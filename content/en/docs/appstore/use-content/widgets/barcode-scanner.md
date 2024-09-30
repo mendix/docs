@@ -16,7 +16,7 @@ The widget does the following:
 * Allows for additional styling customizations through Atlas UI
 
 {{% alert color="info" %}}
-For security reasons, certain browsers will only allow access to an end-user device's camera over an HTTPS connection and not a default HTTP connection. Since this widget accesses the end-user device's camera through this method, the same constraints apply for using this widget in both production and local development. For production, an appropriate security setting can be applied when deploying to the Mendix Cloud. For local development, the easiest solution is to set up a local proxy that secures the connection towards your local Mendix application.
+For security reasons, certain browsers will only allow access to an end-user device's camera over an HTTPS connection and not a default HTTP connection. Since this widget accesses the end-user device's camera through this method, the same constraints apply for using this widget in both production and local development. For production, an appropriate security setting can be applied when deploying to Mendix Cloud. For local development, the easiest solution is to set up a local proxy that secures the connection towards your local Mendix application.
 {{% /alert %}}
 
 ## Usage

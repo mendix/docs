@@ -25,7 +25,7 @@ Before starting this how-to, make sure you are familiar with the following:
 
 #### User API Key
 
-To get access to the Mendix Cloud environments, an authorized user is needed when executing the APIs. With Mendix APIs, API keys are used to achieve this. To create a Mendix API key, follow the steps in [Authentication](/apidocs-mxsdk/apidocs/authentication/).
+To get access to Mendix Cloud environments, an authorized user is needed when executing the APIs. With Mendix APIs, API keys are used to achieve this. To create a Mendix API key, follow the steps in [Authentication](/apidocs-mxsdk/apidocs/authentication/).
 
 #### Mendix API Rights
 

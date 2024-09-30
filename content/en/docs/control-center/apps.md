@@ -1,5 +1,6 @@
 ---
-title: "Apps"
+title: "Company Apps Dashboard "
+linktitle: "Apps"
 url: /control-center/apps/
 description: "Describes the Apps page in the Mendix Control Center."
 weight: 15
@@ -19,7 +20,7 @@ We will enhance this page to provide information about apps deployed on standalo
 
 ## Mendix Cloud
 
-The **Mendix Cloud** tab gives an overview of all the licensed apps that can be published on the Mendix Cloud.
+The **Mendix Cloud** tab gives an overview of all the licensed apps that can be published on Mendix Cloud.
 
 By default you only see apps and their production environments. Turn off the **Production** toggle on the right side above the table to see all the environments.
 
@@ -137,7 +138,7 @@ The description of the items that you can select are as follows:
 
 ## Mendix Free Cloud
 
-The **Mendix Free Cloud** tab shows all the free apps that are deployed on the Mendix Cloud.
+The **Mendix Free Cloud** tab shows all the free apps that are deployed on Mendix Cloud.
 
 You can customize the columns of the table by clicking the column selector (the {{% icon name="view" %}} icon) on the upper-right corner of the table. The items selected are shown as columns in the table.
 

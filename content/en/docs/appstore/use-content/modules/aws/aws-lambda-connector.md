@@ -39,7 +39,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/use-content/) t
 
 ## Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **AWSLambdaConnector** section. The connector provides a [domain model](#domain-model) and several [microflows](#activities) which you can use to quickly configure the Lambda connector for your use case. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
+After you install the connector, you can find it in the **App Explorer**, in the **AWSLambdaConnector** section. The connector provides a [domain model and several activities](#technical-reference) which you can use to quickly configure the Lambda connector for your use case. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
 ### Configuring AWS Authentication
 
@@ -56,7 +56,7 @@ To quickly configure the connection to AWS Lambda by configuring a microflow, pe
 1. In the App Explorer, in **App** > **Marketplace modules** > **AWSAuthentication** > **ConnectionDetails**, configure the required authentication credentials.
     For more information about the difference between static and temporary credentials, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
 2. Create a new microflow.   
-3. In **AWSLambdaConnector** > **Operations**, find the microflow activity for the operation you want to perform. For example, if you want to get the list of available Lambda functions, find the **ListFunctions** activity and drag it to your microflow. For more information about the activities that the microflows can perform, see [Activities](#activities).
+3. In **AWSLambdaConnector** > **Operations**, find the microflow activity for the operation you want to perform. For example, if you want to get the list of available Lambda functions, find the **ListFunctions** activity and drag it to your microflow. For more information about the activities that the microflows can perform, see [Technical Reference](#technical-reference).
 4. Configure the required parameters:
    
     1. For the **ListFunctionsRequest** parameter, create a new `ListFunctionsRequest` object at the start of the microflow and pass it to the **ListFunctions** activity.
@@ -64,72 +64,13 @@ To quickly configure the connection to AWS Lambda by configuring a microflow, pe
     3. For the **ENUM_Region** parameter, choose a Region from the *AWSAuthentication.ENUM_Region* enumeration. For example, *AWSAuthentication.ENUM_Region.us_east_1* for the US_East_1 Region.
     4. The **ListFunctions** activity will return a `ListFunctionsResponse` with details about the retrieved lambda functions. 
 
-## Technical Reference
+## Technical Reference {#technical-reference}
 
-To help you work with the AWS Lambda connector, the following sections of this document list the available entities and activities that you can use in your application.
+The module includes technical reference documentation for the available entities, enumerations, activities, and other items that you can use in your application. You can view the information about each object in context by using the **Documentation** pane in Studio Pro.
 
-### Domain Model {#domain-model}
+The **Documentation** pane displays the documentation for the currently selected element. To view it, perform the following steps:
 
-The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
+1. In the [View menu](/refguide/view-menu/) of Studio Pro, select **Documentation**.
+2. Click on the element for which you want to view the documentation.
 
-| Name | Description | Specializations |
-| --- | --- | --- |
-| `ListFunctionRequest` | Stores the request for a `ListFunction` call and is a specialization of the `AbstractRequest` entity of the Authentication Connector |  |
-| `ListFunctionResponse` | Stores the response for a `ListFunctions` call |  |
-| `FunctionResponse` | Stores the response containing a list of available lambda functions for a `ListFunctions` call |  |
-| `InvokeFunctionRequest` | Stores the request for a `InvokeFunction` call and is a specialization of the `AbstractRequest` entity of the Authentication Connector |  |
-| `InvokeFunctionResponse` | Stores the response for an `InvokeFunction` call |  |
-| `DeleteFunctionRequest` | Stores the request for a `DeleteFunctions` call and is a specialization of the `AbstractRequest` entity of the Authentication Connector |  |
-
-### Activities {#activities}
-
-Activities define the actions that are executed in a microflow or a nanoflow. For the AWS Lambda connector, they represent the actions that can be performed with Lambda functions.
-
-#### ListFunctions
-
-This activity lists all the Lambda functions which are available for the supplied AWS credentials.
-
-**Parameters**
-
-* Parameter of the type `ListFunctionsRequest` – Requesting a list of available Lambda functions
-
-**Returns**
-
-* List of objects of entity type `FunctionResponse`
-
-#### InvokeFunction
-
-This activity invokes a [Lambda function](https://docs.aws.amazon.com/lambda/latest/dg/lambda-functions.html).
-By default, this function invokes Lambda functions synchronously. To invoke a Lambda function, make sure to set the `InvocationType` attribute of the `InvokeFunctionRequest` entity to the preferred value. See section 4.3.1 for more information on the available options.
-
-**Parameters**
-
-* Parameter of the type `InvokeFunctionRequest` – the function that you are invoking
-
-**Returns**
-
-* Function invocation payload response in the `InvokeFunctionResponse` entity
-
-#### DeleteFunction
-
-This activity deletes a single Lambda function.
-
-**Parameters**
-
-* Parameter of the type `DeleteFunctionRequest` – the Lambda function which you want to delete
-
-**Returns**
-
-* Boolean – `true` if function was successfully deleted, otherwise `false`
-
-### Enumerations
-
-An enumeration is a predefined list of values that can be used as an attribute type. For the AWS Lambda connector, the list of available invocation types is provided as an enumeration.
-
-#### `ENUM_InvocationType`
-
-| **Name**         | **Caption**    | **Information** |
-| ---------------- | -------------- | --------------- |
-| `EVENT` | EVENT | Should use when one wants to invoke a lambda function asynchronously |
-| `REQUEST_RESPONSE` | REQUEST_RESPONSE | Should use when one wants to invoke a lambda function synchronously |
-| `DRY_RUN` | DRY_RUN | Should use when one wants to validate parameter values and verify that the user or role has permission to invoke the function |
+    {{< figure src="/attachments/appstore/use-content/modules/technical-reference/doc-pane.png" class="no-border" >}}

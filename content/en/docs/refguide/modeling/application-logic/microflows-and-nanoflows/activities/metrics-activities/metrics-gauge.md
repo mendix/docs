@@ -44,7 +44,7 @@ The name of the gauge for which you want to set a value, which must adhere to th
 * The name is case-insensitive.
 
 {{% alert color="info" %}}
-It is recommended to use a common prefix that uniquely defines your organisation and application.
+It is recommended to use a common prefix that uniquely defines your organization and application.
 {{% /alert %}}
 
 ### Value

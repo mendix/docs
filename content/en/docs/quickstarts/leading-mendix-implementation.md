@@ -174,7 +174,7 @@ In the beginning, it’s highly likely that not all these people will come from 
 
 * **Center of Excellence Lead (COE Lead):** Generally, larger organizations implement a Mendix COE to help define and enforce good governance, development, and enablement practices that can evolve with the business and technological changes for overall platform and program success throughout the enterprise over time. The COE Lead ensures the Mendix COE is properly staffed to support, oversee and enable development teams, and ensures the products produced are of high-quality following best practices for high re-usability, maintainability and return on investment. This person generally has sufficient senior-level technical and managerial skills to oversee the COE’s Enterprise and Solution Architects, DevOps technical leads, trainers and mentors, and other experienced staff.
 
-**Product owners** are key players to a successful program, because they’ll have in-depth knowledge of the business, the product, and its users, and will have insight into the value that it will create. If possible, make sure that your first product owner comes from your own organization and is familiar with the problem you are setting out to solve with your first application. Product owner is not really a leadership role, but the choice of a product owner is crucial for the success of your first app, which is why we touch on it here. can POs are also a part of the agile scrum team, so we will mention them again in section [Identify Your First Mendix Project Team](#identify-first-mendix-team).
+**Product owners** are key players to a successful program, because they’ll have in-depth knowledge of the business, the product, and its users, and will have insight into the value that it will create. If possible, make sure that your first product owner comes from your own organization and is familiar with the problem you are setting out to solve with your first application. Product owner is not really a leadership role, but the choice of a product owner is crucial for the success of your first app, which is why we touch on it here. POs are also a part of the agile scrum team, so we will mention them again in section [Identify Your First Mendix Project Team](#identify-first-mendix-team).
 
 **Architects** will help establish a target architecture, infrastructure, and governance. 
 
@@ -235,7 +235,7 @@ High-level positioning is about knowing how and where Mendix fits in with the re
 
 **Deployment strategy** 
 
-The Start stage is an excellent time to start exploring your cloud options, and use this knowledge as input for strategic choices in the future. You’re most likely going to deploy your application on the Mendix Cloud because it’s the most optimized cloud to run Mendix-built applications. Built on top of Cloud Foundry and AWS, the Mendix Cloud is the deployment solution in which Mendix provides hosting environments for you. It’s available globally and comes standard with deep insights, alerting capabilities, high availability options, and backups. 
+The Start stage is an excellent time to start exploring your cloud options, and use this knowledge as input for strategic choices in the future. You’re most likely going to deploy your application on Mendix Cloud because it’s the most optimized cloud to run Mendix-built applications. Built on top of Cloud Foundry and AWS, Mendix Cloud is the deployment solution in which Mendix provides hosting environments for you. It’s available globally and comes standard with deep insights, alerting capabilities, high availability options, and backups. 
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/cloud-options.png"  >}}
 
@@ -468,7 +468,7 @@ As for your very first project, you want to pick a use case out of your portfoli
 
 Here’s a **quick checklist of things to consider when choosing your first application**:
 
-**Go live quickly:** One of the main goals of your first application is to validate your ability to rapidly bring new ideas to market. It’s important that you identify quick wins, so select applications that are limited in scope and can stand alone in production. 
+**Go live quickly:** One of the main goals of your first application is to validate your ability to rapidly bring new ideas to market. It’s important that you identify quick wins, so select applications that are limited in scope and can work independently in production. 
 
 **Make them worthy:** The first application should also be highly visible within the organization. It must have the right urgency and executive support, and also deliver tangible business value. Select an app idea where you’re sure the results will get noticed and the success will be shared by your stakeholders. 
 
@@ -625,7 +625,7 @@ When setting up your deployment strategy, it is important to look at the feature
 
 If your organization is deploying on **Private Cloud or on-prem**, please **make sure that you are ready to take on the effort and responsibility of managing all hosting and support of the application deployments**.
 
-For a list of all the deployment options that are available, see [Deployment](/deployment/). 
+For a list of all the deployment options that are available, see [Deploying Apps](/deployment/). 
 
 Some highlights to consider:
 
@@ -671,6 +671,7 @@ With Mendix, you have multiple options to choose from for the development of you
 4. **Hybrid**
     a.  You can simultaneously grow your in-house team and supplement with a Mendix partner and/or our Expert Services team.
     
+
 Regardless of which option you choose, we always recommend that at least one person internally has been trained on Mendix and is technically capable of directing the project.  Outsourcing every technical role creates a siloed development team that does not truly understand your business needs.
 
 ### Summary 
@@ -1124,15 +1125,15 @@ By the end of this section, you will be able to: 
 
 ### Deploy Your Application
 
-**Deploy your application to the Mendix Cloud**
+**Deploy your application to Mendix Cloud**
 
-Deploying your application to the Mendix Cloud is a simple process, that will give you access to all the features and services in the Mendix Cloud. It requires only a few steps to set it up, which you only need to do once for each application. Once the cloud settings of your application is done, you can deploy and redeploy your application with just one click.  
+Deploying your application to Mendix Cloud is a simple process, that will give you access to all the features and services in Mendix Cloud. It requires only a few steps to set it up, which you only need to do once for each application. Once the cloud settings of your application is done, you can deploy and redeploy your application with just one click.  
 
-Note that Mendix also offers [other deployment options](/releasenotes/developer-portal/deployment/) than the Mendix cloud e.g. to a private cloud if that’s a requirement.
+Note that Mendix also offers [other deployment options](/releasenotes/developer-portal/deployment/) than Mendix Cloud e.g. to a private cloud if that’s a requirement.
 
 **Obtain a licensed node**
 
-You can deploy your application for free on the Mendix Cloud. These [Free Apps have limitations](/developerportal/deploy/mendix-cloud-deploy/#free-app) when it comes to run time, features and resources. You can publish Free Apps to test the Mendix platform, a specific feature of to quickly prototype an application to test an idea. Once you decide to take your application to the next-level and start serious development on it, you will need to obtain a licensed node, so this is something you will need to do before your launch.
+You can deploy your application for free on Mendix Cloud. These [Free Apps have limitations](/developerportal/deploy/mendix-cloud-deploy/#free-app) when it comes to run time, features and resources. You can publish Free Apps to test the Mendix platform, a specific feature of to quickly prototype an application to test an idea. Once you decide to take your application to the next-level and start serious development on it, you will need to obtain a licensed node, so this is something you will need to do before your launch.
 
 If you have an existing contract that allows for more licensed nodes, you can [request a new licensed node](/developerportal/deploy/licensing-apps/#obtaining-licensed-node).
 If you don’t have a contract, or if your contract doesn’t allow for more licensed nodes, contact your Customer Success Manager.
@@ -1143,7 +1144,7 @@ If you have a licensed node available, you can link your application to this lic
 
 If you have backed up your data, you can [unlink your application](/developerportal/deploy/licensing-apps/#unlink-free) from the Free App environment.
 
-When your app is unlinked from a Free App environment, you can link it to a licensed node. By linking it to a licensed node, you get access to all the features of the Mendix Cloud, such as one-click deployment from Studio Pro and our platform, log management, backups management and monitoring tools.
+When your app is unlinked from a Free App environment, you can link it to a licensed node. By linking it to a licensed node, you get access to all the features of Mendix Cloud, such as one-click deployment from Studio Pro and our platform, log management, backups management and monitoring tools.
 
 **Set node permissions**
 
@@ -1157,9 +1158,9 @@ Granting permissions to team members is dependent on your deployment strategy an
 
 **Set cloud settings**
 
-When the node permissions are set up, you can start configuring your cloud settings. This can be done by any team member with the correct permissions. Changing your cloud settings is not mandatory, as most of settings are set for you by default in the Mendix Cloud, but in some cases you want to customize them to tailor the end user experience or to adhere to company standards.
+When the node permissions are set up, you can start configuring your cloud settings. This can be done by any team member with the correct permissions. Changing your cloud settings is not mandatory, as most of settings are set for you by default in Mendix Cloud, but in some cases you want to customize them to tailor the end user experience or to adhere to company standards.
 
-Things can you can customize for your applications in the Mendix Cloud include:
+Things can you can customize for your applications in Mendix Cloud include:
 
 * [Studio Pro deployment target](/developerportal/deploy/studio-deployment-settings/#studio-pro-target)
 
@@ -1175,9 +1176,9 @@ Things can you can customize for your applications in the Mendix Cloud include:
 
 **Deploy your application**
 
-Once you have linked and configured your Mendix Cloud node, which you only have to do once, you can start deploying your application to the Mendix Cloud. It is recommended that you deploy any new version of your application to the Test or Acceptance environment of your application first for testing, before deploying it to the Production environment.
+Once you have linked and configured your Mendix Cloud node, which you only have to do once, you can start deploying your application to Mendix Cloud. It is recommended that you deploy any new version of your application to the Test or Acceptance environment of your application first for testing, before deploying it to the Production environment.
 
-There are multiple ways to deploy your application to the Mendix Cloud, so there is always a deployment flow that fits your needs. You (or your team) can get a complete overview of those in [Deploying an App to Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/).
+There are multiple ways to deploy your application to Mendix Cloud, so there is always a deployment flow that fits your needs. You (or your team) can get a complete overview of those in [Deploying an App to Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/).
 
 ### Test Your Application
 
@@ -1187,7 +1188,7 @@ There are a variety of tools available for testing, from Mendix-supported ones t
 
 Aside from unit tests, performance tests can also be performed with multiple third-party tools, such as JMeter, BlazeMeter and LoadRunner—all of which are capable of testing the performance of your Mendix application.
 
-After go-live, the Mendix Cloud offers metrics and logs to provide insights into application performance and can help track down bugs.
+After go-live, Mendix Cloud offers metrics and logs to provide insights into application performance and can help track down bugs.
 
 ### User Acceptance Testing
 

@@ -84,4 +84,4 @@ For more information on using this option, see [Deploy to the Cloud](/refguide9/
 ## Read More
 
 * [Studio Pro Overview](/refguide9/studio-pro-overview/)
-* [Deployment](/deployment/)
+* [Deploying Apps](/deployment/)

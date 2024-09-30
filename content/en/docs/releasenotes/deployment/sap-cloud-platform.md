@@ -1,5 +1,6 @@
 ---
-title: "SAP BTP"
+title: "SAP BTP Release Notes"
+linktitle: "SAP BTP"
 url: /releasenotes/developer-portal/sap-cloud-platform/
 weight: 30
 description: "Release notes for deployment to SAP Business Technology Platform"
@@ -7,9 +8,9 @@ description: "Release notes for deployment to SAP Business Technology Platform"
 
 These release notes cover changes to deployment to [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/) (SAP BTP).
 
-SAP Business Technology Platform deployments are also dependent on the latest version of the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack). The [Mendix Cloud Foundry Buildpack release notes](https://github.com/mendix/cf-mendix-buildpack/releases) are published separately as other deployment targets are also dependent on the buildpack.
+SAP Business Technology Platform deployments also depend on the latest version of the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack). The [Mendix Cloud Foundry Buildpack release notes](https://github.com/mendix/cf-mendix-buildpack/releases) are published separately because other deployment targets are also dependent on the buildpack.
 
-For information on the current status of deployment to SAP BTP and any planned releases see [Mendix Status](https://status.mendix.com/).
+For information on the current status of deployment to SAP BTP and any planned releases, see [Mendix Status](https://status.mendix.com/).
 
 ## 2024
 

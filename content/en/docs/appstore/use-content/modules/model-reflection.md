@@ -40,15 +40,15 @@ All the patterns use the locale from the context. Based on the user's language, 
 * Long attribute with a thousand separator:
     * Pattern:  `%,8d%n`
     * Value: `12345678`
-    * Result: `12,345,678`
+    * Result: `12,345,678` with a newline character at the end of the string
 * Date attribute:
     * Pattern: `MM/dd/yyyy`
     * Value: `2nd of July 2016`
-    * Result: `7/6/2016`
-* Decimal attribute with a thousand separator of 2 decimals:
+    * Result: `07/02/2016`
+* Decimal attribute with a thousand separator and one decimal place:
     * Pattern: `#,##0.0`
-    * Value: `12345,678`
-    * Result: `12,345.68`
+    * Value: `12345.678`
+    * Result: `12,345.7`
 
 ## Read More
 

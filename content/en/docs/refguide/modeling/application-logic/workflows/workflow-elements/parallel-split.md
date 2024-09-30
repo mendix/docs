@@ -1,7 +1,7 @@
 ---
 title: "Parallel Split"
 url: /refguide/parallel-split/
-weight: 50
+weight: 40
 ---
 
 ## Introduction

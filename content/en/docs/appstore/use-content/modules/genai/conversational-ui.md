@@ -30,6 +30,7 @@ The Conversational UI module provides the following functionalities:
     * Pages that you can use in your navigation for chat
     * Snippets that you can use directly on your pages, for example to display messages or a history sidebar
     * A floating button that for opening a chat
+    * Pages, snippets and logic to display and export token usage data (if enabled in GenAI Commons and supported by the GenAI Connector of choice)
 * Operations to set up your context, interact with the model, and add the data to be displayed in the UI
 * Domain model to store the chat conversations and additional information
 * Integration with any model that is compatible with [GenAI Commons](https://marketplace.mendix.com/link/component/227933)
@@ -45,15 +46,16 @@ To use the Conversational UI module, your Mendix Studio Pro version must be [9.2
 You must also ensure that you have the prerequisite modules that Conversational UI requires. The modules are included by default in the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934) and the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926), otherwise you must install them yourself:
 
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187)
+* [Data Widgets](https://marketplace.mendix.com/link/component/116540) 
 * [GenAI Commons](https://marketplace.mendix.com/link/component/227933)
 * [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
 * [Web Actions](https://marketplace.mendix.com/link/component/114337)
 
-Finally, you must also install and configure a connector that is compatible with GenAI Commons. Mendix provides platform-supported integration with either [(Azure) OpenAI](/appstore/modules/genai/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). You can also integrate with custom models, by making them compatible with the GenAI Commons [Request](/appstore/modules/genai/commons/#request) and [Response](/appstore/modules/genai/commons/#response).
+Finally, you must also install and configure a connector that is compatible with GenAI Commons. Mendix provides platform-supported integration with either [(Azure) OpenAI](/appstore/modules/genai/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). You can also integrate with custom models, by making them compatible with the [GenAI Commons](/appstore/modules/genai/commons/) Request and Response.
 
 ## Installation {#installation}
 
-Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the Conversational UI into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the Conversational UI module into your app.
 
 ## Configuration {#configuration}
 
@@ -77,7 +79,8 @@ Make sure that the module role `User` is part of the user roles that are intende
 | Module role | Description |
 | --- | --- |
 | `User` | Role needed for every user that should be able to interact with the chat components. Users can only read their own messages (and related data). |
-| `_addOn_ReadAll` | Role can be granted additionally. Users with both roles can read all data. |
+| `_addOn_ReadAll` | Role can be granted additionally. Users with both roles can read all chat data. |
+| `UsageMonitoring` | Can view and export all token usage data. This is related to a module role with the same name in the GenAI Commons module. |
 
 ### ChatContext {#chat-context}
 
@@ -92,12 +95,12 @@ The following operations can be found in the toolbox for processing the [ChatCon
 * `Create ChatContext & Set ActionMicroflow` creates a new `ChatContext` and a new `ProviderConfig` (or a specialization of such depending on the input). The `ProviderConfig` is added to the `ChatContext` and set to active. Additionally, the action microflow of the new `ProviderConfig` is set.
 * `Create ChatContext & Set ProviderConfig` creates a new `ChatContext` and sets a given `ProviderConfig` to active.
 * `Create ChatContext & Set ProviderConfig (List)` creates a new `ChatContext` and adds a `ProviderConfig` to the `ChatContext` and sets it to active. In addition, a list of `ProviderConfigs` can be added to the `ChatContext` (non-active, but selectable in the UI).
-* `Set ConversationID` sets the ConversationID on the `ChatContext`. Storing the ConversationID is needed for [chat with history within Retrieve and Generate with Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/#retrieve-and-generate-with-history).
+* `Set ConversationID` sets the ConversationID on the `ChatContext`. Storing the ConversationID is needed for chat with history within Retrieve and Generate with [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/).
 * `Set Topic` sets the `Topic` of the `ChatContext`. This attribute can be used in the **History** sidebar while making historical chats visible to users.
 
 #### Request Operations {#request-operations}
 
-* `Create Request from ChatContext` creates a [Request](/appstore/modules/genai/commons/#request) object that is used as input parameter in a `Chat with History` operation as part of the [action microflow](#action-microflow). For more information about the `Chat with History` operation, see [(Azure) OpenAI](/appstore/modules/genai/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/).
+* `Create Request from ChatContext` creates a [Request](/appstore/modules/genai/commons/) object that is used as input parameter in a `Chat with History` operation as part of the [action microflow](#action-microflow). For more information about the `Chat with History` operation, see [(Azure) OpenAI](/appstore/modules/genai/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/).
 * `Get Current User Prompt` gets the current user prompt. It can be used in the [action microflow](#action-microflow), because the `CurrentUserPrompt` from the chat context is no longer available.
 * `Update Assistant Response` processes the response of the model and adds the new message and any sources to the UI. This is typically one of the last steps of the logic in an [action microflow](#action-microflow).
 
@@ -180,7 +183,12 @@ The following versions are available and can be swapped as needed:
 * **Snippet_ChatContext_SelectActiveProviderConfig** - With this snippet, users can select an active [Provider Config](#provider-config) from all associated configurations, for example to let them select a model.
 * **Snippet_ChatContext_HistorySideBar** - This snippet can be used in a list view of past conversations.
 
-See the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) or the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) on how to use those snippets.
+See the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) or the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) on how to use those snippets.
+
+#### Token Monitor Snippets {#snippet-token-monitor}
+
+* **Snippet_TokenMonitor** - This snippet can be used to display token usage informatation in charts and contains several other snippets that you can use to build your own token monitor dashboard. To display the token usage data, users will need the `UsageMonitoring` userrole.
+* **Snippet_TokenMonitor_Export** - This snippet can be used to display token usage informatation in a grid and export it as .xlsx. 
 
 ### Additional Operations {#operations}
 
@@ -189,3 +197,19 @@ The following additional microflows can be found in the **USE_ME** folder:
 * **ChatContext_AddProviderConfig_SetActive** - This microflow adds a `ProviderConfig` to the chat context and sets it to active.
 * **ChatContext_Delete** - This microflow deletes a chat context.
 * **AdvancedSettings_GetAndUpdate** - This microflow can be used after chat context creation to set the boundaries and default value for advanced settings in the UI. For more information, see [Configuration Snippets](#snippet-configuration).
+
+## Troubleshooting
+
+This section lists possible solutions to known issues.
+
+### Cannot Export Usage Data for the Token Monitor
+
+The export of usage data for the token monitor does not work correctly.
+
+#### Cause
+
+The [Data Wigets](https://marketplace.mendix.com/link/component/116540) module that you have installed is in an older version which does not support exporting data to *.xlsx* format from the Datagrid 2 widget.
+
+#### Solution
+
+Update the [Data Wigets](https://marketplace.mendix.com/link/component/116540) module to version 2.22.0 or above.

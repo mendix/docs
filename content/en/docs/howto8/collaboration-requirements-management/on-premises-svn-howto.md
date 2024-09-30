@@ -77,7 +77,7 @@ For the purpose of creating an app to store in your on-premises SVN server, this
 5. With all instances of Studio Pro closed, open the folder in which your app is stored locally.
 6. Delete the **.svn** and **.mendix-cache** folders (note that these folders may be hidden, in which case you will need to enable the option in your file explorer to make them visible). By deleting these folders, references to the Mendix Team Server are removed. Now, your app is ready to be uploaded to your own SVN server.
 7. Double-click the **.mpr** file in the project folder to open the app again in Studio Pro (for example, if your app is called **MyApp**, this file will have the name **MyApp.mpr**). Alternatively, you can start Studio Pro, click **My Apps** > **Open App**, and browse to the abovementioned local **.mpr** file to open your app.
-8. When the app is opened in Studio Pro, go to the top menu, select **Edit** > **Preferences** > **Advanced**. and make sure the **Enable private version control** box is checked.
+8. When the app is opened in Studio Pro, go to the top menu, select **Edit** > **Preferences** > **Advanced**, and make sure the **Enable private version control** box is checked.
 9. In the top menu, select **Version Control** > **Upload to Version Control Server**.
 10. In the [Upload to Version Control Server](/refguide8/upload-to-version-control-dialog/) dialog box, select **Private server**.
 11. In the **App repository address** field, enter the address of your SVN server. This address must include the name of the repository you are going to use for your app (for example, `https://svn.example.com:9876/repos/myapp`).

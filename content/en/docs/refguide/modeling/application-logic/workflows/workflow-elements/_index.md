@@ -56,7 +56,7 @@ The elements of this category are described in the table below:
 
 | Graphic                                                     | Element                           | Description                                                  |
 | ----------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------ |
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/wait-for-timer.png" width="50px" alt="Wait for timer activity" class="no-border" >}} | [Wait for timer](/refguide/wait-for-timer/)             | Allows you to suspend the execution of a workflow path until a timer has elapsed or deadline has been reached. |
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/timer.png" width="50px" alt="timer activity" class="no-border" >}} | [Timer](/refguide/timer/)             | Allows you to configure a certain duration or a specific date and time in a workflow. It can be used as a standalone activity on a workflow path or as a [Boundary Event](/refguide/workflow-boundary-events/) attached to another workflow activity.|
 
 ## System Actions {#system}
 

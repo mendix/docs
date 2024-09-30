@@ -26,7 +26,7 @@ The following components are needed:
 The following steps describe how to download the Selenium server:
 
 1. Create a folder on your disk (for example, *C:\Selenium*).
-2. Download [Selenium Server stand-alone version 3.8.1](https://selenium-release.storage.googleapis.com/3.8/selenium-server-standalone-3.8.1.jar) and place it in the folder
+2. Download [Selenium Server standalone version 3.8.1](https://selenium-release.storage.googleapis.com/3.8/selenium-server-standalone-3.8.1.jar) and place it in the folder
 
 ## Downloading the Latest Chrome and Gecko (Firefox) Drivers
 

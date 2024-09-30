@@ -1,7 +1,7 @@
 ---
 title: "Call Workflow"
 url: /refguide/call-workflow/
-weight: 70
+weight: 100
 ---
 
 {{% alert color="info" %}}
@@ -25,6 +25,7 @@ It is also possible to nest **Call Workflow** activities, that is, to use **Call
 Call workflow properties consist of the following sections:
 
 * [General](#general)
+* [Boundary events](#boundary-events)
 * [Common](#common)
 
 ### General Section {#general}
@@ -44,6 +45,10 @@ This property indicates parameters of the selected workflow, parameters pass dat
 To change the parameter, either double-click the parameter from the list or select the parameter row and click the **Edit parameter value** button. When editing the parameter, you can define how the context entity of the calling workflow is mapped (related) to the context entity of the called workflow (sub-workflow). The context object of the called workflow can be selected by either using the calling workflow context object or by using an expression: you can select a context object that is associated to the calling workflow's context object. The **Type** column shows the context object of the selected workflow. 
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/call-workflow/call-workflow-parameter-example.jpg" alt="Call Workflow Parameter Example" class="no-border" >}}
+
+### Boundary Events Section {#boundary-events}
+
+For more information, see [Boundary Events](/refguide/workflow-boundary-events/).
 
 ### Common Section {#common}
 

@@ -110,6 +110,7 @@ You can find the following microflows in Workflow Commons:
 4. For Workflow Commons v2.1.0 and above, you need to configure the state change microflows in the **App Settings**: open **App Settings** > **Workflows** tab to configure the following state change microflows:
     1. Set **Workflow state change** to *OCh_Workflow_State*
     2. Set **User task state change** to *OCh_WorkflowUserTask_State*
+5. For Workflow Commons v3.10.0 and above, we introduced the `DueDateExpirationInDays` constant to configure the period in days for which the workflows/user tasks are to be considered almost due with visual indicators in pages **Task Inbox**, **Task Dashboard**, **Default Workflow Admin** and **Workflow Definition View**. The default value is set to 2 days. You should set the value based on your business needs.
 
 ## Workflow Audit Trail
 

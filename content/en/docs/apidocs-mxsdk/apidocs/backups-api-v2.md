@@ -303,7 +303,7 @@ An object with the following key-value pairs:
 
 #### Description
 
-Requests the creation of an archive of a backup snapshot. The response is a JSON object containing the `archive_id` attribute which identifies an archive. use this `archive_id` in an API request to check the progress of the creation of this archive, and obtain a URL to allow you to download it.
+Requests the creation of an archive of a backup snapshot. The response is a JSON object containing the `archive_id` attribute which identifies an archive. Use this `archive_id` in an API request to check the progress of the creation of this archive, and obtain a URL to allow you to download it.
 
 ```bash
 HTTP Method: POST

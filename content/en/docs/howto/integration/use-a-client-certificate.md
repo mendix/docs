@@ -15,7 +15,7 @@ Let's assume that you already have an app that calls a service. For details on h
 This how-to teaches you how to do the following:
 
 * Configure to run locally
-* Configure in the Mendix Cloud
+* Configure in Mendix Cloud
 
 {{% alert color="info" %}}
 This capability can also be described as Mutual Transport Layer Security (mTLS). Following this guide, the server certificate will be verified against any certificate authorities (CAs) in Mendix application's trust store. If you require true "zero trust" mTLS where standard internet CAs should not be trusted by default, please contact Mendix Expert Services for assistance.
@@ -68,7 +68,7 @@ The following sample uses client certificate `Mx1.pfx` for `WebService1` and no 
 You will only be able to follow the steps below if you have the correct access rights for the client certificates.
 {{% /alert %}}
 
-To configure client certificates in the Mendix Cloud, follow these steps:
+To configure client certificates in Mendix Cloud, follow these steps:
 
 1. Go to [Apps](https://sprintr.home.mendix.com/) and go to the **Environments** page for your app.
 2. Each environment has its own configuration. Click **Details** next to one of the environments.

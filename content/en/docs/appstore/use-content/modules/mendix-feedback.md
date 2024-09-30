@@ -7,32 +7,19 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-This document is for the Mendix Feedback module, compatible with Studio Pro 9.18.6 and above.
-{{% /alert %}}
-
 {{% alert color="warning" %}}
-If you are using the deprecated Mendix Feedback widget (compatible with Studio Pro 8.6.0 and above), see the [Legacy Mendix Feedback Widget Documentation](#legacy-feedback-docs) sections below. Mendix recommends using the newer Mendix Feedback module, as the deprecated Feedback widget will no longer receive regular updates.
-{{% /alert %}}
+This document is for the Mendix Feedback module which is compatible with Studio Pro 9.18.6 and above.
 
-{{% alert color="warning" %}}
-
-**This is the Mendix Feedback module, formerly the Mendix Feedback widget.**
+If you are using the deprecated Mendix Feedback widget (compatible with Studio Pro 8.6.0 and above), see the [Legacy Feedback Widget Docs](#legacy-feedback-docs) sections below.
 
 All [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widgets with versions lower than 8.4.0 are disabled as of October 1, 2022. If you are using one of these versions, [upgrade your current Mendix Feedback widget with the latest version of this module](#upgrade).
 
-The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/app-insights/feedback/) section page for your app in [Apps](https://sprintr.home.mendix.com/), but your app will keep working as usual.
-
-If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which includes another version of the Mendix Native Feedback widget), upgrade to version 3.5.1 or higher. 
-
-If you are using the old Mendix Native Feedback widget, you might face some issues to receive feedback. To make use of [Feedback](/developerportal/app-insights/feedback/) in [Apps](https://sprintr.home.mendix.com/), Mendix recommends removing the server location value within the widget and keep it empty.
-
-In case of any questions, contact [Mendix Support](https://support.mendix.com/hc/en-us).
+Mendix recommends using the newer Mendix Feedback module, as the deprecated Feedback widget will no longer receive regular updates.
 {{% /alert %}}
 
 ## Introduction
 
-The [Mendix Feedback](https://marketplace.mendix.com/link/component/205506) module allows end-users of your application to directly submit feedback into your app. The module contains a feedback widget along with other files. The feedback module is fully integrated with the [Feedback](/developerportal/app-insights/feedback/) page for your app in [Apps](https://sprintr.home.mendix.com/), where you can review feedback and convert it into [user stories](/developerportal/project-management/epics/planning/) to improve your app.
+The [Mendix Feedback](https://marketplace.mendix.com/link/component/205506) module allows end-users of your application to directly submit feedback into your app. The module contains a feedback widget along with the pages and necessary flows and a couple of examples. The feedback module is fully integrated with the [Feedback](/developerportal/app-insights/feedback/) page for your app in [Apps](https://sprintr.home.mendix.com/), where you can review feedback and convert it into [user stories](/developerportal/project-management/epics/planning/) to improve your app.
 
 {{< figure src="/attachments/appstore/use-content/modules/mendix-feedback/feedback-in-app.png" class="no-border" >}}
 
@@ -46,16 +33,21 @@ The Mendix Feedback module is easy to set up and automatically attaches addition
 
 ### Typical Usage Scenario
 
-* Gathers feedback from end-users in an acceptance or production environment
-* Reduces the length of the feedback loop
+Typically, feedback module usage has the following flow:
+
+* An end-user creates feedback through the feedback button
+* The end-user, optionally, creates a screenshot and annotates it before sending the feedback
+* The app maker [receives the feedback](/developerportal/app-insights/feedback/) in **App Insights**
+* The app maker processes the feedback, connecting with the end-user if they need more information
+* The app maker creates a story from the feedback if the feedback is accepted – they can also move or delete the feedback
 
 ### Features
 
+* Screenshots annotation
 * Gathers detailed information about the client state
 
 ### Limitations
 
-* This module can only be used in combination with Mendix apps.
 * This module is compatible with Studio Pro 9.18.6 or higher.
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187) is required to apply the styling.
 * In native mobile apps, some of the feedback metadata such as username, email address, and document name will be hard-coded, as they cannot be retrieved dynamically (to address this you can use the [Native Feedback widget](/appstore/modules/native-mobile-resources/) instead, located in [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513)).
@@ -68,7 +60,8 @@ You should install the latest version of the Mendix Feedback module, as it will 
 
 ### Adding the Feedback Widget to Your App
 
-1. Configure the **User roles** in the **App Security** for the Feedback module.
+1. Configure the **User roles** in the **App Security** for the Feedback module. Add the module role 'user' to each user role that needs access to the feedback option.
+
 2. In the **Toolbox**, find the **Feedback** widget in the **Feedback** category.
 
     {{< figure src="/attachments/appstore/use-content/modules/mendix-feedback/toolbox-feedback.png" width="250px" class="no-border" >}}
@@ -79,35 +72,44 @@ You should install the latest version of the Mendix Feedback module, as it will 
 
 4. [Configure the Feedback widget](#configuration).
 
-5. If your app allows anonymous users, do as follows:
-
-   1. Drop an extra Feedback widget into a position in the layout:
-
-       {{< figure src="/attachments/appstore/use-content/modules/mendix-feedback/two-feedback-on-layout.png" class="no-border" >}} 
-
-   2. Configure the visible roles of each Feedback widget. The Feedback widget for anonymous users should only be visible to the anonymous user role, while the Feedback widget for logged-in users should not be visible to the anonymous user role.
-
-   3. [Configure the extra Feedback widget](#configuration).
-
 ### Configuring the Feedback Widget {#configuration}
 
 To configure the Feedback widget, double-click it to open the **Edit Feedback** dialog box. To use the feedback feature, configure the following properties:
 
 * **Configuration** tab
-    * **Feedback button action** –This controls what happens once you click the **Feedback** button. By default, it opens the **Share Feedback** page. If you select **Custom**, you can select a different **On click** action.
-    * **Project Settings** – This is the unique identifier of your app. You can find it in your app’s [General Settings](/developerportal/collaborate/general-settings/) in Apps.
-
+    * **Model pop-up type** – This controls what happens once you click the **Feedback** button. By default, it opens the **Share Feedback** page. If you select **Custom**, you can select a different **On click** action.
+    * **App ID** – This is the unique identifier of your app. You can find it in your app’s [General Settings](/developerportal/collaborate/general-settings/) in Apps.
+    
         {{% alert color="info" %}}The original value of **App ID** is *1*, but this value should automatically change to your correct app ID. If it does not change automatically, see [Updating App ID](#update-app-id) below.
         {{% /alert %}}
-    
-    * **HTML2Canvas screenshot settings** – These options control the rendering of the screenshots. If you are experiencing problems with screenshots, turn the **Foreign rendering** on.
-    
+        
+    * **Show advanced settings** – The advanced settings control html2canvas, a backup screen capture tool the Mendix Feedback widget uses when the default browser screenshot tool fails. By default, this is set to **No**. If you select **Yes**, the following items appear:
+      
+        * **Enable object rendering** – By default, this is set to **No**. Only select **Yes**, when you experience problems with creating screenshots. Then it will enable the `foreignObjectRendering` method which helps rendering complex HTML, including styles, SVGs, and embedded elements.
+        * **CSS scrollable area**– If your app does not use the default scrolling behavior in Studio Pro, the screenshot feature may not work correctly. You can add a CSS selector here to specify which element on your page scrolls the content.
 * **Customize Button** tab
-    * **Button Labels** – These are the labels for the buttons on the feedback form. You can change the captions for those button here.
+    * **Feedback and screenshot button labels** – These are the labels for the buttons on the feedback form. You can change the captions for those button here.
     * **Feedback Button Styling** – This controls how the **Feedback** button is rendered. There are three options:
         * **Side Tab** – If this option is selected, the **Feedback** button hovers vertically at the right side of the screen. This is the default option.
         * **Button** – If this option is selected, the **Feedback** button shows as a horizontal button on the location the widget is set
         * **Do not render** – If this option is selected, the **Feedback** button does not show. You can still trigger the feedback flow through a custom button action.
+    * **Show in Design mode** – If it is set to **Yes**, the **Feedback** button is shown in Design mode.
+
+### Customizing the Feedback Module
+
+You can modify the feedback module. Here are a couple of examples of what is possible.
+
+#### Edit the Styling of the Feedback Page
+
+To edit the styling of the feedback page, you can add the necessary styling to the page `ShareFeedback`. You can find an example in the examples folder, where a custom logo is added to our feedback page. It is not possible to modify the annotation tool.
+
+#### Connect to Another Feedback Service
+
+You can connect the Feedback module to another service.
+
+To do this, you set your own API call inside the microflow `SUB_Feedback_SendToServer`. Depending on the service, you may need to modify the payload. If you want to use your own server, you can find information on the payload we send in our [API documentation](https://docs.mendix.com/apidocs-mxsdk/apidocs/feedback-api-v2/).
+
+{{< figure src="/attachments/appstore/use-content/modules/mendix-feedback/Feedback_SendToServer.png" width="500px" class="no-border" >}} 
 
 ### Submitting Feedback on an App
 
@@ -149,9 +151,28 @@ If you cannot see your feedback items on the **Feedback** page after opening you
 
 ### Widget Cannot Be Read 
 
-If you see the following error, click **close** and then go to your widget folder to remove the duplicate old widget. 
+If you see the following error, click **close** and then remove the duplicate old widget from your app’s folder ‘/widgets’. Look for ‘SprintrFeedbackWidget.mpk’. 
 
 {{< figure src="/attachments/appstore/use-content/modules/mendix-feedback/widget-error.png" width="600px" class="no-border" >}}
+
+### Feedback Button isn't visible in Design Mode / Hiding the Feedback Button
+
+After you add the Feedback widget to a page of your app in Studio Pro, you can hide or show the **Feedback** button in Design mode.
+
+To hide the Feedback button, do as follows:
+
+1. Double-click the **Feedback** button to open the **Edit Feedback** dialog box.
+2. Go to the **Customize button** tab.
+3. Set **Show in Design mode** to **No**.
+4. Click **OK** to save the change.
+
+To show the Feedback button, do as follows:
+
+1. For Windows users, find the Feedback widget in the [Structure mode](/refguide/page/#structure-mode). For Mac users (who do not have the Structure mode), go to the [Page Explorer](/refguide/page-explorer/) and find the Feedback widget.
+2. Double-click the widget to open the **Edit Feedback** dialog box.
+3. Go to the **Customize button** tab.
+4. Set **Show in Design mode** to **Yes**.
+5. Click **OK** to save the change.
 
 ## Legacy Feedback Widget Docs {#legacy-feedback-docs}
 
@@ -202,7 +223,7 @@ You can configure the widget for certain actions in your app. All the configurat
         * **No** (default)
         * **Yes** – only used when the page includes sensitive information
     
-* **Authentication** tab {#legacy-authentication}
+* **Authentication** tab
 
     {{% alert color="info" %}}For the best user experience, your are strongly encouraged to apply Mendix SSO to your app and connect the Mendix SSO module to the Mendix Feedback widget version 8.2.1 or above. Choose only one of the authentication methods: either **MendixSSO** or **Custom Authentication**.</br></br>You need to enter the value of authentication items manually as currently the widget does not support a drop-down menu for selecting microflow or the attributes of an entity.{{% /alert %}}
 

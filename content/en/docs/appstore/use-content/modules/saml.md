@@ -40,7 +40,7 @@ The SAML SSO module supports the following [SAML 2.0](https://docs.oasis-open.or
 The Mendix SAML SSO supports usage of SAML metadata in the following way:
 
 * Daily synchronization of the IdP metadata, so your Mendix app will always have the latest IdP metadata.
-  * For daily synchronization of IdP metadata, configure the `SE_SynchronizeIdPMetadata` scheduled event. For local development this can be done from Studio Pro. In the Mendix Cloud, you can do this on the [Environments Details](/developerportal/deploy/environments-details/#model-options) page for your app.
+    * For daily synchronization of IdP metadata, configure the `SE_SynchronizeIdPMetadata` scheduled event. For local development this can be done from Studio Pro. In Mendix Cloud, you can do this on the [Environments Details](/developerportal/deploy/environments-details/#model-options) page for your app.
 * Downloading of the metadata for your Mendix application that acts as an SP in the SAML protocol
 
 For encryption of SAML messages the following options are supported:
@@ -95,7 +95,7 @@ The URL for downloading the SP metadata of your app is independent of the value 
 
 * Install and configure the [Mx Model Reflection](/appstore/modules/model-reflection/) module.
 * Install and configure the [Encryption](/appstore/modules/encryption/) module – this is needed to encrypt the key store passwords in version 3.5.0 and above of the SAML module.
-* For apps running outside of the Mendix Cloud, make sure you have [external file storage](/refguide/system-requirements/#file-storage) configured.
+* For apps running outside of Mendix Cloud, make sure you have [external file storage](/refguide/system-requirements/#file-storage) configured.
 
     {{% alert color="warning" %}}The SAML module writes configuration data to a file document on the file storage to read it later. Without external file storage, this configuration will be lost when you restart your app. The SAML module will not work correctly without reading the configuration data from the file storage.
     {{% /alert %}}
@@ -134,7 +134,7 @@ There are different versions of the SAML module, depending on which version of M
 By default, the SAML module will be installed as the **SAML20** module in your app’s Marketplace modules. You can find all microflows and other configuration elements in this module.
 
 1. Configure the **Startup** microflow in the SAML module (**SAML20.Startup**) to run as (part of) the [After startup](/refguide/app-settings/#after-startup) microflow. This microflow will initialize the custom request handler `/SSO/` (please note the importance of using the final `/` for all instances of `/SSO/`), validate all IdP configurations, and prepare the configuration entities required during the configuration.
-1. If you have set up path-based access restrictions in your cloud (for example [Path-Based Access Restrictions](/developerportal/deploy/environments-details/#path-based-restrictions) in the Mendix Cloud), ensure that access to `/SSO/` is allowed.
+1. If you have set up path-based access restrictions in your cloud (for example [Path-Based Access Restrictions](/developerportal/deploy/environments-details/#path-based-restrictions) in Mendix Cloud), ensure that access to `/SSO/` is allowed.
 1. Add the **OpenConfiguration** microflow to the navigation, and then allow the administrator to access this microflow.
 1. Review and configure all the constants:
     * **DefaultLoginPage** – You can specify a different login page here for when the login process fails. When the end-user cannot be authenticated in the external IdP, a button will appear, and by clicking this button, they will be redirected to the specified login page. If this is left blank, an unauthenticated user will be redirected to `/login.html`.
@@ -597,19 +597,33 @@ For more information on using Deep Link module (with Mendix 8 and 9), see the [U
 
 Page URLs and Microflow URLs are supported with SAML for Mendix version 10.6 and above. To do this, follow the steps below:
 
-1. In the **Runtime** tab of the **App Settings**, configure the page **URL prefix** to **link** instead of the default **P** to maintain compatibility with existing URLs and ensure to remove the Deep Link module from your app to start the app successfully.
-1. To allow the end users to navigate to the desired page:
+1. In the **Runtime** tab of the **App Settings**, configure the page **URL prefix** to **link** instead of the default **P** to maintain compatibility with existing URLs. 
+1. Ensure to remove the Deep Link module from your app to start the app successfully.
+1. To implement the SSO redirection, add the following lines of code to your login page (for example, `login.html`):
 
-    * If single IdP configured, URL will be the base URL of your application followed by `SSO/login?cont={page/Microflowurl}`
+    * Extract the return URL:
+
+        `var returnURL = window.location.hash.substring(1) + window.location.search;`
+
+    * For automatic redirection: use `window.onload` to automatically redirect users to the SSO login page.
+
+        `window.location.href = 'sso/login' + (returnURL ? '?cont=link' + encodeURIComponent(returnURL) : '');` or, 
+
+    * For manual redirection: add an `onclick` event to the button that manually triggers the SSO login.
+
+        `this.href = 'sso/login' + (returnURL ? '?cont=link' + encodeURIComponent(returnURL) : '');`
+        
+1. To allow the end users to navigate to the desired page, URL can be formed as follows:
+
+    1. If single IdP configured, URL will be the base URL of your application followed by `SSO/login?cont={page/Microflowurl}`.
 
         For example, `http://localhost:8080/SSO/login?cont=link/pagepath`
 
-    * If Multiple IdPs configured, you can specify which IdP should be used by adding the alias (MyIdPAlias) `SSO/login?_idp_id={MyIdPAlias}&cont={page/Microflowurl}`
+    2. If Multiple IdPs configured, you can specify which IdP should be used by adding the alias (MyIdPAlias) `SSO/login?_idp_id={MyIdPAlias}&cont={page/Microflowurl}`.
 
         For example, `http://localhost:8080/SSO/login?_idp_id=Okta&cont=link/pagepath`
 
-1. The user will be redirected to the IdP login page for authentication.
-1. After successful log in, the user will be directed to the desired page using page URLs and microflow URLs within the application.
+Once the above changes are applied, end users can directly navigate to the desired page. If not logged in, they will be redirected to the IdP login page for authentication. After successful log in, they will be directed to the desired page using page and microflow URLs.
 
 For more information, see the [Migrating to Page and Microflow URLs](/appstore/modules/deep-link/#migrate-page-micro) section of the *Deep Link*.
 

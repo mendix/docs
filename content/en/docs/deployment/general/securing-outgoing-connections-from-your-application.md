@@ -2,7 +2,7 @@
 title: "Secure Outgoing Connections from Your App"
 linktitle: "Secure Outgoing Connections"
 url: /developerportal/deploy/securing-outgoing-connections-from-your-application/
-weight: 50
+weight: 20
 description: "Describes which methods are available for securing connections from your app to the outside world."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

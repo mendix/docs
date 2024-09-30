@@ -1,5 +1,6 @@
 ---
-title: "Native Builder"
+title: "Native Builder Release Notes"
+linktitle: "Native Builder"
 url: /releasenotes/mobile/native-builder/
 weight: 11
 description: "Native Builder release notes."

@@ -323,7 +323,7 @@ When it creates the package, Studio Pro will also create a tag representing this
 
 #### Deploying a Specific Version to a Mendix Licensed Cloud Node
 
-If you are using the Mendix Cloud you can choose **Project** > **Deploy to Licensed Cloud Node** to deploy a specific version.
+If you are using Mendix Cloud you can choose **Project** > **Deploy to Licensed Cloud Node** to deploy a specific version.
 
 {{< figure src="/attachments/refguide8/version-control/using-version-control-in-studio-pro/2018-02-21_17-05-05.png" class="no-border" >}}
 

@@ -132,7 +132,7 @@ If you are migrating from the community edition of the module ([OpenIDConnect Si
 
 1. [Add the OIDC SSO module into your app](/appstore/use-content/).
 2. Add the necessary dependencies (as listed in the previous section) from the Marketplace, if they are not already included in your app.
-3. Add the snippet **Snip_Configuration** in the **USE_ME** > **1. Configuration** folder of the OICD SSO module to a page that is accessible to admin end-users of your app.
+3. Add the snippet **Snip_Configuration** in the **USE_ME** > **1. Configuration** folder of the OIDC SSO module to a page that is accessible to admin end-users of your app.
 4. Replace all the layouts that end in `_REPLACEME` used in pages in this module with layouts from your own project. The layouts are in the **Implementation** > **Layouts** folder of the module. Use the [Find Usages](/refguide/find-and-find-advanced/#find-usages) command to find where they are used.
 5. Follow the instructions in [Design-time App configuration](#app-configuration) to set up your app.
 
@@ -148,9 +148,9 @@ Once the Mx Model Reflection module has been imported into your app, you need to
 
     {{< figure src="/attachments/appstore/use-content/modules/oidc/model-reflection-button.png" class="no-border" >}}
 
-3. Select the modules **MxModelReflection** and **OIDC**  and click **Click to refresh** for both the modules and the entities. Starting from version 3.0.0 of the OIDC SSO module, additionally select and refresh the **Administration**, **UserCommons**, and **System** modules, in the **MxModelReflection.MxObjects_Overview** page to configure User Provisioning. From version 3.1.0, the startup microflow (`OIDC.ASU_OIDC_Startup`) automatically handles this process.
+3. Select the modules **MxModelReflection** and **OIDC**  and click **Click to refresh** for both the modules and the entities. Starting from version 3.0.0 of the OIDC SSO module, additionally select and refresh the **Administration** and **System** modules in the **MxModelReflection.MxObjects_Overview** page to configure User Provisioning.
 
-    {{< figure src="/attachments/appstore/use-content/modules/oidc/select-refresh-modules.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/use-content/modules/oidc/select_modules.png" class="no-border" >}}
 
 ### Migrating from Community Edition to Platform Edition{#migration}
 
@@ -448,7 +448,7 @@ The following constants are optional:
 
     Example: `User`
 
-* **UserType** – assign usertype to the created users
+* **UserType** – assign user type to the created users
 
     Example: `Internal`
 
@@ -466,8 +466,8 @@ The following constants are mandatory when creating an OIDC SSO Client Credentia
 
 * **ClientAlias** – the client alias
 * **AutomaticConfigurationURL** – the URL of the well-known endpoint (ending with `/.well-known/openid-configuration`)
-* **CustomATP** – a custom access token processing microflow — the value of `CompleteName` in the mxmodelreflection$microflows table
-Example: OIDC.Default_SAM_TokenProcessing_CustomATP
+* **CustomATP** – a custom access token processing microflow — the value of `CompleteName` in the `mxmodelreflection$microflows` table
+Example: `OIDC.Default_SAM_TokenProcessing_CustomATP`
 * **IsClientGrantOnly** (*default: false*) – allow to create Client Credential Configuration in the application
 
 {{% alert color="warning" %}}
@@ -501,6 +501,10 @@ If you create custom user entities as specializations of the `System.User` entit
 If you connect multiple IdPs to your Mendix app, you can use separate custom user entities for each IdP, each with its own attribute mapping.
 
 #### Custom User Provisioning Using a Microflow{#custom-provisioning-mf}
+
+{{% alert color="warning" %}}
+This feature is deprecated from the version 3.0.0 of the module.
+{{% /alert %}}
 
 Review the microflow `CUSTOM_UserProvisioning` in the **USE_ME** > **1. Configuration** folder of the OIDC module. This is where you can change the way that end-users are provisioned in your app. The OpenID token is passed to the microflow as a parameter. Use this object to find an existing, or create a new, `System.User` object for the end-user. This is set as the return value of the microflow. You can find examples included in the **USE_ME** > **1. Configuration** > **User Provisioning Examples** folder.
 
@@ -560,12 +564,16 @@ You can set up custom user provisioning once your app is running using the `OIDC
     * You can map multiple **IdP Attribute** (claims) to a **Configured Entity Attribute** but you cannot map a new **IdP Attribute** to a **Configured Entity Attribute** if it is already mapped.
     * The **IdP Attribute** is one of the fixed claims supported by the OIDC SSO module.
     * IdP Attributes(Claims) cannot be of type enum, autonumber, or an association.
+    * The image below shows you the default attribute mapping for the configuration.
 
-6. In the **Custom UserProvisioning**, select a microflow you want to run for [Custom User Provisioning Using a Microflow](#custom-provisioning-mf).
+        {{< figure src="/attachments/appstore/use-content/modules/oidc/default_mapping.png" max-width=80% >}}
 
-    The custom microflow name must begin with the string `UC_CustomProvisioning`. If you have added a new microflow, you will need to refresh the module containing your microflow as described in [Installing Mx Model Reflection](#mxmodelreflection).
+6. Optionally, you can use the custom logic in the **User Provisioning**. In the **Custom UserProvisioning** field, select a microflow you want to run for custom user provisioning. The custom microflow name must begin with the string `UC_CustomProvisioning` and requires the following parameters:
 
-    This selection can be blank if you do not want to add custom logic.
+    1. **UserInfoParameter(UserCommons.UserInfoParam)**: A Mendix object containing user claims information through its associated objects. You can use this  parameter to retrieve user provisioning configuration information.
+    2. **User(System.User)**: A Mendix object representing the user to be provisioned. Ensure that the selected microflow matches this parameter signature.
+
+    It will be executed after user creation or update of user. If you have added a new microflow, you will need to refresh the module containing your microflow as described in the [Installing Mx Model Reflection](#mxmodelreflection). This selection can be blank if you do not want to add custom logic.
 
 7. Click **Save** to save the configuration.
 
@@ -594,12 +602,12 @@ Role of user identifiers in OIDC and SCIM protocols:
 
 * OIDC protocol can use both types of identifiers based on use case:
 
-  * The ID token contains a `sub` claim, which includes the pairwise unique identifier (locally unique identifier).
-  * The ID-token also contains an `oid` claim, which includes the user’s object ID.
+    * The ID token contains a `sub` claim, which includes the pairwise unique identifier (locally unique identifier).
+    * The ID-token also contains an `oid` claim, which includes the user’s object ID.
 
 * SCIM:
 
-  * In the SCIM protocol, you typically want to use the object ID to identify a user. It is used as the value for the `externalID` claim in SCIM payloads by default.
+    * In the SCIM protocol, you typically want to use the object ID to identify a user. It is used as the value for the `externalID` claim in SCIM payloads by default.
 
 #### Guidance on User Identifier{#guidance-user-identifier}
 

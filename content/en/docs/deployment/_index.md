@@ -1,5 +1,6 @@
 ---
-title: "Deployment"
+title: "Deploying Apps"
+linktitle: "Deployment"
 url: /deployment/
 description: "Describes how to deploy Mendix apps to different environments and how to manage those deployments."
 weight: 32

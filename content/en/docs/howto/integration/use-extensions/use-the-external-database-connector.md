@@ -96,23 +96,58 @@ You can typecast `String` into UUID as shown below:
 
 1. Click **Use Response** to view the response data and mapping.
 
-2. In the **Response Structure** tab, you can view the entity.
+2. In the **Response Structure** tab, you can choose create **New Entity** or **Reuse Existing Entity**.
 
-3. Click **Save Query & Create Entity** to save the query and the newly created entity in the domain model. 
+3. If **New Entity** is selected, you can view the entity in the **Response** tab. Click **Save Query & Create Entity** to save the query and the newly created entity in the domain model. 
 
-{{< figure src="/attachments/howto/integration/use-the-external-database-connector/5.png" >}}
+    {{< figure src="/attachments/howto/integration/use-the-external-database-connector/5.png" >}}
+
+4. If **Reuse Entity** is selected, all entities mapped to other queries of same document are listed in the drop down list. Select  the entity you want to reuse and and click on **Save Query**.
+
+    {{< figure src="/attachments/howto/integration/use-the-external-database-connector/5a.png" >}}
 
 ### Save DML Query
 
 1. For DML queries, *Number of affected rows* will be displayed as a response.
-   
+
     For example, `INSERT INTO classicmodels.productlines(productLine, requestedProductRequirement)VALUES({productLine}, {requestedProductRequirement})`
 
 2. Click **Save Query**.
 
-{{< figure src="/attachments/howto/integration/use-the-external-database-connector/6.png" >}}
+	{{< figure src="/attachments/howto/integration/use-the-external-database-connector/6.png" >}}
 
 {{% alert color="info" %}} For all DML Queries, changes made to database in the Mendix Design phase are automatically rolled back. {{% /alert %}}
+
+## Update Existing Query
+
+It is possible to use the existing entity when updating a existing query. 
+
+{{% alert color="info" %}}
+
+This possibility was introduced in Studio Pro 10.15 and above.
+
+{{% /alert %}}
+
+For example, you can modify the query below to retrieve a list of productLine, textDescription, htmlDescription columns from ProductLines where the ProductLine is **Planes**.
+
+SQL Query:
+Existing Query: `Select requestedProductRequirement from productlines where productLine = {productLine}`
+Modified Query: `Select productLine, textDescription, htmlDescription from productlines where productLine = {productLine}`
+
+Do the following:
+
+1. Rerun the Query, to see the **Response**.
+
+2. Click **Use Response** to see the entity preview.
+
+3. Use the existing entity or create a new entity:
+
+4. If **New Entity** is selected, you can view the entity in the **Response** tab.
+     1. Click **Save Query & Create Entity** to save the query and the newly created entity in the domain model.
+
+5. If **Update Entity** is selected,you can see changes that will be made to the existing entity.
+     1. Click **Update Entity** to save the query and the changes made to the entity in the domain model.
+    		{{< figure src="/attachments/howto/integration/use-the-external-database-connector/5b.png" >}}
 
 ## Call Stored Procedure
 
@@ -176,7 +211,7 @@ For MSSQL, for **INOUT** and **OUT** parameters of type Decimal, test values (in
 
 5. Output details for the selected query auto-populate.
 
-{{< figure src="/attachments/howto/integration/use-the-external-database-connector/7.png" >}}
+	{{< figure src="/attachments/howto/integration/use-the-external-database-connector/7.png" >}}
 
 You are now ready to use data from an external database in your Mendix App.
 

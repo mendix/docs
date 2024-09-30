@@ -17,7 +17,7 @@ The Catalog collects metadata from exposed services and currently supports all O
 
 ## Expose OData via a Mendix App {#use-mendix-app}
 
-To expose OData via a Mendix app, replicate and save your persistent entity data in a module. In this module, expose the persistent entities as published OData services. This will allow read-only access to the external entity data within the Mendix Landscape.
+To expose OData via a Mendix app, replicate and save your persistable entity data in a module. In this module, expose the persistable entities as published OData services. This will allow read-only access to the external entity data within the Mendix Landscape.
 
 For more information, see [Published OData Services](/refguide/published-odata-services/) and [Building Connectors](/appstore/creating-content/connector-guide-build/).
 

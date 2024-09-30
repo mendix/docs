@@ -6,7 +6,7 @@ weight: 20
 ---
 
 {{% alert color="warning" %}}
-The Build API only works for apps which are deployed to the Mendix Cloud.
+The Build API only works for apps which are deployed to Mendix Cloud.
 {{% /alert %}}
 
 ## Introduction

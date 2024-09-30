@@ -13,7 +13,7 @@ Business events are like a mailing list to share event notifications between app
 
 With [Mendix Business Events](https://marketplace.mendix.com/link/component/202649), applications can signal when something important happens and can independently subscribe to these events if they want to be informed.
 
-To deliver these events reliably between your applications, an event broker is required. For apps running the Mendix cloud on licensed nodes, you will need to purchase a license for the [Mendix Event Broker](/appstore/services/event-broker/).
+To deliver these events reliably between your applications, an event broker is required. For apps running Mendix Cloud on licensed nodes, you will need to purchase a license for the [Mendix Event Broker](/appstore/services/event-broker/).
 
 {{% alert color="info" %}}
 Business events are supported in Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above and currently can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).{{% /alert %}}
@@ -32,7 +32,7 @@ To use Mendix Business Events, you will need the following:
 
 * The [Mendix Business Events](https://marketplace.mendix.com/link/component/202649) service from the Mendix Marketplace
 * Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above
-* An event broker; this can be a licensed [Mendix Event Broker](#mendix-event-broker) for apps running in the Mendix Cloud or the [local testing](#local-testing) broker (see [Deployment](#deployment))
+* An event broker; this can be a licensed [Mendix Event Broker](#mendix-event-broker) for apps running in Mendix Cloud or the [local testing](#local-testing) broker (see [Deployment](#deployment))
 * [Docker](https://www.docker.com/) for local deployment
 
 ## Licensing {#licensing}
@@ -205,7 +205,7 @@ The **PublishedBusinessEvent** and **ConsumedBusinessEvent** entities are necess
 
 * **PublishedBusinessEvent** - This non-persistable entity has the fields settings that every published event will include. Every published business event will inherit from this entity. The three fields can be set from the Java Action. This is used to define what your published business events look like.
 * **ConsumedBusinessEvent** - This entity has the fields that every consumed event will include. Every consumed business event will inherit from this entity. These fields will be set from the service, as will any additional fields that match with the payload of the event. This defines what you want to receive from the business events you subscribe to.
-* **DeadLetterQueue** - This persistent entity within the domain model of the Business Events service is used for generating a historical record of events that are generated for business event activities that were not successful or had errors when received by the consumer and can be referred to for troubleshooting. You can query the DeadLetterQueue entity to determine which received events could not be processed.
+* **DeadLetterQueue** - This persistable entity within the domain model of the Business Events service is used for generating a historical record of events that are generated for business event activities that were not successful or had errors when received by the consumer and can be referred to for troubleshooting. You can query the DeadLetterQueue entity to determine which received events could not be processed.
 * **Outbox** - This entity is used to store the event prior to being sent.  This entity is connected to the microflow where a business event is triggered.  If the microflow fails, the entity will be removed as part of the same transaction. If the event broker is down at runtime, business events will accumulate in the **Outbox**. They will be retried at increasing intervals for 48 hours and will fail after that time. Once an event is successfully delivered, it gets deleted from the **Outbox**.
 
 #### Dead Letter Queue for Failed Messages {#dead-letter-queue}
@@ -249,7 +249,7 @@ Business Events offers four different deployment models:
 
 * Deploying locally with the [Local Setup Tool](https://github.com/mendix/event-broker-tools)
 * Free apps using a free multi-tenant event broker
-* Production apps using the [Mendix Event Broker](#mendix-event-broker) running in the Mendix Cloud
+* Production apps using the [Mendix Event Broker](#mendix-event-broker) running in Mendix Cloud
 * Apps running their own Kafka cluster (bring your own Kafka)
 
 ### Local Deployment

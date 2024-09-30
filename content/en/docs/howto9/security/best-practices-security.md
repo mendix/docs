@@ -3,7 +3,7 @@ title: "Implement Best Practices for App Security"
 linktitle: "Best Practices for App Security"
 url: /howto9/security/best-practices-security/
 weight: 20
-description: "Describes the common aspects you should consider when delivering an application within the Mendix Cloud."
+description: "Describes the common aspects you should consider when delivering an application within Mendix Cloud."
 aliases:
     - /howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications.html
     - /howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications
@@ -12,9 +12,9 @@ aliases:
 
 ## Introduction
 
-Security is one of the most important aspects of an application, because misconfiguration or failing security can have large stakeholder consequences. The Mendix Runtime protects your application and data according to your model, and the Mendix Cloud handles security at the infrastructure level. 
+Security is one of the most important aspects of an application, because misconfiguration or failing security can have large stakeholder consequences. The Mendix Runtime protects your application and data according to your model, and Mendix Cloud handles security at the infrastructure level. 
 
-This document describes the common aspects you should consider when delivering an application within the Mendix Cloud.
+This document describes the common aspects you should consider when delivering an application within Mendix Cloud.
 
 ## Implementing Access Rules{#access-rules}
 
@@ -194,7 +194,7 @@ This information can be exploited by an attacker (for example, by trying to gues
 
 The user name of the administrator can be changed in 's **App Security** settings on the **Administrator** tab.
 
-When deployed to the Mendix Cloud, the information about the administrator user name and role is taken into account when using the **Change admin password** button on the environment. After changing the settings in and redeploying the application, a successful admin password change will trigger the creation of a user in the app with the new name and role.
+When deployed to Mendix Cloud, the information about the administrator user name and role is taken into account when using the **Change admin password** button on the environment. After changing the settings in and redeploying the application, a successful admin password change will trigger the creation of a user in the app with the new name and role.
 
 {{% alert color="info" %}}
 At this point, the application does not automatically remove the user with the previous user name. Removing the old **MxAdmin** account has to be done manually.
@@ -212,7 +212,7 @@ By using an SSL connection and adding the public key of the endpoint within your
 
 There are several scenarios possible for protecting your outgoing connections using encryption. These depend on the infrastructure possibilities and protocols used. For more information, see [How to Secure Outgoing Connections from Your App](/developerportal/deploy/securing-outgoing-connections-from-your-application/).
 
-You can add individual certificates in your app's settings in . Test, acceptance, and production environments require their certificates to be uploaded to the Mendix Cloud (for more information, see [Certificates](/developerportal/deploy/certificates/)).
+You can add individual certificates in your app's settings in . Test, acceptance, and production environments require their certificates to be uploaded to Mendix Cloud (for more information, see [Certificates](/developerportal/deploy/certificates/)).
 
 ## Adding HTTP Headers {#adding-http-header}
 
@@ -220,11 +220,11 @@ HTTP headers can add an additional layer of security and help you detect certain
 
 An example of an attack is when an application is embedded in an iframe. Applications that can be embedded within an iframe can be misused by attackers. By using an overlay, it could trick users into clicking buttons and make them perform actions within the application on their behalf without knowing it. This approach is called [clickjacking](https://www.owasp.org/index.php/Clickjacking).
 
-By sending a header to the user’s browser, it can block the use of the Mendix application within an iframe and avoid this type of attack. The header is set by default to block embedding within an iframe. For the Mendix Cloud, this can be configured using [HTTP Headers](/developerportal/deploy/environments-details/#http-headers) in your node’s environment details within **Apps**. If you change this value, you will also need to ensure that *SameSite* cookies are set to the correct value. See [Iframes and Running Apps](/developerportal/deploy/running-in-iframe/) for more information.
+By sending a header to the user’s browser, it can block the use of the Mendix application within an iframe and avoid this type of attack. The header is set by default to block embedding within an iframe. For Mendix Cloud, this can be configured using [HTTP Headers](/developerportal/deploy/environments-details/#http-headers) in your node’s environment details within **Apps**. If you change this value, you will also need to ensure that *SameSite* cookies are set to the correct value. See [Iframes and Running Apps](/developerportal/deploy/running-in-iframe/) for more information.
 
 If you are running your Mendix app on Mendix for Private Cloud, you can configure the HTTP headers as part of advanced operator configuration. See the [Endpoint (network) Configuration](/developerportal/deploy/private-cloud-cluster/#advanced-network-settings) section of *Creating a Private Cloud Cluster*.
 
-The Mendix Cloud Foundry Buildpack and Mendix Docker Buildpack also provide [an option to configure HTTP headers](https://github.com/mendix/cf-mendix-buildpack#built-in-proxy-configuration).
+Mendix Cloud Foundry Buildpack and Mendix Docker Buildpack also provide [an option to configure HTTP headers](https://github.com/mendix/cf-mendix-buildpack#built-in-proxy-configuration).
 
 If you use a traditional deployment of your Mendix app, using Windows or Linux, you need to set up these headers on the web server in front of your Mendix application server, for example in Microsoft Internet Informations Services (IIS).
 

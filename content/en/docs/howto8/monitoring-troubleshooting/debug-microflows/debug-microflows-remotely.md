@@ -118,7 +118,7 @@ If you do cannot connect the debugger, then you do not have sufficient permissio
 
 2. In the **Connect Debugger** dialog box set the following:
 
-    * **Connect to** – select the option *An app running in the Mendix Cloud or on another remote server.*
+    * **Connect to** – select the option *An app running in Mendix Cloud or on another remote server.*
     * **URL** – the *URL* from the **Debugger Settings** for your app environment
     * **Password** – the *Password* from the **Debugger Settings** for your app environment
 

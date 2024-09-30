@@ -1,5 +1,6 @@
 ---
-title: "Catalog"
+title: "Catalog Release Notes"
+linktitle: "Catalog"
 url: /releasenotes/catalog/
 description: "Release notes for updates to the Mendix Catalog"
 weight: 36
@@ -12,6 +13,18 @@ aliases:
 These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
+
+### September 26, 2024
+
+#### Improvement
+
+* We made a few UI styling adjustments.
+
+### September 12, 2024
+
+#### Improvement
+
+* We updated the terminology used in the UI when describing contract elements (such as entities and actions) to be more specific.
 
 ### August 29, 2024
 
@@ -256,7 +269,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Features
 
-* We added [beta](/releasenotes/beta-features/) support for published REST services (OpenAPI) to the Catalog. REST services in your Mendix app are now automatically registered when you deploy to the Mendix Cloud. For more information, see [OpenAPI Automatic Registration](/catalog/register/openapi-automatic-registration/). Have a look and [let us know what you think](https://community.mendix.com/link/space/catalog).
+* We added [beta](/releasenotes/beta-features/) support for published REST services (OpenAPI) to the Catalog. REST services in your Mendix app are now automatically registered when you deploy to Mendix Cloud. For more information, see [OpenAPI Automatic Registration](/catalog/register/openapi-automatic-registration/). Have a look and [let us know what you think](https://community.mendix.com/link/space/catalog).
 
 #### Improvements
 

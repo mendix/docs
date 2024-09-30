@@ -34,7 +34,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## The Basics
 
-In the Mendix Cloud, the debugger is always listening for connections so you cannot turn it on or off. To debug your app in the cloud, you need to get a URL and a password from the app environment and provide that information to Studio Pro. The steps below explain how to do this.
+In Mendix Cloud, the debugger is always listening for connections so you cannot turn it on or off. To debug your app in the cloud, you need to get a URL and a password from the app environment and provide that information to Studio Pro. The steps below explain how to do this.
 
 {{% alert color="info" %}}
 The debugger supports only debugging of single-instance environments. Multi-instance environments need to be scaled down to one instance before the debugger can be used. See [Scaling Your Environment in Mendix Cloud](/developerportal/deploy/scale-environment/) for more information.
@@ -140,7 +140,7 @@ If you do cannot connect the debugger, then you do not have sufficient permissio
 
 2. In the **Connect Debugger** dialog box set the following:
 
-    * **Connect to** – select the option *An app running in the Mendix Cloud or on another remote server.*
+    * **Connect to** – select the option *An app running in Mendix Cloud or on another remote server.*
     * **URL** – the *URL* from the **Debugger Settings** for your app environment
     * **Password** – the *Password* from the **Debugger Settings** for your app environment
 

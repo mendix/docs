@@ -85,6 +85,10 @@ You can see which widgets in a page have styling applied via the style or class 
 On a DataGrid column, a dynamic class is only applied to the `<col>` element, not to the `<td>` element (in contrast to the class property). 
 {{% /alert %}}
 
+{{% alert color="info" %}}
+In Studio Pro 10.15 and above, dynamic classes do not require a data container.
+{{% /alert %}}
+
 ### Documentation{#documentation}
 
 Some widgets, for example snippets and building blocks, have a **Documentation** property which can be used to store developer documentation. This can be used to explain to other developers how to use these widgets. End-users will never see this documentation.
@@ -392,6 +396,10 @@ For example, you might want a button to only be visible if a condition is met. A
 {{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/visibility-example.png" alt="Visibility Example" class="no-border" >}}
 
 Note that the expression is evaluated in the browser, and hence, we advise against using "secret" values (like access keys) in it. In particular, we disallow usages of [constants](/refguide/constants/). Also, client-side expressions currently do not support all the functions that are available in the microflows. Please refer to an autocomplete list to know what functions are supported in your version.
+
+{{% alert color="info" %}}
+In Studio Pro 10.15 and above, dynamic classes do not require a data container.
+{{% /alert %}}
 
 #### Module Roles
 

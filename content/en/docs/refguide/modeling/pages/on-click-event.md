@@ -337,7 +337,7 @@ The following properties are specific for this event:
 
 For more information, see the [Instance-Related Entities](/refguide/workflow-engine/#instance) section in *Workflow Engine*.
 
-###  Complete User Task {#complete-task}
+### Complete User Task {#complete-task}
 
 The **Complete user task** event marks the specified user task in the workflow as completed.
 

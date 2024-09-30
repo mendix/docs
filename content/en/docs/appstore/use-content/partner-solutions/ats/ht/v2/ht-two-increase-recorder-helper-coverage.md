@@ -45,7 +45,7 @@ To add a constant in Mendix Studio Pro follow these steps:
 2. In the **Configuration** tab click **New**. This opens the **New Configuration** dialog.
 3. In the dialog click the **Constants** tab and click **New**. This opens the **Select Constant** dialog.
 4. Select a module in this dialog where you want to add the constant and click **New**. This opens the **Add Constant** dialog.
-5. Enter a name in the dialog and click **OK**. This opens the **Constant** dialog. where you can add the following properties:
+5. Enter a name in the dialog and click **OK**. This opens the **Constant** dialog, where you can add the following properties:
 
     * Name: EnableScopedSeleniumClasses
     * Type: Boolean

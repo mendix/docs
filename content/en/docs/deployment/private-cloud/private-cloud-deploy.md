@@ -39,7 +39,7 @@ To deploy an app to your private cloud platform, you need the following:
 
 ### Selecting Mendix for Private Cloud
 
-When you first create your app, it will be set to deploy to the Mendix Cloud. You need to change the target to be private cloud.
+When you first create your app, it will be set to deploy to Mendix Cloud. You need to change the target to be private cloud.
 
 1. Open your app in [Apps](https://sprintr.home.mendix.com/).
 
@@ -57,6 +57,10 @@ Before you can create an environment, you will need to create a deployment packa
 
 {{% alert color="warning" %}}
 Deployment package creation for Mendix versions 7 and below is no longer supported. Upgrade to version 8 or above in order to build and deploy.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+The deployment package created with Java 17/21 support requires the Mendix Operator to be in version 2.15.0 or above.
 {{% /alert %}}
 
 1. Open your app in [Apps](https://sprintr.home.mendix.com/).
@@ -532,18 +536,18 @@ If you change the data type and value in the .mpr file, the changes are visible 
 
 ### Network Tab
 
-On the Network tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections. This works in the same way as the Network tab for deployments to the Mendix Cloud. For more details on these, see the [Network Tab](/developerportal/deploy/environments-details/#network-tab) section of *Environment Details*.
+On the Network tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections. This works in the same way as the Network tab for deployments to Mendix Cloud. For more details on these, see the [Network Tab](/developerportal/deploy/environments-details/#network-tab) section of *Environment Details*.
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/network-tab.png" class="no-border" >}}
 
 ### Runtime Tab {#runtime-tab}
 
-On the Runtime tab, you can change various runtime settings for your app environment. This works in the same way as the Runtime tab for deployments to the Mendix Cloud. For more details on these, see the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details*.
+On the Runtime tab, you can change various runtime settings for your app environment. This works in the same way as the Runtime tab for deployments to Mendix Cloud. For more details on these, see the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details*.
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/runtime-tab.png" class="no-border" >}}
 
 {{% alert color="info" %}}
-When you use some settings on the Runtime tab for Mendix for Private Cloud they may work differently from how they work in the Mendix Cloud.
+When you use some settings on the Runtime tab for Mendix for Private Cloud they may work differently from how they work in Mendix Cloud.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -845,9 +849,9 @@ The Mendix Operator CR is processed by the Mendix Operator into four steps:
 
 1. The Build CR is created – this creates a Docker image from the app deployment package, pushes it into the Image Registry, and provides the correct information to the Runtime CR
 
-2. The StorageInstance CR is created for the database – this causes the Operator to provision database database, according to the plan selected, and pass information about the database to the Runtime CR
+2. The StorageInstance CR is created for the database – this causes the Operator to provision the database, according to the plan selected, and pass information about the database to the Runtime CR
 
-3. The StorageInstance CR is created for the file storage – this causes the Operator to provision an file storage bucket for the app and pass information about the storage to the Runtime CR
+3. The StorageInstance CR is created for the file storage – this causes the Operator to provision a file storage bucket for the app and pass information about the storage to the Runtime CR
 
 4. The Ingress CR is created – this sets up a route to the app.
 

@@ -1,20 +1,49 @@
 ---
-title: "Mendix for Private Cloud"
+title: "Mendix for Private Cloud Release Notes"
+linktitle: "Mendix for Private Cloud"
 url: /releasenotes/developer-portal/mendix-for-private-cloud/
 weight: 20
 description: "Release notes for deployment using Mendix for Private Cloud"
 ---
 
-These release notes cover changes to deployment to [Mendix for Private Cloud](/developerportal/deploy/private-cloud/). There are separate release notes for other deployment targets, see [Deployment](/releasenotes/developer-portal/deployment/) release notes page for further information.
+These release notes cover changes to deployment to [Mendix for Private Cloud](/developerportal/deploy/private-cloud/). There are separate release notes for other deployment targets; for more information, see the [Deployment](/releasenotes/developer-portal/deployment/) release notes page.
 
-For information on the current status of deployment to Mendix for Private Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
+For information on the current status of deployment to Mendix for Private Cloud and any planned releases, see [Mendix Status](https://status.mendix.com/).
 
 ## 2024
+
+### September 13th, 2024
+
+#### License Manage CLI v0.9.0
+
+* We have added a new feature to the PCLM CLI that allows users to specify the path for a self-signed CA certificate for the PCLM server.
+
+#### Mendix Operator v2.19.0 {#2.19.0}
+
+* It is now possible to set the log levels in Operator deployment, enabling customers to tailor log visibility according to their specific needs. (Ticket [223377](https://mendixsupport.zendesk.com/agent/tickets/223377))
+* We have also removed unnecessary Operator logs, removed outdated entries, and eliminated repeated messages.
+* We have updated components to the latest dependency versions in order to improve security score ratings for container images.
+* You can now configure the Operator to trust the Private Cloud Licensing Manager using a self-signed CA certificate.
+* We have resolved an issue where the application couldn't be scaled up when the namespace was configured with PCLM but lacked licenses.
+* The logs are now generated in JSON format so that most fields (such as log levels) are now automatically recognized.
+
+### September 5th, 2024
+
+#### Portal Improvements
+
+* We have resolved an issue where updates to constant descriptions were not being reflected in the portal (Ticket [225562](https://mendixsupport.zendesk.com/agent/tickets/225562)).
+* We have resolved an issue where updating the environment resulted in an invalid MxAdmin password error (Ticket [226829](https://mendixsupport.zendesk.com/agent/tickets/226829)).
+
+#### Deploy API
+
+* We have fixed an issue where new constants from Studio Pro were not propagated to the cluster by the **Update Environment** API call if they were not specifically mentioned in the manifest. Their default values will be the ones set in Studio Pro.
+* We have addressed an issue in the **Update Namespace** API where updating a namespace also required providing **Additional Information** related to the namespace in the manifest. The field has now been marked as non-editable in the specification file and its validation has been removed (Ticket [163987](https://mendixsupport.zendesk.com/agent/tickets/163987)).
+* We have added support for modifying ephemeral storage through the API (Ticket [226147](https://mendixsupport.zendesk.com/agent/tickets/226147)).
 
 ### August 15th, 2024
 
 * We now allow rounding off model constants value with decimal type to 10 decimal digits.
-* We have fixed an issue where the build status failed to be retrieved (ticket [224896](https://mendixsupport.zendesk.com/agent/tickets/224896)).
+* We have fixed an issue where the build status failed to be retrieved (Ticket [224896](https://mendixsupport.zendesk.com/agent/tickets/224896)).
 
 #### Portal Enhancements
 
@@ -24,7 +53,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### License Manage CLI v0.8.0
 
-* We have introduced a new feature in the PLCL CLI that enables users to upgrade their old PCLM server versions to the latest available version.
+* We have introduced a new feature in the PLCM CLI that enables users to upgrade their old PCLM server versions to the latest available version.
 
 #### Portal Enhancements
 

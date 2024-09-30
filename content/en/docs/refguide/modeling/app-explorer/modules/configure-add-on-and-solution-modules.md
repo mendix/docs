@@ -9,7 +9,7 @@ weight: 20
 
 Add-on and solution modules are special types of modules that are developed to add functionality to an app. They have [intellectual property (IP) protection](/appstore/creating-content/sol-ip-protection/) enabled, and they have the *.mxmodule* extension. For more information on IP protection, see . 
 
-The main difference between an add-on and a solution module is their purpose. An add-on module is developed to be a stand-alone functionality that other users can consume in the their apps (for example, an add-on can be a connector). 
+The main difference between an add-on and a solution module is their purpose. An add-on module is developed to be a standalone functionality that other users can consume in the their apps (for example, an add-on can be a connector). 
 
 Solution modules are always part of a solution, which is any Mendix app that is suitable to be sold to multiple different customers. Solution modules are dependent on each other and are inseparable. Solutions modules form the solution core of the solution. 
 

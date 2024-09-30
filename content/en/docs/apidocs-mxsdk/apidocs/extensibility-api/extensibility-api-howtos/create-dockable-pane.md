@@ -52,6 +52,10 @@ public class MyDockablePaneExtensionWebViewModel(string homePage) : WebViewDocka
 }
 ```
 
+{{% alert color="warning" %}}
+{{% snippet file="/static/_includes/apidocs-mxsdk/warning-wwwroot.md" %}}
+{{% /alert %}}
+
 The code above creates a new web-enabled tab view. You still need a way to show the new dockable pane. To do so, you need to modify the menu extension you added when you [created the menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/). Simple replace the existing content of `MyMenuExtension.cs` with the following code:
 
 ```csharp

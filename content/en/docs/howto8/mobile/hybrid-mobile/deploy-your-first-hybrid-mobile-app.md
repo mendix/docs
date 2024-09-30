@@ -6,7 +6,7 @@ weight: 50
 
 ## Introduction
 
-Besides boasting native functionality, another major advantage of a hybrid mobile apps is that you only need to go through the approval process once. Updates after the approval process only require a new deployment of your app in the Mendix cloud.
+Besides boasting native functionality, another major advantage of a hybrid mobile apps is that you only need to go through the approval process once. Updates after the approval process only require a new deployment of your app in Mendix Cloud.
 
 This how-to teaches you how to do the following:
 
@@ -26,7 +26,7 @@ To open a hybrid example app, follow these steps:
 1. Open Mendix Studio Pro, clikc **New App**, and under the **Starter Apps** tab click **Blank App**.
 2. Click the **Use this starting point** button.
 3. Adjust your configurations (be sure to keep **Enable online services** > **Yes** selected) and then click **Create app**.
-4. Click **Run** to deploy this application to the Mendix Cloud:
+4. Click **Run** to deploy this application to Mendix Cloud:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/deploy-your-first-hybrid-mobile-app/18581186.png" class="no-border" >}} 
 

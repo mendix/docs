@@ -14,6 +14,12 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 ## 2024
 
+### September 29, 2024
+
+#### New Features
+
+* We have centralized app team roles at the company level. This enhances your ability to govern access across all Mendix applications and also enables the programmatic assignment of app team roles via [the Mendix Projects API](/apidocs-mxsdk/apidocs/projects-api/). You can migrate the old app-level app team roles to centralized company-level app team roles on the [Roles & Permissions](/control-center/roles-and-permissions/#migrate-centralized-roles) page.
+
 ### September 5, 2024
 
 #### New Features

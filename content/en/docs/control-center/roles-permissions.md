@@ -48,10 +48,12 @@ The results of migrating to centralized company-level roles will be as follows:
 
 - Mendix Admins will be the only ones who can create or modify app team roles.
 
-- Scrum Masters and team members will only be able to view the roles established by Mendix Admins and select the appropriate one. They will not have the ability to modify role permissions. If a custom permission set is needed, they must reach out to a Mendix Admin for assistance in creating it.
+- Scrum Masters and team members will only be able to view the app team roles established by Mendix Admins and select the appropriate one. They will not have the ability to modify the permissions of app team roles. If a custom permission set is needed, they must reach out to a Mendix Admin for assistance in creating it.
 
-- If there were any app-specific custom team roles before the migration, they will be shown on the **Roles & Permissions** page in Control Center with the tag **Inherited from project**. Mendix Admin can review these roles, keep the useful ones, and merge any duplicates.
+- If there were any app-specific custom app team roles before the migration, they will appear on the **Roles & Permissions** page in Control Center with the tag **Inherited from project**. Mendix Admin can review these app team roles, keep the useful ones, and merge any duplicates.
 
   {{% alert color="info" %}}
-  The roles with the tag **Inherited from project** will not be shown to members of your company when they [invite others to an app](/developerportal/general/team/#inviting).
+  
+  When members of your company  [invite someone to an app](/developerportal/general/team/#inviting), they cannot select any role with the tag **Inherited from project**, since these roles will not be shown to them.
+  
   {{% /alert %}} 

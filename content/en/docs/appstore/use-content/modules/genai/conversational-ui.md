@@ -92,9 +92,9 @@ If you need additional attributes or associations on the `ChatContext`, use an e
 
 The following operations can be found in the toolbox for processing the [ChatContext](#chat-context):
 
-* `Create ChatContext & Set ActionMicroflow` creates a new `ChatContext` and a new `ProviderConfig` (or a specialization of such depending on the input). The `ProviderConfig` is added to the `ChatContext` and set to active. Additionally, the action microflow of the new `ProviderConfig` is set.
-* `Create ChatContext & Set ProviderConfig` creates a new `ChatContext` and sets a given `ProviderConfig` to active.
-* `Create ChatContext & Set ProviderConfig (List)` creates a new `ChatContext` and adds a `ProviderConfig` to the `ChatContext` and sets it to active. In addition, a list of `ProviderConfigs` can be added to the `ChatContext` (non-active, but selectable in the UI).
+* `New Chat` creates a new `ChatContext` and a new `ProviderConfig` (or a specialization of such depending on the input). The `ProviderConfig` is added to the `ChatContext` and set to active. Additionally, the action microflow of the new `ProviderConfig` is set.
+* `New Chat with Existing Config` creates a new `ChatContext` and sets a given `ProviderConfig` to active.
+* `New Chat with Additional Configs` creates a new `ChatContext` and adds a `ProviderConfig` to the `ChatContext` and sets it to active. In addition, a list of `ProviderConfigs` can be added to the `ChatContext` (non-active, but selectable in the UI).
 * `Set ConversationID` sets the ConversationID on the `ChatContext`. Storing the ConversationID is needed for chat with history within Retrieve and Generate with [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/).
 * `Set Topic` sets the `Topic` of the `ChatContext`. This attribute can be used in the **History** sidebar while making historical chats visible to users.
 
@@ -124,7 +124,7 @@ It is possible to add suggested user prompts to a `ChatContext`. They appear as 
 
 The `ProviderConfig` contains the selection of the model provider for the AI Bot to chat with. This contains an action microflow that is executed when the **Send** button is clicked. You can store additional information, such as connection details, on the `ProviderConfig` by using a specialization and adding the necessary fields. For an example implementation, see the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926).
 
-The **Create ProviderConfig for ChatContext** toolbox action adds a new `ProviderConfig` (or a specialization of such depending on the input) to a `ChatContext`. The `ProviderConfig` can optionally also be set to active if `IsActive` is set to true. Additionally, the action microflow of the new `ProviderConfig` is set.
+The **New Config for Chat** toolbox action adds a new `ProviderConfig` (or a specialization of such depending on the input) to a `ChatContext`. The `ProviderConfig` can optionally also be set to active if `IsActive` is set to true. Additionally, the action microflow of the new `ProviderConfig` is set.
 
 #### Action Microflow {#action-microflow}
 
@@ -132,7 +132,7 @@ The `Action Microflow` is executed by clicking the **Send** button. It handles t
 
 ##### Using the Action Microflow {#set-action-microflow}
 
-Add the action microflow to an existing `ProviderConfig` by using the **Set ActionMicroflow** toolbox action. Note that the action does not commit the object, so you must also add a step to commit it after.
+Add the action microflow to an existing `ProviderConfig` by using the **Set Chat Action** toolbox action. Note that the action does not commit the object, so you must also add a step to commit it after.
 
 ##### Creating a Custom Action Microflow
 
@@ -141,7 +141,7 @@ If you want to create your own custom action microflow, keep the following consi
 * Only one input parameter of [ChatContext](#chat-context) is accepted.
 * The return type needs to be a `Success` Boolean.
 * Use the [request operations](#request-operations) to facilitate the interaction between the chat context and the model.
-* When creating the `ProviderConfig`, use [Set ActionMicroflow](#set-action-microflow) to set the microflow.
+* When creating the `ProviderConfig`, use [Set Chat Action](#set-action-microflow) to set the microflow.
 
 ### Pages and Layouts {#pages-and-layouts}
 

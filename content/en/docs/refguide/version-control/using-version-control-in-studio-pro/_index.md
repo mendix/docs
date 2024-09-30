@@ -198,7 +198,8 @@ A repository (remote or local) can contain a number of development lines. Each d
 It is often convenient to have more than one development line. For example, one development line is for fixing bugs in the currently deployed version of your app and another line is where you develop new functionality. If you then find a bug in the deployed version, you can fix it in the corresponding development line irrespective of the state of the development line where new functionality is developed. For more information about branches, see the [Branches](/refguide/version-control/#branches) section in *Version Control*. 
 
 ### Working with Branches in Studio Pro
-This chapter outlines how to create branches in Studio Pro, as well as the [Mendix branching best-practices](#branching-best-practices).
+
+This section outlines how to create branches in Studio Pro. It also recommends some [Branching Best-Practices](#branching-best-practices) when developing Mendix apps.
 
 #### Branching
 
@@ -310,56 +311,67 @@ After setting up the driver either locally or globally, create a *.gitattributes
 
 Save the files and now when **git merge** is run and it involves *.mpr* files, the *mx.exe* merge will run Studio Pro merge algorithm before Git finishes the merge.
 
-### Branching best-practices {#branching-best-practices}
-Depending on your team size and preferences, specific branching strategies might be better suited than others. We have outlined three strategies with increasing complexity and control with pros and cons.
+### Branching Best-Practices {#branching-best-practices}
 
-* [Trunk-based (single branch line)](#branching-trunk): straightforward, easy to start with, well-suited for small teams
-* [Trunk-based + feature branches](#branching-trunk-and-feature): reduces risk of merge conflicts, well-suited for larger teams and a regular release cadence
-* [Advanced branching](#branching-advanced): guarding quality becomes easier, well-suited for large teams and structured processes
+Depending on your team's size and preferences, you may find some branching strategies better suited than others. Mendix suggests using one of the following three strategies which have increasing complexity and control and different pros and cons.
 
-We recommend starting 'trunk-based' and adopting 'trunk-based + feature branches' next. Having a lot of merge conflicts, or a first version released to production, are sensible triggers to move away from solely trunk-based development.
-For experienced teams, or for organizations with stricter processes and/or auditability criteria, the 'advanced branching' approach is recommended.
+* [Trunk-Based (Single Branch Line)](#branching-trunk): straightforward, easy to start with, well-suited for small teams
+* [Trunk-Based with Feature Branches](#branching-trunk-and-feature): reduces risk of merge conflicts, well-suited for larger teams and a regular release cadence
+* [Advanced Branching](#branching-advanced): guarding quality becomes easier, well-suited for large teams and structured processes
 
-#### Trunk-based (single branch line) {#branching-trunk}
-In trunk-based development, all developers work on a single branch, typically the "trunk" or "main" branch. Changes are frequently committed to this branch, and developers continuously integrate their work with the mainline codebase. 
+We recommend starting trunk-based and adopting trunk-based with feature branches next, if needed. Getting a lot of merge conflicts or releasing a first version to production are sensible triggers to move away from solely trunk-based development.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/branching-trunk.png" class="no-border" >}}
+For experienced teams, or for organizations with stricter processes and/or auditability criteria, the advanced branching approach is recommended.
+
+#### Trunk-Based (Single Branch Line) {#branching-trunk}
+
+In trunk-based development, all developers work on a single branch, typically the "trunk" or "main" branch. Changes are frequently committed to this branch, and developers continuously push  their work to the remote repository. 
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/branching-trunk.png" >}}
 
 Benefits are:
+
 * Simplicity: Trunk-based development is straightforward and easy to understand, making it suitable for small teams or projects with less complex requirements.
 * Fast feedback: Developers receive immediate feedback on the impact of their changes, helping to identify and resolve issues quickly.
-* Reduced merge conflicts: Since developers frequently integrate their code, the chances of encountering significant merge conflicts are minimized.
+* Reduced merge conflicts: Since developers frequently push their code, the chances of encountering significant merge conflicts are minimized.
 
 Disadvantages are:
+
 * Risk of instability: Constant changes to the main branch can introduce instability, especially if proper testing and quality assurance practices are not in place.
 * Limited parallel development: The single branch model can limit parallel development efforts, making it challenging to work on multiple features concurrently.
 
 This approach is best-suited for small teams.
 
-#### Trunk-based + feature branches {#branching-trunk-and-feature}
+#### Trunk-Based with Feature Branches {#branching-trunk-and-feature}
+
 [Trunk-based](#branching-trunk) can also be combined with short-lived feature branches. Developers work on feature branches, which are created from the main branch. Once a feature is complete, it is merged back into the main branch.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/branching-trunk-and-feature.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/branching-trunk-and-feature.png" >}}
 
 Benefits are:
+
 * Limited complexity: This approach is still relatively straightforward and easy to understand for most developers.
 * Isolation of changes: Working on feature branches allows developers to isolate their changes, reducing the risk of disrupting the mainline codebase.
 
 Disadvantages are:
+
 * Overhead: Separate feature branches can lead to overhead in terms of merging, code review, and testing.
 
 This approach is the most-used among Mendix customers, and is best-suited for teams with some experience, or teams running into the limitations of trunk-based development.
 
-#### Advanced branching {#branching-advanced}
+#### Advanced Branching {#branching-advanced}
+
 In branch-based development, there are typically two types of branches:
+
 * Long-lived branches: main branch, development branch, release branch
 * Short-lived branches: feature branches
 
 Developers work on feature branches, which are merged into the development branch for integration and testing. The release branch is used to prepare for a stable release, while the main branch represents the production-ready codebase.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/branching-advanced.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/branching-advanced.png" >}}
 
 Benefits are:
+
 * Isolation of changes: Working on feature branches allows developers to isolate their changes, reducing the risk of disrupting the mainline codebase.
 * Parallel development: Multiple features can be developed simultaneously, enhancing productivity.
 * Granular control: Different branches provide granular control over the development and release process.
@@ -367,10 +379,11 @@ Benefits are:
 * Scalability: This strategy scales well with larger teams and complex projects
 
 Disadvantages are:
+
 * Complexity: Managing multiple long-lived branches and their interactions requires careful planning and coordination.
 * Overhead: Maintaining separate branches can lead to overhead in terms of merging, code review, and testing.
 
-This approach is best-suited for large teams, or teams preferring a more rigid process. Projects with strict release cycles can also really benefit from this approach, as the release branch is always stable.
+This approach is best-suited to large teams or teams preferring a more rigid process. Projects with strict release cycles can also benefit from this approach, as the release branch is always stable.
 
 ## Versioning an App Deployed to the Cloud {#versioning-app}
 

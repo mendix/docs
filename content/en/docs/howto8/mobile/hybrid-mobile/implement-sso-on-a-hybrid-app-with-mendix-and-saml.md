@@ -125,6 +125,17 @@ MxApp.onConfigReady(function(config) {
 
 To address the [second problem](#secondproblem), after a successful authentication against the IdP, Mendix stores a token in the device’s local storage. The system will use that token from that moment on to create a new session for the user. The session is created in Mendix only, so a new authentication against the IdP will not be performed again. This token is a TokenInformation (part of the System module) object, and it can be accessed/edited in microflows. By default, this local token will never expire, but this can be overridden by changing the `com.mendix.webui.HybridAppLoginTimeOut` [Runtime customization setting](/refguide8/custom-settings/). The downside of this approach is that access rights will not be updated upon login, since no interaction is done with the IdP. However, in most systems using SSO, user and role provisioning is handled separately from the authentication, so this might not be an issue.
 
+In some cases the window will not close properly. To solve this issue, add the following code (after line 9 as shown in the snippet above) as a workaround:
+
+```javascript
+    samlWindow.addEventListener('loadstart', (param)=>{
+        if(param.url == config.unmodifiedRemoteUrl + 'index.html'){
+            samlWindow.close();
+            window.mx.afterLoginAction && window.mx.afterLoginAction();
+        }
+    });
+```
+
 ### The Hybrid App Package
 
 To use the hybrid app package, follow these steps:

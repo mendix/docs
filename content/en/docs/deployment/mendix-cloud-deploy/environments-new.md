@@ -55,11 +55,11 @@ You can also perform the following actions:
 * **More Options** ({{< icon name="three-dots-menu-horizontal" >}}):
     * **Restart** – Stops the running application and starts it again. Restarting your app is required for applying new constant values or scheduled events to the environment.
     * **Start** - Starts a stopped application.
-    * **View Live Log** – Shows a live log for your application. It is identical to the **View Live Log** button on the [Logs](/developerportal/operate/logs/) page.
-    * **Show Debugger Information** – Shows the settings needed to connect the debugger in Studio Pro to your app. For more information on debugging in the cloud, see [How To Debug Microflows Remotely](/refguide/debug-microflows-remotely/).
-    * **Show Logged in Users** – Shows all users who are logged in to your app.
-    * **Show Running Now** – Monitor all actions that are currently running in your environment. For more information, see [Running Now](/developerportal/deploy/mxcloud-runningnow/).
-    * **Stop Application** – Stops the application.
+    * **Live Log** – Shows a live log for your application. It is identical to the **View Live Log** button on the [Logs](/developerportal/operate/logs/) page.
+    * **Debugger Info** – Shows the settings needed to connect the debugger in Studio Pro to your app. For more information on debugging in the cloud, see [How To Debug Microflows Remotely](/refguide/debug-microflows-remotely/).
+    * **Running Now** – Monitor all actions that are currently running in your environment. For more information, see [Running Now](/developerportal/deploy/mxcloud-runningnow/).
+    * **Logged in Users** – Shows all users who are logged in to your app.
+    * **Stop** – Stops the application.
 
 To view more information about each environment and the deployment package it is running, use the **Expand** ({{< icon name="chevron-down" >}}) toggle on the environment.
 

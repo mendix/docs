@@ -139,9 +139,9 @@ The tables in the following sub-sections present the shortcut keys that can be u
 | Windows | Mac | Description |
 | --- | --- | --- |
 | <kbd>Enter</kbd> - on an element | <kbd>Enter</kbd> - on an element | If an element is selected, edit its properties. |
-| <kbd>Enter</kbd> - on a flow arrow | Not available | If a flow arrow is selected, open the Logic Recommender dialog box. |
-| <kbd>Enter</kbd> - on a Logic Recommender suggestion list item | <kbd>Enter</kbd> - on a Logic Recommender suggestion list item | The selected item is added on the flow arrow. The Logic Recommender dialog box is shown again for the next action to be added. |
-| <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + Mouse button) - on a Logic Recommender suggestion list item| <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + Mouse button) - on a Logic Recommender suggestion list item | The selected item is added on the flow arrow. The element’s property dialog box is opened. |
+| <kbd>Enter</kbd> - on a sequence flow | Not available | If a sequence flow is selected, open the Logic Recommender dialog box. |
+| <kbd>Enter</kbd> - on a Logic Recommender suggestion list item | <kbd>Enter</kbd> - on a Logic Recommender suggestion list item | The selected item is added on the sequence flow. The Logic Recommender dialog box is shown again for the next action to be added. |
+| <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + Mouse button) - on a Logic Recommender suggestion list item| <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + Mouse button) - on a Logic Recommender suggestion list item | The selected item is added on the sequence flow. The element’s property dialog box is opened. |
 | <kbd>F2</kbd> | <kbd>Fn</kbd> + <kbd>F2</kbd> | Rename the variable returned by the selected element. |
 | <kbd>Shift</kbd> + <kbd>F2</kbd> | <kbd>Shift</kbd> + <kbd>Fn</kbd> + <kbd>F2</kbd> | Edit the caption of the selected element. |
 | Context-menu key | Not available | Open the context-menu for the currently selected element. |

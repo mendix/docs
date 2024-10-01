@@ -107,38 +107,38 @@ The tables in the following sub-sections present the shortcut keys that can be u
 
 #### Selection
 
-| Windows | Description |
-| --- | --- |
-| Arrow Keys | Select nearby element (activity, event, loop or parameter) in the direction of the arrow. |
-| <kbd>Home</kbd> | Select the start event. |
-| <kbd>End</kbd> | Select the first end event. |
-| <kbd>Ctrl</kbd> + <kbd>A</kbd> | Select all elements. |
-| <kbd>Ctrl</kbd> (in Studio Pro 10.12 and above) | When pressing <kbd>Ctrl</kbd>, you can select additional elements. Clicking a selected element or selecting it with a selection rectangle while holding <kbd>Ctrl</kbd> will deselect it. |
-| <kbd>Tab</kbd> | If a loop is selected, the first element inside the loop will be selected. |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | If an element inside a loop is selected, the loop itself will be selected. |
+| Windows | Mac | Description |
+| --- | --- | --- |
+| Arrow Keys | Arrow Keys | Select nearby element (activity, event, loop or parameter) in the direction of the arrow. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + Left arrow | Select the start event. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + Right arrow | Select the first end event. |
+| <kbd>Ctrl</kbd> + <kbd>A</kbd> | <kbd>Command</kbd> + <kbd>A</kbd> | Select all elements. |
+| <kbd>Ctrl</kbd> (in Studio Pro 10.12 and above) | <kbd>Command</kbd> (in Studio Pro 10.12 and above) | When pressing <kbd>Ctrl</kbd>/<kbd>Command</kbd>, you can select additional elements. Clicking a selected element or selecting it with a selection rectangle while holding <kbd>Ctrl</kbd>/<kbd>Command</kbd> will deselect it. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | If a loop is selected, the first element inside the loop will be selected. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>Shift</kbd> + <kbd>Tab</kbd> | If an element inside a loop is selected, the loop itself will be selected. |
 
 #### Navigation
 
-| Windows | Description |
-| --- | --- |
-| Mouse scroll wheel | Scroll up or down. |
-| <kbd>Shift</kbd> + Mouse scroll wheel | Scroll left or right. |
-| <kbd>Space</kbd> + Mouse button | Drag screen.  |
-| <kbd>Ctrl</kbd> + Mouse scroll wheel | Zoom in or out. |
-| <kbd>Ctrl</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | Zoom in or out.  |
-| <kbd>Ctrl</kbd> + <kbd>0</kbd> | Reset zoom level to 100%. |
+| Windows | Mac | Description |
+| --- | --- | --- |
+| Mouse scroll wheel | Mouse scroll wheel | Scroll up or down. |
+| <kbd>Shift</kbd> + Mouse scroll wheel | <kbd>Shift</kbd> + Mouse scroll wheel | Scroll left or right. |
+| <kbd>Space</kbd> + Mouse button | <kbd>Space</kbd> + Mouse button | Drag screen. |
+| <kbd>Ctrl</kbd> + Mouse scroll wheel | <kbd>Command</kbd> + Mouse scroll wheel | Zoom in or out. |
+| <kbd>Ctrl</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | <kbd>Command</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | Zoom in or out.  |
+| <kbd>Ctrl</kbd> + <kbd>0</kbd> | <kbd>Command</kbd> + <kbd>0</kbd> | Reset zoom level to 100%. |
 
 #### Element Manipulation
 
-| Windows | Description |
-| --- | --- |
-| <kbd>Enter</kbd> - on an element | If an element is selected, edit its properties. |
-| <kbd>Enter</kbd> - on a flow arrow | If a flow arrow is selected, open the Logic Recommender dialog box. |
-| <kbd>Enter</kbd> - on a Logic Recommender suggestion list item | The selected item is added on the flow arrow. The Logic Recommender dialog box is shown again for the next action to be added. |
-| <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + mouse click) - on a Logic Recommender suggestion list item| The selected item is added on the flow arrow. The element’s property dialog box is opened. |
-| <kbd>F2</kbd> | Rename the variable returned by the selected element. |
-| <kbd>Shift</kbd> + <kbd>F2</kbd> | Edit the caption of the selected element. |
-| Context-menu key | Open the context-menu for the currently selected element. |
+| Windows | Mac | Description |
+| --- | --- | --- |
+| <kbd>Enter</kbd> - on an element | <kbd>Enter</kbd> - on an element | If an element is selected, edit its properties. |
+| <kbd>Enter</kbd> - on a flow arrow | Not available | If a flow arrow is selected, open the Logic Recommender dialog box. |
+| <kbd>Enter</kbd> - on a Logic Recommender suggestion list item | <kbd>Enter</kbd> - on a Logic Recommender suggestion list item | The selected item is added on the flow arrow. The Logic Recommender dialog box is shown again for the next action to be added. |
+| <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + Mouse button) - on a Logic Recommender suggestion list item| <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + Mouse button) - on a Logic Recommender suggestion list item | The selected item is added on the flow arrow. The element’s property dialog box is opened. |
+| <kbd>F2</kbd> | <kbd>Fn</kbd> + <kbd>F2</kbd> | Rename the variable returned by the selected element. |
+| <kbd>Shift</kbd> + <kbd>F2</kbd> | <kbd>Shift</kbd> + <kbd>Fn</kbd> + <kbd>F2</kbd> | Edit the caption of the selected element. |
+| Context-menu key | Not available | Open the context-menu for the currently selected element. |
 
 ### Studio Pro 10.5 and Below
 

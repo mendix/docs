@@ -119,7 +119,7 @@ The tables in the following sub-sections present the shortcut keys that can be u
 | <kbd>Home</kbd> | <kbd>Fn</kbd> + Left arrow | Select the start event. |
 | <kbd>End</kbd> | <kbd>Fn</kbd> + Right arrow | Select the first end event. |
 | <kbd>Ctrl</kbd> + <kbd>A</kbd> | <kbd>Command</kbd> + <kbd>A</kbd> | Select all elements. |
-| <kbd>Ctrl</kbd> (in Studio Pro 10.12 and above) | <kbd>Command</kbd> (in Studio Pro 10.12 and above) | When pressing <kbd>Ctrl</kbd>/<kbd>Command</kbd>, you can select additional elements. Clicking a selected element or selecting it with a selection rectangle while holding <kbd>Ctrl</kbd>/<kbd>Command</kbd> will deselect it. |
+| <kbd>Ctrl</kbd> (in Studio Pro 10.12 and above) | <kbd>Command</kbd> | When pressing <kbd>Ctrl</kbd>/<kbd>Command</kbd>, you can select additional elements. Clicking a selected element or selecting it with a selection rectangle while holding <kbd>Ctrl</kbd>/<kbd>Command</kbd> will deselect it. |
 | <kbd>Tab</kbd> | <kbd>Tab</kbd> | If a loop is selected, the first element inside the loop will be selected. |
 | <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>Shift</kbd> + <kbd>Tab</kbd> | If an element inside a loop is selected, the loop itself will be selected. |
 

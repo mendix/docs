@@ -30,7 +30,7 @@ Let's get started with [Creating and Deploying a Hello World App](/quickstarts/h
 
 ## Leading Mendix Implementation
 
-[Leading Mendix Implementation in Your Organization](/quickstarts/leading-mendix-implementation-in-your-organization/) guides you in unlocking the full potential of the Mendix platform and speeding up your application development in your organization.
+[Leading Mendix Implementation in Your Organization](/quickstarts/leading-mendix-implementation-in-your-organization/) helps you unlock the full potential of the Mendix platform and accelerate your application development within your organization.
 
 ## More Ways to Learn with Mendix
 

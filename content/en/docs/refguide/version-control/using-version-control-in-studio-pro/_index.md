@@ -323,6 +323,8 @@ We recommend starting trunk-based and adopting trunk-based with feature branches
 
 For experienced teams, or for organizations with stricter processes and/or auditability criteria, the advanced branching approach is recommended.
 
+In the [tips and tricks](#branching-tricks) section you will find pointers on how to work with and manage branches in an effective way.
+
 #### Trunk-Based (Single Branch Line) {#branching-trunk}
 
 In trunk-based development, all developers work on a single branch, typically the "trunk" or "main" branch. Changes are frequently committed to this branch, and developers continuously push  their work to the remote repository. 
@@ -339,6 +341,7 @@ Disadvantages are:
 
 * Risk of instability: Constant changes to the main branch can introduce instability, especially if proper testing and quality assurance practices are not in place.
 * Limited parallel development: The single branch model can limit parallel development efforts, making it challenging to work on multiple features concurrently.
+* Difficulty to mitigate issues: When encountering issues on production, it is not possible to deploy a hotfix without also publishing other changes to your app, without creating a branch.
 
 This approach is best-suited for small teams.
 
@@ -384,6 +387,15 @@ Disadvantages are:
 * Overhead: Maintaining separate branches can lead to overhead in terms of merging, code review, and testing.
 
 This approach is best-suited to large teams or teams preferring a more rigid process. Projects with strict release cycles can also benefit from this approach, as the release branch is always stable.
+
+#### Tips and tricks for working with branches {#branching-tricks}
+
+There are several recommendations that make it easier to work with and manage multiple branches.
+
+* Periodically merge higher-level branches, such as 'development' or 'main', to lower-level branches, such as feature branches. This ensures you already take the most recent stable work into account when developing a feature, preventing larger merge conflicts down the road.
+* Note in stories that you're working on which branch is used for development, to avoid confusion. You can also consider using a naming convention for branch names, such as feature_[issueNumber].
+* Where possible, keep different branches on the same version of Studio Pro.
+* Make sure that old branches are cleaned up, to prevent accumulating them over time. Ideally deletion of a branch is part of the process when completing a feature. In cases where branches aren't merged in the end, consider cleaning them up periodically.
 
 ## Versioning an App Deployed to the Cloud {#versioning-app}
 

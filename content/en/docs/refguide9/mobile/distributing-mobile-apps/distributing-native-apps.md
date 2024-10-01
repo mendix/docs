@@ -25,21 +25,16 @@ If you have an Apple Mac available, see the Apple developer documentation on [ce
 
 ### On Other Platforms
 
-If you do not have an Apple Mac available, you can create a certificate signing request manually. First, create a private key and certificate signing request with the OpenSSL utility. 
+If you do not have an Apple Mac available, you can create a certificate signing request manually. First, create a private key and certificate signing request with the OpenSSL utility. For more information on OpenSSL, browse these resources:
 
-{{% alert color="warning" %}}
-**Do not use OpenSSL version 3.x on Windows**
-
-If you use OpenSSL version 3.x on Windows and you get the error `Could not open certificate container. Wrong password or corrupted file. Please try again.`, please use the latest patch release of **version 1.x**, which can be downloaded here: [OpenSSL for Windows](https://slproweb.com/products/Win32OpenSSL.html).
-
-Another option is to use OpenSSL from within the **Windows Subsystem for Linux** to generate the certificate. Use the instructions [Install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install) to set this up.
-{{% /alert %}}
+* [OpenSSL Documentation](https://www.openssl.org/docs/manmaster/man1/openssl.html)
+* [Install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
 
 The following steps assume you have a Windows machine, but these are equally applicable to Linux machines, which usually have the OpenSSL package pre-installed.
 
 To create a certificate signing request manually, follow these steps:
 
-1. Download [OpenSSL for Windows](https://www.openssl.org/community/binaries.html) and install it. You just need to download and install the **Win32 OpenSSL Light** package (get the latest version at the top of the list).
+1. Download [OpenSSL for Windows](https://openssl-library.org/source/index.html) and install it. You just need to download and install the **Win32 OpenSSL Light** package (get the latest version at the top of the list).
     * If the setup process complains about a missing VC++ redistributable libraries package, cancel the installation, and first download and install the **Visual C++ 2008 Redistributables** from the same list of packages (you will be redirected to a Microsoft download page). Install OpenSSL to, for example, *C:\OpenSSL* (make note of this directory, as you will need it in step 3).
 2. Open a command line interface (CLI) such as Command Prompt. On most systems, you need to do this as an administrator (right-click the Windows start menu link and select **Run as Administrator**).
 3. Generate a private key with the OpenSSL program that you just installed. Replace `C:\OpenSSL` with where you installed OpenSSL in step 1. The private key file is stored at the location specified after the `-out` parameter. The following example will store the file in the root directory of your C: drive (you can change this to anything you want, just select a convenient place and keep track of where the file is stored): `"C:\OpenSSL\bin\openssl.exe" genrsa -out "C:\private.key" 2048`. The command will output "Generating RSA private key, 2048 bit long modulus" and lots of dots and plus signs.

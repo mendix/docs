@@ -49,9 +49,9 @@ You can see the following information:
 
 You can also perform the following actions:
 
-* **Deploy** ({{< icon name="deploy" >}}) – Launches the **Deploy** wizard, where you can configure and start a new deployment for the selected environment.
+* **Deploy** ({{< icon name="deploy" >}}) – Launches the [Deploy wizard](#deploy-wizard), where you can configure and start a new deployment for the selected environment.
 * **View Details** ({{< icon name="notes-paper-edit" >}}) – Goes to the [Environment Details](/developerportal/deploy/environments-details/) page.
-* **View App** {{< icon name="external" >}} — Launches the app in a new window.
+* **View App** {{< icon name="external" >}} — Launches the app in a new tab.
 * **More Options** ({{< icon name="three-dots-menu-horizontal" >}}):
     * **Restart** – Stops the running application and starts it again. Restarting your app is required for applying new constant values or scheduled events to the environment.
     * **View Live Log** – Shows a live log for your application. It is identical to the **View Live Log** button on the [Logs](/developerportal/operate/logs/) page.

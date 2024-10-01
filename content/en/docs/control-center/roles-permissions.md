@@ -32,6 +32,10 @@ Previously, project roles were managed at the individual project level. This all
 
 Mendix has now centralized project roles at the company level. To take advantage of this update, you just need to migrate all individual project roles to the new centralized project roles. This will enhance your ability to govern access across all Mendix projects and also enable the programmatic assignment of project roles via [the Mendix Projects API](/apidocs-mxsdk/apidocs/projects-api/).
 
+{{% alert color="info" %}}
+Mendix expects you to migrate to centralized company-level project roles by January 1, 2025.
+{{% /alert %}}
+
 ### How to Migrate?
 
 {{% alert color="warning" %}}

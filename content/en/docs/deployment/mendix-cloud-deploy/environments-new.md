@@ -112,7 +112,7 @@ For details on managing node permissions, see [Node Permissions](/developerporta
 
 ### Activity Tab{#activity-tab}
 
-In the **Activity** tab, you can view a log of deployment and backup activities performed on your environments.
+In the **Activity** tab, you can view a log of deployment, backup, and permission activities performed on your environments.
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/activity-tab.png" alt="" >}}
 

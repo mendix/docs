@@ -7,6 +7,8 @@ weight: 5
 numberless_headings: true
 ---
 
+These release notes cover changes to [ATS](/appstore/partner-solutions/ats/).
+
 ## 2.29.3
 
 **Release date: March 26, 2024**

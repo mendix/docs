@@ -54,6 +54,7 @@ You can also perform the following actions:
 * **View App** {{< icon name="external" >}} — Launches the app in a new tab.
 * **More Options** ({{< icon name="three-dots-menu-horizontal" >}}):
     * **Restart** – Stops the running application and starts it again. Restarting your app is required for applying new constant values or scheduled events to the environment.
+    * **Start** - Starts a stopped application.
     * **View Live Log** – Shows a live log for your application. It is identical to the **View Live Log** button on the [Logs](/developerportal/operate/logs/) page.
     * **Show Debugger Information** – Shows the settings needed to connect the debugger in Studio Pro to your app. For more information on debugging in the cloud, see [How To Debug Microflows Remotely](/refguide/debug-microflows-remotely/).
     * **Show Logged in Users** – Shows all users who are logged in to your app.

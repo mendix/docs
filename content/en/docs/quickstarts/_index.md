@@ -26,6 +26,10 @@ When you are done, you will have mastered the basics of building and hosting app
 
 Let's get started with [Creating and Deploying a Hello World App](/quickstarts/hello-world/) or [Building a Responsive Web App](/quickstarts/responsive-web-app/)!
 
+## Leading Mendix Implementation
+
+[Leading Mendix Implementation in Your Organization](/quickstarts/leading-mendix-implementation-in-your-organization/)s guide you through the journey to unlock the full potential of the Mendix platform and accelerate your application development journey in your organization.
+
 ## More Ways to Learn with Mendix
 
 For a more in-depth introduction to building low-code apps with Mendix, check out these learning paths:

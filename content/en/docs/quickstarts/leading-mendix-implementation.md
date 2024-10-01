@@ -671,7 +671,6 @@ With Mendix, you have multiple options to choose from for the development of you
 4. **Hybrid**
     a.  You can simultaneously grow your in-house team and supplement with a Mendix partner and/or our Expert Services team.
     
-
 Regardless of which option you choose, we always recommend that at least one person internally has been trained on Mendix and is technically capable of directing the project.  Outsourcing every technical role creates a siloed development team that does not truly understand your business needs.
 
 ### Summary 

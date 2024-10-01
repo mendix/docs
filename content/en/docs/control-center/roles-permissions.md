@@ -50,11 +50,11 @@ To migrate to centralized company-level project roles, click **Learn More** on t
 
 The results of migrating to the centralized company-level roles will be as follows:
 
-- Mendix Admins will be the only ones who can create or modify project roles.
+* Mendix Admins will be the only ones who can create or modify project roles.
 
-- Scrum Masters and team members will only be able to view the project roles established by Mendix Admins and select the appropriate one. They will not have the ability to modify the permissions of project roles. If a custom permission set is needed, they must reach out to a Mendix Admin for assistance in creating it.
+* Scrum Masters and team members will only be able to view the project roles established by Mendix Admins and select the appropriate one. They will not have the ability to modify the permissions of project roles. If a custom permission set is needed, they must reach out to a Mendix Admin for assistance in creating it.
 
-- If there were any old custom project roles before the migration, they will appear with the tag **Inherited from project** on the **Roles & Permissions** page in Control Center. Mendix Admin can review these custom project roles, keep the useful ones, and merge any duplicates.
+* If there were any old custom project roles before the migration, they will appear with the tag **Inherited from project** on the **Roles & Permissions** page in Control Center. Mendix Admin can review these custom project roles, keep the useful ones, and merge any duplicates.
 
   {{% alert color="info" %}}
   

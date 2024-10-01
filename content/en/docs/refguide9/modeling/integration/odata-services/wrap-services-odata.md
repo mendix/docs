@@ -190,7 +190,7 @@ Set up a Twitter client module that allows users to input a Twitter ID and commu
 
     Double-click the entity, and in the **Persistable** field, choose **No**. The domain model for the Twitter client looks like this:
 
-    {{< figure src="/attachments/refguide9/modeling/integration/wrap-services-odata/twitter-client-domain-model.png" alt="Twitter client domain model with external entities and non-persistent entity." class="no-border" >}}
+    {{< figure src="/attachments/refguide9/modeling/integration/wrap-services-odata/twitter-client-domain-model.png" alt="Twitter client domain model with external entities and non-persistable entity." class="no-border" >}}
 
     {{< figure src="/attachments/refguide9/modeling/integration/wrap-services-odata/newtwitterinput-microflow.png" alt="Microflow that handles inputted usernames." class="no-border" >}}
 

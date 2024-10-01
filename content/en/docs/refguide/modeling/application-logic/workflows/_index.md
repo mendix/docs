@@ -106,6 +106,10 @@ For more information on how to configure the **Workflow Commons** in an existing
 
 The Workflow Engine is the Mendix Runtime engine for executing workflows. For information on how the engine works, how you can interact with the engine, and what information it stores, see [Workflow Engine](/refguide/workflow-engine/).
 
+## Keyboard Support
+
+For information on the supported shortcut keys in the workflow editor, see the [Workflow Editor Shortcut Keys](/refguide/keyboard-shortcuts/#workflow-editor-shortcut-keys) and the [Editors Only](/refguide/keyboard-shortcuts/#editors-only)  sections in *Keyboard Shortcuts*.
+
 ## Read More
 
 * [Performing Workflow Basic Functions](/refguide/perform-workflow-basic-functions/)

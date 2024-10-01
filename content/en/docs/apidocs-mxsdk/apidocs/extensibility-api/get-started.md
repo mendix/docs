@@ -23,7 +23,7 @@ Make sure to keep this Studio Pro installation up-to-date to benefit from new fe
 Extensions can be built on any operating system as the underlying framework is cross-platform.
 {{% /alert %}}
 
-## Using Extensions API via a Hosted NuGet Package
+## Using Extensibility API via a Hosted NuGet Package
 
 You can start extension development by simply including the `Mendix.StudioPro.ExtensionsAPI` NuGet package to your project by searching for *Mendix.Studio.ExtensionsAPI* in NuGet.
 
@@ -32,7 +32,7 @@ You can start extension development by simply including the `Mendix.StudioPro.Ex
 
 Depending on your local environment setup, you possibly need to manually add a NuGet package to your solution. You can add a package source to Visual Studio via the menu: **Tools** > **Options** > **NuGet Package Manager** > **Package Sources**
 
-## Importing Extensions API via a NuGet Package Hosted on a Local Repository
+## Importing Extensibility API via a NuGet Package Hosted on a Local Repository
 
 Another option to start extension development is to import a locally hosted `Mendix.StudioPro.ExtensionsAPI` NuGet package into your project.  
 

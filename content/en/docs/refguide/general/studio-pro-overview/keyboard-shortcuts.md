@@ -107,7 +107,7 @@ The following shortcut keys are available in the page editor:
 
 For an overview of the supported shortcut keys in the microflow and nanoflow editors, see the [Keyboard Support](/refguide/microflows/#keyboard) section in *Microflows*. The supported shortcut keys are the same in the microflow, nanoflow, and rule editors. 
 
-## Workflow Editor Shortcut Keys
+## Workflow Editor Shortcut Keys {#workflow-editor-shortcut-keys}
 
 The following shortcut keys are available in the workflow editor:
 

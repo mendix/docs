@@ -6,6 +6,24 @@ weight: 100
 numberless_headings: true
 ---
 
+## 3.0.0
+
+**Release date: September 24, 2024**
+
+### Improvements
+
+* The ATS source code and model has been upgraded to Mendix [9.24.27](/releasenotes/studio-pro/9.24/#92427).
+* Apps built with Studio Pro [10.12](/releasenotes/studio-pro/10.12/) can now be tested using ATS.
+* We have removed support for selenium 3.
+
+## 2.29.4
+
+**Release date: August 13, 2024**
+
+### Fixes
+
+* We have added support for the new [projects api](/apidocs-mxsdk/apidocs/projects-api/).
+   
 ## 2.29.3
 
 **Release date: March 26, 2024**

@@ -130,6 +130,10 @@ Specify your email for Git to use it in commit messages and make them more infor
 
 #### Clone {#clone}
 
+{{% alert color="info" %}}
+Different clone types are available when using Git in Studio Pro version 9.24.28 and above.
+{{% /alert %}}
+
 Select a [Clone type](/refguide9/clone-type/) to use for future clone operations, such as downloading an app or checking out another branch of an app you already downloaded. Changing this setting does not affect apps that you have already downloaded.
 
 #### Enable Automatic Repository Optimization {#optimization}

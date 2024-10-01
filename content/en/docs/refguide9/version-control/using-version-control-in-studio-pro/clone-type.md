@@ -11,13 +11,15 @@ Different clone types are available when using Git in Studio Pro version 9.24.28
 
 ## Introduction
 
-The Git version control system defaults to downloading a full copy of the repository on the server. Studio Pro allows you to select a different mechanism for cloning to optimize for your needs, such as working offline or working with a large repository.
+The Git version control system defaults to downloading a full copy of the repository from the server. Studio Pro allows you to select a different cloning mechanism to allow you to optimize for your needs, such as working offline or working with a large repository.
 
 ## Clone Types
 
-Currently Studio Pro supports two different clones types. Different types only affect the way the repository is stored on your local device and does not affect the app itself.
+Currently, Studio Pro supports two different clones types. The clone type only affects the way the repository is stored on your local device and does not affect the app itself.
 
-By default Mendix advises customers to use a full clone, with a slightly longer initial download as a trade-off to a more seamless experience while working. For customers that have accumulated a [large repository](/refguide/troubleshoot-repository-size/) over time, using a partial clone can relieve the pressure of initial download and therefore speed up development.
+By default Mendix advises customers to use a full clone. This trades a slightly longer initial download for a more seamless experience while working.
+
+If you have have accumulated a [large repository](/refguide/troubleshoot-repository-size/) over time, you can use a partial clone to shorten the initial download and therefore speed up development.
 
 ### Full Clone
 

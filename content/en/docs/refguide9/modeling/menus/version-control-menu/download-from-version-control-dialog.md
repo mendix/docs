@@ -21,7 +21,7 @@ You can also use the [Open App Dialog](/refguide9/open-app-dialog/) to download 
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Depending on the [Clone type](/refguide9/clone-type/) set for your app either a full or partial clone will be downloaded when using Git.
+From Mendix version 9.24.28, either a full or partial clone will be downloaded when using Git, depending on the [Clone type](/refguide9/clone-type/) set for your app.
 {{% /alert %}}
 
 ## Where Is Your App Stored?

@@ -19,3 +19,9 @@ The initial login screen is the same for all users, whether or not they have adm
 {{< figure src="/attachments/private-platform/pmp-ref-signin.png" class="no-border" >}}
 
 After signing in, all users regardless of their role are initially directed to the **My Apps** page. Users with the administrator role can switch to admin view by clicking the user icon in the top right corner, and then selecting **Switch to Admin Mode**.
+
+### Top Navigation Bar
+
+The top navigation bar displays your location within the Platform (for example, *Apps* or *Marketplace*). The branding of the bar, such as the logo and title, can be customized by a Company Admin.
+
+On the left side of the navigation bar, you can access the **Platform Navigation** (({{% icon name="layout-1-filled" %}})) menu.

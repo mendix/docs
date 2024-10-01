@@ -11,4 +11,7 @@ This section of the Private Mendix Platform Reference Guide provides information
 
 ### My Apps
 
-The **My Apps** page 
+The **My Apps** page is the landing page of Private Mendix Platform. It contains the following elements:
+
+
+

@@ -1,6 +1,6 @@
 ---
-title: "Extensbility API Release Notes"
-linktitle: "Extensbility API"
+title: "Extensibility API Release Notes"
+linktitle: "Extensibility API"
 url: /releasenotes/control-center/extensibility-api/
 weight: 45
 numberless_headings: true

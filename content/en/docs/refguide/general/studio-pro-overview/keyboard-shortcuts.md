@@ -109,7 +109,7 @@ The supported shortcut keys are the same in the microflow, nanoflow, and rule ed
 
 ### Studio Pro 10.6 and Above {#keyboard-improved}
 
-The tables in the following sub-sections present the shortcut keys that can be used for navigating and manipulating microflows in the microflow editor in Studio Pro 10.6 and above.
+The tables in the following sub-sections present the shortcut keys that can be used in the microflow, nanoflow, and rule editors in Studio Pro 10.6 and above.
 
 #### Selection
 
@@ -148,7 +148,7 @@ The tables in the following sub-sections present the shortcut keys that can be u
 
 ### Studio Pro 10.5 and Below
 
-The following table shows the shortcut keys that can be used in the microflow editor in Studio Pro 10.5 and below.
+The following table shows the shortcut keys that can be used in the microflow, nanoflow, and rule editors in Studio Pro 10.5 and below.
 
 | Windows | Description |
 | --- | --- |

@@ -43,7 +43,7 @@ In Studio Pro 10.6 and above, use the new and modernized microflow, nanoflow, an
 The new editors contain several huge improvements, with some major improvements in:
 
 * [Logic Recommender](/refguide/logic-recommender/)
-* [Keyboard navigation](/refguide/microflows/#keyboard-improved) 
+* [Keyboard navigation](/refguide/keyboard-shortcuts/#keyboard-improved) 
 * [Canvas interaction](/refguide/microflows/#canvas-interaction)
 
 In Studio Pro 10.5 and below, the default logic editors are the **Classic** logic editors. In Studio Pro 10.4 and 10.5, there is the toggle at the top right corner of the editor allowing you to try the beta versions of the new modern editor for the current document.

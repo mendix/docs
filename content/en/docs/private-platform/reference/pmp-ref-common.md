@@ -24,4 +24,8 @@ After signing in, all users regardless of their role are initially directed to t
 
 The top navigation bar displays your location within the Platform (for example, *Apps* or *Marketplace*). The branding of the bar, such as the logo and title, can be customized by a Company Admin.
 
-On the left side of the navigation bar, you can access the **Platform Navigation** (({{% icon name="layout-1-filled" %}})) menu.
+From the navigation bar, you can access the following items:
+
+* **Platform Navigation** (({{% icon name="layout-1-filled" %}}))
+* **Notification Center** (({{% icon name="alarm-bell" %}}))
+* **Account Menu**

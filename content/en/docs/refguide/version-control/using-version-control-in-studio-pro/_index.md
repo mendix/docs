@@ -115,7 +115,7 @@ Studio Pro also attaches some information automatically:
 * The list of changed documents, folders, and modules along with the type of the change (for example, **modify** or **add**)
 * The version of Studio Pro that was used to commit
 
-If you also changed Java source code, added widgets, or made other changes that affect files other than the app file, you will see a **Changes on disk** tab page that shows you what disk changes you are about to commit. For files that are **Modified** you can use **Compare with original** which opens an external tool to show the differences, or use **Open containing folder** to view the file on disk.
+If you also changed Java source code, added widgets, or made other changes that affect files other than the app file, you will see a **Changes on disk** tab page that shows you what disk changes you are about to commit. **Open containing folder** allows opening the folder with the file on disk. For files with the **Modified** status you can use **Compare with original** which opens an external tool to show the differences.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/changes-on-disk.png" >}}
 

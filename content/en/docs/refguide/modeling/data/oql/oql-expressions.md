@@ -5,29 +5,66 @@ url: /refguide/oql-expressions/
 
 ## Introduction
 
-An expression is either a constant, a function, or any combination of attribute names, constants, and functions connected by operator (or operators), or a subquery.
+An expression is a query building block that returns a value or a list of values. Constants, functions, combinations of attribute names, constants, and functions connected by operators, or a . They can be used in `WHERE`, `SELECT`, `GROUP BY` and `JOIN` clauses.
 
 ## Aggregation
 
-Aggregations perform specific calculations on the values of the retrieved column (or columns). The following aggregate functions are possible:
+Aggregations are functions that reduce a list of values from a retrieved column (or columns) into a singular value. They can be used as an attribute in a `SELECT` clause or in a condition in `HAVING`. 
 
-| Expression | Description |
-| --- | --- |
-| AVG | Average |
-| COUNT | Count |
-| MAX | Maximum |
-| MIN | Minimum |
-| SUM | Sum |
+When combined with a `GROUP BY` clause, aggregations can target any column normally available in `SELECT`, not just those specified in the `GROUP BY` clause. Aggregation is performed over groups separately.
 
-When you are using an aggregate expression in the `SELECT` clause, all expressions in the `SELECT` clause have to be either an aggregation *or* part of the `GROUP BY` clause of the query.
+## Syntax
+
+```sql
+  COUNT ( { * | attribute_path } )
+  | { AVG | MAX | MIN | SUM } ( attribute_path )
+```
+Where `attribute_path` is an attribute reachable from entities defined in `FROM` and `JOIN`.
+
+### AVG
+
+Calculates the mean of numerical (`INTEGER`, `DECIMAL`, `LONG`) values. Null values are ignored.
+
+```sql
+AVG ( attribute_path )
+```
+
+### COUNT
+
+Calculates the number of rows in a column (or columns). Counting multiple columns with `COUNT(*)` returns count of all rows.
+When counting a single column, rows that are have the `NULL` value are not counted.
+
+### MAX and MIN
+
+Returns the maximum or minimum value from a column, with all data types being supported. Boolean values are treated as `0` and `1`, strings are compared alphanumerically. Null values are ignored.
+
+### SUM
+
+Calculates the sum of numerical values. Null values are ignored.
+
+### STRING_AGG
+
+Combines multiple strings into a single value. Syntax differs from other aggregations:
+
+```sql
+STRING_AGG
+(
+    attribute_path, separator
+)
+```
+Where `separator` is any expression of type `STRING`. 
+
+### Examples
+
+
 
 ## Parameters
 
-Parameters are external values that are referenced by name in an OQL query. To use a defined parameter in a query, prepend the `$` sign to the name of the parameter. 
-
-{{% alert color="warning" %}} Parameters are only supported within OQL queries defined in [data sets](/refguide/data-sets/). They can not be used in View entities {{% /alert %}}
+Parameters are external variables that are referenced by name in an OQL query. To use a defined parameter in a query, prepend the `$` sign to the name of the parameter. 
 
 Undefined parameters used in comparisons, `IN` and `LIKE` expressions cause the condition to always return true. In other cases, undefined parameters cause an exception.
+
+{{% alert color="warning" %}} Parameters are only supported within OQL queries defined in [data sets](/refguide/data-sets/) or inside java actions. They can not be used in View entities {{% /alert %}}
 
 ### Examples
 

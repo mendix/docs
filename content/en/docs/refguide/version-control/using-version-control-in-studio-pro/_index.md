@@ -323,7 +323,7 @@ We recommend starting trunk-based and adopting trunk-based with feature branches
 
 For experienced teams, or for organizations with stricter processes and/or auditability criteria, the advanced branching approach is recommended.
 
-In the [tips and tricks](#branching-tricks) section you will find pointers on how to work with and manage branches in an effective way.
+In the [tips and tricks](#branching-tricks) section you will find suggestions on how to work with, and manage, branches in an effective way.
 
 #### Trunk-Based (Single Branch Line) {#branching-trunk}
 
@@ -388,14 +388,14 @@ Disadvantages are:
 
 This approach is best-suited to large teams or teams preferring a more rigid process. Projects with strict release cycles can also benefit from this approach, as the release branch is always stable.
 
-#### Tips and tricks for working with branches {#branching-tricks}
+#### Tips and Tricks for Working with Branches {#branching-tricks}
 
 There are several recommendations that make it easier to work with and manage multiple branches.
 
 * Periodically merge higher-level branches, such as 'development' or 'main', to lower-level branches, such as feature branches. This ensures you already take the most recent stable work into account when developing a feature, preventing larger merge conflicts down the road.
-* Note in stories that you're working on which branch is used for development, to avoid confusion. You can also consider using a naming convention for branch names, such as feature_[issueNumber].
+* Note which branch is being used for development in the stories that you are working on, to avoid confusion. You can also implement a naming convention for branch names, such as `feature_[issueNumber]`.
 * Where possible, keep different branches on the same version of Studio Pro.
-* Make sure that old branches are cleaned up, to prevent accumulating them over time. Ideally deletion of a branch is part of the process when completing a feature. In cases where branches aren't merged in the end, consider cleaning them up periodically.
+* Make sure that old branches are cleaned up, to prevent accumulating them over time. Ideally you should delete a branch as part of the process of completing a feature. In cases where branches aren't merged in the end, consider cleaning them up periodically.
 
 ## Versioning an App Deployed to the Cloud {#versioning-app}
 

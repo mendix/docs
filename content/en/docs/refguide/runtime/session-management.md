@@ -68,6 +68,8 @@ Below Mendix version 10.9.0, there is no support for authentication tokens.
 
 By default, authentication tokens will not be used in online Mendix apps version 10.9.0 and above. However, you can use them to remember the end-user by writing your own flow using the new API, `login2`, and setting the `useAuthToken` parameter to `true`.
 
+Online apps still utilize [EnableKeepAlive](/refguide/tricky-custom-runtime-settings/#session-duration) setting to maintain the session data changes. If that setting is disabled, authentication token is used to keep users logged in, but it does not maintain the changes.
+
 ### Client-Runtime Session Management Flow
 
 <!-- Diagram created here:

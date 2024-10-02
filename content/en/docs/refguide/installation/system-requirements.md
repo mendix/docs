@@ -109,6 +109,16 @@ To run a Mendix app, Mendix Studio Pro uses the following ports by default. If y
 
 For more information on ports and modifying Studio Pro's default ports, see [Configurations](/refguide/configuration/) and the [Troubleshooting Common Mobile Issues](/refguide/mobile/getting-started-with-mobile/prerequisites/#troubleshooting) section of *Native App Prerequisites and Troubleshooting*.
 
+### File comparison
+
+To compare changed files on disk, you can configure which tool you want to use through **Preferences > Version control > General > File comparison > Executable**. 
+
+{{% alert color="info" %}}
+A tool you can use for this is TortoiseGitMerge, shipped as part of TortoiseGit. You can download the latest version from the [TortoiseGit](https://tortoisegit.org/download/) website. 
+
+By default the binary is installed on this path: *C:\Program Files\TortoiseGit\bin\TortoiseGitMerge.exe*.
+{{% /alert %}}
+
 ### File Locations
 
 For active development and running your application locally, your app folder should be on a local drive (such as C:) or a network folder that has been mapped to a [Windows drive letter](https://support.microsoft.com/en-us/windows/map-a-network-drive-in-windows-10-29ce55d1-34e3-a7e2-4801-131475f9557d).

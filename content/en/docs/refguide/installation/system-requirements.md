@@ -111,12 +111,12 @@ For more information on ports and modifying Studio Pro's default ports, see [Con
 
 ### File comparison
 
-To compare changed files on disk, you can configure which tool you want to use through **Preferences > Version control > General > File comparison > Executable**. 
+By default Studio Pro points to an executable shipped together with TortoiseGit to compare files on disk. You can configure which tool you want to use through **Preferences > Version control > General > File comparison > Executable**. 
 
 {{% alert color="info" %}}
-A tool you can use for this is TortoiseGitMerge, shipped as part of TortoiseGit. You can download the latest version from the [TortoiseGit](https://tortoisegit.org/download/) website. 
+The default path for the binary when installing Studio Pro on a new device is: *C:\Program Files\TortoiseGit\bin\TortoiseGitMerge.exe*.
 
-By default the binary is installed on this path: *C:\Program Files\TortoiseGit\bin\TortoiseGitMerge.exe*.
+You can download the latest version of TortoiseGitMerge from the [TortoiseGit](https://tortoisegit.org/download/) website. 
 {{% /alert %}}
 
 ### File Locations

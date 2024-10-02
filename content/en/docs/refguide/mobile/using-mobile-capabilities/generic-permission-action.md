@@ -156,11 +156,11 @@ To allow a Siri permission you will need to enable Siri capability in your app. 
 
 #### Run Pod Install in your iOS directory
 
-Next, run `pod install` in your iOS app's directory to install and update the necessary dependencies, including the permission-related configurations you've just added.
+Run `pod install` in your iOS app's directory to install and update the necessary dependencies, including the permission-related configurations you just added.
 
 #### Add Permissions Usage Descriptions 
 
-Next, add the corresponding permissions usage descriptions to your *Info.plist*:
+Add the corresponding permissions usage descriptions to your *Info.plist*:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

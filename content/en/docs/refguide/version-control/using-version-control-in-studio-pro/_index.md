@@ -125,6 +125,10 @@ An external file comparison tool can be set through **Preferences > Version cont
 A possible tool to use for this is TortoiseGitMerge, shipped as part of [TortoiseGit](https://tortoisegit.org/download/), which by default installs on this path: *C:\Program Files\TortoiseGit\bin\TortoiseGitMerge.exe*.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+Comparing files on disk with the original is currently not supported on Mac.
+{{% /alert %}}
+
 Committing is only allowed if your working copy is up to date with the repository. If someone else committed a change since the last time you pulled, you will have to pull first. This is because the revision you create with the commit should incorporate both your changes and the changes by the other person. Updating will combine the latest changes in the repository with your changes. After reviewing the result and fixing any conflicts, you can commit again.
 
 ### Pushing {#pushing}

@@ -119,6 +119,10 @@ The default path for the binary when installing Studio Pro on a new device is: *
 You can download the latest version of TortoiseGitMerge from the [TortoiseGit](https://tortoisegit.org/download/) website. 
 {{% /alert %}}
 
+{{% alert color="info" %}}
+Comparing files on disk with the original is currently not supported on Mac.
+{{% /alert %}}
+
 ### File Locations
 
 For active development and running your application locally, your app folder should be on a local drive (such as C:) or a network folder that has been mapped to a [Windows drive letter](https://support.microsoft.com/en-us/windows/map-a-network-drive-in-windows-10-29ce55d1-34e3-a7e2-4801-131475f9557d).

@@ -1,0 +1,655 @@
+openapi: 3.0.1
+info:
+  version: 1.0.0
+  title: User Service
+  description: 'The User API is for managing the governance for certain resources. User can be used to restrict access and modification of a set of apps or marketplace contents to a specific people. '
+servers:
+  - url: 'https://mpp.mendix-dev.tencent-cloud.com/userservice/v1'
+paths:
+  /users:
+    get:
+      tags:
+        - users
+      summary: Get all users of the current organisation
+      description: Get all users of the current organisation
+      operationId: GetUsers
+      responses:
+        '200':
+          $ref: '#/components/responses/users'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '404':
+          description: Not Found
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/userservice/v1'
+    post:
+      tags:
+        - users
+      summary: 'Create a new user '
+      description: "## Use this operation to create a new user\r\n\r\nName field is mandatory. Name can only be alphanumeric, spaces, underscores, or dashes. Max length for name field is 100 characters. Max length for Description is 250 characters."
+      operationId: CreateUser
+      requestBody:
+        description: Input user information
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserInput'
+            examples:
+              Input user information:
+                value:
+                  name: John
+                  fullName: John Coo
+                  email: john.coo@hotmail.com
+                  userRoles:
+                    - role: User
+      responses:
+        '201':
+          $ref: '#/components/responses/user'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/userservice/v1'
+      x-codegen-request-body-name: MppUserInput
+  '/users/{userId}':
+    get:
+      tags:
+        - users
+      summary: Get a single user by id
+      description: Get a single user by id
+      operationId: GetUser
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/user'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/userservice/v1'
+    put:
+      tags:
+        - users
+      summary: Edit a user
+      description: "## Use this operation to edit a user\r\n\r\n- If a field is omitted in the request body, it is not updated. To set field to empty specify with empty string.\r\n"
+      operationId: EditUser
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Input user information
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserInput'
+            examples:
+              Input user information:
+                value:
+                  name: John
+                  fullName: John Coo
+                  email: john.coo@hotmail.com
+                  userRoles:
+                    - role: User
+      responses:
+        '200':
+          $ref: '#/components/responses/user'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/userservice/v1'
+      x-codegen-request-body-name: MppUserInput
+    delete:
+      tags:
+        - users
+      summary: Deletes a single user
+      description: Deletes a single user
+      operationId: DeleteUser
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Delete user successfully
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/userservice/v1'
+  '/users/{userId}/password':
+    patch:
+      tags:
+        - users
+      summary: Change password of the user with user id
+      description: Change password of the user with user id
+      operationId: patch-users-userId-password
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+            pattern: '^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-4[a-fA-F0-9]{3}-[89abAB][a-fA-F0-9]{3}-[a-fA-F0-9]{12}'
+            example: e48b3e22-d6ad-4c81-aa5e-603776d22b4d
+      requestBody:
+        description: Input user old and new password
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserPasswordInput'
+      responses:
+        '200':
+          description: Change user password successfully
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/userservice/v1'
+tags:
+  - name: users
+    description: ''
+components:
+  parameters:
+    userId:
+      name: userId
+      in: path
+      description: User Id
+      required: true
+      schema:
+        type: string
+        format: uuid
+        pattern: '^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-4[a-fA-F0-9]{3}-[89abAB][a-fA-F0-9]{3}-[a-fA-F0-9]{12}'
+        example: e48b3e22-d6ad-4c81-aa5e-603776d22b4d
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    mxtoken:
+      type: apiKey
+      name: Authorization
+      in: header
+  responses:
+    error-401:
+      description: Authentication information is missing or invalid
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            401 - Unauthorized:
+              value:
+                status: 401
+                title: Unauthorized
+                detail: Authentication information missing or invalid
+    error-400:
+      description: Invalid input parameter or request body
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            400 - Invalid user info:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: name
+                    reason: Invalid user name
+                  - name: email
+                    reason: Invalid user email
+            400 - Invalid passwords:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: oldPassword
+                    reason: Incorrect old password
+                  - name: newPassword
+                    reason: Invalid new password
+    error-403:
+      description: User has no permission for this operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            403 - Forbidden:
+              value:
+                status: 403
+                title: Forbidden
+                detail: User has no permission for this operation
+    error-404:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            404 - User not found:
+              value:
+                status: 404
+                title: Not Found
+                detail: User not found
+    user:
+      description: User
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              fullName:
+                type: string
+              email:
+                type: string
+              isLocalUser:
+                type: boolean
+              active:
+                type: boolean
+              firstLoginTime:
+                type: string
+              lastLogin:
+                type: string
+              approved:
+                type: boolean
+              emailVerified:
+                type: boolean
+              onboarded:
+                type: boolean
+              roles:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    role:
+                      type: string
+              blocked:
+                type: boolean
+            x-examples:
+              Example 1:
+                id: c963c178-7cba-49f8-baf2-1c1ae64ed63c
+                name: Daisy
+                fullName: Daisy
+                email: test@qq.com
+                isLocalUser: true
+                active: true
+                firstLoginTime: '2023-02-03T09:02:54.507Z'
+                lastLogin: '2023-02-03T09:02:54.507Z'
+                approved: false
+                emailVerified: false
+                onboarding: true
+                roles:
+                  - role: User
+                  - role: GroupAdmin
+                  - role: CompanyAdmin
+                blocked: false
+          examples:
+            User:
+              value:
+                id: c963c178-7cba-49f8-baf2-1c1ae64ed63c
+                name: Daisy
+                fullName: Daisy
+                email: test@qq.com
+                isLocalUser: true
+                active: true
+                firstLoginTime: '2023-02-03T09:02:54.507Z'
+                lastLogin: '2023-02-03T09:02:54.507Z'
+                approved: false
+                emailVerified: false
+                onboarded: true
+                roles:
+                  - role: User
+                  - role: GroupAdmin
+                  - role: CompanyAdmin
+                blocked: false
+    users:
+      description: User list
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: string
+                name:
+                  type: string
+                fullName:
+                  type: string
+                email:
+                  type: string
+                isLocalUser:
+                  type: boolean
+                active:
+                  type: boolean
+                firstLoginTime:
+                  type: string
+                lastLogin:
+                  type: string
+                approved:
+                  type: boolean
+                emailVerified:
+                  type: boolean
+                onboarded:
+                  type: boolean
+                roles:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      role:
+                        type: string
+                blocked:
+                  type: boolean
+            x-examples:
+              Example 1:
+                - id: c963c178-7cba-49f8-baf2-1c1ae64ed63c
+                  name: Daisy
+                  fullName: Daisy
+                  email: test@qq.com
+                  isLocalUser: true
+                  active: true
+                  firstLoginTime: '2023-02-03T09:02:54.507Z'
+                  lastLogin: '2023-02-03T09:02:54.507Z'
+                  approved: false
+                  emailVerified: false
+                  onboarding: true
+                  roles:
+                    - role: User
+                    - role: GroupAdmin
+                    - role: CompanyAdmin
+                  blocked: false
+                - id: c963c178-7cba-49f8-baf2-1c1ae64ed63d
+                  name: Hank
+                  fullName: Hank Yang
+                  email: hank.yang@mendix.com
+                  isLocalUser: true
+                  active: true
+                  firstLoginTime: '2023-02-03T08:58:27.829Z'
+                  lastLogin: '2023-02-03T08:58:27.829Z'
+                  approved: false
+                  emailVerified: false
+                  onboarding: true
+                  roles:
+                    - role: User
+                    - role: GroupAdmin
+                    - role: CompanyAdmin
+                  blocked: false
+                - id: c963c178-7cba-49f8-baf2-1c1ae64ed63e
+                  name: shabbir
+                  fullName: Shabbir Hossain
+                  email: Shabbir.Hossain@mendix.com
+                  isLocalUser: true
+                  active: true
+                  firstLoginTime: '2023-02-06T10:17:22.670Z'
+                  lastLogin: '2023-02-06T10:17:22.670Z'
+                  approved: false
+                  emailVerified: false
+                  onboarding: true
+                  roles:
+                    - role: User
+                  blocked: false
+          examples:
+            Users:
+              value:
+                - id: c963c178-7cba-49f8-baf2-1c1ae64ed63c
+                  name: Daisy
+                  fullName: Daisy
+                  email: test@qq.com
+                  isLocalUser: true
+                  active: true
+                  firstLoginTime: '2023-02-03T09:02:54.507Z'
+                  lastLogin: '2023-02-03T09:02:54.507Z'
+                  approved: false
+                  emailVerified: false
+                  onboarded: true
+                  roles:
+                    - role: User
+                    - role: GroupAdmin
+                    - role: CompanyAdmin
+                  blocked: false
+                - id: c963c178-7cba-49f8-baf2-1c1ae64ed63d
+                  name: Hank
+                  fullName: Hank Yang
+                  email: hank.yang@mendix.com
+                  isLocalUser: true
+                  active: true
+                  firstLoginTime: '2023-02-03T08:58:27.829Z'
+                  lastLogin: '2023-02-03T08:58:27.829Z'
+                  approved: false
+                  emailVerified: false
+                  onboarding: true
+                  roles:
+                    - role: User
+                    - role: GroupAdmin
+                    - role: CompanyAdmin
+                  blocked: false
+                - id: c963c178-7cba-49f8-baf2-1c1ae64ed63e
+                  name: shabbir
+                  fullName: Shabbir Hossain
+                  email: Shabbir.Hossain@mendix.com
+                  isLocalUser: true
+                  active: true
+                  firstLoginTime: '2023-02-06T10:17:22.670Z'
+                  lastLogin: '2023-02-06T10:17:22.670Z'
+                  approved: false
+                  emailVerified: false
+                  onboarding: true
+                  roles:
+                    - role: User
+                  blocked: false
+  schemas:
+    UserInput:
+      type: object
+      title: UserInput
+      description: User creation request
+      properties:
+        name:
+          type: string
+          description: User name.
+          pattern: '^[a-zA-Z][a-zA-Z0-9_]{2,19}$'
+          minLength: 1
+          maxLength: 100
+        fullName:
+          type: string
+          description: User full name.
+          pattern: '^[\w-][\w- ]+$'
+          minLength: 1
+          maxLength: 200
+        email:
+          type: string
+          description: User's Email.
+          format: email
+          pattern: '\w+((-|\+|\.)\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+'
+          example: username@gmail.com
+        company:
+          type: string
+          description: The company that use belongs to.
+          pattern: '^[\w-][\w- ]+$'
+          minLength: 1
+          maxLength: 200
+          example: Mendix
+        department:
+          type: string
+          description: The department that use belongs to.
+          pattern: '^[\w-][\w- ]+$'
+          minLength: 1
+          maxLength: 200
+        unit:
+          type: string
+          description: The unit that use belongs to.
+          pattern: '^[\w-][\w- ]+$'
+          minLength: 1
+          maxLength: 200
+        team:
+          type: string
+          description: The team that use belongs to.
+          pattern: '^[\w-][\w- ]+$'
+          minLength: 1
+          maxLength: 200
+        aux1:
+          type: string
+          description: User's auxiliar info 1.
+          minLength: 1
+          maxLength: 200
+        aux2:
+          type: string
+          description: User's auxiliar info 2.
+          minLength: 1
+          maxLength: 200
+        userRoles:
+          type: array
+          description: User roles.
+          items:
+            type: object
+            title: userRole
+            properties:
+              role:
+                enum:
+                  - User
+                  - SystemAdmin
+                  - CompanyAdmin
+                description: User role.
+            required:
+              - role
+            xml:
+              name: userRole
+        blocked:
+          type: boolean
+          description: User is blocked (can not login).
+      required:
+        - name
+        - fullName
+        - email
+        - userRoles
+      x-examples:
+        User creation request:
+          name: User name
+          fullName: User full name
+          email: User email
+          userRoles:
+            - role: User
+      xml:
+        name: MppUserInput
+    UserPasswordInput:
+      type: object
+      title: UserPasswordInput
+      description: User password change request
+      properties:
+        oldPassword:
+          type: string
+          description: User's current password.
+          format: password
+          minLength: 12
+          maxLength: 32
+        newPassword:
+          type: string
+          description: New password that user want to set
+          format: password
+          minLength: 12
+          maxLength: 32
+      required:
+        - oldPassword
+        - newPassword
+      x-examples:
+        User password change request:
+          oldPassword: $Old-Password
+          newPassword: $New-Password
+      xml:
+        name: UserPasswordInput
+    error:
+      type: object
+      description: Error response
+      properties:
+        status:
+          type: integer
+          description: Response status code.
+        title:
+          type: string
+          description: 'A short, human-readable summary of the problem type.'
+        detail:
+          type: string
+          description: A human-readable explanation specific to this occurrence of the problem.
+        invalid-params:
+          type: array
+          description: "(Optional) JSON list List of name, reason keys for invalid attribute values.\r\n"
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: "Parameter name.\r\n"
+              reason:
+                type: string
+                description: "Reason for error.\r\n"
+      required:
+        - status
+        - title
+        - detail
+      x-examples:
+        Error response:
+          status: 400
+          title: Bad Request
+          detail: Please see invalid-params list
+          invalid-params:
+            - name: name
+              reason: user name can not be empty
+security:
+  - mxtoken: []

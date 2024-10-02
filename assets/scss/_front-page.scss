@@ -1,0 +1,101 @@
+// File for styling the docs.mendix.com landing page
+
+.td-main main.lp {
+    padding: 2rem 2.5rem;
+    padding-top:5.25rem !important;
+}
+
+div.lp-container {
+    padding: 0;
+    margin: 0;
+}
+
+.lp-row{
+    margin-bottom: 2rem !important;
+}
+
+h1.page-title {
+    font-weight: $font-weight-normal;
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+h5.lp-description {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.lp-container img {
+    border-style: none;
+}
+
+img.card-icon {
+    width: 4rem;
+    height: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: -0.2rem;
+}
+
+h4.card-title {
+    color: $gray-900;
+    font-weight: 600;
+    font-size: 1.25rem;
+    border-top: 3px solid;
+    padding-top: 1rem;
+    border-color: $green;
+}
+
+ul.card-text {
+    margin-top: 1rem;
+    padding-left: 0rem;
+    list-style: none;
+    font-size: 1rem;
+    a {
+        text-decoration: none;
+        &::after {
+            content: "\00a0→"; // Add a nonbreaking space (\00a0) and arrow to links
+        }
+        &:hover {
+            color: $link-hover-color;
+            text-decoration: underline;
+        }
+        color: $secondary;
+    }
+}
+
+div.lp-panel {
+    background: #171717;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 1.5rem 1.25rem;
+    margin: 0.05rem;
+}
+
+h4.lp-panel-title {
+    color: #FFFFFFEB;
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 0.875rem !important;
+}
+
+li.lp-panel-list {
+    font-size: 1rem;
+    font-weight: 600;
+    list-style: none;
+    margin-bottom: 0.5rem;
+    a {
+        color: #8AC4FF !important;
+        &:hover {
+            color: #99D0FF !important;
+        }
+    }
+
+}
+
+p.rn-date {
+    color: #FFFFFFD4;
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin-bottom: 0rem;
+}

@@ -20,9 +20,9 @@ These are the `OPTIONS`:
 | Option | Value | Result |
 | --- | --- | --- |
 | `--unit-type` | A single unit type, or a comma-separated list of unit types. | Filters the results on the supplied unit types and limits the JSON export. |
-| `--module-names` | A single module name, or a comma-separated list of module names. | Filters the results on the supplied modules and limits the JSON export. (this option introduced in Mendix 10.16.0) |
-| `--exclude-system-module` | | Exclude the system module from the JSON export. (this option introduced in Mendix 10.12.0) |
-| `--exclude-protected-modules` | | Exclude protected modules from the JSON export. (this option introduced in Mendix 10.12.0) |
+| `--module-names` | A single module name, or a comma-separated list of module names. | Filters the results on the supplied modules and limits the JSON export. (Available from Mendix 10.16.0) |
+| `--exclude-system-module` | | Exclude the system module from the JSON export. (Available from Mendix 10.12.0) |
+| `--exclude-protected-modules` | | Exclude protected modules from the JSON export. (Available from Mendix 10.12.0) |
 
 ### Examples
 

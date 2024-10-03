@@ -21,20 +21,9 @@ For more information about content support, see [Marketplace Content Support](/a
 
 The [Mendix Marketplace](https://marketplace.mendix.com/) is a vibrant marketplace containing complete sample apps that can be used right away as well as various components (connectors, modules, widgets, and more) that can be used to build your apps more quickly. In the Mendix Marketplace, you can browse all the content, get what you need, and share the content you have created.
 
-The Marketplace home page is your entry point to the various parts of the Mendix Marketplace. 
+The Marketplace home page is your entry point to the various parts of the Mendix Marketplace. This document describes the different sections of the Marketplace home page.
 
-This document describes the different sections of the Mendix Marketplace.
-
-On the right side of the header, you can search for content via the **Search Marketplace** box.
-
-On the left side of the page, you can see the following categories:
-
-* [Explore](#explore)
-* [Personal](#personal)
-* [Company](#company)
-* [Data](#data)
-
-On the right side of the page, you can see the filters such as **Content Types** to use to filter the Marketplace components. The following filter options are available:
+The search box at the top of the page allows you to search for content. You can filter your search results using the fitlers on the right side of the page:
 
 * **Support** – the support categories (for details, see the [Marketplace Content Support](/appstore/marketplace-content-support/))
 * **Visibility** – for [Public](/appstore/sharing-content/#public) or [Private](/appstore/sharing-content/#private) content
@@ -44,7 +33,16 @@ On the right side of the page, you can see the filters such as **Content Types**
 * **Compatibility** – for Studio Pro major versions
 * **Rating** – how the components have been rated in [reviews](/appstore/overview/#my-reviews) by users
 
+{{% alert color="info" %}}
 For details on finding and installing Marketplace content in Studio Pro, see the [Finding and Downloading Content in Studio Pro](/appstore/use-content/#downloading) section of *Using Marketplace Content*.
+{{% /alert %}}
+
+On the left side of the page, you can see the following categories:
+
+* [Explore](#explore)
+* [Personal](#personal)
+* [Company](#company)
+* [Data](#data)
 
 ## Explore {#explore}
 

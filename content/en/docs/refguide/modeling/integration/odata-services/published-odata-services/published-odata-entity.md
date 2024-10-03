@@ -111,7 +111,7 @@ When the app receives a request to insert a new object, it does the following:
 
 This is the behavior when you choose the action **Write to database**.
 
-You can also choose the **Call a microflow** action to use your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/) parameter. In the microflow, you can use the [Commit](/refguide/committing-objects/) activity to commit the changes to the database. 
+You can also choose the **Call a microflow** action to use your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/) and/or a [System.HttpResponse](/refguide/http-request-and-response-entities/) parameters. In the microflow, you can use the [Commit](/refguide/committing-objects/) activity to commit the changes to the database. 
 
 In the publishing app, you can use a validation message action to report a validation error. The client app can include a custom error handler on the [Send External Object](/refguide/send-external-object/) activity to handle the error. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed. For more information, see [Supported OData Operations](/refguide/supported-odata-operations/#updating-objects).
 
@@ -156,7 +156,9 @@ When the app receives a request to change values, it does the following:
 
 This is the behavior when you choose the action **Write to database**.
 
-You can also choose the **Call a microflow** action to use your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/) parameter. In the microflow, you can use the [Commit](/refguide/committing-objects/) activity to commit the changes to the database. 
+You can also choose the **Call a microflow** action to use your own logic.
+Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/) and/or a [System.HttpResponse](/refguide/http-request-and-response-entities/) parameters.
+In the microflow, you can use the [Commit](/refguide/committing-objects/) activity to commit the changes to the database.
 
 In the publishing app, you can use a validation message action to report a validation error. The client app can include a custom error handler on the [Send External Object](/refguide/send-external-object/) activity to handle the error. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed. For more information, see [Supported OData Operations](/refguide/supported-odata-operations/#updating-objects).
 
@@ -164,7 +166,9 @@ In the publishing app, you can use a validation message action to report a valid
 
 Select the checkbox for **Deletable** to indicate that clients can delete the values of attributes and associations.
 
-Choose whether the object should be deleted from the database directly, or whether to call a microflow. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/) parameter. In the microflow, you can use the [Delete](/refguide/deleting-objects/) activity to delete the object from the database. 
+Choose whether the object should be deleted from the database directly, or whether to call a microflow.
+Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/) and/or a [System.HttpResponse](/refguide/http-request-and-response-entities/) parameters.
+In the microflow, you can use the [Delete](/refguide/deleting-objects/) activity to delete the object from the database. 
 
 You can use a validation message to report a validation error if you are performing, for example, a soft delete. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed.
 
@@ -191,3 +195,16 @@ Setting **Use paging** to **Yes** may result in inconsistency in the retrieved d
 When **Use paging** is set to **Yes**, the number of objects per page can be set in **Page size**.
 
 Default: **10000**
+
+## 8 Customising outgoing HTTP response (only applicable when **Call a microflow** is selected)
+
+It is possible to manipulate response which would be produced as a result of the request.
+In order to do that the microflow must take a parameter of [System.HttpResponse](/refguide/http-request-and-response-entities/) type.
+
+If no changes were made to HttpResponse object then actual response won't be changed as well.
+
+If only headers of the HttpResponse were changed (for instance a new header was added to the response) then those headers would be merged with default headers, replacing values of the same name.
+
+If status code OR content of the HttpResponse were changed then actual response would be produced exclusively from HttpResponse parameter, including status code, headers and response body.
+
+Note. Reason phrase field is ignored.

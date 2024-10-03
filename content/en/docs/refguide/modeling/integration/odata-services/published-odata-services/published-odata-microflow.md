@@ -64,3 +64,16 @@ You can also select **Can be empty**. If this checkbox is cleared, calls to the 
 {{% alert color="info" %}}
 Boolean and list parameters can never be empty.
 {{% /alert %}}
+
+## 4 Customising outgoing HTTP response
+
+It is possible to manipulate response which would be produced as a result of OData Action call.
+In order to do that published microflow must take a parameter of [System.HttpResponse](/refguide/http-request-and-response-entities/) type.
+
+If no changes were made to HttpResponse object then actual response won't be changed as well.
+
+If only headers of the HttpResponse were changed (for instance a new header was added to the response) then those headers would be merged with default headers, replacing values of the same name.
+
+If status code OR content of the HttpResponse were changed then actual response would be produced exclusively from HttpResponse parameter, including status code, headers and response body.
+
+Note. Reason phrase field is ignored.

@@ -1,12 +1,12 @@
 ---
 title: "Clone Type"
-url: /refguide/clone-type/
+url: /refguide9/clone-type/
 weight: 40
 description: Describes full and partial clone types for Git. 
 ---
 
 {{% alert color="info" %}}
-Different clone types are available in Studio Pro version 10.12.0 and above.
+Different clone types are available when using Git in Studio Pro version 9.24.28 and above.
 {{% /alert %}}
 
 ## Introduction
@@ -19,7 +19,9 @@ Currently, Studio Pro supports two different clones types. The clone type only a
 
 By default Mendix advises customers to use a full clone. This trades a slightly longer initial download for a more seamless experience while working.
 
-If you have have accumulated a [large repository](/refguide/troubleshoot-repository-size/) over time, you can use a partial clone to shorten the initial download and therefore speed up development.
+If you have have accumulated a [large repository¹](/refguide/troubleshoot-repository-size/) over time, you can use a partial clone to shorten the initial download and therefore speed up development.
+
+*¹This links to a Mendix 10 document, but it also applies to Mendix 9 apps using Git.*
 
 ### Full Clone
 
@@ -28,7 +30,7 @@ A full clone is the default clone type for Git, it downloads a full copy of the 
 There are several advantages to this clone type:
 
 * A full copy allows you to do some operations on the command line without contacting the server. However, Git operations like a `detached head` are not supported in Studio Pro, so the benefits are limited. 
-* Operations like [combining changes](/refguide/new-merge-algorithm/) can be significantly faster when working with a full clone. Even though the latest changes have to be downloaded from the server, your local repository already contains part of it, which saves time.
+* Operations like [combining changes](/refguide9/new-merge-algorithm/) can be significantly faster when working with a full clone. Even though the latest changes have to be downloaded from the server, your local repository already contains part of it, which saves time.
 
 The disadvantage of this clone type is that downloading a full clone can take significantly longer. A 2GB repository needs to be completely downloaded and unpacked, even though you make limited use of the locally-held full history.
 
@@ -45,11 +47,11 @@ There are several advantages to this clone type:
 * Cloning goes faster. Only relevant data is downloaded so you can get started very quickly.
 * Limited disk space usage. Your local repository will be much smaller compared to a full clone.
 
-The disadvantage of this clone type is that you may need an additional download. For example, when [combining changes](/refguide/new-merge-algorithm/) from an older branch, more data will have to be downloaded compared to the full clone. This means it can take slightly longer. The same applies when interacting with the history.
+The disadvantage of this clone type is that you may need an additional download. For example, when [combining changes](/refguide9/new-merge-algorithm/) from an older branch, more data will have to be downloaded compared to the full clone. This means it can take slightly longer. The same applies when interacting with the history.
 
 ## Preferences
 
-You can change the [clone type](/refguide/preferences-dialog/#clone) for future clone operations, such as downloading an app or checking out another branch of an app you already downloaded. Changing this setting will not affect apps that you have already downloaded.
+You can change the [clone type](/refguide9/preferences-dialog/#clone) for future clone operations, such as downloading an app or checking out another branch of an app you already downloaded. Changing this setting will not affect apps that you have already downloaded.
 
 ## Converting a Partial Clone to a Full Clone
 

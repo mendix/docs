@@ -1,5 +1,5 @@
 ---
-title: "Merging and Diffing commands"
+title: "Merging and Diffing Commands"
 url: /refguide/mx-command-line-tool/merge
 weight: 50
 description: "Describes the commands related to merging and diffing apps for the mx command-line tool."

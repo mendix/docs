@@ -1,12 +1,13 @@
 ---
 title: "Set Up Your Personal Access Token in ATS"
+linktitle: "Set Up Your Personal Access Token"
 url: /appstore/partner-solutions/ats/ht-two-ats-setup-pat-key/
-description: "Describes how you can setup pat key in ATS."
+description: "Describes how you can set up the personal access token in ATS."
 ---
 
 ## Introduction
 
-With the introduction of the [Mendix Projects API](/apidocs-mxsdk/apidocs/projects-api/), you need a valid Personal Access Token (PAT) to use the Application Test Suite (ATS).
+With the introduction of the [Mendix Projects API](/apidocs-mxsdk/apidocs/projects-api/), you need a valid personal access token (PAT) to use the Application Test Suite (ATS).
 
 This document guides you through the process of configuring your Mendix PAT in ATS.
 

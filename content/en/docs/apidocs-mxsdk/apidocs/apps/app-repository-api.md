@@ -1,7 +1,7 @@
 ---
 title: "App Repository API"
 url: /apidocs-mxsdk/apidocs/app-repository-api/
-description: "This API retrieves information (branches, commits) of application models stored in the Mendix Team Server."
+description: "This API retrieves information (branches, commits) for application models stored in the Mendix Team Server."
 restapi: true
 weight: 10
 ---

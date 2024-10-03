@@ -12,9 +12,9 @@ numberless_headings: true
 
 ### Improvements
 
-* The ATS source code and model has been upgraded to Mendix [9.24.27](/releasenotes/studio-pro/9.24/#92427).
+* The ATS source code and model have been upgraded to Mendix [9.24.27](/releasenotes/studio-pro/9.24/#92427).
 * Apps built with Studio Pro [10.12](/releasenotes/studio-pro/10.12/) can now be tested using ATS.
-* We have removed support for selenium 3.
+* We have removed support for Selenium 3.
 
 ## 2.29.4
 
@@ -23,7 +23,7 @@ numberless_headings: true
 ### Fixes
 
 * We have added support for the new [projects api](/apidocs-mxsdk/apidocs/projects-api/).
-   
+
 ## 2.29.3
 
 **Release date: March 26, 2024**
@@ -251,7 +251,7 @@ numberless_headings: true
 ### Improvements
 
 * The ATS source code and model has been upgraded to Mendix [8.18.7](/releasenotes/studio-pro/8.18/#8187).
-* The ATS Job running web service no longer needs a username and password combination to authenticate the requests. The API token is enough to authenticate the request.
+* The ATS Job running web service no longer needs a user name and password combination to authenticate the requests. The API token is enough to authenticate the request.
 
 ## 2.24.0
 

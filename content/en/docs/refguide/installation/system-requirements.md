@@ -109,19 +109,17 @@ To run a Mendix app, Mendix Studio Pro uses the following ports by default. If y
 
 For more information on ports and modifying Studio Pro's default ports, see [Configurations](/refguide/configuration/) and the [Troubleshooting Common Mobile Issues](/refguide/mobile/getting-started-with-mobile/prerequisites/#troubleshooting) section of *Native App Prerequisites and Troubleshooting*.
 
-### File comparison
-
-By default Studio Pro points to an executable shipped together with TortoiseGit to compare files on disk. You can configure which tool you want to use through **Preferences > Version control > General > File comparison > Executable**. 
+### File Comparison
 
 {{% alert color="info" %}}
-The default path for the binary when installing Studio Pro on a new device is: *C:\Program Files\TortoiseGit\bin\TortoiseGitMerge.exe*.
+Comparing files on disk with the original is currently not supported on macOS.
+{{% /alert %}}
+
+By default, Studio Pro points to an executable shipped together with TortoiseGit to compare files on disk. You can configure which tool to use by clicking **Preferences** > **Version control** > **General** > **File comparison** > **Executable**. 
+
+The default path for the binary when installing Studio Pro on a new device is `C:\Program Files\TortoiseGit\bin\TortoiseGitMerge.exe`.
 
 You can download the latest version of TortoiseGitMerge from the [TortoiseGit](https://tortoisegit.org/download/) website. 
-{{% /alert %}}
-
-{{% alert color="info" %}}
-Comparing files on disk with the original is currently not supported on Mac.
-{{% /alert %}}
 
 ### File Locations
 

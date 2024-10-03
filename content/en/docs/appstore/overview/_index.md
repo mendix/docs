@@ -21,11 +21,9 @@ For more information about content support, see [Marketplace Content Support](/a
 
 The [Mendix Marketplace](https://marketplace.mendix.com/) is a vibrant marketplace containing complete sample apps that can be used right away as well as various components (connectors, modules, widgets, and more) that can be used to build your apps more quickly. In the Mendix Marketplace, you can browse all the content, get what you need, and share the content you have created.
 
-The Marketplace home page is your entry point to the various parts of the Mendix Marketplace. 
+The Marketplace home page is your entry point to the various parts of the Mendix Marketplace. This document describes the different sections of the Marketplace home page.
 
-This document describes the different sections of the Mendix Marketplace.
-
-The search box at the top of the page allows you to search for content. You can then filter your search results using the fitlers on the right side of the page:
+The search box at the top of the page allows you to search for content. You can filter your search results using the fitlers on the right side of the page:
 
 * **Support** – the support categories (for details, see the [Marketplace Content Support](/appstore/marketplace-content-support/))
 * **Visibility** – for [Public](/appstore/sharing-content/#public) or [Private](/appstore/sharing-content/#private) content

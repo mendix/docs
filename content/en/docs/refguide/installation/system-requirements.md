@@ -115,7 +115,7 @@ For more information on ports and modifying Studio Pro's default ports, see [Con
 Comparing files on disk with the original is currently not supported on macOS.
 {{% /alert %}}
 
-By default, Studio Pro points to an executable shipped together with TortoiseGit to compare files on disk. You can configure which tool to use by clicking **Preferences** > **Version control** > **General** > **File comparison** > **Executable**. 
+By default, Studio Pro points to an executable shipped together with TortoiseGit to compare files on disk. To customize this, navigate to **Preferences** > **Version control** > **General** > **File comparison** > **Executable** and choose your preferred tool. 
 
 The default path for the binary when installing Studio Pro on a new device is `C:\Program Files\TortoiseGit\bin\TortoiseGitMerge.exe`.
 

@@ -5,7 +5,7 @@ url: /apidocs-mxsdk/apidocs/deploy-api-4/
 type: swagger
 aliases:
     - /apidocs-mxsdk/apidocs/deploy-api-3/
-description: "The Deploy API v4 deploys Mendix apps to licensed nodes, manages application environments in Mendix Cloud, retrieves statuses, starts and stops applications, and deploys or transports new model versions to application environments."
+description: "The Deploy API v4 retrieves information about apps and their environments and allows you to change the technical contact and the permissions of individual team members."
 restapi: true
 weight: 46
 ---

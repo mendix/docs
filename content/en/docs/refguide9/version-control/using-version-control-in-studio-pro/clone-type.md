@@ -19,7 +19,9 @@ Currently, Studio Pro supports two different clones types. The clone type only a
 
 By default Mendix advises customers to use a full clone. This trades a slightly longer initial download for a more seamless experience while working.
 
-If you have have accumulated a [large repository](/refguide/troubleshoot-repository-size/) over time, you can use a partial clone to shorten the initial download and therefore speed up development.
+If you have have accumulated a [large repository¹](/refguide/troubleshoot-repository-size/) over time, you can use a partial clone to shorten the initial download and therefore speed up development.
+
+*¹This links to a Mendix 10 document, but it also applies to Mendix 9 apps using Git.*
 
 ### Full Clone
 

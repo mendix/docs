@@ -5,29 +5,25 @@ url: /refguide/oql-expressions/
 
 ## Introduction
 
-An expression is a query building block that returns a value or a list of values. Constants, functions, combinations of attribute names, constants, and functions connected by operators, or a . They can be used in `WHERE`, `SELECT`, `GROUP BY` and `JOIN` clauses.
+An expression is a query building block that returns a value or a list of values. Expressions can be a constant, function, combination of attribute names, constants, and functions connected by operators, or a subquery. They can be used in `WHERE`, `SELECT`, `GROUP BY`, `UNION` and `JOIN` clauses.
 
 ## Aggregation
 
 Aggregations are functions that reduce a list of values from a retrieved column (or columns) into a singular value. They can be used as an attribute in a `SELECT` clause or in a condition in `HAVING`. 
 
-When combined with a `GROUP BY` clause, aggregations can target any column normally available in `SELECT`, not just those specified in the `GROUP BY` clause. Aggregation is performed over groups separately.
+When combined with a `GROUP BY` clause, aggregations can be used with any column normally available in `SELECT`, not just those specified in the `GROUP BY` clause. Aggregation is performed over groups separately in this case.
 
 ## Syntax
 
 ```sql
-  COUNT ( { * | attribute_path } )
-  | { AVG | MAX | MIN | SUM } ( attribute_path )
+  COUNT ( * )
+  | { COUNT | AVG | MAX | MIN | SUM } ( [ DISTINCT ] attribute_path )
 ```
 Where `attribute_path` is an attribute reachable from entities defined in `FROM` and `JOIN`.
 
 ### AVG
 
 Calculates the mean of numerical (`INTEGER`, `DECIMAL`, `LONG`) values. Null values are ignored.
-
-```sql
-AVG ( attribute_path )
-```
 
 ### COUNT
 
@@ -36,7 +32,7 @@ When counting a single column, rows that are have the `NULL` value are not count
 
 ### MAX and MIN
 
-Returns the maximum or minimum value from a column, with all data types being supported. Boolean values are treated as `0` and `1`, strings are compared alphanumerically. Null values are ignored.
+Returns the maximum or minimum value from a column, with all data types being supported. Boolean values are treated as `0` and `1`, strings are compared alphabetically. Null values are ignored.
 
 ### SUM
 
@@ -44,18 +40,115 @@ Calculates the sum of numerical values. Null values are ignored.
 
 ### STRING_AGG
 
-Combines multiple strings into a single value. Syntax differs from other aggregations:
+Combines multiple strings into a single value and adds a separator string in between. `NULL` is ignored, empty strings are included. Syntax differs from other aggregations:
 
 ```sql
-STRING_AGG
-(
-    attribute_path, separator
-)
+STRING_AGG ( attribute_path, separator )
 ```
 Where `separator` is any expression of type `STRING`. 
 
 ### Examples
 
+Let's assume that `Sales.Product` entity has 4 objects with `Name` and `Stock` attributes:
+
+```sql
+SELECT Name, Stock FROM Sales.Product
+```
+
+| Name     | Stock |
+|----------|-------|
+| Cheese   | 5     |
+| Milk     | 54    |
+| Tomatoes | 44    |
+| Tomatoes | NULL  |
+
+The number of rows can be calculated with `COUNT`:
+```sql
+SELECT COUNT(*) AS ProductCount FROM Sales.Product
+```
+| ProductCount |
+|:------------:|
+|      4       |
+
+The same result can be retrieved by using `COUNT` on a single table:
+```sql
+SELECT COUNT(Name) AS ProductCount FROM Sales.Product
+```
+
+As there is a `NULL` value in the `Stock` column, when using `COUNT` it will be ignored:
+```sql
+SELECT COUNT(Stock) AS ProductCount FROM Sales.Product
+```
+| ProductCount |
+|:------------:|
+|      3       |
+
+The sum of all products in stock:
+```sql
+SELECT Sum(Stock) AS ProductCount FROM Sales.Product
+```
+| ProductCount |
+|:------------:|
+|     103      |
+
+The sum of all products in stock:
+```sql
+SELECT SUM(Stock) AS StockSum FROM Sales.Product
+```
+| StockSum |
+|:--------:|
+|   103    |
+
+The average stock per product:
+```sql
+SELECT AVG(Stock) AS ProductCount FROM Sales.Product
+```
+| ProductCount |
+|:------------:|
+|    34.333    |
+
+The highest stock number:
+```sql
+SELECT MAX(Stock) as StockMax FROM Sales.Product
+```
+| StockMax |
+|:--------:|
+|    54    |
+
+Using `MAX` on a string column gives the last alphabetically sorted name:
+```sql
+SELECT MAX(Name) as LastProduct FROM Sales.Product
+```
+| LastProduct |
+|:-----------:|
+|  Tomatoes   |
+
+Selecting the product with the most stock requires the use of a subquery. The subquery returns the maximum stock number, which is then compared to each product's stock in the `WHERE` clause:
+```sql
+SELECT Name FROM Sales.Product
+WHERE Stock = (SELECT MAX(P.Stock) FROM Sales.Product P)
+```
+| Name |
+|:----:|
+| Milk |
+
+Product names can be aggregated into a single list:
+```sql
+SELECT STRING_AGG(Name, ',') as ProductNames FROM Sales.Product
+```
+|         ProductNames          |
+|:-----------------------------:|
+| Cheese,Milk,Tomatoes,Tomatoes |
+
+#### Distinct
+
+There are duplicate values in the `Name` column, which might not want to be counted separately. `DISTINCT` can be used to get the number of unique rows:
+```sql
+SELECT COUNT(DISTINCT Name) AS ProductCount FROM Sales.Product
+```
+| ProductCount |
+|:------------:|
+|      3       |
 
 
 ## Parameters

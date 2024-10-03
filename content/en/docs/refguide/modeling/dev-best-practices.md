@@ -249,15 +249,15 @@ Guidelines below can help you choose a short yet meaningful name for your workfl
 
 [Layouts](/refguide/layout/) and [snippets](/refguide/snippet/) should be identified with prefixes.
 
-| Document Type               | Prefix       |
-| --------------------------- | ------------ |
-| Layout for responsive (web) | Responsive_  |
-| Layout for tablet (web)     | Tablet_      |
-| Layout for phone (web)      | Phone_       |
-| Layout for native phone     | NativePhone_ |
-| Layout for popup            | Popup_       |
-| Layout Atlas specific       | Atlas_       |
-| Snippet                     | SNIP_        |
+| Document Type               | Prefix                                                    |
+| --------------------------- | --------------------------------------------------------- |
+| Layout for responsive (web) | {{% donottranslate %}}Responsive_{{% /donottranslate %}}  |
+| Layout for tablet (web)     | {{% donottranslate %}}Tablet_{{% /donottranslate %}}      |
+| Layout for phone (web)      | {{% donottranslate %}}Phone_{{% /donottranslate %}}       |
+| Layout for native phone     | {{% donottranslate %}}NativePhone_{{% /donottranslate %}} |
+| Layout for popup            | {{% donottranslate %}}Popup_{{% /donottranslate %}}       |
+| Layout Atlas specific       | Atlas_                                                    |
+| Snippet                     | SNIP_                                                     |
 
 #### Enumerations
 

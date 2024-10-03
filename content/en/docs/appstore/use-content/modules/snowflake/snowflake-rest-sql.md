@@ -1,7 +1,7 @@
 ---
 title: "Snowflake REST SQL Connector"
 url: /appstore/connectors/snowflake/snowflake-rest-sql/
-description: "Describes the configuration and usage of the Mendix-Snowflake REST SQL connector from the Mendix Marketplace."
+description: "Describes the configuration and usage of the Mendix-Snowflake REST SQL connector from the Mendix Marketplace." 
 weight: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
@@ -18,12 +18,15 @@ The Snowflake REST SQL connector provides a way to first setup key-pair authenti
 * Write data to Snowflake
 * Trigger [Snowflake Cortex ML functions](https://docs.snowflake.com/en/guides-overview-ml-functions)
 * Use [Snowflake Cortex LLM functions](https://docs.snowflake.com/en/user-guide/snowflake-cortex/llm-functions)
+* Use [Snowflake Cortex Analyst](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst)
 
-The current version of the connector supports the following actions:
+The current version of the connector supports the following:
 
 * Authentication with an RSA key pair according to PKCS #8 standard
+* Authentication with OAUTH through an OIDC provider
 * Execution of single SQL statements
 * Synchronous execution of calls
+* 
 
 ### Prerequisites {#prerequisites}
 

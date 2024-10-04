@@ -26,6 +26,77 @@ The top navigation bar displays your location within the Platform (for example, 
 
 From the navigation bar, you can access the following items:
 
-* **Platform Navigation** (({{% icon name="layout-1-filled" %}}))
+* [Platform Navigation](#navigation) (({{% icon name="layout-1-filled" %}}))
 * **Notification Center** (({{% icon name="alarm-bell" %}}))
 * **Account Menu**
+
+#### Platform Navigation {#navigation}
+
+The navigation menu contains the options that you need to make or manage your apps.
+
+{{< figure src="/attachments/private-platform/pmp-navigation-menu.png" class="no-border" >}}
+
+It consists of the following sections:
+
+* **Make**
+    * **Mendix Home** - Click this option to go to the [My Apps](#my-apps) page.
+    * **Group Apps** - Click this option to go to the [My Group Apps](#my-group-apps) page.
+    * **Get Studio Pro** - Click this option to go to the [Get Studio Pro](#get-studio-pro) page.
+* **Manage**
+    * **My Content** - Click this option to go to the [My Content](#my-content) page.
+    * **Group Content** - Click this option to go to the [Group Content](#group-content) page.
+    * **Company Content** - Click this option to go to the [Company Content](#company-content) page.
+
+#### Notifications
+
+The **Notifications** center shows notifications for the following events:
+
+* Project events
+    * You were added to a project.
+    * You were removed from a project.
+    * Your role in a project changed.
+    * A user requested access to your project.
+    * You were made the owner of a project.
+    * Your project has received new feedback.
+* Deployment events
+    * Your deployment package was successfully created.
+    * Your deployment package could not be created because of an error.
+    * Your app was deployed.
+    * Your app could not be deployed due to an error.
+* Marketplace events
+    * A Marketplace component that you are following was updated.
+    * A Marketplace component that you own was approved for publication.
+    * A new version of your Marketplace component was approved for publication.
+    * A Marketplace component that you own was rejected from publication.
+    * A new version of your Marketplace component was rejected from publication.
+    * You were made the owner of a Marketplace component.
+
+{{< figure src="/attachments/private-platform/pmp-notifications.png" class="no-border" >}}
+
+
+
+### My Apps {#my-apps}
+
+The **My Apps** page is the landing page of Private Mendix Platform.
+
+{{< figure src="/attachments/private-platform/pmp-homepage.png" class="no-border" >}}
+
+It contains the following elements:
+
+#### Onboarding
+
+The top section of the **My Apps** page contains elements that help new users get started with the Private Mendix Platform. It consists of the following blocks:
+
+* **Download & Install Studio Pro** - Click this block to download the highest version of Studio Pro available in your Private Mendix Platform.
+* **Patch Studio Pro** - Click this block to download the required patch file for Studio Pro.
+* **Create a New App Project** - Click this block to create a new app. For more information, see [Creating a New App](/private-mendix-platform/user-guide/#create-app).
+
+To hide the **Onboarding** section, click **Hide onboarding**.
+
+#### My Apps Overview
+
+The bottom section of the **My Apps** page contains an overview of your active and archived applications. It contains the following elements:
+
+* Search bar - Use the search bar to search through apps by name or description.
+* **Active** tab - Displays all currently active apps. Each tile shows the current member count for the app, as well as a sub-menu to archive or delete it. To view more details about an app, click on its tile. For more information, see [Managing Your App](/private-mendix-platform/user-guide/#manage-app).
+* **Archived** tab - Displays all archived apps. To reactivate an archived project, click on its tile. Apps cannot be archived if they have more than one member.

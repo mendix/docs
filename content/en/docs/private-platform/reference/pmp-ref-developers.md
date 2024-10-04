@@ -7,11 +7,8 @@ weight: 20
 
 ## Introduction
 
-This section of the Private Mendix Platform Reference Guide provides information about the menus and functionalities of the Private Mendix Platform that are available to developer users.
+This section of the Private Mendix Platform Reference Guide provides information about the menus and functionalities of the Private Mendix Platform that are available to developer users only.
 
-### My Apps
-
-The **My Apps** page is the landing page of Private Mendix Platform. It contains the following elements:
 
 
 

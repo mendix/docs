@@ -51,13 +51,13 @@ It consists of the following sections:
 
 The **Notifications** center shows notifications for the following events:
 
-* Project events
-    * You were added to a project.
-    * You were removed from a project.
-    * Your role in a project changed.
-    * A user requested access to your project.
-    * You were made the owner of a project.
-    * Your project has received new feedback.
+* App events
+    * You were added to an app.
+    * You were removed from an app.
+    * Your role in an app changed.
+    * A user requested access to your an app.
+    * You were made the owner of an app.
+    * Your app has received new feedback.
 * Deployment events
     * Your deployment package was successfully created.
     * Your deployment package could not be created because of an error.
@@ -73,7 +73,7 @@ The **Notifications** center shows notifications for the following events:
 
 {{< figure src="/attachments/private-platform/pmp-notifications.png" class="no-border" >}}
 
-
+You can click a notification to view the related page or link. You can also mark a notification as read or unread by clicking the status dot on the left. To set your notification preferences, go to [Manage My Account > Notifications](#manage-notifications).
 
 ### My Apps {#my-apps}
 

@@ -137,9 +137,9 @@ You can view details of a backup by clicking **More Options** ({{% icon name="th
 
 ## Data Location {#data-location}
 
-By default, application data, including files and backups, is always replicated to a secondary region, separate from the primary region for security and compliance reasons. Each individual backup is immutable; in other words, once it has been written to Mendix’s storage location, it can no longer be modified or overwritten.
+Application data, including files and backups, is always replicated by default to a secondary region, separate from the primary region, for security and compliance reasons. Each individual backup is immutable; in other words, once it has been written to Mendix’s storage location, it can no longer be modified or overwritten.
 
-Where possible, application data is replicated to a secondary region in the same political region. This is not possible in the regions where there is only one region available in the policital region:
+Where possible, application data is replicated to a secondary region in the same political region. This is not possible in regions where there is only one region available in the political region, which has the following consequences:
 
 * Application data in the Bahrain region, including backups, is replicated to the Mumbai region
 * Application data in the Cape Town region, including backups, is replicated to the Frankfurt region
@@ -149,10 +149,11 @@ Where possible, application data is replicated to a secondary region in the same
 * Application data in the Singapore region, including backups, is replicated to the Sydney region
 * Application data in the UAE region, including backups, is replicated to the Mumbai region
 
-We will change the replication region for these regions when a new region is opened in the political region.
+We will change the replication region for these regions if a new region is opened in the political region.
 
 ### Application Data Replication {#application-data-replication}
-Customers can opt-out from application data replication. In that case, application data will not be replicated to secondary region for any of their applications. Changing the application data replication setting only affects applications and environments that have not been provisioned yet.
+
+Customers can opt-out of application data replication. In that case, application data will not be replicated to a secondary region for any of their applications. Changing the application data replication setting only affects applications and environments that have not yet been provisioned.
 
 ## Limitations
 

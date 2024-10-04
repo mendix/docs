@@ -1,7 +1,7 @@
 ---
 title: "Marketplace Content Support "
 url: /appstore/marketplace-content-support/
-weight: 10
+weight: 4
 no_list: false
 description_list: true
 description: "Presents information on the Marketplace content support."

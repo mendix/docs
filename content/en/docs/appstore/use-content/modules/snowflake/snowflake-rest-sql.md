@@ -101,7 +101,10 @@ After you configure the authentication for Snowflake, you can implement the func
 {{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/example_implementation.png" >}}
 
 ### Configuring Snowflake Cortex Analyst 
-
+Cortex Analyst is a fully-managed, LLM-powered Snowflake Cortex feature that helps you create applications capable of reliably answering business questions based on your structured data in Snowflake.
+Prerequisites
+1.Make sure you have access to Cortex Analyst for more information check the [Snowflake Cortex Analyst documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst)
+2.
 ## Technical Reference
 
 To help you work with the Snowflake REST SQL connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.

@@ -230,16 +230,16 @@ The following shortcut keys are assigned to menu actions that can be used in all
 
 You can use the following shortcut keys in [Maia Chat](/refguide/maia-chat/), including on the feedback page:
 
-| Windows | Description |
-| --- | --- |
-| <kbd>Enter</kbd> (or <kbd>Ctrl</kbd> + <kbd>Enter</kbd>) | Send your question in the chat. |
-| <kbd>Shift</kbd> + <kbd>Enter</kbd> | Add a new line to your question. |
-| <kbd>Delete</kbd> | Delete the selected text. |
-| <kbd>Ctrl</kbd> + <kbd>C</kbd> | Copy the selected text to the clipboard. |
-| <kbd>Ctrl</kbd> + <kbd>X</kbd> | Cut the selected text to the clipboard. |
-| <kbd>Ctrl</kbd> + <kbd>V</kbd> | Paste the text of the clipboard. |
-| <kbd>Ctrl</kbd> + <kbd>Z</kbd> | Undo the previous action. |
-| <kbd>Ctrl</kbd> + <kbd>Y</kbd> | Redo the previous action. |
+| Windows | Mac | Description |
+| --- | --- | --- |
+| <kbd>Enter</kbd> (or <kbd>Ctrl</kbd> + <kbd>Enter</kbd>) | <kbd>Enter</kbd> (or <kbd>Command</kbd> + <kbd>Enter</kbd>) | Send your question in the chat. |
+| <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>Shift</kbd> + <kbd>Enter</kbd> | Add a new line to your question. |
+| <kbd>Delete</kbd> | <kbd>Delete</kbd> | Delete the selected text. |
+| <kbd>Ctrl</kbd> + <kbd>C</kbd> | <kbd>Command</kbd> + <kbd>C</kbd> | Copy the selected text to the clipboard. |
+| <kbd>Ctrl</kbd> + <kbd>X</kbd> | <kbd>Command</kbd> + <kbd>X</kbd> | Cut the selected text to the clipboard. |
+| <kbd>Ctrl</kbd> + <kbd>V</kbd> | <kbd>Command</kbd> + <kbd>V</kbd> | Paste the text of the clipboard. |
+| <kbd>Ctrl</kbd> + <kbd>Z</kbd> | <kbd>Command</kbd> + <kbd>Z</kbd> | Undo the previous action. |
+| <kbd>Ctrl</kbd> + <kbd>Y</kbd> | <kbd>Command</kbd> + <kbd>Y</kbd> | Redo the previous action. |
 
 {{% alert color="info" %}}
 The shortcut keys for the Delete, Copy, Cut, Paste, Undo, and Redo actions are available from Studio Pro 10.11.0 and above, and are currently supported only in Windows.

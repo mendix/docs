@@ -13,7 +13,7 @@ aliases:
 ---
 
 {{% alert color="info" %}}
-A redesigned deployment flow is now available. For more information, see [Environments and Deployment (New UI)](/deploy/environments-redesign).
+A redesigned deployment flow is now available. For more information, see [Environments and Deployment (New UI)](/developerportal/deploy/environments-redesign/).
 {{% /alert %}}
 
 ## Introduction

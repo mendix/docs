@@ -39,7 +39,7 @@ Before starting this how-to, make sure you have completed the following prerequi
     * In the **App Settings** > **Workflows** tab, set **Workflow state change** to *OCh_Workflow_State*.
     * In the **App Settings** > **Workflows** tab, set **User task state change** to *OCh_WorkflowUserTask_State*.
 
-* Make sure your app has Atlas 3. As a result of installing Atlas 3, your app should contain the following modules that Workflow Commons depends on: Atlas_Core, Atlas_Web_Content, and DataGrid.
+* Make sure your app has Atlas 3. As a result of installing Atlas 3, your app should contain the following modules that Workflow Commons depends on: Atlas_Core, Atlas_Web_Content, and DataWidgets.
 
 * Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows/). 
 
@@ -65,7 +65,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Add the following pages to your navigation (pages are part of the Workflow Commons module):
     * TaskInbox
-    * WorkflowDashboard
+    * Workflow_Dashboard
     * WorkflowAdminCenter
 
 ## Setting Up Security 
@@ -96,9 +96,9 @@ Do the following:
 
 8. Confirm your choice by clicking **OK**.
 
-9. Repeat steps 2-8 to create and configure the Manager role.
+9. Refer to steps 2-8 to create and configure the Manager role.
 
-10. Repeat steps 2-8 to create and configure the HR role.
+10. Refer to steps 2-8 to create and configure the HR role.
 
 11. You already have the Administrator role by default, now you need to enable this role to monitor workflows, view their progress, and manage their settings in your app. Do the following:
 

@@ -239,4 +239,4 @@ Cortex Analyst is a fully-managed, LLM-powered Snowflake Cortex feature that hel
 7. Add the "Response: Get Cortex Analyst Response" action to get the "Cortex Analyst Response" entity from Response
    - Request_ID :The returned RequestId
    
-    
+ {{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/CortexAnalystRequestExample.png" >}}    

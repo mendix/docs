@@ -2,7 +2,7 @@
 title: "Environments and Deployment (New UI)"
 url: /developerportal/deploy/environments-redesign/
 beta: true
-weight: 2
+weight: 8
 description: "Describes the new Environments page and deployment flow"
 ---
 

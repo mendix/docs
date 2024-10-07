@@ -26,7 +26,7 @@ The current version of the connector supports the following:
 * Authentication with OAUTH through an OIDC provider
 * Execution of single SQL statements
 * Synchronous execution of calls
-* Execution of a Cortex analyst query
+* Execution of a Cortex Analyst query
 
 ### Prerequisites {#prerequisites}
 

@@ -84,6 +84,7 @@ Now that you have everything set up, it is time to deploy your native app. See [
     | -------- | -------- | ------- |
     | **google-services.json** | Google Firebase | Firebase configuration and private key, bundled as part of your Android application. |
     | **GoogleServices-Info.plist** | Google Firebase | Firebase configuration and private key, bundled as part of your iOS application. |
+
 1. Save the configuration. Now you are ready to build.
 
 When building for local development, keep in mind that Mendix's Make It Native app does not support push notifications. In order to use and test push notifications, you will have to build your own native app as described above and distribute it to an emulator (Android only) or test device.

@@ -21,6 +21,7 @@ Before you continue, you should first set up a test app, and populate it with te
 
 1. Create a [domain model](/refguide/configuring-a-domain-model/) with the following entities:
     * **Customer**
+
         | Attribute name | Attribute type |
         | --- | --- |
         | *CustomerID* | String |
@@ -28,7 +29,9 @@ Before you continue, you should first set up a test app, and populate it with te
         | *Address* | String |
         | *ZipCode* | String |
         | *City* | String |
+
     * **Order**
+
        | Attribute name | Attribute type |
        | --- | --- |
        | *Number* | Integer |
@@ -43,6 +46,7 @@ Before you continue, you should first set up a test app, and populate it with te
 2. Create [overview and detail pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/) to manage the **Customer** and **Order** objects.
 3. Create [menu items](/refguide/setting-up-the-navigation-structure/#menu-items) to access the **Customer** and **Order** overview pages.
 4. Add the following **Customer** data to your app:
+
     | Name | Address | Zip code | City |
     | --- | --- | --- | --- |
     | Olav | Gedempte Zalmhaven 34 | 3050 TE | Rotterdam |
@@ -51,6 +55,7 @@ Before you continue, you should first set up a test app, and populate it with te
     | Harry | Emmerreklaan 25 | 1458 PE | Utrecht |
 
 5. Add the following **Order** data to your app:
+
     | Number | Customer | Date | Total price | Order status |
     | --- | --- | --- | --- | --- |
     | 1 | Harry | 1/28/2022 | 345.00 | Open |

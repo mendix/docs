@@ -100,11 +100,7 @@ After you configure the authentication for Snowflake, you can implement the func
 
 {{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/example_implementation.png" >}}
 
-### Configuring Snowflake Cortex Analyst 
-Cortex Analyst is a fully-managed, LLM-powered Snowflake Cortex feature that helps you create applications capable of reliably answering business questions based on your structured data in Snowflake.
-Prerequisites
-1.Make sure you have access to Cortex Analyst for more information check the [Snowflake Cortex Analyst documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst)
-2.
+
 ## Technical Reference
 
 To help you work with the Snowflake REST SQL connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.
@@ -214,3 +210,33 @@ FROM your_table
 ```
 
 This statement returns data from a Snowflake table with the columns named as specified with the `as **NewColumnName**" part` of each line. If the attribute names, datatypes and their order match, the `TransformResponsesToMxObjects` activity automatically converts the retrieved data into Mendix objects.
+
+## Configuring Snowflake Cortex Analyst 
+Cortex Analyst is a fully-managed, LLM-powered Snowflake Cortex feature that helps you create applications capable of reliably answering business questions based on your structured data in Snowflake.
+
+### Prerequisites for Cortex Analyst {#prerequisitescortexanalyst}
+
+1.Make sure you have access to Cortex Analyst for more information check the [Snowflake Cortex Analyst documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst)
+2.Make sure that you have created the yaml file and added on a stage at the Snowflake enviroment. More information about how to create .yaml file follow [Quick start quide](https://developers.snowflake.com/solution/creating-semantic-models-for-snowflakes-cortex-analyst/)
+3.Set up the Authentication method corrently cortex analyst supports OAUTH and JWT-Keypair 
+
+### Configuration 
+
+1. Create a microflow that contains the cortex connection manadatory information Token, AccountURL and Authentication Type
+2. Add the "Cortex Analyst: Create Request" action from toolbox, add the path to the semantic file on stage at Semantic_model_file parameter
+3. Add the "Cortex Analyst: Add Message to Request" from toolbox, fill in the parameters
+   -Request: the request from the previous step.
+   -Cortex Role: The role of the entity that is creating the message. Currently only supports "user".
+   -Query: The Query/Question to Cortex Analyst.
+   -Content type: Curently only text is supported.
+4. Add the "Cortext Analyst" action from toolbox. Fill in the parameters
+   - Connection : Cortex connection from step 1
+   - Request: The Request from step 2
+5. Add the "Response: Get Cortex Analyst Response Message" action from toolbox to get the Cortex Analyst Response Message from the Response entity. 
+   - Content: This is the content of the return message! This will include the text + the SQL test or the Suggestions in case of no returned SQL 
+   - Cortex Role: The entity that produced the message. One of user or analyst.
+   - SQLText: The returned SQL suggestion     
+7. Add the "Response: Get Cortex Analyst Response" action to get the "Cortex Analyst Response" entity from Response
+   - Request_ID :The returned RequestId
+   
+    

@@ -1,6 +1,6 @@
 ---
 title: "Environments and Deployment (New UI)"
-url: /deploy/environments-redesign
+url: /deploy/environments-redesign/
 beta: true
 weight: 2
 description: "Describes the new Environments page and deployment flow"

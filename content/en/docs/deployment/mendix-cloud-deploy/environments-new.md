@@ -11,7 +11,7 @@ This feature is in Public Beta. For more information, see [Beta Releases](/relea
 {{% /alert %}}
 
 {{% alert color="info" %}}
-If your app is running on Cloud Foundry, you can use the **New Theme** toggle to switch between this new UI and the [legacy UI](/developerportal/deploy/environments/). If your app is running on Kubernetes, the new UI displays by default. 
+While this feature is in Beta, you can use the **New Theme** toggle to switch between this new UI and the [legacy UI](/developerportal/deploy/environments/). For apps running on Kubernetes, the new UI displays by default and cannot be toggled off. 
 {{% /alert %}}
 
 ## Introduction

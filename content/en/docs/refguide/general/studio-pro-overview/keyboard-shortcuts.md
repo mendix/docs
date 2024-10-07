@@ -232,7 +232,7 @@ You can use the following shortcut keys in [Maia Chat](/refguide/maia-chat/), in
 
 | Windows | Mac | Description |
 | --- | --- | --- |
-| <kbd>Enter</kbd> (or <kbd>Ctrl</kbd> + <kbd>Enter</kbd>) | <kbd>Enter</kbd> (or <kbd>Command</kbd> + <kbd>Enter</kbd>) | Send your question in the chat. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Send your question in the chat. |
 | <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>Shift</kbd> + <kbd>Enter</kbd> | Add a new line to your question. |
 | <kbd>Delete</kbd> | <kbd>Delete</kbd> | Delete the selected text. |
 | <kbd>Ctrl</kbd> + <kbd>C</kbd> | <kbd>Command</kbd> + <kbd>C</kbd> | Copy the selected text to the clipboard. |
@@ -242,7 +242,7 @@ You can use the following shortcut keys in [Maia Chat](/refguide/maia-chat/), in
 | <kbd>Ctrl</kbd> + <kbd>Y</kbd> | Not available | Redo the previous action. |
 
 {{% alert color="info" %}}
-The shortcut keys for the Delete, Copy, Cut, Paste, Undo, and Redo actions are available in Studio Pro 10.11 and above on Windows. The supported shortcuts keys on a Mac are available in Studio Pro 10.12 and above.
+The shortcut keys for the Delete, Copy, Cut, Paste, Undo, and Redo actions are available in Studio Pro 10.11 and above on Windows. The supported shortcuts keys on a Mac are available in Studio Pro 10.12 and above. In some scenarios, Mac-supported shortcut keys might not work.
 
 In Studio Pro 10.6, <kbd>Enter</kbd> can only be used to add a new line, not to send the question. You can use <kbd>Ctrl</kbd> + <kbd>Enter</kbd> or the **Ask** button to send the question. 
 {{% /alert %}}

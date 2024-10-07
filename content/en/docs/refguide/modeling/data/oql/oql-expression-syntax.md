@@ -5,37 +5,213 @@ url: /refguide/oql-expression-syntax/
 
 ## Introduction
 
+Operators and functions use expressions as inputs to perform mathematical, comparison, conditional, string, date operations and return the result. They allow an OQL query to perform modifications on data on the database to present a different view of the data or make complex conditions.
 
-| Operator | Description | Example |
-| --- | --- | --- |
-| `+` | Addition | `6 + 4` returns 10. |
-| `-` | Subtraction | `6 - 4` returns 2. |
-| `*` | Multiplication | `6 * 4` returns 24. |
-| `:` | Division | `8 : 4` returns 2. |
-| `%` | Modulo | `8 % 3` returns 2. |
-| `=` | Equal to | `Price = 9.80` returns true if price is 9.80, false if price is 9.90. |
-| `!=` | Not equal to | `Price != 9.80` returns true if price is 9.90, false if price is 9.80. |
-| `<` | Less than | `Price < 9.80` returns true if price is 9.70, false if price is 9.80. |
-| `<=` | Less than or equal to | `Price <= 9.80` returns true if price is 9.80, false if price is 9.90. |
-| `>` | Greater than | `Price > 9.80` returns true if price is 9.90, false if price is 9.80. |
-| `>=` | Greater than or equal to | `Price >= 9.80` returns true if price is 9.80, false if price is 9.70. |
-| `LIKE` | Matches the pattern after the operator. The wildcard character '%' can be used to define any string of zero or more characters. In order to search for special characters like `%`, `_`, and `\`, they should be escaped with the `\` escape character. | `City LIKE '%dun'` returns all the cities with names that end with 'dun', like 'dun' and 'Losdun'.<br> `Symbol LIKE '%\%'` returns all the symbols that end with the `%` special character.|
-| `IN` | Matches any value in a subquery or a list of expression values. | `City IN (SELECT Name FROM City WHERE Country = 'Gelre')` `City IN ('Losdun', 'Die Haghe', 'Haagambacht')` |
-| `EXISTS` | Test for the existence of any rows when executing the subquery. | `EXISTS (SELECT ID FROM City WHERE City = 'Losdun')` Returns true if object exists |
-| `NOT` | Reverses the value of the expression following this keyword. | `NOT City = 'Rotterdam'` returns all objects not in Rotterdam. |
-| `CASE` | Evaluates one or more conditions and returns a possible expression. | See [OQL Case Expressions](/refguide/oql-case-expression/). |
-| `OR` | Returns true if one or both expressions around this operator return true.  | `price = 9.80 OR price = 9.70` returns true if price is 9.80, false if price is 9.60. |
-| `AND` | Returns true if expressions on both sides return true.  | `price = 9.80 AND amount = 1` returns true if price is 9.80 and amount is 1, false if price is 9.70 and amount is 1, false if price is 9.80 and amount is 2. |
+<!-- Some operators and functions are type sensitive, with input types affecting output type. Supported types and their combinations are database dependent.
+Operator and function output value is also database dependent. -->
+
+## Operators
+Supported operators are split into binary, unary and other operators based on syntax.
+There are logical and arithmetic operators, split by return type. Arithmetic operator return type depends on the datatypes of inputs, while logical operators always return a `BOOLEAN` type. `CASE` is detailed separately 
+### Binary operators
+
+These are the supported binary operators:
+
+| Operator | Description              | Type       |                                                         
+|----------|--------------------------|------------|
+| `+`      | Addition                 | Arithmetic |
+| `-`      | Subtraction              | Arithmetic |
+| `*`      | Multiplication           | Arithmetic |
+| `:`      | Division                 | Arithmetic |
+| `%`      | Modulo                   | Arithmetic |
+| `=`      | Equal to                 | Logical    |
+| `!=`     | Not equal to             | Logical    |
+| `<`      | Less than                | Logical    |
+| `<=`     | Less than or equal to    | Logical    |
+| `>`      | Greater than             | Logical    |
+| `>=`     | Greater than or equal to | Logical    |
+| `OR`     | Logical disjunction      | Logical    |
+| `AND`    | Logical conjunction      | Logical    |
+
+Binary operators are used with this syntax:
+```sql
+	expression operator expression
+```
+Where `operator` is any available binary operator. Both `expression` operands should be of compatible types for the operator and compatible with the other operand.
+
+#### NULL handling
+If one of the operands in a binary operation has a `NULL` value, then the return type is also NULL.
+
+#### Return type precedence
+
+Binary operations perform type casting when operand types are differing. For operations involving only numeric types, data types are always upcasted to ensure data types are matching. The result type will also be the operand type with the highest precedence. This is done according to this ordering:
+- `DECIMAL`
+- `LONG`
+- `INTEGER`
+
+{{% alert color="info" %}}
+
+This precedence rule does not apply for operations where at least one of the operands is non-numeric, including that of type `STRING`. The final result type will depend on the database.
+
+{{% /alert %}}
+
+#### + (Addition)
+Performs different operations depending on the first `expression` datatype. A numeric input performs a arithmetic addition, while a `STRING` input will perform string concatenation. 
+
+##### Examples
+Assume `Sales.Customer` and `Sales.Request` contains one object.
+
+```sql
+SELECT * FROM Sales.Request
+```
+
+| LastName | Number           |                                                         
+|----------|------------------|
+| Doe      | 7                |
+
+```sql
+SELECT * FROM Sales.Customer
+```
+
+| LastName | FirstName |                                                         
+|----------|-----------|
+| Doe      | John      |
+
+The operator can be used to modify an attribute in SELECT.
+```sql
+SELECT (Number + 5) FROM Sales.Request
+```
+
+| LastName | Number           |                                                         
+|----------|------------------|
+| Doe      | 7                |
+
+It can also be used for complex `WHERE` comparisons. The query bellow check for equality of the full name of a customer:
+```sql
+SELECT Name FROM Sales.Customer WHERE (FirstName + LastName) = JohnDoe
+```
+
+| LastName |                                             
+|----------|
+| Doe      |
+
+<!--
+All databases support string concatenation with the `+` symbol. Their behaviour and implicit type coercion of different non-string types vary. That behaviour is detailed below. Behaviour of HSQLDB, POSTGRESQL and SAP HANA is considered default. Empty cells are considered as default
+
+|   Database / Scenario    |     HSQLDB, POSTGRESQL and SAP HANA     | MARIADB and MYSQL | ORACLE | SQL SERVER |
+|:------------------------:|:---------------------------------------:|:-----------------:|:------:|:----------:|
+| String + Integer/Decimal | Number converted to string and appended |                   |        |            |
+| String + Integer/Decimal | Number converted to string and appended |                   |        |            |
+-->
+
+#### - (Subtraction)
+Subtracts left `expresion` from the right one. Both operands should be numeric.
+
+##### Examples
+
+Assume `Sales.Finances` contains two objects:
+```sql
+SELECT * FROM Sales.Finances
+```
+
+| Revenue | Cost |                                                         
+|---------|------|
+| 10      | 7    |
+| NULL    | 7    |
+
+```sql
+ Select (Revenue - Cost) as Profit FROM Sales.Finances
+ ```
+
+| Profit |                                                   
+|--------|
+| 3      |
+| NULL   |
 
 
 
-# Case
 
-## Description
+
+
+### Unary Operators
+Unary operators only have a single argument. Unary operators supported:
+
+| Operator | Description         | type       |                                                         
+|----------|---------------------|------------|
+| `-`      | Arithmetic negation | Arithmetic |
+| `NOT`    | Logical negation    | Logical    |
+
+
+Unary operators are used with syntax:
+```sql
+	operator expression
+```
+`expression` should be of type compatible with the `operator`.
+
+#### - (Arithmetic negation)
+Negates a numeric value. The return type is the same as input `expression`. Has no effect on `NULL` values.
+
+#### NOT
+Reverses boolean `TRUE` values into `FALSE` and vice versa. 
+
+### Other operators
+These are operators that do not match the general unary or binary syntax. They are all logical operators. Those are:
+
+| Operator | Description                                                     |     
+|----------|-----------------------------------------------------------------|
+| `LIKE`   | Matches a string to a specified pattern                         |
+| `IN`     | Matches any value in a subquery or a list of expression values. |
+| `EXISTS` | Test for the existence of any rows when executing the subquery. |
+| `IS`     | Logical equivalence                                             |
+
+#### LIKE
+Matches the pattern after the operator.
+
+##### Syntax
+```sql
+expression LIKE pattern
+```
+Where `expression` is of type `STRING` and `pattern` is a string literal.
+
+The pattern literal can have special characters, which are all wildcards. Supported wildcard Characters:
+
+| Wildcard Character | Description                           |     
+|--------------------|---------------------------------------|
+| `%`                | Matches zero or more of any character |
+| `_`                | Matches one of any character          |
+
+In order to search for special characters, they should be escaped with the `\` escape character (including `\` itself).
+
+##### Examples
+`City LIKE '%dun'` returns all the cities with names that end with 'dun', like 'dun' and 'Losdun'.<br> `Symbol LIKE '%\%'` returns all the symbols that end with the `%` special character.
+
+#### IN
+Matches any value in a subquery or a list of expression values. | `City IN (SELECT Name FROM City WHERE Country = 'Gelre')` `City IN ('Losdun', 'Die Haghe', 'Haagambacht')`
+
+#### EXISTS
+Test for the existence of any rows when executing the subquery. | `EXISTS (SELECT ID FROM City WHERE City = 'Losdun')` Returns true if object exists
+
+#### IS
+Tests for an expression being a `NULL`. Can be inverted with optional `NOT`. Syntax:
+
+```sql
+expression IS [ NOT ] NULL
+```
+Where `expression` is an expression of any datatype.
+
+##### Examples:
+
+`IS` operator can be used to filter out values that are NULL:
+```sql
+	SELECT Number FROM WHERE NUMBER IS NOT NULL 
+```
+
+
+### CASE
+
+#### Description
 
 The `CASE` expression is a conditional expression, similar to if/else statements in other programming languages. Each condition is an expression that returns a Boolean result. If the condition's result is true, the value of the `CASE` expression is the result that follows the condition, and the remainder of the `CASE` expression is not processed. If the condition's result is not true, any subsequent `WHEN` clauses are examined in the same manner. If no `WHEN` condition yields true, the value of the `CASE` expression is the result of the `ELSE` clause. If the `ELSE` clause is omitted and no condition is true, the result is null.
-
-## Usage
 
 The `CASE` expression can be used in two ways – simple:
 
@@ -55,31 +231,31 @@ or extended:
 	END
 ```
 
-## Syntax
+#### Syntax
 
-### input_expression
+
 
 `input_expression` will be compared to `when_expression`. If  `input_expression` matches  `when_expression`, the result of the whole `CASE` expression will be `result_expression` given after `THEN`.
 
-### when_expression
 
 `when_expression` will be compared to `input_expression`. When `input_expression` matches this `when_expression`, the result of the whole `CASE` expression will be `result_expression` given after `THEN`.
 
-### boolean_expression
-
 `boolean_expression` must result in a Boolean value. When this expression returns true, the result of the whole `CASE` expression will be `result_expression` given after `THEN`.
 
-### result_expression
-
 `result_expression` is the possible result of the whole `CASE` expression.
-
-### else_result_expression
 
 `else_result_expression` is the result of the whole `CASE` expression, when no `result_expression` is possible.
 
 
-For more information on OQL functions, see the pages below.
 
+
+
+
+
+
+## Functions
+
+These are currently supported functions:
 - CAST
 - COALESCE
 - DATEDIFF
@@ -93,25 +269,22 @@ For more information on OQL functions, see the pages below.
 - UPPER
 
 
-# CAST
+### CAST
 
-## Description
+The `CAST` function converts an expression to a specific data type. 
 
-The `CAST` function converts an expression to a specific data type.
-
-## Syntax
-
+#### Syntax
 The syntax is as follows:
 
 ```sql
 CAST ( expression AS data_type )
 ```
 
-### expression
+##### expression
 
 `expression` specifies the expression to convert.
 
-### data_type
+##### data_type
 
 `data_type` specifies the data type to convert the expression to. The data type can be one of the following:
 
@@ -122,7 +295,7 @@ CAST ( expression AS data_type )
 * `LONG`
 * `STRING`
 
-## Supported Conversions
+#### Supported Conversions
 
 The table below describes which `CAST` conversions are supported:
 
@@ -141,7 +314,7 @@ The table below describes which `CAST` conversions are supported:
 
 <small>[1] BOOLEAN to STRING (limited) is supported only if the resulting string length is ≥ 5. <br />[2] The conversion of DATETIME and DECIMAL to STRING (limited) is supported only if the value fully fits into the string length. The conversion can fail if the resulting string length is < 20.</small>
 
-## Examples
+#### Examples
 
 A frequent use case for `CAST` is to convert your date from the `DATETIME` data type to a more readable `STRING` type:
 
@@ -184,7 +357,7 @@ DATEDIFF ( unit , startdate_expression, enddate_expression [, timezone ] )
 ### unit
 
 `unit` specifies the unit of the date/time value to retrieve. This can be one of the following:
-`YEAR`, `QUARTER`, `MONTH`, `DAY`, `WEEK`, `HOUR`, `MINUTE` or `SECOND`. For more information on date/time values, see the [Example](/refguide/oql-datepart/#oql-datepart-example) section in *OQL DATEPART*.
+`YEAR`, `QUARTER`, `MONTH`, `DAY`, `WEEK`, `HOUR`, `MINUTE`, `SECOND` or `MILISECOND`. For more information on date/time values, see the [Example](/refguide/oql-datepart/#oql-datepart-example) section in *OQL DATEPART*.
 
 ### startdate_expression
 
@@ -226,18 +399,20 @@ DATEPART ( datepart , date_expression [, timezone ] )
 
 ## Example{#oql-datepart-example}
 
-| datepart | Definition | Example (Friday July 1, 2005, 16:34:20) |
-| --- | --- | --- |
-| `YEAR` |   | 2005 |
-| `QUARTER` | 1, 2, 3 or 4 | 3 |
-| `MONTH` | 1 to 12 | 7 |
-| `DAYOFYEAR` | 1 to 366 |   |
-| `DAY` | 1 to 31 | 5 |
-| `WEEK` | 1 to 53 (depends on the database implementation) |   |
-| `WEEKDAY` | 1 to 7 (1 = Sunday, 7 = Saturday) | 6 |
-| `HOUR` | 0 to 23 | 16 |
-| `MINUTE` | 0 to 59 | 34 |
-| `SECOND` | 0 to 59 | 20 |
+| datepart     | Definition                                       | Example (Friday July 1, 2005, 16:34:20.356) |
+|--------------|--------------------------------------------------|---------------------------------------------|
+| `YEAR`       |                                                  | 2005                                        |
+| `QUARTER`    | 1, 2, 3 or 4                                     | 3                                           |
+| `MONTH`      | 1 to 12                                          | 7                                           |
+| `DAYOFYEAR`  | 1 to 366                                         |                                             |
+| `DAY`        | 1 to 31                                          | 5                                           |
+| `WEEK`       | 1 to 53 (depends on the database implementation) |                                             |
+| `WEEKDAY`    | 1 to 7 (1 = Sunday, 7 = Saturday)                | 6                                           |
+| `HOUR`       | 0 to 23                                          | 16                                          |
+| `MINUTE`     | 0 to 59                                          | 34                                          |
+| `SECOND`     | 0 to 59                                          | 20                                          |
+| `MILISECOND` | 0 to 999                                         | 356                                         |
+
 
 # LENGTH
 
@@ -406,5 +581,3 @@ UPPER ( expression )
 ```
 
 `expression` specifies the string to convert.
-
-# LOWER

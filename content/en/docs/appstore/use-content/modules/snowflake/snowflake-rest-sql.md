@@ -211,16 +211,21 @@ FROM your_table
 
 This statement returns data from a Snowflake table with the columns named as specified with the `as **NewColumnName**" part` of each line. If the attribute names, datatypes and their order match, the `TransformResponsesToMxObjects` activity automatically converts the retrieved data into Mendix objects.
 
-## Configuring Snowflake Cortex Analyst 
+## Configuring Snowflake Cortex Analyst
+
 Cortex Analyst is a fully-managed, LLM-powered Snowflake Cortex feature that helps you create applications capable of reliably answering business questions based on your structured data in Snowflake.
 
-### Prerequisites for Cortex Analyst {#prerequisitescortexanalyst}
+### Prerequisites {#prerequisitescortexanalyst}
 
-1. Make sure you have access to Cortex Analyst for more information check the [Snowflake Cortex Analyst documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst).
-2. Make sure that you have created the yaml file and added on a stage at the Snowflake enviroment. More information about how to create .yaml file follow [Quick start quide](https://developers.snowflake.com/solution/creating-semantic-models-for-snowflakes-cortex-analyst/).
-3. Set up the Authentication method corrently cortex analyst supports OAUTH and JWT-Keypair.
+* Make sure that you have access to Cortex Analyst. For more information, refer to the [Snowflake Cortex Analyst documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst).
+* Create the semantic model for Cortex Analyst. For more information, refer to [Creating Semantic Models for Snowflake Cortex Analyst](https://developers.snowflake.com/solution/creating-semantic-models-for-snowflakes-cortex-analyst/) in the Snowflake Cortex Analyst documentation.
+* Set up one of the following supported authentication methods for Cortex Analyst:
+    * OAUTH
+    * WT-Keypair
 
 ### Configuration 
+
+To configure your Mendix app for Snowflake Cortex Analyst, perform the following steps:
 
 1. Create a microflow that contains the cortex connection manadatory information Token, AccountURL and Authentication Type
 2. Add the "Cortex Analyst: Create Request" action from toolbox, add the path to the semantic file on stage at Semantic_model_file parameter

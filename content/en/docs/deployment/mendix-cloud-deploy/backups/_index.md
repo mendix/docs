@@ -153,7 +153,7 @@ We will change the replication region for these regions if a new region is opene
 
 ### Application Data Replication {#application-data-replication}
 
-Customers can opt-out of application data replication. In that case, application data will not be replicated to a secondary region for any of their applications. Changing the application data replication setting only affects applications and environments that have not yet been provisioned.
+Customers can opt-out of application data replication for their licensed applications on Mendix Cloud. In that case, application data of licensed apps will not be replicated to a secondary region for any of their applications. Changing the application data replication setting only affects licensed applications and environments that have not yet been provisioned.
 
 ## Limitations
 

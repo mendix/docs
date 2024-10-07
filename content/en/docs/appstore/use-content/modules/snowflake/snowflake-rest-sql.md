@@ -216,9 +216,9 @@ Cortex Analyst is a fully-managed, LLM-powered Snowflake Cortex feature that hel
 
 ### Prerequisites for Cortex Analyst {#prerequisitescortexanalyst}
 
-1.Make sure you have access to Cortex Analyst for more information check the [Snowflake Cortex Analyst documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst)
-2.Make sure that you have created the yaml file and added on a stage at the Snowflake enviroment. More information about how to create .yaml file follow [Quick start quide](https://developers.snowflake.com/solution/creating-semantic-models-for-snowflakes-cortex-analyst/)
-3.Set up the Authentication method corrently cortex analyst supports OAUTH and JWT-Keypair 
+1. Make sure you have access to Cortex Analyst for more information check the [Snowflake Cortex Analyst documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst).
+2. Make sure that you have created the yaml file and added on a stage at the Snowflake enviroment. More information about how to create .yaml file follow [Quick start quide](https://developers.snowflake.com/solution/creating-semantic-models-for-snowflakes-cortex-analyst/).
+3. Set up the Authentication method corrently cortex analyst supports OAUTH and JWT-Keypair.
 
 ### Configuration 
 

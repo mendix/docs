@@ -7,7 +7,7 @@ description: "Lists the environments in which your app is deployed. Also the sta
 ---
 
 {{% alert color="info" %}}
-There's a redesigned theme for this page available! To learn more, see [Environments and Deployment (New UI)](/deploy/environments-redesign).
+A redesigned deployment flow is now available. For more information, see [Environments and Deployment (New UI)](/developerportal/deploy/environments-redesign/).
 {{% /alert %}}
 
 ## Introduction

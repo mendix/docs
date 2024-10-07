@@ -13,8 +13,8 @@ Advanced features in mobile apps often require permission from users. Apps need 
 
 * Complete the [Prerequisites](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Build a Mendix Native App in the Cloud*.
 * Install Mendix Studio Pro to use the Native Mobile App Builder and the latest Nanoflow Commons module.
-* Make sure your [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module is up to date.
-* Make sure you are using [Make It Native 9 app](/releasenotes/mobile/make-it-native-parent/), and it is up-to-date.
+* Confirm your [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module is up to date.
+* Confirm you are using the latest version of the [Make It Native 10 app](/releasenotes/mobile/make-it-native-parent/).
 
 ## Using a Generic Permission Action
 
@@ -69,7 +69,7 @@ This an example for requesting contact access permission for Android and iOS dev
 
 ### Development
 
-#### IOS
+#### iOS
 
 The following permissions can be tested using the iOS Make It Native app:
 
@@ -109,35 +109,32 @@ The permissions that you cannot find using the Native Builder UI can be added ma
 
 ### iOS {#update-ios-native-permissions}
 
-Update your *ios/podfile* file with the needed permissions:
+Update your *ios/podfile* file with the required permissions:
 
 ```xml
-target 'YourAwesomeProject' do
-
-  # …
-
-  permissions_path = '../node_modules/react-native-permissions/ios'
-
-  pod 'Permission-AppTrackingTransparency', :path => "#{permissions_path}/AppTrackingTransparency"
-  pod 'Permission-BluetoothPeripheral', :path => "#{permissions_path}/BluetoothPeripheral"
-  pod 'Permission-Calendars', :path => "#{permissions_path}/Calendars"
-  pod 'Permission-Camera', :path => "#{permissions_path}/Camera"
-  pod 'Permission-Contacts', :path => "#{permissions_path}/Contacts"
-  pod 'Permission-FaceID', :path => "#{permissions_path}/FaceID"
-  pod 'Permission-LocationAccuracy', :path => "#{permissions_path}/LocationAccuracy"
-  pod 'Permission-LocationAlways', :path => "#{permissions_path}/LocationAlways"
-  pod 'Permission-LocationWhenInUse', :path => "#{permissions_path}/LocationWhenInUse"
-  pod 'Permission-MediaLibrary', :path => "#{permissions_path}/MediaLibrary"
-  pod 'Permission-Microphone', :path => "#{permissions_path}/Microphone"
-  pod 'Permission-Motion', :path => "#{permissions_path}/Motion"
-  pod 'Permission-Notifications', :path => "#{permissions_path}/Notifications"
-  pod 'Permission-PhotoLibrary', :path => "#{permissions_path}/PhotoLibrary"
-  pod 'Permission-PhotoLibraryAddOnly', :path => "#{permissions_path}/PhotoLibraryAddOnly"
-  pod 'Permission-Reminders', :path => "#{permissions_path}/Reminders"
-  pod 'Permission-Siri', :path => "#{permissions_path}/Siri"
-  pod 'Permission-SpeechRecognition', :path => "#{permissions_path}/SpeechRecognition"
-  pod 'Permission-StoreKit', :path => "#{permissions_path}/StoreKit"
-end
+# ⬇️ uncomment the permissions you need
+setup_permissions([
+  # 'AppTrackingTransparency',
+  # 'Bluetooth',
+  # 'Calendars',
+  # 'CalendarsWriteOnly',
+  # 'Camera',
+  # 'Contacts',
+  # 'FaceID',
+  # 'LocationAccuracy',
+  # 'LocationAlways',
+  # 'LocationWhenInUse',
+  # 'MediaLibrary',
+  # 'Microphone',
+  # 'Motion',
+  # 'Notifications',
+  # 'PhotoLibrary',
+  # 'PhotoLibraryAddOnly',
+  # 'Reminders',
+  # 'Siri',
+  # 'SpeechRecognition',
+  # 'StoreKit',
+])
 ```
 
 To allow a Siri permission you will need to enable Siri capability in your app. This can be done one of two ways:
@@ -157,9 +154,68 @@ To allow a Siri permission you will need to enable Siri capability in your app. 
 	</plist>
     ```
 
+#### Run Pod Install in your iOS directory
+
+Run `pod install` in your iOS app's directory to install and update the necessary dependencies, including the permission-related configurations you just added.
+
+#### Add Permissions Usage Descriptions 
+
+Add the corresponding permissions usage descriptions to your *Info.plist*:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <!-- 🚨 Keep only the permissions specified in setup_permissions 🚨 -->
+  <key>NSAppleMusicUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSBluetoothAlwaysUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSBluetoothPeripheralUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSCalendarsFullAccessUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSCalendarsWriteOnlyAccessUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSCameraUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSContactsUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSFaceIDUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSLocationTemporaryUsageDescriptionDictionary</key>
+  <dict>
+    <key>YOUR-PURPOSE-KEY</key>
+    <string>[REASON]</string>
+  </dict>
+  <key>NSLocationWhenInUseUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSMicrophoneUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSMotionUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSPhotoLibraryUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSPhotoLibraryAddUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSRemindersFullAccessUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSSpeechRecognitionUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSSiriUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSUserTrackingUsageDescription</key>
+  <string>[REASON]</string>
+</dict>
+</plist>
+```
+
 ### Android {#update-android-native-permissions}
 
-Update the *android/app/src/main/AndroidManifest.xml* file with the needed permissions:
+Update the *android/app/src/main/AndroidManifest.xml* file with the permissions requried by your app's use case. Make sure to keep only the permissions that are actually used in your app:
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -193,6 +249,7 @@ Update the *android/app/src/main/AndroidManifest.xml* file with the needed permi
   <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
   <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
   <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+  <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
   <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
   <uses-permission android:name="android.permission.READ_PHONE_STATE" />
   <uses-permission android:name="android.permission.READ_SMS" />

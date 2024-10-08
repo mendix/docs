@@ -109,9 +109,9 @@ To import a data snapshot committed by another team member into the model, you f
 
 1. Click **App** > **Show App Directory in Explorer** to open the root directory of your app.
 
-    The data snapshot is in the file `datasnapshot.zip`. 
+    The data snapshot is in the file `data-snapshot.zip`. 
 
-1. Extract the database from the ZIP file to the **deployment** directory.
+1. Extract the database from the ZIP file to a temporary directory.
 
     {{< figure src="/attachments/howto/data-models/sharing-the-development-database/18580417.png" class="no-border" >}}
 

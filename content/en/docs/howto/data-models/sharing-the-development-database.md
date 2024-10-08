@@ -55,7 +55,7 @@ To start the built-in database viewer, follow these steps:
 
     {{< figure src="/attachments/howto/data-models/sharing-the-development-database/18580425.png" class="no-border" >}} 
 
-    The **Database Manager** dialog box will be displayed (depending on the data model of the application):
+    The **HyperSQL Database Manager** app will be started (depending on the data model of the application):
 
     {{< figure src="/attachments/howto/data-models/sharing-the-development-database/18580424.png" class="no-border" >}}
 
@@ -68,7 +68,7 @@ You can execute queries in two ways:
 * Directly from the command line in the upper-right pane using SQL script
 * Via the database explorer on the left pane
 
-To execute queries from the database explorer (the left pane) in the **Database Manager**, follow the steps below:
+To execute queries from the database explorer (the left pane) in the **HyperSQL Database Manager**, follow the steps below:
 
 1. Right-click a table and select the preferred action:
 

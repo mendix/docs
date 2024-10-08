@@ -2,6 +2,7 @@
 title: "Consumed REST Services (Beta)"
 url: /refguide/consumed-rest-services-beta/
 description: "Describes the configuration and usage of the new Consumed REST service document."
+weight: 5
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 

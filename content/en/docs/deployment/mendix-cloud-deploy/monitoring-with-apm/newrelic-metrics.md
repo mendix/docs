@@ -42,6 +42,7 @@ To send your runtime information to New Relic, you must provide the New Relic AP
 1. Click **Details** on the environment you wish to monitor with New Relic. 
 1. Switch to the **Runtime** tab.
 1. Add the following **Custom Environment Variables**:
+
     | Variable | Description |
     | --- | --- |
     | `NEW_RELIC_LICENSE_KEY` | License key or API key from New Relic. Obtained in the [New Relic API Key](#newrelic-api-key) section.

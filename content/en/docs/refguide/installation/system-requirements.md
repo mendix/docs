@@ -55,9 +55,11 @@ The following frameworks are required. They will be installed automatically by t
 When you are running Studio Pro on a Parallels virtual machine on an ARM64 device (for example, an M1 Mac), you need the following dependencies in addition to the x64 version listed above:
 
 * .NET Desktop Runtime (arm64)
+
     | Studio Pro 10.0.0 - 10.10.0 | Studio Pro 10.11.0 and above |
     | --- | --- |
     | .NET 6 Desktop Runtime | .NET 8 Desktop Runtime |
+
 * Microsoft Edge WebView2 Evergreen Runtime (arm64)
 
 {{% alert color="info" %}}
@@ -228,7 +230,7 @@ Current support:
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
 * [MySQL](/refguide/mysql/): 8.0, 8.4
 * [Oracle Database](/refguide/oracle/): 19, 21c
-* PostgreSQL: 12, 13, 14, 15, 16
+* PostgreSQL: 12, 13, 14, 15, 16, 17
 * [SAP HANA](/refguide/saphana/): 2.00.076.00.1705400033
 
 {{% alert color="warning" %}}

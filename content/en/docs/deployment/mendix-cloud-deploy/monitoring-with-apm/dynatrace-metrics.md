@@ -33,6 +33,7 @@ To start sending your Mendix app's metrics to Dynatrace, you need to set some en
 1. Click **Details** on the environment you wish to monitor with Dynatrace. 
 1. Switch to the [**Runtime** tab](/developerportal/deploy/environments-details/#runtime-tab).
 1. Add the following **Custom Environment Variables**.
+
     | Variable | Required? | Description | Details |
     | --- | --- | --- | --- |
     | `DT_SAAS_URL` | Yes | The URL of Dynatrace environment | The format when using the Dynatrace SaaS environment is similar to `https://<your-environment-id>.live.dynatrace.com`. If you are using a Dynatrace managed environment, just provide the full URL of the Dynatrace domain, like `https://<your-dynatrace-domain>`. |

@@ -835,11 +835,6 @@ If your microflow is not correctly implemented you will be told that **Authentic
 
 ### Using Deep Links
 
-{{% alert color="warning" %}}
-The Deep Link module has been deprecated from Studio Pro 10.6 and replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url).
-For instructions on migrating to page and microflow URLs, see the [Using Page and Microflow URLs with OIDC SSO](#page-microflow-url) section below.
-{{% /alert %}}
-
 If end-users who use the deeplink do not yet have a session in your app, the deeplink can trigger the SSO process. If successful, the end-user will be automatically redirected back to the deeplink.
 
 For more information on using Deep Link module (with Mendix 8 and 9), see the [Using Deep Link Module](#using-deep-link) section below.
@@ -873,6 +868,11 @@ Starting from Studio Pro 10.9.0, you can use the primitive parameters as **Query
 For more information, see the [URL](/refguide/microflow/#url) section of the *Microflow Properties*.
 
 #### Using Deep Link Module{#using-deep-link}
+
+{{% alert color="warning" %}}
+The Deep Link module has been deprecated from Studio Pro 10.6 and replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url).
+For instructions on migrating to page and microflow URLs, see the [Using Page and Microflow URLs with OIDC SSO](#page-microflow-url) section above.
+{{% /alert %}}
 
 To use OIDC SSO module in conjunction with the Deep Link module (for Mendix 8 and 9), you can choose between the following methods of selecting an IdP:
 

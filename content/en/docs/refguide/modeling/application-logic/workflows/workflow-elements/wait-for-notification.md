@@ -27,7 +27,7 @@ However, the whole parallel split will still suspend on the merge of the split u
 
 ### General Section {#general}
 
-The **Caption** describes what happens in this element. It is displayed in the workflow element to make the **Wait for notification** activity easier to read and understand without the need to add annotations.
+The **Caption** describes what happens in this element. It is displayed under the workflow element to make the **Wait for notification** activity easier to read and understand without the need to add annotations.
 
 ### Boundary Events {#boundary-events}
 

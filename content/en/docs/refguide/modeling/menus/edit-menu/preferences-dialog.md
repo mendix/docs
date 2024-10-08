@@ -150,6 +150,10 @@ Specify your email for Git to use it in commit messages and make them more infor
 
 #### Clone {#clone}
 
+{{% alert color="info" %}}
+Different clone types are available in Studio Pro version 10.12.0 and above. 
+{{% /alert %}}
+
 Select a [Clone type](/refguide/clone-type/) to use for future clone operations, such as downloading an app or checking out another branch of an app you already downloaded. Changing this setting does not affect apps that you have already downloaded.
 
 #### Combine Local and Remote Changes

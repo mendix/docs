@@ -23,7 +23,7 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 #### Improvements
 
-* We centralized the management of team app roles in [Control Center](/control-center/roles-and-permissions/#migrate-centralized-roles). This improves access governance across all Mendix applications and streamlines the setup process for app access.
+* We centralized the management of team project roles in Control Center. This improves access governance across all Mendix projects and streamlines the setup process for app access. You can [migrate your project roles](/control-center/roles-and-permissions/#migrate-centralized-roles) to the centralized company-level project roles to benefit from this improvement. We expect you to complete the migration by January 1, 2025.
 * We made it possible for you to add external team members to your app via the [Projects API](https://docs.mendix.com/apidocs-mxsdk/apidocs/projects-api/). This mimics the functionality that is already in place through the user interface.
 
 #### Fixes

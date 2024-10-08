@@ -115,9 +115,9 @@ The core information of the configuration to connect to an OPC-UA server must be
 * `SessionTimeout` – This is the requested maximum number of milliseconds a session should remain open without activity.
 * `RequestTimeout` – This is the requested maximum number of milliseconds a request should remain open without response.
 * `MessageSecurityMode` – This is the type of security to apply to messages.
-  * If it is *None* – messages are encrypted.
-  * If it is *Sign* – messages are signed by the client certificate.
-  * If it is *Sign&Encrypt* – messages are signed and encrypted by the client certificate.
+    * If it is *None* – messages are encrypted.
+    * If it is *Sign* – messages are signed by the client certificate.
+    * If it is *Sign&Encrypt* – messages are signed and encrypted by the client certificate.
   
 * `SecurityPolicyURI` – This determines what algorithm to use to encrypt and sign the data.
 * `_IsConnected`: This is set to *true* when connection is open.
@@ -260,6 +260,7 @@ To write the `VALUE` attribute on a `VariableNode`, set the `NodeId` on your `Wr
 The subscription and monitored item services enable you to receive notification upon a change of a monitored value. A subscription is a client-defined endpoint so that your OPC-UA server can send notification to your Mendix application. A monitored item corresponds to a specific attribute on a node that is monitored.
 
 In order to monitor items, create a microflow that does the following:
+
 1. Call `CreateSubscription` action. 
 2. Create `MonitorItem` objects for each attribute to be monitored, with the following fields specified: `NodeID`, `AttributeID`, `MicroflowName`, associated to the created `Subscription`. 
 3. Do not use the Mendix commit, use instead the provided `CommitMonitoredItem` or `CommitMonitoredItems` action.

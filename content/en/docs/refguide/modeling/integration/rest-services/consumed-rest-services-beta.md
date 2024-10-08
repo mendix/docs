@@ -52,6 +52,10 @@ Download [Studio Pro](https://marketplace.mendix.com/link/studiopro/) and add th
 
 Use the Consumed REST Service to configure a `GET`, `POST`, `PUT`, `PATCH`, or `DELETE` request for your app. 
 
+{{% alert color="info" %}}
+
+{{% /alert %}}
+
 ### Basic Configuration {#configure-a-request}
 
 Create a `GET`, `POST`, `PUT`, `PATCH`, or `DELETE` request to send data to your server by doing the following:

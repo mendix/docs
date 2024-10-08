@@ -1,5 +1,5 @@
 ---
-title: "Support Marketplace Content "
+title: "Supporting Marketplace Content "
 url: /appstore/marketplace-content-support/
 weight: 4
 no_list: false

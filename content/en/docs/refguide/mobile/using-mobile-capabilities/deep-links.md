@@ -123,7 +123,7 @@ Now that the **Native Deep Link** nanoflow actions are available in Studio Pro, 
 
     This nanoflow will be called every time the app is opened using a URL.
 
-1. To parse the URL into an object, you will use a non-persistable entity named **DeepLinkParameter** from the **NativeMobileResources** module in the next step. For now, go to **NativeMobileResources** > **Domain Model** and examine this entity. If you use query strings or more, you can copy this entity to your own module. The attributes are all optional and you should only add the attributes your implementation requires. Besides the standard list of possible URL parts, you can also add the query string's keys (for example `?name=Jhon&title=sir`). The attributes are not case sensitive. You can add attributes for path segments of the URL which will be split into `Path0` , `Path1`, and more:
+1. To parse the URL into an object, you will use a non-persistable entity named **DeepLinkParameter** from the **NativeMobileResources** module in the next step. For now, go to **NativeMobileResources** > **Domain Model** and examine this entity. If you use query strings or more, you can copy this entity to your own module. The image below shows you an example. The attributes are all optional and you should only add the attributes your implementation requires. Besides the standard list of possible URL parts, you can also add the query string's keys (for example `?name=Jhon&title=sir`). The attributes are not case sensitive. You can add attributes for path segments of the URL which will be split into `Path0` , `Path1`, and more:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-deep-link/entity-parameter.png" alt="parameter entity" class="no-border" >}}
 

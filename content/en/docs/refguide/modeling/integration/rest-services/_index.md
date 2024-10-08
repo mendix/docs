@@ -23,5 +23,5 @@ To consume REST services, see:
 
 * [Consumed REST Services](/refguide/consumed-rest-services/), an overview in the Studio Pro guide
 * [Call REST Service](/refguide/call-rest-action/), a description of the microflow action
-* [Consume a REST Service](/howto/integration/consume-a-rest-service/) for step-by-step instructions
+* [Advanced Consumed REST Services](/howto/integration/consume-a-rest-service/) for step-by-step instructions
 * [HttpRequest and HttpResponse System Entities](/refguide/http-request-and-response-entities/), an overview of these system entities in your domain model

@@ -9,7 +9,7 @@ aliases:
 
 ## Introduction
 
-All Mendix applications need a database running in the background. While developing an application it is advised to use the standard built-in database that is supplied with Mendix Studio Pro. This how-to teaches you how to open and manage the data stored inside the built-in database.
+All Mendix applications need a database running in the background. While developing an application it is best to use the standard built-in database that is supplied with Mendix Studio Pro. This how-to teaches you how to open and manage the data stored inside the built-in database.
 
 {{% alert color="warning" %}}
 This document is about sharing a database between developers working on **the same app**. It is not possible to share one database between different apps. If you need to copy data to another app, use the [Database Replication](/appstore/modules/database-replication/) module.
@@ -26,18 +26,18 @@ To get the most out of the built-in database, make sure you have completed the f
 
 ## Type of the Database
 
-The built-in database is a flatfile database called HSQLDB (HyperSQL DataBase). This is the leading SQL relational database software written in Java. It offers a small, fast, multithreaded, and transactional database engine with in-memory and disk-based tables and supports embedded and server modes. It includes a powerful command line SQL tool and simple GUI query tools.
+The database built into Mendix Studio Pro is a flat file database called HSQLDB (HyperSQL DataBase). This is the leading SQL relational database software written in Java. It offers a small, fast, multithreaded, and transactional database engine with in-memory and disk-based tables and supports embedded and server modes. It includes a powerful command line SQL tool and simple GUI query tools.
 
-HSQLDB has been constantly developed over 12 years and is used as a database and persistence engine. It is known for its small size, ability to execute completely or partly in memory, flexibility, and speed.
+HSQLDB was first released in 2001 and is used as a database and persistence engine. It is known for its small size, ability to execute completely or partly in memory, flexibility, and speed.
 
-Therefore, this type of database is excellent to use while developing and running applications in Mendix Studio Pro on a local machine. Thanks to this built-in functionality, the developer does not have to run a local database engine and management tools.
+This type of database is excellent to use while developing and running applications in Mendix Studio Pro on a local machine. Thanks to the built-in functionality, the developer does not have to run a local database engine and management tools.
 
 ## Selecting the Preferred Database
 
-One application can make use of many different databases. Take the following steps to select the preferred database (if there is more than one configured):
+Each application uses a single database, but you can choose a different database, even one based on a different database management systems. You can switch between configured databases as follows:
 
 1. Double-click **Settings** in the **App Explorer** to open the **App Settings** dialog box.
-2. On the **Configurations** tab, select the preferred database configuration in the grid, and click **Make active**.
+2. On the **Configurations** tab, select the preferred database configuration, and click **Make active**.
 
     {{< figure src="/attachments/howto/data-models/sharing-the-development-database/18580427.png" class="no-border" >}}
 
@@ -55,22 +55,20 @@ To start the built-in database viewer, follow these steps:
 
     {{< figure src="/attachments/howto/data-models/sharing-the-development-database/18580425.png" class="no-border" >}} 
 
-    The **Database Manager** dialog box will be displayed (depending on the data model of the application):
+    The **HyperSQL Database Manager** app will be started (depending on the data model of the application):
 
     {{< figure src="/attachments/howto/data-models/sharing-the-development-database/18580424.png" class="no-border" >}}
 
 On the left pane, all tables from all modules in the running application are shown. On the upper-right pane, it is possible to enter SQL queries and on the lower-right pane, the results from the entered SQL query will be shown.
 
-## Executing the Queries
+## Executing Queries
 
 You can execute queries in two ways:
 
-* Directly from the command line on the upper-right pane using SQL script
+* Directly from the command line in the upper-right pane using SQL script
 * Via the database explorer on the left pane
 
-To execute queries from the database explorer, follow these steps:
-
-To execute queries from the explorer (the left pane) in the **Database Manager**, follow the steps below:
+To execute queries from the database explorer (the left pane) in the **HyperSQL Database Manager**, follow the steps below:
 
 1. Right-click a table and select the preferred action:
 
@@ -84,11 +82,13 @@ To execute queries from the explorer (the left pane) in the **Database Manager**
 
     {{< figure src="/attachments/howto/data-models/sharing-the-development-database/18580421.png" class="no-border" >}}
 
-On the lower-right pane, the results are shown and a total of 50 rows is retrieved from the database. From the standard actions, it is also possible to delete, update, and insert records. The standard actions can also be customized to retrieve, update, or delete specific data. Advanced knowledge about the SQL language is needed to get the desired results.
+In the lower-right pane, the results are shown and up to 50 rows are retrieved from the database. From the standard actions, it is also possible to delete, update, and insert records.
+
+If you know SQL, you can customize the standard actions to retrieve, update, or delete specific data.
 
 ## Committing the Data Snapshot
 
-The built-in database can easily be shared with other members of the team. It is possible to commit a snapshot of the database to the Team Server. To do this, take the following steps:
+The built-in database can easily be shared with other members of the team. Firstly, you need to commit a snapshot of the database to the Team Server. To do this, take the following steps:
 
 1. Select **Version Control** > **Add Snapshot of Data**:
 
@@ -101,23 +101,28 @@ The data is now committed to the Team Server and can be used by other team membe
 
 ## Updating the Data Snapshot
 
-To import a data snapshot into the model, the app has to be updated since the last database snapshot has been committed by another team member. To get the data from the committed database snapshot, follow these steps:
+To import a data snapshot committed by another team member into the model, you first need to update the app. To get the data from the committed database snapshot, follow these steps:
 
-1. To update the application, click **Update** on the **Changes** tab.
+1. Click **Update** on the **Changes** tab to update the application.
 
     {{< figure src="/attachments/howto/data-models/sharing-the-development-database/18580419.png" class="no-border" >}}
 
-2. To implement the data snapshot, extract the database from a ZIP file to the **deployment** directory.
+1. Click **App** > **Show App Directory in Explorer** to open the root directory of your app.
+
+    The data snapshot is in the file `data-snapshot.zip`. 
+
+1. Extract the database from the ZIP file to a temporary directory.
 
     {{< figure src="/attachments/howto/data-models/sharing-the-development-database/18580417.png" class="no-border" >}}
 
-3. Copy the **data** directory to the **data** directory in the **deployment** directory.
+1. Delete all the files and folders in the **data** directory in the **deployment** directory.
+
+1. Copy the files and folders from the **data** directory of the extracted database to the **data** directory in the **deployment** directory.
 
 {{% alert color="warning" %}}
-Make sure the names of the databases are not the same or make a copy of your own database first so it will not be overwritten.
+If you want to keep a copy of your existing data before using the data from the shared database, you can make a copy of the data folder first so the existing data will not be overwritten.
 {{% /alert %}}
 
 ## Read More
 
-* [Epics](/developerportal/project-management/epics/)
 * [Version Control](/refguide/version-control/)

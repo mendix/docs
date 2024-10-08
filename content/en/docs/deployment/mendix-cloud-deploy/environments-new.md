@@ -94,8 +94,8 @@ You can also see information and perform actions on the existing deployment pack
 * Date that the deployment package was uploaded
 * Uploader account
 * Expiry date of the deployment package, if one is set
-    * Currently deployed packages do not expire. Among any non-deployed packages, the five most recently deployed packages do not expire.
-    * Expiry dates apply only to packages that do not meet either of two non-expiry criteria outlined above. These packages are set to expire and be deleted within 15 days, unless they are deployed before that date.
+    Currently deployed packages do not expire. Among any non-deployed packages, the five most recently deployed packages do not expire.
+    Expiry dates apply only to packages that do not meet either of two non-expiry criteria outlined above. These packages are set to expire and be deleted within 15 days, unless they are deployed before that date.
 
 If you click **More Options** ({{< icon name="three-dots-menu-horizontal" >}}) on a package, you can do the following:
 

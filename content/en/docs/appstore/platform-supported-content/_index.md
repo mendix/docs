@@ -9,4 +9,4 @@ no_list: false
 
 ## Introduction
 
-The Mendix Marketplace offers a great variey of platform-supported components, including widgets, modules, etc. They are supported by Mendix.
+The Mendix Marketplace offers a great variety of platform-supported components, including widgets, modules, etc. For more information on the platform-supported category, see the [Content Support Categories](/appstore/marketplace-content-support/#category) section in *Supporting Marketplace Content*.

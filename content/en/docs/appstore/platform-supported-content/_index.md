@@ -1,5 +1,5 @@
 ---
-title: "Platform-supported content"
+title: "Platform-supported Content"
 url: /appstore/platform-supported content/
 linktitle: "Platform-supported content"
 weight: 5

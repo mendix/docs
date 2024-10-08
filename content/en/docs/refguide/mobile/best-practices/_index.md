@@ -19,5 +19,4 @@ Guides in this section will help you apply best practices and patterns when buil
 
 ## Read More
 
-* To increase the clarity, organization, and documentation of your apps, see [Mendix Best Practices for Development
-](/refguide/dev-best-practices/)
+* To increase the clarity, organization, and documentation of your apps, see [Mendix Best Practices for Development](/refguide/dev-best-practices/)

@@ -47,7 +47,6 @@ This module has the following limitations:
 * Mobile SSO module does not support any other protocol except OIDC.
 * IdPs that lack support for Custom callback URLs, such as Facebook, are not supported.
 * Private use URI Schemes as per [RFC8252, section 7.1](https://datatracker.ietf.org/doc/html/rfc8252#section-7.1) are not used.
-* Approximately 5% of sign in attempts for the iOS app are unsuccessful, resulting in an error message indicating failure to sign in. However, a subsequent attempt usually leads to successful sign in.
 
 #### Adherence to OAuth/OpenID Connect Protocol Specifications
 

@@ -220,7 +220,7 @@ Microflows containing unit tests should have the prefix **TEST_** or **UT_** (ca
 
 | Event Type | Prefix       |
 | ---------- | ------------ |
-| Unit Test  | TEST_ or UT_ |
+| Unit Test  | TEST_or UT_ |
 
 #### Integration Microflows
 

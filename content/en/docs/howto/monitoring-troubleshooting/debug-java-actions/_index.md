@@ -56,7 +56,7 @@ You can also use <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> to disable a 
 5. Place your cursor on any of the variables in the Java action to see its value in a pop-up window:
     {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-java-actions/18580057.png" class="no-border" >}}
 
-    {{% alert color="warning" %}}We are aware of a current limitation that local variables may not be visible when debugging Java actions in Eclipse. This can affect your ability to inspect variable values during execution.{{% /alert %}}
+    {{% alert color="warning" %}}A current limitation is that local variables may not be visible when debugging Java actions in Eclipse. This can affect your ability to inspect variable values during execution.{{% /alert %}}
 
 ## Read More
 

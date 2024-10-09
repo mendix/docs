@@ -59,12 +59,13 @@ Follow the instructions in [Using Marketplace Content](/appstore/use-content/) t
 
 ## Configuration {#configuration}
 
-To use Conversational UI in your app, you must perform the following tasks:
+To use Conversational UI in your app, you must perform the following tasks in Studio Pro:
 
-1. Configure the relevant [user roles](#module-roles).
-2. Create a [chat context](#chat-context).
-3. Associate a [provider](#provider-config) and create an [action microflow](#action-microflow).
-4. Use the [pages](#pages-and-layouts) and [snippets](#snippets) to create your UI.
+1. Configure the relevant [user roles](#module-roles) in the project security.
+2. Use the [pages](#pages-and-layouts) and [snippets](#snippets) as a basis to create the UI for the chat in your app.
+3. Make sure there is a [chat context](#chat-context) available on the page.
+4. To the chat context, associate a [provider](#provider-config) and link an [action microflow](#action-microflow) that will be executed when the user clicks the send button.
+ 
 
 ## Technical Reference {#technical-reference}
 

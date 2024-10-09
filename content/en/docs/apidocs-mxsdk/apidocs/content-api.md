@@ -1,10 +1,11 @@
 ---
 title: "Content API"
+linktitle: "Marketplace Content"
 url: /apidocs-mxsdk/apidocs/content-api/
 type: swagger
 description: "This API accesses both public and company-specific Marketplace content information."
 restapi: true
-weight: 35
+weight: 45
 ---
 
 ## Introduction

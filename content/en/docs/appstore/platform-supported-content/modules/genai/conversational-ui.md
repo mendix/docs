@@ -66,7 +66,7 @@ To use Conversational UI in your app, you must perform the following tasks in St
 3. Make sure there is a [chat context](#chat-context) available on the page where the conversation should show.
 4. To the chat context, associate one or more [provider](#provider-config) configs 
 5. Use a default [action microflow](#action-microflow) or create a custom flow that will be executed when the user clicks the send button.
-6. Optionally, customize styling by overwriting variables and adding custom scss.
+6. Optionally, [customize styling](#customize-styling) by overwriting variables and adding custom scss.
 
 The main entities are shown for reference in the diagram below. For technical documentation, please follow the steps in the [Technical reference](#technical-reference) section.
 
@@ -120,11 +120,11 @@ The following versions are available and can be swapped as needed:
 * **Snippet_Message** - This snippet shows both the user messages and the responses on the left side of the list.
 * **Snippet_Message_Bubble** - This snippet shows the user messages on the right side and the responses on the left side, similarly to common chat apps. The content is placed inside colored cards (bubbles).
 
-##### Configuration Snippets {#snippet-configuration}
+##### Advanced Configuration Snippets {#snippet-configuration}
 
 The following snippets can be used to give the user more control over the chat conversations.
 
-* **Snippet_ChatContext_AdvancedSettings** - This snippet can be placed on pages to let users configure specific parameters (currently **temperature**). 
+* **Snippet_ChatContext_AdvancedSettings** - This snippet can be placed on pages to let users configure specific parameters (currently **temperature**). Use microflow **AdvancedSettings_GetAndUpdate** to set the boundaries and default value for advanced settings in the UI. 
 * **Snippet_ChatContext_SelectActiveProviderConfig** - With this snippet, users can select an active [Provider Config](#provider-config) from all associated configurations, for example to let them select a model.
 * **Snippet_ChatContext_HistorySideBar** - This snippet can be used in a list view of past conversations.
 
@@ -142,7 +142,7 @@ Depending on the implementation, the creation of this entity can happen using a 
 
 * `New Chat` creates a new `ChatContext` and a new `ProviderConfig` (or a specialization of such depending on the input). The `ProviderConfig` is added to the `ChatContext` and set to active. Additionally, the action microflow of the new `ProviderConfig` is set.
 * `New Chat with Existing Config` creates a new `ChatContext` and sets a given `ProviderConfig` to active.
-* `New Chat with Additional Configs` creates a new `ChatContext` and adds a `ProviderConfig` to the `ChatContext` and sets it to active. In addition, a list of `ProviderConfigs` can be added to the `ChatContext` (non-active, but selectable in the UI).
+* `New Chat with Additional Configs` creates a new `ChatContext` and adds a `ProviderConfig` to the `ChatContext` and sets it to active. In addition, a list of `ProviderConfig` can be added to the `ChatContext` (non-active, but selectable in the UI).
 
 #### SuggestedUserPrompt {#suggested-user-prompt}
 
@@ -152,18 +152,16 @@ It is possible to add suggested user prompts to a `ChatContext`. They appear as 
 
 The `ProviderConfig` contains the selection of the model provider for the AI Bot to chat with. This contains an action microflow that is executed when the **Send** button is clicked for a `ChatContext` that has the `ProviderConfig` associated. During creation of the `ChatContext` the `ProviderConfig` (specialization) can be added directly using the aforementioned [operations](#chat-context-operations). 
 
-If the `ChatContext` however already exists and a new `ProviderConfig` needs to be added, use the **New Config for Chat** toolbox action. The `ProviderConfig` can optionally also be set to active if `IsActive` is set to true. Additionally, the action microflow of the new `ProviderConfig` is set.
+If the `ChatContext` however already exists and a new `ProviderConfig` needs to be added, use the **New Config for Chat** toolbox action. The `ProviderConfig` can optionally also be set to active if `IsActive` is set to true. Additionally, the action microflow of the new `ProviderConfig` is set. **ChatContext_AddProviderConfig_SetActive** is the counterpart of this flow when both the `ChatContext` and the `ProviderConfig` exist already. 
 You can store additional information, such as connection details, on the `ProviderConfig` by using a specialization and adding the necessary fields. For an example implementation, see the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926).
 
-### Define the Action Microflow {#action-microflow}
+### Define and set the Action Microflow {#action-microflow}
 
 The `Action Microflow` is executed by clicking the **Send** button. It handles the interaction between the LLM connectors and the Conversational UI entities. The **USE_ME** folder included in the Conversational UI module contains example action microflows for both [OpenAI](/appstore/modules/genai/openai/) and [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). You can copy these microflows and modify them for your use cases, or use them directly for test purposes.
 
-##### Using the Action Microflow {#set-action-microflow}
-
 Add the action microflow to an existing `ProviderConfig` by using the **Set Chat Action** toolbox action. Note that the action does not commit the object, so you must also add a step to commit it after.
 
-##### Creating a Custom Action Microflow
+#### Creating a Custom Action Microflow
 
 If you want to create your own custom action microflow, keep the following considerations in mind:
 
@@ -172,13 +170,13 @@ If you want to create your own custom action microflow, keep the following consi
 * Use the [request operations](#request-operations) to facilitate the interaction between the chat context and the model.
 * When creating the `ProviderConfig`, use [Set Chat Action](#set-action-microflow) to set the microflow.
 
-###### ChatContext operations {#chatcontext-operations}
+##### ChatContext operations {#chatcontext-operations}
 
 The following operations can be found in the toolbox for changing the [ChatContext](#chat-context) in a (custom) action microflow:
 * `Set ConversationID` sets the ConversationID on the `ChatContext`. Storing the ConversationID is needed for chat with history within Retrieve and Generate with [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/).
 * `Set Topic` sets the `Topic` of the `ChatContext`. This attribute can be used in the **History** sidebar while making historical chats visible to users.
 
-###### Request Operations {#request-operations}
+##### Request Operations {#request-operations}
 
 The following operations are to be used in a (custom) action microflow:
 
@@ -186,18 +184,48 @@ The following operations are to be used in a (custom) action microflow:
 * `Get Current User Prompt` gets the current user prompt. It can be used in the [action microflow](#action-microflow), because the `CurrentUserPrompt` from the chat context is no longer available.
 * `Update Assistant Response` processes the response of the model and adds the new message and any sources to the UI. This is typically one of the last steps of the logic in an [action microflow](#action-microflow).
 
+### Customize styling {#customize-styling}
+
+#### Variables {#customize-styling-variables}
+
+* chat-width
+* send-btn-size
+* chat-input-max-height
+
+* chat-header-color
+* pop-up-chat-bottom-position
+* pop-up-chat-right-position
+* pop-up-chat-width
+* pop-up-chat-height
+
+* chat-bubble-user-background 
+* chat-bubble-assistant-background 
+* chat-bubble-margin
+
+You can find the default values of these variables in the _chat-variables.scss file that is shipped with the module.
+
+#### Create custom scss {#customize-styling-classes}
+You can use the following classes in your custom stylesheets to modify the behavior of the conversational UI in your app. 
+
+* btn-chat-popup
+* chat-container
+* messages-container
+* send-btn
+* chat-btn-suggested-prompt
+* chat-input-wrapper and textAreaUserPrompt
+* user-input-instructions
+* message--assistant and chat-bubble-wrapper--assistant 
+* message--user and chat-bubble-wrapper--user 
+
+To learn more about customizing styling and targeting elements using scss selectors, please refer to the [how-to](/howto/front-end/customize-styling-new/#add-custom-styling) page.
+
+
 ### Token Monitor Snippets {#snippet-token-monitor}
+
+A separate set of snippets have been made available to display and export token usage information in the running application. This is applicable for LLM connectors that follow the principles of [GenAI Commons](/appstore/modules/genai/commons/#token-usage) and as a result store token usage information. The following snippets can be added to (admin) pages independently from the conversation logic described in earlier sections. 
 
 * **Snippet_TokenMonitor** - This snippet can be used to display token usage informatation in charts and contains several other snippets that you can use to build your own token monitor dashboard. To display the token usage data, users will need the `UsageMonitoring` userrole.
 * **Snippet_TokenMonitor_Export** - This snippet can be used to display token usage informatation in a grid and export it as .xlsx. 
-
-### Additional Operations {#operations}
-
-The following additional microflows can be found in the **USE_ME** folder:
-
-* **ChatContext_AddProviderConfig_SetActive** - This microflow adds a `ProviderConfig` to the chat context and sets it to active.
-* **ChatContext_Delete** - This microflow deletes a chat context.
-* **AdvancedSettings_GetAndUpdate** - This microflow can be used after chat context creation to set the boundaries and default value for advanced settings in the UI. For more information, see [Configuration Snippets](#snippet-configuration).
 
 ## Technical Reference {#technical-reference}
 

@@ -94,6 +94,18 @@ A Tag is a way of identifying a commit in addition to the [revision](#revision) 
 
 The Repository Service manages communication between Studio Pro and other supporting services (for example, Team Server). The developer will not generally be aware that they are communicating via the Repository Service.
 
+### Mendix MPR Storage  {#mpr-format}
+
+An app modeled in Mendix is stored in an *.mpr* file, a database which contains data for all documents, such as microflows, workflows, pages. Studio Pro, or the [mx Command-Line Tool](/refguide/mx-command-line-tool/), is required to inspect changes in the *.mpr*.
+
+{{% alert color="warning" %}}
+Manually modifying the *.mpr* file, for example through 3rd party tooling, is not supported and can lead to a corrupted state. To recover from a corrupted state a previous commit will need to be restored.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+Mendix 10.18 introduced changes to the *.mpr* format so that individual documents are now stored as separate files on disk. Apps need to switch to the new format manually for this change to be applied.
+{{% /alert %}}
+
 ## Branches {#branches}
 
 With more complex apps, you may want to manage your code in a more sophisticated way. For example, you may want to develop new features separately from the currently deployed version of your app so that you can fix any bugs without having to release all the new features. This is done using [Branch Lines](#branch-line).

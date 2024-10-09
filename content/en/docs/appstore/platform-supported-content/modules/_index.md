@@ -1,6 +1,5 @@
 ---
 title: "Modules"
-linktitle: "Modules"
 url: /appstore/modules/
 description: "Presents details on the platform-supported modules in the Mendix Marketplace."
 weight: 5

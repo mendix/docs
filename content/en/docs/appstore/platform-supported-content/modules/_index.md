@@ -1,8 +1,7 @@
 ---
-title: "Modules in the Marketplace"
-linktitle: "Modules"
+title: "Modules"
 url: /appstore/modules/
-description: "Presents details on the modules available in the Mendix Marketplace."
+description: "Presents details on the platform-supported modules in the Mendix Marketplace."
 weight: 5
 no_list: false
 ---

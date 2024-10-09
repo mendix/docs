@@ -1,7 +1,7 @@
 ---
 title: "Widgets"
 url: /appstore/widgets/
-description: "Presents details on the widgets available in the Mendix Marketplace."
+description: "Presents details on the platform-supported widgets in the Mendix Marketplace."
 weight: 7
 no_list: false
 simple_list: true

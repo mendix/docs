@@ -1,7 +1,6 @@
 ---
 title: "Platform-supported Content"
-url: /appstore/platform-supported content/
-linktitle: "Platform-supported content"
+url: /appstore/platform-supported-content/
 weight: 5
 description: ""
 no_list: false

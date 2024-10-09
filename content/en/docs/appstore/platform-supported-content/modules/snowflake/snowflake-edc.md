@@ -1,345 +1,247 @@
 ---
-title: "Configure the External Database Connector for Snowflake"
-linktitle: "External Database Connector"
-url: /appstore/modules/snowflake/external-database-connector/
-description: "Describes the steps required to use the Mendix External Database connector with Snowflake."
-weight: 10
+title: "Snowflake REST SQL Connector"
+url: /appstore/connectors/snowflake/snowflake-rest-sql/
+description: "Describes the configuration and usage of the Mendix-Snowflake REST SQL connector from the Mendix Marketplace." 
+weight: 20
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## Introduction
 
-The [External Database connector](/appstore/modules/external-database-connector/) allows you to connect to databases and select data to use in your app. You can use it to directly test connections and queries during configuration in Studio Pro (design time). For Mendix apps that use Snowflake as their database, the External Database connector is the recommended integration option for Mendix 10.
+The [Snowflake REST SQL connector](https://marketplace.mendix.com/link/component/225717) allows you to use data from Snowflake in your Mendix application and enrich your app with the capabilities that Snowflake provides.
 
-This how-to describes the steps required to enable your app to use the External Database connector with Snowflake, and to model several common use cases.
+### Typical Use Cases
 
-## Configuring the Connection Between Your Mendix App and Snowflake
+The Snowflake REST SQL connector provides a way to first setup key-pair authentication with an RSA key pair according to PKCS #8 standard, and then execute SQL statements on Snowflake via a REST call from within your Mendix application. These statements allow you to perform the following tasks:
 
-To configure connect your Mendix application to Snowflake with the External Database connector, follow these steps:
+* Read data from Snowflake
+* Write data to Snowflake
+* Trigger [Snowflake Cortex ML functions](https://docs.snowflake.com/en/guides-overview-ml-functions)
+* Use [Snowflake Cortex LLM functions](https://docs.snowflake.com/en/user-guide/snowflake-cortex/llm-functions)
+* Use [Snowflake Cortex Analyst](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst)
 
-1. [Install the External Database connector](/appstore/modules/external-database-connector/#installation). If you are using Studio Pro 10.12, please make sure to use the latest version 3.0.0 [External Database Connector](https://marketplace.mendix.com/link/component/219862).
-2. Run the [Connect to Database wizard](/appstore/modules/external-database-connector/#configuration) and select **Snowflake** as the database type.
-3. Provide a name for the database connection document.
-4. Provide connection details that can be used to access Snowflake. You can either provide a connection string, or enter connection details. If you enter connection details, a constant with a connection string will be created based on your connection details.
-5. If you decide to use the connection details, copy the **Account URL** from the Snowflake console and use it as the **Host parameter** for the **Connection details**.
+The current version of the connector supports the following:
+
+* Authentication with an RSA key pair according to PKCS #8 standard
+* Authentication with OAUTH through an OIDC provider
+* Execution of single SQL statements
+* Synchronous execution of calls
+* Execution of a Cortex Analyst query
+
+### Prerequisites {#prerequisites}
+
+The Snowflake REST SQL connector requires Mendix Studio Pro version 9.18.0 or above.
+
+To use the Snowflake REST SQL connector, you must also install and configure the following modules from the Mendix marketplace:
+
+* [Community Commons](https://marketplace.mendix.com/link/component/170) - This module is a required dependency for the Snowflake REST SQL connector.
+* [Encryption](https://marketplace.mendix.com/link/component/1011) - This module is a required dependency for the Snowflake REST SQL connector. The EncryptionKey constant must be set up in your application settings.
+* [GenAI Commons](https://marketplace.mendix.com/link/component/227933)- This module is a required dependency for the Snowflake Cortex Analyst.
+
+### Licensing and Cost
+
+This connector is available as a free download from the Mendix Marketplace, but the services in Snowflake to which is connects may incur a usage cost. For more information, refer to the [Snowflake documentation](https://www.snowflake.com/en/data-cloud/pricing-options/).
+
+Depending on your use case, your deployment environment, and the type of app that you want to build, you may also need a license for your Mendix app. For more information, refer to [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
+
+## Installation
+
+Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Snowflake REST SQL connector into your app.
+
+## Configuration
+
+After you install the connector, you can find it in the **App Explorer**, in the **SnowflakeRESTSQL** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use. 
+
+### Configuring Snowflake Authentication
+
+In order to use the capabilities of Snowflake in a Mendix app with the Snowflake REST SQL connector, an RSA key-pair authentication method must be used.
+
+### Configuring Key-pair Authentication in Snowflake {#setup-key-pair-snowflake}
+
+To configure RSA key-pair authentication for your account in Snowflake, perform the following steps:
+
+1. Generate the private key.
+2. Generate a public key.
+3. Assign the public key to a Snowflake user.
+
+For more details about each step, refer to the official [Snowflake documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth).
+
+### Setting up the Key-pair Authentication in a Mendix App {#setup-key-pair-mendix}
+
+To make it easier for users to configure the key-pair authentication in a Mendix app, the Snowflake REST SQL connector includes pages and microflows that you can simply drag and drop them into your own modules.
+
+To configure the authentication, perform the following steps:
+
+1. In the **App Explorer**, under the **SnowflakeRESTSQL** section, find the **SNIPPET_SnowflakeConfiguration** snippet and drag and drop it into a page in your module.
+
+    {{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/drag_snippet_to_page.png" >}}
+
+2. Assign the module role **SnowflakeRESTSQL.Administrator** to the application role that will be used to set up the configuration, so that the added logic will be usable.
+3. Run the application and go to the page where you added the snippet.
+4. Click **New**. 
+5. On the **Connection details** page, fill out all fields with the details of your Snowflake account. For more information, see [ConnectionDetails](#connection-details).
+6. In the Snowflake console, click **Copy account URL**. This URL will be used as the **Account URL** parameter for **Connection details**.
 
     {{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/snowsight-account-url.png" >}}
 
-6. Provide a user name and a password or a private key (also a passphrase if the private key is encrypted).
-7. Click **Test Connection** to verify the connection details, and then click **Save**.
+7. In the Snowflake console, click **Copy account identifier**. Before using it inside Mendix, you must replace the `.` separator with a `-`. The final string will be used as the **Account identifier** parameter for the **Connection details**.
 
-{{% alert color="info" %}}
-When using the private key for authentication, format the key as a single line by removing any line breaks. The format should start with "-----BEGIN [ENCRYPTED PRIVATE KEY]-----" and end with "-----END [ENCRYPTED PRIVATE KEY]-----". Note that the text [ENCRYPTED PRIVATE KEY] will vary depending on the type of the key file.
-{{% /alert %}}
+    {{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/snowsight-account-identifier.png" >}}
 
-Your Mendix app now connects to Snowflake with the provided connection details. When the connection is successful, you can see your Snowflake schemas and objects in your Mendix app.
+8. Enter the passphrase and upload [your private key file](#setup-key-pair-snowflake) in *.p8* format.
 
-You can use the connection constants to point your application to a different Snowflake database if you are deploying in a different environment.
+    {{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/connection_details.png" >}}
 
-You can now configure the queries that you need to run on your Snowflake database. The following sections of this document provide examples of some common queries, using data from the *Global Weather & Climate Data for BI* demo dataset available in Snowflake. For general information about creating queries, see [External Database Connector: Querying a Database](/appstore/modules/external-database-connector/#query-database) and [External Database Connector: Using Query Response](/appstore/modules/external-database-connector/#use-query-response).
+9. Click **Save** to save the connection, or click **Save and test connection** to generate a JSON Web Token (JWT) and validate your connection.
 
-## Configuring a Basic Query
+### Configuring a Microflow for the Service
 
-This section provides an example of a query that determines the average minimum, maximum, and average temperature for a given postal code for the next 10 calendar days, based on the climate data in the **CLIMATOLOGY_DAY** view.
+After you configure the authentication for Snowflake, you can implement the functions of the connector by using the provided activities in microflows. An extended microflow has been implemented and added to the Snowflake REST SQL connector as an example for users that would like to retrieve a list of objects from an existing table in Snowflake. In the **SnowflakeRESTSQL** module, see the **ExampleImplementation** microflow and the **ExampleObject** domain model entity to learn how the [**TransformResponsesToMxObjects** operation](#transform-response-to-mx-object) can be used to easily convert the data received in **HttpResponse** objects into Mendix objects. 
 
-To execute and test the query in Studio Pro, follow these steps:
+{{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/example_implementation.png" >}}
 
-1. In your Mendix app, in the **App Explorer**, find and open the external connection document that you created with the Connect to Database wizard.
-2. In the **Name** field, enter a name for your query, for example, *ClimateForecastNext10DaysQuery*.
-3. Enter the following **SQL Query**:
 
-    ```sql
-    select POSTAL_CODE                                                   as "PostalCode"
-        , COUNTRY                                                        as "Country"
-        , doy_std                                                        as "DayOfYearClimate"
-        , dayofyear(CURRENT_DATE)                                        as "DayOfYearToday"
-        , current_date + doy_std - dayofyear(CURRENT_DATE)               as "ClimateDate"
-        , round((AVG_OF__DAILY_AVG_TEMPERATURE_AIR_F - 32) * (5 / 9), 1) as "AvgAvgTempCelsius"
-        , round((AVG_OF__DAILY_MIN_TEMPERATURE_AIR_F - 32) * (5 / 9), 1) as "AvgMinTempCelsius"
-        , round((AVG_OF__DAILY_MAX_TEMPERATURE_AIR_F - 32) * (5 / 9), 1) as "AvgMaxTempCelsius"
-    from  CLIMATOLOGY_DAY
-    where postal_code = {postal_code} 
-    and   ((doy_std + 365) - dayofyear (current_date)) % 365 <=10
-    order by doy_std asc
-    limit 10
-    ```
+## Technical Reference
 
-4. Click **Run Query**.
+To help you work with the Snowflake REST SQL connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.
 
-    {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-basic.png" >}}
+### Domain Model {#domain-model}
 
-    {{% alert color="info" %}}As shown in the above example, if your input parameters do no exactly match what the database needs, or if the output of the query does not match what you need in Mendix, you can cast or transform your data in your query. You can also use column aliases to help generate entities with the required names.{{% /alert %}}
+The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
-5. Verify that the results are correct, and then generate the required entity to collect the data in your Mendix application. For more information, see [External Database Connector: Creating an Entity from the Response](/appstore/modules/external-database-connector/#create-entity).
-6. Create a page with a gallery widget to show the results. Above the gallery widget you need form to allow the user to specify a postalcode. For this you need to create an NPE, e.g. name Filter, with one field, postalcode. The gallery widget will get its data from the Microflow in the next step. You can refresh this widget by using a nanoflow to trigger refresh of the entity shown in the Gallery widget.
+#### ConnectionDetails {#connection-details}
 
-    {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-gallery-page.png" >}}
+| Name | Description |
+| --- | --- |
+| `Name` | An identifier of the connection inside the Mendix app. This property is not passed to Snowflake. |
+| `AccountURL` | The unique account URL of the Snowflake account within your organization to connect to the [Snowflake API](https://sdc-prd.snowflakecomputing.com). For more information, refer to the Snowflake documentation about [account identifiers](https://docs.snowflake.com/en/user-guide/admin-account-identifier#finding-the-organization-and-account-name-for-an-account). |
+| `ResourcePath` | The path to a resource in Snowflake API, for example, `/api/v2/statements`. |
+| `AccountIdentifier` | A unique account identifier that identifies a Snowflake account within your organization, as well as throughout the global network of Snowflake-supported cloud platforms and cloud regions, for example, `<orgname>-<account_name>`. For more information, refer to the Snowflake documentation about [account identifiers](https://docs.snowflake.com/en/user-guide/admin-account-identifier#finding-the-organization-and-account-name-for-an-account). |
+| `Username` | The username with which you sign in to your Snowflake account. |
 
-7. Create a microflow that will run the query by doing the following steps:
-    1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
-    2. Enter a name for your microflow, for example, *ACT_RetrieveWeatherData*, and then click **OK**.
-    3. Set the Filter NPE as input parameter for your microflow.
-    4. In your **Toolbox**, find the **Query External Database** activity and drag it onto the work area of your microflow.
-    5. Position the **Query External Database** activity between the start and end event of your microflow.
-    6. Double-click the **Query External Database** microflow activity to configure the required parameters.
-    7. In the **Database** section, select your Snowflake database.
-    8. In the **Query** list, select the query name that you entered in step 2.
-    9. In the **Parameters** section, add the following parameter:
-        * **Name** - *postal_code*
-        * **Type** - **String**
-        * **Value** - *$Filter/PostalCode*
-    10. In the **Output** section, provide the following values:
-        * **Return type** - **List of *{your module name}*.CLIMATOLOGY_FORECAST**
-        * **Use return value** - set to **Yes**
-        * **List name** - enter *CLIMATOLOGY_DAY*
-    11. Click **OK**.
+#### PrivateKey {#private-key}
 
-    {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-basic-flow.png" >}}
+| Name | Description |
+| --- | --- |
+| `Passphrase` | A passphrase which is used to encode and decode the private key file. |
 
-8. Specify the microflow as the datasource for the gallery widget.
-9. Run the page, provide a valid postalcode, and validate the result of the page.
+#### JWT {#jwt}
 
-## Configuring a Filtered Query
+| Name | Description |
+| --- | --- |
+| `Token` | Value of the JSON Web Token as a string. |
+| `ExpirationDate` | Expiration date of the JSON Web Token.  |
 
-This section provides an example of a filtered query. Although you can filter, sort, and paginate data in your Mendix app by using the [Data Grid 2](/appstore/modules/data-grid-2/) widget, this widget operates mostly client-side, so as a best practice, you may want to pre-filter the data retrieved from Snowflake before using it in a grid. The following example shows how you can specify a filter based on the postal code and country in your SQL query. After running the query, you can then further limit the results with data grid filters, sorting, and pagination.
+#### Statement {#statement}
 
-To execute and test the query in Studio Pro, follow these steps:
+| Name | Description |
+| --- | --- |
+| `SQLStatement` | The SQL statement to execute. |
+| `Timeout` | The amount of seconds after which the connection will be closed. |
+| `Database` | The database to use. |
+| `Schema` | The database schema to use, for example `PUBLIC`. |
+| `Warehouse` | The warehouse to use for computations. |
+| `Role` | The role to use to execute the SQL statement. The role sufficient permissions to execute the statement. |
 
-1. In your Mendix app, in the **App Explorer**, find and open the external connection document that you created with the Connect to Database wizard.
-2. In the **Name** field, enter a name for your query, for example, *QueryHistoryDay*.
-3. Enter the following **SQL Query**:
+#### ResultSet {#result-set}
 
-    ```sql
-    select *
-    from   STANDARD_TILE.HISTORY_DAY
-    where  ({filterPostalCode1} IS NULL 
-                or (postal_code like '%' ||{filterPostalCode2}|| '%'))
-        and ({filterCountry1} IS NULL 
-                or (country like '%' ||{filterCountry2}|| '%')) 
-    limit 1000
-    ```
+| Name | Description |
+| --- | --- |
+| `Code` | Code that is returned from Snowflake as a response to the executed statement. |
+| `StatementHandle` | Unique handle given to the statement that has been executed. It is saved as part of the `ResultSet` object. It can be used to retrieve the `ResultSet` object for each request. |
+| `Message` | Message that is returned from Snowflake as a response to the executed statement. |
+| `NumRows` | The amount of rows which will be returned by the executed statement. This is a sum of all the rows in the partitions. |
 
-4. Click **Run Query**.
-5. Verify that the results are correct, and then generate the required entity to collect the data in your Mendix application. For more information, see [External Database Connector: Creating an Entity from the Response](/appstore/modules/external-database-connector/#create-entity).
-6. [Add a **Data grid 2** widget](/refguide/page/#add-elements) to the page where you want to display the query results.
-7. Similar to the previous example, add a dataview with filter fields, and a filter NPE to collect the user's filter values.
-8. Double-click the data grid widget, and give it a data source microflow by selecting **Data source** > **Type** > **Microflow**.
-9. Next to the microflow field, click the **Select** button, and then click **New**.
-10. Configure the microflow that will run the query by doing the following steps:
-    1. Enter a name for your microflow, for example, *ACT_RetrieveFilteredResults*, and then click **OK**.
-    2. Specify the Filter NPE as input parameter for your microflow.
-    3. In your **Toolbox**, find the **Query External Database** activity and drag it onto the work area of your microflow.
-    4. Position the **Query External Database** activity between the start and end event of your microflow.
-    5. Double-click the **Query External Database** microflow activity to configure the required parameters.
-    6. In the **Database** section, select your Snowflake database.
-    7. In the **Query** list, select the query name that you entered in step 2.
-    8. In the **Parameters** section, add the following parameters:
+#### PartitionInfo {#partition-info}
 
-        | Name | Type | Value |
-        | --- | --- | --- |
-        | *filterPostalCode1* | **String** | *$HistoryDayFilter/PostalCode* |
-        | *filterPostalCode2* | **String** | *$HistoryDayFilter/PostalCode* |
-        | *filterCountry1* | **String** | *$HistoryDayFilter/Country* |
-        | *filterCountry2* | **String** | *$HistoryDayFilter/Country* |
+| Name | Description |
+| --- | --- |
+| `RowCount` | The number of rows within this partition. The sum of all `PartitionInfo.RowCount` corresponds to `ResultSet.NumRows`. |
 
-    9. In the **Output** section, provide the following values:
-        * **Return type** - **List of *{your module name}*.HISTORY_DAY**
-        * **Use return value** - set to **Yes**
-        * **List name** - enter *HISTORY_DAY*
-    10. Click **OK**.
-11. Configure a nanoflow with the [Refresh entity](/appstore/modules/nanoflow-commons/) action to refresh the data grid if a user changes one of the filter values.
+### Activities {#activities}
 
-{{% alert color="info" %}}When using JDK version above 16, set JVM Parameter **--add-opens=java.base/java.nio=ALL-UNNAMED** in the App configuration.{{% /alert %}}
+Activities define the actions that are executed in a microflow or a nanoflow. 
 
-## Configuring a Query to Display Data as a Chart
+#### ExecuteStatement {#execute-statement}
 
-This section provides an example of configuring a query that provides the data required to generate a chart. The chart in the example contains multiple series of historic temperatures. The query averages the minimum, maximum and average temperature in Celsius for all US locations and returns one record for each day available in the database.
+The `ExecuteStatement` activity allows you to execute a command in Snowflake using the SQL statement and the configuration details given in a `Statement` object. It requires a `Statement` object and returns a list of `HttpResponse` objects.
 
-### Displaying the Data in a Multi-Series Chart
+The input and output for this service are shown in the table below:
 
-To define, test and execute the query in Studio Pro, follow these steps:
+| Input | Output |
+| --- | --- |
+| `Statement` | `{HttpResponseList}` |
 
-1. In your Mendix app, in the **App Explorer**, find and open the external connection document that you created with the Connect to Database wizard.
-2. In the **Name** field, enter a name for your query, for example, *QueryHistoryDay*.
-3. Enter the following **SQL Query**:
+#### TransformResponsesToMxObjects {#transform-response-to-mx-object}
 
-    ```sql
-    select date_valid_std
-    ,      avg(avg_temperature_air_2m_f) as avg_temp_f
-    ,      round(avg((avg_temperature_air_2m_f - 21) * (5/9)),1) as avg_temp_c
-    ,      min(avg_temperature_air_2m_f) as min_temp_f
-    ,      round(min((avg_temperature_air_2m_f - 21) * (5/9)),1) as min_temp_c
-    ,      max(avg_temperature_air_2m_f) as max_temp_f
-    ,      round(max((avg_temperature_air_2m_f - 21) * (5/9)),1) as max_temp_c
-    from   STANDARD_TILE.HISTORY_DAY
-    group by date_valid_std
-    order by DATE_VALID_STD asc
-    ```
+The `TransformResponsesToMxObjects` activity allows you to transform the list of `HttpResponse` objects into objects of the entity of your choice. 
 
-4. Click **Run Query**.
-5. Verify that the results are correct, and then generate the required entity to collect the data in your Mendix application. For more information, see [External Database Connector: Creating an Entity from the Response](/appstore/modules/external-database-connector/#create-entity).
-6. Create a microflow that will run the query by doing the following steps:
-    1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
-    2. Enter a name for your microflow, for example, *ACT_RetrieveHistoryAverages*, and then click **OK**.
-    3. In your **Toolbox**, find the **Query External Database** activity and drag it onto the work area of your microflow.
-    4. Position the **Query External Database** activity between the start and end event of your microflow.
-    5. Double-click the **Query External Database** microflow activity to configure the required parameters.
-    6. In the **Database** section, select your Snowflake database.
-    7. In the **Query** list, select the query name that you entered in step 2.
-    8. In the **Output** section, provide the following values:
-        * **Return type** - **List of *{your module name}*.STANDARD_TILE_HISTORY_DAY**
-        * **Use return value** - set to **Yes**
-        * **List name** - enter *STANDARD_TILE_HISTORY_DAY*
-    9. Click **OK**.
+It requires a list of `HttpResponse` objects and the entity of the objects that you would like to create with the received information. It returns a list of Mendix objects of the entity given in the input.
 
-    {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-chart.png" >}}
+| Input | Output |
+| --- | --- |
+| `HttpResponseList`, `EntityType` | `{EntityType}ObjectList` |
 
-7. Select the microflow as the [data source for every series in the chart](/refguide/charts-configuration/) that you want to display the weather data.
+To showcase this, we have created an example entity in the domain model of the connector:
 
-    {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-chart-source.png" >}}
+| ExampleObject |
+| --- |
+| `ATTR_TXT` (string) |
+| `ATTR_INT` (integer) |
+| `ATTR_LONG` (long) |
+| `ATTR_BOOL` (Boolean) |
+| `ATTR_DECI` (decimal) |
+| `ATTR_ENUM` (enumeration) |
+| `ParsedDate` (date and time)|
 
-### Improving the Performance by Fetching the Data in a Single Query
+This entity is only an example. You must review properties such as the naming of the attributes, what datatypes they have or in which order they are added, and configure them according to your needs. This information is important after the entity has been decided on and the data will be received from a Snowflake account. The order in which you receive the columns from a Snowflake table, the name of these columns as well as the datatypes of these values must match the entity that you have selected.
 
-Using a multi-series chart as in the above example can result in slower performance, because the query is executed for every series. To improve performance, you can replace the query in the previous section with the following one, which returns a row per measurement type. In this version, a single query is sufficient to fetch all data for the chart.
+For example, a table in Snowflake may contain multiple columns named `column1, column2,.......,column8`. To retrieve data from the column, create `ExampleObject` objects and display them on a page, you must execute an SQL statement that would retrieve the table columns with the name of my attributes and have the same datatypes. After making sure that the datatypes in Snowflake and Mendix match, you can execute a statement such as the one shown in the following example:
 
 ```sql
-with days as (
-    select date_valid_std
-    ,      avg(avg_temperature_air_2m_f) as avg_temp_f
-    ,      round(avg((avg_temperature_air_2m_f - 21) * (5/9)),1) as avg_temp_c
-    ,      min(avg_temperature_air_2m_f) as min_temp_f
-    ,      round(min((avg_temperature_air_2m_f - 21) * (5/9)),1) as min_temp_c
-    ,      max(avg_temperature_air_2m_f) as max_temp_f
-    ,      round(max((avg_temperature_air_2m_f - 21) * (5/9)),1) as max_temp_c
-    from   STANDARD_TILE.HISTORY_DAY
-    group by date_valid_std
-    order by DATE_VALID_STD asc
-)
-select d1.DATE_VALID_STD
-,      'AvgTempCelcius' as "MeasurementType"
-,      d1.avg_temp_c as "Value"
-from   days as d1
-union
-select d2.DATE_VALID_STD
-,      'MinTempCelcius' as "MeasurementType"
-,      d2.min_temp_c as "Value"
-from   days as d2
-union
-select d3.DATE_VALID_STD
-,      'MaxTempCelcius' as "MeasurementType"
-,      d3.max_temp_c as "Value"
-from   days as d3
-order by 1,2
+SELECT 
+     column1 as ATTR_TXT,
+     column2 as ATTR_INT,
+     column3 as ATTR_LONG,
+     column4 as ATTR_BOOL,
+     column5 as ATTR_DECI,
+     column6 as ATTR_ENUM
+FROM your_table 
 ```
 
-The **group by** property is used to select the column that indicates the series. This results in a single query send to Snowflake, which is usually faster than executing three separate queries.
+This statement returns data from a Snowflake table with the columns named as specified with the `as **NewColumnName**" part` of each line. If the attribute names, datatypes and their order match, the `TransformResponsesToMxObjects` activity automatically converts the retrieved data into Mendix objects.
 
-{{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-chart-source2.png" >}}
+## Configuring Snowflake Cortex Analyst
 
-## Implementing Data Replication
+Cortex Analyst is a fully-managed, LLM-powered Snowflake Cortex feature that helps you create applications capable of reliably answering business questions based on your structured data in Snowflake.
 
-Data replication involves copying the data from Snowflake into the database of your app. This makes the data faster to access and easier to use in your app pages. To ensure that the data in your app is up to date, the data replication process must be recurrent. For example, you can configure a query that iterates over Snowflake data (for example, the list of your customers) at a preconfigured interval, in order to find any differences compared to the last iteration and copy them over to your app database. 
+### Prerequisites {#prerequisitescortexanalyst}
 
-However, iterating over a list of objects can be a performance-heavy operation, and more complex data (such as a list of your customers together with their billing and shipping addresses) can require complex queries with multiple *fetch* operations. Because of this, for complex nested data structures, it might be better and more performant to use the JSON capabilities of Snowflake.
+* Make sure that you have access to Cortex Analyst. For more information, refer to the [Snowflake Cortex Analyst documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst).
+* Create the semantic model for Cortex Analyst. For more information, refer to [Creating Semantic Models for Snowflake Cortex Analyst](https://developers.snowflake.com/solution/creating-semantic-models-for-snowflakes-cortex-analyst/) in the Snowflake Cortex Analyst documentation.
+* Set up one of the following supported authentication methods for Cortex Analyst:
+    * OAUTH
+    * WT-Keypair
 
-This section provides an example of a query that builds a nested structure consisting of records from multiple tables or views, and returns the result as a single string or JSON value.
+### Configuration 
 
-To execute and test the query in Studio Pro, follow these steps:
+To configure your Mendix app for Snowflake Cortex Analyst, perform the following steps:
 
-1. In your Mendix app, in the **App Explorer**, find and open the external connection document that you created with the Connect to Database wizard.
-2. In the **Name** field, enter a name for your query, for example, *TodayForecast*.
-3. Enter the following **SQL Query**:
-
-    ```sql
-    with ftoday as (
-        select fd.postal_code as zipcode
-        ,      fd.country as country
-        ,      fd.DATE_VALID_STD as forecast_date
-        ,      round((fd.AVG_TEMPERATURE_AIR_2M_F -32) * (5/9),1) as avg_temp_c
-        ,      round((fd.MIN_TEMPERATURE_AIR_2M_F -32) * (5/9),1) as min_temp_c
-        ,      round((fd.MAX_TEMPERATURE_AIR_2M_F -32) * (5/9),1) as max_temp_c
-        from   STANDARD_TILE.FORECAST_DAY fd
-        where  fd.DATE_VALID_STD = current_date
-    ), ztoday as (
-        select f.zipcode || '-' || f.country as id
-        ,      f.zipcode, f.country
-        ,      object_construct(
-                    'ForecastId', f.zipcode || '-' || f.country || '-' || f.forecast_date
-                   ,'Date',f.forecast_date
-                   ,'AvgTempCelcius',f.avg_temp_c
-                   ,'MinTempCelcius',f.min_temp_c
-                   ,'MaxTempCelcius',f.max_temp_c
-               ) as forecast
-        from   ftoday f
-        order by 1,2
-    )
-    select array_agg(object_construct('LocationId',zt.id,'ZipCode',zt.zipcode,'Country',zt.country,'Forecast',zt.forecast)) as today_forecast_json
-    from   ztoday as zt
-    ```
-    
-    This query results in a single string return value, containing a nested JSON with weather forecast for today for multiple postal code areas. This resulting string is captured in a non-persistable entity (NPE) with a single attribute.
-
-    {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-replication.png" >}}
-
-4. Use a JSON import mapping to directly import the data into multiple associated persistable entities by doing the following steps:
-
-    1. Define a [JSON structure](/refguide/json-structures/) for the data retrieved from Snowflake.
-
-        {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-replication-json.png" >}}
-
-    2. Define an [import mapping](/refguide/import-mappings/) for the JSON structure.
-
-        {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-replication-map.png" >}}
-
-5. Execute the query in a microflow, take the resulting JSON string, and import it by using an **Import from JSON** microflow activity, as shown in the following figure:
-
-    {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-replication-flow.png" >}}
-
-6. Optionally, to track the status of the replication jobs, create a page with a data grid showing data from the [System.ProcessedQueueTask](/refguide/task-queue/) database table.
-
-    {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-replication-grid.png" >}}
-
-## Using Cortex AI functions
-
-Snowflake comes with built in AI functionality that you can leverage in your Mendix applications. This section provides an example of a query that calls the *sentiment* function to analyze the sentiment of a piece of text.
-
-To execute and test the query in Studio Pro, follow these steps:
-
-1. In your Mendix app, in the **App Explorer**, find and open the external connection document that you created with the Connect to Database wizard.
-2. In the **Name** field, enter a name for your query, for example, *GetSentiment*.
-3. Enter the following **SQL Query**:
-
-    ```sql
-    select snowflake.cortex.sentiment({text}) as "Sentiment"
-    from   dual  as sentiment_result
-    ```
-
-4. Click **Run Query**.
-
-    {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-cortex.png" >}}
-
-5. Verify that the results are correct, and then generate the required entity to collect the data in your Mendix application. For more information, see [External Database Connector: Creating an Entity from the Response](/appstore/modules/external-database-connector/#create-entity).
-
-    {{% alert color="info" %}}Mendix expects a table when generating the entity. As a workaround, you can use a dummy dual table.{{% /alert %}}
-
-6. Create a microflow that will run the query by doing the following steps:
-    1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
-    2. Enter a name for your microflow, for example, *ACT_RetrieveSentiment*, and then click **OK**.
-    3. In your **Toolbox**, find the **Query External Database** activity and drag it onto the work area of your microflow.
-    4. Position the **Query External Database** activity between the start and end event of your microflow.
-    5. Double-click the **Query External Database** microflow activity to configure the required parameters.
-    6. In the **Database** section, select your Snowflake database.
-    7. In the **Query** list, select the query name that you entered in step 2.
-    8. In the **Parameters** section, add the following parameter:
-        * **Name** - *p_text*
-        * **Type** - **String**
-        * **Value** - *$SentimentForm/Text*
-    9. In the **Output** section, provide the following values:
-        * **Return type** - **List of *{your module name}*.SentimentResult**
-        * **Use return value** - set to **Yes**
-        * **List name** - enter *SentimentResult*
-    10. Click **OK**.
-  
-    {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-cortex-flow.png" >}}
-
-7. Configure a method for triggering the **ACT_RetrieveSentiment** microflow. For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
-8. Run the **ACT_RetrieveSentiment** microflow and verify the results.
+1. Create a microflow that contains the cortex connection manadatory information Token, AccountURL and Authentication Type
+2. Add the "Cortex Analyst: Create Request" action from toolbox, add the path to the semantic file on stage at Semantic_model_file parameter
+3. Add the "Cortex Analyst: Add Message to Request" from toolbox, fill in the parameters
+   -Request: the request from the previous step.
+   -Cortex Role: The role of the entity that is creating the message. Currently only supports "user".
+   -Query: The Query/Question to Cortex Analyst.
+   -Content type: Curently only text is supported.
+4. Add the "Cortext Analyst" action from toolbox. Fill in the parameters
+   - Connection : Cortex connection from step 1
+   - Request: The Request from step 2
+5. Add the "Response: Get Cortex Analyst Response Message" action from toolbox to get the Cortex Analyst Response Message from the Response entity. 
+   - Content: This is the content of the return message! This will include the text + the SQL test or the Suggestions in case of no returned SQL 
+   - Cortex Role: The entity that produced the message. One of user or analyst.
+   - SQLText: The returned SQL suggestion     
+7. Add the "Response: Get Cortex Analyst Response" action to get the "Cortex Analyst Response" entity from Response
+   - Request_ID :The returned RequestId
+   
+ {{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/CortexAnalystRequestExample.png" >}}    

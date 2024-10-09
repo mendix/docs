@@ -328,7 +328,7 @@ In order to update the **product type** in the Mendix App CR, ensure that you ar
 
 ### Listing the Operator License
 
-Once the license bundle is installed, you can view the list of Runtime licenses in the bundle by using the following command:
+Once the license bundle is installed, you can view the list of Operator licenses in the bundle by using the following command:
 
 ```bash
 mx-pclm-cli license operator list \

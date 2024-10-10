@@ -213,6 +213,12 @@ When an alert is triggered for your Mendix app, a payload with the following for
 }
 ```
 
+The `serverity` field from the above JSON can have following values:
+* Ok
+* Warning
+* Critical
+* Recovery
+  
 For details on receiving alerts, see [Receive Environment Status Alerts](/developerportal/operate/receive-alerts/).
 
 ## Logging

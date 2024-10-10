@@ -11,8 +11,11 @@ Operators and functions use expressions as inputs to perform mathematical, compa
 Operator and function output value is also database dependent. -->
 
 ## Operators
+Operators perform common operations and do not use parenthesis in their syntax. They take `expression` as input, which can be other operator results, functions, columns and literals.
+
 Supported operators are split into binary, unary and other operators based on syntax.
 There are logical and arithmetic operators, split by return type. Arithmetic operator return type depends on the datatypes of inputs, while logical operators always return a `BOOLEAN` type. `CASE` is detailed separately 
+
 ### Binary operators
 
 These are the supported binary operators:
@@ -39,10 +42,7 @@ Binary operators are used with this syntax:
 ```
 Where `operator` is any available binary operator. Both `expression` operands should be of compatible types for the operator and compatible with the other operand.
 
-#### NULL handling
-If one of the operands in a binary operation has a `NULL` value, then the return type is also NULL.
-
-#### Return type precedence
+#### Type coercion precedence
 
 Binary operations perform type casting when operand types are differing. For operations involving only numeric types, data types are always upcasted to ensure data types are matching. The result type will also be the operand type with the highest precedence. This is done according to this ordering:
 - `DECIMAL`
@@ -58,16 +58,7 @@ This precedence rule does not apply for operations where at least one of the ope
 #### + (Addition)
 Performs different operations depending on the first `expression` datatype. A numeric input performs a arithmetic addition, while a `STRING` input will perform string concatenation. 
 
-##### Examples
-Assume `Sales.Customer` and `Sales.Request` contains one object.
-
-```sql
-SELECT * FROM Sales.Request
-```
-
-| LastName | Number           |                                                         
-|----------|------------------|
-| Doe      | 7                |
+Assume `Sales.Customer` contains two objects and `Sales.Order` contains three objects.
 
 ```sql
 SELECT * FROM Sales.Customer
@@ -76,24 +67,38 @@ SELECT * FROM Sales.Customer
 | LastName | FirstName |                                                         
 |----------|-----------|
 | Doe      | John      |
+| Moose    | Jane      |
+
+```sql
+SELECT * FROM Sales.Order
+```
+
+| LastName | Number | Price |                                                         
+|----------|--------|-------|
+| Doe      | 7      | 1.5   |
+| Doe      | 2      | 5     |
+| Moose    | 3      | 8.2   |
+
 
 The operator can be used to modify an attribute in SELECT.
 ```sql
-SELECT (Number + 5) FROM Sales.Request
+SELECT (Number + 5) FROM Sales.Order
 ```
 
-| LastName | Number           |                                                         
-|----------|------------------|
-| Doe      | 7                |
+| LastName | Number |                                                         
+|----------|--------|
+| Doe      | 12     |
+| Doe      | 8      |
+| Moose    | 7      |
 
 It can also be used for complex `WHERE` comparisons. The query bellow check for equality of the full name of a customer:
 ```sql
-SELECT Name FROM Sales.Customer WHERE (FirstName + LastName) = JohnDoe
+SELECT LastName FROM Sales.Customer WHERE (FirstName + LastName) = JaneMoose
 ```
 
 | LastName |                                             
 |----------|
-| Doe      |
+| Moose    |
 
 <!--
 All databases support string concatenation with the `+` symbol. Their behaviour and implicit type coercion of different non-string types vary. That behaviour is detailed below. Behaviour of HSQLDB, POSTGRESQL and SAP HANA is considered default. Empty cells are considered as default
@@ -107,18 +112,17 @@ All databases support string concatenation with the `+` symbol. Their behaviour 
 #### - (Subtraction)
 Subtracts left `expresion` from the right one. Both operands should be numeric.
 
-##### Examples
-
 Assume `Sales.Finances` contains two objects:
 ```sql
 SELECT * FROM Sales.Finances
 ```
 
-| Revenue | Cost |                                                         
+| Revenue | Cost |                                                       
 |---------|------|
 | 10      | 7    |
-| NULL    | 7    |
+| NULL    | 10   |
 
+We can calculate a profit based on this data: 
 ```sql
  Select (Revenue - Cost) as Profit FROM Sales.Finances
  ```
@@ -128,10 +132,99 @@ SELECT * FROM Sales.Finances
 | 3      |
 | NULL   |
 
+#### * (Multiplication)
+Multiplies operands. 
+
+As an example it can be used to get the total value of an order
+```sql
+SELECT LastName, (Number * Price) as Total FROM Sales.Order
+```
+
+| LastName | Total |                                                  
+|----------|-------|
+| Doe      | 10.5  |
+| Doe      | 10    |
+| Moose    | 24.6  |
+
+#### : (Division)
+Divides left from the right `expression`. Supports both integer and float division.
+#### % (Modulo)
+Returns the remainder of division. Behaviour is database dependent when one of the operands is of type `DECIMAL`.
+
+{{% alert color="info" %}}
+
+The operator throws an error in PostgresSQL and SQL Server when one of the operands is a parameter of type `DECIMAL`
+
+{{% /alert %}}
+#### = (Equal to)
+Returns true if both `expression` inputs are equal. When used with `NULL`, will always return a `FALSE` result. To compare to `NULL` values, use operator [IS](is-operator).
+
+{{% alert color="info" %}}
+
+Note that `DECIMAL` values have to match exactly. Use `ROUND` to compare with less precision.
+
+{{% /alert %}}
+
+The operator is useful for checking exact matches in data. This query retrieves a specific customers orders:
+```sql
+SELECT LastName, Number FROM Sales.Order WHERE LastName = Moose
+```
+
+| LastName | Number |                                                         
+|----------|--------|
+| Moose    | 12     |
 
 
 
+In this query a small difference between decimal columns will return no results:
+```sql
+SELECT LastName, Number FROM Sales.Order WHERE Price = 1.50000001
+```
 
+It can be modified with the use of `ROUND` to only compare two fraction digits : 
+```sql
+SELECT LastName, Price FROM Sales.Order WHERE ROUND(Price, 2) = ROUND(1.50000001, 2)
+```
+
+| LastName | Price |                                                         
+|----------|-------|
+| Doe      | 1.5   |
+
+#### != (Not equal to)
+Inverse of `=`. Same `NULL` handling rules apply. Partial expression `expression !=` is equivalent to `NOT expression =`. 
+#### < (Less than)
+Returns true is the left `expression` is less than the right. Both operands should be numeric.
+
+It can be used for filtering data with the use of a `WHERE` clause:
+```sql
+SELECT * FROM Sales.Order WHERE Price < 5
+```
+
+| LastName | Number | Price |                                                         
+|----------|--------|-------|
+| Doe      | 7      | 1.5   |
+
+#### <= (Less than or equal to)
+Returns true is the left `expression` is less or equal to the right. Both operands should be numeric.
+#### \> (Greater than)
+Returns true is the left `expression` is greater than the right. Both operands should be numeric.
+#### \>= (Greater than or equal to)
+Returns true is the left `expression` is greater or equal to the right. Both operands should be numeric.
+#### OR
+Returns true if at least one input `expression` returns true. Both operands need to be of type `BOOLEAN`.
+#### AND
+Returns true if both input `expression` return true. Both operands need to be of type `BOOLEAN`.
+
+Its main use is to make complex `WHERE` conditions with a combination of input values. In the query below large orders or smaller orders with a high value are selected:
+
+```sql
+SELECT * FROM Sales.Order WHERE Number > 5 OR (Price > 5 AND Number > 2)
+```
+
+| LastName | Number | Price |                                                         
+|----------|--------|-------|
+| Doe      | 7      | 1.5   |
+| Moose    | 3      | 8.2   |
 
 ### Unary Operators
 Unary operators only have a single argument. Unary operators supported:
@@ -149,12 +242,12 @@ Unary operators are used with syntax:
 `expression` should be of type compatible with the `operator`.
 
 #### - (Arithmetic negation)
-Negates a numeric value. The return type is the same as input `expression`. Has no effect on `NULL` values.
+Negates a numeric value. The return type is the same as input `expression`. 
 
 #### NOT
-Reverses boolean `TRUE` values into `FALSE` and vice versa. 
+Reverses boolean `TRUE` values into `FALSE` and vice versa.
 
-### Other operators
+### Other operators {#other-operators}
 These are operators that do not match the general unary or binary syntax. They are all logical operators. Those are:
 
 | Operator | Description                                                     |     
@@ -191,8 +284,8 @@ Matches any value in a subquery or a list of expression values. | `City IN (SELE
 #### EXISTS
 Test for the existence of any rows when executing the subquery. | `EXISTS (SELECT ID FROM City WHERE City = 'Losdun')` Returns true if object exists
 
-#### IS
-Tests for an expression being a `NULL`. Can be inverted with optional `NOT`. Syntax:
+#### IS {#is-operator}
+Tests for an expression being a `NULL`. Can be inverted with an optional `NOT`. Syntax:
 
 ```sql
 expression IS [ NOT ] NULL
@@ -206,12 +299,13 @@ Where `expression` is an expression of any datatype.
 	SELECT Number FROM WHERE NUMBER IS NOT NULL 
 ```
 
-
 ### CASE
 
 #### Description
 
 The `CASE` expression is a conditional expression, similar to if/else statements in other programming languages. Each condition is an expression that returns a Boolean result. If the condition's result is true, the value of the `CASE` expression is the result that follows the condition, and the remainder of the `CASE` expression is not processed. If the condition's result is not true, any subsequent `WHEN` clauses are examined in the same manner. If no `WHEN` condition yields true, the value of the `CASE` expression is the result of the `ELSE` clause. If the `ELSE` clause is omitted and no condition is true, the result is null.
+
+#### Syntax
 
 The `CASE` expression can be used in two ways – simple:
 
@@ -231,10 +325,6 @@ or extended:
 	END
 ```
 
-#### Syntax
-
-
-
 `input_expression` will be compared to `when_expression`. If  `input_expression` matches  `when_expression`, the result of the whole `CASE` expression will be `result_expression` given after `THEN`.
 
 
@@ -246,9 +336,18 @@ or extended:
 
 `else_result_expression` is the result of the whole `CASE` expression, when no `result_expression` is possible.
 
+### Operator precedence
+If operators are used without parenthesis to indicate order, the order of application is left to right with operator precedence:
+- \* (Multiplication), / (Division), % (Modulo)
+- \+ (Positive), - (Negative), + (Addition), + (Concatenation), - (Subtraction))
+- =, >, <, >=, <=, !=, IS, IN, EXISTS, LIKE
+- NOT
+- AND
+- OR
 
-
-
+### NULL handling
+If one of the operands in a binary operation or the unary operand have a `NULL` value, then the return type will also be NULL. 
+This does not apply to `=` and `!=` operators. Handling of `NULL` in [other operators](#other-operators) is detailed in the specific operator subsections.
 
 
 
@@ -581,3 +680,6 @@ UPPER ( expression )
 ```
 
 `expression` specifies the string to convert.
+
+## String coercion
+In some databases, using `STRING` type variables in place of numeric, `DATETIME` or `BOOLEAN` values in operators and functions that explicitly require those types, causes the database to perform an implicit conversion. A common example would be the use of a `STRING` representation of a `DATETIME` variable inside a `DATEPART` function. It is recommended to always cast strings to the exact type the operator or functions.

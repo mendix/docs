@@ -17,7 +17,7 @@ When combined with a `GROUP BY` clause, aggregations can be used with any column
 
 ```sql
   COUNT ( * )
-  | { COUNT | AVG | MAX | MIN | SUM } ( [ DISTINCT ] attribute_path )
+  | { COUNT | AVG | MAX | MIN | SUM | STRING_AGG } ( [ DISTINCT ] attribute_path )
 ```
 Where `attribute_path` is an attribute reachable from entities defined in `FROM` and `JOIN`.
 
@@ -28,7 +28,7 @@ Calculates the mean of numerical (`INTEGER`, `DECIMAL`, `LONG`) values. Null val
 ### COUNT
 
 Calculates the number of rows in a column (or columns). Counting multiple columns with `COUNT(*)` returns count of all rows.
-When counting a single column, rows that are have the `NULL` value are not counted.
+When counting a single column, rows with a `NULL` value are not counted.
 
 ### MAX and MIN
 
@@ -46,6 +46,10 @@ Combines multiple strings into a single value and adds a separator string in bet
 STRING_AGG ( attribute_path, separator )
 ```
 Where `separator` is any expression of type `STRING`. 
+
+{{% alert color="info" %}}
+This aggregate function is currently only supported in Java actions.
+{{% /alert %}}
 
 ### Examples
 
@@ -91,14 +95,6 @@ SELECT Sum(Stock) AS ProductCount FROM Sales.Product
 |:------------:|
 |     103      |
 
-The sum of all products in stock:
-```sql
-SELECT SUM(Stock) AS StockSum FROM Sales.Product
-```
-| StockSum |
-|:--------:|
-|   103    |
-
 The average stock per product:
 ```sql
 SELECT AVG(Stock) AS ProductCount FROM Sales.Product
@@ -114,14 +110,6 @@ SELECT MAX(Stock) as StockMax FROM Sales.Product
 | StockMax |
 |:--------:|
 |    54    |
-
-Using `MAX` on a string column gives the last alphabetically sorted name:
-```sql
-SELECT MAX(Name) as LastProduct FROM Sales.Product
-```
-| LastProduct |
-|:-----------:|
-|  Tomatoes   |
 
 Selecting the product with the most stock requires the use of a subquery. The subquery returns the maximum stock number, which is then compared to each product's stock in the `WHERE` clause:
 ```sql
@@ -166,7 +154,7 @@ with person names whose age is higher than the value specified in the `$age` par
 
 ```sql
 SELECT Name
-FROM Module.Person
+FROM Sales.Person
 WHERE
     Age > $age
 ```
@@ -175,47 +163,49 @@ This query will return a limited number of rows, limited by the value of the `$l
 
 ```sql
 SELECT Name
-FROM Module.Person
+FROM Sales.Person
 LIMIT $limit
 ```
 
 #### Undefined parameters
 
-Take a query with two comparisons and a use of the parameter `$param`:
+As an example, take a query with two comparisons and a use of the parameter `$param`:
 ```sql
 SELECT Name
-FROM Module.Person
+FROM Sales.Person
 WHERE
     Age > $param 
-    AND
-    Active = true
+    OR
+    Job = 'Sales'
 ```
 
 If the value of `$param` is not provided, the query will be equivalent to:
 
 ```sql
 SELECT Name
-FROM Module.Person
+FROM Sales.Person
 WHERE
-    Active = true
+    TRUE
+    OR
+    Job = 'Sales'
 ```
 
 The example above is different from the case where the value of `$param` is provided, but is `NULL`. In that case, the query will be equivalent to:
 
 ```sql
 SELECT Name
-FROM Module.Person
+FROM Sales.Person
 WHERE
     Age > NULL
-    AND
-    Active = true
+    OR
+    Job = 'Sales'
 ```
 
 However, an undefined parameter used in a `LIMIT`, will throw an exception.
 
 ```sql
 SELECT Name
-FROM Module.Person
+FROM Sales.Person
 ORDER BY LastName
 LIMIT $param
 ```

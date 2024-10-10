@@ -9,7 +9,7 @@ description: "Describes what the various log levels of the runtime will show as 
 Below we describe what the various log levels of the runtime will show as output.
 During development, these log levels can be set in the console (advanced -> set log levels), when deployed on a server, please refer to the [Deployment](/developerportal/deploy/mendix-cloud-deploy/) pages.
 
-You can also set log levels to provide more or less information when testing locally using the console in Studio Pro. See [Configuring the Log Levels for Standard Log Messages](/howto/monitoring-troubleshooting/log-levels/#standard-log-levels) in *How To Set Log Levels* for more information.
+You can also set log levels to provide more or less information when testing locally using the console in Studio Pro. See [Configuring Log Levels Within Studio Pro](/howto/monitoring-troubleshooting/log-levels/#configure-log-levels-from-studio-pro) in *How To Set Log Levels* for more information.
 
 ## Log Levels {#log-levels}
 
@@ -67,6 +67,7 @@ This list is currently incomplete and is being updated.
 | DataStorage_QueryPlan | Query execution plan information for installations (currently only supported for PostgreSQL databases). |
 | DocumentExporter | Logs messages related to the templating engine that generates documents. |
 | FileDocumentSizesPopulateJob | Logs messages for a background job that populates the file-size field in the database for documents that do not have that field filled (used during legacy migration). |
+| InvalidRequestLimiter | Logs messages related to responses being throttled due to invalid requests. |
 | IDResolution | Information on retrieval queries and runtime operations that are being executed. |
 | I18NProcessor | Logs messages related to translation of the app. |
 | Integration API | Logs messages related to the documentation of integration APIs. |
@@ -74,23 +75,28 @@ This list is currently incomplete and is being updated.
 | JSON Export | Logs messages related to export mappings to JSON. |
 | JSON Import | Logs messages related to import mappings from JSON. |
 | Jetty | Logs messages from the internal Jetty webserver that handles HTTP requests between the runtime and the outside world. |
-| LocalFileSystemStore | Logs messages related to file handling if you are using local file system as your file store. |
+| LicenseService | Logs messages related to the licensing of the app. |
 | Logging | Logs messages related to the logging framework used by Mendix. |
 | M2EE | Logs messages from the administration interface with the Mendix Runtime. |
+| Metrics | Logs messages related to the runtime metrics reporting infrastructure. |
 | MicroflowDebugger | Logs messages related to the status of the microflow debugger (for example, connection status, incoming and outgoing requests). |
 | MicroflowEngine | Logs messages related to microflow execution (for example, which microflow or microflow action is being executed and errors that occur during the execution). |
+| MicroflowStructureOptimizer | Logs messages related to microflow structure optimization performed during startup. |
 | ModelStore | Logs debug messages related to synchronizing User Role and language information to the system tables. |
 | Module | Logs messages for modules that are loaded on-demand in the core runtime like the microflow-engine. |
 | ObjectManagement | Logs errors relating to attempts to make associations to non-existent object |
 | ODataConsume | Logs messages related to consumed OData services. |
 | OData Publish | Logs messages related to published OData/GraphQL services. |
+| OrphanFileCleaner | Logs messages related the orphan file cleaning background task. |
 | QueryParser | Logs messages related to the parsing or interpretation of XPath and OQL queries. |
-| Queue | All actions related to Task Queues |
+| TaskQueue | All actions related to Task Queues |
 | REST Consume | Logs messages related to the Call REST service activity. |
 | REST Publish | Logs messages related to published REST services. |
 | RequestStatistics | Logs if thresholds related to state defined in [Client Runtime Settings](/refguide/custom-settings/#web-client-settings) have exceeded the defined threshold. |
+| SchemeManager | Logs messages related to model loading that is performed during startup. |
 | Services | Logs messages related to [Web Services](/refguide/integration/web-services/) |
 | StorageAzure | Logs messages related to file handling if you are using Azure system as your file store. |
+| StorageLocal | Logs messages related to file handling if you are using the local file system as your file store. |
 | StorageS3 | Logs messages related to file handling if you are using Amazon S3 system as your file store. |
 | WebServices | Traces SOAP call request and response contents. |
 | WebUI | Logs if thresholds related to feedback size defined in [Client Runtime Settings](/refguide/custom-settings/#web-client-settings) have exceeded the defined threshold, or creating a valid session has failed. |

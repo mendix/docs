@@ -14,7 +14,7 @@ Private Cloud License Manager is currently in beta. For more information, see [B
 
 When deploying your Mendix app for production use, it needs to be licensed. This removes the restrictions which are placed on unlicensed apps. For more information, see [Licensing Mendix for Private Cloud](/developerportal/deploy/private-cloud/#licensing) in the *Private Cloud* documentation.
 
-Apps which are deployed to the Mendix Cloud have access to the internet and have licenses which work on a subscription basis, contacting the Mendix license server to validate the license. This method is not appropriate for apps which are deployed using Mendix for Private Cloud, and may even be in standalone mode and not connected to the internet (air-gapped).
+Apps which are deployed to Mendix Cloud have access to the internet and have licenses which work on a subscription basis, contacting the Mendix license server to validate the license. This method is not appropriate for apps which are deployed using Mendix for Private Cloud, and may even be in standalone mode and not connected to the internet (air-gapped).
 
 Rather than having to apply and update licenses for each environment individually, the Mendix **Private Cloud License Manager** (PCLM) provides a repository of offline Mendix licenses to enable you to manage these centrally. This reduces the possibility of errors, and enables the production of license usage reports.
 
@@ -24,7 +24,7 @@ The PCLM runs as a Kubernetes service on your cluster. This means that it can be
 
 To install and use the PCLM, you need the following prerequisites:
 
-* A Mendix for Private Cloud cluster
+* A Mendix for Private Cloud **Standalone** cluster 
 * Mendix Operator in version 2.11.0 or above
 * Administrative rights to a Kubernetes namespace to install PCLM server (a dedicated namespace is recommended). This can be within your Mendix for Private Cloud cluster, or in another cluster which is accessible over HTTP
 * A Postgres or SQLServer database server and within it:
@@ -56,11 +56,11 @@ Use the following command:
 
 ```bash
 mx-pclm-cli installer-gen --db-type <db-type> \
-    --db-hostname <hostname> \ 
+    --db-hostname <hostname> \
     --db-name <db-name> \
     --db-user <db-user> \
     --db-password <db-pass> \
-    --db-port <port> \ 
+    --db-port <port> \
     --db-strict-tls <tls-boolean> \
     --ssl-cert-file <ssl-root-certificate> \
     --image-repo <docker-repo> \
@@ -116,7 +116,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: pclm-ingress
-  namespace: my-pclm-1 
+  namespace: my-pclm-1
 spec:
   rules:
     - host: pclm.<domain> # for example, pclm.mydomain.io
@@ -164,6 +164,28 @@ kubectl port-forward -n <namespace> svc/<service name> 8080:8080
 
 and use http://localhost:8080 as the PCLM address
 
+## Self-Signed Custom CA Certificate
+
+If the PCLM server is self-signed with a Custom CA Certificate, then the OpenShift route or Ingress needs to be configured with a custom certificate.
+
+Example for an OpenShift route:
+
+```bash
+oc -n <namespace> create route edge --service=mx-privatecloud-license-manager \
+    --cert=server.crt \
+    --key=server.key \
+    --ca-cert=ca.crt \
+    --hostname=<hostname>
+```
+
+The next step is to create a generic secret in the namespace where we need to deploy the application. Below is an example on how to create the secret:
+
+```bash
+oc -n <namespace> create secret generic custom-ca-secret --from-file=custom.crt=<path of ca.crt>
+```
+
+The next step is to also configure the Operator configuration of the namespace with the custom CA secret created above. The custom CA secret can be configured following the [Custom TLS](/developerportal/deploy/standard-operator/#custom-tls) instructions in *Running the Mendix Operator in Standard Mode*.
+
 ## Setting Up Users
 
 Once the PCLM server is running, you can set up users.
@@ -179,7 +201,8 @@ When the PCLM server is set up, it contains one user `administrator` with a defa
 ```bash
 mx-pclm-cli user update \
   -s <pclm-http-url> -u administrator -p <default-password> \
-  --username administrator --password='<new-password>' --type admin
+  --username administrator --password='<new-password>' --type admin \
+  --custom-tls-cert-path=<custom-ca-cert-path>
 ```
 
 Where:
@@ -187,6 +210,7 @@ Where:
 * `<pclm-http-url>` – is the HTTP REST endpoint of the PCLM server
 * `<default-password>` – is the default password which is set for the `administrator` user – you can obtain this from [Mendix Support](https://support.mendix.com)
 * `<new-password>` – is the new password for the `administrator` user
+* `<custom-ca-cert-path>` - is only required if the PCLM server is configured with a custom certificate. Otherwise it is optional.
 
 #### Authenticating Using a Config File
 
@@ -215,7 +239,8 @@ You will want to set up *operator* users and (optionally) additional *admin* use
 ``` bash
 mx-pclm-cli user create \
   -s <pclm-http-url> -u <admin-user> -p <admin-password> \
-  --username=<new-user>  --password='<password>' --type=<user-type>
+  --username=<new-user>  --password='<password>' --type=<user-type> \
+  --custom-tls-cert-path=<custom-ca-cert-path>
 ```
 
 Where:
@@ -226,6 +251,7 @@ Where:
 * `<new-user>` – is the name of the new user you are creating
 * `<password>` – is the password for the new user
 * `<user-type>` – is the type of user you are creating, either `admin` or `operator`
+* `<custom-ca-cert-path>` - is only required if the PCLM server is configured with a custom certificate. Otherwise it is optional.
 
 ## Installing Licenses
 
@@ -239,7 +265,9 @@ mx-pclm-cli license import \
     -s <pclm-http-url> \
     -u <admin-user> \
     -p <admin-password> \
-    -f <bundle-zip-file-path>
+    -f <bundle-zip-file-path> \
+    -t <custom-ca-cert-path>
+
 ```
 
 Where:
@@ -248,6 +276,7 @@ Where:
 * `<admin-user>` – is a user of type *admin* which can update users, default: `administrator` (overrides the config file)
 * `<admin-password>` – is the password for the chosen *admin* user (overrides the config file)
 * `<bundle-zip-file-path>` – is the location of your license bundle file
+* `<custom-ca-cert-path>` - is only required if the PCLM server is configured with a custom certificate. Otherwise it is optional.
 
 You will get a report of the results of your import operation:
 
@@ -279,8 +308,11 @@ Once the license bundle is installed, you can see the list of Runtime license in
 mx-pclm-cli license runtime list \
    -s <pclm-http-url> \
    -u <admin-user> \
-   -p <admin-password>
-```   
+   -p <admin-password> \
+   -t <custom-ca-cert-path>
+```
+
+* `<custom-ca-cert-path>` - is only required if the PCLM server is configured with a custom certificate. Otherwise it is optional.
 
 You will receive the result in the following format:
 
@@ -296,14 +328,17 @@ In order to update the **product type** in the Mendix App CR, ensure that you ar
 
 ### Listing the Operator License
 
-Once the license bundle is installed, you can view the list of Runtime licenses in the bundle by using the following command:
+Once the license bundle is installed, you can view the list of Operator licenses in the bundle by using the following command:
 
 ```bash
 mx-pclm-cli license operator list \
    -s <pclm-http-url> \
    -u <admin-user> \
-   -p <admin-password>
-```   
+   -p <admin-password> \
+   -t <custom-ca-cert-path>
+```
+
+* `<custom-ca-cert-path>` - is only required if the PCLM server is configured with a custom certificate. Otherwise it is optional.
 
 You will receive the result in the following format:
 
@@ -318,15 +353,15 @@ To use the licenses, you must add information to the operator configuration. For
 ### Storing Operator User Credentials and Configuring the Mendix Operator
 
 The credentials you have created for an operator or admin type user need to be stored in the repository. You also need to patch the Mendix Operator and Agent with the location of the PCLM server, and the credentials for accessing the PCLM server. To do this, you can use the below mx-pclm-cli command:
-   
+
 ```bash
 mx-pclm-cli config-namespace -n <operator-ns> \
    -s <pclm-http-url> \
    -u <admin-user> \
    -p <admin-password>
-```   
+```
 
-The default secret name is `mendix-operator-pclm`. If PCLM was previously configured manually, the existing secret name is used. 
+The default secret name is `mendix-operator-pclm`. If PCLM was previously configured manually, the existing secret name is used.
 
 {{% alert color="info" %}}
 For Global Operator installation, execute the above command in both the Global Operator namespace and its managed namespaces where the license is intended to be applied. Please make certain that identical PCLM license details are configured for both the managed and global operator namespaces to avoid unexpected outcomes. Global Operator is still in beta, and it does not currently fully supports PCLM.
@@ -337,7 +372,7 @@ For Global Operator installation, execute the above command in both the Global O
 Below are sample yaml files for the secrets, with the changes applied after running the above command. You do not need to make those changes manually; to configure the Mendix Operator and Agent, it is enough to run the above command.
 
 ##### Mendix Operator
-   
+
 ```yaml
 apiVersion: v1
 kind: Secret
@@ -415,7 +450,8 @@ You can see which licenses are currently used by which environments and operator
 ```bash
 mx-pclm-cli license list-usage -s <pclm-http-url> \
     -u <admin-user> \
-    -p <admin-password>
+    -p <admin-password> \
+    -t <custom-ca-cert-path>
 ```
 
 Where:
@@ -423,6 +459,7 @@ Where:
 * `<pclm-http-url>` – is the HTTP REST endpoint of the PCLM server (overrides the config file)
 * `<admin-user>` – is a user of type *admin* which can update users, default: `administrator` (overrides the config file)
 * `<admin-password>` – is the password for the chosen *admin* user (overrides the config file)
+* `<custom-ca-cert-path>` - is optional. Required only if the PCLM server is configured with custom cert.
 
 Which would reply with something similar to this:
 
@@ -487,8 +524,11 @@ You can confirm this by running the following command:
 ```bash
 mx-pclm-cli license list-usage -s <pclm-http-url> \
     -u <admin-user> \
-    -p <admin-password>
+    -p <admin-password> \
+    -t <custom-ca-cert-path>
 ```
+
+* `<custom-ca-cert-path>` - is optional. Required only if the PCLM server is configured with custom cert.
 
 This will indicate that licenses have been applied to the operator and apps in the selected namespace:
 

@@ -102,7 +102,7 @@ On the **User roles** tab of the **Project Security** dialog box, include the fo
 
 ## Deploying Your App
 
-At this point, all the implementation steps are done and you can deploy your application to the Mendix Cloud. If you are using a Free App, simply click **Run**.
+At this point, all the implementation steps are done and you can deploy your application to Mendix Cloud. If you are using a Free App, simply click **Run**.
 
 {{% alert color="warning" %}}
 

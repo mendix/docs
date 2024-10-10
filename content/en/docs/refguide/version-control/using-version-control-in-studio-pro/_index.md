@@ -199,6 +199,8 @@ It is often convenient to have more than one development line. For example, one 
 
 ### Working with Branches in Studio Pro
 
+This section outlines how to create branches in Studio Pro. It also recommends some [Branching Best-Practices](#branching-best-practices) when developing Mendix apps.
+
 #### Branching
 
 Development lines other than the main line are called branch lines. You can consider developing new features in the main line and using branch lines for fixing bugs in versions that have been deployed. This is the scenario Studio Pro makes easy but other scenarios for more complex apps are supported as well.
@@ -309,6 +311,92 @@ After setting up the driver either locally or globally, create a *.gitattributes
 
 Save the files and now when **git merge** is run and it involves *.mpr* files, the *mx.exe* merge will run Studio Pro merge algorithm before Git finishes the merge.
 
+### Branching Best-Practices {#branching-best-practices}
+
+Depending on your team's size and preferences, you may find some branching strategies better suited than others. Mendix suggests using one of the following three strategies which have increasing complexity and control and different pros and cons.
+
+* [Trunk-Based (Single Branch Line)](#branching-trunk): straightforward, easy to start with, well-suited for small teams
+* [Trunk-Based with Feature Branches](#branching-trunk-and-feature): reduces risk of merge conflicts, well-suited for larger teams and a regular release cadence
+* [Advanced Branching](#branching-advanced): guarding quality becomes easier, well-suited for large teams and structured processes
+
+We recommend starting trunk-based and adopting trunk-based with feature branches next, if needed. Getting a lot of merge conflicts or releasing a first version to production are sensible triggers to move away from solely trunk-based development.
+
+For experienced teams, or for organizations with stricter processes and/or auditability criteria, the advanced branching approach is recommended.
+
+In the [tips and tricks](#branching-tricks) section you will find suggestions on how to work with, and manage, branches in an effective way.
+
+#### Trunk-Based (Single Branch Line) {#branching-trunk}
+
+In trunk-based development, all developers work on a single branch, typically the "trunk" or "main" branch. Changes are frequently committed to this branch, and developers continuously push  their work to the remote repository. 
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/branching-trunk.png" >}}
+
+Benefits are:
+
+* Simplicity: Trunk-based development is straightforward and easy to understand, making it suitable for small teams or projects with less complex requirements.
+* Fast feedback: Developers receive immediate feedback on the impact of their changes, helping to identify and resolve issues quickly.
+* Reduced merge conflicts: Since developers frequently push their code, the chances of encountering significant merge conflicts are minimized.
+
+Disadvantages are:
+
+* Risk of instability: Constant changes to the main branch can introduce instability, especially if proper testing and quality assurance practices are not in place.
+* Limited parallel development: The single branch model can limit parallel development efforts, making it challenging to work on multiple features concurrently.
+* Difficulty to mitigate issues: When encountering issues on production, it is not possible to deploy a hotfix without also publishing other changes to your app, without creating a branch.
+
+This approach is best-suited for small teams.
+
+#### Trunk-Based with Feature Branches {#branching-trunk-and-feature}
+
+[Trunk-based](#branching-trunk) can also be combined with short-lived feature branches. Developers work on feature branches, which are created from the main branch. Once a feature is complete, it is merged back into the main branch.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/branching-trunk-and-feature.png" >}}
+
+Benefits are:
+
+* Limited complexity: This approach is still relatively straightforward and easy to understand for most developers.
+* Isolation of changes: Working on feature branches allows developers to isolate their changes, reducing the risk of disrupting the mainline codebase.
+
+Disadvantages are:
+
+* Overhead: Separate feature branches can lead to overhead in terms of merging, code review, and testing.
+
+This approach is the most-used among Mendix customers, and is best-suited for teams with some experience, or teams running into the limitations of trunk-based development.
+
+#### Advanced Branching {#branching-advanced}
+
+In branch-based development, there are typically two types of branches:
+
+* Long-lived branches: main branch, development branch, release branch
+* Short-lived branches: feature branches
+
+Developers work on feature branches, which are merged into the development branch for integration and testing. The release branch is used to prepare for a stable release, while the main branch represents the production-ready codebase.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/branching-advanced.png" >}}
+
+Benefits are:
+
+* Isolation of changes: Working on feature branches allows developers to isolate their changes, reducing the risk of disrupting the mainline codebase.
+* Parallel development: Multiple features can be developed simultaneously, enhancing productivity.
+* Granular control: Different branches provide granular control over the development and release process.
+* Stability and quality: The main and release branches are stable and thoroughly tested, ensuring high-quality releases.
+* Scalability: This strategy scales well with larger teams and complex projects
+
+Disadvantages are:
+
+* Complexity: Managing multiple long-lived branches and their interactions requires careful planning and coordination.
+* Overhead: Maintaining separate branches can lead to overhead in terms of merging, code review, and testing.
+
+This approach is best-suited to large teams or teams preferring a more rigid process. Projects with strict release cycles can also benefit from this approach, as the release branch is always stable.
+
+#### Tips and Tricks for Working with Branches {#branching-tricks}
+
+There are several recommendations that make it easier to work with and manage multiple branches.
+
+* Periodically merge higher-level branches, such as 'development' or 'main', to lower-level branches, such as feature branches. This ensures you already take the most recent stable work into account when developing a feature, preventing larger merge conflicts down the road.
+* Note which branch is being used for development in the stories that you are working on, to avoid confusion. You can also implement a naming convention for branch names, such as `feature_[issueNumber]`.
+* Where possible, keep different branches on the same version of Studio Pro.
+* Make sure that old branches are cleaned up, to prevent accumulating them over time. Ideally you should delete a branch as part of the process of completing a feature. In cases where branches aren't merged in the end, consider cleaning them up periodically.
+
 ## Versioning an App Deployed to the Cloud {#versioning-app}
 
 ### Deploying Locally
@@ -333,7 +421,7 @@ When it creates the package, Studio Pro will also create a tag representing this
 
 #### Deploying a Specific Version to a Mendix Licensed Cloud Node
 
-If you are using the Mendix Cloud, you can choose **App** > **Deploy to Licensed Cloud Node** to deploy a specific version.
+If you are using Mendix Cloud, you can choose **App** > **Deploy to Licensed Cloud Node** to deploy a specific version.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/deploy-to-cloud.png" class="no-border" >}}
 
@@ -354,7 +442,7 @@ We advise you to always commit and update/pull inside Studio Pro, because, in th
 If you are doing more advanced changes to files, like adding Java actions or resources to your app, you will have to install a separate tool on your computer and perform some operations yourself: you can use [TortoiseGit](https://tortoisegit.org/) (can be downloaded for free).
 
 {{% alert color="info" %}}
-Studio Pro adds metadata on the Mendix version of your app to each revision when you commit or create a branch. Therefore, when committing or merging using third-party tools, it may no longer be possible to deploy to the Mendix Cloud. This can be fixed by making a commit using Studio Pro so that the correct metadata is present again.
+Studio Pro adds metadata on the Mendix version of your app to each revision when you commit or create a branch. Therefore, when committing or merging using third-party tools, it may no longer be possible to deploy to Mendix Cloud. This can be fixed by making a commit using Studio Pro so that the correct metadata is present again.
 {{% /alert %}}
 
 {{% alert color="warning" %}}

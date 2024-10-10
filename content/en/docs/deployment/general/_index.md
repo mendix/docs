@@ -21,6 +21,7 @@ The subjects covered in this documentation section are as follows:
 * [Iframes and Running Apps](/developerportal/deploy/running-in-iframe/)
 * [Deployment Location](/developerportal/deploy/deployment-location/)
 * [Webhooks](/developerportal/deploy/webhooks/)
+* [Software Composition](/developerportal/deploy/software-composition/) (Beta)
 
 ## Building Your Model
 
@@ -29,5 +30,7 @@ To deploy an app to the cloud, you first have to build a project model (MDA). Th
 The time it takes to build your model depends on the complexity of the model and the number and size of the files held in the Team Server repository that is used to build the model.
 
 {{% alert color="info" %}}
-Starting September 1, 2024, your app will need to run Mendix version 8 or above to build a deployment package on the Mendix platform. This applies to all cloud deployment models, including Mendix Cloud, Mendix Cloud Dedicated, Private Cloud, and SAP Cloud. If your app runs on version 7 or below, you will still be able to build a local deployment package from Studio Pro.
+Starting September 1, 2024, your app will need to run Mendix version 8 or above to build a deployment package on the Mendix platform. This applies to all cloud deployment models, including Mendix Cloud, Mendix Cloud Dedicated, Private Cloud, and SAP Cloud.
+
+If your app runs on version 7 or below, you will still be able to build a local deployment package from Studio Pro, but you will not be able to upload this package to the Mendix platform.
 {{% /alert %}}

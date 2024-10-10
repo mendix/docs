@@ -94,7 +94,7 @@ The uniqueness constraint will also take into account the way that the underlyin
 When you add a uniqueness constraint to an entity which already contains data, all the existing objects for the affected entity will be checked on deployment for the uniqueness of the attribute. If you have, for example, applied uniqueness validation to an insurance number and there are multiple people with the same insurance number then:
 
 * if you deploy the app from Studio Pro, an error will be shown on deployment
-* if you deploy the app from a deployment package (for example in the Mendix cloud), the app will not start and errors will be written to the log
+* if you deploy the app from a deployment package (for example in Mendix Cloud), the app will not start and errors will be written to the log
 
 {{< figure src="/attachments/refguide/modeling/domain-model/entities/validation-rules/startup-error.png" class="no-border" >}}
 

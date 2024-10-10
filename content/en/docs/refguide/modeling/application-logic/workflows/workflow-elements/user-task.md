@@ -1,7 +1,7 @@
 ---
 title: "User Task"
 url: /refguide/user-task/
-weight: 30
+weight: 70
 ---
 
 ## Introduction
@@ -22,11 +22,12 @@ User task properties consist of the following sections:
 
 * [General](#general)
 * [Due date](#due-date)
-* [Events](#events)
 * [Targeted users](#users)
 * [Outcomes](#outcomes)
 * [Task page](#task-page)
 * [Display information](#display-info)
+* [Events](#events)
+* [Boundary events](#boundary-events)
 * [Common](#common)
 
 ### General Section {#general}
@@ -44,10 +45,6 @@ The **Due date** section properties are described in the table below:
 | None | No due date is set. |
 | Duration | You can set the deadline for the user task with the **Due in** option, which indicates the number of hours, days, or weeks the task is due in. Possible values of the property are the following ones:<br /><ul><li>Hours</li><li>Days</li><li>Weeks</li> </ul> |
 | Expression | You can set a due date for the user task writing an expression. For example, to set a due date to tomorrow, you can use `addDays([%CurrentDateTime%], 1)`. |
-
-### Events Section {#events}
-
-**On Created** event allows you to select a microflow that is executed immediately after users have been determined for a newly created task instance. You can use this setting for a microflow that will send an email notification about the user task to the assigned users.
 
 ### Targeted Users Section {#users}
 
@@ -138,6 +135,14 @@ In addition to adding new parameters, you can perform the following actions on p
 * **Edit** – double-click a parameter to edit it or click **Edit**
 * **Move up** – to move a parameter up in the list of parameters and also to change its index, click **Move up**
 * **Move down** – to move a parameter down in the list of parameters and also to change its index, click **Move down**
+
+### Events Section {#events}
+
+**On Created** event allows you to select a microflow that is executed immediately after users have been determined for a newly created task instance. You can use this setting for a microflow that will send an email notification about the user task to the assigned users.
+
+### Boundary Events Section {#boundary-events}
+
+For more information, see [Boundary Events](/refguide/workflow-boundary-events/).
 
 ### Common Section {#common}
 

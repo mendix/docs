@@ -36,7 +36,7 @@ This how-to teaches you how to do the following:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a local repository of the app
-* Have your app *hosted in the Mendix Cloud*
+* Have your app *hosted in Mendix Cloud*
 * Identify which version of the Atlas module you are using
 
 ## Creating a Custom Error Page

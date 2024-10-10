@@ -59,7 +59,7 @@ Consult the table below for a summary of additional design properties.
 | Progress Circle                  | Addition of design properties for styling the new updated progress circle. Properties including bar color and bar thickness. |
 | Progress Bar                     | Addition of design properties for the styling the new updated progress bar. Properties including bar color and bar thickness. |
 | Additional background variants   | Dark and light variations can be added to your background colors via design properties. |
-| Responsive images with image-fit | Options can now be added for images to be resized to fit its container. options include fill, contain, cover and scale-down. |
+| Responsive images with image-fit | Options can now be added for images to be resized to fit its container. Options include fill, contain, cover and scale-down. |
 
 ### Web Environment Changes
 

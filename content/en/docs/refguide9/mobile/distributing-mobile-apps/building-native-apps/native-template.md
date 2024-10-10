@@ -629,8 +629,7 @@ The created bundles need to be copied to the right place in the Native Template 
 
 ## Deriving the App's Native Dependencies
 
-Mendix Studio Pro 9 introduced Native Dependency resolution for pluggable widgets and JavaScript actions. For more information, see [Declaring Native Dependencies
-](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/). Prior to Studio Pro 9 Mendix Studio Pro was shipping with a set of core dependencies which are now are removed. 
+Mendix Studio Pro 9 introduced Native Dependency resolution for pluggable widgets and JavaScript actions. For more information, see [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/). Prior to Studio Pro 9 Mendix Studio Pro was shipping with a set of core dependencies which are now are removed. 
 
 As you develop, you may add more Mendix Studio Pro 9 compatible modules, widgets, and actions to your app. This means and more dependencies 
 will be added that will also need be declared in your app's Native Template prior to building the native apps. 

@@ -125,7 +125,7 @@ Every app has documents that are needed for specific entities. Think of overview
 
 ### Microflows {#microflow-naming-conventions}
 
-Generally, [microflow](/refguide/microflows/) names should include the type of event which triggers them, the name of the main entity being processed, and the operation being performed: **{PREFIX}\_{Entity}\_{Operation}**. For example, **ACT_Vendor_StartWorkflow**.
+Generally, [microflow](/refguide/microflows/) names should include the type of event which triggers them, the name of the main entity being processed, and the operation being performed: **{PREFIX}\_{Entity}_{Operation}**. For example, **ACT_Vendor_StartWorkflow**.
 
 There are exceptions, such as where there is no main entity, or there is another reason to use a different name to improve understandability. The important thing is to make sure the name of the microflow clearly indicates its purpose.
 
@@ -139,101 +139,109 @@ For example, an attribute **TotalOrderAmount** is automatically filled based on 
 
 The microflows related to such an event handler should have the following prefixes:
 
-| Event Type      | Prefix               |
-|-----------------|----------------------|
-| Before commit   | BCO\_{Entity name} |
-| After commit    | ACO\_{Entity name} |
-| Before create   | BCR\_{Entity name} |
-| After create    | ACR\_{Entity name} |
-| Before delete   | BDE\_{Entity name} |
-| After delete    | ADE\_{Entity name} |
-| Before rollback | BRO\_{Entity name} |
-| After rollback  | ARO\_{Entity name} |
+| Event Type      | Prefix            |
+| --------------- | ----------------- |
+| Before commit   | BCO_{Entity name} |
+| After commit    | ACO_{Entity name} |
+| Before create   | BCR_{Entity name} |
+| After create    | ACR_{Entity name} |
+| Before delete   | BDE_{Entity name} |
+| After delete    | ADE_{Entity name} |
+| Before rollback | BRO_{Entity name} |
+| After rollback  | ARO_{Entity name} |
 
 #### Calculated Attribute Microflows
 
 For attributes, you can choose to store the value in the database or to calculate the value based on a microflow. For the microflow that does the calculation, you should use **CAL_** as a prefix and refer to the entity and attribute which is being calculated. The calculation is triggered when you show the entity on a page or use it in a microflow. On a page, the object's calculation attribute refreshes if you navigate away from the object and back to it in any way (via pagination buttons or tabs or by re-entering the page).
 
 | Event Type      | Prefix               |
-|-----------------|----------------------|
-| Calculation     | CAL\_{Entity name}\_{Attribute name}    |
+| ----------------| -------------------- |
+| Calculation     | CAL_{Entity name}_{Attribute name} |
 
 #### Page-Based Microflows
 
 [Pages](/refguide/pages/) have a number of events that can trigger a microflow. See the following list for the examples and prefixes:
 
-| Event Type                | Prefix             | Used In |
-|---------------------------|--------------------|---- |
-| On enter event            | OEN\_{Purpose}   | Input elements   |
-| On change event           | OCH\_{Purpose}   | Input elements   |
-| On leave event            | OLE\_{Purpose}   | Input elements   |
-| Data source               | DS\_{Purpose}    | Data view, list view, data grid, template grid |
-| Action button             | ACT\_{Purpose}   | Menu item, navigation item, microflow and action button, drop-down button<br />(“IVK\_” is used historically) |
+| Event Type                | Prefix          | Used In |
+| ------------------------- |---------------- |-------- |
+| On enter event            | OEN_{Purpose}   | Input elements   |
+| On change event           | OCH_{Purpose}   | Input elements   |
+| On leave event            | OLE_{Purpose}   | Input elements   |
+| Data source               | DS_{Purpose}    | Data view, list view, data grid, template grid |
+| Action button             | ACT_{Purpose}   | Menu item, navigation item, microflow and action button, drop-down button<br />("IVK_" was used historically) |
 
 #### Workflow Microflows
 
 You can call a microflow from a [workflow](/refguide/workflows/). See the list of examples and prefixes in the table below:
 
-| Event Type       | Prefix | Description                                                  |
-| ---------------- | ------ | ------------------------------------------------------------ |
-| User assignment  | WFA_   | Returns a list of users who can perform the workflow task.   |
-| System action    | WFS_   | Accepts a workflow object and returns a workflow task result. |
+| Event Type       | Prefix | Description                                                    |
+| ---------------- | ------ | -------------------------------------------------------------- |
+| User assignment  | WFA_   | Returns a list of users who can perform the workflow task.     |
+| System action    | WFS_   | Accepts a workflow object and returns a workflow task result.  |
 | On Created Event | WFC_   | Starts when a user task is created, accepts a workflow object. |
 
 #### Validation Microflows
 
 Microflows that are used for [data validation](/refguide/setting-up-data-validation/) use the prefix **VAL_**.
 
-| Event Type      | Prefix               |
-|-----------------|----------------------|
-| Validation      | VAL\_                 |
+| Event Type | Prefix |
+| ---------- | ------ |
+| Validation | VAL_   |
 
 #### Scheduled Event Microflows
 
 For the microflow that you use in your [scheduled events](/refguide/scheduled-events/), use the prefix **SCE_**. The event itself should have a descriptive name since it will be shown in the cloud configuration portal. The scheduled event and the microflow should have the same name.
 
-| Event Type      | Prefix               |
-|-----------------|----------------------|
-| Scheduled Event | SCE\_                 |
+| Event Type      | Prefix |
+| --------------- | ------ |
+| Scheduled Event | SCE_   |
 
 #### App Microflows {#app-microflows}
 
 Your [app settings](/refguide/app-settings/) provide three events that can trigger a microflow. In these cases we advise writing out the purpose as a microflow name. These microflows are defined only once per app and should preferably call sub-microflows to do the actual processing. These sub-microflows should have a prefix indicated below:
 
 | Event Type      | Microflow Name | Sub-Microflow Prefix |
-|-----------------|----------------|----------------------|
-| After startup   | AfterStartUp   | ASU\_                 |
-| Before shutdown | BeforeShutDown | BSD\_                 |
-| Health check    | HealthCheck    | HCH\_                 |
+| --------------- | -------------- | -------------------- |
+| After startup   | AfterStartUp   | ASU_                 |
+| Before shutdown | BeforeShutDown | BSD_                 |
+| Health check    | HealthCheck    | HCH_                 |
 
 #### Sub-Microflows
 
 To clearly identify a [sub-microflow](/refguide/extracting-and-using-sub-microflows/), use the prefix **SUB_**. Exceptions can happen if there are other sub-microflow prefixes that are generally accepted too, for instance, the sub-microflow prefixes mentioned in the [App Microflows](#app-microflows) section above.
 
-| Event Type      | Prefix                     |
-|-----------------|----------------------------|
-| Sub-microflow   | SUB_{MicroflowDescription} |
+| Event Type    | Prefix                      |
+| ------------- | --------------------------- |
+| Sub-microflow | SUB_{Microflow description} |
 
 #### Unit Test Microflows
 
 Microflows containing unit tests should have the prefix **TEST_** or **UT_** (case-insensitive). For more information about the Unit Testing module, see [Unit Testing](/appstore/modules/unit-testing/).
 
-| Event Type      | Prefix               |
-|-----------------|----------------------|
-| Unit Test       | TEST\_ or UT_ |
+| Event Type | Prefix       |
+| ---------- | ------------ |
+| Unit Test  | TEST_or UT_ |
 
 #### Integration Microflows
 
 For integrations, you have the following types of microflow:
 
-| Event Type                                | Prefix |
-|-------------------------------------------|--------|
-| Consumed web service operation microflow  | CWS\_  |
-| Published web service operation microflow | PWS\_  |
-| Published REST service operation microflow | PRS\_  |
-| Published OData service operation microflow | POS\_  |
+| Event Type                                  | Prefix |
+| ------------------------------------------- | ------ |
+| Consumed web service operation microflow    | CWS_   |
+| Published web service operation microflow   | PWS_   |
+| Published REST service operation microflow  | PRS_   |
+| Published OData service operation microflow | POS_   |
 
 You can also use the [Find Advanced](/refguide/find-and-find-advanced/#find-advanced) option in Studio Pro to search for microflows by service type.
+
+### Workflows
+
+Guidelines below can help you choose a short yet meaningful name for your workflow:
+
+* The name matches the context entity name
+* The name consists of a noun + verb (for example, *EmployeeOnboarding*)
+* The name reflects what the process is about, what the goal of the process is
 
 ### Other Document Types
 
@@ -241,23 +249,23 @@ You can also use the [Find Advanced](/refguide/find-and-find-advanced/#find-adva
 
 [Layouts](/refguide/layout/) and [snippets](/refguide/snippet/) should be identified with prefixes.
 
-| Document Type                             | Prefix    |
-|-------------------------------------------|-----------|
-| Layout for responsive (web)               | Responsive\_  |
-| Layout for tablet (web)                   | Tablet\_  |
-| Layout for phone (web)                    | Phone\_  |
-| Layout for native phone                   | NativePhone\_  |
-| Layout for popup                          | Popup\_  |
-| Layout Atlas specific                     | Atlas\_  |
-| Snippet                                   | SNIP\_ |
+| Document Type               | Prefix       |
+| --------------------------- | ------------ |
+| Layout for responsive (web) | Responsive_  |
+| Layout for tablet (web)     | Tablet_      |
+| Layout for phone (web)      | Phone_       |
+| Layout for native phone     | NativePhone_ |
+| Layout for popup            | Popup_       |
+| Layout Atlas specific       | Atlas_       |
+| Snippet                     | SNIP_        |
 
 #### Enumerations
 
 [Enumerations](/refguide/enumerations/) should be identified with a prefix.
 
-| Document Type                             | Prefix    |
-|-------------------------------------------|-----------|
-| Enumeration                               | ENUM\_ |
+| Document Type | Prefix |
+| ------------- |------- |
+| Enumeration   | ENUM_  |
 
 #### Pages
 
@@ -273,29 +281,29 @@ Pages that are used as a tooltip page should have the suffix **_Tooltip**.
 
 Pages that are called when a [user task](/refguide/user-task/) in a workflow is executed, have suffix **_Workflow**. There is one task page per user task. These pages always have a WorkflowUserTask data view and are specific to performing workflow tasks. 
 
-| Page Purpose                             | Suffix |
-|-------------------------------------------|--------|
-| List objects of a single entity type  | \_Overview |
-| Create an object | \_New |
-| Update an object | \_Edit |
-| Create *or* Update an object | \_NewEdit |
-| View an object (read-only) | \_View |
-| Select a single object | \_Select |
-| Select multiple objects | \_MultiSelect |
-| Tooltip | \_Tooltip |
-| Interact with a user task | _Workflow |
+| Page Purpose                         | Suffix       |
+| ------------------------------------ | ------------ |
+| List objects of a single entity type | _Overview    |
+| Create an object                     | _New         |
+| Update an object                     | _Edit        |
+| Create or update an object         | _NewEdit     |
+| View an object (read-only)           | _View        |
+| Select a single object               | _Select      |
+| Select multiple objects              | _MultiSelect |
+| Tooltip                              | _Tooltip     |
+| Interact with a user task            | _Workflow    |
 
 #### Integration Documents
 
 Documents used to support integration should have the prefixes listed below.
 
-| Document Type                             | Prefix |
-|-------------------------------------------|--------|
-| Import mapping                            | IMM\_  |
-| Export mapping                            | EXM\_  |
-| XML schema definition                     | XSD\_  |
-| JSON structure                            | JSON\_ |
-| Deeplink                                  | DL\_   |
+| Document Type         | Prefix |
+| --------------------- | ------ |
+| Import mapping        | IMM_   |
+| Export mapping        | EXM_   |
+| XML schema definition | XSD_   |
+| JSON structure        | JSON_  |
+| Deeplink              | DL_    |
 
 {{% alert color="warning" %}}
 The [Deep Link](/appstore/modules/deep-link/) module is deprecated from Studio Pro 10.6.0. It is replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url). For instructions on migrating to page and microflow URLs, see the [Migrating to Page and Microflow URLs](/appstore/modules/deep-link/#migrate-page-micro) section in *Deep Link*.
@@ -307,14 +315,14 @@ We will continue to actively support this module for Mendix 9.
 
 You can define the [home pages](/refguide/show-home-page/) per device and role in your navigation. The recommended page names are listed below:
 
-| Event Type           | Device  | Page Name                   |
-|----------------------|---------|-----------------------------|
-| Default home page    | Desktop | Home_Desktop\_Default      |
-| Default home page    | Tablet  | Home_Tablet\_Default       |
-| Default home page    | Mobile  | Home_Phone\_Default        |
-| Role based home page | Desktop | Home_Desktop\_{Userrole} |
-| Role based home page | Tablet  | Home_Tablet\_{Userrole}  |
-| Role based home page | Mobile  | Home_Phone\_{Userrole}   |
+| Event Type           | Device  | Page Name                |
+| -------------------- | ------- | ------------------------ |
+| Default home page    | Desktop | Home_Desktop_Default     |
+| Default home page    | Tablet  | Home_Tablet_Default      |
+| Default home page    | Mobile  | Home_Phone_Default       |
+| Role based home page | Desktop | Home_Desktop_{User role} |
+| Role based home page | Tablet  | Home_Tablet_{User role}  |
+| Role based home page | Mobile  | Home_Phone_{User role}   |
 
 ## General Guidelines and Best Practices
 
@@ -362,13 +370,13 @@ If you decide to color code the different activities in your app, be sure to ali
 
 #### Complexity
 
-Nested `IF` statements in a single microflow expression are not recommended. If multiple checks depend on one another, this should be represented by multiple decisions in the microflow, so that the complexity is not hidden away in the expressions. You can use `AND` and `OR` operators to produce complex expressions if necessary. 
+Nested `if` statements in a single microflow expression are not recommended. If multiple checks depend on one another, this should be represented by multiple decisions in the microflow, so that the complexity is not hidden away in the expressions. You can use `and` and `or` operators to produce complex expressions if necessary. 
 
 The example below shows a low-code approach that Mendix recommends, because it presents a clear picture of what is happening in the microflow:
 
 {{< figure src="/attachments/refguide/modeling/dev-best-practices/recommended-microflow.png" width="700px" class="no-border" >}}
 
-The example below shows an approach that we do not recommend. You can rewrite the microflow expression in this example as `if ($currentDeviceType = System.DeviceType.Phone and $Parameter = true) then true else false` using the `AND` operator. However, it is still not clear enough and the low-code approach shown in the above example is preferable.
+The example below shows an approach that we do not recommend. You can rewrite the microflow expression in this example as `if ($currentDeviceType = System.DeviceType.Phone and $Parameter = true) then true else false` using the `and` operator. However, it is still not clear enough and the low-code approach shown in the above example is preferable.
 
 {{< figure src="/attachments/refguide/modeling/dev-best-practices/not-recommended-microflow.png" width="450px" class="no-border" >}}
 
@@ -407,14 +415,6 @@ Microflows should incorporate mechanisms to detect unexpected values and respond
 As the application evolves, the validation logic within microflows should be updated accordingly to reflect changes in business logic or data models. This regular review and update of validation checks ensures that microflows remain secure and function correctly over time.
 
 By prioritizing the validation of inputs in microflows, you not only enhance the security of your application, but also ensure a more predictable and stable user experience. This practice underscores the development of reliable and robust applications.
-
-### Workflows
-
-Guidelines below can help you choose a short yet meaningful name for your workflow:
-
-* The name matches the context entity name
-* The name consists of a noun + verb (for example, *EmployeeOnboarding*)
-* The name reflects what the process is about, what the goal of the process is
 
 ### Warnings 
 

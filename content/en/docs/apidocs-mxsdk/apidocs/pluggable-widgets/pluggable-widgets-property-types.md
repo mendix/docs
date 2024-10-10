@@ -475,6 +475,10 @@ Then the Studio Pro UI for the property appears like this:
 
 ### Action {#action}
 
+{{% alert color="info" %}}
+The `defaultType` and `defaultValue` attributes for Action were introduced in Mendix [10.15](/releasenotes/studio-pro/10.15/).
+{{% /alert %}}
+
 The action property type allows a user to configure an action which can do things like call nanoflows, save changes, and open pages.
 
 If a `dataSource` attribute is not specified, the client will receive an `ActionValue` representing the action or `undefined` if the **Do nothing** action was selected.
@@ -483,11 +487,13 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 
 #### XML Attributes
 
-| Attribute    | Required | Attribute Type | Description                                                                             |
-|--------------|----------|----------------|-----------------------------------------------------------------------------------------|
-| `type`       | Yes      | String         | Must be `action`                                                                        |
-| `key`        | Yes      | String         | See [key](#key)                                                                         |
-| `dataSource` | No       | Property Path  | Specifies path to a [`datasource`](#datasource) property linked to this action property |
+| Attribute      | Required | Attribute Type | Description                                                                                             |
+|----------------|----------|----------------|---------------------------------------------------------------------------------------------------------|
+| `type`         | Yes      | String         | Must be `action`                                                                                        |
+| `key`          | Yes      | String         | See [key](#key)                                                                                         |
+| `dataSource`   | No       | Property Path  | Specifies path to a [`datasource`](#datasource) property linked to this action property                 |
+| `defaultValue` | No       | String         | Default value for the property, the format should be `<ModuleId>.<DocumentId>`                          |
+| `defaultType`  | No       | String         | Default type for the property, supported values are `None`, `OpenPage`, `CallNanoflow`, `CallMicroflow` |
 
 #### Studio Pro UI
 

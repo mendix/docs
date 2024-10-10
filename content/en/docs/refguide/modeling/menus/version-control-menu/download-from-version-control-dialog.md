@@ -21,7 +21,7 @@ You can also use the [Open App Dialog](/refguide/open-app-dialog/) to download a
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Depending on the [Clone type](/refguide/clone-type/) set for your app either a full or partial clone will be downloaded.
+From Mendix version 10.12.0, either a full or partial clone will be downloaded, depending on the [Clone type](/refguide/clone-type/) set for your app.
 {{% /alert %}}
 
 ## Where Is Your App Stored?

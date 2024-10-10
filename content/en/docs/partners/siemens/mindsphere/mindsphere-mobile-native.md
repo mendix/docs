@@ -90,7 +90,7 @@ You now have successfully registered your application within the Developer Cockp
 {{% alert color="info" %}}
 The [Insights Hub Mobile Starter Application](https://marketplace.mendix.com/link/component/118164) can be used to build applications for both native mobile apps and 'normal' web applications.
 
-Currently you can register either a mobile app or a web app in the Insights Hub Developer Cockpit but not both together. If you need access in a web browser, please push your application to the Mendix cloud and set up another registration via the Auto Registration for your web application as described in [Setting up Insights Hub Launchpad](/developerportal/deploy/deploying-to-mindsphere/#launchpad). This app can then be added to the Insights Hub Launchpad. Please note, pushing a Mendix Mobile Native application to the Insights Hub Cloud Foundry is currently not supported, as the Native applications needing an unprotected endpoint to any time.
+Currently you can register either a mobile app or a web app in the Insights Hub Developer Cockpit but not both together. If you need access in a web browser, please push your application to Mendix Cloud and set up another registration via the Auto Registration for your web application as described in [Setting up Insights Hub Launchpad](/developerportal/deploy/deploying-to-mindsphere/#launchpad). This app can then be added to the Insights Hub Launchpad. Please note, pushing a Mendix Mobile Native application to the Insights Hub Cloud Foundry is currently not supported, as the Native applications needing an unprotected endpoint to any time.
 {{% /alert %}}
 
 ### Start Developing your App with Mendix Studio Pro

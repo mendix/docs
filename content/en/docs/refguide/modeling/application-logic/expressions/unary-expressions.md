@@ -16,7 +16,7 @@ There is no unary plus.
 
 ## Example
 
-The example below represents the negative value of '8'.
+The example below represents the negative value of `8`.
 
 ```java
 -8
@@ -24,7 +24,7 @@ The example below represents the negative value of '8'.
 
 When used with a variable that already has a negative value the result is positive.
 
-For example, if $myVariable has the integer value "-7": 
+For example, if `$myVariable` has the integer value `-7`: 
 
 ```java
 -$myVariable

@@ -36,8 +36,8 @@ If deploying to Red Hat OpenShift, you need to specify that specifically when cr
 
 Mendix for Private Cloud Operator `v2.*.*` is the latest version which officially supports:
 
-* Kubernetes versions 1.19 through 1.30
-* OpenShift 4.6 through 4.15
+* Kubernetes versions 1.19 through 1.31
+* OpenShift 4.6 through 4.16
 
 {{% alert color="warning" %}}
 Kubernetes 1.22 is a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
@@ -192,11 +192,12 @@ The following standard PostgreSQL databases are supported:
 * PostgreSQL 13
 * PostgreSQL 14
 * PostgreSQL 15
+* PostgreSQL 16
 
 {{% alert color="info" %}}
 While Mendix for Private Cloud supports all Postgres versions listed above, the Mendix Runtime might require a more specific Postgres version.
 
-For best compatibility, use Postgres 13. 
+For best compatibility, use Postgres 13, as Postgres 12 is soon going to be deprecated for use in Mendix Applications.
 {{% /alert %}}
 
 A standard PostgreSQL database is an unmodified PostgreSQL database installed from a Helm chart or from an installation package.
@@ -249,6 +250,7 @@ This refers to a SQL Server database which is automatically provisioned by the O
 The following Microsoft SQL Server editions are supported:
 
 * SQL Server 2019
+* SQL Server 2022
 
 The following managed Microsoft SQL Server databases are supported:
 
@@ -264,7 +266,7 @@ As an alternative to static password authentication, Mendix Operator can use its
 {{% alert color="info" %}}
 To use a SQL Server database, the Mendix Operator requires Superuser account with permissions to create new users and databases.
 
-For every Mendix app environment, a new database, user and login will be created so that the app can only access its own data.
+For every Mendix app environment, a new database, user, and login will be created so that the app can only access its own data.
 {{% /alert %}}
 
 {{% alert color="info" %}}

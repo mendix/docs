@@ -11,7 +11,7 @@ Publishing developers can register services in the Catalog in different ways dep
 
 Common tasks for registering data sources include the following:
 
-* [Registering services automatically on the Mendix Cloud](/catalog/register/register-data/#mendix-cloud)
+* [Registering services automatically on Mendix Cloud](/catalog/register/register-data/#mendix-cloud)
 * [Registering data sources on-premises or on a Private Cloud](/catalog/register/data-sources-without-mendix-cloud/)
 * [Automating registration in a pipeline on a Private Cloud](/catalog/automate-registration/)
 * Manually uploading a metadata contract with the [Catalog UI form](/catalog/register/register-data/#registration-form)

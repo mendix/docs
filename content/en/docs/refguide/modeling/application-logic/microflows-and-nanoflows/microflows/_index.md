@@ -101,63 +101,7 @@ In the example below, the parameter **AccountPasswordData** is highlighted becau
 
 ## Keyboard Support {#keyboard}
 
-### Studio Pro 10.6 and Above {#keyboard-improved}
-
-The tables in the following sub-sections present the shortcut keys that can be used for navigating and manipulating microflows in the microflow editor in Studio Pro 10.6 and above.
-
-#### Selection
-
-| Key | Effect |
-| --- | --- |
-| Arrow Keys | Select nearby element (activity, event, loop or parameter) in the direction of the arrow. |
-| <kbd>Home</kbd> | Select the start event. |
-| <kbd>End</kbd> | Select the first end event. |
-| <kbd>Ctrl</kbd> + <kbd>A</kbd> | Select all elements. |
-| <kbd>Ctrl</kbd> (in Studio Pro 10.12 and above) | When pressing <kbd>Ctrl</kbd>, you can select additional elements. Clicking a selected element or selecting it with a selection rectangle while holding <kbd>Ctrl</kbd> will deselect it. |
-| <kbd>Tab</kbd> | If a loop is selected, the first element inside the loop will be selected. |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | If an element inside a loop is selected, the loop itself will be selected. |
-
-#### Navigation
-
-| Key | Effect |
-| --- | --- |
-| mouse scroll | Scroll up/down. |
-| <kbd>Shift</kbd> + mouse scroll | Scroll left/right. |
-| <kbd>Space</kbd> + mouse button | Drag screen.  |
-| <kbd>Ctrl</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | Zoom in/out.  |
-| <kbd>Ctrl</kbd> + <kbd>0</kbd> | Reset zoom level to 100%. |
-| <kbd>Ctrl</kbd> + mouse scroll | Zoom in/out. |
-
-#### Element Manipulation
-
-| Key | Effect |
-| --- | --- |
-| <kbd>Enter</kbd> - on an element | If an element is selected, edit its properties. |
-| <kbd>Enter</kbd> - on a flow arrow | If a flow arrow is selected, open the Logic Recommender dialog box. |
-| <kbd>Enter</kbd> - on a Logic Recommender suggestion list item | The selected item is added on the flow arrow. The Logic Recommender dialog box is shown again for the next action to be added. |
-| <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + mouse click) - on a Logic Recommender suggestion list item| The selected item is added on the flow arrow. The element’s property dialog box is opened. |
-| <kbd>F2</kbd> | Rename the variable returned by the selected element. |
-| <kbd>Shift</kbd> + <kbd>F2</kbd> | Edit the caption of the selected element. |
-| Context-menu key | Open the context-menu for the currently selected element. |
-
-### Studio Pro 10.5 and Below
-
-The following table shows the shortcut keys that can be used in the microflow editor in Studio Pro 10.5 and below.
-
-| Key | Effect |
-| --- | --- |
-| Arrow keys | Move the selection box to the activity or element in the direction of the arrow key. For example, if currently a show page activity is selected and you press the right arrow key, the activity to the right of it becomes selected. |
-| <kbd>Enter</kbd> | Edit the properties of the selected element. |
-| <kbd>F2</kbd> | Edit the name of the return value of the selected activity. This shortcut only functions on activities that return a result. |
-| <kbd>Shift</kbd> + <kbd>F2</kbd> or just start typing | Edit the caption of the selected element. |
-| <kbd>Ctrl</kbd> + arrow keys | Move the selected element in the direction of the arrow. |
-| <kbd>Tab</kbd> | If a loop is selected, the first element inside the loop will be selected. |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | If an element inside a loop is selected, the loop itself will be selected. |
-| <kbd>Home</kbd> | Select the start event. |
-| <kbd>End</kbd> | Cycle through the end events. |
-| <kbd>Shift</kbd> | By holding <kbd>Shift</kbd> when resizing an activity, it will stay centered at its current position and expand equally in all directions. |
-| <kbd>Ctrl</kbd> | When pressing the <kbd>Ctrl</kbd>, you can select additional elements. Clicking a selected element while holding <kbd>Ctrl</kbd> will deselect it. |
-| Context-menu key or <kbd>Shift</kbd> + <kbd>F10</kbd> | Open the context-menu for the currently selected element. |
+For an overview of the shortcut keys that are supported in the microflow editor, see the [Microflow, Nanoflow, and Rule Editor Shortcut Keys](/refguide/keyboard-shortcuts/#logic-editor-keyboard-support) section in *Keyboard Shortcuts*.
 
 ## Microflow Debugging
 

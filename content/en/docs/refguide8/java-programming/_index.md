@@ -51,7 +51,7 @@ For details on usage and example, see [How to Use the Java API](/howto8/logic-bu
 
 ## Opening HTTP Connections
 
-Most cloud infrastructure services (including those used by the Mendix Cloud) will close HTTP connections automatically if there is no traffic for a few minutes, even if your activity is still waiting for a response. This means that, if your activity calls a web service which takes a long time to respond, the connection may be closed without the activity being aware of this and your activity will not receive a response, but instead get stuck waiting indefinitely for data to arrive.
+Most cloud infrastructure services (including those used by Mendix Cloud) will close HTTP connections automatically if there is no traffic for a few minutes, even if your activity is still waiting for a response. This means that, if your activity calls a web service which takes a long time to respond, the connection may be closed without the activity being aware of this and your activity will not receive a response, but instead get stuck waiting indefinitely for data to arrive.
 
 You should therefore ensure that you always set a timeout for any connections you make in your custom Java code.
 

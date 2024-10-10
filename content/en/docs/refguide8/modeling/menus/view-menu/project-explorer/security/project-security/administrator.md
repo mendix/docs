@@ -57,7 +57,7 @@ This role may be helpful in case you have exceeded your user license restriction
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-When your app is not deployed locally, for example to the Mendix Cloud, changes to the user role of the administrator account will not be applied until the administrator password is changed. See the [actions](/developerportal/deploy/environments-details/#actions) section of *Environment Detail* for instructions on changing the admin password.
+When your app is not deployed locally, for example to Mendix Cloud, changes to the user role of the administrator account will not be applied until the administrator password is changed. See the [actions](/developerportal/deploy/environments-details/#actions) section of *Environment Detail* for instructions on changing the admin password.
 {{% /alert %}}
 
 ## Read More

@@ -206,7 +206,7 @@ At the moment, the `baseOSImageTagTemplate` can be set to one of the following v
 
 Future Studio Pro releases will have an option to use alternative (newer) LTS versions of Java, such as Java 17 or Java 21.
 
-If an app's MDA was built using a newer Java version, Mendix Operator 2.15.0 (and newer versions) will detect this and use a base image with the same major Java version that was used to build the MDA.
+If an app's MDA was built using a newer Java version, Mendix Operator 2.15.0 (and newer versions) will detect this and use a base image with the same major Java version that was used to build the MDA. Because of that, Java 17 or Java 21-based applications should use the Operator in version 2.15.0 or above.
 
 {{% /alert %}}
 
@@ -593,7 +593,7 @@ startupProbe:
 In this example, the application will have a maximum of 5 minutes (30 * 10 = 300s) to finish its startup. Once the startup probe has succeeded once, the liveness probe takes over to provide a fast response to container deadlocks. If the startup probe never succeeds, the container is killed after 300s and subject to the pod's [restartPolicy](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy).
 
 {{% alert color="info" %}}
-If you misconfigure a startup probe, for example you don't allow enough time for the startup probe to succeed, the kubelet might restart the container prematurely. causing your container to continually restart.
+If you misconfigure a startup probe, for example you don't allow enough time for the startup probe to succeed, the kubelet might restart the container prematurely, causing your container to continually restart.
 
 Startup probes are available in the Mendix for Private Cloud Operator version 2.6.0 and above.
 {{% /alert %}}
@@ -841,6 +841,50 @@ You can set `runtimeLogFormatType` to one of the following values:
 In the `json` format, newline characters will be sent as `\n` (as specified in the [JSON spec](https://www.json.org/json-en.html)). You might need to configure your log viewer tool to display `\n` as line breaks.
 For example, to correctly display newline characters in Grafana, use the [Escape newlines](https://github.com/grafana/grafana/pull/31352) button.
 {{% /alert %}}
+
+### Log levels {#log-levels}
+
+Mendix Operator version 2.19.0 and above allows you to configure the log levels for your Operator pods. 
+
+Following log levels can be configured:
+
+* `L0` : Fatal Log Level
+
+* `L1` : Error Log Level
+
+* `L2` : Warn Log Level
+
+* `L3` : Info Log Level
+
+* `L4` : Debug Log Level
+
+* `L5` : Trace Log Level
+
+The log level can be set in the mendix-operator deployment yaml:
+
+```yaml
+kind: Deployment
+apiVersion: apps/v1
+spec:
+  # ...
+  # Other configuration options values
+  # Optional: custom pod labels
+    spec:
+      containers:
+        - resources:
+          # ...
+          # Other configuration options values
+          name: mendix-operator
+          command:
+            - mendix-operator
+          env:
+            # ...
+            # Other configuration options values
+            - name: LOG_LEVEL
+              value: L1
+```
+
+By default, the log level value is set to L1 level for operator pods.
 
 ### Pod labels {#pod-labels}
 

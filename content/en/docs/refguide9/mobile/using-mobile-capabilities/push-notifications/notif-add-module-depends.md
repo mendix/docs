@@ -55,7 +55,7 @@ Skip this section if the [Native Mobile Resources](https://marketplace.mendix.co
 
 ## Implementing the Atlas Core Module
 
-Implement the Atlas Core module for apps in Mendix Studio Pro 9.0 and above. Skip this section if the [Atlas Core](https://marketplace.mendix.com/link/component/117187/Mendix/Atlas-Core) module is already implemented in your app. Implement this module by doing the following:
+Implement the Atlas Core module for apps in Mendix Studio Pro 9.24 and above. Skip this section if the [Atlas Core](https://marketplace.mendix.com/link/component/117187/Mendix/Atlas-Core) module is already implemented in your app. Implement this module by doing the following:
 
 1. Open up the Marketplace from Studio Pro.
 1. Search for *Atlas Core*.
@@ -65,7 +65,7 @@ Implement the Atlas Core module for apps in Mendix Studio Pro 9.0 and above. Ski
 
 ## Implementing the Data Widgets Module
 
-Implement the Data Widgets module for apps in Mendix Studio Pro 9.0 and above. Skip this section if the [Data Widgets](https://marketplace.mendix.com/link/component/116540/Mendix/Data-Widgets) module is already implemented in your app. Implement this module by doing the following:
+Implement the Data Widgets module for apps in Mendix Studio Pro 9.24 and above. Skip this section if the [Data Widgets](https://marketplace.mendix.com/link/component/116540/Mendix/Data-Widgets) module is already implemented in your app. Implement this module by doing the following:
 
 1. Open up the Marketplace from Studio Pro.
 1. Search for *Data Widgets*.
@@ -75,7 +75,7 @@ Implement the Data Widgets module for apps in Mendix Studio Pro 9.0 and above. S
 
 ## Implementing the Pop-Up Menu Widget
 
-Implement the Pop-Up Menu widget for apps in Mendix Studio Pro 9.0 and above. Skip this section if the [Pop-Up Menu](https://marketplace.mendix.com/link/component/115826/Mendix/Pop-Up-Menu) widget is already implemented in your app. Implement this widget by doing the following:
+Implement the Pop-Up Menu widget for apps in Mendix Studio Pro 9.24 and above. Skip this section if the [Pop-Up Menu](https://marketplace.mendix.com/link/component/115826/Mendix/Pop-Up-Menu) widget is already implemented in your app. Implement this widget by doing the following:
 
 1. Open up the Marketplace from Studio Pro.
 1. Search for *Pop-Up Menu*.
@@ -84,3 +84,13 @@ Implement the Pop-Up Menu widget for apps in Mendix Studio Pro 9.0 and above. Sk
 1. No further installation is required. If you want to know more about the widget visit the [Pop-Up Menu marketplace guide](/appstore/widgets/popup-menu/).
 
 Now that you have installed the dependencies you need, you can move on to the next section.
+
+## Implementing the Combo Box Widget
+
+Implement the combo box widget for apps in Mendix Studio Pro 9.24 and above. Skip this section if the [Combo Box](https://marketplace.mendix.com/link/component/219304/Mendix/ComboBox) widget is already implemented in your app. Implement this widget by doing the following:
+
+1. Open up the Marketplace from Studio Pro.
+1. Search for *Combo Box*.
+1. Open the [Combo Box](https://marketplace.mendix.com/link/component/219304/Mendix/ComboBox) widget.
+1. Click **Download**.
+1. No further installation is required. If you want to know more about the widget visit the [Combo Box marketplace guide](/appstore/widgets/combobox/).

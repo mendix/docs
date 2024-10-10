@@ -3,7 +3,7 @@ title: "Software Composition"
 linktitle: "Software Composition"
 url: /developerportal/deploy/software-composition/
 description: "Describes the Software Composition page in Apps."
-weight: 3
+weight: 80
 beta: true
 ---
 
@@ -29,7 +29,7 @@ After the creation of a deployment package, it may take up to a day for the **So
 
 To be able to see the software composition information, make sure that you meet the following prerequisites:
 
-* Software Bill of Materials (SBOM) generation and the associated Software Composition capabilities are compatible with the following versions of Studio Pro: 9.24.26 and above, 10.6.12 and above, 10.12.3 and above, and 10.14.0 and above. 
+* Software Bill of Materials (SBOM) generation and the associated Software Composition capabilities are compatible with the following versions of Studio Pro: 9.24.26 and above, 10.6.12 and above, 10.12.3 and above.
 
     {{% alert color="warning" %}}Make sure you upgrade to a compatible Studio Pro version to continue to use Software Composition. Previously supported Studio Pro versions (9.24.22 to 9.24.25, 10.6.9 to 10.6.11, 10.10.0 to 10.12.2, and 10.13) will no longer result in SBOM generation and visibility in Software Composition. Any historical data within Software Composition remains accessible regardless of the upgrade.{{% /alert %}}
 

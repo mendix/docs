@@ -30,7 +30,7 @@ This how-to teaches you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have a Mendix app with mobile support running in the Mendix Cloud, either as a Free App or on a licensed cloud node
+* Have a Mendix app with mobile support running in Mendix Cloud, either as a Free App or on a licensed cloud node
 * Have an account for Adobe PhoneGap Build (you can create one for free [here](https://helpx.adobe.com/experience-manager/kb/adobe-phonegap-end-of-service.html))
 
 To publish your app in the Apple App Store, do the following:

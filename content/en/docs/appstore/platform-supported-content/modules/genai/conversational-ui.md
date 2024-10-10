@@ -91,10 +91,10 @@ A set of reusable pages, layouts and snippets is included in this module to allo
 You can include the following pages in your navigation, or copy them to your module and modify them to suit your use case:
 
 * **ConversationalUI_FullScreenChat** - This page displays a centered chat interface on a full screen responsive page. 
-* **ConversationalUI_PopUp** - This is a floating pop-up in the bottom-right corner. To open it, users can click the **Snippet_FloatingChatButton** that floats in the bottom-right corner. Alternatively, you can use the building block **Floating Button OpenChat** from the toolbox to create your custom opening logic.
 * **ConversationalUI_Sidebar** - This page displays the chat interface on the right side with the full height.
+* **ConversationalUI_PopUp** - This is a floating pop-up in the bottom-right corner. To open it, users can click the **Snippet_FloatingChatButton** that floats in the bottom-right corner. Alternatively, you can use the building block **Floating Button OpenChat** from the toolbox to create your custom opening logic.
 
-All pages expect a [ChatContext](#chat-context) that needs to have an active [ProviderConfig](#provider-config). The user can chat with the LLM on all pages, but not configure any additional settings, such as the model or system prompt. This needs to happen before the page was opened, for example, or in the [action microflow](#action-microflow) that is stored in the active [ProviderConfig](#provider-config).
+All pages expect a [ChatContext](#chat-context) that needs to have an active [ProviderConfig](#provider-config). The user can chat with the LLM on all these pages, but not configure any additional settings, such as the model or system prompt. There are many ways to enable this: on a custom page before the chat was opened, on a custom version of page chat page itself, or in the [action microflow](#action-microflow) that is stored in the active [ProviderConfig](#provider-config).
 
 #### Snippets {#snippets}
 
@@ -132,7 +132,9 @@ See the [AI Bot Starter App](https://marketplace.mendix.com/link/component/22792
 
 ### Provide the ChatContext {#chat-context}
 
-The `ChatContext` is the central entity in the aforementioned pages and it functions as the input for the action microflow that is executed when the user clicks the send button. It can only be viewed by the owner (see [Module Roles](#module-roles) for exceptions). The object needs to be created for every new chat interaction and comprises the `messages` that are sent to and received from the model. A `ProviderConfig` should be associated via `ChatContext_ProviderConfig_Active` in order to execute the correct [action microflow](#action-microflow).
+The `ChatContext` is the central entity in the aforementioned pages and snippets and it functions as the input for the action microflow that is executed when the user clicks the send button. It can only be viewed by the owner (see [Module Roles](#module-roles) for exceptions). The object needs to be created for every new chat interaction and comprises the `messages` that are sent to and received from the model. A `ProviderConfig` should be associated via `ChatContext_ProviderConfig_Active` in order to execute the correct [action microflow](#action-microflow).
+
+Please see the **USE_ME** > **Pages** folder for examples on how to do this in an ACT microflow that opens the chat page. 
 
 If you need additional attributes or associations on the `ChatContext`, use an extension entity that refers to the object which can then be retrieved and altered when needed (for example in the action microflow). The [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) shows an example of this approach.
 
@@ -150,14 +152,14 @@ It is possible to add suggested user prompts to a `ChatContext`. They appear as 
 
 ### Associate the ProviderConfig {#provider-config}
 
-The `ProviderConfig` contains the selection of the model provider for the AI Bot to chat with. This contains an action microflow that is executed when the **Send** button is clicked for a `ChatContext` that has the `ProviderConfig` associated. During creation of the `ChatContext` the `ProviderConfig` (specialization) can be added directly using the aforementioned [operations](#chat-context-operations). 
+The `ProviderConfig` contains the selection of the model provider for the AI Bot to chat with. It also refers to an action microflow that is executed when the **Send** button is clicked for a `ChatContext` that has the `ProviderConfig` associated. During creation of the `ChatContext` the `ProviderConfig` (specialization) can be added directly using the aforementioned [operations](#chat-context-operations). 
 
 If the `ChatContext` however already exists and a new `ProviderConfig` needs to be added, use the **New Config for Chat** toolbox action. The `ProviderConfig` can optionally also be set to active if `IsActive` is set to true. Additionally, the action microflow of the new `ProviderConfig` is set. **ChatContext_AddProviderConfig_SetActive** is the counterpart of this flow when both the `ChatContext` and the `ProviderConfig` exist already. 
 You can store additional information, such as connection details, on the `ProviderConfig` by using a specialization and adding the necessary fields. For an example implementation, see the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926).
 
 ### Define and set the Action Microflow {#action-microflow}
 
-The `Action Microflow` is executed by clicking the **Send** button. It handles the interaction between the LLM connectors and the Conversational UI entities. The **USE_ME** folder included in the Conversational UI module contains example action microflows for both [OpenAI](/appstore/modules/genai/openai/) and [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). You can copy these microflows and modify them for your use cases, or use them directly for test purposes.
+The `Action Microflow` that is stored on a `ProviderConfig` is executed when the user clicks the **Send** button. This microflow handles the interaction between the LLM connectors and the Conversational UI entities. The **USE_ME** folder included in the Conversational UI module contains example action microflows for both [OpenAI](/appstore/modules/genai/openai/) and [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). You can copy these microflows and modify them for your use cases, or use them directly for test purposes.
 
 Add the action microflow to an existing `ProviderConfig` by using the **Set Chat Action** toolbox action. Note that this action does not commit the object, so you must also add a step to commit it after.
 

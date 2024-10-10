@@ -132,6 +132,12 @@ If you click **Cloud Settings** ({{< icon name="settings-slider-1" >}}) from any
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/manage-cloud-settings.png" alt="" >}}
 
+## Environment Settings
+
+If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can use **Environment Settings** to choose the default target for the deployment package. If you do not select a target, the .mda packages is built and uploaded without being deployed.
+
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/manage-env-settings.png" alt="" >}}
+
 ### Custom Domains
 
 In the **Custom Domains** tab, you can manage your custom domain certificates at the application level. You can also see an overview of linked custom domains.
@@ -162,42 +168,29 @@ Once a service has been enabled for an app, Technical Contacts can selectively e
 
 ## Deploy Wizard{#deploy-wizard}
 
-If you click **Deploy** ({{< icon name="deploy" >}}) from the **Overview** tab or the **Deployment Packages** tab, this launches the Deploy wizard. 
+If you click **Deploy** ({{< icon name="deploy" >}}) from the **Overview** tab or the **Deployment Packages** tab, this launches the Deploy wizard. Follow the wizard by performing the following steps:
 
-### Step 1: Select Package
+1. In the **Select Package** tab, select a package from repository, and then click **Next**
+2. In the **Configure Environment** tab, review the live (post-deployment) constant values, and adjust them as required.
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/1-select-package.png" alt="" >}}
+    {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/2-configure-environment.png" alt="" >}}
 
-### Step 2: Configure Environment
+3. In the **Backup** tab, choose if you want to back up your app before deploying the new package. The app is unavailable while the backup runs.
+4. In the **Deploy** tab, review the deployment settings:
+    1. To see an overview of the configuration for this deployment, click **View Summary**. This summary displays the selected package, selected backup option, and any changed constants or scheduled events.
+    
+        {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/deployment-summary.png" alt="" >}}
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/2-configure-environment.png" alt="" >}}
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/edit-configuration.png" alt="" >}}
-
-### Step 3: Backup
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/3-backup.png" alt="" >}}
-
-### Step 4: Deploy
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/4-deploy.png" alt="" >}}
-
-Click **View Summary** for an overview of the configuration for this deployment. This summary displays the selected package, selected backup option, and any changed constants or scheduled events. Review this summary before clicking **Deploy Now**.
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/deployment-summary.png" alt="" >}}
+    2. Review this summary, and then click **Deploy Now**.
 
 ## Create a Package Wizard{#create-package-wizard}
 
-If you click **Create a Package** from the [Deployment Packages tab](/deploy/environments/#deployment-packages-tab), this launches the **Create a Package** wizard.
+If you click **Create a Package** from the [Deployment Packages tab](/deploy/environments/#deployment-packages-tab), this launches the **Create a Package** wizard. Follow the wizard by performing the following steps:
 
-### Step 1: Select Branch
+1. In the **Select Package** tab, select the branch on which to base the build.
+2. In the **Select Revision** tab, select the branch revision.
+3. In the **Choose a Tag** tab, specify the version tag. This includes the major, minor, and patch version numbers.
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/1-select-branch.png" alt="" >}}
+    {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/3-choose-tag.png" alt="" >}}
 
-### Step 2: Select Revision
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/2-select-revision.png" alt="" >}}
-
-### Step 3: Choose a Tag
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/3-choose-tag.png" alt="" >}}
+4. Click **Build this Revision**.

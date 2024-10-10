@@ -7,7 +7,7 @@ description: "The app development team can utilize Mendix's user-friendly [Mini 
 
 ## Introduction
 
-The Mini Surveys feature is part of the Mendix App Insights collection of tools designed to help you collect and aggregate feedback from your customers. 
+Mini Surveys is a part of Mendix App Insights, a set of tools designed to help you gather and consolidate feedback from your customers.
 
 The Mini Surveys feature consists of two parts:
 
@@ -15,7 +15,7 @@ The Mini Surveys feature consists of two parts:
 
 * A back-end dashboard in the [navigation pane](/developerportal/#navigation-pane) of **Apps** for you to create surveys and aggregate your survey results.
 
-You begin by creating a mini survey from the **Mini Survey** page in the navigation pane of **Apps**, and then you implement the mini survey by configuring the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) module in Studio Pro. After the mini survey is running, you can view responses that have been collected in Mini Surveys in the Mendix Portal and export the responses to an XLSX file.
+You begin by creating a mini survey from the **Mini Survey** page in the navigation pane of **Apps**, and then you implement the mini survey by configuring the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) module in Studio Pro. After the mini survey has started, you can view responses that have been collected in Mini Surveys in the Mendix Portal and export the responses to an XLSX file.
 
 This document first describes all the pages in Mini Surveys in **Apps**, and then it describes the procedure for running a mini survey.
 
@@ -35,8 +35,9 @@ The tabs of the **Survey Overview** page are described below.
 
 The **Active** tab shows all the mini surveys that are active for the app with the following details:
 
-* **Survey ID** – This is the unique ID of the mini survey. You can also find this ID on the [survey details](#survey-details) page of the mini survey. You need to use the ID as input when you configure the Mendix Mini Surveys module in Studio Pro to implement the mini survey.
+* **ID** – This is the unique ID of the mini survey. You can also find this ID on the [survey details](#survey-details) page of the mini survey. You need to use the ID as input when you configure the Mendix Mini Surveys module in Studio Pro to implement the mini survey.
 * **Name** – This is the name of the mini survey.
+* **Location** - The Location is an identifier which refers to the location of where the survey will show.
 * **Responses** – This shows the number of responses that have been collected for the mini survey.
 * **Status** – This shows the status of the mini survey. For more information, see the [Statuses of Mini Surveys](#survey-status) section.
 * **Start & End Dates** – This shows the start and end dates of the mini survey.
@@ -50,12 +51,12 @@ A mini survey can have different statuses. You can check the status of a mini su
 
 Along its lifecycle, a mini survey can have the following statuses:
 
-* **Draft** – This status means the mini survey is not finalized. You can still edit the survey and when you finalize it, you need to mark it as ready. Once you mark a survey as ready, its status changes to **Ready to Implement**.
-* **Ready to Implement** – This status means the mini survey is finalized, but its start time is not reached yet. Once the start time is reached, its status changes to **Running**.
-* **Running** – This status means the mini survey is currently running. Once the survey passes its end time, its status changes to **Evaluate Responses.**
-* **Evaluate Responses** – This status means the mini survey has ended.
+* **Draft** – This status means the mini survey is not finalized. You can still edit the survey and when you finalize it, you need to schedule it. Once you schedule a survey, its status changes to **Scheduled**.
+* **Scheduled** – This status means the mini survey is finalized, but its start time is not reached yet. Once the start time is reached, its status changes to **Active**.
+* **Active** – This status indicates that the mini survey is currently running. After the survey reaches its end time, the status will change to **Finished.** Keep in mind that only one survey can be active at a time for each Survey Location.
+* **Finished** – This status means the mini survey has ended.
 
-{{% alert color="info" %}}When a mini survey has the status of **Draft**, you can still edit everything in the survey. When a mini survey has the status of **Ready to Implement**, **Running**, or **Evaluate Responses**, you can only edit the **Settings** section (for **Runtime** and **Toaster Placement**) in the survey.{{% /alert %}}
+{{% alert color="info" %}}When a mini survey has the status of **Draft**, you can still edit everything in the survey. When a mini survey has the status of **Scheduled**, **Active**, or **Finished**, you can only edit the **Settings** section (for **Runtime** and **Toaster Placement**) in the survey.{{% /alert %}}
 
 #### Archived Tab {#archived}
 
@@ -63,7 +64,7 @@ The **Archived** tab shows all the mini surveys that you are archived for the ap
 
 The list on this tab contains the following information:
 
-* **Survey ID** – This is the unique ID of the mini survey.
+* **ID** – This is the unique ID of the mini survey.
 * **Name** – This is the name of the mini survey.
 * **Responses** – This shows the number of responses that were collected for the mini survey.
 * **Start & End Dates** – This shows the start and end dates of the mini survey.
@@ -73,22 +74,11 @@ Clicking the mini survey in a row on the list shows its [survey details](#survey
 
 #### Settings Tab {#settings}
 
-On the **Settings** tab of **Survey Overview**, you can enable the test mode, and view or generate API keys.
-
-* **Test Mode - For All Users** – After you enable this test mode, all users will become the testers of your survey. They will see the survey every time it is triggered. Their responses will not be saved, and therefore will not pollute the true survey results. You can view their responses on the [Test data](#test-data) tab of the survey details page. 
-  
-    * To enable this test mode, open your app in Studio Pro. In the **App Explorer**, go to **Marketplace modules > AppInsights_MiniSurvey > _SETUP > 2. Set API Key & mode.**, and set the **TEST_MODE** constant to **True**.
-    
-* **Test Mode - For Project Members** – After you enable this test mode, all team members of the app will become the testers of your survey. They will see the survey every time it is triggered. Their responses will not be saved, and therefore will not pollute the true survey results. You can view their responses on the [Test data](#test-data) tab of the survey details page.
-
-    {{% alert color="info" %}}This test mode only works for app team members who are authenticated through Mendix SSO.{{% /alert %}} 
-
-    * To enable this test mode, select **Yes** for **Test Mode - For Project Members** here.
+On the **Settings** tab of **Survey Overview**, you can view or generate API keys.
 
 * **API Keys** – You can view API keys here, or generate an API key if there is none available. You need to use the API key as input when you configure the Mendix Mini Surveys module in Studio Pro to implement the mini survey. You need only one API key per app.
 
     * To generate an API key, click **Generate API Key** here.
-    * To view an existing API key, click the eye icon ({{% icon name="view-off" %}}) in the **View** column in the table.
 
 ### Survey Details {#survey-details}
 
@@ -101,35 +91,19 @@ On the upper-right corner, you can find the following buttons:
 * **Share Link** – Clicking **Share Link** copies the link to this page, which allows you to share the survey details with others.
 * **Archive Survey** – Clicking **Archive Survey** archives the survey. Once a survey is archived, you can find it on the [Archived](#archived) tab of the **Survey Overview** page.
 * **Export Responses** – Clicking **Export Responses** exports the responses that have been collected to an XLSX file.
+* **Delete Survey** - Clicking **Delete Survey** will delete the survey.
 
-Depending on the [status](#survey-status) of the mini survey, the survey details page may contain some or all of the following tabs: **Settings**, **Implementation**, **Responses**, and **Test data**.
+Depending on the [status](#survey-status) of the mini survey, the survey details page may contain some or all of the following tabs: **Settings**, and **Responses**.
 
 #### Settings Tab {#survey-details-settings}
 
 This tab is available for mini surveys with all the statuses. It gives an overview of the survey details, including **Survey ID**.
 
-#### Implementation Tab {#survey-details-implementation}
-
-This tab is available for mini surveys with the status of **Draft**, **Ready for Implement**, or **Running**.
-
-On this tab, you can find information about how to implement the mini survey in Studio Pro. For a more detailed procedure, see the [Implement a Mini Survey](#implement-survey) section.
-
 #### Responses Tab {#responses}
 
-This tab is available for mini surveys with the status of **Running** or **Evaluating Responses**. 
+This tab is available for mini surveys with the status of **Active** or **Finished**. 
 
 On this tab, you can view all the responses that have been collected for the mini survey.
-
-#### Test Data Tab {#test-data}
-
-This tab is available for mini surveys with the status of **Ready for Implement** or **Running**.
-
-This tab shows the test data that has been collected from testers in the test mode or Mendix SSO test users.
-
-You can collect test data using two methods:
-
-* Change the value of the **TEST_MODE** constant in the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) module. This will show **[TEST_MODE]** on the survey widget UI.
-* Select the **Enable Mendix SSO test users"** checkbox on the **Settings** tab of **Survey Overview**, which marks the app team members as testers. Note that if an app team member is not authenticated through Mendix SSO, this setting does not work for them. The survey widget will not show **[TEST_MODE]** on the UI.
 
 ## Running a Mini Survey
 
@@ -142,25 +116,25 @@ To create a mini survey, follow these steps:
    * If there are existing mini surveys for the app, [Survey Overview](#survey-overview) opens, which lists all the existing mini surveys and shows the **Create New Survey** button
    * If there are no existing mini surveys for this app, you only see the **Create New Survey** button
 
-2. Click **Create New Survey**.
+2. Click **Create New Survey** to open the survey wizard.
 3. Enter the following information for your mini survey:
 
-   * **Background**
-     * **Name** – Give the mini survey a name.
-     * **Goal** – Describe the goal of the mini survey.
-   * **Conditions** – The conditions you enter here do not affect the mini survey directly. You still need to configure these conditions later in Studio Pro.
-     * **Where** – Describe the location where the mini survey appears.
-     * **When & How** – Describe what can trigger the mini survey to appear.
-     * **Target User Group (Optional)** – Describe the target user group you would like to reach. Leaving the text box empty means you would like to reach all users.
-     * **Attachments (Optional)** – Add attachments if needed. Supported formats are Microsoft Office files, .*pdf*, .*text*, .*png*, and .*jpeg*.
-   * **Settings** – The settings in this section take effect immediately. You do not need to implement these settings later in Studio Pro.
-     * **Runtime** – Set the start and end time of the mini survey.
+   * **Context**
+     * **Survey Title** – Give the mini survey a name.
+     * **Description** – Give additional information on your survey.
+     * **Start date & End date** – Set the start and end time of the mini survey.
+     * **Survey Location** - Select the location of the survey widget 
+   * **Questions**
+     * On this page, you can set up to three questions per mini survey.
+       * **Open Question** - Create a question where the user can fill in their own answer
+       * **Score** - Creates a question where a user can give a star or emoji rating
+       * **Multiple Choice** - Creates a question where you can set up to 4 answers for the user to pick from
+       * **NPS** -  Let's the user pick a score between 0 and 10 to rate your app
+   * **Finalize** - Shows an summary of your survey
      * **Toaster Placement** – Set on which corner of the page the mini survey appears.
-   * **Questions** – Set up to three questions per mini survey.
 
 4. Click **Preview** to see how the mini survey looks once it is live.
-5. If the preview looks good, click **Mark as Ready** to complete the creation of the survey. The survey details page opens and shows the **Survey ID**.
-6. Copy the **Survey ID** and save it for later use. You will need it when you implement the mini survey. 
+5. If the preview looks good, click **Schedule Survey** to complete the creation of the survey.
 
 Now you can [implement the mini survey](#implement-survey).
 
@@ -171,15 +145,18 @@ To edit a mini survey, perform the following steps:
 1. Open the app in [Apps](https://sprintr.home.mendix.com/).
 2. Click **Mini Surveys** in the sidebar. The [Survey Overview](#survey-overview) page opens.
 3. On the **Active** tab, click the mini survey that you want to edit. The [survey details](#survey-details) page opens.
-4. Go to the **Settings** tab.
+4. Go to the **Details** tab.
 5. Depending on its [status](#survey-status), you can edit different parts of the survey:
 
    * If the mini survey has the status of **Draft**, you can edit everything in the mini survey. To edit the mini survey, click **Edit Draft** on the upper-right corner of the page, and then make changes.
-   * If the mini survey has the status of **Ready to Implement**, **Running**, or **Evaluate Responses**, you can only edit the **Settings** section (for **Runtime** and **Toaster Placement**) in the survey. Click **Edit Settings** and then make the changes.
+   * If the mini survey has the status of **Scheduled**, **Active**, or **Finished**, you can only edit the **Start and End Date** and the **Toaster Placement** in the survey. Click **Edit Settings** and then make the changes. Based on the dates set, the status of the survey will update:
+     * **Scheduled** if both the start and end dates are in the future.
+     * **Active** if the Start date is in the past and the end date in the future. Keep in mind that only one survey can be active at a time for each Survey Location.
+     * **Finished** if both the start and end date are in the past.
 
 ### Implementing a Mini Survey {#implement-survey}
 
-Before the start time of the mini survey is reached, you should implement the survey in Studio Pro. Otherwise, users will not actually receive the mini survey, even if it has the [Status](#survey-status) of **Running** on the **Survey Overview** page. You can [reset the start time in the Settings section](#edit-survey) if you need more time to implement the survey in Studio Pro.
+Before the start time of the mini survey is reached, you should implement the survey in Studio Pro. Otherwise, users will not actually receive the mini survey, even if it has the [Status](#survey-status) of **Active** on the **Survey Overview** page. You can [reset the start time in the Settings section](#edit-survey) if you need more time to implement the survey in Studio Pro.
 
 #### Obtaining an API Key {#obtain-api-key}
 
@@ -188,7 +165,7 @@ To obtain an API key for the implementation, follow these steps:
 1. On the [Survey Overview](#survey-overview) page.
 2. Go to the [Setting](#settings) tab.
 3. Check the **API Keys** section:
-    * If there is already an active API key, it is shown on the table. If it is suitable to use, click **View** to show the API key, then copy it and save it for later use.
+    * If there is already an active API key, it is shown on the table. If it is suitable to use, click **Copy* to copy the API key, and save it for later use.
     * If there is no active API key that you can use, generate one as follows:
 
         1. Click **Generate API Key**.

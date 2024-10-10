@@ -159,13 +159,19 @@ You can store additional information, such as connection details, on the `Provid
 
 The `Action Microflow` is executed by clicking the **Send** button. It handles the interaction between the LLM connectors and the Conversational UI entities. The **USE_ME** folder included in the Conversational UI module contains example action microflows for both [OpenAI](/appstore/modules/genai/openai/) and [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). You can copy these microflows and modify them for your use cases, or use them directly for test purposes.
 
-Add the action microflow to an existing `ProviderConfig` by using the **Set Chat Action** toolbox action. Note that the action does not commit the object, so you must also add a step to commit it after.
+Add the action microflow to an existing `ProviderConfig` by using the **Set Chat Action** toolbox action. Note that this action does not commit the object, so you must also add a step to commit it after.
 
 #### Creating a Custom Action Microflow
 
+A typical action microflow is responsible for the following:
+* Convert the `ChatContext` with user input to a `Request` structure for the chat completions operation
+* Retrieve the connection details (i.e. credentials, configuration, ...) for the operation
+* Execute the chat completions operation for the LLM of choice
+* Update the `ChatContext` strucutre based on the response
+
 If you want to create your own custom action microflow, keep the following considerations in mind:
 
-* Only one input parameter of [ChatContext](#chat-context) is accepted.
+* Only one input parameter of [ChatContext](#chat-context) or a specialization is accepted.
 * The return type needs to be a `Success` Boolean.
 * Use the [request operations](#request-operations) to facilitate the interaction between the chat context and the model.
 * When creating the `ProviderConfig`, use [Set Chat Action](#set-action-microflow) to set the microflow.
@@ -186,39 +192,43 @@ The following operations are to be used in a (custom) action microflow:
 
 ### Customize styling {#customize-styling}
 
+The ConversationalUI module comes with its own stylesheets that are intended to work on top of Atlas Core. You can use variables and custom classes to modify the default rendering, think of colors, sizes and positions. To learn more about customizing styling and targeting elements using scss selectors, please refer to the [how-to](/howto/front-end/customize-styling-new/#add-custom-styling) page.
+
 #### Variables {#customize-styling-variables}
 
-* chat-width
-* send-btn-size
-* chat-input-max-height
+The following variables have a default value defined in the Conversational UI module. You can overwrite those by setting a custom value in the _custom-variables.scss or your own styling module. 
 
-* chat-header-color
-* pop-up-chat-bottom-position
-* pop-up-chat-right-position
-* pop-up-chat-width
-* pop-up-chat-height
+| Variable name | Description |
+| --- | --- |
+| `chat-width` | the max-width of the chat UI in a full-page setup |
+| `send-btn-size` | the height and width of the button in the user chat input box | 
+| `chat-input-max-height` | the max-height of the user chat input box | 
+| `chat-header-color` | the background color of the topbar of the pop-up and sidebar chat window |
+| `pop-up-chat-bottom-position` | the absolute bottom-position of the pop-up chat window |
+| `pop-up-chat-right-position` | the absolute right-position of the pop-up chat window |
+| `pop-up-chat-width` | the width of the pop-up and sidebar chat window |
+| `pop-up-chat-height` | the height of the pop-up chat window | 
+| `chat-bubble-user-background` | the background color of a user message in the pop-up and sidebar chat | 
+| `chat-bubble-assistant-background` | the background color of an assistant message in the pop-up and sidebar chat |
 
-* chat-bubble-user-background 
-* chat-bubble-assistant-background 
-* chat-bubble-margin
-
-You can find the default values of these variables in the _chat-variables.scss file that is shipped with the module.
+You can find the default values of these variables in the `_chat-variables.scss` file that is shipped with this module.
 
 #### Create custom scss {#customize-styling-classes}
-You can use the following classes in your custom stylesheets to modify the behavior of the conversational UI in your app. 
+You can use the following classes in your custom stylesheets to overwrite the default styling of Conversational UI and modify the behavior of the chat elements in your app. 
 
-* btn-chat-popup
-* chat-container
-* messages-container
-* send-btn
-* chat-btn-suggested-prompt
-* chat-input-wrapper and textAreaUserPrompt
-* user-input-instructions
-* message--assistant and chat-bubble-wrapper--assistant 
-* message--user and chat-bubble-wrapper--user 
-
-To learn more about customizing styling and targeting elements using scss selectors, please refer to the [how-to](/howto/front-end/customize-styling-new/#add-custom-styling) page.
-
+| Class name | Target element |
+| --- | --- | 
+| `btn-chat-popup` | the floating button that opens the pop-up chat, also see `Snippet_FloatingChatButton` |
+| `chat-container` | the container around the chat, including input box and messages |
+| `messages-container` | the container around the messages inside of `chat-container` |
+| `send-btn` | the button in the user chat input box | 
+| `chat-btn-suggested-prompt` | a suggested prompt for the user to click instead of typing |
+| `chat-input-wrapper` | the container around the user chat input box |
+| `user-input-instructions` | the additional info text below the user chat input box |
+| `message--assistant` | an assistant message in the conversation| 
+| `chat-bubble-wrapper--assistant` | an assistant message in the pop-up and sidebar chat |  
+| `message--user` | a user message conversation |  
+| `chat-bubble-wrapper--user` | a user message in the pop-up and sidebar chat |  
 
 ### Token Monitor Snippets {#snippet-token-monitor}
 

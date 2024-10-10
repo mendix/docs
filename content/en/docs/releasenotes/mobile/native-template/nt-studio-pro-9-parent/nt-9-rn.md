@@ -11,7 +11,7 @@ description: "Native Template 9 release notes."
 ### Improvements
 
   * We upgraded buildToolsVersion, compileSdkVersion, and targetSdkVersion to 34 for Android.
-  * We upgraded react-native-permissions to version 4.1.5
+  * We upgraded `react-native-permissions` to version 4.1.5
  
 ## 9.0.1 {#901}
 

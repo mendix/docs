@@ -89,7 +89,9 @@ You can perform the following actions on this tab:
 
 You can also see information and perform actions on the existing deployment packages. For each deployment package, the table contains the following details:
 
+* Deployment status
 * Deployment package name
+* Deployment label, for packages that are deployed
 * Version of the deployment package
 * Date that the deployment package was uploaded
 * Uploader account

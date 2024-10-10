@@ -84,7 +84,7 @@ On the **Settings** tab of **Survey Overview**, you can view or generate API key
 
 When you click a mini survey on the [Survey Overview](#survey-overview) page, the survey details page of the mini survey opens.
 
-{{< figure src="/attachments/developerportal/app-insights/mini-surveys/survey-details.png" class="no-border" >}}
+{{< figure src="/attachments/developerportal/app-insights/mini-surveys/survey-details_new.png" class="no-border" >}}
 
 On the upper-right corner, you can find the following buttons:
 

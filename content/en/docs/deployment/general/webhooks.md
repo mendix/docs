@@ -214,6 +214,7 @@ When an alert is triggered for your Mendix app, a payload with the following for
 ```
 
 The `severity` key name from the above JSON can have following values:
+
 * Ok
 * Warning
 * Critical

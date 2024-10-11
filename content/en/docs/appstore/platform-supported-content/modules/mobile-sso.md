@@ -262,3 +262,7 @@ After adding the IdP details to the web page, the IdP sign in tab is visible on 
 ### Login and User Landing
 
 Click **IdP login** to redirect to the IdP sign in page. After successful authentication, you will be directed to the user landing page, indicating successful integration of the Mobile SSO module.
+
+### Sign-in Failure Error
+
+When tryin to sign in multiple times, you may receive a sign-in failure error message. To resolve this error, check your network connection and try signing in again.

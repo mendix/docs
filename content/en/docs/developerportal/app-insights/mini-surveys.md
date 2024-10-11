@@ -130,7 +130,7 @@ To create a mini survey, follow these steps:
         * **Multiple Choice** – Create a question where you can set up to 4 answers for the user to pick from.
         * **NPS** – Let the user pick a score between 0 and 10 to rate your app.
     * **Finalize** – Shows an summary of your survey.
-    * **Toaster Placement** – Set on which corner of the page the mini survey appears.
+        * **Toaster Placement** – Set on which corner of the page the mini survey appears.
 
 4. Click **Preview** to see how the mini survey looks once it is live.
 5. If the preview looks good, click **Schedule Survey** to complete the creation of the survey.
@@ -148,7 +148,7 @@ To edit a mini survey, perform the following steps:
 5. Depending on its [status](#survey-status), you can edit different parts of the survey:
 
    * If the mini survey has the status of **Draft**, you can edit everything in the mini survey. To edit the mini survey, click **Edit Draft** on the upper-right corner of the page, and then make changes.
-   * If the mini survey has the status of **Scheduled**, **Active**, or **Finished**, you can only edit the **Start and End Date** and the **Toaster Placement** in the survey. Click **Edit Settings** and then make the changes. Based on the dates set, the status of the survey will update:
+   * If the mini survey does not have the status of **draft**, you can only edit the **Start and End Date** and the **Toaster Placement** in the survey. Click **Edit Settings** and then make the changes. Based on the dates set, the status of the survey will update:
      * **Scheduled** – if both the start and end dates are in the future.
      * **Active** – if the atart date is in the past and the end date in the future. Keep in mind that only one survey can be active at a time for each Survey Location.
      * **Finished** – if both the start and end date are in the past.

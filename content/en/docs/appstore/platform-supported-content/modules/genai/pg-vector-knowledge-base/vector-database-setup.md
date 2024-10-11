@@ -18,6 +18,8 @@ This procedure describes a setup based on a PostgreSQL database with the pgvecto
 
 ## Managing a PostgreSQL Database with Amazon RDS {#aws-database}
 
+A PostgreSQL database in Amazon RDS has the required extension for `pgvector` already installed. If you connect to it using the [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/225063) module, this extension will be activated and the database functions as a vector database for the purpose of knowledge bases automatically.
+
 ### Creating a PostgreSQL Database with Amazon RDS {#aws-database-create}
 
 {{% alert color="info" %}}
@@ -77,6 +79,8 @@ You can use the values in the steps below for experimental purposes:
 If no action is taken, resources in AWS will stay around indefinitely. Make sure to think about deleting the resources when you are done experimenting. When using services from AWS, you are responsible for having the necessary resources and deleting the ones that are no longer needed, to prevent from being charged more than is required. This is especially relevant the moment resources fall outside of the free-tier after a certain time.
 
 ## Managing a PostgreSQL Database with Microsoft Azure {#azure-database}
+
+A PostgreSQL database in Microsoft has the required `pgvector` extension (called *vector*) already installed. In the steps below is described how you can allow it to be used. If you then connect to it using the [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/225063) module, this extension will be activated and the database functions as a vector database for the purpose of knowledge bases automatically.
 
 ### Creating a PostgreSQL Database with Microsoft Azure {#azure-database-create}
 
@@ -159,7 +163,7 @@ If no action is taken, resources on Azure will stay around indefinitely. Make su
 
    2. Use the master username and master password that you set in the **Settings** when you [created the PostgreSQL Database with Amazon RDS](#aws-database-create) or for the admin user in the [Azure Portal](#azure-database-create) as your username and password.
 
-   3. Save and test the configuration.
+   3. Save and test the configuration. This will activate the `pgvector` extension and the vector database is ready to be used.
 
 ## Setup Alternatives {#setup-alternatives}
 

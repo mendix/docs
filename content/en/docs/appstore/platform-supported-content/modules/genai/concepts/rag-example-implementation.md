@@ -37,11 +37,9 @@ In summary, in the first step, you need to provide the private knowledge base, s
 
 ### Prerequisites {#prerequisites}
 
-Before you start experimenting with the end-to-end process, make sure that you have covered the following prerequisites:
+Before you start experimenting with the end-to-end process, make sure that you have access to a (remote) PostgreSQL database with the [pgvector](https://github.com/pgvector/pgvector) extension available. If you do not have one yet, [learn more](/appstore/modules/genai/pgvector-setup/) about how a PostgreSQL vector database can be set up to explore use cases with knowledge bases.
 
-You have access to a (remote) PostgreSQL database with the [pgvector](https://github.com/pgvector/pgvector) extension available.
-
-{{% alert color="info" %}}If you have access to an Amazon Web Services (AWS) account, Mendix recommends you use a [free-tier RDS](https://aws.amazon.com/rds/faqs/#product-faqs#amazon-rds-faqs#free-tier) setup described in the [Creating a PostgreSQL Database with Amazon RDS](/appstore/modules/genai/pgvector-setup/#aws-database-create) section. This is convenient, since PostgreSQL databases in Amazon RDS by default have the required pgvector extension available.{{% /alert %}}
+{{% alert color="info" %}}If you have access to an Amazon Web Services (AWS) account or Microsoft Azure account, Mendix recommends you use a setup described in the [Creating a PostgreSQL Database with Amazon RDS](/appstore/modules/genai/pgvector-setup/#aws-database-create) or [Managing a PostgreSQL Database with Microsoft Azure](/appstore/modules/genai/pgvector-setup/#azure-database) section. This is convenient, since these PostgreSQL databases in the cloud by default have the required pgvector extension available.{{% /alert %}}
 
 ### Steps {#steps}
 

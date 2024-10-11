@@ -151,7 +151,7 @@ To edit a mini survey, perform the following steps:
    * If the mini survey has the status of **Draft**, you can edit everything in the mini survey. To edit the mini survey, click **Edit Draft** on the upper-right corner of the page, and then make changes.
    * If the mini survey does not have the status of **draft**, you can only edit the **Start and End Date** and the **Toaster Placement** in the survey. Click **Edit Settings** and then make the changes. Based on the dates set, the status of the survey will update as follows:
      * **Scheduled** –  if both the start and end dates are in the future
-     * **Active** – if the satart date is in the past and the end date in the future
+     * **Active** – if the start date is in the past and the end date is in the future
      
         {{% alert color="info" %}}Only one survey can be active per survey location at a given time.{{% /alert %}}
      

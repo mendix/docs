@@ -19,7 +19,7 @@ description: "Native Template 9 release notes."
 
 ### Improvements
 
-* We have upgraded `react-native-video` to 6.4.5
+* We upgraded `react-native-video` to 6.4.5
 
 ### Fixes
 

@@ -124,7 +124,7 @@ To create a mini survey, follow these steps:
         * **Description** – Descirbe your survey.
         * **Start date & End date** – Set the start and end time of the mini survey.
         * **Survey Location** – Select the location of the survey widget.
-    * **Questions** – Set up to three questions per mini survey.
+    * **Questions** – You can set up to three questions per mini survey.
         * **Open Question** – Create a question where the user can fill in their own answer.
         * **Score** – Create a question where a user can give a star or emoji rating.
         * **Multiple Choice** – Create a question where you can set up to 4 answers for the user to pick from.

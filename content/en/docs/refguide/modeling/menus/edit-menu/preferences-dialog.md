@@ -54,6 +54,10 @@ This is the directory where new apps are stored. It is used in the [App Settings
 
 ## Deployment Tab {#deployment}
 
+In the **Deployment** tab you can configure various settings related to application deployment.
+
+{{< figure src="/attachments/refguide/modeling/menus/edit-menu/preferences-dialog/preferences-deployment-tab.png" alt="Preferences" width="600" class="no-border" >}}
+
 ### JDK {#jdk}
 
 Here the directories of the Java Development Kit (JDK) for each supported Java version can be selected.
@@ -73,6 +77,10 @@ Enable this setting to increase the speed at which a running application is upda
 This setting is visible and effective when the React client is enabled. By default, it is already enabled to reduce the size of the generated app bundle and speeds up the bundling process by disabling source maps generation. Source maps are used for debugging the bundled code during development. If you want to generate source maps for debugging pluggable widgets, you can disable this setting.
 
 ### Build
+
+#### Gradle Synchronization {#gradle-synchronization}
+
+Disabling this option will disable the synchronization of managed dependencies. For more information, see the [Offline Usage](/refguide/managed-dependencies/#disabling-synchronization) section in *Managed Dependencies*.
 
 #### Gradle Directory
 

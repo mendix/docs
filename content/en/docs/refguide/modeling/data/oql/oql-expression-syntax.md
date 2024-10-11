@@ -64,20 +64,20 @@ Assume `Sales.Customer` contains two objects and `Sales.Order` contains three ob
 SELECT * FROM Sales.Customer
 ```
 
-| LastName | FirstName |                                                         
-|----------|-----------|
-| Doe      | John      |
-| Moose    | Jane      |
+| ID | LastName | FirstName |                                                         
+|----|----------|-----------|
+| -  | Doe      | John      |
+| -  | Moose    | Jane      |
 
 ```sql
 SELECT * FROM Sales.Order
 ```
 
-| LastName | Number | Price |                                                         
-|----------|--------|-------|
-| Doe      | 7      | 1.5   |
-| Doe      | 2      | 5     |
-| Moose    | 3      | 8.2   |
+| ID | LastName | Number | Price |                                                         
+|----|:---------|--------|-------|
+| -  | Doe      | 7      | 1.5   |
+| -  | Doe      | 2      | 5     |
+| -  | Moose    | 3      | 8.2   |
 
 
 The operator can be used to modify an attribute in SELECT.
@@ -100,15 +100,6 @@ SELECT LastName FROM Sales.Customer WHERE (FirstName + LastName) = JaneMoose
 |----------|
 | Moose    |
 
-<!--
-All databases support string concatenation with the `+` symbol. Their behaviour and implicit type coercion of different non-string types vary. That behaviour is detailed below. Behaviour of HSQLDB, POSTGRESQL and SAP HANA is considered default. Empty cells are considered as default
-
-|   Database / Scenario    |     HSQLDB, POSTGRESQL and SAP HANA     | MARIADB and MYSQL | ORACLE | SQL SERVER |
-|:------------------------:|:---------------------------------------:|:-----------------:|:------:|:----------:|
-| String + Integer/Decimal | Number converted to string and appended |                   |        |            |
-| String + Integer/Decimal | Number converted to string and appended |                   |        |            |
--->
-
 #### - (Subtraction)
 Subtracts left `expresion` from the right one. Both operands should be numeric.
 
@@ -117,10 +108,10 @@ Assume `Sales.Finances` contains two objects:
 SELECT * FROM Sales.Finances
 ```
 
-| Revenue | Cost |                                                       
-|---------|------|
-| 10      | 7    |
-| NULL    | 10   |
+| ID | Revenue | Cost |                                                       
+|:---|---------|------|
+| -  | 10      | 7    |
+| -  | NULL    | 10   |
 
 We can calculate a profit based on this data: 
 ```sql
@@ -148,6 +139,7 @@ SELECT LastName, (Number * Price) as Total FROM Sales.Order
 
 #### : (Division)
 Divides left from the right `expression`. Supports both integer and float division.
+
 #### % (Modulo)
 Returns the remainder of division. Behaviour is database dependent when one of the operands is of type `DECIMAL`.
 
@@ -156,6 +148,7 @@ Returns the remainder of division. Behaviour is database dependent when one of t
 The operator throws an error in PostgresSQL and SQL Server when one of the operands is a parameter of type `DECIMAL`
 
 {{% /alert %}}
+
 #### = (Equal to)
 Returns true if both `expression` inputs are equal. When used with `NULL`, will always return a `FALSE` result. To compare to `NULL` values, use operator [IS](is-operator).
 
@@ -192,12 +185,13 @@ SELECT LastName, Price FROM Sales.Order WHERE ROUND(Price, 2) = ROUND(1.50000001
 
 #### != (Not equal to)
 Inverse of `=`. Same `NULL` handling rules apply. Partial expression `expression !=` is equivalent to `NOT expression =`. 
+
 #### < (Less than)
 Returns true is the left `expression` is less than the right. Both operands should be numeric.
 
 It can be used for filtering data with the use of a `WHERE` clause:
 ```sql
-SELECT * FROM Sales.Order WHERE Price < 5
+SELECT LastName, Number, Price FROM Sales.Order WHERE Price < 5
 ```
 
 | LastName | Number | Price |                                                         
@@ -218,7 +212,7 @@ Returns true if both input `expression` return true. Both operands need to be of
 Its main use is to make complex `WHERE` conditions with a combination of input values. In the query below large orders or smaller orders with a high value are selected:
 
 ```sql
-SELECT * FROM Sales.Order WHERE Number > 5 OR (Price > 5 AND Number > 2)
+SELECT LastName, Number, Price FROM Sales.Order WHERE Number > 5 OR (Price > 5 AND Number > 2)
 ```
 
 | LastName | Number | Price |                                                         
@@ -255,18 +249,18 @@ These are operators that do not match the general unary or binary syntax. They a
 | `LIKE`   | Matches a string to a specified pattern                         |
 | `IN`     | Matches any value in a subquery or a list of expression values. |
 | `EXISTS` | Test for the existence of any rows when executing the subquery. |
-| `IS`     | Logical equivalence                                             |
+| `IS`     | Tests if a value is `NULL`                                      |
 
 #### LIKE
-Matches the pattern after the operator.
+Matches an `expression` to the pattern after the operator. 
 
 ##### Syntax
 ```sql
 expression LIKE pattern
 ```
-Where `expression` is of type `STRING` and `pattern` is a string literal.
+Where `expression` is of type `STRING` and `pattern` is a string literal or parameter.
 
-The pattern literal can have special characters, which are all wildcards. Supported wildcard Characters:
+The pattern can have special characters, which are all wildcards. Supported wildcard Characters:
 
 | Wildcard Character | Description                           |     
 |--------------------|---------------------------------------|
@@ -276,13 +270,102 @@ The pattern literal can have special characters, which are all wildcards. Suppor
 In order to search for special characters, they should be escaped with the `\` escape character (including `\` itself).
 
 ##### Examples
-`City LIKE '%dun'` returns all the cities with names that end with 'dun', like 'dun' and 'Losdun'.<br> `Symbol LIKE '%\%'` returns all the symbols that end with the `%` special character.
+Presume we have 3 strings for column `House`: `Apartment`, `Tenement` and `Flat`. We can select all string ending with "ment" with this condition:
+```sql
+Select House FROM House LIKE '%ment' 
+```
+| House     |                                                         
+|-----------|
+| Apartment |
+| Tenement  |
+
+A certain length of string can be enforced with the use of the `_` operator This query matches any string that has 4 of any character ending with "mend"":
+```sql
+Select House FROM House LIKE '____ment' 
+```
+| House     |                                                         
+|-----------|
+| Apartment |
+| Tenement  |
+
+This query will match any string containing the letter "a" and ending in "t":
+```sql
+Select House FROM House LIKE '%a%t' 
+```
+| House     |                                                         
+|-----------|
+| Apartment |
+| Flat      |
 
 #### IN
-Matches any value in a subquery or a list of expression values. | `City IN (SELECT Name FROM City WHERE Country = 'Gelre')` `City IN ('Losdun', 'Die Haghe', 'Haagambacht')`
+Matches a value in a subquery or a list of expression values. 
+
+{{% alert color="info" %}}
+
+If the datatypes that are being matched are not the same, the behaviour is database dependent.
+
+{{% /alert %}}
+
+##### Syntax
+```sql
+expression IN {
+    subquery
+    | ( expression [ ,...n] )
+    | parameter
+```
+Where `expression` can have any type. The left side can be either a `subquery`, a comma separated list of `expression` or a parameter that is a list of values. If `subquery` is used, it must return a single column.
+
+##### Examples
+This operator is used to create conditions that depend on other entities or limited views of entities. `IN` also does not introduce extra columns in the top query, unlike a join. 
+
+This condition checks if the string `House` is in the literal list on the right, returning `FALSE`:
+```sql
+'House' IN ('Apartment','Shed','Shack')
+```
+
+This query retrieves all customers that have an order larger than 3:
+
+```sql
+SELECT LastName, FirstName
+FROM Sales.Customer 
+WHERE LastName IN
+    (SELECT subq.LastName 
+    FROM Sales.Order subq
+    WHERE subq.Number > 3)
+```
+
+| LastName | FirstName |                                                         
+|----------|-----------|
+| Doe      | John      |
 
 #### EXISTS
-Test for the existence of any rows when executing the subquery. | `EXISTS (SELECT ID FROM City WHERE City = 'Losdun')` Returns true if object exists
+Returns true if a `subquery` returns at least one row. Columns from higher level `SELECT` clauses can be used in the select subquery. 
+
+##### Syntax
+```sql
+EXISTS subquery
+```
+Where `subquery` is any query returning rows.
+
+##### Examples
+The operator can be used to check if an entity contains any object matching a condition.
+
+The condition `EXISTS (SELECT * FROM Sales.Customer WHERE LastName = 'Mose')` returns `FALSE` as there are no customers with the last name `Mose`.
+
+This query returns all customers that also have orders placed:
+```sql
+SELECT *
+FROM Sales.Customer customer
+WHERE EXISTS
+    (SELECT *
+    FROM Sales.Order order
+    WHERE order.LastName = customer.LastName)
+```
+
+| ID | LastName | FirstName |                                                         
+|----|----------|-----------|
+| -  | Doe      | John      |
+| -  | Moose    | Jane      |
 
 #### IS {#is-operator}
 Tests for an expression being a `NULL`. Can be inverted with an optional `NOT`. Syntax:
@@ -294,14 +377,15 @@ Where `expression` is an expression of any datatype.
 
 ##### Examples:
 
-`IS` operator can be used to filter out values that are NULL:
+`IS` operator can be used to filter out rows with values that are NULL:
 ```sql
-	SELECT Number FROM WHERE NUMBER IS NOT NULL 
+	SELECT Revenue, Cost FROM Sales.Finance WHERE Revenue IS NOT NULL 
 ```
+| Revenue | Cost |                                                       
+|---------|------|
+| 10      | 7    |
 
 ### CASE
-
-#### Description
 
 The `CASE` expression is a conditional expression, similar to if/else statements in other programming languages. Each condition is an expression that returns a Boolean result. If the condition's result is true, the value of the `CASE` expression is the result that follows the condition, and the remainder of the `CASE` expression is not processed. If the condition's result is not true, any subsequent `WHEN` clauses are examined in the same manner. If no `WHEN` condition yields true, the value of the `CASE` expression is the result of the `ELSE` clause. If the `ELSE` clause is omitted and no condition is true, the result is null.
 
@@ -311,7 +395,7 @@ The `CASE` expression can be used in two ways – simple:
 
 ```sql
 	CASE input_expression
-	WHEN when_expression THEN result_expression [ ...n ]
+	{ WHEN when_expression THEN result_expression } [ ...n ]
 	ELSE else_result_expression
 	END
 ```
@@ -320,7 +404,7 @@ or extended:
 
 ```sql
 	CASE
-	WHEN boolean_expression THEN result_expression [ ...n ] 
+	{ WHEN boolean_expression THEN result_expression } [ ...n ] 
 	ELSE else_result_expression
 	END
 ```

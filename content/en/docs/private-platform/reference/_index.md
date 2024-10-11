@@ -12,5 +12,4 @@ The Private Mendix Platform Reference Guide provides a map of the menus and func
 The reference guide has the following sections:
 
 * [Functionalities available for all users](/private-mendix-platform/reference-guide/common/)
-* [Functionalities available for developers](/private-mendix-platform/reference-guide/developers/)
 * Functionalities available for admin users

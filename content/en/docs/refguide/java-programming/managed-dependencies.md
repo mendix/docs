@@ -195,16 +195,20 @@ If the above options don't work for you, please reach out to [Mendix Support](ht
 
 ## Marketplace Modules
 
-Dependency information is included per module and included in Marketplace Modules. They are downloaded to the `vendorlib` folder automatically when synchronization is run when the module is imported. Artifacts (`.jar` files) will also be included in the exported module packages, these are used if the module is imported in a Studio Pro which has [Gradle synchronization disabled](#disabling-synchronization).
+Dependency information is included per module and included in Marketplace Modules. They are downloaded to the `vendorlib` folder automatically when synchronization is run when the module is imported. Artifacts (`.jar` files) will also be included in the exported module packages. These are used if the module is imported in a Studio Pro which has [Gradle synchronization disabled](#disabling-synchronization).
 
 If you have an issue with the managed dependencies of a Marketplace module, you can revert to an earlier version by removing the new version and downloading an earlier version from the Marketplace.
 
 ## Offline Usage {#disabling-synchronization}
 
+{{% alert color="info" %}}
+This feature was introduced in Mendix 10.16.0, 10.12.7 & 10.6.17.
+{{% /alert %}}
+
 In the Deployment tab of the Studio Pro preferences [Gradle synchronization](/refguide/preferences-dialog/#gradle-synchronization) can be disabled.
 This enables applications to be started even if Studio Pro is offline or in an airgapped environment.
 
-Note that this will prevent managed dependencies from being synchronized, potentionally causing compile errors. SBOM generation is also not supported while Gradle synchronization is disabled. We recommend airgapped users to configure a [custom repository]{#custom-repos} instead of relying on disabling Gradle synchronization.
+Note that this will prevent managed dependencies from being synchronized, potentionally causing compile errors and version conflicts. SBOM generation is also not supported while Gradle synchronization is disabled. We recommend airgapped users to configure a [custom repository]{#custom-repos} instead of relying on disabling Gradle synchronization.
 
 ## Troubleshooting
 

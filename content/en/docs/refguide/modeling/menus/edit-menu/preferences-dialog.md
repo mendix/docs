@@ -80,7 +80,11 @@ This setting is visible and effective when the React client is enabled. By defau
 
 #### Gradle Synchronization {#gradle-synchronization}
 
-Disabling this option will disable the synchronization of managed dependencies. For more information, see the [Offline Usage](/refguide/managed-dependencies/#disabling-synchronization) section in *Managed Dependencies*.
+{{% alert color="info" %}}
+This feature was introduced in Mendix 10.16.0, 10.12.7 & 10.6.17.
+{{% /alert %}}
+
+This option controls the synchronization of managed dependencies. For more information, see the [Offline Usage](/refguide/managed-dependencies/#disabling-synchronization) section in *Managed Dependencies*.
 
 #### Gradle Directory
 

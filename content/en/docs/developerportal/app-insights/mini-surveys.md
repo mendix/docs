@@ -12,9 +12,7 @@ Mini Surveys is a part of Mendix App Insights, a set of tools designed to help y
 The Mini Surveys feature consists of two parts:
 
 * A pop-up survey in your app for users to fill in
-
 * A back-end dashboard in the [navigation pane](/developerportal/#navigation-pane) of **Apps** for you to create surveys and aggregate your survey results.
-
 You begin by creating a mini survey from the **Mini Survey** page in the navigation pane of **Apps**, and then you implement the mini survey by configuring the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) module in Studio Pro. After the mini survey has started, you can view responses that have been collected in Mini Surveys in the Mendix Portal and export the responses to an XLSX file.
 
 This document first describes all the pages in Mini Surveys in **Apps**, and then it describes the procedure for running a mini survey.
@@ -53,7 +51,10 @@ Along its lifecycle, a mini survey can have the following statuses:
 
 * **Draft** – This status means the mini survey is not finalized. You can still edit the survey and when you finalize it, you need to schedule it. Once you schedule a survey, its status changes to **Scheduled**.
 * **Scheduled** – This status means the mini survey is finalized, but its start time is not reached yet. Once the start time is reached, its status changes to **Active**.
-* **Active** – This status indicates that the mini survey is currently running. After the survey reaches its end time, the status will change to **Finished.** Keep in mind that only one survey can be active per survey location at a given time.
+* **Active** – This status indicates that the mini survey is currently running. After the survey reaches its end time, the status will change to **Finished**.
+
+    {{% alert color="info" %}}Only one survey can be active per survey location at a given time.{{% /alert %}}
+
 * **Finished** – This status means the mini survey has ended.
 
 {{% alert color="info" %}}When a mini survey has the status of **Draft**, you can still edit everything in the survey. When a mini survey has the status of **Scheduled**, **Active**, or **Finished**, you can only edit the **Settings** section (for **Runtime** and **Toaster Placement**) in the survey.{{% /alert %}}
@@ -148,10 +149,13 @@ To edit a mini survey, perform the following steps:
 5. Depending on its [status](#survey-status), you can edit different parts of the survey:
 
    * If the mini survey has the status of **Draft**, you can edit everything in the mini survey. To edit the mini survey, click **Edit Draft** on the upper-right corner of the page, and then make changes.
-   * If the mini survey has the status of **Scheduled**, **Active**, or **Finished**, you can only edit the **Start and End Date** and the **Toaster Placement** in the survey. Click **Edit Settings** and then make the changes. Based on the dates set, the status of the survey will update:
-     * **Scheduled** – if both the start and end dates are in the future.
-     * **Active** – if the atart date is in the past and the end date in the future. Keep in mind that only one survey can be active at a time for each Survey Location.
-     * **Finished** – if both the start and end date are in the past.
+   * If the mini survey has the status of **Scheduled**, **Active**, or **Finished**, you can only edit the **Start and End Date** and the **Toaster Placement** in the survey. Click **Edit Settings** and then make the changes. Based on the dates set, the status of the survey will update as follows:
+     * **Scheduled** –  if both the start and end dates are in the future
+     * **Active** – if the satart date is in the past and the end date in the future
+     
+        {{% alert color="info" %}}Only one survey can be active per survey location at a given time.{{% /alert %}}
+     
+     * **Finished** – if both the start and end dates are in the past
 
 ### Implementing a Mini Survey {#implement-survey}
 
@@ -186,14 +190,11 @@ When the start time that you set for the mini survey is reached, the survey will
 To check the responses that have been collected, follow these steps:
 
 1. Open the app in [Apps](https://sprintr.home.mendix.com/).
-
 2. Click **Mini Surveys** in the sidebar. The [Survey Overview](#survey-overview) page opens.
-
 3. On the **Active** tab, click the mini survey to open the [survey details](#survey-details) page.
-
 4. Go to the **Responses** tab to see all the responses that have been collected.
 
-   To have a quick view of individual survey responses, click a response in the list at the bottom. A side panel opens and shows the details of the response.
+    To have a quick view of individual survey responses, click a response in the list at the bottom. A side panel opens and shows the details of the response.
 
 5. To export the responses to an XLSX file, click **Export Responses** on the upper-right corner of the page.
 
@@ -202,7 +203,6 @@ To check the responses that have been collected, follow these steps:
 A mini survey has the following opt-out rules: 
 
 * If a user has closed a survey, without answering any questions, then the survey will not show again to this user .
-
 * If a user has answered one or more questions in a survey, but did not finished the survey, then the survey will show again. However, if the user has closed the survey before finishing for the second time, the survey will not show again to this user.
 * If the user has answered all questions, then the survey will not show again to the user.
 

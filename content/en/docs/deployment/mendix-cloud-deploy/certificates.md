@@ -81,6 +81,10 @@ In the section **Pin Client Certificate to Web Services**, you can specify host 
 
 Loading certificate authorities works much the same way, although they do not require authentication because they are public certificates.
 
+{{% alert color="info" %}}
+By default, Mendix Cloud trusts Certificate Authorities from the [Mozilla CA root bundle](https://wiki.mozilla.org/CA).
+{{% /alert %}}
+
 To upload a certificate authority, follow these steps:
 
 1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.

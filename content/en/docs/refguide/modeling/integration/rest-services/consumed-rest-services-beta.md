@@ -46,7 +46,7 @@ Download [Studio Pro](https://marketplace.mendix.com/link/studiopro/) and add th
 2. Select **Add other** > **Consumed REST service**. 
 3. Name the service and click **OK**.
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/add-service.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/add-service.png" width="500" class="no-border" >}}
 
 ## Configuration {#configuration}
 

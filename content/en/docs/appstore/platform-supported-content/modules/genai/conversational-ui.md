@@ -8,13 +8,13 @@ description: "Describes the Conversational UI marketplace module that assists de
 
 ## Introduction {#introduction}
 
-With the [Conversational UI module](https://marketplace.mendix.com/link/component/227931), you can create an AI-based chat user interface. It contains the needed data model, pages, snippets and building blocks to do so. You can integrate with any LLM and knowledge base to create your own full screen, sidebar or modal chat. It integrates with the Atlas framework and is the basis for the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926). It is also included in the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934).
+With the [Conversational UI module](https://marketplace.mendix.com/link/component/227931), you can create a GenAI-based chat user interface. It contains the needed data model, pages, snippets and building blocks to do so. You can integrate with any LLM and knowledge base to create your own full-screen, sidebar or modal chat. It integrates with the Atlas framework and is the basis for the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926). It is also included in the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934) and the [Suppor Assistant Starter App](https://marketplace.mendix.com/link/component/231035).
 
 Mendix has produced a [Conversational AI Design Checklist](/howto/front-end/conversation-checklist/) which suggests some best practices for introducing conversational AI into your app.
 
 ### Typical Use Cases {#use-cases}
 
-Typical use cases include the following:
+Typical use cases for Conversational UI include the following:
 
 * Create a chat interface for users to chat with Large Language Models (LLM). 
 * Allow users to switch between different implementations by switching providers. 
@@ -26,10 +26,10 @@ Typical use cases include the following:
 The Conversational UI module provides the following functionalities:
 
 * UI components that you can drag and drop onto your pages, for example:
-    * Layouts to have a sidebar or floating popup chat
+    * Layouts to have a sidebar or floating pop-up chat
     * Pages that you can use in your navigation for chat
     * Snippets that you can use directly on your pages, for example to display messages or a history sidebar
-    * A floating button that for opening a chat
+    * A floating button for opening a pop-up chat
     * Pages, snippets and logic to display and export token usage data (if enabled in GenAI Commons and supported by the GenAI Connector of choice)
 * Operations to set up your context, interact with the model, and add the data to be displayed in the UI
 * Domain model to store the chat conversations and additional information
@@ -43,7 +43,7 @@ This module is intended to enable chat interactions between a user and an AI mod
 
 To use the Conversational UI module, your Mendix Studio Pro version must be [9.24.2](/releasenotes/studio-pro/9.24/#9242) or higher.
 
-You must also ensure that you have the prerequisite modules that Conversational UI requires. The modules are included by default in the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934) and the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926), otherwise you must install them yourself:
+You must also ensure that you have the prerequisite modules that Conversational UI requires. The modules are included by default in the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934), the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) and the [Suppor Assistant Starter App](https://marketplace.mendix.com/link/component/231035), otherwise you must install them yourself:
 
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187)
 * [Data Widgets](https://marketplace.mendix.com/link/component/116540) 
@@ -74,7 +74,7 @@ The main entities are shown for reference in the diagram below. For technical do
 
 ### Configure the roles {#module-roles}
 
-Make sure that the module role `User` is part of the user roles that are intended to chat with the model. Optionally, you can grant the `_addOn_ReadAll` role to admin roles, so that users with that role can read all messages.
+Make sure that the module role `User` is part of the user roles that are intended to chat with the model. Optionally, you can grant the `_addOn_ReadAll` role to admin roles, so that users with that role can read all messages. A role for usage montoring is related only to the [Token monitor snippets](#snippet-token-monitor) and does not relate to the conversational snippets.
 
 | Module role | Description |
 | --- | --- |
@@ -82,7 +82,7 @@ Make sure that the module role `User` is part of the user roles that are intende
 | `_addOn_ReadAll` | Role can be granted additionally. Users with both roles can read all chat data. |
 | `UsageMonitoring` | Can view and export all token usage data. This is related to a module role with the same name in the GenAI Commons module. |
 
-### Create the UI components {#ui-components} 
+### Create the chat UI {#ui-components} 
 
 A set of reusable pages, layouts and snippets is included in this module to allow you to add the conversational UI to your app.
 
@@ -90,7 +90,7 @@ A set of reusable pages, layouts and snippets is included in this module to allo
 
 You can include the following pages in your navigation, or copy them to your module and modify them to suit your use case:
 
-* **ConversationalUI_FullScreenChat** - This page displays a centered chat interface on a full screen responsive page. 
+* **ConversationalUI_FullScreenChat** - This page displays a centered chat interface on a full-screen responsive page. 
 * **ConversationalUI_Sidebar** - This page displays the chat interface on the right side with the full height.
 * **ConversationalUI_PopUp** - This is a floating pop-up in the bottom-right corner. To open it, users can click the **Snippet_FloatingChatButton** that floats in the bottom-right corner. Alternatively, you can use the building block **Floating Button OpenChat** from the toolbox to create your custom opening logic.
 
@@ -113,7 +113,7 @@ If the snippet does not fit your use case, you can [inline the snippet](/refguid
 
 ##### Message Snippets {#snippet-messages}
 
-The messages snippets are already part of the [Chat Interface Snippets](#snippet-chat-interface), but can be used individually in your custom setup. They contain the content of the messages list view.
+The messages snippets are already part of the [Chat Interface Snippets](#snippet-chat-interface), but can be used individually in your custom setup if needed. They contain the content of the messages list view.
 
 The following versions are available and can be swapped as needed:
 
@@ -122,7 +122,7 @@ The following versions are available and can be swapped as needed:
 
 ##### Advanced Configuration Snippets {#snippet-configuration}
 
-The following snippets can be used to give the user more control over the chat conversations.
+The following additional snippets can be used to give the user more control over the chat conversations.
 
 * **Snippet_ChatContext_AdvancedSettings** - This snippet can be placed on pages to let users configure specific parameters (currently **temperature**). Use microflow **AdvancedSettings_GetAndUpdate** to set the boundaries and default value for advanced settings in the UI. 
 * **Snippet_ChatContext_SelectActiveProviderConfig** - With this snippet, users can select an active [Provider Config](#provider-config) from all associated configurations, for example to let them select a model.
@@ -132,11 +132,11 @@ See the [AI Bot Starter App](https://marketplace.mendix.com/link/component/22792
 
 ### Provide the ChatContext {#chat-context}
 
-The `ChatContext` is the central entity in the aforementioned pages and snippets and it functions as the input for the action microflow that is executed when the user clicks the send button. It can only be viewed by the owner (see [Module Roles](#module-roles) for exceptions). The object needs to be created for every new chat interaction and comprises the `messages` that are sent to and received from the model. A `ProviderConfig` should be associated via `ChatContext_ProviderConfig_Active` in order to execute the correct [action microflow](#action-microflow).
+The `ChatContext` is the central entity in the aforementioned pages and snippets and represents a chat conversation with potentially many messages. It functions as the input for the action microflow that is executed when the user clicks the **Send** button. It can only be viewed by the owner (see [Module Roles](#module-roles) for exceptions). The object needs to be created for every new chat conversation and comprises the `messages` that are sent to and received from the model during a chat interaction. A `ProviderConfig` should be associated via `ChatContext_ProviderConfig_Active` in order to execute the correct [action microflow](#action-microflow).
 
 Please see the **USE_ME** > **Pages** folder for examples on how to do this in an ACT microflow that opens the chat page. 
 
-If you need additional attributes or associations on the `ChatContext`, use an extension entity that refers to the object which can then be retrieved and altered when needed (for example in the action microflow). The [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) shows an example of this approach.
+If you need additional attributes or associations on the `ChatContext`, use a specialization or an extension entity that refers to the object which can then be retrieved and altered when needed (for example in the action microflow). The [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) shows an example of the extension entity approach.
 
 #### Chat Context Operations {#chat-context-operations}
 
@@ -152,10 +152,13 @@ It is possible to add suggested user prompts to a `ChatContext`. They appear as 
 
 ### Associate the ProviderConfig {#provider-config}
 
-The `ProviderConfig` contains the selection of the model provider for the AI Bot to chat with. It also refers to an action microflow that is executed when the **Send** button is clicked for a `ChatContext` that has the `ProviderConfig` associated. During creation of the `ChatContext` the `ProviderConfig` (specialization) can be added directly using the aforementioned [operations](#chat-context-operations). 
+The `ProviderConfig` contains the selection of the model provider for the AI Bot to chat with. It also refers to an action microflow that is executed when the **Send** button is clicked for a `ChatContext` that has the `ProviderConfig` associated. 
 
-If the `ChatContext` however already exists and a new `ProviderConfig` needs to be added, use the **New Config for Chat** toolbox action. The `ProviderConfig` can optionally also be set to active if `IsActive` is set to true. Additionally, the action microflow of the new `ProviderConfig` is set. **ChatContext_AddProviderConfig_SetActive** is the counterpart of this flow when both the `ChatContext` and the `ProviderConfig` exist already. 
-You can store additional information, such as connection details, on the `ProviderConfig` by using a specialization and adding the necessary fields. For an example implementation, see the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926).
+A `ProviderConfig` (or specialization) can be added directly using the aforementioned [operations](#chat-context-operations) that create a new `ChatContext`. 
+
+If the `ChatContext` however already exists and a new `ProviderConfig` needs to be added, use the **New Config for Chat** toolbox action. The `ProviderConfig` can optionally also be set to active if `IsActive` is set to true. Additionally, the action microflow of the new `ProviderConfig` is set. 
+
+**ChatContext_AddProviderConfig_SetActive** is the counterpart of this flow when both the `ChatContext` and the `ProviderConfig` exist already. 
 
 ### Define and set the Action Microflow {#action-microflow}
 
@@ -169,14 +172,14 @@ A typical action microflow is responsible for the following:
 * Convert the `ChatContext` with user input to a `Request` structure for the chat completions operation
 * Retrieve the connection details (i.e. credentials, configuration, ...) for the operation
 * Execute the chat completions operation for the LLM of choice
-* Update the `ChatContext` strucutre based on the response
+* Update the `ChatContext` strucutre based on the response so that the user can see the result in the UI.
 
 If you want to create your own custom action microflow, keep the following considerations in mind:
 
 * Only one input parameter of [ChatContext](#chat-context) or a specialization is accepted.
 * The return type needs to be a `Success` Boolean.
-* Use the [request operations](#request-operations) to facilitate the interaction between the chat context and the model.
-* When creating the `ProviderConfig`, use [Set Chat Action](#set-action-microflow) to set the microflow.
+* Use the [chat context](#chatcontext-operations) and [request operations](#request-operations) to facilitate the interaction between the chat context and the model.
+* The custom action microflow can only be triggered if it is set as chat action on a `ProviderConfig` using one of the operations mentioned before.
 
 ##### ChatContext operations {#chatcontext-operations}
 
@@ -194,11 +197,11 @@ The following operations are to be used in a (custom) action microflow:
 
 ### Customize styling {#customize-styling}
 
-The ConversationalUI module comes with its own stylesheets that are intended to work on top of Atlas Core. You can use variables and custom classes to modify the default rendering, think of colors, sizes and positions. To learn more about customizing styling and targeting elements using scss selectors, please refer to the [how-to](/howto/front-end/customize-styling-new/#add-custom-styling) page.
+The ConversationalUI module comes with its own stylesheets that are intended to work on top of Atlas Core. You can use variables and custom classes to modify the default rendering, think of colors, sizes and positions. To learn more about customizing styling in a Mendix app in general and targeting elements using scss selectors, please refer to the [how-to](/howto/front-end/customize-styling-new/#add-custom-styling) page.
 
 #### Variables {#customize-styling-variables}
 
-The following variables have a default value defined in the Conversational UI module. You can overwrite those by setting a custom value in the _custom-variables.scss or your own styling module. 
+The following variables have a default value defined in the Conversational UI module. You can override the values by setting a custom value in the _custom-variables.scss file or your own styling module. 
 
 | Variable name | Description |
 | --- | --- |
@@ -229,7 +232,7 @@ You can use the following classes in your custom stylesheets to overwrite the de
 | `user-input-instructions` | the additional info text below the user chat input box |
 | `message--assistant` | an assistant message in the conversation| 
 | `chat-bubble-wrapper--assistant` | an assistant message in the pop-up and sidebar chat |  
-| `message--user` | a user message conversation |  
+| `message--user` | a user message in the conversation |  
 | `chat-bubble-wrapper--user` | a user message in the pop-up and sidebar chat |  
 
 ### Token Monitor Snippets {#snippet-token-monitor}

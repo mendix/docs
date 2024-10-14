@@ -7,7 +7,7 @@ url: /appstore/partner-solutions/apd/rg-two-apps/
 
 The home page of APM displays the list of licensed applications from the Mendix Portal in alphabetical order.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-apps/ProjectsDashboard.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-apps/ProjectsDashboard.png" class="no-border" >}}
 
 It is possible to search on an app's name or select one from the overview directly.
 
@@ -21,23 +21,23 @@ In case an application is not visible in this overview, click **Can’t find you
 
 APM has several tour guides and videos to help navigate through APM to perform certain tasks. These can be accessed by clicking the {{% icon name="question-circle" %}} icon next to your profile image and selecting the **Tour** option.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-apps/Documentation.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-apps/Documentation.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 By default, APM displays the tour guides and videos upon login for new users.
 {{% /alert %}}
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-apps/Tour.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-apps/Tour.png" class="no-border" >}}
 
 When starting a tour, a tool tip will appear throughout the APM application with instructions to follow.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-apps/TourStep.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-apps/TourStep.png" class="no-border" >}}
 
 ## Profile Menu and User Settings
 
 In the profile menu, you can see links to your Mendix Profile and also the user settings for APM.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-apps/profile_menu.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-apps/profile_menu.png" class="no-border" >}}
 
 In the user settings, you can configure the home page to be one of the following:
 
@@ -45,7 +45,7 @@ In the user settings, you can configure the home page to be one of the following
 * A specific app on the Environments overview if an app is selected and the environments drop-down menu is empty
 * A specific environment of a specific app
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-apps/user_settings.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-apps/user_settings.png" class="no-border" >}}
 
 These are the settings on the **User settings** dialog box":
 

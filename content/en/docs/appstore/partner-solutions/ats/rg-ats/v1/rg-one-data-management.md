@@ -7,7 +7,7 @@ url: /appstore/partner-solutions/ats/rg-one-data-management/
 
 The **Repository** is the heart of ATS, since it allows you to create and manage folders, test suites, test cases and actions. The folder in the ATS is equivalent to a directory in your file browser. You can create folders within other folders, and in each folder, you can store test suites, test cases and actions.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v1/rg-one-data-management/21168203.png" alt="Repository of ATS" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v1/rg-one-data-management/21168203.png" alt="Repository of ATS" class="no-border" >}}
 
 ## Import/Export
 
@@ -24,11 +24,11 @@ To import data in ATS, do the following:
 1. Click **Import** to open the data import form.
 2. On the data import form, click **New Import** to open the import data dialog box.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v1/rg-one-data-management/21168204.png" alt="ATS Import Page" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v1/rg-one-data-management/21168204.png" alt="ATS Import Page" class="no-border" >}}
 
 3. In the data import dialog box, select the *.xml* file containing your import and press **Upload**.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v1/rg-one-data-management/21168205.png" alt="Data Import Dialog" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v1/rg-one-data-management/21168205.png" alt="Data Import Dialog" class="no-border" >}}
 
     The system will check the import for data inconsistencies and show error details in a list if any. 
 
@@ -55,14 +55,14 @@ In order to start an export, you can do the following:
 * Mark the export items listed in the current list view in the **Repository** and then click **Export** in the top menu
 * Export the item you are currently editing by clicking the **Export** button in the top right
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v1/rg-one-data-management/21168206.png" alt="Exporting a test Case" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v1/rg-one-data-management/21168206.png" alt="Exporting a test Case" class="no-border" >}}
 
 To export items from the repository, do the following:
 
 1. Open the **All Objects** tab of the **Repository**.
 2. Click the **Export items** button.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v1/rg-one-data-management/21168207.png" alt="Exporting items in the Repository" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v1/rg-one-data-management/21168207.png" alt="Exporting items in the Repository" class="no-border" >}}
 
 Data is exported from the repository.
 
@@ -72,7 +72,7 @@ Data is exported from the repository.
 
 In the **Test Data** tab of the **Repository** you can create datasets by clicking the **New Data Set** button. You can name the dataset and give it a description.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v1/rg-one-data-management/21168208.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v1/rg-one-data-management/21168208.png" class="no-border" >}}
 
 A dataset is defined by one or more fields and records. Fields are the columns of your table, records are the lines in your table containing the field values. Fields can have the data types integer or string. After you have created a dataset you can add fields and records to the set.
 

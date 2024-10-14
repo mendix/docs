@@ -9,7 +9,7 @@ The repository is the heart of ATS, as it allows you to create and manage folder
 
 You can access the repository by clicking **Test Cases** in the navigation menu.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-repository/repository.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-repository/repository.png" class="no-border" >}}
 
 You search for a specific item by using the search bar in the repository. ATS searches for the desired item in the current folder and all sub-folders. So, if you start searching ATS, only searches inside your current folder and its sub-folders.
 
@@ -19,23 +19,23 @@ With the type icons on the left side of the item name, you can identify at a gla
 
 * This is a folder:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-repository/folder-icon.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-repository/folder-icon.png" class="no-border" >}}
 
 * This is a test case:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-repository/test-case-icon.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-repository/test-case-icon.png" class="no-border" >}}
 
 * This is test suite:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-repository/test-suite-icon.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-repository/test-suite-icon.png" class="no-border" >}}
 
 * This is an action:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-repository/action-icon.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-repository/action-icon.png" class="no-border" >}}
 
 If you want to cut, copy, or delete an item in the repository, you can do so by marking it with the checkbox. After that, the actions become available.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-repository/repository-actions.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-repository/repository-actions.png" class="no-border" >}}
 
 ## Actions
 

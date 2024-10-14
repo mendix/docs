@@ -15,7 +15,7 @@ The APM Tool includes the load test session recorder, so APM Tool users do not n
 
 You can start and stop the Load Test Recorder. The followingscreenshot below shows the Log Tool when started:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-load-test-recorder/Control.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-load-test-recorder/Control.png" class="no-border" >}}
 
 You can Start and stop timers to mark individual functionality in the session. This helps the load tool to measure those functions.
 
@@ -23,7 +23,7 @@ You can Start and stop timers to mark individual functionality in the session. T
 
 The following screenshot shows the Load Test Recorder Options:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-load-test-recorder/Options.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-load-test-recorder/Options.png" class="no-border" >}}
 
 The **Max messages to record** can limit the amount of records in memory. The recording stops when the maximum is reached.
 
@@ -34,4 +34,4 @@ You can configure the Load Test Recorder to stop if a queue builds up with too m
 ## Recorded Sessions
 
 The recorded sessions can be downloaded from the recorded sessions tab.
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-load-test-recorder/Overview.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-load-test-recorder/Overview.png" class="no-border" >}}

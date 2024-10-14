@@ -18,11 +18,11 @@ To test this, you log in as an employee and assert that you do not see the admin
 
 This is the navigation menu for an employee:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-create-a-negative-test-case/navigation-menu-employee-company-expenses-app.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-create-a-negative-test-case/navigation-menu-employee-company-expenses-app.png" class="no-border" >}}
 
 This is the navigation menu for an administrator:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-create-a-negative-test-case/navigation-menu-administrator-company-expenses-app.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-create-a-negative-test-case/navigation-menu-administrator-company-expenses-app.png" class="no-border" >}}
 
 This how-to teaches you how to do the following:
 
@@ -40,33 +40,33 @@ The test case used in this how-to was created beforehand. It asserts that the na
 
 This is the navigation menu:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-create-a-negative-test-case/navigation-menu-employee-company-expenses-app.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-create-a-negative-test-case/navigation-menu-employee-company-expenses-app.png" class="no-border" >}}
 
 This is the final test case:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-create-a-negative-test-case/negative-test-case.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-create-a-negative-test-case/negative-test-case.png" class="no-border" >}}
 
 1. Open your app in ATS and go to the **Test Cases** menu item.
 2. Go to the **Repository** tab:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-create-a-negative-test-case/go-to-repository.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-create-a-negative-test-case/go-to-repository.png" class="no-border" >}}
 
 3. Select the test case to add the negative test step.
 4. Add the **Assert not true** action where you want to place the negative test step:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-create-a-negative-test-case/Assert_not_true_step_added.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-create-a-negative-test-case/Assert_not_true_step_added.png" class="no-border" >}}
 
 5. Set the **Assert Value** parameter of the Assert not true action to **True**:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-create-a-negative-test-case/set-to-true.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-create-a-negative-test-case/set-to-true.png" class="no-border" >}}
 
 6. Add the action needed to search for the menu item as a **Precondition**. Check the precondition box and add the [Find/Assert Menu Item](/appstore/partner-solutions/ats/rg-one-findassert-menu-item/) action:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-create-a-negative-test-case/add-findassert-menu-item-as-precondition-2.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-create-a-negative-test-case/add-findassert-menu-item-as-precondition-2.png" class="no-border" >}}
 
 7. Enter the information needed to find the **Admin Menu** as an administrator to verify it is not visible as an employee. Also, enter a proper description.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-create-a-negative-test-case/negative-test-step-finished-2.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-create-a-negative-test-case/negative-test-step-finished-2.png" class="no-border" >}}
 
 These are the inner-workings:
 
@@ -79,7 +79,7 @@ You can use this method for a lot of different things.
 
 *The finished test case*
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-create-a-negative-test-case/the-finished-test-case.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-create-a-negative-test-case/the-finished-test-case.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 You can also add the **Assert not false** action with the **Assert value** set to false, instead of the **Assert not true** action, to create a negative test case.

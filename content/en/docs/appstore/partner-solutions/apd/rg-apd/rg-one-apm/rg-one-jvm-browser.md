@@ -7,11 +7,11 @@ url: /appstore/partner-solutions/apd/rg-one-jvm-browser/
 
 A JVM Browser shows information similar to JConsole or JVisualVM tools provided with the Java JDK. Using the **Refresh** button refreshes an individual item.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-jvm-browser/Overview.png" class="no-border" >}}                
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-jvm-browser/Overview.png" class="no-border" >}}                
 
 Double-clicking an items drills down shows its details.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-jvm-browser/Details.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-jvm-browser/Details.png" class="no-border" >}}
 
 You can start collecting statistics on individual items using the **Collect** button. These statistics can be viewed in the Measurements Tool.
 

@@ -15,10 +15,10 @@ Quick summary:
 
 | Selenium Setup | Uploading your own file | Uploading a file | Uploading possible? |
 | :-------------- | :---------------------- | :--------------- | :------------------ |
-| Local Selenium Server (Docker) | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/grey.png" class="no-border" >}} Limited<sup>1</sup> | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/green.png" class="no-border" >}} Yes | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/green.png" class="no-border" >}} Yes |
-| BrowserStack (SaaS) | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/red.png" class="no-border" >}} No | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/green.png" class="no-border" >}} Yes | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/green.png" class="no-border" >}} Yes |
-| Sauce Labs (SaaS) | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/red.png" class="no-border" >}} No | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/red.png" class="no-border" >}} No | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/red.png" class="no-border" >}} No |
-| Selenium SaaS Agent | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/grey.png" class="no-border" >}} Limited<sup>2</sup> | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/green.png" class="no-border" >}} Yes | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/red.png" class="no-border" >}} No |
+| Local Selenium Server (Docker) | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/grey.png" class="no-border" >}} Limited<sup>1</sup> | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/green.png" class="no-border" >}} Yes | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/green.png" class="no-border" >}} Yes |
+| BrowserStack (SaaS) | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/red.png" class="no-border" >}} No | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/green.png" class="no-border" >}} Yes | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/green.png" class="no-border" >}} Yes |
+| Sauce Labs (SaaS) | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/red.png" class="no-border" >}} No | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/red.png" class="no-border" >}} No | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/red.png" class="no-border" >}} No |
+| Selenium SaaS Agent | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/grey.png" class="no-border" >}} Limited<sup>2</sup> | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/green.png" class="no-border" >}} Yes | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/red.png" class="no-border" >}} No |
 
 <small><sup>1</sup> This only possible when you prepare your own files on that server. <br>
 <sup>2</sup> This depends on where the agent is installed.</small>
@@ -54,7 +54,7 @@ ATS has a standard action for uploading files into your Mendix app. The [Set Fil
 
 *The Set File Manager action*
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/set-file-manager-action.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/set-file-manager-action.png" class="no-border" >}}
 
 A possible filepath is:
 
@@ -62,7 +62,7 @@ C:\users\ats\documents\receipt-1.png
 
 *File Uploader widget in the app*
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/file-uploader-widget-app.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/file-uploader-widget-app.png" class="no-border" >}}
 
 ### Advice
 

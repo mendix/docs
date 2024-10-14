@@ -36,11 +36,11 @@ To define the user approach, follow these steps:
 
     * Switch unchecked:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/switch-widget-unchecked.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/switch-widget-unchecked.png" class="no-border" >}}
 
     * Switch checked:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/switch-widget-checked.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/switch-widget-checked.png" class="no-border" >}}
 
 2. You must determine where you must click it. After looking at the widget, you find out that you must click the actual switch to activate it.
 
@@ -50,11 +50,11 @@ In the previous section, you wrote down the user approach for the Mendix Switch 
 
 1. Look for the element in the debugger ATS needs to click. ATS always clicks in the middle of an element, keep this in mind while looking for the element to click. You must start by checking the parent element, which is always the element with `mx-name-` when building an unsupported widget action. If the widget does not have `mx-name-`, look for the highest `div` element that is still referencing the widget. The parent element of the switch widget has `mx-name-switch1` in the debugger:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/highlighted-switch-mxname-debugger.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/highlighted-switch-mxname-debugger.png" class="no-border" >}}
 
     The debugger creates the border around the selected element in the app: 
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/highlighted-switch-mxname.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/highlighted-switch-mxname.png" class="no-border" >}}
 
     When selecting which element to find, also remember that ATS clicks in the middle of an element. In this case, ATS does not click the actual switch. This means you must use the [*Find Widget Child Node*](/appstore/partner-solutions/ats/rg-one-find-widget-child-node/) action. This action is a combination of the [*Find/Assert Widget*](/appstore/partner-solutions/ats/rg-one-findassert-widget/) and [*Find Element by Sizzle*](/appstore/partner-solutions/ats/rg-one-find-element-by-sizzle/) actions, combining the best of both. It’s an official Mendix action, it has all the internal processes, and it uses a CSS/jQuery selector to find the child, which makes it flexible.
 
@@ -62,11 +62,11 @@ In the previous section, you wrote down the user approach for the Mendix Switch 
 
     After looking through the child nodes, you find a child element that covers the switch and also looks generic. This is the element in the debugger, and the rectangle shows which class name we are going to use:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/childnode-switch-debugger.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/childnode-switch-debugger.png" class="no-border" >}}
 
     That element looks like this in the app:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/childnode-switch-app.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/childnode-switch-app.png" class="no-border" >}}
 
 3. Use the class name to find the element, because it’s the most constant. The ID of an element changes a lot. You cannot use the ID when building a sustainable custom action. Use the class name selector in jQuery for finding specific elements. The class name you must use is `.widget-switch`. To make sure that it works, try it first in the debugger. 
 4. Simulate what ATS does by using the debugger. Since you use the *Find Widget Child Node* action, you also use the `mx-name` in your code. You use jQuery to find out if ATS finds the right element. Enter the following code in the console of the debugger:
@@ -77,13 +77,13 @@ In the previous section, you wrote down the user approach for the Mendix Switch 
 
     When you enter this in the console, it looks like this:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/switch-element-console.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/switch-element-console.png" class="no-border" >}}
 
     It can happen that the debugger does not return an element. Check if jQuery is available and if you constructed the code in the correct manner. When you enter a selector in ATS, don’t use `$( ‘….’ )` or `jQuery( ‘…..’ )`.
 
 5. Enter the child node in the *Find Widget Child Node* action:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/findwidget-childnode-input.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/findwidget-childnode-input.png" class="no-border" >}}
 
     According to the guidelines for building a custom action, you must define the standard parameters. You only want to hard-code the child node; the action user must have the possibility to select another switch by only entering the **Widget Name**. 
 
@@ -91,29 +91,29 @@ In the previous section, you wrote down the user approach for the Mendix Switch 
 
     * **Widget Name Input** parameter:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/widget-name-parameter.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/widget-name-parameter.png" class="no-border" >}}
 
     * **Search Context Input** parameter:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/search-context-parameter.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/search-context-parameter.png" class="no-border" >}}
 
     Make sure you set the data type correctly! The Search Context parameters expect a web element!
 
 7. Connect these parameters to the *Find Widget Child Node* action:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/findwidget-childnode-inputparameters-connected.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/findwidget-childnode-inputparameters-connected.png" class="no-border" >}}
 
 8. Clarify the test step by filling in the description and possible output. In this case, your action returns the Mendix switch:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/mendix-switch-findwidgetchild-description-output.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/mendix-switch-findwidgetchild-description-output.png" class="no-border" >}}
 
 9. You click the Mendix switch to change its state. So, add the [Click/Doubleclick](/appstore/partner-solutions/ats/rg-one-clickdoubleclick/) action, because this action is a Mendix action:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/mendix-switch-click-doubleclick-add.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/mendix-switch-click-doubleclick-add.png" class="no-border" >}}
 
 10. Connect the output of the first test steps to the *Click/Doubleclick* action and give a proper description:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/mendix-switch-click-doubleclick-set-element.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/mendix-switch-click-doubleclick-set-element.png" class="no-border" >}}
 
 ## Last Check {#LastCheck}
 
@@ -128,7 +128,7 @@ After checking these items, you can run the test case that uses this action.
 
 Congratulations! You have created your own custom action for the Mendix Switch widget.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/mendix-switch-nocondition.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/mendix-switch-nocondition.png" class="no-border" >}}
 
 ## Adding Logic to Make Your Action "Smarter" {#AddingLogic}
 
@@ -136,13 +136,13 @@ You have an action that clicks the Switch widget to alter its state, and now you
 
 1. In the debugger, notice that the Mendix Switch has the input type `checkbox`. You use this input element in combination with the *Is Selected* action to get the current state of the widget, either "True" or "False":
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/mendix-switch-input-type.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/mendix-switch-input-type.png" class="no-border" >}}
 
 2. Check if ATS can find the input element. You do this by simulating what ATS does, the same way as before. Enter the following code in the console of the debugger: 
 
     `$( ‘.mx-name-switch1 input’ )`:
   
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/mendix-switch-input-type-debugger.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/mendix-switch-input-type-debugger.png" class="no-border" >}}
 
     It can happen that the debugger does not return an element. Check if jQuery is available and if you constructed the code in the correct manner.
 
@@ -150,17 +150,17 @@ You have an action that clicks the Switch widget to alter its state, and now you
 
 3. Add another *Find Widget Child Node* action to find the input element. Make it step 1. Enter `input` in the child node selector parameter. As said before, you don’t use the full selector. Keep the guidelines in mind and give a proper description of the test step and its output:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/findwidget-childnode-input-element.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/findwidget-childnode-input-element.png" class="no-border" >}}
 
     You use this input element to get the current state of the switch: "True for checked" and "False for unchecked."
 
 4. Add the *Is Selected* action and make it the second test step. Connect the output of step 1 that found the input element and give it a proper description:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/is-selected-action-mendix-switch.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/is-selected-action-mendix-switch.png" class="no-border" >}}
 
 5. To use the output of the Is Selected action, you need something to compare it to. The action user must provide the "True" or "False" statement used to set the action. Next, you create the input parameter for the wanted state:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/wanted-state-input-parameter-mendix-switch.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/wanted-state-input-parameter-mendix-switch.png" class="no-border" >}}
 
     Watch the data type! It must be a Boolean here, because the *Is Selected* action also returns a Boolean; otherwise, you couldn’t compare them.
 
@@ -174,7 +174,7 @@ You have an action that clicks the Switch widget to alter its state, and now you
 
 6. Check the **Precondition** box at test step 4 (the *Click/Doubleclick* action) and select the *Assert Not Equals* action. Next, connect the input parameter value and the output of step 2 (the Mendix Switch current state):
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/mendix-switch-precondition-clickdoubleclick.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/mendix-switch-precondition-clickdoubleclick.png" class="no-border" >}}
 
 ## Final Check {#FinalCheck}
 
@@ -189,4 +189,4 @@ After checking these items, you can run the test case that uses this action.
 
 Congratulations! You have added logic to your custom action.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/switch-finished-withlogic.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/switch-finished-withlogic.png" class="no-border" >}}

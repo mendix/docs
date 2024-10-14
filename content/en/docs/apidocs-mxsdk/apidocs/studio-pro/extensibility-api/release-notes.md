@@ -7,6 +7,10 @@ numberless_headings: true
 
 These release notes cover changes to the Extensibility API.
 
+## Version 10.15.1
+
+* We reverted a breaking change in the `IWebView.PostMessage` API where the JSON serialization defaults changed, resulting in incompatible JSON arriving at the web side.
+
 ## Version 10.15.0
 
 * We introduced the Untyped Model Access API. For more details and practical examples, see [How to Use the Untyped Model Access API](/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/untyped-model-access-api/).

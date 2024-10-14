@@ -8,3 +8,11 @@ weight: 15
 
 ## Consumed REST Services
 
+Add a Consumed REST Service document to send REST requests from Studio Pro.
+
+## Documents in This Category
+
+* [Consumed REST Services (Beta)](/refguide/consumed-rest-services/), an overview on how to Consume a REST Service 
+* [Call REST Service](/refguide/call-rest-action/), a description of the microflow action
+* [Use Call REST Service Action in a Microflow](/howto/integration/use-call-rest-action-in-microflow/), instructions on how to use the Call REST Service action in a microflow
+* [HttpRequest and HttpResponse System Entities](/refguide/http-request-and-response-entities/), an overview of these system entities in your domain model

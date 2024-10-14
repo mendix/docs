@@ -11,7 +11,7 @@ The [Gallery](https://marketplace.mendix.com/link/component/116540) widget, a re
 
 Here is an example of a Gallery widget using filters:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/gallery/example.png" alt="Example of gallery using filter and sort"   width="300"  class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/gallery/example.png" alt="Example of gallery using filter and sort"   width="300"  class="no-border" >}}
 
 ### Advanced Options
 
@@ -60,7 +60,7 @@ This option is only available when `Pagination` is marked as `Paging buttons` an
 
 When this option is defined as custom it will show a composable region. Here you can place widgets that will be presented when no items are available to be shown, as well as when the filter does not return any data:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/gallery/empty-message.png" alt="Example of empty message"   width="300"  class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/gallery/empty-message.png" alt="Example of empty message"   width="300"  class="no-border" >}}
 
 #### Dynamic Item Class
 
@@ -68,7 +68,7 @@ In the new Gallery widget we offer an option to dynamically apply a CSS class to
 
 In this example we check the value of `CountryName`, then if the attribute is equal to `Spain` apply the class `.my-custom-class` to the items:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/gallery/dynamic-item-class.png" alt="Example of dynamic item class"   width="300"  class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/gallery/dynamic-item-class.png" alt="Example of dynamic item class"   width="300"  class="no-border" >}}
 
 ### Events
 
@@ -80,7 +80,7 @@ Triggers an action (such as a nanoflow, microflow, or Show page action) when the
 
 ## Filtering
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/gallery/filtering.gif" alt="Example of filtering"   width="300"  class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/gallery/filtering.gif" alt="Example of filtering"   width="300"  class="no-border" >}}
 
 In order to enable filtering within the gallery items you need to select the desired attributes to be filtered in the **Filtering** tab. You can select attributes of the following types:
 
@@ -102,17 +102,17 @@ If a filter is being used and its type does not match with any selected attribut
 
 An example of filtering configuration:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/gallery/filtering.png" alt="Example of filtering configuration"   width="300"  class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/gallery/filtering.png" alt="Example of filtering configuration"   width="300"  class="no-border" >}}
 
 An example of text filter being used in the composable region combined with a drop-down sort:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/gallery/filter-region.png" alt="Example of filtering composable region"   width="300"  class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/gallery/filter-region.png" alt="Example of filtering composable region"   width="300"  class="no-border" >}}
 
 For more information about filters, see the [Filters](/appstore/modules/data-grid-2/#filters) section of *Data Grid 2*.
 
 ## Sorting
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/gallery/sorting.gif" alt="Example of sorting"   width="300"  class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/gallery/sorting.gif" alt="Example of sorting"   width="300"  class="no-border" >}}
 
 In the new Gallery widget it is possible to add sorting widgets to the composable region and use them based on the configurations available in the **Sorting** tab. In order to make the attributes available for the sorting widgets, you must select an attribute and define the name it will show via the sort button.
 
@@ -120,7 +120,7 @@ In the new Gallery widget it is possible to add sorting widgets to the composabl
 If you have a sorting applied in the datasource of the gallery it will pre-select the value in the drop-down filter if it matches the selection made in the configurations and override the filter selected in the datasource in case you have more options defined.
 {{% /alert %}}
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/gallery/sorting.png" alt="Example of sorting configuration"   width="300"  class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/gallery/sorting.png" alt="Example of sorting configuration"   width="300"  class="no-border" >}}
 
 ### Drop-Down Sort {#dropdown}
 

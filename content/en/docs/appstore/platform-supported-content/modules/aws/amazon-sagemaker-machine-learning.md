@@ -41,7 +41,7 @@ To start using SageMaker Studio, perform the following steps:
     1. Put the cursor at the first line.
     2. Click **Run** ({{% icon name="controls-play" %}}) on top, and then click it again to run the model training and create the ONNX file. You only need to execute the first two sections, as shown in the following figure:
 
-        {{< figure src="/attachments/appstore/use-content/modules/aws-sagemaker/file-contents.png" alt="The file contents" class="no-border" >}}
+        {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-sagemaker/file-contents.png" alt="The file contents" class="no-border" >}}
 
     3. After training and testing the model, terminate all running instances to avoid extra charges.
 
@@ -105,11 +105,11 @@ After creating the ONNX model file, import it into Mendix Studio Pro by doing th
 4. Click **Import Model** in the upper left corner and import the ONNX file. Mendix will automatically create the input and output objects.
 5. If an error message appears at the ML Model input, open the entity and fix the issue by selecting **1** as the **Static tensor shape**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-sagemaker/ml-model.png" alt="The Static tensor shape" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-sagemaker/ml-model.png" alt="The Static tensor shape" class="no-border" >}}
 
 6. Verify that the domain model resembles the following screenshot:
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-sagemaker/domain-model.png" alt="The domain model" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-sagemaker/domain-model.png" alt="The domain model" class="no-border" >}}
 
 7. Go to the domain model in the **App Explorer**, add an extra entity, and call it *Email*.
 8. Add the following string attributes to the **Email** entity: 
@@ -117,7 +117,7 @@ After creating the ONNX model file, import it into Mendix Studio Pro by doing th
     * *Prediction* (leave the default value)
 9. Select the email entity and right-click to open the side menu, then select **Generate overview pages**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-sagemaker/generate-pages.png" alt="The Generate overview pages option" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-sagemaker/generate-pages.png" alt="The Generate overview pages option" class="no-border" >}}
 
     Mendix automatically creates the **Email Overview** and **Email_NewEdit** pages, and place them in the **Overview pages** section of the **App Explorer**. 
 
@@ -130,22 +130,22 @@ After creating the ONNX model file, import it into Mendix Studio Pro by doing th
     * A parameter for the email entity.
     * A **Create object** action for the input object of the ML model.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-sagemaker/create-object.png" alt="The Create object action configuration" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-sagemaker/create-object.png" alt="The Create object action configuration" class="no-border" >}}
 
     * The **Call ML model** action; select the available ML model mapping and input object, and then click **OK**.
     * A **Change Object** action; set **Commit** and **Refresh** to **Yes**. As a member, select the prediction, and as value, set the output label of the **OutputObject**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-sagemaker/change-object.png" alt="The Change object action configuration" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-sagemaker/change-object.png" alt="The Change object action configuration" class="no-border" >}}
 
     * A **Close page** action.
 
 15. In the **App Explorer**, open the **Navigation** and select the email overview page as the default page and home page.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-sagemaker/pages.png" alt="The default page and home page highlighted" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-sagemaker/pages.png" alt="The default page and home page highlighted" class="no-border" >}}
 
 16. Click **Run Locally** ({{% icon name="controls-play" %}}) in the upper right corner to run the project. Once it is ready, click **View App** to go to the local application.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-sagemaker/run-app.png" alt="The Run and View App options" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-sagemaker/run-app.png" alt="The Run and View App options" class="no-border" >}}
 
 ## Testing the Spam Filter
 
@@ -153,7 +153,7 @@ After importing the ML model into Mendix Studio Pro, test the performance of the
 
 1. On the homepage of your test app, click **New**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-sagemaker/test-app.png" alt="The test spam filter" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-sagemaker/test-app.png" alt="The test spam filter" class="no-border" >}}
 
 2. Add a message as a payload, for example:
 

@@ -17,7 +17,7 @@ Due to CKEditor 4 reaching end of life support status, we transitioned the rich 
 
 The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget provides the user with an WYSIWYG editor, where the user can enter and edit rich-text content. The widget automatically converts the rich-text content into a string in HTML format, which can be stored in an attribute of an entity.
 
-{{< figure src="/attachments/appstore/use-content/widgets/rich-text/example.jpg" alt="Example" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/rich-text/example.jpg" alt="Example" class="no-border" >}}
 
 ### Features
 
@@ -52,11 +52,11 @@ To configure this widget, follow these steps:
 * **Editor style**
     * **Toolbar** (default) – if selected, the toolbar is always displayed
 
-        {{< figure src="/attachments/appstore/use-content/widgets/rich-text/basic-toolbar.png" alt="Example of toolbar" class="no-border" >}}
+        {{< figure src="/attachments/appstore/platform-supported-content/widgets/rich-text/basic-toolbar.png" alt="Example of toolbar" class="no-border" >}}
 
         * **Inline** – if selected, the toolbar pops up only when the user starts typing in the editor
 
-        {{< figure src="/attachments/appstore/use-content/widgets/rich-text/inline-toolbar.png" alt="Example of toolbar" class="no-border" >}}
+        {{< figure src="/attachments/appstore/platform-supported-content/widgets/rich-text/inline-toolbar.png" alt="Example of toolbar" class="no-border" >}}
     
 * **Value attribute** (required) – sets a String attribute to store the rich-text content
 * **Sanitize content**
@@ -86,15 +86,15 @@ To configure this widget, follow these steps:
 * **Presets** – defines which pre-set buttons are included in the editor
     * **Basic** – if selected, the editor contains buttons suitable for quick input fields
 
-        {{< figure src="/attachments/appstore/use-content/widgets/rich-text/basic-toolbar.png" alt="Example of toolbar" class="no-border" >}}
+        {{< figure src="/attachments/appstore/platform-supported-content/widgets/rich-text/basic-toolbar.png" alt="Example of toolbar" class="no-border" >}}
 
         * **Standard** – if selected, the editor contains buttons used for creating standards-compliant content
 
-        {{< figure src="/attachments/appstore/use-content/widgets/rich-text/standard-toolbar.png" alt="Example of toolbar" class="no-border" >}}
+        {{< figure src="/attachments/appstore/platform-supported-content/widgets/rich-text/standard-toolbar.png" alt="Example of toolbar" class="no-border" >}}
 
         * **Full** – if selected, the editor contains plenty of buttons suitable for various different needs
 
-        {{< figure src="/attachments/appstore/use-content/widgets/rich-text/full-toolbar.png" alt="Example of toolbar" class="no-border" >}}
+        {{< figure src="/attachments/appstore/platform-supported-content/widgets/rich-text/full-toolbar.png" alt="Example of toolbar" class="no-border" >}}
 
     * **Custom** – allows you to make your toolbar with customized options
         * **Toolbar group** 
@@ -155,7 +155,7 @@ To configure this widget, follow these steps:
 * **Enable code highlight**
     * **Yes** – if selected, the **Insert Code Snippet** button below becomes available in the toolbar, which enables the user to insert a code snippet that is displayed with highlighted syntax in the editor 
 
-        {{< figure src="/attachments/appstore/use-content/widgets/rich-text/insert-code-snippet.png" alt="insert-code-snippet" class="no-border" >}}
+        {{< figure src="/attachments/appstore/platform-supported-content/widgets/rich-text/insert-code-snippet.png" alt="insert-code-snippet" class="no-border" >}}
 
     * **No** (default) – if selected, the **Insert Code Snippet** button is unavailable in the toolbar
 * **Advanced content filtering**  

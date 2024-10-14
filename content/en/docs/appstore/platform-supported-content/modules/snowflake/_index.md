@@ -17,7 +17,7 @@ The integration between Mendix and Snowflake is available in either direction. T
 
 The following diagram outlines the available integration options:
 
-{{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/snowflake_architecture_setup.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-rest-sql/snowflake_architecture_setup.png" >}}
 
 ### Building Mendix Apps on Top of Snowflake
 

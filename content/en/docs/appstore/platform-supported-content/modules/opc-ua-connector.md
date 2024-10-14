@@ -64,11 +64,11 @@ The descriptions of the actions are as follows:
 
 7. Click **New configuration** in the upper-right corner of the page.
 
-    {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/new-configuration-overview.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/opcua-connector/new-configuration-overview.png" >}}
 
 8. Follow the instructions in the wizard to set up your connection to an OPC-UA server.
 
-    {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/new-configuration-step-one.png"  >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/opcua-connector/new-configuration-step-one.png"  >}}
 
     {{% alert color="info" %}}If you want to have your own custom business logic to connect to a server, you can also make your own configuration. It is recommended to use the wizard whenever possible. However, it can be the case that the server is not discoverable. If so, you need to create your own microflow that manually sets all the fields on a server configuration object. For more information, see [Advanced Connections](#advanced-connection) section.{{% /alert %}}
 
@@ -82,7 +82,7 @@ Once the configuration is saved, the APIs can be used in your application.
 4. Go to the **Configurations** page.
 5. Click **Browse** and see what data is available on the server.
 
-    {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/browse.png"  >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/opcua-connector/browse.png"  >}}
 
 ## Advanced Connection {#advanced-connection}
 
@@ -286,4 +286,4 @@ The module includes technical reference documentation for the available entities
 The **Documentation** pane displays the documentation for the currently selected element. To view it, perform the following steps:
 
 1. In the [View menu](/refguide/view-menu/) of Studio Pro, select **Documentation**.
-2. Click the element for which you want to view the documentation.  {{< figure src="/attachments/appstore/use-content/modules/doc-pane.png" >}}
+2. Click the element for which you want to view the documentation.  {{< figure src="/attachments/appstore/platform-supported-content/modules/doc-pane.png" >}}

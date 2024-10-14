@@ -22,7 +22,7 @@ To configure connect your Mendix application to Snowflake with the External Data
 4. Provide connection details that can be used to access Snowflake. You can either provide a connection string, or enter connection details. If you enter connection details, a constant with a connection string will be created based on your connection details.
 5. If you decide to use the connection details, copy the **Account URL** from the Snowflake console and use it as the **Host parameter** for the **Connection details**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/snowsight-account-url.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-rest-sql/snowsight-account-url.png" >}}
 
 6. Provide a user name and a password or a private key (also a passphrase if the private key is encrypted).
 7. Click **Test Connection** to verify the connection details, and then click **Save**.
@@ -65,14 +65,14 @@ To execute and test the query in Studio Pro, follow these steps:
 
 4. Click **Run Query**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-basic.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/sample-snowflake-query-basic.png" >}}
 
     {{% alert color="info" %}}As shown in the above example, if your input parameters do no exactly match what the database needs, or if the output of the query does not match what you need in Mendix, you can cast or transform your data in your query. You can also use column aliases to help generate entities with the required names.{{% /alert %}}
 
 5. Verify that the results are correct, and then generate the required entity to collect the data in your Mendix application. For more information, see [External Database Connector: Creating an Entity from the Response](/appstore/modules/external-database-connector/#create-entity).
 6. Create a page with a gallery widget to show the results. Above the gallery widget you need form to allow the user to specify a postalcode. For this you need to create an NPE, e.g. name Filter, with one field, postalcode. The gallery widget will get its data from the Microflow in the next step. You can refresh this widget by using a nanoflow to trigger refresh of the entity shown in the Gallery widget.
 
-    {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-gallery-page.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/sample-snowflake-gallery-page.png" >}}
 
 7. Create a microflow that will run the query by doing the following steps:
     1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
@@ -93,7 +93,7 @@ To execute and test the query in Studio Pro, follow these steps:
         * **List name** - enter *CLIMATOLOGY_DAY*
     11. Click **OK**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-basic-flow.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/sample-snowflake-query-basic-flow.png" >}}
 
 8. Specify the microflow as the datasource for the gallery widget.
 9. Run the page, provide a valid postalcode, and validate the result of the page.
@@ -191,11 +191,11 @@ To define, test and execute the query in Studio Pro, follow these steps:
         * **List name** - enter *STANDARD_TILE_HISTORY_DAY*
     9. Click **OK**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-chart.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/sample-snowflake-query-chart.png" >}}
 
 7. Select the microflow as the [data source for every series in the chart](/refguide/charts-configuration/) that you want to display the weather data.
 
-    {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-chart-source.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/sample-snowflake-query-chart-source.png" >}}
 
 ### Improving the Performance by Fetching the Data in a Single Query
 
@@ -233,7 +233,7 @@ order by 1,2
 
 The **group by** property is used to select the column that indicates the series. This results in a single query send to Snowflake, which is usually faster than executing three separate queries.
 
-{{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-chart-source2.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/sample-snowflake-query-chart-source2.png" >}}
 
 ## Implementing Data Replication
 
@@ -278,25 +278,25 @@ To execute and test the query in Studio Pro, follow these steps:
     
     This query results in a single string return value, containing a nested JSON with weather forecast for today for multiple postal code areas. This resulting string is captured in a non-persistable entity (NPE) with a single attribute.
 
-    {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-replication.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/sample-snowflake-query-replication.png" >}}
 
 4. Use a JSON import mapping to directly import the data into multiple associated persistable entities by doing the following steps:
 
     1. Define a [JSON structure](/refguide/json-structures/) for the data retrieved from Snowflake.
 
-        {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-replication-json.png" >}}
+        {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/sample-snowflake-query-replication-json.png" >}}
 
     2. Define an [import mapping](/refguide/import-mappings/) for the JSON structure.
 
-        {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-replication-map.png" >}}
+        {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/sample-snowflake-query-replication-map.png" >}}
 
 5. Execute the query in a microflow, take the resulting JSON string, and import it by using an **Import from JSON** microflow activity, as shown in the following figure:
 
-    {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-replication-flow.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/sample-snowflake-query-replication-flow.png" >}}
 
 6. Optionally, to track the status of the replication jobs, create a page with a data grid showing data from the [System.ProcessedQueueTask](/refguide/task-queue/) database table.
 
-    {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-replication-grid.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/sample-snowflake-query-replication-grid.png" >}}
 
 ## Using Cortex AI functions
 
@@ -315,7 +315,7 @@ To execute and test the query in Studio Pro, follow these steps:
 
 4. Click **Run Query**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-cortex.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/sample-snowflake-query-cortex.png" >}}
 
 5. Verify that the results are correct, and then generate the required entity to collect the data in your Mendix application. For more information, see [External Database Connector: Creating an Entity from the Response](/appstore/modules/external-database-connector/#create-entity).
 
@@ -339,7 +339,7 @@ To execute and test the query in Studio Pro, follow these steps:
         * **List name** - enter *SentimentResult*
     10. Click **OK**.
   
-    {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-cortex-flow.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/sample-snowflake-query-cortex-flow.png" >}}
 
 7. Configure a method for triggering the **ACT_RetrieveSentiment** microflow. For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
 8. Run the **ACT_RetrieveSentiment** microflow and verify the results.

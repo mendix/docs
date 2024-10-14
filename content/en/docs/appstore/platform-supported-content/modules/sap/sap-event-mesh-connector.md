@@ -79,7 +79,7 @@ The entities in the table below describe all generalizations. These are reused b
 | **Queue** | Queue details response |
 | **QueueSubscriptions** | Queue subscription response |
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-event-mesh-connector/domain-model.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-event-mesh-connector/domain-model.png" class="no-border" >}}
 
 ### Enumerations
 
@@ -122,7 +122,7 @@ The `PublishMessage` activity allows you to publish messages to queues or topics
 
 ##### Sample Microflow
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-event-mesh-connector/publish-message.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-event-mesh-connector/publish-message.png" class="no-border" >}}
 
 #### Consume Message from a Queue
 
@@ -133,7 +133,7 @@ The `ConsumeMessage` activity allows you to consume a message from a queue. It r
 
 ##### Sample Microflow
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-event-mesh-connector/consume-message.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-event-mesh-connector/consume-message.png" class="no-border" >}}
 
 #### Publish Event
 
@@ -147,7 +147,7 @@ The `PublishCloudEvent` activity allows you to publish events that are compliant
 
 ##### Sample Microflow
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-event-mesh-connector/publish-event.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-event-mesh-connector/publish-event.png" class="no-border" >}}
 
 #### Get All Queues
 
@@ -155,7 +155,7 @@ The `GetQueueList` microflow allows you to retrieve a list of queues. It require
 
 ##### Sample Microflow
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-event-mesh-connector/get-queue-list.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-event-mesh-connector/get-queue-list.png" class="no-border" >}}
 
 #### Get Queue Details
 
@@ -163,7 +163,7 @@ The `GetQueueDetails` microflow allows you to retrieve detailed information abou
 
 ##### Sample Microflow
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-event-mesh-connector/get-queue-details.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-event-mesh-connector/get-queue-details.png" class="no-border" >}}
 
 #### Get Queue Subscriptions
 
@@ -171,7 +171,7 @@ The `GetQueueSubscriptions` microflow allows you to retrieve information about s
 
 ##### Sample Microflow
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-event-mesh-connector/get-queue-subscriptions.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-event-mesh-connector/get-queue-subscriptions.png" class="no-border" >}}
 
 #### Create or Update Queue
 
@@ -179,7 +179,7 @@ The `CreateOrUpdateQueue` activity allows you to create a new queue or update an
 
 ##### Sample Microflow
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-event-mesh-connector/create-queue.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-event-mesh-connector/create-queue.png" class="no-border" >}}
 
 #### Delete Queue
 
@@ -187,7 +187,7 @@ The `DeleteQueue` activity allows you to delete a queue. It requires the Managem
 
 ##### Sample Microflow
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-event-mesh-connector/delete-queue.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-event-mesh-connector/delete-queue.png" class="no-border" >}}
 
 #### Create Queue Subscription
 
@@ -199,7 +199,7 @@ The `CreateQueueSubscription` activity allows you to create a new subscription t
 
 ##### Sample Microflow
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-event-mesh-connector/create-queue-subscription.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-event-mesh-connector/create-queue-subscription.png" class="no-border" >}}
 
 #### Delete Queue Subscription
 
@@ -211,4 +211,4 @@ The `DeleteQueueSubscription` activity allows you to delete a subscription to a 
 
 ##### Sample Microflow
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-event-mesh-connector/delete-queue-subscription.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-event-mesh-connector/delete-queue-subscription.png" class="no-border" >}}

@@ -43,7 +43,7 @@ When the **Widget mode** is set to **Basic**, the widget only sends page-trackin
 
 Typically, the Google Tag widget in **Basic** mode is placed in the layout of your app. The widget automatically tracks when the end-user switches pages and sends page view events accordingly. 
 
-{{< figure src="/attachments/appstore/use-content/modules/google-tag/widget-basic-mode.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/google-tag/widget-basic-mode.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 Placing two widgets in **Basic** mode on a page and/or its layout is not supported.
@@ -53,7 +53,7 @@ Placing two widgets in **Basic** mode on a page and/or its layout is not support
 
 Switching the **Widget mode** to **Advanced** gives you full control over the interaction with `gtag.js`. When using this mode, it is advised to have a basic understanding of [gtag.js](https://developers.google.com/tag-platform/gtagjs).
 
-{{< figure src="/attachments/appstore/use-content/modules/google-tag/widget-advanced-event.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/google-tag/widget-advanced-event.png" class="no-border" >}}
 
 #### Config Command {#widget-advanced-config}
 
@@ -77,7 +77,7 @@ One typical use case of the widget in this scenario is custom page view tracking
 
 The **Parameters** property allows for sending additional data along with the commands issued to `gtag.js`. Examples of parameters are **Page Name** and **Session ID** sent together with the page view event. The value of a parameter might be set as a custom value via an expression or chosen from a predefined set. 
 
-{{< figure src="/attachments/appstore/use-content/modules/google-tag/parameter-value-type.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/google-tag/parameter-value-type.png" class="no-border" >}}
 
 ## Google Tag Command {#jsaction}
 

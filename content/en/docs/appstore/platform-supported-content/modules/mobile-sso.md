@@ -12,7 +12,7 @@ The [Mobile SSO](https://marketplace.mendix.com/link/component/223516) module al
 
 The following diagram gives an overview of architecture of the module:
 
-{{< figure src="/attachments/appstore/use-content/modules/mobile-sso/Module architecture.png" max-width=80% >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/mobile-sso/Module architecture.png" max-width=80% >}}
 
 {{% alert color="info" %}} If you are building a Progressive Web Application (PWA), you need to use [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module instead. {{% /alert %}}
 
@@ -98,13 +98,13 @@ In the **Native mobile (tablet & phone)** tab, configure the **Role-based home p
 * Use `MobileSSO.Login_Native` when you do not want to automatically redirect to the Identity Provider (IdP) login page, especially when only one IdP is configured. This option allows end-users to sign in directly without redirection.
 * Use `MobileSSO.Login_Native_Automatic` if you want end-users to redirect automatically to the IdP sign in page when only one IdP is configured.
 
-{{< figure src="/attachments/appstore/use-content/modules/mobile-sso/configuring navigation.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/mobile-sso/configuring navigation.png" class="no-border" >}}
 
 ### Configuring Custom Login Page
 
 If you want to customize the login page, make sure to add the **App events** widget in the page and call the `MobileSSO.OL_RegisterDeeplink` nanoflow. This step helps to integrate the custom login page with Mobile SSO module.
 
-{{< figure src="/attachments/appstore/use-content/modules/mobile-sso/Custom login.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/mobile-sso/Custom login.png" class="no-border" >}}
 
 ### Configuring Client Information {#client-info}
 
@@ -116,7 +116,7 @@ The following subsections show how to set up IdP for mobile or web and mobile pl
 
 {{% alert color="info" %}} Make sure to add a **Custom callback URL** in the client and IdP. This configuration is optional for web apps but mandatory for mobile apps. For Example, *`APP_NAME`*`://oauth/callback`, where *`APP_NAME`* is an application name which is used to create the application using **Build Native Mobile App** {{% /alert %}}
 
-{{< figure src="/attachments/appstore/use-content/modules/mobile-sso/Configure client information.png" class="no-border" >}} 
+{{< figure src="/attachments/appstore/platform-supported-content/modules/mobile-sso/Configure client information.png" class="no-border" >}} 
 
 When testing locally, add the `makeitnative://oauth/callback` URL in the **Custom callback URL** tab. This configuration also supports signing in with acr_values.
 
@@ -142,7 +142,7 @@ When you are building the native mobile app using **Build Native Mobile App** op
 1. Turn on **Deep Link**.
 1. After turning on the **Deep Link**, add the same *`APP_NAME`* from *`APP_NAME`*`://oauth/callback` to the **App Scheme**. For more information, see the [Configuring Client Information](#client-info) section above.
 
-{{< figure src="/attachments/appstore/use-content/modules/mobile-sso/Deeplink.png" max-width=80% >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/mobile-sso/Deeplink.png" max-width=80% >}}
 
 ### Configuring IdP
 
@@ -154,7 +154,7 @@ The following subsections show how to configure your *Entra ID or Okta IdP*:
 2. Click **New registration**, provide required information, and click **Register**.
 3. In the **Authentication** tab, select **No** to disable the option to **Allow public client flows** as this module only supports confidential client flows.
 
-    {{< figure src="/attachments/appstore/use-content/modules/mobile-sso/Public client flows.png" max-width=80% >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/mobile-sso/Public client flows.png" max-width=80% >}}
 
 4. Add the following JSON representations to the **Manifest** of the application:
 
@@ -173,7 +173,7 @@ The following subsections show how to configure your *Entra ID or Okta IdP*:
             }
             ```
 
-            {{< figure src="/attachments/appstore/use-content/modules/mobile-sso/microsoft_graph.png" max-width=80% >}}
+            {{< figure src="/attachments/appstore/platform-supported-content/modules/mobile-sso/microsoft_graph.png" max-width=80% >}}
 
         2. Update the **Manifest** in the **ADD Graph App Manifest (Deprecating Soon)** tab by updating the following JSON representations. 
 
@@ -186,7 +186,7 @@ The following subsections show how to configure your *Entra ID or Okta IdP*:
             ],
             ```
         
-            {{< figure src="/attachments/appstore/use-content/modules/mobile-sso/ADD_graph.png" max-width=80% >}}
+            {{< figure src="/attachments/appstore/platform-supported-content/modules/mobile-sso/ADD_graph.png" max-width=80% >}}
 
         {{% alert color="info" %}} Use the same *`APP_NAME`* which you used in the **Custom callback URL** tab of the configuration and while building the application using **Build Native Mobile App**. For more information, see the [Configuring Client Information](#client-info) and [Building Native Mobile App](#build-native) sections above. {{% /alert %}}
 
@@ -233,7 +233,7 @@ The following subsections show how to configure your *Entra ID or Okta IdP*:
 1. Select **OIDC-OpenID Connect** option for the **Sign-in method**.
 1. Select **Native Application** for the **Application type** and click **Next**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/mobile-sso/Okta1.png" max-width=80% >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/mobile-sso/Okta1.png" max-width=80% >}}
 
 1. In the **Sign-in redirect URIs** of the **LOGIN** field, add the following application URI:
 
@@ -241,13 +241,13 @@ The following subsections show how to configure your *Entra ID or Okta IdP*:
 
         {{% alert color="info" %}} Use the same *`APP_NAME`* which you used in the **Custom callback URL** tab of the configuration and while building the application using **Build Native Mobile App**. For more information, see the [Configuring Client Information](#client-info) and [Building Native Mobile App](#build-native) App sections above. {{% /alert %}}
 
-        {{< figure src="/attachments/appstore/use-content/modules/mobile-sso/Okta deployed.png" max-width=80% >}}
+        {{< figure src="/attachments/appstore/platform-supported-content/modules/mobile-sso/Okta deployed.png" max-width=80% >}}
 
     2. For local testing: `http://<IP_address>/oauth/v2/callback` and `makeitnative://oauth/callback`
 
         {{% alert color="info" %}} Make sure to add `makeitnative://oauth/callback` to the **Custom callback URL** tab of the configuration. For more information, see the [Configuring Client Information](#client-info) section above.{{% /alert %}}
 
-        {{< figure src="/attachments/appstore/use-content/modules/mobile-sso/Okta local.png" max-width=80% >}}
+        {{< figure src="/attachments/appstore/platform-supported-content/modules/mobile-sso/Okta local.png" max-width=80% >}}
 
 1. Save the configuration and use the **Client Secret**, **Client ID**, and **Automatic Configuration URL** to import the configuration in the **OIDC_Client_Overview** page of the OIDC SSO module.
 1. Add the required scopes such as, `openid`, `profile`, and `email`.

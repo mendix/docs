@@ -56,7 +56,7 @@ The technical purpose of GenAI Commons module is to define a common domain model
 
 The domain model in Mendix is a data model that describes the information in your application domain in an abstract way. For more general information, see the [Domain Model](/refguide/domain-model/) documentation. To learn about where the entities from the domain model are used and relevant during implementation, see the [Microflows](#microflows) section below.
 
-{{< figure src="/attachments/appstore/use-content/modules/genai/genaicommons/genai-commons-domain-model.png" alt="" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genaicommons/genai-commons-domain-model.png" alt="" >}}
 
 #### `Connection` {#connection}
 
@@ -185,7 +185,7 @@ An optional citation. This entity can be used to visualize the link between a pa
 
 #### `ChunkCollection` {#chunkcollection}
 
-{{< figure src="/attachments/appstore/use-content/modules/genai/genaicommons/genai-commons-domain-model-embeddings.png" alt="">}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genaicommons/genai-commons-domain-model-embeddings.png" alt="">}}
 
 This entity represents a collection of chunks. It is a wrapper entity for [Chunk](#chunk-entity) objects or specialization(s) to pass it to operations that execute embedding calculations or knowledge base interaction. 
 

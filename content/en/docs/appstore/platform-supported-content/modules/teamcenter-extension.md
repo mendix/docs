@@ -129,13 +129,13 @@ The landing page has with three tabs: **Menu**, **History**, and **Settings**.
 
 The **Menu** tab displays use cases or actions you can create artifacts for using Teamcenter Extension.
 
-{{< figure src="/attachments/appstore/use-content/modules/teamcenter-extension/menu-tab.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/teamcenter-extension/menu-tab.png" >}}
 
 #### History Tab
 
 The **History** tab displays the history of all actions (also referred as integrations) carried out in Teamcenter Extension.
 
-{{< figure src="/attachments/appstore/use-content/modules/teamcenter-extension/history-tab.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/teamcenter-extension/history-tab.png" >}}
 
 On the **History** tab, you can view details of each action, such as entities and microflows created, Teamcenter URL used to connect with, the preview of the import mapping, and much more. 
 
@@ -164,7 +164,7 @@ If you select an item in the **Action** list, Teamcenter Extension performs a va
 
 The **Settings** tab displays the Teamcenter configuration page. 
 
-{{< figure src="/attachments/appstore/use-content/modules/teamcenter-extension/settings-tab.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/teamcenter-extension/settings-tab.png" >}}
 
 On the **Settings** tab, you can provide your Teamcenter Instance details to connect to, while building your app and using Teamcenter Extension. Click **Edit** to open a panel to enter details. The certificate path should be relative to the app directly.
 
@@ -181,7 +181,7 @@ In Teamcenter Extension, the import mapping consists of the following steps:
 1. Object mapping: As Teamcenter works with many layers of specializations of its business objects, in the import mapping page, you need to configure which object type you want to retrieve from Teamcenter and what Mendix objects need to be created, when retrieving these business objects. This is called object mapping.
 2. Selection of properties, references, and relations: Configure which properties, references, and relations you want to retrieve from Teamcenter and include in your Mendix model .
 
-{{< figure src="/attachments/appstore/use-content/modules/teamcenter-extension/domain-model.png" max-width=80% >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/teamcenter-extension/domain-model.png" max-width=80% >}}
 
 #### Object Mapping {#objectmapping}
 
@@ -189,7 +189,7 @@ Clicking any one of the empty boxes in the import mapping page opens the object 
 
 The relevant objects and entities are dependent on the actions you are configuring. For example, for the action to get `ItemRevisions` from Teamcenter, the Teamcenter tree has an `ItemRevision` as its root object. That means that, for this action, you can only select `ItemRevisions` or its specializations. Similarly, in this example, the Mendix tree has the `TcConnector.ItemRevision` entity as its root entity.
 
-{{< figure src="/attachments/appstore/use-content/modules/teamcenter-extension/select-objects.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/teamcenter-extension/select-objects.png" >}}
 
 When retrieving a tree of objects, relevance can also be based on the type of the relation or reference. When working with typed relations o references, the type of Teamcenter business object is dictated by the relation or reference. By limiting the list of Teamcenter objects and Mendix entities to those that are relevant, Teamcenter Extension guides you to select Teamcenter business objects that make sense in the context of the action you want to perform.
 
@@ -197,7 +197,7 @@ To configure which type of Teamcenter business object you are interested in and 
 
 It is also possible to create new entities for your integrations. This new entity needs to be a specialization of the root entity in the Mendix tree or one of its specializations. When you want to use a new entity, click your generalization of choice, click the **Create new specialization of selected entity** check box and provide an entity name. Once finishing the configuration for the actions, Teamcenter Extension will create a new entity with the given name and the selected entity as its generalization. You can also reuse or create the specialization of the generated entities in subsequent actions.
 
-{{< figure src="/attachments/appstore/use-content/modules/teamcenter-extension/new-entity.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/teamcenter-extension/new-entity.png" >}}
 
 Once you click **OK**, you will return to the import mapping tab with a sidebar open for you to configure which Teamcenter properties, references, and relations to include when retrieving data for this business object.
 
@@ -214,7 +214,7 @@ You often see that check boxes are selected by default or grayed out. In general
 
 As an example, if a check box for reading ({{% icon name="view" %}}) is selected and grayed out, it means that property already exists as an attribute on the selected object or one of its generalizations. Similarly, if a check box for writing ({{% icon name="pencil" %}}) is selected and grayed out, it means the property is required during creation or revision of the selected object.
 
-{{< figure src="/attachments/appstore/use-content/modules/teamcenter-extension/attributes-associations.png" max-width=60% >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/teamcenter-extension/attributes-associations.png" max-width=60% >}}
 
 You can select and deselect the properties, references, and relations depending on the data you need from Teamcenter. When you select a reference or relation, a new placeholder entity will be added to the object mapping tree. You will need to perform the import mapping for these referenced or related objects in a subsequent step (business object mapping and selection of Teamcenter properties, references, and relations).
 
@@ -222,7 +222,7 @@ You can select and deselect the properties, references, and relations depending 
 
 Once you finished import mapping, click **Generate** to create microflows for the selected use case and its corresponding domain model. These artifacts can be used in your app logic.
 
-{{< figure src="/attachments/appstore/use-content/modules/teamcenter-extension/microflow.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/teamcenter-extension/microflow.png" >}}
 
 ## Upgrading Teamcenter Extension V 1.0.0 to V 2.0.0 {#upgrade}
 

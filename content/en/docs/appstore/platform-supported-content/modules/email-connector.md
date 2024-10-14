@@ -191,13 +191,13 @@ Email connector now supports the export and import of email templates. This feat
 
 Select the email template that you want to export and click **Export**. The exported XML file is named with the email template name and a datetime stamp and is downloaded directly to your default download folder. The image below shows the downloaded XML file after the email template export.
 
-{{< figure src="/attachments/appstore/use-content/modules/email-connector/export-email-template.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/email-connector/export-email-template.png" class="no-border" >}}
 
 #### Importing Email Template
 
 You can import the exported email template into the same or a different deployment environment. Click **Import** to start importing the email template. A pop-up window will appear, allowing you to browse for the template file (.xml) to import. Click **Import Template** to complete the email template import process. After successfully importing the email template, you will receive a status message notification.
 
-{{< figure src="/attachments/appstore/use-content/modules/email-connector/import-email-template.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/email-connector/import-email-template.png" class="no-border" >}}
 
 ### Signed and Encrypted Emails
 
@@ -285,7 +285,7 @@ This connector contains functionality for sending and receiving emails, so durin
 
 On the [Azure portal](https://portal.azure.com/), ensure you have the following permissions enabled under the **API permissions** tab on the sidebar:
 
-{{< figure src="/attachments/appstore/use-content/modules/email-connector/app-permissions.png" alt="API permissions for authentication code flow" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/email-connector/app-permissions.png" alt="API permissions for authentication code flow" class="no-border" >}}
 
 #### Settings in the Microsoft Azure Portal (Client Credentials Flow)
 
@@ -295,7 +295,7 @@ This connector contains functionality for sending and receiving emails, so APIs 
 
 On the [Azure portal](https://portal.azure.com/), ensure you have the following permissions enabled under **API permissions** tab on the sidebar:
 
-{{< figure src="/attachments/appstore/use-content/modules/email-connector/client-cred-api-permissions.png" alt="API permissions for client credentials flow" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/email-connector/client-cred-api-permissions.png" alt="API permissions for client credentials flow" class="no-border" >}}
 
 Admin status is given on the added API permissions. The tenant admin must register the Azure application's service principal in Exchange via Exchange Online PowerShell, as described in [Register service principals in Exchange](https://learn.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth#register-service-principals-in-exchange).
 
@@ -377,4 +377,4 @@ If you already have the [included widgets](#included-widgets) in your app and th
 
 You may get a consistency error when importing the Email Connector module in Mendix 10.1 or above that states *"No argument has been selected for parameter "Token" and no default is available"*. This can be resolved by double-clicking the error, which takes you to the snippet **SNIP_EmailTemplate_NewEdit**. Double-click the **Edit [default]** button, then in the **Events** field under **Page settings**, click **Edit**. Once the **Page Settings** dialog box opens, click **OK**, as shown in the image below. The error should resolve. 
 
-{{< figure src="/attachments/appstore/use-content/modules/email-connector/consistency-error-token.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/email-connector/consistency-error-token.png" class="no-border" >}}

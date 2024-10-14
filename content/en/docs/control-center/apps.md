@@ -18,6 +18,8 @@ The **Apps** page gives an overview of all the apps belonging to your company. T
 We will enhance this page to provide information about apps deployed on standalone private clouds. Stay tuned.
 {{% /alert %}}
 
+The search bar on top of the page enables you to search for any app belonging to your company. The search results show up in a pop-up window. Clicking the app opens the app details of the cloud you are part of.
+
 ## Mendix Cloud
 
 The **Mendix Cloud** tab gives an overview of all the licensed apps that can be published on Mendix Cloud.

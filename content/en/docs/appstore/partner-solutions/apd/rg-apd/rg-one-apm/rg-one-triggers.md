@@ -19,7 +19,7 @@ Measurement triggers are used to check measurements for a specific value. If the
 
 The trigger definition tab contains the **Description** and **Enabled** attributes as well as specific settings for the different trigger types.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-triggers/Trigger_Definition.png" class="no-border" >}}   
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-triggers/Trigger_Definition.png" class="no-border" >}}   
 
 #### Shared Fields
 
@@ -46,7 +46,7 @@ The trigger definition tab contains the **Description** and **Enabled** attribut
 
 Trigger actions define what happens when the trigger fires.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-triggers/Trigger_Actions.png" class="no-border" >}} 
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-triggers/Trigger_Actions.png" class="no-border" >}} 
 
 These are possible trigger actions:
 
@@ -64,7 +64,7 @@ These are only visible with special permissions:
 
 The continuation tab enables configuration of what happens after the trigger has fired and the action has been run.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-triggers/Trigger_Continuation.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-triggers/Trigger_Continuation.png" class="no-border" >}}
 
 You can:
 
@@ -80,7 +80,7 @@ If a trigger fires, a record is created in the triggered events. The events are 
 
 **Remove triggered events after (days)**. If you want to keep an event for future reference, you can keep the event using the keep-button above the triggered event grid.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-measurements-tool/Triggered_Events.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-measurements-tool/Triggered_Events.png" class="no-border" >}}
 
 If a trap is created with the trigger actions, you can open the trap.
 

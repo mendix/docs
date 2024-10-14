@@ -20,7 +20,7 @@ To open the **Edit Profile** page, do the following:
 
 2. Click **Show Profile**.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-profile/profile.png" alt="Edit profile page" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-profile/profile.png" alt="Edit profile page" class="no-border" >}}
 
 ### Changing the Full Name 
 

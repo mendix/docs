@@ -13,7 +13,7 @@ A dialog box opens where you give your test case a name and an optional descript
 
 ## Test Case Details
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-test-case/testcase-details.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-test-case/testcase-details.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 
@@ -43,11 +43,11 @@ In the top right corner of the screen, you will find the **Export** and **Run** 
 
 Test steps describe the actions that the test case performs. You can add new test steps by searching an action in the **Add step** box. For a more detailed search, use the **Test Step Setup** dialog box by clicking this button:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-test-case/search-button.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-test-case/search-button.png" class="no-border" >}}
 
 A dialog box will open where you can search for a specific action or you explore all the available actions inside ATS and your current project:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-test-case/select-function-action.png" class="no-border" >}}.
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-test-case/select-function-action.png" class="no-border" >}}.
 
 After you have found the desired action, add it to your test case as a test step by selecting it and clicking **Select**.
 
@@ -73,8 +73,8 @@ Test steps have three different call types: setup, regular, and teardown. ATS ma
 
 | Icon                                     | Meaning  |
 | ---------------------------------------- | -------- |
-| {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-test-case/setting-gears-2.png" class="no-border" >}} | Setup    |
-| {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-test-case/hammer-2.png" class="no-border" >}}       | Teardown |
+| {{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-test-case/setting-gears-2.png" class="no-border" >}} | Setup    |
+| {{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-test-case/hammer-2.png" class="no-border" >}}       | Teardown |
 
 For more information about the call types of test steps, see [Test Step](/appstore/partner-solutions/ats/rg-two-test-step/).
 

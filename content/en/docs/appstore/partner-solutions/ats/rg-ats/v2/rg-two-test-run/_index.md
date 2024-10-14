@@ -16,7 +16,7 @@ Before a test is run, the **Job Configuration** page opens. For every test run, 
 
 You can also cancel a running job by pressing **Cancel** in the corresponding line on the test run page. This immediately cancels the job and interrupts all the running test steps.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-test-run/job-cancel.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-test-run/job-cancel.png" class="no-border" >}}
 
 ## Special Behavior 
 

@@ -11,7 +11,7 @@ The ATS Desktop recorder is a function/plugin in ATS that records the actions be
 
 To use the recorder function, you must have the Google Chrome browser installed on your system, install the **ATS Recorder** Chrome plugin, and download and install the ATS Desktop Recorder. To install the plugin, click **Information** ({{% icon name="info-circle" %}}) in the upper-right corner of the screen:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-recorder/information-icon.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-recorder/information-icon.png" class="no-border" >}}
 
 Clicking the **ATS Recorder** link will lead you to the Chrome Web Store, where you can add the plugin to your browser. The recorder is called the ATS Desktop Recorder.
 
@@ -19,13 +19,13 @@ Clicking the **ATS Recorder** link will lead you to the Chrome Web Store, where 
 
 Before you can use the ATS Desktop Recorder, you must set your project preferences to the Desktop Recorder. You can open the project preferences from any page by clicking **Preferences** ({{% icon name="cog" %}}):
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-recorder/configure-project-preferences.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-recorder/configure-project-preferences.png" class="no-border" >}}
 
 With the ATS Recorder plugin installed, you can start a recording session at any time by clicking the **Record** button inside a test case or an action. You open the Mendix application you want to test in another tab of the browser, and then start testing the application by walking through the app manually. Then ATS will record all the steps.
 
 Open the recording session with three recorded test steps:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-recorder/recording.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-recorder/recording.png" class="no-border" >}}
 
 Some recorded test steps offer you several actions to choose from. In the example above, you can choose one of the following actions:
 

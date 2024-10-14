@@ -7,7 +7,7 @@ url: /appstore/partner-solutions/ats/rg-two-app/
 
 The dashboard is where you find all information about the results of your tests. It is split into two parts: **Current Status and 7-Day History** infographics and the **Recent Tests** result tree.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-app/dashboard.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-app/dashboard.png" class="no-border" >}}
 
 ### Infographics
 
@@ -47,9 +47,9 @@ The following three icons exist for test cases, test suites, and data-driven tes
 
 | Icon                                     | Meaning    |
 | ---------------------------------------- | ---------- |
-|{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-app/test-case-icon.png" class="no-border" >}} | Test case  |
-|{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-app/test-suite-icon.png" class="no-border" >}} | Test suite |
-|{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-app/ddt-icon.png" class="no-border" >}}| Data-driven test case |
+|{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-app/test-case-icon.png" class="no-border" >}} | Test case  |
+|{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-app/test-suite-icon.png" class="no-border" >}} | Test suite |
+|{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-app/ddt-icon.png" class="no-border" >}}| Data-driven test case |
 
 To open the latest execution log, click **Show Log**. When you click the **name of a test case/test suite**, the edit page opens.
 
@@ -73,7 +73,7 @@ Settings is the central point for configuring ATS. You can set the Mendix API Ke
 
 Only App Admins can access the settings. Testers can only use the available deployments and Selenium hubs.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-app/settings.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-app/settings.png" class="no-border" >}}
 
 {{% /alert %}}
 
@@ -83,7 +83,7 @@ Under **Environments**, you add the different environment URLs that you use for 
 
 You edit, create, and delete the applications by clicking the buttons in the top bar:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-app/deployments.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-app/deployments.png" class="no-border" >}}
 
 When you create a new application, set the following parameters:
 
@@ -96,7 +96,7 @@ When you create a new application, set the following parameters:
 
 Under **Selenium Hubs**, you add the different Selenium hubs that you use for the current app. The users run the tests on the listed hubs. To add a new Selenium hub, click **New** in the top menu:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-app/selenium-hub.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-app/selenium-hub.png" class="no-border" >}}
 
 In the **Edit Selenium Hub** dialog box, set the following parameters:
 

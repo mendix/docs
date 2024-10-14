@@ -34,19 +34,19 @@ To install the ATS Helper, follow these steps:
 
 1. Open ATS and click **Information** ({{% icon name="info-circle" %}}) in the upper-right corner of the screen:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-install-ats-helper-recorder/information-icon.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-install-ats-helper-recorder/information-icon.png" class="no-border" >}}
 
     This opens the **ATS Information** dialog box:
    
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-install-ats-helper-recorder/ats-information-screen.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-install-ats-helper-recorder/ats-information-screen.png" class="no-border" >}}
 
 2. Drag the ATS Helper into your bookmark bar to link it there:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-install-ats-helper-recorder/drag-drop-ats-helper.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-install-ats-helper-recorder/drag-drop-ats-helper.png" class="no-border" >}}
 
 To use the ATS Helper, select the bookmark, press <kbd>Ctrl</kbd>, and hover over a widget. The ATS Helper will show the information of that widget.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-install-ats-helper-recorder/ats-helper-widget.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-install-ats-helper-recorder/ats-helper-widget.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 The ATS Helper only works on standalone widgets.
@@ -60,17 +60,17 @@ To install the ATS Recorder, follow these steps:
 
 1. Open ATS and click **Information** ({{% icon name="info-circle" %}}) in the upper-right corner of the screen:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-install-ats-helper-recorder/information-icon.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-install-ats-helper-recorder/information-icon.png" class="no-border" >}}
 
     This opens the **ATS Information** dialog box.    
 
 2. Click the **ATS Recorder (Chrome Web Store)** link to go to the Chrome Web Store.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-install-ats-helper-recorder/ats-information-screen-recorder.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-install-ats-helper-recorder/ats-information-screen-recorder.png" class="no-border" >}}
 
 3. Click **ADD TO CHROME** to add the ATS Recorder extension:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-install-ats-helper-recorder/add-ats-recorder.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-install-ats-helper-recorder/add-ats-recorder.png" class="no-border" >}}
 
 See [How to Create a Test Case](/appstore/partner-solutions/ats/ht-two-create-a-test-case/) for more information on how to use the ATS Helper.
 

@@ -59,7 +59,7 @@ In these instructions, it is assumed that your main module is **MyFirstModule**.
 
 1. Open the [App Settings](/refguide/app-settings/) and make the following changes:
     * In the [Configurations](/refguide/configuration/) tab, edit the current configuration to add a 32-character string value for the constant **Encryption.EncryptionKey**.
-        {{< figure src="/attachments/appstore/use-content/modules/forgot-password/encryption-key.png" class="no-border" >}}
+        {{< figure src="/attachments/appstore/platform-supported-content/modules/forgot-password/encryption-key.png" class="no-border" >}}
     * In the **Runtime** tab, add the microflow **Deeplink.StartDeeplink** as the **After startup** microflow or as a sub-microflow to an existing after startup microflow.
     {{% alert color="warning" %}}For the Forgot Password module version 6.0.0 (Mendix 10.6.0 and above), do not add the **Deeplink.StartDeeplink** microflow as the **After startup** microflow.{{% /alert %}}
     * If you are changing the **URL prefix** value in the **Runtime** tab, ensure that you use the same value in the URLPrefix constant of the Forgot Password module. Otherwise, the signup and reset URLs will not work.
@@ -95,7 +95,7 @@ In these instructions, it is assumed that your main module is **MyFirstModule**.
     * In the **Anonymous users** tab, set **Allow Anonymous users** to *Yes*
 1. Open [Navigation](/refguide/navigation/) and do the following:
     * Set **Role-based home pages** so the target of user role **Guest** is **ForgotPassword.Nav_GuestHomePage**
-        {{< figure src="/attachments/appstore/use-content/modules/forgot-password/role-based-home.png" class="no-border" >}}
+        {{< figure src="/attachments/appstore/platform-supported-content/modules/forgot-password/role-based-home.png" class="no-border" >}}
         The **Nav_GuestHomePage** microflow is the home page for an anonymous user. This microflow either shows the login page or triggers the deep link process which performs the reset password function.
     * Add the menu item **ForgotPasswordConfiguration** to the app navigation. Link this item to the **ForgotPassword.ForgotPasswordConfiguration_Edit** page and assign it to the **Administrator** user role.
         {{% alert color="warning" %}}The **ForgotPasswordConfiguration** page should be accessible to the administrator only. It allows the administrator to configure the email template and deep link, and it shows all the open password reset requests.{{% /alert %}}
@@ -122,7 +122,7 @@ To disable the sign up functionality and use the Forgot Password module only for
 
 1. In the **Deeplink** tab, configure the deeplink to use the **ForgotPassword.Step3_DL_SetNewPassword** microflow.
         {{% alert color="info" %}}The **Deeplink** tab is not available in version 6.0.0 (for Mendix 10.6.0 and above) as the Deep Link module has been deprecated.{{% /alert %}}
-        {{< figure src="/attachments/appstore/use-content/modules/forgot-password/configure-deeplink.png" class="no-border" >}}
+        {{< figure src="/attachments/appstore/platform-supported-content/modules/forgot-password/configure-deeplink.png" class="no-border" >}}
 
 ### Using Email Aliases{#email-aliases}
 
@@ -140,15 +140,15 @@ You may have to configure an email alias on your SMTP server if you are using a 
 1. On the sign in page, click **Signup**.
 1. Enter your name and email ID and click **Send**. You will get confirmation that a password recovery email has been sent.
   
-    {{< figure src="/attachments/appstore/use-content/modules/forgot-password/test-signup.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/forgot-password/test-signup.png" class="no-border" >}}
 
     You will receive an email containing a link to reset your password.
   
-    {{< figure src="/attachments/appstore/use-content/modules/forgot-password/email-example.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/forgot-password/email-example.png" class="no-border" >}}
 
 1. Open the link in the browser. You can now reset your password.
 
-    {{< figure src="/attachments/appstore/use-content/modules/forgot-password/reset-password-page.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/forgot-password/reset-password-page.png" class="no-border" >}}
 
 ## Upgrading to a Later Version
 
@@ -164,11 +164,11 @@ To convert the Mendix 8.18.x to Mendix 9.12.5 or above, follow the steps below:
 
     You will see four errors in the [Errors Pane](/refguide/errors-pane/).
 
-    {{< figure src="/attachments/appstore/use-content/modules/forgot-password/upgrade-errors.png" alt="Four CE1613 errors in the errors pane" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/forgot-password/upgrade-errors.png" alt="Four CE1613 errors in the errors pane" class="no-border" >}}
 
 1. Double-click one of the errors to open the error page and change the (primary) layout to **Atlas_TopBar(Atlas_UI_Resources)**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/forgot-password/change-layout.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/forgot-password/change-layout.png" class="no-border" >}}
 
     This will resolve two of the errors.
 1. Open the error page and again change the (primary) layout to **Atlas_TopBar(Atlas_UI_Resources)**.

@@ -59,7 +59,7 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
 1. In the **App Explorer**, find and open the domain model for your app.
 2. Right-click on the working area of the domain model, and then click **Add entity**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-dynamodb/addentity.png" alt="Adding a new entity to the domain model" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-dynamodb/addentity.png" alt="Adding a new entity to the domain model" class="no-border" >}}
 
 3. Open the new entity by double-clicking on it.
 4. Enter a name for the entity, for example, `DBTable`.
@@ -70,17 +70,17 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
     The parameters that you need to configure depend on the contents of the response that an activity expects. The **ListTables** activity used in this example only expects the database table name as a response. Other activities require different parameters. For more information, see [Technical Reference](#technical-reference).
 6. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
     
-    {{< figure src="/attachments/appstore/use-content/modules/aws-dynamodb/addmicroflow.png" alt="Adding a microflow" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-dynamodb/addmicroflow.png" alt="Adding a microflow" class="no-border" >}}
 
 7. Enter a name for your microflow, for example, *DS_ListTables*, and then click **OK**.
 8. In the **App Explorer**, in the **AmazonDynamoDBConnector** > **Operations** section, find the **ListTables** activity.
 9. Drag the **ListTables** activity onto the work area of your microflow.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-dynamodb/listtables.png" alt="The DS_ListTables microflow with the ListTables activity" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-dynamodb/listtables.png" alt="The DS_ListTables microflow with the ListTables activity" class="no-border" >}}
 
 10. In the **Properties** pane for the microflow, in the **Security** section, select a user role that should be allowed to run the microflow.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-dynamodb/microflowsecurity.png" alt="The Properties pane of a microflow" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-dynamodb/microflowsecurity.png" alt="The Properties pane of a microflow" class="no-border" >}}
 
 11. Double-click the **ListTables** activity to configure the required parameters.
   
@@ -108,39 +108,39 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
 23. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
 24. Position the **Retrieve** activity between the **ListTables** activity and the microflow end event.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-dynamodb/microflow.png" alt="The microflow with the Retrieve activity added" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-dynamodb/microflow.png" alt="The microflow with the Retrieve activity added" class="no-border" >}}
 
 25. Double-click the **Retrieve** activity.
 26. In the **Association** section, click **Select**.
 27. In the **Select Association** dialog box, expand the **Variable** item, and then select **ListTablesResponse** as the association.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-dynamodb/selectassociation.png" alt="Selecting the association" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-dynamodb/selectassociation.png" alt="Selecting the association" class="no-border" >}}
 
 28. Click **OK**.
 29. In the **Toolbox** pane, search for the **Create list** activity and drag it onto the microflow area.
 30. Position the **Create list** activity between the microflow start event and the **ListTables** activity.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-dynamodb/createlist.png" alt="The microflow with the Create list activity added" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-dynamodb/createlist.png" alt="The microflow with the Create list activity added" class="no-border" >}}
 
 31. Double-click the **Create list** activity.
 32. In the **Entity** section, click **Select**.
 33. In the **Select Entity** dialog box, select the entity that you previously added to your domain model, for example, `DBTable`.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-dynamodb/selectentity.png" alt="Selecting the entity" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-dynamodb/selectentity.png" alt="Selecting the entity" class="no-border" >}}
 
 34. In the **Toolbox** pane, search for the **Loop** activity and drag it onto the microflow area.
 35. Position the **Loop** activity before the microflow end event.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-dynamodb/addloop.png" alt="The microflow with the loop added" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-dynamodb/addloop.png" alt="The microflow with the loop added" class="no-border" >}}
 
 36. Double-click the **Loop** activity.
 37. In the **Iterate over** list, select **ListTableList**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-dynamodb/editloop.png" alt="Selecting the entity to iterate over" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-dynamodb/editloop.png" alt="Selecting the entity to iterate over" class="no-border" >}}
 
 38. In the **Toolbox** pane, search for the **Create object** activity and drag it inside the loop area.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-dynamodb/createobject.png" alt="The microflow with the Create activity added" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-dynamodb/createobject.png" alt="The microflow with the Create activity added" class="no-border" >}}
 
 39. Double-click the **Create object** activity.
 40. In the **Entity** section, click **Select**.
@@ -165,7 +165,7 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
 51. Enter a name for your page, for example, *Table_Overview*, and then click **OK**.
 52. On the page, double-click the **List view** widget.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-dynamodb/listview.png" alt="The List view widget" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-dynamodb/listview.png" alt="The List view widget" class="no-border" >}}
 
 53. In the **Select Data Source** dialog, set the **Type** to **Microflow**.
 54. In the **Microflow** field, select the **DS_ListTables** microflow.
@@ -180,11 +180,11 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
     * **On click** - **Show a page**
     * **Page** - Your **Table_Overview** page
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-dynamodb/navigation.png" alt="The New Menu Item dialog" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-dynamodb/navigation.png" alt="The New Menu Item dialog" class="no-border" >}}
 
 60. Click **OK**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-dynamodb/microflow2.png" alt="The microflow after mapping the properties" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-dynamodb/microflow2.png" alt="The microflow after mapping the properties" class="no-border" >}}
     
 61. Click **Run Locally** ({{% icon name="controls-play" %}}) to preview your app and validate your results. For more information, see [Studio Pro Overview: Run and View App](/refguide/studio-pro-overview/#menus).
 
@@ -197,4 +197,4 @@ The **Documentation** pane displays the documentation for the currently selected
 1. In the [View menu](/refguide/view-menu/) of Studio Pro, select **Documentation**.
 2. Click on the element for which you want to view the documentation.
 
-    {{< figure src="/attachments/appstore/use-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/technical-reference/doc-pane.png" class="no-border" >}}

@@ -34,13 +34,13 @@ When you want to find a widget the main choice is always the [*Find/Assert Widge
 
 The **Widget Name** is found using the ATS Helper, the value is the **Widget Name**:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/mx-name-ats-helper-cp-1.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/mx-name-ats-helper-cp-1.png" class="no-border" >}}
 
 The *Find/Assert Widget* action works on every widget that has a `mx-name`. 
 
 *The Find/Assert Widget Action*
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/findassert-widget-action-search-1.png" class="no-border" >}}  
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/findassert-widget-action-search-1.png" class="no-border" >}}  
 
 If the generic action does not work check if there is a specific one.
 
@@ -50,15 +50,15 @@ When you are looking for a specific widget or content of that widget, use the wi
 
 1. Example, you want to find a row inside a datagrid widget. You can use the *Find/Assert Widget* action in combination with the column name, but that doesn't work if there are multiple datagrids. The solution is to use the following search term, "Find Datagrid". ATS checks all the actions and returns those that match these words. You see there is an action that called [*Find/Assert DataGrid Row*](/appstore/partner-solutions/ats/rg-one-findassert-datagrid-row/). The *Find/Assert DataGrid Row* action enables you to search for a datagrid row containing a specific value in a specific column. This action also works on listviews and templategrids.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/find-datagrid-example-1.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/find-datagrid-example-1.png" class="no-border" >}}
 
 2. Example, you want to find the checkbox in a simple checkbox set selector widget. You cannot use the *Find/Assert Widget* action because the checkbox does not have its own `mx-name`. It is part of the simple checkbox set selector widget. The solution is to use the following search term, "Find Simple Checkbox Set Selector". ATS checks all the actions and returns those that match these words. You see there is an action called [Find Simple Checkbox Set Selector](/appstore/partner-solutions/ats/rg-one-find-simple-checkbox-set-selector/). The  *Find Simple Checkbox Set Selector* action finds the checkbox based on the **Widget Name** of the entire widget and the value displayed by the checkbox.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/find-simple-checkbox-set-selector-example-1.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/find-simple-checkbox-set-selector-example-1.png" class="no-border" >}}
 
 3. Example, you want to find a dialog box based on the title or text inside. You cannot use the *Find/Assert Widget* action because the dialog box does not have a `mx-name`. The solution is to use the following search term, "Find Dialog". ATS checks all the actions and returns those that match these words. You see there is an action called [*Find/Assert Dialog*](/appstore/partner-solutions/ats/rg-one-findassert-dialog/). The *Find/Assert Dialog*  action can find a dialog based on title, text or only a dialog. 
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/find-dialog-example-1.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/find-dialog-example-1.png" class="no-border" >}}
 
 ### Summary
 
@@ -78,13 +78,13 @@ When you want to click a widget the main choice is always the [*Click Widget*](/
 
 The **Widget Name** is found using the ATS Helper, the value is the **Widget Name**:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/mx-name-ats-helper-cp-1.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/mx-name-ats-helper-cp-1.png" class="no-border" >}}
 
 The *Click Widget* action works on every widget that has a `mx-name`. 
 
 *The Click Widget Action*
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/click-widget-action-search-1.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/click-widget-action-search-1.png" class="no-border" >}}
 
 If the generic action does not work check if there is a specific one.
 
@@ -95,16 +95,16 @@ ATS also has a few specific click actions. To find these use the search term, "C
 1. Example, you want to click the load more button inside a listview widget. You cannot use the *Click Widget* action because the load more button does not have its own `mx-name`. It is part of the listview widget. The solution is to use one of the following search terms, "Click load more" or "Click listview". ATS checks all the actions and returns those that match these words. You see there is an action called [*Click Widget Button*](/appstore/partner-solutions/ats/rg-one-click-widget-button/). The *Click Widget Button* action uses the `mx-name` of the widget and the button type to click the right button. In this case, select the "load more" type.
 2. Example, you want to click a specific datagrid row inside a datagrid. You can use the *Click Widget* action in combination with the column name, but if there are multiple datagrids ATS cannot distinguish them. The solution is to use the following search term, "Click DataGrid".  ATS checks all the actions and returns those that match these words. You see there is an action called [*Click DataGrid Row*](/appstore/partner-solutions/ats/rg-one-click-datagrid-row/). The *Click DataGrid Row* action enables you to click a datagrid row containing a specific value in a specific column. This action also works on listviews and templategrids.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/click-datagrid-row-action-search-1.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/click-datagrid-row-action-search-1.png" class="no-border" >}}
 
 3. Example, you want to click a menu item in a menu bar widget.
 You cannot use the *Click Widget* action because the menu item does not have its own `mx-name`. It is part of the menu bar widget. The solution is to use the following search term, "Click menu".  ATS checks all the actions and returns those that match these words.  You see there is an action called [*Click Menu Item*](/appstore/partner-solutions/ats/rg-one-click-menu-item/). The *Click Menu Item* action clicks on a menu item inside a menubar widget using the caption.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/click-menu-item-action-search-1.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/click-menu-item-action-search-1.png" class="no-border" >}}
 
 4. Example, you want to click an element you found in a previous step. You cannot use the *Click Widget* action because it does not accept an element as input. The solution is to use the following search term, "Click/Doubleclick". ATS checks all the actions and returns those that match these words.  You see there is an action called [*Click/Doubleclick*](/appstore/partner-solutions/ats/rg-one-clickdoubleclick/). The *Click/Doubleclick* action is the action to use when you want to click an element found in a previous step.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/clickdoubleclick-action-search-1.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/clickdoubleclick-action-search-1.png" class="no-border" >}}
 
 ### Summary
 
@@ -124,13 +124,13 @@ When you want to set an input widget the main choice is always the [*Set Value*]
 
 The **Widget Name** is found using the ATS Helper, the value is the **Widget Name**:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/mx-name-ats-helper-cp-1.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/mx-name-ats-helper-cp-1.png" class="no-border" >}}
 
 The *Set Value* action works on almost every widget that is an input widget.
 
 *The Set Value Action*
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/set-value-action-search-1.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/set-value-action-search-1.png" class="no-border" >}}
 
 If the generic action does not work check if there is a specific one.
 
@@ -140,19 +140,19 @@ ATS also has a few specific actions for setting an input widget. To find these u
 
 1. Example, you want to set the value of a checkbox widget, but you want to set it to a specific state. You cannot use the *Set Value* action because it does not work. The solution is to use the following search term, "Set Checkbox". ATS checks all the actions and returns those that match these words. You see there is an action called [*Set Checkbox Value*](/appstore/partner-solutions/ats/rg-one-set-checkbox-value/). The *Set Checkbox Value* action uses the `mx-name` of the widget and the Boolean value you set to check or uncheck the checkbox.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/set-checkbox-value-action-search-1.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/set-checkbox-value-action-search-1.png" class="no-border" >}}
 
 2. Example, you want to set the BooleanSlider widget to certain value. You cannot use the *Set Value* action because it does not work. The solution is to use the following search term, "Set BooleanSlider". ATS checks all the actions and returns those that match these words. You see there is an action called [*Set BooleanSlider Value*](/appstore/partner-solutions/ats/rg-one-set-booleanslider-value/). The *Set BooleanSlider Value* action uses the `mx-name` of the widget and the value you want to set the slider to.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/set-booleanslider-value-action-search-1.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/set-booleanslider-value-action-search-1.png" class="no-border" >}}
 
 3. Example, you want to set the radiobutton inside a GridSelector widget. You cannot use the *Set Value* because the radiobutton does not have its own `mx-name`. It is part of the GridSelector widget. The solution is to use the following search term, "Set Grid Selector". ATS checks all the actions and returns those that match these words. You see there is an action called [*Set Grid Selector Value*](/appstore/partner-solutions/ats/rg-one-set-grid-selector-radiobutton-checked/). The *Set Grid Selector Value* action uses the `mx-name` of the widget, column caption and row caption to locate the radiobutton.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/set-grid-selector-radiobutton-action-search-1.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/set-grid-selector-radiobutton-action-search-1.png" class="no-border" >}}
 
 4. Example, you want to set an input reference selector widget. You cannot use the *Set Value* action because it does not work. The solution is to use the following search term, "Set InputReferenceSelector". ATS checks all the actions and returns those that match these words. You see there is an action called [*Set InputReferenceSelector Value*](/appstore/partner-solutions/ats/rg-one-set-inputreferenceselector-value/). The *Set InputReferenceSelector Value* action uses the `mx-name` and the value you set to set the InputReferenceSelector widget.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/set-inputreferenceselector-value-action-search-1.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/set-inputreferenceselector-value-action-search-1.png" class="no-border" >}}
 
 ### Summary
 
@@ -172,13 +172,13 @@ When you want to get a value from a widget the main choice is always the [Get Va
 
 The **Widget Name** is found using the ATS Helper, the value is the **Widget Name**:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/mx-name-ats-helper-cp-1.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/mx-name-ats-helper-cp-1.png" class="no-border" >}}
 
 The *Get Value* action works on almost every widget that is an input widget.
 
 *The Get Value Action*
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/get-value-action-search-1.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/get-value-action-search-1.png" class="no-border" >}}
 
 If the generic action does not work check if there is a specific one.
 
@@ -188,15 +188,15 @@ ATS also has a few specific actions for getting a value from an widget. To find 
 
 1. Example, you want to get the value of an Input Reference Selector widget. You cannot use the *Get Value* action because it does not work. The solution is to use the following search term, "Get InputReferenceSelector". ATS checks all the actions and returns those that match these words. You see there is an action called [_ Get InputReferenceSelector_](/appstore/partner-solutions/ats/rg-one-get-inputreferenceselector-value/). The *Get InputReferenceSelector* action returns the value the InputReferenceSelector widget is set to using the `mx-name`. 
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/get-inputreferenceselector-value-action-search-1.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/get-inputreferenceselector-value-action-search-1.png" class="no-border" >}}
 
 2. Example, you want to get the value displayed in the CKEditor widget. You cannot use the *Get Value* action because it does not work. The solution is to use the following search term, "Get CKEditor". ATS checks all the actions and returns those that match these words. You see there is an action called [*Get CKEditor Value*](/appstore/partner-solutions/ats/rg-one-get-ckeditor-value/). The *Get CKEditor Value* action uses the `mx-name` to return the value displayed in the CKEditor widget.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/get-ckeditor-value-action-search-1.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/get-ckeditor-value-action-search-1.png" class="no-border" >}}
 
 3. Example, you want to get the message displayed in the dialog box widget. You cannot use the *Get Value* action because there is no `mx-name`. The solution is to use the following search term "Get Dialog".  ATS checks all the actions and returns those that match these words. You see there is an action called [*Get Dialog Message Text*](/appstore/partner-solutions/ats/rg-one-get-dialog-message-text/). The  *Get Dialog Message Text* action uses the dialog as a WebElement to retrieve the message text. You use the *Find/Assert Dialog* action to get the dialog as a WebElement.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/get-dialog-message-text-action-search-1.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/get-dialog-message-text-action-search-1.png" class="no-border" >}}
 
 ### Summary
 
@@ -216,13 +216,13 @@ When you want to assert a value inside a widget the main choice is always the [*
 
 The **Widget Name** is found using the ATS Helper, the value is the **Widget Name**:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/mx-name-ats-helper-cp-1.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/mx-name-ats-helper-cp-1.png" class="no-border" >}}
 
 The *Assert Value* action works on almost every widget that is an input widget.
 
 *The Assert Value Action*
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/assert-value-action-search-1.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/assert-value-action-search-1.png" class="no-border" >}}
 
 If the generic action does not work check if there is a specific one.
 
@@ -232,17 +232,17 @@ ATS also has a few specific actions for asserting values in a widget or inside A
 
 1. Example, you want to assert that a specific validation message appears. You cannot use the *Assert Value* action because that would assert the value inside the widget and not the validation message. The solution is to use the following search term, "Assert Validation". ATS checks all the actions and returns those that match these words. You see there is an action called [*Assert Validation Message*](/appstore/partner-solutions/ats/rg-one-assert-validation-message/). The *Assert Validation Message* action uses the `mx-name` of a widget to assert the validation message that appears in the widget.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/assert-validation-message-action-search-1.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/assert-validation-message-action-search-1.png" class="no-border" >}}
 
 2. Example, you want to assert that the right page has opened. You cannot use the *Assert Value* because there is no `mx-name` that you can use. The solution is to use the following search term, "Assert Page".  ATS checks all the actions and returns those that match these words. You see there is an action called [*Assert Current Page*](/appstore/partner-solutions/ats/rg-one-assert-current-page/). The *Assert Current Page* action uses the page title to assert that the right page has opened.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/assert-current-page-action-search-1.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/assert-current-page-action-search-1.png" class="no-border" >}}
 
     These examples showed actions meant to assert something in your Mendix app. ATS also has actions that assert internal outcomes/values. 
 
 3. Example, you want to assert that the outcome of an earlier test step is not the same as a certain value. You cannot use the *Assert Value* action because you want to assert a value inside ATS.  The solution is to use the following search term, "Assert not equal". ATS checks all the actions and returns those that match these words. You see there is an action called [*Assert Not equals*](/appstore/partner-solutions/ats/rg-one-assert-not-equals/). The *Assert Not equals* action compares two provided values and checks if they are equal or not.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/assert-not-equals-action-search-1.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/assert-not-equals-action-search-1.png" class="no-border" >}}
 
 ### Summary
 
@@ -264,7 +264,7 @@ It is also used for creating variable selectors.
 
 *The Concatenate String action*
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/concatenate-string-action-search-1.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/concatenate-string-action-search-1.png" class="no-border" >}}
 
 ### Specific Action
 
@@ -272,15 +272,15 @@ ATS also has a few specific actions for generating values to use in your test ca
 
 1. Example, you want to have a unique value in your test case. That also makes your test case reusable. The solution is to use the following search term, "Random".  ATS checks all the actions and returns those that match these words. You see there is an action called [*Random String*](/appstore/partner-solutions/ats/rg-one-random-string/). The *Random String* action generates a random value and allows you to set a prefix and/or postfix.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/random-string-action-search-1.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/random-string-action-search-1.png" class="no-border" >}}
 
 2. Example, you want to have a unique number value in your test case. That also makes your test case reusable. The solution is to use the following search term, "Random".  ATS checks all the actions and returns those that match these words. You see there is an action called [*Random Number*](/appstore/partner-solutions/ats/rg-one-random-number/). The *Random Number* action generates a random number and allows you to set a minimum and maximum.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/random-number-action-search-1.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/random-number-action-search-1.png" class="no-border" >}}
 
 3. Example, you want to use today's date in your test case. This makes your test case reusable, but you don't want to enter it every time you execute the test case. The solution is to use the following search term, "Current Date". ATS checks all the actions and returns those that match these words. You see there is an action called [*Get Current DateTime String*](/appstore/partner-solutions/ats/rg-one-get-current-datetime-string/). The *Get Current DateTime String* action retrieves the current date and allows you to set the date format.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/get-current-datetime-string-action-search-1.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/get-current-datetime-string-action-search-1.png" class="no-border" >}}
 
 ### Summary
 

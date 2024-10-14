@@ -10,7 +10,7 @@ description: "Presents information on the component details page."
 
 Clicking the tile of a [Marketplace](https://marketplace.mendix.com/) component brings you to its details page with the sections described below.
 
-{{< figure src="/attachments/appstore/overview/component-details/component-details.png" >}}
+{{< figure src="/attachments/appstore/component-details/component-details.png" >}}
 
 ## Header {#header}
 

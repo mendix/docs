@@ -142,13 +142,13 @@ The landing page has with three tabs: **Menu**, **History**, and **Settings**.
 
 The **Menu** tab displays use cases or actions you can create artifacts for using Teamcenter Extension.
 
-![{1B240173-DC13-4AB7-BA37-B613453FE629}](https://github.com/user-attachments/assets/76aae872-0591-41e6-9e4d-ef6638d34c80)
+{{< figure src="/attachments/appstore/platform-supported-content/modules/teamcenter-extension/menu-tab.png" max-width=80% >}}
 
 #### History Tab
 
 The **History** tab displays the history of all actions (also referred as integrations) carried out in Teamcenter Extension.
 
-![{43049D92-4D79-4F61-9BD1-7231DB844C2B}](https://github.com/user-attachments/assets/7788049f-687c-417d-85d4-8f6afc6ae7cf)
+{{< figure src="/attachments/appstore/platform-supported-content/modules/teamcenter-extension/history-tab.png" max-width=80% >}}
 
 On the **History** tab, you can view details of each action, such as entities and microflows created, Teamcenter URL used to connect with, the preview of the import mapping, and much more. 
 

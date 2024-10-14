@@ -7,7 +7,7 @@ url: /appstore/partner-solutions/apd/rg-two-logs/
 
 Selecting **Logs** from the menu shows the overview of logs and traps.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-logs/logs.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-logs/logs.png" class="no-border" >}}
 
 ## Logs
 
@@ -25,7 +25,7 @@ The logging will be cleaned up automatically. To prevent a log or trap record fr
 
 Trap records can be opened. When opening a trap, a list is displayed of all the low-level log records that happened just before the trap was displayed:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-logs/trap.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-logs/trap.png" class="no-border" >}}
 
 The **Trap now** button can be used to simulate a trap. This trap will be saved and can be used to get insights into what is happening in the application.
 
@@ -35,7 +35,7 @@ If there are traps with errors, warnings, or messages that are known, not of int
 
 On the **Trap exclusions** tab, it is possible to manage which traps to ignore. It is possible to add, edit, copy, and delete exclusions as well as enable or disable them. By excluding certain errors, warnings, or messages, the **Logs** module will only capture information of interest. 
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-logs/exclusions.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-logs/exclusions.png" class="no-border" >}}
 
 An exclusion contains the following:
 
@@ -53,4 +53,4 @@ To make the pattern more generic, you need to escape according to regular expres
 
 The **Test** button performs a query on the APM manager to see if existing logs or traps match the patterns. This is added for convenience to test if the patterns work as expected.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-logs/exclude_dialog.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-logs/exclude_dialog.png" class="no-border" >}}

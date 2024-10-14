@@ -34,13 +34,13 @@ When you want to find a widget, the main choice is always the [Find/Assert Widge
 
 ATS uses the `widget name` parameter instead of `mx-name`. The widget name is found using the ATS Helper, and the value is the `widget name`:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/mx-name-ats-helper-cp.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/mx-name-ats-helper-cp.png" class="no-border" >}}
 
 The Find/Assert Widget action works on every widget that has a `mx-name`. 
 
 This is the **Find/Assert Widget** action:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/findassert-widget-action-search.png" class="no-border" >}}  
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/findassert-widget-action-search.png" class="no-border" >}}  
 
 If the generic action does not work, check if there is a specific one.
 
@@ -54,7 +54,7 @@ In this example, you want to find a row inside a data grid widget. You can use t
 
 The solution in this situation is to use the following search term: "Find Datagrid". ATS checks all the actions and returns those that match these words. There is an action called [Find/Assert DataGrid Row](/appstore/partner-solutions/ats/rg-one-findassert-datagrid-row/), which enables searching for a data grid row containing a specific value in a specific column. This action also works on list views and template grids.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/find-datagrid-example.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/find-datagrid-example.png" class="no-border" >}}
 
 #### Example 2
 
@@ -62,7 +62,7 @@ In this example, you want to find the checkbox in a simple checkbox set selector
 
 The solution in this situation is to use the following search term: "Find Simple Checkbox Set Selector". ATS checks all the actions and returns those that match these words. There is an action called [Find Simple Checkbox Set Selector](/appstore/partner-solutions/ats/rg-one-find-simple-checkbox-set-selector/), which finds the checkbox based on the `widget name` of the entire widget and the value displayed by the checkbox.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/find-simple-checkbox-set-selector-example.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/find-simple-checkbox-set-selector-example.png" class="no-border" >}}
 
 #### Example 3
 
@@ -70,7 +70,7 @@ In this example, you want to find a dialog box based on the title or text inside
 
 The solution in this situation is to use the following search term: "Find Dialog". ATS checks all the actions and returns those that match these words. There is an action called [Find/Assert Dialog](/appstore/partner-solutions/ats/rg-one-findassert-dialog/), which can find a dialog based on title, text, or only a dialog. 
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/find-dialog-example.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/find-dialog-example.png" class="no-border" >}}
 
 ### Summary
 
@@ -90,13 +90,13 @@ When you want to click a widget, the main choice is always the [Click Widget](/a
 
 ATS uses the `widget name` parameter instead of `mx-name`. The widget name is found using the ATS Helper, and the value is the `widget name`:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/mx-name-ats-helper-cp.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/mx-name-ats-helper-cp.png" class="no-border" >}}
 
 The Click Widget action works on every widget that has a `mx-name`.
 
 This is the **Click Widget** action:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/click-widget-action-search.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/click-widget-action-search.png" class="no-border" >}}
 
 If the generic action does not work, check if there is a specific one.
 
@@ -110,7 +110,7 @@ In this example, you want to click the **Load more** button inside a list view w
 
 The solution in this situation is to use one of the following search terms: "Click Widget Button" because you want to click a button that is part of a widget. ATS checks all the actions and returns those that match these words. There is an action called [Click Widget Button](/appstore/partner-solutions/ats/rg-one-click-widget-button/), which uses the `mx-name` of the widget and the button type to click the right button. In this case, select the "load more" type.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/click-widget-button-action-search.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/click-widget-button-action-search.png" class="no-border" >}}
 
 #### Example 2
 
@@ -118,7 +118,7 @@ In this example, you want to click a specific data grid row inside a data grid. 
 
 The solution in this situation is to use the following search term: "Click DataGrid".  ATS checks all the actions and returns those that match these words. There is an action called [Click DataGrid Row](/appstore/partner-solutions/ats/rg-one-click-datagrid-row/), which enables you to click a data grid row containing a specific value in a specific column. This action also works on list views and template grids.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/click-datagrid-row-action-search.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/click-datagrid-row-action-search.png" class="no-border" >}}
 
 #### Example 3
 
@@ -126,7 +126,7 @@ In this example, you want to click a menu item in a menu bar widget. You cannot 
 
 The solution in this situation is to use the following search term: "Click menu". ATS checks all the actions and returns those that match these words. There is an action called [Click Menu Item](/appstore/partner-solutions/ats/rg-one-click-menu-item/), which clicks on a menu item inside a menu bar widget using the caption.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/click-menu-item-action-search.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/click-menu-item-action-search.png" class="no-border" >}}
 
 #### Example 4
 
@@ -134,7 +134,7 @@ In this example, you want to click an element you found in a previous step. You 
 
 The solution in this situation is to use the following search term: "Click/Doubleclick". ATS checks all the actions and returns those that match these words. You see there is an action called [Click/Doubleclick](/appstore/partner-solutions/ats/rg-one-clickdoubleclick/), which you should use when you want to click an element found in a previous step.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/clickdoubleclick-action-search.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/clickdoubleclick-action-search.png" class="no-border" >}}
 
 ### Summary
 
@@ -154,13 +154,13 @@ When you want to set an input widget, the main choice is always the [Set Value](
 
 ATS uses the `widget name` parameter instead of `mx-name`. The widget name is found using the ATS Helper, and the value is the `widget name`:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/mx-name-ats-helper-cp.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/mx-name-ats-helper-cp.png" class="no-border" >}}
 
 The Set Value action works on almost every widget that is an input widget.
 
 This is the **Set Value** action:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/set-value-action-search.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/set-value-action-search.png" class="no-border" >}}
 
 If the generic action does not work, check if there is a specific one.
 
@@ -174,7 +174,7 @@ In this example, you want to set the value of a checkbox widget, but you want to
 
 The solution in this situation is to use the following search term: "Set Checkbox". ATS checks all the actions and returns those that match these words. There is an action called [Set Checkbox Value](/appstore/partner-solutions/ats/rg-one-set-checkbox-value/), which uses the `mx-name` of the widget and the Boolean value you set to check or clear the checkbox.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/set-checkbox-value-action-search.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/set-checkbox-value-action-search.png" class="no-border" >}}
 
 #### Example 2
 
@@ -182,7 +182,7 @@ In this example, you want to set the BooleanSlider widget to certain value. You 
 
 The solution in this situation is to use the following search term: "Set BooleanSlider". ATS checks all the actions and returns those that match these words. There is an action called [Set BooleanSlider Value](/appstore/partner-solutions/ats/rg-one-set-booleanslider-value/), which uses the `mx-name` of the widget and the value to which you want to set the slider.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/set-booleanslider-value-action-search.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/set-booleanslider-value-action-search.png" class="no-border" >}}
 
 #### Example 3
 
@@ -190,7 +190,7 @@ In this example, you want to set a radio button inside a GridSelector widget. Yo
 
 The solution in this situation is to use the following search term: "Set Grid Selector". ATS checks all the actions and returns those that match these words. There is an action called [Set Grid Selector Value](/appstore/partner-solutions/ats/rg-one-set-grid-selector-radiobutton-checked/), which uses the `mx-name` of the widget, column caption, and row caption to locate the radio button.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/set-grid-selector-radiobutton-action-search.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/set-grid-selector-radiobutton-action-search.png" class="no-border" >}}
 
 #### Example 4
 
@@ -198,7 +198,7 @@ In this example, you want to set an input reference selector widget. You cannot 
 
 The solution in this situation is to use the following search term: "Set InputReferenceSelector". ATS checks all the actions and returns those that match these words. There is an action called [Set InputReferenceSelector Value](/appstore/partner-solutions/ats/rg-one-set-inputreferenceselector-value/), which uses the `mx-name` and the value to which you set the InputReferenceSelector widget.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/set-inputreferenceselector-value-action-search.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/set-inputreferenceselector-value-action-search.png" class="no-border" >}}
 
 ### Summary
 
@@ -218,13 +218,13 @@ When you want to get a value from a widget, the main choice is always the [Get V
 
 ATS uses the `widget name` parameter instead of `mx-name`. The widget name is found using the ATS Helper, and the value is the `widget name`:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/mx-name-ats-helper-cp.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/mx-name-ats-helper-cp.png" class="no-border" >}}
 
 The Get Value action works on almost every widget that is an input widget.
 
 This is the Get Value action:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/get-value-action-search.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/get-value-action-search.png" class="no-border" >}}
 
 If the generic action does not work, check if there is a specific one.
 
@@ -238,14 +238,14 @@ In this example, you want to get the value of an InputReferenceSelector widget. 
 
 The solution in this situation is to use the following search term: "Get InputReferenceSelector". ATS checks all the actions and returns those that match these words. There is an action called [Get InputReferenceSelector](/appstore/partner-solutions/ats/rg-one-get-inputreferenceselector-value/), which returns the value the InputReferenceSelector widget is set to using the `mx-name`. 
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/get-inputreferenceselector-value-action-search.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/get-inputreferenceselector-value-action-search.png" class="no-border" >}}
 
 #### Example 2
 
 In this example, you want to get the value displayed in the CKEditor widget. You cannot use the Get Value action because it does not work.  
 
 The solution in this situation is to use the following search term: "Get CKEditor". ATS checks all the actions and returns those that match these words. There is an action called [Get CKEditor Value](/appstore/partner-solutions/ats/rg-one-get-ckeditor-value/), which uses the `mx-name` to return the value displayed in the CKEditor widget.
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/get-ckeditor-value-action-search.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/get-ckeditor-value-action-search.png" class="no-border" >}}
 
 #### Example 3
 
@@ -253,7 +253,7 @@ In this example, you want to get the message displayed in the dialog box widget.
 
 The solution in this situation is to use the following search term: "Get Dialog". ATS checks all the actions and returns those that match these words. There is an action called [Get Dialog Message Text](/appstore/partner-solutions/ats/rg-one-get-dialog-message-text/), which uses the dialog as a WebElement to retrieve the message text. You use the Find/Assert Dialog action to get the dialog as a WebElement.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/get-dialog-message-text-action-search.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/get-dialog-message-text-action-search.png" class="no-border" >}}
 
 ### Summary
 
@@ -273,13 +273,13 @@ When you want to assert a value inside a widget, the main choice is always the [
 
 ATS uses the `widget name` parameter instead of `mx-name`. The widget name is found using the ATS Helper, and the value is the `widget name`:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/mx-name-ats-helper-cp.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/mx-name-ats-helper-cp.png" class="no-border" >}}
 
 The Assert Value action works on almost every widget that is an input widget.
 
 This is the Assert Value action:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/assert-value-action-search.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/assert-value-action-search.png" class="no-border" >}}
 
 If the generic action does not work, check if there is a specific one.
 
@@ -293,7 +293,7 @@ In this example, you want to assert that a specific validation message appears. 
 
 The solution in this situation is to use the following search term: "Assert Validation". ATS checks all the actions and returns those that match these words. There is an action called [Assert Validation Message](/appstore/partner-solutions/ats/rg-one-assert-validation-message/), which uses the `mx-name` of a widget to assert the validation message that appears in the widget.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/assert-validation-message-action-search.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/assert-validation-message-action-search.png" class="no-border" >}}
 
 #### Example 2
 
@@ -301,7 +301,7 @@ In this example, you want to assert that the right page has opened. You cannot u
 
 The solution in this situation is to use the following search term: "Assert Page". ATS checks all the actions and returns those that match these words. There is an action called [Assert Current Page](/appstore/partner-solutions/ats/rg-one-assert-current-page/), which uses the page title to assert that the right page has opened.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/assert-current-page-action-search.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/assert-current-page-action-search.png" class="no-border" >}}
 
 #### Example 3
 
@@ -311,7 +311,7 @@ In this example, you want to assert that the outcome of an earlier test step is 
 
 The solution in this situation is to use the following search term: "Assert not equal". ATS checks all the actions and returns those that match these words. There is an action called [Assert Not Equals](/appstore/partner-solutions/ats/rg-one-assert-not-equals/), which compares two provided values and checks if they are equal or not.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/assert-not-equals-action-search.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/assert-not-equals-action-search.png" class="no-border" >}}
 
 ### Summary
 
@@ -333,7 +333,7 @@ It is also used for creating variable selectors.
 
 This is the Concatenate String action:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/concatenate-string-action-search.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/concatenate-string-action-search.png" class="no-border" >}}
 
 ### Specific Action
 
@@ -345,7 +345,7 @@ In this example, you want to have a unique value in your test case. That also ma
 
 The solution in this situation is to use the following search term: "Random".  ATS checks all the actions and returns those that match this word. There is an action called [Random String](/appstore/partner-solutions/ats/rg-one-random-string/), which generates a random value and allows you to set a prefix and/or postfix.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/random-string-action-search.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/random-string-action-search.png" class="no-border" >}}
 
 #### Example 2
 
@@ -353,7 +353,7 @@ In this example, you want to have a unique number value in your test case. That 
 
 The solution in this situation is to use the following search term: "Random". ATS checks all the actions and returns those that match this word. There is an action called [Random Number](/appstore/partner-solutions/ats/rg-one-random-number/), which generates a random number and allows you to set a minimum and maximum.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/random-number-action-search.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/random-number-action-search.png" class="no-border" >}}
 
 #### Example 3
 
@@ -361,7 +361,7 @@ In this example, you want to use today's date in your test case. This makes your
 
 The solution in this situation is to use the following search term: "Current Date". ATS checks all the actions and returns those that match these words. There is an action called [Get Current DateTime String](/appstore/partner-solutions/ats/rg-one-get-current-datetime-string/), which retrieves the current date and allows you to set the date format.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/get-current-datetime-string-action-search.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/get-current-datetime-string-action-search.png" class="no-border" >}}
 
 ### Summary
 

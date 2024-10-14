@@ -68,7 +68,7 @@ The following steps describe how to start the Selenium hub:
 
 3. Check with the following link if the hub works: `http://localhost:4444/grid/console`.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-setup-local-selenium-index/ht-two-setup-local-selenium-hub/grid_hub.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-setup-local-selenium-index/ht-two-setup-local-selenium-hub/grid_hub.png" class="no-border" >}}
 
     Congratulations, your local Selenium hub is running.
 
@@ -118,7 +118,7 @@ The following steps describe how to start the node with three Chrome and three F
 
 3. Check in the console whether your Selenium hub node is active `http://localhost:4444/grid/console`:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-setup-local-selenium-index/ht-two-setup-local-selenium-hub/grid_nodes.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-setup-local-selenium-index/ht-two-setup-local-selenium-hub/grid_nodes.png" class="no-border" >}}
 
 ## Starting Testing
 

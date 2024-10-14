@@ -58,7 +58,7 @@ The APM Statistics tool collects statistical data about microflows and client AP
 
 This is the statistics tool (for load balanced environments you see the server where the microflow runs):
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/Overview.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/Overview.png" class="no-border" >}}
 
 ## The Performance Tool to Record Microflows
 
@@ -66,15 +66,15 @@ When support wants to investigate a performance issue, either proactively throug
 
 This is the call tree, which provides an overview of what happens, showing the called microflows and one iteration of a loop, filtered by duration:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/Performance_Tool_Tree_View.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/Performance_Tool_Tree_View.png" class="no-border" >}}
 
 Below is the performance tool output. You can double-click all actions and in the case of a microflow call, you can browse to the next microflow. In the case of loops you will see the individual iterations.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/Performance_Tool_Browse_Microflow.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/Performance_Tool_Browse_Microflow.png" class="no-border" >}}
 
 This is the SQL statements during an action:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/Performance_Tool_Browse_Actions.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/Performance_Tool_Browse_Actions.png" class="no-border" >}}
 
 ## The Trap Tool Is Your Flight Data Recorder
 
@@ -88,7 +88,7 @@ The measurements can be used to trigger events on thresholds. For example, if mo
 
 The trigger can be to trap logging, or to run a microflow, for example, to send an email or to make a heap dump.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/Measurements_Tool.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/Measurements_Tool.png" class="no-border" >}}
 
 ## JVM Browser
 

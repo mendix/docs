@@ -8,11 +8,11 @@ Manual test steps are the process to search and select required actions to manua
 
 When you create a new test case it is empty and has no test steps assigned.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v1/test-dev/rg-one-manual-test-steps/21168178.png" alt="Buttons on the Test Case Window" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v1/test-dev/rg-one-manual-test-steps/21168178.png" alt="Buttons on the Test Case Window" class="no-border" >}}
 
 *Buttons on the Test Case Window*
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v1/test-dev/rg-one-manual-test-steps/21168179.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v1/test-dev/rg-one-manual-test-steps/21168179.png" class="no-border" >}}
 
 To add a new test step follow these steps:
 
@@ -24,7 +24,7 @@ To add a new test step follow these steps:
 
 You can now select the created test step and edit its parameters under the *Test Step Settings* to the right.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v1/test-dev/rg-one-manual-test-steps/21168180.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v1/test-dev/rg-one-manual-test-steps/21168180.png" class="no-border" >}}
 
 On the test step settings you can configure the following:
 

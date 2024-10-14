@@ -35,17 +35,17 @@ The following steps describe how you can set your Mendix API Key in ATS:
 
    {{% alert color="info" %}} **Show App Settings** is only present if you have Scrum Master rights in the Mendix Portal project {{% /alert %}}
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-configure-a-selenium-hub/show-test-settings.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-configure-a-selenium-hub/show-test-settings.png" class="no-border" >}}
 
 4. On the **Settings** page click **Set API Key**.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/set-api-key.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/set-api-key.png" class="no-border" >}}
 
 ### Integrating with Mendix Stories
 
 Clicking **Set API Key** opens this **Mendix API Key** dialog box:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/mendix-api-key-dialog.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/mendix-api-key-dialog.png" class="no-border" >}}
 
 1. To integrate with Mendix stories, set **Use Epics ?** to **No**.
 2. To retrieve your Mendix API key, open the app in Mendix Portal and click [API Keys](/developerportal/collaborate/general-settings/#general-settings-api-keys).
@@ -58,17 +58,17 @@ Clicking **Set API Key** opens this **Mendix API Key** dialog box:
 
 Clicking **Set API Key** opens this **Mendix API Key** dialog box:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/pat-api-key-dialog.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/pat-api-key-dialog.png" class="no-border" >}}
 
 1. Follow the steps in the [Generating a PAT](/apidocs-mxsdk/apidocs/epics-api/#generate) section in *Epics API*.
 2. Copy and paste the `{GENERATED_PAT}` into the **Personal Access Token** field in ATS.
 3. Click **Save**.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/mendix-api-key-filled-e.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/mendix-api-key-filled-e.png" class="no-border" >}}
 
 You have now set the Mendix API key or personal access token (PAT). ATS can now retrieve the user stories from your Mendix Portal app.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/set-mendix-api-key.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/set-mendix-api-key.png" class="no-border" >}}
 
 ## Retrieve User Stories in ATS
 
@@ -78,11 +78,11 @@ The following steps explain how to retrieve user stories from the Mendix Portal 
 2. Click the **Stories** tab.
 3. Click the **Refresh button** to retrieve the User Stories from the Mendix Portal:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/go-to-stories-tab-e.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/go-to-stories-tab-e.png" class="no-border" >}}
 
 If you filled in a correct Mendix API Key you can now see the User Stories in ATS:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/user-stories-in-ats.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/user-stories-in-ats.png" class="no-border" >}}
 
 {{% alert color="danger" %}}If you are using Mendix Epics, stories that have already been archived are not shown in ATS. This is because the Epics API only returns non-archived stories as their response. Stories that have not been archived yet when retrieved via ATS are archived and shown in ATS. {{% /alert %}}
 
@@ -97,11 +97,11 @@ The following steps describe how to link a test case to a user story:
 3. Search for the user story you want to link to a test case.
 4. Click **Add test**:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/add-test-to-story.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/add-test-to-story.png" class="no-border" >}}
 
     Clicking **Add test** opens the **Select item** Dialog box:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/add-test-case-to-story-dialog.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/add-test-case-to-story-dialog.png" class="no-border" >}}
 
 In the **Add Test Case/Suite to Story** dialog you can select to create a new test case or use an existing test case. See below for the explanation of both.
 
@@ -109,7 +109,7 @@ In the **Add Test Case/Suite to Story** dialog you can select to create a new te
 
 1. In the **Select item** Dialog box click **Create new test case**.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/create-new-test-case.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/create-new-test-case.png" class="no-border" >}}
 
 2. Set the type to **Test Case**.
 3. Enter a name in the **Name** field. Use the predefined naming structure.
@@ -119,19 +119,19 @@ In the **Add Test Case/Suite to Story** dialog you can select to create a new te
     * To add a template click the arrow icon. This opens the **Select item** Dialog box.
     * In the Dialog search and select the test case you want to add as template and click **Select**.
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/select-template.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/select-template.png" class="no-border" >}}
 
 6. Click **Create & Open** to create and open your test case. This is useful if you want to edit your test case. Click **Create** to create the test case, but not open it:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/new-test-case-e.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/new-test-case-e.png" class="no-border" >}}
 
     Clicking **Create & Open** or **Create** links the test case to the user story:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/test-case-added.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/test-case-added.png" class="no-border" >}}
 
 To see the added test case double-click the Story name. This opens the **Edit Story** page. This page shows the added test case:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/edit-story-page.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/edit-story-page.png" class="no-border" >}}
 
 On the **Edit Story** page you can do the following:
 
@@ -139,22 +139,22 @@ On the **Edit Story** page you can do the following:
 * Go to the **Test Case Details** page and edit the test case by clicking **Edit** (2).
 * Remove the linked test case by clicking **Remove** (3).
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/edit-story-page-options-e.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/edit-story-page-options-e.png" class="no-border" >}}
 
 ### Linking an Existing Test Case to a User Story
 
 1. In the **Select Item** Dialog search and select the test case you want to link to the Story.
 2. Click **Select**:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/add-existing-test-case-e.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/add-existing-test-case-e.png" class="no-border" >}}
 
 Clicking **Add selected** links the test case to the user story. As this test case ran successfully, the **Success** is 100%:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/existing-test-case-added-e.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/existing-test-case-added-e.png" class="no-border" >}}
 
 To see the added test case double-click the Story name. This opens the **Edit Story** page. This page shows the added test case:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/edit-story-page.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/edit-story-page.png" class="no-border" >}}
 
 On the **Edit Story** page you can do the following:
 
@@ -162,7 +162,7 @@ On the **Edit Story** page you can do the following:
 * Go to the **Test Case Details** page and edit the test case by clicking **Edit** (2).
 * Remove the linked test case by clicking **Remove** (3).
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/edit-story-page-options-e.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/edit-story-page-options-e.png" class="no-border" >}}
 
 ## Linking User Stories to Test Cases
 
@@ -176,20 +176,20 @@ To link an existing test case to a user story follow these steps:
 2. Go to the **Stories** tab.
 3. Click **Link new story**:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/test-case-stories-tab-e.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/test-case-stories-tab-e.png" class="no-border" >}}
 
     Clicking **Link new story** opens the **Link Story** Dialog:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/link-story-dialog.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/link-story-dialog.png" class="no-border" >}}
 
 4. Search and select the user story you want to add to the test case.
 5. Click **Add selected**:
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/link-story-selected-e.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/link-story-selected-e.png" class="no-border" >}}
 
 Clicking **Add selected** links the story to the test case:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/story-linked-to-test-case.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/story-linked-to-test-case.png" class="no-border" >}}
 
 You can go to the **Edit story** page by clicking **Open story**. You can unlink a story by clicking **Unlink selected story**.
 

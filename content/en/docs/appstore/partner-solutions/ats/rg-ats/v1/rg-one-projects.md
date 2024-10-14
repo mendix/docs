@@ -17,7 +17,7 @@ An action library is a special type of project which can only contain actions. T
 
 Projects and action libraries can be created by users and administrators. A user clicks **Add Project** on the application starting screen. Administrators create new projects/libraries from the project overview page they see after login. Users are automatically added as project administrators when they create a new project/library.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v1/rg-one-projects/21168197.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v1/rg-one-projects/21168197.png" class="no-border" >}}
 
 **Project type**
 
@@ -51,13 +51,13 @@ Check action libraries here to make their actions available to be used within yo
 
 Since data is separated into projects, you always work inside a project. You cannot work in multiple projects at the same time. However, you can switch between all your projects at any time. To switch between projects you can use the project selector which you find above the navigation menu on the left.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v1/rg-one-projects/21168198.png" alt="The project selector dropdown" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v1/rg-one-projects/21168198.png" alt="The project selector dropdown" class="no-border" >}}
 
 ## Project Dashboard
 
 The **Project Dashboard** is the first page you see when you open a project.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v1/rg-one-projects/dashboard.png" alt="The project dashboard" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v1/rg-one-projects/dashboard.png" alt="The project dashboard" class="no-border" >}}
 
 There are three sections on the dashboard. The upper-left section (1) shows you the number of all test cases and their results. The lower-left section (2) shows a condensed view of the test results from the last seven days. The right section (3) shows you a detailed view of all the test cases and test suites.
 

@@ -27,7 +27,7 @@ To configure the Mendix Database Connector for Amazon RDS, follow these steps:
     5. In the **Connectivity** section, set **Public access** to **yes**.
     6. Make sure that **Database Authentication** is set to **Password authentication**.
 
-        {{< figure src="/attachments/appstore/use-content/modules/aws-rds/rds.jpg" alt="Amazon RDS database configuration" class="no-border" >}}
+        {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-rds/rds.jpg" alt="Amazon RDS database configuration" class="no-border" >}}
 
 2. Optional: If you want to limit access to the database to specific apps, do the following steps:
     1. After the database is created, access the [security group rules](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#SecurityGroupRules).
@@ -42,7 +42,7 @@ To configure the Mendix Database Connector for Amazon RDS, follow these steps:
     1. Use one of the microflow actions provided in the Database connector in a microflow, as described in [Database](/appstore/modules/database-connector/).
         For example, add the *ExecuteStatement* action.
 
-        {{< figure src="/attachments/appstore/use-content/modules/aws-rds/microflow.jpg" alt="The ExecuteStatement action in a microflow" class="no-border" >}}
+        {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-rds/microflow.jpg" alt="The ExecuteStatement action in a microflow" class="no-border" >}}
 
     2. In the AWS console, in the RDS Database dashboard, find and copy the **Connectivity & Security** endpoint.
     3. In the microflow that you created, in the *ExecuteStatement* microflow action, configure the **jdbcUrl** parameter in the following way: `jdbc:postgresql://{endpoint copied from the AWS console}:5432/`
@@ -57,7 +57,7 @@ To configure the Mendix Database Connector for Amazon RDS, follow these steps:
             last_name VARCHAR(50) NOT NULL)
         ```
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-rds/setup.jpg" alt="The Execute Statement configuration dialog" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-rds/setup.jpg" alt="The Execute Statement configuration dialog" class="no-border" >}}
 
     {{% alert color="info" %}}For the PostgreSQL database, you do not need to download the JDBC jar file because the library exists in the *userlib* folder.{{% /alert %}}
 

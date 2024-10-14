@@ -70,7 +70,7 @@ To configure the authentication, perform the following steps:
 
 1. In the **App Explorer**, under the **SnowflakeRESTSQL** section, find the **SNIPPET_SnowflakeConfiguration** snippet and drag and drop it into a page in your module.
 
-    {{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/drag_snippet_to_page.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-rest-sql/drag_snippet_to_page.png" >}}
 
 2. Assign the module role **SnowflakeRESTSQL.Administrator** to the application role that will be used to set up the configuration, so that the added logic will be usable.
 3. Run the application and go to the page where you added the snippet.
@@ -78,15 +78,15 @@ To configure the authentication, perform the following steps:
 5. On the **Connection details** page, fill out all fields with the details of your Snowflake account. For more information, see [ConnectionDetails](#connection-details).
 6. In the Snowflake console, click **Copy account URL**. This URL will be used as the **Account URL** parameter for **Connection details**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/snowsight-account-url.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-rest-sql/snowsight-account-url.png" >}}
 
 7. In the Snowflake console, click **Copy account identifier**. Before using it inside Mendix, you must replace the `.` separator with a `-`. The final string will be used as the **Account identifier** parameter for the **Connection details**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/snowsight-account-identifier.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-rest-sql/snowsight-account-identifier.png" >}}
 
 8. Enter the passphrase and upload [your private key file](#setup-key-pair-snowflake) in *.p8* format.
 
-    {{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/connection_details.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-rest-sql/connection_details.png" >}}
 
 9. Click **Save** to save the connection, or click **Save and test connection** to generate a JSON Web Token (JWT) and validate your connection.
 
@@ -94,7 +94,7 @@ To configure the authentication, perform the following steps:
 
 After you configure the authentication for Snowflake, you can implement the functions of the connector by using the provided activities in microflows. An extended microflow has been implemented and added to the Snowflake REST SQL connector as an example for users that would like to retrieve a list of objects from an existing table in Snowflake. In the **SnowflakeRESTSQL** module, see the **ExampleImplementation** microflow and the **ExampleObject** domain model entity to learn how the [**TransformResponsesToMxObjects** operation](#transform-response-to-mx-object) can be used to easily convert the data received in **HttpResponse** objects into Mendix objects. 
 
-{{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/example_implementation.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-rest-sql/example_implementation.png" >}}
 
 ## Technical Reference
 

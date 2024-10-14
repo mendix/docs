@@ -80,7 +80,7 @@ In your defining app, you can create a new service by doing the following:
 
 The business event service document is open in Studio Pro:
 
-{{< figure src="/attachments/appstore/use-content/services/business-events/new-business-event-service.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/business-events/new-business-event-service.png" class="no-border" >}}
 
 In the next section, you will define the information included in your events, as well as what the service will implement.
 
@@ -88,7 +88,7 @@ In the next section, you will define the information included in your events, as
 
 To define what information is included in your events, as well as what the service will implement, click **Add** in the open service document:
 
-{{< figure src="/attachments/appstore/use-content/services/business-events/add-event-definition.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/business-events/add-event-definition.png" class="no-border" >}}
 
 1. Define what information is included in this event
 
@@ -96,7 +96,7 @@ To define what information is included in your events, as well as what the servi
 
     In the **Attributes** section, click **Add** to define attributes. Changes you make here later might lead to breaking changes if the entity the attribute belongs to is consumed, though related entities will be updated automatically.
 
-    {{< figure src="/attachments/appstore/use-content/services/business-events/wizard-step-1.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/services/business-events/wizard-step-1.png" class="no-border" >}}
 
 2. Decide what other apps can do and what service this will implement
 
@@ -143,7 +143,7 @@ To use an existing business service in Studio Pro 9.24 and above, do the followi
 
 The business event service document is open in Studio Pro:
 
-{{< figure src="/attachments/appstore/use-content/services/business-events/existing-business-event-service.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/business-events/existing-business-event-service.png" class="no-border" >}}
 
 #### Publishing and Subscribing to Business Events
 
@@ -173,7 +173,7 @@ The base values for your entity are taken from the **PublishedBusinessEvent**, a
 
 The text with the blue background above the entity tells you it is a specialized entity based on the **PublishedBusinessEvent** entity in the **BusinessEvents** service:
 
-{{< figure src="/attachments/appstore/use-content/services/business-events/specialized-entity.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/business-events/specialized-entity.png" class="no-border" >}}
 
 #### Using the Publish Business Event Activity
 
@@ -201,7 +201,7 @@ The **Publish Business Event** activity will commit all event objects at the sta
 
 The **PublishedBusinessEvent** and **ConsumedBusinessEvent** entities are necessary to include in your domain model to publish business events. The **DeadLetterQueue** and **Outbox** are part of the Mendix Business Events service.
 
-{{< figure src="/attachments/appstore/use-content/services/business-events/four-entities-in-domain-model.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/business-events/four-entities-in-domain-model.png" class="no-border" >}}
 
 * **PublishedBusinessEvent** - This non-persistable entity has the fields settings that every published event will include. Every published business event will inherit from this entity. The three fields can be set from the Java Action. This is used to define what your published business events look like.
 * **ConsumedBusinessEvent** - This entity has the fields that every consumed event will include. Every consumed business event will inherit from this entity. These fields will be set from the service, as will any additional fields that match with the payload of the event. This defines what you want to receive from the business events you subscribe to.
@@ -337,7 +337,7 @@ Start your docker cluster using the command `docker-compose up`. This will downl
 
 You can configure the app running in Studio Pro to use the Postgres database created using Docker. Remember to use a different database name for every app.
 
-{{< figure src="/attachments/appstore/use-content/services/business-events/postgres.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/business-events/postgres.png" class="no-border" >}}
 
 Here is an example of a Postgres service that you can add to your `docker-compose.yml` file.
 

@@ -7,7 +7,7 @@ url: /appstore/partner-solutions/ats/rg-two-schedule/
 
 Scheduling allows you to plan the execution of test cases and test suites at defined dates. You can also choose to send alerts when a scheduled run is done.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-schedule/schedules_tab_with_alerting.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-schedule/schedules_tab_with_alerting.png" class="no-border" >}}
 
 If you want to edit the schedule, click **Edit** ({{% icon name="pencil" %}}) to the right of the schedule. Clicking **Delete** ({{% icon name="remove" %}}) will delete the schedule. To activate/deactivate a schedule, click the box in front of the schedule.
 

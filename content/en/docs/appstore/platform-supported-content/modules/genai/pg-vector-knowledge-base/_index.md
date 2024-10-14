@@ -91,7 +91,7 @@ A typical pattern for populating a knowledge base is as follows:
 3. Call an embeddings endpoint with the `ChunkCollection` to generate an embedding vector for each `KnowledgeBaseChunk`
 4. With the `ChunkCollection`, use [(Re)populate Knowledge Base](#repopulate-knowledge-base) to store the chunks.
 
-{{< figure src="/attachments/appstore/use-content/modules/genai/pgvector-knowledge-base/pgvector-embedandrepopulate.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/pgvector-knowledge-base/pgvector-embedandrepopulate.png" >}}
 
 #### `(Re)populate Knowledge Base` {#repopulate-knowledge-base}
 
@@ -171,7 +171,7 @@ The **Documentation** pane displays the documentation for the currently selected
 1. In the [View menu](/refguide/view-menu/) of Studio Pro, select **Documentation**.
 2. Click the element for which you want to view the documentation.
 
-    {{< figure src="/attachments/appstore/use-content/modules/doc-pane.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/doc-pane.png" >}}
 
 ## Showcase Application {#showcase-application}
 

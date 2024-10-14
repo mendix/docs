@@ -17,11 +17,11 @@ If the user needs to set one value, instead of a range, you should use the [Slid
 
 * Configure the minimum value and the maximum value, which define the limits of the slider's track, and then the user can set the lower bound value and the upper bound value of a range within these limits:
 
-    {{< figure src="/attachments/appstore/use-content/widgets/range-slider/sample-range.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/range-slider/sample-range.png" class="no-border" >}}
 
 * Set a step size, which is the difference between two adjacent values on the slider:
 
-    {{< figure src="/attachments/appstore/use-content/widgets/range-slider/step-value.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/range-slider/step-value.png" class="no-border" >}}
 
 * Set a microflow that is executed when the user changes the range value on the slider
 * Show a tooltip when the user clicks or moves a slider handle

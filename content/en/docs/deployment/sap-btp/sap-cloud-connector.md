@@ -18,7 +18,7 @@ A challenge when running an application in the cloud is to be able to access you
 
 For SAP Business Technology Platform (SAP BTP) users, this is solved by using the [Cloud Connector](https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/cloud-connector) tool provided by SAP. With the SAP Cloud Connector, a Mendix application deployed on SAP BTP can access any SAP system running on premises.
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-cloud-connector/connectivity-service.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-cloud-connector/connectivity-service.png" class="no-border" >}}
 
 For more information, see [Cloud Connector](https://help.sap.com/viewer/cca91383641e40ffbe03bdc78f00f681/Cloud/en-US/e6c7616abb5710148cfcf3e75d96d596.html
 ) in the SAP Help Portal.
@@ -33,7 +33,7 @@ An important dependency for the SAP Cloud Connector is the JWT token received fr
 
 When the XSUAA Connector for SAP Business Technology Platform and Cloud Connector are set up, the only thing a developer needs to do to use it is enable the **Use SAP cloud connector** flag on one of the OData Connector for SAP solutions operators (such as Get List, Create, or Delete).
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-cloud-connector/cloud-connector.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-cloud-connector/cloud-connector.png" class="no-border" >}}
 
 ## Read More
 

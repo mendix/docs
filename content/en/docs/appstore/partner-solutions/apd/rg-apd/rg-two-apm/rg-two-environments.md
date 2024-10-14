@@ -7,7 +7,7 @@ url: /appstore/partner-solutions/apd/rg-two-environments/
 
 After selecting an app from the [Apps overview](/appstore/partner-solutions/apd/rg-two-apps/), an overview of available environments for that app is displayed. It is possible to select an existing environment or add a new environment.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-environments/environments.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-environments/environments.png" class="no-border" >}}
 
 When selecting an existing environment, the [Dashboard](/appstore/partner-solutions/apd/rg-two-dashboard/) of that environment will be shown.
 
@@ -21,7 +21,7 @@ When an environment is marked as red instead of green, that means the APM agent 
 
 In order to add a new environment, click **New environment** in the **Environments** overview.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-environments/new_environment.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-environments/new_environment.png" class="no-border" >}}
 
 All the environments initially start as a Mendix Studio Pro environment. A Mendix Studio Pro environment is only visible for the user that creates it in APM.
 

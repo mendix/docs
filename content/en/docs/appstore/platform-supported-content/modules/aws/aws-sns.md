@@ -63,7 +63,7 @@ To subscribe to a topic in your AWS environment and receive email notifications 
 
 1. In the **App Explorer**, right-click the name of your module, and then click **Add microflow**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-sns/sns_create_microflow.png" alt="Adding a microflow" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-sns/sns_create_microflow.png" alt="Adding a microflow" class="no-border" >}}
 
 2. Enter a name for your microflow, for example, *ACT_Subscribe_Email*, and then click **OK**.
 3. In the **App Explorer**, in the **AmazonSNSConnector** section, find the **Subscribe** activity.
@@ -74,12 +74,12 @@ To subscribe to a topic in your AWS environment and receive email notifications 
     2. In the expression builder, type `ENUM_Region`, and then press **Ctrl** + **Space**.
     3. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type *.* and select your AWS region from the list.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-sns/sns_subscribe_aws_region.png" alt="Selecting the AWS region" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-sns/sns_subscribe_aws_region.png" alt="Selecting the AWS region" class="no-border" >}}
 
 6. In the **App Explorer**, in the **AWSAuthentication** > **Operations** section, find the **GetStaticCredentials** and **GetTemporaryCredentials** actions.
 7. Drag the one you would like to use onto the microflow you are working on, and position it between the microflow start event and the **Subscribe** activity.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-sns/sns_subscribe_actions.png" alt="Configuring the Subscribe activity" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-sns/sns_subscribe_actions.png" alt="Configuring the Subscribe activity" class="no-border" >}}
 
 8. Double-click the microflow action and then configure the required **ENUM_Region** parameter in the same way as described in step 5.
 9. Double-click the **Subscribe** activity and configure the **Credentials** parameter by doing the following steps:
@@ -103,7 +103,7 @@ To be able to send a message to a topic so that all endpoints subscribed to that
 
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-sns/sns_create_microflow.png" alt="Creating a microflow" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-sns/sns_create_microflow.png" alt="Creating a microflow" class="no-border" >}}
 
 2. Enter a name for your microflow, for example, *ACT_PublishBatch*, and then click **OK**.
 3. In the **App Explorer**, in the **AmazonSNSConnector** section, find the **PublishBatch** activity.
@@ -114,12 +114,12 @@ To be able to send a message to a topic so that all endpoints subscribed to that
     2. In the expression builder, type `ENUM_Region`, and then press **Ctrl** + **Space**.
     3. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type *.* and select your AWS region from the list.
 
-        {{< figure src="/attachments/appstore/use-content/modules/aws-sns/sns_publishbatch_aws_region.png" alt="Selecting the AWS region" class="no-border" >}}
+        {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-sns/sns_publishbatch_aws_region.png" alt="Selecting the AWS region" class="no-border" >}}
 
 6. In the **App Explorer**, in the **AWSAuthentication** > **Operations** section, find the **GetStaticCredentials** and **GetTemporaryCredentials** actions.
 7. Drag the one you would like to use onto the microflow you are working on, and position it between the microflow start event and the **PublishBatch** activity.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-sns/sns_publishbatch_actions.png" alt="Adding the PublishBatch activity" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-sns/sns_publishbatch_actions.png" alt="Adding the PublishBatch activity" class="no-border" >}}
 
 8. Double-click the microflow action and then configure the required **ENUM_Region** parameter in the same way as described in step 5.
 9. Double-click the **PublishBatch** activity and configure the **Credentials** parameter by doing the following steps:
@@ -148,4 +148,4 @@ The **Documentation** pane displays the documentation for the currently selected
 1. In the [View menu](/refguide/view-menu/) of Studio Pro, select **Documentation**.
 2. Click on the element for which you want to view the documentation.
 
-    {{< figure src="/attachments/appstore/use-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/technical-reference/doc-pane.png" class="no-border" >}}

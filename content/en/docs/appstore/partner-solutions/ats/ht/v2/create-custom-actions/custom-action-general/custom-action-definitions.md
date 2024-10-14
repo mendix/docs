@@ -37,15 +37,15 @@ There are two ways of making a combined action:
 
 These are the steps in a Mendix app:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/custom-action-definitions/combined-action-app-steps.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/custom-action-definitions/combined-action-app-steps.png" class="no-border" >}}
 
 These are the steps in ATS:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/custom-action-definitions/combined-action-ats-steps.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/custom-action-definitions/combined-action-ats-steps.png" class="no-border" >}}
 
 This is the combined action:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/custom-action-definitions/combined-action-ats-newexpense-action.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/custom-action-definitions/combined-action-ats-newexpense-action.png" class="no-border" >}}
 
 ### Summary
 
@@ -69,15 +69,15 @@ Follow the guidelines for building a custom action to create an unsupported widg
 
 This is the widget in a Mendix app:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/custom-action-definitions/unsupported-widget-action-app-widget.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/custom-action-definitions/unsupported-widget-action-app-widget.png" class="no-border" >}}
 
 These are the steps in ATS:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/custom-action-definitions/unsupported-widget-action-ats-steps.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/custom-action-definitions/unsupported-widget-action-ats-steps.png" class="no-border" >}}
 
 This is the unsupported widget action:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/custom-action-definitions/unsupported-widget-action-ats-switch-action.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/custom-action-definitions/unsupported-widget-action-ats-switch-action.png" class="no-border" >}}
 
 ### Summary
 
@@ -98,15 +98,15 @@ The focus is on finding an element that you can use to find the widget. The [Fin
 
 This is an element in a Mendix app:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/custom-action-definitions/searchcontext-action-listview-app.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/custom-action-definitions/searchcontext-action-listview-app.png" class="no-border" >}}
 
 These are the steps in ATS:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/custom-action-definitions/searchcontext-action-listview-ats-steps.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/custom-action-definitions/searchcontext-action-listview-ats-steps.png" class="no-border" >}}
 
 This is the search context action:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/custom-action-definitions/searchcontext-action-listview-ats-action.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/custom-action-definitions/searchcontext-action-listview-ats-action.png" class="no-border" >}}
 
 ### Summary
 
@@ -129,11 +129,11 @@ Function actions distinguish themselves from other actions by their purpose. If 
 
 These are the steps in ATS:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/custom-action-definitions/function-action-ats-teststeps.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/custom-action-definitions/function-action-ats-teststeps.png" class="no-border" >}}
 
 This the function action:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/custom-action-definitions/function-action-ats-function-action.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/custom-action-definitions/function-action-ats-function-action.png" class="no-border" >}}
 
 ### Summary
 

@@ -24,16 +24,17 @@ Try your OQL example online with the [OQL Playground](https://service.mendixclou
 
 ## OQL Clauses
 
-OQL clauses are reserved words that structure the OQL query into sections. Each section and, therefore, clause is responsible for a different aspect of the query. Every query has 2 mandatory clauses: `SELECT` and `FROM`.
+OQL clauses are reserved words that structure an OQL query into sections. Each section, and therefore clause, is responsible for a different aspect of the query. Every query has 2 mandatory clauses: `SELECT` and `FROM`. For example:
 
 ```sql
 SELECT LastName, Address
 FROM Sales.Customer
 ```
 
-These basic clauses define which data needs to be retrieved, and which entity or entities should be used as a source. Other clauses are not mandatory. They are used to specify limitations and other rules on the data being retrieved.
+These basic clauses define which data needs to be retrieved and which entity or entities should be used as a source. Other clauses are not mandatory. They are used to specify limitations and other rules on the data being retrieved.
 
 Other clauses are not mandatory, but if used, they should be present in a fixed order:
+
 1. `SELECT`
 2. `FROM`
 3. `WHERE`
@@ -45,7 +46,7 @@ Other clauses are not mandatory, but if used, they should be present in a fixed 
 
 ### `SELECT` clause
 
-The `SELECT` clause specifies which entity attributes or other specified data must be retrieved. The `SELECT` clause consists of the term `SELECT` and one or more expressions. These expressions must be separated by a comma. Each expression defines a column in the result. Each expression can have an alias, which will be the name of the column in the result.
+The `SELECT` clause specifies which entity attributes or other specified data must be retrieved. The `SELECT` clause consists of the term `SELECT` and one or more expressions. These expressions must be separated by commas. Each expression defines a column in the result. Each expression can have an alias, which will be the name of the column in the result.
 
 #### Syntax
 

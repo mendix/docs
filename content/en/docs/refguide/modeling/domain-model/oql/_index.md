@@ -1,6 +1,6 @@
 ---
-title: "OQL"
-url: /refguide/oql/
+title: "OQL (New Landing Page)"
+url: /refguide/oql-new/
 weight: 10
 ---
 

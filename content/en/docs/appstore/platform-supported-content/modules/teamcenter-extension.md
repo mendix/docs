@@ -14,12 +14,12 @@ Teamcenter Extension offers a list of use cases for which domain models and micr
 
 Teamcenter Extension offers the following integration options:
 
-* Search Item Revisions
-* Create Item and Item Revision
-* Update Item and Item Revision
-* Revise Item Revision
-* Search Datasets
-* Get Datasets for Item Revision
+* Search item revisions
+* Create item and item revision
+* Update item and item revision
+* Revise Item revison
+* Search datasets
+* Get datasets for item revision
 * Search workspace objects
 * Get structures
 
@@ -33,9 +33,9 @@ The compatibility between Teamcenter Extension and Studio Pro is as follows:
 
 * Teamcenter Extension V 1.0.0 is compatible with Studio Pro versions between 10.6.5 and 10.7.
 
-* Teamcenter Extension V 2.0.0 is compatible with Studio Pro version 10.12.1 or higher.
+* Teamcenter Extension V 2.0.0 is compatible with Studio Pro version 10.12.1 and above.
   
-* Teamcenter Extension V 3.0.0 is compatible with Studio Pro version 10.12.6 or higher.
+* Teamcenter Extension V 3.0.0 is compatible with Studio Pro version 10.12.6 and above.
 
 {{% alert color="info" %}}Teamcenter Extension is not compatible with Studio Pro versions between 10.8 to 10.11. </br></br>If you use one of these Studio Pro versions, a possible workaround is to use Teamcenter Extension in one of the compatible versions of Studio Pro first, create necessary artifacts and then import them into your version. However, Mendix always recommends using the latest MTS or LTS Studio Pro version.{{% /alert %}}
 
@@ -83,23 +83,23 @@ This action allows you to generate the domain model and microflow to update an `
 
 #### Revise Item Revision {#reviseitem-and-itemrevision}
 
-This action allows you to generate the domain model and microflow to revise an `ItemRevision` or its specializations in Teamcenter. The resulting microflow implements the `Revise Object and Update Properties` actions from the Teamcenter Connector. With the `Revise Object` action, a new `ItemRevision` is created, setting the Teamcenter properties that need to be set upon revising. With the `Update Properties` action, the remaining properties are updated in Teamcenter.
+This allows you to generate the domain model and microflow to revise an `ItemRevision` or its specializations in Teamcenter. The resulting microflow implements the `Revise Object and Update Properties` actions from the Teamcenter Connector. With the `Revise Object` action, a new `ItemRevision` is created, setting the Teamcenter properties that need to be set upon revising. With the `Update Properties` action, the remaining properties are updated in Teamcenter.
 
 #### Search Datasets {#getdatasets}
 
-This action allows you to generate the domain model and microflow to search for and retrieve `Datasets` or its specialization. The resulting microflow implements the saved query `Datasets` from Teamcenter.
+This allows you to generate the domain model and microflow to search for and retrieve `Datasets` or its specialization. The resulting microflow implements the saved query `Datasets` from Teamcenter.
 
 #### Get Datasets from Item Revision {#getdatasetsfromitemrevision}
 
-This action allows you to generate the domain model and microflow to retrieve datasets for an Item Revision and subsequently download files inside the dataset
+This action allows you to generate the domain model and microflow to retrieve datasets for an Item Revision and subsequently download files inside the dataset.
 
 #### Get Workspace Objects {#getworkspaceobjects}
 
-This action allows you to configure and generate the domain model and microflow to search for and retrieve Workspace Objects or their specialization from Teamcenter. This action implements the saved query `General..` from Teamcenter
+This action allows you to configure and generate the domain model and microflow to search for and retrieve Workspace Objects or their specialization from Teamcenter. This action implements the saved query `General..` from Teamcenter.
 
 #### Get Structures
 
-This action allows you to generate the domain model and microflows to configure a BOM window and retrieve structure data from Teamcenter. This feature supports the retrieval of structures with the following:
+This allows you to generate the domain model and microflows to configure a BOM window and retrieve structure data from Teamcenter. This feature supports the retrieval of structures with the following:
 
 * `RevisionRule` (or default `RevisionRule`)
 * `VariantRule`

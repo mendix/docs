@@ -168,7 +168,7 @@ Team members who have a role with **Cloud Access** can see which services are en
 
 Once a service has been enabled for an app, Technical Contacts can selectively enable it for each environment. For more information, see the [Services](/developerportal/deploy/environments-details/#services) section of the *Environment Details* page.
 
-## Deploy or Promote Wizard{#deploy-wizard}
+## Deploying a Package {#deploy-wizard}
 
 The Deploy or Promote wizard deploys packages to selected environments. Follow the wizard by performing the following steps:
 
@@ -190,14 +190,15 @@ The Deploy or Promote wizard deploys packages to selected environments. Follow t
 
     2. Review this summary, and then click **Deploy Now**.
 
-## Create a Package Wizard{#create-package-wizard}
+## Creating a Package {#create-package-wizard}
 
-If you click **Create a Package** from the [Deployment Packages tab](/deploy/environments/#deployment-packages-tab), this launches the **Create a Package** wizard. Follow the wizard by performing the following steps:
+The **Create a Package** wizard creates deployment packages. Follow the wizard by performing the following steps:
 
-1. In the **Select Package** tab, select the branch on which to base the build.
-2. In the **Select Revision** tab, select the branch revision.
-3. In the **Choose a Tag** tab, specify the version tag. This includes the major, minor, and patch version numbers.
+1. In the [Deployment Packages tab](/deploy/environments/#deployment-packages-tab), click **Create a Package**. This launches the **Create a Package** wizard.
+2. In the **Select Package** tab, select the branch on which to base the build.
+3. In the **Select Revision** tab, select the branch revision.
+4. In the **Choose a Tag** tab, specify the version tag. This includes the major, minor, and patch version numbers.
 
     {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/3-choose-tag.png" alt="" >}}
 
-4. Click **Build this Revision**.
+5. Click **Build this Revision**.

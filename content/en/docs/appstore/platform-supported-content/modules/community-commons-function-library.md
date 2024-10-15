@@ -88,7 +88,7 @@ The module contains one constant: `CommunityCommons.MergeMultiplePdfs_MaxAtOnce`
 ### ORM
 
 * <a id="clone"></a>`Clone` – This clones the objects.
-* `commitInSeparateDetabaseTransaction` – This function commits an object in a seperate context and transaction, making sure it gets persisted in the database (regarding which exception happens after invocation).
+* `commitInSeparateDatabaseTransaction` – This function commits an object in a seperate context and transaction, making sure it gets persisted in the database (regarding which exception happens after invocation).
 * `commitWithoutEvents` – This commits an object but without events.
 * `copyAttributes` – This copies all common primitive attributes from source to target, which are not necessarily of the same type. This is useful to, for example, translate database object into view objects.
 * <a id="deepclone"></a>`DeepClone` – This clones the objects, their associations, and their referred objects. For more information, see the [Limitations](#limitations) section below.

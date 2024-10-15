@@ -115,7 +115,19 @@ Studio Pro also attaches some information automatically:
 * The list of changed documents, folders, and modules along with the type of the change (for example, **modify** or **add**)
 * The version of Studio Pro that was used to commit
 
-If you also changed Java source code, added widgets, or made other changes that affect files other than the app file, you will see a **Changes on disk** tab page that shows you what disk changes you are about to commit.
+If you also changed Java source code, added widgets, or made other changes that affect files other than the app file, you will see a **Changes on disk** tab that shows you what disk changes you are about to commit. **Open containing folder** opens the folder with the file on disk. For files with the **Modified** status, you can use **Compare with original** that opens an external tool to show the differences.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/changes-on-disk.png" >}}
+
+{{% alert color="info" %}}
+An external file comparison tool can be set in **Preferences** > **Version control** > **General** > **File comparison** > **Executable**. 
+
+A tool you can consider using is TortoiseGitMerge, shipped as part of [TortoiseGit](https://tortoisegit.org/download/). It is installed by default on this path: *C:\Program Files\TortoiseGit\bin\TortoiseGitMerge.exe*.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+Comparing files on disk with the original is currently not supported on macOS.
+{{% /alert %}}
 
 Committing is only allowed if your working copy is up to date with the repository. If someone else committed a change since the last time you pulled, you will have to pull first. This is because the revision you create with the commit should incorporate both your changes and the changes by the other person. Updating will combine the latest changes in the repository with your changes. After reviewing the result and fixing any conflicts, you can commit again.
 

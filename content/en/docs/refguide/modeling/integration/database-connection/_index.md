@@ -19,7 +19,7 @@ You must have the [External Database Connector](https://marketplace.mendix.com/l
 
 Right-click on your module and click **Add other > External database connection** to open the **Connect to Database** wizard:
 
-{{< figure src="/attachments/appstore/use-content/modules/external-database-connector/database-connection-wizard.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/database-connection-wizard.png" class="no-border" >}}
 
 Once in the wizard, enter or select the following:
 
@@ -59,7 +59,7 @@ After entering your database information in the **Connect to Database** wizard, 
 
 The name of the document is the **Name** (not **Database name**) you provided when running the wizard:
 
-{{< figure src="/attachments/appstore/use-content/modules/external-database-connector/database-service-document.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/database-service-document.png" class="no-border" >}}
 
 ### Query Screen {#query-screen}
 

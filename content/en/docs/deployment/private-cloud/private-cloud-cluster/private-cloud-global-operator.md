@@ -151,7 +151,7 @@ Once all the standard namespaces within a cluster created on portal side are con
 Configure Private Cloud License Management (PCLM) in the Global Operator namespace. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
 
 {{% alert color="info" %}}
-For Global Operator installations, execute the above command in both the Global Operator namespace and its managed namespaces where the license is intended to be applied. Make sure that identical PCLM license details are configured for both the Managed and Global Operator namespaces to avoid unexpected outcomes. Global Operator is in beta, and it does not currently fully support PCLM.
+For Global Operator installations, execute the above command in both the Global Operator namespace and its managed namespaces where the license is intended to be applied. Make sure that identical PCLM license details are configured for both the Managed and Global Operator namespaces to avoid unexpected outcomes.
 {{% /alert %}}
 
 {{% alert color="warning" %}}

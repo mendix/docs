@@ -220,6 +220,5 @@ Deploy your app again and navigate to the page with your data grid. Enter a valu
 
 * [REST Services](/refguide/integration/rest-services/)
 * [JSON Structures Guide](/refguide/json-structures/)
-* 
 * [Consumed REST Services](/refguide/consumed-rest-services-beta/)
 * [Use Call REST Service Action in a Microflow](/refguide/integration/use-call-rest-action-in-microflow/)

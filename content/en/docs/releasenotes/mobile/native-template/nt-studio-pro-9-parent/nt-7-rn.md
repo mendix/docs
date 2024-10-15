@@ -5,6 +5,14 @@ weight: 9
 description: "Native Template 7 release notes."
 ---
 
+## 7.0.19 {#718}
+
+**Release date: October 1, 2024**
+
+### Improvements
+
+* We have updated `react-native-permissions` to version 3.6.1.
+
 ## 7.0.17 {#717}
 
 **Release date: September 3, 2024**

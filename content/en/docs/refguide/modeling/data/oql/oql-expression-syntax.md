@@ -7,8 +7,21 @@ url: /refguide/oql-expression-syntax/
 
 Operators and functions use expressions as inputs to perform mathematical, comparison, conditional, string, date operations and return the result. They allow an OQL query to perform modifications on data on the database to present a different view of the data or make complex conditions.
 
-<!-- Some operators and functions are type sensitive, with input types affecting output type. Supported types and their combinations are database dependent.
-Operator and function output value is also database dependent. -->
+## Literals
+Literals represent values that are constant and are part of the query itself. The supported literals are detailed below:
+
+| Format | Example         | Data Type            |
+|--------|-----------------|----------------------|
+| -      | `TRUE`, `FALSE` | `BOOLEAN`            |
+| 's*'   | 'my_string'     | `STRING`             |
+| d*     | 5               | `INTEGER` and `LONG` |
+| d*.d*  | 5.3             | `DECIMAL`            |
+| -      | `NULL`          | -                    |
+
+Where `d` is a number, 's' is any character. * indicates zero or more characters.
+
+### DATETIME
+There is no direct support for `DATETIME` literals. For functions that take `DATETIME` as input, it can be represented with a `STRING` in a ISO date time format or a `LONG` value representing unix seconds.
 
 ## Operators
 Operators perform common operations and do not use parenthesis in their syntax. They take `expression` as input, which can be other operator results, functions, columns and literals.
@@ -258,7 +271,7 @@ Matches an `expression` to the pattern after the operator.
 ```sql
 expression LIKE pattern
 ```
-Where `expression` is of type `STRING` and `pattern` is a string literal or parameter.
+Where `expression` is of type `STRING` and `pattern` is a string literal or parameter. A `NULL` pattern is treated as an empty string.
 
 The pattern can have special characters, which are all wildcards. Supported wildcard Characters:
 
@@ -298,11 +311,11 @@ Select House FROM House LIKE '%a%t'
 | Flat      |
 
 #### IN
-Matches a value in a subquery or a list of expression values. 
+Matches a value in a subquery or a list of expression values. Each value in the list or subquery is compared to a specified expression with the operator `=`(Equal to), returning `TRUE` if any of the comparisons return `TRUE`. `NULL` value handling is the same as the `=`(Equal to) operator.
 
 {{% alert color="info" %}}
 
-If the datatypes that are being matched are not the same, the behaviour is database dependent.
+HSQLDB and PostgreSQL do not support matching of different datatypes.
 
 {{% /alert %}}
 
@@ -316,7 +329,7 @@ expression IN {
 Where `expression` can have any type. The left side can be either a `subquery`, a comma separated list of `expression` or a parameter that is a list of values. If `subquery` is used, it must return a single column.
 
 ##### Examples
-This operator is used to create conditions that depend on other entities or limited views of entities. `IN` also does not introduce extra columns in the top query, unlike a join. 
+This operator is used to create conditions that depend on other entities or limited views of entities.
 
 This condition checks if the string `House` is in the literal list on the right, returning `FALSE`:
 ```sql
@@ -422,8 +435,8 @@ or extended:
 
 ### Operator precedence
 If operators are used without parenthesis to indicate order, the order of application is left to right with operator precedence:
-- \* (Multiplication), / (Division), % (Modulo)
-- \+ (Positive), - (Negative), + (Addition), + (Concatenation), - (Subtraction))
+- \* (Multiplication), : (Division), % (Modulo)
+- \- (Arithmetic negation), + (Addition), - (Subtraction)
 - =, >, <, >=, <=, !=, IS, IN, EXISTS, LIKE
 - NOT
 - AND
@@ -497,21 +510,21 @@ The table below describes which `CAST` conversions are supported:
 
 <small>[1] BOOLEAN to STRING (limited) is supported only if the resulting string length is ≥ 5. <br />[2] The conversion of DATETIME and DECIMAL to STRING (limited) is supported only if the value fully fits into the string length. The conversion can fail if the resulting string length is < 20.</small>
 
+Converting `DATETIME`, `BOOLEAN` to `STRING` returns different format per database.
+
 #### Examples
 
 A frequent use case for `CAST` is to convert your date from the `DATETIME` data type to a more readable `STRING` type:
 
 ```sql
-CAST ( your_datetime_variable AS string )
+CAST ( datetime_string AS string )
 ```
 
-# COALESCE
+### COALESCE
 
-## Description
+Returns the first of its arguments that is not NULL. Can be used with columns.
 
-The `COALESCE` function returns the first of its arguments that is not NULL.
-
-## Syntax
+#### Syntax
 
 The syntax is as follows:
 
@@ -519,17 +532,36 @@ The syntax is as follows:
 COALESCE ( expression [ ,...n ] )
 ```
 
-`expression` specifies the expression to check, if the result is NULL.
+`expression` specifies the expression to check. Most databases expect the function to be given at least two `expression` arguments.
 
+#### Examples
+Assume entity `Sales.Customer` entity now has some `NULL` values:
 
+```sql
+SELECT * FROM Sales.Customer
+```
 
-# DATEDIFF
+| ID | LastName | FirstName |                                                         
+|----|----------|-----------|
+| -  | Doe      | NULL      |
+| -  | NULL     | Jane      |
 
-## Description
+Selecting a non-null name for a customer, ignoring if it is the first name or last name, can be done with `COALESCE`:
+
+```sql
+SELECT COALESCE(LastName, FirstName) as Name FROM Sales.Customer
+```
+
+| Name |                                                         
+|------|
+| Doe  |
+| Jane |
+
+### DATEDIFF
 
 The `DATEDIFF` function returns the difference between two given date/time values. The difference is given in the specified unit.
 
-## Syntax
+#### Syntax
 
 The syntax is as follows:
 
@@ -537,20 +569,20 @@ The syntax is as follows:
 DATEDIFF ( unit , startdate_expression, enddate_expression [, timezone ] )
 ```
 
-### unit
+##### unit
 
 `unit` specifies the unit of the date/time value to retrieve. This can be one of the following:
 `YEAR`, `QUARTER`, `MONTH`, `DAY`, `WEEK`, `HOUR`, `MINUTE`, `SECOND` or `MILISECOND`. For more information on date/time values, see the [Example](/refguide/oql-datepart/#oql-datepart-example) section in *OQL DATEPART*.
 
-### startdate_expression
+##### startdate_expression
 
 `startdate_expression` specifies the start date of the period being calculated. This should be formatted in an expression which resolves to a date/time value.
 
-### enddate_expression
+##### enddate_expression
 
 `enddate_expression` specifies the end date of the period being calculated. This should be formatted in an expression which resolves to a date/time value.
 
-### timezone
+##### timezone
 
 `timezone` specifies the time zone to use for the retrieval. This parameter is optional and defaults to the local time zone. It should be a string literal containing an IANA time zone. GMT offset time zones are not supported.
 

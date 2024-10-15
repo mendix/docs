@@ -20,14 +20,20 @@ These are the `OPTIONS`:
 | Option | Value | Result |
 | --- | --- | --- |
 | `--unit-type` | A single unit type, or a comma-separated list of unit types. | Filters the results on the supplied unit types and limits the JSON export. |
+| `--exclude-system-module` | | Exclude the system module from the JSON export. (Available from Mendix 10.12.0) |
+| `--exclude-protected-modules` | | Exclude protected modules from the JSON export. (Available from Mendix 10.12.0) |
+| `--module-names` | A single module name, or a comma-separated list of module names. | Filters the results on the supplied modules and limits the JSON export. (Available from Mendix 10.16.0) |
 
 ### Examples
 
 These are valid examples:
 
-* `mx dump-mpr temp.mpr`
-* `mx dump-mpr temp.mpr --unit-type DomainModels$DomainModel`
-* `mx dump-mpr --unit-type DomainModels$DomainModel,Texts$SystemTextCollection temp.mpr`
+* `mx dump-mpr app.mpr`
+* `mx dump-mpr --unit-type DomainModels$DomainModel app.mpr`
+* `mx dump-mpr --unit-type DomainModels$DomainModel,Texts$SystemTextCollection app.mpr`
+* `mx dump-mpr --module-names MyFirstModule app.mpr`
+* `mx dump-mpr --module-names MyFirstModule --unit-type DomainModels$DomainModel app.mpr`
+* `mx dump-mpr --exclude-system-module --exclude-protected-modules app.mpr`
 
 A sample output with the unit type filter on domain models would be:
 

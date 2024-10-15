@@ -18,7 +18,7 @@ The **Apps** page gives an overview of all the apps belonging to your company. T
 Mendix will enhance this page to provide information about apps deployed on standalone private clouds. Stay tuned.
 {{% /alert %}} 
 
-The search bar at the top of the page allows you to find any company app using either the app ID or the app name.
+The search bar at the top of the page allows you to find an app using either the app ID or the app name.
 
 {{< figure src="/attachments/control-center/apps/top-search-bar.png" >}}
 

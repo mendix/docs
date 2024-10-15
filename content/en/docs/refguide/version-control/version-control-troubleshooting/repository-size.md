@@ -34,8 +34,6 @@ Other places where you might encounter performance issues or timeouts are the fo
 
 The *.mpr* storage format will be changed to reduce the rapid repository growth. Switching to the new storage format will be done under the hood and does not result in functional changes.
 
-Mendix aims to introduce the new format for new apps in Q3 2024. Existing apps will be automatically converted in a later version, targeted for H2 2024.
-
 #### MPR Format
 
 An app modeled in Mendix is traditionally stored in a single *.mpr* file. This is essentially a database which contains data for all documents, such as microflows, workflows, pages. As the Mendix app is stored in a single file, your version control system only sees that a single file is changed. To show the exact documents that have changed inside the *.mpr* file a tool that comprehends the format is required, such as Studio Pro.

@@ -49,7 +49,7 @@ Mendix will introduce a new version of the *.mpr* format: MPRv2. The key differe
 This means that when you change one document, for example a page, that only the small file representing that page will change on disk. This allows Git to calculate an efficient delta, which results in a more appropriate repository growth. Functionally there will be no differences between the split (v2) or the combined (v1) format inside Studio Pro. 
 
 {{% alert color="warning" %}}
-Manually modifying files belonging to the [*.mpr* storage format](/refguide/version-control/#mpr-format) such as the *mprcontents* directory, for example by resolving file conflicts through 3rd party tooling, will lead to a corrupted state. To recover from a corrupted state a previous commit will need to be restored.
+Manually modifying files belonging to the [*.mpr* storage format](/refguide/version-control/#mpr-format) such as the *.mpr* file or *mprcontents* directory, for example when resolving file conflicts through 3rd party tooling, will lead to a corrupted state. To recover from a corrupted state a previous commit will need to be restored.
 {{% /alert %}}
 
 ### Working with a Large Repository Size

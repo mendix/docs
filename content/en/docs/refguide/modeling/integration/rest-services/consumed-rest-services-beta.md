@@ -54,7 +54,7 @@ Use the Consumed REST Service to configure a `GET`, `POST`, `PUT`, `PATCH`, or `
 
 {{% alert color="info" %}}
 
-As of Mendix 10.16.0, you can configure a Consumed REST service using the Web Version or the Classic Version. It is recommended to use the Web Version, as the Classic version will be removed in a future release.
+As of Mendix 10.16.0, you can configure a Consumed REST service using the New Version or the Classic Version. It is recommended to use the New Version, as the Classic version will be removed in a future release.
 
 {{% /alert %}}
 

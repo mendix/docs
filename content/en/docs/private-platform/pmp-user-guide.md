@@ -63,7 +63,7 @@ Before you can create your first app, you must first install Mendix Studio Pro b
 4. Extract the Studio Pro patch file to the *modeler* directory located in the Studio Pro installation directory, and let it patch the files inside.
 5. Launch Studio Pro and log in to it with the same credentials as for Private Mendix Platform.
 
-## Creating a New App
+## Creating a New App {#create-app}
 
 To create a new app, perform the following steps:
 
@@ -83,7 +83,7 @@ To create a new app, perform the following steps:
     * [Quick Starts](/quickstarts/)
     * [Learning path: Become a Rapid Developer](https://academy.mendix.com/link/paths/31/Become-a-Rapid-Developer)
 
-## Managing Your App
+## Managing Your App {#manage-app}
 
 As a user of Private Mendix Platform, you can view the apps that you own directly on the home page of Private Mendix Platform.
 

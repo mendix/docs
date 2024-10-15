@@ -16,8 +16,6 @@ To start the Portfolio Management app, open the [Global Navigation menu](/develo
 
 ## Portfolio Landscape Overview {#portfolio-landscape}
 
-When you start the Portfolio Management app for the first time, an introduction page opens. The introduction page describes the new features and gives helpful information. You can click **Get Started** to open the **Portfolio Landscape Overview** page. After that, when you start the Portfolio Management app, the **Portfolio Landscape Overview** page directly opens. You can click **Learn more about Portfolio Management** to go back to the introduction page.
-
 ### My Portfolios vs Company Portfolios {#my-porfolios-vs-company-portfolios}
 
 The **Portfolio Landscape Overview** page contains two sections: **My Portfolios** and **Company Portfolios**. A section only appears if there is at least one [portfolio card](#portfolio-card) in that section.
@@ -25,6 +23,8 @@ The **Portfolio Landscape Overview** page contains two sections: **My Portfolios
 {{< figure src="/attachments/developerportal/portfolio-management/portfolio-landscape-overview.png" alt="portfolio-landscape-overview" >}}
 
 * **My Portfolios** – This section shows all the portfolios where you are a portfolio member. Clicking a portfolio card opens the portfolio.
+
+First time users will have a demo portfolio as part of their portfolios. The demo portfolio can be removed at any time. It is intereative with limited functionality (It is not possible to invite users and settings also not available).
 
 * **Company Portfolios** – This section shows all the restricted and open portfolios in your company, for which you are not a portfolio member. 
     * Restricted portfolios – Clicking the portfolio card shows more details about the restricted portfolio. To join a restricted portfolio, click **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](/developerportal/portfolio-management/access-management/#access-requests).

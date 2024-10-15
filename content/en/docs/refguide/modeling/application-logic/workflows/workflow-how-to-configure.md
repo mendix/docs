@@ -47,17 +47,17 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Make sure that the domain model of the module you are working in looks the following way:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/domain-model.png" alt="Domain Model" width=250px >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/domain-model.png" alt="Domain Model" width="250" >}}
 
 * Make sure you have the following enumerations configured:
 
     * The ENUM_PhoneModel enumeration:
 
-        {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/enumeration-phone-model.png" width=500px >}}
+        {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/enumeration-phone-model.png" width="500" >}}
 
     * The ENUM_LaptopModel enumeration:
 
-        {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/enumeration-laptop-model.png" width=500px >}}
+        {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/enumeration-laptop-model.png" width="500" >}}
 
 * Make sure you have an **EmployeesToOnboard** page that contains a list view and has the **EmployeeOnboarding** entity as the data source:
 
@@ -88,11 +88,11 @@ Do the following:
 
 6. In the **User Role** dialog box, click **Edit** in the **Module roles** section.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/edit-module-roles.png" width=550px >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/edit-module-roles.png" width="550" >}}
 
 7. In the **Select Module Roles** dialog box, tick the User role for Administration and WorkflowCommons modules where no role is selected and click **OK**:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/modules-roles.png" alt="Module Roles" width=400px >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/modules-roles.png" alt="Module Roles" width="400" >}}
 
 8. Confirm your choice by clicking **OK**.
 
@@ -108,7 +108,7 @@ Do the following:
 
     3. In the **Select Module Roles**, find the WorkflowCommons module and select the Administrator role:
 
-        {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/workflow-commons-admin.png" alt="Selecting Workflow Commons Administrator" width=400px >}}
+        {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/workflow-commons-admin.png" alt="Selecting Workflow Commons Administrator" width="400" >}}
 
     4. Confirm your choice by clicking **OK**.
 
@@ -138,7 +138,7 @@ The next step in setting up security is to configure the entity access otherwise
 2. Double-click the **EmployeeOnboarding** entity to open its properties.
 3. In the **Properties** dialog box, open the **Access rules** tab and click **New** to create a rule for the HR role:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/entity-properties.png" alt="Entity Properties" width=600px >}} 
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/entity-properties.png" alt="Entity Properties" width="600" >}} 
 
 4. In the **New Access rule** dialog box, do the following:
 
@@ -146,7 +146,7 @@ The next step in setting up security is to configure the entity access otherwise
     2. In the **Create and delete rights** section, select **Allow creating new objects**. This allows HR to create a new **EmployeeOnboarding** object when a workflow is started.     
     3. In the **Member read and write rights** section, click **Set all to Read**. As the HR needs only to start the workflow, but not to change any employee information, **Read** rights are sufficient for all attributes of the entity. 
 
-        {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/access-rules-hr.png" alt="Access Rules for the HR role" width=600px >}}
+        {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/access-rules-hr.png" alt="Access Rules for the HR role" width="600" >}}
 
     4. Click **OK** to save settings.
 
@@ -158,7 +158,7 @@ The next step in setting up security is to configure the entity access otherwise
 
     4. Set the **FirstDay** attribute to **Read**.
 
-        {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/access-rules-manager.png" alt="Access Rules for the Manager Role" width=600px >}}
+        {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/access-rules-manager.png" alt="Access Rules for the Manager Role" width="600" >}}
 
     5. Click **OK** to save settings.
 
@@ -186,7 +186,7 @@ To create a workflow that you will add activities to and create pages for, do th
 
 1. In the App Explorer, right-click the **MyFirstModule** module and select **Add workflow** in the drop-down menu.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/add-workflow.png" alt="Add Workflow" width=350px >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/add-workflow.png" alt="Add Workflow" width="350" >}}
 
 2. In the **Add Workflow** dialog box, do the following:
     1. Type *Employee_Onboarding* as the **Name** of the workflow.
@@ -207,7 +207,7 @@ You have an **EmployeesToOnboard** page that contains a list of all employees an
 
 The page access is restricted to the HR user role:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/page-access-hr.png" alt="Page Access" width=350px >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/page-access-hr.png" alt="Page Access" width="350" >}}
 
 To add a button that will initiate the workflow, do the following:
 
@@ -233,7 +233,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
 4. To be able to differentiate this user task from other ones, set the **Name** property to **Specify_Device_and_Location**:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/specify-device-and-location-properties.png" alt="SpecifyDevice Properties" width=350px >}} 
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/specify-device-and-location-properties.png" alt="SpecifyDevice Properties" width="350" >}} 
 
 5. Now configure the user task to be assigned to the Manager role, as only managers should specify devices for the new employee. Make sure **Target users using** is set to **XPath** and click the ellipsis icon in the **XPath constraint** property.
 
@@ -272,7 +272,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
 Great job! You have configured the user task for the Manager role:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/workflow-with-task.png" alt="Workflow with Specify Device User Task"   width="500"  class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/workflow-with-task.png" alt="Workflow with Specify Device User Task" width="500" class="no-border" >}}
 
 This can be also a good time to test your app: you can create an employee, start the onboarding process, and test the first task for the Manager demo user. For more information, see the [Testing the Workflow](#test-workflow) section. 
 
@@ -374,7 +374,7 @@ To test your workflow, you need to switch between different user roles. Follow t
 3. In your browser, log in as an Admin user.
 4. Click the user icon on the right to switch to another user role:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/user-icon.png" alt="User Icon" width=500 class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/user-icon.png" alt="User Icon" width="500" class="no-border" >}}
 
 5. Switch between different demo user roles to test the use case. Do can do the following:
 

@@ -168,28 +168,6 @@ Team members who have a role with **Cloud Access** can see which services are en
 
 Once a service has been enabled for an app, Technical Contacts can selectively enable it for each environment. For more information, see the [Services](/developerportal/deploy/environments-details/#services) section of the *Environment Details* page.
 
-## Deploying a Package {#deploy-wizard}
-
-The Deploy or Promote wizard deploys packages to selected environments. Follow the wizard by performing the following steps:
-
-1. Launch the wizard by choosing one of the following options:
-    * Select an environment to which you want to deploy a package by clicking the **Deploy** ({{< icon name="deploy" >}}) icon on the **Overview** tab.
-    * Select a package that you want to deploy by clicking clicking the **Deploy** ({{< icon name="deploy" >}}) icon on the **Deployment Packages** tab, or by clicking **Promote** by a package name on the **Overview** tab.
-2. Perform one of the following actions, depending on whether you selected the package or the environment first:
-    * If you launched the wizard by selecting an environment, the first screen of the wizard is the **Select Package** tab. Use it to select a package from repository.
-    * If launched the wizard by selecting a package, the first screen of the wizard is the **Select Environment** tab. Use it to select the target environment for your package.
-3. In the **Configure Environment** tab, review the live (post-deployment) constant values, and adjust them as required.
-
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/2-configure-environment.png" alt="" >}}
-
-4. In the **Backup** tab, choose if you want to back up your app before deploying the new package. The app is unavailable while the backup runs.
-5. In the **Deploy** tab, review the deployment settings:
-    1. To see an overview of the configuration for this deployment, click **View Summary**. This summary displays the selected package, selected backup option, and any changed constants or scheduled events.
-    
-        {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/deployment-summary.png" alt="" >}}
-
-    2. Review this summary, and then click **Deploy Now**.
-
 ## Creating a Package {#create-package-wizard}
 
 The **Create a Package** wizard creates deployment packages. Follow the wizard by performing the following steps:
@@ -202,3 +180,25 @@ The **Create a Package** wizard creates deployment packages. Follow the wizard b
     {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/3-choose-tag.png" alt="" >}}
 
 5. Click **Build this Revision**.
+
+## Deploying a Package {#deploy-wizard}
+
+The Deploy or Promote wizard deploys packages to selected environments. Follow the wizard by performing the following steps:
+
+1. Launch the wizard by choosing one of the following options:
+    * Select an environment to which you want to deploy a package by clicking the **Deploy** ({{< icon name="deploy" >}}) icon on the **Overview** tab.
+    * Select a package that you want to deploy by clicking the **Deploy** ({{< icon name="deploy" >}}) icon on the **Deployment Packages** tab, or by clicking **Promote** by a package name on the **Overview** tab.
+2. Perform one of the following actions, depending on whether you selected the package or the environment first:
+    * If you launched the wizard by selecting an environment, the first screen of the wizard is the **Select Package** tab. Use it to select a package from repository.
+    * If you launched the wizard by selecting a package, the first screen of the wizard is the **Select Environment** tab. Use it to select the target environment for your package.
+3. In the **Configure Environment** tab, review the new constant values, and adjust them as required.
+
+    {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/2-configure-environment.png" alt="" >}}
+
+4. In the **Backup** tab, choose if you want to back up your app before deploying the new package. The app is unavailable while the backup runs.
+5. In the **Deploy** tab, review the deployment settings:
+    1. To see an overview of the configuration for this deployment, click **View Summary**. This summary displays the selected package, selected backup option, and any changed constants or scheduled events.
+    
+        {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/deployment-summary.png" alt="" >}}
+
+    2. Review this summary, and then click **Deploy Now**.

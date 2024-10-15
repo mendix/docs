@@ -35,7 +35,7 @@ The **Active** tab shows all the mini surveys that are active for the app with t
 
 * **ID** – This is the unique ID of the mini survey. You can also find this ID on the [survey details](#survey-details) page of the mini survey. You need to use the ID as input when you configure the Mendix Mini Surveys module in Studio Pro to implement the mini survey.
 * **Name** – This is the name of the mini survey.
-* **Location** - The Location is an identifier that refers to the location where the survey will show.
+* **Location** – The Location is an identifier that refers to the location where the mini survey will appear in your app.
 * **Responses** – This shows the number of responses that have been collected for the mini survey.
 * **Status** – This shows the status of the mini survey. For more information, see the [Statuses of Mini Surveys](#survey-status) section.
 * **Start & End Dates** – This shows the start and end dates of the mini survey.
@@ -149,7 +149,7 @@ To edit a mini survey, perform the following steps:
 5. Depending on its [status](#survey-status), you can edit different parts of the survey:
 
    * If the mini survey has the status of **Draft**, you can edit everything in the mini survey. To edit the mini survey, click **Edit Draft** on the upper-right corner of the page, and then make changes.
-   * If the mini survey does not have the status of **draft**, you can only edit the **Start and End Date** and the **Toaster Placement** in the survey. Click **Edit Settings** and then make the changes. Based on the dates set, the status of the survey will update as follows:
+   * If the mini survey has the status of **Active** or **Finished**, you can only edit the **Start and End Date** and the **Toaster Placement** in the survey. Click **Edit Settings** and then make the changes. Based on the dates set, the status of the survey will update as follows:
      * **Scheduled** –  if both the start and end dates are in the future
      * **Active** – if the start date is in the past and the end date is in the future
      

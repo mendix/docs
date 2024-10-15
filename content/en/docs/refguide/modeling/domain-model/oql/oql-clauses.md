@@ -31,7 +31,7 @@ SELECT LastName, Address
 FROM Sales.Customer
 ```
 
-These basic clauses define which data needs to be retrieved and which entity or entities should be used as a source. Other clauses are not mandatory. They are used to specify limitations and other rules on the data being retrieved.
+These basic clauses define for which attributes the values need to be retrieved and which entity or entities should be used as a source. Other clauses are not mandatory. They are used to specify limitations and other rules on the data being retrieved.
 
 Other clauses are not mandatory, but if used, they should be present in a fixed order:
 
@@ -46,7 +46,9 @@ Other clauses are not mandatory, but if used, they should be present in a fixed 
 
 ### `SELECT` clause
 
-The `SELECT` clause specifies which entity attributes or other specified data must be retrieved. The `SELECT` clause consists of the term `SELECT` and one or more expressions. Each expression must be separated by a comma. Each expression defines a column in the result. Each expression can have an alias, which will be the name of the column in the result.
+The `SELECT` clause specifies which entity attributes or other specified data must be retrieved. The clause returns all the values of objects which match the `SELECT` clause.
+
+The `SELECT` clause consists of the term `SELECT` and one or more expressions. Each expression must be separated by a comma. Each expression defines a column in the result. Each expression can have an alias, which will be the name of the column in the result.
 
 #### Syntax
 
@@ -61,7 +63,7 @@ SELECT [ DISTINCT ]
 	}
 ```
 
-#### Selecting Particular Attributes
+#### Selecting Specific Attributes
 
 A simple way to define what is to be retrieved is to specify particular attributes of an entity. For example:
 
@@ -70,34 +72,42 @@ SELECT FirstName AS FName, LastName AS LName
 FROM Sales.Customer
 ```
 
-It is possible to specify aliases for attributes: `FirstName AS FName`. The keyword `AS` is not mandatory, so the following query is equivalent to the one above:
+It is possible to specify aliases for columns – in the example above: `FirstName AS FName`. The keyword `AS` is not mandatory, so the following query is equivalent to the one above:
 
 ```sql
 SELECT FirstName FName, LastName LName
 FROM Sales.Customer
 ```
 
-Alias is an alternative name to replace the column name in the result. When the name attribute is retrieved, the result column is "Name". With an alias, you can specify another result column name, like "Customer_Name". An alias cannot contain spaces.
+An alias is an alternative name which replaces the column name in the result. For example, when the `name` attribute is retrieved, the result column is "Name". With an alias, you can call the result column something else, like "Customer_Name". An alias cannot contain spaces.
 
 
 {{% alert color="info" %}}
 In some scenarios, aliases in `FROM` are mandatory. Aliases are mandatory when defining a view entity.
 {{% /alert %}}
 
-#### Selecting all attributes using `*`
+#### Selecting All Attributes Using `*`
 
-`*` (asterisk) specifies that all attributes from all entities in the `FROM` clause should be returned. `entity_name/*` and `from_alias/*` specify that all attributes of the specified entity or expression of the `FROM` clause should be returned. `entity_name` can be optionally put in double quotes. If the entity name is a [reserved OQL word](/refguide/oql/#reserved-oql-words) (like `Order` or `Group`), double quotes are mandatory.
+Using `*` (asterisk) in the SELECT clause specifies that the values of all attributes from all entities in the `FROM` clause should be returned.
+
+Specifying `entity_name/*` and `from_alias/*` specify that the values of all attributes of the specified entity or expression of the `FROM` clause should be returned.
+
+`entity_name` can optionally be put in double quotes. If the entity name is a [reserved OQL word](/refguide/oql/#reserved-oql-words) (like `Order` or `Group`), double quotes are mandatory.
+
+{{% alert color="warning" %}}
+Specifying all attributes will also return attributes which are normally hidden in the Domain Model, such as the `ID` of each object.
+{{% /alert %}}
 
 ##### Examples
 
-This query returns all attributes of `Sales.Customer`
+This query returns the values of all the attributes of `Sales.Customer`
 
 ```sql
 SELECT *
 FROM Sales.Customer
 ```
 
-This query returns all attributes of objects of `Sales.Customer` entity all attributes of associated objects of `Sales.Request` (see TODO)
+This query returns all the attributes of objects of `Sales.Customer` entity all attributes of associated objects of `Sales.Request` (see TODO)
 
 ```sql
 SELECT *
@@ -121,19 +131,21 @@ FROM Sales.Customer Cust
 JOIN Cust/Sales.Customer_Request/Sales.Request Req
 ```
 
-#### Selecting distinct values with `DISTINCT`
+#### Selecting Distinct Values with `DISTINCT`
 
 TODO: `DISTINCT` with NULL
 
-The keyword `DISTINCT` specifies that duplicate rows must not be included in the result.
+The keyword `DISTINCT` specifies that duplicate rows must not be included in the result. If used, `DISTINCT` should follow directly after `SELECT`. It is not possible to request only some attributes to be distinct.
 
-Let's assume that `Sales.Customer` entity has 4 objects.
+In this example, the `Sales.Customer` entity has 4 objects.
 
 ```sql
 SELECT FirstName FName, LastName LName
 FROM Sales.Customer
 ```
 
+returns
+
 | FName | LName |
 | ----- | ----- |
 | John  | Doe   |
@@ -141,24 +153,28 @@ FROM Sales.Customer
 | Jane  | Doe   |
 | Jane  | Moose |
 
-Then the next query will result only in unique last names
+The following query, using `DISTINCT` will result only in unique last names
 
 ```sql
 SELECT DISTINCT LastName LName
 FROM Sales.Customer
 ```
 
+returns
+
 | LName |
 | ----- |
 | Doe   |
 | Moose |
 
-If multiple attributes are selected, the result is all unique combinations that are present ion the database:
+If multiple attributes are selected, the result is all the unique combinations that are present in the database:
 
 ```sql
 SELECT DISTINCT FirstName FName, LastName LName
 FROM Sales.Customer
 ```
+
+returns
 
 | FName | LName |
 | ----- | ----- |
@@ -166,12 +182,20 @@ FROM Sales.Customer
 | Jane  | Doe   |
 | Jane  | Moose |
 
-`DISTINCT` can also be combined with `*`. In the simple examples below, when an entity name is specified in `FROM`, adding `DISTINCT` does not affect the result because the entity always contains the unique column `ID`. In more complex cases, `SELECT DISTINCT *` can become useful.
+`DISTINCT` can also be combined with `*`.
+
+{{% alert color="warning" %}}
+If you specify an entity name in `FROM`, this will return all columns, including the unique column `ID`. This means that adding `DISTINCT` does not affect the result.
+
+In more complex cases, `SELECT DISTINCT *` can become useful.
+{{% /alert %}}
 
 ```sql
 SELECT DISTINCT *
 FROM Sales.Customer
 ```
+
+returns
 
 | ID              | FName | LName |
 | --------------- | ----- | ----- |
@@ -180,11 +204,9 @@ FROM Sales.Customer
 | 562949953421777 | Jane  | Doe   |
 | 562949953421923 | Jane  | Moose |
 
-If used, `DISTINCT` should follow directly after `SELECT`. It is not possible to request only some attributes to be distinct.
-
 #### Expressions
 
-It is possible to use more complex expressions in `SELECT`. That is explained in detail in [Expressions](TODO). Here are some examples:
+It is possible to use more complex expressions in `SELECT`. That is explained in detail in [OQL Expressions](/refguide/oql-expressions). Here are some examples:
 
 It is possible to use a function of an attribute. For instance:
 

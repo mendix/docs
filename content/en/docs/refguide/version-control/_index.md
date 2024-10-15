@@ -103,7 +103,7 @@ Manually modifying the *.mpr* file, for example through 3rd party tooling, is no
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Mendix 10.18 introduced changes to the *.mpr* format so that individual documents are now stored as separate files on disk. Apps need to switch to the new format manually for this change to be applied.
+Mendix will introduce changes to the *.mpr* format so that individual documents will be stored as separate files on disk. Apps need to switch to the new format manually for this change to be applied.
 {{% /alert %}}
 
 ## Branches {#branches}

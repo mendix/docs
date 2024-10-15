@@ -44,7 +44,7 @@ Version control systems like Git do not store a full copy of a document for ever
 
 #### MPRv2 Format
 
-Mendix 10.18 introduced a new version of the *.mpr* format: MPRv2. The key difference is that all documents, such as microflows, will no longer be stored as part of the *.mpr* file but as separate files in the *mprcontents* directory. The *.mpr* file will function as an index file pointing to all the different files on disk. 
+Mendix will introduce a new version of the *.mpr* format: MPRv2. The key difference is that all documents, such as microflows, will no longer be stored as part of the *.mpr* file but as separate files in the *mprcontents* directory. The *.mpr* file will function as an index file pointing to all the different files on disk. 
 
 This means that when you change one document, for example a page, that only the small file representing that page will change on disk. This allows Git to calculate an efficient delta, which results in a more appropriate repository growth. Functionally there will be no differences between the split (v2) or the combined (v1) format inside Studio Pro. 
 

@@ -69,7 +69,7 @@ In this section, you can view additional information about the environment resou
 
 * For the environment, you can view the environment ID, the deployment region, the [cloud resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack), and the scaling configuration. To launch the **Change Scaling** wizard and [scale the environment](/developerportal/deploy/scale-environment/), click **Scale**.
 
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/change-scaling.png" max-width=70% alt="" >}}
+    {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/change-scaling.png" >}}
 
 * For the deployment package, you can view the package name, version, and runtime. To launch the **Promote a  Package** wizard and promote the package to another environment, click **Promote**.
 
@@ -168,13 +168,16 @@ Team members who have a role with **Cloud Access** can see which services are en
 
 Once a service has been enabled for an app, Technical Contacts can selectively enable it for each environment. For more information, see the [Services](/developerportal/deploy/environments-details/#services) section of the *Environment Details* page.
 
-## Deploy Wizard{#deploy-wizard}
+## Deploy or Promote Wizard{#deploy-wizard}
 
-If you click **Deploy** ({{< icon name="deploy" >}}) from the **Overview** tab or the **Deployment Packages** tab, this launches the Deploy wizard, which you can use to deploy a package to an environment. Follow the wizard by performing the following steps:
+The Deploy or Promote wizard deploys packages to selected environments. Follow the wizard by performing the following steps:
 
-1. Perform one of the following actions, depending on whether you launched the wizard from the **Overview** or the **Deployment Packages** tab:
-    * If launched from the **Overview**, the environment is already selected, so the first screen of the wizard is the **Select Package** tab. Use it to select a package from repository.
-    * If launched from the **Deployment Packages** tab, the package is already selected, so the first screen of the wizard is the **Select Environment** tab. Use it to select the target environment for your package.
+1. Launch the wizard by choosing one of the following options:
+    * Select an environment to which you want to deploy a package by clicking the **Deploy** ({{< icon name="deploy" >}}) icon on the **Overview** tab.
+    * Select a package that you want to deploy by clicking clicking the **Deploy** ({{< icon name="deploy" >}}) icon on the **Deployment Packages** tab, or by clicking **Promote** by a package name on the **Overview** tab.
+2. Perform one of the following actions, depending on whether you selected the package or the environment first:
+    * If you launched the wizard by selecting an environment, the first screen of the wizard is the **Select Package** tab. Use it to select a package from repository.
+    * If launched the wizard by selecting a package, the first screen of the wizard is the **Select Environment** tab. Use it to select the target environment for your package.
 3. In the **Configure Environment** tab, review the live (post-deployment) constant values, and adjust them as required.
 
     {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/2-configure-environment.png" alt="" >}}

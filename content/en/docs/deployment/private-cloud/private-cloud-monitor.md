@@ -844,6 +844,6 @@ The following example will send logs for:
 ```
 <!-- END snippet -->
 
-{{% alert color="info" %}}The format for `mxAgentConfig` is identical to the APM `METRICS_AGENT_CONFIG` [custom environment variable](/developerportal/operate/monitoring-with-apm/#mx-agent-format) in the Mendix Cloud.{{% /alert %}}
+{{% alert color="info" %}}The format for `mxAgentConfig` is identical to the APM `METRICS_AGENT_CONFIG` [custom environment variable](/developerportal/operate/monitoring-with-apm/#mx-agent-format) in Mendix Cloud.{{% /alert %}}
 
 Advanced instrumentation configuration can be specified through `mxAgentInstrumentationConfig`. If this attribute is not supplied, the default instrumentation configuration will be used.

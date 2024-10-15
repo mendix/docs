@@ -92,7 +92,7 @@ To edit existing documentation in GitHub, follow these steps:
 8. Make sure that **Allow edits by maintainers** is selected.
 9. Click **Create pull request**.
 
-The pull request is created. the Mendix Docs team will review the pull request as soon as possible. After the review and if there are no questions, the pull request will be published and you will be able to see the changes on the Mendix Docs site!
+The pull request is created. The Mendix Docs team will review the pull request as soon as possible. After the review and if there are no questions, the pull request will be published and you will be able to see the changes on the Mendix Docs site!
 
 ## Editing the Documentation and Previewing Changes Locally {#local-build}
 

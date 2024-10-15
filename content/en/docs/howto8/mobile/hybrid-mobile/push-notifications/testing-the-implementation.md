@@ -31,7 +31,7 @@ If you would like to use APNS instead of FCM for your iOS devices, then you will
 
 ## Building Your Mobile App
 
-Now that you have set up your hybrid app for push notifications you may continue building it. by following the [hybrid app package documentation](https://github.com/mendix/hybrid-app-template/). Once you have a running app, continue to the section below. 
+Now that you have set up your hybrid app for push notifications, you may continue building it by following the [hybrid app package documentation](https://github.com/mendix/hybrid-app-template/). Once you have a running app, continue to the section below. 
 
 ## Sending a Push Notification to a Device
 

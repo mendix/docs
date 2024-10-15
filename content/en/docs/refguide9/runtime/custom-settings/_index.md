@@ -16,9 +16,9 @@ Only use this functionality if you know exactly what you are doing. Incorrect va
 
 Each custom setting consists of a name and a value. For example, to set the hash algorithm to BCRYPT you add a custom setting with name `HashAlgorithm` and value `BCRYPT`. For a more detailed list of settings and example values, consult [full-documented-m2ee.yaml](https://github.com/mendix/m2ee-tools/blob/master/examples/full-documented-m2ee.yaml).
 
-If you are running your app on the Mendix Cloud or SAP Business Technology Platform, you can access these settings in [Apps](https://sprintr.home.mendix.com/) via **Environments** > **Environment Details** > **Runtime** > **Custom Runtime Settings**. For more information see:
+If you are running your app on Mendix Cloud or SAP Business Technology Platform, you can access these settings in [Apps](https://sprintr.home.mendix.com/) via **Environments** > **Environment Details** > **Runtime** > **Custom Runtime Settings**. For more information see:
 
-* the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details* for information about the Mendix Cloud
+* the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details* for information about Mendix Cloud
 * the [Runtime tab](/developerportal/deploy/sap-cloud-platform/#runtime-tab) section of *SAP Business Technology Platform* for information about the SAP BTP
 
 When you are running your app locally, you can set these values in a [Configuration](/refguide9/configuration/#custom).
@@ -152,7 +152,7 @@ Before the data copying process starts, the main database structure will be gene
 The settings described below influence the behavior of the Amazon S3 Storage Service module. This module can be used for both Amazon S3 Storage and IBM Cloud Object Storage.
 
 {{% alert color="warning" %}}
-For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you and cannot be overwritten.
+For deployments to Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you and cannot be overwritten.
 {{% /alert %}}
 
 | Name | Description | Default Value |
@@ -179,7 +179,7 @@ For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these
 These settings can be changed to use a Microsoft Azure SQL database for your Mendix application.
 
 {{% alert color="warning" %}}
-For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you and cannot be overwritten.
+For deployments to Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you and cannot be overwritten.
 {{% /alert %}}
 
 First, you need to create an Azure SQL database (for information on how to do this, see this [SQL Database Tutorial](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/)). Make sure your Azure firewall settings allow your Mendix application to reach the Azure SQL database (by default, the Azure firewall does not allow external connections).
@@ -197,7 +197,7 @@ First, you need to create an Azure SQL database (for information on how to do th
 These settings can be used to store files using the Microsoft Azure blob storage service. Server-side encryption can be configured through the Azure Portal (for more information, see [Azure Storage encryption for data at rest](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)).
 
 {{% alert color="warning" %}}
-For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you and cannot be overwritten.
+For deployments to Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you and cannot be overwritten.
 {{% /alert %}}
 
 | Name | Description | Default Value |

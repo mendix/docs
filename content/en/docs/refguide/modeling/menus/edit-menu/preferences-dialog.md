@@ -150,6 +150,10 @@ Specify your email for Git to use it in commit messages and make them more infor
 
 #### Clone {#clone}
 
+{{% alert color="info" %}}
+Different clone types are available in Studio Pro version 10.12.0 and above. 
+{{% /alert %}}
+
 Select a [Clone type](/refguide/clone-type/) to use for future clone operations, such as downloading an app or checking out another branch of an app you already downloaded. Changing this setting does not affect apps that you have already downloaded.
 
 #### Combine Local and Remote Changes
@@ -245,12 +249,6 @@ In Studio Pro 10.12.0, Translation Generator was introduced as an experimental f
 ### Mapping Editor
 
 This setting allows you to set the beta version as the default editor.
-
-### Page Editor
-
-In Studio Pro version 10.9, X-ray mode was introduced to the page editor in beta. Enable this option to view your app in X-ray mode: a more detailed version of Design mode. 
-
-For more information, see [X-Ray Mode](/refguide/page/#x-ray-mode).
 
 ### System Texts Editor
 

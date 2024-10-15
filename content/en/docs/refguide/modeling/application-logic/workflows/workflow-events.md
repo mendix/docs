@@ -1,7 +1,7 @@
 ---
 title: "Workflow Events"
 url: /refguide/workflow-events/
-weight: 55
+weight: 40
 ---
 
 ## Introduction
@@ -47,10 +47,10 @@ The **WorkflowRecord** entity represents workflow instance data at a specific ex
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/workflow-event-entities.png" max-width=100% >}}
 
 {{% alert color="warning" %}}
-All associations to the above-mentioned non-persistent entities (with the exception of a sub **WorkflowRecord**) are associations to "live" objects, whose state may have been updated since the event occurred.
+All associations to the above-mentioned non-persistable entities (with the exception of a sub **WorkflowRecord**) are associations to "live" objects, whose state may have been updated since the event occurred (for example, when receiving the **User Task Ended** event, the **WorkflowUserTask** instance may already be deleted).
 {{% /alert %}}
 
-These non-persistent entities are provided as the default input parameters to the microflow specified in the event handler configuration:
+These non-persistable entities are provided as the default input parameters to the microflow specified in the event handler configuration:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/event-handler-microflow-parameters.png" max-width=80% >}}
 
@@ -110,6 +110,7 @@ The event types listed in the tables below correspond to the enumeration values 
 | Wait for Notification Ended | Triggered in the following situations:<br /><ul><li>Notification is received successfully</li><li>Workflow suspended on **Wait for notification** activity is aborted, restarted, or when jump-to option is applied</li><li>Parallel path containing **Wait for notification** activity is removed and workflow is continued  | See [Wait for Notification](/refguide/wait-for-notification/) | 
 | Timer Started | Triggered in the following cases:<br /><ul><li>Timer is successfully scheduled</li><li>Delay expression results in an empty value</li><li>Delay expression is invalid (for example, divide by zero error in an expression) | See [Timer](/refguide/timer/) |
 | Timer Ended | Triggered in following cases:<br /><ul><li>Timer has expired</li><li>Delay expression results in an empty value</li><li>Delay expression in invalid (for example, divide by zero error in expression)</li><li>Workflow suspended on **Timer** activity is aborted, restarted, or when jump-to option is applied</li><li>Parallel path containing **Timer** activity is removed and workflow is continued | See [Timer](/refguide/timer/) |
+| Non-Interrupting Timer Event Executed | Triggered when the scheduled timer for the non-interrupting boundary event expires | See [Boundary Events](/refguide/workflow-boundary-events/) |
 | User Task Started | Triggered in following cases:<br /><ul><li>User targeting is evaluated</li><li>On-created microflow is successfully scheduled | See [User Task](/refguide/user-task/) or [Multi-User Task](/refguide/multi-user-task/) |
 | Multi-User Task Outcome Selected | Triggered when a vote is specified for a multi-user task | |
 | User Task Ended | Triggered in following cases:<br /><ul><li>User task fails</li><li>Workflow suspended on a user task is aborted, restarted, or when jump-to option is applied</li><li>Parallel path containing a user task is removed and workflow is continued | See [User Task](/refguide/user-task/) or [Multi-User Task](/refguide/multi-user-task/)<br><br>User task can fail due to the following reasons:<br /><ul><li>On-created microflow fails</li><li>When number of required users is more than the targeted users in a multi-user task <br><br>{{% alert color="info" %}}**WorkflowActivityRecord** for failure cases will have the **Failed** activity state.<br><br>**WorkflowActivityRecord** will only have one actor in the case of a single-user task.{{% /alert %}} |

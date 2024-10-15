@@ -55,7 +55,7 @@ We highly recommend setting this radio button to **Database**. This will prepare
 The effect of selecting **Database** is that when you deploy a model with unique validation rules on attributes (existing rules or new rules), all the existing objects for the affected entity will be checked for the uniqueness of the attribute. If there are multiple people with the same insurance number then:
 
 * if you deploy the app from Studio Pro, an error will be shown on deployment
-* if you deploy the app from a deployment package (for example in the Mendix cloud), the app will not start and errors will be written to the log
+* if you deploy the app from a deployment package (for example in Mendix Cloud), the app will not start and errors will be written to the log
 
 {{< figure src="/attachments/refguide8/runtime/data-storage/uniqueness-constraint-migration/startup-error.png" class="no-border" >}}
 

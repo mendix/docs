@@ -21,6 +21,10 @@ Rules are very similar to microflows; see the documentation on [Microflows](/ref
 
 These differences mean that rules perform better than microflows if you don't need any of the additional features which microflows provide.
 
+## Keyboard Support
+
+For an overview of the shortcut keys that are supported in the rule editor, see the [Microflow, Nanoflow, and Rule Editor Shortcut Keys](/refguide/keyboard-shortcuts/#logic-editor-keyboard-support) section in *Keyboard Shortcuts*.
+
 ## Read More
 
 * [Microflows](/refguide/microflows/)

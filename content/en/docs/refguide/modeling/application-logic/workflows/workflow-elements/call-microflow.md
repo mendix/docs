@@ -1,7 +1,7 @@
 ---
 title: "Call Microflow"
 url: /refguide/call-microflow/
-weight: 70
+weight: 95
 ---
 
 ## Introduction
@@ -17,13 +17,14 @@ Call microflow properties consist of the following sections:
 * [General](#general)
 * [Parameters](#parameters)
 * [Outcomes](#outcomes)
+* [Boundary events](#boundary-events)
 * [Common](#common)
 
 ### General Section {#general}
 
 #### Caption
 
-The **Caption** describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand without needing to add annotations.
+The **Caption** describes what happens in this element. It is displayed under the workflow element to make the workflow easier to read and understand without needing to add annotations.
 
 #### Microflow {#microflow}
 
@@ -36,6 +37,10 @@ Parameters of the selected microflow. Depending on the selected microflow, you w
 ### Outcomes Section {#outcomes}
 
 **Outcomes** depends on the return type and values of the microflow. For example, when there is not return type, you have a single outcome; for the Boolean, you have **true** and **false** outcomes; and for the enumeration – an outcome per each enumeration value and an empty one when the value is unassigned. 
+
+### Boundary Events Section {#boundary-events}
+
+For more information, see [Boundary Events](/refguide/workflow-boundary-events/).
 
 ### Common Section {#common}
 

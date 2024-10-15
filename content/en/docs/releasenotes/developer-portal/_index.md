@@ -19,6 +19,23 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 ## 2024
 
+### September 29, 2024
+
+#### Improvements
+
+* We centralized the management of team project roles in Control Center. This improves access governance across all Mendix projects and streamlines the setup process for app access. You can [migrate your project roles](/control-center/roles-and-permissions/#migrate-centralized-roles) to the centralized company-level project roles to benefit from this improvement. We expect you to complete the migration by January 1, 2025.
+* We made it possible for you to add external team members to your app via the [Projects API](https://docs.mendix.com/apidocs-mxsdk/apidocs/projects-api/). This mimics the functionality that is already in place through the user interface.
+
+#### Fixes
+
+* We fixed a bug where the commit dates for git-enabled apps on the [Team Server](https://docs.mendix.com/developerportal/general/team-server/#revision-history) page were not correctly localized in some cases.
+
+### September 26, 2024
+
+#### Improvements
+
+* In [Portfolio Management](/developerportal/portfolio-management/initiatives-overview/), you can now assign multiple owners to an initiative.
+
 ### August 25, 2024
 
 #### Improvements

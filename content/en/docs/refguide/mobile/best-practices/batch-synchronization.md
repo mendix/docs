@@ -26,7 +26,7 @@ Batch synchronization lets you group large synchronization actions into smaller 
 To implement this best practice, do the following:
 
 1. Implement [incremental synchronization](/refguide/mobile/best-practices/incremental-synchronization/) for the target entity.
-1. Add a non-persistent entity to store the progress of your synchronization (for example, *SyncProgress* with an attribute **Progress** of type `Integer`).
+1. Add a non-persistable entity to store the progress of your synchronization (for example, *SyncProgress* with an attribute **Progress** of type `Integer`).
 1. Change the microflow that retrieves and synchronizes the changed objects to accept an offset:
     1. Add a parameter **Offset** of type `Integer`.
     1. Set the offset of the retrieve to the parameter and the amount to a fixed value (for example, `100`).
@@ -63,5 +63,4 @@ To improve your apps further, consult the following recommendations:
 
 ## Read More
 
-* To increase the clarity, organization, and documentation of your apps, see [Mendix Best Practices for Development
-](/refguide/dev-best-practices/)
+* To increase the clarity, organization, and documentation of your apps, see [Mendix Best Practices for Development](/refguide/dev-best-practices/)

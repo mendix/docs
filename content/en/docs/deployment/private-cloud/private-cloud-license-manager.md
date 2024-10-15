@@ -14,7 +14,7 @@ Private Cloud License Manager is currently in beta. For more information, see [B
 
 When deploying your Mendix app for production use, it needs to be licensed. This removes the restrictions which are placed on unlicensed apps. For more information, see [Licensing Mendix for Private Cloud](/developerportal/deploy/private-cloud/#licensing) in the *Private Cloud* documentation.
 
-Apps which are deployed to the Mendix Cloud have access to the internet and have licenses which work on a subscription basis, contacting the Mendix license server to validate the license. This method is not appropriate for apps which are deployed using Mendix for Private Cloud, and may even be in standalone mode and not connected to the internet (air-gapped).
+Apps which are deployed to Mendix Cloud have access to the internet and have licenses which work on a subscription basis, contacting the Mendix license server to validate the license. This method is not appropriate for apps which are deployed using Mendix for Private Cloud, and may even be in standalone mode and not connected to the internet (air-gapped).
 
 Rather than having to apply and update licenses for each environment individually, the Mendix **Private Cloud License Manager** (PCLM) provides a repository of offline Mendix licenses to enable you to manage these centrally. This reduces the possibility of errors, and enables the production of license usage reports.
 
@@ -24,7 +24,7 @@ The PCLM runs as a Kubernetes service on your cluster. This means that it can be
 
 To install and use the PCLM, you need the following prerequisites:
 
-* A Mendix for Private Cloud cluster
+* A Mendix for Private Cloud **Standalone** cluster 
 * Mendix Operator in version 2.11.0 or above
 * Administrative rights to a Kubernetes namespace to install PCLM server (a dedicated namespace is recommended). This can be within your Mendix for Private Cloud cluster, or in another cluster which is accessible over HTTP
 * A Postgres or SQLServer database server and within it:
@@ -328,7 +328,7 @@ In order to update the **product type** in the Mendix App CR, ensure that you ar
 
 ### Listing the Operator License
 
-Once the license bundle is installed, you can view the list of Runtime licenses in the bundle by using the following command:
+Once the license bundle is installed, you can view the list of Operator licenses in the bundle by using the following command:
 
 ```bash
 mx-pclm-cli license operator list \

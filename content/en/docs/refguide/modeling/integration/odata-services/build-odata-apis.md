@@ -411,7 +411,7 @@ In this example, you can publish a single REST resource that combines data from 
 
     {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/get-call.png" class="no-border" >}} 
 
-5. You have decoupled your REST resource from your domain model persistent entities. You can change your entities and use the OQL query to ensure the published data remains backwards compatible.
+5. You have decoupled your REST resource from your domain model persistable entities. You can change your entities and use the OQL query to ensure the published data remains backwards compatible.
 
     The Java action used above adds the OData query to the original OQL query as follows:
 

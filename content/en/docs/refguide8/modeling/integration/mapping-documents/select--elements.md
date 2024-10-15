@@ -50,6 +50,7 @@ You may encounter element selection checkboxes that are greyed out. If you hover
 ## Convenience functions
 
 {{% alert color="info" %}}
+
 | Function | Description |
 | --- | --- |
 | Filter | Expand and filter the tree nodes based on whether the name contains the filter text. Because the filtering behavior relies on the 'Expand All' behavior, in very big schemas all elements matching the filter are not guaranteed to be found. |

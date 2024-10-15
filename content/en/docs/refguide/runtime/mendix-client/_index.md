@@ -250,6 +250,7 @@ When the app is deployed, the static resources are placed in a separate structur
 #### Cookies{#cookies}
 
 When the Mendix client is running, it sets a number of technical cookies to record information about the session. These can include:
+
 | Name  | Source | Purpose | Path | Duration | HttpOnly | 
 | --- | --- | --- | --- | --- | --- |
 | **mx-cookie-test** | Client | Tests whether the browser supports cookies | `/` | deleted immediately after setting it | `false` |

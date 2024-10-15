@@ -15,7 +15,7 @@ Let's assume that you already have an app that calls a service. For details on h
 This how-to teaches you how to do the following:
 
 * Configure to run locally
-* Configure in the Mendix Cloud
+* Configure in Mendix Cloud
 
 ## Prerequisites
 
@@ -64,7 +64,7 @@ The following sample uses client certificate `Mx1.pfx` for `WebService1` and no 
 You will only be able to follow the steps below if you have the correct access rights for the client certificates.
 {{% /alert %}}
 
-To configure client certificates in the Mendix Cloud, follow these steps:
+To configure client certificates in Mendix Cloud, follow these steps:
 
 1. Go to [Apps](https://sprintr.home.mendix.com/) and go to the **Environments** page for your app.
 2. Each environment has its own configuration. Click **Details** next to one of the environments.

@@ -53,11 +53,8 @@ For client certificates, only the Public-Key Cryptography Standard #12 (PKCS12) 
 Virtually all certificate formats can be converted to the PKCS12 format. For more information, see the following:
 
 * [Create a PKCS12 (.pfx or .p12) from OpenSSL files (.pem, .cer, .crt, ...)](https://www.tbs-certificates.co.uk/FAQ/en/288.html)
-* [openssl](https://www.openssl.org/docs/manmaster/man1/openssl.html)
-
-{{% alert color="warning" %}}
-Do not use OpenSSL version 3.x on Windows.<br><br>If you use OpenSSL version 3.x on Windows and you get the error "Could not open certificate container. Wrong password or corrupted file. Please try again.", use the latest patch release of version 1.x. You can download the release on [OpenSSL for Windows](https://slproweb.com/products/Win32OpenSSL.html).<br><br>Another option is to use OpenSSL from within the Windows Subsystem for Linux to generate the certificate. To set this up, use the instructions [Install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
-{{% /alert %}}
+* [OpenSSL Documentation](https://www.openssl.org/docs/manmaster/man1/openssl.html)
+* [Download OpenSSL for Windows](https://openssl-library.org/source/index.html)
 
 You can upload a PKCS12 file by following these steps:
 
@@ -83,6 +80,10 @@ In the section **Pin Client Certificate to Web Services**, you can specify host 
 ## Outgoing – Certificate Authorities
 
 Loading certificate authorities works much the same way, although they do not require authentication because they are public certificates.
+
+{{% alert color="info" %}}
+By default, Mendix Cloud trusts Certificate Authorities from the [Mozilla CA root bundle](https://wiki.mozilla.org/CA).
+{{% /alert %}}
 
 To upload a certificate authority, follow these steps:
 

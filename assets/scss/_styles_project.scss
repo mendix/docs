@@ -1,74 +1,10 @@
-// File to override any Docsy/Bootstrap CSS definition
+// Main custom styling file to override Docsy/Bootstrap CSS definitions
 
-// _front-page.scss is only custom styling page not from Docsy/Bootstrap
+// Import any custom styling pages not from Docsy/Bootstrap
 @import "front-page";
-
-// Font
-
-@font-face { // LZ - Added for MxDock by request 2024-01-30
-    font-family: "noto-sans";
-    src: local("noto-sans"), url("/fonts/noto-sans/noto-sans-400.woff2") format("woff2");
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: "noto-sans";
-    src: local("noto-sans"), url("/fonts/noto-sans/noto-sans-400-italic.woff2") format("woff2");
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: "noto-sans";
-    src: local("noto-sans"), url("/fonts/noto-sans/noto-sans-600.woff2") format("woff2");
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: "noto-sans";
-    src: local("noto-sans"), url("/fonts/noto-sans/noto-sans-600-italic.woff2") format("woff2");
-    font-style: italic;
-    font-weight: 600;
-    font-display: swap;
-  }
-  
-  /* Medium */
-  @font-face {
-    font-family: "Patron";
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: local("Patron Medium"), local("Patron-Medium"),
-      url("/fonts/patron/PatronWEB-Medium.woff2") format("woff2");
-  }
-  
-  /* Light */
-  @font-face {
-    font-family: "Patron";
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: local("Patron Light"), local("Patron-Light"),
-      url("/fonts/patron/PatronWEB-Light.woff2") format("woff2");
-  }
-  
-  /* The main font is Noto Sans */
-  body {
-    font-family: "noto-sans", sans-serif;
-    font-weight: 400;
-    line-height: 1.5; // LZ - line height 1.5 (Regular) according to PDS
-  }
-  
-  /* Page Title H1 use Patron Medium. The rest of headings on your page should use Noto Sans */
-  .page-title {
-    font-family: "Patron", "noto-sans", sans-serif;
-    font-weight: 500;
-  }  
+@import "font-face";
+@import "badge";
+@import "numbered-headings";
 
 // _alert.scss - Style alert boxes (alert layout defined in alert.html)
 
@@ -209,7 +145,7 @@ a:not(.btn):not(.td-sidebar-link):not(.card-text a):visited {
 }
 
 // Add icon after external links in main content (but exclude some content)
-main a[href*="https://"]:not(.btn):not(.td-breadcrumbs a):not(.get-started):not(.lp  a)::after {
+main a[href*="https://"]:not(.btn):not(.td-breadcrumbs a):not(.get-started):not(.lp-panel-list a)::after {
     display: inline-block;
     width: 1rem;
     height: 1rem;
@@ -219,9 +155,20 @@ main a[href*="https://"]:not(.btn):not(.td-breadcrumbs a):not(.get-started):not(
     filter: invert(14%) sepia(99%) saturate(4690%) hue-rotate(225deg) brightness(93%) contrast(95%); // Matches to $link-color (blue-8 from PDS). Keep updated with _variables_project.scss.
 }
 
+// Add icon after external links in lp-panel-list - need to be a different colour
+.lp-panel-list a[href*="https://"]:not(.btn):not(.td-breadcrumbs a):not(.get-started)::after {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-left: .2rem;
+    vertical-align: sub;
+    content: url("/mx-icons/external.svg");
+    filter: invert(81%) sepia(55%) saturate(2783%) hue-rotate(181deg) brightness(103%) contrast(101%); // Matches to #8AC4FF specified in lp-panel-list in _front-page.scss. Keep updated with _variables_project.scss. Calculated using https://isotropic.co/tool/hex-color-to-css-filter/
+}
+
 // Change external link icon color upon hover
 main a[href*="https://"]:hover::after {
-    filter: invert(15%) sepia(65%) saturate(5388%) hue-rotate(231deg) brightness(79%) contrast(121%); // Matches to $link-hover-color (blue-9 from PDS). Keep updated with _variables_project.scss.
+    filter: invert(15%) sepia(65%) saturate(5388%) hue-rotate(231deg) brightness(79%) contrast(121%); // Matches to $link-hover-color (blue-9 from PDS). Keep updated with _variables_project.scss. 
 }
 
 .btn {
@@ -260,14 +207,7 @@ html {
 
 // The outer page container i.e. common styles for any page.
 .td-outer {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
     position: absolute; // NK - custom edit
-}
-
-.td-main {
-    flex-grow: 1;
 }
 
 .td-main main {
@@ -303,37 +243,6 @@ div.date-format{
     font-size: 0.8rem;
 }
 
-// _nav.scss
-//
-// Main navbar
-//
-
-.td-navbar {
-    background: $primary;
-    min-height: 4rem;
-    margin: 0;
-    z-index: 32;
-
-    @include media-breakpoint-up(md) {
-        position: fixed;
-        top: 0; // NK - copied from Docsy v0.1.0 file
-        width: 100%;
-    }
-
-    .nav-link {
-        text-transform: none;
-        font-weight: $font-weight-medium; // NK - adjusted for use with multiple Noto Sans weights
-    }
-
-    .td-search-input {
-        border: none;
-        color: $navbar-dark-color; // NK - copied from Docsy v0.1.0 file
-        @include placeholder {
-            color: $navbar-dark-color;
-        }
-    }
-}
-
 // Icons
 
 // DB - custom edit, inline SVG icons for shortcode
@@ -353,6 +262,11 @@ main img {
     border-style: solid;
 }
 
+// DB – custom edit, optional class for preventing borders around images
+.no-border{
+    border-style: none;
+}
+
 // Yiyun - Adjust the stack order so that the clickable images set in body-end.html are not overridden by the left sidebar.
 
 img {
@@ -364,15 +278,9 @@ img {
     opacity: 0.5 !important;
 }
 
-// DB – custom edit, optional class for preventing borders around images
-.no-border{
-    border-style: none;
-}
-
 // _pageinfo.scss - Custom pageinfo styling, used on the banners (similar to the alert styling)
 
 .pageinfo {
-    font-weight: $font-weight-medium;
     border-radius: 4px;
     margin: 2rem;
     padding: 14px;
@@ -381,67 +289,6 @@ img {
         &-#{$color} {
             background-color: map-get($custom-theme-colors, '#{$color}-1'); //Add background color from _variables_project.scss
             border: 1px solid map-get($custom-theme-colors, '#{$color}-6'); //Add border color from _variables_project.scss
-        }
-    }
-}
-
-// Foldable sidebar menu
-nav.foldable-nav {
-
-    .td-sidebar-nav__section, .with-child ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        text-overflow: ellipsis; // NK - custom edit
-        overflow: hidden; // NK - custom edit
-        white-space: nowrap; // NK - custom edit
-    }
-
-    .with-child, .without-child {
-        position: relative;
-        padding-left: 1.5em;
-    }
-
-    .ul-1 .with-child > label:before {
-        display: inline-block;
-        font-style: normal;
-        font-variant: normal;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        font-family: $font-awesome-font-name; font-weight: 900; content: "\f0da";
-        position: absolute;
-        left: 0.1em;
-        padding-left: 0.4em;
-        padding-right: 0.4em;
-        font-size: 1em;
-        color: $gray-900;
-        transition: all 0s; // NK - disables animation transition time, now switch is instant
-        &:hover{
-        transform: rotate(90deg);
-        }
-    }
-
-    .ul-1 .with-child > input:checked ~ label:before { 
-        color: $link-color;
-        transform: rotate(90deg);
-        transition: transform 0s; // NK - disables animation transition time, now switch is instant
-    }
-}
-
-@media (hover: hover) and (pointer: fine) {
-    
-    nav.foldable-nav {
-
-        .ul-1 .with-child > label:hover:before { 
-            color: $link-color;
-            transform: rotate(30deg);
-            transition: transform 0s; // NK - disables animation transition time, now switch is instant
-        }
-
-        .ul-1 .with-child > input:checked ~ label:hover:before { 
-            color: $link-color;
-            transform: rotate(60deg) !important;
-            transition: transform 0s; // NK - disables animation transition time, now switch is instant
         }
     }
 }
@@ -463,16 +310,9 @@ nav.foldable-nav {
     line-height: 1.2; // NK - decreased
 
     @supports (position: sticky) {
-        position: sticky;
         top: 3rem; // NK - change from docsy theme of 4rem
         height: max-content; // NK - change from docsy theme of calc(100vh - 10rem);
-        overflow-y: auto;
     }
-
-    order: 2;
-    padding-top: 0.75rem;
-    padding-bottom: 1.5rem;
-    vertical-align: top;
 
 }
 
@@ -730,173 +570,21 @@ nav.foldable-nav {
 }
 
 
-//_badge.scss
 
-.badge-pill {
-    border-radius: 4px;
-    padding: 4px 4px 3px 4px;
-    margin-left: 2px;
-}
-
-.badge-draft {
-    background-color: $warning-9;
-  }
-
-.badge-beta {
-    color: $gray-900;
-    background-color: $gray-500;
-}
-
-.badge-lts {
-    background-color: $success-9;
-}
-
-.badge-mts {
-    background-color: $info-8;
-}
-
-.badge-deprecated {
-    background-color: $gray-100;
-    border: solid 1px $gray-500;
-    color: $gray-900;
-}
-
-.badge-recommended {
-    border: solid 1px $success-9;
-    color: $success-9;
-}
-
-.badge-react {
-    background-color: $info-1;
-    color: $info-7;
+.badge-restapi {
+    background-color: #007BFF;
 }
 
 // Swagger styling
 
-.swagger-ui .info .title,
-.swagger-ui .model-title {
-    font-family: $font-family !important;
-    color: $secondary;
-}
-
-.swagger-ui .info a {
-    font-family: $font-family !important;
-    color: $link-color !important;
-}
-
 .swagger-ui .info .title small pre {
     background: transparent;
- }
-
- .swagger-ui pre {
-    border: none;
- }
-
-.swagger-ui .servers>label select {
-    margin-top: 1.5rem;
 }
 
-.swagger-ui .model-title {
-    font-size: $font-size-base !important;
+.swagger-ui pre {
+   border: none;
 }
-
-.swagger-ui .renderedMarkdown p,
-.swagger-ui table tr td,
-.swagger-ui .opblock-tag,
-.swagger-ui .opblock-description-wrapper p,
-.swagger-ui .opblock .opblock-summary-description,
-.swagger-ui .opblock .opblock-section-header h4 {
-    font-family: $font-family !important;
-}
-
-.swagger-ui .model-box-control:focus,
-.swagger-ui .models-control:focus,
-.swagger-ui .opblock-summary-control:focus {
-    outline: transparent !important;
-}
-
-.swagger-ui table tbody tr td {
-    padding: .5rem !important;
-}
-
-.swagger-ui .renderedMarkdown code {
-    padding: 0rem !important;
-    font-size: $font-size-base !important;
-    color: $primary !important;
-}
-
-// Numbered headings, from https://github.com/google/docsy/issues/843#issuecomment-1016311098 (based on https://codingnconcepts.com/hugo/auto-number-headings-hugo/)
-
-:root {
-    // When printing a whole section that contains multiple pages, each page has a h1
-    // so you end up with multiple nested h1s each with h2+ under them.
-    // layout/partials/print/content.html adds numbering for all the h1s but also
-    // sets the base number for the h1 into this variable so we can use it to
-    // number all the h2+ headings.
-    --base-section-num: "";
-  }
-  
-  // reset counter for a heading level when its parent level is encountered */
-  body {counter-reset: h2}
-  h1 {counter-reset: h2}
-  h2 {counter-reset: h3}
-  h3 {counter-reset: h4}
-  h4 {counter-reset: h5}
-  h5 {counter-reset: h6}
-  
-  // prepend the counter value before the heading
-  // DB - Exclude pages where numberless_headings:true
-  body:not(.numberless_headings) h2[id]::before {
-    display: inline;
-    visibility: visible;
-    counter-increment: h2; 
-    content: var(--base-section-num,"") counter(h2) " ";
-  }
-  
-  // DB - Exclude headers in Swagger reference and pages where numberless_headings:true
-  body:not(.numberless_headings) h3[id]:not(.opblock-tag)::before {
-    display: inline;
-    visibility: visible;
-    counter-increment: h3; 
-    content: var(--base-section-num,"") counter(h2) "." counter(h3) " ";
-  }
-  
-  // DB - Exclude pages where numberless_headings:true
-  body:not(.numberless_headings) h4[id]::before {
-    display: inline;
-    visibility: visible;
-    counter-increment: h4; 
-    content: var(--base-section-num,"") counter(h2) "." counter(h3) "." counter(h4) " ";
-  }
-  
-  // DB - Exclude pages where numberless_headings:true
-  body:not(.numberless_headings) h5[id]::before {
-    display: inline;
-    visibility: visible;
-    counter-increment: h5; 
-    content: var(--base-section-num,"") counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) " ";
-  }
-  
-  // DB - Exclude pages where numberless_headings:true
-  body:not(.numberless_headings) h6[id]::before {
-    display: inline;
-    visibility: visible;
-    counter-increment: h6; 
-    content: var(--base-section-num,"") counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) " ";
-  }
-  
-  // Reset the counter for the right TOC items
-  .td-toc ul { 
-    counter-reset: item ;
-  }
-  
-  // DB - Exclude pages where numberless_headings:true
-  body:not(.numberless_headings) .td-toc li a:before { 
-    content: counters(item, ".") " "; 
-    counter-increment: item ;
-  }
-
-
+ 
 // Increase spacing between top-level items on the left sidebar
   ul.ul-1 > li > label {
     line-height: 1.5rem;

@@ -682,6 +682,7 @@ If your SAP HANA database has performance issues, you may be able to improve per
         {{< figure src="/attachments/deployment/sap-btp/sap-cloud-platform/binding-credentials.png" class="no-border" >}}
 2. Go to the [Runtime tab](#runtime-tab) of your app environment
 3. Enter the following unsupported environment variables with the associated values, using the values taken from the service binding credentials:
+
     | Variable | Value |
     | --- | --- |
     | MXRUNTIME_DatabaseHost | {host} |
@@ -690,6 +691,7 @@ If your SAP HANA database has performance issues, you may be able to improve per
     | MXRUNTIME_DatabasePassword | {password} |
     | MXRUNTIME_DatabaseUserName | {user} |
     | MXRUNTIME_DatabaseType | `SAPHANA` |
+
 4. Go to the [General tab](#general-tab) and restart your app to apply the changes.
 
 The additional parameters that you added to the url in the `MXRUNTIME_DatabaseJdbcUrl` will set the following tuning parameters:

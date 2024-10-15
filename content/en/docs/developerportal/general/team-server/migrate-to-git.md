@@ -18,13 +18,13 @@ Git is a more modern version control system that has several advantages over SVN
 
 To be able to migrate your app to Git, your app needs to meet the following criteria:
 
-* The main line ('main') branch in the app is Mendix version 9.24.11 or above
+* The main line ('main') branch in the app is Mendix version 9.24.28 or above
 * All branches in the app are Mendix version 9.12 or above
 * Current version control is in Team Server SVN
 * The size of the `.mpr` file for the latest revision of your app and the total number of commits in your version control history fall in one of these two categories:
 
     1. `.mpr` file smaller than 75 MB
-    2. fewer than 2000 commits and `.mpr` file smaller than 125 MB
+    2. Fewer than 2000 commits and `.mpr` file smaller than 125 MB
 
 {{% alert type="info" %}}
 
@@ -34,7 +34,7 @@ Only a user with the Scrum Master role can migrate an app. For more information,
 
 ## How Migration Works
 
-If your main line is Mendix version 9.24.11 or above, and your team role is Scrum Master, you see a notification on a possible migration at the top of the **Team Server** page for your app. Click **Migrate to Git** to check for migration eligibility and to start the migration.
+If your main line is Mendix version 9.24.28 or above, and your team role is Scrum Master, you see a notification on a possible migration at the top of the **Team Server** page for your app. Click **Migrate to Git** to check for migration eligibility and to start the migration.
 
 During migration all app history, including revisions for all branches, is copied from SVN to Git. 
 

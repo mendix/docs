@@ -11,7 +11,7 @@ aliases:
 
 This document provides a comprehensive guide for installing Private Mendix Platform, along with its optional components, in your own Kubernetes environment.
 
-### Prerequisites
+### Prerequisites {#prerequisites}
 
 Private Mendix Platform depends on Mendix for Private Cloud for the installation and deployment of Mendix apps.
 
@@ -37,8 +37,8 @@ Before starting the installation process, make sure that you have all the necess
 
 * Optionally, if you plan to install the Svix component:
 
-    * An existing PostgreSQL database instance
-    * A Redis instance
+    * An existing PostgreSQL database instance.
+    * An optional Redis server version 6.2.0 or higher, for the task queue and cache. Using Redis is recommended for high availability, where you expect a high volume of webhook calls, or if you have multiple Svix servers. As a best practice, enable persistence in Redis so that tasks are persisted across Redis server restarts and upgrades.
 
 ## Installing and Configuring the Mendix Operator
 
@@ -163,9 +163,10 @@ Svix is required if you want to use webhooks. Install the Svix component by doin
 1. Run the command `./installer component -n=<namespace name>`, where `-n` indicates a namespace. The namespace must be the same as the namespace that you plan to use for Private Mendix Platform.
 2. Select **Svix** and specify the following parameters:
 
-    * **POSTGRES_DSN** - A Postgres DSN, for example, `postgresql://postgres:postgres@pgbouncer/postgres`
-    * **REDIS_DSN** - A Redis DSN, for example, `redis://redis:6379`
-    * **Image** - Svix server docker images which can access your cluster. The default value is set to the public registry `svix/svix-server:v0.75.0`. You can change it to your private image in a private cluster.
+    * **POSTGRES_DSN** - A Postgres DSN, for example, `postgresql://postgres:postgres@pgbouncer/postgres`.
+    * **REDIS_DSN** - An optional Redis DSN, for example, `redis://redis:6379`. You can leave this field blank if you are not using Redis.
+    * **SVIX_QUEUE_TYPE** - The type of message queue that Svix should use. For a default configuration without Redis, this should be set to **memory**. If you are using Redis, set this value to **redis**.
+    * **SVIX_CACHE_TYPE** - The type of message cache that Svix should use. For a default configuration without Redis, this should be set to **memory**. If you are using Redis, set this value to **redis**.
 
 3. Click **Install Svix**.
 

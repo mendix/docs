@@ -13,17 +13,13 @@ This activity can only be used in microflows.
 The **Generate jump-to options** activity allows you to generate a list of workflow activities where the workflow can jump to as its next step. The [Apply jump-to option](/refguide/apply-jump-to-option/) activity should be used after the **Generate jump-to options** to let the workflow continue from the selected activity. This is useful when, for example, the workflow is in incompatible state and the Workflow Administrator or any other user should be able to select a specific activity where the workflow can continue. 
 
 {{% alert color="warning" %}} 
-
-The list of generated options will only contain activities of the currently executed path in the workflow, excluding activities inside a [Parallel split](/refguide/parallel-split/) activity of the workflow. When the workflow is executing a path in a [Parallel split](/refguide/parallel-split/), the generated options will only contain activities of the current parallel split path. 
-
+The list of generated options only contains activities of the currently executed path in the workflow, excluding activities inside a [Parallel split](/refguide/parallel-split/) activity of the workflow or activities inside a non-interrupting [Boundary Event](/refguide/workflow-boundary-events/) path. When the workflow is executing a path in a [Parallel split](/refguide/parallel-split/) or in a non-interrupting [Boundary Event](/refguide/workflow-boundary-events/) path, the generated options will only contain activities of the current path. 
 {{% /alert %}}
 
 For more information on configuring the jumping to other activities, see [Jumping to Different Activities in a Workflow](/refguide/jump-to/).
 
 {{% alert color="info" %}}
-
 This functionality is different from the [Jump activity](/refguide/jump-activity/) in workflows, which you can add from the **Toolbox** when you configure the workflow. 
-
 {{% /alert %}}
 
 ## Properties

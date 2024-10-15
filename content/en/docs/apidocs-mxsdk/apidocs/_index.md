@@ -1,8 +1,8 @@
 ---
 title: "API Documentation"
 url: /apidocs-mxsdk/apidocs/
-description: "Presents an overview of the Mendix Platform API documentation, such as Mendix Runtime, Client, Feedback, and Deploy."
-weight: 10
+description: "Presents an overview of the Mendix Platform API documentation, for Studio Pro, Frontend, Apps, Deployment, Governance, Marketplace, Catalog, and Private Mendix Platform APIs."
+weight: 1
 no_list: false 
 description_list: true
 aliases:

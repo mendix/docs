@@ -3,7 +3,7 @@ title: "Adding a Workflow to an Existing App: Using Workflow Commons"
 linktitle: "Add Workflow to Existing App"
 url: /refguide/workflow-setting-up-app/
 description: "Describes how to use Workflow Commons in an existing app in Mendix Studio Pro."
-weight: 40
+weight: 90
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Parallel Split"
 url: /refguide/parallel-split/
-weight: 50
+weight: 40
 ---
 
 ## Introduction
@@ -24,7 +24,7 @@ Parallel split properties consist of the following sections:
 
 ### General Section {#general}
 
-The **Caption** describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand without needing to add annotations.
+The **Caption** describes what happens in this element. It is displayed under the workflow element to make the workflow easier to read and understand without needing to add annotations.
 
 ### Paths Section {#paths}
 

@@ -21,7 +21,7 @@ See [Databases and Apps](#databases), below, for an overview of this.
 
 ## Supported Databases
 
-For apps deployed to the Mendix Cloud, Mendix uses a PostgreSQL database for storing the data defined in the app domain model(s).
+For apps deployed to Mendix Cloud, Mendix uses a PostgreSQL database for storing the data defined in the app domain model(s).
 
 If you are deploying to a different infrastructure, you will need to provide your own database.
 See [System Requirements](/refguide9/system-requirements/#databases) for the list of supported databases.

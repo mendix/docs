@@ -30,7 +30,7 @@ The list contains the following information:
 
 * Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 
-* Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
+* Avatars of the initiative owners – Hovering over an avatar shows the name of the initiative owner.
 
 * **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this opens a menu that enables you to [restore](#restore-delete-archived-initiative) or [delete](#restore-delete-archived-initiative) the archived initiative.
 

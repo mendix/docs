@@ -2,7 +2,7 @@
 title: "Webhooks"
 linktitle: "Webhooks"
 url: /developerportal/deploy/webhooks/
-weight: 10
+weight: 70
 description: "Creating a webhook to trigger actions from Mendix Cloud and Mendix for Private Cloud."
 ---
 
@@ -213,6 +213,13 @@ When an alert is triggered for your Mendix app, a payload with the following for
 }
 ```
 
+The `severity` key name from the above JSON can have following values:
+
+* Ok
+* Warning
+* Critical
+* Recovery
+  
 For details on receiving alerts, see [Receive Environment Status Alerts](/developerportal/operate/receive-alerts/).
 
 ## Logging

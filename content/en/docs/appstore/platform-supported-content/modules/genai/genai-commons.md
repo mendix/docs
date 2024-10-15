@@ -217,7 +217,7 @@ An optional collection of metadata. This is a wrapper entity for one or more [Me
 
 #### `Metadata` {#metadata-entity}
 
-This entity represents additional information that is to be stored with the [KnowledgeBaseChunk](#knowledgebasechunk-entity) in the knowledge base. At the time of knowledge base population, you can link as many metadata objects to a KnowledgeBaseChunk as needed. Metadata objects are key-value pairs that are used for custom filtering during the search step (retrieve). This retrieval works on an exact string-match basis for the key-value pair. Records are only retrieved if they match with all of the metadata records in the collection provided as part of the search step.
+This entity represents additional information that is to be stored with the [KnowledgeBaseChunk](#knowledgebasechunk-entity) in the knowledge base. At the insertion stage, you can link as many metadata objects to a KnowledgeBaseChunk as needed. Metadata objects are key-value pairs that are used for custom filtering during the search step (retrieve). This retrieval works on an exact string-match basis for the key-value pair. Records are only retrieved if they match with all of the metadata records in the collection provided as part of the search step.
 
 | Attribute | Description |
 | --- | --- |

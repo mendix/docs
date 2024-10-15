@@ -1,7 +1,7 @@
 ---
 title: "Snowflake REST SQL Connector"
 url: /appstore/connectors/snowflake/snowflake-rest-sql/
-description: "Describes the configuration and usage of the Mendix-Snowflake REST SQL connector from the Mendix Marketplace."
+description: "Describes the configuration and usage of the Mendix-Snowflake REST SQL connector from the Mendix Marketplace." 
 weight: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
@@ -18,12 +18,15 @@ The Snowflake REST SQL connector provides a way to first setup key-pair authenti
 * Write data to Snowflake
 * Trigger [Snowflake Cortex ML functions](https://docs.snowflake.com/en/guides-overview-ml-functions)
 * Use [Snowflake Cortex LLM functions](https://docs.snowflake.com/en/user-guide/snowflake-cortex/llm-functions)
+* Use [Snowflake Cortex Analyst](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst)
 
-The current version of the connector supports the following actions:
+The current version of the connector supports the following:
 
 * Authentication with an RSA key pair according to PKCS #8 standard
+* Authentication with OAUTH through an OIDC provider
 * Execution of single SQL statements
 * Synchronous execution of calls
+* Execution of a Cortex Analyst query
 
 ### Prerequisites {#prerequisites}
 
@@ -33,6 +36,7 @@ To use the Snowflake REST SQL connector, you must also install and configure the
 
 * [Community Commons](https://marketplace.mendix.com/link/component/170) - This module is a required dependency for the Snowflake REST SQL connector.
 * [Encryption](https://marketplace.mendix.com/link/component/1011) - This module is a required dependency for the Snowflake REST SQL connector. The EncryptionKey constant must be set up in your application settings.
+* [GenAI Commons](https://marketplace.mendix.com/link/component/227933)- This module is a required dependency for the Snowflake Cortex Analyst.
 
 ### Licensing and Cost
 
@@ -95,6 +99,7 @@ To configure the authentication, perform the following steps:
 After you configure the authentication for Snowflake, you can implement the functions of the connector by using the provided activities in microflows. An extended microflow has been implemented and added to the Snowflake REST SQL connector as an example for users that would like to retrieve a list of objects from an existing table in Snowflake. In the **SnowflakeRESTSQL** module, see the **ExampleImplementation** microflow and the **ExampleObject** domain model entity to learn how the [**TransformResponsesToMxObjects** operation](#transform-response-to-mx-object) can be used to easily convert the data received in **HttpResponse** objects into Mendix objects. 
 
 {{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/example_implementation.png" >}}
+
 
 ## Technical Reference
 
@@ -205,3 +210,38 @@ FROM your_table
 ```
 
 This statement returns data from a Snowflake table with the columns named as specified with the `as **NewColumnName**" part` of each line. If the attribute names, datatypes and their order match, the `TransformResponsesToMxObjects` activity automatically converts the retrieved data into Mendix objects.
+
+## Configuring Snowflake Cortex Analyst
+
+Cortex Analyst is a fully-managed, LLM-powered Snowflake Cortex feature that helps you create applications capable of reliably answering business questions based on your structured data in Snowflake.
+
+### Prerequisites {#prerequisitescortexanalyst}
+
+* Make sure that you have access to Cortex Analyst. For more information, refer to the [Snowflake Cortex Analyst documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst).
+* Create the semantic model for Cortex Analyst. For more information, refer to [Creating Semantic Models for Snowflake Cortex Analyst](https://developers.snowflake.com/solution/creating-semantic-models-for-snowflakes-cortex-analyst/) in the Snowflake Cortex Analyst documentation.
+* Set up one of the following supported authentication methods for Cortex Analyst:
+    * OAUTH
+    * WT-Keypair
+
+### Configuration 
+
+To configure your Mendix app for Snowflake Cortex Analyst, perform the following steps:
+
+1. Create a microflow that contains the cortex connection manadatory information Token, AccountURL and Authentication Type
+2. Add the "Cortex Analyst: Create Request" action from toolbox, add the path to the semantic file on stage at Semantic_model_file parameter
+3. Add the "Cortex Analyst: Add Message to Request" from toolbox, fill in the parameters
+   -Request: the request from the previous step.
+   -Cortex Role: The role of the entity that is creating the message. Currently only supports "user".
+   -Query: The Query/Question to Cortex Analyst.
+   -Content type: Curently only text is supported.
+4. Add the "Cortext Analyst" action from toolbox. Fill in the parameters
+   - Connection : Cortex connection from step 1
+   - Request: The Request from step 2
+5. Add the "Response: Get Cortex Analyst Response Message" action from toolbox to get the Cortex Analyst Response Message from the Response entity. 
+   - Content: This is the content of the return message! This will include the text + the SQL test or the Suggestions in case of no returned SQL 
+   - Cortex Role: The entity that produced the message. One of user or analyst.
+   - SQLText: The returned SQL suggestion     
+7. Add the "Response: Get Cortex Analyst Response" action to get the "Cortex Analyst Response" entity from Response
+   - Request_ID :The returned RequestId
+   
+ {{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/CortexAnalystRequestExample.png" >}}    

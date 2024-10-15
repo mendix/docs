@@ -170,15 +170,17 @@ Once a service has been enabled for an app, Technical Contacts can selectively e
 
 ## Deploy Wizard{#deploy-wizard}
 
-If you click **Deploy** ({{< icon name="deploy" >}}) from the **Overview** tab or the **Deployment Packages** tab, this launches the Deploy wizard. Follow the wizard by performing the following steps:
+If you click **Deploy** ({{< icon name="deploy" >}}) from the **Overview** tab or the **Deployment Packages** tab, this launches the Deploy wizard, which you can use to deploy a package to an environment. Follow the wizard by performing the following steps:
 
-1. In the **Select Package** tab, select a package from repository, and then click **Next**
-2. In the **Configure Environment** tab, review the live (post-deployment) constant values, and adjust them as required.
+1. Perform one of the following actions, depending on whether you launched the wizard from the **Overview** or the **Deployment Packages** tab:
+    * If launched from the **Overview**, the environment is already selected, so the first screen of the wizard is the **Select Package** tab. Use it to select a package from repository.
+    * If launched from the **Deployment Packages** tab, the package is already selected, so the first screen of the wizard is the **Select Environment** tab. Use it to select the target environment for your package.
+3. In the **Configure Environment** tab, review the live (post-deployment) constant values, and adjust them as required.
 
     {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/2-configure-environment.png" alt="" >}}
 
-3. In the **Backup** tab, choose if you want to back up your app before deploying the new package. The app is unavailable while the backup runs.
-4. In the **Deploy** tab, review the deployment settings:
+4. In the **Backup** tab, choose if you want to back up your app before deploying the new package. The app is unavailable while the backup runs.
+5. In the **Deploy** tab, review the deployment settings:
     1. To see an overview of the configuration for this deployment, click **View Summary**. This summary displays the selected package, selected backup option, and any changed constants or scheduled events.
     
         {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/deployment-summary.png" alt="" >}}

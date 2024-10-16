@@ -47,7 +47,7 @@ A patch version is released on an as-needed basis. It includes security fixes an
 
 ## Long-Term Support Version (LTS) {#lts}
 
-An LTS version is the last release of a major version. It's release coincides with the release of the GA of the next Major version. for instance, the 10.24 LTS version will be released in the same month as the Mendix 11 GA. Once a minor version becomes an LTS, it will not have new features added to it. 
+An LTS version is the last minor release of a major version. Its release is aligned with the GA release of the next major version. For example, the 10.24 LTS version will be released in the same month as Mendix 11 GA. Once a minor version becomes an LTS, it will not have new features added to it. 
 
 These are the current LTS versions of Studio Pro:
 * [9.24](/releasenotes/studio-pro/9.24/) (started in March, 2023)
@@ -102,7 +102,7 @@ Release notes for the current MTS version are marked with an MTS badge (<text cl
 MTS versions (for example, 9.6) remain supported until the next major version has been released for general availability (for example, 10.0).
 {{% /alert %}}
 
-Mendix MTS versions offer a balance between going with the latest and greatest Mendix has to offer every month, and security and stability.
+Mendix MTS versions offer a balance between getting the latest and greatest Mendix has to offer every month, and security and stability.
 
 {{% alert color="info" %}}
 
@@ -112,7 +112,7 @@ Mendix recommends using the latest patch version of the release as the latest ve
 
 ### Support Duration
 
-The support duration for an MTS depends ends 3 months after the LTS of that major version is released. For instance, version 10.24 is released in June 2025. Support for the 10.6, 10.12 and 10.18 MTS versios will then end in September 2025.
+Support for an MTS version ends three months after the LTS version of that major version is released. For example, version 10.24 is released in June 2025. Support for the 10.6, 10.12 and 10.18 MTS versios will then end in September 2025.
 
 ### Release Cycle
 

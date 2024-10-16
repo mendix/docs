@@ -17,10 +17,14 @@ This document is about [Private Cloud](/developerportal/deploy/private-cloud/) A
 The Mendix for Private Cloud Deploy API allows you to manage application environments deployed to your private cloud using the Mendix Operator. You can use the API to do the following:
 
 * Download the configuration tool, mxpc-cli, for your operating system
+* Get Manifest of multiple/single cluster
+* Get Manifest of multiple/single namespace 
 * Create, update, or delete a cluster
 * Create, update, or delete a namespace
+* Get manifest of single environment
 * Create or delete an environment
 * Update an environment and deploy and manage an app in an environment through changes to the environment manifest
+* Get Manifest of single/multiple applications
 
 {{% alert color="info" %}}
 The Mendix for Private Cloud Deploy API is for connected private cloud clusters only.

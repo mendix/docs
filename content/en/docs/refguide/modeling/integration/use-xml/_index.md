@@ -1,30 +1,18 @@
 ---
-title: "XML Schemas"
-url: /refguide/xml-schemas/
-weight: 15
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+title: Use XML Documents
+url: /howto/integration/use-xml-documents/
 ---
 
-## Overview
+## Introduction 
 
-An XML schema is defined in an XML Schema Definition (XSD) file and can be imported in your model. It describes what a certain XML document should look like. The schema can then be used in [Import Mappings](/refguide/import-mappings/) and [Export Mappings](/refguide/export-mappings/).
+Use Mendix Studio Pro to integrate with other systems using XML. 
 
-## General Tab
+How-tos available for this topic:
 
-{{< figure src="/attachments/refguide/modeling/integration/xml-schemas/18582294.png" alt="Figure 1" class="no-border" >}}
+* [Import XML Documents](/howto/integration/importing-xml-documents/)
 
-### XML Schema
+    Describes how to prepare the data structure and GUI, add an XML schema, and create XML-to-domain mapping.
 
-The XML Schema is the file path to the XSD file. Absolute file paths, `https`, and `html` links are supported.
+* [Export Excel Documents](/howto/integration/export-xml-documents/)
 
-### Preview
-
-The **Preview** field displays the elements of which the XML file is comprised.
-
-## Documentation Tab
-
-In the **Documentation** tab, you can add information that describes the schema.
-
-## Read More
-
-See [XML Schema Support](/refguide/xml-schema-support/) for information on what XML and XSD features Mendix supports.
+    Describes how to add an XML schema, create domain-to-XML mapping, and export logic.

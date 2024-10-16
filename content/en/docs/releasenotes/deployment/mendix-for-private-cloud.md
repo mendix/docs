@@ -16,7 +16,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Deploy API
 
-* In order to avoid any security risk of exposing an critical information, we have removed the MxAdminPassword, DebuggerPassword, and SubscriptionSecret fields from response of GET Environment Manifest endpoint of the DeployAPI. If the actual values needs to be checked, it can be done either in the Portal’s UI or via the cluster route.
+* In order to further increase the security of the API responses, we have removed the MxAdminPassword, DebuggerPassword, and SubscriptionSecret fields from response of GET Environment Manifest endpoint of the DeployAPI. If the actual values needs to be checked, it can be done either in the Portal’s UI or via the cluster route. This change only affects the GET operation, UPDATE operation still works as before.
 * We have added deprecation and sunset response headers for APIs which are soon going to be deprecated in future.
 
 #### Portal Improvements

@@ -9,6 +9,8 @@ An XML schema is defined in an XML Schema Definition (XSD) file and can be impor
 
 {{< figure src="/attachments/refguide/modeling/integration/xml-schemas/18582294.png" alt="Figure 1" class="no-border" >}}
 
+## Import and Export XSD Files
+
 Mendix derives the input/output formats for XML import/export and calling SOAP/XML web services by interpreting XML Schema Definition (XSD) files. When you import an XML schema (*.xsd*) or web service definition (*.wsdl*) using Mendix Studio Pro, you may get a dialog that contains warning messages about unsupported constructs. This is because at this time, Mendix does not support the entire XSD standard. The mapping in Mendix is based on entities and attributes, and some XSD constructs do not lend themselves easily for this format. The following table shows which XSD constructs are currently supported.
 
 | XSD Construct | Is Supported |

@@ -69,37 +69,33 @@ Follow the instructions in [Using Marketplace Content](/appstore/use-content/) t
 
 ### Actions
 
-#### Search Item Revisions from Teamcenter {#getitemrevision}
-
-This action allows you to generate the domain model and microflow to search for and retrieve `ItemRevisions` or its specialization. The resulting microflow implements the saved query `Item Revision...` from Teamcenter.
-
 #### Create Item and Item Revision {#createitem-and-itemrevision}
 
-This action allows you to configure and generate the domain model and microflow to create an Item with `ItemRevision` or its specializations in Teamcenter. The resulting microflow implements the `Create Object and Update Properties` actions from the Teamcenter Connector. With the `Create Object` action, the `Item` and `ItemRevision` get created in Teamcenter, setting the Teamcenter properties that need to be set upon creation. With the `Update Properties` action, the remaining properties are updated in Teamcenter.
+The `Create Item and Item Revision` action allows you to configure and generate the domain model and microflow to create an Item with `ItemRevision` or its specializations in Teamcenter. The resulting microflow implements the `Create Object and Update Properties` actions from the Teamcenter Connector. With the `Create Object` action, the `Item` and `ItemRevision` get created in Teamcenter, setting the Teamcenter properties that need to be set upon creation. With the `Update Properties` action, the remaining properties are updated in Teamcenter.
 
 #### Update Item and Item Revision {#updateitem-and-itemrevision}
 
-This action allows you to generate the domain model and microflow to update an `Item` with `ItemRevision` or their specializations in Teamcenter. The resulting microflows implements the `Update Properties` action from the Teamcenter Connector. 
+The `Update Item and Item Revision` action allows you to generate the domain model and microflow to update an `Item` with `ItemRevision` or their specializations in Teamcenter. The resulting microflows implements the `Update Properties` action from the Teamcenter Connector. 
 
 #### Revise Item Revision {#reviseitem-and-itemrevision}
 
-This allows you to generate the domain model and microflow to revise an `ItemRevision` or its specializations in Teamcenter. The resulting microflow implements the `Revise Object and Update Properties` actions from the Teamcenter Connector. With the `Revise Object` action, a new `ItemRevision` is created, setting the Teamcenter properties that need to be set upon revising. With the `Update Properties` action, the remaining properties are updated in Teamcenter.
+The `Revise Item and Item Revision` allows you to generate the domain model and microflow to revise an `ItemRevision` or its specializations in Teamcenter. The resulting microflow implements the `Revise Object and Update Properties` actions from the Teamcenter Connector. With the `Revise Object` action, a new `ItemRevision` is created, setting the Teamcenter properties that need to be set upon revising. With the `Update Properties` action, the remaining properties are updated in Teamcenter.
 
 #### Search Datasets {#getdatasets}
 
-This allows you to generate the domain model and microflow to search for and retrieve `Datasets` or its specialization. The resulting microflow implements the saved query `Datasets` from Teamcenter.
+The `Search Datasets` allows you to generate the domain model and microflow to search for and retrieve `Datasets` or its specialization. The resulting microflow implements the saved query `Datasets` from Teamcenter.
 
 #### Get Datasets from Item Revision {#getdatasetsfromitemrevision}
 
-This action allows you to generate the domain model and microflow to retrieve datasets for an Item Revision and subsequently download files inside the dataset.
+The `Get Datasets from Item Revision` action allows you to generate the domain model and microflow to retrieve datasets for an Item Revision and subsequently download files inside the dataset.
 
 #### Get Workspace Objects {#getworkspaceobjects}
 
-This action allows you to configure and generate the domain model and microflow to search for and retrieve Workspace Objects or their specialization from Teamcenter. This action implements the saved query `General..` from Teamcenter.
+The `Get Workspace Objects` action allows you to configure and generate the domain model and microflow to search for and retrieve Workspace Objects or their specialization from Teamcenter. This action implements the saved query `General..` from Teamcenter.
 
 #### Get Structures
 
-This allows you to generate the domain model and microflows to configure a BOM window and retrieve structure data from Teamcenter. This feature supports the retrieval of structures with the following:
+The `Get Structures` allows you to generate the domain model and microflows to configure a BOM window and retrieve structure data from Teamcenter. This feature supports the retrieval of structures with the following:
 
 * `RevisionRule` (or default `RevisionRule`)
 * `VariantRule`

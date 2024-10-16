@@ -63,7 +63,7 @@ The resulting *key_and_certificate.p12* will be used by the Mendix Native Mobile
 
 ### Creating the Required Distribution Profile
 
-Once you have the certificate file, you need to obtain a distribution profile. The Apple Developer Member Center allows you to define an app identifier, a test device, and finally a distribution profile. For more information, check the Apple documentation on how to [maintain identifiers, devices and profiles](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html).
+Once you have the certificate file, you need to obtain a distribution profile. The Apple Developer Member Center allows you to define an app identifier, a test device, and finally a distribution profile. For more information, check the Apple documentation on how to [maintain identifiers, devices and profiles](https://developer.apple.com/help/account/configure-app-capabilities/create-order-type-identifiers-and-certificates/).
 
 ## Android{#android}
 

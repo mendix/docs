@@ -55,9 +55,11 @@ The following frameworks are required. They will be installed automatically by t
 When you are running Studio Pro on a Parallels virtual machine on an ARM64 device (for example, an M1 Mac), you need the following dependencies in addition to the x64 version listed above:
 
 * .NET Desktop Runtime (arm64)
+
     | Studio Pro 10.0.0 - 10.10.0 | Studio Pro 10.11.0 and above |
     | --- | --- |
     | .NET 6 Desktop Runtime | .NET 8 Desktop Runtime |
+
 * Microsoft Edge WebView2 Evergreen Runtime (arm64)
 
 {{% alert color="info" %}}
@@ -108,6 +110,18 @@ To run a Mendix app, Mendix Studio Pro uses the following ports by default. If y
 * 8100 – sign-in port
 
 For more information on ports and modifying Studio Pro's default ports, see [Configurations](/refguide/configuration/) and the [Troubleshooting Common Mobile Issues](/refguide/mobile/getting-started-with-mobile/prerequisites/#troubleshooting) section of *Native App Prerequisites and Troubleshooting*.
+
+### File Comparison
+
+{{% alert color="info" %}}
+Comparing files on disk with the original is currently not supported on macOS.
+{{% /alert %}}
+
+By default, Studio Pro points to an executable shipped with TortoiseGit for file comparison. To customize this, navigate to **Preferences** > **Version control** > **General** > **File comparison** > **Executable** and choose your preferred tool. 
+
+The default path for the binary when installing Studio Pro on a new device is `C:\Program Files\TortoiseGit\bin\TortoiseGitMerge.exe`.
+
+You can download the latest version of TortoiseGitMerge from the [TortoiseGit](https://tortoisegit.org/download/) website. 
 
 ### File Locations
 

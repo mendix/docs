@@ -96,6 +96,7 @@ const workingCopy = await app.createTemporaryWorkingCopy("main");
 ```
 
 You can pass the following options to `createTemporaryWorkingCopy`:
+
 | Name | Description |
 |--- | --- |
 | `commitId` | The ID of the commit on which the working copy should be based. If not passed, the working copy is created from the last commit in the specified branch. |

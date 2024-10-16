@@ -35,6 +35,7 @@ To send your runtime information to Splunk Cloud Platform, you need to set it up
 1. Click **Details** on the environment you wish to monitor with Splunk Cloud Platform. 
 1. Switch to the [**Runtime** tab](/developerportal/deploy/environments-details/#runtime-tab).
 1. Add the following **Custom Environment Variables**.
+
     | Variable | Description | Default |
     | --- | --- | --- |
     | `SPLUNK_HOST` | The hostname or the IP address of the Splunk Cloud Platform Controller without the scheme (protocol). An example is `test.splunkcloud.com`. | |

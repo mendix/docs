@@ -14,6 +14,8 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
 
+### October 17, 2024
+
 #### Features
 
 * We have introduced support for Business Events, which includes the following enhancements:

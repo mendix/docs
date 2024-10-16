@@ -66,7 +66,7 @@ To use Conversational UI in your app, you must perform the following tasks in St
 3. Make sure there is a [chat context](#chat-context) available on the page where the conversation should be shown.
 4. Associate one or more [provider-configs](#provider-config) to the chat context. 
 5. Use a default [action microflow](#action-microflow) or create a custom flow that will be executed when the user clicks the send button.
-6. Include the ConversationalUI module in the right oder in the project theme settings. Add it after Atlas_Core, so the styling does not get overwritten (see [Ordering UI Resource Modules](/howto/front-end/customize-styling-new/#ordering-ui-resource-modules) for more information).
+6. Include the ConversationalUI module in the right order in the project theme settings. Add it after Atlas_Core, so the styling does not get overwritten (see [Ordering UI Resource Modules](/howto/front-end/customize-styling-new/#ordering-ui-resource-modules) for more information).
 7. Optionally, [customize styling](#customize-styling) by overwriting variables and adding custom scss. Custom styling modules need to be loaded after ConversationalUI when ordering UI resources.
 
 

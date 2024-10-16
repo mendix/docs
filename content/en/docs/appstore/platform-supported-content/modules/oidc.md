@@ -557,7 +557,7 @@ You can set up custom user provisioning once your app is running using the `OIDC
     1. **UserInfoParameter(UserCommons.UserInfoParam)**: A Mendix object containing user claims information through its associated objects. You can use this  parameter to retrieve user provisioning configuration information.
     2. **User(System.User)**: A Mendix object representing the user to be provisioned. Ensure that the selected microflow matches this parameter signature.
 
-    It will be executed after user creation or update of user. If you have added a new microflow, you will need to refresh the module containing your microflow as described in the [Installing Mx Model Reflection](#mxmodelreflection). This selection can be blank if you do not want to add custom logic.
+    The microflow must return a **System.User** object to ensure proper user provisioning and updates. It will be executed after user creation or update of user. If you have added a new microflow, you will need to refresh the module containing your microflow as described in the [Installing Mx Model Reflection](#mxmodelreflection). This selection can be blank if you do not want to add custom logic.
 
 7. Click **Save** to save the configuration.
 

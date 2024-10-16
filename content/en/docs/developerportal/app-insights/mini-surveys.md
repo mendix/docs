@@ -33,7 +33,7 @@ The tabs of the **Survey Overview** page are described below.
 
 The **Active** tab shows all the mini surveys that are active for the app with the following details:
 
-* **ID** – This is the unique ID of the mini survey. You can also find this ID on the [survey details](#survey-details) page of the mini survey. You need to use the ID as input when you configure the Mendix Mini Surveys module in Studio Pro to implement the mini survey.
+* **ID** – This is the unique ID of the mini survey. You can also find this ID on the [survey details](#survey-details) page of the mini survey.
 * **Name** – This is the name of the mini survey.
 * **Location** – The Location is an identifier that refers to the location where the mini survey will appear in your app.
 * **Responses** – This shows the number of responses that have been collected for the mini survey.
@@ -110,7 +110,7 @@ On this tab, you can view all the responses that have been collected for the min
 
 ### Creating a Mini Survey {#create-survey}
 
-To create a mini survey, follow these steps:
+The first time you complete the onboarding, Mendix creates a demo survey for you to test Mini Surveys. If you want to create a new mini survey, follow these steps:
 
 1. Open the app in [Apps](https://sprintr.home.mendix.com/) and click **Mini Surveys** in the sidebar. What you see depends on whether there are existing mini surveys for the app:
 
@@ -200,13 +200,12 @@ To check the responses that have been collected, follow these steps:
 
 ### Survey Opt-out Rules
 
-A mini survey has the following opt-out rules: 
+ user can choose to opt out of a survey. Once opted out, the survey will no longer appear for that user, even if they haven’t completed it. This occurs when a user dismisses the survey without submitting it.
 
-* If a user has closed a survey, without answering any questions, then the survey will not show again to this user .
-* If a user has answered one or more questions in a survey, but did not finished the survey, then the survey will show again. However, if the user has closed the survey before finishing for the second time, the survey will not show again to this user.
-* If the user has answered all questions, then the survey will not show again to the user.
+* The first time a user dismisses the survey, it will reappear the next time they visit the page. Any information they entered will be saved and shown when they see the survey again.
+* If the user dismisses the survey a second time, it will no longer appear for them, even if they trigger it again.
 
-Survey opt-out rule is a variable cached to your internet browser. You can reset and show a survey multiple times by clearing your browser cache. If you are testing, Mendix recommends using the **TEST_MODE** constant to avoid clearing every time.
+Survey opt-out rule is a variable cached to your internet browser. You can reset and show a survey multiple times by clearing your browser cache.
 
 {{% alert color="info" %}}In a future release, we will allow you to customize these opt-out rules from the App Insights portal.{{% /alert %}} 
 

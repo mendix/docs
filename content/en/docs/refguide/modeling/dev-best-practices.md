@@ -261,7 +261,7 @@ Guidelines below can help you choose a short yet meaningful name for your workfl
 
 #### Enumerations
 
-[Enumerations](/refguide/enumerations/) should be identified with a prefix.
+[Enumerations](/refguide/enumerations/) should be identified with a prefix. The name of the enumeration should reflect its business context, for example, *ENUM_ShippingStatus*.
 
 | Document Type | Prefix |
 | ------------- |------- |

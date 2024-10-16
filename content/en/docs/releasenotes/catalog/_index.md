@@ -19,10 +19,9 @@ These release notes cover changes made to the [Catalog](/catalog/).
 #### Features
 
 * We have introduced support for Business Events, which includes the following enhancements:
-
     * Validation, processing, and storage of Business Events received via CloudEvents.
-    * Business Events are now included in the responses of GET endpoints.
-    * Business Events have been integrated into key app functions such as search results, filtering, and editing, ensuring a seamless experience across the platform.
+    * Business Events are now included in the responses of `GET` endpoints.
+    * Business Events have been integrated into key app functions, such as search results, filtering, and editing, ensuring a seamless experience across the platform.
 
 #### Fixes
 

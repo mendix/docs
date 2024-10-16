@@ -365,7 +365,7 @@ IP addresses must be within the following ranges:
 
 You can restrict access to your application by means of Client Certificates or IP ranges.
 
-The root path (`/`) restricts access to the entire application. Settings for a specific paths override the implicitly inherited profile from other non-root paths.
+The root path (`/`) restricts access to the entire application. Settings for a specific path override the implicitly inherited profile from other non-root paths.
 
 Custom access restriction profiles are managed at the application level. They can be reused for all environments (acceptance, production, etc).
 

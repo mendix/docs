@@ -43,7 +43,7 @@ This module is intended to enable chat interactions between a user and an AI mod
 
 To use the Conversational UI module, your Mendix Studio Pro version must be [9.24.2](/releasenotes/studio-pro/9.24/#9242) or higher.
 
-You must also ensure that you have the prerequisite modules that Conversational UI requires. The modules are included by default in the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934), the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) and the [Suppor Assistant Starter App](https://marketplace.mendix.com/link/component/231035), otherwise you must install them yourself:
+You must also ensure that you have the prerequisite modules that Conversational UI requires. The modules are included by default in the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934), the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) and the [Support Assistant Starter App](https://marketplace.mendix.com/link/component/231035), otherwise you must install them yourself:
 
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187)
 * [Data Widgets](https://marketplace.mendix.com/link/component/116540) 
@@ -51,7 +51,7 @@ You must also ensure that you have the prerequisite modules that Conversational 
 * [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
 * [Web Actions](https://marketplace.mendix.com/link/component/114337)
 
-Finally, you must also install and configure a connector that is compatible with GenAI Commons. Mendix provides platform-supported integration with either [(Azure) OpenAI](/appstore/modules/genai/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). You can also integrate with custom models, by making them compatible with the [GenAI Commons](/appstore/modules/genai/commons/) Request and Response.
+Finally, you must also install and configure a connector that is compatible with GenAI Commons. Mendix provides platform-supported integration with either [(Azure) OpenAI](/appstore/modules/genai/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). You can also integrate with custom models by making them compatible with the [GenAI Commons](/appstore/modules/genai/commons/) Request and Response.
 
 ## Installation {#installation}
 
@@ -62,9 +62,9 @@ Follow the instructions in [Using Marketplace Content](/appstore/use-content/) t
 To use Conversational UI in your app, you must perform the following tasks in Studio Pro:
 
 1. Add the relevant [module roles](#module-roles) to the user roles in the project security.
-2. Create the [UI for the chat](#ui-components) in your app by using the [pages](#pages-and-layouts) and [snippets](#snippets) as a basis to .
-3. Make sure there is a [chat context](#chat-context) available on the page where the conversation should show.
-4. To the chat context, associate one or more [provider](#provider-config) configs 
+2. Create the [UI for the chat](#ui-components) in your app by using the [pages](#pages-and-layouts) and [snippets](#snippets) as a basis.
+3. Make sure there is a [chat context](#chat-context) available on the page where the conversation should be shown.
+4. Associate one or more [provider-configs](#provider-config) to the chat context. 
 5. Use a default [action microflow](#action-microflow) or create a custom flow that will be executed when the user clicks the send button.
 6. Optionally, [customize styling](#customize-styling) by overwriting variables and adding custom scss.
 
@@ -92,7 +92,7 @@ You can include the following pages in your navigation, or copy them to your mod
 
 * **ConversationalUI_FullScreenChat** - This page displays a centered chat interface on a full-screen responsive page. 
 * **ConversationalUI_Sidebar** - This page displays the chat interface on the right side with the full height.
-* **ConversationalUI_PopUp** - This is a floating pop-up in the bottom-right corner. To open it, users can click the **Snippet_FloatingChatButton** that floats in the bottom-right corner. Alternatively, you can use the building block **Floating Button OpenChat** from the toolbox to create your custom opening logic.
+* **ConversationalUI_PopUp** - This is a floating pop-up in the bottom-right corner. To open it, users can click the **Snippet_FloatingChatButton** that floats in the bottom-right corner. Alternatively, you can use the building block **Floating Chat Button** from the toolbox to create your custom opening logic.
 
 All pages expect a [ChatContext](#chat-context) that needs to have an active [ProviderConfig](#provider-config). The user can chat with the LLM on all these pages, but not configure any additional settings, such as the model or system prompt. There are many ways to enable this: on a custom page before the chat was opened, on a custom version of page chat page itself, or in the [action microflow](#action-microflow) that is stored in the active [ProviderConfig](#provider-config).
 
@@ -113,7 +113,7 @@ If the snippet does not fit your use case, you can [inline the snippet](/refguid
 
 ##### Message Snippets {#snippet-messages}
 
-The messages snippets are already part of the [Chat Interface Snippets](#snippet-chat-interface), but can be used individually in your custom setup if needed. They contain the content of the messages list view.
+The messages snippets are already part of the [Chat Interface Snippets](#snippet-chat-interface), but can be used individually in your custom setup if needed. They contain the content of a single message, for example to be used in a list view.
 
 The following versions are available and can be swapped as needed:
 
@@ -124,9 +124,9 @@ The following versions are available and can be swapped as needed:
 
 The following additional snippets can be used to give the user more control over the chat conversations.
 
-* **Snippet_ChatContext_AdvancedSettings** - This snippet can be placed on pages to let users configure specific parameters (currently **temperature**). Use microflow **AdvancedSettings_GetAndUpdate** to set the boundaries and default value for advanced settings in the UI. 
+* **Snippet_ChatContext_AdvancedSettings** - This snippet can be placed on pages to let users configure specific parameters (currently **temperature**). Use the microflow **AdvancedSettings_GetAndUpdate** to set the boundaries and default value for advanced settings in the UI. 
 * **Snippet_ChatContext_SelectActiveProviderConfig** - With this snippet, users can select an active [Provider Config](#provider-config) from all associated configurations, for example to let them select a model.
-* **Snippet_ChatContext_HistorySideBar** - This snippet can be used in a list view of past conversations.
+* **Snippet_ChatContext_HistorySideBar** - This snippet can be used in a list view to show past conversations. It displays the **topic** of the chat context as well as a delete-icon on hover (see [ChatContext operations](#chatcontext-operations) for how to set the topic).
 
 See the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) or the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) on how to use those snippets.
 
@@ -164,22 +164,22 @@ If the `ChatContext` however already exists and a new `ProviderConfig` needs to 
 
 The `Action Microflow` that is stored on a `ProviderConfig` is executed when the user clicks the **Send** button. This microflow handles the interaction between the LLM connectors and the Conversational UI entities. The **USE_ME** folder included in the Conversational UI module contains example action microflows for both [OpenAI](/appstore/modules/genai/openai/) and [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). You can copy these microflows and modify them for your use cases, or use them directly for test purposes.
 
-Add the action microflow to an existing `ProviderConfig` by using the **Set Chat Action** toolbox action. Note that this action does not commit the object, so you must also add a step to commit it after.
+Add the action microflow to an existing `ProviderConfig` by using the **Set Chat Action** toolbox action. Note that this action does not commit the object, so you must also add a step to commit it afterwards.
 
 #### Creating a Custom Action Microflow
 
 A typical action microflow is responsible for the following:
-* Convert the `ChatContext` with user input to a `Request` structure for the chat completions operation
-* Retrieve the connection details (i.e. credentials, configuration, ...) for the operation
-* Execute the chat completions operation for the LLM of choice
-* Update the `ChatContext` strucutre based on the response so that the user can see the result in the UI.
+* Convert the `ChatContext` with user input to a `Request` structure for the chat completions operation.
+* Retrieve the connection details (i.e. credentials, configuration, ...) for the operation.
+* Execute the chat completions operation for the LLM of choice.
+* Update the `ChatContext` structure based on the response so that the user can see the result in the UI.
 
 If you want to create your own custom action microflow, keep the following considerations in mind:
 
 * Only one input parameter of [ChatContext](#chat-context) or a specialization is accepted.
 * The return type needs to be a `Success` Boolean.
 * Use the [chat context](#chatcontext-operations) and [request operations](#request-operations) to facilitate the interaction between the chat context and the model.
-* The custom action microflow can only be triggered if it is set as chat action on a `ProviderConfig` using one of the operations mentioned before.
+* The custom action microflow can only be triggered if it is set as action microflow for the `ProviderConfig` using one of the operations mentioned before.
 
 ##### ChatContext operations {#chatcontext-operations}
 
@@ -191,7 +191,7 @@ The following operations can be found in the toolbox for changing the [ChatConte
 
 The following operations are to be used in a (custom) action microflow:
 
-* `Create Request from ChatContext` creates a [Request](/appstore/modules/genai/commons/) object that is used as input parameter in a `Chat with History` operation as part of the [action microflow](#action-microflow). For more information about the `Chat with History` operation, see [(Azure) OpenAI](/appstore/modules/genai/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/).
+* `Create Request from ChatContext` creates a [Request](/appstore/modules/genai/commons/) object that is used as input parameter in a `Chat with History` operation as part of the [action microflow](#action-microflow). For more information about the `Chat with History` operation, see [(Azure) OpenAI](/appstore/modules/genai/openai/#chatcompletions-with-with-history) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/).
 * `Get Current User Prompt` gets the current user prompt. It can be used in the [action microflow](#action-microflow), because the `CurrentUserPrompt` from the chat context is no longer available.
 * `Update Assistant Response` processes the response of the model and adds the new message and any sources to the UI. This is typically one of the last steps of the logic in an [action microflow](#action-microflow).
 
@@ -240,7 +240,7 @@ You can use the following classes in your custom stylesheets to overwrite the de
 A separate set of snippets have been made available to display and export token usage information in the running application. This is applicable for LLM connectors that follow the principles of [GenAI Commons](/appstore/modules/genai/commons/#token-usage) and as a result store token usage information. The following snippets can be added to (admin) pages independently from the conversation logic described in earlier sections. 
 
 * **Snippet_TokenMonitor** - This snippet can be used to display token usage informatation in charts and contains several other snippets that you can use to build your own token monitor dashboard. To display the token usage data, users will need the `UsageMonitoring` userrole.
-* **Snippet_TokenMonitor_Export** - This snippet can be used to display token usage informatation in a grid and export it as .xlsx. 
+* **Snippet_TokenMonitor_Export** - This snippet can be used to display token usage information in a grid and export it as *.xlsx*. 
 
 ## Technical Reference {#technical-reference}
 

@@ -19,4 +19,4 @@ Documents available for this topic:
 
 * [XML Schemas](/refguide/xml-schema-support/)
 
-    Describes how to import an XML Schema Defintion (XSD) file. 
+    Describes how to import and export an XML Schema Defintion (XSD) file. 

@@ -74,9 +74,9 @@ Store the `{GENERATED_PAT}` value in a safe location, so you can use it to autho
 | Create environment               | `mx:deployment:write`                            |
 | Update environment               | `mx:deployment:write`                            |
 | Delete environment               | `mx:deployment:write`                            |
-| Get Apps manifest                | `mx:deployment:write` and `mx:app:metadata:read` |                        
-| Get App manifest.                | `mx:deployment:write` and `mx:app:metadata:read` |                              
-| Get Job                          | `mx:deployment:read`  and `mx:deployment:write`  |
+| Get apps manifest                | `mx:deployment:write` and `mx:app:metadata:read` |                        
+| Get app manifest                | `mx:deployment:write` and `mx:app:metadata:read` |                              
+| Get job                          | `mx:deployment:read`  and `mx:deployment:write`  |
 
 #### Using the PAT
 

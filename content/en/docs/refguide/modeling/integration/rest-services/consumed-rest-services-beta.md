@@ -52,6 +52,12 @@ Download [Studio Pro](https://marketplace.mendix.com/link/studiopro/) and add th
 
 Use the Consumed REST Service to configure a `GET`, `POST`, `PUT`, `PATCH`, or `DELETE` request for your app. 
 
+{{% alert color="info" %}}
+
+As of Mendix 10.16.0, you can configure a Consumed REST service using the New Version or the Classic Version. It is recommended to use the New Version, as the Classic version will be removed in a future release.
+
+{{% /alert %}}
+
 ### Basic Configuration {#configure-a-request}
 
 Create a `GET`, `POST`, `PUT`, `PATCH`, or `DELETE` request to send data to your server by doing the following:

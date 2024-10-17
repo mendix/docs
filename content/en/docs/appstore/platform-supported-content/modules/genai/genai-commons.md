@@ -191,7 +191,7 @@ This entity represents a collection of chunks. It is a wrapper entity for [Chunk
 
 #### `Chunk` {#chunk-entity}
 
-A piece of information (InputText) and the corresponding embeddings vector retrieved from an Embeddings API.
+A piece of information (InputText) and the corresponding embeddings vector retrieved from an Embeddings API. This is the relevant entity if you need to generate embedding vectors but do not need to store them in a knowledge base.
 
 | Attribute | Description |
 | --- | --- |
@@ -201,7 +201,7 @@ A piece of information (InputText) and the corresponding embeddings vector retri
 
 #### `KnowledgeBaseChunk` {#knowledgebasechunk-entity}
 
-This entity represents a discrete piece of knowledge that can be used in embed and store operations. It is a specialization of [Chunk](#chunk-entity).
+This entity represents a discrete piece of knowledge that can be used in embed and store operations. It is a specialization of [Chunk](#chunk-entity) and it is the relevant entity if you need to both generate embedding vectors and want to store them in a knowledge base.
 
 | Attribute | Description |
 | --- | --- |
@@ -217,7 +217,7 @@ An optional collection of metadata. This is a wrapper entity for one or more [Me
 
 #### `Metadata` {#metadata-entity}
 
-This entity represents additional information that is to be stored with the [KnowledgeBaseChunk](#knowledgebasechunk-entity) in the knowledge base. It can be used for custom filtering during retrieval.
+This entity represents additional information that is to be stored with the [KnowledgeBaseChunk](#knowledgebasechunk-entity) in the knowledge base. At the insertion stage, you can link as many metadata objects to a KnowledgeBaseChunk as needed. Metadata objects are key-value pairs that are used for custom filtering during the search step (retrieve). This retrieval works on an exact string-match basis for the key-value pair. Records are only retrieved if they match with all of the metadata records in the collection provided as part of the search step.
 
 | Attribute | Description |
 | --- | --- |

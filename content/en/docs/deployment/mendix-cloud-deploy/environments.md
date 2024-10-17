@@ -6,6 +6,10 @@ description: "Lists the environments in which your app is deployed. Also the sta
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
+{{% alert color="info" %}}
+A redesigned deployment flow is now available. For more information, see [Environments and Deployment (New UI)](/developerportal/deploy/environments-redesign/).
+{{% /alert %}}
+
 ## Introduction
 
 You can use the **Environments** page to access information about your environments, deploy packages, manage certificates and access restrictions, and more. To access your app's **Environments** page, go to [Apps](https://sprintr.home.mendix.com/) and click **Environments** on your app. You can also directly visit the **Environments** page using this link:  `https://cloud.home.mendix.com/link/deploy/{appID}`, with `{app ID}` replaced by your app ID.

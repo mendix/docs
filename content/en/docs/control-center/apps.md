@@ -15,8 +15,14 @@ aliases:
 The **Apps** page gives an overview of all the apps belonging to your company. The page has the following tabs available: **Mendix Cloud**, **Mendix Free Cloud**, **Other Apps**, and **Deactivated Apps**.
 
 {{% alert color="info" %}}
-We will enhance this page to provide information about apps deployed on standalone private clouds. Stay tuned.
-{{% /alert %}}
+Mendix will enhance this page to provide information about apps deployed on standalone private clouds. Stay tuned.
+{{% /alert %}} 
+
+The search bar at the top of the page allows you to find an app using either the app ID or the app name.
+
+{{< figure src="/attachments/control-center/apps/top-search-bar.png" >}}
+
+The search results apear in a pop-up window where you can apply filters for **AppName**, **AppID**, **Technical Contact**, **Last Commit**, **Created Date**, and **Deployment**. Clicking the app name opens the [app details](#app-details).
 
 ## Mendix Cloud
 
@@ -249,7 +255,7 @@ The filter shown as below allows you to filter apps by **Deployed Status**. (Thi
 
 ## Viewing App Details {#app-details}
 
-If you click an app name on a tab, a page opens and shows the details of this app.
+If you click an app name on a tab or in the search results of the top search bar, a page opens and shows the details of this app.
 
 The app details page has the following tabs:
 

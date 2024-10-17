@@ -64,6 +64,10 @@ Follow the instructions in [Using Marketplace Content](/appstore/use-content/) t
 
 ### Actions
 
+#### Search Item Revisions from Teamcenter {#getitemrevision}
+
+The `Search Item Revisions` action allows you to generate the domain model and microflow to search for and retrieve `ItemRevisions` or its specialization. The resulting microflow implements the saved query `Item Revision...` from Teamcenter.
+
 #### Get Item Revisions from Teamcenter {#getitemrevision}
 
 The `Get ItemRevision` action allows you to generate the domain model and microflow to search for and retrieve `ItemRevisions` or its specialization. The resulting microflow implements the saved query `Item Revision...` from Teamcenter.

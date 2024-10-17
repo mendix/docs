@@ -162,10 +162,6 @@ Licenses imported in the PCLM Server appear in the PCLM Statistics section of th
 
 Claimed licenses are visible in the PCLM Statistics section of the Managed namespace.
 
-### Licensing application via Subscription Secret and manual operator license
-
-If you wish to apply a Runtime license using a subscription secret, it must be applied manually for each managed namespace. The same process must be performed when applying an Operator license to all managed namespaces.
-
 ## Upgrading Managed Namespaces
 
 Currently, the upgrade procedure is not available for managed namespaces.

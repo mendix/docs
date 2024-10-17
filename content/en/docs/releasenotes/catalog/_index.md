@@ -14,6 +14,19 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
 
+### October 17, 2024
+
+#### Features
+
+* We have introduced support for Business Events, which includes the following enhancements:
+    * Validation, processing, and storage of Business Events received via CloudEvents.
+    * Business Events are now included in the responses of `GET` endpoints.
+    * Business Events have been integrated into key app functions, such as search results, filtering, and editing, ensuring a seamless experience across the platform.
+
+#### Fixes
+
+* We fixed a bug where Published Business Event Services were being created incorrectly.
+
 ### September 26, 2024
 
 #### Improvement

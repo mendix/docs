@@ -440,22 +440,6 @@ The following constants are optional:
 
     Example: `acr1 acr2`
 
-* **AllowcreateUsers** – allow to create users in the application
-
-    Example: `True`
-
-* **Userrole** – the role which will be assigned to newly created users. You can select one default user role. If you need additional user roles, use Access Token Parsing microflow to assign multiple roles.
-
-    Example: `User`
-
-* **UserType** – assign user type to the created users
-
-    Example: `Internal`
-
-* **CustomUserProvisioning** – a custom microflow for user provisioning
-
-    Example: `Mymodule.CustomUserProvisioningEntra`
-
 ##### Deploy-time IdPs for API Security Only Configuration
 
 {{% alert color="info" %}}
@@ -533,7 +517,7 @@ You can set up custom user provisioning by setting the following constants. You 
 | AllowcreateUsers | allow to create users in the application | *optional* | `True` |
 | Userrole | the role which will be assigned to newly created users | *optional* - Default Userrole is assigned only at user creation <br> - User updates do not change the default role <br> - No bulk update for existing users when the default userrole changes | `User` |
 | UserType | assign usertype to the created users | *optional* | `Internal` |
-| CustomUserProvisioning | a custom microflow to use for user provisioning | *optional* – in the form `modulename.microflowname` – the microflow name must begin with the string `CustomUserProvisioning` | `Mymodule.CustomUserProvisioningEntra` |
+| CustomUserProvisioning | a custom microflow to use for user provisioning | *optional* – in the form `modulename.microflowname` – the microflow name must begin with the string `UC_CustomProvisioning` | `Mymodule.UC_CustomProvisioning` |
 
 #### Custom User Provisioning at Runtime{#custom-provisioning-rt}
 
@@ -573,7 +557,7 @@ You can set up custom user provisioning once your app is running using the `OIDC
     1. **UserInfoParameter(UserCommons.UserInfoParam)**: A Mendix object containing user claims information through its associated objects. You can use this  parameter to retrieve user provisioning configuration information.
     2. **User(System.User)**: A Mendix object representing the user to be provisioned. Ensure that the selected microflow matches this parameter signature.
 
-    It will be executed after user creation or update of user. If you have added a new microflow, you will need to refresh the module containing your microflow as described in the [Installing Mx Model Reflection](#mxmodelreflection). This selection can be blank if you do not want to add custom logic.
+    The microflow must return a **System.User** object to ensure proper user provisioning and updates. It will be executed after user creation or update of user. If you have added a new microflow, you will need to refresh the module containing your microflow as described in the [Installing Mx Model Reflection](#mxmodelreflection). This selection can be blank if you do not want to add custom logic.
 
 7. Click **Save** to save the configuration.
 

@@ -172,7 +172,7 @@ Once a service has been enabled for an app, Technical Contacts can selectively e
 
 The **Create a Package** wizard creates deployment packages. Follow the wizard by performing the following steps:
 
-1. In the [Deployment Packages tab](/deploy/environments/#deployment-packages-tab), click **Create a Package**. This launches the **Create a Package** wizard.
+1. In the [Deployment Packages tab](#deployment-packages-tab), click **Create a Package**. This launches the **Create a Package** wizard.
 2. In the **Select Package** tab, select the branch on which to base the build.
 3. In the **Select Revision** tab, select the branch revision.
 4. In the **Choose a Tag** tab, specify the version tag. This includes the major, minor, and patch version numbers.

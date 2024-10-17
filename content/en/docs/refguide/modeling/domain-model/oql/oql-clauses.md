@@ -81,7 +81,6 @@ FROM Sales.Customer
 
 An alias is an alternative name which replaces the column name in the result. For example, when the `name` attribute is retrieved, the result column is "Name". With an alias, you can call the result column something else, like "Customer_Name". An alias cannot contain spaces.
 
-
 {{% alert color="info" %}}
 In some scenarios, aliases in `FROM` are mandatory. Aliases are mandatory when defining a view entity.
 {{% /alert %}}
@@ -256,9 +255,11 @@ FROM Sales.Request Req
 Please note that if you use a subquery as an expression in `FROM`, then such subquery should always return  a single column, and the number of rows should be at most one. If the subquery returns more than one row or a number of columns different than one, that will lead to an exception during runtime.
 {{% /alert %}}
 
-### `FROM` clause
+### `FROM` Clause
 
-The `FROM` clause specifies the entities or other source from which the data must be retrieved. This clause starts with the `FROM` keyword, followed by an entity name. To select data from other entities, add these entities via the `JOIN` keywords. This syntax is a little more strict than the official `SQL FROM` clause syntax.
+The `FROM` clause specifies the entities or other source or sources from which the data must be retrieved.
+
+This clause starts with the `FROM` keyword, followed by an entity name. To select data from additional entities, add these entities via the `JOIN` keyword. In OQL, this syntax is a little more strict than that of the SQL `FROM` clause.
 
 #### Syntax
 
@@ -278,30 +279,34 @@ FROM
 	} [ ,...n ]
 ```
 
-#### `SELECT` from one entity
+#### Select from One Entity
 
-An example of a simple select from one entity:
+Below is an example of a simple select from one entity:
 
 ```sql
 SELECT Sales.Customer/LastName
 FROM Sales.Customer
 ```
 
-An alias can be used to replace entity name:
+You can use an alias to replace the entity name:
 
 ```sql
 SELECT Cust/LastName
 FROM Sales.Customer Cust
 ```
 
-#### Select from multiple entities
+#### Select from Multiple Entities
 
-It is possible to specify multiple tables in `FROM`. For instance, Let's say there are 2 entities, `Sales.Customer` and `Sales.Request`:
+You can specify multiple tables in `FROM`.
+
+{{% alert color="info" %}}
+In these examples there are 2 entities, `Sales.Customer` and `Sales.Request`:
 
 ```sql
 SELECT *
 FROM Sales.Customer
 ```
+
 | ID              | FirstName | LastName |
 | --------------- | -----     | -----    |
 | 562949953421521 | John      | Doe      |
@@ -312,18 +317,23 @@ FROM Sales.Customer
 SELECT *
 FROM Sales.Request
 ```
+
 | ID               | CustomerName | Number |
 | ---------------- | ------------ | ------ |
 | 1688849860264073 | Doe          | 1      |
 | 1688849860264231 | Moose        | 2      |
 | 1688849860264654 | Caribou      | -1     |
 
-We can select data from both entities at once. As a result, we get all attributes of both entities. Every object of the first entity is combined with every object of the second entity, which results in a cartesian product of objects of the two entities.
+{{% /alert %}}
+You can select data from both entities at once.
 
 ```sql
 SELECT *
 FROM Sales.Customer, Sales.Request
 ```
+
+ This returns get all attributes of both entities. Every object of the first entity is combined with every object of the second entity, which results in a cartesian product of objects of the two entities.
+
 | sales$customer.ID | FirstName | LastName | sales$request.ID | CustomerName | Number |
 | ---------------   | -----     | -----    | ---------------- | ------------ | ------ |
 | 562949953421521   | John      | Doe      | 1688849860264073 | Doe          | 1      |
@@ -336,44 +346,56 @@ FROM Sales.Customer, Sales.Request
 | 562949953421923   | Jane      | Moose    | 1688849860264654 | Caribou      | -1     |
 | 562949953422131   | Jim       | Elk      | 1688849860264654 | Caribou      | -1     |
 
-It is possible to specify conditions in `WHERE` (see more details and examples in [`WHERE` clause](TODO))
+You can specify conditions to change what is returned using a `WHERE` clause. See [`WHERE` clause](#where-clause) for more information.
 
 ```sql
 SELECT *
 FROM Sales.Customer Cust, Sales.Request Req
 WHERE Cust.LastName = Req.CustomerName
 ```
+
+returns
+
 | sales$customer.ID | FirstName | LastName | sales$request.ID | CustomerName | Number |
 | ---------------   | -----     | -----    | ---------------- | ------------ | ------ |
 | 562949953421521   | John      | Doe      | 1688849860264073 | Doe          | 1      |
 | 562949953421923   | Jane      | Moose    | 1688849860264231 | Moose        | 2      |
 
-It is possible to specify columns in `SELECT`. To avoid ambiguity in case opf duplicate attribute names, it is possible to specify entity name or alias. Respectively, `<module>.<entity>/<attribute>` or `<alias>/<attribute>`. It is possible to retrieve alll attributes of a particular entity using `<alias>/*`
+You can also specify columns in the `SELECT` clause.
+
+To avoid ambiguity in case of duplicate attribute names, you can specify the entity name (as `<module>.<entity>/<attribute`) or alias (`<alias>/<attribute>`. It is possible to retrieve all attributes of a specific entity using `<alias>/*`.
+
 ```sql
 SELECT Cust/FirstName, Req/*
 FROM Sales.Customer Cust, Sales.Request Req
 WHERE Cust.LastName = Req.CustomerName
 ```
+
+returns
+
 | FirstName | sales$request.ID | CustomerName | Number |
 | -----     | ---------------- | ------------ | ------ |
 | John      | 1688849860264073 | Doe          | 1      |
 | Jane      | 1688849860264231 | Moose        | 2      |
 
-#### Select from multiple tables using `JOIN`
+#### Select from Multiple Tables using `JOIN`
 
-OQL supports `JOIN` syntax, which is similar to SQL. There are 4 main types of `JOIN`:
-- `INNER JOIN` or simply `JOIN`
-- `LEFT JOIN` or `LEFT OUTER JOIN`
-- `RIGHT JOIN` or `RIGHT OUTER JOIN`
-- `FULL JOIN` or `FULL OUTER JOIN`
+OQL supports the `JOIN` syntax, which is similar to SQL. There are 4 main types of `JOIN`:
+
+* `INNER JOIN` or simply `JOIN`
+* `LEFT JOIN` or `LEFT OUTER JOIN`
+* `RIGHT JOIN` or `RIGHT OUTER JOIN`
+* `FULL JOIN` or `FULL OUTER JOIN`
 
 In addition to standard SQL syntax, OQL supports joins over associations.
 
 The syntax is as follows:
 
-	{ INNER | { { LEFT | RIGHT | FULL } [ OUTER ] } } JOIN
-	entity_path | entity_name | ( sub_oql_query ) [ [ AS ] from_alias ]
-	[ ON <constraint> ]
+```sql
+{ INNER | { { LEFT | RIGHT | FULL } [ OUTER ] } } JOIN
+entity_path | entity_name | ( sub_oql_query ) [ [ AS ] from_alias ]
+[ ON <constraint> ]
+```
 
 ##### entity_path
 
@@ -383,9 +405,9 @@ The example path `Crm.Customer/Crm.Customer_Address/Crm.Address` defines a path 
 
 Similar to `entity_name`, double quotes can be used.
 
-#### `JOIN` types
+##### `JOIN` types
 
-##### `INNER JOIN`
+###### `INNER JOIN`
 
 An `INNER JOIN` is the most common join operation between entities and represents the default join type. The query compares each row of entity A with each row of entity B to find all the pairs of rows that have an association and/or satisfy the JOIN predicate. If the association exists and the JOIN predicate is satisfied, the column values for each matched pair of rows of A and B are combined into a resulting row.
 
@@ -396,6 +418,7 @@ SELECT Cust/LastName, Req/Number
 FROM Sales.Customer Cust
 JOIN Sales.Request Req ON Cust.LastName = Req.CustomerName
 ```
+
 | LastName     | Number |
 | ------------ | ------ |
 | Doe          | 1      |
@@ -408,12 +431,13 @@ SELECT Cust/LastName, Req/Number
 FROM Sales.Customer Cust
 JOIN Cust/Sales.Request_Customer/Sales.Request Req
 ```
+
 | LastName     | Number |
 | ------------ | ------ |
 | Doe          | 1      |
 | Moose        | 2      |
 
-##### `LEFT OUTER JOIN`
+###### `LEFT OUTER JOIN`
 
 A `LEFT OUTER JOIN` query compares each row of entity A with each row of entity B to find all pairs of rows which have an association and thus satisfy the `JOIN` predicate. When the association exists and the `JOIN` predicate is satisfied, column values for each matched pair of rows of A and B are combined into a resulting row.
 
@@ -424,6 +448,7 @@ The syntax is as follows:
 ```sql
 LEFT [ OUTER ] JOIN entity_path [ ON <constraint> ]
 ```
+
 Example of a `LEFT JOIN` with predicate:
 
 ```sql
@@ -431,6 +456,7 @@ SELECT Cust/LastName, Req/Number
 FROM Sales.Customer Cust
 LEFT OUTER JOIN Sales.Request Req ON Cust.LastName = Req.CustomerName
 ```
+
 | LastName     | Number |
 | ------------ | ------ |
 | Doe          | 1      |
@@ -444,13 +470,14 @@ SELECT Cust/LastName, Req/Number
 FROM Sales.Customer Cust
 LEFT OUTER JOIN Cust/Sales.Request_Customer/Sales.Request Req
 ```
+
 | LastName     | Number |
 | ------------ | ------ |
 | Doe          | 1      |
 | Moose        | 2      |
 | Elk          | NULL   |
 
-##### `LEFT OUTER JOIN`
+###### `LEFT OUTER JOIN`
 
 A `RIGHT OUTER JOIN` query compares each row of entity A with each row of entity B to find all pairs of rows which have an association and thus satisfy the `JOIN` predicate. If the association exists and the `JOIN` predicate is satisfied, the column values for each matched pair of rows of A and B are combined into a resulting row.
 
@@ -469,6 +496,7 @@ SELECT Cust/LastName, Req/Number
 FROM Sales.Customer Cust
 RIGHT OUTER JOIN Sales.Request Req ON Cust.LastName = Req.CustomerName
 ```
+
 | LastName     | Number |
 | ------------ | ------ |
 | Doe          | 1      |
@@ -482,13 +510,14 @@ SELECT Cust/LastName, Req/Number
 FROM Sales.Customer Cust
 RIGHT OUTER JOIN Cust/Sales.Request_Customer/Sales.Request Req
 ```
+
 | LastName     | Number |
 | ------------ | ------ |
 | Doe          | 1      |
 | Moose        | 2      |
 | NULL         | -1     |
 
-##### `FULL OUTER JOIN`
+###### `FULL OUTER JOIN`
 
 A `FULL OUTER JOIN` query compares each row of entity A with each row of entity B to find all pairs of rows which have an association and thus satisfy the `JOIN` predicate. When the association exists and the `JOIN` predicate is satisfied, column values for each matched pair of rows from A and B are combined into a result row.
 
@@ -499,6 +528,7 @@ The syntax is as follows:
 ```sql
 FULL [ OUTER ] JOIN entity_path [ ON <constraint> ]
 ```
+
 Example of a `FULL OUTER JOIN` with predicate:
 
 ```sql
@@ -506,6 +536,7 @@ SELECT Cust/LastName, Req/Number
 FROM Sales.Customer Cust
 FULL OUTER JOIN Sales.Request Req ON Cust.LastName = Req.CustomerName
 ```
+
 | LastName     | Number |
 | ------------ | ------ |
 | Doe          | 1      |
@@ -520,6 +551,7 @@ SELECT Cust/LastName, Req/Number
 FROM Sales.Customer Cust
 FULL OUTER JOIN Cust/Sales.Request_Customer/Sales.Request Req
 ```
+
 | LastName     | Number |
 | ------------ | ------ |
 | Doe          | 1      |
@@ -527,7 +559,7 @@ FULL OUTER JOIN Cust/Sales.Request_Customer/Sales.Request Req
 | Elk          | NULL   |
 | NULL         | -1     |
 
-#### Select from a subquery
+#### Select from a Subquery
 
 It is possible to use a subquery in `FROM`. For example:
 
@@ -538,6 +570,7 @@ FROM (
 		FROM Sales.Customer
 	) AS Cust
 ```
+
 | LastName |
 | -------- |
 | Doe      |
@@ -557,6 +590,7 @@ FROM
 WHERE
 	Req.CustomerName = Cust.LastName
 ```
+
 | LastName | Number |
 | -------- | ------ |
 | Doe      | 1      |
@@ -575,14 +609,14 @@ FROM
 	) AS Cust
 	ON Req.CustomerName = Cust.LastName
 ```
+
 | LastName | Number |
 | -------- | ------ |
 | Doe      | 1      |
 | Moose    | 2      |
 | NULL     | -1     |
 
-
-### `WHERE` clause
+### `WHERE` clause {#where-clause}
 
 The `WHERE` clause specifies how the data being retrieved must be constrained.
 
@@ -607,6 +641,7 @@ SELECT FirstName, LastName
 FROM Sales.Customer
 WHERE LastName = 'Doe'
 ```
+
 | FirstName | LastName |
 | --------- | -------- |
 | John      | Doe      |
@@ -623,11 +658,11 @@ WHERE
 	AND
 	Number < 0
 ```
+
 | CustomerName | Number |
 | ------------ | ------ |
 | Doe          | 1      |
 | Caribou      | -1     |
-
 
 Precedence of logical operators can be modified using parentheses:
 
@@ -643,6 +678,7 @@ WHERE
 	AND
 	Number < 0
 ```
+
 | CustomerName | Number |
 | ------------ | ------ |
 | Caribou      | -1     |
@@ -658,6 +694,7 @@ WHERE
 		WHERE Req/CustomerName = Cust/LastName
 	)
 ```
+
 | FirstName | LastName |
 | --------- | -------- |
 | John      | Doe      |
@@ -671,6 +708,7 @@ FROM Sales.Customer
 WHERE
 	Sales.Customer/Sales.Request_Customer/Sales.Request/Number = 1
 ```
+
 | FirstName | LastName |
 | --------- | -------- |
 | John      | Doe      |
@@ -682,6 +720,7 @@ The `GROUP BY` clause is used to group OQL query results into summary rows based
 #### Syntax
 
 The syntax is as follows:
+
 ```sql
 GROUP BY
 	expression [ ,...n ]
@@ -701,6 +740,7 @@ To better illustrate examples below, let's assume that there is an entity `Sales
 SELECT Brand, City, Stock, Address, LocationNumber
 FROM Sales.Location
 ```
+
 | Brand  | City      | Stock | Address   | LocationNumber |
 | ------ | -----     | ----- | --------- | -----          |
 | Cinco  | Rotterdam | 5     | Address 1 | 1              |
@@ -717,6 +757,7 @@ SELECT Brand, SUM(Stock) AS SumStock
 FROM Sales.Location
 GROUP BY Brand
 ```
+
 | Brand  | SumStock |
 | ------ | -----    |
 | Cinco  | 5        |
@@ -734,6 +775,7 @@ SELECT
 FROM Sales.Location
 GROUP BY Brand
 ```
+
 | Brand  | SumStock | MinStock | MaxStock |
 | ------ | -----    | -----    | -----    |
 | Cinco  | 5        | 5        | 5        |
@@ -747,6 +789,7 @@ SELECT Brand, City, SUM(Stock) AS SumStock
 FROM Sales.Location
 GROUP BY Brand, City
 ```
+
 | Brand  | SumStock |
 | ------ | -----    |
 | Cinco  | 5        |
@@ -762,6 +805,7 @@ SELECT Brand, LENGTH(Brand) AS NameLen, SUM(Stock) AS SumStock
 FROM Sales.Location
 GROUP BY Brand
 ```
+
 | Brand  | NameLen | SumStock |
 | ------ | ------  | -----    |
 | Cinco  | 5       | 5        |
@@ -775,6 +819,7 @@ SELECT LENGTH(Brand) AS NameLen, SUM(Stock) AS SumStock
 FROM Sales.Location
 GROUP BY LENGTH(Brand)
 ```
+
 | NameLen | SumStock |
 | ------  | -----    |
 | 5       | 5        |
@@ -783,6 +828,7 @@ GROUP BY LENGTH(Brand)
 
 {{% alert color="info" %}}
 `GROUP BY` behavior in OQL relies on behavior of the underlying database. Some functionality is allowed by OQL syntax, but its implementation differs per vendor. It is recommended not to use that following functionality to avoid potential migration problems.
+
 1. Some databases do not allow using aliases in `GROUP BY`. [Supported](/refguide/system-requirements/#databases) database vendors that allow that are: HSQLDB, PostgreSQL, MariaDB and MySQL.
 2. Using a subquery in `GROUP BY` is also not supported by some databases. It is allowed in PostgreSQL, MariaDB and MySQL.
 {{% /alert %}}
@@ -800,10 +846,11 @@ GROUP BY Brand
 HAVING COUNT(*) > 1
 
 ```
+
 | Brand  | SumStock | LocationCount |
 | ------ | -----    | ----          |
-| Rekall | 12       | 2 			|
-| Veidt  | 26       | 3 			|
+| Rekall | 12       | 2             |
+| Veidt  | 26       | 3             |
 
 It is possible to use aggregate functions that are not present in `SELECT`:
 
@@ -814,6 +861,7 @@ GROUP BY Brand
 HAVING COUNT(*) > 1 AND SUM(Stock) < 20
 
 ```
+
 | Brand  |
 | ------ |
 | Rekall |
@@ -860,6 +908,7 @@ SELECT FirstName, LastName
 FROM Sales.SalesPerson
 ORDER BY LastName
 ```
+
 | FirstName | LastName |
 | -----     | -----    |
 | John      | Doe      |
@@ -874,6 +923,7 @@ For details on the default ordering behavior of NULL values, see the [NULL Value
 {{% alert color="info" %}}
 It is not possible to use funcntions of attribuites in `ORDER BY` clause.
 {{% /alert %}}
+
 #### ASC
 
 `ASC` specifies that the results must be ordered ascending, from the lowest to the highest value. This is the default sort type, so results are equivalent to not specifying `ASC`.
@@ -883,6 +933,7 @@ SELECT FirstName, LastName
 FROM Sales.SalesPerson
 ORDER BY LastName ASC
 ```
+
 | FirstName | LastName |
 | -----     | -----    |
 | John      | Doe      |
@@ -900,6 +951,7 @@ SELECT FirstName, LastName
 FROM Sales.SalesPerson
 ORDER BY LastName DESC
 ```
+
 | FirstName | LastName |
 | -----     | -----    |
 | Oliver    | Moose    |
@@ -917,6 +969,7 @@ SELECT FirstName, LastName
 FROM Sales.SalesPerson
 ORDER BY LastName, FirstName
 ```
+
 | FirstName | LastName |
 | -----     | -----    |
 | Amelia    | Doe      |
@@ -932,6 +985,7 @@ SELECT FirstName, LastName
 FROM Sales.SalesPerson
 ORDER BY LastName DESC, FirstName ASC
 ```
+
 | FirstName | LastName |
 | -----     | -----    |
 | Jane      | Moose    |
@@ -949,6 +1003,7 @@ SELECT LastName
 FROM Sales.Customer
 ORDER BY Sales.Customer/Sales.Customer_Request/Sales.Request/Number
 ```
+
 | LastName     |
 | ------------ |
 | Doe          |
@@ -979,6 +1034,7 @@ FROM Sales.Location
 ORDER BY LocationNumber
 LIMIT 3
 ```
+
 | Brand  | City      | LocationNumber |
 | ------ | -----     | -----          |
 | Cinco  | Rotterdam | 1              |
@@ -997,6 +1053,7 @@ FROM Sales.Location
 ORDER BY LocationNumber
 OFFSET 2
 ```
+
 | Brand  | City      | LocationNumber |
 | ------ | -----     | -----          |
 | Rekall | Zwolle    | 3              |
@@ -1015,6 +1072,7 @@ ORDER BY LocationNumber
 LIMIT 3
 OFFSET 2
 ```
+
 | Brand  | City      | LocationNumber |
 | ------ | -----     | -----          |
 | Rekall | Zwolle    | 3              |

@@ -83,7 +83,7 @@ It is possible to prepare the prerequisite installers beforehand so the setup pr
 5. Rename the following dependencies:
     * For Studio Pro versions 10.0.0 -10.10.0, The Microsoft .NET Desktop Runtime 6.0.x executable (*dotnet.exe*) to *windowsdesktop-runtime-6.0-x64.exe*
     * For Studio Pro versions 10.11.0 and above, The Microsoft .NET Desktop Runtime 8.0.x executable (*dotnet.exe*) to *windowsdesktop-runtime-8.0-x64.exe*
-    * The Java Development Kit 11 (x64) *msi* (for example, *OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi*) to*adoptiumjdk_11_x64.msi*
+    * The Java Development Kit 21 (x64) *msi* (for example, *OpenJDK21U-jdk_x64_windows_hotspot_21.0.4_7.msi*) to*adoptiumjdk_21_x64.msi*
     * The Visual C++ Redistributable for Visual Studio 2019 (x64) executable (for example, *VC_redist.x64.exe*) to*vcredist2019_x64.exe*
     * The `latest` executable to *mendix_native_mobile_builder.exe*
     * The *Git-{version}-64-bit.exe* executable to *git_for_windows_installer.exe*

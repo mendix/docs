@@ -8,7 +8,7 @@ weight: 15
 
 ## Consumed REST Services
 
-Add a Consumed REST Service document to send REST requests from Studio Pro.
+The Consumed REST Service document allows you to interact with any REST API. You can build, test, and create data structures to store your REST requests
 
 ## Documents in This Category
 

@@ -220,7 +220,7 @@ Microflows containing unit tests should have the prefix **TEST_** or **UT_** (ca
 
 | Event Type | Prefix       |
 | ---------- | ------------ |
-| Unit Test  | TEST_or UT_ |
+| Unit Test  | TEST_ or UT_ |
 
 #### Integration Microflows
 
@@ -261,7 +261,7 @@ Guidelines below can help you choose a short yet meaningful name for your workfl
 
 #### Enumerations
 
-[Enumerations](/refguide/enumerations/) should be identified with a prefix.
+[Enumerations](/refguide/enumerations/) should be identified with a prefix. The name of the enumeration should reflect its business context, for example, *ENUM_ShippingStatus*.
 
 | Document Type | Prefix |
 | ------------- |------- |

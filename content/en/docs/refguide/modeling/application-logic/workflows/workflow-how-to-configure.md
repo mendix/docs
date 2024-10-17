@@ -39,7 +39,7 @@ Before starting this how-to, make sure you have completed the following prerequi
     * In the **App Settings** > **Workflows** tab, set **Workflow state change** to *OCh_Workflow_State*.
     * In the **App Settings** > **Workflows** tab, set **User task state change** to *OCh_WorkflowUserTask_State*.
 
-* Make sure your app has Atlas 3. As a result of installing Atlas 3, your app should contain the following modules that Workflow Commons depends on: Atlas_Core, Atlas_Web_Content, and DataGrid.
+* Make sure your app has Atlas 3. As a result of installing Atlas 3, your app should contain the following modules that Workflow Commons depends on: Atlas_Core, Atlas_Web_Content, and DataWidgets.
 
 * Familiarize yourself with workflow terms. For more information, see [Workflows](/refguide/workflows/). 
 
@@ -47,17 +47,17 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Make sure that the domain model of the module you are working in looks the following way:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/domain-model.png" alt="Domain Model" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/domain-model.png" alt="Domain Model" width="250" >}}
 
 * Make sure you have the following enumerations configured:
 
-    * The PhoneModel enumeration:
+    * The ENUM_PhoneModel enumeration:
 
-        {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/enumeration-phone-model.png" class="no-border" >}}
+        {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/enumeration-phone-model.png" width="500" >}}
 
-    * The LaptopModel enumeration:
+    * The ENUM_LaptopModel enumeration:
 
-        {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/enumeration-laptop-model.png" class="no-border" >}}
+        {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/enumeration-laptop-model.png" width="500" >}}
 
 * Make sure you have an **EmployeesToOnboard** page that contains a list view and has the **EmployeeOnboarding** entity as the data source:
 
@@ -65,7 +65,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Add the following pages to your navigation (pages are part of the Workflow Commons module):
     * TaskInbox
-    * WorkflowDashboard
+    * Workflow_Dashboard
     * WorkflowAdminCenter
 
 ## Setting Up Security 
@@ -88,17 +88,17 @@ Do the following:
 
 6. In the **User Role** dialog box, click **Edit** in the **Module roles** section.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/edit-module-roles.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/edit-module-roles.png" width="550" >}}
 
 7. In the **Select Module Roles** dialog box, tick the User role for Administration and WorkflowCommons modules where no role is selected and click **OK**:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/modules-roles.png" alt="Module Roles" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/modules-roles.png" alt="Module Roles" width="400" >}}
 
 8. Confirm your choice by clicking **OK**.
 
-9. Repeat steps 2-8 to create and configure the Manager role.
+9. Refer to steps 2-8 to create and configure the Manager role.
 
-10. Repeat steps 2-8 to create and configure the HR role.
+10. Refer to steps 2-8 to create and configure the HR role.
 
 11. You already have the Administrator role by default, now you need to enable this role to monitor workflows, view their progress, and manage their settings in your app. Do the following:
 
@@ -108,7 +108,7 @@ Do the following:
 
     3. In the **Select Module Roles**, find the WorkflowCommons module and select the Administrator role:
 
-        {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/workflow-commons-admin.png" alt="Selecting Workflow Commons Administrator"   width="450"  class="no-border" >}}
+        {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/workflow-commons-admin.png" alt="Selecting Workflow Commons Administrator" width="400" >}}
 
     4. Confirm your choice by clicking **OK**.
 
@@ -138,7 +138,7 @@ The next step in setting up security is to configure the entity access otherwise
 2. Double-click the **EmployeeOnboarding** entity to open its properties.
 3. In the **Properties** dialog box, open the **Access rules** tab and click **New** to create a rule for the HR role:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/entity-properties.png" alt="Entity Properties" class="no-border" >}} 
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/entity-properties.png" alt="Entity Properties" width="600" >}} 
 
 4. In the **New Access rule** dialog box, do the following:
 
@@ -146,7 +146,7 @@ The next step in setting up security is to configure the entity access otherwise
     2. In the **Create and delete rights** section, select **Allow creating new objects**. This allows HR to create a new **EmployeeOnboarding** object when a workflow is started.     
     3. In the **Member read and write rights** section, click **Set all to Read**. As the HR needs only to start the workflow, but not to change any employee information, **Read** rights are sufficient for all attributes of the entity. 
 
-        {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/access-rules-hr.png" alt="Access Rules for the HR role" class="no-border" >}}
+        {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/access-rules-hr.png" alt="Access Rules for the HR role" width="600" >}}
 
     4. Click **OK** to save settings.
 
@@ -158,19 +158,21 @@ The next step in setting up security is to configure the entity access otherwise
 
     4. Set the **FirstDay** attribute to **Read**.
 
-        {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/access-rules-manager.png" alt="Access Rules for the Manager Role" class="no-border" >}}
+        {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/access-rules-manager.png" alt="Access Rules for the Manager Role" width="600" >}}
 
     5. Click **OK** to save settings.
 
-6. In the **Access rules** tab, click **New** again to create rule for Facilities and User roles.
-    1. In the **Rule applies to the following modules** section, select **Facilities** and **User** roles.
+6. In the **Access rules** tab, click **New** again to create rule for the Facilities role.
+    1. In the **Rule applies to the following modules** section, select **Facilities**.
     2. In the **Member read and write rights** section, click **Set all to Read**.
-
-        {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/access-rules-facilities-and-user.png" alt="Access Rules for the Facilities and User Role" class="no-border" >}}
-
     3. Click **OK** to save settings.
 
-7. Click **OK** in the **Properties** dialog box.
+7. In the **Access rules** tab, click **New** again to create rule for the User role.
+    1. In the **Rule applies to the following modules** section, select **User**.
+    2. In the **Member read and write rights** section, click **Set all to Read**.
+    3. Click **OK** to save settings.
+
+8. Click **OK** in the **Properties** dialog box.
 
 You have set up the entity access. 
 
@@ -184,16 +186,14 @@ To create a workflow that you will add activities to and create pages for, do th
 
 1. In the App Explorer, right-click the **MyFirstModule** module and select **Add workflow** in the drop-down menu.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/add-workflow.png" alt="Add Workflow" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/add-workflow.png" alt="Add Workflow" width="350" >}}
 
-2. In the **Add workflow** dialog box, set the **Name** to *Employee_Onboarding* and click **OK**.
-3. Click the **WorkflowContext** parameter in the upper-left corner and navigate to the **Properties** pane.
-4. Click the **Entity** property.  This entity will be used by the parameter to carry the business data that is added during the execution of the workflow. 
-5. In the **Select Entity** dialog box, select the **EmployeeOnboarding** entity and click **Select**.
+2. In the **Add Workflow** dialog box, do the following:
+    1. Type *Employee_Onboarding* as the **Name** of the workflow.
+    2. In the Workflow context section, click **Select** to select an entity. This entity will be used by the [Workflow Context parameter](/refguide/workflow-parameters/) to carry the business data that is added during the execution of the workflow. 
+3. In the **Select Entity** dialog box, select the **EmployeeOnboarding** entity and click **Select**.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/select-workflowcontext-entity.png" alt="Select WorkflowContext Entity" class="no-border" >}}
-
-Good job! You have created a workflow and configured parameter properties. 
+Good job! You have created a workflow and configured the Workflow Context parameter. 
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/newly-created-workflow.png" alt="Newly Created Workflow" class="no-border" >}}
 
@@ -207,7 +207,7 @@ You have an **EmployeesToOnboard** page that contains a list of all employees an
 
 The page access is restricted to the HR user role:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/page-access-hr.png" alt="Page Access" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/page-access-hr.png" alt="Page Access" width="350" >}}
 
 To add a button that will initiate the workflow, do the following:
 
@@ -233,7 +233,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
 4. To be able to differentiate this user task from other ones, set the **Name** property to **Specify_Device_and_Location**:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/specify-device-and-location-properties.png" alt="SpecifyDevice Properties"   width="400"  class="no-border" >}} 
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/specify-device-and-location-properties.png" alt="SpecifyDevice Properties" width="350" >}} 
 
 5. Now configure the user task to be assigned to the Manager role, as only managers should specify devices for the new employee. Make sure **Target users using** is set to **XPath** and click the ellipsis icon in the **XPath constraint** property.
 
@@ -272,7 +272,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
 Great job! You have configured the user task for the Manager role:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/workflow-with-task.png" alt="Workflow with Specify Device User Task"   width="500"  class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/workflow-with-task.png" alt="Workflow with Specify Device User Task" width="500" class="no-border" >}}
 
 This can be also a good time to test your app: you can create an employee, start the onboarding process, and test the first task for the Manager demo user. For more information, see the [Testing the Workflow](#test-workflow) section. 
 
@@ -302,7 +302,7 @@ Do the following:
         {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/prepare-desk.png" alt="Prepare Desk" class="no-border" >}}
 
     2. Configure the task to be assigned to the Facilities role only referring to steps 5 and 6 of the [Selecting a Device for the New Hire](#select-device) section and using the `[System.UserRoles = '[%UserRole_Facilities%]']` expression.
-    3. Set a new page called **PrepareDesk_Workflow** for the **Page** property it referring to steps 7-9 of the [Selecting a Device for the New Hire](#select-device) section.
+    3. Set a new page called **PrepareDesk_Workflow** for the **Page** property referring to steps 7-9 of the [Selecting a Device for the New Hire](#select-device) section.
 
 5. You need to make sure that only the relevant information is displayed on the **PrepareDesk_Workflow** page. In the App Explorer, double-click the **PrepareDesk_Workflow** page to open it.
 6. By default, all attributes are added to the employee detail form. You need to make sure that the Facilities department will be able to view the fields but not change them. Do the following: 
@@ -374,7 +374,7 @@ To test your workflow, you need to switch between different user roles. Follow t
 3. In your browser, log in as an Admin user.
 4. Click the user icon on the right to switch to another user role:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/user-icon.png" alt="User Icon"   width="500"  class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-configure/user-icon.png" alt="User Icon" width="500" class="no-border" >}}
 
 5. Switch between different demo user roles to test the use case. Do can do the following:
 

@@ -17,10 +17,14 @@ This document is about [Private Cloud](/developerportal/deploy/private-cloud/) A
 The Mendix for Private Cloud Deploy API allows you to manage application environments deployed to your private cloud using the Mendix Operator. You can use the API to do the following:
 
 * Download the configuration tool, mxpc-cli, for your operating system
+* Get the manifest file of one or more clusters
+* Get the manifest file of one or more namespaces 
 * Create, update, or delete a cluster
 * Create, update, or delete a namespace
+* Get the manifest file of one or more environments
 * Create or delete an environment
 * Update an environment and deploy and manage an app in an environment through changes to the environment manifest
+* Get the manifest file of one or more applications
 
 {{% alert color="info" %}}
 The Mendix for Private Cloud Deploy API is for connected private cloud clusters only.
@@ -53,25 +57,26 @@ Store the `{GENERATED_PAT}` value in a safe location, so you can use it to autho
 
 #### Scopes Explanation
 
-| Operation                   | Scopes                                           |
-|-----------------------------|-------------------------------------------------|
-| Get namespace manifest      | `mx:deployment:read`  or `mx:deployment:write`    |
-| Get namespaces manifest     | `mx:deployment:read`  or `mx:deployment:write`    |
-| Get cluster manifest        | `mx:deployment:read`  or `mx:deployment:write`    |
-| Get clusters manifest       | `mx:deployment:read`  or `mx:deployment:write`    |
-| Create cluster              | `mx:deployment:write`                            |
-| Update cluster              | `mx:deployment:write`                            |
-| Delete cluster              | `mx:deployment:write`                            |
-| Create namespace            | `mx:deployment:write`                            |
-| Update namespace            | `mx:deployment:write`                            |
-| Delete namespace            | `mx:deployment:write`                            |
-| Get environment manifest    | `mx:deployment:read`  or `mx:deployment:write`    |
-| Create environment          | `mx:deployment:write`                            |
-| Update environment          | `mx:deployment:write`                           |
-| Delete environment          | `mx:deployment:write`                           |
-| Get Apps manifest           | `mx:deployment:write` and `mx:app:metadata:read`|                        
-| Get App manifest.           | `mx:deployment:write` and `mx:app:metadata:read`|                              
-| Get Job                     | `mx:deployment:read`  and `mx:deployment:write`    |
+| Operation                        | Scopes                                           |
+|----------------------------------|------------------------------------------------- |
+| Get namespace manifest           | `mx:deployment:read`  or `mx:deployment:write`   |
+| Get namespaces manifest          | `mx:deployment:read`  or `mx:deployment:write`   |
+| Get cluster manifest             | `mx:deployment:read`  or `mx:deployment:write`   |
+| Get clusters manifest       	   | `mx:deployment:read`  or `mx:deployment:write`   |
+| Create cluster                   | `mx:deployment:write`                            |
+| Update cluster                   | `mx:deployment:write`                            |
+| Delete cluster                   | `mx:deployment:write`                            |
+| Create namespace                 | `mx:deployment:write`                            |
+| Update namespace                 | `mx:deployment:write`                            |
+| Delete namespace                 | `mx:deployment:write`                            |
+| Get environment manifest         | `mx:deployment:read`  or `mx:deployment:write`   |
+| Get multiple environment manifest| `mx:deployment:read`  or `mx:deployment:write`   |                         
+| Create environment               | `mx:deployment:write`                            |
+| Update environment               | `mx:deployment:write`                            |
+| Delete environment               | `mx:deployment:write`                            |
+| Get apps manifest                | `mx:deployment:write` and `mx:app:metadata:read` |                        
+| Get app manifest                | `mx:deployment:write` and `mx:app:metadata:read` |                              
+| Get job                          | `mx:deployment:read`  and `mx:deployment:write`  |
 
 #### Using the PAT
 

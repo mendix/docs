@@ -12,15 +12,15 @@ An OQL expression is a query building block that returns a value or a list of va
 * a combination of attribute names, constants, and functions connected by operators
 * a subquery
 
-OQL expressions can be used in `WHERE`, `SELECT`, `GROUP BY`, `UNION`, and `JOIN` clauses.
+OQL expressions can be used in `WHERE`, `SELECT`, `GROUP BY`, `UNION`, and `JOIN` clauses. For more information, see [OQL clauses](/refguide/oql-clauses/).
 
 ## Aggregations
 
 Aggregations are functions that reduce a list of values from a retrieved column (or columns) into a single value. They can be used in the following ways:
-
 * as an attribute in a `SELECT` clause
-* as a condition in a `HAVING` clause
-* When combined with a `GROUP BY` clause, aggregations can be used with any column normally available in `SELECT`, not just those specified in the `GROUP BY` clause. Aggregation is performed over groups separately in this case.
+* as a condition in a `HAVING` clause 
+
+When combined with a `GROUP BY` clause, aggregations in `SELECT` can be used with any column normally available, not just those specified in the `GROUP BY` clause. Aggregation is performed over groups separately in this case.
 
 ### Syntax
 
@@ -89,6 +89,18 @@ SELECT Name, Stock FROM Sales.Product
 | Tomatoes | 44    |
 | Tomatoes | NULL  |
 
+#### AVG
+
+The average stock per product entry:
+
+```sql
+SELECT AVG(Stock) AS ProductCount FROM Sales.Product
+```
+
+| ProductCount |
+|:------------:|
+|    34.333    |
+
 #### COUNT
 
 The number of rows can be calculated with `COUNT`:
@@ -101,7 +113,7 @@ SELECT COUNT(*) AS ProductCount FROM Sales.Product
 |:------------:|
 |      4       |
 
-The same result can be retrieved by using `COUNT` on a single table:
+The same result can be retrieved by using `COUNT` on a single attribute:
 
 ```sql
 SELECT COUNT(Name) AS ProductCount FROM Sales.Product
@@ -117,29 +129,17 @@ SELECT COUNT(Stock) AS ProductCount FROM Sales.Product
 |:------------:|
 |      3       |
 
-#### SUM
-
-The sum of all products in stock:
+There are duplicate values in the `Name` column, which might not want to be counted separately. [Distinct](/refguide/oql-clauses/#Distinct) can be used to get the number of unique rows:
 
 ```sql
-SELECT Sum(Stock) AS ProductCount FROM Sales.Product
+SELECT COUNT(DISTINCT Name) AS ProductCount FROM Sales.Product
 ```
 
 | ProductCount |
 |:------------:|
-|     103      |
+|      3       |
 
-#### AVG
 
-The average stock per product:
-
-```sql
-SELECT AVG(Stock) AS ProductCount FROM Sales.Product
-```
-
-| ProductCount |
-|:------------:|
-|    34.333    |
 
 #### MAX
 
@@ -164,6 +164,18 @@ WHERE Stock = (SELECT MAX(P.Stock) FROM Sales.Product P)
 |:----:|
 | Milk |
 
+#### SUM
+
+The sum of all products in stock:
+
+```sql
+SELECT Sum(Stock) AS ProductCount FROM Sales.Product
+```
+
+| ProductCount |
+|:------------:|
+|     103      |
+
 #### STRING_AGG
 
 You can aggregate product names into a single list:
@@ -175,18 +187,6 @@ SELECT STRING_AGG(Name, ',') as ProductNames FROM Sales.Product
 |         ProductNames          |
 |:-----------------------------:|
 | Cheese,Milk,Tomatoes,Tomatoes |
-
-#### Distinct
-
-There are duplicate values in the `Name` column, which might not want to be counted separately. `DISTINCT` can be used to get the number of unique rows:
-
-```sql
-SELECT COUNT(DISTINCT Name) AS ProductCount FROM Sales.Product
-```
-
-| ProductCount |
-|:------------:|
-|      3       |
 
 ## Parameters
 
@@ -232,7 +232,7 @@ WHERE
     Job = 'Sales'
 ```
 
-If the value of `$param` is not provided, the query will be equivalent to:
+If the value of `$param` is not provided as a parameter to the query, the query will be equivalent to:
 
 ```sql
 SELECT Name

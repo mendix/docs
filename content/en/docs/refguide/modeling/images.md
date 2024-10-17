@@ -20,7 +20,7 @@ If you want different images to appear for different objects (for example, a pic
 
 ## Supported Formats
 
-The following image formats are supported: *png*, *jpeg*, *gif*, *bmp*, and *svg*. The *png* format is recommended, as it is compressed without losing any information and supports transparency very well.
+The following image formats are supported: *png*, *jpeg*, *gif*, *bmp*, *webp*, and *svg*. The *png* format is recommended, as it is compressed without losing any information and supports transparency very well.
 
 ## Custom Images
 

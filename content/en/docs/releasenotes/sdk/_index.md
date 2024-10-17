@@ -1,7 +1,7 @@
 ---
 title: "SDKs"
 url: /releasenotes/sdk/
-weight: 40
+weight: 50
 cascade:
     - numberless_headings: true
 ---

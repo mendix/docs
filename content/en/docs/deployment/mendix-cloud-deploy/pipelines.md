@@ -16,12 +16,12 @@ From the **Pipelines** page, you can set up automated build and deployment pipel
 
 To access the **Pipelines** page, open your app in [Apps](https://sprintr.home.mendix.com/). Then select **Pipelines** in the navigation pane. (To view this page, you must have a [role](/developerportal/general/team/) with cloud access.)
 
-The **Pipelines** page has three tabs: **Runs**, **Designs**, and **Settings**. You can see all three tabs as soon as your app has its first pipeline saved.
+The **Pipelines** page has four tabs: **Runs**, **Designs**, **Variables**, and **Settings**. You can see all four tabs as soon as your app has its first pipeline saved.
 
 {{% alert color="info" %}}
-If your app does not have any pipelines yet, skip to [Designing a New Pipeline](#design-pipeline), below.
+If your app does not have any pipelines yet, skip to the [Designing a New Pipeline](#design-pipeline) section below.
 
-If you need to configure your user settings so that you can run a pipeline for the first time, skip to [Configuring User Settings](#configure-settings).
+If you need to configure your user settings so that you can run a pipeline for the first time, skip to the [Configuring User Settings](#configure-settings) section.
 {{% /alert %}}
 
 ## The Runs Tab{#runs-tab}
@@ -90,7 +90,7 @@ For each design, you can view the following information:
 
 Click **Copy ID** ({{% icon name="copy" %}}) on a pipeline design to copy the design ID.
 
-Click **More Options** ({{% icon name="three-dots-menu-horizontal-filled" %}}) > **Edit** on a pipeline design to go to its **Details** page. From there, you can view and edit the pipeline details, as described in [Editing a Pipeline](#edit-pipeline), below.
+Click **More Options** ({{% icon name="three-dots-menu-horizontal-filled" %}}) > **Edit** on a pipeline design to go to its **Details** page. From there, you can view and edit the pipeline details, as described in the [Editing a Pipeline](#edit-pipeline) section below.
 
 Click **More Options** ({{% icon name="three-dots-menu-horizontal-filled" %}}) > **Delete** to delete a pipeline design.
 

@@ -4,6 +4,7 @@ url: /refguide/importing-xml-documents/
 weight: 3
 description: "Describes how to prepare the data structure and GUI, add an XML schema, and create XML-to-domain mapping."
 aliases: /howto/integration/importing-xml-documents/
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## Introduction

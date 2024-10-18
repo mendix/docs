@@ -2,7 +2,6 @@
 title: "Boundary Events"
 url: /refguide/workflow-boundary-events/
 weight: 20
-beta: true
 ---
 
 {{% alert color="info" %}}
@@ -81,11 +80,18 @@ Boundary events are initiated when their parent activity is initiated. For examp
 
 With non-interrupting boundary events, the parent activity remains active/in progress when a boundary event is triggered (which means that the parent activity is not interrupted). For example, when a timer boundary event on a user task is triggered after 2 days, this task will remain in progress and the path defined below the timer boundary event is executed. When the boundary event's path reaches the **End of boundary path**, the workflow will await the completion of the parent activity. 
 
+## Boundary Event Variables
+
+With boundary events we have direct access to the values of the parent if it is either a userTask or Call Workflow. There we can get information such as DueDate about the parent, which can be used in the boundary event flow and it's expressions.
+The list of variables is described below: 
+
+* `$ParentTask` – The parent User-Task of the attached boundary event.
+* `$CalledWorkflowInstance` – The parent Call Workflow of the attached boundary event
+
 ## Current Limitations
 
 The current release of boundary events has the following limitations which are actively being developed:
 
-* No access to the data of the parent activity in the boundary path. For user tasks, we will add a variable `$ParentTask` which is available in the boundary event path of a user task (for example, to enable getting the assigned user that should receive a notification when a task is overdue). This is the same for `$CalledWorkflowInstance` if the parent activity is a **Call workflow** activity.
 * Non-interrupting timer boundary events currently have no recurrence. They are only executed once and will not repeat.
 
 ## Read more

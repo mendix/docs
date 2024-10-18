@@ -50,6 +50,16 @@ This means that when you change one document, for example a page, in your app on
 
 As a first step we will ensure new apps are created with a new split format (v2). Converting existing apps will initially be a manual action through the **File** menu. In a later release Mendix intends to convert the MPR format from the combined version (v1) to a new split version (v2).
 
+#### Decreasing MPR File Size
+
+When a file exceeds the Git compression threshold, 512 MB by default, Git will store a full copy of the file with each new revision instead of only storing the delta. This results in extremely rapid repository growth with both client- and server-side consequences down the line.
+
+As the Mendix model is stored in a single file, this threshold can be exceeded by the *.mpr* file. To decrease the MPR file size, there are several steps you can take:
+* Remove [excluded and unused documents](/refguide/dev-best-practices/#excluded-and-unused-documents). If you have a large number of unnecessary documents in your app model, this can significantly increase the size of the MPR file.
+* Decrease duplication in pages. If you have a number of pages featuring the same content, such as an advanced datagrid, consider extracting this piece of logic to a widget. Reusing a widget on multiple pages prevents the data from being saved several times and can have a large impact on the size of the MPR file.
+
+You can use [analyze-mpr](/refguide/mx-command-line-tool/analyze-mpr/) of the [mx Command-Line Tool](/refguide/mx-command-line-tool/) to analyze how your MPR file is built up. The output will show how many documents of a type (ie. number of pages) exist and how much disk space they represent within the MPR file. We recommend starting with a brief scan to see if there is an unexpected number of occurences (ie 1500 pages) or large number of bytes (over 50.000.000 bytes) for a unit type.
+
 ### Working with a Large Repository Size
 
 When cloning an app, the default behavior of Git is to download the full history. As Mendix uses different folders on disk for different branches, downloading full history is done for each branch. To mitigate that, Mendix uses local cloning for subsequent branch downloads. When cloning a new branch, data from a local branch you already have is used to reduce data that needs to be downloaded. 

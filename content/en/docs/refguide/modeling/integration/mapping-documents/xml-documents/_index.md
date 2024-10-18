@@ -1,7 +1,9 @@
 ---
 title: Use XML
 url: /refguide/use-xml/
-aliases: /howto/integration/use-xml-documents/
+aliases: 
+    /howto/integration/use-xml-documents/
+    /refguide/xml-schema-support/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -19,7 +21,7 @@ Documents available for this topic:
 
     Describes how to add an XML schema, create domain-to-XML mapping, and export logic.
 
-* [XML Schemas](/refguide/xml-schemas)
+* [XML Schemas](/refguide/xml-schemas/)
   
     Describes how to import and export an XML Schema Defintion (XSD) file. 
 

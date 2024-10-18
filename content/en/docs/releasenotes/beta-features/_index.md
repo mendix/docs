@@ -1,7 +1,7 @@
 ---
 title: "Beta and Experimental Releases"
 url: /releasenotes/beta-features/
-weight: 55
+weight: 60
 #layout: wide
 ---
 

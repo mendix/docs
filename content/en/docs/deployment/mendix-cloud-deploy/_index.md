@@ -100,6 +100,10 @@ Mendix apps cannot use custom ports. They communicate on the standard HTTP and H
 
 The number of end-users supported for your licensed app depends on your [pricing plan](#plans). End-users of your app are classified as either internal or external. You need to report this for licensing purposes, using either the [USAGE_METRICS_EMAIL_FIELDS custom variable](/developerportal/deploy/environments-details/#custom-environment-variables) (if you are using email domains to distinguish between end-users) or by [populating the user type](/howto/monitoring-troubleshooting/populate-user-type/) for each end-user of your app. Only end-users whose Mendix accounts are marked as **Active** are counted towards the number of end-users of the app.
 
+### Supported Mendix Versions {#mendix-cloud-supported-versions}
+
+Mendix Cloud supports deploying and running all [supported major versions](/releasenotes/studio-pro/lts-mts/#major-version) of Mendix. This includes major versions that are supported via the Extended Support product. It is not possible to deploy unsupported versions to Mendix Cloud.
+
 ## Mendix Pricing Plans {#plans}
 
 Mendix licenses are sold as part of plans. Plans consist of the following items:

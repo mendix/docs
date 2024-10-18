@@ -32,7 +32,7 @@ Before starting the installation process, make sure that you have all the necess
 
     * A kubeconfig file with administrator privileges for your Kubernetes or OpenShift platform
     * A command line terminal that supports the console API and mouse interactions. In Windows, this can be PowerShell or the Windows Command Prompt.
-    * For OpenShit clusters, OpenShift CLI. For more information, see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html).
+    * For OpenShift clusters, OpenShift CLI. For more information, see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html).
     * Kubectl installed if you are deploying to another Kubernetes platform. For more information, see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/).
 
 * Optionally, if you plan to install the Svix component:

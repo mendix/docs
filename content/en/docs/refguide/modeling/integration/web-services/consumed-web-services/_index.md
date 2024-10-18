@@ -55,7 +55,7 @@ An XSD (XML Schema Definition) document is a document that describes how the XML
 
 When importing an XSD file into your app, Studio Pro only accepts absolute paths, and the accepted schemes are limited to files or links starting with `https` or `http`.
 
-When importing or exporting an [XML schema](/refguide/xml-schema-support/), the XSD file needs to be in your app. If the XML refers to an XSD file that is not in your app, a runtime error will be thrown. Add the XSD file manually to resolve this error.
+When importing or exporting an [XML schema](/refguide/xml-schemas/), the XSD file needs to be in your app. If the XML refers to an XSD file that is not in your app, a runtime error will be thrown. Add the XSD file manually to resolve this error.
 
 ## WSDL {#wdsl}
 

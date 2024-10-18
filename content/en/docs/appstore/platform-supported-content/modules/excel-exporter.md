@@ -13,9 +13,9 @@ The Excel Exporter is compatible with the [Excel Importer](/appstore/modules/exc
 
 ## Prerequisites
 
-* [Install Mx Model Reflection](/howto/integration/using-the-excel-exporter/#download-modules) version 6.1.1 or higher
-* [Add MxReflection page and Excel Exporter page to the navigation](/howto/integration/using-the-excel-exporter/#add-navigation-items)
-* [Configure Mx Model Reflection](/howto/integration/using-the-excel-exporter/#configure-mx-model-reflection)
+* [Install Mx Model Reflection](/refguide/using-the-excel-exporter/#download-modules) version 6.1.1 or higher
+* [Add MxReflection page and Excel Exporter page to the navigation](/refguide/using-the-excel-exporter/#add-navigation-items)
+* [Configure Mx Model Reflection](/refguide/using-the-excel-exporter/#configure-mx-model-reflection)
 
 ## Configuration
 

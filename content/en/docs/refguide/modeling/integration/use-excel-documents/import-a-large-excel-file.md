@@ -1,7 +1,9 @@
 ---
 title: "Import a Large Excel File"
-url: /howto/integration/import-a-large-excel-file/
+url: /refguide/import-a-large-excel-file/
 weight: 10
+aliases: /howto/integration/import-a-large-excel-file/
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## Introduction

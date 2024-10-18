@@ -1,8 +1,10 @@
 ---
 title: "Import Excel Documents"
-url: /howto/integration/importing-excel-documents/
+url: /refguide/importing-excel-documents/
 weight: 1
 description: "Describes how to set up import templates and import data into your app using the Excel Importer module."
+aliases: /howto/integration/importing-excel-documents/
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## Introduction

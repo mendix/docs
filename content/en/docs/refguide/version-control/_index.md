@@ -96,7 +96,7 @@ The Repository Service manages communication between Studio Pro and other suppor
 
 ### Mendix MPR Storage  {#mpr-format}
 
-An app modeled in Mendix is stored in an *.mpr* file, a database which contains data for all documents, such as microflows, workflows, pages. Studio Pro, or the [mx Command-Line Tool](/refguide/mx-command-line-tool/), is required to inspect changes in the *.mpr*.
+An app modeled in Mendix is stored in an *.mpr* file, a database that contains data on all documents, such as microflows, workflows, pages. Studio Pro or the [mx Command-Line Tool](/refguide/mx-command-line-tool/) is required to inspect changes in the *.mpr*.
 
 {{% alert color="warning" %}}
 Manually modifying files belonging to the *.mpr* storage format such as the *.mpr* file or the *mprcontents* directory (for example, when resolving file conflicts through third-party tooling), will lead to a corrupted state. To recover from a corrupted state a previous commit will need to be restored.

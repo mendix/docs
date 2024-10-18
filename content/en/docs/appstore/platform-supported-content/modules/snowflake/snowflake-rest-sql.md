@@ -251,4 +251,4 @@ To configure your Mendix app for Snowflake Cortex Analyst, perform the following
 6. To get the Cortex Analyst Response entity, add the **Response: Get Cortex Analyst Response** action from the Toolbox, and then add the **Response** entity as a parameter. The response contains the following information:
     * **Request_ID** - The returned *RequestId*
    
- {{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/CortexAnalystRequestExample.png" >}}    
+ {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-rest-sql/CortexAnalystRequestExample.png" >}}    

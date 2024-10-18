@@ -19,7 +19,7 @@ Documents available for this topic:
 
     Describes how to add an XML schema, create domain-to-XML mapping, and export logic.
 
-* [XML Schema Support](/refguide/xml-schema-support/)
+* [XML Schemas](/refguide/xml-schema-support/)
   
     Describes how to import and export an XML Schema Defintion (XSD) file. 
 

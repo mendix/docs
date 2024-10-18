@@ -59,7 +59,7 @@ This chart shows the available solutions for when you want to connect Mendix app
 | Unsupported protocols   | Build a module to connect either via alternative protocols, or by encapsulating one of the platform supported protocols. |
 
 {{% alert color="info" %}}
-The [Catalog](/catalog/) is a hub for shared registered assets made available in your organization. At the moment, it only supports OData.
+The [Catalog](/catalog/) is a hub for shared registered assets made available in your organization. At the moment, it supports OData, REST, and Business Events.
 {{% /alert %}}
 
 ### Getting Mendix Connectors

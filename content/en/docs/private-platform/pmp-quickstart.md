@@ -32,7 +32,7 @@ Before starting the installation process, make sure that you have all the necess
 
     * A kubeconfig file with administrator privileges for your Kubernetes or OpenShift platform
     * A command line terminal that supports the console API and mouse interactions. In Windows, this can be PowerShell or the Windows Command Prompt.
-    * For OpenShit clusters, OpenShift CLI. For more information, see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html).
+    * For OpenShift clusters, OpenShift CLI. For more information, see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html).
     * Kubectl installed if you are deploying to another Kubernetes platform. For more information, see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/).
 
 * Optionally, if you plan to install the Svix component:
@@ -186,7 +186,7 @@ Install the Private Mendix Platform by doing the following steps:
 3. Click **Configure**, and then specify the following parameters:
 
     * **AppName** - The default app name is `mxplatform`. You can change it as required.
-    * **DatasePlan/Storageplan** - The name of the plan that you created previously.
+    * **DatabasePlan/Storageplan** - The name of the plan that you created previously.
     * **AppUrl** - The endpoint where you can connect to your running app. It must be a URL which is supported by your platform. If you leave it blank, Mendix Operator will create it.
     * **EnableTLS** - Allows you to enable or disable TLS for the Mendix app's Ingress or OpenShift Router. The default value is use the default settings.
     * **TLS option** - Allows you to use an existing `kubernetes.io/tls` secret containing the TLS certificate, or to provide the `tls.crt` and `tls.key` values directly.

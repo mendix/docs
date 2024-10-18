@@ -1,9 +1,16 @@
 ---
-title: "XML Schema Support"
-url: /refguide/xml-schema-support/
+title: "XML Schemas"
+url: /refguide/xml-schemas/
+weight: 15
 ---
 
-## Introduction
+## Overview
+
+An XML schema is defined in an XML Schema Definition (XSD) file and can be imported in your model. It describes what a certain XML document should look like. The schema can then be used in [Import Mappings](/refguide/import-mappings/) and [Export Mappings](/refguide/export-mappings/).
+
+{{< figure src="/attachments/refguide/modeling/integration/xml-schemas/18582294.png" alt="Figure 1" class="no-border" >}}
+
+## XSD File Support
 
 Mendix derives the input/output formats for XML import/export and calling SOAP/XML web services by interpreting XML Schema Definition (XSD) files. When you import an XML schema (*.xsd*) or web service definition (*.wsdl*) using Mendix Studio Pro, you may get a dialog that contains warning messages about unsupported constructs. This is because at this time, Mendix does not support the entire XSD standard. The mapping in Mendix is based on entities and attributes, and some XSD constructs do not lend themselves easily for this format. The following table shows which XSD constructs are currently supported.
 

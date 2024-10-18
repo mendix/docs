@@ -37,7 +37,7 @@ Some of the actions can be applied to multiple images. You can select all images
 
 The **Add** button allows you to add a new image from a file to your image collection. The image will be given the name of the image file you add. If the name already exists, a suffix will be added to make the name unique.
 
-The following image formats are supported: *png*, *jpeg*, *gif*, *bmp*, and *svg*.
+The following image formats are supported: *png*, *jpeg*, *gif*, *bmp*, *webp*, and *svg*.
 
 You can also add an image to your collection using <kbd>Ctrl</kbd> + <kbd>N</kbd>.
 

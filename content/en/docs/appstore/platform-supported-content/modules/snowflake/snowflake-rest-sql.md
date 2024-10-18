@@ -211,7 +211,7 @@ FROM your_table
 
 This statement returns data from a Snowflake table with the columns named as specified with the `as **NewColumnName**" part` of each line. If the attribute names, datatypes and their order match, the `TransformResponsesToMxObjects` activity automatically converts the retrieved data into Mendix objects.
 
-## Configuring Snowflake Cortex Analyst
+## Configuring Snowflake Cortex Analyst {#cortex-analyst}
 
 Cortex Analyst is a fully-managed, LLM-powered Snowflake Cortex feature that helps you create applications capable of reliably answering business questions based on your structured data in Snowflake.
 
@@ -219,7 +219,7 @@ Cortex Analyst is a fully-managed, LLM-powered Snowflake Cortex feature that hel
 Snowflake Cortex Analyst is currently in open preview. For more information, refer to the [Snowflake Cortex Analyst documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst).
 {{% /alert %}}
 
-### Prerequisites {#prerequisitescortexanalyst}
+### Prerequisites
 
 * Make sure that you have access to Cortex Analyst. For more information, refer to the [Snowflake Cortex Analyst documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst).
 * Create the semantic model for Cortex Analyst. For more information, refer to [Creating Semantic Models for Snowflake Cortex Analyst](https://developers.snowflake.com/solution/creating-semantic-models-for-snowflakes-cortex-analyst/) in the Snowflake Cortex Analyst documentation.

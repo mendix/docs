@@ -458,7 +458,7 @@ Studio Pro adds metadata on the Mendix version of your app to each revision when
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-Manually modifying files belonging to the [*.mpr* storage format](/refguide/version-control/#mpr-format) such as the *.mpr* file or *mprcontents* directory, for example when resolving file conflicts through 3rd party tooling, will lead to a corrupted state. To recover from a corrupted state a previous commit will need to be restored.
+Manually modifying files belonging to the  [*.mpr* storage format](/refguide/version-control/#mpr-format)  such as the *.mpr* file or the *mprcontents* directory (for example, when resolving file conflicts through third-party tooling), will lead to a corrupted state.  will lead to a corrupted state. To recover from a corrupted state a previous commit will need to be restored.
 {{% /alert %}}
 
 {{% alert color="warning" %}}

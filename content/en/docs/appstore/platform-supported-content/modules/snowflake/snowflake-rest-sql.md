@@ -215,6 +215,10 @@ This statement returns data from a Snowflake table with the columns named as spe
 
 Cortex Analyst is a fully-managed, LLM-powered Snowflake Cortex feature that helps you create applications capable of reliably answering business questions based on your structured data in Snowflake.
 
+{{% alert color="info" %}}
+Snowflake Cortex Analyst is currently in open preview. For more information, refer to the [Snowflake Cortex Analyst documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst).
+{{% /alert %}}
+
 ### Prerequisites {#prerequisitescortexanalyst}
 
 * Make sure that you have access to Cortex Analyst. For more information, refer to the [Snowflake Cortex Analyst documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst).
@@ -232,19 +236,19 @@ To configure your Mendix app for Snowflake Cortex Analyst, perform the following
     * **Token** - The authentication token created from the OIDC provider, or the JWT Token
     * **AccountURL** - The URL of the Snowflake account that has access to Snowflake Cortex Analyst
     * **Authentication Type**
-3. Add the **Cortex Analyst: Create Request** action from the **Toolbox**, and then fill in the path to the semantic file on stage at Semantic_model_file parameter.
-Next add the "Chat: Add Message to Request" action from toolbox, the needed information is
-Request: This is request from step 2.
-ENUM_MessageRole : The role of the entity that is creating the message. Currently only supports "user".
-ContentString: The Question to Cortex Analyst.
-Add the "Snowflake Cortex Analyst" action from toolbox. Fill in the parameters
-Connection: Cortex Analyst Connection from step 1
-Request: The Request from step 2
-To get response message from the response, add the "Response: Get Cortex Analyst Response Message" action from toolbox, add the Response entity as a parameter. The message contains the following information:
-·       Content: This is the content of the return message! This will include the text + the SQL test or the Suggestions in case of no returned SQL
-·       Cortex Role: The entity that produced the message. One of user or analyst.
-·       SQLText: The returned SQL suggestion
-To get the Cortex Analyst Response entity back, add the "Response: Get Cortex Analyst Response" action and add Response as Parameter. Cortex Analyst Response contains the following information:
-·       Request_ID :The returned RequestId
+3. Add the **Cortex Analyst: Create Request** action from the **Toolbox**, and then configure the **Request** to contain the path to the Snowflake semantic model file.
+3. Add the **Chat: Add Message to Request** action from the Toolbox and provide the following information:
+    * **Request** - The request that you configured for the **Cortex Analyst: Create Request** action
+    * **ENUM_MessageRole** - The role of the entity that creates the message; in the current version, the role must be set to **user**
+    * **ContentString** - The text of the question for Cortex Analyst
+4. Add the **Snowflake Cortex Analyst** action from the Toolbox and provide the following information:
+    * **Connection** - The Cortex Analyst connection that you configured for the **Cortex Analyst: Create Cortex Analyst Connection** action
+    * **Request** - The request that you configured for the **Cortex Analyst: Create Request** action
+5. To get the response message from the response, add the **Response: Get Cortex Analyst Response Message** action from the Toolbox, and then add the **Response** entity as a parameter. The message contains the following information:
+    * **Content** - This is the content of the response message. It includes the text and the SQL, or the suggestions if no SQL is returned
+    * **Cortex Role** - The entity that produced the message; possible values are *user* or *analyst*
+    * **SQLText** - The returned SQL suggestion
+6. To get the Cortex Analyst Response entity, add the **Response: Get Cortex Analyst Response** action from the Toolbox, and then add the **Response** entity as a parameter. The response contains the following information:
+    * **Request_ID** - The returned *RequestId*
    
  {{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/CortexAnalystRequestExample.png" >}}    

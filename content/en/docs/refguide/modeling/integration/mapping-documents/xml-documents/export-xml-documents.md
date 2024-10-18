@@ -1,8 +1,10 @@
 ---
 title: "Export XML Documents"
-url: /howto/integration/export-xml-documents/
+url: /refguide/export-xml-documents/
 weight: 4
 description: "Describes how to add an XML schema, create domain-to-XML mapping, and export logic."
+aliases: /howto/integration/export-xml-documents/
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## Introduction

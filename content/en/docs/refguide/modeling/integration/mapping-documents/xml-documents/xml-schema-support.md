@@ -1,5 +1,5 @@
 ---
-title: "XML Schema Support"
+title: "XML Schemas"
 url: /refguide/xml-schema-support/
 weight: 15
 ---

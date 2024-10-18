@@ -1,7 +1,8 @@
 ---
 title: "Import a Large Excel File"
-url: /howto/integration/import-a-large-excel-file/
+url: /refguide/import-a-large-excel-file/
 weight: 10
+aliases: /howto/integration/import-a-large-excel-file/
 ---
 
 ## Introduction

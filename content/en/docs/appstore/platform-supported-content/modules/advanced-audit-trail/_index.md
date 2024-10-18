@@ -13,7 +13,7 @@ aliases:
 
 Advanced Audit Trail employs a managed software stack on top of Kafka and OpenSearch to deliver the service. Kafka is used for long-term immutable data storage of audit data, and OpenSearch is used to index audit data. You can find an integration diagram below:
 
-{{< figure src="/attachments/appstore/use-content/modules/advanced-audit-trail/aat_integration_diagram.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/advanced-audit-trail/aat_integration_diagram.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 The Advanced Audit Trail solution distinguishes itself from the [Audit Trail](/appstore/modules/audit-trail/) module by requiring less implementation effort, while delivering improved search experience and better performance. For a more comprehensive overview of the differences between the regular and the Advanced Audit trail module, see the [Advanced Audit Trail vs. Audit Trail](#comparison) section below.
@@ -70,7 +70,7 @@ To install the component, follow the instructions in the [Importing Content from
 3. Configure the right constant values for the right snapshots. For more information, see the [Configuring Constants](#constants) section below.
 4. Implement the **Before Commit** (**BCo**) and **Before Delete** (**Bde**) events. Use the events on the domain model settings (**BCo** / **BDe**). For example, the configuration in the image below is for the **Before Commit** handler, whereas for the **Before Delete** handler, the value of **Is delete** should be set to *true*.
 
-    {{< figure src="/attachments/appstore/use-content/modules/advanced-audit-trail/example.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/advanced-audit-trail/example.png" class="no-border" >}}
 
     In case you need to follow a compliance that requires you never to delete an object, implement this outside the context of the audit trail module. 
 
@@ -172,7 +172,7 @@ When using basic authentication, a simple username/password credential set is us
 
 When using OAuth authentication, the app connects to an external identity provider (typically controlled by your organization) to retrieve an access token for authenticating to the AAT backend. To configure OAuth authentication, provide the identity provider's configuration information on the AAT settings page, including the client ID, client secret, client scope, and token endpoint URL.
 
-{{< figure src="/attachments/appstore/use-content/modules/advanced-audit-trail/OAuth.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/advanced-audit-trail/OAuth.png" class="no-border" >}}
 
 ## Advanced Audit Trail vs. Audit Trail {#comparison}
 

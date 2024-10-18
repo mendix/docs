@@ -13,7 +13,7 @@ This chapter gives an overview of the trap tool, which can be used to collect th
 
 The trap tool shows the traps that are stored.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-trap-tool/Overview.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-trap-tool/Overview.png" class="no-border" >}}
 
 You can send the trap message to the performance tool when the performance tool is not running. This will process all microflow messages in the trap and will show the functionality that was running during the trap.
 
@@ -23,7 +23,7 @@ If you mark a trap to be kept, make sure this trap is not deleted with the perio
 
 When you select a trap, you get to see all the messages in that trap.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-trap-tool/Individual_Trap.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-trap-tool/Individual_Trap.png" class="no-border" >}}
 
 The search parameters to include or exclude **Connection Bus** messages and **Microflow Engine** messages are available to show or hide the most occurring messages.
 
@@ -35,7 +35,7 @@ You can manually send a trap and get logging output. This can be useful when the
 
 This is the **Output Queue Size** counter. 
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-trap-tool/Output_Queue.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-trap-tool/Output_Queue.png" class="no-border" >}}
 
 When a trap occurs, all the messages to be written to disk are stored in a queue. A separate thread handles this queue. The trap tool has a counter to indicate the number of messages in the output queue. When the trap tool is disabled or stopped, the output is interrupted and cancelled in the middle of processing the output queue.
 
@@ -43,7 +43,7 @@ When a trap occurs, all the messages to be written to disk are stored in a queue
 
 This is the **Trap Tool Options** dialog box:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-trap-tool/Options.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-trap-tool/Options.png" class="no-border" >}}
 
 The trap tool can be configured to trap on warnings. Error and critical messages are always trapped if the tool runs. Specific message patterns can be excluded (for more information, see below).
 
@@ -51,7 +51,7 @@ The trap tool can be configured to remember messages recorded during a certain a
 
 ### Protections Tab
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-trap-tool/Options_Protections.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-trap-tool/Options_Protections.png" class="no-border" >}}
 
 The trap tool has many protection mechanisms to make sure it can run safely in production.
 
@@ -67,12 +67,12 @@ Traps are automatically deleted after a certain amount of days, as configured in
 
 ### Exclusions Tab
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-trap-tool/Options_Exclusions.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-trap-tool/Options_Exclusions.png" class="no-border" >}}
 
 You can define which traps are excluded to avoid highly repetitive messages that are not useful for analysis. You can exclude a complete node or filter out trap messages by regular expressions. Exclusions can be added manually but also by selecting an error,
 a warning, or a critical message in either the log tool or the trap tool, viewing their details, and pressing the **Exclude** button.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-trap-tool/Edit_Exclusion.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-trap-tool/Edit_Exclusion.png" class="no-border" >}}
 
 The regular expression can be tested against the traps and log messages in the database, so if the tool currently records a message that needs to be excluded the next time it occurs, then the test button should give a result.
 
@@ -80,7 +80,7 @@ The regular expression can be tested against the traps and log messages in the d
 
 On the **Triggers** tab, you can define message triggers that fire on messages of level INFO and above. 
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-trap-tool/Options_Triggers.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-trap-tool/Options_Triggers.png" class="no-border" >}}
 
 See the description of [Triggers](/appstore/partner-solutions/apd/rg-one-triggers/) for how to configure triggers.
 

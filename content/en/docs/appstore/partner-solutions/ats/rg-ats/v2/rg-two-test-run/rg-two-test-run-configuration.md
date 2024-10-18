@@ -7,23 +7,23 @@ url: /appstore/partner-solutions/ats/rg-two-test-run-configuration/
 
 To run an existing test, you must open the test case or test suite by clicking its name in the repository, or click the play button displayed in the test case:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-test-run/rg-two-test-run-configuration/play-button.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-test-run/rg-two-test-run-configuration/play-button.png" class="no-border" >}}
 
 The test case (or test suite) details page then opens. On this page, you can see all the test steps and, for the test suite, the containing test case of your test.
 
 If you want to execute your test case, click **Run**:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-test-run/rg-two-test-run-configuration/test-case-details-run.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-test-run/rg-two-test-run-configuration/test-case-details-run.png" class="no-border" >}}
 
 The **General Settings** job configuration page then opens. On this page, set the job configuration for the test case (or test suite) you want to execute. For every test run, a new job is created.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-test-run/rg-two-test-run-configuration/runconfig.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-test-run/rg-two-test-run-configuration/runconfig.png" class="no-border" >}}
 
 For explanations of the general settings sections, see [2 General Settings](#general).
 
 If you selected a Selenium hub from a supported Selenium hub provider (SauceLabs, or BrowserStack), you get access to the **Platform Settings** section for the selection of the operating system and screen resolution:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-test-run/rg-two-test-run-configuration/runconfig-os.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-test-run/rg-two-test-run-configuration/runconfig-os.png" class="no-border" >}}
 
 For explanations of the platform settings, see [3 Platform Settings](#platform).
 

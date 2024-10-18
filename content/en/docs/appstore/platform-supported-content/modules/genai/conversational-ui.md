@@ -70,7 +70,7 @@ To use Conversational UI in your app, you must perform the following tasks:
 
 To help you work with the Conversational UI module, the following sections of this document list the available entities and activities that you can use in your application.
 
-{{< figure src="/attachments/appstore/use-content/modules/genai/conversational-ui/domain-model.png" alt="" width="50%">}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/conversational-ui/domain-model.png" alt="" width="50%">}}
 
 ### Module Roles {#module-roles}
 

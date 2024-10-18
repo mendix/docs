@@ -12,6 +12,17 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2024
 
+### October 17th, 2024
+
+#### Deploy API
+
+* In order to further increase the security of the API responses, we have removed the *MxAdminPassword*, *DebuggerPassword*, and *SubscriptionSecret* fields from the response of the GET Environment Manifest endpoint of the DeployAPI. To check the values, you can use the Portal UI or the cluster route insread. This change only affects the GET operation. The UPDATE operation still works as before.
+* We have added deprecation and sunset response headers for APIs which are going to be deprecated in future releases.
+
+#### Portal Improvements
+
+* We have improved the warning message when an environment is deleted while an agent is disconnected.
+
 ### September 13th, 2024
 
 #### License Manage CLI v0.9.0

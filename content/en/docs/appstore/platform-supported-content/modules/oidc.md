@@ -142,15 +142,15 @@ Once the Mx Model Reflection module has been imported into your app, you need to
 
 1. In the **App Explorer**, add the page **MxObjects_Overview** from the **MxModelReflection** folder to the Navigation menu.
 
-    {{< figure src="/attachments/appstore/use-content/modules/oidc/add-model-reflection.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/add-model-reflection.png" class="no-border" >}}
 
 2. Run the app and click the newly-added navigation link to use Mx Model Reflection.
 
-    {{< figure src="/attachments/appstore/use-content/modules/oidc/model-reflection-button.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/model-reflection-button.png" class="no-border" >}}
 
 3. Select the modules **MxModelReflection** and **OIDC**  and click **Click to refresh** for both the modules and the entities. Starting from version 3.0.0 of the OIDC SSO module, additionally select and refresh the **Administration** and **System** modules in the **MxModelReflection.MxObjects_Overview** page to configure User Provisioning.
 
-    {{< figure src="/attachments/appstore/use-content/modules/oidc/select_modules.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/select_modules.png" class="no-border" >}}
 
 ### Migrating from Community Edition to Platform Edition{#migration}
 
@@ -208,7 +208,7 @@ Ensure that you have allocated the following user roles to the OIDC module and U
 | Anonymous | OIDC.Anonymous |
 | User | OIDC.User |
 
-{{< figure src="/attachments/appstore/use-content/modules/oidc/user-roles.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/user-roles.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 You may have to add the *Anonymous* user role if it does not exist already.
@@ -223,7 +223,7 @@ In the **Anonymous** tab of the app security settings, do the following:
 1. Set **Allow anonymous users** to **Yes**
 2. Select *Anonymous* as the **Anonymous user role**
 
-{{< figure src="/attachments/appstore/use-content/modules/oidc/anonymous-user.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/anonymous-user.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 If a single Identity Provider (IdP) is configured in the OIDC SSO module, end-users can be authenticated via the URL `https://<your-app-url>/oauth/v2/login`.
@@ -440,22 +440,6 @@ The following constants are optional:
 
     Example: `acr1 acr2`
 
-* **AllowcreateUsers** – allow to create users in the application
-
-    Example: `True`
-
-* **Userrole** – the role which will be assigned to newly created users. You can select one default user role. If you need additional user roles, use Access Token Parsing microflow to assign multiple roles.
-
-    Example: `User`
-
-* **UserType** – assign user type to the created users
-
-    Example: `Internal`
-
-* **CustomUserProvisioning** – a custom microflow for user provisioning
-
-    Example: `Mymodule.CustomUserProvisioningEntra`
-
 ##### Deploy-time IdPs for API Security Only Configuration
 
 {{% alert color="info" %}}
@@ -533,7 +517,7 @@ You can set up custom user provisioning by setting the following constants. You 
 | AllowcreateUsers | allow to create users in the application | *optional* | `True` |
 | Userrole | the role which will be assigned to newly created users | *optional* - Default Userrole is assigned only at user creation <br> - User updates do not change the default role <br> - No bulk update for existing users when the default userrole changes | `User` |
 | UserType | assign usertype to the created users | *optional* | `Internal` |
-| CustomUserProvisioning | a custom microflow to use for user provisioning | *optional* – in the form `modulename.microflowname` – the microflow name must begin with the string `CustomUserProvisioning` | `Mymodule.CustomUserProvisioningEntra` |
+| CustomUserProvisioning | a custom microflow to use for user provisioning | *optional* – in the form `modulename.microflowname` – the microflow name must begin with the string `UC_CustomProvisioning` | `Mymodule.UC_CustomProvisioning` |
 
 #### Custom User Provisioning at Runtime{#custom-provisioning-rt}
 
@@ -566,18 +550,18 @@ You can set up custom user provisioning once your app is running using the `OIDC
     * IdP Attributes(Claims) cannot be of type enum, autonumber, or an association.
     * The image below shows you the default attribute mapping for the configuration.
 
-        {{< figure src="/attachments/appstore/use-content/modules/oidc/default_mapping.png" max-width=80% >}}
+        {{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/default_mapping.png" max-width=80% >}}
 
 6. Optionally, you can use the custom logic in the **User Provisioning**. In the **Custom UserProvisioning** field, select a microflow you want to run for custom user provisioning. The custom microflow name must begin with the string `UC_CustomProvisioning` and requires the following parameters:
 
     1. **UserInfoParameter(UserCommons.UserInfoParam)**: A Mendix object containing user claims information through its associated objects. You can use this  parameter to retrieve user provisioning configuration information.
     2. **User(System.User)**: A Mendix object representing the user to be provisioned. Ensure that the selected microflow matches this parameter signature.
 
-    It will be executed after user creation or update of user. If you have added a new microflow, you will need to refresh the module containing your microflow as described in the [Installing Mx Model Reflection](#mxmodelreflection). This selection can be blank if you do not want to add custom logic.
+    The microflow must return a **System.User** object to ensure proper user provisioning and updates. It will be executed after user creation or update of user. If you have added a new microflow, you will need to refresh the module containing your microflow as described in the [Installing Mx Model Reflection](#mxmodelreflection). This selection can be blank if you do not want to add custom logic.
 
 7. Click **Save** to save the configuration.
 
-    {{< figure src="/attachments/appstore/use-content/modules/oidc/user commons.png" max-width=80% >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/user commons.png" max-width=80% >}}
 
 ### Evaluating Multiple User Matches
 
@@ -765,7 +749,7 @@ To parse of SAM access tokens you need to do the following when performing [Runt
 
 1. Select *OIDC.Default_SAM_TokenProcessing_CustomATP* as the **custom AccessToken processing microflow**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/oidc/enable-sam.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/enable-sam.png" >}}
 
 2. Add the scopes `sam_account`, `samauth.role`, `samauth.tier`, and `samauth.ten` to the **Selected Scopes** in the OIDC Client Configuration.
 3. Configure the user roles in your app to match the roles returned by SAM. End-users will be given the matching role when they sign into the app. If the role in the SAM token is not found in the Mendix app the end-user will be given the role `User`.
@@ -787,7 +771,7 @@ To parse the OIDC Provider access tokens you need to do the following when perfo
 
 1. Select `OIDC.Default_OIDCProvider_TokenProcessing_CustomATP` as the **custom AccessToken processing microflow**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/oidc/oidc-provider-parsing.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/oidc-provider-parsing.png" >}}
 
 2. Add the scopes `openid` and the ModelGUID or Name to the **Selected Scopes** in the OIDC Client Configuration. The ModelGUID will look something like `53f5d6fa-6da9-4a71-b011-454ec052cce8`.
 
@@ -911,7 +895,7 @@ To configure the ACR value (or values) in the OIDC SSO module, follow these step
 
 When you have configured multiple ACR values for your IdP, the OIDC module shows the ACR values as additional ways to sign in on the default login page.
 
-{{< figure src="/attachments/appstore/use-content/modules/oidc/login-acr-options.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/login-acr-options.png" class="no-border" >}}
 
 #### Customizing the Login Page
 
@@ -988,7 +972,7 @@ If you have deployed your app on premises but did not configure a return URL for
 
 To resolve this, open the Mendix Service Console and ensure that the **Port number** for the **Public application root URL**, **Runtime server port**, and **Admin server port** match.
 
-{{< figure src="/attachments/appstore/use-content/modules/oidc/service-console-ports.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/service-console-ports.png" class="no-border" >}}
 
 ### `CommunityCommons.RandomStrongPassword` Microflow Does Not Match the Expected Parameters
 
@@ -998,12 +982,12 @@ This error indicates that new parameters must be synced with the microflow.
 
 To resolve this issue, either open the microflow used for the OIDC SSO module or refresh it before deploying your Mendix app again.
 
-{{< figure src="/attachments/appstore/use-content/modules/oidc/Community Commons error.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/Community Commons error.png" class="no-border" >}}
 
 ### Endless Redirect Loop and Runtime Error (Mendix 10.9 to 10.12.2)
 
 When using the OIDC SSO module with Mendix version 10.9 to 10.12.2, you may encounter an endless redirect loop to the login page or you can see a "Runtime operation failed" error message in the UI. This issue is related to the session cookie handling in these versions. To resolve these redirect loop and runtime error, Mendix recommends upgrading to Mendix version 10.12.3 or above.
 
-{{< figure src="/attachments/appstore/use-content/modules/oidc/runtime-failed.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/runtime-failed.png" class="no-border" >}}
 
 If a user logs in on one tab and then attempts to log in on another tab, a `401` error may initially appear. However, after the browser reloads, the error will be resolved as the session is validated and synchronized.

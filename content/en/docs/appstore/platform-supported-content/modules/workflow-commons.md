@@ -144,7 +144,7 @@ To enable audit trail for a specific workflow in your app, go to the **Events** 
 
 The image below represents an example of how to configure audit trail event handler in **App Settings** or on a specific workflow level in the **Properties** of the workflow:
 
-{{< figure src="/attachments/appstore/use-content/modules/workflow-commons/configuration.png" alt="configuration" max-width=90% >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/workflow-commons/configuration.png" alt="configuration" max-width=90% >}}
 
 {{% alert color="info" %}}The audit table can grow rapidly when many workflows are initiated in a short period of time, and could contain many non-human activities. In this case, we recommend to only select a limited set of events depending on your need and to regularly delete old audit records. You can use the included scheduled event: for details, see the [Clean-Up](#clean-up) section below.{{% /alert %}}
 
@@ -158,7 +158,7 @@ You can view audit trail on three levels:
 
 1. **All workflows**: Here you can find all audit trail logs for all workflows in your app. You can find this page by navigating to **Workflow Admin Center** page and then clicking **Workflow audit trail**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/workflow-commons/admin-center.png" alt="admin-center" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/workflow-commons/admin-center.png" alt="admin-center" >}}
 
 2. **A workflow definition**: Here you can see all audit trail logs for all instances of a workflow definition. You can find this view in: **Workflow management** page > select a workflow definition > **Audit trail** tab.
 3. **A specific workflow instance**: Here you can see all audit trail logs for a specific instance of a workflow definition. You can find this view in: **Workflow management** page > select a workflow definition > in the **Workflow** tab, select a workflow > **Audit trail** tab.

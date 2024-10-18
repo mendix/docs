@@ -19,7 +19,7 @@ As a tenant administrator in ATS, you have access to the following additional fu
 
 When you are logged in as a tenant administrator, you can access the tenant administration page from your profile menu:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-administration/tenant_admin_accounts.png" alt="Tenant administration page" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-administration/tenant_admin_accounts.png" alt="Tenant administration page" class="no-border" >}}
 
 Each ATS instance comes with a single tenant administration account with the following credentials: 
 
@@ -34,7 +34,7 @@ On the **Accounts** tab, you can manage the accounts for this ATS instance.
 
 ## Creating Accounts
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-administration/create_account.png" alt="Create new account dialog" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-administration/create_account.png" alt="Create new account dialog" class="no-border" >}}
 
 Field | Description
 --- | ---
@@ -49,7 +49,7 @@ When a new account is created, the user's for all apps will be set according to 
 
 ## Editing Accounts
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-administration/edit_account.png" alt="Edit account dialog" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-administration/edit_account.png" alt="Edit account dialog" class="no-border" >}}
 
 A tenant administrator can change the full name of an account and the password. It is not possible to change the username of an account.
 
@@ -63,7 +63,7 @@ When a user attempts to log in with an incorrect password a certain number of ti
 
 On the **Apps** tab, you can see all the apps that exist on this ATS instance. Here you can create new apps and edit existing ones. When you click **New**/ **Edit**, the following page will open:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-administration/app_new_edit.png" alt="App Create/Edit" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-administration/app_new_edit.png" alt="App Create/Edit" class="no-border" >}}
 
 You can enter/edit the name and the Mendix app ID. The name is used in the **My apps** page. The Mendix app ID is used to retrieve information from the Mendix Portal (for example, user stories), which are needed for certain ATS features. You can leave the Mendix app ID empty if you do not plan to use these features.
 

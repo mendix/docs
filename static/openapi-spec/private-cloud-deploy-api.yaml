@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: Mendix for Private Cloud Deploy API
-  version: 4.9.0
+  version: 4.10.0
   contact:
     name: Mendix Support
     url: 'https://support.mendix.com'
@@ -268,7 +268,7 @@ paths:
       summary: Get Manifests of Multiple Environments
       responses:
         '200':
-          $ref: '#/components/responses/environmentsManifests'
+          $ref: '#/components/responses/getEnvironmentsManifests'
         '401':
           $ref: '#/components/responses/error401'
         '403':
@@ -311,7 +311,7 @@ paths:
       summary: Get Environment Manifest
       responses:
         '200':
-          $ref: '#/components/responses/environmentManifest'
+          $ref: '#/components/responses/getEnvironmentManifest'
         '401':
           $ref: '#/components/responses/error401'
         '403':
@@ -415,7 +415,7 @@ paths:
       summary: Get Environment Manifest for a specified Namespace
       responses:
         '200':
-          $ref: '#/components/responses/environmentManifest'
+          $ref: '#/components/responses/getEnvironmentManifest'
         '401':
           $ref: '#/components/responses/error401'
         '403':
@@ -768,12 +768,193 @@ components:
                 subscriptionSecret:
                   type: string
                   example: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+                  description: 'If you need to clear the value of this attribute, set it to `LS0t`.'
                 debuggerPassword:
                   type: string
                   example: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+                  description: If you need to disable the debugger set the value of this attribute to `LS0t`.
                 mxAdminPassword:
                   type: string
                   example: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+                  description: 'If you need to clear the value of this attribute, set it to `LS0t`.'
+                runtimeVersion:
+                  type: string
+                  default: 9.24.2
+                  example: 9.24.2
+                environmentVariables:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/environmentVariable'
+                customRuntimeSettings:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/customSetting'
+            provider:
+              type: object
+              required:
+                - clusterId
+                - namespace
+              properties:
+                clusterId:
+                  type: string
+                  format: uuid
+                  example: a712d8f4-a77c-4189-a211-e0ea1dfde03c
+                namespace:
+                  type: string
+                  example: my-namespace
+                  description: Be aware that you cannot deploy environments to `Main` namespaces of Global Operator Installations.
+                namespaceId:
+                  $ref: '#/components/schemas/namespaceId'
+            annotations:
+              type: array
+              items:
+                $ref: '#/components/schemas/annotation'
+            services:
+              type: array
+              items:
+                $ref: '#/components/schemas/service'
+            runtimeMetricsConfiguration:
+              type: object
+              properties:
+                mode:
+                  type: string
+                  enum:
+                    - default
+                    - native
+                    - compatibility
+                  example: native
+                interval:
+                  type: string
+                  example: 'https://docs.mendix.com/refguide/custom-settings/#11-durationinterval-settings'
+                mxAgentConfig:
+                  type: string
+                  example: 'https://docs.mendix.com/developerportal/deploy/private-cloud-monitor/#configuring-mxagent'
+                mxAgentInstrumentationConfig:
+                  type: string
+                  example: 'https://docs.mendix.com/developerportal/deploy/private-cloud-monitor/#configuring-mxagent'
+      required:
+        - manifestVersion
+        - environment
+    getEnvironmentManifest:
+      type: object
+      x-examples:
+        example-environment-manifest:
+          $ref: '#/components/examples/GetEnvironmentManifest'
+      description: Model for retrieving the environment manifest.
+      x-stoplight:
+        id: 91a4eba0acc7e
+      properties:
+        manifestVersion:
+          type: string
+          example: 2.0.0
+        environment:
+          type: object
+          required:
+            - id
+            - properties
+            - deployment
+            - container
+            - provider
+            - services
+          properties:
+            id:
+              $ref: '#/components/schemas/environmentId'
+            properties:
+              type: object
+              required:
+                - name
+                - production
+                - defaultStudioTarget
+                - secretsStoreEnabled
+              properties:
+                name:
+                  type: string
+                  example: my-environment
+                production:
+                  type: boolean
+                defaultStudioTarget:
+                  type: boolean
+                secretsStoreEnabled:
+                  type: boolean
+                  default: false
+                OverwriteProductTypePCLM:
+                  type: string
+                  x-stoplight:
+                    id: kledhwkqv84h5
+            deployment:
+              type: object
+              required:
+                - appUrl
+                - packageId
+              properties:
+                appUrl:
+                  type: string
+                  example: 'https://test.app.url'
+                packageId:
+                  $ref: '#/components/schemas/packageId'
+                constants:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/constant'
+                scheduledEvents:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/scheduledEvent'
+                appLogLevels:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/appLogLevel'
+            container:
+              type: object
+              required:
+                - instances
+                - coreResources
+              properties:
+                state:
+                  type: string
+                  enum:
+                    - Ready
+                    - Processing
+                    - Failed
+                    - Unknown
+                  example: Ready
+                instances:
+                  type: integer
+                  maximum: 10
+                  minimum: 0
+                  example: 3
+                coreResources:
+                  type: object
+                  required:
+                    - limits
+                    - requests
+                  properties:
+                    limits:
+                      $ref: '#/components/schemas/coreResource'
+                    requests:
+                      $ref: '#/components/schemas/coreResource'
+            network:
+              type: object
+              properties:
+                outgoingConnectionCertificate:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      enabled:
+                        type: boolean
+                      password:
+                        type: string
+                        example: 'base64 encoded string, e.g.  dGVzdA=='
+                      certificateType:
+                        type: string
+                        example: Client
+                      key:
+                        type: string
+                        example: long base64 encoded .pfx file
+            runtime:
+              type: object
+              properties:
                 runtimeVersion:
                   type: string
                   default: 9.24.2
@@ -929,7 +1110,7 @@ components:
         ephemeralStorage:
           type: string
           example: '1'
-          default: 1
+          default: '1'
           description: The unit of measurement is `Gb` and it will be added automatically.
       required:
         - cpu
@@ -1888,12 +2069,12 @@ components:
           schema:
             type: string
           description: The URL where the result of the job can be found. This is only available after the job has been created.
-    environmentManifest:
+    getEnvironmentManifest:
       description: The environment manifest response returned by a get-environment-manifest request.
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/environmentManifest'
+            $ref: '#/components/schemas/getEnvironmentManifest'
           examples:
             example-environment-manifest:
               value:
@@ -1935,9 +2116,6 @@ components:
                         certificateType: Client
                         key: long base64 encoded .pfx file
                   runtime:
-                    subscriptionSecret: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
-                    debuggerPassword: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
-                    mxAdminPassword: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
                     runtimeVersion: 9.24.2
                     environmentVariables:
                       - name: custom-env-variable1
@@ -1962,7 +2140,7 @@ components:
                     interval: 'https://docs.mendix.com/refguide/custom-settings/#11-durationinterval-settings'
                     mxAgentConfig: 'https://docs.mendix.com/developerportal/deploy/private-cloud-monitor/#configuring-mxagent'
                     mxAgentInstrumentationConfig: 'https://docs.mendix.com/developerportal/deploy/private-cloud-monitor/#configuring-mxagent'
-    environmentsManifests:
+    getEnvironmentsManifests:
       description: The environments manifests response returned by a get-environments-manifests request.
       content:
         application/json:
@@ -1972,7 +2150,7 @@ components:
               environments:
                 type: array
                 items:
-                  $ref: '#/components/schemas/environmentManifest'
+                  $ref: '#/components/schemas/getEnvironmentManifest'
           examples:
             example-environments-manifests:
               value:
@@ -2027,9 +2205,6 @@ components:
                             certificateType: Client
                             key: MIIJnAIBAzCCCVgGCSqGSIb3DQEHAaCCCUkEgglFMIIJQTCCBfoGCSqGSIb3DQEHAaCCBesEggXnMIIF4zCCBd8GCyqGSIb3DQEMCgECoIIE/jCCBPowHAYKKoZIhvcNAQwBAzAOBAhDZRK0G/EhwQICB9AEggTYIUAt0t74nm6I1WcXC3dqVfxOuDiitG/rF0MWFXbOYnBXMsZZ7spe0Hc4x5MhDAAIaD/VO3fozeI8semYONfgxc1hg3k4N4F+HwVtQnqh3c4iGJWCUfSufKwlavlnJHIRpbqSkZGl+3UKIJTwaVmBKtLyJrYhD0H9y0Ev6q3rdyTzLizvY4rwXhZneLnpVQsV+YFC5FdW8ybRQNdpTrPHrQEL7IndLE3hb9HVk2SNwchG+qVuKARfFT29W9E3WUoN5FX2vr0VVGahnvT/y+zgQ/i3peQwlV6WGFkUqBHqrO4M5ZFDywYsKrFBXXDyO0LNmE8HFcFNud1Kvj6XIJ03Wc9PEVAbbGXX3Xwotw3ZAyb6M+uFCd/EBroB0lKNO0yFgEecIgSu1ca/ms4we1CTNmAH+DfFjk+Ks9reyBBnUwNS5kPP8bmh2Jk9C8UhIhFZLMgquFeh1m0uKiUmIUTzH00/NSNSpcugr/cjVz60hygp3QqUF6DejQxa/vi5WZhatb7i2QrBFM3pini+6DF3S0wrgjH/ss+HI9trkESs9fURY1uyYhZ7LvVrL2zny5umEhTR7kYqgzIvLBytSJfQRffyejHGbzh/Ud1mAEMu/MhXgtY0Mbk4K13kJ1pQKE7glv/JTbwp001/9d0x9Cv8xyRMoQN3UDFcMjB96cqTqqm9waDvv6S4AxOljG2qSQsm3Ld0tq1eYLRTphdLW/Ab9WAu5i1ryIiSfwXWK9aCKxjeATVGbcxHH2N+fK5LCSs8RmthYFyZED25FRsZIZxCDW7Y/HVJgI5jTwuklvLyls+Azz1+8UiUoyFrGI7qHFREX4BnVzOdCI+WjNx2SRQii7hBZP7tDeEiU0iyENvUYxxIvA8H2tKk0FuYSsJfYhbQJBSVv6YlnwTggO32SJRunoXtQh008KiQY5VA1Gsr0fjxfafsuUX7g/8LvZvKARlSkP1wOQpbZKXo1Zpc7RM1G9nUv2rlcISbzywDtaN+4Ko3jak0LUaLmPqTbmJYYdEo1kSUEbwXBJxaVrXxvzWFbTi41vhpcaD9kURvuT03b33SV2ZDG3qDASJGNfuahl6EJa3r1O2DI/I5BLzeVW4omR70lktefBuMJjH0vVHuCWzbDoMYWxOJX0Za4a99ii8hRKpKofXnPWEBJdfYW6ZqS165tT99YhyDd92319ntBD/x0PJqZHesgIoOmk89VLeyrVTseSV0OMr7Qfnvue7HWgNraGDhIccKnueC8U+31r+pCuB0dyP/gYm6rMF1gHbup6is4T9/9PEnV0O3pTJgL7nXAmitVAojOKOnnGU098HzsTmLo7Iplv4xznRN0rVJ3pYGC6aP2Ci2Mzn/UIv1NAGkjCi+IFP2n9Z44IPnPREZdXfyEgi+5A0eJqRy5sBoIcvpqiaVhqKXYJCTKRe9mMwk8S6TyDhyanpPwV3fMW4tlLcDBf7OqT/HG10Y65chEj0d+ky0mytur7nfwPQlG+FapZlyeP5hwhp0BQo+KZjNO6abP8IfBTaJ4dxt9kNVSseHuMaw/ux0BRVSsXn68QviOOPvNpW1W9uXSAu1GpNnKdnH1kWoPgGymUCtK0iUspT36F/u1nFso6/gu3ce3g9EvtIGrA/pae7zk57+Q6gN3jMpYqh75jGBzTATBgkqhkiG9w0BCRUxBgQEAQAAADBXBgkqhkiG9w0BCRQxSh5IADAANAAwADQAMwAzADYAZgAtADcAOQA3ADgALQA0AGEAMgA2AC0AOAAyAGEAZAAtAGIANwBjADAAMAAwADMAYQA0AGMAYgAxMF0GCSsGAQQBgjcRATFQHk4ATQBpAGMAcgBvAHMAbwBmAHQAIABTAHQAcgBvAG4AZwAgAEMAcgB5AHAAdABvAGcAcgBhAHAAaABpAGMAIABQAHIAbwB2AGkAZABlAHIwggM/BgkqhkiG9w0BBwagggMwMIIDLAIBADCCAyUGCSqGSIb3DQEHATAcBgoqhkiG9w0BDAEDMA4ECNeK0LuvPAmEAgIH0ICCAvha0L9dGfou/JVS5msokk+IaOu/q/YxJDHXGtLGYRSIyBj2DWnOM88oIOM6L8PVIsM9B49L3HOQKtb4p7QzfkHI+v0vaSSLtWJhk3Mh7jEWfGBppRAGcvy9QVmdKP7YgmTJKbrCdzCD93iBTxZMJoh5dPlCaMXPLxyAaOYkQEOAE3xBRyJDcmU9SSxD2hk8jmuK9DKBig1MokvH5bgQkdbPYw8LqMT55hzpotjg1bHL0UlIha1Ylqh8l0vCZQlyCO6eHEfDfjyQDcJjkCq3NRaCQImIbp6D2sCXPEXBSH6pfjar/VyJmLVKSe7t4xP3dUXXjMnGBVG/jlHAWlVn8naT0/WjREsChL84Y3s4z4J2JyXhS53pf2Iy4UPhKnPTUpvUhm+v1LiQhi+t6qmXiugMVtn2bLyNgxLyi5oJ9TQAZS0M9PjpMtqlU65E/ST/AZHBFS2dsDu4aj8srEscqnD+4JPg1PCadbo8douRBEjLOrz5tTrrDZO46shIYfweIdJ0w3hsnWr1Qpmbnmm8gGfXYBN3fqo+wC5PL7rAHEyAOptvEeZmcPE+5OIM87ef4wuO6IGIEamXkV+dSaaLo4jv4dKeoCnmFifDTioerS1IQDyN5JnRDpWM8cIbD+H00SUDJzbm9vpbNEvlD3rZBZxc1Vip5FYDJMfbCmRndkv/vbhfoH048O3DmbqDdP2xebzdXNieZOZjzmDBl6D922+78HbKgLi780flNHeT9fpI+F3bWURIawQ3B3kgR0LYOskF/EtEI9ChVefjCFQBj1tGWCwyoAt27WvmtIezq0/l3VNe3N3n1iWxWWeSUAo2jjXKKT6czWlHinf5ZXb/pdXf8rcOSslCWlx8LEe+QU08VsDtM8xnL2s14rJ0y0JyNqGW4QikQF9WlPHM22GIR8rdvfpipto9S9XCVxAOB6IUi9T3K32IsmsohDWquS0c+7F8Mnjpo4T4TbAbIygTx0448QLQpaE0MAY7s+XWDeIOCnTLAxSCwU8aMDswHzAHBgUrDgMCGgQUIO1WhoxH9INE4DNuO6Be1qNUo6MEFIvVzBQIke4C/5I4gIxPcZ4aj5laAgIH0A==
                       runtime:
-                        subscriptionSecret: c3Vic2NyaXB0aW9uLXNlY3JldA==
-                        debuggerPassword: NEtpKStwIjhiMzVVUUcodw==
-                        mxAdminPassword: NEtpKStwIjhiMzVVUUcodw==
                         runtimeVersion: 9.24.2
                         environmentVariables:
                           - name: custom-env-variable1
@@ -2130,9 +2305,6 @@ components:
                             certificateType: Client
                             key: MIIJnAIBAzCCCVgGCSqGSIb3DQEHAaCCCUkEgglFMIIJQTCCBfoGCSqGSIb3DQEHAaCCBesEggXnMIIF4zCCBd8GCyqGSIb3DQEMCgECoIIE/jCCBPowHAYKKoZIhvcNAQwBAzAOBAhDZRK0G/EhwQICB9AEggTYIUAt0t74nm6I1WcXC3dqVfxOuDiitG/rF0MWFXbOYnBXMsZZ7spe0Hc4x5MhDAAIaD/VO3fozeI8semYONfgxc1hg3k4N4F+HwVtQnqh3c4iGJWCUfSufKwlavlnJHIRpbqSkZGl+3UKIJTwaVmBKtLyJrYhD0H9y0Ev6q3rdyTzLizvY4rwXhZneLnpVQsV+YFC5FdW8ybRQNdpTrPHrQEL7IndLE3hb9HVk2SNwchG+qVuKARfFT29W9E3WUoN5FX2vr0VVGahnvT/y+zgQ/i3peQwlV6WGFkUqBHqrO4M5ZFDywYsKrFBXXDyO0LNmE8HFcFNud1Kvj6XIJ03Wc9PEVAbbGXX3Xwotw3ZAyb6M+uFCd/EBroB0lKNO0yFgEecIgSu1ca/ms4we1CTNmAH+DfFjk+Ks9reyBBnUwNS5kPP8bmh2Jk9C8UhIhFZLMgquFeh1m0uKiUmIUTzH00/NSNSpcugr/cjVz60hygp3QqUF6DejQxa/vi5WZhatb7i2QrBFM3pini+6DF3S0wrgjH/ss+HI9trkESs9fURY1uyYhZ7LvVrL2zny5umEhTR7kYqgzIvLBytSJfQRffyejHGbzh/Ud1mAEMu/MhXgtY0Mbk4K13kJ1pQKE7glv/JTbwp001/9d0x9Cv8xyRMoQN3UDFcMjB96cqTqqm9waDvv6S4AxOljG2qSQsm3Ld0tq1eYLRTphdLW/Ab9WAu5i1ryIiSfwXWK9aCKxjeATVGbcxHH2N+fK5LCSs8RmthYFyZED25FRsZIZxCDW7Y/HVJgI5jTwuklvLyls+Azz1+8UiUoyFrGI7qHFREX4BnVzOdCI+WjNx2SRQii7hBZP7tDeEiU0iyENvUYxxIvA8H2tKk0FuYSsJfYhbQJBSVv6YlnwTggO32SJRunoXtQh008KiQY5VA1Gsr0fjxfafsuUX7g/8LvZvKARlSkP1wOQpbZKXo1Zpc7RM1G9nUv2rlcISbzywDtaN+4Ko3jak0LUaLmPqTbmJYYdEo1kSUEbwXBJxaVrXxvzWFbTi41vhpcaD9kURvuT03b33SV2ZDG3qDASJGNfuahl6EJa3r1O2DI/I5BLzeVW4omR70lktefBuMJjH0vVHuCWzbDoMYWxOJX0Za4a99ii8hRKpKofXnPWEBJdfYW6ZqS165tT99YhyDd92319ntBD/x0PJqZHesgIoOmk89VLeyrVTseSV0OMr7Qfnvue7HWgNraGDhIccKnueC8U+31r+pCuB0dyP/gYm6rMF1gHbup6is4T9/9PEnV0O3pTJgL7nXAmitVAojOKOnnGU098HzsTmLo7Iplv4xznRN0rVJ3pYGC6aP2Ci2Mzn/UIv1NAGkjCi+IFP2n9Z44IPnPREZdXfyEgi+5A0eJqRy5sBoIcvpqiaVhqKXYJCTKRe9mMwk8S6TyDhyanpPwV3fMW4tlLcDBf7OqT/HG10Y65chEj0d+ky0mytur7nfwPQlG+FapZlyeP5hwhp0BQo+KZjNO6abP8IfBTaJ4dxt9kNVSseHuMaw/ux0BRVSsXn68QviOOPvNpW1W9uXSAu1GpNnKdnH1kWoPgGymUCtK0iUspT36F/u1nFso6/gu3ce3g9EvtIGrA/pae7zk57+Q6gN3jMpYqh75jGBzTATBgkqhkiG9w0BCRUxBgQEAQAAADBXBgkqhkiG9w0BCRQxSh5IADAANAAwADQAMwAzADYAZgAtADcAOQA3ADgALQA0AGEAMgA2AC0AOAAyAGEAZAAtAGIANwBjADAAMAAwADMAYQA0AGMAYgAxMF0GCSsGAQQBgjcRATFQHk4ATQBpAGMAcgBvAHMAbwBmAHQAIABTAHQAcgBvAG4AZwAgAEMAcgB5AHAAdABvAGcAcgBhAHAAaABpAGMAIABQAHIAbwB2AGkAZABlAHIwggM/BgkqhkiG9w0BBwagggMwMIIDLAIBADCCAyUGCSqGSIb3DQEHATAcBgoqhkiG9w0BDAEDMA4ECNeK0LuvPAmEAgIH0ICCAvha0L9dGfou/JVS5msokk+IaOu/q/YxJDHXGtLGYRSIyBj2DWnOM88oIOM6L8PVIsM9B49L3HOQKtb4p7QzfkHI+v0vaSSLtWJhk3Mh7jEWfGBppRAGcvy9QVmdKP7YgmTJKbrCdzCD93iBTxZMJoh5dPlCaMXPLxyAaOYkQEOAE3xBRyJDcmU9SSxD2hk8jmuK9DKBig1MokvH5bgQkdbPYw8LqMT55hzpotjg1bHL0UlIha1Ylqh8l0vCZQlyCO6eHEfDfjyQDcJjkCq3NRaCQImIbp6D2sCXPEXBSH6pfjar/VyJmLVKSe7t4xP3dUXXjMnGBVG/jlHAWlVn8naT0/WjREsChL84Y3s4z4J2JyXhS53pf2Iy4UPhKnPTUpvUhm+v1LiQhi+t6qmXiugMVtn2bLyNgxLyi5oJ9TQAZS0M9PjpMtqlU65E/ST/AZHBFS2dsDu4aj8srEscqnD+4JPg1PCadbo8douRBEjLOrz5tTrrDZO46shIYfweIdJ0w3hsnWr1Qpmbnmm8gGfXYBN3fqo+wC5PL7rAHEyAOptvEeZmcPE+5OIM87ef4wuO6IGIEamXkV+dSaaLo4jv4dKeoCnmFifDTioerS1IQDyN5JnRDpWM8cIbD+H00SUDJzbm9vpbNEvlD3rZBZxc1Vip5FYDJMfbCmRndkv/vbhfoH048O3DmbqDdP2xebzdXNieZOZjzmDBl6D922+78HbKgLi780flNHeT9fpI+F3bWURIawQ3B3kgR0LYOskF/EtEI9ChVefjCFQBj1tGWCwyoAt27WvmtIezq0/l3VNe3N3n1iWxWWeSUAo2jjXKKT6czWlHinf5ZXb/pdXf8rcOSslCWlx8LEe+QU08VsDtM8xnL2s14rJ0y0JyNqGW4QikQF9WlPHM22GIR8rdvfpipto9S9XCVxAOB6IUi9T3K32IsmsohDWquS0c+7F8Mnjpo4T4TbAbIygTx0448QLQpaE0MAY7s+XWDeIOCnTLAxSCwU8aMDswHzAHBgUrDgMCGgQUIO1WhoxH9INE4DNuO6Be1qNUo6MEFIvVzBQIke4C/5I4gIxPcZ4aj5laAgIH0A==
                       runtime:
-                        subscriptionSecret: c3Vic2NyaXB0aW9uLXNlY3JldA==
-                        debuggerPassword: NEtpKStwIjhiMzVVUUcodw==
-                        mxAdminPassword: NEtpKStwIjhiMzVVUUcodw==
                         runtimeVersion: 9.24.2
                         environmentVariables:
                           - name: custom-env-variable1
@@ -2804,6 +2976,70 @@ components:
             subscriptionSecret: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
             debuggerPassword: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
             mxAdminPassword: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+            runtimeVersion: 9.24.2
+            environmentVariables:
+              - name: custom-env-variable1
+                value: custom-env-variable1-value
+            customRuntimeSettings:
+              - name: HashAlgorithm
+                value: BCRYPT
+          provider:
+            clusterId: a712d8f4-a77c-4189-a211-e0ea1dfde03c
+            namespace: my-namespace
+            namespaceId: b912d8f4-a77c-4189-a211-e0ea1dfde04f
+          annotations:
+            - key: prometheus.io/port
+              value: '8900'
+              annotationType: Pod
+          services:
+            - name: ephemeral_db
+              plan: OnDemand
+              config: '{type: \"database\"}'
+          runtimeMetricsConfiguration:
+            mode: native
+            interval: 'https://docs.mendix.com/refguide/custom-settings/#11-durationinterval-settings'
+            mxAgentConfig: 'https://docs.mendix.com/developerportal/deploy/private-cloud-monitor/#configuring-mxagent'
+            mxAgentInstrumentationConfig: 'https://docs.mendix.com/developerportal/deploy/private-cloud-monitor/#configuring-mxagent'
+    GetEnvironmentManifest:
+      value:
+        manifestVersion: 2.0.0
+        environment:
+          id: e9m3vf7f
+          properties:
+            name: my-environment
+            production: true
+            defaultStudioTarget: true
+            secretsStoreEnabled: false
+            OverwriteProductTypePCLM: standard
+          deployment:
+            appUrl: 'https://test.app.url'
+            packageId: 045b8cf4-c9cd-41b4-b241-414b87a7f219
+            constants:
+              - name: MyFirstModule.Constant_Name
+                value: '2022-03-10T13:15:00'
+            scheduledEvents:
+              - name: MyFirstModule.Scheduled_event1
+                enabled: true
+            appLogLevels:
+              - name: MY_LOG_LEVEL
+                level: DEBUG
+          container:
+            state: Ready
+            instances: 3
+            coreResources:
+              limits:
+                cpu: '1'
+                memory: '0.512'
+              requests:
+                cpu: '1'
+                memory: '0.512'
+          network:
+            outgoingConnectionCertificate:
+              - enabled: true
+                password: 'base64 encoded string, e.g.  dGVzdA=='
+                certificateType: Client
+                key: long base64 encoded .pfx file
+          runtime:
             runtimeVersion: 9.24.2
             environmentVariables:
               - name: custom-env-variable1

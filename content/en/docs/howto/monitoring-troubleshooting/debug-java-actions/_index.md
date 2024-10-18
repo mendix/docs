@@ -51,10 +51,12 @@ You can also use <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> to disable a 
 4. Click **Step into** (or press <kbd>F5</kbd>) or **Step over** (or press <kbd>F6</kbd>) to move on the next step in the microflow:
     {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-java-actions/18580056.png" class="no-border" >}}
 
-    {{% alert color="warning" %}}With debugger options, the difference between "Step into" and "Step over" is only noticeable if you run into a function call. "Step into" means that the debugger steps into the function, and "Step over" just moves the debugger to the next line in the same Java action. With "Step Return" (pressing <kbd>F7</kbd>), you can instruct the debugger to leave the function; this is basically the opposite of "Step Into." Clicking "Resume" (pressing <kbd>F8</kbd>) instructs the debugger to continue until it reaches another breakpoint.{{% /alert %}}
+    {{% alert color="info" %}}With debugger options, the difference between **Step into** and **Step over** is only noticeable if you run into a function call. **Step into** means that the debugger steps into the function, and **Step over** just moves the debugger to the next line in the same Java action. With **Step return** (pressing <kbd>F7</kbd>), you can instruct the debugger to leave the function; this is basically the opposite of **Step into**. Clicking **Resume** (pressing <kbd>F8</kbd>) instructs the debugger to continue until it reaches another breakpoint.{{% /alert %}}
 
 5. Place your cursor on any of the variables in the Java action to see its value in a pop-up window:
     {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-java-actions/18580057.png" class="no-border" >}}
+
+    {{% alert color="warning" %}}A current limitation is that local variables may not be visible when debugging Java actions in Eclipse. This can affect your ability to inspect variable values during execution.{{% /alert %}}
 
 ## Read More
 

@@ -55,7 +55,7 @@ After you configure the authentication profile for AWS IoT TwinMaker, you can im
 1. In the **App Explorer**, find and open the domain model for your app.
 2. Right-click on the working area of the domain model, and then click **Add entity**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-iot-twinmaker/addentity.png" alt="Adding a new entity to the domain model" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-iot-twinmaker/addentity.png" alt="Adding a new entity to the domain model" class="no-border" >}}
 
 3. Open the new entity by double-clicking on it.
 4. Name the entity **MyWorkspace**.
@@ -63,7 +63,7 @@ After you configure the authentication profile for AWS IoT TwinMaker, you can im
 
 6. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
     
-    {{< figure src="/attachments/appstore/use-content/modules/aws-iot-twinmaker/addmicroflow.png" alt="Adding a microflow" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-iot-twinmaker/addmicroflow.png" alt="Adding a microflow" class="no-border" >}}
 
 7. Enter a name for your microflow, for example, *DS_ListWorkspaces*, and then click **OK**.
 8. In the **App Explorer**, in the **AWSTwinMakerConnector** > **Microflows** section, find the **ListWorkspaces** activity.
@@ -76,7 +76,7 @@ After you configure the authentication profile for AWS IoT TwinMaker, you can im
 13. In the expression builder, type `ENUM_Region`, and then press **Ctrl** + **Space**.
 14. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type *.* and select your AWS region from the list.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-iot-twinmaker/awsregions.png" alt="The list of AWS regions" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-iot-twinmaker/awsregions.png" alt="The list of AWS regions" class="no-border" >}}
     
 15. Click **OK**, and then click **OK** again.
 16. In the **Toolbox** pane, search for the **Create Object** activity, drag it onto the microflow area, and position it between the microflow start event and the **ListWorkspaces** activity.
@@ -87,12 +87,12 @@ After you configure the authentication profile for AWS IoT TwinMaker, you can im
 21. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
 22. Position the **Retrieve** activity between the **ListWorkspaces** activity and the microflow end event.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-iot-twinmaker/microflow.png" alt="The microflow with the Retrieve activity added" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-iot-twinmaker/microflow.png" alt="The microflow with the Retrieve activity added" class="no-border" >}}
 
 23. Double-click the **Retrieve** activity.
 24. In the **Association** section, click **Select**, and then select **ListWorkspacesResponse_WorkspaceSummary** as the association.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-iot-twinmaker/selectassociation.png" alt="Selecting the association" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-iot-twinmaker/selectassociation.png" alt="Selecting the association" class="no-border" >}}
 
 25. In the **List name** field, enter *WorkspaceSummaryList*, and then click **OK**.
 26. In the **Toolbox** pane, search for the **Create List** activity, drag it onto the microflow area, and then position it after the **Retrieve** activity.
@@ -123,7 +123,7 @@ After you configure the authentication profile for AWS IoT TwinMaker, you can im
     * **Entity** - **{module name}.MyWorkspace**
     * **Return value** - *$MyWorkspaceList*
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-iot-twinmaker/fullmicroflow.png" alt="The complete microflow" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-iot-twinmaker/fullmicroflow.png" alt="The complete microflow" class="no-border" >}}
 
 44. Provide a way for users of your app to trigger the microflow by doing the following steps:
     1. In the **App Explorer**, right-click on the name of your module, and then click **Add page**.
@@ -153,4 +153,4 @@ The **Documentation** pane displays the documentation for the currently selected
 1. In the [View menu](/refguide/view-menu/) of Studio Pro, select **Documentation**.
 2. Click on the element for which you want to view the documentation.
 
-    {{< figure src="/attachments/appstore/use-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/technical-reference/doc-pane.png" class="no-border" >}}

@@ -11,7 +11,7 @@ When you create a new test case, it is empty by default. You must add test steps
 
 To see the details of a test step, click the name of the test step. The details will open below the test step.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-test-step/test-step-details.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-test-step/test-step-details.png" class="no-border" >}}
 
 ## Description
 

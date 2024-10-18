@@ -339,7 +339,7 @@ When using **Run locally** in Studio Pro, a local service is used to run the hea
 
 When running on Mendix Cloud, the PDF document generation service on Mendix Public Platform (EU instance) is used, which is developed and maintained by Mendix. The cloud service opens the page in a headless browser and sends the resulting PDF back to the module. The diagram below illustrates this process.
 
-{{< figure src="/attachments/appstore/use-content/modules/document-generation/request-flow.png"  alt="architecture-overview-diagram" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/document-generation/request-flow.png"  alt="architecture-overview-diagram" >}}
 
 ### Security
 

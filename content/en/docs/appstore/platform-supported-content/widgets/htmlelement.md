@@ -17,19 +17,19 @@ Almost any arbitrary custom HTML configuration can be used with HTML Element. He
 
 * Embedded video:
 
-    {{< figure src="/attachments/appstore/use-content/widgets/htmlelement/sample-embedded-html.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/htmlelement/sample-embedded-html.png" class="no-border" >}}
 
 * Text formatting:
 
-    {{< figure src="/attachments/appstore/use-content/widgets/htmlelement/sample-formatting-text.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/htmlelement/sample-formatting-text.png" class="no-border" >}}
 
 * Building a custom UI component:
 
-    {{< figure src="/attachments/appstore/use-content/widgets/htmlelement/sample-custom-ui.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/htmlelement/sample-custom-ui.png" class="no-border" >}}
 
 * Custom-tailored HTML:
 
-    {{< figure src="/attachments/appstore/use-content/widgets/htmlelement/sample-tailored-html.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/htmlelement/sample-tailored-html.png" class="no-border" >}}
 
 ## Configuration
 

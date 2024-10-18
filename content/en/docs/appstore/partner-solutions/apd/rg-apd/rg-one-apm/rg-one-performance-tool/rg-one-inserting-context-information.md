@@ -7,7 +7,7 @@ The Performance Tool (since version 1.2.1) has a special action to allow context
 
 To add context information use the Java action PerformanceTool.PerformanceToolInfoAction in your microflow as shown below.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-performance-tool/rg-one-inserting-context-information/Performance_Tool_Info_Action_Details.png" class="no-border" >}}             
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-performance-tool/rg-one-inserting-context-information/Performance_Tool_Info_Action_Details.png" class="no-border" >}}             
 
 You can use the info string for the action name and a message string. Optionally you can add 3 mendix objects that have all their attributes added.
 
@@ -19,8 +19,8 @@ You can use the info string for the action name and a message string. Optionally
 
 This leads to an action in the action list with context information:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-performance-tool/rg-one-inserting-context-information/Microflow_Java_Action.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-performance-tool/rg-one-inserting-context-information/Microflow_Java_Action.png" class="no-border" >}}
 
 Details of the Performance Tool info action will look similar to the image below.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-performance-tool/rg-one-inserting-context-information/Performance_Tool_Info_Action_InList.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-performance-tool/rg-one-inserting-context-information/Performance_Tool_Info_Action_InList.png" class="no-border" >}}

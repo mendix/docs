@@ -21,7 +21,7 @@ This is the reference guide for CLEVR APM 2 for Mendix. It has the following cha
 * [Performance Recorder](/appstore/partner-solutions/apd/rg-two-recorder/)
 * [Settings](/appstore/partner-solutions/apd/rg-two-settings/)
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-two-apm/APM_Powered_logo.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-two-apm/APM_Powered_logo.png" class="no-border" >}}
 
 The sections below provide a short explanation of APM along with its features and possible uses.
 
@@ -47,7 +47,7 @@ Mendix APM collects statistical data about microflows, client API requests, and 
 
 In development, it is advised to add checking in APM to the generic definition of done.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-two-apm/statistics_history.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-two-apm/statistics_history.png" class="no-border" >}}
 
 ## The Performance Recorder to Collect Individual Traces
 

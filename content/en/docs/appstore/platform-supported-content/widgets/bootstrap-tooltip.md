@@ -28,7 +28,7 @@ To install, import the Bootstrap Tooltip widget into your app and add the widget
 
 When an element has a tooltip attached to it and needs to be conditionally visible, put both the element and the tooltip together in a container and apply the visibility conditions to the container instead of the element:
 
-{{< figure src="/attachments/appstore/use-content/widgets/bootstrap-tooltip/tooltip.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/bootstrap-tooltip/tooltip.png" class="no-border" >}}
 
 ## Configuration
 

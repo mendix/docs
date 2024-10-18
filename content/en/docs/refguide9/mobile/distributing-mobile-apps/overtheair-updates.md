@@ -64,7 +64,8 @@ OTA updates are useful in the following app development cases:
 * Nanoflow changes
 * JavaScript action changes
 * Widgets added or removed
-* A new custom JavaScript-only widget or module added
+* You added a new custom JavaScript-only widget or module 
+* You added a page with no additional logic
 * Non-destructive model changes (for more information, see [Offline-First](/refguide9/offline-first/))
 
 ### When a Full Release Is Required
@@ -76,6 +77,7 @@ If you have made any changes directly to your iOS or Android app, you will have 
 * You fundamentally changed your app's functionality (this is an Apple App Store limitation, and will require a re-release and re-review of your app by Apple—your app might be removed if you do not comply)
 * A new native module has been added (such as the [Native Mobile AR](https://marketplace.mendix.com/link/component/117209) module — for more information see [Modules](/refguide9/modules/))
 * The app has been renamed
+* You added a new microflow or nanoflow
 * The app's launcher icons have been changed
 * The splash screen has been changed
 

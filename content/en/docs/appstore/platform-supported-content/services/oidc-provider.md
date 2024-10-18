@@ -27,7 +27,7 @@ For more information on how SSO brokering and SSO are implemented within a multi
 
 #### SSO Brokering for Rapid Innovation{#brokering}
 
-{{< figure src="/attachments/appstore/use-content/services/oidc-provider/brokering.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/oidc-provider/brokering.png" class="no-border" >}}
 
 The Mendix marketplace offers Single Sign-On (SSO) module, enabling your Mendix application to delegate end-user login to your Identity Providers (IdPs) such as Entra ID and Okta. However, for some organizations, implementing SSO for each Mendix application can cost more or slow down innovation. In such cases, an SSO broker between your IdP and your expanding portfolio of Mendix applications can offer an effective solution.
 
@@ -41,7 +41,7 @@ Your deployment pipeline (deployment agent) would be responsible for registering
 
 Mendix Solution Vendors (MSVs) may build a multi-app solution that acts as a single application from the end-user perspective. This solution may have initially been a big monolith and is gradually refactored into multiple Mendix applications.
 
-{{< figure src="/attachments/appstore/use-content/services/oidc-provider/SSO_within_multiapp.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/oidc-provider/SSO_within_multiapp.png" class="no-border" >}}
 
 As an MSV, you probably want to hide the internal multi-application structure from your end-users. They prefer logging in once to your overall solution rather than separately to individual apps. The OIDC Provider module allows you to build a ‘Central Portal App' where your end-users login once and subsequently get a SSO experience when navigating to the various applications in the solution. This approach does not need an external third-party IdP to create such a SSO experience, as your Central Portal App acts as a lightweight solution for Customer Identity & Access Management (CIAM).
 
@@ -49,7 +49,7 @@ Instead of using local credentials in the Central Portal App, you may want to in
 
 #### Non-user Specific API Consumption 
 
-{{< figure src="/attachments/appstore/use-content/services/oidc-provider/API_consumption.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/oidc-provider/API_consumption.png" class="no-border" >}}
 
 For API security, it is a best practice to use OAuth-tokens rather than API-keys. OAuth tokens are also known as bearer tokens, access tokens or simply JWTs. You have below two options for using OAuth tokens:
 
@@ -398,7 +398,7 @@ This section applies only when your client is using the authorization code grant
 Consider a scenario, where you build an app using the [OIDC Provider](https://marketplace.mendix.com/link/component/214681) service. You can call this app an OIDC Provider app or Provider app. Other apps using the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module redirect end-users to your Provider app for authentication. You can choose how your Provider app handles the authentication process.
 The **LoginLocation** is a constant in the OIDC Provider service that controls where end-users are authenticated. The default value is a local sign in using a username and password as shown below:
 
-{{< figure src="/attachments/appstore/use-content/services/oidc-provider/Basic_Username_Password.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/services/oidc-provider/Basic_Username_Password.png" class="no-border" >}}
 
 However, if you want the Provider app to act as an IAM broker, you need to redirect the authorization request within your Provider app to the endpoint of the local SSO module you choose to use. To do so, perform the steps below:
 

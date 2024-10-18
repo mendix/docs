@@ -62,7 +62,7 @@ After setting up the authentication, to analyze a document, implement the **Anal
     3. Set the access rights for **Name**, **DeleteAfterDownload** and **Contents** to **Read/write**
     4. Set the remaining access rights to **Read**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-textract/6-completed-access-rules.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-textract/6-completed-access-rules.png" class="no-border" >}}
    
 6. In the App Explorer, right-click on the name of your module, click **Add page**, and then select the **Grid** template.
 7. Enter a name for your page, for example, *Document_Overview*, and then click **OK**.
@@ -98,7 +98,7 @@ After setting up the authentication, to analyze a document, implement the **Anal
     2. Set the values for [AWS_Region](https://docs.aws.amazon.com/general/latest/gr/textract.html#textract_region), **AnalyzeDocumentRequest**, and the **FileDocument** parameter.
     3. Click **OK**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-textract/analyze-document-properties.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-textract/analyze-document-properties.png" class="no-border" >}}
     
 25. In the **Toolbox** [pane](/refguide/view-menu/#layout-of-panes), search for the **AbstractDocumentAnalysisResponse_ProcessResults** microflow and drag it onto the microflow area.
 26. Position the **AbstractDocumentAnalysisResponse_ProcessResults** microflow between the **AnalyzeDocument** activity and the microflow end event.
@@ -114,7 +114,7 @@ After setting up the authentication, to analyze a document, implement the **Anal
     3. Select the list that the **AbstractDocumentAnalysisResponse_ProcessResults** microflow returns.
 31. Create a page with a data view of the **Page** entity, and configure the page to display the specialized `BlockItem` model.
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-textract/block-item-page.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-textract/block-item-page.png" class="no-border" >}}
 
 32. In the **Toolbox** pane, find the **Show page** activity.
 33. Drag the activity onto the microflow area between the **List* operation** activity and the end event.
@@ -126,7 +126,7 @@ After setting up the authentication, to analyze a document, implement the **Anal
 35. On the **Document_Overview** page, right-click the **Delete** button and add an **Action** button.
 36. Right-click the **Action** button, and select the **ACT_AnalyzeDocument** microflow as the on-click action. 
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-textract/analyze-document-configure-microflow.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-textract/analyze-document-configure-microflow.png" class="no-border" >}}
 
 ## Technical Reference {#technical-reference}
 
@@ -137,4 +137,4 @@ The **Documentation** pane displays the documentation for the currently selected
 1. In the [View menu](/refguide/view-menu/) of Studio Pro, select **Documentation**.
 2. Click on the element for which you want to view the documentation.
 
-    {{< figure src="/attachments/appstore/use-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/technical-reference/doc-pane.png" class="no-border" >}}

@@ -1221,12 +1221,12 @@ In the Amazon S3 plan configuration, enter the following details:
     * Mendix recommends using the same IAM role to manage Postgres databases and S3 buckets, as this would be easier to set up and maintain.
 * **K8s Service Account** - the Kubernetes Service Account to create and attach to the IAM role.
 
-  {{% alert color="warning" %}}
-  Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
+{{% alert color="warning" %}}
+Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
     * `mendix-operator`
     * `mendix-agent`
     * `mendix-storage-provisioner`
-  {{% /alert %}}
+{{% /alert %}}
 
 AWS IRSA allows a Kubernetes Service Account to assume an IAM role. For this to work correctly, the IAM role's trust policy needs to trust the Kubernetes Service Account:
 

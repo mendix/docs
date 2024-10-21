@@ -137,7 +137,12 @@ Your pipeline can include the following steps:
 * Checkout – Check out a branch. To configure this step, use the drop-down menu to select the branch to check out. You can select either the main branch or one of your most recently used branches.
 * Build – Build a deployment package based on the latest major, minor, or patch version of the branch you checked out. The highest version is incremented based on the increment settings specified in this step.
 * Maia Best Practice Recommender – Evaluate results of the [Maia Best Practice Recommender](/refguide/best-practice-recommender/) within your pipeline. You can configure this step to fail the pipeline if errors, warnings, deprecations, and/or recommendations are detected.
-* Unit Testing – Import the [Unit Testing](https://marketplace.mendix.com/link/component/390?_gl=1*1xlym4r*_gcl_au*OTc4NTQ4MDAxLjE3MjY0ODA3NjI.) module into your application to verify if all tests are successful. You can use it in a running environment to automate regression tests. For API key configuration, it is recommended to use a User-defined variable.
+* Unit Testing – This step executes the [Unit Testing](/appstore/modules/unit-testing/) module in a running environment. If any unit test fails, the pipeline will be marked as failed, with the run details and output parameters showing the failure count and relevant information. Ensure to add below prerequisites before you add the Unit Testing pipeline step.
+    * Import the [Unit Testing](https://marketplace.mendix.com/link/component/390) module into your Mendix application from the Marketplace.
+    * The environment for the Unit Testing must be in running state.
+
+Since the endpoint is secured with secret credentials, Mendix releases the pipeline variables, allowing the customer to configure them securely during the unit testing step. This step will call the unit testing API endpoint, similar to how a customer would do it. For more information, see the [Running Unit Tests Through the Remote API](/appstore/modules/unit-testing/#running-unit-tests-through-the-remote-api) section of the *Unit testing*.
+
 * Publish – Publish the newly built deployment package to a repository.
 * Start Environment – Start a selected environment.
 * Stop Environment – Stop a selected environment.

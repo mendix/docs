@@ -40,7 +40,7 @@ To prepare the data structure and the GUI, follow these steps:
 3. Create a menu item to access the customer overview page.
 4. Create an entity called *XMLDocument* that inherits all the properties from **System.FileDocument**:
 
-    {{< figure src="/attachments/refguide/modeling/integration/importing-xml-documents/18581650.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/export-xml-documents/18581650.png" class="no-border" >}}
 
 5. Create the overview and detail pages to manage objects of the **XMLDocument** type.
 6. Create a menu item to access the XML document overview page (for more information, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/)).
@@ -54,7 +54,7 @@ To add an XML schema (XSD), follow these steps:
 1. Right-click a module in the **App Explorer** and select **Add Other** > **XML schema** from the menu.
 2. Enter *CustomersXSD* as the **Name** and click **OK**:
 
-    {{< figure src="/attachments/refguide/modeling/integration/importing-xml-documents/18581696.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/export-xml-documents/18581696.png" class="no-border" >}}
 
 3. In the **XML Schema** editor, click **Select** and select the XSD file that you downloaded earlier:
 

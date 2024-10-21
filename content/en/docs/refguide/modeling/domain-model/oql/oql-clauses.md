@@ -344,7 +344,7 @@ entity_path | entity_name | ( sub_oql_query ) [ [ AS ] from_alias ]
 
 `entity_path` specifies the entity to join and the path from an earlier defined entity in the `FROM` clause to this entity.
 
-The example path `Crm.Customer/Crm.Customer_Address/Crm.Address` defines an association path from the entity **Crm.Customer** to a new entity **Crm.Address**.
+The example path `Crm.Customer/Crm.Customer_Address/Crm.Address` defines an association path from the entity **Crm.Customer** to an associated entity **Crm.Address**.
 
 As with `entity_name`, double quotes can be used.
 

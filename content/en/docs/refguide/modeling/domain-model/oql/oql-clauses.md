@@ -346,9 +346,9 @@ entity_path | entity_name | ( sub_oql_query ) [ [ AS ] from_alias ]
 
 The example path `Crm.Customer/Crm.Customer_Address/Crm.Address` defines an association path from the entity **Crm.Customer** to a new entity **Crm.Address**.
 
-Similar to `entity_name`, double quotes can be used.
+As with `entity_name`, double quotes can be used.
 
- If `entity_path` is specified, the `ON` condition is optional. If entitiies are joined by name without using association path, the `ON` condition is mandatory.
+ If `entity_path` is specified, the `ON` condition is optional. If entities are joined by name without using association path, the `ON` condition is mandatory.
 
 #### `JOIN` types
 
@@ -369,7 +369,7 @@ JOIN Sales.Request Req ON Cust.LastName = Req.CustomerName
 | Doe          | 1      |
 | Moose        | 2      |
 
-If the model contains an association between `Sales.Request` and `Sales.Customer`, a more logical way to write a query would be using join on association:
+If the model contains an association between `Sales.Request` and `Sales.Customer`, a more logical way to write this query would be to use a join on association:
 
 ```sql
 SELECT Cust/LastName, Req/Number
@@ -394,7 +394,7 @@ The syntax is as follows:
 LEFT [ OUTER ] JOIN entity_path [ ON <constraint> ]
 ```
 
-Example of a `LEFT JOIN` with predicate:
+Example of a `LEFT OUTER JOIN` with predicate:
 
 ```sql
 SELECT Cust/LastName, Req/Number
@@ -422,7 +422,7 @@ LEFT OUTER JOIN Cust/Sales.Request_Customer/Sales.Request Req
 | Moose        | 2      |
 | Elk          | NULL   |
 
-###### `LEFT OUTER JOIN`
+###### `RIGHT OUTER JOIN`
 
 A `RIGHT OUTER JOIN` query compares each row of entity A with each row of entity B to find all pairs of rows which have an association and thus satisfy the `JOIN` predicate. If the association exists and the `JOIN` predicate is satisfied, the column values for each matched pair of rows of A and B are combined into a resulting row.
 
@@ -538,7 +538,13 @@ WHERE LastName = 'Doe'
 | --------- | -------- |
 | John      | Doe      |
 
-It is possible to specify multiple conditiions in a constraint using logical operators `AND` and `OR`. Notice that `AND` has precedence over `OR`:
+It is possible to specify multiple conditions in a constraint using logical operators `AND` and `OR`.
+
+{{% alert color="info" %}}
+Notice that `AND` has precedence over `OR`
+{{% /alert %}}
+
+For example:
 
 ```sql
 SELECT CustomerName, Number
@@ -556,7 +562,7 @@ WHERE
 | Doe          | 1      |
 | Caribou      | -1     |
 
-Precedence of logical operators can be modified using parentheses:
+You can modify the precedence of logical operators using parentheses:
 
 ```sql
 SELECT CustomerName, Number
@@ -575,9 +581,13 @@ WHERE
 | ------------ | ------ |
 | Caribou      | -1     |
 
-It is possible to use a subquery in `WHERE`. See [Subqueries](/refguide/oql-clauses/#subquery-in-where) for examples.
+You can also use a subquery in `WHERE`. See [Subqueries](/refguide/oql-clauses/#subquery-in-where) for examples.
 
-A feature that is specific to OQL compared to standard SQL syntax is using paths to other entities over associations. For example, when selecting from entity `Sales.Customer`, we can access an attribute of the associated entity `Sales.Request`:
+##### Entities over Associations in `WHERE` Clause
+
+A feature that is specific to OQL and is not in the standard SQL syntax is using paths to other entities over associations.
+
+For example, when selecting from entity `Sales.Customer`, we can access an attribute of the associated entity `Sales.Request`:
 
 ```sql
 SELECT FirstName, LastName
@@ -589,6 +599,8 @@ WHERE
 | FirstName | LastName |
 | --------- | -------- |
 | John      | Doe      |
+
+##### `WHERE` Clause Returns `NULL`
 
 In some cases, the expression in `WHERE` can result in `NULL`. In that case, the `WHERE` expression is equal to `FALSE`, and the query returns no rows.
 
@@ -603,7 +615,7 @@ WHERE NULL
 
 ### `GROUP BY` clause
 
-The `GROUP BY` clause is used to group OQL query results into summary rows based on the values of one or multiple attribuites. It is possible to filter aggregated results further using a `HAVING` clause.
+The `GROUP BY` clause groups OQL query results into summary rows based on the values of one or more attributes. You can filter aggregated results further using a `HAVING` clause.
 
 #### Syntax
 
@@ -616,13 +628,16 @@ GROUP BY
 [HAVING <constraint>]
 ```
 
+{{% alert color="info" %}}
+The `GROUP BY` clause is usually used in combination with [aggregations](/refguide/oql-expressions/#aggregates): `AVG`, `COUNT`, `MAX`, `MIN`, `SUM`.
+{{% /alert %}}
+
 #### Using `GROUP BY`
 
-The `GROUP BY` clause is usually used in combination with [aggregations](/refguide/oql-expressions/#aggregates): `AVG`, `COUNT`, `MAX`, `MIN`, `SUM`.
+When a query contains a `GROUP BY` clause, then its `SELECT` clause can contain only aggregate functions and attributes and other expressions used in `GROUP BY`. If an attribute is present in `SELECT`, but not present in `GROUP BY`, the query is invalid.
 
-If a query contains a `GROUP BY` clause, then its `SELECT` clause can contain only aggregate functions and attributes and other expressions used `GROUP BY`. If an attribute is present in `SELECT`, but not present in `GROUP BY`, such query is invalid.
-
-To better illustrate examples below, let's assume that there is an entity `Sales.Location` with the following objects:
+{{% alert color="info" %}}
+The examples below assume that there is an entity `Sales.Location` with the following objects:
 
 ```sql
 SELECT Brand, City, Stock, Address, LocationNumber
@@ -637,6 +652,9 @@ FROM Sales.Location
 | Veidt  | Rotterdam | 23    | Address 2 | 2              |
 | Veidt  | Rotterdam | 1     | Address 6 | 6              |
 | Veidt  | Utrecht   | 2     | Address 5 | 5              |
+{{% /alert %}}
+
+##### `GROUP BY` with Single Aggregate
 
 The following query retrieves total stock per brand:
 
@@ -652,7 +670,9 @@ GROUP BY Brand
 | Rekall | 12       |
 | Veidt  | 26       |
 
-It is possible to specify multiple aggregate functions in combinantion with `GROUP BY`:
+##### `GROUP BY` with Multiple Aggregates
+
+You can specify multiple aggregate functions in combination with `GROUP BY`:
 
 ```sql
 SELECT
@@ -670,7 +690,9 @@ GROUP BY Brand
 | Rekall | 12       | 3        | 9        |
 | Veidt  | 26       | 1        | 23       |
 
-It is possible to group by multiple attributes:
+##### `GROUP BY` Multiple Attributes
+
+You can also group by multiple attributes:
 
 ```sql
 SELECT Brand, City, SUM(Stock) AS SumStock
@@ -686,7 +708,9 @@ GROUP BY Brand, City
 | Veidt  | 24       |
 | Veidt  | 2        |
 
-It is possible to use functions of attributes in the `SELECT` clause, but only if those attributes are present in the `GROUP BY` clause.
+##### Using Functions with `GROUP BY`
+
+You can use functions of attributes in the `SELECT` clause, but only if those attributes are present in the `GROUP BY` clause:
 
 ```sql
 SELECT Brand, LENGTH(Brand) AS NameLen, SUM(Stock) AS SumStock
@@ -700,7 +724,7 @@ GROUP BY Brand
 | Rekall | 6       | 12       |
 | Veidt  | 5       | 26       |
 
-It is also possible to use functions of attributes in `GROUP BY`. Please note that if `GROUP BY` contrains a function of an attribute, the attribute itself cannot be present in the `SELECT` clause because that would lead to ambiguity.
+You can also use functions of attributes in `GROUP BY`. Please note that if `GROUP BY` constrains a function of an attribute, the attribute itself cannot be present in the `SELECT` clause because that would lead to ambiguity.
 
 ```sql
 SELECT LENGTH(Brand) AS NameLen, SUM(Stock) AS SumStock
@@ -714,16 +738,18 @@ GROUP BY LENGTH(Brand)
 | 6       | 12       |
 | 5       | 26       |
 
-{{% alert color="info" %}}
-`GROUP BY` behavior in OQL relies on behavior of the underlying database. Some functionality is allowed by OQL syntax, but its implementation differs per vendor. It is recommended not to use that following functionality to avoid potential migration problems.
+{{% alert color="warning" %}}
+`GROUP BY` behavior in OQL relies on the behavior of the underlying database. Some functionality is allowed by OQL syntax, but its implementation differs per vendor.
 
-1. Some databases do not allow using aliases in `GROUP BY`. [Supported](/refguide/system-requirements/#databases) database vendors that allow that are: HSQLDB, PostgreSQL, MariaDB and MySQL.
-2. Using a subquery in `GROUP BY` is also not supported by some databases. It is allowed in PostgreSQL, MariaDB and MySQL.
+It is recommended not to use the following functionality to avoid potential migration problems.
+
+1. Aliases in `GROUP BY`. [Supported](/refguide/system-requirements/#databases) database vendors that allow do allow aliases in `GROUP BY` are HSQLDB, PostgreSQL, MariaDB, and MySQL.
+2. Subqueries in `GROUP BY`. Supported database vendors which do allow subqueries in `GROUP BY` are PostgreSQL, MariaDB, and MySQL.
 {{% /alert %}}
 
 #### Using `GROUP BY` with `HAVING`
 
-The `HAVING` clause is used to filter aggregated results of `GROUP BY`. The difference between `HAVING` and `WHERE` is that `WHERE` is applied to every object before the objects are grouped, and `HAVING` is applied to the aggregate rows.
+The `HAVING` clause is used to filter aggregated results of `GROUP BY`. The difference between `HAVING` and `WHERE` is that `WHERE` is applied to every object before the objects are grouped, and `HAVING` is applied only to the aggregate rows.
 
 The following query returns only aggregate rows for brands with more than one location:
 
@@ -740,7 +766,7 @@ HAVING COUNT(*) > 1
 | Rekall | 12       | 2             |
 | Veidt  | 26       | 3             |
 
-It is possible to use aggregate functions that are not present in `SELECT`:
+You can use aggregate functions that are not present in `SELECT`:
 
 ```sql
 SELECT Brand
@@ -754,7 +780,7 @@ HAVING COUNT(*) > 1 AND SUM(Stock) < 20
 | ------ |
 | Rekall |
 
-More complex expressions such as subqueries and functions are allowed in `HAVING`:
+You can also use more complex expressions such as subqueries and functions in `HAVING`:
 
 ```sql
 SELECT Brand
@@ -774,7 +800,9 @@ HAVING
 
 The `ORDER BY` clause specifies the sort order used on columns returned in a `SELECT` statement. Multiple columns can be specified. Columns are ordered in the sequence of the items in the `ORDER BY` clause.
 
+{{% alert color="info" %}}
 This clause can include items that do not appear in the `SELECT` clause, except when `SELECT DISTINCT` is specified or when a `GROUP BY` clause exists. When `UNION` is used, the column names or aliases must be those specified in the `SELECT` clause of the first part of the query.
+{{% /alert %}}
 
 #### Syntax
 
@@ -791,6 +819,8 @@ ORDER BY
 
 `order_by_expression` specifies an attribute of an entity or an alias from the `FROM` clause to sort on.
 
+For example:
+
 ```sql
 SELECT FirstName, LastName
 FROM Sales.SalesPerson
@@ -806,15 +836,18 @@ ORDER BY LastName
 | Jane      | Moose    |
 
 {{% alert color="info" %}}
-For details on the default ordering behavior of NULL values, see the [NULL Values Order Behavior](/refguide/ordering-behavior/#null-ordering-behavior) section of *Order By Behavior*.
+For information on the default ordering behavior of NULL values, see the [NULL Values Order Behavior](/refguide/ordering-behavior/#null-ordering-behavior) section of *Order By Behavior*.
 {{% /alert %}}
+
 {{% alert color="info" %}}
-It is not possible to use funcntions of attribuites in `ORDER BY` clause.
+It is not possible to use functions of attributes in an `ORDER BY` clause.
 {{% /alert %}}
 
 #### ASC
 
-`ASC` specifies that the results must be ordered ascending, from the lowest to the highest value. This is the default sort type, so results are equivalent to not specifying `ASC`.
+`ASC` specifies that the results must be returned in ascending order, from the lowest to the highest value. This is the default sort type, so results are equivalent to not specifying `ASC`.
+
+For example:
 
 ```sql
 SELECT FirstName, LastName
@@ -832,7 +865,9 @@ ORDER BY LastName ASC
 
 #### DESC
 
-`DESC` specifies that the results must be ordered descending, from the highest to the lowest value.
+`DESC` specifies that the results must be returned in descending order, from the highest to the lowest value.
+
+For example:
 
 ```sql
 SELECT FirstName, LastName
@@ -848,9 +883,11 @@ ORDER BY LastName DESC
 | Amelia    | Doe      |
 | Oliver    | Doe      |
 
-#### Multiple `ORDER BY` criteria
+#### Multiple `ORDER BY` Criteria
 
-Multiple criteria can be specified in `ORDER BY` separated by comma:
+Multiple criteria can be specified in `ORDER BY`. Separate each criterion with a comma.
+
+For example:
 
 ```sql
 SELECT FirstName, LastName
@@ -866,7 +903,7 @@ ORDER BY LastName, FirstName
 | Jane      | Moose    |
 | Oliver    | Moose    |
 
-`ASC` and `DESC` modifiers apply to each criterion separately:
+You can apply `ASC` and `DESC` modifiers to each criterion separately:
 
 ```sql
 SELECT FirstName, LastName
@@ -882,9 +919,13 @@ ORDER BY LastName DESC, FirstName ASC
 | John      | Doe      |
 | Oliver    | Doe      |
 
-#### `ORDER BY` associated attribute
+#### `ORDER BY` Associated Attribute
 
-OQL allows specifying paths to attributes of associated entities in the `ORDER BY` clause. Note that in the example below `Sales.Customer` object for Jim Elk does not have any associated objects of `Sales.Request` entity. Depending on the database, that object will end up either at the beggining or at the end of the ordered result. See [NULL Values Order Behavior](/refguide/ordering-behavior/#null-ordering-behavior).
+OQL allows you to specify paths to attributes of associated entities in the `ORDER BY` clause.
+
+{{% alert color="info" %}}
+In the example below `Sales.Customer` object for Jim Elk does not have any associated objects of the `Sales.Request` entity. Depending on the database, that object will end up either at the beginning or the end of the ordered result. See [NULL Values Order Behavior](/refguide/ordering-behavior/#null-ordering-behavior) for more information.
+{{% /alert %}}
 
 ```sql
 SELECT LastName
@@ -898,9 +939,13 @@ ORDER BY Sales.Customer/Sales.Customer_Request/Sales.Request/Number
 | Moose        |
 | Elk          |
 
-### `LIMIT` and `OFFSET` clauses
+### `LIMIT` and `OFFSET` Clauses
 
-With the `LIMIT` and `OFFSET` clauses, a portion of the result of a query can be returned. It is recommended to combine `LIMIT` and `OFFSET` clauses with `ORDER BY` because the return order of rows without an `ORDER BY` clause is inconsistent and can lead to unpredictable output.
+With the `LIMIT` and `OFFSET` clauses, you can specify that only a portion of the result of a query is returned.
+
+{{% alert color="info" %}}
+Mendix recommends combining `LIMIT` and `OFFSET` clauses with `ORDER BY` because the return order of rows without an `ORDER BY` clause is undefined and can lead to unpredictable output.
+{{% /alert %}}
 
 #### Syntax
 
@@ -914,7 +959,7 @@ The syntax is as follows:
 
 `LIMIT` specifies how many rows must be returned.
 
-For example, the following query retrieves first 3 records sorted by last name and first name:
+For example, the following query retrieves the first three records sorted by last name and first name:
 
 ```sql
 SELECT Brand, City, LocationNumber
@@ -933,7 +978,7 @@ LIMIT 3
 
 `OFFSET` specifies how many rows must be skipped before returning the result rows.
 
-For example, the following query retrieves all records except the first 2:
+For example, the following query retrieves all records except the first two:
 
 ```sql
 SELECT Brand, City, LocationNumber
@@ -993,7 +1038,7 @@ FROM Sales.Request Req
 | -1            | 0             |
 
 {{% alert color="info" %}}
-Please note that if you use a subquery as an expression in `SELECT`, then such subquery should always return a single column, and the number of rows should be at most one. If the subquery returns more than one row or a number of columns different than one, that will lead to an exception during runtime.
+If you use a subquery as an expression in `SELECT`, then such subquery should always return a single column, and the number of rows should be at most one. If the subquery returns more than one row or a number of columns different than one, that will lead to an exception during runtime.
 {{% /alert %}}
 
 #### Subquery in `FROM` {#subquery-in-from}

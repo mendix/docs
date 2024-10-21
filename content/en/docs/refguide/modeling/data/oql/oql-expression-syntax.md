@@ -18,10 +18,21 @@ Literals represent values that are constant and are part of the query itself. Th
 | d*.d*  | 5.3             | `DECIMAL`            |
 | -      | `NULL`          | -                    |
 
-Where `d` is a number, 's' is any character. * indicates zero or more characters.
+Where `d` is a number, `s` is any character, * indicates zero or more characters.
 
 ### DATETIME
 There is no direct support for `DATETIME` literals. For functions that take `DATETIME` as input, it can be represented with a `STRING` in a ISO date time format or a `LONG` value representing unix seconds.
+
+## System variables
+Xpath [system variables](/refguide/xpath-keywords-and-system-variables/) can be used in OQL with the format:
+```sql
+'[%SystemVariable%]'
+```
+
+These variables can be used the same way as other expressions. This query gets the names of all `Person` objects that are associated with the current user:
+```sql
+select Name from Person where Person_USER = '[%CurrentUser%]'
+```
 
 ## Operators
 Operators perform common operations and do not use parenthesis in their syntax. They take `expression` as input, which can be other operator results, functions, columns and literals.

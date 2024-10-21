@@ -14,7 +14,7 @@ An OQL expression is a query building block that returns a value or a list of va
 
 OQL expressions can be used in `WHERE`, `SELECT`, `GROUP BY`, `UNION`, and `JOIN` clauses. For more information, see [OQL clauses](/refguide/oql-clauses/).
 
-## Aggregations
+## Aggregations{#aggregates}
 
 Aggregations are functions that reduce a list of values from a retrieved column (or columns) into a single value. They can be used in the following ways:
 * as an attribute in a `SELECT` clause

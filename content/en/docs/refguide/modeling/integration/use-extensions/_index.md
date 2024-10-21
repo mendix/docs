@@ -1,13 +1,15 @@
 ---
 title: Use Extensions with Studio Pro
-url: /howto/integration/use-extensions/
+url: /refguide/use-extensions/
+aliases:
+   - /howto/integration/use-extensions/
 ---
 
-## Introduction 
+## Introduction
 
 Connect to and receive information from external sources with extensions in Mendix Studio Pro.
 
-How-tos available for this topic:
+Documents available for this topic:
 
 * [Use the Data Importer](/howto/integration/use-the-data-importer/)
 

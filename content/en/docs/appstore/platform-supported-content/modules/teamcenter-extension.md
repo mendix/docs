@@ -69,6 +69,10 @@ Follow the instructions in [Using Marketplace Content](/appstore/use-content/) t
 
 ### Actions
 
+#### Search Item Revisions from Teamcenter {#getitemrevision}
+
+The `Search Item Revisions` action allows you to generate the domain model and microflow to search for and retrieve `ItemRevisions` or its specialization. The resulting microflow implements the saved query `Item Revision...` from Teamcenter.
+
 #### Create Item and Item Revision {#createitem-and-itemrevision}
 
 The `Create Item and Item Revision` action allows you to configure and generate the domain model and microflow to create an Item with `ItemRevision` or its specializations in Teamcenter. The resulting microflow implements the `Create Object and Update Properties` actions from the Teamcenter Connector. With the `Create Object` action, the `Item` and `ItemRevision` get created in Teamcenter, setting the Teamcenter properties that need to be set upon creation. With the `Update Properties` action, the remaining properties are updated in Teamcenter.

@@ -129,6 +129,7 @@ The settings below influence the behavior of the log files. These settings can o
 | <a id="UseNetworkTimeout" href="#UseNetworkTimeout">UseNetworkTimeout</a> | This setting is applied to PostgreSQL. It affects the timeout mechanism used when reserving new ids for Mendix objects. If set to true, the socket level request timeout is used. In that case, the request timeout is handled within the operating system. If set to false, the timeout is handled by Mendix runtime. For other databases, timeouts are always handled by Mendix runtime. | true |
 | <a id="JdbcLoginTimeout" href="#JdbcLoginTimeout">JdbcLoginTimeout</a> | This setting defines the database connection establishment time in milliseconds. | 5000 (5 seconds) |
 | <a id="SynchronizationCleanupInterval" href="#SynchronizationCleanupInterval">com.mendix.offline.SynchronizationCleanupInterval</a> | This setting defines how often objects of type `System.OfflineSynchronizationHistory` are cleaned up. | 90 (90 days) |
+| <a id="DataStorageOptimizeSecurityColumns" href="#DataStorageOptimizeSecurityColumns">DataStorage.OptimizeSecurityColumns</a> | When true, query columns generated to evaluate XPath constraints in access rules are optimized to `true` if the runtime can determine that the value will always be true for the objects that the query returns. This is almost always an improvement, but we have seen cases where the PostgreSQL query planner has worse performance for the simpler query. Supported since Mendix 10.17 | false |
 
 ### Connection Pooling {#connection-pooling}
 

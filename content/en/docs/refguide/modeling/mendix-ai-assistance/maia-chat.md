@@ -19,7 +19,7 @@ MendixChat was rebranded to Maia Chat and released in GA in Studio Pro 10.12.0.
 Maia Chat does not use any project, customer, or company information. It only uses the data that you have entered in the Chat. Please do not enter any personal or sensitive data!
 {{% /alert %}}
 
-Maia Chat is a built-in chat interface powered by Generative AI in Studio Pro. Developers can ask questions about app development in Mendix, including how to apply concepts, best practices, and development patterns. It is built based on large language models (LLMs), using data from [Mendix Docs](/), [Mendix Community](https://community.mendix.com/), and [Mendix Academy](https://academy.mendix.com/).
+Maia Chat is a built-in chat interface powered by Generative AI in Studio Pro. Developers can ask questions about app development in Mendix, including how to apply concepts, best practices, and development patterns. It is built based on large language models (LLMs), using data from various resources like [Mendix Docs](/), [Mendix Community](https://community.mendix.com/), and [Mendix Academy](https://academy.mendix.com/).
 
 ## Using Maia Chat
 
@@ -51,7 +51,7 @@ The following steps present an example of how you can interact with Maia Chat by
 
         {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-chat/maia-chat-example.png" width="350px" >}}
 
-        {{% alert color="info" %}}In Studio Pro 10.7.0 and above, you can also see the Mendix version of the references, the level required if the reference comes from Mendix Academy, and the date and answer status if the reference comes from the Mendix Community{{% /alert %}}
+        {{% alert color="info" %}}In Studio Pro 10.7.0 and above, you can also see the Mendix version of the references, the level required if the reference comes from Mendix Academy, and the date and answer status if the reference comes from the Mendix Community.{{% /alert %}}
 
 3. To give your feedback on the given answer, click the thumbs up icon ({{% icon name="thumbs-up" %}}) or the thumbs down icon ({{% icon name="thumbs-down" %}}). 
 

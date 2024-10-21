@@ -192,21 +192,6 @@ SELECT LastName, Number FROM Sales.Order WHERE LastName = Moose
 | Moose    | 12     |
 
 
-
-In this query a small difference between decimal columns will return no results:
-```sql
-SELECT LastName, Number FROM Sales.Order WHERE Price = 1.50000001
-```
-
-It can be modified with the use of `ROUND` to only compare two fraction digits : 
-```sql
-SELECT LastName, Price FROM Sales.Order WHERE ROUND(Price, 2) = ROUND(1.50000001, 2)
-```
-
-| LastName | Price |                                                         
-|----------|-------|
-| Doe      | 1.5   |
-
 #### != (Not equal to)
 Inverse of `=`. Same `NULL` handling rules apply. Partial expression `expression !=` is equivalent to `NOT expression =`. 
 
@@ -458,7 +443,8 @@ If one of the operands in a binary operation or the unary operand have a `NULL` 
 This does not apply to `=` and `!=` operators. Handling of `NULL` in [other operators](#other-operators) is detailed in the specific operator subsections.
 
 
-
+## String coercion
+In some databases, using `STRING` type variables in place of numeric, `DATETIME` or `BOOLEAN` values in operators and functions that explicitly require those types, causes the database to perform an implicit conversion. A common example would be the use of a `STRING` representation of a `DATETIME` variable inside a `DATEPART` function. It is recommended to always cast strings to the exact type the operator or functions.
 
 ## Functions
 
@@ -478,7 +464,7 @@ These are currently supported functions:
 
 ### CAST
 
-The `CAST` function converts an expression to a specific data type. 
+The `CAST` function converts an expression to a specified data type. 
 
 #### Syntax
 The syntax is as follows:
@@ -528,7 +514,7 @@ Converting `DATETIME`, `BOOLEAN` to `STRING` returns different format per databa
 A frequent use case for `CAST` is to convert your date from the `DATETIME` data type to a more readable `STRING` type:
 
 ```sql
-CAST ( datetime_string AS string )
+CAST ( datetime_column AS string )
 ```
 
 ### COALESCE
@@ -587,23 +573,62 @@ DATEDIFF ( unit , startdate_expression, enddate_expression [, timezone ] )
 
 ##### startdate_expression
 
-`startdate_expression` specifies the start date of the period being calculated. This should be formatted in an expression which resolves to a date/time value.
+`startdate_expression` specifies the start date of the period being calculated. The expression should resolve to a `DATETIME` value, string representations of `DATETIME` are accepted.
 
 ##### enddate_expression
 
-`enddate_expression` specifies the end date of the period being calculated. This should be formatted in an expression which resolves to a date/time value.
+`enddate_expression` specifies the end date of the period being calculated. The expression should resolve to a `DATETIME` value, string representations of `DATETIME` are accepted.
 
 ##### timezone
 
 `timezone` specifies the time zone to use for the retrieval. This parameter is optional and defaults to the local time zone. It should be a string literal containing an IANA time zone. GMT offset time zones are not supported.
 
-# DATEPART
+#### Examples
 
-## Description
+Assume the entity `Sales.Period` has 2 objects:
+```sql
+SELECT * FROM Sales.Period
+```
 
-The `DATEPART` function retrieves a specified element from a date/time values. This element is of type integer.
+| ID | Start               | End                 | Revenue |                                                        
+|:---|---------------------|---------------------|---------|
+| -  | 2024-05-02 00:00:00 | 2025-07-05 00:00:00 | 28      |
+| -  | 2024-05-02 00:00:00 | 2024-06-02 15:12:45 | 10      |
 
-## Syntax
+We can use `DATEDIFF` to get the time interval between two dates:
+```sql
+SELECT DATEDIFF(MONTH , End, Start ) as difference FROM Sales.Period
+```
+
+| difference |                                                        
+|------------|
+| 14         |
+| 1          |
+
+This interval can be used to calculate the average revenue per month:
+```sql
+SELECT Revenue : DATEDIFF(MONTH, End, Start ) as avg_revenue FROM Sales.Period
+```
+
+| avg_revenue |                                                        
+|-------------|
+| 2           |
+| 10          |
+
+
+{{% alert color="info" %}}
+
+The way the difference is calculated depends on the database. The `YEAR` difference between "2002-01-01" and "2001-12-31" will be `1` with some databases and `0` with others.
+
+{{% /alert %}}
+
+### DATEPART
+
+#### Description
+
+The `DATEPART` function retrieves a specified element from a date/time values. The return type is `INTEGER`.
+
+#### Syntax
 
 The syntax is as follows:
 
@@ -611,19 +636,19 @@ The syntax is as follows:
 DATEPART ( datepart , date_expression [, timezone ] )
 ```
 
-### datepart
+##### datepart
 
 `datepart` specifies the part of the date/time value to retrieve. For possible values, see the [Example](#oql-datepart-example) below.
 
-### date_expression
+##### date_expression
 
-`date_expression` specifies the date to retrieve an element from. This should be formatted in an expression which resolves to a date/time value.
+`date_expression` specifies the date to retrieve an element from. The expression should resolve to a `DATETIME` value, string representations of `DATETIME` are accepted.
 
-### timezone
+##### timezone
 
 `timezone` specifies the time zone to use for the retrieval. This parameter is optional and defaults to the local time zone. It should be a string literal containing an IANA time zone. GMT offset time zones are not supported.
 
-## Example{#oql-datepart-example}
+#### Examples{#oql-datepart-example}
 
 | datepart     | Definition                                       | Example (Friday July 1, 2005, 16:34:20.356) |
 |--------------|--------------------------------------------------|---------------------------------------------|
@@ -640,29 +665,61 @@ DATEPART ( datepart , date_expression [, timezone ] )
 | `MILISECOND` | 0 to 999                                         | 356                                         |
 
 
-# LENGTH
+`DATEPART` can be used to filter dates on specific components. The query below returns all end dates that are in the year "2025".
 
-## Description
+```sql
+SELECT End FROM Sales.Period WHERE DATEPART(YEAR, End) = 2025
+```
 
-The `LENGTH` function returns the length of a string value.
+|  End                |
+|---------------------|
+| 2025-07-05 00:00:00 |
 
-## Syntax
+### LENGTH
+
+#### Description
+
+The `LENGTH` function returns the length in characters of a string value.
+
+#### Syntax
 
 The syntax is as follows:
 
 ```sql
 LENGTH ( expression )
 ```
+Where `expression` is an expression of type `STRING`.
 
-`expression` specifies an expression of type string.
+#### Example
 
-# LOWER
+The function is used to get the length of strings and can be used for miscellaneous purposes like statistics. Assume we have an entity `Sales.Reports` that contains a field with long text:
 
-## Description
+```sql
+SELECT * FROM Sales.Reports
+```
 
-The `LOWER` function converts all uppercase characters in a given string to lowercase and returns the result.
+| ID | Text                          |                                                         
+|----|-------------------------------|
+| -  | "Performance is satisfactory" |
+| -  | "Order has been completed"    |
 
-## Syntax
+Their length can be calculated with in an extra column
+```sql
+SELECT Text, LENGTH(Text) as text_length FROM Sales.Reports
+```
+
+| Text                          | text_length |                                                         
+|-------------------------------|-------------|
+| "Performance is satisfactory" | 27          |
+| "Order has been completed"    | 24          |
+
+### LOWER {#lower-function}
+
+#### Description
+
+Converts all uppercase characters in a given string to lowercase.
+
+#### Syntax
 
 The syntax is as follows:
 
@@ -672,15 +729,31 @@ LOWER ( expression )
 
 `expression` specifies the string to convert.
 
-# RANGEBEGIN
+#### Example
+The function is useful to enforce consistent case for all strings, especially for comparisons.  The query below would return no results in case-sensitive databases, as there is only a "Doe":
 
-## Description
+```sql
+SELECT * FROM Sales.Customer WHERE LastName = doe
+```
+
+Using `LOWER` this inconsistency can be fully avoided:
+
+```sql
+SELECT * FROM Sales.Customer WHERE LOWER(LastName) = doe
+```
+| ID | LastName | FirstName |                                                         
+|----|----------|-----------|
+| -  | Doe      | John      |
+
+### RANGEBEGIN
+
+#### Description
 
 The `RANGEBEGIN` function extracts the initial value of a range parameter.
 
 `RANGEBEGIN` and [RANGEEND](/refguide/oql-rangeend/) are OQL functions that use a parameter, and OQL parameters are only available in [datasets](/refguide/data-sets/) (which are used for generating a report). When you create a page and add a report that has a dataset, you can use `RANGEBEGIN` and `RANGEEND` in that dataset.
 
-## Syntax
+#### Syntax
 
 The syntax is as follows:
 
@@ -690,7 +763,7 @@ RANGEBEGIN ( $range )
 
 `$range` specifies the range parameter.
 
-## Example
+#### Example
 
 This is an example of using a range in OQL, where `$range` is set to last week, which will give you all the customers born in the last week:
 
@@ -706,15 +779,15 @@ SELECT FirstName AS First, LastName AS Last, Name AS Name, Birthday AS BDay, Cus
 WHERE Birthday > RANGEBEGIN($rangeLastWeek)
 ```
 
-# RANGEEND
+### RANGEEND
 
-## Description
+#### Description
 
 The `RANGEEND` function extracts the end value of a range parameter.
 
-[RANGEBEGIN](/refguide/oql-rangebegin/) and `RANGEEND` are OQL functions that use a parameter, and OQL parameters are only available in [datasets](/refguide/data-sets/) (which are used for generating a report). When you create a page and add a report that has a dataset, you can use `RANGEBEGIN` and `RANGEEND` in that dataset.
+[RANGEBEGIN](/refguide/oql-rangebegin/) and `RANGEEND` are OQL functions that only accept parameters as arguments.
 
-## Syntax
+#### Syntax
 
 The syntax is as follows:
 
@@ -724,9 +797,9 @@ RANGEEND ( $range )
 
 `$range` specifies the range parameter.
 
-## Example
+#### Example
 
-This is an example of using a range in OQL, where `$range` is set to last week, which will give you all the customers born in the last week:
+where `$range` is set to last week, which will give you all the customers born in the last week:
 
 ```sql
 SELECT FirstName AS First, LastName AS Last, Name AS Name, Birthday AS BDay, CustomerType AS Type FROM Sales.Customer
@@ -740,13 +813,11 @@ SELECT FirstName AS First, LastName AS Last, Name AS Name, Birthday AS BDay, Cus
 WHERE Birthday > RANGEEND($rangeLastWeek)
 ```
 
-# REPLACE
+### REPLACE
 
-## Description
+The `REPLACE` function replaces all occurrences of a specified string value with another string value. The function supports limited and unlimited `STRING` types. Arguments of other types are not supported.
 
-The `REPLACE` function replaces all occurrences of a specified string value with another string value. The function supports limited and unlimited strings. Arguments of other types are not supported.
-
-## Syntax
+#### Syntax
 
 The syntax is as follows:
 
@@ -760,45 +831,87 @@ REPLACE ( expression, pattern, replacement )
 
 `replacement` specifies the string to replace the pattern.
 
-## Database-specific limitations
+#### Database-specific limitations
 
 The behavior of the `REPLACE` function relies on underlying database implementation, which may vary by database vendor. For most supported databases, default behavior of `REPLACE` is case-sensitive. That means that `REPLACE('ABC abc', 'abc', 'xyz')` results in `'ABC xyz'`. In some configurations, the behavior is case-insensitive. For example, for SQL Server, case sensitivity of `REPLACE` depends on used collation.
 
-# ROUND
+#### Examples
 
-## Description
+The function is useful when formatting strings in a consistent manner. A space delimited list can be converted to one with commas to be used for csv. Assume we have an entity `Sales.Raw` that contains a `STRING` field:
 
-The `ROUND` function rounds a given numeric expression.
+```sql
+SELECT * FROM Sales.Raw
+```
 
-## Syntax
+| ID | Import            |                                                         
+|----|-------------------|
+| -  | "6 D10 machinery" |
+| -  | "1 A15 tools"     |
+
+The text format is converted with `REPLACE`:
+```sql
+SELECT REPLACE(Import, ' ', ',') FROM Sales.Raw
+```
+
+| Import            |                                                         
+|-------------------|
+| "6,D10,machinery" |
+| "1,A15,tools"     |
+
+
+### ROUND
+
+Rounds a numeric `expression` by reducing precision after the decimal point.
+
+#### Syntax
 
 The syntax is as follows:
 
 ```sql
-ROUND ( numeric_expression , length )
+ROUND ( expression , length )
 ```
 
-### numeric_expression
+##### expression
 
-`numeric_expression` specifies the expression which must be rounded. This expression must be a numeric expression.
+`expression` is any numeric expression to be rounded. If `expression` is `NULL`, the function will return `NULL`.
 
-{{% alert color="info" %}}
+##### length
 
-If `numeric_expression` is `NULL` (empty), the function will return `NULL`.
+`length` specifies the amount of decimals to which the `expression` must be rounded. Must be of numeric type. If the value is of type `DECIMAL`, there is database specific rounding. In PostgreSQL and MySQL, `length` is rounded. With other databases, `length` is floored. If the `length` is `NULL`, the function result will be `NULL`.
 
-{{% /alert %}}
+#### Examples
 
-### length
+The function can be used to check equality of decimal values. In this query a small difference between decimal columns will return no results:
+```sql
+SELECT LastName, Number FROM Sales.Order WHERE Price = 1.50000001
+```
 
-`length` specifies the amount of decimals to which the expression must be rounded.
+It can be modified with the use of `ROUND` to only compare two fraction digits :
+```sql
+SELECT LastName, Price FROM Sales.Order WHERE ROUND(Price, 2) = ROUND(1.50000001, 2)
+```
 
-# UPPER
+| LastName | Price |                                                         
+|----------|-------|
+| Doe      | 1.5   |
 
-## Description
+Operations with decimals like division can produce large number of digits after the decimal point, `ROUND` can be used to 
+reduce the precision when that is not necessary:
+```sql
+SELECT ROUND((Price : 7), 2) as RoundedPrice, Price : 7 FROM Sales.Order
+```
 
-The `UPPER` function converts all lowercase characters in a given string to uppercase and returns the result.
+| RoundedPrice | Price      |                                                         
+|--------------|------------|
+| 0.21         | 0.21428571 |
+| 0.33         | 3.33333333 |
+| 1.17         | 1.17142857 |
 
-## Syntax
+### UPPER
+
+Converts all lowercase characters in a given string to uppercase. Opposite of [LOWER](#lower-function).
+
+#### Syntax
 
 The syntax is as follows:
 
@@ -807,6 +920,3 @@ UPPER ( expression )
 ```
 
 `expression` specifies the string to convert.
-
-## String coercion
-In some databases, using `STRING` type variables in place of numeric, `DATETIME` or `BOOLEAN` values in operators and functions that explicitly require those types, causes the database to perform an implicit conversion. A common example would be the use of a `STRING` representation of a `DATETIME` variable inside a `DATEPART` function. It is recommended to always cast strings to the exact type the operator or functions.

@@ -700,13 +700,13 @@ FROM Sales.Location
 GROUP BY Brand, City
 ```
 
-| Brand  | SumStock |
-| ------ | -----    |
-| Cinco  | 5        |
-| Rekall | 9        |
-| Rekall | 3        |
-| Veidt  | 24       |
-| Veidt  | 2        |
+| Brand  | City      | SumStock |
+| ------ | ------    | -----    |
+| Cinco  | Rotterdam | 5        |
+| Rekall | Utrecht   | 9        |
+| Rekall | Zwolle    | 3        |
+| Veidt  | Rotterdam | 24       |
+| Veidt  | Utrecht   | 2        |
 
 ##### Using Functions with `GROUP BY`
 
@@ -1173,3 +1173,62 @@ WHERE
 | --------- | -------- |
 | John      | Doe      |
 | Jane      | Moose    |
+
+#### Subquery in `HAVING` {#subquery-in-having}
+
+Subqueries can be used in `HAVING` clause the same way they are used in `WHERE`: as a value or combined with `IN` or `EXISTS` clauses. For thor cases, same limitations apply to the subquery outcome.
+
+Example:
+
+
+```sql
+SELECT COUNT(*) AS LocationCount, SUM(Stock) as CityStock, City AS City
+FROM Sales.Location AS Location
+GROUP BY City
+HAVING
+	SUM(Stock) <= (
+		SELECT COUNT(*)
+		FROM Sales.Location
+	)
+```
+| LocationCount | CityStock | City   |
+| ------------- | --------- | ------ |
+| 1			    | 3         | Zwolle |
+
+Example of `EXISTS`:
+
+```sql
+SELECT COUNT(*) AS LocationCount, City AS City
+FROM Sales.Location AS Location
+GROUP BY City
+HAVING
+	EXISTS (
+		SELECT *
+		FROM Sales.Location AS SubLocation
+		WHERE
+			Location/City = SubLocation/City
+			AND SubLocation/Brand = 'Rekall'
+	)
+```
+| LocationCount | City      |
+| ------------- | --------- |
+| 2				| Utrecht   |
+| 1			    | Zwolle    |
+
+The same result can be achieved with `IN`:
+
+```sql
+SELECT COUNT(*) AS LocationCount, City AS City
+FROM Sales.Location AS Location
+GROUP BY City
+HAVING
+	Location/City IN (
+		SELECT SubLocation/City
+		FROM Sales.Location AS SubLocation
+		WHERE SubLocation/Brand = 'Rekall'
+	)
+```
+| LocationCount | City      |
+| ------------- | --------- |
+| 2				| Utrecht   |
+| 1			    | Zwolle    |

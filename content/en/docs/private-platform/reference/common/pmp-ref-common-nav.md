@@ -26,8 +26,8 @@ It consists of the following sections:
 
 * **Make**
     * **Mendix Home** - Click this option to go to the [My Apps](/private-mendix-platform/reference-guide/common/my-apps/) page.
-    * **Group Apps** - Click this option to go to the [My Group Apps](/private-mendix-platform/reference-guide/common/my-group-apps/) page.
-    * **Get Studio Pro** - Click this option to go to the [Get Studio Pro](/private-mendix-platform/reference-guide/common/get-studio-pro/) page.
+    * **Group Apps** - Click this option to go to the [My Group Apps](/private-mendix-platform/reference-guide/common/group-apps/) page.
+    * **Get Studio Pro** - Click this option to go to the [Get Studio Pro](/private-mendix-platform/reference-guide/common/get-studio/) page.
 * **Manage**
     * **My Content** - Click this option to go to the [My Content](/private-mendix-platform/reference-guide/common/my-content/) page.
     * **Group Content** - Click this option to go to the [Group Content](/private-mendix-platform/reference-guide/common/group-content/) page.
@@ -59,7 +59,7 @@ The **Notifications** center shows notifications for the following events:
 
 {{< figure src="/attachments/private-platform/pmp-notifications.png" class="no-border" >}}
 
-You can click a notification to view the related page or link. You can also mark a notification as read or unread by clicking the status dot on the left. To set your notification preferences, go to [Manage My Account > Notifications](/private-mendix-platform/reference-guide/common/manage-account/#manage-notifications).
+You can click a notification to view the related page or link. You can also mark a notification as read or unread by clicking the status dot on the left. To set your notification preferences, go to [Manage My Account > Notifications](/private-mendix-platform/reference-guide/common/account/#manage-notifications).
 
 ### Account Menu {#account}
 
@@ -69,7 +69,7 @@ The Account menu contains the options that you need to make or manage your accou
 
 It consists of the following sections:
 
-* **Manage My Account** - Click this option to go to the [Manage My Account](/private-mendix-platform/reference-guide/common/#manage-account/) section.
+* **Manage My Account** - Click this option to go to the [Manage My Account](/private-mendix-platform/reference-guide/common/account/) section.
 * **Manage My Group** - This option is available only to users who have the Group Admin role. Click it to go to the [Manage My Group](/private-mendix-platform/reference-guide/common/manage-group/) page.
 * **Switch to Admin Mode** - This option is available only to users who have the Company Admin and System Admin roles. Click it to go to the Administration section of Private Mendix Platform.
 * **Show Onboarding** - Click this option to re-enable the [Onboarding](/private-mendix-platform/reference-guide/common/my-apps/#onboarding) section if you previously hid it.

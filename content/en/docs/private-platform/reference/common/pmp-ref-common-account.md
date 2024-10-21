@@ -53,6 +53,6 @@ Service credentials are used to establish the user account's identity with exter
 
 The **Service Credentials** page shows a card for each previously created set of credentials. You can edit, delete, or create new credentials on this page.
 
-### Notifications
+### Notifications {#manage-notifications}
 
 The preferences displayed on the **Notifications** page cannot be changed in the current version of Private Mendix Platform and are offered for information only. In a future release, preferences for additional notification channels such as email and push notifications will be configurable on this page.

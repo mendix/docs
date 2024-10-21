@@ -4,24 +4,6 @@ url: /refguide/oql-clauses/
 weight: 10
 ---
 
-## Introduction
-
-The Mendix Object Query Language (OQL) is a relational query language inspired by [SQL](https://en.wikipedia.org/wiki/Sql). The major advantage of OQL is that it uses Mendix entity and association names instead of actual database table names. That way, it is possible to create queries that use names from the data model of your Mendix app without thinking of how that data model is represented in the database.
-
-In addition, OQL can use predefined relations (associations) to easily join objects without having to calculate which columns should be coupled. Despite these differences, many SQL keywords also work in OQL.
-
-These are some examples of OQL queries:
-
-* `SELECT LastName FROM Sales.Customer` – retrieves the names of all customers
-* `SELECT FirstName FROM Sales.Customer WHERE LastName = 'Jansen'` – retrieves the first name of all customers with name "Jansen"
-* `SELECT SUM(TotalAmount) FROM Sales."Order" WHERE IsPaid = true` – retrieves the sum of the total prices of all paid orders (`Order` needs to be wrapped in quotes, see the [Reserved Words](#reserved-oql-words) section below)
-
-{{% alert color="info" %}}
-OQL queries do not take security into account out-of-the-box. This means that you can use OQL to manually define custom security expressions. In some cases, handling security yourself using OQL—instead of using the out-of-the-box security of XPath—may result in faster queries.
-{{% /alert %}}
-
-Try your OQL example online with the [OQL Playground](https://service.mendixcloud.com/p/OQL) demo app. 
-
 ## OQL Clauses
 
 OQL clauses are reserved words that structure an OQL query into sections. Each section, and therefore clause, is responsible for a different aspect of the query. Every query has 2 mandatory clauses: `SELECT` and `FROM`. For example:
@@ -31,9 +13,7 @@ SELECT LastName, Address
 FROM Sales.Customer
 ```
 
-These basic clauses define for which attributes the values need to be retrieved and which entity or entities should be used as a source. Other clauses are not mandatory. They are used to specify limitations and other rules on the data being retrieved.
-
-Other clauses are not mandatory, but if used, they should be present in a fixed order:
+These basic clauses define the data that needs to be retrieved and which entity or entities should be used as a source. Other clauses are not mandatory. They are used to specify limitations and other rules on the data being retrieved. If they are used, they should be present in the following order:
 
 1. `SELECT`
 2. `FROM`
@@ -48,7 +28,7 @@ Other clauses are not mandatory, but if used, they should be present in a fixed 
 
 The `SELECT` clause specifies which entity attributes or other specified data must be retrieved. The clause returns all the values of objects which match the `SELECT` clause.
 
-The `SELECT` clause consists of the term `SELECT` and one or more expressions. Each expression must be separated by a comma. Each expression defines a column in the result. Each expression can have an alias, which will be the name of the column in the result.
+The `SELECT` clause consists of the term `SELECT` and one or more column definitions. Each column definition must be separated by a comma. Each column definition defines a column or a set of columns in the result. Each single value column definition can have an alias, which will be the name of the column in the result.
 
 #### Syntax
 
@@ -82,7 +62,7 @@ FROM Sales.Customer
 An alias is an alternative name which replaces the column name in the result. For example, when the `name` attribute is retrieved, the result column is "Name". With an alias, you can call the result column something else, like "Customer_Name". An alias cannot contain spaces.
 
 {{% alert color="info" %}}
-In some scenarios, aliases in `FROM` are mandatory. Aliases are mandatory when defining a view entity.
+Aliases are mandatory when defining a view entity.
 {{% /alert %}}
 
 #### Selecting All Attributes Using `*`
@@ -91,7 +71,7 @@ Using `*` (asterisk) in the SELECT clause specifies that the values of all attri
 
 Specifying `entity_name/*` and `from_alias/*` specify that the values of all attributes of the specified entity or expression of the `FROM` clause should be returned.
 
-`entity_name` can optionally be put in double quotes. If the entity name is a [reserved OQL word](/refguide/oql/#reserved-oql-words) (like `Order` or `Group`), double quotes are mandatory.
+`entity_name` can optionally be put in double quotes. If the entity name is a [reserved OQL word](/refguide/oql-clauses/#reserved-oql-words) (like `Order` or `Group`), double quotes are mandatory.
 
 {{% alert color="warning" %}}
 Specifying all attributes will also return attributes which are normally hidden in the Domain Model, such as the `ID` of each object.
@@ -106,17 +86,9 @@ SELECT *
 FROM Sales.Customer
 ```
 
-This query returns all the attributes of objects of `Sales.Customer` entity all attributes of associated objects of `Sales.Request` (see TODO)
+This query returns all attributes of objects of `Sales.Request` that are associated to `Sales.Customer` objects (see [Select from Multiple Tables using `JOIN`](/refguide/oql-clauses/#join))
 
-```sql
-SELECT *
-FROM Sales.Customer
-JOIN Sales.Customer/Sales.Customer_Request/Sales.Request
 ```
-
-This query returns all attributes of objects of `Sales.Request` that are associated to `Sales.Customer` objects (see TODO)
-
-```sql
 SELECT Sales.Request/*
 FROM Sales.Customer
 JOIN Sales.Customer/Sales.Customer_Request/Sales.Request
@@ -124,17 +96,15 @@ JOIN Sales.Customer/Sales.Customer_Request/Sales.Request
 
 This query is equivalent to the previous one, but it uses table aliases
 
-```sql
+```
 SELECT Req/*
 FROM Sales.Customer Cust
 JOIN Cust/Sales.Customer_Request/Sales.Request Req
 ```
 
-#### Selecting Distinct Values with `DISTINCT`
+#### Selecting Distinct Values with `DISTINCT` {#distinct}
 
-TODO: `DISTINCT` with NULL
-
-The keyword `DISTINCT` specifies that duplicate rows must not be included in the result. If used, `DISTINCT` should follow directly after `SELECT`. It is not possible to request only some attributes to be distinct.
+The keyword `DISTINCT` specifies that duplicate rows must not be included in the result. If used, `DISTINCT` should follow directly after `SELECT`. It is not possible to request only some attributes to be distinct. `Null` is treated as a separate value. If the query result containts multiple `Null` values, `DISTINCT` is appplied to them the same way it would be applied to other values.
 
 In this example, the `Sales.Customer` entity has 4 objects.
 
@@ -205,57 +175,33 @@ returns
 
 #### Expressions
 
-It is possible to use more complex expressions in `SELECT`. That is explained in detail in [OQL Expressions](/refguide/oql-expressions). Here are some examples:
+It is possible to use more complex expressions in `SELECT`. That is explained in detail in [OQL Expressions](/refguide/oql-expressions/).
 
-It is possible to use a function of an attribute. For instance:
+It is also possible to use a subquery. See [Subquery in `SELECT`](/refguide/oql-clauses/#subquery-in-select) for more details.
 
-```sql
-SELECT LastName Name, LENGTH(LastName) NameLength
-FROM Sales.Customer
-```
+#### Selecting attributes over associations
 
-| Name  | NameLength |
-| ----- | ---------- |
-| Doe   | 3          |
-| Doe   | 3          |
-| Doe   | 3          |
-| Moose | 5          |
-
-It is possible to use an aggregate function:
-
-```sql
-SELECT COUNT(*) AS CustomerCount
-FROM Sales.Customer
-```
-
-| CustomerCount |
-| ----------    |
-| 5             |
-
-Another possibility is subqueries. A subquery can refer to other tables and expressions in `FROM`.
+A unique feature of OQL is the possibility to access attributes of associated objects using paths. For example:
 
 ```sql
 SELECT
-	Req/Number AS RequestNumber,
-	(
-		SELECT COUNT(*)
-		FROM Sales.Customer Cust
-		WHERE Cust/LastName = Req/CustomerName
-	) AS CustomerCount
-FROM Sales.Request Req
+	Number AS RequestNumber,
+	Sales.Request/Sales.Request_Customer/Sales.Customer/LastName AS CustomerName
+FROM Sales.Request
 ```
 
-| RequestNumber | CustomerCount |
-| ------------- | ------------- |
-| 1             | 1             |
-| 2             | 1             |
-| -1            | 0             |
+It is possible to build paths over multiple associations. Associated entities can be reached from both directions. System associations `System.owner` and `System.changedBy` can also be used in such association paths, assuming they are enabled for the entity. For example:
 
-{{% alert color="info" %}}
-Please note that if you use a subquery as an expression in `FROM`, then such subquery should always return  a single column, and the number of rows should be at most one. If the subquery returns more than one row or a number of columns different than one, that will lead to an exception during runtime.
-{{% /alert %}}
 
-### `FROM` Clause
+```sql
+SELECT
+	LastName AS CustomerName,
+	Sales.Customer/Sales.Request_Customer/Sales.Request/System.owner/System.User/Name AS UserName
+FROM Sales.Customer
+```
+
+
+### `FROM` clause
 
 The `FROM` clause specifies the entities or other source or sources from which the data must be retrieved.
 
@@ -346,7 +292,7 @@ FROM Sales.Customer, Sales.Request
 | 562949953421923   | Jane      | Moose    | 1688849860264654 | Caribou      | -1     |
 | 562949953422131   | Jim       | Elk      | 1688849860264654 | Caribou      | -1     |
 
-You can specify conditions to change what is returned using a `WHERE` clause. See [`WHERE` clause](#where-clause) for more information.
+It is possible to specify conditions in `WHERE` (see more details and examples in [`WHERE` clause](/refguide/oql-clauses/#where))
 
 ```sql
 SELECT *
@@ -361,11 +307,8 @@ returns
 | 562949953421521   | John      | Doe      | 1688849860264073 | Doe          | 1      |
 | 562949953421923   | Jane      | Moose    | 1688849860264231 | Moose        | 2      |
 
-You can also specify columns in the `SELECT` clause.
-
-To avoid ambiguity in case of duplicate attribute names, you can specify the entity name (as `<module>.<entity>/<attribute`) or alias (`<alias>/<attribute>`. It is possible to retrieve all attributes of a specific entity using `<alias>/*`.
-
-```sql
+To avoid ambiguity in case of duplicate attribute names, it is recommended to use entity name or alias when specifying columns to be selected. The format in that case is, respectively, `<module>.<entity>/<attribute>` or `<alias>/<attribute>`. It is also possible to retrieve all attributes of a particular entity using `<alias>/*`
+```
 SELECT Cust/FirstName, Req/*
 FROM Sales.Customer Cust, Sales.Request Req
 WHERE Cust.LastName = Req.CustomerName
@@ -378,7 +321,7 @@ returns
 | John      | 1688849860264073 | Doe          | 1      |
 | Jane      | 1688849860264231 | Moose        | 2      |
 
-#### Select from Multiple Tables using `JOIN`
+#### Select from Multiple Tables using `JOIN` {#join}
 
 OQL supports the `JOIN` syntax, which is similar to SQL. There are 4 main types of `JOIN`:
 
@@ -399,15 +342,17 @@ entity_path | entity_name | ( sub_oql_query ) [ [ AS ] from_alias ]
 
 ##### entity_path
 
-`entity_path` specifies the entity to join and the path from an earlier defined entity in the `FROM` clause to this entity. With `entity-path` the `ON` condition is optional.
+`entity_path` specifies the entity to join and the path from an earlier defined entity in the `FROM` clause to this entity.
 
-The example path `Crm.Customer/Crm.Customer_Address/Crm.Address` defines a path from the entity **Crm.Customer** to a new entity **Crm.Address**.
+The example path `Crm.Customer/Crm.Customer_Address/Crm.Address` defines an association path from the entity **Crm.Customer** to a new entity **Crm.Address**.
 
 Similar to `entity_name`, double quotes can be used.
 
-##### `JOIN` types
+ If `entity_path` is specified, the `ON` condition is optional. If entitiies are joined by name without using association path, the `ON` condition is mandatory.
 
-###### `INNER JOIN`
+#### `JOIN` types
+
+##### `INNER JOIN`
 
 An `INNER JOIN` is the most common join operation between entities and represents the default join type. The query compares each row of entity A with each row of entity B to find all the pairs of rows that have an association and/or satisfy the JOIN predicate. If the association exists and the JOIN predicate is satisfied, the column values for each matched pair of rows of A and B are combined into a resulting row.
 
@@ -561,62 +506,9 @@ FULL OUTER JOIN Cust/Sales.Request_Customer/Sales.Request Req
 
 #### Select from a Subquery
 
-It is possible to use a subquery in `FROM`. For example:
+See [Subquery in `FROM`](/refguide/oql-clauses/#subquery-in-from) for details.
 
-```sql
-SELECT Cust/LastName
-FROM (
-		SELECT *
-		FROM Sales.Customer
-	) AS Cust
-```
-
-| LastName |
-| -------- |
-| Doe      |
-| Moose    |
-| Elk      |
-
-Subqueries in `FROM` can be combined with other tables:
-
-```sql
-SELECT Cust/LastName, Req/Number
-FROM
-	Sales.Request Req,
-	(
-		SELECT *
-		FROM Sales.Customer
-	) AS Cust
-WHERE
-	Req.CustomerName = Cust.LastName
-```
-
-| LastName | Number |
-| -------- | ------ |
-| Doe      | 1      |
-| Moose    | 2      |
-
-`JOIN` is also supported:
-
-```sql
-SELECT Cust/LastName, Req/Number
-FROM
-	Sales.Request Req
-	LEFT JOIN
-	(
-		SELECT *
-		FROM Sales.Customer
-	) AS Cust
-	ON Req.CustomerName = Cust.LastName
-```
-
-| LastName | Number |
-| -------- | ------ |
-| Doe      | 1      |
-| Moose    | 2      |
-| NULL     | -1     |
-
-### `WHERE` clause {#where-clause}
+### `WHERE` clause {#where}
 
 The `WHERE` clause specifies how the data being retrieved must be constrained.
 
@@ -628,7 +520,7 @@ The syntax is as follows:
 WHERE <constraint>
 ```
 
-`<constraint>` is an expression for which the value always equals true. Expressions consist of simple comparisons using operators, functions, keywords or system variables.
+`<constraint>` is an expression of type BOOLEAN. Expressions can consist of simple comparisons using operators, functions, keywords, parameters and system variables. If the result of the expression is `True` for a particular row, that row is included in the result. Rows that do not match the expression are not included in the result.
 
 For more information, see [OQL Expressions](/refguide/oql-expressions/).
 
@@ -683,24 +575,9 @@ WHERE
 | ------------ | ------ |
 | Caribou      | -1     |
 
-It is possible to use a subquery in `FROM`. See [Subqueries](TODO) for more examples.
+It is possible to use a subquery in `WHERE`. See [Subqueries](/refguide/oql-clauses/#subquery-in-where) for examples.
 
-```sql
-SELECT FirstName, LastName
-FROM Sales.Customer Cust
-WHERE
-	EXISTS (
-		SELECT * FROM Sales.Request Req
-		WHERE Req/CustomerName = Cust/LastName
-	)
-```
-
-| FirstName | LastName |
-| --------- | -------- |
-| John      | Doe      |
-| Jane      | Moose    |
-
-A feature that is specific to OQL compared to standard SQL syntax is using paths to other entities over associations. For example:
+A feature that is specific to OQL compared to standard SQL syntax is using paths to other entities over associations. For example, when selecting from entity `Sales.Customer`, we can access an attribute of the associated entity `Sales.Request`:
 
 ```sql
 SELECT FirstName, LastName
@@ -712,6 +589,17 @@ WHERE
 | FirstName | LastName |
 | --------- | -------- |
 | John      | Doe      |
+
+In some cases, the expression in `WHERE` can result in `NULL`. In that case, the `WHERE` expression is equal to `FALSE`, and the query returns no rows.
+
+```sql
+SELECT FirstName, LastName
+FROM Sales.Customer
+WHERE NULL
+```
+
+| FirstName | LastName |
+| --------- | -------- |
 
 ### `GROUP BY` clause
 
@@ -730,11 +618,11 @@ GROUP BY
 
 #### Using `GROUP BY`
 
-The `GROUP BY` clause is usually used in combination with [aggregate functions](TODO): `AVG`, `COUNT`, `MAX`, `MIN`, `SUM`.
+The `GROUP BY` clause is usually used in combination with [aggregations](/refguide/oql-expressions/#aggregates): `AVG`, `COUNT`, `MAX`, `MIN`, `SUM`.
 
 If a query contains a `GROUP BY` clause, then its `SELECT` clause can contain only aggregate functions and attributes and other expressions used `GROUP BY`. If an attribute is present in `SELECT`, but not present in `GROUP BY`, such query is invalid.
 
-To better illustrate examples below, let's assume that there is an entity `Sales.SalesPerson` with the following objects:
+To better illustrate examples below, let's assume that there is an entity `Sales.Location` with the following objects:
 
 ```sql
 SELECT Brand, City, Stock, Address, LocationNumber
@@ -1012,7 +900,7 @@ ORDER BY Sales.Customer/Sales.Customer_Request/Sales.Request/Number
 
 ### `LIMIT` and `OFFSET` clauses
 
-With the `LIMIT` and `OFFSET` clauses, a portion of the result of a query can be returned. It is recommended to combine `LIMIT` and `OFFSET` clauses with `ORDER BY` because otherwise it can be impossible to predict which portion exactly weill be returned.
+With the `LIMIT` and `OFFSET` clauses, a portion of the result of a query can be returned. It is recommended to combine `LIMIT` and `OFFSET` clauses with `ORDER BY` because the return order of rows without an `ORDER BY` clause is inconsistent and can lead to unpredictable output.
 
 #### Syntax
 
@@ -1078,3 +966,165 @@ OFFSET 2
 | Rekall | Zwolle    | 3              |
 | Rekall | Utrecht   | 4              |
 | Veidt  | Utrecht   | 5              |
+
+### Subqueries
+
+A subquery is an OQL query nested inside another query. A subquery can contain the same clauses as a regular OQL query. The entities from the outer query can be referred to in a subquery. A subquery can be used in different parts of the query.
+
+#### Subquery in `SELECT` {#subquery-in-select}
+
+ A subquery can be used as a column in the `SELECT` clause. It can refer to other tables and expressions in `FROM`.
+
+```sql
+SELECT
+	Req/Number AS RequestNumber,
+	(
+		SELECT COUNT(*)
+		FROM Sales.Customer AS Cust
+		WHERE Cust/LastName = Req/CustomerName
+	) AS CustomerCount
+FROM Sales.Request Req
+```
+
+| RequestNumber | CustomerCount |
+| ------------- | ------------- |
+| 1             | 1             |
+| 2             | 1             |
+| -1            | 0             |
+
+{{% alert color="info" %}}
+Please note that if you use a subquery as an expression in `SELECT`, then such subquery should always return a single column, and the number of rows should be at most one. If the subquery returns more than one row or a number of columns different than one, that will lead to an exception during runtime.
+{{% /alert %}}
+
+#### Subquery in `FROM` {#subquery-in-from}
+
+It is possible to use a subquery in `FROM`. For example:
+
+```sql
+SELECT Cust/LastName
+FROM (
+		SELECT *
+		FROM Sales.Customer
+	) AS Cust
+```
+| LastName |
+| -------- |
+| Doe      |
+| Moose    |
+| Elk      |
+
+Subqueries in `FROM` can be combined with other tables:
+
+```sql
+SELECT Cust/LastName, Req/Number
+FROM
+	Sales.Request AS Req,
+	(
+		SELECT *
+		FROM Sales.Customer
+	) AS Cust
+WHERE
+	Req.CustomerName = Cust.LastName
+```
+| LastName | Number |
+| -------- | ------ |
+| Doe      | 1      |
+| Moose    | 2      |
+
+It is possible to refer to other tables in the outer `FROM` clause from a subquery:
+
+```sql
+SELECT Cust/LastName, Req/MaxNumber
+FROM
+	Sales.Customer AS Cust,
+	(
+		SELECT MAX(Number) as MaxNumber
+		FROM Sales.Request
+		WHERE Req.CustomerName = Cust.LastName
+	) AS Req
+```
+| LastName | MaxNumber |
+| -------- | --------- |
+| Doe      | 1         |
+| Moose    | 2         |
+
+`JOIN` is also supported:
+
+```sql
+SELECT Cust/LastName, Req/Number
+FROM
+	Sales.Request Req
+	LEFT JOIN
+	(
+		SELECT *
+		FROM Sales.Customer
+	) AS Cust
+	ON Req.CustomerName = Cust.LastName
+```
+| LastName | Number |
+| -------- | ------ |
+| Doe      | 1      |
+| Moose    | 2      |
+| NULL     | -1     |
+
+#### Subquery in `WHERE` {#subquery-in-where}
+
+A subquery can be used in the `WHERE` clause. There are multiple ways to use subqueries
+
+##### Subquery as a value
+
+An outcome of a subquery can be used as a value to be compared to another value or expression. In this case, the subquery should always return exactly one column and at most one row.
+
+For example:
+
+```sql
+SELECT Brand, City
+FROM Sales.Location AS Location
+WHERE
+	Location.Stock = (
+		SELECT MAX(Stock)
+		FROM Sales.Location AS MaxStockLocation
+		WHERE Location.City = MaxStockLocation.City
+	)
+```
+| Brand  | City      |
+| ------ | -----     |
+| Rekall | Utrecht   |
+| Rekall | Zwolle    |
+| Veidt  | Rotterdam |
+
+##### Subquery with `IN`
+
+A subquery can be combined with `IN` keyword. In that case, the expression is true if a value in the outer query matches one of the results of the subquery. In this case, the subquery can return any number of rows, but it should always return exactly one column.
+
+```sql
+SELECT FirstName, LastName
+FROM Sales.Customer Cust
+WHERE
+	Cust/LastName IN (
+		SELECT CustomerName
+		FROM Sales.Request Req
+	)
+```
+| FirstName | LastName |
+| --------- | -------- |
+| John      | Doe      |
+| Jane      | Moose    |
+
+##### Subquery with `EXISTS`
+
+A subquery can be combined with `EXISTS` keyword. In that case, the expression is true if the subquery returns at least one row. In case of `EXISTS`, the subquery can return any number of rows and any number of columns.
+
+```sql
+SELECT FirstName, LastName
+FROM Sales.Customer Cust
+WHERE
+	EXISTS (
+		SELECT * FROM Sales.Request Req
+		WHERE Req/CustomerName = Cust/LastName
+	)
+```
+| FirstName | LastName |
+| --------- | -------- |
+| John      | Doe      |
+| Jane      | Moose    |

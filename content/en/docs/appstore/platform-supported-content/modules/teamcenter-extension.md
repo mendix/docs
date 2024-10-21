@@ -53,7 +53,7 @@ You must have these Marketplace modules installed:
 | ------------- | ------------- | ------------- |
 | 1.0.0 | 3.6.1, V 3.6.0, V 3.5.0 | 10.6.5 thru 10.7 |
 | 2.0.0 | 2406.0.0 | 10.12.1 and above |
-| 3.0.0 | 2406.3.0 | 10.12.6 and above (except 10.15.0) |
+| 3.0.0                        | 2406.3.0                     | 10.12.6, 10.12.7, 10.16.0, and above |
 
 {{% alert color="info" %}}If you use Teamcenter Extension V 1.0.0 with Teamcenter Connector V 3.6.1 or below, and want to upgrade to Teamcenter Extension V 3.0.0 and Teamcenter Connector V 2406.3.0, see the [Upgrading Teamcenter Extension V 1.0.0 to V 3.0.0](#upgrade) section.{{% /alert %}}
 

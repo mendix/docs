@@ -141,8 +141,7 @@ Your pipeline can include the following steps:
     * Import the [Unit Testing](https://marketplace.mendix.com/link/component/390) module into your Mendix application from the Marketplace.
     * The environment for the Unit Testing must be in running state.
 
-Since the endpoint is secured with secret credentials, Mendix releases the pipeline variables, allowing the customer to configure them securely during the unit testing step. This step will call the unit testing API endpoint, similar to how a customer would do it. For more information, see the [Running Unit Tests Through the Remote API](/appstore/modules/unit-testing/#running-unit-tests-through-the-remote-api) section of the *Unit testing*.
-
+    Since the endpoint is secured with secret credentials, Mendix releases the pipeline variables, allowing the customer to configure them securely during the unit testing step. This step will call the unit testing API endpoint, similar to how a customer would do it. For more information, see the [Running Unit Tests Through the Remote API](/appstore/modules/unit-testing/#running-unit-tests-through-the-remote-api) section of the *Unit testing*.
 * Publish – Publish the newly built deployment package to a repository.
 * Start Environment – Start a selected environment.
 * Stop Environment – Stop a selected environment.
@@ -172,7 +171,7 @@ Keep the following in mind:
 * Do not use multiple asterisks in the branch expression. For example, `**Main` is an invalid expression.
 * Do not use the asterisk between two words. For example, `Main*Main` is an invalid expression.
 
-#### Variables and Dependent Steps
+#### Pipeline Variables and Dependent Steps
 
 Some steps depend on the outputs of other steps. Therefore, you must add Checkout before Build, Build before Publish, and Publish before Deploy.
 
@@ -180,7 +179,18 @@ Some steps depend on the outputs of other steps. Therefore, you must add Checkou
 If you try to add a dependent step without the step that creates the output it depends on, a validation error will display and prompt you to add the missing step first.
 {{% /alert %}}
 
-These pipeline steps use Mendix-defined variables to reference the outputs of previous steps. Variables are indicated with a `$` sign and generally use the format `$StepName.OutputName`. For example, Publish uses the output of Build as `$Build.DeploymentPackage`. Similarly, Deploy uses `$Publish.DeploymentPackage` to deploy to the selected environment.
+These pipeline steps use pipeline variables to reference values across pipelines in a Mendix app project. Variables are indicated with a `$` sign and generally use the format `$StepName.OutputName`. There are two types of variables:
+
+1. Mendix-defined variables
+
+    * These are provided by Mendix. Every pipeline step results in some outputs which can be referenced in subsequent steps. For example, Publish uses the output of Build as $Build.DeploymentPackage. Similarly, Deploy uses $Publish.DeploymentPackage to deploy to the selected environment. Click **Outputs** inside a Pipeline **Designs** tab to view a step’s output variables. 
+    * The scope of these variables is specific to a particular pipeline design within a Mendix project.
+
+2. User-defined variables
+
+    * These are defined by project members who have access to create pipelines using the **Variables** tab. These user-defined variables can be used to easily reference values such as API Keys, third-party tool’s project IDs, and more.
+    * The scope of these variables is project-wide, so any user of the project can create and access them, and any pipeline in the project can configure them.
+
 
 ### Saving, Activating, and Deactivating a Pipeline
 

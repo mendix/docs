@@ -1,7 +1,7 @@
 ---
 title: "External Database Connection"
 url: /refguide/external-database-connection/
-weight: 80
+weight: 10
 description: "Overview of the [External Database Connection document](https://marketplace.mendix.com/link/component/219862) in Studio Pro, downloaded from the Mendix Marketplace."
 ---
 

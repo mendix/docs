@@ -1,7 +1,7 @@
 ---
 title: "Use the Data Importer"
 url: /howto/integration/use-the-data-importer/
-weight: 21
+weight: 60
 description: "Overview of the Data Importer in Studio Pro"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

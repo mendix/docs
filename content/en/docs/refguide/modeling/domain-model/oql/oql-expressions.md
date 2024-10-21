@@ -9,7 +9,8 @@ An OQL expression is a query building block that returns a value or a list of va
 
 * a constant
 * a function
-* a combination of attribute names, constants, and functions connected by operators
+* a system variable
+* a combination of attribute names, constants, system variables and functions connected by operators
 * a subquery
 
 OQL expressions can be used in `WHERE`, `SELECT`, `GROUP BY`, `UNION`, and `JOIN` clauses. For more information, see [OQL clauses](/refguide/oql-clauses/).

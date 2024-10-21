@@ -12,6 +12,8 @@ Connect to and receive information from external sources with extensions in Mend
 Documents available for this topic:
 
 * [Business Event Services](/refguide/business-event-services/)
+  
+  Overview of the Mendix Business Events module, used to share event information between apps.
 
 * [Use the Data Importer](/refguide/use-the-data-importer/)
 

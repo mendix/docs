@@ -7,7 +7,7 @@ description: "Describes the configuration and usage of the Any Chart module, whi
 
 ## Introduction
 
-The [Any Chart](https://marketplace.mendix.com/link/component/106517/) module contains chart types supported in [plotly.js version 1.47.4](https://www.npmjs.com/package/plotly.js/v/1.47.4).
+The [Any Chart](https://marketplace.mendix.com/link/component/106517/) module contains chart types supported in [plotly.js version 2.35.2](https://www.npmjs.com/package/plotly.js/v/2.35.2).
 
 Further documentation on usage can be found in the following pages locations:
 

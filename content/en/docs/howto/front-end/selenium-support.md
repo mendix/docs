@@ -1,8 +1,10 @@
 ---
 title: "Configure Selenium Support"
-url: /howto/integration/selenium-support/
+url: /howto/front-end/selenium-support/
 weight: 16
 description: "Describes how to use naming conventions and avoid pitfalls using Selenium."
+aliases: 
+    -/howto/integration/selenium-support/ 
 ---
 
 ## Introduction

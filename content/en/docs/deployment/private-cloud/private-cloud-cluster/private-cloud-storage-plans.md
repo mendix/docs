@@ -1236,10 +1236,10 @@ AWS IRSA allows a Kubernetes Service Account to assume an IAM role. For this to 
 
 2. For the second condition, copy and paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<Kubernetes namespace>:<Kubernetes serviceaccount name>`.
 
-    {{% alert color="info" %}}
-    For Global Operator installations, you must specify the managed namespace in the **Namespace** field. For more information, see [Amazon EKS Pod Identity Webhook – EKS Walkthrough](https://github.com/aws/amazon-eks-pod-identity-webhook#eks-walkthrough).
-    The role ARN is required. You can use the **Copy** button next to the ARN name in the role details.
-    {{% /alert %}}  
+{{% alert color="info" %}}
+For Global Operator installations, you must specify the managed namespace in the **Namespace** field. For more information, see [Amazon EKS Pod Identity Webhook – EKS Walkthrough](https://github.com/aws/amazon-eks-pod-identity-webhook#eks-walkthrough).
+The role ARN is required. You can use the **Copy** button next to the ARN name in the role details.
+{{% /alert %}}  
 
 #### Existing bucket and account {#s3-existing-bucket-account}
 

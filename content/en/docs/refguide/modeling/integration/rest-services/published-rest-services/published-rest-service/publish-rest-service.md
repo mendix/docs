@@ -1,6 +1,6 @@
 ---
 title: "Publish a REST Service"
-url: /howto/integration/publish-rest-service/
+url: /refguide/publish-a-rest-service/
 weight: 10
 description: "Describes how to create a published REST service and return the results in JSON or XML."
 aliases:

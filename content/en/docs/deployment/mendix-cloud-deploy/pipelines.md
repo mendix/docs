@@ -12,7 +12,7 @@ Mendix Pipelines is in [public beta](/releasenotes/beta-features/). It is curren
 
 ## Introduction
 
-From the **Pipelines** page, you can set up automated build and deployment pipelines for your app. Once you have designed and activated a pipeline, you can use it for automated, zero-click builds and deployments. Each pipeline runs automatically according to the trigger conditions defined in your [Start Pipeline step](#pipeline-steps).
+From the **Pipelines** page, you can set up automated build, test, and deployment pipelines for your app. Once you have designed and activated a pipeline, you can use it for automated, zero-click builds, testing and deployments. Each pipeline runs automatically according to the trigger conditions defined in your [Start Pipeline step](#pipeline-steps).
 
 To access the **Pipelines** page, open your app in [Apps](https://sprintr.home.mendix.com/). Then select **Pipelines** in the navigation pane. (To view this page, you must have a [role](/developerportal/general/team/) with cloud access.)
 
@@ -137,6 +137,7 @@ Your pipeline can include the following steps:
 * Checkout – Check out a branch. To configure this step, use the drop-down menu to select the branch to check out. You can select either the main branch or one of your most recently used branches.
 * Build – Build a deployment package based on the latest major, minor, or patch version of the branch you checked out. The highest version is incremented based on the increment settings specified in this step.
 * Maia Best Practice Recommender – Evaluate results of the [Maia Best Practice Recommender](/refguide/best-practice-recommender/) within your pipeline. You can configure this step to fail the pipeline if errors, warnings, deprecations, and/or recommendations are detected.
+* Unit Testing – Import the [Unit Testing](https://marketplace.mendix.com/link/component/390?_gl=1*1xlym4r*_gcl_au*OTc4NTQ4MDAxLjE3MjY0ODA3NjI.) module into your application to verify if all tests are successful. You can use it in a running environment to automate regression tests. For API key configuration, it is recommended to use a User-defined variable.
 * Publish – Publish the newly built deployment package to a repository.
 * Start Environment – Start a selected environment.
 * Stop Environment – Stop a selected environment.
@@ -146,7 +147,7 @@ Your pipeline can include the following steps:
 
 Expand each step to configure it, delete it, or view its outputs. You can expand or collapse any step in your pipeline by clicking the step's name.
 
-##### Branch Expression{#branch-expression}
+#### Branch Expression{#branch-expression}
 
 If you select **Teamserver push (Git)** as the trigger in the Start Pipeline step, you need to specify the relevant branch (or branches) in the **Branch expression** field.
 
@@ -166,7 +167,7 @@ Keep the following in mind:
 * Do not use multiple asterisks in the branch expression. For example, `**Main` is an invalid expression.
 * Do not use the asterisk between two words. For example, `Main*Main` is an invalid expression.
 
-##### Variables and Dependent Steps
+#### Variables and Dependent Steps
 
 Some steps depend on the outputs of other steps. Therefore, you must add Checkout before Build, Build before Publish, and Publish before Deploy.
 

@@ -138,10 +138,11 @@ Your pipeline can include the following steps:
 * Build – Build a deployment package based on the latest major, minor, or patch version of the branch you checked out. The highest version is incremented based on the increment settings specified in this step.
 * Maia Best Practice Recommender – Evaluate results of the [Maia Best Practice Recommender](/refguide/best-practice-recommender/) within your pipeline. You can configure this step to fail the pipeline if errors, warnings, deprecations, and/or recommendations are detected.
 * Unit Testing – This step executes the [Unit Testing](/appstore/modules/unit-testing/) module in a running environment. If any unit test fails, the pipeline will be marked as failed, with the run details and output parameters showing the failure count and relevant information. Ensure to add below prerequisites before you add the Unit Testing pipeline step.
+
     * Import the [Unit Testing](https://marketplace.mendix.com/link/component/390) module into your Mendix application from the Marketplace.
     * The environment for the Unit Testing must be in running state.
 
-    Since the endpoint is secured with secret credentials, Mendix releases the pipeline variables, allowing the customer to configure them securely during the unit testing step. This step will call the unit testing API endpoint, similar to how a customer would do it. For more information, see the [Running Unit Tests Through the Remote API](/appstore/modules/unit-testing/#running-unit-tests-through-the-remote-api) section of the *Unit testing*.
+    Since the endpoint is secured with secret credentials, Mendix releases the pipeline variables, allowing the customer to configure them securely during the unit testing step. This step will call the unit testing API endpoint, similar to how a customer would do it. For more information, see the [Running Unit Tests Through the Remote API](/appstore/modules/unit-testing/#running-unit-tests-through-the-remote-api) section of *Unit Testing*.
 * Publish – Publish the newly built deployment package to a repository.
 * Start Environment – Start a selected environment.
 * Stop Environment – Stop a selected environment.
@@ -179,17 +180,17 @@ Some steps depend on the outputs of other steps. Therefore, you must add Checkou
 If you try to add a dependent step without the step that creates the output it depends on, a validation error will display and prompt you to add the missing step first.
 {{% /alert %}}
 
-These pipeline steps use pipeline variables to reference values across pipelines in a Mendix app project. Variables are indicated with a `$` sign and generally use the format `$StepName.OutputName`. There are two types of variables:
+These pipeline steps use pipeline variables to reference values across pipelines in a Mendix app. Variables are indicated with a `$` sign and generally use the format `$StepName.OutputName`. There are two types of variables:
 
 1. Mendix-defined variables
 
-    * These are provided by Mendix. Every pipeline step results in some outputs which can be referenced in subsequent steps. For example, Publish uses the output of Build as $Build.DeploymentPackage. Similarly, Deploy uses $Publish.DeploymentPackage to deploy to the selected environment. Click **Outputs** inside a Pipeline **Designs** tab to view a step’s output variables. 
-    * The scope of these variables is specific to a particular pipeline design within a Mendix project.
+    * These are provided by Mendix. Every pipeline step results in some outputs which can be referenced in subsequent steps. For example, Publish uses the output of Build as `$Build.DeploymentPackage`. Similarly, Deploy uses `$Publish.DeploymentPackage` to deploy to the selected environment. Click **Outputs** inside a Pipeline **Designs** tab to view a step’s output variables. 
+    * The scope of these variables is specific to a particular pipeline design within a Mendix app.
 
 2. User-defined variables
 
-    * These are defined by project members who have access to create pipelines using the **Variables** tab. These user-defined variables can be used to easily reference values such as API Keys, third-party tool’s project IDs, and more.
-    * The scope of these variables is project-wide, so any user of the project can create and access them, and any pipeline in the project can configure them.
+    * These are defined by app members who have access to create pipelines using the **Variables** tab. These user-defined variables can be used to easily reference values such as API Keys, third-party tool’s app IDs, and more.
+    * The scope of these variables extends across the apps, so any app user can create and access them, and any pipeline in the app can configure them.
 
 ### Saving, Activating, and Deactivating a Pipeline
 

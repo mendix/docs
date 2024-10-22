@@ -196,9 +196,9 @@ Svix is required if you want to use webhooks. Install the Svix component by doin
 3. Select **Svix**, and then specify the following parameters:
 
     * **POSTGRES_DSN** - A Postgres DSN, for example, `postgresql://postgres:postgres@pgbouncer/postgres`.
-    * **Image** - Optional. If you are using a self-signed TLS certificate, set this path to `{customer-private-image-registry-url}/svix/svix-server:v1.25.tls`.
+    * **Image** - The Svix image path. The default path is `svix/svix-server:v1.25.0`. If you are using a self-signed TLS certificate, set this path to `{customer-private-image-registry-url}/svix/svix-server:v1.25.tls`.
     * **Use Redis** - Optional. Select this check box if you want to use Redis for message cache and queues.
-    * **REDIS_DSN** - This field is only available if you select the **Use Redis** check box. The Redis DSN, for example, `redis://redis:6379`.
+    * **REDIS_DSN** - The Redis DSN, for example, `redis://redis:6379`. This field is only available if you select the **Use Redis** check box.
 
 4. Click **Install Svix** or **Upgrade Svix**.
 

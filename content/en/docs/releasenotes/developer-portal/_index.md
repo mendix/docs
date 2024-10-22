@@ -29,8 +29,6 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 * In [Portfolio Management](/developerportal/portfolio-management/initiatives-overview/), we replaced the introduction page for new users with a more streamlined introduction banner.
 
-* We have made performance improvements to [Software Composition](/developerportal/deploy/software-composition/). Software Bills of Materials (SBOMs) generated automatically upon the creation of deployment packages now show up on the **Software Composition** page within minutes.
-
 ### September 29, 2024
 
 #### Improvements

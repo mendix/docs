@@ -201,3 +201,5 @@ You can use this parameter to affect the HTTP response:
 * The microflow can create headers associated to the HttpResponse parameter. These headers will be added to the response, overwriting headers with the same key if those would otherwise have been created.
 * The microflow can change the StatusCode and/or the Content attributes of the HttpResponse parameter to completely ignore the default behavior and response with that StatusCode and Content instead.
 * Changing the ReasonPhrase attribute has no effect.
+* It is not possible to change values for `Transfer-Encoding` and `Date` headers
+* When StatusCode is set to `204` then empty response body is always produced.

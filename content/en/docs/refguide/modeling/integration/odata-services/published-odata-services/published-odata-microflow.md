@@ -77,3 +77,7 @@ If only headers of the HttpResponse were changed (for instance a new header was 
 If status code OR content of the HttpResponse were changed then actual response would be produced exclusively from HttpResponse parameter, including status code, headers and response body.
 
 Note. Reason phrase field is ignored.
+
+It is not possible to change values for `Transfer-Encoding` and `Date` headers
+
+When StatusCode is set to `204` then empty response body is always produced.

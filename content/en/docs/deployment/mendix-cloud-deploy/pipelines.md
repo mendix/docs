@@ -191,7 +191,6 @@ These pipeline steps use pipeline variables to reference values across pipelines
     * These are defined by project members who have access to create pipelines using the **Variables** tab. These user-defined variables can be used to easily reference values such as API Keys, third-party tool’s project IDs, and more.
     * The scope of these variables is project-wide, so any user of the project can create and access them, and any pipeline in the project can configure them.
 
-
 ### Saving, Activating, and Deactivating a Pipeline
 
 #### Saving
@@ -217,9 +216,27 @@ Note that active pipelines cannot be edited. If you want to edit an existing pip
 
 The pipeline design's status (**Active** or **Inactive**) is displayed in the overview table on the **Designs** tab.
 
+## The Variables Tab{#variable-tab}
+
+The **Variables** tab lets you configure your own variables. These user-defined variables become available in the pipeline steps. It is useful when you want to use the same value in multiple pipelines or avoid storing secret credentials as plain text in your pipeline step.
+
+### Creating a New Variable
+
+To create  a new variable, click **Create New Variable** from the **Variables** tab and open a dialog box. Enter a name for your variable in the **Name** field. The variable name must begin with a letter or underscore. (`_`) and must be unique from existing variables.
+
+Click **Save Variable** to save your variable. You can now select it in the unit testing step.
+
+Click **More Options** ({{% icon name="three-dots-menu-horizontal-filled" %}}) > **Edit** on a saved variable to edit and update the variable or its value.
+
+### Masked Variables
+
+Select **Mask > Yes** for confidential values. It will never be printed in the logs or error messages.
+
+While editing a saved variable, selecting **Mask > No** will allow you to verify the value. Make sure to set it back to **Mask > Yes** before saving the variable.
+
 ## The Settings Tab{#settings-tab}
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/pipelines/settings-tab.png" alt="" >}}
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/pipelines/settings-tab.png" >}}
 
 The **Settings** tab lets you configure user settings. You must add your API key and personal access token (PAT) before you can activate or run your first pipeline. If you still need to configure these user settings, the **Settings** tab is marked with an alert icon ({{% icon name="alert-circle-filled" color="red" %}}).
 

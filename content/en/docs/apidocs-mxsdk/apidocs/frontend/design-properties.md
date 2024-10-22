@@ -17,7 +17,7 @@ Design properties are a special set of settings shipped together with a Mendix t
 
 In Studio Pro, you can see which design properties are available for a widget in the **Properties** pane.
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/overview.png" alt="The Properties pane in Studio Pro" class="no-border" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/overview.png" alt="The Properties pane in Studio Pro" >}}
 
 ## Using Design Properties
 

@@ -84,9 +84,9 @@ The [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) c
 
 The first diagram shows a simple process where the user is interested in the status of a certain ticket. The LLM connector takes care of handling the tool call response as well as executing the function microflows until the API returns the final assistant's response as visualized by the blue box.
 
-{{< figure src="/attachments/appstore/use-content/modules/genai/function-calling/function-calling.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/function-calling/function-calling.png" >}}
 
 In the second diagram, the user did not provide the required input for the function. The model was instructed in the system prompt to not assume parameters and ask for clarification if needed: `Don't make assumptions about what values to plug into functions. Ask for clarification if a user request is ambiguous. If a tool call was not successful, give this information to the user and ask for clarification.`
 The second user prompt contains the identifier and the whole message history is sent as part of the request. With this information, the model is now able to answer the initial question of the user.
 
-{{< figure src="/attachments/appstore/use-content/modules/genai/function-calling/function-calling-with-clarification.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/function-calling/function-calling-with-clarification.png" >}}

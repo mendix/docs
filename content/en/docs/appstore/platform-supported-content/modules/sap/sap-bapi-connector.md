@@ -33,7 +33,7 @@ Using the SAP Cloud Connector minimizes the network complexity and helps make yo
 
 The following diagram shows the architecture of the SAP BAPI connector with the SAP Cloud Connector.
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/diagram.png" alt="A diagram showing the architecture of the SAP BAPI connector" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-bapi-connector/diagram.png" alt="A diagram showing the architecture of the SAP BAPI connector" class="no-border" >}}
 
 ## Prerequisites
 
@@ -68,7 +68,7 @@ To use BAPI Connector for SAP Solutions in your Mendix application to call the B
 4. Search for the BAPIs you need, download the schemas, and [generate Mendix BAPI modules](#create-bapi-module) using the [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com/link/bapi).
 5. Import the generated Mendix BAPI module *.mpk* to your Mendix application using the instructions in [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide/import-and-export/). A module with the same name as the BAPI is added to the app.
 
-    {{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/bapi-material-getall.png" alt="The BAPI_MATERIAL_GETALL module in the App Explorer" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/sap-bapi-connector/bapi-material-getall.png" alt="The BAPI_MATERIAL_GETALL module in the App Explorer" class="no-border" >}}
 
 6. Create a microflow to call the BAPI, as shown in the example below.
 
@@ -91,7 +91,7 @@ To use BAPI Connector for SAP Solutions in your Mendix application to call the B
 
     3. Use the response in further actions. In the example below, the response is used to display details on a Mendix page called `MaterialDetails`.
 
-        {{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/call-bapi-material-getall.png" alt="Microflow calling BAPI_MATERIAL_GETALL using CallBAPI action" class="no-border" >}}
+        {{< figure src="/attachments/appstore/platform-supported-content/modules/sap-bapi-connector/call-bapi-material-getall.png" alt="Microflow calling BAPI_MATERIAL_GETALL using CallBAPI action" class="no-border" >}}
 
     For more information about the microflow actions included in this connector, see the [Microflow Actions](#microflow-actions) section.
 
@@ -102,7 +102,7 @@ To use the BAPI Connector, you have to first set up your environment and configu
 1. Get the [BAPI Connector for SAP solutions module](https://marketplace.mendix.com/link/component/119810).
 2. Import the BAPI Connector for SAP Solutions module into a new or existing application in Mendix Studio Pro 8.18.0 or above. On successful import, the module is visible in your application as **SAPBAPIConnector**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/sap-bapi-connector-module.png" alt="The SAPBAPIConnector module in the App Explorer" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/sap-bapi-connector/sap-bapi-connector-module.png" alt="The SAPBAPIConnector module in the App Explorer" class="no-border" >}}
 
 3. Download the following files from [SAP Support](https://support.sap.com/en/product/connectors/jco.html):
 
@@ -135,7 +135,7 @@ If you are connecting to SAP without using the SAP Cloud Connector, you must set
 
 #### Connecting Using App Constants
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/jcodestination-properties.png" alt="Properties to Set for JCoDestination" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-bapi-connector/jcodestination-properties.png" alt="Properties to Set for JCoDestination" class="no-border" >}}
 
 **DestinationName** – the user-defined name for the JCoDestination.
 
@@ -278,7 +278,7 @@ This section describes two different domain models. The domain model in the `SAP
 
 This is part of the `SAPBAPIConnector` module and contains the entities which are used by the BAPI Connector to create objects required for calling a BAPI
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/bapi-connector-domain-model.png" alt="Domain Model of BAPI Connector" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-bapi-connector/bapi-connector-domain-model.png" alt="Domain Model of BAPI Connector" class="no-border" >}}
 
 * **BAPIRequest** – This is a generic entity which represents a BAPI request. Any entity that represents a specific BAPI request is a specialization of the `BAPIRequest` entity. Objects of this entity contain the request attributes required for a BAPI Call. Request attributes represent Import and Table parameters.
 * **BAPIResponse** – This is a generic entity which represents a BAPI response. Any entity that represents a specific BAPI response is a specialization of the `BAPIResponse` entity. Objects of this entity contain the response from a BAPI Call. Response attributes contain Export and Table parameters.
@@ -298,7 +298,7 @@ A Mendix BAPI module domain model contains entities which are specializations of
 
 For example, consider the domain model for **BAPI_QUOTATION_CREATEFROMDATA2**, shown below:
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/bapi-quotation-createfromdata2-dm.png" alt="Domain model for BAPI_QUOTATION_CREATEFROMDATA2" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-bapi-connector/bapi-quotation-createfromdata2-dm.png" alt="Domain model for BAPI_QUOTATION_CREATEFROMDATA2" class="no-border" >}}
 
 The entities in this domain model are as follows:
 
@@ -313,7 +313,7 @@ BAPI parameters which are reserved words in Mendix will be prefixed with `mxbapi
 
 The BAPI Connector provides the following microflow actions. These can be used as activities in your microflows to consume the BAPIs available in the SAP system for which you have imported Mendix BAPI modules.
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/use-me-microflows.png" alt="Microflow actions in the App Explorer" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-bapi-connector/use-me-microflows.png" alt="Microflow actions in the App Explorer" class="no-border" >}}
 
 The microflow actions are described in the following sections.
 
@@ -321,7 +321,7 @@ The microflow actions are described in the following sections.
 
 The action `GetJCoDestination`, is used to get the JCoDestination. Assign the values from the *JCO_Constants* described in [SAP System Connection Details](#sap-connection-details), above. The action returns a `Destination` object which is used when making calls to a BAPI.
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/getjcodestination-properties.png" alt="The GetJCoDestination action" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-bapi-connector/getjcodestination-properties.png" alt="The GetJCoDestination action" class="no-border" >}}
 
 You can set additional properties which are not available as JCO Constants as a list of objects of the `Property` entity associated with this GetJCoDestination.
 
@@ -330,9 +330,9 @@ This example shows setting of below properties to GetJCoDestination action:
 * jco.pool.maxconn
 * jco.pool.maxpoolsize
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/configure-jcodestination-properties-mf.png" alt="Configuring Additional Properties – JCoDestination" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-bapi-connector/configure-jcodestination-properties-mf.png" alt="Configuring Additional Properties – JCoDestination" class="no-border" >}}
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/getjcodestination-additional.properties.png" alt="Additional properties for the GetJCoDestination action" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-bapi-connector/getjcodestination-additional.properties.png" alt="Additional properties for the GetJCoDestination action" class="no-border" >}}
 
 ### Create_BAPIExplorer
 
@@ -344,7 +344,7 @@ For more information on how to use this microflow, see [BAPI Schema for Model Cr
 
 This microflow action is used to call a BAPI function.
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/call-bapi-properties-2.png" alt="The CallBAPI action" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-bapi-connector/call-bapi-properties-2.png" alt="The CallBAPI action" class="no-border" >}}
 
 | Parameters  | Description   |
 | --- | --- |
@@ -357,7 +357,7 @@ This microflow action is used to call a BAPI function.
 
 Use this microflow action when you want to call more than one BAPI in a given order. This microflow action is only required when you want to call more than one BAPI in a single [JCoContext](https://javadoc.io/doc/com.sap.cloud/neo-java-web-api/2.35.9/com/sap/conn/jco/JCoContext.html). After the calls have been made, this executes an additional call to `BAPI_COMMIT_TRANSACTION` to commit all the changes made in this JCOContext.
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/execute-bapi-sequence.png" alt="The CallBAPISequence action" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-bapi-connector/execute-bapi-sequence.png" alt="The CallBAPISequence action" class="no-border" >}}
 
 | Parameters | Description |
 | --- | --- |
@@ -369,7 +369,7 @@ Use this microflow action when you want to call more than one BAPI in a given or
 
 This microflow action is used together with `CallBAPISequence`. It returns the response for one of the BAPIRequest objects which was in the list supplied to a `CallBAPISequence` action. You need to add this action to your microflow for every `BAPIRequest` object for which you need the response.
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/get-bapi-response.png" alt="The GetBAPIResponse action" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-bapi-connector/get-bapi-response.png" alt="The GetBAPIResponse action" class="no-border" >}}
 
 | Parameters | Description
 | --- | --- |
@@ -401,15 +401,15 @@ A BAPI has to have the status `Released` to be shown in the list. You will not s
 
 When you find a BAPI, you can click **Information** ({{% icon name="info-circle" %}}) to see details including documentation, import, export, and table parameters.
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/bapi-explorer-bapis.png" alt="BAPI Explorer" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-bapi-connector/bapi-explorer-bapis.png" alt="BAPI Explorer" class="no-border" >}}
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/bapi-explorer-bapi-info.png" alt="BAPI Explorer – BAPI Info" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-bapi-connector/bapi-explorer-bapi-info.png" alt="BAPI Explorer – BAPI Info" class="no-border" >}}
 
 Once you find the BAPI you need, select it and click **Next** to generate the BAPI schema file. Download the schema JSON, which you will use in the [Model Creator for SAP Integrations](#create-bapi-module) to create the Mendix BAPI module containing the domain model which supports this BAPI.
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/bapi-explorer-select-bapi.png" alt="BAPI Explorer – Select BAPI" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-bapi-connector/bapi-explorer-select-bapi.png" alt="BAPI Explorer – Select BAPI" class="no-border" >}}
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/bapi-explorer-download-schema.png" alt="BAPI Explorer – Download schema" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-bapi-connector/bapi-explorer-download-schema.png" alt="BAPI Explorer – Download schema" class="no-border" >}}
 
 ## Create a Mendix BAPI Module Using the Model Creator {#create-bapi-module}
 

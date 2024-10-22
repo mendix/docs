@@ -131,7 +131,7 @@ The following is a typical example of how you may want to include the SCIM modul
 | --- | --- |
 | Administrator | SCIM.Administrator |
 
-{{< figure src="/attachments/appstore/use-content/modules/scim/user_roles.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/scim/user_roles.png" class="no-border" >}}
 
 #### After Startup Microflow
 
@@ -208,7 +208,7 @@ Ensure that only legitimate SCIM clients can interact with your app via the SCIM
 
     * **API Key**: Used as a token for header-based authentication. IdP will send this as the authorization header parameter in the request.
 
-    {{< figure src="/attachments/appstore/use-content/modules/scim/alias.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/scim/alias.png" class="no-border" >}}
 
 2. Configuring API-Key via Pipeline
 
@@ -242,7 +242,7 @@ The custom microflow name must begin with the string `UC_CustomProvisioning` and
 
  It will be executed after user creation or update of user. If you have added a new microflow, you need to refresh the module containing your microflow as described in the [Mx Model Reflection](/appstore/modules/model-reflection/).
 
-{{< figure src="/attachments/appstore/use-content/modules/scim/user_commons.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/scim/user_commons.png" class="no-border" >}}
 
 This selection can be blank if you do not want to add custom logic. Save this configuration. Double click on **Alias** name and you will be able to copy the generated **API Key**.
 
@@ -255,7 +255,7 @@ Setting up connectivity with an IdP varies depending on the vendor. The followin
 1. On the Microsoft Entra ID tenant, select **Enterprise Application** and create SCIM client in it.
 2. Change the **Provisioning Mode** to **Automatic**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/scim/provisioning_revised.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/scim/provisioning_revised.png" class="no-border" >}}
 
 3. Configure the SCIM server (Mendix SCIM Application) with the following details:
 
@@ -271,7 +271,7 @@ Setting up connectivity with an IdP varies depending on the vendor. The followin
 
 5. Click **Users and groups** to add and assign the required individual users or group (or groups) of users to the SCIM Client. The scheduled provisioning will sync these users.
 
-    {{< figure src="/attachments/appstore/use-content/modules/scim/users_and_groups.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/scim/users_and_groups.png" class="no-border" >}}
 
 6. On the SCIM client app, click **Provisioning** to do the user provisioning.
 

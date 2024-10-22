@@ -29,10 +29,9 @@ For Mendix 10 and 11, we are planning to follow this release timeline:
 | 10.6 MTS | December 2023 |
 | 10.12 MTS | June 2024 |
 | 10.18 MTS | December 2024 |
-| 10.21 LTS | March 2025 |
-| 11 Beta 1 | April 2025 |
-| 11 Beta 2 | May 2025 |
-| 11.0 GA | June 2025 |
+| 11 Beta 1, 10.22 | April 2025 |
+| 11 Beta 2, 10.23 | May 2025 |
+| 11.0 GA, 10.24 LTS | June 2025 |
 
 ### Minor Version
 
@@ -48,10 +47,9 @@ A patch version is released on an as-needed basis. It includes security fixes an
 
 ## Long-Term Support Version (LTS) {#lts}
 
-An LTS version is the latest minor version before a new major version is released for general availability. Once a minor version becomes an LTS, it will not have new features added to it. 
+An LTS version is the last minor release of a major version. Its release is aligned with the GA release of the next major version. For example, the 10.24 LTS version will be released in the same month as Mendix 11 GA. Once a minor version becomes an LTS, it will not have new features added to it. 
 
 These are the current LTS versions of Studio Pro:
-
 * [9.24](/releasenotes/studio-pro/9.24/) (started in March, 2023)
 * [8.18](/releasenotes/studio-pro/8.18/) (started in March, 2021)
 
@@ -104,7 +102,7 @@ Release notes for the current MTS version are marked with an MTS badge (<text cl
 MTS versions (for example, 9.6) remain supported until the next major version has been released for general availability (for example, 10.0).
 {{% /alert %}}
 
-If you are on an innovation track with your development and need to get the latest and greatest Mendix has to offer every month, then upgrade to an MTS and stay on that version with its patch releases until the next MTS version is released.
+Mendix MTS versions offer a balance between getting the latest and greatest Mendix has to offer every month, and security and stability.
 
 {{% alert color="info" %}}
 
@@ -114,7 +112,7 @@ Mendix recommends using the latest patch version of the release as the latest ve
 
 ### Support Duration
 
-The support duration for an MTS depends on when a new higher major version is released for general availability, which thus creates a new LTS and ends support for all MTS versions for that respective major version.
+Support for an MTS version ends three months after the LTS version of that major version is released. For example, version 10.24 is released in June 2025. Support for the 10.6, 10.12 and 10.18 MTS versios will then end in September 2025.
 
 ### Release Cycle
 

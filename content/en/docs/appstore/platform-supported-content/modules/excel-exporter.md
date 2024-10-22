@@ -13,9 +13,9 @@ The Excel Exporter is compatible with the [Excel Importer](/appstore/modules/exc
 
 ## Prerequisites
 
-* [Install Mx Model Reflection](/howto/integration/using-the-excel-exporter/#download-modules) version 6.1.1 or higher
-* [Add MxReflection page and Excel Exporter page to the navigation](/howto/integration/using-the-excel-exporter/#add-navigation-items)
-* [Configure Mx Model Reflection](/howto/integration/using-the-excel-exporter/#configure-mx-model-reflection)
+* [Install Mx Model Reflection](/refguide/using-the-excel-exporter/#download-modules) version 6.1.1 or higher
+* [Add MxReflection page and Excel Exporter page to the navigation](/refguide/using-the-excel-exporter/#add-navigation-items)
+* [Configure Mx Model Reflection](/refguide/using-the-excel-exporter/#configure-mx-model-reflection)
 
 ## Configuration
 
@@ -50,7 +50,7 @@ On the template details page, you can define the template with the following ite
 * **Date time export format**: the format for exported date and time
 * **Upload existing excel file**: uploads an Excel file which is used as a template
 
-    {{% alert color="info" %}}If you use an uploaded Excel file as a template, the names of the sheets and columns in your template will be used. However, the background color in your template will be overruled by the **Background color** of the style that is applied when the **Background color** is not set to **none**.{{% /alert %}}
+    {{% alert color="info" %}}If you use an uploaded Excel file as a template, the names of the sheets and columns in your template will be used. However, the background color in your template will be overruled by the **Background color** (including **none**) specified in the applicable style. {{% /alert %}}
    
 * **Worksheets**: contains the following items that you can use to define sheets in an exported document:
     * **New**: opens a new [sheet details page](#sheet-details) to create a sheet
@@ -70,7 +70,7 @@ On the template details page, you can define the template with the following ite
         * **Horizontal alignment**: the horizontal alignment of the text 
         * **Background color**: the color of the background
 
-            {{% alert color="info" %}}If you use an uploaded Excel file as a template, the background color you select here (if the value is not **none**) will overrule the background color in your template.{{% /alert %}}
+            {{% alert color="info" %}}If you use an uploaded Excel file as a template, the background color you select here (including the value **none**) will overrule the background color in your template.{{% /alert %}}
 
         * **Vertical alignment**: the vertical alignment of the text
         * **Rotation**: the degrees that the text is rotated anti-clockwise

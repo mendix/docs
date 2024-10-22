@@ -32,11 +32,11 @@ Always try to use a Mendix action first. This table explains why you should use 
 
 However, there are reasons to not use Mendix actions. For example, sometimes a custom action can get too complex using a Mendix action, because of the input parameters that are required. For another example, when using a Mendix action, you have six input parameters:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/guidelines-custom-action/mendix-action-input-parameters.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/guidelines-custom-action/mendix-action-input-parameters.png" class="no-border" >}}
 
 But when you use a core action, you have four input parameters: 
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/guidelines-custom-action/core-action-input-parameters.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/guidelines-custom-action/core-action-input-parameters.png" class="no-border" >}}
 
 The difference is because of the required **Widget Name** input parameter in a Mendix action. When you use a core action, this is not always required. So if you don not need the widget name, a core action is a better solution. This is a valid reason to use the core actions; otherwise, the custom action is not user-friendly.
 
@@ -46,7 +46,7 @@ Only use items that are visually present on the page, like the text inside a cer
 
 This is a visual component:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/guidelines-custom-action/visual-component-widget.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/guidelines-custom-action/visual-component-widget.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 
@@ -75,7 +75,7 @@ Try to find the generic aspect of the child node. In most cases, the `mx-name-` 
 
 This is the `mx-name` in the debugger:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/guidelines-custom-action/mx-name-in-debugger.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/guidelines-custom-action/mx-name-in-debugger.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 
@@ -89,7 +89,7 @@ When using core actions to trigger an event, always use a Mendix Wait action aft
 
 This is the Mendix Wait action:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/guidelines-custom-action/mendix-wait-action.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/guidelines-custom-action/mendix-wait-action.png" class="no-border" >}}
 
 For more information, please see [Mendix Wait](/appstore/partner-solutions/ats/rg-one-mendix-wait/).
 
@@ -121,9 +121,9 @@ These are some of the most used action parameters:
 
 These are the three most used action parameters:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/guidelines-custom-action/standard-input-parameters.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/guidelines-custom-action/standard-input-parameters.png" class="no-border" >}}
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/guidelines-custom-action/standard-input-parameters-2.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/guidelines-custom-action/standard-input-parameters-2.png" class="no-border" >}}
 
 Last but not least, give a description to the action parameters, especially when it requires specific information. You can also give a generic example of what the user should enter, making it more user-friendly.
 
@@ -141,7 +141,7 @@ In addition, describe the output of each test step to make it easier to understa
 
 This is an example:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/guidelines-custom-action/describe-teststeps-define-output.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/guidelines-custom-action/describe-teststeps-define-output.png" class="no-border" >}}
 
 ## Data Type Awareness
 
@@ -163,7 +163,7 @@ These are the different data types in ATS:
 | Float | ⚠ The Float type is deprecated and should not be used. | N/A |
 | Currency | ⚠ The Currency type is deprecated and should not be used. | N/A |
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/guidelines-custom-action/datatype-web-element.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/guidelines-custom-action/datatype-web-element.png" class="no-border" >}}
 
 The JavaScript actions have three different versions, based on the data types:
 

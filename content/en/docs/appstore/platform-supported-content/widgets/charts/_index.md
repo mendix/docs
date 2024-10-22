@@ -42,11 +42,11 @@ These are the available charts:
 
 The **Series** property makes it easy to configure, control, and modify a chart series:
 
-{{< figure src="/attachments/appstore/use-content/widgets/charts/data-source-example.png" width="450px" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/data-source-example.png" width="450px" class="no-border" >}}
 
 You do not need to put a chart into a data view to feed data into a widget. When you click the **New** button on a series panel, the **Edit Series** dialog box will be shown:
 
-{{< figure src="/attachments/appstore/use-content/widgets/charts/series-item-example.png" width="450px" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/series-item-example.png" width="450px" class="no-border" >}}
 
 In this dialog box you will find these properties:
 
@@ -77,13 +77,13 @@ All changes made in the developer editor are temporary. To save your progress, c
 
 When set to **Yes** this property enables **Developer mode** for the selected chart. After enabling **Developer mode** you will see a **Toggle Editor** button. When clicked, this button opens the **Chart settings** panel:
 
-{{< figure src="/attachments/appstore/use-content/widgets/charts/toggle-editor-button.png" width="350px" alt="Toggle Editor button in top right corner of the chart widget." class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/toggle-editor-button.png" width="350px" alt="Toggle Editor button in top right corner of the chart widget." class="no-border" >}}
 
 This developer mode panel is a live settings editor, meaning that your changes will be instantly applied to the current chart.
 
 At the top of the panel there is a drop-down list which shows the currently selected settings group. By default each chart has a **Layout** group and **Configuration** group—these groups control chart and layout settings. Also, in this drop-down list you will find named groups that allow you to configure chart settings per series:
 
-{{< figure src="/attachments/appstore/use-content/widgets/charts/charts-dev-panel.png" width="350px" alt="Panel with dropdown on top and textarea below. Textarea content is a JSON object." class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-dev-panel.png" width="350px" alt="Panel with dropdown on top and textarea below. Textarea content is a JSON object." class="no-border" >}}
 
 {{% alert color="info" %}} 
 To see available options and useful examples, see Plotly's [JavaScript Figure Reference](https://plotly.com/javascript/reference/index/) guide. 
@@ -93,7 +93,7 @@ For more information on saving custom settings for a chart, see the [Chart custo
 
 #### Show Legend
 
-{{< figure src="/attachments/appstore/use-content/widgets/charts/chart-with-legend.png" width="450px" alt="Column chart. The legend list on right side is highlighted with red square." class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/chart-with-legend.png" width="450px" alt="Column chart. The legend list on right side is highlighted with red square." class="no-border" >}}
 
 This setting controls the visibility of a chart's legend block (highlighted in the picture above). If set to **no**, then the legend block is hidden.
 
@@ -170,7 +170,7 @@ Please, find more details in [Custom Configurations](#custom-configurations) in 
 
 This setting controls the bar format. In the **group** format, bars go one below the other. In the **stacked** format, bars are stacked on top of one another forming one line.
 
-{{< figure src="/attachments/appstore/use-content/widgets/charts/bar-chart-formats.png" width="450px" alt="Two bar charts. On the left bar chart lines in group go one below other. On the right chart, lines in group stacked on top of each other, forming one big line." class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/bar-chart-formats.png" width="450px" alt="Two bar charts. On the left bar chart lines in group go one below other. On the right chart, lines in group stacked on top of each other, forming one big line." class="no-border" >}}
 
 #### Edit Series Item Dialog
 
@@ -200,7 +200,7 @@ This setting controls the bar format. In the **group** format, bars go one below
 
 This setting controls a chart's format. In the **group** format, columns go one after another. In the **stacked** format columns from each series will be stacked on top of each other. 
 
-{{< figure src="/attachments/appstore/use-content/widgets/charts/column-chart-format-grouped-vs-stacked.png" alt="Two column charts. On the left chart columns go one after another. On the right chart pairs of columns stacked on each other, each pair go one after another." title="Two format types of column chart, where group format is present on the left and stack format is present on the right." class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/column-chart-format-grouped-vs-stacked.png" alt="Two column charts. On the left chart columns go one after another. On the right chart pairs of columns stacked on each other, each pair go one after another." title="Two format types of column chart, where group format is present on the left and stack format is present on the right." class="no-border" >}}
 
 #### Edit Series Item Dialog
 
@@ -280,7 +280,7 @@ The font color to display values for each dot.
 
 This property allows for an expression that when evaluated will return a unique name for a single series:
 
-{{< figure src="/attachments/appstore/use-content/widgets/charts/pie-chart-series-name-example.png" width="450px" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/pie-chart-series-name-example.png" width="450px" class="no-border" >}}
 
 {{% alert color="warning" %}} 
 This property is required. 
@@ -337,9 +337,9 @@ To navigate to a series' custom settings, do the following:
 1. Select the series you want to configure, then click **Edit**.
 1. Open the **Advanced** tab and paste your custom series settings object there (in JSON format):
 
-    {{< figure src="/attachments/appstore/use-content/widgets/charts/custom-series-settings-step-1.png" width="450px" alt="Two dialog boxes. First shows Data source property with list of series records. Second dialog box show settings for the first series in list. Big red arrow pointing to the Advanced tab of the second dialog box." class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/custom-series-settings-step-1.png" width="450px" alt="Two dialog boxes. First shows Data source property with list of series records. Second dialog box show settings for the first series in list. Big red arrow pointing to the Advanced tab of the second dialog box." class="no-border" >}}
 
-    {{< figure src="/attachments/appstore/use-content/widgets/charts/custom-series-settings-step-2.png" width="450px" alt="Settings dialog box window with Advanced tab being active and single textarea element." class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/custom-series-settings-step-2.png" width="450px" alt="Settings dialog box window with Advanced tab being active and single textarea element." class="no-border" >}}
 
 ### Custom Layout {#custom-layout}
 
@@ -347,7 +347,7 @@ This property allows you to save your custom **Layout** settings for this widget
 
 To save your custom settings that related to the **Layout** group, navigate to the **Advanced** tab and paste your JSON in **Custom layout** text area:
 
-{{< figure src="/attachments/appstore/use-content/widgets/charts/custom-layout-settings.png" width="450px" alt="Settings dialog box with Advanced tab being active. Tab includes two text area on of which is focused." class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/custom-layout-settings.png" width="450px" alt="Settings dialog box with Advanced tab being active. Tab includes two text area on of which is focused." class="no-border" >}}
 
 These layout settings will be passed to the underlying Plotly JavaScript library. To see available options and their description. Visit the [Layout](https://plotly.com/javascript/reference/#layout) section of the *Plotly Reference Guide*. 
 
@@ -357,7 +357,7 @@ This property allows you to save your custom **Configuration** settings for this
 
 This object will be merged with default settings and passed to the underlying [Plotly JavaScript](https://plotly.com/javascript/) library. To see available settings and examples check the [Configuration Options in JavaScript](https://plotly.com/javascript/configuration-options/) section of the *Plotly Reference Guide*.
 
-{{< figure src="/attachments/appstore/use-content/widgets/charts/custom-config.png" width="450px" alt="Settings dialog box with Advanced tab being active. Tab includes two text area on of which is focused." class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/custom-config.png" width="450px" alt="Settings dialog box with Advanced tab being active. Tab includes two text area on of which is focused." class="no-border" >}}
 
 ## Legacy Chart Widget Documentation {#legacy-widget-docs}
 
@@ -437,7 +437,7 @@ The **Heat map** should be configured with required horizontal, vertical, and da
 
 The sample domain model could be either of the two configurations below:
 
-{{< figure src="/attachments/appstore/use-content/widgets/charts/heat-map.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/heat-map.png" class="no-border" >}}
 
 #### Bubble chart
 

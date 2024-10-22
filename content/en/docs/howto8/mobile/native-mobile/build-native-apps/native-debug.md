@@ -112,7 +112,7 @@ The Android Debug Bridge (ADB) can get the log files via command line (specifica
 1. Download the [Latest Android Tools](https://dl.google.com/android/repository/platform-tools-latest-windows.zip) for Windows.
 1. Unzip the files in a working directory, for example **C:\adb**.
 1. Open a command line tool the in the working directory.
-1. Execute the command `adb.exe start`.
+1. Execute the command `adb start-server`.
 1. Connect your phone via USB, then accept the **Allow USB debugging?** dialog box on your phone.
 1. Execute the command `adb logcat > output.txt`. All output will be written in *output.txt*.
 1. Open your Mendix app and implement the actions that you want to debug.

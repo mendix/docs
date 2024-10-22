@@ -128,7 +128,7 @@ To build a simple microflow that uses the ChatCompletions operation to send a si
 9. Add a **Show Message** activity to the end of the microflow and configure it to show the returned response string.
 10. Add a button that calls this microflow, run your project, and verify the results.
 
-{{< figure src="/attachments/appstore/use-content/modules/aws-bedrock/chat-completions-mf.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/aws-bedrock/chat-completions-mf.png" class="no-border" >}}
 
 You can find several implementation examples for the ChatCompletions operations inside of the [GenAI showcase application](https://marketplace.mendix.com/link/component/220475).
 
@@ -160,7 +160,7 @@ To invoke a specific model that is not covered by the ChatCompletions operation,
     7. Map the relevant elements to the correct attributes by double-clicking the shown entities and choosing the correct entity attributes for the correct elements.
 6. Create a microflow that invokes a specific model using the **Invoke Model** operation, such as in the following figure (for Claude v. 2.1):
 
-    {{< figure src="/attachments/appstore/use-content/modules/aws-bedrock/microflow.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/aws-bedrock/microflow.png" class="no-border" >}}
 
 ### Invoking an Agent with the InvokeAgent Operation {#invokeagent}
 
@@ -194,7 +194,7 @@ The **Documentation** pane displays the documentation for the currently selected
 1. In the [View menu](/refguide/view-menu/) of Studio Pro, select **Documentation**.
 2. Click on the element for which you want to view the documentation.
 
-    {{< figure src="/attachments/appstore/use-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
 
 ### Operations to Persist Amazon Bedrock Metadata inside the Application
 

@@ -17,7 +17,7 @@ The widget also uses a flexible approach for filtering. You can drag data-grid-s
 
 Here is an example of a data grid using filters:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/example.png" alt="Example of data grid using filters" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/example.png" alt="Example of data grid using filters" class="no-border" >}}
 
 You can enable these advanced options to customize your data grid:
 
@@ -41,15 +41,15 @@ In the new data grid, you are able to choose how users can iterate within the gr
 * Arrow down: descending sorting applied
 * Double-sided arrow: no sorting is applied
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/sorting-asc.png" alt="Ascending sort" class="no-border" >}}
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/sorting-desc.png" alt="Descending sort" class="no-border" >}}
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/no-sorting.png" alt="Natural order (No sorting)" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/sorting-asc.png" alt="Ascending sort" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/sorting-desc.png" alt="Descending sort" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/no-sorting.png" alt="Natural order (No sorting)" class="no-border" >}}
 
 ### Resizing
 
 **Resizing** enables the header to be resizable by dragging the handle on the right side of a header. Here is an example of the handle indicating the column is resizable:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/resizing.png" alt="Handle indicating the column is resizable" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/resizing.png" alt="Handle indicating the column is resizable" class="no-border" >}}
 
 ### Reordering
 
@@ -57,7 +57,7 @@ In the new data grid, you are able to choose how users can iterate within the gr
 
 Here is an example of reordering in progress:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/reordering.gif" alt="Example of reordering" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/reordering.gif" alt="Example of reordering" class="no-border" >}}
 
 ### Hiding
 
@@ -65,7 +65,7 @@ Here is an example of reordering in progress:
 
 Here is an example of hiding button containing columns to be hidden:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/hiding.png" alt="Example of hiding button containing columns to be hidden" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/hiding.png" alt="Example of hiding button containing columns to be hidden" class="no-border" >}}
 
 {{% alert color="info" %}}
 When a column is marked as “Yes, hidden by default” it will render differently in **Structure mode** and **Design mode** and to indicate that the column is hidden. **When running the application, the column will in fact be hidden by default**. 
@@ -73,11 +73,11 @@ When a column is marked as “Yes, hidden by default” it will render different
 
 Here is an example containing a column with **Yes, hidden by default** in **Structure mode**:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/hidden-columns-structure-mode.png" alt="Example containing a column with “Yes, hidden by default” in Structure mode" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/hidden-columns-structure-mode.png" alt="Example containing a column with “Yes, hidden by default” in Structure mode" class="no-border" >}}
 
 Here is an example containing a column with **Yes, hidden by default** in **Design mode**:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/hidden-columns-design-mode.png" alt="Example containing a column with “Yes, hidden by default” in Design mode" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/hidden-columns-design-mode.png" alt="Example containing a column with “Yes, hidden by default” in Design mode" class="no-border" >}}
 
 ## Pagination
 
@@ -91,7 +91,7 @@ In the new data grid we offer two types of pagination: **Paging Buttons** and **
 
 The **Paging Buttons** option will render the default buttons as the previous data grid. When the data source is uncountable (for example, external entities), neither the last page button nor the counting will be available.
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/paging-buttons.png" alt="Example of paging buttons" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/paging-buttons.png" alt="Example of paging buttons" >}}
 
 You can configure pagination based on the following properties:
 
@@ -112,7 +112,7 @@ In Data Grid you can choose what you want to render into columns. This can be an
 
 Here is an example of column properties:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/column-properties.png" alt="Example of column properties" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/column-properties.png" alt="Example of column properties" >}}
 
 ### Attribute
 
@@ -122,7 +122,7 @@ Here is an example of column properties:
 
 **Dynamic Text** renders a text-templated string which can contain text combined with attributes:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/column-dynamic-text.png" alt="Example of dynamic text" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/column-dynamic-text.png" alt="Example of dynamic text" class="no-border" >}}
 
 ### Custom Content
 
@@ -130,7 +130,7 @@ Here is an example of column properties:
 
 Here is an example of custom content using new Badge widget in **Structure mode**:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/column-custom-content.png" alt="Example of custom content using new Badge widget in Structure mode" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/column-custom-content.png" alt="Example of custom content using new Badge widget in Structure mode" class="no-border" >}}
 
 For more information on configuring various widget properties, see [Common Widget Properties](/refguide/common-widget-properties/).
 
@@ -138,7 +138,7 @@ For more information on configuring various widget properties, see [Common Widge
 
 You can define how each cell will be rendered in the data grid. We offer three choices:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/column-width.png" alt="Settings for column width for each column item" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/column-width.png" alt="Settings for column width for each column item" class="no-border" >}}
 
 * **Auto-fill** — With this option it will auto define the width of your column, if all columns are using auto-fill, it will divide evenly the same width, if another column is configured with auto-fit or manual, it will fill the available space.
 * **Auto-fit** — Content With this option it will calculate the width of your column based on the content of each row.
@@ -152,7 +152,7 @@ You can choose how the content inside your columns will be aligned. We offer thr
 This will also change the alignment of your header.
 {{% /alert %}}
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/column-alignment.png" alt="Settings for alignment of each column item" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/column-alignment.png" alt="Settings for alignment of each column item" class="no-border" >}}
 
 ### Dynamic Cell Class
 
@@ -160,7 +160,7 @@ In the new data grid we offer an option to dynamically apply a CSS class in a sp
 
 In this example we check the value of `StringAttribute` and then apply the class `.my-name-class` if the attribute is equal to `my name` to the cell:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/dynamic-cell-class.png" alt="Example of dynamic cell class" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/dynamic-cell-class.png" alt="Example of dynamic cell class" class="no-border" >}}
 
 ### Wrap Text
 
@@ -170,7 +170,7 @@ You can choose if you want to wrap the text content of a column and apply ellips
 If you are using **Custom content** in the **Show** option of the **General** tab, please make sure you are using a **Text Widget** without containers around it. Containers sometimes interfere with wrapping texts.
 {{% /alert %}}
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/column-wrap-text.png" alt="Example of wrap text" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/column-wrap-text.png" alt="Example of wrap text" class="no-border" >}}
 
 ### Tooltip
 
@@ -180,7 +180,7 @@ If you need to display advisory information for cell content, you can specify th
 This property is not available if you enable **Custom content** for the column
 {{% /alert %}}
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/tooltip-prop.png" alt="Example of wrap text" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/tooltip-prop.png" alt="Example of wrap text" class="no-border" >}}
 
 ### Association Filter {#association-filter}
 
@@ -204,7 +204,7 @@ This section defines options for the rows of the grid.
 
 The **Empty List Message** option defines what users can see when the data grid does not have a value to be presented or when a filter is applied without results. When this option is defined as custom you can place widgets right above the rows in a dropzone. Here is an example:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/empty-list-message.png" alt="Example of empty list message placeholder in Structure mode" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/empty-list-message.png" alt="Example of empty list message placeholder in Structure mode" class="no-border" >}}
 
 ### Dynamic Row Class
 
@@ -216,7 +216,7 @@ If you have a dynamic cell class being applied it will have precedence over the 
 
 In this example we check the value of `StringAttribute and` then apply the class `.my-name-class` if the attribute is equal to `my name` to the row:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/dynamic-row-class.png" alt="Example of dynamic row class" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/dynamic-row-class.png" alt="Example of dynamic row class" class="no-border" >}}
 
 ## Events
 
@@ -236,15 +236,15 @@ The type of your selected attribute should match the filter type. For example, a
 Also the desired attribute must be filterable. For example, not a value which is calculated.
 {{% /alert %}}
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/settings-show-column-filters.png" alt="Settings for data grid 2" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/settings-show-column-filters.png" alt="Settings for data grid 2" class="no-border" >}}
 
 Here is an example of dropzones for filters in **Structure mode**:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/dropzones-for-filters.png" alt="Example of dropzones for filters in Structure mode" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/dropzones-for-filters.png" alt="Example of dropzones for filters in Structure mode" class="no-border" >}}
 
 ### Date Filter
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/date-filter.png" alt="Example of default Date filter look and feel" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/date-filter.png" alt="Example of default Date filter look and feel" class="no-border" >}}
 
 **Date filter** allows users to match date attributes based on these predefined criteria:
 
@@ -258,7 +258,7 @@ Here is an example of dropzones for filters in **Structure mode**:
 
 Here is an example of **Date filter** as **Between**:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/date-filter-between.png" alt="Date filter between" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/date-filter-between.png" alt="Date filter between" class="no-border" >}}
 
 {{% alert color="warning" %}}
 When **Date filter** is defined with **Between** it is not possible to type the date manually. It also has a clear button to clear the date range.
@@ -266,23 +266,23 @@ When **Date filter** is defined with **Between** it is not possible to type the 
 
 You can select your filter criteria in the **Date Filter** settings:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/date-filter-settings.png" alt="Date filter settings" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/date-filter-settings.png" alt="Date filter settings" class="no-border" >}}
 
 When **Adjustable by user** is defined as **No** it will not render the option to choose the filter type in the widget.
 
 Here is an example of available filter types for **Date Filter**:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/date-filter-types.png" alt="Filter types for Date Filter" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/date-filter-types.png" alt="Filter types for Date Filter" class="no-border" >}}
 
 Here is an example of **Date Filter** with **Adjustable by user** defined as **No**:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/date-filter-not-adjustable.png" alt="Example of Date filter with “Adjustable by user” set as No" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/date-filter-not-adjustable.png" alt="Example of Date filter with “Adjustable by user” set as No" class="no-border" >}}
 
 You can also define the default value of the widget which will be predefined as initial value when opening your data grid page.
 
 When **Default filter** is defined as **Between** these fields will appear to define the start and end dates:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/date-filter-between-settings.png" alt="Example of Date filter with “Default value” set as Between" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/date-filter-between-settings.png" alt="Example of Date filter with “Default value” set as Between" class="no-border" >}}
 
 #### Configurations
 
@@ -296,11 +296,11 @@ In this section you can select an action to be executed **On change** by the fil
 
 ### Drop-Down Filter {#drop-down-filter}
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/dropdown-filter.png" alt="Example of default drop-down filter" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/dropdown-filter.png" alt="Example of default drop-down filter" class="no-border" >}}
 
 **Drop-down filter** allows users to match enumeration values, Boolean attributes, or an association attribute. To configure the available options when you press the drop-down filter, you can manually add them to the options list or select **Automatic options** to automatically load the values:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/dropdown-filter-settings.png" alt="Example of settings for drop-down filter" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/dropdown-filter-settings.png" alt="Example of settings for drop-down filter" class="no-border" >}}
 
 {{% alert color="info" %}}
 When a drop-down filter is used in conjunction with an Association Filter data grid configuration, only **Automatic options** are supported. Any custom options will be ignored. To enable association filtering, see the [Association Filter](#association-filter) section.
@@ -315,11 +315,11 @@ When adding a new option, the following properties are required:
 * **Caption** — The text being rendered for each option in the drop-down.
 * **Value** — The corresponding value that will be compared, if a value is being compared with an enumeration, it should match exactly the enumeration value. This property allows the usage of expression (you can use conditionals to apply dynamic values).
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/dropdown-filter-item.png" alt="Example of settings for new option" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/dropdown-filter-item.png" alt="Example of settings for new option" class="no-border" >}}
 
 This widget also allows multiple selections by selecting **Multiselect** in the settings. Multiple selections can look like this:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/dropdown-filter-multiselect.png" alt="Example of multi select drop-down filter" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/dropdown-filter-multiselect.png" alt="Example of multi select drop-down filter" class="no-border" >}}
 
 You can also define the empty option caption, which will be rendered as the first item if **Multiselect** if set as **No**. It allows users to clean the filter if pressed.
 
@@ -339,7 +339,7 @@ In this section you can select an action to be executed **On change** by the fil
 
 ### Number Filter
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/number-filter.png" alt="Example of default number filter" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/number-filter.png" alt="Example of default number filter" class="no-border" >}}
 
 The **Number filter** allows users to match decimal, integer, and long attributes based on these predefined criteria:
 
@@ -352,17 +352,17 @@ The **Number filter** allows users to match decimal, integer, and long attribute
 
 You can select your filter criteria in the **Number Filter** settings:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/number-filter-settings.png" alt="Number filter settings" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/number-filter-settings.png" alt="Number filter settings" class="no-border" >}}
 
 When **Adjustable by user** is defined as **No** it will not render the option to choose the filter type in the widget.
 
 Here is an example of available filter types for **Number Filter**:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/number-filter-types.png" alt="Filter types for number filter" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/number-filter-types.png" alt="Filter types for number filter" class="no-border" >}}
 
 Here is an example of **Number Filter** with **Adjustable by user** set as **No**:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/number-filter-not-adjustable.png" alt="Example of number filter with “Adjustable by user” set as No" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/number-filter-not-adjustable.png" alt="Example of number filter with “Adjustable by user” set as No" class="no-border" >}}
 
 You can also define the default value of the widget, which will be predefined as initial value when opening your data grid page.
 
@@ -383,7 +383,7 @@ In this section you can select an action to be executed **On change** by the fil
 
 ### Text Filter
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/text-filter.png" alt="Example of default text filter" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/text-filter.png" alt="Example of default text filter" class="no-border" >}}
 
 **Text filter** allows users to match string attributes based on these predefined criteria:
 
@@ -399,17 +399,17 @@ In this section you can select an action to be executed **On change** by the fil
 
 You can select your filter criteria in the **Text filter** settings:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/text-filter-settings.png" alt="Text filter settings" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/text-filter-settings.png" alt="Text filter settings" class="no-border" >}}
 
 When **Adjustable by user** is defined as **No** it will not render the option to choose the filter type in the widget.
 
 Here is an example of available filter types for **Text Filter**:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/text-filter-types.png" alt="Filter types for text filter" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/text-filter-types.png" alt="Filter types for text filter" class="no-border" >}}
 
 Here is an example of Text Filter with **Adjustable by user** set to **No**:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/text-filter-not-adjustable.png" alt="Example of text filter with “Adjustable by user” set as No" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/text-filter-not-adjustable.png" alt="Example of text filter with “Adjustable by user” set as No" class="no-border" >}}
 
 You can also define the default value of the widget, which will be predefined as initial value when opening your data grid page.
 
@@ -473,13 +473,13 @@ If the desired `String` attribute does not contain `Unlimited` in its size, the 
 
 Here is an example of an unlimited string attribute:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/unlimited-string-attribute.png" alt="Example of unlimited string attribute" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/unlimited-string-attribute.png" alt="Example of unlimited string attribute" class="no-border" >}}
 
 In order to select an attribute, you need to surround the new Data grid with a Data view. This will allow you to select an attribute. You can also define an action when the attribute will be updated with the new configurations.
 
 Here is an example of a configuration containing an On change action:
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/configuration.png" alt="Example of a configuration containing on change action" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/configuration.png" alt="Example of a configuration containing on change action" class="no-border" >}}
 
 ## Performance
 

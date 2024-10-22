@@ -19,11 +19,11 @@ The performance tool consists of:
 
 The performance tool is a recorder that when started records all action and SQL statements and on stop gives you the option to process and store the recording. During the recording and even when recording is stopped you can filter the recorded data. This filtering removes the recorded items from memory, so there is no undo here.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-performance-tool/Recorder.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-performance-tool/Recorder.png" class="no-border" >}}
 
 Enter a **Session name** and start recording.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-performance-tool/Recorder_Started.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-performance-tool/Recorder_Started.png" class="no-border" >}}
 
 You can use **Set marker** to label or mark recorder items, so when recording multiple functions at once, you can recognize the recorded items in the results.
 
@@ -35,7 +35,7 @@ The recording will automatically stop if the maximum amount of items in memory i
 
 On **Stop** you get the option to process the recorded items. You can also filter some more.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-performance-tool/Recorder_Stopped.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-performance-tool/Recorder_Stopped.png" class="no-border" >}}
 
 If on processing the actual data is more than allowed to store a special filter dialog appears. In this dialog you can filter further. If you use the process button in the filter dialog you overule the checked and process all the data that is in memory.
 
@@ -45,7 +45,7 @@ During processing of recorded data SQL statements are linked to actions or if th
 
 The following screenshot shows the filter options of the Performance Tool when the performance tool is running:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-performance-tool/Filter_Running.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-performance-tool/Filter_Running.png" class="no-border" >}}
 
 The thresholds are used to filter recorded microflows, actions or SQL statements and not store them in/remove them from memory if they have an execution duration less than the threshold.
 
@@ -66,7 +66,7 @@ is used.
 
 The following screenshot shows the options of the Performance Tool:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-performance-tool/Options.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-performance-tool/Options.png" class="no-border" >}}
 
 The **Max actions to record**, **Max SQL statements to record** and **Run fixed period of time (seconds)**
  offer some protection in production environments to prevent that the Performance Tool runs and fills up memory. If any of the maximum thresholds is reached the Performance Tool is stopped. When stopped the Performance Tool stopped recording and you can still filter data and choose to cancel.
@@ -85,7 +85,7 @@ Changes to the options are applied to the Performance Tool if the button **Save*
 
 You can look at what is being recorded in the **Show recorded** dialog:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-performance-tool/Recorded_Microflows.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-performance-tool/Recorded_Microflows.png" class="no-border" >}}
 
 Here the running and finished microflow grids are loaded per 10 records. Using the **Refresh & next chunk**
  button refreshes existing records that are not finished. An additional 10 records are loaded. If microflows have finished in the meantime those records move from running to finished. If filtering is applied finished running microflows can disappear. Running microflows are sorted by start date, oldest first. Finished microflows are sorted by duration, longest first.

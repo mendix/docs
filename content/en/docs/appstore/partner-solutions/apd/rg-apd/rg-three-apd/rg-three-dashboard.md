@@ -11,4 +11,4 @@ The dashboard of an environment shows real-time information regarding the follow
 * The number of actions per second
 * Recent logs and traps
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-three-apd/rg-three-dashboard/dashboard.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-three-apd/rg-three-dashboard/dashboard.png" class="no-border" >}}

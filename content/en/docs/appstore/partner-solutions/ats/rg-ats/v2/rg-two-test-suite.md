@@ -13,7 +13,7 @@ In ATS, you create a new test suite by clicking **New Test Suite** in the **Acti
 
 In the top left corner of the **Test Suite Details** page, you find the name and the description of the test case.  To change them, click them and edit the text. ATS saves the changes automatically.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-test-suite/testsuite-details.png" alt="Edit Test Suite" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-test-suite/testsuite-details.png" alt="Edit Test Suite" class="no-border" >}}
 
 With the parallel/sequential switch, you change the run behavior of the test suite. If it is set to **parallel**, ATS tries to run all the containing tests of your test suite in parallel. This is limited through the concurrency limit of your Selenium hub. With the switch set to **sequential**, the tests run in succession.
 
@@ -30,11 +30,11 @@ Under **Test Steps**, you can find all test cases and test suites that are used 
 
 For a more detailed search, use the **Test Step Setup** dialog box by clicking this button:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-test-suite/search-testcase-testsuite.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-test-suite/search-testcase-testsuite.png" class="no-border" >}}
 
 Then search for the desired test case or test suite in your project. You can also navigate through your project and explore all the available tests in it. 
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-test-suite/dialog-testcase-testsuite.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-test-suite/dialog-testcase-testsuite.png" class="no-border" >}}
 
 Add a new step above or below an existing test step by clicking **Add above** or **Add below**. The buttons appear when you hover over an existing test step.
 
@@ -42,7 +42,7 @@ Add a new step above or below an existing test step by clicking **Add above** or
 
 To delete a test step in a test suite, click this icon on the right side of the test step:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-test-suite/delete-2.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-test-suite/delete-2.png" class="no-border" >}}
 
 You can delete multiple test steps at once by marking them with the checkbox and clicking **Delete**.
 

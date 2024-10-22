@@ -19,6 +19,16 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 ## 2024
 
+### October 17, 2024
+
+#### New features
+
+* If you are new to the [Portfolio Management](/developerportal/portfolio-management/initiatives-overview/) tool, you can find a demo portfolio in the **My Portfolios** section. This demo serves as a playground for you to experiment with all the features of a portfolio. However, you will not be able to invite users or change the portfolio’s settings.
+
+#### Improvements
+
+* In [Portfolio Management](/developerportal/portfolio-management/initiatives-overview/), we replaced the introduction page for new users with a more streamlined introduction banner.
+
 ### September 29, 2024
 
 #### Improvements

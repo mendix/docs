@@ -5,7 +5,7 @@ url: /appstore/partner-solutions/apd/rg-two-settings/
 
 The settings displayed in this screenshot are available for an environment:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-settings/settings.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-settings/settings.png" class="no-border" >}}
 
 By default, the best options are already selected for the most common situations. The following settings can be changed:
 
@@ -30,6 +30,6 @@ By default, the best options are already selected for the most common situations
 
 When you generate an API key for a runtime/Mendix Studio Pro environment, you see this key only once, so copy-paste and use it immediately. For more information about the installation, see the [APM 2 Installation Guide](/appstore/partner-solutions/apd/ig-two/).
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-settings/api_key_dialog.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-settings/api_key_dialog.png" class="no-border" >}}
 
 Click **Copy** to copy the API key to the clipboard.

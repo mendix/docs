@@ -62,7 +62,7 @@ You can choose different types of button by setting the appropriate **Button sty
 | Attention | Warning |
 | Transparent | *this can be added using a building block* |
 
-{{< figure src="/attachments/appstore/use-content/modules/ui-resources/sap-fiori-3-0/button-styles.png" alt="SAP Fiori Button Styles"   width="75%"  class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/ui-resources/sap-fiori-3-0/button-styles.png" alt="SAP Fiori Button Styles"   width="75%"  class="no-border" >}}
 
 For the **Link button**, see [Applying CSS Classes Manually](#apply-css), below*.
 
@@ -70,19 +70,19 @@ For the **Link button**, see [Applying CSS Classes Manually](#apply-css), below*
 
 The **container count badge** allows you to add a count badge to containers on Mendix pages as shown in the following example.
 
-{{< figure src="/attachments/appstore/use-content/modules/ui-resources/sap-fiori-3-0/count-badge-example.png" alt="SAP Fiori Count Badge Example" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/ui-resources/sap-fiori-3-0/count-badge-example.png" alt="SAP Fiori Count Badge Example" class="no-border" >}}
 
 You can create this style by adding the **ContainerCountBadge** widget inside a container.
 
-{{< figure src="/attachments/appstore/use-content/modules/ui-resources/sap-fiori-3-0/count-badge-edit.png" alt="SAP Fiori Count Badge page design" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/ui-resources/sap-fiori-3-0/count-badge-edit.png" alt="SAP Fiori Count Badge page design" class="no-border" >}}
 
 The number which is displayed in the badge is supplied by a microflow which you can specify in the **Data Source** tab of the badge properties. The microflow must return an integer value.
 
-{{< figure src="/attachments/appstore/use-content/modules/ui-resources/sap-fiori-3-0/count-badge-microflow.png" alt="SAP Fiori Count Badge microflow" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/ui-resources/sap-fiori-3-0/count-badge-microflow.png" alt="SAP Fiori Count Badge microflow" class="no-border" >}}
 
 You can specify the appearance of the count badge in the **Appearance** tab of the badge properties. If you want to maintain the correct SAP Fiori theme, you should choose the **Color Source** *Bootstrap Color Schema*.
 
-{{< figure src="/attachments/appstore/use-content/modules/ui-resources/sap-fiori-3-0/count-badge-appearance.png" alt="SAP Fiori Count Badge appearance" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/ui-resources/sap-fiori-3-0/count-badge-appearance.png" alt="SAP Fiori Count Badge appearance" class="no-border" >}}
 
 #### List Views
 
@@ -182,4 +182,4 @@ If you want to include the Web UI Package for SAP Fiori theme in an existing app
 3. Import the [Atlas Core](https://marketplace.mendix.com/link/component/117187) module into your app if it is not already there. Atlas Core must be version 3.2.2 or above.
 4. Look in the **Theme** tab of the app settings. This must contain the `SAP_Fiori_Web_UI_Resources` module below the `Atlas_Core` module.
 
-    {{< figure src="/attachments/appstore/use-content/modules/ui-resources/sap-fiori-3-0/theme-order.png"  width="617px"  class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/ui-resources/sap-fiori-3-0/theme-order.png"  width="617px"  class="no-border" >}}

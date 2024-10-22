@@ -11,7 +11,7 @@ The [Combo Box](https://marketplace.mendix.com/link/component/219304) widget dis
 
 A typical combo box can look like this:
 
-{{< figure src="/attachments/appstore/use-content/widgets/combobox/combobox-demo.gif" width="300px" alt="Combo box example" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/widgets/combobox/combobox-demo.gif" width="300px" alt="Combo box example" class="no-border" >}}
 
 ### Features
 
@@ -80,7 +80,7 @@ The **General** section allows you to configure general behavior and captions fo
 * **Clearable** – if enabled, this allows selected data to be cleared all at once
 * **Custom content** – allows custom widgets to be displayed in the combo box instead of normal text values (only for association data source)
 * **Show footer** – if enabled, this allows custom widgets to be placed in a combo box's footer (as shown below). For example, you can include a link, button, or image in the footer. A popular choice is including a "new item" button in the footer:
-    {{< figure src="/attachments/appstore/use-content/widgets/combobox/show-footer.png" alt="Shows a footer which can house custom widgets." class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/combobox/show-footer.png" alt="Shows a footer which can house custom widgets." class="no-border" >}}
 
 #### Multi Selection (Reference Set)
 
@@ -91,12 +91,12 @@ The **Multi selection (reference set)** section allows you to configure combo bo
     * **Row click** – each selected item will be filtered out from the displayed options. Items can deselected by clicking the {{% icon name="remove" %}} on each of the displayed selected items.
 * **Show selected item as** – you can choose to display selected item as labels with {{% icon name="remove" %}} buttons which allow those items to be deselected (shown at the top of this screenshot), or as simple comma-separated text (shown at the bottom): 
 
-    {{< figure src="/attachments/appstore/use-content/widgets/combobox/combobox-showselected.png" alt="Show selected item as list or labels examples" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/combobox/combobox-showselected.png" alt="Show selected item as list or labels examples" class="no-border" >}}
     {{% alert color="info" %}}The **Show selected item as** property is only available for the **Checkbox** selection method without custom content.{{% /alert %}}
 
 * **Show Select All** – you can choose to enable a "Show select all" button that will be displayed on the top of the options list. It allows the end-user to click it and select or deselect all options at once:
 
-    {{< figure src="/attachments/appstore/use-content/widgets/combobox/select-all.png" alt="Show select or unselect button header" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/combobox/select-all.png" alt="Show select or unselect button header" class="no-border" >}}
 
 #### Label
 

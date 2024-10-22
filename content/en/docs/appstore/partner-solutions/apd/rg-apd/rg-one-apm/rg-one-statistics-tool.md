@@ -11,7 +11,7 @@ This chapter gives an overview of the statistics tool, which measures the durati
 
 The statistics tool screen is split into several sections:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/Overview.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/Overview.png" class="no-border" >}}
 
 Statistics are stored periodically to be able to determine potential trends. The **Periodic store frequency** can be changed in the [Options](#Options).   
 
@@ -19,13 +19,13 @@ Statistics are stored periodically to be able to determine potential trends. The
 
 It is possible to select a microflow and press the **History chart** button to see a graph with history statistics:  
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-statistics-tool/Trend.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-statistics-tool/Trend.png" class="no-border" >}}
 
 The statistics can be started or stopped using the start/stop buttons in the **Start/Stop** dialog box. This dialog is accessible through the top-bar start button.
 
 ## Manual Statistics
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-statistics-tool/Manual_statistics.png" class="no-border" >}}  
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-statistics-tool/Manual_statistics.png" class="no-border" >}}  
 
 In the manual statistics section it is possible to create a snapshot of statistics. This snapshot can be used to compare with other snapshots or to gain insight in statistics for a certain duration. By using the **Reset snapshot** button, the statistics will be reset. With the **Store snapshot** button, the statistics will be saved to a stored snapshot in the database.
 
@@ -35,7 +35,7 @@ In the manual statistics section it is possible to create a snapshot of statisti
 
 This section will give a real-time overview of running actions and microflows. This is the best place to start when there are performance complaints. Running actions show a list of microflows that have been started but have not yet ended. The duration is the time between the start and the moment when the refresh button was hit.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-statistics-tool/Now_Running.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-statistics-tool/Now_Running.png" class="no-border" >}}
 
 **Note**: When the server generates a lot of log messages, the server is running at a high CPU, and all the tools are running, a queue can build up in the Mendix thread that sends the log messages to the subscribers. As a consequence, it can look like running microflows takes 10 seconds while the maximum in the statistics is 1 second. This is caused by the fact that the running time is calculated on the refresh date, and the duration of a microflow is calculated by the message date. When this happens, the debug running counter for the message delay shows a high number (for example, 10000 milliseconds). The statistics tool pauses collecting and handling messages if the processing delay is above the configured **Max Processing Delay (ms)**.
 
@@ -43,7 +43,7 @@ This section will give a real-time overview of running actions and microflows. T
 
 A stored snapshot is a collection of statistics saved to the database. This section provides an overview of all the stored snapshots.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-statistics-tool/Snapshots.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-statistics-tool/Snapshots.png" class="no-border" >}}
 
 In stored snapshots, you can find all the statistics bundled per snapshot. These snapshots can have several types: 
 
@@ -56,7 +56,7 @@ You can prevent a snapshot from being deleted by cleanup when you select to keep
 
 ## Snapshot Details
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-statistics-tool/Snapshot_Details.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-statistics-tool/Snapshot_Details.png" class="no-border" >}}
 
 You can rename snapshots and view the details that will include filtering details when applied.
 
@@ -64,7 +64,7 @@ You can rename snapshots and view the details that will include filtering detail
 
 This screenshot shows the options of the statistics tool:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-statistics-tool/Options.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-statistics-tool/Options.png" class="no-border" >}}
 
 The statistics tool will measure all microflow statistics all the time. The statistics tool can exclude certain microflows while presenting from memory or storing to the database.
 
@@ -78,7 +78,7 @@ The dashboard options include also a top **N** and an exclude pattern to interac
 
 On the **Protections** tab, you see the following:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-statistics-tool/Protections.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-statistics-tool/Protections.png" class="no-border" >}}
 
 You can run the statistics tool for a fixed amount of time. The statistics tool is intended to always be running. This option is available if you want to measure statistics for short periods (for example, during busy hours) and compare that to statistics during less busy hours.
 
@@ -90,7 +90,7 @@ The data is cleaned up automatically after a certain amount of days.
 
 On the trigger tab you can define triggers that fire on a certain microflow duration.
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-statistics-tool/Triggers.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-statistics-tool/Triggers.png" class="no-border" >}}
 
 See the description of [Triggers](/appstore/partner-solutions/apd/rg-one-triggers/) for how to configure triggers.
 

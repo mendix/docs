@@ -32,25 +32,25 @@ Other places where you might encounter performance issues or timeouts are the fo
 
 ### Preventing a Large Repository Size in the Future
 
-The *.mpr* storage format will be changed to reduce the rapid repository growth. Switching to the new storage format will be done under the hood and does not result in functional changes.
+The [*.mpr* storage format](/refguide/version-control/#mpr-format) will be changed to reduce the rapid repository growth. Switching to the new storage format will be done under the hood and does not result in functional changes inside Studio Pro.
 
-Mendix aims to introduce the new format for new apps in Q3 2024. Existing apps will be automatically converted in a later version, targeted for H2 2024.
-
-#### MPR Format
+#### Traditional MPR Format
 
 An app modeled in Mendix is traditionally stored in a single *.mpr* file. This is essentially a database which contains data for all documents, such as microflows, workflows, pages. As the Mendix app is stored in a single file, your version control system only sees that a single file is changed. To show the exact documents that have changed inside the *.mpr* file a tool that comprehends the format is required, such as Studio Pro.
 
-#### Repository Growth
+#### Effect on Repository Growth
 
 Version control systems like Git do not store a full copy of a document for every commit. Instead, they store the difference between the two revisions, also called a delta. For binary files such as the *.mpr* file Git cannot effectively calculate the delta. When a microflow is changed, a small delta of a couple of kilobytes is expected, but the storage format results in a delta of a megabyte or more. The consequence of this is that your Git repository grows more rapidly than you expected.
 
-#### Future Format Change
+#### MPRv2 Format
 
-Mendix will introduce a new version of the *.mpr* format. The key difference is that all documents, such as microflows, will no longer be stored as part of the *.mpr* file but as separate files in the *mprcontents* directory. The *.mpr* file will function as an index file pointing to all the different files on disk. 
+Mendix will introduce a new version of the *.mpr* format: MPRv2. The key difference is that all documents, such as microflows, will no longer be stored as part of the *.mpr* file but as separate files in the *mprcontents* directory. The *.mpr* file will function as an index file pointing to all the different files on disk. 
 
-This means that when you change one document, for example a page, in your app only one file on disk will change. This allows Git to calculate an efficient delta, which results in a more appropriate repository growth. Functionally there will be no differences between the split (v2) or the combined (v1) format. 
+This means that when you change one document, for example a page, that only the small file representing that page will change on disk. This allows Git to calculate an efficient delta, which results in a more appropriate repository growth. Functionally there will be no differences between the split (v2) or the combined (v1) format inside Studio Pro. 
 
-As a first step we will ensure new apps are created with a new split format (v2). Converting existing apps will initially be a manual action through the **File** menu. In a later release Mendix intends to convert the MPR format from the combined version (v1) to a new split version (v2).
+{{% alert color="warning" %}}
+Manually modifying files belonging to the  [*.mpr* storage format](/refguide/version-control/#mpr-format) such as the *.mpr* file or the *mprcontents* directory (for example, when resolving file conflicts through third-party tooling), will lead to a corrupted state. To recover from a corrupted state a previous commit will need to be restored.
+{{% /alert %}}
 
 ### Working with a Large Repository Size
 

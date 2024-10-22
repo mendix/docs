@@ -673,7 +673,7 @@ When using the SAML module with Mendix version 10.9 to 10.12.2, you may encounte
 
 The following diagram gives an overview of all endpoints that the SAML SSO module exposes and consumes:
 
-{{< figure src="/attachments/appstore/use-content/modules/saml/saml-endpoints.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/saml/saml-endpoints.png" class="no-border" >}}
 
 End-users can access your app through the following endpoints when using the SAML SSO module:
 

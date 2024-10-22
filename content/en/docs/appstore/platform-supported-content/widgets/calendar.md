@@ -136,7 +136,7 @@ Drag the widget into a data view which provides a calendar entity (containing ca
 * **Height unit** (default: **Pixels**) – determines whether the unit of the **Width** value is a pixel amount, a percentage of the width, or a percentage of the parent height
 * **Height** (default: **580**) – the height value of the calendar
 
-    {{< figure src="/attachments/appstore/use-content/widgets/calendar/calendar2.gif" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/widgets/calendar/calendar2.gif" class="no-border" >}}
 
 ## Example Configuration
 

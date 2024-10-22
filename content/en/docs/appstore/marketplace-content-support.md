@@ -18,7 +18,7 @@ Support for Marketplace content is determined by the content support category an
 
 The content support category for a component is indicated by the label on the [header](/appstore/component-details/#header) in its component details page. The label can be **Platform Supported**, **Partner Supported**, or **Siemens Supported**. If there is no label indicating the content support category, then the component is community-supported.
 
-{{< figure src="/attachments/appstore/use-content/marketplace-content-support/content-support-label.png" >}}
+{{< figure src="/attachments/appstore/marketplace-content-support/content-support-label.png" >}}
 
 ## Content Support Categories {#category}
 

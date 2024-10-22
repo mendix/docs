@@ -7,7 +7,7 @@ url: /appstore/partner-solutions/apd/rg-three-settings/
 
 The settings displayed in this screenshot are available for an environment:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-three-apd/rg-three-settings/settings.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-three-apd/rg-three-settings/settings.png" class="no-border" >}}
 
 By default, the best options are already selected for the most common situations.
 
@@ -49,6 +49,6 @@ The following settings can be changed:
 
 * **Generate API key** – After clicking this, click **Copy** to copy the API key to the clipboard (when you generate an API key for a runtime/Mendix Studio Pro environment, you see this key only once, so copy-paste and use it immediately; for more information about the installation, see [APD 3 Installation Guide](/appstore/partner-solutions/apd/ig-three/))
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-three-apd/rg-three-settings/api_key_dialog.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-three-apd/rg-three-settings/api_key_dialog.png" class="no-border" >}}
 
 * **Delete this environment** – Clicking this button will delete the environment from the APD Manager

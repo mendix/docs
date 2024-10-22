@@ -51,7 +51,8 @@ It is good practice to *always* redeploy your Mendix App before pushing a new ov
 * Nanoflow changes
 * JavaScript action changes
 * Widgets shipped with Mendix added or removed
-* A new custom JavaScript-only widget or module was added
+* You added a new custom JavaScript-only widget or module 
+* You added a page with no additional logic
 * Non-destructive model changes (for more information, see the [Offline First Reference Guide](/refguide8/offline-first/))
 
 ### When a Full Release is Required
@@ -63,6 +64,7 @@ If you have made any changes directly to your iOS or Android project, you will h
 * You fundamentally changed your app's functionality (this is an Apple App Store limitation, and will require a re-release and re-review of your app by Apple — your app might be removed if you do not comply)
 * A new native module has been added
 * The app has been renamed
+* You added a new microflow or nanoflow
 * The app's launcher icons have been changed
 * The splash screen has been changed
 

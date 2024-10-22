@@ -51,7 +51,7 @@ To add a constant in Mendix Studio Pro follow these steps:
     * Type: Boolean
     * Default value: True
 
-    {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-increase-recorder-helper-coverage/add-constant.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-increase-recorder-helper-coverage/add-constant.png" class="no-border" >}}
 
 6. Click **OK**. This opens the **New Constant Value** dialog.
 7. Click **OK** in the **New Constant Value** dialog and click **OK** in the **New Configuration** dialog.
@@ -62,7 +62,7 @@ You now added the constant in Mendix Studio Pro. If you have this constant anywh
 
 Your application has many buttons, images, and menu widgets etc. on each page. It is possible that those widgets have the same mx-name, for example, mx-name-actionButton1. The recorder can often record these widgets, but when you run your test case it might fail. It might fail because ATS interacts with the first widget it finds with that mx-name. Changing the name in Mendix Studio Pro to a unique name solves this problem:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-increase-recorder-helper-coverage/changed-mx-name.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-increase-recorder-helper-coverage/changed-mx-name.png" class="no-border" >}}
 
 Make sure you use some kind of naming structure when deciding to rename several widgets in your app. Consistency is important.
 
@@ -77,7 +77,7 @@ Custom widgets are often designed differently than Mendix widgets. As the ATS Re
 
 Even with the tips from the previous chapter recording every widget on your AUT is not possible. There are some widgets that are too complicated to record. But if the ATS Recorder doesn't record a widget, it doesn't mean ATS cannot interact with it. When the ATS Recorder doesn't record certain widgets, you must check with the ATS Helper if that widget has an mx-name. For example, the ATS Recorder might not record clicking on a certain image. But when you check that image with the ATS Helper you see that that image does have an mx-name:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-increase-recorder-helper-coverage/not-recordable-image.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-increase-recorder-helper-coverage/not-recordable-image.png" class="no-border" >}}
 
 If the image has an mx-name, ATS can *Find, Click, Set, Assert, and Get* these widgets with the standard Mendix actions.
 
@@ -90,7 +90,7 @@ In case the widget doesn't have a unique mx-name or an mx-name at all, the follo
 
 The previous chapter described that ATS can interact with the correct widget by giving it a unique name in Mendix Studio Pro. Another way to let ATS interact with the correct widget is by adding another mx-name in the ATS action. The mechanics are the same as the **Search Context** input parameter. ATS will search for the widget with the second mx-name inside the widget with the first mx-name. For example: 'container8 microflowButton2' ATS searches for the microflowbutton inside the container. ATS searches for the second mx-name within the first mx-name:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-increase-recorder-helper-coverage/2-mx-names.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-increase-recorder-helper-coverage/2-mx-names.png" class="no-border" >}}
 
 You have to add this manually in ATS. To find the mx-name use the ATS Helper in your AUT.
 
@@ -98,25 +98,25 @@ You have to add this manually in ATS. To find the mx-name use the ATS Helper in 
 
 You can develop a widget without an mx-name, for example, a navigation list with several navigation options:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-increase-recorder-helper-coverage/no-mx-name-listview.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-increase-recorder-helper-coverage/no-mx-name-listview.png" class="no-border" >}}
 
 The ATS Recorder cannot record the options in the navigation list, as they do not have an mx-name. For the same reason, the ATS Helper can not interact with these options. The ATS Helper shows the mx-name of the complete navigation list, instead of the options:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-increase-recorder-helper-coverage/no-mx-name-listview-app-e.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-increase-recorder-helper-coverage/no-mx-name-listview-app-e.png" class="no-border" >}}
 
 You can manually enter a class in the **Class** of Mendix Studio Pro with an mx-name to solve this:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-increase-recorder-helper-coverage/mx-name-listview.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-increase-recorder-helper-coverage/mx-name-listview.png" class="no-border" >}}
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-increase-recorder-helper-coverage/mx-name-listview-app-e.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-increase-recorder-helper-coverage/mx-name-listview-app-e.png" class="no-border" >}}
 
 As the options in the navigation list have an mx-name, the ATS Helper can interact with them. In ATS you can *Find, Click, Set, Assert, and Get* these widgets with the standard Mendix actions. ATS can still interact with the options if you add another class as well:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-increase-recorder-helper-coverage/extra-class-name.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-increase-recorder-helper-coverage/extra-class-name.png" class="no-border" >}}
 
 You have given the **Class** an mx-name and not the widget name in the **Name** field, as the options of the navigation list do not have a **Name** field. Widgets that the ATS Recorder recognizes get their mx-name from the name in the **Name** field. For example, the navigation list:
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-increase-recorder-helper-coverage/mx-name-in-name.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-increase-recorder-helper-coverage/mx-name-in-name.png" class="no-border" >}}
 
 For this reason, recording this widget is still not possible.
 

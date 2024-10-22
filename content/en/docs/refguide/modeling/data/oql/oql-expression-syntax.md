@@ -4,21 +4,34 @@ url: /refguide/oql-expression-syntax/
 ---
 
 ## Introduction
+Expression syntax details expression usage in an oql query.
 
 Operators and functions use expressions as inputs to perform mathematical, comparison, conditional, string, date operations and return the result. They allow an OQL query to perform modifications on data on the database to present a different view of the data or make complex conditions.
+
+## Data Types
+OQL supports a small set of data types that differ from [mendix data types](/refguide/data-types/). The supported data types are:
+
+| Data Type  | Mendix Data type | Example               | Description                                |
+|------------|------------------|-----------------------|--------------------------------------------|
+| `BOOLEAN`  | Boolean          | `TRUE`                | Conditional data, can be `TRUE` or `FALSE` |
+| `DATETIME` | Date and time    | '2025-07-05 00:00:00' | Date and time data                         |
+| `DECIMAL`  | Decimal          | 5.3                   | Floating point numeric data                |
+| `INTEGER`  | Integer/Long     | 5                     | Integer data                               |
+| `LONG`     | Integer/Long     | 5                     | 64 bit width integer data                  |
+| `STRING`   | String           | 'my_string'           | Textual data                               |
 
 ## Literals
 Literals represent values that are constant and are part of the query itself. The supported literals are detailed below:
 
-| Format | Example         | Data Type            |
-|--------|-----------------|----------------------|
-| -      | `TRUE`, `FALSE` | `BOOLEAN`            |
-| 's*'   | 'my_string'     | `STRING`             |
-| d*     | 5               | `INTEGER` and `LONG` |
-| d*.d*  | 5.3             | `DECIMAL`            |
-| -      | `NULL`          | -                    |
+| Format | Example         | Data Type            | Description                                   |
+|--------|-----------------|----------------------|-----------------------------------------------|
+| -      | `TRUE`, `FALSE` | `BOOLEAN`            | Conditional constants                         |
+| 's*'   | 'my_string'     | `STRING`             | String literal                                |
+| d+     | 5               | `INTEGER` and `LONG` | Natural number literal                        |
+| d+.d+  | 5.3             | `DECIMAL`            | Real number literal                           |
+| -      | `NULL`          | -                    | NULL literal to represent non-existent values |
 
-Where `d` is a number, `s` is any character, * indicates zero or more characters.
+Where `d` is a number, `s` is any character, * indicates zero or more characters, + indicated one or more characters.
 
 ### DATETIME
 There is no direct support for `DATETIME` literals. For functions that take `DATETIME` as input, it can be represented with a `STRING` in a ISO date time format or a `LONG` value representing unix seconds.
@@ -80,7 +93,7 @@ This precedence rule does not apply for operations where at least one of the ope
 {{% /alert %}}
 
 #### + (Addition)
-Performs different operations depending on the first `expression` datatype. A numeric input performs a arithmetic addition, while a `STRING` input will perform string concatenation. 
+Performs different operations depending on the first `expression` datatype. A numeric input performs a arithmetic addition, while a `STRING` input performs string concatenation. 
 
 Assume `Sales.Customer` contains two objects and `Sales.Order` contains three objects.
 
@@ -117,7 +130,7 @@ SELECT (Number + 5) FROM Sales.Order
 
 It can also be used for complex `WHERE` comparisons. The query bellow check for equality of the full name of a customer:
 ```sql
-SELECT LastName FROM Sales.Customer WHERE (FirstName + LastName) = JaneMoose
+SELECT LastName FROM Sales.Customer WHERE (FirstName + LastName) = 'JaneMoose'
 ```
 
 | LastName |                                             
@@ -162,7 +175,7 @@ SELECT LastName, (Number * Price) as Total FROM Sales.Order
 | Moose    | 24.6  |
 
 #### : (Division)
-Divides left from the right `expression`. Supports both integer and float division.
+Divides left from the right `expression`. Supports both integer and float division. In case of integer division, the remainder is discarded.
 
 #### % (Modulo)
 Returns the remainder of division. Behaviour is database dependent when one of the operands is of type `DECIMAL`.
@@ -174,7 +187,7 @@ The operator throws an error in PostgresSQL and SQL Server when one of the opera
 {{% /alert %}}
 
 #### = (Equal to)
-Returns true if both `expression` inputs are equal. When used with `NULL`, will always return a `FALSE` result. To compare to `NULL` values, use operator [IS](is-operator).
+Returns true if both `expression` inputs are equal. When used with `NULL`, will always return a `FALSE` result. To compare to `NULL` values, use operator [IS](#is-operator).
 
 {{% alert color="info" %}}
 
@@ -348,13 +361,13 @@ WHERE LastName IN
 | Doe      | John      |
 
 #### EXISTS
-Returns true if a `subquery` returns at least one row. Columns from higher level `SELECT` clauses can be used in the select subquery. 
+Returns true if a `subquery` returns at least one row.
 
 ##### Syntax
 ```sql
 EXISTS subquery
 ```
-Where `subquery` is any query returning rows.
+Where `subquery` is any query.
 
 ##### Examples
 The operator can be used to check if an entity contains any object matching a condition.
@@ -418,16 +431,13 @@ or extended:
 	END
 ```
 
-`input_expression` will be compared to `when_expression`. If  `input_expression` matches  `when_expression`, the result of the whole `CASE` expression will be `result_expression` given after `THEN`.
+In a simple `CASE` expression, `input_expression` will be compared to `when_expression`. If  `input_expression` matches  `when_expression`, the result of the whole `CASE` expression will be `result_expression` given after `THEN`. Data types between `input_expression` and `when_expression` should match.
 
-
-`when_expression` will be compared to `input_expression`. When `input_expression` matches this `when_expression`, the result of the whole `CASE` expression will be `result_expression` given after `THEN`.
-
-`boolean_expression` must result in a Boolean value. When this expression returns true, the result of the whole `CASE` expression will be `result_expression` given after `THEN`.
+In an extended Case expression, `boolean_expression` is evaluated and if it is `TRUE`, the result of the whole `CASE` expression will be `result_expression` given after `THEN`. `boolean_expression` must have return type `BOOLEAN`. 
 
 `result_expression` is the possible result of the whole `CASE` expression.
 
-`else_result_expression` is the result of the whole `CASE` expression, when no `result_expression` is possible.
+`else_result_expression` is the result of the whole `CASE` expression, when no previous `when_expression` matched or no previous `boolean_expression` returned `TRUE`.
 
 ### Operator precedence
 If operators are used without parenthesis to indicate order, the order of application is left to right with operator precedence:
@@ -441,7 +451,6 @@ If operators are used without parenthesis to indicate order, the order of applic
 ### NULL handling
 If one of the operands in a binary operation or the unary operand have a `NULL` value, then the return type will also be NULL. 
 This does not apply to `=` and `!=` operators. Handling of `NULL` in [other operators](#other-operators) is detailed in the specific operator subsections.
-
 
 ## String coercion
 In some databases, using `STRING` type variables in place of numeric, `DATETIME` or `BOOLEAN` values in operators and functions that explicitly require those types, causes the database to perform an implicit conversion. A common example would be the use of a `STRING` representation of a `DATETIME` variable inside a `DATEPART` function. It is recommended to always cast strings to the exact type the operator or functions.
@@ -511,11 +520,22 @@ Converting `DATETIME`, `BOOLEAN` to `STRING` returns different format per databa
 
 #### Examples
 
-A frequent use case for `CAST` is to convert your date from the `DATETIME` data type to a more readable `STRING` type:
+A frequent use case for `CAST` is to convert your date from the `DATETIME` data type to a text formatted `STRING` type:
 
 ```sql
-CAST ( datetime_column AS string )
+CAST ( datetime_column AS STRING )
 ```
+
+Explicit conversions can also be useful for numeric data types, like ensuring a division operation is a floating point division and the remainder is not discarded:
+
+```sql
+SELECT (Number : 2) as Normal, (Cast(Number AS DECIMAL) : 2) as Casted FROM Sales.Order Where Number = 7
+```
+| Normal | Casted |        
+|:-------|--------|
+| 3      | 3.5    |
+| 1      | 1      |
+| 1      | 1.5    |
 
 ### COALESCE
 
@@ -569,7 +589,7 @@ DATEDIFF ( unit , startdate_expression, enddate_expression [, timezone ] )
 ##### unit
 
 `unit` specifies the unit of the date/time value to retrieve. This can be one of the following:
-`YEAR`, `QUARTER`, `MONTH`, `DAY`, `WEEK`, `HOUR`, `MINUTE`, `SECOND` or `MILISECOND`. For more information on date/time values, see the [Example](/refguide/oql-datepart/#oql-datepart-example) section in *OQL DATEPART*.
+`YEAR`, `QUARTER`, `MONTH`, `DAY`, `WEEK`, `HOUR`, `MINUTE`, `SECOND` or `MILISECOND`. For more information on date/time values, see the [Example](#oql-datepart-example) section in *DATEPART*.
 
 ##### startdate_expression
 
@@ -623,8 +643,6 @@ The way the difference is calculated depends on the database. The `YEAR` differe
 {{% /alert %}}
 
 ### DATEPART
-
-#### Description
 
 The `DATEPART` function retrieves a specified element from a date/time values. The return type is `INTEGER`.
 
@@ -713,7 +731,7 @@ SELECT Text, LENGTH(Text) as text_length FROM Sales.Reports
 | "Performance is satisfactory" | 27          |
 | "Order has been completed"    | 24          |
 
-### LOWER {#lower-function}
+### LOWER{#lower-function}
 
 #### Description
 
@@ -730,16 +748,16 @@ LOWER ( expression )
 `expression` specifies the string to convert.
 
 #### Example
-The function is useful to enforce consistent case for all strings, especially for comparisons.  The query below would return no results in case-sensitive databases, as there is only a "Doe":
+The function is useful to enforce consistent case for all strings, especially for comparisons. The query below would return no results in case-sensitive databases, as there is only a "Doe":
 
 ```sql
-SELECT * FROM Sales.Customer WHERE LastName = doe
+SELECT * FROM Sales.Customer WHERE LastName = 'doe'
 ```
 
 Using `LOWER` this inconsistency can be fully avoided:
 
 ```sql
-SELECT * FROM Sales.Customer WHERE LOWER(LastName) = doe
+SELECT * FROM Sales.Customer WHERE LOWER(LastName) = 'doe'
 ```
 | ID | LastName | FirstName |                                                         
 |----|----------|-----------|
@@ -747,15 +765,8 @@ SELECT * FROM Sales.Customer WHERE LOWER(LastName) = doe
 
 ### RANGEBEGIN
 
-#### Description
-
-The `RANGEBEGIN` function extracts the initial value of a range parameter.
-
-`RANGEBEGIN` and [RANGEEND](/refguide/oql-rangeend/) are OQL functions that use a parameter, and OQL parameters are only available in [datasets](/refguide/data-sets/) (which are used for generating a report). When you create a page and add a report that has a dataset, you can use `RANGEBEGIN` and `RANGEEND` in that dataset.
-
+Extracts the initial value of a range parameter. Range parameters defined only in [datasets](/refguide/data-sets/). `RANGEBEGIN` and [RANGEEND](#oql-rangeend) are OQL functions that can only be used with a parameter as input.
 #### Syntax
-
-The syntax is as follows:
 
 ```sql
 RANGEBEGIN ( $range )
@@ -765,31 +776,31 @@ RANGEBEGIN ( $range )
 
 #### Example
 
-This is an example of using a range in OQL, where `$range` is set to last week, which will give you all the customers born in the last week:
+Assume `$now` is "2024-06-15 00:00:00" and there are 3 range parameters defined in a dataset:
+- `$range` with start value "2024-06-01 00:00:00" and end value "2025-06-01 00:00:00"
+- `$range_future` with start value `$now`
+- `$range_past` with end value `$now`
+
+| ID | Start               | End                 | Revenue |                                                        
+|:---|---------------------|---------------------|---------|
+| -  | 2024-05-02 00:00:00 | 2025-07-05 00:00:00 | 28      |
+| -  | 2024-05-02 00:00:00 | 2024-06-02 15:12:45 | 10      |
+
+This query uses `$range_future` to retrieve all periods that end in the future:
 
 ```sql
-SELECT FirstName AS First, LastName AS Last, Name AS Name, Birthday AS BDay, CustomerType AS Type FROM Sales.Customer
-WHERE Birthday IN ($rangeLastWeek)
+SELECT End, Revenue FROM Sales.Period
+WHERE End > RANGEBEGIN($range_future)
 ```
+| End                 | Revenue |
+|---------------------|---------|
+| 2025-07-05 00:00:00 | 28      |
 
-This example uses the `RANGEBEGIN` function in the `WHERE` clause, which will give you all the customers born since the beginning of last week:
+### RANGEEND{#oql-rangeend}
 
-```sql
-SELECT FirstName AS First, LastName AS Last, Name AS Name, Birthday AS BDay, CustomerType AS Type FROM Sales.Customer
-WHERE Birthday > RANGEBEGIN($rangeLastWeek)
-```
-
-### RANGEEND
-
-#### Description
-
-The `RANGEEND` function extracts the end value of a range parameter.
-
-[RANGEBEGIN](/refguide/oql-rangebegin/) and `RANGEEND` are OQL functions that only accept parameters as arguments.
+Extracts the end value of a range parameter.
 
 #### Syntax
-
-The syntax is as follows:
 
 ```sql
 RANGEEND ( $range )
@@ -798,20 +809,24 @@ RANGEEND ( $range )
 `$range` specifies the range parameter.
 
 #### Example
-
-where `$range` is set to last week, which will give you all the customers born in the last week:
-
-```sql
-SELECT FirstName AS First, LastName AS Last, Name AS Name, Birthday AS BDay, CustomerType AS Type FROM Sales.Customer
-WHERE Birthday IN ($rangeLastWeek)
-```
-
-This example uses the `RANGEEND` function in the `WHERE` clause, which will give you all the customers born since the end of last week:
+This query uses `$range` to retrieve all periods that end before the end value of `$range`:
 
 ```sql
-SELECT FirstName AS First, LastName AS Last, Name AS Name, Birthday AS BDay, CustomerType AS Type FROM Sales.Customer
-WHERE Birthday > RANGEEND($rangeLastWeek)
+SELECT End, Revenue FROM Sales.Period
+WHERE End < RANGEEND($range)
 ```
+| End                 | Revenue |
+|---------------------|---------|
+| 2024-06-02 15:12:45 | 10      |
+
+This query uses `$range_past` to retrieve all periods that ended before the end date of `$range_past`:
+```sql
+SELECT End, Revenue FROM Sales.Period
+WHERE End < RANGEEND($range_past)
+```
+| End                 | Revenue |
+|---------------------|---------|
+| 2024-06-02 15:12:45 | 10      |
 
 ### REPLACE
 

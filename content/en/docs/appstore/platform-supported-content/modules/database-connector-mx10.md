@@ -166,28 +166,26 @@ You can configure custom settings that are only used when you run your app local
 See the [Certificates Tab](/refguide/app-settings/#certificates-tab) section of *App Settings* for information about adding certificates. 
 
 {{% alert color="info" %}}
-To test SSL-based connections from the Database Connection wizard, you must add a CA certificate to the system via certificate manager. To do this, open Certmgr.msc, then select **Trusted Root Certification Authorities** and import the CA certificate file.
+To test SSL-based connections from the Database Connection wizard, you must add a CA certificate to the system via the Certificate Manager. To do this, open Certmgr.msc, then select **Trusted Root Certification Authorities** and import the CA certificate file.
 {{% /alert %}}
 
-2. If the PostgreSQL server requires Mendix to authenticate using a client certificate, add client certificate details to the App Settings by clicking **Configuration** > **Edit** > **Custom**. See the [Running Locally](/howto/integration/use-a-client-certificate/) section of *Use a Client Certificate* for further instruction of how to add the certificate details.
+2. If the PostgreSQL server requires Mendix to authenticate using a client certificate, add the client certificate details to the App Settings by clicking **Configuration** > **Edit** > **Custom**. See the [Running Locally](/howto/integration/use-a-client-certificate/) section of *Use a Client Certificate* for further instruction of how to add the certificate details.
 
-3. Add the connection details to the [Database Connection wizard](#connect-database).
-Select SSL Encrytion as Yes.
-Select SSL Mode as per your requirement.
-Add Client certificate identifier, it must match the value provided in the Custom settings dialog.
+3. Add the connection details to the [Database Connection wizard](#connect-database). Fill in the following details:
+    * Set SSL Encrytion to **Yes**
+    * Set SSL Mode as per your requirement
+    * Add Client certificate identifierl; this must match the value provided in the custom settings dialog
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/example-SSL-connection.png" class="no-border" >}}
 
-You can Test connection using certificates added.
+Click **Test Connection** using certificates added to test your connection.
 
-4. Run Application to test connection for local runtime.
+4. Run your application to test  the connection for local runtime.
 
 ### Running in the Cloud
 
-To conect to PostgreSQL when Application is running in Mendix Cloud, follow below steps:
+To connect to PostgreSQL when the application is running in Mendix Cloud, follow these steps:
 
-1. To configure client certificates in Mendix Cloud, follow the steps mentioned in [Running in the Cloud](/howto/integration/use-a-client-certificate/).
-
-2. After client certificate has been added, Double click the client certificate and add `ClientCertificateIdentifier` value to `Use Client Certificate for specific services`.
-
-2. Add required values to the constants created for DBSource, DBUsername, DBPassword, ClientCertificateIdentifier.
+1. Configure client certificates in Mendix Cloud by following the steps in the [Running in the Cloud](/howto/integration/use-a-client-certificate/#running-in-the-cloud) section of *Use a Client Certificate*.
+2. After the client certificate has been added, double-click the client certificate and add the value `ClientCertificateIdentifier` to `Use Client Certificate for specific services`.
+3. Add the required values to the constants created for DBSource, DBUsername, DBPassword, and ClientCertificateIdentifier.

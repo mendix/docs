@@ -27,7 +27,7 @@ This connector supports connections to the following database types:
 
 * Microsoft SQL
 * MySQL
-* PostgreSQL
+* PostgreSQL - For certificate based authentication (supported from Studio Pro 10.16) see [Use certificate-based authentication for connections to PostgreSQL]
 * Oracle
 * Snowflake – GA support from [Studio Pro 10.12](/releasenotes/studio-pro/10.12/) (Beta versions are available from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/)). For more information, see [Configure the External Database Connector for Snowflake](/appstore/modules/snowflake/external-database-connector/)
 
@@ -47,6 +47,7 @@ This connector supports the following statements:
 * The connector supports columns and stored procedure parameters with primitive data types only
 * If column names contain special characters, use an alias for the column name
 * Parameters are only supported for filter values (prepared statements)
+* Certificate based authentication for PostgreSQL is not supported on macOS.
 
 ### Prerequisites
 
@@ -149,3 +150,48 @@ You can now use the microflow in your app. Below is an example of a configured m
 
 See the [Integration Activities](/refguide/integration-activities/) section of the *Studio Pro Guide* for further explanation of the properties in this activity.
 See the [Call Stored Procedure](/howto/integration/use-the-external-database-connector/) section of *Use the External Database Connector* for more information on how to call a stored procedure.
+
+## Use certificate-based authentication for connections to PostgreSQL {#postgres-ssl}
+
+### Prerequisites :
+1. Authority certificate(CA cert) which is used to sign server and client certificate.
+CA file should have only one certificate. 
+
+2. A PKCS12 certificate file that contains a private key - these files typically have the .pfx or .p12 file extension
+and a password to open the file
+
+### Running Locally
+
+To configure the custom settings that are only used when you run your app locally, follow these steps:
+
+1. Add Authority certificate(CA) to Certificates tab of App Settings.
+See the [Certificates Tab](/refguide/app-settings/) section of the *Studio Pro Guide* for further explanation of the certificates to be added.
+
+{{% alert color="info" %}}
+To test SSL based connection from Database Connection wizard of External Database connection document, you must add CA certificate to the system via certificate manager.
+[Open certmgr.msc, Select 'Trusted Root Certification Authorities' and import CA certificate file]
+{{% /alert %}}
+
+2. If postgreSQL server requires mendix to authenticate using a client certificate, Add Client certificate details to the App Settings -> Configuration -> Edit Configuration -> Custom. 
+See the [Running Locally](/howto/integration/use-a-client-certificate/) section of the *Studio Pro Guide* for further explanation of how to add the certificate details.
+
+3. Add connection details to Database Connection wizard of External Database connection document.
+Select SSL Encrytion as Yes.
+Select SSL Mode as per your requirement.
+Add Client certificate identifier, it must match the value provided in the Custom settings dialog.
+
+{{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/example-SSL-connection.png" class="no-border" >}}
+
+You can Test connection using certificates added.
+
+4. Run Application to test connection for local runtime.
+
+### Running in the Cloud
+
+To conect to PostgreSQL when Application is running in Mendix Cloud, follow below steps:
+
+1. To configure client certificates in Mendix Cloud, follow the steps mentioned in [Running in the Cloud](/howto/integration/use-a-client-certificate/).
+
+2. After client certificate has been added, Double click the client certificate and add `ClientCertificateIdentifier` value to `Use Client Certificate for specific services`.
+
+2. Add required values to the constants created for DBSource, DBUsername, DBPassword, ClientCertificateIdentifier.

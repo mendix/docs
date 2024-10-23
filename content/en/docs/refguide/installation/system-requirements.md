@@ -76,7 +76,6 @@ These are the known limitations for Mac:
 
 * No native mobile support
 * No support for document templates
-* No **Structure mode** for the page editor
 * Start from spreadsheet cannot be used at this time 
 * If you have already installed JDK previously, it may not be picked up properly during installation. You can either configure this manually or remove all references to JDK and run the installer again.
     * The limitation that the JDK did not get installed while installing Studio Pro on macOS was removed in [10.8.0](/releasenotes/studio-pro/10.8/).

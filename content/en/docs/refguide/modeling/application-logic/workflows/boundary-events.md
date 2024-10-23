@@ -5,7 +5,7 @@ weight: 20
 ---
 
 {{% alert color="info" %}}
-Non-interrupting boundary events were released in beta in Studio Pro 10.15 and released in GA in Studio Pro 10.16.
+Non-interrupting boundary events were in public beta in Studio Pro 10.15 and released in GA in Studio Pro 10.16.
 {{% /alert %}}
 
 ## Introduction
@@ -82,15 +82,16 @@ With non-interrupting boundary events, the parent activity remains active/in pro
 
 ## Boundary Event Variables
 
-With boundary events we have direct access to the values of the parent if it is either a userTask or Call Workflow. There we can get information such as DueDate about the parent, which can be used in the boundary event flow and it's expressions.
+Boundary events have dedicated variables that can be used to get direct access to the values of the parent activity if it is either a user ask or Call workflow activity. For example, you can get information such as the parent activity's `DueDate`, which can be used in the boundary event flow and its expressions.
+
 The list of variables is described below: 
 
-* `$ParentTask` – The parent User-Task of the attached boundary event.
-* `$CalledWorkflowInstance` – The parent Call Workflow of the attached boundary event
+* `$ParentTask` – the parent user task of the attached boundary event
+* `$CalledWorkflowInstance` – the parent Call workflow activity of the attached boundary event
 
-## Current Limitations
+## Current Limitation
 
-The current release of boundary events has the following limitations which are actively being developed:
+The current release of boundary events has the following limitation which is actively being developed:
 
 * Non-interrupting timer boundary events currently have no recurrence. They are only executed once and will not repeat.
 

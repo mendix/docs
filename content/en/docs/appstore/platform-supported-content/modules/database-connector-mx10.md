@@ -169,10 +169,9 @@ See the [Certificates Tab](/refguide/app-settings/#certificates-tab) section of 
 To test SSL-based connections from the Database Connection wizard, you must add a CA certificate to the system via certificate manager. To do this, open Certmgr.msc, then select **Trusted Root Certification Authorities** and import the CA certificate file.
 {{% /alert %}}
 
-1. If postgreSQL server requires mendix to authenticate using a client certificate, Add Client certificate details to the App Settings > **Configuration** > **Edit Configuration** > **Custom**. 
-See the [Running Locally](/howto/integration/use-a-client-certificate/) section of the *Studio Pro Guide* for further explanation of how to add the certificate details.
+2. If the PostgreSQL server requires Mendix to authenticate using a client certificate, add client certificate details to the App Settings by clicking **Configuration** > **Edit** > **Custom**. See the [Running Locally](/howto/integration/use-a-client-certificate/) section of *Use a Client Certificate* for further instruction of how to add the certificate details.
 
-1. Add connection details to Database Connection wizard of External Database connection document.
+3. Add the connection details to the [Database Connection wizard](#connect-database).
 Select SSL Encrytion as Yes.
 Select SSL Mode as per your requirement.
 Add Client certificate identifier, it must match the value provided in the Custom settings dialog.

@@ -366,10 +366,6 @@ The return type of the expression must be defined using either the `type` or the
 
 ##### Fixed Return Type
 
-{{% alert color="info" %}}
-The `type` attribute was required in Mendix [9.19](/releasenotes/studio-pro/9.19/) and below.
-{{% /alert %}}
-
 You can set a fixed return type for your expression property with one of the supported types from below.
 
 | Supported Return Types | Corresponding Types Client Components Receive                                           |
@@ -381,10 +377,6 @@ You can set a fixed return type for your expression property with one of the sup
 | `String`               | `DynamicValue<string>`                                                                  |
 
 ##### Return Type Assignable to an Attribute
-
-{{% alert color="info" %}}
-The `assignableTo` attribute was introduced in Mendix [9.20](/releasenotes/studio-pro/9.20/).
-{{% /alert %}}
 
 You can use `assignableTo` to specify that the return type of the expression property should depend on the attribute property with the given property path. This means that the value of the expression will be assignable to the attribute configured for that attribute property (using [`setValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#editable-value)).
 
@@ -574,14 +566,6 @@ Then the Studio Pro UI for the property appears like this:
 
 ### Association {#association}
 
-{{% alert color="info" %}}
-This property type was introduced in Mendix [9.13](/releasenotes/studio-pro/9.13/).
-{{% /alert %}}
-
-{{% alert color="info" %}}
-The ability to link association properties to a data source was introduced in Mendix [9.17](/releasenotes/studio-pro/9.17/).
-{{% /alert %}}
-
 The association property type allows a widget to work directly with both reading and writing associations between entities. Depending on the widget's purposes, a widget should define association types it supports.
 
 If a `dataSource` attribute is not specified the client will receive a `ReferenceValue` for references (singular references), a `ReferenceSetValue` for reference sets (multiple references), or a union of them. For more information, see the [ModifiableValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#modifiable-value) section of *Client APIs Available to Pluggable Widgets*.
@@ -710,10 +694,6 @@ Then the Studio Pro UI for the property appears like this:
 
 The datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listvalue) and may be used with [`action`](#action), [`attribute`](#attribute), [`association`](#association), [`expression`](#expression), [`text template`](#texttemplate), and [`widgets`](#widgets) properties. See [Data Sources](/refguide/data-sources/#list-widgets) for available data source types.
 
-{{% alert color="info" %}}
-The ability to link association properties to a data source was introduced in Mendix [9.17](/releasenotes/studio-pro/9.17/).
-{{% /alert %}}
-
 If no data source has been configured by the user, any properties that are linked to the datasource property are automatically omitted from the props passed to the client component (even if they are marked as required).
 
 {{% alert color="warning" %}}
@@ -722,12 +702,29 @@ Only list datasources are supported, therefore specifying `isList="true"` is req
 
 #### XML Attributes
 
-| Attribute  | Required | Attribute Type | Description                                                                     |
-|------------|----------|----------------|---------------------------------------------------------------------------------|
-| `type`     | Yes      | String         | Must be `datasource`                                                            |
-| `key`      | Yes      | String         | See [key](#key)                                                                 |
-| `isList`   | Yes      | Boolean        | Must be `true`                                                                  |
-| `required` | No       | Boolean        | This decides if the user is required to specify a datasource, `true` by default |
+| Attribute      | Required | Attribute Type | Description                                                                                                |
+|----------------|----------|----------------|------------------------------------------------------------------------------------------------------------|
+| `type`         | Yes      | String         | Must be `datasource`                                                                                       |
+| `key`          | Yes      | String         | See [key](#key)                                                                                            |
+| `isList`       | Yes      | Boolean        | Must be `true`                                                                                             |
+| `required`     | No       | Boolean        | This decides if the user is required to specify a datasource, `true` by default                            |
+| `defaultType`  | No       | String         | Default type for the property, supported values are `Database`, `Microflow`, `Nanoflow`, and `Association` |
+| `defaultValue` | No       | String         | Default value for the property, see [Default Data Sources](#data-source-defaults)                          |
+
+##### Data Source Defaults {#data-source-defaults}
+
+{{% alert color="info" %}}
+The `defaultType` and `defaultValue` attributes for datasources were introduced in Mendix [10.16](/releasenotes/studio-pro/10.16/).
+{{% /alert %}}
+
+You can use the `defaultType` and `defaultValue` attributes to configure default data sources for your widget. Unless overridden in Studio Pro, the widget will attempt to configure the data source according to its defaults. Both attributes need to be set for the defaults to be applied.
+
+The format of `defaultValue` depends on the chosen `defaultType`:
+
+| Data source type         | Format      | Example                                                               |
+|--------------------------|-------------|-----------------------------------------------------------------------|
+| `Database` `Association` | Entity Path | `ModuleName.EntityName` or `ModuleName.A/ModuleName.A_B/ModuleName.B` |
+| `Microflow` `Nanoflow`   | Document ID | `ModuleName.DocumentName`                                             |
 
 #### Studio Pro UI
 

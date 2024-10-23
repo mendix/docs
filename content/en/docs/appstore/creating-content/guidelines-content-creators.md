@@ -16,7 +16,7 @@ For the guidelines for creating a specific type of content, see the specific doc
 
 * Guidelines for Creating Widgets
 * Guidelines for Creating Modules
-  * Guidelines for Creating Solutions 
+  * Guidelines for Creating Connectors
 * Guidelines for Creating Solutions
 
 ### General Guidelines{#general}
@@ -24,12 +24,12 @@ For the guidelines for creating a specific type of content, see the specific doc
 Below are the general guidelines for creating new Marketplace content:
 
 * Set up a separate app to build and maintain your Marketplace component.
-* Use a relatively recent Mendix version when creating the item, not only the latest Mendix version.
+* Use the latests MTS or LTS of any major Studio Pro version when creating the item. If that is not possible, then use the earliest version of any major Studio Pro version.
 * Ensure that any latest version of your product supports at least one Mendix LTS versions or Mendix MTS versions.
 * Create multiple versions of your Marketplace component, for example, for Studio Pro 8 and 9.
 * Your products must be complete and fully functional, as advertised upon submission.
 
-When adding the content to the Marketplace, you can add information the end-user should know to the component [documentation](#doc).
+When adding the content to the Marketplace, add information the end-user should know to the component [documentation](#doc).
 
 ### Using a GitHub Repo {#github}
 

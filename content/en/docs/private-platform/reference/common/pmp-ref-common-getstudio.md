@@ -1,6 +1,6 @@
 ---
 title: "Private Mendix Platform Functionalities - Get Studio Pro"
-linktitle: "PGet Studio Pro"
+linktitle: "Get Studio Pro"
 url: /private-mendix-platform/reference-guide/common/get-studio/
 description: "Provides details on the features and functionality of the Get Studio Pro page of Private Mendix Platforms."
 weight: 50

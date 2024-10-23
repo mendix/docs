@@ -5,7 +5,7 @@ weight: 20
 ---
 
 {{% alert color="info" %}}
-This feature is currently in public beta as of Studio Pro 10.15. Certain functionalities may be subject to change and may contain issues. For more information, see [Beta Releases](/releasenotes/beta-features/).
+Non-interrupting boundary events were released in beta in Studio Pro 10.15 and released in GA in Studio Pro 10.16.
 {{% /alert %}}
 
 ## Introduction
@@ -30,11 +30,7 @@ Studio Pro now supports the following boundary event:
 
 ## Getting started
 
-To enable this feature, go to Studio Pro **Preferences** -> the **New features** tab -> the **Workflow editor** section and select **Enable non-interrupting timer boundary events (beta)**:
-
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/enable-boundary-events.png" alt="Enable boundary events" width="450" >}}
-
-<a id="supported-activities"></a>You can now add boundary events to the following activities:
+<a id="supported-activities"></a>You can add boundary events to the following activities:
 
 * [Wait for notification](/refguide/wait-for-notification/)
 * [User task](/refguide/user-task/) 
@@ -53,6 +49,10 @@ To add a boundary event to the [above-listed activities](#supported-activities),
 * Select an event from the **Events** section in the workflow **Toolbox** and drag it onto one of the activities listed above.
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/drag-drop.png" alt="Adding boundary events through drag and drop" width="200" >}}
+
+* Right-click one of the above-listed activities to open its context menu, and click **Add boundary event**.
+
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/context-menu.png" alt="Adding boundary events through context menu" width="200" >}}
 
 * Double-click one of the above-listed activities to open its properties dialog box, go to the **Events** tab, and in the > **Boundary events** section, click **New** to add a new boundary event.
 

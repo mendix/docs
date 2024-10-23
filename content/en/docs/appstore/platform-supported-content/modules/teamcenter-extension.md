@@ -8,7 +8,7 @@ description: "Describes Teamcenter Extension from the Mendix Marketplace. Teamce
 
 The [Teamcenter Extension](https://marketplace.mendix.com/link/component/225544) is a Mendix Extension built using the Mendix Extensibility Framework to provide you with an effortless means to harness the capabilities of [Teamcenter Connector](https://marketplace.mendix.com/link/component/111627) for Mendix. Teamcenter Extension is layered atop the Teamcenter Connector. It provides a low-code experience by making it easier to visualize and access Teamcenter data models and automate creation of Mendix domain models and microflows.
 
-{{% alert color="info" %}}Teamcenter Extension is now also supported on macOS.{{% /alert %}}
+{{% alert color="info" %}}Teamcenter Extension V 3.0.0 and above is also supported on macOS.{{% /alert %}}
 
 ### Typical Use Cases {#usecases}
 

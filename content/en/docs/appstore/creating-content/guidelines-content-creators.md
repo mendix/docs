@@ -325,5 +325,5 @@ For more information on what this program offers, see [Mendix Component Partner 
 ## Read More
 
 * [Community Best Practices for App Performance](/refguide/community-best-practices-for-app-performance/)
-* [Mendix Best Practices for Development](https://docs.mendix.com/refguide/dev-best-practices/)
-* [Best Practices for Building Connectors](https://docs.mendix.com/appstore/creating-content/connector-guide-best-practices/)
+* [Mendix Best Practices for Development](/refguide/dev-best-practices/)
+* [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/)

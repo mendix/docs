@@ -54,6 +54,7 @@ Before starting the process of deploying a licensed app, make sure to complete t
 * You have [transport rights](/developerportal/deploy/node-permissions/#transport-rights)
 * Your [two-factor authentication](/developerportal/deploy/two-factor-authentication/) is set up
 * The deployment package for your app is not bigger than 1 GB (uncompressed)
+* Your app is using a [supported Mendix version](/releasenotes/studio-pro/lts-mts/#major-version)
 
 {{% alert color="info" %}}You can verify that your app is under the 1 GB limit by creating a deployment package, as described below, and then viewing that package's size in the package details.{{% /alert %}}
 

@@ -160,15 +160,49 @@ Private Cloud License Manager is a required component of Private Mendix Platform
 
 Svix is required if you want to use webhooks. Install the Svix component by doing the following steps:
 
-1. Run the command `./installer component -n=<namespace name>`, where `-n` indicates a namespace. The namespace must be the same as the namespace that you plan to use for Private Mendix Platform.
-2. Select **Svix** and specify the following parameters:
+1. Optional: If you are using a self-signed TLS certificate, build and deploy a private Svix server with custom self-signed TLS certification by performing the following steps:
+    1. Prepare the following Docker file to build a private Svix server image:
+
+        ```text
+        # Base build
+        FROM svix/svix-server:v1.25.0
+        # Add customer certification into system cert trust chain
+        COPY ./customer.crt /usr/local/share/ca-certificates/
+        USER root
+        RUN update-ca-certificates
+        # Start svix service
+        USER appuser
+        CMD \
+            set -ex ; \
+            if [ ! -z "$WAIT_FOR" ]; then \
+                WAIT_FOR_ARG="--wait-for 15"; \
+            fi ; \
+            exec svix-server --run-migrations $WAIT_FOR_ARG
+        ```
+
+    2. Build your private Svix server image with the above Docker file and your self-signed TLS certificate file by running the following command:
+    
+        ```text
+        docker build -t {customer-private-image-registry-url}/svix/svix-server:v1.25.tls
+        ```
+    
+    3. Push your private Svix server image to your private image registry by running the following command:
+    
+        ```text
+        docker push {customer-private-image-registry-url}/svix/svix-server:v1.25.tls
+        ```
+    
+2. Run the command `./installer component -n=<namespace name>`, where `-n` indicates a namespace. The namespace must be the same as the namespace that you plan to use for Private Mendix Platform.
+3. Select **Svix**, and then specify the following parameters:
 
     * **POSTGRES_DSN** - A Postgres DSN, for example, `postgresql://postgres:postgres@pgbouncer/postgres`.
-    * **REDIS_DSN** - An optional Redis DSN, for example, `redis://redis:6379`. You can leave this field blank if you are not using Redis.
-    * **SVIX_QUEUE_TYPE** - The type of message queue that Svix should use. For a default configuration without Redis, this should be set to **memory**. If you are using Redis, set this value to **redis**.
-    * **SVIX_CACHE_TYPE** - The type of message cache that Svix should use. For a default configuration without Redis, this should be set to **memory**. If you are using Redis, set this value to **redis**.
+    * **Image** - The Svix image path. The default path is `svix/svix-server:v1.25.0`. If you are using a self-signed TLS certificate, set this path to `{customer-private-image-registry-url}/svix/svix-server:v1.25.tls`.
+    * **Use Redis** - Optional. Select this check box if you want to use Redis for message cache and queues.
+    * **REDIS_DSN** - The Redis DSN, for example, `redis://redis:6379`. This field is only available if you select the **Use Redis** check box.
 
-3. Click **Install Svix**.
+4. Click **Install Svix** or **Upgrade Svix**.
+
+{{< figure src="/attachments/private-platform/pmp-installer-update-svix.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 The installer does not catch your pod's running status. In case of issues, verify that the pod is running correctly.

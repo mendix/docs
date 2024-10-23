@@ -54,5 +54,5 @@ To consume REST services, see:
 
 * [Consumed REST Services (Beta)](/refguide/consumed-rest-services-beta/), an overview on how to Consume a REST Service
 * [Call REST Service](/refguide/call-rest-action/), a description of the microflow action
-* [Use Call REST Service Action in a Microflow](/howto/integration/use-call-rest-action-in-microflow/), instructions on how to use the Call REST Service action in a microflow
+* [Use Call REST Service Action in a Microflow](/refguide/use-call-rest-action-in-microflow/), instructions on how to use the Call REST Service action in a microflow
 * [HttpRequest and HttpResponse System Entities](/refguide/http-request-and-response-entities/), an overview of these system entities in your domain model

@@ -87,8 +87,13 @@ To clear your environment, follow these steps:
 
 1. Click **Clear Environment**.
 2. Select one of the following options:
-    * **Only clear the database** – This empties all data from your database. After you confirm the deletion, the application is stopped, the existing database is deleted, a new database is created, and the application is restarted. Ensure you have a backup of any data that you want to keep.
+
+    * **Only clear the database** – This removes all data from your database tables. Ensure you have a backup of any data that you want to keep.
+
+        After you confirm the deletion, the application is stopped, the existing data is removed from the database, and the application is restarted. Note that the database retains some information, such as logs and system data.
+
     * **Clear the full environment (model and database)** – This clears all data from your database and file storage. It also removes your app from this environment. Clear the full environment if you want to deploy a different app to the environment.
+
 3. Confirm that you want to clear your environment by typing the indicated text (*clear database* or *clear model and database*, depending on which option you selected).
 4. Click **Clear Environment**.
 

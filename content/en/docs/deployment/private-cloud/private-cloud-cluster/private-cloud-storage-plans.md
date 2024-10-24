@@ -466,6 +466,7 @@ Do not use the name of an existing Service Account (environment name), or one of
 To connect to an Azure Postgres database, the firewall must be configured to allow connections to the database from the Kubernetes cluster.
 {{% /alert %}}
 
+
 Azure workload identities allow a Kubernetes Service Account to authenticate itself as a specific Managed Identity. For this to work correctly, add a Federated Credential to the *Postgres Admin* managed identity:
 
 1. Enable managed identities for your AKS cluster as [described in the Azure documentation](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#update-an-existing-aks-cluster). This only need to be done once per cluster.

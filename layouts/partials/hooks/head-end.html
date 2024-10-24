@@ -9,4 +9,7 @@
     <link rel="canonical" href="{{ .Permalink }}">
 {{- end -}}
   <!-- MvM: Add Javascript for Japanese translation -->
-  <script src="https://d.shutto-translation.com/trans.js?id=1806"></script>
+  <!-- MvM: Only if page has a title --> 
+{{- with .Params.title -}}
+    <script src="https://d.shutto-translation.com/trans.js?id=1806"></script>
+{{- end -}}

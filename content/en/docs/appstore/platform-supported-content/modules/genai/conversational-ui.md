@@ -150,7 +150,7 @@ Depending on the implementation, you can create this entity using a microflow th
 
 It is possible to add suggested user prompts to a `ChatContext`. They appear as a button for new chats. When a user clicks the **Suggested User Prompt** that appears above the chat input box, the [action microflow](#action-microflow) sends the content of the prompt to the model and starts a predefined chat in the interface. New `SuggestedUserPrompts` can be created and added to a `ChatContext` with the **Add SuggestedUserPrompt** toolbox action.
 
-### Associate the ProviderConfig {#provider-config}
+### Associating the ProviderConfig {#provider-config}
 
 The `ProviderConfig` contains the selection of the model provider with which the AI Bot can chat. It also refers to an action microflow that is executed when the **Send** button is clicked for a `ChatContext` that has the `ProviderConfig` associated. 
 
@@ -195,7 +195,7 @@ The following operations are used in a (custom) action microflow:
 * `Get Current User Prompt` gets the current user prompt. It can be used in the [action microflow](#action-microflow) because the `CurrentUserPrompt` from the chat context is no longer available.
 * `Update Assistant Response` processes the response of the model and adds the new message and any sources to the UI. This is typically one of the last steps of the logic in an [action microflow](#action-microflow).
 
-### Customize styling {#customize-styling}
+### Customizing styling {#customize-styling}
 
 The ConversationalUI module comes with its stylesheets that are intended to work on top of Atlas Core. You can use variables and custom classes to modify the default rendering, and think of colors, sizes, and positions. To learn more about customizing styling in a Mendix app in general and targeting elements using SCSS selectors, refer to the [how-to](/howto/front-end/customize-styling-new/#add-custom-styling) page.
 
@@ -218,7 +218,7 @@ The following variables have a default value defined in the Conversational UI mo
 
 You can find the default values of these variables in the `_chat-variables.scss` file that is shipped with this module.
 
-#### Create Custom SCSS {#customize-styling-classes}
+#### Creating Custom SCSS {#customize-styling-classes}
 You can use the following classes in your custom stylesheets to overwrite the default styling of Conversational UI and modify the behavior of the chat elements in your app. 
 
 | Class name | Target element |

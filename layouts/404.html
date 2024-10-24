@@ -12,11 +12,28 @@
         */}}
         <div class="container-fluid td-outer" style="padding: 1rem;">
             <main role="main" class="d-flex justify-content-center">
-                <div class="col-12 mx-auto text-center" style="max-width: 35rem; padding-top: 6rem; ">
-                    <img src="/images/404.png" alt="Not found" width="55%" class="no-border" style="min-width: 350px; margin-bottom:1rem;">
+                <div class="col-12 mx-auto text-center" style="max-width: 35rem; padding-top: 3rem; ">
+                    <img src="/images/404.png" width="55%" class="no-border" style="min-width: 350px; margin-bottom:1rem;">
                     <p class="page-title" style="font-size: 1.5rem; margin-bottom:.5rem">Another Page Washed Away Mysteriously (404)</p>
                     <p class="body" style="font-size: 1rem;">This page doesn't exist. Try using the search bar at the top of the page to find the documentation that you are looking for.</p>
-                    <a href="{{ "/" | relURL }}" class="btn btn-outline-secondary" style="padding-top: .5rem; padding-bottom: .5rem; padding-left: 1rem; padding-right: 1rem;">Go Back Home</a>
+                    <a href="{{ "/" | relURL }}" class="btn btn-outline-secondary" style="padding-top: .5rem; padding-bottom: .5rem; padding-left: 1rem; padding-right: 1rem; margin-bottom:.5rem">Go Back Home</a>
+                    <!-- German -->
+                    <p class="page-title" style="font-size: 1rem; margin-bottom:.5rem">Eine weitere Seite wurde auf mysteriöse Weise weggespült (404)</p>
+                    <p class="body" style="font-size: 0.8rem;">Diese Seite existiert nicht. Verwenden Sie die Suchleiste oben auf der Seite, um die gewünschte Dokumentation zu finden.</p>
+                    <a href="{{ "/" | relURL }}" class="btn btn-outline-secondary" style="padding-top: .5rem; padding-bottom: .5rem; padding-left: 1rem; padding-right: 1rem; margin-bottom:.5rem">Wieder nach Hause gehen</a>
+                    <!-- Japanese -->
+                    <p class="page-title" style="font-size: 1rem; margin-bottom:.5rem">もう一つのページが謎の形で流される（404）</p>
+                    <p class="body" style="font-size: 0.8rem;">このページは存在しません。ページ上部の検索バーを使用して、探しているドキュメントを見つけてください。</p>
+                    <a href="{{ "/" | relURL }}" class="btn btn-outline-secondary" style="padding-top: .5rem; padding-bottom: .5rem; padding-left: 1rem; padding-right: 1rem; margin-bottom:.5rem;">家に帰ります</a>
+                    <!-- Korean -->
+                    <p class="page-title" style="font-size: 1rem; margin-bottom:.5rem">신비롭게 씻겨 내려가는 또 다른 페이지(404)</p>
+                    <p class="body" style="font-size: 0.8rem;">이 페이지는 존재하지 않습니다. 페이지 상단의 검색창을 사용해 원하는 문서를 찾아보세요.</p>
+                    <a href="{{ "/" | relURL }}" class="btn btn-outline-secondary" style="padding-top: .5rem; padding-bottom: .5rem; padding-left: 1rem; padding-right: 1rem; margin-bottom:.5rem">집으로 돌아가기</a>
+                    <!-- Chinese -->
+                    <p class="page-title" style="font-size: 1rem; margin-bottom:.5rem">又一页神秘被冲走（404）</p>
+                    <p class="body" style="font-size: 0.8rem;">T此页面不存在。请尝试使用页面顶部的搜索栏来查找您正在寻找的文档。</p>
+                    <a href="{{ "/" | relURL }}" class="btn btn-outline-secondary" style="padding-top: .5rem; padding-bottom: .5rem; padding-left: 1rem; padding-right: 1rem; margin-bottom:.5rem">返回首页</a>
+
                 </div>
             </main>
             <script type="text/javascript">
@@ -27,3 +44,4 @@
         {{ partial "scripts.html" . }}
     </body>
 </html>
+

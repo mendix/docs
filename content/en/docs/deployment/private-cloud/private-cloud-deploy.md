@@ -492,7 +492,7 @@ If any of these garbage collection steps fail, you will no longer see the enviro
 
 If you need to enter or change the subscription secret, then you can do that here.
 
-Subscription secrets are obtained from [Mendix support](https://support.mendix.com/).
+Subscription secrets are obtained from [Mendix support](https://support.mendix.com/). You can use subscription secrets in [standalone mode](/developerportal/deploy/private-cloud-technical-appendix-02/).
 
 We have also released an alternate way of licensing your apps in the Private Cloud by using PCLM. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
 

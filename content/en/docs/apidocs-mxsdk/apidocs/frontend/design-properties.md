@@ -17,7 +17,7 @@ Design properties are a special set of settings shipped together with a Mendix t
 
 In Studio Pro, you can see which design properties are available for a widget in the **Properties** pane.
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/overview.png" alt="The Properties pane in Studio Pro" class="no-border" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/overview.png" alt="The Properties pane in Studio Pro" max-width=60% >}}
 
 ## Using Design Properties
 
@@ -211,7 +211,7 @@ Here is an example of a **Dropdown** design property using CSS variables:
 
 This is how the **Dropdown** design property appears:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/dropdown.png" alt="Dropdown property in Studio Pro" class="no-border" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/dropdown.png" alt="Dropdown property in Studio Pro" max-width=80% >}}
 
 #### Colorpicker-Specific Fields
 
@@ -285,7 +285,7 @@ Note: if you can not provide a value for the preview, it is recommended to inste
 
 This is how the **Colorpicker** design property appears:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/colorpicker.png" alt="Dropdown property in Studio Pro" class="no-border" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/colorpicker.png" alt="Dropdown property in Studio Pro" max-width=80% >}}
 
 #### ToggleButtonGroup-Specific Fields
 
@@ -361,7 +361,7 @@ Here is an example of a **ToggleButtonGroup** design property using CSS variable
 
 This is how the **ToggleButtonGroup** design property appears when using icons for the options:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/toggle_button_group.png" alt="ToggleButtonGroup property in Studio Pro" class="no-border" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/toggle_button_group.png" alt="ToggleButtonGroup property in Studio Pro" max-width=80% >}}
 
 #### Spacing-Specific Fields
 
@@ -499,7 +499,7 @@ Here is an example of a **Spacing** design property using CSS variables:
 
 This is how the **Spacing** design property appears:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/spacing.png" alt="Spacing property in Studio Pro" class="no-border" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/spacing.png" alt="Spacing property in Studio Pro" max-width=80% >}}
 
 ### Extending or Overriding Design Properties of Other Modules {#extend-existing-design-properties}
 

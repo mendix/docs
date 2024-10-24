@@ -31,6 +31,10 @@ To configure connect your Mendix application to Snowflake with the External Data
 When using the private key for authentication, format the key as a single line by removing any line breaks. The format should start with "-----BEGIN [ENCRYPTED PRIVATE KEY]-----" and end with "-----END [ENCRYPTED PRIVATE KEY]-----". Note that the text [ENCRYPTED PRIVATE KEY] will vary depending on the type of the key file.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+Mendix supports the PKCS#8 (Public Key Cryptography Standards) format for private keys, both encrypted (with a passphrase) and unencrypted. For more details, see the [Snowflake documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth). 
+{{% /alert %}}
+
 Your Mendix app now connects to Snowflake with the provided connection details. When the connection is successful, you can see your Snowflake schemas and objects in your Mendix app.
 
 You can use the connection constants to point your application to a different Snowflake database if you are deploying in a different environment.

@@ -27,7 +27,7 @@ This connector supports connections to the following database types:
 
 * Microsoft SQL
 * MySQL
-* PostgreSQL
+* PostgreSQL - For certificate-based authentication (available from Studio Pro 10.16), see the [Use Certificate-Based Authentication for PostgreSQL Connections](#postgres-ssl) section below
 * Oracle
 * Snowflake – GA support from [Studio Pro 10.12](/releasenotes/studio-pro/10.12/) (Beta versions are available from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/)). For more information, see [Configure the External Database Connector for Snowflake](/appstore/modules/snowflake/external-database-connector/)
 
@@ -47,6 +47,7 @@ This connector supports the following statements:
 * The connector supports columns and stored procedure parameters with primitive data types only
 * If column names contain special characters, use an alias for the column name
 * Parameters are only supported for filter values (prepared statements)
+* Certificate-based authentication for PostgreSQL is not supported on macOS
 
 ### Prerequisites
 
@@ -149,3 +150,47 @@ You can now use the microflow in your app. Below is an example of a configured m
 
 See the [Integration Activities](/refguide/integration-activities/) section of the *Studio Pro Guide* for further explanation of the properties in this activity.
 See the [Call Stored Procedure](/howto/integration/use-the-external-database-connector/) section of *Use the External Database Connector* for more information on how to call a stored procedure.
+
+## Use Certificate-Based Authentication for PostgreSQL Connections {#postgres-ssl}
+
+### Prerequisites 
+
+The certificates below are required for server configuration and the SSL mode selected.
+
+* Authority certificate (CA certificate), which is used to sign the server and client certificate. The CA file should have only one certificate. 
+* A PKCS12 certificate file that contains a private key. These files typically have the *.pfx* or .*p12* file extension and a password to open the file.
+
+### Running Locally
+
+You can configure custom settings that are only used when you run your app locally. To do this, follow these steps: 
+
+1. Add the authority certificate (CA) to the **Certificates** tab in the App Settings. See the [Certificates Tab](/refguide/app-settings/#certificates-tab) section of *App Settings* for information about adding certificates. 
+
+{{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/certificates-tab.png" class="no-border" >}}
+
+{{% alert color="info" %}}
+To test SSL-based connections from the Database Connection wizard, you must add a CA certificate to the system via the Certificate Manager. To do this, open Certmgr.msc, then select **Trusted Root Certification Authorities** and import the CA certificate file.
+{{% /alert %}}
+
+2. If the PostgreSQL server requires Mendix to authenticate using a client certificate, add the client certificate details to the App Settings by clicking **Configuration** > **Edit** > **Custom**. See the [Running Locally](/howto/integration/use-a-client-certificate/) section of *Use a Client Certificate* for further instructions of how to add the certificate details.
+
+{{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/edit-configuration.png" class="no-border" >}}
+
+3. Add the connection details to the [Database Connection wizard](#connect-database). Fill in the following details:
+    * Set SSL encryption to **Yes**
+    * Set SSL mode as per your requirement
+    * Add the Client certificate identifier; this must match the value provided in the custom settings dialog
+
+{{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/example-SSL-connection.png" class="no-border" >}}
+
+4. Click **Test Connection**.
+
+5. Run your application to test the connection for local runtime.
+
+### Running in the Cloud
+
+To connect to PostgreSQL when the application is running in Mendix Cloud, follow these steps:
+
+1. To configure SSL-based authentication in Mendix Cloud, add a CA certificate and client certificate for server configuration and the selected SSL mode. For more details, see the [Running in the Cloud](/howto/integration/use-a-client-certificate/#running-in-the-cloud) section of *Use a Client Certificate*.
+2. After the client certificate has been added, double-click the client certificate and add the value `ClientCertificateIdentifier` to `Use Client Certificate for specific services`. This must match the value provided for the constant `ClientCertificateIdentifier`.
+3. Add the required values to the constants created for DBSource, DBUsername, DBPassword, and ClientCertificateIdentifier.

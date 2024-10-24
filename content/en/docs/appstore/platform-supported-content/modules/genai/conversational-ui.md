@@ -70,7 +70,7 @@ To use Conversational UI in your app, you must perform the following tasks in St
 7. Optionally, [customize styling](#customize-styling) by overwriting variables and adding custom scss. Custom styling modules need to be loaded after ConversationalUI when ordering UI resources.
 
 
-The main entities are shown for reference in the diagram below. For technical documentation, please follow the steps in the [Technical reference](#technical-reference) section.
+The main entities are shown for reference in the diagram below. For technical documentation, follow the steps in the [Technical reference](#technical-reference) section.
 
 {{< figure src="/attachments/appstore/use-content/modules/genai/conversational-ui/domain-model.png" alt="" width="50%">}}
 
@@ -197,7 +197,7 @@ The following operations are used in a (custom) action microflow:
 
 ### Customize styling {#customize-styling}
 
-The ConversationalUI module comes with its stylesheets that are intended to work on top of Atlas Core. You can use variables and custom classes to modify the default rendering, and think of colors, sizes, and positions. To learn more about customizing styling in a Mendix app in general and targeting elements using SCSS selectors, please refer to the [how-to](/howto/front-end/customize-styling-new/#add-custom-styling) page.
+The ConversationalUI module comes with its stylesheets that are intended to work on top of Atlas Core. You can use variables and custom classes to modify the default rendering, and think of colors, sizes, and positions. To learn more about customizing styling in a Mendix app in general and targeting elements using SCSS selectors, refer to the [how-to](/howto/front-end/customize-styling-new/#add-custom-styling) page.
 
 #### Variables {#customize-styling-variables}
 

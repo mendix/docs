@@ -12,6 +12,10 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="info" %}}
+A redesigned deployment flow is now available. For more information, see [Environments and Deployment (New UI)](/developerportal/deploy/environments-redesign/).
+{{% /alert %}}
+
 ## Introduction
 
 This page describes how to deploy an app to Mendix Cloud.
@@ -50,6 +54,7 @@ Before starting the process of deploying a licensed app, make sure to complete t
 * You have [transport rights](/developerportal/deploy/node-permissions/#transport-rights)
 * Your [two-factor authentication](/developerportal/deploy/two-factor-authentication/) is set up
 * The deployment package for your app is not bigger than 1 GB (uncompressed)
+* Your app is using a [supported Mendix version](/releasenotes/studio-pro/lts-mts/#major-version)
 
 {{% alert color="info" %}}You can verify that your app is under the 1 GB limit by creating a deployment package, as described below, and then viewing that package's size in the package details.{{% /alert %}}
 

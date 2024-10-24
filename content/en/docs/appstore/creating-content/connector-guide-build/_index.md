@@ -35,7 +35,7 @@ Connectors can be used in your app to simplify connecting to existing third-part
 
 ### Connecting to Other Systems
 
-Connectors are implemented as Mendix modules with a focus on connecting to other systems. Connectors can make use of any of the platform-supported protocols like [SOAP](/refguide/consumed-web-services/#soap), [REST](/refguide/consumed-rest-services/#rest), [OData](/refguide/consumed-odata-services/#external-entities), or [Catalog](/catalog/). 
+Connectors are implemented as Mendix modules with a focus on connecting to other systems. Connectors can make use of any of the platform-supported protocols like [SOAP](/refguide/consumed-web-services/#soap), [REST](/refguide/integration/rest-services/), [OData](/refguide/consumed-odata-services/#external-entities), or [Catalog](/catalog/). 
 
 They can also be used to package a Java library provided by the other system to make the connection. These Java library functions can be exposed via Java actions as custom microflow activities (see [How to Build Microflow Actions with Java](/howto/extensibility/howto-connector-kit/)). This makes it simpler for Mendix developers without in-depth knowledge about third-party integrations to use these connectors in their business logic.
 
@@ -59,7 +59,7 @@ This chart shows the available solutions for when you want to connect Mendix app
 | Unsupported protocols   | Build a module to connect either via alternative protocols, or by encapsulating one of the platform supported protocols. |
 
 {{% alert color="info" %}}
-The [Catalog](/catalog/) is a hub for shared registered assets made available in your organization. At the moment, it only supports OData.
+The [Catalog](/catalog/) is a hub for shared registered assets made available in your organization. At the moment, it supports OData, REST, and Business Events.
 {{% /alert %}}
 
 ### Getting Mendix Connectors

@@ -2,11 +2,10 @@
 title: "Boundary Events"
 url: /refguide/workflow-boundary-events/
 weight: 20
-beta: true
 ---
 
 {{% alert color="info" %}}
-This feature is currently in public beta as of Studio Pro 10.15. Certain functionalities may be subject to change and may contain issues. For more information, see [Beta Releases](/releasenotes/beta-features/).
+Non-interrupting boundary events were in public beta in Studio Pro 10.15 and released in GA in Studio Pro 10.16.
 {{% /alert %}}
 
 ## Introduction
@@ -31,11 +30,7 @@ Studio Pro now supports the following boundary event:
 
 ## Getting started
 
-To enable this feature, go to Studio Pro **Preferences** -> the **New features** tab -> the **Workflow editor** section and select **Enable non-interrupting timer boundary events (beta)**:
-
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/enable-boundary-events.png" alt="Enable boundary events" width="450" >}}
-
-<a id="supported-activities"></a>You can now add boundary events to the following activities:
+<a id="supported-activities"></a>You can add boundary events to the following activities:
 
 * [Wait for notification](/refguide/wait-for-notification/)
 * [User task](/refguide/user-task/) 
@@ -54,6 +49,10 @@ To add a boundary event to the [above-listed activities](#supported-activities),
 * Select an event from the **Events** section in the workflow **Toolbox** and drag it onto one of the activities listed above.
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/drag-drop.png" alt="Adding boundary events through drag and drop" width="200" >}}
+
+* Right-click one of the above-listed activities to open its context menu, and click **Add boundary event**.
+
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/context-menu.png" alt="Adding boundary events through context menu" width="200" >}}
 
 * Double-click one of the above-listed activities to open its properties dialog box, go to the **Events** tab, and in the > **Boundary events** section, click **New** to add a new boundary event.
 
@@ -81,11 +80,19 @@ Boundary events are initiated when their parent activity is initiated. For examp
 
 With non-interrupting boundary events, the parent activity remains active/in progress when a boundary event is triggered (which means that the parent activity is not interrupted). For example, when a timer boundary event on a user task is triggered after 2 days, this task will remain in progress and the path defined below the timer boundary event is executed. When the boundary event's path reaches the **End of boundary path**, the workflow will await the completion of the parent activity. 
 
-## Current Limitations
+## Boundary Event Variables
 
-The current release of boundary events has the following limitations which are actively being developed:
+Boundary events have dedicated variables that can be used to get direct access to the values of the parent activity if it is either a user task or Call workflow activity. You can get information such as the parent activity's `DueDate`, which can be used in the boundary event flow and its expressions. For instance, you can use the expression `addDays($ParentTask/DueDate, -2)` to configure a timer boundary event so that it is triggered two days before the due date of its parent user task.
 
-* No access to the data of the parent activity in the boundary path. For user tasks, we will add a variable `$ParentTask` which is available in the boundary event path of a user task (for example, to enable getting the assigned user that should receive a notification when a task is overdue). This is the same for `$CalledWorkflowInstance` if the parent activity is a **Call workflow** activity.
+The list of variables is described below: 
+
+* `$ParentTask` – the parent user task of the attached boundary event
+* `$CalledWorkflowInstance` – the parent Call workflow activity of the attached boundary event
+
+## Current Limitation
+
+The current release of boundary events has the following limitation which is actively being developed:
+
 * Non-interrupting timer boundary events currently have no recurrence. They are only executed once and will not repeat.
 
 ## Read more

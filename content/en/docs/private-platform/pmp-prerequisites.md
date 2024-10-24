@@ -75,7 +75,7 @@ Private Mendix Platform must connect to services within your premises. Mandatory
 | Type | Tools | Version | Remarks |
 | --- | --- | --- | --- |
 | Version control | GitLab | Latest | Required for projects and collaboration |
-| Version control | GitHub | Latest | Required for projects and collaboration |
+| Version control | GitHub Enterprise Server | 3.6 or higher | Required for projects and collaboration |
 | Version control | Bitbucket | Latest | Required for projects and collaboration |
 | Version control | Azure DevOps | Latest | Required for projects and collaboration |
 | CI/CD | Kubernetes | See [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) | Default for CI/CD |

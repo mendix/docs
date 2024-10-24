@@ -12,7 +12,7 @@ aliases:
 
 All Mendix documentation is open to the Mendix community, which means you can make changes and add to it in ways that you see necessary. Do you see a how-to that is inaccurate or a section of the *Studio Pro Guide* that needs to be updated? You can easily help us improve the documentation for the whole Mendix community!
 
-All the Mendix documentation is stored in a [GitHub repository](https://github.com/mendix/docs). With a GitHub account, you can edit all existing documentation. You can also write a new how-to on an awesome topic of your choice and submit it.
+All the Mendix documentation is stored in a [GitHub repository](https://github.com/mendix/docs). With a GitHub account, you can edit all existing documentation. You can also write a new how-to on an awesome topic of your choice and submit it. When making documentation changes, follow the [Documentation Writing Guidelines](/community-tools/documentation-guidelines/).
 
 To work on the documentation in GitHub, use Markdown. For details on this easy-to-use syntax, see the [GitHub Guide to Mastering Markdown](https://guides.github.com/features/mastering-markdown/).
 
@@ -24,8 +24,9 @@ All documentation contributions may be edited to conform to our internal style g
 **Quick guide to making a documentation change:**
 
 1. Fork the **development** branch of the [mendix/docs](https://github.com/mendix/docs) repository.
-2. Make your changes.
-3. Create a pull request with our **development** branch as the base.
+2. Create a new branch from the forked **development** branch.
+3. Make your changes in the new branch.
+4. Create a pull request with the Mendix **development** branch as the base.
 
 For details on how to fork a repo and create a pull request, watch [How to Contribute to Someone's GitHub Repository (Fork/Pull Request)](https://www.youtube.com/watch?v=yr6IzOGoMsQ).
 {{% /alert %}}
@@ -129,8 +130,8 @@ You can clone a local copy of a forked repository, make documentation changes, a
     
         {{% alert color="warning" %}}If any new or changed files show up as uncommitted files, discard the changes. Do not commit them.{{% /alert %}}
 
-4. Edit the documentation locally with your preferred editing tool (for example, open the repository folder with Visual Studio Code, find the file, and make changes). Remember to save your changes.
-5. To run a local version of site, in the root directory of the local repository, run the following command in a terminal: `npm run build`. 
+4. Create a new branch from the local repository's **development** branch and edit the documentation locally with your preferred editing tool. For example, you can open the local repository folder with Visual Studio Code, create a new branch from its **development** branch, find the file and make changes in the new branch. Remember to save your changes.
+5. To run a local version of site to preview your changes, in the root directory of the local repository, run the following command in a terminal: `npm run build`. 
 6. Once the site is built, you see a table indicating how many pages have been created:
 
     {{< figure src="/attachments/community-tools/contribute-to-mendix-docs/table-of-built-pages.png" max-width=30% >}}
@@ -142,11 +143,9 @@ You can clone a local copy of a forked repository, make documentation changes, a
 8. To see the local site preview, go to `http://localhost:1313/`.
 9. Navigate in the left sidebar menu to the page that you just made changes to, and you can preview your changes locally! 
 
-{{% alert color="info" %}}As long as the current local build is still running, each time after you save your changes, it will detect your changes and rebuild the site. Wait until the web server is available again, and you will be able to preview the changes you just saved!
+    {{% alert color="info" %}}As long as the current local build is still running, each time after you save your changes, it will detect your changes and rebuild the site. Wait until the web server is available again, and you will be able to preview the changes you just saved!<br><br>If you do not see the changes you just saved, clear your browser cache, close and reopen the browser, and go to the local site again. Alternatively, in many browsers, such as Google Chrome, Firefox, and Microsoft Edge, you can perform a hard refresh on the current page by pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>, or <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> on a Mac. This hard refresh ignores cached content.<br><br>If the above solutions do not work, stop the current running build in the terminal by pressing <kbd>Ctrl</kbd> + <kbd>C</kbd> and run the command `npm run build` again. {{% /alert %}}
 
-If you do not see the changes you just saved, clear your browser cache, close and reopen the browser, and go to the local site again. Alternatively, in many browsers, such as Google Chrome, Firefox, and Microsoft Edge, you can perform a hard refresh on the current page by pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>, or <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> on a Mac. This hard refresh ignores cached content.
-
-If the above solutions do not work, stop the current running build in the terminal by pressing <kbd>Ctrl</kbd> + <kbd>C</kbd> and run the command `npm run build` again. {{% /alert %}}
+10. When the changes are ready to be submitted, stage and commit the changes using your preferred Git client, and create a pull request with the Mendix **development** branch as the base.
 
 ## Leaving Feedback on the Documentation
 
@@ -184,7 +183,7 @@ To submit a new how-to or *Studio Pro Guide* page to the Mendix documentation, s
 
 Follow these guidelines and conventions when writing:
 
-* Reference and use our [Documentation Writing Guidelines](/developerportal/community-tools/documentation-guidelines/)
+* Reference and use our [Documentation Writing Guidelines](/community-tools/documentation-guidelines/)
 * Make sure the Markdown file name reflects the title of the page (for example, if the page is titled "Create Your App," the file name should be *create-your-app.md*)
 * Name the Markdown and image files in lower-case with a hyphen (`-`) between each word, and do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
 * When creating screenshots:

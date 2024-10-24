@@ -193,7 +193,7 @@ Follow these guidelines and conventions when writing:
     * Save the image as a *.png* (preferred), *.jpg*, or *.gif* file
     * Save the image file in a sub-folder in the [attachments](https://github.com/mendix/docs/tree/development/static/attachments) folder for the location of the document (this sub-folder should have the same name as the document file name you are working on)
 
-### Submitting Your Work {#submit-work}
+### Submitting Your Work
 
 When you are ready to submit your work, follow these guidelines:
 

@@ -8,10 +8,6 @@ weight: 70
 
 ## Introduction
 
-This section of the Private Mendix Platform Reference Guide provides information about the menus and functionalities of the Private Mendix Platform that are common for administrator and developer users.
-
-### Group Content {#group-content}
-
 The **My Content** page shows a list of all the content owned by the groups to which the user belongs. Only items that have been shared with the relevant group are displayed here. Draft versions of content are not shown on the page.
 
 {{< figure src="/attachments/private-platform/pmp-refguide-mygroupcontent.png" class="no-border" >}}

@@ -92,11 +92,11 @@ Where you need to supply the following parameters
 
 By default, static credentials are used for authentication, meaning that if `--db-auth-mode` is not specified, you must provide `--db-password`. For enhanced security, AWS providers can use Postgres IAM authentication, while Azure providers can use Postgres managed identity authentication. When the authentication mode is set to `aws-irsa`, you need to specify `--db-aws-iam-role`, and the `--db-password` is no longer required. Similarly, for `azure-wi`, `--db-azure-client-id` must be provided, and `--db-password` is not necessary.
 
-To set up Postgres with IAM authentication, refer to the [Prerequisites](/developerportal/deploy/private-cloud-storage-plans/#prerequisites-1) for configuring the server. Instructions for configuring the database can be found [here](/developerportal/deploy/private-cloud-storage-plans/#rds-database).
+To set up Postgres with IAM authentication, refer to the [Prerequisites](/developerportal/deploy/private-cloud-storage-plans/#prerequisites-1) for configuring the server. For instructions on configuring the database, see [Private Cloud Storage Plans: RDS Database](/developerportal/deploy/private-cloud-storage-plans/#rds-database).
 
 For setting up Postgres with Azure workload identity, follow the guide in [Azure azwi Postgres setup](/developerportal/deploy/private-cloud-storage-plans/#database-postgres-azwi).
 
-To configure SQL Server, refer to the [Azure azwi SQL setup](/developerportal/deploy/private-cloud-storage-plans/#walkthrough-azure-azwi).
+To configure an SQL Server, refer to the [Azure azwi SQL setup](/developerportal/deploy/private-cloud-storage-plans/#walkthrough-azure-azwi).
 
 
 ### Applying the Manifest

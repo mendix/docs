@@ -12,16 +12,16 @@ Mendix Pipelines is in [public beta](/releasenotes/beta-features/). It is curren
 
 ## Introduction
 
-From the **Pipelines** page, you can set up automated build and deployment pipelines for your app. Once you have designed and activated a pipeline, you can use it for automated, zero-click builds and deployments. Each pipeline runs automatically according to the trigger conditions defined in your [Start Pipeline step](#pipeline-steps).
+From the **Pipelines** page, you can set up automated build, test, and deployment pipelines for your app. Once you have designed and activated a pipeline, you can use it for automated, zero-click builds, testing and deployments. Each pipeline runs automatically according to the trigger conditions defined in your [Start Pipeline step](#pipeline-steps).
 
 To access the **Pipelines** page, open your app in [Apps](https://sprintr.home.mendix.com/). Then select **Pipelines** in the navigation pane. (To view this page, you must have a [role](/developerportal/general/team/) with cloud access.)
 
-The **Pipelines** page has three tabs: **Runs**, **Designs**, and **Settings**. You can see all three tabs as soon as your app has its first pipeline saved.
+The **Pipelines** page has four tabs: **Runs**, **Designs**, **Variables**, and **Settings**. You can see all four tabs as soon as your app has its first pipeline saved.
 
 {{% alert color="info" %}}
-If your app does not have any pipelines yet, skip to [Designing a New Pipeline](#design-pipeline), below.
+If your app does not have any pipelines yet, skip to the [Designing a New Pipeline](#design-pipeline) section below.
 
-If you need to configure your user settings so that you can run a pipeline for the first time, skip to [Configuring User Settings](#configure-settings).
+If you need to configure your user settings so that you can run a pipeline for the first time, skip to the [Configuring User Settings](#configure-settings) section.
 {{% /alert %}}
 
 ## The Runs Tab{#runs-tab}
@@ -90,7 +90,7 @@ For each design, you can view the following information:
 
 Click **Copy ID** ({{% icon name="copy" %}}) on a pipeline design to copy the design ID.
 
-Click **More Options** ({{% icon name="three-dots-menu-horizontal-filled" %}}) > **Edit** on a pipeline design to go to its **Details** page. From there, you can view and edit the pipeline details, as described in [Editing a Pipeline](#edit-pipeline), below.
+Click **More Options** ({{% icon name="three-dots-menu-horizontal-filled" %}}) > **Edit** on a pipeline design to go to its **Details** page. From there, you can view and edit the pipeline details, as described in the [Editing a Pipeline](#edit-pipeline) section below.
 
 Click **More Options** ({{% icon name="three-dots-menu-horizontal-filled" %}}) > **Delete** to delete a pipeline design.
 
@@ -137,6 +137,12 @@ Your pipeline can include the following steps:
 * Checkout – Check out a branch. To configure this step, use the drop-down menu to select the branch to check out. You can select either the main branch or one of your most recently used branches.
 * Build – Build a deployment package based on the latest major, minor, or patch version of the branch you checked out. The highest version is incremented based on the increment settings specified in this step.
 * Maia Best Practice Recommender – Evaluate results of the [Maia Best Practice Recommender](/refguide/best-practice-recommender/) within your pipeline. You can configure this step to fail the pipeline if errors, warnings, deprecations, and/or recommendations are detected.
+* Unit Testing – This step executes the [Unit Testing](/appstore/modules/unit-testing/) module in a running environment. If any unit test fails, the pipeline will be marked as failed, with the run details and output parameters showing the failure count and relevant information. Ensure to add below prerequisites before you add the Unit Testing pipeline step.
+
+    * Import the [Unit Testing](https://marketplace.mendix.com/link/component/390) module into your Mendix application from the Marketplace.
+    * The environment for the Unit Testing must be in running state.
+
+    Since the endpoint is secured with secret credentials, Mendix releases the pipeline variables, allowing the customer to configure them securely during the unit testing step. This step will call the unit testing API endpoint, similar to how a customer would do it. For more information, see the [Running Unit Tests Through the Remote API](/appstore/modules/unit-testing/#running-unit-tests-through-the-remote-api) section of *Unit Testing*.
 * Publish – Publish the newly built deployment package to a repository.
 * Start Environment – Start a selected environment.
 * Stop Environment – Stop a selected environment.
@@ -146,7 +152,7 @@ Your pipeline can include the following steps:
 
 Expand each step to configure it, delete it, or view its outputs. You can expand or collapse any step in your pipeline by clicking the step's name.
 
-##### Branch Expression{#branch-expression}
+#### Branch Expression{#branch-expression}
 
 If you select **Teamserver push (Git)** as the trigger in the Start Pipeline step, you need to specify the relevant branch (or branches) in the **Branch expression** field.
 
@@ -166,7 +172,7 @@ Keep the following in mind:
 * Do not use multiple asterisks in the branch expression. For example, `**Main` is an invalid expression.
 * Do not use the asterisk between two words. For example, `Main*Main` is an invalid expression.
 
-##### Variables and Dependent Steps
+#### Pipeline Variables and Dependent Steps
 
 Some steps depend on the outputs of other steps. Therefore, you must add Checkout before Build, Build before Publish, and Publish before Deploy.
 
@@ -174,7 +180,17 @@ Some steps depend on the outputs of other steps. Therefore, you must add Checkou
 If you try to add a dependent step without the step that creates the output it depends on, a validation error will display and prompt you to add the missing step first.
 {{% /alert %}}
 
-These pipeline steps use Mendix-defined variables to reference the outputs of previous steps. Variables are indicated with a `$` sign and generally use the format `$StepName.OutputName`. For example, Publish uses the output of Build as `$Build.DeploymentPackage`. Similarly, Deploy uses `$Publish.DeploymentPackage` to deploy to the selected environment.
+These pipeline steps use pipeline variables to reference values across pipelines in a Mendix app. Variables are indicated with a `$` sign and generally use the format `$StepName.OutputName`. There are two types of variables:
+
+1. Mendix-defined variables
+
+    * These are provided by Mendix. Every pipeline step results in some outputs which can be referenced in subsequent steps. For example, Publish uses the output of Build as `$Build.DeploymentPackage`. Similarly, Deploy uses `$Publish.DeploymentPackage` to deploy to the selected environment. Click **Outputs** inside a Pipeline **Designs** tab to view a step’s output variables. 
+    * The scope of these variables is specific to a particular pipeline design within a Mendix app.
+
+2. User-defined variables
+
+    * These are defined by app members who have access to create pipelines using the **Variables** tab. These user-defined variables can be used to easily reference values such as API Keys, third-party tool’s app IDs, and more.
+    * The scope of these variables extends across the apps, so any app user can create and access them, and any pipeline in the app can configure them.
 
 ### Saving, Activating, and Deactivating a Pipeline
 
@@ -201,9 +217,27 @@ Note that active pipelines cannot be edited. If you want to edit an existing pip
 
 The pipeline design's status (**Active** or **Inactive**) is displayed in the overview table on the **Designs** tab.
 
+## The Variables Tab{#variable-tab}
+
+The **Variables** tab lets you configure your own variables. These user-defined variables become available in the pipeline steps. It is useful when you want to use the same value in multiple pipelines or avoid storing secret credentials as plain text in your pipeline step.
+
+### Creating a New Variable
+
+To create  a new variable, click **Create New Variable** from the **Variables** tab and open a dialog box. Enter a name for your variable in the **Name** field. The variable name must begin with a letter or underscore. (`_`) and must be unique from existing variables.
+
+Click **Save Variable** to save your variable. You can now select it in the unit testing step.
+
+Click **More Options** ({{% icon name="three-dots-menu-horizontal-filled" %}}) > **Edit** on a saved variable to edit and update the variable or its value.
+
+### Masked Variables
+
+Select **Mask > Yes** for confidential values. It will never be printed in the logs or error messages.
+
+While editing a saved variable, selecting **Mask > No** will allow you to verify the value. Make sure to set it back to **Mask > Yes** before saving the variable.
+
 ## The Settings Tab{#settings-tab}
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/pipelines/settings-tab.png" alt="" >}}
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/pipelines/settings-tab.png" >}}
 
 The **Settings** tab lets you configure user settings. You must add your API key and personal access token (PAT) before you can activate or run your first pipeline. If you still need to configure these user settings, the **Settings** tab is marked with an alert icon ({{% icon name="alert-circle-filled" color="red" %}}).
 

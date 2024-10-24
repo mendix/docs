@@ -13,7 +13,7 @@ aliases:
 
 Catalog is an open, standards-based metadata repository that enables Mendix developers and administrators to discover and explore data sources throughout their connected ecosystem. This repository is accessible to [authorized users](/catalog/manage-data-sources/user-roles/) in your company on the web app, catalog.mendix.com, or through [Catalog APIs](/apidocs-mxsdk/apidocs/catalog-apis/).
 
-{{% alert color="info" %}}The Catalog currently supports OData data sources, or services, APIs, or databases that are wrapped in OData.{{% /alert %}}
+{{% alert color="info" %}}The Catalog currently supports OData, REST, Web Services, and Business Events. It also supports services, APIs, or databases that are wrapped in OData.{{% /alert %}}
 
 ## Your Company's Catalog
 

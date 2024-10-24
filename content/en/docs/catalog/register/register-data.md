@@ -16,11 +16,11 @@ aliases:
 
 ## Introduction
 
-There are three ways to register published services in the Catalog. Mendix supports all OData versions, REST, and Business Events
+There are three ways to register published services in the Catalog. Mendix supports all OData versions, REST, Business Events, and Web Services
 
 This how-to teaches you how to register a service in the following ways:
 
-* [Through Mendix Cloud](#mendix-cloud), where registration occurs automatically when you deploy a [published OData](/refguide/published-odata-services/)/REST service, or Business Event to Mendix Cloud
+* [Through Mendix Cloud](#mendix-cloud), where registration occurs automatically when you deploy a [published OData](/refguide/published-odata-services/)/REST/Web service, or Business Event to Mendix Cloud
 * [Through the Catalog Registration API](#registration-api)
 * [Through the Catalog UI form](#registration-form)
 
@@ -30,7 +30,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * You have Studio Pro [8.14.0 or above](https://marketplace.mendix.com/link/studiopro/) installed
 * You have a Mendix account
-* You have an exposed OData/REST service or Business Event that you are ready to register (for instructions on how to create an exposed OData service, refer to the sections on creating an app and exposing an entity in [Share Data Between Apps](/howto/integration/share-data/)
+* You have an exposed OData/REST/Web service or Business Event that you are ready to register (for instructions on how to create an exposed OData service, refer to the sections on creating an app and exposing an entity in [Share Data Between Apps](/howto/integration/share-data/)
 
 ## Registering a Service Through Mendix Cloud {#mendix-cloud}
 

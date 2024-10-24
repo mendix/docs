@@ -225,6 +225,9 @@ The following shortcut keys are assigned to menu actions that can be used in all
 | <kbd>Ctrl</kbd> + <kbd>W</kbd> | <kbd>Command</kbd> + <kbd>W</kbd> | Closes the current document. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> | <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> | Closes all document tabs. |
 | <kbd>Delete</kbd> | <kbd>Delete</kbd> | Deletes the selected element. |
+| <kbd>Ctrl</kbd> + <kbd>-</kbd> | <kbd>Command</kbd> + <kbd>-</kbd> | Moves backward through your editing history. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>-</kbd> | <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>-</kbd> | Moves forward through your editing history. |
+
 
 ## Maia Chat Shortcut Keys {#maia-chat-shortcuts}
 

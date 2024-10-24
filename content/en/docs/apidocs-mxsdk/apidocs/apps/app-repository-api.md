@@ -60,7 +60,7 @@ This is the generic error response format. The payload example format applies to
 
 | Name | Value |
 | --- | --- |
-| Content-Type | `application/json; charset=utf-8` |
+| `Content-Type` | `application/json; charset=utf-8` |
 
 #### Payload
 
@@ -122,7 +122,7 @@ Authorization: MxToken hZUPhAV4ELPrRm7U7JAKf5BnxJk6q7dcsvFdw6ZR4wRYdv7egHjwHEYBw
 
 |Name|Value|
 |---|---|
-|Content-Type|`application/json; charset=utf-8`|
+|`Content-Type`|`application/json; charset=utf-8`|
 
 #### Response Payload
 
@@ -183,7 +183,7 @@ Authorization: MxToken hZUPhAV4ELPrRm7U7JAKf5BnxJk6q7dcsvFdw6ZR4wRYdv7egHjwHEYBw
 
 |Name|Value|
 |---|---|
-|Content-Type|`application/json; charset=utf-8`|
+|`Content-Type`|`application/json; charset=utf-8`|
 
 #### Response Payload
 
@@ -266,7 +266,7 @@ Authorization: MxToken hZUPhAV4ELPrRm7U7JAKf5BnxJk6q7dcsvFdw6ZR4wRYdv7egHjwHEYBw
 
 |Name|Value|
 |---|---|
-|Content-Type|`application/json; charset=utf-8`|
+|`Content-Type`|`application/json; charset=utf-8`|
 
 #### Response Payload {#response-payload}
 
@@ -352,7 +352,7 @@ Authorization: MxToken hZUPhAV4ELPrRm7U7JAKf5BnxJk6q7dcsvFdw6ZR4wRYdv7egHjwHEYBw
 
 |Name|Value|
 |---|---|
-|Content-Type|`application/json; charset=utf-8`|
+|`Content-Type`|`application/json; charset=utf-8`|
 
 #### Response Payload
 

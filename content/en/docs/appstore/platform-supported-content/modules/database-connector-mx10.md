@@ -155,7 +155,7 @@ See the [Call Stored Procedure](/howto/integration/use-the-external-database-con
 
 ### Prerequisites 
 
-The certificates below are required for server configuration and SSL mode selection.
+The certificates below are required for server configuration and the SSL mode selected.
 
 * Authority certificate (CA certificate), which is used to sign the server and client certificate. The CA file should have only one certificate. 
 * A PKCS12 certificate file that contains a private key. These files typically have the *.pfx* or .*p12* file extension and a password to open the file.

@@ -130,7 +130,7 @@ You can clone a local copy of a forked repository, make documentation changes, a
     
         {{% alert color="warning" %}}If any new or changed files show up as uncommitted files, discard the changes. Do not commit them.{{% /alert %}}
 
-4. Create a new branch from the local repository's **development** branch and edit the documentation locally with your preferred editing tool. For example, you can open the local repository folder with Visual Studio Code, create a new branch from its **development** branch, find the file and make changes on the new branch. Remember to save your changes.
+4. Create a new branch from the local repository's **development** branch and edit the documentation locally with your preferred editing tool. For example, you can open the local repository folder with Visual Studio Code, create a new branch from its **development** branch, find the file and make changes in the new branch. Remember to save your changes.
 5. To run a local version of site to preview your changes, in the root directory of the local repository, run the following command in a terminal: `npm run build`. 
 6. Once the site is built, you see a table indicating how many pages have been created:
 

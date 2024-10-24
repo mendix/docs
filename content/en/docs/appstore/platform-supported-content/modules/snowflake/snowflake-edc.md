@@ -32,9 +32,7 @@ When using the private key for authentication, format the key as a single line b
 {{% /alert %}}
 
 {{% alert color="info" %}}
-We support the PKCS#8 (Public Key Cryptography Standards) format for private keys, both encrypted (with a passphrase) and unencrypted.
-For more details please check snowflake documentation:
-https://docs.snowflake.com/en/user-guide/key-pair-auth
+Mendix supports the PKCS#8 (Public Key Cryptography Standards) format for private keys, both encrypted (with a passphrase) and unencrypted. For more details, see the [Snowflake documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth). 
 {{% /alert %}}
 
 Your Mendix app now connects to Snowflake with the provided connection details. When the connection is successful, you can see your Snowflake schemas and objects in your Mendix app.

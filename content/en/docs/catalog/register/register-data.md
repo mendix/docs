@@ -16,7 +16,7 @@ aliases:
 
 ## Introduction
 
-There are three ways to register published services in the Catalog. Mendix supports all OData versions, REST, Business Events and Web Services
+There are three ways to register published services in the Catalog. Mendix supports all OData versions, REST, Business Events, and Web Services
 
 This how-to teaches you how to register a service in the following ways:
 

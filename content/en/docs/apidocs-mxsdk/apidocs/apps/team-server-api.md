@@ -57,7 +57,7 @@ HTTP Method: GET
 
 ##### Parameter
 
-* *AppId* (String) : Subdomain name of an app.
+* `AppId` (String) : Subdomain name of an app.
 
 ##### Example
 
@@ -74,10 +74,10 @@ Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 
 List of objects with the following key-value pairs:
 
-* *Name* (String) : Name of the branch. This is 'trunk' for the main line or a specific branch name.
-* *DisplayName* (String) : Visible name in the Mendix Portal. For the trunk, this is 'Main line'.
-* *LatestRevisionNumber* (Long) : Number of the latest revision.
-* *LatestRevisionMendixVersion* (String) : Version string of the Mendix version of the app in this revision.
+* `Name` (String) : Name of the branch. This is 'trunk' for the main line or a specific branch name.
+* `DisplayName` (String) : Visible name in the Mendix Portal. For the trunk, this is 'Main line'.
+* `LatestRevisionNumber` (Long) : Number of the latest revision.
+* `LatestRevisionMendixVersion` (String) : Version string of the Mendix version of the app in this revision.
 
 ##### Error Codes
 
@@ -115,8 +115,8 @@ Retrieves a specific branch that belongs to the team server project of a specifi
 
 ##### Parameters
 
-* *AppId* (String) : Subdomain name of an app.
-* *Name* (String) : Name of the branch to get or 'trunk' to get the main line. The name of the branch should be [URL-encoded](https://www.w3schools.com/tags/ref_urlencode.asp).
+* `AppId` (String) : Subdomain name of an app.
+* `Name` (String) : Name of the branch to get or 'trunk' to get the main line. The name of the branch should be [URL-encoded](https://www.w3schools.com/tags/ref_urlencode.asp).
 
 ##### Example
 
@@ -133,10 +133,10 @@ Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 
 An object with the following key-value pairs:
 
-* *Name* (String) : Name of the branch. This is 'trunk' for the main line or a specific branch name.
-* *DisplayName* (String) : Visible name in the Mendix Portal. For the trunk, this is 'Main line'.
-* *LatestRevisionNumber* (Long) : Number of the latest revision.
-* *LatestRevisionMendixVersion* (String) : Version string of the Mendix version of the app in the latest revision.
+* `Name` (String) : Name of the branch. This is 'trunk' for the main line or a specific branch name.
+* `DisplayName` (String) : Visible name in the Mendix Portal. For the trunk, this is 'Main line'.
+* `LatestRevisionNumber` (Long) : Number of the latest revision.
+* `LatestRevisionMendixVersion` (String) : Version string of the Mendix version of the app in the latest revision.
 
 ##### Error Codes
 
@@ -170,8 +170,8 @@ HTTP Method: GET
 
 ##### Parameters
 
-* *AppId* (String) : Subdomain name of an app.
-* *Name* (String) : Name of the branch to get. Use `trunk` to get the main line or `branches%2FyourBranchName` for any other development branch.
+* `AppId` (String) : Subdomain name of an app.
+* `Name` (String) : Name of the branch to get. Use `trunk` to get the main line or `branches%2FyourBranchName` for any other development branch.
 
 ##### Examples
 
@@ -197,11 +197,11 @@ Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 
 List of objects with the following key-value pairs:
 
-* *Number* (Long) : Number of the revision.
-* *CommitMessage* (String) : Commit message of the revision.
-* *Date* (Date) : Date when the revision is created (or the commit is done).
-* *Author* (String) : Creator of the revision (committer).
-* *MendixVersion* (String) : Version string of the Mendix version of the app in this revision.
+* `Number` (Long) : Number of the revision.
+* `CommitMessage` (String) : Commit message of the revision.
+* `Date` (Date) : Date when the revision is created (or the commit is done).
+* `Author` (String) : Creator of the revision (committer).
+* `MendixVersion` (String) : Version string of the Mendix version of the app in this revision.
 
 ##### Error Codes
 

@@ -153,10 +153,19 @@ See the [Call Stored Procedure](/howto/integration/use-the-external-database-con
 
 ## Use Certificate-Based Authentication for PostgreSQL Connections {#postgres-ssl}
 
-### Prerequisites
+### Prerequisites 
 
+<<<<<<< HEAD
 * Authority certificate (CA certificate), which is used to sign the server and client certificate. The CA file should have only one certificate. 
 * A PKCS12 certificate file that contains a private key. These files typically have the *.pfx* or .*p12* file extension and a password to open the file.
+=======
+Below certificates are required as per the need of server configuration and SSL mode selected.
+
+1. Authority certificate(CA cert) which is used to sign server and client certificate.
+CA file should have only one certificate. 
+
+2. A PKCS12 certificate file that contains a private key. These files typically have the *.pfx* or .*p12* file extension and a password to open the file.
+>>>>>>> 403d09718416700c0d9f694664adbc307f47c43f
 
 ### Running Locally
 
@@ -165,17 +174,29 @@ You can configure custom settings that are only used when you run your app local
 1. Add the authority certificate (CA) to the **Certificates** tab in the App Settings.
 See the [Certificates Tab](/refguide/app-settings/#certificates-tab) section of *App Settings* for information about adding certificates. 
 
+{{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/certificates-tab.png" class="no-border" >}}
+
 {{% alert color="info" %}}
 To test SSL-based connections from the Database Connection wizard, you must add a CA certificate to the system via the Certificate Manager. To do this, open Certmgr.msc, then select **Trusted Root Certification Authorities** and import the CA certificate file.
 {{% /alert %}}
 
 2. If the PostgreSQL server requires Mendix to authenticate using a client certificate, add the client certificate details to the App Settings by clicking **Configuration** > **Edit** > **Custom**. See the [Running Locally](/howto/integration/use-a-client-certificate/) section of *Use a Client Certificate* for further instruction of how to add the certificate details.
 
+{{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/edit-configuration.png" class="no-border" >}}
+
 3. Add the connection details to the [Database Connection wizard](#connect-database). Fill in the following details:
+<<<<<<< HEAD
     * Set SSL encryption to **Yes**
     * Set SSL mode as per your requirement
     * Add the Client certificate identifier; this must match the value provided in the custom settings dialog
 
+=======
+    * Set SSL Encrytion to **Yes**
+    * Set SSL Mode as per your requirement
+    * Add Client certificate identifier; this must match the value provided in the custom settings dialog
+    * Value for Client certificate identifier is saved in constant `ClientCertificateIdentifier`.
+    
+>>>>>>> 403d09718416700c0d9f694664adbc307f47c43f
 {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/example-SSL-connection.png" class="no-border" >}}
 
 4. Click **Test Connection**.
@@ -186,6 +207,15 @@ To test SSL-based connections from the Database Connection wizard, you must add 
 
 To connect to PostgreSQL when the application is running in Mendix Cloud, follow these steps:
 
+<<<<<<< HEAD
 1. Configure client certificates in Mendix Cloud by following the steps in the [Running in the Cloud](/howto/integration/use-a-client-certificate/#running-in-the-cloud) section of *Use a Client Certificate*.
 2. After the client certificate has been added, double-click the client certificate and add the value `ClientCertificateIdentifier` to `Use Client Certificate for specific services`. This must match the value provided for the constant `ClientCertificateIdentifier`.
 3. Add the required values to the constants created for DBSource, DBUsername, DBPassword, and ClientCertificateIdentifier.
+=======
+1. To configure SSL based authentication in Mendix Cloud, Add CA certificate and client certificate as per the need of server configuration and SSL mode selected.
+for more details see the steps in the [Running in the Cloud](/howto/integration/use-a-client-certificate/#running-in-the-cloud) section of *Use a Client Certificate*.
+
+2. After client certificate has been added, Double click the client certificate and add the value `ClientCertificateIdentifier` to `Use Client Certificate for specific services`(it must match the value provided for constant ClientCertificateIdentifier).
+
+3. Add required values to the constants created for DBSource, DBUsername, DBPassword, ClientCertificateIdentifier.
+>>>>>>> 403d09718416700c0d9f694664adbc307f47c43f

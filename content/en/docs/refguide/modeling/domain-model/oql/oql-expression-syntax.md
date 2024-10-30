@@ -79,7 +79,7 @@ Binary operators are used with this syntax:
 ```
 Where `operator` is any available binary operator. Both `expression` operands should be of compatible types for the operator and compatible with the other operand.
 
-#### Type coercion precedence
+#### Type coercion precedence {#type-coercion}
 
 Binary operations perform type casting when operand types are differing. For operations involving only numeric types, data types are always upcasted to ensure data types are matching. The result type will also be the operand type with the highest precedence. This is done according to this ordering:
 - `DECIMAL`
@@ -234,13 +234,22 @@ Returns true if both input `expression` return true. Both operands need to be of
 Its main use is to make complex `WHERE` conditions with a combination of input values. In the query below large orders or smaller orders with a high value are selected:
 
 ```sql
-SELECT LastName, Number, Price FROM Sales.Order WHERE Number > 5 OR (Price > 5 AND Number > 2)
+SELECT LastName, Number, Price FROM Sales.Order WHERE Number >= 5 OR Price > 4 AND Number >= 3
 ```
 
 | LastName | Number | Price |                                                         
 |----------|--------|-------|
 | Doe      | 7      | 1.5   |
 | Moose    | 3      | 8.2   |
+
+Note that in the query above `AND` is evaluated first. The query below with parentheses returns orders that have low volume or low price with a minimum of 3 orders:
+```sql
+SELECT LastName, Number, Price FROM Sales.Order WHERE (Number <= 5 OR Price < 6) AND Number >= 3
+```
+
+| LastName | Number | Price |                                                         
+|:---------|--------|-------|
+| Doe      | 7      | 1.5   |
 
 ### Unary Operators
 Unary operators only have a single argument. Unary operators supported:
@@ -280,7 +289,7 @@ Matches an `expression` to the pattern after the operator.
 ```sql
 expression LIKE pattern
 ```
-Where `expression` is of type `STRING` and `pattern` is a string literal or parameter. A `NULL` pattern is treated as an empty string.
+Where `expression` is of type `STRING` and `pattern` is a string literal or parameter. Note that this means functions are not allowed to be used in `pattern`. A `NULL` pattern is treated as an empty string.
 
 The pattern can have special characters, which are all wildcards. Supported wildcard Characters:
 
@@ -409,7 +418,7 @@ Where `expression` is an expression of any datatype.
 
 ### CASE
 
-The `CASE` expression is a conditional expression, similar to if/else statements in other programming languages. Each condition is an expression that returns a Boolean result. If the condition's result is true, the value of the `CASE` expression is the result that follows the condition, and the remainder of the `CASE` expression is not processed. If the condition's result is not true, any subsequent `WHEN` clauses are examined in the same manner. If no `WHEN` condition yields true, the value of the `CASE` expression is the result of the `ELSE` clause. If the `ELSE` clause is omitted and no condition is true, the result is null.
+The `CASE` expression is a conditional expression, similar to if/else statements in other programming languages. If the condition's result is true, the value of the `CASE` expression is the result that follows the condition, and the remainder of the `CASE` expression is not processed. If the condition's result is not true, any subsequent `WHEN` clauses are examined in the same manner. If no `WHEN` condition yields true, the value of the `CASE` expression is the result of the `ELSE` clause. If the `ELSE` clause is omitted and no condition is true, the result is null.
 
 #### Syntax
 
@@ -763,6 +772,8 @@ SELECT * FROM Sales.Customer WHERE LOWER(LastName) = 'doe'
 |----|----------|-----------|
 | -  | Doe      | John      |
 
+Note that this query can no longer take advantage of an index for `LastName` for comparison, resulting in a performance decrease.
+
 ### RANGEBEGIN
 
 Extracts the initial value of a range parameter. Range parameters defined only in [datasets](/refguide/data-sets/). `RANGEBEGIN` and [RANGEEND](#oql-rangeend) are OQL functions that can only be used with a parameter as input.
@@ -830,7 +841,7 @@ WHERE End < RANGEEND($range_past)
 
 ### REPLACE
 
-The `REPLACE` function replaces all occurrences of a specified string value with another string value. The function supports limited and unlimited `STRING` types. Arguments of other types are not supported.
+The REPLACE function takes an input string and replaces all occurrences within it of a specified string value with another string value. The function supports limited and unlimited `STRING` types. Arguments of other types are not supported.
 
 #### Syntax
 
@@ -892,7 +903,7 @@ ROUND ( expression , length )
 
 ##### length
 
-`length` specifies the amount of decimals to which the `expression` must be rounded. Must be of numeric type. If the value is of type `DECIMAL`, there is database specific rounding. In PostgreSQL and MySQL, `length` is rounded. With other databases, `length` is floored. If the `length` is `NULL`, the function result will be `NULL`.
+`length` specifies the amount of decimals to which the `expression` must be rounded. Must be of numeric type. If the `length` is `NULL`, the function result will be `NULL`.
 
 #### Examples
 

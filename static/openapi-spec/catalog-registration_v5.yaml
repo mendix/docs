@@ -1,0 +1,1250 @@
+openapi: 3.0.1
+info:
+  title: "Catalog Registration API"
+  description: "This is the Registration API specification. You can use it to register and manage your data sources and datasets in the Catalog."
+  termsOfService: "#"
+  contact:
+    email: PlatformCore@mendix.com
+  version: "5.1.0"
+externalDocs:
+  description: "Specification of this API"
+  url: "https://docs.mendix.com/apidocs-mxsdk/apidocs/catalog-apis/"
+servers:
+  - url: "https://catalog.mendix.com/rest/registration/v5"
+paths:
+  /applications:
+    post:
+      tags:
+        - Applications
+      summary: "Registers an application"
+      security:
+        - OAuth2:
+            [
+              "mx:datahub:services:write",
+              "openid",
+              "offline_access",
+              "mx:user:profile:v1:read",
+            ]
+        - PersonalAccessTokens: []
+      requestBody:
+        $ref: "#/components/requestBodies/Applications_POST"
+      responses:
+        "201":
+          $ref: "#/components/responses/Applications_POST_201"
+        "400":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/400"
+        "401":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/401"
+        "403":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/403"
+        "410":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/410"
+        "500":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/500"
+    get:
+      tags:
+        - Applications
+      summary: "Retrieves all the applications from users company"
+      security:
+        - OAuth2:
+            [
+              "mx:datahub:services:read",
+              "openid",
+              "offline_access",
+              "mx:user:profile:v1:read",
+            ]
+        - PersonalAccessTokens: []
+      parameters:
+        - in: query
+          name: "limit"
+          description: "The maximum number of applications that can be returned per request. If the total applications retrieved is more than this limit, then we shall provide page links for retrieval of subsequent applications in the response. If no limit is provided it shall be defaulted to 20, the maximum limit that can be supplied is 100, if a limit over 100 is supplied it shall be defaulted to 100 and no error message shall be generated."
+          schema:
+            type: integer
+            minimum: 1
+            default: 20
+            maximum: 100
+        - in: query
+          name: "offset"
+          description: "The offset is the zero-based index of the first application to be returned on the page."
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+      responses:
+        "200":
+          $ref: "#/components/responses/All_Applications_GET_200"
+        "400":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/400"
+        "401":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/401"
+        "403":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/403"
+        "404":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/404"
+        "500":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/500"
+  /applications/{AppUUID}:
+    get:
+      tags:
+        - Applications
+      summary: "Retrieves the details of a particular application"
+      security:
+        - OAuth2:
+            [
+              "mx:datahub:services:read",
+              "openid",
+              "offline_access",
+              "mx:user:profile:v1:read",
+            ]
+        - PersonalAccessTokens: []
+      parameters:
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/AppUUID_Path"
+      responses:
+        "200":
+          $ref: "#/components/responses/Application_GET_200"
+        "400":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/400"
+        "401":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/401"
+        "403":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/403"
+        "404":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/404"
+        "500":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/500"
+    delete:
+      tags:
+        - Applications
+      summary: "Deletes the specified application and all environments and endpoints associated to it"
+      description: "Deleting an application can only be done by the owner of the resource’s application, company admins, or Catalog curators."
+      security:
+        - OAuth2:
+            [
+              "mx:datahub:services:write",
+              "openid",
+              "offline_access",
+              "mx:user:profile:v1:read",
+            ]
+        - PersonalAccessTokens: []
+      parameters:
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/AppUUID_Path"
+      responses:
+        "204":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/204"
+        "401":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/401"
+        "403":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/403"
+        "404":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/404"
+        "410":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/410"
+        "500":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/500"
+      externalDocs:
+        description: "Learn more about the specific roles required to execute this API operation."
+        url: "https://docs.mendix.com/catalog/#catalog-roles"
+    put:
+      tags:
+        - Applications
+      summary: "Register a new application or update an existing application at the given UUID. Currently registered application are overwritten with the values provided in this request body."
+      description: "Some PUT operations can only be done by the owner of the resource’s application, company admins, or Catalog curators."
+      security:
+        - OAuth2:
+            [
+              "mx:datahub:services:write",
+              "openid",
+              "offline_access",
+              "mx:user:profile:v1:read",
+            ]
+        - PersonalAccessTokens: []
+      parameters:
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/AppUUID_Path"
+      requestBody:
+        $ref: "#/components/requestBodies/Applications_PUT"
+      responses:
+        "200":
+          $ref: "#/components/responses/Applications_PUT_200"
+        "201":
+          $ref: "#/components/responses/Applications_PUT_201"
+        "400":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/400"
+        "401":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/401"
+        "403":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/403"
+        "404":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/404"
+        "500":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/500"
+      externalDocs:
+        description: "Learn more about the specific roles required to execute this API operation."
+        url: "https://docs.mendix.com/catalog/#catalog-roles"
+  /applications/{AppUUID}/environments:
+    post:
+      tags:
+        - Environments
+      summary: "Registers an environment for the specified application"
+      security:
+        - OAuth2:
+            [
+              "mx:datahub:services:write",
+              "openid",
+              "offline_access",
+              "mx:user:profile:v1:read",
+            ]
+        - PersonalAccessTokens: []
+      parameters:
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/AppUUID_Path"
+      requestBody:
+        $ref: "#/components/requestBodies/Environments_POST"
+      responses:
+        "201":
+          $ref: "#/components/responses/Environments_POST_201"
+        "400":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/400"
+        "401":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/401"
+        "403":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/403"
+        "404":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/404"
+        "409":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/409"
+        "410":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/410"
+        "500":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/500"
+    get:
+      tags:
+        - Environments
+      summary: "Retrieves the details of all environments of an application"
+      security:
+        - OAuth2:
+            [
+              "mx:datahub:services:read",
+              "openid",
+              "offline_access",
+              "mx:user:profile:v1:read",
+            ]
+        - PersonalAccessTokens: []
+      parameters:
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/AppUUID_Path"
+        - in: query
+          name: "environmentType"
+          schema:
+            type: string
+            enum: ["Production", "Non-Production", "Free App"]
+          description: "Type of environment. (Default: all environment types)"
+        - in: query
+          name: "limit"
+          description: "The maximum number of environments that can be returned per request. If the total environments retrieved is more than this limit, then we shall provide page links for retrieval of subsequent environments in the response. If no limit is provided it shall be defaulted to 20, the maximum limit that can be supplied is 100, if a limit over 100 is supplied it shall be defaulted to 100 and no error message shall be generated."
+          schema:
+            type: integer
+            minimum: 1
+            default: 20
+            maximum: 100
+        - in: query
+          name: "offset"
+          description: "The offset is the zero-based index of the first environment to be returned on the page."
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+      responses:
+        "200":
+          $ref: "#/components/responses/ApplicationEnvironments_GET_200"
+        "400":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/400"
+        "401":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/401"
+        "403":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/403"
+        "404":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/404"
+        "500":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/500"
+  /applications/{AppUUID}/environments/{EnvironmentUUID}:
+    get:
+      tags:
+        - Environments
+      summary: "Retrieves the details of a particular environment of an application"
+      security:
+        - OAuth2:
+            [
+              "mx:datahub:services:read",
+              "openid",
+              "offline_access",
+              "mx:user:profile:v1:read",
+            ]
+        - PersonalAccessTokens: []
+      parameters:
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/AppUUID_Path"
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/EnvironmentUUID_Path"
+      responses:
+        "200":
+          $ref: "#/components/responses/Environments_GET_200"
+        "400":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/400"
+        "401":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/401"
+        "403":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/403"
+        "404":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/404"
+        "500":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/500"
+    delete:
+      tags:
+        - Environments
+      summary: "Deletes the specified environment"
+      description: "Deleting an environment can only be done by the owner of the resource’s application, company admins, or Catalog curators."
+      security:
+        - OAuth2:
+            [
+              "mx:datahub:services:write",
+              "openid",
+              "offline_access",
+              "mx:user:profile:v1:read",
+            ]
+        - PersonalAccessTokens: []
+      parameters:
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/AppUUID_Path"
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/EnvironmentUUID_Path"
+      responses:
+        "204":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/204"
+        "400":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/400"
+        "401":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/401"
+        "403":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/403"
+        "404":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/404"
+        "500":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/500"
+      externalDocs:
+        description: "Learn more about the specific roles required to execute this API operation."
+        url: "https://docs.mendix.com/catalog/#catalog-roles"
+    put:
+      tags:
+        - Environments
+      summary: "Registers or updates a specific environment at the given UUID. Currently registered environments are overwritten with the values provided in this request body."
+      description: "Some PUT operations can only be done by the owner of the resource’s application, company admins, or Catalog curators."
+      security:
+        - OAuth2:
+            [
+              "mx:datahub:services:write",
+              "openid",
+              "offline_access",
+              "mx:user:profile:v1:read",
+            ]
+        - PersonalAccessTokens: []
+      parameters:
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/AppUUID_Path"
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/EnvironmentUUID_Path"
+      requestBody:
+        $ref: "#/components/requestBodies/Environments_PUT"
+      responses:
+        "200":
+          $ref: "#/components/responses/Environments_PUT_200"
+        "201":
+          $ref: "#/components/responses/Environments_PUT_201"
+        "400":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/400"
+        "401":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/401"
+        "403":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/403"
+        "404":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/404"
+        "410":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/410"
+        "500":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/500"
+      externalDocs:
+        description: "Learn more about the specific roles required to execute this API operation."
+        url: "https://docs.mendix.com/catalog/#catalog-roles"
+  /applications/{AppUUID}/environments/{EnvironmentUUID}/published-endpoints:
+    put:
+      tags:
+        - Endpoints
+      summary: "Registers all published endpoints for the specified app UUID and environment UUID. Currently registered published endpoints are overwritten with the values provided in this request body. Endpoints that are not in the new request will be deleted."
+      description: "Some PUT operations can only be done by the owner of the resource’s application, company admins, or Catalog curators."
+      security:
+        - OAuth2:
+            [
+              "mx:datahub:services:write",
+              "openid",
+              "offline_access",
+              "mx:user:profile:v1:read",
+            ]
+        - PersonalAccessTokens: []
+      parameters:
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/AppUUID_Path"
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/EnvironmentUUID_Path"
+      requestBody:
+        $ref: "#/components/requestBodies/PublishedEndpoints_PUT"
+      responses:
+        "200":
+          $ref: "#/components/responses/PublishedEndpoints_PUTGET_200"
+        "400":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/400"
+        "401":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/401"
+        "403":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/403"
+        "404":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/404"
+        "410":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/410"
+        "500":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/500"
+      externalDocs:
+        description: "Learn more about the specific roles required to execute this API operation."
+        url: "https://docs.mendix.com/catalog/#catalog-roles"
+    post:
+      tags:
+        - Endpoints
+      summary: "Registers a published endpoint for the specified app and environment."
+      security:
+        - OAuth2:
+            [
+              "mx:datahub:services:write",
+              "openid",
+              "offline_access",
+              "mx:user:profile:v1:read",
+            ]
+        - PersonalAccessTokens: []
+      parameters:
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/AppUUID_Path"
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/EnvironmentUUID_Path"
+      requestBody:
+        $ref: "#/components/requestBodies/PublishedEndpoint_POSTPUT"
+      responses:
+        "201":
+          $ref: "#/components/responses/PublishedEndpoint_POSTPUT_201"
+        "400":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/400"
+        "401":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/401"
+        "403":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/403"
+        "404":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/404"
+        "409":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/409"
+        "410":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/410"
+        "500":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/500"
+    get:
+      tags:
+        - Endpoints
+      summary: "Returns all published endpoints for the specified environment."
+      security:
+        - OAuth2:
+            [
+              "mx:datahub:services:read",
+              "openid",
+              "offline_access",
+              "mx:user:profile:v1:read",
+            ]
+        - PersonalAccessTokens: []
+      parameters:
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/AppUUID_Path"
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/EnvironmentUUID_Path"
+      responses:
+        "200":
+          $ref: "#/components/responses/PublishedEndpoints_PUTGET_200"
+        "400":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/400"
+        "401":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/401"
+        "403":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/403"
+        "404":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/404"
+        "410":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/410"
+        "500":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/500"
+  ? /applications/{AppUUID}/environments/{EnvironmentUUID}/published-endpoints/{EndpointUUID}
+  : get:
+      tags:
+        - Endpoints
+      summary: "Returns details of the specified published endpoint"
+      security:
+        - OAuth2:
+            [
+              "mx:datahub:services:read",
+              "openid",
+              "offline_access",
+              "mx:user:profile:v1:read",
+            ]
+        - PersonalAccessTokens: []
+      parameters:
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/AppUUID_Path"
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/EnvironmentUUID_Path"
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/EndpointUUID_Path"
+      responses:
+        "200":
+          $ref: "#/components/responses/PublishedEndpoint_GETPUT_200"
+        "400":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/400"
+        "401":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/401"
+        "403":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/403"
+        "404":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/404"
+        "410":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/410"
+        "500":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/500"
+    delete:
+      tags:
+        - Endpoints
+      summary: "Deletes the specified published endpoint"
+      description: "Deleting an endpoint can only be done by the owner of the resource’s application, company admins, or Catalog curators."
+      security:
+        - OAuth2:
+            [
+              "mx:datahub:services:write",
+              "openid",
+              "offline_access",
+              "mx:user:profile:v1:read",
+            ]
+        - PersonalAccessTokens: []
+      parameters:
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/AppUUID_Path"
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/EnvironmentUUID_Path"
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/EndpointUUID_Path"
+      responses:
+        "204":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/204"
+        "400":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/400"
+        "401":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/401"
+        "403":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/403"
+        "404":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/404"
+        "410":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/410"
+        "500":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/500"
+      externalDocs:
+        description: "Learn more about the specific roles required to execute this API operation."
+        url: "https://docs.mendix.com/catalog/#catalog-roles"
+    put:
+      tags:
+        - Endpoints
+      summary: "Updates the details of the specified published endpoint. Will create the published endpoint if it does not exist yet."
+      description: "Some PUT operations can only be done by the owner of the resource’s application, company admins, or Catalog curators."
+      security:
+        - OAuth2:
+            [
+              "mx:datahub:services:write",
+              "openid",
+              "offline_access",
+              "mx:user:profile:v1:read",
+            ]
+        - PersonalAccessTokens: []
+      requestBody:
+        $ref: "#/components/requestBodies/PublishedEndpoint_POSTPUT"
+      parameters:
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/AppUUID_Path"
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/EnvironmentUUID_Path"
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/EndpointUUID_Path"
+      responses:
+        "200":
+          $ref: "#/components/responses/PublishedEndpoint_GETPUT_200"
+        "201":
+          $ref: "#/components/responses/PublishedEndpoint_POSTPUT_201"
+        "400":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/400"
+        "401":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/401"
+        "403":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/403"
+        "404":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/404"
+        "409":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/409"
+        "410":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/410"
+        "500":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/500"
+      externalDocs:
+        description: "Learn more about the specific roles required to execute this API operation."
+        url: "https://docs.mendix.com/catalog/#catalog-roles"
+  /applications/{AppUUID}/environments/{EnvironmentUUID}/consumed-endpoints:
+    put:
+      tags:
+        - Endpoints
+      summary: "Registers all consumed endpoints for the specified app and environment. Currently registered consumed endpoints are overwritten with the values provided in this request body."
+      description: "Some PUT operations can only be done by the owner of the resource’s application, company admins, or Catalog curators."
+      security:
+        - OAuth2:
+            [
+              "mx:datahub:services:write",
+              "openid",
+              "offline_access",
+              "mx:user:profile:v1:read",
+            ]
+        - PersonalAccessTokens: []
+      parameters:
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/AppUUID_Path"
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/EnvironmentUUID_Path"
+      requestBody:
+        $ref: "#/components/requestBodies/ConsumedEndpoints_PUT"
+      responses:
+        "200":
+          $ref: "#/components/responses/ConsumedEndpoints_PUTGET_200"
+        "400":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/400"
+        "401":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/401"
+        "403":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/403"
+        "404":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/404"
+        "410":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/410"
+        "500":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/500"
+      externalDocs:
+        description: "Learn more about the specific roles required to execute this API operation."
+        url: "https://docs.mendix.com/catalog/#catalog-roles"
+    get:
+      tags:
+        - Endpoints
+      summary: "Returns all consumed endpoints for the specified environment."
+      security:
+        - OAuth2:
+            [
+              "mx:datahub:services:read",
+              "openid",
+              "offline_access",
+              "mx:user:profile:v1:read",
+            ]
+        - PersonalAccessTokens: []
+      parameters:
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/AppUUID_Path"
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/EnvironmentUUID_Path"
+      responses:
+        "200":
+          $ref: "#/components/responses/ConsumedEndpoints_PUTGET_200"
+        "400":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/400"
+        "401":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/401"
+        "403":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/403"
+        "404":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/404"
+        "410":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/410"
+        "500":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/500"
+  ? /applications/{AppUUID}/environments/{EnvironmentUUID}/consumed-endpoints/{EndpointUUID}
+  : get:
+      tags:
+        - Endpoints
+      summary: "Return details of specified consumed endpoint"
+      security:
+        - OAuth2:
+            [
+              "mx:datahub:services:read",
+              "openid",
+              "offline_access",
+              "mx:user:profile:v1:read",
+            ]
+        - PersonalAccessTokens: []
+      parameters:
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/AppUUID_Path"
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/EnvironmentUUID_Path"
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/EndpointUUID_Path"
+      responses:
+        "200":
+          $ref: "#/components/responses/ConsumedEndpoint_GET_200"
+        "400":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/400"
+        "401":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/401"
+        "403":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/403"
+        "404":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/404"
+        "410":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/410"
+        "500":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/500"
+  /transform/dependenciesjson:
+    post:
+      tags:
+        - Endpoints
+      summary: "Transforms contents of the dependencies.json file for your Mendix app into request bodies for the PUT published/consumed-endpoints operations of this API"
+      description: 'For this call the contents of the dependencies.json file have to be included. <br> The dependencies.json file for your Mendix app is usually located in your project folder in the deployment\model directory. <br> Contents of this file must be included in escaped JSON format.'
+      security:
+        - OAuth2:
+            [
+              "mx:datahub:services:read",
+              "openid",
+              "offline_access",
+              "mx:user:profile:v1:read",
+            ]
+        - PersonalAccessTokens: []
+      requestBody:
+        $ref: "#/components/requestBodies/TransformDependenciesJson_POST"
+      responses:
+        "200":
+          $ref: "#/components/responses/TransformDependenciesJson_POST_200"
+        "400":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/400"
+        "401":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/401"
+        "403":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/403"
+        "410":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/410"
+        "500":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/500"
+components:
+  requestBodies:
+    Applications_POST:
+      description: "Description of an application that publishes or consumes services."
+      content:
+        application/json:
+          schema:
+            $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Application_Base"
+      required: true
+    Applications_PUT:
+      description: "Description of the application"
+      content:
+        application/json:
+          schema:
+            $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Application_Base"
+      required: true
+    ConsumedEndpoints_PUT:
+      description: "Description of consumed endpoints."
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - endpoints
+            properties:
+              endpoints:
+                type: array
+                description: "List of the endpoints the environment consumes. Note that passing an empty array here will be interpreted as the environment not consuming any endpoints."
+                items:
+                  $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Endpoint_ConsumedRequest"
+    Environments_POST:
+      description: "Description of the environment"
+      content:
+        application/json:
+          schema:
+            $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Environment_Base"
+      required: true
+    Environments_PUT:
+      description: "Description of the environment"
+      content:
+        application/json:
+          schema:
+            $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Environment_Base"
+      required: true
+    PublishedEndpoint_POSTPUT:
+      description: "Description of the published endpoint"
+      content:
+        application/json:
+          schema:
+            $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Endpoint_PublishedRequest"
+          example:
+            path: "/employeeservice/v2"
+            discoverable: true
+            validated: true
+            serviceVersion:
+              version: "2.0"
+              description: "Information about the employees of AcmeCorp."
+              type: "OData"
+              service:
+                name: "test.acme.employeeinformation"
+              tags:
+                - name: "hr"
+                - name: "employee"
+              securityScheme:
+                securityTypes:
+                  - name: "MxID"
+                    marketplaceModuleID: "93457"
+                mxAllowedRoles:
+                  - name: "User"
+                    uuid: "91ca220e-9498-4d23-9d2e-90b9c19aca37"
+              contracts:
+                - type: "CSDL"
+                  documentBaseURL: "https://hr.acmecorp.test/odata/test.acme.employeeinformation/v1/"
+                  documents:
+                    - isPrimary: true
+                      uri: "metadata.xml"
+                      contents: '<?xml version="1.0" encoding="utf-8"?><edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:mx="http://www.mendix.com/Protocols/MendixData">  <edmx:DataServices m:DataServiceVersion="3.0" m:MaxDataServiceVersion="3.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">    <Schema Namespace="DefaultNamespace" xmlns="http://schemas.microsoft.com/ado/2009/11/edm"><EntityType Name="Employee"><Key><PropertyRef Name="ID" /></Key><Property Name="ID" Type="Edm.Int64" Nullable="false" mx:isAttribute="false" /><Property Name="Name" Type="Edm.String" MaxLength="200" /><Property Name="DateOfBirth" Type="Edm.DateTimeOffset" /><Property Name="Address" Type="Edm.String" MaxLength="200" /><Property Name="JobTitle" Type="Edm.String" MaxLength="200" /><Property Name="Salary" Type="Edm.Decimal" /></EntityType><EntityContainer Name="test.acme.employeeinformation/v1Entities" m:IsDefaultEntityContainer="true"><EntitySet Name="Employees" EntityType="DefaultNamespace.Employee" /></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>'
+                    - isPrimary: false
+                      uri: "servicefeed.xml"
+                      contents: '<?xml version="1.0" encoding="utf-8"?><service xmlns:atom="http://www.w3.org/2005/Atom" xml:base="https://hr.acmecorp.test/odata/test.acme.employeeinformation/v1/" xmlns="http://www.w3.org/2007/app"><workspace><atom:title>Default</atom:title><collection href="Employees"><atom:title>Employees</atom:title></collection>  </workspace></service>'
+    PublishedEndpoints_PUT:
+      description: "Description of the published endpoints."
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - endpoints
+            properties:
+              endpoints:
+                type: array
+                description: "List of the endpoints the environment publishes. Note that passing an empty array here will be interpreted as the environment not publishing any endpoints."
+                items:
+                  $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Endpoint_PublishedRequest"
+            example:
+              endpoints:
+                - path: "/employeeservice/v2"
+                  discoverable: true
+                  validated: true
+                  serviceVersion:
+                    version: "2.0"
+                    description: "Information about the employees of AcmeCorp."
+                    type: "OData"
+                    service:
+                      name: "test.acme.employeeinformation"
+                    tags:
+                      - name: "hr"
+                      - name: "employee"
+                    securityScheme:
+                      securityTypes:
+                        - name: "MxID"
+                          marketplaceModuleID: "93457"
+                      mxAllowedRoles:
+                        - name: "User"
+                          uuid: "91ca220e-9498-4d23-9d2e-90b9c19aca37"
+                    contracts:
+                      - type: "CSDL"
+                        documentBaseURL: "https://hr.acmecorp.test/odata/test.acme.employeeinformation/v1/"
+                        documents:
+                          - isPrimary: true
+                            uri: "metadata.xml"
+                            contents: '<?xml version="1.0" encoding="utf-8"?><edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:mx="http://www.mendix.com/Protocols/MendixData">  <edmx:DataServices m:DataServiceVersion="3.0" m:MaxDataServiceVersion="3.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">    <Schema Namespace="DefaultNamespace" xmlns="http://schemas.microsoft.com/ado/2009/11/edm"><EntityType Name="Employee"><Key><PropertyRef Name="ID" /></Key><Property Name="ID" Type="Edm.Int64" Nullable="false" mx:isAttribute="false" /><Property Name="Name" Type="Edm.String" MaxLength="200" /><Property Name="DateOfBirth" Type="Edm.DateTimeOffset" /><Property Name="Address" Type="Edm.String" MaxLength="200" /><Property Name="JobTitle" Type="Edm.String" MaxLength="200" /><Property Name="Salary" Type="Edm.Decimal" /></EntityType><EntityContainer Name="test.acme.employeeinformation/v1Entities" m:IsDefaultEntityContainer="true"><EntitySet Name="Employees" EntityType="DefaultNamespace.Employee" /></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>'
+                          - isPrimary: false
+                            uri: "servicefeed.xml"
+                            contents: '<?xml version="1.0" encoding="utf-8"?><service xmlns:atom="http://www.w3.org/2005/Atom" xml:base="https://hr.acmecorp.test/odata/test.acme.employeeinformation/v1/" xmlns="http://www.w3.org/2007/app"><workspace><atom:title>Default</atom:title><collection href="Employees"><atom:title>Employees</atom:title></collection>  </workspace></service>'
+                - path: "/salaryservice/v3"
+                  discoverable: true
+                  validated: true
+                  serviceVersion:
+                    version: "3.0"
+                    description: "This service contains salary information."
+                    type: "OData"
+                    service:
+                      name: "test.acme.salaryservice"
+                    tags:
+                      - name: "salary"
+                      - name: "money"
+                    securityScheme:
+                      securityTypes:
+                        - name: "MxID"
+                          marketplaceModuleID: "93457"
+                      mxAllowedRoles:
+                        - name: "User"
+                          uuid: "ba4a309d-63e8-49e1-a02d-b98745b24b7c"
+                    contracts:
+                      - type: "CSDL"
+                        documentBaseURL: "https://hr.acmecorp.test/odata/test.acme.employeeinformation/v1/"
+                        documents:
+                          - isPrimary: true
+                            uri: "metadata.xml"
+                            contents: '<?xml version="1.0" encoding="UTF-8"?><edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"><edmx:DataServices><Schema Namespace="Mendix.Integration" xmlns="http://docs.oasis-open.org/odata/ns/edm"><EntityType Name="Category"><Key><PropertyRef Name="CategoryID"/></Key><Property Name="CategoryID" Type="Edm.Int32" Nullable="false"/><Property Name="CategoryName" Type="Edm.String"/><Property Name="Description" Type="Edm.String"/><Property Name="Picture" Type="Edm.Binary"/><NavigationProperty Name="Products" Type="Collection(Mendix.Integration.Product)" Partner="Category"/><NavigationProperty Name="RelatedCategory" Type="Mendix.Integration.Category" Partner="IsRelatedCategoryOf"/><NavigationProperty Name="IsRelatedCategoryOf" Type="Mendix.Integration.Category" Partner="RelatedCategory"/></EntityType><EntityType Name="Product"><Key><PropertyRef Name="ProductID"/></Key><Property Name="ProductID" Type="Edm.Int32" Nullable="false"/><Property Name="ProductName" Type="Edm.String" MaxLength="280"/><Property Name="Status" Type="Mendix.Integration.Status"/><NavigationProperty Name="Category" Type="Mendix.Integration.Category" Partner="Products"/><NavigationProperty Name="RelatedProducts" Type="Collection(Mendix.Integration.Product)"/></EntityType><EnumType Name="Status" UnderlyingType="Edm.Int32"><Member Name="InStock" Value="1"/><Member Name="OutOfStock" Value="2"/></EnumType><EntityContainer Name="Container"><EntitySet Name="Categories" EntityType="Mendix.Integration.Category"><NavigationPropertyBinding Path="Products" Target="Products"/></EntitySet><EntitySet Name="Products" EntityType="Mendix.Integration.Product"><NavigationPropertyBinding Path="Category" Target="Categories"/></EntitySet></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>'
+                          - isPrimary: false
+                            uri: "metadata.xml"
+                            contents: '<?xml version="1.0" encoding="UTF-8"?><edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"><edmx:DataServices><Schema Namespace="Mendix.Integration" xmlns="http://docs.oasis-open.org/odata/ns/edm"><EntityType Name="Category"><Key><PropertyRef Name="CategoryID"/></Key><Property Name="CategoryID" Type="Edm.Int32" Nullable="false"/><Property Name="CategoryName" Type="Edm.String"/><Property Name="Description" Type="Edm.String"/><Property Name="Picture" Type="Edm.Binary"/><NavigationProperty Name="Products" Type="Collection(Mendix.Integration.Product)" Partner="Category"/><NavigationProperty Name="RelatedCategory" Type="Mendix.Integration.Category" Partner="IsRelatedCategoryOf"/><NavigationProperty Name="IsRelatedCategoryOf" Type="Mendix.Integration.Category" Partner="RelatedCategory"/></EntityType><EntityType Name="Product"><Key><PropertyRef Name="ProductID"/></Key><Property Name="ProductID" Type="Edm.Int32" Nullable="false"/><Property Name="ProductName" Type="Edm.String" MaxLength="280"/><Property Name="Status" Type="Mendix.Integration.Status"/><NavigationProperty Name="Category" Type="Mendix.Integration.Category" Partner="Products"/><NavigationProperty Name="RelatedProducts" Type="Collection(Mendix.Integration.Product)"/></EntityType><EnumType Name="Status" UnderlyingType="Edm.Int32"><Member Name="InStock" Value="1"/><Member Name="OutOfStock" Value="2"/></EnumType><EntityContainer Name="Container"><EntitySet Name="Categories" EntityType="Mendix.Integration.Category"><NavigationPropertyBinding Path="Products" Target="Products"/></EntitySet><EntitySet Name="Products" EntityType="Mendix.Integration.Product"><NavigationPropertyBinding Path="Category" Target="Categories"/></EntitySet></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>'
+    TransformDependenciesJson_POST:
+      description: "Contents of the dependencies.json file. Note: it should be JSON escaped"
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - dependenciesJsonString
+            properties:
+              dependenciesJsonString:
+                type: string
+                description: "JSON escaped contents of a  dependencies.json file"
+                example: "{ \"schemaVersion\": \"1.3\", \"appName\": \"HR Acme Corp\", \"published\": [ { \"name\": \"test.acme.employeeinformation\", \"version\": \"2.0\", \"path\": \"\/employeeservice\/v2\", \"serviceType\": \"OData 3.0\", \"contracts\": [ { \"type\": \"ServiceFeed\", \"value\": \"<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\"?>\\r\\n<service xmlns=\\\"http:\/\/www.w3.org\/2007\/app\\\" xmlns:atom=\\\"http:\/\/www.w3.org\/2005\/Atom\\\" xml:base=\\\"https:\/\/hr.acmecorp.test\/odata\/test.acme.employeeinformation\/v1\/\\\">\\r\\n <workspace>\\r\\n <atom:title>Default<\/atom:title>\\r\\n <collection href=\\\"Employees\\\">\\r\\n <atom:title>Employees<\/atom:title>\\r\\n <\/collection>\\r\\n <\/workspace>\\r\\n<\/service>\" }, { \"type\": \"Metadata\", \"value\": \"<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\"?>\\r\\n<edmx:Edmx xmlns:edmx=\\\"http:\/\/schemas.microsoft.com\/ado\/2007\/06\/edmx\\\" xmlns:mx=\\\"http:\/\/www.mendix.com\/Protocols\/MendixData\\\" Version=\\\"1.0\\\">\\r\\n <edmx:DataServices xmlns:m=\\\"http:\/\/schemas.microsoft.com\/ado\/2007\/08\/dataservices\/metadata\\\" m:DataServiceVersion=\\\"3.0\\\" m:MaxDataServiceVersion=\\\"3.0\\\">\\r\\n <Schema xmlns=\\\"http:\/\/schemas.microsoft.com\/ado\/2009\/11\/edm\\\" Namespace=\\\"DefaultNamespace\\\">\\r\\n <EntityType Name=\\\"Employee\\\">\\r\\n <Key>\\r\\n <PropertyRef Name=\\\"ID\\\" \/>\\r\\n <\/Key>\\r\\n <Property Name=\\\"ID\\\" Type=\\\"Edm.Int64\\\" Nullable=\\\"false\\\" mx:isAttribute=\\\"false\\\" \/>\\r\\n <Property Name=\\\"Name\\\" Type=\\\"Edm.String\\\" MaxLength=\\\"200\\\" \/>\\r\\n <Property Name=\\\"DateOfBirth\\\" Type=\\\"Edm.DateTimeOffset\\\" \/>\\r\\n <Property Name=\\\"Address\\\" Type=\\\"Edm.String\\\" MaxLength=\\\"200\\\" \/>\\r\\n <Property Name=\\\"JobTitle\\\" Type=\\\"Edm.String\\\" MaxLength=\\\"200\\\" \/>\\r\\n <Property Name=\\\"Salary\\\" Type=\\\"Edm.Decimal\\\" \/>\\r\\n <\/EntityType>\\r\\n <EntityContainer Name=\\\"test.acme.employeeinformation\/v1Entities\\\" m:IsDefaultEntityContainer=\\\"true\\\">\\r\\n <EntitySet Name=\\\"Employees\\\" EntityType=\\\"DefaultNamespace.Employee\\\" \/>\\r\\n <\/EntityContainer>\\r\\n <\/Schema>\\r\\n <\/edmx:DataServices>\\r\\n<\/edmx:Edmx>\" } ], \"security\": { \"types\": [ { \"type\": \"MxID\", \"authenticationModuleId\": \"a4f7847b-9562-4b5a-adc2-4a0bf41cc534\" } ], \"allowedRoles\": [ { \"name\": \"User\", \"id\": \"91ca220e-9498-4d23-9d2e-90b9c19aca37\" } ] } } ], \"consumed\": [ { \"name\": \"test.acme.employeemanagement\", \"version\": \"1.0\", \"serviceType\": \"OData 3.0\", \"constant\": \"MyFirstModule.EmployeeManagement_Location\", \"uses\": [{ \"type\": \"entity\", \"name\": \"ManagingEmployees\" }] } ] }"
+              endpointLocationConstants:
+                type: array
+                items:
+                  $ref: "#/components/schemas/EndpointLocationConstant"
+                description: "Specify all the location constants for the consumed endpoints referred to in the dependencies.json file. <br> You can find this information in Studio Pro in the constant location documents for the OData service. <br>This information is also in the metadata.json file for the specified constants. The metadata.json file is in the same directory as the dependencies.json file "
+  responses:
+    Applications_PUT_200:
+      description: "OK"
+      headers:
+        X-Api-Version:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/XApiVersion"
+      content:
+        application/json:
+          schema:
+            $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Application_Response"
+    Applications_PUT_201:
+      description: "Created"
+      headers:
+        Location:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/Location"
+        X-Api-Version:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/XApiVersion"
+      content:
+        application/json:
+          schema:
+            $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Application_Response"
+    Applications_POST_201:
+      description: "Created"
+      headers:
+        Location:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/Location"
+        X-Api-Version:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/XApiVersion"
+      content:
+        application/json:
+          schema:
+            $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Application_Response"
+    Application_GET_200:
+      description: "OK"
+      headers:
+        X-Api-Version:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/XApiVersion"
+      content:
+        application/json:
+          schema:
+            $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Application_Response"
+    All_Applications_GET_200:
+      description: "OK"
+      headers:
+        X-Api-Version:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/XApiVersion"
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - totalApplications
+              - links
+              - limit
+              - offset
+            properties:
+              applications:
+                type: array
+                items:
+                  $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Application_Response"
+              totalApplications:
+                type: integer
+                example: 383
+                description: "Total number of application in the user's company"
+              links:
+                type: array
+                description: "Pagination links to the First, Previous, Current and Next pages of results"
+                items:
+                  $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Link"
+                example:
+                  - rel: "First"
+                    href: "https://catalog.mendix.com/rest/registration/v5/applications?limit=20"
+                  - rel: "Previous"
+                    href: "https://catalog.mendix.com/rest/registration/v5/applications?limit=20&offset=120"
+                  - rel: "Current"
+                    href: "https://catalog.mendix.com/rest/registration/v5/applications?limit=20&offset=140"
+                  - rel: "Next"
+                    href: "https://catalog.mendix.com/rest/registration/v5/applications?limit=20&offset=160"
+                  - rel: "Last"
+                    href: "https://catalog.mendix.com/rest/registration/v5/applications?limit=20&offset=380"
+              limit:
+                type: integer
+                description: The maximum number of applications that is returned in this resultset.
+                example: 20
+              offset:
+                type: integer
+                example: 120
+                description: The zero-based index of the first application in the resultset.
+    ConsumedEndpoints_PUTGET_200:
+      description: "OK"
+      headers:
+        X-Api-Version:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/XApiVersion"
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - endpoints
+            properties:
+              endpoints:
+                type: array
+                items:
+                  $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Endpoint_ConsumedResponse"
+    ConsumedEndpoint_GET_200:
+      description: "OK"
+      headers:
+        X-Api-Version:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/XApiVersion"
+      content:
+        application/json:
+          schema:
+            $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Endpoint_ConsumedResponseSingle"
+    Environments_GET_200:
+      description: "OK"
+      headers:
+        X-Api-Version:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/XApiVersion"
+      content:
+        application/json:
+          schema:
+            $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Environment_ResponseWithApplication"
+    ApplicationEnvironments_GET_200:
+      description: "OK"
+      headers:
+        X-Api-Version:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/XApiVersion"
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - totalEnvironments
+              - links
+              - limit
+              - offset
+            properties:
+              environments:
+                type: array
+                items:
+                  $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Environment_ResponseWithApplication"
+              totalEnvironments:
+                type: integer
+                example: 383
+                description: "Total number of environments for the specified application."
+              links:
+                type: array
+                description: Pagination URL links are provided to the 'First', 'Previous', 'Current', 'Next' and 'Last' result pages.
+                items:
+                  $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Link"
+                example:
+                  - rel: "First"
+                    href: "https://catalog.mendix.com/rest/registration/v5/applications/cfc36b98-7409-4384-b71d-f003b0c2f84b/environments?limit=20&environmentType=Production"
+                  - rel: "Previous"
+                    href: "https://catalog.mendix.com/rest/registration/v5/applications/cfc36b98-7409-4384-b71d-f003b0c2f84b/environments?limit=20&offset=120&environmentType=Production"
+                  - rel: "Current"
+                    href: "https://catalog.mendix.com/rest/registration/v5/applications/cfc36b98-7409-4384-b71d-f003b0c2f84b/environments?limit=20&offset=140&environmentType=Production"
+                  - rel: "Next"
+                    href: "https://catalog.mendix.com/rest/registration/v5/applications/cfc36b98-7409-4384-b71d-f003b0c2f84b/environments?limit=20&offset=160&environmentType=Production"
+                  - rel: "Last"
+                    href: "https://catalog.mendix.com/rest/registration/v5/applications/cfc36b98-7409-4384-b71d-f003b0c2f84b/environments?limit=20&offset=380&environmentType=Production"
+              limit:
+                type: integer
+                description: The maximum number of environments that is returned in this resultset.
+                example: 20
+              offset:
+                type: integer
+                example: 120
+                description: The zero-based index of the first environment in the resultset.
+    Environments_POST_201:
+      description: "Created"
+      headers:
+        Location:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/Location"
+        X-Api-Version:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/XApiVersion"
+      content:
+        application/json:
+          schema:
+            $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Environment_ResponseWithApplication"
+    Environments_PUT_200:
+      description: "OK"
+      headers:
+        X-Api-Version:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/XApiVersion"
+      content:
+        application/json:
+          schema:
+            $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Environment_ResponseWithApplication"
+    Environments_PUT_201:
+      description: "Created"
+      headers:
+        Location:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/Location"
+        X-Api-Version:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/XApiVersion"
+      content:
+        application/json:
+          schema:
+            $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Environment_ResponseWithApplication"
+    PublishedEndpoint_POSTPUT_201:
+      description: "Created"
+      headers:
+        Location:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/Location"
+        X-Api-Version:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/XApiVersion"
+      content:
+        application/json:
+          schema:
+            $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Endpoint_PublishedResponseSingle"
+    PublishedEndpoint_GETPUT_200:
+      description: "OK"
+      headers:
+        X-Api-Version:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/XApiVersion"
+      content:
+        application/json:
+          schema:
+            $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Endpoint_PublishedResponseSingle"
+    PublishedEndpoints_PUTGET_200:
+      description: "OK"
+      headers:
+        X-Api-Version:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/XApiVersion"
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - endpoints
+            properties:
+              endpoints:
+                type: array
+                items:
+                  $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Endpoint_PublishedResponseArray"
+                example:
+                  - uuid: "9e26c386-9316-4a33-9963-8fe9f69a5117"
+                    path: "/employeeservice/v3"
+                    securityClassification: "Public"
+                    discoverable: true
+                    validated: true
+                    connections: 17
+                    lastUpdated: "2019-01-01T15:22:58.981Z"
+                    links:
+                      - rel: "Self"
+                        href: "https://catalog.mendix.com/rest/registration/v5/endpoints/9e26c386-9316-4a33-9963-8fe9f69a5117"
+                      - rel: "Catalog"
+                        href: "https://catalog.mendix.com/link/endpoint?EndpointUUID=9e26c386-9316-4a33-9963-8fe9f69a5117"
+                    serviceVersion:
+                      version: "2.1"
+                      uuid: "ac288b46-7bd1-4dbe-98e5-e5956d91aa76"
+                      type: "OData"
+                      description: "Information about the employees of AcmeCorp"
+                      publishDate: "2019-07-23T15:28:34.981Z"
+                      service:
+                        name: "test.acme.employeeinformation"
+                        uuid: "4f68596a-7bd3-4f31-b8d7-a9e1344e7b60"
+                        links:
+                          - rel: "Self"
+                            href: "https://catalog.mendix.com/rest/registration/v5/applications/cfc36b98-7409-4384-b71d-f003b0c2f84b/services/test.acme.employeeinformation"
+                      tags:
+                        - name: "hr"
+                        - name: "employee"
+                      securityScheme:
+                        securityTypes:
+                          - name: "MxID"
+                            marketplaceModuleID: "93457"
+                        mxAllowedRoles:
+                          - name: "User"
+                            uuid: "ba4a309d-63e8-49e1-a02d-b98745b24b7c"
+                  - uuid: "0a25b1d5-5b17-494b-99c6-81ecec7ccab2"
+                    path: "/salaryservice/v3"
+                    securityClassification: "Public"
+                    discoverable: true
+                    validated: true
+                    connections: 42
+                    lastUpdated: "2019-01-01T15:22:58.981Z"
+                    links:
+                      - rel: "Self"
+                        href: "https://catalog.mendix.com/rest/registration/v5/endpoints/0a25b1d5-5b17-494b-99c6-81ecec7ccab2"
+                      - rel: "Catalog"
+                        href: "https://catalog.mendix.com/link/endpoints?EndpointUUID=0a25b1d5-5b17-494b-99c6-81ecec7ccab2"
+                    serviceVersion:
+                      version: "3.0"
+                      uuid: "fef91870-0306-42a7-810f-13d3dbb14331"
+                      type: "OData"
+                      description: "This service contains salary information"
+                      publishDate: "2020-09-24T12:23:34.981Z"
+                      service:
+                        name: "test.acme.salaryservice"
+                        uuid: "8afabb90-fb74-4647-b33a-39b81cc33abb"
+                        links:
+                          - rel: "Self"
+                            href: "https://catalog.mendix.com/rest/registration/v5/applications/cfc36b98-7409-4384-b71d-f003b0c2f84b/services/test.acme.salaryservice"
+                      tags:
+                        - name: "salary"
+                        - name: "money"
+                      securityScheme:
+                        securityTypes:
+                          - name: "MxID"
+                            marketplaceModuleID: "93457"
+                        mxAllowedRoles:
+                          - name: "User"
+                            uuid: "ba4a309d-63e8-49e1-a02d-b98745b24b7c"
+    TransformDependenciesJson_POST_200:
+      description: "Transformation successful"
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - putPublishedEndpoints
+              - putConsumedEndpoints
+            properties:
+              putPublishedEndpoints:
+                type: object
+                required:
+                  - endpoints
+                description: "List of OData services published by this app. Use this object in your PUT published-endpoints request."
+                properties:
+                  endpoints:
+                    type: array
+                    items:
+                      allOf:
+                        - $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Endpoint_Base"
+                        - type: object
+                          required:
+                            - serviceVersion
+                          properties:
+                            serviceVersion:
+                              $ref: "catalog-common-definitions_v5.yaml#/components/schemas/ServiceVersion_Request_Transform"
+              putConsumedEndpoints:
+                type: object
+                required:
+                  - endpoints
+                description: "List of the endpoints the environment consumes. Note that passing an empty array here will be interpreted as the environment not consuming any endpoints."
+                properties:
+                  endpoints:
+                    type: array
+                    items:
+                      $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Endpoint_ConsumedRequest"
+  schemas:
+    EndpointLocationConstant:
+      type: object
+      required:
+        - name
+        - value
+      properties:
+        name:
+          type: string
+          example: "MyFirstModule.EmployeeManagement_Location"
+          description: "Canonical name (Module.ConstantName) of the constant that holds the location of a consumed endpoint"
+        value:
+          type: string
+          example: "https://hr.acmecorp.test/employeeservice/v2"
+          description: "Value of the location constant; should be a valid, absolute URL.  <br> In the metadata.json file this is the value given for the attribute DefaultValue."
+  securitySchemes:
+    OAuth2:
+      $ref: "catalog-common-definitions_v5.yaml#/components/securitySchemes/OAuth2"
+    PersonalAccessTokens:
+      $ref: "catalog-common-definitions_v5.yaml#/components/securitySchemes/PersonalAccessTokens"

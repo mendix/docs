@@ -10,10 +10,11 @@ An OQL expression is a query building block that returns a value or a list of va
 * a constant
 * a function
 * a system variable
-* a combination of attribute names, constants, system variables and functions connected by operators
 * a subquery
+* a combination of attribute names, constants, system variables, functions and subqueries connected by operators
 
-OQL expressions can be used in `WHERE`, `SELECT`, `GROUP BY`, `UNION`, and `JOIN` clauses. For more information, see [OQL clauses](/refguide/oql-clauses/).
+
+OQL expressions can be used in `WHERE`, `SELECT`, `GROUP BY`, `UNION`, `HAVING` and `ON` conditions of `JOIN` clauses. For more information, see [OQL clauses](/refguide/oql-clauses/).
 
 ## Aggregations{#aggregates}
 
@@ -27,7 +28,8 @@ When combined with a `GROUP BY` clause, aggregations in `SELECT` can be used wit
 
 ```sql
   COUNT ( * )
-  | { COUNT | AVG | MAX | MIN | SUM | STRING_AGG } ( [ DISTINCT ] attribute_path )
+  | { COUNT | AVG | MAX | MIN | SUM } ( [ DISTINCT ] attribute_path )
+  | STRING_AGG ( attribute_path )
 ```
 
 Where `attribute_path` is an attribute reachable from entities defined in the `FROM` and `JOIN` clauses.
@@ -88,6 +90,7 @@ SELECT Name, Stock FROM Sales.Product
 | Cheese   | 5     |
 | Milk     | 54    |
 | Tomatoes | 44    |
+| Tomatoes | 44    |
 | Tomatoes | NULL  |
 
 #### AVG
@@ -95,12 +98,22 @@ SELECT Name, Stock FROM Sales.Product
 The average stock per product entry:
 
 ```sql
-SELECT AVG(Stock) AS ProductCount FROM Sales.Product
+SELECT AVG(Stock) AS StockAverage FROM Sales.Product
 ```
 
-| ProductCount |
-|:------------:|
-|    34.333    |
+| StockAverage  |
+|:-------------:|
+|     36.75     |
+
+There are duplicate values in the `Stock` column, which can be ignored by using [DISTINCT](/refguide/oql-clauses/#Distinct). The query below returns the average unique stock:
+
+```sql
+SELECT AVG(Distinct Stock) AS DistinctStockAverage FROM Sales.Product
+```
+
+| DistinctStockAverage |
+|:--------------------:|
+|        33.333        |
 
 #### COUNT
 
@@ -112,34 +125,33 @@ SELECT COUNT(*) AS ProductCount FROM Sales.Product
 
 | ProductCount |
 |:------------:|
-|      4       |
+|      5       |
 
 The same result can be retrieved by using `COUNT` on a single attribute:
 
 ```sql
-SELECT COUNT(Name) AS ProductCount FROM Sales.Product
+SELECT COUNT(Name) AS NameEntryCount FROM Sales.Product
 ```
 
 As there is a `NULL` value in the `Stock` column, when using `COUNT` it will be ignored:
 
 ```sql
-SELECT COUNT(Stock) AS ProductCount FROM Sales.Product
+SELECT COUNT(Stock) AS StockEntryCount FROM Sales.Product
 ```
 
-| ProductCount |
-|:------------:|
-|      3       |
+| StockEntryCount |
+|:---------------:|
+|        4        |
 
-There are duplicate values in the `Name` column, which might not want to be counted separately. [Distinct](/refguide/oql-clauses/#Distinct) can be used to get the number of unique rows:
+Only unique names can be counted with `DISTINCT`:
 
 ```sql
-SELECT COUNT(DISTINCT Name) AS ProductCount FROM Sales.Product
+SELECT COUNT(DISTINCT Name) AS DistinctNameEntryCount FROM Sales.Product
 ```
 
-| ProductCount |
-|:------------:|
-|      3       |
-
+| DistinctNameEntryCount |
+|:----------------------:|
+|           3            |
 
 
 #### MAX
@@ -157,25 +169,36 @@ SELECT MAX(Stock) as StockMax FROM Sales.Product
 To return the name(s) of the product(s) with the highest stock level you have to use a subquery. The subquery returns the maximum stock number, which is then compared to each product's stock in the `WHERE` clause:
 
 ```sql
-SELECT Name FROM Sales.Product
+SELECT HighestStockProductName FROM Sales.Product
 WHERE Stock = (SELECT MAX(P.Stock) FROM Sales.Product P)
 ```
 
-| Name |
-|:----:|
-| Milk |
+| HighestStockProductName |
+|:-----------------------:|
+|          Milk           |
 
 #### SUM
 
 The sum of all products in stock:
 
 ```sql
-SELECT Sum(Stock) AS ProductCount FROM Sales.Product
+SELECT Sum(Stock) AS StockSum FROM Sales.Product
 ```
 
-| ProductCount |
-|:------------:|
-|     103      |
+| StockSum |
+|:--------:|
+|   147    |
+
+The sum of unique product entries:
+
+```sql
+SELECT Sum(DISTINCT Stock) AS DistinctStockSum FROM Sales.Product
+```
+
+| DistinctStockSum |
+|:----------------:|
+|       103        |
+
 
 #### STRING_AGG
 

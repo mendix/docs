@@ -11,10 +11,10 @@ An OQL expression is a query building block that returns a value or a list of va
 * a function
 * a system variable
 * a subquery
-* a combination of attribute names, constants, system variables, functions and subqueries connected by operators
+* a combination of attribute names, constants, system variables, functions, and subqueries connected by operators
 
 
-OQL expressions can be used in `WHERE`, `SELECT`, `GROUP BY`, `UNION`, `HAVING` and `ON` conditions of `JOIN` clauses. For more information, see [OQL clauses](/refguide/oql-clauses/).
+OQL expressions can be used in `WHERE`, `SELECT`, `GROUP BY`, `UNION`, `HAVING`, and `ON` conditions of `JOIN` clauses. For more information, see [OQL clauses](/refguide/oql-clauses/).
 
 ## Aggregations{#aggregates}
 
@@ -22,7 +22,7 @@ Aggregations are functions that reduce a list of values from a retrieved column 
 * as an attribute in a `SELECT` clause
 * as a condition in a `HAVING` clause 
 
-When combined with a `GROUP BY` clause, aggregations in `SELECT` can be used with any column normally available, not just those specified in the `GROUP BY` clause. Aggregation is performed over groups separately in this case.
+When combined with a `GROUP BY` clause, aggregations in `SELECT` clauses can be used with any column normally available, not just those specified in the `GROUP BY` clause. Aggregation is performed over groups separately in this case.
 
 ### Syntax
 
@@ -34,15 +34,15 @@ When combined with a `GROUP BY` clause, aggregations in `SELECT` can be used wit
 
 Where `attribute_path` is an attribute reachable from entities defined in the `FROM` and `JOIN` clauses.
 
-#### AVG
-
-Calculates the mean of numerical (`INTEGER`, `DECIMAL`, and `LONG`) values. `NULL` values are ignored.
-
 #### COUNT
 
 Calculates the number of rows in a column. Counting multiple columns using  `COUNT(*)` returns a count of all rows.
 
 When counting a single column, rows with a `NULL` value are not counted.
+
+#### AVG
+
+Calculates the mean of numerical (`INTEGER`, `DECIMAL`, and `LONG`) values. `NULL` values are ignored.
 
 #### MAX and MIN
 
@@ -79,7 +79,7 @@ This aggregate function is only supported in Java actions.
 
 ### Examples
 
-In the following examples, the `Sales.Product` entity has 4 objects with `Name` and `Stock` attributes:
+In the following examples, the `Sales.Product` entity has five objects with `Name` and `Stock` attributes:
 
 ```sql
 SELECT Name, Stock FROM Sales.Product
@@ -92,28 +92,6 @@ SELECT Name, Stock FROM Sales.Product
 | Tomatoes | 44    |
 | Tomatoes | 44    |
 | Tomatoes | NULL  |
-
-#### AVG
-
-The average stock per product entry:
-
-```sql
-SELECT AVG(Stock) AS StockAverage FROM Sales.Product
-```
-
-| StockAverage  |
-|:-------------:|
-|     36.75     |
-
-There are duplicate values in the `Stock` column, which can be ignored by using [DISTINCT](/refguide/oql-clauses/#Distinct). The query below returns the average unique stock:
-
-```sql
-SELECT AVG(Distinct Stock) AS DistinctStockAverage FROM Sales.Product
-```
-
-| DistinctStockAverage |
-|:--------------------:|
-|        33.333        |
 
 #### COUNT
 
@@ -143,7 +121,7 @@ SELECT COUNT(Stock) AS StockEntryCount FROM Sales.Product
 |:---------------:|
 |        4        |
 
-Only unique names can be counted with `DISTINCT`:
+You can count just unique names with [`DISTINCT`](/refguide/oql-clauses/#Distinct):
 
 ```sql
 SELECT COUNT(DISTINCT Name) AS DistinctNameEntryCount FROM Sales.Product
@@ -153,6 +131,28 @@ SELECT COUNT(DISTINCT Name) AS DistinctNameEntryCount FROM Sales.Product
 |:----------------------:|
 |           3            |
 
+
+#### AVG
+
+The average stock per product entry:
+
+```sql
+SELECT AVG(Stock) AS StockAverage FROM Sales.Product
+```
+
+| StockAverage  |
+|:-------------:|
+|     36.75     |
+
+There are duplicate values in the `Stock` column, which can be ignored by using `DISTINCT`. The query below returns the average unique stock:
+
+```sql
+SELECT AVG(Distinct Stock) AS DistinctStockAverage FROM Sales.Product
+```
+
+| DistinctStockAverage |
+|:--------------------:|
+|        33.333        |
 
 #### MAX
 
@@ -218,7 +218,7 @@ Parameters are external variables that are referenced to by name in an OQL query
 
 If you use undefined in `IN` and `LIKE` comparison expressions, the condition always returns `true`. In other cases, undefined parameters cause an exception.
 
-{{% alert color="warning" %}} Parameters are only supported within OQL queries defined in [data sets](/refguide/data-sets/) or inside Java actions. They can not be used in View entities {{% /alert %}}
+{{% alert color="warning" %}} Parameters are only supported within OQL queries defined in [data sets](/refguide/data-sets/) or inside Java actions using the [Mendix Runtime API](/apidocs-mxsdk/apidocs/runtime-api/). They can not be used in View entities {{% /alert %}}
 
 ### Examples
 
@@ -226,7 +226,7 @@ If you use undefined in `IN` and `LIKE` comparison expressions, the condition al
 
 In these examples the valid parameters `$age` and `$limit`, both of type `INTEGER`, have been defined.
 
-This query uses the parameter in the `WHERE` clause, returning a result set with person names whose age is higher than the value specified in the `$age` parameter.
+The following query uses the parameter in the `WHERE` clause, returning a result set with person names whose age is higher than the value specified in the `$age` parameter.
 
 ```sql
 SELECT Name
@@ -235,7 +235,7 @@ WHERE
     Age > $age
 ```
 
-This query will return a limited number of rows, limited by the value of the `$limit` parameter in the `LIMIT` clause.
+The following query will return a limited number of rows, limited by the value of the `$limit` parameter in the `LIMIT` clause.
 
 ```sql
 SELECT Name
@@ -278,7 +278,7 @@ WHERE
     Job = 'Sales'
 ```
 
-However, an undefined parameter used in a `LIMIT`, will throw an exception.
+If you use an undefined parameter used in a `LIMIT`, will throw an exception.
 
 ```sql
 SELECT Name

@@ -4,11 +4,13 @@ url: /refguide/oql-expression-syntax/
 ---
 
 ## Introduction
+
 Expression syntax details expression usage in an oql query.
 
 Operators and functions use expressions as inputs to perform mathematical, comparison, conditional, string, date operations and return the result. They allow an OQL query to perform modifications on data on the database to present a different view of the data or make complex conditions.
 
 ## Data Types
+
 OQL supports a small set of data types that differ from [mendix data types](/refguide/data-types/). The supported data types are:
 
 | Data Type  | Mendix Data type | Example               | Description                                |
@@ -21,6 +23,7 @@ OQL supports a small set of data types that differ from [mendix data types](/ref
 | `STRING`   | String           | 'my_string'           | Textual data                               |
 
 ## Literals
+
 Literals represent values that are constant and are part of the query itself. The supported literals are detailed below:
 
 | Format | Example         | Data Type            | Description                                   |
@@ -34,20 +37,25 @@ Literals represent values that are constant and are part of the query itself. Th
 Where `d` is a number, `s` is any character, * indicates zero or more characters, + indicated one or more characters.
 
 ### DATETIME
-There is no direct support for `DATETIME` literals. For functions that take `DATETIME` as input, it can be represented with a `STRING` in a ISO date time format or a `LONG` value representing unix seconds.
+
+There is no direct support for `DATETIME` literals. For functions that take `DATETIME` as input, it can be represented with a `STRING` in a ISO date time format or a `LONG` value representing Unix seconds.
 
 ## System variables
-Xpath [system variables](/refguide/xpath-keywords-and-system-variables/) can be used in OQL with the format:
+
+XPath [system variables](/refguide/xpath-keywords-and-system-variables/) can be used in OQL with the format:
+
 ```sql
 '[%SystemVariable%]'
 ```
 
 These variables can be used the same way as other expressions. This query gets the names of all `Person` objects that are associated with the current user:
+
 ```sql
 select Name from Person where Person_USER = '[%CurrentUser%]'
 ```
 
 ## Operators
+
 Operators perform common operations and do not use parenthesis in their syntax. They take `expression` as input, which can be other operator results, functions, columns and literals.
 
 Supported operators are split into binary, unary and other operators based on syntax.
@@ -74,17 +82,20 @@ These are the supported binary operators:
 | `AND`    | Logical conjunction      | Logical    |
 
 Binary operators are used with this syntax:
+
 ```sql
 	expression operator expression
 ```
+
 Where `operator` is any available binary operator. Both `expression` operands should be of compatible types for the operator and compatible with the other operand.
 
 #### Type coercion precedence {#type-coercion}
 
 Binary operations perform type casting when operand types are differing. For operations involving only numeric types, data types are always upcasted to ensure data types are matching. The result type will also be the operand type with the highest precedence. This is done according to this ordering:
-- `DECIMAL`
-- `LONG`
-- `INTEGER`
+
+* `DECIMAL`
+* `LONG`
+* `INTEGER`
 
 {{% alert color="info" %}}
 
@@ -93,6 +104,7 @@ This precedence rule does not apply for operations where at least one of the ope
 {{% /alert %}}
 
 #### + (Addition)
+
 Performs different operations depending on the first `expression` datatype. A numeric input performs a arithmetic addition, while a `STRING` input performs string concatenation. 
 
 Assume `Sales.Customer` contains two objects and `Sales.Order` contains three objects.
@@ -116,8 +128,8 @@ SELECT * FROM Sales.Order
 | -  | Doe      | 2      | 5     |
 | -  | Moose    | 3      | 8.2   |
 
-
 The operator can be used to modify an attribute in SELECT.
+
 ```sql
 SELECT (Number + 5) FROM Sales.Order
 ```
@@ -129,6 +141,7 @@ SELECT (Number + 5) FROM Sales.Order
 | Moose    | 7      |
 
 It can also be used for complex `WHERE` comparisons. The query bellow check for equality of the full name of a customer:
+
 ```sql
 SELECT LastName FROM Sales.Customer WHERE (FirstName + LastName) = 'JaneMoose'
 ```
@@ -138,9 +151,11 @@ SELECT LastName FROM Sales.Customer WHERE (FirstName + LastName) = 'JaneMoose'
 | Moose    |
 
 #### - (Subtraction)
+
 Subtracts left `expresion` from the right one. Both operands should be numeric.
 
 Assume `Sales.Finances` contains two objects:
+
 ```sql
 SELECT * FROM Sales.Finances
 ```
@@ -151,6 +166,7 @@ SELECT * FROM Sales.Finances
 | -  | NULL    | 10   |
 
 We can calculate a profit based on this data: 
+
 ```sql
  Select (Revenue - Cost) as Profit FROM Sales.Finances
  ```
@@ -161,9 +177,11 @@ We can calculate a profit based on this data:
 | NULL   |
 
 #### * (Multiplication)
+
 Multiplies operands. 
 
 As an example it can be used to get the total value of an order
+
 ```sql
 SELECT LastName, (Number * Price) as Total FROM Sales.Order
 ```
@@ -175,10 +193,12 @@ SELECT LastName, (Number * Price) as Total FROM Sales.Order
 | Moose    | 24.6  |
 
 #### : (Division)
+
 Divides left from the right `expression`. Supports both integer and float division. In case of integer division, the remainder is discarded.
 
 #### % (Modulo)
-Returns the remainder of division. Behaviour is database dependent when one of the operands is of type `DECIMAL`.
+
+Returns the remainder of division. Behavior is database dependent when one of the operands is of type `DECIMAL`.
 
 {{% alert color="info" %}}
 
@@ -187,6 +207,7 @@ The operator throws an error in PostgresSQL and SQL Server when one of the opera
 {{% /alert %}}
 
 #### = (Equal to)
+
 Returns true if both `expression` inputs are equal. When used with `NULL`, will always return a `FALSE` result. To compare to `NULL` values, use operator [IS](#is-operator).
 
 {{% alert color="info" %}}
@@ -196,6 +217,7 @@ Note that `DECIMAL` values have to match exactly. Use `ROUND` to compare with le
 {{% /alert %}}
 
 The operator is useful for checking exact matches in data. This query retrieves a specific customers orders:
+
 ```sql
 SELECT LastName, Number FROM Sales.Order WHERE LastName = Moose
 ```
@@ -204,14 +226,16 @@ SELECT LastName, Number FROM Sales.Order WHERE LastName = Moose
 |----------|--------|
 | Moose    | 12     |
 
-
 #### != (Not equal to)
+
 Inverse of `=`. Same `NULL` handling rules apply. Partial expression `expression !=` is equivalent to `NOT expression =`. 
 
 #### < (Less than)
+
 Returns true is the left `expression` is less than the right. Both operands should be numeric.
 
 It can be used for filtering data with the use of a `WHERE` clause:
+
 ```sql
 SELECT LastName, Number, Price FROM Sales.Order WHERE Price < 5
 ```
@@ -221,14 +245,23 @@ SELECT LastName, Number, Price FROM Sales.Order WHERE Price < 5
 | Doe      | 7      | 1.5   |
 
 #### <= (Less than or equal to)
+
 Returns true is the left `expression` is less or equal to the right. Both operands should be numeric.
+
 #### \> (Greater than)
+
 Returns true is the left `expression` is greater than the right. Both operands should be numeric.
+
 #### \>= (Greater than or equal to)
+
 Returns true is the left `expression` is greater or equal to the right. Both operands should be numeric.
+
 #### OR
+
 Returns true if at least one input `expression` returns true. Both operands need to be of type `BOOLEAN`.
+
 #### AND
+
 Returns true if both input `expression` return true. Both operands need to be of type `BOOLEAN`.
 
 Its main use is to make complex `WHERE` conditions with a combination of input values. In the query below large orders or smaller orders with a high value are selected:
@@ -243,6 +276,7 @@ SELECT LastName, Number, Price FROM Sales.Order WHERE Number >= 5 OR Price > 4 A
 | Moose    | 3      | 8.2   |
 
 Note that in the query above `AND` is evaluated first. The query below with parentheses returns orders that have low volume or low price with a minimum of 3 orders:
+
 ```sql
 SELECT LastName, Number, Price FROM Sales.Order WHERE (Number <= 5 OR Price < 6) AND Number >= 3
 ```
@@ -252,6 +286,7 @@ SELECT LastName, Number, Price FROM Sales.Order WHERE (Number <= 5 OR Price < 6)
 | Doe      | 7      | 1.5   |
 
 ### Unary Operators
+
 Unary operators only have a single argument. Unary operators supported:
 
 | Operator | Description         | type       |                                                         
@@ -259,20 +294,24 @@ Unary operators only have a single argument. Unary operators supported:
 | `-`      | Arithmetic negation | Arithmetic |
 | `NOT`    | Logical negation    | Logical    |
 
-
 Unary operators are used with syntax:
+
 ```sql
 	operator expression
 ```
+
 `expression` should be of type compatible with the `operator`.
 
 #### - (Arithmetic negation)
+
 Negates a numeric value. The return type is the same as input `expression`. 
 
 #### NOT
-Reverses boolean `TRUE` values into `FALSE` and vice versa.
+
+Reverses Boolean `TRUE` values into `FALSE` and vice versa.
 
 ### Other operators {#other-operators}
+
 These are operators that do not match the general unary or binary syntax. They are all logical operators. Those are:
 
 | Operator | Description                                                     |     
@@ -283,12 +322,15 @@ These are operators that do not match the general unary or binary syntax. They a
 | `IS`     | Tests if a value is `NULL`                                      |
 
 #### LIKE
+
 Matches an `expression` to the pattern after the operator. 
 
 ##### Syntax
+
 ```sql
 expression LIKE pattern
 ```
+
 Where `expression` is of type `STRING` and `pattern` is a string literal or parameter. Note that this means functions are not allowed to be used in `pattern`. A `NULL` pattern is treated as an empty string.
 
 The pattern can have special characters, which are all wildcards. Supported wildcard Characters:
@@ -301,34 +343,42 @@ The pattern can have special characters, which are all wildcards. Supported wild
 In order to search for special characters, they should be escaped with the `\` escape character (including `\` itself).
 
 ##### Examples
+
 Presume we have 3 strings for column `House`: `Apartment`, `Tenement` and `Flat`. We can select all string ending with "ment" with this condition:
+
 ```sql
 Select House FROM House LIKE '%ment' 
 ```
+
 | House     |                                                         
 |-----------|
 | Apartment |
 | Tenement  |
 
 A certain length of string can be enforced with the use of the `_` operator This query matches any string that has 4 of any character ending with "mend"":
+
 ```sql
 Select House FROM House LIKE '____ment' 
 ```
+
 | House     |                                                         
 |-----------|
 | Apartment |
 | Tenement  |
 
 This query will match any string containing the letter "a" and ending in "t":
+
 ```sql
 Select House FROM House LIKE '%a%t' 
 ```
+
 | House     |                                                         
 |-----------|
 | Apartment |
 | Flat      |
 
 #### IN
+
 Matches a value in a subquery or a list of expression values. Each value in the list or subquery is compared to a specified expression with the operator `=`(Equal to), returning `TRUE` if any of the comparisons return `TRUE`. `NULL` value handling is the same as the `=`(Equal to) operator.
 
 {{% alert color="info" %}}
@@ -338,18 +388,22 @@ HSQLDB and PostgreSQL do not support matching of different datatypes.
 {{% /alert %}}
 
 ##### Syntax
+
 ```sql
 expression IN {
     subquery
     | ( expression [ ,...n] )
     | parameter
 ```
+
 Where `expression` can have any type. The left side can be either a `subquery`, a comma separated list of `expression` or a parameter that is a list of values. If `subquery` is used, it must return a single column.
 
 ##### Examples
+
 This operator is used to create conditions that depend on other entities or limited views of entities.
 
 This condition checks if the string `House` is in the literal list on the right, returning `FALSE`:
+
 ```sql
 'House' IN ('Apartment','Shed','Shack')
 ```
@@ -370,20 +424,25 @@ WHERE LastName IN
 | Doe      | John      |
 
 #### EXISTS
+
 Returns true if a `subquery` returns at least one row.
 
 ##### Syntax
+
 ```sql
 EXISTS subquery
 ```
+
 Where `subquery` is any query.
 
 ##### Examples
+
 The operator can be used to check if an entity contains any object matching a condition.
 
 The condition `EXISTS (SELECT * FROM Sales.Customer WHERE LastName = 'Mose')` returns `FALSE` as there are no customers with the last name `Mose`.
 
 This query returns all customers that also have orders placed:
+
 ```sql
 SELECT *
 FROM Sales.Customer customer
@@ -399,19 +458,23 @@ WHERE EXISTS
 | -  | Moose    | Jane      |
 
 #### IS {#is-operator}
+
 Tests for an expression being a `NULL`. Can be inverted with an optional `NOT`. Syntax:
 
 ```sql
 expression IS [ NOT ] NULL
 ```
+
 Where `expression` is an expression of any datatype.
 
 ##### Examples:
 
 `IS` operator can be used to filter out rows with values that are NULL:
+
 ```sql
 	SELECT Revenue, Cost FROM Sales.Finance WHERE Revenue IS NOT NULL 
 ```
+
 | Revenue | Cost |                                                       
 |---------|------|
 | 10      | 7    |
@@ -449,42 +512,47 @@ In an extended Case expression, `boolean_expression` is evaluated and if it is `
 `else_result_expression` is the result of the whole `CASE` expression, when no previous `when_expression` matched or no previous `boolean_expression` returned `TRUE`.
 
 ### Operator precedence
+
 If operators are used without parenthesis to indicate order, the order of application is left to right with operator precedence:
-- \* (Multiplication), : (Division), % (Modulo)
-- \- (Arithmetic negation), + (Addition), - (Subtraction)
-- =, >, <, >=, <=, !=, IS, IN, EXISTS, LIKE
-- NOT
-- AND
-- OR
+
+* \* (Multiplication), : (Division), % (Modulo)
+* \- (Arithmetic negation), + (Addition), - (Subtraction)
+* =, >, <, >=, <=, !=, IS, IN, EXISTS, LIKE
+* NOT
+* AND
+* OR
 
 ### NULL handling
+
 If one of the operands in a binary operation or the unary operand have a `NULL` value, then the return type will also be NULL. 
 This does not apply to `=` and `!=` operators. Handling of `NULL` in [other operators](#other-operators) is detailed in the specific operator subsections.
 
 ## String coercion
+
 In some databases, using `STRING` type variables in place of numeric, `DATETIME` or `BOOLEAN` values in operators and functions that explicitly require those types, causes the database to perform an implicit conversion. A common example would be the use of a `STRING` representation of a `DATETIME` variable inside a `DATEPART` function. It is recommended to always cast strings to the exact type the operator or functions.
 
 ## Functions
 
 These are currently supported functions:
-- CAST
-- COALESCE
-- DATEDIFF
-- DATEPART
-- LENGTH
-- LOWER
-- RANGEBEGIN
-- RANGEEND
-- REPLACE
-- ROUND
-- UPPER
 
+* CAST
+* COALESCE
+* DATEDIFF
+* DATEPART
+* LENGTH
+* LOWER
+* RANGEBEGIN
+* RANGEEND
+* REPLACE
+* ROUND
+* UPPER
 
 ### CAST
 
 The `CAST` function converts an expression to a specified data type. 
 
 #### Syntax
+
 The syntax is as follows:
 
 ```sql
@@ -540,6 +608,7 @@ Explicit conversions can also be useful for numeric data types, like ensuring a 
 ```sql
 SELECT (Number : 2) as Normal, (Cast(Number AS DECIMAL) : 2) as Casted FROM Sales.Order Where Number = 7
 ```
+
 | Normal | Casted |        
 |:-------|--------|
 | 3      | 3.5    |
@@ -561,6 +630,7 @@ COALESCE ( expression [ ,...n ] )
 `expression` specifies the expression to check. Most databases expect the function to be given at least two `expression` arguments.
 
 #### Examples
+
 Assume entity `Sales.Customer` entity now has some `NULL` values:
 
 ```sql
@@ -615,6 +685,7 @@ DATEDIFF ( unit , startdate_expression, enddate_expression [, timezone ] )
 #### Examples
 
 Assume the entity `Sales.Period` has 2 objects:
+
 ```sql
 SELECT * FROM Sales.Period
 ```
@@ -625,6 +696,7 @@ SELECT * FROM Sales.Period
 | -  | 2024-05-02 00:00:00 | 2024-06-02 15:12:45 | 10      |
 
 We can use `DATEDIFF` to get the time interval between two dates:
+
 ```sql
 SELECT DATEDIFF(MONTH , End, Start ) as difference FROM Sales.Period
 ```
@@ -635,6 +707,7 @@ SELECT DATEDIFF(MONTH , End, Start ) as difference FROM Sales.Period
 | 1          |
 
 This interval can be used to calculate the average revenue per month:
+
 ```sql
 SELECT Revenue : DATEDIFF(MONTH, End, Start ) as avg_revenue FROM Sales.Period
 ```
@@ -643,7 +716,6 @@ SELECT Revenue : DATEDIFF(MONTH, End, Start ) as avg_revenue FROM Sales.Period
 |-------------|
 | 2           |
 | 10          |
-
 
 {{% alert color="info" %}}
 
@@ -691,7 +763,6 @@ DATEPART ( datepart , date_expression [, timezone ] )
 | `SECOND`     | 0 to 59                                          | 20                                          |
 | `MILISECOND` | 0 to 999                                         | 356                                         |
 
-
 `DATEPART` can be used to filter dates on specific components. The query below returns all end dates that are in the year "2025".
 
 ```sql
@@ -715,6 +786,7 @@ The syntax is as follows:
 ```sql
 LENGTH ( expression )
 ```
+
 Where `expression` is an expression of type `STRING`.
 
 #### Example
@@ -731,6 +803,7 @@ SELECT * FROM Sales.Reports
 | -  | "Order has been completed"    |
 
 Their length can be calculated with in an extra column
+
 ```sql
 SELECT Text, LENGTH(Text) as text_length FROM Sales.Reports
 ```
@@ -757,6 +830,7 @@ LOWER ( expression )
 `expression` specifies the string to convert.
 
 #### Example
+
 The function is useful to enforce consistent case for all strings, especially for comparisons. The query below would return no results in case-sensitive databases, as there is only a "Doe":
 
 ```sql
@@ -768,6 +842,7 @@ Using `LOWER` this inconsistency can be fully avoided:
 ```sql
 SELECT * FROM Sales.Customer WHERE LOWER(LastName) = 'doe'
 ```
+
 | ID | LastName | FirstName |                                                         
 |----|----------|-----------|
 | -  | Doe      | John      |
@@ -777,6 +852,7 @@ Note that this query can no longer take advantage of an index for `LastName` for
 ### RANGEBEGIN
 
 Extracts the initial value of a range parameter. Range parameters defined only in [datasets](/refguide/data-sets/). `RANGEBEGIN` and [RANGEEND](#oql-rangeend) are OQL functions that can only be used with a parameter as input.
+
 #### Syntax
 
 ```sql
@@ -788,9 +864,10 @@ RANGEBEGIN ( $range )
 #### Example
 
 Assume `$now` is "2024-06-15 00:00:00" and there are 3 range parameters defined in a dataset:
-- `$range` with start value "2024-06-01 00:00:00" and end value "2025-06-01 00:00:00"
-- `$range_future` with start value `$now`
-- `$range_past` with end value `$now`
+
+* `$range` with start value "2024-06-01 00:00:00" and end value "2025-06-01 00:00:00"
+* `$range_future` with start value `$now`
+* `$range_past` with end value `$now`
 
 | ID | Start               | End                 | Revenue |                                                        
 |:---|---------------------|---------------------|---------|
@@ -803,6 +880,7 @@ This query uses `$range_future` to retrieve all periods that end in the future:
 SELECT End, Revenue FROM Sales.Period
 WHERE End > RANGEBEGIN($range_future)
 ```
+
 | End                 | Revenue |
 |---------------------|---------|
 | 2025-07-05 00:00:00 | 28      |
@@ -820,21 +898,25 @@ RANGEEND ( $range )
 `$range` specifies the range parameter.
 
 #### Example
+
 This query uses `$range` to retrieve all periods that end before the end value of `$range`:
 
 ```sql
 SELECT End, Revenue FROM Sales.Period
 WHERE End < RANGEEND($range)
 ```
+
 | End                 | Revenue |
 |---------------------|---------|
 | 2024-06-02 15:12:45 | 10      |
 
 This query uses `$range_past` to retrieve all periods that ended before the end date of `$range_past`:
+
 ```sql
 SELECT End, Revenue FROM Sales.Period
 WHERE End < RANGEEND($range_past)
 ```
+
 | End                 | Revenue |
 |---------------------|---------|
 | 2024-06-02 15:12:45 | 10      |
@@ -875,6 +957,7 @@ SELECT * FROM Sales.Raw
 | -  | "1 A15 tools"     |
 
 The text format is converted with `REPLACE`:
+
 ```sql
 SELECT REPLACE(Import, ' ', ',') FROM Sales.Raw
 ```
@@ -883,7 +966,6 @@ SELECT REPLACE(Import, ' ', ',') FROM Sales.Raw
 |-------------------|
 | "6,D10,machinery" |
 | "1,A15,tools"     |
-
 
 ### ROUND
 
@@ -908,11 +990,13 @@ ROUND ( expression , length )
 #### Examples
 
 The function can be used to check equality of decimal values. In this query a small difference between decimal columns will return no results:
+
 ```sql
 SELECT LastName, Number FROM Sales.Order WHERE Price = 1.50000001
 ```
 
 It can be modified with the use of `ROUND` to only compare two fraction digits :
+
 ```sql
 SELECT LastName, Price FROM Sales.Order WHERE ROUND(Price, 2) = ROUND(1.50000001, 2)
 ```
@@ -923,6 +1007,7 @@ SELECT LastName, Price FROM Sales.Order WHERE ROUND(Price, 2) = ROUND(1.50000001
 
 Operations with decimals like division can produce large number of digits after the decimal point, `ROUND` can be used to 
 reduce the precision when that is not necessary:
+
 ```sql
 SELECT ROUND((Price : 7), 2) as RoundedPrice, Price : 7 FROM Sales.Order
 ```

@@ -91,7 +91,7 @@ Binary operators are used with this syntax:
 
 Where `operator` is any available binary operator. Both `expression` operands should be of compatible types for the operator and compatible with the other operand.
 
-#### Type coercion precedence {#type-coercion}
+#### Type Coercion Precedence {#type-coercion}
 
 Binary operations perform type casting when operands have different types. For operations involving only numeric types, data types are always upcasted to ensure data types match. The resulting type will be the operand type with the highest precedence according to this ordering:
 
@@ -204,7 +204,7 @@ Returns the remainder of a division. The behavior is database dependent when one
 The operator throws an error in PostgresSQL and SQL Server when one of the operands is a parameter of type `DECIMAL`
 {{% /alert %}}
 
-#### = (Equal to)
+#### = (Equal To)
 
 Returns `TRUE` if both `expression` inputs are equal. When used with `NULL`, it will always return a `FALSE` result. To compare to `NULL` values, use the [IS](#is-operator) operator.
 
@@ -222,11 +222,11 @@ SELECT LastName, Number FROM Sales.Order WHERE LastName = Moose
 |----------|--------|
 | Moose    | 12     |
 
-#### != (Not equal to)
+#### != (Not Equal To)
 
 Inverse of `=`. The same `NULL` handling rules apply. Partial expression `expression !=` is equivalent to `NOT expression =`. 
 
-#### < (Less than)
+#### < (Less Than)
 
 Returns `TRUE` if the left `expression` is less than the right. Both `expression` must be numeric.
 
@@ -240,25 +240,25 @@ SELECT LastName, Number, Price FROM Sales.Order WHERE Price < 5
 |----------|--------|-------|
 | Doe      | 7      | 1.5   |
 
-#### <= (Less than or equal to)
+#### <= (Less Than Or Equal To)
 
 Returns `TRUE` if the left `expression` is less than or equal to the right. Both `expression` must be numeric.
 
-#### \> (Greater than)
+#### \> (Greater Than)
 
 Returns `TRUE` if the left `expression` is greater than the right. Both `expression` must be numeric.
 
-#### \>= (Greater than or equal to)
+#### \>= (Greater Than Or Equal To)
 
 Returns `TRUE` is the left `expression` is greater than or equal to the right. Both `expression` must be numeric.
 
 #### OR
 
-Returns `TRUE` if at least one input `expression` returns true. Both `expression` must be of type `BOOLEAN`.
+Returns `TRUE` if at least one input `expression` returns `TRUE`. Both `expression` must be of type `BOOLEAN`.
 
 #### AND
 
-Returns `TRUE` if both input `expression` return true. Both `expression` must be of type `BOOLEAN`.
+Returns `TRUE` if both input `expression` return `TRUE`. Both `expression` must be of type `BOOLEAN`.
 
 Its main use is to make complex `WHERE` conditions with a combination of input values.
 
@@ -300,7 +300,7 @@ Unary operators are used with the following syntax:
 
 `expression` should be of a type compatible with the `operator`.
 
-#### - (Arithmetic negation)
+#### - (Arithmetic Negation)
 
 Negates a numeric value. The return type is the same as the input `expression`. 
 
@@ -494,7 +494,7 @@ The `IS` operator can be used to filter out rows with values that are NULL. For 
 
 ### CASE
 
-The `CASE` expression is a conditional expression, similar to if/else statements in other programming languages. If the condition's result is true, the value of the `CASE` expression is the result that follows the condition, and the remainder of the `CASE` expression is not processed. If the condition's result is not true, any subsequent `WHEN` clauses are examined in the same manner. If no `WHEN` condition yields true, the value of the `CASE` expression is the result of the `ELSE` clause. If the `ELSE` clause is omitted and no condition is true, the result is null.
+The `CASE` expression is a conditional expression, similar to if/else statements in other programming languages. If the result of a following `WHEN` condition is `TRUE`, the value of the `CASE` expression is the result that follows the condition and the remainder of the `CASE` expression is not processed. If the result is not `TRUE`, any subsequent `WHEN` clauses are examined in the same manner. If no `WHEN` condition yields `TRUE`, the value of the `CASE` expression is the result of the `ELSE` clause. If the `ELSE` clause is omitted and no condition is `TRUE`, the result is null.
 
 #### Syntax
 
@@ -507,7 +507,9 @@ The `CASE` expression can be used in two ways – simple:
 	END
 ```
 
-or extended:
+In a simple `CASE` expression, `input_expression` will be compared to `when_expression`. If  `input_expression` matches  `when_expression`, the result of the whole `CASE` expression will be `result_expression` given after `THEN`. The data types of `input_expression` and `when_expression` must tch.
+
+There is also an extended version:
 
 ```sql
 	CASE
@@ -516,15 +518,11 @@ or extended:
 	END
 ```
 
-In a simple `CASE` expression, `input_expression` will be compared to `when_expression`. If  `input_expression` matches  `when_expression`, the result of the whole `CASE` expression will be `result_expression` given after `THEN`. Data types between `input_expression` and `when_expression` should match.
-
 In an extended Case expression, `boolean_expression` is evaluated and if it is `TRUE`, the result of the whole `CASE` expression will be `result_expression` given after `THEN`. `boolean_expression` must have return type `BOOLEAN`. 
 
-`result_expression` is the possible result of the whole `CASE` expression.
+In both instances, `else_result_expression` is the result of the whole `CASE` expression, when no previous `when_expression` matched or no previous `boolean_expression` returned `TRUE`.
 
-`else_result_expression` is the result of the whole `CASE` expression, when no previous `when_expression` matched or no previous `boolean_expression` returned `TRUE`.
-
-### Operator precedence
+### Operator Precedence
 
 If operators are used without parenthesis to indicate order, the order of application is left to right with operator precedence:
 
@@ -535,18 +533,19 @@ If operators are used without parenthesis to indicate order, the order of applic
 * AND
 * OR
 
-### NULL handling
+### NULL Handling
 
-If one of the operands in a binary operation or the unary operand have a `NULL` value, then the return type will also be NULL. 
-This does not apply to `=` and `!=` operators. Handling of `NULL` in [other operators](#other-operators) is detailed in the specific operator subsections.
+If one of the `expression` in a binary operation or the unary `expression` have a `NULL` value, then the return type will also be NULL.
 
-## String coercion
+This does not apply to the `=` and `!=` operators. Handling of `NULL` in [other operators](#other-operators) is detailed in the specific operator subsections.
 
-In some databases, using `STRING` type variables in place of numeric, `DATETIME` or `BOOLEAN` values in operators and functions that explicitly require those types, causes the database to perform an implicit conversion. A common example would be the use of a `STRING` representation of a `DATETIME` variable inside a `DATEPART` function. It is recommended to always cast strings to the exact type the operator or functions.
+## String Coercion
+
+In some databases, using `STRING` type variables in place of numeric, `DATETIME` or `BOOLEAN` values in operators and functions that explicitly require those types, causes the database to perform an implicit conversion. A common example would be the use of a `STRING` representation of a `DATETIME` variable inside a `DATEPART` function. Mendix recommends that you always [cast](#cast) strings to the exact type the operator or functions.
 
 ## Functions
 
-These are currently supported functions:
+These are the currently supported functions:
 
 * CAST
 * COALESCE
@@ -560,7 +559,7 @@ These are currently supported functions:
 * ROUND
 * UPPER
 
-### CAST
+### CAST{#cast}
 
 The `CAST` function converts an expression to a specified data type. 
 
@@ -597,16 +596,18 @@ The table below describes which `CAST` conversions are supported:
 
 | From \ To | BOOLEAN | DATETIME | DECIMAL | INTEGER | LONG | STRING (unlimited) | STRING (limited) |
 |------| :------: | :------: | :------: | :------: | :------: | :------: | :------: |
-| BOOLEAN | ✔ | ✘ | ✘ | ✘ | ✘ | ✔* | ✔*<sup><small>1</small></sup> |
-| DATETIME | ✘ | ✔ | ✘ | ✘ | ✘ | ✔* | ✔*<sup><small>2</small></sup> |
-| DECIMAL | ✘ | ✘ | ✔* | ✔* | ✔* | ✔* | ✔*<sup><small>2</small></sup> |
+| BOOLEAN | ✔ | ✘ | ✘ | ✘ | ✘ | ✔* | ✔*¹ |
+| DATETIME | ✘ | ✔ | ✘ | ✘ | ✘ | ✔* | ✔*² |
+| DECIMAL | ✘ | ✘ | ✔* | ✔* | ✔* | ✔* | ✔*² |
 | INTEGER | ✘ | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | LONG | ✘ | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | STRING | ✘ | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |
 
-<small>[1] BOOLEAN to STRING (limited) is supported only if the resulting string length is ≥ 5. <br />[2] The conversion of DATETIME and DECIMAL to STRING (limited) is supported only if the value fully fits into the string length. The conversion can fail if the resulting string length is < 20.</small>
+¹BOOLEAN to STRING (limited) is supported only if the resulting string length is greater than or equal to 5.
 
-Converting `DATETIME`, `BOOLEAN` to `STRING` returns different format per database.
+²The conversion of DATETIME and DECIMAL to STRING (limited) is supported only if the value fully fits into the string length. The conversion can fail if the resulting string length is less than 20.
+
+Converting `DATETIME` or `BOOLEAN` to `STRING` returns different format per database.
 
 #### Examples
 
@@ -623,10 +624,12 @@ SELECT (Number : 2) as Normal, (Cast(Number AS DECIMAL) : 2) as Casted FROM Sale
 ```
 
 | Normal | Casted |        
-|:-------|--------|
+|------:|-------:|
 | 3      | 3.5    |
-| 1      | 1      |
+| 1      | 1.0      |
 | 1      | 1.5    |
+
+{{% todo %}}Proofread from here to the end{{% /todo %}}
 
 ### COALESCE
 

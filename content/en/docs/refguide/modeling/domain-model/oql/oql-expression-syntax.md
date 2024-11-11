@@ -5,13 +5,13 @@ url: /refguide/oql-expression-syntax/
 
 ## Introduction
 
-Expression syntax details expression usage in an oql query.
+Operators and functions in OQL use expressions as inputs to perform mathematical, comparison, conditional, string, date operations and return the result. They allow an OQL query to perform modifications on data on the database to present a different view of the data or make complex conditions.
 
-Operators and functions use expressions as inputs to perform mathematical, comparison, conditional, string, date operations and return the result. They allow an OQL query to perform modifications on data on the database to present a different view of the data or make complex conditions.
+This document details the use and syntax of expressions in an oql query.
 
 ## Data Types
 
-OQL supports a small set of data types that differ from [mendix data types](/refguide/data-types/). The supported data types are:
+OQL supports a set of data types that differ slightly from [Mendix data types](/refguide/data-types/). The supported data types are:
 
 | Data Type  | Mendix Data type | Example               | Description                                |
 |------------|------------------|-----------------------|--------------------------------------------|
@@ -28,11 +28,11 @@ Literals represent values that are constant and are part of the query itself. Th
 
 | Format | Example         | Data Type            | Description                                   |
 |--------|-----------------|----------------------|-----------------------------------------------|
-| -      | `TRUE`, `FALSE` | `BOOLEAN`            | Conditional constants                         |
+|        | `TRUE`, `FALSE` | `BOOLEAN`            | Conditional constants                         |
 | 's*'   | 'my_string'     | `STRING`             | String literal                                |
 | d+     | 5               | `INTEGER` and `LONG` | Natural number literal                        |
 | d+.d+  | 5.3             | `DECIMAL`            | Real number literal                           |
-| -      | `NULL`          | -                    | NULL literal to represent non-existent values |
+|        | `NULL`          | N/A                  | NULL literal to represent non-existent values |
 
 Where `d` is a number, `s` is any character, * indicates zero or more characters, + indicated one or more characters.
 
@@ -48,7 +48,9 @@ XPath [system variables](/refguide/xpath-keywords-and-system-variables/) can be 
 '[%SystemVariable%]'
 ```
 
-These variables can be used the same way as other expressions. This query gets the names of all `Person` objects that are associated with the current user:
+These variables can be used the same way as other expressions.
+
+For example, this query gets the names of all `Person` objects that are associated with the current user:
 
 ```sql
 select Name from Person where Person_USER = '[%CurrentUser%]'
@@ -58,8 +60,8 @@ select Name from Person where Person_USER = '[%CurrentUser%]'
 
 Operators perform common operations and do not use parenthesis in their syntax. They take `expression` as input, which can be other operator results, functions, columns and literals.
 
-Supported operators are split into binary, unary and other operators based on syntax.
-There are logical and arithmetic operators, split by return type. Arithmetic operator return type depends on the datatypes of inputs, while logical operators always return a `BOOLEAN` type. `CASE` is detailed separately 
+Supported operators are split into binary, unary, and other operators based on their syntax.
+These are further subdivided into logical and arithmetic operators, depending on their return type. Logical operators always return a `BOOLEAN` type. The return type of arithmetic operators depends on the datatypes of the expressions being operated on. `CASE` is detailed separately .
 
 ### Binary operators
 
@@ -91,16 +93,14 @@ Where `operator` is any available binary operator. Both `expression` operands sh
 
 #### Type coercion precedence {#type-coercion}
 
-Binary operations perform type casting when operand types are differing. For operations involving only numeric types, data types are always upcasted to ensure data types are matching. The result type will also be the operand type with the highest precedence. This is done according to this ordering:
+Binary operations perform type casting when operands have different types. For operations involving only numeric types, data types are always upcasted to ensure data types match. The resulting type will be the operand type with the highest precedence according to this ordering:
 
 * `DECIMAL`
 * `LONG`
 * `INTEGER`
 
 {{% alert color="info" %}}
-
-This precedence rule does not apply for operations where at least one of the operands is non-numeric, including that of type `STRING`. The final result type will depend on the database.
-
+This precedence rule does not apply for operations where at least one of the operands is non-numeric, including that of type `STRING`. In this case, the final result type will depend on the database.
 {{% /alert %}}
 
 #### + (Addition)
@@ -140,7 +140,7 @@ SELECT (Number + 5) FROM Sales.Order
 | Doe      | 8      |
 | Moose    | 7      |
 
-It can also be used for complex `WHERE` comparisons. The query bellow check for equality of the full name of a customer:
+It can also be used for complex `WHERE` comparisons. The following query checks for equality of the full name of a customer:
 
 ```sql
 SELECT LastName FROM Sales.Customer WHERE (FirstName + LastName) = 'JaneMoose'
@@ -152,7 +152,7 @@ SELECT LastName FROM Sales.Customer WHERE (FirstName + LastName) = 'JaneMoose'
 
 #### - (Subtraction)
 
-Subtracts left `expresion` from the right one. Both operands should be numeric.
+Subtracts the right `expression` from the left one. Both operands must be numeric.
 
 Assume `Sales.Finances` contains two objects:
 
@@ -178,9 +178,9 @@ We can calculate a profit based on this data:
 
 #### * (Multiplication)
 
-Multiplies operands. 
+Multiplies expressions. 
 
-As an example it can be used to get the total value of an order
+For example, it can be used to get the total value of an order:
 
 ```sql
 SELECT LastName, (Number * Price) as Total FROM Sales.Order
@@ -194,29 +194,25 @@ SELECT LastName, (Number * Price) as Total FROM Sales.Order
 
 #### : (Division)
 
-Divides left from the right `expression`. Supports both integer and float division. In case of integer division, the remainder is discarded.
+Divides left `expression` by the right `expression`. Supports long, integer, and decimal division. In case of long and integer division, the remainder is discarded.
 
 #### % (Modulo)
 
-Returns the remainder of division. Behavior is database dependent when one of the operands is of type `DECIMAL`.
+Returns the remainder of a division. The behavior is database dependent when one of the `expression` is of type `DECIMAL`.
 
 {{% alert color="info" %}}
-
 The operator throws an error in PostgresSQL and SQL Server when one of the operands is a parameter of type `DECIMAL`
-
 {{% /alert %}}
 
 #### = (Equal to)
 
-Returns true if both `expression` inputs are equal. When used with `NULL`, will always return a `FALSE` result. To compare to `NULL` values, use operator [IS](#is-operator).
+Returns `TRUE` if both `expression` inputs are equal. When used with `NULL`, it will always return a `FALSE` result. To compare to `NULL` values, use the [IS](#is-operator) operator.
 
 {{% alert color="info" %}}
-
-Note that `DECIMAL` values have to match exactly. Use `ROUND` to compare with less precision.
-
+Note that `DECIMAL` values have to match exactly. Use [`ROUND`](#round) to compare with less precision.
 {{% /alert %}}
 
-The operator is useful for checking exact matches in data. This query retrieves a specific customers orders:
+The = operator is useful for checking exact matches in data. For example, this query retrieves a specific customer's orders:
 
 ```sql
 SELECT LastName, Number FROM Sales.Order WHERE LastName = Moose
@@ -228,13 +224,13 @@ SELECT LastName, Number FROM Sales.Order WHERE LastName = Moose
 
 #### != (Not equal to)
 
-Inverse of `=`. Same `NULL` handling rules apply. Partial expression `expression !=` is equivalent to `NOT expression =`. 
+Inverse of `=`. The same `NULL` handling rules apply. Partial expression `expression !=` is equivalent to `NOT expression =`. 
 
 #### < (Less than)
 
-Returns true is the left `expression` is less than the right. Both operands should be numeric.
+Returns `TRUE` if the left `expression` is less than the right. Both `expression` must be numeric.
 
-It can be used for filtering data with the use of a `WHERE` clause:
+It can be used for filtering data with the use of a `WHERE` clause. For example:
 
 ```sql
 SELECT LastName, Number, Price FROM Sales.Order WHERE Price < 5
@@ -246,25 +242,27 @@ SELECT LastName, Number, Price FROM Sales.Order WHERE Price < 5
 
 #### <= (Less than or equal to)
 
-Returns true is the left `expression` is less or equal to the right. Both operands should be numeric.
+Returns `TRUE` if the left `expression` is less than or equal to the right. Both `expression` must be numeric.
 
 #### \> (Greater than)
 
-Returns true is the left `expression` is greater than the right. Both operands should be numeric.
+Returns `TRUE` if the left `expression` is greater than the right. Both `expression` must be numeric.
 
 #### \>= (Greater than or equal to)
 
-Returns true is the left `expression` is greater or equal to the right. Both operands should be numeric.
+Returns `TRUE` is the left `expression` is greater than or equal to the right. Both `expression` must be numeric.
 
 #### OR
 
-Returns true if at least one input `expression` returns true. Both operands need to be of type `BOOLEAN`.
+Returns `TRUE` if at least one input `expression` returns true. Both `expression` must be of type `BOOLEAN`.
 
 #### AND
 
-Returns true if both input `expression` return true. Both operands need to be of type `BOOLEAN`.
+Returns `TRUE` if both input `expression` return true. Both `expression` must be of type `BOOLEAN`.
 
-Its main use is to make complex `WHERE` conditions with a combination of input values. In the query below large orders or smaller orders with a high value are selected:
+Its main use is to make complex `WHERE` conditions with a combination of input values.
+
+For example, in the following query, large orders or smaller orders with a high value are selected:
 
 ```sql
 SELECT LastName, Number, Price FROM Sales.Order WHERE Number >= 5 OR Price > 4 AND Number >= 3
@@ -287,24 +285,24 @@ SELECT LastName, Number, Price FROM Sales.Order WHERE (Number <= 5 OR Price < 6)
 
 ### Unary Operators
 
-Unary operators only have a single argument. Unary operators supported:
+Unary operators only have a single argument. The following unary operators are supported:
 
 | Operator | Description         | type       |                                                         
 |----------|---------------------|------------|
 | `-`      | Arithmetic negation | Arithmetic |
 | `NOT`    | Logical negation    | Logical    |
 
-Unary operators are used with syntax:
+Unary operators are used with the following syntax:
 
 ```sql
 	operator expression
 ```
 
-`expression` should be of type compatible with the `operator`.
+`expression` should be of a type compatible with the `operator`.
 
 #### - (Arithmetic negation)
 
-Negates a numeric value. The return type is the same as input `expression`. 
+Negates a numeric value. The return type is the same as the input `expression`. 
 
 #### NOT
 
@@ -312,7 +310,7 @@ Reverses Boolean `TRUE` values into `FALSE` and vice versa.
 
 ### Other operators {#other-operators}
 
-These are operators that do not match the general unary or binary syntax. They are all logical operators. Those are:
+The operators in this section do not match the general unary or binary syntax. They are all logical operators:
 
 | Operator | Description                                                     |     
 |----------|-----------------------------------------------------------------|
@@ -327,13 +325,15 @@ Matches an `expression` to the pattern after the operator.
 
 ##### Syntax
 
+The syntax of the `LIKE` operator is as follows:
+
 ```sql
 expression LIKE pattern
 ```
 
 Where `expression` is of type `STRING` and `pattern` is a string literal or parameter. Note that this means functions are not allowed to be used in `pattern`. A `NULL` pattern is treated as an empty string.
 
-The pattern can have special characters, which are all wildcards. Supported wildcard Characters:
+The pattern can have special characters, which are all wildcards. The following wildcard characters are supported:
 
 | Wildcard Character | Description                           |     
 |--------------------|---------------------------------------|
@@ -344,7 +344,7 @@ In order to search for special characters, they should be escaped with the `\` e
 
 ##### Examples
 
-Presume we have 3 strings for column `House`: `Apartment`, `Tenement` and `Flat`. We can select all string ending with "ment" with this condition:
+For example, say we have 3 strings for column `House`: `Apartment`, `Tenement`, and `Flat`. We can select all strings ending with "ment" with this condition:
 
 ```sql
 Select House FROM House LIKE '%ment' 
@@ -355,7 +355,7 @@ Select House FROM House LIKE '%ment'
 | Apartment |
 | Tenement  |
 
-A certain length of string can be enforced with the use of the `_` operator This query matches any string that has 4 of any character ending with "mend"":
+A certain length of string can be enforced with the use of the `_` operator This query matches any string that has 4 of any character ending with "ment":
 
 ```sql
 Select House FROM House LIKE '____ment' 
@@ -382,27 +382,28 @@ Select House FROM House LIKE '%a%t'
 Matches a value in a subquery or a list of expression values. Each value in the list or subquery is compared to a specified expression with the operator `=`(Equal to), returning `TRUE` if any of the comparisons return `TRUE`. `NULL` value handling is the same as the `=`(Equal to) operator.
 
 {{% alert color="info" %}}
-
 HSQLDB and PostgreSQL do not support matching of different datatypes.
-
 {{% /alert %}}
 
 ##### Syntax
+
+The syntax of the `IN` operator is as follows:
 
 ```sql
 expression IN {
     subquery
     | ( expression [ ,...n] )
     | parameter
+}
 ```
 
-Where `expression` can have any type. The left side can be either a `subquery`, a comma separated list of `expression` or a parameter that is a list of values. If `subquery` is used, it must return a single column.
+Where `expression` can have any type. The left side can be either a `subquery`, a comma separated list of `expression`, or a parameter that is a list of values. If `subquery` is used, it must return a single column.
 
 ##### Examples
 
-This operator is used to create conditions that depend on other entities or limited views of entities.
+The `IN` operator is used to create conditions that depend on other entities or limited views of entities.
 
-This condition checks if the string `House` is in the literal list on the right, returning `FALSE`:
+For example, the condition below checks if the string `House` is in the literal list on the right, and returns `FALSE`:
 
 ```sql
 'House' IN ('Apartment','Shed','Shack')
@@ -425,9 +426,11 @@ WHERE LastName IN
 
 #### EXISTS
 
-Returns true if a `subquery` returns at least one row.
+Returns `TRUE` if a `subquery` returns at least one row.
 
 ##### Syntax
+
+The syntax of the `EXISTS` operator is as follows:
 
 ```sql
 EXISTS subquery
@@ -437,9 +440,15 @@ Where `subquery` is any query.
 
 ##### Examples
 
-The operator can be used to check if an entity contains any object matching a condition.
+The `EXISTS` operator can be used to check if an entity contains any object matching a condition.
 
-The condition `EXISTS (SELECT * FROM Sales.Customer WHERE LastName = 'Mose')` returns `FALSE` as there are no customers with the last name `Mose`.
+For example, the following condition:
+
+```sql
+EXISTS (SELECT * FROM Sales.Customer WHERE LastName = 'Mose')
+```
+
+returns `FALSE` as there are no customers with the last name `Mose`.
 
 This query returns all customers that also have orders placed:
 
@@ -459,7 +468,11 @@ WHERE EXISTS
 
 #### IS {#is-operator}
 
-Tests for an expression being a `NULL`. Can be inverted with an optional `NOT`. Syntax:
+Tests for an expression being `NULL`. Can be inverted with an optional `NOT`.
+
+##### Syntax
+
+The syntax of the `IS` operator is as follows:
 
 ```sql
 expression IS [ NOT ] NULL
@@ -467,9 +480,9 @@ expression IS [ NOT ] NULL
 
 Where `expression` is an expression of any datatype.
 
-##### Examples:
+##### Examples
 
-`IS` operator can be used to filter out rows with values that are NULL:
+The `IS` operator can be used to filter out rows with values that are NULL. For example:
 
 ```sql
 	SELECT Revenue, Cost FROM Sales.Finance WHERE Revenue IS NOT NULL 
@@ -718,9 +731,7 @@ SELECT Revenue : DATEDIFF(MONTH, End, Start ) as avg_revenue FROM Sales.Period
 | 10          |
 
 {{% alert color="info" %}}
-
 The way the difference is calculated depends on the database. The `YEAR` difference between "2002-01-01" and "2001-12-31" will be `1` with some databases and `0` with others.
-
 {{% /alert %}}
 
 ### DATEPART
@@ -967,7 +978,7 @@ SELECT REPLACE(Import, ' ', ',') FROM Sales.Raw
 | "6,D10,machinery" |
 | "1,A15,tools"     |
 
-### ROUND
+### ROUND{#round}
 
 Rounds a numeric `expression` by reducing precision after the decimal point.
 

@@ -123,9 +123,9 @@ SELECT * FROM Sales.Order
 ```
 
 | ID | LastName | Number | Price |                                                         
-|----|:---------|--------|-------|
+|----|:---------|-------:|------:|
 | -  | Doe      | 7      | 1.5   |
-| -  | Doe      | 2      | 5     |
+| -  | Doe      | 2      | 5.0   |
 | -  | Moose    | 3      | 8.2   |
 
 The operator can be used to modify an attribute in SELECT.
@@ -135,7 +135,7 @@ SELECT (Number + 5) FROM Sales.Order
 ```
 
 | LastName | Number |                                                         
-|----------|--------|
+|----------|-------:|
 | Doe      | 12     |
 | Doe      | 8      |
 | Moose    | 7      |
@@ -161,7 +161,7 @@ SELECT * FROM Sales.Finances
 ```
 
 | ID | Revenue | Cost |                                                       
-|:---|---------|------|
+|:---|--------:|-----:|
 | -  | 10      | 7    |
 | -  | NULL    | 10   |
 
@@ -187,9 +187,9 @@ SELECT LastName, (Number * Price) as Total FROM Sales.Order
 ```
 
 | LastName | Total |                                                  
-|----------|-------|
+|----------|------:|
 | Doe      | 10.5  |
-| Doe      | 10    |
+| Doe      | 10.0    |
 | Moose    | 24.6  |
 
 #### : (Division)
@@ -219,7 +219,7 @@ SELECT LastName, Number FROM Sales.Order WHERE LastName = Moose
 ```
 
 | LastName | Number |                                                         
-|----------|--------|
+|----------|-------:|
 | Moose    | 12     |
 
 #### != (Not Equal To)
@@ -237,7 +237,7 @@ SELECT LastName, Number, Price FROM Sales.Order WHERE Price < 5
 ```
 
 | LastName | Number | Price |                                                         
-|----------|--------|-------|
+|----------|-------:|------:|
 | Doe      | 7      | 1.5   |
 
 #### <= (Less Than Or Equal To)
@@ -269,18 +269,18 @@ SELECT LastName, Number, Price FROM Sales.Order WHERE Number >= 5 OR Price > 4 A
 ```
 
 | LastName | Number | Price |                                                         
-|----------|--------|-------|
+|----------|-------:|------:|
 | Doe      | 7      | 1.5   |
 | Moose    | 3      | 8.2   |
 
-Note that in the query above `AND` is evaluated first. The query below with parentheses returns orders that have low volume or low price with a minimum of 3 orders:
+Note that in the query above `AND` is evaluated first. The following query with parentheses returns orders that have low volume or low price with a minimum of 3 orders:
 
 ```sql
 SELECT LastName, Number, Price FROM Sales.Order WHERE (Number <= 5 OR Price < 6) AND Number >= 3
 ```
 
 | LastName | Number | Price |                                                         
-|:---------|--------|-------|
+|:---------|-------:|------:|
 | Doe      | 7      | 1.5   |
 
 ### Unary Operators
@@ -489,7 +489,7 @@ The `IS` operator can be used to filter out rows with values that are NULL. For 
 ```
 
 | Revenue | Cost |                                                       
-|---------|------|
+|--------:|-----:|
 | 10      | 7    |
 
 ### CASE
@@ -633,7 +633,7 @@ SELECT (Number : 2) as Normal, (Cast(Number AS DECIMAL) : 2) as Casted FROM Sale
 
 ### COALESCE
 
-Returns the first of its arguments that is not NULL. Can be used with columns.
+Returns the value of the first `expression` that is not NULL. Can be used with columns.
 
 #### Syntax
 
@@ -671,7 +671,7 @@ SELECT COALESCE(LastName, FirstName) as Name FROM Sales.Customer
 
 ### DATEDIFF
 
-The `DATEDIFF` function returns the difference between two given date/time values. The difference is given in the specified unit.
+The `DATEDIFF` function returns the difference between two given `DATETIME` expressions. The difference is given in the specified unit.
 
 #### Syntax
 
@@ -683,20 +683,31 @@ DATEDIFF ( unit , startdate_expression, enddate_expression [, timezone ] )
 
 ##### unit
 
-`unit` specifies the unit of the date/time value to retrieve. This can be one of the following:
-`YEAR`, `QUARTER`, `MONTH`, `DAY`, `WEEK`, `HOUR`, `MINUTE`, `SECOND` or `MILISECOND`. For more information on date/time values, see the [Example](#oql-datepart-example) section in *DATEPART*.
+`unit` specifies the unit of the `DATETIME` value to retrieve. This can be one of the following:
+
+* `YEAR`,
+* `QUARTER`,
+* `MONTH`,
+* `DAY`,
+* `WEEK`,
+* `HOUR`,
+* `MINUTE`,
+* `SECOND`
+* `MILLISECOND`.
+        
+For more information on `DATETIME` values, see the [example section under *DATEPART*](#oql-datepart-example), below.
 
 ##### startdate_expression
 
-`startdate_expression` specifies the start date of the period being calculated. The expression should resolve to a `DATETIME` value, string representations of `DATETIME` are accepted.
+`startdate_expression` specifies the start date of the period being calculated. The expression should resolve to a `DATETIME` value. String representations of `DATETIME` are accepted.
 
 ##### enddate_expression
 
-`enddate_expression` specifies the end date of the period being calculated. The expression should resolve to a `DATETIME` value, string representations of `DATETIME` are accepted.
+`enddate_expression` specifies the end date of the period being calculated. The expression should resolve to a `DATETIME` value. String representations of `DATETIME` are accepted.
 
 ##### timezone
 
-`timezone` specifies the time zone to use for the retrieval. This parameter is optional and defaults to the local time zone. It should be a string literal containing an IANA time zone. GMT offset time zones are not supported.
+`timezone` specifies the time zone to use for the retrieval. This parameter is optional and defaults to the local time zone. It should be a string literal containing an [IANA time zone](https://www.iana.org/time-zones). GMT offset time zones are not supported.
 
 #### Examples
 
@@ -707,18 +718,18 @@ SELECT * FROM Sales.Period
 ```
 
 | ID | Start               | End                 | Revenue |                                                        
-|:---|---------------------|---------------------|---------|
+|:---|---------------------|---------------------|--------:|
 | -  | 2024-05-02 00:00:00 | 2025-07-05 00:00:00 | 28      |
 | -  | 2024-05-02 00:00:00 | 2024-06-02 15:12:45 | 10      |
 
-We can use `DATEDIFF` to get the time interval between two dates:
+You can use `DATEDIFF` to get the time interval between two dates:
 
 ```sql
 SELECT DATEDIFF(MONTH , End, Start ) as difference FROM Sales.Period
 ```
 
 | difference |                                                        
-|------------|
+|-----------:|
 | 14         |
 | 1          |
 
@@ -729,7 +740,7 @@ SELECT Revenue : DATEDIFF(MONTH, End, Start ) as avg_revenue FROM Sales.Period
 ```
 
 | avg_revenue |                                                        
-|-------------|
+|------------:|
 | 2           |
 | 10          |
 
@@ -739,7 +750,7 @@ The way the difference is calculated depends on the database. The `YEAR` differe
 
 ### DATEPART
 
-The `DATEPART` function retrieves a specified element from a date/time values. The return type is `INTEGER`.
+The `DATEPART` function retrieves a specified element from `DATETIME` values. The return type is `INTEGER`.
 
 #### Syntax
 
@@ -751,7 +762,7 @@ DATEPART ( datepart , date_expression [, timezone ] )
 
 ##### datepart
 
-`datepart` specifies the part of the date/time value to retrieve. For possible values, see the [Example](#oql-datepart-example) below.
+`datepart` specifies the part of the `DATETIME` value to retrieve. For possible values, see the [Example](#oql-datepart-example) below.
 
 ##### date_expression
 
@@ -768,16 +779,16 @@ DATEPART ( datepart , date_expression [, timezone ] )
 | `YEAR`       |                                                  | 2005                                        |
 | `QUARTER`    | 1, 2, 3 or 4                                     | 3                                           |
 | `MONTH`      | 1 to 12                                          | 7                                           |
-| `DAYOFYEAR`  | 1 to 366                                         |                                             |
+| `DAYOFYEAR`  | 1 to 366                                         | 182                                         |
 | `DAY`        | 1 to 31                                          | 5                                           |
-| `WEEK`       | 1 to 53 (depends on the database implementation) |                                             |
+| `WEEK`       | 1 to 53 (depends on the database implementation) | 26 (using defaults for the US)              |
 | `WEEKDAY`    | 1 to 7 (1 = Sunday, 7 = Saturday)                | 6                                           |
 | `HOUR`       | 0 to 23                                          | 16                                          |
 | `MINUTE`     | 0 to 59                                          | 34                                          |
 | `SECOND`     | 0 to 59                                          | 20                                          |
 | `MILISECOND` | 0 to 999                                         | 356                                         |
 
-`DATEPART` can be used to filter dates on specific components. The query below returns all end dates that are in the year "2025".
+`DATEPART` can be used to filter dates on specific components. The following query returns all end dates that are in the year "2025".
 
 ```sql
 SELECT End FROM Sales.Period WHERE DATEPART(YEAR, End) = 2025
@@ -791,7 +802,7 @@ SELECT End FROM Sales.Period WHERE DATEPART(YEAR, End) = 2025
 
 #### Description
 
-The `LENGTH` function returns the length in characters of a string value.
+The `LENGTH` function returns the length in characters of the result of a string expression.
 
 #### Syntax
 
@@ -816,14 +827,14 @@ SELECT * FROM Sales.Reports
 | -  | "Performance is satisfactory" |
 | -  | "Order has been completed"    |
 
-Their length can be calculated with in an extra column
+You can return an extra column containing the calculated length of the Text as follows:
 
 ```sql
 SELECT Text, LENGTH(Text) as text_length FROM Sales.Reports
 ```
 
 | Text                          | text_length |                                                         
-|-------------------------------|-------------|
+|-------------------------------|------------:|
 | "Performance is satisfactory" | 27          |
 | "Order has been completed"    | 24          |
 
@@ -845,7 +856,9 @@ LOWER ( expression )
 
 #### Example
 
-The function is useful to enforce consistent case for all strings, especially for comparisons. The query below would return no results in case-sensitive databases, as there is only a "Doe":
+The function is useful to enforce consistent case for all strings, especially for comparisons.
+
+For example, the following query would return no results in case-sensitive databases, as there is only a "Doe":
 
 ```sql
 SELECT * FROM Sales.Customer WHERE LastName = 'doe'
@@ -861,13 +874,23 @@ SELECT * FROM Sales.Customer WHERE LOWER(LastName) = 'doe'
 |----|----------|-----------|
 | -  | Doe      | John      |
 
-Note that this query can no longer take advantage of an index for `LastName` for comparison, resulting in a performance decrease.
+{{% alert color="info" %}}
+This query can no longer take advantage of an index for `LastName` for comparison, resulting in a performance decrease.
+{{% /alert %}}
 
-### RANGEBEGIN
+### Ranges in Datasets
 
-Extracts the initial value of a range parameter. Range parameters defined only in [datasets](/refguide/data-sets/). `RANGEBEGIN` and [RANGEEND](#oql-rangeend) are OQL functions that can only be used with a parameter as input.
+{{% alert color="info" %}}
+Range parameters are defined only in [datasets](/refguide/data-sets/).
+{{% /alert %}}
 
-#### Syntax
+`RANGEBEGIN` and `RANGEEND` can only be used with a [parameter](/refguide/oql-expressions-new/#parameters) as input.
+
+#### RANGEBEGIN
+
+Extracts the initial value of a range parameter. 
+
+##### Syntax
 
 ```sql
 RANGEBEGIN ( $range )
@@ -875,7 +898,7 @@ RANGEBEGIN ( $range )
 
 `$range` specifies the range parameter.
 
-#### Example
+##### Example(#oql-rangebegin-example)
 
 Assume `$now` is "2024-06-15 00:00:00" and there are 3 range parameters defined in a dataset:
 
@@ -884,7 +907,7 @@ Assume `$now` is "2024-06-15 00:00:00" and there are 3 range parameters defined 
 * `$range_past` with end value `$now`
 
 | ID | Start               | End                 | Revenue |                                                        
-|:---|---------------------|---------------------|---------|
+|:---|---------------------|---------------------|--------:|
 | -  | 2024-05-02 00:00:00 | 2025-07-05 00:00:00 | 28      |
 | -  | 2024-05-02 00:00:00 | 2024-06-02 15:12:45 | 10      |
 
@@ -896,14 +919,14 @@ WHERE End > RANGEBEGIN($range_future)
 ```
 
 | End                 | Revenue |
-|---------------------|---------|
+|---------------------|--------:|
 | 2025-07-05 00:00:00 | 28      |
 
-### RANGEEND{#oql-rangeend}
+#### RANGEEND{#oql-rangeend}
 
 Extracts the end value of a range parameter.
 
-#### Syntax
+##### Syntax
 
 ```sql
 RANGEEND ( $range )
@@ -911,9 +934,9 @@ RANGEEND ( $range )
 
 `$range` specifies the range parameter.
 
-#### Example
+##### Example
 
-This query uses `$range` to retrieve all periods that end before the end value of `$range`:
+Using the same data as in the [RANGEBEGIN example](#oql-rangebegin-example), this query uses `$range` to retrieve all periods that end before the end value of `$range`:
 
 ```sql
 SELECT End, Revenue FROM Sales.Period
@@ -921,7 +944,7 @@ WHERE End < RANGEEND($range)
 ```
 
 | End                 | Revenue |
-|---------------------|---------|
+|---------------------|--------:|
 | 2024-06-02 15:12:45 | 10      |
 
 This query uses `$range_past` to retrieve all periods that ended before the end date of `$range_past`:
@@ -932,12 +955,12 @@ WHERE End < RANGEEND($range_past)
 ```
 
 | End                 | Revenue |
-|---------------------|---------|
+|---------------------|--------:|
 | 2024-06-02 15:12:45 | 10      |
 
 ### REPLACE
 
-The REPLACE function takes an input string and replaces all occurrences within it of a specified string value with another string value. The function supports limited and unlimited `STRING` types. Arguments of other types are not supported.
+The REPLACE function takes an input string and replaces all occurrences of a specified string within it with another string. The function supports limited and unlimited `STRING` types. Arguments of other types are not supported.
 
 #### Syntax
 
@@ -955,11 +978,13 @@ REPLACE ( expression, pattern, replacement )
 
 #### Database-specific limitations
 
-The behavior of the `REPLACE` function relies on underlying database implementation, which may vary by database vendor. For most supported databases, default behavior of `REPLACE` is case-sensitive. That means that `REPLACE('ABC abc', 'abc', 'xyz')` results in `'ABC xyz'`. In some configurations, the behavior is case-insensitive. For example, for SQL Server, case sensitivity of `REPLACE` depends on used collation.
+The behavior of the `REPLACE` function relies on underlying database implementation, which varies by database vendor. For most supported databases, the default behavior of `REPLACE` is case-sensitive. That means that `REPLACE('ABC abc', 'abc', 'xyz')` results in `'ABC xyz'`. In some configurations, the behavior is case-insensitive. For example, for SQL Server, case sensitivity of `REPLACE` depends on which collation is used.
 
 #### Examples
 
-The function is useful when formatting strings in a consistent manner. A space delimited list can be converted to one with commas to be used for csv. Assume we have an entity `Sales.Raw` that contains a `STRING` field:
+The function is useful if you want to format strings in a consistent manner. 
+
+For example, a space delimited list can be converted to one with commas to be used for csv. Assume we have an entity `Sales.Raw` that contains a `STRING` field:
 
 ```sql
 SELECT * FROM Sales.Raw
@@ -970,7 +995,7 @@ SELECT * FROM Sales.Raw
 | -  | "6 D10 machinery" |
 | -  | "1 A15 tools"     |
 
-The text format is converted with `REPLACE`:
+The text can be converted with `REPLACE` as follows:
 
 ```sql
 SELECT REPLACE(Import, ' ', ',') FROM Sales.Raw
@@ -999,35 +1024,34 @@ ROUND ( expression , length )
 
 ##### length
 
-`length` specifies the amount of decimals to which the `expression` must be rounded. Must be of numeric type. If the `length` is `NULL`, the function result will be `NULL`.
+`length` specifies the number of decimal places to which the `expression` must be rounded. It must be of a numeric type. If the `length` is `NULL`, the function result will be `NULL`.
 
 #### Examples
 
-The function can be used to check equality of decimal values. In this query a small difference between decimal columns will return no results:
+The function can be used to check the equality of decimal values. In this query a small difference between decimal columns means that no results are returned:
 
 ```sql
 SELECT LastName, Number FROM Sales.Order WHERE Price = 1.50000001
 ```
 
-It can be modified with the use of `ROUND` to only compare two fraction digits :
+You can modify it with the use of `ROUND` to only compare to two decimal places:
 
 ```sql
 SELECT LastName, Price FROM Sales.Order WHERE ROUND(Price, 2) = ROUND(1.50000001, 2)
 ```
 
 | LastName | Price |                                                         
-|----------|-------|
+|----------|------:|
 | Doe      | 1.5   |
 
-Operations with decimals like division can produce large number of digits after the decimal point, `ROUND` can be used to 
-reduce the precision when that is not necessary:
+Operations like division with `DECIMAL` data type can produce a large number of digits after the decimal point. `ROUND` can be used to reduce the precision when these are not needed:
 
 ```sql
 SELECT ROUND((Price : 7), 2) as RoundedPrice, Price : 7 FROM Sales.Order
 ```
 
 | RoundedPrice | Price      |                                                         
-|--------------|------------|
+|-------------:|-----------:|
 | 0.21         | 0.21428571 |
 | 0.33         | 3.33333333 |
 | 1.17         | 1.17142857 |

@@ -21,8 +21,6 @@ Due to TinyMCE changing its public license, we transitioned to the Quill V2 libr
 
 The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget provides the user with an WYSIWYG editor, where the user can enter and edit rich-text content. The widget automatically converts the rich-text content into a string in HTML format, which can be stored in an attribute of an entity.
 
-{{< figure src="/attachments/appstore/widgets/rich-text/example.png" alt="Example" >}}
-
 ### Features
 
 * Allows the user to enter and format text in a WYSIWYG editor
@@ -79,22 +77,10 @@ To configure this widget, follow these steps:
             * | undo redo | bold italic underline strikethrough | superscript subscript | removeformat | bullist numlist | blockquote | outdent indent | ltr rtl | alignleft aligncenter alignright alignjustify | fontfamily fontsize forecolor backcolor | image link media | blocks anchor | cut copy paste pastetext | codesample preview code | emoticons insertdatetime searchreplace | selectall fullscreen | help |
         * **Custom** – allows you to make your own menubar selection based on the **full** selection list
     * **Mode** - defines transition mode used for displaying out of screen toolbar when the three dots [...] button being clicked
-        * **Sliding** – the toolbar appears as a fixed toolbar below the first toolbar when the overflow icon drawer is clicked:
-
-            {{< figure src="/attachments/appstore/widgets/rich-text/sliding.gif" alt="Example" >}}
-        
-        * **Floating** – the toolbar appears under the toolbar overflow icon in a floating shelf format when the overflow icon drawer is clicked:
-       
-            {{< figure src="/attachments/appstore/widgets/rich-text/floating.png" alt="Example" >}}
-        
-        * **Scrolling** – the overflow toolbar buttons will remain on the toolbar. To access the overflow toolbar buttons, scroll the toolbar. This mode is usually better on touch screen devices:
-        
-            {{< figure src="/attachments/appstore/widgets/rich-text/scroll.png" alt="Example" >}}
-        
-        * **Wrap** – the overflow toolbar buttons will be shown on one or more toolbars below the primary toolbar:
-        
-            {{< figure src="/attachments/appstore/widgets/rich-text/wrap.png" alt="Example" >}}
-    
+        * **Sliding** – the toolbar appears as a fixed toolbar below the first toolbar when the overflow icon drawer is clicked        
+        * **Floating** – the toolbar appears under the toolbar overflow icon in a floating shelf format when the overflow icon drawer is clicked        
+        * **Scrolling** – the overflow toolbar buttons will remain on the toolbar. To access the overflow toolbar buttons, scroll the toolbar. This mode is usually better on touch screen devices
+        * **Wrap** – the overflow toolbar buttons will be shown on one or more toolbars below the primary toolbar    
     * **Location** 
 
 * **Editable** – determines when user can edit content in the editor and when it is read-only

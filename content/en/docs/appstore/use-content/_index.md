@@ -15,7 +15,7 @@ aliases:
 
 ## Introduction
 
-This how-to covers the basics of accessing the Marketplace from Studio Pro and provides examples of how to add a widget and a module to your application.
+This document covers the basics of accessing the Marketplace from Studio Pro and provides examples of how to add a widget and a module to your application.
 
 This how-to teaches you how to do the following:
 

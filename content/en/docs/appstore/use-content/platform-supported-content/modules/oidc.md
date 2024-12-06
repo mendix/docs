@@ -41,9 +41,7 @@ Alternatives to using OIDC SSO for managing single sign-on are:
 * **Works with Responsive web app and PWA:** OIDC SSO module supports both responsive web apps and progressive web apps (PWA), ensuring seamless functionality in both offline and online modes for PWAs. If you are building a native mobile app, you need to use [Mobile SSO](https://marketplace.mendix.com/link/component/223516) module for your app. For more information, see [Building a Responsive Web App](/quickstarts/responsive-web-app/), [Progressive Web App](/refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/), and [Native Mobile](/refguide/mobile/introduction-to-mobile-technologies/native-mobile/).
 * **API security:** If your app exposes APIs, such as an OData API, it is best security practice to use OAuth Access Tokens (also known as bearer tokens or JWT tokens) instead of Basic Authentication or API keys. You can use the OIDC SSO module to validate these Access Tokens and check if they have right authorization (i.e., the right OAuth scopes) for accessing your API endpoint. For example, you may want to allow a specific user or client to perform a GET (read) request but not a POST or PATCH (write) request. The OIDC module supports processing Access Tokens obtained via both SSO and the OAuth client credential grant.
 
-### Features and Limitations
-
-#### Features
+### Features
 
 The OIDC SSO module supports the following features:
 
@@ -76,7 +74,24 @@ The OIDC SSO module supports the following features:
 
     * Built primarily in standard Mendix components (minimal Java) to allow for easy customization and ongoing development.
 
-#### OIDC Protocol Adherence
+### Limitations
+
+The OIDC SSO module does not yet support the following:
+
+* Requesting claims via the 'claims' query parameter, as per OIDC specs
+* Other client authentication methods such as using asymmetric keys (“private_key_jwt”)
+* Delegating authorization using OAuth-scopes; this currently requires a custom microflow for parsing of Access Tokens
+* Mobile apps
+* Controlling the configuration using constants requires an app restart
+
+The OIDC SSO module also has the following limitations:
+
+* If an end-user accesses your app via a deeplink, the end-user is not already signed in, and you have configured multiple IdPs, only one IdP can be used to sign the end-user in.
+* If you use both the [SAML](/appstore/modules/saml/) module and the OIDC SSO module in the same app, each end-user can only authenticate using one IdP.
+* If OIDC SSO is used for API security, it does not validate the value of the "aud" claim, as suggested by [RFC 9068](https://datatracker.ietf.org/doc/html/rfc9068#section-4). Customers should prevent cross-JWT confusion by using unique scope values.
+* The Admin screens have separate tabs for configuring clients that use the Client Credential grant for API security and for situations where your app is used for both SSO and API security. If the first version of your app uses only OIDC SSO for API security and you want to introduce SSO in a later version, the IdP configuration needs to be re-entered on the other tab.
+
+### OIDC Protocol Adherence
 
 For readers with more knowledge of the OAuth and OIDC protocol:
 
@@ -97,23 +112,6 @@ For readers with more knowledge of the OAuth and OIDC protocol:
 * Supports response_mode=query and response_mode=form_post
 * Helps you implement an OAuth Resource Server that receives an Access Token which is obtained by a client via either Authorization Code grant or Client Credential grant.
 * When the OIDC SSO module secures an API with the Client Credential grant, the `sub` as claim (which contains either user-id or client-id) should always be available in the access token as per [RFC 9068](https://datatracker.ietf.org/doc/html/rfc9068#name-data-structure).  If it is not included, the module will look for `client_id`. To be compliant with Microsoft's Entra ID and Okta, it will use `app_id` or `cid` as alternatives to `client_id`. Any of these client identifiers are used to create a user in the Mendix application, allowing the Mendix security model to apply not only to users (human identities) but also to clients (machine identities).
-
-#### Limitations
-
-The OIDC SSO module does not yet support the following:
-
-* Requesting claims via the 'claims' query parameter, as per OIDC specs
-* Other client authentication methods such as using asymmetric keys (“private_key_jwt”)
-* Delegating authorization using OAuth-scopes; this currently requires a custom microflow for parsing of Access Tokens
-* Mobile apps
-* Controlling the configuration using constants requires an app restart
-
-The OIDC SSO module also has the following limitations:
-
-* If an end-user accesses your app via a deeplink, the end-user is not already signed in, and you have configured multiple IdPs, only one IdP can be used to sign the end-user in.
-* If you use both the [SAML](/appstore/modules/saml/) module and the OIDC SSO module in the same app, each end-user can only authenticate using one IdP.
-* If OIDC SSO is used for API security, it does not validate the value of the "aud" claim, as suggested by [RFC 9068](https://datatracker.ietf.org/doc/html/rfc9068#section-4). Customers should prevent cross-JWT confusion by using unique scope values.
-* The Admin screens have separate tabs for configuring clients that use the Client Credential grant for API security and for situations where your app is used for both SSO and API security. If the first version of your app uses only OIDC SSO for API security and you want to introduce SSO in a later version, the IdP configuration needs to be re-entered on the other tab.
 
 ## Dependencies
 
@@ -875,7 +873,7 @@ A standard logout action will end an end-user's Mendix session, but will not end
 
 To do this, add a menu item or button for your end-users that calls the nanoflow `ACT_Logout`.
 
-### Using ACR to Request Authentication Method
+### Using ACR for Authentication Method Request
 
 By default, the OIDC SSO module does not care how users are signed in at your IdP, that is left to the discretion of the IdP. In some cases your IdP may support different methods for end-users to be authenticated and your app may want to indicate a preference.
 

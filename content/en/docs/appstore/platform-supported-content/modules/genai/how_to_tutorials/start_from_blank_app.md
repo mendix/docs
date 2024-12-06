@@ -180,7 +180,7 @@ Congratulations! Your chatbot is ready to use.
 
 ### Inspirational Material
 
-- The [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) is a template that demonstrates over 10 use cases of how GenAI can be implemented.
+- The [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) is a showcase app that demonstrates over 10 use cases of how GenAI can be implemented.
 - The [Support Assistant Starter App](https://marketplace.mendix.com/link/component/231035) is a template that incorporates [**RAG (Retrieval-Augmented Generation)**](/appstore/modules/genai/rag/), [**function calling (ReAct Pattern)**](/appstore/modules/genai/function-calling/), and knowledge base integration. For more details on this use case, you can refer to the blog post [How to Build Smarter Apps with Function Calling & Generative AI](https://www.mendix.com/blog/building-smarter-apps-with-function-calling-and-generative-ai/) which provides an in-depth exploration of the topic.
 
 ### Prompt Engineering Support 

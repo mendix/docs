@@ -1,5 +1,5 @@
 ---
-title: "How to build a Smart App from a Blank GenAI App"
+title: "How to build a Smart App from the Blank GenAI App"
 url: /appstore/modules/genai/genai-howto-blankapp/
 linktitle: "How to build a Smart App from a Blank GenAI App"
 weight: 10
@@ -8,7 +8,7 @@ description: "A tutorial that describes how to get started building a smart app 
 
 ## Introduction
 
-This guide aims to help you step out of your comfort zone and begin building a smart app from scratch. If you find this process challenging, please refer to the documentation on [How to Build a Smart App from a Blank GenAI App](/appstore/modules/genai/genai-howto-starterapp/) for additional support.
+This guide aims to help you step out of your comfort zone and begin building a smart app from scratch. If you find this process challenging, please refer to the documentation on [How to build a Smart App using the Starter Template](/appstore/modules/genai/genai-howto-starterapp/) for additional support.
 
 ### Pre-requisites
 
@@ -47,7 +47,7 @@ The [Blank GenAI App Template](https://marketplace.mendix.com/link/component/227
 
 Selecting the infrastructure for integrating GenAI into your Mendix application is the first step. Depending on your use case and preferences, you can choose from the following options:
 
-- [OpenAI](/appstore/modules/genai/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472?_gl=1*1gbywo4*_gcl_au*NjUwMzI0NzA0LjE3MzI2MjkxMTI.) enables seamless integrations, and it supports OpenAI’s platform and Azure’s OpenAI service.
+- [OpenAI](/appstore/modules/genai/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472?_gl=1*1gbywo4*_gcl_au*NjUwMzI0NzA0LjE3MzI2MjkxMTI.) supports OpenAI’s platform and Azure’s OpenAI service.
 
 {{% alert color="info" %}}
 To start, you can sign up for a free trial with OpenAI and receive credits valid for three months from the account creation date. For more details, see the [OpenAI API reference](https://platform.openai.com/docs/api-reference/authentication).
@@ -117,19 +117,19 @@ You may encounter an error about allowed roles. To resolve this, go to the page 
 
 #### OpenAI Configuration
 
-Follow these steps to configure OpenAI for your application:
+Follow these steps to configure OpenAI for your application and for more background information, look at the [OpenAI Configuration](/appstore/modules/genai/openai/#configuration) documentation:
 
 1. **Run the application locally.**
 
 2. **Configure OpenAI Settings**:
    - In the chatbot-like application interface, go to **Settings** icon, and find the **OpenAI Configuration**.
    - Click **New** and provide the following details:
-     - **Display Name**: A reference name to identify this configuration (e.g., "ConversationalUI").
+     - **Display Name**: A reference name to identify this configuration (e.g., "My OpenAI Configuration").
      - **API Type**: Choose between **OpenAI** or **Azure OpenAI**.
      - **Endpoint**: Enter the endpoint URL for your selected API type.
      - **Token**: Provide the API key for authentication.
      - If using Azure OpenAI, add:
-       - **Deployment Type**: Specify the deployed model (e.g., `gpt-4o`, `gpt-3.5-turbo`).
+       - **Deployment Name**: Specify the deployed model (e.g., `gpt-4o`, `gpt-3.5-turbo`).
        - **API Version**: Provide the version of the API you are using (e.g., `2024-06-01`, `2024-10-21`).
 
    - Click **Save** to store your configuration.
@@ -166,15 +166,15 @@ If you encounter any issues while using the Amazon Bedrock connector, check the 
 
 Before starting step 4, you should have set the OpenAI or Bedrock configuration.
 
-{{% alert color="warning" %}}
- If an error occurs, check the **Mendix Console** in Studio Pro for details to help resolve the issue.
-{{% /alert %}}
-
 4. **Test the Chatbot**:
    - Navigate to the **Home** icon to open the chatbot interface.
    - Start interacting with your chatbot by typing in the chat box.
 
 Congratulations! Your chatbot is ready to use.
+
+{{% alert color="warning" %}}
+ If an error occurs, check the **Mendix Console** in Studio Pro for details to help resolve the issue.
+{{% /alert %}}
 
 ## Support Material to continue your GenAI Journey
 

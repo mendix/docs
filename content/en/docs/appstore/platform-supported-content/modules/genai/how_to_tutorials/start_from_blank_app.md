@@ -90,6 +90,8 @@ To tailor your application's behavior, you can customize the [**system prompt**]
 
 ##### Change the System Prompt:
 
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-blankapp/blank_genai_mf.jpg" >}}
+
 1. Open the copied `ChatContext_ChatWithHistory_ActionMicroflow_OpenAI` or `ChatContext_ChatWithHistory_ActionMicroflow_Bedrock` microflow from your `MyFirstBot` module.
 2. Locate the `Create Request from ChatContext` action.
 3. Inside this action, find the `SystemPrompt` parameter, which has a default value of `"You are an assistant"`.

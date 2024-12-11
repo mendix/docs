@@ -260,26 +260,6 @@ To connect your App with your IdP, you need to configure both your IdP (as descr
     * `https://<your-app-url>/oauth/v2/callback`
     * `makeitnative://<your-app-url>/oauth/callback`
 
-#### Microsoft Entra ID Provider Configuration for APIs{#azure-portal}
-
-This section gives some guidance for doing the necessary configurations at your entra ID provider to obtain access tokens containing the right authorization claims to secure your APIs.
-
-If you do not set the access token up correctly, you will get access tokens containing default `aud` (audience) claims. The default audience is the Microsoft Graph API and so these access tokens cannot be validated by your API.
-
-To get the Microsoft Identity Platform to issue access tokens you can pass to your API, you need to set up a custom scope in the App Registration’s **Expose an API** tab, and request that scope when you acquire the tokens. To do this, follow the steps below:
-
-1. Open the **Expose an API** tab in the **App Registration** page of the Azure Portal.
-1. In the **Expose an API** tab, set up a custom scope.
-    The scope will be prefixed with your `Application ID URI`.
-1. In the **API permissions** tab, assign the created scope to the application.
-1. In the **App roles** tab, add the user roles you want to authorize using either the user role name, or the user role UUID. This adds the configured user roles to the roles claim in the access token.
-
-By adding a custom claim to the App Registration’s Expose an API tab and requesting that scope when we acquire tokens, the Microsoft Identity Platform will now generate access tokens that can be validated using the `/jwks` URI.
-
-#### Amazon Cognito Provider Configuration
-
-For information about configuring Amazon Cognito for the OIDC SSO module, see [Amazon Cognito: Configuring Amazon Cognito](/appstore/modules/aws/amazon-cognito/#cognito-provider).
-
 ### Runtime Configuration of Your IdP at Your App {#runtime-idp-app}
 
 This section describes how you can configure your IdP in your Mendix app using the Admin UIs provided by the OIDC SSO module. These screens offer below tabs:
@@ -357,24 +337,7 @@ Use this simpler configuration screen if you are configuring an IdP that is only
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/client-credential-grant.png" class="no-border" >}}
 
-##### Microsoft Entra ID Client Configuration for APIs {#azure}
-
-For Entra ID access to APIs through an access token, in addition to the configuration described above, we can request the scope [configured in Azure portal](#azure-portal), described above, from the OIDC SSO UI configuration.
-
-1. Start your app, log in as an administrator, for example *demo_administrator*, and access the **IdPs for API security only** Setup page.
-1. Add the custom scope which you [configured in Azure](#azure-portal) in **Available scopes**.
-1. Save the configuration.
-1. Edit the Entra ID configuration and add the custom scope to **Selected scopes**.
-
-Now, you can acquire tokens which can be validated using JWKS URI.
-
-##### Amazon Cognito Client Configuration
-
-For more information about configuring your app for OIDC with Amazon Cognito, see [Amazon Cognito: Configuring the Required Settings in Your Mendix App](/appstore/modules/aws/amazon-cognito/#cognito).
-
 ### Automated Deploy-time Configuration of Your IdP at Your App{#deploytime-idp-configuration}
-
-~~ #### Automated Deploy-time SSO Configuration{#deploy-time}~~
 
 In version 2.3.0 and above, you can configure the OIDC SSO module using app [constants](/refguide/constants/) rather than using the app administration pages. As the developer of an app using OIDC SSO, you can set default values. These values can be overridden using the app constants.
 
@@ -398,7 +361,7 @@ The following error messages will be displayed when you try to edit/delete.
 
 #### Customizing Default Deploy-time Configuration
 
-By default, the `Custom_CreateIDPConfiguration` microflow in the **MOVE_ME** folder of the OIDC module uses the `Default_CreateIDPConfiguration` microflow. Review the microflow `Custom_CreateIDPConfiguration` in the **MOVE_ME** folder. This is where you can change the default IdP configuration at Deploytime Configuration.
+By default, the `Custom_CreateIDPConfiguration` microflow in the **MOVE_ME** folder of the OIDC module uses the `Default_CreateIDPConfiguration` microflow. Review the microflow `Custom_CreateIDPConfiguration` in the **MOVE_ME** folder. This is where you can change the default IdP configuration by replacing `Default_CreateIDPConfiguration` with your own custom microflow at deploy-time configuration.
 
 In this configuration, you have several options to customize the Identity Provider (IdP) settings. Firstly, you can configure the IdP using constants. Additionally, the OIDC module supports further customization of the IdP configuration through the implementation of a custom microflow called `Custom_CreateIdPConfiguration`. This microflow returns a list of configured IdPs, which the OIDC module then uses to generate the necessary SSO configurations for multiple IdPs.
 
@@ -470,6 +433,43 @@ Example: `OIDC.Default_SAM_TokenProcessing_CustomATP`
 {{% alert color="warning" %}}
 When the `IsClientGrantOnly` constant is set to *true*, the OIDC SSO module considers the configuration as Client Credential grant configuration.
 {{% /alert %}}
+
+### IdP Configuration for Microsoft Entra ID and Amazon Cognito
+
+The section below shows you how to configure both your IdP and your Mendix application for the Entra ID and Amazon Cognito IdPs.
+
+#### Configuring Microsoft Entra ID
+
+##### Microsoft Entra ID Provider Configuration for APIs{#azure-portal}
+
+This section gives some guidance for doing the necessary configurations at your entra ID provider to obtain access tokens containing the right authorization claims to secure your APIs.
+
+If you do not set the access token up correctly, you will get access tokens containing default `aud` (audience) claims. The default audience is the Microsoft Graph API and so these access tokens cannot be validated by your API.
+
+To get the Microsoft Identity Platform to issue access tokens you can pass to your API, you need to set up a custom scope in the App Registration’s **Expose an API** tab, and request that scope when you acquire the tokens. To do this, follow the steps below:
+
+1. Open the **Expose an API** tab in the **App Registration** page of the Azure Portal.
+1. In the **Expose an API** tab, set up a custom scope.
+    The scope will be prefixed with your `Application ID URI`.
+1. In the **API permissions** tab, assign the created scope to the application.
+1. In the **App roles** tab, add the user roles you want to authorize using either the user role name, or the user role UUID. This adds the configured user roles to the roles claim in the access token.
+
+By adding a custom claim to the App Registration’s Expose an API tab and requesting that scope when we acquire tokens, the Microsoft Identity Platform will now generate access tokens that can be validated using the `/jwks` URI.
+
+##### Microsoft Entra ID Client Configuration for APIs {#azure}
+
+For Entra ID access to APIs through an access token, in addition to the configuration described above, we can request the scope [configured in Azure portal](#azure-portal), described above, from the OIDC SSO UI configuration.
+
+1. Start your app, log in as an administrator, for example *demo_administrator*, and access the **IdPs for API security only** Setup page.
+1. Add the custom scope which you [configured in Azure](#azure-portal) in **Available scopes**.
+1. Save the configuration.
+1. Edit the Entra ID configuration and add the custom scope to **Selected scopes**.
+
+Now, you can acquire tokens which can be validated using JWKS URI.
+
+#### Configuring Amazon Cognito
+
+To configure your app at Amazon, see the [Configuring Amazon Cognito](appstore/modules/aws/amazon-cognito/#cognito-provider) section and configuring at Mendix apps, see the [Configuring the Required Settings in Your Mendix App](https://docs.mendix.com/appstore/modules/aws/amazon-cognito/#cognito) section of the *Amazon Cognito.*
 
 ## User Provisioning
 

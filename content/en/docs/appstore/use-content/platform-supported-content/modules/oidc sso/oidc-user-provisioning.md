@@ -12,47 +12,9 @@ Initially your app will not have any end-users. The OIDC module provides so-call
 
 By default, end-users are provisioned using the `Account` object in the Administration module. If you need to use a custom user entity you can do this via [Custom User Provisioning Using a Microflow](#custom-provisioning-mf) or (in version 3.0.0 and above) [Deploy-time User Provisioning Configuration](#custom-provisioning-dep) or [Custom User Provisioning at Runtime](#custom-provisioning-rt).
 
-## Configuring User Provisioning for Version 2.4.0 and Below
-
-### Default User Provisioning
-
-By default, the `CUSTOM_UserProvisioning` microflow in the **USE_ME** > **1. Configuration** folder of the OIDC module uses the `OIDC_CustomUserParsing_Standard` microflow. This applies the following mapping:
-
-| ID-token Provided by your IdP | Attribute of `Administration.Account` Object |
-| ----------------------------- | ----------------------------- |
-| sub                           | Name                          |
-| name                          | Fullname                      |
-| email                         | Email                         |
-
-{{% alert color="warning" %}}
-Do not change the `OIDC_CustomUserParsing_Standard` microflow. This may give problems if you upgrade to a newer version of the OIDC SSO module. Apply customizations to the `CUSTOM_UserProvisioning` microflow only.
-{{% /alert %}}
-
-### Custom User Provisioning{#custom-provisioning}
-
-If you create custom user entities as specializations of the `System.User` entity, you can store user information that is more extensive than is possible with the `System.User` or `Administration.Account` entities. You can use these specializations as target entities for end-user provisioning using one of the methods described below.
-
-If you connect multiple IdPs to your Mendix app, you can use separate custom user entities for each IdP, each with its own attribute mapping.
-
-### Custom User Provisioning Using a Microflow{#custom-provisioning-mf}
-
-{{% alert color="warning" %}}
-Since this feature is deprecated from the version 3.0.0 of the module, you can do the custom user provisioning at runtime or deploy-time. For more information, see the [Custom User Provisioning at Deploy-time](/appstore/modules/oidc/oidc-user-provisioning/#custom-provisioning-dep) and [Custom User Provisioning at Runtime](/appstore/modules/oidc/oidc-user-provisioning/#custom-provisioning-rt) sections below.
-{{% /alert %}}
-
-Review the microflow `CUSTOM_UserProvisioning` in the **USE_ME** > **1. Configuration** folder of the OIDC module. This is where you can change the way that end-users are provisioned in your app. The OpenID token is passed to the microflow as a parameter. Use this object to find an existing, or create a new, `System.User` object for the end-user. This is set as the return value of the microflow. You can find examples included in the **USE_ME** > **1. Configuration** > **User Provisioning Examples** folder.
-
-Make a single call from `CUSTOM_UserProvisioning` to your own module where you implement the provisioning flow you need. This way, it will be easy to install new versions of the OIDC SSO module over time without overwriting your custom provisioning.
-
-The OIDC SSO module supports multiple IdPs. Since each provider can provide user data in a different format, you may want to use multiple provisioning flows. The microflow should contain the prefix `OIDC_CustomUserParsing`. See the microflow `UserProvisioning_Sample` for an example and details on how to do this.
-
 ## Configuring User Provisioning for Version 3.0.0 and Above
 
-### Custom User Provisioning at Runtime{#custom-provisioning-rt}
-
-{{% alert color="info" %}}
-This feature is available in version 3.0.0 and above
-{{% /alert %}}
+### User Provisioning at Runtime{#custom-provisioning-rt}
 
 You can set up custom user provisioning once your app is running using the `OIDC.OIDC_Client_Overview` page that you set up for the administrator for the app in [Configuring Navigation](#configure-nav). You can set up custom user provisioning as follows:
 
@@ -77,26 +39,56 @@ You can set up custom user provisioning once your app is running using the `OIDC
     * You can map multiple **IdP Attribute** (claims) to a **Configured Entity Attribute** but you cannot map a new **IdP Attribute** to a **Configured Entity Attribute** if it is already mapped.
     * The **IdP Attribute** is one of the fixed claims supported by the OIDC SSO module.
     * IdP Attributes(Claims) cannot be of type enum, autonumber, or an association.
-    * The image below shows you the default attribute mapping for the configuration.
 
-        {{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/default_mapping.png" max-width=80% >}}
+6. Optionally, you can use the custom logic in the User Provisioning. In the **Custom UserProvisioning** field, select a microflow you want to run for custom user provisioning. For more information, see the [Customizing User Provisioning Using a Microflow at Runtime](#microflow-at-runtime) section below.
 
-6. Optionally, you can use the custom logic in the **User Provisioning**. In the **Custom UserProvisioning** field, select a microflow you want to run for custom user provisioning. The custom microflow name must begin with the string `UC_CustomProvisioning` and requires the following parameters:
-
-    1. **UserInfoParameter(UserCommons.UserInfoParam)**: A Mendix object containing user claims information through its associated objects. You can use this  parameter to retrieve user provisioning configuration information.
-    2. **User(System.User)**: A Mendix object representing the user to be provisioned. Ensure that the selected microflow matches this parameter signature.
-
-    The microflow must return a **System.User** object to ensure proper user provisioning and updates. It will be executed after user creation or update of user. If you have added a new microflow, you will need to refresh the module containing your microflow as described in the [Installing Mx Model Reflection](#mxmodelreflection). This selection can be blank if you do not want to add custom logic.
+    {{% alert color="info" %}}
+If you are using module version 3.2.0 and below, you will need to refresh the module containing your microflow as described in the [Installing Mx Model Reflection](/appstore/modules/oidc/#mxmodelreflection) and select the microflow in the **Custom UserProvisioning** field.
+    {{% /alert %}}
 
 7. Click **Save** to save the configuration.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/user commons.png" max-width=80% >}}
-
-### Custom User Provisioning at Deploy-time{#custom-provisioning-dep}
+By default, users are provisioned by [Default User Provisioning Configuration](#default). Optionally, you can customize user provisioning by [Modifying default Attribute Mapping](#modify-default), [Customizing Default User Provisioning Configuration](#custom_user_entity) or [Customizing User Provisioning Using a Microflow at Runtime](#microflow-at-runtime).
 
 {{% alert color="info" %}}
-This feature is available in version 3.0.0 and above
+If you connect multiple IdPs to your Mendix app, you can use separate custom user entities for each IdP, each with its own attribute mapping.
 {{% /alert %}}
+
+#### Default User Provisioning Configuration{#default}
+
+By default you get the User Provisioning configuration in the **Provisioning** tab. In that tab you get the Custom user Entity as `Administration.Account`, principle attribute as `name`, and default attribute mapping.
+
+{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/default-provisioning.png" max-width=80% >}}
+
+##### Modifying Default Attribute Mapping{#modify-default}
+
+If you want to change the default **IdP Attribute** or **Configured Entity Attribute**, you can edit the mapping in the **Attribute Mapping** section of the **Provisioning** tab. 
+
+#### Customizing Default User Provisioning Configuration{#custom_user_entity}
+
+If you want to use your custom user entity which is specialization of the `System.User` entity to store user information, select it in the **Custom user Entity (extension of System.User)** field by replacing the `Administration.Account` entity.
+
+{{% alert color="info" %}}
+When you replace the custom user entity which is `Administration.Account`, the attribute mapping associated to the user provisioning will be deleted on confirmation.
+{{% /alert %}}
+
+{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/user commons.png" max-width=80% >}}
+
+#### Customizing User Provisioning Using a Microflow at Runtime{#microflow-at-runtime}
+
+If you want to use custom user entity which is not specialization of the `System.User` entity, you can:
+
+* Configure a subclass of System.User as the Just In Time Provisioning entity.
+* Build a custom microflow (e.g., UC_CustomProvisioning) to create or handle your own user provisioning logic based on your specific requirements.
+
+Select it in the **Custom UserProvisioning** field. The custom microflow name must begin with the string `UC_CustomProvisioning` and requires the following parameters:
+
+* **UserInfoParameter(UserCommons.UserInfoParam)**: A Mendix object containing user claims information through its associated objects. You can use this parameter to retrieve user provisioning configuration information.
+* **User(System.User)**: A Mendix object representing the user to be provisioned. Ensure that the selected microflow matches this parameter signature.
+
+The custom microflow will be executed after user creation or update of user. 
+
+### Custom User Provisioning at Deploy-time{#custom-provisioning-dep}
 
 You can set up custom user provisioning by setting constants when you deploy your app. This has the following limitations compared to setting up provisioning using a microflow or changing the settings at runtime:
 
@@ -115,9 +107,35 @@ You can set up custom user provisioning by setting the following constants. You 
 | UserType | assign usertype to the created users | *optional* | `Internal` |
 | CustomUserProvisioning | a custom microflow to use for user provisioning | *optional* – in the form `modulename.microflowname` – the microflow name must begin with the string `UC_CustomProvisioning` | `Mymodule.UC_CustomProvisioning` |
 
-## Custom Behavior
+## Configuring User Provisioning for Version 2.4.0 and Below
 
-### Evaluating Multiple User Matches
+### Default User Provisioning
+
+By default, the `CUSTOM_UserProvisioning` microflow in the **USE_ME** > **1. Configuration** folder of the OIDC module uses the `OIDC_CustomUserParsing_Standard` microflow. This applies the following mapping:
+
+| ID-token Provided by your IdP | Attribute of `Administration.Account` Object |
+| ----------------------------- | ----------------------------- |
+| sub                           | Name                          |
+| name                          | Fullname                      |
+| email                         | Email                         |
+
+{{% alert color="warning" %}}
+Do not change the `UserProvisioning_StandardOIDC` microflow. This may give problems if you upgrade to a newer version of the OIDC SSO module. Apply customizations to the `CUSTOM_UserProvisioning` microflow only.
+{{% /alert %}}
+
+### Custom User Provisioning Using a Microflow{#custom-provisioning-mf}
+
+{{% alert color="warning" %}}
+Since this feature is deprecated from the version 3.0.0 of the module, you can do the custom user provisioning at runtime or deploy-time. For more information, see the [Custom User Provisioning at Deploy-time](/appstore/modules/oidc/oidc-user-provisioning/#custom-provisioning-dep) and [Custom User Provisioning at Runtime](/appstore/modules/oidc/oidc-user-provisioning/#custom-provisioning-rt) sections below.
+{{% /alert %}}
+
+Review the microflow `CUSTOM_UserProvisioning` in the **USE_ME** > **1. Configuration** folder of the OIDC module. This is where you can change the way that end-users are provisioned in your app. The OpenID token is passed to the microflow as a parameter. Use this object to find an existing, or create a new, `System.User` object for the end-user. This is set as the return value of the microflow. You can find examples included in the **USE_ME** > **1. Configuration** > **User Provisioning Examples** folder.
+
+Make a single call from `CUSTOM_UserProvisioning` to your own module where you implement the provisioning flow you need. This way, it will be easy to install new versions of the OIDC SSO module over time without overwriting your custom provisioning.
+
+The OIDC SSO module supports multiple IdPs. Since each provider can provide user data in a different format, you may want to use multiple provisioning flows. See the microflow `UserProvisioning_Sample` for an example and details on how to do this.
+
+## Evaluating Multiple User Matches
 
 Review the custom microflow `evaluateMultipleUserMatches` in the **USE_ME** folder. The module tries to find the user corresponding to the given username. This microflow is triggered when multiple matching `System.User` records are found.
 

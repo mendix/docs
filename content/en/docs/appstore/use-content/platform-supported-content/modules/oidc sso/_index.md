@@ -273,7 +273,9 @@ You can configure your OIDC client using the app pages – see [General OIDC Cli
 
 #### IdPs for SSO and API Security
 
-Use this more extensive configuration screen if you are implementing SSO and optionally API security. Start your app, log in as an administrator, for example *demo_administrator*, and access the **IdPs for SSO and API security** setup page. Click **New** to add a new client configuration and access the **Configuration** tab.
+Use this more extensive configuration screen if you are implementing SSO and optionally API security. Start your app, log in as an administrator, for example *demo_administrator*, and access the **IdPs for SSO and API security** setup page. Click **New** to add a new client configuration and access the **Configuration** tab. 
+
+{{% alert color="info" %}}Additionally, you can see the **UserProvisioning** tab to provision your end users. For more information, see the [OIDC SSO User Provisioning](/appstore/modules/oidc/oidc-user-provisioning/).{{% /alert %}}
 
 ##### General OIDC Clients {#general-oidc}
 
@@ -306,13 +308,15 @@ In this case, the OIDC client is the app you are making. In the **Configuration*
 
     | Default Microflow | Use |
     | --- | --- |
-    | OIDC_CustomUserParsing_Standard | It implements some standard OpenID claims to find/provision a user. |
-    | OIDC_CustomUserParsing_UserInfo | It is similar as standard OIDC user parsing flow, except it works with identity providers that use `opaque` tokens. |
-    | OIDC_CustomUserParsing_Salesforce | It offers an `id` endpoint that retrieves information about user. You can use OpenID token (`id_token`) to map user attributes. |
+    | OIDC_CustomUserParsing_Standard <br>(renamed from UserProvisioning_Standard)| It implements some standard OpenID claims to find/provision a user. |
+    | OIDC_CustomUserParsing_UserInfo <br>(renamed from UserProvisioning_UserInfo)| It is similar as standard OIDC user parsing flow, except it works with identity providers that use `opaque` tokens. |
+    | OIDC_CustomUserParsing_Salesforce <br>(renamed from UserProvisioning_Salesforce)| It offers an `id` endpoint that retrieves information about user. You can use OpenID token (`id_token`) to map user attributes. |
 
-    In version below 3.0.0 of the OIDC SSO module, you can configure the timezone and language using the `OIDC_CustomUserParsing_Standard` and `OIDC_CustomUserParsing_UserInfo` microflow. However, in version 3.0.0 and above of the OIDC SSO module, you can set the timezone and language using any standard microflow.
+    In version 3.0.0 and above you can write your own custom userparsing microflow prefixed with `OIDC_CustomUserParsing`. It should return a `System.User` object.
 
-    You can also use your own custom user entity to manage users of the app. See the section on [Custom User Provisioning](#custom-provisioning) for more information on what you can do to implement provisioning logic which fits your business needs. The module includes a Salesforce-specific example.
+    In version below 3.0.0 of the OIDC SSO module, you can configure the timezone and language using the `OIDC_CustomUserParsing_Standard` and `OIDC_CustomUserParsing_UserInfo` microflow. However, in version 3.0.0 and above, you can set the timezone and language using any user parsing microflow.
+
+    You can also use your own custom user entity to manage users of the app. See the section on [OIDC SSO User Provisioning](/appstore/modules/oidc/oidc-user-provisioning/) for more information on what you can do to implement provisioning logic which fits your business needs. The module includes a Salesforce-specific example.
 
 10. Optionally, you can select the `CustomAccessTokenParsing` microflow if you want to use additional information from the OIDC IdP. This can be used, for example, to assign end-user roles based on information from the IdP – see [Access Token Parsing](#access-token-parsing) for more information.
 

@@ -312,9 +312,10 @@ In this case, the OIDC client is the app you are making. In the **Configuration*
     | OIDC_CustomUserParsing_UserInfo <br>(renamed from UserProvisioning_UserInfo)| It is similar as standard OIDC user parsing flow, except it works with identity providers that use `opaque` tokens. |
     | OIDC_CustomUserParsing_Salesforce <br>(renamed from UserProvisioning_Salesforce)| It offers an `id` endpoint that retrieves information about user. You can use OpenID token (`id_token`) to map user attributes. |
 
-    In version 3.0.0 and above you can write your own custom userparsing microflow prefixed with `OIDC_CustomUserParsing`. It should return a `System.User` object.
-
-    In version below 3.0.0 of the OIDC SSO module, you can configure the timezone and language using the `OIDC_CustomUserParsing_Standard` and `OIDC_CustomUserParsing_UserInfo` microflow. However, in version 3.0.0 and above, you can set the timezone and language using any user parsing microflow.
+    {{% alert color="info" %}}In version 3.0.0 and above you can write your own custom userparsing microflow prefixed with `OIDC_CustomUserParsing`. It should return a `System.User` object.
+    <br>
+    In version below 3.0.0 of the OIDC SSO module, you can configure the timezone and language using the `UserProvisioning_Standard` and `UserProvisioning_UserInfo` microflow. However, in version 3.0.0 and above, you can set the timezone and language using any user parsing microflow.
+    {{% /alert %}}
 
     You can also use your own custom user entity to manage users of the app. See the section on [OIDC SSO User Provisioning](/appstore/modules/oidc/oidc-user-provisioning/) for more information on what you can do to implement provisioning logic which fits your business needs. The module includes a Salesforce-specific example.
 

@@ -60,20 +60,29 @@ install:
   - mkdir public  # This because <Maybe> the process of syncing to public is probably deadlocked behind waiting for the public folder to be made, and is never signalled that the folder is created, which ends up stalling the build on Travis CI.
   # ------------------------
   -  ./node_modules/.bin/hugo config --environment $TRAVIS_BRANCH # report the config we are using
-  - echo "HUGO was run for environment $TRAVIS_BRANCH" > $TRAVIS_BUILD_DIR/hugo.log
+  # Output header in bold white on green
+  - printf '\033[37;42;1m' > $TRAVIS_BUILD_DIR/hugo.log
+  - echo "HUGO was run for environment $TRAVIS_BRANCH" >> $TRAVIS_BUILD_DIR/hugo.log
+  - printf '\033[0;22mm' >> $TRAVIS_BUILD_DIR/hugo.log
   # Set pipefail so that if Hugo fails the whole job fails
   - set -o pipefail
   # put the flags in different config files controlled by environment matching $TRAVIS_BRANCH
   # Append output to hugo.log file to print at the end of the travis job
   # (see https://stackoverflow.com/questions/418896/how-to-redirect-output-to-a-file-and-stdout)
+
   -  ./node_modules/.bin/hugo --environment $TRAVIS_BRANCH 2>&1 | tee -a $TRAVIS_BUILD_DIR/hugo.log
-  #
+
   # normal htmltest takes too much memory - using a modified version which strips <aside> tag content
   # NB - Set pipefail so that Travis CI sees the return code from `tee` and not from `htmltest` so it will always build.
   - set +o pipefail
+  # Additional info  in bold white on green
+  - printf '\033[37;42;1m' >> $TRAVIS_BUILD_DIR/hugo.log
   - echo "Any errors from HTMLTEST will be treated as warnings - the build will continue." >> $TRAVIS_BUILD_DIR/hugo.log 
+  - printf '\033[0;22m' >> $TRAVIS_BUILD_DIR/hugo.log
   - chmod +x ./htmltest/htmltest
-  - ./htmltest/htmltest 2>&1 | tee -a $TRAVIS_BUILD_DIR/hugo.log
+  # Run htmltest - convert red (91) and green (92) aixterm colors with 8-bit versions (31 and 32).
+
+  - ./htmltest/htmltest 2>&1 | sed "s/\o033\[91/\o033\[31/g; s/\o033\[92/\o033\[32/g" |tee -a $TRAVIS_BUILD_DIR/hugo.log
 
 before_script:
 ##############
@@ -109,7 +118,7 @@ script:
 #  - pwd
 # NB: Have to have something here, otherwise Travis tries to run "npm test"
 # Display the output from hugo and htmltest so it is not folded and hidden, and is at the end of the log.
-  - echo "$(<$TRAVIS_BUILD_DIR/hugo.log)"
+  - printf '\n\n%s\n\n' "$(<$TRAVIS_BUILD_DIR/hugo.log)"
 
 # before_cache
 ############## Skipped

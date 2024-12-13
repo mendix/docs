@@ -14,6 +14,13 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
 
+### December 12, 2024
+
+
+#### Features
+
+* You can now register new, and update existing, REST and Web Services through the Catalog UI. 
+
 ### November 28, 2024
 
 #### Fixes

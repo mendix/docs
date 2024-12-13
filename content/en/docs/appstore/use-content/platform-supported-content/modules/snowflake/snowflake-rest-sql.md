@@ -100,6 +100,22 @@ After you configure the authentication for Snowflake, you can implement the func
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-rest-sql/example_implementation.png" >}}
 
+#### Asynchronous Query Execution
+
+At present, the Snowflake REST SQL Connector does not provide any out of the box operation microflows for making asynchronous calls. However, you can still configure asynchronous calls manually using the connector.
+
+To set this up:
+
+1. Locate the **POST_v1_ExecuteStatement** microflow.
+2. Open the **Call REST (POST)** action within this microflow and examine the **Location** field. Note a query parameter named **async** that is set to **false**.
+3. Duplicate the **Call REST (POST)** action, modify the **async** query parameter to **true**, and use this as a basis to build your custom asynchronous microflows.
+
+Your custom microflows should consist of the following:
+* **A request call microflow** - Sends the request and returns the request ID.
+* **A polling microflow** - Uses the request ID to check if the response is available, and then returns the response once it is ready.
+
+This approach allows you to achieve asynchronous behavior while leveraging the Snowflake REST SQL Connector.
+
 ## Technical Reference
 
 To help you work with the Snowflake REST SQL connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.

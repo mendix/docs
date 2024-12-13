@@ -44,6 +44,10 @@ To follow these instructions you will need:
 
 If you have any issues when following these instructions, see the [Troubleshooting](#troubleshooting) section to see if there is a solution.
 
+{{% alert color="info" %}}
+The Tekton pipeline is compatible with Mendix Operator versions v2.20.0 and earlier. Future Mendix Operator versions might need an updated version of the pipeline.
+{{% /alert %}}
+
 ## Overview of Tekton and the Mendix for Private Cloud Pipelines
 
 ### Tekton Components

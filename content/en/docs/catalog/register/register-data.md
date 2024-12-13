@@ -373,7 +373,7 @@ A successful `PUT` call results in a `200` status code and a JSON response body.
 
 The Catalog has a UI form where you can register a single exposed service. Make sure you have collected the following details before you begin:
 
-* Metadata contract file as an XML, or ZIP if it is multiple files
+* Metadata contract file as an *.xml*, *.json*, *.yaml* or *.wsdl*, depending on the service you want to register, or a *.zip* if there are multiple files
 * Service details: `Name`, `Version`, `Path`
 * Application `Name`
 * Environment details: `Name`, `Location` (URL), `Type`
@@ -381,8 +381,18 @@ The Catalog has a UI form where you can register a single exposed service. Make 
 Follow the steps below:
 
 1. Open the [Catalog home page](https://catalog.mendix.com).
-2. On the **Contract** screen, upload your XML or ZIP file. For more information on the contract, see the [Contract Structure](#contract-structure) section below.
-3. On the **Services** screen, select the type of service you want to register and specify the following details: **Service Name**, **Service Version**, and **Service Relative Path**. The Service Relative Path is the path of the service contract relative to the environment URL of the application. For more advice on versioning, see [Semantic numbering](/refguide/consumed-odata-service/#semantic). The other fields on the form are optional.
+2. On the **Contract** screen, select what type of service you would like to register. Upload a valid contract file corresponding to the service type that is selected, such as: 
+    * *.xml* for OData
+    * *.yaml* or *.json* for REST
+    * *.wsdl* or *.xml* for Web Service
+
+    For more information on the contract, see the [Contract Structure](#contract-structure) section below.
+3. On the **Service Details** screen, select the type of service you want to register and specify the following details: 
+   1. Service Name
+   2. Service Version
+   3. Service Relative Path. 
+   
+   The Service Relative Path is the path of the service contract relative to the environment URL of the application. For more information on versioning, see [Semantic numbering](/refguide/consumed-odata-service/#semantic). The other fields on the form are optional.
 
     {{% alert color="warning" %}}Once a version is released to production, any updated contracts should be given a new version. This applies even if you are only registering for a non-production environment.<br/><br/>This is because changes to a particular version of a published service are reflected in the entities and attributes available through the Catalog for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment are also reflected in the service in production.{{% /alert %}}
 
@@ -396,7 +406,7 @@ Follow the steps below:
     * **Non-production** – hosting is paid for, but data is not of production quality
 
 8. Select your **Authentication** method. For details on supported authentication types, see the [Authentication](#authentication) section below. Curators can also [add or change authentication methods](/catalog/manage/curate/#authentication) later.
-9. Select **Done!** to complete the registration.
+9.  Select **Done!** to complete the registration.
 
 Congratulations! Your service is registered in the Catalog. 
 

@@ -39,7 +39,7 @@ To deploy an app to your private cloud platform, you need the following:
 
 ### Selecting Mendix for Private Cloud
 
-When you first create your app, it will be set to deploy to Mendix Cloud. You need to change the target to be private cloud.
+When you first [create your app](/developerportal/#create-app), it will be set to deploy to Mendix Cloud. You need to change the target to be private cloud.
 
 1. Open your app in [Apps](https://sprintr.home.mendix.com/).
 
@@ -363,13 +363,29 @@ This button contains a list of actions which you can perform quickly on the envi
 * **Delete Environment** – allows you to delete the environment (see [Current Limitations](#limitations) for additional details about what is deleted); if you select this action, you must confirm your choice before the environment is deleted
 * **Set as Studio Pro Deployment target** – allows you to select the default target environment for Studio Pro deployment
 
-### Activity
+### Activity Log
 
-This section shows all the activities, such as creating environments and deploying apps, which have taken place in this environment. You can sort the activities in either descending or ascending date and time order.
+This section shows all the activities which have taken place in this environment, for example, creating environments, changing the Technical Contact, or deploying apps. You can sort the activities in either descending or ascending date and time order.
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/image20.png" class="no-border" >}}
 
-## Managing Your Environments from the Environment Details Page{#environment-details}
+### Application Settings
+
+This section allows you to designate the Technical Contact for the application. The Technical Contact serves as the point of contact for any app-related inquiries and should have the capability to manage all environments within the app.
+
+{{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/technicalContact.png" class="no-border" >}}
+
+For applications created before December 12, the Technical Contact field is empty by default. It can be set by a user with cloud access permissions for the application.
+
+{{% alert color="info" %}}  
+Once a Technical Contact is assigned, they automatically receive administrative permissions for all namespaces associated with environments in the application.
+{{% /alert %}}
+
+For applications created on or after December 12, the Technical Contact is automatically set to the application's creator. In such cases, whenever a new environment is added, the Technical Contact receives administrative permissions for the namespaces associated with that environment.
+
+The Technical Contact can be changed later, but only by the current Technical Contact.
+
+## Managing Your Environments from the Environment Details Page {#environment-details}
 
 Each environment you create has an **Environment Details** page which allows you to monitor and manage your environments. You can reach this by clicking the **Details** button next to the environment you want to manage.
 

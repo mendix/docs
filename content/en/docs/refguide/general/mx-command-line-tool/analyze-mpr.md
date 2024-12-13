@@ -1,6 +1,6 @@
 ---
 title: "MPR Analyze Command"
-url: /refguide/analyze-mpr/
+url: /refguide/mx-command-line-tool/analyze-mpr/
 weight: 60
 description: "Describes MPR analyze command, which shows the contents of the MPR file and their contribution to file size."
 ---

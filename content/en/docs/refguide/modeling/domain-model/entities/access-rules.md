@@ -31,7 +31,7 @@ The **System.User** entity has inbuilt access rules where access is given to its
 ## Defining Access Rules
 
 {{% alert color="info" %}}
-A new entity access rule editor was released in Studio Pro version 10.6.0, as a [beta](/releasenotes/beta-features/). This will be made generally available in Studio Pro version 10.18.0. You can enable this new editor in the [Preferences Dialog](/refguide/preferences-dialog/#new-features).
+A new entity access rule editor was released in Studio Pro version 10.6.0, as a [beta](/releasenotes/beta-features/). This will be made generally available in Studio Pro version 10.19.0. You can enable this new editor in the [Preferences Dialog](/refguide/preferences-dialog/#new-features).
 
 For guidance on using the new editor, see [Defining Access Rules Using the New Editor](#new-editor), below.
 {{% /alert %}}
@@ -199,7 +199,7 @@ Non-persistable objects cannot have XPath constraints.
 ## Defining Access Rules Using the New Editor {#new-editor}
 
 {{% alert color="warning" %}}
-The new access rule editor was introduced in Studio Pro version 10.6.0 as a beta and will be made generally available in Studio Pro version 10.18.0. For more information on beta features, see [Beta Releases](/releasenotes/beta-features/).
+The new access rule editor was introduced in Studio Pro version 10.6.0 as a beta and will be made generally available in Studio Pro version 10.19.0. For more information on beta features, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 {{% alert color="info" %}}

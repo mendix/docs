@@ -60,8 +60,7 @@ As the Mendix model is stored in a single file, this threshold can be exceeded b
 
 * Remove [excluded and unused documents](/refguide/dev-best-practices/#excluded-and-unused-documents) – If you have a large number of unnecessary documents in your app model, this can significantly increase the size of the MPR file.
 * Decrease duplication in pages – If you have a number of pages featuring the same content, such as an advanced datagrid, consider extracting this piece of logic to a widget. Reusing a widget on multiple pages prevents the data from being saved several times and can have a large impact on the size of the MPR file.
-
-You can use [analyze-mpr](/refguide/analyze-mpr/) of the [mx Command-Line Tool](/refguide/mx-command-line-tool/) to analyze how your MPR file is built up. The output will show how many documents of a type (ie. number of pages) exist and how much disk space they represent within the MPR file. We recommend starting with a brief scan to see if there is an unexpected number of occurences (ie 1500 pages) or large number of bytes (over 50.000.000 bytes) for a unit type.
+* You can use [analyze-mpr](/refguide/mx-command-line-tool/analyze-mpr/) of the [mx Command-Line Tool](/refguide/mx-command-line-tool/) to analyze how your MPR file is built up. The output will show how many documents of a type (ie. number of pages) exist and how much disk space they represent within the MPR file. We recommend starting with a brief scan to see if there is an unexpected number of occurences (ie 1500 pages) or large number of bytes (over 50.000.000 bytes) for a unit type.
 
 ### Working with a Large Repository Size
 

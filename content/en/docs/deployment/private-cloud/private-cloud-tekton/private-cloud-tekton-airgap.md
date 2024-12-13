@@ -43,7 +43,7 @@ Get the Tekton package:
 
 ```bash
 mkdir tekton && cd tekton
-aip init https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/packages/tekton-package-v1.0.4.json
+aip init https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/packages/tekton-package-v1.0.5.json
 aip pull
 ```
 
@@ -99,20 +99,24 @@ Get the pipeline package:
 
 ```bash
 mkdir pipeline && cd pipeline
-aip init https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/packages/pipeline-package-v1.0.4.json
+aip init https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/packages/pipeline-package-v1.0.5.json
 aip pull
 ```
 
-Add build and runtime images for a specific Mendix version, or for a range of versions:
+Add build and runtime images for a specific Mendix version, and a base OS with a specific Java version, or for a range of versions:
 
 ```bash
 # add one specific version (in this example 8.18.11.27969)
 aip addimage mxbuild8.18.11 private-cloud.registry.mendix.com/mxbuild:8.18.11.27969
-aip addimage runtime-base8.18.11 private-cloud.registry.mendix.com/runtime-base:8.18.11.27969-rhel
+aip addimage runtime8.18.11 private-cloud.registry.mendix.com/app-building-blocks:runtime-8.18.11.27969
+aip addimage ubi8-1-java11 private-cloud.registry.mendix.com/app-building-blocks:ubi8-1-jre11-entrypoint
 
 # add multiple versions (in this example all patch versions of 8.18)
 aip addimagesquery private-cloud.registry.mendix.com/mxbuild '^8.18.*'
-aip addimagesquery private-cloud.registry.mendix.com/runtime-base '^8.18.*-rhel$'
+aip addimagesquery private-cloud.registry.mendix.com/app-building-blocks '^runtime-8.18.*$'
+
+# add all base OS images
+aip addimagesquery private-cloud.registry.mendix.com/app-building-blocks '^ubi\d+-\d-jre\d+-entrypoint$'
 
 aip pull
 ```
@@ -193,15 +197,15 @@ cd $PATH_TO_DOWNLOADED_FOLDERS && cd helm/charts
 helm install -n $NAMESPACE_WITH_PIPELINES mx-tekton-pipeline ./pipeline/ \
   -f ./pipeline/values.yaml \
   --set images.imagePushURL=$URL_TO_YOUR_REPO_WITHOUT_TAG \
-  --set images.fetch=$PRIVATE_REGISTRY/mxpc-pipeline-tools:git-init-0.0.2 \
-  --set images.verExtraction=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.8 \
+  --set images.fetch=$PRIVATE_REGISTRY/mxpc-pipeline-tools:gitinit-0.0.3 \
+  --set images.verExtraction=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.9 \
   --set images.build=$PRIVATE_REGISTRY/mxbuild \
-  --set images.imageBuild=$PRIVATE_REGISTRY/mxpc-pipeline-tools:imagebuild-0.0.2 \
-  --set images.constantsAndEventsResolver=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.8 \
-  --set images.k8sPatch=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.8 \
-  --set images.createAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.8 \
-  --set images.deleteAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.8 \
-  --set images.configureAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.8 
+  --set images.imageBuild=$PRIVATE_REGISTRY/mxpc-pipeline-tools:imagebuild-0.0.9 \
+  --set images.constantsAndEventsResolver=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.9 \
+  --set images.k8sPatch=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.9 \
+  --set images.createAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.9 \
+  --set images.deleteAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.9 \
+  --set images.configureAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.9
 ```
 
 ## Installing Triggers{#installing-triggers}

@@ -31,7 +31,7 @@ The search box at the top of the page allows you to search for content. You can 
 * **Category** – for specific domains in which components or services share characteristics, functions, or purposes
 * **Industry** – for specific sectors or business domains in which components or services are used
 * **Compatibility** – for Studio Pro major versions
-* **Rating** – how the components have been rated in [reviews](/appstore/home-page/#my-reviews) by users
+* **Rating** – how the components have been rated in [reviews](#my-reviews) by users
 
 {{% alert color="info" %}}
 For details on finding and installing Marketplace content in Studio Pro, see the [Finding and Downloading Content in Studio Pro](/appstore/use-content/#downloading) section of *Using Marketplace Content*.
@@ -57,7 +57,6 @@ The **Personal** category contains the following items:
 
 * My drafts
 * My content
-* My Subscriptions
 * Shared with Me
 * Saved Content
 * My Reviews
@@ -111,16 +110,6 @@ You may see the **Private** label on a component, which means it is your company
 
 In addition, you may see a label on a component name for the [content group](#content-groups) to which the component is assigned as group [group content](#group-content).
 
-### My Subscriptions {#my-subscriptions}
-
-You can see all the Marketplace content you have trials for on this page:
-
-{{< figure src="/attachments/appstore/marketplace-home-page/my-subscriptions.jpg" class="no-border" >}}
-
-The table presents the **Names** of products you have trials for.
-
-The table also presents the **Plan** and its **Status**, and the **Expires On** date for the subscription. 
-
 ### Shared with Me {#shared-with-me}
 
 This page contains private content shared with you by other companies who have marked you as a [guest](#guests).
@@ -147,7 +136,6 @@ This page contains reviews of [My Content](#my-content) by other users as well a
 The **Company** category contains the following items:
 
 * Company Content
-* Company Subscriptions
 * Content Group
 
 These items are described in the sections below.
@@ -163,18 +151,6 @@ Click the context menu to access various options for managing this content:
 {{< figure src="/attachments/appstore/marketplace-home-page/company-content.png"  width="400"  class="no-border" >}}
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. However, the **Edit a Version** and **Unpublish a Version** options are only available for your own versions of company content.
-
-### Company Subscriptions {#company-subscriptions}
-
-You can see all the content shared within your organization on this page, which includes previously purchased products, trial subscriptions, paid subscriptions, or company-level services:
-
-{{< figure src="/attachments/appstore/marketplace-home-page/company-subscriptions.png" class="no-border" >}}
-
-The table presents the **Names** of the products your company has subscribed to.
-
-The table also presents the **Technical Owner** of the company subscription. When subscribing for a paid component, you can assign the **Technical Owner** role to a user in your company.
-
-Finally, the table presents the plan's **Status**, the subscription **Plan**, and the **Expires On** date for the plan.
 
 ### Content Groups {#content-groups}
 

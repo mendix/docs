@@ -1,5 +1,9 @@
 {{ $src := (.Page.Resources.GetMatch (printf "**%s*" (.Get "src"))) }}
 <figure>
+    <!-- Yiyun - only adds on-click link to images that have a link parameter, default target is in new tab/window -->
+    {{- if .Get "link" -}}
+        <a href="{{ .Get "link" }}" target="{{ with .Get "target" }}{{ . }}{{ else }}_blank{{ end }}"{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
+    {{- end }}
     <img src="{{ if $src }}{{ $src.RelPermalink }}{{ else }}{{ .Get "src" }}{{ end }}" 
          {{- if or (.Get "alt") (.Get "caption") }}
          alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"

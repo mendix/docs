@@ -19,8 +19,6 @@ The header for a component presents the following details:
 * Labels (if there are any)
 
     * **Partner**: If the header contains this label, it means that the component is partner-supported.
-        * These components can have a **Contact Us** button for setting up your subscription with the partner.
-        * If you already have an active subscription or trial, click **View status** to go to the [Company Subscriptions](/appstore/home-page/#company-subscriptions) page.
     * **Mendix**: If the header contains this label, it means that the component is platform-supported.
     * **Siemens**: If the header contains this label, it means that the component is Siemens-supported.
     * **Recommended**: If the header contains this label, it means that the component meets your company's policies and guidelines, and therefore is recommended by your Mendix Admins.

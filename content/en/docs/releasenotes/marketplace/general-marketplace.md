@@ -14,11 +14,19 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2024
 
+### December 12, 2024
+
+#### Improvements
+
+* Release notes are now editable for all versions of your Marketplace components. You no longer have to reach out to Mendix Support to change them.
+* The Company Subscriptions page has been removed from the Marketplace.
+* The Support Type labels 'Siemens' and 'Partner' have been added to the Marketplace in Studio Pro.
+
 ### October 31, 2024
 
 #### New Features
 
-* Components with the content type Solutions or Industry Templates now have a component details page.
+* Components with the content type Solutions or Industry Templates now have a new component details page.
 * On the component details page, you can now view information about the company that owns the component and the industry it belongs to.
 * The **Releases** tab on the component details page now includes two search bars, enabling you to search by release notes and Mendix versions.
 
@@ -169,7 +177,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 #### New Features
 
 * There are now user trials available for **Premium** app services, such as Email Service and Speech to Text. This self-service experience helps you to evaluate the capabilities offered with these components and realize the value of premium content.
-* User trial subscriptions are now listed under [My Subscriptions](/appstore/home-page/#my-subscriptions), and company trial and paid subscriptions are now listed under [Company Subscriptions](/appstore/home-page/#company-subscriptions).
+* User trial subscriptions are now listed under My Subscriptions, and company trial and paid subscriptions are now listed under Company Subscriptions.
 * For new uploads of public components, you can now optionally share a [virus scan report](/appstore/submit-content/#package) to speed up the governance process.
 * For solutions and solution templates, you can now add a [use case](/appstore/submit-content/#capabilities) relevant to the component. The use case is displayed in the component listing and includes header text and an external link.
 
@@ -215,7 +223,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 * Marketplace filtering has been revamped. You can now find content faster by filtering by **Industry**, [Content Type](/appstore/#components-type), and Studio Pro **Compatibility**. 
 * We have made 15+ fully developed solutions and 10+ solution templates available to help you realize value even more quickly.
-* We have listed 10+ **Premium** app services, and we now support a self-service [subscription](/appstore/home-page/#company-subscriptions) experience using credit card for two app services in supported regions.
+* We have listed 10+ **Premium** app services, and we now support a self-service subscription experience using credit card for two app services in supported regions.
 
 ### August 12, 2021
 
@@ -253,7 +261,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 * We released support for the subscription to an app service (like *MindSphere IIoT for Makers*):
     * Automatic provisioning of the app service on subscription.
-    * The [Service Management Dashboard](/appstore/home-page/#company-subscriptions), where you can view the service instance to which you have subscribed and generate binding keys for your service instance.
+    * The Service Management Dashboard, where you can view the service instance to which you have subscribed and generate binding keys for your service instance.
 
 ### May 4, 2021
 

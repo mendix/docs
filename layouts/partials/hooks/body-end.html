@@ -15,13 +15,15 @@
 <script>
   const images = Array.from(document.querySelectorAll(".td-content img"));
   images.forEach(img => {
-
-    mediumZoom(img, {
-      margin: 10, /* The space outside the zoomed image */
-      background: "black", /* The background of the zoomed image */
-      scrollOffset: 0, /* The number of pixels to scroll to close the zoom */
-      container: null, /* The viewport to render the zoom in */
-      template: null /* The template element to display on zoom */
-    });
+    // Check if the image is inside a link
+    if (!img.closest('a')) {
+      mediumZoom(img, {
+        margin: 10, /* The space outside the zoomed image */
+        background: "black", /* The background of the zoomed image */
+        scrollOffset: 0, /* The number of pixels to scroll to close the zoom */
+        container: null, /* The viewport to render the zoom in */
+        template: null /* The template element to display on zoom */
+      });
+    }
   });
-  </script>
+</script>

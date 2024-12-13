@@ -385,7 +385,7 @@ The following constants are mandatory when creating an OIDC SSO IdP configuratio
 * **ClientSecret** – the client secret (see security best-practice, above)
 * **AutomaticConfigurationURL** – the URL of the well-known endpoint (ending with `/.well-known/openid-configuration`)
 
-For more information on creating user provisioning with constants, see the [Deploy-time User Provisioning Configuration](#custom-provisioning-dep) section below.
+For more information on creating user provisioning with constants, see the [User Provisioning at Deploy-time](/appstore/modules/oidc/oidc-user-provisioning/#custom-provisioning-dep) section of the *OIDC SSO User Provisioning*.
 
 The following constants are optional:
 

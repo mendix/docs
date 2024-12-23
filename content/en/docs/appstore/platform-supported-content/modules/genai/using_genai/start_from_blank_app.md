@@ -1,7 +1,7 @@
 ---
 title: "Build a Smart App from a Blank GenAI App"
 url: /appstore/modules/genai/genai-howto-blankapp/
-linktitle: "Build a Smart App from a Blank GenAI App"
+linktitle: "Use a Blank GenAI App to Build a Smart App"
 weight: 10
 description: "A tutorial that describes how to get started building a smart app from a Blank GenAI App"
 ---

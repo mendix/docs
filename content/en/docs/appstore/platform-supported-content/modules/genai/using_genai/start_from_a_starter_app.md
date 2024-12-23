@@ -1,6 +1,6 @@
 ---
 title: "Build a Smart App using a Starter Template"
-url: /appstore/modules/genai/genai-howto-starterapp/
+url: /appstore/modules/genai/using-genai/starter-template
 linktitle: "Use a Starter Template to Build a Smart App"
 weight: 10
 description: "A tutorial that describes how to get started building a smart app with a starter template"

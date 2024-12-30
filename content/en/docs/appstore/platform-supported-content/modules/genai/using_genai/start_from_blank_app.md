@@ -8,7 +8,7 @@ description: "A tutorial that describes how to get started building a smart app 
 
 ## Introduction
 
-This document provides guidance on building a smart app from scratch using a blank GenAI app template. Alternatively, you can use a starter app template to begin your build. For more details, see [Build a Smart App Using a Starter Template](/appstore/modules/genai/using-genai/starter-template/).
+This document guides you on building a smart app from scratch using a blank GenAI app template. Alternatively, you can use a starter app template to begin your build. For more details, see [Build a Smart App Using a Starter Template](/appstore/modules/genai/using-genai/starter-template/).
 
 ### Pre-requisites
 
@@ -16,9 +16,9 @@ Before starting this guide, make sure you have completed the following prerequis
 
 * Intermediate knowledge of the Mendix platform: Familiarity with Mendix Studio Pro, microflows, and modules is required.
 
-* Basic understanding of GenAI concepts: Review the [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/) page to gain foundational knowledge and and become familiar with the key [concepts](/appstore/modules/genai/get-started/).
+* Basic understanding of GenAI concepts: Review the [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/) page to gain foundational knowledge and become familiar with the key [concepts](/appstore/modules/genai/get-started/).
 
-* Understanding Large Language Models (LLMs) and Prompt Engineering: Learn about [LLMs](/appstore/modules/genai/using-gen-ai/#llm) and [prompt engineering](/appstore/modules/genai/using-gen-ai/#prompt-engineering) to effectively use these within the Mendix ecosystem.
+* Understanding Large Language Models (LLMs) and Prompt Engineering: Learn about [LLMs](/appstore/modules/genai/get-started/#llm) and [prompt engineering](/appstore/modules/genai/get-started/#prompt-engineering) to effectively use these within the Mendix ecosystem.
 
 ### Learning Goals
 
@@ -32,7 +32,7 @@ By the end of this document, you will:
 
 ## Building Your Smart App
 
-To start building your smart app with a blank GenAI App template, download the [Blank GenAI App Template](https://marketplace.mendix.com/link/component/227934) from the Mendix Marketplace. This template provides a clean slate, enabling you to build your own GenAI-powered application step by step. You can see the end result in the image below.
+To start building your smart app with a blank GenAI App template, download the [Blank GenAI App Template](https://marketplace.mendix.com/link/component/227934) from the Mendix Marketplace. This template provides a clean slate, enabling you to build your GenAI-powered application step by step. You can see the result in the image below.
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-blankapp/blank_genai_interface.jpg" >}}
 
@@ -40,9 +40,9 @@ To start building your smart app with a blank GenAI App template, download the [
 
 The [Blank GenAI App Template](https://marketplace.mendix.com/link/component/227934) includes two essential pre-installed modules, which are beneficial to familiarize yourself with:
 
-* The [**GenAI Commons**](https://marketplace.mendix.com/link/component/227933) module: This module provides pre-built operations and data structures for seamless integration with platform-supported GenAI connectors, such as OpenAI or Amazon Bedrock.
+* The [**GenAI Commons**](https://marketplace.mendix.com/link/component/227933) module: provides pre-built operations and data structures for seamless integration with platform-supported GenAI connectors, such as OpenAI or Amazon Bedrock.
 
-* The [**Conversational UI**](https://marketplace.mendix.com/link/component/227931) module: This module offers UI elements for chat interfaces and usage data monitoring. You can download it from the Mendix Marketplace.
+* The [**Conversational UI**](https://marketplace.mendix.com/link/component/227931) module: offers UI elements for chat interfaces and usage data monitoring. You can download it from the Mendix Marketplace.
 
 ### Choosing the Infrastructure
 
@@ -51,12 +51,12 @@ Selecting the infrastructure for integrating GenAI into your Mendix application 
 * [OpenAI](/appstore/modules/genai/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472?_gl=1*1gbywo4*_gcl_au*NjUwMzI0NzA0LjE3MzI2MjkxMTI.) supports both OpenAI’s platform and Azure’s OpenAI service.
 
 {{% alert color="info" %}}
-To get started, you can sign up for a free trial with OpenAI and receive credits valid for three months from the account creation date. For more details, see [OpenAI API reference](https://platform.openai.com/docs/api-reference/authentication).
+To start, you can sign up for a free trial with OpenAI and receive credits valid for three months from the account creation date. For more details, see [OpenAI API reference](https://platform.openai.com/docs/api-reference/authentication).
 {{% /alert %}}
 
 * [Amazon Bedrock](/appstore/modules/genai/bedrock/): The [Bedrock Connector](https://marketplace.mendix.com/link/component/215042?_gl=1*yogwo1*_gcl_au*NjUwMzI0NzA0LjE3MzI2MjkxMTI.) allows you to leverage Amazon Bedrock’s fully managed service to integrate foundation models from Amazon and leading AI providers. 
 
-* Your Own Connector: Optionally, if you prefer a custom connector, you can integrate your chosen infrastructure. However, this document focuses on the OpenAI and Bedrock connectors, as they offer comprehensive support and ease of use for getting started.
+* Your Own Connector: Optionally, if you prefer a custom connector, you can integrate your chosen infrastructure. However, this document focuses on the OpenAI and Bedrock connectors, as they offer comprehensive support and ease of use to get started.
 
 ### Creating a Conversational UI interface
 
@@ -118,13 +118,13 @@ You may encounter an error about allowed roles. To resolve this, go to the page 
 
 #### OpenAI Configuration
 
-Follow steps below to configure OpenAI for your application. For more information, see the [OpenAI Configuration](/appstore/modules/genai/openai/#configuration) documentation.
+Follow the steps below to configure OpenAI for your application. For more information, see the [Configuration](/appstore/modules/genai/openai/#configuration) section of the *OpenAI*.
 
 1. Run the application locally.
 
 2. Configure OpenAI Settings:
 
-   * In the chatbot-like application interface, go to **Settings** ({{% icon name="cog" %}}) icon, and find the **OpenAI Configuration**.
+   * In the chatbot-like application interface, go to the **Settings** ({{% icon name="cog" %}}) icon, and find the **OpenAI Configuration**.
    * Click **New** and provide the following details:
      * **Display Name**: A reference name to identify this configuration (for example, "My OpenAI Configuration").
      * **API Type**: Choose between **OpenAI** or **Azure OpenAI**.
@@ -159,7 +159,7 @@ Follow the steps below to configure Amazon Bedrock for your application:
 
 3. Configure Bedrock Settings:
 
-   * In the chatbot-like application interface, go to **Settings** ({{% icon name="cog" %}}) icon, and find the **Amazon Bedrock Configuration**.
+   * In the chatbot-like application interface, go to the **Settings** ({{% icon name="cog" %}}) icon, and find the **Amazon Bedrock Configuration**.
    * Click **New/Edit** and provide the following details:
      * **Region**: Select the AWS region where your Bedrock service is hosted.
      * **Use Static Credentials**: Enable this option if you are using static AWS credentials configured in the app.

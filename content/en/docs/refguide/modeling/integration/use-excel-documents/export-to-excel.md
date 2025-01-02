@@ -231,6 +231,8 @@ To configure the custom formatting and styling for the cells, follow these steps
 In this section, you will learn how to call the newly created Excel export template in your application. If you have used **Input Object**, follow these steps to retrieve the template and generate the document:
 
 1. Create a microflow that takes an inbound parameter of the **Input Object** which is associated with objects that need to be exported.
+
+    {{% alert color="info" %}}Leave [**Apply entity access**](/refguide/microflow/#apply-entity-access) as *No*. Setting it to *Yes* can cause an OQL exception.{{% /alert %}}
    
 2. In the microflow, retrieve a single object which is the template you set up earlier to use for the export.
 

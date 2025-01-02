@@ -2,7 +2,7 @@
 title: "Server-Side Paging and Sorting for a Microflow Data Source"
 linktitle: "Server-Side Paging and Sorting"
 url: /refguide/server-side-paging/
-weight: 30
+weight: 2
 description: "Describes how to create a data grid with a microflow data source which retrieves data from a REST service, and then add server-side paging and sorting to it."
 aliases:
     - /howto/logic-business-rules/server-side-paging/

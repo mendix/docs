@@ -14,34 +14,6 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
 
-### December 12, 2024
-
-#### Features
-
-* You can now register new, and update existing, REST and Web Services through the Catalog UI. 
-
-### November 28, 2024
-
-#### Fixes
-
-* We fixed a bug where the Edit button was not appearing for Business Events.
-* We fixed an issue where users that were promoted to Technical Owner received an incorrect notification.
-
-#### Improvement
-
-* We made various UI improvements to offer better insight into service registration. 
-
-### November 14, 2024
-
-#### Fixes
-
-* We fixed an issue with the **Owned by me** filter under **Ownership** in the Catalog search, which was not returning accurate results.
-
-#### Improvement
-
-* We made minor enhancements to UX and compatibility, including updates to widgets and filter displays.
-* We upgraded the starter kit module, which includes minor UI changes on the Administration page for company admins.
-
 ### October 31, 2024
 
 #### Fixes
@@ -314,13 +286,13 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Improvement
 
-* We updated the link on the search results page to give more details about what OpenAPI beta means in the Catalog.
+* We updated the link on the search results page to give more details about what [OpenAPI beta](/catalog/register/openapi-automatic-registration/) means in the Catalog.
 
 ### September 21, 2023
 
 #### Features
 
-* We added [beta](/releasenotes/beta-features/) support for published REST services (OpenAPI) to the Catalog. REST services in your Mendix app are now automatically registered when you deploy to Mendix Cloud. Have a look and [let us know what you think](https://community.mendix.com/link/space/catalog).
+* We added [beta](/releasenotes/beta-features/) support for published REST services (OpenAPI) to the Catalog. REST services in your Mendix app are now automatically registered when you deploy to Mendix Cloud. For more information, see [OpenAPI Automatic Registration](/catalog/register/openapi-automatic-registration/). Have a look and [let us know what you think](https://community.mendix.com/link/space/catalog).
 
 #### Improvements
 
@@ -456,7 +428,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Fixes
 
-* We fixed a bug that was causing the creation of an application using the [Registration API](/apidocs-mxsdk/apidocs/registration-api/) to fail.
+* We fixed a bug that was causing the creation of an application using the [Registration API](/apidocs-mxsdk/apidocs/catalog-apis/#registration) to fail.
 
 ### January 12, 2023
 
@@ -563,7 +535,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We have addressed potential security vulnerabilities.
 * The **Authentication** page in the registration form will now show validation errors, if there are any.
-* Restoring a previously deleted environment through the [Registration API](/apidocs-mxsdk/apidocs/registration-api/) is now possible and will no longer return a `409` response.
+* Restoring a previously deleted environment through the [Registration API](/apidocs-mxsdk/apidocs/catalog-apis/#registration) is now possible and will no longer return a `409` response.
 * Submitting an API request with an invalid JSON body will no longer trigger a `500` response, but a `400` Bad Request instead.
 
 ### September 22, 2022
@@ -606,7 +578,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 #### Improvements
 
 * We improved the accuracy of the Catalog's search results.
-* We added the option to the [Search API](/apidocs-mxsdk/apidocs/search-api/) to paginate through search results with an offset. This allows you to limit the number of results and specify how many to skip.
+* We added the option to the [Search API](/apidocs-mxsdk/apidocs/catalog-apis/#search) to paginate through search results with an offset. This allows you to limit the number of results and specify how many to skip.
 * We made several improvements to the Catalog UI.
 
 ### August 18, 2022
@@ -630,7 +602,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 * We fixed a bug where notifications about deletion were mistakenly sent when updating a service. 
 * We fixed an issue where some **Company Admins** would get an error when trying to change the default discoverability setting.
-* We removed an undocumented field that was returned by the [Search API](/apidocs-mxsdk/apidocs/search-api/).
+* We removed an undocumented field that was returned by the [Search API](/apidocs-mxsdk/apidocs/catalog-apis/#search).
 * We fixed an issue where under certain conditions, published and consumed services were not registered automatically in the Catalog.
 
 ### August 4, 2022
@@ -677,7 +649,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 #### Improvements
 
 * Consumed data sources that have been deleted are now indicated in the [Landscape](/data-hub/data-hub-landscape/).
-* Existing endpoints that are not present in a `PUT` call of the **Registration API** will be deleted. Check out the [Data Hub Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html), or read the documentation in the [Registration API](/apidocs-mxsdk/apidocs/registration-api/) section of *Catalog APIs*.
+* Existing endpoints that are not present in a `PUT` call of the **Registration API** will be deleted. Check out the [Data Hub Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html), or read the documentation in the [Registration API](/apidocs-mxsdk/apidocs/catalog-apis/#registration) section of *Catalog APIs*.
 * The `app_uuid` is now present in the `409 CONFLICT` response from **Registration API** when registering an environment on a location that is already in use. 
 
 #### Fixes
@@ -729,7 +701,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### New Features
 
-* You can now delete applications through the **Registration API**. Check out the [Data Hub Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html), or read the documentation in the [Registration API](/apidocs-mxsdk/apidocs/registration-api/) section of *Catalog APIs*.
+* You can now delete applications through the **Registration API**. Check out the [Data Hub Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html), or read the documentation in the [Registration API](/apidocs-mxsdk/apidocs/catalog-apis/#registration) section of *Catalog APIs*.
 * When a person is assigned to an application as a Technical Owner or Business Owner, they will receive an MxDock notification confirming their new role.
 
 #### Fixes
@@ -1096,7 +1068,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### New Features
 
-The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) is available for Mendix users deploying their apps to non-Mendix environments.  The Transform API extracts the information from the app’s `dependencies.json` file to generate the request bodies that are required when using the [Catalog API](/apidocs-mxsdk/apidocs/catalog-apis/). For further information see [Data Hub Transform API](/apidocs-mxsdk/apidocs/registration-api/#transform-api).
+The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) is available for Mendix users deploying their apps to non-Mendix environments.  The Transform API extracts the information from the app’s `dependencies.json` file to generate the request bodies that are required when using the [Catalog API](/apidocs-mxsdk/apidocs/catalog-apis/). For further information see [Data Hub Transform API](/apidocs-mxsdk/apidocs/catalog-apis/#transform).
 
 ### April 29, 2021
 

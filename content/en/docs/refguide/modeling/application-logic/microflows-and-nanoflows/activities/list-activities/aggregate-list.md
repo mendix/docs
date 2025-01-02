@@ -7,7 +7,7 @@ weight: 1
 ---
 
 {{% alert color="info" %}}
-This activity works differently in microflows and in nanoflows. In nanoflows, changes done to the lists in a sub-nanoflow are not reflected in the original nanoflow, whereas in microflows, such changes are reflected.
+This activity can be used in both microflows and nanoflows.
 {{% /alert %}}
 
 ## Introduction

@@ -14,11 +14,17 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 ## 2024
 
+### November 29, 2024
+
+#### New Features
+
+* We enhanced Software Composition to include marketplace-related metadata. You can now view this additional information on both the [All Components](/control-center/software-composition/#all-components) tab and the [Company Usage](/control-center/software-composition/#component-usage) page for a more comprehensive overview of your components.
+
 ### November 3, 2024
 
 #### New Features
 
-- Mendix Admins can now centrally manage cloud permissions through the Control Center for apps deployed in the Mendix Cloud. This enhancement provides greater oversight over user roles and actions within different environments. This feature is available to companies that use [Company Roles](/control-center/roles-and-permissions/).
+* Mendix Admins can now centrally manage cloud permissions through the Control Center for apps deployed in the Mendix Cloud. This enhancement provides greater oversight over user roles and actions within different environments. This feature is available to companies that use [Company Roles](/control-center/roles-and-permissions/).
 
 ### October 31, 2024
 

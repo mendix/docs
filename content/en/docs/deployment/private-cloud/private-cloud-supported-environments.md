@@ -37,7 +37,7 @@ If deploying to Red Hat OpenShift, you need to specify that specifically when cr
 Mendix for Private Cloud Operator `v2.*.*` is the latest version which officially supports:
 
 * Kubernetes versions 1.19 through 1.31
-* OpenShift 4.6 through 4.16
+* OpenShift 4.6 through 4.17
 
 {{% alert color="warning" %}}
 Kubernetes 1.22 is a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
@@ -193,6 +193,7 @@ The following standard PostgreSQL databases are supported:
 * PostgreSQL 14
 * PostgreSQL 15
 * PostgreSQL 16
+* PostgreSQL 17
 
 {{% alert color="info" %}}
 While Mendix for Private Cloud supports all Postgres versions listed above, the Mendix Runtime might require a more specific Postgres version.

@@ -40,32 +40,37 @@ Micrometer can send metrics to multiple registries. To configure micrometer for 
 
 The details of each settings are listed below.
 
-* `type` *(mandatory)* – the type of registry to use. Currently supported types are [`prometheus`](https://prometheus.io/docs/introduction/overview/), [`jmx`](https://www.oracle.com/java/technologies/javase/javamanagement.html), [`influx`](https://www.influxdata.com/), and [`statsd`](https://www.datadoghq.com/dg/monitor/ts/statsd/). Depending on the type of the registry the `settings` may vary.
+* `type` *(mandatory)* – the type of registry to use. Currently supported types are [`prometheus`](https://prometheus.io/docs/introduction/overview/), [`jmx`](https://www.oracle.com/java/technologies/javase/javamanagement.html), [`influx`](https://www.influxdata.com/), [`statsd`](https://www.datadoghq.com/dg/monitor/ts/statsd/), and [`opentelemetry`](https://opentelemetry.io/docs/). Depending on the type of the registry the `settings` may vary.
 * `settings` *(conditional mandatory)* – settings for the registry. Each registry has different settings depending upon the **type** specified. Follow the links below to see the settings for each type:
     * [Prometheus](#prometheus)
     * [jmx](#jmx)
     * [influx](#influx)
     * [statsd](#statsd)
+    * [OpenTelemetry](#opentelemetry)
 * `filters` *(optional)* – instructions on which metrics to accept or deny. See the [Filters](#filters) section, below, for more information.
 
 ### Settings
 
 The following settings can be used, depending on the type of metrics being generated:
 
-| Setting | DataType | Manda-tory | Type | Description | Default Value | Examples |
-| --- | --- | --- | --- | --- | --- | --- |
-| `db` | *String* | No | influx | The db to send metrics to | mydb | customDb, metricDb |
-| `password` | *String* | Yes | influx | Authenticate requests with this password | - | - |
-| `uri` | *String* | No | influx | The URI for the back end | http://localhost:8086 (for Influx) | - |
-| `userName` | *String* | Yes | influx | Authenticate requests with this user | - | - |
-| `protocol` | *String* | No | influx | Protocol of the statsd connection | UDP | TCP, UDP |
-| `domain` | *String* | No | jmx | Jmx domain to publish the metrics to | metrics | "Mendix", "Employee" |
-| `enabled` | *Boolean* | No | influx / statsd | Enables / Disables the meter | true | true, false |
-| `flavor` | *StatsdFlavor* | No | statsd | The variant of the StatsD protocol | DATADOG | ETSY, TELEGRAF, SYSDIG |
-| `host` | *String* | No | statsd | The host name of the StatsD agent | localhost | - |
-| `port` | *Int* | No | statsd | The port of the StatsD agent | 8125 | - |
-| `step` | *Duration* | No | all | The step size (reporting frequency) to use | 1m | `1ms`, `2s`, `3m`, `4h`, `5d` or [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) -> `P3Y6M4DT12H30M5S` |
-| `filters` | *Json* | No | all | Custom setting from Mendix to filter metrics | - | [See below](#filters)    
+| Setting                   | DataType       | Manda-tory | Type            | Description                                                                                  | Default Value                      | Examples |
+|---------------------------|----------------| --- |----------------|----------------------------------------------------------------------------------------------|------------------------------------| --- |
+| `db`                      | *String*       | No | influx          | the database to which to send the metrics                                                    | mydb                               | customDb, metricDb |
+| `password`                | *String*       | Yes | influx         | Authenticate requests with this password                                                     | -                                  | - |
+| `uri`                     | *String*       | No | influx          | The URI for the back end                                                                     | http://localhost:8086 (for Influx) | - |
+| `url`                     | *String*       | No | opentelemetry   | The URL for the back end                                                                     | http://localhost:4318/v1/metrics   | - |
+| `userName`                | *String*       | Yes | influx         | Authenticate requests with this user                                                         | -                                  | - |
+| `protocol`                | *String*       | No | influx          | Protocol of the statsd connection                                                            | UDP                                | TCP, UDP |
+| `domain`                  | *String*       | No | jmx             | Jmx domain to publish the metrics to                                                         | metrics                            | "Mendix", "Employee" |
+| `enabled`                 | *Boolean*      | No | influx / statsd | Enables / Disables the meter                                                                 | true                               | true, false |
+| `flavor`                  | *StatsdFlavor* | No | statsd          | The variant of the StatsD protocol                                                           | DATADOG                            | ETSY, TELEGRAF, SYSDIG |
+| `host`                    | *String*       | No | statsd          | The host name of the StatsD agent                                                            | localhost                          | - |
+| `port`                    | *Int*          | No | statsd          | The port of the StatsD agent                                                                 | 8125                               | - |
+| `step`                    | *Duration*     | No | all             | The step size (reporting frequency) to use                                                   | 1m                                 | `1ms`, `2s`, `3m`, `4h`, `5d` or [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) -> `P3Y6M4DT12H30M5S` |
+| `filters`                 | *Json*         | No | all             | Custom setting from Mendix to filter metrics                                                 | -                                  | [See below](#filters)
+| `aggregationTemporality`  | *String*       | No | opentelemetry   | Determines how the additive quantities are expressed, in relation to time                    | `cumulative`                       | `cumulative` or `delta`
+| `headers`                 | *String*       | No | opentelemetry   | Additional headers to send with exported metrics, this can be used for authorization headers | -                                  | "header1=value1,header2=value2"
+| `resourceAttributes`      | *String*       | No | opentelemetry   | List of attributes which can be used for including information about the environment         | -                                  | "attribute1=value1,attribute2=value2"
 
 #### Prometheus{#prometheus}
 
@@ -209,6 +214,50 @@ Example 2
     "settings": {
       "flavor": "SYSDIG",
       "step": "3m"
+    }
+  }
+]
+```
+
+#### OpenTelemetry{#opentelemetry}
+
+{{% alert color="info" %}}
+This feature was introduced in Mendix version 10.17.0.
+{{% /alert %}}
+
+* `url` – the OpenTelemetry metrics endpoint url to which data is reported.
+* `aggregationTemporality` – determines how the additive quantities are expressed, in relation to time. The supported values are `cumulative` or `delta`. Defaults to `cumulative`.
+* `headers` – additional headers to send with exported metrics, this can be used for authorization headers.
+* `step` – the step size or reporting frequency to use.
+* `resourceAttributes` – additional attributes used for all metrics published. You can use this, for example, to include information about the environment.
+* `enabled` – set to `true` to enable the registry. This means you can switch the meter on and off while keeping the settings in the configuration.
+
+Example 1
+
+```json
+[
+  {
+    "type": "opentelemetry",
+    "settings": {
+      "url": "http://localhost:4318/v1/metrics",
+      "step": "30s"
+    }
+  }
+]
+```
+
+Example 2
+
+```json
+[
+  {
+    "type": "opentelemetry",
+    "settings": {
+      "url": "https://otlp.example.com:4318/v1/metrics",
+      "aggregationTemporality": "delta",
+      "step": "20s",
+      "headers": "header1=value1,header2=value2",
+      "resourceAttributes": "service.name=shoppingcart,env=test"
     }
   }
 ]

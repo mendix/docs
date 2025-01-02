@@ -275,10 +275,6 @@ Your new microflow should look similar to this:
 {{< figure src="/attachments/refguide/modeling/integration/using-the-excel-exporter/associating-objects.png" class="no-border" >}}
 
 {{% alert color="info" %}}
-Take a note of the *DeleteAfterDownload* flag set for the PolicyDoc entity, which is shown to avoid having multiple PolicyDocs being associated with same set of policy entities.
-{{% /alert %}}
-
-{{% alert color="info" %}}
 If you create a **PolicyDoc** with *no* associations to **Policy** objects, you will export an empty spreadsheet with the structure defined in the template.
 {{% /alert %}}
 

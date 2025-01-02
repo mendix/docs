@@ -1,7 +1,7 @@
 ---
 title: "Use Call REST Service Action in a Microflow"
 url: /refguide/integration/use-call-rest-action-in-microflow/
-weight: 9
+weight: 15
 description: "Describes how to integrate an existing system or a legacy system into a Mendix app by calling a REST service in a microflow."
 description: "Describes how to get information from a REST service."
 aliases:
@@ -22,13 +22,8 @@ The Wikipedia REST service allows you to retrieve the summary of a page. This se
 
 The steps below use Studio Pro as an example of what the REST service returns:
 
-1. Open your browser and go to [https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti](https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti).
-   
-   This calls the REST service with a `GET` request. The result is the summary of the [Tahiti page on Wikipedia](https://en.wikipedia.org/wiki/Tahiti) in JSON format:
-
-    {{< figure src="/attachments/refguide/modeling/integration/consume-a-rest-service/get-call-result.png" alt="Screenshot of the result of the rest call" class="no-border" >}}
-
-2. Select the **Raw Data** tab and copy the whole JSON snippet.
+1. Open your browser and go to [https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti](https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti). This calls the REST service with a `GET` request. The result is the summary of the [Tahiti page on Wikipedia](https://en.wikipedia.org/wiki/Tahiti) in JSON format.
+2. Copy the whole JSON snippet.
 3. Create a module and name it *RESTconsume*. 
 4. Add the new [JSON structure](/refguide/json-structures/) to your module by right-clicking the module in the **App Explorer** and selecting **Add other** > **JSON structure**. 
 5. Enter *JSON_structure* in the **Name** field and click **OK**.

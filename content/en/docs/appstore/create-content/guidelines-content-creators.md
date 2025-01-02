@@ -87,9 +87,9 @@ If you have created own product specific terms and conditions, you must host the
 
 If your product is not licensed as an open-source component and you would like to specify certain licensing terms and conditions or end-user license agreements, Mendix recommends creating a document that covers the following topics:
 
-- Copyright information and license conditions
+* Copyright information and license conditions
 
-- IP usage, which covers a list of OSS/commercial licenses used
+* IP usage, which covers a list of OSS/commercial licenses used
 
   Below is a declaration template you can use for terms & conditions.
 
@@ -97,9 +97,9 @@ If your product is not licensed as an open-source component and you would like t
 | ------------------------- | ------------ | -------------------------------------------- | ------- |
 | Pro Secure Net 5.0 | https://example.com/prosecurenet/9f86d081884c7d659a2feaa0c55ad915 | A network security software that protects systems from unauthorized access and cyber threats. The software is needed to ensure the safety and integrity of network data. | MIT |
 
-- Export control
-- Data Privacy, including data processing agreement, as necessary 
-- Customer Service Level Agreement (SLA)
+* Export control
+* Data Privacy, including data processing agreement, as necessary 
+* Customer Service Level Agreement (SLA)
 
 #### Data Privacy
 
@@ -237,21 +237,21 @@ Follow your description by adding information on how the product solves the prob
 
 The requirements for the product description are as follows:
 
-*   There is no limit on the characters in the description.
-*   Mendix recommends adding a catchy one-liner before the rich text of the description. This line is used in the product's thumbnail as plain text—a maximum of 150 characters.
+* There is no limit on the characters in the description.
+* Mendix recommends adding a catchy one-liner before the rich text of the description. This line is used in the product's thumbnail as plain text—a maximum of 150 characters.
 
 Below are some tips that can help you write a proper product description:
 
-*   The product description should cover answers to the key questions that developers have when they look for content.
+* The product description should cover answers to the key questions that developers have when they look for content.
 
-*   The product description should cover the product benefits. Rather than covering many technical features, which you can also cover in the **Documentation** tab, the **Overview** tab can draw attention to the benefits. Specify how your product can improve customers' app development or work life in general. What can help you is outlining the features and benefits of your product, before writing the description. For every feature you list, think about how it will directly benefit a customer.
+* The product description should cover the product benefits. Rather than covering many technical features, which you can also cover in the **Documentation** tab, the **Overview** tab can draw attention to the benefits. Specify how your product can improve customers' app development or work life in general. What can help you is outlining the features and benefits of your product, before writing the description. For every feature you list, think about how it will directly benefit a customer.
 
-*   Knowing the target audience will help you understand why this person needs your product, what features or benefits interest your customer. That way, you can put the focus on the right aspects.
-*   Use natural language. Imagine you are telling your friend about the product. Reading the description aloud helps you see if you bring the natural tone like in the real conversation. Friendly- and easily-explained lines in the description help your customers connect to your product. 
+* Knowing the target audience will help you understand why this person needs your product, what features or benefits interest your customer. That way, you can put the focus on the right aspects.
+* Use natural language. Imagine you are telling your friend about the product. Reading the description aloud helps you see if you bring the natural tone like in the real conversation. Friendly- and easily-explained lines in the description help your customers connect to your product. 
 
-*   Try not to use plain text, but rather support your description with bullet points, short paragraphs, and different size fonts. That way, you will help customers skim your text faster and draw attention to the most important parts of the text.
+* Try not to use plain text, but rather support your description with bullet points, short paragraphs, and different size fonts. That way, you will help customers skim your text faster and draw attention to the most important parts of the text.
 
-*   You can also add keywords to your description to optimize the content for search engines like Mendix or Google Search. That way, if someone is searching for your product using a certain word, your product may come out in the search of the potential customer.
+* You can also add keywords to your description to optimize the content for search engines like Mendix or Google Search. That way, if someone is searching for your product using a certain word, your product may come out in the search of the potential customer.
 
 ### Screenshots and Assets
 
@@ -289,12 +289,12 @@ Any products listed on Mendix Marketplace must meet the following requirements:
 
 To provide the best level of support to customers of the product. Mendix recommends that you do the following:
 
-- Set up a Service Level Agreement (SLA). For inspiration, consider the Mendix SLA as one example.
-- Provide customers 24 x 7 x 365 support with global coverage. Ideally, a dedicated support team is available. In any case, make it straightforward for customers to identify which team or contact person  gives them support. Ensure proper Mendix training for the team—Mendix Advanced Certification is recommended.
-- Continuously monitor customer satisfaction with both the product itself and the support you are providing.
-- The support team should have a direct line of communication with the engineering team delivering the product as second- or third-line  support.
-- Put internal procedures in place to manage changes, incidents, and escalations.
-- Make a status page like status.mendix.com available for all customers.
+* Set up a Service Level Agreement (SLA). For inspiration, consider the Mendix SLA as one example.
+* Provide customers 24 x 7 x 365 support with global coverage. Ideally, a dedicated support team is available. In any case, make it straightforward for customers to identify which team or contact person  gives them support. Ensure proper Mendix training for the team—Mendix Advanced Certification is recommended.
+* Continuously monitor customer satisfaction with both the product itself and the support you are providing.
+* The support team should have a direct line of communication with the engineering team delivering the product as second- or third-line  support.
+* Put internal procedures in place to manage changes, incidents, and escalations.
+* Make a status page like status.mendix.com available for all customers.
 
 {{% alert color="info" %}}
 Mendix reserves the right to temporarily delist any products that do not adhere to these requirements until resolved. In principle, you will be notified in advance, but for critical issues, the notification can be sent at the same time as the delisting and customer notifications.

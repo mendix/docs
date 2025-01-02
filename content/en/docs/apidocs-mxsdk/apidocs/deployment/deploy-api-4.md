@@ -56,7 +56,7 @@ To authenticate calls when using the Open API specification below, click **Autho
 
 ### Using the API to Change the Technical Contact
 
-{{% alert color="info" %}}Team member access permissions can only be changed by Mendix Admins of the company, the Technical Contact of the app, and any app team members who have **Manage Permissions** enabled.{{% /alert %}}
+{{% alert color="info" %}}The Technical Contact can only be changed by Mendix Admins of the company or the current Technical Contact of the app.{{% /alert %}}
 
 The following steps change the Technical Contact of the app identified by the UUID {appId}.
 

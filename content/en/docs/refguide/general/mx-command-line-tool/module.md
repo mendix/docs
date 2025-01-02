@@ -48,7 +48,7 @@ The command will output the version of the module to the command line output.
 
 ## mx set-module-version Command {#set-module-version}
 
-The `mx set-module-version` command outputs the version of a module.
+The `mx set-module-version` changes the version of an add-on module.
 
 ### Usage
 

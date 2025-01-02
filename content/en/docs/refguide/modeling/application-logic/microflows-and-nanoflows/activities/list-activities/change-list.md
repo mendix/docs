@@ -5,6 +5,10 @@ weight: 2
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="info" %}}
+This activity works differently in microflows and in nanoflows. In nanoflows, changes done to the lists in a sub-nanoflow are not reflected in the original nanoflow, whereas in microflows, such changes are reflected.
+{{% /alert %}}
+
 ## Introduction
 
 The **Change list** activity allows you to change a list by adding objects to, and removing objects from, it. The activity works directly on the list provided, in contrast to the [List operation](/refguide/list-operation/) activity.
@@ -45,9 +49,13 @@ Defines the type of change that is applied to the list.
 | Clear | The list is emptied. |
 | Replace | The list is emptied and the object (or objects) in the value property are added to the list. |
 
-#### Notes When Using the Add Type{#notes}
+#### When Using the Add Type{#notes}
 
 If you do not want duplicates in your (microflow) list, you can either remove the object (or objects) first, or use the **Contains** [list operation](/refguide/list-operation/) to examine the list before adding the object (or objects).
+
+{{% alert color="info" %}}
+In Studio Pro 10.9 and below, this works differently in nanoflows and microflows. In a nanoflow, objects will not be added if they are already in the list, whereas in a microflow, the same object can be added multiple times. In Studio Pro 10.10 and above, this difference is resolved: like in microflows, you can add duplicate objects in nanoflows regardless of whether they are added in a sub-nanoflow or outside of it.
+{{% /alert %}}
 
 ### Value
 

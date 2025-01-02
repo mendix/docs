@@ -151,8 +151,8 @@ Only Portfolio Managers and Contributors from the same company as the portfolio 
 
 1. Make sure that [you have linked the Jira project to your portfolio](/developerportal/portfolio-management/integrate-with-jira/#link-jira-project).
 2. At the bottom of the **Epics** section, click **+ Add Jira Epics**.
-2. Select the Jira project to which the epics belong.
-3. Select the Jira epics. You can search by its full key or summary.
+3. Select the Jira project to which the epics belong.
+4. Select the Jira epics. You can search by its full key or summary.
 5. Click **Add** to link the selected epics to the initiative. 
 6. If you need to link epics in other Jira projects to this initiative, repeat the steps from 2 to 5, until you link all the epics. You can link up to a maximum of 20 Jira epics per initiative.
 

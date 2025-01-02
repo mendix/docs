@@ -14,7 +14,7 @@ On the **Roles & Permissions** page in Control Center, you can view and manage p
 
 Default project roles are the default [team roles](/developerportal/general/app-roles/#team-roles) assigned for every new project created in your company.
 
-{{< figure src="/attachments/control-center/roles-permissions/roles-permissions.png"  alt="Roles & Permissions page" >}}
+{{< figure src="/attachments/control-center/people/roles-permissions/roles-permissions.png"  alt="Roles & Permissions page" >}}
 
 To create a new role, click **Create Project Role**.
 
@@ -46,7 +46,7 @@ Migrating to the centralized company-level project roles is a permanent action. 
 
 To migrate to centralized company-level project roles, click **Learn More** on the blue banner at the top of the page and follow the outlined steps to complete the migration.
 
-{{< figure src="/attachments/control-center/roles-permissions/learn-more.png"  >}}
+{{< figure src="/attachments/control-center/people/roles-permissions/learn-more.png"  >}}
 
 #### After the Migration
 
@@ -78,20 +78,20 @@ To create a role, do as follows:
 
 2. In the wizard, configure the settings on the **Project Role Details** tab.
 
-    {{< figure src="/attachments/control-center/roles-permissions/edit-project-role-step-1.png" alt="Project Role Step 1" >}}
+    {{< figure src="/attachments/control-center/people/roles-permissions/edit-project-role-step-1.png" alt="Project Role Step 1" >}}
 
     1. Enter a role name. Every role name in your company must be unique.
     2. Optionally, add a description for the role for further reference.
 
 3. Click **Next** and configure the settings on **Project Permissions** tab.
 
-    {{< figure src="/attachments/control-center/roles-permissions/edit-project-role-step-2.png" alt="Project Role Step 2" >}}
+    {{< figure src="/attachments/control-center/people/roles-permissions/edit-project-role-step-2.png" alt="Project Role Step 2" >}}
 
     These permissions determine what the team member is allowed to do within the context of project management.
 
 4. Click **Next** and configure the settings on the **Non-production Environments** tab.
 
-   {{< figure src="/attachments/control-center/roles-permissions/edit-project-role-step-3.png" alt="Project Role Step 3" >}}
+   {{< figure src="/attachments/control-center/people/roles-permissions/edit-project-role-step-3.png" alt="Project Role Step 3" >}}
 
    Set the environment permissions for non-productive environments, such as the test or acceptance environments, as instructed below. These permissions are applied to the assigned team members on the [Permission](/developerportal/deploy/environments/#permissions) page in the Cloud Portal.
 
@@ -102,7 +102,7 @@ To create a role, do as follows:
 
 5. Click **Next** and configure the settings on the **Production Environments** tab.
 
-    {{< figure src="/attachments/control-center/roles-permissions/edit-project-role-step-4.png" alt="Project Role Step 4" >}}
+    {{< figure src="/attachments/control-center/people/roles-permissions/edit-project-role-step-4.png" alt="Project Role Step 4" >}}
 
     Set the environment permissions for productive environments as instructed below. The permissions you set here will be fixed for this role. They cannot be altered later on the [Permission](/developerportal/deploy/environments/#permissions) page in the Cloud Portal.
 
@@ -119,7 +119,7 @@ To create a role, do as follows:
 
 To show the details of a role, click **Show Details**. The **Project Role Details** pop-up window opens with detailed information of the role.
 
-{{< figure src="/attachments/control-center/roles-permissions/project-role-details.png" alt="Project Role Details" >}}
+{{< figure src="/attachments/control-center/people/roles-permissions/project-role-details.png" alt="Project Role Details" >}}
 
 {{% alert color="info" %}}
 In the **Project Role Details** pop-up window, you can find the role ID that can be used in the [Mendix Projects API](/apidocs-mxsdk/apidocs/projects-api/).

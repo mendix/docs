@@ -25,6 +25,24 @@ The data type of a parameter defines the type of the value that it expects. See 
 
 Default: *Object*
 
+### Argument {#argument}
+
+{{% alert color="info" %}}
+This feature was introduced in Studio Pro 10.17.0.
+{{% /alert %}}
+
+Determines whether the argument is optional or required. When the argument is set to be **Optional**, it can be omitted when calling the microflow/nanoflow. When the argument is set to be **Required**, an argument must be passed.
+
+#### Default Value
+
+When an argument is set to **optional**, a default value can be set:
+
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/parameter/argument-optional.png" max-width=70% >}}
+
+{{% alert color="info" %}}
+ The default value is used when the argument is omitted, not when the argument value is `empty`.
+{{% /alert %}}
+
 ### Name
 
 **Name** refers to the name of the parameter.

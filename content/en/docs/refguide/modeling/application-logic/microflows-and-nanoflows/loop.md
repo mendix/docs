@@ -10,6 +10,14 @@ A loop is used to execute repeated actions and is visualized as a frame. For eac
 
 The loop can contain all types of elements used in microflows, except for [start events](/refguide/start-event/) and [end events](/refguide/end-event/). Only a loop can contain [break events](/refguide/break-event/) and [continue events](/refguide/continue-event/).
 
+## Loop Variable
+
+{{% alert color="info" %}}
+The `$currentIndex` variable was introduced in Mendix 10.17.0.
+{{% /alert %}}
+
+Within a loop, the `$currentIndex` variable contains the current number of loop iterations. This index starts at zero and increments with each iteration. For nested loops, `$currentIndex` holds the index of the innermost loop that the variable is part of. `$currentIndex` is also available when entering an expression for a [While](#while) loop.
+
 ## Loop Type Property {#loop-type}
 
 The two loop types are described below.

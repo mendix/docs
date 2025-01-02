@@ -7,7 +7,7 @@ weight: 10
 
 ## Introduction
 
-In Studio Pro versions 10.7.0 and above, there is an alternative version of the Mendix Client written in React. The React version of the client is currently a [beta feature](/releasenotes/beta-features/). You can enable this React client in [App Settings](/refguide/app-settings/#react-client).
+In Studio Pro versions 10.7.0 and above, there is an alternative version of the Mendix Client written in React. You can enable this React client in [App Settings](/refguide/app-settings/#react-client).
 
 The React client replaces [Dojo](https://dojotoolkit.org/) with [React](https://react.dev/) for the view layer. This change allows for improved performance, enables incremental loading, and future-proofs your application. For more information on these three aspects, see the sections below:
 
@@ -51,7 +51,7 @@ Review the prerequisites below that your application must fulfill before it can 
 
 ### Mendix Version{#mendix-version}
 
-The React client was introduced in Mendix 10.7.0 as a [beta feature](/releasenotes/beta-features/). It is planned to be released for general availability in Mendix 10.18 as an opt-in feature.
+The React client was introduced in Mendix 10.7.0 as a [beta feature](/releasenotes/beta-features/). It became general availability in [Mendix 10.18](/releasenotes/studio-pro/10.18/) as an opt-in feature.
 
 ### Widgets{#widgets}
 
@@ -89,62 +89,33 @@ Not all Mendix Marketplace components are ready for the React client. Refer to [
 
 Mendix recommends refreshing all Marketplace components in your app before enabling the React client.
 
-### Dynamic & Static Image{#dynamic-static}
+### Widgets{#widgets}
 
-The [Dynamic Image](/refguide/image-viewer/) and [Static Image](/refguide/image/) widgets are not supported in the React client. To use React, replace them with the universal [Image](/appstore/widgets/image/) widget. You can [download the Image widget from the Mendix Marketplace](https://marketplace.mendix.com/link/component/118579).
+Not all widgets are supported by the React client. Mendix recommends migrating widgets in apps below [10.18](/releasenotes/studio-pro/10.18/) using the automatic conversion capabilities in Studio Pro (right-click a widget and select **Convert in-place**). For a list of configuration options unsupported by automatic conversions, see [Widget Conversion Limitations](/refguide/mendix-client/widget-conversion-limitations/).
+
+#### Dynamic & Static Image{#dynamic-static}
+
+The [Dynamic Image](/refguide/image-viewer/) and [Static Image](/refguide/image/) widgets are not supported in the React client. To use a React version of these widgets, replace them with the universal Image widget; it is documented [here](/appstore/widgets/image/), and downloadable [here](https://marketplace.mendix.com/link/component/118579). 
 
 To automatically convert a dynamic image or a static image, right-click the widget (or the error message) and select **Convert to Image**.
 
-{{% alert color="info" %}}
-We are working on a batch conversion for image widgets that lets you convert all images in your project with a few clicks. We will announce the release in our [Release Notes](/releasenotes/studio-pro/10/).
+#### Reference Selectors & Drop-down{#reference-selectors-drop-down}
+
+The reference selector widgets ([Reference Selector](/refguide/reference-selector/), [Reference Set Selector](/refguide/reference-set-selector/), and [Input Reference Set Selector](/refguide/input-reference-set-selector/)) and the [Drop-down](/refguide/drop-down/) widget are not supported in the React client. To leverage React, replace unsupported widgets with the combo box widget; it is documented [here](/appstore/widgets/combobox/), and downloadable [here](https://marketplace.mendix.com/link/component/219304). 
+
+To automatically convert a reference selector widget or a drop-down to a combo box, right-click on the widget (or consistency error message) and select **Convert to combo box**.
+
+{{% alert color="warning" %}}
+Because the reference set selector widget is technically a grid, while combo box is a drop-down, only the applicable configuration options will be transferred to the resulting combo box during conversion.
 {{% /alert %}}
 
-### Reference Selector{#reference-selector}
-
-The reference selector widgets ([Reference Selector](/refguide/reference-selector/), [Reference Set Selector](/refguide/reference-set-selector/), and [Input Reference Set Selector](/refguide/input-reference-set-selector/)) are not supported in the React client. To leverage React, replace them with the [Combo Box](/appstore/widgets/combobox/) widget. The combo box widget can be [downloaded from the Mendix Marketplace](https://marketplace.mendix.com/link/component/219304).
-
-To replace a reference selector widget, follow these steps:
-
-1. Add a combo box widget next to the original widget.
-1. Set the **Attribute**, **Caption**, and **Label** properties to match the original widget.
-1. Set any other properties to match the original widget.
-
-To replace a reference set selector widget, follow these steps:
-
-1. Add a combo box widget next to the original widget.
-1. Set the **Attribute** to the association that was used as data source in the original widget.
-1. Set the **Caption** to the attribute used in the column of the original widget, or use an expression to reflect multiple columns.
-1. Set the **Label** to a meaningful label for the attribute.
-
-This will replace the table from the reference set selector with a more commonly used [drop-down widget](/refguide/drop-down/) supporting multiple selection.
-
-To replace an input reference set selector, follow these steps:
-
-1. Add a combo box widget next to the original widget.
-1. Set the **Attribute** to the association used as data source on the select page used by the original widget.
-1. Set the **Caption** to the attribute used on the select page, or use an expression to reflect multiple columns.
-1. Set the **Label** and any other properties to match the original widget.
-1. Remove the select page.
-
-This will replace the pop-up showing a table for selection with a more commonly used dropdown widget supporting multiple selection (see above).
-
-We also recommended you replace drop down widgets with combo box widgets for a better user experience. This change is not required.
-
-{{% alert color="info" %}}
-We are working on an automatic conversion for reference selector widgets that lets you convert a reference selector automatically to a combo box. We will announce the release in our [Release Notes](/releasenotes/studio-pro/10/).
-{{% /alert %}}
-
-### Data Grid{#data-grid}
+#### Data Grid{#data-grid}
 
 The data grid widget is not supported in the React client. To leverage React, replace it with the [Data Grid 2](/appstore/modules/data-grid-2/) widget. The data grid 2 widget is part of the [Data Widgets Module](https://marketplace.mendix.com/link/component/116540) in the Mendix Marketplace.
 
 To automatically convert a data grid widget to a data grid 2, right-click the widget (or the error message) and select **Convert to Data Grid 2**.
 
-{{% alert color="info" %}}
-We are working on a batch conversion for data grid widgets that lets you convert all data grids in your project with a few clicks. We will announce the release in our [Release Notes](/releasenotes/studio-pro/10/).
-{{% /alert %}}
-
-### Template Grid{#template-grid}
+#### Template Grid{#template-grid}
 
 The template grid widget is not supported in the React client. It should be replaced with the [Gallery widget](/appstore/modules/gallery/). The gallery widget is part of the [Data Widgets Module](https://marketplace.mendix.com/link/component/116540) in the Mendix Marketplace.
 
@@ -156,7 +127,7 @@ To replace a template grid widget, follow these steps:
 1. Add any actions that items from your original widget as icon buttons to the content area.
 1. Add any actions that do not affect rows as buttons to the gallery widget's header.
 
-### Custom Widgets{#custom-widgets}
+#### Custom Widgets{#custom-widgets}
 
 Dojo widgets are no longer supported in the React client. They should be replaced with a pluggable widget based on React. 
 

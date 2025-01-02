@@ -1,0 +1,505 @@
+openapi: 3.0.1
+info:
+  title: "Catalog Search API"
+  description: "This is the Search API specification. With this API, you can search for data sources and datasets in the Catalog."
+  termsOfService: "#"
+  contact:
+    email: PlatformCore@mendix.com
+  version: "5.1.0"
+externalDocs:
+  description: "Specification of this API"
+  url: "https://docs.mendix.com/apidocs-mxsdk/apidocs/catalog-apis"
+servers:
+  - url: "https://catalog.mendix.com/rest/search/v5"
+paths:
+  /data:
+    get:
+      tags:
+        - Search
+      summary: "Search in the Catalog based on the query string and specified filters."
+      security:
+        - OAuth2:
+            [
+              "mx:datahub:services:read",
+              "openid",
+              "offline_access",
+              "mx:user:profile:v1:read",
+            ]
+        - PersonalAccessTokens: []
+      parameters:
+        - in: query
+          name: "query"
+          schema:
+            type: string
+          description: "The search term consisting of min of 3 characters. Only alphanumeric characters allowed."
+        - in: query
+          name: productionEndpointsOnly
+          schema:
+            type: boolean
+          description: "Boolean filter to return endpoints in Production environments only. (Default: false - returning endpoints from all environments)"
+        - in: query
+          name: ownedContentOnly
+          schema:
+            type: boolean
+          description: "Boolean filter to return only endpoints of which you are the business- or technical owner. Note that this will also return items that you have set to undiscoverable. (Default: false)"
+        - in: query
+          name: serviceType
+          schema:
+            type: string
+            enum: ["OData", "REST", "SOAP"]
+          description: "Protocol used by the service. Currently supported value: OData | REST | SOAP "
+          example: "REST"
+          style: form
+          explode: false
+        - in: query
+          name: capabilities
+          schema:
+            $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Capabilities"
+          description: "This will restrict search results to datasources with datasets that have the specified capabilities. Default 'none', i.e. no capability constraint. A comma delimitied list of multiple values may be supplied. In the case of multiple capabilities the values shall be combined with 'AND'."
+          example: "updatable"
+          style: form
+          explode: false
+        - in: query
+          name: offset
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+          description: "The offset is the zero-based index of the first record to be returned on the page."
+        - in: query
+          name: limit
+          schema:
+            type: integer
+            minimum: 1
+            default: 20
+            maximum: 100
+          description: "The maximum number of items that can be returned per request. If the total items retrieved is more than this limit, then we shall provide page links for retrieval of subsequent items in the response. If no limit is provided it shall be defaulted to 20, the maximum limit that can be supplied is 100, if a limit over 100 is supplied it shall be defaulted to 100 and no error message shall be generated."
+      responses:
+        "200":
+          $ref: "#/components/responses/Data_GET_200"
+        "400":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/400"
+        "401":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/401"
+        "403":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/403"
+        "410":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/410"
+        "500":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/500"
+  /applications/{AppUUID}/services/{ServiceName}:
+    #~1 is escape for forward slash in json pointer
+    $ref: "catalog-common-definitions_v5.yaml#/paths/~1applications~1{AppUUID}~1services~1{ServiceName}"
+  /endpoints/{EndpointUUID}:
+    get:
+      tags:
+        - Endpoints
+      summary: "Retrieves the details of the specified endpoint"
+      security:
+        - OAuth2:
+            [
+              "mx:datahub:services:read",
+              "openid",
+              "offline_access",
+              "mx:user:profile:v1:read",
+            ]
+        - PersonalAccessTokens: []
+      parameters:
+        - $ref: "catalog-common-definitions_v5.yaml#/components/parameters/EndpointUUID_Path"
+      responses:
+        "200":
+          $ref: "#/components/responses/PublishedEndpoint_GET_200"
+        "400":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/400"
+        "401":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/401"
+        "403":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/403"
+        "404":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/404"
+        "410":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/410"
+        "500":
+          $ref: "catalog-common-definitions_v5.yaml#/components/responses/500"
+components:
+  responses:
+    PublishedEndpoint_GET_200:
+      description: "OK"
+      headers:
+        X-Api-Version:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/XApiVersion"
+      content:
+        application/json:
+          schema:
+            $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Endpoint_PublishedResponseSingle"
+    Data_GET_200:
+      description: "OK"
+      headers:
+        X-Api-Version:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/XApiVersion"
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - data
+              - links
+              - limit
+              - offset
+              - totalResults
+            properties:
+              data:
+                type: array
+                items:
+                  anyOf:
+                    - $ref: "#/components/schemas/SearchResultOData"
+                    - $ref: "#/components/schemas/SearchResultREST"
+                    - $ref: "#/components/schemas/SearchResultBusinessEvent"
+                    - $ref: "#/components/schemas/SearchResultSOAP"
+                  discriminator:
+                    propertyName: serviceType
+                    mapping:
+                      OData: "#/components/schemas/SearchResultOData"
+                      SOAP: "#/components/schemas/SearchResultSOAP"
+                      REST: "#/components/schemas/SearchResultREST"
+                      Business Events: "#/components/schemas/SearchResultBusinessEvent"
+                example:
+                  - uuid: "69db538d-35d4-4a9f-825a-93db0eb8130f"
+                    name: "test.acme.employeeinformation"
+                    version: "2.1"
+                    serviceType: "OData"
+                    specificationVersion: "3.0"
+                    description: "Information about the employees of AcmeCorp"
+                    connections: 42
+                    lastUpdated: "2019-01-01T15:22:58.981Z"
+                    securityClassification: "Internal"
+                    validated: true
+                    securityScheme:
+                      securityTypes:
+                        - name: "Basic"
+                        - name: "MxID"
+                          marketplaceModuleID: "93457"
+                      mxAllowedRoles:
+                        - name: HrExpert'
+                          uuid: 04989324-8a86-495b-b2d0-baf491ce6ff5
+                    environment:
+                      name: HR-eu-prod'
+                      location: "https://hr.acmecorp.test"
+                      type: "Production"
+                      uuid: "57e214d1-d8b2-48fb-8ff3-d67932ae392b"
+                    application:
+                      name: "AcmeHR"
+                      description: "This application is used to manage the entire HR process of AcmeCorp"
+                      repositoryLocation: "https://teamserver.sprintr.com/e0fb450a-203f-3e0a-ae3c-9cadaea00743"
+                      type: "Mendix"
+                      businessOwner:
+                        name: "Stan Raine"
+                        email: "stan.raine@acme.test"
+                        openID: "https://mxid2.mendixcloud.com/mxid2/id?id=964fe18e-65f6-4ed2-99c3-62acee9dcdd6"
+                      technicalOwner:
+                        name: "Stan Raine"
+                        email: "stan.raine@acme.test"
+                        openID: "https://mxid2.mendixcloud.com/mxid2/id?id=964fe18e-65f6-4ed2-99c3-62acee9dcdd6"
+                      uuid: "cfc36b98-7409-4384-b71d-f003b0c2f84b"
+                      icon: "https://cdn.mendix.com/image.png"
+                    tags:
+                      - name: "hr"
+                      - name: "salary"
+                      - name: "peoplemanagement"
+                    links:
+                      - rel: "Catalog"
+                        href: "https://catalog.mendix.com/link/entity?EndpointUUID=9e26c386-9316-4a33-9963-8fe9f69a5117&EntityUUID=130b6d98-bb60-4920-8262-a0adfbe0ade8"
+                    totalEntities: 1
+                    entities:
+                      - name: "Employee"
+                        entitySetName: "NewEmployees"
+                        EntityTypeName: "Employee"
+                        namespace: "AcmeHR"
+                        totalAttributes: 2
+                        totalAssociation: 1
+                        validated: true
+                        updatable: false
+                        insertable: false
+                        deletable: false
+                        countable: false
+                        topSupported: false
+                        skipSupported: false
+                        filterable: false
+                        sortable: false
+                        attributes:
+                          - name: "Name"
+                            typeName: "String"
+                            typeKind: "Primitive"
+                            updatable: false
+                            insertable: false
+                            countable: false
+                            filterable: false
+                            sortable: false
+                          - name: "Salary"
+                            typeName: "Decimal"
+                            typeKind: "Primitive"
+                            updatable: false
+                            insertable: false
+                            countable: false
+                            filterable: false
+                            sortable: false
+                        associations:
+                          - name: "Employee_Car"
+                            referencedDataset: "Car"
+                            multiplicity: "0..1"
+                            entitySetName: "CompanyCars"
+                            entityTypeName: "Car"
+                            namespace: "AcmeHR"
+                            updatable: true
+                            insertable: false
+                            countable: false
+                    totalActions: 1
+                    actions:
+                      - name: "MyActionMicroflow"
+                        fullyQualifiedName: "MyNamespace.MyActionMicroflow"
+                        summary: "Summary of an action"
+                        description: "Description of an action"
+                        totalParameters: 1
+                        parameters:
+                          - name: "MyFirstEntity"
+                            typekind: "EntityType"
+                            typeName: "DefaultNamespace.MyFirstEntity"
+                            summary: "Parameter Summary"
+                            description: "Parameter Description"
+                            nullable: false
+                        returnType:
+                          typeName: "String"
+                          typekind: "Primitive"
+                          Nullable: true
+                  - uuid: "09b9a38d-c478-4fdf-a466-0286dd526853"
+                    name: "test.acme.salesinformation"
+                    version: "1.0.0"
+                    serviceType: "REST"
+                    specificationVersion: "2.0"
+                    description: "Information about the sales of AcmeCorp"
+                    connections: 0
+                    lastUpdated: "2024-01-01T15:22:58.981Z"
+                    securityClassification: "Internal"
+                    validated: true
+                    securityScheme:
+                      securityTypes:
+                        - name: "Basic"
+                        - name: "MxID"
+                          marketplaceModuleID: "93457"
+                      mxAllowedRoles:
+                        - name: SalesExpert'
+                          uuid: 04989324-8a86-856b-b2d0-baf491ce6ff5
+                    environment:
+                      name: Sales-eu-prod'
+                      location: "https://sales.acmecorp.test"
+                      type: "Production"
+                      uuid: "57e214d1-d8b2-48fb-8ff3-d67932ae819b"
+                    application:
+                      name: "AcmeSales"
+                      description: "This application is used to manage the entire Sales process of AcmeCorp"
+                      repositoryLocation: "https://teamserver.sprintr.com/e0fb450a-203f-3e0a-ae3c-9cadaea95862"
+                      type: "Mendix"
+                      businessOwner:
+                        name: "Stan Raine"
+                        email: "stan.raine@acme.test"
+                        openID: "https://mxid2.mendixcloud.com/mxid2/id?id=964fe18e-65f6-4ed2-99c3-62acee9dcdd6"
+                      technicalOwner:
+                        name: "Stan Raine"
+                        email: "stan.raine@acme.test"
+                        openID: "https://mxid2.mendixcloud.com/mxid2/id?id=964fe18e-65f6-4ed2-99c3-62acee9dcdd6"
+                      uuid: "cfc36b98-7409-8592-b71d-f003b0c2f84b"
+                      icon: "https://cdn.mendix.com/image.png"
+                    tags:
+                      - name: "sales"
+                      - name: "management"
+                    links:
+                      - rel: "Catalog"
+                        href: "https://catalog.mendix.com/link/entity?EndpointUUID=9e26c386-9316-4a33-9963-8fe9f69a5946&EntityUUID=130b6d98-bb60-4920-8594-a0adfbe0ade8"
+              links:
+                type: array
+                description: Pagination URL links are provided to the 'First', 'Previous', 'Current', 'Next' and 'Last' result pages.
+                items:
+                  $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Link"
+                example:
+                  - rel: "First"
+                    href: "https://catalog.mendix.com/rest/search/v5/data?query=employee&productionEndpointsOnly=false&offset=0&limit=20"
+                  - rel: "Previous"
+                    href: "https://catalog.mendix.com/rest/search/v5/data?query=employee&productionEndpointsOnly=false&offset=100&limit=20"
+                  - rel: "Current"
+                    href: "https://catalog.mendix.com/rest/search/v5/data?query=employee&productionEndpointsOnly=false&offset=120&limit=20"
+                  - rel: "Next"
+                    href: "https://catalog.mendix.com/rest/search/v5/data?query=employee&productionEndpointsOnly=false&offset=140&limit=20"
+                  - rel: "Last"
+                    href: "https://catalog.mendix.com/rest/search/v5/data?query=employee&productionEndpointsOnly=false&offset=380&limit=20"
+              limit:
+                type: integer
+                description: The maximum number of items that is returned in this resultset.
+                example: 20
+              offset:
+                type: integer
+                description: The zero-based index of the first item in the resultset.
+                example: 40
+              lastId:
+                type: string
+                format: uuid
+                description: UUID of the last item returned in the Data array.
+                example: "69db538d-35d4-4a9f-825a-93db0eb8130f"
+              totalResults:
+                type: integer
+                description: Total number of results matching the search query
+                example: 393
+  schemas:
+    SearchResultBase:
+      type: object
+      required:
+        - uuid
+        - name
+        - version
+        - specificationVersion
+        - lastUpdated
+        - securityClassification
+        - validated
+        - environment
+        - application
+        - links
+      properties:
+        uuid:
+          type: string
+          format: uuid
+          description: UUID of the endpoint
+          example: "69db538d-35d4-4a9f-825a-93db0eb8130f"
+        name:
+          type: string
+          maxLength: 200
+          description: Name of the service published at the endpoint
+          example: "test.acme.employeeinformation"
+        version:
+          type: string
+          maxLength: 200
+          description: Version of the service published at the endpoint
+          example: "2.1"
+        specificationVersion:
+          type: string
+          description: "Version of the specification used to describe the service. ** please note that for REST and SOAP contracts the specification version may not be accurately determined in all cases.**"
+          example: "3.0"
+        description:
+          type: string
+          description: Description of the service published at the endpoint.
+          example: "Information about the employees of AcmeCorp"
+        lastUpdated:
+          type: string
+          format: date-time
+          description: UTC timestamp of the latest update to the service.
+          example: "2019-01-01T15:22:58.981Z"
+        securityClassification:
+          type: string
+          enum: ["Internal", "Public", "Confidential"]
+          description: "The access restrictions for this service. Currently supported values are Public, Internal (restricted to company), or Confidential (restricted within company). (Default: Internal)"
+          example: Internal
+        validated:
+          type: boolean
+          description: Indicates if the service has the validated setting. This is set by the owner or curator as part of curation.
+          example: true
+        environment:
+          type: object
+          required:
+            - name
+            - location
+            - type
+            - uuid
+          properties:
+            name:
+              type: string
+              maxLength: 200
+              description: Name of the environment.
+              example: "HR-eu-prod"
+            location:
+              type: string
+              maxLength: 500
+              format: uri
+              description: The URL of the environment.
+              example: "https://hr.acmecorp.test"
+            type:
+              type: string
+              enum: [Production, Non-Production, Free App]
+              description: 'Indicates the environment type and the quality of the data that the data source exposes. Possible values of this enum: "Production", "Non-Production" or "Free App". (Default: Non-Production)'
+              example: "Production"
+            uuid:
+              type: string
+              format: uuid
+              description: UUID of the environment.
+              example: "57e214d1-d8b2-48fb-8ff3-d67932ae392b"
+        application:
+          $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Application_Response"
+        tags:
+          type: array
+          description: Tags assigned to this endpoint.
+          items:
+            $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Tag"
+          example:
+            - name: "hr"
+            - name: "salary"
+            - name: "peoplemanagement"
+        links:
+          type: array
+          description: Catalog is the URL to the service endpoint details page in the Catalog. "Self" is the URL at which with the endpoint's details, including contracts, can be retrieved.
+          items:
+            $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Link"
+          example:
+            - rel: "Self"
+              href: "http://catalog.mendix.com/rest/search/v5/endpoints/9e26c386-9316-4a33-9963-8fe9f69a5117"
+            - rel: "Catalog"
+              href: "https://catalog.mendix.com/link/endpoint?EndpointUUID=9e26c386-9316-4a33-9963-8fe9f69a5117"
+    SearchResultSynchronousTechnology:
+      allOf:
+        - $ref: "#/components/schemas/SearchResultBase"
+        - properties:
+            securityScheme:
+              $ref: "catalog-common-definitions_v5.yaml#/components/schemas/SecurityScheme"
+            serviceType:
+              type: string
+              enum: ["OData", "REST", "SOAP"]
+              description: "Protocol used by the service. Currently supported value: OData | REST | SOAP"
+              example: "OData"
+          required:
+            - securityScheme
+            - serviceType
+    SearchResultASynchronousTechnology:
+      allOf:
+        - $ref: "#/components/schemas/SearchResultBase"
+        - required:
+            - serviceType
+        - properties:
+            serviceType:
+              type: string
+              enum: ["Business Events"]
+              description: "Protocol used by the service"
+              example: "Business Events"
+    SearchResultOData:
+      allOf:
+        - $ref: "#/components/schemas/SearchResultSynchronousTechnology"
+        - $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Details_OData"
+        - properties:
+            connections:
+              type: integer
+              description: Number of application environments consuming the endpoint.
+              example: 42
+          required:
+            - connections
+    SearchResultREST:
+      allOf:
+        - $ref: "#/components/schemas/SearchResultSynchronousTechnology"
+        - $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Details_Rest"
+    SearchResultSOAP:
+      allOf:
+        - $ref: "#/components/schemas/SearchResultSynchronousTechnology"
+        - $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Details_Soap"
+    SearchResultBusinessEvent:
+      allOf:
+        - $ref: "#/components/schemas/SearchResultASynchronousTechnology"
+        - $ref: "catalog-common-definitions_v5.yaml#/components/schemas/Details_BusinessEvents"
+  securitySchemes:
+    OAuth2:
+      $ref: "catalog-common-definitions_v5.yaml#/components/securitySchemes/OAuth2"
+    PersonalAccessTokens:
+      $ref: "catalog-common-definitions_v5.yaml#/components/securitySchemes/PersonalAccessTokens"

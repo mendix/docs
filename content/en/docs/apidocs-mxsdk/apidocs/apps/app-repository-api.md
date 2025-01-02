@@ -107,7 +107,7 @@ Returns information about the version control repository for a Mendix app.
 
 |Name|Type|Required|Description|
 |---|---|---|---|
-|`AppId`|String|Yes|The App ID of the Mendix app for which the repository information should be returned. You can find this in the [General](/developerportal/collaborate/general-settings/) tab of the **Settings** page after you open your app in [Apps](https://sprintr.home.mendix.com/). |
+|`AppId`|String|Yes|The App ID of the Mendix app for which the repository information should be returned. You can find this under **Project ID** in the [General](/developerportal/collaborate/general-settings/) tab of the **Settings** page after you open your app in [Apps](https://sprintr.home.mendix.com/). |
 
 ##### Example
 

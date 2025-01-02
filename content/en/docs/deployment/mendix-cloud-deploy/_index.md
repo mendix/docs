@@ -53,7 +53,7 @@ If, after a couple of minutes, your app does not wake up, contact [Mendix Suppor
 
 You can upgrade a Free App to a licensed app running on a node in Mendix Cloud. For more information, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
 
-#### Free Apps Archiving {#free-apps-archival}
+#### Archiving of Free Apps {#free-apps-archival}
 
 If a Free App has been in sleep mode for three months or longer, it may be archived. For Free Apps that are going to be archived, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) is informed two weeks beforehand. Upon archiving, the project and model are retained and will remain active and accessible, but the running app, database, files, and backups for the Free App are deleted.
 
@@ -61,6 +61,25 @@ There are two ways to prevent your Free App from being archived:
 
 * Visit the Free App
 * Deploy a new version of your app to your Free App environment
+
+#### Deletion of Unused Free Apps
+
+If a Free App has never seen any activity since it was created, it is kept on the [Team Server](/developerportal/general/team-server/) for a maximum of one year. After this, the app, its repository, and any cloud resources will be permanently deleted.
+
+The system uses the following criteria when determining if an app is unused:
+
+* Free App (i.e. unlicensed)
+* Deployed to the Public Mendix Cloud
+* Unpinned
+* A project team with only 1 team member
+* The app was created more than a year ago
+* No commits since the app was created
+
+You can prevent this clean up by performing one of the following actions:
+
+* Make changes and commit them to the Team Server
+* [Pin your app](/developerportal/#app-tiles)
+* [Invite someone](/developerportal/general/team/#inviting) to collaborate with you on your app
 
 ### Licensed App
 
@@ -128,20 +147,21 @@ For more information, see [Pricing](https://www.mendix.com/pricing/).
 
 Mendix environments are sized by reference to cloud resource packs. These resources are used for application runtime as well as anything else required to run your application, such as agents for any third-party integrations that you have added. The table below shows the current cloud resource packs for Standard, Premium, and Premium Plus plans. Resources for the Basic plan are fixed as described in [Mendix Basic Package](/developerportal/deploy/basic-package/).
 
-If you have a Standard, Premium, or Premium Plus plan, you can redeem virtual credits known as cloud credits to purchase cloud resource packs on the Mendix Platform. For more information about how this works, see [Entitlements](/control-center/entitlements/).
+If you have a Standard, Premium, or Premium Plus plan, you can redeem virtual credits known as cloud tokens to purchase cloud resource packs on the Mendix Platform. For more information about how this works, see [Entitlements](/control-center/entitlements/).
 
 The technical details for the cloud resource packs are listed below.
 
-| Pack                                                 | App RAM | App vCPU | DB RAM  | DB vCPU | DB Storage | File Storage |
-| ---------------------------------------------------- | ------- | -------- | ------- | ------- | ---------- | ------------ |
-| XS21                                                 | 1 GiB   | 0.25     | 1 GiB   | 2       | 5 GiB      | 10 GiB       |
-| S21,<br>S21 Premium                                  | 2 GiB   | 0.5      | 2 GiB   | 2       | 10 GiB     | 20 GiB       |
-| M21,<br>M21 Premium                                  | 4 GiB   | 1        | 4 GiB   | 2       | 20 GiB     | 40 GiB       |
-| L21,<br>L21 Premium                                  | 8 GiB   | 2        | 8 GiB   | 2       | 40 GiB     | 80 GiB       |
-| XL21,<br>XL21 Premium,<br>XL21 Premium Plus          | 16 GiB  | 4        | 16 GiB  | 4       | 80 GiB     | 160 GiB      |
-| XXL21,<br>XXL21 Premium,<br>XXL21 Premium Plus       | 32 GiB  | 8        | 32 GiB  | 4       | 160 GiB    | 320 GiB      |
-| XXXL21,<br>XXXL21 Premium,<br>XXXL21 Premium Plus    | 64 GiB  | 16       | 64 GiB  | 8       | 320 GiB    | 640 GiB      |
-| XXXXL21,<br>XXXXL21 Premium,<br>XXXXL21 Premium Plus | 128 GiB | 32       | 128 GiB | 16      | 640 GiB    | 1280 GiB     |
+| Pack                                                                   | App RAM | App vCPU | DB RAM  | DB vCPU | DB Storage | File Storage |
+| ---------------------------------------------------------------------- | ------- | -------- | ------- | ------- | ---------- | ------------ |
+| XS21                                                                   | 1 GiB   | 0.25     | 1 GiB   | 2       | 5 GiB      | 10 GiB       |
+| S21,<br>S21 Premium                                                    | 2 GiB   | 0.5      | 2 GiB   | 2       | 10 GiB     | 20 GiB       |
+| M21,<br>M21 Premium                                                    | 4 GiB   | 1        | 4 GiB   | 2       | 20 GiB     | 40 GiB       |
+| L21,<br>L21 Premium                                                    | 8 GiB   | 2        | 8 GiB   | 2       | 40 GiB     | 80 GiB       |
+| XL21,<br>XL21 Premium,<br>XL21 Premium Plus                            | 16 GiB  | 4        | 16 GiB  | 4       | 80 GiB     | 160 GiB      |
+| XXL21,<br>XXL21 Premium,<br>XXL21 Premium Plus                         | 32 GiB  | 8        | 32 GiB  | 4       | 160 GiB    | 320 GiB      |
+| XXXL21,<br>XXXL21 Premium,<br>XXXL21 Premium Plus                      | 64 GiB  | 16       | 64 GiB  | 8       | 320 GiB    | 640 GiB      |
+| XXXXL21,<br>XXXXL21 Premium,<br>XXXXL21 Premium Plus                   | 128 GiB | 32       | 128 GiB | 16      | 640 GiB    | 1280 GiB     |
+| XXXXL21-5XLDB,<br>XXXXL21-5XLDB Premium,<br>XXXXL21-5XLDB Premium Plus | 128 GiB | 32       | 256 GiB | 32      | 1280 GiB   | 1280 GiB     |
 
 {{% alert color="info" %}}Premium plans provide multi-AZ fallback, and Premium Plus plans provide multi-region fallback. For more details, see [Additional Resources](#additional-resources), below.{{% /alert %}}
 

@@ -13,7 +13,7 @@ aliases:
 
 The Landscape View presents a graphical view of the registered services in your [Catalog](/catalog/). It provides a landscape visualization of items registered in the Catalog, and their relationships with apps that consume the datasets that they connect to. In the Landscape, the nodes are the runtime instances of applications (or, more specifically, the deployments of apps in specific environments) and the published services from the apps. All public services that are issued are also shown in the Landscape.
 
-In the Landscape, you will see, at a glance, the network of deployments of the apps publishing services and those consuming them. It enhances searching for suitable data sources in the Catalog by showing the following:
+In the Landscape, you will see, at a glance, the network of deployments of the apps publishing services and those consuming them. It enhances searching for suitable services in the Catalog by showing the following:
 
 * Popular apps in the Catalog Landscape and the apps that consume data from them
 * The dependencies between consuming and publishing apps
@@ -52,11 +52,11 @@ You can pan around the landscape and zoom using the mouse. You can also collapse
 
 Registered apps and services are depicted in the Landscape as nodes from the definitions in the registered service metadata. The icons for each of these nodes identifies the source application, for example, Mendix and Siemens.
 
-#### Data Sources
+#### Services
 
-Data sources or the published services are depicted as a round node with the icon that indicates the **Technology** and the service name and version number on the line connecting it to the publishing app, the number of datasets exposed in the service.
+Services are depicted as a round node with the icon that indicates the **Technology** and the service name and version number on the line connecting it to the publishing app, the number of datasets exposed in the service.
 
-{{% alert color="info" %}}The application icon that is shown for the data source and application in the asset details screen and the search results is not shown for the data source in Landscape. Here the service technology is indicated.{{% /alert %}}
+{{% alert color="info" %}}The application icon that is shown for the service and application in the asset details screen and the search results is not shown for the service in Landscape. Here the service technology is indicated.{{% /alert %}}
 
 #### Apps
 
@@ -69,7 +69,7 @@ Apps are displayed as square icons with the application icon and the environment
 The relationships and dependencies between apps, published services, and consuming apps are represented by connecting lines that also display the datasets that are published by a service and consumed by consuming apps. These are illustrated and described in the following examples:
 
 * **Solid gray line** – This links an app and the services published from the app in the specified environment. In the example, the selected app **LEGO-Machinesafety Data** has 2 published services, which includes**Published_OData_MS 1.0.0**.
-* **Broken gray line with an arrow (consume line)** – This indicates that an app is consuming from the service it is linked to by the line. The direction of the dependency is indicated by the direction of the arrow: the consuming app makes a call to the service for data from the publishing app—the arrow points to the service (or data source) which is "pulling" the data. The service will "get" the data associated with the endpoint of the consumed dataset from the publishing app.
+* **Broken gray line with an arrow (consume line)** – This indicates that an app is consuming from the service it is linked to by the line. The direction of the dependency is indicated by the direction of the arrow: the consuming app makes a call to the service for data from the publishing app—the arrow points to the service which is "pulling" the data. The service will "get" the data associated with the endpoint of the consumed dataset from the publishing app.
 
     The app **StudioExperienceMob6Aug** consumes one dataset through **Published_OData_MS 1.0.0**, which is published from **LEGO - Machine Safety Data** in the production environment.
 

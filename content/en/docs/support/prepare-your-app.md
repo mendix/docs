@@ -38,7 +38,7 @@ To add users to an app's team and give them access to submit tickets for a speci
 
     These roles have an **Edit** permission set for **Deploy** or **Capture**, thus they can submit/view Support tickets for the app. For more details on setting permissions, see the [Managing the Team](/developerportal/general/team/#managing) section of **Team**.
 
-5. To finalize the setup, email [support@mendix.com](https://support.mendix.com/) with the **App name** and **App ID** (both of which can be found on the [General](/developerportal/settings/general-settings/) page for the app).
+5. To finalize the setup, email [support@mendix.com](https://support.mendix.com/) with the **App name** and **Project ID** (both of which can be found on the [General](/developerportal/settings/general-settings/) page for the app).
 
 ### Giving Existing Team Members Access
 

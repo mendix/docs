@@ -8,7 +8,7 @@ aliases: /howto/integration/import-a-large-excel-file/
 
 ## Introduction
 
-Use XML-to-domain mapping to create a new import entity from an Excel sheet in a quick, semi-automated way.
+Use XML-to-domain mapping to create a new import entity from an Excel sheet in a quick, semi-automated way. There is also a new & fully automated way available to create placeholder entity based off of Excel files, refer section **Using Data Importer Extension to create Entity using a Large Excel.**
 
 This how-to teaches you how to do the following:
 
@@ -141,3 +141,25 @@ To keep your application clean, you can delete the XSD schema and XML-to-domain 
 A video demonstrating this technique can be viewed below:  
 
 {{< youtube 8qLyIoUqKEE >}}
+
+## Using Data Importer Extension to create Entity using a Large Excel.
+
+{{% alert color="info" %}}
+Mendix Studio Pro 10.7 or above is required for this approach. You can also use these steps to create an entity from a CSV file.
+{{% /alert %}}
+
+The [Data Importer](/appstore/modules/data-importer/) extension can be used to automatically create an entity in your domain model. This example uses the same input Excel (*countries.xlsx*) to create an entity. 
+
+To create entity in your domain model using an Excel sheet, follow these steps:
+
+1. Right-click your module and navigate to **Add other** > **Data Importer**.
+2. Provide a name for the Data Importer document. You will then have the ability to upload a sample file.
+3. Drop the *Countries.xlsx* file or click **Select a local file** and navigate to the file.
+4. Set the configuration in terms of **Sheet Name**, **Header Row No**, and **Read Data from**.
+5. Click **Preview Source Data & Entity**
+   * If the column names do not conform to Mendix naming conventions, they will automatically be corrected.    
+   * The extension identifies correct data types of each column (such as string, boolean, or date).
+6. After reviewing the preview, click **Create Entity** and a non-persistable entity (NPE) is created in your domain model.
+   {{< figure src="/attachments/howto/integration/importing-excel-documents/import-a-large-excel-file/create-entity-using-excel-input.png" class="no-border" >}}
+
+    You can change the name of the entity or change its persistence later, if necessary.

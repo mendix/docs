@@ -14,7 +14,7 @@ The **Private Marketplace** page gives you the governance capabilities to approv
 * Company guidelines assurance: It enables you to meet regulatory requirements and internal policies by thoroughly reviewing components.
 * Efficient management: It offers a centralized approval process to save time and resources, preventing additional communication outside of the platform. 
 
-{{% alert color="info" %}}As a Mendix Admin, you can always unpublish content from the private Marketplace of your organization. This can help your organization keep its private Marketplace neat, with only relevant company content. To do so, go to [Company Content](/appstore/overview/#company-content) in the Marketplace home page, click the {{% icon name="three-dots-menu-horizontal" %}} icon on the component card, and then select **Unpublish all versions**. {{% /alert %}}
+{{% alert color="info" %}}As a Mendix Admin, you can always unpublish content from the private Marketplace of your organization. This can help your organization keep its private Marketplace neat, with only relevant company content. To do so, go to [Company Content](/appstore/home-page/#company-content) in the Marketplace home page, click the {{% icon name="three-dots-menu-horizontal" %}} icon on the component card, and then select **Unpublish all versions**. {{% /alert %}}
 
 The **Private Marketplace** page contains two tabs: the [Approval Requests](#approval-requests) tab and the [Approval History](#approval-history) tab.
 
@@ -22,7 +22,7 @@ The **Private Marketplace** page contains two tabs: the [Approval Requests](#app
 
 On the **Approval Requests** tab, you can configure the governance settings for publishing private Marketplace content and also manage all the pending requests.
 
-{{< figure src="/attachments/control-center/private-marketplace/approval-requests.png" max-width=100% alt=''private-marketplace''  >}}
+{{< figure src="/attachments/control-center/marketplace/private-marketplace/approval-requests.png" max-width=100% alt=''private-marketplace''  >}}
 
 ### Approval Requests Settings
 
@@ -64,7 +64,7 @@ The **Pending Approvals** list shows all the submission requests that need to be
 
 If you click the component name in a request on the **Pending Approvals** list, the details of the request open in a new page. Here you can check all the provided information about the component, download the *•mpk* file, and approve or decline the request.
 
-{{< figure src="/attachments/control-center/private-marketplace/request-details.png" max-width=100% alt=''request-details''  >}}
+{{< figure src="/attachments/control-center/marketplace/private-marketplace/request-details.png" max-width=100% alt=''request-details''  >}}
 
 On the top, you can find following buttons:
 
@@ -88,7 +88,7 @@ The request details page also has the following tabs:
 
 The **Approval History** tab lists all the requests that were approved or declined in the history.
 
-{{< figure src="/attachments/control-center/private-marketplace/approval-history.png" max-width=100% alt=''approval-history''  >}}
+{{< figure src="/attachments/control-center/marketplace/private-marketplace/approval-history.png" max-width=100% alt=''approval-history''  >}}
 
 The list shows the following details:
 

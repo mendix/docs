@@ -1,5 +1,5 @@
 ---
-title: "Register Data Sources (On-Prem or Private Cloud)"
+title: "Register Resources (On-Prem or Private Cloud)"
 description: "Describes how to use Catalog and external entities for local deployments, or for private cloud or on-premises solutions."
 url: /catalog/register/data-sources-without-mendix-cloud/
 linktitle: "Private Cloud/On-Premises Registration"
@@ -24,7 +24,7 @@ In these cases, you can still publish and consume external entities. This guide 
 
 ## Using Data in Design Time{#dh-design-time}
 
-During design time, when you are [modeling](/refguide/modeling/) your app, you are finding, registering, or importing data source [metadata](#metadata) into Studio Pro. This metadata is in the form of contracts, and is registered automatically in the Catalog if your application is hosted on Mendix Cloud. See the [Metadata Contracts](#metadata) section below for more details.
+During design time, when you are [modeling](/refguide/modeling/) your app, you are finding, registering, or importing service [metadata](#metadata) into Studio Pro. This metadata is in the form of contracts, and is registered automatically in the Catalog if your application is hosted on Mendix Cloud. See the [Metadata Contracts](#metadata) section below for more details.
 
 If you will be deploying locally, to a Private Cloud, or On-Premises, you can add an app, the environments on which it is deployed, and the [published OData entity](/refguide/published-odata-entity/) it provides using the metadata contract. For general resources on using data when modeling your app during design time, check out [Share Data Between Apps](/data-hub/share-data/) and [Write Data to Another App](/catalog/write-data/).
 
@@ -40,13 +40,13 @@ We support ZIP (for multiple file contracts) or XML (for single file contracts).
 
 ### Manually Registering Contracts to the Catalog with Team Server {#manual-team-server}
 
-If you deploy to a Private Cloud or On-Premises setup, and use the [Mendix Team Server](/refguide/version-control/#team-server), you can manually register applications, environments, services, or data sources to the Catalog. Registering the data source contracts to the Catalog ensures that it can be found and imported into an application by members of the company that owns it. 
+If you deploy to a Private Cloud or On-Premises setup, and use the [Mendix Team Server](/refguide/version-control/#team-server), you can manually register applications, environments, services, or services to the Catalog. Registering the service contracts to the Catalog ensures that it can be found and imported into an application by members of the company that owns it. 
 
 To manually register an OData contract metadata file to the Catalog, follow these basic steps:
 
 1. Create an `.mda` package to deploy. To do this, go to the **Environments** page in the **Mendix Portal** and click **Create Package From Teamserver**. The `.mda` package contains a `dependencies.json` file that lists all published and consumed OData services.
-2. Use the [Transform](/catalog/register/register-data/#transform-api) operation to transform the contents of `dependencies.json` into payloads for other operations (see the [Transform operation specs](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/registration_v5.html#/Endpoints/post_transform_dependenciesjson)).
-3. Use the [Registration API](/apidocs-mxsdk/apidocs/catalog-apis/#registration) to register the data source.
+2. Use the [Transform](/apidocs-mxsdk/apidocs/registration-api/#transform-api) operation to transform the contents of `dependencies.json` into payloads for other operations (see the [Transform operation specs](http://datahub-spec.s3-website.eu-central-1.amazonaws.com/registration_v5.html#/Endpoints/post_transform_dependenciesjson)).
+3. Use the [Registration API](/apidocs-mxsdk/apidocs/registration-api/) to register the service.
 
 For detailed steps, see the [Registering a Service without Mendix Cloud](/catalog/register/register-data/#without-mendix-cloud) section of *Register Resources in the Catalog*.
 
@@ -59,7 +59,7 @@ To manually register contracts to the Catalog without the Mendix Team Server, do
 
 ### Importing Contracts Directly into Studio Pro (Bypassing the Catalog) {#import-contracts}
 
-If you are deploying locally, or do not want to register the data sources in the Catalog, you can import the metadata contracts or service URLs directly into Studio Pro to consume a published OData service.
+If you are deploying locally, or do not want to register the service in the Catalog, you can import the metadata contracts or service URLs directly into Studio Pro to consume a published OData service.
 
 #### Importing from a File
 

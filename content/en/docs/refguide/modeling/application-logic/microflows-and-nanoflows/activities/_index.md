@@ -11,12 +11,12 @@ Activities define the actions that are executed in a microflow or a nanoflow.
 There are different types of activity, and they are grouped together in the Studio Pro **Toolbox**. All the activities are listed below. Click on each activity for more details.
 
 {{% alert color="info" %}}
-Most activities can be used in both microflows and nanoflows. However, some can only be used in one of these types of flow, or the behavior may differ between in microflows and in nanoflows.
+Most activities can be used in both microflows and nanoflows. However, some can only be used in one of these types of flow, or the behavior may differ between in microflows and in nanoflows. For more information, see the [Differences between Microflows and Nanoflows](/refguide/microflows-and-nanoflows/#differences) section in *Microflows and Nanoflows*.
 {{% /alert %}}
 
 ## Object Activities
 
-Object activities can be used to create and manipulate objects. The [domain model](/refguide/domain-model/) defines the object types ([entities](/refguide/entities/)) that can be used.
+[Object activities](/refguide/object-activities/) can be used to create and manipulate objects. The [domain model](/refguide/domain-model/) defines the object types ([entities](/refguide/entities/)) that can be used.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
@@ -30,7 +30,7 @@ Object activities can be used to create and manipulate objects. The [domain mode
 
 ## List Activities
 
-List activities can be used to create and manipulate lists of objects.
+[List activities](/refguide/list-activities/) can be used to create and manipulate lists of objects.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
@@ -41,7 +41,7 @@ List activities can be used to create and manipulate lists of objects.
 
 ## Action Call Activities
 
-Action call activities can be used to call another microflow or to call a Java action.
+[Action call activities](/refguide/action-call-activities/) can be used to call another microflow or to call a Java action.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
@@ -51,7 +51,7 @@ Action call activities can be used to call another microflow or to call a Java a
 
 ## Variable Activities
 
-Variable activities can be used to create or change a variable.
+[Variable activities](/refguide/variable-activities/) can be used to create or change a variable.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
@@ -60,7 +60,7 @@ Variable activities can be used to create or change a variable.
 
 ## Client Activities
 
-Client activities can be used to have the web client of your application perform an action, such as showing a different page or downloading a file.
+[Client activities](/refguide/client-activities/) can be used to have the web client of your application perform an action, such as showing a different page or downloading a file.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
@@ -80,7 +80,7 @@ Client activities can be used to have the web client of your application perform
 These activities can only be used in microflows.
 {{% /alert %}}
 
-Integration activities can be used to integrate with other systems, for example by calling a web service.
+[Integration activities](/refguide/integration-activities/) can be used to integrate with other systems, for example by calling a web service.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
@@ -110,6 +110,8 @@ Integration activities can be used to integrate with other systems, for example 
 These activities can only be used in microflows.
 {{% /alert %}}
 
+[Metrics activities](/refguide/metrics-activities/) are used to provide custom metrics from your app.
+
 | Graphic | Name | Description |
 | --- | --- | --- |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/counter.png" alt="counter" link="/refguide/metrics-counter/" max-width=55% class="no-border" >}} | [Counter](/refguide/metrics-counter/) | Allows you to increment a counter by the specified value. |
@@ -117,6 +119,8 @@ These activities can only be used in microflows.
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/gauge.png" alt="gauge" link="/refguide/metrics-gauge/" max-width=55% class="no-border" >}} | [Gauge](/refguide/metrics-gauge/) | Allows you to specify the value of a gauge. |
 
 ## ML Kit Activities
+
+[ML Kit activities](/refguide/ml-kit-activities/) are used with a machine learning model.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
@@ -128,7 +132,7 @@ These activities can only be used in microflows.
 These activities can only be used in microflows.
 {{% /alert %}}
 
-Workflow activities are used in relation to workflows and their user tasks. 
+[Workflow activities](/refguide/workflow-activities/) are used in relation to workflows and their user tasks. 
 
 | Graphic | Name | Description |
 | --- | ---| --- |
@@ -151,6 +155,8 @@ Workflow activities are used in relation to workflows and their user tasks.
 {{% alert color="info" %}}
 These activities can only be used in microflows.
 {{% /alert %}}
+
+[External object activities](/refguide/external-object-activities/) allow you to call the service to update the state of the object in the other system.
 
 | Graphic | Name | Description |
 | --- | --- | --- |

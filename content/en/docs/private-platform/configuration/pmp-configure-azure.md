@@ -20,7 +20,7 @@ To configure the CI/CD pipeline, prepare the following:
 
 ## Configuring the CI/CD Pipeline
 
-If you have an Azure organization, you can set Azure as your CI System in **Settings** > **DevOps** > **CI/CD**. You need to first obtain a [Personal Access Token](#pat), and then configure the followings settings:
+If you have an Azure organization, you can set Azure as your CI System in **Switch to Admin Mode** > **Settings** > **Build settings** > **Build Utility**. You need to first obtain a [Personal Access Token](#pat), and then configure the followings settings:
 
 * [Azure blob settings](#blob)
 * [S3 bucket settings](#bucket)

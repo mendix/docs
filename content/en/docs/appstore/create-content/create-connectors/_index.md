@@ -1,5 +1,5 @@
 ---
-title: "Create a Connector"
+title: "Create Connectors"
 url: /appstore/creating-content/connector-guide-build/
 weight: 4
 description: "Introduces the concept of connectors, how they work, and the basic steps for building and publishing connectors."

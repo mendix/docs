@@ -157,7 +157,7 @@ We will change the replication region for these regions if a new region is opene
 
 ### Application Data Replication {#application-data-replication}
 
-If you have a Standard or Premium platform subscription, you can opt out of application data replication for your licensed applications on Mendix Cloud. In that case, application data of licensed apps will not be replicated to a secondary region for any of your applications. Changing the application data replication setting only affects licensed applications and environments that have not yet been provisioned. This setting does not apply if you have a Basic plan.
+If you have a Premium platform subscription, you can opt out of application data replication for your licensed applications on Mendix Cloud. In that case, application data of licensed apps will not be replicated to a secondary region for any of your applications. Changing the application data replication setting only affects licensed applications and environments that have not yet been provisioned. This setting does not apply to applications with a Basic plan.
 
 ## Limitations
 

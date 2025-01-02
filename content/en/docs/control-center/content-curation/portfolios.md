@@ -128,7 +128,7 @@ In the list, you can see the following items:
 
 On the **Privacy Requests** tab, you can decide whether a Mendix Admin needs to approve the creation of a restricted or open portfolio or any change of privacy settings of an existing portfolio. You can use the toggle on the tab to turn it on or off. For details on privacy settings, see the [Different Privacy Settings of a Portfolio](/developerportal/portfolio-management/#privacy-settings) section.
 
-{{< figure src="/attachments/control-center/portfolios/admin-curation-toggle.png" alt="Mendix Admins must approve changes to portfolio privacy settings" class="no-border" >}}
+{{< figure src="/attachments/control-center/content-curation/portfolios/admin-curation-toggle.png" alt="Mendix Admins must approve changes to portfolio privacy settings" class="no-border" >}}
 
 The toggle is turned off by default. If the toggle is turned on, as a Mendix Admin, you automatically get a [notification](/developerportal/global-navigation/#notifications) whenever someone creates a restricted or open portfolio or changes the privacy settings of an existing portfolio. 
 

@@ -157,8 +157,8 @@ To change the app URL (if you are not using a custom domain), contact [Mendix Su
 
 * **URL** for the new app, which is available from the **Environments** page for the new app
 * **URL** for the old app, which is available from the **Environments** page for the old app
-* **App ID** for the new app, which is available from the **Settings** page for the new app
-* **App ID** for the old app, which is available from the **Settings** page for the old app
+* **Project ID** for the new app, which is available from the **Settings** page for the new app
+* **Project ID** for the old app, which is available from the **Settings** page for the old app
 
 ### Changing a Custom Domain{#custom-domain}
 

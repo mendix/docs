@@ -24,7 +24,7 @@ On the [Catalog](/control-center/catalog-admin/) page of Control Center, you can
 
 A Mendix Admin sees the **Curators** tab displaying the list of Curators for the organization:
 
-{{< figure src="/attachments/control-center/data-hub-admin/curators.png" alt="Curators" class="no-border" >}}
+{{< figure src="/attachments/control-center/content-curation/catalog-admin/curators.png" alt="Curators" class="no-border" >}}
 
 The Curator role can see and edit metadata for all registered assets in the Catalog. Business and Technical Owners can edit metadata on the items they own, but not those that they do not own.
 
@@ -48,7 +48,7 @@ Custom owners are only the contact people for registered assets. Adding a custom
 
 Mendix Admins and Curators can manage the custom owner list on the **Owners** tab:
 
-{{< figure src="/attachments/control-center/data-hub-admin/owners.png" alt="Owners" class="no-border" >}}
+{{< figure src="/attachments/control-center/content-curation/catalog-admin/owners.png" alt="Owners" class="no-border" >}}
 
 {{% alert color="info" %}}
 Curators will see *only* the **Owners** tab available in the **Catalog** page.
@@ -65,7 +65,7 @@ On this tab, you can do the following:
 
 Mendix Admins can invite external users on the **External Users** tab. An external user is a user from outside of your organization who can search for published data sources and use them in apps. External users cannot register or curate content unless they are an owner of the data source.
 
-{{< figure src="/attachments/control-center/data-hub-admin/external_users.png" alt="External users" class="no-border" >}}
+{{< figure src="/attachments/control-center/content-curation/catalog-admin/external_users.png" alt="External users" class="no-border" >}}
 
 To invite a new user, on the Catalog screen, click **Invite External Users**. In the dialog box, enter the email addresses of the users you would like to invite as external users and click **Send Invitation**.
 
@@ -75,7 +75,7 @@ You can only invite users with a Mendix account. The invitation email will not b
 
 Once the external user receives the invitation, they log into the Catalog with their Mendix credentials and accept. An external user can only access resources from one organization at a time; therefore, they need to select the company that sent the invitation in the **Company** drop-down list in the Catalog [Home](/catalog/#catalog-home) page:
 
-{{< figure src="/attachments/control-center/data-hub-admin/company_selector.png" alt="Company selector" class="no-border" >}}
+{{< figure src="/attachments/control-center/content-curation/catalog-admin/company_selector.png" alt="Company selector" class="no-border" >}}
 
 Mendix Admins can also **Remove** rights of users who no longer need access, and can add another user in their place.
 

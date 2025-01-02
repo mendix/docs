@@ -9,30 +9,20 @@ aliases:
 
 ## Introduction
 
-Mendix allows you to publish REST web services natively from Studio Pro. This how-to explains how to publish a REST service in an example project and demonstrates the `GET` operation for a published REST service.
-
-This how-to teaches you how to do the following:
-
-* Create a published REST service and return the results in JSON or XML
-
-## Prerequisites
-
-Before starting this how-to, make sure you have completed the following prerequisites:
-
-* Install [Studio Pro](https://marketplace.mendix.com/link/studiopro/)
+Mendix allows you to publish REST web services natively from Studio Pro. This document explains how to publish a REST service in an example project and demonstrates the `GET` operation for a published REST service.
 
 ## Setting Up the Example App
 
-To set up the example app that you will use in the next sections for publishing your REST service, follow these steps:
+To set up the example app you will use in the next sections, follow these steps:
 
 1. Create a new app and rename the **MyFirstModule** module to **RESTExample**.
 2. Open the domain model of the **RESTExample** module.
-3. Create **OrderItem** and **Order** entities with a many-to-one association, like this:
+3. Create **OrderItem** and **Order** entities with a many-to-one association, as seen below:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/domainmodel.png" alt="Many-to-one association from OrderItem to Order" class="no-border" >}}
 
 4. [Generate overview and detail pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/#create-automatically) for the **Order** and **OrderItem** entities.
-5. [Add a data grid](/refguide/data-grid/) to the **Order_NewEdit** page. Set it to display the **OrderItem** objects from the database over an association, like this:
+5. [Add a data grid](/refguide/data-grid/) to the **Order_NewEdit** page. Set it to display the **OrderItem** objects from the database over an association:
     
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/DataGridSettings.png" alt="Data grid settings for the Order_NewEdit page" class="no-border" >}}
 
@@ -92,7 +82,7 @@ To create the mapping, follow these steps:
 
 10. Add a **Retrieve** activity to the microflow to retrieve the **Order** based on the **OrderID**. Set this activity to retrieve the first matching order from the database.
 
-    {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/RetrieveOrder.png" alt="Range and XPath constraint settings in the Retrieve Objects dialog box" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/RetrieveOrder.png" alt="Range and XPath constraint settings in the Retrieve dialog box" >}}
 
 #### Building an Export Mapping (optional){#export-mapping}
 
@@ -155,7 +145,7 @@ To view and try out your app, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/RESTTestResponse.png" alt="Result in Response" class="no-border" >}}
 
-Congratulations! You have published your first REST service from Mendix.
+Congratulations! You have published your first REST service.
 
 ## Error Handling
 
@@ -208,4 +198,4 @@ Now that you have covered the **OrderID** parameter error handling, it is time t
 
 ## Read More
 
-* [Published REST Services](/refguide/published-rest-services/) – Information on creating published REST services in Mendix (including `GET`, `POST`, and `DELETE` operations)
+* [Published REST Services](/refguide/published-rest-services/) – Information on creating published REST services (including `GET`, `POST`, and `DELETE` operations)

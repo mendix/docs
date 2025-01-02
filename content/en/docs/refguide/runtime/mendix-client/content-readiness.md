@@ -18,9 +18,9 @@ The following table shows which of the more popular platform-supported Marketpla
 | Marketplace Component | React Client Ready |
 | --- | --- |
 | [Community Commons](https://marketplace.mendix.com/link/component/170) | {{< icon name="checkmark-circle-filled" color="green" >}} |
-| [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) | {{< icon name="remove-circle-filled" color="red" >}} |
+| [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) | {{< icon name="checkmark-circle-filled" color="green" >}} |
 | [Excel Importer](https://marketplace.mendix.com/link/component/72) | {{< icon name="remove-circle-filled" color="red" >}} |
-| [Encryption](https://marketplace.mendix.com/link/component/1011) | {{< icon name="remove-circle-filled" color="red" >}} |
+| [Encryption](https://marketplace.mendix.com/link/component/1011) | {{< icon name="checkmark-circle-filled" color="green" >}} |
 | [SAML](https://marketplace.mendix.com/link/component/1174) | {{< icon name="remove-circle-filled" color="red" >}} |
 | [Excel Exporter](https://marketplace.mendix.com/link/component/726) | {{< icon name="remove-circle-filled" color="red" >}} |
 | [Deep Link Module](https://marketplace.mendix.com/link/component/43) | {{< icon name="checkmark-circle-filled" color="green" >}} |
@@ -28,7 +28,7 @@ The following table shows which of the more popular platform-supported Marketpla
 | [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515) | {{< icon name="checkmark-circle-filled" color="green" >}} |
 | [Data Widgets](https://marketplace.mendix.com/link/component/116540) | {{< icon name="checkmark-circle-filled" color="green" >}} |
 | [Database Connector](https://marketplace.mendix.com/link/component/2888) | {{< icon name="checkmark-circle-filled" color="green" >}} |
-| [Workflow Commons](https://marketplace.mendix.com/link/component/117066) | {{< icon name="remove-circle-filled" color="red" >}} |
+| [Workflow Commons](https://marketplace.mendix.com/link/component/117066) | {{< icon name="checkmark-circle-filled" color="green" >}} |
 | [Atlas Core](https://marketplace.mendix.com/link/component/117187) | {{< icon name="checkmark-circle-filled" color="green" >}} |
 | [Email Connector](https://marketplace.mendix.com/link/component/120739) | {{< icon name="remove-circle-filled" color="red" >}} |
 | [UnitTesting](https://marketplace.mendix.com/link/component/390) | {{< icon name="checkmark-circle-filled" color="green" >}} |
@@ -40,7 +40,7 @@ The following table shows which of the more popular platform-supported Marketpla
 | [DatabaseReplication](https://marketplace.mendix.com/link/component/160) | {{< icon name="remove-circle-filled" color="red" >}} |
 | [ObjectHandling](https://marketplace.mendix.com/link/component/37114) | {{< icon name="checkmark-circle-filled" color="green" >}} |
 | [Administration Module](https://marketplace.mendix.com/link/component/23513) | {{< icon name="checkmark-circle-filled" color="green" >}} |
-| [Push Notifications Connector](https://marketplace.mendix.com/link/component/3003) | {{< icon name="remove-circle-filled" color="red" >}} |
+| [Push Notifications Connector](https://marketplace.mendix.com/link/component/3003) | {{< icon name="checkmark-circle-filled" color="green" >}} |
 | [AnyChart](https://marketplace.mendix.com/link/component/106517) | {{< icon name="remove-circle-filled" color="red" >}} |
 | [Mendix Application Performance Diagnostics](https://marketplace.mendix.com/link/component/6127) | {{< icon name="remove-circle-filled" color="red" >}} |
 | [OIDC SSO](https://marketplace.mendix.com/link/component/120371) | {{< icon name="remove-circle-filled" color="red" >}} |

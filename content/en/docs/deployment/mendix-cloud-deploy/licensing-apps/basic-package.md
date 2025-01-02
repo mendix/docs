@@ -94,16 +94,8 @@ For automatic orders, payment occurs when the package is ordered. For manual ord
 
 ## Renewing Your Payment Method
 
-Your plan automatically renews 12 months from the date of provision. You can opt out of auto-renewal 60 days before the period ends.
+Your plan automatically renews 12 months from the date of provision. You can opt out of auto-renewal via the [MyCommerce](https://account.mycommerce.com/) site up to 60 days before the period ends.
 
-Before renewing the licenses for your company, Mendix checks if your company's payment method is still valid. If it is expired, you will receive an email that asks you to update your company's payment method on the **Billing Accounts** page.
+Before renewing the licenses for your company, Mendix checks if your company's payment method is still valid. If it is expired, you will receive an email that asks you to update your company's payment method.
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/licensing-apps/basic-package/billing-accounts-page.png" alt="billing accounts page" class="no-border" >}}
-
-The **Billing Accounts** page shows the details of your company's existing billing accounts. These accounts are on the company level. If your company has multiple billing accounts, you can select a billing account from the drop-down list on the page.
-
-You can find the **Payment Method** at the bottom of the page. Depending on the payment method, you will see either an invoice or the credit card data.
-
-{{% alert color="info" %}}You might have used different credit cards with the same billing account when purchasing premium content at the Marketplace in the past. These cards are not shown here. The **Payment Method** section shows only the most recent credit card registered for your company's billing account. This card is also used to renew the existing subscriptions.{{% /alert %}}
-
-If the credit card is expired, the credit card data is shown in red. To update the credit card data, click **Update**, fill in the new credit card data, and click **Update Details**.
+You can update your payment details on the **Account Information** page of the [MyCommerce](https://account.mycommerce.com/) site.

@@ -82,3 +82,11 @@ Mendix applications that are deployed to SAP BTP can have SSO with SAP's IdP. Me
 ## Building an App as a Team {#team}
 
 If you want to invite your colleagues to build your app, you can manage the **Team** in [Apps](https://sprintr.home.mendix.com/). Only team members who are invited to your app can access it (as a project to collaborate on). You can assign app roles to them. These team member roles define what they can access and change in the app in the backend while developing the app and are different from end-user roles which define what users can access in a running app. For more information, see [Team](/developerportal/general/team/) in the documentation of **Apps**.
+
+## The Security Overview (Beta)
+
+The [Security Overview (Beta)](/refguide/security-overview/) provides you with an overview of your app's security. To access the overview, open the **App** menu, and then click **Show Security Overview (Beta)**. 
+
+{{% alert color="info" %}}
+This feature is currently in beta. For more information, see [Beta and Experimental Releases](/releasenotes/beta-features/).
+{{% /alert %}}

@@ -29,6 +29,7 @@ This query returns all the customers whose name is not known to the system:
 {{< /tabpane >}}
 
 These keywords can only be used in conjunction with attributes. The existence of associations cannot be confirmed in this manner. For more information on how to constrain on associations, see [XPath Constraint Functions](/refguide/xpath-constraint-functions/).
+See also [Empty values](/refguide/xpath-expressions/#empty-values) for the behavior of expressions when empty values are involved.
 
 ## System Variables {#system-variables}
 

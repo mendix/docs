@@ -751,12 +751,13 @@ The selection property allows a widget to read and set a selection that can be u
 
 #### XML Attributes
 
-| Attribute      | Required | Attribute Type      | Description                                                                                     |
-|----------------|----------|---------------------|-------------------------------------------------------------------------------------------------|
-| `type`         | Yes      | String              | Must be `selection`                                                                             |
-| `key`          | Yes      | String              | See [key](#key)                                                                                 |
-| `dataSource`   | Yes      | Property Path       | Specifies the path to a [`datasource`](#datasource) property linked to this selection property  |
-| `defaultValue` | No       | String (Expression) | Default value for the property                                                                  |
+| Attribute      | Required | Attribute Type      | Description                                                                                                                     |
+|----------------|----------|---------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| `type`         | Yes      | String              | Must be `selection`                                                                                                             |
+| `key`          | Yes      | String              | See [key](#key)                                                                                                                 |
+| `dataSource`   | Yes      | Property Path       | Specifies the path to a [`datasource`](#datasource) property linked to this selection property                                  |
+| `defaultValue` | No       | String (Expression) | Default value for the property                                                                                                  |
+| `onChange`     | No       | Property Path       | The path to an [`action`](#action) property that will be run by the Mendix Platform when the selection is changed by the widget |
 
 #### XML Elements
 

@@ -100,15 +100,7 @@ Lastly, ensure you are not using any external fonts by checking your theme's sty
 
 #### Testing Your Changes Locally
 
-To check that your changes are working locally, you can temporarily enforce the header by adding the following *theme/web/index.html* at the top of the `<head>` tag:
-
-```html
-<html>
-    <head>
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self';">
-    </head>
-</html>
-```
+To check that your changes are working locally, you can add a custom `Content-Security-Policy` header in your [configuration](/refguide/configuration/#headers).
 
 After redeploying your app locally, it should function as normal. If your app does not load or if there are errors, check that you have completed all steps listed above.
 

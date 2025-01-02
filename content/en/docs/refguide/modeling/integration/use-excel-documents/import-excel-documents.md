@@ -78,7 +78,7 @@ Before you can import data from an Excel File, you have to set up an import temp
 
 In this section, you will import data from a simple Excel file example, which can be downloaded here:
 
-{{< figure src="/attachments/howto/integration/importing-excel-documents/18581938.png" link="/attachments/howto/integration/importing-excel-documents/18581949.xlsx" class="no-border" >}}
+{{% button color="info" href="/attachments/howto/integration/importing-excel-documents/18581949.xlsx" text="Download Example" title="Download sample Excel template" %}}
 
 Based on the structure of the file you want to import, you need to manually set up your template by following these steps:
 

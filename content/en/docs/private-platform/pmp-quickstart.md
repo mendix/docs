@@ -141,16 +141,21 @@ Private Cloud License Manager is a required component of Private Mendix Platform
 3. Specify the following parameters:
 
     * **Databasetype** – The database type, either **postgres** (default) or **sqlserver**.
+    * **DB Authentication mode** - The authentication mode for the database:
+        * **static** (default)
+        * **aws-irsa**
+        * **azure-wi**
     * **Host** – The host name of the database service.
-    * **DBName** – The name of the database where you want to hold the PCLM data.
-    * **DBUser** – A database user with the rights described in the prerequisites section.
-    * **DBPassword** – The password for the database user.
-    * **port** – The port used to access the database. The default value is *5432*.
-    * **Strict TLS** – Whether the database uses strict TLS. The default value is *false*.
-    * **ssl Cert File** – If Strict TLS is set to *true*, provide the location of the SSL Root certificate file. If Strict TLS is set to *false*, leave this field blank.
-    * **ImageRepo** – The location of the image repo, for example, `private-cloud.registry.mendix.com/privatecloud-license-manager`
-    * **ImageTag** – The docker image tag, for example, `0.3.0`.
-    * **Admin password** – A new PCLM admin password. When the PCLM server is set up, it contains an *administrator* user with a default password. This password should be modified immediately.
+    * **Port** – The port used to access the database. The default value is *5432*.
+    * **Database Name** – The name of the database where you want to hold the PCLM data.
+    * **Database User** – A database user with the rights described in the prerequisites section.
+    * **Database Password** – The password for the database user. This setting is available only when **DB Authentication mode** is set to **static**. 
+    * **AWS-iam-Role**  – The AWS IAM role. This setting is available only when **DB Authentication mode** is set to **aws-irsa**.
+    * **Azure-client-id** –  The Azure client ID. This setting is available only when **DB Authentication mode** is set to **azure-wi**.
+    * **ImageRepo** – The location of the image repo, for example, `private-cloud.registry.mendix.com/privatecloud-license-manager`.
+    * **Imagetag** – The docker image tag, for example, `0.3.0`.
+    * **DB SSL cert file** – If your database uses strict TLS, provide the location of the SSL Root certificate file. If not, leave this field blank.
+    * **Admin Password** – A new PCLM admin password. When the PCLM server is set up, it contains an *administrator* user with a default password. This password should be modified immediately.
     * **PCLM Operator User** – A new PCLM operator user.
     * **PCLM Operator Password** – A new PCLM operator password.
 
@@ -227,15 +232,15 @@ Install the Private Mendix Platform by doing the following steps:
     * **TLS Secret** - An existing `kubernetes.io/tls` secret containing the TLS certificate. Cannot be used together with certificate and key. If you leave it blank, the default TLS certificate from the Ingress Controller or OpenShift Router will be used.
     * **TLS certificate** and **TLS key** – Allows you to provide the `tls.crt` and `tls.key` values directly (not recommended for production environments). Cannot be used together with secretName.
     * **SourceUrl** - The location of the deployment package, in the format `oci-image://<your image location>`. This location must be accessible from your cluster.
-    * **Replicas** – By default one replica will be started when you deploy your app.
+    * **Replicas** – When you deploy your app, one replica is deployed automatically. Do not increase the number of replicas yourself, as this may cause data to be duplicated.
 
     {{< figure src="/attachments/private-platform/pmp-install7.png" class="no-border" >}}
 
 4. Click **Runtime**, and then specify the following parameters:
 
     * **MxAdminPassword** - The password for the admin user. It must have at least one number, one upper case letter, one lower case letter and one symbol, with a minimum length of 12 characters.
-    * **dtapmode** - For the development of the app, for example acceptance testing, select **D**. For production deployments, select **P**. If integrated with PCLM, you can keep the value as **D**.
-    * **License Id/Secret** - Offline LicenseId (**UUID**) value provided by Mendix Support.
+    * **dtapmode** - For production deployments, leave this value set to **P**. For the development of the app, for example acceptance testing, set the value to **D**.
+    * **ApplicationRootUrl** - Optional. Manually specify the URL of your Private Mendix Platform, for example, for use with SSO or when sending emails. For more information about this functionality, see [ApplicationRootUrl Needs to be Set Manually](/developerportal/deploy/private-cloud-operator/#applicationrooturl-needs-to-be-set-manually).
 
     {{< figure src="/attachments/private-platform/pmp-install8.png" class="no-border" >}}
 

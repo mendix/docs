@@ -133,6 +133,10 @@ If you want to perform penetration tests, your Customer Service Manager (CSM) ca
 
 If Mendix is not aware of your tests, you may find that they are interrupted if they cause unexpected alerts to be generated for our Cloud Operations or Security teams. You may also be breaking your agreement with Mendix.
 
+{{% alert color="info" %}}
+Mendix cannot change any standard settings for your environments to support your testing. For example, you cannot ask to have the Web Application Firewall (WAF) turned off during your testing.
+{{% /alert %}}
+
 ## Product Support Period
 
 Mendix supports the current major release and the two prior major releases (and we support each major release for a minimum of 24 months). Because of this, Mendix recommends upgrading your apps to the latest version of Studio Pro at least once a year. We will reach out to you in time if you are running on a version that will become unsupported so that you have ample time to perform an upgrade.

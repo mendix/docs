@@ -40,29 +40,32 @@ To be able to see the software composition information, make sure that you meet 
 
 ### Software Composition Generation {#software-composition-generation}
 
-Components are identified in the following manner:
+a software bill of material (SBOM) is generated in the following circumstances:
 
-First, when a new deployment package is created via the Mendix Portal with the compatible Mendix Runtime version, a software bill of material (SBOM) is generated along with it. The log details can be viewed by clicking **View build output** in the deployment package details in the Mendix Portal. For details on SBOM generation, see [SBOM Generation](/refguide/sbom-generation/).
+* when a new deployment package with the compatible Mendix Runtime version is created via the Mendix Portal
+* using menu option **App -> Tools -> Generate Bill of Materials** in Studio Pro 10.18 and above
 
-The component dependencies for each non-expired, deployment package are available in the [Software Composition](/developerportal/deploy/software-composition/) page in **Apps**. 
+Click **View build output** in the deployment package details in the Mendix Portal to see the log details. For details of SBOM generation, see [SBOM Generation](/refguide/sbom-generation/).
+
+You can find the component dependencies for each non-expired, deployment package in the [Software Composition](/developerportal/deploy/software-composition/) page of **Apps** in the Mendix Portal. 
 
 ## Overview {#overview}
 
 On the **Overview** tab, you can see a list of all the deployed apps and their environments, if applicable.
 
-{{< figure src="/attachments/control-center/software-composition/overview.png" >}}
+{{< figure src="/attachments/control-center/security/software-composition/overview.png" >}}
 
 Above the list, you can use the search box to search for information in the list. Next to the search box, you can filter apps by selecting the type of the cloud. You can click {{% icon name="office-sheet" %}}**Export all** on the right side above the list to export all the information in the list to an Excel file.
 
 The list contains the following information:
 
-* **App Name**: This is the name of the app.
-* **Environment**: This is the name of the environment.
-* **Runtime**: This shows the Mendix Runtime version.
-* **Technical Contact**: This shows the Technical Contact of the app.
-* **Target Cloud**: This shows the type of the cloud where the deployment package is deployed. Currently, only Mendix Free Cloud and Mendix Cloud (including Mendix Cloud Dedicated) are supported.
-* Column customization ({{% icon name="view" %}}): You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
-* **View details**: Click this opens the [Component Summary](#component-summary) page, if it is available. The **View details** button is grayed out when an SBOM is not available for the selected application environment. Ensure you are on a compatible runtime version and create a new deployment package in order to get component visibility here.
+* **App Name** – This is the name of the app.
+* **Environment** – This is the name of the environment.
+* **Runtime** – This shows the Mendix Runtime version.
+* **Technical Contact** – This shows the Technical Contact of the app.
+* **Target Cloud** – This shows the type of the cloud where the deployment package is deployed. Currently, only Mendix Free Cloud and Mendix Cloud (including Mendix Cloud Dedicated) are supported.
+* Column customization ({{% icon name="view" %}}) – You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
+* **View details** – Click this opens the [Component Summary](#component-summary) page, if it is available. The **View details** button is grayed out when an SBOM is not available for the selected application environment. Ensure you are on a compatible runtime version and create a new deployment package in order to get component visibility here.
 
 To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click {{% icon name="office-sheet" %}} **Selection Export** that appears at the bottom of the page.
 
@@ -70,7 +73,7 @@ To export the information of selected items in the list to an Excel file, select
 
 On the **Overview** tab, if you click **View Details** for an item in the list, the **Component Summary** page opens. This page shows the components of the selected app environment for your easy visual consumption.
 
-{{< figure src="/attachments/control-center/software-composition/component-summary.png" >}}
+{{< figure src="/attachments/control-center/security/software-composition/component-summary.png" >}}
 
 On the top of the page, you can find the app name, the environment name, the Mendix Runtime version, the Technical Contact, and the type of the cloud where the deployment package is deployed.
 
@@ -88,15 +91,15 @@ The **All Components** tab gives an overview of all the unique components used a
 
 {{% alert color="info" %}}To be able to see the software composition information, make sure that you meet the prerequisites. For more information, see the [Prerequisites](#prerequisites) section.{{% /alert %}}
 
-{{< figure src="/attachments/control-center/software-composition/all-components.png" >}}
+{{< figure src="/attachments/control-center/security/software-composition/all-components.png" >}}
 
 Above the list, you can use the search box to search for a component name or a component version. Next to the search box, you can filter components by selecting the component type. You can click {{% icon name="office-sheet" %}}**Export all** on the right side above the list to export all the information in the list to an Excel file.
 
 The list shows the following information about the component:
 
-* **Component**: This is the name of the component.
+* **Component** – This is the name of the component.
 
-* **Type**: This shows the type of the component. The type could be modules, widgets, framework, Java libraries (JAR), etc. The descriptions of each type are as follows:
+* **Type** – This shows the type of the component. The type could be modules, widgets, framework, Java libraries (JAR), etc. The descriptions of each type are as follows:
   
     * **Modules** – Standard marketplace modules imported from the Marketplace, for example [Community Commons](https://marketplace.mendix.com/link/component/170)
     * **Widgets** – User interface elements downloaded from the Marketplace, for example [Charts](https://marketplace.mendix.com/link/component/105695)
@@ -107,13 +110,23 @@ The list shows the following information about the component:
     
     For more information, refer to [SBOM Generation](/refguide/sbom-generation/).
     
-* **Version**: This is the component version.
+* **Support type** – This shows the support type of the Marketplace component. It can be **Mendix**, **Partner**, or **Community**. For more information, see [Content Support Categories](/appstore/marketplace-content-support/#category).
 
-* **Apps using component**: This shows the number of apps where the component is used.
+* **Version** – This shows the version of the component that is being used.
 
-* Column customization ({{% icon name="view" %}}): You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
+* **License** – This shows the end-user license for the component.
 
-* **View details**: Click this opens the [Component Usage](#component-usage) page.
+* **Marketplace** – This shows whether the component is **Public** or **Private**. A public component is available to the whole Mendix community in the Marketplace, while a private component is available only via your [Company Content](/appstore/home-page/#company-content) page.
+
+* **Apps using component** – This shows the number of apps where the component is used.
+
+* **Latest version** – This shows the latest version of the component.
+
+* **Publisher** – This shows the name of the organization that published the component.
+
+* Column customization ({{% icon name="view" %}}) – You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
+
+* **View details** – Click this opens the [Component Usage](#component-usage) page.
 
 To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click {{% icon name="office-sheet" %}} **Selection Export** that appears at the bottom of the page.
 
@@ -121,7 +134,7 @@ To export the information of selected items in the list to an Excel file, select
 
 On the **All Components** tab, if you click **View details** for an item, the **Component Usage** page opens. This page lists the apps and the environments where the selected component is being used. If a security vulnerabilities is found in one of the components, then the component usage tab can be used to assess the impact radius.
 
-{{< figure src="/attachments/control-center/software-composition/component-usage.png" >}}
+{{< figure src="/attachments/control-center/security/software-composition/component-usage-page.png" >}}
 
 On the top of the page, you can find the component name, the component version, the component type, the number of apps where the component is used, and the number of environments where the component is used.
 

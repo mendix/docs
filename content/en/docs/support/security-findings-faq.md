@@ -28,6 +28,14 @@ Security Advisories for Mendix are published in [Security Advisories](/releaseno
 
 You can find our best practices on how to make your app secure in [How To Implement Best Practices for App Security](/howto/security/best-practices-security/).
 
+### Compliance Reports
+
+Compliance reports for Mendix, such as SOC, ISO, and PCI, are available to Mendix customers and prospects in the [Mendix profile in Conveyor](https://app.conveyor.com/profile/mendix). Request access using the email address you use for your Mendix account and you will be granted access. It can help speed up approval if you mention in the comments the name of your CSM and what document(s) you are looking for.
+
+{{% alert color="info" %}}
+Mendix does not make compliance reports available publicly, you will need to be a Mendix customer or prospect to have your access approved.
+{{% /alert %}}
+
 ### Platform Support
 
 Mendix Support will only assist when using platform-supported components. See the table in the [Support for Different Deployment Strategies](/support/#support-by-strategy) section of the *Mendix Support* document for information on what is supported by Mendix and what you need to support yourself. For Marketplace components, you can check the support status of a component by finding it in the marketplace and looking at the **Support** section in the component details to the right of the component name.

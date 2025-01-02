@@ -20,7 +20,7 @@ Specify where the parameter comes from. Possible values are the following:
 
 * **Query** – When the request contains a query string such as `?name=John&age=42`, you can pass these to the microflow by adding query parameters. For more information, see [Published REST Query Parameters](/refguide/published-rest-query-parameters/).
 * **Path** – The operation path can contain parameters as well. If you add a path parameter, make sure you also add it to the operation. For more information, see [Published REST Path Parameters](/refguide/published-rest-path-parameters/).
-* **Body** – The microflow can have 0 or 1 body parameters. A body parameter is taken from the body of the request. If the body is a file document or an image, its contents will be filled with the body of the request. If the body parameter is another type of object or a list, an import mapping is needed to convert the body content of the request into an object or a list. `GET`, `HEAD`, and `OPTIONS` operations should not have body parameters.
+* **Body** – The microflow can have 0 or 1 body parameters. A body parameter is taken from the body of the request. If the body is a file document or an image, the contents will be filled with the body of the request. If the body parameter is another type of object or a list, an [import mapping](/refguide/import-mappings/) is needed to convert the body content of the request into an object or a list. `GET`, `HEAD`, and `OPTIONS` operations should not have body parameters.
 * **Header** – The value of a header parameter is taken from the (first) request header with that name.
 * **Form** – The value of a form parameter is taken from the body part with that name (these are available for `multipart/form-data` requests).
 
@@ -54,17 +54,17 @@ If the top-level of an [import mapping](/refguide/import-mappings/) has **Decide
 
 If the import mapping has **Decide this at the place where the mapping gets used** checked, you can define the **If no object was found** action in the REST operation itself. This means you can use the same import mapping in multiple operations, but have a different behavior for each of them. The options are:
 
-* Create – create an object of the correct entity to map to, typically used for **POST** operations
-* Ignore – do not map this element and continue parsing
-* Error – stop parsing the XML and throw an error, typically used for **PUT** and **PATCH** operations
+* **Create** – Create an object of the correct entity to map to, typically used for `POST` operations.
+* **Ignore** – Do not map this element and continue parsing.
+* **Error** – Stop parsing the XML and throw an error, typically used for `PUT` and `PATCH` operations.
 
 ### Commit
 
 You can indicate whether the import mapping should commit the objects that it creates or changes. You can choose between the following:
 
-* **Yes** – commits the changes and triggers events, such as validation rules
-* **Yes without events** – commits the changes without triggering events, such as validation rules
-* **No** – does not commit the changes, so you can commit them in your microflow; this is useful if you want to add additional checks in your microflow and skip the commit if one of those checks fail
+* **Yes** – Commits the changes and triggers events, such as validation rules.
+* **Yes without events** – Commits the changes without triggering events, such as validation rules.
+* **No** – Does not commit the changes, so you can commit them in your microflow. This is useful if you want to add additional checks in your microflow and skip the commit if one of those checks fail.
 
 ## Public Documentation
 

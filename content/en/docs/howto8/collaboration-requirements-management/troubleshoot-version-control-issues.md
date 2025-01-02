@@ -47,9 +47,7 @@ Follow these steps:
 
 1. Install [TortoiseSVN](https://tortoisesvn.net/), as suggested in [System Requirements](/refguide8/system-requirements/).
 
-    {{% alert color="warning" %}}Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions are NOT compatible.<br/>
-
-    Always use the version of TortoiseSVN that matches your app model. If you open a local model from Mendix 7.x with the latest version of TortoiseSVN, you will no longer be able to open it in Mendix.{{% /alert %}}
+    {{% alert color="warning" %}}Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions are NOT compatible. Always use the version of TortoiseSVN that matches your app model. If you open a local model from Mendix 7.x with the latest version of TortoiseSVN, you will no longer be able to open it in Mendix.{{% /alert %}}
 
 2. Go to the parent directory (folder) of your app (this is the folder with the **<folder_name>** from the error message).
 3. Right-click to open the folder's context menu and select **TortoiseSVN** > **Clean up**.
@@ -67,9 +65,7 @@ Follow these steps:
 
 1. Install [TortoiseSVN](https://tortoisesvn.net/), as suggested in [System Requirements](/refguide8/system-requirements/).
 
-    {{% alert color="warning" %}}Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions are NOT compatible.<br/>
-
-    Always use the version of TortoiseSVN that matches your app model. If you open a local model from Mendix 7.x with the latest version of TortoiseSVN, you will no longer be able to open it in Mendix.{{% /alert %}}
+    {{% alert color="warning" %}}Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions are NOT compatible. Always use the version of TortoiseSVN that matches your app model. If you open a local model from Mendix 7.x with the latest version of TortoiseSVN, you will no longer be able to open it in Mendix.{{% /alert %}}
 
 2. Open the project folder via Studio Pro by selecting **Project** > **Show Project Directory in Explorer**.
 3. Right-click the white background of the project folder.
@@ -141,9 +137,7 @@ To resolve a conflict on the `svn:ignore` property, perform these steps:
 
 1. Install [TortoiseSVN](https://tortoisesvn.net/), as suggested in [System Requirements](/refguide8/system-requirements/).
 
-    {{% alert color="warning" %}}Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions are NOT compatible.<br/>
-
-    Always use the version of TortoiseSVN that matches your app model. If you open a local model from Mendix 7.x with the latest version of TortoiseSVN, you will no longer be able to open it in Mendix.{{% /alert %}}
+    {{% alert color="warning" %}}Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions are NOT compatible. Always use the version of TortoiseSVN that matches your app model. If you open a local model from Mendix 7.x with the latest version of TortoiseSVN, you will no longer be able to open it in Mendix.{{% /alert %}}
 
 2. Open the project directory in Windows File Explorer
 3. Right-click the white background and choose **TortoiseSVN** > **Edit Conflicts**. The following pop-up window will be shown (resize the window to display all the information):

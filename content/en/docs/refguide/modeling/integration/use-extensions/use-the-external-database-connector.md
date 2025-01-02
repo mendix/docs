@@ -13,7 +13,7 @@ aliases:
 Use the [External Database Connector](https://marketplace.mendix.com/link/component/219862) to connect, retrieve, and insert data into your Mendix app.
 
 {{% alert color="info" %}}
-If you are using Studio Pro 10.12, please make sure to use the latest version 3.0.0 [External Database Connector](https://marketplace.mendix.com/link/component/219862).
+If you are using Studio Pro 10.12, make sure to use the latest version 3.0.0 [External Database Connector](https://marketplace.mendix.com/link/component/219862).
 {{% /alert %}}
 
 The External Database Connector supports connections to the following databases:
@@ -24,22 +24,31 @@ The External Database Connector supports connections to the following databases:
 * Oracle
 * Snowflake (GA support from [Studio Pro 10.12](/releasenotes/studio-pro/10.12/) – Beta versions are available from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/))
 
-This how-to teaches you how to do the following:
+This document teaches you how to do the following:
 
 * Connect your Mendix App to an external database
-* Create and validate SQL Queries
+* Create and validate SQL queries
 * Use created queries in the **Query External Database** activity
 
-For information on how to configure the connector, see [External Database Connector](/appstore/modules/external-database-connector/). For information about the database wizard and how to connect using the External Database Connection document, see [External Database Connection](/refguide/external-database-connection/). 
+For information on how to configure the connector, see [External Database Connector](/appstore/modules/external-database-connector/). For information on the database wizard and how to connect using the External Database Connection document, see [External Database Connection](/refguide/external-database-connection/). 
 
 ## Prerequisites
 
 Download the [External Database Connector](https://marketplace.mendix.com/link/component/219862) into your app. Make sure you have the following details for your external connection:  
 
-* **Username** and **Password** for signing into the external database
-* Connection details: **Host**, **Port**, **Database name**
+* Username
+* Password
+* Host
+* Port
+* Database name
 
 If additional connection properties are required to connect, you can alternatively use **JDBC Connection String**.
+
+### If Using the Flag: `--enable-live-preview` (available for Studio Pro 10.18) {#enable-live-preview}
+
+* Download the [External Database Connector](https://marketplace.mendix.com/link/component/219862).
+* If certificate-based authentication is required for PostgreSQL connections, ensure that all necessary certificates are added before running the app.
+* To test the connection and execute queries during design time, run your app locally.
 
 ## Connect to the External Database
 
@@ -47,7 +56,7 @@ If additional connection properties are required to connect, you can alternative
 
 1. Right-click the module you want to add the external database document to and click **Add other** > **External database connection**.
 
-2. Select the database you want to connect to and add the connection details the Database Connection wizard.
+2. Select the database you want to connect to and add the connection details in the Database Connection wizard.
 
     {{< figure src="/attachments/refguide/modeling/integration/use-the-external-database-connector/1.png" width="600" >}}
 
@@ -63,7 +72,12 @@ Click **Save** to save the connection details, which are stored in 3 constants:
 
 For example: `*Database*_DBsource.`
 
-{{% alert color="info" %}}Values for these constants are stored in the Active configuration of the user, the password is stored as a private value.{{% /alert %}}
+{{% alert color="info" %}} Values for these constants are stored in the active configuration of the user. The password is stored as a private value.
+
+Constants are an environment variable whose values can differ per environment, When you deploy an app on Mendix Cloud, values for constants are not added. For more information, see [Constants](https://docs.mendix.com/refguide/configuration/#constants){{% /alert %}}
+
+{{% alert color="info" %}}
+For free apps, make sure to add the default values to the constant in Studio Pro. For more information, see the [Deploying a Free App](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/#deploy-free-app) section below. {{% /alert %}}
 
 ### Explore Schemas of a Connected Database
 
@@ -90,7 +104,7 @@ SQL Query:
 
 ### Typecast Parameter Data Type
 
-You can typecast `String` into UUID as shown below:
+You can typecast `String` into UUID, as shown below:
 
 {{< figure src="/attachments/refguide/modeling/integration/use-the-external-database-connector/13.png" width="700" >}}
 
@@ -100,13 +114,13 @@ You can typecast `String` into UUID as shown below:
 
 1. Click **Use Response** to view the response data and mapping.
 
-2. In the **Response Structure** tab, you can choose create **New Entity** or **Reuse Existing Entity**.
+2. In the **Response Structure** tab, you can choose **New Entity** or **Reuse Entity**.
 
-3. If **New Entity** is selected, you can view the entity in the **Response** tab. Click **Save Query & Create Entity** to save the query and the newly created entity in the domain model. 
+   a. If **New Entity** is selected, you can view the entity in the **Response structure** tab. Click **Save Query & Create Entity** to save the query and the newly created entity in the domain model. 
 
     {{< figure src="/attachments/refguide/modeling/integration/use-the-external-database-connector/5.png" width="600" >}}
 
-4. If **Reuse Entity** is selected, all entities mapped to other queries of same document are listed in the drop down list. Select  the entity you want to reuse and and click on **Save Query**.
+   b. If **Reuse Entity** is selected, all entities mapped to other queries of same document are listed in the drop-down list. Select the entity you want to reuse and click **Save Query**.
 
     {{< figure src="/attachments/refguide/modeling/integration/use-the-external-database-connector/5a.png" width="600" >}}
 
@@ -124,15 +138,15 @@ You can typecast `String` into UUID as shown below:
 
 ## Update Existing Query
 
-It is possible to use the existing entity when updating a existing query. 
+You can use the existing entity when updating a existing query. 
 
 {{% alert color="info" %}}
 
-This possibility was introduced in Studio Pro 10.15 and above.
+This feature was introduced in Studio Pro 10.15 and above.
 
 {{% /alert %}}
 
-For example, you can modify the query below to retrieve a list of productLine, textDescription, htmlDescription columns from ProductLines where the ProductLine is **Planes**.
+For example, you can modify the query below to retrieve a list of `productLine`, `textDescription`, and `htmlDescription` columns from `productLines` where the `productLine` is **Planes**.
 
 SQL Query:
 Existing Query: `Select requestedProductRequirement from productlines where productLine = {productLine}`
@@ -140,18 +154,17 @@ Modified Query: `Select productLine, textDescription, htmlDescription from produ
 
 Do the following:
 
-1. Rerun the Query, to see the **Response**.
+1. Rerun the query to see the **Response data**.
 
 2. Click **Use Response** to see the entity preview.
 
-3. Use the existing entity or create a new entity:
+3. Use the existing entity or create a new entity.
 
-4. If **New Entity** is selected, you can view the entity in the **Response** tab.
-     1. Click **Save Query & Create Entity** to save the query and the newly created entity in the domain model.
+   a. If **New Entity** is selected, you can view the entity in the **Response structure** tab. Click **Save Query & Create Entity** to save the query and the newly created entity in the domain model.
 
-5. If **Update Entity** is selected,you can see changes that will be made to the existing entity.
-     1. Click **Update Entity** to save the query and the changes made to the entity in the domain model.
-            {{< figure src="/attachments/refguide/modeling/integration/use-the-external-database-connector/5b.png" width="600" >}}
+   b. If **Update Entity** is selected, you can see changes that will be made to the existing entity. Click **Update Entity** to save the query and the changes made to the entity in the domain model.
+
+    {{< figure src="/attachments/refguide/modeling/integration/use-the-external-database-connector/5b.png" width="600" >}}
 
 ## Call Stored Procedure
 
@@ -179,7 +192,7 @@ To call a stored procedure, do the following:
 
 {{% alert color="info" %}}DML commands within a stored procedure are rolled back if they are not committed by a stored procedure, but DDL commands are not.{{% /alert %}}
 
-{{% alert color="info" %}}Only stored procedures with primitive datatype parameters are supported.{{% /alert %}}
+{{% alert color="info" %}} Only stored procedures with primitive datatype parameters are supported.{{% /alert %}}
 
 For Postgres, Mendix supports the following parameters:
 

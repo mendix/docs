@@ -19,7 +19,7 @@ To configure the CI/CD pipeline, prepare the following:
 
 ## Configuring the CI/CD Pipeline
 
-If you have a Kubernetes cluster, you can set Kubernetes as your CI System in **Settings** > **DevOps** > **CI/CD**. You need to first obtain and configure a [CA certificate](#ca-certificate), and then configure the followings settings:
+If you have a Kubernetes cluster, you can set Kubernetes as your CI System in **Switch to Admin Mode** > **Settings** > **Build settings** > **Build Utility**. You need to first obtain and configure a [CA certificate](#ca-certificate), and then configure the followings settings:
 
 * [Build Cluster Setting](#build-cluster)
 * [Build Images Setting](#build-images)
@@ -27,7 +27,7 @@ If you have a Kubernetes cluster, you can set Kubernetes as your CI System in **
 
 Finally, you must also [register your Kubernetes cluster](#register-cluster).
 
-{{< figure src="/attachments/private-platform/pmp-cicd1.png" class="no-border" >}}
+{{< figure src="/attachments/private-platform/pmp-cicd4.png" class="no-border" >}}
 
 ### Obtaining and Configuring the CA Certificate {#ca-certificate}
 
@@ -149,13 +149,51 @@ The settings in this section configure the images.
               name: default
               namespace: default # The same as the one in Configuring Build Cluster Setting
               annotations:
-                azure.workload.identity/client-id: {client-id}
+                azure.workload.identity/client-id: {client-id-build}
             ```
 
 * **Build Package Path** - This setting is required for the **File Server** build package source. The default value is `https://cdn.mendix.com/runtime`. If you have your own file server, you must download the package from the Mendix Content Delivery Network, and then upload it to your file server. The file name format is *mxbuild-9.24.1.4658.tar.gz*.
 * **S3 Endpoint**, **S3 Bucket Name**, **Region**, **Access Key ID**, **Secret Access Key** - These settings are required for the **S3 Bucket** build package source.
 * **Storage Account**, **Container** - These settings are required for the **Azure Blob** build package source.
 * **Build OCI Image** - Select this check box to build the OCI image besides the MDA file. Only OCI image can be used for deployment if this is checked. This option can be used to avoid configuring anonymous access to your S3 bucket or Azure Blob container.
+* **Registry Type** - This setting is only applicable if you selected the **Build OCI Image check box.** The following values are supported:
+
+    * **Generic** - Supports user and password authentication
+    * **AWS ECR** - Supports IRSA authentication; add the following policy to the IAM role:
+
+        ```text
+        {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Sid": "AllowImageBuilds",
+                    "Effect": "Allow",
+                    "Action": [
+                        "ecr:BatchGetImage",
+                        "ecr:BatchCheckLayerAvailability",
+                        "ecr:CompleteLayerUpload",
+                        "ecr:GetDownloadUrlForLayer",
+                        "ecr:InitiateLayerUpload",
+                        "ecr:PutImage",
+                        "ecr:ListImages",
+                        "ecr:UploadLayerPart",
+                        "ecr:DescribeRepositories",
+                        "ecr:CreateRepository"
+                    ],
+                    "Resource": "arn:aws:ecr:*:<account_id>:repository/*"
+                },
+                {
+                    "Sid": "AllowAuthentication",
+                    "Effect": "Allow",
+                    "Action": "ecr:GetAuthorizationToken",
+                    "Resource": "*"
+                }
+            ]
+        }
+        ```
+
+    * **Azure ACR** - Supports Workload Identity authentication; add the **AcrPush** role to the build managed identity.
+
 * **Runtime Base Image** - This setting is only applicable if you selected the **Build OCI Image** check box. The default value is `private-cloud.registry.mendix.com/app-building-blocks`. If you are in an air gap environment, sync tag `ubi9-1-jre{XX}-entrypoint` and `runtime-{YYYYY}`, where `{XX}` is java version in your app, and `{YYYYY}` is your app runtime version. For example: `app-building-blocks:ubi9-1-jre21-entrypoint` and `app-building-blocks:runtime-10.12.1.39914`.
 * **Allow Anonymous Access** - Select this checkbox if above Runtime Base Image is accessible without authentication.
 * **Runtime Base Registry User** - This setting is only applicable if you did not select the **Allow Anonymous Access** check box. User name for the registry authentication.
@@ -180,17 +218,22 @@ The settings in this section configure the storage for build output artifacts.
         metadata:
             name: default
             namespace: default # The same as the one in Configuring Build Cluster Setting
-                azure.workload.identity/client-id: {client-id}
+            annotations:
+                azure.workload.identity/client-id: {client-id-build}
         ```
+
+    5. Add a role assignment with the Storage Blob Data Reader role scoped to the storage account to ensure that Private Mendix Platform can access the build metadata after the build is completed. If you are already using Azure Blob Storage (Azure managed identity authentication) for Private Mendix Platform, you can reuse the managed identity which was created by the Mendix Operator.
 
         ```text
         kind: ServiceAccount
         metadata:
-            name: default
+            name: {pmp-serviceaccount-name}
             namespace: {pmp-namespace} # The namespace where Private Mendix Platform is installed
-                azure.workload.identity/client-id: {client-id}
+            annotations:
+                azure.workload.identity/client-id: {client-id-pmp}
         ```
-    5. Add **customPodLabels** to the Mendix Operator to label the Private Mendix Platform pod with the proper configuration. This configuration allows Private Mendix Platform to get build artifacts from Azure Storage Blob.
+
+    6. Add **customPodLabels** to the Mendix Operator to label the Private Mendix Platform pod with the proper configuration. This configuration allows Private Mendix Platform to get build artifacts from Azure Storage Blob.
 
         ```text
         kind: OperatorConfiguration
@@ -202,6 +245,8 @@ The settings in this section configure the storage for build output artifacts.
             general:
                 azure.workload.identity/use: "true"
         ```
+        
+    7. Restart Private Mendix Platform to ensure that the label is applied.
 
 * **S3 Endpoint** - For example, `https://s3.ap-southeast-1.amazonaws.com`.
 * **No Verify SSL** - Select this checkbox if you use your own bucket server, and its certificate is self-signed. Selecting this option adds *--no-verify-ssl* to the AWS CLI command to avoid failure.

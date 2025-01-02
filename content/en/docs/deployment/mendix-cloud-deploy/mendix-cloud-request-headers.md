@@ -34,7 +34,7 @@ The following headers are set by Mendix Cloud. If any of these are present in th
 | Header name                                 | Example values                                             | Description
 | ------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | **X-Real-IP**                               | `192.0.2.66`, `2001:db8::31:3024:37:487`                     | The IPv4 or IPv6 address of the endpoint of the HTTP connection at the client side. |
-| **SSL-Protocol**                            | `TLSv1.3`, `TLSv1.2`, `TLSv1.1`, `TLSv1`                     | The TLS encryption protocol used for the HTTPS connection. |
+| **SSL-Protocol**                            | `TLSv1.3`, `TLSv1.2`                                         | The TLS encryption protocol used for the HTTPS connection. |
 | **SSL-Cipher**                              | `ECDHE-RSA-AES256-GCM-SHA384`                                | The TLS ciphers used for the HTTPS connection. |
 | **SSL-Client-S-DN**                         | `CN=Hans van Kranenburg,OU=RnD,O=Mendix,C=NL`                | The Subject DN string of the client certificate for an established TLS connection according to [RFC 2253](https://tools.ietf.org/html/rfc2253). |
 | **SSL-Client-Fingerprint**                  | `74e034c13a38003b433605f5a13062eb816e467e`                   | The SHA1 fingerprint of the client certificate for an established TLS connection. |

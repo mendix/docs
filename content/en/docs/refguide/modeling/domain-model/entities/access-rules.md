@@ -31,7 +31,7 @@ The **System.User** entity has inbuilt access rules where access is given to its
 ## Defining Access Rules
 
 {{% alert color="info" %}}
-With Studio Pro 10.6.0 a new entity access rule editor has been released as a [beta](/releasenotes/beta-features/). You can enable this new editor in the [Preferences Dialog](/refguide/preferences-dialog/#new-features).
+A new entity access rule editor was released in Studio Pro version 10.6.0, as a [beta](/releasenotes/beta-features/). This will be made generally available in Studio Pro version 10.19.0. You can enable this new editor in the [Preferences Dialog](/refguide/preferences-dialog/#new-features).
 
 For guidance on using the new editor, see [Defining Access Rules Using the New Editor](#new-editor), below.
 {{% /alert %}}
@@ -110,7 +110,7 @@ The set of objects that can be deleted can be limited by using an [XPath constra
 | Read, Write | End-users are allowed to view and edit the value of this member. |
 
 {{% alert color="info" %}}
-You cannot set *Write* access to attributes which are calculated. This includes attributes of type *Autonumber* and attributes where the attribute value is set to **Calculated**.
+You cannot set *Write* access to attributes which are calculated. This includes both attributes where the attribute value is set to **Calculated** and attributes of type *Autonumber*.
 {{% /alert %}}
 
 **Default rights for new members** specifies the rights which are applied to new attributes or associations of this entity.
@@ -199,7 +199,7 @@ Non-persistable objects cannot have XPath constraints.
 ## Defining Access Rules Using the New Editor {#new-editor}
 
 {{% alert color="warning" %}}
-The new access rule editor was introduced in Studio Pro version 10.6.0 as a beta. For more information on beta features, see [Beta Releases](/releasenotes/beta-features/).
+The new access rule editor was introduced in Studio Pro version 10.6.0 as a beta and will be made generally available in Studio Pro version 10.19.0. For more information on beta features, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -207,34 +207,62 @@ In Studio Pro version 10.6.0 and above, you will need to enable the new editor v
 {{% /alert %}}
 
 {{% alert color="info" %}}
-The new access rule editor works with normalized access rules. A normalized access rule is an access rule that has exactly one module role attached to it. See [Access Rule Normalization](#normalization), below, for the implications when you switch to the new editor.
+In preparation for making the new access rule editor generally available, the features and interface were modified in Studio Pro version 10.17.0. The description below describes that version of the interface and does not fully describe the previous beta interface (Studio Pro versions 10.6.0 through 10.16.0).
+{{% /alert %}}
+
+{{% alert color="info" %}}
+For Studio Pro versions 10.6.0 through 10.16.0, the new access rule editor worked with normalized access rules. A normalized access rule is an access rule that has exactly one module role attached to it. See [Access Rule Normalization](#normalization), below, for the implications when you switch to the new editor for those versions.
 {{% /alert %}}
 
 ### Editor Layout
 
-Each module role from the module of the entity will have a default column for its access rights without an XPath. Next to this default column a module role can have more columns if XPath's have been added. The default column can not be deleted.
+The access rules editor displays each access rule belonging to the entity as an individual column. The header shows the modules role(s) the access rules apply to. When the module role name is long or there are multiple roles, the label is clipped. Hover over the header to show the full module role(s).
 
-Each column has a three-dot [context menu](#context) ({{% icon name="three-dots-menu-vertical" %}}) which you can see when you hover over the column heading containing the module role.
+When there are no access rules yet, they can be added by clicking **New**. 
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/example-columns.png" class="no-border" >}}
+Select an access rule by clicking on the column. When an access rule is selected, it can be edited, duplicated or deleted using the respective buttons. You can also edit an access rule by double-clicking it.
 
-### XPath
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-editor.png" alt="This image indicates the position of the Delete icons" width="550px" class="no-border" >}}
 
-An XPath constraint can be added to a module role by clicking on the XPath field of its default column. This will open the XPath editor dialogue. After an XPath constraint has been entered, a new column is added. This new column will be created with the same access rights as the default column. Alternatively, you can use the [Add XPath](#add-xpath) option in the context menu to add a new column based on any column.
+#### XPath Constraint
 
-The rights in this column will only be granted if the XPath constraint is true.
+When there is a value shown in the **XPath constraint** row for a specific access rule, this means it has an XPath constraint. The access rule will only be granted if the XPath constraint is true. When an XPath constraint has a caption, this is shown instead of the XPath constraint itself.
 
-The new column will display the XPath constraint, or the **Caption** of the XPath constraint if one has been entered.
+### Entity Rights
 
-The non-default columns with an XPath constraint can be deleted via the [context menu](#delete). The default column can not be deleted, but its content can be cleared in the same way.
+By setting the appropriate entity rights in an access rule, you can control the ability to create and/or delete objects of the entity. By default, an access rule has no entity rights. 
+
+When an access rule has entity rights, this is shown using the **Create** ({{% icon name="create" color="gray" %}}) and/or **Delete** ({{% icon name="trash-can" %}}) icon in the entity rights row for the specific access rule.
+
+### Attribute and Association Rights
+
+In the access rule, access to specific members (attributes or associations belonging to the entity) can be controlled. The access can be **None**, **Read**, or **Read and Write**. When there is no access, no icon is displayed in the row of the member in the access rule column. If there is **Read** access, a **Read** icon ({{% icon name="view" %}}) is displayed. For **Read and Write** access, both the **Read** ({{% icon name="view" %}}) and **Write** ({{% icon name="pencil" %}}) icons are displayed.
+
+### Creating or editing an access rule
+
+Access rules can be created from the **New Access Rule** dialog. This dialog can be opened by clicking **New**. To edit an existing access rule, select an access rule and click **Edit**. You can also double-click on an access rule. 
+
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-editor.png" alt="This image indicates the position of the Delete icons" width="550px" class="no-border" >}}
+
+#### Documentation
+
+You can add documentation to describe the access rule. 
+
+#### Module roles
+
+Select the module role(s) this access rule applies to. If there are no module roles selected there will be a consistency error.
+
+#### XPath Constraints
+
+To edit the XPath constraint, click **Edit...** next to the XPath constraint field. This will open the XPath editor dialogue to edit the XPath constraint of the access rule.
 
 {{% alert color="warning" %}}
-XPath constraints can only be applied to persistable entities as they are applied by the database. Defining XPath constraints for non-persistable entities results in consistency errors.
+XPath constraints can only be applied to persistable entities, as they are applied by the database. Defining XPath constraints for non-persistable entities results in consistency errors.
 {{% /alert %}}
 
 There are two constraints that can be appended easily with a single button click. 
 
-#### Owner
+##### Owner
 
 The **Owner** button adds an XPath constraint so the access rule is only applied if the object owner is the current end-user.
 
@@ -244,7 +272,7 @@ The **Owner** button adds an XPath constraint so the access rule is only applied
 
 This constraint is only valid when the [Store 'owner'](/refguide/entities/#store-owner) checkbox in the **System members** section of the entity properties is checked.
 
-#### Path to User
+##### Path to User
 
 The **Path to user...** button adds an XPath constraint so the access rule is only applied when a User object which is associated (directly or indirectly) with the current object is the current end-user. When you click **Path to user...**, you can select a path to an associated entity that is either a `System.User` or a specialization of `System.User`. This is then converted into an XPath constraint for the access rule.
 
@@ -259,84 +287,32 @@ The XPath constraint can be constructed easily using the **Path to user...** but
 [Module.Order_Customer = '[%CurrentUser%]']
 ```
 
-Because of this XPath constraint, access defined in this column of the access rules editor is only applied to orders for which the customer is the current end-user.
+Because of this XPath constraint, access defined in the access rule is only applied to orders for which the customer is the current end-user.
 
-### Entity Rights
+#### Entity Rights
 
-You can set rights on whether a module role can create or delete entities. Settings are on when they are dark, and off when they are light gray.
+You can add or edit entity rights using the toggles next to **Allow creating new and deleting existing objects**. 
 
-#### Create Rights
+XPath constraints are not applied to create operations, meaning that if you enable create access in an access rule which applies to a certain module role, any end-user with this module role can create objects of this entity.
 
-Toggle the **Create** setting, shown below, *on* or *off* to enable or disable Create rights.
+XPath constraints are applied to delete operations, unlike create operations.
 
-XPath constraints are not applied to create operations, meaning that if you enable create access for one column of a module role, any end-user with this module role can create objects of this entity.
+#### Attribute and Association Rights
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/create.png" alt="This image indicates the position of the Create icons" width="550px" class="no-border" >}}
+Access to the members can be set using the toggles in the column next to the member description. 
 
-#### Delete Rights
+You can also click **Read** or **Write** in the **Set all to** footer to enable or disable 'Read' or 'Read and Write' access for all attributes and associations in this column. 
 
-Toggle the **Delete** setting, shown below, *on* or *off* to enable or disable Delete rights.
+{{% alert color="info" %}}
+You cannot set *Write* access to attributes which are calculated. This includes both attributes where the attribute value is set to **Calculated** and attributes of type *Autonumber*.
+{{% /alert %}}
 
-In contrast, to Create access, XPath constraints are applied to delete operations.
-
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/delete.png" alt="This image indicates the position of the Delete icons" width="550px" class="no-border" >}}
-
-### Attribute and Association Rights
-
-You can set rights on whether a module role can read or write an attribute or association. Settings are on when they are dark, and off when they are light gray.
-
-Module roles will have no access to newly added attributes or associations. The option in the old editor to set default rights for new members (described in [Member Read and Write Rights Section](#member-access), above) has been removed from the new editor to improve security.
+Attributes and associations which are added to an entity in the domain model will default to allowing no access to any module roles. This improves security by forcing you to choose who can access any new information which is added to the domain model and is a change from the old editor where you could set default rights for new members (described in [Member Read and Write Rights Section](#member-access), above).
 
 See [Attribute Changes and Security Constraints](#attribute-changes), above, for important considerations about giving access to attributes.
 
-#### Read Rights
-
-Toggle the **Read** setting, shown below, *on* or *off* to enable or disable Read rights for the attribute or association of that row. When disabling Read access, Write access is automatically disabled as well.
-
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/read.png" alt="This image indicates the position of the Read icons" width="550px" class="no-border" >}}
-
-You can also click **Read** in the **Set all to** footer to enable or disable Read access for all attributes and associations in this column. Disabling Read access for all rows will also disable Write access for all of them.
-
-#### Write Rights
-
-Toggle the **Write** setting, shown below, on or off to enable or disable Write rights for the attribute or association of that row. When enabling Write access, Read access is automatically enabled as well.
-
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/write.png" alt="This image indicates the position of the Write icons" width="550px" class="no-border" >}}
-
-You can also click **Write** in the **Set all to** footer to enable or disable Write access for all attributes and associations in this column. Enabling Write access for all rows will also enable Read access for all of them.
-
-{{% alert color="info" %}}
-You cannot set *Write* access to attributes which are calculated. This includes attributes of type *Autonumber* and attributes where the attribute value is set to **Calculated**.
-{{% /alert %}}
-
-### Context menu {#context}
-
-The context menu of a column can be opened by clicking on the three dot icon ({{% icon name="three-dots-menu-vertical" %}}) that is shown when hovering over a module role name in the header. Within the context menu, you will find options to easily reuse, add, or remove access rules.
-
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/context-menu.png" width="550px" class="no-border" >}}
-
-#### Copy To
-
-The **Copy to** option allows you to select another module role column and to copy the Create, Delete, Read, and Write access of this column to that column. The target columns are identified by the module role and any XPath applied to it.
-
-#### Copy From
-
-The **Copy from** option allows you to select another column and to copy the Create, Delete, Read, and Write access of that column to this column. The source columns are identified by the module role and any XPath applied to it.
-
-#### Add XPath{#add-xpath}
-
-The **Add XPath** option allows you to enter an XPath and create a new column with the same Create, Delete, Read, and Write access of this column, but with the new XPath you just entered.
-
-#### Delete {#delete}
-
-This option is shown for module role columns with an XPath constraint. It removes this column from the table.
-
-#### Clear
-
-This option is shown for the default module role columns. It resets all the access rights to their default (off) values.
-
 ### Access Rule Normalization{#normalization}
 
-The new access rule editor works with normalized access rules. A normalized access rule is an access rule that has exactly one module role attached to it. This change is made because the new editor works with a table where the entity members make use of the rows and module roles (optionally with XPaths) use the columns. 
+Older beta versions of the new access rule editor, in Studio Pro versions 10.6 through 10.16, worked with normalized access rules. A normalized access rule is an access rule that has exactly one module role attached to it. This change was made because the editor used to work with a table where the entity members make use of the rows and module roles (optionally with XPaths) use the columns. 
 
-Access rules are automatically normalized when first using the new editor for an entity. Alternatively, all access rules in a project can be normalized at once by going to *App* *Tools* > *Normalize access rules*;
+Access rules were automatically normalized when first using the new editor for an entity. Alternatively, all access rules in a project could be normalized at once by going to *App* *Tools* > *Normalize access rules*;

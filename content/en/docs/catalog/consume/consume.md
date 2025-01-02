@@ -2,7 +2,7 @@
 title: "Consume Registered Assets"
 url: /catalog/consume/consume-registered-assets/
 weight: 20
-description: "Describes how to use shared data sources and datasets through the Catalog."
+description: "Describes how to use shared services and datasets through the Catalog."
 aliases:
     - /data-hub/data-hub-catalog/consume/
 ---
@@ -13,7 +13,7 @@ The Catalog is a catalog of OData services exposing datasets that you can use in
 
 ## Using Registered Assets in Your App {#consuming-services-entities}
 
-You can use the Catalog or the [Integration Pane](/refguide/integration-pane/) in Studio Pro to find registered data sources. Click [Copy Data Source URI](/catalog/manage/search/#service-details) to obtain the OData service URI, which can be used in other enterprise applications.
+You can use the Catalog or the [Integration Pane](/refguide/integration-pane/) in Studio Pro to find registered services. Click [Copy URI](/catalog/manage/search/#service-details) to obtain the OData service URI, which can be used in other enterprise applications.
 
 The following sections summarize important points to consider when using OData services and registered datasets in your apps in Studio Pro.
 

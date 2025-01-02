@@ -245,3 +245,61 @@ For example:
 
 * `3` if errors and warnings found
 * `7` if errors, warnings, and deprecations found
+
+## mx translate Command {#translate}
+
+The `mx translate` command allows you to export and import all translatable texts included in your Mendix application.
+This command is currently in public beta.
+
+{{% alert color="info" %}}
+The *.mpr* file must be the same version as the mx tool.
+{{% /alert %}}
+
+### Usage
+
+Use the following command pattern for `mx translate`:
+
+`mx translate [-i|-e] -t EXPORT_FORMAT -s LANGUAGE_CODE PROJECT TRANSLATION_PATH [OPTIONS]`
+
+These are the required parameters:
+
+| Option | Shortcut | Result |
+| --- | --- | --- |
+| `--import-translations` | `-i` | Imports the translations from the directory specified as the translation directory. This is required if export is not specified. |
+| `--export-translations` | `-e` | Exports the translations from the directory specified as the translation directory. This is required if import is not specified. |
+| `--type`  | `-t` | Specifies the file type to use. This can be either `xlsx` or `po`. |
+| `--source-language-code`| `-s` | Specifies the ISO 639 language code to use (for example,`en_US` as the source language to translate from). This will be used as the text that needs to be translated. |
+
+For `PROJECT`, enter a single *.mpr* file.
+For `TRANSLATION_PATH`, enter a filepath to import or export the translation files from.
+
+These are the `OPTIONS`:
+
+| Option | Shortcut | Result |
+| --- | --- | --- |
+| `--force-import`  | `-f` | Accepts some warnings and errors and tries to continue the import process. |
+| `--loose-version-check`  | `-l` | Converts the project to the version of the mx.exe, if it is a different version. |
+
+{{% alert color="info" %}}
+Errors in the *.mpr* are always reported.
+{{% /alert %}}
+
+### Examples
+
+These are example commands:
+
+| Example | Result |
+| --- | --- |
+| `mx translate --help` | Displays the help text for the translate command. |
+| `mx translate -i -t po -s en_US C:\MxProjects\App-main\App-main.mpr C:\MxProjects\App-main\translations` | Imports *.po* files from *C:\MxProjects\App-main\translations* in to the app at *C:\MxProjects\App-main\App-main.mpr* with *en_US* as the source language code. |
+| `mx translate -e -t xlsx -s en_US C:\MxProjects\App-main\App-main.mpr C:\MxProjects\App-main\translations` | Exports *.xlsx* files from the app at *C:\MxProjects\App-main\App-main.mpr* in to the directory at *C:\MxProjects\App-main\translations* with *en_US* as the source language code. |
+
+### Return Codes
+
+These are the return codes:
+
+| Return Code | Description |
+| --- | --- |
+| `0` | No issues found. |
+| `100` | Validation error on the input. |
+| `300` | Exception, something went wrong. |

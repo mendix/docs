@@ -132,7 +132,7 @@ URL: https://deploy.mendix.com/api/1/apps
 
 An object with the following key-value pair:
 
-* `ProjectId` (String) : The Mendix Portal project identifier that should be linked to the new Free App. This value can be found on the **General** tab of the **Settings** page of your app, and it is represented as **App ID**.
+* `ProjectId` (String) : The Mendix Portal project identifier that should be linked to the new Free App. You can find this on the **General** tab of the **Settings** page of your app.
 
 **Example Request**
 

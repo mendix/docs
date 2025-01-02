@@ -6,25 +6,13 @@ weight: 35
 ---
 ## Introduction
 
-Kubernetes allows to update an app without downtime by [performing a rolling update](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/). Instead of stopping an app and then starting it with an updated version or configuration, Kubernetes can replace pods (replicas) one by one with an updated version. Existing pods handle requests until the newer version is fully started.
+Kubernetes allows to update an app without downtime by [performing a rolling update](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/). Instead of stopping an app and then starting it with an updated version or configuration, Kubernetes can replace pods (replicas) one by one with an updated version. Existing pods handle requests until the newer version is fully started. Any changes in the [domain model](/refguide/domain-model/) need a database (schema) update. While the update process runs, you cannot modify any persistent entities.
 
-Any changes in the [domain model](/refguide/domain-model/) need a database (schema) update. While the update process runs, you cannot modify any persistent entities.
-
-The Private Cloud Operator uses a [recreate](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#recreate-deployment) strategy by default. That is, the current version (configuration) of an app stops, and then the new version starts.
-
-Alternatively, the Private Cloud Operator can use a **PreferRolling** strategy. That is, the Operator tries to perform a rolling update whenever possible. If the Operator detects that a database schema update is needed, it switches to a Recreate strategy to perform a full restart. 
-
-If the new version of the app has model changes, deploying it requires a schema update. In this case, the Private Cloud Operator automatically stops all replicas of the app, causing downtime.
+The Private Cloud Operator uses a [recreate](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#recreate-deployment) strategy by default. That is, the current version (configuration) of an app stops, and then the new version starts. Alternatively, the Private Cloud Operator can use a **PreferRolling** strategy. That is, the Operator tries to perform a rolling update whenever possible. If the Operator detects that a database schema update is needed, it switches to a Recreate strategy to perform a full restart. If the new version of the app has model changes, deploying it requires a schema update. In this case, the Private Cloud Operator automatically stops all replicas of the app, causing downtime.
 
 This feature works with Mendix for Private Cloud version 2.20 and later.
 
-### How a PreferRolling Strategy Works
-
-When the Operator is configured to use a **PreferRolling** strategy, it will try to do an optimistic update and use a **Rolling** strategy. If the app needs to perform a database schema update, it signals to the Operator that it is waiting for approval to perform the update. The Operator then switches the app to use a **Recreate** strategy (stop all current replicas and start an updated version) and wait until all replicas of the app are running the same MDA version. Then, the Operator lets the app know that it is safe to update the database schema, and approve the process.
-
-As a **Rolling** strategy can run multiple versions of the app at the same time, requests from the browser must be routed to a matching app version (that is, an app that has the same microflow or nanoflow parameters). The Operator uses Kubernetes service labels to perform an atomic switch, and instantly switch all clients to the updated version. This is done automatically once the number of updated replicas reaches a certain threshold. By default the threshold is 50% of all replicas. The value is specified in the [switchoverThreshold](#prefer-rolling-in-standalone) parameter.
-
-## Enabling Reduced Deployment Downtime
+## Prerequisites
 
 You can enable the `PreferRolling` deployment strategy if your environment fulfills the following requirements:
 
@@ -34,7 +22,15 @@ You can enable the `PreferRolling` deployment strategy if your environment fulfi
 
 If the app can be deployed without having to modify the database schema (model), it will now be deployed using a Rolling deployment strategy.
 
-For example, the following changes can be done without downtime:
+## How a PreferRolling Strategy Works
+
+When the Operator is configured to use a **PreferRolling** strategy, it will try to do an optimistic update and use a **Rolling** strategy. If the app needs to perform a database schema update, it signals to the Operator that it is waiting for approval to perform the update. The Operator then switches the app to use a **Recreate** strategy (stop all current replicas and start an updated version) and wait until all replicas of the app are running the same MDA version. Then, the Operator lets the app know that it is safe to update the database schema, and approve the process.
+
+As a **Rolling** strategy can run multiple versions of the app at the same time, requests from the browser must be routed to a matching app version (that is, an app that has the same microflow or nanoflow parameters). The Operator uses Kubernetes service labels to perform an atomic switch, and instantly switch all clients to the updated version. This is done automatically once the number of updated replicas reaches a certain threshold. By default the threshold is 50% of all replicas. The value is specified in the [switchoverThreshold](#prefer-rolling-in-standalone) parameter.
+
+### Use Cases
+
+Whether a change can be performed without downtime depends on the type of the change. For example, the following changes can be done without downtime:
 
 * Changing app constants, MxAdmin password or debugger settings
 * Changing environment variables, Runtime or Java options
@@ -56,7 +52,7 @@ Thes following changes will be deployed with downtime, because the model must be
 * Updating the object model in the app itself, or its Marketplace modules
 * Updating to a newer Mendix version
 
-#### Using the PreferRolling Strategy in Standalone Environments {#prefer-rolling-in-standalone}
+## Using the PreferRolling Strategy in Standalone Environments {#prefer-rolling-in-standalone}
 
 To reduce deployment downtime, add the `deploymentStrategy` section to your `MendixApp` CR, as in the following example:
 

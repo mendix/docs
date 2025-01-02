@@ -36,15 +36,11 @@ To be able to use the Mendix APIs to access your environment, you will need to g
 
 ### Building the Deployment Package
 
-To build the deployment package, use the [Team Server API](/apidocs-mxsdk/apidocs/team-server-api/) and the [Build API](/apidocs-mxsdk/apidocs/build-api/). In this scenario, a package will be built for the latest revision, but you can use whatever version you wish.
+To build the deployment package, use the [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/) and the [Build API](/apidocs-mxsdk/apidocs/build-api/). In this scenario, a package will be built for the latest revision, but you can use whatever version you wish.
 
 #### Getting the Latest Revision
 
-To get the latest revision, use the [Retrieve Branch API call](/apidocs-mxsdk/apidocs/team-server-api/#retrieve-branch) to get the `LatestRevisionNumber` from the output.
-
-An example of how to do this call is below. Be aware that `<AppId>` is not a GUID, but the actual name of the cloud node. In the example below, the `<AppId>` is `ukservices`.
-
-{{< figure src="/attachments/howto9/integration/implement-cicd-pipeline/02GetLatestRevision.png" class="no-border" >}}
+To get the latest revision, use the [Retrieve Branch](/apidocs-mxsdk/apidocs/app-repository-api/#retrieve-branch) API call to get the `latestCommit.id` from the output.
 
 #### Building the Package{#BuildPackage}
 

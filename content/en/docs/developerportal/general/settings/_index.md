@@ -39,17 +39,17 @@ These tabs are only available for users with the **App Settings** permission:
 
 In this tab, you can find the following items:
 
-* **Logo** of the app
-* **Description** of the app
-* **App ID**
+* Logo of the project
+* **Description** of the project
+* **Project ID**
 * [Technical Contact](/developerportal/general/app-roles/#technical-contact) of the app
 * **Danger Zone**
-    * **Leave this app**
-    * **Deactivate this app**
-    * **Delete this app**
+    * **Leave Project**
+    * **Deactivate Project**
+    * **Delete Project**
 
 {{% alert color="info" %}}
-Only users with the **App Settings** permission can change the description of the app.<br/>Only users with the **App Settings** permission can deactivate or delete an app. For details, see [How to Leave, Delete, or Deactivate an App](/developerportal/general/leave-delete-app/).
+Only users with the **App Settings** permission can change the description of the project.<br/>Only users with the **App Settings** permission can deactivate or delete a project. For details, see [How to Leave, Delete, or Deactivate an App](/developerportal/general/leave-delete-app/).
 {{% /alert %}}
 
 ## Cloud Settings {#cloud-settings}

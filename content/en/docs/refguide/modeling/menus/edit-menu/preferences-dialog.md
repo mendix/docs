@@ -78,6 +78,10 @@ This setting is visible and effective when the React client is enabled. By defau
 
 ### Build
 
+#### Generate Full Debug Info {#debug-info}
+
+Enabling this option includes debug information about local variables in the Java actions when building them, which aids debugging from Eclipse. Without this option, only line numbers and source information will be included.
+
 #### Gradle Synchronization {#gradle-synchronization}
 
 {{% alert color="info" %}}
@@ -211,6 +215,20 @@ This option sets the default page editor mode that your page opens in: **Structu
 ### Rendering {#rendering}
 
 Hardware and driver issues may cause performance problems when running Studio Pro. These issues can appear in form of dialog boxes opening and closing much more slowly than expected, and general slowness of the UI. In case the hardware problems cannot be solved, it is possible to mitigate these issues by turning the **Enable software rendering mode** setting on. Enabling this setting requires a restart of Studio Pro to take effect. Running the application with this setting on may increase the CPU usage.
+
+### Language {#language}
+
+This beta feature is available from Studio Pro 10.17. 
+
+This option allows you to change the user interface language you work in while using Studio Pro. At this time, German, English, Japanese, Chinese, and Korean are supported. You must restart Studio Pro in order to use this feature.
+
+### Editor Tabs Closing Policy {#closing-policy}
+
+It is recommended to limit the number of open tabs (open documents) to improve the performance of Studio Pro. This option is enabled by default and set to a limit of 15 tabs. However, you can disable this behavior completely or change the limit value.
+
+{{% alert color="info" %}}
+The closing policy is not applied to tabs with unsaved changes.
+{{% /alert %}}
 
 ## Advanced Tab
 

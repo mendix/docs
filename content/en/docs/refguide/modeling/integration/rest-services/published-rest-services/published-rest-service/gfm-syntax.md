@@ -10,6 +10,6 @@ description: "Link to GitHub Guide to Mastering Markdown"
 
 Several places in published REST services indicate that you can use [GitHub-flavored Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#GitHub-flavored-markdown) for rich text.
 
-This is especially useful in case you want to include JSON example payload in your rest documentation. Just add three backticks, `json`, the JSON structure, and three backticks to close the code, as illustrated in this example:
+This is especially useful in case you want to include JSON example payload in your rest documentation. To do this, add three backticks, `json`, the JSON structure, and three backticks to close the code, as illustrated in this example:
 
 {{< figure src="/attachments/refguide/modeling/integration/published-rest-services/published-rest-service/gfm-syntax/snippet.png" class="no-border" >}}

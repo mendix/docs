@@ -431,7 +431,6 @@ When calling a REST service, you can run into an error. This can be one of two t
 1. Error with a response
 2. Error without a response
    
-
 If there is no response, the default error handling is enough. This will typically occur when the endpoint is down or when you get a timeout.
 
 If there is a response the error message will contain the error code and the reason, but not the message. For that reason, add an additional log message with the response and then rethrow the error. Add details about the request that will help the developer.

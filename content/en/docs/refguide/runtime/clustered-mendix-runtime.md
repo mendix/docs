@@ -57,7 +57,7 @@ For more information about configuring the Mendix Runtime to store files on thes
 
 ## After-Startup and Before-Shutdown Microflows {#startup-shutdown-microflows}
 
-It is possible to configure `After-Startup` and `Before-Shutdown` microflows in Mendix. In a Mendix cluster, this means that those microflows are called per node. This lets you register request handlers and other activities. However, doing database maintenance during these microflows is strongly discouraged, because it might impact other nodes of the same cluster. There is no possibility to run a microflow on cluster startup or shutdown.
+It is possible to configure `After-Startup` and `Before-Shutdown` microflows in Mendix. In a Mendix cluster, this means that those microflows are called per node. This lets you register request handlers and other activities. However, doing data changes during these microflows is strongly discouraged, because it might impact other nodes of the same cluster. There is no possibility to run a microflow on cluster startup or shutdown.
 
 ## Cluster Limitations
 

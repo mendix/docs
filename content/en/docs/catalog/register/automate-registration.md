@@ -40,7 +40,7 @@ For this section, you will need:
 * Endpoint location `Name` (found in the *metadata.json* file for your exposed service, in an array called **Constants**, under **Name**)
 * Endpoint location `Value` (found in the *metadata.json* file for your exposed service, in an array called **Constants**, under **DefaultValue**)
 
-Follow the steps in [Registering an environment through the Catalog Registration API](/catalog/register/register-data/#register-environment) to prepare your service details. When finished, [register the application](#register-the-application).
+Follow the steps in [Registering an environment through the Catalog Registration API](/apidocs-mxsdk/apidocs/registration-api/#register-environment) to prepare your service details. When finished, [register the application](#register-the-application).
 
 ## Register the Application{#register-the-application}
 
@@ -49,7 +49,7 @@ To register the application, you need:
 * A [Personal Access Token](/community-tools/mendix-profile/user-settings/#pat)
 * The application **Name**
 
-Follow the steps for [registering an application through the Registration API](/catalog/register/register-data/#register-application).
+Follow the steps for [registering an application through the Registration API](/apidocs-mxsdk/apidocs/registration-api/#register-application).
 
 Upon completion, you will have the `application_UUID`.
 
@@ -63,7 +63,7 @@ To register the environment, you will need:
 * Environment `Location`
 * Environment `Type`
 
-Follow the steps in [Registering an environment through the Catalog Registration API](/catalog/register/register-data/#register-environment) to register the environment of your application. When finished, [register the endpoint (or endpoints)](#register-endpoints).
+Follow the steps in [Registering an environment through the Catalog Registration API](/apidocs-mxsdk/apidocs/registration-api/#register-environment) to register the environment of your application. When finished, [register the endpoint (or endpoints)](#register-endpoints).
 
 Upon completion, you will have the `environment_UUID`.
 
@@ -78,6 +78,6 @@ To register the service endpoint (or endpoints), you will need:
 * Service `Version` and `Security Scheme`
 * Service `Contract` with `Type` and `Value`
 
-Follow the steps for [registering services (endpoints) through the Catalog Registration API](/catalog/register/register-data/#register-services).
+Follow the steps for [registering services (endpoints) through the Catalog Registration API](/apidocs-mxsdk/apidocs/registration-api/#register-services).
 
 If you want to register more than one service for the same application and environment at once, add another object to the Endpoints list in the request body.

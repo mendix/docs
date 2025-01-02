@@ -13,4 +13,4 @@ On the **Brand** page in Control Center, you can upload, edit, or remove a **Com
 
 You can upload, edit, or remove a **Cover image**. The cover image uploaded here will be available for usage in your company onboarding.
 
-{{< figure src="/attachments/control-center/company-branding/company-brand.png" class="no-border" >}}
+{{< figure src="/attachments/control-center/company/company-branding/company-brand.png" class="no-border" >}}

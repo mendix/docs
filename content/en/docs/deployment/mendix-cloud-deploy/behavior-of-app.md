@@ -10,9 +10,12 @@ description: "Describes the behaviors and limitations that apply to your app whe
 
 Apps running in Mendix Cloud are subject to certain limitations. These behaviors are described in this document; keep the following considerations in mind.
 
-## MDA Size Limits
+## MDA Size Limit
 
-* It is not possible to deploy a model (MDA file) that is larger than 1 GB when uncompressed or that contains more than about 64,000 files.
+* It is not possible to deploy a model (MDA file) that is larger than 1 GB when uncompressed.
+
+## Other File Size Limits
+
 * You cannot upload files bigger than 1 GB to your app.
 * You cannot download files bigger than 1 GB from your app.
 

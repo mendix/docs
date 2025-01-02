@@ -22,6 +22,10 @@ However, there may be times when physically reclaiming the lost space is importa
 
 You can recover physical disk space by creating a database backup and then restoring it.
 
+{{% alert color="warning" %}}
+Do not try to manipulate the backup in any way to reduce its size before restoring it. Doing so may lead to a backup file which can no longer be restored.
+{{% /alert %}}
+
 A database restore does a full physical rewrite of the database. It compresses the database to contain just the current records. It also fully optimizes the physical placement of files on the actual hard disk to maximize the performance of disk read operations.
 
 In the Mendix Portal, you can create and restore a backup on your app's **Backups** page. For more information, see [Creating a Backup](/developerportal/operate/create-backup/).

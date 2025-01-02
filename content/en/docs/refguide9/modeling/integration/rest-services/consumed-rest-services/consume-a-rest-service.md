@@ -22,19 +22,15 @@ The Wikipedia REST service allows you to retrieve the summary of a page. This se
 
 We will start by providing Studio Pro as an example of what the REST service returns:
 
-1. Open your browser and go to [https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti](https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti).
-2. This calls the REST service with a GET request – the result is the summary of the [Tahiti page on Wikipedia](https://en.wikipedia.org/wiki/Tahiti) in the JSON format:
-
-    {{< figure src="/attachments/refguide9/modeling/integration/consume-a-rest-service/get-call-result.png" alt="Screenshot of the result of the rest call" class="no-border" >}}
-
-3. Select the **Raw Data** tab and copy the whole whole JSON snippet.
-4. Create a module and name it *RESTconsume*. Add the new [JSON structure](/refguide9/json-structures/) to your module: right-click the module in the **App Explorer** and select **Add other** > **JSON structure**. 
-5. Enter a **Name** for the structure: *JSON_structure* and click **OK**.
-6. In the **JSON Structure** dialog box, paste the JSON snippet in the **General** tab and click **Refresh** in the **Structure** section. This analyzes the structure of the JSON snippet and provides a representation of it.
+1. Open your browser and go to [https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti](https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti). This calls the REST service with a GET request – the result is the summary of the [Tahiti page on Wikipedia](https://en.wikipedia.org/wiki/Tahiti) in the JSON format.
+2. Copy the whole JSON snippet.
+3. Create a module and name it *RESTconsume*. Add the new [JSON structure](/refguide9/json-structures/) to your module: right-click the module in the **App Explorer** and select **Add other** > **JSON structure**. 
+4. Enter a **Name** for the structure: *JSON_structure* and click **OK**.
+5. In the **JSON Structure** dialog box, paste the JSON snippet in the **General** tab and click **Refresh** in the **Structure** section. This analyzes the structure of the JSON snippet and provides a representation of it.
 
     {{< figure src="/attachments/refguide9/modeling/integration/consume-a-rest-service/json-structure.png" class="no-border" >}}
 
-7. Click **OK**
+6. Click **OK**
 
 ## Creating an Import Mapping {#create-import-mapping}
 

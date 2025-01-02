@@ -8,10 +8,8 @@ no_list: true
 
 ## Introduction
 
-The **Deployed Apps Overview** page in Control Center provides a comprehensive view of all the apps within your company. On this page, you can find detailed information about each app, including its name, ID, Technical Contact, status, number of environments, and the number of [cloud credits](/control-center/entitlements/#cloud-credits) used, if applicable. Additionally, this page allows you to provision and offboard environments for apps on Mendix Cloud. Moreover, you can email or download the license keys for your apps directly from this page.
-
+The **Deployed Apps Overview** page provides a comprehensive view of all the apps within your company. On this page, you can find detailed information about each app, including its name, ID, Technical Contact, status, number of environments, and the number of [cloud tokens](/control-center/entitlements/#cloud-tokens) used, if applicable. Additionally, this page allows you to provision and offboard environments for apps on Mendix Cloud. Moreover, you can email or download the license keys for your apps directly from this page.
 The **Deployed Apps Overview** page has the following tabs: [Mendix Cloud](#mendix-cloud), [Free Apps](#free-apps), and [Apps with License Keys](#apps-license-keys).
-
 If you click the **...** icon in the upper-right corner, you can access the following pages that allow you to [make requests to Mendix Support](/support/submit-support-request/#submitting):
 
 * [Resize Environment](/support/new-app-node-request-template/#resize) – requests a container size change
@@ -38,7 +36,7 @@ The list on this tab shows the following information:
 
 If you click the name of an app in the list, a page opens and shows the app environment details.
 
-{{< figure src="/attachments/control-center/deployed-apps/cloud-provisioning.png"  alt="cloud provisioning page for an app" >}}
+{{< figure src="/attachments/control-center/apps/deployed-apps/cloud-provisioning.png"  alt="cloud provisioning page for an app" >}}
 
 On the top, you can see the app name, credits used, and the Technical Contact. The labels below show whether the app is licensed or active.
 
@@ -63,16 +61,16 @@ The list shows the all the environments available for the app, with the followin
 To add a new environment for your app, click the name of an app, and then click the **Add Environment** button. You must specify the following information:
 
 * **Environment Name** – Enter a name for your new environment. The name must be unique (that is, your app cannot have more than one environment with the same name).
-* **Resource Pack** – Select the resources required for the new environment. The page displays the resources included in each resource pack, and their cost in cloud credits.
+* **Resource Pack** – Select the resources required for the new environment. The page displays the resources included in each resource pack, and their cost in cloud tokens.
 * **Production Environment** – Indicate whether the environment will be used for production.
 
-{{< figure src="/attachments/control-center/deployed-apps/new-environment.png"   alt="adding a new environment" >}}
+{{< figure src="/attachments/control-center/apps/deployed-apps/new-environment.png"   alt="adding a new environment" >}}
 
 #### Offboarding an Environment {#offboard-environment}
 
 To offboard an environment, click **Offboard**, which is available for stopped environments. After that, confirm that you have made any necessary backups, and type *Offboard* to confirm.
 
-{{< figure src="/attachments/control-center/deployed-apps/offboarding.png" width= 50% alt="confirming the offboarding" class="no-border" >}}
+{{< figure src="/attachments/control-center/apps/deployed-apps/offboarding.png" width= 50% alt="confirming the offboarding" class="no-border" >}}
 
 {{% alert color="warning" %}}
 Offboarding an environment deletes it permanently. You are responsible for making a backup of the environment in case you need it in the future.
@@ -85,7 +83,7 @@ The **Free Apps** tab shows all the apps deployed to Mendix Free Cloud.
 The list shows the following information:
 
 * **App Name** – This is the name of the app.
-* **App ID** – This shows the app ID.
+* **App ID** – This shows the app/project ID.
 * **Technical Contact** – This shows the registered email address for sending license keys to. If the Technical Contact is not correct, you can change it by clicking the edit icon ({{% icon name="pencil" %}}) next to the email address. Every app can only have one Technical Contact. After you change the Technical Contact, both the new and the old contact receive a notification email about the change.
 
 * **Status** – This shows whether app is active or not.

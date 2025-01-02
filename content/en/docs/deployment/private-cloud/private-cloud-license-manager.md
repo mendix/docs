@@ -98,7 +98,6 @@ For setting up Postgres with Azure workload identity, follow the guide in [Azure
 
 To configure an SQL Server, refer to the [Azure azwi SQL setup](/developerportal/deploy/private-cloud-storage-plans/#walkthrough-azure-azwi).
 
-
 ### Applying the Manifest
 
 To apply the installation manifest to install the server in the Kubernetes namespace, use the following command:

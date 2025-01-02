@@ -11,28 +11,32 @@ description: "Describes the features in Domain Model Generator."
 Domain Model Generator is currently an experimental feature introduced in Studio Pro 10.13.0. For more information on experimental features, see [Beta and Experimental Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
-Maia Domain Model Generator is an AI-powered tool that you can use for generating a [domain model](/refguide/domain-model/). It helps you to generate entities and associations based on text input. As an experimental feature, Domain Model Generator only works when the domain model is empty. For more information, see the [Limitations](#limitation) section below.
+Maia Domain Model Generator is an AI-powered tool that you can use for generating a [domain model](/refguide/domain-model/). It helps you to generate entities and associations based on text input. In Studio Pro 10.18 and above, you can also use Domain Model Generator in existing domain models. As an experimental feature, Domain Model Generator still have several limitations. For more information, see the [Limitations](#limitation) section below.
 
 ## Using Domain Model Generator
 
-To enable Domain Model Generator, go to **Edit** > **Preferences** > the **New Features** tab > the **Maia** section.
+In Studio Pro 10.18 and above, Domain Model Generator is enabled by default.
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/domain-model-generator/enable-domain-model-generator.png" max-width=80% >}}
-
-Once enabled, you will find the **Generate Domain Model** option in the toolbar of a domain model.
+You can find it in the the toolbar of a domain model:
 
 {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/domain-model-generator/domain-model-generator.png" max-width=80% >}}
 
-After clicking **Generate Domain Model**, a dedicated chat interface will appear at the right side of Studio Pro under the **Maia** tab.
+If you want to disable this feature, go to **Edit** > **Preferences** > the **New Features** tab > the **Maia** section.
+
+After clicking **Generate Domain Model**, a dedicated chat interface will appear at the right side of Studio Pro under the **Maia** tab:
 
 {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/domain-model-generator/chat-interface.png" max-width=42% >}}
 
-Describe your application or its main goals in the chatbox, and Maia will use this information to generate a relevant domain model for you!
+Describe your application or its main goals in the chatbox. Maia will use this information to generate a relevant domain model for you! After a domain model is generated and if the dedicated chat is still active, you can still ask Maia to add more entities and associations to the generated domain model. In Studio Pro 10.17 and above, it also supports adding more attributes to an existing entity in the generated domain model. Give it a try!
 
 {{% alert color="info" %}}
 In this dedicated chat, only requests related to domain model generation will be properly handled. If you have other questions, close this chat and go back to the general [Maia Chat](/refguide/maia-chat/) interface.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+Domain Model Generator does not support deleting items in the domain model. You can always delete them manually. 
+{{% /alert %}}
+ 
 ### Best Practices for Text Input
 
 To achieve optimal results, provide context about your application by describing its main use cases, customer needs, or other relevant details. The more Maia knows about your application, the more tailored and accurate the generated domain model will be.
@@ -50,27 +54,9 @@ Below are some examples you can use as a starting point:
 
 As an experimental feature, Domain Model Generator has some limitations.
 
-### Studio Pro Restart Required
+### Enumeration Generation
 
-Studio Pro restart is required after Domain Model Generator is enabled in the Preferences.
-
-### Empty Domain Model Only
-
-If the **Generate Domain Model** option is greyed out, it is because it currently only works for empty domain models. You can always start fresh with an empty domain model by creating a new module in your application.
-
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/domain-model-generator/domain-model-generator-greyed-out.png" max-width=100% >}}
-
-### Creating only
-
-After a domain model is generated and if the dedicated chat is still active, you can still ask Maia to add more entities and associations to the generated domain model. 
-
-However, it currently does not support deleting or editing what are already in the generated domain model. This includes adding more attributes to an existing entity. Such requests will not be handled properly at this moment.
-
-You can always edit the generated domain model manually, or remove it and ask Maia to generate a new domain model with adjusted text input.
-
-### Enumeration Generation Not Supported
-
-Currently, it cannot generate [enumerations](/refguide/enumerations/). So, it is not possible to generate an attribute of type Enumeration.
+In Studio Pro 10.17 and below, it is not possible to generate [enumerations](/refguide/enumerations/). In Studio Pro 10.18, it can generate an attribute of type Enumeration if there is an existing enumeration in the module to refer to.
 
 ### Generalization Not Supported
 

@@ -62,19 +62,19 @@ To connect your portfolio to Jira, follow these steps:
      * **Account**: This is the login name (the email address) of a user on the Jira platform with project access rights.
      * **API Token**: This is a valid API token issued by the Jira platform and assigned to the above-mentioned account. For more information on how to get this API token, see [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
 
-5. Click **Next**.
-6. Select the Jira projects you want to link to your portfolio. You can link up to a maximum of 20 Jira projects per portfolio.
+7. Click **Next**.
+8. Select the Jira projects you want to link to your portfolio. You can link up to a maximum of 20 Jira projects per portfolio.
 
     {{< figure src="/attachments/developerportal/portfolio-management/integrate-with-jira/jira-configuration-wizard-page-3.png" >}}
 
-7. Click **Save**.
+9. Click **Save**.
 
 Once the configuration is completed, your portfolio is connected to Jira, and you can see the following:
 
 {{< figure src="/attachments/developerportal/portfolio-management/integrate-with-jira/jira-integration-linked-projects.png" >}}
 
 * A card with the details of your Jira integration and the **Edit Configuration** button, which enables you to [edit the current configuration of the integration](#edit-configuration). 
-* A list with the Jira projects that are linked to this portfolio, which contains the folllowing items:
+* A list with the Jira projects that are linked to this portfolio, which contains the following items:
 
     * Project icon – This is the icon of the linked Jira project.
     * **Name** – This is the name of the linked Jira project.
@@ -99,7 +99,7 @@ If you want to edit your existing Jira configuration, for example to rotate the 
 ## Deleting Jira Configuration
 
 {{% alert color="warning" %}}
-If you already have [linked Jira projects](#link-jira-project) to the portoflio, after you delete the Jira configuration, the linked Jira projects will be unlinked from the portfolio automatically.
+If you already have [linked Jira projects](#link-jira-project) to the portfolio, after you delete the Jira configuration, the linked Jira projects will be unlinked from the portfolio automatically.
 {{% /alert %}}
 
 To delete a configuration, do the following steps:
@@ -144,4 +144,4 @@ If you already have [linked epics from the Jira project to an initiative](/devel
 
     {{< figure src="/attachments/developerportal/portfolio-management/integrate-with-jira/warning-jira-project-unlink.png" >}}
 
-4. Click **Unlink** to confirm your action.
+5. Click **Unlink** to confirm your action.

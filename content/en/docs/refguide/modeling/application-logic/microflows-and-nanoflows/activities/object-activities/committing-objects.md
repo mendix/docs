@@ -116,6 +116,8 @@ An autocommit is an automatic commit from the platform, which is done to keep th
 {{% alert color="warning" %}}
 An autocommit is not the same as an explicit commit!
 
+When objects are autocommitted, all changed member values, including associations, are saved in the database as well. These members are still marked as changed until these objects are explicitly committed. As a consequence, association rows for these objects are deleted and reinserted in the database when these objects are explicitly committed.
+
 If a rollback is triggered for any reason (for example, if the user session is terminated by the user closing the browser), then autocommitted objects are deleted from the database. For more information about how Mendix handles persistable objects, see [Persistability](/refguide/persistability/).
 {{% /alert %}}
 

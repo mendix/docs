@@ -1169,6 +1169,8 @@ You can also see an activity log containing the following information for all na
 * When Runtime Metrics configurations are added, updated, or deleted
 * When developer mode is enabled in the namespace
 * When developer mode is disabled in the namespace
+* When deployment strategy is enabled for an environment in a namespace
+* When deployment strategy is disabled for an environment in a namespace
 
 #### Apps
 
@@ -1214,6 +1216,10 @@ This is addressed in Mendix Operator version 2.15.0; if you need to remove an in
 You can configure the runtime metrics for the environment in the **Runtime** section. For more information, see [Customize Runtime Metrics](#customize-runtime-metrics).
 
 You can also configure the pod labels for the environment in the **Labels** section. For more information, see [App Pod Labels](#pod-labels).
+
+Starting from Operator 2.20.0 onwards, it is now also possible to set the deployment strategy for an environment. This allows you to update an app with reduced downtime by performing a rolling update. To use this feature, you must enable the **Reduced App Downtime Strategy** option.  For more information, see [Deployment Strategy](/developerportal/deploy/private-cloud-reduced-downtime/)
+
+{{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/deploymentStrategy.png" class="no-border" >}}
 
 #### Members
 

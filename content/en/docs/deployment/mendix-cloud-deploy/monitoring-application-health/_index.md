@@ -18,15 +18,11 @@ When your application has reached production status, it is important to keep tra
 
 {{% alert color="info" %}}This page describes alerts for licensed apps deployed to Mendix Cloud. Alerts are not available for Free Apps deployed to Mendix Cloud.<br><br>If your app is deployed to SAP Business Technology Platform (SAP BTP) instead, the **Alerts** page links to the SAP BTP cockpit.{{% /alert %}}
 
-Mendix analyzes the application and platform status periodically. All status alerts are logged in the **History** of the **Alerts**. 
-
-{{% alert color="info" %}}
-If you have status alerts set up (for details, see [Receive Environment Status Alerts](/developerportal/operate/receive-alerts/)), you will receive each status alert only once. Mendix will not send you multiple alerts for the same status.
-{{% /alert %}}
+Mendix analyzes the application and platform status periodically. All status alerts are logged in the [History](#history) of the **Alerts**. 
 
 This document explains how to access the application status page, what the information on this page means, and how to look at the alerts for your app.
 
-## Application Status
+## Alerts Page
 
 Mendix Cloud automatically monitors the health and status of apps that are deployed on cloud nodes. To access the information gathered in this way, follow these steps:
 
@@ -34,23 +30,59 @@ Mendix Cloud automatically monitors the health and status of apps that are deplo
 
 1. In the [navigation pane](/developerportal/#navigation-pane), click **Alerts**. This displays the status of your app node in various categories.
 
-    {{% alert color="info" %}}To directly visit the **Alerts** page, you can also use this link: `https://cloud.home.mendix.com/link/monitor/{appID}`, with `{app ID}` replaced by your app ID.{{% /alert %}}
+    {{% alert color="info" %}}To directly visit the **Alerts** page, you can also use this link: `https://cloud-alerts.home.mendix.com/link/monitor/{appID}`, with `{app ID}` replaced by your app ID.{{% /alert %}}
 
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/monitoring-application-health/application-status.png" class="no-border" >}}
+There are three tabs on the Alerts page:
 
-1. To view more details about a specific alert, click it. Detailed information about that alert will appear below the alert status table.
+### Status
 
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/monitoring-application-health/alert-details.png" class="no-border" >}}
+Click **Status** to open the **Status** tab.
 
-You may be able to use this information to resolve the issue yourself; otherwise, include this information when submitting a support request to [Mendix Support](https://support.mendix.com). You can download a log of the alerts on the [Logs](/developerportal/operate/logs/) page.
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/monitoring-application-health/application-status.png" >}}
+
+The information shows is as follows:
+
+* **Severity** – indicates whether this check is **OK**, **WARNING**, or **CRITICAL**. See [Mendix Cloud Alerting Check Types and Thresholds](#check-types), below, to see what each severity means.
+* **Date** – the last time this check type was reported by the app.
+* **Check Type** – the type of check that was undertaken.
+* **Details** – further information about the current status of this check type.
+
+You may be able to use the information in the details to resolve the issue yourself; otherwise, include this information when submitting a support request to [Mendix Support](https://support.mendix.com). You can download a log of the alerts on the [Logs](/developerportal/operate/logs/) page.
 
 Any status that could cause your app to stop functioning results in an alert. For example, the monitoring information from the image above shows that one of the status indicators was **Critical**. If this happens to one of your nodes, all users who are subscribed to alerts receive an email alert.
 
-## Mendix Cloud Alerting Categories and Thresholds
+You can set up status alerts (for details, see [Receive Environment Status Alerts](/developerportal/operate/receive-alerts/)) which allows you to receive alerts when the status of a check type changes. You will, however, receive each status alert only once. Mendix will not send you multiple alerts for the same status.
 
-The status overview has several categories, which are related to various technical parts of your application environment. Each category indicates a different part of the app infrastructure that is monitored.
+### History {#history}
 
-Any category that does not display as *OK* needs to be investigated. Some alerts listed in the tables below appear only when the alert is triggered. Therefore, if an alert is not present in the overview, that is the same as the alert having an *OK* status.
+Click **History** to open the **History** tab.
+
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/monitoring-application-health/alerts-history.png" >}}
+
+The overview shows the following information:
+
+* **Severity** – indicates whether this check is **OK**, **WARNING**, or **CRITICAL**. See [Mendix Cloud Alerting Check Types and Thresholds](#check-types), below, to see what each severity means.
+* **Date** – the time the severity changed.
+* **Check Type** – the type of check that was undertaken.
+* **Details** – further information about the current status of this check type.
+
+The check types provide a broad indication of the type of error that occurred, such as critical log messages or failures of the health check microflow. Recovery notifications are also shown here.
+
+### Settings
+
+Click **Settings** to open the **Settings** tab.
+
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/monitoring-application-health/alerts-settings.png" >}}
+
+#### Email Alerts
+
+See [Receive Environment Status Alerts](/developerportal/operate/receive-alerts/) for more information about setting up email alerts.
+
+## Mendix Cloud Alerting Check Types and Thresholds {#check-types}
+
+The status overview has several check types, which are related to various technical parts of your application environment. Each type of check indicates a different part of the app infrastructure that is monitored.
+
+Any check type that does not display as *OK* needs to be investigated. Some alerts listed in the tables below appear only when the alert is triggered. Therefore, if an alert is not present in the overview, that is the same as the alert having an *OK* status.
 
 ### Application Status {#app-status}
 
@@ -173,18 +205,6 @@ You might see database connection errors in your app logs. For example, you migh
 The reason you receive a message is that when you are using a [basic license](/developerportal/deploy/basic-package/), you get your own database schema which is part of a shared database hosted by AWS. As part of normal operations, AWS can apply autoscaling to the shared database. This will cause these error messages.
 
 The autoscaling might occur when your app does not have high resource usage because of the way shared databases are managed. More resources may be required by an app using another schema on the shared database. This is a known phenomenon, which AWS terms a [noisy neighbor](https://docs.aws.amazon.com/wellarchitected/latest/saas-lens/noisy-neighbor.html).
-
-## Alerts History
-
-To access the history of the alerts from your app, follow these steps:
-
-1. Click the **History** tab on the **Alerts** page.
-2. Select the environment that you wish to see alert history for.
-3. You will see an overview of all alerts that have been sent for this application.
-
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/monitoring-application-health/alerts-history.png" >}}
-
-    The overview shows alert types and details, including date and time. The alert types provide a broad indication of the type of error that occurred, such as critical log messages or failures of the health check microflow. Recovery notifications are also shown here.
 
 ## Read More
 

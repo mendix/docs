@@ -73,3 +73,7 @@ In Studio Pro 10.8.0 and above, Maia Chat supports asking follow-up questions ba
 ## Keyboard Support
 
 For information on the supported shortcut keys in Maia Chat, see the [Maia Chat Shortcut Keys](/refguide/keyboard-shortcuts/#maia-chat-shortcuts) section in *Keyboard Shortcuts*.
+
+## Read More
+
+* [Maia Learn](/refguide/maia-learn/)

@@ -78,37 +78,37 @@ Now the application is ready to store redundant data, but you still need to keep
 
     {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582164.png" class="no-border" >}}
 
-9. Double-click the new activity to open its properties on the **Retrieve Objects** dialog box and do the following:
+9. Double-click the new activity to open its properties on the **Retrieve** dialog box and do the following:
     * Select **By association** as **Source**
     * Click **Select...** to open the **Association** selector
 
-    {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582162.png" class="no-border" >}}
+    {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582162.png">}}
 
 10. On the **Select association** pop-up window, select **Order_Customer** from the **Variables** node in the tree view, and then click **Select**:
 
-    {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582161.png" class="no-border" >}}
+    {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582161.png" >}}
 
-    As you can see below, the **Output** section of the **Retrieve Objects** dialog box is configured automatically:
+    As you can see below, the **Output** section of the **Retrieve** dialog box is configured automatically:
 
-    {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582160.png" class="no-border" >}}
+    {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582160.png" >}}
 
 11. Click **OK** to save the activity. Your microflow should now look like this:
 
     {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582159.png" class="no-border" >}}
 
-12. Insert another retrieve activity (as you did in step #8), double-click it to open its properties on the **Retrieve Objects** dialog box, and do the following:
+12. Insert another retrieve activity (as you did in step #8), double-click it to open its properties on the **Retrieve** dialog box, and do the following:
     * Select **From Database** as **Source**
     * Click **Select...** to open the entity selector
 
-    {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582157.png" class="no-border" >}}
+    {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582157.png" >}}
 
 13. On the **Select entity** pop-up window, select **Order** via from the **Variables** node in the tree view, and then click **Select**:
 
     {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582158.png" class="no-border" >}}
 
-    As you can see below, the **XPath constraint** and **Output** sections of the **Retrieve Objects** dialog box are configured automatically:
+    As you can see below, the **XPath constraint** and **Output** sections of the **Retrieve** dialog box are configured automatically:
 
-    {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582156.png" class="no-border" >}}
+    {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582156.png" >}}
 
 14. Click **OK** to save the activity. Your microflow should now look like this:
 

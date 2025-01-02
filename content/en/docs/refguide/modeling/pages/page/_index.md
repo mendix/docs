@@ -69,35 +69,39 @@ The way you can add an element on a page depends on a mode you are editing your 
 
 In **Structure mode**, there are several ways to add an element on a page:
 
-1. Through the **Toolbox**:
+* Through the **Toolbox**:
 
-    1. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there.   
-    2. Select an element you would like to add and drag this element onto your page.
+    1. Open the **Toolbox**, and select the **Widgets** or **Building blocks** tab.   
+    1. Select an element you would like to add and drag this element onto your page.
 
-2. Through the menu at the top of the page:
+* Through the menu at the top of the page:
 
     1. Do one of the following:
 
-        1. Select frequently-used widgets (a data view, a data grid, a template grid, or a list view).
-        1. Click **Add widget**  or **Add building block**, find an element in a list and click **Select**.
+        * Select frequently-used widgets (a data view, a data grid, a template grid, or a list view).
+        * Click **Add widget**  or **Add building block**, find an element in a list, and click **Select**:
 
         {{< figure src="/attachments/refguide/modeling/pages/page/top-menu.png" class="no-border" >}}
 
     2. Click a drop-zone on a page to position an element.
 
-3. By right-clicking a drop-zone:<br/>
+* By right-clicking a drop-zone:<br/>
 
-    1. Right-click a drop-zone you want to insert an element in.<br/>
-    1. Select between adding a widget or a building block.<br/>
+    1. Right-click a drop-zone you want to insert an element into.<br/>
+    1. Select between adding a **widget** or a **building block**.<br/>
 
         {{< figure src="/attachments/refguide/modeling/pages/page/adding-widget-in-drop-zone.png"   width="400"  class="no-border" >}}<br/>
 
     1. Select an element you would like to add and confirm your choice by clicking **Select**.
 
-In **Design mode**, you can add elements though the Toolbox. Do the following:
+In **Design mode**, you can add elements though the **Toolbox**. Do the following:
 
-1. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there. 
-2. Select an element you would like to add and drag this element onto your page.
+1. Open the **Toolbox**, and select the **Widgets** or **Building blocks** tab. 
+1. Select an element you would like to add and drag this element onto your page.
+
+{{% alert color="info" %}}
+In Studio Pro 10.18 and above, you can also add elements through UI Recommender in **Design mode**. It allows you to easily add new widgets to a page without losing the context of what you are currently working on. For more information, see [UI Recommender](/refguide/ui-recommender/).
+{{% /alert %}}
 
 ### Viewing Element Properties {#view-properties}
 
@@ -217,3 +221,4 @@ Here is the same page with **X-ray mode** enabled:
 * [Pages](/refguide/pages/)
 * [Page Properties](/refguide/page-properties/)
 * [Page Explorer](/refguide/page-explorer/)
+* [UI Recommender](/refguide/ui-recommender/)

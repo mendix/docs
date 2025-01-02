@@ -28,19 +28,15 @@ You are going to use the Wikipedia REST service as an example in this how-to. It
 
 We will start by providing to Studio Pro an example of what the REST service returns:
 
-1. Open your browser and go to [https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti](https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti).
-2. This calls the REST service with a GET request – the result is the summary of the [Tahiti page on Wikipedia](https://en.wikipedia.org/wiki/Tahiti) in the JSON format:
-
-    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/get-call-result.png" alt="Screenshot of the result of the rest call" class="no-border" >}}
-
-3. Copy the whole JSON snippet. Make sure that you select the **Raw Data** tab to copy the whole code structure.
-4. Create a module and name it *RESTconsume*. To add a new [JSON structure](/refguide8/json-structures/) to your module with the sample JSON that you can use in the app, right-click the module in the **Project Explorer** and select **Add other** > **JSON structure**.
-5. Enter a **Name** for the structure: *JSON_structure* and click **OK**.
-6. In the **JSON Structure** dialog box, paste the JSON snippet in the **General** tab and click **Refresh**. This analyzes the structure of the JSON snippet that we can use later.
+1. Open your browser and go to [https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti](https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti). This calls the REST service with a GET request – the result is the summary of the [Tahiti page on Wikipedia](https://en.wikipedia.org/wiki/Tahiti) in the JSON format.
+2. Copy the whole JSON snippet.
+3. Create a module and name it *RESTconsume*. To add a new [JSON structure](/refguide8/json-structures/) to your module with the sample JSON that you can use in the app, right-click the module in the **Project Explorer** and select **Add other** > **JSON structure**.
+4. Enter a **Name** for the structure: *JSON_structure* and click **OK**.
+5. In the **JSON Structure** dialog box, paste the JSON snippet in the **General** tab and click **Refresh**. This analyzes the structure of the JSON snippet that we can use later.
 
     {{< figure src="/attachments/howto8/integration/consume-a-rest-service/json-structure.png" class="no-border" >}}
 
-7. Click **OK**.
+6. Click **OK**.
 
 ## Creating an Import Mapping
 

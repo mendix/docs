@@ -26,23 +26,22 @@ Before submitting a new Mendix Support request, check these resources to make su
 * [Mendix Documentation](/)
 * [Mendix Platform status](https://status.mendix.com)
 
-If you cannot find the answer to your question in the Mendix Community or in the Mendix documentation, you can submit a support request. The Mendix Support Portal will walk you through the ticket creation by asking for relevant information based on the type of request. 
+If you cannot find the answer to your question in the Mendix Community or in the Mendix documentation, you can submit a support request. The Mendix Support Portal will walk you through the ticket creation by asking for relevant information based on the type of request.
 
 ## Submitting a New Request {#submitting}
 
-You can access the Mendix Support Portal at [support.mendix.com](https://support.mendix.com).
-
-This is the basic information required for a ticket:
-
-* A detailed description of the exact error
-* A detailed description of the action that was performed when the error was received
-* A description of the desired goal (optional)
-* The affected app (for more information, see [How to Prepare Your App for Support](/support/prepare-your-app/))
-
 To submit a request with Mendix Support, follow these steps:
 
-1. Click **Submit a request** in the upper-right corner of the portal.
-2. Select an issue from the drop-down menu:
+1. Prepare the following information required for a ticket:
+
+    * A detailed description of the exact error
+    * A detailed description of the action that was performed when the error was received
+    * A description of the desired goal (optional)
+    * The affected app (for more information, see [How to Prepare Your App for Support](/support/prepare-your-app/))
+
+2. Log in to the [Mendix Support Portal](https://support.mendix.com).
+3. Click **Submit request**.
+4. Select an issue from the drop-down menu:
 
     {{< figure src="/attachments/support/submit-support-request/issue.png" class="no-border" >}}
 
@@ -66,8 +65,7 @@ To submit a request with Mendix Support, follow these steps:
     * **Standard Change** – other changes which can be made on the platform, but for which you do not have access
     * **Non-Standard Change** – any other changes not covered by other issues above
 
-3. Fill in the fields for the issue type you selected, including [Priority](#request-priority).
-4. When you select **Request for Information** or **Incident**, you then have to select the **Related Component** for the issue. The correct component will allow Mendix Support to help you more effectively. In some cases, you can also select the **Related Sub-Component** for your issue. Selecting the related sub-component is not required, but it will allow Mendix Support to help you more quickly and accurately. There are two main options for the related component:
+5. For **Requests for Information** or **Incidents**, you must select the **Related Component** for the issue. The correct component will allow Mendix Support to help you more effectively. In some cases, you can also select the **Related Sub-Component** for your issue. Selecting the related sub-component is not required, but it will allow Mendix Support to help you more quickly and accurately. There are two main options for the related component:
     * **App** – select one of these components when you have issues with designing, developing, building, deploying, or operating one of your own apps built on the Mendix Platform:
         * **App - Development** – issues/questions regarding developing your app (for example, with your [domain model](/refguide/domain-model/), [widgets](/refguide/data-widgets/), or [logic](/refguide/application-logic/))
         * **App - Deployment** – issues/questions regarding deploying your app (for example, when the app cannot be [deployed](/deployment/) or will not start)
@@ -89,9 +87,13 @@ To submit a request with Mendix Support, follow these steps:
         * **Developer Platform - Other** – any other issues/questions regarding the Mendix Platform itself
     * **Licensing** – select this component when you have issues/questions regarding your Mendix licenses
 
-5. Make sure all your attachments have finished uploading before clicking **Next**.
+6. Fill in the other fields for the issue type you selected, including [Priority](#request-priority).
+7. Optionally, enable the check box that grants Mendix Support permission to access your logs for the purpose of diagnosing and troubleshooting the issue.
 
-If investigating the documentation and searching the [Mendix Community](https://community.mendix.com/) does not help you solve your issue, you can submit the Mendix Support request.    
+    {{% alert color="info" %}}Although not required, granting this permission is highly recommended because it greatly enhances Mendix Support's ability to assist you effectively. Without it, diagnosing and resolving any issues you encounter may be challenging, potentially impacting the level of support that Mendix Support can provide. Any logs collected are strictly used for providing help on your ticket and are handled with the utmost care. 
+    {{% /alert %}}
+
+8. Make sure all your attachments have finished uploading before clicking **Next**.
 
 ## Request Priority {#request-priority}
 
@@ -101,9 +103,9 @@ The priority is based on the combination of impact and urgency:
 
 | Impact  | Description |
 | ------- | ------- |
-| High    | A high-priority production issue with a high impact on the customer’s business, impacting (almost) all users. |
-| Medium  | A production issue with intermediate impact on the customer’s business, impacting a group of users. |
-| Low     | A trivial production issue with no impact on the customer’s business. |
+| High    | A high-priority production issue with a high impact on the customer's business, impacting (almost) all users. |
+| Medium  | A production issue with intermediate impact on the customer's business, impacting a group of users. |
+| Low     | A trivial production issue with no impact on the customer's business. |
 
 | Urgency | Description |
 | ------- | ------- |
@@ -148,7 +150,7 @@ If you are reporting a security finding or other security-related issue, for exa
 1. If the issue has been reported by a scanning tool, please check that the results are not caused by factors outside the Mendix app (for example, tool settings or network traffic routing issues).
 1. Include the following information:
     * A description of the issue found — please submit only one finding per support ticket.
-    * Where the issue was found — for example, which URL, which Mendix version, the App ID?
+    * Where the issue was found — for example, which URL, which Mendix version, the App/project ID?
     * How the issue was found — for example, was it from scanning an app and, if so, which tool was used?
     * A copy of an app containing the reported issue — see [How To Export A Mendix App Package](/refguide/export-app-package-dialog/) for instructions on creating an app package.
     * An actual exploitation scenario, if possible, including steps showing how to reproduce and exploit a vulnerability.
@@ -164,7 +166,7 @@ Mendix Support will only accept security findings for the Mendix platform. This 
 
 ### Team Server Problems and App Issues
 
-* [App ID](/developerportal/settings/general-settings/)
+* [](/developerportal/settings/general-settings/)
 
 ### Studio Pro Problems
 

@@ -18,7 +18,7 @@ The **Cloud** page in Control Center shows you an overview of the paid and free 
 
 The **Paid Environments** tab presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) and whether the [Fallback](/developerportal/deploy/mendix-cloud-deploy/#fallback) option is included as part of a Premium plan.   
 
-{{< figure src="/attachments/control-center/cloud/cloud.jpg" class="no-border" >}}
+{{< figure src="/attachments/control-center/apps/cloud/cloud.jpg" class="no-border" >}}
 
 When you select one or more environments via the checkboxes on the **Paid Environments**, a context menu appears at the bottom of the screen with the option for exporting environment details to an *.xlsx* file.
 

@@ -69,11 +69,25 @@ The **App Explorer** shows an icon in front of items (such as documents, folders
 In the **App Explorer**, there is only room for one icon for each item. If an item is both modified and moved, it is shown as modified with a yellow icon.
 {{% /alert %}}
 
-For example, say that the microflow **ChangePassword** has been modified. Also a new folder called **Flows** was added and all microflows, including the modified microflow, were moved into this folder. The new folder gets a green icon, and the module containing those changes is depicted with a yellow icon. The microflows which were moved but had not been modified get a blue icon. The modified microflow **ChangePassword** gets a yellow icon. This helps you to quickly see where in the app the changes are.
+For example, the microflow **ChangePassword** has been modified. Also a new folder called **Flows** was added and all microflows, including the modified microflow, were moved into this folder. The new folder gets a green icon, and the module containing those changes is depicted with a yellow icon. The microflows which were moved but had not been modified get a blue icon. The modified microflow **ChangePassword** gets a yellow icon. This helps you to quickly see where in the app the changes are.
 
 In the **Changes** pane, you can find more detailed information. There is an entry for each change to an item. If a document is both modified and moved, there are two lines for that document. The pane also shows items that were deleted, something the app explorer cannot do. For more information, see [Changes Pane](/refguide/changes-pane/).
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/changes-pane.png" max-width=80% >}}
+
+If you also changed Java source code, added widgets, or made other changes that affect files other than the app file, you will see entry for each changed file. You can right-click the entry and click **Open containing folder** to open the folder with the file on disk. For files with the **Modified** status, you can use **Compare with original** that opens an external tool to show the differences.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/changes-pane-file-changes.png" >}}
+
+{{% alert color="info" %}}
+An external file comparison tool can be set in **Preferences** > **Version control** > **General** > **File comparison** > **Executable**. 
+
+A tool you can consider using is TortoiseGitMerge, shipped as part of [TortoiseGit](https://tortoisegit.org/download/). It is installed by default on this path: *C:\Program Files\TortoiseGit\bin\TortoiseGitMerge.exe*.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+Comparing files on disk with the original is currently not supported on macOS.
+{{% /alert %}}
 
 {{% alert color="info" %}}
 When you successfully commit your app, this becomes the new original and all the change information is removed from the **App Explorer** and the **Changes** pane.
@@ -117,7 +131,7 @@ Studio Pro also attaches some information automatically:
 
 If you also changed Java source code, added widgets, or made other changes that affect files other than the app file, you will see a **Changes on disk** tab that shows you what disk changes you are about to commit. **Open containing folder** opens the folder with the file on disk. For files with the **Modified** status, you can use **Compare with original** that opens an external tool to show the differences.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/changes-on-disk.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-git-changes-on-disk.png" >}}
 
 {{% alert color="info" %}}
 An external file comparison tool can be set in **Preferences** > **Version control** > **General** > **File comparison** > **Executable**. 

@@ -63,9 +63,9 @@ Unfortunately, Git for Windows is not synchronized with the system proxy setting
 
 You can also use the `--global` modifier to apply the changes system-wise, but this is not recommended if you are using Git for things other than Mendix development.
 
-### Getting an "Oops" Pop-Up Menu
+### Getting an Oops Pop-Up Menu
 
-You may get an "Oops" pop-up menu when setting a name and an email for Git in the **Preferences** dialog box or while committing. This problem might occur if there is no global Git config file on the PC yet. To fix this issue, you can use the Git command line client and do the following:
+You may get an **Oops** pop-up menu when setting a name and an email for Git in the **Preferences** dialog box or while committing. This problem might occur if there is no global Git config file on the PC yet. To fix this issue, you can use the Git command line client and do the following:
 
 * Specify the user name:
   `git config --global user.name "<Name>"`

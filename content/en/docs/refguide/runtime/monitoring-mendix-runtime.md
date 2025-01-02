@@ -533,3 +533,117 @@ This request can only be executed when the Mendix Runtime status is "running" (s
 ### Return Values
 
 Returns feedback about the Mendix Runtime.
+
+## Logging
+
+A log subscriber renders logs. By changing log subscribers it is possible to configure the log format. 
+For that you need to do three things:
+
+1. Get the name of your current log subscriber
+2. Delete your current log subscriber
+3. Create new log subscriber
+
+### Request to Get the Name of Your Current Log Subscriber
+
+```json
+{"action": "get_log_settings", "params": {"sort": "subscriber"}}
+```
+
+ [//]: # (<!-- markdownlint-disable no-duplicate-heading -->)
+
+### Example Response
+
+```json
+{
+  "feedback": {
+    "ConsoleLogSubscriber": {
+      "ConnectionBus_Queries": "INFO",
+      "Configuration": "INFO",
+      "Core": "INFO",
+      "Logging": "INFO",
+      "SchemeManager": "INFO",
+      ...
+    }
+  },
+  "result": 0
+}
+```
+
+If the `feedback` is not empty use the name of your current log subscriber in the next request. In this example the name is `"ConsoleLogSubscriber"`.
+
+### Request to Delete Your Current Log Subscriber
+
+```json
+{"action": "remove_log_subscriber", "params": {"name": "ConsoleLogSubscriber"}}
+```
+
+### Example Response
+
+```json
+{
+  "feedback": {},
+  "result": 0
+}
+```
+
+It is possible to have multiple log subscribers running simultaneously, if several log subscribers were created then each of them will be writing the same log lines. 
+
+### Request to Create New Log Subscriber in Json Format
+
+```json
+{
+  "action": "create_log_subscriber",
+  "params": {
+    "type": "console_json",
+    "name": "JsonLogSubscriber",
+    "autosubscribe": "INFO",
+    "tags": {
+      "ddtags": "env:test",
+      "service": "my-application-name"
+    }
+  }
+}
+```
+
+### Example Response
+
+```json
+{
+  "feedback": {},
+  "result": 0
+}
+```
+
+This will write logs to standard output in Json format. If you need to add extra static fields to tag logs then you can add them into `tags`, in this example `ddtags` and `service` are added.
+This configuration will produce logs similar to these:
+
+```json
+{"node":"TaskQueue","level":"INFO","ddtags":"env:test","service":"my-application-name","message":"Rescheduling running tasks for expired XAS instance '169a16c5-a748-4e21-8efa-3a6057a14d8a'.","timestamp":1734629114040}
+{"node":"Core","level":"INFO","ddtags":"env:test","service":"my-application-name","message":"Mendix Runtime is now shut down.","timestamp":1734629114260}
+```
+
+### Request to Create New Log Subscriber in Simple Text Format
+
+```json
+{
+  "action": "create_log_subscriber",
+  "params": {
+    "type": "console",
+    "name": "SimpleTextLogSubscriber",
+    "autosubscribe": "INFO"
+  }
+}
+```
+
+### Example Response
+
+```json
+{
+  "feedback": {},
+  "result": 0
+}
+```
+
+This will write logs to standard output in simple text format.
+
+[//]: # (<!-- markdownlint-enable no-duplicate-heading -->)

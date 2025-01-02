@@ -42,7 +42,7 @@ The [Blank GenAI App Template](https://marketplace.mendix.com/link/component/227
 
 * The [**GenAI Commons**](https://marketplace.mendix.com/link/component/227933) module: provides pre-built operations and data structures for seamless integration with platform-supported GenAI connectors, such as OpenAI or Amazon Bedrock.
 
-* The [**Conversational UI**](https://marketplace.mendix.com/link/component/227931) module: offers UI elements for chat interfaces and usage data monitoring. You can download it from the Mendix Marketplace.
+* The [**Conversational UI**](https://marketplace.mendix.com/link/component/227931) module: offers UI elements for chat interfaces and usage data monitoring.
 
 ### Choosing the Infrastructure
 

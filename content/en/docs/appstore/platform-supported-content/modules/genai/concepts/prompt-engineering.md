@@ -37,7 +37,7 @@ After telling the model what to do, you can include additional context. This can
 
 * information about the end-user of your application – for example their language, role, department, specific database records
 * context information – for example, all data related to an object the end-user is looking at
-* knowledge coming from [Retrieval Augmented Generation (RAG)](/appstore/modules/genai/using-gen-ai/#rag)
+* knowledge coming from [Retrieval Augmented Generation (RAG)](/appstore/modules/genai/get-started/#rag)
 
 Tip: you can provide information in a JSON or XML structure to ensure the information is presented in a consistent way. From Mendix apps, you can use [Export Mappings](/refguide/export-mappings/) to create JSON structures and [Export XML Documents](/howto/integration/export-xml-documents/) to create XML structures.
 

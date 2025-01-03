@@ -19,7 +19,7 @@ Typical use cases for Conversational UI include the following:
 * Create a chat interface for users to chat with Large Language Models (LLM). 
 * Allow users to switch between different implementations by switching providers. 
 * Include advanced capabilities to control the model's behavior, for example, by setting the temperature parameter.
-* Easily extend the chat interface with advanced concepts, such as RAG or the ReAct pattern. For more information, see [Using Generative AI](/appstore/modules/genai/using-gen-ai/).
+* Easily extend the chat interface with advanced concepts, such as RAG or the ReAct pattern. For more information, see [Get Started with Generative AI](/appstore/modules/genai/get-started/).
 
 ### Features {#features}
 

@@ -5,6 +5,30 @@ weight: 8
 description: "Native Template 8 release notes."
 ---
 
+## 8.2.9 {#829}
+
+**Release date: January 7, 2025**
+
+### Improvements
+
+* We have updated the AppCenter's Xcode version to 15.4.
+
+## 8.0.16 {#816}
+
+**Release date: January 7, 2025**
+
+### Improvements
+
+* We have updated the AppCenter's Xcode version to 15.4.
+
+## 8.2.8 {#828}
+
+**Release date: December 23, 2024**
+
+### Improvements
+
+* We've updated min sdk to 23 on android.
+
 ## 8.2.7 {#827}
 
 **Release date: September 3, 2024**

@@ -5,6 +5,22 @@ weight: 9
 description: "Native Template 7 release notes."
 ---
 
+## 7.0.22 {#722}
+
+**Release date: January 3, 2025**
+
+### Improvements
+
+* We fixed an issue that occurred when selecting the devDebug variant in Android Studio for API levels greater than 34.
+
+## 7.0.20 {#720}
+
+**Release date: December 23, 2024**
+
+### Improvements
+
+* We've updated min sdk to 23 on android.
+
 ## 7.0.19 {#718}
 
 **Release date: October 1, 2024**

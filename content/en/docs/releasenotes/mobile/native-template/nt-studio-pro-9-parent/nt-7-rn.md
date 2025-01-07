@@ -5,11 +5,19 @@ weight: 9
 description: "Native Template 7 release notes."
 ---
 
+## 7.0.23 {#723}
+
+**Release date: January 7, 2025**
+
+### Improvements
+
+* We have updated the AppCenter's Xcode version to 15.4.
+
 ## 7.0.22 {#722}
 
 **Release date: January 3, 2025**
 
-### Improvements
+### Fixes
 
 * We fixed an issue that occurred when selecting the devDebug variant in Android Studio for API levels greater than 34.
 

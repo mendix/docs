@@ -19,6 +19,8 @@ Read below for either [simple setup](#simple-setup) instructions, or a more [adv
 
 {{% alert color="info" %}}
 In the following sections, the term "context entity" refers to the entity of the context object in which the file uploader widget is placed. This can be either a data view or a page parameter.
+
+Please make sure, when using a new context object, it is commited before the upload, else it can cause unique constrain violations when uploading mulitple files.
 {{% /alert %}}
 
 ### Simple Setup {#simple-setup}

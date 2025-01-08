@@ -14,6 +14,8 @@ Use this dialog box to upload an app that is not yet stored in a version control
 
 {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/upload-to-version-control-dialog/upload-to-version-control-server.png" alt="Upload to Version Control Server menu option" class="no-border" width="250" >}}
 
+{{% alert color="info" %}} Test data created locally during development will be uploaded as a [snapshot](/howto/data-models/sharing-the-development-database/#committing-the-data-snapshot){{% /alert %}}
+
 ## Location
 
 Use this setting to select the location where you want to store your app. There are three options, which are described below.

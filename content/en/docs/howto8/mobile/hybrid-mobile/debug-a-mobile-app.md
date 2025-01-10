@@ -5,7 +5,7 @@ weight: 40
 description: "How to set up a mobile app to run from your local machine and debug using Mendix's tools"
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix has great tools for debugging web applications, including the offline and online debugger, but many people do not know that these tools can also be used to debug and test mobile applications.
 
@@ -22,18 +22,18 @@ This how-to teaches you how to do the following:
 * Build and run a hybrid Mendix mobile app that connects to your local development machine
 * Debug the mobile app using Mendix debugging tools, Chrome DevTools and the Safari Web Inspector
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Ensure that you have a network utilities tool on your mobile device (I use [PingTools](https://play.google.com/store/apps/details?id=ua.com.streamsoft.pingtools) on Android, and [NetworkPing Lite](https://itunes.apple.com/us/app/network-ping-lite/id289967115?mt=8) on iOS) in order to ensure connectivity between your device and your computer
 * Acquire a paid Apple Developer Membership—see [Apple Membership](https://developer.apple.com/support/membership/) for more details
 
-## 3 Android and macOS {#AndroidMac}
+## Android and macOS {#AndroidMac}
 
 This is perhaps the easiest combination of a mobile target platform and a development environment to configure.
 
-### 3.1 macOS Configuration
+### macOS Configuration
 
 Since Mendix Studio Pro only runs on Windows, you need to make sure that your virtual (Windows) machine can be accessed by the outside world. To do that, the network setting must be shared between the virtual machine and your Mac, and the appropriate ports forwarded. Follow these steps to configure your development environment with Parallels:
 
@@ -74,7 +74,7 @@ Since Mendix Studio Pro only runs on Windows, you need to make sure that your vi
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/debug-a-mobile-app/win-2.png" alt="win-2" class="no-border" >}}
 
-### 3.2 PhoneGap Configuration
+### PhoneGap Configuration
 
 You can use PhoneGap Build to build the native mobile application and tell it to initialize based on this new URL, rather than the default. Follow these steps to download a package, update it, and upload it to PhoneGap Build:
 
@@ -118,7 +118,7 @@ You can use PhoneGap Build to build the native mobile application and tell it to
 
 1. When your app has finished building in the cloud, download it and run it to connect to your Mendix app running on your local machine.
 
-### 3.3 Android Configuration
+### Android Configuration
 
 1. Enable the developer options on your Android device. See [Configure On-Device Developer Options](https://developer.android.com/studio/debug/dev-options) for more information.
 2. Connect your device to your development machine and when the popup window appears on your mobile device to allow USB debugging, choose **Allow**:
@@ -139,9 +139,9 @@ You can use PhoneGap Build to build the native mobile application and tell it to
 
 You can now take advantage of all the debugging tools you know and love with Mendix, including offline breakpoints, quick updates/refreshes, and the Chrome Developer Tools.
 
-## 4 iOS and macOS {#iosAndMac}
+## iOS and macOS {#iosAndMac}
 
-### 4.1 Apple Developer Configuration
+### Apple Developer Configuration
 
 In order to build (and debug) a Mendix iOS app, you need to ensure that you have the right setup in your Apple Developer Account. You will need a Developer Provisioning Profile that includes your device ID and a Signing Certificate. If you already have an iOS Development provisioning profile, you can continue with [5.2 PhoneGap Configuration](#PhonegapConfiguration). Follow these steps to set up an iOS provisioning profile:
 
@@ -227,7 +227,7 @@ In order to build (and debug) a Mendix iOS app, you need to ensure that you have
 
 1. Download your Provisioning Profile (you will need this for Phonegap).
 
-### 4.2 Phonegap Configuration {#PhonegapConfiguration}
+### Phonegap Configuration {#PhonegapConfiguration}
 
 You can use PhoneGap Build to build the native mobile application and tell it to initialize based on this new URL, rather than the default. Follow these steps to change the PhoneGap Build
 
@@ -291,7 +291,7 @@ You can use PhoneGap Build to build the native mobile application and tell it to
 
 15. When your app finishes building in the cloud, scan the QR code to download the app and run it on your iOS device.
 
-### 4.3 iOS Configuration
+### iOS Configuration
 
 1. Go to **Settings > Safari** on your iOS device:
 
@@ -325,9 +325,9 @@ You can use PhoneGap Build to build the native mobile application and tell it to
 
 10. This will bring up the **Safari Web Inspector** for your device.
 
-## 5 Android + Windows {#AndroidAndWindows}
+## Android + Windows {#AndroidAndWindows}
 
-### 5.1 Windows Configuration
+### Windows Configuration
 
 Follow these steps to test your computer's connection to your device:
 
@@ -339,7 +339,7 @@ Follow these steps to test your computer's connection to your device:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/debug-a-mobile-app/win-2-1162756.png" alt="win-2" class="no-border" >}}
 
-### 5.2 PhoneGap Configuration
+### PhoneGap Configuration
 
 You can use PhoneGap Build to build the native mobile application and tell it to intialize based on this new URL, rather than the default. Follow these steps to create a new configuration:
 
@@ -383,7 +383,7 @@ You can use PhoneGap Build to build the native mobile application and tell it to
 
 10. When your app finished building in the cloud, download the app and run it to connect to your Mendix app running on your local machine!
 
-### 5.3 Android Configuration
+### Android Configuration
 
 1. Enable the developer options on your Android device. See [Configure On-Device Developer Options](https://developer.android.com/studio/debug/dev-options) for more information.
 2. Connect your device to your development machine and when the popup appears on your mobile device to allow USB debugging, choose **Allow**:
@@ -406,7 +406,7 @@ You can now take advantage of all the debugging tools you know and love with Men
 
 For more help with Android remote debugging, check out [Get Started with Remote Debugging Android Devices](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/).
 
-## 6 Read More
+## Read More
 
 * [Debug Microflows](/howto8/monitoring-troubleshooting/debug-microflows/)
 * [Debug Java Actions](/howto8/monitoring-troubleshooting/debug-java-actions/)

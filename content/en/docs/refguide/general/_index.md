@@ -7,8 +7,8 @@ no_list: false
 description_list: true
 ---
 
-## 1 Introduction
+## Introduction
 
 As you start using Studio Pro 10, reference [Studio Pro Overview](/refguide/studio-pro-overview/) to understand the IDE's user interface and shortcut options.
 
-## 2 Documents in This Category
+## Documents in This Category

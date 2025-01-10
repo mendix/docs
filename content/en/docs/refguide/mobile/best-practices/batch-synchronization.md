@@ -5,7 +5,7 @@ weight: 30
 description: "This pattern lets you spread long synchronizations to multiple actions and present a progress to your users."
 ---
 
-## 1 Introduction
+## Introduction
 
 This pattern lets you spread long synchronizations to multiple actions and present a progress to your users.
 
@@ -13,20 +13,20 @@ This pattern was developed by our MVP Marcel Groeneweg. You can watch him explai
 
 {{% vidyard dUhLAZukL7AU3JY43eUQ4Q %}}
 
-## 2 Challenge
+## Challenge
 
 When synchronizing objects in an offline-first application, no feedback is given to the user about the duration of the synchronization. This can be frustrating for users if the synchronization takes a long time.
 
-## 3 Solution
+## Solution
 
 Batch synchronization lets you group large synchronization actions into smaller actions. These smaller actions can be tracked in the client to show progress when synchronizing all data. This increases the user's sense of understanding and control while using your app.
 
-## 4 Implementation
+## Implementation
 
 To implement this best practice, do the following:
 
 1. Implement [incremental synchronization](/refguide/mobile/best-practices/incremental-synchronization/) for the target entity.
-1. Add a non-persistent entity to store the progress of your synchronization (for example, *SyncProgress* with an attribute **Progress** of type `Integer`).
+1. Add a non-persistable entity to store the progress of your synchronization (for example, *SyncProgress* with an attribute **Progress** of type `Integer`).
 1. Change the microflow that retrieves and synchronizes the changed objects to accept an offset:
     1. Add a parameter **Offset** of type `Integer`.
     1. Set the offset of the retrieve to the parameter and the amount to a fixed value (for example, `100`).
@@ -53,7 +53,7 @@ To implement this best practice, do the following:
 1. Add a data view around the button that triggers the synchronization and set its data source to the nanoflow **DS_SyncProgress**.
 1. Add a widget to show the value of **SyncProgress/Progress** into the data view, such as a [progress bar](/appstore/widgets/progress-bar/).
 
-## 5 Recommendations
+## Recommendations
 
 To improve your apps further, consult the following recommendations:
 
@@ -61,7 +61,6 @@ To improve your apps further, consult the following recommendations:
 * Batch size should be between 100 and 10,000 objects. Larger batches tend to synchronize faster, but smaller batches give more responsive feedback to users.
 * If the data changes during the batch synchronization, then the offset might run out of sync resulting in incomplete synchronizations. Use this pattern only for data that changes infrequently when users are not using the app. If overlap cannot be avoided, add a locking mechanism that prevents synchronization while the data is changing.
 
-## 6 Read More
+## Read More
 
-* To increase the clarity, organization, and documentation of your apps, see [Mendix Best Practices for Development
-](/refguide/dev-best-practices/)
+* To increase the clarity, organization, and documentation of your apps, see [Mendix Best Practices for Development](/refguide/dev-best-practices/)

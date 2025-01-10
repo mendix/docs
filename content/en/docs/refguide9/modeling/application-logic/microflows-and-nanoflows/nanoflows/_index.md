@@ -6,7 +6,7 @@ description: "Presents an overview of all the elements that can be used in a nan
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Nanoflows are similar to [microflows](/refguide9/microflows/), in that they allow you to express the logic of your application. However, they do have some specific benefits (for example, they run directly on the browser/device and can be used in an offline app). Furthermore, most of the actions run directly on the device, so there is also a speed benefit for logic which does not need access to the server.
 
@@ -14,13 +14,13 @@ This page is an overview of all the elements that can be used in a nanoflow. For
 
 For information on using nanoflows as data sources, see [Nanoflow Source](/refguide9/nanoflow-source/).
 
-## 2 When to Use Nanoflows
+## When to Use Nanoflows
 
-### 2.1 Offline Mobile Apps
+### Offline Mobile Apps
 
 Nanoflows are designed with offline-first applications in mind, as they allow you to model application logic that works in offline apps. Since all database-related actions will be executed on the local offline database, nanoflows in offline apps will be fast.
 
-### 2.2 Logic Where No Connection Is Needed
+### Logic Where No Connection Is Needed
 
 Nanoflows also offer great value to online applications (for example, for UI logic, validations, calculations, and navigation). However, please keep in mind that, when you perform database-related actions, each action will create a separate network request to the Mendix Runtime.
 
@@ -37,11 +37,11 @@ Therefore, the best practice is to use nanoflows in online applications when the
 Changing objects without committing is not a database-related action, as changes are applied on the device or in the browser.
 {{% /alert %}}
 
-#### 2.2.1 Other Cases
+#### Other Cases
 
 Although nanoflows perform best in online applications when no database-related actions are used, and these are generally the best cases, nanoflows that contain at most one database-related action can also still perform well. Because such nanoflows only require one network call, they perform as well as a microflow. An example of such a use case is performing validation logic on an object and committing the object in the same nanoflow.
 
-## 3 Differences from Microflows
+## Differences from Microflows
 
 There are five main differences between nanoflows and microflows:
 
@@ -52,7 +52,7 @@ There are five main differences between nanoflows and microflows:
 5. Because nanoflows use JavaScript libraries and microflows use Java libraries, there can sometimes be slight differences in the way expressions are executed.
 6. Changes done to the lists in a sub-nanoflow are not reflected in the original nanoflow.
 
-## 4 Notation and Categories
+## Notation and Categories
 
 The graphical notation of nanoflows is based on the [Business Process Model and Notation](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation) (BPMN). BPMN is a standardized graphical notation for drawing business processes in a workflow.
 
@@ -66,7 +66,7 @@ A nanoflow is composed of elements. The following categories are used:
 * [Parameter](#parameter) is data that serves as input for the nanoflow.
 * [Annotation](#annotation) is an element that can be used to put comments in a nanoflow.
 
-### 4.1 Events {#events}
+### Events {#events}
 
 Events represent the start and endpoints of a nanoflow and special operations in a loop.
 
@@ -77,7 +77,7 @@ Events represent the start and endpoints of a nanoflow and special operations in
 | {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/continue-event.png" alt="continue event" link="/refguide9/continue-event/" class="no-border" >}} | [Continue event](/refguide9/continue-event/) | Used to stop the current iteration of a loop and continue with the next iteration. Continue events can only be used inside a [loop](/refguide9/loop/). |
 | {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/break-event.png" alt="break event" link="/refguide9/break-event/" class="no-border" >}} | [Break Event](/refguide9/break-event/) | Used to stop iterating over the list of objects and to continue with the rest of the flow after the loop. Break events can only be used inside a [loop](/refguide9/loop/). |
 
-### 4.2 Flows {#flows}
+### Flows {#flows}
 
 Flows form the connection between elements.
 
@@ -86,7 +86,7 @@ Flows form the connection between elements.
 | {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/sequence-flow.png" link="/refguide9/sequence-flow/" class="no-border" >}} | [Sequence flow](/refguide9/sequence-flow/) | An arrow that links events, activities, decisions, and merges with each other. Together they define the order of execution within a nanoflow. |
 | {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/annotation-flow.png" link="/refguide9/annotation/#annotation-flow" class="no-border" >}} | [Annotation flow](/refguide9/annotation/#annotation-flow) | A connection that can be used to connect an annotation to another element. |
 
-### 4.3 Decisions {#decisions}
+### Decisions {#decisions}
 
 Decisions deal with making choices and merging different paths.
 
@@ -95,13 +95,13 @@ Decisions deal with making choices and merging different paths.
 | {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/decision.png" alt="decision" link="/refguide9/decision/" class="no-border" >}} | [Decision](/refguide9/decision/) | Makes a decision based on a condition and follows one and only one of the outgoing flows. **Note**: there is no parallel execution in nanoflows. |
 | {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/merge.png" alt="merge" link="/refguide9/merge/" class="no-border" >}} | [Merge](/refguide9/merge/) | Can be used to combine multiple sequence flows into one. If a choice is made in a nanoflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
 
-### 4.4 Activities{#activities}
+### Activities{#activities}
 
 [Activities](/refguide9/activities/) are the actions that are executed in a nanoflow:
 
 {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/activity.png" alt="Activity" class="no-border" >}}
 
-### 4.5 Loop {#loop}
+### Loop {#loop}
 
 A [loop](/refguide9/loop/) is used to iterate over a list of objects:
 
@@ -109,7 +109,7 @@ A [loop](/refguide9/loop/) is used to iterate over a list of objects:
 
 For every object the flow inside the loop is executed. A loop activity can contain all elements used in nanoflow, with the exception of start and end events. 
 
-### 4.6 Parameter {#parameter}
+### Parameter {#parameter}
 
 A [parameter](/refguide9/parameter/) is data that serves as input for the nanoflow. 
 
@@ -117,13 +117,13 @@ A [parameter](/refguide9/parameter/) is data that serves as input for the nanofl
 
 Parameters are filled at the location from where the nanoflow is triggered.
 
-### 4.7 Annotation {#annotation}
+### Annotation {#annotation}
 
 An [annotation](/refguide9/annotation/) is an element that can be used to put comments in a nanoflow:
 
 {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/annotation.png" alt="Annotation" class="no-border" >}}
 
-### 4.8 Item Usages
+### Item Usages
 
 Studio Pro visualizes which items are used by the selected element(s). It does this by showing the used items in white text on a blue background. Conversely, elements that use the item(s) returned by the selected element(s) are marked with the word 'Usage' in white text on a green background.
 
@@ -131,7 +131,7 @@ In the example below, the parameter **AccountPasswordData** is highlighted becau
 
 {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/microflow-nanoflow-example.png" class="no-border" >}}
 
-## 5 Keyboard Support
+## Keyboard Support
 
 The nanoflow editor offers keyboard support for navigating and manipulating the nanoflows. The following table shows the keys that can be used.
 
@@ -148,11 +148,11 @@ The nanoflow editor offers keyboard support for navigating and manipulating the 
 | <kbd>End</kbd> | Cycles through the end events. |
 | Context-menu key or <kbd>Shift</kbd> + <kbd>F10</kbd> | Opens the context menu for the currently selected element. |
 
-## 6 Security {#security}
+## Security {#security}
 
 Nanoflows are executed in the context of the current user. Any operation for which the user is unauthorized will fail. For instance, when objects are retrieved in a nanoflow, only the ones for which the current user has read access will be returned. Committing an object only succeeds when the current user has write access for all changes.
 
-## 7 Converting a Nanoflow to a Microflow {#convert-to-microflow}
+## Converting a Nanoflow to a Microflow {#convert-to-microflow}
 
 {{% alert color="info" %}}
 This feature was introduced in Studio Pro [9.24.0](/releasenotes/studio-pro/9.24/#9240) and the alternative option was added in Studio Pro 9.24.1.

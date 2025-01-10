@@ -4,7 +4,7 @@ url: /refguide8/project-explorer/
 weight: 40
 ---
 
-## 1 Introduction
+## Introduction
 
 The **Project Explorer** shows the complete structure of your project including all documents inside the modules:
 
@@ -13,11 +13,11 @@ The **Project Explorer** shows the complete structure of your project including 
 The **Project Explorer** consists of the following:
 
 * **Project** folder – contains settings and documents that apply to your project as a whole (for more information, see [Projects](/refguide8/project/))
-* **Modules**  – contain settings, a domain model, and *documents* that apply to this module (for more information, see [Modules](/refguide8/modules/)) 
+* **Modules** – contain settings, a domain model, and *documents* that apply to this module (for more information, see [Modules](/refguide8/modules/)) 
     * **Domain model** – a model that describes the information (or *data*) used by your application in an abstract way; one module can have one domain model only 
     * **Document** – an individual file, for example, a [page](/refguide8/pages/), [microflow](/refguide8/microflows/), or a [scheduled event](/refguide8/scheduled-events/). 
 
-## 2 Performing Basic Functions
+## Performing Basic Functions
 
 In the **Project Explorer**, you can do the following:
 
@@ -32,7 +32,7 @@ In the **Project Explorer**, you can do the following:
 * **Expand or collapse an individual folder** – to expand/collapse documents in an individual folder click the plus/minus icon or double-click the folder 
 * **Perform actions specific to the selected folder** – right-click the selected folder to see what functions you can perform. The list of functions depends on the folder, for example, when right-clicking the **System** module, you can only find usages of this module, while when right-clicking **MyFirstModule** you can add a page, add a microflow, rename the module, export the module package, copy/paste documents, and much more.
 
-## 3 Read More
+## Read More
 
 * [Projects](/refguide8/project/)
 * [Modules](/refguide8/modules/)

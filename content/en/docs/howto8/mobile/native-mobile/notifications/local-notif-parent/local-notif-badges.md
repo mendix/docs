@@ -5,7 +5,7 @@ weight: 20
 description: A tutorial for setting up badges for local push notifications.
 ---
 
-## 1 Introduction
+## Introduction
 
 Badges are crucial for many apps on iOS and Android. Badges differ in appearance based on platform, and often indicate important information in applications. For example with messaging applications, it is good practice to employ badges which alert users to new messages.
 
@@ -13,7 +13,7 @@ You will need to build badge functionality into your app so that when a user get
 
 In this document you will learn to add badge functionality to your app, as well as how to remove a badge.
 
-## 2 Prerequisites 
+## Prerequisites 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -21,7 +21,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install the [Make It Native](/refguide8/getting-the-make-it-native-app/) app on your mobile device
 * Complete the preceding tutorial in this [Use Local Notifications](/howto8/mobile/local-notif-parent/) series
 
-## 3 Setting a Badge Number
+## Setting a Badge Number
 
 Since you know how to send a simple local notification, you can now set the badge number by following these steps:
 
@@ -52,7 +52,7 @@ Start and load the app on your mobile device and tap the button which calls your
 
 {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-badges/badge-mobile.png" alt="badge number on mobile"   width="300"  class="no-border" >}}
 
-## 4 Reducing a Badge Number
+## Reducing a Badge Number
 
 To make your badge disappear after your user opens your app, follow the instructions below.
 
@@ -104,7 +104,7 @@ You can now test your badge clearing.
 
 Congratulations! You successfully implemented basic badge clearing. Next, in [How to Use Local Notifications Part 3: Actions](/howto8/mobile/local-notif-action/), you will learn how to configure a notification so that when a user taps a notification, they are brought to a page.
 
-## 5 Read More
+## Read More
 
 * [Implement Push Notifications](/howto8/mobile/implementation-guide/)
 * [Build JavaScript Actions](/howto8/extensibility/build-javascript-actions/)

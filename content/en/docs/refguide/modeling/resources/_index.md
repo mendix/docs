@@ -6,13 +6,13 @@ description: "Introduces the helping documents (resources) that can be used in S
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-## 1 Introduction
+## Introduction
 
 Resources are helping documents in a module that cannot function on their own but can be used in other documents. For example, a microflow or a page can function on its own, but a Java action can only function in a microflow.  
 
 Resources can be reused in different modules of your app. 
 
-## 2 Adding Resources
+## Adding Resources
 
 To add a resource document, do the following:
 
@@ -22,7 +22,7 @@ To add a resource document, do the following:
 
 2. In the **Resources** category, select the document you would like to add to your app.
 
-## 3 Resources Overview
+## Resources Overview
 
 The **Resources** category contain various document types that can be used in different editors of Studio Pro:
 
@@ -38,7 +38,7 @@ The **Resources** category contain various document types that can be used in di
 | [Scheduled event](/refguide/scheduled-events/) | Microflows                     | Scheduled events let the runtime execute a microflow at a specific moment in time. |
 | [Document template](/refguide/document-templates/) | Microflows                             | Document template is used to format the document in a client and to download or print it. |
 
-## 4 Read More
+## Read More
 
 * [Microflows](/refguide/microflows/)
 * [Domain Model](/refguide/domain-model/)

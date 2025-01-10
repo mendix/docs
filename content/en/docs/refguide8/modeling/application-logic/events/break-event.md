@@ -4,7 +4,7 @@ url: /refguide8/break-event/
 weight: 5
 ---
 
-## 1 Introduction
+## Introduction
 
 {{% alert color="warning" %}}
 Break events can only be used inside [loops](/refguide8/loop/).
@@ -16,7 +16,7 @@ For example, if you want to notify the user of any unpaid order lines you can us
 
 {{< figure src="/attachments/refguide8/modeling/application-logic/events/break-event/break-event-example.png" alt="Break Event Example" class="no-border" >}}
 
-## 2 Read More
+## Read More
 
 * [Loop](/refguide8/loop/)
 * [Continue Event](/refguide8/continue-event/)

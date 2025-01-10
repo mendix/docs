@@ -42,7 +42,7 @@ Please use a Native Template version [compatible](/releasenotes/mobile/nt-studio
 
 ### Improvements
 
-iOS 15 requires you to recompile your apps with XCode 13. This release bumps the configuration of App Center to use XCode 13.
+iOS 15 requires you to recompile your apps with Xcode 13. This release bumps the configuration of App Center to use Xcode 13.
 
 ## 5.1.16
 
@@ -76,7 +76,7 @@ iOS 15 requires you to recompile your apps with XCode 13. This release bumps the
 
 ### Improvements
 
-* When installing pods (`pod install`) the Native Template is now able to derive the XCode version on the system and correctly apply the XCode 12.5 compatibility patch.
+* When installing pods (`pod install`) the Native Template is now able to derive the Xcode version on the system and correctly apply the Xcode 12.5 compatibility patch.
 
 ### Fixes
 

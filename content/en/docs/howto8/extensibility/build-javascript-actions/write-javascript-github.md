@@ -6,7 +6,7 @@ weight: 20
 description: "This advanced how-to teaches you how to make a JavaScript action which can search for GitHub users."
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix has made nanoflows even more powerful with pluggable nanoflow actions — called JavaScript actions — in Mendix 8. [How to Build JavaScript Actions: Part 1 (Basic)](/howto8/extensibility/write-javascript-actions/) shows you how to create a JavaScript TextToSpeech action, expose it as a nanoflow action, and then use it in a demo. In this advanced how-to you will learn to call a REST service, use a generic return type, and make an API to enhance the power of your JavaScript actions.
 
@@ -21,14 +21,14 @@ This how-to teaches you how to do the following:
 * Expose an action as a nanoflow action
 * Use your actions in a demo
 
-## 2 Prerequisites
+## Prerequisites
 
 In [Creating a "Search GitHub User" JavaScript Action](#create-a-search) below, you will make an API which allows you to search for GitHub users. Before continuing, you can do the following to practice your API skills: 
 
 * Learn how the GitHub API works using the [GitHub developer documentation](https://developer.github.com/v3/search/#search-users)
 * Use test tooling to see how the GitHub API in action — an HTTP GET request of the URL `https://api.github.com/search/users?q=test` will result in a JSON response which you should study
 
-## 3 Downloading the Project Package
+## Downloading the Project Package
 
 This how-to comes paired with an app package prepared for you by Mendix. To download and import the package, follow the steps below:
 
@@ -39,7 +39,7 @@ This how-to comes paired with an app package prepared for you by Mendix. To down
 
     {{< figure src="/attachments/howto8/extensibility/build-javascript-actions/write-javascript-github/import-package.png" alt="import package" class="no-border" >}}
 
-## 4 Creating a “Search GitHub User” JavaScript Action {#create-a-search}
+## Creating a “Search GitHub User” JavaScript Action {#create-a-search}
 
 To create a JavaScript action that can search for users on GitHub, follow the steps below:
 
@@ -312,7 +312,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 
 Congratulations! Using the power of JavaScript actions, your app can search for any GitHub user.
 
-## 5 Read More
+## Read More
 
 * [Build JavaScript Actions: Part 1 (Basic)](/howto8/extensibility/write-javascript-actions/)
 * [Mendix Client API](/apidocs-mxsdk/apidocs/client-api/)

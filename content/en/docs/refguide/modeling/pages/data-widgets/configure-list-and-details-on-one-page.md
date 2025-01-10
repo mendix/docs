@@ -6,7 +6,7 @@ description: "Describes how to configure a list and view list item details on on
 weight: 60
 ---
 
-## 1 Introduction 
+## Introduction 
 
 This how-to explains how you can configure a list of items and view the item details selected in this list on one page. 
 
@@ -22,7 +22,7 @@ Sales Representatives in your company want to view a list of opportunity contact
 
 {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/configured-page.png" width="650px" class="no-border" >}}
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -31,7 +31,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/domain-model.png" width="200px" class="no-border" >}}
 
-## 3 Adding the Primary Detail Page
+## Adding the Primary Detail Page
 
 You would like to open a page with opportunity contact list and its details from your home page. Do the following:
 
@@ -39,14 +39,14 @@ You would like to open a page with opportunity contact list and its details from
 2. Navigate to **Toolbox** > **Widgets**.
 3. Search for **Open page button** and drag it onto the page.
 4. In the **Select web page** dialog box, click **New** to create a page.
-5. In the **Create Page** dialog box,  type *OpportunityContact* as the **Page name**.
+5. In the **Create Page** dialog box, type *OpportunityContact* as the **Page name**.
 6. Navigate to **Lists**, select **List MasterDetail** as the page template, and click **OK**.
 
 You just created a new page. A list (list view) is displayed on the left and list item details (data view) are displayed on the right:
 
 {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/primary-detail-page.png" width="650px" class="no-border" >}} 
 
-## 4 Configuring the List
+## Configuring the List
 
 Now you need to configure the page you just created. 
 
@@ -62,7 +62,7 @@ First of all, you need to configure the list view so that it displays the opport
 
     {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/list-configured.png" width="300px" class="no-border" >}} 
 
-## 5 Configuring List Item Details
+## Configuring List Item Details
 
 Now you need to configure opportunity contact details displayed next to the list. The idea is when you select the name from the list, the details of the selected contact are displayed. 
 
@@ -99,7 +99,7 @@ Congratulations! Now you have a page that displays a list of opportunity contact
 
 You can now preview your app and test your page.
 
-## 6 Read More
+## Read More
 
 * [Page](/refguide/page/)
 * [Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)

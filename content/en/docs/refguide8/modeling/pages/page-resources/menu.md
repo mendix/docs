@@ -9,7 +9,7 @@ aliases:
 #The anchor <menu-item> below is mapped, so it should not be removed or changed.
 ---
 
-## 1 Introduction
+## Introduction
 
 A menu document defines a navigation menu that can be used by a [menu widget](/refguide8/menu-widgets/). Typically the main menus for your application are defined in device types, while you use menu documents for auxiliary menus, for example, a side bar.
 
@@ -19,11 +19,11 @@ A menu consists of a list of menu items, which optionally contain sub-items. Dep
 If [security](/refguide8/project-security/) is enabled, the menu will only show items that the user has access to.
 {{% /alert %}}
 
-## 2 Menu Item {#menu-item}
+## Menu Item {#menu-item}
 
-Menus are composed of menu items. Menu items can contain a number sub-items. Menu bars can go two levels deep, the navigation tree – three levels, and the simple menu bar cannot have any sub-items.
+Menus are composed of menu items. Menu items can contain a number of sub-items. Menu bars can go two levels deep, the navigation tree – three levels, and the simple menu bar cannot have any sub-items.
 
-### 2.1 Menu Item Properties 
+### Menu Item Properties 
 
 A menu item or a sub-item has the following general properties:
 
@@ -34,7 +34,7 @@ A menu item or a sub-item has the following general properties:
 
 {{% alert color="info" %}}To open a page with a data view on it from a menu item, set a microflow that first retrieves an object for the data view and then opens the page as a target.{{% /alert %}}
 
-## 3 Read More
+## Read More
 
 * [Pages](/refguide8/pages/)
 * [Menu Widgets](/refguide8/menu-widgets/)

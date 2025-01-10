@@ -5,7 +5,7 @@ weight: 30
 description: "Widgets which can be added to pages to view and edit attributes of objects."
 ---
 
-## 1 Introduction
+## Introduction
 
 Input elements show data to the end-user and, optionally, allow them to edit the data.
 
@@ -45,7 +45,7 @@ There are several different input elements, these are used for different [data t
 
     {{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector.png" alt="Reference selector showing company name attribute of associated company" class="no-border" >}}
 
-* [Reference Set Selector](/refguide/reference-set-selector/) –  lists with one or more attributes and, optionally, allows the end-user to add and remove associated objects linked via a *many-to-many* association:
+* [Reference Set Selector](/refguide/reference-set-selector/) – lists with one or more attributes and, optionally, allows the end-user to add and remove associated objects linked via a *many-to-many* association:
 
     {{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-set-selector.png" alt="Reference set selector showing details of associated products" class="no-border" >}}
 
@@ -59,11 +59,11 @@ For more information on data types, see [Data Types](/refguide/data-types/).
 For more information on associations and their properties, see [Associations](/refguide/associations/).
 {{% /alert %}}
 
-## 2 Performing Basic Functions
+## Performing Basic Functions
 
 {{% snippet file="/static/_includes/refguide/performing-basic-functions-widgets.md" %}}
 
-## 3 Read More
+## Read More
 
 * [Page](/refguide/page/)
 * [Pages](/refguide/pages/)

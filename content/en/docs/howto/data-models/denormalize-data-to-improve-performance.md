@@ -5,7 +5,7 @@ weight: 6
 description: "Describes how to denormalize data and keep denormalized data in sync in Studio Pro."
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to explains how you can improve performance by denormalizing data in Mendix.
 
@@ -14,13 +14,13 @@ This how-to teaches you how to do the following:
 * Denormalize data
 * Keep denormalized data in sync
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * [Configure a domain model](/refguide/configuring-a-domain-model/)
 
-## 3 Denormalization
+## Denormalization
 
 For an example scenario, a domain model contains two related entities called Customer and Order. The customer overview page needs to show the name of the customer and the total order amount next to each other. Showing the customer name is easy, but the total order amount needs to be calculated.
 
@@ -48,7 +48,7 @@ To enable denormalization, follow these steps:
 
 Now the application is ready to store redundant data, but you still need to keep the data in sync.
 
-## 4 Keep Denormalized Data in Sync with an After Commit Event
+## Keep Denormalized Data in Sync with an After Commit Event
 
 1. Open the domain model and double-click the Order entity to open its properties editor.
 2. On the **Event handlers** tab, click **New** to add a new event handler.
@@ -78,37 +78,37 @@ Now the application is ready to store redundant data, but you still need to keep
 
     {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582164.png" class="no-border" >}}
 
-9. Double-click the new activity to open its properties on the **Retrieve Objects** dialog box and do the following:
+9. Double-click the new activity to open its properties on the **Retrieve** dialog box and do the following:
     * Select **By association** as **Source**
     * Click **Select...** to open the **Association** selector
 
-    {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582162.png" class="no-border" >}}
+    {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582162.png">}}
 
 10. On the **Select association** pop-up window, select **Order_Customer** from the **Variables** node in the tree view, and then click **Select**:
 
-    {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582161.png" class="no-border" >}}
+    {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582161.png" >}}
 
-    As you can see below, the **Output** section of the **Retrieve Objects** dialog box is configured automatically:
+    As you can see below, the **Output** section of the **Retrieve** dialog box is configured automatically:
 
-    {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582160.png" class="no-border" >}}
+    {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582160.png" >}}
 
 11. Click **OK** to save the activity. Your microflow should now look like this:
 
     {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582159.png" class="no-border" >}}
 
-12. Insert another retrieve activity (as you did in step #8), double-click it to open its properties on the **Retrieve Objects** dialog box, and do the following:
+12. Insert another retrieve activity (as you did in step #8), double-click it to open its properties on the **Retrieve** dialog box, and do the following:
     * Select **From Database** as **Source**
     * Click **Select...** to open the entity selector
 
-    {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582157.png" class="no-border" >}}
+    {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582157.png" >}}
 
 13. On the **Select entity** pop-up window, select **Order** via from the **Variables** node in the tree view, and then click **Select**:
 
     {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582158.png" class="no-border" >}}
 
-    As you can see below, the **XPath constraint** and **Output** sections of the **Retrieve Objects** dialog box are configured automatically:
+    As you can see below, the **XPath constraint** and **Output** sections of the **Retrieve** dialog box are configured automatically:
 
-    {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582156.png" class="no-border" >}}
+    {{< figure src="/attachments/howto/data-models/denormalize-data-to-improve-performance/18582156.png" >}}
 
 14. Click **OK** to save the activity. Your microflow should now look like this:
 
@@ -141,7 +141,7 @@ Now the application is ready to store redundant data, but you still need to keep
 
 20. Run the application and create some customers and orders. You should now see an up-to-date value for the TotalOrderAmount.
 
-## 5 Read More
+## Read More
 
 * [Configuring a Domain Model](/refguide/configuring-a-domain-model/)
 * [Setting Up Data Validation](/refguide/setting-up-data-validation/)

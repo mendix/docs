@@ -2,11 +2,14 @@
 {{- with .Site.Params.search.algolia -}}
 <!-- stylesheet for algolia docsearch -->
 {{- end -}}
-<!-- MvM: Always set page as self-canonical unless another canonical (.Params.canonicalUrl) is set -->
+<!-- MvM: Always set page as self-canonical unless another canonical (.Params.canonical_url) is set -->
 {{- with .Params.canonical_url -}}
     <link rel="canonical" href="{{ . }}">
 {{- else -}}
     <link rel="canonical" href="{{ .Permalink }}">
 {{- end -}}
   <!-- MvM: Add Javascript for Japanese translation -->
-  <script src="https://d.shutto-translation.com/trans.js?id=1806"></script>
+  <!-- MvM: Only if page has a title --> 
+{{- with .Params.title -}}
+    <script src="https://d.shutto-translation.com/trans.js?id=1806"></script>
+{{- end -}}

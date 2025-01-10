@@ -8,7 +8,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 A user role aggregates a number of access rights on data, forms, and microflows. An end-user of the application is assigned one or more user roles by an administrator, and gets all access rights that these user roles represent.
 
@@ -22,7 +22,13 @@ To access user roles, open **App Security** > **User roles** tab:
 
 {{< figure src="/attachments/refguide/modeling/security/app-security/user-roles/user-roles-example.png" class="no-border" >}}
 
-## 2 User Role Properties
+{{% alert color="warning" %}}
+The effects of changes to user roles are not immediate. This means that your app might show outdated pages or incorrect data. For more information, please refer documentation about [persistent sessions](/refguide/clustered-mendix-runtime/#sessions-are-always-persistent).
+
+Mendix recommends that you do NOT use this feature to create a dynamic UI as these changes will not take effect immediately. 
+{{% /alert %}}
+
+## User Role Properties
 
 Double-click the user role to open its properties. 
 
@@ -33,7 +39,7 @@ The user role has the following properties:
 
 {{< figure src="/attachments/refguide/modeling/security/app-security/user-roles/user-role-properties.png" class="no-border" >}}
 
-### 2.1 General Properties {#general}
+### General Properties {#general}
 
 General properties of user roles are described in the table below:
 
@@ -44,7 +50,7 @@ General properties of user roles are described in the table below:
 | Module roles   | A list of module roles of which the access rights are accumulated in the user role. An end-user that is assigned a user role gets all access rights of the module roles of that user role. |
 | Check security | This specifies whether the consistency of security settings is checked for this user role. You can choose to not check security for a user role. For example, user roles that are used only for web service users do not need to be checked because they never sign in to the client. For more information on the security check, see [App Security](/refguide/app-security/). |
 
-### 2.2 User Management Properties {#user-management}
+### User Management Properties {#user-management}
 
 A user role can be allowed to manage users with a number of other user roles (including itself), called manageable roles. This means that end-users who have this user role, can create, view, edit and delete users with at most the manageable user roles.
 
@@ -55,9 +61,9 @@ A user role can be allowed to manage users with a number of other user roles (in
 
 Internally, user management properties are translated into entity access rules for **System.User**. This means that they are not applied in microflows that do not check entity access.
 
-## 3 Read More
+## Read More
 
-* [App Security](/refguide/app-security/)
+* [App Security](/refguide/app-security/)   
 * [Administrator](/refguide/administrator/)
 * [Demo Users](/refguide/demo-users/)
 * [Anonymous Users](/refguide/anonymous-users/)

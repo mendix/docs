@@ -1,0 +1,42 @@
+// Styling for badges (enabled in the frontmatter)
+// Badge styling mimics the PDS guidelines: https://designsystem.mendix.com/doc/p/Components/Badge/5b0de933-d909-4269-b957-276f16f71341
+// For guidance on how to use these, see https://mendix.atlassian.net/wiki/spaces/RNDHB/pages/2757787839/Front+Matter+Metadata#For-Badges
+
+.badge-pill {
+    border-radius: 4px;
+    padding: 4px 4px 3px 4px;
+    margin-left: 2px;
+}
+
+.badge-draft {
+    background-color: $warning-9;
+  }
+
+.badge-beta {
+    color: $gray-900;
+    background-color: $gray-500;
+}
+
+.badge-lts {
+    background-color: $success-9;
+}
+
+.badge-mts {
+    background-color: $info-8;
+}
+
+.badge-deprecated {
+    background-color: $gray-100;
+    border: solid 1px $gray-500;
+    color: $gray-900;
+}
+
+.badge-recommended {
+    border: solid 1px $success-9;
+    color: $success-9;
+}
+
+.badge-react {
+    background-color: $info-1;
+    color: $info-7;
+}

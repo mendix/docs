@@ -1,5 +1,6 @@
 ---
-title: "Integration"
+title: "Integration How-Tos"
+linktitle: "Integration"
 url: /howto/integration/
 weight: 70
 description: "Presents a list of how-tos about integrating Mendix applications with other systems and services."
@@ -8,10 +9,10 @@ description_list: true
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Do you want to connect your app to the internet? Learn how to do this by following these how-tos.
 
 We want to create a large network of Mendix apps, so let's start integrating!
 
-## 2 Documents in This Category
+## Documents in This Category

@@ -7,7 +7,7 @@ The ROUND function rounds a given numeric expression.
 
 The syntax is as following:
 
-```sql {linenos=false}
+```sql
 ROUND ( numeric_expression , length )
 ```
 

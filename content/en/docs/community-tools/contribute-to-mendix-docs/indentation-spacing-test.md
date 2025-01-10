@@ -23,11 +23,11 @@ Paragraph text here.
 
 Another paragraph here.
 
-## 1 Indents and Spacing 123456 12345678
+## Indents and Spacing 123456 12345678
 
 See [Section Spacing Tests](#spacing) for multiple examples of spacing. 
 
-### 1.1 Indents with Four Spaces
+### Indents with Four Spaces
 
 Paragraph text here.
 
@@ -59,7 +59,7 @@ Without this text, the lower list was treated as part of the upper numbered list
 Two line breaks between the numbered lists were not enough to make them separate lists.
 {{% / alert %}}
 
-### 1.2 Indents with Four Spaces and Trailing Space (or Spaces)
+### Indents with Four Spaces and Trailing Space (or Spaces)
 
 Paragraph text here.
 
@@ -77,7 +77,7 @@ Paragraph text here.
 3. And another item.  
     Indenting with **4** spaces and **1** or **2** trailing spaces **works**.
 
-### 1.3 Indents with Tabs and a Line Break – DO NOT USE TABS
+### Indents with Tabs and a Line Break – DO NOT USE TABS
 
 Paragraph text here.
 
@@ -100,7 +100,7 @@ Paragraph text here.
 DO NOT USE TABS
 {{% / alert %}}
 
-### 1.4 Indents with Tabs and Trailing Spaces – DO NOT USE TABS
+### Indents with Tabs and Trailing Spaces – DO NOT USE TABS
 
 Paragraph text here.
 
@@ -121,7 +121,7 @@ Paragraph text here.
 DO NOT USE TABS
 {{% / alert %}}
 
-### 1.5 Spacing Between List Items and Code Block
+### Spacing Between List Items and Code Block
 
 1. First list item
 2. Second list item
@@ -130,7 +130,7 @@ DO NOT USE TABS
 Code blocks do NOT need a line break to work. Not part of list indent.
 ```
 
-### 1.6 Indent Between List Items and Code Block
+### Indent Between List Items and Code Block
 
 1. First list item
 2. Second list item
@@ -146,7 +146,7 @@ Code blocks do NOT need a line break to work. Not part of list indent.
 Do not add a double-space between the number (or bullet point) and first letter of first word in a list item. This can break code block formatting.
 {{% / alert %}}
 
-### 1.7 Indent Between List Items and Code Block (Highlight Shortcode) – DO NOT USE HIGHLIGHT
+### Indent Between List Items and Code Block (Highlight Shortcode) – DO NOT USE HIGHLIGHT
 
 1. First list item
 2. Second list item
@@ -156,7 +156,7 @@ Do not add a double-space between the number (or bullet point) and first letter 
     Using Hugo version 0.91.2 produces an extra blank line in the code block. 0.93.1 removes the blank line.
     {{< / highlight >}}
 
-### 1.8 Spacing Between List Items and Images
+### Spacing Between List Items and Images
 
 1. First list item
 2. Second list item
@@ -165,7 +165,7 @@ Do not add a double-space between the number (or bullet point) and first letter 
     * Indenting with **4 spaces** and a line break works, keeping the image in line with list item 2. The line break causes the parent element, list item 2 to be wrapped in `<p>`, making a gap between 1 and 2.
 3. Third item
 
-### 1.9 Spacing Between List Items and Images, No Line Breaks
+### Spacing Between List Items and Images, No Line Breaks
 
 1. First list item
 2. Second list item
@@ -173,14 +173,14 @@ Do not add a double-space between the number (or bullet point) and first letter 
     * Image indentation works with **4 spaces**.
     * Images don't need a line break to work.
 
-### 1.10 Spacing Between List Items and Images, No Line Breaks, with Trailing Spaces
+### Spacing Between List Items and Images, No Line Breaks, with Trailing Spaces
 
 1. First list item
 2. Second list item  
     {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/set-hybrid-nav.png" class="no-border" >}}
     * Adding trailing spaces (`<br>`) doesn't change example.
 
-### 1.11 Indent for Alerts in Lists
+### Indent for Alerts in Lists
 
 1. First list item
 2. Second list item 
@@ -205,12 +205,12 @@ Lists in alerts:
         ```
 {{% / alert %}}
 
-## 2 Use of Markdown Extras
-### 2.1 Block Quotes
+## Use of Markdown Extras
+### Block Quotes
 
 >A block of text
 
-### 2.2 TODOs and Comments
+### TODOs and Comments
 
 Two ways to add comments:
 
@@ -230,7 +230,7 @@ Two ways to add comments:
     {{%/* todo */%}}[ToDo comment text, only visible in development]{{%/* /todo */%}}
     ```
 
-### 2.3 Details
+### Details
 
 If you need an element that starts collapsed and can be expanded by clicking, it will look like the following:
 
@@ -246,7 +246,7 @@ hidden stuff
 </details>
 ```
 
-### 2.4 Footnotes
+### Footnotes
 
 If you need a footnote use `<sup>footnote_number</sup>` to mark the footnote and `<small><sup>footnote_number</sup>My footnote text</small>` around the actual text.
 
@@ -254,12 +254,12 @@ Example<sup>1</sup>
 
 <small><sup>1</sup>My footnote text</small>
 
-### 2.5 Key Combination Styling
+### Key Combination Styling
 
 Key Combination
 <kbd>{key name}</kbd>
 
-### 2.6 Indent Tables
+### Indent Tables
 
 1. some bullet point 
     | Element | Displays | 
@@ -274,13 +274,13 @@ A table with list items:
 | --- | --- |
 | <ol><li>numbered item</li><li>numbered item</li><li>numbered item</li></ol> | <ul><li>bullet point</li><li>bullet point</li><li>bullet point</li></ul> |
 
-### 2.7 Anchors in Tables
+### Anchors in Tables
 
 | Table Heading 1 | Table Heading 2 <a id="myanchor" href="#myanchor">My anchor here!</a> |
 | --- | --- |
 | table cell 1 | table cell 2 <a id="myanchor2" href="#myanchor2">My anchor 2 here!</a>  |
 
-## 3 Section Spacing Tests<br />==================={#spacing}
+## Section Spacing Tests<br />==================={#spacing}
 
 ## Level 2 Section – Paragraph after
 

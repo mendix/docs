@@ -5,6 +5,6 @@ weight: 3
 no_list: false
 ---
 
-## 1 Introduction
+## Introduction
 
-## 2 Documents in This Category
+## Documents in This Category

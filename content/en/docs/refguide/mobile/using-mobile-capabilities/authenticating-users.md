@@ -5,11 +5,11 @@ weight: 9
 description: "This guide explains how to authenticate users in a mobile app."
 ---
 
-## 1 Introduction
+## Introduction
 
 Native mobile apps often need to authenticate users just like web applications. However, there are some differences between native and web when it comes to authenticating users in Mendix. In this guide, you will learn how to authenticate users in native mobile apps and what to look out for.
 
-## 2 Setting Up User Authentication
+## Setting Up User Authentication
 
 To enable user authentication in a native mobile app, you first need to enable [App Security](/refguide/app-security/) by setting the security level to **Prototype** or **Production**.
 
@@ -17,7 +17,7 @@ In a web-based app, you can rely on the provided `login.html` file to handle sho
 
 You can skip the first step if you are using the [Blank Native App](https://marketplace.mendix.com/link/component/109511) starter template, as the sign-in page has already been created.
 
-### 2.1 Model the Sign-In Page
+### Model the Sign-In Page
 
 To model your native sign-in page, do the following:
 
@@ -28,7 +28,7 @@ To model your native sign-in page, do the following:
     The page already contains a sign-in form but is missing a data source to store the sign-in information. 
 
 1. Before you will model the data source, make sure to change the new page's layout to **NativePhone_TopBarOnly** to remove the bottom navigation.
-1. To model the data source that will store the sign-in form data, start by creating a non-persistent entity in the [Domain model](/refguide/domain-model/) called *Login*. 
+1. To model the data source that will store the sign-in form data, start by creating a non-persistable entity in the [Domain model](/refguide/domain-model/) called *Login*. 
 1. Add three attributes of type String: **Username**, **Password**, and **ValidationMessage**:
 
     {{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/login-entity.png" alt="Login entity" class="no-border" >}}
@@ -63,13 +63,13 @@ Do not fill the contents of the form automatically. Instead connect the Email Ad
 
     {{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/login-nanoflow.png" alt="Finished sign-in nanoflow" class="no-border" >}}
 
-### 2.2 Enable Anonymous Users
+### Enable Anonymous Users
 
 The **Anonymous users** role allows users use your application without needing to authenticate first. This is needed to let users access the sign-in page before they can use it to authenticate.
 
 Anonymous users are enabled in **App Security**. For more information, see [Anonymous Users](/refguide/anonymous-users/).
 
-### 2.3 Set Up Role-Based Homepages
+### Set Up Role-Based Homepages
 
 Your final step is to set the sign-in page as the home page for anonymous users. This will ensure that if a user is not signed, then they will see the sign-in page instead of your application's other pages.
 
@@ -83,7 +83,7 @@ Role-based homepages are set up in **App Navigation**:
 
 For more information on role-based homepages, see [Setting a Role-Based Homepage](/refguide/setting-up-the-navigation-structure/#role-based-home-page).
 
-## 3 Read More
+## Read More
 
 * [App Security](/refguide/app-security/)
 * [Anonymous Users](/refguide/anonymous-users/)

@@ -9,13 +9,13 @@ weight: 70
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 With the **Log message** activity you can create messages that appear in the log of your Mendix application:
 
 {{< figure src="/attachments/refguide8/modeling/application-logic/activities/log-message/log-message.png" alt="Log Message" class="no-border" >}}
 
-## 2 Properties
+## Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
@@ -26,7 +26,7 @@ The **Log message** properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section {#action}
+## Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -34,7 +34,7 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.3 Log Level
+### Log Level
 
 The log level defines the severity of the log message. In the [Studio Pro Console pane](/refguide8/view-menu/#console), messages have a different color and an icon for some log levels.
 
@@ -47,7 +47,7 @@ The log level defines the severity of the log message. In the [Studio Pro Consol
 | Error | {{< figure src="/attachments/refguide8/modeling/application-logic/activities/log-message/error.png" alt="Error" width="15%" class="no-border" >}} | Used to log error messages. These messages appear in red. |
 | Critical | {{< figure src="/attachments/refguide8/modeling/application-logic/activities/log-message/critical-error.png" alt="Critical Error" width="15%" class="no-border" >}} | Used to log critical errors. These messages appear in white on red. |
 
-### 3.2 Log Node Name {#log-node-name}
+### Log Node Name {#log-node-name}
 
 {{% alert color="warning" %}}
 This property is only available in microflows.
@@ -61,11 +61,11 @@ It is advised to use a [constant](/refguide8/constants/) for the log node name. 
 You can only set custom [log node levels](/developerportal/deploy/environments-details/#log-levels) for the environment if your app has posted a message to that log node. It is therefore recommended that you send an initial message to all your custom log nodes in an [after startup microflow](/refguide8/project-settings/#after-startup).
 {{% /alert %}}
 
-### 3.3 Template
+### Template
 
 A **Template** defines the message text. The template can contain parameters that are written as a number between braces, for example, `{1}`. The first parameter has number `1`, the second `2`, and so on.
 
-### 3.4 Parameters
+### Parameters
 
 For each parameter in the template you define a microflow expression of which the value will be inserted at the position of the parameter. Parameters need to be entered using [expressions](/refguide8/expressions/) resulting in a string.
 
@@ -75,7 +75,7 @@ With parameters you can customize your message with data specific to the situati
 
 {{% /alert %}}
 
-### 3.5 Include Latest Stack Trace
+### Include Latest Stack Trace
 
 Defines whether to include the stack trace of the latest error in this log message. In Studio Pro, log messages that include a stack trace are marked with a paperclip icon ({{% icon name="paperclip" %}}).
 
@@ -83,6 +83,6 @@ Double-clicking these log messages shows the stack trace.
 
 This option also applies to `$latestSoapFault`. If you define an error handler for a web service call, and it catches a soap fault error, checking this box will add the stack trace to the logline in Studio Pro.
 
-## 4 Common Section {#common}
+## Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide8/microflow-common-section-link.md" %}}

@@ -122,7 +122,7 @@ To target Android 13 (API level 33 or higher), you can update the `compileSdkVer
 
 ### Improvements
 
-* iOS 15 requires you to recompile your apps with XCode 13. This release bumps the configuration of App Center to use XCode 13.
+* iOS 15 requires you to recompile your apps with Xcode 13. This release bumps the configuration of App Center to use Xcode 13.
 
 ## 5.2.3
 

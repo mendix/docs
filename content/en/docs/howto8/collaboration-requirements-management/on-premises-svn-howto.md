@@ -5,7 +5,7 @@ url: /howto8/collaboration-requirements-management/on-premises-svn-howto/
 weight: 60
 ---
 
-## 1 Introduction
+## Introduction
 
 When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/general/team-server/) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see [Version Control](/refguide8/version-control/).
 
@@ -19,7 +19,7 @@ This how-to teaches you how to do the following:
 For version control, Mendix uses the [Subversion](https://subversion.apache.org) system (also known as SVN). This how-to will not describe how to set up an SVN server from scratch; typically, this will be taken care of by the IT department of your organization.
 {{% /alert %}}
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -27,7 +27,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Have access to an SVN server and possess credentials (username and password) that give you access to that SVN server
 * Know the location of the SVN server – usually this is an address similar to an internet URL (for example, `https://svn.example.com:9876/repos/myapp`)
 
-## 3 Repositories
+## Repositories
 
 Subversion uses repositories for storing all the data of your version-controlled app. Each Subversion server can contain many different repositories.
 
@@ -41,7 +41,7 @@ Usually, repositories are created and maintained by the administrator of your SV
 
 In the following sections of this how-to, it is assumed that you have a repository available for your application.
 
-## 4 SVN Versions
+## SVN Versions
 
 Mendix Studio Pro has a (built-in) Subversion client that uses version 1.9 of the SVN working copy format. This client should be compatible with any 1.x version of the SVN server, so you could use, for example, a 1.6.x or 1.9.x SVN server as well.
 
@@ -50,7 +50,7 @@ Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the
 
 This means that, if you use a separate SVN client (for example [TortoiseSVN](https://tortoisesvn.net/)) to work on your Mendix app, you must always use the version which matches your app model. If you open a local model from Mendix 7.x with the latest version of TortoiseSVN, **you will no longer be able to open it in Mendix**.{{% /alert %}}
 
-## 5 Creating a New App to Store in an On-Premises SVN Server
+## Creating a New App to Store in an On-Premises SVN Server
 
 To create a new app to store in your on-premises SVN server, you must create the app from Studio Pro by following these steps:
 
@@ -62,28 +62,28 @@ To create a new app to store in your on-premises SVN server, you must create the
 6. In the **App repository address** field, enter the address of your SVN server. This address must include the name of the repository you are going to use for your app (for example, `https://svn.example.com:9876/repos/myapp`).
 7. Click **OK** to connect to the server.
 
-## 6 Moving an App from Mendix Team Server to an SVN Server
+## Moving an App from Mendix Team Server to an SVN Server
 
-To look at moving an app from Mendix Team Server to a private SVN server, we will use the scenario of creating a new app in the [Developer Portal](/developerportal/), wherein a Team Server project is created automatically.
+To look at moving an app from Mendix Team Server to a private SVN server, we will use the scenario of creating a new app in [Apps](/developerportal/), wherein a Team Server project is created automatically.
 
 {{% alert color="warning" %}}
 For the purpose of creating an app to store in your on-premises SVN server, this is a deprecated workflow.
 {{% /alert %}}
 
-1. Click **Create App** in the [Developer Portal](https://sprintr.home.mendix.com/index.html).
+1. Click **Create App** in [Apps](https://sprintr.home.mendix.com/).
 2. After you have created your app, click the arrow next to **Edit App**, select **Edit in Mendix Studio Pro**, then open the app in the relevant Studio Pro version. You need to open your app in Studio Pro in order to download it to your local machine (for more information, see [Version Control](/refguide8/version-control/)).
 3. Your app contains a link to the location of the Mendix Team Server by default. To replace this with the address of your own SVN server, create a ticket in the [Mendix Support Portal](https://support.mendix.com/) specifying your app and the address of your SVN server. This address must include the name of the repository you are going to use for your app (for example, `https://svn.example.com:9876/repos/myapp`). This will allow Mendix Support to change the URL of your app.
 4. Wait for confirmation from Mendix Support before continuing the process.
 5. With all instances of Studio Pro closed, open the folder in which your app is stored locally.
 6. Delete the **.svn** and **.mendix-cache** folders (note that these folders may be hidden, in which case you will need to enable the option in your file explorer to make them visible). By deleting these folders, references to the Mendix Team Server are removed. Now, your app is ready to be uploaded to your own SVN server.
 7. Double-click the **.mpr** file in the project folder to open the app again in Studio Pro (for example, if your app is called **MyApp**, this file will have the name **MyApp.mpr**). Alternatively, you can start Studio Pro, click **My Apps** > **Open App**, and browse to the abovementioned local **.mpr** file to open your app.
-8. When the app is opened in Studio Pro, go to the  top menu, select **Edit** > **Preferences** > **Advanced**. and make sure the **Enable private version control** box is checked.
+8. When the app is opened in Studio Pro, go to the top menu, select **Edit** > **Preferences** > **Advanced**, and make sure the **Enable private version control** box is checked.
 9. In the top menu, select **Version Control** > **Upload to Version Control Server**.
 10. In the [Upload to Version Control Server](/refguide8/upload-to-version-control-dialog/) dialog box, select **Private server**.
 11. In the **App repository address** field, enter the address of your SVN server. This address must include the name of the repository you are going to use for your app (for example, `https://svn.example.com:9876/repos/myapp`).
 12. Click **OK** to connect to the server.
 
-## 7 Read More
+## Read More
 
 * [Version Control](/refguide8/version-control/)
 * [Team Server](/developerportal/general/team-server/)

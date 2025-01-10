@@ -6,11 +6,11 @@ aliases:
     - /apidocs-mxsdk/mxsdk/setup-your-pat/
 ---
 
-## 1 Introduction
+## Introduction
 
 Before running your first script, you need to set up your personal access token by creating a new token with the required scope and saving it to your computer as an environment variable.
 
-## 2 Creating the Personal Access Token
+## Creating the Personal Access Token
 
 For details on how to create your personal access token (PAT), see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
 
@@ -19,7 +19,7 @@ Make sure you choose at least the following scopes:
 * **Model Repository** – `mx:modelrepository:repo:write`
 * **Sprintr Project API** – `mx:app:create` and `mx:app:delete`
 
-## 3 Saving the Personal Access Token as an Environment Variable
+## Saving the Personal Access Token as an Environment Variable
 
 We do not recommend hard-coding your credentials (meaning, your PAT) into your script. Instead, you can save it as an environment variable with the name of a variable called `MENDIX_TOKEN`, and the Mendix Platform SDK will read it automatically.
 

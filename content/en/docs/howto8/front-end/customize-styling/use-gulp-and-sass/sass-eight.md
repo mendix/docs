@@ -5,7 +5,7 @@ weight: 1
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1  Introduction
+## Introduction
 
 {{% alert color="info" %}}
 Styling in a Mendix app is easy to do once you get the hang of it. For the majority of styling needs, you can use Mendix's styling tool: Calypso. For more information, see [How to Use Calypso](/howto8/front-end/calypso/).
@@ -19,7 +19,7 @@ This how-to teaches you how to do the following:
 * Set up your Sass files
 * Work with Sass
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -38,7 +38,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 5. Install version **1.7.15** of [TortoiseSVN](https://osdn.net/projects/tortoisesvn/storage/Archive/1.7.15/Application/).
 
-## 3 Preparing Your App
+## Preparing Your App
 
 To prepare your app, follow these steps:
 
@@ -88,7 +88,7 @@ To prepare your app, follow these steps:
 
 10. Open your app in Studio Pro, then click **Run Locally** and **View**.
 
-## 4  Setting Up Your Sass Files
+## Setting Up Your Sass Files
 
 Final steps! Read below to open and work with Sass:
 
@@ -109,7 +109,7 @@ Final steps! Read below to open and work with Sass:
 
     {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/welcome.png" class="no-border" >}}
 
-### 4.1  Keeping Your Sass in the Custom Folder
+### Keeping Your Sass in the Custom Folder
 
 It is important to keep in mind that you are only working in the **custom** folder. You will not make any changes in the **lib** folder, but you can use that as a reference. You will only use the contents of the *_variables.scss* file to get the variables you need and copy them in your *_custom-variables.scss* file. The variables can differ from the default font sizes, colors, background colors, heights, and so on. In the *_custom-variables.scss* file, you can also make your own variables, for example `$brand-blue: #48B0F7;`.
 
@@ -119,7 +119,7 @@ When you create a new Sass file, follow this naming guideline: *\_{namefilehere}
 
 {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/name-example.png" class="no-border" >}}
 
-### 4.2 Importing New Sub-Folders and Files
+### Importing New Sub-Folders and Files
 
 Before you can see any changes in your app with your new Sass, you need to import the folders and files first. If you open *custom.scss*, you will see this:
 
@@ -135,7 +135,7 @@ To import all the sub-folders and files you have created, write this:
 
 After you import everything, you are finally ready to Sass!
 
-## 5 Working with Sass
+## Working with Sass
 
 Here is an example of custom Sass:
 
@@ -159,9 +159,9 @@ You can remove **spacing-outer-bottom-medium**, as that is a variable that conta
 The inline styling is used in this example. That is because the inline styling will always overrule your code in VSC.
 {{% /alert %}}
 
-### 5.1 Seeing Your Changes
+### Seeing Your Changes
 
-When you add, remove, or change something in Studio Pro, you need to save your changes and run the app  locally to see your styling changes in the browser.
+When you add, remove, or change something in Studio Pro, you need to save your changes and run the app locally to see your styling changes in the browser.
 
 For example, when you set a color for your title and subtitle, click **Run Locally** then **View**. When browser automatically opens, you will see the following URL:
 
@@ -177,7 +177,7 @@ If you use a Mac laptop, you can open this URL: `http://windows-10:3000`.
 
 You can test this by changing the color of `.pageheader-subtitle` from green to blue in the example above. If you have correctly synced with the browser, you can already see that the subtitle color changes into blue.
 
-## 6 Summary
+## Summary
 
 Practice the routine above a few times and you will master it in no time. In addition, keep the following summary in mind:
 
@@ -198,11 +198,11 @@ Practice the routine above a few times and you will master it in no time. In add
 
 Have fun styling!
 
-## 7 Troubleshooting
+## Troubleshooting
 
 You may encounter certain issues when styling your app using Gulp and Sass. Here are some common problems, and the steps you can take to fix them:
 
-### 7.1 Theme Folder Issues
+### Theme Folder Issues
 
 When using UX-theming in Mendix 8, some issues might occur with an infinite loop or folders not being recognized.
 
@@ -216,15 +216,15 @@ var sourceStyleFolder = 'theme/styles/web';
 var deploymentStyleFolder = 'styles/web';
 ```
 
-### 7.2 Apache Subversion Issues
+### Apache Subversion Issues
 
 Other issues might occur with SVN and possible rewriting of *Gulpfile.js*. To fix these issues, try the following solutions:
 
 * Remove *node_modules*, *package.json*, *package-lock.json* and *Gulpfile.js*, then replace them with a fresh copy downloaded from Mendix's [ux-theming repository](https://github.com/mendix/ux-theming/)
 * Ignore not only *node_modules* but also *Gulpfile.js* — this means you will have to add the *Gulpfile* to the project if you download it again or someone in your team is working on it
-* Make sure you are using the most recent LTS version of [NodeJS](https://nodejs.org/en/)
+* Make sure you are using the most recent LTS version of [Node.js](https://nodejs.org/en/)
 
-## 8 Read More
+## Read More
 
 * [How to Start Styling with Gulp and Sass](/howto8/front-end/style-with-gulp-and-sass/)
 * [How to Use Calypso](/howto8/front-end/calypso/)

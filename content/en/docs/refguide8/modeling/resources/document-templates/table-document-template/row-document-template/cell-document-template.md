@@ -9,12 +9,12 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Cells are part of a table. They can contain other widgets.
 
-## 2 Appearance Properties
+## Appearance Properties
 
-### 2.1 Style
+### Style
 
 For details, see [Style](/refguide8/style/).

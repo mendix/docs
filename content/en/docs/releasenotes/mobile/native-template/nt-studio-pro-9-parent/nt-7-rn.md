@@ -5,7 +5,47 @@ weight: 9
 description: "Native Template 7 release notes."
 ---
 
-## 7.0.13 {#714}
+## 7.0.19 {#718}
+
+**Release date: October 1, 2024**
+
+### Improvements
+
+* We have updated `react-native-permissions` to version 3.6.1.
+
+## 7.0.17 {#717}
+
+**Release date: September 3, 2024**
+
+### Fixes
+
+* We fixed OTA update compatibility issues on iOS 18.
+
+## 7.0.16 {#716}
+
+**Release date: August 29, 2024**
+
+### Fixes
+
+* We resolved a build error related to Flipper on Xcode 15.3.
+
+## 7.0.15 {#715}
+
+**Release date: August 5, 2024**
+
+### Improvements
+
+* Upgraded `buildToolsVersion`, `compileSdkVersion`, and `targetSdkVersion` to 34 for Android.
+
+## 7.0.14 {#714}
+
+**Release date: June 28, 2024**
+
+### Fixes
+
+* <a id="fix-cookie-encryption"></a> We fixed a [known cookie encryption issue](#kis-713) by updating the `@mendix/native` dependency. Users who still have problems after the app is updated to this version should clear their app's cache and load the app again.
+
+## 7.0.13 {#713}
 
 **Release date: June 5, 2024**
 
@@ -13,7 +53,12 @@ description: "Native Template 7 release notes."
 
 * We enhanced encrypted file sync on Android.
 
-## 7.0.12 {#711}
+### Known Issues {#kis-713}
+
+* We addressed a cookie encryption issue which turned out to be incompatible with the existing mechanism. This leads to the following exception when loading the app: `java.security.InvalidAlgorithmParameterException Unsupported IV length: 16 bytes. Only 12 bytes long IV supported`
+    * Fixed in [Native Template 7.0.14](#fix-cookie-encryption). 
+
+## 7.0.12 {#712}
 
 **Release date: May 27, 2024**
 
@@ -21,7 +66,7 @@ description: "Native Template 7 release notes."
 
 * We added support for scheduling [local notifications](/refguide/mobile/using-mobile-capabilities/local-notifications/) on Android 14.
 
-## 7.0.11 {#710}
+## 7.0.11 {#711}
 
 **Release date: May 13, 2024**
 
@@ -29,7 +74,7 @@ description: "Native Template 7 release notes."
 
 * We switched to Xcode 15.1 for cloud builds (App Center) in response to the updated minimum iOS SDK requirements.
 
-## 7.0.10 {#709}
+## 7.0.10 {#710}
 
 **Release date: March 15, 2024**
 
@@ -43,7 +88,7 @@ description: "Native Template 7 release notes."
 
 ### Fixes
 
-* We fixed build errors caused by the recent XCode 15 update.
+* We fixed build errors caused by the recent Xcode 15 update.
 
 ## 7.0.8 {#708}
 

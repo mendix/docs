@@ -7,7 +7,7 @@ aliases:
     - /howto9/mobile/how-to-ota/
     - /howto9/mobile/how-to-ota-appcenter/
 ---
-## 1 Introduction
+## Introduction
 
 Native apps can be updated by building and releasing an updated version to the appropriate app stores. The app-users are then asked to update their app and once they choose so the updated app is installed.
 
@@ -32,7 +32,7 @@ This guide teaches you how to do the following:
 * Build your app 
 * Preserve your model's integrity
 
-## 2 Why You Should Use Mendix's OTA Update Solution
+## Why You Should Use Mendix's OTA Update Solution
 
 Third-party OTA update solutions present the following shortcomings: 
 
@@ -43,7 +43,7 @@ Third-party OTA update solutions present the following shortcomings:
 
 With these shortcomings in mind, we developed a Mendix OTA update mechanism which solves these issues. Your Mendix server is the single source of truth, as OTA updates are served from the same endpoint. In addition, instead of thinking of OTA packages and deployments, we merged both actions into one. Instead of deploying a new application to your server, the native apps can simply be updated the next time they are restarted and the devices are updated. As your Mendix server is the one providing the OTA bundles, no third-party service is required. Finally, by developing an in-house solution we can continuously improve it based on your feedback.
 
-## 3 Prerequisites {#prerequisites}
+## Prerequisites {#prerequisites}
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
@@ -52,9 +52,9 @@ Before starting this guide, make sure you have completed the following prerequis
 * Install your app on a test device or emulator.
 * Read the [Offline-First](/refguide9/offline-first/) guide. Understand this document before issuing OTA updates or releasing new versions.
 
-## 4 When to Use OTA Updates
+## When to Use OTA Updates
 
-### 4.1 Use Cases for OTA Updates {#safeToUpdate}
+### Use Cases for OTA Updates {#safeToUpdate}
 
 OTA updates are useful in the following app development cases:
 
@@ -64,10 +64,11 @@ OTA updates are useful in the following app development cases:
 * Nanoflow changes
 * JavaScript action changes
 * Widgets added or removed
-* A new custom JavaScript-only widget or module added
+* You added a new custom JavaScript-only widget or module 
+* You added a page with no additional logic
 * Non-destructive model changes (for more information, see [Offline-First](/refguide9/offline-first/))
 
-### 4.2 When a Full Release Is Required
+### When a Full Release Is Required
 
 If you have made any changes directly to your iOS or Android app, you will have to fully redeploy your app to the app stores for the changes to take effect. OTA updates do not suffice and a full release is required in the following cases:
 
@@ -76,10 +77,11 @@ If you have made any changes directly to your iOS or Android app, you will have 
 * You fundamentally changed your app's functionality (this is an Apple App Store limitation, and will require a re-release and re-review of your app by Apple—your app might be removed if you do not comply)
 * A new native module has been added (such as the [Native Mobile AR](https://marketplace.mendix.com/link/component/117209) module — for more information see [Modules](/refguide9/modules/))
 * The app has been renamed
+* You added a new microflow or nanoflow
 * The app's launcher icons have been changed
 * The splash screen has been changed
 
-## 5 Enabling and Building an App with Mendix OTA Updates Enabled {#build-with-ota-support}
+## Enabling and Building an App with Mendix OTA Updates Enabled {#build-with-ota-support}
 
 By default OTA updates are disabled for your Native Mobile Profile. To enable them, do the following: 
 
@@ -98,7 +100,7 @@ Next you must build new binaries with this capability toggled on, and then relea
 
 To make the OTA update functionality available to your users, release the new binaries via the appropriate app stores. If you are testing the functionality you can now install the apps on your test devices.
 
-## 6 Deploying an OTA Update
+## Deploying an OTA Update
 
 OTA updates let you correct mistakes in your published apps without issuing a new release. For example, imagine you issued a new release and later found a spelling mistake on your welcome screen:
 

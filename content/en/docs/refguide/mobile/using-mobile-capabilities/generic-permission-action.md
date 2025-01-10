@@ -5,22 +5,22 @@ weight: 85
 description: "This guide teaches you how to use request generic permission actions for native mobile apps."
 ---
 
-## 1 Introduction
+## Introduction
 
 Advanced features in mobile apps often require permission from users. Apps need to respect the user's privacy, so it is common practice for an app to request the user's permission before storing media and data. To get permission, you can build a generic JavaScript action. This generic action will allow your app to ask for specific permissions before accessing a mobile capability, such as the device camera or location.
 
-## 2 Prerequisites
+## Prerequisites
 
 * Complete the [Prerequisites](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Build a Mendix Native App in the Cloud*.
 * Install Mendix Studio Pro to use the Native Mobile App Builder and the latest Nanoflow Commons module.
-* Make sure your [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module is up to date.
-* Make sure you are using [Make It Native 9 app](/releasenotes/mobile/make-it-native-parent/), and it is up-to-date.
+* Confirm your [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module is up to date.
+* Confirm you are using the latest version of the [Make It Native 10 app](/releasenotes/mobile/make-it-native-parent/).
 
-## 3 Using a Generic Permission Action
+## Using a Generic Permission Action
 
 A generic permission action can be used inside nanoflows in an existing app or in a new app. With a nanoflow open, you can find it in the Toolbox under the **Native Mobile** section.
 
-### 3.1 Naming the Permission
+### Naming the Permission
 
 When using the generic permission action you must choose the permission name you need. It should be one of the available permissions in `NanoflowCommons.Enum_Permissions` enumeration.
 
@@ -28,7 +28,7 @@ When using the generic permission action you must choose the permission name you
 Keep in mind that the permission names are different for each platform. For example, if you need to request permission to access reading contacts you will need to call the actions twice: one for iOS permission (`CONTACTS_IOS`) and one for Android permission (`READ_CONTACTS_ANDROID`).
 {{% /alert %}}
 
-### 3.2 Action Return Type Statuses
+### Action Return Type Statuses
 
 This action returns the status of the permission after the action, and it is of type `NanoflowCommons.Enum_PermissionStatus`. The statuses are as follows:
 
@@ -48,7 +48,7 @@ When the permission is blocked, if a user requests it a pop-up window will ask t
 These permissions statuses match the statuses that are received from the action, so you should not override them.
 {{% /alert %}}
 
-### 3.3 Permission Usage Example
+### Permission Usage Example
 
 This an example for requesting contact access permission for Android and iOS devices:
 
@@ -65,11 +65,11 @@ This an example for requesting contact access permission for Android and iOS dev
       
         {{< figure src="/attachments/refguide/mobile/native-mobile/generic-permission-action/ios.png" alt="ios permission"   width="400"  class="no-border" >}}
 
-## 4 Building
+## Building
 
-### 4.1 Development
+### Development
 
-#### 4.1.1 IOS
+#### iOS
 
 The following permissions can be tested using the iOS Make It Native app:
 
@@ -81,7 +81,7 @@ The following permissions can be tested using the iOS Make It Native app:
 
 To test the remaining permissions you can build [native app](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) and [update the native app](#update-ios-native-permissions) with the required permissions.
 
-#### 4.1.2 Android
+#### Android
 
 The following permissions can be tested using the Android Make It Native app:
 
@@ -97,7 +97,7 @@ The following permissions can be tested using the Android Make It Native app:
 
 To test the remaining permissions you can build a [native app](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) and [update the native app](#update-android-native-permissions) with the required permissions.
 
-### 4.2 Deployment
+### Deployment
 
 During deployment you must specify the permissions that your application has used to be able to request them from the user on production. To do that you can navigate to **App permissions** while using Native Builder UI and add the permissions you are using in your application for iOS and Android.
 
@@ -105,39 +105,36 @@ During deployment you must specify the permissions that your application has use
 The permissions that you cannot find using the Native Builder UI can be added manually per the [Update Native App Permissions](#update-native-permissions) section below.
 {{% /alert %}}
 
-## 5 Updating Native App Permissions {#update-native-permissions}
+## Updating Native App Permissions {#update-native-permissions}
 
-### 5.1 iOS {#update-ios-native-permissions}
+### iOS {#update-ios-native-permissions}
 
-Update your *ios/podfile* file with the needed permissions:
+Update your *ios/podfile* file with the required permissions:
 
 ```xml
-target 'YourAwesomeProject' do
-
-  # …
-
-  permissions_path = '../node_modules/react-native-permissions/ios'
-
-  pod 'Permission-AppTrackingTransparency', :path => "#{permissions_path}/AppTrackingTransparency"
-  pod 'Permission-BluetoothPeripheral', :path => "#{permissions_path}/BluetoothPeripheral"
-  pod 'Permission-Calendars', :path => "#{permissions_path}/Calendars"
-  pod 'Permission-Camera', :path => "#{permissions_path}/Camera"
-  pod 'Permission-Contacts', :path => "#{permissions_path}/Contacts"
-  pod 'Permission-FaceID', :path => "#{permissions_path}/FaceID"
-  pod 'Permission-LocationAccuracy', :path => "#{permissions_path}/LocationAccuracy"
-  pod 'Permission-LocationAlways', :path => "#{permissions_path}/LocationAlways"
-  pod 'Permission-LocationWhenInUse', :path => "#{permissions_path}/LocationWhenInUse"
-  pod 'Permission-MediaLibrary', :path => "#{permissions_path}/MediaLibrary"
-  pod 'Permission-Microphone', :path => "#{permissions_path}/Microphone"
-  pod 'Permission-Motion', :path => "#{permissions_path}/Motion"
-  pod 'Permission-Notifications', :path => "#{permissions_path}/Notifications"
-  pod 'Permission-PhotoLibrary', :path => "#{permissions_path}/PhotoLibrary"
-  pod 'Permission-PhotoLibraryAddOnly', :path => "#{permissions_path}/PhotoLibraryAddOnly"
-  pod 'Permission-Reminders', :path => "#{permissions_path}/Reminders"
-  pod 'Permission-Siri', :path => "#{permissions_path}/Siri"
-  pod 'Permission-SpeechRecognition', :path => "#{permissions_path}/SpeechRecognition"
-  pod 'Permission-StoreKit', :path => "#{permissions_path}/StoreKit"
-end
+# ⬇️ uncomment the permissions you need
+setup_permissions([
+  # 'AppTrackingTransparency',
+  # 'Bluetooth',
+  # 'Calendars',
+  # 'CalendarsWriteOnly',
+  # 'Camera',
+  # 'Contacts',
+  # 'FaceID',
+  # 'LocationAccuracy',
+  # 'LocationAlways',
+  # 'LocationWhenInUse',
+  # 'MediaLibrary',
+  # 'Microphone',
+  # 'Motion',
+  # 'Notifications',
+  # 'PhotoLibrary',
+  # 'PhotoLibraryAddOnly',
+  # 'Reminders',
+  # 'Siri',
+  # 'SpeechRecognition',
+  # 'StoreKit',
+])
 ```
 
 To allow a Siri permission you will need to enable Siri capability in your app. This can be done one of two ways:
@@ -157,9 +154,68 @@ To allow a Siri permission you will need to enable Siri capability in your app. 
 	</plist>
     ```
 
-### 5.2 Android {#update-android-native-permissions}
+#### Run Pod Install in your iOS directory
 
-Update the *android/app/src/main/AndroidManifest.xml* file with the needed permissions:
+Run `pod install` in your iOS app's directory to install and update the necessary dependencies, including the permission-related configurations you just added.
+
+#### Add Permissions Usage Descriptions 
+
+Add the corresponding permissions usage descriptions to your *Info.plist*:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <!-- 🚨 Keep only the permissions specified in setup_permissions 🚨 -->
+  <key>NSAppleMusicUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSBluetoothAlwaysUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSBluetoothPeripheralUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSCalendarsFullAccessUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSCalendarsWriteOnlyAccessUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSCameraUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSContactsUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSFaceIDUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSLocationTemporaryUsageDescriptionDictionary</key>
+  <dict>
+    <key>YOUR-PURPOSE-KEY</key>
+    <string>[REASON]</string>
+  </dict>
+  <key>NSLocationWhenInUseUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSMicrophoneUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSMotionUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSPhotoLibraryUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSPhotoLibraryAddUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSRemindersFullAccessUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSSpeechRecognitionUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSSiriUsageDescription</key>
+  <string>[REASON]</string>
+  <key>NSUserTrackingUsageDescription</key>
+  <string>[REASON]</string>
+</dict>
+</plist>
+```
+
+### Android {#update-android-native-permissions}
+
+Update the *android/app/src/main/AndroidManifest.xml* file with the permissions requried by your app's use case. Make sure to keep only the permissions that are actually used in your app:
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -193,6 +249,7 @@ Update the *android/app/src/main/AndroidManifest.xml* file with the needed permi
   <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
   <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
   <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+  <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
   <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
   <uses-permission android:name="android.permission.READ_PHONE_STATE" />
   <uses-permission android:name="android.permission.READ_SMS" />

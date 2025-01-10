@@ -5,7 +5,7 @@ weight: 40
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Button widgets perform an action when clicked. They can be rendered as a button or as a hyperlink. Button widgets can be divided into the following ones:
 
@@ -27,11 +27,11 @@ Button widgets perform an action when clicked. They can be rendered as a button 
 
     Different items can perform different actions. For more information on items and actions that can be assigned to them, see the [Item Section](/refguide8/button-properties/#items) in *Button Properties*.  
 
-## 2 Performing Basic Functions
+## Performing Basic Functions
 
 {{% snippet file="/static/_includes/refguide8/performing-basic-functions-widgets.md" %}}
 
-## 3 Read More
+## Read More
 
 * [Page](/refguide8/page/)
 * [Pages](/refguide8/pages/)

@@ -5,11 +5,11 @@ weight: 30
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 A rule is a special kind of microflow. Its result should be an enumeration or a Boolean and it can be used in a [decision](/refguide/decision/) to make a decision based on that result. The idea is that complicated decisions can be consolidated in rules and reused in various places.
 
-## 2 Differences from Microflows
+## Differences from Microflows
 
 Rules are very similar to microflows; see the documentation on [Microflows](/refguide/microflows/) for more information on how to build a rule. There are only a few differences between rules and microflows:
 
@@ -21,7 +21,11 @@ Rules are very similar to microflows; see the documentation on [Microflows](/ref
 
 These differences mean that rules perform better than microflows if you don't need any of the additional features which microflows provide.
 
-## 3 Read More
+## Keyboard Support
+
+For an overview of the shortcut keys that are supported in the rule editor, see the [Microflow, Nanoflow, and Rule Editor Shortcut Keys](/refguide/keyboard-shortcuts/#logic-editor-keyboard-support) section in *Keyboard Shortcuts*.
+
+## Read More
 
 * [Microflows](/refguide/microflows/)
 * [Decision](/refguide/decision/)

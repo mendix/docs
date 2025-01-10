@@ -6,11 +6,11 @@ description: "Presents the system requirements for using the Mendix Platform."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 This document presents the system requirements for the various parts of the Mendix Platform.
 
-## 2 Mendix Studio Pro {#sp}
+## Mendix Studio Pro {#sp}
 
 Mendix [Studio Pro](/refguide8/modeling/) supports 64-bit versions of Windows 7, 8, and 10. Windows 7 must be at least Service Pack 1. LTS versions starting from Mendix Studio Pro 8.18.14 are enabled and tested to run on Apple Silicon Macs such as the M1, which requires [Parallels 17](https://www.parallels.com/) and Windows 11.
 
@@ -30,7 +30,7 @@ You can choose which JDK is used for building and running locally via the **Edit
 Please note the limitation that the database viewer built into Studio Pro (as described in [How to Share the Development Database](/howto8/collaboration-requirements-management/sharing-the-development-database/)) does not work with JDK 11.06 or 11.07.
 {{% /alert %}}
 
-### 2.1 Firewall Settings
+### Firewall Settings
 
 Studio Pro needs access to the following URLs in order to work. If your firewall is currently blocking these, you will need to safelist them.
 
@@ -38,7 +38,7 @@ Studio Pro needs access to the following URLs in order to work. If your firewall
 * `*.mendixcloud.com`
 * `*.teamserver.sprintr.com`
 
-### 2.2 TortoiseSVN
+### TortoiseSVN
 
 If you want to use TortoiseSVN in combination with Studio Pro, download the latest version from the [TortoiseSVN](https://tortoisesvn.net/) website.
 
@@ -48,11 +48,11 @@ Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the
 Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix 7.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
 {{% /alert %}}
 
-### 2.3 Graphics Card
+### Graphics Card
 
 If you are using the Intel® UHD Graphics 630 graphics processor, please ensure that you are using [driver version 27.20.100.9664](https://www.catalog.update.microsoft.com/Search.aspx?q=Intel(R)+UHD+Graphics+630) or above.
 
-## 3 Team Server {#ts}
+## Team Server {#ts}
 
 The [Team Server](/developerportal/general/team-server/) is implemented using Subversion, and Studio Pro uses the HTTPS protocol to communicate with that server. To access the Team Server from within Studio Pro, the network at your location needs the following settings:
 
@@ -60,35 +60,35 @@ The [Team Server](/developerportal/general/team-server/) is implemented using Su
 * The HTTP port (TCP 80) needs to be open
 * WebDAV (verbs within the HTTP protocol) needs to be enabled on the proxy server (if any)
 
-## 4 Cloud Foundry
+## Cloud Foundry
 
 The [Mendix Cloud Foundry buildpack](https://github.com/mendix/cf-mendix-buildpack) supports Cloud Foundry versions v9 and above. 
 
-## 5 Docker
+## Docker
 
 The [Mendix Docker buildpack](https://github.com/mendix/docker-mendix-buildpack) supports Docker version 18.09.0 and above. 
 
-### 5.1 Kubernetes
+### Kubernetes
 
 The Mendix Docker buildpack supports the following Kubernetes versions: 
 
 * Kubernetes version v1.12 and above
 * Redhat Openshift v3.11 and v4.2 and above
 
-## 6 Server
+## Server
 
-### 6.1 Operating System
+### Operating System
 
 * Microsoft Windows Server 2008 SP2 and above
 * [Debian OldOldStable (LTS)](https://wiki.debian.org/DebianOldOldStable), [Debian OldStable, Debian Stable](https://wiki.debian.org/DebianReleases#Current_Releases.2FRepositories)
 
-### 6.2 Web Server
+### Web Server
 
 * Microsoft Internet Information Services 7 and above
 * Nginx
 * Apache
 
-### 6.3 Java
+### Java
 
 When running Mendix on a server, you will need Java Runtime Environment (JRE) 11 or (for Mendix versions 8.18.29 and above) 17. To download an OpenJDK distribution from Adoptium, see [Adoptium Installation](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
@@ -96,7 +96,7 @@ When running Mendix on a server, you will need Java Runtime Environment (JRE) 11
 There is an issue since Java 7 that causes timeouts when using web services with a certain amount of data. You can circumvent this issue by adding the VM params `-Djava.net.preferIPv4Stack=true`. Mendix Studio Pro will do this for you, but if you are running Mendix on premises on a Windows server, you will need to do this yourself. For more information about this issue, see [Possible Bug in Java 7](https://community.oracle.com/tech/developers/discussion/comment/9987709).
 {{% /alert %}}
 
-## 7 Databases {#databases}
+## Databases {#databases}
 
 Mendix tries to support the most recent and patched database server versions from database vendors. We aim to add support for a new vendor version two minor Mendix versions after the vendor has released it. Dropping support for a database will be announced in the release notes at the date the vendor drops support. We will drop support two minor Mendix versions later.
 
@@ -115,9 +115,9 @@ Current support:
 Each app should have its own database. Mendix apps cannot share data by sharing the same database. 
 {{% /alert %}}
 
-## 8 File Storage
+## File Storage
 
-### 8.1 Storage Services for Containers
+### Storage Services for Containers
 
 For container-based deployments using Docker, Kubernetes, or Cloud Foundry, the following storage services are supported:
 
@@ -129,7 +129,7 @@ For container-based deployments using Docker, Kubernetes, or Cloud Foundry, the 
 
 For container-mounted storage in Kubernetes, provided by an external storage class, see also [Use Docker with Minikube](/developerportal/deploy/run-mendix-on-kubernetes/).
 
-### 8.2 Storage types for Servers
+### Storage types for Servers
 
 For server-based installations, the following storage types mounted by the OS are supported:
 
@@ -138,7 +138,7 @@ For server-based installations, the following storage types mounted by the OS ar
 * GFS
 * Local Storage 
 
-## 9 Browsers {#browsers}
+## Browsers {#browsers}
 
 * Google Chrome (latest stable desktop and Android versions)
 * Mozilla Firefox (latest stable desktop version)
@@ -146,11 +146,11 @@ For server-based installations, the following storage types mounted by the OS ar
 * Microsoft Edge (latest stable desktop version)
 * Microsoft Internet Explorer 11
 
-## 10 Hybrid Preview
+## Hybrid Preview
 
 Using a hybrid preview is not the same as using an emulator. A hybrid preview only shows a resized view of an app to give an impression of what that app might look like on a mobile device. Some hybrid app functionality will not be supported in this browser view. Full tests always need to be done on a device or emulator. Offline apps can only be previewed in Google Chrome.
 
-## 11 Mobile Operating Systems {#mobileos}
+## Mobile Operating Systems {#mobileos}
 
 For native and hybrid apps built with Mendix (and the [Mendix Developer App](/refguide8/getting-the-mendix-app/)) the following operating system versions are supported:
 
@@ -168,14 +168,14 @@ Mendix recommends the following minimum hardware requirements for all mobile dev
 
 Depending on your app's complexity, these minimum hardware requirements might not be sufficient and should be adjusted.
 
-## 12 MxBuild {#mxbuild}
+## MxBuild {#mxbuild}
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](/refguide8/mxbuild/).
 
 * Mono v5.20.x or .NET v4.7.2
 * JDK 11 or 17
 
-## 13 mx Command-Line Tool {#mxtool}
+## mx Command-Line Tool {#mxtool}
 
 The **mx** command-line tool is a Windows and Linux command-line tool that can be used to do useful things with your Mendix app. For more information, see [mx Command-Line Tool](/refguide8/mx-command-line-tool/).
 

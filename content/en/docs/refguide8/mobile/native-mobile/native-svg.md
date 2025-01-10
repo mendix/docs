@@ -5,11 +5,11 @@ weight: 80
 description: "Learn how to integrate SVGs into your native mobile apps."
 ---
 
-## 1 Introduction
+## Introduction
 
 When building a native mobile application, you may want to use vector images for icons or other illustrations. For this purpose, you can use Scalable Vector Graphics (SVGs). This reference guide will provide guidance for working with SVGs in native mobile apps.
 
-## 2 Optimizing SVGs {#optimizing}
+## Optimizing SVGs {#optimizing}
 
 When exporting an SVG from an editor, you will often produce an SVG with several unnecessary elements. These elements increase file size, decrease performance, and can cause unwanted side effects. Therefore it is recommended that you run your SVG through an SVG-optimization tool. 
 
@@ -17,7 +17,7 @@ To optimize your SVGs, you can either run them through an online tool such as [S
 
 {{% alert color="info" %}}Some users have experienced an issue where SVGs are not visible in the Make It Native testing app. When deploying changed SVG images, it may be necessary to clean the deployment folder first. In Studio Pro, click on **App** > **Clean Deployment Directory**. When recompiling, any new images will now become visible in the Make It Native app.{{% /alert %}}
 
-## 3 Unsupported Elements
+## Unsupported Elements
 
 SVGs can contain several kinds of elements. However, not all of them are supported in native mobile apps. Unsupported elements will have no effect and should be removed. The following SVG elements are *not* supported for native mobile apps:
 
@@ -30,7 +30,7 @@ SVGs can contain several kinds of elements. However, not all of them are support
 
 Mendix suggests manually removing these elements from your SVGs, or using the tools mentioned in [Optimizing SVGs](#optimizing) above to ensure their compatibility. 
 
-## 4 Styling SVGs
+## Styling SVGs
 
 You might want to change certain colors in your SVG, for example when adding an image. Mendix allows you to do this by setting the `fill` and `stroke` properties in image's styling. These properties will then be applied to *all* the elements inside the SVG that do not have these properties.
 
@@ -54,7 +54,7 @@ Here is how an SVG with the `fill` property looks:
 
 You can check the list of allowed style properties at the [react-native-svg](https://github.com/react-native-community/react-native-svg#common-props) repository.
 
-### 4.1 Coloring SVG Icons
+### Coloring SVG Icons
 
 Icons can only be set for buttons and bottom bar items. When you integrate an SVG icon into a button or bottom bar item, you will have to set the SVG's color yourself. When using an app which employs Atlas UI, by default the colors are all white. For more information on styling, see the [Native Mobile Styling Reference Guide](/refguide8/native-styling-refguide/).
 
@@ -78,7 +78,7 @@ Would produce the following button and SVG:
 
 {{< figure src="/attachments/refguide8/mobile/native-mobile/native-svg/blue-svg.png" alt="blue svg" class="no-border" >}}
 
-## 5 Using SVGs in Pluggable Native Widgets
+## Using SVGs in Pluggable Native Widgets
 
 To use an SVG in a pluggable native widget's image property, Mendix recommends using the provided `Image` or `Icon` component. This will allow a static image of any supported format to be used within your pluggable widget, including SVGs.
 
@@ -113,7 +113,7 @@ export const PluggableWidget = () => (
 
 If you want to use SVG elements directly in your pluggable widget, see the [react-native-svg](https://github.com/react-native-community/react-native-svg) library.
 
-## 6 Read More
+## Read More
 
 * [Build a Pluggable Native Widget](/howto8/extensibility/build-native-widget/)
 * [Atlas UI](/howto8/front-end/atlas-ui/)

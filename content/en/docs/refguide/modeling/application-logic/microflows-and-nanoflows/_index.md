@@ -5,7 +5,7 @@ weight: 10
 description: "Presents an overview of microflows and nanoflows."
 ---
 
-## 1 Introduction
+## Introduction
 
 Microflows and nanoflows allow you to express the logic of your application. They can perform actions such as creating and updating objects, showing pages, and making choices. It is a visual way of expressing what traditionally ends up in textual program code.
 
@@ -23,7 +23,7 @@ Explore the documentation for details on microflow and nanoflow definitions, pro
 * [Common Properties](/refguide/microflow-element-common-properties/)
 * [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)
 
-## 2 Differences between Microflows and Nanoflows {#differences}
+## Differences between Microflows and Nanoflows {#differences}
 
 Microflows run in the runtime server and can therefore not be used in offline apps, while nanoflows run directly on the client side (that is, on the browser/device), and can be used in an offline app. Furthermore, most of the actions in nanoflows run directly on the device, so there is also a speed benefit for logic which does not need access to the server. 
 
@@ -34,16 +34,17 @@ Below presents a list of main differences between microflows and nanoflows:
 * Because nanoflows use JavaScript libraries and microflows use Java libraries, there can sometimes be slight differences in the way [expressions](/refguide/expressions/) are executed.
 * When used in nanoflow activities, expressions do not support the following objects and variables: `$latestSoapFault`, `$latestHttpResponse`, `$currentSession`, `$currentUser`, `$currentDeviceType`.
 * Nanoflows are not run inside a transaction. So, if an error occurs in a nanoflow, it will not roll back any previous changes.
-* Changes done to the lists in a sub-nanoflow are not reflected in the original nanoflow.
+* <a id="list-changes-in-sub-nanoflows"></a>Changes done to the lists in a sub-nanoflow are not reflected in the original nanoflow.
+* In nanoflows, when retrieving an `empty` attribute of an object, an empty string (`''`) is returned.
 
-## 3 Classic and Modern Logic Editors {#new-editor}
+## Classic and Modern Logic Editors {#new-editor}
 
 In Studio Pro 10.6 and above, use the new and modernized microflow, nanoflow, and rule editors. The new editors focus on making your daily logic modeling experience faster, smoother and easier to learn. 
 
 The new editors contain several huge improvements, with some major improvements in:
 
-* [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/)
-* [Keyboard navigation](/refguide/microflows/#keyboard-improved) 
+* [Logic Recommender](/refguide/logic-recommender/)
+* [Keyboard navigation](/refguide/keyboard-shortcuts/#keyboard-improved) 
 * [Canvas interaction](/refguide/microflows/#canvas-interaction)
 
 In Studio Pro 10.5 and below, the default logic editors are the **Classic** logic editors. In Studio Pro 10.4 and 10.5, there is the toggle at the top right corner of the editor allowing you to try the beta versions of the new modern editor for the current document.

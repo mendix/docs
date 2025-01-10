@@ -7,7 +7,7 @@ The WHERE clause specifies how the data being retrieved must be constrained.
 
 The syntax is as following:
 
-```sql {linenos=false}
+```sql
 WHERE <constraint>
 ```
 

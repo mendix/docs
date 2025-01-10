@@ -4,7 +4,7 @@ url: /howto8/data-models/create-a-basic-data-layer/
 weight: 1
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to explains how you can create a basic data layer for your application with Mendix. Each application can have multiple modules, and each module has its own domain model. All the domain models together define the data layer of the application. 
 
@@ -17,14 +17,14 @@ This how-to teaches you how to do the following:
 * Create associations
 * Delete association behavior
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Download and install [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/)
 * Create a new app or have an existing app available
 
-## 3 Creating Entities and Attributes
+## Creating Entities and Attributes
 
 To create entities and their attributes, follow these steps:
 
@@ -61,7 +61,7 @@ To create entities and their attributes, follow these steps:
 
     {{< figure src="/attachments/howto8/data-models/create-a-basic-data-layer/18582184.png" class="no-border" >}}
 
-## 4 Adding Enumerations
+## Adding Enumerations
 
 An enumeration is a predefined list of values that can be used as an attribute type. This allows users of the app to select any of the predefined values for this attribute. A good example of an enumeration is order status. Let's add an enumeration and extend the **Order** entity with an enumeration value-based attribute.
 
@@ -90,7 +90,7 @@ To add enumerations, follow these steps:
 
     {{< figure src="/attachments/howto8/data-models/create-a-basic-data-layer/18582176.png" class="no-border" >}}
 
-## 5 Creating Associations
+## Creating Associations
 
 After you have created the entities, you can start creating associations.
 
@@ -98,7 +98,7 @@ To create an association, draw a line from the border of one entity to the borde
 
 {{< figure src="/attachments/howto8/data-models/create-a-basic-data-layer/18582175.png" class="no-border" >}}
 
-## 6 Multiplicity
+## Multiplicity
 
 This section will explain how to change the multiplicity of associations. 
 
@@ -114,7 +114,7 @@ To change the multiplicity, double-click the **Order_Customer** association in o
 
     {{< figure src="/attachments/howto8/data-models/create-a-basic-data-layer/18582205.png" class="no-border" >}}
 
-## 7 Delete Behavior {#delete-behavior}
+## Delete Behavior {#delete-behavior}
 
 You can configure the delete behavior for both sides of an association.
 
@@ -132,7 +132,7 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 Delete behavior includes objects which are in memory. This means that delete cascades and delete prevention will apply, even if the associated object has not been committed.
 {{% /alert %}}
 
-## 8 Read More
+## Read More
 
 * [Work with Images and Files](/howto8/data-models/working-with-images-and-files/)
 * [Denormalize Data to Improve Performance](/howto8/data-models/denormalize-data-to-improve-performance/)

@@ -5,17 +5,17 @@ weight: 40
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Widgets that display information stored in entities require you to assign a method by which to retrieve the relevant data. Such methods are collectively known as data sources. Widgets that require a data source include all [data containers](/refguide/data-widgets/) and [input elements](/refguide/input-widgets/). [Pluggable widgets](/apidocs-mxsdk/apidocs/pluggable-widgets/) can also use data sources.
 
 This document describes data sources of data containers. 
 
-## 2 Data View
+## Data View
 
 A data view supports the following data sources:
 
-* [Context](/refguide/context-source/) – the data view gets its object from the context:  either from a page parameter or a surrounding data container.
+* [Context](/refguide/context-source/) – the data view gets its object from the context: either from a page parameter or a surrounding data container.
 * [Microflow](/refguide/microflow-source/) – the data view object is determined by the result of calling the selected microflow. The microflow can take objects in the context as parameter and needs to return a single object.
 * [Nanoflow](/refguide/nanoflow-source/) – objects retrieved are determined by the result of calling the selected nanoflow. The nanoflow can take objects in the context as a parameter and needs to return a single object. 
 * [Listen to widget](/refguide/listen-to-grid-source/) – the data view object depends on the selection in a list widget (a data grid, template grid, or list view).
@@ -24,9 +24,9 @@ A data view supports the following data sources:
 The **Microflow** source is not supported in offline applications because it implies a call to the server.
 {{% /alert %}}
 
-## 3 List Widgets {#list-widgets}
+## List Widgets {#list-widgets}
 
-### 3.1 Introduction
+### Introduction
 
 Data grids, template grids, and list views are list widgets. Also, some [pluggable widgets](/apidocs-mxsdk/apidocs/pluggable-widgets/) may behave as list widgets and use data sources. Supported data sources are listed below:
 
@@ -45,7 +45,7 @@ The data source also determines which features of the widget are enabled. For ex
 Database and nanoflow data sources are the only data sources supported offline. If a list widget has a database data source in an offline application, the data will come from the database that is situated on the device. This database can be synced with a [button](/refguide/button-properties/) widget for creating a new object.
 {{% /alert %}}
 
-### 3.2 Network Optimization Mode {#optimization-mode}
+### Network Optimization Mode {#optimization-mode}
 
 {{% alert color="info" %}}
 The **Advanced** tab and **Optimization mode** properties are available in Mendix version 10.8.0 and above.
@@ -61,19 +61,19 @@ The optimization mode cannot be changed for [data grid](/refguide/data-grid/), [
 
 {{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/data-source-advanced.png" alt="data source advanced tabpage" class="no-border" >}}
 
-#### 3.2.1 Optimize for Network Round Trips {#optimize-for-network-round-trips}
+#### Optimize for Network Round Trips {#optimize-for-network-round-trips}
 
 In this mode, all the attributes of the data source entity are returned to the Mendix Client, even if not all these attributes are shown by the widget.
 
 The advantage of this mode is that when a [client action](/refguide/on-click-event/#actions) is triggered, an additional request to the Runtime Server can be prevented. 
 
-#### 3.2.2 Optimize for Network Load {#optimize-for-network-load}
+#### Optimize for Network Load {#optimize-for-network-load}
 
 In this mode, only the attributes shown by the list widget are returned to the Mendix Client. This reduces the amount of data transferred over the network.
 
 This means that when a [client action](/refguide/on-click-event/#actions) is triggered, an additional request to the Mendix Runtime might be necessary.
 
-## 4 Read More
+## Read More
 
 * [Data Containers](/refguide/data-widgets/)
 * [Data Sources Retrieval](/refguide/datasource-runtime/) 

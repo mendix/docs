@@ -7,27 +7,27 @@ description: "Generate a published REST resource from an entity"
 # linked from DM: domain model > entity (right-click) > Expose as REST resource > Help (integration)
 ---
 
-## 1 Introduction
+## Introduction
 
 You can publish a REST resource with basic operations based on an entity by right-clicking an entity in the domain model and selecting **Expose as REST resource**. Alternatively, you can drag an entity or [message definition](/refguide/message-definitions/) onto the list of resources of a published REST service. This page describes the options you have once you perform one of these actions.
 
-## 2 REST Service
+## REST Service
 
 This only shows up when you click **Expose as REST resource** in the domain model. Next, choose a service in which to generate the resource and operation.
 
-## 3 General
+## General
 
-### 3.1 Resource Name
+### Resource Name
 
-Type the name of the resource that you want to publish.
+Type the name of the resource you want to publish.
 
-### 3.2 Key Attribute
+### Key Attribute
 
-To be able to create a **Get by key**, a **Patch**, or a **Delete** operation, there needs to be a unique attribute on the entity. Select that attribute here.
+To create a **Get by key**, **Patch**, or **Delete** operation, there needs to be a unique attribute on the entity. Select that attribute here.
 
-## 4 Operations {#operations}
+## Operations {#operations}
 
-Select the checkbox for the operations that you want to generate:
+Select the checkbox for the operations you want to generate:
 
 * **Get all** – allows clients to get all the objects
 * **Get by key** – allows clients to get an object, given its key
@@ -38,10 +38,10 @@ Select the checkbox for the operations that you want to generate:
 When you click **OK**, the following items are created:
 
 * A resource
-* All the operations that you selected
+* All the operations you selected
 * A microflow for each operation
 * A message definition
-* An [import mapping](/refguide/import-mappings/) (for the **Post** and **Patch** operations)
+* An [import mapping](/refguide/import-mappings/) (for the `POST` and `PATCH` operations)
 * An [export mapping](/refguide/export-mappings/) (for the **Get all** and **Get by key** operations)
 
 If you have already created a message definition for the entity, that message definition will be reused. Existing import and export mappings based on that message definition will also be reused.

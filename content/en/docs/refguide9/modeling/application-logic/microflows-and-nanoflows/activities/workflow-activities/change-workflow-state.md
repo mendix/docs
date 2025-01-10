@@ -10,11 +10,11 @@ This activity can only be used in **Microflows**.
 This activity was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6/#960). The **Retry workflow** option of this activity was introduced in Studio Pro [9.12.0](/releasenotes/studio-pro/9.12/#9120). The **Unpause workflow** option was called **Resume workflow** in Studio Pro versions below 9.12.0.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The **Change workflow state** activity can be used to add **Abort**, **Continue**, **Pause**, **Restart**, and **Resume** operations to a workflow and control workflow instances. 
 
-## 2 Properties
+## Properties
 
 An example of change workflow state properties is represented in the image below:
 
@@ -27,7 +27,7 @@ The **Change workflow state** properties pane consists of the following sections
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section {#action}
+## Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -35,13 +35,13 @@ You can open a dialog box to configure this action by clicking the ellipsis (**�
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Operation {#operation}
+### Operation {#operation}
 
 You can select the following operations that represent the new state of the workflow instance:
 
 * **Abort workflow** – This operation aborts the workflow instance and brings it to its final state; there is no operation to undo an abort operation. The **Reason** property can be set for administration purposes to indicate why the workflow instance is aborted. For more information on the **Reason** property, see the [Reason](#reason) section below.
 
-* **Continue workflow** – This operation continues the processing of the workflow instance from the point where it was before a new version of the workflow definition was deployed. The workflow instance will no longer be in the *Incompatible* state . If the task is no longer in the new workflow definition, this action results in an error.
+* **Continue workflow** – This operation continues the processing of the workflow instance from the point where it was before a new version of the workflow definition was deployed. The workflow instance will no longer be in the *Incompatible* state. If the task is no longer in the new workflow definition, this action results in an error.
 
 * **Pause workflow** – This operation pauses further processing of the workflow. User tasks cannot be completed when the workflow instance is in the *Pause* state. Use the **Resume workflow** operation to resume processing of the workflow.
 
@@ -60,14 +60,14 @@ You can select the following operations that represent the new state of the work
 The workflow instance state changes are reflected in the **System.Workflow.State** attribute.
 {{% /alert %}}
 
-### 3.2 Workflow Object
+### Workflow Object
 
 The **Workflow object** property should be a specialization of the **System.Workflow** entity and identifies the workflow instance the operation should be executed on.
 
-### 3.3 Reason {#reason}
+### Reason {#reason}
 
 The **Reason** property is only used when **Abort workflow** is selected in the [Operation](#operation) property and allows you to add a description on why this workflow instance was aborted.
 
-## 4 Common Section {#common}
+## Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}

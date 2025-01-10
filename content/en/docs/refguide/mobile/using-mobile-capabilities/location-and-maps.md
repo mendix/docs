@@ -7,7 +7,7 @@ aliases:
     - /howto/mobile/how-to-maps/
 ---
 
-## 1 Introduction
+## Introduction
 
 The Maps module allows you to work with maps. Consult the instructions below to include map capabilities in your native mobile apps.
 
@@ -15,18 +15,18 @@ The Maps module allows you to work with maps. Consult the instructions below to 
 The Mendix Native Mobile Builder does not currently support connections behind proxy servers. Please make sure you are not behind a proxy server and that your security rules allow access to the required services.
 {{% /alert %}}
 
-## 2 Prerequisites
+## Prerequisites
 
 * Complete the [Prerequisites](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Deploying Native Apps*
 * Create an app on the [Google Cloud Console](https://console.cloud.google.com/google/maps-apis/overview) and have Google Maps enabled for Android (and iOS, if you wish to use Google Maps on iOS as well) and also posses an [API key](https://developers.google.com/maps/documentation/android-sdk/get-api-key). 
 * Before you can start using the Google Maps Platform APIs and SDKs, you must sign up and create a [billing account](https://developers.google.com/maps/gmp-get-started#create-billing-account).
 * Install Mendix Studio Pro 8.15.0 and above to use the Native Mobile App Builder
 
-## 3 Setting Up the Maps Module
+## Setting Up the Maps Module
 
 Make sure you have app containing the Maps module. This is a core module, so it is available in the **Widgets** panel. You can either add it to an existing app or make a new app from scratch. 
 
-### 3.1 Configuring Map Provider
+### Configuring Map Provider
 
 Next you will configure the **Maps** widget provider. You will have two choices: **Default** and **Google Maps**. Selecting **Default** will have your app use the default-enabled map on your device. This means using Google Maps on Android devices and Apple Maps on iOS devices. Selecting **Google Maps** as your **Maps** configuration will have only Google Maps used on both platforms:
 
@@ -35,7 +35,7 @@ Next you will configure the **Maps** widget provider. You will have two choices:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/how-to-maps/maps-provider-configuration.png" alt="maps provider configuration"   width="400"  class="no-border" >}}
 
-### 3.2 Configuring Maps Capability 
+### Configuring Maps Capability 
 
 1. Set up a native template with the **Native Mobile App Builder**. This can be launched from the **App** menu as shown in [Build a Mendix Native App Locally](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/). Complete the wizard and configure the app's details and tokens:
 
@@ -60,7 +60,7 @@ Next you will configure the **Maps** widget provider. You will have two choices:
 When running locally from source, on iOS you have to run `pod install` once more
 {{% /alert %}}
 
-## 4 Read More
+## Read More
 
 * [Build a Mendix Native App Locally](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/)
 * [Getting Started with Mobile](/refguide/mobile/getting-started-with-mobile/)

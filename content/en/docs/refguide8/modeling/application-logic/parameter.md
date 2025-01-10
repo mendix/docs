@@ -5,7 +5,7 @@ weight: 70
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 A parameter is a special kind of variable that is used an input for the microflow. When a microflow is triggered, the parameters are filled with the current values.
 
@@ -13,13 +13,13 @@ If you want to use an object of the *Customer* entity in a microflow, use the pa
 
 {{< figure src="/attachments/refguide8/modeling/application-logic/parameter/parameter.png" class="no-border" >}}
 
-## 2 Output Properties
+## Output Properties
 
-### 2.1 Name
+### Name
 
 **Name** refers to the value of the parameter.
 
-### 2.2 Data Type
+### Data Type
 
 The data type of a parameter defines the type of the value that it expects. See [Data Types](/refguide8/data-types/) for the possible data types.
 

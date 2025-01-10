@@ -5,7 +5,7 @@ weight: 5
 description: "Why and how to create an image collection"
 ---
 
-## 1 Introduction
+## Introduction
 
 If you want to use your own static images within an application, for example for branding or to give your buttons a unique feel, you will need to store them in your app. To do this, you create an **image collection** where you can store your images.
 
@@ -17,7 +17,7 @@ Remember that, if you want to use the same set of custom images in several apps,
 Too many large static images in your app can lead to performance issues. If you need a lot of large images, you can store them in your database (see [Dynamic Image](/refguide9/image-viewer/) for more information).
 {{% /alert %}}
 
-## 2 Adding an Image Collection
+## Adding an Image Collection
 
 To add an image collection, do the following.
 
@@ -25,37 +25,37 @@ To add an image collection, do the following.
 2. Select **Add other > Image collection**.
 3. Give your image collection a name.
 
-## 3 Image Collection Actions
+## Image Collection Actions
 
 You can perform the following actions within image collections using the icons at the top of the image collection tab.
 
 {{< figure src="/attachments/refguide9/modeling/pages/page-resources/image-collection/actions.png" alt="Image collection actions" class="no-border" >}}
 
-Some of the actions can be applied to multiple images. You can select all images with <kbd>Ctrl</kbd>+<kbd>A</kbd>, or multiple images by combining your click with <kbd>Ctrl</kbd> or <kbd>Shift</kbd>.
+Some of the actions can be applied to multiple images. You can select all images with <kbd>Ctrl</kbd> + <kbd>A</kbd>, or multiple images by combining your click with <kbd>Ctrl</kbd> or <kbd>Shift</kbd>.
 
-### 3.1 Add
+### Add
 
 The **Add** button allows you to add a new image from a file to your image collection. The image will be given the name of the image file you add. If the name already exists, a suffix will be added to make the name unique.
 
 The following image formats are supported: *png*, *jpeg*, *gif*, *bmp*, and *svg*.
 
-You can also add an image to your collection using <kbd>Ctrl</kbd>+<kbd>N</kbd>.
+You can also add an image to your collection using <kbd>Ctrl</kbd> + <kbd>N</kbd>.
 
-### 3.2 Rename
+### Rename
 
 The **Rename** button allows you to change the name of the selected image. As well as being the name you use within your app to refer to this image, this is also the name that **Export to file…** will give to your image if you save it as a file. If you change the name here, the name will also be changed in references to this image elsewhere in your app.
 
 You can also rename an image using <kbd>F2</kbd>.
 
-### 3.3 Delete
+### Delete
 
 The **Delete** button removes the selected image(s) from the image collection. You will be warned if the image or images are used elsewhere in the app.
 
-### 3.4 Find Usages
+### Find Usages
 
 The **Find usages** button displays, in the **Find Results** dock, all the places where this image is used in your app.
 
-### 3.5 Move to Other Image Collection
+### Move to Other Image Collection
 
 The **Move to other image collection** button allows you to move the selected image(s) to another image collection. When you move the image(s), all references elsewhere in your app will also be updated.
 
@@ -63,6 +63,6 @@ The **Move to other image collection** button allows you to move the selected im
 It is not possible to *copy* an image, you can only *move* it. If you need to make a copy, you can export the image to a file (see below) and then add the image to a different image collection.
 {{% /alert %}}
 
-### 3.6 Export to File
+### Export to File
 
 The **Export to file…** button saves the selected image(s) as image files. You can select the folder where the images will be saved and they will be given the same name as they have in the image collection. If a file with the same name already exists, you will be warned.

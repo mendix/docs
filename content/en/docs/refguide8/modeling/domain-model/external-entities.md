@@ -5,7 +5,7 @@ weight: 15
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 External entities connect to the data for shared data sources that are available through [Mendix Data Hub](/data-hub/). These external entities represent the link to the datasets that are maintained and stored in the external applications. You can integrate or *consume* external entities in your project and use them with local entities to create an app that uses the shared datasets. This dataset that the external entity connects to will be updated as it is changed in the source application. 
 
@@ -19,7 +19,7 @@ A license is required to use Mendix Data Hub and connect to external data source
 
 For more information on adding external entites from the **Data Hub** pane see [Adding External Entities](#adding-external-entities).
 
-## 2 Adding an External Entity to a Project {#adding-external-entities}
+## Adding an External Entity to a Project {#adding-external-entities}
 
 To add an external entity to your project, do the following:
 
@@ -49,7 +49,7 @@ You can make local changes to the properties of external entities that only affe
 
 For more information on using published OData services and entities through the Catalog, see [How to Consume Registered Assets](/catalog/consume/) in the *Data Hub Guide*.
 
-## 2 Properties of External Entities {#properties}
+## Properties of External Entities {#properties}
 
 Compared to local entities, external entities have a limited number of properties that can be changed. The rest of the properties are defined in the originating app and are, therefore, read-only. 
 
@@ -57,7 +57,7 @@ Compared to local entities, external entities have a limited number of propertie
 Changes that are made to the properties of external entities are made only in the consuming app. The originating app will not be affected by the changes.
 {{% /alert %}}
 
-### 2.1 General
+### General
 
 This tab displays the general properties of the external entity. The values that are defined in the originating app are displayed but but cannot be edited. The values that can be edited will only apply to the local project:
 
@@ -67,7 +67,7 @@ This tab displays the general properties of the external entity. The values that
 * **Original name** – this is read-only and shows the name of the entity as defined in the consumed OData service
 * **Summary** – this is a read-only field and displays the description for the entity in the originating app
 
-### 2.2 Attributes {#attributes}
+### Attributes {#attributes}
 
 The [attributes](/refguide8/attributes/) that have been exposed in the OData service for the external entity are listed here. All changes that are made to the attributes and the attribute list are applied to the local instance of the entity. As they are consumed, these changes will not affect the metadata of the consumed service that the entity is exposed in or the attributes of the entity in the originating app.
 
@@ -79,7 +79,7 @@ The following operations can be done on the displayed attribute list:
 * **Edit** – edit the selected attribute from the [Edit Attribute](#edit-attribute) form
 * **Remove** – remove an attribute from list 
 
-#### 2.2.1 Edit Attribute {#edit-attribute}
+#### Edit Attribute {#edit-attribute}
 
 The **Edit Attribute** box can be used for specifying a local name for the attribute and adding a local description.
 
@@ -92,7 +92,7 @@ The **Edit Attribute** box can be used for specifying a local name for the attri
     * **Type** – the **Type** and **Length** of the attribute as defined in the originating app 
 * **Documentation** – a description for the attribute that is displayed for users of the current app
 
-### 2.3 Associations {#associations}
+### Associations {#associations}
 
 This tab displays the associations that the external entity has with other entities that are exposed in the same service and also any associations that have been made with local entities. For further details on association properties in Studio Pro see [Association Tab Properties](/refguide8/association-member-properties/). 
 
@@ -118,7 +118,7 @@ It is possible to **Remove** an association between two external entities in the
 If you want to connect two external entities that are not connected in the originating app, this is not possible as the relationship to the data cannot be influenced locally. However, consider adding a local entity and connect this local entity with both external entities. The local entity must be the owner of both associations, in this case.
 {{% /alert %}}
 
-### 2.3.1 Association Properties
+### Association Properties
 
 When you **Edit** an association that is included for two entities exposed in the same OData service, the following properties are displayed and the only local change that can be name is the local Name:
 
@@ -130,15 +130,15 @@ When you **Edit** an association that is included for two entities exposed in th
 * **Multiplicity** – read-only multiplicity values from the originating app
 * **Documentation** – go to this tab to add a local description for the external entity association
 
-### 2.3.2 Connecting Two External Entities 
+### Connecting Two External Entities 
 
 If you want to connect two external entities that are not connected in the originating app, this is not possible as the relationship to the data cannot be influenced locally. However, you can add a local entity and connect this local entity with both external entities. The local entity must be the owner of both associations, in this case.
 
-### 2.4 Documentation {#documentation}
+### Documentation {#documentation}
 
 You can add any local information about the external entity in this tab.
 
-## 3 External Entity Limitations
+## External Entity Limitations
 
 External entities are the endpoints that are defined in the published OData service from the originating app. The consumed OData service document displays the values from the service metadata when the external entity is used through the **Data Hub** pane. The limitation on external entities is that they are consume-only entities. The datasets associated with the entities are maintained in the originating apps.
 

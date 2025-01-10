@@ -5,7 +5,7 @@ weight: 60
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Constants are used to define configuration values. These can differ per environment.
 
@@ -24,13 +24,13 @@ Constants can be used in the following:
 * [Expressions](/refguide/expressions/) – by prefixing the full name of the constant with `@`
 * [Consumed web services](/refguide/consumed-web-services/) – in this case, the constant is a URL that specifies where the web service is located; this can vary based on the environment in which the application is running, so that you can, for example use different web services for development and production
 
-## 2 Common Properties
+## Common Properties
 
-### 2.1 Name
+### Name
 
 The name of the constant. This name is used to refer to it.
 
-### 2.2 Export Level 
+### Export Level 
 
 {{% alert color="info" %}}
 
@@ -45,23 +45,23 @@ This property is only available for add-on and solution modules. For more inform
 | Hidden *(default)* | The document/element content is hidden from a consumer. |
 | Usable             | Consumers can see the constant and use it in their app. |
 
-### 2.3 Documentation
+### Documentation
 
 This field is for documentation purposes only: end-users will never see it, and it does not influence the behavior of your application
 
-## 3 Type Properties
+## Type Properties
 
-### 3.1 Type
+### Type
 
 The [data type](/refguide/data-types/) of the constant. This determines what kind of values a constant can hold. Supported data types are string, Boolean, date and time, decimal, and integer/long.
 
-## 4 Value Properties
+## Value Properties
 
-### 4.1 Default Value {#default-value}
+### Default Value {#default-value}
 
 This property is the default value of the constant. This value is used when running locally or in a Free App environment. When running locally, the value can be overridden in the currently selected [configuration](/refguide/configuration/).
 
-### 4.2 Exposed to Client
+### Exposed to Client
 
 This property defines whether the constant is accessible from client-side expressions (expressions in [nanoflows](/refguide/nanoflows/) and [pages](/refguide/pages/)).
 

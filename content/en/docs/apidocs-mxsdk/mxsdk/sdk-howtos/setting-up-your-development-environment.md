@@ -4,11 +4,11 @@ url: /apidocs-mxsdk/mxsdk/setting-up-your-development-environment/
 weight: 10
 ---
 
-## 1 Introduction
+## Introduction
 
 This document will lead you through the process of setting up everything you need to start working with the Mendix Platform SDK. This includes setting up development tools and creating a first SDK script that automatically bootstraps a new Mendix app.
 
-## 2 Quick Installation
+## Quick Installation
 
 If you know what you are doing, the quick installation instructions below are for you. Otherwise, skip this paragraph and continue with the [Setting Up Your Development Tools](#setting) section.
 
@@ -24,7 +24,7 @@ $ npm install mendixmodelsdk mendixplatformsdk --save
 $ tsc --init --target es2020
 ```
 
-## 3 Setting Up Your Development Tools {#setting}
+## Setting Up Your Development Tools {#setting}
 
 To set up your development tools, follow these steps:
 
@@ -39,12 +39,12 @@ To set up your development tools, follow these steps:
 
     For Debian-based Linux distributions such as Ubuntu, please refer to [NodeSource Node.js Binary Distributions](https://github.com/nodesource/distributions#user-content-installation-instructions) to properly set up your apt-get sources.
 
-    In the rest of the how-to's, in blocks such as the above, lines starting with a `$` represent commands to type into a terminal. Sometimes a line follows without a $, represents output of the command.
+    In the rest of the how-tos, in blocks such as the above, lines starting with a `$` represent commands to type into a terminal. Sometimes a line follows without a $, represents output of the command.
 
 3. Install [Visual Studio Code](https://code.visualstudio.com/) (not to be confused with Visual Studio), a text editor/IDE with good support for [TypeScript](https://www.typescriptlang.org/). Make sure you have a recent version (v1.11.0+); check the version you are using through Help > About when you have Code opened.
 4. Install TypeScript 4.4.3 or higher with [`npm`](https://www.npmjs.com/) (or [`yarn`](https://yarnpkg.com/)), Node.js's package manager:
 
-    ```bash {linenos=false}
+    ```bash
     $ npm install -g typescript
     ```
 
@@ -57,7 +57,7 @@ To set up your development tools, follow these steps:
 
     If the version number is much lower, it could be that you also have an outdated TypeScript SDK on your system, left over from a previous installation. You can either uninstall the old TypeScript SDK, or bypass it by removing the old TypeScript SDK from your system's PATH environment variable.
 
-## 4 Setting Up a Working Directory for Your Script
+## Setting Up a Working Directory for Your Script
 
 To set up a working directory for your script, follow these steps:
 
@@ -73,7 +73,7 @@ To set up a working directory for your script, follow these steps:
 
 2. Start **Visual Studio Code** and open the directory you just created. You can open a new instance of Code from the command line with the directory you want to open as first argument. For example, if your current working directory in your terminal is the directory in which all your project files live, use the following command to open Code:
 
-    ```bash {linenos=false}
+    ```bash
     $ code .
     ```
 
@@ -91,7 +91,7 @@ To set up a working directory for your script, follow these steps:
 
 4. Save your changes and then execute the following to install the dependencies:
 
-    ```bash {linenos=false}
+    ```bash
     $ npm install
     ```
 
@@ -116,6 +116,6 @@ To set up a working directory for your script, follow these steps:
     
     Create new files in your app directory with Visual Studio Code by hovering over the name of the working directory in the left-side pane. When the **New file** icon appears, click it to create a new file. For more information on basic editing with VSC, see [Basic Editing](https://code.visualstudio.com/Docs/editor/codebasics).
 
-## 5 Next Step
+## Next Step
 
 Continue with [Creating Your First Script](/apidocs-mxsdk/mxsdk/creating-your-first-script/).

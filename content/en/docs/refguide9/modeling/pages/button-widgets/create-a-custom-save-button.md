@@ -7,7 +7,7 @@ aliases:
     - /howto9/logic-business-rules/create-a-custom-save-button/
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix uses visual models called microflows to define the logic of your application. A [microflow](/refguide9/microflows/) is a visual way of expressing what traditionally would be written in code. 
 
@@ -23,7 +23,7 @@ Before you continue, make sure you have completed the following:
 
     {{< figure src="/attachments/refguide9/modeling/pages/button-widgets/create-a-custom-save-button/detail-page-customer.png" width="400px" class="no-border" >}}
 
-## 2 Replacing the Default Save Button with a Custom One
+## Replacing the Default Save Button with a Custom One
 
 The detail page you just created has a default **Save** button. To recreate the behavior of this default button, you need to replace it with a custom one. To do so, follow these steps:
 
@@ -47,7 +47,7 @@ The detail page you just created has a default **Save** button. To recreate the 
 
 You have created a button that calls a microflow.
 
-## 3 Recreating the Default Save Behavior
+## Recreating the Default Save Behavior
 
 The button you just created calls a microflow that does not do anything yet. To recreate the default Save behavior for this button, do the following:
 
@@ -70,7 +70,7 @@ The button you just created calls a microflow that does not do anything yet. To 
 
 You have recreated the default **Save** button logic.
 
-## 4 Extending the Microflow with a Custom Message
+## Extending the Microflow with a Custom Message
 
 To extend the logic with a custom message that is shown to end-users when they click the button, do the following:
 
@@ -86,6 +86,6 @@ Congratulations! You have customized the **Save** button using a microflow:
 
 {{< figure src="/attachments/refguide9/modeling/pages/button-widgets/create-a-custom-save-button/microflow.png" width="500px" class="no-border" >}}
 
-## 5 Read More
+## Read More
 
 * [Advanced Validation with a Custom Save Button](/refguide9/setting-up-data-validation/#custom-validation-save-button)

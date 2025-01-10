@@ -117,7 +117,7 @@ This release introduces a number of breaking changes in the SDK's API, so becaus
 | story# | impact | description |
 | --- | --- | --- |
 | 612773 | High | The mechanics of model elements being contained has been reworked: see below for more details. |
-| 634662 | Low | The `toPlainJson` method on elements and units has been renamed to `toJSON`, because for example, the Chrome Developer Tools understand this to produce nice, human-readably representations of such objects. Rename all usages of `toPlainJson` to `toJSON` to fix your code. |
+| 634662 | Low | The `toPlainJson` method on elements and units has been renamed to `toJSON`, because for example, the Chrome Developer Tools understand this to produce nice, human-readable representations of such objects. Rename all usages of `toPlainJson` to `toJSON` to fix your code. |
 | 639825 | Low | Broken by-name references are automatically fixed when a target is added to the model again. |
 | 637545 | None | Minor internal modifications for upcoming Mendix 6.3.0. |
 | 633932 | None | Added support for long-lived working copies (that are not deleted after 24 hours) to SDK. Note that this is currently **not** available to non-trusted back ends! |

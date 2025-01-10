@@ -5,7 +5,7 @@ description: "Describes how sessions are established and managed."
 weight: 35
 ---
 
-## 1 Introduction 
+## Introduction 
 
 When an end-user signs in to an application, the Mendix Runtime establishes a session that persists as long as the end-user remains active within the application. The session expires after a certain amount of inactivity, determined by the time elapsed since the last runtime request and the [session timeout](/refguide/custom-settings/#SessionTimeout).
 
@@ -19,15 +19,15 @@ If you are using an app created in a version below 10.9.0, then long-lived sessi
 
 Online apps in Mendix versions below 10.9.0 have a different approach, using the [EnableKeepAlive](/refguide/tricky-custom-runtime-settings/#session-duration) setting to send keep alive requests from the client.
 
-## 2 Authentication Token
+## Authentication Token
 
-### 2.1 Authentication Token Generation
+### Authentication Token Generation
 
 When the runtime receives the `get_session_data` request, it checks the existence of the `useAuthToken` cookies. If present, it adds an additional HttpOnly cookie holding the generated unique authentication token `authtoken`. This token is then used in the subsequent actions to authenticate the user and extend the session when it expires.
 
 This approach enhances security, as these cookies are inaccessible to anything other than the server.
 
-### 2.2 Enable Authentication Token
+### Enable Authentication Token
 
 For offline-first apps using the client API `login`, with version 10.9.0 or above, the authentication token system will be used by default.
 
@@ -42,13 +42,13 @@ Follow the links below to find the `login2` API specifications for the following
 * [React](https://apidocs.rnd.mendix.com/10/client-react/mx.html#.login2)
 * [Non-react (Dojo)](https://apidocs.rnd.mendix.com/10/client/mx.html#.login2)  
 
-### 2.3 Authentication Token Expiry
+### Authentication Token Expiry
 
 There is a custom runtime setting, [`com.mendix.webui.HybridAppLoginTimeOut`](/refguide/custom-settings/#commendixwebuiHybridAppLoginTimeOut) that determines how long the authentication token is valid for. If no value is set, the token remains valid for one year.
 
-## 3 Application Behavior
+## Application Behavior
 
-### 3.1 Native and Offline PWA Applications
+### Native and Offline PWA Applications
 
 This feature maintains backward compatibility, If end users haven't updated their apps on their devices, but the runtime is a newer version, it still functions correctly to support the previous session management methods.
 
@@ -62,13 +62,15 @@ New offline-first applications created in version 10.9.0 or above will also use 
 
 If you do not want your offline-first app to create an authentication token, you can disable the use of authentication tokens by writing your own flow using the new API, `login2`, but setting the `useAuthToken` parameter to `false`.
 
-### 3.2 Online Applications
+### Online Applications
 
 Below Mendix version 10.9.0, there is no support for authentication tokens.
 
 By default, authentication tokens will not be used in online Mendix apps version 10.9.0 and above. However, you can use them to remember the end-user by writing your own flow using the new API, `login2`, and setting the `useAuthToken` parameter to `true`.
 
-### 3.3 Client-Runtime Session Management Flow
+Online apps still utilize the [EnableKeepAlive](/refguide/tricky-custom-runtime-settings/#session-duration) setting to maintain uncommitted data which changes during the session. If that setting is disabled, in Mendix apps version 10.9.0 and above where `useAuthToken` is set to `true`, uncommitted changes will be lost if an action is performed after the session expires, which occurs after the [SessionTimeout](https://github.com/refguide/custom-settings/#SessionTimeout). In this case, the authentication token is used to reinitialize the session to keep user signed in, after which the application is reloaded.
+
+### Client-Runtime Session Management Flow
 
 <!-- Diagram created here:
 https://www.plantuml.com/plantuml/uml/bPB1Rjim44Jl-efjV7M3n4Lww2687TSd5oZgzbOWeAMnj91Cgikb7AVklnTI65iA3BGv211dXyCt8E-y6j6mhP9tMc0BMbS1kPXzuaksjH6pfRL9ornSiDczgvpGQ5UmecVm-1LWKz3lP9ggauMp6grN7s_ci-b9Nl4JQ7ALJ4NSRkZffAFdUXA5yrap9ndaUJ07wbMvdrK1oP8tMB95VpwQVlXyivYTPhq-_VbN8yefryPg3tKeluRvazIdCLryWStuaUuhXjKBCfxIxlTuni3zBLZbBMW5QI2TtNU_D9fVBoQBUM9IvSOeOinn7Nr9J7z_UnkLJxHqELlQiHOKFAP1Y--kXANkgg0Gyb1IHoe1IJol7z10UBCdBT06o9XIWL5qWeVtxEoOl6b0tEPqUcRKh8t7c7vQCZQZdN3SqaByY13jg9z3gNCbmr-UAoBjg_9AEVGX-X_QS-WST5eWBRleVkcOFwOC5RG5xW1pMCXB9Js22LGO3GQ4mRFDpp1VzYcUwLjaNxksFMinsDDo9uV3eVtUrDLi53A8AemdFDOioFvnUusfE6FTazjqQnEqEBLboygcugTpVLbV-lr_lIJ3g-VQKo9Vr_yEDWlRwYy0
@@ -77,3 +79,16 @@ https://www.plantuml.com/plantuml/uml/bPB1Rjim44Jl-efjV7M3n4Lww2687TSd5oZgzbOWeA
 {{< figure src="/attachments/refguide/runtime/session.png" alt="The Session Management Flow between client and the runtime." class="no-border" >}}
 
 This diagram illustrates the interaction between the client and the runtime to initialize or retrieve the session.
+
+### Session Deletion
+
+Sessions are deleted under two circumstances:
+
+* When there is a database upgrade on application startup ‒ for example if there is a model change or if the database is new.
+* During periodic cleanup of expired sessions.
+
+    You can configure how often expired sessions are cleaned up using the [ClusterManagerActionInterval](/refguide/custom-settings/#ClusterManagerActionInterval) runtime setting.
+
+    You can configure when a session is considered expired using the [SessionTimeout](/refguide/custom-settings/#SessionTimeout) runtime setting.
+
+When an anonymous session is deleted the associated anonymous user is deleted as well.

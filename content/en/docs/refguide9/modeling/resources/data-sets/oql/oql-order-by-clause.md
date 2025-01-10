@@ -3,13 +3,13 @@ title: "OQL Order by Clause"
 url: /refguide9/oql-order-by-clause/
 ---
 
-## 1 Description
+## Description
 
 The `ORDER BY` clause specifies the sort order used on columns returned in a `SELECT` statement. Multiple columns can be specified. Columns are ordered in the sequence of the items in the `ORDER BY` clause.
 
 This clause can include items that do not appear in the `SELECT` clause, except when `SELECT DISTINCT` is specified or when a `GROUP BY` clause exists. When `UNION` is used, the column names or aliases must be those specified in the `SELECT` clause of the first part of the query.
 
-## 2 Syntax
+## Syntax
 
 The syntax is as follows:
 
@@ -20,15 +20,15 @@ ORDER BY
 	}
 ```
 
-### 2.1 order_by_expression
+### order_by_expression
 
 `order_by_expression` specifies an attribute of an entity or an alias from the `FROM` clause to sort on.
 
-### 2.2 ASC
+### ASC
 
 `ASC` specifies that the results must be ordered ascending, from the lowest to the highest value. This is the default sort type.
 
-### 2.3 DESC
+### DESC
 
 `DESC` specifies that the results must be ordered descending, from the highest to the lowest value.
 
@@ -36,7 +36,7 @@ ORDER BY
 For details on the default ordering behavior of NULL values, see the [NULL Values Order Behavior](/refguide9/ordering-behavior/#null-ordering-behavior) section of *Order By Behavior*.
 {{% /alert %}}
 
-## 3 Examples
+## Examples
 
 This query retrieves all customers and returns the first names sorted on the last name, ascending:
 

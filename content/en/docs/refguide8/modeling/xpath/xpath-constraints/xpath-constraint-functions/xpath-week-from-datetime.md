@@ -3,7 +3,7 @@ title: "XPath Week-from-DateTime"
 url: /refguide8/xpath-week-from-datetime/
 ---
 
-## 1 Overview
+## Overview
 
 The `week-from-dateTime()` function extracts the week number (in the year) from a **Date and time** attribute so it can be used to compare to a value. Values range from 1 to 53.
 
@@ -13,7 +13,7 @@ The value returned depends on which *database* is being used to support your Men
 Many databases implement [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601), but please refer to the documentation for the database you are using to find the exact details.
 {{% /alert %}}
 
-## 2 Example
+## Example
 
 This query returns all the logs where the date `DateAttribute` falls in the second week of the year (for example, "2011-01-13"):
 
@@ -21,7 +21,7 @@ This query returns all the logs where the date `DateAttribute` falls in the seco
 //Logging.Log[week-from-dateTime(DateAttribute) = 2]
 ```
 
-## 3 Read More
+## Read More
 
 The following links are for the relevant documentation on how week number is calculated for a specific date for many of the databases used with Mendix.
 

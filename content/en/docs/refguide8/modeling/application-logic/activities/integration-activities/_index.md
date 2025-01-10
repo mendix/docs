@@ -8,7 +8,7 @@ weight: 60
 These activities can only be used in **Microflows**.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 When working with external services there are several microflow activities which enable you to call the service and perform mapping operations.
 
@@ -23,6 +23,6 @@ The following are the list activities you can use in your microflow:
 * [Import Mapping](/refguide8/import-mapping-action/) – imports data from an XML or JSON document into objects
 * [Export Mapping](/refguide8/export-mapping-action/) – exports data from objects into XML or JSON documents, or a string variable
 
-## 2 Read More
+## Read More
 
 * [Activities](/refguide8/activities/)

@@ -5,15 +5,15 @@ weight: 140
 description: "Describes the function for parsing integer from strings in Mendix."
 ---
 
-## 1 Introduction
+## Introduction
 
 This document describes the function that converts a string to a value that is of data type [Integer/Long](/refguide9/data-types/#integer-long).
 
-## 2 parseInteger
+## parseInteger
 
 Takes a string and parses it to an Integer/Long.
 
-### 2.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -26,7 +26,7 @@ The input parameters are described in the table below:
 A default value can be specified to handle parsing errors. If no default value is provided, an error will occur if the string is not a number or if the parsed value is not within the range of valid values for an Integer/Long. The range of valid values for an Integer/Long can be found in this [table of supported data types](/refguide9/data-types/#supported-data-types).
 {{% /alert %}}
 
-### 2.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -34,7 +34,7 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------- |
 | An Integer/Long if it is possible to parse it from the string. If the string cannot be parsed to an Integer/Long, the default value will be returned. If no default value is provided, an error will occur. | Integer/Long |
 
-### 2.3 Examples
+### Examples
 
 The examples below illustrate which value the expression returns:
 

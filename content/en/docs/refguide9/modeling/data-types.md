@@ -6,11 +6,11 @@ description: "Presents an overview of the data types that Studio Pro supports."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Throughout Studio Pro the same set of data types are used. The exception is the type of [attributes](/refguide9/attributes/), which is more specific with regard to storage in the database. In general, an attribute type maps to the data type with the same name. The exceptions are mentioned in the table below.
 
-## 2 Data Types Supported {#supported-data-types}
+## Data Types Supported {#supported-data-types}
 
 Mendix supports the following data types:
 

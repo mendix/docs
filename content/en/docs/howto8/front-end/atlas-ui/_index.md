@@ -9,31 +9,35 @@ aliases:
     - /howto8/ux/create-a-custom-theme-with-the-mendix-ui-framework
 ---
 
-## 1 Introduction
+{{% alert color="info" %}}
+The Atlas UI Resources module is deprecated, as is Atlas 2. If you are still using Atlas 2, Mendix recommends that you [migrate from Atlas 2 To Atlas 3](/refguide9/moving-from-atlas-2-to-3/).
+{{% /alert %}}
+
+## Introduction
 
 Mendix Atlas UI is the design framework that makes building elegant user experiences a rapid process. It was built upon three design principles: simplicity, harmony, and flexibility. Simplicity helps you focus on what is important. We’ve simplified the design process with readymade page templates, building blocks, and widgets that can be arranged and customized to suit your app. Our design elements are harmonious, bringing a unified aesthetic to your app landscape. Atlas UI is built to be fully responsive, ensuring quality across scale without losing functionality. 
 
 Visit the [Atlas UI site](https://atlas2.mendix.com/) for detailed previews and descriptions of all Atlas UI elements, or see the Atlas UI Framework [GitHub repository](https://github.com/mendix/Atlas-UI-Framework). If you wish to customize your Mendix apps' styling, see [How to Customize Your Styling Using Calypso](/howto8/front-end/calypso/).
 
-### 1.1 Design Principles
+### Design Principles
 
 Atlas UI has a philosophy based on the core principles described below. These principles guide all our design decisions at Mendix, and we encourage every Mendix user to adopt them when building their own apps.
 
-#### 1.1.1 Simplicity
+#### Simplicity
 
 Freedom from complexity: we strive for simplicity to help you focus on what is important.
 
-#### 1.1.2 Harmony
+#### Harmony
 
 Create familiarity and consistency throughout your apps landscape, regardless of the device you use.
 
-#### 1.1.3 Flexibility
+#### Flexibility
 
 Design apps that look good and scale in all situations without losing an intuitive and consistent experience.
 
 {{< figure src="/attachments/howto8/front-end/atlas-ui/atlas_ui_preview.png" class="no-border" >}}
 
-## 2 Design Elements
+## Design Elements
 
 Our UI library is fully integrated. After choosing a navigation layout, you can find page templates, building blocks, and widgets directly in your **Toolbox**. These UI elements form the foundation of your app.
 
@@ -59,7 +63,7 @@ Widgets are small user interface elements (alerts, buttons, charts, etc.) used t
 
 You can further customize widgets by changing their design properties. Colors, text, and many other variables can be altered to make the widget what you need it to be. 
 
-## 3 Read More
+## Read More
 
 * [Get Started with Atlas UI](/howto8/front-end/get-started-with-atlasui/)
 * [Migrate Existing Apps to Atlas UI](/howto8/front-end/migrate-existing-projects-to-atlasui/)

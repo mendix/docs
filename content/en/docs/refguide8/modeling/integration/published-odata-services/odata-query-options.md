@@ -3,7 +3,7 @@ title: "OData Query Options"
 url: /refguide8/odata-query-options/
 ---
 
-## 1 Introduction
+## Introduction
 
 This is a list of query options for OData.
 
@@ -11,17 +11,17 @@ This is a list of query options for OData.
 We currently only support the options described here.
 {{% /alert %}}
 
-## 2 Retrieving Objects
+## Retrieving Objects
 
-### 2.1 Retrieving All Objects
+### Retrieving All Objects
 
 All objects can be retrieved by specifying the URI. For example: `/odata/myservice/myresource`. You can see this if you specify the URI in a browser.
 
-### 2.2 Retrieving a Single Object
+### Retrieving a Single Object
 
 A single object can be retrieved by passing the object identifier in the URI. For example: `/odata/myservice/myresource(8444249301330581)`.
 
-### 2.3 Retrieving Associated Objects
+### Retrieving Associated Objects
 
 Associated objects can be retrieved by passing the `$expand` query parameter. For example: `/odata/myservice/Exployees?$expand=Cars,Address/City`.
 
@@ -29,21 +29,21 @@ Associated objects can be retrieved by passing the `$expand` query parameter. Fo
 The `$expand` feature was introduced in Studio Pro [8.11.0](/releasenotes/studio-pro/8.11/#8110).
 {{% /alert %}}
 
-## 3 Counting the Number of Objects
+## Counting the Number of Objects
 
-### 3.1 Retrieving a Count of Objects
+### Retrieving a Count of Objects
 
 You can find out how many objects there are by passing the `$count` query option. In this case, the result is an integer which is the number of objects. For example: `/odata/myservice/myresource/$count`.
 
-### 3.2 Inline Count
+### Inline Count
 
 By setting the `$inlinecount` query option to 'allpages', a count of the number of items returned will be included in the result. For example: `?$inlinecount=allpages`.
 
-## 4 Filtering
+## Filtering
 
 Filters are applied by appending a `$filter=...` parameter to the request. For example: `/Employees?$filter=Name eq 'John'`.
 
-### 4.1 Passing attributes
+### Passing attributes
 
 This table describes how to pass values for different attribute types:
 
@@ -53,7 +53,7 @@ This table describes how to pass values for different attribute types:
 | Datetime | Preceded with `datetime` and enclosed in single quotes (for example, datetime'2015-01-01' or datetime'&lt;epoch value here&gt;') |
 | Other | Plain value (for example, 15) |
 
-### 4.2 Comparison Operators
+### Comparison Operators
 
 We support the following comparison operators:
 
@@ -66,7 +66,7 @@ We support the following comparison operators:
 | ge | greater than or equal to | `/Employees?$filter=Age ge 15` |
 | le | less than or equal to | `/Employees?$filter=Age le 15` |
 
-### 4.3 Functions
+### Functions
 
 | Function     | Example                                 | Returns |
 | ---          | ---                                     | ---     |
@@ -81,7 +81,7 @@ We support the following comparison operators:
 | minute       | `/Employees?$filter=minute(Registration) eq 55` | All employees registered on the 55th minute of any hour |
 | second       | `/Employees?$filter=second(Registration) eq 55` | All employees registered on the 55th second of any minute of any hour |
 
-### 4.4 Combining Filters
+### Combining Filters
 
 Filters can be combined with `and`, `or`, `not`, and `()`. For example: `?$filter=Name eq 'John' and (Age gt 65 or Age lt 11)`.
 
@@ -92,7 +92,7 @@ Filters can be combined with `and`, `or`, `not`, and `()`. For example: `?$filte
 | not | `/Employees?$filter=not(Name eq 'John')` |
 | ( ) | `/Employees?$filter=Name eq 'John' and (Age gt 65 or Age lt 11)` |
 
-### 4.5 Filtering by Association
+### Filtering by Association
 
 You can filter on attributes of an associated entity. The way you do this depends on whether the association exposes one object or a list of objects.
 
@@ -103,11 +103,11 @@ You can filter on attributes of an associated entity. The way you do this depend
 
 Filtering on an associated object or list in this way is possible when you [expose associations as a link](/refguide8/odata-representation/#associations). It is not possible when you [expose associations as an associated object ID](/refguide8/odata-representation/#associations).
 
-### 4.6 Arithmetic Operators
+### Arithmetic Operators
 
 The use of arithmetic operators such as `add`, `sub`, `mul`, `div`, and `mod` in filter expressions is not supported.
 
-## 5 Sorting
+## Sorting
 
 You can sort the result using the `$orderby` query option. For example: `?$orderby=Name` or `?$orderby=BirthPlace/CityName`.
 
@@ -117,21 +117,21 @@ You can also order the result in a descending direction. For example: `?$orderby
 
 It is possible to sort on multiple attributes, which have to be comma-separated. For example: `?$orderby=Name asc,Age desc`.
 
-## 6 Selecting fields
+## Selecting fields
 
 You can select which attributes and associations to return by specifying the `$select` query option. For example: `?$select=Name,Age`.
 
-## 7 Paging
+## Paging
 
-### 7.1 Top (Limit)
+### Top (Limit)
 
 You can limit the number of returned objects using the `$top` query option, where the limit is a positive integer. For example: `?$top=100`.
 
-### 7.2 Skip (Offset)
+### Skip (Offset)
 
 You can skip a number of objects before retrieving the result using the `$skip` query option, where the offset is a positive integer. For example: `?$skip=100` will return objects starting with the 101st object in the list.
 
-## 8 Null Literals
+## Null Literals
 
 You can compare values against the `null` literal. For example: `?$filter=Name eq null`.
 

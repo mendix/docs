@@ -4,7 +4,7 @@ url: /refguide9/grids/
 weight: 20
 ---
 
-## 1 Introduction
+## Introduction
 
 Grids show a list of objects and include a [data grid](/refguide9/data-grid/) and a [template grid](/refguide9/template-grid/). The main difference between these grids is the way the list of objects is displayed: a data grid shows it in columns, while a template grid shows it in tiles.
 
@@ -12,15 +12,15 @@ Grids show a list of objects and include a [data grid](/refguide9/data-grid/) an
 
 Grids have the following components in common:
 
-* [Search bar](/refguide9/search-bar/) –  allows end-users to search for objects in the grid 
-* [Sort bar](/refguide9/sort-bar/) –  allows end-users to sort items in the grid 
-* [Control bar](/refguide9/control-bar/) –  allows end-users to control the objects displayed in the grid by means of buttons 
+* [Search bar](/refguide9/search-bar/) – allows end-users to search for objects in the grid 
+* [Sort bar](/refguide9/sort-bar/) – allows end-users to sort items in the grid 
+* [Control bar](/refguide9/control-bar/) – allows end-users to control the objects displayed in the grid by means of buttons 
 
-## 2 Choosing a Grid
+## Choosing a Grid
 
 If your app needs to display data on a page, different widgets suit different use cases. Determine what type of data you need to display, imagine how you would like it presented, and then consult the options below.
 
-### 2.1 Data Grid
+### Data Grid
 
 The [data grid](/refguide9/data-grid/) widget is well suited for these cases:
 
@@ -28,7 +28,7 @@ The [data grid](/refguide9/data-grid/) widget is well suited for these cases:
 * Employing several rows and columns
 * Displaying simple text data
 
-### 2.2 Template Grid
+### Template Grid
 
 The [template grid](/refguide9/template-grid/) widget is well suited for these cases:
 
@@ -37,7 +37,7 @@ The [template grid](/refguide9/template-grid/) widget is well suited for these c
 * Adding a button to your list item
 * Creating a custom layout for your items
 
-### 2.3 Data Grid 2
+### Data Grid 2
 
 The [data grid 2](/appstore/modules/data-grid-2/) widget is an expanded version of the standard data grid widget for displaying content in a tabular form. It is well suited for these cases:
 
@@ -46,7 +46,7 @@ The [data grid 2](/appstore/modules/data-grid-2/) widget is an expanded version 
 * Customizing the look and behavior of table rows and columns
 * Adding many different widgets into the grid
 
-## 3 Read More
+## Read More
 
 * [Data Grid](/refguide9/data-grid/)
 * [Template Grid](/refguide9/template-grid/)

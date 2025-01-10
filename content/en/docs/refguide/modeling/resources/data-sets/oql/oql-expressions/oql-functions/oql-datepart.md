@@ -3,31 +3,31 @@ title: "OQL DATEPART"
 url: /refguide/oql-datepart/
 ---
 
-## 1 Description
+## Description
 
 The `DATEPART` function retrieves a specified element from a date/time values. This element is of type integer.
 
-## 2 Syntax
+## Syntax
 
 The syntax is as follows:
 
-```sql {linenos=false}
+```sql
 DATEPART ( datepart , date_expression [, timezone ] )
 ```
 
-### 2.1 datepart
+### datepart
 
 `datepart` specifies the part of the date/time value to retrieve. For possible values, see the [Example](#oql-datepart-example) below.
 
-### 2.2 date_expression
+### date_expression
 
 `date_expression` specifies the date to retrieve an element from. This should be formatted in an expression which resolves to a date/time value.
 
-### 2.3 timezone
+### timezone
 
 `timezone` specifies the time zone to use for the retrieval. This parameter is optional and defaults to the local time zone. It should be a string literal containing an IANA time zone. GMT offset time zones are not supported.
 
-## 3 Example{#oql-datepart-example}
+## Example{#oql-datepart-example}
 
 | datepart | Definition | Example (Friday July 1, 2005, 16:34:20) |
 | --- | --- | --- |

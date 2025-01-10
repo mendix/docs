@@ -1,4 +1,4 @@
-// Bootstrap options
+// Page for defining variables (colors, values, etc.) to be referenced by other SCSS files
 
 $enable-gradients: true; // TODO: consider removing this duplicate variable from this custom file
 $enable-shadows: true; //TODO: consider removing this duplicate variable from this custom file
@@ -7,6 +7,7 @@ $enable-shadows: true; //TODO: consider removing this duplicate variable from th
 
 // Changed almost all colors to better match Mendix palette
 // Codes taken mostly from PDS (https://designsystem.mendix.com)
+// See also filters in _styles_project.scss if any of these colours is changed
 
 $primary: #146FF4; // MX Blue (Blue-7 from PDS) YL - updated the Mendix Blue color to its latest version in MX 10
 $primary-light: #47A9FF; // DB - Blue-5 from PDS
@@ -126,7 +127,6 @@ $custom-theme-colors: (
 // UI element colors
 
 $border-color: $gray-200; // NK - changed to better align to Figma Docs mockup
-$td-sidebar-tree-root-color: $secondary; // NK - switched top left nav bar link and line color to secondary
 $td-sidebar-bg-color: $gray-light;//rgba($primary, 0.03) !default;
 
 // Background colors for the sections on home page etc. It is a paint by number system, starting at 0, where the number is taken from the shortcode's ordinal

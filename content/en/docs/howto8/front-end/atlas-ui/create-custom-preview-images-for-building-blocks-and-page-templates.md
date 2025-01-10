@@ -5,7 +5,11 @@ url: /howto8/front-end/create-custom-preview-images-for-building-blocks-and-page
 weight: 50
 ---
 
-## 1 Introduction
+{{% alert color="info" %}}
+The Atlas UI Resources module is deprecated, as is Atlas 2. If you are still using Atlas 2, Mendix recommends that you [migrate from Atlas 2 To Atlas 3](/refguide9/moving-from-atlas-2-to-3/).
+{{% /alert %}}
+
+## Introduction
 
 To make your custom UI resources easy to browse, you can create custom preview images for your building blocks and page templates. We’ve provided downloadable templates in the *.sketch* and *.psd* formats, which are available on the [Atlas UI site](https://atlas2.mendix.com).
 
@@ -14,11 +18,11 @@ This how-to teaches you how to do the following:
 * Create building block preview images in various editors
 * Create page template preview images in various editors
 
-## 2 Creating Building Block Preview Images
+## Creating Building Block Preview Images
 
 {{< figure src="/attachments/howto8/front-end/atlas-ui/create-custom-preview-images-for-building-blocks-and-page-templates/create_custom_image_bb.png" class="no-border" >}}
 
-### 2.1 Creating a Building Block Preview Image in Sketch
+### Creating a Building Block Preview Image in Sketch
 
 To create a building block preview image in Sketch, follow these steps:
 
@@ -34,7 +38,7 @@ To create a building block preview image in Sketch, follow these steps:
 
 6. Export your image.
 
-### 2.2 Creating a Building Block Preview Image in Photoshop
+### Creating a Building Block Preview Image in Photoshop
 
 To create a building block preview image in Photoshop, follow these steps:
 
@@ -48,7 +52,7 @@ To create a building block preview image in Photoshop, follow these steps:
 5. Save your changes and navigate back to your template file.
 6. If you are happy with your image, export your file as a *.png* file.
 
-### 2.3 Creating a Building Block Preview Image in Illustrator
+### Creating a Building Block Preview Image in Illustrator
 
 To create a building block preview image in Illustrator, follow these steps:
 
@@ -65,15 +69,15 @@ To create a building block preview image in Illustrator, follow these steps:
 
 7. Export your image.
 
-### 2.4 Creating a Building Block Preview Image in Another Image Editor
+### Creating a Building Block Preview Image in Another Image Editor
 
 You can also create your building block preview image in a different image editor of your choice. Building block preview images should be 280px wide and 216px tall. Save the image as a *.png* file.
 
-## 3 Creating Page Template Preview Images
+## Creating Page Template Preview Images
 
 {{< figure src="/attachments/howto8/front-end/atlas-ui/create-custom-preview-images-for-building-blocks-and-page-templates/create_custom_image_pt.png" class="no-border" >}}
 
-### 3.1 Creating a Page Template Preview Image in Sketch
+### Creating a Page Template Preview Image in Sketch
 
 To create a page template preview image in Sketch, follow these steps:
 
@@ -89,7 +93,7 @@ To create a page template preview image in Sketch, follow these steps:
 
 6. Export your image.
 
-### 3.2 Creating a Page Template Preview Image in Photoshop
+### Creating a Page Template Preview Image in Photoshop
 
 To create a page template preview image in Photoshop, follow these steps:
 
@@ -102,7 +106,7 @@ To create a page template preview image in Photoshop, follow these steps:
 4. Replace the contents of the folder with your page template preview image.
 5. Save your changes and navigate back to your template file. If you are happy with your image, export your file as a *.png* file.
 
-### 3.3 Creating a Page Template Preview Image in Illustrator
+### Creating a Page Template Preview Image in Illustrator
 
 To create a page template preview image in Illustrator, follow these steps:
 
@@ -119,11 +123,11 @@ To create a page template preview image in Illustrator, follow these steps:
 
 7. Export your image.
 
-### 3.4 Creating a Page Template Preview Image in Another Image Editor
+### Creating a Page Template Preview Image in Another Image Editor
 
 You can also create your page template preview image in a different image editor of your choice. Page template preview images should be 255px wide and 255px tall. Save the image as a *.png* file.
 
-## 4 Read More
+## Read More
 
 * [Get Started with Atlas UI](/howto8/front-end/get-started-with-atlasui/)
 * [Create Company Atlas UI Resources](/howto8/front-end/create-company-atlas-ui-resources/)

@@ -8,7 +8,7 @@ weight: 40
 This activity can only be used in **Microflows**.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 A **Retrieve workflow activity records** activity can be used to retrieve a list of **System.WorkflowActivityRecord** objects sorted by activity start time. It needs the **System.Workflow** instance object as its input. It will break at Runtime if the passed workflow object is empty.
 
@@ -20,7 +20,7 @@ The image below shows an example of how an activity timeline can look like using
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/retrieve-workflow-activity-records/example-activity-timeline.png" max-width=80% >}}
 
-## 2 Properties
+## Properties
 
 An example of retrieve workflow context properties is presented in the image below:
 
@@ -33,7 +33,7 @@ The **Retrieve workflow activity records** properties pane consists of the follo
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section{#action}
+## Action Section{#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -41,14 +41,14 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Workflow Object
+### Workflow Object
 
 A workflow object of the **System.Workflow** entity available from the microflow parameters. 
 
-### 3.2 Variable Name
+### Variable Name
 
 The name of the list variable returned by the activity.
 
-## 4 Common Section {#common}
+## Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}

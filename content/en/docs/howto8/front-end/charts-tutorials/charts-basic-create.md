@@ -5,7 +5,7 @@ weight: 10
 description: "How to create a basic chart and configure the display options"
 ---
 
-## 1 Introduction
+## Introduction
 
 The charts widget provides a basic implementation of different types of chart (for example: area, line, bar, column, and pie) in a Mendix application.
 
@@ -15,17 +15,17 @@ This how-to teaches you how to do the following:
 
 * Configure the chart display options
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Download the latest [Charts Widget](/appstore/widgets/charts/) from the Mendix Marketplace
 
-## 3 Implementing the Charts Widget in an Existing App
+## Implementing the Charts Widget in an Existing App
 
 In this section, you will create a chart with basic sample data.
 
-## 3.1 Setting up the Domain Model
+## Setting up the Domain Model
 
 To use the Charts widget, a specific data structure is set up. This is defined by entities and attributes in the domain model.
 
@@ -35,7 +35,7 @@ To use the Charts widget, a specific data structure is set up. This is defined b
 
     {{< figure src="/attachments/howto8/front-end/charts-tutorials/charts-basic-create/charts-entity.png" alt="Value entity" class="no-border" >}}
 
-## 3.2 Creating a Data Entry Page
+## Creating a Data Entry Page
 
 To create a basic data entry page from which the Charts widget will fetch data, follow these steps:
 
@@ -47,7 +47,7 @@ To create a basic data entry page from which the Charts widget will fetch data, 
 
 3. Add the **Value_NewEdit** page to user navigation.
 
-## 3.3 Adding the Charts Widget to a New Page
+## Adding the Charts Widget to a New Page
 
 1. Create a page named *ShowChart*.
 
@@ -73,7 +73,7 @@ To create a basic data entry page from which the Charts widget will fetch data, 
 
     {{< figure src="/attachments/howto8/front-end/charts-tutorials/charts-basic-create/charts-widget-page.png" alt="Final widget Page" class="no-border" >}}
 
-## 3.4 Configuring the Charts Widget
+## Configuring the Charts Widget
 
 To configure a Charts widget, follow these steps:
 
@@ -95,7 +95,7 @@ To configure a Charts widget, follow these steps:
 
     {{< figure src="/attachments/howto8/front-end/charts-tutorials/charts-basic-create/charts-data-points.png" alt="select Data Points" class="no-border" >}}
 
-## 3.5 Viewing the Chart
+## Viewing the Chart
 
 To view the chart, follow these steps:
 
@@ -113,7 +113,7 @@ To view the chart, follow these steps:
 
     {{< figure src="/attachments/howto8/front-end/charts-tutorials/charts-basic-create/charts-area-chart.png" alt="Show Chart" class="no-border" >}}
 
-## 4 Read More
+## Read More
 
 * [Use a Chart With a REST Data Source](/howto8/front-end/charts-basic-rest/)
 * [Use Any Chart](/howto8/front-end/charts-any-usage/)

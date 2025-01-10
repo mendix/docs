@@ -1,11 +1,12 @@
 ---
-title: "Archive"
+title: "Archive Initiatives"
+linktitle: "Archive"
 url: /developerportal/portfolio-management/archive/
 weight: 10
 description: "Describes the Archive page in the Mendix Portfolio Management app."
 ---
 
-## 1 Introduction
+## Introduction
 
 The **Archive** page shows all the initiatives that are archived. You can search for an initiative in the search bar. You can [export Initiatives](/developerportal/portfolio-management/export-import-initiatives/) by clicking the {{% icon name="office-sheet" %}} **Export Initiatives** button. Clicking **Filters** enables you to filter initiatives.
 
@@ -29,13 +30,13 @@ The list contains the following information:
 
 * Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 
-* Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
+* Avatars of the initiative owners – Hovering over an avatar shows the name of the initiative owner.
 
 * **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this opens a menu that enables you to [restore](#restore-delete-archived-initiative) or [delete](#restore-delete-archived-initiative) the archived initiative.
 
   {{% alert type="info" %}}Both Portfolio Managers and Contributors can restore or delete an archived initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Members](/developerportal/portfolio-management/access-management/#members) section in *Access Management*.{{% /alert %}}
 
-## 2 Restoring or Deleting an Archived Initiative {#restore-delete-archived-initiative}
+## Restoring or Deleting an Archived Initiative {#restore-delete-archived-initiative}
 
 {{% alert type="info" %}}
 Both Portfolio Managers and Contributors can restore or delete an archived initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Members](/developerportal/portfolio-management/access-management/#members) section in *Access Management*.

@@ -9,11 +9,11 @@ weight: 70
 This activity can only be used in **Nanoflows**.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The **Synchronize** activity can be used to synchronize your data between your device and the server.  The **Synchronize** action has two modes:
 
-### 1.1 Synchronize All Objects
+### Synchronize All Objects
 
 {{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize/synchronize.png" alt="Synchronize"   width="200"  class="no-border" >}}
 
@@ -21,7 +21,7 @@ This mode synchronizes the entire local database. The server database is updated
 
 The behavior of this mode can be configured through [**Synchronization configuration**](/refguide8/offline-first/#customizable-synchronization).
 
-### 1.2 Synchronize Selected Object(s)
+### Synchronize Selected Object(s)
 
 {{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize/synchronize-objects.png" alt="Synchronize"   width="200"  class="no-border" >}}
 
@@ -43,7 +43,7 @@ If the selected object originated from the server (not created on the device), a
 
 If the set of objects selected for synchronization contains objects without local changes, synchronization updates the local copy from the server database. If there is an object that has been deleted from the server or is no longer accessible due to access rules, that object will be removed from the local database too.
 
-## 2 Properties
+## Properties
 
 The **Synchronize** activity properties consists of the following sections:
 
@@ -52,15 +52,15 @@ The **Synchronize** activity properties consists of the following sections:
 
     {{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize/synchronize-properties.png" alt="Synchronize Action Properties"   width="300"  class="no-border" >}}
 
-## 3 Action Section {#action}
+## Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
-## 4 Common Section {#common}
+## Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide8/microflow-common-section-link.md" %}}
 
-## 5 Limitations {#limitations}
+## Limitations {#limitations}
 
 Running multiple synchronization processes at the same time is not supported, regardless of the type (**full** or **selective**).
 
@@ -70,7 +70,7 @@ If you try to trigger another synchronization process while the synchronization 
 
 Such an error can be handled in the nanoflow from which the synchronization attempt was triggered using [error handlers](/refguide8/error-event/#errorhandlers).
 
-## 6 Read More
+## Read More
 
 * [Activities](/refguide8/activities/)
 * [Offline-first](/refguide8/offline-first/)

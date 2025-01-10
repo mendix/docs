@@ -5,7 +5,7 @@ weight: 30
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 A dynamic image can be used to display an image or its thumbnail. For example, you can show a profile picture:
 
@@ -17,7 +17,7 @@ A dynamic image must be placed in a data view or a template grid.
 
 {{% /alert %}}
 
-## 2 Defining an Image Entity 
+## Defining an Image Entity 
 
 To correctly configure a dynamic image (for more information, see the [Data Source](#data-source) section below), you first need to create an entity in your domain model and define that it is an image entity. This is done by the concept of *inheritance*, sometimes called *generalization*. By inheriting from System.Image your entity gets all the properties of the system image entity. 
 
@@ -41,7 +41,7 @@ Your entity now inherits all properties from the System.Image entity you selecte
 
 {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-viewer/entity-example.png" class="no-border" >}}
 
-## 3 Properties
+## Properties
 
 An example of dynamic image properties is represented in the image below:
 
@@ -56,31 +56,31 @@ Dynamic image properties consist of the following sections:
 * [General](#general)
 * [Visibility](#visibility)
 
-### 3.1 Common Section{#common}
+### Common Section{#common}
 
 {{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
-### 3.2 Design Properties Section {#design-properties}
+### Design Properties Section {#design-properties}
 
 {{% snippet file="/static/_includes/refguide9/design-section-link.md" %}} 
 
-### 3.3 Data Source Section {#data-source}
+### Data Source Section {#data-source}
 
-#### 3.3.1 Entity (Path)
+#### Entity (Path)
 
 The **Entity (path)** property specifies which object will be shown in the dynamic image. It must be a System.Image or a specialization thereof. If the object in the data view is (a specialization of) System.Image you can use this object in the dynamic image as well.
 
-### 3.4  Events Section {#events}
+### Events Section {#events}
 
 {{% snippet file="/static/_includes/refguide9/events-section-link.md" %}}
 
-### 3.5 General Section{#general}
+### General Section{#general}
 
-#### 3.5.1 Default Image
+#### Default Image
 
 This is the image that is displayed if no image is uploaded.
 
-#### 3.5.2 Width Unit {#width-unit}
+#### Width Unit {#width-unit}
 
 The table below describes possible ways to specify the width of an image: 
 
@@ -94,13 +94,13 @@ The table below describes possible ways to specify the width of an image:
 Not supported on native mobile pages.
 {{% /alert %}}
 
-#### 3.5.3 Width 
+#### Width 
 
 This property is displayed only when the [Width unit](#width-unit) property is set to *Pixels* or *Percentage*. This property determines the width of the image, either in pixels or a percentage.
 
 Default: *0*
 
-#### 3.5.4 Height Unit {#height-unit}
+#### Height Unit {#height-unit}
 
 The table below describes possible ways to specify the height of an image: 
 
@@ -112,29 +112,29 @@ The table below describes possible ways to specify the height of an image:
 
 {{% alert color="info" %}}This property is not supported on native mobile pages.{{% /alert %}}
 
-#### 3.5.5 Height
+#### Height
 
 This property is displayed only when the [Height unit](#height-unit) property is set to *Pixels* or *Percentage*. This property determines the height of the image, either in pixels or a percentage.
 
 Default: *0*
 
-#### 3.5.6 Responsive
+#### Responsive
 
 This property determines how the image scales. If the value is set to *Yes*, the image will never get bigger than its original size, but it can become smaller. If the value is set to *No*, the image can become both larger and smaller than its original size.
 
 Default: *Yes*
 
-#### 3.5.7 Show
+#### Show
 
 This property indicates whether the generated thumbnail or the full image is shown.
 
 Default: *Thumbnail*
 
-### 3.6 Visibility Properties{#visibility}
+### Visibility Properties{#visibility}
 
 {{% snippet file="/static/_includes/refguide9/visibility-section-link.md" %}}
 
-## 4 Read More
+## Read More
 
 * [Page](/refguide9/page/)
 * [Images, Videos, and Files](/refguide9/image-and-file-widgets/)

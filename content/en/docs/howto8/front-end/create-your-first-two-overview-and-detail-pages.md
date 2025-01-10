@@ -5,7 +5,7 @@ url: /howto8/front-end/create-your-first-two-overview-and-detail-pages/
 weight: 25
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to explains how you can create overview and detail pages in Mendix. 
 
@@ -14,7 +14,7 @@ This how-to teaches you how to do the following:
 * Create overview and detail pages
 * Configure navigation and security
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
@@ -22,7 +22,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
     {{< figure src="/attachments/howto8/front-end/create-your-first-two-overview-and-detail-pages/18582175.png" class="no-border" >}}
 
-## 3 Creating Overview and Detail Pages Automatically
+## Creating Overview and Detail Pages Automatically
 
 To create the overview and detail pages for your data structure, follow these steps:
 
@@ -36,11 +36,11 @@ And there you go! For each entity, an overview page and a detail page is generat
 Mendix can do even more of the work for you if you create an Excel spreadsheet with two tabs (one for the header and data for **Customer** and the other for the header and data for **Order**). When you are creating a new app, select **App from a spreadsheet** and upload your Excel spreadsheet.
 {{% /alert %}}
 
-## 4 Creating Overview and Detail Pages Manually
+## Creating Overview and Detail Pages Manually
 
 For a better understanding of Mendix Studio Pro, this section describes the manual steps for creating these pages.
 
-### 4.1 Creating the Overview Page
+### Creating the Overview Page
 
 To create a new overview page and add it to your app, follow these steps:
 
@@ -73,7 +73,7 @@ You should now have an overview page with a data grid like this:
 
 {{< figure src="/attachments/howto8/front-end/create-your-first-two-overview-and-detail-pages/18581330.png" class="no-border" >}}
 
-### 4.1 Creating the Detail Page
+### Creating the Detail Page
 
 To create a new detail page manually, follow these steps:
 
@@ -91,13 +91,13 @@ To create a new detail page manually, follow these steps:
 
     {{< figure src="/attachments/howto8/front-end/create-your-first-two-overview-and-detail-pages/18581325.png" class="no-border" >}}
 
-## 5 Navigation and Security
+## Navigation and Security
 
 Now create a navigation item for your overview page to start using it. For details on how to set up the navigation structure, see [How to Set Up the Navigation Structure](/howto8/general/setting-up-the-navigation-structure/).
 
 If you switched on security for this application, you also need to configure page access on both the overview and detail pages. For more information, see [How to Create a Secure App](/howto8/security/create-a-secure-app/).
 
-## 6 Read More
+## Read More
 
 * [Atlas UI](/howto8/front-end/atlas-ui/)
 * [Use Layouts and Snippets](/howto8/front-end/layouts-and-snippets/)

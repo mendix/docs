@@ -4,19 +4,19 @@ url: /refguide9/attributes-type-migration/
 weight: 10
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix allows you to change attribute and association types on existing domain models. This document explains the consequences of doing this.
 
-## 2 Data Type Changes on Existing Attributes
+## Data Type Changes on Existing Attributes
 
-### 2.1 Data Type Change Behavior
+### Data Type Change Behavior
 
 If the type of an existing attribute is changed in Mendix Studio Pro, the existing attribute will usually be deleted and a new attribute will be created. For some attribute type changes Mendix tries to convert existing data in the database to the new type.
 
 If data should NOT be converted to the new type, you must remove the attribute in Studio Pro and create a new column (with the same name). If you change the type and rename the column, Mendix remembers the old column name and will try to convert the column values if possible.
 
-### 2.2 Conversion Table
+### Conversion Table
 
 The table below shows, for each data type change, whether Mendix will convert the values.
 
@@ -29,7 +29,7 @@ Key | Means
 {{< figure src="/attachments/refguide9/runtime/data-storage/attributes-type-migration/conversion-table.png" alt="Table of conversions - click to enlarge" class="no-border" >}}
 (*Click the image to enlarge*)
 
-### 2.3 Manual Conversion
+### Manual Conversion
 
 Even if Mendix cannot convert the values of a specific column to another type, you can still manage that manually. Change the name of the attribute, for example append the text 'Deleted' to its name. Create a new attribute with the same name and the new data type. Look up each occurrence of the old (renamed) attribute in the whole model and change this to the new attribute. Be sure that there is no microflow or page anymore which refers to the old attribute.
 
@@ -37,6 +37,6 @@ Create a microflow in which you retrieve all instances of the entity, loop throu
 
 When you deploy, you have to run this microflow one time, after which you can remove both the microflow and the button pointing to it, and then you can also remove the old attribute.
 
-## 3 Association Type Changes on Existing Associations
+## Association Type Changes on Existing Associations
 
 When you change the type of an association from many-to-many to one-to-many or from one-to-many to one-to-one, be aware that duplicate associations are not automatically removed from the database. For example, a one-to-many association from entity A to entity B allows multiple references: a1 to b1, a1 to b2, etc. One-to-one associations only allow a single reference per object: a1 to b1. In this situation, the new version of your app will fail to start with an error message indicating a unique constraint violation. You will first have to clean up your data before you can deploy the new version with the changed association type.

@@ -9,7 +9,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 When inserting a page break, the current page will be cut off after the break and widgets below the break will be inserted in a new page.
 
@@ -21,6 +21,6 @@ A page break.
 
 {{% /alert %}}
 
-## 2 Common Properties
+## Common Properties
 
 {{% snippet file="/static/_includes/refguide/name-property.md" %}}

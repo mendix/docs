@@ -1,18 +1,18 @@
 ---
 title: "Multi-User Task"
 url: /refguide/multi-user-task/
-weight: 30
+weight: 80
 ---
 
-## 1 Introduction
+## Introduction
 
 Multi-user tasks are tasks that have to be executed by multiple users. Each user performs the same task. The outcomes from all individual tasks will be aggregated into a single multi-user task outcome based on the [completion condition](#completion-condition).
 
 For example, you can assign a review task to multiple users:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/multi-user-task/multi-user-task.jpg" alt="Multi-user Task Example" width="200" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/multi-user-task/multi-user-task.jpg" alt="Multi-User Task Example" width="200" class="no-border" >}}
 
-## 2 Properties
+## Properties
 
 Multi-user task properties consist of the following sections:
 
@@ -24,13 +24,15 @@ Multi-user task properties consist of the following sections:
 * [Outcomes](#outcomes)
 * [Task page](#task-page)
 * [Display information](#display-info)
+* [Events](#events)
+* [Boundary events](#boundary-events)
 * [Common](#common)
 
-### 2.1 General Section {#general}
+### General Section {#general}
 
 **Caption** defines a title of the multi-user task.
 
-### 2.2 Due Date Section {#due-date}
+### Due Date Section {#due-date}
 
 **Due date** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. For example, you can use it to set a deadline for the multi-user task and display it in your app. However, this is not an automatic reminder but rather a deadline you reference when keeping track of the multi-user task. If you are using the **Workflow Commons** module, **Due date** is used in page templates and preconfigured dashboards.
 
@@ -42,13 +44,9 @@ The **Due date** section properties are described in the table below:
 | Duration | You can set the deadline for the multi-user task with the **Due in** option, which indicates the number of hours, days, or weeks the task is due in. Possible values of the property are the following ones:<br /><ul><li>Hours</li><li>Days</li><li>Weeks</li> </ul> |
 | Expression | You can set a due date for the multi-user task writing an expression. For example, to set a due date to tomorrow, you can use `addDays([%CurrentDateTime%], 1)`. |
 
-### 2.3 Events Section {#events}
+### Targeted Users Section {#users}
 
-**On Created** event allows you to select a microflow that is executed immediately after users have been determined for a newly created task instance. You can use this setting for a microflow that will send an email notification about the multi-user task to the assigned users.
-
-### 2.4 Targeted Users Section {#users}
-
-#### 2.4.1 Target Users Using {#target-users}
+#### Target Users Using {#target-users}
 
 **Target users using** allows you to manage what users will the task be assigned to. You can filter users using XPath, or implement more flexible logic and add several checks using a microflow.
 
@@ -62,15 +60,15 @@ Possible options of this property are described in the table below:
 
 In case **Target users using** (an XPath or a microflow) results in an empty list of users (0 users), the workflow fails. For more information on how to handle this kind of issues, see the [Operation](/refguide/change-workflow-state/#operation) section in *Change Workflow State*.
 
-#### 2.4.2 XPath Constraint
+#### XPath Constraint
 
 Specifies the expression used to assign the multi-user task. This option is displayed only when the [Target users using](#target-users) is set to **XPath**. Click **Edit** to edit the [XPath constraint](/refguide/xpath-constraints/).
 
-#### 2.4.3 Microflow
+#### Microflow
 
 Specifies the microflow used to assign the multi-user task. This option is displayed only when the [Target users using](#target-users) is set to **Microflow**.
 
-### 2.5 Completion Condition Section {#completion-condition}
+### Completion Condition Section {#completion-condition}
 
 **Completion condition** defines all the criteria that must be fulfilled for the multi-user task to be marked as completed. It consists of the following settings:
 
@@ -78,7 +76,7 @@ Specifies the microflow used to assign the multi-user task. This option is displ
 * [Decision method](#decision-method)
 * [Completion moment](#completion-moment)
 
-#### 2.5.1 Participant Input {#participant-input}
+#### Participant Input {#participant-input}
 
 This property determines the maximum number of targeted users that are required to select an outcome to complete the multi-user task. The targeted users that are required to select an outcome for the multi-user task are participants of the multi-user task.
 
@@ -94,7 +92,7 @@ Possible options of participant input are described in the table below:
 If the number of [targeted users](#users) is less than the absolute number specified in the [Participant input](#participant-input) section, it is impossible to complete the multi-user task and the workflow will fail.
 {{% /alert %}}
 
-#### 2.5.2 Decision Method {#decision-method}
+#### Decision Method {#decision-method}
 
 With this property, you specify how the outcomes of the individual participants are aggregated into a single multi-user task outcome. This aggregated outcome is used as the final outcome to complete the multi-user task.
 
@@ -118,13 +116,13 @@ In all the examples given below for the decision methods, the **When outcome is 
 
 For more details and examples of how each decision method works, see the sub-sections below.
 
-##### 2.5.2.1 Consensus {#consensus}
+##### Consensus {#consensus}
 
 Select this decision method when all participants should be in agreement with the provided outcome. That is, they should all select the same outcome. There has to be consensus. When there is no consensus, the multi-user task will complete with the fallback outcome.
 
 **Fallback outcome**: This outcome will be the final outcome of the multi-user task if any of the participants during consensus decision method selects a different outcome from the rest of the participants.
 
-###### 2.5.2.1.1 Example
+###### Example
 
 The following example shows how it works when the decision method is **Consensus**:
 
@@ -143,7 +141,7 @@ You can refer to the following properties settings for this example:
 * **Completion moment**: **When outcome is known**
 * **Outcomes**: `Approve`, `Reject`, `NoConsensus`
 
-##### 2.5.2.2 Veto {#veto}
+##### Veto {#veto}
 
 Veto decision method requires two outcomes, one of which is the veto outcome. If anyone selects the veto outcome, then the multi-user task will be completed with the veto outcome.
 
@@ -151,7 +149,7 @@ For a multi-user task to complete with the non-veto outcome, all participants de
 
 **Veto outcome**: This property defines the [veto](#veto) outcome.
 
-###### 2.5.2.2.1 Examples
+###### Examples
 
 Two examples are provided here to show how it works when the decision method is **Veto**.
 
@@ -177,7 +175,7 @@ You can refer to the following properties settings for the second example above:
 * **Completion moment**: **When outcome is known**
 * **Outcomes**: `Minor`, `Major`
 
-##### 2.5.2.3 Majority {#majority}
+##### Majority {#majority}
 
 Select this decision method when a task should result in an outcome based on an absolute or relative majority number of votes. The number of required votes is defined as the result of the [participant input](#participant-input).
 
@@ -198,7 +196,7 @@ When the **Majority type** is set to **More than half**, the fallback outcome is
 When there are only 2 outcomes for a task, there is no difference between the majority type **More than half** and **Most chosen**.
 {{% /alert %}}
 
-###### 2.5.2.3.1 Example
+###### Example
 
 The following example shows how it works when the decision method is **Majority** and when the majority type is **More than half** or **Most chosen**.
 
@@ -221,7 +219,7 @@ You can refer to the following properties settings for this example:
 * **Completion moment**: **When outcome is known**
 * **Outcomes**: `A`, `B`, `C`
 
-##### 2.5.2.4 Threshold {#threshold}
+##### Threshold {#threshold}
 
 Select this decision method when a task should complete with an outcome when the number of votes for this outcome reaches the amount of votes set as the threshold value. 
 
@@ -242,7 +240,7 @@ A threshold of `100%` is the same as using **Consensus** as the decision method.
 
 **Fallback Outcome**: This outcome will be the final outcome of the multi-user task if no outcome reached the amount of votes set as the threshold value.
 
-###### 2.5.2.4.1 Example
+###### Example
 
 The following example shows how it works when the decision method is **Threshold** and the threshold type is **Percentage**.
 
@@ -253,7 +251,7 @@ There are 50 targeted users and 10 of them are required to participate in the ta
 | Votes    | 3   | 5   | 1   |
 
 * In case the next participant votes outcome A or C, the remaining votes will never reach the threshold of `60%`. As a result, the task will complete with the fallback outcome.
-* In case the last two participants vote for outcome B, the task will be completed with outcome B , as it is the first outcome that reaches the threshold of `60%`.
+* In case the last two participants vote for outcome B, the task will be completed with outcome B, as it is the first outcome that reaches the threshold of `60%`.
 * In case the next participant votes for outcome B and the last participant votes for either outcome A or C, none of the outcomes reaches the threshold of `60%`. As a result, the task will complete with the fallback outcome.
 
 You can refer to the following properties settings for this example:
@@ -266,7 +264,7 @@ You can refer to the following properties settings for this example:
 * **Completion moment**: **When outcome is known**
 * **Outcomes**: `A`, `B`, `C`
 
-##### 2.5.2.5 Microflow {#microflow}
+##### Microflow {#microflow}
 
 Select this decision method when none of the other decision methods does what you need, and you want to provide your own microflow to determine the final outcome of the multi-user task. This microflow is executed every time when a participant selects an outcome for the multi-user task, regardless of the [Completion moment](#completion-moment) setting.
 
@@ -298,13 +296,13 @@ When a value is returned that is not defined in the [Outcomes](#outcomes), the m
 If the microflow is changed in between deployments, it might return a different result after the deployment from during the previous deployment, for user tasks that are in progress. This cannot be detected during [workflow versioning conflict detection](/refguide/workflow-versioning/) because the microflow cannot be called at that point. As a result, it will not cause a conflict and behaves like when the workflow is marked as resolved.
 {{% /alert %}}
 
-###### 2.5.2.5.1 Example
+###### Example
 
 As an example, consider the trivial case where the quickest participant decides, which basically means choosing the first outcome. This can be achieved using the following microflow:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/multi-user-task/microflow-decision.png" alt="Custom Microflow Decision Method" class="no-border" >}}
 
-#### 2.5.3 Completion Moment {#completion-moment}
+#### Completion Moment {#completion-moment}
 
 {{% alert color="warning" %}}
 This property was added in Studio Pro 10.2. In Studio Pro 10.0 and 10.1, the multi-user task is marked as completed as soon as its outcome is known, and adding additional votes is not possible once the outcome is known. 
@@ -323,7 +321,7 @@ Possible options are described in the table below:
 The option **When outcome is known** is selected by default because this is the most efficient choice. With this option selected, the multi-user task completes with the minimum number of participants that have completed their task.
 {{% /alert %}}
 
-##### 2.5.3.1 Example
+##### Example
 
 The following example shows how **Completion moment** works.
 
@@ -334,31 +332,31 @@ The decision method is **Majority** and the majority type is **More than half** 
 
 In both cases, the multi-user task will complete with outcome A, as this outcome has the majority of the votes. The final participant's vote will not change the final outcome of the multi-user task.
 
-### 2.6 Outcomes Section {#outcomes}
+### Outcomes Section {#outcomes}
 
 The outcomes property allows you to create new outcomes for the multi-user task. Outcomes are translated into different outgoing paths of the multi-user task and can be referred to by other elements, such as a button. For example, you have a process when you need to approve or reject a request. One button on a [task page](#task-page) can refer to the **Approve** outcome of the multi-user task, while another one can use the **Reject** outcome.
 
-### 2.7 Task Page Section {#task-page}
+### Task Page Section {#task-page}
 
 Task page is the page that an assigned user will use to inspect their task and complete it. You can also allow users to add comments or attachments on this page.
 
 If you generate the page using the templates in the **Workflows Commons** module, these templates contain necessary data containers and associated context entity.
 
-### 2.8 Display Information Section {#display-info}
+### Display Information Section {#display-info}
 
-#### 2.8.1 Task Name
+#### Task Name
 
 **Task name** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Task name** is used in page templates and on preconfigured pages to identify the task.
 
 For more information on using parameters, see the [Parameters](#parameters) section below.
 
-#### 2.8.2 Task Description
+#### Task Description
 
 **Task Description** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Task description** is used in page templates.
 
 The **Task description** can contain parameters that are written between braces, for example, {1}.
 
-#### 2.8.3 Parameters {#parameters}
+#### Parameters {#parameters}
 
 Parameters are attributes the value of which will be displayed. For example, you can display when the task is due using the **DueDate** parameter.
 
@@ -369,7 +367,7 @@ Parameters have the following settings:
 * **Index** – an identification number of a parameter
 * **Expression** – an attribute from the context that will be displayed
 
-##### 2.8.3.1 Adding New Parameters
+##### Adding New Parameters
 
 To add a parameter to the **Task name** or the **Task description**, do the following:
 
@@ -387,7 +385,7 @@ To add a parameter to the **Task name** or the **Task description**, do the foll
 
    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/task-description-example.jpg" alt="Task Description Example" class="no-border" >}}
 
-##### 2.8.3.2 Performing Other Actions on Parameters
+##### Performing Other Actions on Parameters
 
 In addition to adding new parameters, you can perform the following actions on parameters:
 
@@ -396,11 +394,19 @@ In addition to adding new parameters, you can perform the following actions on p
 * **Move up** – to move a parameter up in the list of parameters and also to change its index, click **Move up**
 * **Move down** – to move a parameter down in the list of parameters and also to change its index, click **Move down**
 
-### 2.9 Common Section {#common}
+### Events Section {#events}
+
+**On Created** event allows you to select a microflow that is executed immediately after users have been determined for a newly created task instance. You can use this setting for a microflow that will send an email notification about the multi-user task to the assigned users.
+
+### Boundary Events Section {#boundary-events}
+
+For more information, see [Boundary Events](/refguide/workflow-boundary-events/).
+
+### Common Section {#common}
 
 **Name** is the internal name of the multi-user task. When referring to the multi-user task in the app you will use this name. It must be unique within the workflow, but you can have two multi-user tasks with the same name in different workflows.
 
-## 3 Read More
+## Read More
 
 * [Workflows](/refguide/workflows/)
 * [User Task](/refguide/user-task/)

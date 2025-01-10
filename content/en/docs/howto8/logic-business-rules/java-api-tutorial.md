@@ -4,7 +4,7 @@ url: /howto8/logic-business-rules/java-api-tutorial/
 weight: 13
 ---
 
-## 1 Introduction
+## Introduction
 
 This tutorial contains some examples of how to use the Java API provided by the Mendix Runtime. The tutorial assumes you have basic Java knowledge as well as basic Mendix modeling knowledge.
 
@@ -17,7 +17,7 @@ This how-to teaches you how to do the following:
 * Execute microflows and commit objects
 * Copy FileDocuments
 
-## 2 Executing Microflows and Committing Objects
+## Executing Microflows and Committing Objects
 
 There are cases in which you'd like to execute a microflow in a Java Action. This case will explain how to do this, including how to pass parameters and obtain the return value. Additionally, the result will be saved in an object and the object will be committed.
 
@@ -49,7 +49,7 @@ testObject.setTestString(context, formattedString);
 Core.commit(context, testObject.getMendixObject());
 ```
 
-## 3 Copying FileDocuments
+## Copying FileDocuments
 
 A FileDocument is a system module entity that holds the content of a file (for example, a text file or Excel sheet). For this case, we assume we have an entity called `GenericObject` that has a relation with an `Attachment` entity. The `Attachment` entity inherits from `FileDocument`. One `GenericObject` can have multiple `Attachments`. We'd like to copy the `Attachments` from one `GenericObject` to another so that they can be independently modified later.
 
@@ -109,7 +109,7 @@ for (IMendixObject iMendixObject: getAttachments(sourceObject, context))
 
 After this, all `Attachments` belonging to one `GenericObject` have been copied to another.
 
-## 4 Read More
+## Read More
 
 * [Create a Custom Save Button](/howto8/logic-business-rules/create-a-custom-save-button/)
 * [Trigger a Microflow From a Menu Item](/howto8/logic-business-rules/trigger-microflow-from-menu-item/)

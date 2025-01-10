@@ -4,7 +4,7 @@ url: /refguide8/activities/
 weight: 40
 ---
 
-## 1 Introduction
+## Introduction
 
 Activities define the actions that are executed in a microflow or a nanoflow.
 
@@ -14,7 +14,7 @@ There are different types of activity, and these are grouped together in the Stu
 Most activities can be used in both microflows and nanoflows. However, some can only be used in one of these types of flow, or the behavior may differ between microflows and nanoflows. Follow the links for more information.
 {{% /alert %}}
 
-## 2 Object Activities
+## Object Activities
 
 Object activities can be used to create and manipulate objects. The [domain model](/refguide8/domain-model/) defines the object types ([entities](/refguide8/entities/)) that can be used.
 
@@ -28,7 +28,7 @@ Object activities can be used to create and manipulate objects. The [domain mode
 | {{< figure src="/attachments/refguide8/modeling/application-logic/activities/retrieve.png" alt="retrieve" link="/refguide8/retrieve/" class="no-border" >}} | [Retrieve](/refguide8/retrieve/) | Gets one (or more) associated objects of another object. Furthermore, this activity can also get one or more objects directly from a database. |
 | {{< figure src="/attachments/refguide8/modeling/application-logic/activities/rollback.png" alt="rollback object" link="/refguide8/rollback-object/" class="no-border" >}} | [Rollback object](/refguide8/rollback-object/) | Rolls uncommitted changes back that were made to an object in the part of the microflow preceding the activity. Furthermore, it deletes objects that have been created but have never been committed. |
 
-## 3 List Activities
+## List Activities
 
 List activities can be used to create and manipulate lists of objects.
 
@@ -39,17 +39,17 @@ List activities can be used to create and manipulate lists of objects.
 | {{< figure src="/attachments/refguide8/modeling/application-logic/activities/create-list.png" alt="create list" link="/refguide8/create-list/" class="no-border" >}} | [Create list](/refguide8/create-list/) | Creates a (empty) list variable. |
 | {{< figure src="/attachments/refguide8/modeling/application-logic/activities/list-operation.png" alt="list operation" link="/refguide8/list-operation/" class="no-border" >}} | [List operation](/refguide8/list-operation/) | Combines or compares two lists with objects of the same entity. |
 
-## 4 Action Call Activities
+## Action Call Activities
 
 Action call activities can be used to call another microflow or to call a Java action.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide8/modeling/application-logic/activities/call-java-action.png" alt="java action call" link="/refguide8/java-action-call/" class="no-border" >}} | [Call Java action](/refguide8/java-action-call/) *(only in microflows)* | Calls a Java action. Arguments can be passed to the action and the result can be stored in a variable. |
+| {{< figure src="/attachments/refguide8/modeling/application-logic/activities/call-java-action.png" alt="Java action call" link="/refguide8/java-action-call/" class="no-border" >}} | [Call Java action](/refguide8/java-action-call/) *(only in microflows)* | Calls a Java action. Arguments can be passed to the action and the result can be stored in a variable. |
 | {{< figure src="/attachments/refguide8/modeling/application-logic/activities/call-javascript-action.png" alt="javascript action call" link="/refguide8/javascript-action-call/" class="no-border" >}} | [Call JavaScript action](/refguide8/javascript-action-call/) *(only in nanoflows)* | Calls a JavaScript action. Arguments can be passed to the action and the result can be stored in a variable. |
 | {{< figure src="/attachments/refguide8/modeling/application-logic/activities/call-microflow.png" alt="microflow call" link="/refguide8/microflow-call/" class="no-border" >}} | [Microflow call](/refguide8/microflow-call/) | Calls a microflow. Arguments can be passed to the microflow and the result can be stored in a variable. |
 
-## 5 Variable Activities
+## Variable Activities
 
 Variable activities can be used to create or change a variable within a microflow.
 
@@ -58,7 +58,7 @@ Variable activities can be used to create or change a variable within a microflo
 | {{< figure src="/attachments/refguide8/modeling/application-logic/activities/change-variable.png" alt="change variable" link="/refguide8/change-variable/" class="no-border" >}} | [Change variable](/refguide8/change-variable/) | Allows you to changes the value of a variable. |
 | {{< figure src="/attachments/refguide8/modeling/application-logic/activities/create-variable.png" alt="create variable" link="/refguide8/create-variable/" class="no-border" >}} | [Create variable](/refguide8/create-variable/) | Allows you to creates a new variable. |
 
-## 6 Client Activities
+## Client Activities
 
 Client activities can be used to have the web client of your application perform an action, such as showing a different page or downloading a file.
 
@@ -74,7 +74,7 @@ Client activities can be used to have the web client of your application perform
 | {{< figure src="/attachments/refguide8/modeling/application-logic/activities/synchronize.png" alt="synchronize" link="/refguide8/synchronize/" class="no-border" >}} | [Synchronize](/refguide8/synchronize/)  *(only in nanoflows)* | Synchronizes data. |
 | {{< figure src="/attachments/refguide8/modeling/application-logic/activities/validation-feedback.png" alt="validation feedback" link="/refguide8/validation-feedback/" class="no-border" >}} | [Validation feedback](/refguide8/validation-feedback/) | Allows you to display a red text below a widget that displays an attribute or association. |
 
-## 7 Integration Activities
+## Integration Activities
 
 Integration activities can be used to integrate with other systems, for example by calling a web service.
 
@@ -85,13 +85,13 @@ Integration activities can be used to integrate with other systems, for example 
 | {{< figure src="/attachments/refguide8/modeling/application-logic/activities/import-with-mapping.png" alt="import with mapping" link="/refguide8/import-mapping-action/" class="no-border" >}} | [Import with mapping](/refguide8/import-mapping-action/) | Can be used to parse the data in a string variable or data stored in a file document, and store them to entities defined in the [domain model](/refguide8/domain-model/) of the database. An [import mapping](/refguide8/import-mappings/) is used to map the incoming XML or JSON to entities. |
 | {{< figure src="/attachments/refguide8/modeling/application-logic/activities/export-with-mapping.png" alt="export with mapping" link="/refguide8/export-mapping-action/" class="no-border" >}} | [Export with mapping](/refguide8/export-mapping-action/) | Can be used to export the data stored in [domain model](/refguide8/domain-model/) entities into an XML or JSON string. It can also be stored in a file document. An [export mapping](/refguide8/export-mappings/) is used to map domain model entities into XML or JSON. |
 
-## 8 Logging Activities
+## Logging Activities
 
 | Graphic                                                      | Name                       | Description                                                  |
 | ------------------------------------------------------------ | -------------------------- | ------------------------------------------------------------ |
 | {{< figure src="/attachments/refguide8/modeling/application-logic/activities/log-message.png" alt="log message" link="/refguide8/log-message/" class="no-border" >}} | [Log message](/refguide8/log-message/) | Allows you to create messages that appear in the log of your Mendix application. |
 
-## 9 Document Generation Activities
+## Document Generation Activities
 
 | Graphic | Name | Description |
 | --- | --- | --- |

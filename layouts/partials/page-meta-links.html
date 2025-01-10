@@ -12,7 +12,7 @@
             {{ if $gh_url -}}
               <!-- NK - changed icon properties -->
               {{/* {{ warnf "Warning: use of `github_url` is deprecated. For details see https://www.docsy.dev/docs/adding-content/repository-links/#github_url-optional" -}}*/ -}}
-              <a data-proofer-ignore href="{{ $gh_url }}" target="_blank"><img class="my-icon" src="/icons/content-paper-edit.svg" title="Edit on GitHub"></a>
+              <a data-proofer-ignore href="{{ $gh_url }}" target="_blank"><img class="ToC-icon" src="/icons/content-paper-edit.svg" title="Edit on GitHub"></a>
             {{ else if $gh_repo -}}
               {{ $gh_repo_path := printf "%s/content/%s" $gh_branch $pathFormatted -}}
               {{ if and ($gh_subdir) (.Site.Language.Lang) -}}
@@ -42,11 +42,11 @@
               {{ $newPageQS := querify "value" $newPageStub.Content "filename" "change-me.md" | safeURL -}}
               {{ $newPageURL := printf "%s/new/%s?%s"  $gh_repo $gh_repo_path $newPageQS -}}
               <!-- NK - changed icon properties -->
-              <a data-proofer-ignore href="{{ $editURL }}" target="_blank"><img class="ToC-icon" src="/icons/notes-paper-edit-1.svg" title="View on GitHub"></a>
+              <a data-proofer-ignore href="{{ $editURL }}" target="_blank"><img class="ToC-icon" src="/icons/notes-paper-edit.svg" title="View on GitHub"></a>
           </div>
           <div class="col-3">
               <!-- NK - changed icon properties, added class name for feedback widget -->
-              <a href="{{ $issuesURL }}" target="_blank" class="feedback-issue"><img class="ToC-icon" src="/icons/message-bubble-typing-1.svg" title="Leave feedback"></a>
+              <a href="{{ $issuesURL }}" target="_blank" class="feedback-issue"><img class="ToC-icon" src="/icons/message-bubble-typing.svg" title="Leave feedback"></a>
               <!-- NK - deactivated icon for project issue -->
               {{/* {{ with $gh_project_repo -}}
                 {{ $project_issueURL := printf "%s/issues/new" . -}}
@@ -58,7 +58,7 @@
           </div>
           <div class="col-3">
             <!-- NK - changed icon properties -->
-            <a data-proofer-ignore id="print" href="{{ .Permalink | safeURL }}"><img class="ToC-icon" src="/icons/print-1.svg" title="Go to print view"></a>
+            <a data-proofer-ignore id="print" href="{{ .Permalink | safeURL }}"><img class="ToC-icon" src="/icons/print.svg" title="Go to print view"></a>
         {{ end }}
           </div>
       </div>

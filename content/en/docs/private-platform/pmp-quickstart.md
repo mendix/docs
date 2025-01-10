@@ -7,20 +7,20 @@ aliases:
     - /private-mendix-platform-quickstart/
 ---
 
-## 1 Introduction
+## Introduction
 
 This document provides a comprehensive guide for installing Private Mendix Platform, along with its optional components, in your own Kubernetes environment.
 
-### 1.1 Prerequisites
+### Prerequisites {#prerequisites}
 
 Private Mendix Platform depends on Mendix for Private Cloud for the installation and deployment of Mendix apps.
 
 Before starting the installation process, make sure that you have all the necessary prerequisites:
 
-* A Kubernetes instance where the target namespace has already been created. For more information, see [Supported Providers: Supported Versions](/developerportal/deploy/private-cloud-supported-environments/#211-supported-versions).
-* A database. For more information, see [Supported Providers: Databases](/developerportal/deploy/private-cloud-supported-environments/#databases).
-* File storage. For more information, see [Supported Providers: File Storage](/developerportal/deploy/private-cloud-supported-environments/#5-file-storage).
-* A registry. For more information, see [Supported Providers: Container Registries](/developerportal/deploy/private-cloud-supported-environments/#3-container-registries).
+* A Kubernetes instance where the target namespace has already been created. For more information, see [Supported Providers: Supported Versions](/developerportal/deploy/private-cloud-supported-environments/#supported-versions).
+* A PostgreSQL 12 database.
+* File storage. For more information, see [Supported Providers: File Storage](/developerportal/deploy/private-cloud-supported-environments/#file-storage).
+* A registry. For more information, see [Supported Providers: Container Registries](/developerportal/deploy/private-cloud-supported-environments/#container-registries).
 * A domain.
 * For the PCLM component:
 
@@ -32,15 +32,15 @@ Before starting the installation process, make sure that you have all the necess
 
     * A kubeconfig file with administrator privileges for your Kubernetes or OpenShift platform
     * A command line terminal that supports the console API and mouse interactions. In Windows, this can be PowerShell or the Windows Command Prompt.
-    * For OpenShit clusters, OpenShift CLI. For more information, see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html).
+    * For OpenShift clusters, OpenShift CLI. For more information, see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html).
     * Kubectl installed if you are deploying to another Kubernetes platform. For more information, see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/).
 
 * Optionally, if you plan to install the Svix component:
 
-    * An existing PostgreSQL database instance
-    * A Redis instance
+    * An existing PostgreSQL database instance.
+    * An optional Redis server version 6.2.0 or higher, for the task queue and cache. Using Redis is recommended for high availability, where you expect a high volume of webhook calls, or if you have multiple Svix servers. As a best practice, enable persistence in Redis so that tasks are persisted across Redis server restarts and upgrades.
 
-## 2 Installing and Configuring the Mendix Operator
+## Installing and Configuring the Mendix Operator
 
 To install and configure the Mendix Operator, perform the following steps:
 
@@ -132,7 +132,7 @@ To install and configure the Mendix Operator, perform the following steps:
     
         {{< figure src="/attachments/private-platform/pmp-install5.png" class="no-border" >}}
     
-### 2.1 Installing Private Cloud License Manager {#install-pclm}
+### Installing Private Cloud License Manager {#install-pclm}
 
 Private Cloud License Manager is a required component of Private Mendix Platform. Before you install the Platform, install PCLM by doing the following steps:
 
@@ -141,22 +141,79 @@ Private Cloud License Manager is a required component of Private Mendix Platform
 3. Specify the following parameters:
 
     * **Databasetype** – The database type, either **postgres** (default) or **sqlserver**.
+    * **DB Authentication mode** - The authentication mode for the database:
+        * **static** (default)
+        * **aws-irsa**
+        * **azure-wi**
     * **Host** – The host name of the database service.
-    * **DBName** – The name of the database where you want to hold the PCLM data.
-    * **DBUser** – A database user with the rights described in the prerequisites section.
-    * **DBPassword** – The password for the database user.
-    * **port** – The port used to access the database. The default value is *5432*.
-    * **Strict TLS** – Whether the database uses strict TLS. The default value is *false*.
-    * **ssl Cert File** – If Strict TLS is set to *true*, provide the location of the SSL Root certificate file. If Strict TLS is set to *false*, leave this field blank.
-    * **ImageRepo** – The location of the image repo, for example, `private-cloud.registry.mendix.com/privatecloud-license-manager`
-    * **ImageTag** – The docker image tag, for example, `0.3.0`.
-    * **Admin password** – A new PCLM admin password. When the PCLM server is set up, it contains an *administrator* user with a default password. This password should be modified immediately.
+    * **Port** – The port used to access the database. The default value is *5432*.
+    * **Database Name** – The name of the database where you want to hold the PCLM data.
+    * **Database User** – A database user with the rights described in the prerequisites section.
+    * **Database Password** – The password for the database user. This setting is available only when **DB Authentication mode** is set to **static**. 
+    * **AWS-iam-Role**  – The AWS IAM role. This setting is available only when **DB Authentication mode** is set to **aws-irsa**.
+    * **Azure-client-id** –  The Azure client ID. This setting is available only when **DB Authentication mode** is set to **azure-wi**.
+    * **ImageRepo** – The location of the image repo, for example, `private-cloud.registry.mendix.com/privatecloud-license-manager`.
+    * **Imagetag** – The docker image tag, for example, `0.3.0`.
+    * **DB SSL cert file** – If your database uses strict TLS, provide the location of the SSL Root certificate file. If not, leave this field blank.
+    * **Admin Password** – A new PCLM admin password. When the PCLM server is set up, it contains an *administrator* user with a default password. This password should be modified immediately.
     * **PCLM Operator User** – A new PCLM operator user.
     * **PCLM Operator Password** – A new PCLM operator password.
 
 4. Click **Install PCLM**.
 
-## 3 Installing the Private Mendix Platform
+## Optional: Installing the Svix Component {#install-svix}
+
+Svix is required if you want to use webhooks. Install the Svix component by doing the following steps:
+
+1. Optional: If you are using a self-signed TLS certificate, build and deploy a private Svix server with custom self-signed TLS certification by performing the following steps:
+    1. Prepare the following Docker file to build a private Svix server image:
+
+        ```text
+        # Base build
+        FROM svix/svix-server:v1.25.0
+        # Add customer certification into system cert trust chain
+        COPY ./customer.crt /usr/local/share/ca-certificates/
+        USER root
+        RUN update-ca-certificates
+        # Start svix service
+        USER appuser
+        CMD \
+            set -ex ; \
+            if [ ! -z "$WAIT_FOR" ]; then \
+                WAIT_FOR_ARG="--wait-for 15"; \
+            fi ; \
+            exec svix-server --run-migrations $WAIT_FOR_ARG
+        ```
+
+    2. Build your private Svix server image with the above Docker file and your self-signed TLS certificate file by running the following command:
+    
+        ```text
+        docker build -t {customer-private-image-registry-url}/svix/svix-server:v1.25.tls
+        ```
+    
+    3. Push your private Svix server image to your private image registry by running the following command:
+    
+        ```text
+        docker push {customer-private-image-registry-url}/svix/svix-server:v1.25.tls
+        ```
+    
+2. Run the command `./installer component -n=<namespace name>`, where `-n` indicates a namespace. The namespace must be the same as the namespace that you plan to use for Private Mendix Platform.
+3. Select **Svix**, and then specify the following parameters:
+
+    * **POSTGRES_DSN** - A Postgres DSN, for example, `postgresql://postgres:postgres@pgbouncer/postgres`.
+    * **Image** - The Svix image path. The default path is `svix/svix-server:v1.25.0`. If you are using a self-signed TLS certificate, set this path to `{customer-private-image-registry-url}/svix/svix-server:v1.25.tls`.
+    * **Use Redis** - Optional. Select this check box if you want to use Redis for message cache and queues.
+    * **REDIS_DSN** - The Redis DSN, for example, `redis://redis:6379`. This field is only available if you select the **Use Redis** check box.
+
+4. Click **Install Svix** or **Upgrade Svix**.
+
+{{< figure src="/attachments/private-platform/pmp-installer-update-svix.png" class="no-border" >}}
+
+{{% alert color="info" %}}
+The installer does not catch your pod's running status. In case of issues, verify that the pod is running correctly.
+{{% /alert %}}
+
+## Installing the Private Mendix Platform
 
 Install the Private Mendix Platform by doing the following steps:
 
@@ -168,22 +225,22 @@ Install the Private Mendix Platform by doing the following steps:
 3. Click **Configure**, and then specify the following parameters:
 
     * **AppName** - The default app name is `mxplatform`. You can change it as required.
-    * **DatasePlan/Storageplan** - The name of the plan that you created previously.
+    * **DatabasePlan/Storageplan** - The name of the plan that you created previously.
     * **AppUrl** - The endpoint where you can connect to your running app. It must be a URL which is supported by your platform. If you leave it blank, Mendix Operator will create it.
     * **EnableTLS** - Allows you to enable or disable TLS for the Mendix app's Ingress or OpenShift Router. The default value is use the default settings.
     * **TLS option** - Allows you to use an existing `kubernetes.io/tls` secret containing the TLS certificate, or to provide the `tls.crt` and `tls.key` values directly.
     * **TLS Secret** - An existing `kubernetes.io/tls` secret containing the TLS certificate. Cannot be used together with certificate and key. If you leave it blank, the default TLS certificate from the Ingress Controller or OpenShift Router will be used.
     * **TLS certificate** and **TLS key** – Allows you to provide the `tls.crt` and `tls.key` values directly (not recommended for production environments). Cannot be used together with secretName.
     * **SourceUrl** - The location of the deployment package, in the format `oci-image://<your image location>`. This location must be accessible from your cluster.
-    * **Replicas** – By default one replica will be started when you deploy your app.
+    * **Replicas** – When you deploy your app, one replica is deployed automatically. Do not increase the number of replicas yourself, as this may cause data to be duplicated.
 
     {{< figure src="/attachments/private-platform/pmp-install7.png" class="no-border" >}}
 
 4. Click **Runtime**, and then specify the following parameters:
 
     * **MxAdminPassword** - The password for the admin user. It must have at least one number, one upper case letter, one lower case letter and one symbol, with a minimum length of 12 characters.
-    * **dtapmode** - For the development of the app, for example acceptance testing, select **D**. For production deployments, select **P**. If integrated with PCLM, you can keep the value as **D**.
-    * **License Id/Secret** - Offline LicenseId (**UUID**) value provided by Mendix Support.
+    * **dtapmode** - For production deployments, leave this value set to **P**. For the development of the app, for example acceptance testing, set the value to **D**.
+    * **ApplicationRootUrl** - Optional. Manually specify the URL of your Private Mendix Platform, for example, for use with SSO or when sending emails. For more information about this functionality, see [ApplicationRootUrl Needs to be Set Manually](/developerportal/deploy/private-cloud-operator/#applicationrooturl-needs-to-be-set-manually).
 
     {{< figure src="/attachments/private-platform/pmp-install8.png" class="no-border" >}}
 
@@ -209,24 +266,16 @@ Install the Private Mendix Platform by doing the following steps:
 
 {{< figure src="/attachments/private-platform/pmp-install10.png" class="no-border" >}}
 
-## 4 Optional: Installing the Svix Component {#install-svix}
+### Adding Additional Components After Installing the Private Mendix Platform
 
-Svix is required if you want to use webhooks. Install the Svix component by doing the following steps:
+To ensure that components such as svix and PCLM work correctly, you should install them before you install the Private Mendix Platform itself. If you want to add a component after the Platform installation (for example, if you want to install svix because you decided to enable webhooks), you must perform the following steps:
 
-1. Run the command `./installer component -n=<namespace name>`, where `-n` indicates a namespace. The namespace must be the same as the namespace that you used for Private Mendix Platform.
-2. Select **Svix** and specify the following parameters:
+1. Install the component as described in [Installing Private Cloud License Manager](#install-pclm) and [Installing the Svix Component](#install-svix).
+2. Run the command `./installer platform -n=<namespace name>`, where `-n` is the same namespace as the one where you installed Svix and PCLM.
 
-    * **POSTGRES_DSN** - A Postgres DSN, for example, `postgresql://postgres:postgres@pgbouncer/postgres`
-    * **REDIS_DSN** - A Redis DSN, for example, `redis://redis:6379`
-    * **Image** - Svix server docker images which can access your cluster. The default value is set to the public registry `svix/svix-server:v0.75.0`. You can change it to your private image in a private cluster.
+Re-running the installation command ensures that the installer fetches the relevant information from the components that you added.
 
-3. Click **Install Svix**.
-
-{{% alert color="info" %}}
-The installer does not catch your pod's running status. In case of issues, verify that the pod is running correctly.
-{{% /alert %}}
-
-## 5 Upgrading the Private Mendix Platform
+## Upgrading the Private Mendix Platform {#upgrade}
 
 If you have installed Private Mendix Platform before, you can upgrade it by doing the following steps:
 
@@ -251,38 +300,38 @@ If you have installed Private Mendix Platform before, you can upgrade it by doin
     {{< figure src="/attachments/private-platform/pmp-upgrade2.png" class="no-border" >}}
 
 {{% alert color="info" %}}
-For the Svix component, you can use the Svix panel to upgrade directly.
+To upgrade the PCLM component, select the option **Upgrade PCLM** in the upgrade wizard. For the Svix component, you can use the Svix panel to upgrade directly.
 {{% /alert %}}
 
-## 6 Running the Private Platform Configuration Wizard {#wizard}
+## Running the Private Platform Configuration Wizard {#wizard}
 
 After you install Private Mendix Platform, run a one-time configuration wizard to configure the necessary settings.
 
-To start the wizard, log in to your Private Mendix Plaform app as an administrator. The wizard starts automatically and walks you through the required configuration steps. For more information about the available options, refer to the sections below.
+To start the wizard, log in to your Private Mendix Platform app with the user ID *Admin*. The wizard starts automatically and walks you through the required configuration steps. For more information about the available options, refer to the sections below.
 
 {{% alert color="info" %}}
 The settings that are enabled for your Private Mendix Platform depend on the service package that you have purchased. Because of that, some of the settings listed below may be disabled for your platform.
 {{% /alert %}}
 
-### 6.1 Configuring IdP Settings
+### Configuring IdP Settings
 
 In this step, you can specify whether you want to enable logging in via SSO for your users. Private Mendix Platform supports OIDC and SAML identity providers.
 
 {{< figure src="/attachments/private-platform/pmp-wizard1.png" class="no-border" >}}
 
-### 6.2 Configuring Management Settings
+### Configuring Management Settings
 
 In this step, you can specify whether you want to create and manage your app projects in Private Mendix Platform. If you enable the project management, you must also specify the Git host that will be used for the project. This option must be enabled if you want your Private Mendix Platform to support CI/CD capabilities.
 
 {{< figure src="/attachments/private-platform/pmp-wizard2.png" class="no-border" >}}
 
-### 6.3 Configuring CI/CD Settings
+### Configuring CI/CD Settings
 
 In this step, you can enable CI/CD capabilities for your app. If you enable this option, you must also specify your CI system, configure the necessary settings, and register a Kubernetes cluster.
 
 {{< figure src="/attachments/private-platform/pmp-wizard3.png" class="no-border" >}}
 
-### 6.4 Configuring Marketplace Settings
+### Configuring Marketplace Settings
 
 In this step, you can enable your app to upload and download connectors from the Marketplace.
 
@@ -292,16 +341,16 @@ The Marketplace enabled here is hosted entirely within your Private Mendix Platf
 
 {{< figure src="/attachments/private-platform/pmp-wizard4.png" class="no-border" >}}
 
-### 6.5 Configuring Custom Branding Settings
+### Configuring Custom Branding Settings
 
 In this step, you can customize the branding for your app. You may change the name that is displayed in the top bar, upload a new logo, or change the default login page image.
 
 {{< figure src="/attachments/private-platform/pmp-wizard5.png" class="no-border" >}}
 
-### 6.6 Reviewing and Confirming the Settings
+### Reviewing and Confirming the Settings
 
 After the wizard finishes running, you are logged in to your Private Mendix Platform. The settings that you previously selected are displayed on screen. You can review and update them now, or at a later point by using the **Settings** menu in the upper left corner of the screen.
 
-## 7 Next Steps
+## Next Steps
 
 After completing the installation and first-time configuration wizard, configure the remaining necessary settings. For more information, see [Configuring Private Mendix Platform](/private-mendix-platform-configuration/).

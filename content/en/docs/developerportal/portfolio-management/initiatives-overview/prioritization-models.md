@@ -8,19 +8,19 @@ description: "Describes the prioritization models supported by the Mendix Portfo
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 When you manage initiatives in a flow-based manner, only looking at each initiative's return on investment theoretically does not produce the best economic benefit. Instead, sequencing initiatives based on their priorities and updating their priorities continuously can bring you the best result.
 
 The [Portfolio Management](/developerportal/portfolio-management/) tool supports two prioritization models, WSJF and RICE. These two prioritization models can be used to prioritize your initiatives in a flow-based environment. WSJF and RICE are based on different components. You can pick the prioritization model that is most suitable for your portfolio management.
 
-## 2 WSJF {#wsjf}
+## WSJF {#wsjf}
 
 The weighted shortest job first (WSJF) score is calculated as the cost of delay (CoD) divided by the job size of an initiative. The CoD is the sum of the initiative's business value, time criticality, and risk reduction. If an initiative can deliver the most CoD with the smallest job size, it has the highest WSJF score, and provides the best chance of return.
 
 {{< figure src="/attachments/developerportal/portfolio-management/prioritization-models/wsjf-score-calculation.png" class="no-border" >}}
 
-### 2.1 Calculating CoD
+### Calculating CoD
 
 You can calculate the CoD by adding up the following three primary components:
 
@@ -30,7 +30,7 @@ You can calculate the CoD by adding up the following three primary components:
 
 During the calculation, **Highest**, **High**, **Medium**, **Low**, and **Lowest** translate to the numeric values 20, 13, 8, 5, and 1 respectively.
 
-### 2.2 Calculating Job Size
+### Calculating Job Size
 
 The job size of an initiative is the amount of effort that an initiative requires. In the Portfolio Management tool, the job size of an initiative is rated by five levels: **XL**, **L**, **M**, **S**, or **XS**. You should rate the job size of an initiative by comparing it with other initiatives. For example, you can set the initiative with the smallest job size to **XS**, and then set the other initiatives relative to that.
 
@@ -38,7 +38,7 @@ During the calculation, **XL**, **L**, **M**, **S**, and **XS** translate to the
 
 If the job size of an initiative is too big, Mendix recommends splitting it into multiple smaller initiatives.
 
-## 3 RICE {#rice}
+## RICE {#rice}
 
 You get the reach impact confident effort (RICE) score of an initiative by multiplying the Reach, Impact, and Confidence estimates and then dividing the result by the Effort estimate. An initiative with a higher RICE score has a better chance of return.
 

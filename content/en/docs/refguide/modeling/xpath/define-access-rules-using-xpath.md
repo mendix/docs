@@ -12,7 +12,7 @@ aliases:
 This example is using a version of Mendix below 10.5. In Mendix version 10.5 and above, the [XPath Constraints](/refguide/xpath-constraints/) dialog has a different UX which makes it easier to build XPath constraints. However, the concepts and XPath examples can still be used in Mendix version 10.5 and above.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The access rules of an entity define what a user is allowed to do with the objects of the entity. Users can be allowed to create and/or delete objects and to view and/or edit member values. A member is an attribute or an association of an entity. Furthermore, the set of objects available for viewing, editing, and removing can be limited by means of an XPath constraint (for details, see [XPath Constraints](/refguide/xpath-constraints/) in the *Studio Pro Guide*). For more information on access rules, see [Access Rules](/refguide/access-rules/) in the *Studio Pro Guide*.
 
@@ -22,7 +22,7 @@ This how-to teaches you how to do the following:
 
 * Define access rules for an entity using XPath
 
-## 2 Preparing the Data Structure, GUI, and Example Data
+## Preparing the Data Structure, GUI, and Example Data
 
 The access rules used in this how-to contain customer and order data. To define the access rules, you first need to set up the data structure, user roles, and GUI to maintain customer and order data.
 
@@ -61,7 +61,7 @@ To prepare the data structure, GUI, and example data, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18581002.png" class="no-border" >}}
 
-## 3 Defining the Access Rules on the Order Entity Using XPath
+## Defining the Access Rules on the Order Entity Using XPath
 
 In the previous section, you set up a basic data structure and created some sample data. In this section, you will define the access rules on the **Order** entity so that orders can only be viewed by a financial administrator if the payment status of the order is set to **Complete**. You will do this by adding an XPath constraint to the **Order** entity for the **FinancialAdministrator** module role.
 
@@ -84,6 +84,6 @@ To define the access rules on the **Order** entity using XPath, follow these ste
 
     {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18580994.png" class="no-border" >}}
 
-## 4 Read More
+## Read More
 
 * [Filtering Data on an Overview Page Using XPath](/refguide/filtering-data-on-an-overview-page/)

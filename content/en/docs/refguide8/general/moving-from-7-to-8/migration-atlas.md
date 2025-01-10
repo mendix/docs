@@ -5,7 +5,7 @@ weight: 20
 description: "This document explains how to fix your styling when migrating a project from Mendix 7 to Mendix 8."
 ---
 
-## 1 Introduction
+## Introduction
 
 When you upgrade to Mendix 8, your widgets' DOM structure will be changed. This means that the correlating Sass styling will not work as expected anymore. This document will allow you to make your theming compatible with Mendix 8.
 
@@ -21,20 +21,20 @@ If you are using a modified version of Atlas UI resources, Mendix cannot update 
 
 Follow the steps below to begin upgrading your Atlas UI Resources module:
 
-1. Download the latest [Atlas UI Resources](/appstore/modules/atlas-ui-resources/) module (v2.0.0 or higher).
+1. Download the latest [Atlas UI Resources](https://marketplace.mendix.com/link/component/104730) module (v2.0.0 or higher).
 2. Import this module into your app and replace the old resource module. This will overwrite the layouts, page templates, and building blocks inside of the resource module. The **theme** folder related to your old resource module will be moved to **theme_old**. You will get a new **theme** folder with the latest changes. From here, you must choose one of the following based on if you have custom styling or not:<br />
     * If you did not change anything in the old **theme** folder, you can safely remove **theme_old** and leave everything else as is. Your styling will work and you can stop with consulting this document. <br />
     * If you did change anything in the old **theme** folder, you will have to do some manual work to align your styling. Consult the information below to decide what to do based on your needs.
 
-## 2 Integrating the Old Theme Folder into the New One
+## Integrating the Old Theme Folder into the New One
 
 When migrating from Mendix 7 to Mendix 8, you must integrate **theme_old** into **theme** while adhering to several guidelines. Which guidelines you must follow vary based on your specific project. Consult the subsections below for instructions based on your unique case.
 
 {{% alert color="info" %}}If you customized any widget where the DOM structure has changed, consult [Troubleshoot DOM Changes when Migrating to Mendix 8](/refguide8/migration-dom-issues/) to ensure your custom styling works.{{% /alert %}}
 
-### 2.1 Working with HTML Files
+### Working with HTML Files
 
-If you have altered  your HTML files, consult the instructions below. If you have not, you may ignore this subsection.
+If you have altered your HTML files, consult the instructions below. If you have not, you may ignore this subsection.
 
 If you changed any **index\*.html** files, make sure to do the following:
 
@@ -50,11 +50,11 @@ If you changed any **login\*.html** files, complete the following actions:
 * Make sure you do not import `styles/css/lib/lib.css` anymore
 * Place either `<link*rel*="stylesheet" *type*="text/css" *href*="styles/web/css/main.css?{{cachebust}}">` or `{{themecss}}` inside of the `<head></head>` tags
 
-### 2.2 Working with JSON Files
+### Working with JSON Files
 
 If you have altered *settings.json* or *components.json* files, consult the instructions below. If you have not, you may ignore this subsection.
 
-#### 2.2.1 Design Properties
+#### Design Properties
 
 If you changed design properties in your theme, you must manually integrate them into the new Atlas UI.
 
@@ -64,7 +64,7 @@ If you have custom design properties which have not been moved to the new Atlas 
 
 Please move your custom design properties to the *settings.json* file of the new Atlas UI theme.
 
-### 2.2.2 Additional CSS Files
+### Additional CSS Files
 
 {{% alert color="warning" %}}
 Changing `cssFiles` is not recommended. Please consider moving custom CSS files to your *theme/styles/web/sass/app/_custom.scss* file.
@@ -97,7 +97,7 @@ If you changed hybrid mobile app imports in *components.json*, make sure to do t
 * Confirm the *bootstrap.min.css*, *bootstrap-rtl.min.css*, and *mxui.css* imports are gone (if they are not, delete them)
 * Confirm that *styles/css/lib/lib.css* is changed to *styles/web/css/main.css*    
 
-### 2.3 Working with Custom Folder Files
+### Working with Custom Folder Files
 
 If you have altered your custom folders, consult the instructions below. If you have not, you may ignore this subsection.
 
@@ -107,11 +107,11 @@ If you added or changed custom styling in the custom folder, copy your content o
 
 * In this case, also make sure that your old *custom.scss* file is renamed to *_custom.scss*
 
-### 2.4 Working with Lib Folder Files
+### Working with Lib Folder Files
 
 If you have altered your *styles/sass/lib* folder, consult the instructions below. If you have not, you may ignore this subsection.
 
-If you changed any files in the *styles/sass/lib* folder, complete the actions below::
+If you changed any files in the *styles/sass/lib* folder, complete the actions below:
 
 * If you changed a file’s content or name, you must manually make the same changes in the new file and in the new theme folder (while also keeping the Mendix 8 [DOM changes](/refguide8/migration-dom-issues/) in mind)
 * If you removed a file, no action is required
@@ -144,13 +144,13 @@ Make sure any custom or added Sass files are all imported in either *styles/web/
 
 After troubleshooting your issues with the guidance above, complete the following steps to test your migrated app:
 
-### 2.5 Working with a Modified Custom Folder {#modified}
+### Working with a Modified Custom Folder {#modified}
 
 1. Recompile your Sass to CSS.
 2. Test your app to see if everything works as expected.
 3. Delete *theme_old*.
 
-## 3 Read More
+## Read More
 
 * [Troubleshoot DOM Changes](/refguide8/migration-dom-issues/)
 * [Atlas UI](/howto8/front-end/atlas-ui/)

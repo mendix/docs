@@ -4,7 +4,11 @@ url: /howto8/front-end/create-company-atlas-ui-resources/
 weight: 30
 ---
 
-## 1 Introduction
+{{% alert color="info" %}}
+The Atlas UI Resources module is deprecated, as is Atlas 2. If you are still using Atlas 2, Mendix recommends that you [migrate from Atlas 2 To Atlas 3](/refguide9/moving-from-atlas-2-to-3/).
+{{% /alert %}}
+
+## Introduction
 
 Creating Atlas UI resources for your company is a great way to keep your company's apps in sync with your company brand. It’s easier to scale and manage apps throughout your app landscape when all the resources are neatly organized in a single module. 
 
@@ -14,13 +18,13 @@ This how-to teaches you how to do the following:
 * Create page templates
 * Export resources
 
-## 2 Creating Page Templates
+## Creating Page Templates
 
 The Atlas UI resources include a large variety of page templates to use. When creating an app, a lot of pages you create will be custom-made, and developers may want to reuse these page templates within the app or in other apps without having to start from scratch. This is now possible in Mendix Studio Pro.
 
 In the example below, we’ll go through the steps of creating a new page template and talk about how the page template behaves in a local app and in the **UI Resources** module.
 
-### 2.1 Example Scenario
+### Example Scenario
 
 In Studio Pro, go to the **Project Explorer** of your app and right-click the page you want to use as the page template. In this example, we are using a dashboard page.
 
@@ -46,13 +50,13 @@ When you create a new page in the module, it will now also show the created page
 
 Page templates in Atlas UI are all built with building blocks. In the next section, we will walk through the steps of creating building blocks.
 
-## 3 Creating Building Blocks
+## Creating Building Blocks
 
 Building blocks are single-purpose user interface elements comprised of multiple widgets. Multiple building blocks are usually used together on one page. Atlas UI comes with a variety of building blocks like cards, forms, headers, and controls.
 
 Every page can contain building blocks by grouping widgets together. In our example, we have a building block that consists of a container, title, text, and a button. This is a simple building block that is often used in apps.
 
-Go to a page and select a group of widgets that can be used as a building block. Right-click  the container or parent widget that includes the widgets, then select **Create building block**:
+Go to a page and select a group of widgets that can be used as a building block. Right-click the container or parent widget that includes the widgets, then select **Create building block**:
 
 {{< figure src="/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/creating_bb.png" class="no-border" >}}
 
@@ -71,7 +75,7 @@ The building block is now available in the **Toolbox**, where users can drag it 
 
 {{< figure src="/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/creating_bb_toolbox.png" class="no-border" >}}
 
-## 4 Moving from Local to Atlas UI Resources {#moving-from-local-to-atlas-ui-resources}
+## Moving from Local to Atlas UI Resources {#moving-from-local-to-atlas-ui-resources}
 
 Now that it’s clear how to create page templates and building blocks, we need to discuss how to get our resources from the **Local** category into a module that can be shared with our apps and users.
 
@@ -87,7 +91,7 @@ The **UI_Resources** module has been organized with folders that can be renamed 
 
 Adding an underscore to the folder name in Studio Pro (for example, **_Layouts**) ensures that the folder doesn’t get added to the categories for page templates or building blocks.
 
-## 5 Export Company Atlas UI Resources
+## Export Company Atlas UI Resources
 
 When the resources are ready to be shared with multiple developers or apps, the module can be exported from the Project Explorer. You are free to change the name of a module as long as the module has been exported as a UI resource package.
 
@@ -95,7 +99,7 @@ When the resources are ready to be shared with multiple developers or apps, the 
 
 The module can now be imported in other apps or uploaded to the [Mendix Marketplace](https://marketplace.mendix.com/). There is an option to make the resource module available for private use only so that everybody in your company can benefit from and extend the module.
 
-## 6 Read More
+## Read More
 
 * [Get Started with Atlas UI](/howto8/front-end/get-started-with-atlasui/)
 * [Create Custom Preview Images for Building Blocks and Page Templates](/howto8/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/)

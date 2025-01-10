@@ -1,0 +1,1440 @@
+openapi: 3.0.1
+info:
+  title: "Catalog API Common Definitions"
+  description: "These are the common definitions for the Catalog APIs."
+  termsOfService: "#"
+  contact:
+    email: PlatformCore@mendix.com
+  version: "5.1.0"
+paths:
+  "/applications/{AppUUID}/services/{ServiceName}":
+    get:
+      tags:
+        - Service Versions
+      summary: "Retrieves details of all the versions and their endpoints for a specified service."
+      security:
+        - OAuth2:
+            [
+              "mx:datahub:services:read",
+              "openid",
+              "offline_access",
+              "mx:user:profile:v1:read",
+            ]
+        - PersonalAccessTokens: []
+      parameters:
+        - $ref: "#/components/parameters/AppUUID_Path"
+        - $ref: "#/components/parameters/ServiceName_Path"
+      responses:
+        "200":
+          $ref: "#/components/responses/Service_GET_200"
+        "400":
+          $ref: "#/components/responses/400"
+        "401":
+          $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
+        "404":
+          $ref: "#/components/responses/404"
+        "410":
+          $ref: "#/components/responses/410"
+        "500":
+          $ref: "#/components/responses/500"
+components:
+  parameters:
+    AppUUID_Path:
+      in: "path"
+      name: "AppUUID"
+      schema:
+        type: string
+        format: uuid
+      required: true
+      description: "Valid UUID of the specified application."
+    EnvironmentUUID_Path:
+      in: "path"
+      name: "EnvironmentUUID"
+      schema:
+        type: string
+        format: uuid
+      required: true
+      description: "Valid UUID of the specified environment."
+    EndpointUUID_Path:
+      in: "path"
+      name: "EndpointUUID"
+      schema:
+        type: string
+      required: true
+      description: "Valid UUID of the specified endpoint."
+    ServiceName_Path:
+      in: "path"
+      name: "ServiceName"
+      schema:
+        type: string
+        maxLength: 200
+      required: true
+      description: "Name of the specified service."
+  responses:
+    "204":
+      description: "No content"
+    "400":
+      description: "Incorrect Input"
+      headers:
+        X-Api-Version:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/XApiVersion"
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/Error_Base"
+              - type: object
+                properties:
+                  code:
+                    description: "Code describing why the request failed."
+                    example: "INVALID_REQUEST"
+                  message:
+                    description: "Message detailing the reason why the request failed. A response with HTTP status 400 indicates (some of) the provided parameters with the request are invalid."
+                    example: "Invalid input"
+    "401":
+      description: "Authentication Failed"
+      headers:
+        WWW-Authenticate:
+          schema:
+            type: string
+            description: Message detailing challenge to the request.
+        X-Api-Version:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/XApiVersion"
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/Error_Base"
+              - type: object
+                properties:
+                  code:
+                    description: "Code describing why the request failed."
+                    example: "UNAUTHORIZED"
+                  message:
+                    description: "Message detailing the reason why the request failed. A response with HTTP status 401 indicates the provided means of authentication was not accepted."
+                    example: "Credentials could not be authenticated."
+    "403":
+      description: "Forbidden"
+      headers:
+        X-Api-Version:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/XApiVersion"
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/Error_Base"
+              - type: object
+                properties:
+                  code:
+                    description: "Code describing why the request failed."
+                    example: "FORBIDDEN"
+                  message:
+                    description: "Message detailing the reason why the request failed. A response with HTTP status 403 indicates that the provided means of authentication does not give access to the requested resource."
+                    example: "You do not have access to the requested resource."
+    "404":
+      description: "Not Found"
+      headers:
+        X-Api-Version:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/XApiVersion"
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/Error_Base"
+              - type: object
+                properties:
+                  code:
+                    description: "Code describing why the request failed."
+                    example: "NOT_FOUND"
+                  message:
+                    description: "Message detailing the reason why the request failed. A response with HTTP status 404 indicates that the requested resource could not be found."
+                    example: "Could not find the requested resource."
+    "409":
+      description: "Conflict"
+      headers:
+        X-Api-Version:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/XApiVersion"
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/Error_Base"
+              - type: object
+                properties:
+                  code:
+                    description: "Code describing why the request failed."
+                    example: "CONFLICT"
+                  message:
+                    description: "Message detailing the reason why the request failed. A response with HTTP status 409 indicates a conflict with the data already existing in the Catalog."
+                    example: "Another environment ({UUID}) already exists in your company with the provided location."
+    "410":
+      description: "Unsupported Version"
+      headers:
+        X-Api-Version:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/XApiVersion"
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/Error_Base"
+              - type: object
+                properties:
+                  code:
+                    description: "Code describing why the request failed."
+                    example: "UNSUPPORTED_VERSION"
+                  message:
+                    description: "Message detailing the reason why the request failed. A response with HTTP status 410 indicates that the requested operation is not supported by this version of the API."
+                    example: "This version of the API is no longer available."
+    "500":
+      description: "Internal Server Error"
+      headers:
+        X-Api-Version:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/XApiVersion"
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/Error_Base"
+              - type: object
+                properties:
+                  code:
+                    description: "Code describing why the request failed."
+                    example: "INTERNAL_SERVER_ERROR"
+                  message:
+                    description: "Message detailing the reason why the request failed. A response with HTTP status 500 indicates that an unexpected error occurred while the server was processing the request. If the problem persists you should contact Mendix Support."
+                    example: "An internal server error occurred."
+    Service_GET_200:
+      description: OK
+      headers:
+        X-Api-Version:
+          $ref: "catalog-common-definitions_v5.yaml#/components/headers/XApiVersion"
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/Service_Response"
+              - type: object
+                required:
+                  - application
+                properties:
+                  application:
+                    $ref: "#/components/schemas/Application_Response"
+                  versions:
+                    type: array
+                    items:
+                      anyOf:
+                        - $ref: "#/components/schemas/ServiceVersion_ResponseWithEndpointsArrayASynchronousTechnology"
+                        - $ref: "#/components/schemas/ServiceVersion_ResponseWithEndpointsArraySynchronousTechnology"
+                      discriminator:
+                        propertyName: type
+                        mapping:
+                          OData: "#/components/schemas/ServiceVersion_ResponseWithEndpointsArraySynchronousTechnology"
+                          SOAP: "#/components/schemas/ServiceVersion_ResponseWithEndpointsArraySynchronousTechnology"
+                          REST: "#/components/schemas/ServiceVersion_ResponseWithEndpointsArraySynchronousTechnology"
+                          Business Events: "#/components/schemas/ServiceVersion_ResponseWithEndpointsArrayASynchronousTechnology"
+  schemas:
+    Action:
+      type: object
+      description: Action details at this endpoint
+      required:
+        - name
+        - fullyQualifiedName
+      properties:
+        name:
+          type: string
+          maxLength: 200
+          description: The name of the action.
+          example: "MyAction"
+        fullyQualifiedName:
+          type: string
+          maxLength: 200
+          description: The name of the action including namespace.
+          example: "MyNamespace.MyAction"
+        summary:
+          type: string
+          maxLength: 500
+          description: Summary of the action.
+          example: "Summary of the action"
+        description:
+          type: string
+          maxLength: 10000
+          description: Description of the action.
+          example: "Description of the action"
+        totalParameters:
+          type: integer
+          description: The number of parameters in the parameters array.
+          example: 1
+        parameters:
+          type: array
+          description: List of the parameters belonging to this action.
+          items:
+            $ref: "#/components/schemas/Parameter"
+        returnType:
+          allOf:
+            - $ref: "#/components/schemas/ReturnType"
+    Application_Base:
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          maxLength: 200
+          example: "AcmeHR"
+          description: "Name of the application."
+        description:
+          type: string
+          maxLength: 10000
+          example: "This application is used to manage the entire HR process of AcmeCorp"
+          description: "Description of the application"
+        repositoryLocation:
+          type: string
+          format: uri
+          maxLength: 400
+          example: "https://teamserver.sprintr.com/e0fb450a-203f-3e0a-ae3c-9cadaea00743"
+          description: "Location of the development repository of the application."
+        type:
+          type: string
+          enum:
+            [Mendix, Teamcenter, MindSphere, Microsoft, SAP, Opcenter, Other]
+          example: "Mendix"
+          description: 'Type of the application, possible values are "Mendix", "Teamcenter", "MindSphere", "Microsoft", "SAP", "Opcenter" and "Other" (Default)'
+        businessOwner:
+          allOf:
+            - $ref: "#/components/schemas/Owner"
+            - type: object
+              description: "Business owner of the application."
+        technicalOwner:
+          allOf:
+            - $ref: "#/components/schemas/Owner"
+            - type: object
+              description: "Technical owner of the application."
+    Application_Response:
+      allOf:
+        - $ref: "#/components/schemas/Application_Base"
+        - type: object
+          required:
+            - type
+            - uuid
+            - icon
+          properties:
+            uuid:
+              type: string
+              format: uuid
+              example: "cfc36b98-7409-4384-b71d-f003b0c2f84b"
+              description: "UUID that uniquely identifies the application in the Mendix Platform."
+            icon:
+              type: string
+              format: uri
+              description: URL of the icon location
+              example: "https://cdn.mendix.com/image.png"
+    Association:
+      type: object
+      description: Details of an association belonging to an entity
+      required:
+        - name
+        - referencedDataset
+        - multiplicity
+        - entitySetName
+        - entityTypeName
+        - namespace
+        - updatable
+        - insertable
+        - countable
+      properties:
+        name:
+          type: string
+          maxLength: 200
+          description: The name of the association.
+          example: "Employee_Car"
+        referencedDataset:
+          type: string
+          maxLength: 200
+          description: The associated entity.
+          example: "Car"
+        multiplicity:
+          type: string
+          enum: ["0..1", "1", "*"]
+        entitySetName:
+          type: string
+          maxLength: 200
+          description: EntitySet name of the associated entity.
+          example: "Cars"
+        entityTypeName:
+          type: string
+          maxLength: 200
+          description: EntityType name of the associated entity.
+          example: "Car"
+        namespace:
+          type: string
+          maxLength: 200
+          description: Namespace of the associated entity.
+          example: "SUPC_SCHEMA_V_1_0"
+        updatable:
+          type: boolean
+          description: Indicates if the dataset supports updates to this association.
+        insertable:
+          type: boolean
+          description: Indicates if the dataset supports setting this association when creating a new instance of the entity.
+        countable:
+          type: boolean
+          description: Indicates if this dataset is countable.
+    Attribute:
+      type: object
+      description: Details of an attribute belonging to an entity
+      required:
+        - name
+        - typeName
+        - typeKind
+        - updatable
+        - insertable
+        - countable
+        - filterable
+        - sortable
+      properties:
+        name:
+          type: string
+          maxLength: 200
+          description: The name of the attribute.
+          example: "Name"
+        typeName:
+          type: string
+          maxLength: 500
+          description: The type of the attribute.
+          example: "Edm.Int16"
+        typeKind:
+          type: string
+          enum: ["Primitive", "Complex", "Enum"]
+          description: The type category of the attribute
+        updatable:
+          type: boolean
+          description: Indicates if the dataset supports updates to this attribute.
+        insertable:
+          type: boolean
+          description: Indicates if the dataset supports setting this attribute when creating a new instance of the entity.
+        countable:
+          type: boolean
+          description: Indicates if this dataset is countable.
+        filterable:
+          type: boolean
+          description: Indicates if this dataset supports usage of `$filter` for navigation properties.
+        sortable:
+          type: boolean
+          description: Indicates if this dataset supports usage of `$orderby` for navigation properties.
+    ActionInputOutput:
+      type: object
+      description: Details of an input/output belonging to an action
+      required:
+        - typekind
+        - typeName
+        - isCollection
+      properties:
+        typekind:
+          type: string
+          enum: ["Primitive", "Complex", "Enum"]
+          description: The type category of the parameter/returnType.
+        typeName:
+          type: string
+          maxLength: 200
+          description: The type of the parameter/returnType.
+          example: "Edm.Int16"
+        isCollection:
+          type: boolean
+          description: Indicates if a parameter/returnType is a single entry or a list.
+        nullable:
+          type: boolean
+          description: Indicates if a parameter/returnType can be null.
+    BusinessEvent:
+      type: object
+      description: Details of the business event
+      required:
+        - name
+        - fullyQualifiedName
+        - channelId
+        - canPublish
+        - canSubscribe
+      properties:
+        name:
+          type: string
+          maxLength: 200
+          description: The name of the business event
+          example: MyFirstEvent
+        fullyQualifiedName:
+          type: string
+          maxLength: 200
+          description: The name of the business event including namespace
+          example: BES.MyFirstEvent
+        description:
+          type: string
+          maxLength: 10000
+          description: Description of the business event.
+          example: "Description of the business event"
+        channelId:
+          type: string
+          maxLength: 200
+          description: Unique identifier of the channel
+          example: "4856034ac1a34a34abc8d4e5e9e324a0"
+        canPublish:
+          type: boolean
+          description: "Indicates whether consumers can publish or not"
+          example: True
+        canSubscribe:
+          type: boolean
+          description: "Indicates whether consumers can subscribe or not"
+          example: True
+        totalAttributes:
+          type: integer
+          description: The total number of business events at this data source (endpoint)
+          example: 1
+        attributes:
+          type: array
+          items:
+            $ref: "#/components/schemas/BusinessEventAttribute"
+          description: "List of attributes belonging to the business event"
+    BusinessEventAttribute:
+      type: object
+      required:
+        - name
+        - typeKind
+        - typeName
+      properties:
+        name:
+          type: string
+          maxLength: 200
+          description: The name of the attribute.
+          example: "StringAttribute"
+        typeKind:
+          type: string
+          enum: ["Primitive", "Enum"]
+          description: The type category of the attribute
+          example: "Primitive"
+        typeName:
+          type: string
+          maxLength: 200
+          description: The type of the attribute.
+          example: "Integer"
+        description:
+          type: string
+          maxLength: 10000
+          description: The description of the attribute.
+          example: "Description of the attribute"
+    Capabilities:
+      type: string
+      enum:
+        - creatable
+        - updatable
+        - deletable
+        - countable
+        - topsupported
+        - skipsupported
+        - filterable
+        - sortable
+    ConsumedItem_Base:
+      type: object
+      required:
+        - type
+      properties:
+        type:
+          type: string
+          enum: ["EntitySet"]
+          description: "Type of item being consumed. Currently only `EntitySet` is supported."
+          example: "EntitySet"
+    ConsumedItem_Request:
+      allOf:
+        - $ref: "#/components/schemas/ConsumedItem_Base"
+        - oneOf:
+            - $ref: "#/components/schemas/ConsumedItem_EntitySetRequest"
+          discriminator:
+            propertyName: type
+            mapping:
+              EntitySet: "#/components/schemas/ConsumedItem_EntitySetRequest"
+      example:
+        type: "EntitySet"
+        name: "ManagingEmployees"
+        nameSpace: "DefaultNameSpace"
+    ConsumedItem_EntitySetRequest:
+      type: object
+      required:
+        - name
+      properties:
+        namespace:
+          type: string
+          maxLength: 200
+          description: "Namespace from which the EntitySet is consumed. Note that while this field is optional, we strongly recommend including it. Not doing so could result in ambiguous situations where it is impossible to register consumptions, for example when the consumed EntitySet name exists in multiple Namespaces in the published endpoint."
+          example: "DefaultNamespace"
+        name:
+          type: string
+          maxLength: 200
+          description: "Name of the EntitySet being consumed."
+          example: "ManagingEmployees"
+    ConsumedItem_Response:
+      allOf:
+        - $ref: "#/components/schemas/ConsumedItem_Base"
+        - oneOf:
+            - $ref: "#/components/schemas/ConsumedItem_EntitySetResponse"
+          discriminator:
+            propertyName: type
+            mapping:
+              EntitySet: "#/components/schemas/ConsumedItem_EntitySetResponse"
+      example:
+        type: "EntitySet"
+        name: "ManagingEmployees"
+        nameSpace: "DefaultNameSpace"
+    ConsumedItem_EntitySetResponse:
+      type: object
+      required:
+        - name
+        - namespace
+      properties:
+        namespace:
+          type: string
+          maxLength: 200
+          description: "Namespace from which the EntitySet is consumed."
+          example: "DefaultNamespace"
+        name:
+          type: string
+          maxLength: 200
+          description: "Name of the EntitySet being consumed."
+          example: "ManagingEmployees"
+    Contract_Base:
+      type: object
+      required:
+        - documentBaseURL
+        - documents
+        - type
+      properties:
+        type:
+          type: string
+          enum: ["CSDL", "Open API", "WSDL", "Async API"]
+          description: "Protocol used by the service. Currently supported values: CSDL | Open API | WSDL | Async API"
+          example: "CSDL"
+        documentBaseURL:
+          type: string
+          description: "This is the Document Base URL where the documents can be found and to which relative document URIs are relative to."
+          example: "https://AnimalKingdom.com/odata/v1/docs"
+        documents:
+          type: array
+          description: List of contract documents which this contract includes (ie, depends upon); only supported for OData_4_0_Xml services.
+          items:
+            $ref: "#/components/schemas/Documents"
+    Contract_Base_URI:
+      allOf:
+        - $ref: "#/components/schemas/Contract_Base"
+        - type: object
+          properties:
+            documentBaseURL:
+              format: uri
+    Contract_Response:
+      allOf:
+        - $ref: "#/components/schemas/Contract_Base"
+        - type: object
+          properties:
+            specificationVersion:
+              type: string
+              description: "Specification version implemented by the service"
+              example: "3.0"
+    Details_BusinessEvents:
+      type: object
+      description: List of BusinessEvents resources
+      properties:
+        totalBusinessEvents:
+          type: integer
+          description: The total number of business events at this data source (endpoint)
+          example: 1
+        businessEvents:
+          type: array
+          items:
+            $ref: "#/components/schemas/BusinessEvent"
+    Details_OData:
+      type: object
+      description: List of Odata resources
+      properties:
+        totalEntities:
+          type: integer
+          description: The total number of entities at this data source (endpoint)
+          example: 1
+        entities:
+          type: array
+          items:
+            $ref: "#/components/schemas/Entity"
+        totalActions:
+          type: integer
+          description: The total number of actions at this data source (endpoint)
+          example: 1
+        actions:
+          type: array
+          items:
+            $ref: "#/components/schemas/Action"
+    Details_Soap:
+      type: object
+      description: List of SOAP resources
+    Details_Rest:
+      type: object
+      description: List of REST resources
+    Documents:
+      type: object
+      required:
+        - uri
+        - contents
+      properties:
+        isPrimary:
+          type: boolean
+          description: Indicate whether the document is the primary document or not. In case of multiple files, Only 1 file can be marked as true.
+          example: true
+        uri:
+          type: string
+          format: uri-reference
+          description: The absolute/relative URI of the document.
+          example: "metadata.xml"
+        contents:
+          type: string
+          description: The string contents of the document
+          example: '<?xml version=\"1.0\" encoding=\"utf-8\"?><edmx:Edmx Version=\"1.0\" xmlns:edmx=\"http://schemas.microsoft.com/ado/2007/06/edmx\" xmlns:mx=\"http://www.mendix.com/Protocols/MendixData\">  <edmx:DataServices m:DataServiceVersion=\"3.0\" m:MaxDataServiceVersion=\"3.0\" xmlns:m=\"http://schemas.microsoft.com/ado/2007/08/dataservices/metadata\">    <Schema Namespace=\"DefaultNamespace\" xmlns=\"http://schemas.microsoft.com/ado/2009/11/edm\"><EntityType Name=\"Employee\"><Key><PropertyRef Name=\"ID\" /></Key><Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" MaxLength=\"200\" /><Property Name=\"DateOfBirth\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"Address\" Type=\"Edm.String\" MaxLength=\"200\" /><Property Name=\"JobTitle\" Type=\"Edm.String\" MaxLength=\"200\" /><Property Name=\"Salary\" Type=\"Edm.Decimal\" /></EntityType><EntityContainer Name=\"test.acme.employeeinformation/v1Entities\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"Employees\" EntityType=\"DefaultNamespace.Employee\" /></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>'
+    Endpoint_Base:
+      type: object
+      properties:
+        path:
+          type: string
+          maxLength: 400
+          description: "Path to the endpoint. This will be returned for synchronous technologies such as OData, REST and SOAP"
+          example: "/employeeservice/v2"
+        discoverable:
+          type: boolean
+          description: "Indicates whether the endpoint can be found through searches and then consumed by another application."
+          example: true
+        validated:
+          type: boolean
+          description: "Indicates whether a curator has reviewed the metadata of this endpoint and vouched for its correctness."
+          example: true
+    Endpoint_ResponseBase:
+      allOf:
+        - $ref: "#/components/schemas/Endpoint_Base"
+        - type: object
+          required:
+            - securityClassification
+            - discoverable
+            - validated
+            - uuid
+            - lastUpdated
+            - links
+          properties:
+            uuid:
+              type: string
+              format: uuid
+              description: "UUID that uniquely identifies the endpoint in the Mendix Platform."
+              example: "9e26c386-9316-4a33-9963-8fe9f69a5117"
+            securityClassification:
+              type: string
+              enum: ["Internal", "Public", "Confidential"]
+              description: The access restrictions for this service. Currently supported values are Public, Internal (restricted to company), or Confidential (restricted within company). (Default&#58; Internal)
+            connections:
+              type: integer
+              description: Number of application environments consuming this endpoint. Currently only relevant for OData endpoints
+              example: 17
+            lastUpdated:
+              type: string
+              format: date-time
+              description: UTC timestamp of the most recent update to the service.
+              example: "2019-01-01T15:22:58.981Z"
+            links:
+              type: array
+              items:
+                $ref: "#/components/schemas/Link"
+              example:
+                - rel: "Self"
+                  href: "https://catalog.mendix.com/rest/registration/v4/endpoints/9e26c386-9316-4a33-9963-8fe9f69a5117"
+                - rel: "Catalog"
+                  href: "https://catalog.mendix.com/link/endpoint?EndpointUUID=9e26c386-9316-4a33-9963-8fe9f69a5117"
+    Endpoints_ResponseWithEnvironment:
+      allOf:
+        - $ref: "#/components/schemas/Endpoint_ResponseBase"
+        - type: object
+          required:
+            - environment
+          properties:
+            environment:
+              $ref: "#/components/schemas/Environment_Response"
+    Endpoint_ResponseSynchronousTechnology:
+      allOf:
+        - $ref: "#/components/schemas/Endpoints_ResponseWithEnvironment"
+        - required:
+            - path
+    Endpoint_PublishedRequest:
+      allOf:
+        - $ref: "#/components/schemas/Endpoint_Base"
+        - type: object
+          required:
+            - serviceVersion
+            - path
+          properties:
+            serviceVersion:
+              $ref: "#/components/schemas/ServiceVersion_Request"
+    Endpoint_PublishedResponseArray:
+      allOf:
+        - $ref: "#/components/schemas/Endpoint_ResponseBase"
+        - type: object
+          required:
+            - serviceVersion
+          properties:
+            serviceVersion:
+              anyOf:
+                - $ref: "#/components/schemas/ServiceVersion_Response"
+                - $ref: "#/components/schemas/ServiceVersion_ResponseSynchronousTechnology"
+              discriminator:
+                propertyName: type
+                mapping:
+                  OData: "#/components/schemas/ServiceVersion_ResponseSynchronousTechnology"
+                  SOAP: "#/components/schemas/ServiceVersion_ResponseSynchronousTechnology"
+                  REST: "#/components/schemas/ServiceVersion_ResponseSynchronousTechnology"
+                  Business Events: "#/components/schemas/ServiceVersion_Response"
+    Endpoint_PublishedResponseSingle:
+      allOf:
+        - $ref: "#/components/schemas/Endpoint_ResponseBase"
+        - type: object
+          required:
+            - serviceVersion
+            - environment
+          properties:
+            location:
+              type: string
+              description: "The location at which the endpoint is published."
+              example: "https://hr.acmecorp.test/employeeservice/v2"
+            serviceVersion:
+              allOf:
+                - anyOf:
+                    - $ref: "#/components/schemas/ServiceVersionResponseWithODataDetails"
+                    - $ref: "#/components/schemas/ServiceVersionResponseWithSOAPDetails"
+                    - $ref: "#/components/schemas/ServiceVersionResponseWithRESTDetails"
+                    - $ref: "#/components/schemas/ServiceVersionResponseWithBusinessEventDetails"
+                  discriminator:
+                    propertyName: type
+                    mapping:
+                      OData: "#/components/schemas/ServiceVersionResponseWithODataDetails"
+                      SOAP: "#/components/schemas/ServiceVersionResponseWithSOAPDetails"
+                      REST: "#/components/schemas/ServiceVersionResponseWithRESTDetails"
+                      Business Events: "#/components/schemas/ServiceVersionResponseWithBusinessEventDetails"
+                - type: object
+                  required:
+                    - contracts
+                  properties:
+                    contracts:
+                      type: array
+                      items:
+                        $ref: "#/components/schemas/Contract_Response"
+                      example:
+                        - type: "CSDL"
+                          specificationVersion: "3.0"
+                          documentBaseURL: "https://hr.acmecorp.test/odata/test.acme.employeeinformation/v1/"
+                          documents:
+                            - isPrimary: true
+                              uri: "metadata.xml"
+                              contents: '<?xml version=\"1.0\" encoding=\"utf-8\"?><edmx:Edmx Version=\"1.0\" xmlns:edmx=\"http://schemas.microsoft.com/ado/2007/06/edmx\" xmlns:mx=\"http://www.mendix.com/Protocols/MendixData\">  <edmx:DataServices m:DataServiceVersion=\"3.0\" m:MaxDataServiceVersion=\"3.0\" xmlns:m=\"http://schemas.microsoft.com/ado/2007/08/dataservices/metadata\">    <Schema Namespace=\"DefaultNamespace\" xmlns=\"http://schemas.microsoft.com/ado/2009/11/edm\"><EntityType Name=\"Employee\"><Key><PropertyRef Name=\"ID\" /></Key><Property Name=\"ID\" Type=\"Edm.Int64\" Nullable=\"false\" mx:isAttribute=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" MaxLength=\"200\" /><Property Name=\"DateOfBirth\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"Address\" Type=\"Edm.String\" MaxLength=\"200\" /><Property Name=\"JobTitle\" Type=\"Edm.String\" MaxLength=\"200\" /><Property Name=\"Salary\" Type=\"Edm.Decimal\" /></EntityType><EntityContainer Name=\"test.acme.employeeinformation/v1Entities\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"Employees\" EntityType=\"DefaultNamespace.Employee\" /></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>'
+            environment:
+              $ref: "#/components/schemas/Environment_ResponseWithApplication"
+    Endpoint_ConsumedRequest:
+      type: object
+      required:
+        - endpointLocation
+      properties:
+        endpointLocation:
+          type: string
+          format: uri
+          maxLength: 500
+          description: "Absolute URL of the consumed endpoint."
+          example: "https://hr.acmecorp.test/employeeservice/v2"
+        consumedItems:
+          type: array
+          items:
+            $ref: "#/components/schemas/ConsumedItem_Request"
+          example:
+            - type: "EntitySet"
+              name: "ManagingEmployees"
+              namespace: "DefaultNamespace"
+    Endpoint_ConsumedResponse:
+      allOf:
+        - $ref: "#/components/schemas/Endpoint_PublishedResponseArray"
+        - type: object
+          required:
+            - environment
+          properties:
+            consumedItems:
+              type: array
+              items:
+                $ref: "#/components/schemas/ConsumedItem_Response"
+            environment:
+              $ref: "#/components/schemas/Environment_ResponseWithApplication"
+    Endpoint_ConsumedResponseSingle:
+      allOf:
+        - $ref: "#/components/schemas/Endpoint_ResponseBase"
+        - type: object
+          required:
+            - serviceVersion
+            - environment
+          properties:
+            serviceVersion:
+              anyOf:
+                - $ref: "#/components/schemas/ServiceVersion_Response"
+                - $ref: "#/components/schemas/ServiceVersion_ResponseSynchronousTechnology"
+              discriminator:
+                propertyName: type
+                mapping:
+                  OData: "#/components/schemas/ServiceVersion_ResponseSynchronousTechnology"
+                  SOAP: "#/components/schemas/ServiceVersion_ResponseSynchronousTechnology"
+                  REST: "#/components/schemas/ServiceVersion_ResponseSynchronousTechnology"
+                  Business Events: "#/components/schemas/ServiceVersion_Response"
+            environment:
+              $ref: "#/components/schemas/Environment_ResponseWithApplication"
+            consumedItems:
+              type: array
+              items:
+                $ref: "#/components/schemas/ConsumedItem_Response"
+    Entity:
+      type: object
+      description: Entity details at this endpoint
+      required:
+        - name
+        - entitySetName
+        - entityTypeName
+        - namespace
+        - validated
+        - deletable
+        - updatable
+        - insertable
+        - countable
+        - topSupported
+        - skipSupported
+        - filterable
+        - sortable
+        - links
+      properties:
+        name:
+          type: string
+          maxLength: 200
+          description: The name of the entity.
+          example: "Employees"
+        entitySetName:
+          type: string
+          maxLength: 200
+          description: The name of the entity set.
+          example: "Employee_Cars"
+        entityTypeName:
+          type: string
+          maxLength: 200
+          description: The name of the entity type.
+          example: "Employee_Car"
+        namespace:
+          type: string
+          maxLength: 200
+          description: The namespace of the entity.
+          example: "SUPC_SCHEMA_V_1_0"
+        validated:
+          type: boolean
+          description: Shows whether this entity has been validated by an owner or curator.
+        updatable:
+          type: boolean
+          description: Indicates if this dataset supports changes the entity's properties.
+        insertable:
+          type: boolean
+          description: Indicates if this dataset supports adding new instances of the entity.
+        deletable:
+          type: boolean
+          description: Indicates if this dataset supports deleting instances of the entity.
+        countable:
+          type: boolean
+          description: Indicates if this dataset is countable.
+        topSupported:
+          type: boolean
+          description: Indicates if this dataset supports `$top` usage for queries.
+        skipSupported:
+          type: boolean
+          description: Indicates if this dataset supports `$skip` usage for queries.
+        filterable:
+          type: boolean
+          description: Indicates if this dataset supports usage of `$filter` for navigation properties.
+        sortable:
+          type: boolean
+          description: Indicates if this dataset supports usage of `$orderby` for navigation properties.
+        totalAttributes:
+          type: integer
+          description: The number of attributes in the attributes array.
+          example: 1
+        totalAssociations:
+          type: integer
+          description: The number of associations in the associations array.
+          example: 1
+        attributes:
+          type: array
+          description: List of the attributes belonging to this entity.
+          items:
+            $ref: "#/components/schemas/Attribute"
+        associations:
+          type: array
+          description: List of the associations belonging to this entity.
+          items:
+            $ref: "#/components/schemas/Association"
+        links:
+          type: array
+          description: Deeplink to the detail page of the entity in the Catalog.
+          items:
+            $ref: "#/components/schemas/Link"
+          example:
+            - rel: "Catalog"
+              href: https://catalog.mendix.com/link/endpoint?EndpointUUID=9e26c386-9316-4a33-9963-8fe9f69a5117&EntityUUID=39a261cc-bb79-435e-8194-1cfe9b1cd693'
+    Environment_Base:
+      type: object
+      required:
+        - name
+        - location
+        - type
+      properties:
+        name:
+          type: string
+          maxLength: 200
+          example: "HR-eu-prod"
+          description: "Name of the environment."
+        location:
+          type: string
+          format: uri
+          maxLength: 500
+          example: "https://hr.acmecorp.test"
+          description: "Location of the environment."
+        type:
+          type: string
+          enum: [Production, Non-Production, Free App]
+          example: "Production"
+          description: "Value for the environment type, allowed values are: Production, Non-Production, Free App. Default value is Non-Production."
+        customLocations:
+          type: array
+          minLength: 1
+          description: "List of custom locations at which this environment can also be reached."
+          items:
+            type: object
+            required:
+              - url
+            properties:
+              url:
+                type: string
+                format: uri
+                maxLength: 500
+                example: "https://hr.acme.com"
+    Environment_Response:
+      allOf:
+        - $ref: "#/components/schemas/Environment_Base"
+        - type: object
+          required:
+            - uuid
+          properties:
+            uuid:
+              type: string
+              format: uuid
+              example: "57e214d1-d8b2-48fb-8ff3-d67932ae392b"
+              description: "UUID uniquely identifying the environment."
+    Environment_ResponseWithApplication:
+      allOf:
+        - $ref: "#/components/schemas/Environment_Response"
+        - type: object
+          required:
+            - application
+          properties:
+            application:
+              $ref: "#/components/schemas/Application_Response"
+    Error_Base:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+    Link:
+      type: object
+      required:
+        - rel
+        - href
+      properties:
+        rel:
+          type: string
+          description: "Describes how the link relates to the object, see the specific array description to see what kinds of links to expect."
+          example: "Self"
+        href:
+          type: string
+          format: uri
+          description: Location of the link.
+          example: "https://catalog.mendix.com/rest/datahubservice/v2/applications/ab1a74cb-2f28-458c-801c-ea4ded75070f/services/com.mendix.contacts"
+    MxAllowedRole:
+      type: object
+      required:
+        - name
+        - uuid
+      properties:
+        name:
+          type: string
+          maxLength: 255
+          description: The name of the Mendix role.
+          example: "HrExpert"
+        uuid:
+          type: string
+          format: uuid
+          example: "04989324-8a86-495b-b2d0-baf491ce6ff5"
+    Owner:
+      type: object
+      required:
+        - name
+        - email
+      properties:
+        name:
+          type: string
+          maxLength: 400
+          description: Name of the owner.
+          example: "Stan Raine"
+        email:
+          type: string
+          maxLength: 500
+          description: Email of the owner.
+          example: "stan.raine@acme.test"
+        uuid:
+          type: string
+          format: uuid
+          description: The UUID of the owner. Will only be available if the owner has a Mendix Platform account.
+    Parameter:
+      allOf:
+        - $ref: "#/components/schemas/ActionInputOutput"
+        - type: object
+          required:
+            - name
+          description: Details of an parameter belonging to an action
+          properties:
+            name:
+              type: string
+              maxLength: 200
+              description: The name of the parameter.
+              example: "MyParameter"
+            summary:
+              type: string
+              maxLength: 500
+              description: The summary of the parameter.
+              example: "The summary of the parameter"
+            description:
+              type: string
+              maxLength: 10000
+              description: The description of the parameter.
+              example: "The description of the parameter"
+    ReturnType:
+      allOf:
+        - $ref: "#/components/schemas/ActionInputOutput"
+        - type: object
+          description: Details of return type of an action
+    SecurityScheme:
+      type: object
+      properties:
+        securityTypes:
+          type: array
+          items:
+            $ref: "#/components/schemas/SecurityType"
+          example:
+            - name: "Basic"
+            - name: "MxID"
+              marketplaceModuleID: "93457"
+        mxAllowedRoles:
+          type: array
+          description: The roles that can access this endpoint in a Mendix application.
+          items:
+            $ref: "#/components/schemas/MxAllowedRole"
+    SecurityType:
+      description: The `SecurityType` represents the different authentication mechanisms that can be applied to secure access to an API. Each type corresponds to a specific security method that determines how clients authenticate and gain access to the service. **Note:** The `SOAP` service type does not support `Session` as a security type.
+      anyOf:
+        - $ref: "#/components/schemas/SecurityType_Base"
+        - $ref: "#/components/schemas/SecurityType_Custom"
+      discriminator:
+        propertyName: name
+        mapping:
+          Basic: "#/components/schemas/SecurityType_Base"
+          Anonymous: "#/components/schemas/SecurityType_Base"
+          Session: "#/components/schemas/SecurityType_Base"
+          MxID: "#/components/schemas/SecurityType_Custom"
+          Custom: "#/components/schemas/SecurityType_Custom"
+          OAuth: "#/components/schemas/SecurityType_Custom"
+          OpenID_Connect: "#/components/schemas/SecurityType_Custom"
+    SecurityType_Base:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          enum:
+            [
+              "Basic",
+              "Session",
+              "Custom",
+              "MxID",
+              "Anonymous",
+              "OAuth",
+              "OpenID_Connect",
+            ]
+          description: The name of a security scheme
+          example: "MxID"
+    SecurityType_Custom:
+      allOf:
+        - $ref: "#/components/schemas/SecurityType_Base"
+        - type: object
+          properties:
+            marketplaceModuleID:
+              type: string
+              maxLength: 200
+              description: numeric ID of the Marketplace module that implements this security type. It can be found in the Marketplace webpage URL of the desired module.
+              example: "93457"
+            marketplaceModuleLocation:
+              type: string
+              maxLength: 500
+              description: The full URL of the Marketplace module that implements this security type.
+    Service_Base:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          maxLength: 200
+          example: "test.acme.employeeinformation"
+          description: "Name of the service. This is the key by which a service is identified within an environment. Changing the name will cause it to be considered a new service."
+    Service_Response:
+      allOf:
+        - $ref: "#/components/schemas/Service_Base"
+        - type: object
+          required:
+            - uuid
+            - links
+          properties:
+            uuid:
+              type: string
+              format: uuid
+              description: "UUID uniquely identifying the service."
+              example: "4f68596a-7bd3-4f31-b8d7-a9e1344e7b60"
+            links:
+              type: array
+              description: Will contain a Self link for the Service that can be used to retrieve a detailed representation.
+              items:
+                $ref: "#/components/schemas/Link"
+              example:
+                - rel: "Self"
+                  href: "https://catalog.mendix.com/rest/registration/v5/applications/cfc36b98-7409-4384-b71d-f003b0c2f84b/services/test.acme.employeeinformation"
+    ServiceVersion_Base:
+      type: object
+      required:
+        - version
+      properties:
+        version:
+          type: string
+          maxLength: 200
+          example: "2.1"
+          description: "Version number of the service. This is the key by which a version is identified within a service."
+        description:
+          type: string
+          example: "Information about the employees of AcmeCorp"
+          description: "Description of the service"
+        tags:
+          type: array
+          items:
+            $ref: "#/components/schemas/Tag"
+          example:
+            - name: "HR"
+            - name: "Employee"
+    ServiceVersion_ResponseBase:
+      allOf:
+        - $ref: "#/components/schemas/ServiceVersion_Base"
+        - type: object
+          required:
+            - uuid
+            - publishDate
+          properties:
+            uuid:
+              type: string
+              format: uuid
+              description: UUID uniquely identifying this ServiceVersion.
+              example: "ac288b46-7bd1-4dbe-98e5-e5956d91aa76"
+            publishDate:
+              type: string
+              format: date-time
+              description: UTC timestamp of the most recent update to the service.
+              example: "2019-07-23T15:28:34.981Z"
+    ServiceVersion_ResponseASynchronousTechnology:
+      allOf:
+        - $ref: "#/components/schemas/ServiceVersion_Response"
+        - required:
+            - type
+          properties:
+            type:
+              type: string
+              enum: ["Business Events"]
+              description: "Protocol used by the service."
+              example: "Business Events"
+    ServiceVersion_ResponseSynchronousTechnology:
+      allOf:
+        - $ref: "#/components/schemas/ServiceVersion_Response"
+        - required:
+            - securityScheme
+            - type
+          properties:
+            securityScheme:
+              $ref: "#/components/schemas/SecurityScheme"
+            type:
+              type: string
+              enum: ["OData", "REST", "SOAP"]
+              description: "Protocol used by the service. Currently supported value: OData | REST | SOAP"
+              example: "OData"
+    ServiceVersion_ResponseWithEndpointsArrayASynchronousTechnology:
+      allOf:
+        - $ref: "#/components/schemas/ServiceVersion_ResponseBase"
+        - required:
+            - type
+        - properties:
+            type:
+              type: string
+              enum: ["Business Events"]
+              description: "Protocol used by the service."
+              example: "Business Events"
+            endpoints:
+              type: array
+              items:
+                $ref: "#/components/schemas/Endpoints_ResponseWithEnvironment"
+    ServiceVersion_ResponseWithEndpointsArraySynchronousTechnology:
+      allOf:
+        - $ref: "#/components/schemas/ServiceVersion_ResponseBase"
+        - properties:
+            type:
+              type: string
+              enum: ["OData", "REST", "SOAP"]
+              description: "Protocol used by the service. Currently supported value: OData | REST | SOAP"
+              example: "OData"
+            securityScheme:
+              $ref: "#/components/schemas/SecurityScheme"
+            endpoints:
+              type: array
+              items:
+                $ref: "#/components/schemas/Endpoint_ResponseSynchronousTechnology"
+        - required:
+            - securityScheme
+            - type
+    ServiceVersion_Request:
+      allOf:
+        - $ref: "#/components/schemas/ServiceVersion_Base"
+        - type: object
+          required:
+            - contracts
+            - service
+            - type
+            - securityScheme
+          properties:
+            service:
+              allOf:
+                - $ref: "#/components/schemas/Service_Base"
+                - type: object
+                  description: "Service details of endpoint."
+            contracts:
+              type: array
+              items:
+                $ref: "#/components/schemas/Contract_Base_URI"
+            type:
+              type: string
+              enum: ["OData", "REST", "SOAP"]
+              description: "Protocol used by the service. Currently supported value: OData | REST | SOAP"
+              example: "OData"
+            securityScheme:
+              $ref: "#/components/schemas/SecurityScheme"
+    ServiceVersion_Request_Transform:
+      allOf:
+        - $ref: "#/components/schemas/ServiceVersion_Base"
+        - type: object
+          required:
+            - contracts
+            - service
+            - type
+          properties:
+            service:
+              allOf:
+                - $ref: "#/components/schemas/Service_Base"
+                - type: object
+                  description: "Service details of endpoint."
+            contracts:
+              type: array
+              items:
+                $ref: "#/components/schemas/Contract_Base"
+            type:
+              type: string
+              enum: ["OData", "REST", "SOAP"]
+              description: "Protocol used by the service. Currently supported value: OData | REST | SOAP"
+              example: "OData"
+    ServiceVersion_Response:
+      allOf:
+        - $ref: "#/components/schemas/ServiceVersion_ResponseBase"
+        - type: object
+          required:
+            - service
+          properties:
+            service:
+              allOf:
+                - $ref: "#/components/schemas/Service_Response"
+                - type: object
+                  description: "Service details of endpoint."
+    ServiceVersionResponseWithODataDetails:
+      allOf:
+        - $ref: "#/components/schemas/ServiceVersion_ResponseSynchronousTechnology"
+        - $ref: "#/components/schemas/Details_OData"
+    ServiceVersionResponseWithSOAPDetails:
+      allOf:
+        - $ref: "#/components/schemas/ServiceVersion_ResponseSynchronousTechnology"
+        - $ref: "#/components/schemas/Details_Soap"
+    ServiceVersionResponseWithBusinessEventDetails:
+      allOf:
+        - $ref: "#/components/schemas/ServiceVersion_ResponseASynchronousTechnology"
+        - $ref: "#/components/schemas/Details_BusinessEvents"
+    ServiceVersionResponseWithRESTDetails:
+      allOf:
+        - $ref: "#/components/schemas/ServiceVersion_ResponseSynchronousTechnology"
+        - $ref: "#/components/schemas/Details_Rest"
+    Tag:
+      type: object
+      description: A tag on this endpoint
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          maxLength: 100
+          description: name of the tag.
+          example: "hr"
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: OAuth2 based authentication using authorization code flow.
+      flows:
+        authorizationCode:
+          authorizationUrl: "https://login.mendix.com/oauth/authorize"
+          tokenUrl: "https://login.mendix.com/oauth/token"
+          scopes:
+            mx:datahub:services:write: Operations on resources that may create, delete or change resources.
+            mx:datahub:services:read: Read-only access to resources.
+            openid: Required to access user info, must have scope for every api
+            offline_access: Required to access user info, must have scope for every api
+            mx:user:profile:v1:read: Required to access user info, must have scope for every api
+    PersonalAccessTokens:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: "Personal access tokens for access to the Catalog APIs; set in your [Mendix Developer Settings](https://user-settings.mendix.com/link/developersettings). Contents of the header should be ```MxToken <Your PAT>```."
+  headers:
+    Location:
+      description: Location at which the newly created resource can be found.
+      schema:
+        type: string
+        maxLength: 400
+        format: uri
+    XApiVersion:
+      description: API version header
+      schema:
+        type: string
+        example: "5.0.0"

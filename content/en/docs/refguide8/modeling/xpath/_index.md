@@ -5,7 +5,7 @@ weight: 90
 description: "Describes how the XPath query language is used in Mendix by presenting functions and examples."
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix XPath is one of the Mendix query languages designed to retrieve data. XPath uses path expressions to select data of Mendix objects and their attributes or associations.
 
@@ -24,7 +24,7 @@ Examples of XPath queries are:
 In Studio Pro, you do not write complete queries, only the constraints. The entity is implicitly determined by the context. So, instead of `//Sales.Customer[Name='Jansen']`, you only need to write `[Name='Jansen']` in the context of a customer. In Java, you do need to write the whole queries, including the double slashes (`//`) and the entity name.
 {{% /alert %}}
 
-## 2 XPath Elements
+## XPath Elements
 
 A common Mendix XPath query consists of a several elements.
 
@@ -48,15 +48,15 @@ Element D of a query is optional and specifies an attribute of the retrieved ent
 
 Element A of a query is optional and specifies an aggregation. Element A can be one of the following functions: [avg](/refguide8/xpath-avg/), [count](/refguide8/xpath-count/), [max](/refguide8/xpath-max/), [min](/refguide8/xpath-min/) and [sum](/refguide8/xpath-sum/). With the exception of 'count', each of these functions require that a particular attribute is specified in element D.
 
-## 3 Tokens
+## Tokens
 
 For details, see [XPath Tokens](/refguide8/xpath-tokens/).
 
-## 4 Operators
+## Operators
 
 For details, see [XPath Operators](/refguide8/xpath-operators/).
 
-## 5 Functions
+## Functions
 
 The following XPath functions are available:
 
@@ -74,7 +74,7 @@ The following XPath functions are available:
     * [true](/refguide8/xpath-true/)
     * [false](/refguide8/xpath-false/)
 
-## 6 Example
+## Example
 
 **How to find the right path to XPath**
 

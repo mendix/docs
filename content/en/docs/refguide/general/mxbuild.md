@@ -5,7 +5,7 @@ weight: 30
 description: "Describes MxBuild, which is a command-line tool for building and deploying Mendix Apps."
 ---
 
-## 1 Introduction
+## Introduction
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package from a Mendix app.
 
@@ -20,9 +20,9 @@ The table below can help you find the correct MxBuild. Copy a URL from the corre
 
 {{% alert color="info" %}}
 
-A build number is included in the version, which has to be included in the link path mentioned above (for example, `10.0.0.5003` is the 5003 build of the 10.0.0 Studio Pro release).
+A build number is included in the version, which has to be included in the link path mentioned above (for example, `10.0.0.9976` is the 9976 build of the 10.0.0 Studio Pro release).
 
-You can find the build number in path of your Mendix installation (for example, if your installation looks like this `C:\Program Files\Mendix\10.0.0.5003`, use this URL to get your files: [https://cdn.mendix.com/runtime/mxbuild-10.0.0.5003.tar.gz](https://cdn.mendix.com/runtime/mxbuild-10.0.0.5003.tar.gz)).
+You can find the build number in path of your Mendix installation (for example, if your installation looks like this `C:\Program Files\Mendix\10.0.0.9976`, use this URL to get your files: [https://cdn.mendix.com/runtime/mxbuild-10.0.0.9976.tar.gz](https://cdn.mendix.com/runtime/mxbuild-10.0.0.9976.tar.gz)).
 
 Any public version of Studio Pro in this [Studio Pro Releases List](https://marketplace.mendix.com/link/studiopro/) will allow you to download MxBuild files. If you experience trouble downloading files, make sure your build is listed there.
 
@@ -36,7 +36,7 @@ For details on the system requirements for MxBuild, see [System Requirements](/r
 The examples used in this document are for Windows, except when specifically mentioned otherwise.
 {{% /alert %}}
 
-## 2 Command Line
+## Command Line
 
 To build your package, specify the Mendix app file (*.mpr*) for which you want to build the deployment package (*.mda*) on the command-line. The file name may be preceded by a relative or absolute path. The app file should be located inside a Mendix app directory.
 
@@ -52,7 +52,7 @@ You can also run MxBuild under Linux using the following command line format:
 
 After creating the deployment package, the MxBuild process quits.
 
-### 2.1 General Command-Line Options
+### General Command-Line Options
 
 Command-line options are described in the table below:
 
@@ -61,34 +61,53 @@ Command-line options are described in the table below:
 | `-h`, `--help` | Prints a short description of the MxBuild and a list of all available options. |
 | `--java-home=DIRECTORY` | (Required). The directory in which the JDK is installed.<br/>For example, `--java-home=/usr/lib/jvm/java-8-oracle`.<br/>For Windows, *DIRECTORY* should be enclosed in double-quotes `"`. |
 | `--java-exe-path=FILENAME` | (Required). The full path to the Java executable.<br/>For example, `--java-exe-path=/usr/lib/jvm/java-8-oracle/bin/java`.<br/>For Windows, *DIRECTORY* should be enclosed in double-quotes `"` and must contain the complete file name `...\java.exe`. |
-| <code>––target=[package&#124;deploy]</code> | `package`: default if option is omitted; creates a deployment package (*.mda file*).<br/>`deploy`: deploys the app without making a deployment package. |
+| <code>––target=[package&#124;deploy]</code> | `package`: default if option is omitted; creates a deployment package (*.mda file*).<br/>`deploy`: deploys the app without making a deployment package.<br/>`sbom`: generates a [Software Bill of Materials](/refguide/sbom-generation/) (SBOM) in the CycloneDX format for the app. |
 | `--loose-version-check` | Creates a deployment package from an app which was created with a lower Mendix version.<br/>The app will be upgraded to the MxBuild version before the deployment package is created.<br /> Any changes included as a result of this upgrade will not be stored in your app. |
 | `--write-errors=FILENAME` | Writes all errors, warnings, and deprecations encountered during deployment of the app to the specified file in JSON format.<br />This file is only written when the app contains errors.<br />If the file already exists, it will be overwritten without a warning.<br />For a description of the format of this file, see the [App Errors](#app-errors) section below. |
-| `--generate-sbom` | Generate a [Software Bill of Materials](/refguide/sbom-generation/) (SBOM) in the CycloneDX format. |
-| `--sbom-output-path=VALUE` | File path to generate bill of material file (Default value: `deployment\sbom.json`). |
+| `--generate-sbom` | Generates a Software Bill of Materials (SBOM) file as a part of the `package` and `deployment` targets. The SBOM will be included in the deployment package if this option is used and is saved under its default location: `deployment\sbom.json` |
+| `--sbom-output-path=VALUE` | The file path to generate a bill of material file for the `package` and `deployment` targets. Use `--output` for the `sbom` target (Default value: `deployment\sbom.json`). <br>This parameter is deprecated and will be removed in Mendix 11 and replaced with the `sbom` target.</br> |
+| `--gradle-home` | Sets the Gradle home directory. This can be used when auto-detection of the Gradle installation fails. | 
 
-### 2.2 Options When Creating a Package
+### Options When Creating a Package
 
 {{% alert color="info" %}}
-The following options are only applicable with the `--target=package` option:
+The following options are only applicable with the `--target=package` option.
 {{% /alert %}}
 
-Options when creating a package are described in the table below;
+Options when creating a package are described in the table below:
 
-| Option&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Description |
+| Option | Description |
 | --- | --- |
 | `-o FILENAME` or<br/>`--output=FILENAME` | The name (with optional relative or absolute path) of the *.mda* file that is created by MxBuild.<br />If this option is omitted, the file will be saved in the current directory under a name `out.mda`. |
 | `--project-name=NAME` | Changes the name of the application to the one used by the Mendix Runtime.<br />When this option is not specified, the name of the app is used. |
 | `--model-version=VERSION` | Applies a specific version number to the model in the package. |
 | `--model-description=DESCRIPTION` | Embeds a description of the model in the package. |
 
-For example, to create a deployment package `out.mda` in the current directory using the app `MyApp` using the Windows version of MxBuild, you can use the following command:
+For example, to create a deployment package `out.mda` in the current directory using the app `MyApp` with the Windows version of MxBuild, you can use the following command:
 
 ```bat
 mxbuild --target=package --java-home="C:\Program Files\Java\jdk1.8.0_144" --java-exe-path="C:\Program Files\Java\jdk1.8.0_144\bin\java.exe" "C:\Users\username\Documents\Mendix\MyApp\MyApp.mpr"
 ```
 
-## 3 Return Code
+### Options When Creating a SBOM
+
+{{% alert color="info" %}}
+The following options are only applicable with the `--target=sbom` option:
+{{% /alert %}}
+
+Options when creating a software bill of materials (SBOM) are described in the table below:
+
+| Option&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Description |
+| --- | --- |
+| `-o FILENAME` or<br/>`--output=FILENAME` | The name (with optional relative or absolute path) of the file that will contain the SBOM and is created by MxBuild.<br />If this option is omitted, the file will be saved in the deployment directory of the App under the name `sbom.json`. |
+
+For example, to create a SBOM in the deployment directory of the App with the name `sbom.json` using the app `MyApp` using the Windows version of MxBuild, you can use the following command:
+
+```bat
+mxbuild --target=sbom --java-home="C:\Program Files\Java\jdk1.8.0_144" --java-exe-path="C:\Program Files\Java\jdk1.8.0_144\bin\java.exe" "C:\Users\username\Documents\Mendix\MyApp\MyApp.mpr"
+```
+
+## Return Code
 
 When MxBuild exits, one of the following codes will be returned:
 
@@ -101,7 +120,7 @@ When MxBuild exits, one of the following codes will be returned:
 
 If the exit code is larger than 0, MxBuild will show you the message describing the error.
 
-## 4 App Errors {#app-errors}
+## App Errors {#app-errors}
 
 When your Mendix app contains errors, deployment will fail and MxBuild will report these errors. You can use the `--write-errors=FILENAME` command-line option to tell MxBuild to write the errors to a file.
 

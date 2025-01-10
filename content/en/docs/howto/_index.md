@@ -13,10 +13,10 @@ cascade:
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-## 1 Introduction
+## Introduction
 
 Browse the *Studio Pro 10 How-tos* to find step-by-step guides that teach you how to build and customize apps with Mendix.
 
-## 2 How-to Categories
+## How-to Categories
 
 The *Studio Pro 10 How-tos* are divided into the following categories:

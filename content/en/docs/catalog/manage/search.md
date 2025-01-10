@@ -1,262 +1,54 @@
 ---
 title: "Search in the Catalog"
 url: /catalog/manage/search/
-description: "Describes how to find data sources and datasets in the Catalog."
+description: "Describes how to find services and datasets in the Catalog."
 aliases:
     - /data-hub/data-hub-catalog/search/
     - /data-hub/data-hub-catalog/manage-data-sources/search/
     - /catalog/search/
 ---
 
-## 1 Introduction
+## Introduction
 
 Finding the right data to use in your app development is made easier using the search functionality in the Catalog. The details of registered data assets can be accessed using the [Search API](/apidocs-mxsdk/apidocs/catalog-apis/), or viewed in the [Asset details](#search-details) screen of the Catalog or the [Integration pane](/refguide/integration-pane/) in Studio Pro.  This document describes how you can search in Catalog.
 
-## 2 Search Using the API {#search-api}
+## Search in the Catalog {#search-catalog}
 
-To use the Catalog Search API, you need the following:
+### Details of Registered Assets
 
-* A [personal access token](/community-tools/mendix-profile/user-settings/#pat)
-* A search term
-
-For more details on what can and cannot be provided in your search query, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/search_v4.html#/Search/get_data).
-
-You can see an example of a request below where the search term is `Customer`:
-
-```curl
-curl --location --request GET 'https://catalog.mendix.com/rest/search/v3/data?query=Customer' \
---header 'Content-Type: application/json' \
---header 'Authorization: MxToken <your_Personal_Access_Token>'
-```
-
-A successful `GET` call results in a `200` status code and a JSON response body that includes the details about the search results:
-
-```json
-{
-    "TotalResults": 145,
-    "Links": [
-        {
-            "Href": "https://catalog.mendix.com/rest/search/v3/data?query=Customer",
-            "Rel": "First"
-        },
-        {
-            "Href": "https://catalog.mendix.com/rest/search/v3/data?query=Customer",
-            "Rel": "Current"
-        },
-        {
-            "Href": "https://catalog.mendix.com/rest/search/v3/data?query=Customer&afterId=18d7d608-723f-4f33-b247-a85271d5eefd",
-            "Rel": "Next"
-        }
-    ],
-    "Data": [
-        {
-            "Connections": 34,
-            "Validated": true,
-            "Description": "This is the primary data source for customer information.",
-            "SecurityClassification": "Internal",
-            "TotalItems": 3,
-            "Name": "CustomerApi",
-            "Version": "1.1.0",
-            "ContractType": "OData_3_0",
-            "Environment": {
-                "Type": "Production",
-                "UUID": "5f0e2439-cc8b-4b12-87a4-556437d9e4d1",
-                "Name": "Production",
-                "Location": "https://your-app-url.com"
-            },
-            "Links": [
-                {
-                    "Rel": "Self",
-                    "Href": "https://catalog.mendix.com/rest/search/v3/endpoints/9756545b-9b36-4f51-8655-1102c36e9288"
-                },
-                {
-                    "Rel": "Catalog",
-                    "Href": "https://catalog.mendix.com/link/endpoint?EndpointUUID=9756545b-9b36-4f51-8655-1102c36e9288"
-                }
-            ],
-            "Items": [
-                {
-                    "Type": "DataSource",
-                    "Validated": false,
-                    "EntitySetName": "Customers",
-                    "Updatable": false,
-                    "Links": [{
-                        "Rel": "Catalog",
-                        "Href": "https://catalog.mendix.com/link/entity?EndpointUUID=9756545b-9b36-4f51-8655-1102c36e9288&EntityUUID=d27150f1-1ba3-41f0-965b-3ce3402412ef"
-                    }],
-                    "Deletable": false,
-                    "Items": [
-                        {
-                            "Type": "Attribute",
-                            "EdmxType": "Edm.Int64",
-                            "Updatable": false,
-                            "Insertable": false,
-                            "Name": "CustomerId"
-                        },
-                        {
-                            "Type": "Association",
-                            "ReferencedDataSource": "ContactHistory",
-                            "Multiplicity": "*",
-                            "EntitySetName": "ContactHistorys",
-                            "Updatable": false,
-                            "Insertable": false,
-                            "Namespace": "mx.customer.api",
-                            "Name": "ContactHistory_Customer",
-                            "EntityTypeName": "ContactHistory"
-                        },
-                        {
-                            "Type": "Association",
-                            "ReferencedDataSource": "ContactInfo",
-                            "Multiplicity": "0..1",
-                            "EntitySetName": "ContactInfos",
-                            "Updatable": false,
-                            "Insertable": false,
-                            "Namespace": "mx.customer.api",
-                            "Name": "ContactInfo_Customer",
-                            "EntityTypeName": "ContactInfo"
-                        }
-                    ],
-                    "TotalItems": 6,
-                    "Insertable": false,
-                    "Namespace": "mx.customer.api",
-                    "Name": "Customer",
-                    "EntityTypeName": "Customer"
-                },
-                {
-                    "Type": "DataSource",
-                    "Validated": false,
-                    "EntitySetName": "ContactHistorys",
-                    "Updatable": false,
-                    "Links": [{
-                        "Rel": "Catalog",
-                        "Href": "https://catalog.mendix.com/link/entity?EndpointUUID=9756545b-9b36-4f51-8655-1102c36e9288&EntityUUID=3aeb0d6b-4205-4bc6-adef-67487e85e178"
-                    }],
-                    "Deletable": false,
-                    "Items": [{
-                        "Type": "Association",
-                        "ReferencedDataSource": "Customer",
-                        "Multiplicity": "0..1",
-                        "EntitySetName": "Customers",
-                        "Updatable": false,
-                        "Insertable": false,
-                        "Namespace": "mx.customer.api",
-                        "Name": "ContactHistory_Customer",
-                        "EntityTypeName": "Customer"
-                    }],
-                    "TotalItems": 6,
-                    "Insertable": false,
-                    "Namespace": "mx.customer.api",
-                    "Name": "ContactHistory",
-                    "EntityTypeName": "ContactHistory"
-                },
-                {
-                    "Type": "DataSource",
-                    "Validated": false,
-                    "EntitySetName": "ContactInfos",
-                    "Updatable": false,
-                    "Links": [{
-                        "Rel": "Catalog",
-                        "Href": "https://catalog.mendix.com/link/entity?EndpointUUID=9756545b-9b36-4f51-8655-1102c36e9288&EntityUUID=6939a90c-c3bc-4eaf-a741-a484cf2248ad"
-                    }],
-                    "Deletable": false,
-                    "Items": [{
-                        "Type": "Association",
-                        "ReferencedDataSource": "Customer",
-                        "Multiplicity": "*",
-                        "EntitySetName": "Customers",
-                        "Updatable": false,
-                        "Insertable": false,
-                        "Namespace": "mx.customer.api",
-                        "Name": "ContactInfo_Customer",
-                        "EntityTypeName": "Customer"
-                    }],
-                    "TotalItems": 11,
-                    "Insertable": false,
-                    "Namespace": "mx.customer.api",
-                    "Name": "ContactInfo",
-                    "EntityTypeName": "ContactInfo"
-                }
-            ],
-            "LastUpdated": "2021-07-24T16:12:52.795Z",
-            "UUID": "9756545b-9b36-4f51-8655-1102c36e9288",
-            "SecurityScheme": {
-                "Types": [{"Name": "Anonymous"}],
-                "MxAllowedRoles": [
-                    {
-                        "UUID": "abc56ffb-75ab-44f6-9c04-87fbe419ce74",
-                        "Name": "Administrator"
-                    },
-                    {
-                        "UUID": "3f8cbb62-bbcc-4d9f-b583-27d4b50d5405",
-                        "Name": "User"
-                    }
-                ]
-            },
-            "Application": {
-                "Type": "Other",
-                "TechnicalOwner": {
-                    "Email": "roselien.opmeer@mendix.com",
-                    "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=3abbc519-36cb-49e0-b158-120e9100e8be",
-                    "Name": "Roselien Opmeer"
-                },
-                "Icon": "https://catalog.mendix.com/resources/logos/other_icon.png",
-                "UUID": "34aacfda-8a85-497c-bb21-74f1c6ee2b18",
-                "RepositoryLocation": "https://sprintr.home.mendix.com/link/project/a2e76491-bd8d-4284-b865-00c9ae8dde94",
-                "BusinessOwner": {
-                    "Email": "roselien.opmeer@mendix.com",
-                    "OpenID": "https://mxid2.mendixcloud.com/mxid2/id?id=3abbc519-36cb-49e0-b158-120e9100e8be",
-                    "Name": "Roselien Opmeer"
-                },
-                "Name": "CustomerApp"
-            },
-            "Tags": [
-                {"Name": "customer"},
-                {"Name": "contact"}
-            ]
-        }, {...}, {...}, {...},
-    ],
-    "Limit": 20,
-    "LastId": "18d7d608-723f-4f33-b247-a85271d5eefd"
-}
-```
-
-## 3 Search in the Catalog {#search-catalog}
-
-### 3.1 Details of Registered Assets
-
-You can start searching from the [Home](#data-hub-home) page, or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Asset Details** screen. This section describes important properties of registered assets: data sources, datasets, and attributes.
+You can start searching from the [Home](#data-hub-home) page, or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Asset Details** screen. This section describes important properties of registered assets: services, datasets, and attributes.
 
 {{% alert color="info" %}}The **Dataset** is the name of the **Entity set** of a published **Entity** in Mendix Studio Pro, which by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Dataset** name in the **Search Details** will be `Customers`.{{% /alert %}}
 
-#### 3.1.1 Versions
+#### Versions
 
-Every published service (or data source) has a version number. Apps that consume a data source will consume from a specific version. Updates and changes to a service will be indicated by a change in the version number. Several versions of a registered data source may be available in the Catalog. The data source version is displayed in the [Asset Details](#search-details).
+Every published service has a version number. Apps that consume a service will consume from a specific version. Updates and changes to a service will be indicated by a change in the version number. Several versions of a registered service may be available in the Catalog. The service version is displayed in the [Asset Details](#search-details).
 
-#### 3.1.2 Environments
+#### Environments
 
-The Catalog is a register of published services (or data sources) that are deployed to a particular environment. You can have multiple versions of a service for each environment by giving them different version numbers.
+The Catalog is a register of published services that are deployed to a particular environment. You can have multiple versions of a service for each environment by giving them different version numbers.
 
 The environment also provides an indication of the quality of the dataset that is available. Shared datasets that are available from a *production environment* will have production-level data, while those in non-production environments (*acceptance*, *development*) could be populated with data that may not be reliable for building stable apps but be useful for development work.
 
-Search results show the data source endpoints. If a version of a service is deployed on both a test and acceptance environment, two endpoints are shown in the search results.
+Search results show the service endpoints. If a version of a service is deployed on both a test and acceptance environment, two endpoints are shown in the search results.
 
 {{% alert color="info" %}}
 By default, search results in the Catalog are filtered to show only hits in the **Production** environments. You can extend the search to **Non-production** or **Mendix Free App (Sandbox)** environments by checking them in the search pane **Add Filter** list. For more details, see the [Filters](#filter) section below.
 {{% /alert %}}
 
-#### 3.1.3 Asset Description
+#### Asset Description
 
-The description that is included as part of the published service metadata. This description can be edited at the data source, dataset, and attribute level by owners and curators.
+The description that is included as part of the published service metadata. This description can be edited at the service, dataset, and attribute level by owners and curators.
 
 {{% alert color="info" %}}
 In Studio Pro, when publishing a service, it is possible to specify a summary of the service and a description. Only the description is included in the service contract document and registered in the Catalog.
 {{% /alert %}}
 
-### 3.2 Searching for Assets {#data-hub-home}
+### Searching for Assets {#data-hub-home}
 
 When searching in the Catalog, the following fields are searched:
 
-* Data source or service endpoint: Name, Description, Tags
+* Service endpoint: Name, Description, Tags
 * Application: Name
 * Dataset: Name, Description
 * Attribute: Name, Description
@@ -267,26 +59,26 @@ From the **Catalog** home page, you can search the Catalog in the following ways
 * Type a search term in the search box and click **Search** (search strings must be at least 3 alphanumeric characters)
 * Click one of the tags provided in the search suggestions
 * Click one of the services under **Most Recent Changes**
-* Click one of the services under **Popular Data Sources**
+* Click one of the services under **Popular Services**
 * Click the **Catalog** tab
 
 Any of the above actions will take you to the **Search** screen.
 
-### 3.3 Search Screen {#search-tab}
+### Search Screen {#search-tab}
 
 The **Search** screen is divided into the [search](#search-pane) pane on the left, the [asset details](#search-details) of the selected asset in the center panel, and the [asset metadata](#metadata) panel on the right.
 
-### 3.4 Search Pane {#search-pane}
+### Search Pane {#search-pane}
 
 The collapsible **Search** pane is used to search for registered assets in the Catalog:
 
 {{< figure src="/attachments/catalog/search/search-pane.png" alt="search pane"   width="300"  class="no-border" >}}
 
-#### 3.4.1 Specifying the Search
+#### Specifying the Search
 
 Enter a search string in the **Search** area with a minimum of 3 alphanumeric characters. Searching for the wildcard `*` or the empty string `''` will return all registered items.
 
-#### 3.4.2 Filters {#filter}
+#### Filters {#filter}
 
 You can filter search results by: 
 
@@ -299,7 +91,7 @@ In the **Filter** dialog box, check the filters you want to include in your sear
 
 You will also see any restrictions that apply, including **Count** and **Pagination** and whether something is **Sortable** or **Filterable**.
 
-#### 3.4.3 Search Results {#search-results}
+#### Search Results {#search-results}
 
 The number of items satisfying the search criteria (search string plus filters) are shown in the search results list. The order of the items presented in the search results will be a combination of the following:
 
@@ -309,49 +101,49 @@ The number of items satisfying the search criteria (search string plus filters) 
 
 When an item in the search results is selected, the **Landscape** tab shows the network of connections and dependencies of the selected item in the [Landscape](/data-hub/data-hub-landscape/).
 
-### 3.5 Selected Asset Details {#search-details}
+### Selected Asset Details {#search-details}
 
 When you click a search result, the details are displayed in this panel.
 
-#### 3.5.1 Details of a Selected Data Source {#service-details}
+#### Details of a Selected Service {#service-details}
 
 The contract of the published service (the *$metadata* document) contains the details of what is exposed in the service. This includes the metadata of the exposed datasets (or entity sets in Mendix Studio Pro) and their exposed attributes, associations, and types. The contract metadata is displayed, along with any Catalog-curated metadata.
 
-When a data source is selected in the search results, the following details are displayed:
+When a service is selected in the search results, the following details are displayed:
 
 * Application icon
-* Name of the data source
-* **Non-discoverable** icon – if the data source has been set to non-discoverable (by default, data sources are discoverable to all users in your company and no icon appears)
+* Name of the Service
+* **Non-discoverable** icon – if the service has been set to non-discoverable (by default, services are discoverable to all users in your company and no icon appears)
 * **Validated** icon – if it has been set for the asset
 * **Environment Name** – where the app is deployed
 * **Version** – version number of the service
 * **Connections** – number of apps that consume the service
 * **Authentication** – authentication information, and the option to **Request access** if available
-* A description of the data source
-* All **Datasets** that are exposed in the data source (you can expand each one to see details of the attributes and associations)
+* A description of the service
+* All **Datasets** that are exposed in the service (you can expand each one to see details of the attributes and associations)
 
 {{% alert color="info" %}}In Mendix Studio Pro, the **Dataset** is the name of the **Entity set** of a published **Entity**. This defaults to the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Dataset** name in the **Search Details** will be `Customers`.{{% /alert %}}
 
 You can perform the following actions from this screen:
 
 * **Share** – click to copy the link to this asset detail page to the clipboard so that you can share it with others.
-* **[Download Contract](#download-contract)** – retrieve and save the OData contract from the data source endpoint to your computer. You can upload this in the Catalog to register it manually.
-* **Copy URI** – click to copy the URI of the data source contract to the clipboard. This URI can be used to integrate the data source in other enterprise applications.
+* **[Download Contract](#download-contract)** – retrieve and save the OData contract from the service endpoint to your computer. You can upload this in the Catalog to register it manually.
+* **Copy URI** – click to copy the URI of the service contract to the clipboard. This URI can be used to integrate the service in other enterprise applications.
 * **Copy Dataset URI** – click to copy the URI of the dataset to the clipboard for use in other business applications.
 
-#### 3.5.2 Details for a Selected Dataset {#entity-details}
+#### Details for a Selected Dataset {#entity-details}
 
 When a **Dataset** is selected in the search results, the following details are displayed in the **Search Details** panel.
 
-##### 3.5.2.1 General Information
+##### General Information
 
 The source and endpoint details of the dataset are displayed:
 
 {{< figure src="/attachments/catalog/search/dataset-details.png" alt="associations info" >}}
 
 * Dataset name
-* **Part of** – a link to the data source details page that the dataset is exposed in
-* **Version** number of the data source that the dataset is exposed in
+* **Part of** – a link to the service details page that the dataset is exposed in
+* **Version** number of the service that the dataset is exposed in
 * **Connections** – the number of apps that consume this dataset
 * A description of the dataset
 * [Authentication method](/catalog/register/register-data/#authentication)
@@ -362,7 +154,7 @@ You can perform the following actions from this screen:
 * **Share** – click to copy the link to this dataset detail page to the clipboard so that it can be shared with others
 * **Edit** – click to access the dataset edit screen
 
-#### 3.5.2.2 Dataset Information
+#### Dataset Information
 
 The **Attributes** tab lists the attributes that are exposed for the dataset in the service.
 
@@ -374,48 +166,48 @@ Under the **Associations** tab for each dataset, the associations are displayed:
 * **Navigates to** – the dataset the association is made with. Click the link to see the details of the associated dataset in the Catalog.
 * **Multiplicity** – indicates the multiplicity.
 
-### 3.6 Metadata Panel {#metadata}
+### Metadata Panel {#metadata}
 
 The metadata panel at the right of the asset details screen displays details from the service metadata contract and values that have been curated in the Catalog:
 
 {{< figure src="/attachments/catalog/search/metadata.png" alt="metadata pane"   width="300"  class="no-border" >}}
 
-#### 3.6.1 Tags
+#### Tags
 
-These are the tags that have been assigned to the data source in the Catalog (for more information, see the [Adding or Editing Tags to a Service](/catalog/manage/curate/#tags) section of *How to Curate Registered Assets*). Tags assigned at a data source-level propagate down to the datasets and attributes exposed in the service.
+These are the tags that have been assigned to the service in the Catalog (for more information, see the [Adding or Editing Tags to a Service](/catalog/manage/curate/#tags) section of *How to Curate Registered Assets*). Tags assigned at a service-level propagate down to the datasets and attributes exposed in the service.
 
-#### 3.6.2 Business Owner {#busines-owner}
+#### Business Owner {#business-owner}
 
-This is a link to the business owner of the data exposed in the data source. For more information, see the [Changing Owners of an App](/catalog/manage/curate/#changing-owners) section of *How to Curate Registered Assets*.
+This is a link to the business owner of the data exposed in the service. For more information, see the [Changing Owners of an App](/catalog/manage/curate/#changing-owners) section of *How to Curate Registered Assets*.
 
-#### 3.6.3 Technical Owner
+#### Technical Owner
 
 This is a technical contact for the app. By default, this is the owner who registered the service.
 
-For apps hosted in the Mendix Cloud, the **Technical Owner** is the app developer that deployed the app.
+For apps hosted in Mendix Cloud, the **Technical Owner** is the app developer that deployed the app.
 
 Technical owners can be [changed](/catalog/manage/curate/#changing-owners).
 
-#### 3.6.4 Discoverability {#discoverability-metadata}
+#### Discoverability {#discoverability-metadata}
 
-When a data source is registered, by default, it is **Discoverable** in the Catalog. When this is set, all users in your company can find it, view the details, and consume it. The owners of an asset and curators can set a data source as **Non-discoverable**, which means it is not visible to users unless they are the owner or a curator.
+When a service is registered, by default, it is **Discoverable** in the Catalog. When this is set, all users in your company can find it, view the details, and consume it. The owners of an asset and curators can set a service as **Non-discoverable**, which means it is not visible to users unless they are the owner or a curator.
 
-See the [Curation Bar](#curation-option) section below for changing **Discoverability** as the owner of the data source or curator.
+See the [Curation Bar](#curation-option) section below for changing **Discoverability** as the owner of the service or curator.
 
 The following discoverability values can be set:
 
 * **Discoverable** – all users in your company can see and consume the asset in the Catalog and Studio Pro 
 * **Non-Discoverable** – the asset is only visible to owners, curators, and the Mendix Admin in the Catalog; it is not included in the search results in the [Integration pane](/refguide/integration-pane/) of Studio Pro, or any other client of the Catalog API.
 
-#### 3.6.5 Validated
+#### Validated
 
-This indicates if the data source has been **Validated**. For details on changing **Validated** as an owner or curator, see the [Curation Bar](#curation-option) section below. See the [Validated](/catalog/manage/curate/#validated) section of *Curate Registered Assets* to learn about what this means.
+This indicates if the service has been **Validated**. For details on changing **Validated** as an owner or curator, see the [Curation Bar](#curation-option) section below. See the [Validated](/catalog/manage/curate/#validated) section of *Curate Registered Assets* to learn about what this means.
 
-#### 3.6.6 Application
+#### Application
 
-A link to the application from which the data source was published in the given environment.
+A link to the application from which the service was published in the given environment.
 
-#### 3.6.7 Environment Type
+#### Environment Type
 
 The environment type indicates the quality and the status of the data that the exposed datasets connect to. The following environment types can be specified:
 
@@ -423,23 +215,23 @@ The environment type indicates the quality and the status of the data that the e
 * **Non-Production**
 * **Sandbox** (the Mendix Free App environment)
 
-### 3.7 Curation Option {#curation-option}
+### Curation Option {#curation-option}
 
 The **Curation Option** is displayed in the asset detail screen if you are the owner of the selected asset or a curator. In **Edit**, you can edit the information that is displayed in the Catalog for an asset:
 
 {{< figure src="/attachments/catalog/search/curation-option.png" alt="curation option"   width="300"  >}}
 
-* For the selected data source, you can edit [Application Details](/catalog/manage/curate/#curate-application), [Data Source Details](/catalog/manage/curate/#service-details), and Authentication
+* For the selected service, you can edit [Application Details](/catalog/manage/curate/#curate-application), [Service Details](/catalog/manage/curate/#service-details), and Authentication
 
 For further details, see the [Discoverable and Validated](/catalog/manage/curate/#discoverability) section of *Curate Registered Assets*.
 
-### 3.8 Data Source and Dataset URIs
+### Service and Dataset URIs
 
-The data source URI is the location of the service contract of the data source, also known as the service endpoint. The endpoints of all exposed datasets (entity sets) are defined in the contract. From the details screen of the data source and dataset, you can copy the URIs to the clipboard by clicking the **Copy Data Source URI** and **Copy Dataset URI** respectively. These URIs can be used for directly accessing the contract and resource in BI applications.
+The service URI is the location of the service contract of the service, also known as the service endpoint. The endpoints of all exposed datasets (entity sets) are defined in the contract. From the details screen of the service and dataset, you can copy the URIs to the clipboard by clicking the **Copy URI**. These URIs can be used for directly accessing the contract and resource in BI applications.
 
-### 3.9 Download the Contract of a Data Source {#download-contract}
+### Download the Contract of a Service {#download-contract}
 
-For a selected data source, you can click **Download** to download the service contract that is located at the data source endpoint. A ZIP file that includes the all the files that make up the full contract is generated and downloaded.
+For a selected service, you can click **Download** to download the service contract that is located at the service endpoint. A ZIP file that includes the all the files that make up the full contract is generated and downloaded.
 
 The resulting ZIP file is named `DataHub_<service_name>_<service_version>_<technology>.zip` where the string `<technology>` identifies the service protocol.
 
@@ -449,6 +241,10 @@ Here is an example:
 
 When you click **Download**, the following file is downloaded: `DataHub_SAP_Intelligence_1.0_OData4.zip`. This ZIP file has the folder `DataHub_SAP_Intelligence_1.0_OData4`, which contains all the metadata files that define the service.
 
-### 3.10 Viewing Search Results in the Landscape
+### Viewing Search Results in the Landscape
 
 When an item is selected in the search results pane, you can click the [Landscape](/data-hub/data-hub-landscape/) tab to see the network of connections and dependencies for the selected asset. This provides a graphical representation to indicate the context and relevance of a selected item and the data for the exposed datasets.
+
+## Search using the API
+
+To use the Catalog Search API, see [Search API](/apidocs-mxsdk/apidocs/search-api/).

@@ -7,7 +7,7 @@ aliases:
     - /refguide9/native-template/
 ---
 
-## 1 Introduction
+## Introduction
 
 A template is required when you build a Mendix native app: specifically the Native Template. In short, the Native Template describes the native dependencies your app needs, and it includes two native apps (one for iOS and one for Android) that can be independently built to create the finished apps. The Native Template works in conjunction with the Native Mobile Builder which configures it. For more information on the Native Mobile Builders' capabilities, see the [Native Mobile Builder Release Notes](/releasenotes/mobile/mendix-native-mobile-builder/).
 
@@ -15,11 +15,11 @@ The template also includes tooling to help put everything together. Specifically
 
 In addition, the Native Template helps create custom developer apps. These are apps that act like the Make It Native app but are tailored your app's specific needs. If you would like to build an app that uses bespoke functionality like custom native widgets see [Create a Custom Developer App](/refguide9/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/). 
 
-## 2 Location
+## Location
 
 The Native Template is hosted on [GitHub](https://github.com/mendix/native-template) and is publicly available.
 
-## 3 Versioning
+## Versioning
 
 Please note this key information regarding versioning:
 
@@ -38,7 +38,7 @@ The keys represent the Mendix Studio Pro version. The `min` and `max` values are
 
 So like in the example shown above, in the case of Mendix Studio Pro 8.9.x you could choose any Native Template version from 4.0.0 to the latest. Ideally, you should choose the most recent supported version.
 
-## 4 Auto-Linking Dependencies
+## Auto-Linking Dependencies
 
 React Native modules are npm packages that include dependencies which must be linked with your platform-specific apps so that the React Native modules can be compiled with the apps.
 
@@ -46,7 +46,7 @@ The Native Template fully supports the [React Native's CLI auto-linking capabili
 
 For libraries that are not fully auto-linkable (those are usually libraries that require special initialization) we extended the default auto-linking capabilities. This process is limited to publicly known capabilities. We will expand the documentation when the API becomes public.
 
-## 5 Native Mobile Toolkit
+## Native Mobile Toolkit
 
 The Native Mobile Toolkit is a Mendix-developed npm module that is used to facilitate the configuration requirements of platform-specific apps. It lets you define app features like versioning, package ID, splash screens, and more in a platform-agnostic way. 
 
@@ -56,7 +56,7 @@ The Native Mobile Toolkit includes conversion logic that allows conversion from 
 happens in memory so that it does not conflict with custom implementations. The converted config is outputted in the terminal's console
 for further debugging. 
 
-### 5.1 Mobile Toolkit Configuration Structure
+### Mobile Toolkit Configuration Structure
 
 App-specific information is defined in a top level **config** file. The best way to derive possible config options is to configure an app initially with the Mendix Native Mobile Builder and note the configuration keys.
 
@@ -193,7 +193,7 @@ This is an example of a configured app:
 
 </details>
 
-### 5.2 Assets
+### Assets
 
 The Mobile Toolkit supports configuring splash screens and the icons for your app. Assets are expected to be saved relative to the root of the Native Template in a folder named **assets**.
 
@@ -203,7 +203,7 @@ The Mobile Toolkit supports configuring splash screens and the icons for your ap
     - splashScreens
 ```
 
-#### 5.2.1 iOS Icons
+#### iOS Icons
 
 The icons' configuration needs to be defined in a versioned *JSON* formatted **config** file under **assets/icons/ios.json**.
 
@@ -364,7 +364,7 @@ This is an example of all the keys required to successfully configure an app:
 
 </details>
 
-#### 5.2.2 Android Icons
+#### Android Icons
 
 The icons' configuration needs to be defined in a versioned JSON-formatted **config** file under *assets/icons/android.json*.
 
@@ -447,7 +447,7 @@ This is an example of all the keys required to successfully configure an app:
 
 </details>
 
-#### 5.2.3 iOS Splash Screens
+#### iOS Splash Screens
 
 The splash screen configuration needs to be defined in a versioned JSON-formatted **config** file under *assets/splashScreens/ios.json*.
 
@@ -499,7 +499,7 @@ Here is an example of the file with all required splash screens defined:
 }
 ```
 
-#### 5.2.4 Android Splash Screens
+#### Android Splash Screens
 
 The splash screen configuration needs to be defined in a versioned JSON-formatted **config** file *assets/splashScreens/android.json*.
 
@@ -543,7 +543,7 @@ Here is an example of the file with all required splash screens defined:
 }
 ```
 
-### 5.3 Configuring Firebase
+### Configuring Firebase
 
 Using Firebase requires special considerations. When enabling the Firebase capabilities via the Native Mobile Toolkit **config** file, 
 the toolkit will look in the *assets/firebase* folder for the appropriate configuration files.
@@ -558,7 +558,7 @@ The files are looked up by name. The expected names per platform are the followi
 The Native Mobile Toolkit does not verify the validity of the provided configuration files. It only moves them to the correct 
 location when configuring the app. 
 
-### 5.4 Running the Native Mobile Toolkit
+### Running the Native Mobile Toolkit
 
 The Native Mobile Toolkit is a Node module included with Native Template. As such, it must be installed first by running `install` in the Native Template root directory. When building locally, you must run `npm install` when a new version of the Native Mobile Toolkit is released to ensure you are always running on the latest version.
 
@@ -568,23 +568,23 @@ The npm script expects that the Native Mobile Toolkit configuration files are at
 
 To run the toolkit using the run script defined in *package.json*, run `npm run configure`.
 
-#### 5.4.1 Specifying Custom Configuration Paths
+#### Specifying Custom Configuration Paths
 
 Having the configuration file relative to the root directory is not required for the toolkit, but is done for convenience. To specify a different configuration file path the toolkit can be executed using the following command:
 
-```text {linenos=false}
+```text
 native-mobile-toolkit configure --config-path='./<name of the configuration>.json' --verbose
 ```
 
-## 6 Bundle Information
+## Bundle Information
 
 Mendix Native apps are based on React Native. When building your Mendix app using the Mendix Native Mobile Builder, your app is first compiled to JavaScript code and static assets. Using React Native's Metro Bundler, the client code and assets are then compiled to platform specific React Native Bundles. These are finally moved to the correct location in Native Template before compiling the final apps.
 
-This whole process is unified using a tool called MXBuild that is included with every installation of Mendix Studio Pro. For more information, see the [MxBuild Reference Guide](/refguide9/mxbuild/).
+This whole process is unified using a tool called MxBuild that is included with every installation of Mendix Studio Pro. For more information, see the [MxBuild Reference Guide](/refguide9/mxbuild/).
 
-### 6.1 Using MxBuild to Build your Native App
+### Using MxBuild to Build your Native App
 
-If for some reason you cannot use Mendix Native Mobile Builder to configure and build your app, for example when operating in a CI environment which lacks a display, you will have to explicitly have set up the correct Mendix Studio Pro version for the app you are building and then manually run MXBuild.
+If for some reason you cannot use Mendix Native Mobile Builder to configure and build your app, for example when operating in a CI environment which lacks a display, you will have to explicitly have set up the correct Mendix Studio Pro version for the app you are building and then manually run MxBuild.
 
 To do so: 
 
@@ -592,7 +592,7 @@ To do so:
 1. Find the path to the executable **mxbuild.exe** and note it down. 
 1. Open a command line and run this command: 
 
-    ```text {linenos=false}
+    ```text
     <path-to-mxbuild.exe> --java-home=DIRECTORY -java-exe-path=FILENAME --target=deploy --native-packager <path-to-the-app-mpr>
     ```
 
@@ -620,17 +620,16 @@ The bundle folder structure will look something like this:
         - index.ios.bundle
 ```
 
-### 6.2 Copying the Bundle to the Right Location
+### Copying the Bundle to the Right Location
 
 The created bundles need to be copied to the right place in the Native Template to be built:
 
 * For Android, the content of the `bundle/android` reflects the exact folders the assets and bundles need to be copied to
 * For iOS, the content of the `bundle/iOS` folder needs to be simply copied to the `<native-template>/ios/Bundle` directory
 
-## 7 Deriving the App's Native Dependencies
+## Deriving the App's Native Dependencies
 
-Mendix Studio Pro 9 introduced Native Dependency resolution for pluggable widgets and JavaScript actions. For more information, see [Declaring Native Dependencies
-](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/). Prior to Studio Pro 9 Mendix Studio Pro was shipping with a set of core dependencies which are now are removed. 
+Mendix Studio Pro 9 introduced Native Dependency resolution for pluggable widgets and JavaScript actions. For more information, see [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/). Prior to Studio Pro 9 Mendix Studio Pro was shipping with a set of core dependencies which are now are removed. 
 
 As you develop, you may add more Mendix Studio Pro 9 compatible modules, widgets, and actions to your app. This means and more dependencies 
 will be added that will also need be declared in your app's Native Template prior to building the native apps. 
@@ -638,7 +637,7 @@ will be added that will also need be declared in your app's Native Template prio
 As this dependency management is required for your app's initial setup, Mendix suggests you use the Mendix Native Mobile Builder to configure your app.
 The Mendix Native Mobile builder is capable of deriving required dependencies and linking them with your app's Native Template. 
 
-## 8 Continuous Integration Testing Guidelines
+## Continuous Integration Testing Guidelines
 
 In some advanced cases you might consider setting up continuous integration (CI) testing. This could be useful if you have multiple environments and prefer testing
 any nightly changes in acceptance before pushing to production.
@@ -650,12 +649,12 @@ A CI environment needs to be able to do the following to successfully configure 
 * Check out the latest Mendix app from SVN
 * Check out your app's Native Template (the one used when configuring the app)
 * Run `mxbuild`
-* Set up the configuration and move assets as needed (this can be done with simple shell scripts or any other solution, and is the implementor's choice) 
+* Set up the configuration and move assets as needed (this can be done with simple shell scripts or any other solution, and is the implementer's choice) 
 * Run `npm i` and `npm run configure` to configure the app using Mendix Mobile Toolkit before the build.
 
-How to build the apps is a choice for the implementor. Mendix Native App Builder use App Center for convenience. There are multiple other 
+How to build the apps is a choice for the implementer. Mendix Native App Builder use App Center for convenience. There are multiple other 
 solutions, on premise or as a service, that can be used for this purpose. We do not endorse one over the other.
 
-## 9 Read More
+## Read More
 
 * [Offline First Guide](/refguide9/offline-first/)

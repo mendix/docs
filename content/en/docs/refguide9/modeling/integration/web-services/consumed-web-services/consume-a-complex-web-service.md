@@ -7,7 +7,7 @@ aliases:
     - /howto9/integration/consume-a-complex-web-service/
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to explains how to consume a (third-party) web service with which you can integrate your Mendix application and re-use functionality and data from other applications. Web services are the preferred way of integrating a Mendix application with external systems. They can be used to retrieve data, send updates, and perform operations. In Mendix, calling a web service is done in a microflow using the call web service action.
 
@@ -17,11 +17,11 @@ This how-to teaches you how to do the following:
 * Directly import a web service document into your app
 * Configure a web service call
 
-## 2 Importing a Web Service Using the Wizard
+## Importing a Web Service Using the Wizard
 
 This section describes the powerful wizard that enables integrating—in just a few clicks—the creation of an imported web service, the related data entities, the XML-mapping, and a microflow to trigger the web service.
 
-### 2.1 The Configuration
+### The Configuration
 
 To import a web service using the wizard, follow these steps:
 
@@ -39,7 +39,7 @@ To import a web service using the wizard, follow these steps:
     {{< figure src="/attachments/refguide9/modeling/integration/consume-a-complex-web-service/wizard-import-schema.png" alt="wizard banner" class="no-border" >}}
 
 3. On the **Import Web Service** dialog box, select **Web service operation** and click **Next**.
-4. In the **New Web Service Operation** dialog box, for **WSDL source** , specify the WSDL to be used for this imported web service. For the **WSDL source** you can either provide the **URL** (for example, http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL) or load a **File** from your computer.
+4. In the **New Web Service Operation** dialog box, for **WSDL source**, specify the WSDL to be used for this imported web service. For the **WSDL source** you can either provide the **URL** (for example, http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL) or load a **File** from your computer.
 
     {{< figure src="/attachments/refguide9/modeling/integration/consume-a-complex-web-service/wizard-new-operation.png" class="no-border" >}}
 
@@ -62,7 +62,7 @@ To import a web service using the wizard, follow these steps:
 
 10. Click **Finish** to create the web service.
 
-### 2.1 The Outcome
+### The Outcome
 
 When finished the wizard will add the following to your model based on the options selected:
 
@@ -73,7 +73,7 @@ When finished the wizard will add the following to your model based on the optio
 
 {{< figure src="/attachments/refguide9/modeling/integration/consume-a-complex-web-service/web-service-entity.png" class="no-border" >}}
 
-## 3 Importing a Web Service Directly
+## Importing a Web Service Directly
 
 An alternative to using the wizard described above is to import a web service document directly into your app. For further information, see [Consumed Web Services](/refguide9/consumed-web-services/) in the *Studio Pro Guide*.
 
@@ -91,7 +91,7 @@ To import a web service directly, follow these steps:
 
     {{< figure src="/attachments/refguide9/modeling/integration/consume-a-complex-web-service/consumed-web-service-doc.png" class="no-border" >}}  
 
-## 4 Configuring the Web Service Call
+## Configuring the Web Service Call
 
 To configure the web service call, follow these steps:
 
@@ -133,7 +133,7 @@ To configure the web service call, follow these steps:
     * If you want to ignore the return, select **Ignore**
 8. Your imported web service is now ready to be used in your application.
 
-## 5 Read More
+## Read More
 
 * [Consume a Simple Web Service](/howto9/integration/consume-a-simple-web-service/)
 * [Export XML Documents](/howto9/integration/export-xml-documents/)

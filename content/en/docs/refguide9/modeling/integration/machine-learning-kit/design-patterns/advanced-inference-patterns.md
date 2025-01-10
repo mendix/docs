@@ -6,7 +6,7 @@ weight: 35
 ---
 {{% alert color="info" %}}[Machine learning model](/refguide9/machine-learning-kit/) support is available in Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above.{{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The [Integrating Models with Pre-processors and Post-processors](/refguide9/machine-learning-kit/using-ml-kit/#pre-post-processors) section of *Integrate Machine Learning Models* outlines considerations when importing a machine learning model with advanced processing needs. What are the standards for these models, and what do they look like? 
 
@@ -19,7 +19,7 @@ This document explores four common advanced inference design patterns for machin
 
 {{% alert color="info" %}}To view all of the examples from the sections below, check out the demo app in our [Demo for Mendix ML Kit Repository](https://github.com/mendix/mlkit-example-app#getting-started). The **Getting Started** section includes instructions on using the demo app.{{% /alert %}}
 
-### 1.1 Ensembles {#ensembles}
+### Ensembles {#ensembles}
 
 Ensemble models are used when dealing with a lot of variance on a dataset or many features versus a relatively low number of data available. Ensemble models are a machine learning approach to combine multiple other models, called *base estimators*, in the prediction process. Ensemble models offer a solution to overcome the technical challenges of building a single estimator. In this approach, the same data points are sent to a group of models and then collect all the predictions to find the best prediction.
 
@@ -35,7 +35,7 @@ An example of the sample microflow:
 
 {{< figure src="/attachments/refguide9/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/ensembles-example-microflow.png" alt="." class="no-border" >}}
 
-### 1.2 Cascaded Inference {#cascaded-inference}
+### Cascaded Inference {#cascaded-inference}
 
 The Cascaded Inference pattern refers to the ability to feed the output of one model into another in a cascade pattern. 
 
@@ -47,7 +47,7 @@ An example of a microflow:
 
 A model pre-processor makes some data available for the first model, and the output is injected into the second model as an input. Ultimately, that output is used for the final prediction.
 
-### 1.3 Machine Learning MaaS (Model as a Service) {#maas}
+### Machine Learning MaaS (Model as a Service) {#maas}
 
 A common pattern in machine learning deployment is using a microservice or a service. While Studio Pro supports monolith applications with its security and speed advantages, creating a microservice is possible by servers [publishing a REST service](/howto9/integration/publish-rest-service/) and clients [calling the service](/refguide9/call-rest-action/). 
 
@@ -57,7 +57,7 @@ Below is an example of such deployment. Instead of actually storing the variable
 
 {{< figure src="/attachments/refguide9/modeling/integration/ml-kit/design-patterns/advanced-inference-patterns/maas-sample-microflow.png" alt="Sample microflow for a Maas, as explained in the paragraph above." class="no-border" >}}
 
-### 1.4 Batch Inference {#batch-inference}
+### Batch Inference {#batch-inference}
 
 A common pattern for machine learning applications is the ability to run multiple inferences with a single request for the model, or batch inference. This is just a special case of [Dynamic Shapes](/refguide9/machine-learning-kit/using-ml-kit/#dynamic-shapes), in which the first dimension is dynamic:
 

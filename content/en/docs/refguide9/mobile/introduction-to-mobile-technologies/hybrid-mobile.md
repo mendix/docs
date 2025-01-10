@@ -11,7 +11,7 @@ aliases:
     - /howto9/mobile/push-notifications/
 ---
 
-## 1 Introduction
+## Introduction
 
 Hybrid mobile applications are web applications that run inside a native application. They can access device capabilities via JavaScript or by relying on the native application to provide the required functionality in native code.
 

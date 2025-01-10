@@ -1,5 +1,6 @@
 ---
-title: "Mendix Native Mobile Builder"
+title: "Mendix Native Mobile Builder Release Notes"
+linktitle: "Mendix Native Mobile Builder"
 url: /releasenotes/mobile/mendix-native-mobile-builder/
 weight: 11
 description: "Mendix Native Mobile Builder release notes."
@@ -7,6 +8,24 @@ description: "Mendix Native Mobile Builder release notes."
 ---
 
 The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Studio Pro, which helps you build your Mendix native mobile app. After the Mendix Native Mobile Builder simplifies your build process, you can do what you want most: test and publish your app. The Mendix Native Mobile Builder uses MxBuild, GitHub, and App Center to simplify the app building process and is directly accessible via Mendix Studio Pro. 
+
+## 2025
+
+### Release 1.0.132
+
+**Release date: January 7, 2025**
+
+#### App Center Deprecated March 2025
+
+* Building mobile apps with App Center is [deprecated](https://learn.microsoft.com/en-us/appcenter/retirement) and will be removed on March 2025. We now show the deprecation warning when the cloud build option is enabled.
+
+#### Fixes
+
+* We have resolved an issue where remote JavaScript debugging failed in custom-built Mendix Native Developer Apps. This happened in cases of improper initialization of Firebase services during the build process. Our fix ensures Firebase dependencies are only included when explicitly required by the application.
+  
+{{% alert color="warning" %}}
+Please note that this is a breaking change, and thus, requires a mandatory update. You must use the latest Native Template version to implement this fix, as older versions may cause errors in your application. Failure to update could lead to potential app instability and functionality issues.
+{{% /alert %}}
 
 ## 2024
 
@@ -130,13 +149,13 @@ Now, instead of accessing the first MPR file found in the directory, the tool wi
 
 * The tool now handles apps with multiple MPR files correctly.
 * The tool now discloses the error that led to a Native Template update failing in the error dialog.
-* The tool now correctly updates the App Center build configuration for already-configured builds. This will allow for updates to things like the XCode or Node versions to accommodate new requirements.
+* The tool now correctly updates the App Center build configuration for already-configured builds. This will allow for updates to things like the Xcode or Node versions to accommodate new requirements.
 
 #### Fixes
 
 * We fixed a UI bug where, when App Center fails to configure the repository, a generic error is shown instead of the visual guide to manually link the repository. Now instead of a generic error, the visual guide is shown correctly again.
 * We fixed a bug with the Native Template update dialog box that would show the wrong reason for a required update. Now the correct reason for a required update is shown.
-* We fixed a bug that could stop apps from completely  loading when its GitHub or App Center tokens were no longer valid. Now the app will finish loading and the errors are clearly visible in the UI.
+* We fixed a bug that could stop apps from completely loading when its GitHub or App Center tokens were no longer valid. Now the app will finish loading and the errors are clearly visible in the UI.
 * We fixed a bug with fatal exceptions not being caught correctly at the start of the app. This could result in a blank screen at startup. Now a dialog box is shown correctly.
 * We fixed an issue with compatibility checks where the tool would incorrectly warn that a compatible Native Template is incompatible with Mendix Native OTA. Any Native Template from version 6.2.7 or newer is compatible.
 
@@ -312,7 +331,7 @@ still fail if the keystore values are invalid.
 
 #### Fixes
 
-* We fixed an issue with android certificates not being verified correctly.
+* We fixed an issue with Android certificates not being verified correctly.
 * We fixed a bug where Native Mobile Builder might try to configure the wrong app on App Center. 
 
 ### Release v1.0.81

@@ -12,7 +12,7 @@ aliases:
 For information about generating PDF documents, see the [PDF Document Generation](/appstore/modules/document-generation/) module.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 Document Templates are used to model a template required as input for a document export action which can generate all kinds of documents based on application data. They are composed much in the same way as [Pages](/refguide9/pages/).
 
@@ -31,11 +31,11 @@ Additionally, in most widgets as well as on the document template itself, a styl
 
 If you would like to display text in a language with uncommon characters such as Arabic or Thai, make sure you select a font in the style editor that supports these characters. "Tahoma" is such a font.
 
-## 2 Core Widgets {#core}
+## Core Widgets {#core}
 
 The core widgets are central to building document templates in Mendix. They can show the contents of a single entity or of a list of entities. Every document template designed to show data from the domain model requires one of these components.
 
-### 2.1 Data Grid
+### Data Grid
 
 The data grid shows a list of objects in a grid. For example, a data grid can show all the orders a customer has placed.
 
@@ -49,7 +49,7 @@ A data grid showing a list of orders with a description and the referenced custo
 
 {{% /alert %}}
 
-### 2.2 Data View
+### Data View
 
 The data view is used for showing the contents of exactly one object. If, for example, you want to show details of a single customer you would use a data view to do this. The data view typically contains a table with static labels and dynamic data widgets like a dynamic label. In more complex templates, a data view can contain data grids and other data views for related objects.
 
@@ -63,7 +63,7 @@ A data view showing order line information.
 
 {{% /alert %}}
 
-### 2.3 Template Grid
+### Template Grid
 
 The template grid shows a list of objects in a tile view. For example, a template grid can show a list of products. The template grid has a lot in common with the data grid. The main difference is that the objects are shown in templates (somewhat like a small data view) instead of rows.
 
@@ -77,11 +77,11 @@ A template grid showing products with name and description.
 
 {{% /alert %}}
 
-## 3 Layout Widgets {#layout}
+## Layout Widgets {#layout}
 
 Layout widgets give structure to a page. They do not show data but provide a layout in which you can place other widgets that do.
 
-### 3.1 Table
+### Table
 
 Tables can be used to change the layout of the page. They contain a number of rows and columns and the intersection of the two is called a cell. Each cell can contain widgets. Cells can be merged horizontally and vertically before they are filled to allow for asymmetric layouts.
 Tables can be used both inside and outside data view or templategrid widgets.
@@ -96,7 +96,7 @@ A table with four rows and three columns. Last row containing a data view with a
 
 {{% /alert %}}
 
-### 3.2 Page Break
+### Page Break
 
 When inserting a page break, the current page will be cut off after the break and widgets below the break will be displayed in a new page.
 
@@ -110,17 +110,17 @@ A page break
 
 {{% /alert %}}
 
-### 3.3 Line Break
+### Line Break
 
 When inserting a line break, a new line will be inserted at that position.
 
 For more information, see [Line Break (Document Template)](/refguide9/line-break-document-template/).
 
-## 4 Dynamic Data Widgets {#dynamic}
+## Dynamic Data Widgets {#dynamic}
 
 Dynamic data widgets are used for showing (dynamic) data. They must be placed inside a data view or template grid because they show attributes or associations of an entity.
 
-### 4.1 Dynamic Label
+### Dynamic Label
 
 A dynamic label is used for the same attribute types as a text box in the page editor. It can be used to display a text value.
 
@@ -134,7 +134,7 @@ A dynamic label linking to a customer name.
 
 {{% /alert %}}
 
-### 4.2 Dynamic Image
+### Dynamic Image
 
 A dynamic image can be used to show a System.Image. If the image is not available (for example: the image was never saved) it will show the preset default image. It can be deployed inside a data view or templategrid.
 
@@ -148,11 +148,11 @@ A dynamic image inside a table cell, showing the preset default image.
 
 {{% /alert %}}
 
-## 5 Static Data Widgets {#static}
+## Static Data Widgets {#static}
 
 These widgets contain static (fixed) data to help create the look of the generated document.
 
-### 5.1 Static Label
+### Static Label
 
 A static label shows a line of static text. You can use it to place custom text inside a dataview or template grid or table.
 
@@ -166,13 +166,13 @@ A label with text 'Customer name'.
 
 {{% /alert %}}
 
-### 5.2 Title
+### Title
 
 A title works much like a static label but can be placed outside a data view, template grid or table.
 
 For more information, see [Title (Document Template)](/refguide9/title-document-template/).
 
-### 5.3 Static Image
+### Static Image
 
 A static image shows a predefined image. It can be put either in- or outside a data view or templategrid.
 

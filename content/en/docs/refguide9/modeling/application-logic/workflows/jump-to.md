@@ -4,9 +4,9 @@ url: /refguide9/jump-to/
 linktitle: "Jump to Different Activities"
 weight: 55
 ---
-## 1 Introduction
+## Introduction
 
-Running workflow instances can be manually changed while they are in progress. This means that you can manually select what activity the workflow will continue from. This can be useful to correct wrong decisions or to continue a workflow when it is in incompatible state. You can use the [Generate Jump-to Option](/refguide9/generate-jump-to-options/) microflow action to generate a list of activities the workflow can jump to and the [Apply Jump-To Option](/refguide9/apply-jump-to-option/) microflow action to apply the desired changes to the workflow instance. The information is captured in a set of non-persistent entities.
+Running workflow instances can be manually changed while they are in progress. This means that you can manually select what activity the workflow will continue from. This can be useful to correct wrong decisions or to continue a workflow when it is in incompatible state. You can use the [Generate Jump-to Option](/refguide9/generate-jump-to-options/) microflow action to generate a list of activities the workflow can jump to and the [Apply Jump-To Option](/refguide9/apply-jump-to-option/) microflow action to apply the desired changes to the workflow instance. The information is captured in a set of non-persistable entities.
 
 {{% alert color="info" %}}
 
@@ -14,7 +14,7 @@ This functionality is different from the [Jump activity](/refguide9/jump-activit
 
 {{% /alert %}}
 
-## 2 Related System Entities and Associations
+## Related System Entities and Associations
 
 The [Generate Jump-to Option](/refguide9/generate-jump-to-options/) microflow action generates a **System.WorkflowJumpToDetails** object with associated **System.WorkflowCurrentActivity** and **System.WorkflowActivityDetails** objects. The entity structure is shown in the image of the System domain model below:
 
@@ -24,12 +24,12 @@ The **System.WorkflowJumpToDetails** object is associated with the **System.Work
 
 The **System.WorkflowCurrentActivity** reflects the current activities of the workflow instance and gets the description of the current activity through the **System.WorkflowCurrentActivity_ActivityDetails** association. It also contains a list of activities which this activity can jump to through the **System.WorkflowCurrentActivity_ApplicableTargets** association. The **System.WorkflowCurrentActivity_JumpToTarget** association is empty.
 
-## 3 Updating Object Members to Jump to Other Activities
+## Updating Object Members to Jump to Other Activities
 
 For the workflow to jump to other activities, you need to update the **System.WorkflowCurrentActivity** object members. You need to do the following:
 
 * Set the **Action** enumeration attribute to *JumpTo*
-* Set the **System.WorkflowCurrentActivity_JumpToTarget** association to refer to to the **System.WorkflowActivityDetails** object
+* Set the **System.WorkflowCurrentActivity_JumpToTarget** association to refer to the **System.WorkflowActivityDetails** object
 
 The **Action** attribute on the **System.WorkflowCurrentActivity** object is an enumeration consisting of two options:
 
@@ -40,11 +40,11 @@ When the **Action** attribute is set to *JumpTo*, the **System.WorkflowCurrentAc
 
 After setting the objects, changes can be applied by calling a microflow containing the [Apply jump-to option](/refguide9/apply-jump-to-option/). This will change the current activities of the associated workflow instance and queue the workflow for execution (as this happens asynchronously, execution may not happen instantly). If the workflow was in incompatible state because of versioning conflicts, the workflow is set to its previous state (for example *In Progress* or *Paused*).
 
-## 4 Jumping to Other Activities in Parallel Splits
+## Jumping to Other Activities in Parallel Splits
 
 Jumping to other activities has a limitation in parallel splits: it is not possible to jump into or out of a current parallel split path. However, it is possible to jump to other activities in a current parallel split path including the end of the path. Activities in other parallel split paths and activities outside of the current parallel split path will not be available in the **System.WorkflowCurrentActivity_ApplicableTargets** association.
 
-## 5 Read More
+## Read More
 
 * [Generate Jump-To Options](/refguide9/generate-jump-to-options/)
 * [Apply Jump-To Option](/refguide9/apply-jump-to-option/)

@@ -8,7 +8,7 @@ weight: 90
 These activities can only be used in microflows.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 When working with external object there is a microflow activity which enables you to call the service to update the state of the object in the other system.
 
@@ -19,6 +19,6 @@ The following are the integration activities you can use in your microflow:
 * [Send external object](/refguide/send-external-object/) – sends changes to an external object to the publishing app
 * [Delete external object](/refguide/delete-external-object/) – deletes an external object in the publishing app
 
-## 2 Read More
+## Read More
 
 * [Activities](/refguide/activities/)

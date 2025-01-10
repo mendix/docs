@@ -4,13 +4,13 @@ url: /refguide8/commit-dialog/
 weight: 20
 ---
 
-## 1 Introduction
+## Introduction
 
 The commit dialog is used for committing changes to the Team Server. You can enter a message and, if applicable, select related stories.
 
 {{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/commit-dialog/commit-dialog-stories.png" alt="Version Control Menu" class="no-border" >}}
 
-## 2 Branch
+## Branch
 
 At the top of the dialog box you will see the branch which you are committing. This will be one of the following:
 
@@ -19,25 +19,25 @@ At the top of the dialog box you will see the branch which you are committing. T
 | {{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/commit-dialog/commit-main.png" alt="Version Control Menu" class="no-border" >}} |  you are committing the main line |
 | {{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/commit-dialog/commit-branch.png" alt="Version Control Menu" class="no-border" >}} |  you are committing the specified branch |
 
-## 3 Message
+## Message
 
-Enter a message describing the changes you have made. This message may contain multiple lines. If you want to make the commit using the keyboard you can press <kbd>Ctrl</kbd>+<kbd>Enter</kbd>.
+Enter a message describing the changes you have made. This message may contain multiple lines. If you want to make the commit using the keyboard you can press <kbd>Ctrl</kbd> + <kbd>Enter</kbd>.
 
-## 4 Commit Tabs
+## Commit Tabs
 
-### 4.1 Related Stories {#stories}
+### Related Stories {#stories}
 
 {{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/commit-dialog/commit-dialog-stories.png" alt="Version Control Menu" class="no-border" >}}
 
 Tick the boxes next to the stories that are related to your commit. Mendix recommends committing a small number of changes at a time, so there is usually just one related story.
 
-### 4.2 Changes in Model
+### Changes in Model
 
 {{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/commit-dialog/commit-dialog-model-changes.png" alt="Version Control Menu" class="no-border" >}}
 
 If there are changes in the model this tab shows a summary of those changes. See [Changes Pane](/refguide8/changes-pane/) for a description of how changes are reported in Studio Pro.
 
-### 4.3 Changes on Disk
+### Changes on Disk
 
 {{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/commit-dialog/commit-dialog-disk-changes.png" alt="Version Control Menu" class="no-border" >}}
 

@@ -121,7 +121,7 @@ We have decided to retract version 5.0.11 after we received reports that apps wo
 
 ### Improvements 
 
-* We updated a number of dependencies to ensure support with XCode 12. We also updated the App Center configuration to use XCode 12 and Node LTS.
+* We updated a number of dependencies to ensure support with Xcode 12. We also updated the App Center configuration to use Xcode 12 and Node LTS.
 
 ## 5.0.2
 

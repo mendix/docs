@@ -1,82 +1,17 @@
-// File to override any Docsy/Bootstrap CSS definition
+// Main custom styling file to override Docsy/Bootstrap CSS definitions
 
-// _front-page.scss is only custom styling page not from Docsy/Bootstrap
+// Import any custom styling pages not from Docsy/Bootstrap
 @import "front-page";
-
-@font-face { // LZ - Added for MxDock by request 2024-01-30
-    font-family: "noto-sans";
-    src: local("noto-sans"), url("/fonts/noto-sans/noto-sans-400.woff2") format("woff2");
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: "noto-sans";
-    src: local("noto-sans"), url("/fonts/noto-sans/noto-sans-400-italic.woff2") format("woff2");
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: "noto-sans";
-    src: local("noto-sans"), url("/fonts/noto-sans/noto-sans-600.woff2") format("woff2");
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: "noto-sans";
-    src: local("noto-sans"), url("/fonts/noto-sans/noto-sans-600-italic.woff2") format("woff2");
-    font-style: italic;
-    font-weight: 600;
-    font-display: swap;
-  }
-  
-  /* Medium */
-  @font-face {
-    font-family: "Patron";
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: local("Patron Medium"), local("Patron-Medium"),
-      url("/fonts/patron/PatronWEB-Medium.woff2") format("woff2");
-  }
-  
-  /* Light */
-  @font-face {
-    font-family: "Patron";
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: local("Patron Light"), local("Patron-Light"),
-      url("/fonts/patron/PatronWEB-Light.woff2") format("woff2");
-  }
-  
-  /* The main font is Noto Sans */
-  body {
-    font-family: "noto-sans", sans-serif;
-    font-weight: 400;
-    line-height: 1.5; // LZ - line height 1.5 (Regular) according to PDS
-  }
-  
-  /* Page Title H1 use Patron Medium. The rest of headings on your page should use Noto Sans */
-  .page-title {
-    font-family: "Patron", "noto-sans", sans-serif;
-    font-weight: 500;
-  }  
+@import "font-face";
+@import "badge";
+@import "numbered-headings";
 
 // _alert.scss - Style alert boxes (alert layout defined in alert.html)
 
 .alert {
     font-weight: $font-weight-normal; // NK - adjusted for use with multiple Noto Sans weights
-    color: inherit;
     border-radius: 4px; // Round corners
     padding: 14px;
-    display: flex;
-    align-items: flex-start; // Align items at the top of the flexbox
     @each $color, $value in $theme-colors {
         &-#{$color} {
             background-color: map-get($custom-theme-colors, '#{$color}-1'); //Add background color from _variables_project.scss
@@ -96,7 +31,7 @@
     margin-right:12px;
 }
 
-.alert.has-line-breaks { // Reduce bottom padding of .alert when alert text has line breaks
+.alert.has-line-breaks { // Reduce bottom padding of .alert when alert text has line breaks (class added in alerts.html)
     padding-bottom: 0px;
 }
 
@@ -120,50 +55,27 @@
     .highlight {
         @extend .card;
 
-        margin: 2rem 0;
-        padding: 0;
-        position: relative;
-
+        display: block;
         pre {
-            margin: 0;
-            padding: 1.5rem 0.5rem 0.5rem 0.5rem;  // NK - changed padding
+            padding: 1rem .75rem;
         }
     }
 
     // Inline code
-    p code, li > code, table code {
-        color: inherit;
+    // DB – expanded selector to include all list children
+    p code, li code, table code {
         padding: 0.1em 0.1em;  // NK - made padding smaller
-        margin: 0;
         font-size: $font-size-base; // NK - added to match rest of text
-        word-break: normal;
         background-color: rgba($info, 0.07); // NK - changed background color
-        border-radius: $border-radius;
-        border: 1px solid rgba($info, 0.1);  // NK - added border and color
-
-        br {
-            display: none;
-        }
+        border-radius: 0; // DB – Removed radius
     }
-
 
     // Code blocks
     pre {
-        word-wrap: normal;
-        background-color: $gray-100;
-        padding: 0.5rem; // NK - changed
         line-height: 1.25; // NK - added to match code text
         font-size: $font-size-base; // NK - added to match code text
-        border:none;
-
         > code {
-            background-color: inherit !important;
-            padding: 0;
-            margin: 0;
-            font-size: $font-size-base; // NK - added to match rest of text
-            word-break: normal;
-            white-space: pre;
-            border: 0;
+            padding: .0rem;
         }
     }
 }
@@ -227,13 +139,13 @@
     }
 }
 
-// Style visited links but exclude buttons and left sidebar
-a:not(.btn):not(.td-sidebar-link):visited {
+// Style visited links but exclude buttons, left sidebar, and card text
+a:not(.btn):not(.td-sidebar-link):not(.card-text a):visited {
     color: $purple;
 }
 
-// Add icon after external links in main content (but exclude buttons and breadcrumb and get-started banner)
-main a[href*="https://"]:not(.btn):not(.td-breadcrumbs a):not(.get-started)::after {
+// Add icon after external links in main content (but exclude some content)
+main a[href*="https://"]:not(.btn):not(.td-breadcrumbs a):not(.get-started):not(.lp-panel-list a)::after {
     display: inline-block;
     width: 1rem;
     height: 1rem;
@@ -243,9 +155,20 @@ main a[href*="https://"]:not(.btn):not(.td-breadcrumbs a):not(.get-started)::aft
     filter: invert(14%) sepia(99%) saturate(4690%) hue-rotate(225deg) brightness(93%) contrast(95%); // Matches to $link-color (blue-8 from PDS). Keep updated with _variables_project.scss.
 }
 
+// Add icon after external links in lp-panel-list - need to be a different colour
+.lp-panel-list a[href*="https://"]:not(.btn):not(.td-breadcrumbs a):not(.get-started)::after {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-left: .2rem;
+    vertical-align: sub;
+    content: url("/mx-icons/external.svg");
+    filter: invert(81%) sepia(55%) saturate(2783%) hue-rotate(181deg) brightness(103%) contrast(101%); // Matches to #8AC4FF specified in lp-panel-list in _front-page.scss. Keep updated with _variables_project.scss. Calculated using https://isotropic.co/tool/hex-color-to-css-filter/
+}
+
 // Change external link icon color upon hover
-main a[href*="https://"]:hover:not(.btn):not(.td-breadcrumbs a)::after {
-    filter: invert(15%) sepia(65%) saturate(5388%) hue-rotate(231deg) brightness(79%) contrast(121%); // Matches to $link-hover-color (blue-9 from PDS). Keep updated with _variables_project.scss.
+main a[href*="https://"]:hover::after {
+    filter: invert(15%) sepia(65%) saturate(5388%) hue-rotate(231deg) brightness(79%) contrast(121%); // Matches to $link-hover-color (blue-9 from PDS). Keep updated with _variables_project.scss. 
 }
 
 .btn {
@@ -254,7 +177,7 @@ main a[href*="https://"]:hover:not(.btn):not(.td-breadcrumbs a)::after {
 
 // main.scss
 
-// Adjust anchors vs the fixed menu.
+// Adjust anchors vs the fixed menu
 @include media-breakpoint-up(md) {
     .td-offset-anchor:target {
         display: block;
@@ -284,14 +207,7 @@ html {
 
 // The outer page container i.e. common styles for any page.
 .td-outer {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
     position: absolute; // NK - custom edit
-}
-
-.td-main {
-    flex-grow: 1;
 }
 
 .td-main main {
@@ -313,62 +229,21 @@ html {
         height: 100%; // NK - so that all of main (side menus and content get stretched to bottom of page)
     }
 
-// NK - to fully stretch the footer & bottom of dock
 div.footer{
     background-color: $gray-100;
     border-top: 1px solid $gray-border;
     border-bottom: 1px solid $gray-border;
-    margin: 0 -15px;
+    margin: 0 -15px; // to fully stretch the footer & bottom of dock
     padding: 0.5rem 0;
 }
-div.mx-dock-footer{
-    margin: 0 -15px;
+div.mx-footer{
+    margin: 0 -15px; // to fully stretch the footer & bottom of dock
 }
 div.date-format{
     font-size: 0.8rem;
 }
 
-// _nav.scss
-//
-// Main navbar
-//
-
-.td-navbar {
-    background: $primary;
-    min-height: 4rem;
-    margin: 0;
-    z-index: 32;
-
-    @include media-breakpoint-up(md) {
-        position: fixed;
-        top: 0; // NK - copied from Docsy v0.1.0 file
-        width: 100%;
-    }
-
-    .nav-link {
-        text-transform: none;
-        font-weight: $font-weight-medium; // NK - adjusted for use with multiple Noto Sans weights
-    }
-
-    .td-search-input {
-        border: none;
-        color: $navbar-dark-color; // NK - copied from Docsy v0.1.0 file
-        @include placeholder {
-            color: $navbar-dark-color;
-        }
-    }
-}
-
 // Icons
-// NK - custom edit
-.dropdown-toggle.lang-arrow {
-    &::after {
-        border-left: 0.4em solid transparent;
-        border-right: 0.4em solid transparent;
-        border-top: 0.4em solid;
-        margin-left: -0.8em;
-    }
-}
 
 // DB - custom edit, inline SVG icons for shortcode
 .inline-svg {
@@ -380,7 +255,7 @@ div.date-format{
 
 // Images
 
-// DB – custom edit, add borders around images
+// DB – Add borders around images
 main img {
     border-color: #d7d7d7;
     border-width: 1px;
@@ -392,11 +267,20 @@ main img {
     border-style: none;
 }
 
+// Yiyun - Adjust the stack order so that the clickable images set in body-end.html are not overridden by the left sidebar.
+
+img {
+    z-index: 10;
+}
+
+.medium-zoom-overlay{
+    z-index:10;
+    opacity: 0.5 !important;
+}
+
 // _pageinfo.scss - Custom pageinfo styling, used on the banners (similar to the alert styling)
 
 .pageinfo {
-    font-weight: $font-weight-medium;
-    color: inherit;
     border-radius: 4px;
     margin: 2rem;
     padding: 14px;
@@ -405,67 +289,6 @@ main img {
         &-#{$color} {
             background-color: map-get($custom-theme-colors, '#{$color}-1'); //Add background color from _variables_project.scss
             border: 1px solid map-get($custom-theme-colors, '#{$color}-6'); //Add border color from _variables_project.scss
-        }
-    }
-}
-
-// Foldable sidebar menu
-nav.foldable-nav {
-
-    .td-sidebar-nav__section, .with-child ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        text-overflow: ellipsis; // NK - custom edit
-        overflow: hidden; // NK - custom edit
-        white-space: nowrap; // NK - custom edit
-    }
-
-    .with-child, .without-child {
-        position: relative;
-        padding-left: 1.5em;
-    }
-
-    .ul-1 .with-child > label:before {
-        display: inline-block;
-        font-style: normal;
-        font-variant: normal;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        font-family: $font-awesome-font-name; font-weight: 900; content: "\f0da";
-        position: absolute;
-        left: 0.1em;
-        padding-left: 0.4em;
-        padding-right: 0.4em;
-        font-size: 1em;
-        color: $gray-900;
-        transition: all 0s; // NK - disables animation transition time, now switch is instant
-        &:hover{
-        transform: rotate(90deg);
-        }
-    }
-
-    .ul-1 .with-child > input:checked ~ label:before { 
-        color: $link-color;
-        transform: rotate(90deg);
-        transition: transform 0s; // NK - disables animation transition time, now switch is instant
-    }
-}
-
-@media (hover: hover) and (pointer: fine) {
-    
-    nav.foldable-nav {
-
-        .ul-1 .with-child > label:hover:before { 
-            color: $link-color;
-            transform: rotate(30deg);
-            transition: transform 0s; // NK - disables animation transition time, now switch is instant
-        }
-
-        .ul-1 .with-child > input:checked ~ label:hover:before { 
-            color: $link-color;
-            transform: rotate(60deg) !important;
-            transition: transform 0s; // NK - disables animation transition time, now switch is instant
         }
     }
 }
@@ -487,16 +310,9 @@ nav.foldable-nav {
     line-height: 1.2; // NK - decreased
 
     @supports (position: sticky) {
-        position: sticky;
         top: 3rem; // NK - change from docsy theme of 4rem
         height: max-content; // NK - change from docsy theme of calc(100vh - 10rem);
-        overflow-y: auto;
     }
-
-    order: 2;
-    padding-top: 0.75rem;
-    padding-bottom: 1.5rem;
-    vertical-align: top;
 
 }
 
@@ -547,13 +363,9 @@ nav.foldable-nav {
     }
 }
 
-// _sidebar-tree.scss - Left side navigation
+// _sidebar-tree.scss - Left-side navigation
 
 .td-sidebar-nav {
-    padding-right: 0.5rem;
-    margin-right: -5px; // NK - decreased
-    margin-left: -15px;
-    font-size: 0.95rem; // NK - decreased from inherited
     line-height: 1.2; // NK - decreased from inherited
 
     @include media-breakpoint-up(md) {
@@ -586,21 +398,18 @@ nav.foldable-nav {
             font-weight: inherit;//$font-weight-light;`
         }
         .link-title:hover {
-            text-decoration: underline;
+            text-decoration: underline; // DB – added
         }
     }
     
     .td-sidebar-link.tree-root{
-        font-weight: $font-weight-bold;
-        color: $td-sidebar-tree-root-color;
-        border-bottom: none;//1px $td-sidebar-tree-root-color solid; // NK - deactivated to align with design proposal
-        margin-bottom: 1rem;
+        display: none; // DB – added to prevent linktitle from index page
     }
 }
 
 .td-sidebar {
     @include media-breakpoint-up(md) {
-        padding-top: 4rem;
+        padding-top: 5.25rem; // DB – aligns with .td-main main padding-top
         background-color: $td-sidebar-bg-color;
         padding-right: 1rem;
         border-right: none;//border-right: 1px solid $td-sidebar-border-color; // NK - moved to td-main main, to fully span height of screen
@@ -689,20 +498,12 @@ nav.foldable-nav {
 
 }
 
-// MvM/YL Max width was only 80% and looked horrible. Making the tabs full width.
+//tabbed-pane.scss
 .tab-content {
     .tab-pane {
-      .highlight {
-        margin: 0rem 0 0rem 0;
-        border: none;
-        max-width: 100%;
-      }
-      margin-top: 0rem;
-      margin-bottom: 1.5rem;
-      max-width: 100%;
-      border-left: 1px solid rgba(0, 0, 0, 0.125);
-      border-right: 1px solid rgba(0, 0, 0, 0.125);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        .highlight{
+            border-radius: 0px;
+        }
     }
   }
 
@@ -769,88 +570,41 @@ nav.foldable-nav {
 }
 
 
-//_badge.scss
 
-.badge-pill {
-    border-radius: 4px;
-    padding: 4px 4px 3px 4px;
-    margin-left: 2px;
-}
-
-.badge-draft {
-    background-color: $warning-9;
-  }
-
-.badge-beta {
-    color: $gray-900;
-    background-color: $gray-500;
-}
-
-.badge-lts {
-    background-color: $success-9;
-}
-
-.badge-mts {
-    background-color: $info-8;
-}
-
-.badge-deprecated {
-    background-color: $gray-100;
-    border: solid 1px $gray-500;
-    color: $gray-900;
-}
-
-.badge-recommended {
-    border: solid 1px $success-9;
-    color: $success-9;
+.badge-restapi {
+    background-color: #007BFF;
 }
 
 // Swagger styling
 
-.swagger-ui .info .title,
-.swagger-ui .model-title {
-    font-family: $font-family !important;
-    color: $secondary;
-}
-
-.swagger-ui .info a {
-    font-family: $font-family !important;
-    color: $link-color !important;
-}
-
 .swagger-ui .info .title small pre {
     background: transparent;
- }
-
-.swagger-ui .servers>label select {
-    margin-top: 1.5rem;
 }
 
-.swagger-ui .model-title {
-    font-size: $font-size-base !important;
+.swagger-ui pre {
+   border: none;
+}
+ 
+// Increase spacing between top-level items on the left sidebar
+  ul.ul-1 > li > label {
+    line-height: 1.5rem;
+  }
+
+// 404 page
+a.home-btn{
+    border-radius: 0.5rem;
+    padding: 0.375rem 0.375rem;
 }
 
-.swagger-ui .renderedMarkdown p,
-.swagger-ui table tr td,
-.swagger-ui .opblock-tag,
-.swagger-ui .opblock-description-wrapper p,
-.swagger-ui .opblock .opblock-summary-description,
-.swagger-ui .opblock .opblock-section-header h4 {
-    font-family: $font-family !important;
-}
-
-.swagger-ui .model-box-control:focus,
-.swagger-ui .models-control:focus,
-.swagger-ui .opblock-summary-control:focus {
-    outline: transparent !important;
-}
-
-.swagger-ui table tbody tr td {
-    padding: .5rem !important;
-}
-
-.swagger-ui .renderedMarkdown code {
-    padding: 0rem !important;
-    font-size: $font-size-base !important;
-    color: $primary !important;
+// Icon styling on right ToC
+img.ToC-icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    float:left;
+    margin: 0rem 0.5rem 0rem 0.5rem;
+    padding: 0.3rem;
+    border-radius: 4px;
+    &:hover {
+        background-color: $gray-light;
+    };
 }

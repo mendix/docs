@@ -1,18 +1,29 @@
-{{ define "main" -}}
-    <main id="main" style="border-left-style: none;border-right-style: none;">
-      <div class="container">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="row">
-          <div class="col-12" style="text-align: center;">
-            <h1 id="title">404</h1>
-            <p>Oops! This page doesn't exist.</p>
-            <a href="{{ "/" | relURL }}" class="btn btn-outline-secondary home-btn">Back to Home</a>
-          </div>
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="{{ .Site.Language.Lang }}" class="no-js">
+    <head>
+        {{ partial "head.html" . }}
+        <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+    </head>
+    <body class="td-{{ .Kind }}">
+        {{/* NK - deactivation of original navbar 
+        <header>
+            {{ partial "navbar.html" . }}
+        </header>
+        */}}
+        <div class="container-fluid td-outer" style="padding: 1rem;">
+            <main role="main" class="d-flex justify-content-center">
+                <div class="col-12 mx-auto text-center" style="max-width: 35rem; padding-top: 6rem; ">
+                    <img src="/images/404.png" alt="Not found" width="55%" class="no-border" style="min-width: 350px; margin-bottom:1rem;">
+                    <p class="page-title" style="font-size: 1.5rem; margin-bottom:.5rem">Another Page Washed Away Mysteriously (404)</p>
+                    <p class="body" style="font-size: 1rem;">This page doesn't exist. Try using the search bar at the top of the page to find the documentation that you are looking for.</p>
+                    <a href="{{ "/" | relURL }}" class="btn btn-outline-secondary" style="padding-top: .5rem; padding-bottom: .5rem; padding-left: 1rem; padding-right: 1rem;">Go Back Home</a>
+                </div>
+            </main>
+            <script type="text/javascript">
+                window.__MX_APP_NAME = 'Docs';
+            </script>
+            <script src="https://dock-static.mendix.com/main.js" async></script>
         </div>
-      </div>
-    </main>
-{{- end }}
+        {{ partial "scripts.html" . }}
+    </body>
+</html>

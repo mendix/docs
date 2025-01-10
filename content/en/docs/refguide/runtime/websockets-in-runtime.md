@@ -4,7 +4,7 @@ url: /refguide/websockets-in-runtime/
 description: "Describes how to use WebSockets in the Mendix Runtime."
 ---
 
-## 1 Introduction
+## Introduction
 
 The Mendix Runtime supports registering custom web socket endpoints using the `javax.websocket` API.
 
@@ -16,7 +16,7 @@ As with `Core#addRequestHandler`, adding a web socket end point only happens on 
 
 Below is an example of how to register a websocket in your Mendix app.
 
-## 2 Example
+## Example
 
 A simple implementation of an endpoint is shown below.
 

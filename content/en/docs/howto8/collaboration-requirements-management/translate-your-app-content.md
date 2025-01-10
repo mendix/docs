@@ -4,7 +4,7 @@ url: /howto8/collaboration-requirements-management/translate-your-app-content/
 weight: 50
 ---
 
-## 1 Introduction
+## Introduction
 
 Delivering your Mendix app in multiple languages is an important capability for reaching a wide audience. Most of the text that the end-user sees is stored as translatable texts (for example, labels, button names, and menu items). Using the language features of Mendix, you can quickly make your app multilingual and translate the content to many other languages.
 
@@ -19,7 +19,7 @@ This how-to teaches you how to do the following:
 
 It is assumed that you know the basics of creating new apps and editing them.
 
-## 2 Creating a Sample App
+## Creating a Sample App
 
 To demonstrate working with languages, you will create a new app from the blank app template. You will add some text to this app, as an example, but the app you create is to demonstrate the language features of Mendix and is not intended to be run.
 
@@ -45,7 +45,7 @@ To create your app, do the following:
 
 You now have an app with some translatable texts.
 
-## 3 Adding App Languages
+## Adding App Languages
 
 You can now add an additional language to your app.
 
@@ -61,7 +61,7 @@ To add an additional language, do the following:
 
 You will see that the default language is still *English, United States* which is what you want the end-user to see if they do not choose Russian as their language.
 
-## 4 Changing the Current Language
+## Changing the Current Language
 
 The current language is the language of the dictionary where any text you enter is stored. You can see which language is the current language in the status bar at the bottom right of the Studio Pro window.
 
@@ -75,7 +75,7 @@ To change your current language to Russian, do the following:
 If you do further development later on, you will need to remember to change back to your default language so that any new text is recorded there and not in a translated dictionary.
 {{% /alert %}}
 
-## 5 Translating an Individual Piece of Text
+## Translating an Individual Piece of Text
 
 Now that your current language is Russian, you can translate some of the texts into that language.
 
@@ -87,13 +87,13 @@ Now that your current language is Russian, you can translate some of the texts i
 
 You have now added a translation for these two pieces of text.
 
-## 6 Using Batch Translate
+## Using Batch Translate
 
 You could translate each piece of text individually. However, there are texts which appear multiple times, for example **Cancel**, **Delete**, and **Edit**.
 
 Mendix offers you a way to add a translation for all occurrences of a text at once.
 
-### 6.1 Translating Multiple Texts
+### Translating Multiple Texts
 
 To translate multiple occurrences and multiple texts from the default language, English, to Russian in a single operation, do the following:
 
@@ -116,7 +116,7 @@ To translate multiple occurrences and multiple texts from the default language, 
 9. **Close** the batch translate dialog and look at the page **Product_NewEdit**. You will see that these terms now have Russian translations.
     {{< figure src="/attachments/howto8/collaboration-requirements-management/translate-your-app-content/product-new-edit-partial-translation.png" alt="Product New Edit page showing the cancel button translated into Russian" class="no-border" >}}
 
-### 6.2 Dealing With More Complex Translations
+### Dealing With More Complex Translations
 
 Sometimes a single word in the source language does not have a single translation in the destination language.
 
@@ -148,7 +148,7 @@ To solve this issue, you can do the following:
 
 You can now check that the correct translation has been applied to the other instances of *Order*. For example on the **Order_Overview** page.
 
-## 7 Replacing Text in Current Language
+## Replacing Text in Current Language
 
 Once you have made some translations, you may want to look at just the translations to check for spelling or consistency. To do this, use **Batch replace…**.
 
@@ -167,7 +167,7 @@ To use batch replace, do the following.
 
 4. Click **Replace** to update the translation dictionary.
 
-## 8 Copying to a New Language
+## Copying to a New Language
 
 Having translated your app, you may want to translate it into another, related, language. For example *Dutch, Netherlands* into *Dutch, Belgium*, *English, United States* into *English, United Kingdom*, or *Russian, Russia* into *Belarusian, Belarus*. Many of the translations will be the same so you don't want to type them again.
 
@@ -185,11 +185,11 @@ To copy our Russian translations into a Belarusian dictionary you can do the fol
 
 Your Russian texts are copied to the Belarusian dictionary and you can now review them using batch replace or batch translate to change any cases where the Russian and Belarusian languages diverge.
 
-## 9 Other Considerations
+## Other Considerations
 
 Now you know how to make translations of translatable texts, there are a couple of other things you may wish to investigate.
 
-### 9.1 Completeness
+### Completeness
 
 You will probably want to know that you haven't missed any text that should have been translated, and it is a big task to go through your app manually and check every piece of text.
 
@@ -197,7 +197,7 @@ Mendix provides you with a completeness check for your languages. You can set th
 
 For more information, see [Advanced Language Settings](/refguide8/language-settings/#advanced) in the *Language Settings* reference guide.
 
-### 9.2 Sharing Translations With Other Apps
+### Sharing Translations With Other Apps
 
 You have seen how you can create translations easily and even copy your new translation to a new language in the current app.
 
@@ -207,6 +207,6 @@ Mendix allows you to export a translation to an Excel file, either for the whole
 
 For more information, see [Exporting and Importing Text](/refguide8/batch-translate/#export-import) in the *Batch Translate* reference guide.
 
-## 10 Read More
+## Read More
 
 * [Language Menu](/refguide8/translatable-texts/)

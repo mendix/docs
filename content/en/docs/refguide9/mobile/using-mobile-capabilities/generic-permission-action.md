@@ -5,22 +5,22 @@ weight: 85
 description: "This guide teaches you how to use request generic permission actions for native mobile apps."
 ---
 
-## 1 Introduction
+## Introduction
 
 Advanced features in mobile apps often require permission from users. Apps need to respect the user's privacy, so it is common practice for an app to request the user's permission before storing media and data. To get permission, you can build a generic JavaScript action. This generic action will allow your app to ask for specific permissions before accessing a mobile capability, such as the device camera or location.
 
-## 2 Prerequisites
+## Prerequisites
 
 * Complete the [Prerequisites](/refguide9/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Deploy Your First Mendix Native Mobile App*.
 * Install Mendix Studio Pro 9.10.0 and above to use the Native Mobile App Builder and the latest Nanoflow Commons module.
 * Make sure your [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module is up to date.
 * Make sure you are using [Make It Native 9 app](/releasenotes/mobile/make-it-native-parent/), and it is up-to-date.
 
-## 3 Using a Generic Permission Action
+## Using a Generic Permission Action
 
 A generic permission action can be used inside nanoflows in an existing app or in a new app. With a nanoflow open, you can find it in the Toolbox under the **Native Mobile** section.
 
-### 3.1 Naming the Permission
+### Naming the Permission
 
 When using the generic permission action you must choose the permission name you need. It should be one of the available permissions in `NanoflowCommons.Enum_Permissions` enumeration.
 
@@ -28,7 +28,7 @@ When using the generic permission action you must choose the permission name you
 Keep in mind that the permission names are different for each platform. For example, if you need to request permission to access reading contacts you will need to call the actions twice: one for iOS permission (`CONTACTS_IOS`) and one for Android permission (`READ_CONTACTS_ANDROID`).
 {{% /alert %}}
 
-### 3.2 Action Return Type Statuses
+### Action Return Type Statuses
 
 This action returns the status of the permission after the action, and it is of type `NanoflowCommons.Enum_PermissionStatus`. The statuses are as follows:
 
@@ -48,7 +48,7 @@ When the permission is blocked, if a user requests it a pop-up window will ask t
 These permissions statuses match the statuses that are received from the action, so you should not override them.
 {{% /alert %}}
 
-### 3.3 Permission Usage Example
+### Permission Usage Example
 
 This an example for requesting contact access permission for Android and iOS devices:
 
@@ -65,11 +65,11 @@ This an example for requesting contact access permission for Android and iOS dev
       
         {{< figure src="/attachments/refguide9/mobile/native-mobile/generic-permission-action/ios.png" alt="ios permission"   width="400"  class="no-border" >}}
 
-## 4 Building
+## Building
 
-### 4.1 Development
+### Development
 
-#### 4.1.1 IOS
+#### IOS
 
 The following permissions can be tested using the iOS Make It Native app:
 
@@ -81,7 +81,7 @@ The following permissions can be tested using the iOS Make It Native app:
 
 To test the remaining permissions you can build [native app](/refguide9/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) and [update the native app](#update-ios-native-permissions) with the required permissions.
 
-#### 4.1.2 Android
+#### Android
 
 The following permissions can be tested using the Android Make It Native app:
 
@@ -97,7 +97,7 @@ The following permissions can be tested using the Android Make It Native app:
 
 To test the remaining permissions you can build a [native app](/refguide9/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) and [update the native app](#update-android-native-permissions) with the required permissions.
 
-### 4.2 Deployment
+### Deployment
 
 During deployment you must specify the permissions that your application has used to be able to request them from the user on production. To do that you can navigate to **App permissions** while using Native Builder UI and add the permissions you are using in your application for iOS and Android.
 
@@ -105,9 +105,9 @@ During deployment you must specify the permissions that your application has use
 The permissions that you cannot find using the Native Builder UI can be added manually per the [Update Native App Permissions](#update-native-permissions) section below.
 {{% /alert %}}
 
-## 5 Updating Native App Permissions {#update-native-permissions}
+## Updating Native App Permissions {#update-native-permissions}
 
-### 5.1 iOS {#update-ios-native-permissions}
+### iOS {#update-ios-native-permissions}
 
 Update your *ios/podfile* file with the needed permissions:
 
@@ -157,7 +157,7 @@ To allow a Siri permission you will need to enable Siri capability in your app. 
 	</plist>
     ```
 
-### 5.2 Android {#update-android-native-permissions}
+### Android {#update-android-native-permissions}
 
 Update the *android/app/src/main/AndroidManifest.xml* file with the needed permissions:
 

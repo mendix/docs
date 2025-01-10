@@ -3,15 +3,15 @@ title: "OQL LENGTH"
 url: /refguide/oql-length/
 ---
 
-## 1 Description
+## Description
 
 The `LENGTH` function returns the length of a string value.
 
-## 2 Syntax
+## Syntax
 
 The syntax is as follows:
 
-```sql {linenos=false}
+```sql
 LENGTH ( expression )
 ```
 

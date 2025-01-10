@@ -1,5 +1,6 @@
 ---
-title: "Native Builder"
+title: "Native Builder Release Notes"
+linktitle: "Native Builder"
 url: /releasenotes/mobile/native-builder/
 weight: 11
 description: "Native Builder release notes."
@@ -87,7 +88,7 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
     * `build --project-name "My Mendix Project" --app-version "1.0.0" --build-number 1`
 * Updating any of your configuration is still possible by calling this: 
     * `prepare --project-name "My Mendix Project" --github-api-token "" <the arguments to update with new values>`
-* In addition, two new arguments have been added to the `build` command: `--platform` and `--skip-mxbuild`. The `--platform` argument allows the build for a specific platform, iOS or Android, while `--skip-mxbuild` allows you to skip the project's build. Skipping a build is useful in  the case of a successful MxBuild but a failed later step.
+* In addition, two new arguments have been added to the `build` command: `--platform` and `--skip-mxbuild`. The `--platform` argument allows the build for a specific platform, iOS or Android, while `--skip-mxbuild` allows you to skip the project's build. Skipping a build is useful in the case of a successful MxBuild but a failed later step.
 
 #### Upgrade Path Improvements
 

@@ -4,7 +4,7 @@ url: /refguide/client-activities/
 weight: 50
 ---
 
-## 1 Introduction
+## Introduction
 
 **Client Activities** perform activities in the client, for example, opening a page or showing a message. The activities described in this document are in the **Client Activities** section of the **Toolbox** and can differ for microflows and nanoflows.
 
@@ -21,6 +21,6 @@ The following are the client activities you can use in your microflow or nanoflo
 * [Validation feedback](/refguide/validation-feedback/) – does a validation check, and if this check fails, it shows a message to the end-user
 * [Clear from device](/refguide/clear-from-device/) (nanoflows only) – clears all objects of an entity only from the local database of the device
 
-## 2 Read More
+## Read More
 
 * [Activities](/refguide/activities/)

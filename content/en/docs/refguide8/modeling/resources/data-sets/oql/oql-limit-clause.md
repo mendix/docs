@@ -7,7 +7,7 @@ With the limit clause a portion of the result of a query can be returned.
 
 The syntax is as following:
 
-```sql {linenos=false}
+```sql
 [ LIMIT number ] [ OFFSET number ]
 ```
 

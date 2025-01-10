@@ -2,11 +2,11 @@
 title: "System Entities"
 url: /refguide/system-entities/
 menu_order: 80
-description: "Technical and user information about the system entities FileDocument, Image, and User"
+description: "Technical and user information about thSe system entities FileDocument, Image, and User"
 tags: ["domain model", "entity", "system", "generalization", "specialization", "studio pro", "Image", "FileDocument", "User"]
 ---
 
-## 1 Introduction
+## Introduction
 
 The domain model in the **System** module holds information which is needed for the native functions of Mendix. For example, managing scheduled events and reporting on errors.
 
@@ -16,7 +16,7 @@ The entities in the system domain model fall into three categories:
 * entities which can be used directly in the system domain model
 * entities which are only used internally by Mendix.
 
-## 2 Generalizable Entities
+## Generalizable Entities
 
 There are three entities in the system domain model which can be used as generalizations. You cannot use any of the other entities in the system domain model as generalizations.
 
@@ -30,12 +30,12 @@ To learn more about generalizations and specializations, see [Generalization & O
 
 {{< figure src="/attachments/refguide/modeling/domain-model/entities/system-entities/generalizable-dm.png" >}}
 
-### 2.1 System.FileDocument{#filedocument}
+### System.FileDocument{#filedocument}
 
 The entity type System.FileDocument is a built-in entity type that represents a file. Its attributes contains the metadata of a file.
 The underlying file may be stored in various ways, for example, on disk or in the cloud.
 
-#### 2.1.1 Entity Attributes
+#### Entity Attributes
 
 The FileDocument entity has the following attributes:
 
@@ -48,17 +48,17 @@ The FileDocument entity has the following attributes:
 | HasContents         | Boolean      | false        |
 | Size                | Long         | -1           |
 
-## **FileID**
+##### **FileID**
 
 The FileID attribute is a unique identifier for the FileDocument instance. It is automatically set by the runtime.
 
 
-## **Name**
+###### **Name**
 
 The name of the file. When downloading such a file, this name will be used.
 
 
-## **DeleteAfterDownload**
+###### **DeleteAfterDownload**
 
 A boolean that indicates whether the file should be deleted after being downloaded. The file will no longer exist in the database and will be deleted in storage as well.
 
@@ -73,7 +73,7 @@ Jan-David Salchow  2 days ago
 Whether the S3 file is deleted also depends on the runtime setting `com.mendix.storage.PerformDeleteFromStorage`. We recommend that this is left as `false`, otherwise your database and S3 files can get out of step if you have to restore a previous version of the database.
 
 
-## **Contents**
+###### **Contents**
 
 A binary attribute that allows accessing and modifying the contents of the underlying file. Modifications are transactionally safe.
 
@@ -81,21 +81,21 @@ J-D S: All interactions with file documents are designed in such a way that it d
 ​​
 
 
-## **HasContents**
+##### **HasContents**
 
 A boolean that indicates whether there is a current file. This is automatically set by the runtime.
 
 
-## **Size**
+###### **Size**
 
 The size of the file. Defaults to -1. Files with size -1 will automatically be updated in the background to their correct file size. Files that are not found have a size 0.
 
 
-## **Remarks** ⚠️ 
+##### **Remarks** ⚠️ 
 
 There are hidden attributes for the System.FileDocument entity, these are used internally by runtime and should not be changed manually.
 
-#### 2.1.2 Entity Behavior
+#### Entity Behavior
 
 You  9 days ago
 ​​Is there anything more we can say about how this actually works? Perhaps a short description of how the CRUD actions on this entity are different from CRUD actions on ‘normal’ entities.
@@ -123,26 +123,73 @@ You  6 minutes ago
 
 For more information on working with FileDocuments, see [How to Work with Images & Files](/howto/data-models/working-with-images-and-files/).
 
-### 2.2 System.Image{#image}
-
-# System.Image
+### System.Image{#image}
 
 An entity that inherits from the System.FileDocument entity. Used to store images. It is verified that the contents of the file is an image. In some places, thumbnails are generated.
 
 
-## Entity Attributes
+#### Entity Attributes
 | ## *Attribute Name* | ## *Type*    | ## *Default* |
 | ------------------- | ------------ | ------------ |
 | PublicThumbnailPath | String (500) |              |
 
-## PublicThumbnailPath
+#### PublicThumbnailPath
 
 Not used internally.
 
 For more information on working with Images, see [How to Work with Images & Files](/howto/data-models/working-with-images-and-files/).
 
-### 2.3 System.User{#user}
+### System.User{#user}
 
 The **Administration** module (Project… > App Store modules > Administration), for example, has an **Account** entity which is a specialization of the **System.User** entity and is used to manage users of the app.
 
-## 3 Non-generalizable Entities
+#### **Remarks** ⚠️
+
+**Ronny Prinse**
+
+Hey team, @**Sergey Firsov** I have some questions around the behavior of certain attributes in our `System.User` entity, and I was hoping you could help clarify them?
+
+- `Blocked`
+    - How does this value become True? And then False again? What is the business logic behind this flag?
+- `BlockedSince`
+    - In which Studio Pro version was this introduced?
+    - What is the initial value?
+    - How does its value change over time as `Blocked` changes?
+- `FailedLogins`
+    - What is the initial value?
+    - How does its value change over time?
+
+Thanks a lot!
+
+**Sergey Firsov**
+
+Hi Ronny,  
+The `Blocked` is by default `false` and it's set to `true` after 3 `FailedLogins`, and became `false` again after some time is passed, so probably `BlockedSince` is used for the check if the user should be unblocked already or not. As far as I remember it works this way, let me know if this information is not enough for you. (edited) 
+
+**Ronny Prinse**
+
+@**Sergey Firsov** Yes, that helps, do you know if `FailedLogins` and `BlockedSince` are reset after `Blocked` flips back to False?
+
+**Sergey Firsov**
+
+Yes they reset
+
+**Ronny Prinse**
+
+To 0 and NULL respectively?
+
+**Sergey Firsov**
+
+I'm not sure if the BlockedSince is reset to null, need to check the code for that.
+
+**Ronny Prinse**
+
+Could you check that for me? This is important for user metering data collection.
+
+**Sergey Firsov**
+
+> To 0 and NULL respectively?
+
+yes, they reset to these values
+
+## Non-generalizable Entities

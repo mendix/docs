@@ -64,6 +64,8 @@ A boolean that indicates whether the file should be deleted after being download
 
 A retrieve from database is *not* the same as performing an actual download and does not result in the file being deleted.
 
+***
+
 Does this mean that the S3 file will be deleted the first time it is downloaded (e.g. for sharing one-time secrets)? Does the entity also get deleted, or does it end up will null content?
  • 
 JS
@@ -72,14 +74,17 @@ Jan-David Salchow  2 days ago
 
 Whether the S3 file is deleted also depends on the runtime setting `com.mendix.storage.PerformDeleteFromStorage`. We recommend that this is left as `false`, otherwise your database and S3 files can get out of step if you have to restore a previous version of the database.
 
+***
 
 ###### **Contents**
 
 A binary attribute that allows accessing and modifying the contents of the underlying file. Modifications are transactionally safe.
 
+***
+
 J-D S: All interactions with file documents are designed in such a way that it doesn’t matter what backend you use. A file document is back by one “BinaryAttribute” implementation. In principle the data could also be stored in the database. This is transparent to the user.
 ​​
-
+***
 
 ##### **HasContents**
 
@@ -96,6 +101,8 @@ The size of the file. Defaults to -1. Files with size -1 will automatically be u
 There are hidden attributes for the System.FileDocument entity, these are used internally by runtime and should not be changed manually.
 
 #### Entity Behavior
+
+***
 
 You  9 days ago
 ​​Is there anything more we can say about how this actually works? Perhaps a short description of how the CRUD actions on this entity are different from CRUD actions on ‘normal’ entities.
@@ -121,6 +128,8 @@ You  6 minutes ago
 ​​OK - thanks for the clarification.
 ​​I’ll pick up what I can for documentation and then look at filling out more information over time.
 
+***
+
 For more information on working with FileDocuments, see [How to Work with Images & Files](/howto/data-models/working-with-images-and-files/).
 
 ### System.Image{#image}
@@ -129,6 +138,7 @@ An entity that inherits from the System.FileDocument entity. Used to store image
 
 
 #### Entity Attributes
+
 | ## *Attribute Name* | ## *Type*    | ## *Default* |
 | ------------------- | ------------ | ------------ |
 | PublicThumbnailPath | String (500) |              |
@@ -144,6 +154,8 @@ For more information on working with Images, see [How to Work with Images & File
 The **Administration** module (Project… > App Store modules > Administration), for example, has an **Account** entity which is a specialization of the **System.User** entity and is used to manage users of the app.
 
 #### **Remarks** ⚠️
+
+***
 
 **Ronny Prinse**
 
@@ -191,5 +203,7 @@ Could you check that for me? This is important for user metering data collection
 > To 0 and NULL respectively?
 
 yes, they reset to these values
+
+***
 
 ## Non-generalizable Entities

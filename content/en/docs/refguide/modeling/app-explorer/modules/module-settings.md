@@ -70,7 +70,7 @@ When the module is set as the solution module, it gets the letter **S** as an ic
 ### Module Version {#module-version}
 
 {{% alert color="info" %}}
-Until Studio Pro 10.20 this setting was only for add-on and solution module types. From Studio Pro 10.21 this setting is available for all module types.
+From Studio Pro 10.21 this setting is available for all [module types](/refguide/module-settings/#module-type). In older versions this is only available for add-on and solution modules.
 {{% /alert %}}
 
 This is the version number of the module which will be shown in various places in the Studio Pro user interface, as well as in the Marketplace. 
@@ -84,7 +84,7 @@ The Marketplace will not allow the same version number to be uploaded twice.
 #### Version format
 The version should be a semantic version, consisting of at least three numerical parts: major, minor, and patch version, such as `10.18.3`.
 
-* Increase the MAJOR version when making breaking changes. Examples are removing functionality or upgrading the module to a new major version of Studio Pro.
+* Increase the MAJOR version when making breaking changes. Examples are removing functionality like an entity or a microflow, or upgrading the module to a new major version of Studio Pro.
 * Increase the MINOR version when adding new features in a backward compatible manner. Examples are adding a microflow or entity that don't interfere with existing behavior.
 * Increase the PATCH version when making backward compatible bug fixes. Examples are fixing a styling issue on a page or changing a calculation in a microflow without changing the parameters and output type.
 

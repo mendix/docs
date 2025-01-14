@@ -70,11 +70,22 @@ When the module is set as the solution module, it gets the letter **S** as an ic
 ### Module Version
 
 {{% alert color="info" %}}
-This setting is available only for add-on and solution module types.
+Until Studio Pro 10.20 this setting was only for add-on and solution module types. From Studio Pro 10.21 this setting is available for all module types.
 {{% /alert %}}
 
-This is the version number of the module. The version should be a semantic version (meaning, it should consist of at least three parts: major, minor, and patch version). For more information on semantic versions, see [Semantic Versioning](https://semver.org/).
+This is the version number of the module which will be shown in various places in the Studio Pro user interface, as well as in the Marketplace.
 
+#### Version format
+The version should be a semantic version, consisting of at least three numerical parts: major, minor, and patch version, such as `10.18.3`.
+
+* The MAJOR version should be increased when making breaking changes. Examples are removing functionality or upgrading the module to a new major version of Studio Pro.
+* The MINOR version should be increased when adding new features in a backward compatible manner. Examples are adding a microflow or entity that don't interfere with existing behavior.
+* The PATCH version should be increased when making backward compatible bug fixes.
+
+Aside from the numerical major, minor and patch version, more alphanumerical parts are allowed. This is considered to be an advanced feature, for which we refer you to the documentation of [Semantic Versioning](https://semver.org/). An example advanced version number is `10.18.3-beta.11`.
+
+#### When to change the version number
+TODO
 Mendix recommends setting a new version every time changes are made to the module.
 
 ## Read More

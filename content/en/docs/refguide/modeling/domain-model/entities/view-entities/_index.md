@@ -13,7 +13,7 @@ You can perform operations such as sorting, paging, and filtering using view ent
 * Concatenate attributes
 * Calculate aggregates and averages
 
-## Use cases
+## Use Cases
 
 A view entity can be seen as a named OQL query that behaves like a persistent entity. Because of this, it offers most features that any other entity has. 
 
@@ -37,7 +37,11 @@ View entities offer an additional powerful way to improve reuse, readability, an
 
 For example, the view entity pictured below lists all customers at an organization that are over age 18. The entity includes their full name, age, and delivery and billing addresses.
 
+{{< figure src="/attachments/refguide/modeling/domain-model/view-entities/customer-with-address.png" >}}
+
 Age is determined for each customer by calculating the difference in years between the current day and the customer’s date of birth. The view entity can then count the number of customers that were born in each decade and group them appropriately. 
+
+{{< figure src="/attachments/refguide/modeling/domain-model/view-entities/customer-per-decade.png" >}}
 
 The original customer view included address information, but most database optimizers will see that this information is not relevant when counting customers by age, so this information will be excluded when retrieving the data.  However, the information is still present and can be generated, if requested. 
 
@@ -48,6 +52,8 @@ You may have previously used the OQL module or datasets to execute OQL queries. 
 Filtering attributes is one way to configure your queries. For example, assume you have an entity with the attributes `FirstName` and `LastName`. In a view entity, you combine both the first name and last name into a `FullName` attribute. When you select from this entity, you can specify an XPath expression that limits the data on the full attribute name.
 
 Alternatively, you can store the parameter value in the database, then use that value in your view entity.  For example, the image below is of a view entity that returns the data of the *Product* entity in the language of the current user. 
+
+{{< figure src="/attachments/refguide/modeling/domain-model/view-entities/product-language.png" >}}
 
 This is done by joining an entity that has all the necessary translations and filtering it by the language of the current user. Coalesce is used to return the default language in case there is no translation is available.
 
@@ -63,7 +69,11 @@ Persistent entity access rules are not applied when using view entities. Instead
 
 In the following example, a view entity is used to implement multi-tenant security. The view entity *CustomersVE* only returns the customers that belong to the tenant of the current user. Any additional view entity that uses *CustomersVE* instead of the persistent entity *Customer* will only get data belonging to the tenant of the user. 
 
+{{< figure src="/attachments/refguide/modeling/domain-model/view-entities/active-tenant.png" >}}
+
 Instead of joining with the `[%CurrentUser%]` expression, this example joins with a view entity that only returns one object: the current user and related details, such active language and tenant ID. This simplifies use of user information for other view entities. 
+
+{{< figure src="/attachments/refguide/modeling/domain-model/view-entities/current-user.png" >}}
 
 ## Performance
 
@@ -82,6 +92,8 @@ To understand the performance impact of database queries, it is best to determin
 * Availability of indexes that suit your query and parameters
 
 Below, you see how the data for customers per age bracket is fetched by a database (read bottom up):
+
+{{< figure src="/attachments/refguide/modeling/domain-model/view-entities/query-plans.png" >}}
 
 The database follows the below steps:
 
@@ -109,4 +121,4 @@ For specific use cases, see the following:
 * [Data Versioning with View Entities](/refguide/view-entity-data-versioning/)
 * [Exporting Data with View Entities](/refguide/view-entity-expport-data/)
 * [Abstracting data of add-on modules with View Entities](/refguide/abstracting-view-entity-data/)
-* [Multi-tenant Applications with View Entities](/refguide/view-entity-multitenant-apps/)
+* [Multi-Tenant Applications with View Entities](/refguide/view-entity-multitenant-apps/)

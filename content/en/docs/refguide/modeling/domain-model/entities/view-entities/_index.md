@@ -37,11 +37,11 @@ View entities offer an additional powerful way to improve reuse, readability, an
 
 For example, the view entity pictured below lists all customers at an organization that are over age 18. The entity includes their full name, age, and delivery and billing addresses.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/view-entities/customer-with-address.png" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/use-view-entities/customer-with-address.png" width="500" >}}
 
 Age is determined for each customer by calculating the difference in years between the current day and the customer’s date of birth. The view entity can then count the number of customers that were born in each decade and group them appropriately. 
 
-{{< figure src="/attachments/refguide/modeling/domain-model/view-entities/customer-per-decade.png" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/use-view-entities/customer-per-decade.png" width="500" >}}
 
 The original customer view included address information, but most database optimizers will see that this information is not relevant when counting customers by age, so this information will be excluded when retrieving the data.  However, the information is still present and can be generated, if requested. 
 
@@ -53,7 +53,7 @@ Filtering attributes is one way to configure your queries. For example, assume y
 
 Alternatively, you can store the parameter value in the database, then use that value in your view entity.  For example, the image below is of a view entity that returns the data of the *Product* entity in the language of the current user. 
 
-{{< figure src="/attachments/refguide/modeling/domain-model/view-entities/product-language.png" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/use-view-entities/product-language.png" width="500" >}}
 
 This is done by joining an entity that has all the necessary translations and filtering it by the language of the current user. Coalesce is used to return the default language in case there is no translation is available.
 
@@ -69,11 +69,11 @@ Persistent entity access rules are not applied when using view entities. Instead
 
 In the following example, a view entity is used to implement multi-tenant security. The view entity *CustomersVE* only returns the customers that belong to the tenant of the current user. Any additional view entity that uses *CustomersVE* instead of the persistent entity *Customer* will only get data belonging to the tenant of the user. 
 
-{{< figure src="/attachments/refguide/modeling/domain-model/view-entities/active-tenant.png" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/use-view-entities/active-tenant.png" width="500" >}}
 
 Instead of joining with the `[%CurrentUser%]` expression, this example joins with a view entity that only returns one object: the current user and related details, such active language and tenant ID. This simplifies use of user information for other view entities. 
 
-{{< figure src="/attachments/refguide/modeling/domain-model/view-entities/current-user.png" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/use-view-entities/current-user.png" width="500" >}}
 
 ## Performance
 
@@ -93,7 +93,7 @@ To understand the performance impact of database queries, it is best to determin
 
 Below, you see how the data for customers per age bracket is fetched by a database (read bottom up):
 
-{{< figure src="/attachments/refguide/modeling/domain-model/view-entities/query-plans.png" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/use-view-entities/query-plans.png" >}}
 
 The database follows the below steps:
 

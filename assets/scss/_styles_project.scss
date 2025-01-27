@@ -246,6 +246,9 @@ div.date-format{
 // Icons
 
 // DB - custom edit, inline SVG icons for shortcode
+// MvM - https://stackoverflow.com/questions/16404485/getting-inline-block-elements-height-to-fill-the-parent
+// https://stackoverflow.com/questions/55117226/set-height-of-svg-to-line-height
+// https://css-tricks.com/scale-svg/
 .inline-svg {
     display: inline-block;
     height:0.9rem;

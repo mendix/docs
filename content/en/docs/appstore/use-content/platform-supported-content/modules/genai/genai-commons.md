@@ -158,18 +158,24 @@ A tool in the tool collection. This is sent along with the request to expose a l
 | `Name` | The name of the tool to call. This is used by the model in the response to identify which function needs to be called. |
 | `Description` | An optional description of the tool, used by the model in addition to the name attribute to choose when and how to call the tool. | 
 | `ToolType` | The type of the tool. Refer to the documentation supplied by your AI provider for information about the supported types. |
+| `Microflow` | The name (string) of the microflow that this tool represents. |
 
 #### `Function` {#function}
 
 A tool of the type *function*. This is a specialization of [Tool](#tool) and represents a microflow in the same Mendix application. The return value of this microflow when executed as a function is sent to the model in the next iteration and hence must be of type String.
 
-| Attribute | Description |
-| --- | --- |
-| `Microflow` | The name (string) of the microflow that this function represents. |
-
 {{% alert color="info" %}}
 Since this microflow runs in the context of the user, you can make sure that it only shows data that is relevant to the current user.
 {{% /alert %}}
+
+#### `KnowledgeBaseRetrieval` {#knowledge-base-retrieval}
+
+A tool of the type *function*. This is a specialization of [Tool](#tool) and represents a microflow in the same Mendix application. Typically used internally inside of connector operations to enable the model with a knowledge base retrieval.
+
+| Attribute | Description |
+| --- | --- |
+| `MinimumSimilarity` | Specifies the minimum similarity score (usually 0,0 - 1,0) of the passed chunk and the knowledge chunks in the knowledge base. |
+| `MaxNumberOfResults` | Specifies the maximum number of results that should be retrieved from the knowledge base. |
 
 #### `StopSequence` {#stopsequence}
 

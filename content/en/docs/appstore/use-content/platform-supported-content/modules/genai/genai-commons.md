@@ -170,7 +170,7 @@ Since this microflow runs in the context of the user, you can make sure that it 
 
 #### `KnowledgeBaseRetrieval` {#knowledge-base-retrieval}
 
-A tool of the type *function*. This is a specialization of [Tool](#tool) and represents a microflow in the same Mendix application. Typically used internally inside of connector operations to enable the model with a knowledge base retrieval.
+A tool of the type *function*. This is a specialization of [Tool](#tool) and represents a microflow in the same Mendix application. It is typically used internally inside of connector operations to enable the model with a knowledge base retrieval.
 
 | Attribute | Description |
 | --- | --- |

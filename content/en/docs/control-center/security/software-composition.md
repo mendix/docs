@@ -63,7 +63,10 @@ The list contains the following information:
 * **Environment** – This is the name of the environment.
 * **Runtime** – This shows the Mendix Runtime version.
 * **Technical Contact** – This shows the Technical Contact of the app.
-* **Target Cloud** – This shows the type of the cloud where the deployment package is deployed. Currently, only Mendix Free Cloud and Mendix Cloud (including Mendix Cloud Dedicated) are supported.
+* **Target Cloud** – This shows the type of the cloud where the deployment package is deployed. Currently, the following types of cloud are supported:
+    * Mendix Free Cloud
+    * Mendix Cloud (including Mendix Cloud Dedicated)
+    * Private Cloud (connected)
 * Column customization ({{% icon name="view" %}}) – You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
 * **View details** – Click this opens the [Component Summary](#component-summary) page, if it is available. The **View details** button is grayed out when an SBOM is not available for the selected application environment. Ensure you are on a compatible runtime version and create a new deployment package in order to get component visibility here.
 

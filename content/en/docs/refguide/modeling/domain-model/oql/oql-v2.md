@@ -72,13 +72,14 @@ In OQL v2, the date arguments of functions [DATEPART](/refguide/oql-expression-s
 * String. In this case, Runtime will implicitly attempt conversion of the string to a Date and time.
 * One of Numeric types Integer, Long and Decimal. In this case, the value is treated as a Java timestamp.
 
-### Subquery Columns Should Have a Name or an Alias
+### Columns Should Have a Name or an Alias
 
-In OQL v1, when a column in the `SELECT` clause is a subquery, it was possible for it not to have a name. For example:
+In OQL v1, when a column in the `SELECT` clause was a subquery, a function, or a constant, it was possible for it not to have a name. For example:
 
 ```sql
 SELECT
   Name,
+  LENGTH(Name),
   (
     SELECT COUNT(*)
     FROM Module.Person
@@ -87,13 +88,14 @@ SELECT
 FROM Module.City
 ```
 
-The column names in this case would be `Name` and a `null` name which would not be possible to refer to.
+The column names in this case would be `Name` and multiple columns named `null` which could not be referred to.
 
-In OQL v2, such queries are no longer allowed. You must always provide an alias for subqueries that do not result in a named column. The query above can be rewritten as follows:
+In OQL v2, such queries are no longer allowed. You must always provide an alias for expressions that do not result in a named column. The query above can be rewritten as follows:
 
 ```sql
 SELECT
   Name,
+  LENGTH(Name) AS NameLength,
   (
     SELECT COUNT(*)
     FROM Module.Person

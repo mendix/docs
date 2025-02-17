@@ -39,7 +39,13 @@ To address the issue, there are one of three things you can do:
 
 #### Workaround {#bitcode-workaround}
 
-Apply the following changes to the native mobile project in "ios/Podfile" file in the "post_install" block (ref https://stackoverflow.com/questions/79022303/asset-validation-failed-nslocalizedrecoverysuggestion-invalid-executable-the-e/79022687):
+{{% alert color="info" %}}
+
+In the workaround below, there might be paths (files) missing depending on the exact version of Studio Pro you are using. If the build process fails, Studio Pro shows you problematic paths that need to be added to the list.
+
+{{% /alert %}}
+
+Apply the following changes to the native mobile project in "ios/Podfile" file in the "post_install" block (For more information, see [Asset validation failed, NSLocalizedRecoverySuggestion=Invalid Executable](https://stackoverflow.com/questions/79022303/asset-validation-failed-nslocalizedrecoverysuggestion-invalid-executable-the-e/79022687)):
 
 ```
 bitcode_strip_path = `xcrun --find bitcode_strip`.chop!
@@ -60,3 +66,4 @@ bitcode_strip_path = `xcrun --find bitcode_strip`.chop!
      strip_bitcode_from_framework(bitcode_strip_path, framework_relative_path)
    end
 ```
+

@@ -3,6 +3,7 @@ title: "Running the Mendix Operator in Global Mode"
 url: /developerportal/deploy/global-operator/
 description: "Describes the processes of installing and configuring the Mendix Operator in the Private Cloud in Global mode"
 weight: 30
+beta: true
 ---
 
 {{% alert color="info" %}}

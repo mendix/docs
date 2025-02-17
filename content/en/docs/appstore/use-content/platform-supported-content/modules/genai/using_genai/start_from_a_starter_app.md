@@ -44,21 +44,23 @@ Selecting the infrastructure for integrating GenAI into your Mendix application 
 
 * [OpenAI](/appstore/modules/genai/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) supports OpenAI’s platform and Azure’s OpenAI service.
 
-{{% alert color="info" %}}
-To start, you can sign up for a free trial with OpenAI and receive credits valid for three months from the account creation date. For more details, see the [OpenAI API reference](https://platform.openai.com/docs/api-reference/authentication).
-{{% /alert %}}
-
-* [Amazon Bedrock](/appstore/modules/genai/bedrock/): The [Bedrock Connector](https://marketplace.mendix.com/link/component/215042) allows you to leverage Amazon Bedrock’s fully managed service to integrate foundation models from Amazon and leading AI providers. 
+* [Amazon Bedrock](/appstore/modules/genai/bedrock/): The [Amazon Bedrock Connector](https://marketplace.mendix.com/link/component/215042) allows you to leverage Amazon Bedrock’s fully managed service to integrate foundation models from Amazon and leading AI providers. 
 
 * Your Own Connector: Optionally, if you prefer a custom connector, you can integrate your chosen infrastructure. However, this document focuses on the OpenAI and Bedrock connectors, as they offer comprehensive support and ease of use to get started.
 
 ### Getting Started
 
-Download the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) from the Marketplace and configure the **encryption key** in the **App Settings**. Follow the steps below based on the infrastructure you chose.
+Follow the steps below to set up the app.
+
+1. Download the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) from the Marketplace.
+
+2. Configure the `EncryptionKey` in the **App Settings** in Studio Pro. Make sure that it is 32 characters long. For more information, see the [EncryptionKey Constant](/appstore/modules/encryption/#encryptionkey-constant) section of *Encryption*. 
+
+Next, follow the steps below based on the infrastructure you chose.
 
 #### Mendix Cloud GenAI Configuration
 
-Follow these steps to configure the Mendix Cloud GenAI Resources Packs for your application and for more background information, look at the [Mendix Cloud GenAI Configuration](/appstore/modules/genai/MxGenAI/#configuration) documentation:
+Follow these steps to configure the Mendix Cloud GenAI Resources Packs for your application and for more background information, look at the [Mendix Cloud GenAI Configuration](/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/#configuration) documentation:
 
 1. Run the application locally.
 
@@ -72,7 +74,7 @@ Follow these steps to configure the Mendix Cloud GenAI Resources Packs for your 
 
 #### OpenAI Configuration
 
-Follow the steps below to configure OpenAI for your application. For more information, see the [Configuration](/appstore/modules/genai/openai/#configuration) section of the *OpenAI*.
+Follow the steps below to configure OpenAI for your application. For more information, see the [Configuration](/appstore/modules/genai/reference-guide/external-connectors/openai/#configuration) section of the *OpenAI*.
 
 1. Run the application locally.
 

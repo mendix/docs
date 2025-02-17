@@ -942,9 +942,15 @@ to get familiar with the process around security fixes.
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/cutomize-your-brand.png"  >}}
 
-On the **Company Brand** page, you can upload, edit, or remove a **Company Logo**. The company logo uploaded here will appear across the platform where it is used. For instance, it will be displayed on your published Marketplace content.
+On the **Customize Your Brand** page, you can upload, edit, or remove a **Company Logo**. The company logo uploaded here will appear across the platform where it is used. For instance, it will be displayed on your published Marketplace content.
 
 [Additional reading](/control-center/company-brand/)
+
+**Improve the onboarding experience for new team members**
+
+On the **Company Onboarding** page, you can customize the landing page which new team members will see when they are onboarded and the email that new team members will receive.
+
+[Additional reading](/control-center/company-onboarding/)
 
 **Setup IDP or SSO for access to the Mendix platform**
 

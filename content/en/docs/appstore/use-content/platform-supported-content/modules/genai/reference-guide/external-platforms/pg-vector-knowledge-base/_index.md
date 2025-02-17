@@ -1,11 +1,12 @@
 ---
 title: "PgVector Knowledge Base"
-url: /appstore/modules/genai/pgvector/
+url: /appstore/modules/genai/reference-guide/external-connectors/pgvector/
 linktitle: "PgVector Knowledge Base"
 description: "Describes the configuration and usage of the PgVector Knowledge Base module from the Mendix Marketplace. This module allows developers to integrate PostgreSQL databases with pgvector installed as knowledge bases into their Mendix app."
 weight: 70
 aliases:
    - /appstore/modules/pgvector-knowledge-base/
+   - /appstore/modules/genai/pgvector/
 ---
 
 ## Introduction {#introduction}
@@ -62,7 +63,7 @@ You must perform the following steps to integrate a Mendix app integrate a PgVec
 
 1. Add the module role **PgVectorKnowledgeBase.Administrator** to your Administrator user role in the security settings of your app. Optionally, map **GenAICommons.User** to any user roles that need read access directly on retrieved entities.
 2. Add the **DatabaseConfiguration_Overview** page (**USE_ME > Configuration**) to your navigation, or add the **Snippet_DatabaseConfigurations** to a page that is already part of your navigation. 
-3. Set up your database configurations at runtime. For more information, see the [Configuring the Database Connection Details](/appstore/modules/genai/pgvector-setup/#configure-database-connection) section in *Setting up a Vector Database*.
+3. Set up your database configurations at runtime. For more information, see the [Configuring the Database Connection Details](/appstore/modules/genai/reference-guide/external-connectors/pgvector-setup/#configure-database-connection) section in *Setting up a Vector Database*.
 
 {{% alert color="info" %}}
 It is possible to have multiple knowledge bases in the same database in parallel by providing different knowledge base names in combination with the same `DatabaseConfiguration`.

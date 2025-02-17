@@ -432,7 +432,7 @@ components:
       properties:
         typekind:
           type: string
-          enum: ["Primitive", "Complex", "Enum"]
+          enum: ["Primitive", "Complex", "Enum", "Entity"]
           description: The type category of the parameter/returnType.
         typeName:
           type: string
@@ -615,7 +615,7 @@ components:
           example: "https://AnimalKingdom.com/odata/v1/docs"
         documents:
           type: array
-          description: List of contract documents which this contract includes (ie, depends upon); only supported for OData_4_0_Xml services.
+          description: List of contract documents which this contract includes.
           items:
             $ref: "#/components/schemas/Documents"
     Contract_Base_URI:

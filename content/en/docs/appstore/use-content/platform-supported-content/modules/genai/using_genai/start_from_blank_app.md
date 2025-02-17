@@ -80,16 +80,17 @@ Since the **ConversationalUI_FullScreenChat** page contains a **Data View** usin
 
 To tailor your application's behavior, you can customize the [System Prompt](/appstore/modules/genai/prompt-engineering/#system-prompt) to make it more specific to your use case:
 
-##### Changing the System Prompt
+##### Changing the System Prompt {#changing-system-prompt}
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-blankapp/blank_genai_mf.jpg" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-blankapp/blank_genai_systemprompt.png" >}}
 
 1. Open the copied `ACT_FullScreenChat_Open` microflow from your `MyFirstBot` module.
 2. Locate the **ChatContext** action.
-3. Inside this action, find the `System prompt` parameter, which has default an emprty value.
+3. Inside this action, find the `System prompt` parameter, which has default an empty value.
 4. Update the `System prompt` value to reflect your desired behavior. For example:
    * For a customer service chatbot: *'You are a helpful customer service assistant providing answers to common product questions.'*
    * For a travel advisor assistant: *'You are a travel advisor assistant providing travel tips and destination information.'*
+   * Or keep it simple with *'You are an assistant.'*
 5. Save the changes.
 
 #### Navigation Configuration
@@ -100,11 +101,11 @@ Click **Home** and select the `ACT_FullScreenChat_Open` microflow from your `MyF
 You may encounter an error about allowed roles. To resolve this, go to the page **Properties** and update the **Navigation > Visible for** setting to include the appropriate user roles.
 {{% /alert %}}
 
-### Infrastructure Configuration
+### Infrastructure Configuration {#config}
 
 #### Mendix Cloud GenAI Configuration
 
-Follow these steps to configure the Mendix Cloud GenAI Resources Packs for your application and more background information, look at the [Mendix Cloud GenAI Configuration](/appstore/modules/genai/MxGenAI/#configuration) documentation:
+Follow these steps to configure the Mendix Cloud GenAI Resources Packs for your application and more background information, look at the [Mendix Cloud GenAI Configuration](/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/#configuration) documentation:
 
 1. Run the application locally.
 
@@ -118,7 +119,7 @@ Follow these steps to configure the Mendix Cloud GenAI Resources Packs for your 
 
 #### OpenAI Configuration
 
-Follow the steps below to configure OpenAI for your application. For more information, see the [Configuration](/appstore/modules/genai/openai/#configuration) section of the *OpenAI*.
+Follow the steps below to configure OpenAI for your application. For more information, see the [Configuration](/appstore/modules/genai/reference-guide/external-connectors/openai/#configuration) section of the *OpenAI*.
 
 1. Run the application locally.
 
@@ -150,7 +151,7 @@ Follow the steps below to configure OpenAI for your application. For more inform
    * In the **Test configuration**, select the deployed model and press **Test**.
    * If an error occurs, check the **Mendix Console** for more details on resolving the issue.
 
-#### Bedrock Configuration
+#### Amazon Bedrock Configuration
 
 Follow the steps below to configure Amazon Bedrock for your application:
 

@@ -5,6 +5,7 @@ description: "Describes the online sync mode, which allows entities to be used i
 no_list: false
 description_list: true 
 weight: 20
+beta: true
 aliases:
     - /refguide/mobile/using-mobile-capabilities/offlinefirst-data/online-sync-mode/
 ---

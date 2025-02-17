@@ -1,7 +1,9 @@
 ---
-title: "Use a Client Certificate"
-url: /howto/integration/use-a-client-certificate/
+title: "Authenticate with a Client Certificate"
+url: /developerportal/deploy/use-a-client-certificate/
 description: "Describes how to configure your app to authenticate using a client certificate."
+aliases:
+    - /howto/integration/use-a-client-certificate/
 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team (buildpack) know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -48,7 +50,7 @@ This is an example:
 
 A complete configuration may look like this:
 
-{{< figure src="/attachments/howto/integration/use-a-client-certificate/example-custom-settings.png" class="no-border" >}}
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/use-a-client-certificate/example-custom-settings.png" class="no-border" >}}
 
 You can use an empty path for `ClientCertificateUsages` to specify that you do not want to use a client certificate, even when the server accepts one. To do this, you need to add the **Value** `{"<endpoint>":""}` (replace `<endpoint>` with the actual endpoint).
 

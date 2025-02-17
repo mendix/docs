@@ -41,7 +41,7 @@ You can also open the dialog box by double-clicking the activity, or right-click
 
 The object or list of objects that you want to commit.
 
-### With Events
+### With Events{#with-events}
 
 {{% alert color="info" %}}
 This property is for microflows only.
@@ -50,6 +50,10 @@ This property is for microflows only.
 Indicates whether or not to execute the commit event handlers of the objects.
 
 Default: **Yes**
+
+{{% alert color="warning" %}}
+Most validation rules are not triggered if you do a commit and **With events** is set to *No*. In most cases, validation rules will have been triggered when members (for example, an attribute) are changed, but Mendix advises that you set **With events** to *Yes* if you want to ensure that validations are always carried out. See [data validation](/refguide/setting-up-data-validation/) for more information.
+{{% /alert %}}
 
 #### Events in Nanoflows
 

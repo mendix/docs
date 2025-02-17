@@ -10,10 +10,15 @@ weight: 20
 You can increase the security of your environment by implementing an external secrets store to manage your Kubernetes secrets.
 Environments running Mendix for Private Cloud can be granted read-only access to a secrets store by using a [Kubernetes Secrets Store CSI Driver](https://secrets-store-csi-driver.sigs.k8s.io/). This document outlines the high-level process, and provides example implementations for HashiCorp Vault and AWS Secrets Manager.
 
-{{% alert color="info" %}}Secret storage does not currently support [database plans](/developerportal/deploy/private-cloud-storage-plans/#database) or [blob storage plans](/developerportal/deploy/private-cloud-storage-plans/#blob-storage). You must provision your environment manually.{{% /alert %}}
+{{% alert color="info" %}}
+Secret storage does not currently support [database plans](/developerportal/deploy/private-cloud-storage-plans/#database) or [blob storage plans](/developerportal/deploy/private-cloud-storage-plans/#blob-storage). You must provision your environment manually.
+{{% /alert %}}
 
-{{% alert color="info" %}}Using an external secret storage provides multiple benefits, such as rotating credentials from a single location, collecting audit logs and dynamically generating role-specific credentials.
+{{% alert color="info" %}}
+Using an external secret storage provides multiple benefits, such as rotating credentials from a single location, collecting audit logs and dynamically generating role-specific credentials.
+{{% /alert %}}
 
+{{% alert color="warning" %}}
 Using a secret storage incorrectly may reduce the security of your app. This document describes a simplified approach to setting up Vault and should not be used for production environments. Consult with your secrets store provider to ensure that it is set up securely for your production environment.
 {{% /alert %}}
 
@@ -21,9 +26,10 @@ Using a secret storage incorrectly may reduce the security of your app. This doc
 
 Mendix apps currently support the following secret stores:
 
-* AWS Secrets Manager
-* HashiCorp Vault
-* Azure Key Vault
+* [AWS Secrets Manager](#aws-secrets-manager)
+* [Azure Key Vault](#azure-key-vault)
+* [Google Secret Manager](#google-secret-manager)
+* [HashiCorp Vault](#hashicorp)
 
 ## Configuring Your Environment
 
@@ -79,7 +85,7 @@ The following table lists the properties used as keys for database and storage-r
 
 {{% alert color="info" %}}
 If your app is created in Mendix 9.20 or above, and its Kubernetes service account is linked to an AWS IAM Role, you do not need to specify an `storage-access-key-id` or `storage-secret-access-key` to access an S3 bucket. Instead, you can use the same AWS IAM role for RDS authentication.
-For more information and a complete walkthrough example, see [Configuring a Secret Store with AWS Secrets Manager](#configure-using-aws-secrets-manager).
+For more information and a complete walkthrough example, see [Configuring a Secret Store with AWS Secrets Manager](#aws-secrets-manager).
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -104,7 +110,7 @@ In case you want to use the Key vault on Azure, the value should be mx-const-MyF
 To set a [Mendix Runtime custom setting](/refguide/custom-settings/), use the `mx-runtime-{name}` format (replace `{name}` with the name of the custom setting).
 For example, if you need to set the `com.mendix.storage.s3.EncryptionKeys` constant, specify its value via the `mx-runtime-com.mendix.storage.s3.EncryptionKeys` key.
 
-For a full configuration example, see [Configuring a Secret Store with AWS Secrets Manager](#configure-using-aws-secrets-manager).
+For a full configuration example, see [Configuring a Secret Store with AWS Secrets Manager](#aws-secrets-manager).
 
 {{% alert color="info" %}}
 Most of the Mendix Runtime settings don't contain private data or are managed by the Mendix Operator, and overriding some values could lead to unexpected behavior.
@@ -128,7 +134,7 @@ To load Mendix Debugger password (`mx-debugger-password`) from CSI Secrets Stora
 
 The following sections outline the process of implementing an external secret store with Vault and with AWS. You can refer to them as an example, and to help you troubleshoot your own implementation.
 
-### Configuring a Secret Store with Vault
+### Configuring a Secret Store with HashiCorp Vault{#hashicorp}
 
 To enable your environment to use Vault as external secret storage, follow these steps:
 
@@ -318,7 +324,7 @@ To enable your environment to use Vault as external secret storage, follow these
 
 {{% alert color="warning" %}}These examples are provided for [KV Secrets Engine - Version 2](https://developer.hashicorp.com/vault/docs/secrets/kv/kv-v2). When setting policies or reading keys from the Vault `kv-v2` keystore, paths should be prefixed with `secrets/data/`. Please refer to the [Hashicorp Vault documentation](https://developer.hashicorp.com/vault/docs) for more information.{{% /alert %}}
 
-### Configuring a Secret Store with AWS Secrets Manager {#configure-using-aws-secrets-manager}
+### Configuring a Secret Store with AWS Secrets Manager {#aws-secrets-manager}
 
 To enable your environment to use [AWS Secrets Manager](https://aws.amazon.com/blogs/security/how-to-use-aws-secrets-configuration-provider-with-kubernetes-secrets-store-csi-driver/) as external secret storage, follow these steps:
 
@@ -494,7 +500,7 @@ To use this feature, you need to:
 * Use an AWS RDS Postgres database with [IAM authentication enabled](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.Enabling.html).
 * Use Mendix Operator version 2.10.1 and above.
 * Use Mendix 9.22 and above.
-* Complete the steps described in [Configuring a Secret Store with AWS Secrets Manager](#configure-using-aws-secrets-manager).
+* Complete the steps described in [Configuring a Secret Store with AWS Secrets Manager](#aws-secrets-manager).
 
 After completing the prerequisites, follow these steps to switch from password-based authentication to IAM authentication:
 
@@ -513,7 +519,7 @@ After completing the prerequisites, follow these steps to switch from password-b
    ALTER ROLE <database-username> WITH PASSWORD NULL;
    ```
 
-3. Attach the following inline IAM policy to the environment's IAM role (created when [Configuring a Secret Store with AWS Secrets Manager](#configure-using-aws-secrets-manager)):
+3. Attach the following inline IAM policy to the environment's IAM role (created when [Configuring a Secret Store with AWS Secrets Manager](#aws-secrets-manager)):
 
    ```json
    {
@@ -540,7 +546,7 @@ After completing the prerequisites, follow these steps to switch from password-b
 When using IAM authentication, the Mendix app's environment (`m2ee-sidecar` container) uses that app's attached IAM role to request a new Postgres password every 10 minutes from the [RDS API](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.Connecting.Go.html). These passwords expire after 15 minutes.
 Passwords are only checked when opening a new connection, so an expired password does not cancel any existing connections or interrupt any running database transactions and queries.
 
-### Configuring a Secret Store with Azure Key Vault {#configure-using-azure-key-vault}
+### Configuring a Secret Store with Azure Key Vault {#azure-key-vault}
 
 To enable your environment to use [Azure Key Vault](https://learn.microsoft.com/en-us/azure/aks/csi-secrets-store-driver) as external secret storage, follow these steps:
 
@@ -718,7 +724,7 @@ To use this feature, you need to:
 * Use an Azure Postgres (Flexible Server) database
 * Use Mendix Operator version 2.17.0 and above.
 * Use Mendix 9.22 and above.
-* Complete the steps described in [Configuring a Secret Store with AWS Secrets Manager](#configure-using-aws-secrets-manager).
+* Complete the steps described in [Configuring a Secret Store with AWS Secrets Manager](#aws-secrets-manager).
 
 After completing the prerequisites, follow these steps to switch from password-based authentication to managed identity authentication:
 
@@ -753,7 +759,7 @@ To use this feature, you need to:
 * Use an Azure SQL database.
 * Use Mendix Operator version 2.17.0 and above.
 * Use Mendix 10.10 and above.
-* Complete the steps described in [Configuring a Secret Store with AWS Secrets Manager](#configure-using-aws-secrets-manager).
+* Complete the steps described in [Configuring a Secret Store with AWS Secrets Manager](#aws-secrets-manager).
 
 After completing the prerequisites, follow these steps to switch from password-based authentication to managed identity authentication:
 
@@ -784,7 +790,7 @@ To use this feature, you need to:
 * Use an Azure Blob Storage account.
 * Use Mendix Operator version 2.17.0 and above.
 * Use Mendix 10.10 and above.
-* Complete the steps described in [Configuring a Secret Store with AWS Secrets Manager](#configure-using-aws-secrets-manager).
+* Complete the steps described in [Configuring a Secret Store with AWS Secrets Manager](#aws-secrets-manager).
 
 After completing the prerequisites, follow these steps to switch from password-based authentication to managed identity authentication:
 
@@ -794,6 +800,175 @@ After completing the prerequisites, follow these steps to switch from password-b
     * `storage-azure-use-default-azure-credential` - set to `true` to enable managed identity authentication.
 3. Open the environment's Blob Storage Account Container in the Azure portal, and [assign a Storage Blob Data Contributor role](https://learn.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access) to the environment's managed identity.
 4. Restart the Mendix app environment.
+
+
+### Configuring a Secret Store with Google Secret Manager {#google-secret-manager}
+
+To follow these instructions you will need:
+
+* A [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine) cluster and access permissions.
+* Mendix Operator version 2.9.0 and above installed in the cluster.
+* The [Helm](https://helm.sh) package manager.
+
+{{% alert color="warning" %}}Google Kubernetes Engine has an alternative Secret Manager CSI driver, called `secrets-store-gke.csi.k8s.io` and enabled using the [Secret Manager add-on](https://cloud.google.com/secret-manager/docs/secret-manager-managed-csi-component) in the cluster settings. The driver installed with the Secret Manager add-on **is not supported** by the Mendix Operator. Please use the `secrets-store-csi-driver-provider-gcp` documented below.{{% /alert %}}
+
+To enable your environment to use [Google Secret Manager Provider](https://github.com/GoogleCloudPlatform/secrets-store-csi-driver-provider-gcp) as external secret storage, follow these steps:
+
+1. Enable workload identity federation for your GKE cluster as described in the [Google Cloud documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#console_1) (this only needs to be done once per cluster).
+
+2. Install the [CSI Secret Store Driver](https://secrets-store-csi-driver.sigs.k8s.io/getting-started/installation.html#install-the-secrets-store-csi-driver), as follows (this only need to be done once per cluster):
+
+    ```shell
+    helm repo add secrets-store-csi-driver https://kubernetes-sigs.github.io/secrets-store-csi-driver/charts
+    helm -n kube-system install csi-secrets-store secrets-store-csi-driver/secrets-store-csi-driver \
+    --set syncSecret.enabled=true
+    ```
+
+3. Install and enable the [Google Secret Manager Provider for Secret Store CSI Driver](https://github.com/GoogleCloudPlatform/secrets-store-csi-driver-provider-gcp?tab=readme-ov-file#install) using the following steps (this only needs to be done once per cluster):
+
+    1. Clone or download a copy of the [secrets-store-csi-driver-provider-gcp](https://github.com/GoogleCloudPlatform/secrets-store-csi-driver-provider-gcp) repository.
+
+    2. Navigate to the root folder of the local `secrets-store-csi-driver-provider-gcp` copy.
+    3. Run the following command to install the provider using Helm:
+
+        ```shell
+        helm upgrade --install secrets-store-csi-driver-provider-gcp charts/secrets-store-csi-driver-provider-gcp
+        ```
+
+4. Get the Google Cloud account **Project Number** and **Project ID** from the Google Cloud welcome page, or using the `gcloud projects list` command.
+
+5. Create an app with the secret store enabled.
+
+    If you are using connected mode, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. For a standalone app, you must set the value of the setting `allowOverrideSecretsWithSecretStoreCSIDriver` to `true` in the Mendix app CRD.
+
+    The following yaml shows an example Mendix app CRD:
+
+    ```yaml
+    apiVersion: privatecloud.mendix.com/v1alpha1
+    kind: MendixApp
+    metadata:
+      name: <{Mendix App CR name}>
+    spec:
+      mendixRuntimeVersion: 9.4.0.24572
+      allowOverrideSecretsWithSecretStoreCSIDriver: true
+      replicas: 1
+      resources:
+        limits:
+          cpu: "1"
+          memory: 512Mi
+        requests:
+          cpu: 100m
+          memory: 512Mi
+      runtime:
+        customConfiguration: '{"ScheduledEventExecution":"NONE","MicroflowConstants":"{\"MyFirstModule.MyConstant\":\"Awesome\",\"RestClient.RestServiceUrl\":\"https://go-dummy-app.privatecloud-storage-tls.svc.cluster.local\",\"Atlas_Core.Atlas_Core_Version\":\"3.0.5\"}"}'
+        dtapMode: D
+        logAutosubscribeLevel: INFO
+        runtimeLicense: {}
+      runtimeMetricsConfiguration: {}
+      sourceURL: oci-image://<{image URL}>
+      sourceVersion: 0.0.0.87
+    EOF
+    ```
+
+6. Go to the **Secrets Manager** page in the Google Cloud console, and use the **Create Secret** button to create keys for every key listed in the [`SecretProviderClass` Keys](#keys) section above.
+
+    {{% alert color="info" %}}Keys can only be stored as a flat list as Google Secret Manager does not support any sort of hierarchy at the moment. A typical environment needs about a dozen keys so Mendix recommends adding labels and using a pattern when creating keys. For example, use `<namespace>-<environment-id>-database-type` for the `database-type` key.{{% /alert %}}
+
+    Alternatively, the `gcloud` CLI tool can be used to create keys in an automated way as follows:
+
+    ```shell
+    NAMESPACE=<{Kubernetes namespace}>
+    ENVIRONMENT_NAME=<{Mendix App CR name}>
+    # Example: set the database-type to PostgreSQL
+    printf "PostgreSQL" | gcloud secrets create ${NAMESPACE}-${ENVIRONMENT_NAME}-database-type --data-file=- --replication-policy=automatic
+    ```
+
+    Replace `<{Kubernetes namespace}>` with the namespace where the app is deployed, and `<{Mendix App CR name}>` with the name of the MendixApp CR. 
+
+7. For every secret created in the previous step, allow the Mendix app to access it by adding a **Secret Manager Secret Accessor** role to the following principal:
+
+    ```
+    principal://iam.googleapis.com/projects/<{Project number}>/locations/global/workloadIdentityPools/<{Project ID}>.svc.id.goog/subject/ns/<{Kubernetes namespace}>/sa/<{Mendix App CR name}>
+    ```
+
+    Replace `<{Project number}>` and `<{Project ID}>` with the Google Cloud account **Project Number** and **Project ID** which you found earlier, `<{Kubernetes namespace}>` with the namespace where the app is deployed, and `<{Mendix App CR name}>` with the name of the MendixApp CR.
+
+    This can also be done using the `gcloud` CLI tool:
+
+    ```shell
+    NAMESPACE=<{Kubernetes namespace}>
+    ENVIRONMENT_NAME=<{Mendix App CR name}>
+    PROJECT_ID=<{Project ID}>
+    PROJECT_NUMBER=<{Project number}>
+    # Example: grand access ENVRIONMENT_NAME in NAMESPACE permissions to access its database-type secret
+    gcloud secrets add-iam-policy-binding ${NAMESPACE}-${ENVIRONMENT_NAME}-database-type --role=roles/secretmanager.secretAccessor\
+      --member=principal://iam.googleapis.com/projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/${PROJECT_ID}.svc.id.goog/subject/ns/${NAMESPACE}/sa/${ENVIRONMENT_NAME}
+    ```
+
+8. Create a Kubernetes `ServiceAccount` for your environment as follows:
+
+    ```shell
+    kubectl -n <{Kubernetes namespace}> create serviceaccount <{environment name}>
+    kubectl -n <{Kubernetes namespace}> annotate serviceaccount <{environment name}> privatecloud.mendix.com/environment-account=true
+    ```
+
+    Replacing `<{environment name}>` with the name of the MendixApp CR:
+
+9. Attach the secret to the environment by applying the following Kubernetes yaml:
+
+    ```yaml
+    NAMESPACE=<{Kubernetes namespace}>
+    ENVIRONMENT_NAME=<{Mendix App CR name}>
+    PROJECT_ID=<{Project ID}>
+    PROJECT_NUMBER=<{Project number}>
+    cat <<EOF |kubectl apply -n $NAMESPACE -f -
+    apiVersion: secrets-store.csi.x-k8s.io/v1
+    kind: SecretProviderClass
+    metadata:
+      name: ${ENVIRONMENT_NAME}
+      namespace: ${NAMESPACE}
+      annotations:
+        privatecloud.mendix.com/environment-class: "true"
+    spec:
+      provider: gcp
+      parameters:
+        secrets: |
+          - resourceName: projects/${PROJECT_ID}/secrets/${NAMESPACE}-${ENVIRONMENT_NAME}-database-type/versions/latest
+            fileName: database-type
+          - resourceName: projects/${PROJECT_ID}/secrets/${NAMESPACE}-${ENVIRONMENT_NAME}-database-jdbc-url/versions/latest
+            fileName: database-jdbc-url
+          - resourceName: projects/${PROJECT_ID}/secrets/${NAMESPACE}-${ENVIRONMENT_NAME}-database-host/versions/latest
+            fileName: database-host
+          - resourceName: projects/${PROJECT_ID}/secrets/${NAMESPACE}-${ENVIRONMENT_NAME}-database-name/versions/latest
+            fileName: database-name
+          - resourceName: projects/${PROJECT_ID}/secrets/${NAMESPACE}-${ENVIRONMENT_NAME}-database-username/versions/latest
+            fileName: database-username
+          - resourceName: projects/${PROJECT_ID}/secrets/${NAMESPACE}-${ENVIRONMENT_NAME}-database-password/versions/latest
+            fileName: database-password
+          - resourceName: projects/${PROJECT_ID}/secrets/${NAMESPACE}-${ENVIRONMENT_NAME}-storage-service-name/versions/latest
+            fileName: storage-service-name
+          - resourceName: projects/${PROJECT_ID}/secrets/${NAMESPACE}-${ENVIRONMENT_NAME}-storage-access-key-id/versions/latest
+            fileName: storage-access-key-id
+          - resourceName: projects/${PROJECT_ID}/secrets/${NAMESPACE}-${ENVIRONMENT_NAME}-storage-secret-access-key/versions/latest
+            fileName: storage-secret-access-key
+          - resourceName: projects/${PROJECT_ID}/secrets/${NAMESPACE}-${ENVIRONMENT_NAME}-storage-endpoint/versions/latest
+            fileName: storage-endpoint
+          - resourceName: projects/${PROJECT_ID}/secrets/${NAMESPACE}-${ENVIRONMENT_NAME}-storage-bucket-name/versions/latest
+            fileName: storage-bucket-name
+          - resourceName: projects/${PROJECT_ID}/secrets/${NAMESPACE}-${ENVIRONMENT_NAME}-storage-perform-delete/versions/latest
+            fileName: storage-perform-delete
+          # Example: to get the MyFirstModule.MyConstant constant value from the namespace1-myapp1-myfirstmodule-myconstant secret you would use the following:
+          #
+          #- resourceName: namespace1-myapp1-myfirstmodule-myconstant
+          #  fileName: "mx-const-MyFirstModule.MyConstant"
+    ```
+
+    In the above example, `resourceName` specifies the secret ID from the Google Cloud project, and `fileName` specifies how it will be named when mounted into the sidecar.
+
+    Replace `<{Project number}>` and `<{Project ID}>` with the Google Cloud account **Project Number** and **Project ID** which you found earlier, `<{Kubernetes namespace}>` with the namespace where the app is deployed, and `<{Mendix App CR name}>` with the name of the MendixApp CR.
+
+For more information, refer to the the official [Google Secret Manager Provider for Secret Store CSI Driver](https://github.com/GoogleCloudPlatform/secrets-store-csi-driver-provider-gcp) repository and [Google Secret Manager documentation](https://cloud.google.com/secret-manager/docs/overview).
+
 
 ## Additional Considerations {#additional-considerations}
 

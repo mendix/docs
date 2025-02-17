@@ -33,9 +33,9 @@ Before starting this how-to, make sure you have completed the following prerequi
     {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-java-actions/18581041.png" class="no-border" >}}
 3. Place the cursor on the line that needs debugging, press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> to enable a breakpoint. A blue dot in front of the line will appear: 
     {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-java-actions/18580059.png" class="no-border" >}}
-{{% alert color="info" %}}
-You can also use <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> to disable a breakpoint.
-{{% /alert %}}
+    {{% alert color="info" %}}
+    You can also use <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> to disable a breakpoint.
+    {{% /alert %}}
 
 ## Debugging in Eclipse
 
@@ -58,6 +58,12 @@ You can also use <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> to disable a 
 
     {{% alert color="warning" %}}A current limitation is that local variables may not be visible when debugging Java actions in Eclipse. This can affect your ability to inspect variable values during execution.{{% /alert %}}
 
+## Limitations
+
+There is the following limitation:
+* If there are add-on modules imported into Studio Pro and the application is deployed for Eclipse using menu option **App > Deploy for Eclipse**, there are known build failures in Java source code.
+
+  
 ## Read More
 
 * [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)

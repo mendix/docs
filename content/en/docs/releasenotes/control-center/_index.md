@@ -14,6 +14,12 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 ## 2025
 
+### February 13, 2025
+
+#### New Features
+
+* We have re-released the company **Onboarding** functionality in Control Center. This allows you to set up Mendix onboarding specifically for all new members of your company. You can set up an onboarding email that new users get as soon as they create their Mendix accounts and a company onboarding page that new users land on.
+
 ### January 30th, 2025
 
 #### Fixes

@@ -12,6 +12,12 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2025
 
+### February 12, 2025
+
+#### Documentation Updates
+
+* We have updated the [CSI Secrets Storage](/developerportal/deploy/secret-store-credentials/) documentation to include instructions on storing credentials and configuration in Google Cloud Secret Manager.
+
 ### January 23, 2025
 
 #### Portal Improvements

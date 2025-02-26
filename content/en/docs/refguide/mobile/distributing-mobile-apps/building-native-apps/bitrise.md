@@ -9,7 +9,7 @@ description: Describes how to integrate with Bitrise to build a Mendix native ap
 
 This guide helps you set up [Bitrise](https://bitrise.io) to automate building a Mendix native app in the cloud. Bitrise is a popular continuous integration service optimized for mobile apps.
 
-{{% alert color="info" %}}
+{{% alert color="warning" %}}
 The React Native version used in Studio Pro versions 10.11-10.16 includes Bitcode, which is not longer supported by Xcode 16 and above. This means that native mobile iOS applications created by customers **cannot be submitted to the App Store**. 
 
 For more information and workarounds, see [Bitcode Deprecation](/refguide/mobile/introduction-to-mobile-technologies/native-mobile/#bitcode-deprecation).
@@ -22,8 +22,8 @@ Before starting this guide, make sure you have completed the following prerequis
 * Signed up for a [GitHub account](https://github.com/signup) and created a personal access token
 * Signed up for a [Bitrise account](https://app.bitrise.io/users/sign_up)
 * Read the [Getting Starting guide from Bitrise](https://devcenter.bitrise.io/en/getting-started.html) and understand the key concepts of Bitrise
-* Have access to a Mendix application project with a native mobile profile as a developer
-    * The Mendix application is deployed
+* Have access to a Mendix application app with a native mobile profile as a developer
+    * The Mendix app is deployed
 * Have created the native template project for your app by following [Using Mendix Native Mobile Builder to Set Up Your Local App](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/#using-mendix-native-mobile-builder-to-set-up-your-local-app). Make sure to set the GitHub token to also create a GitHub repository.
 * Fulfilled the prerequisites below for all operating systems you want to target:
 
@@ -41,7 +41,7 @@ Before starting this guide, make sure you have completed the following prerequis
 
 ## Set Up Your Build Project {#set-up-your-build-project}
 
-To set up your build project, do the following:
+To set up your build project (a build project is?), do the following:
 
 1. Create a workspace (if needed) in Bitrise.
 1. Create a new project in the workspace.
@@ -65,7 +65,7 @@ To set up your build project, do the following:
 
 ## Setup Code Signing for iOS
 
-Applications distributed to iOS devices must be signed with a certificate and a provisioning profile. To do so, you need to register as a developer with Apple and join one of their development programs (see [Prerequisites](#prerequisites)).
+Applications distributed to iOS devices must be signed with a certificate and a provisioning profile. To do so, you need to register as a developer with Apple and join one of their development programs (see the [Prerequisites](#prerequisites) section above).
 
 Bitrise supports automatic provisioning via a constant connection with the App Store. To set it up, follow [the guide from Bitrise](https://devcenter.bitrise.io/en/code-signing/ios-code-signing/managing-ios-code-signing-files---automatic-provisioning.html).
 
@@ -73,24 +73,15 @@ If you prefer to manually set up provisioning, follow [this guide from Bitrise](
 
 ## Setup Code Signing for Android 
 
-Applications distributed to Android devices must be signed with a keystore. To distribute Android apps via the PlayStore, you must also register as an Android developer (see [Prerequisites](#prerequisites)).
+Applications distributed to Android devices must be signed with a keystore. To distribute Android apps via the PlayStore, you must also register as an Android developer (see the [Prerequisites](#prerequisites) section above).
 
 Bitrise lets you store your Android keystore in the build project. Follow [this guide from Bitrise](https://devcenter.bitrise.io/en/code-signing/android-code-signing/uploading-android-keystore-files-to-bitrise.html) to upload and store the keystore.
 
 ## Adjust Workflow
 
-The default workflow (**deploy**) needs to be extended to work for Mendix native mobile apps. Open the build project and click on **Workflow** to access the workflow editor. With it, you can customize the commands you run in order to build your application.
+The default workflow (**deploy** (Is this from Bitrise interface? is this a name of a workflow you see in the App Explorer? Are we in Studio Pro or in Bitrise?)) needs to be extended to work for Mendix native mobile apps. Open the build project (Mendix app?) and click **Workflow** to access the workflow editor. With it, you can customize the commands (what are commands?) you run in order to build (commands to build application? logic?) your application.
 
-Any additional workflows that may have been created can be removed. Select the workflow from the dropdown and click **Properties** > **Delete workflow**.
-
-{{% alert color="info" %}}
-Building native mobile apps for Mendix 9.24 requires Node v16 (no longer included by default in Bitrise). Follow these steps to install it:
-
-1. Add a new step before the step "Run npm command".
-1. Choose **Node Version Manager (NVM)** from the list of steps.
-1. Set the **Node Version** property to 16 (leave the NVM version blank).
-1. Save changes.
-{{% /alert %}}
+Any additional workflows that may have been created can be removed. To delete a workflow, select it from the dropdown (which dropdown? In the App Explorer???) and click **Properties** > **Delete workflow**.
 
 ### Add Missing npm Command
 
@@ -130,9 +121,11 @@ This step will install the dependencies required for iOS.
 
 ### Add iOS Code Signing (iOS Only)
 
+To add iOS code signing, do the following:
+
 1. Add a new step before the step **Xcode Archive** (after Run CocoaPods install).
 1. Choose **Manage iOS Code Singing** from the list of steps.
-1. Set the distribution method to the method selected in [section 3](#set-up-your-build-project).
+1. Set the distribution method to the method selected in the [Set Up Your Build Project](#set-up-your-build-project) section.
 1. Save changes.
 
 Bitrise will use the provided iOS Signing information to sign the iOS app.
@@ -159,4 +152,4 @@ Now, every time some runs **Build Native App** to update the application bundle,
 
 ## Additional Considerations
 
-Our MVP Marcel Groeneweg has written a blog post about optimizing Mendix native mobile builds with Bitrise. Check it out on [Medium](https://marcel-groeneweg.medium.com/mendix-native-builds-with-bitrise-6ce56f0bb8fc) (Mendix cannot take responsibility for third-party recommendations).
+Our MVP Marcel Groeneweg has written a blog post about optimizing Mendix native mobile builds with Bitrise. For more information, see [Medium](https://marcel-groeneweg.medium.com/mendix-native-builds-with-bitrise-6ce56f0bb8fc) (Mendix cannot take responsibility for third-party recommendations).

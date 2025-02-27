@@ -225,7 +225,28 @@ Implement the action in Java as follows:
 2. Use `Core.integration().importStream()` to import the JSON with the specified mapping.
 3. Return the first object imported.
 
-{{< figure src="/attachments/howto/extensibility/howto-connector-kit/import_string_java.png" alt="Import String Java action" class="no-border" >}}
+```java
+public ImportString(IContext context, java.lang.String InputString, java.lang.String ImportMapping, java.lang.String ResultEntity)
+{
+    super(context);
+    this.InputString = InputString;
+    this.ImportMapping = ImportMapping;
+    this.ResultEntity = ResultEntity;
+}
+
+@Override
+public IMendixObject executeAction() throws Exception
+{
+    // BEGIN USER CODE
+    try (InputStream is = new ByteArrayInputStream(this.InputString.getBytes(StandardCharsets.UTF_8))) {  // import the string by executing the mapping}
+    List<IMendixObject> Objects = Core.integration().importStream(getContext(), is, this.ImportMapping, null,false);
+    // Return first object created in mapping
+    return objects.get(0);
+    } catch (Exception e) { logger.error(e); throw new MendixRuntimeException(String.format("Failed to import json string: %s", e.getMessage()))
+    }
+    // END USER CODE
+}
+```
 
 ## Some Development Tips
 

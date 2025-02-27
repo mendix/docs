@@ -125,7 +125,22 @@ In the Java implementation for this action, you'll see the following details for
 * **InitializationMicroflow** – a string containing the name of the initializing microflow
 * **ListSize** – a long variable containing the number of objects desired in the list
 
-{{< figure src="/attachments/howto/extensibility/howto-connector-kit/initilialize_list_java_1.png" alt="Initialize list java implementation 1" class="no-border" >}}
+```java
+  private java.lang.String ResultEntity;
+  private IMendixObject DefaultObject;
+  private java.lang.String InitializationMicroflow;
+  private java.lang.Long ListSize;
+
+  public CreateObjectList(IContext context, java.lang.String ResultEntity, IMendixObject DefaultObject, java.lang.String InitializationMicroflow, java.lang.Long ListSize)
+  {
+      super(context);
+      this.ResultEntity = ResultEntity;
+      this.DefaultObject = DefaultObject;
+      this.InitializationMicroflow = InitializationMicroflow;
+      this,ListSize = ListSize;
+  }
+
+```
 
 The `executeAction` method is where all the magic happens:
 

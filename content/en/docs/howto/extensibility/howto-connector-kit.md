@@ -83,6 +83,7 @@ public class JoinObjectsInList extends CustomJavaAction<java.util.List<IMendixOb
         List<IMendixObject> resultList = new ArrayList<IMendixObject>();
         resultList.add(Objcet1);
         resultList.add(Objcet2);
+
         return resultList;
         // END USER CODE
     }
@@ -131,14 +132,19 @@ In the Java implementation for this action, you'll see the following details for
   private java.lang.String InitializationMicroflow;
   private java.lang.Long ListSize;
 
-  public CreateObjectList(IContext context, java.lang.String ResultEntity, IMendixObject DefaultObject, java.lang.String InitializationMicroflow, java.lang.Long ListSize)
-  {
-      super(context);
-      this.ResultEntity = ResultEntity;
-      this.DefaultObject = DefaultObject;
-      this.InitializationMicroflow = InitializationMicroflow;
-      this,ListSize = ListSize;
-  }
+  public CreateObjectList(
+      IContext context, java.lang.String ResultEntity, 
+      IMendixObject DefaultObject,
+      java.lang.String InitializationMicroflow,
+      java.lang.Long ListSize
+  )
+      {
+          super(context);
+          this.ResultEntity = ResultEntity;
+          this.DefaultObject = DefaultObject;
+          this.InitializationMicroflow = InitializationMicroflow;
+          this,ListSize = ListSize;
+      }
 
 ```
 
@@ -238,11 +244,21 @@ public ImportString(IContext context, java.lang.String InputString, java.lang.St
 public IMendixObject executeAction() throws Exception
 {
     // BEGIN USER CODE
-    try (InputStream is = new ByteArrayInputStream(this.InputString.getBytes(StandardCharsets.UTF_8))) {  // import the string by executing the mapping}
-    List<IMendixObject> Objects = Core.integration().importStream(getContext(), is, this.ImportMapping, null,false);
-    // Return first object created in mapping
-    return objects.get(0);
-    } catch (Exception e) { logger.error(e); throw new MendixRuntimeException(String.format("Failed to import json string: %s", e.getMessage()))
+    try (
+      InputStream is = new ByteArrayInputStream(this.InputString.getBytes(StandardCharsets.UTF_8))
+    ){  
+      
+      // import the string by executing the mapping}
+      List<IMendixObject> Objects = Core.integration()
+      .importStream(getContext(), is, this.ImportMapping, null,false);
+    
+      // Return first object created in mapping
+      return objects.get(0);
+    } 
+    catch (Exception e) {
+      logger.error(e);
+      
+      throw new MendixRuntimeException(String.format("Failed to import json string: %s",e.getMessage()))
     }
     // END USER CODE
 }

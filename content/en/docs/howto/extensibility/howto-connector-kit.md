@@ -61,7 +61,33 @@ The Java implementation still uses strings to specify the name of an entity, whi
 
 Finally, here's the actual Java implementation of the action defined:
 
-{{< figure src="/attachments/howto/extensibility/howto-connector-kit/join_objects_javacode.png" alt="Java implementation join object" class="no-border" >}}
+```java
+public class JoinObjectsInList extends CustomJavaAction<java.util.List<IMendixObject>>
+{
+  private java.lang.String Entity;
+  private IMendixObject Object1;
+  private IMendixObject Object2;
+
+  public JoinObjectsInList(IContext context, java.lang.String Entity, IMendixObject Object, IMendixObject Object2)
+  {
+    super(context);
+    this.Entity = Entity;
+    this.Object1 = Object1;
+    this.Object2 = Object2;
+  }
+
+    @Override
+    public java.util.List<IMendixObject> executeAction() throws Exception
+    {
+        // BEGIN USER CODE
+        List<IMendixObject> resultList = new ArrayList<IMendixObject>();
+        resultList.add(Objcet1);
+        resultList.add(Objcet2);
+        return resultList;
+        // END USER CODE
+    }
+}
+```
 
 You now have a reusable action in your toolbox that will join two objects into a list as illustrated by this example:
 

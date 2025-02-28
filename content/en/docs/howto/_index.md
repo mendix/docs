@@ -6,8 +6,8 @@ weight: 15
 no_list: false
 description_list: true
 cascade:
-    - content_type: "Studio Pro 10"
-    - mendix_version: 10
+    - content_type: "Studio Pro 11"
+    - mendix_version: 11
     - sitemap:
         priority: 0.7
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.

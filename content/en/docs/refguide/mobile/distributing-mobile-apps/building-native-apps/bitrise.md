@@ -1,9 +1,11 @@
 ---
 title: "Build a Mendix Native App with Bitrise"
-url: /refguide/mobile/distributing-mobile-apps/building-native-apps/bitrise/ {{% todo %}} This url reflects the whole folder structure, in the rest of the refguide we have much shorter urls. Maybe something to consider.{{% /todo %}} 
+url: /refguide/mobile/distributing-mobile-apps/building-native-apps/bitrise/
 weight: 60
 description: Describes how to integrate with Bitrise to build a Mendix native app in the cloud.
 ---
+
+{{% todo %}} This url reflects the whole folder structure, in the rest of the refguide we have much shorter urls. Maybe something to consider.{{% /todo %}} 
 
 ## Introduction
 

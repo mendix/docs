@@ -1,5 +1,5 @@
 ---
-title: "Studio Pro 10 How-tos"
+title: "Studio Pro 11 How-tos"
 url: /howto/
 description: "Step-by-step guides on various Mendix topics that teach you how to build and customize apps."
 weight: 15
@@ -15,8 +15,8 @@ cascade:
 
 ## Introduction
 
-Browse the *Studio Pro 10 How-tos* to find step-by-step guides that teach you how to build and customize apps with Mendix.
+Browse the *Studio Pro 11 How-tos* to find step-by-step guides that teach you how to build and customize apps with Mendix.
 
 ## How-to Categories
 
-The *Studio Pro 10 How-tos* are divided into the following categories:
+The *Studio Pro 11 How-tos* are divided into the following categories:

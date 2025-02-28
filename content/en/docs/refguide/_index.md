@@ -22,7 +22,7 @@ If you have been using Studio Pro version 9, Mendix recommends reading [Upgradin
 
 If you are looking to build your first app, check out the [Quick Starts](/quickstarts/).
 
-If you are looking for step-by-step guides on performing various Mendix actions, browse the [Studio Pro 10 How-tos](/howto/).
+If you are looking for step-by-step guides on performing various Mendix actions, browse the [Studio Pro 11 How-tos](/howto/).
 
 ## Studio Pro Functionality
 

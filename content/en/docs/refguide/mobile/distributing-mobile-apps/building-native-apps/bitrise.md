@@ -1,6 +1,6 @@
 ---
 title: "Build a Mendix Native App with Bitrise"
-url: /refguide/mobile/distributing-mobile-apps/building-native-apps/bitrise/
+url: /refguide/mobile/distributing-mobile-apps/building-native-apps/bitrise/ {{% todo %}} This url reflects the whole folder structure, in the rest of the refguide we have much shorter urls. Maybe something to consider.{{% /todo %}} 
 weight: 60
 description: Describes how to integrate with Bitrise to build a Mendix native app in the cloud.
 ---
@@ -41,7 +41,7 @@ Before starting this guide, make sure you have completed the following prerequis
 
 ## Set Up Your Build Project {#set-up-your-build-project}
 
-To set up your build project (a build project is?), do the following:
+To set up your build project{{% todo %}} Can we add an definition on what a build project is? {{% /todo %}} , do the following:
 
 1. Create a workspace (if needed) in Bitrise.
 1. Create a new project in the workspace.
@@ -65,7 +65,7 @@ To set up your build project (a build project is?), do the following:
 
 ## Setup Code Signing for iOS
 
-Applications distributed to iOS devices must be signed with a certificate and a provisioning profile. To do so, you need to register as a developer with Apple and join one of their development programs (see the [Prerequisites](#prerequisites) section above).
+Applications distributed to iOS devices must be signed with a certificate and a provisioning profile. To do so, you need to register as a developer with Apple and join one of their development programs (see the [Prerequisites](#prerequisites) section above). {{% todo %}} There is a dedicated iOS section, but we reference the whole section, do we want to reference only the dedicated one?{{% /todo %}} 
 
 Bitrise supports automatic provisioning via a constant connection with the App Store. To set it up, follow [the guide from Bitrise](https://devcenter.bitrise.io/en/code-signing/ios-code-signing/managing-ios-code-signing-files---automatic-provisioning.html).
 
@@ -73,15 +73,17 @@ If you prefer to manually set up provisioning, follow [this guide from Bitrise](
 
 ## Setup Code Signing for Android 
 
-Applications distributed to Android devices must be signed with a keystore. To distribute Android apps via the PlayStore, you must also register as an Android developer (see the [Prerequisites](#prerequisites) section above).
+Applications distributed to Android devices must be signed with a keystore. To distribute Android apps via the PlayStore, you must also register as an Android developer (see the [Prerequisites](#prerequisites) section above). {{% todo %}} There is a dedicated Android section, but we reference the whole section, do we want to reference only the dedicated one?{{% /todo %}} 
 
 Bitrise lets you store your Android keystore in the build project. Follow [this guide from Bitrise](https://devcenter.bitrise.io/en/code-signing/android-code-signing/uploading-android-keystore-files-to-bitrise.html) to upload and store the keystore.
 
 ## Adjust Workflow
 
-The default workflow (**deploy** (Is this from Bitrise interface? is this a name of a workflow you see in the App Explorer? Are we in Studio Pro or in Bitrise?)) needs to be extended to work for Mendix native mobile apps. Open the build project (Mendix app?) and click **Workflow** to access the workflow editor. With it, you can customize the commands (what are commands?) you run in order to build (commands to build application? logic?) your application.
+{{% todo %}} There are multiple terms in this section that make it unclear if we are in the Bitrise interface or Studio Pro. For example, deploy, workflow, workflow editor. It would be beneficial to make it very clear where we are at the moment and to add screenshots if possible{{% /todo %}} 
 
-Any additional workflows that may have been created can be removed. To delete a workflow, select it from the dropdown (which dropdown? In the App Explorer???) and click **Properties** > **Delete workflow**.
+The default workflow (**deploy**) needs to be extended to work for Mendix native mobile apps. Open the build project and click **Workflow** to access the workflow editor. With it, you can customize the commands {{% todo %}} What are commands?{{% /todo %}}  you run in order to build your application.
+
+Any additional workflows that may have been created can be removed. To delete a workflow, select it from the dropdown {{% todo %}} Are we still in Bitrise or is this in SP?{{% /todo %}}  and click **Properties** > **Delete workflow**.
 
 ### Add Missing npm Command
 

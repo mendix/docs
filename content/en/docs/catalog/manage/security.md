@@ -16,7 +16,7 @@ Security for a Mendix app can be defined at the app-level, module-level, and ent
 
 This security level determines which end-users of the apps will have access to the data represented by the exposed dataset. For further information, see the [Security](/refguide/published-odata-services/#security) section in *Published OData Services*.
 
-Access to data is determined by the identification protocols of the organization and applied to all access to the data via Mendix apps. For an example of custom HTTP header validation, see the [custom HTTP header validation](/refguide/security-shared-datasets/#http-header-validation) section of *Security and Shared Datasets* in the Studio Pro 10 guide.
+Access to data is determined by the identification protocols of the organization and applied to all access to the data via Mendix apps. For an example of custom HTTP header validation, see the [custom HTTP header validation](/refguide/security-shared-datasets/#http-header-validation) section of *Security and Shared Datasets*.
 
 ## Access Level of Registered Services {#access-level}
 

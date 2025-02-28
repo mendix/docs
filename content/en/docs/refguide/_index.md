@@ -1,5 +1,5 @@
 ---
-title: "Studio Pro 10 Guide"
+title: "Studio Pro 11 Guide"
 url: /refguide/
 description: "The various sections of the Mendix Studio Pro Guide provide details on the features and functionality of the Mendix Platform."
 weight: 10
@@ -14,7 +14,7 @@ cascade:
 
 ## Introduction
 
-The *Mendix Studio Pro 10 Guide* covers important topics concerning [Studio Pro](/refguide/modeling/), the [Mendix Runtime](/refguide/runtime/), and other components of the Mendix Platform.
+The *Mendix Studio Pro 11 Guide* covers important topics concerning [Studio Pro](/refguide/modeling/), the [Mendix Runtime](/refguide/runtime/), and other components of the Mendix Platform.
 
 Studio Pro runs on both Windows and macOS. Before installing Studio Pro 10, please read [System Requirements](/refguide/system-requirements/). For information on how to install Studio Pro, see [Installing Mendix Studio Pro](/refguide/install/).
 
@@ -48,7 +48,7 @@ For more information on options for deploying your app see [Deploying Apps](/dep
 
 ## Mendix Runtime
 
-The [Mendix Runtime](/refguide/runtime/) executes the application model that is created in Studio Pro. It is included in the Studio Pro 10 Guide as it uses the same version numbering. 
+The [Mendix Runtime](/refguide/runtime/) executes the application model that is created in Studio Pro. It is included in the Studio Pro 11 Guide as it uses the same version numbering. 
 
 ## Mobile
 
@@ -56,4 +56,4 @@ Mobile app development allows you to create native mobile and progressive web ap
 
 ## Guide Categories
 
-The *Studio Pro 10 Guide* is divided into the following categories:
+The *Studio Pro 11 Guide* is divided into the following categories:

@@ -22,7 +22,7 @@ Before starting this guide, make sure you have completed the following prerequis
 * Signed up for a [GitHub account](https://github.com/signup) and created a personal access token
 * Signed up for a [Bitrise account](https://app.bitrise.io/users/sign_up)
 * Read the [Getting Starting guide from Bitrise](https://devcenter.bitrise.io/en/getting-started.html) and understand the key concepts of Bitrise
-* Have access to a Mendix application app with a native mobile profile as a developer
+* Have access to a Mendix app with a native mobile profile as a developer
     * The Mendix app is deployed
 * Have created the native template project for your app by following [Using Mendix Native Mobile Builder to Set Up Your Local App](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/#using-mendix-native-mobile-builder-to-set-up-your-local-app). Make sure to set the GitHub token to also create a GitHub repository.
 * Fulfilled the prerequisites below for all operating systems you want to target:

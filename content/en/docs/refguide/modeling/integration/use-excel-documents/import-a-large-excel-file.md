@@ -141,7 +141,7 @@ A video demonstrating this technique can be viewed below:
 ## Using Data Importer Extension to create Entity using a Large Excel.
 
 {{% alert color="info" %}}
-Mendix Studio Pro 10.7 or above is required for this approach. You can also use these steps to create an entity from a CSV file.
+You can also use these steps to create an entity from a CSV file.
 {{% /alert %}}
 
 The [Data Importer](/appstore/modules/data-importer/) extension can be used to automatically create an entity in your domain model. This example uses the same input Excel (*countries.xlsx*) to create an entity. 

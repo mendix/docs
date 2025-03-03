@@ -60,16 +60,16 @@ Merging MPRv2 apps using the command line with `git merge` or using third-party 
 
 #### Converting MPR Storage Format {#convert}
 
-In Studio Pro 10.18 and above upgrading to the new format is optional and can be done per branch via the [File menu](/refguide/file-menu/). To upgrade to MPRv2, open your app and select **File > Upgrade app to split MPR format (v2)**. After a confirmation the app will be converted and you will be prompted to commit.
+Upgrading to the new format is optional and can be done per branch via the [File menu](/refguide/file-menu/). To upgrade to MPRv2, open your app and select **File > Upgrade app to split MPR format (v2)**. After a confirmation, the app will be converted and you will be prompted to commit.
 
 You can also downgrade branches that are already on MPRv2 to MPRv1 by selecting **File > Downgrade app to combined MPR format (v1)**.
 
 {{% alert color="info" %}}
-Before converting the MPR format it is recommended to commit your local work to ensure there is an isolated commit with the conversion step for debugging, in case conversion fails.
+Before converting the MPR format, it is recommended to commit your local work to ensure there is an isolated commit with the conversion step for debugging, in case conversion fails.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-In future versions of Studio Pro conversion to MPRv2 will happen automatically when opening a branch.
+In future versions of Studio Pro, conversion to MPRv2 will happen automatically when opening a branch.
 {{% /alert %}}
 
 ### Decreasing MPRv1 File Size
@@ -87,7 +87,7 @@ As the Mendix model is stored in a single file, this threshold can be exceeded b
 
 When cloning an app, the default behavior of Git is to download the full history. As Mendix uses different folders on disk for different branches, downloading full history is done for each branch. To mitigate that, Mendix uses local cloning for subsequent branch downloads. When cloning a new branch, data from a local branch you already have is used to reduce data that needs to be downloaded. 
 
-Starting from Studio Pro 10.12 it is possible to prevent downloading the full history, by changing the [Clone type](/refguide/clone-type/) to use partial clones. A partial clone downloads all data for a specific revision without downloading the contents of all historical commits.
+It is possible to prevent downloading the full history, by changing the [Clone type](/refguide/clone-type/) to use partial clones. A partial clone downloads all data for a specific revision without downloading the contents of all historical commits.
 
 ### Mitigating Large Repository Size
 

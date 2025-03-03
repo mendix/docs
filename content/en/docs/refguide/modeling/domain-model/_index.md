@@ -21,7 +21,7 @@ A domain model consists of [entities](/refguide/entities/) with their relationsh
 * View (green) – entities which are the result of a stored OQL query on persistable entities or other view entities (this feature is in beta)
 
 {{% alert color="info" %}}
-[View entities](/refguide/view-entities/) were introduced in [Studio Pro 10.19](/releasenotes/studio-pro/10.19/) as a beta feature. To enable this feature in your app, set the OQL version to version 2 by clicking **App** > **Settings** > **Runtime**.
+[View entities](/refguide/view-entities/) is currently in beta. To enable this feature in your app, set the OQL version to version 2 by clicking **App** > **Settings** > **Runtime**.
 {{% /alert %}}
 
 You can also add [annotations](/refguide/annotations/) to your domain model to remind yourself, and other team members, how it is to be used.

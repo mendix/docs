@@ -412,10 +412,6 @@ A microflow selected for this setting will start every time a user task changes 
 
 ## Dependencies Tab {#deployment}
 
-{{% alert color="info" %}}
-The Deployment tab was renamed to **Dependencies** in Studio Pro 10.12.0.
-{{% /alert %}}
-
 This tab can be used to view the managed dependencies in your app in one place and to manage the dependencies in the userlib directory. It contains three tabbed sections.
 
 ### Overview

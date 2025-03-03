@@ -16,13 +16,13 @@ The table below can help you find the correct MxBuild. Copy a URL from the corre
 | Operating System | Mendix Version               | URL                                                          |
 | ---------------- | ---------------------------- | ------------------------------------------------------------ |
 | Linux (x64)      | All versions                 | `https://cdn.mendix.com/runtime/mxbuild-{mxversion}.tar.gz`  |
-| Windows (x64)    | All version of Studio Pro 10 | `https://cdn.mendix.com/runtime/win-mxbuild-{mxversion}.tar.gz` |
+| Windows (x64)    | All version of Studio Pro 11 | `https://cdn.mendix.com/runtime/win-mxbuild-{mxversion}.tar.gz` |
 
 {{% alert color="info" %}}
 
-A build number is included in the version, which has to be included in the link path mentioned above (for example, `10.0.0.9976` is the 9976 build of the 10.0.0 Studio Pro release).
+A build number is included in the version, which has to be included in the link path mentioned above (for example, `11.0.0.9976` is the 9976 build of the 11.0.0 Studio Pro release).
 
-You can find the build number in path of your Mendix installation (for example, if your installation looks like this `C:\Program Files\Mendix\10.0.0.9976`, use this URL to get your files: [https://cdn.mendix.com/runtime/mxbuild-10.0.0.9976.tar.gz](https://cdn.mendix.com/runtime/mxbuild-10.0.0.9976.tar.gz)).
+You can find the build number in path of your Mendix installation (for example, if your installation looks like this `C:\Program Files\Mendix\11.0.0.9976`, use this URL to get your files: [https://cdn.mendix.com/runtime/mxbuild-11.0.0.9976.tar.gz](https://cdn.mendix.com/runtime/mxbuild-11.0.0.9976.tar.gz)).
 
 Any public version of Studio Pro in this [Studio Pro Releases List](https://marketplace.mendix.com/link/studiopro/) will allow you to download MxBuild files. If you experience trouble downloading files, make sure your build is listed there.
 

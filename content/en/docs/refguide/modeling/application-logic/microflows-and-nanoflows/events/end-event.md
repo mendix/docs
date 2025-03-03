@@ -29,10 +29,6 @@ The end event properties pane consists of the following sections:
 
 The return value is the value that is returned to the flow that called the current flow. You can specify or change the return value either through the **End Event** dialog box or through the **Properties** pane.
 
-{{% alert color="info" %}}
-The option to change the return value of an end event through the **Properties** pane was introduced in Studio Pro 10.3.0.
-{{% /alert %}}
-
 If you have several end events and they have a return value, they all need to return a value of the same type. For example, if one of the end events returns an object of type *Entity*, the others need to return the same type: 
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/events/end-event/return-value.png"   width="300px"  class="no-border" >}}

@@ -5,10 +5,6 @@ weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-In Studio Pro 10.3.0 and above, there are two tabs: **Java Dependencies** and **Export**. In versions below 10.3.0, the content of the **Export** tab is the only content of the dialog box.
-{{% /alert %}}
-
 ## Introduction
 
 Module settings allow you to set Java managed dependencies, choose the type of the module, and set a version for certain module types.
@@ -18,10 +14,6 @@ To open module settings, double-click **Settings** in the required module.
 {{< figure src="/attachments/refguide/modeling/app-explorer/modules/module-settings/settings.png" class="no-border" >}}
 
 ## Java Dependencies
-
-{{% alert color="info" %}}
-Java managed dependencies are available in Studio Pro 10.3.0 and above.
-{{% /alert %}}
 
 You can add managed dependencies for each module on the **Java Dependencies** tab. For more information, see [Managed Dependencies](/refguide/managed-dependencies/).
 

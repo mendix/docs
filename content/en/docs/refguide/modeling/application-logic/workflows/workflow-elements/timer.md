@@ -9,10 +9,6 @@ aliases:
 
 ## Introduction
 
-{{% alert color="info" %}}
-**Wait for timer** was renamed to **Timer** in Studio Pro 10.14.0.
-{{% /alert %}}
-
 **Timer** allows you to configure a certain duration or a specific date and time in a workflow.
 
 It can be used in the following two ways:
@@ -21,7 +17,7 @@ It can be used in the following two ways:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/timer/standalone-timer-activity.png" alt="Standalone Timer activity" width="250" >}}
 
-* **Timer** can also be attached to another workflow activity as a [Boundary Event](/refguide/workflow-boundary-events/) (released in GA in Studio Pro 10.16):
+* **Timer** can also be attached to another workflow activity as a [Boundary Event](/refguide/workflow-boundary-events/):
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/timer/timer-boundary-event.png" alt="Timer boundary event" width="300" >}}
 

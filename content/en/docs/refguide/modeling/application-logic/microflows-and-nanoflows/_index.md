@@ -36,19 +36,3 @@ Below presents a list of main differences between microflows and nanoflows:
 * Nanoflows are not run inside a transaction. So, if an error occurs in a nanoflow, it will not roll back any previous changes.
 * <a id="list-changes-in-sub-nanoflows"></a>Changes done to the lists in a sub-nanoflow are not reflected in the original nanoflow.
 * In nanoflows, when retrieving an `empty` attribute of an object, an empty string (`''`) is returned.
-
-## Classic and Modern Logic Editors {#new-editor}
-
-In Studio Pro 10.6 and above, use the new and modernized microflow, nanoflow, and rule editors. The new editors focus on making your daily logic modeling experience faster, smoother and easier to learn. 
-
-The new editors contain several huge improvements, with some major improvements in:
-
-* [Logic Recommender](/refguide/logic-recommender/)
-* [Keyboard navigation](/refguide/keyboard-shortcuts/#keyboard-improved) 
-* [Canvas interaction](/refguide/microflows/#canvas-interaction)
-
-In Studio Pro 10.5 and below, the default logic editors are the **Classic** logic editors. In Studio Pro 10.4 and 10.5, there is the toggle at the top right corner of the editor allowing you to try the beta versions of the new modern editor for the current document.
-
-{{% alert color="info" %}}
-In Studio Pro 10.6, you can still switch to the **Classic** editor if you go to **Edit** > **Preferences** > **New features**, and **Enable switching to the Classic version of the editor**.
-{{% /alert %}}

@@ -53,12 +53,12 @@ There are several ways to add an element to a workflow:
     1. Open the **Toolbox**.
     2. Select an element you would like to add and drag this element into the working area.
 
-* You can add an element via an path in your workflow (available from Studio Pro 10.4.0):
+* You can add an element via an path in your workflow:
 
     1. Place your mouse on any path you would like to add an element to. A plus icon appears to indicate that a new element can be added.
     2. Click the plus icon and select an element from the pop-up menu.
 
-* You can also add an element by right-clicking an existing element (available from Studio Pro 10.4.0):
+* You can also add an element by right-clicking an existing element:
 
     1. Right-click an existing element and go to **Insert after**.
     2. Select an element from the menu.

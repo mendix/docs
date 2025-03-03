@@ -243,7 +243,7 @@ Hardware and driver issues may cause performance problems when running Studio Pr
 
 ### Language {#language}
 
-This beta feature is available from Studio Pro 10.17. 
+This feature is currently in beta.
 
 This option allows you to change the user interface language you work in while using Studio Pro. At this time, German, English, Japanese, Chinese, and Korean are supported. You must restart Studio Pro in order to use this feature.
 
@@ -299,21 +299,21 @@ Select this option to use the modernized version of the Errors Pane. You must re
 
 ### Expression Editor
 
-The expression editor is modernized since Studio Pro 10.6. This setting is enabled by default. The editor allows the user to write rich text statements and get instant feedback on their validity. In Studio Pro, it is often used to write an expression for a decision or to write an XPath expression for data filtering.
+This setting is enabled by default. The editor allows the user to write rich text statements and get instant feedback on their validity. In Studio Pro, it is often used to write an expression for a decision or to write an XPath expression for data filtering.
 
 ### GraphQL {#graphql}
 
-Publishing data as a GraphQL service is available as of Studio Pro 10.14. When you enable this feature, you can indicate that a published OData service [also supports GraphQL](/refguide/published-odata-services/#supports-graphql).
+You can publish data as a GraphQL service. When you enable this feature, you can indicate that a published OData service [also supports GraphQL](/refguide/published-odata-services/#supports-graphql).
 
 ### Maia
 
 #### Enable Domain Model Generator (Experimental)
 
-In Studio Pro 10.13.0, Domain Model Generator was introduced as an experimental feature. Enable this option to help you generate entities and associations for empty domain models. For more information on how to use this feature, see [Domain Model Generator](/refguide/domain-model-generator/).
+Domain Model Generator is currently an experimental feature. Enable this option to help you generate entities and associations for empty domain models. For more information on how to use this feature, see [Domain Model Generator](/refguide/domain-model-generator/).
 
 #### Enable Translation Generator (Experimental)
 
-In Studio Pro 10.12.0, Translation Generator was introduced as an experimental feature. Enable this option to help you translate your model to different languages through **Batch translate** under the **Language** menu. For more information, see [Translation Generator](/refguide/translation-generator/).
+Translation Generator is currenlty an experimental feature. Enable this option to help you translate your model to different languages through **Batch translate** under the **Language** menu. For more information, see [Translation Generator](/refguide/translation-generator/).
 
 ### Mapping Editor
 
@@ -325,11 +325,11 @@ This setting allows you to move forward and backward through your editing histor
 
 ### Online Synchronization Mode
 
-This setting, introduced in 10.19 and currently in beta, allows entities to be used in offline navigation profiles without requiring data synchronization. This enables app developers to use entity data on pages without synchronizing the data of those entities to the offline database. This mode requires an available connection to the server. For more details, see [Online Synchronization Mode](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/online-sync-mode/).
+This setting, currently in beta, allows entities to be used in offline navigation profiles without requiring data synchronization. This enables app developers to use entity data on pages without synchronizing the data of those entities to the offline database. This mode requires an available connection to the server. For more details, see [Online Synchronization Mode](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/online-sync-mode/).
 
 ### System Texts Editor
 
-In Studio Pro 10.14.0, the web version of the system texts editor was released as an experimental feature. Enable this option to use the web version of the editor. 
+The web version of the system texts editor is currently an experimental feature. Enable this option to use the web version of the editor. 
 
 If Translation Generator is also enabled, you can use it in this editor as well. For more information, see the [Generating Translation for System Texts](/refguide/translation-generator/#translate-system-text) section in *Translation Generator*.
 

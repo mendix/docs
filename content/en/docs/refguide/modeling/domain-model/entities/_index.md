@@ -27,7 +27,7 @@ The rows in the table are CDs. The type of the two rows is *CD* and this is the 
 ## Types of Entities {#entity-types}
 
 {{% alert color="info" %}}
-View entities were introduced in [Studio Pro 10.19](/releasenotes/studio-pro/10.19/) as a beta feature. 
+View entities is currently in beta. 
 {{% /alert %}}
 
 The entity type defines how the data is handled and there are four types:

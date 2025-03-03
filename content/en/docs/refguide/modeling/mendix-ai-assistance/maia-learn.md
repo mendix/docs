@@ -9,10 +9,6 @@ description: "Describes the features in Maia Learn."
 ## Introduction 
 
 {{% alert color="info" %}}
-Maia Learn is available in Studio Pro 10.18 and above.
-{{% /alert %}}
-
-{{% alert color="info" %}}
 To use Maia Learn, internet connection and signing in to Studio Pro are required.
 {{% /alert %}}
 

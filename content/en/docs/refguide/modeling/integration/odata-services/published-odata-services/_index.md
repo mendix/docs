@@ -56,10 +56,6 @@ The URL prefixes `api-doc/`, `xas/`, `p/`, and `reload/` are reserved and cannot
 
 ### Supports GraphQL {#supports-graphql}
 
-{{% alert color="info" %}}
-GraphQL support was introduced in [Studio Pro 10.14.0](/releasenotes/studio-pro/10.14/).
-{{% /alert %}}
-
 Default: **No**
 
 Choose **Yes** to publish the entities in a GraphQL service. This allows clients to send GraphQL `POST` requests to the location of the service. The service responds with the requested entity data in JSON format. This option is available when the [GraphQL feature](/refguide/preferences-dialog/#graphql) is enabled or when the value is **Yes**.
@@ -196,10 +192,6 @@ xmlHttp.send(null);
 ```
 
 ##### Custom {#authentication-microflow}
-
-{{% alert color="info" %}}
-Support for using a list of `System.HttpHeader` in authentication microflows was introduced in [Studio Pro 10.18.0](/releasenotes/studio-pro/10.18/).
-{{% /alert %}}
 
 Specify which microflow to use for custom authentication. The microflow may take the following as a parameter:
 

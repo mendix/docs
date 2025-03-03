@@ -78,7 +78,7 @@ To use Maia Chat, you need to be signed in to Mendix and have an internet connec
 Maia Chat does not use any project, customer, or company information. It only uses the data that you have entered in the Chat. Please do not enter any personal or sensitive data!
 {{% /alert %}}
 
-Maia Chat  is a built-in chat interface in the Mendix Platform powered by Generative AI. Developers can ask questions about all aspects of Mendix, including how to apply concepts, best practices, governance tools, and development patterns.
+Maia Chat is a built-in chat interface in the Mendix Platform powered by Generative AI. Developers can ask questions about all aspects of Mendix, including how to apply concepts, best practices, governance tools, and development patterns.
 
 Maia Chat is also available in Studio Pro 10.12.0 and above. See [Maia Chat](/refguide/maia-chat/) for more information.
 

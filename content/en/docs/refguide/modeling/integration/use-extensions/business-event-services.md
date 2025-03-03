@@ -7,7 +7,7 @@ description: "Overview of the [Business Event services module](https://marketpla
 
 ## Introduction
 
-Studio Pro 10 integrates with Mendix Business Events module functionality. With the [Mendix Business Events](/appstore/services/business-events/) module, applications can signal when something important happens and can subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps.
+Studio Pro integrates with Mendix Business Events module functionality. With the [Mendix Business Events](/appstore/services/business-events/) module, applications can signal when something important happens and can subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps.
 
 This page references the **Business Event Service** documents in Studio Pro. See [Mendix Business Events](/appstore/services/business-events/) for the complete documentation. 
 

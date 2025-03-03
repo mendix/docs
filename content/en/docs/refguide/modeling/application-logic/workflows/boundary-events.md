@@ -5,9 +5,7 @@ weight: 20
 ---
 
 {{% alert color="info" %}}
-Non-interrupting timer boundary events were introduced in beta in Studio Pro 10.15 and released in GA in Studio Pro 10.16.
-
-Interrupting timer boundary events were introduced in Studio Pro 10.20 and are currently in beta. Certain features or attributes are subject to change and may contain bugs. For more information, see [Beta and Experimental Releases](/releasenotes/beta-features/).
+Interrupting timer boundary events are currently in beta. Certain features or attributes are subject to change and may contain bugs. For more information, see [Beta and Experimental Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 ## Introduction

@@ -16,7 +16,7 @@ You must have the [External Database Connector](https://marketplace.mendix.com/l
 {{% /alert %}}
 
 {{% alert color="info" %}}
-For Studio Pro 10.18, the External Database Connector uses a different approach to connect to databases during design time. This functionality enhances consistency between design time and runtime environments. To enable this beta feature, use the flag: `--enable-live-preview`
+The External Database Connector uses a different approach to connect to databases during design time. This functionality enhances consistency between design time and runtime environments. To enable this beta feature, use the flag: `--enable-live-preview`
 
 For information on how to connect using the External Database Connection document with a feature flag, see [External Database Connection](/refguide/use-the-external-database-connector/#enable-live-preview).
 {{% /alert %}}
@@ -30,7 +30,7 @@ Right-click your module and click **Add other > External database connection** t
 Enter or select the following:
 
 * **Name** — name of your database connection
-* **Database Type** — Microsoft SQL, MySQL, Oracle, PostgreSQL, or Snowflake (Beta support from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/))
+* **Database Type** — Microsoft SQL, MySQL, Oracle, PostgreSQL, or Snowflake
 
 ### Connection Details
 
@@ -57,7 +57,7 @@ If you select **Use connection string**, enter the following:
 
 ### Password Security
 
-The password you provide when using one of the above connection methods will be stored in a constant, which can be altered upon deployment on a Cloud node. As of Mendix Studio Pro 10.9, you can indicate which constants contain private or sensitive information to ensure this information is saved locally, and that it is not shared on the TeamServer or Cloud Portal.
+The password you provide when using one of the above connection methods will be stored in a constant, which can be altered upon deployment on a Cloud node. You can indicate which constants contain private or sensitive information to ensure this information is saved locally, and that it is not shared on the TeamServer or Cloud Portal.
 
 ## External Database Connection Document {#external-database-document}
 

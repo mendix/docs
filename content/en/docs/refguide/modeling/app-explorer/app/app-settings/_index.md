@@ -232,10 +232,6 @@ Default: *Yes*
 
 If this option is enabled, database [foreign key constraints](/refguide/data-storage/#fkc) will be used. An attempt to commit a dangling reference will throw a runtime exception.
 
-{{% alert color="info" %}}
-This option was added in Mendix version 10.10.
-{{% /alert %}}
-
 Default: *depends on the version of Mendix used to create the app:*
 
 * *Yes* for apps created with Mendix versions 10.6.0 and above

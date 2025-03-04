@@ -40,7 +40,7 @@ An [Association source](/refguide/association-source/) works in the same way as 
 
 As described in previous section, the type of data source impacts when a network request is triggered. The size of the response of this request depends on the number of objects returned but also on the optimization mode.
 
-There are two [optimization modes](/refguide/data-sources/#optimization-mode) and, in Mendix version 10.8.0 and above, the one that applies to the data source can be seen in the data source advanced properties.
+There are two [optimization modes](/refguide/data-sources/#optimization-mode) and the one that applies to the data source can be seen in the data source advanced properties.
 
 To show how these modes impact the performance and behavior of the widget, consider a [Data Grid 2](/appstore/modules/data-grid-2/) widget. The data grid is configured with a database data source of entity `OrderLine`. The data grid shows two columns containing the `Description` and the `Price` attribute, respectively.
 

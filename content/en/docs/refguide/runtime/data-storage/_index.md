@@ -76,10 +76,6 @@ A Foreign Key Constraint (FKC) is a database-level concept. An FKC enforces cons
 
 ### Foreign Key Constraints in Mendix
 
-{{% alert color="info" %}}
-Foreign Key Constraints are applied to new apps created in Mendix version 10.6.0 and above.
-{{% /alert %}}
-
 When it comes to the Mendix data model, having a FKC means that all associations and System members such as `owner` and `changedBy` are guaranteed to be consistent; if there is an association, then the associated object exists as well.
 
 From the user perspective, that is already the case. In a Mendix app, is impossible to encounter a reference that does not refer to an object.
@@ -103,7 +99,7 @@ When a new app is created from a Starter App or an app package, it may already c
 
 ### Setting Foreign Key Constraints On and Off
 
-In Mendix version 10.10.0 and above, it is possible to set Foreign Key Constraints for existing projects on or off regardless of which version the project was originally created in by toggling the option in the app's [runtime settings](/refguide/app-settings/#database-fkc).
+It is possible to set Foreign Key Constraints for existing projects on or off regardless of which version the project was originally created in by toggling the option in the app's [runtime settings](/refguide/app-settings/#database-fkc).
 
 {{% alert color="info" %}}
 Deploying an existing application after enabling or disabling FKC will cause a synchronization step to be executed.

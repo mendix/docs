@@ -195,10 +195,6 @@ Select a [Clone type](/refguide/clone-type/) to use for future clone operations,
 
 #### Combine Local and Remote Changes
 
-{{% alert color="info" %}}
-This setting was introduced in Mendix version 10.5.
-{{% /alert %}}
-
 When [combining changes](/refguide/merge-algorithm/), for example when doing a Git pull, the user can choose between **Rebase** and **Merge** as the default action. This preference can be overridden for each merge which contains conflicts.
 
 #### Git Version Warning

@@ -221,10 +221,6 @@ Example 2
 
 #### OpenTelemetry{#opentelemetry}
 
-{{% alert color="info" %}}
-This feature was introduced in Mendix version 10.17.0.
-{{% /alert %}}
-
 * `url` – the OpenTelemetry metrics endpoint url to which data is reported.
 * `aggregationTemporality` – determines how the additive quantities are expressed, in relation to time. The supported values are `cumulative` or `delta`. Defaults to `cumulative`.
 * `headers` – additional headers to send with exported metrics, this can be used for authorization headers.

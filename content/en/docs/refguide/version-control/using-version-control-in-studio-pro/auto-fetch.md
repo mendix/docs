@@ -5,10 +5,6 @@ weight: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-Automatic fetching was introduced in Mendix version 10.3.
-{{% /alert %}}
-
 ## Introduction
 
 When collaborating with someone on the same branch, they may push their changes to the server before you. Studio Pro has an automatic fetch mechanism that periodically checks the version control server for changes that are not yet present on your machine. 

@@ -24,9 +24,7 @@ For more information and general help on version control, see the following docu
 ### Getting an Unexpected Error: `The project contains changes that have not been committed yet. Please commit first before attempting to merge again.` {#css-error}
 
 {{% alert color="info" %}}
-
 This is a known issue for Mendix version 10.0 and above. For more information, see [10.0](/releasenotes/studio-pro/10.0/#css-ki) release notes.
-
 {{% /alert %}}
 
 You may get the error `The project contains changes that have not been committed yet. Please commit first before attempting to merge again.` when you feel there are no uncommitted changes. 

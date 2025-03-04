@@ -54,8 +54,6 @@ The data source determines which objects will be shown in the template grid. For
 The template grid supports the following types of data sources: 
 
 * [Database source](/refguide/database-source/) – objects are retrieved directly form the database
-* [XPath source](/refguide/xpath-source/) – objects are retrieved directly form the database
-    {{% alert color="info" %}}From Mendix version 10.5, the template grid widget does not have a separate XPath source, you can apply XPath constraints to the **Database** source.{{% /alert %}}
 * [Microflow source](/refguide/microflow-source/) – calculates the list of objects by executing a microflow
 * [Association source](/refguide/association-source/) – follows an association to get to objects
 

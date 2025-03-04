@@ -31,14 +31,10 @@ Constraints are applied equally to all users and only apply to the data displaye
 {{% /alert %}}
 
 {{% alert color="info" %}}
-In Mendix version 10.5 and above, you can add a full XPath constraint to a Database source; click **Edit…** next to the **XPath constraint** field. There is no separate **XPath** source. See [XPath Constraints](/refguide/xpath-constraints/) for more information.
+You can add a full XPath constraint to a Database source; click **Edit…** next to the **XPath constraint** field. See [XPath Constraints](/refguide/xpath-constraints/) for more information.
 {{% /alert %}}
 
-For Mendix versions below 10.5, each constraint consists of an **Attribute**, an **Operator**, and a **Value**:
-
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/database-source/constraint-example.png" alt="Constraint Example" class="no-border" >}}
-
-Multiple constraints will limit the data even more (the logical operator **AND**). There is no way to use the logical operator **OR** in database constraints in versions of Mendix below 10.5, but you can switch to an [XPath data source](/refguide/xpath-source/) and create an XPath constraint.
+Multiple constraints will limit the data even more (with logical operators like **AND** and **OR**).
 
 ### Show Search Bar {#show-search-bar}
 

@@ -181,8 +181,6 @@ The **Source** property sets which of the three ways to define the selectable ob
 
 * Database *(default)*
 * Microflow
-* XPath
-    {{% alert color="info" %}}From Mendix version 10.5, the reference selector does not have a separate XPath source, you can apply XPath constraints to the **Database** source.{{% /alert %}}
 
 #### Database
 

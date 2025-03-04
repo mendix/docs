@@ -159,7 +159,7 @@ The period for a graceful shutdown of queues can be configured as a [custom runt
 |--------------------------------------------|---------------|-----------------------------------------------------------------------------------------|
 | `TaskQueue.ShutdownGracePeriod`            |          10000| Time in ms to wait for task to finish when shutting down.                               |
 | `com.mendix.core.ProcessedTasksCleanupAge` |       86400000| Time in ms after which `ProcessedQueueTask` are deleted automatically (by default this is 365 days for projects migrated from Mendix 9 and 7 days for new projects or projects with an empty database.). |
-| `com.mendix.core.ProcessedTasksCleanupBatchSize` |       10000| Specifies how many System.<wbr>ProcessedQueueTask objects will be removed from the database each time the ProcessedTask cleanup action runs. <br />*This setting was introduced in Mendix version 10.9.0* |
+| `com.mendix.core.ProcessedTasksCleanupBatchSize` |       10000| Specifies how many System.<wbr>ProcessedQueueTask objects will be removed from the database each time the ProcessedTask cleanup action runs. |
 
 {{% alert color="info" %}}
 This grace period is applied twice during the [shutdown](#shutdown) (described below) so the maximum time that the runtime will wait for tasks to end is twice this value.

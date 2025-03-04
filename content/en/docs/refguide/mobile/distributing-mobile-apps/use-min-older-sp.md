@@ -30,10 +30,10 @@ Next, select the Mendix version you want to build your Make It Native App for:
 git checkout <BRANCH_NAME>>
 ```
 
-For example, if you want to build Make It Native for Mendix 10.0.0, do the following:
+For example, if you want to build Make It Native for Mendix 11.0.0, do the following:
 
 ```bash
-git checkout mx/10.0
+git checkout mx/11.0
 ```
 
 You can find a complete list of supported Mendix versions and their branch names in the [GitHub Repository](https://github.com/mendix/make-it-native/branches/active).

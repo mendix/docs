@@ -77,7 +77,7 @@ Your mouse pointer should not activate a white dot. This indicates the creation 
 
 ### Reverse the Association Direction
 
-In Mendix 10.3.0 and above, you can reverse an association direction by right-clicking the association and selecting **Reverse direction**.
+You can reverse an association direction by right-clicking the association and selecting **Reverse direction**.
 
 {{% alert color="warning" %}}
 Reversing the association in the domain model will result in the loss of existing association links between objects, but the objects themselves will not be deleted.

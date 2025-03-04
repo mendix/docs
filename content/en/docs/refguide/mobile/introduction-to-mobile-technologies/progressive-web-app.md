@@ -8,16 +8,6 @@ aliases:
 
 ## Introduction
 
-{{% alert color="info" %}}
-Due to web browsers changing what they support, offline-first progressive web apps are only supported in the following versions of Mendix:
-
-* Mendix 9.24.18 and higher patch versions
-* Mendix 10.6.6 and higher patch versions
-* Mendix 10.9.0 and above
-
-Offline-first progressive web apps build with other versions of Mendix will not work in most web browsers.
-{{% /alert %}}
-
 Progressive web apps (PWAs) are an evolution of traditional web apps. Overall, PWAs tend to behave more like native mobile apps, and their popularity is increasing. One difference and possible advantage of PWAs compared to native mobile apps is that PWAs do not need to be distributed via an app store but can be accessed directly via the browser.
 
 Progressive web apps have three main characteristics:

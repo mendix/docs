@@ -5,10 +5,6 @@ weight: 50
 description: "Describes how to use the managed dependencies feature in Studio Pro"
 ---
 
-{{% alert color="info" %}}
-This feature was introduced in Mendix 10.3.0.
-{{% /alert %}}
-
 ## Introduction
 
 Mendix Studio Pro allows you to manage your Java dependencies. By specifying Java dependencies and their versions per module, Studio Pro can automatically download them and resolve conflicts by leveraging Gradle.

@@ -94,10 +94,6 @@ The editable property indicates whether the data view as a whole is editable or 
 | Never                       | The data view is not editable; no widget inside the data view will be editable.                                                                                             |
 | Conditionally               | The value is editable if the specified condition satisfies the specified criteria (see below). It will be combined with the conditions of the containing data containers.   |
 
-{{% alert color="info" %}}
-The 'Conditionally' option was introduced in Mendix 10.7.0.
-{{% /alert %}}
-
 ### Condition
 
 If the editable property is set to **Conditionally**, the widgets inside the data view are made editable only if the editability value satisfies the specified criteria.

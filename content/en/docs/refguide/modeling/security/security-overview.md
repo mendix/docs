@@ -6,7 +6,7 @@ beta: true
 ---
 
 {{% alert color="info" %}}
-This feature was introduced in Mendix 10.18 and is currently in beta. For more information, see [Beta and Experimental Releases](/releasenotes/beta-features/).
+This feature is currently in beta. For more information, see [Beta and Experimental Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 ## Introduction

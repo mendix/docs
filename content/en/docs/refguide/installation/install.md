@@ -38,7 +38,7 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 3. Check the desktop option if you want to create a shortcut to Studio Pro on your desktop and click **Next**.
 4. Click **Install** to install Studio Pro on your computer.
 
-5. If you are asked to restart your computer, make a selection and click **Finish**. Otherwise, check **Launch Mendix 10.X.X** and click **Finish** to finish the installation and launch Studio Pro.
+5. If you are asked to restart your computer, make a selection and click **Finish**. Otherwise, check **Launch Mendix 11.X.X** and click **Finish** to finish the installation and launch Studio Pro.
 
 ## Troubleshooting {#troubleshooting}
 

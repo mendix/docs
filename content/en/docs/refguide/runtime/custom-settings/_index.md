@@ -84,7 +84,7 @@ The ApplicationRootUrl setting is used to specify the domain and path to your ap
 There are two main ways that you might use to host multiple applications.
 
 * Routing based on a (sub)domain
-* Routing based on a subpath (supported since Mendix 10.3.0)
+* Routing based on a subpath
 
 Say we are hosting two apps, App1 and App2. In domain-based routing, every app gets its own domain (for example. `app1.domain.com` and `app2.domain.com`). In subpath-based routing, this would be on a subpath, for example `domain.com/app1` and `domain.com/app2`.
 

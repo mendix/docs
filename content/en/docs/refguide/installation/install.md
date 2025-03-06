@@ -144,7 +144,9 @@ Mendix offers a Studio Pro installer called the **Portable** installer that does
 
 While the regular installer installs Mendix Studio Pro dependencies in system directories, the portable installer installs Studio Pro in a user-level directory together with all the dependencies. This means that dependencies are not shared between Studio Pro versions, which results in higher disk space usage. In return, you do not require admin rights to install Studio Pro and you can still use all the functionality.
 
-The portable installer for Windows x64 and arm64 includes mx, mxbuild, mxutil, MprTool and MendixConsoleLog.
+For Studio Pro version below 10.14, the portable installer does not include all the tools, such as MprTool, mx, mxbuild, mxutil, or MendixConsoleLog, that come installed with Studio Pro or can be leveraged by Studio Pro. The portable installer only includes the tools that are necessary to be able to build with Studio Pro and run apps locally. 
+
+From Studio Pro version 10.14.0, the portable installer for Windows x64 and arm64 includes mx, mxbuild, mxutil, MprTool and MendixConsoleLog.
 
 ### Git Installation
 

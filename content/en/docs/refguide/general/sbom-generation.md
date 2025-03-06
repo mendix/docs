@@ -13,13 +13,13 @@ When building a Mendix app, you use many reusable components such as Widgets and
 
 You can generate an SBOM by using either of the following options:
 
-1. [MxBuild](/refguide/mxbuild/).
+1. [MxBuild](/refguide/mxbuild/)
 
     ```bat
    mxbuild --java-home="C:\Program Files\Eclipse Adoptium\jdk-11.0.16.101-hotspot" --java-exe-path="C:\Program Files\Eclipse Adoptium\jdk-11.0.16.101-hotspot\bin\java.exe" --generate-sbom  "C:\Mendix\MyApp\MyApp.mpr"
    ```
 
-2. Menu option **App -> Tools -> Generate Bill of Materials** in Studio Pro version 10.18 and above.
+2. Menu option **App -> Tools -> Generate Bill of Materials**
 
 Both of these generate an `sbom.json` file in the deployment folder of your package `.mda`. Bundling the SBOM together with your deployment ensures that the SBOM represents the components that were present during the build.
 

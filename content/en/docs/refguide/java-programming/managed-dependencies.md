@@ -41,10 +41,6 @@ After finding the package of your choice, locate the Snippets part, containing t
 
 ## Adding or Updating Exclusions
 
-{{% alert color="info" %}}
-Exclusions are available in Studio Pro version 10.12.0 and above.
-{{% /alert %}}
-
 Transitive (or indirect) dependencies of different configured Java dependencies might conflict. For example, if two Java dependencies have the same package name and classes but a different group or artifact then they may both be included in your app, possibly causing conflicts.
 
 To fix this, transitive dependencies can be excluded when configuring dependencies.

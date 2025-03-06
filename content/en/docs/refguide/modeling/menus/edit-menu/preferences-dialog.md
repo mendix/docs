@@ -187,10 +187,6 @@ When this option is selected, the application automatically uses credentials of 
 
 #### Clone {#clone}
 
-{{% alert color="info" %}}
-Different clone types are available in Studio Pro version 10.12.0 and above. 
-{{% /alert %}}
-
 Select a [Clone type](/refguide/clone-type/) to use for future clone operations, such as downloading an app or checking out another branch of an app you already downloaded. Changing this setting does not affect apps that you have already downloaded.
 
 #### Combine Local and Remote Changes
@@ -259,13 +255,7 @@ When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro
 
 ### Visual Builder for XPath Constraints{#visual-builder}
 
-In Studio Pro version 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called **visual Builder for XPath constraints** (Builder).
-
-From Mendix version 10.10, Builder is the default way to construct XPath constraints, but you can change the default by clearing **Enable the XPath Builder as the default XPath constraint editor**.
-
-{{% alert color="info" %}}
-For Mendix versions 10.5.0 through 10.9.0, this option is on the **New Features** tab.
-{{% /alert %}}
+**Visual Builder** is the default way to construct XPath constraints, but you can change the default by clearing **Enable the XPath Builder as the default XPath constraint editor**.
 
 ### Feedback Survey
 

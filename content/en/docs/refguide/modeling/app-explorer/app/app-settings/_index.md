@@ -232,10 +232,7 @@ Default: *Yes*
 
 If this option is enabled, database [foreign key constraints](/refguide/data-storage/#fkc) will be used. An attempt to commit a dangling reference will throw a runtime exception.
 
-Default: *depends on the version of Mendix used to create the app:*
-
-* *Yes* for apps created with Mendix versions 10.6.0 and above
-* *No* for apps created with Mendix versions below 10.6
+Default: *Yes*
 
 ### SSL Certificate Algorithm
 

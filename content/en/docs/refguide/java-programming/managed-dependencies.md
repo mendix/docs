@@ -193,12 +193,7 @@ If you have an issue with the managed dependencies of a Marketplace module, you 
 
 ## Offline Usage {#disabling-synchronization}
 
-{{% alert color="info" %}}
-This feature was introduced in Mendix versions 10.16.0, 10.12.7, and 10.6.17.
-{{% /alert %}}
-
-In the Deployment tab of the Studio Pro preferences [Gradle synchronization](/refguide/preferences-dialog/#gradle-synchronization) can be disabled.
-This means that applications can be started even if Studio Pro is offline or in an air gapped environment.
+In the Deployment tab of the Studio Pro preferences, [Gradle synchronization](/refguide/preferences-dialog/#gradle-synchronization) can be disabled. This means that applications can be started even if Studio Pro is offline or in an air gapped environment.
 
 {{% alert color="info" %}}
 This prevents managed dependencies being synchronized, potentially causing compile errors and version conflicts. In addition, you cannot generate SBOMs while Gradle synchronization is disabled. Mendix recommends that air gapped users configure a [custom repository](#custom-repos) instead of relying on disabling Gradle synchronization.

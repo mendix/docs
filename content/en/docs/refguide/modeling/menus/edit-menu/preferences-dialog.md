@@ -84,10 +84,6 @@ Enabling this option includes debug information about local variables in the Jav
 
 #### Gradle Synchronization {#gradle-synchronization}
 
-{{% alert color="info" %}}
-This feature was introduced in Mendix versions 10.16.0, 10.12.7, and 10.6.17.
-{{% /alert %}}
-
 This option controls the synchronization of managed dependencies. For more information, see the [Offline Usage](/refguide/managed-dependencies/#disabling-synchronization) section in *Managed Dependencies*.
 
 #### Gradle Directory

@@ -23,7 +23,7 @@ For more information, see [Control Bar](/refguide/control-bar/).
 
 ### Search Bar
 
-**Search Bar** is only available for **Database** and, below version 10.5, **XPath** [data sources](#data-source). For more information on a search bar and its settings, see [Search Bar](/refguide/search-bar/).
+**Search Bar** is only available for **Database** [data source](#data-source). For more information on a search bar and its settings, see [Search Bar](/refguide/search-bar/).
 
 ## Properties
 
@@ -57,7 +57,7 @@ The template grid supports the following types of data sources:
 * [Microflow source](/refguide/microflow-source/) – calculates the list of objects by executing a microflow
 * [Association source](/refguide/association-source/) – follows an association to get to objects
 
-The database and, below version 10.5, XPath sources retrieve objects from the database and supports searching and sorting. 
+The database source retrieves objects from the database and supports searching and sorting. 
 
 ### Design Properties Section {#design-properties}
 

@@ -59,7 +59,7 @@ The data grid supports the following types of data sources:
 * [Microflow source](/refguide/microflow-source/) – calculates the list of objects by executing a microflow
 * [Association source](/refguide/association-source/) – follows an association to get to objects
 
-The database and, below version 10.5, XPath sources retrieve objects from the database and supports searching and sorting. 
+The database source retrieves objects from the database and supports searching and sorting. 
 
 ### Design Properties Section {#design-properties}
 

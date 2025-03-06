@@ -55,7 +55,7 @@ The list view supports the following types of data sources:
 * [Nanoflow source](/refguide/nanoflow-source/) – calculates the list of objects by executing a nanoflow
 * [Association source](/refguide/association-source/) – follows an association to get to objects
 
-The database and, below version 10.5, XPath sources retrieve objects from the database and supports searching and sorting. 
+The database source retrieves objects from the database and supports searching and sorting. 
 
 {{% alert color="warning" %}}Searching is not supported on native mobile pages.{{% /alert %}}
 

@@ -23,7 +23,7 @@ GenAI resource packs accelerate the delivery of full Generative AI solutions wit
 
 ### Settings
 
-The settings overview contains the details of a GenAI resource. Here is more information about: 
+The 'Settings' overview contains the details of a GenAI resource. Here is more information about: 
 
 - The region where the resource is hosted 
 - Cloud provider 
@@ -35,7 +35,7 @@ The settings overview contains the details of a GenAI resource. Here is more inf
 
 ### Team
 
-The Team overview can be used to manage who has access to the GenAI resource. All users in this overview have access to the resource in the GenAI resource portal and can create new keys or invite new users. New users can be added to a resource via the Add User button. 
+The 'Team' overview can be used to manage who has access to the Cloud GenAI resource. All users in this overview have access to the resource in the GenAI resource portal and can create new keys or invite new users. New users can be added to a resource via the Add User button. 
 
 > Currently it is only possible to invite people within the same organization.
 
@@ -70,7 +70,7 @@ We offer different options for adding data to a Knowledge Base:
 
 It is possible to directly upload documents in the GenAI portal. Before uploading documents, it is possible to optionally add metadata.  
 
-> Only .PDF and .TXT files are supported. 
+{{% alert color="info" %}} Only .PDF and .TXT files are supported. {{% /alert %}} 
 
 #### Metadata 
 

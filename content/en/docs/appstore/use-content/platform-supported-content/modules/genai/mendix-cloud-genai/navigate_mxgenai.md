@@ -23,7 +23,7 @@ GenAI resource packs accelerate the delivery of full Generative AI solutions wit
 
 ### Settings
 
-The 'Settings' overview contains the details of a GenAI resource. Here is more information about: 
+The `Settings` tab contains the details of a GenAI resource. Here is more information about: 
 
 - The region where the resource is hosted 
 - Cloud provider 
@@ -35,13 +35,12 @@ The 'Settings' overview contains the details of a GenAI resource. Here is more i
 
 ### Team
 
-The 'Team' overview can be used to manage who has access to the Cloud GenAI resource. All users in this overview have access to the resource in the GenAI resource portal and can create new keys or invite new users. New users can be added to a resource via the Add User button. 
+The `Team` tab can be used to manage who has access to the Mendix Cloud GenAI resource. All users listed in this overview have access to the resource in the GenAI resource portal and can create new keys or invite new users. New users can be added to a resource via the Add User button. 
 
-> Currently it is only possible to invite people within the same organization.
+{{% alert color="info" %}} Currently it is only possible to invite people within the same organization. {{% /alert %}} 
 
 
 ## Keys
-
 
 The keys overview is the location to manage configuration keys for the resource. Resource keys provide programmatic access to the GenAI resources. From the key overview it is possible to create new keys and revoke existing keys.  
 
@@ -78,9 +77,9 @@ Metadata is additional information that can be attached to data in a GenAI knowl
 
 Metadata consists of key-value pairs and is additional information, which is connected but not part of the vectorization itself.  
 
-An example is a GenAI knowledge base to store customer support tickets. Each ticket could be associated with metadata such as: Ticket Type, Status, Priority. Instead of performing a similarity-based search on ticket descriptions, a user can filter for only “bug” tickets that have the status “solved”. 
+An example is a GenAI knowledge base to store customer support tickets. Each ticket could be associated with metadata such as: Ticket Type, Status, Priority. Instead of performing a similarity-based search on ticket descriptions, a user can filter for only “bug” tickets that have the Status “solved”. 
 
-### Connect to a MX Data Source. 
+### Add data from a Mendix application
 
 It is possible to upload data directly from Mendix to the Knowledge Base. To see how this can be done, please see [add data chunks to your knowledge base](https://docs.mendix.com/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/#add-data-chunks-to-your-knowledge-base). 
 

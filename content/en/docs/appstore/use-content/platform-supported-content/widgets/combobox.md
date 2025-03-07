@@ -35,6 +35,7 @@ Properties:
 * [General](#general)
 * [Events](#events)
 * [Accessibility](#accessibility)
+* [Advanced](#advanced)
 * [Common](#common)
 
 Styling:
@@ -81,7 +82,6 @@ The static source type can be used to set the value of a string attribute with m
 The **General** section allows you to configure general behavior and captions for the combo box. The following configurations are available:
 
 * **Placeholder text** – captions that will be displayed when there is no data being selected
-* **Filter type** – allows the user to type into the input and filter displayable options on the combo box
 * **No options text** – captions that will be used when filter results are empty, or shown when there is no data displayed in the combo box's options
 * **Clearable** – if enabled, this allows selected data to be cleared all at once
 * **Custom content** – allows custom widgets to be displayed in the combo box instead of normal text values
@@ -127,6 +127,34 @@ The following configurations are available:
 ### Accessibility Tab {#accessibility}
 
 The **Accessibility** tab allows you to configure settings for combo box accessibility features.
+
+### Advanced Tab {#advanced}
+
+The **Advanced** tab allows you to configure settings for features that is beyond the normal configurations.
+
+* **Performance group**
+
+    * **Lazy loading** – allows the user to configure when to load the combo box's options data. Set it to **yes** to ensure that the data is not loaded until the user opens the options menu.
+    * **Loading type** – allows the user to configure the loading animation of a combo box.
+
+{{% alert color="info" %}}
+Lazy loading always fetches 100 data items for each request. Pagination is triggered when the user scrolls to the bottom of the options menu.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+Using lazy loading with microflow or nanoflow data sources can result in performance issues if the microflow retrieves more than 100 items. Because of that, it is not currently recommended to use lazy loading with microflow or nanoflow data sources. This issue will be fixed in a future release.
+{{% /alert %}}
+
+* **Multiple selection**
+    This setting is only applicable for combo boxes with multiple item selections.
+
+    * **Selected items sorting** – allows user to configure the sorting mechanism to display the selected items.
+        * **Caption** - if selected, this settings displays selected items based on their captions, regardless of user's selected sequence. 
+        * **Default** - if selected, this settings does not do any sorting on the client side. Instead, it keeps the sorting from the saved values given from datasource.
+            If the target attribute value is set (that is, if the multiple selection is set to **association**) the data will already sorted based on values from the API and combobox will display it as it is. Otherwise, if there is no target attribute (that is, if the multiple selection is set to **database**) the selected items are displayed based on user's selected sequence.
+
+* **Filter**
+    * **Filter type** – allows the user to type into the input and filter displayable options on the combo box.
 
 ### Common Tab {#common}
 

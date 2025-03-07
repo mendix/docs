@@ -11,6 +11,10 @@ description: "Describes the features in Domain Model Generator."
 Domain Model Generator is currently an experimental feature introduced in Studio Pro 10.13.0. For more information on experimental features, see [Beta and Experimental Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
+{{% alert color="info" %}}
+To use Domain Model Generator, internet connection and signing in to Studio Pro are required.
+{{% /alert %}}
+
 Maia Domain Model Generator is an AI-powered tool that you can use for generating a [domain model](/refguide/domain-model/). It helps you to generate entities and associations based on text input. In Studio Pro 10.18 and above, you can also use Domain Model Generator in existing domain models. As an experimental feature, Domain Model Generator still have several limitations. For more information, see the [Limitations](#limitation) section below.
 
 ## Using Domain Model Generator
@@ -64,6 +68,6 @@ Currently, it cannot set [generalization](/refguide/generalization-and-associati
 
 ## Read More
 
-* [Domain Model](/refguide/domain-model/)
+* [Data in the Domain Model](/refguide/domain-model/)
 * [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)
 * [Maia Chat](/refguide/maia-chat/)

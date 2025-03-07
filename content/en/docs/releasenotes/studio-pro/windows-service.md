@@ -8,7 +8,7 @@ aliases:
     - /releasenotes/desktop-modeler/windows-service
 ---
 
-To download the Windows Service, go to the [Get Studio Pro](https://marketplace.mendix.com/link/studiopro/) page in the Mendix Marketplace and click **Related Downloads**.
+You can download the required version of the [Mendix Service Console](https://marketplace.mendix.com/link/component/223425) module from the Marketplace.
 
 ## 4.7
 

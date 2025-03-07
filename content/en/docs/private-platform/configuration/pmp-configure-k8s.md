@@ -432,7 +432,7 @@ Before creating any environments, you must register your Kubernetes clusters by 
 
 4. Click **Save**.
 
-5. Click the newly created cluster and expand it, and then click **Retrieve Namespace(s)** to retrieve all the namespace and storage plans. 
+5. Click the newly created cluster and expand it, and then click **Retrieve Namespace(s)** to retrieve all the namespace and storage plans, or **Manually Register Namespace**. 
     
     Namespaces without any storage plan are skipped. This step requires the Mendix Operator to be installed and configured. You can repeat this step as required to retrieve additional namespaces.
 

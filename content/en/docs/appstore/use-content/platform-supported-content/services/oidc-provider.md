@@ -10,14 +10,15 @@ aliases:
 
 ## Introduction
 
- The [OIDC Provider](https://marketplace.mendix.com/link/component/214681) module enables developers to build Mendix applications that issue security tokens to other applications. In IAM (Identity and Access Management) terminology, this module acts as an OpenID Provider and an OAuth Authorization Server. Therefore, let us refer to such an application as an access provider application.
+The [OIDC Provider](https://marketplace.mendix.com/link/component/214681) module lets developers build Mendix applications that issue security tokens to other applications. In IAM (Identity and Access Management) terminology, this module acts as an OpenID Provider and an OAuth Authorization Server. Therefore, this document will refer to such an application as an access-provider application.
 
-An access provider application can offer a Single Sign-On (SSO) experience for end-users of connected applications Additionally, it can issue Access Tokens for API consumption when APIs are secured with OAuth bearer tokens.
-The service supports responsive browser-based applications and has been tested with applications that use the OIDC SSO module.
+An access-provider application can offer a Single Sign-On (SSO) experience for end-users of connected applications. Additionally, it can issue Access Tokens for API consumption when APIs are secured with OAuth bearer tokens.
 
-For successful implementation of the OIDC Provider module, [Advanced](https://academy.mendix.com/link/certifications/6/advanced) or [Expert](https://academy.mendix.com/link/certifications/24/expert) Mendix certification is recommended. Customers with limited low-code experience may consider partnering with a Mendix Implementation Partner.
+The service supports responsive browser-based applications, and has been tested with applications that use the OIDC SSO module.
 
-There are below versions of the OIDC Provider module, compatible with Mendix versions.
+For successful implementation of the OIDC Provider module, Mendix recommends that you attain [Advanced](https://academy.mendix.com/link/certifications/6/advanced) or [Expert](https://academy.mendix.com/link/certifications/24/expert) Mendix certification. Customers with limited low-code experience may consider partnering with a Mendix Implementation Partner.
+
+Certain OIDC Provider module versions are compatible with certain versions of Studio Pro (shown below).
 
 | Mendix Version | OIDC Provider Version |
 | --- | --- |
@@ -26,26 +27,26 @@ There are below versions of the OIDC Provider module, compatible with Mendix ver
 
 ### Typical Usage Scenarios
 
-The following are usage scenarios that would be achievable with the OIDC Provider module.
+The OIDC Provider module excels at the following usage scenarios:
 
 * SSO brokering
-* SSO within multi-app Mendix solution
+* SSO within multi-app Mendix solutions
 * Non-user specific API consumption
 * Platform Extensions
 
-For more information on how SSO brokering and SSO are implemented within a multi-app Mendix solution, see the [End-User Account Creation in the OIDC Provider](#end-user-account) section below.
+For more information on how SSO brokering and SSO are implemented within a multi-app Mendix solution, see [End-User Account Creation in the OIDC Provider](#end-user-account) below.
 
 #### SSO Brokering for Rapid Innovation{#brokering}
 
 {{< figure src="/attachments/appstore/platform-supported-content/services/oidc-provider/brokering.png" class="no-border" >}}
 
-The Mendix marketplace offers Single Sign-On (SSO) module, enabling your Mendix application to delegate end-user login to your Identity Providers (IdPs) such as Entra ID and Okta. However, for some organizations, implementing SSO for each Mendix application can cost more or slow down innovation. In such cases, an SSO broker between your IdP and your expanding portfolio of Mendix applications can offer an effective solution.
+The Mendix Marketplace offers the Single Sign-On (SSO) module, which enables your Mendix application to delegate end-user login to your Identity Providers (IdPs) such as Entra ID and Okta. However, for some organizations, implementing SSO for each Mendix application can cost more or slow down innovation. In such cases, an SSO broker between your IdP and your expanding portfolio of Mendix applications can offer an effective solution.
 
 You can build a Mendix application that acts as a SSO Broker by using the OIDC SSO and the OIDC Provider modules. The OIDC SSO module authenticates end-users at your central IdP, while the OIDC Provider module enables your new app to act as an IdP (OpenID Provider) for your other Mendix applications. This means it is working as an SSO broker, catering for authentication and, optionally, for authorization. 
 
-For more information on the concepts behind authorization, see the [About Authorization](#about-authorization) section below.
+For more information on the concepts behind authorization, see [Authorization](#authorization) below.
 
-Your deployment pipeline (deployment agent) would be responsible for registering additional Mendix apps with the SSO broker. This process can be automated using client registration API provided by the OIDC Provider module.
+Your deployment pipeline (deployment agent) will be responsible for registering additional Mendix apps with the SSO broker. This process can be automated using client registration API provided by the OIDC Provider module.
 
 #### SSO Within Multi-app Mendix Solution
 
@@ -53,7 +54,7 @@ Mendix Solution Vendors (MSVs) may build a multi-app solution that acts as a sin
 
 {{< figure src="/attachments/appstore/platform-supported-content/services/oidc-provider/SSO_within_multiapp.png" class="no-border" >}}
 
-As an MSV, you probably want to hide the internal multi-application structure from your end-users. They prefer logging in once to your overall solution rather than separately to individual apps. The OIDC Provider module allows you to build a ‘Central Portal App' where your end-users login once and subsequently get a SSO experience when navigating to the various applications in the solution. This approach does not need an external third-party IdP to create such a SSO experience, as your Central Portal App acts as a lightweight solution for Customer Identity & Access Management (CIAM).
+As an MSV, you probably want to hide the internal multi-application structure from your end-users. They prefer logging in once to your overall solution, rather than separately to individual apps. The OIDC Provider module allows you to build a **Central Portal App** where your end-users login once and subsequently get a SSO experience when navigating to the various applications in the solution. This approach does not need an external third-party IdP to create such a SSO experience, as your Central Portal App acts as a lightweight solution for customer identity and access management (CIAM).
 
 Instead of using local credentials in the Central Portal App, you may want to integrate your solution with an IdP. As an MSV, you probably also want to hide the internal multi-application structure from this IdP and have a single integration point. The Central Portal App can then act as an SSO broker, similar to the usage scenario described in the [SSO Brokering for rapid innovation](#brokering) section above.
 
@@ -61,13 +62,13 @@ Instead of using local credentials in the Central Portal App, you may want to in
 
 {{< figure src="/attachments/appstore/platform-supported-content/services/oidc-provider/API_consumption.png" class="no-border" >}}
 
-For API security, it is a best practice to use OAuth-tokens rather than API-keys. OAuth tokens are also known as bearer tokens, access tokens or simply JWTs. You have below two options for using OAuth tokens:
+For API security, it is a best practice to use OAuth-tokens rather than API-keys. OAuth tokens are also known as bearer tokens, access tokens, or simply JSON web tokens (JWTs). You have two options when using OAuth tokens:
 
-* Use human identities: An end-user logs in via SSO, allowing the client application to consume the API on behalf of your end-user, using the OAuth access token which is received from the SSO process. 
+* Use human identities: An end-user logs in via SSO (allowing the client application to consume the API on behalf of your end-user) using the OAuth access token which is received from the SSO process. 
 
-* Use a machine identity: Machine identities are also known as service accounts or application accounts. In this case, access tokens are used by the client application to consume the API on behalf of itself. In this scenario, the end-user is not relevant.
+* Use a machine identity: Machine identities are also known as service accounts or application accounts. In this case, the client application uses access tokens to consume the API on behalf of itself. In this scenario, the end-user is irrelevant.
 
-The OIDC Provider supports the so-called Client Credential grant. This means that, a client application can obtain a client access token by authenticating at the OIDC Provider and present that access token to the API it consumes. The OIDC SSO module (version 3.1.0 and above) helps you to implement security in your API. It validates the token either through token introspection at the OIDC Provider or by verifying its signature. Moreover, it creates a user that represents the client that is consuming the API.
+The OIDC Provider supports the [Client Credential grant](https://oauth.net/2/grant-types/client-credentials/). This means that a client application can obtain a client access token by authenticating at the OIDC Provider and presenting that access token to the API it consumes. The OIDC SSO module (version 3.1.0 and above) helps you implement security in your API. It validates the token either through token inspection at the OIDC Provider or by verifying its signature. Moreover, it creates a user that represents the client that is consuming the API.
 
 #### Platform Extensions
 
@@ -168,14 +169,14 @@ To configure the app security, do the following:
 
 ### Configure App Modules
 
-Every end-user that is known in Admin module also needs to be known in the OIDC Provider service. Access has to be given to allow an OIDCProvider.AccountDetail record to be created for every Administration.Account record when the end-user signs in. This can be achieved by the following steps:
+Every end-user that is known in **Admin** module also needs to be known in the OIDC Provider service. Access has to be given to allow an OIDCProvider.AccountDetail record to be created for every Administration.Account record when the end-user signs in. This can be achieved by the following steps:
 
 1. Open the **Domain model** of the **Administration** module.
 1. Edit the **Account** entity.
     1. Switch to the **Access Rules** tab.
     1. **Edit** the **Administrator** module role.
     1. Give **Read** **Access rights** to the **AccountDetail_Account** association.
-1. Open the **Runtime** tab of the app **Settings**.
+1. Open the **Runtime** tab of the app's **Settings**.
 1. Add the **OpenIDConnectProvider.ASU_Start_All** microflow as an [After Startup](/refguide/app-settings/#after-startup) microflow.
 1. Finally, ensure that your app has the following Administration navigation items:
 
@@ -184,14 +185,14 @@ Every end-user that is known in Admin module also needs to be known in the OIDC 
     | Accounts | Open page 'OpenIDConnectProvider.AccountDetail_Overview' | Administrator |
     | Active Sessions | Open page 'Administration.ActiveSessions' | Administrator |
     | Scheduled Events | Open page 'Administration.ScheduledEvents' | Administrator |
-    | Runtime Instances | Open page 'Administration.RunteimInstances' | Administrator |
+    | Runtime Instances | Open page 'Administration.RuntimeInstances' | Administrator |
     | My Account | Call microflow 'Administration.ManageMyAccount' | User |
     | OpenID Connect | Open page 'OpenIDConnectProvider.OpenIDConnect_Dashboard' | Administrator |
     | Mx Objects | Open page 'MxModelReflection.MxObjects_Overview' | Administrator |
 
 ### Configure OIDC Provider
 
-The rest of the configuration can be performed through the app.
+Perform the rest of configuration through the app:
 
 1. Deploy and run the app.
 1. Login as an administrator.
@@ -203,12 +204,12 @@ The rest of the configuration can be performed through the app.
 1. Open the **Scopes** tab.
 1. For the authorization code grant, create **New** scopes, enter `openid` as the **Name**, and set the **Scope type** to **Standard**. You need to use your own value in the **Name** field for the client credential grant type.
 
-    This page sets up a single list of all the scopes that are known to the OIDC Provider service. For each client, you can then choose the scopes used by that specific client. See [Configuring Centralized Authorization](#configuring-authorization) for more information on what scopes you should set.
+    This page sets up a single list of all the scopes that are known to the OIDC Provider service. For each client, you can then choose the scopes used by that specific client. See [Configuring Centralized Authorization](#configuring-authorization) for more information on which scopes you should set.
 
 1. Open the **Clients** tab.
 1. Click **New Client Registration**.
 
-    You can register a new client (an app using the OIDC SSO module for sign in which identifies this app as its IdP) in one of two ways. Follow one of the sets of instructions below:
+    You can register a new client (an app using the OIDC SSO module for sign in which identifies this app as its IdP) in one of the two ways shown below in [Automatic Client Registration](#automatic-client-registration).
 
 #### Automatic Client Registration{#automatic-client-registration}
 
@@ -219,10 +220,10 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
 1. Select **Automatic Registration**.
 1. Take a copy of the **Bearer Registration Access token** and the **Registration URI**.
 1. In your API testing tool, set up the following:
-    * a **POST** command to the **Registration URI** with the endpoint `/oidc/register`, for example, for a locally-deployed app, `http://localhost:8080/oidc/register`
-    * an HTTP header with **Key** = "Authorization" and **Value** = **Bearer Registration Access token**
-    * an HTTP request body with the following format (for a Client `ClientID` which is running on host and port `localhost:8081`):
-1. For the `grant_types`: `authorization_code` and `refresh token`
+    * A **POST** command to the **Registration URI** with the endpoint `/oidc/register`, for example, for a locally-deployed app, `http://localhost:8080/oidc/register`
+    * An HTTP header with **Key** = "Authorization" and **Value** = **Bearer Registration Access token**
+    * An HTTP request body with the following format (for a Client `ClientID` which is running on host and port `localhost:8081`)
+1. For the `grant_types`: `authorization_code` and `refresh token` properties:
 
     ```json
     {
@@ -252,7 +253,7 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
     }
     ```
 
-1. For the `grant_types`: `client_credentials`
+1. For the `grant_types`: `client_credentials` properties:
 
     ```json
     {
@@ -280,43 +281,43 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
 
 #### Manual Client Registration
 
-If you cannot use automatic registration, you can register the client manually.
+If you cannot use automatic registration, you can register the client manually:
 
 1. Select **Manual Registration**. There are below two options **To support different types of grant-type**.
 
     * Allow Client-Credentials grant type
     * Allow Authorization-Code grant type
 
-2. Select any option and add the following information:
+1. Select any option and add the following information:
 
     * **Client Name** – a name for this client so that it is easy to identify
     * **Client ID** – a unique string which identifies this client
     * **Alias** – usually the same as *Client Name* but can be different
     * **Client Secret** – the client password to allow the client to authenticate to the OIDC Provider service
 
-    Additionally, you need to add below information if you select **Allow Authorization-Code grant type**
+1. Additionally, you need to add below information if you select **Allow Authorization-Code grant type**:
 
     * **Post Logout redirect URI** – the fully qualified logout url, `<appurl>/logout` — for example, for testing a local OIDC SSO app on port `8081`, `http://localhost:8081/logout`
     * **Redirect URI** – Redirects support both URIs with and without a port. For example, `http://localhost/oauth/v2/callback` and `http://localhost:8081/oauth/v2/callback` for testing a local OIDC SSO app on port `8081`.
     * **Back channel logout session support**
     * **Front channel Logout URI**
 
-3. Select the **Allow Token Refresh grant type** option to enable refresh token generation. This option is visible only when the **Allow Authorization-Code grant type** is selected. When you want your provider app to generate refresh tokens to your client Mendix app, ensure the following:
+1. Select the **Allow Token Refresh grant type** option to enable refresh token generation. This option is visible only when the **Allow Authorization-Code grant type** is selected. When you want your provider app to generate refresh tokens to your client Mendix app, ensure the following:
 
     1. Both **Allow Token Refresh grant type** and **Allow Authorization-Code grant type** options are selected.
-    2. The `offline_access` scope is selected.
+    1. The `offline_access` scope is selected.
 
 #### Configuring Centralized Authorization{#configuring-authorization}
 
 This section applies only when your client is using the authorization code grant. There are two alternatives for [centralized authorization](#centralized-auth). You can use scopes, or a custom user claim.
 
-Choose one of the two options, below.
+Choose one of the two options in the subsections below.
 
-Whichever option you choose, you will need to use [Custom User Provisioning](/appstore/modules/oidc/#custom-provisioning) in the OIDC SSO module of your client app to assign the correct user roles to the end-user.
+Whichever option you choose, you will need to use Custom User Provisioning in the OIDC SSO module of your client app to assign the correct user roles to the end-user. For more information, see the [Runtime Configuration of End-user Onboarding](/appstore/modules/oidc/#custom-provisioning-rt) section of *OIDC SSO*.
 
 ##### Configuration of the OIDC Provider for Centralized Authorization with Scopes{#configure-scopes}
 
- When you follow the recommended approach for [centralized authorization](#centralized-auth) using OAuth scopes, the OIDC Provider needs to know which user roles have been implemented in your Mendix apps, so the client can assign those user roles.
+ When you follow the recommended approach for [centralized authorization](#centralized-auth) using OAuth scopes, the OIDC Provider needs to know which user roles have been implemented in your Mendix apps so that the client can assign those user roles.
 
 The scope values (user roles) that you assign to the authenticated user in the OIDC Provider are sent to your app in both the ID-token and Access Token. Communicating authorization via Access Token is the standard approach when using OAuth. If your client app consumes APIs, it can forward the Access Token as a bearer token in the http authorization header in such API calls.
 
@@ -328,9 +329,10 @@ To return requested scopes to your client app, you need to perform the following
     1. Use the **Name** as the user role in your client app.
     1. From version 1.1.0 you can also use the UUID of the user role in your client app.
 
-        The benefit of this second approach is that it avoids ‘scope collision’. In other words, you avoid having confusion between user roles with the same name but in different apps.
+        The benefit of this second approach is that it avoids scope collision. This means you avoid multiple user roles with the same name located in different apps.
 
     If your client app consumes APIs and wants to get access using the Access Token from the OIDC Provider, you may want to configure additional scope values, as required by those APIs.
+
 {{% alert color="warning" %}}
 Do not create scopes with the same name as standard scopes (as defined in the [OIDC specs](https://openid.net/specs/openid-connect-core-1_0.html#ScopeClaims)), for example:
 
@@ -339,6 +341,7 @@ Do not create scopes with the same name as standard scopes (as defined in the [O
 * profile
 * phone
 {{% /alert %}}
+
 {{% alert color="info" %}}
 The scopes you configure are not added automatically to the "scopes_supported" attribute on the OIDC Provider’s well-known endpoint. You must manually configure the scope value in your client app to be able to request it.
 {{% /alert %}}
@@ -470,9 +473,9 @@ You need to configure the OIDC SSO module in your app which is using the IAM bro
 1. Login by entering credentials of the user which you have created earlier on OIDC provider Accounts section.
     You should be able to login successfully and get into the index.html page
 
-## Token Formats for Non-custom Claims
+## Token Formats for Non-Custom Claims
 
-### Non-custom Claims in Access Token
+### Non-Custom Claims in Access Token
 
 The format of non-custom claims in the access token is as follows:
 
@@ -491,14 +494,14 @@ The format of non-custom claims in the access token is as follows:
 }
 ```
 
-In the version 3.0.0 and above of the OIDC Provider module, a new `client_id` attribute has been added.
+In version 3.0.0 and above of the OIDC Provider module, a new `client_id` attribute has been added.
 
 In the following versions of the OIDC Provider module, a new `jti` attribute has been added:
 
 * Version 4.1.0 for Mendix version 10.12.10 and above
 * Version 3.3.0 for Mendix version 9.24.18 and above
 
-### Non-custom Claims in ID-token
+### Non-Custom Claims in ID-token
 
 The format of non-custom claims in the ID-token is as follows:
 
@@ -543,7 +546,7 @@ In versions of the OIDC Provider above 2.0.0, the sub value was changed from an 
 
 ## Deleting Expired Access Tokens
 
-The `CleanupOldCodes` deletes expired access tokens from the database. The scheduler interval is set to one hour, and you can adjust it in the **USE_ME** folder of the **OpenIDConnectProvider** module according to your requirements. For more information, see [Scheduled Events](/refguide/scheduled-events/).
+`CleanupOldCodes` deletes expired access tokens from the database. The scheduler interval is set to one hour, and you can adjust it in the **USE_ME** folder of the **OpenIDConnectProvider** module according to your requirements. For more information, see [Scheduled Events](/refguide/scheduled-events/).
 
 ## Troubleshooting
 
@@ -552,7 +555,7 @@ The `CleanupOldCodes` deletes expired access tokens from the database. The sched
 The OIDC Provider service sets a cookie as a means to persist the session in the user’s browser. If the cookie is not properly set, this may lead to problems. For example, when the OIDC Provider service is used to build an IAM Broker, no session is established and the broker may initiate a new session at the upstream IdP, which results in an ‘infinite loop’ of redirects via the user’s browser.
 To ensure the cookie is properly set, the runtime setting com.mendix.core.SameSiteCookies must have value None. See [Environment Details](/developerportal/deploy/environments-details/#samesite) for more information how to set the correct value for SameSite runtime setting. Note that the default value for this setting changed in [Mendix 8.11](/releasenotes/studio-pro/8.11/).
 
-## About Authorization{#about-authorization}
+## Authorization{#authorization}
 
 When you are building Mendix apps you need to make two architectural decisions in the area of end-user access:
 
@@ -569,7 +572,7 @@ These two options are described below.
 
 ### Fully Decentralized Authorization
 
-With fully decentralized authorization, you will typically want to propagate the identity of the end-user to your app and the app can subsequently make an authorization decision using some logic in your app. The authorization business logic in your app may need information about the authenticated end-user. In a business application this could be end-user attributes like ‘department’ and/or ‘job title’.
+With fully decentralized authorization, you will typically want to propagate the identity of the end-user to your app and the app can subsequently make an authorization decision using some logic in your app. The authorization business logic in your app may need information about the authenticated end-user. In a business application this could be end-user attributes like ‘department’ or ‘job title’.
 
 The OIDC Provider service allows you to pass user attributes in the ID-tokens that are sent from the OIDC Provider to your app. You can define ‘custom’ claims, so the user attributes that can be communicated are not restricted to a pre-defined set.
 
@@ -579,8 +582,8 @@ With centralized authorization your app delegates authorization decisions to a c
 
 The OIDC Provider service is one such central component and you can communicate the authorization decision made by the OIDC Provider service in 2 ways:
 
-* using the concept of OAuth scopes (recommended)
-* using a custom user claim
+* Using the concept of OAuth scopes (recommended)
+* Using a custom user claim
 
 Using OAuth scopes is the recommended approach since it is the standard OAuth solution. With Mendix, we advise you to think of an app’s user roles as being the same as OAuth scope values.  By adhering to this logic, you can develop apps with any user roles without having to decide and agree on custom attributes. You can customize the OIDC SSO module with microflows which parse the tokens from the OIDC Provider service and apply user roles to enforce the authorization indicated in the token.
 
@@ -592,15 +595,15 @@ The OIDC Provider service adds the `AccountDetail` entity into your Provider app
 
 There are two ways in OIDC Provider to get create accounts:
 
-#### When Using IAM Brokering
+#### Using IAM Brokering
 
-In this case, accounts which can be used by OIDC provider are synced from your IdP directly into the IAM broker application. In this case, an `AccountDetail` object is created for every account object when the end-user tries to login. This is automatically handled by code without any configuration.
+When Using IAM Brokering, accounts which can be used by OIDC provider are synced from your IdP directly into the IAM broker application. In this case, an `AccountDetail` object is created for every account object when the end-user tries to login. This is automatically handled by code without any configuration.
 
 This means that the access token will contain a "sub" claim which gets value from the `MendixUserID` attribute of the `AccountDetail` entity.
 
 #### Using the AccountDetail Page of the OIDC Provider service
 
-This is the case where the OIDC Provider service can be used separately as an IDP without building an IAM structure.
+This method allows OIDC Provider service to be used separately as an IDP without building an IAM structure.
 
 Where there is no IAM brokering functionality, the administrator can create end-users (Accounts) using the AccountDetail page in the OIDC Provider service. This page creates `AccountDetail` objects which automatically create `Account` objects in the app to represent the AccountDetails as accounts.
 

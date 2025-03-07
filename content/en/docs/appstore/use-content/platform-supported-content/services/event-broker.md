@@ -57,7 +57,7 @@ See [Enabling the Mendix Event Broker Service](#enable-mx-event-broker) for more
 
 Events are placed in channels, sometimes called topics. Apps subscribed to a channel will receive events published to this channel.
 
-Events published by Free Apps are published to one shared company channel on a multi-tenant free Event Broker. Events published by apps running on licensed nodes are published to their own channels on the company Event Broker. These channels, implemented as topics on Kafka, are automatically created upon deployment of the app publishing the events.
+Events published by Free Apps are published to one shared company channel on a multitenant free Event Broker. Events published by apps running on licensed nodes are published to their own channels on the company Event Broker. These channels, implemented as topics on Kafka, are automatically created upon deployment of the app publishing the events.
 
 #### Event Access Control {#access-control}
 

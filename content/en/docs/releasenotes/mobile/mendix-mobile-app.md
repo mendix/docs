@@ -112,7 +112,7 @@ description: "These are the release notes for the Mendix Mobile app."
 
 ### New Functionality
 
-We have added two new features to accelerate your app delivery projects:
+We added two new features to accelerate your app delivery projects:
 
 * Easily test your hybrid mobile Mendix apps on your phone by scanning the QR code shown in the Mendix Modeler from the convenience of the Mendix Mobile app.
 * Review the capabilities of Atlas UI and the Mendix Platform through the showcases accessible through the Mendix Mobile app. The above features are available without logging in. However, you still need to log in if you want to use **Buzz**.

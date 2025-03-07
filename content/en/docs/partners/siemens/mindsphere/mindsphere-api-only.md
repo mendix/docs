@@ -14,7 +14,7 @@ This information is for standalone Mendix application which are not fully integr
 If you have your own user management or SSO solution, but want to gather insights via the Insights Hub APIs, this page explains how you can achieve it. It describes how you can authenticate Insights Hub API REST calls with the help of a **Technical User** and the **Siemens Insights Hub API Authenticator**.
 Please note that this way is not a full integration with Insights Hub and has the following limitations:
 
-* You cannot make your app multi-tenant – see [Multi-tenancy](/partners/siemens/mindsphere-development-considerations/#multitenancy) in *Insights Hub Development Considerations* for more information on multi-tenancy
+* You cannot make your app multitenant – see [Multi-tenancy](/partners/siemens/mindsphere-development-considerations/#multitenancy) in *Insights Hub Development Considerations* for more information on multitenancy
 * Your app cannot be deployed to the Insights Hub platform and cannot be added to the Insights Hub Developer Cockpit
 * End-users cannot use Insights Hub credentials to sign in to your app, so Insights Hub does not know anything about individual app end-users — you must design your app to handle any required security for each end-user
 * You cannot use the fine grain access control on asset level via SDS.

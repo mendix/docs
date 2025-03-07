@@ -20,7 +20,7 @@ To configure the CI/CD pipeline, prepare the following:
 
 ## Configuring the CI/CD Pipeline
 
-If you have an Azure organization, you can set Azure as your CI System in **Switch to Admin Mode** > **Settings** > **Build settings** > **Build Utility**. You need to first obtain a [Personal Access Token](#pat), and then configure the followings settings:
+If you have an Azure organization, you can set Azure as your CI System in **Switch to Admin Mode** > **Settings** > **Build Settings** > **Build Method** > **Build Utility**. You need to first obtain a [Personal Access Token](#pat), and then configure the followings settings:
 
 * [Azure blob settings](#blob)
 * [S3 bucket settings](#bucket)
@@ -54,7 +54,7 @@ The settings in this section configure the S3 bucket.
 
 Before creating any environments, you must register your Kubernetes clusters by doing the following steps:
 
-1. Click **Register New Cluster**.
+1. In **Switch to Admin Mode** > **Manage** > **Cluster Manager**, click **Register New Cluster**.
 2. Configure the following values:
     
     * **Cluster Name** - Specify a name for the cluster.
@@ -216,7 +216,7 @@ Before creating any environments, you must register your Kubernetes clusters by 
     ```
 
 4. Click **Save**.
-5. Click the newly created cluster and expand it, and then click **Retrieve Namespace(s)** to retrieve all the namespace and storage plans. 
+5. Click the newly created cluster and expand it, and then click **Retrieve Namespace(s)** to retrieve all the namespace and storage plans, or **Manually Register Namespace**. 
     
     Namespaces without any storage plan are skipped. This step requires the Mendix Operator to be installed and configured. You can repeat this step as required to retrieve additional namespaces.
 

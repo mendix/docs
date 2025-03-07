@@ -102,7 +102,7 @@ The second optional parameter determines the precision of the rounding. The defa
 
 ### Example
 
-If you use the following input:
+Here is an example of commercial rounding. If you use the following input:
 
 ```java
 round(3.5)
@@ -114,7 +114,7 @@ The output is of type Integer/Long:
 4
 ```
 
-Another example of an input is:
+Here is an example of banker's rounding with a specified precision value. If you use the following input:
 
 ```java
 round(88.725,2)

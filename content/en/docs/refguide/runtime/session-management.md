@@ -21,6 +21,12 @@ Online apps in Mendix versions below 10.9.0 have a different approach, using the
 
 ## Authentication Token
 
+Authentication tokens allow users to stay logged in for long periods of time. They store the credentials of the user on the user's device and use that to automatically create a new session when the previous session is expired. They are enabled by default for offline-first applications.
+
+{{% alert color="warning" %}}
+Authentication tokens cannot be used with a login processing relying on `login.html`. To make use of authentication tokens, [create a modeled sign-in page](/refguide/mobile/using-mobile-capabilities/auth-users/#model-the-sign-in-page) that uses the Sign in Nanoflow action or the `login2` client API.
+{{% /alert %}}
+
 ### Authentication Token Generation
 
 When the runtime receives the `get_session_data` request, it checks the existence of the `useAuthToken` cookies. If present, it adds an additional HttpOnly cookie holding the generated unique authentication token `authtoken`. This token is then used in the subsequent actions to authenticate the user and extend the session when it expires.

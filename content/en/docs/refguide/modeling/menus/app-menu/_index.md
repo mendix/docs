@@ -23,13 +23,13 @@ The **Batch Update Button Icons** option allows you to update many button icons 
 
 The **Batch Update Layouts** option allows you to update the layouts of many pages in a single batch process.
 
-### Update Widgets {#update-widgets}
-
-The **Update Widgets** option presents the current versions of the widgets you are using in your app, what the latest versions of the widgets are, and an update option.
-
 ### Check Widgets
 
 The **Check Widgets** option checks that the widgets you have implemented in the app have been built correctly.
+
+### Update Widgets {#update-widgets}
+
+The **Update Widgets** option presents the current versions of the widgets you are using in your app, what the latest versions of the widgets are, and an update option
 
 ### Convert Classes to Design Properties
 
@@ -86,6 +86,21 @@ The [Mendix Studios Target](/developerportal/deploy/studio-deployment-settings/#
 {{% /alert %}}
 
 For more information on using this option, see [Deploy to the Cloud](/refguide/deploy-to-the-cloud-dialog/).
+
+## Build Native Mobile App
+
+If you have an app with a [native profile](/refguide/navigation/#native-phone), this option launches the [Mendix Native Mobile Builder](/releasenotes/mobile/mendix-native-mobile-builder/). This wizard will guide you through the required steps for configuring and publishing your app. 
+
+For the first step in your native mobile journey, see [Build a Mendix Native App Locally
+](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/).
+
+## Synchronize Dependencies 
+
+Dependency synchronization is automatically triggered to run in the background whenever changes are made to a specific dependency. It also occurs when you open your app in Studio Pro.
+
+You can trigger manual synchronization by opening the **App** menu and selecting **Synchronize Dependencies**. 
+
+For more information, see the [Dependency Sychronization](/refguide/managed-dependencies/#dependency-synchronization) section of *Managed Dependencies*.
 
 ## Show Security Overview (Beta)
 

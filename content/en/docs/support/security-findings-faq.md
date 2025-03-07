@@ -227,7 +227,9 @@ The Mendix Client is bundled with the full dojo library. However, not all functi
 
 #### Prototype Pollution Vulnerability - CVE-2021-23450
 
-Mendix 9.11.0 and above uses Dojo 1.16.4. The `setObject` function is used in one place in our code, but this is in a deprecated function. This function is no longer used internally. Therefore, there is no opportunity for the `setObject` function to be exploited.
+Mendix versions 9.11.0 to 9.24.0 use Dojo 1.16.4. The `setObject` function is used in one place in our code, but this is in a deprecated function. This function is no longer used internally. Therefore, there is no opportunity for the `setObject` function to be exploited.
+
+Mendix 9.24.0 and above uses Dojo 1.17.3, which does not have this vulnerability. Upgrading will prevent the vulnerability being reported by your security tool.
 
 ### BREACH Attacks
 

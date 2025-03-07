@@ -78,7 +78,7 @@ The following log nodes are used by Mendix when writing log messages:
 
 | Log Node | Description |
 | --- | --- |
-| Client_AppCenter| Logs messages related to the state and phases of over-the-air updates by AppCenter. |
+| Client_AppCenter| Logs messages related to the state and phases of over-the-air updates by App Center. |
 | Client_Auth | Logs messages related to the different authentication states and user actions.|
 | Client | The default log node when no log node is provided. |
 | Client_Database | Logs messages related to different read/write operations on the local database. |

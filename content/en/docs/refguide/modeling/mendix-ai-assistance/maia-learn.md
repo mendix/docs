@@ -8,6 +8,14 @@ description: "Describes the features in Maia Learn."
 
 ## Introduction 
 
+{{% alert color="info" %}}
+Maia Learn is available in Studio Pro 10.18 and above.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+To use Maia Learn, internet connection and signing in to Studio Pro are required.
+{{% /alert %}}
+
 Maia Learn helps you to quickly learn Mendix core concepts and get started with Studio Pro. It is a tab within the **Maia** pane where you can navigate to different learning materials while providing you a holistic learning experience.
 
 ## Using Maia Learn

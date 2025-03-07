@@ -36,7 +36,7 @@ If deploying to Red Hat OpenShift, you need to specify that specifically when cr
 
 Mendix for Private Cloud Operator `v2.*.*` is the latest version which officially supports:
 
-* Kubernetes versions 1.19 through 1.31
+* Kubernetes versions 1.19 through 1.32
 * OpenShift 4.6 through 4.17
 
 {{% alert color="warning" %}}
@@ -65,7 +65,7 @@ To install the Mendix Operator, the cluster administrator will need permissions 
 * Create roles in the target namespace or project
 * Create role bindings in the target namespace or project
 
-The cluster should have at least 2 CPU cores and 2 GB memory *available*. This is enough to run one simple app - but does not include additional resources required by Kubernetes core components.
+The cluster should have at least 2 CPU cores, 2 GB memory and 3 GB ephemeral-storage available on a Kubernetes node. This is enough to run one simple app, but does not include additional resources required by Kubernetes core components.
 
 In OpenShift, the cluster administrator must have a `system:admin` role.
 

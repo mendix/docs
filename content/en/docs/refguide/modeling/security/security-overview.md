@@ -2,15 +2,20 @@
 title: "Security Overview"
 url: /refguide/security-overview/
 weight: 20
+beta: true
 ---
 
 {{% alert color="info" %}}
-This feature is currently in beta. For more information, see [Beta and Experimental Releases](/releasenotes/beta-features/).
+This feature was introduced in Mendix 10.18 and is currently in beta. For more information, see [Beta and Experimental Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 ## Introduction
 
-The **Security Overview** page provides you with an overview of your app's security. This overview can be used to review the security of your app. 
+The **Security Overview** page provides you with an overview of your app's security. 
+
+{{< figure src="/attachments/refguide/modeling/security/security-overview/entity-security-overview.png" class="no-border" >}}
+
+This overview can be used to review the security of your app. You can also export information from the page to an Excel file, for more details, see the [Export To Excel](#export-excel) section below.
 
 ## Viewing the Security Overview
 
@@ -27,15 +32,9 @@ The **Security Overview** summarizes the app's security for a selected user role
 The **Security Overview** page has the following tabs:
 
 * [Entity access](#entity-access)
-* **Page access**
-* **Microflow access**
-* **Nanoflow access**
-
-{{% alert color="info" %}}
-In the beta release of the **Security Overview** page, only the **Entity access** tab is available. The other tabs will be available in future versions of Studio Pro.
-{{% /alert %}}
-
-{{< figure src="/attachments/refguide/modeling/security/app-security/user-roles/security-overview.png" class="no-border" >}}
+* [Page access](#page-access)
+* [Microflow access](#microflow-access)
+* [Nanoflow access](#nanoflow-access)
 
 ### Entity Access {#entity-access}
 
@@ -46,7 +45,47 @@ Multiple columns are shown for entities with XPath constraints. Access rules wit
 
 When the selected user role has no access to an attribute or an association, it is not shown in the table. If the selected user role has no access to an entity at all, the entity is not shown in the **Security Overview**.
 
+### Page Access {#page-access}
+
+The **Page Access** tab lists the names of pages within the selected module that are visible to the selected user role.
+
+### Microflow Access {#microflow-access}
+
+The **Microflow Access** tab lists the names of microflows within the selected module that can be executed by the selected user role.
+
+### Nanoflow Access {#nanoflow-access}
+
+The **Nanoflow Access** tab lists the names of nanoflows within the selected module that can be executed by the selected user role.
+
+## Export To Excel {#export-excel}
+
+To export the **Security Overview**, click the **Export to Excel** button. This generates an Excel file in the selected directory, which contains the following three sheets:
+
+1. Entity Access -- This sheet contains the entity access rules data, including the following:
+
+    1. User Role.
+    2. Module: The module containing the entity.
+    3. Entity: The name of the entity.
+    4. Member: The attribute or association name.
+    5. Kind: Specifies whether the member is an association or an attribute.
+    6. Type: The type of the member.
+    7. XPath: The XPath constraint.
+    8. XPath Caption:  The XPath constraint caption, when set.
+    9. Access: The access level (None, Read or ReadWrite).
+
+2. Document Access -- This sheet includes the accessible pages, microflows and nanoflows, including the following:
+
+    1. Document type -- The type of the accessible document (page, microflow, nanoflow).
+    2. User Role.
+    3. Module: The module containing the the page, nanoflow, or microflow.
+    4. Document: The name of the page, nanoflow, or microflow.
+
+4. Module Roles -- this sheet provides the mappings between user roles and module roles, including the following:
+    1. User Role.
+    2. Module.
+    3. Module Role.
+
 ## Read More
 
 * [User Roles](/refguide/user-roles/)
-* [Access Rules](/refguide/access-rules/).
+* [Access Rules](/refguide/access-rules/)

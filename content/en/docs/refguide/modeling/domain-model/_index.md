@@ -1,6 +1,6 @@
 ---
-title: "Domain Model"
-linktitle: "Domain Model (Data)"
+title: "Data in the Domain Model"
+linktitle: "Data (Domain Model)"
 url: /refguide/domain-model/
 weight: 30
 description: "Introduces the domain model in Studio Pro."
@@ -13,11 +13,16 @@ The **domain model** describes the information (or data) used by your app in a v
 
 The domain model is central to the architecture of your application. Each [module](/refguide/modules/) has its own domain model which describes the data used in that module. All modules in an app can use data from all the domain models within the app.
 
-A domain model consists of [entities](/refguide/entities/) with their relationships to other entities represented by [associations](/refguide/associations/). Entities can be one of three types:
+A domain model consists of [entities](/refguide/entities/) with their relationships to other entities represented by [associations](/refguide/associations/). Entities can be one of four types:
 
 * Persistable (blue) – entities which hold app information which needs to be held permanently or shared with other end-users of the app (see [Implementation of Persistable Entities](#implementation), below, for information on how these are implemented)
 * Non-persistable (orange) – entities which hold app information which is needed while the end-user is using the app but can then be thrown away
 * External (purple) – entities, described in the [Mendix Catalog](/catalog/), which contain data which belongs to another app or service and is needed while the end-user is using the app but isn't stored in the database of the app
+* View (green) – entities which are the result of a stored OQL query on persistable entities or other view entities (this feature is in beta)
+
+{{% alert color="info" %}}
+[View entities](/refguide/view-entities/) were introduced in [Studio Pro 10.19](/releasenotes/studio-pro/10.19/) as a beta feature. To enable this feature in your app, set the OQL version to version 2 by clicking **App** > **Settings** > **Runtime**.
+{{% /alert %}}
 
 You can also add [annotations](/refguide/annotations/) to your domain model to remind yourself, and other team members, how it is to be used.
 

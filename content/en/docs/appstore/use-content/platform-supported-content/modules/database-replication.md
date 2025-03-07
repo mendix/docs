@@ -158,9 +158,13 @@ This determines whether values in this column should be interpreted as case sens
 
 ### Custom Query
 
-If you selected **Custom** as the query type, you can enter a custom select value for the field. This enables constructing a complex value for the mapped field. For example, you can concatenate multiple database columns together. The **Join tokens** table (below the query field) shows the tokens representing the tables you joined using the **Include additional tables** tab. You can insert these into your query and they will be replaced by the proper table names. Keep in mind that this query must be provided in the dialect from the database from which you are retrieving the data.
+If you selected **Custom** as the query type, you can enter a custom select value for the field. This enables constructing a complex value for the mapped field. For example, you can concatenate multiple database columns together. The **Join tokens** table (below the query field) shows the tokens representing the tables you joined using the **Include additional tables** tab. You can insert these into your query and they will be replaced by the proper table names.
 
-For example, to map a first name and last name column to a full name object attribute, use a query like this: `“[%startobject%].firstname + ‘ ‘ + [%startobject%].lastname”`.
+{{% alert color="info" %}}
+Custom queries must be provided in the dialect of the database from which you are retrieving the data.
+{{% /alert %}}
+
+For example, to map a first name and last name column to a full name object attribute, use a query like this: `[%startobject%].firstname || ' ' || [%startobject%].lastname`.
 
 ## Tab Page References
 

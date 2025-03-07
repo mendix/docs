@@ -331,6 +331,25 @@ You can define the [home pages](/refguide/show-home-page/) per device and role i
 
 ## General Guidelines and Best Practices
 
+### Application
+
+#### Project Size
+
+Mendix apps are best built in a way that they are easily scalable through a microservice architecture.
+
+To ensure maintainability and performance, it is recommended to keep your app within: 
+
+* 3,000 microflows and 750 entities if using a high end machine
+* 2,000 microflows and 500 entities on a lower specced machine
+
+Staying within these limits helps maintain optimal performance in Studio Pro, while ensuring your app remains manageable and scalable over time. If your app exceeds these limits, consider breaking your app into smaller services to improve maintainability and performance.
+
+Applications exceeding these guidelines may still function, depending on your system. However, Mendix cannot provide support for performance issues in oversized projects.
+
+{{% alert color="info" %}}
+Project size impacts IDE performance. Choose a development strategy that aligns with your system's capabilities and Mendix's recommended guidelines.
+{{% /alert %}}
+
 ### Domain Models
 
 #### Attributes {#attributes}

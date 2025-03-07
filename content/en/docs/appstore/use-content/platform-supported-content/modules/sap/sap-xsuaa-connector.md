@@ -61,7 +61,7 @@ You need to provide your own [xs-security.json](https://help.sap.com/viewer/4505
 
 You then have two options:
 
-### Use the XSUAA Configurator {#configurator}
+### Using the XSUAA Configurator {#configurator}
 
 The **XSUAA Configurator** provides a user friendly interface to create the JSON required to configure the XSUAA service. It can be uploaded automatically for you, or you can download the file and upload it manually.
 
@@ -81,7 +81,7 @@ You cannot change the **xsappname** in the configurator – this is generated au
 
     Alternatively, click **Download Configuration File** to save the file locally so that you can review it, or reuse it. You can upload it manually to the XSUAA service using the instructions in the next section.
 
-### Upload Configuration JSON
+### Uploading a Configuration JSON
 
 You can upload your own JSON configuration file, either created from the XSUAA Configurator or handcrafted.
 
@@ -89,6 +89,10 @@ You can upload your own JSON configuration file, either created from the XSUAA C
 2. Choose the file containing the XSUAA configuration you want to use.
 
 The configuration will be applied when your app is restarted.
+
+### Configuring the Default Redirect URL
+
+When using the SAP XSUAA Connector for SAP SSO login, you can now set a default redirect URL by adding **ApplicationRootUrl** in the **Runtime** settings of the environment from the portal. Ensure that the URL is included in the **Redirect URIs** of the XSUAA configuration.
 
 ## Usage
 
@@ -102,7 +106,7 @@ For more information about implementing this capability in your app, see the fol
 SAP Authentication will not work if the App Security is off. See the prerequisites above.
 {{% /alert %}}
 
-### Adding the OnStartup Microflow to the Application Settings
+### Adding the On Startup Microflow to the Application Settings
 
 The app needs to be bound to the SAP XSUAA service. This is achieved by executing a microflow when the app starts. This may have been set up already if XSUAA was included in your app template.
 
@@ -254,7 +258,7 @@ Your Subaccount will have one or more **Trust Configurations**. These are the Id
 
 Depending on the IdP, you can either map **Users** (G) directly to a Role Collection, or map a **User Group** (F) to a Role Collection. Users are mapped by the IdPs own configuration to the User Group.
 
-##### Map User Directly to a Role Collection
+##### Mapping a User Directly to a Role Collection
 
 This is the method used by the **SAP ID Service**, amongst others.
 
@@ -271,7 +275,7 @@ You can picture the authentication as shown below:
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/sap-xsuaa-connector/xsuaa-diagram-config-direct.png" class="no-border" >}}
 
-##### Map User Group to a Role Collection
+##### Mapping a User Group to a Role Collection
 
 Some IdPs (for example SAML 2.0 IdPs) have the concept of a User Group. In this case there will be two options in the Trust Configuration for the IdP: **Role Collection Mappings** and **Role Collection Assignment**.
 

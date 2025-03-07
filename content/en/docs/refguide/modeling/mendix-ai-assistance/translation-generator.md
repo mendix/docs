@@ -8,12 +8,16 @@ description: "Describes the features in Translation Generator."
 ## Introduction 
 
 {{% alert color="info" %}}
-Translation Generator is currently an experimental feature introduced in Studio Pro 10.12.0. For more information on experimental features, see [Beta and Experimental Releases](/releasenotes/beta-features/).
+Translation Generator, an AI translation tool, is currently an experimental feature introduced in Studio Pro 10.12.0. For more information on experimental features, see [Beta and Experimental Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
-Translation Generator is an AI-powered translation tool available in Mendix Studio Pro. You can use it for [batch translate](/refguide/batch-translate/). In Studio Pro 10.14.0 and above, you can also use it to translate [system texts](/refguide/system-texts/).
+{{% alert color="info" %}}
+To use Translation Generator, internet connection and signing in to Studio Pro are required.
+{{% /alert %}}
 
-For more information on how to enable and use it in Studio Pro, see the sections below.
+Maia Translation Generator is a translation tool powered by AI in Mendix Studio Pro. You can use this AI tool in Studio Pro to [batch translate](/refguide/batch-translate/) your Mendix app into a different language. In Studio Pro 10.14.0 and above, you can also use it to translate [system texts](/refguide/system-texts/).
+
+For more information on how to enable and use this AI translation tool in Studio Pro, see the sections below.
 
 ## Modeling Using Translation Generator
 
@@ -27,7 +31,7 @@ Once enabled, you will find the **Generate Translations...** option in **Languag
 
 {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/translation-generator/batch-translate.png" max-width=80% >}}
 
-It helps you to translate your model to different languages. It gives translations for the languages that you have selected, using parameters in the way that works specifically for the selected languages.
+Translation Generator helps you to translate your model to different languages. It gives translations for the languages that you have selected, using parameters in the way that works specifically for the selected languages.
 
 {{% alert color="info" %}}
 Translation Generator only translates the texts that do not have a translation yet, so only when their corresponding **Translation** field is empty.

@@ -764,15 +764,15 @@ You can specify which request handlers, microflows, and activities are reported 
 | Value | What Is Sent | Note |
 | --- | --- | --- |
 | `"name": "*"` | All | Default |
-| `"name": "<requesthandler>"` | All request handler calls of this type | click **Request Handlers<sup><small>1</small></sup>** below to see the list of options |
+| `"name": "<requesthandler>"` | All request handler calls of this type | click **Request Handlers¹** below to see the list of options |
 | `"name": "<microflow>"` | Each time this microflow is run | The format is `<module>.<microflow>`<br />For example, `TrainingManagement.ACT_CancelScheduledCourse` |
-| `"name": "<activity>"` | All activities of this type | click **Activities<sup><small>2</small></sup>** below to see the list of options |
+| `"name": "<activity>"` | All activities of this type | click **Activities²** below to see the list of options |
 
 {{% alert color="warning" %}}
 Microflow names are case-sensitive. If the case is not exactly matched, metrics will not be properly submitted.
 {{% /alert %}}
 
-**<details><summary><sup><small>[1 ]</small></sup> Request Handlers (click to see list)</summary>**
+**<details><summary>¹ Request Handlers (click to see list)</summary>**
 
 The following Mendix *request handler* calls will be passed to Prometheus:
 
@@ -789,7 +789,7 @@ The following Mendix *request handler* calls will be passed to Prometheus:
 You can find help in analyzing some of these values in [Metrics](/developerportal/operate/metrics/).
 </details>
 
-**<details><summary><sup><small>[2]</small></sup> Activities (click to see list)</summary>**
+**<details><summary>² Activities (click to see list)</summary>**
 
 The following Mendix *activities* can be passed to Prometheus:
 

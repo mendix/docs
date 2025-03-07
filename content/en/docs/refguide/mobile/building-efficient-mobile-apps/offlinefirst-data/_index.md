@@ -21,6 +21,14 @@ It is essential to understand that offline-first is an architectural concept and
 
 Mendix supports building offline-first applications for [native mobile](/refguide/native-mobile/) and [progressive web apps](/refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/). Both native and progressive web apps (PWAs) share the same core, giving them the same offline-first capabilities. Native mobile apps are always offline-first, but for progressive web apps this is optional. You can configure your PWA to be offline-first by adding an offline-first PWA navigation profile to your app. For more information, see [Progressive Web Apps](/refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/).
 
+{{% alert color="info" %}}
+**Online Synchronization Mode (Introduced in Mendix 10.19)**
+
+Mendix 10.19 introduces a new way to sync an app's data: online synchronization mode. This mode allows app developers to use entity data on pages without synchronizing the data of those entities to the offline database. Using this mode requires an available connection to the server. 
+
+For more details, see [Online Synchronization Mode](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/online-sync-mode/).
+{{% /alert %}}
+
 ## Synchronization
 
 Synchronization is the process of copying data and files from the app's server to the device and updating the server with the changes made on the local device. The local database is populated when the app starts for the first time. After this initial synchronization, data will remain available in the app so that it can work without an internet connection. You can model when and how to perform the subsequent synchronizations. In some cases, the Mendix Client may perform a synchronization automatically. Designing an efficient synchronization strategy is crucial for a high-performance app and a smooth UX. For more information, see the [Synchronization Guide](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/).

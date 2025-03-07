@@ -68,7 +68,7 @@ The following disadvantages apply:
 
 * DNS is not available
 * With failover data centers, VPN becomes extremely difficult to manage
-* Connections are added to (virtual) machines, this makes deployment to multi-tenant public-cloud environments based on containerization a challenge
+* Connections are added to (virtual) machines, this makes deployment to multitenant public-cloud environments based on containerization a challenge
 * VPN gateways potentially add two more single points of failure
 
 {{< figure src="/attachments/deployment/general/securing-outgoing-connections-from-your-application/19399048.png" class="no-border" >}}

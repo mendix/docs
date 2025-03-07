@@ -81,11 +81,13 @@ This guide provides the step-by-step process of integrating the Mobile Single Si
     | Anonymous | MobileSSO.Anonymous |
     | User| MobileSSO.User |
 
+    {{% alert color="info" %}} Make sure to assign *Anonymous* user role to the OIDC SSO module. For more information, see the [Configuring Roles](/appstore/modules/oidc/#configuring-roles) section of *OIDC SSO*.{{% /alert %}}
+
 ## Configuration
 
 This section shows you how to configure your app to use Mobile SSO.
 
-### Configuration Settings 
+### Configuration Settings
 
 Refer to the [OIDC SSO](/appstore/modules/oidc/) documentation for the configuration settings of the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module and ensure the **OIDC_Client_Overview** page is appropriately set up.
 
@@ -148,7 +150,7 @@ When you are building the native mobile app using **Build Native Mobile App** op
 
 The following subsections show how to configure your *Entra ID or Okta IdP*:
 
-#### Configuring IdP for Entra ID
+#### Configuring IdP for Entra ID {#idp-for-intra}
 
 1. On the [Microsoft Entra ID](https://portal.azure.com/#home) portal, select **App Registrations**.
 2. Click **New registration**, provide required information, and click **Register**.
@@ -253,7 +255,7 @@ The following subsections show how to configure your *Entra ID or Okta IdP*:
 1. Add the required scopes such as, `openid`, `profile`, and `email`.
 1. Save the configuration and you can login into the application using Okta SSO.
 
-## Testing and Troubleshooting
+## Testing
 
 ### IdP Integration
 
@@ -266,3 +268,13 @@ Click **IdP login** to redirect to the IdP sign in page. After successful authen
 ### Sign-in Failure Error
 
 When tryin to sign in multiple times, you may receive a sign-in failure error message. To resolve this error, check your network connection and try signing in again.
+
+## Troubleshooting
+
+### Sign-in Failure Error
+
+When tryin to sign in multiple times, you may receive a sign-in failure error message. To resolve this error, check your network connection and try signing in again.
+
+### 401 Error
+
+If you encounter a 401 error, follow the process described in the [Configuring IdP for Entra ID](#idp-for-intra) section above for applications deployed using the **Build Native Mobile App**.

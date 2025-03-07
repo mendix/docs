@@ -102,7 +102,7 @@ Enabling this option allows you to specify which repositories should be used by 
 
 This option becomes available if **Use custom repositiories** is set to **Yes**. 
 
-You can specify which repositories to use for Gradle. The content of this field should be specified using Groovy syntax and is what is inside the `repositories { }` section in a Gradle build file. By default, this field contains: `mavenCentral()`. 
+You can specify which repositories to use for Gradle. The content of this field should be specified using Groovy syntax and is what is inside the `repositories { }` section in a Gradle build file. By default, this field contains: `mavenCentral()` and `gradlePluginPortal()`. 
 
 ## Maia Tab
 
@@ -149,11 +149,15 @@ This is the pattern from which the arguments are derived that are passed to the 
 * `{0}` – this is replaced with the name of the original file before the arguments are passed to the file comparison program
 * `{1}` – this is replaced with the name of the changed file before the arguments are passed to the file comparison program
 
-### Solution Warning
+#### Solution Warning
 
 Select **Show warning on updating marketplace modules** to display a warning message when updating a Marketplace module. 
 
 ### Git{#git}
+
+#### Git Location {#git-location}
+
+This setting allows users to specify a path for Git installation in their system. By default, Studio Pro automatically detects installed Git, ensuring a smooth setup for most users. However, there may be cases where manually configuring the path is beneficial, such as when multiple versions of Git are installed or when the default detection does not align with specific project requirements.
 
 #### Enable Private Version Control with Git {#enable-with-Git}
 
@@ -166,6 +170,14 @@ Specify your name for Git to use it in commit messages and make them more inform
 #### Email {#email}
 
 Specify your email for Git to use it in commit messages and make them more informative.
+
+#### Enable Current Windows User Authentication {#enable-windows-authentication}
+
+{{% alert color="info" %}}
+This setting is available in Studio Pro MTS versions 10.6.21 and above, 10.12.14 and above, 10.18.3 and above.
+{{% /alert %}}
+
+When this option is selected, the application automatically uses credentials of the currently logged-in Windows user to authenticate and connect to the on-premises Git server. This feature streamlines the authentication process by eliminating the need for users to manually enter their credentials, enhancing both security and user convenience. By leveraging Windows authentication, organizations can ensure that access to the Git server is seamlessly integrated with their existing IT infrastructure, providing a smooth and efficient workflow for development teams.
 
 #### Clone {#clone}
 
@@ -294,6 +306,10 @@ This setting allows you to set the beta version as the default editor.
 ### Navigation
 
 This setting allows you to move forward and backward through your editing history to show the documents you have recently worked on. You must restart Studio Pro to use this feature.
+
+### Online Synchronization Mode
+
+This setting, introduced in 10.19 and currently in beta, allows entities to be used in offline navigation profiles without requiring data synchronization. This enables app developers to use entity data on pages without synchronizing the data of those entities to the offline database. This mode requires an available connection to the server. For more details, see [Online Synchronization Mode](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/online-sync-mode/).
 
 ### System Texts Editor
 

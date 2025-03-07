@@ -68,7 +68,7 @@ invoice.location = { x: 400, y: 100 };
 
 *Studio Pro Guide*
 
-* [Domain Model](/refguide/domain-model/)
+* [Data in the Domain Model](/refguide/domain-model/)
 * [Entities](/refguide/entities/)
 
 Metamodel reference guide

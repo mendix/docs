@@ -44,8 +44,8 @@ Other main properties of the widget are as follows:
     * Default: **Click**
 * **Menu position** – determines the location of a visible menu relative to the trigger area
     * Default: **Bottom**
-* **Custom visualization** – determines whether menu items can be composed of text or widgets
-    * Default: **No**
-    * Note that the on click action should still be configured on the menu items and not internal widgets
+* **Clipping strategy** – determines the relative positioning of floating elements on the page. 
+    * **Absolute** - positions the floating element relative to its nearest positioned ancestor.
+    * **Fixed** - positions the floating element relative to the viewport. It breaks the element out of any clipping ancestor.
 
-If you want to use dynamic content, make sure to wrap the widget in a [data view](/refguide/data-view/) and set **Custom visualization** to **Yes**.
+If you want to use dynamic content, make sure to wrap the widget in a [data view](/refguide/data-view/) and set **Enable advanced options** to **Yes**.

@@ -41,5 +41,5 @@ The **Resources** category contain various document types that can be used in di
 ## Read More
 
 * [Microflows](/refguide/microflows/)
-* [Domain Model](/refguide/domain-model/)
+* [Domain Model]
 * [Pages](/refguide/pages/)

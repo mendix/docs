@@ -12,11 +12,18 @@ This document describes how an existing installation of Mendix for Private Cloud
 This procedure allows you to upgrade to any supported (v1.9.0 and later) version of the Mendix for Private Cloud Operator.
 
 {{% alert color="warning" %}}
+There are special considerations that you must be aware of in the following cases:
+
+* when using the `mxpc-cli` installation and configuration tool version 2.20.1 or earlier.
+* when manually installing or upgrading CRDs with `kubectl apply`.
+
 Upgrading the Mendix for Private Cloud Operator in a namespace will modify global resources such as Mendix Custom Resource Definitions in the cluster.
 
 [Custom Resource Definitions](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) allow Mendix applications to be managed with Kubernetes APIs and tools such as `kubectl` and `oc`.
 
 Once you have installed a particular version of the Mendix Operator into any namespace in the cluster, you should not install older versions of the Mendix Operator into the same cluster, even if they are in other namespaces. This is because all the CRDs are global resources and operators in all namespaces use the same one, which may not be compatible across versions.
+
+Starting from `mxpc-cli` version 2.21.0, the installation or upgrade process checks to see if the CRDs in the cluster are newer than the CRDs bundled with `mxpc-cli`. If the cluster has newer CRDs, `mxpc-cli` will skip the CRD installation step and avoid downgrading CRDs.
 {{% /alert %}}
 
 If you are using your own private registry, follow the [Migrating to Your Own Registry](/developerportal/deploy/private-cloud-migrating/) guide first

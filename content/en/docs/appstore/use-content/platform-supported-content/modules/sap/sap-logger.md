@@ -28,7 +28,7 @@ To use the [SAP Logging](https://marketplace.mendix.com/link/component/110219/) 
 
 ## Using the Connector
 
-To format all the log messages, the SAP Logging Connector needs to be initialized during the startup of the Mendix application<sup><small>[1]</small></sup>.
+To format all the log messages, the SAP Logging Connector needs to be initialized during the startup of the Mendix application.
 
 To initialize the connector, do the following:
 
@@ -38,8 +38,7 @@ To initialize the connector, do the following:
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/sap-logger/logger_project_runtime_show_startup.png" alt="Runtime show After startup microflow" class="no-border" >}}
 
-    {{% alert color="info" %}}If there's no existing microflow (as indicated by the text `(none)`, instead of a microflow name), click **Select…** and create a new microflow by clicking **New**:<br/>   
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/sap-logger/logger_project_runtime_nostartup.png" alt="Runtime no After Startup" class="no-border" >}}
+    {{% alert color="info" %}}If there's no existing microflow (as indicated by the text `(none)`, instead of a microflow name), click **Select…** and create a new microflow by clicking **New**:<br/>{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-logger/logger_project_runtime_nostartup.png" alt="Runtime no After Startup" class="no-border" >}}
     {{% /alert %}}
 
 4. In the **App Explorer**, drag and drop the **RegisterSubscriber** action from the **SapApplicationLogs** > **USE_ME** folder at the end of the *After startup* microflow:

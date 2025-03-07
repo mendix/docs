@@ -163,6 +163,8 @@ This folder contains the *db.backup* file, which is a PostgreSQL dump file creat
 If the dump does not use the custom format, then the restore will fail.
 
 The dump must be created with `pg_dump` version 1.14 or below, which is currently bundled with PostgreSQL 13, 14, and 15. If it is created with a later version, then the upload will fail.
+
+You can find the exact version of PostgreSQL each environment of your application is using on the [General](/developerportal/deploy/environments-details/#general-tab) tab of each environment's  **Environment Details** page.
 {{% /alert %}}
 
 #### tree Folder{#tree-folder}

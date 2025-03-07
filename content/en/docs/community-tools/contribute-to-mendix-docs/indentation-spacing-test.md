@@ -4,6 +4,7 @@ url: /developerportal/community-tools/indentation-spacing-test/
 draft: true
 description: "Various test cases for rendering of indents and spaces. Use this page to test how spacing and indents will render with various elements and shortcodes. Linting has been disabled for this file."
 ---
+
 <!-- markdownlint-disable-file -->
 ## Heading 2
 
@@ -248,11 +249,11 @@ hidden stuff
 
 ### Footnotes
 
-If you need a footnote use `<sup>footnote_number</sup>` to mark the footnote and `<small><sup>footnote_number</sup>My footnote text</small>` around the actual text.
+If you need a footnote use Unicode superscript characters (¹²³etc.) to mark the footnote and `<small>…</small>` around the actual text.
 
-Example<sup>1</sup>
+Example¹
 
-<small><sup>1</sup>My footnote text</small>
+<small>¹My footnote text</small>
 
 ### Key Combination Styling
 

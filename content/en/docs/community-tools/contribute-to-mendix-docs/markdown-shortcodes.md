@@ -282,11 +282,11 @@ For collapsible content, use the HTML `<details>` and `<summary>` tags:
 
 ### Footnotes
 
-For footnotes, use the HTML `<sup>` and `<small>` tags:
+For footnotes, use Unicode superscript characters (¹²³ etc.) and `<small>` tags:
 
 | Mendix Data Type | Edm Type | Attribute Value | Atom XML Representation |
 | --- | --- | --- | --- |
-| ID <sup>1</sup>| Edm.Int64 | 3940649673954387 | 3940649673954387 |
+| ID ¹| Edm.Int64 | 3940649673954387 | 3940649673954387 |
 | Autonumber | Edm.Int64 | 1 | 1 |
 | Binary (not supported) |   |   |   |
 | Boolean | Edm.Boolean | true | true |
@@ -295,10 +295,10 @@ For footnotes, use the HTML `<sup>` and `<small>` tags:
 | Big decimal  | Edm.Decimal | 0.3333333333333333333333333333333333 | 0.3333333333333333333333333333333333 |
 | Hashed string | Edm.String | HashPassword | HashPassword |
 | Integer  | Edm.Int64 | 50 | 50 |
-| Long <sup>1</sup> | Edm.Int64 | 3940649673954387 | 3940649673954387 |
+| Long ¹ | Edm.Int64 | 3940649673954387 | 3940649673954387 |
 | String | Edm.String | John | John |
 
-<small><sup>1</sup> When using Excel to import an OData source, long numbers may seem cut off. This is due to a restriction in the data type Microsoft uses. For more information, see [Last digits are changed to zeroes when you type long numbers in cells of Excel](https://support.microsoft.com/en-us/kb/269370).</small>
+<small>¹ When using Excel to import an OData source, long numbers may seem cut off. This is due to a restriction in the data type Microsoft uses. For more information, see [Last digits are changed to zeroes when you type long numbers in cells of Excel](https://support.microsoft.com/en-us/kb/269370).</small>
 
 ### Inline Code
 

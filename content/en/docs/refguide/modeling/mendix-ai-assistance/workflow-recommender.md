@@ -11,6 +11,10 @@ description: "Describes Workflow Recommender in Mendix Studio Pro."
 Workflow Recommender is available in Studio Pro 10.12 and above.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+Workflow Recommender works both online and offline. No internet connection or signing-in is required.
+{{% /alert %}}
+
 Workflow Recommender is a virtual co-developer that helps you to model and configure your workflow in Mendix Studio Pro. It gives you contextualized recommendations on the next best activity in your workflow based on context-related information.
 
 The key features of Workflow Recommender are the following:
@@ -21,11 +25,7 @@ The key features of Workflow Recommender are the following:
 
 ## Modeling Using Workflow Recommender
 
-{{% alert color="info" %}}
-Workflow Recommender is enabled by default.
-
-It can be disabled via Studio Pro preferences: go to **Edit** > **Preferences** > **Maia** > **In-Editor Recommender**.
-{{% /alert %}}
+Workflow Recommender is enabled by default. It can be disabled via Studio Pro preferences: go to **Edit** > **Preferences** > **Maia** > **In-Editor Recommender**.
 
 Workflow Recommender is displayed as a small blue plus sign in the flow. When you want to view recommendations on a particular flow, you can hover the mouse over that flow and click on the blue plus icon, or navigate to it with the keyboard and press <kbd>Enter</kbd>.
 

@@ -31,4 +31,4 @@ The examples of using the **Go to** option are described below:
 * [Navigation](/refguide/navigation/)
 * [Pages](/refguide/pages/)
 * [Microflows](/refguide/microflows/)
-* [Domain Model](/refguide/domain-model/)
+* [Data in the Domain Model](/refguide/domain-model/)

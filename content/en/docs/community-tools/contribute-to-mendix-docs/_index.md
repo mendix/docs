@@ -1,7 +1,7 @@
 ---
 title: "Contribute to Mendix Docs"
 url: /community-tools/contribute-to-mendix-docs/
-weight: 10
+weight: 70
 description: "Describes how to add and edit Mendix documentation as a community member."
 aliases:
     - /developerportal/community-tools/contribute-to-mendix-docs/

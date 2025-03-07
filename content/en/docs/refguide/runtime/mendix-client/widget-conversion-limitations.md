@@ -25,8 +25,6 @@ The following sections list the unsupported widget configuration options.
 |------------------------------------|
 | Go to Page                         |
 | Screen Reader Caption              |
-| 'Text' Read-only Style             |
-| 'Text' Read-only Style (inherited) |
 | 'Required' Validation              |
 | 'Custom' Validation                |
 | Decimal Precision Formatting       |
@@ -49,8 +47,6 @@ Because the reference set selector widget is technically a grid, while combo box
 | Unsupported in Combo Box           |
 |------------------------------------|
 | Screen Reader Caption              |
-| 'Text' Read-only Style             |
-| 'Text' Read-only Style (inherited) |
 | Constrained By                     |
 | Decimal Precision Formatting       |
 | Group Digits Formatting            |

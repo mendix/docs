@@ -47,7 +47,7 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 ### Improvements
 
 * Custom developer apps are officially released. Using the `dev-app` command, you can build a smaller version of the Make It Native app tailored to your specific app's testing needs. A custom developer app is built against the sources, dependencies, and capabilities of the final release app. For more information, see [How to Create a Custom Developer App](/refguide9/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/).
-* We have updated image functionality. With this improvement we were able to remove all extra dependencies and compress the CLI to a single executable.
+* We updated image functionality. With this improvement we were able to remove all extra dependencies and compress the CLI to a single executable.
 * We introduced new iOS-specific configuration commands. For more information, see [Native Builder](/refguide8/native-builder/).
 
 ### Fixes

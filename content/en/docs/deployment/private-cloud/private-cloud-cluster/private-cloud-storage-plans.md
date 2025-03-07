@@ -267,7 +267,7 @@ This section provides technical details on how IAM authentication works with Pos
 {{% /alert %}}
 
 {{% alert color="info" %}}
-When dealing with an Aurora PostgreSQL database, an additional procedural step is required. To employ IAM authentication in conjunction with PostgreSQL, establish a connection to the designated database instance by using either the master user or an alternative user with admin privileges. Once the connection is established, assign the `rds_iam` role to the user, as shown in the following example:
+To employ IAM authentication in conjunction with PostgreSQL, establish a connection to the designated database instance by using either the master user or an alternative user with admin privileges. Once the connection is established, assign the `rds_iam` role to the user, as shown in the following example:
 
 ```shell
 GRANT rds_iam TO db_userx;
@@ -390,6 +390,10 @@ The Postgres database is an automated, on-demand database. The Postgres plan off
 [Managed identity authentication](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-connect-with-managed-identity) removes static passwords and instead uses IAM roles for authentication.
 
 This section provides technical details on how managed identity authentication works with Postgres. If you just need instructions to get started, the [Azure Managed Identity-based storage walkthrough](#walkthrough-azure-azwi) provides a quick start guide to set the Mendix Operator to manage a Postgres database, SQL Server and Blob Storage account using managed identity authentication.
+
+{{% alert color="info" %}}
+Azure prioritizes managed identity authentication for PostgreSQL when both static authentication and Microsoft Entra authentication are selected in the Azure portal.
+{{% /alert %}}
 
 ##### Prerequisites
 
@@ -1897,7 +1901,7 @@ To configure the required settings for an RDS database, do the following steps:
 
     {{% alert color="info" %}}The VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster. When creating the RDS instance, as a best practice, make sure that it uses the same VPC as the Kubernetes cluster. Alternatively, you can also use a publicly accessible cluster. After an RDS instance has been created, it is not possible to modify its VPC.{{% /alert %}}
 
-    {{% alert color="info" %}}In the case of Aurora DB, ensure that the `rds_iam` role is granted to the master database user{{% /alert %}}
+    {{% alert color="info" %}} Ensure that the `rds_iam` role is granted to the master database user{{% /alert %}}
 
 3. Navigate to the RDS instance details, and write down the following information:
 

@@ -43,7 +43,7 @@ You would like the **Details** button in this list to open a page showing the de
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Page](/refguide/page/). 
-* Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/refguide/domain-model/).
+* Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Data in the Domain Model](/refguide/domain-model/).
 * Make sure your domain model is configured the following way:
 
     {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-form/domain-model.jpg" alt="Domain Model"   class="no-border" >}}

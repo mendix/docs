@@ -251,6 +251,10 @@ For example:
 The `mx translate` command allows you to export and import all translatable texts included in your Mendix application.
 This command is currently in public beta.
 
+{{% alert color="warning" %}}
+A limitation of this command is that the default behavior is to exclude Marketplace modules from the exported texts. When they are updated, the texts from a previous export will not be imported correctly. Your translations will also be lost when importing a new version of a Marketplace module.
+{{% /alert %}}
+
 {{% alert color="info" %}}
 The *.mpr* file must be the same version as the mx tool.
 {{% /alert %}}
@@ -279,6 +283,7 @@ These are the `OPTIONS`:
 | --- | --- | --- |
 | `--force-import`  | `-f` | Accepts some warnings and errors and tries to continue the import process. |
 | `--loose-version-check`  | `-l` | Converts the project to the version of the mx.exe, if it is a different version. |
+| `--include-marketplace-modules` | `-m` | By default, the export does not include Marketplace modules. Adding this option will include them in the output. |
 
 {{% alert color="info" %}}
 Errors in the *.mpr* are always reported.
@@ -303,3 +308,43 @@ These are the return codes:
 | `0` | No issues found. |
 | `100` | Validation error on the input. |
 | `300` | Exception, something went wrong. |
+
+## mx sync-java-dependencies Command {#java-dependencies}
+
+{{% alert color="info" %}}
+This command is available as of [Studio Pro 10.20](/releasenotes/studio-pro/10.20/).
+{{% /alert %}}
+
+The `mx sync-java-dependencies` command synchronizes the managed Java dependencies that are configured in the modules of the project.
+This results in the corresponding .*jar* files being added to the `vendorlib` directory in the project root.
+
+The input is a single .*mpr* file.
+
+{{% alert color="info" %}}
+The .*mpr* file must be the same version as mx.
+{{% /alert %}}
+
+### Usage
+
+Use the following command pattern for `mx sync-java-dependencies`:
+
+`mx sync-java-dependencies INPUT`
+
+For `INPUT`, enter an *.mpr* file.
+
+### Examples
+
+These are example commands:
+
+| Example | Result |
+| --- | --- |
+| `mx sync-java-dependencies C:\Mendix\App1\App1.mpr` | Synchronizes the managed Java dependencies of the project. |
+
+### Return Codes
+
+These are the return codes:
+
+| Return Code | Description |
+| --- | --- |
+| 0 | The command ran successfully. |
+| 1 | The command failed. For example, because the *.mpr* file could not be found. |

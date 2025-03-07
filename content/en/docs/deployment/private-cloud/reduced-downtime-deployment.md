@@ -6,7 +6,7 @@ weight: 35
 ---
 ## Introduction
 
-Kubernetes allows to update an app without downtime by [performing a rolling update](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/). Instead of stopping an app and then starting it with an updated version or configuration, Kubernetes can replace pods (replicas) one by one with an updated version. Existing pods handle requests until the newer version is fully started. Any changes in the [domain model](/refguide/domain-model/) need a database (schema) update. While the update process runs, you cannot modify any persistent entities.
+Kubernetes allows to update an app without downtime by [performing a rolling update](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/). Instead of stopping an app and then starting it with an updated version or configuration, Kubernetes can replace pods (replicas) one by one with an updated version. Existing pods handle requests until the newer version is fully started. Any changes in the [Data in the Domain Model](/refguide/domain-model/) need a database (schema) update. While the update process runs, you cannot modify any persistent entities.
 
 The Private Cloud Operator uses a [recreate](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#recreate-deployment) strategy by default. That is, the current version (configuration) of an app stops, and then the new version starts. Alternatively, the Private Cloud Operator can use a **PreferRolling** strategy. That is, the Operator tries to perform a rolling update whenever possible. If the Operator detects that a database schema update is needed, it switches to a Recreate strategy to perform a full restart. If the new version of the app has model changes, deploying it requires a schema update. In this case, the Private Cloud Operator automatically stops all replicas of the app, causing downtime.
 
@@ -44,9 +44,9 @@ The following changes in the UI can be done without downtime, but as soon as the
 
 * Page changes, including layout or CSS changes
 * Changes in nanoflows or microflow parameters, if the microflow is used on a page
-* Changes in Javascript actions
+* Changes in JavaScript actions
 
-Thes following changes will be deployed with downtime, because the model must be updated:
+The following changes will be deployed with downtime, because the model must be updated:
 
 * Adding Marketplace modules that have persistent entities
 * Updating the object model in the app itself, or its Marketplace modules

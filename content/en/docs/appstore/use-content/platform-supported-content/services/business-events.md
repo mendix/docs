@@ -229,7 +229,7 @@ Within Mendix Cloud, a Mendix Event Broker is available for easy application dep
 
 Events are placed in channels, sometimes called topics. Apps subscribed to a channel will receive events published to this channel.
 
-Events published by Free Apps are published to one shared company channel on a multi-tenant free Event Broker. Events published by apps running on licensed nodes are published to their own channels on the company Event Broker. These channels, implemented as topics on Kafka, are automatically created upon deployment of the app publishing the events.
+Events published by Free Apps are published to one shared company channel on a multitenant free Event Broker. Events published by apps running on licensed nodes are published to their own channels on the company Event Broker. These channels, implemented as topics on Kafka, are automatically created upon deployment of the app publishing the events.
 
 For information on setting topics and channels for your own Kafka clusters ("Bring Your Own Kafka"), see [Configuring Deployment Constants for Own Kafka Cluster](#deployment-constants).
 
@@ -248,7 +248,7 @@ This is implemented as follows:
 Business Events offers four different deployment models:
 
 * Deploying locally with the [Local Setup Tool](https://github.com/mendix/event-broker-tools)
-* Free apps using a free multi-tenant event broker
+* Free apps using a free multitenant event broker
 * Production apps using the [Mendix Event Broker](#mendix-event-broker) running in Mendix Cloud
 * Apps running their own Kafka cluster (bring your own Kafka)
 

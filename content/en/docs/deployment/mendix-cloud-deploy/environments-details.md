@@ -18,7 +18,7 @@ To open the **Environment Details** page, go to [Apps](https://sprintr.home.mend
 
 The **Environment Details** page shows information about the selected environment. You can use this page to manage and debug several aspects of the environment. The page has eight tabs: **General**, **Model Options**, **Network**, **Log Levels**, **Runtime**, **Maintenance**, **Tags**, and **Services**.
 
-## The General Tab
+## The General Tab{#general-tab}
 
 In the **General** tab, you can find the following information about your environment:
 

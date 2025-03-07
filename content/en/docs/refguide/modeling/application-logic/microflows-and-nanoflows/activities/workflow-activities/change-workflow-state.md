@@ -41,7 +41,7 @@ You can select the following operations that represent the new state of the work
 
 * **Continue workflow** – This operation continues the processing of the workflow instance from the point where it was before a new version of the workflow definition was deployed. The workflow instance will no longer be in the *Incompatible* state. If the task is no longer in the new workflow definition, this action results in an error.
 
-* **Pause workflow** – This operation pauses further processing of the workflow. User tasks cannot be completed when the workflow instance is in the *Pause* state. Use the **Resume workflow** operation to resume processing of the workflow.
+* **Pause workflow** – This operation pauses further processing of the workflow. User tasks cannot be completed when the workflow instance is in the *Pause* state. Use the **Unpause workflow** operation to resume processing of the workflow.
 
 * **Unpause workflow** – This operation resumes the workflow after it has been paused with the **Pause workflow** operation. User tasks can be completed again.
 

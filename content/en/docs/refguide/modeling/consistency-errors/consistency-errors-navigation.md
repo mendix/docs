@@ -17,15 +17,17 @@ Some errors have error codes and if these errors are described in documentation,
 
 ## Navigation Consistency Errors 
 
-The most common errors you can come across when configuring a navigation item are described in the table below:
+The most common errors you can come across when configuring a navigation item are described in the following sub-sections.
 
-| Error Code | Message in the Errors Pane                                   | Cause of the Error                                           | Way to Fix                                                   |
-| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| CE1568     | The selected page {Name of the page} expects an object of type {type of object}, which is not available here. | The page has a page parameter that expects an object of a particular type to be passed to it. | Pass an object to the page by changing the **On click** property of the menu item from **Show a page** to **Create object**. For more information, see the [Error Fix Example for CE1568](#page-expects-an-object) section. |
-| CE0529     | The selected {Name of the page} expects an object of type {type of object} and cannot be used as a home page. Change the page or use a microflow to provide the page with an object. | You have set a page that expects an object to be passed to it (for example, a page with a data view) as a home page. But the home page has no object that is passed to it, because it is the starting point of a flow. | You can use a microflow as the home page that will open the preferred page and pass a specific object to the home page. For more information, see the [Error Fix Example for CE0529](#home-page-expects-an-object). |
-| CE0548     | Items with subitems cannot have an action themselves.        | You have assigned an [on-click event](/refguide/on-click-event/) to a menu item that has a sub-item, when menu items with have sub-items cannot have on-click events assigned to them. | You need to either set the on-click event of the menu item to *Nothing*, or delete/move the sub-item. |
+### Error Code: CE1568
 
-### Error Fix Example for CE1568 {#page-expects-an-object}
+CE1568 error message: *The selected page {Name of the page} expects an object of type {type of object}, which is not available here.*
+
+You get CE1568 if the page has a page parameter that expects an object of a particular type to be passed to it.
+
+To fix CE1568, pass an object to the page by changing the **On click** property of the menu item from **Show a page** to **Create object**. For more information, see the [Error Fix Example for CE1568](#page-expects-an-object) section below.
+
+#### Error Fix Example for CE1568 {#page-expects-an-object}
 
 When you set a page with a data view as a menu item, you get a consistency error, because the page expects an object to be passed to it. 
 
@@ -40,10 +42,17 @@ To fix the error, you can create an object and pass it to the page. Do the follo
     1. Change the **On click** property from **Show a page** to **Create object**.
     1. Set **ProgramItem** as **Entity (path)**. 
     1. Set **Program** as **On click page**. 
-
 Now when an end-user clicks the menu item, a new *ProgramItem* object will be created and passed to the page.
 
-### Error Fix Example for CE0529 {#home-page-expects-an-object}
+### Error Code: CE0529
+
+CE0529 error message: *The selected {Name of the page} expects an object of type {type of object} and cannot be used as a home page. Change the page or use a microflow to provide the page with an object.*
+
+You get CE0529 if you have set a page that expects an object to be passed to it (for example, a page with a data view) as a home page. But the home page has no object that is passed to it, because it is the starting point of a flow.
+
+To fix CE0529, you can use a microflow as the home page that opens the preferred page and pass a specific object to the home page. For more information, see the [Error Fix Example for CE0529](#home-page-expects-an-object) section below.
+
+#### Error Fix Example for CE0529 {#home-page-expects-an-object}
 
 If you set a page that expects an object to be passed to it as a home page for a [navigation profile](/refguide/navigation/#properties), you will get a consistency error.
 
@@ -73,6 +82,14 @@ You can fix this error by creating a microflow that will that will create a new 
 Now the new object of type *Customer* will be created and passed to the home page.
 
 {{< figure src="/attachments/refguide/modeling/consistency-errors/consistency-errors-navigation/open-home-page-microflow.png" alt="Open Home Page Microflow" class="no-border" >}}
+
+### Error Code: CE0548
+
+CE0548 error message: *Items with subitems cannot have an action themselves.*
+
+You get CE0548 if you have assigned an [on-click event](/refguide/on-click-event/) to a menu item that has a sub-item, when menu items with have sub-items cannot have on-click events assigned to them.
+
+To fix CE0548, you need to either set the on-click event of the menu item to *Nothing*, or delete/move the sub-item.
 
 ## Read More
 

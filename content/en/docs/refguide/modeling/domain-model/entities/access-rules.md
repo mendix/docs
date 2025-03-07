@@ -31,7 +31,7 @@ The **System.User** entity has inbuilt access rules where access is given to its
 ## Defining Access Rules
 
 {{% alert color="info" %}}
-A new entity access rule editor was released in Studio Pro version 10.6.0, as a [beta](/releasenotes/beta-features/). This will be made generally available in Studio Pro version 10.19.0. You can enable this new editor in the [Preferences Dialog](/refguide/preferences-dialog/#new-features).
+A new entity access rule editor was released in Studio Pro version 10.6.0, as a [beta](/releasenotes/beta-features/). You can enable this new editor in the [Preferences Dialog](/refguide/preferences-dialog/#new-features).
 
 For guidance on using the new editor, see [Defining Access Rules Using the New Editor](#new-editor), below.
 {{% /alert %}}
@@ -199,7 +199,7 @@ Non-persistable objects cannot have XPath constraints.
 ## Defining Access Rules Using the New Editor {#new-editor}
 
 {{% alert color="warning" %}}
-The new access rule editor was introduced in Studio Pro version 10.6.0 as a beta and will be made generally available in Studio Pro version 10.19.0. For more information on beta features, see [Beta Releases](/releasenotes/beta-features/).
+The new access rule editor was introduced in Studio Pro version 10.6.0 as a beta and will be made generally available in Studio Pro version 10.20.0. For more information on beta features, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -297,6 +297,10 @@ XPath constraints are not applied to create operations, meaning that if you enab
 
 XPath constraints are applied to delete operations, unlike create operations.
 
+#### Default member access
+
+Specifies the rights which are applied to new attributes or associations of this entity. This option was absent from the new Access Rule Editor before version 10.19 where the rights always defaulted to no access for any module roles.
+
 #### Attribute and Association Rights
 
 Access to the members can be set using the toggles in the column next to the member description. 
@@ -306,8 +310,6 @@ You can also click **Read** or **Write** in the **Set all to** footer to enable 
 {{% alert color="info" %}}
 You cannot set *Write* access to attributes which are calculated. This includes both attributes where the attribute value is set to **Calculated** and attributes of type *Autonumber*.
 {{% /alert %}}
-
-Attributes and associations which are added to an entity in the domain model will default to allowing no access to any module roles. This improves security by forcing you to choose who can access any new information which is added to the domain model and is a change from the old editor where you could set default rights for new members (described in [Member Read and Write Rights Section](#member-access), above).
 
 See [Attribute Changes and Security Constraints](#attribute-changes), above, for important considerations about giving access to attributes.
 

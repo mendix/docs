@@ -16,6 +16,10 @@ cascade:
         priority: 0.3
 ---
 
+{{% alert color="warning" %}}
+When Mendix 11 is released (expected in June 2025), Mendix 8 will go end of support. This means that Mendix 8 will no longer receive support, maintenance, or updates. To ensure continued access to the latest features and security enhancements, we recommend planning an upgrade to a more recent version of the platform.
+{{% /alert %}}
+
 ## Introduction
 
 The *Mendix Studio Pro 8 Guide* covers important topics concerning [Studio Pro](/refguide8/modeling/), the [Mendix Runtime](/refguide8/runtime/), and other components of the Mendix Platform.

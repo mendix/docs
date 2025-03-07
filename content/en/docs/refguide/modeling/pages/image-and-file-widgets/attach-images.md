@@ -30,7 +30,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Familiarize yourself with page terms and how to perform basic functions on pages. For more information, see [Page](/refguide/page/). 
 
-* Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/refguide/domain-model/).
+* Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model].
 
 * Make sure your domain model is configured the following way:
 

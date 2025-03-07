@@ -14,7 +14,7 @@ Depending on the Mendix version your app is developed in and the device you want
 
 ### Improvements
 
-* We have upgraded our React Native version to 0.73.9. This significant update improves performance and increases compatibility with React Native's latest features.
+* We upgraded our React Native version to 0.73.9. This significant update improves performance and increases compatibility with React Native's latest features.
 
 ## Android 2.0.1
 
@@ -30,7 +30,7 @@ Depending on the Mendix version your app is developed in and the device you want
 
 ### Improvements
 
-* We have upgraded our React Native to 0.72.7. This significant update improves performance and increases compatibility with React Native's latest features.
+* We upgraded our React Native to 0.72.7. This significant update improves performance and increases compatibility with React Native's latest features.
 
 ### Compatibility Notice
 

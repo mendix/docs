@@ -22,21 +22,25 @@ The typical usage scenario is when an app/module consumes a service where a user
 
 ### Limitations
 
-* Currently only AES is supported
+Currently, only AES is supported.
 
 ### Configuration {#configuration}
 
 #### EncryptionKey Constant
 
-Set the `EncryptionKey` constant located in the **Private - String en/de-cryption** folder. Make sure the key consists of 16 characters.
+Set the `EncryptionKey` constant in your application, which can be found in the **Private - String en/de-cryption** folder. In module versions 2.2.0 and above, the `EncryptionKey` constant must be 32 characters long, corresponding to the updated 256 bits key length. You can use the `LegacyEncryptionKey` constant to decrypt strings which were encrypted with 128 bit keys using an older version of the Encryption module.
 
-In version 2.2.0, the key length was increased from 128 to 256 bits. The `EncryptionKey` constant must now have a key with 32 characters. The `LegacyEncryptionKey` constant can be used for the 128 bits, in order to decrypt strings that were encrypted using an older version of the Encryption module.
+For versions below 2.2.0, ensure the key is 16 characters long to support the 128 bits key length.
+
+When running the application locally, add a random 32-character string **Value** for the `EncryptionKey` constant in the **App Settings** > **Configurations** tab. For more information, see the [Constants](/refguide/configuration/#constants) section of *Configurations*.
+
+{{< figure src="/attachments/appstore/platform-supported-content/modules/encryption/encryption-constant.png" class="no-border" >}}
 
 #### EncryptionPrefix Constant
 
-Set the `EncryptionPrefix` constant located in the **Private - String en/de-cryption** folder. The value depends on the module version you are using:
+Set the `EncryptionPrefix` constant in the **Private - String en/de-cryption** folder. The value depends on the module version you are using:
 
-* For version 2.2.0 or above, set the constant to `{AES3}`
+* For version 2.2.0 and above, set the constant to `{AES3}`
 * For versions 1.4.1–2.1.3, set the constant to `{AES2}`
 
 {{% alert color="info" %}}
@@ -53,7 +57,7 @@ Encrypt and decrypt the contents of FileDocument entities using the [PGP](https:
 
 ### Typical Use Cases
 
-One of the typical usage scenarios may be an app/module that stores customer sensitive documents such as photos. In such a case, you may want to encrypt those documents in a way that only the owner can see.
+One of the typical usage scenarios may be an app/module that stores customer-sensitive documents such as photos. In such a case, you may want to encrypt those documents in a way that only the owner can see.
 
 ### Configuration
 

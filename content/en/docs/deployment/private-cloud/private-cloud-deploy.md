@@ -325,13 +325,13 @@ The word changes to **Production** if the environment is set up for production.
 
 See [Creating an Environment](#create-environment), above, for more information.
 
-##### Trial
+##### Trial Operator
 
-The word **Trial** indicates that the Operator managing that environment is unlicensed.
+The word **Trial Operator** indicates that the Operator managing that environment is unlicensed.
 
-When the Operator is running in trial mode, it will stop managing an environment ninety days (thirty days for Mendix Operator versions 1.12.0 and below) after the environment was created and the word changes to **Expired**. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment. You can, however, create a new environment if you have not finished your evaluation of Mendix for Private Cloud.
+When the Operator is running in trial mode, it will stop managing an environment ninety days (thirty days for Mendix Operator versions 1.12.0 and below) after the environment was created and the word changes to **Expired Operator**. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment. You can, however, create a new environment if you have not finished your evaluation of Mendix for Private Cloud.
 
-The word **Licensed** shows that the Operator managing that environment is licensed.
+The word **Licensed Operator** shows that the Operator managing that environment is licensed.
 
 {{% alert color="info" %}}
 The Operator license is independent from a Mendix Runtime license. The Operator license allows you to manage Mendix apps in your cluster, while the Mendix Runtime license (configured through a [Subscription Secret](#license-mendix)) removes trial restrictions from a Mendix App itself.
@@ -409,7 +409,7 @@ These tabs are described below.
 
 The general tab shows information about your running app.
 
-{{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/image22.png" class="no-border" >}}
+{{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/generalTab.png" class="no-border" >}}
 
 Most of the information is self-explanatory, but the status information gives you a quick summary of the status of the environment and the app deployed there. The **Source** field shows how the environment was created - by using the Portal or the [API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/)
 
@@ -417,19 +417,17 @@ Most of the information is self-explanatory, but the status information gives yo
 
 This status shows you the following information – how many replicas are running, whether there was a successful build, and how long since the app was last started.
 
-In order to get more detailed information per replica in the application, you can click on **More Info** button.
+In order to get more detailed information per replica in the application, you can click on **More Info** button. This shows information about the runtime status, license status and sources for the Database, Storage, MxAdmin password, Debugger password, App constants and Custom Runtime settings. 
 
-You can get the information related to Runtime status, License status and Sources w.r.t to Database, Storage, MxAdmin password, Debugger password, App constants and Custom Runtime settings. Along with this, from Operator version 2.15.0 onwards, you can also specifically collect information w.r.t to pods running in the application. Below is the brief explanation of the fields in the section:
+If no runtime license is applied to the environment, the license status shows **0/n Licensed Runtime**, where **n** is the number of replicas running. The license status is **Not licensed**. Once a runtime license has been applied to the environment, the license status shows **n/n Licensed Runtime**, where **n/n** indicates the number of licenses applied to the number of replicas.
 
-1. **deletionInitiated**: This indicates whether the deletion of the pod has been initiated (pod is stopping). If it's `false`, it means the pod is not currently being deleted.
+Starting in Operator version 2.15.0, you can also specifically collect information about pods running in the application. Below is a brief explanation of the fields in the section:
 
-2. **ready**: This shows whether the pod is ready to serve requests. If it's `false`, it means the pod is not ready to serve requests, possibly due to containers within the pod not being ready or other issues.
-
-3. **restartCount**: This represents the number of times the containers within the pod have been restarted.
-
-4. **started**: This indicates whether the pod has started. If it's `false`, it means the pod has not yet started successfully.
-
-5. **state**: This describes the current state of the pod. In this case, it indicates that the pod is in a waiting state, which means it is not running but waiting for something to happen, such as a container to become ready or other conditions to be met before it can start running.
+* **deletionInitiated** - This indicates whether the deletion of the pod has been initiated (pod is stopping). If **false**, the pod is not currently being deleted.
+* **ready** - This shows whether the pod is ready to serve requests. If **false**, the pod is not ready to serve requests, possibly due to containers within the pod not being ready or other issues.
+* **restartCount** - This represents the number of times the containers within the pod have been restarted.
+* **started** - This indicates whether the pod has started. If**false**, the pod has not yet started successfully.
+* **state** - This describes the current state of the pod. In this case, it indicates that the pod is in a waiting state, which means it is not running but waiting for something to happen, such as a container to become ready or other conditions to be met before it can start running.
 
 #### Environment Details > Status
 
@@ -510,6 +508,14 @@ Images are not deleted from the container registry. You should delete those imag
 {{% alert color="warning" %}}
 If any of these garbage collection steps fail, you will no longer see the environment in the Mendix Portal, and will have to [delete the storage instances](#delete-storage) manually.
 {{% /alert %}}
+
+##### Read-Only Root Filesystem
+
+[Read-only Root file system](/developerportal/deploy/private-cloud-cluster/#readonlyrootfs) can be enabled per environment. By default, this option is disabled. 
+
+##### Deployment Strategy 
+
+Starting from Operator 2.20.0 onwards, it is now also possible to set the deployment strategy for an environment on the cluster details page. This stategy can be enabled by the cluster manager. This feature allows to update an app with reduced downtime by performing a rolling update. By default, it is set to Recreate strategy.
 
 ##### License Mendix{#license-mendix}
 

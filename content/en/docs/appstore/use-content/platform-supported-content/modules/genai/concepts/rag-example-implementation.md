@@ -25,7 +25,7 @@ Every LLM will have its algorithm for generating vectors, but the convention is 
 
 #### Chunk
 
-In the context of GenAI Commons in a Mendix app, embedding vectors are generated using a [Chunk](/appstore/modules/genai/commons/#chunk-entity). Each object represents a discrete piece of information and contains its original string representation, as well as (after the embedding operation) the vector representation of that string according to the LLM of choice.
+In the context of GenAI Commons in a Mendix app, embedding vectors are generated using a [Chunk](/appstore/modules/genai/genai-for-mx/commons/#chunk-entity). Each object represents a discrete piece of information and contains its original string representation, as well as (after the embedding operation) the vector representation of that string according to the LLM of choice.
 
 #### Knowledge base 
 
@@ -35,11 +35,11 @@ In the context of GenAI Commons in a Mendix app, we use the [PgVector Knowledge 
 
 #### Knowledge base chunk
 
-In most use cases, more information needs to be stored than just the original input string and its vector representation. A [KnowledgeBaseChunk](/appstore/modules/genai/commons/#knowledgebasechunk-entity) is an extension of [Chunk](/appstore/modules/genai/commons/#chunk-entity) that can hold additional information that is typically required for useful insertion and retrieval from a Mendix application.
+In most use cases, more information needs to be stored than just the original input string and its vector representation. A [KnowledgeBaseChunk](/appstore/modules/genai/genai-for-mx/commons/#knowledgebasechunk-entity) is an extension of [Chunk](/appstore/modules/genai/genai-for-mx/commons/#chunk-entity) that can hold additional information that is typically required for useful insertion and retrieval from a Mendix application.
 
 #### Metadata
 
-If additional conventional filtering is needed during similarity searches, such additional data can be stored in the knowledge base as well. [Metadata](/appstore/modules/genai/commons/#metadata-entity) objects are key-value pairs that are inserted along with the chunks and contain this additional information. The filtering is applied on an exact string-match basis for the key-value pair. Records are only retrieved if they match all records of the metadata in the collection provided as part of the search step.
+If additional conventional filtering is needed during similarity searches, such additional data can be stored in the knowledge base as well. [Metadata](/appstore/modules/genai/genai-for-mx/commons/#metadata-entity) objects are key-value pairs that are inserted along with the chunks and contain this additional information. The filtering is applied on an exact string-match basis for the key-value pair. Records are only retrieved if they match all records of the metadata in the collection provided as part of the search step.
 
 {{% alert color="info" %}}The example described in the remainder of this document does not include the more advanced use case of metadata filtering nor does it cover the construction of complex input strings. If you want to see how this can work in practice, take a look at the *RAG with Semantic Search on Historical Data* example in the [GenAI Showcase app](https://marketplace.mendix.com/link/component/220475). {{% /alert %}}
 
@@ -69,7 +69,7 @@ In summary, in the first step, you need to provide the private knowledge base, s
 
 Before you start experimenting with the end-to-end process, make sure that you have access to a (remote) PostgreSQL database with the [pgvector](https://github.com/pgvector/pgvector) extension available. If you do not have one yet, [learn more](/appstore/modules/genai/pgvector-setup/) about how a PostgreSQL vector database can be set up to explore use cases with knowledge bases.
 
-{{% alert color="info" %}}If you have access to an Amazon Web Services (AWS) account or Microsoft Azure account, Mendix recommends you use a setup described in the [Creating a PostgreSQL Database with Amazon RDS](/appstore/modules/genai/pgvector-setup/#aws-database-create) or [Managing a PostgreSQL Database with Microsoft Azure](/appstore/modules/genai/pgvector-setup/#azure-database) section. This is convenient, since these PostgreSQL databases in the cloud have the required pgvector extension available by default.{{% /alert %}}
+{{% alert color="info" %}}If you have access to an Amazon Web Services (AWS) account or Microsoft Azure account, Mendix recommends you use a setup described in the [Creating a PostgreSQL Database with Amazon RDS](/appstore/modules/genai/reference-guide/external-connectors/pgvector-setup/#aws-database-create) or [Managing a PostgreSQL Database with Microsoft Azure](/appstore/modules/genai/reference-guide/external-connectors/pgvector-setup/#azure-database) section. This is convenient, since these PostgreSQL databases in the cloud have the required pgvector extension available by default.{{% /alert %}}
 
 ### Steps {#steps}
 

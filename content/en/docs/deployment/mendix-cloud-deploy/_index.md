@@ -62,7 +62,7 @@ There are two ways to prevent your Free App from being archived:
 * Visit the Free App
 * Deploy a new version of your app to your Free App environment
 
-#### Deletion of Unused Projects (#projects-deletion)
+#### Deletion of Unused Projects {#projects-deletion}
 
 If a project has never seen any activity since it was created, it is kept on the Team Server for a maximum of one year. After this, the project on the Mendix Platform, its repository on the Team Server, and any Mendix Cloud resources will be permanently deleted.
 
@@ -201,7 +201,7 @@ With a Premium plan, your app can be [horizontally scaled](/developerportal/depl
 
 Fallback ensures that the data in your database is automatically copied to a database in a second AZ. This ensures that all your data is still available to your app if there is an issue with the primary availability zone and app instances have to be started in the second AZ. 
 
-The connections between AZs are low latency. However, the implementation of these features means that your monitoring may indicate that apps deployed to Mendix Cloud under a Premium plan suffer an additional latency of a few milliseconds compared with apps deployed using a Standard plan. For a well-designed app, this difference is not noticeable to end-users. 
+The connections between AZs are low latency. However, the implementation of these features means that your monitoring may indicate that apps deployed to Mendix Cloud under a Premium plan suffer an additional latency of a few milliseconds per query compared with apps deployed using a Standard plan. For a well-designed app, this difference is not noticeable to end-users. 
 
 #### Application Data Replication
 

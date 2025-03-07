@@ -22,9 +22,9 @@ This document describes the steps to set up a single sign-on configuration in Me
 
 ### Benefits
 
-Benefits of using BYOIDP SSO are:
+The benefits of using BYOIDP SSO are:
 
-* **Security** – You are in control of the credentials and authentication of your platform users. You can, for example, apply password complexity rules and two-factor authentication (2FA). Users don't need to have separate credentials in the Mendix Platform to access the Mendix Portal.
+* **Security** – You are in control of the credentials and authentication of your platform users. You can, for example, apply password complexity rules and two-factor authentication (2FA). Users do not need to have separate credentials in the Mendix Platform to access the Mendix Portal.
 * **Access governance** – You are in control of denying access to the platform via SSO, for example when an employee has left the company or your corporate policy does not allow an employee to develop Mendix applications.
 * **Convenience** – Platform users have the convenience of SSO and don't have to manage credentials for the Mendix Platform.
 
@@ -43,7 +43,7 @@ BYOIDP SSO has the following features:
 * Authentication is delegated for any user that has an email address where the email domain is associated with your company. This includes service accounts (for example non-personal accounts used for consuming APIs) that may have been created on the Mendix Platform. 
 * When you add a domain to your company account, it is automatically added to the active IdP configuration. 
 * External users (with domains that are not part of your company) are unaffected. They still have access based on the way they normally sign in to Mendix.
-* When BYOIDP is used, a session at Mendix is valid for one hour. After the session is expired, Mendix will request a new `ID_token` from your IdP. If the user still has a session at your IdP, the token will be issued without any user input and the platform user continues to have access to the Mendix Platform. The effect of this mechanism is that users have access to the Mendix Platform as long as the session at your IdP is valid.
+* When BYOIDP is used, a session at Mendix is valid for one hour. After the session has expired, Mendix will request a new `ID_token` from your IdP. If the user still has a session at your IdP, the token will be issued without any user input and the platform user continues to have access to the Mendix Platform. The effect of this mechanism is that users have access to the Mendix Platform as long as the session at your IdP is valid.
 * You can also use the [Mendix SSO](/appstore/modules/mendix-sso/) module in your non-production apps to provide an SSO experience. With BYOIDP, authentication of end-users of these apps will also be delegated by BYOIDP SSO. The end-users of these apps need to [sign up for a Mendix account](https://signup.mendix.com/) before they can sign in to your app.
 
 #### Technical Integration
@@ -54,7 +54,7 @@ BYOIDP SSO integrates with the Mendix Platform using the following techniques:
 * The user's email address is used to associate a user's existing account within Mendix with the user's account at your IdP. This means that any existing Mendix account is linked to their IdP account for authentication, rather than a new Mendix account being created for them.
     * This assumes that the IdP returns an email address to Mendix during SSO which the user previously used to sign up and log in to Mendix. If the email address that is returned to Mendix is not recognized, then the user will be offered the sign-up option to enable them to create a new account.
 * BYOIDP SSO makes an authentication request to your IdP which means that only the 'openid' and 'profile' scope values are requested, as defined by OIDC. The request does not explicitly ask for authorization for specific platform roles such as developer, Mendix Admin, or Technical Contact. You can set up your IdP, however, to apply coarse-grained access rules based on the `client_id` for the Mendix Platform to deny access to the Mendix Platform for certain groups of employees.
-* Mendix provides support for two client authentication methods: `client_secret_post` (client credentials in the payload) or `client_secret_basic` (basic authentication credentials in the HTTP header). If the IdP supports both methods, `client_secret_post` is used.
+* Mendix provides support for three client authentication methods: `client_secret_post` (client credentials in the payload), `client_secret_basic` (basic authentication credentials in the HTTP header), and `private_key_jwt` (using a client key-pair/certificate instead of a client secret). The Mendix platform will select `client_secret_post` if supported; otherwise, it will use `client_secret_basic`. The `private_key_jwt` method is available only to customers with a Premium platform license and requires onboarding by Mendix. For further assistance, contact your CSM.
 * Mendix includes the `login_hint` parameter in requests to your IdP This allows the IdP to pre-populate the login screen with the user's email address, which gives a better user experience. Your IdP may choose to ignore the hint. After receiving a positive response, Mendix does not do any validation if the logged-in user matches the login_hint.
 * Whether or not users signing in to the Mendix Platform have to use 2FA does not change the [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/) which protects sensitive activities on Mendix Cloud nodes. This remains in place and works independently of BYOIDP SSO.
 
@@ -65,7 +65,7 @@ BYOIDP SSO has the following limitations.
 * If the user's email address is changed in your IdP, Mendix may not recognize it as the same account and will ask the user to set up a new Mendix account.
 * `login_hint` is not optional and is always sent as part of authentication requests to the IdP.
 * BYOIDP SSO only supports OIDC and does not support other protocols such as SAML.
-* Once BYOIDP is activated, direct access to [Team Server](/developerportal/general/team-server/) is no longer possible using a username and password. To access code repositories from a pipeline, you need to use a personal access token (PAT).
+* Once BYOIDP is activated, direct access to the [Team Server](/developerportal/general/team-server/) is no longer possible using a username and password. To access code repositories from a pipeline, you need to use a personal access token (PAT).
 * Mendix Platform APIs which require a PAT can use one which is created by a platform user. You cannot directly set up service accounts within Mendix once BYOIDP SSO is activated. You can set up a service-like account to consume Mendix Platform APIs in one of the following ways:
     * Use a personal account as if it were a service account
     * Create a service account in the company IdP
@@ -78,12 +78,12 @@ BYOIDP SSO has the following limitations.
 
 To set up an IdP configuration for the Mendix Platform and your Mendix app, you will need the following:
 
-* A subscription to an OIDC compliant IdP; you need to validate that your IdP supports OIDC
-    * If you are using Entra ID, Okta, Auth0, [Ping Identity](https://www.pingidentity.com), or ADFS you will be OK
-    * a full list of compliant providers can be found in the [OpenID Certified OpenID Providers](https://openid.net/certification/)
-* The URL for the so-called "well-known endpoint" of your IdP, where configuration details can be retrieved
-    * The IdP's well-known endpoint must have a URL for the JWKS endpoint
-* The Mendix Portal needs to be registered as a client in your IdP, and you need to know the corresponding client ID and secret
+* For a subscription to an OIDC compliant IdP; you need to validate that your IdP supports OIDC:
+    * If you are using Entra ID, Okta, Auth0, [Ping Identity](https://www.pingidentity.com), or ADFS you will be OK.
+    * A full list of compliant providers can be found in the [OpenID Certified OpenID Providers](https://openid.net/certification/).
+* The URL for the so-called "well-known endpoint" of your IdP, where configuration details can be retrieved.
+    * The IdP's well-known endpoint must have a URL for the JWKS endpoint.
+* The Mendix Portal needs to be registered as a client in your IdP, and you need to know the corresponding client ID and secret.
 
 ## Configuring Your BYOIDP Setup
 
@@ -121,7 +121,7 @@ Use the **Copy** button to copy **the redirect URL used by the Mendix Platform C
 
 {{< figure src="/attachments/control-center/security/set-up-sso-byoidp/customer-idp-wizard-page-2.png" class="no-border" >}}
 
-Click **Next** to test your configuration
+Click **Next** to test your configuration.
 
 ### Testing Your Configuration
 
@@ -137,7 +137,7 @@ Click **Previous** if the test indicates that you have not entered the correct c
 
 The data from your IdP may have different attribute names from the Mendix identity.
 
-Configure which data from your IdP is mapped to the attributes of the Mendix identity. Configure at least **Foreign ID**, **Username**, and a **First Name** or **Last Name**.
+Configure which data from your IdP is mapped to the attributes of the Mendix identity. Configure at least a **Foreign ID**, **Username**, and **First Name** or **Last Name**.
 
 {{% alert color="info" %}}
 The **Username** must be in the correct form for an email address.
@@ -154,7 +154,7 @@ When you have completed your IdP setup, you can perform a test sign-in before ac
 You can test in one of two ways:
 
 * Use the **Test Link** for your configuration. It will redirect you to the login page of your IdP. Enter the credentials of a user known to your IdP. If the test succeeds, the Mendix Portal landing page opens.
-* Copy the ***Test Email Domain** of your configuration from the overview page. Go to https://login.mendix.com/ and, in the **Username** field, paste the test email domain. The password field disappears. Click **Sign in with SSO**. This will redirect you to a login page of your IdP. Enter credentials known to your IdP. If the test succeeds, the Mendix Platform home page opens.
+* Copy the ***Test Email Domain** of your configuration from the overview page. Go to https://login.mendix.com/ and, in the **Username** field, paste the test email domain. The password field disappears. Click **Sign in with SSO**. This will redirect you to the login page of your IdP. Enter credentials known to your IdP. If the test succeeds, the Mendix Platform home page opens.
 
 For advice on where to look for issues if your test fails, see the [Troubleshooting](#troubleshooting) section.
 
@@ -166,7 +166,7 @@ When you are ready, you can activate the IdP configuration from the overview pag
 
 ## Deactivating
 
-You can deactivate the IdP configuration at any time. Although the changes start to come into effect immediately, updating your users will take some time depending on the number of users in your company. Users will have to reset their Mendix password to be able to sign-in since it was scrambled upon activation.
+You can deactivate the IdP configuration at any time. Although the changes start to come into effect immediately, updating your users will take some time depending on the number of users in your company. Users will have to reset their Mendix password to be able to sign in since it was scrambled upon activation.
 
 ## Entra ID
 
@@ -182,7 +182,7 @@ Entra ID (formerly Microsoft Azure AD) is one of the most used IdPs, and it supp
 
     {{< figure src="/attachments/control-center/security/set-up-sso-byoidp/azure-app-registration-step-1.png" class="no-border" >}}
 
-5. In the app registration details that open after you save your registration, hover over **Application (client) ID** and copy the ID to the clipboard with the button that appears.
+5. In the app registration details that open after you save your registration, hover over the **Application (client) ID** and copy the ID to the clipboard with the button that appears.
 
     {{< figure src="/attachments/control-center/security/set-up-sso-byoidp/azure-app-registration-step-2.png" class="no-border" >}}
 
@@ -195,7 +195,7 @@ Entra ID (formerly Microsoft Azure AD) is one of the most used IdPs, and it supp
 
 8. Close the sidebar with the ({{% icon name="remove" %}}) in the top-right corner. This returns you to the app registration details page.
 9. Click **Certificates & secrets** in the left-hand menu bar.
-10. Click **New client secret** in the page that opens.
+10. Click **New client secret** on the page that opens.
 
     {{< figure src="/attachments/control-center/security/set-up-sso-byoidp/azure-app-registration-step-4.png" class="no-border" >}}
 
@@ -203,7 +203,7 @@ Entra ID (formerly Microsoft Azure AD) is one of the most used IdPs, and it supp
 
     {{< figure src="/attachments/control-center/security/set-up-sso-byoidp/azure-app-registration-step-5.png" class="no-border" >}}
 
-    If you wish to let the certificate to expire, write down the date the certificate will expire.
+    If you wish to let the certificate expire, write down the date the certificate will expire.
 
 12. Copy the client secret. You need this to set up your IdP in the Mendix Portal.
 
@@ -211,7 +211,7 @@ Entra ID (formerly Microsoft Azure AD) is one of the most used IdPs, and it supp
 
 That's it! You are now ready to resume your IdP setup in the Mendix Portal.
 
-For more information on setting up federation with a Microsoft Entra ID IdP, see [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app) in the Microsoft documentation.
+For more information on setting up a federation with a Microsoft Entra ID IdP, see [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app) in the Microsoft documentation.
 
 ### Recommended Attribute Mapping for Entra ID
 
@@ -234,7 +234,7 @@ Existing users of the Mendix Portal can continue to use their accounts, but they
 
 ### BYOIDP and Team Server {#team-server}
 
-Once BYOIDP is activated, direct access to Team Server is no longer possible. To access code repositories from a pipeline, you need to use a [PAT](/community-tools/mendix-profile/user-settings/#pat).
+Once BYOIDP is activated, direct access to the Team Server is no longer possible. To access code repositories from a pipeline, you need to use a [PAT](/community-tools/mendix-profile/user-settings/#pat).
 
 Before activating BYOIDP, your developers should set up PATs for direct access to repos (for example, from CI/CD pipelines and/or Tortoise SVN) instead of using usernames and passwords.
 
@@ -250,7 +250,7 @@ Once you have set up BYOIDP SSO, you may want to change the client secret that i
 
 If the client secret is still active or you (as an administrator) still have an active session on the Mendix Platform, you can do one of the following:
 
-* Clone the existing active IdP configuration, update the secret there and then activate the clone. This avoids updating all the users. This is the preferred option.
+* Clone the existing active IdP configuration, update the secret there, and then activate the clone. This avoids updating all the users. This is the preferred option.
 * Disable the IdP configuration, update the secret, and then enable it again.
   
 If the client secret has expired, ask [Mendix Support](https://support.mendix.com/hc/en-us) to update the client secret of your active IdP configuration.
@@ -263,7 +263,7 @@ Single sign-on was introduced in Studio Pro 7.18. Your app will need to be this 
 
 ### Multiple Email Domains for a Company
 
-When you activate BYOIDP SSO, it will apply to all email domains which are registered to your company. If you add another email domain to your company, BYOIDP will automatically adopt it, without further actions from the Mendix administrator.
+When you activate BYOIDP SSO, it will apply to all email domains that are registered to your company. If you add another email domain to your company, BYOIDP will automatically adopt it, without further actions from the Mendix administrator.
 
 ## Troubleshooting {#troubleshooting}
 
@@ -277,7 +277,7 @@ Without proper exchange of `client_id` and `client_secret` between the IdP and M
 
 If the wrong authentication method is configured for the Mendix Platform as a client to your IdP, login fails.
 
-Mendix supports two client authentication methods: `client_secret_post` (client credentials in the payload) or `client_secret_basic` (basic authentication; credentials in the HTTP authorization header). If the IdP indicates support for both methods at the well-known endpoint, Mendix uses `client_secret_post`. If the client configuration at your IdP for the Mendix Platform sets a different client authentication method, the IdP may reject Mendix to authenticate itself as a client to the `/token` endpoint, and the delegated login fails.
+Mendix supports three client authentication methods: `client_secret_post`, `client_secret_basic`, and `private_key_jwt`. If the IdP indicates support for both `client_secret_post` and `client_secret_basic` methods at the well-known endpoint, Mendix uses `client_secret_post`. If the client configuration at your IdP for the Mendix Platform sets a different client authentication method, the IdP may reject Mendix to authenticate itself as a client to the `/token` endpoint, and the delegated login fails.
 
 ### Incorrect Conditional Access Policies
 

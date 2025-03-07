@@ -88,14 +88,14 @@ One-way navigable associations are represented by a dashed arrow in Domain model
 | Value | Description |
 | --- | --- |
 | Delete {name of entity} object but keep {name of other entity} object(s) *(default)* | When an object is deleted, the associated object(s) are not deleted. |
-| Delete {name of entity} object and {name of other entity} object(s) as well<sup><small>[1]</small></sup> | When an object is deleted, the associated object(s) are also deleted. |
-| Delete {name of entity} object only if it is not associated with {name of other entity}<sup><small>[2]</small></sup> object(s) | An object can only be deleted if it is not associated with any other object(s). |
+| Delete {name of entity} object and {name of other entity} object(s) as well¹ | When an object is deleted, the associated object(s) are also deleted. |
+| Delete {name of entity} object only if it is not associated with {name of other entity}² object(s) | An object can only be deleted if it is not associated with any other object(s). |
 
-<sup><small>[1]</small></sup> This delete behavior is used if you want to delete any associated **Profile** when a **Customer** is deleted:
+¹ This delete behavior is used if you want to delete any associated **Profile** when a **Customer** is deleted:
 
 {{< figure src="/attachments/refguide9/modeling/domain-model/associations/association-properties/association-delete-both.png" class="no-border" >}}
 
-<sup><small>[2]</small></sup> This delete behavior is used if you want to be able to delete a **Customer** only if it is not associated with any **Order**. In this case you will be asked to enter an **Error message if 'Customer' object cannot be deleted** to inform the end user that this customer cannot be deleted and perhaps suggest a next course of action:
+² This delete behavior is used if you want to be able to delete a **Customer** only if it is not associated with any **Order**. In this case you will be asked to enter an **Error message if 'Customer' object cannot be deleted** to inform the end user that this customer cannot be deleted and perhaps suggest a next course of action:
 
 {{< figure src="/attachments/refguide9/modeling/domain-model/associations/association-properties/association-prevent-delete.png" class="no-border" >}}
 

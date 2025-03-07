@@ -14,6 +14,38 @@ There are separate release notes for other deployment targets; for more informat
 
 For information on the current status of deployment to Mendix Cloud and any planned releases, see [Mendix Status](https://status.mendix.com/).
 
+## 2025
+
+### February 27, 2025
+
+#### Improvements
+
+* We have added a validation mechanism for pipeline designs, which prevents users from deleting a design if any pipelines using that design are currently running. For more information, see [Pipelines: Editing a Pipeline Design](/developerportal/deploy/pipelines/#edit-pipeline). 
+* You can now access the **Details** page of a pipeline at any point, also while the pipeline is running. For more information, see [Pipelines: Run Results](/developerportal/deploy/pipelines/#run-results).
+
+## 2025
+
+### February 20, 2025
+
+#### Improvements
+
+* We have updated the custom JMX metrics prefix from `jmx` to `mx`. This change ensures that these metrics are not indexed as `custom metrics` in Datadog.
+
+### February 2, 2025
+
+#### New Features
+
+* We have added a number of new features which are all available as part of the [new UI](/developerportal/deploy/environments-redesign/). These are:
+
+    * Redesigned the **Environment Details** page to improve functionality and enhance the user experience.
+    * Added staging support for apps in the deploy wizard.
+    * Added the ability to compare and edit model options across environments.
+    * Redesigned the **Environments** page for Free Apps.
+
+#### Improvements
+
+* Based on user feedback, the [new UI](/developerportal/deploy/environments-redesign/) now also contains UX improvements to the **Environments Overview** page for paid apps.
+
 ## 2024
 
 ### December 12, 2024

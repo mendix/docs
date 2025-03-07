@@ -8,16 +8,20 @@ description: "Describes UI Recommender in Mendix Studio Pro."
 ## Introduction
 
 {{% alert color="info" %}}
- UI Recommender is available in Studio Pro 10.18 and above. 
- 
- UI Recommender is enabled by default. You can disable it via **Edit** > **Preferences** > **Maia** > **In-Editor Recommender** > **Enable for Page Editor**. 
+UI Recommender is available in Studio Pro 10.18 and above. 
+{{% /alert %}}
+
+{{% alert color="info" %}}
+UI Recommender works both online and offline. No internet connection or signing-in is required.
 {{% /alert %}}
 
 UI Recommender allows you to easily add new widgets to a page in Mendix Studio Pro without losing the context of what you are currently working on.
 
 ## Using UI Recommender
 
-UI Recommender is only available in **Design Mode**. It is displayed as a small blue plus sign in the page editor. To use UI Recommender, do the following:
+ UI Recommender is enabled by default. You can disable it via **Edit** > **Preferences** > **Maia** > **In-Editor Recommender** > **Enable for Page Editor**. 
+
+UI Recommender is displayed as a small blue plus sign in the page editor. It is only available in **Design Mode**. To use UI Recommender, do the following:
 
 1. Open the UI Recommender dialog box in the following way:
 

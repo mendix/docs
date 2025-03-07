@@ -5,13 +5,37 @@ weight: 9
 description: "Native Template 7 release notes."
 ---
 
-## 7.0.19 {#718}
+## 7.0.24 {#724}
+
+**Release date: January 15, 2025**
+
+* We resolved an issue where remote JavaScript debugging failed in a custom-built Mendix Native Developer App, leading to crashes when enabling “Remote JS Debugging.” The problem was caused by Firebase services not being initialized properly during the build process. Firebase dependencies are now only included when explicitly required by the application.
+
+## 7.0.23 {#723}
+
+**Release date: January 7, 2025**
+
+* We updated App Center's Xcode version to 15.4.
+
+## 7.0.22 {#722}
+
+**Release date: January 3, 2025**
+
+* We updated the implementation of the **registerReceiver** method to align with Android SDK 34 and above.
+
+## 7.0.20 {#720}
+
+**Release date: December 23, 2024**
+
+* We updated **min sdk** to 23 on android.
+
+## 7.0.19 {#719}
 
 **Release date: October 1, 2024**
 
 ### Improvements
 
-* We have updated `react-native-permissions` to version 3.6.1.
+* We updated `react-native-permissions` to version 3.6.1.
 
 ## 7.0.17 {#717}
 

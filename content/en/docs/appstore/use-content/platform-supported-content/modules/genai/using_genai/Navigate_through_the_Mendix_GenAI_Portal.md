@@ -1,5 +1,5 @@
 ---
-title: "How to navigate through the Mendix GenAI Portal as a developer"
+title: "Navigate through the Mendix GenAI Portal"
 #url: Set the relative URL of the document; after the name of the main directory/product the document is in, use the document title; example for document titled my-new-page.md, in refguide directory: /refguide/my-new-page/
 #linktitle: Enter a short title to be used in the left side menu; increases readability and navigation through the menu
 #weight: Enter the position of the document compared to other 'child' documents at the same level; number by 10 (for first), 20, 30, etc. for easy ordering of other documents in the future if necessary; don't add brackets or quotation marks
@@ -9,77 +9,118 @@ title: "How to navigate through the Mendix GenAI Portal as a developer"
 
 ## Introduction
 
-Mendix offers GenAI resources to make working with GenAI easier! This document describes everything you need to know about the GenAI resources we offer!
+The Mendix GenAI portal is the location for Mendix GenAI resources. The portal can be found on [genai.home.mendix.com](https://genai.home.mendix.com/). 
 
-## Mendix GenAI resources
+Mendix GenAI resource packs on Mendix Cloud provide access to Generative AI technology provisioned & hosted by Mendix: 
 
-Mendix offers the following GenAI resources:
+- GenAI Model Resource Packs provide access to model resources: Anthropic's  Claude & Cohere's Embed. 
+- GenAI Knowledge Base Resource Packs provide the infrastructure to deliver RAG architecture & other GenAI use cases that need a vector database. 
 
-### Compute - Embeddings Generation
+GenAI resource packs accelerate the delivery of full Generative AI solutions within Mendix apps that seamlessly integrate with GenAI technology. Learn more about [Mendix Cloud GenAI Resource Packs](https://docs.mendix.com/appstore/modules/genai/mx-cloud-genai/resource-packs/). To get started with a GenAI-infused Mendix application see: [creating a chatbot using the AI Bot Starter App](https://docs.mendix.com/appstore/modules/genai/using-genai/starter-template/) or [building a GenAI app from scratch with the Blank GenAI App](https://docs.mendix.com/appstore/modules/genai/using-genai/blank-app/). 
 
-Embeddings generation servers are designed to convert various types of data, such as text or images, into vector representations. These vectors, known as embeddings, are essential for numerous machine learning tasks.
 
-**Uses:**
 
-- Similarity Search: Finding similar items in a dataset.
+## Resource Details 
 
-- Clustering: Grouping similar items together.
+### Settings
 
-- Classification: Categorizing items based on their embeddings.
+The settings overview contains the details of a GenAI resource. Here is more information about: 
 
-### Compute - Text Generation
+- The region where the resource is hosted 
+- Cloud provider 
+- Type of resource (Text Generation, Embeddings, Knowledgebase) 
+- Model (if applicable) 
+- Environment (test, acceptance, production) 
+- Associated resources (embeddings resources for knowledge bases and the other way around) [learn more about embeddings](https://docs.mendix.com/appstore/modules/genai/rag/#embedding-vector)
 
-Text generation servers are used to create human-like text based on given inputs. This capability is crucial for applications that require natural language generation.
 
-**Uses:**
+### Team
 
-- Chatbots: Providing conversational responses.
+The Team overview can be used to manage who has access to the GenAI resource. All users in this overview have access to the resource in the GenAI resource portal and can create new keys or invite new users. New users can be added to a resource via the Add User button. 
 
-- Content Creation: Generating articles, summaries, or other written content.
+> Currently it is only possible to invite people within the same organization.
 
-- Code Generation: Assisting in writing code based on natural language descriptions.
 
-### Knowledge Base
+## Keys
 
-Knowledge base servers store and manage structured and unstructured data, providing quick access to information. They are essential for applications that need to retrieve and use knowledge efficiently.
 
-**Uses:**
+The keys overview is the location to manage configuration keys for the resource. Resource keys provide programmatic access to the GenAI resources. From the key overview it is possible to create new keys and revoke existing keys.  
 
-- Question Answering Systems: Providing answers to user queries.
+To create a new key: 
 
-- Semantic Search: Enabling search based on the meaning of the query rather than just keywords.
+1. Click Create Key. 
+2. Add a description. 
+3. Save the changes.  
+4. A pop-up message will appear with the key. Make sure to safely store the key, since it is only shown once. 
 
-- Information Retrieval: Accessing specific information quickly and accurately.
+After key creation, it can be used in the Mendix application through the Mendix Cloud GenAI Connector which is part of the GenAI For Mendix bundle. 
 
-#### Integration with Embeddings: 
-The knowledge base uses embeddings generated by the Compute - Embeddings Generation servers. These embeddings help in organizing and retrieving information more effectively by understanding the semantic relationships between different pieces of data.
+When creating a key for a knowledgebase, an embeddings key is also automatically created.
 
-Read more about [using knowledge bases](#upload-data-to-your-knowledge-base)
 
-## Manage keys in the Mendix GenAI portal
+## Content (Knowledgebases)
 
-To run your [GenAI application](https://docs.mendix.com/appstore/modules/genai/using-genai/), you need to create a key. On the GenAI resource details page you will find an keys option to generate new keys.  
+The Content page supports uploading documents to the knowledgebase. 
 
-1. Click Create Key.
+We offer different options for adding data to a Knowledge Base:  
 
-2. Give the key a description.
+1. Add Files (Like .TXT or .PDF) 
+2. Connect to a MX Data Source. 
 
-3. Make sure to safely store your key, we only show it once.
+### Add Files 
 
-Once you have created a key, you can import it in your application (add link to a how to of one of the templates)
+It is possible to directly upload documents in the GenAI portal. Before uploading documents, it is possible to optionally add metadata.  
 
-## Using the Knowledge base
+> Only .PDF and .TXT files are supported. 
 
-In the knowledge base you can feed documents and files to your GenAI resource. To interpret the information of the knowledge base, an embeddings resource is connected to extract the information from the knowledge base to interpret the data so it can be accessed by the model. Currently we only support manual uploading files, but in the future we will support multiple of ther options: Connect to a MX Data source, Browse the public web, Sharepoint, Salesforce and Confluence.
+#### Metadata 
 
-### Metadata
-You can add metadata to the files in your knowledge base, these will be used to make it easier to browse though the documents.
+Metadata is additional information that can be attached to data in a GenAI knowledge base. Unlike the actual content, metadata provides structured details that help in organizing, searching, and filtering information more efficiently. It helps with managing large datasets by allowing to retrieve relevant data based on specific attributes rather than relying solely on similarity-based searches.  
+
+Metadata consists of key-value pairs and is additional information, which is connected but not part of the vectorization itself.  
+
+An example is a GenAI knowledge base to store customer support tickets. Each ticket could be associated with metadata such as: Ticket Type, Status, Priority. Instead of performing a similarity-based search on ticket descriptions, a user can filter for only “bug” tickets that have the status “solved”. 
+
+### Connect to a MX Data Source. 
+
+It is possible to upload data directly from Mendix to the Knowledge Base. To see how this can be done, please see [add data chunks to your knowledge base](https://docs.mendix.com/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/#add-data-chunks-to-your-knowledge-base). 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Read More
 
-* Getting started with GenAI {Link 1}
-* Getting started with the Mendix GenAI templates
-* Maia, and how she turned from a bee to a AI bot
-
-{Make sure this section contains a bulleted list only with explanations where necessary. Do not just repeat cross-references you used throughout the document, but list useful supplementary links here.}
+* [Mendix Cloud GenAI Resource Packs](https://docs.mendix.com/appstore/modules/genai/mx-cloud-genai/resource-packs/)

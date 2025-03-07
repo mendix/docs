@@ -1,10 +1,9 @@
 ---
-title: "Navigate through the Mendix GenAI Portal"
-#url: Set the relative URL of the document; after the name of the main directory/product the document is in, use the document title; example for document titled my-new-page.md, in refguide directory: /refguide/my-new-page/
-#linktitle: Enter a short title to be used in the left side menu; increases readability and navigation through the menu
-#weight: Enter the position of the document compared to other 'child' documents at the same level; number by 10 (for first), 20, 30, etc. for easy ordering of other documents in the future if necessary; don't add brackets or quotation marks
-#description: "Set a description with a maximum of 140 characters; this should describe what the goal of the document is, and it can be different from the document introduction; this is optional, and it can be removed"
-#draft: Set to true if page should not appear in production
+title: "Navigate through the Mendix Cloud GenAI Portal"
+url: /appstore/modules/genai/mx-cloud-genai/Navigate-MxGenAI/
+linktitle: "Mendix Cloud GenAI Portal"
+description: "Describes the steps to take when navigating through the Mendix Cloud GenAI Portal."
+weight: 30
 ---
 
 ## Introduction

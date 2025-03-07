@@ -8,14 +8,14 @@ weight: 30
 
 ## Introduction
 
-The Mendix GenAI portal is the location for Mendix GenAI resources. The portal can be found on [genai.home.mendix.com](https://genai.home.mendix.com/). 
+The Mendix Cloud GenAI portal is the location for the Mendix Cloud GenAI resources. The portal can be found on [genai.home.mendix.com](https://genai.home.mendix.com/). 
 
-Mendix GenAI resource packs on Mendix Cloud provide access to Generative AI technology provisioned & hosted by Mendix: 
+Mendix GenAI resource packs on Mendix Cloud provide access to Generative AI technology provisioned and hosted by Mendix: 
 
 - GenAI Model Resource Packs provide access to model resources: Anthropic's  Claude & Cohere's Embed. 
 - GenAI Knowledge Base Resource Packs provide the infrastructure to deliver RAG architecture & other GenAI use cases that need a vector database. 
 
-GenAI resource packs accelerate the delivery of full Generative AI solutions within Mendix apps that seamlessly integrate with GenAI technology. Learn more about [Mendix Cloud GenAI Resource Packs](https://docs.mendix.com/appstore/modules/genai/mx-cloud-genai/resource-packs/). To get started with a GenAI-infused Mendix application see: [creating a chatbot using the AI Bot Starter App](https://docs.mendix.com/appstore/modules/genai/using-genai/starter-template/) or [building a GenAI app from scratch with the Blank GenAI App](https://docs.mendix.com/appstore/modules/genai/using-genai/blank-app/). 
+GenAI resource packs accelerate the delivery of full Generative AI solutions within Mendix apps that seamlessly integrate with GenAI technology. Learn more about [Mendix Cloud GenAI Resource Packs](https://docs.mendix.com/appstore/modules/genai/mx-cloud-genai/resource-packs/) and the [Mendix Cloud GenAI Connector](/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/). To get started with a GenAI-infused Mendix application see: [creating a chatbot using the AI Bot Starter App](https://docs.mendix.com/appstore/modules/genai/using-genai/starter-template/) or [building a GenAI app from scratch with the Blank GenAI App](https://docs.mendix.com/appstore/modules/genai/using-genai/blank-app/). 
 
 
 

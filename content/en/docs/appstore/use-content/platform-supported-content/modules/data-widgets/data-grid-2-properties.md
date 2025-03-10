@@ -69,15 +69,13 @@ The number of rows to display per page. When **Pagination** type is **Virtual sc
 
 #### Pagination
 
-#### Position of Pagination
-
 Defines the type of pagination. By default, the data grid groups rows into pages, and employs buttons to navigate between pages.
 
 When the property is set to **Virtual scrolling**, then the navigation buttons are hidden and the data grid scrolling is used as a trigger to show the next chunk of data.
 
 #### Show Paging Buttons
 
-This property controls the visibility of navigation buttons. If set to "Auto", navigation buttons are only visible when the number of elements in the data source exceeds the page size.
+This property controls the visibility of navigation buttons. If set to **Always**, the pagination buttons are always visible. If set to **Auto**, the pagination buttons are only visible when the number of elements in the data source exceeds the page size.
 
 #### Empty List Message
 

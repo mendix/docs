@@ -65,13 +65,13 @@ If set to **No**, then all column filters will be hidden.
 
 #### Page Size
 
-The number of rows to display per page. When **Pagination** type is **Virtual scrolling**, then this number defines how many rows added to the end when the grid is scrolled to the bottom.
+The number of rows to display per page. When **Pagination** type is **Virtual scrolling**, then this number defines how many rows are added to the end when the grid is scrolled to the bottom.
 
 #### Pagination
 
-Defines the type of pagination. By default, the data grid groups rows into pages, and employs buttons to navigate between pages.
+Defines the type of pagination. By default, the data grid groups rows into pages and employs buttons to navigate between pages.
 
-When the property is set to **Virtual scrolling**, then the navigation buttons are hidden and the data grid scrolling is used as a trigger to show the next chunk of data.
+When the property is set to **Virtual scrolling**, the navigation buttons are hidden and the data grid scrolling is used as a trigger to show the next chunk of data.
 
 #### Show Paging Buttons
 

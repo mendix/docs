@@ -82,7 +82,7 @@ It is possible to prepare the prerequisite installers beforehand so the setup pr
 1. Create a folder for the Mendix Studio Pro installer.
 2. Download the latest **[Mendix Studio Pro installer](https://marketplace.mendix.com/link/studiopro/)** and move it into the folder created.
 3. Create a folder in the same location where the Mendix Studio Pro installer was moved. Name this folder *Dependencies*.
-4. Download the prerequisites listed in the **[Troubleshooting](https://docs.mendix.com/refguide9/install/#troubleshooting)** section above and move them into the **Dependencies** folder.
+4. Download the prerequisites listed in the **[Troubleshooting](#troubleshooting)** section above and move them into the **Dependencies** folder.
 5. Rename the following dependencies:
    1. Microsoft .NET Desktop Runtime
       * On x64, rename *windowsdesktop-runtime-8.0.10-win-x64.exe* to *windowsdesktop-runtime-8.0-x64.exe*

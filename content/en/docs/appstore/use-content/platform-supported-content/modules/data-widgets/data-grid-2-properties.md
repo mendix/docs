@@ -127,6 +127,10 @@ This flag controls column hiding for the entire data grid. If set to **No**, the
 
 This property sets the entity attribute that is used to store custom visual settings for the data grid.
 
+#### Store Filters
+
+This property determines whether the filters applied to the data grid should be stored in the user's personalization settings. When enabled, the filters will be saved and restored automatically for the user.
+
 #### On Change
 
 This property sets the action to be performed when the **Attribute** value is changed.

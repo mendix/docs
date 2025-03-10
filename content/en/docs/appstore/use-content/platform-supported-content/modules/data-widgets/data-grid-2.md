@@ -97,7 +97,7 @@ If a column contains interactive elements such as buttons, this might lead to un
 This widget does not support [system texts](/refguide/system-texts/), meaning is not possible to translate its content to another language.
 {{% /alert %}}
 
-In the new data grid we offer two types of pagination: **Paging Buttons** and **Virtual Scrolling**.
+In the new data grid we offer three types of pagination: **Paging Buttons**, **Virtual Scrolling**, and **Load More**.
 
 ### Paging Buttons
 
@@ -502,6 +502,16 @@ In order to select an attribute, you need to surround the new Data grid with a D
 Here is an example of a configuration containing an On change action:
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/configuration.png" alt="Example of a configuration containing on change action" class="no-border" >}}
+
+
+### Saving Personalization Settings
+
+To ensure that the personalization settings are saved, you must configure either a microflow that saves the attribute or select the "Save changes" action for the "On change" event. This step is crucial to make sure that any changes made by the user to the data grid's configuration, such as column visibility or filter settings, are persisted.
+
+1. **Microflow**: Create a microflow that saves the attribute containing the personalized configuration. This microflow should be triggered whenever there is a change in the configuration.
+2. **Save Action**: Alternatively, you can select the "Save changes" action for the "On change" event. This action will automatically save the changes to the attribute without the need for a custom microflow.
+
+By implementing one of these methods, you ensure that the user's personalized settings are stored and restored correctly, providing a consistent and customized experience.
 
 ## Performance
 

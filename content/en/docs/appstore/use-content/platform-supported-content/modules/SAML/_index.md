@@ -153,6 +153,8 @@ There are different versions of the SAML module, depending on which version of M
 
         Mendix 10 does not support the 2.0 version of the Atlas UI, so you should never use the even-numbered (Atlas 2.0-compatible) SAML patch releases with your Mendix 10 app.
 
+    {{% todo %}} Do we need to add anything here for Mendix 11? {{% /todo %}}
+
 3. To download the required release, in the **Releases** tab, find the release that is compatible with your app per the guidelines in the **Documentation** tab, and then click the **Download** button by the number of the release.
 4. Follow the instructions in [How to Use Marketplace Content](/appstore/use-content/) to import the SAML module into your app.
 
@@ -175,6 +177,7 @@ By default, the SAML module will be installed as the **SAML20** module in your a
             Only use this setting if you are using SAML on a hybrid mobile app. Note that this functionality also requires mobile authentication tokens to be enabled in your IdP Configuration as well as changes to the hybrid app package as described in [How To Implement SSO on a Hybrid App with Mendix and SAML](/howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/).
 
         {{% alert color="warning" %}}Hybrid mobile apps are not available in Mendix 10.{{% /alert %}}
+        {{% todo %}} How about in Mendix 11? {{% /todo %}}
 
 5. Sign in to the application and configure the SAML module as described in the [Configuration SAML Module](#config) section.
 

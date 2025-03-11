@@ -97,6 +97,10 @@ If a column contains interactive elements such as buttons, this might lead to un
 This widget does not support [system texts](/refguide/system-texts/), meaning is not possible to translate its content to another language.
 {{% /alert %}}
 
+{{% alert color="warning" %}}
+When using a microflow or nanoflow as a datasource, paging parameters are not available in the data grid. As a workaround, you can create your own custom paging buttons and pass the current page data into your microflow/nanoflow datasource parameters.
+{{% /alert %}}
+
 In the new data grid we offer three types of pagination: **Paging Buttons**, **Virtual Scrolling**, and **Load More**.
 
 ### Paging Buttons

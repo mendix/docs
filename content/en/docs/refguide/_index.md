@@ -18,7 +18,7 @@ The *Mendix Studio Pro 11 Guide* covers important topics concerning [Studio Pro]
 
 Studio Pro runs on both Windows and macOS. Before installing Studio Pro 11, please read [System Requirements](/refguide/system-requirements/). For information on how to install Studio Pro, see [Installing Mendix Studio Pro](/refguide/install/).
 
-If you have been using Studio Pro version 10, Mendix recommends reading [Upgrading from Mendix Studio Pro 10 to 11](/refguide/upgrading-from-9-to-10/).
+If you have been using Studio Pro version 10, Mendix recommends reading [Upgrading from Mendix Studio Pro 10 to 11](/refguide/upgrading-from-9-to-10/){{% todo %}} Update doc URL {{% /todo %}}.
 
 If you are looking to build your first app, check out the [Quick Starts](/quickstarts/).
 

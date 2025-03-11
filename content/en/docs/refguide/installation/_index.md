@@ -11,6 +11,6 @@ description_list: true
 
 Before installing Studio Pro 11, it is important to understand the [System Requirements](/refguide/system-requirements/). 
 
-If you have been using Studio Pro 10, see [Upgrading from Mendix Studio Pro 10 to 11](/refguide/upgrading-from-9-to-10/).
+If you have been using Studio Pro 10, see [Upgrading from Mendix Studio Pro 10 to 11](/refguide/upgrading-from-9-to-10/){{% todo %}} Update doc URL {{% /todo %}}.
 
 ## Documents in This Category

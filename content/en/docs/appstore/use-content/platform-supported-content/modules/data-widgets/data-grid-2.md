@@ -510,14 +510,16 @@ Here is an example of a configuration containing an On change action:
 
 ### Saving Personalization Settings
 
-To save settings, first choose how settings will be stored. The first option is to store settings in an attribute. The second option is to use local storage, which requires no configuration but stores data "in browser", which may be limiting.
+To save settings, first choose how settings will be stored:
+* The first option is to store settings in an attribute. 
+* The second option is to use local storage, which requires no configuration but stores data 'in browser', which can be limiting depending on your use case.
 
-In case of an attribute, to ensure that the personalization settings are saved, you must configure either a microflow that saves the attribute or select the "Save changes" action for the "On change" event. This step is crucial to make sure that any changes made by the user to the data grid's configuration, such as column visibility or filter settings, are persisted.
+In case of an attribute, to ensure that the personalization settings are saved, you must configure either a microflow that saves the attribute or select the **Save changes** action for the **On change** event. This step ensures that any changes made by the user to the data grid's configuration (such as column visibility or filter settings) are persisted. Here is some additional context to guide your decision:
 
-1. **Microflow**: Create a microflow that saves the attribute containing the personalized configuration. This microflow should be triggered whenever there is a change in the configuration.
-2. **Save Action**: Alternatively, you can select the "Save changes" action for the "On change" event. This action will automatically save the changes to the attribute without the need for a custom microflow.
+* **Microflow** — Create a microflow that saves the attribute containing the personalized configuration. This microflow should be triggered whenever there is a change in the configuration.
+* **Save Changes action** — Select the **Save changes** action for the **On change** event. This action will automatically save the changes to the attribute without the need for a custom microflow.
 
-By implementing one of these methods, you ensure that the user's personalized settings are stored and restored correctly, providing a consistent and customized experience.
+By implementing one of the methods above, you ensure that the user's personalized settings are stored and restored correctly, providing a consistent and customized experience.
 
 ## Performance
 

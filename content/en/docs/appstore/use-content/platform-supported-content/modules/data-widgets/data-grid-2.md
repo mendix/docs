@@ -120,11 +120,11 @@ The **Virtual Scrolling** option forces the data grid to show a fixed amount of 
 
 ### Load More
 
-This option functions similarly to the **Virtual Scrolling** feature, but instead of automatically loading data as the end-user scrolls, a button is displayed at the end of the list of items. Clicking this button enables the end-user to fetch more items.
+This option functions similarly to the **Virtual Scrolling** feature. However, instead of automatically loading data as the end-user scrolls, a button is displayed at the end of the list of items. Clicking this button enables the end-user to fetch more items.
 
 ## Columns
 
-In Data Grid you can choose what you want to render into columns. This can be an attribute, dynamic text, or even a combination of widgets (custom content). To choose what you want to render, open a column in the column list and select the appropriate option according to your needs.
+In a data grid you can choose what you want to render into columns. This can be an attribute, dynamic text, or even a combination of widgets (custom content). To choose what you want to render, open a column in the column list and select the appropriate option according to your needs.
 
 Here is an example of column properties:
 

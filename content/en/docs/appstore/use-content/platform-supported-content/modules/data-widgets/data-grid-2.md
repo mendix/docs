@@ -98,7 +98,7 @@ This widget does not support [system texts](/refguide/system-texts/), meaning is
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-When using a microflow or nanoflow as a datasource, paging parameters are not available in the data grid. As a workaround, you can create your own custom paging buttons and pass the current page data into your microflow/nanoflow datasource parameters.
+When using a microflow or nanoflow as a data source, paging parameters are not available in the data grid. As a workaround, you can create your own custom paging buttons and pass the current page data into your microflow or nanoflow data source parameters.
 {{% /alert %}}
 
 In the new data grid we offer three types of pagination: **Paging Buttons**, **Virtual Scrolling**, and **Load More**.

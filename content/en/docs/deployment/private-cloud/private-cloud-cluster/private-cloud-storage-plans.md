@@ -529,7 +529,7 @@ If the SQL Server instance is an Azure SQL database, you can use [managed identi
 
 SQL server databases are automated, on-demand databases. The **SQL Server** plan offers a good balance between automation, ease of use, and security when using Microsoft SQL Server or Azure SQL. If you would like to have more control over database configuration, consider using the [JDBC plan](#database-jdbc) instead.
 
-If your app is using Mendix 10.10 (or a later version) consider using the [Azure managed identity authentication](#database-sqlserver-azwi) instead, for additional security.
+If your app is using Mendix 10.10 (or above), consider using the [Azure managed identity authentication](#database-sqlserver-azwi) instead, for additional security.
 
 ##### Prerequisites
 
@@ -629,7 +629,7 @@ This section provides technical details on how managed identity authentication w
 
 ##### Limitations
 
-* To use this feature, your app needs to be upgraded to Mendix 10.10 (or later), and your namespace needs to use Mendix Operator version 2.17.0 (or later).
+* To use this feature, your app needs to be upgraded to Mendix 10.10 (or above), and your namespace needs to use Mendix Operator version 2.17.0 (or above).
 
 ##### Environment Isolation
 
@@ -1628,7 +1628,7 @@ In the Amazon S3 plan configuration, enter the following details:
 
 ### Azure Blob Storage {#blob-azure}
 
-If you would like to have Mendix Operator with automation, and have full isolation between environments, use the [Azure managed identity authentication](#blob-azure-azwi) option. This option works with apps using Mendix 10.10 (or a later version).
+If you would like to have Mendix Operator with automation, and have full isolation between environments, use the [Azure managed identity authentication](#blob-azure-azwi) option. This option works with apps using Mendix 10.10 (or above).
 
 If you would like to simply share a container between environments, or to manually create a container and account per environment, use the [static credentials](#blob-azure-static) option.
 
@@ -1651,7 +1651,7 @@ This section provides technical details on how managed identity authentication w
 
 ##### Limitations
 
-* To use this feature, your app needs to be upgraded to Mendix 10.10 (or later), and your namespace needs to use Mendix Operator version 2.17.0 (or later).
+* To use this feature, your app needs to be upgraded to Mendix 10.10 (or above), and your namespace needs to use Mendix Operator version 2.17.0 (or above).
 
 ##### Environment Isolation
 
@@ -1725,7 +1725,7 @@ Azure workload identities allow a Kubernetes Service Account to authenticate its
 
 This basic, on-demand option allows you to attach an existing Azure Blob Storage container and credentials (account name and secret key) to one or more environments. All apps (environments) will use the same Azure Blob Storage container and credentials.
 
-If your app is using Mendix 10.10 (or a later version) consider using the [Azure managed identity authentication](#blob-azure-azwi) instead, for additional security.
+If your app is using Mendix 10.10 (or above) consider using the [Azure managed identity authentication](#blob-azure-azwi) instead, for additional security.
 
 ##### Prerequisites
 
@@ -2148,7 +2148,7 @@ Azure recommends using [managed identity authentication](https://learn.microsoft
 This guide explains how to set up and use a database and blob file storage plan using Azure best practices.
 
 {{% alert color="warning" %}}
-This feature requires an Mendix app based on Mendix 10.10 (or later) and Mendix Operator version 2.17 (or later).
+This feature requires an Mendix app based on Mendix 10.10 (or above) and Mendix Operator version 2.17 (or above).
 {{% /alert %}}
 
 Before you begin, you need to create an AKS cluster and install Mendix for Private Cloud in that cluster.

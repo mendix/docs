@@ -20,6 +20,8 @@ If your main line is Studio Pro version 9.24.28 or above and your team role is S
 
 Mendix recommends to combine a migration to Git with an upgrade to Mendix 10, as the advantages of Git in Mendix 9 are limited. For more details on this recommendation, see the [Recommendation on Avoiding Git Issues](/refguide/troubleshoot-repository-size/#recommendation) section in *Troubleshooting Repository Size*.
 
+{{% todo %}} Do we need to mention anything about Mendix 11 here? {{% /todo %}}
+
 ## Apps Eligible for Migration
 
 {{% alert type="info" %}}

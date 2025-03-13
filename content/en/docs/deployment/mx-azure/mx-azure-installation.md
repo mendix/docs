@@ -22,7 +22,7 @@ Before starting the installation and implementation process, make sure that you 
 {{< figure src="/attachments/deployment/mx-azure/coadmin-permission.png" class="no-border" >}}
 
 * Familiarize yourself with the [Private Cloud](https://docs.mendix.com/developerportal/deploy/private-cloud/) concepts.
-* Ensure that your Mendix Studio Pro is in version 10.10 or newer.
+* Ensure that your Mendix Studio Pro is in version 10.10 or above.
 * As an optional best practice, add multiple cluster manager to your clusters.
 
 ## Creating an Azure Cluster

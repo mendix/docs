@@ -23,24 +23,30 @@ GenAI resource packs accelerate the delivery of full Generative AI solutions wit
 
 ### Settings
 
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/Settings.png" >}}
+
 The `Settings` tab contains the details of a GenAI resource. Here is more information about: 
 
 - The region where the resource is hosted 
-- Cloud provider 
+- Cloud provider (e.g. AWS)
 - Type of resource (Text Generation, Embeddings, Knowledge Base) 
-- Model (if applicable) 
+- Model (e.g. Anthropic Claude Sonnet 3.5) 
 - Environment (test, acceptance, production) 
 - Associated resources (embeddings resources for knowledge bases and the other way around) [learn more about embeddings](https://docs.mendix.com/appstore/modules/genai/rag/#embedding-vector)
 
-
 ### Team
 
-The `Team` tab can be used to manage who has access to the Mendix Cloud GenAI resource. All users listed in this overview have access to the resource in the GenAI resource portal and can create new keys or invite new users. New users can be added to a resource via the Add User button. 
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/Team.png" >}}
+
+The `Team` tab can be used to manage who has access to the Mendix Cloud GenAI resource. All users listed in this overview have access to the resource in the GenAI resource portal and can create new keys or invite new users. New users can be added to a resource via the Add User button. They can be removed by clicking the 'Remove' button next to their name in the overview.
 
 {{% alert color="info" %}} Currently it is only possible to invite people within the same organization. {{% /alert %}} 
 
 
 ### Keys
+
+
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/Keys.png" >}}
 
 The keys overview is the location to manage configuration keys for the resource. Resource keys provide programmatic access to the GenAI resources. From the key overview it is possible to create new keys and revoke existing keys.  
 
@@ -49,25 +55,29 @@ To create a new key:
 1. Click Create Key. 
 2. Add a description. 
 3. Save the changes.  
-4. A pop-up message will appear with the key. Make sure to safely store the key, since it is only shown once. 
+4. A pop-up message will appear with the key. Make sure to safely store the key, since it is only shown once.
+
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/GenerateKey.png" >}}
 
 After key creation, it can be used in the Mendix application through the Mendix Cloud GenAI Connector which is part of the GenAI For Mendix bundle. 
 
-When creating a key for a knowledge base, an embeddings key is also automatically created.
+When creating a key for a knowledge base, an embeddings key is automatically created and indicated as such in the keys overview.
 
 
 ### Content (Only for Knowledge Bases)
 
-The Content page supports uploading documents to the knowledge base. 
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/GenerateKey.png" >}}
 
-We offer different options for adding data to a Knowledge Base:  
+On the content page you can find information about how to add knowledge to your knowledge base resource and manage the knowledge base's content. 
+
+We currently offer the following options for adding data to a Knowledge Base:  
 
 1. Add Files (Like .TXT or .PDF) 
-2. Connect to a MX Data Source. 
+2. Add data from a Mendix application. 
 
 #### Add Files 
 
-It is possible to directly upload documents in the GenAI portal. Before uploading documents, it is possible to optionally add metadata.  
+When selecting this option, you can directly upload documents in the GenAI portal. Before the upload, there also is the option to add metadata. You can find more information about metadata in the next section.
 
 {{% alert color="info" %}} Only .PDF and .TXT files are supported. {{% /alert %}} 
 
@@ -81,4 +91,4 @@ An example is a GenAI knowledge base to store customer support tickets. Each tic
 
 #### Add data from a Mendix application
 
-It is possible to upload data directly from Mendix to the Knowledge Base. To see how this can be done, please see [add data chunks to your knowledge base](https://docs.mendix.com/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/#add-data-chunks-to-your-knowledge-base). 
+It is possible to upload data directly from Mendix to the Knowledge Base. In order to do that, several operations of the Mendix Cloud GenAI connector are required. Please see [add data chunks to your knowledge base](https://docs.mendix.com/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/#add-data-chunks-to-your-knowledge-base) for a more detailed guide on how this works. 

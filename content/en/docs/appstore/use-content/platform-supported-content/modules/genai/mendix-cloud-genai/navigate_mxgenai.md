@@ -27,7 +27,7 @@ The `Settings` tab contains the details of a GenAI resource. Here is more inform
 
 - The region where the resource is hosted 
 - Cloud provider 
-- Type of resource (Text Generation, Embeddings, Knowledgebase) 
+- Type of resource (Text Generation, Embeddings, Knowledge Base) 
 - Model (if applicable) 
 - Environment (test, acceptance, production) 
 - Associated resources (embeddings resources for knowledge bases and the other way around) [learn more about embeddings](https://docs.mendix.com/appstore/modules/genai/rag/#embedding-vector)
@@ -53,12 +53,12 @@ To create a new key:
 
 After key creation, it can be used in the Mendix application through the Mendix Cloud GenAI Connector which is part of the GenAI For Mendix bundle. 
 
-When creating a key for a knowledgebase, an embeddings key is also automatically created.
+When creating a key for a knowledge base, an embeddings key is also automatically created.
 
 
-### Content (Only for Knowledgebases)
+### Content (Only for Knowledge Bases)
 
-The Content page supports uploading documents to the knowledgebase. 
+The Content page supports uploading documents to the knowledge base. 
 
 We offer different options for adding data to a Knowledge Base:  
 

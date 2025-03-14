@@ -23,7 +23,7 @@ GenAI resource packs accelerate the delivery of full Generative AI solutions wit
 
 ### Settings
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/Settings.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/GenAIResource_Settings.png" >}}
 
 The `Settings` tab contains the details of a GenAI resource. Here is more information about: 
 
@@ -36,7 +36,7 @@ The `Settings` tab contains the details of a GenAI resource. Here is more inform
 
 ### Team
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/Team.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/GenAIResource_Team.png" >}}
 
 The `Team` tab can be used to manage who has access to the Mendix Cloud GenAI resource. All users listed in this overview have access to the resource in the GenAI resource portal and can create new keys or invite new users. New users can be added to a resource via the Add User button. They can be removed by clicking the 'Remove' button next to their name in the overview.
 
@@ -46,7 +46,7 @@ The `Team` tab can be used to manage who has access to the Mendix Cloud GenAI re
 ### Keys
 
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/Keys.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/GenAIResource_Keys.png" >}}
 
 The keys overview is the location to manage configuration keys for the resource. Resource keys provide programmatic access to the GenAI resources. From the key overview it is possible to create new keys and revoke existing keys.  
 
@@ -57,7 +57,7 @@ To create a new key:
 3. Save the changes.  
 4. A pop-up message will appear with the key. Make sure to safely store the key, since it is only shown once.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/GenerateKey.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/GenAIResource_KeyGeneration.png" >}}
 
 After key creation, it can be used in the Mendix application through the Mendix Cloud GenAI Connector which is part of the GenAI For Mendix bundle. 
 
@@ -66,7 +66,7 @@ When creating a key for a knowledge base, an embeddings key is automatically cre
 
 ### Content (Only for Knowledge Bases)
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/GenerateKey.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/GenAIResource_Content.png" >}}
 
 On the content page you can find information about how to add knowledge to your knowledge base resource and manage the knowledge base's content. 
 

@@ -15,7 +15,7 @@ OIDC is an extension of OAuth2 that propagates the end-user's identity to your a
 {{% alert color="warning" %}}
 This OIDC SSO module works with Mendix 9.0 and above. If you are using a previous version of Mendix, you can use the community-supported module [OpenIDConnect Single Sign-on (OIDC, OAuth2, SSO)](https://marketplace.mendix.com/link/component/117529).
 
-If you are using Mendix versions from 9.20 to 9.24, ensure you are using version 2.0.0 or above of the OIDC SSO module. For Mendix 10.0 and above, you need to use version 2.2.0 or above of the OIDC SSO module.
+If you are using Mendix versions from 9.20 to 9.24, ensure you are using version 2.0.0 or above of the OIDC SSO module. For all versions of Mendix 10.0, you need to use version 2.2.0 or above of the OIDC SSO module.
 {{% /alert %}}
 
 {{% alert color="warning" %}}

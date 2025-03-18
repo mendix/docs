@@ -12,6 +12,17 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2025
 
+### March 20, 2025
+
+#### Portal Improvements
+
+* We have added an option which will allow a Technical Contact to set the [Environment purpose](developerportal/deploy/private-cloud-deploy/#environment-purpose) of the environments. Setting the purpose of your environment does not affect its operational state. We strongly recommend setting this field, as future features may be tailored to specific environment purposes.
+* We have renamed **Development mode** to **Development DTAP mode** in the UI.
+
+#### Deploy API
+* We have fixed the issue where a person with Technical contact role was not able to create/manage environments via API.
+* We have fixed the issue where it was not possible to retrieve the environments via Get multiple environment manifest API when the environment internal id is greater than 8 characters.
+
 ### March 10, 2025
 
 #### License Manage CLI v0.10.1

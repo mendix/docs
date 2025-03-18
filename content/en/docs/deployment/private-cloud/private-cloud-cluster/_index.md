@@ -1481,7 +1481,7 @@ Enabling the **External Secrets Store** option allows users to retrieve the foll
 If you want to use the secret store for custom runtime settings or MxApp constants, the Mendix Operator must be in version 2.10.0 or later. Database plan, storage plan, and MxAdmin password are available from version 2.9.0 onwards.
 {{% /alert %}}
 
-Enabling the Development Mode option will allow users to change the type of an environment to Development.
+Enabling the Development DTAP Mode option will allow users to change the type of an environment to Development. By default, the DTAP mode is set to Production mode. If this option is enabled, the type of an environment can be changed to Development mode via the **Environment Details** page.
 
 If PCLM is configured, the default product type for Runtime licenses is set to **standard**. However, if the product type for PCLM Runtime licenses in the license server differs from **Standard**, you can customize it here. To check the product type of the Runtime license, navigate to the **PCLM Statistics** page, and then select **Runtime** in the **Select type** field.
 

@@ -136,9 +136,9 @@ Click **Previous** if the test indicates that you have not entered the correct c
 
 ### Mapping Between IdP and Mendix{#attribute-mapping}
 
-The data from your IdP may have different attribute names from the Mendix identity.
+Attribute mapping is a critical step in configuring SSO for the Mendix Platform. Incorrect mappings can lead to failed authentications, misconfigured user profiles, and access issues.
 
-Configure which data from your IdP is mapped to the attributes of the Mendix identity. Configure at least a **Foreign ID**, **Username**, and **First Name** or **Last Name**.
+The data from your IdP may have different attribute names from the Mendix identity. Configure which data from your IdP is mapped to the attributes of the Mendix identity. Configure at least a **Foreign ID**, **Username**, and **First Name** or **Last Name**.
 
 {{% alert color="info" %}}
 The **Username** must be in the correct form for an email address.
@@ -147,6 +147,8 @@ The **Username** must be in the correct form for an email address.
 {{< figure src="/attachments/control-center/security/set-up-sso-byoidp/customer-idp-wizard-page-4.png" class="no-border" >}}
 
 **Preview** will show you how user names will be displayed.
+
+You can find the [recommended attribute mapping for Entra ID](#attribute-mapping-entra) in the section below.
 
 ## Testing
 
@@ -214,7 +216,7 @@ That's it! You are now ready to resume your IdP setup in the Mendix Portal.
 
 For more information on setting up a federation with a Microsoft Entra ID IdP, see [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app) in the Microsoft documentation.
 
-### Recommended Attribute Mapping for Entra ID
+### Recommended Attribute Mapping for Entra ID {#attribute-mapping-entra}
 
 For Entra ID, you can create a mapping between Entra ID and Mendix as described in [Mapping Between IdP and Mendix](#attribute-mapping), above. The most common mapping used for Entra ID is as follows:
 

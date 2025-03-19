@@ -190,8 +190,6 @@ To convert the Mendix 9.24.2 to Mendix 10.6.0 or above, follow the steps below:
 
 You have now successfully upgraded the Forgot Password Module to work with Mendix 10.
 
-{{% todo %}} Upgrading from Mendix 10 to Mendix 11? {{% /todo %}}
-
 ## Migrating from Email Module with Templates to Email Connector{#migrate-email}
 
 Below versions of the Forgot Password module use the [Email Connector](/appstore/connectors/email-connector/) module rather than the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module.

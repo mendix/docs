@@ -55,10 +55,6 @@ The **Output** section shows what the action returns and allows you to rename it
 
 If the action returns an entity that has associations, you can select the associations that you want to have populated in the resulting variable. You can then use the **Retrieve** activity to retrieve the associated objects over the association. 
 
-{{% alert color="info" %}}
-Support for retrieving associations from external actions was introduced in Studio Pro [10.12.0](/releasenotes/studio-pro/10.12/).
-{{% /alert %}}
-
 ## Documentation Tab {#public-documentation}
 
 In the **Documentation** tab, you can find a **Summary** and a **Description**. These fields contain public documentation provided by the author of the service.
@@ -72,7 +68,3 @@ The **Edit External Action Parameter Mapping** dialog allows you to set the valu
 Every parameter must have a value specified. When **Can be empty** is true, the selected variable or expression may evaluate to `empty`. When the value cannot be empty, the microflow will throw an error if the value evaluates to `empty`.
 
 If you have selected a variable for an entity that has associations, you can select which associations you want to include in the arguments that you call the external action with.
-
-{{% alert color="info" %}}
-Support for including associations in parameters of external actions was introduced in Studio Pro [10.12.0](/releasenotes/studio-pro/10.12/).
-{{% /alert %}}

@@ -9,8 +9,6 @@ description: "Describes how to use the managed dependencies feature in Studio Pr
 
 Mendix Studio Pro allows you to manage your Java dependencies. By specifying Java dependencies and their versions per module, Studio Pro can automatically download them and resolve conflicts by leveraging Gradle.
 
-In versions of Mendix below 10.3.0, Java dependencies were put into the `userlib` folder manually. This process has been simplified using managed dependencies, although the `userlib` folder can still be used for custom `.jar`s. For more information see [Unmanaged Dependencies](#unmanaged), below.
-
 ## Adding or Updating Managed Dependencies{#add-dependency}
 
 You can specify Java dependencies through the module settings of each module. For each module, you can configure your dependencies on the **Java Dependencies** tab of [Module settings](/refguide/module-settings/).

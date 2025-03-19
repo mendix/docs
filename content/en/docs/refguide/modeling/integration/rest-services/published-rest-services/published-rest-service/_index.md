@@ -51,10 +51,6 @@ To save a service's [OpenAPI (Swagger) documentation](/refguide/open-api/) on yo
 
 When the app is running, these files are available under */rest-doc/{location}/openapi.json* and */rest-doc/{location}/swagger.json*, where *{location}* is the location of the REST service (for instance, *rest/myservice/v1*).
 
-{{% alert color="info" %}}
-Exporting OpenAPI documentation in version 3.0 of the specification was introduced in Studio Pro [10.1.0](/releasenotes/studio-pro/10.1/).
-{{% /alert %}}
-
 ## Security
 
 ### Requires Authentication {#authentication}

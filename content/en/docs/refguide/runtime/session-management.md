@@ -7,6 +7,8 @@ weight: 35
 
 ## Introduction 
 
+{{% todo %}}This should be rewritten for Mx11?{{% /todo %}}
+
 When an end-user signs in to an application, the Mendix Runtime establishes a session that persists as long as the end-user remains active within the application. The session expires after a certain amount of inactivity, determined by the time elapsed since the last runtime request and the [session timeout](/refguide/custom-settings/#SessionTimeout).
 
 Mendix versions 10.9.0 and above can use authentication tokens to keep a session active while users are not actively working in the app. For offline-first apps, this replaces earlier approaches for long-lived sessions, improving security.

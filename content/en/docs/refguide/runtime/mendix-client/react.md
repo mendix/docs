@@ -97,6 +97,8 @@ Mendix recommends refreshing all Marketplace components in your app before enabl
 
 ### Widgets{#widgets}
 
+{{% todo %}}I think this is unclear to start with and should be made clearer in Mx11. Do we mean that in 10.18 and above we can do an automatic conversion? If so, we can remove all the version stuff.{{% /todo %}}
+
 Not all widgets are supported by the React client. Mendix recommends migrating widgets in apps below [10.18](/releasenotes/studio-pro/10.18/) using the automatic conversion capabilities in Studio Pro (right-click a widget and select **Convert in-place**). For a list of configuration options unsupported by automatic conversions, see [Widget Conversion Limitations](/refguide/mendix-client/widget-conversion-limitations/).
 
 #### Dynamic & Static Image{#dynamic-static}

@@ -43,10 +43,6 @@ You can create associations between local [persistable entities](/refguide/persi
 When a service defines an entity without an entity set, it means that this entity is not persistable. You can add it to the domain model as a non-persistable entity.
 The definition of this entity is read-only and is controlled in the service that publishes it. This means that you cannot add attributes or change them.
 
-{{% alert type="info" %}}
-Support for importing non-persistable entities from a consumed OData service was introduced in Studio Pro [10.8.0](/releasenotes/studio-pro/10.8/).
-{{% /alert %}}
-
 ### External Enumerations
 
 When you consume an external entity that has an attribute of an enumeration type, the corresponding enumeration will be added to your project if it did not previously exist. The enumeration is created according to the definition in the OData service contract, meaning that all allowed values will be automatically added to your enumeration.

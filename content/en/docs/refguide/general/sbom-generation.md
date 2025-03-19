@@ -31,6 +31,8 @@ The SBOM is based on the [CycloneDX 1.4 JSON format](https://cyclonedx.org/docs/
 
 Since a full SBOM contains all project details, this is only a partial representation of a full example. To simplify, below is one of the Java libraries that is packaged. The `dependencies` field will contain the dependency relationship from Mendix Marketplace Modules to npm modules and Java libraries.
 
+{{% todo %}}Should we put Mx 11 examples in this doc?{{% /todo %}}
+
 ```json
 
 {

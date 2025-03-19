@@ -8,6 +8,8 @@ aliases:
     - /howto/logic-business-rules/filtering-data-on-an-overview-page/
 ---
 
+{{% todo %}}This should be rewritten using the new XPath mechanism?{{% /todo %}}
+
 {{% alert color="info" %}}
 This example is using a version of Mendix below 10.5. In Mendix version 10.5 and above, the [XPath Constraints](/refguide/xpath-constraints/) dialog has a different UX which makes it easier to build XPath constraints. However, the concepts and XPath examples can still be used in Mendix version 10.5 and above.
 {{% /alert %}}

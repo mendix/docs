@@ -11,6 +11,8 @@ The mx tool is a Windows and Linux command-line tool that can be used to perform
 
 ## Location
 
+{{% todo %}}Should we use an Mx 11 example here?{{% /todo %}}
+
 Mendix Studio Pro comes with the mx command-line tool. You can find the executable *mx.exe* file in the same folder that contains *studiopro.exe* (for example, *C:\Program Files\Mendix\10.0.0.5003\modeler\mx.exe*). It is also included if you download [mxbuild](/refguide/mxbuild/).
 
 ## Available Commands

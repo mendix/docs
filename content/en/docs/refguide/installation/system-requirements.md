@@ -54,10 +54,6 @@ When you are running Studio Pro on a Parallels virtual machine on an ARM64 devic
 You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in Studio Pro.
 {{% /alert %}}
 
-{{% alert color="warning" %}}
-The limitation that the database viewer built into Studio Pro (as described in [How to Share the Development Database](/howto/data-models/sharing-the-development-database/)) does not work with JDK 11.06 or 11.07.
-{{% /alert %}}
-
 #### Known Limitations for Mac {#mac-limitations}
 
 These are the known limitations for Mac:

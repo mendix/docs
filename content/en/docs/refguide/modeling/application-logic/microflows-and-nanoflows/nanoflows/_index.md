@@ -140,7 +140,7 @@ Nanoflows are executed in the context of the current user. Any operation for whi
 
 ## Converting a Nanoflow to a Microflow {#convert-to-microflow}
 
-There are two options available:
+Right-click anywhere in the nanoflow editor, or right-click a nanoflow in the **App Explorer**, you will find the following two options in the context menu:
 
 * **Duplicate as microflow**: This option creates a new microflow based on the original nanoflow.
 * **Convert to microflow**: This option removes the original nanoflow and replaces it with a new microflow. All possible usages throughout your app are updated and any non-replaceable usages remain as they are. When some usages cannot be replaced because they are not allowing microflows, a warning dialog appears. See below as an example:

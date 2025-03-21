@@ -112,7 +112,7 @@ If you want to see what happens while a microflow is executing, you can use the 
 
 ## Converting a Microflow to a Nanoflow {#convert-to-nanoflow}
 
-There are two options available:
+Right-click anywhere in the microflow editor, or right-click a microflow in the **App Explorer**, you will find the following two options in the context menu:
 
 * **Duplicate as nanoflow**: This option creates a new nanoflow based on the original microflow.
 * **Convert to nanoflow**: This option removes the original microflow and replaces it with a new nanoflow. All possible usages throughout your app are updated and any non-replaceable usages remain as they are. When some usages cannot be replaced because they are not allowing nanoflows, a warning dialog appears. See below as an example:

@@ -41,7 +41,7 @@ Once the Mendix Data Loader is deployed, follow these steps to configure and use
 4. Click **Create** to create a new data source.
     1. Enter a **Name** for your data source within the Data Loader.
     2. Enter an **API endpoint** – that is, the base endpoint for the OData resource in your Mendix application, for example, `https://yourmendixapp.mendixcloud.com/odata/snowflakedata/v1/`.
-    3. Use the radio button **Use Delta Ingestion** to specify if you want to ingest all exposed data every ingestion or if you want to ingest data that was newly created or changed since the last ingestion that was done for the data source.
+    3. Use the radio button **Use Delta Ingestion** to specify if you want to ingest all exposed data with every ingestion, or if you want to ingest only data that was newly created or changed since the last ingestion for this data source.
     4. Click **Save**.
     5. Grant the application **CREATE DATABASE** and **EXECUTE TASK** privileges. This step is necessary for the application to create the staging database for data ingestion and to execute tasks.
 

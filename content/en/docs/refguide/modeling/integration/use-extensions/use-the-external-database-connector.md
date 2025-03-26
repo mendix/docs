@@ -44,6 +44,8 @@ For information on how to configure the connector, see [External Database Connec
 
 ### Prerequisites (available via the feature flag: `--enable-live-preview`) {#enable-live-preview}
 
+{{% todo %}} Check if this is still behind feature flag in Studio Pro 11. Also, why is there a Prerequisites section within a Prerequisites section? {{% /todo %}}
+
 * Download the latest [External Database Connector](https://marketplace.mendix.com/link/component/219862).
 * If certificate-based authentication is required for PostgreSQL connections, ensure that all necessary certificates are added before running the app.
 * To test the connection and execute queries during design time, Ensure to run your app locally.

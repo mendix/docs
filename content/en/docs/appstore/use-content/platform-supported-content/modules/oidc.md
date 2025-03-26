@@ -18,6 +18,8 @@ This OIDC SSO module works with Mendix 9.0 and above. If you are using a previou
 If you are using Mendix versions from 9.20 to 9.24, ensure you are using version 2.0.0 or above of the OIDC SSO module. For all versions of Mendix 10.0, you need to use version 2.2.0 or above of the OIDC SSO module.
 {{% /alert %}}
 
+{{% todo %}} The team will update the above warning for Mendix 11 when more information is available. {{% /todo %}}
+
 {{% alert color="warning" %}}
 If you are migrating to the OIDC module version 3.0.0 and above, include the [UserCommons](https://marketplace.mendix.com/link/component/223053) module as a dependency and configure the `OIDC.Startup` microflow as part of after-startup Microflow. In the module version 3.1.0 and above, `OIDC.Startup` has been renamed to `OIDC.ASU_OIDC_Startup`. For more details, see the [Upgrading the OIDC SSO Module](#upgrade) section below.
 {{% /alert %}}

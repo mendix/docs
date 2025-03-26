@@ -84,13 +84,13 @@ The ingested data is stored in the target schema of the specified target databas
 
 ## Using Delta Ingestion Setting
 
-If you don't want to ingest all exposed data from the published OData of your Mendix application, you can enable the **Use Delta Ingestion** setting on your data source when creating or editing the data source in the Mendix Data Loader.
+If you do not want to ingest all exposed data from the published OData of your Mendix application, you can enable the **Use Delta Ingestion** setting on your data source when creating or editing the data source in the Mendix Data Loader.
 
-The first ingestion performed for the data source with this setting enabled will ingest all data exposed by your OData endpoint. Subsequent ingestions will ingest only the data with a **changedDate** later than the date of the last ingestion.
+The first ingestion performed for the data source with this setting enabled ingests all data exposed by your OData endpoint. Subsequent ingestions ingest only the data with a **changedDate** later than the date of the last ingestion.
 
 ### Enabling **ChangedDate** for Delta Ingestion
 
-To use delta ingestion, you must enable the system member called **changedDate** on the exposed entities. To do this:
+To use delta ingestion, you must enable the system member called **changedDate** on the exposed entities. To do this, perform the following steps:
 
 1. Navigate to the entities in your domain model.
 2. In their properties, select the **Store 'changedDate'** radio button.
@@ -98,7 +98,7 @@ To use delta ingestion, you must enable the system member called **changedDate**
 
 ### Handling Deleted Objects
 
-Please note that deleted objects are not automatically handled on the Snowflake side. To properly manage deletions, we recommend adding a boolean field to your exposed entities, such as **IsSoftDeleted**, which is set to **true** when an object needs to be deleted.
+Deleted objects are not automatically handled on the Snowflake side. To properly manage deletions, we recommend adding a boolean field to your exposed entities, for example, **IsSoftDeleted**. You can then set the field to **true** when an object needs to be deleted.
 
 After these objects are ingested into the staging area in Snowflake, you can process them accordingly during further data processing. After ingesting a soft-deleted object, you can delete it from the database of your Mendix application. 
 
@@ -198,15 +198,15 @@ A bug in the published OData service resource in Mendix Studio Pro 10.10 where t
 
 #### Solution
 
-This issue will be resolved in a future Mendix Studio Pro release. If you wish to work around this issue, you can set the ApplicationRootUrl of the application so that it has a trailing slash "/", e.g., **https://mymendixapp.mendixcloud.com/**. This resolution is the same as setting a custom domain as described in the [Custom Domains Mendix Documentation](/developerportal/deploy/custom-domains/#use-custom-url).
+This issue will be resolved in a future Mendix Studio Pro release. If you wish to work around this issue, you can set the ApplicationRootUrl of the application so that it has a trailing slash "/", for example, **https://mymendixapp.mendixcloud.com/**. This resolution is the same as setting a custom domain as described in the [Custom Domains Mendix Documentation](/developerportal/deploy/custom-domains/#use-custom-url).
 
-### Error Using Delta Ingestion: Could not map 'changedDate' to attribute or association.
+### Error Using Delta Ingestion: Could Not Map 'ChangedDate' to Attribute or Association
 
-When ingesting data using the **Use Delta Ingestion** setting while the **changedDate** system member isn't properly exposed you will be presented with an error (while doing second ingestion for the data source). In the stacktrace you will see error code 400 with the message "Could not map 'changedDate' to attribute or association.".
+When ingesting data using the **Use Delta Ingestion** setting, the stacktrace shows the error code 400 with the message `Could not map 'changedDate' to attribute or association.`.
 
 #### Cause 
 
-The **ChangedDate** system member on the exposed entity isn't enabled or is not exposed in the OData endpoint.
+The **ChangedDate** system member on the exposed entity is not enabled or is not exposed in the OData endpoint.
 
 #### Solution
 

@@ -232,7 +232,7 @@ Select the **Version Control** menu > **Revert a Commit...** to revert a commit.
 {{% alert color="warning" %}}
 Reverting a commit creates a new commit that undoes the changes introduced by the original commit. This may lead to unexpected results depending on the context of the original commit.
 
-* **Port fix and reverting** – If you used [Port Fix](/refguide/merge-dialog/#port-fix) to apply a commit from another branch to the current branch, and then you revert that commit, the changes from the cherry-pick will not be reapplied when merging the full branch. This happens because the revert commit explicitly negates the cherry-picked changes, and Git recognizes them as already addressed.
+* **Cherry picking and reverting** – If you used [Cherry Pick](/refguide/merge-dialog/#cherry-pick) to apply a commit from another branch to the current branch, and then you revert that commit, the changes from the cherry-pick will not be reapplied when merging the full branch. This happens because the revert commit explicitly negates the cherry-picked changes, and Git recognizes them as already addressed.
 * **Merging and reverting** – If you [merged another branch](/refguide/version-control/#merging-branches) into the current branch and then reverted the merge commit, merging the same branch again will not reapply its changes. Git identifies that the merge was undone and prevents those changes from being reapplied.
 {{% /alert %}}
 
@@ -311,7 +311,7 @@ If you have multiple development lines, you sometimes want to merge changes from
 
 Merging is always done while you have a working copy open. The merge will result in extra local changes in that working copy. It is advisable to commit local changes first before merging extra changes into a working copy. Otherwise, the uncommitted local changes and the changes caused by the merge will be combined and it is very hard to untangle them if you are unhappy with the merge. Studio Pro will warn you if you have uncommitted changes.
 
-Select **Version Control** > **Merge Changes Here**, after that you can select **Port fix** or **Merge feature branch** options. For more information on merge settings, see [Merge Dialog](/refguide/merge-dialog/).
+Select **Version Control** > **Merge Changes Here**, after that you can select **Cherry Pick** or **Merge feature branch** options. For more information on merge settings, see [Merge Dialog](/refguide/merge-dialog/).
 
 #### Replacing the Main Line with a Branch Line
 

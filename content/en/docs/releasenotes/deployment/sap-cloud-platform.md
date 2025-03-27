@@ -14,6 +14,12 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2025
 
+### March 30, 2025
+
+#### Bug Fixes
+
+* We fixed portal genrated user messages.
+
 ### February 16, 2025
 
 #### Portal Improvements

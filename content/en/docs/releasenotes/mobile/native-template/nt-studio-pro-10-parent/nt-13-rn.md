@@ -5,6 +5,10 @@ weight: 5
 description: "Native Template 13 release notes."
 ---
 
+## 13.0.1 {#1301}
+
+We have applied a patch for react-native-camera-roll to fix the saving pictures issue.
+
 ## 13.0.0 {#1300}
 
 **Release date: March 21, 2025**

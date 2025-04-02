@@ -154,3 +154,22 @@ The **Documentation** pane displays the documentation for the currently selected
 2. Click on the element for which you want to view the documentation.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
+
+For additional reference, the available activities are listed below.
+
+### Activities
+
+[Activities](/refguide/activities/) define the actions that are executed in a microflow or a nanoflow.
+
+The AWS IoT TwinMaker connector contains the following activities:
+
+* `Microflow ListEntities` - Retrieves the list of all TwinMaker entities in a workspace.
+* `Microflow GetWorkspace` - Retrieves details of a workspace.
+* `Microflow GetEntity` - Retrieves information about a TwinMaker entity.
+* `Microflow GetPropertyValue` - Gets the property values for a component, component type, entity, or workspace.
+* `Microflow GetComponentType` - Retrieves information about a specific component type.
+* `Microflow GetPropertyValueHistory` - Retrieves information about the history of a time series property value for a component, component type, twinmaker entity, or workspace.
+* `Microflow ListWorkspaces` - Retrieves the list of workspaces in the current account.
+* `Microflow ListComponentTypes` - Lists all component types in a workspace.
+* `Microflow GetScene` - Gets information about a specific scene.
+* `Microflow ListScenes` - Retrieves the list of scenes in a workspace.

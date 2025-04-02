@@ -194,13 +194,13 @@ kind: OperatorConfiguration
 # omitted lines for brevity
 # ...
 spec:
-  baseOSImageTagTemplate: 'ubi8-1-jre{{.JavaVersion}}-entrypoint'
+  baseOSImageTagTemplate: 'ubi9-1-jre{{.JavaVersion}}-entrypoint'
 ```
 
 At the moment, the `baseOSImageTagTemplate` can be set to one of the following values:
 
-* `ubi8-1-jre{{.JavaVersion}}-entrypoint` - to use Red Hat UBI 8 Micro images; this is the default option.
-* `ubi9-1-jre{{.JavaVersion}}-entrypoint` - to use Red Hat UBI 9 Micro images; this option can be used to use a newer OS and improve security scores.
+* `ubi8-1-jre{{.JavaVersion}}-entrypoint` - to use Red Hat UBI 8 Micro images; this option can be used for some cases where backward compatibility is needed.
+* `ubi9-1-jre{{.JavaVersion}}-entrypoint` - to use Red Hat UBI 9 Micro images; this is the default option.
 
 {{% alert color="info" %}}
 
@@ -439,9 +439,11 @@ spec:
           limits:
             cpu: 1
             memory: 512Mi
+            ephemeral-storage: 4Mi
           requests:
             cpu: 100m
             memory: 512Mi
+            ephemeral-storage: 4Mi
 # ...
 # omitted lines for brevity
 # ...
@@ -462,30 +464,38 @@ spec:
     limits:
       cpu: 250m
       memory: 32Mi
+      ephemeral-storage: 4Mi
     requests:
       cpu: 100m
       memory: 16Mi
+      ephemeral-storage: 4Mi
   metricsSidecarResources:
     limits:
       cpu: 100m
       memory: 32Mi
+      ephemeral-storage: 4Mi
     requests:
       cpu: 100m
       memory: 16Mi
+      ephemeral-storage: 4Mi
   buildResources:
     limits:
       cpu: '1'
       memory: 256Mi
+      ephemeral-storage: 2Gi
     requests:
       cpu: 250m
       memory: 64Mi
+      ephemeral-storage: 2Gi
   runtimeResources:
     limits:
       cpu: 1000m
       memory: 512Mi
+      ephemeral-storage: 256Mi
     requests:
       cpu: 100m
       memory: 512Mi
+      ephemeral-storage: 256Mi
   runtimeLivenessProbe:
     initialDelaySeconds: 60
     periodSeconds: 15
@@ -629,9 +639,11 @@ resources:
   limits:
     cpu: 1
     memory: 512Mi
+    ephemeral-storage: 256Mi
   requests:
     cpu: 100m
     memory: 512Mi
+    ephemeral-storage: 256Mi
 ```
 
 This section allows the configuration of the lower and upper resource boundaries, the `requests` and `limits` respectively.
@@ -938,6 +950,24 @@ In most cases, this option is only needed when an app is partially scaled down (
 Some container runtimes or network configurations prevent a terminating pod from receiving traffic or opening new connections. The Mendix Runtime can still use its existing database connections from the connection pool and keep processing any running microflows and requests, but uploading files or calling external REST services may fail.
 {{% /alert %}}
 
+### Read-only RootFS {#readonlyrootfs}
+
+Mendix app container images are locked down by default - they run as a non-root user, cannot request elevated permissions, and file ownership and permissions prevent modification of system and critical paths. Kubernetes allows you to lock down containers even further, by mounting the container filesystem as read-only if the container's security context specifies [readOnlyRootFilesystem: true](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/). With this option enabled, any files and paths from the container image cannot be modified by any user.
+
+Starting from Mendix Operator version 2.21.0, all system containers and pods use `readOnlyRootFilesystem` by default. It is possible to specify if an environment's app container should also have a read-only filesystem. For Mendix apps, the `readOnlyRootFilesystem` option is off by default, as some Java actions in marketplace modules might expect some paths to be writable.
+
+If you enable the `runtimeReadOnlyRootFilesystem` option in the MendixApp CRD (for standalone clusters) or in the Private Cloud Portal, the Mendix app container also uses a read-only root filesystem. As Mendix apps needs certain paths to be writable, an [emptyDir](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir) is used for writable paths. Each path is mounted as a separate `subPath` to keep data separated. The `emptyDir` size is set to the `ephemeral-storage` [resource limit](#advanced-resource-customization).
+
+In addition to internal Mendix Runtime paths, `/tmp` is mounted for any temporary files that might be created through Java actions. For Java actions to work correctly, ensure that they only create files in `/tmp`, for example, by using the `File.createTempFile` or `File.createTempDirectory` Java methods.
+
+{{% alert color="info" %}}
+If your app works without issues when read-only root filesystem is enabled, it is best to enable it wherever possible. We recommend using a non-production environment to validate that your app keeps working correctly with a read-only RootFS.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+Enabling the `runtimeReadOnlyRootFilesystem` option causes the `model/resources` directory to be empty. If your app (or a Marketplace module such as SAML) uses the `model/resources` directory for resources such as configuration data, consider moving those resources to another location (for example, `model/userlib`) or loading them from FileDocument entities.
+{{% /alert %}}
+
 ### GKE Autopilot Workarounds {#gke-autopilot-workarounds}
 
 In GKE Autopilot, one of the key features is its ability to automatically adjust resource settings based on the observed resource utilization of the containers. GKE Autopilot verifies the resource allocations and limits for all containers, and makes adjustments to deployments when the resources are not as per its requirements.
@@ -954,16 +984,20 @@ spec:
     limits:
       cpu: "1"
       memory: 256Mi
+      ephemeral-storage: 2Gi
     requests:
       cpu: "1"
       memory: 256Mi
+      ephemeral-storage: 2Gi
   metricsSidecarResources:
     limits:
       cpu: 100m
       memory: 32Mi
+      ephemeral-storage: 4Mi
     requests:
       cpu: 100m
       memory: 32Mi
+      ephemeral-storage: 4Mi
 ```
 
 Run the following command in order to update the core resources in the `OperatorConfiguration`:
@@ -1024,6 +1058,37 @@ The only limitations are that:
 
 {{% alert color="info" %}}
 When you delete a cluster, this removes the cluster from the Mendix Portal. However, it will not remove the associated namespace from your platform. You will need to explicitly delete the namespace using the tools provided by your platform.
+{{% /alert %}}
+
+#### Managing Roles and Permissions {#rolesandpermissions}
+
+It is now possible to manage the roles and permissions for the namespace member by clicking **Roles and Permissions** in the left navigation pane. 
+
+Below are the predefined roles with default permissions; these roles are built-in and cannot be edited:
+
+* **Administrator** - This role gives the cluster manager full access to the namespace, the permissions for which are shown in the figure below.
+* **Developer** - This role gives the developer with the permission which are shown in the figure below.
+
+{{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/RolesAndPermission.png" class="no-border" >}}
+
+In addition to the predefined roles, you can create customised roles with the required permissions which you want to assign to the namespace member. Cluster managers can create a role once, and then reuse it across multiple namespaces. 
+
+To create a role, click **Create Role** in the top right.
+
+{{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/CreateRole.png" class="no-border" >}}
+
+This option allows the cluster manager to create, edit, and delete roles and permissions. 
+
+Once a role is created, you can assign it to the namespace member by clicking **Invite Member** under **Members** section on the **Namespace Overview** page. You can select the role from the dropdown.
+
+{{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/Invitemember.png" class="no-border" >}}
+
+Once the role is assigned, it cannot be deleted until the role is removed from the assigned members.
+
+{{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/deleteRole.png" class="no-border" >}}
+
+{{% alert color="warning" %}}
+Existing namespace members who have been given custom permissions will continue to use those custom permissions. However, those custom permissions will no longer be editable. To update a permission, reassign an existing role or create a custom role on the Roles and Permissions page.
 {{% /alert %}}
 
 ### Namespace Management
@@ -1277,10 +1342,16 @@ You can invite additional members to the namespace, and configure their role dep
 
     1. **Developer** – a standard set of rights needed by a developer, these are listed on the screen
     2. **Administrator** – a standard set of rights needed by an administrator, these are listed on the screen
-    3. **Custom** – you can select a custom set of rights by checking the box next to each role you want to give to this person
+    3. **Custom** – This option is now deprecated.
 
-    With custom permissions, we have now decoupled the permissions for Scale, Start and Stop operations. If an application is in the Stopped state, the scaling does not come into effect until the application is Started. This means that you have to click **Start application** in order for the changes to be sent to the cluster.
-    Along with this, we have also decoupled the permission for modifying the MxAdmin password and managing environments.
+{{% alert color="info" %}}
+The custom permission if needed to be edited, a role need to be assigned with appropriate permissions. See [Roles and Permissions](/developerportal/deploy/private-cloud-cluster/#rolesandpermissions) for more information.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+If an application is in the Stopped state, the scaling does not come into effect until the application is Started. This means that you have to click **Start application** in order for the changes to be sent to the cluster.
+Along with this, we have also decoupled the permission for modifying the MxAdmin password and managing environments.
+{{% /alert %}}
 
 6. Click **Send Invite** to send an invite to this person.
 
@@ -1410,7 +1481,7 @@ Enabling the **External Secrets Store** option allows users to retrieve the foll
 If you want to use the secret store for custom runtime settings or MxApp constants, the Mendix Operator must be in version 2.10.0 or later. Database plan, storage plan, and MxAdmin password are available from version 2.9.0 onwards.
 {{% /alert %}}
 
-Enabling the Development Mode option will allow users to change the type of an environment to Development.
+Enabling the Development DTAP Mode option allows users to change the type of an environment to Development. By default, the DTAP mode is set to Production mode. If this option is enabled, the type of an environment can be changed to Development mode on the **Environment Details** page.
 
 If PCLM is configured, the default product type for Runtime licenses is set to **standard**. However, if the product type for PCLM Runtime licenses in the license server differs from **Standard**, you can customize it here. To check the product type of the Runtime license, navigate to the **PCLM Statistics** page, and then select **Runtime** in the **Select type** field.
 

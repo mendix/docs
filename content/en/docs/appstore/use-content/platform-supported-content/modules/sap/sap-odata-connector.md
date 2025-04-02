@@ -778,7 +778,7 @@ This documentation describes two different domain models.
 
 2. The OData Connector for SAP solutions Domain Model – this contains entities which are used by the OData Connector for SAP solutions itself: for example, to construct the request which needs to be sent to the OData service. A description of this domain model is included for completeness in the section [OData Connector for SAP Solutions Domain Model](#ConnectorDM)
 
-For more information on domain models, see [Domain Model](/refguide/domain-model/).
+For more information on domain models, see [Data in the Domain Model](/refguide/domain-model/).
 
 #### SAP Service Domain Model
 
@@ -868,7 +868,7 @@ This domain model is part of the OData Connector for SAP solutions module and ca
 
 * [Attributes](/refguide/attributes/)
 * [Data Types](/refguide/data-types/)
-* [Domain Model](/refguide/domain-model/)
+* [Data in the Domain Model](/refguide/domain-model/)
 * [Entities](/refguide/entities/)
 * [SAP Cloud Connector](/developerportal/deploy/sap-cloud-platform/sap-cloud-connector/)
 * [SAP Help Portal](https://help.sap.com)

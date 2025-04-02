@@ -14,7 +14,7 @@ The Data Importer is available in [Studio Pro 10.6](/releasenotes/studio-pro/10.
 
 The [Data Importer](https://marketplace.mendix.com/link/component/219833) allows you to import data from an Excel or comma-separated value (CSV) file. You can choose which sheet and columns to import, preview the data, and create a non-persistable entity (NPE) in your domain model that corresponds to your input. Then, you can import data into your app using the [Import Data from File](/refguide/import-data-from-file/) activity.
 
-The Data Importer Document can also be used as a source for creating [Import Mapping](/refguide/import-mappings/). This import mapping can import data from Excel/CSV file using the  [Import with Mapping](/refguide/import-mapping-action/) activity.
+The Data Importer document can also be used as a source for creating [Import Mapping](/refguide/import-mappings/). This import mapping can import data from Excel/CSV file using the  [Import with Mapping](/refguide/import-mapping-action/) activity.
 
 {{% alert color="info" %}}
 The Data Importer document as a source for import mapping is available from [Studio Pro 10.18.0](/releasenotes/studio-pro/10.18/) and above.
@@ -22,13 +22,15 @@ The Data Importer document as a source for import mapping is available from [Stu
 
 ### Typical Use Cases
 
-The Data Importer extension allows you to import data from Excel and CSV files directly into your app. You can create a Data Importer document to define which columns to import and an NPE to hold the imported data, along with source-to-target mapping. 
+The Data Importer extension allows you to import data from Excel and CSV files directly into your app. You can create a Data Importer document to define which columns to import and an NPE to hold the imported data, along with source-to-target mapping.
+The Data Importer document can also be used as a source for creating Import Mapping and you can leverage the capabilities provided by Import Mapping to import data into existing entity.
 
 ### Features {#features}
 
 This extension supports following source files:
 
 * Microsoft Excel (*.xls, .xlsx, .csv*)
+* Mapping Parameter support is extended for the Data Importer document with Import Mapping.
 
 ### Limitations
 
@@ -58,7 +60,7 @@ To import data, right-click on the module and click **Add other** > **Data Impor
 
 Once you have [created the Data Importer document](#create-document), click **Select a local file** to import an Excel file (*.xls* or *.xslx*) or CSV file (*.csv*).
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/select-file-for-preview.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/select-file-for-preview.png" >}}
 
 #### Previewing Excel Data {#preview-data-excel}
 
@@ -68,7 +70,7 @@ Select or drop the file in the **Select Source File** window. You can choose whi
 * **Header Row No.** – row number of the file header; the default is 1
 * **Read Data From Row No.** – starting line for reading data; the default is 2
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/select-sheet-and-header-data-row.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/select-sheet-and-header-data-row.png"  >}}
 
 Click **Preview Source Data & Entity** to view the data from the file. The first 10 rows from the source file are shown in the data preview section. The Sheet Name is used to create a NPE, but this can be edited. The column names correspond to the attribute names within the entity.
 
@@ -76,7 +78,7 @@ All the columns are selected (checked) by default. You can uncheck the columns y
 
 {{% alert color="warning" %}} Column names that do not adhere to Mendix naming conventions will be autocorrected. {{% /alert %}}
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/preview-data-and-entity.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/preview-data-and-entity.png" >}}
 
 ##### Header and data row numbering
 
@@ -84,7 +86,7 @@ The empty rows before the start of actual header and data row(s) are trimmed in 
 
 For example, the below file will result in a confusing preview if **Header Row No.** is 2 and **Read Data From** is 3. In this scenario, the first row (which is empty) should be removed from the input Excel file. Then, **Header Row No.** should be set as 1 and **Read Data From** as 2. Otherwise, a static test should be given in any column of first row to continue with **Header Row No.** as 2.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/empty-row-before-header.png" class="no-border" width="400" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/empty-row-before-header.png"  width="400" >}}
 
 #### Previewing CSV Data {#preview-data-csv}
 
@@ -105,11 +107,11 @@ All the columns are selected (checked) by default. You can uncheck the columns y
 
 For example, for the following source data (CSV), the separator is specified as Comma. The Quote and Escape Characters are set to Double Quote, and Header is included in the input file.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/source-csv-data.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/source-csv-data.png"  >}}
 
 The data preview and resulting entity would be as seen below:
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/preview-csv-data-and-entity.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/preview-csv-data-and-entity.png" >}}
 
 ### Editing an Entity {#edit-entity}
 
@@ -159,7 +161,7 @@ When you are done editing the entity, click **Create Entity** > **OK**. This wil
 
 When the entity is created, you can view the mapping of the source columns to the target entity attributes. 
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/source-to-target-mapping.png" class="no-border" width="500" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/source-to-target-mapping.png" width="500" >}}
 
 The Data Importer document creation is complete and can be used to [import data in a microflow](#import-microflow).
 
@@ -169,19 +171,19 @@ Use the previously created Data Importer document to import data from your input
 
 1. Create a new microflow and drag the **Import data from file** activity into it.
 
-   {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/custom-activity.png" class="no-border" >}}
+   {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/custom-activity.png"  >}}
 
 2. Double-click the activity and in the **File** field, select an input file (Excel or CSV).
 3. In the **Data importer document** field, click **Select** and choose the Data Importer document you want to use. Choose an appropriate Data Importer document based on the input file.
 
-   {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/choose-data-importer-template.png" class="no-border" >}}
+   {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/choose-data-importer-template.png"  >}}
 
 4. After selecting the Data Importer document, the **Return type** and **Variable name** will auto-populate. You can also change the name of the output variable.
 5. Click **OK**.
 
 The custom activity is configured and you can import data from input files.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/example-microflow.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/example-microflow.png"  >}}
 
 ## Running Your App
 
@@ -191,7 +193,7 @@ To perform testing, you can do the following actions:
 * Deploy your app locally and browse and upload an input file that resembles the file used to create Data Importer document
 * View the message about x number of rows being imported into a list of entities
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/local-app-run.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/local-app-run.png"  >}}
 
 ## Data Importer Document (as a Source for Import Mapping)
 
@@ -205,13 +207,13 @@ To import data, do the following:
 2. Name the document and enable the **Use with Import Mapping** checkbox. 
 3. Click **OK** and the new Data Importer document opens. 
    
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/create-DI-doc-with-import-mapping.png" class="no-border" width="400" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/create-DI-doc-with-import-mapping.png" width="400" >}}
 
 ### Previewing Structure {#preview-structure}
 
 Once you have [created the Data Importer document](#create-document-with-imm), click **Select a local file** to upload a sample Excel file (*.xls* or *.xslx*) or CSV file (*.csv*).
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/select-file-for-structure-preview.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/select-file-for-structure-preview.png"  >}}
 
 You can choose which sheet to import data from, and specify the header row and starting data row.
 
@@ -221,7 +223,7 @@ You can choose which sheet to import data from, and specify the header row and s
 
 Click **Preview Structure Elements** to view the data structure from the file. The data from the first row of the source file is shown in the **Schema elements** section. Click **Create Structure** and you will be notified that a new structure is generated successfully.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/preview-data-structure.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/preview-data-structure.png"  >}}
 
 {{% alert color="warning" %}} Column names that do not adhere to Mendix naming conventions will be autocorrected. {{% /alert %}}
 
@@ -234,22 +236,22 @@ Create the import mapping using the Data Importer document created in the step a
 3. From the **Schema source**, choose **Excel/CSV structure**.
 4. Select the sheet from the Excel file that has been uploaded as a sample, as shown in the image below:
    
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/select-schema-elements-for-imm.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/select-schema-elements-for-imm.png"  >}}
 
 5. Select the columns you want to import. You can either select all the columns by choosing **Check all** or select individual columns. 
 6. Click **OK** to create the **Import Mapping**. 
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/create-import-mapping.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/create-import-mapping.png"  >}}
 
 7. You can now choose to:
    1. Map an existing entity by dragging and dropping an entity from your domain model via the **Connector** tab
    2. Click **Map automatically** to create a new NPE in your domain model:
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/map-automatically.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/map-automatically.png"  >}}
 
 8. If you choose **Map automatically**, you can open the domain model and change the entity's name and persistence, as per your requirement.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/entity-name-persist-change.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/entity-name-persist-change.png"  >}}
 
 ### Import With Mapping Activity in a Microflow {#import-with-mapping-MF}
 
@@ -264,7 +266,25 @@ The instructions below show how to import data from an Excel (or CSV) file.
 5. Select **Range** and **Commit** options, if needed.
 6. In the **Output** section, you can choose **Store in variable**, then click **OK**.
    
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/import-with-mapping-params.png" class="no-border" width="500" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/import-with-mapping-params.png"  width="500" >}}
+
+### Support for Mapping Parameter in Import Mapping {#mapping-param-import-mapping}
+
+The [Mapping Parameter](/refguide/import-mappings/#mapping-parameter) is supported by Data Importer starting from Mendix 10.21. The Mapping Parameter can be used to create associations with imported data. Primitive types that are not supported but any Mendix object type can be passed as the **Mapping Parameter**.
+
+Follow the instructions below to define an **Import Mapping** with mapping parameters. 
+
+1. In your **Import Mapping**, drag an entity from the **Connector** tab and drop into the target object placeholder. Click **Cancel** on the **Map entity...** dialog as you will fill in the details later.
+2. From the **Connector** pane, drag another entity which you intend to pass as a parameter and drop into the parameter placeholder.
+3. **Double Click** the source or target object to open the **Map entity...** dialog.
+4. Select **Call a microflow** to **Obtain Mendix Object** for your Import Mapping.
+5. If necessary, create a **Microflow** which will create an object of target entity and set an association with the passed parameter.
+6. In your **Import Mapping**, choose the **Set association** to **Yes** and select a valid **Association** from the dropdown.
+7. Click **Map attributes** to map the source schema value elements to the target entity attribute.
+
+The Import Mapping should look like the example below:
+
+{{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/IM-with-mapping-param-association.png"width="500" >}}
 
 ### Before Running Your App {#data-import-with-mapping-app}
 
@@ -276,7 +296,7 @@ Before you can run your app, do the following:
 
 You should see the data from the file being imported and shown on the page's data grid.
 
-​    {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/data-imported-from-input-file.png" class="no-border" >}}
+​    {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/data-imported-from-input-file.png"  >}}
 
 ## Edit Data Importer Document
 
@@ -291,13 +311,13 @@ To edit the Data Importer document, do the following:
 1. Double-click the Data Importer document that you want to **Edit**. The document opens in read-only mode.
 2. Click **Update File** in the top-right corner. You will receive notification that when a new file is uploaded and changes are saved, existing mapping/structure elements will be erased and will be replaced by new mapping/structure.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/update-data-importer-doc-confirmation.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/update-data-importer-doc-confirmation.png"  >}}
 
 3. Click **Update**, then upload the new file. 
 4. Change the configuration, such as **Sheet Name** and **Header Row**.
 5. Click  **Create Structure** to update the document.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/data-importer-doc-updated.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/data-importer-extension/data-importer-doc-updated.png"  >}}
 
 Similar steps can be followed to update the Data Importer document, which was created with **Implicit Mapping** in the [Creating a Data Importer Document](#create-document-with-imm) section.
 

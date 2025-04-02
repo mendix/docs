@@ -16,7 +16,7 @@ While this feature is in Beta, you can use the **New Theme** toggle to switch be
 
 ## Introduction
 
-You can use the **Environments** page to access information about your environments, deploy packages, manage certificates and access restrictions, and more. To access your app's **Environments** page, go to [Apps](https://sprintr.home.mendix.com/) and click **Environments** on your app. You can also directly visit the **Environments** page using this link: `https://cloud.home.mendix.com/link/deploy/`*`APP_ID`*, with *`APP_ID`* replaced by your [project ID](/developerportal/deploy/environments-details/#the-general-tab).
+You can use the **Environments** page to access information about your environments, deploy packages, manage certificates and access restrictions, and more. To access your app's **Environments** page, go to [Apps](https://sprintr.home.mendix.com/) and click **Environments** on your app. You can also directly visit the **Environments** page using this link: `https://cloud.home.mendix.com/link/deploy/`*`APP_ID`*, with *`APP_ID`* replaced by your [project ID](/developerportal/deploy/environments-details/#general-tab).
 
 ## Tab Overview
 
@@ -46,6 +46,10 @@ You can see the following information:
 * The date and time the app was started, if it is running; this is set in the user's time zone
 * Version of the deployment package
 * Name of the deployment package
+
+The most recent deployment package is shown in a banner on top of the page, along with a button to deploy it immediately.
+
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/deploy-mda.png" alt="" >}}
 
 You can also perform the following actions:
 

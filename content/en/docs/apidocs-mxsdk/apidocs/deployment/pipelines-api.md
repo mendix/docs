@@ -4,12 +4,7 @@ url: /apidocs-mxsdk/apidocs/pipelines-api/
 type: swagger
 description: "The Pipelines API sends requests to pipelines."
 weight: 85
-beta: true
 ---
-
-{{% alert color="info" %}}
-This feature is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).
-{{% /alert %}}
 
 ## Introduction
 

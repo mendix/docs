@@ -259,11 +259,11 @@ Default: *Fixed*
 | -------- | ---------- | ------------ | -------- |
 | 19.0     | 19.00      | 19.0000      | 19       |
 | 19.99    | 19.99      | 19.9900      | 19.99    |
-| 19.9944  | 19.99<sup><small>*</small></sup> | 19.9944      | 19.9944  |
-| 19.9999  | 20.00<sup><small>*</small></sup> | 19.9999      | 19.9999  |
-| 19.99999 | 20.00<sup><small>*</small></sup> | 20.0000<sup><small>*</small></sup> | 19.99999 |
+| 19.9944  | 19.99¹ | 19.9944      | 19.9944  |
+| 19.9999  | 20.00¹ | 19.9999      | 19.9999  |
+| 19.99999 | 20.00¹ | 20.0000¹ | 19.99999 |
 
-<sup><small>*</small></sup> The value is rounded to the nearest decimal with the defined number of decimal places.
+¹ The value is rounded to the nearest decimal with the defined number of decimal places.
 
 ### Decimal Precision{#decimal-precision}
 

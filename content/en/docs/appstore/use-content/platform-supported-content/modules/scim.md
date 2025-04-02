@@ -245,7 +245,7 @@ In the **Provisioning** tab of the SCIM server configuration, you need to config
 * **Allow the module to create users**: this enables the module to create users based on user provisioning and attribute mapping configurations.
     * By default, the value is set to ***Yes***.
 * **Default Userrole** – the role assigned to newly created users and remains unchanged even when the user's details are updated. You can select one default user role. To assign additional roles, use the Access Token Parsing Microflow. If the Access Token Processing Microflow is selected, OIDC verifies the updated default role configuration and applies any changes to the user's role. Note that, bulk updates for existing users are not automated when the default role configuration is changed.
-* **User Type**: this allows you to configure end-users of your application as internal or external. It is created when the user is created and updated whenever user details, such as name, email, or active status, are changed.
+* **User Type**: this allows you to configure end-users of your application as internal or external. It is created when the user is created and updated whenever user details, such as name, email, or active status, are changed. For more information, see [Populate User Types](/howto/monitoring-troubleshooting/populate-user-type/).
     * By default, the value is set to ***Internal***.
 * **Attribute Mapping**: under **Attribute Mapping**, select an **IdP Attribute** (claim) for each piece of information you want to add to your custom user entity. Specify the **Configured Entity Attribute** where you want to store the information.
 
@@ -352,4 +352,10 @@ Your app may have multiple tenants in the Entra ID. Users created from any of th
 
 ### Troubleshooting
 
+#### Modifying Default-time Configuration at Runtime
+
 Attempting to edit or delete the default deploy-time configuration at runtime will result in errors. These errors indicate that the SCIM configuration was created at runtime with possible deploy-time overrides, as explained in the [Deploy-time configuration](#deploy-time) section above. You cannot modify such configurations at runtime using the admin screens.
+
+#### SCIM User Deactivation Due to Missing `active` Attribute in the `PUT` Request
+
+The issue occurs when the `active` attribute is missing in the first `PUT` request, causing the user to become inactive (`"active": false`). Once the user is inactive, any further `PUT` updates fail with a **500 Internal Server Error**. To prevent this, always include `"active": true` in the PUT requests to keep the user active. 

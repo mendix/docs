@@ -77,3 +77,30 @@ The **Documentation** pane displays the documentation for the currently selected
 2. Click on the element for which you want to view the documentation.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
+
+For additional reference, the available activities are listed below.
+
+### Activities
+
+[Activities](/refguide/activities/) define the actions that are executed in a microflow or a nanoflow.
+
+The AWS IoT SiteWise connector contains the following activities:
+
+* `ListAssetModels` - Retrieve a list of all asset model summaries for the given region.
+* `DescribeAssetModel` - Retrieve information about an asset model.
+* `ListProjects`- Retrieve a list of all project summaries for an AWS IoT SiteWise Monitor portal.
+* `DescribeProject` - Get details on a specific project that exists within your AWS environment.
+* `ListPortals` - Retrieve a list of all portal summaries for the given region. 
+* `ListAssets` - Retrieve a list of all asset summaries for the given region.
+* `ListProjectAssets` - Retrieve a list of assets belonging to a project.
+* `DescribeAsset` - Retrieve information for a given asset.
+* `ListAssociatedAssets` - Retrieve a list of all associated assets for the given asset.
+* `ListAssetRelationships` - Retrieve a list of asset relationships for an asset.
+* `DescribeAssetProperty` - Retrieve information about an asset property.
+* `GetAssetPropertyValue` - Retrieve an asset property's current value.
+* `GetAssetPropertyValueHistory` - Retrieve a set of an asset property's historic values.
+* `GetAssetPropertyAggregates` - Retrieve aggregated values for an asset property.
+* `BatchGetAssetPropertyValue` - Get the current value for one or more asset properties.
+* `BatchGetAssetPropertyValueHistory` - Get the historical values for one or more asset properties.
+* `BatchPutAssetPropertyValue` - Put values for one or more asset properties. It requires a valid `ENUM_Region` parameter and a `BatchPutAssetPropertyValueRequest` object and returns a `BatchPutAssetPropertyValueResponse` object.
+* `JA_FindNearestSecond` - The `GetAssetPropertyValueHistory`, `GetAssetPropertyAggregates` and `BatchGetAssetPropertyValueHistory` Amazon Iot SiteWise activities have two attributes call `StartDate` and `EndDate` that can be given to describe the range from which to query historical data. The date and time variable given to these two attributes must be expressed in seconds (millisecond must be 000). For our users to be able to find the nearest second to their chosen time if need be, we have created the `JA_FindNearestSecond` Java action with three different enum variables for the `FindType` parameter.

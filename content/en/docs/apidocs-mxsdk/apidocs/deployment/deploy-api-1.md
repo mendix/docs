@@ -399,11 +399,11 @@ An object with the following key-value pairs:
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
+| 200 | ALREADY_STARTED | Cannot start app. App is already running. |
 | 400 | INVALID_APPID | Invalid AppId |
 | 404 | APP_NOT_FOUND | App not found |
 | 500 | NO_MDA_HAS_BEEN_DEPLOYED | Cannot start app. There is no MDA deployed. |
 | 500 | APP_ALREADY_HAS_A_STARTING_JOB | Cannot start app. There is already a starting job id found. |
-| 500 | ALREADY_STARTED | Cannot start app. App is already running. |
 
 ##### Example Output
 

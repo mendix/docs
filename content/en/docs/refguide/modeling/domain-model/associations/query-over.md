@@ -12,6 +12,10 @@ Sometimes, you want to create a more generic domain model to allow more flexibil
 
 This example is for an implementation of folders on a computer, where one folder can contain several subfolders.
 
+{{% alert color="info" %}}
+This example describes an implementation using association tables. In Mendix 10.21 and above, you can specify direct associations. Although the technical implementation details are different, the XPath constraints in the use cases do not change.
+{{% /alert %}}
+
 {{< figure src="/attachments/refguide/modeling/domain-model/associations/query-over/query-over-example-structure.png" class="no-border" >}}
 
 To implement this, a self-reference to **Folder** is used. The self-reference is an association called **SubFolder_Folder**. This allows you to build a folder structure with unlimited numbers and levels of folders.

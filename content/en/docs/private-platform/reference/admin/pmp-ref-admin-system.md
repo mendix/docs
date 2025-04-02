@@ -1,5 +1,6 @@
 ---
 title: "Private Mendix Platform Functionalities - System Administrators"
+linktitle: "System Administrators"
 url: /private-mendix-platform/reference-guide/admin/system/
 description: "Provides details on the features and functionality of the Private Mendix Platform that are available to system administrators."
 weight: 20
@@ -193,7 +194,7 @@ Configure CI/CD capabilities for your app. If you enable this option, you must a
 
 For Kubernetes CI, you can configure the pipeline to include additional steps after the pipeline is triggered, and before the build is completed. These additional steps can include webhook and REST calls, or manual approval for the build.
 
-#### Deployment
+#### Deployment {#deployment}
 
 Settings in this section allow you to configure your Deployment pipeline.
 

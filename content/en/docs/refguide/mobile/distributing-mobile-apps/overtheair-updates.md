@@ -80,6 +80,7 @@ If you have made any changes directly to your iOS or Android app, you will have 
 * You added a new microflow or nanoflow
 * The app's launcher icons have been changed
 * The splash screen has been changed
+* The native template was updated (NT patch updates also require a full release)
 
 ## Enabling and Building an App with Mendix OTA Updates Enabled {#build-with-ota-support}
 

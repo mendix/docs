@@ -923,6 +923,13 @@ components:
                   maximum: 10
                   minimum: 0
                   example: 3
+                lastRunningInstanceCount:
+                  type: integer
+                  description: |-
+                    non-editable</br>
+                    If application is running, this is equal to the number of instances.</br>
+                    If the application is stopped, this is equal to the number of instances which the application was running before it stopped.
+                  example: 3
                 coreResources:
                   type: object
                   required:
@@ -1290,6 +1297,8 @@ components:
         example-update-namespace-manifest:
           $ref: '#/components/examples/NamespaceManifestExample'
       description: Model for the manifest used when retrieving a namespace.
+      x-stoplight:
+        id: c5451533c063d
       properties:
         manifestVersion:
           type: string
@@ -1356,7 +1365,10 @@ components:
                     example: abc@xxx.com
                   role:
                     type: string
-                    example: Developer | Administrator | Custom
+                    example: Developer | Administrator | Custom_DEPRECATED | MyCustomRole | OtherCustomRole
+                    description: |-
+                      Existing Custom permission-based role is becoming deprecated, hence its new name Custom_DEPRECATED.<br/>
+                      To get the same result/functionality, you can use the Custom Roles which can be created/accessed at cluster level on the portal.
                   status:
                     $ref: '#/components/schemas/invitationStatus'
                   displayName:
@@ -1373,57 +1385,75 @@ components:
                       manageEnvironment:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       deployApp:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       scaleApp:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       startApp:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       stopApp:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       modifyMxAdminPassword:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       editAppConstants:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       manageAppScheduledEvents:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       viewAppLogs:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       viewAppAlerts:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       viewAppMetrics:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       manageAppBackups:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       manageDebugger:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       manageTLSConfigurations:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       manageCustomEnvVarJVMOpts:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       manageCustomRuntimeSettings:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       manageLogLevels:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       manageRuntimeMetricsConfiguration:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                 required:
                   - email
                   - role
@@ -1511,9 +1541,6 @@ components:
       required:
         - manifestVersion
         - namespace
-      x-stoplight:
-        id: c5451533c063d
-      title: ''
     createNamespaceManifest:
       type: object
       x-examples:
@@ -1624,7 +1651,10 @@ components:
                     example: abc@xxx.com
                   role:
                     type: string
-                    example: Developer | Administrator | Custom
+                    example: Developer | Administrator | Custom_DEPRECATED | MyCustomRole | OtherCustomRole
+                    description: |-
+                      Existing Custom permission-based role is becoming deprecated, hence its new name Custom_DEPRECATED.<br/>
+                      To get the same result/functionality, you can use the Custom Roles which can be created/accessed at cluster level on the portal.
                   status:
                     $ref: '#/components/schemas/invitationStatus'
                   displayName:
@@ -1641,57 +1671,75 @@ components:
                       manageEnvironment:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       deployApp:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       scaleApp:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       startApp:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       stopApp:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       modifyMxAdminPassword:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       editAppConstants:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       manageAppScheduledEvents:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       viewAppLogs:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       viewAppAlerts:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       viewAppMetrics:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       manageAppBackups:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       manageDebugger:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       manageTLSConfigurations:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       manageCustomEnvVarJVMOpts:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       manageCustomRuntimeSettings:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       manageLogLevels:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                       manageRuntimeMetricsConfiguration:
                         type: boolean
                         default: false
+                        description: non-editable</br>
                 required:
                   - email
                   - role
@@ -2102,6 +2150,7 @@ components:
                   container:
                     state: Ready
                     instances: 3
+                    lastRunningInstanceCount: 3
                     coreResources:
                       limits:
                         cpu: '1'
@@ -3026,6 +3075,7 @@ components:
           container:
             state: Ready
             instances: 3
+            lastRunningInstanceCount: 3
             coreResources:
               limits:
                 cpu: '1'

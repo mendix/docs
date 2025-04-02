@@ -198,7 +198,10 @@ You can also edit an existing custom domain certificate.
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/custom-domains/certificate-edit.png" alt="Edit a certificate" class="no-border" >}}
 
 {{% alert color="warning" %}}
-For this, you need access to the certificate request that you created for the current certificate.
+To edit an existing custom domain certificate, you need the following:
+
+* access to the certificate request that you created for the current certificate
+* [transport rights](/developerportal/deploy/node-permissions/#transport-rights) for all environments of the application
 {{% /alert %}}
 
 ## Configuring a Custom Domain {#Configuring}

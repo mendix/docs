@@ -64,15 +64,18 @@ The prerequisites are the following:
 
 * [Mendix Native Mobile Builder one-click Installer](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)
 
-* [Git for Windows (x64)](https://git-scm.com/download/win) using the versions described below. These are the versions of Git that Studio Pro installs if the Git version installed on the system is below the suggested one.  
-  
-    | Studio Pro 10.0.0 - 10.1.0 | Studio Pro 10.2.0 - 10.9 | Studio Pro 10.6.10 (MTS), 10.10 and above
-    | --- | --- | --- |
-    | [2.37.1](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1) | [2.41.0](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3) | [2.43.0](https://github.com/git-for-windows/git/releases/tag/v2.43.0.windows.1)|
-    
-    {{% alert color="info" %}}You do not need to install Git for all operations, but you may need to install the Git CLI if you perform certain actions. For example, [rebase](/refguide/merge-algorithm/#rebase) will not work without Git being installed.{{% /alert %}}
-    
+* [Git for Windows (x64)](https://git-scm.com/download/win) using the versions described below. These are the versions of Git that Studio Pro installs if the Git version installed on the system is below the suggested one.
+
+    | Studio Pro 10.0.0 - 10.1.0 | Studio Pro 10.2.0 - 10.9 | Studio Pro 10.6.10 (MTS), 10.10 to 10.20 | Studio Pro 10.21.0 and above |
+    | --- | --- | --- | --- |
+    | [2.37.1](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1) | [2.41.0](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3) | [2.43.0](https://github.com/git-for-windows/git/releases/tag/v2.43.0.windows.1)|[2.48.1](https://github.com/git-for-windows/git/releases/download/v2.48.1.windows.1/Git-2.48.1-64-bit.exe)|
+
+{{% alert color="warning" %}}  Mendix recommends installing Git for all versions of Studio Pro to ensure optimal performance and full feature availability.
+* Studio Pro versions below 10.21.0 can work without Git, but some operations may experience reduced performance, and advanced features—such as [rebase](/refguide/merge-algorithm/#rebase)—will not be available.
+* Starting from Studio Pro 10.21.0, Git version 2.48.1 or above is required. This version is automatically installed during Studio Pro installation. However, for [non-administrative installation](#offline) you must install Git manually.{{% /alert %}}
+
 * [Microsoft Edge WebView2 Evergreen Runtime (x64 or ARM64) (Evergreen Standalone Installer version)](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
+
 * One of the following versions of [Gradle](https://gradle.org/install/#manually) with Gradle extracted to the parent directory of the folder where Studio Pro is installed (usually `C:\Program Files\Mendix`) instead of `C:\Gradle`.
 
     | Studio Pro 10.0.0 - 10.9.0 | Studio Pro 10.10.0 and above |
@@ -145,7 +148,11 @@ For Studio Pro version below 10.14, the portable installer does not include all 
 
 From Studio Pro version 10.14.0, the portable installer for Windows x64 and arm64 includes mx, mxbuild, mxutil, MprTool and MendixConsoleLog.
 
+### Git Installation
+
 {{% alert color="info" %}}Git does not get installed automatically for the portable version because it requires Admin rights.{{% /alert %}}
+
+You can download and install [portable version](https://git-scm.com/downloads/win) of Git and configure [Git Location](/refguide/preferences-dialog/#git-location) in **Preferences** in Studio Pro to use it.
 
 Versions of Mendix Studio Pro that are installed via the portable installer do not show up in the Mendix Version Selector where you can manage Mendix versions. However, you can manually add a Studio Pro version by clicking **Add custom version** in **Manage Mendix versions** and specifying the path to the executable file of the Studio Pro version:
 

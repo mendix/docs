@@ -49,12 +49,12 @@ This table shows the return codes and their description:
 | --- | --- |
 | `0` | OK. |
 | `2` | Conflicts were found during the diff. |
-| `3` | An error happened during the merge. |
 | `4` | The version of either *.mpr* file is not supported. |
+| `129` | An error happened during the diff. |
 
 ## mx merge Command {#merge}
 
-The `mx merge` command performs a three-way merge of two *.mpr* files that have a common base commit.
+The `mx merge` command performs a three-way merge of two *.mpr* files by taking their common ancestor (base) into account.
 
 The input is three *.mpr*  files: `BASE`, `MINE`, and `THEIRS`.
 
@@ -106,6 +106,10 @@ This merge state is needed for Studio Pro to know what your current branch is an
 
 So, if you run this command from the command line specifying the three *.mpr* files but the result has conflicts, you will not be able to resolve the conflicts in the `MINE` app using the `THEIRS` documents by just opening the app in Studio Pro. Instead, you need to configure Git to use `mx merge` as a [merge driver](#merge-git-driver) for the *.mpr* files and trigger the merge from the Git command line (so the repository is put in the merge state for Studio Pro to be able to pick it up after the command is complete).
 
+{{% alert color="warning" %}}
+`mx merge` as a [merge driver](#merge-git-driver) is suitable only for [MPRv1 Format](/refguide/troubleshoot-repository-size/#mpr-format)
+{{% /alert %}}
+
 ### Examples
 
 Here is an example:
@@ -119,20 +123,29 @@ This table shows the return codes and their description:
 | Return Code | Description |
 | --- | --- |
 | `0` | The merge is successful and there are no conflicts. *MINE.mpr* contains the result of the merge. |
-| `1` | The command is invalid for the input parameters. |
 | `2` | Conflicts are detected. Open *MINE.mpr* in Studio Pro to resolve them. |
-| `3` | There is an exception, as an error occurred during the merge. Error details are printed to the command line output. |
 | `4` | The version is unsupported. |
+| `129` | There is an exception, an error occurred during the merge. Error details are printed in the command line output. |
 
 ## mx merge as Git Merge Driver {#merge-git-driver}
 
-This section describes the configuration you need to do in order to enable using the [mx merge](#merge) command as a merge driver in Git. With this configuration, you can merge one branch into another using third-party version control tools and the Git command line.
+{{% alert color="warning" %}}
+`mx merge` as a [merge driver](#merge-git-driver) is suitable only for [MPRv1 Format](/refguide/troubleshoot-repository-size/#mpr-format)
+{{% /alert %}}
 
-Normally, when you are merging branches with Git, it compares the changes in files in both branches. If a certain file has been changed in both branches, this is called a conflict. If the files in conflict are text files, Git attempts to resolve it automatically (and very often succeeds). 
+{{% alert color="info" %}}
+Studio Pro configures the merge driver for an app with the name **studiopro** when opening it in Studio Pro.
+{{% /alert %}}
 
-However, if the files in conflict are Mendix apps the conflict is in two *.mpr* files, both the files and the conflict are more complex, which is why we need Studio Pro to resolve the conflicts. For such cases, Git has an option to delegate conflict resolution for a certain file type to an external tool. The `mx merge` command is compatible with this mechanism and allows Git to try to merge the *.mpr* files as if Studio Pro did it. Then, if there are still conflicts, you can open Studio Pro and resolve those manually.
+This section outlines the necessary configuration to enable the [mx merge](#merge) command as a merge driver in Git. With this configuration, you can merge one branch into another using third-party version control tools and the Git command line.
 
-### config File
+Normally, when you are merging branches with Git, it compares the file changes in both branches. If a certain file has been changed in both branches, this triggers a conflict. If conflicting files are text files, Git attempts to resolve it automatically (very often successfully). 
+
+However, if the conflicting files are Mendix apps, the conflict occurs in two .mpr files. Both the files and the conflict itself are more complex, which is why Studio Pro is needed to resolve them. 
+
+For such cases, Git provides an option to delegate conflict resolution for specific file types to an external tool. The `mx merge` command is designed to work with this mechanism, allowing Git to attempt merging the *.mpr* files as Studio Pro would. If conflicts remain, you can open Studio Pro and resolve them manually.
+
+### config File {#merge-config}
 
 Add the lines below to the *config* file located in the *.git* folder of your app on disk.
 
@@ -144,21 +157,15 @@ At the end of the file, add a `[merge "custom"]` block like this:
     driver = [MX.EXE_PATH] merge %O %A %B
 ```
 
-Replace `[MX.EXE_PATH]` with a full path to your *mx.exe* file in the Unix format (for example, `'/c/Program Files/Mendix/10.0.0.8753/modeler/mx.exe'`).
-
-Under the `[core]` section, add the following:
-
-```ini
-    attributesfile = .git/.gitattributes
-```
+Replace `[MX.EXE_PATH]` with a full path to your *mx.exe* file in the Unix format (for example, `'/C/Program Files/Mendix/10.0.0.8753/modeler/mx.exe'`).
 
 {{% alert color="info" %}}
-The *.git* folder is a hidden folder in a computer file management system. You can view it when hidden items are visible.
+The *.git* folder is a hidden folder in your computer file management system. You can view it when hidden items are visible.
 {{% /alert %}}
 
-### .gitattributes File
+### attributes File
 
-Create `.gitattributes` file in .git folder of your app on disk. Add the following line to tell git to use `[merge "custom"]` driver from .gitconfig chapter of this page for merging **.mpr* files.
+Create an `attributes` file in the *info* folder of the *.git* directory of your app. Add the following line to instruct Git to use the `[merge "custom"]` driver from the [config](#merge-config) section of this document for merging *.mpr* files.
 
 ```ini
 *.mpr merge=custom
@@ -202,3 +209,69 @@ Now, if you open you app on the **Main** branch, you should see the following:
 {{% alert color="info" %}}
 When you get a different output, the custom merge drive is not configured correctly. Abort the merge using the command `$git merge --abort` and close the Git command line tool before making changes to the configuration. Changes made to the configuration *config* and *.gitattributes* files are picked up by reopening the Git command line tool.
 {{% /alert %}}
+
+## mx git-merge Command {#git-merge}
+
+The `mx git-merge` command performs a three-way merge of two *.mpr* files by  considering their common ancestor (base).
+The command is suitable for both [MPRv2 Format](/refguide/troubleshoot-repository-size/#mpr-format) and the [MPRv1 Format](/refguide/troubleshoot-repository-size/#mpr-format).  
+
+{{% alert color="warning" %}}
+The command should be used as a **merge driver** and not as a standalone command like [mx merge](#merge).
+{{% /alert %}}
+
+The input is three *.mpr* files: `BASE`, `MINE`, `THEIRS`, and three labels: `BASE_COMMIT`, `MINE_COMMIT` and `THEIRS_COMMIT` which are their respective revisions.
+
+### Usage
+
+{{% alert color="info" %}}
+Studio Pro configures the merge driver for an app with the name **studiopro** when  opening it in Studio Pro.
+{{% /alert %}}
+
+This section outlines the necessary configuration to enable the `mx git-merge` command as a merge driver in Git. With this configuration, you can merge one branch into another using third-party version control tools and the Git command line.
+
+Normally, when you are merging branches with Git, it compares the file changes in both branches. If a certain file has been changed in both branches, this triggers a conflict. If conflicting files are text files, Git attempts to resolve it automatically (very often successfully). 
+
+However, if the conflicting files are Mendix apps, the conflict occurs in two *.mpr* files. Both the files and the conflict itself are more complex, which is why Studio Pro is needed to resolve them.
+
+For such cases, Git provides an option to delegate conflict resolution for specific file types to an external tool. The `mx git-merge` command is designed to work with this mechanism, allowing Git to attempt merging the *.mpr* files as Studio Pro would. If conflicts remain, you can open Studio Pro and resolve them manually.
+
+{{% alert color="warning" %}}
+Currently `mx git-merge` supports merging MPRv2 with MPRv2 and MPRv1 with MPRv1. Merging MPRv2 with MPRv1 or MPRv1 with MPRv2 should be done in Studio Pro.
+{{% /alert %}} 
+
+### config File {#git-merge-config}
+
+Add the lines below to the *config* file located in the *.git* folder of your app.
+
+At the end of the file, add a `[merge "custommpr"]` block like in the example below:
+
+```ini
+[merge "custommpr"]
+    name = custom merge driver for MPR files
+    driver = [MX.EXE_PATH] git-merge %O %A %B %S %X %Y
+```
+
+and a `[merge "custommprcontent"]` block like this
+
+```ini
+[merge "custommprcontent"]
+    name = custom merge driver for mxunit files
+    driver = true
+```
+
+Replace `[MX.EXE_PATH]` with a full path to your *mx.exe* file in the Unix format (for example, `'/C/Program Files/Mendix/10.21.0.63213/modeler/mx.exe'`).
+
+{{% alert color="info" %}}
+The *.git* folder is a hidden folder in your computer file management system. You can view it when hidden items are visible.
+{{% /alert %}}
+
+With the `custommprcontent` merge driver you specify that all *.mxunit* files will be preserved from the default git merge driver. As all conflict are resolved inside the mx tool, there is no need to solve any conflicts in *.mxunit* separately -- mx tool does it together with resolving the mpr file conflict. The only side effect is that modified and deleted files remain unstaged. They should be staged manually using the git add command or within Studio Pro when committing the merge result.
+
+### attributes File
+
+Create the `attributes` file in *info* folder of *.git* directory of your app. Add the following line to instruct Git to use `[merge "custommpr"]` and `[merge "custommprcontent"]` drivers from the [config](#git-merge-config) section of this document for merging *.mpr* and *.mxunit* files.
+
+```ini
+*.mpr     merge=custommpr
+*.mxunit  merge=custommprcontent
+```

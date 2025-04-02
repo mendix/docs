@@ -12,6 +12,100 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2025
 
+### March 20, 2025
+
+#### Portal Improvements
+
+* We have added an option which allows a Technical Contact to set the [environment purpose](/developerportal/deploy/private-cloud-deploy/#environment-purpose). Setting the purpose of your environment does not affect its operational state. We strongly recommend setting this field, as future features may be tailored to specific environment purposes.
+* We have renamed **Development mode** to **Development DTAP mode** in the UI.
+
+#### Deploy API
+
+* We have fixed an issue where users with the Technical Contact role could not create or manage environments through API.
+* We have fixed an issue where it was not possible to retrieve the environments with the *Get multiple environment manifest* API if the environment internal ID was longer than 8 characters.
+
+### March 10, 2025
+
+#### License Manage CLI v0.10.1
+
+* We have updated this component to use the latest dependency versions in order to improve security score ratings for container images. This update will allow us to address CVE-2024-45337 and CVE-2024-45338.
+
+#### Mendix Operator v2.21.1 {#2.21.1}
+
+* We have updated components to use the latest dependency versions in order to improve security score ratings for container images.
+* For new installations, the Operator now uses ubi9 as the base image for Mendix apps. Existing installations will keep their configuration and stay on ubi8. For more information on base image versions, see the [Runtime Base Image](/developerportal/deploy/private-cloud-cluster/#runtime-base-image) section.
+* We have fixed a regression that caused the `model/resources` directory to appear empty and caused problems with some Marketplace modules, such as SAML (Ticket 242648).
+* Upgrading to Mendix Operator v2.21.0 from a previous version now restarts environments managed by that version of the Operator. Environments with 2 or more replicas and a **PreferRolling** update strategy are restarted without downtime.
+
+##### Known Issues
+
+After completing the base installation, the Operator pod may enter a crash loop, reporting a missing endpoint.
+
+For the Standard Operator, you can safely ignore this message. Simply configure the namespace with the required ingress type, and restart the Operator pod.
+
+For the Global Operator, follow these steps to resolve the issue:
+
+1. Edit the operator configuration using the following command: 
+
+    ```shell
+    kubectl -n {namespace} edit operatorconfiguration mendix-operator-configuration
+    ```
+
+2. Modify the endpoint section by setting type: service as shown below, then restart the operator pod:
+
+    ```yaml
+    apiVersion: privatecloud.mendix.com/v1alpha1
+    kind: OperatorConfiguration
+    # ...
+    # omitted lines for brevity
+    # ...
+    spec:
+      endpoint:
+        type: service
+    ```  
+
+We are working on a patch which will resolve the crash loop issue.
+
+### March 6, 2025
+
+#### Portal Improvements
+
+* The character limit for internal application IDs has been extended from 8 to 35 characters.
+* Version 2.21.0 of the Operator introduces support for [read-only root filesystem](/developerportal/deploy/private-cloud-cluster/#readonlyrootfs). This can be enabled for an environment by setting the **Read-Only Root Filesystem** field to **true** in the **Environment details** page.
+* We have added support for creating custom roles for namespace members. The roles can then be applied uniformly across all namespaces within a cluster.
+
+#### General Availability Release
+
+* We have released the general availability (GA) version of Global Operator in the Private Cloud.
+
+### February 19, 2025
+
+#### Mendix Operator v2.21.0 {#2.21.0}
+
+* We have switched all system containers to use a read-only root filesystem. For Mendix app containers, we added an option to use a read-only rootfs, which is disabled by default.
+* We have added a default on ephemeral storage usage to ensure that temporary file storage is reserved and is limited, so that a container gets a guaranteed amount of temporary file storage that cannot be exceeded.
+* We have added a check in `mxpc-cli` to prevent CRD downgrades; starting from `mxpc-cli` version 2.21.0, the installation or upgrade process will keep cluster CRDs unchanged if the cluster has newer CRDs than what is included with the installer.
+* We have updated components to use the latest dependency versions in order to improve security score ratings for container images.
+* We have fixed a *Failed to determine if DDL migration needs approval* error message that sometimes appeared when using a **Recreate** deployment strategy. This error message does not mean that there is an issue, and can therefore be ignored.
+* We have updated documentation with information that Kubernetes 1.32 is supported by the Mendix Operator.
+* Upgrading to Mendix Operator v2.21.0 from a previous version will restart environments managed by that version of the Operator. Environments with 2 or more replicas and a **PreferRolling** update strategy will be restarted without downtime.
+
+#### Important Upgrade Information
+
+With the introduction of ephemeral storage requests and limits, building an app requires at least 2 GB of ephemeral storage available on the Kubernetes node. If your nodes do not have enough temporary storage, the build pods cannot start and their status remains **Pending**. To resolve this issue, you can lower the values for `ephemeral-storage` in the [buildResources](/developerportal/deploy/private-cloud-cluster/#resource-definition-ocm) configuration.
+
+#### Known Issue
+
+This issue has been fixed in Mendix Operator [version 2.21.1](#2.21.1).
+
+* The `model/resources` directory is empty when starting the app, causing issues with some Marketplace modules (such as SAML) that use that location to store configuration data and other resources.
+
+### February 12, 2025
+
+#### Documentation Updates
+
+* We have updated the [CSI Secrets Storage](/developerportal/deploy/secret-store-credentials/) documentation to include instructions on storing credentials and configuration in Google Cloud Secret Manager.
+
 ### January 23, 2025
 
 #### Portal Improvements
@@ -32,7 +126,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We have updated a library used to validate licenses to the latest non-alpha version.
 * We have updated documentation that OpenShift 4.17 and Postgres 17 are supported by the Mendix Operator.
 * We have addressed a rare deadlock situation which could prevent a failing environment from restarting.
-* Upgrading to Mendix Operator v2.20.0 from a previous version will restart environments managed by that version of the Operator. Environments with 2 or more replicas and a **PreferRolling** update strategy will be restarted without downtime.
+* Upgrading to Mendix Operator v2.20.1 from a previous version will restart environments managed by that version of the Operator. Environments with 2 or more replicas and a **PreferRolling** update strategy will be restarted without downtime.
 
 #### Known Limitations
 

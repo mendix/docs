@@ -26,7 +26,7 @@ Sales Representatives in your company want to view a list of opportunity contact
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Domain Model](/refguide/domain-model/).
+* Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Data in the Domain Model](/refguide/domain-model/).
 * Make sure your domain model is configured in the following way:
 
     {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/domain-model.png" width="200px" class="no-border" >}}

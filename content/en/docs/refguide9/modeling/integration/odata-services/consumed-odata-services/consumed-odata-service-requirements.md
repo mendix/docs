@@ -68,10 +68,10 @@ The most commonly used attribute types can be used in your app. The types of the
 | OData Type                     | Mendix Type                           |
 | ---                            | ---                                   |
 | Binary                         | Binary (but see 3.4) |
-| Boolean                        | Boolean <sup><small>[1]</small></sup> |
+| Boolean                        | Boolean ¹ |
 | Byte, SByte, Int16, Int32      | Integer |
 | DateTime, DateTimeOffset, Time | Date/time |
-| Decimal, Double, Single        | Decimal <sup><small>[2]</small></sup> |
+| Decimal, Double, Single        | Decimal ² |
 | Enumeration                    | Enumeration |
 | Int64                          | Long |
 | String, Guid                   | String |
@@ -85,7 +85,7 @@ Support for enumerations was introduced in Studio Pro [9.24.0](/releasenotes/stu
 When the OData endpoint contains operations, these are not imported in the consumed OData service. You can use a [Call REST service](/refguide9/call-rest-action/) activity to call these operations.
 {{% /alert %}}
 
-<small><sup>[1]</sup> In Mendix, Booleans cannot be null. If the service returns null, the value will be false in Mendix.<br /><sup>[2]</sup> Decimal values outside of the range of a [Mendix decimal](/refguide9/attributes/#type) are currently not supported. If the service returns a value outside of the range, there will be an error.</small>
+<small>¹ In Mendix, Booleans cannot be null. If the service returns null, the value will be false in Mendix.<br />² Decimal values outside of the range of a [Mendix decimal](/refguide9/attributes/#type) are currently not supported. If the service returns a value outside of the range, there will be an error.</small>
 
 ### Generalizations
 

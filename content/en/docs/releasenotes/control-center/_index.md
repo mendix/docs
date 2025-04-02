@@ -12,6 +12,26 @@ These release notes cover changes to the app management functionality and other 
 
 To see the current status of the Mendix Control Center, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
+## 2025
+
+### March 18, 2025
+
+#### New Features
+
+* Software Composition is now generally available. It helps you easily manage security risk by providing visibility and insights into the dependencies of each application across your application landscape. You can access the feature in [Control Center](/control-center/software-composition/) and [Apps navigation pane](/developerportal/deploy/software-composition/).
+
+### February 13, 2025
+
+#### New Features
+
+* We have re-released the company **Onboarding** functionality in Control Center. This allows you to set up Mendix onboarding specifically for all new members of your company. You can set up an onboarding email that new users get as soon as they create their Mendix accounts and a company onboarding page that new users land on.
+
+### January 30th, 2025
+
+#### Fixes
+
+* We fixed an issue where the export to Excel from the AppsOverview was wrongly setting the DBRam value. (Ticket 239384)
+
 ## 2024
 
 ### November 29, 2024
@@ -48,7 +68,7 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 #### New Features
 
-* We have centralized project roles at the company level. This enhances your ability to govern access across all Mendix projects and also enables the programmatic assignment of project roles via [the Mendix Projects API](/apidocs-mxsdk/apidocs/projects-api/). You can migrate your project roles to the centralized company-level project roles on the [Roles & Permissions](/control-center/roles-and-permissions/#migrate-centralized-roles) page. We expect you to complete the migration by January 1, 2025.
+* We have centralized project roles at the company level. This enhances your ability to govern access across all Mendix projects and also enables the programmatic assignment of project roles via [the Mendix Projects API](/apidocs-mxsdk/apidocs/projects-api/). You can migrate your project roles to the centralized company-level project roles on the **Roles & Permissions** page. We expect you to complete the migration by January 1, 2025.
 
 ### September 5, 2024
 

@@ -36,11 +36,7 @@ Within a team, there are predefined roles that can be provisioned to team member
 * Who has the [node permissions](/developerportal/deploy/node-permissions/) for access to the node information
 * Who can change the app's [Settings](/developerportal/collaborate/general-settings/)
 
-Scrum Masters can edit and create new team roles on the [Team](/developerportal/general/team/) page, and Mendix Admins can edit and create new team roles within the company in [Control Center](/control-center/).
-
-{{% alert color="info" %}}
-It is not possible to maintain project dedicated roles, if your company is using [Centralized Project Roles](/control-center/roles-and-permissions/).
-{{% /alert %}}
+Mendix Admins can edit and create new team roles within the company in [Control Center](/control-center/roles-and-permissions/).
 
 ## Technical Contact {#technical-contact}
 

@@ -224,10 +224,13 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 ### Java {#java}
 
-When running Mendix on a server, you will need Java Runtime Environment (JRE) 11, 17, or 21. To download an Eclipse Temurin OpenJDK distribution from Adoptium, see [Eclipse Temurin™ Latest Releases](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
+When running Mendix on a server, you need Java Runtime Environment (JRE). To download an Eclipse Temurin OpenJDK distribution from Adoptium, see [Eclipse Temurin™ Latest Releases](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html). The following list explains which version to use:
+
+* Mendix 9.24 LTS: Java 11, optionally use Java 21 in 9.24.23 and later
+* (Future) Mendix 10.24 LTS: Java 21
 
 {{% alert color="warning" %}}
-Compatibility with JDK 17 has been released with Studio Pro version 10.8. Java 21 is compatible with Studio Pro 9.24 LTS from 9.24.3, Studio Pro 10.6 MTS from 10.6.9, and Studio Pro 10.11 and above. Mendix recommends switching to a Studio Pro version compatible with Java 21.
+Studio Pro 10.21 and above (including the future 10.24 LTS) does not support Java 11. Upgrade your application to Java 21 before migrating.
 {{% /alert %}}
 
 ## Databases {#databases}
@@ -320,7 +323,7 @@ MxBuild is a Windows and Linux command-line tool that can be used to build a Men
     | --- | --- |
     | .NET 6 | .NET 8 |
 
-* JDK 11
+* The appropriate JDK, 11, 17, or 21, see [Java](#java), above for more information.
 
 ## mx Command-Line Tool {#mxtool}
 

@@ -3,12 +3,7 @@ title: "Pipelines"
 url: /developerportal/deploy/pipelines/
 weight: 8
 description: "Describes how to design, implement, and review pipelines using the Pipelines feature in the Mendix Portal"
-beta: true
 ---
-
-{{% alert color="warning" %}}
-Mendix Pipelines is in [public beta](/releasenotes/beta-features/). It is currently available for unlimited use with all licensed Mendix Cloud apps. Limitations may be put on its use in the future.
-{{% /alert %}}
 
 ## Introduction
 
@@ -92,7 +87,7 @@ Click **Copy ID** ({{% icon name="copy" %}}) on a pipeline design to copy the de
 
 Click **More Options** ({{% icon name="three-dots-menu-horizontal-filled" %}}) > **Edit** on a pipeline design to go to its **Details** page. From there, you can view and edit the pipeline details, as described in the [Editing a Pipeline](#edit-pipeline) section below.
 
-Click **More Options** ({{% icon name="three-dots-menu-horizontal-filled" %}}) > **Delete** to delete a pipeline design.
+Click **More Options** ({{% icon name="three-dots-menu-horizontal-filled" %}}) > **Delete** to delete a pipeline design. You cannot delete a pipeline design if it is used in any currently running pipelines. Instead, you must wait for the run to finish before you delete the design.
 
 {{% alert color="warning" %}}
 If you delete a pipeline design in the **Designs** tab, any run history associated with that pipeline design is deleted from the **Runs** tab.
@@ -121,6 +116,8 @@ From your pipeline design's **Details** page, you can add, remove, and configure
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/pipelines/pipeline-design.png" alt="" >}}
 
 {{% alert color="info" %}}
+For pipelines that are currently running, the page shows the current state of the steps (finished, running, or not started).
+
 Active pipelines cannot be edited; if you want to edit an existing pipeline, make sure it is deactivated.
 {{% /alert %}}
 
@@ -140,6 +137,8 @@ This is a mandatory step for each pipeline; you cannot delete this step. This st
 
 {{% alert color="info" %}}
 The Teamserver push (Git) command requires a Git repository. Customers using an SVN repository for their Mendix app cannot use this trigger.
+
+Ensure that you only create one pipeline per app with the Teamserver push (Git) trigger and the same [branch expression](#branch-expression). If you create multiple pipelines with the Teamserver push (Git) trigger and the same expression, only the pipeline that you created first is executed.
 {{% /alert %}}
 
 ##### Checkout
@@ -161,7 +160,7 @@ Evaluate results of the [Maia Best Practice Recommender](/refguide/best-practice
 * Import the [Unit Testing](https://marketplace.mendix.com/link/component/390) module into your Mendix application from the Marketplace.
 * The environment in which Unit Testing needs to happen should be in a running state.
 
-Since a remote API password is required to trigger Unit Tests and it is not advisable to have sensitive credential information in the pipeline definition, use variables within pipelines. These variables can then be easily referenced in the pipeline design. For more information, see the [Running Unit Tests Through the Remote API](/appstore/modules/unit-testing/#running-unit-tests-through-the-remote-api) section of *Unit Testing*.
+Since a remote API password is required to trigger Unit Tests and it is not advisable to have sensitive credential information in the pipeline definition, use variables within pipelines. These variables can then be easily referenced in the pipeline design. For more information, see the [Running Unit Tests Through the Remote API](/appstore/modules/unit-testing/#using-the-remote-api) section of *Unit Testing*.
 
 Using **Timeout (in seconds)** field, users can restrict the execution time of unit tests. If the tests exceed the predefined duration or timeout, the test step fails. It helps to avoid unnecessary waiting if tests are stuck in a loop.
 
@@ -197,17 +196,17 @@ If you want the pipeline to run when there is a push to one specific branch, you
 
 Here are some examples of valid branch expressions:
 
-* `Main` – The branch named "Main"
+* `main` – The branch named "main"
 * `*` – All branches
-* `Main*` – All branches that start with "Main"
-* `*Main` – All branches that end with "Main" 
+* `main*` – All branches that start with "main"
+* `*main` – All branches that end with "main" 
 
 Keep the following in mind:
 
 * Branch expressions are case sensitive.
 * White spaces are allowed.
-* Do not use multiple asterisks in the branch expression. For example, `**Main` is an invalid expression.
-* Do not use the asterisk between two words. For example, `Main*Main` is an invalid expression.
+* Do not use multiple asterisks in the branch expression. For example, `**main` is an invalid expression.
+* Do not use the asterisk between two words. For example, `main*main` is an invalid expression.
 
 #### Pipeline Variables and Dependent Steps
 
@@ -326,9 +325,11 @@ To trigger pipelines based on Teamserver push (Git), Mendix automatically create
 
 ### Known Issues and Limitations
 
-Pipelines is in public beta and is undergoing optimizations. Initial stages may involve occasional slowness, leading to pipeline failures. Mendix is committed to resolving these issues swiftly and appreciates your understanding.
+Pipeline runs are not picked up and executed if the Pipelines functionality is undergoing maintenance.
 
 It is not currently possible to add the same pipeline step more than once in a pipeline. This will be improved in the future.
+
+In case of a system outage, pipelines triggered during that time are not executed.
 
 ## Read More
 

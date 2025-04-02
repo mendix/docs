@@ -18,7 +18,10 @@ You can integrate between Snowflake and Mendix applications by using OAUTH provi
 
 ### Prerequisites
 
-To enable SSO-based RBAC for your Mendix app, you must first install and configure the [OIDC SSO module](/appstore/modules/oidc/).
+To enable SSO-based RBAC for your Mendix app, you must install and configure the following prerequisites:
+
+* [OIDC SSO module](/appstore/modules/oidc/).
+* [Snowflake REST SQL Connector](https://docs.mendix.com/appstore/connectors/snowflake/snowflake-rest-sql/)
 
 ## Configuring Azure Entra ID
 
@@ -142,7 +145,7 @@ To configure your Mendix application, perform the following steps:
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-sso/scope.png" >}}
 
-10. For **UserParsing**, select the default method.
+10. For **UserParsing**, select the default method, `OIDC.OIDC_CustomUserParsing_Standard`.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-sso/parsing.png" >}}
 
@@ -150,4 +153,29 @@ To configure your Mendix application, perform the following steps:
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-sso/provisioning.png" >}}
 
-12. Run the application and log in with the user that you use in Snowflake and Azure.
+    * Custom user Entity (extension of System.User) – Administration.Account
+    * The attribute where the user principal is stored – Name
+    * Allow the module to create users – Yes
+    * Default Userrole – User
+    * User Type – Internal
+    * IdP Attributes to Configured Entity Attributes
+
+        * email – Email
+        * name – FullName
+        * preferred_username – Name
+    
+12. Go to the configuration page of the [Snowflake RestSQL connector](/appstore/connectors/snowflake/snowflake-rest-sql/) and add a new connection.
+13. Select OAUTH as the "Authentication Type".
+    
+     {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-sso/RestSQLOAuth.png" >}}
+  
+14. Please provide the following information to set up the connection:
+   
+    * **Connection Name** – A descriptive name for this connection.
+    * **Snowflake Account URL** – The URL for your Snowflake account. This can be found within the Snowflake application.
+    * **Snowflake Account Identifier** – Your Snowflake Account Identifier.
+    * **Resource Path** – Use the default resource path or customize it as needed.
+
+    For more information see the [Snowflake documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth).
+
+15. Logout from the admin user and sign in using SSO. 

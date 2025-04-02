@@ -40,9 +40,13 @@ An app modeled in Mendix is traditionally stored in a single *.mpr* file. This i
 
 Version control systems like Git do not store a full copy of a document for every commit. Instead, they store the difference between the two revisions, also called a delta. For binary files such as the *.mpr* file Git cannot effectively calculate the delta. When a microflow is changed, a small delta of a couple of kilobytes is expected, but the storage format results in a delta of a megabyte or more. The consequence of this is that your Git repository grows more rapidly than you expected.
 
-#### MPRv2 Format
+#### MPRv2 Format {#mprv2}
 
-Studio Pro 10.18 introduced a public beta of the new version of the *.mpr* format: MPRv2. The key difference is that all documents, such as microflows, are no longer stored as part of the *.mpr* file but as separate files in the *mprcontents* directory. The *.mpr* file functions as an index file pointing to all the different files on disk. 
+{{% alert color="info" %}}
+MPRv2 was released in Studio Pro 10.18.0 as [Public Beta](/releasenotes/beta-features/). In Studio Pro 10.21.0, MPRv2 was released for General Availability (GA) and is automatically used for new apps.
+{{% /alert %}}
+
+Studio Pro 10.18 introduced a new version of the *.mpr* format: MPRv2. The key difference is that all documents, such as microflows, are no longer stored as part of the *.mpr* file but as separate files in the *mprcontents* directory. The *.mpr* file functions as an index file pointing to all the different files on disk. 
 
 This means that when you change one document, for example, a page, only a small file representing that page will change on disk. This allows Git to calculate an efficient delta and results in a more appropriate repository growth compared to MPRv1. Functionally there is no differences between the split (v2) or the combined (v1) format inside Studio Pro. 
 
@@ -51,17 +55,21 @@ Collaborating within one app on MPRv1 and MPRv2 branches is possible. To limit r
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-Merging using the command line with `git merge` or by using third-party tools is not yet supported for MPRv2.
+Merging MPRv2 apps using the command line with `git merge` or using third-party tools is only supported from Studio Pro 10.21.0 and above. Hybrid merges involving both MPRv1 and MPRv2 formats are not supported.
 {{% /alert %}}
 
 #### Converting MPR Storage Format {#convert}
 
-Upgrading to the new format is optional and can be done per branch via the [File menu](/refguide/file-menu/). To upgrade to MPRv2, open your app and select **File > Upgrade app to split MPR format (v2)**. After a confirmation the app will be converted and you will be prompted to commit.
+In Studio Pro 10.18 and above upgrading to the new format is optional and can be done per branch via the [File menu](/refguide/file-menu/). To upgrade to MPRv2, open your app and select **File > Upgrade app to split MPR format (v2)**. After a confirmation the app will be converted and you will be prompted to commit.
 
 You can also downgrade branches that are already on MPRv2 to MPRv1 by selecting **File > Downgrade app to combined MPR format (v1)**.
 
 {{% alert color="info" %}}
 Before converting the MPR format it is recommended to commit your local work to ensure there is an isolated commit with the conversion step for debugging, in case conversion fails.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+In future versions of Studio Pro conversion to MPRv2 will happen automatically when opening a branch.
 {{% /alert %}}
 
 ### Decreasing MPRv1 File Size
@@ -220,3 +228,12 @@ When reaching out to Mendix Support, please include:
 * App/Projects ID for your app
 * Log file (you can find its location in the command line output)
 * Version of the tool, for example, `git-fixer v1.16.5.essentials` (you can find the version number in the command line output)
+
+## Recommendation on Avoiding Git Issues {#recommendation}
+
+In case you are still deciding whether to migrate from SVN to Git, or you are already on Git and want to get a recommendation on what steps to take to solve or prevent Git-related performance issues, please follow the decision trees in the image below:
+
+{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/migration-advice-combined.png" class="no-border" >}}
+
+In Studio Pro 10.18 and above, you can manually convert branches to MPRv2. In future versions, branch conversion will happen automatically. For more information on the format, see the [MPRv2 Format](#mprv2) section.
+For more information on partial clone, see [Clone Type](/refguide/clone-type/).

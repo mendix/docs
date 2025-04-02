@@ -42,8 +42,9 @@ Once the Mendix Data Loader is deployed, follow these steps to configure and use
 4. Click **Create** to create a new data source.
     1. Enter a **Name** for your data source within the Data Loader.
     2. Enter an **API endpoint** – that is, the base endpoint for the OData resource in your Mendix application, for example, `https://yourmendixapp.mendixcloud.com/odata/snowflakedata/v1/`.
-    3. Click **Save**.
-    4. Grant the application **CREATE DATABASE** and **EXECUTE TASK** privileges. This step is necessary for the application to create the staging database for data ingestion and to execute tasks.
+    3. Use the radio button **Use Delta Ingestion** to specify if you want to ingest all exposed data with every ingestion, or if you want to ingest only data that was newly created or changed since the last ingestion for this data source.
+    4. Click **Save**.
+    5. Grant the application **CREATE DATABASE** and **EXECUTE TASK** privileges. This step is necessary for the application to create the staging database for data ingestion and to execute tasks.
 
 5. To view the status of your data source, check the **Details**.
 6. To view the configuration status, click the **Authentication Configuration** tab.
@@ -83,6 +84,26 @@ Once the Mendix Data Loader is deployed, follow these steps to configure and use
 19. To view the ingested data, access the schema specified in the target database within your Snowflake environment.
 
 The ingested data is stored in the target schema of the specified target database, created by the Mendix Data Loader application. This target schema serves as a staging area. After each ingestion, copy the tables from the target schema to the desired database and schema that you want to use to store the ingested data.
+
+## Using Delta Ingestion Setting
+
+If you do not want to ingest all exposed data from the published OData of your Mendix application, you can enable the **Use Delta Ingestion** setting on your data source when creating or editing the data source in the Mendix Data Loader.
+
+The first ingestion performed for the data source with this setting enabled ingests all data exposed by your OData endpoint. Subsequent ingestions ingest only the data with a **changedDate** later than the date of the last ingestion.
+
+### Enabling ChangedDate for Delta Ingestion
+
+To use delta ingestion, you must enable the **changedDate** system member on the exposed entities. To do this, perform the following steps:
+
+1. Navigate to the entities in your domain model.
+2. In their properties, select the **Store 'changedDate'** radio button.
+3. Navigate to your OData resource and expose the **changedDate** attribute.
+
+### Handling Deleted Objects
+
+Deleted objects are not automatically handled on the Snowflake side. To properly manage deletions, we recommend adding a boolean field to your exposed entities, for example, **IsSoftDeleted**. You can then set the field to **true** when an object needs to be deleted.
+
+After these objects are ingested into the staging area in Snowflake, you can process them accordingly during further data processing. After ingesting a soft-deleted object, you can delete it from the database of your Mendix application. 
 
 ## Using Unique Schemas to Avoid Ingestion Job Conflicts
 
@@ -139,6 +160,56 @@ For example, for a data source with the ID *40FJYP9D*, the resulting statement w
 CALL MENDIX_DATA_LOADER.MX_FUNCTIONS.RUN_INGESTION_JOB('40FJYP9D','');
 ```
 
+## Setting Up Mail Notifications on Failed Task Execution
+
+Snowflake provides a built-in functionality for alerts and notifications. This `ALERT` object lets you specify a conditional expression to check if tasks have failed and send notifications if required. 
+
+To use this functionality, perform the following steps:
+
+1. Create a [notifcation integration email](https://docs.snowflake.com/en/sql-reference/sql/create-notification-integration-email).
+2. Create an [ALERT](https://docs.snowflake.com/en/sql-reference/commands-alert) using the notification integration and the ["SYSTEM$SEND_EMAIL"](https://docs.snowflake.com/en/sql-reference/stored-procedures/system_send_email) system function.
+
+For more information about using external integrations for sending all types of notifications, see [Introduction to Snowflake's data pipeline alerts & notifications](https://medium.com/snowflake/introduction-to-snowflakes-data-pipeline-alerts-notifications-9beac8d127cc).
+
+### Sample SQL to Set up a Mail Notification
+
+The following is a sample SQL template which you can customize with your data and execute in a worksheet:
+
+```sql
+CREATE DATABASE IF NOT EXISTS <db name>;
+
+CREATE SCHEMA IF NOT <schema name>;
+
+USE SCHEMA <schema name>;
+
+CREATE OR REPLACE NOTIFICATION INTEGRATION <NOTIFICATION INTEGRATION name>
+  TYPE = EMAIL
+  ENABLED = TRUE
+  ALLOWED_RECIPIENTS = ('<mail1@company.com>', '<mail2@company.com>', ...);
+
+CREATE OR REPLACE ALERT <ALERT name>
+  WAREHOUSE = <warehouse name>
+  SCHEDULE = '<integer> MINUTE' -- Or use CRON e.g. 15 * * * * UTC
+  IF (
+    EXISTS (
+      SELECT 1
+      FROM SNOWFLAKE.ACCOUNT_USAGE.TASK_HISTORY
+      WHERE (STATE = 'FAILED' OR STATE = 'FAILED_AND_AUTO_SUSPENDED') AND NAME = '<task name>'
+        AND SCHEDULED_TIME >= CONVERT_TIMEZONE('UTC',DATEADD(MINUTE, -<integer>, CURRENT_TIMESTAMP()))
+    )
+  )
+  THEN CALL SYSTEM$SEND_EMAIL(
+    '<NOTIFICATION INTEGRATION name>',
+    ('<mail1@company.com>', '<mail5@company.com>', ...) --Subset of ALLOWED_RECIPIENTS in NOTIFICATION INTEGRATION. 
+    '<Mail subject>',
+    '<Mail Body>.'
+  );
+
+ALTER ALERT <ALERT name> RESUME; -- The ALERT has STATE Suspended when created and is started by this statement
+
+SHOW ALERTS;
+```
+
 ## Verifying the Access Token
 
 When using OAuth authentication with the Mendix Data Loader, it is crucial to verify the access token received by your Mendix application. This verification process ensures the token's authenticity and integrity, protecting your application from unauthorized access attempts.
@@ -176,12 +247,29 @@ https://apps-api.c1.<cloud_region_id>.<cloud>.app.snowflake.com/oauth/complete-s
 
 The *cloud_region_id* and the *cloud* in the URL depend on the configurations of your Snowflake account. See [Supported Cloud Regions](https://docs.snowflake.com/en/user-guide/intro-regions) and [Supported Cloud Platforms](https://docs.snowflake.com/en/user-guide/intro-cloud-platforms) for more information on what these values are according to the region and cloud platform your account is in.
 
+## Using Mendix Data Loader with a Private Link
+
+If you do not want the connection between the Mendix Data Loader and your Mendix apps to run through the public internet (for example, due to regulations or internal policies), you can configure a private link functionality for your cloud. This section outlines a sample high-level process that your company can implement to enable private links.
+
+{{% alert color="info" %}}Creating private endpoints is not available on [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).
+
+The process described in this section applies to setting up a private link within the same cloud provider. Private links between different cloud providers, for example, Azure and AWS, require special measures such as an S2S VPN to link the two VNets.{{% /alert %}}
+
+To implement the connection between Mendix Data Loader and your app, perform the following steps:
+
+1. Obtain the necessary information from your Mendix Platform owner (for example, your system administrator, or a partner who implemented the Platform for you).
+
+    You must know in which cluster your app is running, so you can set up a private link tunnel to the location.
+
+2. Configure the private link as described in the following documents:
+
+    * For AWS - [Get started with AWS PrivateLink](https://docs.aws.amazon.com/vpc/latest/privatelink/getting-started.html) and [Manage private connectivity endpoints: AWS](https://docs.snowflake.com/en/user-guide/private-manage-endpoints-aws)
+    * For Azure - [Quickstart: Create a Private Link service by using the Azure portal](https://learn.microsoft.com/en-us/azure/private-link/create-private-link-service-portal) and [Manage private connectivity endpoints: Azure](https://docs.snowflake.com/en/user-guide/private-manage-endpoints-azure)
+
 ## Current Limitations
 
 * Exposing an association in an OData service as a link is not supported yet by the Mendix Data Loader. Instead, choose the **As an associated object id** option in your OData settings. This option stores the associated object ID in the table, but not explicitly as foreign key.
-* The Mendix Data Loader always ingests all data exposed by the OData published by your Mendix application. If you do not want to use everything within the exposed entities, you must apply further filtering on the Snowflake side. Enabling filtering on the Mendix side is currently on the roadmap.
 * The Mendix Data Loader does not support custom domains for Mendix applications when using pagination in published OData services. This is because the OData response always returns the base domain's root URL, regardless of the custom domain being used. As a result, the call for the next page fails because the returned root URL does not have a corresponding network rule in Snowflake.
-* Loading deltas is not yet supported on the OData side.
 
 ## Technical Reference {#technical-reference}
 
@@ -223,6 +311,18 @@ A bug in the published OData service resource in Mendix Studio Pro 10.10 where t
 #### Solution
 
 This issue is resolved in Mendix Studio Pro version 10.12 and newer. For information about using OData pagination, see [Published OData Entity: Use Paging](/refguide/published-odata-entity/#paging).
+
+### Error Using Delta Ingestion: Could Not Map 'ChangedDate' to Attribute or Association
+
+When ingesting data using the **Use Delta Ingestion** setting, the stacktrace shows the error code 400 with the message `Could not map 'changedDate' to attribute or association.`.
+
+#### Cause 
+
+The **ChangedDate** system member on the exposed entity is not enabled or is not exposed in the OData endpoint.
+
+#### Solution
+
+Enable the **changedDate** system member on the exposed entity and expose it on the published OData resource.
 
 ## Contact Information
 

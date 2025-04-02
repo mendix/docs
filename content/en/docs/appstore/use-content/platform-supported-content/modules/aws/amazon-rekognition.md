@@ -91,3 +91,22 @@ The **Documentation** pane displays the documentation for the currently selected
 2. Click on the element for which you want to view the documentation.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
+
+For additional reference, the available activities are listed below.
+
+### Activities {#activities}
+
+[Activities](/refguide/activities/) define the actions that are executed in a microflow or a nanoflow.
+
+The Amazon Rekognition connector contains the following activities:
+
+* `CompareFaces` - This service compares a face in the source input image with each of the 100 largest faces detected in the target input image. If the source image contains multiple faces, the service detects the largest face and compares it with each face detected in the target image.
+* `DetectCustomLabels` - This service detects custom labels in a supplied image by using an Amazon Rekognition Custom Labels model. You specify which version of a model version to use by using the `ProjectVersionArn` input parameter.
+* `DetectFaces` - This service detects faces within an image that is provided as input.
+* `DetectModerationLabels` - This service detects unsafe content in a specified image (JPEG or PNG). Use `DetectModerationLabels` to moderate images depending on your requirements. For example, you might want to filter images that contain nudity, but not images containing suggestive content.
+* `DetectLabels` - This service detects instances of real-world entities within an image (JPEG or PNG) that is provided as input. This includes objects like flower, tree, and table; events like wedding, graduation, and birthday party; and concepts like landscape, evening, and nature. 
+* `DetectText` - This service detects text in the input image and converts it into machine-readable text.
+* `DetectProtectiveEquipment` - This service detects Personal Protective Equipment (PPE) worn by people detected in an image. Amazon Rekognition can detect face, hand, and head covers.
+* `RecognizeCelebrities` - This service returns an array of celebrities recognized in the input image.
+* JavaScript actions - These actions provide an additional way to extend the functionality of your application. For more information, see [JavaScript Actions](/refguide/javascript-actions/).
+* `Image_AddBoundingBox` - This nanoflow action can be used to generate a rectangle around the labels that have been identified on an image. It makes use of a JavaScript action inside the Nanoflow. The image upon which the rectangles are to be generated must be contained in a container. As a result, the nanoflow action can only be executed after the page has been rendered.

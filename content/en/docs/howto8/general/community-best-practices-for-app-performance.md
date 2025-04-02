@@ -88,7 +88,7 @@ Indexes is a topic with a long history of best practices from the database world
 
 For OQL, many of the same best practices apply as for XPath.
 
-* Note that OQL queries do not get domain model security, so you might need to add extra clauses when applicable (for example, in multi-tenant apps).
+* Note that OQL queries do not get domain model security, so you might need to add extra clauses when applicable (for example, in multitenant apps).
 
 ## Security Best Practices
 

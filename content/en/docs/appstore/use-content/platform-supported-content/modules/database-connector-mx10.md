@@ -31,6 +31,12 @@ If you need to connect to other database types, check out the [Database Connecto
 
 ### Features {#features}
 
+{{% alert color="info" %}}
+
+From [Studio Pro 10.19](/releasenotes/studio-pro/10.19/), you can connect to any database by using the Java dependency specified by the user for the respective database. For more information, see the [Configure for Any Database](#byod) section below.
+
+{{</alert>}}
+
 This connector supports connections to the following database types:
 
 * Microsoft SQL
@@ -38,8 +44,6 @@ This connector supports connections to the following database types:
 * PostgreSQL - For certificate-based authentication (available from Studio Pro 10.16), see the [Use Certificate-Based Authentication for PostgreSQL Connections](#postgres-ssl) section below
 * Oracle
 * Snowflake – GA support from [Studio Pro 10.12](/releasenotes/studio-pro/10.12/) (Beta versions are available from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/)). For more information, see [Configure the External Database Connector for Snowflake](/appstore/modules/snowflake/external-database-connector/)
-
-If you are looking for another database type, follow the prompt to request support your database when you open the database connection wizard.
 
 This connector supports the following statements:
 
@@ -51,9 +55,9 @@ This connector supports the following statements:
 
 ### Limitations 
 
-* `SELECT` queries and `Stored Procedure` can be saved only if they are successfully executed and a response structure is created
+* `SELECT` queries and `Stored Procedure` can be saved only if they are successfully executed and a response structure is created (this is no longer a limitation as of Studio Pro 10.20)
 * The connector supports columns and stored procedure parameters with primitive data types only
-* If column names contain special characters, use an alias for the column name
+* If column names contain special characters, use an alias for the column name (this is no longer a limitation as of Studio Pro 10.20)
 * Parameters are only supported for filter values (prepared statements)
 * Certificate-based authentication for PostgreSQL is not supported on macOS
 
@@ -119,6 +123,22 @@ Then, use the parameter in the query:
 
 `select * from customers where contactFirstName like {paramFirstName}`
 
+To pass a list of values to a parameter, you can use the following approach:
+
+```sql
+WITH empids AS (
+   SELECT empid
+   FROM json_table({EmpIdList}, '$[*]' columns (empid number PATH '$'))
+)
+SELECT *
+FROM emp
+WHERE empno IN
+    (SELECT empid
+     FROM empids);
+```
+
+Here, the parameter `EmpIdList` is of type String with the  value `[1,7946,3,4,7942,7943,7945]`.
+
 ### Using Query Response {#use-query-response}
 
 After [querying the database](#query-database), you can view the response in the **Response** screen. 
@@ -162,6 +182,14 @@ You can now use the microflow in your app. Below is an example of a configured m
 See the [Integration Activities](/refguide/integration-activities/) section of the *Studio Pro Guide* for further explanation of the properties in this activity.
 See the [Call Stored Procedure](/howto/integration/use-the-external-database-connector/) section of *Use the External Database Connector* for more information on how to call a stored procedure.
 
+### Saving Intermediate Queries
+
+As of Studio Pro 10.20, it is possible to save queries at intermediate stages.
+
+Studio Pro's standard save behavior is implemented, including the dot indicator in the tab to signify unsaved changes.
+
+Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to store changes when switching to a different query or performing another action. Make sure to not to use queries that are saved intermediately in the [Query External Database](/refguide/query-external-database/) activity of a microflow, as it might lead to runtime exception.
+
 ## Use Certificate-Based Authentication for PostgreSQL Connections {#postgres-ssl}
 
 ### Prerequisites 
@@ -188,25 +216,98 @@ To test SSL-based connections from the Database Connection wizard, use the Certi
 1. Import the CA certificate file
     {{% /alert %}}
 
-1. If the PostgreSQL server requires Mendix to authenticate using a client certificate, add the client certificate details to the App Settings by clicking **Configuration** > **Edit** > **Custom**. See the [Running Locally](/howto/integration/use-a-client-certificate/) section of *Use a Client Certificate* for further instructions of how to add the certificate details.
+2. If the PostgreSQL server requires Mendix to authenticate using a client certificate, add the client certificate details to the App Settings by clicking **Configuration** > **Edit** > **Custom**. See the [Running Locally](/developerportal/deploy/use-a-client-certificate/) section of *Use a Client Certificate* for further instructions of how to add the certificate details.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/edit-configuration.png" class="no-border" >}}
 
-1. Add the connection details to the [Database Connection wizard](#connect-database). Fill in the following details:
+3. Add the connection details to the [Database Connection wizard](#connect-database). Fill in the following details:
     * Set SSL encryption to **Yes**
     * Set SSL mode as per your requirement
     * Add the Client certificate identifier; this must match the value provided in the custom settings dialog
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/example-SSL-connection.png" class="no-border" >}}
 
-1. Click **Test Connection**.
+4. Click **Test Connection**.
 
-1. Run your application to test the connection for local runtime.
+5. Run your application to test the connection for local runtime.
 
 ### Running in the Cloud
 
 To connect to PostgreSQL when the application is running in Mendix Cloud, follow these steps:
 
-1. To configure SSL-based authentication in Mendix Cloud, add a CA certificate and client certificate for server configuration and the selected SSL mode. For more details, see the [Running in the Cloud](/howto/integration/use-a-client-certificate/#running-in-the-cloud) section of *Use a Client Certificate*.
+1. To configure SSL-based authentication in Mendix Cloud, add a CA certificate and client certificate for server configuration and the selected SSL mode. For more details, see the [Running in the Cloud](//developerportal/deploy/use-a-client-certificate/) section of *Use a Client Certificate*.
 2. After the client certificate has been added, double-click the client certificate and add the value `ClientCertificateIdentifier` to `Use Client Certificate for specific services`. This must match the value provided for the constant `ClientCertificateIdentifier`.
 3. Add the required values to the constants created for DBSource, DBUsername, DBPassword, and ClientCertificateIdentifier.
+
+## Configure for Any Database {#byod}
+
+### Prerequisites 
+
+* Ensure you have the appropriate Java Database Connectivity (JDBC) JAR file for the specific database.
+* Gather the external connection details, including login credentials and the JDBC connection string.
+
+### Connect to the Database
+
+1. Open the module settings and add the JDBC JAR File.
+   
+   * Alternatively, place the downloaded JAR file in the userlib folder of your application.
+
+2. Run the app with the latest version of the External Database Connector. 
+
+3. Create a New External Database Connection.
+4. Open the connection settings and under Database Type, select **Other**.
+5. Enter the login credentials and JDBC connection string.
+6. Click **Test Connection** to ensure the database connection is successful.
+7. Click **Save** to save the connection details. 
+
+### Configure Database Schema Information 
+
+The Browse Database Schema tab might not display a comprehensive overview of all available schemas for certain databases. You can customize this behavior using the Configure option. To do so, follow these steps:
+
+1. Open the **App** menu and select **Deploy for Eclipse**.
+2. Extend the class MxQueryBasedSchemaInfoProvider.
+3. Override the following methods based on your requirements:
+    * getTableMetaDataQuery
+    * getViewMetaDataQuery
+    * getProcedureMetaDataQuery
+    * getFunctionMetaDataQuery
+4. Use the provided example, MxDb2SchemaInfoProvider for IBM Db2, for a better understanding of how to customize the schema information.
+
+### Running Queries and Handling Query Responses
+
+Execute queries as you would with supported databases, and retrieve responses in the associated entity. Refer to the documentation of your specific JDBC library for detailed syntax and execution options.
+
+{{% alert color="info" %}}
+By default, autocommit is set to false for design time queries.
+{{% /alert %}}
+
+### Resolving Dependency Issues with Apache Arrow on JDK 17 or 21
+
+When using JDK versions 17 or 21 (or any version above 16), you may encounter compatibility issues if database you are connecting to has a dependency on Apache Arrow.
+
+#### Resolving Apache Arrow Dependency Issues in Snowflake
+
+The Snowflake JDBC Driver uses Arrow as the default result format for query execution to improve performance. However, you can override this default setting by switching the result format to JSON.
+
+To set the result format at the Snowflake session or user level, use the following SQL statement:
+
+```sql
+**ALTER USER <user_name> SET JDBC_QUERY_RESULT_FORMAT='JSON';**
+```
+
+This approach ensures compatibility with JDK 16+.
+For more information, see [Getting Java Lang NoClassDefFoundError](https://community.snowflake.com/s/article/Getting-java-lang-NoClassDefFoundError-for-class-RootAllocator) in Snowflake documentation.
+
+#### Resolve Apache Arrow Dependency Issues in Databricks {#apache-arrow-databricks}
+
+The Databricks JDBC Driver uses Arrow for serialization as it improves performance.
+
+To override this setting add below parameter to JDBC URL
+
+```sql
+EnableArrow=0
+```
+For more information, see:
+
+* [Java 21 Support with Databricks](https://community.databricks.com/t5/data-engineering/java-21-support-with-databricks-jdbc-driver/td-p/49297) in Databricks documentation
+* [Configure the External Database Connector for Databricks](/appstore/modules/databricks/external-database-connector/)

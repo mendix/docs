@@ -56,6 +56,8 @@ The **My Apps** tab displays all the apps for which you are a [Team](/developerp
 
 If you pin an app, it stays on top.
 
+You can filter the overview to display only the apps that are marked for deletion. Read more about how we mark apps for deletion [here](/developerportal/deploy/mendix-cloud-deploy/#projects-deletion).
+
 Use the drop-down menu on the right side of the page to sort the apps by **Pinned**, **Recent Activity** or in alphabetical order of **App Name**.
 
 ### App Tiles {#app-tiles}
@@ -101,7 +103,7 @@ The **Company Apps** tab displays all the apps created by members of your [compa
 
 There are also details on the app's [Target Cloud](/deployment/), and the [Total Members](/control-center/members/) who can view or edit the app.
 
-You can also sort the order of the apps here by **Updated Date**, **Last Created**, **App Name**, **App Name, descending**, **Oldest Updated**, or **Oldest Created**.
+You can also sort the order of the apps here by **Recent Activity**, **Created Date**, **Name**.
 
 ## Guide Categories
 

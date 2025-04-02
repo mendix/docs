@@ -16,6 +16,10 @@ Git is a more modern version control system that has several advantages over SVN
 
 If your main line is Studio Pro version 9.24.28 or above and your team role is Scrum Master, you see a notification on a possible migration at the top of the **Team Server** page for your app. Click **Migrate to Git** to check for migration eligibility and to start the migration.
 
+## When to Migrate from SVN to Git
+
+Mendix recommends to combine a migration to Git with an upgrade to Mendix 10, as the advantages of Git in Mendix 9 are limited. For more details on this recommendation, see the [Recommendation on Avoiding Git Issues](/refguide/troubleshoot-repository-size/#recommendation) section in *Troubleshooting Repository Size*.
+
 ## Apps Eligible for Migration
 
 {{% alert type="info" %}}
@@ -37,15 +41,13 @@ In addition to the hard criteria mentioned above, a check is performed to determ
 
 ### Eligibility Check Outcomes
 
-#### Not Eligible for Migration
+#### Eligible for Migrating With History
 
-If your app is not eligible for migration the reason(s) will be listed on the page. to continue with the migration, resolve these reasons and try again.
-
-In case there are reasons you cannot address, please reach out to Support or your Customer Success Manager to discuss the options.
+If your repository is eligible for migrating with full history, you can choose whether to retain your history during migration or not. For the smoothest experience after the migration, Mendix advises to migrate without history.
 
 #### Eligible for Migrating Without History
 
-If your app is eligible for migration, but the SVN repository size exceeds the threshold, you can only migrate the latest commit of the main branch. This limitation has been imposed to guarantee a smooth experience post-migration, as a [large Git Repository Size](/refguide/troubleshoot-repository-size/) can have a negative effect on the developer experience.
+If your app is eligible for migration, but the SVN repository size exceeds the threshold, you can only migrate the latest commit of the main branch. This limitation has been imposed to guarantee a smooth experience after the migration, as a [large Git Repository Size](/refguide/troubleshoot-repository-size/) can have a negative effect on the developer experience.
 
 {{% alert type="info" %}}
 
@@ -53,9 +55,19 @@ You will receive a full backup of your SVN repository after completing the migra
 
 {{% /alert %}}
 
-#### Eligible for Migrating With History
+#### Not Eligible for Migration
 
-If your repository is eligible for migrating with full history, you can choose whether to retain your history when migrating or not. For the smoothest experience post-migration we advise you to migrate without history.
+If your app is not eligible for migration the reason(s) will be listed on a page. To continue the process, resolve these reasons and try again.
+
+##### MPR File Size
+
+When the size of the *.mpr* file exceeds the threshold, migration is blocked to prevent rapid repository growth after migrating to Git. To get your app approved for migration, you have to agree on the following steps with Support or your Customer Success Manager:
+
+1. [Migrate without history](#without-history). This requires converging all branches which you want to retain.
+2. Update your app to Studio Pro version 10.18 or above, and convert to [MPRv2](/refguide/troubleshoot-repository-size/#mprv2).
+3. Execute a [Git cleanup](/refguide/troubleshoot-repository-size/#cleanup-tool).
+
+The first two steps need to be executed within a short timeframe. The last step is technically optional, but is strongly recommended for the best experience.
 
 ## How Migration Works
 
@@ -76,7 +88,7 @@ During migration without history, only the last revision of the main branch is c
 
 The migration should take a few minutes to complete.
 
-After migration is completed a full backup of your SVN repository is created and made available to all Scrum Masters. They receive an email with information on how to download the backup that is available for three months. Several days before this backup expires all Scrum Masters on the app receive another email.
+After migration is completed a full backup of your SVN repository is created and made available to all Scrum Masters for a period of 90 days. They receive an email with information on how to download the backup. Several days before this backup expires all Scrum Masters on the app receive another email.
 
 {{% alert color="info" %}}
 
@@ -89,6 +101,26 @@ Inform your team members that they should commit their changes and merge them to
 All work not merged to the main branch will not be migrated to your Git repository.
 
 {{% /alert %}}
+
+#### Using an SVN Backup
+
+All Scrum Masters receive an email with a link to download an SVN backup. The backup can also be accessed through `https://git-migration.home.mendix.com/p/view-backup/[repository-ID]`, where you need to fill in the *[repository-ID]*.
+
+You can then download a *[repository-id].dump* file to your local device and you can use this file to restore the repository locally.
+
+{{% alert color="warning" %}}
+
+The SVN backup automatically expires after 90 days. After this time the SVN history is permanently deleted and connot be recovered.
+
+{{% /alert %}}
+
+To set up your local SVN repository, follow these steps:
+
+1. Download and Install VisualSVN Server – Use [VisualSVN Server](https://www.visualsvn.com/server/download/) and import the existing repository from the *.dump* file. This will create a locally hosted SVN repository.
+
+2. Access the Repository – Use [TortoiseSVN](https://tortoisesvn.net/) to check the repository. This will allow you to inspect the *.mpr* file or any other files within the repository.
+
+    {{% alert color="info" %}}To inspect files from a historical revision, use **TortoiseSVN** and select **Update to revision** to check a specific revision.{{% /alert %}}
 
 ### Migrating With History {#with-history}
 

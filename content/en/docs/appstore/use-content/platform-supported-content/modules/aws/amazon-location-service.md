@@ -91,3 +91,15 @@ The **Documentation** pane displays the documentation for the currently selected
 2. Click on the element for which you want to view the documentation.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
+
+For additional reference, the available activities are listed below.
+
+### Activities
+
+[Activities](/refguide/activities/) define the actions that are executed in a microflow or a nanoflow.
+
+The Amazon Location Service connector contains the following activities:
+
+* `CalculateRoute` - Calculate a route between multiple points and returns the distance and duration of the proposed routes.
+* `SearchPlaceIndexForPosition` - Takes a set of coordinates and returns the nearest points of interest.
+* `SearchPlaceIndexForText` - Geocodes free-form text, such as an address, name, city, or region to allow you to search for places or points of interest. 

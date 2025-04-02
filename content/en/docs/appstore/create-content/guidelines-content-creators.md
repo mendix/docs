@@ -18,6 +18,7 @@ Below are the general guidelines for creating new Marketplace content:
 * Use the latests MTS or LTS of any major Studio Pro version when creating the item. If that is not possible, then use the earliest version of any major Studio Pro version.
 * Ensure that any latest version of your product supports at least one Mendix LTS versions or Mendix MTS versions.
 * Your products must be complete and fully functional, as advertised upon submission.
+* In Mendix 10.21.0 and above, do not use direct associations in your module as this can cause issues when it is imported.
 
 When adding the content to the Marketplace, add information the end-user should know to the component [documentation](/appstore/submit-content/#doc).
 

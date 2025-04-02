@@ -68,6 +68,6 @@ Currently, it cannot set [generalization](/refguide/generalization-and-associati
 
 ## Read More
 
-* [Domain Model](/refguide/domain-model/)
+* [Data in the Domain Model](/refguide/domain-model/)
 * [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)
 * [Maia Chat](/refguide/maia-chat/)

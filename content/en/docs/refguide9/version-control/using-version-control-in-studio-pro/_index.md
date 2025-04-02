@@ -85,16 +85,16 @@ To commit your changes, click the **Commit** button in the **Changes** pane, or 
 
 {{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/commit-button.png" alt="Commit Button" class="no-border" >}}
 
-In general, it is a good idea to commit after implementing one feature or fixing one bug. By committing often, your work is integrated with the work of others regularly. The benefits of committing include the following:
+In general, it is a good idea to commit after implementing one feature or fixing one bug. By committing often, your work is integrated with the work of others regularly. The benefits of frequent commits include the following:
 
 * If any conflicts arise, the changes are still fresh in your mind
 * Revisions are easier to understand
 * If you ever need to revert something, you can revert a small chunk of work
 
-Committing results in a new revision in the repository. You can add the following information in Studio Pro when you perform a commit, and this will be attached to the newly created revision:
+Committing results in a new revision in the repository. By adding the following information in Studio Pro when you perform a commit, you can attach it to the newly created revision:
 
 * A textual message. This should be a summary of the changes you made
-* A list of Mendix Portal stories that relate to the commit. A small commit will probably relate to one story. Studio Pro shows stories that are in the current Sprint and do not have a status of *Done*. Adding the story to the commit will not change the state of the Mendix Portal story. Setting the status to 'Done' must be done manually and depends on your *definition of done*.
+* A list of Mendix Portal stories that relate to the commit. A small commit usually relates to one story. Studio Pro shows stories that are in the current Sprint and do not have a status of *Done*. Adding the story to the commit will not change the state of the Mendix Portal story. Setting the status to Done must be done manually and depends on your *definition of done*.
 
     {{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/commit-dialog.png" class="no-border" >}}
 
@@ -105,9 +105,9 @@ Studio Pro also attaches some information automatically:
 * The list of changed documents, folders, and modules along with the type of the change (for example *modify* or *add*)
 * The version of Studio Pro that was used to commit
 
-If you also changed Java source code, added widgets or made other changes that affect files other than the app file you will see a **Changes on disk** tab page that shows you what disk changes you are about to commit.
+If you also changed Java source code, added widgets or made other changes that affect files other than the app file, you will see a **Changes on disk** tab page that shows you what disk changes you are about to commit.
 
-Committing is only allowed if your working copy is up to date with the repository. If someone else committed a change since the last time you updated/pulled, you will have to update/pull first. This is because the revision you create with the commit should incorporate both your changes and the changes by the other person. Updating will combine the latest changes in the repository with your changes. After reviewing the result, and fixing any conflicts, you can commit again.
+Committing is only allowed if your working copy is up to date with the repository. If someone else committed a change since the last time you updated (pulled), you will have to update (pull) first. This is because the revision you create with the commit should incorporate both your changes and the changes by the other person. Updating combines the latest changes in the repository with your changes. After reviewing the result, and fixing any conflicts, you can commit again.
 
 ### Pushing
 
@@ -115,9 +115,9 @@ Committing is only allowed if your working copy is up to date with the repositor
 Push is only available in Git. In SVN, changes are automatically pushed together with the commit. 
 {{% /alert %}}
 
-Pushing is sending your local changes to the Team Server. After committing you need to push the committed changes if you want them to be accessible to others. By default, this is done when committing, but it is possible to wait for this step until later.
+Pushing sends your local changes to the Team Server. After committing you need to push the committed changes if you want them to be accessible to others. By default, this is done when committing, but it is possible to wait for this step until later.
 
-To push changes, select **Version Control** > **Push** or make sure that the **Also push changes to the remote server** setting is set to **Yes** in the **Commit** dialog box, this way changes are pushed automatically when you commit them:
+To push changes, select **Version Control** > **Push** or make sure that the **Also push changes to the remote server** setting is set to **Yes** in the **Commit** dialog box. In this way changes are pushed automatically when you commit them.
 
 {{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/commit-git.png" class="no-border" >}}
 
@@ -129,9 +129,9 @@ To update the working copy of your app, click **Update** (for SVN) or **Pull** (
 
 {{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/update-button.png" alt="Update Button" class="no-border" >}}
 
-Changes you receive from the repository when updating/pulling are combined with the changes you have made to your working copy (if any). Afterwards, your working copy will contain both your changes and the changes you received. As part of the update/pull, the original of your working copy is updated as well.
+Changes you receive from the repository when updating or pulling are combined with the changes you have made to your working copy (if any). Afterwards, your working copy will contain both your changes and the changes you received. As part of the update or pull, the original of your working copy is updated as well.
 
-For example, if the last time you updated/pulled you received all changes up to and including revision N, this means that the original for your working copy is revision 40. Since you started making changes to your working copy, other people on your team have made another four commits (X, Y, and Z). If you now update/pull, you will receive those changes and Z will be the new *original* to which your changes are compared.
+For example, if the last time you updated or pulled you received all changes up to and including revision N, this means that the original for your working copy is revision 40. Since you started making changes to your working copy, other people on your team have made another four commits (X, Y, and Z). If you now update or pull, you will receive those changes and Z will be the new *original* to which your changes are compared.
 
 Usually, combining your changes with the latest revision from the repository will be done automatically. For example, one person may add a page while you are changing a microflow. If the changes are too close, however, a conflict can arise. For example, if one of your team has changed the properties of the same data view which you have also changed. You will have to resolve such conflicts before you can commit. See the [Dealing With Conflicts](#conflicts) section, below, for information on how to do this.
 
@@ -143,7 +143,7 @@ The *history* of the app is a list of all revisions that have been committed. To
 
 {{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/history-button.png" alt="History Button" class="no-border" >}}
 
-The revisions are shown in reverse chronological order (newest is at top of list). The history dialog shows you revision number, date, time, author and message of each revision.
+The revisions are shown in reverse chronological order (newest is at the top of the list). The history dialog shows you revision number, date, time, author and message of each revision.
 
 Select a revision to see additional details such as related stories, changed documents, Studio Pro version and changes on disk. Icons summarize the kinds of changes that happened in the app.
 
@@ -153,7 +153,7 @@ Select a revision to see additional details such as related stories, changed doc
 
 Changes that have not yet been committed can be reverted. Say, for example, that you have made a lot of changes to a page and you are not happy with the result. You can revert the page to the original: that is, the state of the page before you started making changes.
 
-Deletes of documents, folders, and modules can also be reverted. This will bring them back into the app. Note that you will get back the latest version you have *committed*. For example, if you commit, make some changes to a microflow, and then delete the microflow, reverting the delete will give you the microflow without the changes that you made.
+Deletes of documents, folders, and modules can also be reverted. This brings them back into the app. Note that you will get back the latest version you have *committed*. For example, if you commit, make some changes to a microflow, and then delete the microflow, reverting the delete gives you the microflow without the changes that you made.
 
 You can revert changes in the **Changes** pane, from **Version Control** > **Revert All Changes**, or from the right-click menu on the document you want to revert.
 
@@ -161,7 +161,7 @@ You can revert changes in the **Changes** pane, from **Version Control** > **Rev
 
 ## Dealing With Conflicts {#conflicts}
 
-If you update/pull your app and the changes cannot be merged automatically you will receive a message telling you there are conflicts. A conflict arises when two changes cannot be combined.
+If you update or pull your app and the changes cannot be merged automatically, you receive a message telling you there are conflicts. A conflict arises when two changes cannot be combined.
 
 There are two different sorts of conflict:
 
@@ -176,24 +176,24 @@ For more information on resolving document conflicts see [New Merge Algorithm wi
 
 ### Resolving an App Conflict
 
-App conflicts are conflicts are conflicts at the level of the app. There are two cause for app conflicts:
+App conflicts are conflicts at the level of the app. These conflicts can be caused by one of the following:
 
-1. One person deletes a document and the other makes a change inside that document.
-2. Both people move a document but to different places in the app tree.
+* One person deletes a document and the other makes a change inside that document.
+* Both people move a document but to different places in the app tree.
 
 The involved document is marked as conflicted and you can see the reason in the details column of the **Changes** pane.
 
 {{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/app-conflicts.png" alt="Example of app conflicts" class="no-border" >}}
 
 {{% alert color="info" %}}
-If a whole folder (or module) was *deleted* and another person changes a document inside that folder, the folder/module is restored and also marked as conflicted. This way you know that the intention was to delete that folder but it has been restored to show you the context of the changed document.
+If a whole folder (or module) was deleted and another person changes a document inside that folder, the folder or module is restored and also marked as conflicted. In this way you know that the intention was to delete that folder, but it has been restored to show you the context of the changed document.
 {{% /alert %}}
 
 You can resolve an app conflict by choosing **Tasks** > **Use mine** or by deleting the involved documents or folders.
 
 ## Using Branches
 
-A repository can contain a number of development lines. Each development line offers independent development from the other development lines. In the simple case there is just one development line called the main line (called 'trunk' in subversion). All development then happens inside that one line.
+A repository can contain a number of development lines. Each development line offers independent development from the other development lines. In the simple case there is just one development line called the main line (called *trunk* in SVN). All development then happens inside that one line.
 
 {{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/main-branch-line.png" class="no-border" >}}
 
@@ -222,22 +222,24 @@ Of course, not all maintenance fixes need to be merged to the main line. Sometim
 
 #### Developing a New Feature Independently
 
-Another reason for creating a branch is to develop a big new feature without interfering with other development. This gives you the freedom to commit a half-implemented feature, possibly even with errors, while other people can still commit and update/pull on the main line. Without using a branch line, you would have to constantly make sure that your app is error free and does not break other parts of the system.
+Another reason for creating a branch is to develop a big new feature without interfering with other development. This gives you the freedom to commit a half-implemented feature, possibly even with errors, while other people can still commit and update or pull on the main line. Without using a branch line, you would have to constantly make sure that your app is error free and does not break other parts of the system.
 
-Firstly, select **Version Control** > **Manage Branch Lines...** and create a branch from a revision of the main line.
+To create a branch line, perform the following steps:
 
-{{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/create-branch-line-dialog.png" class="no-border" >}}
+1. Click **Version Control** > **Manage Branch Lines...**.
+2. Create a branch from a revision of the main line.
 
-Now work on the branch until the feature is done and commit the completed work.
+    {{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/create-branch-line-dialog.png" class="no-border" >}}
 
-When you want to merge the whole branch back to the main line to integrate the feature there. Do the following:
+3. Work on the branch until the feature is done and commit the completed work.
+4. Merge the branch back to the main line to integrate the feature there by performing the following steps:
 
-1. Open the main line.
-2. Choose **Version Control** > **Merge changes here**.
-3. Select **Merge feature branch** option.
-4. Click **Merge**.
-5. Resolve any conflicts and errors.
-6. Commit the new feature to the main line.
+    1. Open the main line.
+    2. Choose **Version Control** > **Merge changes here**.
+    3. Select **Merge feature branch** option.
+    4. Click **Merge**.
+    5. Resolve any conflicts and errors.
+    6. Commit the new feature to the main line.
 
 You can delete the branch after merging it back, if you want.
 
@@ -245,7 +247,7 @@ You can delete the branch after merging it back, if you want.
 
 #### Branching
 
-Development lines other than the main line are called branch lines. Our advice would be to develop new features in the *main line* and to use *branch lines* for fixing bugs in versions that have been deployed. This is the scenario Studio Pro makes easy but other scenarios for more complex apps are supported as well.
+Development lines other than the main line are called branch lines. As a best practice, develop new features in the *main line* and use *branch lines* for fixing bugs in versions that have been deployed. This is the default scenario for Studio Pro. However, other scenarios for more complex apps are supported as well.
 
 You can create branch lines from the Branch Line Manager which you can find at **Version Control** > **Manage Branch Lines...**.
 
@@ -253,11 +255,11 @@ You can create branch lines from the Branch Line Manager which you can find at *
 
 #### Merging
 
-If you have multiple development lines, you sometimes want to port changes from one development line to another. For example, the fix that you made in a branch line for the production version should also be applied to the new 2.0 version you are developing in the main line. You can, of course, do this by hand but Studio Pro can also help you by merging changes from one development line to another.
+If you have multiple development lines, you may want to port changes from one development line to another. For example, the fix that you made in a branch line for the production version should also be applied to the new 2.0 version you are developing in the main line. Instead of doing this manually, you can use Studio Pro to merge changes from one development line to another.
 
-Merging is always done while you have a working copy open. The merge will result in extra local changes in that working copy. It is advisable to commit local changes first before merging extra changes into a working copy. Otherwise, the uncommitted local changes and the changes caused by the merge will be combined and it is very hard to untangle them if you are unhappy with the merge. Studio Pro will warn you if you have uncommitted changes.
+Merging is always done while you have a working copy open. The merge results in additional local changes in that working copy. It is advisable to commit local changes first before merging the additional changes into a working copy. Otherwise, the uncommitted local changes and the changes caused by the merge are combined, and it is very hard to untangle them if you are unhappy with the merge. Studio Pro warns you if you have uncommitted changes.
 
-Select **Version Control** > **Merge Changes Here**, select the option available for the version control you are using:
+To merge the changes, select **Version Control** > **Merge Changes Here**, and then select one of the options available for your version control system:
 
 * For SVN, **Port fix**, **Merge feature branch**, and **Advanced merge** options are available
 * For Git, **Port fix** and **Merge feature branch** options are available
@@ -266,7 +268,7 @@ For more information on merge settings, see [Merge Dialog](/refguide9/merge-dial
 
 #### Reverse Merging
 
-Reverting changes works for changes that have not been committed yet. Changes that have been committed can never be deleted. However, you can apply the changes 'in reverse' and commit that. This feature is called 'Reverse merging' in Studio Pro.
+Reverting changes works for changes that have not been committed yet. Changes that have been committed can never be deleted. However, you can apply the changes in reverse and commit that. This feature is called *reverse merging* in Studio Pro.
 
 Choose **Version Control** > **Reverse Merge Changes...**
 
@@ -278,18 +280,22 @@ For Git, reverting changes is done with one commit at a time. If you want to rev
 
 {{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/revert-changes-git.png" class="no-border" >}}
 
-After a reverse merge the app will look like the changes never happened; if you 'reverse merge' the adding of a page, the page will be deleted locally. Just like when you are doing a normal merge, conflicts can arise. In the example, if later commits change the added page, the reverse merge will result in a conflict. After resolving any problems, you can commit the results to the repository.
+After a reverse merge the app looks like the changes never happened; if you reverse merge the adding of a page, the page is deleted locally. Just like during a normal merge, conflicts can arise. In the example, if later commits change the added page, the reverse merge will result in a conflict. After resolving any problems, you can commit the results to the repository.
 
 #### Replacing the Main Line with a Branch Line
 
 There are two methods for fully replacing your main line with a branch line.
 
-The first method is to merge the entire branch line into the main line, essentially replacing the main line contents with the branch line contents). This works as long as the branch line is up to date with the main line (to avoid conflicts). To do this, follow these steps:
+##### Merging Feature Branches
+
+The first method is to merge the entire branch line into the main line, essentially replacing the main line contents with the branch line contents. This works as long as the branch line is up to date with the main line (to avoid conflicts). To do this, follow these steps:
 
 1. Select **Version Control** > **Merge Changes Here** > **Merge feature branch**.
 2. Select the branch to merge into the main line.
 
-The second method should be used if the first method is not possible for some reason and you want to "overwrite" the main line with your branch line. For this method, you must follow these steps:
+##### Overwriting the Main Line with the Branch Line
+
+The second method should be used if the first method is not possible for some reason and you want to overwrite the main line with your branch line. For this method, you must follow these steps:
 
 1. Check out both the main line and the branch line locally.
 2. Overwrite all the files in the main line app directory with those of the branch line (except for the *.svn* directory).
@@ -327,33 +333,33 @@ After setting up the driver either locally or globally, create a *.gitattributes
 *.mpr merge=custom
 ```
 
-Save the files and now when **git merge** is run and it involves *.mpr* files, the *mx.exe* merge will run Studio Pro merge algorithm before Git finishes the merge.
+After saving the files, when **git merge** is run on *.mpr* files, the *mx.exe* merge runs the Studio Pro merge algorithm before Git finishes the merge.
 
 ## Versioning an App Deployed to the Cloud {#versioning-app}
 
 ### Deploying Locally
 
-While developing you can deploy and run your app on your local machine by clicking the menu item **Run** > **Run Locally**. This allows you to test the app as it currently is stored on your local machine.
+While developing, you can deploy and run your app on your local machine by clicking the menu item **Run** > **Run Locally**. This allows you to test the app as it currently is stored on your local machine.
 
 ### Deploying Your Working Copy
 
-When you deploy to the cloud, you can choose to use the version of the app stored on your local machine, the *working copy* and deploy that to the default environment. If you are using the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), or other partner cloud (SAP BTP, for example), click **Publish** to commit the version of the app stored on your local machine and deploy that to the default environment.
+When you deploy to the cloud, you can choose to use the version of the app stored on your local machine, the *working copy*, and deploy that to the default environment. If you are using the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), or other partner cloud (for example, SAP BTP), you can click **Publish** to commit the version of the app stored on your local machine and deploy that to the default environment.
 
 ### Choosing a Specific Development Line and Revision
 
 It is also possible to choose a specific development line and revision to deploy to the default environment, or to create a package from.
 
-In this case, Studio Pro will create a fresh checkout of the chosen revision. This means that any team member can always recreate this version of the deployment package. In other words, Studio Pro does *not* rely on your local files for creating a versioned deployment package.
+In this case, Studio Pro creates a fresh checkout of the chosen revision. This means that any team member can always recreate this version of the deployment package. In other words, Studio Pro does not rely on your local files for creating a versioned deployment package.
 
 {{% alert color="warning" %}}
 You can only create a versioned deployment package of changes that have been committed. If you have local changes that you want to deploy in a versioned deployment package, commit them first.
 {{% /alert %}}
 
-When it creates the package, Studio Pro will also create a tag representing this version of your app. If you want to make modifications to this version later, independently of other development which has taken place, you can create a branch based on this tag. The name of the tag is a version number that you choose.
+When it creates the package, Studio Pro also creates a tag representing this version of your app. If you want to make modifications to this version later, independently of other development which has taken place, you can create a branch based on this tag. The name of the tag is a version number that you choose.
 
 #### Deploying a Specific Version to a Mendix Licensed Cloud Node
 
-If you are using Mendix Cloud you can choose **App** > **Deploy to Licensed Cloud Node** to deploy a specific version.
+If you are using Mendix Cloud, you can choose **App** > **Deploy to Licensed Cloud Node** to deploy a specific version.
 
 {{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/deploy-to-cloud.png" class="no-border" >}}
 
@@ -365,18 +371,23 @@ If you are using a different hosting environment, you create a deployment packag
 
 ## Working Outside Studio Pro {#working-outside-studio-pro}
 
-Studio Pro takes care of some file management automatically. If you add or remove custom widgets they are automatically added or removed from version control, too. Some files and directories (for example, deployment and releases directories) are automatically ignored so that they are not committed to version control.
+Studio Pro takes care of some file management automatically. If you add or remove custom widgets, they are automatically added or removed from version control, too. Some files and directories (for example, deployment and releases directories) are automatically ignored so that they are not committed to version control.
 
-We advise you to always commit and update/pull inside Studio Pro because in this way useful metadata is added to your revisions. Studio Pro has ways to recover from external updates or merges but it is best to not depend on that.
+We advise you to always commit and update or pull inside Studio Pro because in this way useful metadata is added to your revisions. Studio Pro has ways to recover from external updates or merges, but it is best to not depend on that.
 
 ### External Tools {#external-tools}
 
-If you are doing more advanced changes to files, like adding Java actions or resources to your app, you will have to install a separate tool on your computer and perform some operations yourself. When using SVN, use TortoiseSVN [https://tortoisesvn.net/](https://tortoisesvn.net/). When using Git, use TortoiseGit [https://tortoisegit.org/](https://tortoisegit.org/). Both can be downloaded for free.
+If you are doing more advanced changes to files, like adding Java actions or resources to your app, you must install a separate tool on your computer and perform some operations yourself.
+
+* For SVN, use TortoiseSVN [https://tortoisesvn.net/](https://tortoisesvn.net/). 
+* For Git, use TortoiseGit [https://tortoisegit.org/](https://tortoisegit.org/). 
+
+Both of those tools can be downloaded for free.
 
 {{% alert color="warning" %}}
-Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions **are not compatible**.
+Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions are not compatible.
 
-Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix 7.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
+Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix 7.x with the latest version of TortoiseSVN, you will no longer be able to open it in Mendix.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -391,33 +402,33 @@ Studio Pro automatically performs the necessary post-processing steps when you d
 
 When using external tools, you might be asked to authenticate separately to Team Server.
 
-Connecting to Git is done via a personal access token (PAT). For information on how to create a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
+Connecting to Git is done via a personal access token (PAT). For information on how to create a PAT, see [Mendix Profile: Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat).
 
-You need to use the following credentials:
+You must use the following credentials:
 
-* URL: `https://git.api.mendix.com/<your AppID>.git`
-* Username: your Mendix account username (alternatively, you can use the word *pat* as your username)
-* Password: the personal access token you created
+* **URL** - `https://git.api.mendix.com/<your AppID>.git`
+* **Username** - your Mendix account username (alternatively, you can use the word *pat* as your username)
+* **Password** - the personal access token that you created
 
 Connecting to SVN is done with your Mendix credentials:
 
-* URL: `https://teamserver.sprintr.com/<your AppID>/`
-* Username: your Mendix account username
-* Password: your Mendix account password
+* **URL** - `https://teamserver.sprintr.com/<your AppID>/`
+* **Username** - your Mendix account username
+* **Password** - your Mendix account password
 
-    {{% alert color="info" %}}If you are using BYOIDP, direct access to Team Server is no longer possible. For more information, see the in the [BYOIDP and Team Server](/control-center/security/set-up-sso-byoidp/#team-server) section *Set Up an SSO (BYOIDP)* .{{% /alert %}}
+    {{% alert color="info" %}}If you are using BYOIDP, direct access to Team Server is no longer possible. For more information, see [BYOIDP and Team Server: Set Up an SSO (BYOIDP)](/control-center/security/set-up-sso-byoidp/#team-server).{{% /alert %}}
 
 ### Adding Files and Directories
 
 If you add files or directories or delete files using Windows Explorer, Studio Pro automatically adds or deletes these from version control, too.
 
-Make sure you use the **Export** feature of TortoiseSVN/TortoiseGit if you are copying a directory that is already under version control in your app.
+Make sure you use the **Export** feature of TortoiseSVN or TortoiseGit if you are copying a directory that is already under version control in your app.
 
 ### Deleting Files and Directories
 
-If you delete a file from your app, Studio Pro will automatically also delete it from the Team Server.
+If you delete a file from your app, Studio Pro automatically also deletes it from the Team Server.
 
-If you are using SVN and want to delete a whole directory, you have to use the delete command of TortoiseSVN. You can execute this command by right-clicking the directory and choosing **TortoiseSVN** > **Delete**. 
+If you are using SVN and want to delete a whole directory, you must use the Delete command of TortoiseSVN. You can execute this command by right-clicking the directory and choosing **TortoiseSVN** > **Delete**. 
 
 When using Git, a folder is no longer be tracked if all the files in the folder are removed.
 
@@ -425,25 +436,40 @@ When using Git, a folder is no longer be tracked if all the files in the folder 
 
 If you perform branching outside of Studio Pro, you will not be able to immediately deploy to Mendix Cloud. That is because Studio Pro adds metadata about the Mendix version of your app to each revision when you commit or create a branch, which is needed by the Mendix Cloud deployment. Branching outside of Studio Pro means that metadata is missing from your branch, thus your app cannot successfully be deployed.
 
-To fix this, make a small commit on your branch in Studio Pro (for example, changing a documentation field). Studio Pro will then add the metadata that Mendix Cloud deployment requires, and you will be able to deploy your app.
+To fix this, make a small commit on your branch in Studio Pro (for example, change a documentation field). Studio Pro will then add the metadata that Mendix Cloud deployment requires, and you will be able to deploy your app.
 
 ### Reverting Accidental Studio Pro App Model Upgrade
 
-When working in different apps with different Studio Pro versions, you may one day find yourself with an app model upgraded and committed to a newer Studio Pro version, while the rest of your team is not yet ready to upgrade. 
+When working in different apps with different Studio Pro versions, you may find yourself with an app model upgraded and committed to a newer Studio Pro version, while the rest of your team is not yet ready to upgrade. 
 
 To revert this version upgrade of the app model, follow these steps, using either TortoiseGit or TortoiseSVN depending on your repository type:
 
 1. Inform your team of the situation and prevent them from making further commits.
 2. Close Studio Pro. 
-3. In Windows Explorer, go to your main app directory.
-4. Right-click the directory and select **Tortoise(Git/SVN)** > **Show log**. 
+3. In Windows Explorer, right-click your main app directory.
+4. Click **Tortoise(Git/SVN)** > **Show log**. 
 5. Find the latest revision that was in the desired Studio Pro version.
-6. When using TortoiseGit, select all revisions up to but excluding the desired revision. Right-click and select **Revert changes by these commits**, then confirm and click **Yes**. 
-7. When using TortoiseSVN, right-click that the desired revision, select **Revert to this version**, confirm, and click **OK**.
-8. Back in Windows Explorer, right-click the folder again, select **TortoiseSVN** > **Commit**, enter your commit message, and click **OK**.
+6. For TortoiseGit, perform the following steps:
+
+    1. Select all revisions up to but excluding the desired revision. 
+    2. Right-click the selected revisions, and then click **Revert changes by these commits**.
+    3. Confirm and click **Yes**. 
+
+7. For TortoiseSVN, perform the following steps:
+
+    1. Right-click the desired revision.
+    2. Click **Revert to this version**.
+    3. Confirm and click **OK**.
+
+8. Back in Windows Explorer, perform the following steps:
+
+    1. In Windows Explorer, right-click your main app directory.
+    2. Click **TortoiseSVN** > **Commit**
+    3. Enter your commit message and click **OK**.
+
 9. Start the desired Studio Pro version and download the app from Team Server.
-10. Check that everything is okay in your app.
-11. Inform your team that they need to do a fresh checkout of the app or run **TortoiseSVN** > **Update** on their app folder before opening the app in the desired Studio Pro version again.
+10. Verify that your app works correctly.
+11. Inform your team that they must do a fresh checkout of the app or run **TortoiseSVN** > **Update** on their app folder before opening the app in the desired Studio Pro version again.
 
 ## Read More
 

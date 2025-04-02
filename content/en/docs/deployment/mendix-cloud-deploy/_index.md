@@ -75,11 +75,15 @@ The system uses the following criteria when determining if an app is unused:
 * The app was created more than a year ago
 * No commits since the app was created
 
+Once a project is marked for deletion, the system uses a grace period of 14 calendar days before it is permanently deleted.
+
 You can prevent this clean up by performing one of the following actions:
 
 * Make changes and commit them to the Team Server
 * [Pin your app](/developerportal/#app-tiles)
 * [Invite someone](/developerportal/general/team/#inviting) to collaborate with you on your app
+
+Pinning a project that has been marked for deletion unmarks it immediately. Changes to the other criteria do not effect the mark-for-deletion immediately, but are verified before the actual deletion.
 
 ### Licensed App
 
@@ -201,7 +205,7 @@ With a Premium plan, your app can be [horizontally scaled](/developerportal/depl
 
 Fallback ensures that the data in your database is automatically copied to a database in a second AZ. This ensures that all your data is still available to your app if there is an issue with the primary availability zone and app instances have to be started in the second AZ. 
 
-The connections between AZs are low latency. However, the implementation of these features means that your monitoring may indicate that apps deployed to Mendix Cloud under a Premium plan suffer an additional latency of a few milliseconds compared with apps deployed using a Standard plan. For a well-designed app, this difference is not noticeable to end-users. 
+The connections between AZs are low latency. However, the implementation of these features means that your monitoring may indicate that apps deployed to Mendix Cloud under a Premium plan suffer an additional latency of a few milliseconds per query compared with apps deployed using a Standard plan. For a well-designed app, this difference is not noticeable to end-users. 
 
 #### Application Data Replication
 

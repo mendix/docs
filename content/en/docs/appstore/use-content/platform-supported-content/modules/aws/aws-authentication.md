@@ -218,7 +218,7 @@ To help you work with signature version 4 headers, the following sections of thi
 
 #### Domain Model {#domain-model}
 
-The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
+The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Data in the Domain Model](/refguide/domain-model/).
 
 You can view the domain model in the **App Explorer** in the **AWS Authentication** > **Domain model** section. The following entities are relevant for signature version 4 headers authentication:
 
@@ -311,7 +311,7 @@ It takes the following parameters as input:
 * A `Credentials` object
 * A `ENUM_Region` enumeration value
 
-The output is a boolean indicating whether the credentials are valid. 
+The output is a Boolean indicating whether the credentials are valid. 
 
 ## Read More
 

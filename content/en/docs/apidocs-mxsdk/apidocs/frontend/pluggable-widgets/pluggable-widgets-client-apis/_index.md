@@ -56,7 +56,7 @@ export interface ActionValue {
 }
 ```
 
-#### 4.1.1 canExecute
+#### canExecute {#canexecute}
 
 The flag `canExecute` indicates if an action can be run under current conditions. This prevents executing actions that are not allowed by the app's security settings. User roles can be set in the microflows and nanoflows, allowing users to call them. For more information on user roles and security, see the [Module Security Reference Guide](/refguide/module-security/).
 
@@ -64,15 +64,31 @@ You can also employ this flag when using a **Call microflow** action triggering 
 
 The exception to this behavior is when the `ActionValue` is returned by [`ListActionValue.get()`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listactionvalue). In this case, the flag will be true when not all arguments have been loaded. Calling `execute()` for an action with loading arguments will run the action as soon as all arguments become available. While waiting, `isExecuting` will be set to `true` and subsequent calls to `execute()` are ignored. If any arguments become unavailable after loading, the action will not run and a debug-level warning message will be logged.
 
-#### 4.1.2 isExecuting
+#### isExecuting {#isexecuting}
 
 The flag `isExecuting` indicates whether an action is currently running. A long-running action can take seconds to complete. Your component might use this information to render an inline loading indicator which lets users track loading progress. Often it is not desirable to allow a user to trigger multiple actions in parallel. Therefore, a component (maybe based on a configuration) can decide to skip triggering an action while a previous execution is still in progress.
 
 Note that `isExecuting` indicates only whether the current action is running. It does not indicate whether a target nanoflow, microflow, or object operation is running due to another action.
 
-#### 4.1.3 execute
+#### execute {#execute}
 
 The method `execute` triggers the action. It returns nothing and does not guarantee that the action will be started synchronously. But when the action does start, the component will receive a new prop with the `isExecuting` flag set.
+
+When the action property [defines action variables](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#action-xml-elements), the `execute()` method expects an object map containing a property for each variable. The variables may be passed as undefined, but need to be set explicitly.
+
+Given an action property that defines two `Decimal` variables `lat` and `long`, and a `String` variable named `label`, its `execute()` method accepts the following input:
+
+```ts
+interface MapWidgetProps {
+    onClick: ActionValue<{ lat: Option<Big>, long: Option<Big>, label: Option<string> }>
+}
+
+onClick.execute({
+    lat: new Big(51.907),
+    long: new Big(4.488),
+    label: undefined
+});
+```
 
 ### DynamicValue {#dynamic-value}
 
@@ -105,7 +121,7 @@ Though the type definition above looks complex, it is fairly simply to use becau
 
 ### EditableValue {#editable-value}
 
-`EditableValue` is used to represent values that can be changed by a pluggable widget client component and is passed only to [attribute properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#attribute). It is defined as follows:
+`EditableValue` is used to represent values, either an attribute or a variable, that can be changed by a pluggable widget client component and is passed only to [attribute properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#attribute). It is defined as follows:
 
 ```ts
 export interface EditableValue<T extends AttributeValue> {
@@ -135,15 +151,15 @@ The flag `readOnly` indicates whether a value can actually be edited. It will be
 
 The value can be read from the `value` field and modified using `setValue` function. Note that `setValue` returns nothing and does not guarantee that the value is changed synchronously. But when a change is propagated, a component receives a new prop reflecting the change.
 
-When setting a value, a new value might not satisfy certain validation rules — for example a value might be bigger that the underlying attribute allows. In this case, your change will affect only `value` and `displayValue` received through a prop. Your change will not be propagated to an object’s attribute and will not be visible outside of your component. The component will also receive a validation error text through the `validation` field of `EditableValue`.
+When setting a value, a new value might not satisfy certain validation rules — for example when an attribute is selected and the new value is bigger than the underlying attribute allows. In this case, your change will affect only `value` and `displayValue` received through a prop. Your change will not be propagated to an object’s attribute and will not be visible outside of your component. The component will also receive a validation error text through the `validation` field of `EditableValue`.
 
 It is possible for a component to extend the defined set of validation rules. A new validator — a function that checks a passed value and returns a validation message string if any — can be provided through the `setValidator` function. A component can have only a single custom validator. The Mendix Platform ensures that custom validators are run whenever necessary, for example when a page is being saved by an end-user. It is best practice to call `setValidator` early in a component's lifecycle — specifically in the [componentDidMount](https://en.reactjs.org/docs/react-component.html#componentdidmount) function.
 
-In practice, many client components present values as nicely formatted strings which take locale-specific settings into account. To facilitate such cases `EditableValue` exposes a field `displayValue` formatted version of `value`, and a method `setTextValue` — a version of `setValue` that takes care of parsing. `setTextValue` also validates that a passed value can be parsed and assigns the target attribute’s type. Similarly to `setValue`, a change to an invalid value will not be propagated further that the prop itself, but a `validation` is reported. Note that if a value cannot be parsed, the prop will contain only a `displayValue` string and `value` will become undefined.
+In practice, many client components present values as nicely formatted strings which take locale-specific settings into account. To facilitate such cases `EditableValue` exposes a field `displayValue` which is the formatted version of `value`, and a method `setTextValue` — a version of `setValue` that takes care of parsing. `setTextValue` also validates that a passed value can be parsed and assigned to the target's value type. Similarly to `setValue`, a change to an invalid value will not be propagated further than the prop itself, but a `validation` is reported. Note that if a value cannot be parsed, the prop will contain only a `displayValue` string and `value` will become undefined.
 
 There is a way to use more the convenient `displayValue`  and `setTextValue` while retaining control over the format. A component can use a `setFormatter` method passing a formatter object: an object with `format` and `parse` methods. The Mendix Platform provides a convenient way of creating such objects for simple cases. An existing formatter exposed using a `EditableValue.formatter` field can be modified using its `withConfig` method. For complex cases formatters still can be created manually. A formatter can be reset back to default settings by calling `setFormatter(undefined)`.
 
-The optional field `universe` is used to indicate the set of all possible values that can be passed to a `setValue` if a set is limited. Currently, `universe` is provided only when the edited attribute is of the Boolean or enumeration [types](/refguide/attributes/#type).
+The optional field `universe` is used to indicate the set of all possible values that can be passed to a `setValue` if a set is limited. Currently, `universe` is provided only when the edited value is of the Boolean or enumeration [types](/refguide/attributes/#type).
 
 ### ModifiableValue {#modifiable-value}
 
@@ -192,7 +208,7 @@ It is possible for a component to extend the defined set of validation rules. A 
 
 ### IconValue {#icon-value}
 
-`DynamicValue<IconValue>` is used to represent icons: small pictograms in the Mendix Platform. Those can be static or dynamic file- or font-based images. An icon can only be configured through an [icon](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#attribute) property. `IconValue` is defined as follows:
+`DynamicValue<IconValue>` is used to represent icons: small pictograms in the Mendix Platform. Those can be static or dynamic file- or font-based images. An icon can only be configured through an [icon](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#icon) property. `IconValue` is defined as follows:
 
 ```ts
 interface GlyphIcon {

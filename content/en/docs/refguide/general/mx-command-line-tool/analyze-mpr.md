@@ -36,6 +36,8 @@ The `OPTIONS` are described in the table below:
 
 To identify which types of documents (pages, microflows, etc.) have the largest contribution to the MPR file size, you can focus on the **Size by unit type** section, where the number of occurrences and file size contribution are displayed in percentage.
 
+You can use the MPR Tool to get more details. You can find it at *C:\Program Files\Mendix\<version>\modeler\MprTool.exe* (where <version> should be replaced with your installed Mendix version). After opening the *.mpr* file for your app, use **Search** > **Find unit by ID** to find the name and module for a particular unit.
+
 ### Examples
 
 Valid examples are given below:

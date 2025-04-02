@@ -4,6 +4,7 @@ linktitle: "PCLM – License Manager"
 url: /developerportal/deploy/private-cloud/private-cloud-license-manager/
 description: "Describes setting up a license server and applying licenses to your Mendix app namespaces in private cloud"
 weight: 47
+beta: true
 ---
 
 {{% alert color="warning" %}}

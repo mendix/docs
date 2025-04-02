@@ -149,3 +149,18 @@ The **Documentation** pane displays the documentation for the currently selected
 2. Click on the element for which you want to view the documentation.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
+
+For additional reference, the available activities are listed below.
+
+### Activities
+
+[Activities](/refguide/activities/) define the actions that are executed in a microflow or a nanoflow. For the Amazon SNS connector, they represent actions such as creating or deleting a topic in Amazon SNS.
+
+The Amazon SNS connector contains the following activities:
+
+* `ConfirmSubscription` - This action confirms the subscription in order to activate the sending of messages to the subscription for a URL endpoint
+* `CreateTopic` - This action allows you to create a new topic.
+* `ListTopics` - This action allows you to retrieve a list of all Topics for a given Amazon SNS environment.
+* `Publish` - This action allows you to publish up to 10 messages to all those subscribed to a given topic. 
+* `Subscribe` - To receive messages published to a topic, you must subscribe an endpoint to the topic. When you subscribe an endpoint to a topic, the endpoint begins to receive messages published to the associated topic. The supported endpoint types are email, json-email, SMS, and URL.
+* `Unsubscribe` - To stop receiving messages published to a topic, you must unsubscribe from it using the `SubscriptionARN`. For more information, see [Subscribing to an Amazon SNS topic](https://docs.aws.amazon.com/sns/latest/api/API_Unsubscribe.html).

@@ -66,8 +66,8 @@ Depending on the Mendix version used to build your app, you have to use a differ
 
 * **Latest Mendix Version** - Latest version of Make It Native 10 ([Android](https://play.google.com/apps/testing/com.mendix.developerapp.mx10), [iOS](https://testflight.apple.com/join/bQfLf27w))
     * Please note that the latest version of Make It Native 10 is offered in online stores' beta version programs. Simply follow the instructions on those sites to download and install the latest version of MIN 10.
-* **10.12.x** – Make It Native 10 MTS ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10), [iOS](https://apps.apple.com/app/make-it-native-10/id6450037464))
-* **10.6.x to 10.11.x** – These versions are no longer supported by Make It Native. Please use MIN 9 LTS (below) or 10 MTS (above) instead, or make your own [custom MIN app](/refguide/mobile/distributing-mobile-apps/use-min-older-sp/) from open source.
+* **10.18.x** – Make It Native 10 MTS ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10), [iOS](https://apps.apple.com/app/make-it-native-10/id6450037464))
+* **10.6.x to 10.17.x** – These versions are no longer supported by Make It Native. Please use MIN 9 LTS (below) or 10 MTS (above) instead, or make your own [custom MIN app](/refguide/mobile/distributing-mobile-apps/use-min-older-sp/) from open source.
 * **9.24.0 to 10.5.x** – Make It Native 9 LTS ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9), [iOS](https://apps.apple.com/app/make-it-native-9/id1542182000))
 * **8.18.x** – Make It Native 8 LTS ([iOS](https://apps.apple.com/app/make-it-native-8/id1334081181))
 * **Other** – [Creating a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) or [Building Your Own Make It Native App](https://github.com/mendix/make-it-native)

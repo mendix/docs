@@ -14,13 +14,13 @@ Quick summary:
 
 | Selenium Setup | Uploading your own file | Uploading a file | Uploading possible? |
 | :-------------- | :---------------------- | :--------------- | :------------------ |
-| Local Selenium Server (Docker) | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-upload-file-using-ats/grey.png" class="no-border" >}} Limited<sup>1</sup> | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-upload-file-using-ats/green.png" class="no-border" >}} Yes | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-upload-file-using-ats/green.png" class="no-border" >}} Yes |
+| Local Selenium Server (Docker) | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-upload-file-using-ats/grey.png" class="no-border" >}} Limited¹ | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-upload-file-using-ats/green.png" class="no-border" >}} Yes | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-upload-file-using-ats/green.png" class="no-border" >}} Yes |
 | BrowserStack (SaaS) | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-upload-file-using-ats/red.png" class="no-border" >}} No | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-upload-file-using-ats/green.png" class="no-border" >}} Yes | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-upload-file-using-ats/green.png" class="no-border" >}} Yes |
 | Sauce Labs (SaaS) | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-upload-file-using-ats/red.png" class="no-border" >}} No | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-upload-file-using-ats/red.png" class="no-border" >}} No | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-upload-file-using-ats/red.png" class="no-border" >}} No |
-| Selenium SaaS Agent | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-upload-file-using-ats/grey.png" class="no-border" >}} Limited<sup>2</sup> | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-upload-file-using-ats/green.png" class="no-border" >}} Yes | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-upload-file-using-ats/red.png" class="no-border" >}} No |
+| Selenium SaaS Agent | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-upload-file-using-ats/grey.png" class="no-border" >}} Limited² | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-upload-file-using-ats/green.png" class="no-border" >}} Yes | {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-upload-file-using-ats/red.png" class="no-border" >}} No |
 
-<small><sup>1</sup> This only possible when you prepare your own files on that server. <br>
-<sup>2</sup> This depends on where the agent is installed.</small>
+<small>¹ This only possible when you prepare your own files on that server. <br>
+² This depends on where the agent is installed.</small>
 
 This how-to teaches you how to do the following:
 

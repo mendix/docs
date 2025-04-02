@@ -138,3 +138,26 @@ The **Documentation** pane displays the documentation for the currently selected
 2. Click on the element for which you want to view the documentation.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
+
+For additional reference, the available activities are listed below.
+
+### Activities
+
+[Activities](/refguide/activities/) define the actions that are executed in a microflow or a nanoflow. For the Amazon Textract connector, they represent actions such as analyzing a document or expense.
+
+To help you work with multi-page PDF files, you can use the `JA_SplitPdfPages` helper action to split a PDF File with multiple pages into a list of single-page PDFs. The action also supports extracting only a subset of the pages.
+
+You can use the action for use cases such as the following:
+
+* Splitting a two-pager PDF into two one-pagers and using the synchronous `AnalyzeDocument` action on both. 
+* Removing a cover page that does not contain information of interest from a document.
+* When working with a large PDF file, extracting a small subset of pages (for example, only pages 10-12), which contain the information to analyze.
+
+The Amazon Textract connector contains the following activities:
+
+* `AnalyzeDocument` - Analyze documents and extract information from them. 
+`AnalyzeExpense` - Analyze expense documents and extract information from them.
+* `StartDocumentAnalysis` - Analyze multi-page documents asynchronously and extract information from them.
+* `GetDocumentAnalysis` - Retrieve the analysis results that have been invoked by the `StartDocumentAnalysis` action. 
+* `StartExpenseAnalysis` - Analyze multi-page documents asynchronously and extract expense information from them. 
+* `GetExpenseAnalysis` - Retrieve the expense analysis results that have been invoked by the `StartExpenseAnalysis` action.

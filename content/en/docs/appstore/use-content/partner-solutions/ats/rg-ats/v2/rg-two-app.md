@@ -104,7 +104,7 @@ In the **Edit Selenium Hub** dialog box, set the following parameters:
 | ------------------- | ---------------------------------------- |
 | Name                | The name of the Selenium hub.            |
 | URL                 | The URL of the Selenium server.          |
-| Custom Capabilities<sup>1</sup> | Sets the Selenium DesiredCapabilities (for more information, see [Class DesiredCapabilities](https://seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/remote/DesiredCapabilities.html)). |
+| Custom Capabilities¹ | Sets the Selenium DesiredCapabilities (for more information, see [Class DesiredCapabilities](https://seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/remote/DesiredCapabilities.html)). |
 
 ATS automatically retrieves the parallel test session limit from the Selenium hub. This limit is updated every 15 minutes. If ATS is not able to get the limit from the Selenium hub, it is set to one single test execution at a time.
 

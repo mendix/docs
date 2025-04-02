@@ -204,6 +204,14 @@ This table presents the results of rounding the input to one digit with the give
 | -2.5 | -3 | -2 |
 | -5.5 | -6 | -6 |
 
+### OQL version 2 {#oql-version-2}
+
+If this option is set to **Yes**, your app will use version 2 of the OQL syntax. This setting must be enabled to use [view entities](/refguide/view-entities/). Make sure your app is ready to use the new syntax before making the switch. 
+
+For more information about the differences, see [OQL Version 2 Features](/refguide/oql-v2/).
+
+Default: *No*
+
 ### Multiple Sessions per User {#multiple-sessions}
 
 If this option is enabled, users can sign in multiple times through different clients (for example, desktop browser and tablet). Otherwise, an existing session for a user is signed out when the user signs in somewhere else.
@@ -232,6 +240,16 @@ Default: *depends on the version of Mendix used to create the app:*
 
 * *Yes* for apps created with Mendix versions 10.6.0 and above
 * *No* for apps created with Mendix versions below 10.6
+
+### SSL Certificate Algorithm
+
+Choose between **PKIX (recommended)** and **SunX509 (for backwards compatibility)** as the Java validator and trust manager. According to [this JDK issue](https://bugs.openjdk.org/browse/JDK-8169745), the PKIX validator/trust manager supports richer extensions and features, and the use of SunX509 is discouraged.
+
+{{% alert color="info" %}}
+This option was added in Mendix version 10.21.0.
+{{% /alert %}}
+
+Default: **SunX509 (for backwards compatibility)**
 
 ## Languages Tab {#languages-tab}
 
@@ -432,14 +450,6 @@ When deploying to the cloud, custom widgets are bundled to optimize client-serve
 
 If this option is set, custom widgets will also be bundled locally. This mimics the production deployment, eliminating risk at the cost of start-up time.
 
-### Suggest Lower-Case Variable Names in Microflows
-
-When enabled, the names that Studio Pro suggests in microflows will start with a lower-case letter instead of an upper-case letter.
-
-### Activity Default Colors
-
-This table allows you to select a default color for each microflow activity type that is available in your app. The selected color will be used as the background color for all microflow activities of that type in your app. It is possible to override this default value for individual activities in the microflow editor. If you change the default color for an activity type, and there are activities of that type present in the app that have an individual background color specified, a dialog will be shown that allows you to apply the new default color to these activities as well.
-
 ### Use Data Grid 2, Combo Box, and Image Widgets for Content Generation{#use-dg-cb-i}
 
 If this setting is enabled, modern widgets like [Data Grid 2](/appstore/modules/data-grid-2/), [Combo Box](/appstore/widgets/combobox/), and [Image](/appstore/widgets/image/) will be used when generating overview pages or the content of data views. Existing generated content remains as is. 
@@ -449,3 +459,23 @@ See the list below for detailed information on which widgets are generated in va
 * A Data Grid 2 module is generated instead of a Data Grid 1 module
 * A combo box is generated instead of a combination of dropdown, reference selector, and input reference set selector widgets
 * An image widget is generated instead of a static image widget and a dynamic image widget
+
+### Default Association Storage
+
+In Mendix 10.21 and above, you can decide how associations are stored in the database.
+
+This option allows you to change the default for new associations. The initial defaults will be as follows:
+
+* **New projects** – one-to-many and one-to-one associations are implemented as direct associations
+* **Upgraded projects** – for projects which are upgraded from an older version of Mendix, all new associations continue to be implemented as association tables
+
+For more information, including which types of association this applies to, see [Association Storage Options](/refguide/association-storage/).
+
+### Suggest Lower-Case Variable Names in Microflows
+
+When enabled, the names that Studio Pro suggests in microflows will start with a lower-case letter instead of an upper-case letter.
+
+### Activity Default Colors
+
+This table allows you to select a default color for each microflow activity type that is available in your app. The selected color will be used as the background color for all microflow activities of that type in your app. It is possible to override this default value for individual activities in the microflow editor. If you change the default color for an activity type, and there are activities of that type present in the app that have an individual background color specified, a dialog will be shown that allows you to apply the new default color to these activities as well.
+

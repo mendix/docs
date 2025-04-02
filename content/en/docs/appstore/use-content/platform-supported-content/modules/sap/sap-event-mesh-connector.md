@@ -65,7 +65,7 @@ To help you work with the SAP Event Mesh connector, the following sections of th
 
 ### Domain Model {#domain-model}
 
-The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
+The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Data in the Domain Model](/refguide/domain-model/).
 
 The entities in the table below describe all generalizations. These are reused by the different models for the specific microflow activities or for storing connection details.
 

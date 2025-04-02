@@ -82,3 +82,20 @@ The **Documentation** pane displays the documentation for the currently selected
 2. Click on the element for which you want to view the documentation.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
+
+For additional reference, the available activities are listed below.
+
+### Activities
+
+[Activities](/refguide/activities/) define the actions that are executed in a microflow or a nanoflow. For the Amazon SQS connector, they represent actions such as sending or receiving a message to or from an SQS queue.
+
+The Amazon SQS connector contains the following activities:
+
+* `SendMessageBatch` - Send up to 10 messages to a queue in a batch.
+* `ReceiveMessages` - Receive up to 10 messages from a particular queue. 
+* `ListQueues` - Get a list of queues created in a particular region for the user.
+* `DeleteMessageBatch` - Delete a message from a queue.
+* `CreateQueue` - Create a queue in a specific region with the credentials provided.
+* `GetQueueAttributes` - View all attribute values set for a specific queue.
+* `PurgeQueue` - Delete all messages from a specific queue.
+* `DeleteQueue` - Delete a specific queue.

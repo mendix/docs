@@ -21,7 +21,7 @@ It can be used in the following two ways:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/timer/standalone-timer-activity.png" alt="Standalone Timer activity" width="250" >}}
 
-* **Timer** can also be attached to another workflow activity as a [Boundary Event](/refguide/workflow-boundary-events/) (in Studio Pro 10.15.0 and above):
+* **Timer** can also be attached to another workflow activity as a [Boundary Event](/refguide/workflow-boundary-events/) (released in GA in Studio Pro 10.16):
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/timer/timer-boundary-event.png" alt="Timer boundary event" width="300" >}}
 
@@ -30,12 +30,25 @@ It can be used in the following two ways:
 **Timer** properties consist of the following sections:
 
 * [General](#general)
+* [Boundary properties](#boundary-properties)
 * [Timer](#timer)
 * [Common](#common)
 
 ### General Section {#general}
 
 The **Caption** describes what happens in this element. It is displayed under the workflow element to make the **Timer** easier to read and understand without the need to add annotations.
+
+### Boundary Properties {#boundary-properties}
+
+{{% alert color="info" %}}
+This section is only applicable when **Timer** is used as a timer boundary event.
+
+This section is displayed if interrupting timer boundary events (beta) are enabled through Studio Pro **Preferences** -> **New features** -> **Workflow editor** > **Enable interrupting timer boundary events (beta)**.
+{{% /alert %}}
+
+The **Interrupting** property sets the timer boundary event to be either interrupting or non-interrupting.
+
+By default, it is set to **No**, which means that the timer boundary event is non-interrupting. When it is set to **Yes**, the timer boundary event is interrupting. For more information, see [Boundary Events](/refguide/workflow-boundary-events/).
 
 ### Timer Section {#timer}
 

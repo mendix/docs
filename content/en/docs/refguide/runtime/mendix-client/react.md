@@ -83,6 +83,16 @@ The migration mode will show deprecation warnings instead of errors for all inco
 
 Read further for guides that allow you convert your app so it is ready for the React client.
 
+### Custom `index.html`{#index}
+
+The structure of the `index.html` file is different for React and Dojo clients. To make sure your application will work correctly, follow these steps:
+
+1. Delete the custom `index.html`, or rename it temporarily.
+2. Run the local deployment and copy the app/deployment/web/index-example.html to your app/theme/web/index.html. That will be your new `index.html`.
+3. Apply any changes you want.
+
+It is also possible to keep custom `index.html` files for both clients. To do this, name the React client index file *index-react.html*. This file will take precedence when the React client is enabled, while the `index.html` will be used for Dojo client deployments.
+
 ### Marketplace Components{#marketplace}
 
 Not all Mendix Marketplace components are ready for the React client. Refer to [Marketplace Component React Status](/refguide/mendix-client/marketplace-react-status/) to see which of the most popular marketplace components are React ready. If a module or widget you are using is not on the list, test it for yourself then reach out to the authors to update it if not.

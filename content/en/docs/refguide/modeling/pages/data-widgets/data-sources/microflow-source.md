@@ -54,7 +54,7 @@ This duplicates the [Microflow](#microflow) specified above.
 
 #### Microflow Arguments
 
-**Microflow arguments** are automatically configured based on the parameters of the selected microflow and the available arguments. In general arguments are taken from any enclosing data widget. If the data widget enclosing the widget calling a microflow is inside another (nested) data widget, then objects from that data widget and any others in which it is nested can also be passed.
+**Microflow arguments** are automatically configured based on the parameters of the selected microflow and the available arguments. In general arguments are taken from parameters and variables in pages and snippets, in addition to any enclosing data widget. If the data widget enclosing the widget calling a microflow is inside another (nested) data widget, then objects from that data widget and any others in which it is nested can also be passed.
 
 ## Read More
 

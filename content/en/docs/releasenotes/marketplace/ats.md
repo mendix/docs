@@ -7,6 +7,14 @@ weight: 15
 numberless_headings: true
 ---
 
+## 3.0.1
+
+**Release date: February 18, 2025**
+
+### Fixes
+
+* We fixed an issue with compatibility for [Data Widgets](https://marketplace.mendix.com/link/component/116540) 2.29.1.
+
 ## 3.0.0
 
 **Release date: September 24, 2024**
@@ -1270,11 +1278,11 @@ We saw decreasing performance in some parts of the UI when you had a lot of data
 
 Getting started with ATS has never been easier. We’ve put a lot of effort into ensuring that the onboarding of new users is as smooth as possible. Existing users can enjoy zero maintenance and a well-known user interface.
 
-We accomplished this by providing a single, multi-tenant SaaS instance of ATS in Mendix Cloud. This instance comes with the same styling and usability as Mendix Cloud facilities.
+We accomplished this by providing a single, multitenant SaaS instance of ATS in Mendix Cloud. This instance comes with the same styling and usability as Mendix Cloud facilities.
 
 #### Application Test Suite as a Service
 
-ATS is now offered as a service. There is a single multi-tenant instance in Mendix Cloud to serve all customers:
+ATS is now offered as a service. There is a single multitenant instance in Mendix Cloud to serve all customers:
 
 [https://ats.mendix.com](https://ats.mendix.com)
 

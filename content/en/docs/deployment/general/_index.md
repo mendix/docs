@@ -21,7 +21,7 @@ The subjects covered in this documentation section are as follows:
 * [Iframes and Running Apps](/developerportal/deploy/running-in-iframe/)
 * [Deployment Location](/developerportal/deploy/deployment-location/)
 * [Webhooks](/developerportal/deploy/webhooks/)
-* [Software Composition](/developerportal/deploy/software-composition/) (Beta)
+* [Software Composition](/developerportal/deploy/software-composition/)
 
 ## Building Your Model
 

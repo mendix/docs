@@ -617,7 +617,7 @@ Mendix applications can be deployed in different ways, mainly:
 
 3. On-premise
 
-**Mendix Cloud** is the default deployment option and has the advantage of being a fully integrated solution, with easy setting up and administrating. When developing your first application and if there are no specific (private) cloud constraints, it makes sense to choose the user friendly Mendix Cloud option. Within Mendix Cloud, there are options for multi-tenant cloud environments and single-tenant cloud environments. Deploying to Mendix Cloud gives you the shortest time-to-value.
+**Mendix Cloud** is the default deployment option and has the advantage of being a fully integrated solution, with easy setting up and administrating. When developing your first application and if there are no specific (private) cloud constraints, it makes sense to choose the user friendly Mendix Cloud option. Within Mendix Cloud, there are options for multitenant cloud environments and single-tenant cloud environments. Deploying to Mendix Cloud gives you the shortest time-to-value.
 
 Mendix can also be deployed to any cloud platform which supports a version of Cloud Foundry. With **Mendix for Private Cloud**, you can choose the cloud provider of your preference, e.g. your own Azure or AWS infrastructures. If there already is access to an on-premise hosting environment, Mendix can also be deployed on-premise.
 
@@ -942,9 +942,15 @@ to get familiar with the process around security fixes.
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/cutomize-your-brand.png"  >}}
 
-On the **Company Brand** page, you can upload, edit, or remove a **Company Logo**. The company logo uploaded here will appear across the platform where it is used. For instance, it will be displayed on your published Marketplace content.
+On the **Customize Your Brand** page, you can upload, edit, or remove a **Company Logo**. The company logo uploaded here will appear across the platform where it is used. For instance, it will be displayed on your published Marketplace content.
 
 [Additional reading](/control-center/company-brand/)
+
+**Improve the onboarding experience for new team members**
+
+On the **Company Onboarding** page, you can customize the landing page which new team members will see when they are onboarded and the email that new team members will receive.
+
+[Additional reading](/control-center/company-onboarding/)
 
 **Setup IDP or SSO for access to the Mendix platform**
 

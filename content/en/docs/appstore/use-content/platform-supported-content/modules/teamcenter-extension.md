@@ -22,8 +22,10 @@ Teamcenter Extension offers the following integration options:
 * Revise item revision
 * Search datasets
 * Get datasets for item revision
+* Attach dataset to item revision
 * Search workspace objects
-* Get structures
+* Relate workspace objects
+* Get structure
 
 ### License {#license}
 
@@ -42,7 +44,7 @@ Compatibility among Teamcenter Extension, Teamcenter Connector, and Studio Pro i
 | ------------- | ------------- | ------------- |
 | 1.0.0 | 3.6.1, V 3.6.0, V 3.5.0 | 10.6.5 thru 10.7 |
 | 2.0.0 | 2406.0.0 | 10.12, patch versions 1 and above and 10.16.0 and above |
-| 3.0.0                        | 2406.3.0                     | 10.12 patch version 6 and above and 10.16.0 and above |
+| 3.0.0 and above | 2406.3.0 | 10.12 patch version 6 and above and 10.16.0 and above |
 
 {{% alert color="info" %}}
 Teamcenter Extension is not compatible with Studio Pro versions between 10.8 and 10.11, as well as 10.13.x, 10.14.x, and 10.15.x. If you use one of these Studio Pro versions, a possible workaround is to use Teamcenter Extension in one of the compatible versions of Studio Pro first, create the necessary artifacts, and then import them into your version. However, Mendix always recommends using the latest MTS or LTS Studio Pro version.
@@ -64,19 +66,15 @@ Follow the instructions in [How to Use Marketplace Content](/appstore/use-conten
 
 ### Actions
 
-#### Search Item Revisions from Teamcenter {#getitemrevision}
+#### Search Item Revisions {#getitemrevision}
 
 The `Search Item Revisions` action allows you to generate the domain model and microflow to search for and retrieve `ItemRevisions` or its specialization. The resulting microflow implements the saved query `Item Revision...` from Teamcenter.
 
-#### Get Item Revisions from Teamcenter {#getitemrevision}
-
-The `Search Item Revisions` action allows you to generate the domain model and microflow to search for and retrieve `ItemRevisions` or its specialization. The resulting microflow implements the saved query `Item Revision...` from Teamcenter.
-
-#### Create Item and Item Revision {#createitem-and-itemrevision}
+#### Create Item With Item Revision {#createitem-and-itemrevision}
 
 The `Create Item and Item Revision` action allows you to configure and generate the domain model and microflow to create an Item with `ItemRevision` or its specializations in Teamcenter. The resulting microflow implements the `Create Object and Update Properties` actions from the Teamcenter Connector. With the `Create Object` action, the `Item` and `ItemRevision` get created in Teamcenter, setting the Teamcenter properties that need to be set upon creation. With the `Update Properties` action, the remaining properties are updated in Teamcenter.
 
-#### Update Item and Item Revision {#updateitem-and-itemrevision}
+#### Update Item With Item Revision {#updateitem-and-itemrevision}
 
 The `Update Item and Item Revision` action allows you to generate the domain model and microflow to update an `Item` with `ItemRevision` or their specializations in Teamcenter. The resulting microflows implements the `Update Properties` action from the Teamcenter Connector. 
 
@@ -88,21 +86,25 @@ The `Revise Item and Item Revision` allows you to generate the domain model and 
 
 The `Search Datasets` allows you to generate the domain model and microflow to search for and retrieve `Datasets` or its specialization. The resulting microflow implements the saved query `Datasets` from Teamcenter.
 
-#### Get Datasets from Item Revision {#getdatasetsfromitemrevision}
+#### Get Datasets for Item Revision {#getdatasetsfromitemrevision}
 
 The `Get Datasets from Item Revision` action allows you to generate the domain model and microflow to retrieve datasets for an Item Revision and subsequently download files inside the dataset.
 
 #### Attach Datasets to Item Revision {#attachdatasetstoitemrevision}
 
-The 'Attach Datasets to Item Revision' action allows you to generate a domain model and microflow which creates and attaches a Teamcenter dataset (or its specializations) with a file document to an Item Revision in Teamcenter. The resulting microflow implements the Upload file, Create relation, and Get properties actions from the `TcConnector` module.
+The 'Attach Datasets to Item Revision' action allows you to generate a domain model and microflow which creates and attaches a Teamcenter dataset (or its specializations) with a file document to an Item Revision in Teamcenter. The resulting microflow implements the `Upload file`, `Create relation`, and `Get properties` actions from the `TcConnector` module.
 
-#### Get Workspace Objects {#getworkspaceobjects}
+#### Search Workspace Objects {#getworkspaceobjects}
 
-The `Get Workspace Objects` action allows you to configure and generate the domain model and microflow to search for and retrieve Workspace Objects or their specialization from Teamcenter. This action implements the saved query `General..` from Teamcenter.
+The `Search Workspace Objects` action allows you to configure and generate the domain model and microflow to search for and retrieve Workspace Objects or their specialization from Teamcenter. This action implements the saved query `General..` from Teamcenter.
 
-#### Get Structures
+#### Relate Workspace Objects {#relateworkspaceobjects}
 
-The `Get Structures` allows you to generate the domain model and microflows to configure a BOM window and retrieve structure data from Teamcenter. This feature supports the retrieval of structures with the following:
+The 'Relate Workspace Objects' action allows you to generate the domain model and microflow to relate two workspace objects or their specialization from Teamcenter. The resulting microflow implements the `Create relation` action from the `TcConnector` module.
+
+#### Get Structure {#getstructures}
+
+The `Get Structure` action allows you to generate the domain model and microflows to configure a BOM window and retrieve structure data from Teamcenter. This feature supports the retrieval of structures with the following:
 
 * `RevisionRule` (or default `RevisionRule`)
 * `VariantRule`
@@ -222,6 +224,8 @@ Once you click **OK**, you will return to the import mapping tab with a sidebar 
 In the import mapping sidebar, you can configure which Teamcenter properties, references, and relations to include when retrieving data from Teamcenter. The import mapping sidebar is launched automatically after the completion of object mapping. When you are on the import mapping page and the sidebar is closed, you can double-click a previously configured entity to open the sidebar for that entity.
 
 The sidebar shows all properties, references, and relations for the configured Teamcenter object. Depending on the use case, each one of them is accompanied with check boxes for reading ({{% icon name="view" %}}) and writing ({{% icon name="pencil" %}}) for you to configure what to include when retrieving data from or creating data in Teamcenter.
+
+{{% alert color="info" %}} The Teamcenter Extension currently does not display compound attributes from Teamcenter. A compound attribute is a property defined on one object but displayed on a different object.{{% /alert %}}
 
 You often see that check boxes are selected by default or grayed out. In general, the following rules apply:
 

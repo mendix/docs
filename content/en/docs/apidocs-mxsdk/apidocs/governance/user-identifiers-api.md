@@ -16,6 +16,10 @@ The User Identifiers API is available for Mendix Admins.
 
 The User Identifiers API allows Mendix admins to perform operations related to user identifiers within their company, such as obtaining the user UUIDs of specific email addresses.
 
+{{% alert color="info" %}}
+The User Identifiers API supports a maximum of 100 email addresses per request. Any email addresses exceeding this limit will be ignored.
+{{% /alert %}}
+
 ## Authentication{#authentication}
 
 Authentication for the User Identifiers API uses a personal access token (PAT).

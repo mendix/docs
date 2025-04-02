@@ -205,7 +205,7 @@ The definition of a tenant on Insights Hub is available in the Insights Hub docu
 
 **UserTenant**
 
-This should be the tenant that the user has access to in a multi-tenant environment. For a developer tenant, this must be the same as the HostTenant. In an operator or iot plan tenant, you can change this to allow you to test multi-tenant apps.
+This should be the tenant that the user has access to in a multitenant environment. For a developer tenant, this must be the same as the HostTenant. In an operator or iot plan tenant, you can change this to allow you to test multitenant apps.
 
 **UserEmail**
 
@@ -268,9 +268,9 @@ You can only add one icon per element.
 
 ## Multi-Tenancy {#multitenancy}
 
-In Insights Hub, apps are usually designed to be multi-tenant, meaning that a single instance of the app serves multiple tenants. A tenant is a representation of a real-world organization. It groups users, data, assets, entities, and many kinds of other properties. Access to these resources for users of the same tenant is controlled via the authorization management system.
+In Insights Hub, apps are usually designed to be multitenant, meaning that a single instance of the app serves multiple tenants. A tenant is a representation of a real-world organization. It groups users, data, assets, entities, and many kinds of other properties. Access to these resources for users of the same tenant is controlled via the authorization management system.
 
-For an Insights Hub app to be multi-tenant, each user can only see the data from a single tenant, defined by their login credentials, and cannot access resources of other tenants.
+For an Insights Hub app to be multitenant, each user can only see the data from a single tenant, defined by their login credentials, and cannot access resources of other tenants.
 
 ### Control Through Insights Hub APIs
 
@@ -278,7 +278,7 @@ The Authorization HTTP Header (see DS_AccessToken in the [Microflows](/partners/
 
 ### Control Within a Mendix App
 
-If no security is placed on persistable Mendix entity objects, these are accessible to all users of the app (subject to access granted by their user role). This means that any app which stores data in persistable Mendix entities cannot be made multi-tenant without additional security.
+If no security is placed on persistable Mendix entity objects, these are accessible to all users of the app (subject to access granted by their user role). This means that any app which stores data in persistable Mendix entities cannot be made multitenant without additional security.
 
 Insights Hub SSO provides the user’s tenant as the **Name** attribute in the **Tenant** entity.
 
@@ -286,9 +286,9 @@ Insights Hub SSO provides the user’s tenant as the **Name** attribute in the *
 
 In addition, Insights Hub SSO will identify whether the current user is a subtenant using **IsSubTenantUser** and, if so, will populate the name of the subtenant in **SubtenantId**. More information about subtenants can be found in the Insights Hub documentation [Subtenants](https://developer.mindsphere.io/apis/core-tenantmanagement/api-tenantmanagement-overview.html#subtenants).
 
-**How To Make Your App Multi-Tenant**
+**How To Make Your App Multitenant**
 
-By utilizing the **Tenant** when an entity is accessed, the Mendix app can be made multi-tenant.
+By utilizing the **Tenant** when an entity is accessed, the Mendix app can be made multitenant.
 
 {{% alert color="warning" %}}
 It is not possible, currently, to generate these access restrictions automatically.
@@ -300,7 +300,7 @@ The developer will have to add a rule every time the entity is accessed. See the
 It is not necessary to put an access rule on every entity within the domain model. It is only required for: **persistable** entities which have a **TenantId** attribute.
 {{% /alert %}}
 
-To make your Mendix app multi-tenant, do the following:
+To make your Mendix app multitenant, do the following:
 
 1. Make all *persistable* entities which have a **TenantId** attribute a specialization of the SiemensInsightsHubSingleSignOn.TenantObject entity.
     This ensures that every object is associated with the Tenant object of the user who creates it.
@@ -313,7 +313,7 @@ To make your Mendix app multi-tenant, do the following:
 
     This ensures that the user can only retrieve entities which belong to their tenant, in other words, where their Tenant matches the TenantId of the entity. You can copy and paste this constraint from here (hover your mouse over the text and click the **Copy** button). You can also copy it from XPath constraint on the *TenantObject* entity in the *SiemensInsightsHubSingleSignOn* module. For more information on XPath, see [XPath](/refguide/xpath/).
 
-    {{% alert color="info" %}}For consistency, it is recommended that all access to these entities is done through a sub-microflow which contains the XPath constraint. This enforces multi-tenant security.{{% /alert %}}
+    {{% alert color="info" %}}For consistency, it is recommended that all access to these entities is done through a sub-microflow which contains the XPath constraint. This enforces multitenant security.{{% /alert %}}
 
 3. Similarly, every data widget on a page (for example a *Data view*) which retrieves data from the database or via an association must have the following XPath constraint, which works in the same way as the microflow XPath constraint, above:
 

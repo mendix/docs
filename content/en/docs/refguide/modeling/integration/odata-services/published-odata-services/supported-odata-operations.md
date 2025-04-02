@@ -87,7 +87,7 @@ Mendix supports the following comparison operators:
 
 | Function               | Example                                         | Returns                                                               |
 | ---------------------- | ----------------------------------------------- | --------------------------------------------------------------------- |
-| `contains`<sup>1</sup> | `/Employees?$filter=contains(Name, 'f')`        | All employees with names that contain an `f`                          |
+| `contains`¹ | `/Employees?$filter=contains(Name, 'f')`        | All employees with names that contain an `f`                          |
 | `startswith`           | `/Employees?$filter=startswith(Name, 'f')`      | All employees with names that start with `f`                          |
 | `endswith`             | `/Employees?$filter=endswith(Name, 'f')`        | All employees with names that end with `f`                            |
 | `length`               | `/Employees?$filter=length(Name) eq 5`          | All employees with names that have a length of 5                      |
@@ -98,7 +98,7 @@ Mendix supports the following comparison operators:
 | `minute`               | `/Employees?$filter=minute(Registration) eq 55` | All employees registered on the 55th minute of any hour               |
 | `second`               | `/Employees?$filter=second(Registration) eq 55` | All employees registered on the 55th second of any minute of any hour |
 
-<small><sup>1</sup> In OData v3 (⚠ deprecated), the `contains` function is called `substringof`, and its arguments are reversed. Here is an example: `/Employees?$filter=substringof('f', Name)`.</small>
+<small>¹ In OData v3 (⚠ deprecated), the `contains` function is called `substringof`, and its arguments are reversed. Here is an example: `/Employees?$filter=substringof('f', Name)`.</small>
 
 ##### Combining Filters
 

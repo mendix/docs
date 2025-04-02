@@ -7,7 +7,7 @@ description: "Introduces Menditect Test Automation, which is new Mendix partner 
 
 ## Introduction
 
-[Menditect Test Automation (MTA)](https://marketplace.mendix.com/link/component/120116) is a tool for automated regression testing. MTA offers a no-code, visual suite of automated test tools for embedding unit, component, process and API testing into your application lifecycle. For more information, see the [Menditect](https://menditect.com/) website.
+[Menditect Test Automation (MTA)](https://marketplace.mendix.com/link/component/120116) is a tool for automated regression testing. MTA offers a no-code, visual suite of automated test tools for embedding unit, component, process, User interface (UI), and API testing into your application lifecycle. For more information, see the [Menditect](https://menditect.com/) website.
 
 {{% alert color="info" %}}
 For more information about purchasing MTA, contact your Customer Success Manager (CSM) or fill out the contact [form](https://www.mendix.com/contact-us/#contactform).
@@ -24,6 +24,8 @@ When purchased via Mendix, MTA can be used with any Mendix cloud hosting option,
 
 * The application model being tested must be stored in the Mendix Team Server repository.
 * The MTA application and the application under test must be able to establish network connectivity with the Mendix platform APIs, including the Mendix Team Server and Project APIs.
+
+For UI testing, MTA requires Playwright. The supported options are self-hosted Playwright or BrowserStack SaaS instances.
 
 Currently, MTA cannot be used for apps using an on-premises Git repository or running in a fully air-gapped scenario.
 

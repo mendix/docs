@@ -79,9 +79,11 @@ spec:
     limits: # Upper limit - process will be stopped if it tries to use more
       cpu: 500m # 500 millicores - half of a vCPU
       memory: 512Mi # 512 megabytes - suitable for small-scale non-production apps
+      ephemeral-storage: 256Mi # 256 megabytes - for temporary files such as generated Excel documents
     requests: # Lower limit - needs at least these resources
       cpu: 250m
       memory: 256Mi
+      ephemeral-storage: 256Mi
   runtimeDeploymentPodAnnotations: # Optional, can be omitted : set custom annotations for Mendix Runtime Pods
     # example: inject the Linkerd proxy sidecar
     linkerd.io/inject: enabled
@@ -173,6 +175,7 @@ spec:
     rollingUpdate:
       maxSurge: 0
       maxUnavailable: 50%
+  runtimeReadOnlyRootFilesystem: true # Optional: specify if the Mendix Runtime container should use a read-only root filesystem
 ```
 
 You need to make the following changes:
@@ -230,6 +233,7 @@ You need to make the following changes:
 * **customPodLabels** - specify additional pod labels (please avoid using labels that start with the `privatecloud.mendix.com/` prefix)
     * **general** - specify additional labels for all pods of the app
 * **deploymentStrategy** - specify parameters for the deployment strategy; for more information, see the reduced downtime deployment documentation.
+* **runtimeReadOnlyRootFilesystem** - specify if the Runtime container should mount the root filesystem in [read-only mode](/developerportal/deploy/private-cloud-cluster/#readonlyrootfs).
 
 #### Setting App Constants{#set-app-constants}
 

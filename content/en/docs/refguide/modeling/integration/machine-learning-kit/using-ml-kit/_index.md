@@ -259,8 +259,6 @@ Machine learning models might be placed in the core of a Mendix application that
 
 In the section below, there are tips for Mendix developers to get insights about inference calls in the development and production phases. You might need to observe the inputs/outputs of a model that is used in an *ML Kit* activity, assess the performance (latency) of making a prediction, or debug an individual pre/post-processing unit on a test sample to verify that the Microflow works and to catch potential bugs in development time before rolling out the application to the production environments.
 
-See the [Monitoring and Troubleshooting](/howto/monitoring-troubleshooting/) guide for general monitoring and troubleshooting tips in Studio Pro.
-
 ### Troubleshooting
 
 The [Errors Pane](/refguide/errors-pane/) in Studio Pro shares informative messages about the metadata of the ML models that are consumed by the **Call ML Model** activity. Warning messages do not block deployment, but the application may not work seamlessly. All error messages have to be resolved in order to execute applications in local environments or deploy applications into the production environments.

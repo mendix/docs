@@ -198,3 +198,20 @@ The **Documentation** pane displays the documentation for the currently selected
 2. Click on the element for which you want to view the documentation.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
+
+For additional reference, the available activities are listed below.
+
+### Activities
+
+[Activities](/refguide/activities/) define the actions that are executed in a microflow or a nanoflow. For the Amazon DynamoDB connector, they represent the actions that can be performed on DynamoDB database tables.
+
+The Amazon DynamoDB connector contains the following activities:
+
+* `BatchGetItem` - Get multiple items from DynamoDB in a single call.
+* `ListTables` - Retrieve a list of `Table` objects for a given region, which contains the table's name.
+* `DescribeTable` - Get a description from a given table inside DynamoDB.
+* `BatchWriteItem` - Put or delete multiple items from DynamoDB in a single call.
+* `DeleteItem` - Delete an item from a given table from your DynamoDB environment. 
+* `ScanTable` - Retrieve items from an Amazon DynamoDB table.
+* `PutItem` - Put and update an item in DynamoDB.
+* `GetItem` - Get an item from DynamoDB.

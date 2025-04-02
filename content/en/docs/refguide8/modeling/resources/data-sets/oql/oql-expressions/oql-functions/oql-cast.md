@@ -32,9 +32,9 @@ The table below describes which CAST conversions are supported:
 
 | From \ To | BOOLEAN | DATETIME | DECIMAL | INTEGER | LONG | STRING (unlimited) | STRING (limited) |
 |------| :------: | :------: | :------: | :------: | :------: | :------: | :------: |
-| BOOLEAN | ✔ | ✘ | ✘ | ✘ | ✘ | ✔* | ✔*<sup><small>1</small></sup> |
-| DATETIME | ✘ | ✔ | ✘ | ✘ | ✘ | ✔* | ✔*<sup><small>2</small></sup> |
-| DECIMAL | ✘ | ✘ | ✔* | ✔* | ✔* | ✔* | ✔*<sup><small>2</small></sup> |
+| BOOLEAN | ✔ | ✘ | ✘ | ✘ | ✘ | ✔* | ✔*¹ |
+| DATETIME | ✘ | ✔ | ✘ | ✘ | ✘ | ✔* | ✔*² |
+| DECIMAL | ✘ | ✘ | ✔* | ✔* | ✔* | ✔* | ✔*² |
 | INTEGER | ✘ | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | LONG | ✘ | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | STRING | ✘ | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |

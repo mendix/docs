@@ -153,3 +153,22 @@ The **Documentation** pane displays the documentation for the currently selected
 2. Click on the element for which you want to view the documentation.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
+
+For additional reference, the available activities are listed below.
+
+### Activities
+
+[Activities](/refguide/activities/) define the actions that are executed in a microflow or a nanoflow.
+
+The Amazon EventBridge connector contains the following activities:
+
+* `UpdateConnection` - Update connections in your AWS console from your Mendix app.
+* `PutEvents` - Send custom events to Amazon EventBridge so that they can be matched to rules.
+* `CreateConnection` - Create new connections in your AWS console from your Mendix app.
+* `CreateApiDestination` - Create a custom API destination in your AWS console inside the Amazon EventBridge service so that events can be routed to the provided endpoint. 
+    * `Endpoint parametrization` - Extends upon `CreateApiDestination`. In the `CreateApiDestination` request, you can configure the boolean attribute Wildcard. Upon setting this attribute to true, the API endpoint resource in Amazon EventBridge will have the wildcard `*` suffixed to configured invocation endpoint. This wildcard token acts as a placeholder to be replaced by a value that resides within the event body. An example of this would be a REST API for an order service where an order ID is passed as a path parameter: `http://myhosturl.com/rest/orderservice/v1/{orderID}`.
+* `DescribeConnection` - Get details on a specific connection that exists within EventBridge.
+* `DescribeApiDestination` - Get details on a specific API destination that exists within EventBridge.
+* `UpdateApiDestination` - Update a specific API destination that exists within EventBridge. 
+* `RegisterMyMendixApp` - This custom microflow registers your Mendix application into the Amazon EventBridge service in the specified region. 
+* `CreateConfiguration` - This Java action allows you to create an `EventRoutingConfiguration` object for each event that you would want to be able to call.

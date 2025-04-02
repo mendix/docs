@@ -60,6 +60,10 @@ The app is imported.
 
 ### Importing Module Packages {#import-module}
 
+{{% alert color="warning" %}}
+Importing a module containing workflows is supported from Studio Pro 10.21.0 and above. In Studio Pro 10.20 and below, importing a module containing workflows will make all running workflow instances incompatible.
+{{% /alert %}}
+
 Mendix modules can either be stored in a Mendix package (*.mpk*) file or have an *.mxmodule* extension if they are [add-on or solution modules](/refguide/configure-add-on-and-solution-modules/). 
 
 #### Importing a Module Package Through the App Explorer
@@ -71,20 +75,37 @@ To import module packages through the App Explorer in Studio Pro, follow these s
 3. In the dialog box, choose a name for your module and select whether to create a new module or replace an existing one:
 
     {{< figure src="/attachments/refguide/modeling/import-and-export/import-module.png" class="no-border" >}}
-
-    {{% alert color="info" %}}If you replace the module with a new version, the existing user data will be retained based on the names of entities, attributes, and associations. If you delete a module and then add a newer version of it, all user data will be lost.{{% /alert %}}
+    
+    {{% alert color="info" %}} For more information, see the [Rules for Replacing an Existing Module](#replace-existing-modules) section below.{{% /alert %}}
 
 4. Click **Import**. You may see a **Warning** pop-up window that will inform you of any included module dependencies that will be overwritten in your app.
 
     {{% alert color="info" %}}Widgets are only overwritten when an imported module contains a newer version of the widget.{{% /alert %}}
-
 5. Click **OK**. 
 
-If you are importing a module with the *.mxmodule* extension, a dialog informing you about the imported add-on module is displayed:
+You see a new or replaced module in the **App Explorer**. You also see your changes in the **Changes** pane.
+
+If you are importing a module with the *.mxmodule* extension, a dialog informing you about the imported add-on module is also displayed:
 {{< figure src="/attachments/refguide/modeling/import-and-export/mxmodule-notification.png" class="no-border" >}}
 
-You see a new or replaced module in the **App Explorer**. You also see your changes in the **Changes** pane. 
+##### Rules for Replacing an Existing Module {#replace-existing-modules}
 
+{{% alert color="warning" %}}
+If you delete a module and then add a newer version of it, all the existing data in the module will be lost.
+{{% /alert %}}
+
+If you replace a module with a newer version, the existing data in the module are retained based on the names of entities, attributes, associations, microflows, workflows, and workflow activities. The following rules apply:
+
+* Entities are matched by name; if the name changes in a newer version of the module, the entities and all associated data are removed from the database. An empty table is created for the 'new' entity.
+* Attributes are matched by name; if the name changes in a newer version of the module, all attribute data is removed from the database. An attribute with the new name is added to the entity, with empty data.
+* Associations are matched by name; if the name changes in a newer version of the module, all association data is removed from the database. The associated entities are not deleted.
+* Microflows are matched by name; if the name changes in a newer version of the module, clients may experience errors when trying to trigger a microflow from a page.
+* Workflows are matched by name; if the name changes in a newer version of the module, all existing workflow instances will become incompatible.
+* Workflow activities are matched by name; if the name changes in a newer version of the module, existing workflow instances may become incompatible.
+* The paths of parallel splits (in workflows) are matched by their position; if their order changes in a newer version of the module, or paths are added or removed, existing workflow instances may become incompatible.
+* The outcomes of user tasks (in workflows) are matched by value; if the outcome value changes in a newer version of the module, existing workflow instances may become incompatible.
+* The boundary events of workflow activities are matched by their position; if their order changes in a newer version of the module, or events are added or removed, existing workflow instances may become incompatible.
+    
 #### Importing an Add-On Module Package Through the App Directory
 
 {{% alert color="info" %}}

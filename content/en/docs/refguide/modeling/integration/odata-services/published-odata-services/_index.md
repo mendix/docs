@@ -203,9 +203,9 @@ Support for using a list of `System.HttpHeader` in authentication microflows was
 
 Specify which microflow to use for custom authentication. The microflow may take the following as a parameter:
 
-* A list of [HttpHeader](/refguide/http-request-and-response-entities/#http-header). This cannot be used in combination with [HttpRequest](/refguide/http-request-and-response-entities/#http-request) parameter.
+* A list of [HttpHeader](/refguide/http-request-and-response-entities/#http-header). These are the HTTP headers in the client's request. Use this parameter for authentication schemes that are based on HTTP headers.
+* [HttpRequest](/refguide/http-request-and-response-entities/#http-request). Use this parameter for authentication schemes that are based on more than just the HTTP headers (for example, when the client supplies credentials in the request body). You cannot use this parameter together with a list of HttpHeader. Instead, use a [retrieve activity](/refguide/retrieve/) to retrieve the associated request headers.
 * [HttpResponse](/refguide/http-request-and-response-entities/#http-response). When the microflow sets the status code of this response to something other then **200**, this value is returned and the operation will not be executed. Any headers set on the response are returned (except when the microflow returns an empty user).
-* [HttpRequest](/refguide/http-request-and-response-entities/#http-request), so it can inspect the incoming request.
 
 The authentication microflow should return a User.
 

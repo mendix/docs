@@ -164,7 +164,7 @@ To set the result format at the Snowflake session or user level, use the followi
 **ALTER USER <user_name> SET JDBC_QUERY_RESULT_FORMAT='JSON';**
 ```
 
-This approach ensures compatibility with JDK 16+.
+This approach ensures compatibility with JDK 16+. For more information, see [JDBC Driver throws NoClassDefFoundError for class RootAllocator in Arrow Library, while trying to run a select query](https://community.snowflake.com/s/article/Getting-java-lang-NoClassDefFoundError-for-class-RootAllocator).
 
 ## Configuring a Query to Display Data as a Chart
 

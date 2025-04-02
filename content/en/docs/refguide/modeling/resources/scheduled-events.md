@@ -51,7 +51,8 @@ This allows you to run the event on the same date every year (for example, April
 | --- | --- |
 | Date | The month and day on which to execute the event. |
 | Time | The time at which to execute the event. |
-| On overlap | See explanation of options in [Long-running Events](#long-events). |
+| UTC/Server | Whether to use UTC or a local time set on the server. See [Server Time](#server-time), below, for more information. |
+| On overlap | See explanation of options in [Long-Running Events](#long-events). |
 
 {{% alert color="warning" %}}
 It is possible to select the leap day (February 29). In non-leap years the event will then be executed on February 28th.
@@ -66,7 +67,8 @@ This allows you to run the event on a certain day of the week every year. For ex
 | Month | The month in which to execute the event. |
 | Day | The day on which to execute the event. |
 | Time | The time at which to execute the event. |
-| On overlap | See explanation of options in [Long-running Events](#long-events). |
+| UTC/Server | Whether to use UTC or a local time set on the server. See [Server Time](#server-time), below, for more information. |
+| On overlap | See explanation of options in [Long-Running Events](#long-events). |
 
 ### Monthly Properties {#monthly}
 
@@ -75,7 +77,7 @@ Monthly events also come in 2 flavors:
 * Execute on a specific day of the month
 * Execute on a specific weekday
 
-#### Specific Date
+#### Particular Day
 
 This allows you to run the event on the same date every month, or number of months (for example, the 5th of each month).
 
@@ -85,13 +87,14 @@ This allows you to run the event on the same date every month, or number of mont
 | Months | The months in which the event will be executed; not visible when executing every month. |
 | Day | The day of the month on which to execute the event. |
 | Time | The time at which to execute the event. |
-| On overlap | See explanation of options in [Long-running Events](#long-events). |
+| UTC/Server | Whether to use UTC or a local time set on the server. See [Server Time](#server-time), below, for more information. |
+| On overlap | See explanation of options in [Long-Running Events](#long-events). |
 
 {{% alert color="warning" %}}
 The selected day might not exist in all selected months. In those months the event will be executed on the last day of the month.
 {{% /alert %}}
 
-#### Specific Weekday
+#### Weekday
 
 This allows you to run the event on a certain day of the week every month, or number of months. For example, the first Monday of each month.
 
@@ -100,7 +103,8 @@ This allows you to run the event on a certain day of the week every month, or nu
 | Month | The month in which to execute the event. |
 | Day | The day on which to execute the event. |
 | Time | The time at which to execute the event. |
-| On overlap | See explanation of options in [Long-running Events](#long-events). |
+| UTC/Server | Whether to use UTC or a local time set on the server. See [Server Time](#server-time), below, for more information. |
+| On overlap | See explanation of options in [Long-Running Events](#long-events). |
 
 #### Weekly Properties {#weekly}
 
@@ -108,9 +112,10 @@ This allows you to run the event on certain days every week. For example every M
 
 | Property | Description |
 | --- | --- |
-| Day | The days of the week on which to execute the event. |
+| Days | The days of the week on which to execute the event. |
 | Time | The time at which to execute the event. |
-| On overlap | See explanation of options in [Long-running Events](#long-events). |
+| UTC/Server | Whether to use UTC or a local time set on the server. See [Server Time](#server-time), below, for more information. |
+| On overlap | See explanation of options in [Long-Running Events](#long-events). |
 
 ### Daily Properties {#daily}
 
@@ -119,7 +124,8 @@ This allows you to run the event every day.
 | Property | Description |
 | --- | --- |
 | Time | The time at which to execute the event. |
-| On overlap | See explanation of options in [Long-running Events](#long-events). |
+| UTC/Server | Whether to use UTC or a local time set on the server. See [Server Time](#server-time), below, for more information. |
+| On overlap | See explanation of options in [Long-Running Events](#long-events). |
 
 ### Hourly Properties {#hourly}
 
@@ -128,8 +134,9 @@ This allows you to run the event every hour, or number of hours. It also allows 
 | Property | Description |
 | --- | --- |
 | Interval | The number of hours in between executions of the event. This must be a divisor of 24. |
-| Offset (minutes) | The offset in minutes from the start time of an event period. For instance, set to 90 in order to execute halfway during a 3 hour interval. The offset must be shorter than the specified interval|
-| On overlap | See explanation of options in [Long-running Events](#long-events). |
+| Offset (minutes) | The offset in minutes from the start time of an event period. For instance, set to 90 in order to execute halfway during a 3 hour interval. The offset must be shorter than the specified interval. |
+| UTC/Server | Whether to use UTC or a local time set on the server. See [Server Time](#server-time), below, for more information. |
+| On overlap | See explanation of options in [Long-Running Events](#long-events). |
 
 Example times will be shown in the dialog to illustrate the effects of the offset.
 
@@ -142,9 +149,9 @@ This allows you to run the event every minute, or number of minutes.
 | Property | Description |
 | --- | --- |
 | Interval | The number of minutes in between executions of the event. This must be a divisor of 60. |
-| On overlap | See explanation of options in [Long-running Events](#long-events). |
+| On overlap | See explanation of options in [Long-Running Events](#long-events). |
 
-### Long-running Events {#long-events}
+### Long-Running Events {#long-events}
 
 If a repeated scheduled event takes longer than the interval, an overlap would occur. To prevent this a choice must be made on how to handle this. This is set in the **On overlap** property of the scheduled event.
 
@@ -159,6 +166,14 @@ If a repeated scheduled event takes longer than the interval, an overlap would o
     Should an event have drifted a long way from its intended schedule over time, the best way to remedy this is to delete the event and create a new one (with a longer interval).
 
 ## Additional information
+
+### Server Time{#server-time}
+
+Although you can choose **Server** time rather than **UTC** time, please make sure that your server time is set as you expect. Many servers are set to run on UTC to avoid issues when working across timezones.
+
+{{% alert color="warning" %}}
+All Mendix Cloud servers are set to UTC.
+{{% /alert %}}
 
 ### Daylight Saving
 

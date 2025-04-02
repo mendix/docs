@@ -64,3 +64,14 @@ The **Documentation** pane displays the documentation for the currently selected
 2. Click on the element for which you want to view the documentation.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
+
+For additional reference, the available activities are listed below.
+
+### Activities
+
+[Activities](/refguide/activities/) define the actions that are executed in a microflow or a nanoflow.
+
+The Amazon Translate connector contains the following activities:
+
+* `ListLanguages` - This action allows you to retrieve a list of supported languages that can used for translation.
+* `TranslateText` - This action allow you to retrieve the translation of the input text.

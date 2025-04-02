@@ -12,6 +12,21 @@ aliases:
 
 These release notes cover changes made to the [Catalog](/catalog/).
 
+## 2025
+
+### January 30, 2025
+
+#### Fixes
+
+* We fixed an issue where applications that were registered on Mendix Cloud should have the application type **Mendix** instead of **Other**.
+* We fixed a bug where the Control Center navigation layout was not collapsible on the Administration page for company admins.
+
+### January 28, 2025
+
+#### Fixes
+
+* We fixed an issue where the search results were not always showing the latest information.
+
 ## 2024
 
 ### December 12, 2024

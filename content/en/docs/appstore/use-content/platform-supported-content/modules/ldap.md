@@ -137,11 +137,12 @@ If LDAP is enabled for this connection (**LDAP enabled** is checked), you must f
 * **LDAP type** – Set the type of action that should be done for this LDAP connection. Depending on this type, you will need to add further information as described in [LDAP Type Configurations](#ldap-type-configurations), below. The LDAP type can be one of the following:
 
     * **Import users** – Import and synchronize the end-users specified the configuration. This will make the end-user information available in your Mendix app.
-    * **Only authenticate users** – This will only authenticate existing Mendix end-users against the LDAP server, but it will not synchronize any information. If an end-user is not known in Mendix, they cannot sign in.
+    * **Only authenticate users** – This will only authenticate existing Mendix end-users against the LDAP server, but it will not synchronize any information. If an end-user is not known in Mendix, they cannot sign in. In the **General** tab, when the **LDAP Type** is set to **Only authenticate users based on the LDAP credentials**, the **Custom User Provisioning** toggle button appears. Enabling this option automatically triggers the `Ldap.customLoginLogic` microflow.
     * **Authenticate and create** – This will not synchronize end-users. However, if an end-user that is unknown in Mendix signs in using valid LDAP authentication, a Mendix end-user will be created, and the end-user info will be copied from the LDAP server at that moment.
 
 * **Map users to** – This specifies which entity type objects should be created when creating new end-users. You can choose from all the specializations of **System.User**. For example, you may want to use the `Administration.Account` entity if you are using the Administration module.
-* **Domain suffix** – This is a concatenation of the LDAP root directory fields. It is used to authenticate users and will be concatenated to the Mendix user name to form the LDAP user name. For example, the domain suffix at Mendix is `@mendixdomain.local`.
+* **Domain prefix** – This is a concatenation of the LDAP root directory fields. It is used to authenticate users and will be concatenated to the Mendix user name to form the LDAP user name. For example, `Org\`.
+* **Domain suffix** – Similarly, the domain suffix is derived from LDAP root directory fields and serves the same authentication purpose. It will be concatenated to the Mendix user name to form the LDAP user name. For example, `@mendixdomain.local`.
 * **User roles WITHOUT LDAP authentication** – This property identifies which user roles are not authenticated against LDAP. End-users that have at least one of these roles will not be authenticated against LDAP, but will instead use their Mendix app password to sign in. Note that end-users with the **Administrator** user role will never be authenticated against LDAP.
 
 #### LDAP Type Configurations{#ldap-type-configurations}

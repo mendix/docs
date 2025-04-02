@@ -169,6 +169,10 @@ The following steps will create a cluster, create a namespace, and create an env
 Please note that there is a limited support for Custom permissions in Deploy APIs.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+In order to create or manage environments in a namespace through an API, the technical contact must have a role assigned to the namespace permissions.
+{{% /alert %}}
+
 ## API Reference
 
 {{% alert color="info" %}}

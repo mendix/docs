@@ -40,6 +40,10 @@ Logic Recommender is displayed as a blue plus in the flow. When you want to view
 
 {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/logic-bot-recommender/assist-bulb.png" max-width=50% >}}
 
+{{% alert color="info" %}}
+In Studio Pro 10.20 and above, if the sequence flow is too short or is selected, the blue plus is hidden. To open Logic Recommender in such cases, right-click the flow to open its context menu, and click **Open recommender**.
+{{% /alert %}}
+
 A dialog box is shown with recommendations of objects or activities to insert. This list initially contains the top 10 contextual suggestions. You can select an element directly from the recommendation list:
 
 {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/logic-bot-recommender/initial-recommendations.png" max-width=80% >}}

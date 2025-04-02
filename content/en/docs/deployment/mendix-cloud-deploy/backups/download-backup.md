@@ -55,6 +55,10 @@ To download a backup of a licensed app, follow these steps:
     * Click **Show URL** to see the URL of the backup
     * Click **Download** to immediately start downloading the archive using your browser.
 
+## Known Limitations
+
+* Mendix Cloud runs on Amazon Web Services, which has a 2 TB limit on the size of backup that can be downloaded. The same size limitation applies to Mendix Cloud.
+
 ## Read More
 
 * [Creating a Backup](/developerportal/operate/create-backup/)

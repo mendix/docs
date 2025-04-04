@@ -22,7 +22,7 @@ Available scenarios are described in sections below.
 
 This scenario allows you to move a fix from a maintenance branch line to the main line. If you just want to redo a small fix, a single commit is often enough.
 
-Port fix adds changes from the selected commit to your branch line. You will need to explicitly commit these changes after performing the port fix.
+Cherry Pick adds changes from the selected commit to your branch line. You will need to explicitly commit these changes after performing the cherry pick.
 
 ### Branch Line
 

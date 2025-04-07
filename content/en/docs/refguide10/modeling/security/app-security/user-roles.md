@@ -20,7 +20,7 @@ End-users of your application only see the user roles and not the module roles.
 
 To access user roles, open **App Security** > **User roles** tab:
 
-{{< figure src="/attachments/refguide/modeling/security/app-security/user-roles/user-roles-example.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/security/app-security/user-roles/user-roles-example.png" class="no-border" >}}
 
 {{% alert color="warning" %}}
 The effects of changes to user roles are not immediate. This means that your app might show outdated pages or incorrect data. For more information, please refer documentation about [persistent sessions](/refguide/clustered-mendix-runtime/#sessions-are-always-persistent).
@@ -37,7 +37,7 @@ The user role has the following properties:
 * [General properties](#general)
 * [User management properties](#user-management)
 
-{{< figure src="/attachments/refguide/modeling/security/app-security/user-roles/user-role-properties.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/security/app-security/user-roles/user-role-properties.png" class="no-border" >}}
 
 ### General Properties {#general}
 

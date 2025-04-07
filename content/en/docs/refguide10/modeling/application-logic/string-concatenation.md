@@ -30,7 +30,7 @@ An inefficient example is to check for text and create combined messages based o
 
 Reference this microflow:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/string-concatenation/bco_contactperson_createfullname_inefficient.jpg" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/string-concatenation/bco_contactperson_createfullname_inefficient.jpg" class="no-border" >}}
 
 ## A Single Expression
 
@@ -56,7 +56,7 @@ else '')
 
 Reference this microflow:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/string-concatenation/bco_contactperson_createfullname_hardtoread.jpg" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/string-concatenation/bco_contactperson_createfullname_hardtoread.jpg" class="no-border" >}}
 
 ## Best Practices for Expression Breakdown
 
@@ -70,4 +70,4 @@ trim(  $ContactPerson/Fullname + ' ' + trim(  $ContactPerson/Firstname ) )
 
 Reference this microflow:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/string-concatenation/bco_contactperson_createfullname.jpg" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/string-concatenation/bco_contactperson_createfullname.jpg" class="no-border" >}}

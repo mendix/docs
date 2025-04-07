@@ -10,7 +10,7 @@ Multi-user tasks are tasks that have to be executed by multiple users. Each user
 
 For example, you can assign a review task to multiple users:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/multi-user-task/multi-user-task.jpg" alt="Multi-User Task Example" width="200" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/workflows/workflow-elements/multi-user-task/multi-user-task.jpg" alt="Multi-User Task Example" width="200" class="no-border" >}}
 
 ## Properties
 
@@ -286,7 +286,7 @@ The multi-user task completes as soon as a non-empty outcome is returned, unless
 When all required participants (based on the [Completion condition](#completion-condition)) have completed their task and the microflow still returns an empty value, the workflow is marked as failed. To prevent this from happening, it is suggested to check this in the microflow. For example, when the number of selected outcomes equals to the number of required participants, then a fallback outcome is returned. 
 {{% /alert %}}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/multi-user-task/microflow-decision-fallback.png" alt="Custom Microflow Decision Method" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/workflows/workflow-elements/multi-user-task/microflow-decision-fallback.png" alt="Custom Microflow Decision Method" class="no-border" >}}
 
 {{% alert color="warning" %}}
 When a value is returned that is not defined in the [Outcomes](#outcomes), the multi-user task will be marked as failed.
@@ -300,7 +300,7 @@ If the microflow is changed in between deployments, it might return a different 
 
 As an example, consider the trivial case where the quickest participant decides, which basically means choosing the first outcome. This can be achieved using the following microflow:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/multi-user-task/microflow-decision.png" alt="Custom Microflow Decision Method" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/workflows/workflow-elements/multi-user-task/microflow-decision.png" alt="Custom Microflow Decision Method" class="no-border" >}}
 
 #### Completion Moment {#completion-moment}
 
@@ -377,13 +377,13 @@ To add a parameter to the **Task name** or the **Task description**, do the foll
 
 3. In the **Template Parameter (String)** dialog box, specify the expression, and confirm your choice:
 
-   {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/parameter-example.jpg" alt="Parameter Example" class="no-border" >}}
+   {{< figure src="/attachments/refguide10/modeling/application-logic/workflows/workflow-elements/user-task/parameter-example.jpg" alt="Parameter Example" class="no-border" >}}
 
    {{% alert color="info" %}}Make sure that the attribute you use in the expression is of the string type.{{% /alert %}}
 
 4. In the **Template** setting, write the text you would like to display and type **Index** of the parameter you would like to include. For example, you can add a template for the **Task description** specifying the name of the workflow and what the workflow due date is :
 
-   {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/task-description-example.jpg" alt="Task Description Example" class="no-border" >}}
+   {{< figure src="/attachments/refguide10/modeling/application-logic/workflows/workflow-elements/user-task/task-description-example.jpg" alt="Task Description Example" class="no-border" >}}
 
 ##### Performing Other Actions on Parameters
 

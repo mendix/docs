@@ -13,7 +13,7 @@ This feature was introduced in Mendix 10.18 and is currently in beta. For more i
 
 The **Security Overview** page provides you with an overview of your app's security. 
 
-{{< figure src="/attachments/refguide/modeling/security/security-overview/entity-security-overview.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/security/security-overview/entity-security-overview.png" class="no-border" >}}
 
 This overview can be used to review the security of your app. You can also export information from the page to an Excel file, for more details, see the [Export To Excel](#export-excel) section below.
 

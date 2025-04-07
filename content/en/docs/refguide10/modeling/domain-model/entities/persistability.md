@@ -10,7 +10,7 @@ The **Persistable** property of an entity in the domain model defines whether an
 
 Persistable entities are colored blue in the domain model. Non-persistable entities are colored orange. The **Customer** entity in the image below is persistable, while **ProductQueryResults** is non-persistable.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/persistability/persistable-vs-non-persistable.png" alt="Picture of a persistable and a non-persistable entity" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/entities/persistability/persistable-vs-non-persistable.png" alt="Picture of a persistable and a non-persistable entity" class="no-border" >}}
 
 ## Persistable Entities {#persistable}
 

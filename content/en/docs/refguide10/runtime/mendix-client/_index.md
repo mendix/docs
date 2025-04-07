@@ -41,7 +41,7 @@ The first two of these load a bundle dynamically, while the last one includes a 
 
 Here is a chart showing the components of the Mendix Client (for more information on the components, see the sections written beneath the chart):
 
-{{< figure src="/attachments/refguide/runtime/mendix-client/mendix-client.png" alt="The makeup of the Mendix Client" class="no-border" >}}
+{{< figure src="/attachments/refguide10/runtime/mendix-client/mendix-client.png" alt="The makeup of the Mendix Client" class="no-border" >}}
 
 ### Client Core
 

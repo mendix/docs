@@ -12,7 +12,7 @@ Use view entities to create apps that provide translations for your users.
 
 For this purpose of this use case, the following domain model is used:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/view-entities/multilingual-apps/domain-model.png" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/multilingual-apps/domain-model.png" >}}
 
 The entity *ProductTranslation* contains a translation of a product’s description to a language indicated by *LanguageCode*. *LanguageCode* is a standard 5-letter language-country code (for example, `en_US`, `nl_NL`, `ko_KR`).
 
@@ -52,7 +52,7 @@ Combine the languages in the two entities into a single view. To do this, join t
     FROM Shop.Product p
     ```
     
-    {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/multilingual-apps/all-product-translation-ve.png" width="200" >}}
+    {{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/multilingual-apps/all-product-translation-ve.png" width="200" >}}
 
 3. Filter the translation that corresponds to the user’s current language by creating a new view entity. Name this new entity *TranslatedProductVE*.
 4. Add the query below to your entity:
@@ -71,7 +71,7 @@ Combine the languages in the two entities into a single view. To do this, join t
     WHERE (l.Code = pt.LanguageCode)
     ```
 
-    {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/multilingual-apps/translated-product-ve.png" width="200" >}}
+    {{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/multilingual-apps/translated-product-ve.png" width="200" >}}
 
 Alternatively, you can also combine the view entities into one with a nested query:
 

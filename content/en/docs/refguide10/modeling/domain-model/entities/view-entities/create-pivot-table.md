@@ -12,7 +12,7 @@ Use a view entity to create a pivot table. A pivot table is a table that contain
 
 For this purpose of this use case, the following domain model is used:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/view-entities/pivot-table-view-entities/domain-model.png" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/pivot-table-view-entities/domain-model.png" >}}
 
 In this example, you run a business and this is your shop's domain model. It includes:
 

@@ -32,7 +32,7 @@ See [Configuring a Domain Model](/refguide/configuring-a-domain-model/) for info
 
 Below is a domain model that describes customers and orders. The names of the entities are `Customer` and `Order`. The line between them is an association. `Order_Customer`. One customer can have many orders, but each order is for one customer. Within the boxes representing the entities you can see the [attributes](/refguide/attributes/) of the entities together with the [type](/refguide/attributes/#type) of data they hold. There is also a [non-persistable](/refguide/persistability/) entity, `ProductQueryResults`, which is used to record product information which is retrieved from a separate product system, and an [external entity](/refguide/external-entities/), `Products`, which holds a list of products stored in a separate system.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/annotated-domain-model.png" alt="Domain Model annotated with structure" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/annotated-domain-model.png" alt="Domain Model annotated with structure" >}}
 
 | Element | Displays |
 | --- | --- |
@@ -73,7 +73,7 @@ For more information on how the underlying database behaves and why data cannot 
 
 Take a look at the following domain model.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/customer-order.png" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/customer-order.png" >}}
 
 #### Customer Entity
 

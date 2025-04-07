@@ -16,7 +16,7 @@ The **Create list** activity creates an empty list.
 
 An example of create list properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/create-list/create-list-properties.png" alt="create list properties" width="650px" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/create-list/create-list-properties.png" alt="create list properties" width="650px" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

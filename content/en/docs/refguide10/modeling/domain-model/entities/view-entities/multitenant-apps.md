@@ -12,7 +12,7 @@ Using view entities in your multitenant applications ensures that users will onl
 
 For this purpose of this use case, the following domain model is used:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/view-entities/multitenant-apps/domain-model.png" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/multitenant-apps/domain-model.png" >}}
 
 You are developing a project management tool that is used by multiple organizations. You do not want users from one organization to see projects from other organizations. To do this, you want to use a view entity that filters tenant data.
 
@@ -34,7 +34,7 @@ Create a view entity that gets the account and tenant information from the curre
     WHERE a.ID = '[%CurrentUser%]'
     ```
 
-    {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/multitenant-apps/current-user-ve.png" width="200" >}}
+    {{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/multitenant-apps/current-user-ve.png" width="200" >}}
 
     This view entity will always contain one row that contains the information of the current user. 
 
@@ -58,7 +58,7 @@ Create a view entity that gets the account and tenant information from the curre
 5. Generate an overview page by right-clicking this view entity > **Generate overview pages**.
 6. Run your app locally. The view entity shows all projects shown in the database. 
 
-     {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/multitenant-apps/project-ve-grid.png" >}}
+     {{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/multitenant-apps/project-ve-grid.png" >}}
 
 ### Filter the View Entity
 
@@ -87,4 +87,4 @@ With these new view entities, you want to only see the projects of a specific te
 3. Generate an overview page by right-clicking this view entity > **Generate overview pages**.
 4. Run your app locally. *ProjectVE* only shows projects of the current user's tenant.
 
-    {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/multitenant-apps/project-ve-grid-2.png" >}}
+    {{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/multitenant-apps/project-ve-grid-2.png" >}}

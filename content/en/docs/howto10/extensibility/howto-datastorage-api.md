@@ -40,15 +40,15 @@ The Java action needs the following parameters:
 * A result entity where the user specifies which entity is to be returned
 * A return type which specifies that the action returns a list of the entities specified in the previous parameter
 
-    {{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image003.png" class="no-border" >}}
+    {{< figure src="/attachments/howto10/extensibility/howto-datastorage-api/image003.png" class="no-border" >}}
 
 A type parameter is required to define what object types should be returned in the list. This is specified using the ResultEntity parameter:
 
-{{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image005.png" class="no-border" >}}
+{{< figure src="/attachments/howto10/extensibility/howto-datastorage-api/image005.png" class="no-border" >}}
 
 Finally, you should define how you want to display the microflow in the microflow toolbox. This consists of a caption, a category and an icon:
 
-{{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image007.png" class="no-border" >}}
+{{< figure src="/attachments/howto10/extensibility/howto-datastorage-api/image007.png" class="no-border" >}}
 
 The implementation of this Java action is pretty straightforward; you can use the [Core.createXPathQuery](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/Core.html#createXPathQuery(java.lang.String)) API to execute your XPath expression and return a list of Mendix objects.
 
@@ -74,11 +74,11 @@ Now you have a new microflow action in the toolbox that you can use in your micr
 
 Here is an example domain model with two entities: Department and Employee.
 
-{{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image011.png" class="no-border" >}}
+{{< figure src="/attachments/howto10/extensibility/howto-datastorage-api/image011.png" class="no-border" >}}
 
 You can drag the Java action created above from the toolbox into a microflow. In this example, you want to retrieve all Employee objects and return a list of these objects.
 
-{{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image013.png" class="no-border" >}}
+{{< figure src="/attachments/howto10/extensibility/howto-datastorage-api/image013.png" class="no-border" >}}
 
 ## Retrieving Objects Using OQL
 
@@ -97,11 +97,11 @@ The following non-persistable entity shows what data you are interested in for y
     * the average salary of the employees
     * the minimum salary paid to an employee
 
-{{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image017.png" class="no-border" >}}
+{{< figure src="/attachments/howto10/extensibility/howto-datastorage-api/image017.png" class="no-border" >}}
 
 Using OQL, you can query this data as follows:
 
-{{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image018.png" class="no-border" >}}
+{{< figure src="/attachments/howto10/extensibility/howto-datastorage-api/image018.png" class="no-border" >}}
 
 Note that here you use the alias (**as ...**) to map the results of the selection to the attributes in the entity.
 
@@ -115,7 +115,7 @@ As in the XPath example above, a **Type parameter** is defined to specify that t
 
 Additionally, you need to expose the Java action as a microflow action, so provide a caption and an icon.
 
-{{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image020.png" class="no-border" >}}
+{{< figure src="/attachments/howto10/extensibility/howto-datastorage-api/image020.png" class="no-border" >}}
 
 The Java action illustrated below does the following:
 
@@ -162,21 +162,21 @@ Note that in this case, as show in the domain model screenshot and the OQL scree
 
 The result is a generic OQL action that you can use in your microflows as follows:
 
-{{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image023.png" class="no-border" >}}
+{{< figure src="/attachments/howto10/extensibility/howto-datastorage-api/image023.png" class="no-border" >}}
 
 ## Retrieving Objects Using OQL Specified in a Dataset
 
 Instead of coding the OQL statement in a string parameter, you can also use a Dataset. This has the benefit that Mendix Studio Pro will validate your OQL query.
 
-{{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image040.png" class="no-border" >}}
+{{< figure src="/attachments/howto10/extensibility/howto-datastorage-api/image040.png" class="no-border" >}}
 
 This time, you need to define a Java action that will take the name of the dataset. This action will get the OQL from the DataSet, execute it, and return a list of Mendix objects.
 
-{{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image041.png" class="no-border" >}}
+{{< figure src="/attachments/howto10/extensibility/howto-datastorage-api/image041.png" class="no-border" >}}
 
 The microflow to execute the Java action is similar to the previous example, but instead of an OQL query, you specify the name of the Dataset.
 
-{{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image042.png" class="no-border" >}}
+{{< figure src="/attachments/howto10/extensibility/howto-datastorage-api/image042.png" class="no-border" >}}
 
 Below is the Java code to get the Dataset OQL, execute the OQL, and retrieve the Objects. You use the [Core.createOQLTextGetRequestFromDataSet](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/Core.html#createOQLTextGetRequestFromDataSet(java.lang.String)) method to get the OQL query of the Dataset specified. (See [RetrieveDatasetOql.java](https://github.com/ako/QueryApiBlogPost/blob/master/javasource/hr/actions/RetrieveDatasetOql.java) in the *QueryApiBlogPost* GitHub repo for the full source code).
 
@@ -221,7 +221,7 @@ Although there is no restriction on which SQL clauses you can use, you should no
 
 The definition of the Java action resembles the OQL action, but instead of an OQL parameter you have an SQL parameter.
 
-{{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image025.png" class="no-border" >}}
+{{< figure src="/attachments/howto10/extensibility/howto-datastorage-api/image025.png" class="no-border" >}}
 
 The Java code below implements the following steps:
 
@@ -270,7 +270,7 @@ You can find the complete Java source code in the *QueryApiBlogPost* GitHub repo
 
 You now have a generic SQL action that can be used in microflows to retrieve data from your application database. The query in this example returns the same data as the OQL earlier, so you can reuse the non-persistable entity **DepartmentSummary** as defined previously.
 
-{{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image029.png" class="no-border" >}}
+{{< figure src="/attachments/howto10/extensibility/howto-datastorage-api/image029.png" class="no-border" >}}
 
 {{% alert color="warning" %}}
 If you use SQL statements you need to implement security constraints yourself.
@@ -290,7 +290,7 @@ The requirement for this example is to generate a list of dates for all the firs
 
 This example has a page where an end-user can enter a start and end date. The microflow triggered by the **Generate first Mondays of the month** button will write all the respective dates to the log.
 
-{{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image031.png" class="no-border" >}}
+{{< figure src="/attachments/howto10/extensibility/howto-datastorage-api/image031.png" class="no-border" >}}
 
 In Postgres you can query a list of the dates of all Mondays between these dates using the following Postgres specific query:
 
@@ -325,7 +325,7 @@ and fm.first_monday_date <= '2017-11-05 12:00'::timestamp
 
 You create a Java action with parameters for the start date and the end date. You have a specific entity to return a list of the dates: *Hr.FirstMondayDate*.
 
-{{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image033.png" class="no-border" >}}
+{{< figure src="/attachments/howto10/extensibility/howto-datastorage-api/image033.png" class="no-border" >}}
 
 ### Creating the Java Code
 
@@ -404,11 +404,11 @@ All the code is also available in [CreateDateRangeList.java](https://github.com/
 
 When you use this in a microflow, you just need to specify the start and end dates, and the name of the resulting list. This example iterates through all the data objects in the list and writes the date of that object to the log.
 
-{{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image037.png" class="no-border" >}}
+{{< figure src="/attachments/howto10/extensibility/howto-datastorage-api/image037.png" class="no-border" >}}
 
 You will see the list of dates in the console.
 
-{{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image039.png" class="no-border" >}}
+{{< figure src="/attachments/howto10/extensibility/howto-datastorage-api/image039.png" class="no-border" >}}
 
 ## Global Custom Entity Event Listeners
 

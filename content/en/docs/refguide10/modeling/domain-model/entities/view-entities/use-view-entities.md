@@ -144,7 +144,7 @@ To understand the performance impact of database queries, it is best to determin
 
 Below, you see how the data for customers per age bracket is fetched by a database (read bottom up):
 
-{{< figure src="/attachments/refguide/modeling/domain-model/use-view-entities/query-plans.png" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/use-view-entities/query-plans.png" >}}
 
 The database follows the below process:
 

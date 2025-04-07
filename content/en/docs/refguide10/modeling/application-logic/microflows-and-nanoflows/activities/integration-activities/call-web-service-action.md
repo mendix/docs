@@ -19,7 +19,7 @@ The **Call web service** activity can be used to call one of the [imported web s
 
 An example of call web service properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/properties.png" alt="call web service properties" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/properties.png" alt="call web service properties" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -46,7 +46,7 @@ The properties dialog box consists of five tabs:
 
 ## Operation Tab{#operation}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/operation-tab.png" width="500px" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/operation-tab.png" width="500px" class="no-border" >}}
 
 ### Operation
 
@@ -132,7 +132,7 @@ When this identifier is not set for the environment where your app is deployed (
 
 ## HTTP Headers Tab{#http-headers}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/http-headers.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/http-headers.png" class="no-border" >}}
 
 ### Use HTTP Authentication
 
@@ -156,7 +156,7 @@ For the request header, Studio Pro provides some common XML structures in a drop
 
 ## SOAP Request Body Tab {#request-body}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/soap-request-body-tab.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/soap-request-body-tab.png" class="no-border" >}}
 
 The XML for the request parts (header and body) can be generated in several ways, chosen through the dropdown at the top of the page, that are described in the following sections.
 
@@ -170,7 +170,7 @@ This option for request parts can be used when all children of the XML element o
 
 Using this option you need to supply an argument value for all elements of a primitive type (parameters). Argument values need to be entered using [expressions](/refguide/expressions/) resulting in the same data type as the parameter.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/req-param.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/req-param.png" class="no-border" >}}
 
 For primitive parameters (both optional and nillable) that do not have an export mapping, you can choose to send empty values by setting **Send empty values** to **Yes, as null**.
 
@@ -198,7 +198,7 @@ For each parameter in the template, you can specify its value using a [microflow
 
 ## SOAP Response Tab{#response}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/soap-response-tab.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-web-service-action/soap-response-tab.png" class="no-border" >}}
 
 If the data type is a complex XML structure it can be mapped to entities using a [Import Mapping](/refguide/import-mappings/). If it is primitive data, it can be stored in a variable immediately. The response does not have to be used though; it can also be ignored if you are not interested in it.
 

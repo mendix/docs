@@ -36,7 +36,7 @@ Best Practice Recommender is enabled by default and is designed as a pane. To ac
 
 The pane gives you information on each anti-pattern and contains Best Practice Recommender settings and configurations:
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/best-practice-recommender/best-practice-recommender-pane.png" alt="Best Practice Recommender Pane" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/mendix-ai-assistance/best-practice-recommender/best-practice-recommender-pane.png" alt="Best Practice Recommender Pane" class="no-border" >}}
 
 ### Options and Configuration {#options}
 
@@ -50,11 +50,11 @@ At the top of the **Best Practice Recommender** pane, you can see the following 
 
     * The **App Model** tab lists all relevant documents in your app. You can choose which specific modules or documents to inspect or leave out. 
 
-        {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/best-practice-recommender/app-model.png" alt="App Model" width="300px" >}}
+        {{< figure src="/attachments/refguide10/modeling/mendix-ai-assistance/best-practice-recommender/app-model.png" alt="App Model" width="300px" >}}
 
     * The **Best Practice** tab lists the available best practice. You can choose your preferred best practices and inspect your model against it: 
 
-        {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/best-practice-recommender/best-practice.png" alt="Best Practice" width="400px" >}}
+        {{< figure src="/attachments/refguide10/modeling/mendix-ai-assistance/best-practice-recommender/best-practice.png" alt="Best Practice" width="400px" >}}
 
 You can use both app model and best practice configuration together. 
 
@@ -73,7 +73,7 @@ Each anti-pattern line in the pane provides you with the following information:
 
 Right-clicking the message line of an anti-pattern in the pane opens the drop-down menu:
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/best-practice-recommender/drop-down-menu.jpg" alt="Drop-Down Menu" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/mendix-ai-assistance/best-practice-recommender/drop-down-menu.jpg" alt="Drop-Down Menu" class="no-border" >}}
 
 The following actions are available in the drop-down menu:
 
@@ -97,7 +97,7 @@ The **Inspect now** option will be disabled if there are consistency errors in t
 
 The recommender will detect anti-patterns and list them in the pane under the associated anti-pattern type. To learn more about each anti-pattern type, click the anti-pattern code link. Click the arrow icon next to the anti-pattern type to see the detected cases of this type:
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/best-practice-recommender/viewing-anti-pattern.jpg" alt="Viewing Anti-Pattern" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/mendix-ai-assistance/best-practice-recommender/viewing-anti-pattern.jpg" alt="Viewing Anti-Pattern" class="no-border" >}}
 
 To view the element or the document where the anti-pattern is located, double-click the message line or right-click the message line and choose **Go to Cause** or **Go to Usage** in the drop-down menu.
 
@@ -114,24 +114,24 @@ There are two ways to view the recommendations:
 1. Right-click an anti-pattern message on the pane and select **View Best Practice recommendation** in the drop-down menu. 
 2. Click an indicator in the visual editor to view the detected issue:
 
-    {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/best-practice-recommender/indicator-in-editor.jpg" alt="Indicator in the Editor" width="450px" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/mendix-ai-assistance/best-practice-recommender/indicator-in-editor.jpg" alt="Indicator in the Editor" width="450px" class="no-border" >}}
 
 The recommendation contains the description of the identified issue, potential impact from it, the way to fix it, and a link to a more detailed guidance on fixing the issue: 
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/best-practice-recommender/best-practice-recommendation.png" alt="Best Practice Recommendation" width="500px" >}}
+{{< figure src="/attachments/refguide10/modeling/mendix-ai-assistance/best-practice-recommender/best-practice-recommendation.png" alt="Best Practice Recommendation" width="500px" >}}
 
 ### Auto-Fixing the Anti-Pattern {#auto-fixing}
 
 The third level of assistance is **auto-fixing** where the recommender can automatically implement the best practice and fix the issue in just one click. To avoid undesirable changes, auto-fixing is only available when the recommender can safely refactor the code without creating an error or making other undesirable change in the model. Each anti-pattern has an icon in the pane that indicates whether it is auto-fixable. If the icon has the “A” letter, the issue can be auto-fixed:
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/best-practice-recommender/auto-fixable.png" alt="Auto-Fixable Icon"   width="45"  class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/mendix-ai-assistance/best-practice-recommender/auto-fixable.png" alt="Auto-Fixable Icon"   width="45"  class="no-border" >}}
 
 To auto-fix the issue, follow the steps below:
 
 1. Click the corresponding indicator in the editor to open the recommendation or right-click the message line in the pane and select **View Best Practice recommendation** in the drop-down menu.
 2. In the **Recommendation from Best Practice Recommender** pop-up window, click **Fix**: 
 
-    {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/best-practice-recommender/fix-issue.png" alt="Fix Issue" width="500px" >}}
+    {{< figure src="/attachments/refguide10/modeling/mendix-ai-assistance/best-practice-recommender/fix-issue.png" alt="Fix Issue" width="500px" >}}
 
 After the issue is auto-fixed, a pop-up window listing the changes appears. You can click **Show the fix** to view the changed document and element. 
 

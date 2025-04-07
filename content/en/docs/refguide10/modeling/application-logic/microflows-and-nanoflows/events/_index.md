@@ -8,7 +8,7 @@ weight: 90
 
 Events are elements that are displayed as circles on a flow of your microflow and are usually placed at the end or the beginning of the flow:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/events/events.png"   width="200"  class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/microflows-and-nanoflows/events/events.png"   width="200"  class="no-border" >}}
 
 For example, they are used to start or end your microflow, to break an iteration in a loop, or continue this iteration, depending on the type of the event. All of the events can be used both in a microflow or nanoflow, except for the error event. 
 

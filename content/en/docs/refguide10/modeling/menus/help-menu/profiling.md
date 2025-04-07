@@ -12,7 +12,7 @@ These features are not yet supported on native macOS machines.
 
 The **Profiling** section of the **Help** menu > **Support Tools** allows you to run a performance profiler session and to capture a memory snapshot:
 
-{{< figure src="/attachments/refguide/modeling/menus/help-menu/profiling/profiling-menu.png" class="no-border" width="500" >}}
+{{< figure src="/attachments/refguide10/modeling/menus/help-menu/profiling/profiling-menu.png" class="no-border" width="500" >}}
 
 ### Run a Performance Profiler Session (Start Profiling/Stop Profiling)
 

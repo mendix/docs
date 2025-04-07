@@ -12,7 +12,7 @@ View entities can be used to make a consolidated view of archived historical and
 
 For this purpose of this use case, the following domain model is used:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/view-entities/view-archived-data/domain-model.png" width="400" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/view-archived-data/domain-model.png" width="400" >}}
 
 Create a view entity that contains the columns of the *ActiveProducts* and *DiscontinuedProducts* entities, as well as an additional column, *Archived*. The *Archived* column will indicate the origin table of each product. 
 
@@ -41,9 +41,9 @@ Create a view entity that contains the columns of the *ActiveProducts* and *Disc
     FROM Shop.DiscontinuedProducts dp
     ```
 
-    {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/view-archived-data/all-products-ve.png" width="200" >}}
+    {{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/view-archived-data/all-products-ve.png" width="200" >}}
 
 3. Generate an overview page for the view entity by right-clicking **AllProductsVE** > **Generate overview pages**.
 4. Run your app locally and view the new data grid. 
 
-    {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/view-archived-data/data-grid.png" >}}
+    {{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/view-archived-data/data-grid.png" >}}

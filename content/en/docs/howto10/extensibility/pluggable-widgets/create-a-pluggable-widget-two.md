@@ -50,7 +50,7 @@ To add these restrictions, follow the instructions below:
 
 2. Run `npm start` to update the widget and start the watcher if you have not already done so. When viewing in Studio Pro, the `Editability` property can be seen here:
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/editability-property-studio-pro.png" alt="Editability studio pro"   width="500"  class="no-border" >}}
+    {{< figure src="/attachments/howto10/extensibility/pluggable-widgets/create-a-pluggable-widget-two/editability-property-studio-pro.png" alt="Editability studio pro"   width="500"  class="no-border" >}}
 
 3. Now add read-only functionality to your widget. In *TextBox.tsx*, replace the React component with the code below to check if the input should be disabled and pass it to in the `TextInput` component:
 
@@ -116,7 +116,7 @@ To add these restrictions, follow the instructions below:
 
 5. When you select **Never** for your TextBox widget's `Editable` property in Studio Pro, the widget will function like this: 
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/settonever.png" alt="editable never result"   width="500"  class="no-border" >}}
+    {{< figure src="/attachments/howto10/extensibility/pluggable-widgets/create-a-pluggable-widget-two/settonever.png" alt="editable never result"   width="500"  class="no-border" >}}
 
     Explaining the code:
 
@@ -128,13 +128,13 @@ This section teaches you how to add validation to your TextBox widget. Using mic
 
 1. Drag a **call microflow button** widget below your TextBox widget and drop it there. On the subsequent dialog box, click **New** to assign a new microflow to your button, name it *Validation_Microflow*, and click **OK**:
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/validation-microflow-dialog.png" alt="validation microflow dialog box"   width="500"  class="no-border" >}}
+    {{< figure src="/attachments/howto10/extensibility/pluggable-widgets/create-a-pluggable-widget-two/validation-microflow-dialog.png" alt="validation microflow dialog box"   width="500"  class="no-border" >}}
 
     Before moving forward, go back to your app's **Home** page, double-click your validation button, and name it *Show validation feedback*.
 
 2. Open your *Validation_Microflow* and drop a **Validation feedback** activity into your microflow: 
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/addingvalidation.png" alt="validation feedback client activity"   width="500"  class="no-border" >}}
+    {{< figure src="/attachments/howto10/extensibility/pluggable-widgets/create-a-pluggable-widget-two/addingvalidation.png" alt="validation feedback client activity"   width="500"  class="no-border" >}}
 
     To define your validation feedback activity:
     1. Double-click the **Validation feedback** activity.
@@ -210,7 +210,7 @@ This section teaches you how to add validation to your TextBox widget. Using mic
 
     Now, your widget will show validation feedback from its microflow:
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/microflowwithvalidationfeedback.png" alt="validation feedback demo"   width="350"  class="no-border" >}}
+    {{< figure src="/attachments/howto10/extensibility/pluggable-widgets/create-a-pluggable-widget-two/microflowwithvalidationfeedback.png" alt="validation feedback demo"   width="350"  class="no-border" >}}
 
 ### Customizing Validation
 
@@ -275,7 +275,7 @@ Validation can come from a modeled microflow or nanoflow, but can also be widget
 
 3. When entering text and removing all characters, the following error is shown:
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/nocharerror.png" alt="no character error"   width="500"  class="no-border" >}}
+    {{< figure src="/attachments/howto10/extensibility/pluggable-widgets/create-a-pluggable-widget-two/nocharerror.png" alt="no character error"   width="500"  class="no-border" >}}
 
 ### Adding an OnChange Action
 
@@ -309,7 +309,7 @@ Until now the components did not keep any state. Each keystroke passed through t
 
     Adding this code will allow you to select various actions:
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/variousactions.png" alt="various actions" class="no-border" >}}
+    {{< figure src="/attachments/howto10/extensibility/pluggable-widgets/create-a-pluggable-widget-two/variousactions.png" alt="various actions" class="no-border" >}}
 
 2. In *TextBox.tsx*, check if `onChangeAction` is available and call the execute function `onLeave` when the value is changed. When doing this, replace the `onUpdate` function with your new `onLeave` function:
 
@@ -618,7 +618,7 @@ To apply this knowledge, reorganize the `properties` section in *TextBox.xml* to
 
 Your code alterations will produce the following result:
 
-{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/property-grouping-studio-pro.png" alt="property dialog Studio Pro"   width="500"  class="no-border" >}}
+{{< figure src="/attachments/howto10/extensibility/pluggable-widgets/create-a-pluggable-widget-two/property-grouping-studio-pro.png" alt="property dialog Studio Pro"   width="500"  class="no-border" >}}
 
 ## Read More
 

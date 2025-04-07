@@ -19,7 +19,7 @@ The **Call REST service** activity can be used to call a REST endpoint. You can 
 
 An example of the Call REST service activity's properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/call-rest-action-properties.png" alt="Call REST service properties" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/call-rest-action-properties.png" alt="Call REST service properties" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -45,7 +45,7 @@ The properties dialog box consists of four tabs:
 
 ## General Tab {#general}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/general-tab.png"   width="66%"  class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/general-tab.png"   width="66%"  class="no-border" >}}
 
 ### Location
 
@@ -113,7 +113,7 @@ When this identifier is not set for the environment where your app is deployed (
 
 ## HTTP Headers Tab {#http-headers}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/http-headers-tab.png" width="400px" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/http-headers-tab.png" width="400px" class="no-border" >}}
 
 ### Use HTTP Authentication
 
@@ -137,7 +137,7 @@ REST endpoints which are using NGINX as a webserver will ['silently drop'](https
 
 ## Request Tab {#request}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/request-tab.png" width="500px" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/request-tab.png" width="500px" class="no-border" >}}
 
 The sections below describe the options in the drop-down menu for generating the request.
 
@@ -195,7 +195,7 @@ See [String Template](#string-template), above, for more information on construc
 
 ## Response Tab {#response}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/response-tab.png" width="500px" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/response-tab.png" width="500px" class="no-border" >}}
 
 ### Response Handling
 
@@ -249,7 +249,7 @@ There are two ways to resolve this:
 1. Alter the value of the `http.client.CleanupAfterSeconds` [runtime setting](/refguide/custom-settings/) to be less than the connection timeout. This will ensure that the your app client will create a new HTTP client for the request.
 2. Handle the error in your microflow and retry a number of times before returning the error. Your flow might look similar to the one below.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/retry-rest-connection-timeout.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-rest-action/retry-rest-connection-timeout.png" class="no-border" >}}
 
 ## Security Considerations {#security}
 

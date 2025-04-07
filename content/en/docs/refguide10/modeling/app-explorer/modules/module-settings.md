@@ -15,7 +15,7 @@ Module settings allow you to set Java managed dependencies, choose the type of t
 
 To open module settings, double-click **Settings** in the required module.
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/modules/module-settings/settings.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/app-explorer/modules/module-settings/settings.png" class="no-border" >}}
 
 ## Java Dependencies
 
@@ -25,13 +25,13 @@ Java managed dependencies are available in Studio Pro 10.3.0 and above.
 
 You can add managed dependencies for each module on the **Java Dependencies** tab. For more information, see [Managed Dependencies](/refguide/managed-dependencies/).
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/modules/module-settings/module-settings-java-dependencies.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/app-explorer/modules/module-settings/module-settings-java-dependencies.png" class="no-border" >}}
 
 ## Export
 
 Select the **Export** tab:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/modules/module-settings/module-settings-export.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/app-explorer/modules/module-settings/module-settings-export.png" class="no-border" >}}
 
 ### Module Type {#module-type}
 

@@ -27,7 +27,7 @@ There are two ways to access Maia Learn:
 
 The learning interface appears at the right side of Studio Pro under the **Maia** tab:
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-learn/maia-learn-interface.png" width="300px">}}
+{{< figure src="/attachments/refguide10/modeling/mendix-ai-assistance/maia-learn/maia-learn-interface.png" width="300px">}}
 
 Click **Mendix Core Concepts**, you can start your learning journey with Maia Learn and learn all the basics about domain models, pages, logic, security, and integrations, including how you can apply these core concepts in Studio Pro.
 

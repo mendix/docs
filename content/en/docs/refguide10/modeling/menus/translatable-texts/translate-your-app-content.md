@@ -36,23 +36,23 @@ To create your app, do the following:
     * **Order** with the **Integer** attribute **OrderNumber**
     * **Product** with the **String** attribute **ProductName**
 
-        {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/domain-model.png" alt="Domain model for How To" class="no-border" >}}
+        {{< figure src="/attachments/refguide10/modeling/menus/translatable-texts/translate-your-app-content/domain-model.png" alt="Domain model for How To" class="no-border" >}}
 
 4. Right-click one of the entities and select **Generate overview pages**.
 5. In the **Generate pages** dialog box, ensure both entities are selected and click **OK**.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/generate-pages.png" alt="Options selected for Generate Pages" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/menus/translatable-texts/translate-your-app-content/generate-pages.png" alt="Options selected for Generate Pages" class="no-border" >}}
 
     This generates some pages containing text for you to translate.
 
 6. Open the page **Product_NewEdit** and add a new **Button** widget.
 7. Change the text on the new button to **Order**. You will use this button to allow the end-user to order the product they are viewing. Ignore the warnings about the setup of this button.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/order-button.png" alt="Product New Edit page with an Order button" class="no-border" width="350" >}}
+    {{< figure src="/attachments/refguide10/modeling/menus/translatable-texts/translate-your-app-content/order-button.png" alt="Product New Edit page with an Order button" class="no-border" width="350" >}}
 
 8. Open the page **Home_Web** and add some text into the title and subtitle.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/home-page-text.png" alt="Product New Edit page with an Order button" class="no-border" width="350" >}}
+    {{< figure src="/attachments/refguide10/modeling/menus/translatable-texts/translate-your-app-content/home-page-text.png" alt="Product New Edit page with an Order button" class="no-border" width="350" >}}
 
 You now have an app with some translatable texts.
 
@@ -74,7 +74,7 @@ To add an additional language, do the following:
 
     In the **App Settings** window, the **default** language is still **English, United States**. This is the language that the end-user sees if they do not choose Chinese as their language.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/language-settings.png" alt="Language settings tab in the app settings dialog" class="no-border" width="650" >}}
+    {{< figure src="/attachments/refguide10/modeling/menus/translatable-texts/translate-your-app-content/language-settings.png" alt="Language settings tab in the app settings dialog" class="no-border" width="650" >}}
 
 5. Click **OK**. 
 
@@ -87,7 +87,7 @@ To change your current language to Chinese, do the following:
 1. Click the language indicator at the lower-right corner of the Studio Pro window.
 2. Select **Chinese (Simplified), China** to make that your current language.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/change-language.png" alt="Change the current language" class="no-border" width="250" >}}
+    {{< figure src="/attachments/refguide10/modeling/menus/translatable-texts/translate-your-app-content/change-language.png" alt="Change the current language" class="no-border" width="250" >}}
 
     {{% alert color="warning" %}}If you do more development later on, remember to change back to your default language so that any new text is recorded there and not in a translated dictionary.{{% /alert %}}
 
@@ -99,11 +99,11 @@ Now that your current language is Chinese, you can translate some of the texts i
 
     The untranslated texts appear in the default language (English, United States) between angle brackets `<>`.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/untranslated-texts.png" alt="untranslated-texts" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/menus/translatable-texts/translate-your-app-content/untranslated-texts.png" alt="untranslated-texts" class="no-border" >}}
 
 2. Enter your translation for the two text items on the page.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/home-page-chinese.png" alt="Home page with translated text" class="no-border" width="350" >}}
+    {{< figure src="/attachments/refguide10/modeling/menus/translatable-texts/translate-your-app-content/home-page-chinese.png" alt="Home page with translated text" class="no-border" width="350" >}}
 
 You have now added a translation for these two pieces of text.
 
@@ -123,21 +123,21 @@ To translate multiple occurrences and multiple texts from the default language, 
 4. The **Documents/modules** field is set to **(all)**. You initially want to work just on your module, rather than everything. To change this, click **Select** next to **Documents/modules**.
 5. Make sure only the module **MyFirstModule** is selected. This restricts batch translation to this module.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-myfirstmodule.png" alt="Select only MyFirstModule" class="no-border" width="300" >}}
+    {{< figure src="/attachments/refguide10/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-myfirstmodule.png" alt="Select only MyFirstModule" class="no-border" width="300" >}}
 
 6. Click **OK**. You can now see all the translatable texts in your module. The **Translation (Chinese (Simplified), China)** column shows the individual translations you made in the previous section. The **#** column shows the number of times each text appears in the selected module (or modules).
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-initial.png" alt="Translatable texts in MyFirstModule" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-initial.png" alt="Translatable texts in MyFirstModule" class="no-border" >}}
 
 7. Enter translations in the **Translation (Chinese (Simplified), China)** column for the terms **Cancel** and **Edit Order**.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-cancel-edit.png" alt="Translate Cancel and Edit Order into Chinese" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-cancel-edit.png" alt="Translate Cancel and Edit Order into Chinese" class="no-border" >}}
 
 8. Click **Translate** to save the current translations.
 9. Click **Close** to close the dialog box.
 10. Open the **Product_NewEdit** page. The related terms now have Chinese translations.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/product-new-edit-partial-translation.png" alt="Product New Edit page showing the cancel button translated into Chinese" class="no-border" width="350" >}}
+    {{< figure src="/attachments/refguide10/modeling/menus/translatable-texts/translate-your-app-content/product-new-edit-partial-translation.png" alt="Product New Edit page showing the cancel button translated into Chinese" class="no-border" width="350" >}}
 
 ### Dealing With More Complex Translations
 
@@ -149,11 +149,11 @@ To handle this, follow the steps below:
 2. In the **Search** field, enter *Order*.
 3. In the grid, there are two lines for the text **Order**. The **#** column shows that there are three places where this text is used (one instance in the first line, and two in the second). The locations are listed in the **Show occurrence** field.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-order.png" alt="All source texts containing the word 'order' with the locations of the text 'order' shown" class="no-border" width="600" >}}
+    {{< figure src="/attachments/refguide10/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-order.png" alt="All source texts containing the word 'order' with the locations of the text 'order' shown" class="no-border" width="600" >}}
 
 4. In the **Show occurrence** field, the **Object** column shows that one of the locations of the text **Order** is the **Action button 'actionButton3'** on the **Product_NewEdit** page. This is the button added to allow the end-user to order the product. To confirm this, double-click the row of **Action button 'actionButton3'**.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/product-new-edit-order.png" alt="Order button on Product New Edit page" class="no-border"  width="650" >}}
+    {{< figure src="/attachments/refguide10/modeling/menus/translatable-texts/translate-your-app-content/product-new-edit-order.png" alt="Order button on Product New Edit page" class="no-border"  width="650" >}}
 
     In the background, the **Product_NewEdit** page opens with the button **Order** selected. This shows that this text is used on the button.
 
@@ -162,17 +162,17 @@ To handle this, follow the steps below:
 7. In your app, the text *Order* is used as the command to order a product, and is used to refer to the Order entity. However, in Chinese, the translations for these two scenarios are different. To solve this issue, open the **Product_NewEdit** page.
 8. Edit the text on the button to reflect the verb *to order*. In Chinese, this is *下单*.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/product-new-edit-order-chinese.png" alt="Order button on Product New Edit page translated into Chinese" class="no-border" width="300" >}}
+    {{< figure src="/attachments/refguide10/modeling/menus/translatable-texts/translate-your-app-content/product-new-edit-order-chinese.png" alt="Order button on Product New Edit page translated into Chinese" class="no-border" width="300" >}}
 
 9. Go to the **Language** > **Batch Translate** to open the dialog box and search for *Order* in the module **MyFirstModule**. 
 
     Now in the grid, **Order** has two rows: one row has the translation *下单*, and the other row has no translation.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-order-split.png" alt="All source texts containing the word 'order' showing that ones with different translations are shown separately. " class="no-border" width="600" >}}
+    {{< figure src="/attachments/refguide10/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-order-split.png" alt="All source texts containing the word 'order' showing that ones with different translations are shown separately. " class="no-border" width="600" >}}
 
 10. In the row where **Order** has no translation, enter *订单*. This is the Chinese translation for *an order*.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-order-2-translations.png" alt="All source texts containing the word 'order' showing two different translations for Order. " class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-order-2-translations.png" alt="All source texts containing the word 'order' showing two different translations for Order. " class="no-border" >}}
 
 11. Click **Translate** to save the translation.
 12. Click **Close** to close the dialog box.
@@ -188,7 +188,7 @@ Once you have made some translations, you may want to look at the translations t
 
     The **Documents/modules** field is set to **(all)**, so the dialog box shows all the translations in the current language dictionary. You can click **Select** next to this field and select only one module to reduce the scope. You can also search for a specific word in the **Search** field. The **#** column shows the locations where the text is used. These locations are listed in the **Show occurrence** section.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-replace-initial.png" alt="All texts which have been translated into Chinese." class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/menus/translatable-texts/translate-your-app-content/batch-replace-initial.png" alt="All texts which have been translated into Chinese." class="no-border" >}}
 
 3. Enter any translations that need to be replaced in the **Replace with** column, then click **Replace**.
 
@@ -201,7 +201,7 @@ To copy our Chinese (Simplified), China translations into a Chinese (Simplified)
 1. Go to **Language**  > **Language Settings**. 
 2. Click **Add** to add **Chinese (Simplified), Singapore** as an app language.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/language-settings-singapore.png" alt="Belarusian added to the app" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/menus/translatable-texts/translate-your-app-content/language-settings-singapore.png" alt="Belarusian added to the app" class="no-border" >}}
 
 3. Click **OK** to save the changes and close the **App Settings** dialog box.
 4. Go to **Language** > **Language Operations**. 

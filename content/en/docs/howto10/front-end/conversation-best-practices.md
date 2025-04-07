@@ -69,7 +69,7 @@ Don’t just jump right in. Say "Hello."
 
 * Welcome the end-user. Greet the end-user briefly, for example with a simple "Welcome" or "Hi."
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/say-hi1.png" max-width="320px" alt="Hello Ana, How can I help you today?" >}}
+    {{< figure src="/attachments/howto10/front-end/conversation-best-practices/say-hi1.png" max-width="320px" alt="Hello Ana, How can I help you today?" >}}
 
 ## Tailoring Greetings{#greeting}
 
@@ -93,11 +93,11 @@ Don’t overwhelm the end-user with lots of details upfront.
 
 * Greet and explain the system status to the novice end-user:
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/bot-is-experiment.png" max-width="480px" alt="A pop-up explaining what Bot is." >}}
+    {{< figure src="/attachments/howto10/front-end/conversation-best-practices/bot-is-experiment.png" max-width="480px" alt="A pop-up explaining what Bot is." >}}
 
 * For returning end-users:
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/bot-recurring.png" max-width="480px" alt="Recurring end-users get straight to Bot with some suggestions and an offer to start asking questions" >}}
+    {{< figure src="/attachments/howto10/front-end/conversation-best-practices/bot-recurring.png" max-width="480px" alt="Recurring end-users get straight to Bot with some suggestions and an offer to start asking questions" >}}
 
 ## Determining Value{#value}
 
@@ -124,12 +124,12 @@ You should help end-users to determine the value of the AI feature. Designers ca
 * Communicate what the end-user can do with the system.
 * Proactively ensure the end-user's data protection and let the end-user know about it.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/protection-and-examples.png" max-width="320px" alt="Give example questions and indicate on the screen that data is protected" >}}
+    {{< figure src="/attachments/howto10/front-end/conversation-best-practices/protection-and-examples.png" max-width="320px" alt="Give example questions and indicate on the screen that data is protected" >}}
 
 * Communicate the new features or improved service to the end-users. Let end-users properly evaluate the value of the AI system. 
 * Indicate the version of the system, allowing the end-user to determine the system's limitations.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/upgraded-recommendations.png" max-width="320px" alt="Pop-up informing that new features are available" >}}
+    {{< figure src="/attachments/howto10/front-end/conversation-best-practices/upgraded-recommendations.png" max-width="320px" alt="Pop-up informing that new features are available" >}}
 
 ## Assuring Privacy and Security{#privacy}
 
@@ -146,11 +146,11 @@ Users seek trust and assurance that their personal information is handled secure
 
 * Proactively protect end-users' personal and corporate data. Make sure to also indicate to the end-user that their data is protected.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/protection-and-examples.png" max-width="320px" alt="Use a Protected badge to indicate that data is protected" >}}
+    {{< figure src="/attachments/howto10/front-end/conversation-best-practices/protection-and-examples.png" max-width="320px" alt="Use a Protected badge to indicate that data is protected" >}}
 
 * Allow the end-user to delete records of previous conversations and control whether conversation history is stored.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/delete-conversation.png" max-width="320px" alt="Show a switch to turn activity history on and off" >}}
+    {{< figure src="/attachments/howto10/front-end/conversation-best-practices/delete-conversation.png" max-width="320px" alt="Show a switch to turn activity history on and off" >}}
 
 ## Giving Local Control{#local-control}
 
@@ -169,15 +169,15 @@ Additionally, people are more motivated and engaged when they believe they can i
 
 * Make it easy for the end-user to edit and update a previous prompt to generate a new response.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/cancel-update-button.png" max-width="320px" alt="Show a button to allow end-user to edit a prompt" >}}
+    {{< figure src="/attachments/howto10/front-end/conversation-best-practices/cancel-update-button.png" max-width="320px" alt="Show a button to allow end-user to edit a prompt" >}}
 
 * Provide a way to stop or pause the AI interaction.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/pause.png" max-width="320px" alt="Show a switch to pause current interaction" >}}
+    {{< figure src="/attachments/howto10/front-end/conversation-best-practices/pause.png" max-width="320px" alt="Show a switch to pause current interaction" >}}
 
 * Provide options for the end-user to select a preferred response to their prompt—for example, by choosing between three different draft versions or even generating new versions—without having to write a new prompt.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/regenerate.png" max-width="320px" alt="Allow end-user to select a previous prompt and generate new responses from it" >}}
+    {{< figure src="/attachments/howto10/front-end/conversation-best-practices/regenerate.png" max-width="320px" alt="Allow end-user to select a previous prompt and generate new responses from it" >}}
 
 ## Creating an Input Mechanism{#input}
 
@@ -197,11 +197,11 @@ The input mechanism is the method through which the end-user provides informatio
 
 * Provide both inputs of command buttons and free text inputs for the user to navigate the conversation.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/buttons-and-prompts.png" max-width="320px" alt="Suggested questions on buttons and also a text input field" >}}
+    {{< figure src="/attachments/howto10/front-end/conversation-best-practices/buttons-and-prompts.png" max-width="320px" alt="Suggested questions on buttons and also a text input field" >}}
 
 * Do not limit users to provide free text input.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/free-text.png" max-width="320px" alt="Suggested free input text" >}}
+    {{< figure src="/attachments/howto10/front-end/conversation-best-practices/free-text.png" max-width="320px" alt="Suggested free input text" >}}
 
 ## Prompting{#prompting}
 
@@ -221,15 +221,15 @@ A helpful prompt guide bridges the gap between what end-users want and what the 
 
 * Present examples of prompts in the input field, helping the end-user to understand how to draft prompts in the system. Provide further guidance via an information icon ({{% icon name="info-circle" %}}).
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/prompts.png" max-width="320px" alt="Suggested prompt fragments on buttons and further help next to input field" >}}
+    {{< figure src="/attachments/howto10/front-end/conversation-best-practices/prompts.png" max-width="320px" alt="Suggested prompt fragments on buttons and further help next to input field" >}}
 
 * Showcase prompts for advanced end-users.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/further-advice.png" max-width="320px" alt="Pop up shown while response is generated giving additional suggestions for how to construct a prompt" >}}
+    {{< figure src="/attachments/howto10/front-end/conversation-best-practices/further-advice.png" max-width="320px" alt="Pop up shown while response is generated giving additional suggestions for how to construct a prompt" >}}
 
 * Provide ready-to-use prompts, so the end-user can compose on top of the provided context.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/context-driven-prompts.png" max-width="320px" alt="Suggested responses to latest output explaining a typo in the question" >}}
+    {{< figure src="/attachments/howto10/front-end/conversation-best-practices/context-driven-prompts.png" max-width="320px" alt="Suggested responses to latest output explaining a typo in the question" >}}
 
 ## Quoting and Reprompting {#reprompting}
 
@@ -252,11 +252,11 @@ If you allow end-users to quote specific parts of previous messages and reply di
 
 * Ensure that additional functionalities are discoverable but do not overwhelm the interface or distract from the main task. For example, when the end-user selects some text, an icon could appear indicating that they can reply directly to their selection.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/reply-quote-icon.png" max-width="320px" alt="Showing an icon in the Bot response to indicate that selected text can be replied to directly" >}}
+    {{< figure src="/attachments/howto10/front-end/conversation-best-practices/reply-quote-icon.png" max-width="320px" alt="Showing an icon in the Bot response to indicate that selected text can be replied to directly" >}}
 
 * Display the selected text near the input area. Let the end-user dismiss it if it is no longer needed.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/highlight-the-question.png" max-width="320px" alt="Display selected text above the input area" >}}
+    {{< figure src="/attachments/howto10/front-end/conversation-best-practices/highlight-the-question.png" max-width="320px" alt="Display selected text above the input area" >}}
 
 ## Hinting and Discoverability{#hinting}
 
@@ -279,11 +279,11 @@ Provide a clear motivation for any action you want the end-user to take. Tell th
 
 * When text is highlighted, the **Reply** icon ({{% icon name="blockquote-filled" %}}) appears, signaling an opportunity for further interaction.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/reply-quote-icon.png" max-width="320px" alt="Showing an icon in the Bot response to indicate that selected text can be replied to directly" >}}
+    {{< figure src="/attachments/howto10/front-end/conversation-best-practices/reply-quote-icon.png" max-width="320px" alt="Showing an icon in the Bot response to indicate that selected text can be replied to directly" >}}
 
 * The end-user can discover options to show or hide various drafts of the generated text and then select their preferred version.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/show-hide-draft.png" max-width="320px" alt="Option is given to create multiple drafts of response from Bot with option to show or hide the Bot's responses" >}}
+    {{< figure src="/attachments/howto10/front-end/conversation-best-practices/show-hide-draft.png" max-width="320px" alt="Option is given to create multiple drafts of response from Bot with option to show or hide the Bot's responses" >}}
 
 ## Reporting Errors{#errors}
 
@@ -302,7 +302,7 @@ Transparent error messages tell end-users exactly what went wrong, preventing co
 
 * Offer context explaining why the requested action can’t be made. Also, provide alternative solutions.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/error.png" max-width="320px" alt="Bot responds explaining why it cannot send an email and suggesting something it can do" >}}
+    {{< figure src="/attachments/howto10/front-end/conversation-best-practices/error.png" max-width="320px" alt="Bot responds explaining why it cannot send an email and suggesting something it can do" >}}
 
 ## Confirming Intent{#confirming}
 
@@ -321,8 +321,8 @@ Clarifying end-user intent ensures the system understands what the end-user want
 
 * Asking “Did I get that right?” helps the end-user and the system shape conversation direction.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/am-i-right.png" max-width="480px" alt="Bot responds with asking if response is correct with Yes/No buttons to allow response" >}}
+    {{< figure src="/attachments/howto10/front-end/conversation-best-practices/am-i-right.png" max-width="480px" alt="Bot responds with asking if response is correct with Yes/No buttons to allow response" >}}
 
 * If the system cannot handle the query, provide fallback options for further navigation.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/do-not-understand.png" max-width="320px" alt="Bot responds that it cannot understand and prompts with buttons showing possible next steps" >}}
+    {{< figure src="/attachments/howto10/front-end/conversation-best-practices/do-not-understand.png" max-width="320px" alt="Bot responds that it cannot understand and prompts with buttons showing possible next steps" >}}

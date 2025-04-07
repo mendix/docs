@@ -19,7 +19,7 @@ Being aware of what happened on the server allows Studio Pro to guide you during
 
 When automatic fetching is enabled, the repository state indicator is displayed at the bottom right of Studio Pro window.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/repository-state-bar.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/version-control/using-version-control-in-studio-pro/repository-state-bar.png" class="no-border" >}}
 
 This indicator shows the following:
 

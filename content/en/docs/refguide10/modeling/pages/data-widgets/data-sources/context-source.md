@@ -25,7 +25,7 @@ If you have a nested data view, you can select one of the following:
 
 For more information on associations, see [Associations](/refguide/associations/). 
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/context-source/context-source-example.png" alt="Context Source"   width="400"  class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/pages/data-widgets/data-sources/context-source/context-source-example.png" alt="Context Source"   width="400"  class="no-border" >}}
 
 ## Read More
 

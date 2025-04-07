@@ -8,7 +8,7 @@ description: "Describes how to provide feedback on your experience using Studio 
 
 The **Help us improve** dialog box allows you to provide feedback on your experience with Studio Pro. Your feedback helps the Mendix team understand user needs and improve the product.
 
-{{< figure src="/attachments/refguide/modeling/menus/help-menu/feedback-survey/feedback-survey.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/menus/help-menu/feedback-survey/feedback-survey.png" class="no-border" >}}
 
 ## Feedback Survey Overview
 
@@ -22,13 +22,13 @@ To disable the dialog box from opening, follow the steps below:
 2. Click **Preferences** > **Advanced** > **Feedback Survey**. 
 3. Set **Show feedback survey periodically** to **No**.
 
-{{< figure src="/attachments/refguide/modeling/menus/help-menu/feedback-survey/disable-feedback-survey.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/menus/help-menu/feedback-survey/disable-feedback-survey.png" class="no-border" >}}
 
 ### Submitting Feedback Manually
 
 The dialog box can be opened manually by clicking **Help** > **Submit Feedback**:
 
-{{< figure src="/attachments/refguide/modeling/menus/help-menu/feedback-survey/submit-feedback.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/menus/help-menu/feedback-survey/submit-feedback.png" class="no-border" >}}
 
 ### Send Feedback Button
 

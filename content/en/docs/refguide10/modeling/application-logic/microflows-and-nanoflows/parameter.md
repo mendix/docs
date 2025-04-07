@@ -11,7 +11,7 @@ Parameters are the means by which you pass data to your logic. When a microflow 
 
 If you want to use an object of the **Customer** entity in a microflow, use the parameter. In the image below, the object name is **EnclosingCustomer** and is shown in black. The data type is object. Therefore, the entity name is shown underneath the object name in color blue.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/parameter/parameter.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/microflows-and-nanoflows/parameter/parameter.png" class="no-border" >}}
 
 ## Common Section
 
@@ -37,7 +37,7 @@ Determines whether the argument is optional or required. When the argument is se
 
 When an argument is set to **optional**, a default value can be set:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/parameter/argument-optional.png" max-width=70% >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/microflows-and-nanoflows/parameter/argument-optional.png" max-width=70% >}}
 
 {{% alert color="info" %}}
  The default value is used when the argument is omitted, not when the argument value is `empty`.
@@ -51,22 +51,22 @@ When an argument is set to **optional**, a default value can be set:
 
 To set a parameter as the [return value](/refguide/end-event/#return-value) of your microflow, right-click the parameter and select **Set $Parameter as return value** via the context menu:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/parameter/set-parameter-as-return-value.png" width="300px" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/microflows-and-nanoflows/parameter/set-parameter-as-return-value.png" width="300px" class="no-border" >}}
 
 ## Passing Arguments from a Page
 
 When calling a microflow or nanoflow as a source or action from a page, you can pass arguments in two primary ways, depending on the data type of the argument.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/parameter/parameter-grid.png" width="500px" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/microflows-and-nanoflows/parameter/parameter-grid.png" width="500px" >}}
 
 ### Variable Arguments (Objects/Object Lists)
 
 Variable arguments are used to pass objects or lists of objects from the page to the microflow or nanoflow.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/parameter/parameter-variable.png" width="500px" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/microflows-and-nanoflows/parameter/parameter-variable.png" width="500px" >}}
 
 ### Expression-Based Arguments (All Data Types)
 
 Primitive values, such as strings, booleans, and enumerations, can be passed as expressions. This method allows users to use functions and follow associations within the expression to set the argument values. Using expressions for arguments provides flexibility in setting values and improves the functionality of microflows and nanoflows.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/parameter/parameter-expression.png" width="500px" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/microflows-and-nanoflows/parameter/parameter-expression.png" width="500px" >}}

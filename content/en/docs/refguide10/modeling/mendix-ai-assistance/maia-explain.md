@@ -29,7 +29,7 @@ There are two ways to launch Maia Explain:
 
 A message is sent to Maia and a chat interface with an initial answer appears on the right side of Studio Pro under the **Maia** tab:
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-explain/maia-explain-interface.png" width="300px">}}
+{{< figure src="/attachments/refguide10/modeling/mendix-ai-assistance/maia-explain/maia-explain-interface.png" width="300px">}}
 
 The initial answer consists of two parts: 
 

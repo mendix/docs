@@ -24,7 +24,7 @@ Variables created inside a loop are not accessible outside the loop. In this cas
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/variable-activities/create-variable/create-variable-properties.png" alt="Create Variable Properties" width="650px" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/microflows-and-nanoflows/activities/variable-activities/create-variable/create-variable-properties.png" alt="Create Variable Properties" width="650px" class="no-border" >}}
 
 The **Create variable** properties pane consists of the following sections:
 

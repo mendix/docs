@@ -58,7 +58,7 @@ You can add access rules by clicking **New**.
 
 Click on a column to select an access rule. When an access rule is selected, you can click on the buttons to edit, duplicate, or delete it. You can also edit an access rule by double-clicking it.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-editor.png" alt="This image show the access rules editor layout" width="550px" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/entities/access-rules/access-rules-editor.png" alt="This image show the access rules editor layout" width="550px" class="no-border" >}}
 
 #### XPath Constraint
 
@@ -78,7 +78,7 @@ In the access rule, access to specific members (attributes or associations belon
 
 Access rules can be created from the **New Access Rule** dialog. This dialog can be opened by clicking **New**. To edit an existing access rule, select an access rule and click **Edit** or double-click on the access rule.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-editor.png" alt="This image indicates the position of the Delete icons" width="550px" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/entities/access-rules/access-rule-editor.png" alt="This image indicates the position of the Delete icons" width="550px" class="no-border" >}}
 
 #### Documentation
 
@@ -193,7 +193,7 @@ The old editor is the only one available in versions of Studio Pro below 10.6. F
 
 An example of the access rules properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-properties.png" alt="Access Rules for Entities" width="700px" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/entities/access-rules/access-rules-properties.png" alt="Access Rules for Entities" width="700px" class="no-border" >}}
 
 Access rules properties consist of the following sections:
 
@@ -260,7 +260,7 @@ You cannot set *Write* access to attributes which are calculated. This includes 
 
 For example, a customer is allowed to view the discount, but is not allowed to edit it. The access rights for the discount attribute are **Read**.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-discount-read.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/entities/access-rules/access-rule-discount-read.png" class="no-border" >}}
 
 See [Attribute Changes and Security Constraints](#attribute-changes), below, for important considerations about giving access to attributes.
 
@@ -270,7 +270,7 @@ An [XPath constraint](/refguide/xpath-constraints/) can be used to constrain the
 
 Click **Edit…** to edit the XPath constraint.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-xpath-tab.png" width="450px" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/entities/access-rules/access-rule-xpath-tab.png" width="450px" class="no-border" >}}
 
 {{% alert color="warning" %}}
 XPath constraints can only be applied to persistable entities as they are applied by the database. Defining XPath constraints for non-persistable entities results in consistency errors.
@@ -303,6 +303,6 @@ The XPath constraint can be constructed easily using the **Path to user...** but
 [Module.Order_Customer = '[%CurrentUser%]']
 ```
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-order-xpath.png" width="1000px" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/entities/access-rules/access-rule-order-xpath.png" width="1000px" class="no-border" >}}
 
 Because of this XPath constraint, access defined in the **Access rights** tab is only applied to orders for which the customer is the current end-user.

@@ -53,11 +53,11 @@ Setting the `fill` property on this image's styling will turn the rectangle (`re
 
 Here is how an SVG without the `fill` property looks:
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/native-svg/before.png" alt="before" class="no-border" >}}
+{{< figure src="/attachments/refguide10/mobile/native-mobile/native-svg/before.png" alt="before" class="no-border" >}}
 
 Here is how an SVG with the `fill` property looks:
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/native-svg/after.png" alt="after" class="no-border" >}}
+{{< figure src="/attachments/refguide10/mobile/native-mobile/native-svg/after.png" alt="after" class="no-border" >}}
 
 You can check the list of allowed style properties at the [react-native-svg](https://github.com/react-native-community/react-native-svg#common-props) repository.
 
@@ -83,7 +83,7 @@ export const DemoButton = {
 
 Would produce the following button and SVG:
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/native-svg/blue-svg.png" alt="blue svg" class="no-border" >}}
+{{< figure src="/attachments/refguide10/mobile/native-mobile/native-svg/blue-svg.png" alt="blue svg" class="no-border" >}}
 
 ### Using SVGs in Pluggable Native Widgets {#svg-pluggable}
 

@@ -116,7 +116,7 @@ If you are already familiar with using branches, you can check the [Branching Be
 
 All apps are developed along the main line. Here you have all development happening along a single line, with all changes built upon the previous revision:
 
-{{< figure src="/attachments/refguide/version-control/image7.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/version-control/image7.png" class="no-border" >}}
 
 ### Branch Line
 
@@ -124,7 +124,7 @@ When you add a branch line, you take a copy of an existing [revision](#revision)
 
 In Mendix each commit within a [repository](#repository) is given a unique identifier. 
 
-{{< figure src="/attachments/refguide/version-control/image8.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/version-control/image8.png" class="no-border" >}}
 
 ### Merging Branches {#merging-branches}
 
@@ -137,7 +137,7 @@ On the other hand, you may want to add the features from one branch line into an
 
 You can merge a specific revision of a branch line into your current [working copy](#working-copy). If, for example, you were working on the main line updated to revision 6, you can [merge](#merge) revision 5 from another branch line into your working copy. Then you can commit the result to create revision 7. If you want to merge several different committed changes from a branch, you will need to select a range of revisions which includes all the changes.
 
-{{< figure src="/attachments/refguide/version-control/image9.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/version-control/image9.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 

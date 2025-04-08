@@ -72,6 +72,15 @@ These are the available [merging and diffing commands](/refguide/mx-command-line
 | [diff](/refguide/mx-command-line-tool/merge/#diff) | Shows the diff of the *.mpr* files. |
 | [dump-mpr](/refguide/mx-command-line-tool/dump-mpr/) | Create a JSON description of the model of a Mendix App |
 
+### Private Values Commands
+
+These are the available [private values commands](/refguide/mx-command-line-tool/private-values/):
+
+|   Command | Description |
+| --- | --- |
+| [show-private-values](/refguide/mx-command-line-tool/private-values/#show-private-values) | Shows private values. |
+| [delete-private-values](/refguide/mx-command-line-tool/private-values/#delete-private-values) | Deletes private values. |
+
 ## Undocumented Options
 
 The mx tool contains options that are not described in this document. These options are for internal Mendix usage and are not officially supported. This might change in the future, but these options are used at your own risk.

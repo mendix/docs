@@ -125,6 +125,20 @@ The following steps will create a cluster, register and install a namespace, add
 If required, the invitation for the cluster/namespace member can be auto-accepted by setting `autoAcceptInvite` to true in the update cluster/namespace API request.
 {{% /alert %}}
 
+### Using the API to Assign a custom role to the Namespace member
+
+The following steps will create a cluster, register and install a namespace, Add a custom role in the Cluster Overview  page in the portal and assign the role to the namespace member.
+
+1. Set up your authentication PAT.
+2. Prepare the manifest for both your new cluster and namespace.
+3. Configure the namespace by following steps 8 through 11.
+4. Create a custom role in the Cluster Overview  page in the portal (this role needs to be created only on the Portal side)
+5. Make an API call POST /clusters/{namespaceId} to assign the role to the namespace member. Use the role created in Step 4. The manifest for this update request can be obtained through GET /clusters/{namespaceId}. When updating the namespace, only the role needs to be specified for the namespace member, as the fine-grained permissions are already included in the role created in Step 4.
+
+{{% alert color="info" %}}
+If required, the invitation for the cluster/namespace member can be auto-accepted by setting `autoAcceptInvite` to true in the update cluster/namespace API request.
+{{% /alert %}}
+
 ### Using the API to Restart an App {#restart}
 
 The following steps will restart an app by setting the number of instances to zero and then setting it back to the number of instances required.

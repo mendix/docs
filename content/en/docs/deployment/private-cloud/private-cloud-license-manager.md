@@ -554,8 +554,11 @@ This will indicate that licenses have been applied to the operator and apps in t
 | `<license-id>` | `<namepace>` | `<app-ID>` | mx-operator |
 | `<license-id>` | `<namepace>` | `<app-ID>` | mx-runtime  |
 
-## Troubleshooting
+## Upgrading the PCLM Server
 
+To upgrade the PCLM server, simply update the image tag in the PCLM server deployment and restart it.
+
+## Troubleshooting
 ### mx-pclm-cli Help
 
 You can get help on using mx-pclm-cli and its individual commands at any time by using the help command.

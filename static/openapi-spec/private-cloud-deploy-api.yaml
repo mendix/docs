@@ -691,6 +691,10 @@ components:
                   type: string
                   x-stoplight:
                     id: kledhwkqv84h5
+                environmentPurpose:
+                  type: string
+                  x-stoplight:
+                    id: x71vw40wxapdg
             deployment:
               type: object
               required:
@@ -881,6 +885,10 @@ components:
                   type: string
                   x-stoplight:
                     id: kledhwkqv84h5
+                environmentPurpose:
+                  type: string
+                  x-stoplight:
+                    id: dt3lmg72zzu8m
             deployment:
               type: object
               required:
@@ -2769,6 +2777,7 @@ components:
             defaultStudioTarget: true
             secretsStoreEnabled: false
             OverwriteProductTypePCLM: standard
+            environmentPurpose: Test
           deployment:
             appUrl: 'https://test.app.url'
             packageId: 045b8cf4-c9cd-41b4-b241-414b87a7f219
@@ -2991,6 +3000,7 @@ components:
             defaultStudioTarget: true
             secretsStoreEnabled: false
             OverwriteProductTypePCLM: standard
+            environmentPurpose: Test
           deployment:
             appUrl: 'https://test.app.url'
             packageId: 045b8cf4-c9cd-41b4-b241-414b87a7f219
@@ -3060,6 +3070,7 @@ components:
             defaultStudioTarget: true
             secretsStoreEnabled: false
             OverwriteProductTypePCLM: standard
+            environmentPurpose: Test
           deployment:
             appUrl: 'https://test.app.url'
             packageId: 045b8cf4-c9cd-41b4-b241-414b87a7f219

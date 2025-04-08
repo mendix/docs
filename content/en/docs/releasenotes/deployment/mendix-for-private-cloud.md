@@ -12,6 +12,13 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2025
 
+### April 10, 2025
+
+#### Deploy API Improvements
+
+* We've resolved an issue with the Get Environment Manifest where the environment's updated status wasn't being properly reflected in the response.
+* The Deploy API now supports setting the Environment Purpose (for Create Environment, Update Environment, and Get Environment Manifest).
+
 ### April 03, 2025
 
 #### Mendix Operator v2.21.2 {#2.21.2}

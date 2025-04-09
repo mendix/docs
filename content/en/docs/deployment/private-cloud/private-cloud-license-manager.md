@@ -556,10 +556,10 @@ This will indicate that licenses have been applied to the operator and apps in t
 
 ## Upgrading the PCLM Server
 
-To upgrade the PCLM server, simply update the image tag in the PCLM server deployment and restart it.
+To upgrade the PCLM server, update the image tag in the PCLM server deployment and restart it.
 
 ## Troubleshooting
-### mx-pclm-cli Help
 
-You can get help on using mx-pclm-cli and its individual commands at any time by using the help command.
-For example, `mx-pclm-cli --help` or `mx-pclm-cli user --help`.
+### Mx-pclm-cli Help
+
+You can get help on using mx-pclm-cli and its individual commands at any time by using the help command, for example, `mx-pclm-cli --help` or `mx-pclm-cli user --help`.

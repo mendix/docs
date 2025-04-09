@@ -122,12 +122,12 @@ The following steps will create a cluster, register and install a namespace, add
 13. Make an API call `POST /clusters/{namespaceId}` to update the namespace development mode and set `enableDevelopmentMode` to true. You can get the manifest for this update request from `GET /clusters/{namespaceId}`.
 
 {{% alert color="info" %}}
-If required, the invitation for the cluster/namespace member can be auto-accepted by setting `autoAcceptInvite` to true in the update cluster/namespace API request.
+If required, the invitation for the cluster or namespace member can be auto-accepted by setting `autoAcceptInvite` to true in the update cluster or namespace API request.
 {{% /alert %}}
 
-### Using the API to Assign a custom role to the Namespace member
+### Using the API to Assign a Custom Role to the Namespace Member
 
-The following steps will create a cluster, register and install a namespace, Add a custom role in the Cluster Overview  page in the portal and assign the role to the namespace member.
+The following steps create a cluster, register and install a namespace, add a custom role in the Cluster Overview page in the portal, and assign the role to the namespace member.
 
 1. Set up your authentication PAT.
 2. Prepare the manifest for both your new cluster and namespace.

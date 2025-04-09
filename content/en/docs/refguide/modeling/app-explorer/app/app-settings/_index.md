@@ -478,3 +478,9 @@ When enabled, the names that Studio Pro suggests in microflows will start with a
 ### Activity Default Colors
 
 This table allows you to select a default color for each microflow activity type that is available in your app. The selected color will be used as the background color for all microflow activities of that type in your app. It is possible to override this default value for individual activities in the microflow editor. If you change the default color for an activity type, and there are activities of that type present in the app that have an individual background color specified, a dialog will be shown that allows you to apply the new default color to these activities as well.
+
+### Automatically Code Parameter Values in Send REST Request Microflow Activities
+
+This option is available for Studio Pro 10.21 and above.
+
+If enabled, the encoding for the URL parameters for the Send REST Request microflow activity will be disabled and parameter values will be used as provided. The behavior will be inconsistent with the Consumed REST service.

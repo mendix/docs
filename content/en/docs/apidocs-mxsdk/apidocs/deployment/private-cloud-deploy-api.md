@@ -104,7 +104,7 @@ The following sections of this document contain sample usage scenarios for the A
 
 ### Using the API to Update the Cluster and Namespace
 
-The following steps will create a cluster, register and install a namespace, add or update a cluster member, and enable development mode for the namespace.
+Perform the following steps to create a cluster, register and install a namespace, add or update a cluster member, and enable development mode for the namespace:
 
 1. Set up your authentication PAT.
 2. Prepare a manifest for your new cluster.
@@ -127,21 +127,22 @@ If required, the invitation for the cluster or namespace member can be auto-acce
 
 ### Using the API to Assign a Custom Role to the Namespace Member
 
-The following steps create a cluster, register and install a namespace, add a custom role in the Cluster Overview page in the portal, and assign the role to the namespace member.
+Perform the following steps to create a cluster, register and install a namespace, add a custom role in the Cluster Overview page in the portal, and assign the role to the namespace member:
 
 1. Set up your authentication PAT.
 2. Prepare the manifest for both your new cluster and namespace.
 3. Configure the namespace by following steps 8 through 11.
-4. Create a custom role in the Cluster Overview  page in the portal (this role needs to be created only on the Portal side)
-5. Make an API call POST /clusters/{namespaceId} to assign the role to the namespace member. Use the role created in Step 4. The manifest for this update request can be obtained through GET /clusters/{namespaceId}. When updating the namespace, only the role needs to be specified for the namespace member, as the fine-grained permissions are already included in the role created in Step 4.
+4. Create a custom role in the Cluster Overview page in the portal. This role must be created only on the Portal side.
+5. Make a POST `/clusters/{namespaceId}` API call to assign the role that you created in step 4 to the namespace member.
+    You can obtain the manifest for this update request through GET `/clusters/{namespaceId}`. When updating the namespace, only the role needs to be specified for the namespace member, as the fine-grained permissions are already included in the role created in step 4.
 
 {{% alert color="info" %}}
-If required, the invitation for the cluster/namespace member can be auto-accepted by setting `autoAcceptInvite` to true in the update cluster/namespace API request.
+If required, the invitation for the cluster or namespace member can be auto-accepted by setting `autoAcceptInvite` to true in the update cluster or namespace API request.
 {{% /alert %}}
 
 ### Using the API to Restart an App {#restart}
 
-The following steps will restart an app by setting the number of instances to zero and then setting it back to the number of instances required.
+Perform the following steps to restart an app by setting the number of instances to zero and then setting it back to the number of instances required:
 
 1. Set up your authentication PAT.
 2. Call `GET /apps/{appId}/namespaces/{namespaceId}/environments/{environmentId}` to get the environment manifest for your app environment.
@@ -190,7 +191,7 @@ In order to create or manage environments in a namespace through an API, the tec
 ## API Reference
 
 {{% alert color="info" %}}
-Please note that the fields marked as non-editable in the OpenAPI .yaml file are used for read-only purposes. Any modifications made to the values of these fields will be ignored.
+Fields marked as non-editable in the OpenAPI .yaml file are used for read-only purposes. Any modifications made to the values of these fields is ignored.
 {{% /alert %}}
 
 {{< swaggerui src="/openapi-spec/private-cloud-deploy-api.yaml"  >}}

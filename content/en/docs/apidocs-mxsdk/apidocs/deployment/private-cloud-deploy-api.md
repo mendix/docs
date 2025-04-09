@@ -102,7 +102,7 @@ The API does not generate unique UUIDs for the resources. You must generate your
 
 The following sections of this document contain sample usage scenarios for the API.
 
-### Using the API to Update the Cluster and Namespace
+### Using the API to Update the Cluster and Namespace {#update-cluster}
 
 Perform the following steps to create a cluster, register and install a namespace, add or update a cluster member, and enable development mode for the namespace:
 
@@ -131,7 +131,7 @@ Perform the following steps to create a cluster, register and install a namespac
 
 1. Set up your authentication PAT.
 2. Prepare the manifest for both your new cluster and namespace.
-3. Configure the namespace by following steps 8 through 11.
+3. Configure the namespace by following steps 8-11 of [Using the API to Update the Cluster and Namespace](#update-cluster).
 4. Create a custom role in the Cluster Overview page in the portal. This role must be created only on the Portal side.
 5. Make a POST `/clusters/{namespaceId}` API call to assign the role that you created in step 4 to the namespace member.
     You can obtain the manifest for this update request through GET `/clusters/{namespaceId}`. When updating the namespace, only the role needs to be specified for the namespace member, as the fine-grained permissions are already included in the role created in step 4.

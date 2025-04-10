@@ -153,8 +153,6 @@ There are different versions of the SAML module, depending on which version of M
 
         Mendix 10 does not support the 2.0 version of the Atlas UI, so you should never use the even-numbered (Atlas 2.0-compatible) SAML patch releases with your Mendix 10 app.
 
-    * For Mendix 11, you should ...
-
 
 3. To download the required release, in the **Releases** tab, find the release that is compatible with your app per the guidelines in the **Documentation** tab, and then click the **Download** button by the number of the release.
 4. Follow the instructions in [How to Use Marketplace Content](/appstore/use-content/) to import the SAML module into your app.

@@ -23,7 +23,7 @@ You want to export a report of customer information in JSON format. The report s
 Create a view entity to join the customer and address tables. To do this, follow the steps below: 
 
 1. Create a view entity and name it *CustomerVE*. 
-2. Add the following query to the OQL editor:
+2. Add the following query to the View Entity Document OQL editor:
 
     ```sql
     SELECT

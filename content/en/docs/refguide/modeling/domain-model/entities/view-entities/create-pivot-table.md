@@ -73,7 +73,7 @@ With view entities, you can take the relevant component of `DateTime` as a colum
 
 5. Click **Run Query** to preview the data.
 
-    {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/pivot-table-view-entities/orderpivotve.png" >}}
-
+    {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/pivot-table-view-entities/view-entity-doc-order-pivot.png" >}}
+                     
 6. Click **OK** to save. 
 7. Create a page that shows the pivot table by right-clicking the new entity > **Generate overview pages**.

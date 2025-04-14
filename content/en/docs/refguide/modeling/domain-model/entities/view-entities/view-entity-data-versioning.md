@@ -28,12 +28,7 @@ An advantage of separating *OrderUpdate* from *OrderLine* is that it is easier t
 To view the latest status of an order, follow the steps below:
 
 1. Open your domain model and add a view entity named *LatestOrderStatusVE*.
-<<<<<<< HEAD
 2. Add the following query to the OQL editor:
-=======
-2. Click **Show** to open the view entity document.
-3. Add the following query to the View Entity document OQL editor:
->>>>>>> e5d98ad55b (Style)
 
     ```sql
     SELECT

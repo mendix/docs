@@ -50,7 +50,12 @@ branches:
 before_install:
 ###############
   # Hugo, Docsy and dependencies are installed via npm
-  - npm install # use npm rather than yarn - HUGO doesn't have that many dependencies
+
+  # Updated commands to help Travis research stalled build issue
+  - npm config set loglevel verbose
+  - npm install --verbose
+
+#  - npm install # (Previous line before Travis research) use npm rather than yarn - HUGO doesn't have that many dependencies
   #
   # Currently will use custom version of htmltest stored in /htmltest/htmltest
   # This version makes the html.Parse much smaller

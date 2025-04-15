@@ -12,7 +12,7 @@ Add-on modules allow you to abstract your domain model and use view entities to 
 
 For this purpose of this use case, the following domain model is used:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/view-entities/abstracting-data/domain-model.png" width="500" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/abstracting-data/domain-model.png" width="500" >}}
 
 You have a module that manages the inventory and stock of your shop products. You want to export this module so you can reuse it in different projects. To increase security, you do not want to expose the persistable entities, so you want to create view entities that represent the data you want to share outside the module. 
 
@@ -22,11 +22,11 @@ You have a module that manages the inventory and stock of your shop products. Yo
 2. Open the module **Settings** and click the **Export** tab.
 3. Select **Add-on module** as the module type, then click **OK**. 
 
-   {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/abstracting-data/module-settings.png" width="500" >}}
+   {{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/abstracting-data/module-settings.png" width="500" >}}
 
   With the add-on enabled, you should see an additional configurable property in the documents and other elements of your module called **Export level**. This is set to **Hidden** by default, which means users of your add-on cannot access them. 
 
-   {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/abstracting-data/export-level.png" width="500" >}}
+   {{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/abstracting-data/export-level.png" width="500" >}}
 
 ## Create a View Entity
 
@@ -49,6 +49,6 @@ You want to make an interface that shows products where you can filter the resul
 
 3. Double-click **ProductCategoryVE** and set the export level to **Usable**. 
 
-    {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/abstracting-data/usable.png" width="500" >}}
+    {{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/abstracting-data/usable.png" width="500" >}}
 
 4. Export the add-on module by right-clicking it and selecting **Export add-on module package**.

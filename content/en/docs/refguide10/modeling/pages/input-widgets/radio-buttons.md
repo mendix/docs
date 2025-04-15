@@ -13,7 +13,7 @@ weight: 50
 
 When the page is displayed to the end-user, all the possible values are listed, with a filled-in circle next to the selected value and an empty circle next to the unselected value (or values). Only one value can be chosen – choosing another value deselects the current value. For example:
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/radio-buttons/radio-buttons-displayed.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/pages/input-widgets/radio-buttons/radio-buttons-displayed.png" class="no-border" >}}
 
 A radio button must be placed within a data context to display or edit the intended value:
 * A [data container](/refguide/data-widgets/) widget containing an object
@@ -24,7 +24,7 @@ The name of the configured value is shown inside the radio button widget, betwee
 
 For example, the following image contains two sets of radio buttons. The first allows the end-user to see, and set, the value of an enumeration identifying the preferred time to contact this person (**PreferredContact**). The second allows the end-user to see, and set, a Boolean indicating whether this is a **Personal** contact.
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/radio-buttons/radio-buttons.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/pages/input-widgets/radio-buttons/radio-buttons.png" class="no-border" >}}
 
 ## Properties Pane
 

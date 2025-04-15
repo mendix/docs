@@ -46,23 +46,36 @@ If you run into problems installing Studio Pro, one workaround is to restart you
 
 The prerequisites are the following:
 
-* [Microsoft .NET Desktop Runtime 8.0.x (x64 or ARM64)](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (Mendix recommends using version 8.0.10 or above)
-* [Eclipse Temurin JDK 21 (x64 or ARM64)](https://adoptium.net/temurin/releases/?version=21)
+* Microsoft .NET Desktop Runtime
+
+    | Studio Pro 10.0.0 - 10.10.0 | Studio Pro 10.11.0 and above |
+    | --- | --- |
+    | [.NET Desktop Runtime 6.0.x (x64 or ARM64)](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) <br/> Mendix recommends using version 6.0.35 or above | [.NET Desktop Runtime 8.0.x (x64 or ARM64)](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) <br/> Mendix recommends using version 8.0.10 or above |
+
+* Eclipse Temurin JDK (x64) (see [JDK Installation](/refguide/jdk-installation/) if you want to install another version of the JDK). Mendix versions 10.8.0 and 10.0.9 support JDK 11 and 17. Mendix versions 10.6.9 and 10.10.0 support JDK 11, 17, and 21, but the installer still installs JDK 11.
+
+    | Studio Pro 10.0.0 - 10.6.21 (MTS) and 10.7.0 - 10.10.0 | Studio Pro 10.6.22 (and higher MTS patch versions) and 10.11.0 and above |
+    | --- | --- |
+    | [JDK 11 (x64)](https://adoptium.net/temurin/releases/?version=11) | [JDK 21 (x64 or ARM64)](https://adoptium.net/temurin/releases/?version=21) |
+
 * [Microsoft Visual C++ 2015 and 2019 Redistributable Package](https://aka.ms/vs/16/release/vc_redist.x64.exe)
 * [Mendix Native Mobile Builder one-click Installer](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)
 
-* [Git for Windows (x64)](https://git-scm.com/download/win) using the versions described below. These are the versions of Git that Studio Pro installs if the Git version installed on the system is below the suggested one.
-
-    | Studio Pro 10.0.0 - 10.1.0 | Studio Pro 10.2.0 - 10.9 | Studio Pro 10.6.10 (MTS), 10.10 to 10.20 | Studio Pro 10.21.0 and above |
-    | --- | --- | --- | --- |
-    | [2.37.1](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1) | [2.41.0](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3) | [2.43.0](https://github.com/git-for-windows/git/releases/tag/v2.43.0.windows.1)|[2.48.1](https://github.com/git-for-windows/git/releases/download/v2.48.1.windows.1/Git-2.48.1-64-bit.exe)|
-
-{{% alert color="warning" %}}  Mendix recommends installing Git for all versions of Studio Pro to ensure optimal performance and full feature availability.
-* Studio Pro versions below 10.21.0 can work without Git, but some operations may experience reduced performance, and advanced features—such as [rebase](/refguide/merge-algorithm/#rebase)—will not be available.
-* Starting from Studio Pro 10.21.0, Git version 2.48.1 or above is required. This version is automatically installed during Studio Pro installation. However, for [non-administrative installation](#offline) you must install Git manually.{{% /alert %}}
-
+* [Git for Windows (x64)](https://git-scm.com/download/win) using the versions described below. These are the versions of Git that Studio Pro installs if the Git version installed on the system is below the suggested one.  
+  
+    | Studio Pro 10.0.0 - 10.1.0 | Studio Pro 10.2.0 - 10.6.9 and 10.7.0 - 10.9.0 | Studio Pro 10.6.10 (and higher MTS patch versions), 10.10.0 and above |
+    | --- | --- | --- |
+    | [2.37.1](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1) | [2.41.0](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3) | [2.43.0](https://github.com/git-for-windows/git/releases/tag/v2.43.0.windows.1)|
+    
+    {{% alert color="info" %}}You do not need to install Git for all operations, but you may need to install the Git CLI if you perform certain actions. For example, [rebase](/refguide/merge-algorithm/#rebase) will not work without Git being installed.{{% /alert %}}
+    
 * [Microsoft Edge WebView2 Evergreen Runtime (x64 or ARM64) (Evergreen Standalone Installer version)](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
-* [Gradle 8.5](https://gradle.org/install/#manually) with Gradle extracted to the parent directory of the folder where Studio Pro is installed (usually `C:\Program Files\Mendix`) instead of `C:\Gradle`.
+
+* One of the following versions of [Gradle](https://gradle.org/install/#manually) with Gradle extracted to the parent directory of the folder where Studio Pro is installed (usually `C:\Program Files\Mendix`) instead of `C:\Gradle`.
+
+    | Studio Pro 10.0.0 - 10.6.9 (MTS) and 10.7.0 - 10.9.0 | Studio Pro 10.6.10 (and higher MTS patch versions) and 10.10.0 and above |
+    | --- | --- |
+    | Gradle 7.6.3 or above | Gradle 8.5  |
 
 Depending on the error message you get from the installer, you can choose to install a single prerequisite, or you can install them all.
 
@@ -80,11 +93,20 @@ It is possible to prepare the prerequisite installers beforehand so the setup pr
 4. Download the prerequisites listed in the **[Troubleshooting](#troubleshooting)** section above and move them into the **Dependencies** folder.
 5. Rename the following dependencies:
    1. Microsoft .NET Desktop Runtime
-      * On x64, rename *windowsdesktop-runtime-8.0.10-win-x64.exe* to *windowsdesktop-runtime-8.0-x64.exe*
-      * On ARM64, rename *windowsdesktop-runtime-8.0.10-win-arm64.exe* to *windowsdesktop-runtime-8.0-arm64.exe*
-   2. Eclipse Temurin JDK (x64 or ARM64) 
-      * On x64, rename *OpenJDK21U-jdk_x64_windows_hotspot_21.0.5_11.msi* to *adoptiumjdk_21_x64.msi*
-      * On ARM64, rename *OpenJDK21U-jdk_aarch64_windows_hotspot_21.0.5_11.msi* to *adoptiumjdk_21_arm64.msi*
+      * For Studio Pro versions 10.0.0 through 10.10.0, rename the Microsoft .NET Desktop Runtime 6.0.x
+        * On x64, rename *windowsdesktop-runtime-6.0.35-win-x64.exe* to *windowsdesktop-runtime-6.0-x64.exe*
+        * On ARM64, rename *windowsdesktop-runtime-6.0.35-win-arm64.exe* to *windowsdesktop-runtime-6.0-arm64.exe*
+      * For Studio Pro versions 10.11.0 and above, rename the Microsoft .NET Desktop Runtime 8.0.x
+        * On x64, rename *windowsdesktop-runtime-8.0.10-win-x64.exe* to *windowsdesktop-runtime-8.0-x64.exe*
+        * On ARM64, rename *windowsdesktop-runtime-8.0.10-win-arm64.exe* to *windowsdesktop-runtime-8.0-arm64.exe*
+   2. Eclipse Temurin JDK (x64)
+      * For Studio Pro versions 10.0.0 through 10.6.21 (MTS) and 10.7.0 through 10.10.0, rename the Java Development Kit 11 (x64) *msi* 
+        * For example, *OpenJDK11U-jdk_x64_windows_hotspot_11.0.20.1_1.msi* to *adoptiumjdk_11_x64.msi*
+      * For Studio Pro versions 10.11.0 through 10.18.0, rename the Java Development Kit 21 (x64) *msi* 
+        * For example, *OpenJDK21U-jdk_x64_windows_hotspot_21.0.4_7.msi* to *adoptiumjdk_21_x64.msi*
+      * For Studio Pro MTS versions 10.6.22, 10.12.11, and 10.18.1 (and higher MTS patch versions) and 10.19.0 and above, rename the Java Development Kit 21 *msi*
+        * On x64, rename *OpenJDK21U-jdk_x64_windows_hotspot_21.0.5_11.msi* to *adoptiumjdk_21_x64.msi*
+        * On ARM64, rename *OpenJDK21U-jdk_aarch64_windows_hotspot_21.0.5_11.msi* to *adoptiumjdk_21_arm64.msi*
    3. Visual C++ Redistributable for Visual Studio 2019 (x64)
       * Rename the executable 
         * For example, *VC_redist.x64.exe* to *vcredist2019_x64.exe*

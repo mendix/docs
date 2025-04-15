@@ -8,7 +8,7 @@ weight: 10
 
 Use the **Create Branch Line** dialog box to create a new [branch line](/refguide/version-control/#branches) via the **Branch Line Manager**:
 
-{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/branch-line-manager-dialog/create-branch-line-dialog/create-branch-line.png" class="no-border" width="550" >}}
+{{< figure src="/attachments/refguide10/modeling/menus/version-control-menu/branch-line-manager-dialog/create-branch-line-dialog/create-branch-line.png" class="no-border" width="550" >}}
 
 To view the **Create Branch Line** dialog box, do the following:
 

@@ -13,13 +13,13 @@ A navigation tree displays menu items of a [navigation profile](/refguide/naviga
 
 The menu structure of a navigation tree can have three levels, that means that menu items can have sub-items. For more information on menu items and their properties, see [Menu](/refguide/menu/). 
 
-{{< figure src="/attachments/refguide/modeling/pages/menu-widgets/navigation-tree/navigation-tree.png" alt="Navigation Tree" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/pages/menu-widgets/navigation-tree/navigation-tree.png" alt="Navigation Tree" class="no-border" >}}
 
 ## Properties
 
 An example of navigation tree properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/menu-widgets/navigation-tree/navigation-tree-properties.png" alt="Navigation Tree Properties"   width="250"  class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/pages/menu-widgets/navigation-tree/navigation-tree-properties.png" alt="Navigation Tree Properties"   width="250"  class="no-border" >}}
 
 Navigation tree properties consist of the following sections:
 

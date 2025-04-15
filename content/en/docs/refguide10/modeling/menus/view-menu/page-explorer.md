@@ -9,7 +9,7 @@ description: "Describes the Page Explorer pane in Mendix Studio Pro."
 
 The **Page Explorer** shows the structure of your page in a tree view:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/page-explorer.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/menus/view-menu/page-explorer.png" class="no-border" >}}
 
 The **Page Explorer** is a simplified page view that makes the page building easier. In combination with [Design mode](/refguide/page/#design-mode) it allows you to view and edit nested containers which are hard to see and select in the WYSIWYG editor. However, it can be used in combination with [Structure mode](/refguide/page/#structure-mode) as well, for example, to get a quick overview of the page.
 

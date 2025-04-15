@@ -17,6 +17,13 @@ For information on Mendix data storage policies and practices for Maia, see [Mai
 
 For information on what third-party services Maia uses and what data are sent to the third-party services, see the [Maia Third-Party Services](#maia-third-party-services) section below.
 
+## Network Configuration Requirements {#maia-network-requirement}
+
+To ensure the smooth operation of Mendix AI Assistance (Maia), the following network requirements must be met:
+
+* Ensure access to hostnames within the `maia.mendix.com` subdomain
+* Allow secure network traffic through port 443 (HTTPS) to enable uninterrupted operation of Maia
+
 ## Maia Capabilities in Mendix Studio Pro 
 
 Maia in Mendix Studio Pro has the following capabilities: 

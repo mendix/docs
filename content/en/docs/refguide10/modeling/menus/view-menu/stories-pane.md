@@ -15,7 +15,7 @@ In the **Stories** pane, you can view the stories and tasks of the active Sprint
 
 The **Stories** pane consists of the top bar with various buttons and a table:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/stories-pane/stories-pane.png" alt="Stories Pane Example" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/menus/view-menu/stories-pane/stories-pane.png" alt="Stories Pane Example" class="no-border" >}}
 
 The table contains following columns:
 
@@ -55,7 +55,7 @@ When you view the details of a story, the **Story Details** pop-up window opens 
 * **Points** – the story points assigned to the story
 * **Description** – the description of the story
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/stories-pane/story-details.png" alt="Story Details" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/menus/view-menu/stories-pane/story-details.png" alt="Story Details" class="no-border" >}}
 
 ### Changing the Status of a Story or a Task {#changing-status}
 

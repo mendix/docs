@@ -8,7 +8,7 @@ weight: 50
 
 The **Preferences** option in the menu opens a dialog box where you can set user-specific preferences which apply to the whole of Studio Pro:
 
-{{< figure src="/attachments/refguide/modeling/menus/edit-menu/preferences-dialog/preferences.png" alt="Preferences" width="600" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/menus/edit-menu/preferences-dialog/preferences.png" alt="Preferences" width="600" class="no-border" >}}
 
 ## General Tab {#general}
 
@@ -56,7 +56,7 @@ This is the directory where new apps are stored. It is used in the [App Settings
 
 In the **Deployment** tab you can configure various settings related to application deployment.
 
-{{< figure src="/attachments/refguide/modeling/menus/edit-menu/preferences-dialog/preferences-deployment-tab.png" alt="Preferences" width="600" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/menus/edit-menu/preferences-dialog/preferences-deployment-tab.png" alt="Preferences" width="600" class="no-border" >}}
 
 ### JDK {#jdk}
 

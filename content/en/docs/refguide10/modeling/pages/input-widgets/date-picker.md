@@ -18,7 +18,7 @@ The name of the configured value is shown inside the date picker widget, between
 
 For example, the following date picker allows the end-user to see, and set, the **LastContacted** date of a customer.
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/date-picker/date-picker.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/pages/input-widgets/date-picker/date-picker.png" class="no-border" >}}
 
 ## Properties Pane
 

@@ -101,7 +101,7 @@ When filing a Git support issue with Mendix Support, attach the log files by doi
 
 1. Navigate to the **Help** menu > **Open Log File Directory**:
 
-   {{< figure src="/attachments/refguide/version-control/on-premises-git/troubleshoot-git-issues/open-log-file-directory-menu.png" alt="Download from Version Control Server dialog" class="no-border" >}}
+   {{< figure src="/attachments/refguide10/version-control/on-premises-git/troubleshoot-git-issues/open-log-file-directory-menu.png" alt="Download from Version Control Server dialog" class="no-border" >}}
 
 2. Copy the file called *log.txt* into your ticket. You can also attach additional *log.X.txt* files if they exist.
 

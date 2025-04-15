@@ -223,8 +223,8 @@ When the Mendix client is running, it sets a number of technical cookies to reco
 | **mx-cookie-test** | Client | Tests whether the browser supports cookies | `/` | deleted immediately after setting it | `false` |
 | **OfflineLogout** | Client | Used in offline applications when there is no connection and tells the runtime to logout on the next request | `/` | 1 year for offline sessions¹ |  `false` | 
 | **originURI** | index.html | Tells the client where to redirect to if a user is required to log in | `/` | until user closes their browser (session cookie) |  `false` | 
-| **DeviceType** | Runtime | Holds the type of the device used for the session | `/` | until user closes their browser (session cookie) |  `true` | 
-| **Profile** | Runtime | Holds the navigation profile that is being accessed within the session | `/` | until user closes their browser (session cookie) |  `true` | 
+| **DeviceType** | Runtime | Holds the type of the device used for the session | `/` | In Mendix 9.12 and above, 1 year. Below Mendix 9.12, until user closes their browser (session cookie) |  `true` | 
+| **Profile** | Runtime | Holds the navigation profile that is being accessed within the session | `/` | In Mendix 9.12 and above, 1 year. Below Mendix 9.12, until user closes their browser (session cookie) |  `true` | 
 | **SessionTimeZoneOffset** | Runtime | Holds the time zone offset for the session | `/` | until user closes their browser (session cookie) |  `true` | 
 | **xasid** | Runtime | Used for multi-instance fail-over | `/` | until user closes their browser (session cookie) |  `true` | 
 | **reloginReason** | Runtime | Used to let the client know that a relogin reason should be displayed on the sign in page | `/` | until user closes their browser (session cookie) |  `true` | 

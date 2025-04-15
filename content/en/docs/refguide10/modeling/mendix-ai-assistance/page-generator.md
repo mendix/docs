@@ -23,7 +23,7 @@ To enable Page Generator, go to **Edit** > **Preferences** > the **New Features*
 
 Once enabled, you can find it in the the toolbar of a page:
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/page-generator/page-generator.png" max-width=80% >}}
+{{< figure src="/attachments/refguide10/modeling/mendix-ai-assistance/page-generator/page-generator.png" max-width=80% >}}
 
 {{% alert color="info" %}}
 Page Generator is available in both the **Structure mode** and **Design mode**.
@@ -31,7 +31,7 @@ Page Generator is available in both the **Structure mode** and **Design mode**.
 
 After clicking **Generate page**, a dedicated chat interface appears at the right side of Studio Pro under the **Maia** tab:
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/page-generator/chat-interface.png" max-width=42% >}}
+{{< figure src="/attachments/refguide10/modeling/mendix-ai-assistance/page-generator/chat-interface.png" max-width=42% >}}
 
 Describe your page or its main goals in the chat. Maia uses this information to add relevant widgets to the page and configure them for you. When generating a page, Maia knows about the domain model of the module you are currently working on. For example, it might include a [Data View](/refguide/data-view/) with some [Text Box](/refguide/text-box/) widgets for an attribute of an entity.
 

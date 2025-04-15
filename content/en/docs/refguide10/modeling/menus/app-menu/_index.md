@@ -9,7 +9,7 @@ weight: 30
 
 In the **App** menu, you can view and/or manipulate settings that are connected to your app and deployment. For example, you can create a deployment package.
 
-{{< figure src="/attachments/refguide/modeling/menus/app-menu/app-menu.png" alt="App Menu" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/menus/app-menu/app-menu.png" alt="App Menu" class="no-border" >}}
 
 ## Tools
 

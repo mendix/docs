@@ -20,7 +20,7 @@ The name of the configured value is shown inside the checkbox widget, between sq
 
 For example, this checkbox allows you to see, and set, whether someone is subscribed to your newsletter.
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/check-box/check-box.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/pages/input-widgets/check-box/check-box.png" class="no-border" >}}
 
 ## Properties Pane
 

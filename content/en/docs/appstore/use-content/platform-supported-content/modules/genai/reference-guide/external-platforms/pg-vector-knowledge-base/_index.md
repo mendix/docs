@@ -47,7 +47,7 @@ You should have access to your own (remote) PostgreSQL database server with the 
 * [Encryption](https://marketplace.mendix.com/link/component/1011) module
 * [Community Commons](https://marketplace.mendix.com/link/component/170) module
 * [Database Connector](https://marketplace.mendix.com/link/component/2888) module
-* GenAI Commons module in the [GenAI For Mendix](https://marketplace.mendix.com/link/component/227931) bundle
+* [GenAI Commons](https://marketplace.mendix.com/link/component/239448)
 
 ## Installation {#installation}
 

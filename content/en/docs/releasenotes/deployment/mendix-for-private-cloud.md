@@ -12,6 +12,19 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2025
 
+### April 03, 2025
+
+#### Mendix Operator v2.21.2 {#2.21.2}
+
+* We have updated components to use the latest dependency versions in order to improve security score ratings for container images.
+* We have fixed a regression that caused the `mendix-operator` pod to enter a crash loop after running the base installation in a new namespace (Ticket 244619).
+* We have fixed an issue in the connection retry mechanism for the image builder and storage provisioners. Previously, when a retryable action failed for 63 times in a row, any following retry attempts would no longer wait for a delay. In this update, all retry attempts will wait for a variable, random delay regardless of the number of retry attempts.
+* Upgrading to Mendix Operator v2.21.2 from a previous version now restarts environments managed by that version of the Operator. Environments with two or more replicas and a **PreferRolling** update strategy are restarted without downtime.
+
+#### License Manager CLI v0.10.2
+
+* We have updated this component to use the latest dependency versions in order to improve security score ratings for container images.
+
 ### March 20, 2025
 
 #### Portal Improvements
@@ -26,7 +39,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ### March 10, 2025
 
-#### License Manage CLI v0.10.1
+#### License Manager CLI v0.10.1 {#license-manage-cli-v0101}
 
 * We have updated this component to use the latest dependency versions in order to improve security score ratings for container images. This update will allow us to address CVE-2024-45337 and CVE-2024-45338.
 
@@ -35,9 +48,9 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We have updated components to use the latest dependency versions in order to improve security score ratings for container images.
 * For new installations, the Operator now uses ubi9 as the base image for Mendix apps. Existing installations will keep their configuration and stay on ubi8. For more information on base image versions, see the [Runtime Base Image](/developerportal/deploy/private-cloud-cluster/#runtime-base-image) section.
 * We have fixed a regression that caused the `model/resources` directory to appear empty and caused problems with some Marketplace modules, such as SAML (Ticket 242648).
-* Upgrading to Mendix Operator v2.21.0 from a previous version now restarts environments managed by that version of the Operator. Environments with 2 or more replicas and a **PreferRolling** update strategy are restarted without downtime.
+* Upgrading to Mendix Operator v2.21.1 from a previous version now restarts environments managed by that version of the Operator. Environments with 2 or more replicas and a **PreferRolling** update strategy are restarted without downtime.
 
-##### Known Issues
+##### Known Issue
 
 After completing the base installation, the Operator pod may enter a crash loop, reporting a missing endpoint.
 
@@ -64,7 +77,7 @@ For the Global Operator, follow these steps to resolve the issue:
         type: service
     ```  
 
-We are working on a patch which will resolve the crash loop issue.
+This issue is addressed in Mendix Operator version 2.21.2.
 
 ### March 6, 2025
 

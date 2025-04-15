@@ -59,7 +59,7 @@ If **Network load** is the default, you can change this to **Network round trips
 
 The optimization mode cannot be changed for [data grid](/refguide/data-grid/), [template grid](/refguide/template-grid/), and [list view](/refguide/list-view/) widgets. 
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/data-source-advanced.png" alt="data source advanced tabpage" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/pages/data-widgets/data-sources/data-source-advanced.png" alt="data source advanced tabpage" class="no-border" >}}
 
 #### Optimize for Network Round Trips {#optimize-for-network-round-trips}
 

@@ -10,7 +10,7 @@ description: "Describes the concept of navigation in apps and the properties of 
 
 This document describes the concept of navigation in Mendix applications and the properties of a profile. The **Navigation** document can be found by expanding the **App** node in the **App Explorer**. It defines the navigation structure of the application for users. It also allows you to set the home page of your application and to define the menu structures that can be used in [Menus and Navigation](/refguide/menu-widgets/). 
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/navigation-profile-properties.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/app-explorer/app/navigation/navigation-profile-properties.png" class="no-border" >}}
 
 A user's home page can vary based on their [user roles](/refguide/user-roles/).
 
@@ -76,7 +76,7 @@ It is also possible to force the client to use a specific profile by adding a `p
 
 A profile can be added with the **Add navigation profile** button. Only one profile per type is allowed. While adding the profile, it is possible to copy the settings from an existing profile.
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/add-navigation-profile.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/app-explorer/app/navigation/add-navigation-profile.png" class="no-border" >}}
 
 ### General
 
@@ -136,7 +136,7 @@ This opens the **Customize offline synchronization** dialog box that is used for
 
 For more details on the settings and when to use them, see the [Offline-First Reference Guide](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/#customizable-synchronization).
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/customize-offline-synchronization.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/app-explorer/app/navigation/customize-offline-synchronization.png" class="no-border" >}}
 
 ## Read More
 

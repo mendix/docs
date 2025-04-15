@@ -11,7 +11,7 @@ Studio Pro supports a number of dockable window panes, such as the **Changes** a
 
 Via this menu you can also enable or disable the [full screen mode](#full-screen) or [reset the layout](#reset-layout) of your app to the default.  
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/view-menu.png" alt="View Menu" width="300" >}}
+{{< figure src="/attachments/refguide10/modeling/menus/view-menu/view-menu.png" alt="View Menu" width="300" >}}
 
 ## Layout of Panes {#layout-of-panes}
 
@@ -23,7 +23,7 @@ Note that this section describes the behavior of panes, not the behavior of docu
 
 When you drag a pane, you can see arrows that indicate where you can position this pane. You can position the pane either inside the current pane (arrows grouped together) or make it full-window height or width (individual arrows on the borders). Each position is labelled and explained below:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/interaction-with-panes.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/menus/view-menu/interaction-with-panes.png" class="no-border" >}}
 
 1. Within the current *pane* you can position a pane in one of the following ways:
 
@@ -62,7 +62,7 @@ For version control-enabled apps (meaning, those with [Team Server](/developerpo
 
 This pane has two levels, so when you zoom into a changed document, you can review all the changes within that document without going back and forth between levels. The zoomed-in level of the pane is split into two grids, with elements on the left and properties on the right. Selecting an element on the left presents the changed properties on the right:
 
-<video width="640" height="360" controls src="/attachments/refguide/view-menu/changes.mp4">VIDEO</video>
+<video width="640" height="360" controls src="/attachments/refguide10/view-menu/changes.mp4">VIDEO</video>
 
 ### Connector {#connector}
 

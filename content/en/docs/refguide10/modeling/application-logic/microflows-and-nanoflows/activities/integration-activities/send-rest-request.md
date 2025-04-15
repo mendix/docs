@@ -8,13 +8,13 @@ url: /refguide/send-rest-request/
 
 The **Send REST request** activity allows you to send a REST request, which is configured in a [Consumed REST Service](/refguide/consumed-rest-service/) document.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/send-rest-request/rest-microflow.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/send-rest-request/rest-microflow.png" class="no-border" >}}
 
 ## Properties 
 
 Double-click the **Send REST request** activity to view its properties:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/send-rest-request/send-request.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/send-rest-request/send-request.png" class="no-border" >}}
 
 The following are the properties in the **Request** section:
 

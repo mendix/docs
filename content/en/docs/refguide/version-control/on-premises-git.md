@@ -55,7 +55,6 @@ Studio Pro can use Windows Authentication for Git service providers that support
 
 You can enable Windows Authentication in [Git Preferences settings](/refguide/preferences-dialog/#enable-windows-authentication).
 
-
 ## Setting Up the Environment
 
 This section describes how to configure a Git versioned app in Studio Pro. You need a Git server and an initially unversioned Mendix app.

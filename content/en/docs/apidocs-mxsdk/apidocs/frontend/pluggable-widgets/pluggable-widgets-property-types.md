@@ -492,6 +492,7 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 `<actionVariables>` — Defines variables a widget provides when calling [execute() on an ActionValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#execute). The variables are made available in Studio Pro when configuring [Call a Microflow](/refguide/on-click-event/#call-microflow) and [Call a Nanoflow](/refguide/on-click-event/#call-nanoflow) actions.
 
 `<actionVariable>` (required one or more) — Represents a primitive value provided by the widget as an argument when calling `ActionValue.execute()`. The variable is defined by the following attributes:
+
 * `key` (required) — The identifier of the variable used in Studio Pro and the Pluggable Widgets API.
 * `type` (required) — The type of the value that the variable represents. Supported types and their corresponding Typescript type are listed in the table below.
 * `caption` (required) — A short description of the variable that is displayed in Studio Pro.

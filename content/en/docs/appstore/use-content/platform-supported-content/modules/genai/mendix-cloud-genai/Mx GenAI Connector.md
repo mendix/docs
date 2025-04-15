@@ -10,7 +10,7 @@ aliases:
 
 ## Introduction
 
-The Mendix Cloud GenAI connector (delivered as part of [GenAI for Mendix](https://marketplace.mendix.com/link/component/227931)) lets you utilize Mendix Cloud GenAI resource packs directly within your Mendix application. It allows you to integrate generative AI by dragging and dropping common operations from its toolbox. Feel free to contact [genai-resource-packs@mendix.com](mailto:genai-resource-packs@mendix.com) to learn more.
+The [Mendix Cloud GenAI connector](https://marketplace.mendix.com/link/component/239449) lets you utilize Mendix Cloud GenAI resource packs directly within your Mendix application. It allows you to integrate generative AI by dragging and dropping common operations from its toolbox. Feel free to contact [genai-resource-packs@mendix.com](mailto:genai-resource-packs@mendix.com) to learn more.
 
 ### Typical Use Cases
 
@@ -70,24 +70,24 @@ To use this connector, you need configuration keys to authenticate to the Mendix
 
 ### Dependencies {#dependencies}
 
-* Mendix Studio Pro version [9.24.2](/releasenotes/studio-pro/9.24/#9242) or above
+* [GenAICommons](https://marketplace.mendix.com/link/component/239448)
 * [Encryption](https://marketplace.mendix.com/link/component/1011)
 * [Community Commons](https://marketplace.mendix.com/link/component/170)
 
 ## Installation
 
-Add the [dependencies](#dependencies) listed above from the Marketplace. On the Marketplace, the Mendix Cloud GenAI connector is bundled inside of the [GenAI for Mendix](https://marketplace.mendix.com/link/component/227931) which also contains GenAI commons operations and logic. To import this module into your app, follow the instructions in the [Use Marketplace Content](/appstore/use-content/).
+Add the [dependencies](#dependencies) listed above from the Marketplace. To import this module into your app, follow the instructions in the [Use Marketplace Content](/appstore/use-content/).
 
 ## Configuration {#configuration}
 
-After installing the Mendix Cloud GenAI connector, you can find it in the **App Explorer** inside of the **Add-ons** section. The connector includes a domain model and several activities to help integrate your app with the Mendix Cloud GenAI service. To implement the connector, simply use its actions in a microflow. You can find the Mendix GenAI actions in the microflow toolbox. Note that the module is protected, meaning it cannot be modified and the microflow logic is not visible. For details about each exposed operation, see the [Operations](#operations) section below or refer to the documentation provided within the module. For more information on Add-on modules, see [Consuming Add-on Modules and Solutions](/refguide/consume-add-on-modules-and-solutions/).
+After installing the Mendix Cloud GenAI connector, you can find it in the **App Explorer** inside of the **Marketplace modules** section. The connector includes a domain model and several activities to help integrate your app with the Mendix Cloud GenAI service. To implement the connector, simply use its actions in a microflow. You can find the Mendix GenAI actions in the microflow toolbox.
 
 Follow the steps below to get started:
 
 * Make sure to configure the [Encryption module](/appstore/modules/encryption/#configuration) before you connect your app to Mendix Cloud GenAI.
 * Add the module role `MxGenAIConnector.Administrator` to your Administrator **User roles** in the **Security** settings of your app. 
-* Add the `NAV_ConfigurationOverview_Open` microflow (**USE_ME** > **Configuration**) to your **Navigation** or register your key using the `Configuration_RegisterByString` microflow.
-* Complete the runtime setup of Mendix Cloud GenAI configuration by navigating to the page through the microflow mentioned above. Import a key generated in the [portal](https://genai.home.mendix.com) or provided to you and click **Test Key** to validate its functionality.
+* Add the `Configuration_Overview` page (**USE_ME** > **Configuration**) to your navigation, or add the `Snippet_Configuration` to a page that is already part of your navigation. Alternatively, you can register your key by using the `Configuration_RegisterByString` microflow.
+* Complete the runtime setup of Mendix Cloud GenAI configuration by navigating to the page mentioned above. Import a key generated in the [portal](https://genai.home.mendix.com) or provided to you and click **Test Key** to validate its functionality.
 
 ## Operations
 
@@ -256,7 +256,7 @@ The **Documentation** pane displays the documentation for the currently selected
 
 ## Implementing GenAI with the Showcase App
 
-For more inspiration or guidance on how to use microflows in your logic, Mendix recommends downloading the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475), which demonstrates a variety of example use cases and applies almost all of the Mendix Cloud GenAI operations. The starter apps in the [Mendix Components](/appstore/modules/genai/#mendix-components) list can also be used as inspiration or simply adapted for a specific use case.
+For more guidance on how to use microflows in your logic, Mendix recommends downloading the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475), which demonstrates a variety of example use cases and applies almost all of the Mendix Cloud GenAI operations. The starter apps in the [Mendix Components](/appstore/modules/genai/#mendix-components) list can also be used as inspiration or simply adapted for a specific use case.
 
 ## Troubleshooting {#troubleshooting}
 
@@ -280,7 +280,22 @@ To check your JDK version and update it if necessary, follow these steps:
     2. You may also need to update Gradle. To do this, go to **Edit** > **Preferences** > **Deployment** > **Gradle directory**. Click **Browse** and select the appropriate Gradle version from the Mendix folder. For Mendix 10.10 and above, use Gradle 8.5. For Mendix 10 versions below 10.10, use Gradle 7.6.3. Then save your settings by clicking **OK**.
     3. Rerun the project.
 
-## Read More{#readmore}
+### Migrating From Add-on Module to App Module
+
+Since the module has been changed with version 3.0.0 from an add-on to an app module, updating it via the marketplace will require a migration to ensure it works properly with your application.
+
+To do this, follow the steps below:
+
+1. Back up your data — either as a full database backup or by exporting individual components:
+
+    * Keys for MxCloud GenAI Resource Packs can be reimported later.
+    * Incoming associations to the protected module’s entities will be deleted.
+2. Delete the add-on module: MxGenAIConnector.
+3. Download the updated module from the Marketplace. Note that the module is now listed under the **Marketplace modules** category in the **App Explorer**.
+4. Test your application locally to ensure everything functions as expected.
+5. Restore any lost data in deployed environments. Typically, keys and incoming associations to the protected module need to be reset.
+  
+## Read More {#readmore}
 
 For Anthropic Claude-specific documentation, refer to:
 

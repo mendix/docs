@@ -93,6 +93,8 @@ To run a Mendix app, Mendix Studio Pro uses the following ports by default. If y
 
 For more information on ports and modifying Studio Pro's default ports, see [Configurations](/refguide/configuration/) and the [Troubleshooting Common Mobile Issues](/refguide/mobile/getting-started-with-mobile/prerequisites/#troubleshooting) section of *Native App Prerequisites and Troubleshooting*.
 
+For information on how to ensure the smooth operation of Mendix AI Assistance (Maia), see the [Network Configuration Requirements](/refguide/mendix-ai-assistance/#maia-network-requirement) section in *Mendix AI Assistance (Maia)*.
+
 ### File Comparison
 
 {{% alert color="info" %}}
@@ -226,7 +228,7 @@ Current support:
 {{% alert color="warning" %}}
 Each app must have its own database. Mendix apps cannot share data by sharing the same database.
 
-If you want two apps to share the same database, then you need to share the data from one app to the other using APIs. In Mendix, these are supported by [Data Hub](/data-hub/share-data/) or the REST and OData services described in the [Integration](/refguide/integration/) section of the *Studio Pro Guide*. This is referred to as a microservices architecture.
+If you want two apps to share the same database, then you need to share the data from one app to the other using APIs. In Mendix, these are supported by the [Catalog](/refguide/share-data/) or the REST and OData services described in the [Integration](/refguide/integration/) section of the *Studio Pro Guide*. This is referred to as a microservices architecture.
 
 For more information on why data cannot be shared between apps, see [Data Storage](/refguide/data-storage/#databases). Use the [Database Replication](/appstore/modules/database-replication/) module if you need to copy the data from one app to another.
 {{% /alert %}}

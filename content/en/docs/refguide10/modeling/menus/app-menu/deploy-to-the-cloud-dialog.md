@@ -7,7 +7,7 @@ url: /refguide/deploy-to-the-cloud-dialog/
 
 This menu option dialog creates a versioned deployment package and deploys it to your environment in Mendix Cloud.
 
-{{< figure src="/attachments/refguide/modeling/menus/app-menu/deploy-to-the-cloud-dialog/deploy-to-the-cloud.png" alt="Deploy to the Cloud dialog" width="500" >}}
+{{< figure src="/attachments/refguide10/modeling/menus/app-menu/deploy-to-the-cloud-dialog/deploy-to-the-cloud.png" alt="Deploy to the Cloud dialog" width="500" >}}
 
 ## Development Line
 

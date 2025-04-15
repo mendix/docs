@@ -2,7 +2,7 @@
 title: "Integrate Function Calling into Your Mendix App"
 url: /appstore/modules/genai/how-to/howto-functioncalling/
 linktitle: "Integrating Function Calling"
-weight: 30
+weight: 40
 description: "This document guides you through integrating and implementing function calling in your Mendix application to enhance functionality."
 aliases:
     - /appstore/modules/genai/using-genai/howto-functioncalling/
@@ -25,7 +25,7 @@ Before integrating function calling into your app, make sure you meet the follow
 
 * Be on Mendix Studio Pro 10.12.4 or higher.
 
-* Installation: Install the [GenAI For Mendix](https://marketplace.mendix.com/link/component/227931) bundle from the Mendix marketplace. If you start with the Blank GenAI App, skip this installation.
+* Install the [Mendix GenAI Connector](https://marketplace.mendix.com/link/component/239449) and [GenAICommons](https://marketplace.mendix.com/link/component/239448) modules (version 2.2.0 and above) from the Mendix Marketplace. If you start with the Blank GenAI App, you can skip this installation.
 
 * Intermediate knowledge of the Mendix platform: Familiarity with Mendix Studio Pro, microflows, and modules.
 
@@ -46,7 +46,7 @@ In this example, two functions will be implemented with the following purposes:
 
 Selecting the infrastructure for integrating GenAI into your Mendix application is the first step. Depending on your use case and preferences, you can choose from the following options:
 
-* [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/MxGenAI/): The Mendix Cloud GenAI Connector is part of the [GenAI For Mendix](https://marketplace.mendix.com/link/component/227931) bundle on the marketplace, allowing you to utilize Mendix Cloud GenAI Resource Packs directly within your Mendix application.
+* [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/): The [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) allows you to utilize Mendix Cloud GenAI Resource Packs directly within your Mendix application.
 
 * [OpenAI](/appstore/modules/genai/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) supports both OpenAI’s platform and Azure’s OpenAI service.
 

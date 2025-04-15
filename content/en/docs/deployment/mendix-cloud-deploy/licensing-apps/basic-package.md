@@ -11,7 +11,7 @@ description: "Obtaining a Mendix Basic Package Node"
 You can only run a Mendix app in production on Mendix Cloud if the app is linked to a licensed node. If you have an app that you want to license, you can do this simply and cost-effectively by ordering the [Mendix Basic](https://www.mendix.com/pricing/basic-package/) package.
 
 {{% alert color="info" %}}
-After you order the Mendix Basic package, it may take up to 48 hours before your licensed node is ready for use.
+After you submit your order, it will be sent to our Order Desk Team and they will contact you in around five working days.
 {{% /alert %}}
 
 {{% alert color="info" %}}

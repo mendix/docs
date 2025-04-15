@@ -8,7 +8,7 @@ weight: 95
 
 **Call microflow** is used to call a selected [microflow](/refguide/microflow/). 
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/call-microflow/call-microflow-example.jpg" alt="Call Microflow Example" width="250" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/workflows/workflow-elements/call-microflow/call-microflow-example.jpg" alt="Call Microflow Example" width="250" class="no-border" >}}
 
 ## Properties
 

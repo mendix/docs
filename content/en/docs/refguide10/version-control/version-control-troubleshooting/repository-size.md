@@ -113,7 +113,7 @@ This tool is executed on a Mendix Git repository. If your Mendix app is still on
 
 The cleanup tool will reduce the size of the repository to a minimum, by only retaining the latest commit of the main branch. This means that all work on branches that have been merged to main branch are kept, but the commits themselves (author, changes per commit, ...) are not.
 
-{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/git_fixer_mode.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/version-control/troubleshoot-version-control-issues/git_fixer_mode.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 Uncommitted work, or work committed to branches that have not been merged to the main branch, will be permanently removed from the repository.
@@ -233,7 +233,7 @@ When reaching out to Mendix Support, please include:
 
 In case you are still deciding whether to migrate from SVN to Git, or you are already on Git and want to get a recommendation on what steps to take to solve or prevent Git-related performance issues, please follow the decision trees in the image below:
 
-{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/migration-advice-combined.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/version-control/troubleshoot-version-control-issues/migration-advice-combined.png" class="no-border" >}}
 
 In Studio Pro 10.18 and above, you can manually convert branches to MPRv2. In future versions, branch conversion will happen automatically. For more information on the format, see the [MPRv2 Format](#mprv2) section.
 For more information on partial clone, see [Clone Type](/refguide/clone-type/).

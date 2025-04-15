@@ -26,8 +26,6 @@ The **Security Overview** summarizes the app's security for a selected user role
 3. Optionally, select a module in the sidebar of the overview.
     Selecting a module filters the content in the **Entity access**, **Page access**, **Microflow access**, and **Nanoflow access** tabs. The list of modules does not show the System module or any protected modules.
 
-
-
 ## Security Overview Contents
 
 The **Security Overview** page has the following tabs:

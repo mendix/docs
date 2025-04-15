@@ -170,6 +170,10 @@ Hardware and driver issues may cause performance problems when running Studio Pr
 This functionality is currently available in Studio Pro 9.24.
 {{% /alert %}}
 
+### Feedback Survey
+
+When the **Show feedback survey periodically** setting is enabled, Studio Pro will periodically display a feedback survey to gather input on your experience. This helps Mendix improve the product based on user feedback. For more information, see [Feedback Survey](/refguide9/feedback-survey/).
+
 ## Work Environment Tab
 
 ### Default Page Editor {#default-page-editor}

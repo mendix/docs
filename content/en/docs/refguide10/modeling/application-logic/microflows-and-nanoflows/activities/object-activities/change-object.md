@@ -16,7 +16,7 @@ The **Change object** activity can be used to change the members of an object. T
 
 An example of change object properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/change-object/change-properties.png" alt="change object properties" width="700px" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/change-object/change-properties.png" alt="change object properties" width="700px" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

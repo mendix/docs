@@ -26,7 +26,7 @@ The name of the configured value is shown inside the text box widget, between sq
 
 For example, here are two text boxes shown in design mode that allow the end-user to see, and set, the **Name** of a customer. The difference is that the top text box in this example is configured with an attribute while the bottom uses a variable defined on the page.
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/text-box/text-box.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/pages/input-widgets/text-box/text-box.png" class="no-border" >}}
 
 ## Properties Pane
 

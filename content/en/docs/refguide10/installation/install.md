@@ -31,7 +31,7 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 
 1. Open the downloaded Mendix Studio Pro executable. It is named: *Mendix-10.X.X-Setup.exe*. Then, click **Next**:
 
-    {{< figure src="/attachments/refguide/installation/install/setup-wizard.png"  class="no-border" >}}
+    {{< figure src="/attachments/refguide10/installation/install/setup-wizard.png"  class="no-border" >}}
 
 2. Select **I accept the terms in the License Agreement** and click **Next**.
 
@@ -156,7 +156,7 @@ You can download and install [portable version](https://git-scm.com/downloads/wi
 
 Versions of Mendix Studio Pro that are installed via the portable installer do not show up in the Mendix Version Selector where you can manage Mendix versions. However, you can manually add a Studio Pro version by clicking **Add custom version** in **Manage Mendix versions** and specifying the path to the executable file of the Studio Pro version:
 
-{{< figure src="/attachments/refguide/installation/install/version-selector.png"  alt="Version Selector" width="450" class="no-border" >}}
+{{< figure src="/attachments/refguide10/installation/install/version-selector.png"  alt="Version Selector" width="450" class="no-border" >}}
 
 ## Signing In
 
@@ -166,7 +166,7 @@ You can sign in with your Mendix account or with your own company account if thi
 
 In some situations, (for example, when your network has a firewall or proxy server), a warning about an untrusted certificate may appear during the sign-in process:
 
-{{< figure src="/attachments/refguide/installation/install/untrusted-certificate.png" width="600px" class="no-border" >}}
+{{< figure src="/attachments/refguide10/installation/install/untrusted-certificate.png" width="600px" class="no-border" >}}
 
 To continue, you may accept the certificate for the current session by clicking **Accept for this session**, or install it permanently by clicking **View certificate information**. 
 

@@ -48,7 +48,7 @@ For information on how to configure the connector, see [External Database Connec
 
 * Download the latest [External Database Connector](https://marketplace.mendix.com/link/component/219862).
 * If certificate-based authentication is required for PostgreSQL connections, ensure that all necessary certificates are added before running the app.
-* To test the connection and execute queries during design time, Ensure to run your app locally.
+* To test the connection and execute queries during design time, ensure to run your app locally.
 
 ## Connect to the External Database
 

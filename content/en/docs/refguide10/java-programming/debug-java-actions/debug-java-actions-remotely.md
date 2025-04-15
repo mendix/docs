@@ -28,7 +28,7 @@ To edit the server configuration with extra JVM parameters, follow these steps:
 
     `-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005`
 
-    {{< figure src="/attachments/refguide/java-programming/debug-java-actions/debug-java-actions-remotely/18580063.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/java-programming/debug-java-actions/debug-java-actions-remotely/18580063.png" class="no-border" >}}
 
 4. Run your application.
 
@@ -36,7 +36,7 @@ To edit the server configuration with extra JVM parameters, follow these steps:
 
 In your Java IDE, you need to configure remote debugging.
 
-{{< figure src="/attachments/refguide/java-programming/debug-java-actions/debug-java-actions-remotely/eclipse-debug.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/java-programming/debug-java-actions/debug-java-actions-remotely/eclipse-debug.png" class="no-border" >}}
 
 To configure Eclipse, follow these steps:
 

@@ -121,7 +121,7 @@ Clicking the filter bar will open the **Filter by** side panel. In this side pan
 
 ## Opening Feedback in Inbox or Archive{#feedback-details}
 
-On the [Inbox](#inbox) and [Archive](#archive) tabs, you can open feedback by clicking it in the list. If you click the **ID** of the feedback, the feedback details page will open. If you click a place other than the **ID** of the feedback, a side panel will open. Either the feedback details page or the side panel contains two tabs: [Feedback](#feedback) and [Contact Reporter](#contact-reporter).
+On the [Inbox](#inbox) and [Archive](#archive) tabs, you can open feedback by clicking it in the list. If you click the **ID** of the feedback, the feedback details page will open. If you click a place other than the **ID** of the feedback, a side panel will open. Either the feedback details page or the side panel contains two tabs: [Feedback](#feedback) and [Reporter Comments](#contact-reporter).
 
 ### Feedback Tab {#feedback}
 
@@ -183,9 +183,9 @@ The **Feedback** tab shows the following items:
 
 * **Communication** – This section shows all the comments on this feedback from your team. You can leave comments here and attach attachments to each comment. Comments submitted to this section are only visible to your team members.
 
-### Contact Reporter Tab {#contact-reporter}
+### Reporter Comments Tab {#contact-reporter}
 
-The **Contact Reporter** tab allows you to read messages from the reporter and reply to them. Whenever the reporter sends a message, it is shown in this section. Once you reply to a message from the reporter, they receive an email. When multiple feedback items are linked, the system only sends an email to the reporter of this specific feedback item, not other associated feedback items in the same group.
+The **Reporter Comments** tab allows you to read messages from the reporter and reply to them. Whenever the reporter sends a message, it is shown in this section. Once you reply to a message from the reporter, they receive an email. When multiple feedback items are linked, the system only sends an email to the reporter of this specific feedback item, not other associated feedback items in the same group.
 
 For more information, see the [What Happens to a User After They Submit Feedback](#what-happens-to-user) section.
 

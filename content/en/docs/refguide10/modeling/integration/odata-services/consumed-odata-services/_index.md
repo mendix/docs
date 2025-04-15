@@ -63,7 +63,7 @@ There are some limitations on which actions can be consumed. These are described
 
 When an external entity is dragged into the domain model, or when an external action is used in a microflow, the  **Consumed OData service** document that is added to the model displays the values of the metadata contract from the service endpoint.
 
-In the [Integration pane](/refguide/integration-pane/), the service and the entity are shown as consumed both in the search results pane and also in the **Used in your App** section.
+In the [Integration pane](/refguide/integration-pane/), the service and the entity are shown as consumed both in the search results pane and also in the **Used in this app** section.
 
 If the metadata contract at the specified service endpoint is different to the contract in the current app model, this is indicated in the [Integration pane](/refguide/integration-pane/) search results and the **Properties** pane for the service with an **Update** icon (a blue arrow).
 

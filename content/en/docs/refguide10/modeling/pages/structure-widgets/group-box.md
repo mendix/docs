@@ -11,7 +11,7 @@ weight: 30
 
 A group box can be used to visually group related widgets together. Group boxes are displayed as a frame around nested widgets with an optional header. Group boxes can be configured to collapse and expand dynamically.
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/group-box/group-box.jpg" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/pages/structure-widgets/group-box/group-box.jpg" class="no-border" >}}
 
 ## Properties Pane
 

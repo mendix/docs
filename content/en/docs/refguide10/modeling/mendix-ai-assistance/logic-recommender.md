@@ -38,7 +38,7 @@ In Studio Pro 10.12 and above, it is enabled by default. You can disable it via 
 
 Logic Recommender is displayed as a blue plus in the flow. When you want to view recommendations on a particular flow, you can hover the mouse over that flow and click on the blue plus, or navigate to it with the keyboard and press <kbd>Enter</kbd>.
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/logic-bot-recommender/assist-bulb.png" max-width=50% >}}
+{{< figure src="/attachments/refguide10/modeling/mendix-ai-assistance/logic-bot-recommender/assist-bulb.png" max-width=50% >}}
 
 {{% alert color="info" %}}
 In Studio Pro 10.20 and above, if the sequence flow is too short or is selected, the blue plus is hidden. To open Logic Recommender in such cases, right-click the flow to open its context menu, and click **Open recommender**.
@@ -46,21 +46,21 @@ In Studio Pro 10.20 and above, if the sequence flow is too short or is selected,
 
 A dialog box is shown with recommendations of objects or activities to insert. This list initially contains the top 10 contextual suggestions. You can select an element directly from the recommendation list:
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/logic-bot-recommender/initial-recommendations.png" max-width=80% >}}
+{{< figure src="/attachments/refguide10/modeling/mendix-ai-assistance/logic-bot-recommender/initial-recommendations.png" max-width=80% >}}
 
 You can also type in the search box to search for the elements that you want to add to the flow. Logic Recommender works with fuzzy search, which means that it finds direct matches first and then any matches in the recommendations. For instance, you can use `cr ob`  to search for the recommendations that contain **Create Object**.
 
 The search is based on your microflow or nanoflow parameters, domain model entities, or the documents in your app. You can search for generic activities or elements from the toolbox:
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/logic-bot-recommender/search-toolbox.png" max-width=80% >}}
+{{< figure src="/attachments/refguide10/modeling/mendix-ai-assistance/logic-bot-recommender/search-toolbox.png" max-width=80% >}}
 
 You can search for sub-actions of an aggregate list or list operation activity, such as sum, count, or average:
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/logic-bot-recommender/search-sub-actions.png" max-width=100% >}}
+{{< figure src="/attachments/refguide10/modeling/mendix-ai-assistance/logic-bot-recommender/search-sub-actions.png" max-width=100% >}}
 
 You can also use the search to call microflows or nanoflows with a concrete document:
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/logic-bot-recommender/search-sub-flows.png" max-width=80% >}}
+{{< figure src="/attachments/refguide10/modeling/mendix-ai-assistance/logic-bot-recommender/search-sub-flows.png" max-width=80% >}}
 
 Choose a suggestion and click it to accept it. You can also choose a suggestion with the arrow keys and press the <kbd>Enter</kbd> key to accept it. The suggested element will be added to the flow and the Recommender will open on the next flow so that you can continue adding activities.
 
@@ -74,7 +74,7 @@ To use this older version of Logic Recommender, do the following:
 
 1. Click the icon to see the next best action recommendations:
 
-    {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/logic-bot-recommender/mx-assist-recommendations.png" alt="Logic Bot Recommendations" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/mendix-ai-assistance/logic-bot-recommender/mx-assist-recommendations.png" alt="Logic Bot Recommendations" class="no-border" >}}
 
 2. Click one of the recommended activities to insert it into a microflow.
 

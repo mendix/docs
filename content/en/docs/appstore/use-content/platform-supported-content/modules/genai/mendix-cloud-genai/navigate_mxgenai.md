@@ -51,7 +51,7 @@ To create a new key, click **Create Key**, add a description, and save the chang
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/GenAIResource_KeyGeneration.png" >}}
 
-Once created, the key can be used in the Mendix application via the Mendix Cloud GenAI Connector, which is part of the GenAI for the Mendix bundle. When you create a key for a knowledge base, an embedding key is automatically generated and marked accordingly in the keys overview.
+Once created, the key can be used in the Mendix application via the Mendix Cloud GenAI Connector. When you create a key for a knowledge base, an embedding key is automatically generated and marked accordingly in the keys overview.
 
 ### Content (Only for Knowledge Bases)
 

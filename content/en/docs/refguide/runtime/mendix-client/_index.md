@@ -256,8 +256,8 @@ When the Mendix client is running, it sets a number of technical cookies to reco
 | **mx-cookie-test** | Client | Tests whether the browser supports cookies | `/` | deleted immediately after setting it | `false` |
 | **OfflineLogout** | Client | Used in offline applications when there is no connection and tells the runtime to logout on the next request | `/` | 1 year for offline sessions¹ |  `false` | 
 | **originURI** | index.html | Tells the client where to redirect to if a user is required to log in | `/` | until user closes their browser (session cookie) |  `false` | 
-| **DeviceType** | Runtime | Holds the type of the device used for the session | `/` | until user closes their browser (session cookie) |  `true` | 
-| **Profile** | Runtime | Holds the navigation profile that is being accessed within the session | `/` | until user closes their browser (session cookie) |  `true` | 
+| **DeviceType** | Runtime | Holds the type of the device used for the session | `/` | 1 year |  `true` | 
+| **Profile** | Runtime | Holds the navigation profile that is being accessed within the session | `/` | 1 year |  `true` | 
 | **SessionTimeZoneOffset** | Runtime | Holds the time zone offset for the session | `/` | until user closes their browser (session cookie) |  `true` | 
 | **xasid** | Runtime | Used for multi-instance fail-over | `/` | until user closes their browser (session cookie) |  `true` |
 | **XASSESSIONID**² | Runtime | Holds the ID of the user's session | `/` | 1 year for offline sessions¹, otherwise based on the session timeout |  `true` | 

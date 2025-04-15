@@ -12,7 +12,7 @@ Exposing view entities instead of the underlying persistable entity takes away t
 
 For this purpose of this use case, the following domain model is used:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/view-entities/decoupling-apis/domain-model.png" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/decoupling-apis/domain-model.png" >}}
 
 For example, you want to make an API call that returns **Products**, and allows you to filter the results by **Category**. 
 
@@ -38,11 +38,11 @@ Create a single view entity and expose it as an OData resource. To do this, foll
 3. Right-click this entity and select **Publish in OData service**. Name this service *POS_ProductCategory*.
 4. Add `ProductId` as a key attribute, then click **OK**.
 
-     {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/decoupling-apis/key-attribute.png" >}}
+     {{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/decoupling-apis/key-attribute.png" >}}
 
 5. In the **Entity** field, double-click the **ProductId** attribute. 
 6. Uncheck the box **Can be empty**, then click **OK**. 
    
-    {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/decoupling-apis/can-be-empty.png" >}}
+    {{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/decoupling-apis/can-be-empty.png" >}}
 
 7. Run your app locally and test the functionality. 

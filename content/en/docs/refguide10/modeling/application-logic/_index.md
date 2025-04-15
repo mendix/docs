@@ -11,7 +11,7 @@ While you can create a simple Mendix app using widgets on pages, you can unleash
 
 Application logic in Mendix can be implemented via [microflows](/refguide/microflows/), [nanoflows](/refguide/nanoflows/), and [workflows](/refguide/workflows/). These are visual ways of expressing what traditionally ends up in a textual programming code. 
 
-{{< figure src="/attachments/refguide/modeling/application-logic/logic-comparison-diagram.png" class="no-border">}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/logic-comparison-diagram.png" class="no-border">}}
 
 Microflows and nanoflows are short-lived in nature. They can perform actions such as creating and updating objects, customizing button functionalities, showing pages, and making choices. For example, you can use a microflow to customize a **Save** button for validating end-users' input data. For more instructions, see the [Defining Logic Using Microflows](/quickstarts/responsive-web-app/#microflow-use-case) section in *Building a Responsive Web App*. An example of a nanoflow is to use it to create a button that allows end-users to take a picture. For more instructions, see the [Using a Nanoflow to Call a JavaScript Action](/quickstarts/native-mobile-app/#nanoflow-use-case) section in *Adding a Native Mobile App*. 
 

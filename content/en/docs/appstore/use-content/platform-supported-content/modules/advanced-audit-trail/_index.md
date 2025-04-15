@@ -40,7 +40,8 @@ Features of Advanced Audit Trail include the following:
 * Supports decoupling—when the external system cannot be reached, the snapshots will be stored in the local database, thus ensuring that the main system will keep on working without a dependency on the external database
 * Offers auditor interface to search through the external database (across entities)
 * Supports full-text search on data and search on changed data
-* supports configuring different permissions for audit data for different users
+* Supports configuring different permissions for audit data for different users
+* Provides support for advanced filtering in search criteria
 
 ### Limitations
 
@@ -197,6 +198,22 @@ The table below provides a detailed comparison between the Advanced Audit Trail 
 | Guaranteed completeness of audit trail in case of disaster| Yes | No |
 | Additional custom data can be added to an audit trail snapshot (e.g. "on behalf of" in case of REST service)| Yes | No |
 | Built-in features for username and hash (e.g. password) scrambling| Yes | No |
+
+## Search Criteria and Advanced Filtering
+
+The updated search functionality supports both exact matches and flexible filtering based on field type:
+
+* Exact Match Fields
+
+    * **Execution-ID**, **Transaction-ID**, Search for object **By code**, and **By GUID** – Use exact values for these fields to ensure precise results.
+    * **Environment to search in** and **Limit** – Specify the target environment and set the maximum number of results.
+    * **Time window** – Define a **Start** and **End** time with an option to **Sort by timestamp** (*Ascending* or *Descending*).
+    * **Object is created** and **Object is deleted** – Include or exclude records based on their created or deleted state using Boolean fields.
+
+* Flexible Match Fields
+
+    * Search for object **By entity**, **Username**, and **Role** – Search using partial matches for entity types, usernames, and user roles.
+    * **Additional information** and **Stack trace** – Include supplementary data to refine your search.
 
 ## Read More
 

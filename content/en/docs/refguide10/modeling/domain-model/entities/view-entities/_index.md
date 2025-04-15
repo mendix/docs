@@ -31,7 +31,7 @@ Your app must use OQL version 2 to use view entities. You can change this settin
 
 Double-click a view entity to open its Properties dialog box. An example of a view entity's properties dialog box is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/use-view-entities/customer-with-address.png" width="500" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/use-view-entities/customer-with-address.png" width="500" >}}
 
 View entity properties consist of the following sections:
 

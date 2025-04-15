@@ -42,7 +42,7 @@ Once the Mendix Data Loader is deployed, follow these steps to configure and use
 4. Click **Create** to create a new data source.
     1. Enter a **Name** for your data source within the Data Loader.
     2. Enter an **API endpoint** – that is, the base endpoint for the OData resource in your Mendix application, for example, `https://yourmendixapp.mendixcloud.com/odata/snowflakedata/v1/`.
-    3. Use the radio button **Use Delta Ingestion** to specify if you want to ingest all exposed data with every ingestion, or if you want to ingest only data that was newly created or changed since the last ingestion for this data source.
+    3. Use the **Use Delta Ingestion** check box to specify if you want to ingest all exposed data with every ingestion, or if you want to ingest only data that was newly created or changed since the last ingestion for this data source.
     4. Click **Save**.
     5. Grant the application **CREATE DATABASE** and **EXECUTE TASK** privileges. This step is necessary for the application to create the staging database for data ingestion and to execute tasks.
 
@@ -93,11 +93,21 @@ The first ingestion performed for the data source with this setting enabled inge
 
 ### Enabling ChangedDate for Delta Ingestion
 
-To use delta ingestion, you must enable the **changedDate** system member on the exposed entities. To do this, perform the following steps:
+To use delta ingestion, you must expose a Date and Time attribute with the name **changedDate** in your OData resource. This attribute is used to track changes and must follow the `yyyy-MM-dd'T'HH:mm:ss.SSS` format.
 
-1. Navigate to the entities in your domain model.
-2. In their properties, select the **Store 'changedDate'** radio button.
-3. Navigate to your OData resource and expose the **changedDate** attribute.
+{{% alert color="info" %}}This format should be the default for date attributes in Mendix when exposed through OData.{{% /alert %}}
+
+To provide this date choose one of the following options:
+
+* Use the **changedDate** system member:
+
+    1. Navigate to the entities in your domain model.
+    2. In their properties, select the **Store changedDate** check box.
+        This option automatically tracks when each object is modified.
+
+* Use any custom date attribute - Use any Date and Time attribute from your domain model, with any name you choose. Make sure to expose it in OData under the name **changedDate**.
+
+In both cases, make sure the **changedDate** attribute is exposed in your OData resource so it can be used during delta ingestion.
 
 ### Handling Deleted Objects
 

@@ -12,7 +12,7 @@ Use a view entity to create a pivot table. A pivot table is a table that contain
 
 For this purpose of this use case, the following domain model is used:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/view-entities/pivot-table-view-entities/domain-model.png" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/pivot-table-view-entities/domain-model.png" >}}
 
 In this example, you run a business and this is your shop's domain model. It includes:
 
@@ -73,7 +73,7 @@ With view entities, you can take the relevant component of `DateTime` as a colum
 
 5. Click **Run Query** to preview the data.
 
-    {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/pivot-table-view-entities/orderpivotve.png" >}}
+    {{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/pivot-table-view-entities/orderpivotve.png" >}}
 
 6. Click **OK** to save. 
 7. Create a page that shows the pivot table by right-clicking the new entity > **Generate overview pages**.

@@ -8,6 +8,7 @@ aliases:
     - /catalog/write-data/
     - /howto/integration/write-data/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+# SB: The images on this page are created using the Lato-LandscapeDemoApp (https://sprintr.home.mendix.com/link/project/1b515494-d818-4358-8c91-6c3d54e9cae5)
 ---
 
 ## Introduction

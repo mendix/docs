@@ -25,7 +25,7 @@ The different files serve different purposes:
 
 If you do not create these files, the default error page will be used for each scenario:
 
-{{< figure src="/attachments/howto/front-end/custom-error-page/custom-error-page.png" class="no-border" >}}
+{{< figure src="/attachments/howto10/front-end/custom-error-page/custom-error-page.png" class="no-border" >}}
 
 This how-to teaches you how to do the following:
 
@@ -46,19 +46,19 @@ If you are using Atlas 3, do the following:
 1. Open the local folder of your app.
 2. Go to **theme**:
 
-    {{< figure src="/attachments/howto/front-end/custom-error-page/theme.png" class="no-border" >}}
+    {{< figure src="/attachments/howto10/front-end/custom-error-page/theme.png" class="no-border" >}}
 
 3. Go to **web**:
 
-    {{< figure src="/attachments/howto/front-end/custom-error-page/web.png" class="no-border" >}}
+    {{< figure src="/attachments/howto10/front-end/custom-error-page/web.png" class="no-border" >}}
 
 4. Create a new folder named *error_page*:
 
-    {{< figure src="/attachments/howto/front-end/custom-error-page/error-page.png" class="no-border" >}}
+    {{< figure src="/attachments/howto10/front-end/custom-error-page/error-page.png" class="no-border" >}}
 
 5. In the **error_page** folder, place your *offline.html* file:
 
-    {{< figure src="/attachments/howto/front-end/custom-error-page/offline.png" class="no-border" >}}
+    {{< figure src="/attachments/howto10/front-end/custom-error-page/offline.png" class="no-border" >}}
 
     Optionally, you can also create *404.html* and *403.html* pages.
 
@@ -98,23 +98,23 @@ To create a custom error page inside your theme module, do the following:
 1. Open your app's local folder.
 1. Go to **themesource**:
 
-   {{< figure src="/attachments/howto/front-end/custom-error-page/themesource.png" class="no-border" >}}
+   {{< figure src="/attachments/howto10/front-end/custom-error-page/themesource.png" class="no-border" >}}
 
 1. Open your theme module's folder:
 
-   {{< figure src="/attachments/howto/front-end/custom-error-page/module-themesource.png" class="no-border" >}}
+   {{< figure src="/attachments/howto10/front-end/custom-error-page/module-themesource.png" class="no-border" >}}
 
 1. Open the **public** folder:
 
-   {{< figure src="/attachments/howto/front-end/custom-error-page/public.png" class="no-border" >}}
+   {{< figure src="/attachments/howto10/front-end/custom-error-page/public.png" class="no-border" >}}
 
 1. Create a new folder named *error_page*:
 
-   {{< figure src="/attachments/howto/front-end/custom-error-page/public-error-page.png" class="no-border" >}}
+   {{< figure src="/attachments/howto10/front-end/custom-error-page/public-error-page.png" class="no-border" >}}
 
 1. In the **error_page** folder, place your *offline.html*, *404.html*, and/or *403.html* files:
 
-   {{< figure src="/attachments/howto/front-end/custom-error-page/offline.png" class="no-border" >}}
+   {{< figure src="/attachments/howto10/front-end/custom-error-page/offline.png" class="no-border" >}}
 
 Now you have a custom error page inside a re-usable theme module! When this module is imported into other apps, its custom error pages will automatically become available.
 

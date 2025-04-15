@@ -4,7 +4,7 @@ url: /refguide/consumed-rest-service/
 description: "Describes the configuration and usage of the new Consumed REST service document."
 weight: 5
 aliases:
-    - /refguide/consumed-rest-services-beta
+    - /refguide/consumed-rest-services-beta/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
@@ -95,11 +95,11 @@ To add more requests from your existing contract, do the following:
 
 1. In the **Request** field, click **Add Request**:
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-service/add-request-button.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-service/add-request-button.png" class="no-border" width="400" >}}
 
 2. In the **Add Request(s)** dialog box, select the additional requests you want to add to the document, then click **Add**.
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-service/add-request.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-service/add-request.png" class="no-border" width="400" >}}
 
 To create a new blank request, click **New** in the **Add Request(s)** dialog box.
 
@@ -110,7 +110,7 @@ You can configure basic authentication to use for all requests in your document.
 1. Click **Authentication**.
 2. In the **Authentication method** field, click the drop-down and select **Basic authentication**. 
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-service/authentication-setup.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-service/authentication-setup.png" >}}
 
 3. Select a constant or create a new one for your username and password. To create a new constant, follow these steps:
    1. Next to **Username** or **Password**, click **Select** > **New**.
@@ -159,8 +159,6 @@ You can add a header for any HTTP request you have specified in your document. T
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-service/header-example.png" class="no-border"  width="300" >}}
 
 2. In the **Key** field, click the drop-down and choose from the list of the most commonly used HTTP headers. You can also create a custom header by typing directly in the key field and adding a value in the **Value** field.
-
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-service/accept-header.png" class="no-border"  width="500" >}}
 
 3. Click **OK**. To test the header, click **Send**.
 

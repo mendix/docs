@@ -10,7 +10,7 @@ The **WorkflowContext** parameter provides the means by which you can pass busin
 
 In the workflow editor, you can see the **Workflow Context** parameter in the upper-left corner. In the image below, the parameter type (the specified entity) is shown after the colon:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/workflow-parameters/workflow-parameter.png" max-width=50% class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/application-logic/workflows/workflow-elements/workflow-parameters/workflow-parameter.png" max-width=50% class="no-border" >}}
 
 ## Output Section
 

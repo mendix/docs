@@ -307,6 +307,7 @@ To override this setting add below parameter to JDBC URL
 ```sql
 EnableArrow=0
 ```
+
 For more information, see:
 
 * [Java 21 Support with Databricks](https://community.databricks.com/t5/data-engineering/java-21-support-with-databricks-jdbc-driver/td-p/49297) in Databricks documentation

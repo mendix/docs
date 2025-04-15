@@ -1,7 +1,7 @@
 ---
 title: "Native Template 13"
 url: /releasenotes/mobile/nt-13-rn/
-weight: 5
+weight: 30
 description: "Native Template 13 release notes."
 ---
 
@@ -29,7 +29,7 @@ For more information on cookie encryption, see [Encrypting Session Cookies](/ref
 * **react-native-image-picker:** 7.2.3
 * **@react-native-community/netinfo:** 11.4.1
 
-- We changed the bottom sheet library to **@gorhom/bottom-sheet**
+* We changed the bottom sheet library to **@gorhom/bottom-sheet**
 
 ### Upgrade Instructions {#upgrade-instructions}
 

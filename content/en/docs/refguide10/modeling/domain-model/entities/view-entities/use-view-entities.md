@@ -38,11 +38,11 @@ View entities offer an additional powerful way to improve reusability, readabili
 
 For example, the view entity pictured below lists all customers at an organization that are over age 18. The entity includes their full name, age, and delivery and billing addresses.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/use-view-entities/customer-with-address.png" width="500" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/use-view-entities/customer-with-address.png" width="500" >}}
 
 Age is determined for each customer by calculating the difference in years between the current day and the customer’s date of birth. Another view entity can then count the number of customers that were born in each decade and group them appropriately. 
 
-{{< figure src="/attachments/refguide/modeling/domain-model/use-view-entities/customer-per-decade.png" width="500" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/use-view-entities/customer-per-decade.png" width="500" >}}
 
 The original customer view included address information, but most database optimizers will see that this information is not relevant when counting customers by age, so this information is excluded when retrieving the data. However, the information is still present and can be generated, if requested. 
 
@@ -54,7 +54,7 @@ Filtering attributes is one way to configure your queries. For example, assume y
 
 Alternatively, you can store the parameter value in the database, then use that value in your view entity.  For example, the image below is of a view entity that returns the data of the *Product* entity in the language of the current user. 
 
-{{< figure src="/attachments/refguide/modeling/domain-model/use-view-entities/product-language.png" width="500" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/use-view-entities/product-language.png" width="500" >}}
 
 This is done by joining an entity that has all the necessary translations and filtering it by the language of the current user. Coalesce is used to return the default language in case there is no translation is available.
 
@@ -70,17 +70,17 @@ Persistable entity access rules are not applied when using view entities. Instea
 
 In the following example, a view entity is used to implement multitenant security. The view entity *CustomersVE* only returns the customers that belong to the tenant of the current user. Any additional view entity that uses *CustomersVE* instead of the persistable entity *Customer* will only get data belonging to the tenant of the user. 
 
-{{< figure src="/attachments/refguide/modeling/domain-model/use-view-entities/active-tenant.png" width="500" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/use-view-entities/active-tenant.png" width="500" >}}
 
 Instead of joining with the `[%CurrentUser%]` expression, this example joins with a view entity that only returns one object: the current user and related details, such active language and tenant ID. This simplifies use of user information for other view entities. 
 
-{{< figure src="/attachments/refguide/modeling/domain-model/use-view-entities/current-user.png" width="500" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/use-view-entities/current-user.png" width="500" >}}
 
 ## Performance
 
 When working with large amounts of data, using the database optimizer to get required information from your database is usually faster than processing in the application itself. A database knows the data’s characteristics, and therefore can find the fastest path to access the data. It can also aggregate data in the database, minimizing unnecessary data movement. 
 
-In the example above where customers are counted in age brackets, the query result contains approximately 10 objects. To determine these 10 objects, the database may need to process thousands or even millions of objects. A database can do this more efficiently if all objects are read into a Mendix Runtime for aggregation.
+In the example above where customers are counted in age brackets, the query result contains approximately 10 objects. To determine these 10 objects, the database may need to process thousands or even millions of objects. A database can do this more efficiently than if all objects are read into a Mendix Runtime for aggregation.
 
 ## Understanding Query Plans
 
@@ -94,7 +94,7 @@ To understand the performance impact of database queries, it is best to determin
 
 Below, you see how the data for customers per age bracket is fetched by a database (read bottom up):
 
-{{< figure src="/attachments/refguide/modeling/domain-model/use-view-entities/query-plans.png" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/use-view-entities/query-plans.png" >}}
 
 The database follows the below process:
 

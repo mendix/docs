@@ -45,18 +45,20 @@ To help you get started, the following sections list the available GenAI compone
 
 | Asset |  Description | Type | Studio Pro Version |
 |-------------------|---------------------------------------------------|----------------------------------|------------|
-| [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) | Lets you kick-start the development of enterprise-grade AI chatbot experiences. For example, you can use it to create your own private enterprise-ready ChatGPT-like app. | Starter App | 10.12 |
-| [Blank GenAI App](https://marketplace.mendix.com/link/component/227934) | Start from scratch to create a new application with GenAI capabilities and without any dependencies. | Starter App | 10.12 |
-| [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) | Understand what you can build with generative AI. Understand how to implement the Mendix Cloud GenAI, OpenAI, and Amazon Bedrock connectors and how to integrate them with the Conversational UI module. |Showcase App | 9.24.2 |
-| [RFP Assistant Starter App / Questionnaire Assistant Starter App](https://marketplace.mendix.com/link/component/235917) | The RFP Assistant Starter App and the Questionnaire Assistant Starter App leverage historical RFPs (or question-answer pairs) and a continuously updated knowledge base to generate and assist in editing responses to RFPs, offering a time-saving alternative to manually finding similar responses and enhancing the knowledge management process.  | Starter App | 9.24.2 |
-| [Support Assistant Starter App](https://marketplace.mendix.com/link/component/231035) | Learn how to combine common GenAI patterns, such as function calling and RAG to build your support assistant. Connect it to a model like Anthropic Claude via Mendix Cloud GenAI or Amazon Bedrock or use an (Azure) OpenAI subscription.  | Starter App | 10.12 |
-| [GenAI For Mendix](https://marketplace.mendix.com/link/component/227931) |[GenAI Commons](/appstore/modules/genai/commons/): Common capabilities that allow all GenAI connectors to be integrated with the other modules. You can also implement your own connector based on this. | Common Module | 9.24.2 |
-| |[Conversational UI](/appstore/modules/genai/conversational-ui/): Create a Conversational UI for a new or existing app. | UI Module | 9.24.2 |
-| |[Mendix Cloud GenAI Connector](/appstore/modules/genai/MxGenAI/): Connect to Mendix Cloud and utilize Mendix Cloud GenAI resource packs directly within your Mendix application. | Connector Module | 9.24.2 |
-| [OpenAI Connector](/appstore/modules/genai/openai/) | Connect to (Azure) OpenAI. | Connector Module | 9.24.2 |
-| [Amazon Bedrock Connector](/appstore/modules/aws/amazon-bedrock/) | Connect to Amazon Bedrock. Use Retrieve and Generate or Bedrock agents. | Connector Module | 9.24.2 |
-| [PgVector Knowledge Base](/appstore/modules/genai/pgvector/) | Manage and interact with a PostgreSQL *pgvector* Knowledge Base. | Connector Module | 9.24.2 |
-| [Snowflake Showcase App](https://marketplace.mendix.com/link/component/225845) | Learn how to implement the Cortex functionalities in your app. | Showcase App | 10.12 |
+| [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) | Lets you kick-start the development of enterprise-grade AI chatbot experiences. For example, you can use it to create your own private enterprise-ready ChatGPT-like app. | Starter App | 10.21 |
+| [Blank GenAI App](https://marketplace.mendix.com/link/component/227934) | Start from scratch to create a new application with GenAI capabilities and without any dependencies. | Starter App | 10.21 |
+| [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) | Understand what you can build with generative AI. Understand how to implement the Mendix Cloud GenAI, OpenAI, and Amazon Bedrock connectors and how to integrate them with the Conversational UI module. |Showcase App | 10.21 |
+| [RFP Assistant Starter App / Questionnaire Assistant Starter App](https://marketplace.mendix.com/link/component/235917) | The RFP Assistant Starter App and the Questionnaire Assistant Starter App leverage historical RFPs (or question-answer pairs) and a continuously updated knowledge base to generate and assist in editing responses to RFPs, offering a time-saving alternative to manually finding similar responses and enhancing the knowledge management process.  | Starter App | 10.21 |
+| [Support Assistant Starter App](https://marketplace.mendix.com/link/component/231035) | Learn how to combine common GenAI patterns, such as function calling and RAG to build your support assistant. Connect it to a model like Anthropic Claude via Mendix Cloud GenAI or Amazon Bedrock or use an (Azure) OpenAI subscription.  | Starter App | 10.21 |
+| [GenAI Commons](/appstore/modules/genai/commons/) | Common capabilities that allow all GenAI connectors to be integrated with the other modules. You can also implement your own connector based on this. | Common Module | 10.21 |
+| [Conversational UI](/appstore/modules/genai/conversational-ui/) | Create a Conversational UI, manage prompts or monitor token consumption in your app. | UI Module | 10.21 |
+| [Mendix Cloud GenAI Connector](/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/) | Connect to Mendix Cloud and utilize Mendix Cloud GenAI resource packs directly within your Mendix application. | Connector Module | 10.21 |
+| [OpenAI Connector](/appstore/modules/genai/openai/) | Connect to (Azure) OpenAI. | Connector Module | 10.21 |
+| [Amazon Bedrock Connector](/appstore/modules/aws/amazon-bedrock/) | Connect to Amazon Bedrock. Use Retrieve and Generate or Bedrock agents. | Connector Module | 10.21 |
+| [PgVector Knowledge Base](/appstore/modules/genai/pgvector/) | Manage and interact with a PostgreSQL *pgvector* Knowledge Base. | Connector Module | 10.21 |
+| [Snowflake Showcase App](https://marketplace.mendix.com/link/component/225845) | Learn how to implement the Cortex functionalities in your app. | Showcase App | 10.21 |
+
+Older versions of the marketplace modules and GenAI Showcase App are available in Studio Pro 9.24.2.
 
 ### Available Models {#models}
 
@@ -67,7 +69,7 @@ Mendix connectors offer direct support for the following models:
 | Mendix Cloud GenAI | Anthropic Claude 3.5 Sonnet | Chat Completions | text, image, document | text | Function calling |
 | | Cohere Embed English, Cohere Embed Multilingual | Embeddings | text | embeddings | |
 | Azure / OpenAI | gpt-3.5-turbo | Chat completions | text | text | Function calling |
-| | gpt-4, gpt-4-turbo, gpt-4o, gpt-4o mini | Chat completions | text, image | text | Function calling |
+| | gpt-4, gpt-4-turbo, gpt-4o, gpt-4o mini gpt-4.5-preview | Chat completions | text, image | text | Function calling |
 | | DALL·E 2, DALL·E 3 | Image generation | text | image | |
 | | text-embedding-ada-002, text-embedding-3-small, text-embedding-3-large     | Embeddings | text | embeddings| |
 | Amazon Bedrock | Amazon Titan Text G1 - Express, Amazon Titan Text G1 - Lite, Amazon Titan Text G1 - Premier | Chat Completions | text, document (except Titan Premier) | text | |
@@ -77,11 +79,12 @@ Mendix connectors offer direct support for the following models:
 | | Amazon Titan Image Generator G1 | Image generation | text | image | |
 | | Amazon Titan Embeddings Text v2 | Embeddings | text | embeddings| |
 | | Anthropic Claude 2.0, Anthropic Claude 2.1| Chat Completions | text, document | text | |
-| | Anthropic Claude 3 Sonnet, Anthropic Claude 3.5 Sonnet, Anthropic Claude 3.5 Sonnet v2, Anthropic Claude 3 Haiku, Anthropic Claude 3 Opus | Chat Completions | text, image, document | text | Function calling |
+| | Anthropic Claude 3 Sonnet, Anthropic Claude 3.5 Sonnet, Anthropic Claude 3.5 Sonnet v2, Anthropic Claude 3 Haiku, Anthropic Claude 3 Opus, Anthropic Claude 3.5 Haiku, Anthropic Claude 3.7 Sonnet  | Chat Completions | text, image, document | text | Function calling |
 | | Cohere Command | Chat Completions | text, document | text | |
 | | Cohere Command Light | Chat Completions | text | text | |
 | | Cohere Command R, Cohere Command R+ | Chat Completions | text, document | text | Function calling |
 | | Cohere Embed English, Cohere Embed Multilingual | Embeddings | text | embeddings | |
+| | DeepSeek, DeepSeek-R1 | Text | text | document | |
 | | Meta Llama 2, MetaLlama 3| Chat Completions | text, document | text | |
 | | Meta Llama 3.1| Chat Completions | text, document | text | Function calling |
 | | Mistral AI Instruct | Chat Completions | text. document | text | |

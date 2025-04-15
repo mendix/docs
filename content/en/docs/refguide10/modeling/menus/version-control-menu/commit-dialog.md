@@ -14,8 +14,8 @@ At the top of the dialog box you will see the branch which you are committing. T
 
 | Branch Description | Notes |
 | --- | --- |
-| {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/commit-dialog/commit-main.png" alt="Main line icon" class="no-border" >}} |  you are committing the main line |
-| {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/commit-dialog/commit-branch.png" alt="Commit branch icon" class="no-border" >}} |  you are committing the specified branch |
+| {{< figure src="/attachments/refguide10/modeling/menus/version-control-menu/commit-dialog/commit-main.png" alt="Main line icon" class="no-border" >}} |  you are committing the main line |
+| {{< figure src="/attachments/refguide10/modeling/menus/version-control-menu/commit-dialog/commit-branch.png" alt="Commit branch icon" class="no-border" >}} |  you are committing the specified branch |
 
 ## Message
 
@@ -33,7 +33,7 @@ If there are changes in the model this tab shows a summary of those changes. For
 
 There are several scenarios and options that you can choose when committing. Two of these options are represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/commit-dialog/commit-options.jpg" alt="Several options when committing" >}}
+{{< figure src="/attachments/refguide10/modeling/menus/version-control-menu/commit-dialog/commit-options.jpg" alt="Several options when committing" >}}
 
 #### Commit and Push
 
@@ -53,7 +53,7 @@ Changes are committed to your local working copy and are not pushed to the sever
 
 If someone else committed a change since the last time you pulled your branch, you will have to pull and merge their changes before you can push to the server. This process is called **Commit and Combine** in the [Commit](/refguide/commit-dialog/) dialog box. **Commit and Combine** will first create a local commit and then automatically do a pull. After resolving any conflicts, you can push the combined version to the server.
 
-{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/commit-dialog/commit-and-combine.jpg" alt="Commit and combine changes" >}}
+{{< figure src="/attachments/refguide10/modeling/menus/version-control-menu/commit-dialog/commit-and-combine.jpg" alt="Commit and combine changes" >}}
 
 {{% alert color="warning" %}}
 

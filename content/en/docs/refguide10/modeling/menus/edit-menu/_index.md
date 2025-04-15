@@ -9,7 +9,7 @@ weight: 10
 
 Via the **Edit** menu you can perform various actions, such cut/copy/paste or search where a particular document is used. You can also open the [Preferences](/refguide/preferences-dialog/) dialog that contains user-specific settings. 
 
-{{< figure src="/attachments/refguide/modeling/menus/edit-menu/edit-menu.png" alt="Edit Menu" class="no-border" width="300" >}}
+{{< figure src="/attachments/refguide10/modeling/menus/edit-menu/edit-menu.png" alt="Edit Menu" class="no-border" width="300" >}}
 
 ## Menu Item Overview {#overview}
 

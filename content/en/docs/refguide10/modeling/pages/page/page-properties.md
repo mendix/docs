@@ -69,7 +69,7 @@ For example, in the URL `product/{Product/Name}` the `Name` attribute of the pag
 
 Next to this, you can use `Id` as an attribute to include the identifier of the entity in the URL. This would appear as `product/{Product/Id}` for example. In the page URL dialog box, the configured URL is shown together with an example URL (with example values filled in for the parameters), and also shows which XPath queries the runtime will use to retrieve the page parameters. See this example URL in a dialog box:
 
-{{< figure src="/attachments/refguide/modeling/pages/page/page-url-dialog.png" alt="page url dialog" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/pages/page/page-url-dialog.png" alt="page url dialog" class="no-border" >}}
 
 {{% alert color="warning" %}}
 Page URLs are not supported for pages that have non-persistable entities as parameters
@@ -101,7 +101,7 @@ You can also use multiple page parameters. Multiple page parameters allow you to
 
 The list of variables defined on this page. The variables can be used by widgets directly without the need for a [data view](/refguide/data-view/).
 
-Variables represent non-persistent, primitive values that are available to widgets on a page. Widgets can read and write to them as they were attributes, supporting features like formatting and validation. Variables are also available in expressions, so you can use them for page logic, such as conditional visibility, editability, text template parameters, and as arguments to microflows and nanoflows.
+Variables represent non-persistent, primitive values that are available to widgets on a page. Widgets can read and write to them as they were attributes, supporting features like formatting and validation. Variables are also available in expressions, so you can use them for page logic, such as conditional visibility, editability, text template parameters, XPath constraints, and as arguments to microflows and nanoflows.
 
 You can also define a default value for variables. The expression is used to instantiate the variable at runtime and can make use of page parameters. 
 

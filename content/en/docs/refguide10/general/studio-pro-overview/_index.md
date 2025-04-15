@@ -22,7 +22,7 @@ When Studio Pro is open, press <kbd>F1</kbd> to open the relevant documentation.
 
 This document describes the user interface of Mendix Studio Pro:
 
-{{< figure src="/attachments/refguide/studio-pro-overview/studio-pro-diagram.png" alt="Diagram of the home page of Studio Pro, which labels each section of the home page layout." class="no-border" >}}
+{{< figure src="/attachments/refguide10/studio-pro-overview/studio-pro-diagram.png" alt="Diagram of the home page of Studio Pro, which labels each section of the home page layout." class="no-border" >}}
 
 ## Top Bar {#top-bar}
 
@@ -42,7 +42,7 @@ For more information, see [Menus](/refguide/menus/).
 
 Deploy your app by clicking the **Publish** or **Run Locally** ({{% icon name="controls-play" %}}) buttons. To view your deployed app, click **View App**. 
 
-{{< figure src="/attachments/refguide/studio-pro-overview/view-and-publish.png" alt="View and Publish buttons" class="no-border" >}}
+{{< figure src="/attachments/refguide10/studio-pro-overview/view-and-publish.png" alt="View and Publish buttons" class="no-border" >}}
 
 For more information on deployment in Mendix, see [Deploying Apps](/deployment/).
 
@@ -78,7 +78,7 @@ Each document has its own save state, history, and future, so undo and redo acti
 
 Dockable panes can be positioned around the working area and contain various elements and settings.
 
-{{< figure src="/attachments/refguide/studio-pro-overview/pane-example.png" alt="Properties Pane Example" width="300" class="no-border" >}}
+{{< figure src="/attachments/refguide10/studio-pro-overview/pane-example.png" alt="Properties Pane Example" width="300" class="no-border" >}}
 
 For example, you can view the [list of errors](/refguide/errors-pane/), run the [Best Practice Recommender](/refguide/best-practice-recommender/), configure properties of a specific document or an element, or view the toolbox. For more information on panes and their layout, see [View Menu](/refguide/view-menu/).
 
@@ -86,7 +86,7 @@ For example, you can view the [list of errors](/refguide/errors-pane/), run the 
 
 At the bottom of the Studio Pro main window pane is a status bar:
 
-{{< figure src="/attachments/refguide/studio-pro-overview/status-bar.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/studio-pro-overview/status-bar.png" class="no-border" >}}
 
 On the left is the current status of your app.
 

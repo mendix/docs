@@ -46,7 +46,7 @@ A layout that has the header property enabled will always show a bar at the top 
 
 This is an example of the default header on iOS:
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/header.png" alt="An example of the default header on iOS."   width="250"  class="no-border" >}}
+{{< figure src="/attachments/refguide10/mobile/native-mobile/native-navigation/header.png" alt="An example of the default header on iOS."   width="250"  class="no-border" >}}
 
 ### Bottom Bar
 
@@ -58,7 +58,7 @@ Every item in the bottom bar has its own navigation stack. This means that if yo
 Pages without a bottom bar are created in a separate stack. If you navigate from a page *without* a bottom bar to a page *with* a bottom bar, then all pages in that stack are closed.
 {{% /alert %}}
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/bottombar.png" alt="An example of the default bottom bar on iOS."   width="250"  class="no-border" >}}
+{{< figure src="/attachments/refguide10/mobile/native-mobile/native-navigation/bottombar.png" alt="An example of the default bottom bar on iOS."   width="250"  class="no-border" >}}
 
 ### Sidebar
 
@@ -66,15 +66,15 @@ You can use the **Sidebar** in your native projects' navigation systems. It is a
 
 There are only a few steps needed to be done to create a **Sidebar** in your native project. First of all, you need to include **NativePhone_SideMenu**, which you can find under **Phone Layouts** in **Atlas Core**:
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/includesidebar.png" alt="Include a sidebar" >}}
+{{< figure src="/attachments/refguide10/mobile/native-mobile/native-navigation/includesidebar.png" alt="Include a sidebar" >}}
 
 Then, decide which screen in your project will have a **Sidebar** and apply the appropriate layout — **NativePhone_SideMenu** in our case:
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/selectsidebarlayout.png" alt="Select a sidebar layout" >}}
+{{< figure src="/attachments/refguide10/mobile/native-mobile/native-navigation/selectsidebarlayout.png" alt="Select a sidebar layout" >}}
 
 After that, you will see the **Sidebar** appear on your screen. You can place any content inside of it, and you can see it using **Sidebar Toggle** button (which will appear in the left part of your [Header](#header)):
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/sidebarlayout.png" alt="Sidebar layout" >}}
+{{< figure src="/attachments/refguide10/mobile/native-mobile/native-navigation/sidebarlayout.png" alt="Sidebar layout" >}}
 
 ## How does Mendix Native Navigation Work?
 
@@ -92,7 +92,7 @@ The first page on the stack is always the home page. When you tap a button that 
 
 When you close a page (via a back button, a close action, or swipe to go back (iOS)), only the current page is closed and the previous page becomes visible again.
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/singlestack.gif"   width="250"  class="no-border" >}}
+{{< figure src="/attachments/refguide10/mobile/native-mobile/native-navigation/singlestack.gif"   width="250"  class="no-border" >}}
 
 #### Multiple Stacks
 
@@ -100,7 +100,7 @@ If an app has bottom bar items, every item in the bottom bar will have a separat
 
 If a bottom bar item is not focused, pressing it will focus that item. Switching to another bottom bar item will not close pages in the focused one. If the item is already focused, pressing it again will dismiss all pages from its stack.
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/multiplestacks.gif"   width="250"  class="no-border" >}}
+{{< figure src="/attachments/refguide10/mobile/native-mobile/native-navigation/multiplestacks.gif"   width="250"  class="no-border" >}}
 
 #### Pop-Ups
 
@@ -108,7 +108,7 @@ When a page with a pop-up layout is opened, a new stack is created and all pages
 
 It is possible to open other pop-up pages inside the pop-up, and all of those together behave as a single stack. When opening a normal page from the pop-up, the pop-ups will be closed first.
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/popups.gif"   width="250"  class="no-border" >}}
+{{< figure src="/attachments/refguide10/mobile/native-mobile/native-navigation/popups.gif"   width="250"  class="no-border" >}}
 
 ### Opening and Closing Pages
 
@@ -136,7 +136,7 @@ In order to add more flexibility and customization to mobile apps, Mendix offers
 
 You can find and customize these options in [Navigation Profile](/refguide/navigation/):
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/navigationtransition.png" >}}
+{{< figure src="/attachments/refguide10/mobile/native-mobile/native-navigation/navigationtransition.png" >}}
 
 By default, all screens and popups will inherit the appropriate behavior of their operating system (either iOS or Android). 
 

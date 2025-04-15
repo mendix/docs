@@ -11,7 +11,7 @@ An entity usually represents a class of real-world objects, such as customers, i
 
 For example, the object representing the CD 'Exodus' could be an instance of the entity 'CD'.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/example-entity.png" alt="Example of a CD entity" width="650px" class="no-border" >}} 
+{{< figure src="/attachments/refguide10/modeling/domain-model/entities/example-entity.png" alt="Example of a CD entity" width="650px" class="no-border" >}} 
 
 The properties or features of an entity are described using [attributes](/refguide/attributes/). An attribute represents a small piece of information about an entity, such as the name or birth date of a person.
 
@@ -41,7 +41,7 @@ The entity type defines how the data is handled and there are four types:
 4. View entity (beta)
     * View entities represent the result sets of stored OQL queries on one or more entities, similar to database views, and are read-only. These entities are colored *green* in the domain model.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/type-of-entities.png" width=="300" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/entities/type-of-entities.png" width=="300" >}}
 
 The structure of persistable, non-persistable, and view entities are defined within your app. This page describes how to add and update persistable and non-persistable entities. For more information on persistable entities, see [Persistability](/refguide/persistability/). 
 
@@ -53,7 +53,7 @@ View entities are defined by their underlying OQL queries, which run on one or m
 
 An example of the entity properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/entity-properties.png"   width="300"  class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/entities/entity-properties.png"   width="300"  class="no-border" >}}
 
 Entity properties consist of the following sections:
 
@@ -101,7 +101,7 @@ One important use of this feature is to derive functionality from the **System**
 
 An example of generalization is a situation where you have entities, say a **Student** entity and a **Professor** entity, which both have some generic properties. In this case, they both have a name, telephone number, and email address and can be a member of one or more courses. Both entities are generalized in the **Member** entity. Conversely, this means that the **Member** entity is specialized in the **Student** and **Professor** entities.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/917900.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/entities/917900.png" class="no-border" >}}
 
 For more information, and a discussion on the relative merits of using generalization or associations, see [Generalization vs 1-1 Associations](/refguide/generalization-and-association/).
 
@@ -199,7 +199,7 @@ This allows you to document the entity to help you or other team members use the
 
 You can also edit an entity by opening the entity properties dialog box.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/example-entity.png" alt="Example of a CD entity" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/entities/example-entity.png" alt="Example of a CD entity" class="no-border" >}}
 
 In addition to the properties described above, there are also tabs which allow you to edit the following:
 

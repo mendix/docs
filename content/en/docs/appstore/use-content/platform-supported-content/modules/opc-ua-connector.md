@@ -121,6 +121,9 @@ The core information of the configuration to connect to an OPC-UA server must be
   
 * `SecurityPolicyURI` – This determines what algorithm to use to encrypt and sign the data.
 * `_IsConnected`: This is set to *true* when connection is open.
+* `IsWritingDataValueOnly`: This determines how the connector writes data.
+    *  If *true* – the connector writes only the DataValue to the node.
+    *  If *false* – the connector writes the DataValue, SourceTimestamp, and StatusCode to the node.
 
 ### Identity Token {#identity-token}
 
@@ -218,7 +221,7 @@ For more advanced cases, use the [read action](#read-action) as described below.
 
 The read action allows you to read specific attributes of a node. The request object for the action is `ReadNodeRequest`, which contains a list of `ReadNodeReadValueIDs`.
 
-Each `ReadNodeReadValueID` object specifies the attributes of the nodes you want to read. Upon executing the read action, a `ReadNodeResponse` object is returned. This object contains a list of `ReadNodeResponseResults`, each corresponding to the attributes requested, in the same order they were specified.
+Each `ReadNodeReadValueID` object specifies the attributes of the nodes you want to read. Upon executing the read action, a `ReadNodeResponse` object is returned which has associations with a list of `ReadNodeResponseResults` objects. Each `ReadNodeResponseResults` object has a 1-1 association with a `ReadNodeResponseReadValueId` object so you can match the requested attributes with the results.
 
 Each `ReadNodeResponseResult` object contains a `DataValue` attribute. This is the raw payload returned from the OPC-UA Server. 
 
@@ -249,7 +252,7 @@ The Write action allows you to write to specific attributes on a node. The reque
 
 The `WriteNode` objects describe how and what to write to a node. 
 
-The `Write node` action returns a `WriteNodeResponse` object. The object contains a list of `WriteNodeStatusCode` that contains the statuses of the written attributes in the same order as the request. Check the statuses to know whether the action succeeded.
+The `Write node` action returns a `WriteNodeResponse` object. This object has associations with a list of `WriteNodeStatusCode` objects that contains the statuses of the written attributes. Each `WriteNodeStatusCode` has a 1-1 association with a `WriteResponseWriteValue` object that allows you to match the resulting status code with the requested write action. Check the statuses to see whether the action succeeded. 
 
 To write the `VALUE` attribute on a `VariableNode`, set the `NodeId` on your `WriteNode` to the right node ID, the `AttributeId` to *ENUM_AttributeId.VALUE*, and the `Payload` to one based on the table above in the [Read Action](#read-action) section and the `VariantType` to the correct type.
 

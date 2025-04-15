@@ -19,11 +19,11 @@ It can be used in the following two ways:
 
 * **Timer** can be used as a standalone activity on a workflow path. It suspends the workflow path for a configurable duration or until a set date and time. For example, when a new salary legislation is about to take effect, a timer can be set until the date of effect to actually adjust the values in the system.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/timer/standalone-timer-activity.png" alt="Standalone Timer activity" width="250" >}}
+    {{< figure src="/attachments/refguide10/modeling/application-logic/workflows/workflow-elements/timer/standalone-timer-activity.png" alt="Standalone Timer activity" width="250" >}}
 
 * **Timer** can also be attached to another workflow activity as a [Boundary Event](/refguide/workflow-boundary-events/) (released in GA in Studio Pro 10.16):
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/timer/timer-boundary-event.png" alt="Timer boundary event" width="300" >}}
+    {{< figure src="/attachments/refguide10/modeling/application-logic/workflows/workflow-elements/timer/timer-boundary-event.png" alt="Timer boundary event" width="300" >}}
 
 ## Properties
 

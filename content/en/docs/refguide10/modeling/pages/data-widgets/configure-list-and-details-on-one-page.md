@@ -20,7 +20,7 @@ The how-to describes the following use case:
 
 Sales Representatives in your company want to view a list of opportunity contacts – potential customers. When Sales Representatives click a row in this list, the details of the corresponding opportunity contact are displayed next to the list:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/configured-page.png" width="650px" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/pages/data-widgets/configure-list-and-details-on-one-page/configured-page.png" width="650px" class="no-border" >}}
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Familiarize yourself with the domain model terms and learn how to perform basic functions. For more information, see [Data in the Domain Model](/refguide/domain-model/).
 * Make sure your domain model is configured in the following way:
 
-    {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/domain-model.png" width="200px" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/pages/data-widgets/configure-list-and-details-on-one-page/domain-model.png" width="200px" class="no-border" >}}
 
 ## Adding the Primary Detail Page
 
@@ -44,7 +44,7 @@ You would like to open a page with opportunity contact list and its details from
 
 You just created a new page. A list (list view) is displayed on the left and list item details (data view) are displayed on the right:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/primary-detail-page.png" width="650px" class="no-border" >}} 
+{{< figure src="/attachments/refguide10/modeling/pages/data-widgets/configure-list-and-details-on-one-page/primary-detail-page.png" width="650px" class="no-border" >}} 
 
 ## Configuring the List
 
@@ -60,7 +60,7 @@ First of all, you need to configure the list view so that it displays the opport
 
     Now the list view displays the list of opportunity contacts by their name:
 
-    {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/list-configured.png" width="300px" class="no-border" >}} 
+    {{< figure src="/attachments/refguide10/modeling/pages/data-widgets/configure-list-and-details-on-one-page/list-configured.png" width="300px" class="no-border" >}} 
 
 ## Configuring List Item Details
 
@@ -73,7 +73,7 @@ Now you need to configure the widgets inside the data view to show all the attri
 1. Delete the **Save** and **Cancel** buttons inside the data view because you only want to display the data, not change it.
 2. Double-click **Form title** (which is displayed as a data view heading), rename the **Caption** to *Opportunity Contact Details*, and click **OK**:
 
-    {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/data-view.png" width="500px" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/pages/data-widgets/configure-list-and-details-on-one-page/data-view.png" width="500px" class="no-border" >}}
 
 3. Double-click the **First name** text box to open its properties and do the following:
 
@@ -83,7 +83,7 @@ Now you need to configure the widgets inside the data view to show all the attri
 
 4. Refer to steps 3a-3c to select the **Phone** attribute for the **Phonenumber** text box and the **Email** attribute for the **Email** text box.
 
-    {{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/attributes-replaced.png" width="500px" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/pages/data-widgets/configure-list-and-details-on-one-page/attributes-replaced.png" width="500px" class="no-border" >}}
 
 5. Now you still lack information on the contact's job title. To add the job title information, do the following:
 
@@ -95,7 +95,7 @@ Now you need to configure the widgets inside the data view to show all the attri
 
 Congratulations! Now you have a page that displays a list of opportunity contacts and the details of the selected contact:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/configure-list-and-details-on-one-page/configured-page.png" width="650px" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/pages/data-widgets/configure-list-and-details-on-one-page/configured-page.png" width="650px" class="no-border" >}}
 
 You can now preview your app and test your page.
 

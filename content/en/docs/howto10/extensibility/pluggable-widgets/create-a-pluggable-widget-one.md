@@ -50,9 +50,9 @@ The following steps teach you how to build a pluggable input widget, and show yo
 5. Go back to the home page, open the **Add Widget** menu, and then add a **TextBox** widget inside the data view.
 6. Open the Textbox's properties and select the **Datasource Attribute (path)** string attribute you created above. Then click the **OK** button to close the dialog box. The end result should look like this:
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/createtestobject.png" alt="The page editor in Studio Pro in structure mode. The page contains a Data View that has a Microflow as its datasource. It contains a Text Input widget referencing the text attribute created in this section." class="no-border" >}}
+    {{< figure src="/attachments/howto10/extensibility/pluggable-widgets/create-a-pluggable-widget-one/createtestobject.png" alt="The page editor in Studio Pro in structure mode. The page contains a Data View that has a Microflow as its datasource. It contains a Text Input widget referencing the text attribute created in this section." class="no-border" >}}
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/microflowcreateentity.png" alt="A Microflow with a single Create Entity Action. The Action creates an instance of the entity created in the steps above. The Microflow ends with returning the new entity." class="no-border" >}}
+    {{< figure src="/attachments/howto10/extensibility/pluggable-widgets/create-a-pluggable-widget-one/microflowcreateentity.png" alt="A Microflow with a single Create Entity Action. The Action creates an instance of the entity created in the steps above. The Microflow ends with returning the new entity." class="no-border" >}}
 
 ### Scaffolding the Widget
 
@@ -83,7 +83,7 @@ The generator will ask you a few questions during setup. Answer the questions by
 * Unit tests: **No**
 * End-to-end tests: **No**
 
-{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/generatorblack-new.png" alt="The Mendix Widget generator with the prompts answered according to the list above." class="no-border" >}}
+{{< figure src="/attachments/howto10/extensibility/pluggable-widgets/create-a-pluggable-widget-one/generatorblack-new.png" alt="The Mendix Widget generator with the prompts answered according to the list above." class="no-border" >}}
 
 As part of the widget scaffolding, the generator builds the widget for the first time. You can do this yourself by running `npm run build` inside your widget's directory.
 
@@ -103,7 +103,7 @@ When the build script completes it will package your widget as a `.mpk` file and
 1. Drag the Text Box widget to the Data View added in [Creating a Test Project](#creating-a-test-project).
 1. Run your app locally and open it in the browser. The homepage should now display Hello World below the text widget:
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/hello-world.png" alt="A live mendix app displaying a text field and below it the pluggable widget with the text Hello World." class="no-border" >}}
+    {{< figure src="/attachments/howto10/extensibility/pluggable-widgets/create-a-pluggable-widget-one/hello-world.png" alt="A live mendix app displaying a text field and below it the pluggable widget with the text Hello World." class="no-border" >}}
 
 ### Adding the Attribute
 
@@ -202,13 +202,13 @@ Open the *(YourMendixApp)/myPluggableWidgets/textBox* folder in your IDE of choi
 
     The widget now displays a red border indicating that it needs to be updated. Open its context menu with a right click and select **Update all widgets**.
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/updateallwidgets.png" alt="A demonstration of opening the context menu of a widget in the page editor to reveal the Update all widgets command." class="no-border" >}}
+    {{< figure src="/attachments/howto10/extensibility/pluggable-widgets/create-a-pluggable-widget-one/updateallwidgets.png" alt="A demonstration of opening the context menu of a widget in the page editor to reveal the Update all widgets command." class="no-border" >}}
 
 8. Open the widget properties. In the **Data source** tab **select** the **text attribute** created in [section 3.1](#creating-a-test-project).
 
 9. **Run** the app locally to see the results, the new widget is already functional. The first text box is a standard Text box widget and the second is your pluggable web widget. Select the first text box and enter some text, unfocus the text box and the pluggable widget will now display the same data.
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/twotextwidgets.png" alt="A live Mendix App featuring two text fields displaying the identical text: test." class="no-border" >}}
+    {{< figure src="/attachments/howto10/extensibility/pluggable-widgets/create-a-pluggable-widget-one/twotextwidgets.png" alt="A live Mendix App featuring two text fields displaying the identical text: test." class="no-border" >}}
 
 ### Adding Style
 
@@ -260,7 +260,7 @@ The input works, but the styling could be improved. In the next code snippets, y
 
 3. Refresh your Mendix app in the browser, the result should be a well-styled input widget. If the change does not appear immediately, open your browser's devtools and disable cache. This ensures you are loading your widget's latest assets.
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/styledinputwidgets.png" alt="A live Mendix app with two text fields with a similar appearance." class="no-border" >}}
+    {{< figure src="/attachments/howto10/extensibility/pluggable-widgets/create-a-pluggable-widget-one/styledinputwidgets.png" alt="A live Mendix app with two text fields with a similar appearance." class="no-border" >}}
 
 ### Labeling the Input{#label-input}
 
@@ -284,11 +284,11 @@ Comparing our widget to the Mendix text input widget we are still missing a labe
 
     This will show the **Show label** radio buttons. When **Show label** is set to true, it will automatically render the label for you in the page editor and the browser:
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/edittextboxtwo.png" alt="The widget properties opened at the Label tab. The show label setting is set to true, which reveals a label caption field with the value TextBox." class="no-border" >}}
+    {{< figure src="/attachments/howto10/extensibility/pluggable-widgets/create-a-pluggable-widget-one/edittextboxtwo.png" alt="The widget properties opened at the Label tab. The show label setting is set to true, which reveals a label caption field with the value TextBox." class="no-border" >}}
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/editdataviewone.png" alt="The page editor showing the caption TextBox in front of the pluggable widget" class="no-border" >}}
+    {{< figure src="/attachments/howto10/extensibility/pluggable-widgets/create-a-pluggable-widget-one/editdataviewone.png" alt="The page editor showing the caption TextBox in front of the pluggable widget" class="no-border" >}}
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/inputwidgetswithlabel.png" alt="A live Mendix app with two text fields with labels. The second text field has the label TextBox" class="no-border" >}}
+    {{< figure src="/attachments/howto10/extensibility/pluggable-widgets/create-a-pluggable-widget-one/inputwidgetswithlabel.png" alt="A live Mendix app with two text fields with labels. The second text field has the label TextBox" class="no-border" >}}
 
 {{% alert color="info" %}}The labels will appear in front of, or above the inputs. This depends on the surrounding [data view's properties](/refguide/data-view/#orientation) (**form orientation** and **label width**) and the size of the screen.{{% /alert %}}
 

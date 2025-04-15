@@ -12,7 +12,7 @@ View entities allow you to work with versioned data. In this example, you will i
 
 For this purpose of this use case, the following domain model is used:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/view-entities/view-entity-data-versioning/domain-model.png" width="500" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/view-entity-data-versioning/domain-model.png" width="500" >}}
 
 The domain model above is for an ordering system of a shop. The entities contain the following:
 
@@ -57,9 +57,9 @@ For more information on different OQL clauses, see [OQL Version 2 Features](/ref
 
 The final result is a list with only the latest update of each order: 
 
-{{< figure src="/attachments/refguide/modeling/domain-model/view-entities/view-entity-data-versioning/entity-properties.png" width="500" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/view-entity-data-versioning/entity-properties.png" width="500" >}}
 
-{{< figure src="/attachments/refguide/modeling/domain-model/view-entities/view-entity-data-versioning/data-grid.png" width="500" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/view-entity-data-versioning/data-grid.png" width="500" >}}
 
 ## Order Status on Specific Date
 
@@ -71,6 +71,6 @@ WHERE u.UpdateDate < CAST('1997/08/17' as DATETIME)
 
 This addition retrieves the order status for one specific date:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/view-entities/view-entity-data-versioning/entity-properties-2.png" width="500" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/view-entity-data-versioning/entity-properties-2.png" width="500" >}}
 
-{{< figure src="/attachments/refguide/modeling/domain-model/view-entities/view-entity-data-versioning/data-grid-2.png" width="500" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/view-entity-data-versioning/data-grid-2.png" width="500" >}}

@@ -10,7 +10,7 @@ weight: 15
 
 Mendix offers different features which allow you to interact with any REST API. You can use them to build and test your REST requests or create data structures in your project.
 
-## Documents in This Category
+## Read More
 
 * [Consumed REST Services](/refguide/consumed-rest-service/), an overview on how to Consume a REST Service document
 * [Import an OpenAPI/Swagger contract](/refguide/consumed-rest-service/#installation), instructions on how to create a Consumed REST Service from an OpenAPI/Swagger contract

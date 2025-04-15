@@ -12,7 +12,7 @@ Use view entities to export data from your domain model with JSON.
 
 For this purpose of this use case, the following domain model is used:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/view-entities/exporting-data/domain-model.png" width="400" >}}
+{{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/exporting-data/domain-model.png" width="400" >}}
 
 The domain model contains two entities that store customer data and their associated delivery and billing addresses. 
 
@@ -48,7 +48,7 @@ Create a JSON structure that represents the customer entity. To do this, follow 
 1. Right-click your module and select **Add other** > **JSON structure**.
 2. Create an example snippet of the JSON object.
 
-    {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/exporting-data/json-structure.png" width="500" >}}
+    {{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/exporting-data/json-structure.png" width="500" >}}
 
 3. Click **Refresh**, then click **OK** to save. 
 
@@ -58,15 +58,15 @@ Create a JSON structure that represents the customer entity. To do this, follow 
 2. In the **Schema source** field, select the JSON structure you created in the previous section.
 3. In the **Schema elements** field, select **Check all**, then click **OK**. 
 
-    {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/exporting-data/export-mapping-data.png" width="500" >}}
+    {{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/exporting-data/export-mapping-data.png" width="500" >}}
 
 4. In the Integration pane, open the **Connectors** tab.
 5. Drag **CustomerVE** to the export mapping document.
 
-    {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/exporting-data/connectors-pane.png" width="500" >}}
+    {{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/exporting-data/connectors-pane.png" width="500" >}}
 
 6. Map the CustomerVE attributes to their corresponding schema field.
 
-    {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/exporting-data/mapping.png" width="500" >}}
+    {{< figure src="/attachments/refguide10/modeling/domain-model/view-entities/exporting-data/mapping.png" width="500" >}}
 
 7. Click **OK** to save.

@@ -101,7 +101,7 @@ You can also use multiple page parameters. Multiple page parameters allow you to
 
 The list of variables defined on this page. The variables can be used by widgets directly without the need for a [data view](/refguide/data-view/).
 
-Variables represent non-persistent, primitive values that are available to widgets on a page. Widgets can read and write to them as they were attributes, supporting features like formatting and validation. Variables are also available in expressions, so you can use them for page logic, such as conditional visibility, editability, text template parameters, and as arguments to microflows and nanoflows.
+Variables represent non-persistent, primitive values that are available to widgets on a page. Widgets can read and write to them as they were attributes, supporting features like formatting and validation. Variables are also available in expressions, so you can use them for page logic, such as conditional visibility, editability, text template parameters, XPath constraints, and as arguments to microflows and nanoflows.
 
 You can also define a default value for variables. The expression is used to instantiate the variable at runtime and can make use of page parameters. 
 

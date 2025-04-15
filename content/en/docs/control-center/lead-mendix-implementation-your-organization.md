@@ -1145,9 +1145,9 @@ If you don’t have a contract, or if your contract doesn’t allow for more lic
 
 **Link your application to your licensed node**
 
-If you have a licensed node available, you can link your application to this licensed node. If your application was published as a Free App, you will have to unlink the application from the Free App environment first. This will delete all data on that Free App environment. So, before you unlink your Free App, [back up the data](/developerportal/deploy/licensing-apps/#backing-up) first, if you require it.
+If you have a licensed node available, you can link your application to this licensed node. [Back up the data](/developerportal/deploy/licensing-apps/#backing-up) first if you require it.
 
-If you have backed up your data, you can [unlink your application](/developerportal/deploy/licensing-apps/#unlink-free) from the Free App environment.
+After that, you can [connect your application](/developerportal/deploy/licensing-apps/#connect-app) to the node.
 
 When your app is unlinked from a Free App environment, you can link it to a licensed node. By linking it to a licensed node, you get access to all the features of Mendix Cloud, such as one-click deployment from Studio Pro and our platform, log management, backups management and monitoring tools.
 

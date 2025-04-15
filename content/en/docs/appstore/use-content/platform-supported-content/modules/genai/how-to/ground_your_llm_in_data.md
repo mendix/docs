@@ -21,7 +21,7 @@ Before implementing this capability into your app, make sure you meet the follow
 
 * Start from scratch: to simplify your first use case, start building from a preconfigured setup [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934). For more information, see [Build a Chatbot from Scratch Using the Blank GenAI App](/appstore/modules/genai/how-to/blank-app/). 
 
-* Install the [GenAI For Mendix](https://marketplace.mendix.com/link/component/227931) bundle (version 2.2.0 and above) from the Mendix Marketplace. If you start with the Blank GenAI App, you can skip this installation.
+* Install the [Mendix GenAI Connector](https://marketplace.mendix.com/link/component/239449) and [GenAICommons](https://marketplace.mendix.com/link/component/239448) modules (version 2.2.0 and above) from the Mendix Marketplace. If you start with the Blank GenAI App, you can skip this installation.
 
 * Set up a Knowledge Base resource within the [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/). 
 
@@ -37,7 +37,7 @@ Before implementing this capability into your app, make sure you meet the follow
 
 ### Choosing the Infrastructure
 
-Since this document focuses on the [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/), ensure that you have the [Mendix Cloud GenAI Connector](/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/), which is part of the [GenAI For Mendix](https://marketplace.mendix.com/link/component/227931) bundle on the Marketplace.
+Since this document focuses on the [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/), ensure that you have the [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) installed.
 
 Follow the [Navigate through the Mendix Cloud GenAI Portal](/appstore/modules/genai/mx-cloud-genai/Navigate-MxGenAI/) instructions to collect the resources keys.
 
@@ -204,7 +204,7 @@ For the application to function as expected, ensure that the following microflow
 
 * Create Demo Data and Populate KB: Add the `MyFirstModule.ACT_TicketList_CreateData_InsertIntoKnowledgeBase` which was created in the [Joining the Microflows section](#joining-microflows).
 
-* Mendix Cloud Configuration: If you started from a Blank GenAI App, the configuration page should already be included. In case you started from your application, add the `MxGenAIConnector.NAV_ConfigurationOverview_Open` microflow.
+* Mendix Cloud Configuration: If you started from a Blank GenAI App, the configuration page should already be included. In case you started from your application, add the `Configuration_Overview` page.
 
 * Ensure that your admin role has the following module roles assigned: MxGenAIConnector.Administrator, ConversationalUI.User, and MyFirstModule.Administrator.
 

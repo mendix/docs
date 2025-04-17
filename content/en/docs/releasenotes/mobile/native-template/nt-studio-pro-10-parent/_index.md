@@ -5,6 +5,8 @@ weight: 10
 description: "Studio Pro 10 compatible Native Template release notes."
 ---
 
+{{% todo %}}[replace the 10.22 mention with a link to RNs upon release]{{% /todo %}} 
+
 These are the current Native Template versions for Studio Pro 10 in active development:
 
 * Native Template versions of [14](/releasenotes/mobile/nt-14-rn/) are compatible with apps built using the following versions of Studio Pro:

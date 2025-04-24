@@ -5,6 +5,8 @@ weight: 50
 description: "Native Template 11 release notes."
 ---
 
+* We have fixed an issue where a user may face an error during build process because latest version 18 for playServices is not compatible with current gradle version.
+
 ## 11.0.5 {#1004}
 
 ### Fixes

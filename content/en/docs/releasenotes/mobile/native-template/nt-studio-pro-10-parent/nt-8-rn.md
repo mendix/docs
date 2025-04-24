@@ -5,6 +5,8 @@ weight: 80
 description: "Native Template 8 release notes."
 ---
 
+* We have fixed an issue where a user may face an error during build process because latest version 18 for playServices is not compatible with current gradle version.
+
 ## 8.2.10 {#830}
 
 **Release date: January 15, 2025**

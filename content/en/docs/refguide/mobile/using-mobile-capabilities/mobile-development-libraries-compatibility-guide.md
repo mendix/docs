@@ -39,16 +39,4 @@ This page outlines the compatibility between Mendix mobile development libraries
 
 ### Native Template
 
-[GitHub Repository](https://github.com/mendix/native-template)
-
-| Native Template v.  | React Native v.                | Compatible Studio Pro Versions |
-| ------------------- | ------------------------------ | ------------------------------ |
-| 13.*                | 0.75.4                         | 10.20                          |
-| 12.*                | 0.75.4                         | 10.19                          |
-| 11.*                | 0.75.4                         | 10.18                          |
-| 10.*                | 0.75.4                         | 10.17                          |
-| 9.*                 | 0.73.8                         | 10.13 - 10.17                  |
-| 8.2.*               | 0.72.7                         | 10.11 - 10.12                  |
-| 8.1.*               | 0.72.7                         | 10.10                          |
-| 8.0.*               | 0.72.7                         | 10.6 - 10.9                    |
-| 8.7.*               | 0.70.7                         | 9.24 - 10.5                    |
+Detailed information about Native Template versions, including Studio Pro and React Native compatibility, can be found [here](https://mendix.github.io/native-template/version-compatibility/version-compatibility.html).

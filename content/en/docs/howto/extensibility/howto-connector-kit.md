@@ -131,25 +131,25 @@ In the Java implementation for this action, you'll see the following details for
 * **ListSize** – a long variable containing the number of objects desired in the list
 
 ```java
-  private java.lang.String ResultEntity;
-  private IMendixObject DefaultObject;
-  private java.lang.String InitializationMicroflow;
-  private java.lang.Long ListSize;
+  private final java.lang.String ResultEntity;
+	private final IMendixObject DefaultObject;
+	private final java.lang.String InitializationMicroflow;
+	private final java.lang.Long ListSize;
 
-  public CreateObjectList(
-      IContext context, java.lang.String ResultEntity, 
-      IMendixObject DefaultObject,
-      java.lang.String InitializationMicroflow,
-      java.lang.Long ListSize
-  )
-      {
-          super(context);
-          this.ResultEntity = ResultEntity;
-          this.DefaultObject = DefaultObject;
-          this.InitializationMicroflow = InitializationMicroflow;
-          this,ListSize = ListSize;
-      }
-
+	public CreateObjectList(
+		IContext context,
+		java.lang.String _resultEntity,
+		IMendixObject _defaultObject,
+		java.lang.String _initializationMicroflow,
+		java.lang.Long _listSize
+	)
+	    {
+		    super(context);
+		    this.ResultEntity = _resultEntity;
+		    this.DefaultObject = _defaultObject;
+		    this.InitializationMicroflow = _initializationMicroflow;
+		    this.ListSize = _listSize;
+	    }
 ```
 
 The `executeAction` method is where all the magic happens:

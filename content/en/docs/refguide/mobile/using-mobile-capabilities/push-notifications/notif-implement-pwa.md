@@ -59,3 +59,7 @@ Push notifications in progressive web apps require Firebase to be set up as earl
 1. Stop the Mendix Runtime in Studio Pro if it is running and start it afterwards. Do not use **Rerun**, as that will not pick up the changes in your theme folder.
 
 You have now successfully added a button to enable receiving push notifications for your users. Go ahead to the next section to test sending a push notification.
+
+{{% alert color="warning" %}}
+Do not make use of the widget "Push Notifications" that comes with the Push Notificaitons Connector in a PWA. This widget is only supported in Hybrid Mobile apps and will not work in a PWA. Receiving events for received notifications is currently not supported in PWAs.
+{{% /alert %}}

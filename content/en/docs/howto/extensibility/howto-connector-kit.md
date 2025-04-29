@@ -81,7 +81,7 @@ public class JoinObjectsInList extends UserAction<java.util.List<IMendixObject>>
 		this.Object2 = _object2;
 	}
 
-	@java.lang.Override
+	@Override
 	public java.util.List<IMendixObject> executeAction() throws Exception
 	{
 		// BEGIN USER CODE
@@ -131,7 +131,7 @@ In the Java implementation for this action, you'll see the following details for
 * **ListSize** – a long variable containing the number of objects desired in the list
 
 ```java
-  private final java.lang.String ResultEntity;
+  	private final java.lang.String ResultEntity;
 	private final IMendixObject DefaultObject;
 	private final java.lang.String InitializationMicroflow;
 	private final java.lang.Long ListSize;
@@ -143,13 +143,13 @@ In the Java implementation for this action, you'll see the following details for
 		java.lang.String _initializationMicroflow,
 		java.lang.Long _listSize
 	)
-	    {
-		    super(context);
-		    this.ResultEntity = _resultEntity;
-		    this.DefaultObject = _defaultObject;
-		    this.InitializationMicroflow = _initializationMicroflow;
-		    this.ListSize = _listSize;
-	    }
+	{
+		super(context);
+		this.ResultEntity = _resultEntity;
+		this.DefaultObject = _defaultObject;
+		this.InitializationMicroflow = _initializationMicroflow;
+		this.ListSize = _listSize;
+	}
 ```
 
 The `executeAction` method is where all the magic happens:
@@ -249,15 +249,18 @@ public ImportString(
 		this.ResultEntity = _resultEntity;
 	}
 
-	@java.lang.Override
+	@Override
 	public IMendixObject executeAction() throws Exception
 	{
 		// BEGIN USER CODE
 		try (InputStream is = new ByteArrayInputStream(this.InputString.getBytes(StandardCharsets.UTF_8))) {
+			
 			// Import the string by executing the mapping
 			List<IMendixObject> objects = Core.integration().importStream(getContext(), is, this.ImportMapping, null, false);
+			
 			// Return first object created in mapping
 			return objects.get(0);
+
 		} catch (Exception e) {
 			throw new CoreException("Failed to import JSON string: " + e.getMessage(), e);
 		}

@@ -64,7 +64,7 @@ These are the additional details you can see about each environment:
 * The environment ID
 * The deployment region
 * The [cloud resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack)
-* The scaling configuration. To [scale an environment](/developerportal/deploy/scale-environment/), namely to change the number of instances it runs on and the memory it consumes, click Scale. This opens the **Change Scaling** wizard.
+* The scaling configuration. To [scale an environment](/developerportal/deploy/scale-environment/), meaning to change the number of instances it runs on and the memory it consumes, click **Scale**. This opens the **Change Scaling** wizard.
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/change-scaling.png" >}}
 
@@ -84,10 +84,10 @@ These are the actions you can perform on your environments:
 
 * **Deploy** ({{< icon name="deploy" >}}) – Launch the [Deploy wizard](#deploy-wizard), where you can configure and start a new deployment for the selected environment.
 * **View Details** ({{< icon name="notes-paper-edit" >}}) – Access the [Environment Details](/developerportal/deploy/environments-details/) page.
-* **View App** {{< icon name="external" >}} — Launch the app in a new tab.
+* **View App** {{< icon name="external" >}} – Launch the app in a new tab.
 * **More Options** ({{< icon name="three-dots-menu-horizontal" >}}):
     * **Restart** – Stop and restart the running app. Restarting your app is required for applying new constant values or scheduled events to the environment.
-    * **Start** - Start a stopped app.
+    * **Start** – Start a stopped app.
     * **Live Log** – Display a live log for your app. This option is identical to the **View Live Log** button on the [Logs](/developerportal/operate/logs/) page.
     * **Debugger Info** – Display the settings needed to connect the debugger in Studio Pro to your app. For more information on debugging in the cloud, see [How To Debug Microflows Remotely](/refguide/debug-microflows-remotely/).
     * **Running Now** – Monitor all actions that are currently running in your environment. For more information, see [Running Now](/developerportal/deploy/mxcloud-runningnow/).
@@ -106,11 +106,11 @@ The table contains the following details for each deployment package:
 
 * The deployment status
 * The deployment package name
-* The deployment label (for packages that are deployed)
+* The deployment label (only displayed for packages that are deployed)
 * The version of the deployment package
 * The date when the deployment package was uploaded
 * The uploader account
-* The expiry date of the deployment package (if one is set). Packages are set to expire and be deleted within 15 days, unless they are deployed before that date. Expiry dates apply only to packages that do not meet either of these criteria:
+* The expiry date of the deployment package, if one is set. Packages are set to expire and be deleted within 15 days, unless they are deployed before that date. Expiry dates apply only to packages that do not meet either of these criteria:
     * Deployed packages do not expire.  
     * Out of the non-deployed packages, the five most recently deployed packages do not expire. 
 
@@ -118,15 +118,15 @@ The table contains the following details for each deployment package:
 
 You can perform the following actions on this tab:
 
-* Use the **Search** field to search the deployment packages by name or version
-* Click **Upload a Package** to upload a deployment package from your local device
-* Click **Create a Package** to create a deployment package based on a specific branch
+* Use the **Search** field to search the deployment packages by name or version.
+* Click **Upload a Package** to upload a deployment package from your local device.
+* Click **Create a Package** to create a deployment package based on a specific branch.
 * See information and perform actions on the existing deployment packages. 
 * Click **More Options** ({{< icon name="three-dots-menu-horizontal" >}}) on a package to do the following:
 
-    * View details, including the package size, description, build output, and an overview of the environments that are running the package
-    * Download the package
-    * Delete the package
+    * View details, including the package size, description, build output, and an overview of the environments that are running the package.
+    * Download the package.
+    * Delete the package.
 
 ### Permissions Tab{#permissions-tab}
 
@@ -146,9 +146,9 @@ On the **Activity** tab, you can view a log of deployment, backup, and permissio
 Operations performed on a customer's behalf through an authorized Mendix Support ticket are not logged in the activity log.
 {{% /alert %}}
 
-If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can download a copy of the activity log by following these steps:
+If you are the Technical Contact, you can download a copy of the activity log by following these steps:
 
-1. Click **Download to CSV**. (This button is only visible if you are the Technical Contact.)
+1. Click **Download to CSV**. This button is only visible if you are the Technical Contact.
 2. Select the period for which you want to download log entries.
 3. Click **Download**.
 
@@ -188,7 +188,7 @@ Once a service has been enabled for an app, Technical Contacts can selectively e
 
 ## Environment Settings
 
-If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can use **Environment Settings** to choose the default target for the deployment package. If you do not select a target, the .mda package is built and uploaded without being deployed.
+If you are the Technical Contact, you can use **Environment Settings** to choose the default target for the deployment package. If you do not select a target, the .mda package is built and uploaded without being deployed.
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/manage-env-settings.png" alt="" >}}
 
@@ -217,7 +217,7 @@ Follow these steps to deploy packages to selected environments using the **Deplo
     * Select an environment to which you want to deploy a package by clicking the **Deploy** ({{< icon name="deploy" >}}) icon on the **Overview** tab.
     * Select a package that you want to deploy by clicking the **Deploy** ({{< icon name="deploy" >}}) icon on the **Deployment Packages** tab, or by clicking **Promote** by a package name on the **Overview** tab.
 2. Perform one of the following actions, depending on whether you selected the package or the environment first:
-    * If you launched the wizard by selecting an environment, the first screen of the wizard is the **Select Package** tab. Use it to select a package fromthe repository.
+    * If you launched the wizard by selecting an environment, the first screen of the wizard is the **Select Package** tab. Use it to select a package from the repository.
     * If you launched the wizard by selecting a package, the first screen of the wizard is the **Select Environment** tab. Use it to select the target environment for your package.
 3. On the **Configure Environment** tab, review the new constant values, and adjust them as required.
 

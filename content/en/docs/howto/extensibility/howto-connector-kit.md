@@ -8,21 +8,21 @@ weight: 80
 
 ## Introduction
 
-Mendix provides the tools to enable Java developers to easily add powerful and robust new microflow actions to their Mendix toolbox. These microflow actions can be shared in the Mendix Marketplace, so anyone can benefit from them without having to know Java. This is particularly useful when building connectors to services.
+Mendix offers tools that enable Java developers to seamlessly add powerful, robust new microflow actions to their Mendix toolbox. You can share these microflow actions in the Mendix Marketplace allowing anyone to benefit from them without needing Java knowledge. This is especially useful when building connectors to services.
 
-The diagram below illustrates the power of Mendix's integration with Java. It shows a Mendix Slack bot that enables users to determine things and people in pictures taken with a mobile Slack app:
+The diagram below highlights the power of Mendix's integration with Java. It shows a Mendix Slack bot that enables users to identify objects and people in images taken with the mobile Slack app.
 
 {{< figure src="/attachments/howto/extensibility/howto-connector-kit/slack-rekogition-bot-architecture.png" alt="Slack Rekognition Bot design" class="no-border" >}}
 
-The Mendix application consists of a small number of microflows that use Mendix microflow actions to offer a conversational user interface using [Slack](https://slack.com/) and different Amazon services: [S3](https://aws.amazon.com/s3/), [Rekognition](https://aws.amazon.com/rekognition/), and [Lex](https://aws.amazon.com/lex/).
+The Mendix application is built around a few microflows that utilize Mendix microflow actions to provide a conversational user interface through [Slack](https://slack.com/) and various Amazon services: [S3](https://aws.amazon.com/s3/), [Rekognition](https://aws.amazon.com/rekognition/), and [Lex](https://aws.amazon.com/lex/).
 
-This image shows what the microflow toolbox looks like after including all the modules that provide connectors to the services used:
+The image below illustrates the microflow toolbox after adding all the modules that offer connectors to the services used:
 
 {{< figure src="/attachments/howto/extensibility/howto-connector-kit/slack-rekogition-bot-toolkit.png" alt="Slack Rekognition bot toolbox" class="no-border" >}}
 
 For the basics of building toolbox actions, see the blog post [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/). 
 
-This how-to teaches you how to do the following:
+This document shows you how to do the following:
 
 * Use advanced features when creating your own microflow actions
 * Create the **Create object list** action

@@ -26,6 +26,8 @@ After completing the steps outlined in this guide, you will be able to:
 
 ## Delving Into the Mendix Ecosystem
 
+{{< vidyard "AVffVf7KCVt7h1ioBvUQ1f" >}} 
+
 This section offers an overview of the Mendix platform, and outlines the 5 P’s of Digital Transformation and their importance to your Mendix success.  
 
 By the end of this section, you will: 
@@ -49,70 +51,78 @@ If you already have at least one Admin, you can see them in the list when you op
 
 If you do not have an Admin, you can assign one through [Mendix Support](https://support.mendix.com/hc/en-us/requests/new), by selecting **"**Standard Change: Assign Mendix Admin** from the drop-down list. This first admin can then [add other admins](/control-center/company-settings/#mendix-admins). 
 
-### Get Familiar With Mendix
+### Digital Execution Practice (DEP)
 
-{{< vidyard "AVffVf7KCVt7h1ioBvUQ1f" >}} 
+The Mendix Digital Execution Practice is a method for executing on your digital transformation initiatives, designed to ensure that your organization effectively navigates through the stages of digital transformation using the Mendix platform. It embodies a phased approach – Start, Structure, and Scale – each with distinct milestones and activities that correspond to the 5Ps — People, Portfolio, Process, Platform, and Promotion.  
 
-Let’s start with building the foundation of your Mendix knowledge and get you familiar with the Mendix platform! 
+For more information, see [Digital Execution Practice](https://www.mendix.com/evaluation-guide/digital-execution-practice/?_gl=1*1qwc59x*_gcl_au*ODUxMDExMzk2LjE3NDM1OTMwNjM.).
 
-Mendix is the platform that helps you turn ideas into outcomes. It contains all the tools you need to plan your application portfolio, ensure the right ideas get invested in, manage the entire application development lifecycle, and get end-user feedback on what to build. The Mendix platform also provides a space for anyone working with Mendix to interact with the community, share ideas and components as well as find help in case they get stuck.
+#### The 3 S’s of Digital Execution Practice
 
-### Introduction to Digital Execution Practice (DEP): the 3 S’s and the 5 P’s
+Your journey to innovation goes through three major stages:
 
-**The 3 S’s of Digital Execution Practice: Start, Structure and Scale**
+1. Start
+2. Structure
+3. Scale
 
-Your journey to innovation will go through three major stages: **Start**, **Structure** and **Scale**. You are now in the **Start** stage, where the goal is to lay the foundations for your innovation factory. In Start, you want to develop applications that realize value quickly. The reason for this is two-fold:
+##### Start
 
-1. You’ll be spending a lot of time building a team and putting the necessary prerequisites in place in terms of infrastructure and process. Because of that... 
-2. You want quick wins. Quick wins are important because you’ll use these to prove the value of your new approach. Celebrating your first success will help you gain broader support around the company.
+You are now in the Start stage, where the goal is to lay the foundations for your innovation factory. Now is the time to develop applications that achieve value quickly. The reason for this is two-fold:
 
-If the Start stage is about establishing and proving the benefits of rapid application development, then **Structure** is about building out predictability and continuity. Structure is about growing from your first set of apps to a portfolio with a diverse array of apps addressing multiple use cases, expanding your first team into multiple teams, and expanding your developer center. 
+* You’ll be spending a lot of time building a team and putting the necessary prerequisites in place in terms of infrastructure and process. Because of that... 
+* You want quick wins. Quick wins are important because you will use these to prove the value of your new approach. Celebrating your first success will help you gain broader support around the company.
 
-Structure is about taking the process of your first agile experience that you established in Start to a process that institutes shorter release cycles under strict governance. Structure is where you begin to formalize your rapid application development process — establishing an architecture, enabling continuous delivery, and creating governance. By establishing predictability and stability, you’re building the scaffolding for future successes.
+##### Structure
 
-In **Scale**, you have learned how to use Mendix to speed up and scale out app development and start delivering real value for your business.
-Your talent has been trained and activated in such a way that you can shift them around the organization to work on projects where their skills are best put to use. You are applying greater automation to your processes to efficiently and rapidly deliver and manage hundreds of applications with strategic impact. This includes automating deployment and maintenance to support a large portfolio, automating quality assurance to proactively monitor the maintainability of your projects, and enabling greater reusability by establishing a private app store. With these capabilities in place, you maximize value and productivity by creating distributed innovation capabilities throughout the enterprise. You have achieved continuous productivity and efficiency.
+If the Start stage is about establishing and proving the benefits of rapid application development, the Structure stage is about building out predictability and continuity. Structure is about growing from your first set of apps to a portfolio with a diverse array of apps addressing multiple use cases, expanding your first team into multiple teams, and expanding your developer center. 
 
-**The 5 P’s of Digital Transformation**
+Structure is about taking the process of your first agile experience established during the Start stage and turning it into to a process that institutes shorter release cycles under strict governance. You begin to formalize your rapid application development process — establishing an architecture, enabling continuous delivery, and creating governance. By establishing predictability and stability, you’re building the scaffolding for future successes.
 
-Sounds great, right? But how do you get there? Step by step. There are five major areas you will need to focus on. We call these the **5 P’s of Digital Transformation** and aligning the P’s (Portfolio, People, Process, Platform, and Promotion) to your organization's digital strategy is crucial to your Mendix success. Let’s go over them one by one.
+##### Scale
+
+During the Scale stage, you use Mendix to speed up and scale out app development, and start delivering real value for your business. You are applying greater automation to your processes to efficiently and rapidly deliver and manage hundreds of applications with strategic impact. This includes automating deployment and maintenance to support a large portfolio, automating quality assurance to proactively monitor the maintainability of your projects, and enabling greater reusability by establishing a private app store. With these capabilities in place, you maximize value and productivity by creating distributed innovation capabilities throughout the enterprise. 
+
+The Scale stage is where you achieve continuous productivity and efficiency.
+
+#### The 5 P’s of Digital Transformation
+
+There are five major areas that you need to focus on in your Digital Execution Practice, namely the 5 P’s of digital transformation: Portfolio, People, Process, Platform, and Promotion.
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/5-ps.png"  >}}
 
-#### Portfolio: Choosing a Use Case That Is Equally Meaningful and Doable
+##### Portfolio
 
 Getting your digital transformation program off the ground starts with identifying the right projects and creating an application portfolio of quick wins in high-value initiatives.
 
-Why quick wins?
+Proving the value of a program, whether it’s through software that allows your business to create a new channel of revenue or an application that saves employees time on an internal process, allows you to achieve immediate success and justify a broader organizational change. It is important to include a diversity of use cases, to show that your application portfolio can reach many different departments, and address a variety of needs.
 
-Proving the value of a program—whether it’s through software that allows your business to create a new channel of revenue or an application that saves employees time on an internal process—allows you to realize immediate success and justify a broader organizational change. A diversity of use cases is important here, to show that your application portfolio can reach many different departments and address a variety of needs.
-
-And guess what? We have a tool to help you with that. Mendix Portfolio Management gives you a way to identify, track, and plan out your initiatives. So, let's get started by creating your Portfolio board [here](https://portfolio.mendix.com/index.html). All you need to do is click on *Get Started* and then *Create your first Portfolio*. 
+Mendix Portfolio Management gives you a way to identify, track, and plan out your initiatives. Create your Portfolio board [here](https://portfolio.mendix.com/index.html).
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/portfolio-landscape-overview.png"  >}}
 
-If you would like to learn more about how to manage your portfolio of ideas and applications. You might also have done a portfolio workshop with Mendix experts before, in which case, you may already have an Excel file with your list of initiatives that you can easily import into your brand new board. If not, we discuss your first app selection in more detail in 3.
+##### People
 
-#### People: Building a Strong Mendix Team
+The people you choose for your teams are crucial to the success of your digital execution program. They need to have the right skills, be excited about the program, and be able to commit time and energy to it, no matter their job title. 
 
-The people you choose for your teams are absolutely crucial to the success of your digital execution program. You want to find the right people with the right skills who are excited about and can commit time and energy to the program, no matter their job title. 
+Your first Mendix team should include a core comprised of a professional developer—someone with technical expertise—and a business developer—someone familiar with the platform that can act as a power user if needed. The key is to have developers who can collaborate closely with end users, bridging the gap between business needs and technical possibilities.  
 
-A strong first Mendix team is more than just the number of people in the room. Your first Mendix team should include a core development team comprised of a combination of a professional developer — someone with technical expertise — and a business developer — someone familiar with the platform that can act as a power user if needed. The key is to have developers who can collaborate closely with end users, bridging the gap between business needs and technical possibilities.
-In the beginning, it’s highly likely that not all these people will come from your own organization (we will further review the options in section [Review Options for Development Resources](#review-options-for-development-resources)), but this is an overview of all the higher level roles you will need sooner or later.The following leadership roles are essential to the success of any new platform or paradigm:
+The following leadership roles are essential to the success of any new platform or paradigm:
 
-* **Executive Sponsors:** Success starts at the top, where senior executive buy-in is a must. These are the top-level executives, ideally representing both the Business/Operations and IT, who are willing to be engaged periodically to provide oversight and steering-committee level guidance. These people won’t necessarily be involved day-to-day, but they understand the big picture vision of how Mendix will help the enterprise achieve its digital transformation and low-code goals, how it fits to ‘play nicely’ with other technology stacks and tools like Microsoft’s ADO or Power Apps, and what the transformational value is expected. Your Mendix team can work with these individuals to help understand, define, and refine their role, the value proposition for high ROI, etc.
+* Executive sponsors – these are the top-level executives, ideally representing both Business/Operations and IT. They are willing to be engaged periodically to provide oversight and steering-committee level guidance. These people won’t necessarily be involved day-to-day, but they understand the big picture vision of how Mendix will help the enterprise achieve its digital transformation and low-code goals, how it fits in with other technology stacks and tools like Microsoft’s ADO or Power Apps, and what the transformational value is expected. Your Mendix team can work with these individuals to help understand, define, and refine their role, as well as the value proposition for high return on investment.
 
-* **Program Owner:**  You need a person to lead the program and mandate/enable change; who generates excitement about the importance of this transformation and can inspire people to *want* to participate. This person is directly responsible for the overall success of the platform’s implementation, bringing impactful apps to fruition, ensuring value targets are defined and tracked, and that the teams are properly assigned and allocated for success.
+* Program owner – a person who leads the program and mandates or enables change. They generate excitement about the importance of this transformation and can inspire people to want to participate. This person is directly responsible for the overall success of the platform’s implementation, bringing impactful apps to fruition, ensuring value targets are defined and tracked, and that the teams are properly assigned and allocated for success.  
 
-    It’s common for Program Owners to work very closely with their Mendix CSMs to define and implement success plans and to evolve those plans over time to ensure ever-increasing returns and solid value. For smaller organizations, this person may also be part of the Core Team; for larger organizations, it’s common for this person to be a part of the Center of Excellence leadership team or to be a dedicated senior resource overseeing global success. Areas of responsibility include assurance of proper architectural and governance guidelines/adherence, successful regional and global rollouts, successful team growth/training/enablement plans, KPI definition and tracking, etc.  
+  Program owners work closely with their Mendix CSMs to define and implement success plans, and to evolve those plans over time. For smaller organizations, this person may also be part of the core team. For larger organizations, it is common for this person to be a part of the Center of Excellence leadership team, or to be a dedicated senior resource overseeing global success. Areas of responsibility include assurance of proper architectural and governance guidelines and adherence, successful regional and global rollouts, successful team growth, training, and enablement plans, KPI definition and tracking.
 
-* **Center of Excellence Lead (COE Lead):** Generally, larger organizations implement a Mendix COE to help define and enforce good governance, development, and enablement practices that can evolve with the business and technological changes for overall platform and program success throughout the enterprise over time. The COE Lead ensures the Mendix COE is properly staffed to support, oversee and enable development teams, and ensures the products produced are of high-quality following best practices for high re-usability, maintainability and return on investment. This person generally has sufficient senior-level technical and managerial skills to oversee the COE’s Enterprise and Solution Architects, DevOps technical leads, trainers and mentors, and other experienced staff.
+* Center of Excellence lead (COE Lead) – larger organizations appoint a Mendix COE to help define and enforce good governance, development, and enablement practices that can evolve with the business and technological changes over time. The COE lead ensures the Mendix COE is properly staffed to support, oversee, and enable development teams, and ensures the products are of high-quality, and follow best practices for high re-usability, maintainability, and return on investment. This person generally has sufficient senior-level technical and managerial skills to oversee the COE’s Enterprise and Solution Architects, DevOps technical leads, trainers, mentors, and other experienced staff.
 
-**Product owners** are key players to a successful program, because they’ll have in-depth knowledge of the business, the product, and its users, and will have insight into the value that it will create. If possible, make sure that your first product owner comes from your own organization and is familiar with the problem you are setting out to solve with your first application. Product owner is not really a leadership role, but the choice of a product owner is crucial for the success of your first app, which is why we touch on it here. POs are also a part of the agile scrum team, so we will mention them again in section [Identify Your First Mendix Project Team](#identify-first-mendix-team).
+* Product owner – they have in-depth knowledge of the business, the product, and its users, as well as insight into the value that it will create. If possible, make sure that your first product owner comes from your own organization, and is familiar with the problem you are setting out to solve with your first application. The product owner does not hold a leadership role, but they are crucial for the success of your first app. They are also part of the agile scrum team, so will come up again in the [Identify Your First Mendix Project Team](#identify-first-mendix-team) section.
 
-**Architects** will help establish a target architecture, infrastructure, and governance. 
+* Architect – they help establish a target architecture, infrastructure, and governance. 
 
-Finally, an **application development manager** needs to spearhead the initiative and drive the program and the cross-functional teams who will deliver on those projects. 
+* Application development manager* – they need to spearhead the initiative, and drive the program and the cross-functional teams who will deliver on those projects. 
+
+At first, it is likely that not all these people will come from your own organization—the [Review Options for Development Resources](#review-options-for-development-resources) section offers information about this.
 
 **The blueprint to build your first Mendix team**
 

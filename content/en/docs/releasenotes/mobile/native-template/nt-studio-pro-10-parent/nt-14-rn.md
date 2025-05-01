@@ -5,6 +5,18 @@ weight: 6
 description: "Native Template 14"
 ---
 
+## 14.1.0 {#1410}
+
+**Release date: ___**
+
+### Improvements
+
+- We upgraded our Database Backend Library to the most recent version. This update brings better performance on database operations and performance improvements. 
+
+### Library Updates and Improvements
+
+- **@op-engineering/op-sqlite:** 12.0.2
+
 ## 14.0.0 {#1400}
 
 **Release date: April 2, 2025**

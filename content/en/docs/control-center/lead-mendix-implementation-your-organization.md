@@ -1,103 +1,53 @@
 ---
 title: "Lead Mendix Implementation in Your Organization"
-linktitle: "Bring Mendix into Your Organization"
+linktitle: "Lead Mendix Implementation in Your Organization"
 url: /lead-mendix-implementation-in-your-organization/
 weight: 100
-description: "Unlock the full potential of the Mendix platform and accelerate your application development journey in your organization."
+description: "Unlock the full potential of the Mendix platform and accelerate the application development journey in your organization."
 ---
 
 ## Introduction
 
-With this guide, you can unlock the full potential of the Mendix platform and accelerate your application development journey in your organization.
+This guide helps you unlock the full potential of the Mendix platform and accelerate the application development journey in your organization. It provides you with everything you need to know to define your low code vision, configure company-wide settings, and launch your first application.
 
-This guide covers everything you need to know to get started with Mendix in your company. This guide is meant for anyone who is in charge of managing the entire Mendix program in an organization. It will take you through defining your low code vision, defining company-wide settings as well as kicking off what will become the first app you will launch. Follow these steps to unlock the full potential of the Mendix platform and accelerate your journey into the digital execution practice.
+This guide is tailored to organizations new to Mendix, and is especially geared towards leaders responsible for implementing Mendix in their company. It does not cover technical aspects, but rather focuses on how to manage organizational change, along with all the initial decisions you need to make to ensure success.
 
-### Welcome! What You Will Learn in This Guide
+The content can be covered in a few hours. However, since it is designed as a guide, not as a course, Mendix recommends that you come back to it as you are working towards launching your first application.
 
-Welcome to Mendix, the leading low-code application development platform that empowers you to turn your ideas into outcomes quickly and efficiently! 
+After completing the steps outlined in this guide, you will be able to:
 
-The “Lead Mendix Implementation in Your Organization" guide is designed to help you navigate through the initial steps of getting started with Mendix in your company.
+* Describe the various elements of the Mendix platform. 
+* Explain the 5 P’s of the Digital Execution Practice, and how they are imperative to low-code success. 
+* Create a getting-started plan. 
+* Kick off your Mendix program. 
+* Establish governance guidelines. 
+* Prepare your first project, and onboard your first project team. 
+* Launch your first application.
 
-By the end of this guide, you’ll be able to:
+## Delving Into the Mendix Ecosystem
 
-* Describe the various elements of the Mendix platform 
-* Explain the 5 P’s of the Digital Execution Practice and how they are imperative to low-code success 
-* Create a getting-started plan 
-
-* Kick-off your Mendix program 
-* Establish governance guidelines 
-* Prepare your first project and onboard your first project team 
-* Launch your first application
-
-### Who This Guide Is For, How to Use It, and for How Long
-
-This guide is tailored for organizations new to Mendix, especially for leaders responsible for implementing Mendix in their company. It is designed to help you navigate your Mendix journey from starting up until your first application is launched. It also reflects the most common steps in that journey and is a collection of resources you can use to ensure success on each of these steps.
-
-We will not talk about technical setup here, but will guide you through managing the organizational change along with all the initial decisions you will need to make to ensure success. Think of this guide as your guide to getting started with Mendix at your company and if you are (a part of the team) in charge of making that a success, then this is the perfect starting point for you.
-
-The content in this guide can be covered in a few hours, but it was designed as more of a guide versus a course, so you will likely come back to it as you are working towards getting that first app live. Our most successful customers tend to do that within 4-5 months, but the time frame heavily depends on your organization, the choice of that first app, and many other factors that will also influence how long you might find the content in this guide useful.
-
-### Questions and Feedback
-
-**Got a question on anything related to the Digital Execution Practice and the process of getting started on the organization side of things?**
-
-* Reach out to your Mendix team:
-
-  They are always willing to answer questions, help you make decisions, and provide extra information. But even if you don’t have a dedicated CSM, we have provided extra resources throughout this guide that should help you out.
-
-* Ask the Community in our [Digital Execution Practice space](https://community.mendix.com/link/space/digital-execution-community):
-
-  This is a part of the Mendix Community that is specifically dedicated to helping others succeed with their digital execution practice. Feel free to ask questions there, and our own Mendix experts, as well as other companies using Mendix who have been down the same road you are starting now, will share their experience. If you haven’t already joined, you can do that with one click [here](https://community.mendix.com/link/invitation/space/Digital-Execution-Community/0438b34d-3432-44c1-ac85-d5bc940116e9).
-
-**Having trouble with something (more) technical?**
-
-* Check out Mendix Documentation:
-
-  Sometimes the right information is just a click away in a document.
-
-* Contact the Mendix Community:
-
-  The [Mendix Community](https://community.mendix.com/p/questions) is where you can find help when you get **stuck.** You can also help others when you know the answer! Be sure to first check whether someone has already asked the question you're wondering about. If not, feel free to post it and our community will help you out! If you didn’t already know, you can gain **points** when you do so!
-
-* Submit a Support ticket:
-
-  If something really appears to be broken from a technical point of view (for example, you can’t even visit or edit your app anymore), contact our [Support Team](https://support.mendix.com/hc/en-us), and they will do their absolute best to help you out.
-
-**Have some feedback?**
-
-* Give your feedback using our **Feedback** widget at the bottom of the page. If you have suggestions for improvement, please tell us.
-
-## Get Familiar With the 5 P’s of the Digital Execution Practice 
-
-In this section you will learn about the 5 P’s of Digital Transformation and their importance to your Mendix success. You will also get an overview of the Mendix platform and learn where you can find all the extra information you may need. 
-
-**Learning Objectives**
-
-Let’s start with building the foundation of your Mendix knowledge!
+This section offers an overview of the Mendix platform, and outlines the 5 P’s of Digital Transformation and their importance to your Mendix success.  
 
 By the end of this section, you will: 
 
-* Assign your Mendix Admin 
-* List the different components of the Mendix platform and explain their role 
-* Identify the three major stages of the Digital Execution Practice and what each stage entails 
-* Describe the 5 P’s of the Digital Execution Practice and their importance to your long-term success 
-* Create your Portfolio in Mendix Portfolio Management to manage your initiatives 
-* Recognize the different roles and skills required to build your first Mendix team 
-* Choose the right people for your Mendix team 
-* Explain how to build repeatable practices and long-term outcomes 
-* Describe the benefits that the Mendix Platform brings to an organization 
-* Identify best practices to promote the value of low-code within your organization 
-* List the available options you have for staying up to date with Mendix
+* Assign your Mendix Admin. 
+* List the different components of the Mendix platform and explain their role. 
+* Identify the three major stages of the Digital Execution Practice and what each stage entails. 
+* Describe the 5 P’s of the Digital Execution Practice and their importance to your long-term success. 
+* Create your portfolio in Mendix Portfolio Management to manage your initiatives. 
+* Recognize the different roles and skills required to build your first Mendix team. 
+* Choose the right people for your Mendix team. 
+* Explain how to build repeatable practices and long-term outcomes. 
+* Describe the benefits that the Mendix Platform brings to an organization. 
+* Identify best practices to promote the value of low-code within your organization. 
 
-### Assign Your Mendix Admin
+### Assigning a Mendix Admin
 
-First let’s get one admin (no pun intended) thing out of the way. Your company needs **at least one Admin**. It might make sense for the first admin to be you and then you can easily assign as many other admins as you need.
+Your company needs at least one Admin. This is normally someone from the company's IT department, who has full access to the Control Center. The [Control Center](/control-center/) provides insights into the company activities carried out by developers. You can find out more about it from this learning path](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center).
 
-So why do you need an admin? Your developers are able to create new apps, invite other users to their app teams, deploy apps, and invite app end-users to give feedback, among many other activities. Insights into these company activities are provided in [Control Center](https://controlcenter.mendix.com/index.html) in one central overview. You can read more about Control Center [here](/control-center/) or follow this [learning path](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center).
+If you already have at least one Admin, you can see them in the list when you open [Control Center](https://controlcenter.mendix.com/index.html).
 
-Do you already have at least one admin? If that’s the case, you can see them on the list when you open [Control Center](https://controlcenter.mendix.com/index.html), and you can skip the rest of this section.
-
-A **Mendix Admin** will normally be someone in the IT department of your company, and they will have full access to Control Center, which will give them visibility and essential controls to make sure the apps deliver business value at acceptable cost and risk.  You can assign your first Mendix Admin through [Mendix Support](https://support.mendix.com/hc/en-us/requests/new), just choose "Standard Change: Assign Mendix Admin" from the dropdown. This first admin can then [add other admins](/control-center/company-settings/#mendix-admins). 
+If you do not have an Admin, you can assign one through [Mendix Support](https://support.mendix.com/hc/en-us/requests/new), by selecting **"**Standard Change: Assign Mendix Admin** from the drop-down list. This first admin can then [add other admins](/control-center/company-settings/#mendix-admins). 
 
 ### Get Familiar With Mendix
 
@@ -106,22 +56,6 @@ A **Mendix Admin** will normally be someone in the IT department of your company
 Let’s start with building the foundation of your Mendix knowledge and get you familiar with the Mendix platform! 
 
 Mendix is the platform that helps you turn ideas into outcomes. It contains all the tools you need to plan your application portfolio, ensure the right ideas get invested in, manage the entire application development lifecycle, and get end-user feedback on what to build. The Mendix platform also provides a space for anyone working with Mendix to interact with the community, share ideas and components as well as find help in case they get stuck.
-
-**Here are some resources to help familiarize yourself with the Mendix platform:**
-
-* The [“Mendix Ecosystem”](https://academy.mendix.com/link/modules/78/lectures/504/1.3-Mendix-Ecosystem) lecture in our Rapid Developer course offers a short description of each of the elements of the platform relevant for developers together with useful links. 
-* [Apps](/developerportal/) will help you explore apps: the central location to collaborate, deploy, and manage your Mendix apps.
-
-**Also, don’t forget to bookmark your “Favorites”!**
-
-* [**Mendix Support**](https://support.mendix.com/hc/en-us): Tickets, issues, incidents
-* [**Mendix Academy**](https://academy.mendix.com/index3.html): Certifications and trainings 
-* [**Mendix Community**](https://community.mendix.com/p/questions): Online community 
-* [**Mendix Blog**](https://www.mendix.com/blog/): Articles and trending topics 
-* [**Mendix Docs**](/): Platform documentation 
-* [**Mendix Partner Hub**](https://www.mendix.com/partners/): Explore our Partner Network 
-* [**Siemens Annual Reports**](https://www.siemens.com/global/en/company/investor-relations/events-publications-ad-hoc/annualreports.html?gclid=CjwKCAjwzo2mBhAUEiwAf7wjkpk1onH3tK1d_kOzGxjbQa5MTFF91cbKKfp7a6F3AS8mDpov1_M6choCbE8QAvD_BwE&acz=1): Financial, corporate governance, sustainability 
-* [**Mendix Marketplace**](https://marketplace.mendix.com/): Modules and other content provided by Mendix, partners or the community 
 
 ### Introduction to Digital Execution Practice (DEP): the 3 S’s and the 5 P’s
 
@@ -260,14 +194,6 @@ Promotion tends to be a challenge for many IT organizations, in part because IT 
 
 ***Celebrating success:*** We love a good reason to celebrate, and hope you’ll use milestones large and small to celebrate your successes. Acknowledging your achievements, whether it’s getting the team to complete Academy certifications, building the first reusable component, finishing the first development sprint or launching your first application, celebrations are a powerful way to boost team morale and drive future momentum. 
 
-#### Additional Resources
-
-Below you can find a collection of different resources to grow your knowledge regarding the 5 P’s of Digital Transformation and their importance in your Mendix journey. 
-
-* In our [DEP Manual](https://www.mendix.com/resources/digital-execution-manual/) you can learn more about the 5 P’s and how to best leverage Mendix’s low-code platform.
-* Follow the [Digital Execution Learning Path](https://academy.mendix.com/link/paths/52/Digital-Execution) to learn the steps of successful digital execution and the meaning of rapid application development maturity.
-* In the Agile Awareness Learning Path, you can read more about the [Digital Execution Stages](https://academy.mendix.com/link/modules/389/lectures/3133/2.2-Digital-Execution-Stages:-Start,-Structure,-Scale) as well as the [core tenets of digital execution](https://academy.mendix.com/link/modules/389/lectures/3135/2.4-People,-Portfolio,-Process,-and-Platform-(4-P’s)).
-* You can check our Mendix blog where you will find many interesting articles for Digital Transformation, like [this one](https://www.mendix.com/blog/successful-digital-transformation-a-practice-makes-perfect/) that explains the importance of digital transformation and the 5P’s; or [this one](https://www.mendix.com/blog/digital-transformation-a-matter-of-time/#learning-to-walk-the-4-ps-and-3-ss-of-digital-transformation) about the digital transformation journey.  
 
 ### Stay up to Date With Mendix
 
@@ -1276,6 +1202,46 @@ Learn more about [version details and release timelines](/releasenotes/studio-pr
 ### Summary
 
 Your first application is launched, and you now know all about testing, launching, and promoting your application as well as the importance of continuous improvement, maintenance and upgrades. It was a long journey, but you made it!  
+
+## Questions and Feedback
+
+If you have questions related to the Digital Execution Practice and organizational aspects:
+
+* Reach out to your Mendix team. They are always willing to answer questions, help you make decisions, and provide extra information.  
+  If you do not have a dedicated customer success manager (CSM), this guide contains the necessary resources to help you out.
+
+* Ask the Community in our [Digital Execution Practice space](https://community.mendix.com/link/space/digital-execution-community). This is a part of the Mendix Community that is specifically dedicated to helping others succeed with their digital execution practice.  
+  Your questions will be answered by our own Mendix experts, as well as other companies who have used Mendix to their benefit.  
+  If you haven’t already joined, you can do that by clicking [here](https://community.mendix.com/link/invitation/space/Digital-Execution-Community/0438b34d-3432-44c1-ac85-d5bc940116e9).
+
+If you need help with technical matters:
+
+* Check out the Mendix Documentation.
+* Contact the [Mendix Community](https://community.mendix.com/p/questions). Here, you can get answers to your questions, and help others with their own questions.  
+  Be sure to first check whether someone has already asked the question you're wondering about. If not, feel free to post it, and our community will help you out! Doing so will gain you points!
+* Submit a support ticket. If something really appears to be broken from a technical point of view, such as not being able to visit or edit your application anymore, contact our [Support Team](https://support.mendix.com/hc/en-us).
+
+If you have feedback or any improvement suggestions, use the **Feedback** option at the bottom of this page.
+
+## Resources
+
+Here are some resources help familiarize yourself with the Mendix platform:
+
+* The [Mendix Ecosystem](https://academy.mendix.com/link/modules/78/lectures/504/1.3-Mendix-Ecosystem) lecture in our Rapid Developer course offers a short description of each platform element relevant for developers, along with useful links. 
+* [Apps](/developerportal/) is the central location to collaborate, deploy, and manage your Mendix applications.
+* [Mendix Support](https://support.mendix.com/hc/en-us) allows you to create tickets, issues, incidents.
+* The [Mendix Academy](https://academy.mendix.com/index3.html) provides access to trainings and certifications. For example:  
+    * The [Digital Execution Learning Path](https://academy.mendix.com/link/paths/52/Digital-Execution) outlines the steps to successful digital execution, and the meaning of rapid application development maturity.
+    * In the Agile Awareness Learning Path, you can read more about the [Digital Execution Stages](https://academy.mendix.com/link/modules/389/lectures/3133/2.2-Digital-Execution-Stages:-Start,-Structure,-Scale) as well as the [core tenets of digital execution](https://academy.mendix.com/link/modules/389/lectures/3135/2.4-People,-Portfolio,-Process,-and-Platform-(4-P’s)).
+* The [Mendix Community](https://community.mendix.com/p/questions) is our online collaborative help community. 
+* The [Mendix Blog](https://www.mendix.com/blog/) contains articles on trending topics. For example:
+    * [Successful Digital Transformation: A Practice Makes Perfect](https://www.mendix.com/blog/successful-digital-transformation-a-practice-makes-perfect/) explains the importance of digital transformation.
+    * [Learning to walk: The 4 Ps and 3 Ss of digital transformation](https://www.mendix.com/blog/digital-transformation-a-matter-of-time/#learning-to-walk-the-4-ps-and-3-ss-of-digital-transformation) covers the 4 P's of digital transformation.
+* The [Mendix Docs](/) cover platform-wide documentation.
+* The [Mendix Partner Hub](https://www.mendix.com/partners/) allows you to explore our Partner Network. 
+* The [Mendix Marketplace](https://marketplace.mendix.com/) provides access to modules, widgets, solutions, and other content provided by Mendix, partners or the community. 
+* The [Siemens Annual Reports](https://www.siemens.com/global/en/company/investor-relations/events-publications-ad-hoc/annualreports.html?gclid=CjwKCAjwzo2mBhAUEiwAf7wjkpk1onH3tK1d_kOzGxjbQa5MTFF91cbKKfp7a6F3AS8mDpov1_M6choCbE8QAvD_BwE&acz=1) offer details on financial, corporate governance, and sustainability.
+* The [DEP Manual](https://www.mendix.com/resources/digital-execution-manual/) provides information about the 5 P’s and how to best leverage the Mendix low-code platform.
 
 ## Conclusion
 

@@ -42,7 +42,7 @@ The following pattern letters can be used to parse and format Date and time valu
 | S      | Millisecond                                      | 201                       |
 
 {{% alert color="info" %}}
-The issue described in this warning has been resolved in Mendix 10.23, patch versions of Mendix 10.18 newer then 10.18.6, patch versions of Mendix 10.12 newer then Mendix 10.12.16, and patch versions of Mendix 10.6 newer then 10.6.23.
+The issue described in this warning has been resolved in Mendix 10.23, in patch versions of Mendix 10.18 starting from 10.18.7, Mendix 10.12 starting from 10.12.17, and Mendix 10.6 starting from 10.6.24.
 
 In microflows, both pattern letters `M` and `L` are supported and work completely as expected.
 

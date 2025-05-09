@@ -5,12 +5,14 @@ description: "How to install and configure Mendix on a Linux system"
 weight: 99
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
+
 {{% alert color="warning" %}} Linux deployment is only supported on Debian 10 (buster) and using Mendix Runtime versions 7-9. Further version support will not be added anymore.  {{% /alert %}}
+
 ## Introduction
 
-Mendix can be installed on-premises on systems running Linux. The installation consists of the following:
+Mendix can be installed on premises on systems running Linux. The installation consists of the following:
 
-* m2ee-tools: a command line tool used for managing your Mendix installation
+* M2ee-tools - A command line tool used for managing your Mendix installation
 * Mendix Runtime
 * Java Runtime Environment
 * Web server
@@ -20,7 +22,6 @@ For a list of the distributions which are currently supported, see [Operating Sy
 ## Technical Documentation
 
 The documentation describing the installation and basic configuration of the Mendix software on a Linux system is available as part of the m2ee-tools helper program: [https://github.com/mendix/m2ee-tools/tree/develop/doc/README.md](https://github.com/mendix/m2ee-tools/tree/develop/doc/README.md).
-
 
 ## License Key Activation on Linux
 

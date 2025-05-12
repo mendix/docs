@@ -61,5 +61,5 @@ Push notifications in progressive web apps require Firebase to be set up as earl
 You have now successfully added a button to enable receiving push notifications for your users. Go ahead to the next section to test sending a push notification.
 
 {{% alert color="warning" %}}
-Do not make use of the widget "Push Notifications" that comes with the Push Notificaitons Connector in a PWA. This widget is only supported in Hybrid Mobile apps and will not work in a PWA. Receiving events for received notifications is currently not supported in PWAs.
+Do not use the **Push Notifications** widget that comes with the **Push Notifications Connector** in a progressive web app. This widget is only supported in hybrid mobile apps, and will not work in a PWA. Receiving events for received notifications is not supported in PWAs.
 {{% /alert %}}

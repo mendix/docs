@@ -13,10 +13,6 @@ cascade:
         priority: 0.8
 ---
 
-{{% alert color="warning" %}}
-Mendix 11 is currently in Beta. For more information about Beta releases and features, see [Beta Releases](/releasenotes/beta-features/).
-{{% /alert %}}
-
 ## Introduction
 
 The *Mendix Studio Pro 11 Guide* covers important topics concerning [Studio Pro](/refguide/modeling/), the [Mendix Runtime](/refguide/runtime/), and other components of the Mendix Platform.

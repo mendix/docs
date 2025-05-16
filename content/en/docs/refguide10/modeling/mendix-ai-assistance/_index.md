@@ -21,7 +21,7 @@ For information on what third-party services Maia uses and what data are sent to
 
 To ensure the smooth operation of Mendix AI Assistance (Maia), the following network requirements must be met:
 
-* Ensure access to hostnames within the `maia.mendix.com` subdomain
+* Ensure access to hostnames within the `maia.mendix.com` and `logic.maia.mendix.com` subdomains
 * Allow secure network traffic through port 443 (HTTPS) to enable uninterrupted operation of Maia
 
 ## Maia Capabilities in Mendix Studio Pro 

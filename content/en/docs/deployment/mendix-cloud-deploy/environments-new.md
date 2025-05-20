@@ -20,7 +20,7 @@ You can use the **Environments** page to access information about your environme
 
 To access this page, go to [Apps](https://sprintr.home.mendix.com/), and click **Environments** on your app. You can also directly visit the **Environments** page using `https://cloud.home.mendix.com/link/deploy/`*`APP_ID`*, with *`APP_ID`* replaced by your [project ID](/developerportal/deploy/environments-details/#general-tab).
 
-## Tab Overview
+## Available Tabs
 
 The **Environments** page has the following tabs:
 
@@ -35,10 +35,14 @@ On the **Overview** tab, you can view information about and perform actions on y
 
 #### Environment Information
 
+The most recent deployment package is shown in a banner at the top of the page, along with a button to deploy it.
+
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/deploy_mda.png" alt="" >}}
+
 These are the details you can see on the **Overview** tab for each environment:
 
 * The environment's name
-* Studio Pro Target ({{< icon name="mendix-browser" >}}) – This is displayed if the environment is the designated Studio Pro target. For more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
+* Whether this is the Studio Pro Target ({{< icon name="mendix-browser" >}}) – This is displayed if the environment is the designated Studio Pro target. For more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
 * Licensed badge – This is displayed if the environment is licensed.
 * The environment's status:
     * {{< icon name="checkmark-circle-filled" color="green" >}} – The application in this environment is running.
@@ -51,9 +55,7 @@ These are the details you can see on the **Overview** tab for each environment:
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/overview-tab.png" alt="" >}}
 
-The most recent deployment package is shown in a banner at the top of the page, along with a button to deploy it.
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/deploy_mda.png" alt="" >}}
+##### Environment Details
 
 To view more information about each environment and the deployment package it is running, use the **Expand** ({{< icon name="chevron-down" >}}) toggle on the environment. 
 
@@ -64,19 +66,13 @@ These are the additional details you can see about each environment:
 * The environment ID
 * The deployment region
 * The [cloud resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack)
-* The scaling configuration. To [scale an environment](/developerportal/deploy/scale-environment/), meaning to change the number of instances it runs on and the memory it consumes, click **Scale**. This opens the **Change Scaling** wizard.
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/change-scaling.png" >}}
+* The scaling configuration.
 
 These are the details you can see about the deployment package:
 
 * The package name
 * The package version
 * The package runtime 
-
-You can promote a package to another environment. To do that, click **Promote**, which opens the **Promote** wizard.
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/promote-dialog.png" alt="" >}}
 
 #### Environment Actions
 
@@ -93,6 +89,10 @@ These are the actions you can perform on your environments:
     * **Running Now** – Monitor all actions that are currently running in your environment. For more information, see [Running Now](/developerportal/deploy/mxcloud-runningnow/).
     * **Logged in Users** – Display all users who are logged in to your app.
     * **Stop** – Stop the app.
+* **Scale** – [Scale an environment](/developerportal/deploy/scale-environment/). When clicked, it opens the **Change Scaling** wizard.
+  {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/change-scaling.png" >}} 
+* **Promote** – Promote a package to another environment. When clicked, it opens the **Promote** wizard.
+  {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/promote-dialog.png" >}}
 
 ### Deployment Packages Tab{#deployment-packages-tab}
 

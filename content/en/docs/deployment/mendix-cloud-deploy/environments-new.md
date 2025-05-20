@@ -31,9 +31,11 @@ The **Environments** page has the following tabs:
     
 ### Overview Tab{#overview-tab}
 
-On the **Overview** tab, you can view information about and perform actions on your environments.
+On the **Overview** tab, you can view [information](#environment-information) about and perform [actions](#environment-actions) on your environments.    
 
-#### Environment Information
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/overview-tab.png" alt="" >}}
+
+#### Environment Information{#environment-information}
 
 The most recent deployment package is shown in a banner at the top of the page, along with a button to deploy it.
 
@@ -52,8 +54,6 @@ These are the details you can see on the **Overview** tab for each environment:
 * The date and time the app was started, if it is running. This is set in the user's time zone.
 * The version of the deployment package
 * The name of the deployment package
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/overview-tab.png" alt="" >}}
 
 ##### Environment Details
 
@@ -74,13 +74,13 @@ These are the details you can see about the deployment package:
 * The package version
 * The package runtime 
 
-#### Environment Actions
+#### Environment Actions{#environment-actions}
 
 These are the actions you can perform on your environments:
 
 * **Deploy** ({{< icon name="deploy" >}}) – Launch the [Deploy wizard](#deploy-wizard), where you can configure and start a new deployment for the selected environment.
 * **View Details** ({{< icon name="notes-paper-edit" >}}) – Access the [Environment Details](/developerportal/deploy/environments-details/) page.
-* **View App** {{< icon name="external" >}} – Launch the app in a new tab.
+* **View App** {{< icon name="external" >}} – Launch the app in a new browser tab.
 * **More Options** ({{< icon name="three-dots-menu-horizontal" >}}):
     * **Restart** – Stop and restart the running app. Restarting your app is required for applying new constant values or scheduled events to the environment.
     * **Start** – Start a stopped app.
@@ -89,9 +89,11 @@ These are the actions you can perform on your environments:
     * **Running Now** – Monitor all actions that are currently running in your environment. For more information, see [Running Now](/developerportal/deploy/mxcloud-runningnow/).
     * **Logged in Users** – Display all users who are logged in to your app.
     * **Stop** – Stop the app.
-* **Scale** – [Scale an environment](/developerportal/deploy/scale-environment/). When clicked, it opens the **Change Scaling** wizard.
+* **Scale** – [Scale an environment](/developerportal/deploy/scale-environment/). When clicked, it opens the **Change Scaling** wizard.    
+  
   {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/change-scaling.png" >}} 
-* **Promote** – Promote a package to another environment. When clicked, it opens the **Promote** wizard.
+* **Promote** – Promote a package to another environment. When clicked, it opens the **Promote** wizard.    
+  
   {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/promote-dialog.png" >}}
 
 ### Deployment Packages Tab{#deployment-packages-tab}
@@ -127,6 +129,45 @@ You can perform the following actions on this tab:
     * View details, including the package size, description, build output, and an overview of the environments that are running the package.
     * Download the package.
     * Delete the package.
+
+##### Creating a Package {#create-package-wizard}
+
+The **Create a Package** wizard walks you through the steps for creating deployment packages:
+
+1. On the [Deployment Packages tab](#deployment-packages-tab), click **Create a Package**. This launches the **Create a Package** wizard.
+2. On the **Select Branch** tab, select the branch on which to base the build.
+3. On the **Select Revision** tab, select the branch revision on which to base the package.
+4. On the **Choose a Tag** tab, specify the version tag. This includes the major, minor, and patch version numbers.
+
+    {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/3-choose-tag.png" alt="" >}}
+
+5. Click **Build this Revision**.
+
+##### Uploading a Package
+
+Click **Upload a Package** on the **Deployment Packages** tab to select an existing package from your computer.
+
+##### Deploying a Package {#deploy-wizard}
+
+Follow these steps to deploy packages to selected environments using the **Deploy** or **Promote** wizard:
+
+1. Launch the wizard by choosing one of the following options:
+    * Select an environment to which you want to deploy a package by clicking the **Deploy** ({{< icon name="deploy" >}}) icon on the **Overview** tab.
+    * Select a package that you want to deploy by clicking the **Deploy** ({{< icon name="deploy" >}}) icon on the **Deployment Packages** tab, or by clicking **Promote** by a package name on the **Overview** tab.
+2. Perform one of the following actions, depending on whether you selected the package or the environment first:
+    * If you launched the wizard by selecting an environment, the first screen of the wizard is the **Select Package** tab. Use it to select a package from the repository.
+    * If you launched the wizard by selecting a package, the first screen of the wizard is the **Select Environment** tab. Use it to select the target environment for your package.
+3. On the **Configure Environment** tab, review the new constant values, and adjust them as required.
+
+    {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/2-configure-environment.png" alt="" >}}
+
+4. On the **Backup** tab, choose if you want to back up your app before deploying the new package. The app is unavailable while the backup runs.
+5. On the **Deploy** tab, review the deployment settings:
+    1. To see an overview of the configuration for this deployment, click **View Summary**. This summary displays the selected package, selected backup option, and any changed constants or scheduled events.
+    
+        {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/deployment-summary.png" alt="" >}}
+
+    2. Review this summary, then click **Deploy Now**.
 
 ### Permissions Tab{#permissions-tab}
 
@@ -188,45 +229,7 @@ Once a service has been enabled for an app, Technical Contacts can selectively e
 
 ## Environment Settings
 
-If you are the Technical Contact, you can use **Environment Settings** to choose the default target for the deployment package. If you do not select a target, the .mda package is built and uploaded without being deployed.
+If you are the Technical Contact, you can use **Environment Settings** ({{< icon name="cog" >}}) to choose the default target for the deployment package. If you do not select a target, the .mda package is built and uploaded without being deployed.
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/manage-env-settings.png" alt="" >}}
 
-## Creating a Package {#create-package-wizard}
-
-The **Create a Package** wizard walks you through the steps for creating deployment packages:
-
-1. On the [Deployment Packages tab](#deployment-packages-tab), click **Create a Package**. This launches the **Create a Package** wizard.
-2. On the **Select Branch** tab, select the branch on which to base the build.
-3. On the **Select Revision** tab, select the branch revision on which to base the package.
-4. On the **Choose a Tag** tab, specify the version tag. This includes the major, minor, and patch version numbers.
-
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/3-choose-tag.png" alt="" >}}
-
-5. Click **Build this Revision**.
-
-## Uploading a Package
-
-Click **Upload a Package** on the **Deployment Packages** tab to select an existing package from your computer.
-
-## Deploying a Package {#deploy-wizard}
-
-Follow these steps to deploy packages to selected environments using the **Deploy** or **Promote** wizard:
-
-1. Launch the wizard by choosing one of the following options:
-    * Select an environment to which you want to deploy a package by clicking the **Deploy** ({{< icon name="deploy" >}}) icon on the **Overview** tab.
-    * Select a package that you want to deploy by clicking the **Deploy** ({{< icon name="deploy" >}}) icon on the **Deployment Packages** tab, or by clicking **Promote** by a package name on the **Overview** tab.
-2. Perform one of the following actions, depending on whether you selected the package or the environment first:
-    * If you launched the wizard by selecting an environment, the first screen of the wizard is the **Select Package** tab. Use it to select a package from the repository.
-    * If you launched the wizard by selecting a package, the first screen of the wizard is the **Select Environment** tab. Use it to select the target environment for your package.
-3. On the **Configure Environment** tab, review the new constant values, and adjust them as required.
-
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/2-configure-environment.png" alt="" >}}
-
-4. On the **Backup** tab, choose if you want to back up your app before deploying the new package. The app is unavailable while the backup runs.
-5. On the **Deploy** tab, review the deployment settings:
-    1. To see an overview of the configuration for this deployment, click **View Summary**. This summary displays the selected package, selected backup option, and any changed constants or scheduled events.
-    
-        {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/deployment-summary.png" alt="" >}}
-
-    2. Review this summary, then click **Deploy Now**.

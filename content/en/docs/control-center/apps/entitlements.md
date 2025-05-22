@@ -109,10 +109,10 @@ On the **Transactions** tab, you can see a list of transactions that use cloud t
 
 * **Transaction** – The name of the transaction, which includes the provisioned plan, and the impacted application and environment.
 * **Transaction Date** - The date when the transaction occurred.
-* **Quantity** - 
-* **Tokens per Unit** – The number of cloud tokens included in the transaction.
-* **Transaction Type** – This can be credit or debit.
-* **Cloud Tokens** – The number of cloud tokens consumed within the transaction. 
+* **Quantity** - <!-- add description -->
+* **Tokens per Unit** – The number of cloud tokens included in the transaction. <!-- check -->
+* **Transaction Type** – This can be either **Credit** or **Debit**.
+* **Cloud Tokens** – The number of cloud tokens consumed within the transaction. <!-- check -->
 
 ### Requests
 

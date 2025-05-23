@@ -11,8 +11,6 @@ no_list: true
 
 The **Entitlements** page is a self-service tool that displays transactions which use cloud tokens, and that helps manage plan change requests. It also displays the number of entitled, consumed, and remaining cloud tokens.
 
-<!-- change screenshot --> {{< figure src="/attachments/control-center/apps/entitlements/entitlements.png" alt="entitlements page" >}}
-
 ### Mendix Cloud Tokens Explained {#cloud-tokens}
 
 Mendix cloud tokens are annual capacity-based virtual credits that allow you to provision and allocate any Mendix [cloud resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) for your Mendix Cloud deployments.
@@ -20,7 +18,7 @@ Mendix cloud tokens are annual capacity-based virtual credits that allow you to 
 To use cloud tokens, you need to enable self-service. If you want to enable self-service or have questions about cloud tokens, contact your Customer Success Manager (CSM).
 
 {{% alert color="info" %}}
-If you have previously worked with cloud credits, note that they have been replaced with cloud credits. Cloud tokens will be available as a product on the Mendix pricelist starting in early 2025.    
+If you have previously worked with cloud credits, note that they have been replaced with cloud tokens. Cloud tokens will be available as a product on the Mendix pricelist starting in early 2025.    
 One cloud credit is equivalent to ten cloud tokens. For more information, see [From Cloud Credits to Cloud Tokens](#cloud-tokens-faq).
 {{% /alert %}}
 
@@ -105,22 +103,30 @@ The **Entitlements** page contains the following tabs:
 
 ### Transactions
 
-On the **Transactions** tab, you can see a list of transactions that use cloud tokens, with the following details:
+On the **Transactions** tab, you can see a list of transactions that use cloud tokens.
 
-* **Transaction** – The name of the transaction, which includes the provisioned plan, and the impacted application and environment.
+{{< figure src="/attachments/control-center/apps/entitlements/entitlements-transactions.png" alt="The Transactions tab of the Entitlements page">}}
+
+These are the details available for each transaction:
+
+* **Transaction** – The identifier of the transaction, made up of the provisioned plan, and the impacted application and environment.
 * **Transaction Date** - The date when the transaction occurred.
 * **Quantity** - <!-- add description -->
 * **Tokens per Unit** – The number of cloud tokens included in the transaction. <!-- check -->
 * **Transaction Type** – This can be either **Credit** or **Debit**.
 * **Cloud Tokens** – The number of cloud tokens consumed within the transaction. <!-- check -->
 
-### Requests
+### Requests {#plan-change-requests}
 
 {{% alert color="info" %}}
 This feature is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
+The Technical Contact can request a plan change for an app environment. To do that, they need to click the **Change Plan** button on the environment in the **Apps** section of Mendix Portal. For details, see <!-- add link to cloud docs -->.    
+
 This tab lists plan change requests, along with the actions you can take for each request. 
+
+{{< figure src="/attachments/control-center/apps/entitlements/entitlements-requests.png" alt="The Requests tab of the Entitlements page">}}  
 
 These are the details available for each request:
 
@@ -136,8 +142,12 @@ These are the details available for each request:
     * **Pending approval**
     * **Approved**
     * **Canceled**
+    * **Rejected**
 
-Once a plan change request is submitted at the app environment level, a banner and a notification are displayed on the **Entitlements** page. You can access the request details by clicking the notification itself or the **Details** button next to the request in the list. The details include the cost of the plan change and the reason for the request.
+You can filter requests by status and type.
+
+Once a plan change request is submitted at the app environment level, a banner and a notification are displayed on the **Entitlements** page in Control Center.    
+You can access the request details by clicking the notification itself or the **Details** button next to the request in the list. The details include the cost of the plan change, and the reason for the request.
 
 #### Approving a Request
 

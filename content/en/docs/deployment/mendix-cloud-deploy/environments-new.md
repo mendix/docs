@@ -11,12 +11,14 @@ This feature is in Public Beta. For more information, see [Beta Releases](/relea
 {{% /alert %}}
 
 {{% alert color="info" %}}
-While this feature is in Beta, you can use the **New Theme** toggle to switch between this new UI and the [legacy UI](/developerportal/deploy/environments/). For apps running on Kubernetes, the new UI displays by default and cannot be toggled off. 
+While this feature is in Beta, you can switch to the new UI by clicking **Upgrade to the New Experience**. For apps running on Kubernetes, the new UI displays by default and you cannot switch back to the [legacy UI](/developerportal/deploy/environments-details/). 
 {{% /alert %}}
 
 ## Introduction
 
-You can use the **Environments** page to access information about your environments, deploy packages, manage certificates and access restrictions, and more. To access your app's **Environments** page, go to [Apps](https://sprintr.home.mendix.com/) and click **Environments** on your app. You can also directly visit the **Environments** page using this link: `https://cloud.home.mendix.com/link/deploy/`*`APP_ID`*, with *`APP_ID`* replaced by your [project ID](/developerportal/deploy/environments-details/#general-tab).
+You can use the **Environments** page to access information about your environments, deployment packages, manage certificates and access restrictions, and more.
+
+To access your app's **Environments** page, go to [Apps](https://sprintr.home.mendix.com/) and click **Environments** on your app. You can also directly visit the **Environments** page using this link: `https://cloud.home.mendix.com/link/deploy/`*`APP_ID`*, with *`APP_ID`* replaced by your [project ID](/developerportal/deploy/environments-details/#general-tab).
 
 ## Tab Overview
 
@@ -26,12 +28,11 @@ The **Environments** page has the following tabs:
 * **Deployment Packages**
 * **Permissions**
 * **Activity**
+* **Request Overview**
     
 ### Overview Tab{#overview-tab}
 
 In the **Overview** tab, you can view information about your environments.
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/overview-tab.png" alt="" >}}
 
 You can see the following information:
 
@@ -47,43 +48,33 @@ You can see the following information:
 * Version of the deployment package
 * Name of the deployment package
 
-The most recent deployment package is shown in a banner on top of the page, along with a button to deploy it immediately.
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/deploy-mda.png" alt="" >}}
+The most recent deployment package is shown in a banner at the top of the page, along with a button to deploy it immediately.
 
 You can also perform the following actions:
 
 * **Deploy** ({{< icon name="deploy" >}}) – Launches the [Deploy wizard](#deploy-wizard), where you can configure and start a new deployment for the selected environment.
-* **View Details** ({{< icon name="notes-paper-edit" >}}) – Goes to the [Environment Details](/developerportal/deploy/environments-details/) page.
-* **View App** {{< icon name="external" >}} — Launches the app in a new tab.
+* **Details** ({{< icon name="notes-paper-edit" >}}) – Goes to the [Environment Details](/developerportal/deploy/environments-details/) page.
+* **View App** {{< icon name="external" >}} – Launches the app in a new tab.
 * **More Options** ({{< icon name="three-dots-menu-horizontal" >}}):
     * **Restart** – Stops the running application and starts it again. Restarting your app is required for applying new constant values or scheduled events to the environment.
-    * **Start** - Starts a stopped application.
-    * **Live Log** – Shows a live log for your application. It is identical to the **View Live Log** button on the [Logs](/developerportal/operate/logs/) page.
+    * **Start** – Starts a stopped application.
+    * **Live Logs** – Shows a live log for your application. It performs the same action as the **View Live Log** button on the [Logs](/developerportal/operate/logs/) page.
     * **Debugger Info** – Shows the settings needed to connect the debugger in Studio Pro to your app. For more information on debugging in the cloud, see [How To Debug Microflows Remotely](/refguide/debug-microflows-remotely/).
     * **Running Now** – Monitor all actions that are currently running in your environment. For more information, see [Running Now](/developerportal/deploy/mxcloud-runningnow/).
     * **Logged in Users** – Shows all users who are logged in to your app.
     * **Stop** – Stops the application.
 
-To view more information about each environment and the deployment package it is running, use the **Expand** ({{< icon name="chevron-down" >}}) toggle on the environment.
+To view detailed information about each environment such as its environment resources and the deployed package, use the **Expand** ({{< icon name="chevron-down" >}}) toggle on the environment.
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/environment-expanded.png" alt="" >}}
+* For the environment resources, you can view the environment ID, deployment region and [cloud resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack). Additionally, you can perform the following actions:
+    * [Scale the environment](/developerportal/deploy/scale-environment/) by clicking **Scale**
+    * Change the resource pack by clicking **Change Plan**
 
-In this section, you can view additional information about the environment resources and the deployed package:
-
-* For the environment, you can view the environment ID, the deployment region, the [cloud resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack), and the scaling configuration. To launch the **Change Scaling** wizard and [scale the environment](/developerportal/deploy/scale-environment/), click **Scale**.
-
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/change-scaling.png" >}}
-
-* For the deployment package, you can view the package name, version, and runtime. To launch the **Promote a  Package** wizard and promote the package to another environment, click **Promote**.
-
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/promote-dialog.png" alt="" >}}
+* For the deployed package, you can view the package name, version, and runtime. To promote the package to another environment, click **Promote**.
 
 ### Deployment Packages Tab{#deployment-packages-tab}
 
 In the **Deployment Packages** tab, you can view information about your deployment packages.
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/deployment-packages-tab.png" alt="" >}}
 
 You can perform the following actions on this tab:
 
@@ -99,14 +90,19 @@ You can also see information and perform actions on the existing deployment pack
 * Version of the deployment package
 * Date that the deployment package was uploaded
 * Uploader account
-* Expiry date of the deployment package, if one is set
-    Currently deployed packages do not expire. Among any non-deployed packages, the five most recently deployed packages do not expire.
-    Expiry dates apply only to packages that do not meet either of two non-expiry criteria outlined above. These packages are set to expire and be deleted within 15 days, unless they are deployed before that date.
+* Expiry date of the deployment package. If an expiry date is set:
+    * Currently deployed packages do not expire
+    * Among any non-deployed packages, the five most recently deployed packages do not expire
+    * Packages that do not meet either of the non-expiry criteria outlined above are assigned an expiry date and will be deleted within 15 days, unless deployed before that date
 
-If you click **More Options** ({{< icon name="three-dots-menu-horizontal" >}}) on a package, you can do the following:
+On a package:
 
-* View details, including the package size, description, build output, and an overview of the environments that are running the package
-* Delete the package
+* Launch the [Deploy wizard](#deploy-wizard) by clicking the **Deploy** ({{< icon name="deploy" >}}) icon
+* Click **More Options** ({{< icon name="three-dots-menu-horizontal" >}}) to:
+
+    * View details, including the package size, description, build output, and an overview of the environments that are running the package
+    * Download the package
+    * Delete the package
 
 ### Permissions Tab{#permissions-tab}
 
@@ -114,13 +110,9 @@ In the **Permissions** tab, the [Technical Contact](/developerportal/general/app
 
 For details on managing node permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/permissions-tab.png" alt="" >}}
-
 ### Activity Tab{#activity-tab}
 
 In the **Activity** tab, you can view a log of deployment, backup, and permission activities performed on your environments.
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/activity-tab.png" alt="" >}}
 
 {{% alert color="info" %}}
 Operations performed on a customer's behalf through an authorized Mendix Support ticket are not logged in the activity log.
@@ -134,21 +126,13 @@ If you are the [Technical Contact](/developerportal/general/app-roles/#technical
 
 ## Cloud Settings{#cloud-settings}
 
-If you click **Cloud Settings** ({{< icon name="settings-slider-1" >}}) from any tab, you can adjust custom domains, access restriction profiles, and services.
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/manage-cloud-settings.png" alt="" >}}
-
-## Environment Settings
-
-If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can use **Environment Settings** to choose the default target for the deployment package. If you do not select a target, the .mda packages is built and uploaded without being deployed.
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/manage-env-settings.png" alt="" >}}
+If you click **Cloud Settings** ({{< icon name="settings-slider-1" >}}) from any tab, you can adjust the custom domains, access restriction profiles, and services.
 
 ### Custom Domains
 
 In the **Custom Domains** tab, you can manage your custom domain certificates at the application level. You can also see an overview of linked custom domains.
 
-When you need your Mendix app to be accessible via your own URL (for example, `https://myapp.mycompany.com/`), you must provide a custom SSL/TLS certificate for your domain. This enables your Mendix app to be accessible via a secure connection. For more information, see [Custom Domains](/developerportal/deploy/custom-domains/).
+When you need your Mendix app to be accessible via your own URL (for example, `https://myapp.mycompany.com/`), you must provide a custom SSL/TLS certificate for your domain. This ensures a secure connection to your Mendix app. For more information, see [Custom Domains](/developerportal/deploy/custom-domains/).
 
 ### Access Restriction Profiles
 
@@ -170,20 +154,21 @@ The Technical Contact can only see services that have been licensed for their co
 
 Team members who have a role with **Cloud Access** can see which services are enabled or disabled.
 
-Once a service has been enabled for an app, Technical Contacts can selectively enable it for each environment. For more information, see the [Services](/developerportal/deploy/environments-details/#services) section of the *Environment Details* page.
+Once a service has been enabled for an app, Technical Contacts can selectively enable it for each environment. For more information, see the [Services](/developerportal/deploy/environments-details-redesign/#services) section of the *Environment Details* page.
+
+## Environment Settings
+
+If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can use **Environment Settings** ({{< icon name="cog" >}}) to choose the default target for the deployment package. If you do not select a target, the `.mda` packages is built and uploaded without being deployed.
 
 ## Creating a Package {#create-package-wizard}
 
-The **Create a Package** wizard creates deployment packages. Follow the wizard by performing the following steps:
+The **Create a Package** wizard creates deployment packages. To use the wizard, follow these steps:
 
-1. In the [Deployment Packages tab](#deployment-packages-tab), click **Create a Package**. This launches the **Create a Package** wizard.
+1. On the [Deployment Packages tab](#deployment-packages-tab), click **Create a Package**. This launches the **Create a Package** wizard.
 2. In the **Select Package** tab, select the branch on which to base the build.
 3. In the **Select Revision** tab, select the branch revision.
 4. In the **Choose a Tag** tab, specify the version tag. This includes the major, minor, and patch version numbers.
-
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/3-choose-tag.png" alt="" >}}
-
-5. Click **Build this Revision**.
+5. Click **Build this revision**.
 
 ## Deploying a Package {#deploy-wizard}
 
@@ -191,18 +176,12 @@ The Deploy or Promote wizard deploys packages to selected environments. Follow t
 
 1. Launch the wizard by choosing one of the following options:
     * Select an environment to which you want to deploy a package by clicking the **Deploy** ({{< icon name="deploy" >}}) icon on the **Overview** tab.
-    * Select a package that you want to deploy by clicking the **Deploy** ({{< icon name="deploy" >}}) icon on the **Deployment Packages** tab, or by clicking **Promote** by a package name on the **Overview** tab.
+    * Select a package you want to deploy by clicking the **Deploy** ({{< icon name="deploy" >}}) icon on the **Deployment Packages** tab, or by clicking **Promote** by a package name on the **Overview** tab.
 2. Perform one of the following actions, depending on whether you selected the package or the environment first:
     * If you launched the wizard by selecting an environment, the first screen of the wizard is the **Select Package** tab. Use it to select a package from repository.
     * If you launched the wizard by selecting a package, the first screen of the wizard is the **Select Environment** tab. Use it to select the target environment for your package.
 3. In the **Configure Environment** tab, review the new constant values, and adjust them as required.
-
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/2-configure-environment.png" alt="" >}}
-
-4. In the **Backup** tab, choose if you want to back up your app before deploying the new package. The app is unavailable while the backup runs.
+4. In the **Other Options** tab, choose whether to stage the package without deploying, and when to create the backup: either before or after deploying the new package. The app is unavailable while the backup runs.
 5. In the **Deploy** tab, review the deployment settings:
     1. To see an overview of the configuration for this deployment, click **View Summary**. This summary displays the selected package, selected backup option, and any changed constants or scheduled events.
-    
-        {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/deployment-summary.png" alt="" >}}
-
-    2. Review this summary, and then click **Deploy Now**.
+    2. Review this summary, and then click **Deploy Now**. 

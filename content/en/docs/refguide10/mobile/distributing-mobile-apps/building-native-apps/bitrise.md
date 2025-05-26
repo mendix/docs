@@ -73,7 +73,27 @@ Bitrise supports automatic provisioning via a constant connection with the App S
 
 If you prefer to manually set up provisioning, follow [this guide from Bitrise](https://devcenter.bitrise.io/en/code-signing/ios-code-signing/managing-ios-code-signing-files---manual-provisioning.html) instead.
 
-## Set Up Code Signing for Android 
+### Fixing Development Team Errors
+
+If you see the following error, then you need to specify your development team in the Xcode Archive step: 
+
+```
+Signing for "nativeTemplate" requires a development team. Select a development team in the Signing & Capabilities editor.
+```
+
+To specify your development team, do the following:
+
+1. In the **Workflow Editor**, go to your workflow.
+2. Find the **Xcode Archive & Export for iOS** step.
+3. Click on the step to open its settings.
+4. Scroll down and find the **IPA export configuration** section.
+5. Look for the input field labeled **Developer Portal team**.
+6. Enter your Apple Developer Team ID into that field.
+7. Save the changes.
+
+Your Apple Developer Team ID can be found in your Apple Developer account under **Membership** details.
+
+## Setup Code Signing for Android 
 
 Applications distributed to Android devices must be signed with a keystore. To distribute Android apps via the PlayStore, you must also register as an Android developer (see [Prerequisites for Android](#prerecs-android) above).
 

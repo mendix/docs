@@ -7,12 +7,16 @@ weight: 5
 numberless_headings: true
 aliases:
     - /releasenotes/app-store/index.html
-#This document is mapped to the landing page, update the link there if renaming or moving the doc file.
+#This document is mapped to the landing page, update the link there if renaming or moving the doc file
 ---
 
 These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2025
+
+### May 22, 2025
+
+* We have replaced the [Marketplace Curation](/control-center/marketplace-curation/) <text class="badge badge-pill badge-recommended" style="margin-left:0px">RECOMMENDED</text> label with <text class="badge badge-pill badge-company-approved" style="margin-left:0px"> {{% icon name="checkmark-shield-filled" color="green" %}}COMPANY APPROVED</text>. The new label indicates Marketplace components that meet company policies and guidelines.
 
 ### January 16, 2025
 
@@ -189,7 +193,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 * There are now user trials available for **Premium** app services, such as Email Service and Speech to Text. This self-service experience helps you to evaluate the capabilities offered with these components and realize the value of premium content.
 * User trial subscriptions are now listed under My Subscriptions, and company trial and paid subscriptions are now listed under Company Subscriptions.
 * For new uploads of public components, you can now optionally share a [virus scan report](/appstore/submit-content/#package) to speed up the governance process.
-* For solutions and solution templates, you can now add a [use case](/appstore/submit-content/#capabilities) relevant to the component. The use case is displayed in the component listing and includes header text and an external link.
+* For solutions and solution templates, you can now add a use case relevant to the component. The use case is displayed in the component listing and includes header text and an external link.
 
 #### Improvements
 

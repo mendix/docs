@@ -121,7 +121,7 @@ Mendix apps cannot use custom ports. They communicate on the standard HTTP and H
 
 ### Number of End-Users for Licensed Apps
 
-The number of end-users supported for your licensed app depends on your [pricing plan](#plans). End-users of your app are classified as either internal or external. You need to report this for licensing purposes, using either the [USAGE_METRICS_EMAIL_FIELDS custom variable](/developerportal/deploy/environments-details/#custom-environment-variables) (if you are using email domains to distinguish between end-users) or by [populating the user type](/howto/monitoring-troubleshooting/populate-user-type/) for each end-user of your app. Only end-users whose Mendix accounts are marked as **Active** are counted towards the number of end-users of the app.
+The number of end-users supported for your licensed app depends on your [pricing plan](#plans). End-users of your app are classified as either internal or external. You need to report this for licensing purposes, using either the [USAGE_METRICS_EMAIL_FIELDS custom variable](/developerportal/deploy/environments-details/#custom-environment-variables) (if you are using email domains to distinguish between end-users) or by [populating the user type](/developerportal/deploy/populate-user-type/) for each end-user of your app. Only end-users whose Mendix accounts are marked as **Active** are counted towards the number of end-users of the app.
 
 ### Supported Mendix Versions {#mendix-cloud-supported-versions}
 
@@ -149,7 +149,7 @@ For more information, see [Pricing](https://www.mendix.com/pricing/).
 
 ### Cloud Resource Packs {#resource-pack}
 
-Mendix environments are sized by reference to cloud resource packs. These resources are used for application runtime as well as anything else required to run your application, such as agents for any third-party integrations that you have added. The table below shows the current cloud resource packs for Standard, Premium, and Premium Plus plans. Resources for the Basic plan are fixed as described in [Mendix Basic Package](/developerportal/deploy/basic-package/).
+Mendix environments are sized by reference to cloud resource packs. These resources are used for application runtime as well as anything else required to run your application, such as agents for any third-party integrations that you have added. The table below shows the current cloud resource packs for Standard, Premium, and Premium Plus plans.
 
 If you have a Standard, Premium, or Premium Plus plan, you can redeem virtual credits known as cloud tokens to purchase cloud resource packs on the Mendix Platform. For more information about how this works, see [Entitlements](/control-center/entitlements/).
 

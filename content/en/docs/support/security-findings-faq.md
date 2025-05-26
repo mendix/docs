@@ -221,9 +221,13 @@ For example, the old version of the [LDAP Synchronization module](https://market
 
 ### Dojo library 
 
+{{% alert color="info" %}}
+The Dojo library is only used with the Dojo Client and not with the React Client.
+{{% /alert %}}
+
 #### deepCopy Vulnerability - CVE-2020-5258
 
-The Mendix Client is bundled with the full dojo library. However, not all functionality of the Dojo library is used. The vulnerability is in the `deepCopy` util method of dojo; this method is not used in the Mendix Client. This vulnerability cannot be exploited in the client.
+When the Dojo client is used, the Mendix Client is bundled with the full dojo library. However, not all functionality of the Dojo library is used. The vulnerability is in the `deepCopy` util method of dojo; this method is not used in the Mendix Client. This vulnerability cannot be exploited in the client.
 
 #### Prototype Pollution Vulnerability - CVE-2021-23450
 

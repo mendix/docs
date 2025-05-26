@@ -149,7 +149,7 @@ To create a new environment, perform the following steps:
 
 5. Enter the name of the environment. This can be anything you choose: for example Test, Acceptance, or Production.
 
-    {{< figure src="/attachments/deployment/sap-btp/sap-cloud-platform/08-sap-env-2.png" class="no-border" >}}
+    {{< figure src="/attachments/deployment/sap-btp/sap-cloud-platform/08-sap-env-2.png" >}}
 
 6. Set the size of the memory that the app needs in order to run. This can also be changed later.
 
@@ -163,13 +163,17 @@ To create a new environment, perform the following steps:
 
 9. Select **File Store Enabled** if your application makes use of FileDocument or Image objects. Other sorts of object do not need File Store to be enabled.
 
-10. Set a **Subscription Secret** (required). This secret is associated with your Mendix production license. By entering the subscription secret, your application will run in this environment as production. If the subscription secret is invalid, your app will still run, but will restart every 2-4 hours and have a limitation of six concurrent users.
+10. To configure logging, select the **Logging** service you would like to use from the dropdown.
+
+    {{% alert color="info" %}} **Application Logs** has been the default logging service but will be deprecated soon. See [SAP Application Logging Service](https://help.sap.com/docs/application-logging-service/sap-application-logging-service/what-is-sap-application-logging-service) for more details on the deprecation of **Application Logs**. For older environments still using the **Application Logs** service, see the [Migrating from SAP Application Logging to SAP Cloud Logging](#migrating-cloud-logging) section below to ensure continued logging support.{{% /alert %}}
+
+11. Set a **Subscription Secret** (required). This secret is associated with your Mendix production license. By entering the subscription secret, your application will run in this environment as production. If the subscription secret is invalid, your app will still run, but will restart every 2-4 hours and have a limitation of six concurrent users.
 
     {{% alert color="info" %}}If you do not have a subscription secret, refer to our documentation on [Obtaining a Mendix License](/developerportal/deploy/licensing-apps-outside-mxcloud/#get-license) in *Licensing Apps* for details on submitting a request to Mendix Support.{{% /alert %}}
 
-11. If you want the user to be redirected to a custom URL after they have logged in using XSUAA then, optionally, add **Redirect URLs**. 
+12. If you want the user to be redirected to a custom URL after they have logged in using XSUAA then, optionally, add **Redirect URLs**. 
 
-12. Click **Next** to create the environment and finish the setup.
+13. Click **Next** to create the environment and finish the setup.
 
     {{< figure src="/attachments/deployment/sap-btp/sap-cloud-platform/09-sap-env-3.png" class="no-border" >}}
 
@@ -722,6 +726,19 @@ If you want to delete your app and all its resources, delete the environment and
 {{% /alert %}}
 
 You can still delete the app and its resources from the SAP BTP cockpit, but you will then have to remove all the resources individually.
+
+## Migrating from SAP Application Logging to SAP Cloud Logging {#migrating-cloud-logging}
+
+Since SAP Application Logging will soon be deprecated, you need to migrate your logging service to SAP Cloud Logging for older environments still using SAP Application Logging. To complete the migration, follow the steps below:
+
+1. In the **Services** tab of the **Environment** details page, search for and select **cloud-logging** in the **Available Services** field.
+
+    {{% alert color="info" %}}Note that the user account must have entitlements for the SAP Cloud Logging service in SAP BTP.{{% /alert %}}
+
+2. Select the appropriate **Plan** and upload a **File** if required. 
+3. Click **Connect Services** and restart your application to bind the new SAP Cloud logging service.
+4. At this point, both **application-logs** and **cloud-logging** services will be active for your application.
+5. Retain the **application-logs** service until its log retention period ends, to ensure access to existing log entries. Then, delete it following the instructions provided in the [Unbinding and Removing Services](/developerportal/deploy/sap-cloud-platform/#unbinding-and-removing-services) section above. After this, only the new SAP Cloud Logging service will remain active.
 
 ## Troubleshooting
 

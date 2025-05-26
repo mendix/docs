@@ -13,7 +13,7 @@ A member in Control Center means a user of the Mendix platform who participates 
 
 ## Introduction 
 
-The **Settings** page in the **Security** category in Control Center allows you to configure the security settings, manage the single sign-on configurations, and view the security history of your company.
+The **Settings** page in the **Security** category in Control Center allows you to configure security settings, manage single sign-on configurations, and view the security history of your company.
 
 ## Security Settings Tab
 
@@ -27,11 +27,29 @@ The Mendix Platform digitally signs the content of emails from senders [no-reply
 
 To disable the digital signing of emails, turn off the toggle. To enable the digital signing of emails, turn on the toggle. This setting has an effect on the emails sent to all the [email domains claimed by your company](/control-center/company-settings/#company-email-domains).
 
-#### Why Would You Want to Disable the Digital Signing of Email Content? {#why-disable-email-signing}
+#### Disabling the Digital Signing of Email Content {#why-disable-email-signing}
 
-Digital signing of email content contributes to security, so why would you want to disable the digital signing of email content sometimes?
+While digital signing of email content contributes to security, there are cases where it should be disabled.
 
 Digital signing might interfere with other email safety measures like “External Email Warning”. This feature might add a customized HTML warning to the email. Since Mendix emails cannot be altered, some email servers will wrap the original message in a blank email and add the original email as an attachment. This is not beneficial for the experience of the user and will make the emails look suspicious, impacting user engagement. Also, it makes searching for emails with specific text content more difficult for users.
+
+### Allowing External User Invites to Projects {#allow-external-users}
+
+By default, members outside your organization can be invited to collaborate on projects.
+
+However, if your IT policy requires that only individuals with a [company email](/control-center/company-settings/#company-email-domains) address, meaning an email address that matches your company domains, work on projects, you can disable this option.
+
+{{% alert color="info" %}}
+If you disable this option, all invitations to email addresses outside of your company domains will be blocked. Any attempt to invite such users will result in an error.
+{{% /alert %}}
+
+Existing external collaborators are not affected by this change. You can manually remove them at any time from the [External Members](/control-center/members/#external-members) page.
+
+If you need to make an exception and temporarily invite an external member:
+
+1. Re-enable external invitations.
+2. Add the external member.
+3. Disable the setting again to reinstate the restriction.
 
 ### Application Data Replication {#application-data-replication}
 

@@ -12,7 +12,7 @@ The Mendix Client runs on the end-user's device and serves as the interface betw
 The above description of the Mendix Client is based on using the Runtime Server of an app running in the cloud. You can also run Mendix locally for testing, which works in a conceptually similar way.
 
 {{% alert color="info" %}}
-There is an alternative version of the Mendix Client written in React. This is currently a [beta](/releasenotes/beta-features/). You can enable this React client in [App Settings](/refguide/app-settings/#react-client).
+The Mendix Client has transitioned to a modern implementation using React. In Mendix 11.0 and above, the React Client is the default for new applications and the legacy Dojo Client is deprecated.
 
 The React client replaces [Dojo](https://dojotoolkit.org/) with [React](https://react.dev/) for the view layer. This means that widgets based on Dojo will no longer work. You will get consistency errors if your app contains Dojo widgets, or you can choose **Migration mode** which will allow you to build your app but will replace incompatible widgets with a placeholder.
 
@@ -215,6 +215,10 @@ When the end-user launches an app in the browser, it triggers the following flow
     The Mendix Client is now ready to start interacting with the end-user.
 
 ##### Dojo Client
+
+{{% alert color="warning" %}}
+In Mendix 11.0 and above, the Dojo Client is deprecated.
+{{% /alert %}}
     
 The Mendix Dojo Client, which is not built entirely using React, will repeat the following steps for as long as the end-user’s session continues.
 
@@ -227,7 +231,7 @@ The Mendix Dojo Client, which is not built entirely using React, will repeat the
 
 ##### React Client
 
-The React client works differently than the Dojo client.
+The React client is the default client used for new applications created with Mendix 11.0 and above, and it works differently than the Dojo client.
 
 During the build process, Studio Pro exports JavaScript files containing JavaScript and React components into the `pages`, `layouts` and `nanoflows` folders. The contents of those folders are bundled into the `dist` folder using [Rollup](https://rollupjs.org/), which generates *chunks*.
 

@@ -57,8 +57,6 @@ In a licensed node, you have everything you need to stage and deploy your app. Y
 
 To license an app, you must have a licensed cloud node available:
 
-If you want to license a single app for between five and one hundred users, you can order the Mendix Basic package online. For more information, see [Mendix Basic Package](/developerportal/deploy/basic-package/).
-
 If you have an existing contract that allows for more licensed nodes, use the [Request New App Node](https://newnode.mendix.com) app to request a new node from Mendix Support. For more information, see [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
 
 {{% alert color="info" %}}

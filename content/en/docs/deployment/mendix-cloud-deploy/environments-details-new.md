@@ -496,7 +496,7 @@ Click **Add** and select **Supported** to choose from the following variables:
 * **JVM_GARBAGE_COLLECTOR** – This overrides the automatic configuration of the Java garbage collector. Accepted values are `Serial` or `G1`.
 * **METRICS_AGENT_CONFIG** – This passes a configuration JSON to control the metrics passed to Datadog.
 * **SAMESITE_COOKIE_PRE_MX812** – This sets `SameSite=None;Secure` for all cookies coming from the Mendix runtime, as described in the [Running Your App in an Iframe](#iframe) section.
-* **USAGE_METRICS_EMAIL_FIELDS** – If your app uses specializations of the `System.User` entity to store users, use this variable to point to them. This enables Mendix to identify internal and external users of your app.
+* **USAGE_METRICS_EMAIL_FIELDS** – If your app uses specializations of the `System.User` entity to store users, use this variable to point to them. This enables Mendix to identify [internal and external users](/developerportal/deploy/populate-user-type/) of your app.
     * The value of this variable is in the format `Module.Entity.Attribute`, where `Module` is the module of your app that contains the `Entity` that is a specialization of `System.User` and `Attribute` is the attribute that contains the email address of the user.
     * If you have multiple specializations of `System.User`, you can specify the values in comma-separated format (that is, `Module1.Entity1.Attribute1,Module2.Entity2.Attribute2,…,ModuleN.EntityN.AttributeN`). In the following example, there are two specializations identified: `Administration.Account.Email,MendixSSO.MendixSSOUser.EmailAddress`.
 

@@ -14,6 +14,12 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2025
 
+### May 25, 2025
+
+#### New Features
+
+* We introduced a new feature that allows users to select their preferred **Logging** service from the portal. For more information, see [Creating a New Environment](/developerportal/deploy/sap-cloud-platform/#NewEnvironment).
+
 ### April 18, 2025
 
 #### Portal Improvements

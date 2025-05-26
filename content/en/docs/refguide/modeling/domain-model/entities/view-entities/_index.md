@@ -2,8 +2,6 @@
 title: "View Entities"
 url: /refguide/view-entities/
 weight: 17
-cascade:
-    - beta: true
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

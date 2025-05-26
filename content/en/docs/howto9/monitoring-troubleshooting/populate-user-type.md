@@ -11,9 +11,11 @@ In your Mendix Pricing Plan there is a distinction between Internal and External
 {{% alert color="info"  %}}
 **Definitions** 
 
-* *Named User* – an individual authorized by you to have access to your apps with unique login credentials, or an authorized external system that accesses or is accessed by your application.
+* *Named User*¹ – an individual authorized by you to have access to your apps with unique login credentials, or an authorized external system that accesses or is accessed by your application.
 * *Internal User* – a *Named User* who is an employee or contractor of your business.
 * *External User* – a *Named User* who is not an employee or contractor of your business, and is designated as an External User in the Mendix Platform.
+
+¹You may re-assign the entitlement to access and use your applications from one Named User to another Named User within the same entitlement category (internal or external) once per calendar month.
 {{% /alert %}}
 
 ## Background

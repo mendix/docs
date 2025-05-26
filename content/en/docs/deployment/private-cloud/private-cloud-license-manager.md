@@ -9,6 +9,8 @@ beta: true
 
 {{% alert color="warning" %}}
 Private Cloud License Manager is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).
+
+Mendix highly recommends that you upgrade to the latest available version to ensure that all apps get a valid, non-expired license. Newer versions contain bugfixes and improvements.
 {{% /alert %}}
 
 ## Introduction

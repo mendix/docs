@@ -7,7 +7,9 @@ weight: 10
 
 ## Introduction
 
-There is an alternative version of the Mendix Client written in React. You can enable this React client in [App Settings](/refguide/app-settings/#react-client).
+The Mendix Client has transitioned to a modern implementation using React. As of Mendix 11, the React Client is the default for all new applications created in Studio Pro, and the legacy Dojo client has been deprecated.
+
+You can enable the React client for existing applications in [App Settings](/refguide/app-settings/#react-client).
 
 The React client replaces [Dojo](https://dojotoolkit.org/) with [React](https://react.dev/) for the view layer. This change allows for improved performance, enables incremental loading, and future-proofs your application. For more information on these three aspects, see the sections below:
 

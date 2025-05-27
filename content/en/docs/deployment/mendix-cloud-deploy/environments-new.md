@@ -57,7 +57,7 @@ You can see the following details for each environment shown in the **Overview**
 You can perform the following actions on your environments:
 
 * **Deploy** ({{< icon name="deploy" >}}) – Launch the [Deploy wizard](#deploy-wizard), where you can configure and start a new deployment for the selected environment.
-* **View Details** ({{< icon name="notes-paper-edit" >}}) – Access the [Environment Details](/developerportal/deploy/environments-details-redesign) page.
+* **View Details** ({{< icon name="notes-paper-edit" >}}) – Access the [Environment Details](/developerportal/deploy/environments-details-redesign/) page.
 * **View App** {{< icon name="external" >}} – Launch the app in a new browser tab.
 * **More Options** ({{< icon name="three-dots-menu-horizontal" >}}):
     * **Restart** – Stop the running app and restart. Restarting your app is required for applying new constant values or scheduled events to the environment.
@@ -81,7 +81,7 @@ In the environment resources section, you can view the following information:
 Additionally, you can perform the following actions:
 
 * [Scale the environment](/developerportal/deploy/scale-environment/) by clicking **Scale**.
-* Change the resource pack by clicking **Change Plan**. For more information on how to change plans on your Mendix Cloud, refer to [Changing Plans](/developerportal/deploy/change-plan).
+* Change the resource pack by clicking **Change Plan**. For more information on how to change plans on your Mendix Cloud, refer to [Changing Plans](/developerportal/deploy/change-plan/).
 
 ##### Deployed Package {#deployed-package}
 
@@ -216,7 +216,7 @@ For each submitted plan change request you can see the following information:
 * App name
 * Environment
 
-For more information, refer to the [Available Actions by status](#available-actions-by-status) section in *Changing Your Plan in Mendix Cloud*.
+For more information, refer to the [Available Actions by Status](/developerportal/deploy/change-plan/#available-actions-by-status) section in *Changing Your Plan in Mendix Cloud*.
 
 ## Cloud Settings{#cloud-settings}
 

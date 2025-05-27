@@ -15,12 +15,7 @@ The **Entitlements** page is a self-service tool that displays transactions whic
 
 Mendix cloud tokens are annual capacity-based virtual credits that allow you to provision and allocate any Mendix [cloud resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) for your Mendix Cloud deployments.
 
-To use cloud tokens, you need to enable self-service. If you want to enable self-service or have questions about cloud tokens, contact your Customer Success Manager (CSM).
-
-{{% alert color="info" %}}
-If you have previously worked with cloud credits, note that they have been replaced with cloud tokens. Cloud tokens will be available as a product on the Mendix pricelist starting in early 2025.    
-One cloud credit is equivalent to ten cloud tokens. For more information, refer to [From Cloud Credits to Cloud Tokens](#cloud-tokens-faq).
-{{% /alert %}}
+You can see available and used cloud tokens on the **Entitlements** page. If you cannot, contact your Customer Success Manager (CSM).
 
 {{% alert color="info" %}}
 From now on, you can only purchase and provision Standard, Premium, and Premium Plus cloud resource packs, not legacy resource packs. The cloud tokens for legacy resource packs that you already purchased are credited back to your account if you deprovision an environment.
@@ -82,18 +77,6 @@ The following tables show how many cloud tokens each cloud resource pack costs:
 | 2XL | 167 |
 | 3XL | 640 |
 
-### From Cloud Credits to Cloud Tokens{#cloud-tokens-faq}
-
-If you have previously worked with cloud credits, these are the changes you can expect as a result of moving to cloud tokens:
-
-* Name change – Cloud tokens have replaced cloud credits throughout the Mendix Platform. This name change primarily affects the **Entitlements** page and the [Deployed Apps](/control-center/deployed-apps/) page in Control Center.
-* Value adjustment – A cloud credit is equivalent to ten cloud tokens. As a result, Mendix cloud resource packs are valued differently with cloud tokens compared to cloud credits.    
-    For example, the smallest cloud resource pack, the XS standard resource pack, is now equivalent to ten cloud tokens. Previously, it was valued at one cloud credit.    
-    Your existing transactions and the number of cloud tokens are automatically adjusted. This change is displayed on the **Entitlements** page in Control Center. 
-* Direct ordering – You can order Mendix cloud tokens directly from the Mendix pricelist. You can use your available cloud tokens to provision any cloud resource pack for your apps.
-
-For any questions, contact your Mendix Customer Success Manager. If you experience any issues, create a support ticket with Mendix Support.
-
 ## Entitlements Page Tabs
 
 The **Entitlements** page contains the following tabs:
@@ -119,10 +102,10 @@ These are the details available for each transaction:
 ### The Requests Tab {#plan-change-requests-tab}
 
 {{% alert color="info" %}}
-This feature is currently in beta. For more information, refer to [Beta Releases](/releasenotes/beta-features/).
+This feature is in Public Beta. For more information, refer to [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
-The Technical Contact can request a plan change for an app environment. To do that, they need to click the **Change Plan** button on the environment in the **Apps** section of Mendix Portal. For more information, refer to <!-- add link to cloud docs -->.    
+The Technical Contact can request a plan change for an app environment. To do that, they need to click the **Change Plan** button on the environment in the **Apps** section of Mendix Portal. For more information, refer to [Changing Your Plan in Mendix Cloud](/developerportal/deploy/change-plan/).    
 
 The **Requests** tab displays all plan change requests, along with the actions you can take for each request. 
 
@@ -165,7 +148,7 @@ Once a request is approved, its status changes as follows:
 * To **Approved** on the **Requests** tab of the **Entitlements** page
 * To **Pending Schedule** on the **Request Overview** tab of the **Environments** page.
 
-The Technical Contact needs to specify when the plan change should take effect. For more information, refer to <!--[add link to cloud docs]-->
+The Technical Contact needs to specify when the plan change should take effect. For more information, refer to [Scheduling a Plan Change](/developerportal/deploy/change-plan/#scheduling-a-plan-change) in *Changing Your Plan in Mendix Cloud*.
 
 #### Rejecting a Request
 

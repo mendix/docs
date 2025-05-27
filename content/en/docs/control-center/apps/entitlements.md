@@ -19,7 +19,7 @@ To use cloud tokens, you need to enable self-service. If you want to enable self
 
 {{% alert color="info" %}}
 If you have previously worked with cloud credits, note that they have been replaced with cloud tokens. Cloud tokens will be available as a product on the Mendix pricelist starting in early 2025.    
-One cloud credit is equivalent to ten cloud tokens. For more information, see [From Cloud Credits to Cloud Tokens](#cloud-tokens-faq).
+One cloud credit is equivalent to ten cloud tokens. For more information, refer to [From Cloud Credits to Cloud Tokens](#cloud-tokens-faq).
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -28,7 +28,7 @@ From now on, you can only purchase and provision Standard, Premium, and Premium 
 
 ### Cloud Resource Packs
 
-For the technical details of each cloud resource pack, see the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) section in *Mendix Cloud*.
+For the technical details of each cloud resource pack, refer to the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) section in *Mendix Cloud*.
 
 The following tables show how many cloud tokens each cloud resource pack costs:
 
@@ -89,7 +89,7 @@ If you have previously worked with cloud credits, these are the changes you can 
 * Name change – Cloud tokens have replaced cloud credits throughout the Mendix Platform. This name change primarily affects the **Entitlements** page and the [Deployed Apps](/control-center/deployed-apps/) page in Control Center.
 * Value adjustment – A cloud credit is equivalent to ten cloud tokens. As a result, Mendix cloud resource packs are valued differently with cloud tokens compared to cloud credits.    
     For example, the smallest cloud resource pack, the XS standard resource pack, is now equivalent to ten cloud tokens. Previously, it was valued at one cloud credit.    
-    Your existing transactions and the number of cloud tokens are automatically adjusted. You can see this change on the **Entitlements** page in Control Center. 
+    Your existing transactions and the number of cloud tokens are automatically adjusted. This change is displayed on the **Entitlements** page in Control Center. 
 * Direct ordering – You can order Mendix cloud tokens directly from the Mendix pricelist. You can use your available cloud tokens to provision any cloud resource pack for your apps.
 
 For any questions, contact your Mendix Customer Success Manager. If you experience any issues, create a support ticket with Mendix Support.
@@ -101,11 +101,11 @@ The **Entitlements** page contains the following tabs:
 * **Transactions** – Allows you to monitor your cloud token consumption.
 * **Requests** – Allows you to view and manage plan change requests.
 
-### Transactions
+### The Transactions Tab
 
-On the **Transactions** tab, you can see a list of transactions that use cloud tokens.
+On the **Transactions** tab, you can view a list of transactions that use cloud tokens.
 
-{{< figure src="/attachments/control-center/apps/entitlements/entitlements-transactions.png" alt="The Transactions tab of the Entitlements page">}}
+{{< figure src="/attachments/control-center/apps/entitlements/entitlements-transactions_beta.png" alt="The Transactions tab of the Entitlements page">}}
 
 These are the details available for each transaction:
 
@@ -116,21 +116,22 @@ These are the details available for each transaction:
 * **Transaction Type** – This can be either **Credit** or **Debit**.
 * **Cloud Tokens** – The number of cloud tokens consumed within the transaction. <!-- check -->
 
-### Requests {#plan-change-requests}
+### The Requests Tab {#plan-change-requests-tab}
 
 {{% alert color="info" %}}
-This feature is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).
+This feature is currently in beta. For more information, refer to [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
-The Technical Contact can request a plan change for an app environment. To do that, they need to click the **Change Plan** button on the environment in the **Apps** section of Mendix Portal. For details, see <!-- add link to cloud docs -->.    
+The Technical Contact can request a plan change for an app environment. To do that, they need to click the **Change Plan** button on the environment in the **Apps** section of Mendix Portal. For more information, refer to <!-- add link to cloud docs -->.    
 
-This tab lists plan change requests, along with the actions you can take for each request. 
+The **Requests** tab displays all plan change requests, along with the actions you can take for each request. 
 
-{{< figure src="/attachments/control-center/apps/entitlements/entitlements-requests.png" alt="The Requests tab of the Entitlements page">}}  
+{{< figure src="/attachments/control-center/apps/entitlements/entitlements-requests_beta.png" alt="The Requests tab of the Entitlements page">}}  
 
 These are the details available for each request:
 
-* **Request Type** – The type of request being submitted. This can be **Plan Upgrade**.
+* **Request Type** – The type of request being submitted.    
+    The only available option is **Plan Upgrade**.
 * **App Name** – The name of the app for which the request is submitted.
 * **Environment** – The app environment for which the request is submitted.
 * **Production** – This column displays a green checkmark if the environment for which the request is submitted is production.
@@ -139,15 +140,18 @@ These are the details available for each request:
 * **Submitted On** - The date when the request was submitted.
 * **Status** - The current status of the request, which can be one of the following:
 
-    * **Pending approval**
+    * **Pending Approval**
     * **Approved**
     * **Canceled**
     * **Rejected**
+    * **Expired**
 
 You can filter requests by status and type.
 
-Once a plan change request is submitted at the app environment level, a banner and a notification are displayed on the **Entitlements** page in Control Center.    
-You can access the request details by clicking the notification itself or the **Details** button next to the request in the list. The details include the cost of the plan change, and the reason for the request.
+#### Request Details
+
+Once a plan change request is submitted at the app environment level, a banner and a notification are displayed on the **Entitlements** page.      
+You can access the request details by clicking the notification itself or the **Details** button next to the request in the list. The details include the same information that is available on the **Requests** tab, as well as the cost of the plan change and the reason for the request.
 
 #### Approving a Request
 
@@ -156,12 +160,12 @@ Follow these steps to approve a request:
 1. Click **Approve** in the request details window.
 2. Click **Approve** again in the confirmation window that opens.
 
-This is what happens once a request is approved:
+Once a request is approved, its status changes as follows:
 
-* Its status changes to **Approved** on the **Requests** tab of the **Entitlements** page.
-* Its status changes to **Pending Schedule** on the **Environments** page.
-* The Technical Contact is notified on the **Environments** page.    
-    They then need to specify when the plan change should take effect.  <!--[add link to cloud docs]-->
+* To **Approved** on the **Requests** tab of the **Entitlements** page
+* To **Pending Schedule** on the **Request Overview** tab of the **Environments** page.
+
+The Technical Contact needs to specify when the plan change should take effect. For more information, refer to <!--[add link to cloud docs]-->
 
 #### Rejecting a Request
 
@@ -170,3 +174,5 @@ Follow these steps to reject a request:
 1. Click **Reject** in the request details window.
 2. Provide a reason for the rejection in the confirmation window that opens.
 3. Click **Reject** again.
+
+Once a request is rejected, its status changes to **Rejected** on both the **Requests** tab of the **Entitlements** page, and the **Request Overview** tab of the **Environments** page.

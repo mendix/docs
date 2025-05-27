@@ -14,12 +14,26 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 ## 2025
 
+### June xx, 2025
+
+#### New Features
+
+* We have released a beta feature that enables Technical Contacts to request a plan change for each of their environments, thus allowing them to increase the resources available for running apps.    
+The request is sent to the company Admin, who can see and manage it from the newly introduced **Requests** tab, which can be found on the **Entitlements** page in Control Center.    
+
+    For more information on requesting a plan change, refer to <!--add cloud link-->.    
+    For more information on approving or rejecting a plan change, refer to [The Requests Tab](/control-center/apps/entitlements/#plan-change-requests-tab) in *Entitlements*.
+
 ### May 26, 2025
+
+#### New Features
 
 * You can now restrict people from outside your organization from being invited to projects. To do that, toggle off the **External User Invites** option on the **Security Settings** tab of the Control Center **Settings** page.    
 For more information, see [Allowing External User Invites to Projects](/control-center/security-settings/#allow-external-users).
 
 ### May 22, 2025
+
+#### Improvements
 
 * We have replaced the [Marketplace Curation](/control-center/marketplace-curation/) <text class="badge badge-pill badge-recommended" style="margin-left:0px">RECOMMENDED</text> label with <text class="badge badge-pill badge-company-approved" style="margin-left:0px"> {{% icon name="checkmark-shield-filled" color="green" %}}COMPANY APPROVED</text>. The new label indicates Marketplace components that meet company policies and guidelines.
 

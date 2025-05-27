@@ -4,6 +4,8 @@ linktitle: "Changing Plan"
 url: /developerportal/deploy/change-plan/
 weight: 80
 description: "Describes how to change your plan in Mendix Cloud."
+
+#Do NOT remove any of the anchors in this document as they are all referenced from other documents
 ---
 
 {{% alert color="warning" %}}
@@ -12,9 +14,9 @@ This feature is in Public Beta. For more information, see [Beta Releases](/relea
 
 ## Introduction
 
-Mendix offers several license plans including Free, Basic, Standard, Premium, and Premium Plus. For more information, see [Pricing](https://www.mendix.com/pricing/)
+Mendix offers several license plans including Free, Basic, Standard, Premium, and Premium Plus. For more information, see [Pricing](https://www.mendix.com/pricing/).
 
-This document explains how to change your [environment's plan](/developerportal/deploy/mendix-cloud-deploy/#plans-1) in Mendix Cloud. Plan changes can be applied independently to each environment. For example, the Technical Contact can upgrade the application's acceptance environment while keeping production on its current plan
+This document explains how to change your [environment's plan](/developerportal/deploy/mendix-cloud-deploy/#plans-1) in Mendix Cloud. Plan changes can be applied independently to each environment. For example, the Technical Contact can upgrade the application's acceptance environment while keeping production on its current plan.
 
 {{% alert color="info" %}}
 It is only possible to change and upgrade to higher-tier plans, not downgrade. Upgrades from legacy plans to new plans are supported, but not from new plans to legacy plans. 
@@ -24,10 +26,10 @@ It is only possible to change and upgrade to higher-tier plans, not downgrade. U
 
 Before requesting a plan change, verify the following:
 
-* The app environment is deployed
-* The app runs on Kubernetes
-* The app's tenant is self service enabled. To activate this capability for your company, contact your Customer Success Manager
-* You are the [Technical Contact](/support/#technical-contacts) for the app (only the Technical Contact can submit a request)
+* The app environment is deployed.
+* The app runs on Kubernetes.
+* The app's tenant is self service enabled. To activate this capability for your company, contact your Customer Success Manager.
+* You are the [Technical Contact](/support/#technical-contacts) for the app (only the Technical Contact can submit a request).
 
 ## Changing Plan
 
@@ -44,20 +46,20 @@ To change an environment's plan, follow these steps:
 5. In the environment resource section, click **Change Plan**. 
 6. In the **Plan Change Request** dialog that appears:
     * On the left side, review your current plan details. This includes:
-        * Plan **Name**
-        * Plan **Environment** (such as, staging or acceptance)
-        * **App** Name
-        * Plan **Memory**
+        * Plan **Name**.
+        * Plan **Environment** (such as, staging or acceptance).
+        * **App** Name.
+        * Plan **Memory**.
     * On the right side, create a new plan:
-        * To compare plans, click **Show Comparison**. This opens a comparison page where the Technical Contact can evaluate the current plan against other available options. The last selected comparison will populate the form. Alternatively, select a new plan directly from the **Plan** dropdown without comparing
-        * Enter a reason for plan change
+        * To compare plans, click **Show Comparison**. This opens a comparison page where the Technical Contact can evaluate the current plan against other available options. The last selected comparison will populate the form. Alternatively, select a new plan directly from the **Plan** dropdown without comparing.
+        * Enter a reason for plan change.
 
 7. Click **Submit Request** to submit your plan change request. After submission, the request appears in the [Control Center](/control-center/entitlements/#plan-change-requests-tab) for the [Mendix Admin](/control-center/company-settings/#mendix-admins) review. To view the list of approvers, click **Mendix Admin** at the bottom of the **New Plan** form. As a Technical Contact, you can [track and manage](#manage-plan-requests) your plan change requests from the [Request Overview](/developerportal/deploy/environments-redesign/#request-overview) tab on your app's environment's page. 
 
 The app environment will remain on its current plan until the request is approved by a Mendix Admin.
 
 {{% alert color="info" %}}
-Changing plan consumes [cloud tokens](/control-center/entitlements/#cloud-tokens). Only one plan change request can exist per environment at a time. As a request, new requests cannot be submitted until the current one is completed.
+Changing plan consumes [cloud tokens](/control-center/entitlements/#cloud-tokens). Only one plan change request can exist per environment at a time. New requests cannot be submitted until the current one is completed.
 {{% /alert %}}
 
 ## Managing Plan Requests {#manage-plan-requests}
@@ -80,9 +82,9 @@ This diagram shows the request status' progress from plan change request submiss
 
 Depending on the request's status, Technical Contacts can perform the following actions:
 
-* **Pending approval** – Click **Cancel Request** to cancel the entire request
-* **Pending schedule** – Click **Cancel Request** to cancel the entire request, or click **Schedule Change** to set execution timing for when the approved plan will be applied. For more details on how to schedule a plan change, see [Scheduling a Plan Change](#scheduling-a-plan-change)
-* **Scheduled** – Click **Cancel Request** to cancel the entire request, or click **Execute Now** to apply the new plan immediately
+* **Pending approval** – Click **Cancel Request** to cancel the entire request.
+* **Pending schedule** – Click **Cancel Request** to cancel the entire request, or click **Schedule Change** to set execution timing for when the approved plan will be applied. For more details on how to schedule a plan change, see [Scheduling a Plan Change](#scheduling-a-plan-change).
+* **Scheduled** – Click **Cancel Request** to cancel the entire request, or click **Execute Now** to apply the new plan immediately.
 
 {{% alert color="warning" %}}
 If the Technical Contact cancels a request, the plan change process is canceled entirely. To proceed with a plan change, the Technical Contact must start over and submit a new request.
@@ -120,6 +122,6 @@ After scheduling, once the plan change process starts:
 After a plan change is applied, you cannot change to a new plan for the same environment for the next 6 hours.
 {{% /alert %}}
 
-## Monitor Updates
+## Monitoring Updates
 
 To stay informed about changes and status updates, open notifications by clicking on the **Notifications** icon ({{< icon name="alarm-bell" >}}) at the upper-right corner of the Mendix platform.

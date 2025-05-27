@@ -94,7 +94,7 @@ These are the details available for each transaction:
 
 * **Transaction** – The identifier of the transaction, made up of the provisioned plan, and the impacted application and environment.
 * **Transaction Date** - The date when the transaction occurred.
-* **Quantity** - <!-- add description -->
+* **Quantity** - The number of cloud tokens credited or debited. <!-- check -->
 * **Tokens per Unit** – The number of cloud tokens included in the transaction. <!-- check -->
 * **Transaction Type** – This can be either **Credit** or **Debit**.
 * **Cloud Tokens** – The number of cloud tokens consumed within the transaction. <!-- check -->
@@ -120,8 +120,8 @@ These are the details available for each request:
 * **Production** – This column displays a green checkmark if the environment for which the request is submitted is production.
 * **Current Plan** – The plan that the environment is currently on.
 * **Requested Plan** – The plan that the environment should be moved to.
-* **Submitted On** - The date when the request was submitted.
-* **Status** - The current status of the request, which can be one of the following:
+* **Submitted On** – The date when the request was submitted.
+* **Status** – The current status of the request, which can be one of the following:
 
     * **Pending Approval**
     * **Approved**
@@ -133,7 +133,7 @@ You can filter requests by status and type.
 
 #### Request Details
 
-Once a plan change request is submitted at the app environment level, a banner and a notification are displayed on the **Entitlements** page.      
+Once a plan change request is submitted at the app environment level, a banner and a notification are displayed on the **Entitlements** page. For more information, refer to [Changing Your Plan in Mendix Cloud](/developerportal/deploy/change-plan/).         
 You can access the request details by clicking the notification itself or the **Details** button next to the request in the list. The details include the same information that is available on the **Requests** tab, as well as the cost of the plan change and the reason for the request.
 
 #### Approving a Request
@@ -143,12 +143,9 @@ Follow these steps to approve a request:
 1. Click **Approve** in the request details window.
 2. Click **Approve** again in the confirmation window that opens.
 
-Once a request is approved, its status changes as follows:
+Once a request is approved, its status changes to **Approved**.
 
-* To **Approved** on the **Requests** tab of the **Entitlements** page
-* To **Pending Schedule** on the **Request Overview** tab of the **Environments** page.
-
-The Technical Contact needs to specify when the plan change should take effect. For more information, refer to [Scheduling a Plan Change](/developerportal/deploy/change-plan/#scheduling-a-plan-change) in *Changing Your Plan in Mendix Cloud*.
+For the Technical Contact, the status changes to **Pending Schedule** on the [Request Overview tab](/developerportal/deploy/environments-redesign/#request-overview) of the **Environments** page. They then need to specify when the plan change should take effect. For more information, refer to the [Scheduling a Plan Change](/developerportal/deploy/change-plan/#scheduling-a-plan-change) section in *Changing Your Plan in Mendix Cloud*.
 
 #### Rejecting a Request
 
@@ -158,4 +155,5 @@ Follow these steps to reject a request:
 2. Provide a reason for the rejection in the confirmation window that opens.
 3. Click **Reject** again.
 
-Once a request is rejected, its status changes to **Rejected** on both the **Requests** tab of the **Entitlements** page, and the **Request Overview** tab of the **Environments** page.
+Once a request is rejected, its status changes to **Rejected**.    
+The Technical Contact can see the same status on the **Request Overview** tab of the **Environments** page.

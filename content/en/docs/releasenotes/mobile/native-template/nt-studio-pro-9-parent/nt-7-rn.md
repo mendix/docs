@@ -5,6 +5,12 @@ weight: 9
 description: "Native Template 7 release notes."
 ---
 
+## 7.0.27 {#727}
+
+**Release date: May 23, 2025**
+
+* We have fixed an issue where a white screen was showing instead of splash screen for nanoflow based home screen. 
+
 ## 7.0.25 {#725}
 
 **Release date: January 30, 2025**

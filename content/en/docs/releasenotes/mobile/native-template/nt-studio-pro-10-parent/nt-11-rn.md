@@ -5,6 +5,14 @@ weight: 50
 description: "Native Template 11 release notes."
 ---
 
+## 11.1.0 {#1005}
+
+### Fixes
+
+**Release date: May 23, 2025**
+
+* We have fixed an issue where a white screen was showing instead of splash screen for nanoflow based home screen. 
+
 ## 11.0.5 {#1004}
 
 ### Fixes

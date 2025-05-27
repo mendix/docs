@@ -102,9 +102,9 @@ You can trigger manual synchronization by opening the **App** menu and selecting
 
 For more information, see the [Dependency Sychronization](/refguide/managed-dependencies/#dependency-synchronization) section of *Managed Dependencies*.
 
-## Show Security Overview (Beta)
+## Show Security Overview
 
-The **Show Security Overview (Beta)** option opens the [Security Overview](/refguide/security-overview/), where you can view a unified overview of your app's security. 
+The **Show Security Overview** option opens the [Security Overview](/refguide/security-overview/), where you can view a unified overview of your app's security. 
 
 ## Read More
 

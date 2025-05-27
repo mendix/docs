@@ -18,13 +18,13 @@ Documents available for this topic:
 
    Overview of how to use the Data Importer to import data from a representative file (Excel and CSV) and create a non-persistable entity in your domain model. 
 
-* [External Database Connection](/refguide/external-database-connection/)
+* [Connect to an External Database](/refguide/external-database-connection/)
 
-   Overview of the External Database Connector, used to connect your Mendix app to an external database and create and validate SQL queries. 
+   Overview of how to configure the External Database Connection document. 
 
-* [Use the External Database Connector](/refguide/use-the-external-database-connector/)
+* [Querying and Integrating External Data](/refguide/query-and-integrate-external-data/)
 
-   Instructions on how to use the External Database Connector. 
+   Details how to use the External Database Connector to query external databases and integrate the data into your Mendix application.
 
 * [Execute an SQL Statement on an External Database](/refguide/execute-an-sql-statement-on-an-external-database/)
 

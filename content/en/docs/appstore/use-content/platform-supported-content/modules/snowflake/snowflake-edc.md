@@ -8,7 +8,7 @@ weight: 10
 
 ## Introduction
 
-The [External Database connector](/appstore/modules/external-database-connector/) allows you to connect to databases and select data to use in your app. You can use it to directly test connections and queries during configuration in Studio Pro (design time). For Mendix apps that use Snowflake as their database, the External Database connector is the recommended integration option for Mendix 10.
+The [External Database connector](/appstore/modules/external-database-connector/) allows you to connect to databases and select data to use in your app. You can use it to directly test connections and queries during configuration in Studio Pro (design time). For Mendix apps that work with Snowflake data, the External Database connector is the recommended integration option for Mendix 10 and above.
 
 This how-to describes the steps required to enable your app to use the External Database connector with Snowflake, and to model several common use cases.
 

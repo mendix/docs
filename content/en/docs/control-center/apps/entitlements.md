@@ -3,45 +3,37 @@ title: "Entitlements"
 url: /control-center/entitlements/
 description: "Describes the Entitlements page in the Mendix Control Center."
 weight: 50
-beta: true
 no_list: true 
 
 ---
 
-{{% alert color="info" %}}
-This feature is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).
-{{% /alert %}}
-
 ## Introduction
 
-The **Entitlements** page is a self-service tool that displays the transactions using cloud tokens. You can use the page to monitor your consumption of cloud tokens.
+The **Entitlements** page is a self-service tool that displays transactions which use cloud tokens, and that helps manage plan change requests. It also displays the number of entitled, consumed, and remaining cloud tokens.
 
-{{< figure src="/attachments/control-center/apps/entitlements/entitlements.png" alt="entitlements page" >}}
-
-## What Are Mendix Cloud Tokens? {#cloud-tokens}
+### Mendix Cloud Tokens Explained {#cloud-tokens}
 
 Mendix cloud tokens are annual capacity-based virtual credits that allow you to provision and allocate any Mendix [cloud resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) for your Mendix Cloud deployments.
 
 To use cloud tokens, you need to enable self-service. If you want to enable self-service or have questions about cloud tokens, contact your Customer Success Manager (CSM).
 
 {{% alert color="info" %}}
-If you previously worked with cloud credits, please note that cloud tokens have now replaced cloud credits. Cloud tokens will be available as a product on the Mendix pricelist, starting in early 2025. One cloud credit is equivalent to ten cloud tokens. For more information, see the [Transition from Cloud Credits to Cloud Tokens](#cloud-tokens-faq).
+If you have previously worked with cloud credits, note that they have been replaced with cloud tokens. Cloud tokens will be available as a product on the Mendix pricelist starting in early 2025.    
+One cloud credit is equivalent to ten cloud tokens. For more information, see [From Cloud Credits to Cloud Tokens](#cloud-tokens-faq).
 {{% /alert %}}
 
 {{% alert color="info" %}}
-From now on, you can only purchase and provision standard, premium, and premium plus cloud resource packs, not legacy resource packs. The cloud tokens for legacy resource packs that you already purchased will be credited back to your account if you deprovision an environment.
+From now on, you can only purchase and provision Standard, Premium, and Premium Plus cloud resource packs, not legacy resource packs. The cloud tokens for legacy resource packs that you already purchased are credited back to your account if you deprovision an environment.
 {{% /alert %}}
 
-## Cloud Resource Packs
+### Cloud Resource Packs
 
-{{% alert color="info" %}}
 For the technical details of each cloud resource pack, see the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) section in *Mendix Cloud*.
-{{% /alert %}}
 
-The tables below show how many cloud tokens each cloud resource pack costs:
+The following tables show how many cloud tokens each cloud resource pack costs:
 
 | Standard Resource Packs | Cloud Tokens |
-| --- | --: |
+| --- | --- |
 | XS21 | 10 |
 | S21 | 20 |
 | M21 | 40 |
@@ -53,7 +45,7 @@ The tables below show how many cloud tokens each cloud resource pack costs:
 | 4XL-5XLDB | 2240 |
 
 |Premium Resource Packs | Cloud Tokens |
-| --- | --: |
+| --- | --- |
 | S21 | 30 |
 | M21 | 60 |
 | L21 | 120 |
@@ -64,7 +56,7 @@ The tables below show how many cloud tokens each cloud resource pack costs:
 | 4XL-5XLDB | 3360 |
 
 |Premium Plus Resource Packs | Cloud Tokens |
-| --- | --: |
+| --- | --- |
 | XL21 | 400 |
 | 2XL21 | 800 |
 | 3XL21 | 1600 |
@@ -72,7 +64,7 @@ The tables below show how many cloud tokens each cloud resource pack costs:
 | 4XL-5XLDB | 5600 |
 
 | Legacy Resource Packs | Cloud Tokens |
-| --- | --: |
+| --- | --- |
 | XS20 | 10 |
 | S20 | 20 |
 | M20 | 40 |
@@ -90,12 +82,91 @@ The tables below show how many cloud tokens each cloud resource pack costs:
 | 2XL | 167 |
 | 3XL | 640 |
 
-## Transition from Cloud Credits to Cloud Tokens{#cloud-tokens-faq}
+### From Cloud Credits to Cloud Tokens{#cloud-tokens-faq}
 
-If you previously worked with cloud credits, you can see the following changes after Mendix cloud tokens are introduced:
+If you have previously worked with cloud credits, these are the changes you can expect as a result of moving to cloud tokens:
 
-* Name change: cloud tokens are the successor to cloud credits and completely replace this concept. Cloud tokens have replaced cloud credits throughout the Mendix Platform. This name change has primarily affected the **Entitlements** page and the [Deployed Apps](/control-center/deployed-apps/) page in Control Center.
-* Value adjustment: A cloud credit is equivalent to ten cloud tokens. As a result, Mendix cloud resource packs are valued differently with cloud tokens compared to cloud credits. For example, the smallest cloud resource pack, XS standard resource pack, which was valued at one cloud credit, is now equivalent to ten cloud tokens. Your existing transactions and the number of cloud tokens are automatically adjusted. You can see this change on the **Entitlements** page in Control Center. 
-* Direct ordering: you can order Mendix cloud tokens directly from the Mendix pricelist. You can use your available cloud tokens to provision any cloud resource pack for your apps.
+* Name change – Cloud tokens have replaced cloud credits throughout the Mendix Platform. This name change primarily affects the **Entitlements** page and the [Deployed Apps](/control-center/deployed-apps/) page in Control Center.
+* Value adjustment – A cloud credit is equivalent to ten cloud tokens. As a result, Mendix cloud resource packs are valued differently with cloud tokens compared to cloud credits.    
+    For example, the smallest cloud resource pack, the XS standard resource pack, is now equivalent to ten cloud tokens. Previously, it was valued at one cloud credit.    
+    Your existing transactions and the number of cloud tokens are automatically adjusted. You can see this change on the **Entitlements** page in Control Center. 
+* Direct ordering – You can order Mendix cloud tokens directly from the Mendix pricelist. You can use your available cloud tokens to provision any cloud resource pack for your apps.
 
 For any questions, contact your Mendix Customer Success Manager. If you experience any issues, create a support ticket with Mendix Support.
+
+## Entitlements Page Tabs
+
+The **Entitlements** page contains the following tabs:
+
+* **Transactions** – Allows you to monitor your cloud token consumption.
+* **Requests** – Allows you to view and manage plan change requests.
+
+### Transactions
+
+On the **Transactions** tab, you can see a list of transactions that use cloud tokens.
+
+{{< figure src="/attachments/control-center/apps/entitlements/entitlements-transactions.png" alt="The Transactions tab of the Entitlements page">}}
+
+These are the details available for each transaction:
+
+* **Transaction** – The identifier of the transaction, made up of the provisioned plan, and the impacted application and environment.
+* **Transaction Date** - The date when the transaction occurred.
+* **Quantity** - <!-- add description -->
+* **Tokens per Unit** – The number of cloud tokens included in the transaction. <!-- check -->
+* **Transaction Type** – This can be either **Credit** or **Debit**.
+* **Cloud Tokens** – The number of cloud tokens consumed within the transaction. <!-- check -->
+
+### Requests {#plan-change-requests}
+
+{{% alert color="info" %}}
+This feature is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).
+{{% /alert %}}
+
+The Technical Contact can request a plan change for an app environment. To do that, they need to click the **Change Plan** button on the environment in the **Apps** section of Mendix Portal. For details, see <!-- add link to cloud docs -->.    
+
+This tab lists plan change requests, along with the actions you can take for each request. 
+
+{{< figure src="/attachments/control-center/apps/entitlements/entitlements-requests.png" alt="The Requests tab of the Entitlements page">}}  
+
+These are the details available for each request:
+
+* **Request Type** – The type of request being submitted. This can be **Plan Upgrade**.
+* **App Name** – The name of the app for which the request is submitted.
+* **Environment** – The app environment for which the request is submitted.
+* **Production** – This column displays a green checkmark if the environment for which the request is submitted is production.
+* **Current Plan** – The plan that the environment is currently on.
+* **Requested Plan** – The plan that the environment should be moved to.
+* **Submitted On** - The date when the request was submitted.
+* **Status** - The current status of the request, which can be one of the following:
+
+    * **Pending approval**
+    * **Approved**
+    * **Canceled**
+    * **Rejected**
+
+You can filter requests by status and type.
+
+Once a plan change request is submitted at the app environment level, a banner and a notification are displayed on the **Entitlements** page in Control Center.    
+You can access the request details by clicking the notification itself or the **Details** button next to the request in the list. The details include the cost of the plan change, and the reason for the request.
+
+#### Approving a Request
+
+Follow these steps to approve a request:
+
+1. Click **Approve** in the request details window.
+2. Click **Approve** again in the confirmation window that opens.
+
+This is what happens once a request is approved:
+
+* Its status changes to **Approved** on the **Requests** tab of the **Entitlements** page.
+* Its status changes to **Pending Schedule** on the **Environments** page.
+* The Technical Contact is notified on the **Environments** page.    
+    They then need to specify when the plan change should take effect.  <!--[add link to cloud docs]-->
+
+#### Rejecting a Request
+
+Follow these steps to reject a request:
+
+1. Click **Reject** in the request details window.
+2. Provide a reason for the rejection in the confirmation window that opens.
+3. Click **Reject** again.

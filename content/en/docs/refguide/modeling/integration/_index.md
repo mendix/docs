@@ -23,7 +23,7 @@ Data integration capabilities in Studio Pro is part of [Mendix Connect](#integra
 * [Business Event services](/refguide/business-event-services/)
 * [Published GraphQL services](/refguide/published-odata-services/) (experimental)
 
-In addition to integration capabilities in Studio Pro [10](/releasenotes/studio-pro/10/), Mendix Connect functionalities include:
+In addition to integration capabilities in Studio Pro, Mendix Connect functionalities include:
 
 * The [Catalog](/catalog/#catalog-mx-connect), used to register, manage, and govern data in your organization
 * Platform-supported [connectors and modules](/appstore/#marketplace-mx-connect) available in the [Mendix Marketplace](/appstore/)

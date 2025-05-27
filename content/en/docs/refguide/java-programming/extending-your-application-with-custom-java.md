@@ -14,7 +14,7 @@ Most application logic can be developed using [microflows](/refguide/microflows/
 This document teaches you how to do the following:
 
 * Extend your application with custom Java code you can call from a microflow
-* Use the [Mendix Runtime API](/apidocs-mxsdk/apidocs/runtime-api/) to retrieve data from the database using an XPath in a Java action
+* Use the [Mendix Runtime API](/apidocs-mxsdk/apidocs/runtime-api-11/) to retrieve data from the database using an XPath in a Java action
 
 ## Prerequisites {#prerequisites}
 
@@ -174,7 +174,7 @@ Now you will add a button to the Product_NewEdit page which uses a microflow to 
 
 ## XPath Retrieval in Java {#xpath}
 
-Using the [Mendix Runtime API](/apidocs-mxsdk/apidocs/runtime-api/), your Java actions can interact with many parts of your app. One thing that many developers want to do is to retrieve a list of objects using an [XPath Constraint](/refguide/xpath-constraints/). This section describes how to implement an XPath retrieval in a Java action.
+Using the [Mendix Runtime API](/apidocs-mxsdk/apidocs/runtime-api-11/), your Java actions can interact with many parts of your app. One thing that many developers want to do is to retrieve a list of objects using an [XPath Constraint](/refguide/xpath-constraints/). This section describes how to implement an XPath retrieval in a Java action.
 
 Using the Domain Model you set up in [Setting Up a Simple App](#simple-app), above, you want to retrieve a list of Products which meet the following criteria:
 

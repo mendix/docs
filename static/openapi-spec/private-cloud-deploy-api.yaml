@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: Mendix for Private Cloud Deploy API
-  version: 4.10.0
+  version: 4.10.1
   contact:
     name: Mendix Support
     url: 'https://support.mendix.com'
@@ -691,6 +691,8 @@ components:
                   type: string
                   x-stoplight:
                     id: kledhwkqv84h5
+                environmentPurpose:
+                  $ref: '#/components/schemas/environmentPurpose'
             deployment:
               type: object
               required:
@@ -881,6 +883,8 @@ components:
                   type: string
                   x-stoplight:
                     id: kledhwkqv84h5
+                environmentPurpose:
+                  $ref: '#/components/schemas/environmentPurpose'
             deployment:
               type: object
               required:
@@ -1265,6 +1269,25 @@ components:
       x-examples:
         example-connected: Connected
         example-standalone: Standalone
+    environmentPurpose:
+      type: string
+      x-stoplight:
+        id: mhkgbry30ziw9
+      title: environmentPurpose
+      example: Test
+      description: |-
+        non-editable</br>
+        Model for environmentPurpose.
+      x-examples:
+        example-test: Test
+        example-development: Development
+        Example-acceptance: Acceptance
+        Example-production: Production
+      enum:
+        - Test
+        - Development
+        - Acceptance
+        - Production
     cliVersion:
       type: object
       x-examples:
@@ -2135,6 +2158,7 @@ components:
                     defaultStudioTarget: true
                     secretsStoreEnabled: false
                     OverwriteProductTypePCLM: standard
+                    environmentPurpose: Test
                   deployment:
                     appUrl: 'https://test.app.url'
                     packageId: 045b8cf4-c9cd-41b4-b241-414b87a7f219
@@ -2213,6 +2237,7 @@ components:
                         defaultStudioTarget: true
                         secretsStoreEnabled: false
                         OverwriteProductTypePCLM: standard
+                        environmentPurpose: Test
                       deployment:
                         appUrl: 'http://test.app.url'
                         packageId: 045b8cf4-c9cd-41b4-b241-414b87a7f219
@@ -2311,6 +2336,7 @@ components:
                         defaultStudioTarget: true
                         secretsStoreEnabled: false
                         OverwriteProductTypePCLM: standard
+                        environmentPurpose: Test
                       deployment:
                         appUrl: 'http://test.app.url'
                         packageId: 045b8cf4-c9cd-41b4-b241-414b87a7f219
@@ -2769,6 +2795,7 @@ components:
             defaultStudioTarget: true
             secretsStoreEnabled: false
             OverwriteProductTypePCLM: standard
+            environmentPurpose: Test
           deployment:
             appUrl: 'https://test.app.url'
             packageId: 045b8cf4-c9cd-41b4-b241-414b87a7f219
@@ -2991,6 +3018,7 @@ components:
             defaultStudioTarget: true
             secretsStoreEnabled: false
             OverwriteProductTypePCLM: standard
+            environmentPurpose: Test
           deployment:
             appUrl: 'https://test.app.url'
             packageId: 045b8cf4-c9cd-41b4-b241-414b87a7f219
@@ -3060,6 +3088,7 @@ components:
             defaultStudioTarget: true
             secretsStoreEnabled: false
             OverwriteProductTypePCLM: standard
+            environmentPurpose: Test
           deployment:
             appUrl: 'https://test.app.url'
             packageId: 045b8cf4-c9cd-41b4-b241-414b87a7f219

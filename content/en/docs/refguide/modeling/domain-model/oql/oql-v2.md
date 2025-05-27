@@ -7,7 +7,7 @@ weight: 100
 
 ## Introduction
 
-In Studio Pro version 10.19, we introduced OQL v2. It can be enabled by setting the [OQL version 2](/refguide/app-settings/#oql-version-2) app setting to *Yes*. You will have to switch to OQL v2 in order to enable [View entities](/refguide/view-entities/).
+OQL v2 can be enabled by setting the [OQL version 2](/refguide/app-settings/#oql-version-2) app setting to *Yes*. You will have to switch to OQL v2 in order to enable [View entities](/refguide/view-entities/).
 
 OQL v2 syntax is the same as OQL. However, there are a few differences in the handling of specific, mostly not very common, cases.
 

@@ -107,25 +107,21 @@ The following shortcut keys are available in the page editor:
 
 ## Microflow, Nanoflow, and Rule Editor Shortcut Keys {#logic-editor-keyboard-support}
 
-The supported shortcut keys are the same in the microflow, nanoflow, and rule editors. 
+The tables in the following sub-sections present the shortcut keys that can be used in the microflow, nanoflow, and rule editors.
 
-### Studio Pro 10.6 and Above {#keyboard-improved}
-
-The tables in the following sub-sections present the shortcut keys that can be used in the microflow, nanoflow, and rule editors in Studio Pro 10.6 and above.
-
-#### Selection
+### Selection
 
 | Windows | Mac | Description |
 | --- | --- | --- |
 | Arrow Keys | Arrow Keys | Select nearby element (activity, event, loop or parameter) in the direction of the arrow. |
 | <kbd>Home</kbd> | <kbd>Fn</kbd> + Left arrow | Select the start event. |
-| <kbd>End</kbd> | <kbd>Fn</kbd> + Right arrow | Select the first end event. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + Right arrow | Cycle through the end events. |
 | <kbd>Ctrl</kbd> + <kbd>A</kbd> | <kbd>Command</kbd> + <kbd>A</kbd> | Select all elements. |
-| <kbd>Ctrl</kbd> (in Studio Pro 10.12 and above) | <kbd>Command</kbd> | When pressing <kbd>Ctrl</kbd>/<kbd>Command</kbd>, you can select additional elements. Clicking a selected element or selecting it with a selection rectangle while holding <kbd>Ctrl</kbd>/<kbd>Command</kbd> will deselect it. |
+| <kbd>Ctrl</kbd> | <kbd>Command</kbd> | When pressing <kbd>Ctrl</kbd>/<kbd>Command</kbd>, you can select additional elements. Clicking a selected element or selecting it with a selection rectangle while holding <kbd>Ctrl</kbd>/<kbd>Command</kbd> will deselect it. |
 | <kbd>Tab</kbd> | <kbd>Tab</kbd> | If a loop is selected, the first element inside the loop will be selected. |
 | <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>Shift</kbd> + <kbd>Tab</kbd> | If an element inside a loop is selected, the loop itself will be selected. |
 
-#### Navigation
+### Navigation
 
 | Windows | Mac | Description |
 | --- | --- | --- |
@@ -136,7 +132,7 @@ The tables in the following sub-sections present the shortcut keys that can be u
 | <kbd>Ctrl</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | <kbd>Command</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | Zoom in or out.  |
 | <kbd>Ctrl</kbd> + <kbd>0</kbd> | <kbd>Command</kbd> + <kbd>0</kbd> | Reset zoom level to 100%. |
 
-#### Element Manipulation
+### Element Manipulation
 
 | Windows | Mac | Description |
 | --- | --- | --- |
@@ -144,27 +140,8 @@ The tables in the following sub-sections present the shortcut keys that can be u
 | <kbd>Enter</kbd> - on a Logic Recommender suggestion list item | <kbd>Enter</kbd> - on a Logic Recommender suggestion list item | The selected item is added on the sequence flow. The Logic Recommender dialog box is shown again for the next action to be added. |
 | <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + Mouse button) - on a Logic Recommender suggestion list item| <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + Mouse button) - on a Logic Recommender suggestion list item | The selected item is added on the sequence flow. The element’s property dialog box is opened. |
 | <kbd>F2</kbd> | <kbd>Fn</kbd> + <kbd>F2</kbd> | Rename the variable returned by the selected element. |
-| <kbd>Shift</kbd> + <kbd>F2</kbd> | <kbd>Shift</kbd> + <kbd>Fn</kbd> + <kbd>F2</kbd> | Edit the caption of the selected element. |
-| Context-menu key | Not available | Open the context-menu for the currently selected element. |
-
-### Studio Pro 10.5 and Below
-
-The following table shows the shortcut keys that can be used in the microflow, nanoflow, and rule editors in Studio Pro 10.5 and below.
-
-| Windows | Description |
-| --- | --- |
-| Arrow keys | Move the selection box to the activity or element in the direction of the arrow key. For example, if currently a show page activity is selected and you press the right arrow key, the activity to the right of it becomes selected. |
-| <kbd>Enter</kbd> | Edit the properties of the selected element. |
-| <kbd>F2</kbd> | Edit the name of the return value of the selected activity. This shortcut only functions on activities that return a result. |
-| <kbd>Shift</kbd> + <kbd>F2</kbd> or just start typing | Edit the caption of the selected element. |
-| <kbd>Ctrl</kbd> + arrow keys | Move the selected element in the direction of the arrow. |
-| <kbd>Tab</kbd> | If a loop is selected, the first element inside the loop will be selected. |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | If an element inside a loop is selected, the loop itself will be selected. |
-| <kbd>Home</kbd> | Select the start event. |
-| <kbd>End</kbd> | Cycle through the end events. |
-| <kbd>Shift</kbd> | By holding <kbd>Shift</kbd> when resizing an activity, it will stay centered at its current position and expand equally in all directions. |
-| <kbd>Ctrl</kbd> | When pressing the <kbd>Ctrl</kbd>, you can select additional elements. Clicking a selected element while holding <kbd>Ctrl</kbd> will deselect it. |
-| Context-menu key or <kbd>Shift</kbd> + <kbd>F10</kbd> | Open the context-menu for the currently selected element. |
+| <kbd>Shift</kbd> + <kbd>F2</kbd> or just start typing | <kbd>Shift</kbd> + <kbd>Fn</kbd> + <kbd>F2</kbd> or just start typing | Open the **Properties** pane and edit the caption of the selected element. |
+| Context-menu key or <kbd>Shift</kbd> + <kbd>F10</kbd> | <kbd>Shift</kbd> + <kbd>Fn</kbd> + <kbd>F10</kbd> | Open the context-menu for the currently selected element. |
 
 ## Workflow Editor Shortcut Keys {#workflow-editor-shortcut-keys}
 
@@ -174,10 +151,10 @@ The following shortcut keys are available in the workflow editor:
 | --- | --- | --- |
 | Mouse scroll wheel| Mouse scroll wheel | Scroll up or down. |
 | <kbd>Shift</kbd> + Mouse scroll wheel | <kbd>Shift</kbd> + Mouse scroll wheel | Scroll left or right. |
-|<kbd>Ctrl</kbd> + Mouse scroll wheel<br>(in Studio Pro 10.15.0 and above) | <kbd>Command</kbd> + Mouse scroll wheel<br>(in Studio Pro 10.15.0 and above) | Zoom in or out. |
+|<kbd>Ctrl</kbd> + Mouse scroll wheel | <kbd>Command</kbd> + Mouse scroll wheel | Zoom in or out. |
 | <kbd>Ctrl</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | <kbd>Command</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | Zoom in or out.  |
 | <kbd>Ctrl</kbd> + <kbd>0</kbd> | <kbd>Command</kbd> + <kbd>0</kbd> | Reset zoom level to 100%. |
-| <kbd>Ctrl</kbd> + Left/Right arrow<br>(in Studio Pro 10.15.0 and above) | <kbd>Command</kbd> + Left/Right arrow<br>(in Studio Pro 10.15.0 and above) | Move a [boundary event](/refguide/workflow-boundary-events/) left or right. |
+| <kbd>Ctrl</kbd> + Left/Right arrow | <kbd>Command</kbd> + Left/Right arrow | Move a [boundary event](/refguide/workflow-boundary-events/) left or right. |
 
 ## Debugger Shortcut Keys {#debugger-shortcuts}
 
@@ -243,10 +220,8 @@ You can use the following shortcut keys in [Maia Chat](/refguide/maia-chat/), in
 | <kbd>Ctrl</kbd> + <kbd>Z</kbd> | <kbd>Command</kbd> + <kbd>Z</kbd> | Undo the previous action. |
 | <kbd>Ctrl</kbd> + <kbd>Y</kbd> | Not available | Redo the previous action. |
 
-{{% alert color="info" %}}
-The shortcut keys for the Delete, Copy, Cut, Paste, Undo, and Redo actions are available in Studio Pro 10.11 and above on Windows. The supported shortcuts keys on a Mac are available in Studio Pro 10.12 and above. In some scenarios, Mac-supported shortcut keys might not work.
-
-In Studio Pro 10.6, <kbd>Enter</kbd> can only be used to add a new line, not to send the question. You can use <kbd>Ctrl</kbd> + <kbd>Enter</kbd> or the **Ask** button to send the question. 
+{{% alert color="warning" %}}
+In some scenarios, Mac-supported shortcut keys might not work.
 {{% /alert %}}
 
 ## Read More

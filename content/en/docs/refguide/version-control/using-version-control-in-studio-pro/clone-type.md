@@ -5,10 +5,6 @@ weight: 40
 description: Describes full and partial clone types for Git. 
 ---
 
-{{% alert color="info" %}}
-Different clone types are available in Studio Pro version 10.12.0 and above.
-{{% /alert %}}
-
 ## Introduction
 
 The Git version control system defaults to downloading a full copy of the repository from the server. Studio Pro allows you to select a different cloning mechanism to allow you to optimize for your needs, such as working offline or working with a large repository.

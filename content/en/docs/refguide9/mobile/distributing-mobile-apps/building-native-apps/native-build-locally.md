@@ -49,7 +49,7 @@ To set up your local app, do the following:
 1. In the **Build type** make sure the **Local** option is selected. 
     {{< figure src="/attachments/howto9/mobile/native-mobile/distribution/build-native-apps/native-build-locally/wizard-buildtype-local.png" alt="Build type"   width="350"  class="no-border" >}}
 1. Select the folder for your app's Native Template. Valid choices are an empty directory or a directory with an existing Native Template.
-1. Disable any service you do not wish to use. App Center requires GitHub as a service to work.
+1. Disable GitHub service if do not wish to use.
 1. Click **Next Step** until you reach the end of the wizard. Feel free to configure any step as needed.  
 1. Select **Build type** from the side bar. 
 

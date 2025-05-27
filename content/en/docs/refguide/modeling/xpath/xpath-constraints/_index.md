@@ -18,15 +18,13 @@ All the Studio Pro examples below assume that an entity `Sales.Customer` is sele
 
 ### Using Visual Builder for XPath Constraints
 
-In Studio Pro version 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called **visual Builder for XPath constraints** (Builder). This was in beta in version 10.5 and released as GA in version 10.12.
-
 {{% alert color="warning" %}}
 Visual Builder for XPath constraints has a number of limitations which are listed in [Builder Limitations](#limitations).
 {{% /alert %}}
 
-You can use the Builder in all places where you can retrieve data from the database, for example a [Retrieve](/refguide/retrieve/) activity in a microflow or the [Data Source](/refguide/xpath-source/) of a widget. Select **(From) Database** and click **Edit…** next to **XPath constraint** to open a dialog box where you can build your constraint.
+You can use the Builder in all places where you can retrieve data from the database, for example a [Retrieve](/refguide/retrieve/) activity in a microflow or the [Data Source](/refguide/database-source/) of a widget. Select **(From) Database** and click **Edit…** next to **XPath constraint** to open a dialog box where you can build your constraint.
 
-Ensure the **Builder** option is selected to use the Builder—this is the default from Mendix version 10.10. You can switch between the Builder and the XPath expression editor to view them in different ways. You can also set the Builder as the default in your [preferences](/refguide/preferences-dialog/#visual-builder).
+You can switch between the Builder and the XPath expression editor to view them in different ways. You can also set the Builder as the default in your [preferences](/refguide/preferences-dialog/#visual-builder).
 
 #### Constructing an XPath Constraint
 
@@ -83,27 +81,13 @@ If you try to use an unsupported feature you will be warned and can choose to ed
 
 In all versions of Mendix you can write XPath constraints using the syntax explained below. As you enter your XPath you will be given assistance to help you choose the correct entities, attributes, variables, and associations. You will also see if there are any syntax errors.
 
-Depending on the version, you may have to use a different option to add your XPath constraint.
-
-#### Mendix Version 10.5 and Above
-
-For all places where you can retrieve data from the database, for example a [Retrieve](/refguide/retrieve/) activity in a microflow or the [Data Source](/refguide/xpath-source/) of a widget, you select **(From) Database** and you will always have the option to add an **XPath constraint** by clicking **Edit…** to open a dialog box where you can enter your constraint.
+For all places where you can retrieve data from the database, for example a [Retrieve](/refguide/retrieve/) activity in a microflow or the [Data Source](/refguide/database-source/) of a widget, you select **(From) Database** and you will always have the option to add an **XPath constraint** by clicking **Edit…** to open a dialog box where you can enter your constraint.
 
 {{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/from-database-xpath-10-5.png" class="no-border" >}}
 
 You can type your constraint by selecting the option **XPath expression**.
 
 {{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/xpath-expression-10-5.png" class="no-border" >}}
-
-#### Mendix Versions Below 10.5
-
-For a **Retrieve** activity in a microflow, you choose **Source: From database** and you can enter your constraint under **XPath constraint**.
-
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/from-database-xpath-10-4.png" class="no-border" >}}
-
-For a **Data Source** of a page widget such as a [Data Grid](/refguide/data-grid/), you choose **Type: XPath**. You will then see an **XPath** field and click **Edit…** to open a dialog box where you can enter your constraint.
-
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/data-source-xpath-10-4.png" class="no-border" >}}
 
 ## Constraints in Java
 

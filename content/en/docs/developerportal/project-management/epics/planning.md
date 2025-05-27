@@ -34,8 +34,6 @@ On the upper-right corner of the page, you can see two buttons:
 
     {{% alert color="info" %}}You can also use **Maia Create User Story**, an AI-assisted tool, to create a user story for you. To access it, click **Create Story**, the option to **Create with Maia** appears at the left side of **Create Story**. It is disabled by default. To enable it, open the **Settings** by clicking the **...** next to **Create Story** and toggle the **Maia Assistance** option on. Note that only Scrum Masters can modify this setting.{{% /alert %}}
 
-    {{% alert color="info" %}}**Maia Create User Story** is currently in beta. For more information on beta features, see [Beta and Experimental Releases](/releasenotes/beta-features/).{{% /alert %}}
-
 * **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this shows the following options:
     * **Create Epic** – This enable you to create an epic.
     * **Edit Sprint** (only available for [a Scrum workflow](#scrum-planning)) – This enables you to edit the current Sprint.

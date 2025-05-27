@@ -11,7 +11,7 @@ The mx tool is a Windows and Linux command-line tool that can be used to perform
 
 ## Location
 
-Mendix Studio Pro comes with the mx command-line tool. You can find the executable *mx.exe* file in the same folder that contains *studiopro.exe* (for example, *C:\Program Files\Mendix\10.0.0.5003\modeler\mx.exe*). It is also included if you download [mxbuild](/refguide/mxbuild/).
+Mendix Studio Pro comes with the mx command-line tool. You can find the executable *mx.exe* file in the same folder that contains *studiopro.exe* (for example, *C:\Program Files\Mendix\11.0.0.5003\modeler\mx.exe*). It is also included if you download [mxbuild](/refguide/mxbuild/).
 
 ## Available Commands
 
@@ -68,9 +68,21 @@ These are the available [merging and diffing commands](/refguide/mx-command-line
 |   Command | Description |
 | --- | --- |
 | [merge](/refguide/mx-command-line-tool/merge/#merge) | Merges the *.mpr* files. |
-| [git-merge](/refguide/mx-command-line-tool/merge/#git-merge) | Merges the *.mpr* files as a custom git merge driver. |
 | [diff](/refguide/mx-command-line-tool/merge/#diff) | Shows the diff of the *.mpr* files. |
-| [dump-mpr](/refguide/mx-command-line-tool/dump-mpr/) | Create a JSON description of the model of a Mendix App |
+| [dump-mpr](/refguide/mx-command-line-tool/dump-mpr/) | Create a JSON description of the model of a Mendix app. |
+
+### Private Values Commands
+
+These are the available [private values commands](/refguide/mx-command-line-tool/private-values/):
+
+|   Command | Description |
+| --- | --- |
+| [show-private-values](/refguide/mx-command-line-tool/private-values/#show-private-values) | Shows private values. |
+| [delete-private-values](/refguide/mx-command-line-tool/private-values/#delete-private-values) | Deletes private values. |
+
+### Security Overview Command
+
+The available `export-security-overview` exports the [Security Overview](/refguide/security-overview/). For more information, see [Security Overview Command](/refguide/mx-command-line-tool/security/#export-security-overview).
 
 ## Undocumented Options
 

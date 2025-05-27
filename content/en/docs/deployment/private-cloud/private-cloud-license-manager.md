@@ -381,7 +381,7 @@ mx-pclm-cli config-namespace -n <operator-ns> \
 The default secret name is `mendix-operator-pclm`. If PCLM was previously configured manually, the existing secret name is used.
 
 {{% alert color="info" %}}
-For Global Operator installation, execute the above command in both the Global Operator namespace and its managed namespaces where the license is intended to be applied. Please make certain that identical PCLM license details are configured for both the managed and global operator namespaces to avoid unexpected outcomes. Global Operator is still in beta, and it does not currently fully supports PCLM.
+For Global Operator installation, execute the above command in both the Global Operator namespace and its managed namespaces where the license is intended to be applied. Please make certain that identical PCLM license details are configured for both the managed and global operator namespaces to avoid unexpected outcomes.
 {{% /alert %}}
 
 #### Sample Yaml Files
@@ -553,6 +553,18 @@ This will indicate that licenses have been applied to the operator and apps in t
 | ------------------------------------ | ---------- | -------- | ----------- |
 | `<license-id>` | `<namepace>` | `<app-ID>` | mx-operator |
 | `<license-id>` | `<namepace>` | `<app-ID>` | mx-runtime  |
+
+## Upgrade PCLM Server
+
+To upgrade the PCLM server, update the image tag in the PCLM server deployment and restart it.
+
+It is also possible to upgrade the PCLM server using following command:
+
+```bash
+mx-pclm-cli server-upgrade \
+    -d <pclm-deployment-name> \
+    -n <pclm-server-namespace>
+```
 
 ## Troubleshooting
 

@@ -58,7 +58,7 @@ This data repository stores components of the deployment process such as version
 
 ### Java RE
 
-This is the Java Runtime Environment (JRE) used to run the Runtime Server. The version of the JRE depends on the version of the Runtime Server. For example, different versions of Mendix 10 run on JRE versions 11, 17, or 21.
+This is the Java Runtime Environment (JRE) used to run the Runtime Server. The version of the JRE depends on the version of the Runtime Server. For example, Mendix 11 runs on JRE version 21.
 
 ### M2ee
 

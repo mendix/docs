@@ -859,12 +859,14 @@ To check your JDK version and update it if necessary, follow these steps:
     3. Rerun the project.
   
 ### Migration from Add-On module to App module
+
 As the module has been changed with version 3.0.0 from an add-on to an app module, if you are updating the module the install from marketplace will need a migration to work properly with your application.
 
 The process may look like this:
+
 1. Backup of data; either as database backup or individual:
-    - Incoming associations to protected module’s entities will be deleted
-    - Usage data will be lost but can be exported in the ConversationalUI module via the Token Consumption Monitor snippets
+    * Incoming associations to protected module’s entities will be deleted
+    * Usage data will be lost but can be exported in the ConversationalUI module via the Token Consumption Monitor snippets
 2. Delete Add-On module: GenAICommons
 3. Download the module from the marketplace; note that the module is from now on located under the “Marketplace modules” category in the app explorer.
 4. Test your application locally and verify that everything works as before.

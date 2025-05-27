@@ -149,11 +149,11 @@ To use the secret provider option for your database plan or storage plan, config
 | Data Type | Key | Example Value |
 | --- | --- | --- |
 | Database type (for example, PostgreSQL) | **database-type** | `PostgreSQL` |
-| Database Jdbc Url	| **database-jdbc-url**	| `jdbc:postgresql://pg.example.com:5432/my-app-1?sslmode=prefer` |
-| Database host | **database-host**	| `pg.example.com:5432` |
-| Database name	| **database-name** | `my-app-1` |
+| Database Jdbc Url    | **database-jdbc-url**    | `jdbc:postgresql://pg.example.com:5432/my-app-1?sslmode=prefer` |
+| Database host | **database-host**    | `pg.example.com:5432` |
+| Database name    | **database-name** | `my-app-1` |
 | Database user name | **database-username** | `my-app-user-1` |
-| Database password | **database-password**	|  |
+| Database password | **database-password**    |  |
 
 ### Storage Plan Keys
 

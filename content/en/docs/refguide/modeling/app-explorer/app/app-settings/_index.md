@@ -28,7 +28,7 @@ These settings influence the behavior of the Runtime when running your applicati
 
 ### Use React Client {#react-client}
 
-This setting enables the new React version of the Mendix Client. This React client was released into beta in [Mendix 10.7](/releasenotes/studio-pro/10.7/#react-client). As of [Mendix 10.18](/releasenotes/studio-pro/10.18/), it is in GA. There are three options:
+This setting enables the new React version of the Mendix Client. There are three options:
 
 * **No**: Do not use the React client (default).
 * **Yes**: Use the React client. In this mode, you will get consistency errors for incompatible widgets.
@@ -70,12 +70,10 @@ If the URL prefix breaks any of the rules mentioned above, then you will get a c
 
 ### Java Version{#java-version}
 
-Here you can select which Java version to use for you application.
+Here you can select which Java version to use for you application. For information on how the Java version can influence the behavior of an application, see [Java Version Migration](/refguide/java-version-migration/).
 
 {{% alert color="info" %}}
-
-For Studio Pro versions 10.6.7 and 10.8.0 and above, you can choose Java 17.
-
+For Studio Pro 11, you should choose Java 21.
 {{% /alert %}}
 
 For local development the Java version configured here needs to have a corresponding JDK configured in the [Studio Pro preferences](/refguide/preferences-dialog/#jdk).
@@ -232,22 +230,11 @@ Default: *Yes*
 
 If this option is enabled, database [foreign key constraints](/refguide/data-storage/#fkc) will be used. An attempt to commit a dangling reference will throw a runtime exception.
 
-{{% alert color="info" %}}
-This option was added in Mendix version 10.10.
-{{% /alert %}}
-
-Default: *depends on the version of Mendix used to create the app:*
-
-* *Yes* for apps created with Mendix versions 10.6.0 and above
-* *No* for apps created with Mendix versions below 10.6
+Default: *Yes*
 
 ### SSL Certificate Algorithm
 
 Choose between **PKIX (recommended)** and **SunX509 (for backwards compatibility)** as the Java validator and trust manager. According to [this JDK issue](https://bugs.openjdk.org/browse/JDK-8169745), the PKIX validator/trust manager supports richer extensions and features, and the use of SunX509 is discouraged.
-
-{{% alert color="info" %}}
-This option was added in Mendix version 10.21.0.
-{{% /alert %}}
 
 Default: **SunX509 (for backwards compatibility)**
 
@@ -412,10 +399,6 @@ A microflow selected for this setting will start every time a user task changes 
 
 ## Dependencies Tab {#deployment}
 
-{{% alert color="info" %}}
-The Deployment tab was renamed to **Dependencies** in Studio Pro 10.12.0.
-{{% /alert %}}
-
 This tab can be used to view the managed dependencies in your app in one place and to manage the dependencies in the userlib directory. It contains three tabbed sections.
 
 ### Overview
@@ -462,7 +445,7 @@ See the list below for detailed information on which widgets are generated in va
 
 ### Default Association Storage
 
-In Mendix 10.21 and above, you can decide how associations are stored in the database.
+You can decide how associations are stored in the database.
 
 This option allows you to change the default for new associations. The initial defaults will be as follows:
 
@@ -481,6 +464,6 @@ This table allows you to select a default color for each microflow activity type
 
 ### Automatically Encode Parameter Values in Send REST Request Microflow Activities
 
-For Studio Pro 10.21 and above, you can disable the encoding of the URL parameters for the Send REST Request microflow activity. This allows parameter values to be used as provided.
+You can disable the encoding of the URL parameters for the Send REST Request microflow activity. This allows parameter values to be used as provided.
 
 When enabled, the behavior will be inconsistent with the Consumed REST service.

@@ -18,11 +18,12 @@ Before starting the installation and implementation process, make sure that you 
 * Obtain and configure a Microsoft Azure account. For more information, refer to the the Microsoft Azure documentation.
 * Purchase the Mendix on Azure offering in the [Azure Marketplace](https://azuremarketplace.microsoft.com/).
 * You must sign in to the Mendix on Azure portal with the same Azure account that was used to purchasing the offering. If you sign in with another account, the cluster is not visible for initialization.
+* You must log in to [Private Cloud page](https://privatecloud.mendixcloud.com/) before starting the installation process in the Mendix on Azure portal.
 
 {{< figure src="/attachments/deployment/mx-azure/coadmin-permission.png" class="no-border" >}}
 
 * Familiarize yourself with the [Private Cloud](https://docs.mendix.com/developerportal/deploy/private-cloud/) concepts.
-* Ensure that your Mendix Studio Pro is in version 10.10 or newer.
+* Ensure that your Mendix Studio Pro is in version 10.10 or above.
 * As an optional best practice, add multiple cluster manager to your clusters.
 
 ## Creating an Azure Cluster
@@ -58,17 +59,42 @@ To create a cluster for your Mendix on Azure app, perform the following steps:
 
     {{< figure src="/attachments/deployment/mx-azure/preflight-check.png" class="no-border" >}}
 
-8. After the preflight check completes, click **Next**.
+8. In the **Preflight Check** screen, click **Next** to be redirected to the **Provision** screen. When all preflight checks are passed, the status is displayed as **Done** in the **Preflight Check** section, as in the following figure:
 
-9. In the **Provision** screen, add the custom tags if required and review the information in the **Advanced Settings** section, and adjust any settings as needed. Note that selecting higher service tiers will incur higher costs.
+    {{< figure src="/attachments/deployment/mx-azure/preflight-check-successful.png" class="no-border" >}}
+
+9. In the **Provision** screen, add the custom tags if required and review the information in the **Advanced Options** section. If required, adjust any settings as needed. Note that selecting higher service tiers will also incur higher costs.
+   
+    You can update the following advanced options:
+
+    * AKS Service Tier
+    * AKS Node Size
+    * VM Type
+    * Load Balancer Type
+    * Postgres Flexible Server - Under this, you can update Compute Tier, Compute Size and Storage Performance Tier.
+    * AKS Node IP Address 
 
     {{% alert color="info" %}}If you plan to use [virtual network peering](#network-peering), you must set the **Load Balancer Type** to **Private (Internal)**.{{% /alert %}}
 
-10. In the **Review & Initialize** screen, review the information and click **Initialize**.
+    {{< figure src="/attachments/deployment/mx-azure/provision-additional-option.png" class="no-border" >}}
 
-    The initialization process takes approximately 15 minutes. It creates a resource group in the managed app that you created in step 3 above. Once the cluster is initialized successfully, a corresponding cluster is created in the the Private Cloud portal. The namespace is also created and configured automatically, as described in [Standard Operator: Running the Tool](https://docs.mendix.com/developerportal/deploy/standard-operator/#running-the-tool). You cannot create additional namespaces for a Mendix on Azure cluster. You also cannot use APIs to create or modify the cluster.
-    
-    The cluster cannot be deleted from the Private Cloud portal or the Mendix on Azure portal. If you want to remove it, you must delete it in the Microsoft Azure portal.
+11. In the **Review & Initialize** screen, review the information and click **Initialize**.
+
+    {{< figure src="/attachments/deployment/mx-azure/initializeCluster.png" class="no-border" >}}
+
+    The initialization process takes approximately 15 minutes. It creates a resource group in the managed app that you created in step 3 above as shwon below:
+
+    {{< figure src="/attachments/deployment/mx-azure/resourceGroup.png" class="no-border" >}}
+
+12. Once the cluster is initialized successfully, a corresponding cluster and a namespace within it is created in the the Private Cloud portal. The namespace is configured automatically, as described in [Standard Operator: Running the Tool](https://docs.mendix.com/developerportal/deploy/standard-operator/#running-the-tool). 
+
+    {{% alert color="info" %}}You cannot create additional namespaces for a Mendix on Azure cluster. You also cannot use APIs to create or modify the cluster. Also, the cluster cannot be deleted from the Private Cloud portal or the Mendix on Azure portal. If you want to remove it, you must delete the Managed application (created in Step 3) in the Microsoft Azure portal.{{% /alert %}}
+
+13. Once the cluster is initialized successfully, the status of the cluster in the Portal changes to **INITIALIZED**.
+
+14. The Infrastructure details of the cluster can be seen in the **Details** option visible under **Actions** column.
+
+    {{< figure src="/attachments/deployment/mx-azure/infrastructure-details.png" class="no-border" >}}
 
 ## Rerunning Failed Clusters
 
@@ -82,15 +108,18 @@ To fix the issue, you can click **Rerun** to manually re-run the cluster. If a c
     
 ## Editing the Cluster in the Mendix on Azure Portal
 
-If required, you can change the following options for your cluster:
+If required, you can change the following options for your cluster. The **Edit** page might take few second to open.
 
 * AKS service tier
 * AKS node size
 * VM type
 * Load balancer type
 * Postgres compute SKU
-* Postgres performance tier for storage IOPS
-* Custom tags
+* Postgres Performance tier for storage IOPS
+* Postgres Compute tier
+* Postgres Compute size
+
+    {{< figure src="/attachments/deployment/mx-azure/editClusterPage.png" class="no-border" >}}
 
 ## Enabling Connections Between Different Azure Resource Groups
 
@@ -110,7 +139,7 @@ The following diagram shows one potential solution to the access issue. Bi-direc
 
 To enable virtual network peering for your Mendix on Azure app, perform the following steps:
 
-1. In the Microsoft Azure portal, add a new bi-directional virtual peering.
+1. In the Microsoft Azure portal, [add a new bi-directional virtual peering](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-peering?tabs=peering-portal).
 
     {{< figure src="/attachments/deployment/mx-azure/virtual-network-peerings-add.png" class="no-border" >}}
 

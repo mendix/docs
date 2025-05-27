@@ -513,7 +513,7 @@ Please note these code samples omit checks of `myDataSource` status and availabi
 
 The `id` field of type `ListAssociationId` represents the unique randomly-generated string identifier of an association. That identifier can be used when applying filtering on a linked data source property to identify which association should be used for filtering. For more information, see the [Filtering](#listvalue-filtering) section.
 
-THe `filterable` field specifies if the association can be used for filtering. This flag has to be checked before a widget applies filtering on a data source property. An attempt to filter on a non-filterable association leads to an error during the execution time.
+The `filterable` field specifies if the association can be used for filtering. This flag has to be checked before a widget applies filtering on a data source property. An attempt to filter on a non-filterable association leads to an error during the execution time.
 
 #### Association Type {#association-type}
 

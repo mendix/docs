@@ -10,7 +10,7 @@ With the **Merge** dialog you can [merge](/refguide/version-control/#merge) chan
 
 {{% alert color="warning" %}}
 Before continuing with the merge action, make sure you are currently working in the development line to which you want to merge.
-{{% /alert %}} 
+{{% /alert %}}
 
 To access the **Merge** dialog box, open [Version Control](/refguide/version-control-menu/) > **Merge Changes Here**:
 
@@ -18,23 +18,31 @@ To access the **Merge** dialog box, open [Version Control](/refguide/version-con
 
 Available scenarios are described in sections below.
 
-## Port Fix
+## Cherry Pick
+
+{{% alert color="info" %}}
+This functionality was known as **Port fix** in previous versions of Studio Pro. It has been renamed to **Cherry pick** to keep it more consistent with the native Git name for the operation.
+{{% /alert %}}
 
 This scenario allows you to move a fix from a maintenance branch line to the main line. If you just want to redo a small fix, a single commit is often enough.
 
-Port fix adds changes from the selected commit to your branch line. You will need to explicitly commit these changes after performing the port fix.
+Cherry pick adds changes from the selected commit to your branch line. You will need to explicitly commit these changes after performing the cherry pick.
 
 ### Branch Line
 
 Choose the branch line from which you want to merge the fix.
 
+{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/merge-dialog/cherry-pick-details.png" alt="Cherry Pick Details" class="no-border" >}}
+
 ### Revision
 
-Choose a revision that you would like to port fix.
+Choose a revision that you would like to cherry pick.
 
 ## Merge Feature Branch
 
 This merge scenario allows you to merge a complete feature branch line to the main line.
+
+{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/merge-dialog/merge-details.png" alt="Merge Details" class="no-border" >}}
 
 To merge the whole branch back to the main line to integrate a new feature there, do the following:
 

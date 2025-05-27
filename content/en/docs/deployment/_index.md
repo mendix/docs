@@ -90,7 +90,7 @@ Mendix on Azure is a deployment option that makes use of some of the features of
 
 ## On-Premises
 
-To learn how to deploy your Mendix application on premises, see [How to Deploy Mendix on Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/) and [Unix-Like Deployment](/developerportal/deploy/unix-like/).
+To learn how to deploy your Mendix application on premises, see [How to Deploy Mendix on Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/) and [Linux Deployment](/developerportal/deploy/linux/).
 
 ## Mendix Applications on Industrial Edge
 

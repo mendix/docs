@@ -12,7 +12,7 @@ The Mendix Client runs on the end-user's device and serves as the interface betw
 The above description of the Mendix Client is based on using the Runtime Server of an app running in the cloud. You can also run Mendix locally for testing, which works in a conceptually similar way.
 
 {{% alert color="info" %}}
-In Studio Pro versions 10.7.0 and above, there is an alternative version of the Mendix Client written in React. This is currently a [beta](/releasenotes/beta-features/). You can enable this React client in [App Settings](/refguide/app-settings/#react-client).
+There is an alternative version of the Mendix Client written in React. This is currently a [beta](/releasenotes/beta-features/). You can enable this React client in [App Settings](/refguide/app-settings/#react-client).
 
 The React client replaces [Dojo](https://dojotoolkit.org/) with [React](https://react.dev/) for the view layer. This means that widgets based on Dojo will no longer work. You will get consistency errors if your app contains Dojo widgets, or you can choose **Migration mode** which will allow you to build your app but will replace incompatible widgets with a placeholder.
 
@@ -259,12 +259,11 @@ When the Mendix client is running, it sets a number of technical cookies to reco
 | **DeviceType** | Runtime | Holds the type of the device used for the session | `/` | 1 year |  `true` | 
 | **Profile** | Runtime | Holds the navigation profile that is being accessed within the session | `/` | 1 year |  `true` | 
 | **SessionTimeZoneOffset** | Runtime | Holds the time zone offset for the session | `/` | until user closes their browser (session cookie) |  `true` | 
-| **xasid** | Runtime | Used for multi-instance fail-over | `/` | until user closes their browser (session cookie) |  `true` | 
-| **reloginReason** | Runtime | Used to let the client know that a relogin reason should be displayed on the sign in page—*not used by apps created in Mendix version 10.9.0 and above* | `/` | until user closes their browser (session cookie) |  `true` | 
+| **xasid** | Runtime | Used for multi-instance fail-over | `/` | until user closes their browser (session cookie) |  `true` |
 | **XASSESSIONID**² | Runtime | Holds the ID of the user's session | `/` | 1 year for offline sessions¹, otherwise based on the session timeout |  `true` | 
-| **useAuthToken** | Runtime | Lets the runtime know whether to generate an authtoken or not—*introduced for apps created in Mendix version 10.9.0 and above* | `/` | until the end-user closes their browser (session cookie) |  `true` | 
-| **authtoken** | Runtime | Used to hold the authentication token—*introduced for apps created in Mendix version 10.9.0 and above* | `/` | until the authentication token expires |  `true` | 
-| **clear_cache** | Runtime | Instructs the client to clear the cached session data whenever a new end-user signs in to an offline application. If the client is not directly used for the sign-in functionality, you can use the newly added Java API, [addSessionCookies](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/m2ee/api/IMxRuntimeResponse.html#addSessionCookies), which sets all necessary cookies related to the session.—*introduced for apps created in Mendix version 10.13.0 and above* | `/` | until client starts or end-user closes their browser | `false`³ | 
+| **useAuthToken** | Runtime | Lets the runtime know whether to generate an authtoken or not | `/` | until the end-user closes their browser (session cookie) |  `true` | 
+| **authtoken** | Runtime | Used to hold the authentication token | `/` | until the authentication token expires |  `true` | 
+| **clear_cache** | Runtime | Instructs the client to clear the cached session data whenever a new end-user signs in to an offline application. If the client is not directly used for the sign-in functionality, you can use the newly added Java API, [addSessionCookies](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/m2ee/api/IMxRuntimeResponse.html#addSessionCookies), which sets all necessary cookies related to the session. | `/` | until client starts or end-user closes their browser | `false`³ | 
 
 ¹*Offline sessions* are sessions created for users using an offline or native mobile [navigation profile](/refguide/navigation/#profiles).
 

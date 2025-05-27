@@ -141,7 +141,7 @@ Before starting the bot configuration, ensure that the Mendix Cloud GenAI, OpenA
 1. In the **Administration** menu, go to the **Bot Configuration**, and click **New**.
 2. Enter the following details:
 
-     * **Display Name**: A reference name for the bot configuration (for example, "MxCloud GenAI Configuration Bot").
+     * **Display Name**: A reference name for the bot configuration (for example, "Mendix Cloud GenAI Configuration Bot").
      * **Is Selectable in UI**: Enable this option to allow the end user to select this configuration.
      * **Model**: Select the  Mendix Cloud GenAI, OpenAI, or Bedrock model you just created.
      * **Action Microflow**: Choose the provided microflow (e.g.,  `ChatContext_ChatWithHistory_ActionMicroflow`).

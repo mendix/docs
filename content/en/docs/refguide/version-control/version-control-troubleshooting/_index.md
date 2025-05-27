@@ -24,9 +24,7 @@ For more information and general help on version control, see the following docu
 ### Getting an Unexpected Error: `The project contains changes that have not been committed yet. Please commit first before attempting to merge again.` {#css-error}
 
 {{% alert color="info" %}}
-
 This is a known issue for Mendix version 10.0 and above. For more information, see [10.0](/releasenotes/studio-pro/10.0/#css-ki) release notes.
-
 {{% /alert %}}
 
 You may get the error `The project contains changes that have not been committed yet. Please commit first before attempting to merge again.` when you feel there are no uncommitted changes. 
@@ -84,7 +82,7 @@ To fix this issue, take the following steps:
     `git config --global user.name "<Name>"`
     * Specify the email:
     `git config --global user.email "<Email>"` 
-2. Ensure the git version on your machine is 2.43.x or above:
+2. Ensure the git version on your machine is 2.48.1 or above:
     * Check your installed git version by running the following command:
     `git version`.
     * If needed, install the correct version from the [git website](https://git-scm.com/download/win).
@@ -156,3 +154,11 @@ You can download and install a recent version of Git from [here](https://git-scm
 
 Sometimes the Git process may crash while performing any operation on the repository. The reason for this can be a dead battery, a blue screen on Windows, or any other unexpected shutdown. As a result, there is a leftover *index.lock* file, which blocks other Git operations.
 To fix this, go to `<directory of your app>/.git/` and delete the *index.lock* file.
+
+### Unknown Author Shown in Version Control History
+
+In case of a configuration error, an unknown author may appear in the commit history for one or more commits. The values used for commit messages originate from the Git configuration. This information is not used for authentication on Team Server and can be adjusted in [Preferences](/refguide/preferences-dialog/#name).
+
+Other tools on your machine that use the Git configuration, such as a traditional IDE, are typically also capable of changing this Git configuration. If you have chosen a name and email for a hobby project in another IDE, that information may also appear in commits made from Studio Pro.
+
+To fix the issue, ensure that responsible users change their Git configuration in [Preferences](/refguide/preferences-dialog/#name). Changing historical commits is not possible within Studio Pro. 

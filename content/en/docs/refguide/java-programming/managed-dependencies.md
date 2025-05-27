@@ -5,15 +5,9 @@ weight: 50
 description: "Describes how to use the managed dependencies feature in Studio Pro"
 ---
 
-{{% alert color="info" %}}
-This feature was introduced in Mendix 10.3.0.
-{{% /alert %}}
-
 ## Introduction
 
 Mendix Studio Pro allows you to manage your Java dependencies. By specifying Java dependencies and their versions per module, Studio Pro can automatically download them and resolve conflicts by leveraging Gradle.
-
-In versions of Mendix below 10.3.0, Java dependencies were put into the `userlib` folder manually. This process has been simplified using managed dependencies, although the `userlib` folder can still be used for custom `.jar`s. For more information see [Unmanaged Dependencies](#unmanaged), below.
 
 ## Adding or Updating Managed Dependencies{#add-dependency}
 
@@ -44,10 +38,6 @@ After finding the package of your choice, locate the Snippets part, containing t
 {{< figure src="/attachments/refguide/java-programming/managed-dependencies/junit-notation-example.png" class="no-border" >}}
 
 ## Adding or Updating Exclusions
-
-{{% alert color="info" %}}
-Exclusions are available in Studio Pro version 10.12.0 and above.
-{{% /alert %}}
 
 Transitive (or indirect) dependencies of different configured Java dependencies might conflict. For example, if two Java dependencies have the same package name and classes but a different group or artifact then they may both be included in your app, possibly causing conflicts.
 
@@ -201,12 +191,7 @@ If you have an issue with the managed dependencies of a Marketplace module, you 
 
 ## Offline Usage {#disabling-synchronization}
 
-{{% alert color="info" %}}
-This feature was introduced in Mendix versions 10.16.0, 10.12.7, and 10.6.17.
-{{% /alert %}}
-
-In the Deployment tab of the Studio Pro preferences [Gradle synchronization](/refguide/preferences-dialog/#gradle-synchronization) can be disabled.
-This means that applications can be started even if Studio Pro is offline or in an air gapped environment.
+In the Deployment tab of the Studio Pro preferences, [Gradle synchronization](/refguide/preferences-dialog/#gradle-synchronization) can be disabled. This means that applications can be started even if Studio Pro is offline or in an air gapped environment.
 
 {{% alert color="info" %}}
 This prevents managed dependencies being synchronized, potentially causing compile errors and version conflicts. In addition, you cannot generate SBOMs while Gradle synchronization is disabled. Mendix recommends that air gapped users configure a [custom repository](#custom-repos) instead of relying on disabling Gradle synchronization.

@@ -7,9 +7,33 @@ description: "Mendix Native Mobile Builder release notes."
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
+## Introduction
+
 The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Studio Pro, which helps you build your Mendix native mobile app. After the Mendix Native Mobile Builder simplifies your build process, you can do what you want most: test and publish your app. 
 
-The Mendix Native Mobile Builder uses MxBuild, GitHub, and App Center to simplify the app building process and is directly accessible via Mendix Studio Pro. For best results, we recommend using the latest version of the Native Mobile Builder.
+The Mendix Native Mobile Builder uses MxBuild and GitHub to simplify the app building process and is directly accessible via Mendix Studio Pro. For best results, we recommend using the latest version of the Native Mobile Builder.
+
+### Troubleshooting
+
+#### OTA Update Caught in a Loop
+
+If you built your app using a version of the Native Template that no longer exists (such as a beta version that was rolled out previously), then it is possible your app gets caught in an unresolved loop when you update it [OTA](/refguide/mobile/distributing-mobile-apps/overtheair-updates/#when-to-use-ota). This problem can affect any NMB version, as the problems stem from the unsupported Native Template. 
+
+To fix this issue, do the following:
+
+1. Navigate to the NMB's previous build output folder.
+2. Open the **template_version** file.
+3. Remove the content of the file.
+4. Remove **config.json**.
+5. Reopen the Mendix Native Mobile Builder.
+
+## Release 1.0.136 {#10135}
+
+**Release date: April 1, 2025**
+
+#### Breaking Changes
+
+* Building mobile apps with App Center (the **Cloud Build** option) has been removed. Customers who previously used **Cloud Build** will be able to select **Local Build**.
 
 ## Release 1.0.135 {#10135}
 

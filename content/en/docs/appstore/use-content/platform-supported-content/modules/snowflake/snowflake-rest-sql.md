@@ -143,6 +143,75 @@ This approach allows you to achieve asynchronous behavior while leveraging the S
 
 The Snowflake REST SQL connector can be used to trigger data ingestion jobs with an SQL statement. For more information, see [Mendix Data Loader: Programmatically Triggering an Ingestion Job From a Mendix App](/appstore/modules/snowflake/mendix-data-loader/#trigering-jobs).
 
+## Binding Variables in Snowflake using the Snowflake REST SQL Connector
+
+When executing SQL statements from Mendix into Snowflake, *binding variables* is a critical concept that improves security, performance, and maintainability of your database interactions.
+
+### What Is Variable Binding?
+
+Instead of putting values directly into your SQL, you can use `?` placeholders and provide the values separately. This is called *binding*. It works in a similar way to using parameters in a Mendix microflow, that is, it keeps your logic and data separate.
+
+In Mendix, you do this by creating a `Statement` entity with a SQL query that includes `?`. Then, you add `Binding` entities to provide the values for those placeholders.
+
+Each `Binding` is linked to the `Statement`. The order of the bindings matters — the first binding fills the first `?`, the second fills the second `?`, and so on.
+
+Make sure the number of bindings matches the number of `?` placeholders in your SQL. Otherwise, the execution will fail due to mismatched parameters.
+
+### Benefits of Variable Binding
+
+Binding variables provides the following benefits:
+
+* **Security** - Prevents SQL injection attacks by treating values as data, not code.
+* **Reusability** - You can reuse the same SQL template with different values.
+* **Performance** - Snowflake can cache and reuse execution plans for bound SQL.
+* **Clarity** - Keeps SQL readable and separates logic from values—easier to debug and maintain.
+
+## Sample SQL for Variable Binding
+
+The following is an example of unbound SQL:
+
+```sql
+INSERT INTO db.sch.Persons (PersonID, LastName, FirstName, Address, City, IsActiveUser) 
+VALUES (12, 'Doe', 'Jane', 'Main Street 123', 'Metroville', true);
+```
+
+The following is an example of bound SQL using `?` placeholders:
+
+```sql
+INSERT INTO db.sch.Persons (PersonID, LastName, FirstName, Address, City, IsActiveUser)
+VALUES (?, ?, ?, ?, ?, ?);
+```
+
+The following values are provided separately in a bindings structure:
+
+```sql
+"bindings": {
+    "1": { "type": "FIXED", "value": "12" },
+    "2": { "type": "TEXT", "value": "Doe" },
+    "3": { "type": "TEXT", "value": "Jane" },
+    "4": { "type": "TEXT", "value": "Main Street 123" },
+    "5": { "type": "TEXT", "value": "Metroville" },
+    "6": { "type": "BOOLEAN", "value": "true" }
+}
+```
+
+### Mendix Attribute Type to Snowflake Data Type Mapping
+
+This table maps Mendix attribute types to Snowflake data types, along with common binding types and usage notes.
+
+| Mendix Attribute Type | Snowflake Data Type | Typical Binding Type | Notes |
+| --- | --- | --- | --- |
+| Integer | `INT` / `NUMBER` | FIXED | Maps from Snowflake *INT* or *NUMBER*, depending on the range. |
+| Decimal | `FLOAT` | REAL | Supports floating-point precision. |
+| String | `VARCHAR` | TEXT | Use for general text data. |
+| Binary / String | `BINARY` | BINARY / TEXT | *Binary* for raw data; *String* for hex representations. |
+| Boolean | `BOOLEAN` | BOOLEAN / TEXT | Accepts `true`/`false` or `0`/`1`. |
+| DateTime | `DATE` | DATE / TEXT | Stores both date and time; time defaults to `00:00:00`. |
+| String / DateTime | `TIME` | TIME / TEXT | Store as *String* or convert to *DateTime*. |
+| DateTime | `TIMESTAMP_TZ` | TIMESTAMP_TZ / TEXT | Time zone-aware; stored in UTC. |
+| DateTime | `TIMESTAMP_LTZ` | TIMESTAMP_LTZ / TEXT | Local time zone; stored in UTC. |
+| DateTime | `TIMESTAMP_NTZ` | TIMESTAMP_NTZ / TEXT | No time zone; stored in UTC. |
+
 ## Technical Reference
 
 To help you work with the Snowflake REST SQL connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.
@@ -184,6 +253,14 @@ The domain model is a data model that describes the information in your applicat
 | `Schema` | The database schema to use, for example `PUBLIC`. |
 | `Warehouse` | The warehouse to use for computations. |
 | `Role` | The role to use to execute the SQL statement. The role sufficient permissions to execute the statement. |
+
+#### Binding {#binding}
+
+| **Attribute**   | **Description**                                                       |
+|----------------|------------------------------------------------------------------------|
+| `createdDate`  | The timestamp when this binding was generated.                         |
+| `BindingType`  | The Snowflake data type used in binding (e.g., `FIXED`, `TEXT`).       |
+| `value`        | The actual value passed into the query for that position.              |
 
 #### ResultSet {#result-set}
 

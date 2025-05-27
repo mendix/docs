@@ -15,8 +15,9 @@ env:
   global:
 # Global variables can go here, for example HUGO_VERSION if we were using Netlify to publish.
 
-#add group: previous to see if this fixes the stalled npm build - 2025-04-14
-group: previous
+# add group: previous to see if this fixes the stalled npm build - 2025-04-14
+# remove again 2025-05-08 as builds started breaking again.
+# group: previous
 
 branches:
 # build only development and production

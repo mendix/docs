@@ -20,6 +20,7 @@ Siemens publishes their common vulnerabilities and exposures (CVE) on the second
 
 | CVE ID | CVSS v3.1 Base Score | Siemens Security Advisory (SSA) Description | Notes |
 | --- | --- | ---  | --- |
+| <a id="40571">CVE-2025-40571 | 2.2 | [Incorrect Privilege Assignment Vulnerability in Mendix OIDC SSO Module](https://cert-portal.siemens.com/productcert/html/ssa-726617.html) | See the SSA description for remediation details. |
 | <a id="30280">CVE-2025-30280 | 5.3 | [Entity Enumeration Vulnerability in Mendix Runtime](https://cert-portal.siemens.com/productcert/html/ssa-874353.html) | See the SSA description for remediation details. |
 | <a id="50313">CVE-2024-50313 | 5.3 | [Race Condition Vulnerability in Basic Authentication Implementation of Mendix Runtime](https://cert-portal.siemens.com/productcert/html/ssa-914892.html) | See the SSA description for remediation details. |
 | <a id="56841">CVE-2024-56841 | 7.4 | [LDAP Injection Vulnerability in Mendix LDAP Module](https://cert-portal.siemens.com/productcert/html/ssa-314390.html) | See the SSA description for remediation details. |

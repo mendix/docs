@@ -84,10 +84,6 @@ Enabling this option includes debug information about local variables in the Jav
 
 #### Gradle Synchronization {#gradle-synchronization}
 
-{{% alert color="info" %}}
-This feature was introduced in Mendix versions 10.16.0, 10.12.7, and 10.6.17.
-{{% /alert %}}
-
 This option controls the synchronization of managed dependencies. For more information, see the [Offline Usage](/refguide/managed-dependencies/#disabling-synchronization) section in *Managed Dependencies*.
 
 #### Gradle Directory
@@ -183,25 +179,13 @@ Changing these values for another application will also affect the commits made 
 
 #### Enable Current Windows User Authentication {#enable-windows-authentication}
 
-{{% alert color="info" %}}
-This setting is available in Studio Pro MTS versions 10.6.21 and above, 10.12.14 and above, 10.18.3 and above.
-{{% /alert %}}
-
 When this option is selected, the application automatically uses credentials of the currently logged-in Windows user to authenticate and connect to the on-premises Git server. This feature streamlines the authentication process by eliminating the need for users to manually enter their credentials, enhancing both security and user convenience. By leveraging Windows authentication, organizations can ensure that access to the Git server is seamlessly integrated with their existing IT infrastructure, providing a smooth and efficient workflow for development teams.
 
 #### Clone {#clone}
 
-{{% alert color="info" %}}
-Different clone types are available in Studio Pro version 10.12.0 and above. 
-{{% /alert %}}
-
 Select a [Clone type](/refguide/clone-type/) to use for future clone operations, such as downloading an app or checking out another branch of an app you already downloaded. Changing this setting does not affect apps that you have already downloaded.
 
 #### Combine Local and Remote Changes
-
-{{% alert color="info" %}}
-This setting was introduced in Mendix version 10.5.
-{{% /alert %}}
 
 When [combining changes](/refguide/merge-algorithm/), for example when doing a Git pull, the user can choose between **Rebase** and **Merge** as the default action. This preference can be overridden for each merge which contains conflicts.
 
@@ -243,9 +227,9 @@ Hardware and driver issues may cause performance problems when running Studio Pr
 
 ### Language {#language}
 
-This beta feature is available from Studio Pro 10.17. 
+This feature is currently in beta.
 
-This option allows you to change the user interface language you work in while using Studio Pro. At this time, German, English, Japanese, Chinese, and Korean are supported. You must restart Studio Pro in order to use this feature.
+This option allows you to change the user interface language you work in while using Studio Pro. At this time, English, Japanese, Chinese, and Korean are supported. You must restart Studio Pro in order to use this feature.
 
 ### Editor Tabs Closing Policy {#closing-policy}
 
@@ -254,6 +238,10 @@ It is recommended to limit the number of open tabs (open documents) to improve t
 {{% alert color="info" %}}
 The closing policy is not applied to tabs with unsaved changes.
 {{% /alert %}}
+
+### Navigation
+
+This setting allows you to move forward and backward through your editing history to show the documents you have recently worked on. This feature is enabled by default. 
 
 ## Advanced Tab
 
@@ -267,27 +255,27 @@ When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro
 
 ### Visual Builder for XPath Constraints{#visual-builder}
 
-In Studio Pro version 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called **visual Builder for XPath constraints** (Builder).
-
-From Mendix version 10.10, Builder is the default way to construct XPath constraints, but you can change the default by clearing **Enable the XPath Builder as the default XPath constraint editor**.
-
-{{% alert color="info" %}}
-For Mendix versions 10.5.0 through 10.9.0, this option is on the **New Features** tab.
-{{% /alert %}}
+**Visual Builder** is the default way to construct XPath constraints, but you can change the default by clearing **Enable the XPath Builder as the default XPath constraint editor**.
 
 ### Feedback Survey
 
 When the **Show feedback survey periodically** setting is enabled, Studio Pro will periodically display a feedback survey to gather input on your experience. This helps Mendix improve the product based on user feedback. For more information, see [Feedback Survey](/refguide/feedback-survey/).
 
+### Antivirus Exclusion
+
+When the **Do not show antivirus exclusion notifications** setting is enabled, Studio Pro will not display notifications related to antivirus exclusions. For more information, see [Antivirus Exclusion](/refguide/antivirus-exclusion/).
+
 ## New Features Tab {#new-features}
 
 ### Access Rules Editor
 
-In Studio Pro version 10.21, the modernized access rule editor was made generally available and enabled by default. It was introduced as a Beta option in Studio Pro version 10.6. The old editor is deprecated and will be removed in 11.0.
+This option allows you to disable the new editor in the *Access rules* tab of the entity properties dialog and return to the version which was available in Studio Pro 10 or enable the new editor if it has been disabled.
 
-This option allows you to enable and disable the new editor in the *Access rules* tab of the entity properties dialog.
+{{% alert color="warning" %}}
+This option will be removed before the GA version of Mendix 11.0.
+{{% /alert %}}
 
-For more information, see [Defining Access Rules Using the New Editor](/refguide/access-rules/#new-editor) section of *Access Rules*.
+For more information, see [Defining Access Rules Using the New Editor](/refguide10/access-rules/#new-editor) section of the Mendix 10 documentation *Access Rules*.
 
 ### App Explorer
 
@@ -299,37 +287,41 @@ Select this option to use the modernized version of the Errors Pane. You must re
 
 ### Expression Editor
 
-The expression editor is modernized since Studio Pro 10.6. This setting is enabled by default. The editor allows the user to write rich text statements and get instant feedback on their validity. In Studio Pro, it is often used to write an expression for a decision or to write an XPath expression for data filtering.
+This setting is enabled by default. The editor allows the user to write rich text statements and get instant feedback on their validity. In Studio Pro, it is often used to write an expression for a decision or to write an XPath expression for data filtering.
 
 ### GraphQL {#graphql}
 
-Publishing data as a GraphQL service is available as of Studio Pro 10.14. When you enable this feature, you can indicate that a published OData service [also supports GraphQL](/refguide/published-odata-services/#supports-graphql).
+You can publish data as a GraphQL service. When you enable this feature, you can indicate that a published OData service [also supports GraphQL](/refguide/published-odata-services/#supports-graphql).
 
 ### Maia
 
-#### Enable Domain Model Generator (Experimental)
+#### Enable Maia for Domain Model
 
-In Studio Pro 10.13.0, Domain Model Generator was introduced as an experimental feature. Enable this option to help you generate entities and associations for empty domain models. For more information on how to use this feature, see [Domain Model Generator](/refguide/domain-model-generator/).
+Enable this option to help you generate entities and associations for your domain models. For more information on how to use this feature, see [Maia for Domain Model](/refguide/maia-for-domain-model/).
 
-#### Enable Translation Generator (Experimental)
+#### Enable Maia for Pages
 
-In Studio Pro 10.12.0, Translation Generator was introduced as an experimental feature. Enable this option to help you translate your model to different languages through **Batch translate** under the **Language** menu. For more information, see [Translation Generator](/refguide/translation-generator/).
+Enable this option to help you generate pages by adding and configuring widgets based on text input and an optional image. For more information on how to use this feature, see [Maia for Pages](/refguide/maia-for-pages/).
+
+#### Enable Maia for OQL
+
+Enable this option to help you generate and manage OQL (Object Query Language) queries through an intuitive interface. For more information on how to use this feature, see [Maia for OQL](/refguide/maia-for-oql/).
+
+#### Enable Translation Generator
+
+Enable this option to help you translate your model to different languages through **Batch translate** under the **Language** menu. For more information, see [Translation Generator](/refguide/translation-generator/).
 
 ### Mapping Editor
 
 This setting allows you to set the beta version as the default editor.
 
-### Navigation
-
-This setting allows you to move forward and backward through your editing history to show the documents you have recently worked on. You must restart Studio Pro to use this feature.
-
 ### Online Synchronization Mode
 
-This setting, introduced in 10.19 and currently in beta, allows entities to be used in offline navigation profiles without requiring data synchronization. This enables app developers to use entity data on pages without synchronizing the data of those entities to the offline database. This mode requires an available connection to the server. For more details, see [Online Synchronization Mode](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/online-sync-mode/).
+This setting, currently in beta, allows entities to be used in offline navigation profiles without requiring data synchronization. This enables app developers to use entity data on pages without synchronizing the data of those entities to the offline database. This mode requires an available connection to the server. For more details, see [Online Synchronization Mode](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/online-sync-mode/).
 
 ### System Texts Editor
 
-In Studio Pro 10.14.0, the web version of the system texts editor was released as an experimental feature. Enable this option to use the web version of the editor. 
+The web version of the system texts editor is currently an experimental feature. Enable this option to use the web version of the editor. 
 
 If Translation Generator is also enabled, you can use it in this editor as well. For more information, see the [Generating Translation for System Texts](/refguide/translation-generator/#translate-system-text) section in *Translation Generator*.
 

@@ -138,6 +138,9 @@ If LDAP is enabled for this connection (**LDAP enabled** is checked), you must f
 
     * **Import users** – Import and synchronize the end-users specified the configuration. This will make the end-user information available in your Mendix app.
     * **Only authenticate users** – This will only authenticate existing Mendix end-users against the LDAP server, but it will not synchronize any information. If an end-user is not known in Mendix, they cannot sign in. In the **General** tab, when the **LDAP Type** is set to **Only authenticate users based on the LDAP credentials**, the **Custom User Provisioning** toggle button appears. Enabling this option automatically triggers the `Ldap.customLoginLogic` microflow.
+
+        {{% alert color="info" %}} Starting from version 2.1.0 of the module, the value of the `Username` parameter in the `Ldap.customLoginLogic` microflow includes the configured domain prefix and suffix.{{% /alert %}}
+
     * **Authenticate and create** – This will not synchronize end-users. However, if an end-user that is unknown in Mendix signs in using valid LDAP authentication, a Mendix end-user will be created, and the end-user info will be copied from the LDAP server at that moment.
 
 * **Map users to** – This specifies which entity type objects should be created when creating new end-users. You can choose from all the specializations of **System.User**. For example, you may want to use the `Administration.Account` entity if you are using the Administration module.
@@ -161,7 +164,9 @@ The following settings are available:
 
 * **Login name field** – This is the LDAP attribute that will be used as a user login name. This must be an attribute that has a unique value for every end-user. For AD, this will often be `sAMAccountName`.
 * **Available attributes** – These are the LDAP attributes that are available to map to user attributes. Click **Refresh** to load this list from the LDAP server.
-* **Custom attribute mapping** – You can define the mappings for other attributes of the **User** entity, or a specialization of the **User** entity, that need to be imported from the LDAP server. For each mapping, you can specify an LDAP attribute, and the attribute in which its value will be stored. Note that you can only map to attributes of the User entity which are of type string. This mapping is the same as set up in **User Authentication Mapping**.
+* **Custom attribute mapping** – You can define the mappings for other attributes of the **User** entity, or a specialization of the **User** entity, that need to be imported from the LDAP server. For each mapping, you can specify an LDAP attribute and the attribute in which its value will be stored. Note that you can only map to attributes of the User entity which are of type string. This mapping is the same as set up in **User Authentication Mapping**.
+
+{{% alert color="info" %}} A unique attribute is used to import users from the LDAP server. Starting from version 1.1.3 of the LDAP module, users whose unique attribute value exceeds the length limit of the configured **Map users to** entity attribute are skipped during import. For more information on **Map users to** entity attribute, see the [Server Configuration](#server-configuration) section above.{{% /alert %}}
 
 When using the LDAP module for user synchronization in combination with a separate method of authentication (for example, the SAML module), you typically want to persist a user identifier in your Mendix app (using **Custom attribute mapping**) and use that to identify the end-user that is signed in when receiving the SAML response (the Identifying Assertion). This needs alignment between the LDAP module configuration and the [SAML module configuration](/appstore/modules/saml/#user-provisioning). One option might be to use the user’s email address, but Mendix recommends using an immutable "technical" user identifier. This may be a user attribute different from the username that the user would be entering in a login screen at the IdP which supports SAML.
 

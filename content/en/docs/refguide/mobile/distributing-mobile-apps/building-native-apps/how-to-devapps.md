@@ -36,7 +36,7 @@ A custom developer app helps you by serving as a replacement for the Make It Nat
 
 1. Click the *Build developer app* button
 
-1. The tool will set up your GitHub repository commit your changes, configure App Center if needed with two new apps, one for iOS and one for Android and continue with building the apps.
+1. The tool will set up your GitHub repository commit your changes, one for iOS and one for Android and continue with building the apps.
 
     {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/deploying-native-app/build-release-app-build-step1.png" alt="Building"   width="350"  class="no-border" >}}{{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/deploying-native-app/build-release-app-build-step1.png" alt="Building"   width="350"  class="no-border" >}}
     {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/deploying-native-app/build-release-app-build-step2.png" alt="Build release app" width="350" class="no-border" >}}

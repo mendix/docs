@@ -77,7 +77,7 @@ Congratulations! Your app has been successfully upgraded to Mendix 9 and you can
 
 ## Mendix Runtime API Changes
 
-Most of the Java API calls that were deprecated in Mendix 8 have been removed. If you were still using such methods in your Java actions, you must replace or delete them. To check which calls were depreciated, click the **Mendix 8 Runtime API** link in our [Mendix Runtime API](/apidocs-mxsdk/apidocs/runtime-api/).
+Most of the Java API calls that were deprecated in Mendix 8 have been removed. If you were still using such methods in your Java actions, you must replace or delete them. To check which calls were depreciated, click the **Mendix 8 Runtime API** link in our [Mendix Runtime API](/apidocs-mxsdk/apidocs/runtime-api-9/).
 
 Additionally, refer to the Mendix Studio Pro 9.02 Release notes for more Mendix Runtime API change details.
 

@@ -2,7 +2,7 @@
 title: "Grounding Your Large Language Model in Data – Mendix Cloud GenAI"
 url: /appstore/modules/genai/how-to/howto-groundllm/
 linktitle: "Grounding Your LLM in Data"
-weight: 40
+weight: 50
 description: "This document guides you on grounding your large language model in data within your Mendix application to enhance its functionality."
 ---
 

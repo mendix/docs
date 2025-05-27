@@ -45,15 +45,15 @@ When your application is running, you can click the location to open the [intera
 
 The public documentation is used in the service's [OpenAPI (Swagger) Documentation](/refguide/open-api/). You can use [GitHub-flavored markdown](/refguide/gfm-syntax/) for rich text.
 
+## OpenAPI Documentation
+
+In the **OpenAPI Documentation** pane, you can preview the API documentation for the published REST service. It displays the available operations and schemas that will become accessible when you run the app. This is similar to the [Swagger UI page](/refguide/view-menu/#api-documentation) that is available after publishing your app, except the preview is not interactive. 
+
 ### Export OpenAPI Documentation {#export-openapi-documentation}
 
 To save a service's [OpenAPI (Swagger) documentation](/refguide/open-api/) on your machine, right-click the service in the **App Explorer** and select **Export openapi.json** for the [OpenAPI 3.0 definition](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.1.md) of the REST service, or select **Export swagger.json** (or just click the **Export swagger.json** button, depending on your Studio Pro version) for the [OpenAPI 2.0 version](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/2.0.md). These are machine-readable files according to the OpenAPI Specification format. Most API tools support this format.
 
 When the app is running, these files are available under */rest-doc/{location}/openapi.json* and */rest-doc/{location}/swagger.json*, where *{location}* is the location of the REST service (for instance, *rest/myservice/v1*).
-
-{{% alert color="info" %}}
-Exporting OpenAPI documentation in version 3.0 of the specification was introduced in Studio Pro [10.1.0](/releasenotes/studio-pro/10.1/).
-{{% /alert %}}
 
 ## Security
 

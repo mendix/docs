@@ -12,6 +12,16 @@ These release notes cover changes to deployment to [Mendix on Azure](/developerp
 
 For information on the current status of Mendix deployment, see [Mendix Status](https://status.mendix.com/).
 
+### Release date: April 24, 2025
+
+* You can now update the **Additional Options** even after the clusters have been initialized.
+* We have enhanced our preflight check process to deliver a better user experience.
+* A back button has been added to the **Review and Initialize** screen, allowing users to return to the Provision screen.
+* A new dropdown filter has been introduced on the **Cluster Overview** page to filter clusters by status.
+* Users will now see a message indicating the deployment progress of provisioned resources within the cluster.
+* A Creator column has been added to the **Support Overview** page to display who created each support ticket.
+* We have resolved an issue by disabling the Zendesk ticket link for users who did not create the corresponding support ticket.
+
 ### Release date: March 20, 2025
 
 * We have introduced a Custom Tags option in the Initialization flow.

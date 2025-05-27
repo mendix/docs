@@ -11,17 +11,17 @@ description: "Native Template 14"
 
 ### Improvements
 
-- We upgraded our React Native version to 0.77.1. This update brings significant security and performance improvements.
+* We upgraded our React Native version to 0.77.1. This update brings significant security and performance improvements.
 
 #### Library Updates and Improvements
 
-- **@op-engineering/op-sqlite:** 9.2.7
-- **@react-native-picker/picker:** 2.11.0
-- **@react-native-community/cli:** 16.0.2
-- **@react-native-community/cli-platform-android:** 16.0.2
-- **@react-native-community/cli-platform-ios:** 16.0.2
-- **react-native-gesture-handler:** 2.23.1
-- **react-native-safe-area-context:** 5.2.0
-- **react-native-screens:** 4.6.0
-- **react-native-svg:** 15.11.1
-- **react-native-video:** 6.10.0
+* **@op-engineering/op-sqlite:** 9.2.7
+* **@react-native-picker/picker:** 2.11.0
+* **@react-native-community/cli:** 16.0.2
+* **@react-native-community/cli-platform-android:** 16.0.2
+* **@react-native-community/cli-platform-ios:** 16.0.2
+* **react-native-gesture-handler:** 2.23.1
+* **react-native-safe-area-context:** 5.2.0
+* **react-native-screens:** 4.6.0
+* **react-native-svg:** 15.11.1
+* **react-native-video:** 6.10.0

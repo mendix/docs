@@ -142,4 +142,4 @@ To license a Mendix app on Linux or another Unix-like operating system, follow t
 3. Request a license key from Mendix Support.
 4. Activate your license on the server, using the m2ee command `activate_license`.
 
-For more instructions on how to do this, see [Unix-Like Deployment](/developerportal/deploy/unix-like/).
+For more instructions on how to do this, see [Linux Deployment](/developerportal/deploy/linux/).

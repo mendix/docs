@@ -117,4 +117,3 @@ spec:
 * Deploying a new version of the app will cause downtime if there are changes in the domain model, or the Mendix version.
 * If an app is based on Mendix 9.12 or a later version, a Rolling update can run scheduled events on any replica. During an update, scheduled events might use a newer or older version of their associated microflows, which will be random. If there are major changes in a scheduled event microflow, consider temporarily disabling scheduled events during an update.
 * To ensure that scheduled events [are correctly synchronized at startup](/releasenotes/studio-pro/10.20/#improvements), it is recommended to use Mendix 10.20 or later.
-

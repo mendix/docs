@@ -27,7 +27,7 @@ The rows in the table are CDs. The type of the two rows is *CD* and this is the 
 ## Types of Entities {#entity-types}
 
 {{% alert color="info" %}}
-View entities were introduced in [Studio Pro 10.19](/releasenotes/studio-pro/10.19/) as a beta feature. 
+View entities is currently in beta. 
 {{% /alert %}}
 
 The entity type defines how the data is handled and there are four types:
@@ -142,9 +142,7 @@ Data grids do not directly display this date.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-In Mendix 10.20 and above, the 'changedDate' attribute is updated when the changed object is committed.
-
-In Mendix 10.19.x and below, the 'changedDate' attribute is updated whenever a value is set for a member (attribute or association).
+The 'changedDate' attribute is updated when the changed object is committed.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
@@ -178,9 +176,7 @@ Data grids do not directly display the associated System.User entity or its spec
 {{% /alert %}}
 
 {{% alert color="info" %}}
-In Mendix 10.20 and above, the 'changedBy' property is updated when a changed object is committed.
-
-In Mendix 10.19.x and below, the 'changedBy' property is updated whenever a value is set for a member (attribute or association).
+The 'changedBy' property is updated when a changed object is committed.
 {{% /alert %}}
 
 ### Access Rules Section {#access-rules}

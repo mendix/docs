@@ -102,7 +102,7 @@ The API does not generate unique UUIDs for the resources. You must generate your
 
 The following sections of this document contain sample usage scenarios for the API.
 
-### Using the API to Update the Cluster and Namespace
+### Using the API to Update the Cluster and Namespace {#update-cluster}
 
 The following steps will create a cluster, register and install a namespace, add or update a cluster member, and enable development mode for the namespace.
 
@@ -123,6 +123,21 @@ The following steps will create a cluster, register and install a namespace, add
 
 {{% alert color="info" %}}
 If required, the invitation for the cluster/namespace member can be auto-accepted by setting `autoAcceptInvite` to true in the update cluster/namespace API request.
+{{% /alert %}}
+
+### Using the API to Assign a Custom Role to the Namespace Member {#assign-custom-role}
+
+Perform the following steps to create a cluster, register and install a namespace, add a custom role in the Cluster Overview page in the portal, and assign the role to the namespace member:
+
+1. Set up your authentication PAT.
+2. Prepare the manifest for both your new cluster and namespace.
+3. Configure the namespace by following steps 8-11 of [Using the API to Update the Cluster and Namespace](#update-cluster).
+4. Create a custom role in the Cluster Overview page in the portal. This role must be created only on the Portal side.
+5. Make a POST `/clusters/{namespaceId}` API call to assign the role that you created in step 4 to the namespace member.
+    You can obtain the manifest for this update request through GET `/clusters/{namespaceId}`. When updating the namespace, only the role needs to be specified for the namespace member, as the fine-grained permissions are already included in the role created in step 4.
+
+{{% alert color="info" %}}
+If required, the invitation for the cluster or namespace member can be auto-accepted by setting `autoAcceptInvite` to true in the update cluster or namespace API request.
 {{% /alert %}}
 
 ### Using the API to Restart an App {#restart}

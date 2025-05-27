@@ -16,6 +16,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2025
 
+### April 17, 2025
+
+#### Improvements
+
+* We have added new environment variables which allow you to control the buffer size and buffer memory for the Fluentbit agent for Splunk and New Relic.
+
 ### February 27, 2025
 
 #### Improvements

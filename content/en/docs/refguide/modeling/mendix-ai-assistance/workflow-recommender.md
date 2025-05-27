@@ -8,10 +8,6 @@ description: "Describes Workflow Recommender in Mendix Studio Pro."
 ## Introduction 
 
 {{% alert color="info" %}}
-Workflow Recommender is available in Studio Pro 10.12 and above.
-{{% /alert %}}
-
-{{% alert color="info" %}}
 Workflow Recommender works both online and offline. No internet connection or signing-in is required.
 {{% /alert %}}
 

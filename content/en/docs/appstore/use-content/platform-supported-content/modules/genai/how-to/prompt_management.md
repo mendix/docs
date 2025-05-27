@@ -50,7 +50,7 @@ Prompt Management is a capability of the ConversationalUI module. It enables use
 
 3. If you have not started from a GenAI Starter App, you also need to add a navigation item that calls the `NAV_ConfigurationOverview_Open` microflow of the **MxGenAIConnector**. For more details, see [Configuration](/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/#configuration).
 
-You can now run the app, login as administrator, and verify that you can navigate to the **Prompt_Overview** and **MxCloud Configuration** pages. If you already have a key for a **Text Generation** resource, you can import at this stage. For more details, see [Mendix Cloud GenAI](/appstore/modules/genai/mx-cloud-genai/Navigate-MxGenAI/).
+You can now run the app, login as administrator, and verify that you can navigate to the **Prompt_Overview** and **MxGenAIConnector's Configuration** pages. If you already have a key for a **Text Generation** resource, you can import at this stage. For more details, see [Mendix Cloud GenAI](/appstore/modules/genai/mx-cloud-genai/Navigate-MxGenAI/).
 
 ## Create Your First Prompt {#create-prompt}
 
@@ -74,7 +74,7 @@ You can now create your first prompt in the user interface. The final prompt wil
 5. You are now navigated to the prompt's details page, where you can perform prompt engineering at runtime. In the [User Prompt](/appstore/modules/genai/prompt-engineering/#user-prompt) field, enter the following prompt:
 `Generate a short product description for a chair`. The **User Prompt** typically represents what the end user would write, although it can be prefilled by our own instructions.
 
-6. Click **Run** in the top-right corner to view the model's response. However, since no model has been selected yet, you will be prompted to choose one before running the test. If no models are available to select, you first need to configure one (for MxCloud, you need to import a key on the configuration page you added in the previous section). You can later change the selected model by clicking the **Configuration** ({{% icon name="cog" %}}) icon located to the left of the **Run** button.
+6. Click **Run** in the top-right corner to view the model's response. However, since no model has been selected yet, you will be prompted to choose one before running the test. If no models are available to select, you first need to configure one (for the Mendix Cloud GenAI, you need to import a key on the configuration page you added in the previous section). You can later change the selected model by clicking the **Configuration** ({{% icon name="cog" %}}) icon located to the left of the **Run** button.
 
 7. In the **Output card**, you can observe the response from the model. This is already sufficient for the first try. Click **Save As** button in the **Prompt card** to save this version of the prompt. For the title, use `Simple product description prompt` and save it. The prompt cannot be edited anymore.
 

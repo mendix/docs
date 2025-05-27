@@ -241,6 +241,7 @@ components:
       required:
         - name
         - fullyQualifiedName
+        - links
       properties:
         name:
           type: string
@@ -274,6 +275,14 @@ components:
         returnType:
           allOf:
             - $ref: "#/components/schemas/ReturnType"
+        links:
+          type: array
+          description: Deeplink to the detail page of the action in the Catalog.
+          items:
+            $ref: "#/components/schemas/Link"
+          example:
+            - rel: "Catalog"
+              href: https://catalog.mendix.com/link/action?EndpointUUID=9e26c386-9316-4a33-9963-8fe9f69a5117&ActionUUID=39a261cc-bb79-435e-8194-1cfe9b1cd693'
     Application_Base:
       required:
         - name

@@ -8,74 +8,74 @@ description: "Options for configuring scheduled events"
 
 ## Introduction
 
-With scheduled events you can make the runtime execute a microflow repeatedly at specific intervals. The microflow is run using the [task queue](/refguide/task-queue/) mechanism.
+Sometimes you will want to regularly run a microflow which does not require end-user interaction. You can do this using scheduled events. Scheduled events are managed using the [task queue](/refguide/task-queue/) mechanism.
 
 A scheduled event is added to your module as a document (right-click your module and you will find it listed under *Add other*).
 
 {{% alert color="warning" %}}
-Scheduled events can be tested locally, but they will not be run if your app is deployed as a Free App. See the Free App section of [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/#free-app) for more information on Free App limitations.
+Scheduled events can be tested locally, but they will not be run if your app is deployed as a Free App. For more information on Free App limitations, see the [Free App](/developerportal/deploy/mendix-cloud-deploy/#free-app) section of *Mendix Cloud*.
 {{% /alert %}}
 
 ## Common Properties
 
 | Property | Description |
 | --- | --- |
-| Name | The name of the scheduled event. This name is recorded in the `System.ProcessedQueueTask` objects at runtime, so that you can identify when this scheduled event has been processed. See [Task Queues](/refguide/task-queue/) for additional information about this object. ⚠ For compatibility with legacy scheduled events, it is also stored in the `ScheduledEventInformation` objects but this is deprecated and will be removed in Mendix 11. |
-| Documentation | This field is for documentation purposes in the app model only. Its value is not visible to end-users and doesn't influence the behavior of your application. |
+| Name | The name of the scheduled event. This name is recorded in the `System.ProcessedQueueTask` objects at runtime so you can identify when this scheduled event has been processed. See [Task Queues](/refguide/task-queue/) for additional information about this object.<br/>⚠ For compatibility with legacy scheduled events, it is also stored in the `ScheduledEventInformation` objects but this is deprecated and will be removed in Mendix 11. |
+| Documentation | This field is for documentation purposes in the app model only. Its value is not visible to end-users and does not influence the behavior of your application. |
 
 ## Execution Properties
 
 | Property | Description |
 | --- | --- |
-| Microflow | The microflow that is executed when the scheduled event is executed. It should have no parameters and is run with all rights (see [Microflow](/refguide/microflow/)). |
-| Enabled | The microflow is only executed if the scheduled event is enabled. This setting only applies when running from Studio Pro or from Eclipse. On production environments, scheduled events are enabled/disabled via the platform tools (for example the Mendix Portal or Windows Service Console). |
+| Microflow | The microflow that is initiated when the scheduled event is run. It should have no parameters and is run with all rights (see [Microflow](/refguide/microflow/)). |
+| Enabled | The microflow is only initiated if the scheduled event is enabled. This setting only applies when running from Studio Pro or from Eclipse. On production environments, scheduled events are enabled/disabled via the platform tools (for example, the Mendix Portal or Windows Service Console). |
 
 ## Timing Properties
 
 | Property | Description |
 | --- | --- |
-| Interval type | The type of scheduled that should be executed. Valid values are [Yearly](#yearly), [Monthly](#monthly), [Weekly](#weekly), [Daily](#daily), [Hourly](#hourly) or [Minutes](#minutes). |
+| Interval type | The type of schedule that should be implemented. Valid values are [Yearly](#yearly), [Monthly](#monthly), [Weekly](#weekly), [Daily](#daily), [Hourly](#hourly), or [Minutes](#minutes). |
 
 ### Yearly Properties {#yearly}
 
-Yearly events come in 2 flavors:
+You can specify how a yearly scheduled event is run in two different ways by specifying the **Input type**:
 
-* Execute on a specific date
-* Execute on a specific weekday
+* **Date** – run it on a specific date
+* **Month and weekday** – run it on a specific weekday
 
-#### Specific Date
+#### Date
 
 This allows you to run the event on the same date every year (for example, April 5th).
 
 | Property | Description |
 | --- | --- |
-| Date | The month and day on which to execute the event. |
-| Time | The time at which to execute the event. |
-| UTC/Server | Whether to use UTC or a local time set on the server. See [Server Time](#server-time), below, for more information. |
+| Date | The month and day on which to run the event. |
+| Time | The time at which to run the event. |
+| UTC/Server | Whether to use UTC or a local time set on the server. See [Server Time](#server-time) below for more information. |
 | On overlap | See explanation of options in [Long-Running Events](#long-events). |
 
 {{% alert color="warning" %}}
-It is possible to select the leap day (February 29). In non-leap years the event will then be executed on February 28th.
+It is possible to select the leap day (February 29). In non-leap years, the event will be run on February 28th.
 {{% /alert %}}
 
-#### Specific Month and Weekday
+#### Month and Weekday
 
 This allows you to run the event on a certain day of the week every year. For example, the first Monday in April.
 
 | Property | Description |
 | --- | --- |
-| Month | The month in which to execute the event. |
-| Day | The day on which to execute the event. |
-| Time | The time at which to execute the event. |
-| UTC/Server | Whether to use UTC or a local time set on the server. See [Server Time](#server-time), below, for more information. |
+| Month | The month in which to run the event. |
+| Day | The day on which to run the event. |
+| Time | The time at which to run the event. |
+| UTC/Server | Whether to use UTC or a local time set on the server. See [Server Time](#server-time) below for more information. |
 | On overlap | See explanation of options in [Long-Running Events](#long-events). |
 
 ### Monthly Properties {#monthly}
 
-Monthly events also come in 2 flavors:
+You can also specify how a monthly scheduled event is run in two different ways by specifying the **Input type**:
 
-* Execute on a specific day of the month
-* Execute on a specific weekday
+* **Particular day** – run it on a specific day of the month
+* **Weekday** – run it on a specific weekday
 
 #### Particular Day
 
@@ -83,15 +83,15 @@ This allows you to run the event on the same date every month, or number of mont
 
 | Property | Description |
 | --- | --- |
-| Interval | The number of months in between executions of the event. This must be a divisor of 12. |
-| Months | The months in which the event will be executed; not visible when executing every month. |
-| Day | The day of the month on which to execute the event. |
-| Time | The time at which to execute the event. |
-| UTC/Server | Whether to use UTC or a local time set on the server. See [Server Time](#server-time), below, for more information. |
+| Interval | The number of months between each running of the event. This must be a divisor of 12. |
+| Months | The months in which the event will be run; not visible when running every month. |
+| Day | The day of the month on which to run the event. |
+| Time | The time at which to run the event. |
+| UTC/Server | Whether to use UTC or a local time set on the server. See [Server Time](#server-time) below for more information. |
 | On overlap | See explanation of options in [Long-Running Events](#long-events). |
 
 {{% alert color="warning" %}}
-The selected day might not exist in all selected months. In those months the event will be executed on the last day of the month.
+The selected day might not exist in all selected months. In those months, the event will be run on the last day of the month.
 {{% /alert %}}
 
 #### Weekday
@@ -100,21 +100,21 @@ This allows you to run the event on a certain day of the week every month, or nu
 
 | Property | Description |
 | --- | --- |
-| Month | The month in which to execute the event. |
-| Day | The day on which to execute the event. |
-| Time | The time at which to execute the event. |
-| UTC/Server | Whether to use UTC or a local time set on the server. See [Server Time](#server-time), below, for more information. |
+| Month | The month in which to run the event. |
+| Day | The day on which to run the event. |
+| Time | The time at which to run the event. |
+| UTC/Server | Whether to use UTC or a local time set on the server. See [Server Time](#server-time) below for more information. |
 | On overlap | See explanation of options in [Long-Running Events](#long-events). |
 
-#### Weekly Properties {#weekly}
+### Weekly Properties {#weekly}
 
 This allows you to run the event on certain days every week. For example every Monday, Wednesday, and Friday.
 
 | Property | Description |
 | --- | --- |
-| Days | The days of the week on which to execute the event. |
-| Time | The time at which to execute the event. |
-| UTC/Server | Whether to use UTC or a local time set on the server. See [Server Time](#server-time), below, for more information. |
+| Days | The days of the week on which to run the event. |
+| Time | The time at which to run the event. |
+| UTC/Server | Whether to use UTC or a local time set on the server. See [Server Time](#server-time) below for more information. |
 | On overlap | See explanation of options in [Long-Running Events](#long-events). |
 
 ### Daily Properties {#daily}
@@ -123,8 +123,8 @@ This allows you to run the event every day.
 
 | Property | Description |
 | --- | --- |
-| Time | The time at which to execute the event. |
-| UTC/Server | Whether to use UTC or a local time set on the server. See [Server Time](#server-time), below, for more information. |
+| Time | The time at which to run the event. |
+| UTC/Server | Whether to use UTC or a local time set on the server. See [Server Time](#server-time) below for more information. |
 | On overlap | See explanation of options in [Long-Running Events](#long-events). |
 
 ### Hourly Properties {#hourly}
@@ -133,9 +133,9 @@ This allows you to run the event every hour, or number of hours. It also allows 
 
 | Property | Description |
 | --- | --- |
-| Interval | The number of hours in between executions of the event. This must be a divisor of 24. |
-| Offset (minutes) | The offset in minutes from the start time of an event period. For instance, set to 90 in order to execute halfway during a 3 hour interval. The offset must be shorter than the specified interval. |
-| UTC/Server | Whether to use UTC or a local time set on the server. See [Server Time](#server-time), below, for more information. |
+| Interval | The number of hours between each running of the event. This must be a divisor of 24. |
+| Offset (minutes) | The offset in minutes from the start time of an event period. For instance, set to 90 in order to run halfway during a 3 hour interval. The offset must be shorter than the specified interval. |
+| UTC/Server | Whether to use UTC or a local time set on the server. See [Server Time](#server-time) below for more information. |
 | On overlap | See explanation of options in [Long-Running Events](#long-events). |
 
 Example times will be shown in the dialog to illustrate the effects of the offset.
@@ -148,28 +148,28 @@ This allows you to run the event every minute, or number of minutes.
 
 | Property | Description |
 | --- | --- |
-| Interval | The number of minutes in between executions of the event. This must be a divisor of 60. |
+| Interval | The number of minutes between each running of the event. This must be a divisor of 60. |
 | On overlap | See explanation of options in [Long-Running Events](#long-events). |
 
 ### Long-Running Events {#long-events}
 
-If a repeated scheduled event takes longer than the interval, an overlap would occur. To prevent this a choice must be made on how to handle this. This is set in the **On overlap** property of the scheduled event.
+If a repeated scheduled event takes longer than the interval, an overlap would occur. To prevent this, choose one of the following options in the **On overlap** property of the scheduled event:
 
 * **Skip next** – If an event takes longer than its interval, subsequent events are skipped until it has completed. The next event will start at the next available scheduled time.
 
-    This is the default and will ensure that events are always executed at a scheduled time, subject to queue resources being available (see [Running Concurrently](#concurrently), below).
+    This is the default and will ensure that events are always run at a scheduled time, subject to queue resources being available (see [Running Concurrently](#concurrently), below).
 
-* **Delay next** – If an event takes longer than its interval, the next event is delayed until it has completed. The next event will start immediately after the previous one has completed and will likely not be executed at a scheduled time.
+* **Delay next** – If an event takes longer than its interval, the next event is delayed until it has completed. The next event will start immediately after the previous one has completed and will likely not be run at a scheduled time.
 
-    If multiple successive events are longer than their interval, the intended scheduled time will be further and further away from the actual start time. This situation should be avoided by choosing an interval that is generally sufficient to execute the event.
+    If multiple successive events are longer than their interval, the intended scheduled time will be further and further away from the actual start time. This situation should be avoided by choosing an interval that is generally sufficient to run the event.
 
-    Should an event have drifted a long way from its intended schedule over time, the best way to remedy this is to delete the event and create a new one (with a longer interval).
+    If an event has drifted a long way from its intended schedule over time, the best way to remedy this is to delete the event and create a new one (with a longer interval).
 
-## Additional information
+## Additional Information
 
 ### Server Time{#server-time}
 
-Although you can choose **Server** time rather than **UTC** time, please make sure that your server time is set as you expect. Many servers are set to run on UTC to avoid issues when working across timezones.
+You can choose **Server** time rather than **UTC** time, but make sure that your server time is set as you expect. Many servers are set to run on UTC to avoid issues when working across time zones.
 
 {{% alert color="warning" %}}
 All Mendix Cloud servers are set to UTC.
@@ -177,22 +177,19 @@ All Mendix Cloud servers are set to UTC.
 
 ### Daylight Saving
 
-If the chosen time zone is UTC, then an event will always execute at the specified time.
-However, if server time is chosen there may be daylight saving for the configured time zone (in the app's runtime settings).
-If a time is chosen which is in the daylight saving time window (the time at which the clocks change, for example between 01:00 and 03:00 in Europe), then that time will not occur on one day of the year and occur
-twice on another day of the year. The scheduled event will not be affected by this and will execute exactly once on those days.
+If the chosen time zone is UTC, then an event will always be run at the specified time. However, if server time is chosen there may be daylight saving for the configured time zone (in the app's runtime settings). If a time is chosen which is in the daylight saving time window (the time at which the clocks change, for example between 01:00 and 03:00 in Europe), then that time will not occur on one day of the year and occur twice on another day of the year. The scheduled event will not be affected by this and will run exactly once on those days.
 
 ### Running Concurrently{#concurrently}
 
-No more than ten scheduled events can run in parallel per cluster node. Additional scheduled events will be queued and run in "first in, first out" order as currently running events finish.
+No more than ten scheduled events can be run in parallel for each cluster node. Additional scheduled events will be queued and run in "first in, first out" order as currently running events finish.
 
 This limit cannot be overridden.
 
 ### Unsupported Intervals
 
-Hour- and minute-based intervals can only be integer divisors of 24 or 60, respectively. For example you cannot schedule an event to run every seven minutes as this does not divide precisely into sixty minutes. If it is absolutely critical that an unsupported interval is used, you should schedule the event with interval value of one (every hour or every minute) and decide within the microflow whether it should continue executing at that particular time.
+Hour- and minute-based intervals can only be integer divisors of 24 or 60, respectively. For example you cannot schedule an event to be run every seven minutes as this does not divide precisely into 60 minutes. If it is absolutely critical that an unsupported interval is used, you should schedule the event with interval value of one (every hour or every minute) and decide within the microflow whether it should continue at that particular time.
 
-### Cleaning Up Completed Runs of Scheduled Events
+### Cleaning Up Completed Scheduled Events
 
 Every time a scheduled event is run it produces an entry in the `System.ProcessedQueueTask` table in the database. Over time these accumulate and the table can grow large. Refer to the documentation on [Cleaning Up Old Processed Tasks](/refguide/task-queue/#cleanup) in *Task Queue* to learn how to remove processed entries.
 

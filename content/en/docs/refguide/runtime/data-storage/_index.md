@@ -76,10 +76,6 @@ A Foreign Key Constraint (FKC) is a database-level concept. An FKC enforces cons
 
 ### Foreign Key Constraints in Mendix
 
-{{% alert color="info" %}}
-Foreign Key Constraints are applied to new apps created in Mendix version 10.6.0 and above.
-{{% /alert %}}
-
 When it comes to the Mendix data model, having a FKC means that all associations and System members such as `owner` and `changedBy` are guaranteed to be consistent; if there is an association, then the associated object exists as well.
 
 From the user perspective, that is already the case. In a Mendix app, is impossible to encounter a reference that does not refer to an object.
@@ -90,20 +86,9 @@ The FKC feature is designed to safeguard against scenarios that would lead to da
 
 With this feature, if the app is going to create a dangling reference, a runtime exception is thrown. This allows the developer to identify and investigate the root cause of the dangling reference. Without that feature, the erroneous scenario would go unnoticed.
 
-### Adding Foreign Key Constraints to New Projects
+### Setting Foreign Key Constraints On and Off 
 
-Foreign Key Constraints are enabled for new projects in version 10.6.0 and above. This applies to:
-
-* Projects created from scratch using a starter app
-* Projects created using [Import app package](/refguide/import-app-package-dialog/)
-
-Apps created before 10.6 are not affected. This means that if your app is created in a version of Studio Pro below 10.6.0 and then upgraded to version 10.6.0 or above, FKCs do not get enabled for it.
-
-When a new app is created from a Starter App or an app package, it may already contain a data snapshot. Before FKC is enabled during synchronization, any dangling references are deleted from the database. This cleanup is performed only once and is not repeated on consequent runs for the same database.
-
-### Setting Foreign Key Constraints On and Off
-
-In Mendix version 10.10.0 and above, it is possible to set Foreign Key Constraints for existing projects on or off regardless of which version the project was originally created in by toggling the option in the app's [runtime settings](/refguide/app-settings/#database-fkc).
+It is possible to set Foreign Key Constraints for existing projects on or off regardless of which version the project was originally created in by toggling the option in the app's [runtime settings](/refguide/app-settings/#database-fkc).
 
 {{% alert color="info" %}}
 Deploying an existing application after enabling or disabling FKC will cause a synchronization step to be executed.

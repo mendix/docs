@@ -8,12 +8,12 @@ cascade:
 ---
 
 {{% alert color="info" %}}
-This feature was introduced in Studio Pro 10.19 and is currently in beta. For more information, see [Beta and Experimental Releases](/releasenotes/beta-features/).
+This feature is currently in beta. For more information, see [Beta and Experimental Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 ## Introduction
 
-A view entity represents the result set of a stored [OQL query](/refguide/oql/) and can be used similarly to a [persistable entity](/refguide/persistability/#persistable). This concept is similar to the function of views in general database technology. Whenever a view entity is retrieved via a page or a microflow, the corresponding OQL query runs and fetches the relevant data. Consequently, the result set of a view entity is not stored as a separate table in the database (like a materialized view). Instead, the query runs each time the view entity is accessed, dynamically retrieving the data.
+A view entity represents a dynamic set of data retrieved using a stored [OQL query](/refguide/oql/) and can be used similarly to a [persistable entity](/refguide/persistability/#persistable). This concept is analogous to views commonly found in relational database systems. Whenever a view entity is accessed through a page or microflow, the associated OQL query executes to retrieve the relevant data dynamically. Unlike materialized views, the results of a view entity are not stored as a separate table in the database. Instead, the query is executed each time the view entity is accessed, ensuring the data retrieved is always up-to-date.
 
 During modeling, changes to the underlying entities used in the OQL query affect the options available within the query. At runtime, any changes to the data in the underlying entities immediately impact the data available through the view entity.
 
@@ -31,38 +31,38 @@ Your app must use OQL version 2 to use view entities. You can change this settin
 
 Double-click a view entity to open its Properties dialog box. An example of a view entity's properties dialog box is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/use-view-entities/customer-with-address.png" width="500" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/use-view-entities/view-entity.png" width="200" >}}
+
+An example of a view entity's properties dialog is represented in the image below:
+
+{{< figure src="/attachments/refguide/modeling/domain-model/use-view-entities/view-entity-dialog.png" width="500" >}}
+
+To open the OQL query, click the **Show** button in the view entity dialog:
+
+{{< figure src="/attachments/refguide/modeling/domain-model/use-view-entities/view-entity-document.png" width="500" >}}
+
+Alternatively, you can right-click the entity and click **Go to OQL query** from the context menu:
+
+{{< figure src="/attachments/refguide/modeling/domain-model/use-view-entities/view-entity-contextual-menu.png" width="300" >}}
 
 View entity properties consist of the following sections:
 
 * [General](#general)
-* [OQL editor](#oql-editor)
 * [Access rules](#access-rules)
 * [Documentation](#documentation)
+* [OQL Query Tab Editor](#view-entity-doc-tab-editor)
 
 ### General Section {#general}
 
 #### Name {#name}
 
-The name property defines the name of the view entity. This name is used to refer to the view entity in forms, microflows, queries, constraints, etc.
+The name property defines the name of the view entity and OQL query document. This name is used to refer to the view entity in forms, microflows, queries, constraints, etc.
 
 The name has to be unique only within the domain model of a module. You can have two view entities with the same name, provided they are in the domain models of different modules.
 
 #### Image {#image}
 
 The image property can be used to associate an image with a view entity. In the domain model, this image is shown in the top-left corner of the view entity. The image is also shown in other places where view entities are mentioned, such as the entity selection pop-up window when selecting an entity for a data view.
-
-### OQL Editor Section {#oql-editor}
-
-This section contains the **OQL editor** and the **Preview data** table.
-
-The **OQL editor** allows you to write the query that defines this view entity. While writing this query, the editor suggests names of the entities and attributes in your domain model, as well as allowed clauses, operators, and functions. If the query is not valid, a list of validation errors will be displayed underneath the editor with the line and column number of the place where the error was found.
-
-The resulting names and types of the attributes will be displayed as column headers in the **Preview data** table. You can view the resulting data set of your OQL query by clicking **Run Query**, which enables Studio Pro to retrieve the data from the database that is configured in your app settings. The database type of the active configuration is also listed in the header of the section. To use this functionality, your app must be running.
-
-{{% alert color="warning" %}}
-The **Preview data** table tries to retrieve the data using your OQL query from the running app. This means if you have changed your domain model since you last started the app, you can run into errors when the OQL query uses attributes or entities that do not yet exist in the version of the app that is running.
-{{% /alert %}}
 
 ### Access Rules {#access-rules}
 
@@ -75,6 +75,21 @@ Direct writing from the view entity to its source entities is not supported, but
 ### Documentation {#documentation}
 
 You can add any local information about the view entity in this tab. This is also available to other users working on the app.
+
+### OQL Query Tab Editor {#view-entity-doc-tab-editor}
+
+This section contains the **OQL editor** and the **Preview data** table.
+
+The **OQL editor** runs in the OQL query tab, where you can interact with various UI components in Studio Pro, such as the Properties pane and a real-time view to preview your data.
+
+The **OQL editor** allows you to write the query that defines this view entity. While writing the query, the editor suggests names of the entities and attributes in your domain model, as well as allowed clauses, operators, and functions. If the query is not valid, a list of validation errors are displayed underneath the editor with the line and column number of the place where the error was found.
+
+The resulting names and types of the attributes are displayed as column headers in the **Preview data** table. You can view the resulting data set of your OQL query by clicking **Run Query**, which enables Studio Pro to retrieve the data from the database that is configured in your app settings. The database type of the active configuration is also listed in the header of the section. To use this functionality, your app must be running.
+
+{{% alert color="warning" %}}
+The **Preview data** table tries to retrieve the data using your OQL query from the running app. This means if you have changed your domain model since you last started the app, you can run into errors when the OQL query uses attributes or entities that do not yet exist in the version of the app that is running.
+{{% /alert %}}
+
 
 ## Using a View Entity 
 

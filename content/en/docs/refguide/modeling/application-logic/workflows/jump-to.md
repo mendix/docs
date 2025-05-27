@@ -44,7 +44,7 @@ After setting the objects, changes can be applied by calling a microflow contain
 
 Jumping to other activities has a limitation in parallel splits and in non-interrupting boundary event paths: it is not possible to jump into or out of a current parallel split or a non-interrupting boundary event path. However, it is possible to jump to other activities within a current parallel split or a non-interrupting boundary event path, including the end of the path. Activities in other parallel split or boundary event paths, as well as activities outside of the current path, are not available in the **System.WorkflowCurrentActivity_ApplicableTargets** association.
 
-For interrupting boundary event paths, in Studio Pro 10.21.0 and above, it is possible to jump within or out of an interrupting boundary event path (to any activity in the parent path). If the interrupting boundary event is in a parallel split path, the boundary path must end with a **Jump** activity and then can jump back to the parent path (which is the parallel split path).
+For interrupting boundary event paths, it is possible to jump within or out of an interrupting boundary event path (to any activity in the parent path). If the interrupting boundary event is in a parallel split path, the boundary path must end with a **Jump** activity and then can jump back to the parent path (which is the parallel split path).
 
 ## Read More
 

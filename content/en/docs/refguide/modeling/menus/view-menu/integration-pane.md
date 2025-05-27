@@ -15,10 +15,6 @@ Use the Integration pane in Studio Pro to use available assets from the differen
 You can search in the Catalog through the Integration pane to discover assets that you can use in your app. You can connect to services in your landscape by dragging elements from this pane into your app. For example, you can add the entities that are published in the registered OData services to your app's domain model. These entities are called [external entities](/refguide/external-entities/) and are different because they enable the connection to the data associated with the entities in the originating app. Besides external entities, OData services can expose actions that can be called from within microflows, and can define non-persistable entities that can be used as parameters or return types of these actions. You can also connect with [business event services](/refguide/business-event-services/) by dragging an event unto your app's domain model. 
 To display the Integration pane, click **View** > **Integration**.
 
-{{% alert color="info" %}}
-The ability to search for Business Event services in the Catalog was added in Studio Pro 10.21. In earlier versions you can only find these in the **Used in this app** section, when they had been manually imported before.
-{{% /alert %}}
-
 ## Integration Pane Overview
 
 The following functionality is available in the pane:
@@ -139,7 +135,7 @@ By clicking the expand button next to the action, the parameters and return type
 
 ### Business Events {#business-events}
 
-Business event services have a single folder, named **Events**, which contains the business events available in the service. These events can be consumed by dragging one into your domain model and choosing whether you want to __Publish events__ and / or __Subscribe to events__. Clicking OK will create entities that represent the payload of the event you want to publish or subscribe to. In case of subscribing to an event, it will also create a microflow in which you can model how to handle this event.
+Business event services have a single folder, named **Events**, which contains the business events available in the service. These events can be consumed by dragging one into your domain model and choosing whether you want to **Publish events** and / or **Subscribe to events**. Clicking OK will create entities that represent the payload of the event you want to publish or subscribe to. In case of subscribing to an event, it will also create a microflow in which you can model how to handle this event.
 
 Note that in the case of both publishing and subscribing to business events, there will be two different entities in your domain model. If your app does any operation on that event, it will show he green checkmark in the integration pane. As long as the event is not yet published or subscribed to by your app, but it is a [capability](#capabilities) the business event offers, you can drag it to your domain model.
 

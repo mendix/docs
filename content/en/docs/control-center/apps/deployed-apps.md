@@ -19,9 +19,7 @@ If you click the **...** icon in the upper-right corner, you can access the foll
 
 The **Mendix Cloud** tab gives you an overview of all the apps that are deployed on Mendix Cloud and allows you to manage your cloud resources using the self-service tool.
 
-{{% alert color="info" %}}
-This feature is in beta. To see if this capability can be activated for your company, contact your Customer Success Manager.
-{{% /alert %}}
+To activate this capability for your company, contact your Customer Success Manager.
 
 The list on this tab shows the following information:
 

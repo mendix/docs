@@ -47,6 +47,10 @@ After setting up all the prerequisites, you can start writing a first script tha
 
 Don't forget to [set up your personal access token](/apidocs-mxsdk/mxsdk/set-up-your-pat/) before executing the script.
 
+{{% alert color="warning" %}}
+Working copy creation is a resource-intensive process. Consider reusing previously-created ones by invoking `app.getOnlineWorkingCopy(workingCopyId)`. All working copies are automatically deleted after 24 hours.
+{{% /alert %}}
+
 ### Code Explanation
 
 Here are some explanations about the script:

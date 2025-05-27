@@ -221,10 +221,6 @@ Example 2
 
 #### OpenTelemetry{#opentelemetry}
 
-{{% alert color="info" %}}
-This feature was introduced in Mendix version 10.17.0.
-{{% /alert %}}
-
 * `url` – the OpenTelemetry metrics endpoint url to which data is reported.
 * `aggregationTemporality` – determines how the additive quantities are expressed, in relation to time. The supported values are `cumulative` or `delta`. Defaults to `cumulative`.
 * `headers` – additional headers to send with exported metrics, this can be used for authorization headers.
@@ -376,7 +372,7 @@ You can use activities to provide custom metrics from your app. See [Metrics Act
 
 ## Java API {#java-api}
 
-Micrometer metrics can be accessed through [Mendix Runtime Java APIs](/apidocs-mxsdk/apidocs/runtime-api/) as well inside Mendix. This can be achieved by using the custom runtime setting `com.mendix.metrics.Type`. This setting defaults to `micrometer`.
+Micrometer metrics can be accessed through [Mendix Runtime Java APIs](/apidocs-mxsdk/apidocs/runtime-api-11/) as well inside Mendix. This can be achieved by using the custom runtime setting `com.mendix.metrics.Type`. This setting defaults to `micrometer`.
 
 * Custom Runtime Setting – **Name**: `com.mendix.metrics.Type`
 * **Value**: `micrometer`

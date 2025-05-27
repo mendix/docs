@@ -85,6 +85,21 @@ Once the Mendix Data Loader is deployed, follow these steps to configure and use
 
 The ingested data is stored in the target schema of the specified target database, created by the Mendix Data Loader application. This target schema serves as a staging area. After each ingestion, copy the tables from the target schema to the desired database and schema that you want to use to store the ingested data.
 
+## Exposing Associations in OData
+
+Depending on how you expose the associations in your published OData, you can expect slightly different structure of the ingested data in your staging area in Snowflake. Navigate to your OData resource in Studio Pro and select one of the following options:
+
+* **As a Link**
+* **As an Associated Object ID**
+
+### As a Link
+
+When exposing associations as a link, we recommend that you expose the associations on the owners side of the association. This prevents the creation of duplicate junction tables when ingesting the data. When choosing this option, all associations are ingested into junction tables where the name of the table has the format *MX_OwnerObjectName_TargetObjectName_ExposedAssociationName*. The column names are the names of the attributes that are exposed in the OData as the object key. Make sure that the attribute you choose as object key has unique values for all the different objects.
+
+### As an Associated Object ID
+
+When exposing associations as an object ID, no junction tables are created on ingestion. Instead, a column is added on the target table with the ID of the associated object. This setting does not support many-to-many associations. 
+
 ## Using Delta Ingestion Setting
 
 If you do not want to ingest all exposed data from the published OData of your Mendix application, you can enable the **Use Delta Ingestion** setting on your data source when creating or editing the data source in the Mendix Data Loader.
@@ -278,7 +293,6 @@ To implement the connection between Mendix Data Loader and your app, perform the
 
 ## Current Limitations
 
-* Exposing an association in an OData service as a link is not supported yet by the Mendix Data Loader. Instead, choose the **As an associated object id** option in your OData settings. This option stores the associated object ID in the table, but not explicitly as foreign key.
 * The Mendix Data Loader does not support custom domains for Mendix applications when using pagination in published OData services. This is because the OData response always returns the base domain's root URL, regardless of the custom domain being used. As a result, the call for the next page fails because the returned root URL does not have a corresponding network rule in Snowflake.
 
 ## Technical Reference {#technical-reference}
@@ -297,6 +311,18 @@ The **Documentation** pane displays the documentation for the currently selected
 If you encounter any issues while using the Mendix Data Loader, use the following troubleshooting tips to help you solve them.
 
 For any additional troubleshooting, contact the [development team](mailto:sa_dev_team@mendix.com).
+
+### Ingestion Fails at RETRIEVING_METADATA
+
+When ingesting data, the Mendix Data Loader displays an error similar to the following: `connection.ConnectionValidationException: Failed to validate connection to https://nodename.mendixcloud.com/odata/TableName/v1/`.
+
+#### Cause
+
+The authentication configuration may be incorrect, or the endpoint might not be properly set up.
+
+#### Solution
+
+In the Data Loader, go to the **Authentication Configuration** tab. Ensure that the correct **Auth Type** is selected and that the credentials are accurate. If the issue persists, try testing the connection using Postman.
 
 ### Error Parsing JSON: Document Is Too Large
 

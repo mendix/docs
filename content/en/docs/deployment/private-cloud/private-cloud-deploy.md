@@ -124,7 +124,7 @@ All environments are defined as production environments, which means that [secur
 
 6. Select the **Environment Purpose** to select the purpose of the environment.
 
-    {{% alert color="info" %}} Currently, its only possible to set the Environment Purpose in the portal and not via the API. {{% /alert %}}
+    {{% alert color="info" %}} Currently, it is only possible to set the Environment Purpose in the portal. {{% /alert %}}
 
 7. Enter a **Subscription Secret** if you want your app to run as a licensed app. Without a license, your app will be subjected to restrictions very similar to those listed in the [Free Apps](/developerportal/deploy/mendix-cloud-deploy/#free-app) section of *Mendix Cloud*.
 
@@ -407,7 +407,7 @@ The Technical Contact can be changed later, but only by the current Technical Co
 
 This section allows you to edit the Environment Purpose for the environments within the application. Setting the purpose of your environment does not affect its operational state. However, it helps ensure the environment is used as intended, providing clarity for both you and us. We strongly recommend setting this field, as future features may be tailored to specific environment purposes. For applications where the Technical Contact is not set, this section is not visible.
 
-When creating a new environment, the Technical Contact can set the environment purpose. Once the environment is created, you can change the purpose in Application Settings. However, the purpose can only be edited by the Technical Contact after environment creation.
+When creating a new environment, the Technical Contact can set the environment purpose. The field is not visible when some one else other than the Technical Contact is creating the environment. It is also possible to change the purpose in **Application Settings** after environment creation. However, the purpose can only be edited by the Technical Contact.
 
 ## Managing Your Environments from the Environment Details Page {#environment-details}
 

@@ -67,12 +67,6 @@ For each combination you can indicate whether or not the module role has access 
 
 **Entity Access** defines for each module role whether users with this role are authorized to **Create**, **Read**, **Write** and/or **Delete** objects of the entity. You can also write an XPath constraint to restrict the set of objects to which the access rule applies. 
 
-{{% alert color="info" %}}
-
-From Mendix 10.21 and above editing access rules uses the [new access rule editor](/refguide/access-rules/#new-editor). 
-
-{{% /alert %}}
-
 The **Entity Access** tab is displayed as a matrix showing access rules that apply to entities:
 
 {{< figure src="/attachments/refguide/modeling/security/module-security/entity-access-tab.png" width="600" >}}

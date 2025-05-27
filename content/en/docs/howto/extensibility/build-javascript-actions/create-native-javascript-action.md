@@ -315,11 +315,11 @@ Congratulations on making your own native JavaScript action! Please use your own
 
 Until this section, you have used a custom developer app to validate your application. When you want to distribute your app in the Google Play Store or Apple App Store, you have to make a build that includes the bundled Mendix app.
 
-For the full explanation on how to build, sign, and distribute your app to an app store see [Build a Mendix Native App in the Cloud](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/), as well as the tutorial's subsequent sections.
+For the full explanation on how to build, sign, and distribute your app to an app store see [Building, Testing, and Distributing Apps](/refguide/mobile/distributing-mobile-apps/).
 
 ## Read More
 
-* [How to Build a Mendix Native App in the Cloud](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/)
+* [Building, Testing, and Distributing Apps](/refguide/mobile/distributing-mobile-apps/)
 * [JavaScript Actions Reference Guide](/refguide/javascript-actions/)
 * [How To Build JavaScript actions](/howto/extensibility/build-javascript-actions/)
 * [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/)

@@ -12,12 +12,8 @@ aliases:
 
 Use the Consumed REST Service document to send REST requests from Mendix Studio Pro. With this feature, you can build, test, and create data structures to store your requests. 
 
-This feature is supported for [Mendix Studio Pro 10.17](/releasenotes/studio-pro/10.17/) and above.
-
 {{% alert color="info" %}}
-
 The Consumed REST Service document is released for general availability (GA) for Windows only. This feature is still in beta for macOS and will be released for GA at a later date.
-
 {{% /alert %}}
 
 ### Use Cases
@@ -30,7 +26,7 @@ Use the Consumed REST Service document to do the following:
 * Send REST requests through a microflow
 
 {{% alert color="info" %}}
-The ability to import an OpenAPI/Swagger contract was introduced as a beta feature in [Studio Pro 10.21](/releasenotes/studio-pro/10.21/).
+The ability to import an OpenAPI/Swagger contract is currently in beta.
 {{% /alert %}}
 
 ### Limitations
@@ -39,7 +35,6 @@ The ability to import an OpenAPI/Swagger contract was introduced as a beta featu
 
 ### Prerequisites 
 
-* [Studio Pro 10.17](/releasenotes/studio-pro/10.17/) and above
 * Familiarity with [HTTP request methods](https://www.w3schools.com/tags/ref_httpmethods.asp)
 
 ## Add the Consumed REST Service Document {#installation}
@@ -88,7 +83,7 @@ Create a `GET`, `POST`, `PUT`, `PATCH`, or `DELETE` request to send data to your
 5. Click **Authentication**.
 6. Select an authentication method, then click **OK**. For more information, see [Authentication methods](#authentication).
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-service/configuration-screen.png" class="no-border" width="500" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-service/configuration-screen.png" width="500" >}}
 
 7. Click **Send**. 
 

@@ -7,6 +7,8 @@ weight: 50
 
 Use the **History** dialog box to look at all the changes that have been committed to a development line of an app. You can open this dialog box from the **Version Control** > **History…** menu item. This dialog box is also used when selecting a revision to merge from, create a branch line off, or to create a deployment archive from.
 
+The **History** dialog can display up to 250 commits at once, making it easy to look at the detailed project history. If the app was only partially copied, it may need to download missing data from the server. While the data is being downloaded, a progress bar will be shown. This initial download could take a little time, but once the data is saved locally, future access to the **History** dialog will be significantly faster — almost instant.
+
 ## Revisions
 
 {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/history-dialog/revisions.png" alt="Revisions Image" class="no-border" >}}

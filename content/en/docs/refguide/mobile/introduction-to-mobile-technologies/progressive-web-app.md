@@ -8,16 +8,6 @@ aliases:
 
 ## Introduction
 
-{{% alert color="info" %}}
-Due to web browsers changing what they support, offline-first progressive web apps are only supported in the following versions of Mendix:
-
-* Mendix 9.24.18 and higher patch versions
-* Mendix 10.6.6 and higher patch versions
-* Mendix 10.9.0 and above
-
-Offline-first progressive web apps build with other versions of Mendix will not work in most web browsers.
-{{% /alert %}}
-
 Progressive web apps (PWAs) are an evolution of traditional web apps. Overall, PWAs tend to behave more like native mobile apps, and their popularity is increasing. One difference and possible advantage of PWAs compared to native mobile apps is that PWAs do not need to be distributed via an app store but can be accessed directly via the browser.
 
 Progressive web apps have three main characteristics:
@@ -136,17 +126,9 @@ For more information on the available properties in the web app manifest, read t
 
 ### Sessions {#sessions}
 
-#### Mendix Version 10.9.0 and Above
-
 Offline-first PWAs use an authentication token by default to keep the session active while users are not actively working in the app.
 
 For more information on the session and authentication tokens, see [Session Management](/refguide/session-management/)
-
-#### Mendix Versions Below 10.9.0
-
-Offline-first PWAs use long-lived sessions, which keep users logged in for a longer period even after their apps are closed. By default, users will be logged out after 7 days of inactivity. This can be customized using the [LongLivedSessionTimeout](/refguide/custom-settings/#LongLivedSessionTimeout) runtime setting.
-
-For more information on sessions and how to customize the timeout, see the [Session Duration](/refguide/tricky-custom-runtime-settings/#session-duration) section of the *Advanced Custom Settings in Mendix Runtime Reference Guide*.
 
 ## Accessing Device Features
 

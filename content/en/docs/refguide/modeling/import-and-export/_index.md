@@ -60,10 +60,6 @@ The app is imported.
 
 ### Importing Module Packages {#import-module}
 
-{{% alert color="warning" %}}
-Importing a module containing workflows is supported from Studio Pro 10.21.0 and above. In Studio Pro 10.20 and below, importing a module containing workflows will make all running workflow instances incompatible.
-{{% /alert %}}
-
 Mendix modules can either be stored in a Mendix package (*.mpk*) file or have an *.mxmodule* extension if they are [add-on or solution modules](/refguide/configure-add-on-and-solution-modules/). 
 
 #### Importing a Module Package Through the App Explorer

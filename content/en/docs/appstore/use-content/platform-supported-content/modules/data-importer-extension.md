@@ -41,6 +41,7 @@ This extension currently has the following limitations:
 * You cannot map data to an existing NPE; you have to create a new entity as part of mapping
 * Enumerations are not supported
 * **String** is the default attribute type (*.csv* only)
+* Only UTF-8 encoded files are supported for CSV import. Non-encoded files may result in loss of data.
 
 ### Prerequisites
 

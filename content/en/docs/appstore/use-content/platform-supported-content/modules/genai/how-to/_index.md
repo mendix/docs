@@ -15,12 +15,17 @@ Generative Artificial Intelligence (GenAI) transforms business applications, emp
 
 ## Key Resources to Continue Your GenAI Journey
 
-### Support Resources
+### Getting Started with the How-Tos
+
+* [Build a Chatbot Using the AI Bot Starter App](/appstore/modules/genai/how-to/starter-template/)
+* [Build a Chatbot from Scratch Using the Blank GenAI App](/appstore/modules/genai/how-to/blank-app/)
+
+### Starter Apps
 
 * The [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) demonstrates over 10 use cases for implementing GenAI.
-* The [Support Assistant Starter App](https://marketplace.mendix.com/link/component/231035) is a template that incorporates [**RAG (Retrieval-Augmented Generation)**](/appstore/modules/genai/rag/), [**function calling (ReAct Pattern)**](/appstore/modules/genai/function-calling/), and knowledge base integration. For more details on this use case, see [How to Build Smarter Apps with Function Calling & Generative AI](https://www.mendix.com/blog/building-smarter-apps-with-function-calling-and-generative-ai/).
+* The [Support Assistant Starter App](https://marketplace.mendix.com/link/component/231035) is a template that incorporates [RAG (Retrieval-Augmented Generation)](/appstore/modules/genai/rag/), [Function Calling (ReAct Pattern)](/appstore/modules/genai/function-calling/), and knowledge base integration. For more details on this use case, see [How to Build Smarter Apps with Function Calling & Generative AI](https://www.mendix.com/blog/building-smarter-apps-with-function-calling-and-generative-ai/).
 
-### Prompt Engineering Resources 
+### Prompt Engineering Resources
 
 * The [Prompt Engineering](/appstore/modules/genai/prompt-engineering/) documentation provides an introduction to the basics of prompting and useful tips.
 * The [Prompt Library](https://mendixlabs.github.io/smart-apps-prompt-library/) offers a collection of prompts used in Mendix applications, as well as other examples.
@@ -41,6 +46,11 @@ For any additional feedback, send a message in the [#genai-connectors](https://m
 
 ### Featured Blogposts
 
+* [AI Model Training: What it is and How it Works](https://www.mendix.com/blog/ai-model-training/)
+* [What Are the Different Types of AI Models?](https://www.mendix.com/blog/what-are-the-different-types-of-ai-models/)
+* [OpenAI using the ‘GenAI for Mendix’ Module](https://www.mendix.com/blog/openai-using-the-genai-for-mendix-module/)
+* [How to Configure Azure OpenAI Models in Mendix](https://www.mendix.com/blog/how-to-configure-azure-openai-models-in-mendix/)
 * [How to Run Open-Source LLMs Locally with the OpenAI Connector and Ollama](https://www.mendix.com/blog/how-to-run-open-source-llms-locally-with-the-openai-connector-and-ollama/)
+* [How Multi-Agent AI Systems in Mendix Can Train You for a Marathon](https://www.mendix.com/blog/how-multi-agent-ai-systems-in-mendix-can-train-you-for-a-marathon/)
 
 ## Documents in this Category

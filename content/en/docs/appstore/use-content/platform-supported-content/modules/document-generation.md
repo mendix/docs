@@ -70,7 +70,7 @@ Follow the instructions in [How to Use Marketplace Content](/appstore/use-conten
 
     2. [Running On-Premises](#run-on-premises) using a local version of the PDF service. This option is available for apps that are deployed to the following environments:
         * [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/)
-        * [Linux](/developerportal/deploy/unix-like/)
+        * [Linux](/developerportal/deploy/linux/)
 
 ### Running Locally from Studio Pro {#run-locally}
 

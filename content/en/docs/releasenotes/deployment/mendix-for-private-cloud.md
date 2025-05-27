@@ -12,6 +12,26 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2025
 
+### May 08, 2025
+
+#### Portal Improvements
+
+* Updating or setting an Environment Purpose is now logged in the activity logs.
+
+### April 24, 2025
+
+#### Deploy API Improvements
+
+* We have resolved an issue with the Get Environment Manifest where the environment's updated status was not properly reflected in the response.
+* The Deploy API now supports setting the Environment Purpose (for Create Environment, Update Environment, and Get Environment Manifest).
+* We have increased the error message limit when retrieving the latest feedback from the cluster (Ticket 245648).
+
+### April 10, 2025
+
+#### Documentation Improvements
+
+* We have published detailed documentation about network ingress settings. For more information, see [Network Ingress Settings in Mendix for Private Cloud](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/).
+
 ### April 03, 2025
 
 #### Mendix Operator v2.21.2 {#2.21.2}

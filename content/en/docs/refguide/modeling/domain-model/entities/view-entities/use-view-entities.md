@@ -6,7 +6,7 @@ weight: 10
 
 ## Introduction
 
-View entities allow you to retrieve, transform, and aggregate your data. They represent a set of stored OQL queries that can be used similarly to [persistable entities]( /refguide/persistability/#persistable). The data that view entities contain is determined when you retrieve the data.
+View entities enable the retrieval, transformation, and aggregation of data within Mendix applications. Each view entity is defined by a corresponding **Object Query Language (OQL) query** specifying the data retrieval logic. This configuration allows view entities to function similarly to [persistable entities]( /refguide/persistability/#persistable). The data that view entities contain is determined when you retrieve the data.
 
 You can perform operations such as sorting, paging, and filtering using view entities. The entire query is executed by the database, often resulting in faster performance compared to executing multiple independent retrieves. A view entity fetches the data you need from the database and allows data transformation and aggregation. With view entities, you can:
 
@@ -36,13 +36,35 @@ Retrieving data from your database can result in very large and complex queries.
 
 View entities offer an additional powerful way to improve reusability, readability, and maintainability. You can use them to combine simple queries into more complex ones. A query defines a set of data, which can then be further refined to retrieve more detailed information. A view entity can be also composed of data defined by other view entities.
 
-For example, the view entity pictured below lists all customers at an organization that are over age 18. The entity includes their full name, age, and delivery and billing addresses.
-
-{{< figure src="/attachments/refguide/modeling/domain-model/use-view-entities/customer-with-address.png" width="500" >}}
+For example, the view entity pictured below lists all customers at an organization that are over age 18. The view entity includes their full name, age, and delivery and billing addresses.
+ 
+ ```sql
+ FROM Shop.Customer AS c
+  LEFT JOIN c/Shop.BillingAddress/Shop.Address as ba
+  LEFT JOIN c/Shop.DeliveryAddress/Shop.Address as da
+ WHERE datediff(YEAR,c.DateOfBirth,'[%CurrentDateTime%]') > 18
+ SELECT
+  c.CustomerId                                                                                   as CustomerId
+ ,c.LastName + ', ' + FirstName                                                                  as FullName
+ ,datediff(YEAR, c.DateOfBirth,'[%CurrentDateTime%]')                                            as Age
+ ,ba.Streetname + ' ' + ba.StreetNumber + ' ' + ba.Zipcode + ' ' + ba.City + ' ' +  ba.Country   as BillingAddress
+ ,da.Streetname + ' ' + da.StreetNumber + ' ' + da.Zipcode + ' ' + da.City + ' ' +  da.Country   as DeliveryAddress
+ ```
 
 Age is determined for each customer by calculating the difference in years between the current day and the customer’s date of birth. Another view entity can then count the number of customers that were born in each decade and group them appropriately. 
 
-{{< figure src="/attachments/refguide/modeling/domain-model/use-view-entities/customer-per-decade.png" width="500" >}}
+```sql
+ FROM
+   (
+    FROM HowToThink.CustomerWithAddressVE as c SELECT CAST(c.Age:10 as integer) * 10 as AgeBucket ,
+                                                      c.CustomerId as CustomerId) as b
+ GROUP BY b.AgeBucket
+ SELECT b.AgeBucket as AgeBucketStart ,
+        b.AgeBucket + 9 as AgeBucketEnd ,
+        COUNT(b.CustomerId) as CustomerCount
+ ORDER BY b.AgeBucket
+ LIMIT 10
+ ```
 
 The original customer view included address information, but most database optimizers will see that this information is not relevant when counting customers by age, so this information is excluded when retrieving the data. However, the information is still present and can be generated, if requested. 
 
@@ -54,7 +76,18 @@ Filtering attributes is one way to configure your queries. For example, assume y
 
 Alternatively, you can store the parameter value in the database, then use that value in your view entity.  For example, the image below is of a view entity that returns the data of the *Product* entity in the language of the current user. 
 
-{{< figure src="/attachments/refguide/modeling/domain-model/use-view-entities/product-language.png" width="500" >}}
+ ```sql
+ FROM Shop.Product as p
+ LEFT JOIN System.User as u ON (u.ID = '[%CurrentUser%]')
+ LEFT JOIN u/System.User_Language/System.Language as l
+ LEFT JOIN p/Shop.ProductTranslations_Product/Shop.ProductTranslations as t ON (t.LanguageCode = l.Code)
+ SELECT p.ID as ID,
+        p.ProductId as ProductId,
+        COALESCE(t.Name, p.Name) as Name,
+        COALESCE(t.Description, p.Description) as Description,
+        p.WeightInGrams as WeightInGrams,
+        l.Code as UserLanguageCode
+ ```
 
 This is done by joining an entity that has all the necessary translations and filtering it by the language of the current user. Coalesce is used to return the default language in case there is no translation is available.
 
@@ -70,11 +103,27 @@ Persistable entity access rules are not applied when using view entities. Instea
 
 In the following example, a view entity is used to implement multitenant security. The view entity *CustomersVE* only returns the customers that belong to the tenant of the current user. Any additional view entity that uses *CustomersVE* instead of the persistable entity *Customer* will only get data belonging to the tenant of the user. 
 
-{{< figure src="/attachments/refguide/modeling/domain-model/use-view-entities/active-tenant.png" width="500" >}}
+ ```sql
+ FROM Shop.Customer as c
+ JOIN ShopViewSamples.CurrentUserVe u ON (u.UserTenantId = c.TenantId)
+ SELECT c.CustomerId as CustomerId,
+        c.FirstName as FirstName,
+        c.LastName as LastName,
+        c.EmailAddess as EmailAddess,
+        c.DateOfBirth as DateOfBirth
+ ```
 
 Instead of joining with the `[%CurrentUser%]` expression, this example joins with a view entity that only returns one object: the current user and related details, such active language and tenant ID. This simplifies use of user information for other view entities. 
 
-{{< figure src="/attachments/refguide/modeling/domain-model/use-view-entities/current-user.png" width="500" >}}
+ ```sql
+ FROM System.User as u
+ LEFT JOIN u/System.User_Language/System.Language as l
+ LEFT JOIN u/Shop.UserTenant_User/Shop.UserTenant as t
+ WHERE (u.ID = '[%CurrentUser%]')
+   SELECT u.Name as UserName ,
+          l.Code as UserLanguageCode ,
+          t.TenantId as UserTenantId
+ ```
 
 ## Performance
 

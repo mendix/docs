@@ -13,7 +13,7 @@ Mendix Studio Pro supports two query languages to retrieve data:
 * XPath as an easy to use query language to retrieve objects
 * OQL is a SQL based language, more focused on powerful reporting facilities
 
-You can use these query languages in Mendix Studio Pro, but both languages are also available through the [Mendix Runtime Java API](/apidocs-mxsdk/apidocs/runtime-api/). You can use this API to implement powerful reusable microflow actions. In addition to XPath and OQL, the Mendix API also enables you to use standard SQL on your Mendix database.
+You can use these query languages in Mendix Studio Pro, but both languages are also available through the [Mendix Runtime Java API](/apidocs-mxsdk/apidocs/runtime-api-11/). You can use this API to implement powerful reusable microflow actions. In addition to XPath and OQL, the Mendix API also enables you to use standard SQL on your Mendix database.
 
 This how to describes how you can build the following microflow actions:
 

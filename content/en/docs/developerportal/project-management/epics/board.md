@@ -14,8 +14,6 @@ On the upper-right corner of the page, you can find the following items:
 
     {{% alert color="info" %}}You can also use **Maia Create User Story**, an AI-assisted tool, to create a user story for you. To access it, click **Create Story**, the option to **Create with Maia** appears at the left side of **Create Story**. It is disabled by default. To enable it, open the **Settings** by clicking the **...** next to **Create Story** and toggle the **Maia Assistance** option on. Note that only Scrum Masters can modify this setting.{{% /alert %}}
 
-    {{% alert color="info" %}}**Maia Create User Story** is currently in beta. For more information on beta features, see [Beta and Experimental Releases](/releasenotes/beta-features/).{{% /alert %}}
-
 * **Create Epic** – Clicking this enables you to create a new epic.
   
 * Search box – You can search stories based on story title, tags, epic name, assignee (including unassigned stories), and story ID. You can use the search box in combination with the filter.

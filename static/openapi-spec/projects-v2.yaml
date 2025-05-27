@@ -705,6 +705,20 @@ components:
                     type: string
                     description: Full name of the member.
                     maxLength: 200
+              versionStudioPro:
+                type: string
+                description: The Studio Pro version of the main branch of the project. Please note that this value could be empty or not up to date if the changes are not committed through Studio Pro.
+                minLength: 0
+                maxLength: 50
+              storyTool:
+                type: string
+                description: The tool or service used to manage the workload of the project. Could be empty if no tool has been chosen yet
+                enum:
+                - Epics
+                - Jira
+              storyBoardUrl:
+                type: string
+                description: Location of the story board used to manage the workload of the project
               cloudProvider: 
                 type: string
                 description: Cloud deployment provider (Public Mendix, Private Mendix, SAP, on-prem, etc)
@@ -715,7 +729,7 @@ components:
                 - Mendix_for_Private_Cloud
               targetCloud: 
                 type: string
-                description: URL of the cloud portal the project is hosted on      
+                description: URL of the cloud portal the project is hosted on
               members:
                 type: array
                 description: Array of members in the project. Inactive members will only be returned for Mendix Administrators
@@ -753,6 +767,9 @@ components:
                 createdBy: 
                   userId: "123e4567-e89b-12d3-a456-426614174000"
                   fullName: "John Doe"
+                versionStudioPro: "9.24.32"
+                storyTool: "Epics"
+                storyBoardUrl: "https://epics.mendix.com/link/board/123e4567-e89b-12d3-a456-426614174000"
                 cloudProvider: "Mendix"
                 targetCloud: "https://cloud.example.com"
                 members:

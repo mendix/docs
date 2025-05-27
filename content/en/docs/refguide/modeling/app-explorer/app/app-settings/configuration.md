@@ -62,10 +62,6 @@ The choice between a **Shared** value or a **Private** value determines where St
 * Choose **Shared** to store the value as part of the app. That means that when you commit/push your changes, you share the value with everyone that has access to the app's repository.
 * Choose **Private** to store the value on your local machine. The value will be encrypted so that only your user account can read it. Other users will have to specify their own value for this constant.
 
-{{% alert color="info" %}}
-Private configuration values are available in Studio Pro 10.9.0 and above. In versions below 10.9.0, all configuration values are shared.
-{{% /alert %}}
-
 ### Custom {#custom}
 
 You can use custom server settings to configure the Runtime beyond the standard possibilities offered by Studio Pro.

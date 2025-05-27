@@ -2,7 +2,7 @@
 title: "Build Your Own GenAI Connector"
 url: /appstore/modules/genai/how-to/byo-connector
 linktitle: "Build Your Own GenAI connector"
-weight: 20
+weight: 70
 description: "A tutorial that describes how to build your own GenAI connector"
 ---
 
@@ -68,7 +68,7 @@ The Echo connector is a module in the [GenAI Showcase App](https://marketplace.m
 This section allows you to focus on implementing chat completions, a fundamental capability supported by most LLMs. To make the process more practical, develop an example connector—the Echo Connector. This simple connector returns the similar text as output provided as input while remaining fully compatible with the chat capabilities of GenAICommons and ConversationalUI.
 During development, you will get the key considerations to keep in mind when creating your own connector. You can either start from scratch and build your own connector or use the finished Echo Connector from the GenAI Showcase App and modify it to fit your use case.
 
-To enable chat completion, the key microflow to consider is `ChatCompletions_WithHistory`, located in the GenAICommons module. Since this module is protected, its inner logic is not visible.
+To enable chat completion, the key microflow to consider is `ChatCompletions_WithHistory`, located in the GenAICommons module. 
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-byo/ChatCompletions_WithHistory.png" >}}
 
@@ -85,7 +85,7 @@ And one output object:
 
 Since this structure is already standardized, no modifications are needed for the `Request` entity. Instead, when implementing a new connector, map the request data from the existing `Request` object to the format required by the specific provider—in this case, the Echo Connector.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-byo/GenAICommons_DomainModel.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-byo/GenAICommons_TextFiles_DomainModel.png" >}}
 
 Just as the `Request` entity structures input for the LLM, the Response entity defines how the model's output must be formatted for proper display in the chat interface. When an LLM returns a result, it must be converted into the `Response` entity’s format to ensure compatibility with GenAICommons and ConversationalUI.
 
@@ -106,7 +106,7 @@ The `DeployedModel` represents a GenAI model that the Mendix application can inv
 
 To accommodate this, you will need to create a new entity within your connector that inherits from `GenAICommons.DeployedModel`. This allows you to extend it with any provider-specific attributes required for your integration.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-byo/DeployedModel_Entity.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-byo/GenAICommons_DeployedModel_DM.png" >}}
 
 For the Echo Connector, a specialization of `DeployedModel` is created to include any additional attributes required for proper functionality.
 

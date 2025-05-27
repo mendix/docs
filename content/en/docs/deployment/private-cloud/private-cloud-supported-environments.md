@@ -188,7 +188,6 @@ This refers to a PostgreSQL database which is automatically provisioned by the O
 
 The following standard PostgreSQL databases are supported:
 
-* PostgreSQL 12
 * PostgreSQL 13
 * PostgreSQL 14
 * PostgreSQL 15
@@ -198,7 +197,7 @@ The following standard PostgreSQL databases are supported:
 {{% alert color="info" %}}
 While Mendix for Private Cloud supports all Postgres versions listed above, the Mendix Runtime might require a more specific Postgres version.
 
-For best compatibility, use Postgres 13, as Postgres 12 is soon going to be deprecated for use in Mendix Applications.
+For best compatibility, use the newest available version of Postgres.
 {{% /alert %}}
 
 A standard PostgreSQL database is an unmodified PostgreSQL database installed from a Helm chart or from an installation package.
@@ -262,7 +261,7 @@ Amazon and Azure SQL servers require additional firewall configuration to allow 
 
 Some managed SQL Server databases might have restrictions or require additional configuration.
 
-As an alternative to static password authentication, Mendix Operator can use its Kubernetes Service Account to authenticate with Azure SQL databases. The Kubernetes Service Account is linked with a Managed Identity, and the Managed Identity replaces a static username/password. This feature requires Mendix Operator version 2.17 (or later) and Mendix 10.10 (or later).
+As an alternative to static password authentication, Mendix Operator can use its Kubernetes Service Account to authenticate with Azure SQL databases. The Kubernetes Service Account is linked with a Managed Identity, and the Managed Identity replaces a static username/password. This feature requires Mendix Operator version 2.17 (or above) and Mendix 10.10 (or above).
 
 {{% alert color="info" %}}
 To use a SQL Server database, the Mendix Operator requires Superuser account with permissions to create new users and databases.
@@ -333,7 +332,7 @@ configuration details.
 Mendix Operator can perform the following tasks:
 
 * Provide a static access key and other credentials to environments (a static config).
-* Handle the lifecycle of a storage container by creating a dedicated container and Azure Managed Identity for every new environment, and ensuring that an environment can only access its dedicated container (through the environment's Managed Identity); this feature works with Mendix 10.10 (or later versions).
+* Handle the lifecycle of a storage container by creating a dedicated container and Azure Managed Identity for every new environment, and ensuring that an environment can only access its dedicated container (through the environment's Managed Identity); this feature works with Mendix 10.10 and above.
 
 A complete list of supported Azure Blob Storage modes and their required role assignments (permissions) for each one is available in [storage plan](/developerportal/deploy/standard-operator/#storage-plan) configuration details.
 

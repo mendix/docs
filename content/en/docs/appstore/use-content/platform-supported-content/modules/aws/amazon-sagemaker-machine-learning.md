@@ -1,8 +1,8 @@
 ---
-title: "Add Machine Learning Capabilities to Your App with Amazon SageMaker"
-linktitle: "Amazon SageMaker"
+title: "Add Machine Learning Capabilities to Your App with Amazon SageMaker AI"
+linktitle: "Amazon SageMaker AI"
 url: /appstore/modules/aws/amazon-sagemaker-machine-learning/
-description: "Describes the steps required to add Amazon SageMaker machine learning capabilities to your Mendix app."
+description: "Describes the steps required to add Amazon SageMaker AI machine learning capabilities to your Mendix app."
 weight: 20
 aliases:
     - /appstore/connectors/aws/amazon-sagemaker-machine-learning/
@@ -12,17 +12,17 @@ aliases:
 
 Machine Learning (ML) is a subset of Artificial Intelligence (AI) that focuses on developing algorithms and models that enable computers to learn from data and make predictions or decisions without being explicitly programmed. In this way, models can be trained based on custom data of a specific sector or company, and can perform tasks more efficiently than an out-of-the-box foundational model. 
 
-In this document, you will learn how you can incorporate ML into your Mendix app by using [Amazon SageMaker](https://aws.amazon.com/pm/sagemaker/).
+In this document, you will learn how you can incorporate ML into your Mendix app by using [Amazon SageMaker AI](https://aws.amazon.com/pm/sagemaker/).
 
 ### Prerequisites
 
 To complete this tutorial, you need the following tools:
 
-* [Amazon SageMaker](https://aws.amazon.com/pm/sagemaker/) - For creating and training the model. Amazon SageMaker is a fully managed machine-learning service from Amazon that helps you build, train and deploy machine learning models quickly. It offers a wide range of features that include, but are not limited to, Jupyter Notebooks, Pipelines, SageMaker Studio, Canvas and RStudio.
+* [Amazon SageMaker AI](https://aws.amazon.com/pm/sagemaker/) - For creating and training the model. Amazon SageMaker AI is a fully managed machine-learning service from Amazon that helps you build, train and deploy machine learning models quickly. It offers a wide range of features that include, but are not limited to, Jupyter Notebooks, Pipelines, SageMaker Studio, Canvas and RStudio.
 * Python 3.0 - To write the code.
 * Mendix Studio Pro 10.1.1 or higher - The latest version of Mendix; includes the ML Kit required to create tailored smart end-user apps.
 
-By following the tutorial, you will create a demo spam filter with the help of Amazon SageMaker and Mendix. To help you achieve that, download the following demo files:
+By following the tutorial, you will create a demo spam filter with the help of Amazon SageMaker AI and Mendix. To help you achieve that, download the following demo files:
 
 * [The spam_nb.ipynb notebook example](https://github.com/mendix/mlkit-example-app/blob/main/notebooks/spam_nb.ipynb)
 * [The spam.csv file](https://github.com/mendix/mlkit-example-app/blob/main/notebooks/spam.csv)
@@ -182,4 +182,4 @@ If the email is recognized as spam, the prediction will display *spam*, and if n
 * [Introducing the Mendix ML Kit for Low-Code ML Deployment](https://www.mendix.com/blog/introducing-the-mendix-ml-kit-for-low-code-deployment/)
 * [AI-Infused Apps](https://www.mendix.com/evaluation-guide/app-lifecycle/ai-infused-apps/)
 * [Machine Learning Kit](/refguide/machine-learning-kit/)
-* [AI at the Speed of Thought: A Guide to ML-Enhanced Applications Powered by Mendix and Amazon SageMaker](https://www.mendix.com/blog/ai-at-the-speed-of-thought-a-guide-to-ml-enhanced-applications-powered-by-mendix-and-amazon-sagemaker/)
+* [AI at the Speed of Thought: A Guide to ML-Enhanced Applications Powered by Mendix and Amazon SageMaker AI](https://www.mendix.com/blog/ai-at-the-speed-of-thought-a-guide-to-ml-enhanced-applications-powered-by-mendix-and-amazon-sagemaker/)

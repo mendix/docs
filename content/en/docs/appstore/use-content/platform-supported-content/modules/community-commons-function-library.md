@@ -34,8 +34,8 @@ The module contains one constant: `CommunityCommons.MergeMultiplePdfs_MaxAtOnce`
 ### Execute Microflow
 
 * `executeMicroflowAsUser` – This runs the given microflow as if the `$currentuser` is the provided user (delegation).
-* `executeMicroflowAsUser_1` – This is identical to `executeMicroflowAsUser` , except that it accepts one arguement.
-* `executeMicroflowAsUser`_2 – This is identical to `executeMicroflowAsUser` , except that it accepts two arguement.
+* `executeMicroflowAsUser_1` – This is identical to `executeMicroflowAsUser` , except that it accepts one argument.
+* `executeMicroflowAsUser`_2 – This is identical to `executeMicroflowAsUser` , except that it accepts two argument.
 * `executeMicroflowInBackground` – This is similar to `RunMicroflowAsyncInQueue`, but it accepts one argument as parameter.
 * `executeMicroflowInBatches` – This performs a batch operation on a large dataset by invoking the microflow on small sub-sets of the data, each with its own database transaction.
 * `executeUnverifiedMicroflowAsUser` – This runs the given microflow as if the `$currentuser` is the provided user (delegation). Use `sudoContext` to determine if 'apply entity access' should be used.
@@ -88,7 +88,10 @@ The module contains one constant: `CommunityCommons.MergeMultiplePdfs_MaxAtOnce`
 ### ORM
 
 * <a id="clone"></a>`Clone` – This clones the objects.
-* `commitInSeparateDatabaseTransaction` – This function commits an object in a seperate context and transaction, making sure it gets persisted in the database (regarding which exception happens after invocation).
+* `commitInSeparateDatabaseTransaction` – This function commits an object in a separate context and transaction, making sure it gets persisted in the database (regarding which exception happens after invocation).
+
+    {{% alert color="warning" %}}This action is prone to deadlock. For example, this can happen if you commit an object in one transaction and then use this action to commit the same object in a separate transaction. Therefore Mendix does not recommend the use of this action.{{% /alert %}}
+
 * `commitWithoutEvents` – This commits an object but without events.
 * `copyAttributes` – This copies all common primitive attributes from source to target, which are not necessarily of the same type. This is useful to, for example, translate database object into view objects.
 * <a id="deepclone"></a>`DeepClone` – This clones the objects, their associations, and their referred objects. For more information, see the [Limitations](#limitations) section below.

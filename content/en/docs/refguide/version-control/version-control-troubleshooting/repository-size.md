@@ -10,7 +10,7 @@ description: "Explains consequences and root cause of a large repository size an
 
 In case you are experiencing performance issues when cloning or pulling your app, this may be caused by a large repository size. This document explains why your repository may be large, how Git handles it, and what you can do about this issue.
 
-## Causes of a Large Repository 
+## Causes of a Large Repository
 
 There are several reasons why your repository may be large. The most common reasons for a Mendix app are the following:
 
@@ -43,33 +43,33 @@ Version control systems like Git do not store a full copy of a document for ever
 #### MPRv2 Format {#mprv2}
 
 {{% alert color="info" %}}
-MPRv2 was released in Studio Pro 10.18.0 as [Public Beta](/releasenotes/beta-features/). In Studio Pro 10.21.0, MPRv2 was released for General Availability (GA) and is automatically used for new apps.
+When opening an existing app in Studio Pro 11, it automatically converts to the MPRv2 format.
 {{% /alert %}}
 
-Studio Pro 10.18 introduced a new version of the *.mpr* format: MPRv2. The key difference is that all documents, such as microflows, are no longer stored as part of the *.mpr* file but as separate files in the *mprcontents* directory. The *.mpr* file functions as an index file pointing to all the different files on disk. 
+Studio Pro 10.18 introduced a new version of the *.mpr* format: MPRv2. The key difference is that all documents, such as microflows, are no longer stored as part of the *.mpr* file but as separate files in the *mprcontents* directory. The *.mpr* file functions as an index file pointing to all the different files on disk.
 
-This means that when you change one document, for example, a page, only a small file representing that page will change on disk. This allows Git to calculate an efficient delta and results in a more appropriate repository growth compared to MPRv1. Functionally there is no differences between the split (v2) or the combined (v1) format inside Studio Pro. 
+This means that when you change one document, for example, a page, only a small file representing that page will change on disk. This allows Git to calculate an efficient delta and results in a more appropriate repository growth compared to MPRv1. Functionally there is no differences between the split (v2) or the combined (v1) format inside Studio Pro.
 
 {{% alert color="info" %}}
 Collaborating within one app on MPRv1 and MPRv2 branches is possible. To limit repository growth as much as possible, Mendix recommends migrating the most active branches to MPRv2 the first.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-Merging MPRv2 apps using the command line with `git merge` or using third-party tools is only supported from Studio Pro 10.21.0 and above. Hybrid merges involving both MPRv1 and MPRv2 formats are not supported.
+Merging MPRv2 apps using the command line with `git merge` or using third-party tools is supported. Hybrid merges involving both MPRv1 and MPRv2 formats are not supported.
 {{% /alert %}}
 
 #### Converting MPR Storage Format {#convert}
 
-In Studio Pro 10.18 and above upgrading to the new format is optional and can be done per branch via the [File menu](/refguide/file-menu/). To upgrade to MPRv2, open your app and select **File > Upgrade app to split MPR format (v2)**. After a confirmation the app will be converted and you will be prompted to commit.
+Upgrading to the new format is optional and can be done per branch via the [File menu](/refguide/file-menu/). To upgrade to MPRv2, open your app and select **File > Upgrade app to split MPR format (v2)**. After a confirmation, the app will be converted and you will be prompted to commit.
 
 You can also downgrade branches that are already on MPRv2 to MPRv1 by selecting **File > Downgrade app to combined MPR format (v1)**.
 
 {{% alert color="info" %}}
-Before converting the MPR format it is recommended to commit your local work to ensure there is an isolated commit with the conversion step for debugging, in case conversion fails.
+Before converting the MPR format, it is recommended to commit your local work to ensure there is an isolated commit with the conversion step for debugging, in case conversion fails.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-In future versions of Studio Pro conversion to MPRv2 will happen automatically when opening a branch.
+In future versions of Studio Pro, conversion to MPRv2 will happen automatically when opening a branch.
 {{% /alert %}}
 
 ### Decreasing MPRv1 File Size
@@ -85,9 +85,9 @@ As the Mendix model is stored in a single file, this threshold can be exceeded b
 
 ### Working with a Large Repository Size
 
-When cloning an app, the default behavior of Git is to download the full history. As Mendix uses different folders on disk for different branches, downloading full history is done for each branch. To mitigate that, Mendix uses local cloning for subsequent branch downloads. When cloning a new branch, data from a local branch you already have is used to reduce data that needs to be downloaded. 
+When cloning an app, the default behavior of Git is to download the full history. As Mendix uses different folders on disk for different branches, downloading full history is done for each branch. To mitigate that, Mendix uses local cloning for subsequent branch downloads. When cloning a new branch, data from a local branch you already have is used to reduce data that needs to be downloaded.
 
-Starting from Studio Pro 10.12 it is possible to prevent downloading the full history, by changing the [Clone type](/refguide/clone-type/) to use partial clones. A partial clone downloads all data for a specific revision without downloading the contents of all historical commits.
+It is possible to prevent downloading the full history, by changing the [Clone type](/refguide/clone-type/) to use partial clones. A partial clone downloads all data for a specific revision without downloading the contents of all historical commits.
 
 ### Mitigating Large Repository Size
 
@@ -121,13 +121,13 @@ Uncommitted work, or work committed to branches that have not been merged to the
 
 #### Deciding on the Cleanup
 
-The cleanup is intended to shrink your repository size to mitigate performance issues. We advise to first check whether you and your team are affected by performance issues, as that largely depends on your situation. 
+The cleanup is intended to shrink your repository size to mitigate performance issues. We advise to first check whether you and your team are affected by performance issues, as that largely depends on your situation.
 
 To conclude whether the situation is acceptable for you, follow these steps:
 
 * Ensure the Git app you are downloading is not yet on your machine
 * Download the branch through Studio Pro, while manually measuring how long the download takes
-  
+
 The first download of a branch on a device is a good indication of the maximum waiting time you or your team member can experience. Subsequent branch downloads use data that is already available locally and will, therefore, be a lot faster.
 
 If the download time was acceptable, or if you have a process where team members do not change often and they do not have to download an app for the first time, you can skip the cleanup.
@@ -178,7 +178,7 @@ Force pushing your results to the server is a separate step, in a separate scrip
 
 If you are using Mendix Team Server as your Git version control server, you can follow the steps below:
 
-* Ensure you have configured a Personal Access Token to use it as described in the [Authenticating to Team Server](/refguide/using-version-control-in-studio-pro/#authenticating) section in *Using Version Control in Studio Pro*. 
+* Ensure you have configured a Personal Access Token to use it as described in the [Authenticating to Team Server](/refguide/using-version-control-in-studio-pro/#authenticating) section in *Using Version Control in Studio Pro*.
 * Run the second script.
     * When prompted, enable force pushing.
     * Conduct the force push.
@@ -186,7 +186,7 @@ If you are using Mendix Team Server as your Git version control server, you can 
 
 ##### Other Git Platforms
 
-When using another Git platform than Mendix Team Server, such as GitHub or Azure Devops, you can typically enable force pushing in a portal. 
+When using another Git platform than Mendix Team Server, such as GitHub or Azure Devops, you can typically enable force pushing in a portal.
 
 {{% alert color="warning" %}}
 Force pushing allows to make destructive changes to the repository, which can easily lead to unrecoverable errors. We recommend you to give these permissions to as few users as strictly necessary.
@@ -200,7 +200,7 @@ You can follow these steps:
 
 #### Handling Local Copies
 
-After the results of the cleanup are pushed to the server all local clones need to be reset. This means that each developer of your team who has the project on disk and CI pipelines that have cached data need to get a fresh clone. 
+After the results of the cleanup are pushed to the server all local clones need to be reset. This means that each developer of your team who has the project on disk and CI pipelines that have cached data need to get a fresh clone.
 
 For developers on your team this means they have to ensure Studio Pro can no longer find their local folders. The **sp-reset** tool, shipped together with the Cleanup tool, can be used. Alternatively, they can rename their folders of the app to *old*.
 
@@ -222,7 +222,7 @@ We recommend doing the following:
 * Check the local repo location, it should be up-to-date and there should be no uncommitted changes
 * Check your git config settings, especially any setting that involves encoding or text conversions: run `git config --list --show-origin`.
 * Consider moving your local repo, so that its folder has a shorter name
-  
+
 When reaching out to Mendix Support, please include:
 
 * App/Projects ID for your app
@@ -235,5 +235,5 @@ In case you are still deciding whether to migrate from SVN to Git, or you are al
 
 {{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/migration-advice-combined.png" class="no-border" >}}
 
-In Studio Pro 10.18 and above, you can manually convert branches to MPRv2. In future versions, branch conversion will happen automatically. For more information on the format, see the [MPRv2 Format](#mprv2) section.
+In Studio Pro 10.18 and above, you can manually convert branches to MPRv2. In Studio Pro 10.22 and above, branch conversion happens automatically. For more information on the format, see the [MPRv2 Format](#mprv2) section.
 For more information on partial clone, see [Clone Type](/refguide/clone-type/).

@@ -9,18 +9,14 @@ description: "Describes the features in Maia Explain."
 ## Introduction 
 
 {{% alert color="info" %}}
-Maia Explain is currently an experimental feature introduced in Studio Pro 10.21.0. For more information on experimental features, see [Beta and Experimental Releases](/releasenotes/beta-features/).
-{{% /alert %}}
-
-{{% alert color="info" %}}
 To use Maia Explain, an internet connection and signing in to Studio Pro are required.
 {{% /alert %}}
 
 Maia Explain is an AI-powered tool that helps you easily understand a microflow or a nanoflow. It explains the general purpose of the logic and highlights specific technical details to help you understand the logic further.
 
-## Using Maia Learn
+## Using Maia Explain
 
-Maia Explain is enabled by default. If you want to disable this feature, go to **Edit** > **Preferences** > **New Features** and clear the **Enable Maia Explain (experimental)** checkbox.
+Maia Explain is enabled by default. If you want to disable this feature, go to **Edit** > **Preferences** > **New Features** and clear the **Enable Maia Explain** checkbox.
 
 There are two ways to launch Maia Explain:
 

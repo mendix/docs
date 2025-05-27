@@ -103,6 +103,6 @@ If you are importing a very long JSON string, the underlying conversion library 
 
 Mendix uses the Jackson Core XML library when performing the import mapping and this [has a limit of 20 million](https://javadoc.io/static/com.fasterxml.jackson.core/jackson-core/2.15.1/com/fasterxml/jackson/core/StreamReadConstraints.html#DEFAULT_MAX_STRING_LEN) characters (in earlier versions 5 million) in the JSON string.
 
-In Mendix version 10.9.0 and above and Mendix MTS version 10.6, patch releases 10.6.5 and above, you can override this using the [mapping.import.MaxJsonReadingLength](/refguide/custom-settings/#mapping.import.MaxJsonReadingLength) custom setting.
+You can override this using the [mapping.import.MaxJsonReadingLength](/refguide/custom-settings/#mapping.import.MaxJsonReadingLength) custom setting.
 
 Mendix recommends that you only add this setting if you will be getting very long JSON strings as it may result in more memory usage.

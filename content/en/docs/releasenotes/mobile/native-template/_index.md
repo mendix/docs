@@ -6,13 +6,11 @@ weight: 12
 description: "Native Template release notes."
 ---
 
-{{% todo %}}[replace 10.22 mention with link to RNs upon release]{{% /todo %}} 
-
-For more information on native mobile app development, see the [native-template](https://github.com/mendix/native-template/) repository and [Build a Mendix Native App in the Cloud](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/) guide. Below you can see the current versions in active development and which Mendix Studio Pro versions they correspond with.
+For more information on native mobile app development, see the [native-template](https://github.com/mendix/native-template/) repository and the [Building, Testing, and Distributing Apps](/refguide/mobile/distributing-mobile-apps/) guide. Below you can see the current versions in active development and which Mendix Studio Pro versions they correspond with.
 
 Compatible with Studio Pro 10:
 
-* Native Template versions of [14](/releasenotes/mobile/nt-14-rn/) are compatible with apps built using Studio Pro 10.22 and above.
+* Native Template versions of [14](/releasenotes/mobile/nt-14-rn/) are compatible with apps built using Studio Pro [10.22](/releasenotes/studio-pro/10.22/) and above.
 * Native Template versions of [13](/releasenotes/mobile/nt-13-rn/) are compatible with apps built using Studio Pro [10.21](/releasenotes/studio-pro/10.21/) and above.
 * Native Template versions of [12](/releasenotes/mobile/nt-12-rn/) are compatible with apps built using Studio Pro [10.19](/releasenotes/studio-pro/10.19/) and above.
 * Native Template versions of [11](/releasenotes/mobile/nt-11-rn/) are compatible with apps built using Studio Pro [10.18](/releasenotes/studio-pro/10.18/) and above.

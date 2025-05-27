@@ -26,7 +26,7 @@ Mendix Cloud Model Resource Packs provide customers with a monthly quota of inpu
 
 ### Supported models
 
-Mendix Cloud provides access to the following models:
+The Mendix Cloud GenAI Resource Packs provide access to the following models:
 
 * Anthropic Claude v3.5 Sonnet v1
 * Cohere Embed v3 (English & multilingual options)

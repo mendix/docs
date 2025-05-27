@@ -21,7 +21,7 @@ A domain model consists of [entities](/refguide/entities/) with their relationsh
 * View (green) – entities which are the result of a stored OQL query on persistable entities or other view entities (this feature is in beta)
 
 {{% alert color="info" %}}
-[View entities](/refguide/view-entities/) were introduced in [Studio Pro 10.19](/releasenotes/studio-pro/10.19/) as a beta feature. To enable this feature in your app, set the OQL version to version 2 by clicking **App** > **Settings** > **Runtime**.
+[View entities](/refguide/view-entities/) is currently in beta. To enable this feature in your app, set the OQL version to version 2 by clicking **App** > **Settings** > **Runtime**.
 {{% /alert %}}
 
 You can also add [annotations](/refguide/annotations/) to your domain model to remind yourself, and other team members, how it is to be used.
@@ -61,7 +61,7 @@ While data in non-persistable and external entities is maintained in the memory 
 
 In the database, every entity is stored in a separate table and has columns for the attributes defined in Studio Pro (except those which are calculated) and the system attributes. Each row of the table contains the data for an object of this particular entity type, and every entity table contains a column holding a unique identifier for the object. If an entity has specializations there is also a column indicating which specialization the object belongs to.
 
-Associations are stored in association tables with columns holding the identifiers (ID) of both associated objects. This allows for more flexibility when creating your domain model. In Mendix 10.21 and above, you can also choose to store direct associations for one-to-one and one-to-many associations. For more information, see [Association Storage Options](/refguide/association-storage/).
+Associations are stored in association tables with columns holding the identifiers (ID) of both associated objects. This allows for more flexibility when creating your domain model. You can also choose to store direct associations for one-to-one and one-to-many associations. For more information, see [Association Storage Options](/refguide/association-storage/).
 
 {{% alert color="info" %}}
 Mendix apps cannot share data by sharing the same database. If you want two apps to share the same database, then you need to share the data from one app to the other using APIs. In Mendix, these are supported by external entities or the REST and OData services described in the [Integration](/refguide/integration/) section of the Studio Pro Guide. This is referred to as a microservices architecture.
@@ -105,7 +105,7 @@ The entity `Order` is stored in the table `module$order` which is shown below. I
 #### OrderLine Entity
 
 {{% alert color="info" %}}
-The description of the `OrderLine` includes direct associations, which were introduced in Mendix 10.21.0. See [Association Storage Options](/refguide/association-storage/) for more information.
+The description of the `OrderLine` includes direct associations. See [Association Storage Options](/refguide/association-storage/) for more information.
 {{% /alert %}}
 
 The entity `OrderLine` is stored in the table `module$orderline` which is shown below. It is similar to the table of the entity `Order`. `Orderline` also has an association, `OrderLine_Order` associating each order line with the order it belongs to. This is implemented as a direct association, so the information is stored in the `module$orderline` table, as shown below.
@@ -120,4 +120,4 @@ The entity `OrderLine` is stored in the table `module$orderline` which is shown 
 ## Read More
 
 * [Configuring a Domain Model](/refguide/configuring-a-domain-model/)
-* [Maia Domain Model Generator](/refguide/domain-model-generator/)
+* [Maia for Domain Model](/refguide/maia-for-domain-model/)

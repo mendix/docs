@@ -7,7 +7,7 @@ description: "Concepts and usage of the task queue"
 
 ## Introduction
 
-Using a **Task Queue** allows you to run microflows or Java actions asynchronously while controlling the number of tasks that are executed simultaneously by assigning them to a task queue. You can configure the task queue to control the maximum load put on your application by these tasks during peak usage while still ensuring all microflows and Java actions are eventually executed.
+Using a **Task Queue** allows you to run microflows or Java actions asynchronously while controlling the number of tasks that are active simultaneously by assigning them to a task queue. You can configure the task queue to control the maximum load put on your application by these tasks during peak usage while still ensuring all microflows and Java actions are eventually run.
 
 ## Configuration
 
@@ -17,15 +17,15 @@ Microflows or Java actions can be scheduled to run in the background when they a
 
 #### Process Flow When Adding a Task to a Task Queue
 
-Scheduling a microflow or Java action to be executed returns immediately. The task will be executed somewhere in the cluster, as soon as possible after the transaction in which it was called completes.
+Scheduling a microflow or Java action to be run returns immediately. The task will be run somewhere in the cluster, as soon as possible after the transaction in which it was called completes.
 
-Because the task is executed in the background, there is no return value. You can only find out if the task ran successfully. For information on how to do that, see [Interfacing the Queue](#interfacing-queue), below.
+Because the task is run in the background, there is no return value. You can only find out if the task ran successfully. For information on how to do that, see [Interfacing the Queue](#interfacing-queue), below.
 
 #### Where Do the Tasks Run?
 
-In a single node scenario, the tasks in a task queue will simply be executed on the single node.
+In a single node scenario, the tasks in a task queue will simply be run on the single node.
 
-In a clustered setting, the Mendix runtime distributes these tasks transparently throughout the cluster. Should a cluster node be shutdown or fail halfway during executing a task, then the remaining cluster nodes will pick it up (eventually, when the node is detected to be down) and re-execute it. This happens automatically and does not need to be managed.
+In a clustered setting, the Mendix runtime distributes these tasks transparently throughout the cluster. Should a cluster node be shutdown or fail halfway during running a task, then the remaining cluster nodes will pick it up (eventually, when the node is detected to be down) and re-run it. This happens automatically and does not need to be managed.
 
 You can control how many tasks can run in parallel on each node or in the whole cluster when you create your task queue. See [Creating Task Queues](#create-queue), below, for more information.
 
@@ -34,12 +34,12 @@ You can control how many tasks can run in parallel on each node or in the whole 
 For microflows and Java actions which are running in a task queue, the conditions in which the task runs changes slightly in the following ways:
 
 * Only committed persistable entities can be passed as parameters to the task. Passing a persistable *New* or *Changed* entity produces a runtime error. Basically, this means an entity must have been committed previously or is committed in the same transaction in which the task is created.
-* The task is not executed immediately. The task is added only to a task queue when (and if) the transaction from which it has been scheduled ends successfully. At that point any cluster node may pick it up.
-* If the execution fails with an exception, the failure is logged in the `System.ProcessedQueueTask` table.
+* The task is not run immediately. The task is added only to a task queue when (and if) the transaction from which it has been scheduled ends successfully. At that point any cluster node may pick it up.
+* If the run fails with an exception, the failure is logged in the `System.ProcessedQueueTask` table.
 
 ### Creating Task Queues {#create-queue}
 
-Background execution is done in so called **Task Queues**. They can be created in Studio Pro as follows:
+Running in the background is done in so called **Task Queues**. They can be created in Studio Pro as follows:
 
 1. Right click on a module or folder.
 2. Select **Add other**.
@@ -53,7 +53,7 @@ Task Queues have a number of threads. Each of these threads can process one task
     
 #### Thread Count Recommendation 
 
-In general, one or two threads should be enough, unless there is a large number of tasks or tasks take a long time and need to execute in parallel. Having many threads will put additional load on the database and should not be done if not needed.
+In general, one or two threads should be enough, unless there is a large number of tasks or tasks take a long time and need to run in parallel. Having many threads will put additional load on the database and should not be done if not needed.
 
 When choosing the number of threads for a task queue, use the following guidelines:
 
@@ -63,7 +63,7 @@ When choosing the number of threads for a task queue, use the following guidelin
 * Keep in mind that using more threads than the number of cores will require additional scheduling and will not necessarily improve the queued task throughput.
 * Be aware that setting the total number of threads across all task queues to a number larger than the allowed number of database connections may cause a connection pool bottle-neck.
 
-### Queueing Microflow Executions{#queuing}
+### Queueing Microflows{#queuing}
 
 #### In Studio Pro {#sp}
 
@@ -71,14 +71,14 @@ In Studio Pro, a [Call Microflow](/refguide/microflow-call/) activity can start 
 
 1. Edit the **Call Microflow** activity.
 2. Check the box **Execute this Microflow in a Task Queue**.
-3. Set **Select Task Queue** to the task queue in which the microflow should be executed.
+3. Set **Select Task Queue** to the task queue in which the microflow should be initiated.
 4. (optionally) Select an automatic retry strategy:
     * with "Fixed retry" the retries will be performed after the given delay, up to the given number of attempts.
     * with "Exponential retry" the length of the delay between the retries is doubled for each retry, up to the given maximum interval.
 
 #### Through the API
 
-The `Core` class in `com.mendix.core` contains a method `microflowCall`. It can be used to schedule a microflow for background execution as in the following example:
+The `Core` class in `com.mendix.core` contains a method `microflowCall`. It can be used to schedule a microflow to run in the background as in the following example:
 
 ```java
 Core.microflowCall("AModule.SomeMicroflow")
@@ -87,9 +87,9 @@ Core.microflowCall("AModule.SomeMicroflow")
   .executeInBackground(context, "AModule.SomeQueueName");
 ```
 
-The method `executeInBackground` takes two parameters: a context and a queue name. The context is only used for creating the task; executing the task will be done with a [new, but equivalent context](#context). See the [API documentation](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/Core.html#microflowCall(java.lang.String)) for more information.
+The method `executeInBackground` takes two parameters: a context and a queue name. The context is only used for creating the task; the task will run with a [new, but equivalent context](#context). See the [API documentation](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/Core.html#microflowCall(java.lang.String)) for more information.
 
-### Queueing Java Action Executions
+### Queueing Java Actions
 
 #### In Studio Pro
 
@@ -97,11 +97,11 @@ In Studio Pro, a [Call Java action](/refguide/microflow-call/) activity can star
 
 1. Edit the **Call Java Action** activity.
 2. Check the box **Execute this Java action in a Task Queue**.
-3. Set **Select Task Queue** to the task queue in which the Java action should be executed.
+3. Set **Select Task Queue** to the task queue in which the Java action should be initiated.
 
 #### Through the API
 
-The `Core` class in `com.mendix.core` contains a method `userActionCall`. It can be used to schedule a Java action for background execution as in the following example:
+The `Core` class in `com.mendix.core` contains a method `userActionCall`. It can be used to schedule a Java action to run in the background as in the following example:
 
 ```java
 Core.userActionCall("AModule.SomeJavaAction")
@@ -109,11 +109,11 @@ Core.userActionCall("AModule.SomeJavaAction")
   .executeInBackground(context, "AModule.SomeQueueName");
 ```
 
-The method `executeInBackground` takes two parameters: a context and a queue name. The context is only used for creating the task; executing the task will be done with a [new, but equivalent context](#context). See the [API documentation](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/Core.html#userActionCall(java.lang.String)) for more information.
+The method `executeInBackground` takes two parameters: a context and a queue name. The context is only used for creating the task; the task will be run with a [new, but equivalent context](#context). See the [API documentation](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/Core.html#userActionCall(java.lang.String)) for more information.
 
 ### Task scheduling {#scheduling}
 
-It is possible to schedule a task to be executed at a specified date/time. This can be done through the API, for instance:
+It is possible to schedule a task to run at a specified date/time. This can be done through the API, for instance:
 
 ```java
 Calendar calendar = Calendar.getInstance();
@@ -159,7 +159,7 @@ The period for a graceful shutdown of queues can be configured as a [custom runt
 |--------------------------------------------|---------------|-----------------------------------------------------------------------------------------|
 | `TaskQueue.ShutdownGracePeriod`            |          10000| Time in ms to wait for task to finish when shutting down.                               |
 | `com.mendix.core.ProcessedTasksCleanupAge` |       86400000| Time in ms after which `ProcessedQueueTask` are deleted automatically (by default this is 365 days for projects migrated from Mendix 9 and 7 days for new projects or projects with an empty database.). |
-| `com.mendix.core.ProcessedTasksCleanupBatchSize` |       10000| Specifies how many System.<wbr>ProcessedQueueTask objects will be removed from the database each time the ProcessedTask cleanup action runs. <br />*This setting was introduced in Mendix version 10.9.0* |
+| `com.mendix.core.ProcessedTasksCleanupBatchSize` |       10000| Specifies how many System.<wbr>ProcessedQueueTask objects will be removed from the database each time the ProcessedTask cleanup action runs. |
 
 {{% alert color="info" %}}
 This grace period is applied twice during the [shutdown](#shutdown) (described below) so the maximum time that the runtime will wait for tasks to end is twice this value.
@@ -167,7 +167,7 @@ This grace period is applied twice during the [shutdown](#shutdown) (described b
 
 ### Interfacing the Queue {#interfacing-queue}
 
-Besides scheduling and executing tasks, the Mendix Platform keeps track of tasks that have been executed in the background: for example, which completed and which failed.
+Besides scheduling and running tasks, the Mendix Platform keeps track of tasks that have been run in the background: for example, which completed and which failed.
 
 Internally, a scheduled or running task is represented by the Mendix entity `System.QueuedTask`. In a high performance setting, this entity should *not* be used directly by user code, because the underlying database table is heavily used. For example counting how many `System.QueuedTask` objects exist at the moment will perform a table scan and might cause a serious slowdown in task processing. You should also not Write directly to `System.QueuedTask`. Instead, mark a task for background execution in the **Call Microflow** or **Call Java Action** activity or using the Mendix Runtime Java API.
 
@@ -178,30 +178,30 @@ Tasks that have been processed, that is have completed or failed, are saved as o
 
 See [Cleaning Up Old Processed Tasks](#cleanup) for details about the cleanup of `System.ProcessedQueueTask` objects in the database.
 
-### Execution Context {#context}
+### Context{#context}
 
 Tasks now run in an equivalent context to the one in which they were scheduled. This has the following effect:
 
 In case where **Apply entity access** is set to *true*, the following rules apply:
 
-* When a user is logged in, the task will be executed in a new context for the same named user. This context will be the same as if the user is logged in. 
-* When no user is logged in, the task will be executed in a new anonymous context. This context will be for a new anonymous user with the same language and time zone as the original user.
+* When a user is logged in, the task will be run in a new context for the same named user. This context will be the same as if the user is logged in. 
+* When no user is logged in, the task will be run in a new anonymous context. This context will be for a new anonymous user with the same language and time zone as the original user.
 
 There is one exception to the above rules:
 
-* When a system context is used to schedule the task using the [Mendix Runtime Java API](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/actionmanagement/ActionCallBuilder.html#executeInBackground(com.mendix.systemwideinterfaces.core.IContext,java.lang.String)), the task will be executed in a new system context, regardless of the **Apply entity access** setting.
+* When a system context is used to schedule the task using the [Mendix Runtime Java API](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/actionmanagement/ActionCallBuilder.html#executeInBackground(com.mendix.systemwideinterfaces.core.IContext,java.lang.String)), the task will be run in a new system context, regardless of the **Apply entity access** setting.
 
 ### Task Status
 
 The **Status** attribute of `System.QueuedTask` and `System.ProcessedQueueTask` reflects the state that a background task is in. The values are:
 
-* `Idle`: The task was created and is waiting to be executed.
-* `Running`: The task is being executed.
-* `Completed`: The task executed successfully. A `System.ProcessedQueueTask` is added to reflect this.
-* `Failed`: The task is no longer executing, because an exception occurred. A `System.ProcessedQueueTask` containing the exception is added to reflect the failure. The task will not be retried.
+* `Idle`: The task was created and is waiting to be run.
+* `Running`: The task is being run.
+* `Completed`: The task ran successfully. A `System.ProcessedQueueTask` is added to reflect this.
+* `Failed`: The task is no longer running, because an exception occurred. A `System.ProcessedQueueTask` containing the exception is added to reflect the failure. The task will not be retried.
 * `Retrying`: Same as `Failed` but the task will be retried.
-* `Aborted`: The task is no longer executing, because the cluster node that was executing it went down. A `System.ProcessedQueueTask` is added to reflect this. The task will be retried on another cluster node.
-* `Incompatible`: The task never executed, because the model changed in such a way that it cannot be executed anymore. This could be because the microflow was removed/renamed, the arguments were changed or the Task Queue was removed.
+* `Aborted`: The task is no longer running, because the cluster node that was running it went down. A `System.ProcessedQueueTask` is added to reflect this. The task will be retried on another cluster node.
+* `Incompatible`: The task never ran, because the model changed in such a way that it cannot be run anymore. This could be because the microflow was removed/renamed, the arguments were changed or the Task Queue was removed.
 
 ### Model Changes
 
@@ -215,7 +215,7 @@ If any of these condition checks fail, tasks are moved to `System.ProcessedQueue
 
 ### Shutdown {#shutdown}
 
-During shutdown, the `TaskQueueExecutors` will stop accepting new tasks. Running tasks are allowed a [grace period](#configuration) to finish. After this period, the runtime will send an interrupt to all task threads that are still running and again allow a grace period for them to finish. After the second grace period the runtime just continues shutting down, eventually aborting the execution of the tasks. The aborted tasks will be reset, so that they are re-executed later or on another cluster node. In development mode, the first grace period is shortened to 1 second.
+During shutdown, the `TaskQueueExecutors` will stop accepting new tasks. Running tasks are allowed a [grace period](#configuration) to finish. After this period, the runtime will send an interrupt to all task threads that are still running and again allow a grace period for them to finish. After the second grace period the runtime just continues shutting down, eventually aborting any running tasks. The aborted tasks will be reset, so that they are re-run later or on another cluster node. In development mode, the first grace period is shortened to 1 second.
 
 {{% alert color="info" %}}
 Interrupting task threads may cause them to fail. These tasks will be marked as `Aborted` and retried at a later time.
@@ -223,9 +223,9 @@ Interrupting task threads may cause them to fail. These tasks will be marked as 
 
 ### Cleaning Up Old Processed Tasks {#cleanup}
 
-The execution of a task produces a `System.ProcessedQueueTask` object in the database. Over time these accumulate and the table can grow large.
+Running a task produces a `System.ProcessedQueueTask` object in the database. Over time these accumulate and the table can grow large.
 
-The `System.ProcessedQueueTask` can be cleaned up automatically by specifying the [`com.mendix.core.ProcessedTasksCleanupAge`](/refguide/custom-settings/#commendixcoreProcessedTasksCleanupAge) runtime setting. This setting specifies (in milliseconds) how old objects in the table have to be before they are automatically cleaned up. Only objects with the "Completed" status are cleaned up.  The cleanup action will be run every [`ClusterManagerActionInterval`](/refguide/custom-settings/#general), and does not produce any log messages. The cleanup action will remove 10000 objects each time it runs. In Mendix 10.9.0 and later, this can be configured with the [`com.mendix.core.ProcessedTasksCleanupBatchSize`](/refguide/custom-settings/#commendixcoreProcessedTasksCleanupBatchSize) runtime setting.
+The `System.ProcessedQueueTask` can be cleaned up automatically by specifying the [`com.mendix.core.ProcessedTasksCleanupAge`](/refguide/custom-settings/#commendixcoreProcessedTasksCleanupAge) runtime setting. This setting specifies (in milliseconds) how old objects in the table have to be before they are automatically cleaned up. Only objects with the "Completed" status are cleaned up.  The cleanup action will be run every [`ClusterManagerActionInterval`](/refguide/custom-settings/#general), and does not produce any log messages. The cleanup action will remove 10000 objects each time it runs. This can be configured with the [`com.mendix.core.ProcessedTasksCleanupBatchSize`](/refguide/custom-settings/#commendixcoreProcessedTasksCleanupBatchSize) runtime setting.
 
 {{% alert color="info" %}}
 When turning on the automatic cleanup after having used tasks for a long time, there might be many objects to clean up, which will be initiated when the runtime starts. This may cause additional load on the database, but will not block the startup. It is recommended not to do this during a busy period.
@@ -239,7 +239,7 @@ A [Log Node](/refguide/logging/#mendix-nodes) named `Queue` exists specifically 
 
 ## Other
 
-Executing **Find usages** on a task queue only finds the occurrences of that queue in microflows.
+Searching using **Find usages** on a task queue only finds the occurrences of that queue in microflows.
 
 {{% alert color="info" %}}
 Invocations from Java actions are not found.
@@ -256,9 +256,9 @@ You can use the [Task Queue Helpers](https://marketplace.mendix.com/link/compone
 
 Task queues have the following limitations:
 
-* Microflows or Java actions that are executed in the background execute as soon as possible in the order they were created, but possibly in parallel. They are consumed in FIFO order, but then executed in parallel in case of multiple threads. If you want to ensure that only a single microflow or action is executed at any point in time, you can do this by [creating a Tasks Queue](#create-queue) with a cluster wide scope and a single thread.
-* Microflows or Java actions that are executed in the background can *only* use the following types of parameters: Boolean, Integer/Long, Decimal, String, Date and time, Enumeration, committed Persistable Entity.
-* Background microflows or Java actions will start execution as soon as the transaction in which they are created is completed. This ensures that any data that is needed by the background microflow or Java action is committed as well. It is not possible to start a background microflow or Java action immediately, halfway during a transaction. Note that if the transaction is rolled back, the task is not executed at all.
+* Microflows or Java actions that are run in the background run as soon as possible in the order they were created, but possibly in parallel. They are consumed in FIFO order, but then run in parallel in case of multiple threads. If you want to ensure that only a single microflow or action is run at any point in time, you can do this by [creating a Tasks Queue](#create-queue) with a cluster wide scope and a single thread.
+* Microflows or Java actions that are run in the background can *only* use the following types of parameters: Boolean, Integer/Long, Decimal, String, Date and time, Enumeration, committed Persistable Entity.
+* Background microflows or Java actions will start running as soon as the transaction in which they are created is completed. This ensures that any data that is needed by the background microflow or Java action is committed as well. It is not possible to start a background microflow or Java action immediately, halfway during a transaction. Note that if the transaction is rolled back, the task is not run at all.
 
 ### Behavior If App Stops Unexpectedly
 
@@ -272,9 +272,9 @@ Tasks are stored in the database in a `System.QueuedTask` table. For each backgr
 
 The tasks are then consumed by executors that perform a `SELECT FOR UPDATE SKIP LOCKS` SQL statement, that will try to claim the next free task. The `SKIP LOCKS` clause will skip over any tasks that are already locked for update by other executors. The corresponding `UPDATE` changes the `Status` to `Running` and sets the owner of the task in the `XASId` and `ThreadId` attributes.
 
-After the task has been executed, it is moved to be an object of the `System.ProcessedQueueTask` entity with `Status` `Completed` or `Failed`. If the task failed with an exception, this is included in the `ErrorMessage` attribute.
+After the task has been run, it is moved to be an object of the `System.ProcessedQueueTask` entity with `Status` `Completed` or `Failed`. If the task failed with an exception, this is included in the `ErrorMessage` attribute.
 
-Arguments are stored in the `Arguments` attribute as JSON values. Arguments can be any primitive type ([variable](/refguide/variable-activities/)) or a committed persistable object, which is included in the `Arguments` field by its Mendix identifier. Upon execution of the task, the corresponding object is retrieved from the database using the Mendix identifier. For this reason the persistable object must be committed before the task executes, because otherwise a runtime exception will occur.
+Arguments are stored in the `Arguments` attribute as JSON values. Arguments can be any primitive type ([variable](/refguide/variable-activities/)) or a committed persistable object, which is included in the `Arguments` field by its Mendix identifier. When the task is run, the corresponding object is retrieved from the database using the Mendix identifier. For this reason the persistable object must be committed before the task runs, because otherwise a runtime exception will occur.
 
 When a node crashes, this is eventually detected by another cluster node, because it no longer updates its heartbeat timestamp. At this point the other node will reset all tasks that were running on the crashed node. The reset performs the following actions:
 
@@ -283,8 +283,8 @@ When a node crashes, this is eventually detected by another cluster node, becaus
 * increment the `Retried` field
 * clear the `XASId` and `ThreadId` fields
 
-The task will then automatically be consumed again by one of the remaining nodes in the cluster. Effectively, this means that a task is guaranteed to be executed at least once.
+The task will then automatically be consumed again by one of the remaining nodes in the cluster. Effectively, this means that a task is guaranteed to be run at least once.
 
 {{% alert color="warning" %}}
-Under normal circumstances, a task is executed exactly once, but in the face of node failures a task may be (partially) executed multiple times. This is the best guarantee that a distributed system can provide.
+Under normal circumstances, a task is run exactly once, but in the face of node failures a task may be (partially) run multiple times. This is the best guarantee that a distributed system can provide.
 {{% /alert %}}

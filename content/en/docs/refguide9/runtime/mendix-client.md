@@ -247,10 +247,9 @@ The flow described here is for production apps. During development, the flow is 
 2. The shell app loads a native bundle. This is the equivalent of the Mendix Client resources used by the Mendix Client running in a browser. It contains, for example, the Mendix Client code and page definitions. However, it is held locally on the device rather than centrally with the Runtime Server.
 3. If there is not a valid authentication token on the device, the Mendix Client contacts the Runtime Server and authenticates the end-user and gets any additional configuration required from the Runtime Server.
 4. If this is the first time the app has been started, or the first time after an update to the app, the Mendix Client performs a synchronization with the Runtime Server.
-5. The Mendix Client checks the resources stored in Visual Studio App Center for updates to the native bundle. This enables the app to keep up-to-date without needing to download new versions of the app from the app store.
 
     *The Mendix Client is now ready to start interacting with the end-user and will repeat the following steps for as long as the continues to run.*
 
-6. The Mendix Client prepares a page using the data on the device.
-7. The Mendix Client presents the page to the end-user.
-8. The Mendix Client reacts to the end-user input.
+5. The Mendix Client prepares a page using the data on the device.
+6. The Mendix Client presents the page to the end-user.
+7. The Mendix Client reacts to the end-user input.

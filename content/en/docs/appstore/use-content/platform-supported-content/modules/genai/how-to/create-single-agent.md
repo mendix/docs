@@ -1,14 +1,14 @@
 ---
-title: "Create a Single Agent"
+title: "Create Your First Agent"
 url: /appstore/modules/genai/how-to/howto-single-agent/
-linktitle: "Creating a Single Agent"
+linktitle: "Creating Your First Agent"
 weight: 60
-description: "This document guides you through creating an agent by integrating knowledge bases, function calling, and prompt management in your Mendix application to build powerful GenAI use cases."
+description: "This document guides you through creating your first agent by integrating knowledge bases, function calling, and prompt management in your Mendix application to build powerful GenAI use cases."
 ---
 
 ## Introduction
 
-This document explains how to create a single-agent in your smart app. The agent combines powerful GenAI capabilities such as [knowledge base retrieval (RAG)](/appstore/modules/genai/rag/), [function calling](/appstore/modules/genai/function-calling/), and [prompt management](/appstore/modules/genai/genai-for-mx/prompt-management/) to facilitate an AI-enriched use case. To do this, you can use your existing app or follow the [Build a Smart App from a Blank GenAI App](/appstore/modules/genai/how-to/blank-app/) guide to start from scratch, as demonstrated in the sections below.
+This document explains how to create your agent in your Mendix app. The agent combines powerful GenAI capabilities such as [knowledge base retrieval (RAG)](/appstore/modules/genai/rag/), [function calling](/appstore/modules/genai/function-calling/), and [prompt management](/appstore/modules/genai/genai-for-mx/prompt-management/) to facilitate an AI-enriched use case. To do this, you can use your existing app or follow the [Build a Smart App from a Blank GenAI App](/appstore/modules/genai/how-to/blank-app/) guide to start from scratch, as demonstrated in the sections below.
 
 Through this document, you will:
 
@@ -16,9 +16,16 @@ Through this document, you will:
 * Understand how to enrich your use case with function calling.
 * Ingest your Mendix data into a knowledge base and enable the model of your choice to use it.
 
+The type of agent you can build is a single-turn agent, which means that:
+
+* It is a one-shot interactions (single question-answer pair).
+* No conversation memory is needed.
+* It is focused on specific task completion. 
+* Uses knowledge base and function calling.
+
 ### Prerequisites {#prerequisites}
 
-Before building a single agent in your app, make sure you meet the following requirements:
+Before building a single-turn agent in your app, make sure you meet the following requirements:
 
 * An existing app: Either from your existing app or start building from a pre-configured set up [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934) where the marketplace modules are already installed.
 
@@ -34,17 +41,17 @@ Before building a single agent in your app, make sure you meet the following req
 
 * Basic understanding Function Calling and Prompt Engineering: Learn about [Function Calling](/appstore/modules/genai/function-calling/) and [Prompt Engineering](/appstore/modules/genai/get-started/#prompt-engineering) to use them within the Mendix ecosystem.
 
-## Single Agent Use Case
+## Single-turn Agent Use Case
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-singleagent/structure_singleagent.jpg" >}}
 
-The single agent combines multiple capabilities of the Mendix GenAI suite. In this document, you will set up the logic to start using LLM calls to dynamically determine which in-app and external information is needed based on user input. The system retrieves the necessary information, uses it to reason about the actions to be performed, and handles execution, while keeping the user informed and involved where needed. The end result is an example of an agent in a Mendix app. In this use case, the user can ask IT-related questions to the model, which assists in solving problems. The model has access to a knowledge base containing historical, resolved tickets that can help identify suitable solutions. Additionally, function microflows are available to enrich the context with relevant ticket information, for example, the number of currently open tickets or the status of a specific ticket.
+The agent combines multiple capabilities of the Mendix GenAI suite. In this document, you will set up the logic to start using LLM calls to dynamically determine which in-app and external information is needed based on user input. The system retrieves the necessary information, uses it to reason about the actions to be performed, and handles execution, while keeping the user informed and involved where needed. The end result is an example of an agent in a Mendix app. In this use case, the user can ask IT-related questions to the model, which assists in solving problems. The model has access to a knowledge base containing historical, resolved tickets that can help identify suitable solutions. Additionally, function microflows are available to enrich the context with relevant ticket information, for example, the number of currently open tickets or the status of a specific ticket.
 
 This document guides you through the following steps:
 
 1. Create a prompt in the UI that fits the use case. Learn how to iterate on prompts and fine-tune them for production use.
 2. Generate ticket data and ingest historical information into a knowledge base.
-3. Build a simple user interaction page and add a single agent to generate responses based on user input.
+3. Build a simple user interaction page and add a single-turn agent to generate responses based on user input.
 
 ## Setup Your Application
 
@@ -311,6 +318,6 @@ If you are looking for more technical details and an example implementation, che
 
 Before testing, ensure that you have completed the Mendix Cloud GenAI configuration as described in the [Build a Chatbot from Scratch Using the Blank GenAI App](/appstore/modules/genai/how-to/blank-app/), particularly the [Infrastructure Configuration](/appstore/modules/genai/how-to/blank-app/#config) section. 
 
-Congratulations! Your single agent is now ready to use and enriched by powerful capabilities such as prompt management, function calling, and knowledge base retrieval.
+Congratulations! Your agent is now ready to use and enriched by powerful capabilities such as prompt management, function calling, and knowledge base retrieval.
 
 If an error occurs, check the **Console** in Studio Pro for detailed information to assist in resolving the issue.

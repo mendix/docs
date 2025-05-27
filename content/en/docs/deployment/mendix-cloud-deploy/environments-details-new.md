@@ -536,7 +536,7 @@ The status of a maintenance task can be one of:
     * You can operate the environment as usual. This can happen, for example, if the database of your environment was scheduled to be upgraded but it is already on the target version
 
 {{% alert color="info" %}}
-You will automatically receive email notifications about planned maintenance.
+The Technical Contact for the application will automatically receive email notifications about planned maintenance.
 {{% /alert %}}
 
 ## The Tags Tab{#tags}

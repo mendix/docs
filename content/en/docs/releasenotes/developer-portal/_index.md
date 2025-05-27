@@ -6,7 +6,7 @@ description: "Release notes for app management and other parts of Apps"
 weight: 20
 cascade:
     - numberless_headings: true
-#This document is mapped to the landing page, update the link there if renaming or moving the doc file.
+# This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
 These release notes cover changes to the app management functionality and other features of the [Apps](/developerportal/).
@@ -17,8 +17,20 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](/rele
 
 To see the current status of the Mendix Portal, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
+[//]: # (The latest release date of this file is on the landing page - update latest-releases.html)
+
 ## 2025
 
+### April 24, 2025
+
+#### Improvements 
+
+* We have made the following improvements to the feedback management page:
+
+    * DataGrid 2 now allows users to customize what they see on their feedback overview
+    * We have improved performance for large sets of feedback
+    * The date filters have been reset and the 6 month restriction has been removed
+    
 ### March 30, 2025
 
 #### New Features
@@ -31,7 +43,7 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 #### New Features
 
-* We introduced a new beta feature for Mendix AI Assistance (Maia) in Epics: **Maia Create User Story**. It helps you to easily create stories. You can access it on the [Board](/developerportal/project-management/epics/board/) or the [Planning](/developerportal/project-management/epics/planning/) page under **Project Management**.
+* We introduced a new feature for Mendix AI Assistance (Maia) in Epics: **Maia Create User Story**. It helps you to easily create stories. You can access it on the [Board](/developerportal/project-management/epics/board/) or the [Planning](/developerportal/project-management/epics/planning/) page under **Project Management**.
 
 It is turned off by default. Scrum Master can switch it on in the Project Management settings.
 

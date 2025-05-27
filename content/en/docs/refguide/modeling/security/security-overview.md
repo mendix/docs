@@ -2,12 +2,7 @@
 title: "Security Overview"
 url: /refguide/security-overview/
 weight: 20
-beta: true
 ---
-
-{{% alert color="info" %}}
-This feature was introduced in Mendix 10.18 and is currently in beta. For more information, see [Beta and Experimental Releases](/releasenotes/beta-features/).
-{{% /alert %}}
 
 ## Introduction
 
@@ -96,6 +91,10 @@ To export the **Security Overview**, click the **Export to Excel** button. This 
     3. Module Role.
     4. Anonymous role: Specifies whether this user roles is an anonymous user role.
     5. Administrator role: Specifies whether this user role is the administrator user role.
+
+## CLI export
+
+The security overview can be exported to a JSON or xlsx file with the `mx` command line tool. See the [export-security-overview](/refguide/mx-command-line-tool/security/#export-security-overview) command.
 
 ## Read More
 

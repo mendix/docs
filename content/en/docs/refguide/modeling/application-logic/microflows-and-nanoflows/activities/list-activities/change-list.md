@@ -54,7 +54,7 @@ Defines the type of change that is applied to the list.
 If you do not want duplicates in your (microflow) list, you can either remove the object (or objects) first, or use the **Contains** [list operation](/refguide/list-operation/) to examine the list before adding the object (or objects).
 
 {{% alert color="info" %}}
-In Studio Pro 10.9 and below, this works differently in nanoflows and microflows. In a nanoflow, objects will not be added if they are already in the list, whereas in a microflow, the same object can be added multiple times. In Studio Pro 10.10 and above, this difference is resolved: like in microflows, you can add duplicate objects in nanoflows regardless of whether they are added in a sub-nanoflow or outside of it.
+Like in microflows, you can add duplicate objects in nanoflows regardless of whether they are added in a sub-nanoflow or outside of it.
 {{% /alert %}}
 
 ### Value

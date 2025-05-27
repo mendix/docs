@@ -19,6 +19,7 @@ There are below versions of the Forgot Password module, depending on whether you
 
 | Mendix Version | Forgot Password Version |
 | --- | --- |
+| 10.21.01 and above | 6.3.0 |
 | 10.12.10 and above | 6.1.0 |
 | 10.6.0 and above | 6.0.0 |
 | 9.20.0 and above | 5.1.0 |
@@ -100,7 +101,8 @@ In these instructions, it is assumed that your main module is **MyFirstModule**.
         The **Nav_GuestHomePage** microflow is the home page for an anonymous user. This microflow either shows the login page or triggers the deep link process which performs the reset password function.
     * Add the menu item **ForgotPasswordConfiguration** to the app navigation. Link this item to the **ForgotPassword.ForgotPasswordConfiguration_Edit** page and assign it to the **Administrator** user role.
         {{% alert color="warning" %}}The **ForgotPasswordConfiguration** page should be accessible to the administrator only. It allows the administrator to configure the email template and deep link, and it shows all the open password reset requests.{{% /alert %}}
-1. If you are using version 5.3.0 or above of the Forgot Password module, open [Module Security](/refguide/module-security/#entity-access) for the **Email_Connector** module in the Marketplace. On the **Entity Access** tab, assign read-only access to the **Email_Connector.EmailConnectorAdmin** module role on the **EmailTemplateLanguage_EmailTemplate** template.
+1. For version 6.3.0 and above of the Forgot Password module, go to the **Edit** tab of the Studio Pro, click **New features**, and disable the **Access Rules editor**. Then, open the [Module Security](/refguide/module-security/#entity-access) for the **Email_Connector** module in the Marketplace. In the **Entity Access** tab, assign read-only access to the **Email_Connector.EmailConnectorAdmin** module role for the **EmailTemplateLanguage_EmailTemplate** template. If you are using version 5.3.0 or above of the module, you do not need to disable the **Access Rules Editor** and can proceed with the remaining steps as described above.
+
 1. Run the application.
 1. Sign in as **demo_administrator** from [Demo Users](/refguide/demo-users/) and choose the **ForgotPasswordConfiguration** menu item.
 1. In the **Reset Password Email** tab, do the following:

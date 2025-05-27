@@ -122,8 +122,8 @@ The core information of the configuration to connect to an OPC-UA server must be
 * `SecurityPolicyURI` – This determines what algorithm to use to encrypt and sign the data.
 * `_IsConnected`: This is set to *true* when connection is open.
 * `IsWritingDataValueOnly`: This determines how the connector writes data.
-    *  If *true* – the connector writes only the DataValue to the node.
-    *  If *false* – the connector writes the DataValue, SourceTimestamp, and StatusCode to the node.
+    * If *true* – the connector writes only the DataValue to the node.
+    * If *false* – the connector writes the DataValue, SourceTimestamp, and StatusCode to the node.
 
 ### Identity Token {#identity-token}
 

@@ -522,7 +522,7 @@ You can view and change the preferred maintenance. For more information about ma
 When a maintenance operation is planned, it appears under **Planned Maintenance**. Each task card will show the purpose of the maintenance, when it is scheduled and its status.
 
 {{% alert color="info" %}}
-Maintenance topics (for example, "PostgreSQL 14 Upgrade") have a predefined period (start date and deadline). Once the start date is reached, you will get the option to execute it immediately, regardless of the Maintenance Window configured for the environment, by clicking **Execute Now**.
+Maintenance topics (for example, "PostgreSQL 14.11 Minor Upgrade") have a predefined period (start date and deadline). Once the start date is reached, you will get the option to start it immediately, regardless of the Maintenance Window configured for the environment, by clicking **Execute Now**. The maintenance task will be queued and usually runs within a few minutes.
 {{% /alert %}}
 
 The status of a maintenance task can be one of:

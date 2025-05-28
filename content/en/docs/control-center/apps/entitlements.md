@@ -9,13 +9,12 @@ no_list: true
 
 ## Introduction
 
-The **Entitlements** page is a self-service tool that displays transactions which use cloud tokens, and that helps manage plan change requests. It also displays the number of entitled, consumed, and remaining cloud tokens.
+The **Entitlements** page is a self-service tool that displays transactions which use Mendix Cloud Tokens, and that helps manage plan change requests. It also displays the number of entitled, consumed, and remaining Mendix Cloud Tokens.
 
 ### Mendix Cloud Tokens Explained {#cloud-tokens}
 
-Mendix cloud tokens are annual capacity-based virtual credits that allow you to provision and allocate any Mendix [cloud resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) for your Mendix Cloud deployments.
+Mendix Cloud Tokens are a type of Token that can be used within the Mendix Platform to consume Cloud Resources, such as  [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) (CRPs), for your Mendix Cloud deployments. The contractual definitions of Tokens and Mendix Cloud Tokens can be found on our [Order Form Definitions](https://www.mendix.com/legal/platform-usage/order-form-definitions/#section-9) page.
 
-You can see available and used cloud tokens on the **Entitlements** page. If you cannot, contact your Customer Success Manager (CSM).
 
 {{% alert color="info" %}}
 From now on, you can only purchase and provision Standard, Premium, and Premium Plus cloud resource packs, not legacy resource packs. The cloud tokens for legacy resource packs that you already purchased are credited back to your account if you deprovision an environment.
@@ -25,10 +24,33 @@ From now on, you can only purchase and provision Standard, Premium, and Premium 
 
 For the technical details of each cloud resource pack, refer to the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) section in *Mendix Cloud*.
 
-The following tables show how many cloud tokens each cloud resource pack costs:
+The number of Mendix Cloud Tokens required for each type of Cloud Resource Pack is specified in the [Cloud Resource Packs](#crps) section of this document. All your current CRPs will be converted to their equivalent Mendix Cloud Tokens and aggregated with any other Mendix Cloud Tokens. You can then use these to provision Cloud resources (of any type and size) as specified in your contracts. 
 
-| Standard Resource Packs | Cloud Tokens |
-| --- | --- |
+You can see available and used Mendix Cloud Tokens on the **Entitlements** page. If you cannot, contact your Customer Success Manager (CSM).
+
+### Legacy Cloud Resource Packs
+
+{{% alert color="info" %}}
+It is no longer possible to purchase Legacy Cloud Resources Packs. It is now only possible to purchase and provision the following CRPs: Standard; Premium; and Premium Plus. Any legacy Cloud Resource Packs you already purchased will be converted into Mendix Cloud Tokens if they are deprovisioned. This will use the rate specified in the [Cloud Resource Packs](#crps) section and the Mendix Cloud Tokens will be added to your Token pool.
+{{% /alert %}}
+
+### Key Takeaways
+
+* Mendix Cloud Tokens are a specific type of token used to access Cloud Resources in the Mendix Platform.
+* The number of tokens required depends on the CRP you want, as listed below.
+* You buy tokens in advance and can use them to obtain CRPs.
+* If you no longer need those resources, you can reuse the token to obtain other CRPs or keep it to be used later.
+
+## Cloud Resource Packs {#crps}
+
+{{% alert color="info" %}}
+For the technical details of each cloud resource pack, see the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) section of *Mendix Cloud*.
+{{% /alert %}}
+
+The tables below show how many Mendix Cloud Tokens each CRP requires:
+
+| Standard Resource Packs | Mendix Cloud Tokens |
+| --- | --: |
 | XS21 | 10 |
 | S21 | 20 |
 | M21 | 40 |
@@ -39,7 +61,7 @@ The following tables show how many cloud tokens each cloud resource pack costs:
 | 4XL21 | 1280 |
 | 4XL-5XLDB | 2240 |
 
-|Premium Resource Packs | Cloud Tokens |
+|Premium Resource Packs | Mendix Cloud Tokens |
 | --- | --- |
 | S21 | 30 |
 | M21 | 60 |
@@ -50,16 +72,16 @@ The following tables show how many cloud tokens each cloud resource pack costs:
 | 4XL21 | 1920 |
 | 4XL-5XLDB | 3360 |
 
-|Premium Plus Resource Packs | Cloud Tokens |
-| --- | --- |
+|Premium Plus Resource Packs | Mendix Cloud Tokens |
+| --- | --: |
 | XL21 | 400 |
 | 2XL21 | 800 |
 | 3XL21 | 1600 |
 | 4XL21 | 3200 |
 | 4XL-5XLDB | 5600 |
 
-| Legacy Resource Packs | Cloud Tokens |
-| --- | --- |
+| Legacy Resource Packs | Mendix Cloud Tokens |
+| --- | --: |
 | XS20 | 10 |
 | S20 | 20 |
 | M20 | 40 |
@@ -81,12 +103,12 @@ The following tables show how many cloud tokens each cloud resource pack costs:
 
 The **Entitlements** page contains the following tabs:
 
-* **Transactions** – Allows you to monitor your cloud token consumption.
+* **Transactions** – Allows you to monitor your Mendix Cloud Token consumption.
 * **Requests** – Allows you to view and manage plan change requests.
 
 ### The Transactions Tab
 
-On the **Transactions** tab, you can view a list of transactions that use cloud tokens.
+On the **Transactions** tab, you can view a list of transactions that use Mendix Cloud Tokens.
 
 {{< figure src="/attachments/control-center/apps/entitlements/entitlements-transactions_beta.png" alt="The Transactions tab of the Entitlements page">}}
 
@@ -94,10 +116,10 @@ These are the details available for each transaction:
 
 * **Transaction** – The identifier of the transaction, made up of the provisioned plan, and the impacted application and environment.
 * **Transaction Date** - The date when the transaction occurred.
-* **Quantity** - The number of cloud tokens credited or debited. <!-- check -->
-* **Tokens per Unit** – The number of cloud tokens included in the transaction. <!-- check -->
+* **Quantity** - The number of Mendix Cloud Tokens credited or debited. <!-- check -->
+* **Tokens per Unit** – The number of Mendix Cloud Tokens included in the transaction. <!-- check -->
 * **Transaction Type** – This can be either **Credit** or **Debit**.
-* **Cloud Tokens** – The number of cloud tokens consumed within the transaction. <!-- check -->
+* **Cloud Tokens** – The number of Mendix Cloud Tokens consumed within the transaction. <!-- check -->
 
 ### The Requests Tab {#plan-change-requests-tab}
 

@@ -16,22 +16,22 @@ This feature is in Public Beta. For more information, see [Beta Releases](/relea
 
 Mendix offers several license plans including Free, Basic, Standard, Premium, and Premium Plus. For more information, see [Pricing](https://www.mendix.com/pricing/).
 
-This document explains how to change your [environment's plan](/developerportal/deploy/mendix-cloud-deploy/#plans-1) in Mendix Cloud. Plan changes can be applied independently to each environment. For example, the Technical Contact can upgrade the application's acceptance environment while keeping production on its current plan.
+This document explains how to change your environment's [plan](/developerportal/deploy/mendix-cloud-deploy/#plans-1) in Mendix Cloud. Plan changes can be applied independently to each environment. For example, the Technical Contact can upgrade the application's acceptance environment while keeping production on its current plan.
 
 {{% alert color="info" %}}
 It is only possible to change and upgrade to higher-tier plans, not downgrade. Upgrades from legacy plans to new plans are supported, but not from new plans to legacy plans. 
 {{% /alert %}}
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 Before requesting a plan change, verify the following:
 
 * The app environment is deployed.
 * The app runs on Kubernetes.
-* The app's tenant is self service enabled. To activate this capability for your company, contact your Customer Success Manager.
-* You are the [Technical Contact](/support/#technical-contacts) for the app (only the Technical Contact can submit a request).
+* The app's tenant is self-service enabled. To activate this capability for your company, contact your Customer Success Manager.
+* You are the [Technical Contact](/support/#technical-contacts) for the app (only Technical Contacts can submit a plan change request).
 
-## Changing Plan
+## Changing Plan {#changing-plan}
 
 {{% alert color="info" %}}
 This feature is only visible to the Technical Contact.
@@ -40,9 +40,9 @@ This feature is only visible to the Technical Contact.
 To change an environment's plan, follow these steps:
 
 1. Go to [Apps](https://sprintr.home.mendix.com/) and click **Environments** on your app. 
-2. On the **Environments** page, click the **Overview** tab to view information about your environments.
+2. On the **Environments** page, click the **Overview** tab to view your environments.
 3. Find your target environment.
-4. Use the **Expand** ({{< icon name="chevron-down" >}}) toggle to view detailed information about each environment, such as its environment resources and deployed package.
+4. Use the **Expand** ({{< icon name="chevron-down" >}}) toggle to view detailed information about each environment, such as the environment resources and deployed package.
 5. In the environment resource section, click **Change Plan**. 
 6. In the **Plan Change Request** dialog that appears:
     * On the left side, review your current plan details. This includes:
@@ -59,7 +59,7 @@ To change an environment's plan, follow these steps:
 The app environment will remain on its current plan until the request is approved by a Mendix Admin.
 
 {{% alert color="info" %}}
-Changing plan consumes [cloud tokens](/control-center/entitlements/#cloud-tokens). Only one plan change request can exist per environment at a time. New requests cannot be submitted until the current one is completed.
+Changing plan consumes [Mendix Cloud Tokens](/control-center/entitlements/#cloud-tokens). Only one plan change request can exist per environment at a time. As a result, new requests cannot be submitted until the current one is completed.
 {{% /alert %}}
 
 ## Managing Plan Requests {#manage-plan-requests}
@@ -74,7 +74,7 @@ To access it:
 
 For detailed information on the **Request Overview** tab, refer to the [Request Overview](/developerportal/deploy/environments-redesign/#request-overview) section in *Environments and Deployment*.
 
-This diagram shows the request status' progress from plan change request submission to fulfilled (accepted, rejected, or canceled):
+This diagram shows the progress of the request status from plan change submission to fulfilled (approved, rejected, completed, or failed):
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/plan-change-status.png" >}}
 
@@ -98,7 +98,7 @@ If your request status is **Pending Schedule**:
 2. Click **Schedule Change**.
 3. Choose from the following options:
    * **Execute Now** to apply the change immediately
-   * **Schedule for later** to delay the plan application until the maintenance window
+   * **Schedule for later** to delay the plan application until the next maintenance window
 
 To schedule for later:
 
@@ -111,17 +111,17 @@ After scheduling, the status changes to **Scheduled**. You can still click **Exe
 Applications will be unavailable for up to 45 minutes while the plan change is being applied.
 {{% /alert %}}
 
-### After Scheduling
+### After Scheduling {#after-schedule}
 
 After scheduling, once the plan change process starts:
 
 1. The status changes to **In Progress**.
-2. The process now moves to either **Completed** (if successful) or **Failed** (if an error occurs).
+2. Next, the status progresses to either **Completed** (if successful) or **Failed** (if an error occurs).
 
 {{% alert color="info" %}}
 After a plan change is applied, you cannot change to a new plan for the same environment for the next 6 hours.
 {{% /alert %}}
 
-## Monitoring Updates
+## Monitoring Updates {#monitoring-updates}
 
 To stay informed about changes and status updates, open notifications by clicking on the **Notifications** icon ({{< icon name="alarm-bell" >}}) at the upper-right corner of the Mendix platform.

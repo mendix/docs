@@ -14,8 +14,10 @@ The listen-to-widget data source is a data view specific source that allows a da
 A data view in an image above listens to a data grid. In this example, the data view will display the name of the selected product if one is selected.
 
 List views, template grids, and data grids are list widgets and can be listened to. If no object is selected in the list widget, the data view will remain empty and unresponsive.
-DataGrid2 - First change **Selection** to _Single_ and **Selection method** to _Row click_  to be able to select the DataGrid2 as a **Listen to widget** data source in your dataview.
-Gallery - First change **Selection** to _Single_ to be able to select the DataGrid2 as a **Listen to widget** data source in your dataview.
+
+To enable **Listen to widget** in common data sources, do the following per your use case: 
+* DataGrid2: Change **Selection** to **Single** and **Selection method** to **Row click**  to be able to select a  DataGrid2 as a **Listen to widget** data source in your dataview.
+* Gallery: Change **Selection** to **Single** to be able to select the Gallery as a **Listen to widget** data source in your dataview.
 
 ## 2 Properties
 

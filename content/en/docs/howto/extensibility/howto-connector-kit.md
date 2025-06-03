@@ -238,15 +238,15 @@ Implement the action in Java as follows:
 ```java
 public ImportString(
 		IContext context,
-		java.lang.String _inputString,
-		java.lang.String _importMapping,
-		java.lang.String _resultEntity
+		java.lang.String InputString,
+		java.lang.String ImportMapping,
+		java.lang.String ResultEntity
 	)
 	{
 		super(context);
-		this.InputString = _inputString;
-		this.ImportMapping = _importMapping;
-		this.ResultEntity = _resultEntity;
+		this.InputString = InputString;
+		this.ImportMapping = ImportMapping;
+		this.ResultEntity = ResultEntity;
 	}
 
 	@Override
@@ -262,7 +262,8 @@ public ImportString(
 			return objects.get(0);
 
 		} catch (Exception e) {
-			throw new CoreException("Failed to import JSON string: " + e.getMessage(), e);
+			logger.error(e);
+			throw new MendixRuntimeException(String.format("Failed to import JSON string: ", e.getMessage()));
 		}
 		// END USER CODE
 	}

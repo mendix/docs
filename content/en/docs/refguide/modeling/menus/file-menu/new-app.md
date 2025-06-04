@@ -20,8 +20,8 @@ To create a new app, follow the steps below:
     1. Open the **File** menu in the top bar > **New App**.
     2. Click **Create New App** on the Studio Pro landing page.
 
-2. In **My Apps** tab, select a starting point (an app template).
-3. Click **Use this app**.
+2. In **Create New App** tab, select a starting point (an app template).
+3. Click **Use This Starting Point**.
 4. In the **App Settings** dialog box, select the settings for your app and click **Create app**. For more information on app settings, see the [App Settings](#app-settings) section. 
 
 The new app is created and opened. 

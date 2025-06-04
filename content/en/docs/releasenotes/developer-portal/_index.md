@@ -21,6 +21,13 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 ## 2025
 
+### June 5, 2025
+
+#### Improvements 
+
+* We fixed an issue where sometimes users did not properly get access to project management pages after joining a project
+* We’ve made improvements to address an issue where story creation could sometimes get stuck
+
 ### April 24, 2025
 
 #### Improvements 

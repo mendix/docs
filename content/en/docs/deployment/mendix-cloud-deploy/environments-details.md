@@ -529,7 +529,7 @@ The status of a maintenance task can be one of:
 * **Ineligible** – the task is not applicable to the environment
     * No changes were applied, you can operate the environment as usual
     * This can happen, for example, if the database of your environment was scheduled to be upgraded but it is already on the target version
-* **Canceled**  – the task was canceled
+* **Cancelled**  – the task was cancelled
     * No changes were applied, you can operate the environment as usual
     * This can happen if circumstances required us to remove the planned task, a new copy of the task will be scheduled at a later point in time
 

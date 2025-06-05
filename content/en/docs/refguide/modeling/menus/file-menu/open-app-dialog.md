@@ -14,7 +14,7 @@ aliases:
 To open an app in Mendix Studio Pro, do one of the following:
 
 * Select **File** > **Open App**
-* Click **Open App** on the Studio Pro landing page
+* Click **Open in Studio Pro** on the Studio Pro landing page
 
 The **Open App** dialog box will open, where you can [select an app](#select-app) from your apps, [open an app locally](#open-locally),[open an app from a private Git repository](#open-private) or [import an app package](#import-app):
 

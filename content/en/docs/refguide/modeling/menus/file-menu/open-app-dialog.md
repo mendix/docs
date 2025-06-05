@@ -42,6 +42,16 @@ For opening an app you already have in a [Git On-Premises Version Control Server
 
 You can also import an app package and open it. Click **Import App Package** in the left sidebar. For more information on how to import an app package, see [Import App Package](/refguide/import-app-package-dialog/).
 
+## Studio Pro Versions
+
+### Download Latest Version
+
+If you are using an older version of Studio Pro, you can click **Download Latest Version** to install the most recent version of Studio Pro on your machine.
+
+### Select Version from Archive
+
+You can select an earlier version of Studio Pro from the [Marketplace](https://marketplace.mendix.com/link/studiopro) to download.
+
 ### Preferences
 
 Clicking **Preferences** opens a dialog box with a subset of the preferences you can set in [Preferences](/refguide/preferences-dialog/). The preferences you can change are as follows:

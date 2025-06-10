@@ -11,7 +11,7 @@ description: "Native Template 7 release notes."
 
 ### Improvements
 
-* We have updated the AppCenter's Xcode version to 15.4.
+* We updated AppCenter's Xcode version to 15.4.
 
 ## 7.0.22 {#722}
 
@@ -19,7 +19,7 @@ description: "Native Template 7 release notes."
 
 ### Fixes
 
-* We fixed an issue that occurred when selecting the devDebug variant in Android Studio for API levels greater than 34.
+* We fixed an issue that occurred when selecting the devDebug variant in Android Studio for API levels higher than 34.
 
 ## 7.0.20 {#720}
 
@@ -27,7 +27,7 @@ description: "Native Template 7 release notes."
 
 ### Improvements
 
-* We've updated min sdk to 23 on android.
+* We updated minSDK to 23 on Android.
 
 ## 7.0.19 {#718}
 

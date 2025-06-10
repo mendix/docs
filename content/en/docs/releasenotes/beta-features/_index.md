@@ -7,7 +7,7 @@ weight: 55
 
 ## Introduction
 
-Some Mendix Platform releases contain beta or experimental features or products that can be used and evaluated by early-adopter developers. 
+Some Mendix Platform releases contain beta or experimental features or products that can be used and evaluated by early-adopter developers. Beta and experimental releases and features are not recommended for production use. 
 
 Mendix releases beta versions in two circumstances:
 

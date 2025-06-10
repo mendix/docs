@@ -89,7 +89,7 @@ The impact of upgrading from an LTS to an LTS is often the lowest of these optio
 
 ## Medium-Term Support Version (MTS) {#mts}
 
-An MTS is a minor version released approximately every 6 months after a new major version release for general availability.
+An MTS is a minor version released approximately every 6 months after a new major version release for general availability. MTS provides you a balance of new features and support. 
 
 This is the current MTS version of Studio Pro:
 

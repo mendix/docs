@@ -11,7 +11,7 @@ description: "Native Template 8 release notes."
 
 ### Improvements
 
-* We have updated the AppCenter's Xcode version to 15.4.
+* We updated AppCenter's Xcode version to 15.4.
 
 ## 8.0.16 {#816}
 
@@ -19,7 +19,7 @@ description: "Native Template 8 release notes."
 
 ### Improvements
 
-* We have updated the AppCenter's Xcode version to 15.4.
+* We updated AppCenter's Xcode version to 15.4.
 
 ## 8.2.8 {#828}
 
@@ -27,7 +27,7 @@ description: "Native Template 8 release notes."
 
 ### Improvements
 
-* We've updated min sdk to 23 on android.
+* We updated minSDK to 23 on Android.
 
 ## 8.2.7 {#827}
 

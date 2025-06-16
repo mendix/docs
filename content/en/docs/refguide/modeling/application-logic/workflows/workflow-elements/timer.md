@@ -38,13 +38,21 @@ The **Caption** describes what happens in this element. It is displayed under th
 
 {{% alert color="info" %}}
 This section is only applicable when **Timer** is used as a timer boundary event.
-
-This section is displayed if interrupting timer boundary events (beta) are enabled through Studio Pro **Preferences** -> **New features** -> **Workflow editor** > **Enable interrupting timer boundary events (beta)**.
 {{% /alert %}}
 
 The **Interrupting** property sets the timer boundary event to be either interrupting or non-interrupting.
 
 By default, it is set to **No**, which means that the timer boundary event is non-interrupting. When it is set to **Yes**, the timer boundary event is interrupting. For more information, see [Boundary Events](/refguide/workflow-boundary-events/).
+
+{{% alert color="info" %}}
+The following section is only applicable when **Timer** is used as a non-interrupting timer boundary event.
+{{% /alert %}}
+
+The **Recurrence** property allows a non-interrupting timer boundary event to execute multiple times when the specified interval has elapsed. The following parameters can be set.
+| Type | Description |
+| --- | --- |
+| Interval | You can set a certain duration for the timer. With the **Repeat every** setting, you can indicate the number of seconds, minutes, hours, days, weeks or months the timer's duration is. Possible values for the setting are:<br /><ul><li>Minutes</li><li>Hours</li><li>Days</li><li>Weeks</li><li>Months</li> </ul> |
+| Max occurrences | The maximum amount of occurrences. |
 
 ### Timer Section {#timer}
 

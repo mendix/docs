@@ -4,19 +4,15 @@ url: /refguide/workflow-boundary-events/
 weight: 20
 ---
 
-{{% alert color="info" %}}
-Interrupting timer boundary events are currently in beta. Certain features or attributes are subject to change and may contain bugs. For more information, see [Beta and Experimental Releases](/releasenotes/beta-features/).
-{{% /alert %}}
-
 ## Introduction
 
 Based on Business Process Model and Notation (BPMN) 2.0, boundary events are a type of event that is attached to the boundary of an activity (such as a task or a sub-process) to handle exceptional situations or are triggered by certain behaviors. 
 
 There are two main types of boundary events:
 
-* Non-interrupting boundary events: These events do not interrupt the ongoing activity. When triggered, they allow the activity to continue while simultaneously starting a new path from the boundary event. Use non-interrupting boundary events when the parent activity should remain active, but you would like to do something in parallel. For example, after 2 days, a reminder should be sent to the assigned user. As per BPMN 2.0 specification, non-interrupting boundary events are visualized as two dashed circles with an icon in the center.
+* **Non-interrupting boundary events**: These events do not interrupt the ongoing activity. When triggered, they allow the activity to continue while simultaneously starting a new path from the boundary event. Use non-interrupting boundary events when the parent activity should remain active, but you would like to do something in parallel. For example, after 2 days, a reminder should be sent to the assigned user. As per BPMN 2.0 specification, non-interrupting boundary events are visualized as two dashed circles with an icon in the center.
 
-* Interrupting boundary events (currently in beta): When these events are triggered, they interrupt the activity they are attached to, meaning that this activity will be aborted. The process flow is redirected to the boundary event's outgoing sequence path. Use interrupting boundary event in situations where further execution of the activity (and other following activities) is not required and an alternative path should be taken. For example, use an interrupting boundary event to start an escalation or a fast-track path when an activity is not completed 2 days after the due date. Or when the assigned user does not make a decision within 5 days, you want to abort the user task and continue the process with a pre-set decision. As per BPMN 2.0 specification, interrupting boundary events are visualized as two solid circles.
+* **Interrupting boundary events**: When these events are triggered, they interrupt the activity they are attached to, meaning that this activity will be aborted. The process flow is redirected to the boundary event's outgoing sequence path. Use interrupting boundary event in situations where further execution of the activity (and other following activities) is not required and an alternative path should be taken. For example, use an interrupting boundary event to start an escalation or a fast-track path when an activity is not completed 2 days after the due date. Or when the assigned user does not make a decision within 5 days, you want to abort the user task and continue the process with a pre-set decision. As per BPMN 2.0 specification, interrupting boundary events are visualized as two solid circles.
 
 Boundary Events are always displayed by 2 circles (either solid or dashed) and are linked by a dotted line to the parent activity. The icon inside the event indicates the type of event. For example, a clock indicates that it is a timer boundary event.
 
@@ -125,6 +121,16 @@ An interrupting boundary event path must end with an **End** event or a **Jump**
 When there are multiple boundary events attached to an activity and an interrupting boundary event is executed, all the scheduled boundary events will be aborted and all the boundary events that have already started will continue to run until the entire workflow ends.
 {{% /alert %}}
 
+## Nested jump rules
+Boundary events come with a specific set of rules for jumps when they are nested, the variations are working meant for both a modelled jump and a runtime ad-hoc jump. In the following table are the differences specified.
+
+|Parent | Child | Description|
+| -------- |-------- | ------- |
+|Interrupting | Interrupting | When an interrupting boundary event is nested inside an interrupting boundary event we are allowed to either jump out of the boundary event flow or end the workflow.|
+|Interrupting | Non-Interrupting | When an interrupting boundary event is nested inside an non-interrupting boundary event we are only allowed to jump out of the boundary event flow to it's parent flow.|
+|Non-Interrupting | Interrupting | When a non-interrupting boundary event is nested inside an interrupting boundary event we are only allowed to jump in the nested non-interrupting boundary event flow, this follows the same rules as the parallel split outcomes.|
+|Non-Interrupting | Non-Interrupting | When a non-interrupting boundary event is nested inside an non-interrupting boundary event we are only allowed to jump inside the nested non-interrupting boundary event flow, this follows the same rules as the parallel split outcomes.|
+
 ## Boundary Event Variables
 
 Boundary events have dedicated variables that can be used to get direct access to the values of the parent activity if it is either a user task or Call workflow activity. You can get information such as the parent activity's `DueDate`, which can be used in the boundary event flow and its expressions. For instance, you can use the expression `addDays($ParentTask/DueDate, -2)` to configure a timer boundary event so that it is triggered two days before the due date of its parent user task.
@@ -133,12 +139,6 @@ The list of variables is described below:
 
 * `$ParentTask` – the parent user task of the attached boundary event
 * `$CalledWorkflowInstance` – the parent Call workflow activity of the attached boundary event
-
-## Current Limitation {#limitation}
-
-The current release of boundary events is still under development and has the following limitation:
-
-* Non-interrupting timer boundary events currently have no recurrence (they are only executed once and will not repeat).
 
 ## Read more
 

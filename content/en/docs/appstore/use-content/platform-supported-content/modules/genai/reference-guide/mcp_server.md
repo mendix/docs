@@ -8,7 +8,7 @@ weight: 30
 
 ## Introduction
 
-The [MCP Server](https://marketplace.mendix.com/link/component/240380) module provides easy low-code capability to set up MCP Server within a Mendix app using the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction). An MCP server can expose resources (such as tools or pompts) seamlessly to other, external AI applications that support MCP. The Mendix MCP Server module bridges a Mendix application and the [MCP Java SDK](https://github.com/modelcontextprotocol/java-sdk). With the current implementation it is possible to:
+The [MCP Server](https://marketplace.mendix.com/link/component/240380) module provides easy low-code capability to set up MCP Server within a Mendix app using the [Model Context Protocol (MCP)](/appstore/modules/genai/mcp). An MCP server can expose resources (such as tools or pompts) seamlessly to other, external AI applications that support MCP. The Mendix MCP Server module bridges a Mendix application and the [MCP Java SDK](https://github.com/modelcontextprotocol/java-sdk). With the current implementation it is possible to:
 * Expose reusable prompts including the ability to use prompt parameters
 * List and execute microflow implemented in the application as tools
 
@@ -27,8 +27,6 @@ Note that the MCP Server module is still in its early version and thus (breaking
 If you are starting from the [Blank GenAI app](https://marketplace.mendix.com/link/component/227934), the MCP Server module is already included and does not need to be downloaded manually.
 
 If you start from a blank app, or have an existing project, you must install GenAI Commons manually. Follow the instructions in [How to Use Marketplace Content](/appstore/use-content/) to install [MCP Server](https://marketplace.mendix.com/link/component/240380).
-
-## What is MCP?
 
 ## Configuration
 
@@ -76,7 +74,7 @@ The selected microflow needs to apply to the following principles:
 * Input needs to be the same as passed in the `PromptArgument` object(s) (only primitives and/or an object of type `MCPServer.Prompt` are supported)
 * The return value needs to be a `PromptMessage` object which you can create inside of the microflow to return the relevant information to the MCP client based on the outcome of the microflow.
 
-Be aware that technically other logic than just returning the prompt can be executed inside of the microflow.
+Be aware that technically other logic than just returning a prompt can be executed inside of the microflow, which should be used with caution because it might not be clear when the prompts are called from the client-side.
 
 ## Technical Reference
 
@@ -91,6 +89,7 @@ The **Documentation** pane displays the documentation for the currently selected
 
 ## Read More
 
+* Concept description of [Model Context Protocol (MCP)](/appstore/modules/genai/mcp)
 * The [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) provides an example on how to expose microflows as tools via the MCP Server module. 
 * The offical [MCP docs](https://modelcontextprotocol.io/introduction)
 * The [MCP Java SDK Github Repository](https://github.com/modelcontextprotocol/java-sdk)

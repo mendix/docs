@@ -42,7 +42,13 @@ Based on your use case, this action can be triggered manually by an admin if wra
 
 If no authentication is enabled for the MCP Server, it can be accessed by any service without being authorized specifically. Be aware that this is not recommended for applications running on the public cloud.
 
-For most cases, you want to ensure that MCP clients need to be authorized before using any resources from the MCP Server or even discover what resources are available. To enable authentication, you can specify a microflow in the `Create MCP Server` action. !!(TBD IF THAT IS STILL THE RIGHT WAY WHEN RELEASING DUE TO MANDATORY MICROFLOW ADDING)!! The microflow is executed everytime a request is processed for the MCP Server. The input parameters can be of type `MCPServer` and/or `System.HttpRequest` to extract required values, such as HttpHeaders from the request. The return value needs to be of type `System.User` which represents the user that sent the request. Inside of your microflow, you can implement your custom logic to authenticate the user. Based on your use case, username and password, Mendix SSO or external identity providers (Idp) can be used as long as a User is returned.
+For most cases, you want to ensure that MCP clients need to be authorized before using any resources from the MCP Server or even discover what resources are available. To enable authentication, you can specify a microflow in the `Create MCP Server` action. !!(TBD IF THAT IS STILL THE RIGHT WAY WHEN RELEASING DUE TO MANDATORY MICROFLOW ADDING)!! The microflow is executed everytime a request is processed for the MCP Server. 
+
+The selected microflow needs to apply to the following principles:
+* Input can only be of type `MCPServer` and/or `System.HttpRequest` to extract required values, such as HttpHeaders from the request.
+* The return value needs to be a `System.User` object which represents the user that sent the request.
+
+Inside of your microflow, you can implement your custom logic to authenticate the user. For example, you can use username and password, Mendix SSO or external identity providers (Idp) as long as a User is returned.
 
 ### Add Tools
 
@@ -62,13 +68,15 @@ Mendix also strongly advises that you keep the user in the loop (e.g., with user
 
 ### Add Prompts
 
-After the [Create MCP Server](#create-server) action, you can add one or multiple microflows as [Prompts](https://modelcontextprotocol.io/docs/concepts/tools) to be exposed by using the `Add Prompt` action. Connecting MCP Clients can discover the prompts and make them selectable for users to start/continue a conversation. If your prompt (and thus microflow) require any input parameters that the user should pass, you need to use the `Populate Prompt Argument List` action for each parameter:
+After the [Create MCP Server](#create-server) action, you can add one or multiple microflows as [Prompts](https://modelcontextprotocol.io/docs/concepts/tools) to be exposed by using the `Add Prompt` action. Connecting MCP Clients can discover the prompts and make them selectable for users to start/continue a conversation. If your prompt (and thus microflow) requires any input parameters that the user should pass, you need to use the `Populate Prompt Argument List` action for each parameter to describe how the input is used:
 
-{{< figure src="\attachments\appstore\platform-supported-content\modules\genai\mcpserver/mcp_addprompt_example.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/mcpserver/mcp_addprompt_example.png" >}}
 
 The selected microflow needs to apply to the following principles:
 * Input needs to be the same as passed in the `PromptArgument` object(s) (only primitives and/or an object of type `MCPServer.Prompt` are supported)
 * The return value needs to be a `PromptMessage` object which you can create inside of the microflow to return the relevant information to the MCP client based on the outcome of the microflow.
+
+Be aware that technically other logic than just returning the prompt can be executed inside of the microflow.
 
 ## Technical Reference
 

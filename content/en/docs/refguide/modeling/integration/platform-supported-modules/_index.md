@@ -1,18 +1,17 @@
 ---
-title: Use Extensions 
-url: /refguide/use-extensions/
+title: Use Platform-Supported Modules
+url: /refguide/use-platform-supported-modules/
 aliases: 
    - /howto/integration/use-extensions/
+   - /refguide/use-extensions/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team (buildpack) know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## Introduction 
 
-Connect to and receive information from external sources with extensions in Mendix Studio Pro.
+Connect to and receive information from external sources with platform-supported modules in Mendix Studio Pro.
 
 Documents available for this topic:
-
-* [Business Event Services](/refguide/business-event-services/)
 
 * [Use the Data Importer](/refguide/use-the-data-importer/)
 
@@ -32,8 +31,6 @@ Documents available for this topic:
 
 ## Read More
 
-* [Mendix Business Events](/appstore/services/business-events/)
-* [Mendix Event Broker](/appstore/services/event-broker/)
 * [Import Data from File](/refguide/import-data-from-file/)
 * [External Database Connector](/appstore/modules/external-database-connector/)
 * [Query External Database](/refguide/query-external-database/)

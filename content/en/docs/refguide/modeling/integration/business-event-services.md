@@ -1,7 +1,7 @@
 ---
 title: "Business Event Services"
 url: /refguide/business-event-services/
-weight: 10
+weight: 55
 description: "Overview of the [Business Event services module](https://marketplace.mendix.com/link/component/202649) in Studio Pro, downloaded from the Mendix Marketplace."
 ---
 

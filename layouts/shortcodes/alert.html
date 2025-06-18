@@ -1,0 +1,61 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+{{ $color := .Get "color" | default "info" }}
+
+<!-- Colors from PDS; keep synced with _variables_project.scss -->
+{{ $colorDictionary := dict
+  "info" "#146FF4"
+  "warning" "#C97800"
+  "success" "#0D990D"
+  "danger" "#F25C5C"
+}}
+
+<!--Custom design to align with alert guidance on PDS (https://designsystem.mendix.com)-->
+
+<!-- Alert container with dynamic color -->
+<div class="alert alert-{{ $color }}" role="alert">
+  <div class="alert-content">
+      <!-- Conditional block for different icon types -->
+      {{ if eq $color "info" }}
+        <!-- Info icon -->
+        <svg class="alert-svg" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 22V13H12V15H15V22H12V24H20V22H17Z" fill="{{ index $colorDictionary "info" }}"/>
+          <path d="M17.5 9.5C17.5 10.3284 16.8284 11 16 11C15.1716 11 14.5 10.3284 14.5 9.5C14.5 8.67157 15.1716 8 16 8C16.8284 8 17.5 8.67157 17.5 9.5Z" fill="{{ index $colorDictionary "info" }}"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M16 2C8.28 2 2 8.28 2 16C2 23.72 8.28 30 16 30C23.72 30 30 23.72 30 16C30 8.28 23.72 2 16 2ZM16 28C9.38 28 4 22.62 4 16C4 9.38 9.38 4 16 4C22.62 4 28 9.38 28 16C28 22.62 22.62 28 16 28Z" fill="{{ index $colorDictionary "info" }}"/>
+        </svg>
+      {{ else if eq $color "warning" }}
+        <!-- Warning icon -->
+        <svg class="alert-svg" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 24C16.8284 24 17.5 23.3284 17.5 22.5C17.5 21.6716 16.8284 21 16 21C15.1716 21 14.5 21.6716 14.5 22.5C14.5 23.3284 15.1716 24 16 24Z" fill="{{ index $colorDictionary "warning" }}"/>
+          <path d="M15 11H17V19H15V11Z" fill="{{ index $colorDictionary "warning" }}"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M27.9299 28H4.06991C3.31991 28 2.64991 27.61 2.27991 26.95C1.89991 26.29 1.91991 25.47 2.30991 24.82L14.2399 5.01C14.6199 4.38 15.2799 4 15.9999 4C16.7199 4 17.3799 4.38 17.7599 5.01L29.6899 24.82C30.0799 25.47 30.0899 26.29 29.7199 26.95C29.3499 27.61 28.6799 28 27.9299 28ZM16.0499 6.04L4.01991 25.85C4.01991 25.85 3.99991 25.93 4.01991 25.97L27.9399 26.01C28.0099 25.93 28.0099 25.89 27.9899 25.86L16.0499 6.04Z" fill="{{ index $colorDictionary "warning" }}"/>
+        </svg>
+      {{ else if eq $color "success" }}
+        <!-- Success icon -->
+        <svg class="alert-svg" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.29004 16.71L14 21.41L22.71 12.71L21.29 11.29L14 18.59L10.71 15.29L9.29004 16.71Z" fill="{{ index $colorDictionary "success" }}"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M2 16C2 23.72 8.28 30 16 30C23.72 30 30 23.72 30 16C30 8.28 23.72 2 16 2C8.28 2 2 8.28 2 16ZM4 16C4 9.38 9.38 4 16 4C22.62 4 28 9.38 28 16C28 22.62 22.62 28 16 28C9.38 28 4 22.62 4 16Z" fill="{{ index $colorDictionary "success" }}"/>
+        </svg>
+      {{ else if eq $color "danger" }}
+        <!-- Danger icon -->
+        <svg class="alert-svg" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 25C16.8284 25 17.5 24.3284 17.5 23.5C17.5 22.6716 16.8284 22 16 22C15.1716 22 14.5 22.6716 14.5 23.5C14.5 24.3284 15.1716 25 16 25Z" fill="{{ index $colorDictionary "danger" }}"/>
+          <path d="M15 20V7H17V20H15Z" fill="{{ index $colorDictionary "danger" }}"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M16 30C8.28 30 2 23.72 2 16C2 8.28 8.28 2 16 2C23.72 2 30 8.28 30 16C30 23.72 23.72 30 16 30ZM16 4C9.38 4 4 9.38 4 16C4 22.62 9.38 28 16 28C22.62 28 28 22.62 28 16C28 9.38 22.62 4 16 4Z" fill="{{ index $colorDictionary "danger" }}"/>
+        </svg>
+      {{ end }}
+      <div class="alert-text">
+          <!--Render alert text and convert to HTML-->
+          {{ .Inner | markdownify | safeHTML }}
+      </div>
+  </div>
+</div>
+
+<script> // Script for .alert.has-line-breaks styling in _styles_project.scss
+$(document).ready(() => {
+  $('.alert-text').each((index, element) => { // Iterate over each element with class 'alert-text'
+      if ($(element).find('p, ul, ol').length) { // Check for <p>, <ul>, or <ol> elements in the current 'alert-text' element
+          $(element).closest('.alert').addClass('has-line-breaks'); // Add class 'has-line-breaks' to the closest 'alert' ancestor element
+      }
+  });
+});
+</script>

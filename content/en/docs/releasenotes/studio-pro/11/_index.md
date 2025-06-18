@@ -1,0 +1,16 @@
+---
+title: "Mendix Studio Pro Version 11 Release Notes"
+linktitle: "11"
+url: /releasenotes/studio-pro/11/
+description: "The release notes for version 11 of Mendix Studio Pro."
+weight: 8
+no_list: false
+simple_list: true
+beta: true
+cascade:
+    - numberless_headings: true
+    - banner: "Mendix 11 is currently in Beta. For more information about Beta releases and features, see <a href=\"/releasenotes/beta-features/\">Beta Releases</a>."
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+---
+
+These are the release notes for Mendix Studio Pro 11:

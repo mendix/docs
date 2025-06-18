@@ -1,0 +1,32 @@
+{{ $isSingle := true -}}
+{{ with .Parent -}}
+  {{ $isSingle = .IsHome -}}
+{{ end -}}
+<nav aria-label="breadcrumb"  style="margin-left:2rem; margin-right: 2rem;" class="td-breadcrumbs
+    {{- if $isSingle }} td-breadcrumbs__single {{- end }}">
+			<!-- NK - keeps breadcrumb out of landing page -->
+			{{ if (ne .Page.Type "landingpage")}}
+        <ol class="breadcrumb spb-1">
+          {{- template "breadcrumbnav" (dict "p1" . "p2" .) }}
+        </ol>
+      {{end}}
+</nav>
+
+{{- define "breadcrumbnav" -}}
+  {{ if .p1.Parent -}}
+    {{ if not .p1.Parent.IsHome -}}
+      {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 )  -}}
+    {{ end -}}
+  {{ else if not .p1.IsHome -}}
+    {{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  -}}
+  {{ end -}}
+  {{ $isActive :=  eq .p1 .p2 }}
+  <li class="breadcrumb-item{{ if $isActive }} active{{ end }}"
+      {{- if $isActive }} aria-current="page"{{ end }}>
+    {{ if $isActive -}}
+      {{ .p1.LinkTitle -}}
+    {{ else -}}
+      <a href="{{ .p1.RelPermalink }}">{{ .p1.LinkTitle }}</a>
+    {{- end -}}
+  </li>
+{{- end -}}

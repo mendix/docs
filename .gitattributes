@@ -1,0 +1,7 @@
+# Override GitHub ignoring markdown as a language so that the repo shows correct statistics
+*.md linguist-vendored=false
+*.md linguist-generated=false
+*.md linguist-documentation=false
+*.md linguist-detectable=true
+README.md linguist-detectable=false
+readme.md linguist-detectable=false

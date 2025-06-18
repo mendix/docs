@@ -1,0 +1,34 @@
+{{ $src := (.Page.Resources.GetMatch (printf "**%s*" (.Get "src"))) }}
+<figure>
+    <!-- Yiyun - only adds clickable links to images that have a link parameter, default target is in new tab/window -->
+    {{- if .Get "link" -}}
+        <a href="{{ .Get "link" }}"
+    {{- else -}}
+        <link href="{{ .Get "src" }}"
+    {{- end }} target="{{ with .Get "target" }}{{ . }}{{ else }}_blank{{ end }}"{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
+    <img src="{{ if $src }}{{ $src.RelPermalink }}{{ else }}{{ .Get "src" }}{{ end }}" 
+         {{- if or (.Get "alt") (.Get "caption") }}
+         alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
+         {{- end -}}
+         {{- with .Get "max-width" }} style="max-width:{{ . }}"{{ end -}}
+         {{- with .Get "width" }} width="{{ . }}"{{ end -}}
+         {{- with .Get "height" }} height="{{ . }}"{{ end -}}
+         {{ with .Get "class" }} class="{{ . }}"{{ end -}}
+    /> <!-- Closing img tag -->
+    </a>
+    {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
+        <figcaption>
+            {{ with (.Get "title") -}}
+                <h4>{{ . }}</h4>
+            {{- end -}}
+            {{- if or (.Get "caption") (.Get "attr") -}}<p>
+                {{- .Get "caption" | markdownify -}}
+                {{- with .Get "attrlink" }}
+                    <a href="{{ . }}">
+                {{- end -}}
+                {{- .Get "attr" | markdownify -}}
+                {{- if .Get "attrlink" }}</a>{{ end }}</p>
+            {{- end }}
+        </figcaption>
+    {{- end }}
+</figure>

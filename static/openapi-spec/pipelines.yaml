@@ -1,0 +1,316 @@
+openapi: 3.0.3
+x-stoplight:
+  id: h451lkumf4xm6
+info:
+  title: Pipelines API
+  version: 1.0.0
+  contact:
+    name: Mendix Support
+    url: 'https://support.mendix.com'
+    email: support@mendix.com
+  termsOfService: 'https://www.mendix.com/terms-of-use/'
+  license:
+    name: '@Mendix.com'
+    url: 'https://www.mendix.com'
+  description: The API to manage pipelines of apps deployed on Mendix Cloud
+servers:
+  - url: 'https://pipeline-portal.home.mendix.com/api/v1'
+    description: Base URL
+tags:
+  - name: Pipelines
+    description: Manage pipelines of apps deployed on Mendix Cloud
+paths:
+  '/apps/{appId}/runs':
+    parameters:
+      - $ref: '#/components/parameters/appId'
+    post:
+      tags:
+        - Pipelines
+      summary: 'Start a new pipeline run for a saved and activated pipeline design'
+      description: 'Schedules a job on the server to start a new pipeline run. The job will be handled asynchronously; the operation returns a pipelineID that can be used to monitor the status of the process. Every request must be authenticated by a personal access token containing the scope `mx:pipelines:write`.'
+      operationId: startRun
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                pipelineId:
+                  type: string
+                  example: db6ed4d3-8b6d-4c2b-ad2b-2a69d0f7afe0
+                  format: uuid
+                  description: UUID of the pipeline.
+              required:
+                - pipelineId
+      responses:
+        '201':
+          $ref: '#/components/responses/runStarted'
+        '400':
+          $ref: '#/components/responses/error400'
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403'
+        '404':
+          $ref: '#/components/responses/error404'
+      x-stoplight:
+        id: fqdwjj9lcsugf
+  '/apps/{appId}/runs/{runId}/status':
+    parameters:
+      - $ref: '#/components/parameters/appId'
+      - $ref: '#/components/parameters/runId'
+    get:
+      tags:
+        - Pipelines
+      summary: 'Get the status of a pipeline run'
+      description: 'Retrieves the status of a pipeline run. The operation returns a pipeline run status. Every request must be authenticated by a personal access token containing the scope `mx:pipelines:read`.'
+      operationId: getRunStatus
+      responses:
+        '200':
+          $ref: '#/components/responses/runStatus'
+        '400':
+          $ref: '#/components/responses/error400'
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403'
+        '404':
+          $ref: '#/components/responses/error404'
+      x-stoplight:
+        id: b2ntkujwhgwjc
+components:
+  parameters:
+    appId:
+      name: appId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+        example: c533ee0b-f7db-4e62-868b-1192d392ccec
+      description: The unique ID of the app.
+    runId:
+      name: runId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+        example: 2868b153-2d92-4ec5-ab64-2e26a9e0f16e
+      description: The unique ID of the run.
+  schemas:
+    error:
+      type: object
+      properties:
+        error:
+          $ref: '#/components/schemas/error-body'
+      description: An error is returned if something went wrong.
+      x-stoplight:
+        id: sxeys55uppr0r
+    error-body:
+      description: The error body gives more detail on what happened.
+      type: object
+      properties:
+        code:
+          type: integer
+          minimum: 0
+          description: The HTTP status code.
+          example: 400
+        message:
+          type: string
+          description: Explanation of what happened.
+          example: Request validation errors
+        invalid-params:
+          type: array
+          uniqueItems: true
+          minItems: 1
+          description: Array of invalid parameters (RFC7807-compatible).
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                example: age
+                description: Name of the parameter that was invalid.
+              reason:
+                type: string
+                example: must be a positive integer
+                description: Explanation of why the parameter was invalid.
+            required:
+              - name
+              - reason
+      required:
+        - code
+        - message
+      x-stoplight:
+        id: 9mss4dvlh4ovs
+    run:
+      description: Details about the run.
+      type: object
+      properties:
+        id:
+          $ref: '#/components/schemas/runId'
+        pipelineId:
+          $ref: '#/components/schemas/pipelineId'
+        pipelineName:
+          type: string
+          title: pipelineName
+          example: Test pipeline
+        triggeredBy:
+          $ref: '#/components/schemas/user'
+      required:
+        - id
+        - pipelineId
+        - pipelineName
+        - triggeredBy
+      x-stoplight:
+        id: 6uktlpbg6wyg8
+    runStatus:
+      description: Run status details.
+      type: object
+      properties:
+        runId:
+          $ref: '#/components/schemas/runId'
+        status:
+          $ref: '#/components/schemas/runStatusEnum'
+      required:
+        - runId
+        - status
+      x-stoplight:
+        id: 5yystu7dgim3c
+    runId:
+      description: The unique run ID in UUID format.
+      type: string
+      title: runId
+      format: uuid
+      example: 2868b153-2d92-4ec5-ab64-2e26a9e0f16e
+      x-stoplight:
+        id: unm31s8peb2h0
+    pipelineId:
+      description: The unique pipeline ID in UUID format.
+      type: string
+      title: pipelineId
+      format: uuid
+      example: db6ed4d3-8b6d-4c2b-ad2b-2a69d0f7afe0
+      x-stoplight:
+        id: 9g47ikr3k96m4
+    runStatusEnum:
+      description: An array of possible pipeline run statuses.
+      type: string
+      title: runStatusEnum
+      enum:
+        - CREATED
+        - RUNNING
+        - SUCCEEDED
+        - FAILED
+      x-stoplight:
+        id: my4j6mo44r8vh
+    user:
+      description: The email of the user who triggered the pipeline run.
+      title: user
+      x-stoplight:
+        id: h8ru7dslp7qnt
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+          example: jane.doe@example.com
+          x-stoplight:
+            id: dumuouqb8wwdz
+  responses:
+    error400:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+    error401:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example:
+              value:
+                error:
+                  code: 401
+                  message: Unauthorized
+                  invalid-params:
+                    - name: Authentication
+                      reason: Missing or invalid Authorization header
+    error403:
+      description: Access Denied
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example:
+              value:
+                error:
+                  code: 403
+                  message: Forbidden
+                  invalid-params:
+                    - name: Authentication
+                      reason: The token is not accepted
+    error404:
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            Example:
+              value:
+                error:
+                  code: 404
+                  message: App not found
+                  invalid-params:
+                    - name: Validation
+                      reason: App 76ef1b0f-4050-4810-a159-cb419268636c could not be found
+    runStarted:
+      description: Pipeline run is created. The Content-Location header can be used for the follow-up request to retrieve the run's status.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/run'
+          examples:
+            Run started:
+              value:
+                id: 2868b153-2d92-4ec5-ab64-2e26a9e0f16e
+                pipelineId: db6ed4d3-8b6d-4c2b-ad2b-2a69d0f7afe0
+                pipelineName: Test pipeline
+                triggeredBy:
+                  email: jane.doe@domain.tld
+      headers:
+        Content-Location:
+          schema:
+            type: string
+            example: apps/c533ee0b-f7db-4e62-868b-1192d392ccec/runs/2868b153-2d92-4ec5-ab64-2e26a9e0f16e
+            format: uri-reference
+          description: A relative URL that can be used in the follow-up request, to get the status of the started pipeline run, with the app ID and pipeline run ID already populated.
+    runStatus:
+      description: 200 Get Status response
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/runStatus'
+          examples:
+            Running status:
+              value:
+                runId: 2868b153-2d92-4ec5-ab64-2e26a9e0f16e
+                status: RUNNING
+            Succeeded status:
+              value:
+                runId: 2868b153-2d92-4ec5-ab64-2e26a9e0f16e
+                status: SUCCEEDED
+  securitySchemes:
+    PersonalAccessToken:
+      type: apiKey
+      description: 'For more information about requesting and using a token, see the [documentation](https://docs.mendix.com/community-tools/mendix-profile/user-settings/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
+      name: Authorization
+      in: header
+security:
+  - PersonalAccessToken: []

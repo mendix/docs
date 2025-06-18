@@ -1,0 +1,824 @@
+openapi: 3.0.1
+info:
+  version: 1.0.0
+  title: Project Service
+  description: Use Project Service API to manage Project app and team members access.
+servers:
+  - url: 'https://mpp.mendix-dev.tencent-cloud.com/projectservice/v1'
+paths:
+  /projects:
+    get:
+      tags:
+        - projects
+      summary: Get my projects
+      description: Get my project list
+      operationId: GetMyProjects
+      parameters:
+        - name: status
+          in: query
+          schema:
+            enum:
+              - Active
+              - Archived
+      responses:
+        '200':
+          $ref: '#/components/responses/projects'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '404':
+          $ref: '#/components/responses/Error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/projectservice/v1'
+    post:
+      tags:
+        - projects
+      summary: Create a new project
+      description: 'Create a new project with input app name, summary, template id'
+      operationId: CreateProject
+      requestBody:
+        description: Create new project request
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProjectCreation'
+            examples:
+              New project:
+                value:
+                  name: string
+                  summary: string
+                  useAppTemplate: true
+                  appTemplate:
+                    templateId: string
+      responses:
+        '202':
+          $ref: '#/components/responses/job'
+        '400':
+          $ref: '#/components/responses/Error-400'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '403':
+          $ref: '#/components/responses/Error-403'
+        '404':
+          $ref: '#/components/responses/Error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/projectservice/v1'
+      x-codegen-request-body-name: ProjectRequest
+  '/projects/jobs/{jobId}':
+    get:
+      tags:
+        - projects
+      summary: Get project creation status
+      description: Get project creation status
+      operationId: GetJob
+      parameters:
+        - name: jobId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Get project creation job status successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  projectId:
+                    type: string
+                  status:
+                    type: string
+                  errorMessage:
+                    type: string
+                required:
+                  - projectId
+                  - status
+                x-examples:
+                  Example 1:
+                    projectId: ec603b34-2ceb-4011-9c9c-d7c10ef1ca4e
+                    status: Success
+                    errorMessage: ''
+              examples:
+                Job status:
+                  value:
+                    projectId: ec603b34-2ceb-4011-9c9c-d7c10ef1ca4e
+                    status: Success
+                    errorMessage: ''
+            application/xml:
+              schema:
+                type: object
+        '400':
+          $ref: '#/components/responses/Error-400'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '404':
+          description: Project creation job not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
+                x-examples:
+                  Example 1:
+                    code: 404
+                    message: Project creation job not found
+              examples:
+                Error 404 - Job not found:
+                  value:
+                    code: 404
+                    message: Project creation job not found
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/projectservice/v1'
+  '/projects/{projectId}':
+    get:
+      tags:
+        - projects
+      summary: Get a project with project Id
+      description: Get a project details with project Id
+      operationId: GetProject
+      parameters:
+        - name: status
+          in: query
+          schema:
+            enum:
+              - Active
+              - Archived
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/project'
+        '400':
+          $ref: '#/components/responses/Error-400'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '404':
+          $ref: '#/components/responses/Error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/projectservice/v1'
+    patch:
+      tags:
+        - projects
+      summary: Change project info and status
+      description: 'Change project name, description or status'
+      operationId: patch-projects-projectId
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Change project request
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProjectInput'
+      responses:
+        '200':
+          $ref: '#/components/responses/project'
+        '400':
+          $ref: '#/components/responses/Error-400'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '403':
+          $ref: '#/components/responses/Error-403'
+        '404':
+          $ref: '#/components/responses/Error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/projectservice/v1'
+    delete:
+      tags:
+        - projects
+      summary: Delete project with project Id
+      description: Delete project with project Id
+      operationId: DeleteProject
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Project deleted
+        '400':
+          $ref: '#/components/responses/Error-400'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '403':
+          $ref: '#/components/responses/Error-403'
+        '404':
+          $ref: '#/components/responses/Error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/projectservice/v1'
+  '/projects/{projectId}/owner':
+    put:
+      tags:
+        - projects
+      summary: Change owner user and group of project
+      description: Change owner user and group of project
+      operationId: ChangeProjectOwner
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Input owner user and group name of project
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OwnerInput'
+            examples:
+              Project owner user and group:
+                value:
+                  userName: User1
+                  groupName: Group1
+      responses:
+        '200':
+          $ref: '#/components/responses/project'
+        '400':
+          $ref: '#/components/responses/Error-400'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '403':
+          $ref: '#/components/responses/Error-403'
+        '404':
+          $ref: '#/components/responses/Error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/projectservice/v1'
+      x-codegen-request-body-name: OwnerInput
+  '/projects/{projectId}/groups':
+    get:
+      tags:
+        - projects
+      summary: Get sharing groups of project
+      description: Get sharing group list of project
+      operationId: GetProjectShareGroups
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/objects'
+        '400':
+          $ref: '#/components/responses/Error-400'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '404':
+          $ref: '#/components/responses/Error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/projectservice/v1'
+  '/projects/{projectId}/members':
+    get:
+      tags:
+        - projects
+      summary: Get team members of project
+      description: Get team members of project
+      operationId: GetProjectMembers
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/objects'
+        '400':
+          $ref: '#/components/responses/Error-400'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '404':
+          $ref: '#/components/responses/Error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/projectservice/v1'
+  '/projects/requests/{project Id}':
+    post:
+      tags:
+        - projects
+      summary: Request to add or delete share groups or memberes of project
+      description: |-
+        Request with parameters to indicate add or delete share groups or memberes of project.
+
+        type: supported request type is add or delete.
+
+        objectType: supported object type can be group or member.
+
+        objectInput : list including project share groups or memberes that will be added or deleted.
+      operationId: RequestProjectObjects
+      parameters:
+        - name: type
+          in: query
+          description: Request type
+          schema:
+            enum:
+              - Add
+              - Delete
+        - name: objectType
+          in: query
+          description: Object type
+          schema:
+            enum:
+              - Member
+              - Group
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: project Id
+          in: path
+          description: Project Id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Input project object (share group or membere) list
+        required: false
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  name:
+                    type: string
+              x-examples:
+                Example 1:
+                  - name: string
+            examples:
+              Project memebers:
+                value:
+                  - name: Project memeber user name
+              Project groups:
+                value:
+                  - name: Project share group name
+      responses:
+        '200':
+          $ref: '#/components/responses/objects'
+        '400':
+          $ref: '#/components/responses/Error-400'
+        '401':
+          $ref: '#/components/responses/Error-401'
+        '403':
+          $ref: '#/components/responses/Error-403'
+        '404':
+          $ref: '#/components/responses/Error-404'
+      security:
+        - {}
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/projectservice/v1'
+      x-codegen-request-body-name: objectInput
+tags:
+  - name: projects
+    description: ''
+components:
+  parameters:
+    projectId:
+      name: projectId
+      in: path
+      description: Project Id
+      required: true
+      schema:
+        type: string
+        format: uuid
+        pattern: '^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-4[a-fA-F0-9]{3}-[89abAB][a-fA-F0-9]{3}-[a-fA-F0-9]{12}'
+        example: e48b3e22-d6ad-4c81-aa5e-603776d22b4d
+    jobId:
+      name: jobId
+      in: path
+      description: Project Creation Job Id
+      required: true
+      schema:
+        type: string
+        minLength: 1
+        maxLength: 20
+        example: '123'
+  securitySchemes:
+    BearAuth:
+      type: http
+      scheme: bearer
+    mxtoken:
+      type: apiKey
+      name: Authorization
+      in: header
+  responses:
+    Error-400:
+      description: Invalid input parameter or request body
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            400 - Invalid project creation request:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: name
+                    reason: Invalid project name
+                  - name: templateId
+                    reason: Invalid project template id
+            400 - Invalid project owner change request:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: userName
+                    reason: Invalid project owner user name
+                  - name: groupName
+                    reason: Invalid project owner group name
+            400 - Invalid project member user name:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: name
+                    reason: Invalid project member user name
+            400 - Invalid project share group name:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: name
+                    reason: Invalid project share group name
+    Error-401:
+      description: Authentication information missing or invalid
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            401 - Unauthorized:
+              value:
+                status: 401
+                title: Unauthorized
+                detail: Authentication information missing or invalid
+    Error-403:
+      description: No permission for this operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            403 - Forbidden:
+              value:
+                status: 403
+                title: Forbidden
+                detail: User has no permission for this operation
+    Error-404:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            404 - Project not found:
+              value:
+                status: 404
+                title: Not Found
+                detail: Project not found
+            404 - Project member not found:
+              value:
+                status: 404
+                title: Not Found
+                detail: Project member not found
+            404 - Project share group not found:
+              value:
+                status: 404
+                title: Not Found
+                detail: Project share group not found
+    projects:
+      description: Project list
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: string
+                name:
+                  type: string
+                description:
+                  type: string
+                ownerUserName:
+                  type: string
+                ownerGroupName:
+                  type: string
+                memberCount:
+                  type: integer
+                repositoryId:
+                  type: string
+                repositoryName:
+                  type: string
+                repositoryURL:
+                  type: string
+                isActive:
+                  type: boolean
+                createdDate:
+                  type: string
+            x-examples:
+              Example 1:
+                - id: d8e4086c-8a5c-4372-9781-03a83c87defb
+                  name: App-test-1
+                  description: This project was created by Mendix Studio Pro.
+                  ownerUserName: Peter
+                  ownerGroupName: IT
+                  memberCount: 2
+                  repositoryId: '172'
+                  repositoryName: App-test-1
+                  repositoryURL: 'https://mendixcloud.com.cn/muhong0/App-test-1.git'
+                  isActive: true
+                  createdDate: '2023-08-13T06:06:55.196Z'
+                - id: c6af395b-be22-4cfc-a473-5e30d255fb6d
+                  name: App-test-2
+                  description: This project was created by Mendix Studio Pro.
+                  ownerUserName: Peter
+                  ownerGroupName: IT
+                  memberCount: 2
+                  repositoryId: '552'
+                  repositoryName: App-test-2
+                  repositoryURL: 'https://mendixcloud.com.cn/org/App-test-2.git'
+                  isActive: true
+                  createdDate: '2023-08-13T06:06:55.211Z'
+          examples:
+            Project list:
+              value:
+                - id: d8e4086c-8a5c-4372-9781-03a83c87defb
+                  name: App-test-1
+                  description: This project was created by Mendix Studio Pro.
+                  ownerUserName: Peter
+                  ownerGroupName: IT
+                  memberCount: 2
+                  repositoryId: '172'
+                  repositoryName: App-test-1
+                  repositoryURL: 'https://mendixcloud.com.cn/muhong0/App-test-1.git'
+                  isActive: true
+                  createdDate: '2023-08-13T06:06:55.196Z'
+                - id: c6af395b-be22-4cfc-a473-5e30d255fb6d
+                  name: App-test-2
+                  description: This project was created by Mendix Studio Pro.
+                  ownerUserName: Peter
+                  ownerGroupName: IT
+                  memberCount: 2
+                  repositoryId: '552'
+                  repositoryName: App-test-2
+                  repositoryURL: 'https://mendixcloud.com.cn/org/App-test-2.git'
+                  isActive: true
+                  createdDate: '2023-08-13T06:06:55.211Z'
+    job:
+      description: Project creation job
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+            x-examples:
+              Example 1:
+                id: '123'
+          examples:
+            Project creation job:
+              value:
+                id: '123'
+    project:
+      description: Project
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              description:
+                type: string
+              ownerUserName:
+                type: string
+              ownerGroupName:
+                type: string
+              memberCount:
+                type: integer
+              repositoryId:
+                type: string
+              repositoryName:
+                type: string
+              repositoryURL:
+                type: string
+              isActive:
+                type: boolean
+              createdDate:
+                type: string
+            x-examples:
+              Example 1:
+                id: d8e4086c-8a5c-4372-9781-03a83c87defb
+                name: App-test-1
+                description: This project was created by Mendix Studio Pro.
+                ownerUserName: Peter
+                ownerGroupName: IT
+                memberCount: 2
+                repositoryId: '172'
+                repositoryName: App-test-1
+                repositoryURL: 'https://mendixcloud.com.cn/muhong0/App-test-1.git'
+                isActive: true
+                createdDate: '2023-08-13T06:06:55.196Z'
+          examples:
+            Project:
+              value:
+                id: d8e4086c-8a5c-4372-9781-03a83c87defb
+                name: App-test-1
+                description: This project was created by Mendix Studio Pro.
+                ownerUserName: Peter
+                ownerGroupName: IT
+                memberCount: 2
+                repositoryId: '172'
+                repositoryName: App-test-1
+                repositoryURL: 'https://mendixcloud.com.cn/muhong0/App-test-1.git'
+                isActive: true
+                createdDate: '2023-08-13T06:06:55.196Z'
+    objects:
+      description: Project members or share groups
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: string
+                name:
+                  type: string
+            x-examples:
+              Example 1:
+                - id: 205b6ffd-34cf-453e-aa45-2782d2f8cf9c
+                  name: Group IT
+                - id: 10d0a84a-0c13-4efa-a09f-948e49462be9
+                  name: Group QA
+          examples:
+            Project member list:
+              value:
+                - id: 05ab1238-407c-478b-9dd3-05f4256702b1
+                  name: User1
+                - id: cf77fc69-d303-446d-b045-d2aa6fb54937
+                  name: User2
+            Projec share group list:
+              value:
+                - id: 205b6ffd-34cf-453e-aa45-2782d2f8cf9c
+                  name: Group IT
+                - id: 10d0a84a-0c13-4efa-a09f-948e49462be9
+                  name: Group QA
+  schemas:
+    ProjectCreation:
+      type: object
+      description: Project creation request
+      properties:
+        name:
+          type: string
+          description: Project name.
+        description:
+          type: string
+          description: Project description.
+        useAppTemplate:
+          type: boolean
+          description: 'If true, app template will be used for project creation.'
+        appTemplate:
+          type: object
+          description: App template.
+          properties:
+            templateId:
+              type: string
+              description: App template id.
+      required:
+        - name
+      x-examples:
+        Project creation request:
+          name: App-Test-1
+          description: My test app 1
+          useAppTemplate: true
+          appTemplate:
+            templateId: '438'
+    ProjectInput:
+      type: object
+      description: Project change request
+      properties:
+        name:
+          type: string
+          description: Project name
+        description:
+          type: string
+          description: Project description
+        isActive:
+          type: boolean
+          description: Project status (Active or Archived)
+      x-examples:
+        Project info change request:
+          name: App-Test-1
+          description: App Test 1 description
+        Project archive request:
+          isActive: false
+        Project active request:
+          isActive: true
+    OwnerInput:
+      type: object
+      title: OwnerInput
+      description: Project owner change request
+      properties:
+        userName:
+          type: string
+          description: Project owner user name.
+          pattern: '^[a-zA-Z][a-zA-Z0-9_]{2,19}$'
+          minLength: 1
+          maxLength: 100
+        groupName:
+          type: string
+          description: Project owner group name
+          minLength: 1
+          maxLength: 100
+      x-examples:
+        Project owner change request:
+          userName: UserX
+          groupName: GroupY
+      xml:
+        name: OwnerInput
+    error:
+      type: object
+      description: Error response
+      properties:
+        status:
+          type: integer
+          description: Response status code.
+        title:
+          type: string
+          description: 'A short, human-readable summary of the problem type.'
+        detail:
+          type: string
+          description: A human-readable explanation specific to this occurrence of the problem.
+        invalid-params:
+          type: array
+          description: "(Optional) JSON list List of name, reason keys for invalid attribute values.\r\n"
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: "Parameter name.\r\n"
+              reason:
+                type: string
+                description: "Reason for error.\r\n"
+      required:
+        - status
+        - title
+        - detail
+      x-examples:
+        Error response:
+          status: 400
+          title: Bad Request
+          detail: Please see invalid-params list
+          invalid-params:
+            - name: name
+              reason: Project name can not be empty
+security:
+  - {}

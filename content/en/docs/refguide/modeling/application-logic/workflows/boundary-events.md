@@ -82,10 +82,14 @@ For an existing boundary event, when you change its type from non-interrupting t
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/security-dialog.png" alt="Security Dialog when changing type" width="450">}}
 
+The dialog is shown due to execution limitations on ongoing boundary events. For example the parent activity will be in progress when a non-interrupting BE starts. Once the type is changed it's parent activity will stay in progress, which would allow the parent to have more than the maximal allowed interrupting boundary events.
+
 After you confirm the change:
 
-* The boundary event is re-created as the specified type. As a result, new IDs are created. These IDs are used by the Mendix Runtime for conflict detection analysis.
-* The current activities on the boundary event path including the boundary event itself become incompatible and need to be restarted.
+* The boundary event is re-created as the specified type. And the boundary event will be scheduled after redeploy of the workflow, as soon as it becomes in progress. 
+* The workflow will become incompatible once a boundary event is changed that has already been executed. The workflow will become incompatible by the following reasons:
+    * If the old boundary event was non-interrupting, we'll get [Non-interrupting boundary event path removed](/refguide/workflow-versioning/#non-interrupting-boundary-event-path-removed) conflict.
+    * If the old boundary event was interrupting, we'll get the [Current Activity Removed](/refguide/workflow-versioning/#current-activity-removed) conflict.
 
 ### Rearranging Boundary Events
 
@@ -121,24 +125,24 @@ An interrupting boundary event path must end with an **End** event or a **Jump**
 When there are multiple boundary events attached to an activity and an interrupting boundary event is executed, all the scheduled boundary events will be aborted and all the boundary events that have already started will continue to run until the entire workflow ends.
 {{% /alert %}}
 
-## Nested jump rules
-Boundary events come with a specific set of rules for jumps when they are nested, the variations are working meant for both a modelled jump and a runtime ad-hoc jump. In the following table are the differences specified.
+## Jump rules
+Boundary events come with a specific set of rules for jumps, these rules are integrated in both types of jumps such as [Jumping to other activities in design time](/refguide/jump-activity/) and and [jumping in running workflow instances](/refguide/jump-to/). The rules are as follows:
 
-|Parent | Child | Description|
-| -------- |-------- | ------- |
-|Interrupting | Interrupting | When an interrupting boundary event is nested inside an interrupting boundary event we are allowed to either jump out of the boundary event flow or end the workflow.|
-|Interrupting | Non-Interrupting | When an interrupting boundary event is nested inside an non-interrupting boundary event we are only allowed to jump out of the boundary event flow to it's parent flow.|
-|Non-Interrupting | Interrupting | When a non-interrupting boundary event is nested inside an interrupting boundary event we are only allowed to jump in the nested non-interrupting boundary event flow, this follows the same rules as the parallel split outcomes.|
-|Non-Interrupting | Non-Interrupting | When a non-interrupting boundary event is nested inside an non-interrupting boundary event we are only allowed to jump inside the nested non-interrupting boundary event flow, this follows the same rules as the parallel split outcomes.|
+- Jump to the inside of a boundary event: not allowed (and never will be regardless of how they are organized)
+- Jump to the outside of a boundary event: only allowed from within an interrupting boundary event.
+- Jump within a boundary event: allowed
 
 ## Boundary Event Variables
 
-Boundary events have dedicated variables that can be used to get direct access to the values of the parent activity if it is either a user task or Call workflow activity. You can get information such as the parent activity's `DueDate`, which can be used in the boundary event flow and its expressions. For instance, you can use the expression `addDays($ParentTask/DueDate, -2)` to configure a timer boundary event so that it is triggered two days before the due date of its parent user task.
+Boundary events have dedicated variables that can be used by activities in the path of the boundary event to get direct access to the values of the parent activity if it is either a user task or Call workflow activity. You can get information such as the parent activity's `DueDate`, which can be used in the boundary event flow and its expressions. For instance, you can use the expression `addDays($ParentTask/DueDate, -2)` to configure a timer boundary event so that it is triggered two days before the due date of its parent user task.
 
 The list of variables is described below: 
 
 * `$ParentTask` – the parent user task of the attached boundary event
 * `$CalledWorkflowInstance` – the parent Call workflow activity of the attached boundary event
+
+## Current Limitation {#limitation}
+- When a workflow instance has a running timer boundary event which is set to recur. And for example in the running instance we do a manual jump to the parent activity of the running workflow. The already scheduled boundary event will not be cancelled whilst the new one is scheduled. When the old one executes in the mean time the new one will be disregarded. This is a limitation that will be fixed in the future.
 
 ## Read more
 

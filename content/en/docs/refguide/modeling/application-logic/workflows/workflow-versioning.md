@@ -233,3 +233,12 @@ You can do one of the following:
 * The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
 * The Administrator can use **Mark-as-Resolved** to fix this issue (the currently running activity within the removed path will be aborted).
 * The app developer can revert the change (which adds the path back) and deploy it.
+
+#### Non-interrupting boundary event path removed
+
+When an app developer removes a non-interrupting boundary event which was already executed, and then deploys this change. The currently running workflow instances that are executing activities within that path cannot continue execution.
+
+* The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
+* The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
+* The Administrator can use **Mark-as-Resolved** to fix this issue (the currently running activity within the removed boundary event path will be aborted).
+* The app developer can revert the change (which adds the boundary event path back) and deploy it.

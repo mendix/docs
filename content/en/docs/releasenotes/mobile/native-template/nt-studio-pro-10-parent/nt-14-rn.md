@@ -2,16 +2,32 @@
 title: "Native Template 14"
 url: /releasenotes/mobile/nt-14-rn/
 weight: 6
-description: "Native Template 14"
+description: "Native Template 14 release notes"
 ---
 
-## 14.0.1 {#1401}
+## 14.1.2
 
-**Release date: June 5, 2025**
+**Release date: June 06, 2025**
 
 ### Fixes
 
 * We resolved an issue where iOS applications built with Mendix 10.18 or higher would fail when the React client was enabled in **Runtime** settings.
+
+## 14.1.1 {#1402}
+
+**Release date: May 02, 2025**
+
+### Fixes
+
+* We have fixed an issue where a user may face an error during build process because latest version 18 for playServices is not compatible with current gradle version.
+
+## 14.1.0 {#1401}
+
+**Release date: April 02, 2025**
+
+### Fixes
+
+* We have upgraded `@mendix/native` to version 9.0.1.
   
 ## 14.0.0 {#1400}
 

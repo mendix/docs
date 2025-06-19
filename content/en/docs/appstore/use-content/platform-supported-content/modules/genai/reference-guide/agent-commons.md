@@ -130,7 +130,10 @@ For more technical details, see the [Function Calling](/appstore/modules/genai/f
 
 #### Adding Knowledge Bases
 
-For supported knowledge bases registered in your app, you can connect them to agents to enable autonomous retrievals. Refer to the documentation of the connector provided by your chosen knowledge base provider - follow the instructions for setting up the configuration of knowledge bases in your app, so that they can be linked to your agents.
+For supported knowledge bases registered in your app, you can connect them to agents to enable autonomous retrievals. Refer to the documentation of the connector provided by your chosen knowledge base provider - follow the instructions for setting up the configuration of knowledge bases in your app, so that they can be linked to your agents. Mendix provides the following platform-supported connectors that support knowledge base integrations with agents: 
+- [Mendix Cloud GenAI Connector](/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/#configuration)
+- [Amazon Bedrock Connector](/appstore/modules/aws/amazon-bedrock/#sync-models)
+- [OpenAI Connector](/appstore/modules/genai/reference-guide/external-connectors/openai/#general-configuration) for Azure knowledge bases, coming soon.
 
 To allow an agent to perform semantic searches, add the knowledge base to the agent definition and configure the retrieval parameters, such as the number of chunks to retrieve, and the threshold similarity. Multiple knowledge bases can be added to the agent to pick from. Give each knowledge base a name and description (in human language) so that the model can decide which retrieves are necessary based on the input it gets.
 

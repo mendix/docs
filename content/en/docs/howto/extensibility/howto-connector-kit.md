@@ -14,7 +14,7 @@ The diagram below highlights the power of Mendix's integration with Java. It sho
 
 {{< figure src="/attachments/howto/extensibility/howto-connector-kit/slack-rekogition-bot-architecture.png" alt="Slack Rekognition Bot design" class="no-border" >}}
 
-The Mendix application is built around a few microflows that utilize Mendix microflow actions to provide a conversational user interface through [Slack](https://slack.com/) and various Amazon services: [S3](https://aws.amazon.com/s3/), [Rekognition](https://aws.amazon.com/rekognition/), and [Lex](https://aws.amazon.com/lex/).
+The Mendix application consists of a few microflows that utilize Mendix microflow actions to provide a conversational user interface through [Slack](https://slack.com/) and various Amazon services: [S3](https://aws.amazon.com/s3/), [Rekognition](https://aws.amazon.com/rekognition/), and [Lex](https://aws.amazon.com/lex/).
 
 The image below illustrates the microflow toolbox after adding all the modules that offer connectors to the services used:
 
@@ -31,7 +31,7 @@ This document shows you how to do the following:
 
 ## Creating Generic Actions Using Type Parameters
 
-Let's start with type parameters. In the **Type parameters** tab in the Java action definition dialog box, you can use a type parameter if you want to ensure that certain parameters of your action share the same entity but you do not know the name of this entity when defining the actions.
+In the **Type parameters** tab of the Java Action definition dialog box, you can use a type parameter to ensure that certain parameters of your action share the same entity, even if you do not yet know the name of that entity when defining the action.
 
 For example, suppose you want to create an action that takes two objects of the same entity and returns a list containing both objects. You can use a type parameter to guarantee that both the input parameters for specifying the objects and the resulting list all use the same entity.
 
@@ -94,7 +94,7 @@ public class JoinObjectsInList extends UserAction<java.util.List<IMendixObject>>
 }
 ```
 
-You now have a reusable action in your toolbox that will join two objects into a list as illustrated by this example:
+You now have a reusable action in your toolbox that will join two objects into a list as shown by the example below:
 
 {{< figure src="/attachments/howto/extensibility/howto-connector-kit/join_objects_use.png" alt="Join objects use" class="no-border" >}}
 
@@ -106,7 +106,7 @@ The following example illustrates how you can use microflow parameters. The micr
 
 {{< figure src="/attachments/howto/extensibility/howto-connector-kit/init-loop.png" alt="Init loop" class="no-border" >}}
 
-Here's an alternative to the microflow above that uses a custom Java action to replace the loop, instantiation, and initialization of the objects with a Java action:
+Here is an alternative to the above microflow that uses a custom Java action to replace the loop, instantiation, and initialization of the objects with a Java action:
 
 {{< figure src="/attachments/howto/extensibility/howto-connector-kit/init-list-use.png" alt="Init list loop with action" class="no-border" >}}
 
@@ -123,10 +123,10 @@ As you can see below, this action uses a new parameter type (**Microflow**) to i
 
 {{< figure src="/attachments/howto/extensibility/howto-connector-kit/initialize_list_mf_pars.png" alt="Initialize list using microflow action parameters" class="no-border" >}}
 
-In the Java implementation for this action, you'll see the following details for the parameters:
+In the Java implementation for this action, see the following details for the parameters:
 
 * **ResultEntity** – a string with the entity name used for the default object and the result list
-* **DefaultObject** – an IMendixObject instance containing the default object
+* **DefaultObject** – an `IMendixObject` instance containing the default object
 * **InitializationMicroflow** – a string containing the name of the initializing microflow
 * **ListSize** – a long variable containing the number of objects desired in the list
 
@@ -152,15 +152,15 @@ In the Java implementation for this action, you'll see the following details for
 	}
 ```
 
-The `executeAction` method is where all the magic happens:
+The `executeAction` method handles the main functionality:
 
-1. It initializes an ArrayList for the result.
-2. It has a for-loop to create the desired number of objects.
-3. The objects are created using `Core.instantiate()`. The entity name specified in the action is used as the input to specify what entity to instantiate.
-4. The system determines if a default object was specified. If so, it copies all the attribute values to the new object.
-5. The system executes the initialization microflow using `Core.microflowCall()`.
+1. It initializes an `ArrayList` to store the results.
+2. A `for` loop runs to create the desired number of objects.
+3. Each objects is created using `Core.instantiate()`, with the entity name specified in the action used as the input to specify which entity to instantiate.
+4. If a default object is defined, its attribute values are copied to the new object.
+5. The system then executes the initialization microflow using `Core.microflowCall()`.
 6. The newly instantiated and initialized object is added to the result list.
-7. The list of new objects is returned.
+7. Finally, the method returns the list of newly created objects.
 
 ```java
   @Override
@@ -212,13 +212,13 @@ Microflow parameters are especially useful for handling events. For example, the
 
 ## Using Import and Export Mappings
 
-Now we will discuss an example of how you can use mappings in your Java actions. In this example, you'll create an action to import a string using an import mapping. This is not particularly useful, seeing there is a default action in your toolbox already that provides this functionality called **Import with mapping**. However, as an example, it illustrates how to use mappings.
+In this section, you can see how to use mappings in your Java actions. In this example, you will create an action to import a string using an import mapping. This is not particularly useful, seeing there is a default action in your toolbox already that provides this functionality called **Import with mapping**. However, as an example, it illustrates how to use mappings.
 
-This is an image of what we are building: an action to import JSON strings:
+This is an image of what we are building: an action to import JSON strings.
 
 {{< figure src="/attachments/howto/extensibility/howto-connector-kit/example_import_string_use.png" alt="Example import string use" class="no-border" >}}
 
-The action requires the user to provide a string with the JSON to import, select an import mapping, and define the entity of the result. Finally, a name needs to be provided for the result of the import mapping.
+The action requires the user to provide a string with the JSON to import, select an import mapping, and define the entity of the result. Finally, provide a name for the result of the import mapping.
 
 The action is defined as follows:
 
@@ -231,7 +231,7 @@ The action is defined as follows:
 
 Implement the action in Java as follows:
 
-1. Create an InputStream from the JSON input so it can be read by the import mapping.
+1. Create an `InputStream` from the JSON input so it can be read by the import mapping.
 2. Use `Core.integration().importStream()` to import the JSON with the specified mapping.
 3. Return the first object imported.
 
@@ -269,16 +269,15 @@ public ImportString(
 	}
 ```
 
-## Some Development Tips
+## Development Tips
 
 ### Unit Testing
 
-When developing connector modules, you can use the unit test module to test the actions you are implementing.
+When developing connector modules, you can use the [Unit Testing](https://marketplace.mendix.com/link/component/390) module to test the actions you are implementing.
 
-If you want to publish your module with custom microflow actions to the Mendix Marketplace for easy reuse, it's best to have a module containing only the reusable parts. Add another module to your app with all the test microflows and anything else you need
-while developing your application.
+If you want to publish your module with custom microflow actions to the Mendix Marketplace for easy reuse, it is best to have a module containing only the reusable parts. Add another module to your app with all the test microflows and anything else you need while developing your application.
 
-In the screenshot below, observe two important points. First, the **ConnectorKitDemo** module only contains the actions you want to publish to the Marketplace. To do this, right-click the module and select **Export module package...**. Second, the **ConnectorKitDemoTests** module contains all the functionality you need while developing the reusable module: a small domain model with some sample data and some test pages. It also contains the unit test microflow **Test_InitProduct**, which will be called by the unit test module.
+In the screenshot below, observe two important points. First, the **ConnectorKitDemo** module only contains the actions you want to publish to the Marketplace. To do this, right-click the module and select **Export module package...**. Second, the **ConnectorKitDemoTests** module contains all the functionality you need while developing the reusable module: a small domain model with some sample data and some test pages. It also contains the unit test microflow **Test_InitProduct**, which will be called by the [Unit Testing](/appstore/modules/unit-testing/) module.
 
 ### Managing Libraries
 

@@ -22,7 +22,6 @@ The subjects covered in this documentation section are as follows:
 * [Deployment Location](/developerportal/deploy/deployment-location/)
 * [Webhooks](/developerportal/deploy/webhooks/)
 * [Software Composition](/developerportal/deploy/software-composition/)
-* [Siemens Advanced License Technology](/developerportal/deploy/salt/)
 
 ## Building Your Model
 

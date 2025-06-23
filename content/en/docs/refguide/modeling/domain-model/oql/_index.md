@@ -38,9 +38,9 @@ Here is a list of all OQL reserved words:
 
 `BOOLEAN`, `BY`
 
-`CASE`, `CAST`, `CONFLICT`, `COUNT`
+`CASE`, `CAST`, `COUNT`
 
-`DATEDIFF`, `DATEPART`, `DATETIME`, `DAY`, `DAYOFYEAR`, `DECIMAL`, `DELETE`, `DESC`, `DISTINCT`, `DUPLICATE`
+`DATEDIFF`, `DATEPART`, `DATETIME`, `DAY`, `DAYOFYEAR`, `DECIMAL`, `DESC`, `DISTINCT`
 
 `ELSE`, `END`, `EXISTS`
 
@@ -50,15 +50,13 @@ Here is a list of all OQL reserved words:
 
 `HAVING`, `HOUR`
 
-`IGNORE`, `IN`, `INNER`, `INSERT`, `INTEGER`, `INTO`, `IS`
+`IN`, `INNER`, `INTEGER`, `IS`
 
 `JOIN`
 
-`KEY`
-
 `LEFT`, `LIKE`, `LIMIT`, `LONG`
 
-`MATCHED`, `MAX`, `MERGE`, `MILLISECOND`, `MIN`, `MINUTE`, `MONTH`
+`MAX`, `MILLISECOND`, `MIN`, `MINUTE`, `MONTH`
 
 `NOT`, `NULL`
 
@@ -66,24 +64,18 @@ Here is a list of all OQL reserved words:
 
 `QUARTER`
 
-`REPLACE`, `RIGHT`
+`RIGHT`
 
-`SECOND`, `SELECT`, `SET`, `SOURCE`, `STRING`, `SUM`
+`SECOND`, `SELECT`, `STRING`, `SUM`
 
-`TARGET`, `THEN`, `TRUE`
+`THEN`, `TRUE`
 
-`UNION`, `UPDATE`, `UPSERT`, `USING`
+`UNION`
 
-`VALUES`
-
-`WEEK`, `WEEKDAY`, `WHEN`, `WHERE`, `WITH`
+`WEEK`, `WEEKDAY`, `WHEN`, `WHERE`
 
 `YEAR`
 
 {{% alert color="info" %}}
 In OQL, `FLOAT` is a reserved word for legacy reasons. Mendix no longer supports a Float data type. It should not be used.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-In OQL, `DELETE`, `INSERT`, `REPLACE`, `UPDATE`, `UPSERT`, `INTO`, `SET`, `VALUES`, `IGNORE`, `MATCHED`, `DUPLICATE`, `KEY`, `CONFLICT`, `MERGE`, `USING`, `SOURCE`, `TARGET`, and `WITH` are reserved but not yet used.
 {{% /alert %}}

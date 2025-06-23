@@ -8,7 +8,7 @@ no_list: true
 
 ## Introduction
 
-The **Deployed Apps Overview** page provides a comprehensive view of all the apps deployed within your company. For each deployed app, you can view details such as its name, ID, Technical Contact, status, number of environments, and, if applicable, the number of [cloud tokens](/control-center/entitlements/#cloud-tokens) used. 
+The **Deployed Apps Overview** page provides a comprehensive view of all the apps deployed within your company. For each deployed app, you can view details such as its name, ID, Technical Contact, status, number of environments, and, if applicable, the number of [cloud tokens](/control-center/cloud-tokens/#cloud-tokens) used. 
 
 Additionally, this page allows you to provision and offboard environments for apps on Mendix Cloud, and email or download the license keys for your apps.
 

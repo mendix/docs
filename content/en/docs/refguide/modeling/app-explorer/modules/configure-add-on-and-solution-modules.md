@@ -1,6 +1,6 @@
 ---
 title: "Configuring Add-on and Solution Modules for Publishing"
-linktitle: "Publish Add-on and Solution Modules"
+linktitle: "Configuring Add-on and Solution Modules"
 url: /refguide/configure-add-on-and-solution-modules/
 weight: 20
 ---

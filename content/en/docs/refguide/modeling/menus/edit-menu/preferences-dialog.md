@@ -225,10 +225,6 @@ This option allows user to choose between Studio Pro themes: **Auto (System them
 
 This option sets the default page editor mode that your page opens in: **Structure mode** (the default) or **Design mode**. For more information on page editor modes, see the [Page Editor Modes](/refguide/page/#page-editor-modes) section in *Page*.
 
-### Rendering {#rendering}
-
-Hardware and driver issues may cause performance problems when running Studio Pro. These issues can appear in form of dialog boxes opening and closing much more slowly than expected, and general slowness of the UI. In case the hardware problems cannot be solved, it is possible to mitigate these issues by turning the **Enable software rendering mode** setting on. Enabling this setting requires a restart of Studio Pro to take effect. Running the application with this setting on may increase the CPU usage.
-
 ### Language {#language}
 
 This feature is currently in beta.
@@ -248,6 +244,12 @@ The closing policy is not applied to tabs with unsaved changes.
 This setting allows you to move forward and backward through your editing history to show the documents you have recently worked on. This feature is enabled by default. 
 
 ## Advanced Tab
+
+### Rendering {#rendering}
+
+Hardware and driver issues may cause performance problems when running Studio Pro. These issues can appear in form of dialog boxes opening and closing much more slowly than expected, and general slowness of the UI. If case the hardware problems cannot be solved, it is possible to mitigate these issues by turning the **Enable software rendering mode** setting on. This option is available for Native UI and Web Content. For Web Content, you can select **Auto**, which enables software rendering mode automatically when running on Parallels or another virtual machine.
+
+Enabling this setting requires a restart of Studio Pro to take effect. Running the application with this setting on may increase the CPU usage.
 
 ### Proxy Server
 

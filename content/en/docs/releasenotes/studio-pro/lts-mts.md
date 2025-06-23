@@ -14,7 +14,7 @@ To understand the different types of versions and releases, consider the example
 
 In the 9.24.1 example, the first number (**9**) indicates the major version.
 
-Mendix supports three major versions at a time. To clarify our current offering and in relation to our SLA, today Mendix supports major versions 8, 9, and 10. Version 7 is only supported via the Extended Support product.
+Mendix supports three major versions at a time. To clarify our current offering and in relation to our SLA, today Mendix supports major versions 8, 9, and 10. 
 
 As of Mendix 10, to make planning version upgrades easier for our users, Mendix will release in a two-year cadence, which means that every two years we plan to release a new major version in June. This will help in preparing and planning to adopt new releases and upgrade older Mendix versions. Each major version release will start with two public [beta releases](/releasenotes/beta-features/).
 
@@ -48,8 +48,8 @@ An LTS version is the last minor release of a major version. Its release is alig
 
 These are the current LTS versions of Studio Pro:
 
-* [9.24](/releasenotes/studio-pro/9.24/) (started in March, 2023)
 * [8.18](/releasenotes/studio-pro/8.18/) (started in March, 2021)
+* [9.24](/releasenotes/studio-pro/9.24/) (started in March, 2023)
 
 Release notes for the current LTS versions are marked with an LTS badge (<text class="badge badge-pill badge-lts" style="margin-left:0px">LTS</text>) in the left sidebar.
 
@@ -91,15 +91,11 @@ An MTS is a minor version released approximately every 6 months after a new majo
 
 This is the current MTS version of Studio Pro:
 
-* [10.18](/releasenotes/studio-pro/10.18/) (started in December, 2024)
 * [10.6](/releasenotes/studio-pro/10.6/) (started in December, 2023)
 * [10.12](/releasenotes/studio-pro/10.12/) (started in June, 2024)
+* [10.18](/releasenotes/studio-pro/10.18/) (started in December, 2024)
 
 Release notes for the current MTS version are marked with an MTS badge (<text class="badge badge-pill badge-mts" style="margin-left:0px">MTS</text>) in the left sidebar.
-
-{{% alert color="info" %}}
-MTS versions (for example, 9.6) remain supported until the next major version has been released for general availability (for example, 10.0).
-{{% /alert %}}
 
 Mendix MTS versions offer a balance between getting the latest and greatest Mendix has to offer every month, and security and stability.
 

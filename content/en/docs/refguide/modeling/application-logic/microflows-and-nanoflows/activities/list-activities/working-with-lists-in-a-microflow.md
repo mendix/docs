@@ -41,7 +41,7 @@ Before you continue, you should first set up a test app, and populate it with te
 
     One **Customer** entity can be associated with many **Orders**, so set the association between the entities accordingly.
 
-    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18581378.png" alt="Customer and Order entities with one-to-many association" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/working-with-lists-in-a-microflow/domain-model.png" >}}
 
 2. Create [overview and detail pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/) to manage the **Customer** and **Order** objects.
 3. Create [menu items](/refguide/setting-up-the-navigation-structure/#menu-items) to access the **Customer** and **Order** overview pages.

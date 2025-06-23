@@ -21,9 +21,9 @@ This document describes the installation and configuration of Mendix software on
 
 ## Prerequisites {#Prerequisites}
 
-To set up an environment to run Mendix applications, you will need to install the Mendix software. For each Mendix application that will be run, a separate user (service) account is required. This section presents an overview of the setup.
+To set up an environment to run Mendix applications, you will need to install the Mendix software. You must also create a separate user (service) account for each Mendix application you plan to run.
 
-{{< figure src="/attachments/deployment/on-premises-design/ms-windows/18580733.png" >}}
+{{< figure src="/attachments/deployment/on-premises-design/ms-windows/ms-windows-setup.png" >}}
 
 Before starting this how-to, make sure you have the following prerequisites:
 
@@ -40,7 +40,7 @@ Before starting this how-to, make sure you have the following prerequisites:
 * MS IIS URL Rewrite installed (for more information, see [URL Rewrite](https://www.iis.net/downloads/microsoft/url-rewrite))
 * Java Runtime, version depending on your Mendix Server Distribution. See [System Requirements](/refguide/system-requirements/#java) for more information. 
 * The Mendix Deployment Archive (MDA) of your Mendix project
-* The Mendix server distribution corresponding with your Mendix Studio Pro version (see the [Mendix Marketplace](https://marketplace.mendix.com/link/studiopro/))
+* The Mendix server distribution corresponding to your Mendix Studio Pro version (see the [Mendix Marketplace](https://marketplace.mendix.com/link/studiopro/))
 * A database with sufficient security rights
 
     * Suitable database servers are MariaDB, MS SQL Server, MySQL, Oracle Database and PostgreSQL. See [System Requirements](/refguide/system-requirements/#databases) for more information
@@ -52,12 +52,9 @@ Before starting this how-to, make sure you have the following prerequisites:
 To download and install the Mendix Service Console, follow these steps:
 
 1. Download the latest version of the [Mendix Service Console](https://marketplace.mendix.com/link/component/223425) module from the Marketplace.
-
-    {{< figure src="/attachments/deployment/on-premises-design/ms-windows/service_console_download.png" >}}
-
 2. Install the Mendix Service Console by following the installation wizard.
 
-3. Start the Mendix Service Console after completing the installation. The first time you launch the application, a popup will be shown (it will always be shown if no valid location is configured for the apps and server files):
+3. Start the Mendix Service Console after completing the installation. The first time you launch the application, you will see a dialog box (it will always be shown if no valid location is configured for the apps and server files):
 
     {{< figure src="/attachments/deployment/on-premises-design/ms-windows/service_console_first_run.png" >}}
 
@@ -65,7 +62,7 @@ To download and install the Mendix Service Console, follow these steps:
 
     {{< figure src="/attachments/deployment/on-premises-design/ms-windows/18580730.png" >}}
 
-5. In the **Preferences** dialog box, enter a **Location of apps and server files**. This location is used for storing your app files and Mendix server files. Mendix recommends using a directory:
+5. In the **Preferences** dialog box, enter the **Location of apps and server files**. This location is used for storing your app files and Mendix server files. Mendix recommends using a directory:
 
     * that is NOT on the system partition
     * where you can easily control the security rights
@@ -101,7 +98,7 @@ To deploy a Mendix app using the Mendix Service Console, follow these steps:
 
     {{< figure src="/attachments/deployment/on-premises-design/ms-windows/service_console_selectapp.png" >}}
 
-6. Now select the **MDA** file that was [created in Studio Pro](/refguide/create-deployment-package-dialog/) and contains your application logic. After the installation of your MDA file, you will see which Mendix server (Mendix Runtime) version is needed.
+6. Now select the **MDA** file that was [created in Mendix Studio Pro](/refguide/create-deployment-package-dialog/) and contains your application logic. After the installation of your MDA file, you will see which Mendix server (Mendix Runtime) version is needed.
 
 7. Configure the **Database Settings**:
 
@@ -137,7 +134,7 @@ In order to use the proxy functionality within ARR, you need to enable this feat
 To create a website, follow these steps:
 
 1. Open the IIS Manager.
-2. In the **Connections** pane, click the **Sites** node in the tree. If **Default Website** or any other website is present under **Sites**, please check if it is being used.
+2. In the **Connections** pane, click the **Sites** node in the tree. If **Default Website** or any other website is present under **Sites**, check if it is being used.
 3. Right-click **Sites** and select **Add Web Site**.
 4. In the **Add Web Site** dialog box, enter a friendly name for your web site in the **Web site name** field.
 5. In the **Physical path** field, enter the physical path of your application-project-web folder (for example, *D:\Mendix\Apps\Application\Project\Web*).
@@ -203,7 +200,13 @@ Rule | Name | Pattern | Rewrite URL
 10 | p | `^(p/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 11 | manifest | `^(manifest.webmanifest)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 
-Follow the instructions below and replace *[Name]* with the name of the rule in the table above, *[Pattern]* with the regular expression pattern, and *[Rewrite URL]* with the Rewrite URL. Note that some patterns contain a trailing slash, `/`, when they need to point to an exact path (for example, `/ws-doc/mydoc/1234`).
+{{% alert color="info" %}}
+Some patterns include a trailing slash, `/`, when they need to match an exact path. For example, the pattern `ws-doc/` will match `/ws-doc/mydoc/1234`, but it will not match similar prefixes like `/ws-documentation/`.
+
+Additionally, while the example path (`/ws-doc/mydoc/1234`) includes a leading slash because browser URLs always start with one, IIS rewrite patterns do not include this slash. This is because the web server removes the leading slash before processing the URL path for matching.
+{{% /alert %}}
+
+Follow the instructions below and replace *[Name]* with the name of the rule in the table above, *[Pattern]* with the regular expression pattern, and *[Rewrite URL]* with the Rewrite URL.
 
 1. Open the IIS Manager and navigate to the website you want to manage.
 2. In the **Features View**, double-click **URL Rewrite**.
@@ -214,7 +217,7 @@ Follow the instructions below and replace *[Name]* with the name of the rule in 
 7. Set **Using** to *Regular Expressions*.
 8. In the **Pattern** field, enter `[Pattern]`.
 9. In the **Action** section, set **Action type** to *Rewrite*.
-10. In the **Rewrite URL** field, enter `[Rewrite URL]` (in the rules above this is always `http://localhost:8080/{R:1}{R:2}`).
+10. In the **Rewrite URL** field, enter `[Rewrite URL]` (in the rules above, this is always `http://localhost:8080/{R:1}{R:2}`).
 11. Ensure the **Append query string** checkbox is set to *true* (checked).
 12. Click **Apply**.
 13. Click **Back to Rules**.

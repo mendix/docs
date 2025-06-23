@@ -234,7 +234,7 @@ Activate/deactivate a user account in your company. Deactivating a user means th
  URL: https://usermanagement.mendix.com/legacy-api/1/users/<openId>
 ```
 
-The replacement for this deprecated endpoint is the [User Identifiers API](/apidocs-mxsdk/apidocs/user-identifiers-api/).
+The replacement for this deprecated endpoint is the [User Deactivation API](/apidocs-mxsdk/apidocs/user-deactivation-api/).
 
 #### Can Be Invoked By
 

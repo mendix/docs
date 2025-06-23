@@ -8,10 +8,6 @@ description: "Describes the features in Maia for OQL Generation."
 ## Introduction
 
 {{% alert color="info" %}}
-Maia for OQL was introduced in Studio Pro 11 beta 1.
-{{% /alert %}}
-
-{{% alert color="info" %}}
 An internet connection and signing in to Studio Pro are required to use Maia for OQL.
 {{% /alert %}}
 

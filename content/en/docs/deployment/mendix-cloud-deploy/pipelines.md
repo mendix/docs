@@ -321,7 +321,10 @@ Pipeline failure notifications only send if the user who triggered the pipeline 
 
 Pipelines time out if they run for more than three hours. In other words, if the operations in your pipeline cumulatively take longer than three hours to complete, then the pipeline will fail.
 
-To trigger pipelines based on Teamserver push (Git), Mendix automatically creates a webhook on your behalf. You can see this webhook if you click **Webhooks** in the [navigation pane](/developerportal/#navigation-pane). Do not delete this webhook; deleting it would cause pipeline run failures for pipelines that rely on the Teamserver push (Git) trigger type.
+Mendix automatically creates a webhook on your behalf to trigger pipelines based on [Teamserver push (Git)](/developerportal/deploy/webhooks/#teamserver-push-git):
+
+* This webhook is not visible to first-time pipeline users. 
+* For existing pipeline users, you can view this webhook by clicking **Webhooks** in the [navigation pane](/developerportal/#navigation-pane). Do not delete this webhook. Deleting it causes failures for pipelines that rely on the Teamserver push (Git) trigger.
 
 ### Known Issues and Limitations
 

@@ -20,6 +20,7 @@ The **Environments** page has the following tabs:
 * **Deployment Packages**
 * **Permissions**
 * **Activity**
+* **Request Overview**
     
 ### Overview Tab{#overview-tab}
 
@@ -69,7 +70,10 @@ In the environment resources section, you can view the following information:
 * The deployment **region**
 * The [cloud resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack)
 
-Additionally, you can [Scale the environment](/developerportal/deploy/scale-environment/) by clicking **Scale**.
+Additionally, you can perform the following actions:
+
+* [Scale the environment](/developerportal/deploy/scale-environment/) by clicking **Scale**.
+* Change the resource pack by clicking **Change Plan**. For more information on how to change plans on your Mendix Cloud, refer to [Changing Plans](/developerportal/deploy/change-plan/).
 
 ##### Deployed Package {#deployed-package}
 
@@ -167,6 +171,44 @@ If you are the [Technical Contact](/developerportal/general/app-roles/#technical
 1. Click **Download to CSV**. This button is only visible if you are the Technical Contact.
 2. Select the period for which you want to download log entries.
 3. Click **Download**.
+
+### Request Overview Tab {#request-overview}
+
+On the **Request Overview** tab, the Technical Contact can view details of all past and current [Change Plan](/developerportal/deploy/change-plan/) requests and perform certain actions based on the current request status.
+
+For each submitted plan change request you can see the following information:
+
+* **Request Type** – Type of change requested
+* **Environment** – The environment the plan change was requested for (such as, acceptance or production)
+* **Current Plan** – The environment's existing plan
+* **Requested Plan** – The plan requested for change
+* **Submitted on** – Request submission date
+* **Status** – Current request state. This can be:
+    * **Pending approval** – Awaiting Mendix Admin review
+    * **Pending schedule** – Approved by Mendix Admin, but plan change application not yet scheduled by the Technical Contact
+    * **Scheduled** – Plan change scheduled for the next maintenance window
+    * **In progress** – Plan change is being applied
+    * **Completed** – Mendix Admin has approved the change, Technical Contact has scheduled and applied the changes, and the new plan has been successfully applied to the environment
+    * **Rejected** – Request was denied
+    * **Failed** – Plan change did not complete successfully
+* **Action** – Shows more details of each plan request and provides options based on the request status. For more information, see [Request Overview Action](#request-overview-action)
+
+#### Request Overview Action {#request-overview-action}
+
+ Click **Details** on any request to view the **name** of the requester and the reviewer and other request details, including:
+
+* Status of the request
+* Current plan
+* Requested plan
+* Reasons for resizing
+* Date of request creation
+* Date the request was scheduled
+* Request ID
+* Request type
+* App name
+* Environment
+
+For more information, refer to the [Available Actions by Status](/developerportal/deploy/change-plan/#available-actions-by-status) section in *Changing Your Plan in Mendix Cloud*.
 
 ## Cloud Settings{#cloud-settings}
 

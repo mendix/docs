@@ -101,11 +101,11 @@ To test the extension, do the following in File Explorer.
 
     The extension files have now been added to the app.
     
-1. Start Studio Pro with the following command line parameters to tell it to use the extensions in the folder.
+1. Start Studio Pro with the following command line parameter to tell it to use the extensions in the folder.
 
-    `--enable-extension-development --webview-remote-debugging`
+    `--enable-extension-development`
 
-    These flags instruct Studio Pro to do the following:
+    This flag instructs Studio Pro to do the following:
 
     * Load extensions from the `extensions` folder
     * Enable web debugging tools which will be useful when developing your extension

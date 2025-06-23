@@ -14,7 +14,16 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2025
 
+### June 19, 2025
+
+#### Improvements
+
+* We have redesigned the Studio Pro download page to make it easier for you to identify supported versions and make informed version management decisions at a glance.    
+The new layout prominently displays the latest LTS and MTS releases, allowing you to choose the best version for your production apps. It also includes a definition of each release type to clarify the meaning of the labels in the version table. 
+
 ### May 22, 2025
+
+#### Improvements
 
 * We have replaced the [Marketplace Curation](/control-center/marketplace-curation/) <text class="badge badge-pill badge-recommended" style="margin-left:0px">RECOMMENDED</text> label with <text class="badge badge-pill badge-company-approved" style="margin-left:0px"> {{% icon name="checkmark-shield-filled" color="green" %}}COMPANY APPROVED</text>. The new label indicates Marketplace components that meet company policies and guidelines.
 
@@ -22,7 +31,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 #### Improvements
 
-* We have removed outdated components from the marketplace. These components were no longer supported, actively maintained, or guaranteed to work as intended. This step ensures a more reliable experience for all users.
+* We have removed outdated components from the Marketplace. These components were no longer supported, actively maintained, or guaranteed to work as intended. This step ensures a more reliable experience for all users.
 
 ## 2024
 

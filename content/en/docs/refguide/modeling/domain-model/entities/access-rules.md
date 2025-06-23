@@ -113,7 +113,7 @@ Because of this XPath constraint, access defined in the access rule is only appl
 
 #### Entity Rights
 
-You can add or edit entity rights using the **Create objects** and **Delete objects** checkboxes  next to **Entity rights**.
+You can add or edit entity rights using the **Create objects** and **Delete objects** checkboxes next to **Entity rights**.
 
 XPath constraints are not applied to create operations, meaning that if you enable create access in an access rule which applies to a certain module role, any end-user with this module role can create objects of this entity.
 

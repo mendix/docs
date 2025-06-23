@@ -1,6 +1,6 @@
 ---
-title: "Lead Mendix Implementation in Your Organization"
-linktitle: "Lead Mendix Implementation in Your Organization"
+title: "Implementing Mendix in Your Organization"
+linktitle: "Implementing Mendix in Your Organization"
 url: /lead-mendix-implementation-in-your-organization/
 weight: 100
 description: "Unlock the full potential of the Mendix platform and accelerate the application development journey in your organization."
@@ -186,18 +186,6 @@ It is important to know what’s happening with the Mendix Platform to be sure t
 
 * [Subscribe to our blog](https://www.mendix.com/blog/#blog__subscribe) and deep dive into our diverse library of articles and blog posts, where we discuss everything from Mendix best practices to industry trends.
 
-### Summary {#summary}
-
-In this section, you learned more about the Mendix platform and explored the 3 S’s and the 5 P’s of digital transformation, and how these can contribute to a successful journey. More specifically you:
-
-* Created your Mendix Portfolio Management board that will help you identify, track, and plan out your initiatives.
-* Started thinking about the people you want to include to establish a strong Mendix team.
-* Familiarized with the processes you'll have to build to ensure long-term outcomes.
-* Outlined the benefits the Mendix Platform brings to your organization.
-* Identified best practices to promote the value of low-code within your organization.
-* Assigned your Mendix admin.
-* Are now a member of our Mendix community, where you can always seek additional resources or inspiration! 
-
 ## Creating a Getting Started Plan 
 
 In this section, you will learn why and how to create an effective getting started plan. By the end, you will be able to: 
@@ -309,346 +297,218 @@ These image contain examples of timelines that Mendix uses frequently.
 
 ### Starting Your Mendix Portfolio
 
-Portfolio Management is a top-down process led by a portfolio manager and by decision-makers. Its main purpose is to assess potential initiatives and ensure they align with business goals. Initiatives that don't meet the criteria are excluded from consideration.
+Portfolio Management is a top-down process led by a portfolio manager and by decision makers. Its main purpose is to assess potential initiatives and ensure they align with business goals. Initiatives that don't meet criteria are excluded from consideration.
 
-To make sure that the strategy is reflected in the initiatives, you need to put into place a program to ensure vision alignment at every level, across every department. At this level, program owners or managers empower collaboration across departments. This will ensure that every solution will always meet the criteria, and support the goals of the vision. 
+To make sure that the strategy is reflected in the initiatives, you need to put in place a program to ensure alignment at every level, across every department. At this level, program owners or managers enable collaboration across departments. This ensures that every solution will always meet the criteria, and support the goals of the vision. 
 
 Portfolio Management starts at the company level, where the strategy is defined. The company strategy leads to a Portfolio Vision, which is translated into a backlog and budget for all initiatives. 
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/strategy.png"  >}}
 
-To start, think about what your organization striving to achieve. Jot down a few ideas that can help you get there. These could include solutions to migrate from legacy apps, improve customer experience, or increase efficiency. 
+If you have not already created your portfolio, you can start by thinking of the goals that your organization wants to achieve. These could include solutions to migrate from legacy apps, improve customer experience, or increase efficiency.    
+Follow these steps:
 
-If you have not already created your portfolio, you can start now by following these steps:
-
-1. Access [this page](https://portfolio.mendix.com/).
+1. Access [Portfolio Management](https://portfolio.mendix.com/).
 2. Click **Open Portfolio Management**.
-3. Click **Create Portfolio**. You can make it restricted for the time being, which means that you will have to approve other people before they gain access to it.   
-   If you have done a portfolio workshop already and maybe have your list of initiatives in an Excel file, you can easily import them. If not, just create a few cards that represent your ideas. Your Mendix team can also help you with this, so please do not hesitate to reach out to them to go over everything together.  
-   
-   Portfolio Management is a key activity that ensures you are always creating solutions that bring the most value to your organization. This means that you need to go over your main portfolio, keep initiatives up to date, and adjust or reprioritize if needed. 
+3. Click **Create Portfolio**. You can make it restricted for the time being, which means that you have to approve other people before they gain access to it.   
+   You can import ideas from an Excel file.    
 
 4. Click **Create Initiative** on the top right, and start jotting down your ideas.
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/create-initiative.png"  >}}
 
-### Finalize First Application Selection 
+### Choosing Your First App 
 
-It’s important that your first applications bring immediate value upon launch, because rapid application development isn’t just about delivering rapidly, it’s about realizing value quicker than you have before. 
+We recommend that you start by adding at least three app ideas to your portfolio, and picking one based on this checklist: 
 
-We recommend that you start with adding at least three applications ideas to your portfolio. While the first success is always important, to truly grasp the new rapid application development process and the Mendix platform, developing multiple apps and demonstrating repeated success is a best practice. 
-
-As for your very first project, you want to pick a use case out of your portfolio that is equal parts meaningful and doable. A great first project is something that impacts the enterprise positively but can be completed by a relatively small team in a reasonable timeframe. 
-
-Here’s a **quick checklist of things to consider when choosing your first application**:
-
-**Go live quickly:** One of the main goals of your first application is to validate your ability to rapidly bring new ideas to market. It’s important that you identify quick wins, so select applications that are limited in scope and can work independently in production. 
-
-**Make them worthy:** The first application should also be highly visible within the organization. It must have the right urgency and executive support, and also deliver tangible business value. Select an app idea where you’re sure the results will get noticed and the success will be shared by your stakeholders. 
-
-**Involve business stakeholders:** Requirements are often unclear and need to be refined through collaboration with, and feedback from, business stakeholders. The goal is to illustrate the higher level of creativity and collaboration facilitated by this new rapid application development approach.   The key to involving business stakeholders lies with the role of the product owner. The product owner knows what needs to be built. Application success is achieved when the development team and product owner work together with a passion for making applications that deliver value. 
-
-**Limit dependencies:** External factors over which you have little, or no control can quickly diminish the productivity advantage offered by the Mendix platform. That’s like using a permanent marker on a brand-new whiteboard. 
-
-**Don’t get bogged down in requirements:** Digital innovation projects are often marked by unclear business requirements. Don’t worry; this is a good thing, because it is better to define a high-level goal or purpose versus having detailed requirements. The more requirements your first applications have upfront, the longer it’s going to take to release. Make sure that you have at least two follow-up iterations planned so that you can capture and refine requirements and build trust with the business stakeholders. This shows them that even if their requirements don’t make it into the initial MVP, they will come in the next versions. 
-
-**Make failures into wins:** It’s okay to admit defeat. In this case, it’s actually beneficial. It may sound contradictory, but good first applications are often ones that your organization previously failed to deliver.
-
-For instance, a Mendix customer initially failed to build an application that calculates prices because the algorithm was so specific to the business, and the .NET developer couldn’t grasp all the nuances. Using Mendix, business stakeholders and IT developers were able to take that failure and turn it into a win, collaborate much more closely, and successfully deliver a first version of the application in a few days. 
-
-**Make them smart:** To ensure that apps deliver the best possible experience to the user, they should be intelligent, contextual and proactive — i.e., smart. Develop an app that uses AI to personalize a user’s experience or uses geolocation to tell let you know the location for the cake you ordered for your big app launch party. 
-
-**The complexity matrix:** Using the complexity matrix is a great way to assess the right projects for your Start stage portfolio. 
-
-**Exposure** is the amount of usage or availability an application has. **Complexity** can be defined as how technically complex the application is; i.e., how many integrations does the application require? You want to start on the left-hand side of the quadrant, which represents your team learning and feeling comfortable with the new way of working. 
+* Go live quickly — One of the main goals of your first app is to validate your ability to rapidly bring new ideas to market. Therefore, Mendix recommends selecting an app that is limited in scope and can work independently in production. 
+* Keep visibility in mind — Your first app should be highly visible within the organization. It must have executive support, and also deliver tangible business value.
+* Involve business stakeholders — Requirements are often unclear and need to be refined through collaboration with, and feedback from, business stakeholders. 
+* Limit dependencies — Avoid external factors over which you have little or no control. They can quickly diminish the productivity advantage offered by the Mendix platform. 
+* Start with high-level requirements — It is a good idea to start with a high-level goal rather than having detailed requirements. Then, have at least two follow-up iterations so that you can capture and refine requirements.
+* Do not get discouraged by failure — Good first apps are often ones that your organization previously failed to deliver. They teach you how to learn from mistakes and how to collaborate better.
+* Create a smart app — To ensure that it delivers the best possible experience, the app should be intelligent, contextual and proactive. Develop an app that uses AI to personalize a user’s experience. 
+* Apply the complexity matrix — Using the complexity matrix is a great way to assess the right projects for your Start stage portfolio.    
+    Exposure is the amount of usage or availability of an app.     
+    Complexity stands for how technically complex an app is, such as how many integrations it requires.
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/level-of-complexity.png"  >}}
 
-**Which type of projects is Mendix a good fit for?**
+* Think of the projects that Mendix is a good fit for — Mendix fits a wide variety of software applications, but some really stand out as a perfect fit:    
 
-Another thing that might help is understanding which type of projects Mendix is the best fit for (and which ones are not a great fit).
-Here’s a little guide for that.
+    * Any software requirement where there is no readily available solution 
+    * Software projects where the requirements are not very clear yet, and the business requires flexibility during the development process 
+    * Software projects where a high degree of business involvement is expected during the development process 
+    * Situations where the customer wants to build multiple applications and they want to benefit from reusing components 
+    * Applications that span multiple channels, such as desktop, mobile, and tablet
+    * Workflow applications 
+    * Customer-facing applications that need to be visually perfect 
+    * Applications that require the flexibility to start small and be scaled up 
+    * Applications that require governance, with audit and traceability built in the platform 
+    * Projects where resources are scarce 
+    * Applications that the customer wants to maintain and support themselves 
+    * Projects where changes after release are likely to happen 
+    * Internal work portals 
+    * Process-oriented applications 
+    * Integration applications 
+    * Applications that require data management 
+    * Applications that replace Excel applications 
+    * Applications that have integrations with other platforms and systems
+    * Projects that will replace a legacy application 
+    * Any new solutions where the data will also be stored in the application 
+    * Extensions of System of Record, such as ERP, PLM, and MES 
 
-**Mendix fits a wide variety of software applications, but some really stand out as a perfect fit:**
+    These are projects where Mendix would not be a perfect fit:    
 
-* Any software requirement where there is no off-the-shelf solution available 
+    * Games, as as Mendix is aimed at building business applications
+    * Content Management Systems, although Mendix can integrate well with existing CMS for creating CMS portals
+    * Data warehouse applications, although Mendix can integrate well with existing data warehouse applications 
+    * Enterprise Service Bus applications, where the main purpose is to connect applications with other applications, without adding business value or logic
+    * Applications with heavy mathematical calculations, although Mendix would be a good layer on top of an AI solution or calculation engine that compute statistical models or data analytics 
+    * Web portals with more than 10,000 concurrent users 
+    * Mobile applications with more than 100,000 concurrent users 
+    * Applications where the main goal is to visualize data 
 
-* Software projects when the requirements are not very clear yet and the business also requires flexibility during the development process 
+### Defining Application Value
 
-* Software projects where there is going to be a high degree of business involvement during the development process 
+{{% alert color="info" %}}For more resources, download the [Company Apps Value Template](/attachments/quickstarts/leading-mendix-implementation/company-apps-value-template.pptx) file.{{% /alert %}}
 
-* Situations where the customer wants to build multiple applications and they want to benefit from reusing components 
+By thoroughly defining the app’s purpose and value, you provide a clear roadmap for development. You thus align the project with organizational goals, and set the stage for successful implementation and adoption. These are some things to keep in mind:
 
-* Applications that require multichannel (desktop/mobile/tablet etc.) 
+* Business value proposition — Clearly articulate the app's value proposition in terms of the problem it is trying to solve, and the benefits it is trying to bring to the business.
+* User experience and satisfaction:    
 
-* Workflow applications 
+    * Identify the target audience or users who will benefit from the app. Understanding end-users helps in tailoring the application to their needs.
+    * Consider the user experience as a critical aspect of the app's value. An intuitive and user-friendly interface enhances user satisfaction and adoption.
+    * Value is often derived not just from functionalities, but also from how easily and effectively users can accomplish their tasks.
+* Efficiency and productivity:
 
-* Customer-facing applications that need to be pixel perfect 
+    * Assess how the application improves operational efficiency and productivity. Identify areas where manual processes can be automated, reducing errors and saving time.
+    * Highlight any potential cost savings or resource optimization achieved through the application.
+* Innovation and competitive advantage:    
 
-* Flexible applications: applications that start small but need to be able to scale up 
+    * If applicable, emphasize how the application introduces innovative solutions or features that set your organization apart from competitors.
+    * Consider how the application positions the organization for future growth and adaptation to changing market conditions.
+* Adaptability and scalability — Highlight the application's adaptability to changing business needs, and its scalability to accommodate future growth.
+* Measurable objectives:
 
-* Applications that require governance, since things like audit and traceability are built in the platform 
+    * Establish measurable objectives to gauge the success of the application. Define key performance indicators (KPIs) that will help evaluate its impact on business processes, efficiency, or other relevant metrics.
+    * Measurable objectives provide a basis for assessing the application's effectiveness and return on investment.
+* Alignment with organizational goals:   
 
-* Projects where resources are scarce, since Mendix is easy to learn developers can be trained internally and citizen developers can be used 
-
-* Applications that the customer wants to maintain and support themselves 
-
-* Projects where changes after go-live are likely to happen 
-
-* Internal work portals 
-
-* Process-oriented applications 
-
-* Integrations applications 
-
-* Applications that require data-management 
-
-* Applications that replace Excel applications 
-
-* Applications that have integrations with other platforms and systems (like SAP) 
-
-* Projects that are going to replace a legacy application 
-
-* Any new solutions where the data is also going to be stored in the application 
-
-* Extensions of System of Record (ERP/PLM/MES etc.) 
-
-**Which type of projects would Mendix potentially not be the perfect fit for?**
-
-Even though you can build almost anything with Mendix, especially with the extensibility of the platform using Java, Mendix might not be the perfect fit for every application. Below are some examples of applications where additional work needs to be done. 
-
-* Games (as Mendix is aimed to build business applications) 
-
-* Content Management Systems, but Mendix can integrate well with existing CMS for creating CMS portals and such 
-
-* Data warehouse applications, similar to CMS, Mendix can integrate well with existing data warehouse applications 
-
-* Enterprise Service Bus applications. When the main purpose is to connect applications with other applications, without adding business value/logic, Mendix might not be the best fit 
-
-* Applications with heavy mathematical calculations, but Mendix would be a good layer on top of an AI solution or calculation engine that compute statistical models or data analytics 
-
-* Web portals with more than 10,000 concurrent users 
-
-* Mobile applications with more than 100,000 concurrent users 
-
-* Applications where the main goal is to visualize data 
-
-### Define Application Value
-
-{{% alert color="info" %}}For more resources for this section, see [Company Apps Value Template](/attachments/quickstarts/leading-mendix-implementation/company-apps-value-template.pptx).{{% /alert %}}
-
-By thoroughly defining the application’s purpose and value, you provide a clear roadmap for development, aligning the project with organizational goals, and setting the stage for successful implementation and adoption. What will help you do that is trying to think along these lines:
-
-1. **Business value proposition:**
-    * Clearly articulate the value proposition of the application. Ask yourself: What problem does this application solve? What specific business process or pain point does it address? How does it contribute to the organization's success? What benefits will it bring to the business, such as cost savings, revenue generation, or improved customer satisfaction?
-
-2. **User experience and satisfaction:**
-
-   * Identify the target audience or users who will benefit from the application. Understanding the end-users helps in tailoring the application to their needs.
-
-   * Consider the user experience as a critical aspect of the application's value. An intuitive and user-friendly interface enhances user satisfaction and adoption.
-
-   * Value is often derived not just from functionalities but also from how easily and effectively users can accomplish their tasks.
-
-3. **Efficiency and productivity:**
-
-   * Assess how the application improves operational efficiency and productivity. Identify areas where manual processes can be automated, reducing errors and saving time.
-
-   * Highlight any potential cost savings or resource optimization achieved through the application.
-
-4. **Innovation and competitive advantage:**
-
-   * If applicable, emphasize how the application introduces innovative solutions or features that set your organization apart from competitors.
-
-   * Consider how the application positions the organization for future growth and adaptation to changing market conditions.
-
-5. **Adaptability and scalability:**
-    * Highlight the application's adaptability to changing business needs and its scalability to accommodate future growth. A valuable application is one that can evolve with the organization.
-
-6. **Measurable objectives:**
-
-   * Establish measurable objectives to gauge the success of the application. Define key performance indicators (KPIs) that will help evaluate its impact on business processes, efficiency, or other relevant metrics.
-
-   * Measurable objectives provide a basis for assessing the application's effectiveness and return on investment.
-
-7. **Alignment with organizational goals:**
-
-   * Confirm that the application purpose aligns with the overall goals and vision of the organization. It should contribute positively to the strategic direction of the company.
-
-   * Understand how the application fits into the larger ecosystem of organizational processes and systems.
-
-You can also try filling in a template such as this one (you can find this template attached in the Resources box at the top of this page):
+    * Confirm that the application purpose aligns with the overall goals and vision of the organization. It should contribute positively to the strategic direction of the company.
+    * Understand how the application fits into the larger ecosystem of organizational processes and systems.    
+    You can try filling in the template available at the beginning of this section.
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/template.png"  >}}
 
-### Set up Deployment Architecture and Resources
+### Setting Up the Deployment Architecture and Resources
 
 Mendix applications can be deployed in different ways, mainly:
 
-1. Public 
+* Public 
+* Private 
+* On-premises
 
-2. Private 
-
-3. On-premise
-
-**Mendix Cloud** is the default deployment option and has the advantage of being a fully integrated solution, with easy setting up and administrating. When developing your first application and if there are no specific (private) cloud constraints, it makes sense to choose the user friendly Mendix Cloud option. Within Mendix Cloud, there are options for multitenant cloud environments and single-tenant cloud environments. Deploying to Mendix Cloud gives you the shortest time-to-value.
-
-Mendix can also be deployed to any cloud platform which supports a version of Cloud Foundry. With **Mendix for Private Cloud**, you can choose the cloud provider of your preference, e.g. your own Azure or AWS infrastructures. If there already is access to an on-premise hosting environment, Mendix can also be deployed on-premise.
-
-When setting up your deployment strategy, it is important to look at the features that are needed, as some features that rely on the target platform can work differently.
-
-If your organization is deploying on **Private Cloud or on-prem**, please **make sure that you are ready to take on the effort and responsibility of managing all hosting and support of the application deployments**.
+Mendix can also be deployed to any cloud platform which supports a version of Cloud Foundry. If there is already access to an on-premise hosting environment, Mendix can also be deployed on-premises.    
+If your organization is deploying to Private Cloud or on-premises, you must be ready to take on the effort and responsibility of managing all hosting and support of the app deployments.    
 
 For a list of all the deployment options that are available, see [Deploying Apps](/deployment/). 
 
-Some highlights to consider:
+#### Mendix Cloud
 
-**Mendix Cloud:**
+Mendix Cloud is the default deployment option. It is a fully integrated solution, with easy setting up and administration.    
+This is a great option for your first app if you do not have any specific private cloud constraints. Within Mendix Cloud, there are options for multi-tenant and single-tenant cloud environments. Deploying to Mendix Cloud gives you the shortest time-to-value.
 
-* Pros: Fast and easy, all hosting is taken care of.  It has the best utilization rate for your infrastructure allowing you to maintain optimal flexibility and convert your capital investment into operational expenses. This option is supported by Mendix and it is the most optimized cloud to run Mendix applications.
-* Cons: Some organizations don’t allow shared cloud usage and require air-gapped or private-cloud options
+* Pros: Fast and easy, all hosting is taken care of.  It has the best utilization rate for your infrastructure, allowing you to maintain optimal flexibility and to convert your capital investment into operational expenses. This option is supported by Mendix, and it is the most optimized cloud to run Mendix applications.
+* Cons: Some organizations don’t allow shared cloud usage, and require air-gapped or private-cloud options.
 
-**Mendix Private Cloud:**
+#### Mendix for Private Cloud
 
-* Pros: Your DevOps team has complete control over application deployment and application lifecycle, with centralized management. It is cloud agnostic, and you can choose on-premise or your chosen cloud provider.
+With Mendix for Private Cloud, you can choose the cloud provider of your preference, such as your own Azure or AWS infrastructures.   
 
+* Pros: Your DevOps team has complete control over application deployment and application lifecycle, with centralized management. It is cloud-agnostic, and you can choose on-premises or your chosen cloud provider.
 * Cons: Requires your own experienced staff to set up and maintain with reduced Mendix Support due to lack of access and visibility.
 
-For Private deployment, **please be ready to start that process immediately in order to avoid development and go-live date delays**. 
+For Private deployment, you need to be ready to start that process immediately in order to avoid development and go-live date delays. 
 
-See below for Private Cloud responsibility matrix:
+This is the Private Cloud responsibility matrix:
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/responsibility-matrix.png"  >}}
 
-### Review Options for Development Resources (Who Will Build Your First App?) {#review-options-for-development-resources}
+### Options for Development Resources {#review-options-for-development-resources}
 
 With Mendix, you have multiple options to choose from for the development of your applications:
 
-1. **In-house development**
-
-   a. Train and/or hire Mendix developers to develop and support all your Mendix applications.
-
-      When training in-house, we recommend choosing individuals who either have a traditional development background or have some understanding of OOP (object-oriented programming).  We’ve also seen individuals without a technical background succeed if they have the right problem-solving mindset!  Beyond the technical side, you also want to look for individuals who can provide consulting to your business team. Mendix development is quick and Agile, and you need someone who can speak to not only the technical side of Mendix but also the business side at the same time in order to prevent project bottlenecks.
-
-2. **Mendix partner**
-
-   a. Bring in one of our certified Mendix partners to support your app development.  Our directory of partners is listed [here](https://developerprofiles.mendix.com/link/partneroverview), but your Mendix team is a great resource to identify a good fit for you.
-
-      This can be a great option to get your project kick-started, or if you have no future goals of building out your internal development team.
-
-3. **Mendix Expert Services**
-
-   a. Our team of experts are here to support you! We have many options for enabling your team and helping you quickly demonstrate the power of Mendix.
-
-      Choosing Expert Services is the right option if you plan on building out your internal team and need enablement and support alongside application development.  Expert Services can help prove the value of the Mendix internally while simultaneously coaching your team on how to continue with the application(s).
-
-4. **Hybrid**
-    a.  You can simultaneously grow your in-house team and supplement with a Mendix partner and/or our Expert Services team.
+* In-house development — Train and/or hire Mendix developers to develop and support all your Mendix applications.    
+When training in-house, we recommend choosing individuals who either have a traditional development background or have some understanding of object-oriented programming (OOP)). Beyond the technical side, Mendix recommends looking for individuals who can provide consulting to your business team.
+* Mendix partner — Work with one of our certified Mendix partners to support your app development. Our directory of partners is listed [here](https://developerprofiles.mendix.com/link/partneroverview), but your Mendix team is a great resource to identify a good fit for you.    
+This can be a great option to get your project kick-started, or if you have no future goals of building out your internal development team.
+* Mendix Expert Services — Choosing Mendix Expert Services is the right option if you plan on building out your internal team and need enablement and support alongside application development.  Expert Services can help prove the value of the Mendix internally while simultaneously coaching your team on how to continue with the apps.
+* Hybrid — You can simultaneously grow your in-house team and supplement with a Mendix partner and/or our Expert Services team.
 
 Regardless of which option you choose, we always recommend that at least one person internally has been trained on Mendix and is technically capable of directing the project.  Outsourcing every technical role creates a siloed development team that does not truly understand your business needs.
 
-### Summary 
+## Starting Your Mendix Program
 
-By now you should have finalized your getting started plan, and are ready to start your first application development! How exciting!
-
-You’ve done a great job so far and learned a lot along the way. By now you should have:
-
-* Define the goals and objectives you want to achieve by using Mendix within your team or organization.
-
-* Added your first ideas into your portfolio board and prioritized them.
-
-* Chosen your first application to develop and defined its value and purpose.
-
-* Identified the most suitable deployment option for this first application.
-
-And 
-
-* Decided who will help you build this app.
-
-* Established the necessary components for your Program Kick-Off meeting with business & IT leadership
-
-Time to start putting everything you’ve prepared into practice!
-
-## Start Your Mendix Program
-
-In this section, you will learn all you need to know to kick-off your Mendix program. 
-
-**Learning Objectives**
-
-By now, you are familiar with what you can do with Mendix in your organization and have finalized your getting started plan. Now, it’s time to kick-off your Mendix program!
-
+In this section, you will learn all you need to know to kick off your Mendix program.    
 By the end of this section, you will be able to: 
 
-* Explain the benefits of using the agile framework to work with Mendix 
-* Build your first Mendix project team 
-
-* Arrange Academy training for your team 
-
-* Organize a successful program kick-off
+* Explain the benefits of using the agile framework to work with Mendix. 
+* Build your first Mendix project team. 
+* Arrange Academy training for your team. 
+* Organize a successful program kick-off.
 
 ### Introduction to Agile
 
-**What is the Agile Framework?**
-
-Defining and honing your development process is a critical factor in program success. By nature of low-code, **the [Agile Framework](https://www.mendix.com/agile-framework/) is the best way to work with Mendix.**
+Defining and honing your development process is a critical factor in program success. By nature of low-code, the [Agile Framework](https://www.mendix.com/agile-framework/) is the best way to work with Mendix.
 
 Understanding how to work in Agile allows organizations to [stay responsive to change](https://s2.bl-1.com/h/i/dtfq477y/xKsSFL1?url=https://www.mendix.com/blog/design-thinking-vs-agile-combine-problem-finding-problem-solving-better-outcomes/) and reduce time-to-market by nearly 50%. Mendix highlights these benefits by providing capabilities such as sprints, story management, and integrated feedback management within the platform itself.
 
-In the Academy, you can find an [Agile Awareness Learning Path](https://academy.mendix.com/link/paths/110/Agile-Awareness) that you can use to train your team in the Agile Framework and how it will define your Mendix journey. 
+Follow the [Agile Awareness Learning Path](https://academy.mendix.com/link/paths/110/Agile-Awareness) in the Academy to train your team in the Agile Framework and how it will define your Mendix journey. 
 
-### Identify Your First Mendix Project Team {#identify-first-mendix-team}
+### Identifying Your First Mendix Project Team {#identify-first-mendix-team}
 
-This section addresses how you set up your first Mendix Project Team.
-Ensuring you have the right people in the right roles is a critical step in successfully getting started. Everyone participating should be interested and enthusiastic about learning how to leverage this powerful platform, how to constantly improve collaboration and best practices across roles and groups within the BizDevOps model, and how the work they’ll be doing will bring value to the end users and the overall organization.
+Ensuring you have the right people in the right roles is a critical step in successfully getting started. Everyone participating should be interested and enthusiastic about learning how to leverage this powerful platform, how to constantly improve collaboration and best practices across roles and groups within the BizDevOps model, and how the work they’ll be doing will bring value to end-users and the overall organization.
 
-**Setting up your Agile Scrum team**
+#### Setting Up your Agile Scrum Team
 
-To work in Mendix, we recommend working in an Agile Scrum Team that is already familiar with the Agile Framework (if needed, refer to this [Agile Awareness Learning Path)](https://academy.mendix.com/link/paths/110/Agile-Awareness).
+Mendix recommends working in an Agile Scrum Team that is already familiar with the Agile Framework. This framework allows development teams to collaborate better, respond to change, and continuously incorporate user feedback. You can find out more from the [Agile Awareness Learning Path)](https://academy.mendix.com/link/paths/110/Agile-Awareness) in the Academy.
 
-This framework allows development teams to collaborate better, respond to change, and continuously incorporate user feedback.
+It is important to have small cross-functional teams to make sure that knowledge of all aspects is available within the team, and that all roles are covered. If needed, a person can take on multiple roles as long as they have the skills, expertise, and time to commit to each role.
+Ideal Scrum Teams are composed of five to seven people, never exceeding nine for larger enterprises. 
 
-It’s important to have small cross-functional teams to make sure that knowledge of all aspects is available within the team with all roles being covered. If needed, a person can take on multiple roles as long as they have the skills, expertise, and time to commit to each role.
-Ideal Scrum Teams are composed of 5-7 people, never exceeding nine for larger enterprises. 
+Getting all the required knowledge in each team might be difficult while keeping your team small, efficient, and aligned. Mendix considers a Scrum team as a juncture of a core team and accelerators. 
 
-Getting all the required knowledge in each team might be difficult while keeping your team small, efficient, and aligned. Mendix considers a Scrum team as a juncture of a **core team** and **accelerators**. 
+The core team is made up of the following:
 
-**Core Team:**
+* Product Owner (PO) — Responsible for defining the direction of a project. They have a clear understanding of what the business and users need from the product being developed and the value to be delivered, and they translate these needs to the Scrum team. Ideally, a PO would have these five key [skills & characteristics.](https://www.mendix.com/blog/5-important-product-owner-skills-for-rapid-app-dev/). The PO is expected to do the following:
 
-* **Product Owner (PO):** responsible for defining the direction of a project. They have a clear understanding of what the business and users need from the product being developed and the value to be delivered. They translate these needs to the Scrum team. The PO:
-    * Is a liaison between the business and the development team to build, prioritize, and manage the backlog to drive production forward.
-
-    * Ensures the product being developed delivers the required value for the business and users. 
-
-    * Accepts or rejects the completed work 
-    Ideal POs have these five key [skills & characteristics.](https://www.mendix.com/blog/5-important-product-owner-skills-for-rapid-app-dev/)
-
-* **Scrum Master (SM):** ensures that the team follows Agile best practices and oversees addressing and removing any productivity blockers that may come up. Essentially, the Scrum master is the authority in Agile and Scrum to keep the team working together efficiently and effectively. SMs:
-    * Should be supportive leaders. 
-
+    * Be a liaison between the business and the development team to build, prioritize, and manage the backlog to drive production forward.
+    * Ensure the product being developed delivers the required value for the business and users. 
+    * Accept or reject the completed work.          
+* Scrum Master (SM) — Ensures that the team follows Agile best practices and oversees addressing and removing any productivity blockers that may come up. Essentially, the SM is the authority in Agile and Scrum, and keeps the team working together efficiently and effectively. The SM is expected to do the following:
+    
+    * Be a supportive leader. 
     * Help POs define the product’s value, plan work, and manage the backlog. 
-
     * Help developers self-organize.
-
-* **Development Team:** consists of the people who actually build the app. They are responsible for turning the requirements into functionality, based on the input provided by the Product Owner. The development team:
+* Development Team — Consists of the people who actually build the app. They are responsible for turning requirements into functionality, based on the input provided by the Product Owner. The development team:
+    
     * Is comprised of one or more people with the skills needed to build the product as envisioned by the PO.
-
     * May be comprised of non-developers and traditional developers alike: architects, writers, technical BAs, designers, and other specialized roles can all be part of the development team. 
-
     * Work with the SM in the key Scrum activities of sprint planning, sprint review, retrospectives and daily standups to keep their assigned tasks on track with high-quality code during each sprint, while working towards continuous improvement as a team.
 
-**Accelerators:**
+Accelerators are the following:
 
-* **BAs or SMEs** get involved when a team requires detailed knowledge about such subjects as UX/UI, QA, testing and integration. 
+* Business Analyst (BA) or Subject Matter Expert (SME) — They get involved when a team requires detailed knowledge about such subjects as UX/UI, QA, testing and integration. 
+* Business Owner — The primary stakeholder who is ultimately responsible and accountable for the end-result of the project and product, including the actual value delivered. 
+* Stakeholders — The end-users of the product under development, who represent strategical, tactical, and operational levels of the business. 
 
-* **The Business Owner** is the primary stakeholder who is ultimately responsible and accountable for the end-result of the project and product including the actual value delivered. 
-
-* **Stakeholders** are the end-users of the product under development, represent strategical, tactical, and operational levels of the business. 
-
-Your team does not have to fit this exact mold, but it is important that all the responsibilities outlined here are covered to ensure success in your low-code program. Here’s a typical team structure:
+Your team does not have to fit this exact mold, but it is important that all the responsibilities outlined here are covered to ensure success in your low-code program. This is a typical team structure:
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/team-structure.png"  >}}
 
-**Additional Resources**
+#### Additional Resources
 
 * Learn more about the Agile team, roles and responsibilities in this [lecture of the Agile Awareness Learning Path](https://academy.mendix.com/link/modules/390/lectures/3142/3.3-Agile-Team,-Roles-and-Responsibilities). 
 

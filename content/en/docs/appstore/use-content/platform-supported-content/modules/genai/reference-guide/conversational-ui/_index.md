@@ -2,7 +2,7 @@
 title: "Conversational UI Module"
 url: /appstore/modules/genai/conversational-ui-module/
 linktitle: "Conversational UI Module"
-weight: 20
+weight: 40
 description: "Provides information on the ConversationalUI Module."
 no_list: false
 aliases:

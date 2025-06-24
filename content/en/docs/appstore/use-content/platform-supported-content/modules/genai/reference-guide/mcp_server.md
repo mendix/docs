@@ -3,7 +3,7 @@ title: "MCP Server"
 url: /appstore/modules/genai/mcp-server/
 linktitle: "MCP Server"
 description: "Describes the purpose, configuration and usage of the MCP Server module from the Mendix Marketplace that allows developers to expose Mendix logic to external MCP clients and AI systems."
-weight: 30
+weight: 20
 ---
 
 ## Introduction
@@ -19,6 +19,7 @@ To use function calling within the same Mendix application and integrating to an
 The following limitations exist for the current version:
 * Tools can only return a TextContent result.
 * The client connection is only kept alive for 15 minutes, because Mendix runtime does not support async requests yet.
+* User authorization can currently only be applied on request but not tool/prompt level. Therefore, the current user is not available in the tool/prompt microflows and entity access or xpath constraints can not be enabled out of the box. As we follow the capabilities offered by the official MCP Java SDK, we cannot use the same session in the executed tools/prompts.
 
 Note that the MCP Server module is still in its early version and thus (breaking) changes might be introduced with later versions. The open-source protocol as well as the Java SDK are still evolving and regularly updated which also affects this module.
 
@@ -26,27 +27,33 @@ Note that the MCP Server module is still in its early version and thus (breaking
 
 If you are starting from the [Blank GenAI app](https://marketplace.mendix.com/link/component/227934), the MCP Server module is already included and does not need to be downloaded manually.
 
-If you start from a blank app, or have an existing project, you must install GenAI Commons manually. Follow the instructions in [How to Use Marketplace Content](/appstore/use-content/) to install [MCP Server](https://marketplace.mendix.com/link/component/240380).
+If you start from a blank app, or have an existing project, you must install the MCP Server module manually. Follow the instructions in [How to Use Marketplace Content](/appstore/use-content/) to install [MCP Server](https://marketplace.mendix.com/link/component/240380).
 
 ## Configuration
 
 ### Create MCP Server {#create-server}
 
-The `Create MCP Server` action initializes an MCP server in the Mendix runtime, creates and returns the `MCPServer` object. Use the MCPServer to add tools or prompts. The `Path` attribute determines how external systems can reach the MCP server, which means that value needs to be known to the the MCP Client (usually set in a configuration file). After the action gets triggered, the server is available for external clients to connect to. As mentioned in the (limitations)[#limitations], the connection is only kept alive for 15 minutes.
+The `Create MCP Server` action initializes an MCP server in the Mendix runtime, creates and returns the `MCPServer` object. Use the MCPServer to add tools or prompts. The `Path` attribute determines how external systems can reach the MCP server, which means that this value needs to be known to the the MCP Client (usually set in a configuration file). After the action gets triggered, the server is available for external clients to connect to. As mentioned in the (limitations)[#limitations], the connection is only kept alive for 15 minutes.
 
 Based on your use case, this action can be triggered manually by an admin if wrapped around a microflow accessible in the UI, via an after start-up microflow or by any other microflow (such as scheduled events).
 
+For examples, see the `Example Implementations` folder inside of the module which shows how to create a server, add an authentication microflow and expose a tool and prompt.
+
 #### Enable Authentication
 
-If no authentication is enabled for the MCP Server, it can be accessed by any service without being authorized specifically. Be aware that this is not recommended for applications running on the public cloud.
+If no authentication is enabled for the MCP Server, it can be accessed by any service without being authorized specifically. Be aware that this is not recommended for applications running on the public cloud. Currently, selecting a microflow is required. For test purposes, you can delete the content of the attribute after setting up the MCP Server if you don't want to enable authentication.
 
-For most cases, you want to ensure that MCP clients need to be authorized before using any resources from the MCP Server or even discover what resources are available. To enable authentication, you can specify a microflow in the `Create MCP Server` action. !!(TBD IF THAT IS STILL THE RIGHT WAY WHEN RELEASING DUE TO MANDATORY MICROFLOW ADDING)!! The microflow is executed everytime a request is processed for the MCP Server. 
+For most cases, you want to ensure that MCP clients need to be authorized before using any resources from the MCP Server or even discover what resources are available. To enable authentication, you can specify a microflow in the `Create MCP Server` action. The microflow is executed everytime a request is processed for the MCP Server. 
 
 The selected microflow needs to apply to the following principles:
 * Input can only be of type `MCPServer` and/or `System.HttpRequest` to extract required values, such as HttpHeaders from the request.
 * The return value needs to be a `System.User` object which represents the user that sent the request.
 
-Inside of your microflow, you can implement your custom logic to authenticate the user. For example, you can use username and password, Mendix SSO or external identity providers (Idp) as long as a User is returned.
+Inside of your microflow, you can implement your custom logic to authenticate the user. For example, you can use username and password (basic auth), Mendix SSO or external identity providers (IdP) as long as a `User` is returned.
+
+#### Protocol Version
+
+When creating an MCP server, you need to specify a `ProtocolVersion`. On the official MCP documentation, you can review the differences between the protocol versions in the [changelog](https://modelcontextprotocol.io/specification/2025-03-26/changelog). The MCP Server module currently only supports `v2024-11-05` and thus the HTTP+SSE transport. MCP Clients, that need to connect to a Mendix MCP server, should support the same version. Note that Mendix follows the offered capabilities of the MCP Java SDK.
 
 ### Add Tools
 
@@ -56,12 +63,12 @@ The selected microflow needs to apply to the following principles:
 * Input needs to be the same as described in the `Schema` attribute (only primitives and/or an object of type `MCPServer.Tool` are supported)
 * The return value needs to be a `TextContent` object which you can create inside of the microflow to return the relevant information to the model based on the outcome of the microflow.
 
-PLACEHOLDER: ADD EXAMPLE SCHEMA HERE IF LOGIC HAS NOT CHANGED BY NOW
+For an example, see the `Example Implementations` folder inside of the module.
 
 {{% alert color="warning" %}}
 Function calling is a highly effective capability and should be used with caution. Tool microflows currently do not run in the context of the authenticated user, and thus cannot apply entity access. 
 
-Mendix also strongly advises that you keep the user in the loop (e.g., with user confirmation logic) if tool microflows have a potential impact on the world on behalf of the end-user. Some examples of such microflows include sending an email, posting online, or making a purchase. You should especially evaluate the use case and security when exposing those to external AI systems via MCP.
+Mendix also strongly advises that you keep the user in the loop (e.g., with user confirmation logic which many MCP clients integrated) if tool microflows have a potential impact on the world on behalf of the end-user. Some examples of such microflows include sending an email, posting online, or making a purchase. You should especially evaluate the use case and security when exposing those to external AI systems via MCP.
 {{% /alert %}}
 
 ### Add Prompts
@@ -74,7 +81,7 @@ The selected microflow needs to apply to the following principles:
 * Input needs to be the same as passed in the `PromptArgument` object(s) (only primitives and/or an object of type `MCPServer.Prompt` are supported)
 * The return value needs to be a `PromptMessage` object which you can create inside of the microflow to return the relevant information to the MCP client based on the outcome of the microflow.
 
-Be aware that technically other logic than just returning a prompt can be executed inside of the microflow, which should be used with caution because it might not be clear when the prompts are called from the client-side.
+Be aware that technically other logic than just returning a prompt can be executed inside of the microflow, which should be used with caution because it might not be clear for users when the prompts are used on the client-side.
 
 ## Technical Reference
 

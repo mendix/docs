@@ -31,7 +31,7 @@ The MCP client usually runs inside of the MCP Host and is responsible of connect
 
 ### MCP Server
 
-MCP servers expose resources that can be discovered by MCP hosts and are made available for use to the model and user within the chat interaction. Once a request was made, the server processes it using its built-in logic and returns a value for the MCP host to use.
+MCP servers expose resources that can be discovered by MCP clients and are made available for use to the model and user within the chat interaction. Once a request was made, the server processes it using its built-in logic and returns a value for the MCP host to use.
 
 There are three main types of resources that can be exposed by servers:
 
@@ -45,8 +45,7 @@ Prompts can be exposed to define templates and to structure the interaction betw
 
 #### Resources
 
-In general, generic resources such as files or database records can be exposed via MCP. There is are no guidelines on how to use resources on the client side, for example if a user first needs to add them to a chat or if they are automatically incorporated to the chat context. Mendix currently does not support resources to be exposed.
-
+In general, generic resources such as files or database records can be exposed via MCP. There are no guidelines on how to use resources on the client side, for example if a user first needs to add them to a chat or if they are automatically incorporated to the chat context. Mendix currently does not support resources to be exposed.
 
 ## MCP Example in the GenAI Showcase App
 

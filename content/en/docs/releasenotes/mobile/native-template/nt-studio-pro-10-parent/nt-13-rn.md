@@ -11,7 +11,7 @@ description: "Native Template 13 release notes."
 
 ### Fixes
 
-* We have fixed an issue building iOS apps using Bitrise.
+* We fixed an issue affecting building iOS apps using Bitrise.
 
 ## 13.1.0 {#1301}
 
@@ -19,7 +19,7 @@ description: "Native Template 13 release notes."
 
 ### Fixes
 
-* We have applied the patch for @react-native-camera-roll to fix the saving picture issue.
+* We applied the patch for `@react-native-camera-roll` to fix a saving picture issue.
 
 ## 13.0.0 {#1300}
 
@@ -27,7 +27,7 @@ description: "Native Template 13 release notes."
 
 ### Improvements
 
-We have added the option to optionally enable or disable cookie encryption for Android devices. This option was introduced in Studio Pro 9.8 and was enabled by default until Studio Pro Version 10.21.
+We added the option to optionally enable or disable cookie encryption for Android devices. This option was introduced in Studio Pro 9.8 and was enabled by default until Studio Pro Version 10.21.
 
 You can find this option in the Navigation Tab of the **Mobile** profile in Studio Pro.
 

@@ -19,7 +19,7 @@ description: "Native Template 11 release notes."
 
 ### Fixes
 
-* We have fixed an issue where a white screen was showing instead of splash screen for nanoflow based home screen.
+* We fixed an issue where a white screen was showing instead of splash screen for nanoflow-based home screens.
 
 ## 11.0.7 {#1006}
 
@@ -27,7 +27,7 @@ description: "Native Template 11 release notes."
 
 ### Fixes
 
-* We have fixed an issue where a user may face an error during build process because latest version 18 for playServices is not compatible with current gradle version.
+* We fixed an issue where a user may face an error during the build process because the latest version 18 for playServices is not compatible with the current Gradle version.
 
 ## 11.0.6 {#1005}
 

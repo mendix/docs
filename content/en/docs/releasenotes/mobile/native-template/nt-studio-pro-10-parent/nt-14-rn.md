@@ -19,7 +19,7 @@ description: "Native Template 14 release notes"
 
 ### Fixes
 
-* We have fixed an issue where a user may face an error during build process because latest version 18 for playServices is not compatible with current gradle version.
+* We fixed an issue where a user may face an error during the build process because the latest version 18 for playServices is not compatible with the current Gradle version.
 
 ## 14.1.0 {#1401}
 
@@ -27,7 +27,7 @@ description: "Native Template 14 release notes"
 
 ### Fixes
 
-* We have upgraded `@mendix/native` to version 9.0.1.
+* We upgraded `@mendix/native` to version 9.0.1.
   
 ## 14.0.0 {#1400}
 

@@ -514,282 +514,227 @@ Your team does not have to fit this exact mold, but it is important that all the
 
 * Find additional content on our Mendix blog, like this article on [How to Structure an Agile Scrum Team](https://www.mendix.com/blog/the-road-to-adopting-scrum-team-composition/).
 
-### Arrange Academy Training for Your Team
+### Arranging Academy Training for Your Team
 
-As you begin to map out your Mendix team, it's important to establish a training plan. Properly training your Mendix team helps accelerate your time to first value and promotes long-term low-code success. It helps each team member take charge of their own success and the overall team’s success.
+Properly training your Mendix team helps accelerate your time to first value and promotes long-term low-code success. It helps each team member take charge of their own success and the overall team’s success.
 
-Take the time to familiarize yourself with the [Mendix Academy](https://academy.mendix.com/link/home). Here, we provide a variety of learning paths and individual courses for various roles and diverse backgrounds to allow you to customize the learning journey appropriate for each team member and role. Once you are familiar with the various guides, diverse topics and individual courses, create a training plan with each team member based on their role and experience. 
+Take the time to familiarize yourself with the [Mendix Academy](https://academy.mendix.com/link/home). It includes a variety of learning paths and individual courses for various roles and diverse backgrounds. This allows you to customize the learning journey for each team member and role. Once you are familiar with the various guides, diverse topics and individual courses, create a training plan with each team member based on their role and experience. 
 
-Here is a sample you can use as a template:
+This is a sample template:
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/sample.png"  >}}
 
-This will vary based on the specific people taking each role. A Scrum Master who used to be a full-stack developer could take the *Crash Course* instead of the *Become a Rapid Developer* course. Your EA may need to add *Native Mobile* or *Configure Advanced Security* for your particular organization, project and team needs. Your Mendix team is happy to help create your training plan.
+It will vary based on the specific people taking each role. A Scrum Master who used to be a full-stack developer could take the **Crash Course** instead of the **Become a Rapid Developer** course. An EA may need to add **Native Mobile** or **Configure Advanced Security** for your particular organization, project and team needs.
 
-**Mendix Certificates**
+### Mendix Certificates
 
 Mendix provides four different certification levels to measure developer maturity, each with an increasing level of required skill and experience:
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/mendix-certificates.png"  >}}
 
-**Rapid Developer Certification**
+#### Rapid Developer Certification
 
 A Rapid Developer has a baseline knowledge of the Mendix platform and knows where to find information using the documentation and the Mendix community.
 
-This certification is proof of basic Mendix knowledge and demonstrates that someone can join a project team and independently build prototypes.
+This certification is proof of basic Mendix knowledge, and demonstrates that someone can join a project team and independently build prototypes.
 
-The Rapid Developer certification is a minimum requirement for working in Mendix. Before taking a certification exam, there is required coursework for each level. All courses can either be taken via [instructor-led](https://academy.mendix.com/link/classrooms) or via a [self-led](https://academy.mendix.com/link/paths).
+The Rapid Developer certification is a minimum requirement for working in Mendix. Before taking a certification exam, there is required coursework for each level. All courses can be [instructor-led](https://academy.mendix.com/link/classrooms) or [self-led](https://academy.mendix.com/link/paths).
 
 You can find all the details about the certification, as well as the required coursework [here](https://academy.mendix.com/link/certifications/23/rapid). 
 
-As your team grows and takes on more projects, it's important to continue to also level up on your Mendix expertise. Proper enablement will allow your team to take on more complex projects and deliver more business impact. When able, remember to take the time to level up on your Mendix Certification.
+As your team grows and takes on more projects, it's important to continue to also level up on your Mendix expertise.
 
-**Intermediate Developer Certification**
+#### Intermediate Developer Certification
 
-An Intermediate Developer has the fundamental knowledge of the Mendix platform to start building the next great apps. This certification is proof that someone is ready to be added to operating teams and can contribute from the start by applying your knowledge and skills in different parts of the project development lifecycle.
+An Intermediate Developer has the fundamental knowledge of the Mendix platform to start building the next great apps. 
 
-You can find information as well as required courseware for the Intermediate certification [here](https://academy.mendix.com/link/certifications/22/intermediate). 
+This certification is proof that someone is ready to be added to operating teams, and can contribute from the start by applying knowledge and skills in different parts of the project development lifecycle.
 
-**Advanced Developer Certification**
+You can find information and the required courseware for the Intermediate certification [here](https://academy.mendix.com/link/certifications/22/intermediate). 
 
-An Advanced Developer has the knowledge and skills required to build production-ready applications. This certification is proof of someone’s advanced knowledge of the platform and their professional experience with developing Mendix apps.
+#### Advanced Developer Certification
 
-You can find information as well as required courseware for the Advanced certification [here](https://academy.mendix.com/link/certifications/6/advanced). 
+An Advanced Developer has the knowledge and skills required to build production-ready applications. 
 
-**Expert Developer Certification**
+This certification is proof of someone’s advanced knowledge of the platform and their professional experience with developing Mendix apps.
 
-The Expert Developer Certificate is not only proof of Mendix knowledge, it confirms a developer’s expertise and shows they have applied what they know about Mendix in their day-to-day job.
+You can find information and the required courseware for the Advanced certification [here](https://academy.mendix.com/link/certifications/6/advanced). 
 
-You can find information as well as required courseware for the Advanced certification [here](https://academy.mendix.com/link/certifications/24/expert). 
+#### Expert Developer Certification
 
-### Organize Your Program Kick-Off
+The Expert Developer Certificate is not only proof of Mendix knowledge, but it also confirms a developer’s expertise and shows they have applied what they know about Mendix in their day-to-day job.
 
-The program kick-off is important to hold before the project kick-off as this meeting ensures alignment across all groups and team members involved, from leadership to the development team, on goals, vision, and value.  This meeting sets the foundation for bridging business and IT as you begin your Mendix journey.
+You can find information and the required courseware for the Advanced certification [here](https://academy.mendix.com/link/certifications/24/expert). 
 
-**Who should be there?**
+### Organizing Your Program Kick-Off
 
-Make sure to include the relevant business and IT leaders, project team members, other stakeholders, Mendix and/or Mendix partner team members. If your executive sponsor could also be there, that would be amazing.
+The program kick-off is important to hold before the project kick-off. This meeting ensures alignment across all groups and team members involved on goals, vision, and value. It sets the foundation for aligning business and IT as you begin your Mendix journey.
 
-**What’s the agenda?**
+#### Attendants
+
+Make sure to include the relevant business and IT leaders, project team members, other stakeholders, Mendix and/or Mendix partner team members. The attendance of your executive sponsor is also recommended.
+
+#### Agenda
 
 A sample agenda of a successful program kickoff can include:
 
 * A round of introductions 
 * Why Mendix was chosen 
 * Business and IT alignment on:
+   
     * Organizational challenges and needs Mendix is solving (this is where your low-code vision will be very important — you always need to be able to tie Mendix work back to the larger business needs)
-
-    * An overview of Mendix vision and strategy for your organization 
+    * An overview of the Mendix vision and strategy for your organization: 
         * Goals and success at both the organizational and project levels 
         * Important milestones 
-
         * Value measurement and impact 
-
-    * Identify initial concerns or challenges and build mitigation plans(s)
-
-* Establish a cadence for this group to meet going forward for a business review - quarterly, every other month, monthly, etc.
-
-### Summary
-
-Amazing, you should have kicked-off your Mendix Program by now! During this phase you:
-
-* Made sure the right Expert Leads and Stakeholders needed for your Mendix program are involved.
-
-* Familiarized with the agile framework and its benefits, and decided whether or not to use this way of working.
-
-* Built your first Mendix project team and arranged Academy training based on their role and needs.
-
-* Planned a successful program kick-off.
-
-You are now ready to move to the next phase. Good job! 
+    * Identifying initial concerns or challenges and building mitigation plans
+* Establishing a cadence for this group to meet going forward for a business review, which can be quarterly, monthly, every two months
 
 ## Governance and Control in Mendix
 
-In this section, you will get a quick view on the features we offer to incorporate governance in your process. We will show you in detail which of these you need to configure at the start, so the platform supports your organization’s onboarding.
-
-**Learning Objectives**
-
-Now that you have kicked-off your Mendix Program, it’s time to familiarize with the features Mendix offers to incorporate governance in your process.
-
+This section provides information on the features we offer to incorporate governance in your process.    
 By the end of this section, you will be able to:
 
-* Recognize the options Mendix offers to tailor the platform to your specific governance needs 
-* Identify the required steps to Configure the Platform in Control Center
+* Recognize the options Mendix offers to tailor the platform to your specific governance needs. 
+* Identify the required steps to configure the platform in Control Center.
 
 ### Introduction to Governance in Mendix
 
-Low-code governance is about having oversight and maintaining control over both a landscape of apps and individual app development. It provides guardrails for your development process and brings resources together to achieve the enterprise’s objectives. Increase accountability, increase transparency, and get the most ROI out of what your teams build and deploy.  It will help you maximize business value at acceptable risk and cost.
-Knowing the broad strokes capabilities of the Mendix platform early on helps in getting solid early successes.
+Low-code governance is about having oversight and maintaining control over both a landscape of apps, and individual app development. It provides guardrails for your development process and brings resources together to achieve enterprise objectives.
 
-When you start, the governance responsibility will probably be in the hands of your Mendix admin, but as your Mendix landscape grows you may want to define a Center of Excellence. Admins can use Control Center, a dashboard that gives you an overview of various company activities on the Mendix platform, to manage many of the aspects of landscape governance. 
+{{< figure src="/attachments/quickstarts/leading-mendix-implementation/governance-capability-highlights.png"  >}}
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/control-center.png"  >}}
+At the beginning, the governance responsibility will likely be in the hands of your Mendix Admin. However, as your Mendix landscape grows, you may want to define a Center of Excellence. Admins can use [Control Center](control-center/), which gives you an overview of various company activities on the Mendix platform, to manage many of the aspects of landscape governance. 
 
 There are several advanced capabilities in the Control Center to help you manage your app landscape as it grows.
 
 * [Dashboard](/control-center/dashboard/) provides insight into some KPIs of how your company is advancing.
-
 * [Apps](/control-center/apps/) provides easy visibility into all apps, environments, their deployment status, technical contact, version, and more.
-
 * [Health dashboard](/control-center/application-health-dashboard/) provides an insight into the running status of your app landscape.
-
 * [Entitlements](/control-center/entitlements/) shows the resources you’ve bought and used.
-
 * You can add, resize or remove environments in the [Deployed apps](/control-center/deployed-apps/) view.
-
 * Additional curation settings are available for [Marketplace](/control-center/private-marketplace/), [Portfolios](/control-center/portfolios/), and [Data Catalog](/control-center/catalog-admin/), which apply to all your developers.
 
-New capabilities are released regularly, so exploring Control Center regularly is always a good idea!
+If you would like to learn more about our governance features, you can check out the [Control Center Guide](/control-center/) and the [Control Center Learning Path](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center). 
 
-But as you can tell from the slide below, governance touches many aspects of the development cycle and it’s not just confined to control center.
-
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/governance-capability-highlights.png"  >}}
-
-If you would like to learn more about our governance features, you can check out the [Control Center Guide,](/control-center/) [Control Center Learning Path](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center), or the Mendix documentation. You probably already involved your subject matter experts while you were evaluating Mendix, so they might want to do a deeper dive.
-
-A lot of these options will become more relevant for you as you scale your Mendix portfolio, so for now, we will just point to a couple of key settings that are important for getting started and launching your first app.
-
-### Configure the Platform in Control Center
+### Configuring the Platform in Control Center
 
 The Mendix platform has a few options to tailor the platform to your specific governance needs. 
 
-**Claim additional email domains**
+#### Claiming Additional Email Domains
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/company-email-domains.png"  >}}
+If your company has more than one email domain, all your email domains should be claimed. An example of this is MyCompany.com, MyCompany.nl, MyCompany-SpecialUnit.com, etc. This is to ensure all users that sign up with an email address on any of these domains end up in the same company on the Mendix platform. If you don’t do this from the start, your users may create projects in different companies or tenants on the Mendix platform, which is hard to govern and may require cumbersome merging activities later.
 
-If your company has more than one email domain, all your email domains should be claimed, such as: MyCompany.com, MyCompany.nl, MyCompany-SpecialUnit.com etc. This is to ensure all users that do a signup with an email address on any of these domains all end-up in the same ‘company’ on the Mendix platform. If you don’t do this from the start, your users may create projects in different ‘companies’/tenants on the Mendix platform, which is hard to govern and may require cumbersome merging activities later.
+For more information, refer to [Company Email Domains](/control-center/company-settings/#company-email-domains) in *Company Settings*.
 
-[You can read more about that, here.](/control-center/company-settings/#company-email-domains)
+#### Assigning a Security Contact
 
-**Assign a security contact**
+Provide a specific Security Contact who is informed if there are critical security issues with the Mendix platform and platform-supported Marketplace components. Mendix strongly recommends applying a team email address or a functional mailbox instead of a personal individual email address.
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/security-contact.png"  >}}
-
-Provide a specific **Security Contact** who is informed if there are critical security issues with the Mendix platform and platform-supported Marketplace components. Mendix strongly recommends applying a team email address or a functional mailbox instead of a personal individual email address.
-
-Your security contact person(s) may want to subscribe the [Mendix Security Advisories](/releasenotes/security-advisories/)
+Your security contact person may want to subscribe to the [Mendix Security Advisories](/releasenotes/security-advisories/)
 to get familiar with the process around security fixes.
 
-[Additional reading](/control-center/company-settings/#security-contact)
+For more information, refer to [Security Contact](/control-center/company-settings/#security-contact) in *Company Settings*.
 
-**Define company brand and description**
+#### Defining the Company Brand and Description
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/cutomize-your-brand.png"  >}}
+On the **Customize Your Brand** page, you can upload, edit, or remove a company logo. The company logo uploaded here is displayed across the platform where it is used. For instance, it will be displayed on your published Marketplace content.
 
-On the **Customize Your Brand** page, you can upload, edit, or remove a **Company Logo**. The company logo uploaded here will appear across the platform where it is used. For instance, it will be displayed on your published Marketplace content.
+For more information, refer to [Company Brand](/control-center/company-brand/).
 
-[Additional reading](/control-center/company-brand/)
-
-**Improve the onboarding experience for new team members**
+#### Improving the Onboarding Experience for New Team Members
 
 On the **Company Onboarding** page, you can customize the landing page which new team members will see when they are onboarded and the email that new team members will receive.
 
-[Additional reading](/control-center/company-onboarding/)
+For more information, refer to [Company Onboarding](/control-center/company-onboarding/).
 
-**Setup IDP or SSO for access to the Mendix platform**
+#### Setting Up IDP or SSO
 
-It is recommended that you [set-up SSO](/control-center/security/set-up-sso-byoidp/) between the Mendix platform and your corporate IDP such as Microsoft Entra ID (f.k.a. Azure AD) or Okta.  This will put your IDP in control of how users are authenticated before they can access your content on the Mendix platform. Leavers (former employees) will not be able to login. Your platform users get the convenience of Single Sign-On, rather than yet-another-password. See also our [BYOIDP blog](https://www.mendix.com/blog/introducing-byoidp-bring-your-own-identity-provider/).
+It is recommended that you [set up SSO](/control-center/security/set-up-sso-byoidp/) between the Mendix platform and your corporate IDP, such as Microsoft Entra ID or Okta.  This puts your IDP in control of how users are authenticated before they can access your content on the Mendix platform. Former employees will not be able to login, and your platform users get the convenience of Single Sign-On. 
+
+You can find out more from the [BYOIDP blog post](https://www.mendix.com/blog/introducing-byoidp-bring-your-own-identity-provider/).
 
 Optionally, you may set up access rules in your IDP to control which of your employees can and cannot work on the Mendix platform. As we encourage collaboration in multi-disciplined teams, be careful not to be too restrictive or not apply any restriction at all. For example, potential end-users of Mendix apps may want to contribute to development teams. In a later stage you can set up restrictive access rules as you start putting more business-critical IPs in the logic of your Mendix apps.
 
-**Setup password policy**
+#### Setting Up Password Policy
 
-If you don’t enable SSO, you will want to specify if the user passwords expire or not. If you do not want the passwords to expire, toggle **Passwords of company members never expire** to **On**.  
+If you do not enable SSO, Mendix recommends specifying if user passwords expire or not. If you do not want the passwords to expire, toggle **Passwords of company members never expire** to **On**.  
 
-### Summary
+For more information, refer to [Security Settings in Control Center](/control-center/security-settings/).
 
-Now that you know how Mendix can be tailored to your own governance needs, you are ready to get your first project started! You will find all the useful information to do this in the following section.
-
-## Get Started With Your First Project
+## Getting Started With Your First Project
 
 In this section, you will get all the information you need to know to help you get started with your first Mendix project.
 
-**Learning Objectives**
-
-It’s now time to begin your first Mendix project! How exciting!
-
 By the end of this section, you will be able to: 
 
-* Organize your first project kick-off 
-* Create your project 
-* Ensure project access for all of your team members 
-* Set up the agile way of working 
-* Define requirements for your first project 
+* Organize your first project kick-off. 
+* Create your project. 
+* Ensure project access for all of your team members. 
+* Set up the agile way of working. 
+* Define requirements for your first project. 
+* Identify continuous collaboration that you can leverage through Mendix.
 
-* Identify continuous collaboration that you can leverage through Mendix
+### Organizing Your First Project Kick-off
 
-### Organize Your First Project Kick-off
+Now that the program is properly kicked off, the next step is to organize the kick-off for your first project. Kick-off meetings are a great way to communicate key project information to your team, and give them an opportunity to ask questions.
 
-Now that the program is properly kicked off, the next step is to organize the kick-off for your first project. Kick-off meetings are a great way to communicate key project information to your team and give them an opportunity to ask questions. You might also want to have your key stakeholders in the same (physical or virtual) room. 
+A sample agenda for a successful project kick-off might include:
 
-A sample agenda for a successful project kickoff might include:
+* Introduction. Make sure everyone knows each other.
+* The background of the project. Go back to your application value definition and simply present the most important points to your team.
+* The project scope. You might not have your MVP scope defined in the kick-off meeting, but it is important to have a clear understanding of the problem you are solving and what the most crucial aspect of that problem to tackle first.
+* Individual responsibilities. Every team member should have a clear understanding of their roles and responsibilities, both in the context of the scrum framework, as well as in general.
+* Collaboration methods. Establish your agile rituals, such as standups, refinements, reviews, and retrospectives. Decide who should be attending and how often. In general, all team members should attend all the rituals. Stakeholders can limit themselves to sprint reviews.
+* Success definition. This could be represented by project milestones, but also by metrics you would like to influence.
 
-* Introduction: Make sure everyone knows each other.
+### Creating Your Project and Making Sure Everyone Has Access
 
-* The background of the project i.e. why are you doing it in the first place? (Go back to your application value definition and simply present the most important points to your team).
+Anyone can sign up to the Mendix platform using their business email address. All they need to do is go to [signup.mendix.com](https://signup.mendix.com) and use the relevant company email domain. 
 
-* What is the project scope: You might not have your MVP scope defined in the kick-off meeting and that’s okay. What is important is to have a clear understanding of the problem you are solving and what the most crucial aspect of that problem to tackle first.
+If you are working with implementation partners, you need to decide how to give those team members access to your app projects.
 
-* Who’s doing what: Here every team member should have a clear understanding of their roles and responsibilities (in the context of the scrum framework as well as in general).
+You can choose one of the following approaches:
 
-* How are you going to work together: Establish your agile rituals (standups, refinements, reviews, retrospectives) and decide who should be attending and how often. In general, all team members will be coming to all the rituals, but your stakeholders will not. The only thing that is super important for your stakeholders to attend is the sprint review.
+* Invite external users to your app projects using their external email address.
+* Create accounts for external user in your company’s Entra ID or similar IdP, such as Okta.
 
-* What does success look like: How will you know if you have delivered value? These could be project milestones, but also metrics you would like to influence.
+### Creating Your First App
 
-### Create Your Project and Make Sure Everyone Has Access
+Once everyone has a Mendix account, they can click the **Create App** button on the Mendix Portal home page to start building their first app.
 
-Anyone can sign up to the Mendix platform using their business email address, so there is no need to on-board a specific list of users. All they need to do is go to [signup.mendix.com](https://signup.mendix.com) and use the relevant company email domain (any from the list you have added in section 5.2). 
-
-If you are working with implementation partners, you need to decide **how to give those team members access to your app projects**.
-
-You may take one of the following approaches:
-
-* One possibility is to invite external users to your app projects using their external email address (e.g. Joan@MyMendixPartner.com).
-
-* Another possibility is to create accounts for them in your company’s Entra ID (or similar IdP such as Okta).
-
-**Create your first app!**
-
-And now that everyone has a Mendix account, this is the moment you’ve all been waiting for — it’s time to actually create your first app!
-Anyone from your team can click the Create App button on the Mendix platform, just make sure they are logged in with an email address from your company domain.
-
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/my-apps.png"  >}}
-
-Once the project is created, everyone from the team should get access to it as well as their appropriate role. This is the overview of the default project roles on the Mendix platform: 
-
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/default-project-roles.png"  >}}
+Once the project is created, everyone from the team should get access to it according to their role.
 
 ### Setting up the Agile Way of Working
 
-Sprint Zero is all about laying the groundwork for a successful project by focusing on planning and preparation rather than immediately jumping into development. It might seem like this is a whole lot of process while the team is ready to get to building, but especially for your first project, it is crucial to set up the right process, get everyone comfortable with it and define the initial requirements — this will absolutely speed you up very soon. 
+During sprint 0, you need to lay the groundwork for a successful project by focusing on planning and preparation rather than immediately jumping into development. It is important to set up the right process, get everyone comfortable with it, and define the initial requirements. 
 
-Let’s start by setting up your agile ways of working. You might have defined some things already in your project kick-off, so you can start by revisiting that. Moving forward, you also need to determine which Agile practices will become your organizational standard: this could be Scrum (the Mendix platform is optimized for Scrum at team level), Kanban, or other variants. Creating a standard doesn't mean that all teams will be forced to work in exactly the same way, but having a shared set of practices will increase mobility between teams. The more familiar and standardized this methodology is across your organization, the tighter the collaboration will be amongst teams as team members understand expectations and roles. 
+You need to determine which Agile practices will become your organizational standard. This could be:
 
-However, it should be noted that your agile methodology should remain lightweight and flexible to keep administrative burden as low as possible while maximizing the benefits to your organization. The way of working should suit the team's needs, so that they can get the best out of themselves. Take a pragmatic approach so that this can be discovered progressively. 
+* Scrum — The Mendix platform is optimized for Scrum at the team level.
+* Kanban
+* Other variants
+
+Creating a standard does not mean that all teams need to work in exactly the same way, but having a shared set of practices will increase mobility between teams. The more familiar and standardized this methodology is across your organization, the tighter the collaboration will be among teams. 
+
+However, your agile methodology should remain lightweight and flexible to keep administrative burden as low as possible, while maximizing the benefits to your organization. The way of working should suit the team's needs. 
 
 Regardless of Agile methodology, some of the practices that you can consider standardizing are: 
 
-* Sprint 0 (or design sprints) 
-
+* Sprint 0 (or design sprint) 
 * Daily stand-ups 
-
 * Sprint planning 
-
 * Backlog refinement 
-
 * Product demos 
-
 * Team retrospectives
 
-Care should be taken to incorporate feedback from team retrospectives and other Agile ceremonies into your standards as part of your continuous improvement process. That includes reviewing and analyzing any shortcuts taken or other deviations from the standard process to understand why it was necessary and potentially consider adapting your standards or putting another appropriate measure in place.
+You need to incorporate feedback from team retrospectives and other Agile ceremonies into your standards as part of your continuous improvement process. That includes reviewing and analyzing any shortcuts taken or other deviations from the standard process, to understand why it was necessary and potentially consider adapting your standards or putting another appropriate measure in place.
 
-Development teams can work most efficiently if requirements are clearly described (e.g. in user stories), to estimate the effort and implementation. Because of this, it is important that you choose a tool in which these can be tracked. The Mendix platform offers a collaborative tool called [Epics](https://www.mendix.com/blog/mendix-projects-and-the-wizardry-of-epics/), in which this is possible. Here you can manage the backlog, epics, create user stories, and of course sprints. Both the Agile and Kanban methods are supported.
+Development teams can work most efficiently if requirements are clearly described. This helps to estimate the effort and implementation. Because of this, it is important that you choose a tool in which these can be tracked. The Mendix platform offers a collaborative tool called [Epics](https://www.mendix.com/blog/mendix-projects-and-the-wizardry-of-epics/), in which this is possible. Here you can manage the backlog, epics, create stories, and sprints. Both the Agile and Kanban methods are supported.
 
-An organization that is familiar with the Agile way of working will likely already use related tools, such as Jira. Jira is often used for Scrum projects, which is why it is now possible to link Jira to your Mendix Project. The Scrum Master of the project can choose between Epics or Jira in the Settings part of the project navigation, in the Project Management tab.
+An organization that is familiar with the Agile way of working will likely already use related tools, such as Jira. Jira is often used for Scrum projects, and can be linked to your Mendix project. The Scrum Master of the project can choose between Epics or Jira in the **Settings** part of the project navigation, on the **Project Management** tab.
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/project-management.png"  >}}
-
-Make sure that the tool and process you choose supports close collaboration between the product owner, developers, users, and other stakeholders. The tool should enable clear visibility and tracing between user stories, implementation, feedback, and deployments. Team members unfamiliar with your chosen tool may also need additional training to maximize use of the tool.
+Make sure that the tool and process you choose supports close collaboration between the product owner, developers, users, and other stakeholders. The tool should enable clear visibility and tracing between stories, implementation, feedback, and deployments. Team members unfamiliar with your chosen tool may also need additional training to maximize use of the tool.
 
 ### Defining Requirements
 

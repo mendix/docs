@@ -16,7 +16,7 @@ OSS delivers a series of key benefits, including:
 * Accelerated development with reusable components
 * Community support and collaborative improvement
 * Transparency and security through peer-reviewed code
-* Ability ti customize for diverse business needs
+* Ability to customize for diverse business needs
 
 However, improper use of OSS, especially without proper attribution or in violation of license terms, can lead to legal, operational, or reputational risks for Mendix.
 

@@ -19,7 +19,7 @@ To use function calling within the same Mendix application and integrating to an
 The following limitations exist for the current version:
 * Tools can only return a TextContent result.
 * The client connection is only kept alive for 15 minutes, because Mendix runtime does not support async requests yet.
-* User authorization can currently only be applied on request but not tool/prompt level. Therefore, the current user is not available in the tool/prompt microflows and entity access or xpath constraints can not be enabled out of the box. This is because we follow the capabilities offered by the official MCP Java SDK and cannot use the same Mendix session in the executed tools/prompts.
+* User authorization can currently only be applied on request but not tool/prompt level. Therefore, the current user is not available in the tool/prompt microflows and entity access or xpath constraints can not be enabled out of the box. This is because we follow the capabilities offered by the official MCP Java SDK and cannot reuse a Mendix user session in the executed tools/prompts.
 
 Note that the MCP Server module is still in its early version and thus (breaking) changes might be introduced with later versions. The open-source protocol as well as the Java SDK are still evolving and regularly updated which also affects this module.
 

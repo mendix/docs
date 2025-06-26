@@ -141,7 +141,18 @@ The following inputs are required for the Azure OpenAI configuration:
 2. In the upper-right corner, next to your Avatar, click on the scope dropdown. 
 3. The tab shows your Directory, Subscription, and Azure OpenAI resource.
 4. Make sure the right Azure OpenAI resource is selected.
-5. You can now view ({{% icon name="view" %}}) and copy ({{% icon name="copy" %}}) the value of the **key1** or **key2** field as your API key while setting up the configuration. Note that these keys might not be visible for everyone in the Azure OpenAI Portal, depending on your organization's security settings. 
+5. You can now view ({{% icon name="view" %}}) and copy ({{% icon name="copy" %}}) the value of the **key1** or **key2** field as your API key while setting up the configuration. Note that these keys might not be visible for everyone in the Azure OpenAI Portal, depending on your organization's security settings.
+
+##### Adding Azure AI Search Resources {#azure-ai-search}  
+
+1. In the configuration page, go the "Azure AI Search Resources" tab
+2. Click "New" to add a new resource
+3. Fill in the details of the resource you would like to add.
+After saving, the indexes in this resource will be automatically synced and displayed in the configuration page. They will all be separate datasources that can be added to the request when using Chat completions.
+
+{{% alert color="warning" %}}
+Currently only API key are supported as an authorization method for Azure AI Search resources.
+{{% /alert %}}
 
 #### Configuring the OpenAI Deployed Models
 
@@ -200,6 +211,14 @@ Mendix also strongly advises that you build user confirmation logic into functio
 {{% /alert %}}
 
 For more information, see [Function Calling](/appstore/modules/genai/function-calling/).
+
+#### Datasources {#chatcompletions-datasources}
+
+Adding datasources to a call enables LLMs to retrieve information from them when a related topic is mentioned. Adding them to the request object with a name and description enables the model to intelligently decide when to let the Mendix app call one or more predefined datasources to gather additional information to include in the assistant's response.
+
+OpenAI does not directly connect to the Azure AI Search resource. The model returns a tool called JSON structure that is used to build the input of the retrieval (or retrievals) so that they can be executed as part of the chat completions operation. The OpenAI connector takes care of handling the tool call response as well as executing the function microflows until the API returns the assistant's final response. 
+
+This is all part of the implementation that is executed by the GenAI Commons chat completions operations mentioned before. As a developer, you have to make the system aware of your datasources and what these do by registering them to the request. This is done using the GenAI Commons operation [Tools: Add Knowledge Base](/appstore/modules/genai/genai-for-mx/commons/#add-knowledge-base) once per datasource before passing the request to the chat completions operation.
 
 #### Vision {#chatcompletions-vision}
 

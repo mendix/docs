@@ -691,7 +691,7 @@ A sample agenda for a successful project kick-off might include:
 * Collaboration methods. Establish your agile rituals, such as standups, refinements, reviews, and retrospectives. Decide who should be attending and how often. In general, all team members should attend all the rituals. Stakeholders can limit themselves to sprint reviews.
 * Success definition. This could be represented by project milestones, but also by metrics you would like to influence.
 
-### Creating Your Project and Making Sure Everyone Has Access
+### Creating Your Project and Providing Access
 
 Anyone can sign up to the Mendix platform using their business email address. All they need to do is go to [signup.mendix.com](https://signup.mendix.com) and use the relevant company email domain. 
 
@@ -724,7 +724,7 @@ However, your agile methodology should remain lightweight and flexible to keep a
 
 Regardless of Agile methodology, some of the practices that you can consider standardizing are: 
 
-* Sprint 0 (or design sprint) 
+* Sprint zero (design sprint) 
 * Daily stand-ups 
 * Sprint planning 
 * Backlog refinement 
@@ -733,22 +733,22 @@ Regardless of Agile methodology, some of the practices that you can consider sta
 
 You need to incorporate feedback from team retrospectives and other Agile ceremonies into your standards as part of your continuous improvement process. That includes reviewing and analyzing any shortcuts taken or other deviations from the standard process, to understand why it was necessary and potentially consider adapting your standards or putting another appropriate measure in place.
 
-Development teams can work most efficiently if requirements are clearly described. This helps to estimate the effort and implementation. Because of this, it is important that you choose a tool in which these can be tracked. The Mendix platform offers a collaborative tool called [Epics](https://www.mendix.com/blog/mendix-projects-and-the-wizardry-of-epics/), in which this is possible. Here you can manage the backlog, epics, create stories, and sprints. Both the Agile and Kanban methods are supported.
+Development teams can work most efficiently if requirements are clearly described. This helps to estimate the effort and implementation. Because of this, it is important that you choose a tool in which these can be tracked. To that end, the Mendix platform offers a collaborative tool called [Epics](https://www.mendix.com/blog/mendix-projects-and-the-wizardry-of-epics/). It allows you to manage the backlog, epics, create stories, and sprints. Both the Agile and Kanban methods are supported.
 
-An organization that is familiar with the Agile way of working will likely already use related tools, such as Jira. Jira is often used for Scrum projects, and can be linked to your Mendix project. The Scrum Master of the project can choose between Epics or Jira in the **Settings** part of the project navigation, on the **Project Management** tab.
+An organization that is familiar with the Agile way of working likely already uses related tools, such as Jira. Jira is often used for Scrum projects, and can be linked to your Mendix project. The Scrum Master of the project can choose between Epics or Jira in the **Settings** part of the project navigation, on the **Project Management** tab.
 
 Make sure that the tool and process you choose supports close collaboration between the product owner, developers, users, and other stakeholders. The tool should enable clear visibility and tracing between stories, implementation, feedback, and deployments. Team members unfamiliar with your chosen tool may also need additional training to maximize use of the tool.
 
 ### Defining Requirements
 
-If at all possible, make sure the development team talks to the future end-users — this is what sprint zero is for. The team needs to understand what the app will be used for, what problem it is supposed to solve, how that problem is being solved now, and what can be improved.
+If at all possible, make sure the development team talks to the future end-users. This is the aim of sprint zero. The team needs to understand what the app will be used for, what problem it is supposed to solve, how that problem is being solved now, and what can be improved.
 
-When defining requirements, try to not take things at face value. Your stakeholders might have a clear list of requirements, but always start by making sure that you have a shared understanding of the problem (this is what the part about defining application value was for). Then look at the various ways you can help solve that problem — maybe that first idea is not always the best one, and the way things have always been done can be adapted for maximum efficiency.
+When defining requirements, start by making sure that you and the stakeholders have a shared understanding of the problem, then look at the various ways you can help solve it.
 
 Once the team has enough information, they should list the key features and functionalities that the application will offer. This could include data entry forms, workflow automation, reporting tools, or any other capabilities that align with the application's purpose.
 Think about what the user needs to be able to do and how. 
 
-Next step is to prioritize features based on their importance to achieving the primary goal. Remember, a minimum viable product is all about achieving that initial value. Just because something is not a part of that scope, does not mean it’s considered unimportant or that it will not get done. Often things your stakeholders, or even end-users consider crucial are things they can probably live without for a couple of weeks. And if done right, your team will have a rhythm that ensures they consistently continue delivering value.
+The next step is to prioritize features based on their importance to achieving the primary goal. Remember: a minimum viable product entails achieving that initial value. Just because something is not a part of that scope, does not mean it’s considered unimportant or that it will not get done. Often things your stakeholders, or even end-users consider crucial are things they can probably live without for a couple of weeks. And if done right, your team will have a rhythm that ensures they consistently continue delivering value.
 
 ### Standard Requirements and Reusability
 

@@ -748,29 +748,25 @@ When defining requirements, start by making sure that you and the stakeholders h
 Once the team has enough information, they should list the key features and functionalities that the application will offer. This could include data entry forms, workflow automation, reporting tools, or any other capabilities that align with the application's purpose.
 Think about what the user needs to be able to do and how. 
 
-The next step is to prioritize features based on their importance to achieving the primary goal. Remember: a minimum viable product entails achieving that initial value. Just because something is not a part of that scope, does not mean it’s considered unimportant or that it will not get done. Often things your stakeholders, or even end-users consider crucial are things they can probably live without for a couple of weeks. And if done right, your team will have a rhythm that ensures they consistently continue delivering value.
+The next step is to prioritize features based on their importance to achieving the primary goal. Keep in mind that a minimum viable product entails achieving that initial value. Anything that is not part of the initial scope can be added later on. Often things your stakeholders, or even end-users consider crucial are things they can probably live without for a couple of weeks. And if done right, your team will have a rhythm that ensures they consistently continue delivering value.
 
 ### Standard Requirements and Reusability
 
-There will always be requirements that are repeated for each and every application you build, things like access management or standardized navigation, or maybe things that each app you build needs to have which are specific to your business. If you already see things like that, note them down and think about whether it makes sense to add them to your standard company app template, or maybe to invest in creating a reusable component, which will save you time in the long run. It's also okay to move quickly for this first app and look into reusability later, some of our most successful customers started like that!
+Certain requirements, such as access management or standardized navigation, are repeated for every application you build. Consider adding them to your standard company app template, or creating a reusable component.
 
-Here is a couple of topics to keep in mind:
+Here are a few topics to keep in mind:
 
-**End user login**
+* End user login — Every app needs a way for end-users to get access to it. We advise using the [OIDC SSO module](/appstore/modules/oidc/) for your B2E apps. This is the easiest and most flexible approach for Single Sign-On, and is supported by Microsoft’s Entra ID and most other IdPs.  As an alternative, you can use [SAML](/appstore/modules/saml/) for regulated B2C-apps, [LDAP](/appstore/modules/ldap/) for on-prem apps, or the [Forgot My Password](/appstore/modules/forgot-password/) module for non-SSO apps.
 
-Every app will need a way for your end users to get access to it. We advise to use the [OIDC SSO module](/appstore/modules/oidc/) for (B2E) apps you are developing. This is a sensible default as it is the easiest and most flexible approach for Single Sign-On and is supported by Microsoft’s Entra ID and most other IdPs.  As an alternative you may advise [SAML](/appstore/modules/saml/) (e.g. for regulated B2C-apps) or [LDAP](/appstore/modules/ldap/) for on-prem apps or the [Forgot My Password](/appstore/modules/forgot-password/) module for non-SSO apps.
+* Getting familiar with the Marketplace — Low-code development may be fast, but using modules or content from the Marketplace may even be faster. You may find modules relevant to your portfolio or your first app in particular and create a shortlist for your teams.  Marketplace content may be supported by Mendix, by Mendix partners or by the Mendix community.
 
-**Familiarize with the Marketplace**
+### Continuous Collaboration Through Mendix
 
-Low-code development may be fast, but using modules or content from the Marketplace may even be faster. You may find modules relevant to your portfolio or your first app in particular and create a shortlist for your teams.  Marketplace content may be supported by Mendix, Mendix partners or by the Mendix community.
-
-### Familiarize Yourself With Continuous Collaboration Through Mendix
-
-One of the core values of the Mendix platform is continuous collaboration between business and IT. We have already shown you how that works in practice when it comes to aligning on wider strategic objectives (your low-code vision), program goals as well as your project goals. Now it’s time to see how it all works throughout the application development lifecycle. 
+One of the core values of the Mendix platform is continuous collaboration between business and IT. 
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/continuous-collaboration-suite.png"  >}}
 
-It all starts with your portfolio. You have already added a couple of initiatives in it, but now that you have the MVP scope of your first application, add it in as a separate initiative and describe or link to documentation showing what needs to be delivered exactly and why. 
+The starting point is your portfolio. You have already added a couple of initiatives in it, but now that you have the MVP scope of your first application, add it in as a separate initiative and describe or link to documentation showing what needs to be delivered exactly and why. 
 
 You also have your application, so now you can link it to the initiative. To do this, you just need to select *Edit initiative* and start typing your app name to select it from the dropdown.
 

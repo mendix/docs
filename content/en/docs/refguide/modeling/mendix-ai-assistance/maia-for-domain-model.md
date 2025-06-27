@@ -24,7 +24,7 @@ You can find it in the the toolbar of a domain model:
 
 {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-for-domain-model/maia-for-domain-model.png" max-width=80% >}}
 
-If you want to disable this feature, go to **Edit** > **Preferences** > the **New Features** tab > the **Maia** section.
+If you want to disable this feature, go to **Edit** > **Preferences** > the **Maia** tab and clear the **Enable Maia for Domain Model** checkbox.
 
 After clicking **Maia for Domain Model**, a dedicated chat interface will appear at the right side of Studio Pro under the **Maia** tab:
 

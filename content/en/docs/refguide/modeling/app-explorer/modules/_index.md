@@ -56,7 +56,7 @@ There are the following type of modules:
 | --- | --- |
 | [Constants](/refguide/constants/) | Constants are used to define a constant value (for example, to store a URL for a web service). |
 | [Datasets](/refguide/data-sets/) | A dataset can be used for reporting and is defined using either an OQL query or a custom Java action. |
-| [Document Templates](/refguide/document-templates/) | Document templates are used to model a template needed as input for a document export action that can generate all kinds of documents based on application data. They are composed much in the same way as forms. |
+| [Document Templates](/refguide/document-templates/) | **Deprecated in 11.0.0** Document Templates were used to design templates for exporting documents based on application data. |
 | [Java Actions](/refguide/java-actions/) | With Java actions, you can extend the functionality of your application in situations where it would be hard to implement the functionality in microflows. You can call a Java action from a microflow. |
 | [Regular Expressions](/refguide/regular-expressions/) | A regular expression is used by [validation rules](/refguide/validation-rules/) on an entity to describe a set of criteria that a string can match. |
 | [Rules](/refguide/rules/) | A rule defines a set of criteria. With a certain input, the rule will result in a Boolean or enumeration, depending on the criteria met. It can be called from a decision to determine the direction the microflow should go once a decision is reached. |

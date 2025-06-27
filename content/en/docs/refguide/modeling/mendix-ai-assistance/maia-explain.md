@@ -16,7 +16,7 @@ Maia Explain helps you easily understand a microflow or a nanoflow. It explains 
 
 ## Using Maia Explain
 
-Maia Explain is enabled by default. If you want to disable this feature, go to **Edit** > **Preferences** > **New Features** and clear the **Enable Maia Explain** checkbox.
+Maia Explain is enabled by default. If you want to disable this feature, go to **Edit** > **Preferences** > the **Maia** tab and clear the **Enable Maia Explain** checkbox.
 
 There are two ways to launch Maia Explain:
 

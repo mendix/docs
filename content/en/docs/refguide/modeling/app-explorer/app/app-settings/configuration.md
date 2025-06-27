@@ -26,6 +26,7 @@ A configuration contains the following:
 * [Constants tab](#constants)
 * [Custom tab](#custom)
 * [Headers tab](#headers)
+* [Tracing tab](/refguide/tracing-in-runtime/#min-configuration)
 
 ### Database {#database}
 

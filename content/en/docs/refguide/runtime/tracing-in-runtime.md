@@ -27,19 +27,9 @@ The runtime generates spans for:
 
 ### Minimal Configuration {#min-configuration}
 
-Tracing configuration is handled through the [OpenTelemetry Java Agent](https://opentelemetry.io/docs/zero-code/java/agent/). Use the following steps to set up a minimal tracing configuration:
+Tracing can be enabled from the `App Settings` -> `Configuration` dialog. In the `Tracing` tab you can enable tracing and specify an **Endpoint** and **Service Name**.
 
-1. Download [opentelemetry-javaagent.jar](https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/latest/download/opentelemetry-javaagent.jar) from the [OpenTelemetry Java Instrumentation release page](https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases).
-1. In the [Server settings](/refguide/configuration/#server) of Studio Pro, locate the field **Extra JVM parameters** and add the following:
-
-    ```
-    -javaagent:{/path/to/opentelemetry-javaagent.jar} -Dotel.instrumentation.common.default-enabled=false -Dotel.instrumentation.opentelemetry-api.enabled=true -Dotel.service.name="{My App}"
-    ```
-  
-    * Change `{/path/to/opentelemetry-javaagent.jar}` to the location where you saved the agent earlier. Make sure it is the full absolute path to the file, e.g. `C:\Users\SomeUser\Documents\opentelemetry-javaagent.jar` (Windows) or `/Users/SomeUsers/Documents/opentelemetry-javaagent.jar` (MacOS).
-    * Change `{My App}` to the name under which you want your traces to appear.
-
-This will enable Mendix related tracing, while silencing the tracing of internals. The OpenTelemetry Java Agent sends traces to http://localhost:4318/v1/traces using the `http/protobuf` protocol by default.
+{{< figure src="/attachments/refguide/runtime/tracing-in-runtime/tracing-configuration.png" >}}
 
 ### Testing
 

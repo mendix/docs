@@ -13,7 +13,7 @@ aliases:
 
 The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) allows you to integrate generative AI into your Mendix app. It is compatible with [OpenAI's platform](https://platform.openai.com/) as well as [Azure's OpenAI service](https://oai.azure.com/). 
 
-The current scope covers text generation use cases based on the [OpenAI Chat Completions API](https://platform.openai.com/docs/api-reference/chat), image generation use cases based on the [Image Generations API](https://platform.openai.com/docs/api-reference/images), and embedding use cases based on the [Embeddings API](https://platform.openai.com/docs/api-reference/embeddings). Furthermore, datasources via [Azure AI Search](https://learn.microsoft.com/en-us/azure/search/) can be used for knowledge base retrieval.
+The current scope covers text generation use cases based on the [OpenAI Chat Completions API](https://platform.openai.com/docs/api-reference/chat), image generation use cases based on the [Image Generations API](https://platform.openai.com/docs/api-reference/images), and embedding use cases based on the [Embeddings API](https://platform.openai.com/docs/api-reference/embeddings). Furthermore, indexes via [Azure AI Search](https://learn.microsoft.com/en-us/azure/search/) can be used for knowledge base retrieval.
 
 Mendix provides dual-platform support for both OpenAI and Azure OpenAI.
 
@@ -74,7 +74,7 @@ By integrating Azure AI Search, the OpenAI Connector allows for knowledge base r
 
 Mendix provides dual-platform support for both [OpenAI](https://platform.openai.com/) and [Azure OpenAI](https://oai.azure.com/). 
 
-With the current version, Mendix supports the Chat Completions API for [text generation](https://platform.openai.com/docs/guides/text-generation), the Image Generations API for [images](https://platform.openai.com/docs/guides/images), the Embeddings API for [vector embeddings](https://platform.openai.com/docs/guides/embeddings/what-are-embeddings) as well as datasources via [Azure AI Search](https://learn.microsoft.com/en-us/azure/search/) for knowledge base retrieval.
+With the current version, Mendix supports the Chat Completions API for [text generation](https://platform.openai.com/docs/guides/text-generation), the Image Generations API for [images](https://platform.openai.com/docs/guides/images), the Embeddings API for [vector embeddings](https://platform.openai.com/docs/guides/embeddings/what-are-embeddings) as well as indexes via [Azure AI Search](https://learn.microsoft.com/en-us/azure/search/) for knowledge base retrieval.
 
 ### Prerequisites {#prerequisites}
 
@@ -152,10 +152,10 @@ The following inputs are required for the Azure OpenAI configuration:
 1. In the configuration page, go the "Azure AI Search Resources" tab
 2. Click "New" to add a new resource
 3. Fill in the details of the resource you would like to add.
-After saving, the indexes in this resource will be automatically synced and displayed in the configuration page. They will all be separate datasources that can be added to the request when using Chat completions.
+After saving, the indexes in this resource will be automatically synced and displayed in the configuration page. They will all be separate indexes that can be added to the request when using Chat completions.
 
 {{% alert color="warning" %}}
-Currently only API key are supported as an authorization method for Azure AI Search resources.
+Currently only API key is supported as an authorization method for Azure AI Search resources.
 {{% /alert %}}
 
 #### Configuring the OpenAI Deployed Models
@@ -216,13 +216,13 @@ Mendix also strongly advises that you build user confirmation logic into functio
 
 For more information, see [Function Calling](/appstore/modules/genai/function-calling/).
 
-#### Datasources {#chatcompletions-datasources}
+#### Index {#chatcompletions-index}
 
-Adding Azure datasources to a call enables LLMs to retrieve information from them when a related topic is mentioned. Adding them to the request object with a name and description enables the model to intelligently decide when to let the Mendix app call one or more predefined datasources to gather additional information to include in the assistant's response.
+Adding Azure indexes to a call enables LLMs to retrieve information from them when a related topic is mentioned. Adding them to the request object with a name and description enables the model to intelligently decide when to let the Mendix app call one or more predefined indexes to gather additional information to include in the assistant's response.
 
 OpenAI does not directly connect to the Azure AI Search resource. The model returns a tool called JSON structure that is used to build the input of the retrieval(s) so that they can be executed as part of the chat completions operation. The OpenAI connector takes care of handling the tool call response as well as executing the function microflows until the API returns the assistant's final response. 
 
-This is all part of the implementation that is executed by the GenAI Commons chat completions operations mentioned before. As a developer, you have to make the system aware of your datasources and what these do by registering them to the request. This is done using the GenAI Commons operation [Tools: Add Knowledge Base](/appstore/modules/genai/genai-for-mx/commons/#add-knowledge-base-to-request) once per datasource before passing the request to the chat completions operation. The retrieval is not connected to the model provider and can thus be used with different models as long as they support function calling.
+This is all part of the implementation that is executed by the GenAI Commons chat completions operations mentioned before. As a developer, you have to make the system aware of your indexes and what these do by registering them to the request. This is done using the GenAI Commons operation [Tools: Add Knowledge Base](/appstore/modules/genai/genai-for-mx/commons/#add-knowledge-base-to-request) once per index before passing the request to the chat completions operation. The retrieval is not connected to the model provider and can thus be used with different models as long as they support function calling.
 
 #### Vision {#chatcompletions-vision}
 

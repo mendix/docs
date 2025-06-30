@@ -3,16 +3,16 @@ title: "Implementing Mendix in Your Organization"
 linktitle: "Implementing Mendix in Your Organization"
 url: /lead-mendix-implementation-in-your-organization/
 weight: 100
-description: "Unlock the full potential of the Mendix platform and accelerate the application development journey in your organization."
+description: "Unlock the full potential of the Mendix platform and accelerate the app development journey in your organization."
 ---
 
 ## Introduction
 
-This guide helps you unlock the full potential of the Mendix platform and accelerate the application development journey in your organization. It provides you with everything you need to know to define your low code vision, configure company-wide settings, and launch your first application.
+This guide helps you unlock the full potential of the Mendix platform and accelerate the app development journey in your organization. It provides you with everything you need to know to define your low code vision, configure company-wide settings, and launch your first app.
 
 This guide is tailored to organizations new to Mendix, and is especially geared towards leaders responsible for implementing Mendix in their company. It does not cover technical aspects, but rather focuses on how to manage organizational change, along with all the initial decisions you need to make to ensure success.
 
-The content can be covered in a few hours. However, since it is designed as a guide, not as a course, Mendix recommends that you come back to it as you are working towards launching your first application.
+The content can be covered in a few hours. However, since it is designed as a guide, not as a course, Mendix recommends that you come back to it as you are working towards launching your first app.
 
 After completing the steps outlined in this guide, you will be able to:
 
@@ -22,7 +22,7 @@ After completing the steps outlined in this guide, you will be able to:
 * Kick off your Mendix program. 
 * Establish governance guidelines. 
 * Prepare your first project, and onboard your first project team. 
-* Launch your first application.
+* Launch your first app.
 
 ## Delving Into the Mendix Ecosystem
 
@@ -67,20 +67,20 @@ Your journey to innovation goes through three major stages:
 
 ##### Start
 
-You are now in the Start stage, where the goal is to lay the foundations for your innovation factory. Now is the time to develop applications that achieve value quickly. The reason for this is two-fold:
+You are now in the Start stage, where the goal is to lay the foundations for your innovation factory. Now is the time to develop apps that achieve value quickly. The reason for this is two-fold:
 
 * You’ll be spending a lot of time building a team and putting the necessary prerequisites in place in terms of infrastructure and process. Because of that... 
 * You want quick wins. Quick wins are important because you will use these to prove the value of your new approach. Celebrating your first success will help you gain broader support around the company.
 
 ##### Structure
 
-If the Start stage is about establishing and proving the benefits of rapid application development, the Structure stage is about building out predictability and continuity. Structure is about growing from your first set of apps to a portfolio with a diverse array of apps addressing multiple use cases, expanding your first team into multiple teams, and expanding your developer center. 
+If the Start stage is about establishing and proving the benefits of rapid app development, the Structure stage is about building out predictability and continuity. Structure is about growing from your first set of apps to a portfolio with a diverse array of apps addressing multiple use cases, expanding your first team into multiple teams, and expanding your developer center. 
 
-Structure is about taking the process of your first agile experience established during the Start stage and turning it into to a process that institutes shorter release cycles under strict governance. You begin to formalize your rapid application development process — establishing an architecture, enabling continuous delivery, and creating governance. By establishing predictability and stability, you’re building the scaffolding for future successes.
+Structure is about taking the process of your first agile experience established during the Start stage and turning it into to a process that institutes shorter release cycles under strict governance. You begin to formalize your rapid app development process — establishing an architecture, enabling continuous delivery, and creating governance. By establishing predictability and stability, you’re building the scaffolding for future successes.
 
 ##### Scale
 
-During the Scale stage, you use Mendix to speed up and scale out app development, and start delivering real value for your business. You are applying greater automation to your processes to efficiently and rapidly deliver and manage hundreds of applications with strategic impact. This includes automating deployment and maintenance to support a large portfolio, automating quality assurance to proactively monitor the maintainability of your projects, and enabling greater reusability by establishing a private app store. With these capabilities in place, you maximize value and productivity by creating distributed innovation capabilities throughout the enterprise. 
+During the Scale stage, you use Mendix to speed up and scale out app development, and start delivering real value for your business. You are applying greater automation to your processes to efficiently and rapidly deliver and manage hundreds of apps with strategic impact. This includes automating deployment and maintenance to support a large portfolio, automating quality assurance to proactively monitor the maintainability of your projects, and enabling greater reusability by establishing a private app store. With these capabilities in place, you maximize value and productivity by creating distributed innovation capabilities throughout the enterprise. 
 
 The Scale stage is where you achieve continuous productivity and efficiency.
 
@@ -98,9 +98,9 @@ There are five major areas that you need to focus on in your Digital Execution P
 
 ##### Portfolio
 
-Getting your digital transformation program off the ground starts with identifying the right projects and creating an application portfolio of quick wins in high-value initiatives.
+Getting your digital transformation program off the ground starts with identifying the right projects and creating an app portfolio of quick wins in high-value initiatives.
 
-Proving the value of a program, whether it’s through software that allows your business to create a new channel of revenue or an application that saves employees time on an internal process, allows you to achieve immediate success and justify a broader organizational change. It is important to include a diversity of use cases, to show that your application portfolio can reach many different departments, and address a variety of needs.
+Proving the value of a program, whether it’s through software that allows your business to create a new channel of revenue or an app that saves employees time on an internal process, allows you to achieve immediate success and justify a broader organizational change. It is important to include a diversity of use cases, to show that your app portfolio can reach many different departments, and address a variety of needs.
 
 Mendix Portfolio Management gives you a way to identify, track, and plan out your initiatives. Create your Portfolio board [here](https://portfolio.mendix.com/index.html).
 
@@ -112,7 +112,7 @@ The people you choose for your teams are crucial to the success of your digital 
 
 Traditional developers, those with experience in programming languages such as C#, Python, Java, are usually very quick to grasp Mendix. Other people who have been successful in Mendix-related roles come from business analysis, UX, front-end web design, and business intelligence backgrounds. 
 
-Your first Mendix team should include a core comprised of a professional developer—someone with technical expertise—and a business developer—someone familiar with the platform that can act as a power user if needed. The key is to have developers who can collaborate closely with end users, bridging the gap between business needs and technical possibilities.  
+Your first Mendix team should include a core comprised of a professional developer—someone with technical expertise—and a business developer—someone familiar with the platform that can act as a power user if needed. The key is to have developers who can collaborate closely with end-users, bridging the gap between business needs and technical possibilities.  
 
 The following leadership roles are essential to the success of any new platform or paradigm:
 
@@ -124,36 +124,36 @@ The following leadership roles are essential to the success of any new platform 
 
 * Center of Excellence (COE) lead – larger organizations appoint a Mendix COE to help define and enforce good governance, development, and enablement practices that can evolve with the business and technological changes over time. The COE lead ensures the Mendix COE is properly staffed to support, oversee, and enable development teams, and ensures the products are of high-quality, and follow best practices for high re-usability, maintainability, and return on investment. This person generally has sufficient senior-level technical and managerial skills to oversee the COE’s Enterprise and Solution Architects, DevOps technical leads, trainers, mentors, and other experienced staff.
 
-* Product owner – they have in-depth knowledge of the business, the product, and its users, as well as insight into the value that it will create. If possible, make sure that your first product owner comes from your own organization, and is familiar with the problem you are setting out to solve with your first application. The product owner does not hold a leadership role, but they are crucial for the success of your first app. They are also part of the agile scrum team, so will come up again in the [Identify Your First Mendix Project Team](#identify-first-mendix-team) section.
+* Product owner – they have in-depth knowledge of the business, the product, and its users, as well as insight into the value that it will create. If possible, make sure that your first product owner comes from your own organization, and is familiar with the problem you are setting out to solve with your first app. The product owner does not hold a leadership role, but they are crucial for the success of your first app. They are also part of the agile scrum team, so will come up again in the [Identify Your First Mendix Project Team](#identify-first-mendix-team) section.
 
 * Architect – they help establish a target architecture, infrastructure, and governance. 
 
-* Application development manager – they need to spearhead the initiative, and drive the program and the cross-functional teams who will deliver on those projects. 
+* App development manager – they need to spearhead the initiative, and drive the program and the cross-functional teams who will deliver on those projects. 
 
 At first, it is likely that not all these people will come from your own organization—the [Review Options for Development Resources](#review-options-for-development-resources) section offers information about this.
 
-It is important to keep your team small as you build your Mendix COE, which is your central repository of development expertise, reusable components, and governance guidance that business teams can access as they build their specialized solutions. With a small team, you can deliver new applications quickly, avoiding much of the miscommunication and delays that often come with larger development teams. Smaller teams encourage productivity and creativity. Amazon CEO Jeff Bezos’ “two pizza rule” states that you should never have a meeting where two pizzas couldn’t feed the entire group. The smaller the team, the more room for brainstorming and peer review. 
+It is important to keep your team small as you build your Mendix COE, which is your central repository of development expertise, reusable components, and governance guidance that business teams can access as they build their specialized solutions. With a small team, you can deliver new app quickly, avoiding much of the miscommunication and delays that often come with larger development teams. Smaller teams encourage productivity and creativity. Amazon CEO Jeff Bezos’ “two pizza rule” states that you should never have a meeting where two pizzas couldn’t feed the entire group. The smaller the team, the more room for brainstorming and peer review. 
 
-Mendix recommends that you start thinking about who you need to kick off building your first application, and that you start talking to them about it. More information about who you need is available in the [Identifying Your First Mendix Project Team](#identify-first-mendix-team) section.
+Mendix recommends that you start thinking about who you need to kick off building your first app, and that you start talking to them about it. More information about who you need is available in the [Identifying Your First Mendix Project Team](#identify-first-mendix-team) section.
 
 ##### Process
 
-Successful digital execution means changing the way you work and establishing rapid application development processes. Agile methodologies like Scrum are a good starting point, splitting the work into sprints and basing them off user stories. However, you also need to change from a traditional way of development and operations into a BizDevOps approach, which promotes close collaboration and shared knowledge between the business team, developers, and operational team.
+Successful digital execution means changing the way you work and establishing rapid app development processes. Agile methodologies like Scrum are a good starting point, splitting the work into sprints and basing them off user stories. However, you also need to change from a traditional way of development and operations into a BizDevOps approach, which promotes close collaboration and shared knowledge between the business team, developers, and operational team.
 It ditches the division between those departments to get rid of unnecessary knowledge silos that only disrupt the information flow.
 
-One important concept to embrace for your process, if you haven’t already, is the Minimum Viable Product (MVP). MVP is a version of an application with just enough features to be usable by early customers who can then provide feedback for future development. 
+One important concept to embrace for your process, if you haven’t already, is the Minimum Viable Product (MVP). MVP is a version of an app with just enough features to be usable by early customers who can then provide feedback for future development. 
 
 Minimum viable products are meant to be incomplete by nature. Their goal is to deliver value quickly, then identify the next requirements and iterate on them based on input from actual users. Getting user input early on will save you many costly changes down the road. Once the MVP is delivered, you can start adding new features and improvements.
 
-One other important concept to adopt is governance. You need to define and implement processes and rules around application development that help you coordinate and control your application portfolio. This means creating a centralized hub where you establish best practices around agile and scrum, UI/UX, and guidelines around build, deployment, and architecture, as well as security/compliance. You’re assigning the people on your team responsibilities around these best practices. 
+One other important concept to adopt is governance. You need to define and implement processes and rules around app development that help you coordinate and control your app portfolio. This means creating a centralized hub where you establish best practices around agile and scrum, UI/UX, and guidelines around build, deployment, and architecture, as well as security/compliance. You’re assigning the people on your team responsibilities around these best practices. 
 
 ##### Platform
 
 Mendix is specifically built to improve operational efficiency, reduce time-to-market, and foster collaboration between Business and IT. It enables enterprises to get things done quickly, and allows your teams and technology ecosystem to evolve.
 
-Use the Start stage to experience the benefits of instant provisioning, not just of the application environment, but all the software needed to support the entire lifecycle, from project management to repositories. Learning more about how easy it should be to deploy and operate apps shows how developers can do this themselves, and helps your innovation factory achieve continuous productivity and efficiency. 
+Use the Start stage to experience the benefits of instant provisioning, not just of the app environment, but all the software needed to support the entire lifecycle, from project management to repositories. Learning more about how easy it should be to deploy and operate apps shows how developers can do this themselves, and helps your innovation factory achieve continuous productivity and efficiency. 
 
-The Start stage is also a good time to start exploring your cloud options, and use this knowledge as input for strategic choices in the future. Mendix Cloud is fully optimized to run Mendix-built applications. Built on top of Cloud Foundry and AWS, Mendix Cloud is the deployment solution in which Mendix provides hosting environments for you. It is available globally, and includes deep insights, alerting capabilities, high availability options, and backups. 
+The Start stage is also a good time to start exploring your cloud options, and use this knowledge as input for strategic choices in the future. Mendix Cloud is fully optimized to run Mendix-built app. Built on top of Cloud Foundry and AWS, Mendix Cloud is the deployment solution in which Mendix provides hosting environments for you. It is available globally, and includes deep insights, alerting capabilities, high availability options, and backups. 
 
 As you expand your portfolio and move from Start to Structure, you will need to consider other deployment options, and moving to a multi-cloud environment. Understanding the cloud environments to which you’ll deploy—for example, the security features and how they fit into your existing security framework—will help inform how you move to Structure. 
 
@@ -169,9 +169,9 @@ You can promote your company even without a marketing team. Here are five ways y
 
 * Internal PR – build a plan for how you will raise awareness and involvement in your low-code implementation, and ensure your executive sponsor helps your PR efforts. You can leverage existing communication channels such as company meetings, newsletters, or shared collaboration sites to spread your message. Start by sharing your plan and vision, then use these channels to celebrate success after your first go-live.
 
-* Community building – start with a portfolio workshop to brainstorm ideas for your first application, then identify teams who will collaborate through implementation and launch. Identify a core group of champions who can raise awareness on your behalf.
+* Community building – start with a portfolio workshop to brainstorm ideas for your first app, then identify teams who will collaborate through implementation and launch. Identify a core group of champions who can raise awareness on your behalf.
 
-* Celebrating success – acknowledge your achievements, whether it’s getting the team to complete Academy certifications, building the first reusable component, finishing the first development sprint or launching your first application. Celebrations are a powerful way to boost team morale and drive future momentum. 
+* Celebrating success – acknowledge your achievements, whether it’s getting the team to complete Academy certifications, building the first reusable component, finishing the first development sprint or launching your first app. Celebrations are a powerful way to boost team morale and drive future momentum. 
 
 ### Staying up to Date With Mendix
 
@@ -194,9 +194,9 @@ In this section, you will learn why and how to create an effective getting start
 * Explain the possibilities and importance of creating a getting started plan. 
 * Explain the importance of portfolio management to your stakeholders, and start working with them to identify the best ideas. 
 * Start populating your portfolio with initial ideas. 
-* Choose your first application. 
-* Define the value and purpose of your first application. 
-* Identify the most suitable deployment option for your Mendix application. 
+* Choose your first app. 
+* Define the value and purpose of your first app. 
+* Identify the most suitable deployment option for your Mendix app. 
 * List the different development options and choose the right one for your organization.
 
 ### Creating or Revising Your Low-Code Vision 
@@ -255,7 +255,7 @@ You may choose to do so in town halls or an all-hands, as well as through videos
 
 ### Building Your Getting Started Plan
 
-First, work with stakeholders to align your start stage goals and key challenges. These goals should be focused on what success looks like for your team and how to measure it. Goals could be something like “At the end of Q3, we will have at least two apps live”, or “We want to generate X in ROI with our first application”. The start stage is all about bringing together your first team, building, deploying, and celebrating your first apps, while defining a future portfolio vision. Keep your start stage goals related to these topics, but customize them based on what you want to achieve. You should consider your low-code vision as the future state you are working toward, then break that into digestible goals for your getting started plan.
+First, work with stakeholders to align your start stage goals and key challenges. These goals should be focused on what success looks like for your team and how to measure it. Goals could be something like “At the end of Q3, we will have at least two apps live”, or “We want to generate X in ROI with our first app”. The start stage is all about bringing together your first team, building, deploying, and celebrating your first apps, while defining a future portfolio vision. Keep your start stage goals related to these topics, but customize them based on what you want to achieve. You should consider your low-code vision as the future state you are working toward, then break that into digestible goals for your getting started plan.
 
 After you’ve established your goals, think about the challenges that might get in your way and then build a mitigation plan to avoid those.
 
@@ -334,42 +334,42 @@ We recommend that you start by adding at least three app ideas to your portfolio
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/level-of-complexity.png"  >}}
 
-* Think of the projects that Mendix is a good fit for — Mendix fits a wide variety of software applications, but some really stand out as a perfect fit:    
+* Think of the projects that Mendix is a good fit for — Mendix fits a wide variety of software apps, but some really stand out as a perfect fit:    
 
     * Any software requirement where there is no readily available solution 
     * Software projects where the requirements are not very clear yet, and the business requires flexibility during the development process 
     * Software projects where a high degree of business involvement is expected during the development process 
-    * Situations where the customer wants to build multiple applications and they want to benefit from reusing components 
-    * Applications that span multiple channels, such as desktop, mobile, and tablet
-    * Workflow applications 
-    * Customer-facing applications that need to be visually perfect 
-    * Applications that require the flexibility to start small and be scaled up 
-    * Applications that require governance, with audit and traceability built in the platform 
+    * Situations where the customer wants to build multiple apps and they want to benefit from reusing components 
+    * Apps that span multiple channels, such as desktop, mobile, and tablet
+    * Workflow apps 
+    * Customer-facing apps that need to be visually perfect 
+    * Apps that require the flexibility to start small and be scaled up 
+    * Apps that require governance, with audit and traceability built in the platform 
     * Projects where resources are scarce 
-    * Applications that the customer wants to maintain and support themselves 
+    * Apps that the customer wants to maintain and support themselves 
     * Projects where changes after release are likely to happen 
     * Internal work portals 
-    * Process-oriented applications 
-    * Integration applications 
-    * Applications that require data management 
-    * Applications that replace Excel applications 
-    * Applications that have integrations with other platforms and systems
-    * Projects that will replace a legacy application 
-    * Any new solutions where the data will also be stored in the application 
+    * Process-oriented apps 
+    * Integration apps 
+    * Apps that require data management 
+    * Apps that replace Excel apps 
+    * Apps that have integrations with other platforms and systems
+    * Projects that will replace a legacy app 
+    * Any new solutions where the data will also be stored in the app
     * Extensions of System of Record, such as ERP, PLM, and MES 
 
     These are projects where Mendix would not be a perfect fit:    
 
-    * Games, as as Mendix is aimed at building business applications
+    * Games, as as Mendix is aimed at building business apps
     * Content Management Systems, although Mendix can integrate well with existing CMS for creating CMS portals
-    * Data warehouse applications, although Mendix can integrate well with existing data warehouse applications 
-    * Enterprise Service Bus applications, where the main purpose is to connect applications with other applications, without adding business value or logic
-    * Applications with heavy mathematical calculations, although Mendix would be a good layer on top of an AI solution or calculation engine that compute statistical models or data analytics 
+    * Data warehouse apps, although Mendix can integrate well with existing data warehouse apps 
+    * Enterprise Service Bus apps, where the main purpose is to connect apps with other apps, without adding business value or logic
+    * Apps with heavy mathematical calculations, although Mendix would be a good layer on top of an AI solution or calculation engine that compute statistical models or data analytics 
     * Web portals with more than 10,000 concurrent users 
-    * Mobile applications with more than 100,000 concurrent users 
-    * Applications where the main goal is to visualize data 
+    * Mobile apps with more than 100,000 concurrent users 
+    * Apps where the main goal is to visualize data 
 
-### Defining Application Value
+### Defining App Value
 
 {{% alert color="info" %}}For more resources, download the [Company Apps Value Template](/attachments/quickstarts/leading-mendix-implementation/company-apps-value-template.pptx) file.{{% /alert %}}
 
@@ -378,33 +378,33 @@ By thoroughly defining the app’s purpose and value, you provide a clear roadma
 * Business value proposition — Clearly articulate the app's value proposition in terms of the problem it is trying to solve, and the benefits it is trying to bring to the business.
 * User experience and satisfaction:    
 
-    * Identify the target audience or users who will benefit from the app. Understanding end-users helps in tailoring the application to their needs.
+    * Identify the target audience or users who will benefit from the app. Understanding end-users helps in tailoring the app to their needs.
     * Consider the user experience as a critical aspect of the app's value. An intuitive and user-friendly interface enhances user satisfaction and adoption.
     * Value is often derived not just from functionalities, but also from how easily and effectively users can accomplish their tasks.
 * Efficiency and productivity:
 
-    * Assess how the application improves operational efficiency and productivity. Identify areas where manual processes can be automated, reducing errors and saving time.
-    * Highlight any potential cost savings or resource optimization achieved through the application.
+    * Assess how the app improves operational efficiency and productivity. Identify areas where manual processes can be automated, reducing errors and saving time.
+    * Highlight any potential cost savings or resource optimization achieved through the app.
 * Innovation and competitive advantage:    
 
-    * If applicable, emphasize how the application introduces innovative solutions or features that set your organization apart from competitors.
-    * Consider how the application positions the organization for future growth and adaptation to changing market conditions.
-* Adaptability and scalability — Highlight the application's adaptability to changing business needs, and its scalability to accommodate future growth.
+    * If applicable, emphasize how the app introduces innovative solutions or features that set your organization apart from competitors.
+    * Consider how the app positions the organization for future growth and adaptation to changing market conditions.
+* Adaptability and scalability — Highlight the app's adaptability to changing business needs, and its scalability to accommodate future growth.
 * Measurable objectives:
 
-    * Establish measurable objectives to gauge the success of the application. Define key performance indicators (KPIs) that will help evaluate its impact on business processes, efficiency, or other relevant metrics.
-    * Measurable objectives provide a basis for assessing the application's effectiveness and return on investment.
+    * Establish measurable objectives to gauge the success of the app. Define key performance indicators (KPIs) that will help evaluate its impact on business processes, efficiency, or other relevant metrics.
+    * Measurable objectives provide a basis for assessing the app's effectiveness and return on investment.
 * Alignment with organizational goals:   
 
-    * Confirm that the application purpose aligns with the overall goals and vision of the organization. It should contribute positively to the strategic direction of the company.
-    * Understand how the application fits into the larger ecosystem of organizational processes and systems.    
+    * Confirm that the app's purpose aligns with the overall goals and vision of the organization. It should contribute positively to the strategic direction of the company.
+    * Understand how the app fits into the larger ecosystem of organizational processes and systems.    
     You can try filling in the template available at the beginning of this section.
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/template.png"  >}}
 
 ### Setting Up the Deployment Architecture and Resources
 
-Mendix applications can be deployed in different ways, mainly:
+Mendix apps can be deployed in different ways, mainly:
 
 * Public 
 * Private 
@@ -420,14 +420,14 @@ For a list of all the deployment options that are available, see [Deploying Apps
 Mendix Cloud is the default deployment option. It is a fully integrated solution, with easy setting up and administration.    
 This is a great option for your first app if you do not have any specific private cloud constraints. Within Mendix Cloud, there are options for multi-tenant and single-tenant cloud environments. Deploying to Mendix Cloud gives you the shortest time-to-value.
 
-* Pros: Fast and easy, all hosting is taken care of.  It has the best utilization rate for your infrastructure, allowing you to maintain optimal flexibility and to convert your capital investment into operational expenses. This option is supported by Mendix, and it is the most optimized cloud to run Mendix applications.
+* Pros: Fast and easy, all hosting is taken care of.  It has the best utilization rate for your infrastructure, allowing you to maintain optimal flexibility and to convert your capital investment into operational expenses. This option is supported by Mendix, and it is the most optimized cloud to run Mendix apps.
 * Cons: Some organizations don’t allow shared cloud usage, and require air-gapped or private-cloud options.
 
 #### Mendix for Private Cloud
 
 With Mendix for Private Cloud, you can choose the cloud provider of your preference, such as your own Azure or AWS infrastructures.   
 
-* Pros: Your DevOps team has complete control over application deployment and application lifecycle, with centralized management. It is cloud-agnostic, and you can choose on-premises or your chosen cloud provider.
+* Pros: Your DevOps team has complete control over app deployment and app lifecycle, with centralized management. It is cloud-agnostic, and you can choose on-premises or your chosen cloud provider.
 * Cons: Requires your own experienced staff to set up and maintain with reduced Mendix Support due to lack of access and visibility.
 
 For Private deployment, you need to be ready to start that process immediately in order to avoid development and go-live date delays. 
@@ -438,13 +438,13 @@ This is the Private Cloud responsibility matrix:
 
 ### Options for Development Resources {#review-options-for-development-resources}
 
-With Mendix, you have multiple options to choose from for the development of your applications:
+With Mendix, you have multiple options to choose from for the development of your apps:
 
-* In-house development — Train and/or hire Mendix developers to develop and support all your Mendix applications.    
+* In-house development — Train and/or hire Mendix developers to develop and support all your Mendix apps.    
 When training in-house, we recommend choosing individuals who either have a traditional development background or have some understanding of object-oriented programming (OOP)). Beyond the technical side, Mendix recommends looking for individuals who can provide consulting to your business team.
 * Mendix partner — Work with one of our certified Mendix partners to support your app development. Our directory of partners is listed [here](https://developerprofiles.mendix.com/link/partneroverview), but your Mendix team is a great resource to identify a good fit for you.    
 This can be a great option to get your project kick-started, or if you have no future goals of building out your internal development team.
-* Mendix Expert Services — Choosing Mendix Expert Services is the right option if you plan on building out your internal team and need enablement and support alongside application development.  Expert Services can help prove the value of the Mendix internally while simultaneously coaching your team on how to continue with the apps.
+* Mendix Expert Services — Choosing Mendix Expert Services is the right option if you plan on building out your internal team and need enablement and support alongside app development.  Expert Services can help prove the value of the Mendix internally while simultaneously coaching your team on how to continue with the apps.
 * Hybrid — You can simultaneously grow your in-house team and supplement with a Mendix partner and/or our Expert Services team.
 
 Regardless of which option you choose, we always recommend that at least one person internally has been trained on Mendix and is technically capable of directing the project.  Outsourcing every technical role creates a siloed development team that does not truly understand your business needs.
@@ -554,7 +554,7 @@ You can find information and the required courseware for the Intermediate certif
 
 #### Advanced Developer Certification
 
-An Advanced Developer has the knowledge and skills required to build production-ready applications. 
+An Advanced Developer has the knowledge and skills required to build production-ready apps. 
 
 This certification is proof of someone’s advanced knowledge of the platform and their professional experience with developing Mendix apps.
 
@@ -682,7 +682,7 @@ Now that the program is properly kicked off, the next step is to organize the ki
 A sample agenda for a successful project kick-off might include:
 
 * Introduction. Make sure everyone knows each other.
-* The background of the project. Go back to your application value definition and simply present the most important points to your team.
+* The background of the project. Go back to your app value definition and simply present the most important points to your team.
 * The project scope. You might not have your MVP scope defined in the kick-off meeting, but it is important to have a clear understanding of the problem you are solving and what the most crucial aspect of that problem to tackle first.
 * Individual responsibilities. Every team member should have a clear understanding of their roles and responsibilities, both in the context of the scrum framework, as well as in general.
 * Collaboration methods. Establish your agile rituals, such as standups, refinements, reviews, and retrospectives. Decide who should be attending and how often. In general, all team members should attend all the rituals. Stakeholders can limit themselves to sprint reviews.
@@ -742,18 +742,18 @@ If at all possible, make sure the development team talks to the future end-users
 
 When defining requirements, start by making sure that you and the stakeholders have a shared understanding of the problem, then look at the various ways you can help solve it.
 
-Once the team has enough information, they should list the key features and functionalities that the application will offer. This could include data entry forms, workflow automation, reporting tools, or any other capabilities that align with the application's purpose.
+Once the team has enough information, they should list the key features and functionalities that the app will offer. This could include data entry forms, workflow automation, reporting tools, or any other capabilities that align with the app's purpose.
 Think about what the user needs to be able to do and how. 
 
 The next step is to prioritize features based on their importance to achieving the primary goal. Keep in mind that a minimum viable product entails achieving that initial value. Anything that is not part of the initial scope can be added later on. Often things your stakeholders, or even end-users consider crucial are things they can probably live without for a couple of weeks. And if done right, your team will have a rhythm that ensures they consistently continue delivering value.
 
 ### Standard Requirements and Reusability
 
-Certain requirements, such as access management or standardized navigation, are repeated for every application you build. Consider adding them to your standard company app template, or creating a reusable component.
+Certain requirements, such as access management or standardized navigation, are repeated for every app you build. Consider adding them to your standard company app template, or creating a reusable component.
 
 Here are a few topics to keep in mind:
 
-* End user login — Every app needs a way for end-users to get access to it. We advise using the [OIDC SSO module](/appstore/modules/oidc/) for your B2E apps. This is the easiest and most flexible approach for Single Sign-On, and is supported by Microsoft’s Entra ID and most other IdPs.  As an alternative, you can use [SAML](/appstore/modules/saml/) for regulated B2C-apps, [LDAP](/appstore/modules/ldap/) for on-prem apps, or the [Forgot My Password](/appstore/modules/forgot-password/) module for non-SSO apps.
+* End-user login — Every app needs a way for end-users to get access to it. We advise using the [OIDC SSO module](/appstore/modules/oidc/) for your B2E apps. This is the easiest and most flexible approach for Single Sign-On, and is supported by Microsoft’s Entra ID and most other IdPs.  As an alternative, you can use [SAML](/appstore/modules/saml/) for regulated B2C-apps, [LDAP](/appstore/modules/ldap/) for on-prem apps, or the [Forgot My Password](/appstore/modules/forgot-password/) module for non-SSO apps.
 
 * Getting familiar with the Marketplace — Low-code development may be fast, but using modules or content from the Marketplace may even be faster. You may find modules relevant to your portfolio or your first app in particular and create a shortlist for your teams.  Marketplace content may be supported by Mendix, by Mendix partners or by the Mendix community.
 
@@ -763,194 +763,152 @@ One of the core values of the Mendix platform is continuous collaboration betwee
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/continuous-collaboration-suite.png"  >}}
 
-The starting point is your portfolio. You have already added a couple of initiatives in it, but now that you have the MVP scope of your first application, add it in as a separate initiative and describe or link to documentation showing what needs to be delivered exactly and why. 
+The starting point is your portfolio, to which you have already added a couple of initiatives. Now that you have the MVP scope of your first app, add it in as a separate initiative and describe or link to documentation showing what needs to be delivered and why. 
 
-You also have your application, so now you can link it to the initiative. To do this, you just need to select *Edit initiative* and start typing your app name to select it from the dropdown.
+You also have an app which you can link to the initiative. To do this, select **Edit initiative** and start typing your app name to select it from the dropdown.
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/edit-initiative.png"  >}}
 
-If you are using Epics as your agile planning tool, you will be able to link the right epics to this initiative. This means that anyone who opens that initiative in Portfolio Management will be able to see development progress on the epic level.
+If you are using Epics as your agile planning tool, you can link the right epics to this initiative. This means that anyone who opens that initiative in Portfolio Management can see the development progress at the epic level.
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/development-progress.png"  >}}
 
-Another important part of collaboration in the application development lifecycle is the collaboration between the development team and their end users. Mendix makes that super easy using the feedback module. Your app users just need to click the *Feedback* button in your app and tell you what they like, need or miss, and your development team will be able to immediately respond. Once your app is live, the team will be able to set up a mini-survey to ask for user satisfaction, or get more targeted input by asking specific questions. Here you can read more on [the importance of user feedback for application development](https://www.mendix.com/blog/how-to-collect-and-analyze-user-feedback-in-your-app/).
+Another important part of collaboration in the app development lifecycle is the collaboration between the development team and their end-users. Mendix facilitates this through the feedback module. Your app users just need to click the **Feedback** button in your app, and tell you what they like, need or miss. Your development team can then immediately respond. Once your app is live, the team can set up a mini-survey to ask for user satisfaction, or to get more targeted input by asking specific questions. Find out more about [the importance of user feedback for app development](https://www.mendix.com/blog/how-to-collect-and-analyze-user-feedback-in-your-app/).
 
-### The Development Process Itself and Why That’s Not a Part of This Guide
+### The Development Process
 
-We have created this guide in order to help anyone who is in charge of implementing Mendix in their organization to hit the ground running.
+This guide is aimed at anyone who is in charge of implementing Mendix in their organization. If you are working on managing the Mendix program, you are likely not the person actually developing the app itself. Rather, your job is to enable the setup of everything, to focus on the 5 P's, and to empower the development team to focus on development only. There are many dedicated resources on the platform to help new or seasoned developers get the most out of Mendix.
 
-The end goal of this phase is to bring your first app to life, but if you are working on managing the Mendix program, odds are you will not be the person actually developing the app itself. Rather, your job is to enable the set up of everything, focus on the 5 P’s, and empower the development team to focus on development only. 
-
-There are many dedicated resources on the platform to help new (or seasoned developers) get the most out of Mendix.So for the sake of your time, this guide’s length, and your sanity, let us skip a few steps ahead and pretend that the application is now almost ready.
-
-### Summary
-
-By now most probably your first application has been developed and is ready for launch! You’ve learned how to kick off your project and have ensured access for all stakeholders involved. You’ve also laid the foundation for establishing an Agile way of working and made sure there is a clear understanding of project requirements shared amongst all stakeholders. Also, you are aware of what tools are in place to support continuous collaboration that you can leverage through Mendix.
-
-Time to move on and prepare for launching your first application!
-
-## Launching Your First Application
-
-You’ve come a long way, and it is time to launch your first application. This section covers all you need to know at this stage. 
-
-**Learning Objectives**
-
-Well done, you’ve gone a long way and learned a lot through the process! It’s time to launch your first application. Exciting! 
+## Launching Your First App
 
 By the end of this section, you will be able to: 
 
-* Identify the different options available to test your application 
-* Describe the ways to promote your application 
-* Recognize the importance and options to maintain and upgrade your application
+* Identify the different options available to test your app.
+* Describe the ways to promote your app. 
+* Recognize the importance and options to maintain and upgrade your app.
 
-### Deploy Your Application
+### Deploying Your App
 
-**Deploy your application to Mendix Cloud**
+Follow this process to make sure that your app is ready to be deployed.
 
-Deploying your application to Mendix Cloud is a simple process, that will give you access to all the features and services in Mendix Cloud. It requires only a few steps to set it up, which you only need to do once for each application. Once the cloud settings of your application is done, you can deploy and redeploy your application with just one click.  
+#### Deploying Your App to Mendix Cloud
 
-Note that Mendix also offers [other deployment options](/releasenotes/developer-portal/deployment/) than Mendix Cloud e.g. to a private cloud if that’s a requirement.
+Deploying your app to Mendix Cloud gives you access to all the features and services in Mendix Cloud. Setting up the deployment only requires a few steps, and only needs to be done once for each app. Once the cloud settings of your app are configured, you can deploy and redeploy it with just one click.  
 
-**Obtain a licensed node**
+Note that Mendix also offers [other deployment options](/releasenotes/developer-portal/deployment/).
 
-You can deploy your application for free on Mendix Cloud. These [Free Apps have limitations](/developerportal/deploy/mendix-cloud-deploy/#free-app) when it comes to run time, features and resources. You can publish Free Apps to test the Mendix platform, a specific feature of to quickly prototype an application to test an idea. Once you decide to take your application to the next-level and start serious development on it, you will need to obtain a licensed node, so this is something you will need to do before your launch.
+#### Obtaining a Licensed Node
+
+You can deploy your app for free to Mendix Cloud. However, [free apps have limitations](/developerportal/deploy/mendix-cloud-deploy/#free-app) when it comes to runtime, features, and resources. You can publish free apps to test the Mendix platform or a specific feature, or to quickly prototype an app to test an idea. However, once you decide to develop your app further, you need to obtain a licensed node.
 
 If you have an existing contract that allows for more licensed nodes, you can [request a new licensed node](/developerportal/deploy/licensing-apps/#obtaining-licensed-node).
 If you don’t have a contract, or if your contract doesn’t allow for more licensed nodes, contact your Customer Success Manager.
 
-**Link your application to your licensed node**
+#### Linking Your App to Your Licensed Node
 
-If you have a licensed node available, you can link your application to this licensed node. [Back up the data](/developerportal/deploy/licensing-apps/#backing-up) first if you require it.
+If you have a licensed node available, you can link your app to it. If needed, [back up the data](/developerportal/deploy/licensing-apps/#backing-up) first. Then, you can [connect your app](/developerportal/deploy/licensing-apps/#connect-app) to the node.
 
-After that, you can [connect your application](/developerportal/deploy/licensing-apps/#connect-app) to the node.
+When your app is unlinked from a free app environment, you can link it to a licensed node. By linking it to a licensed node, you get access to all the features of Mendix Cloud, such as one-click deployment from Studio Pro and our platform, log management, backup management, and monitoring tools.
 
-When your app is unlinked from a Free App environment, you can link it to a licensed node. By linking it to a licensed node, you get access to all the features of Mendix Cloud, such as one-click deployment from Studio Pro and our platform, log management, backups management and monitoring tools.
+#### Setting Node Permissions
 
-**Set node permissions**
-
-Once you have linked your application to a licensed node, your team needs to determine what users can perform what actions on the node.
-
-Who can configure an environment, who can deploy to an environment, who has access to the logs of an environment, etc. All of that is controlled by [node permissions](/developerportal/deploy/node-permissions/).
+Once you have linked your app to a licensed node, your team needs to determine which users can perform which actions on the node. For example, things like who can configure an environment, who can deploy to an environment, who has access to the logs of an environment, and so on are controlled by [node permissions](/developerportal/deploy/node-permissions/).
 
 By default, only the Technical Contact of a node has permissions to perform any action on the licensed node. The Technical Contact can grant permissions to other members of the app team.
 
-Granting permissions to team members is dependent on your deployment strategy and process: do you have DevOps teams where the developers also deploy and monitor the apps? Or does your company have separate Ops teams, where the deployment is done by people other than the developers? You can set node permissions for each of the environments of your node, so you can grant developers to deploy the app to the Test environment, but restrict deployment permissions for the Production environment to a smaller team.
+Granting permissions to team members is dependent on your deployment strategy and process. For example, you can set node permissions for each of the environments of your node. That way, you can grant developers the permission to deploy the app to the Test environment, but restrict deployment permissions for the Production environment to a smaller team.
 
-**Set cloud settings**
+#### Configuring Cloud Settings
 
-When the node permissions are set up, you can start configuring your cloud settings. This can be done by any team member with the correct permissions. Changing your cloud settings is not mandatory, as most of settings are set for you by default in Mendix Cloud, but in some cases you want to customize them to tailor the end user experience or to adhere to company standards.
+Once node permissions are set up, you can start configuring your cloud settings. This can be done by any team member with the correct permissions. Changing your cloud settings is not mandatory, as most settings are configured for you by default in Mendix Cloud. However, in some cases, you may want to customize them to tailor the end-user experience or to adhere to company standards.
 
-Things can you can customize for your applications in Mendix Cloud include:
+Things you can customize for your apps in Mendix Cloud include:
 
 * [Studio Pro deployment target](/developerportal/deploy/studio-deployment-settings/#studio-pro-target)
-
 * [Custom domains](/developerportal/deploy/custom-domains/)
-
 * [HTTP headers](/howto/security/best-practices-security/#adding-http-header)
-
 * [Path-based access restrictions](/developerportal/deploy/access-restrictions/)
-
 * [Environment variables](/developerportal/deploy/environments-details/#custom-environment-variables)
-
 * [Services](/developerportal/deploy/environments-details/#services), such as [the Event Broker service](/appstore/services/business-events/#mendix-event-broker)
 
-**Deploy your application**
+#### Deploying the App
 
-Once you have linked and configured your Mendix Cloud node, which you only have to do once, you can start deploying your application to Mendix Cloud. It is recommended that you deploy any new version of your application to the Test or Acceptance environment of your application first for testing, before deploying it to the Production environment.
+Once you have linked and configured your Mendix Cloud node, which you only have to do once, you can start deploying your app to Mendix Cloud. Mendix recommends that you first deploy any new version of your app to the Test or Acceptance environment for testing, before deploying it to the Production environment.
 
-There are multiple ways to deploy your application to Mendix Cloud, so there is always a deployment flow that fits your needs. You (or your team) can get a complete overview of those in [Deploying an App to Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/).
+There are multiple ways to deploy your app to Mendix Cloud. You can find out more about these in [Deploying an App to Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/).
 
-### Test Your Application
+### Testing the App
 
-Mendix has a module that allows developers to write and execute Unit Tests: the UnitTesting module in Marketplace. With the UnitTesting module, critical parts of the application can be tested.
+The Mendix Marketplace includes the [Unit Testing module](/appstore/modules/unit-testing/), which allows developers to write and execute unit tests, thus testing all critical parts of the app.
 
-There are a variety of tools available for testing, from Mendix-supported ones to third-party ones. Read more about [Test Automation and Quality Assurance](https://www.mendix.com/evaluation-guide/app-lifecycle/test-automation-quality-assurance/).
+There are a variety of tools available for testing, from Mendix-supported ones to third-party ones. Find out more from [Test Automation and Quality Assurance](https://www.mendix.com/evaluation-guide/app-lifecycle/test-automation-quality-assurance/).
 
-Aside from unit tests, performance tests can also be performed with multiple third-party tools, such as JMeter, BlazeMeter and LoadRunner—all of which are capable of testing the performance of your Mendix application.
+Aside from unit tests, performance tests can also be performed with multiple third-party tools, such as JMeter, BlazeMeter and LoadRunner, all of which are capable of testing the performance of your Mendix app.
 
-After go-live, Mendix Cloud offers metrics and logs to provide insights into application performance and can help track down bugs.
+After launching the app, Mendix Cloud offers metrics and logs to provide insights into app performance and bug detection.
 
 ### User Acceptance Testing
 
-Before launching your first application, it is important to thoroughly test the application, not just in terms of bug bashing, but also to make sure it fulfills end user needs. That is why User Acceptance Tests should be performed before any go-live. What does that mean? It’s simple — always get your end users to actually try out the app before the go-live. This will give you the chance to catch any last-minute bugs and make sure your app is meeting (and exceeding)
-user expectations. 
+Before launching your first app, it is important to thoroughly test it. This goes beyond bug bashing, and includes ensuring that it fulfills end-user needs. This is why User Acceptance Tests, where end-users actually try out the app, should be performed before any launch. This gives you the chance to catch any last-minute bugs and make sure your app is meeting and exceeding user expectations. 
 
-Mendix feedback module makes it super easy to organize user acceptance tests, all you need to do is to select the environment you want to do this in, make sure the feedback module is set up there, inform your end-users that you need their help and give them information on how to log in and how to provide feedback (maybe you want them to test specific scenarios you would give them on advance, or just let them play around themselves and give feedback on anything they notice might need to be changed). Then your development team will be able to fix any issues and respond to questions that might arise. Keep in mind that they might need extra time to tackle this feedback, so be sure you get user input at least a week before your planned go live date, preferably even longer. 
+The [Mendix Feedback](/appstore/modules/mendix-feedback/) module makes it easy to organize user acceptance tests. All you need to do is to select the environment you want to do this in, make sure the Mendix Feedback module is set up there, inform your end-users that you need their help, and give them information on how to log in and how to provide feedback. Then, your development team can fix any issues and respond to questions that might arise. Keep in mind that they might need extra time to tackle this feedback, so be sure you get user input at least a week before the planned launch date, preferably even longer. 
 
-### Launch and Promote Your Application
+### Launching and Promoting the App
 
-Congratulations! If you made it this far, you’ve most likely launched your first Mendix app and have already started delivering value for your organization. You’ve probably tried doing things a bit differently than before and your team, as well as your whole organization, learned a lot along the way. To ensure continued success, here are a couple of things you need to think about now.
+By this point, you have already launched your first Mendix app, and have started delivering value for your organization. To ensure continued success, here are some things you need to think about:
 
-**Celebrate your first launch**
+* Celebrate your first launch in an impactful way.
+    
+    * Throw a party and invite as many people as possible, not just your development team. 
+    * Host the party in a central location so that other departments take notice. 
+    * Make sure your most senior sponsor is in the room to reinforce the importance of low-code development. 
+    * Captivate your audience by presenting the astonishing results of your project. Have the business show the demo.
+    * Consider inviting the following people to celebrate with you: 
+        
+        * Project team 
+        * Business stakeholders 
+        * Stakeholders from other lines of business 
+        * IT leaders 
+        * Mendix Expert Services or the Partner that helped guide the team through the project 
 
-Yes, you absolutely need to celebrate. Here are some tips to maximize the impact of your internal celebration: 
-
-* Throw a party and invite as many people as possible, not just your development team. 
-
-* Host the party in a central location so that other departments take notice. 
-
-* People love cake. To be more specific: people love free cake. Order a cake. One of our customers in the shipping industry made their cake look like a shipping container because their app increased the utilization of their containers. You could make your cake look like a volcano, because business is about to erupt. 
-
-* Make sure your most senior sponsor is in the room to reinforce the importance of low-code development. 
-
-* Captivate your audience by presenting the astonishing results of your project. Have the business show the demo.
-
-* Here’s who you can consider inviting to celebrate with you: 
-    * Project team 
-    * Business stakeholders 
-
-    * Stakeholders from other lines of business 
-    * IT leaders 
-    * Mendix Expert Services or the Partner that helped guide the team through the project 
-
-But it doesn’t stop there. You need to continue talking about your first success. This part might feel like shameless promotion, and it might not come naturally to you or your team, but trust us, it’s vital and it works. Some of our most successful customers went on to share their success story in the form of a blog for your company website or intranet, a video, a podcast or at the very least a value one-pager that can be shared across your organization. Trust us, it’s worth it.
+* Continue talking about your first success. This might not come naturally to you or your team, but it is vital to keep the momentum. You could share your success story in the form of a blog post for your company website or intranet, through a video, a podcast, or at the very least a value one-pager that can be shared across your organization.
 
 ### After the Launch
 
-**Establish a retrospective cadence**
+These are some things to keep in mind after you launch your first app.
 
-To achieve this milestone, it’s first important to establish the goals of a retrospective. The retrospective should look back on the project and review successes and lessons learned. 
+#### Establishing a Retrospective Cadence
 
-1. Did the project achieve its business goal? 
+To achieve this, it is first important to establish the goals of a retrospective. The retrospective should look back on the project and review successes and lessons learned:
 
-2. Did you have the right people on the team? 
+* Did the project achieve its business goal? 
+* Did you have the right people on the team? 
+* How well was the business engaged in the process? 
 
-3. How well was the business engaged in the process? 
+Embrace all feedback, whether it’s perception or reality. Let the business know they have a voice, and that their input is vital to improving future projects. Seek their advice on how to develop a more structured rapid app development approach that further enhances engagement and collaboration with other business units.
 
-Embrace all feedback, whether it’s perception or reality. Again, let the business know they have a voice and that their input is vital to improving future projects. Seek their advice on how to develop a more structured rapid application development approach that further enhances engagement and collaboration with other business units.
+One of the most important questions to ask business stakeholders in the retrospective is what they would tell their friends or colleagues about this project to make them enthusiastic. The key is constant communication and proof. Once business users see that you have done what you said you would do, and that they can have a significant impact on the project, they will quickly embrace this new approach.
 
-One of the most important questions to ask the business stakeholders in the retrospective is “What would you tell your friends/colleagues about this project to make them enthusiastic?” This elevator pitch is great fodder for internal feedback, with the goal of implementing this approach more broadly across the organization. To effectively engage the business, you may have to reverse years of perception. The key is constant communication and proof. Once business users see that you have done what you said you would do — and that they can have a significant impact on the project —they will quickly embrace this new approach.
-
-Make sure to do a team retrospective as well, these are some of the points you can consider:
+Make sure to do a team retrospective as well, taking into account these points:
 
 * What went well?
-
 * What didn’t go well? 
-
 * Who really excelled in the project and can take on the Mendix developer lead role/advance their certification level?
-
 * How can you use this information to refine your process for the next project?
 
-**Document and measure the value of the application** 
+#### Documenting and Measuring the App Value
 
-Remember those goals you outlined when you initially defined the value of your application? Now is the time to go back to them and see if you have reached them or are on track to reach them.
+Now is the time to go back to the goals you outlined when you initially defined the value of your app, and see if you have reached them or if you are on track to reach them.
 
-It might take a bit of time to capture enough data to be able to draw conclusions, but always make sure the value the app brought about is captured. This might include things like generating additional revenue or maybe saving costs by sunsetting existing legacy apps, automating previously manual processes, or simply delivering a new application faster than you would with traditional development. It could even be something like improving your customer satisfaction or engagement.
-Whatever it is, make sure you have measured it and will continue to measure it. This will also be important when the time comes for you to define the value of your second and third app.
+Always make sure that the value the app brought is captured. This might include things like generating additional revenue or saving costs by sunsetting existing legacy apps, automating previously manual processes, or delivering a new app faster than you would with traditional development. It could even be something like improving your customer satisfaction or engagement.
 
-### Maintain and Upgrade Your Applications
+#### Maintaining and Upgrading Your App
 
-**Platform: Maintaining your Mendix App**
+After developing and publishing your first Mendix app, it's important to put proper maintenance measures in place. [Establishing a regular upgrade practice](https://www.mendix.com/wp-content/uploads/Your-Mendix-Upgrade-Guide-1.pdf) helps keep your app up to date with support and retain access to the latest features.
 
-After developing and publishing your first Mendix app, it's important to put proper maintenance measures in place. [Establishing a regular upgrade practice](https://www.mendix.com/wp-content/uploads/Your-Mendix-Upgrade-Guide-1.pdf) [DB37\]\[UT38\]will help keep your app up to date with support and retain access to the latest features.
-
-Mendix supports three major versions at a time. For example, today Mendix supports major versions 8, 9, and 10. When the next version (11) is released, then version 8 will sunset, and versions 9, 10, and 11 will be supported.
+Mendix supports three major versions at a time. Example: Mendix supports major versions 8, 9, and 10. When version 11 is released, version 8 is no longer supported, and versions 9, 10, and 11 are supported.
 
 Learn more about [version details and release timelines](/releasenotes/studio-pro/lts-mts/#major-version).
-
-### Summary
-
-Your first application is launched, and you now know all about testing, launching, and promoting your application as well as the importance of continuous improvement, maintenance and upgrades. It was a long journey, but you made it!  
 
 ## Questions and Feedback
 
@@ -958,7 +916,6 @@ If you have questions related to the Digital Execution Practice and organization
 
 * Reach out to your Mendix team. They are always willing to answer questions, help you make decisions, and provide extra information.  
   If you do not have a dedicated customer success manager (CSM), this guide contains the necessary resources to help you out.
-
 * Ask the Community in our [Digital Execution Practice space](https://community.mendix.com/link/space/digital-execution-community). This is a part of the Mendix Community that is specifically dedicated to helping others succeed with their digital execution practice.  
   Your questions will be answered by our own Mendix experts, as well as other companies who have used Mendix to their benefit.  
   If you haven’t already joined, you can do that by clicking [here](https://community.mendix.com/link/invitation/space/Digital-Execution-Community/0438b34d-3432-44c1-ac85-d5bc940116e9).
@@ -967,8 +924,8 @@ If you need help with technical matters:
 
 * Check out the Mendix Documentation.
 * Contact the [Mendix Community](https://community.mendix.com/p/questions). Here, you can get answers to your questions, and help others with their own questions.  
-  Be sure to first check whether someone has already asked the question you're wondering about. If not, feel free to post it, and our community will help you out! Doing so will gain you points!
-* Submit a support ticket. If something really appears to be broken from a technical point of view, such as not being able to visit or edit your application anymore, contact our [Support Team](https://support.mendix.com/hc/en-us).
+  Be sure to first check whether someone has already asked the question you're wondering about. If not, feel free to post it, and our community will help you out. Doing so will gain you points.
+* Submit a support ticket. If something really appears to be broken from a technical point of view, such as not being able to visit or edit your app anymore, contact our [Support Team](https://support.mendix.com/hc/en-us).
 
 If you have feedback or any improvement suggestions, use the **Feedback** option at the bottom of this page.
 
@@ -977,10 +934,10 @@ If you have feedback or any improvement suggestions, use the **Feedback** option
 Here are some resources help familiarize yourself with the Mendix platform:
 
 * The [Mendix Ecosystem](https://academy.mendix.com/link/modules/78/lectures/504/1.3-Mendix-Ecosystem) lecture in our Rapid Developer course offers a short description of each platform element relevant for developers, along with useful links. 
-* [Apps](/developerportal/) is the central location to collaborate, deploy, and manage your Mendix applications.
+* [Apps](/developerportal/) is the central location to collaborate, deploy, and manage your Mendix apps.
 * [Mendix Support](https://support.mendix.com/hc/en-us) allows you to create tickets, issues, incidents.
 * The [Mendix Academy](https://academy.mendix.com/index3.html) provides access to trainings and certifications. For example:  
-    * The [Digital Execution Learning Path](https://academy.mendix.com/link/paths/52/Digital-Execution) outlines the steps to successful digital execution, and the meaning of rapid application development maturity.
+    * The [Digital Execution Learning Path](https://academy.mendix.com/link/paths/52/Digital-Execution) outlines the steps to successful digital execution, and the meaning of rapid app development maturity.
     * In the Agile Awareness Learning Path, you can read more about the [Digital Execution Stages](https://academy.mendix.com/link/modules/389/lectures/3133/2.2-Digital-Execution-Stages:-Start,-Structure,-Scale) as well as the [core tenets of digital execution](https://academy.mendix.com/link/modules/389/lectures/3135/2.4-People,-Portfolio,-Process,-and-Platform-(4-P’s)).
 * The [Mendix Community](https://community.mendix.com/p/questions) is our online collaborative help community. 
 * The [Mendix Blog](https://www.mendix.com/blog/) contains articles on trending topics. For example:
@@ -991,11 +948,3 @@ Here are some resources help familiarize yourself with the Mendix platform:
 * The [Mendix Marketplace](https://marketplace.mendix.com/) provides access to modules, widgets, solutions, and other content provided by Mendix, partners or the community. 
 * The [Siemens Annual Reports](https://www.siemens.com/global/en/company/investor-relations/events-publications-ad-hoc/annualreports.html?gclid=CjwKCAjwzo2mBhAUEiwAf7wjkpk1onH3tK1d_kOzGxjbQa5MTFF91cbKKfp7a6F3AS8mDpov1_M6choCbE8QAvD_BwE&acz=1) offer details on financial, corporate governance, and sustainability.
 * The [DEP Manual](https://www.mendix.com/resources/digital-execution-manual/) provides information about the 5 P’s and how to best leverage the Mendix low-code platform.
-
-## Conclusion
-
-Congratulations, you’ve made it to the end of this journey, and your first Mendix application has been launched! You’ve learned a lot along the way. The resources you’ve explored will also be very helpful during the next phases of your journey. You’ve made a great start and are ready to keep a successful journey going with Mendix. 
-
-By now you are familiar with the Mendix ecosystem and the importance of the 5 P’s of Digital Transformation. You know how to create an action plan, and successfully manage your Mendix program and are ready to keep managing and adding value to your portfolio. 
-
-An exiting Mendix journey has just begun, and we hope this guide was a useful tool during your first steps!

@@ -27,7 +27,7 @@ Regardless of which major version you are upgrading from, we recommend you upgra
 
 1. Back up your app.
 1. Upgrade to the latest patch of Studio Pro.
-1. Upgrade widgets, modules, Marketplace components, templates, and connectors.
+1. Upgrade widgets, modules, Marketplace components, and connectors.
 1. Fix deprecations and test your app.
 1. Upgrade app to Mendix 11.
 
@@ -55,7 +55,10 @@ In general, you should not remove and re-import modules unless this is recommend
 
 After the upgrade of your marketplace content, take the next steps:
 
-1. Fix any deprecation warnings you see in development in Studio Pro, as well as in the Mendix Runtime using your console and browser console.
+1. Fix any deprecation warnings you see in development in Studio Pro, as well as in the Mendix Runtime using your console and browser console. These deprecations could include, but are not limited to, the following:
+    * [Document Templates](/refguide/document-templates/): deprecated in 10.24 
+    * [Dojo-based Mendix Client](/refguide/mendix-client/): deprecated in 11.0
+    * Deprecated Java Version: depending on your Java version you may see errors — to resolve those errors, see [Java Version Migration](/refguide/java-version-migration/)
 1. Review the major changes in the sections below.
 1. Run your app, test all functionality, and ensure it works without error.
 1. Back up or commit your Mendix 10 app so you can return to it if necessary.
@@ -78,6 +81,16 @@ We recommend you also upgrade Atlas Web Content if it is in your app.
 
 For optimal implementation, ensure all UI modules either use CSS variables or have their variables defined within the module. If an app uses CSS variables inside **theme/web/custom-variables.scss** while some UI modules still rely on old Atlas SASS variables, those usages will fallback to Atlas default values. Therefore, we recommend you to transition to CSS variables only after confirming that all company design modules no longer depend on Atlas SASS variables.
 
+### Using the **ShowHomePage** Microflow in the **System** Module {#apply-entity-access}
+
+In Studio Pro versions prior to 11, the default configuration was insecure: **Apply entity access** was set to `false`. In Studio Pro version 11, the **ShowHomePage** microflow in the **System** module now enforces a secure default for entity access. As a result, after upgrading to version 11, your application may report errors that were previously not detected.
+
+Below is an example of a potential error that may occur after upgrading to version 11, along with recommended approaches for resolving it.
+
+After the upgrade, your app may report the following new error: `A microflow that does not apply entity access can only call microflows that also do not apply entity access`. This error occurs when a microflow that does not apply entity access attempts to call the **ShowHomePage** microflow in the **System** module, which now enforces entity access. In earlier versions, the **ShowHomePage** microflow did not have entity access applied, so this error did not arise before the upgrade.
+
+You can resolve the error by enabling entity access for the microflow that calls the **ShowHomePage** microflow. However, this may not always align with your intended access control strategy. Alternatively, you can create a custom microflow that includes the [Show home page](/refguide/show-home-page/) activity without enabling entity access. You can then call this new microflow instead of the one in the **System** module. Another approach is to call the **Show home page** activity directly within your microflow.
+
 ### Other
 
 * Studio Pro 10.21 and above requires your application to use Java 21. The Java version of an application can be configured in the runtime settings. Java 21 is available in 9.24.23 and above. Please consider the Java Version Migration guide for a list of changes between Java versions. For on-premises deployments, ensure that JDK 21 is installed in the environments where Mendix 10 applications are deployed.
@@ -99,3 +112,4 @@ For optimal implementation, ensure all UI modules either use CSS variables or ha
 * When COALESCE function in OQL has attributes of different numeric types, the result type is defined according to type precedence. Before, the result type would match the type of the first argument.
 * Client API `mx.logger` is no longer supported. All calls to it should be replaced with standard `console.log`, `console.warn`, and other such standard calls. All widgets that use the `mx.logger` need to be updated. 
 * We no longer convert `empty` values sent to the client into empty strings. All client side expressions must be adjusted accordingly.
+* We no longer support the runtime API class `com.mendix.modules.email.EmailModule` which was deprecated in [Mendix 10.12](https://docs.mendix.com/releasenotes/studio-pro/10.12/#deprecate-email). We recommend using the [Email Connector](https://marketplace.mendix.com/link/component/120739) module instead.

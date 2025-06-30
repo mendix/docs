@@ -5,13 +5,11 @@ description: "The various sections of the Mendix Studio Pro Guide provide detail
 weight: 10
 no_list: false
 description_list: true
-beta: true
 cascade:
     - content_type: "Studio Pro 11"
     - mendix_version: 11
     - sitemap:
-        priority: 0.8
-    - banner: "Mendix 11 is currently in Beta. For more information about Beta releases and features, see <a href=\"/releasenotes/beta-features/\">Beta Releases</a>."
+        priority: 0.8 
 ---
 
 ## Introduction

@@ -14,6 +14,16 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2025
 
+### June 29, 2025
+
+#### New Features
+
+* We added a service configurator for the **SAP Cloud Logging** service.
+
+#### Bug Fixes
+
+* Fixed an issue where changes to the app health check **Timeout** value were not taking effect.
+
 ### June 1, 2025
 
 #### New Features

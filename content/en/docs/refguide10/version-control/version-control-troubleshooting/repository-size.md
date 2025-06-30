@@ -231,7 +231,10 @@ When reaching out to Mendix Support, please include:
 
 In case you are still deciding whether to migrate from SVN to Git, or you are already on Git and want to get a recommendation on what steps to take to solve or prevent Git-related performance issues, please follow the decision trees in the image below:
 
-{{< figure src="/attachments/refguide10/version-control/troubleshoot-version-control-issues/migration-advice-combined.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/version-control/troubleshoot-version-control-issues/migration-advice-mx10.png" class="no-border" >}}
 
-In Studio Pro 10.18 and above, you can manually convert branches to MPRv2. In Studio Pro 10.22 and above, branch conversion happens automatically. For more information on the format, see the [MPRv2 Format](#mprv2) section.
-For more information on partial clone, see [Clone Type](/refguide10/clone-type/).
+\* In case your *.git* folder is less than 2GB but you are having performance issues when cloning, please see the [Verify Full Clone Through Git CLI](/refguide10/troubleshoot-team-server-issues/#verify-full-clone-through-git-cli) section in *Troubleshooting Team Server Issues* and contact Support with the relevant information.
+
+\** For more information on the partial clone, see [Clone Type](/refguide10/clone-type/).
+
+\*** For more information on Git cleanup, see the [Cleanup Tool](/refguide10/troubleshoot-repository-size/#cleanup-tool) section in *Troubleshooting Repository Size*.

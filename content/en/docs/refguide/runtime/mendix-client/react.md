@@ -142,6 +142,16 @@ To replace a template grid widget, follow these steps:
 1. Add any actions that items from your original widget as icon buttons to the content area.
 1. Add any actions that do not affect rows as buttons to the gallery widget's header.
 
+#### Feedback Widget
+
+The deprecated feedback widget is not supported in the React client. It should be replaced with the [Mendix Feedback Module](https://marketplace.mendix.com/link/component/205506). This module requires some additional configuration to work with the React client:
+
+1. Install the latest version of the Feedback Module.
+1. Replace the widget or snippet on your main layout(s) with the snippet `FeedbackModule.FeedbackWidget`.
+1. Edit the properties of the widget inside the `FeedbackWidget` snippet (use the Page Explorer or Structure Mode to see it).
+1. Set the **Modal pop-up type** to **Custom**.
+1. Set the **On click action** to **Show a page** and choose the page `FeedbackModule.ShareFeedback`.
+
 #### Custom Widgets{#custom-widgets}
 
 Dojo widgets are no longer supported in the React client. They should be replaced with a pluggable widget based on React. 

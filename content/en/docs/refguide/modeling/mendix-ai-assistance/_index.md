@@ -28,6 +28,10 @@ To ensure the smooth operation of Mendix AI Assistance (Maia), the following net
 
 Mendix AI Assistance (Maia) in Studio Pro has the following capabilities: 
 
+Starting point for app creation:
+
+* **Start with Maia** - a starting point in Studio Pro that helps you to start the app development process. Based on a required text description and an optional image or PDF, it generates an app that includes a domain model, data management overview pages, test data, and a tailored homepage. For more information, see [Start with Maia](/refguide/start-with-maia/).
+
 Guidance:
 
 * **Maia Chat** – a built-in chat interface powered by Generative AI in Studio Pro. It answers questions about app development in Mendix, including how to apply concepts, best practices, and development patterns. For more information, see [Maia Chat](/refguide/maia-chat/). 

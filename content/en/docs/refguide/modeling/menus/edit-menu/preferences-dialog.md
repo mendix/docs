@@ -106,21 +106,33 @@ You can specify which repositories to use for Gradle. The content of this field 
 
 ## Maia Tab
 
+### Generative AI
+
+The **Generative AI** section contains the following settings:
+
+* **Enable Start with Maia** – When enabled, you can use the **Start with Maia** starting point in Studio Pro to help you create an app. For more information on how to use this feature, see [Start with Maia](/refguide/start-with-maia/). It is enabled by default.
+* **Enable Maia Explain** – When enabled, you can use it to explain a microflow or a nanoflow in the logic editors. For more information on how to use this feature, see [Maia Explain](/refguide/maia-explain/). It is enabled by default.
+* **Enable Maia for Domain Model** – when enabled, you can use it to generate a new domain model or to explain and improve an existing one. For more information on how to use this feature, see [Maia for Domain Model](/refguide/maia-for-domain-model/). It is enabled by default.
+* **Enable Maia for OQL**– when enabled, you can use it to generate and manage OQL (Object Query Language) queries through an intuitive interface. For more information on how to use this feature, see [Maia for OQL](/refguide/maia-for-oql/). It is disabled by default.
+* **Enable Maia for Pages** – when enabled, you can use it to generate a new page or to explain and improve an existing one. For more information on how to use this feature, see [Maia for Pages](/refguide/maia-for-pages/). It is disabled by default.
+* **Enable Maia for Workflows** – when enabled, you can use it to generate workflows by adding and configuring activities. For more information on how to use this feature, see [Maia for Workflows](/refguide/maia-for-workflows/). It is disabled by default.
+* **Enable Translation Generator** – when enabled, you can use it to translate your model into different languages through the **Batch translate** option under the **Language** menu, or to translate [system texts](/refguide/system-texts/) for you. For more information, see [Translation Generator](/refguide/translation-generator/). It is disabled by default.
+
 ### In-Editor Recommender
 
 The **In-Editor Recommender** section contains the following settings:
 
-* **Enable for microflow, nanoflow, and rule editors** – this allows you to enable and disable [Logic Recommender](/refguide/logic-recommender/) in the microflow, nanoflow, and rule editors. 
-* **Enable for workflow editor** – this allows you to enable and disable [Workflow Recommender](/refguide/workflow-recommender/) in the workflow editor.
-* **Enable for page editor** - this allows you to enable and disable the [UI Recommendor](/refguide/ui-recommender/). This feature is enabled by default. 
+* **Enable for microflow, nanoflow, and rule editors** – this allows you to enable and disable [Logic Recommender](/refguide/logic-recommender/) in the microflow, nanoflow, and rule editors. It is enabled by default. 
+* **Enable for workflow editor** – this allows you to enable and disable [Workflow Recommender](/refguide/workflow-recommender/) in the workflow editor. It is enabled by default.
+* **Enable for page editor** - this allows you to enable and disable the [UI Recommendor](/refguide/ui-recommender/). It is enabled by default.
 
 ### Best Practice Recommender
 
 The **Best Practice Recommender** section contains the following settings:
 
-* **Show recommendation in editors** – when enabled, [Best Practice Recommender](/refguide/best-practice-recommender/) highlights elements that contain anti-patterns in visual editors.
+* **Show recommendation in editors** – when enabled, [Best Practice Recommender](/refguide/best-practice-recommender/) highlights elements that contain anti-patterns in visual editors. It is enabled by default.
 
-* **Automatically run an inspection after opening an app** – when enabled, [Best Practice Recommender](/refguide/best-practice-recommender/) automatically runs an inspection when an app is opened. If the app contains errors, the inspection will not run.
+* **Automatically run an inspection after opening an app** – when enabled, [Best Practice Recommender](/refguide/best-practice-recommender/) automatically runs an inspection when an app is opened. If the app contains errors, the inspection will not run. It is enabled by default.
 
 ## Model Tab
 
@@ -288,28 +300,6 @@ This setting is enabled by default. The editor allows the user to write rich tex
 ### GraphQL {#graphql}
 
 You can publish data as a GraphQL service. When you enable this feature, you can indicate that a published OData service [also supports GraphQL](/refguide/published-odata-services/#supports-graphql).
-
-### Maia
-
-#### Enable Maia for Domain Model
-
-Enable this option to help you generate entities and associations for your domain models. For more information on how to use this feature, see [Maia for Domain Model](/refguide/maia-for-domain-model/).
-
-#### Enable Maia for Pages
-
-Enable this option to help you generate pages by adding and configuring widgets based on text input and an optional image. For more information on how to use this feature, see [Maia for Pages](/refguide/maia-for-pages/).
-
-#### Enable Maia for Workflows
-
-Enable this option to help you generate workflows by adding and configuring activities. For more information on how to use this feature, see [Maia for Workflows](/refguide/maia-for-workflows/).
-
-#### Enable Maia for OQL
-
-Enable this option to help you generate and manage OQL (Object Query Language) queries through an intuitive interface. For more information on how to use this feature, see [Maia for OQL](/refguide/maia-for-oql/).
-
-#### Enable Translation Generator
-
-Enable this option to help you translate your model to different languages through **Batch translate** under the **Language** menu. For more information, see [Translation Generator](/refguide/translation-generator/).
 
 ### Mapping Editor
 

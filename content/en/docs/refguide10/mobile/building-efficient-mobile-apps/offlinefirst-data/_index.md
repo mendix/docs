@@ -9,7 +9,7 @@ aliases:
     - /refguide10/mobile/building-efficient-mobile-apps/offlinefirst-data/
 ---
 
-## Introduction
+## Introduction {#intro}
 
 The Mendix platform offers support to build fully offline-first applications, whether it is a native mobile app or a progressive web app.
 
@@ -19,7 +19,11 @@ Offline-first applications work regardless of the connection to provide a contin
 It is essential to understand that offline-first is an architectural concept and not an approach based on the device's network state. Offline-first apps do not rely on a connection. Still, they can use network connections (for example, you can call microflows, use a Google Maps widget, or use push notifications).
 {{% /alert %}}
 
-Mendix supports building offline-first applications for [native mobile](/refguide10/native-mobile/) and [progressive web apps](/refguide10/mobile/introduction-to-mobile-technologies/progressive-web-app/). Both native and progressive web apps (PWAs) share the same core, giving them the same offline-first capabilities. Native mobile apps are always offline-first, but for progressive web apps this is optional. You can configure your PWA to be offline-first by adding an offline-first PWA navigation profile to your app. For more information, see [Progressive Web Apps](/refguide10/mobile/introduction-to-mobile-technologies/progressive-web-app/).
+Mendix supports building offline-first applications for [native mobile](/refguide10/native-mobile/) and [progressive web apps](/refguide10/mobile/introduction-to-mobile-technologies/progressive-web-app/). Both native and progressive web apps (PWAs) share the same core, giving them the same offline-first capabilities. 
+
+Starting in Studio Pro 10.24, the feature of adding online date in offline apps is generally available. This means developers have more flexibility than ever when building apps and configuring when and how they pass data.
+
+Native mobile apps are always offline-first, but for progressive web apps this is optional. You can configure your PWA to be offline-first by adding an offline-first PWA navigation profile to your app. For more information, see [Progressive Web Apps](/refguide10/mobile/introduction-to-mobile-technologies/progressive-web-app/).
 
 {{% alert color="info" %}}
 **Online Synchronization Mode (Introduced in Mendix 10.19)**

@@ -16,6 +16,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2025
 
+### June 27, 2025
+
+#### Bug Fixes
+
+* We fixed a bug where users could not trigger the on commit trigger pipeline (Ticket 245653)
+
 ### June 12, 2025
 
 #### New Features

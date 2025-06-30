@@ -28,18 +28,17 @@ It can be used in the following two ways:
 * [General](#general)
 * [Boundary properties](#boundary-properties)
 * [Timer](#timer)
+* [Recurrence](#recurrence)
 * [Common](#common)
 
 ### General Section {#general}
 
 The **Caption** describes what happens in this element. It is displayed under the workflow element to make the **Timer** easier to read and understand without the need to add annotations.
 
-### Boundary Properties {#boundary-properties}
+### Boundary Properties Section {#boundary-properties}
 
 {{% alert color="info" %}}
 This section is only applicable when **Timer** is used as a timer boundary event.
-
-This section is displayed if interrupting timer boundary events (beta) are enabled through Studio Pro **Preferences** -> **New features** -> **Workflow editor** > **Enable interrupting timer boundary events (beta)**.
 {{% /alert %}}
 
 The **Interrupting** property sets the timer boundary event to be either interrupting or non-interrupting.
@@ -56,6 +55,23 @@ The **Timer** properties are described in the table below:
 | --- | --- |
 | Duration | You can set a certain duration for the timer. With the **Continue after** setting, you can indicate the number of seconds, minutes, hours, days, weeks or months the timer's duration is. Possible values for the setting are:<br /><ul><li>Seconds</li><li>Minutes</li><li>Hours</li><li>Days</li><li>Weeks</li><li>Months</li> </ul> |
 | Expression | You can set a certain date and time for the timer by writing an expression via the **Continue at** setting.<br><br>For example, you can write `addDays([%CurrentDateTime%], 1)` to set tomorrow as the due date and time. To set a static date and time, you can use the expression `parseDateTimeUTC('2023-12-10T17:12:00.000', 'yyyy-MM-dd''T''HH:mm:ss.SSS')`.<br><br>You can also create a more complex timer. For example, you can set a timer based on a Boolean value (in this example, `isVIPUser`) from the provided workflow context entity: `if $WorkflowContext/isVIPUser then addDays([%CurrentDateTime%], 2) else addWeeks([%CurrentDateTime%], 2])`.<br><br>For more information on available expressions in Mendix, see [Expressions](/refguide/expressions/). |
+
+### Recurrence Section {#recurrence}
+
+{{% alert color="info" %}}
+The **Recurrence** property is only applicable when **Timer** is used as a non-interrupting timer boundary event.
+{{% /alert %}}
+
+The **Recurrence** property allows a non-interrupting timer boundary event to run multiple times when the specified interval has elapsed. The following parameters can be set.
+
+| Type | Description |
+| --- | --- |
+| Interval | You can set a certain duration for the timer. With the **Repeat every** setting, you can indicate the number of minutes, hours, days, weeks or months the timer interval duration is. Possible values for the setting are:<br /><ul><li>Minutes</li><li>Hours</li><li>Days</li><li>Weeks</li><li>Months</li> </ul> |
+| Max occurrences | The maximum number of occurrences, including the first boundary event execution.|
+
+{{% alert color="info" %}}
+When recurrence is set, the non-interrupting boundary event is first executed after the specified timer duration. From that point onward, it recurs with the set interval.
+{{% /alert %}}
 
 ### Common Section {#common}
 

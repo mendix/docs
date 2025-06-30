@@ -10,7 +10,7 @@ aliases:
 
 ## Introduction
 
-If your app uses the [Mendix Feedback](/appstore/modules/mendix-feedback/) module, users can report feedback to your team using the feedback widget in your app, and all their feedback will go to the **Feedback** page. **Feedback** enables your team to view all the feedback. It also allows team members with the right permissions to organize feedback and add feedback manually. 
+If your app uses the [Mendix Feedback](/appstore/modules/mendix-feedback/) module, users can report feedback to your team using the feedback widget in your app, and all their feedback goes to the **Feedback** page. **Feedback** enables your team to view all the feedback. It also allows team members with the right permissions to organize feedback and add feedback manually. 
 
 You can access the **Feedback** page by selecting your app in [Apps](https://sprintr.home.mendix.com/) and then clicking **Feedback** in the navigation pane. 
 
@@ -20,13 +20,13 @@ The **Feedback** page contains two tabs: [Inbox](#inbox) and [Archive](#archive)
 
 #### What Happens to Your Team
 
-After a user reports feedback in the app using the feedback widget, the feedback goes automatically to the [Inbox](#inbox) on the **Feedback** page, and the members in your team who are a Scrum Master or have the same permissions as the default permissions of a Scrum Master will get a [notification](/developerportal/global-navigation/#notifications). If you no longer want to receive feedback notifications for a specific app, you can [stop watching](/developerportal/#my-apps) the app. 
+After a user reports feedback in the app using the feedback widget, the feedback goes automatically to the [Inbox](#inbox) on the **Feedback** page, and the members in your team who are a Scrum Master or have the same permissions as the default permissions of a Scrum Master get a [notification](/developerportal/global-navigation/#notifications). If you no longer want to receive feedback notifications for a specific app, you can [stop watching](/developerportal/#my-apps) the app. 
 
-Next to getting a notification in the Mendix Portal, Scrum Masters of your team will also receive an email with a link to the details of the new feedback.
+On top of getting a notification in the Mendix Portal, Scrum Masters of your team also receive an email with a link to the details of the new feedback.
 
 #### What Happens to the User
 
-After a user reports feedback in the app using the feedback widget, the user will get an email with a link to their submitted feedback. When the user opens the link, a page opens and shows their feedback details. See the table below:
+After a user reports feedback in the app using the feedback widget, they get an email with a link to their submitted feedback. When the user opens the link, a page opens and shows their feedback details. See the table below:
 
 | What a User Can See on the Page                             | What a User Cannot See on the Page                          |
 | ----------------------------------------------------------- | ----------------------------------------------------------- |
@@ -38,7 +38,7 @@ After a user reports feedback in the app using the feedback widget, the user wil
 | Last activity on the feedback                               | Attachments that you team uploaded for this feedback        |
 |                                                             | Team comments on this feedback                              |
 
-This page also has a message feature for the user to communicate with your team directly. Users can upload images in the messages. When the user posts a message, the assigned team member will receive an email. When there is a reply from your team, the user will get an email notification.
+This page also has a message feature for the user to communicate with your team directly. Users can upload images in the messages. When the user posts a message, the assigned team member receives an email. When there is a reply from your team, the user gets an email notification.
 
 {{% alert color="warning" %}}Do not share the link to feedback details with someone unless it is necessary. Anyone who has this link can access the feedback details, including the title and the description of the feedback as well as the screenshot if there is one.{{% /alert %}}
 
@@ -69,7 +69,7 @@ To export all feedback into one CSV file, click **Export**.
 
 To search by **Subject**, **Description**, **User Email** and **Tags**, type the keywords in the search bar.
 
-Clicking the filter bar will open the **Filter by** side panel. In this side panel, you can filter feedback using the **Environment**, **Assignee**, **Priority**, **Status**, and **Submission date**. The filters are saved until the page is refreshed.
+Clicking the filter bar opens the **Filter by** side panel. In this side panel, you can filter feedback using the **Environment**, **Assignee**, **Priority**, **Status**, and **Submission date**. The filters are saved until the page is refreshed.
 
 ### Organizing Feedback in Inbox
 
@@ -85,13 +85,13 @@ If you select feedback, you can see the following items:
 
 * **Link** – Clicking this links the feedback together into one feedback group.
 
-  You need to choose which item is the primary item of the group. After the feedback items are linked, only the primary feedback item appears in the list. The feedback items that are linked to the primary item will disappear from the list. You can only access these linked feedback items from their primary item. If you change the status of the primary feedback item, all the linked items will get the same status automatically.
+  You need to choose which item is the primary item of the group. After the feedback items are linked, only the primary feedback item appears in the list. The feedback items that are linked to the primary item disappear from the list. You can only access these linked feedback items from their primary item. If you change the status of the primary feedback item, all the linked items get the same status automatically.
 
   {{% alert color="info" %}}When you open a linked feedback, you can click **Make [the linked feedback] the Primary feedback** to make this feedback the primary feedback of the feedback group instead.{{% /alert %}}
 
-* **Move** – Clicking this moves the selected feedback to any other app of which you are a member. Whenever you move feedback, you will also move all linked feedback. If you only want to move one feedback item, you need to unlink the feedback from the group first.
+* **Move** – Clicking this moves the selected feedback to any other app of which you are a member. Whenever you move feedback, you also move all linked feedback. If you only want to move one feedback item, you need to unlink the feedback from the group first.
 
-* **Create Stories** – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button will convert the selected feedback to stories on the designated board in Epics or Jira.
+* **Create Stories** – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button converts the selected feedback to stories on the designated board in Epics or Jira.
 
 * Status drop-down list – You can select a status from the drop-down list and then click **Apply** to change the status of the selected feedback.
 
@@ -117,11 +117,11 @@ To export all the archived feedback into one CSV file, click **Export**.
 
 To search by **Subject** and **ID**, type the keywords in the search bar.
 
-Clicking the filter bar will open the **Filter by** side panel. In this side panel, you can filter the feedback using the **Environment**, **Closed date**, **Submission date**, and **Assignees**. The filters are saved until the page is refreshed.
+Clicking the filter bar opens the **Filter by** side panel. In this side panel, you can filter the feedback using the **Environment**, **Closed date**, **Submission date**, and **Assignees**. The filters are saved until the page is refreshed.
 
 ## Opening Feedback in Inbox or Archive{#feedback-details}
 
-On the [Inbox](#inbox) and [Archive](#archive) tabs, you can open feedback by clicking it in the list. If you click the **ID** of the feedback, the feedback details page will open. If you click a place other than the **ID** of the feedback, a side panel will open. Either the feedback details page or the side panel contains two tabs: [Feedback](#feedback) and [Reporter Comments](#contact-reporter).
+On the [Inbox](#inbox) and [Archive](#archive) tabs, you can open feedback by clicking it in the list. If you click the **ID** of the feedback, the feedback details page opens. If you click a place other than the **ID** of the feedback, a side panel opens. Either the feedback details page or the side panel contains two tabs: [Feedback](#feedback) and [Reporter Comments](#contact-reporter).
 
 ### Feedback Tab {#feedback}
 
@@ -134,13 +134,13 @@ The **Feedback** tab shows the following items:
     * {{% icon name="view" %}} – Clicking the button to stop receiving notifications for this feedback.
     * **Copy Link** ({{% icon name="hyperlink" %}}) – Clicking this button copies the URL to the feedback. You can send the URL to other people.
     * **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking the button opens a menu with the following items:
-        * **Move** – Clicking this button moves the feedback to any other app of which you are a member. Whenever you move feedback, you will also move all linked feedback. If you only want to move one feedback item, you need to unlink the feedback from the group first.
-        * **Create Story** – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button will convert the feedback to a story on the designated board in Epics or Jira. Once the story is created, clicking this button brings you to the story on the board right away.
+        * **Move** – Clicking this button moves the feedback to any other app of which you are a member. Whenever you move feedback, you also move all linked feedback. If you only want to move one feedback item, you need to unlink the feedback from the group first.
+        * **Create Story** – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button converts the feedback to a story on the designated board in Epics or Jira. Once the story is created, clicking this button brings you to the story on the board right away.
         * **Delete** – Clicking this button removes the feedback permanently from **Feedback**. The result is irreversible.
     
 * **Last activity** – This shows when the last edit to the feedback was made.
 
-* **Assigned To** – This shows to whom the feedback is assigned. When you assign the feedback to someone, they will get an email notification.
+* **Assigned To** – This shows to whom the feedback is assigned. When you assign the feedback to someone, they get an email notification.
 
 * **Priority** – This shows the priority that the feedback has.
 
@@ -173,7 +173,7 @@ The **Feedback** tab shows the following items:
 
   {{< figure src="/attachments/developerportal/app-insights/feedback/linked-feedback.png" class="no-border" >}}
 
-  Once the feedback is linked, it disappears from the list on the **Inbox** or **Archive** tab. You can only access the linked feedback from its primary feedback to which it is linked. If you change the status of the primary feedback, all the linked feedback will get the same status automatically.
+  Once the feedback is linked, it disappears from the list on the **Inbox** or **Archive** tab. You can only access the linked feedback from its primary feedback to which it is linked. If you change the status of the primary feedback, all the linked feedback gets the same status automatically.
 
   {{% alert color="info" %}}When you open a linked feedback item, you can click **Make [the linked feedback item] the Primary feedback** to make this feedback the primary feedback of the feedback group instead.{{% /alert %}}
 
@@ -215,13 +215,17 @@ From the [feedback details](#feedback-details) page, you can manage tags by clic
 
 ## Receiving Notifications {#notifications}
 
-You can receive a notification when new feedback lands in **Inbox** or when a reporter replies to their feedback. To receive notifications, do as follows:
+You can receive a notification when new feedback lands in **Inbox** or when a reporter replies to their feedback. To receive notifications, follow these steps:
 
 1. Watch the app on the [Settings](/developerportal/collaborate/general-settings/) page after you open it in [Apps](https://sprintr.home.mendix.com/).
-2. Go to Feedback again.
-3. Enable the feedback notifications as follows:
-    1. In Feedback, click the **Settings** {{% icon name="cog" %}} icon on the upper-right corner of the page.
-    2. Turn on the toggle to receive notifications.
+2. Go to **Feedback** again.
+3. Click the **Settings** {{% icon name="cog" %}} icon in the upper-right corner of the page.
+4. Turn on the toggle to receive notifications.
+5. Choose how often you want to receive notifications by selecting a **Frequency**:    
+
+    * **Instantly** (default) 
+    * **Daily email update**
+    * **Weekly email update**
 
 ### Receiving Notifications for an Individual Feedback Item {#notifications-individual-feedback}
 

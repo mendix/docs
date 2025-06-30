@@ -69,6 +69,7 @@ A widget package file is just a ZIP archive containing the following things:
     * *{widgetName}.tile.dark.png* sets the dark-mode equivalent to *{widgetName}.tile.png*
 * Optionally, some widget-related resources, preferably located next to the file which contains the client component
     * Note that all CSS files you add (except the one located in the **lib** sub-directory) will automatically be loaded in an app via the widget
+* Optionally, a *locales* folder.
 
 Naming your widget package file after the `widgetName` is best practice. Also, a widget package can include multiple widgets by putting several of the above items in the same widget package. However, creating such packages is *not recommended*. 
 
@@ -306,6 +307,59 @@ Here is how a caption and description look in Studio Pro:
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/card-icon.png" alt="caption" class="no-border" >}}
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/card-description.png" alt="description" class="no-border" >}}
+
+## Widget Translations
+
+A pluggable widget can provide translations to be used within Studio Pro to match an end-user's preferred user interface language (of Studio Pro). This includes translations for:
+
+* The name of the pluggable widget (for example, in the **Toolbox**).
+* The names of properties or values of properties, (for example, in the **Properties** dialog box).
+* Texts like labels used in the editor preview (for example, when editing a page in Design Mode).
+
+If provided, the Studio Pro user interface automatically uses the translations for the name of the widget and any of its properties. However, texts shown in the pluggable widgets preview have to be translated by calling the **translate** function. The **preview** function in *{widgetName}.editorPreview.js* receives this **translate** function as a prop. It will look up the provided translation for a given key, as in the following example:
+
+```tsx
+export function preview(props) {
+    return (
+        <div>
+            {props.translate("Hello world")}
+        </div>
+    )
+}
+```
+
+Translations for a pluggable widget can be provided in two ways: in the widget package itself, or in a module. These translations do not affect the behavior of the app once deployed. If there is no translation available for a users preferred user interface language, English will be used as the fallback language.
+
+### Providing Translations in a Pluggable Widget Package
+
+To support a translation for a specific language and locale, create a *locales/{language-code}/{widget ID}.json* or *locales/{language-code}/translation.json* file. The language code can be any of the user interface languages supported by Studio Pro, such as *en-US*, *ja-JP*, *ko-KR*, or *zh-CN*. Other files in the **locales** folder will be ignored. As a result, custom namespaces cannot be used. We recommend using *translation.json*, unless your .MPK contains multiple pluggable widgets. Note that if you use the widget ID as the file name, you will have to replace any spaces and illegal path characters (if there are any) with underscores. The file name should be all lower case. For example, if your widget ID is *%My Pluggable Widget%*, the name of the file should be *_my_pluggable_widget_.json*.
+
+These JSON files follow the format used by the i18next library, specifically v3. For more information, see [the i18nest JSON documentation](https://www.i18next.com/misc/json-format). For example, to translate a widget with the name *Text Box* that has a property *length*, the contents of *locales/ko-KR/translation.json* might look something like this example:
+
+```json
+{
+    "Text Box": "텍스트 상자",
+    "length": "텍스트 길이"
+}
+```
+
+### Providing Translations in a Module
+
+Translations for a pluggable widget can also be provided by a module. This can be useful when you would like to provide a module that has more than one pluggable widget, or if your pluggable widget uses one or more [/apidocs-mxsdk/apidocs/frontend/design-properties/](design properties).
+
+To achieve this, create a *locales/{language-code}/{widget ID}.json* file in the **Styling** folder of your module. You will have to replace any spaces and illegal path characters (if there are any) with underscores. The file name should be all lower case. For example, if your widget ID is *%My Pluggable Widget%*, the name of the file should be *_my_pluggable_widget_.json*. In addition, create a *locales/metadata.json* file. The resulting structure will look something like this example:
+
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/translations.png" alt="A metadata.json file in the Styling/locales folder and a custom.widget.id.json file in the Styling/locales/ko-KR folder" class="no-border" max-width=50% >}}
+
+The contents of *locales/metadata.json* should be as follows:
+
+```json
+{
+    "widgetsToBeTranslated": []
+}
+```
+
+The value of *widgetsToBeTranslated* is a string array where each string must be a valid widget ID. If a .JSON file for a pluggable widget exists, but its widget ID is not included in this array, it will be ignored.
 
 ## Documents in this Section
 

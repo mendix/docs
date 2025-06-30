@@ -9,6 +9,10 @@ description: Describes how to integrate with Bitrise to build a Mendix native ap
 
 This guide helps you set up [Bitrise](https://bitrise.io) to automate building a Mendix native app in the cloud. Bitrise is a popular continuous integration service optimized for mobile apps.
 
+{{% alert color="info" %}}
+Please note that this documentation is provided as a guide only. Mendix offers support if issues arise with the Mendix build process itself, but cannot provide support for problems related to the Bitrise platform or other third-party tools described in this guide.
+{{% /alert %}}
+
 {{% alert color="warning" %}}
 The React Native version used in Studio Pro versions 10.11-10.16 includes Bitcode, which is not longer supported by Xcode 16 and above. This means that native mobile iOS applications created by customers **cannot be submitted to the App Store**. 
 

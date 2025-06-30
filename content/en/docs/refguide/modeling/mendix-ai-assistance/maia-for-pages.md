@@ -18,7 +18,7 @@ Maia for Pages helps you generate a [page](/refguide/page/) by adding and config
 
 ## Using Maia for Pages
 
-To enable Maia for Pages, go to **Edit** > **Preferences** > the **New Features** tab > the **Maia** section.
+To enable Maia for Pages, go to **Edit** > **Preferences** > the **Maia** tab and select **Enable Maia for Pages**.
 
 Once enabled, you can find it in the the toolbar of a page:
 

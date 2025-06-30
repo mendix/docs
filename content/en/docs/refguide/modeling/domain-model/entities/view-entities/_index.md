@@ -5,10 +5,6 @@ weight: 17
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-This feature is currently in beta. For more information, see [Beta and Experimental Releases](/releasenotes/beta-features/).
-{{% /alert %}}
-
 ## Introduction
 
 A view entity represents a dynamic set of data retrieved using a stored [OQL query](/refguide/oql/) and can be used similarly to a [persistable entity](/refguide/persistability/#persistable). This concept is analogous to views commonly found in relational database systems. Whenever a view entity is accessed through a page or microflow, the associated OQL query executes to retrieve the relevant data dynamically. Unlike materialized views, the results of a view entity are not stored as a separate table in the database. Instead, the query is executed each time the view entity is accessed, ensuring the data retrieved is always up-to-date.

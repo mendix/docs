@@ -9,6 +9,10 @@ description: Describes how to integrate with Bitrise to build a Mendix native ap
 
 This guide helps you set up [Bitrise](https://bitrise.io) to automate building a Mendix native app in the cloud. Bitrise is a popular continuous integration service optimized for mobile apps.
 
+{{% alert color="info" %}}
+Please note that this documentation is provided as a guide only. Mendix offers support if issues arise with the Mendix build process itself, but cannot provide support for problems related to the Bitrise platform or other third-party tools described in this guide.
+{{% /alert %}}
+
 ## Prerequisites {#prerequisites}
 
 Before starting this guide, make sure you have completed the following prerequisites:

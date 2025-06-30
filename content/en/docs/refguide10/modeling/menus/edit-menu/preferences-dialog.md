@@ -251,9 +251,16 @@ Hardware and driver issues may cause performance problems when running Studio Pr
 
 ### Language {#language}
 
-This beta feature is available from Studio Pro 10.17. 
+This option allows you to change the user interface language you work in while using Studio Pro. At this time, English, Japanese, Chinese, Korean, and Brazilian Portuguese (Beta) are supported. You must restart Studio Pro in order to use this feature.
 
-This option allows you to change the user interface language you work in while using Studio Pro. At this time, English, Japanese, Chinese, Korean, and Brazilian Portuguese (from Studio Pro 10.23) are supported. You must restart Studio Pro in order to use this feature.
+| Language               | Introduced | General Availability |
+| ---------------------- | ---------- | -------------------- |
+| Chinese                | 10.17      | 10.24                |
+| Japanese               | 10.17      | 10.24                |
+| Korean                 | 10.17      | 10.24                |
+| Portuguese (Brazilian) | 10.23      | TBD                  |
+
+
 
 ### Editor Tabs Closing Policy {#closing-policy}
 
@@ -323,6 +330,10 @@ Publishing data as a GraphQL service is available as of Studio Pro 10.14. When y
 
 ### Maia
 
+### Enable Maia Explain
+
+Maia Explain was introduced in Studio Pro 10.21.0. Enable this option to let Maia explain a microflow or a nanoflow in the logic editors for you. For more information on how to use this feature, see [Maia Explain](/refguide10/maia-explain/). It is enabled by default.
+
 #### Enable Maia for Domain Model
 
 Maia for Domain Model was introduced in Studio Pro 10.13.0. Enable this option to help you generate entities and associations for your domain models. For more information on how to use this feature, see [Maia for Domain Model](/refguide10/maia-for-domain-model/).
@@ -352,6 +363,10 @@ If Translation Generator is also enabled, you can use it in this editor as well.
 ### Toolbox
 
 Enable this setting to use the modernized toolbox. This requires restart of Studio Pro.
+
+### Workflow Editor
+
+Interrupting timer boundary event was released as a beta feature in Studio Pro 10.20.0. Enable this option to be able to use interrupting timer boundary events in the workflow editor. For more information, see [Boundary Events](/refguide10/workflow-boundary-events/).
 
 ## Read More
 

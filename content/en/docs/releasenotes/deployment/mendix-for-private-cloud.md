@@ -12,6 +12,15 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2025
 
+### June 25, 2025
+
+#### Mendix Operator v2.22.0 {#2.22.0}
+
+* We have added an option to use regular Kubernetes secrets in place of Kubernetes CSI Secrets Store.
+  This option allows to use all features from [CSI Secrets Storage](/developerportal/deploy/secret-store-credentials/) without having to use an external CSI Secrets Store driver, or by using any Kubernetes secret management solution such as [External Secrets Operator](https://external-secrets.io/).
+* We have updated components to use the latest dependency versions in order to improve security score ratings for container images.
+* Upgrading to Mendix Operator v2.22.0 from a previous version will restart environments managed by that version of the Operator. Environments with two or more replicas and a **PreferRolling** update strategy are restarted without downtime.
+
 ### May 29, 2025
 
 #### Portal Improvements

@@ -18,7 +18,7 @@ If your main line is Studio Pro version 9.24.28 or above and your team role is S
 
 ## When to Migrate from SVN to Git
 
-Mendix recommends to combine a migration to Git with an upgrade to Mendix 10, as the advantages of Git in Mendix 9 are limited. For more details on this recommendation, see the [Recommendation on Avoiding Git Issues](/refguide/troubleshoot-repository-size/#recommendation) section in *Troubleshooting Repository Size*.
+Mendix recommends to combine a migration to Git with an upgrade to Studio Pro version 10.24 LTS, as the advantages of Git in Studio Pro version 9 are limited. For more details on this recommendation, see the [Recommendation on Avoiding Git Issues](/refguide10/troubleshoot-repository-size/#recommendation) section in *Troubleshooting Repository Size*.
 
 ## Apps Eligible for Migration
 
@@ -49,7 +49,13 @@ The eligibility check does not display your repository size, and Support Enginee
 
 #### Eligible for Migrating With History
 
-If your repository is eligible for migrating with full history, you can choose whether to retain your history during migration or not. For the smoothest experience after the migration, Mendix advises to migrate without history.
+If your repository is eligible for migrating with full history, you can choose whether to retain your history during migration or not. 
+
+{{% alert color="info" %}}
+
+For the smoothest experience after the migration, Mendix advises to [migrate without history](#without-history).
+
+{{% /alert %}}
 
 #### Eligible for Migrating Without History
 
@@ -61,6 +67,8 @@ You will receive a full backup of your SVN repository after completing the migra
 
 {{% /alert %}}
 
+For more information on the process, see [Migrating Without History](#without-history) section below.
+
 #### Not Eligible for Migration
 
 If your app is not eligible for migration the reason(s) will be listed on a page. To continue the process, resolve these reasons and try again.
@@ -70,7 +78,7 @@ If your app is not eligible for migration the reason(s) will be listed on a page
 When the size of the *.mpr* file exceeds the threshold, migration is blocked to prevent rapid repository growth after migrating to Git. To get your app approved for migration, you have to agree on the following steps with Support or your Customer Success Manager:
 
 1. [Migrate without history](#without-history). This requires converging all branches which you want to retain.
-2. Update your app to Studio Pro version 10.18 or above, and convert to [MPRv2](/refguide10/troubleshoot-repository-size/#mprv2). If you upgrade to Studio Pro 10.22 and above, the conversion will happen automatically. 
+2. Update your app to Studio Pro version 10.24 LTS to automatically convert to [MPRv2](/refguide10/troubleshoot-repository-size/#mprv2).
 3. Execute a [Git cleanup](/refguide/troubleshoot-repository-size/#cleanup-tool).
 
 The first two steps need to be executed within a short timeframe. The last step is technically optional, but is strongly recommended for the best experience.
@@ -148,10 +156,16 @@ Previously deleted SVN branches will not be mapped to Git branches by the migrat
 
 ## Steps After Migration
 
+### Steps for Developers
+
 After migration, existing local copies are no longer linked to a working version control system. To be able to work on your app and store your changes in the version control system, you need to check out (re-download) the app from Team Server. Do the following:
 
 1. Open Studio Pro, then select the app that was migrated to Git. You can identify it by its Git icon. Click **Open** in Studio Pro to download the Git version of your app. Once this is completed you can make changes and store them in version control.
 2. Remove previous local copies of the app to avoid working on the wrong app version.
+
+### Upgrade Planning
+
+To prevent issues with rapid repository growth, we strongly recommend to upgrade to Studio Pro version 10.24 LTS as soon as possible, which will automatically convert your app to [MPRv2](/refguide10/troubleshoot-repository-size/#mprv2).
 
 ## If Migration Failed
 

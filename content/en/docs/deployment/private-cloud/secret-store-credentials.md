@@ -10,6 +10,8 @@ weight: 20
 You can increase the security of your environment by implementing an external secrets store to manage your Kubernetes secrets.
 Environments running Mendix for Private Cloud can be granted read-only access to a secrets store by using a [Kubernetes Secrets Store CSI Driver](https://secrets-store-csi-driver.sigs.k8s.io/). This document outlines the high-level process, and provides example implementations for HashiCorp Vault and AWS Secrets Manager.
 
+Starting from Mendix Operator version 2.22.0, regular Kubernetes secrets can be used instead of a Secrets Store CSI driver. These secrets can be created directly from Kubernetes, or by using an addon such as [External Secrets Operator](https://external-secrets.io/) to load the contents of a secret from a different source.
+
 {{% alert color="info" %}}
 Secret storage does not currently support [database plans](/developerportal/deploy/private-cloud-storage-plans/#database) or [blob storage plans](/developerportal/deploy/private-cloud-storage-plans/#blob-storage). You must provision your environment manually.
 {{% /alert %}}
@@ -19,7 +21,7 @@ Using an external secret storage provides multiple benefits, such as rotating cr
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-Using a secret storage incorrectly may reduce the security of your app. This document describes a simplified approach to setting up Vault and should not be used for production environments. Consult with your secrets store provider to ensure that it is set up securely for your production environment.
+Incorrect use of a secret storage may reduce the security of your app. This document describes a simplified approach to setting up Vault and should not be used for production environments. Consult your secrets store provider to ensure that it is set up securely for your production environment.
 {{% /alert %}}
 
 ### Supported Stores
@@ -30,10 +32,11 @@ Mendix apps currently support the following secret stores:
 * [Azure Key Vault](#azure-key-vault)
 * [Google Secret Manager](#google-secret-manager)
 * [HashiCorp Vault](#hashicorp)
+* Regular [Kubernetes Secrets](#regular-k8s-secrets)
 
 ## Configuring Your Environment
 
-To implement an external secret store, you must configure the required settings by following these steps:
+To implement an external secret store from a CSI driver, you must configure the required settings by following these steps:
 
 1. Set up and configure the secret storage provider, for example, HashiCorp Vault, AWS Secret Manager or Azure Key Vault.
     In most cases, this should only be done once for the entire cluster. For more information and support, contact the secret storage provider.
@@ -48,9 +51,11 @@ To implement an external secret store, you must configure the required settings 
 5. Configure permissions to read secrets specified in the `SecretProviderClass`.
     The specific configuration requirements depend on your secret store provider. It usually involves allowing the Kubernetes `ServiceAccount` to access specific keys in Vault or in AWS console.
 
+These steps only apply to CSI drivers, and are not necessary when using regular Kubernetes secrets.
+
 ### `SecretProviderClass` Keys {#keys}
 
-The following table lists the properties used as keys for database and storage-related data. Use the following values when configuring the mapping rules in your `SecretProviderClass`.
+The following table lists the properties used as keys for database and storage-related data. Use the following values when configuring the mapping rules in your `SecretProviderClass`, or keys in a regular Kubernetes Secret.
 
 | Data type | Key | Example | Required |
 | --- | --- | --- | --- |
@@ -968,15 +973,105 @@ To enable your environment to use [Google Secret Manager Provider](https://githu
 
 For more information, refer to the the official [Google Secret Manager Provider for Secret Store CSI Driver](https://github.com/GoogleCloudPlatform/secrets-store-csi-driver-provider-gcp) repository and [Google Secret Manager documentation](https://cloud.google.com/secret-manager/docs/overview).
 
+### Using an exixting Kubernetes Secret as an external secret source{#regular-k8s-secrets}
+
+{{% alert color="info" %}}
+This feature is only available in Mendix Operator version 2.22.0 or later.
+{{% /alert %}}
+
+To enable your environment to use a regular, existing Kubernetes Secret for some configuration options, follow these steps:
+
+1. Configure a Postgres or SQLServer database server with the following:
+
+    * A dedicated database to store your secrets
+    * An S3-compatible storage or Azure Blob Storage.
+
+2. Create the Kubernetes Secret, as shown in the following example. Replace `<{MendixApp CR name}>` with the environment internal name (MendixApp CR name):
+
+    ```yaml
+    apiVersion: v1
+    kind: Secret
+    type: Opaque
+    metadata:
+      name: <{MendixApp CR name}>
+      namespace: <Namespace name>
+      annotations:
+        privatecloud.mendix.com/environment-secret: "true"
+    # stringData will accept normal values, without having to base64-encode them
+    stringData:
+      database-host: "pg.example.com:5432"
+      database-jdbc-url: "jdbc:postgresql://pg.example.com:5432/my-app-1?sslmode=prefer"
+      database-name: "my-app-1"
+      database-type: "PostgreSQL"
+      database-username: "my-app-user-1"
+      database-password: "Welc0me!"
+      storage-service-name: "com.mendix.storage.s3"
+      storage-endpoint: "https://my-app-bucket.s3.eu-west-1.amazonaws.com"
+      storage-access-key-id: "AKIA################"
+      storage-secret-access-key: "A#######################################"
+      storage-bucket-name: "subdirectory"
+      storage-use-ca-certificates: "true"
+      storage-perform-delete: "true"
+      mx-admin-password: "Welc0me!"
+      mx-debugger-password: "Welc0me!"
+      # Example: set MyFirstModule.MyConstant to SecretValue
+      # mx-const-MyFirstModule.MyConstant: "SecretValue"
+    ```
+
+3. Create an app with the secret store enabled. If you are using the Portal, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. For a standalone app, you must set the value of the `allowOverrideSecretsWithSecretStoreCSIDriver` setting to `true` in the Mendix app CRD.
+    The following yaml shows an example Mendix app CRD:
+
+    ```yaml
+    cat > mendixApp.yaml <<EOF
+    apiVersion: privatecloud.mendix.com/v1alpha1
+    kind: MendixApp
+    metadata:
+      name: <{Mendix App CR name}>
+    spec:
+      mendixRuntimeVersion: 9.4.0.24572
+      allowOverrideSecretsWithSecretStoreCSIDriver: true
+      replicas: 1
+      resources:
+        limits:
+          cpu: "1"
+          memory: 512Mi
+        requests:
+          cpu: 100m
+          memory: 512Mi
+      runtime:
+        customConfiguration: '{"ScheduledEventExecution":"NONE","MicroflowConstants":"{\"MyFirstModule.MyConstant\":\"Awesome\",\"RestClient.RestServiceUrl\":\"https://go-dummy-app.privatecloud-storage-tls.svc.cluster.local\",\"Atlas_Core.Atlas_Core_Version\":\"3.0.5\"}"}'
+        dtapMode: D
+        logAutosubscribeLevel: INFO
+        runtimeLicense: {}
+      runtimeMetricsConfiguration: {}
+      sourceURL: oci-image://<{image URL}>
+      sourceVersion: 0.0.0.87
+    EOF
+    ```
+
+4. Optional: If the environment should use identity-based authentication, such as AWS IRSA or Azure Workload Identity, create a Kubernetes `ServiceAccount`, as shown in the following example.
+    Specify the environment's Kubernetes namespace and MendixApp CR name in place of `<{env-namespace}>` and `<{env-name}>`:
+
+    ```shell
+    kubectl -n <{env-namespace}> create serviceaccount <{env-name}>
+    kubectl -n <{env-namespace}> annotate serviceaccount <{env-name}> privatecloud.mendix.com/environment-account=true
+    ```
+
+    Consult the documentation of your identity-based authentication provider on instructions how to attach this service account to an IAM role.
+
 ## Additional Considerations {#additional-considerations}
 
 When implementing a secret store, keep in mind the following considerations:
 
-* It is not currently possible to use Storage Plans with CSI Secrets Storage. Instead, your infrastructure admin must attach a Kubernetes `ServiceAccount` and `SecretProviderClass` would be attached to the app before or after the environment is created.
-* If a secret is rotated or updated, Mendix Operator version 2.10.0 and above will detect the changes and apply them. However (depending on the Mendix Runtime version in use), the changes might not be applied. If the changes are not applied, you should restart the environment. Bear in mind the following features of detecting a changed secret:
-    * There is a delay of a few minutes before the CSI Secrets Storage driver detects the changes.
-    * Only file storage credentials and `MxAdmin` password changes are correctly processed at the moment.
+* It is not currently possible to use Storage Plans with CSI Secrets Storage. Instead, your infrastructure admin must attach a Kubernetes `ServiceAccount` and `SecretProviderClass` (or regular Kubernetes Secret) would be attached to the app before or after the environment is created.
+* If a secret is rotated or updated, Mendix Operator version 2.10.0 and above will detect the changes and apply them. However (depending on the Mendix Runtime version in use), the changes might not be applied by the Mendix Runtime itself. If the changes are not applied, you should restart the environment manually. Bear in mind the following features of detecting a changed secret:
+    * There is a delay of a few minutes before the CSI Secrets Storage driver (or `kubelet` in case of regular Kubernetes Secrets) detects the changes.
+    * Only file storage credentials and `MxAdmin` password changes are correctly processed at the moment. Other changes, such as log levels or app constants are ignored and require a manual restart.
     * In Mendix 9.22 or above, database password rotation is processed without restarting the app.
 * Dynamic secrets in HashiCorp Vault are supported - from the app environment, they are identical to regular secrets.
-* The internal name of the environment must match an existing `ServiceAccount` and `SecretProviderClass`.
+* The internal name of the environment must match an existing `ServiceAccount` and `SecretProviderClass` (or regular Kubernetes Secret).
 * CSI Secrets Storage can override app settings — if a parameter is configured in the Mendix Portal or `MendixApp` CR, the value from CSI Secrets Storage will have a higher priority and will override the value specified elsewhere. For example, CSI Secrets Storage can override the `MxAdmin` password, app constants, and runtime custom settings.
+* If the secret is expected to be synchronized from an external source, create configuration for this synchronization process. For example, the [External Secrets Operator](https://external-secrets.io) needs an addititional `ExternalSecret` CR to specify where to get the data and any additional processing rules.
+* Consider enabling etcd encryption, which is available in [AWS EKS](https://docs.aws.amazon.com/eks/latest/userguide/enable-kms.html), [Azure AKS](https://learn.microsoft.com/en-us/azure/aks/use-kms-etcd-encryption) and other enterprise-grade Kubernetes distributions.
+* If the namespace has both a `SecretProviderClass` and regular Kubernetes Secret that match a `<{Mendix App CR name}>`, the `SecretProviderClass` takes priority, and the regular Kubernetes Secret will be ignored.
+It is not possible for an environment to use both a `SecretProviderClass` and regular Kubernetes Secret at the same time.

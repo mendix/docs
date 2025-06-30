@@ -5,6 +5,19 @@ weight: 50
 description: "Native Template 11 release notes."
 ---
 
+## 11.1.2 {#1009}
+
+**Release date: June 30, 2025**
+
+### Fixes
+
+* We applied an important fix to `@mendix/native` which caused infrequent crashes in the published app.
+
+#### Important Notes
+
+* For projects upgrading to 10.18, follow the steps in [Upgrade Instructions](#upgrade-instructions) to migrate your app.
+* Even if your project is already using Hermes, the update is still required.
+
 ## 11.1.1 {#1008}
 
 **Release date: June 10, 2025**

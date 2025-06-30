@@ -16,7 +16,7 @@ Maia for Workflows allows you to generate a [workflow](/refguide/workflows/) as 
 
 ## Using Maia for Workflows
 
-To enable Maia for Workflows, go to **Edit** > **Preferences** > the **New Features** tab > the **Maia** section.
+To enable Maia for Workflows, go to **Edit** > **Preferences** > the **Maia** tab and select **Enable Maia for Workflows**.
 
 Once enabled, you can find it in the the toolbar of a workflow:
 

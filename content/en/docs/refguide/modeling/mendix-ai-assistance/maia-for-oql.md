@@ -15,7 +15,7 @@ Maia for OQL is a powerful feature that enables you to generate and manage OQL (
 
 ## Using Maia for OQL
 
-To enable this feature, navigate to **Edit** > **Preferences** > the **New Features** tab, and enable it under the **Maia** section.
+To enable this feature, navigate to **Edit** > **Preferences** > the **Maia** tab and select **Enable Maia for OQL Generation**.
 
 Once enabled, you can access it from the toolbar in the **OQL Editor**:
 

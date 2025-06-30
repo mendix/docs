@@ -916,6 +916,33 @@ The editability property allows a pluggable widget to have an editable configura
 <systemProperty key="Editability"/>
 ```
 
+## Converting Properties {#converting-properties}
+
+When a pluggable widget's property type changes, the Mendix Platform will automatically migrate the value of the property to the new type. The following table lists the property type changes that are supported:
+
+| From           | To             |
+|----------------|----------------|
+| `TextTemplate` | `Expression`   |
+| `Expression`   | `TextTemplate` |
+| `Expression`   | `String`       |
+| `Expression`   | `Boolean`      |
+| `Expression`   | `Integer`      |
+| `Expression`   | `Decimal`      |
+| `String`       | `Expression`   |
+| `Boolean`      | `Expresson`    |
+| `Integer`      | `Expression`   |
+| `Decimal`      | `Expression`   |
+| `Decimal`      | `Integer`      |
+| `Integer`      | `Decimal`      |
+| `Attribute`    | `Expression`   |
+| `Attribute`    | `TextTemplate` |
+
+{{% alert color="warning" %}}
+When converting from `decimal` to `integer`, the value will be rounded to the closest integer.
+
+When converting from `TextTemplate` to `Expression`, only the text template of the active language is migrated; fallback texts are not included.
+{{% /alert %}}
+
 ## Read More
 
 * [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets/)

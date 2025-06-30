@@ -13,7 +13,7 @@ aliases:
 
 The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) allows you to integrate generative AI into your Mendix app. It is compatible with [OpenAI's platform](https://platform.openai.com/) as well as [Azure's OpenAI service](https://oai.azure.com/). 
 
-The current scope covers text generation use cases based on the [OpenAI Chat Completions API](https://platform.openai.com/docs/api-reference/chat), image generation use cases based on the [Image Generations API](https://platform.openai.com/docs/api-reference/images), and embedding use cases based on the [Embeddings API](https://platform.openai.com/docs/api-reference/embeddings).
+The current scope covers text generation use cases based on the [OpenAI Chat Completions API](https://platform.openai.com/docs/api-reference/chat), image generation use cases based on the [Image Generations API](https://platform.openai.com/docs/api-reference/images), and embedding use cases based on the [Embeddings API](https://platform.openai.com/docs/api-reference/embeddings). Furthermore, datasources via [Azure AI Search](https://learn.microsoft.com/en-us/azure/search/) can be used for knowledge base retrieval.
 
 Mendix provides dual-platform support for both OpenAI and Azure OpenAI.
 
@@ -66,11 +66,15 @@ Combine embeddings with text generation capabilities and leverage specific sourc
 For more information on how to set up a vector database, see [Retrieval Augmented Generation (RAG)](/appstore/modules/genai/rag/). Also, check out the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) from the Marketplace for an example implementation.
 {{% /alert %}}
 
+#### Knowledge Base
+
+By integrating Azure AI Search, the OpenAI Connector allows for knowledge base retrieval from Azure datsources. The most common use case is retrieval augmented generation (RAG) to retrieve relevant knowledge from the knowledge base, incorporating it into a prompt, and sending it to the model to generate a response.
+
 ### Features {#features}
 
 Mendix provides dual-platform support for both [OpenAI](https://platform.openai.com/) and [Azure OpenAI](https://oai.azure.com/). 
 
-With the current version, Mendix supports the Chat Completions API for [text generation](https://platform.openai.com/docs/guides/text-generation), the Image Generations API for [images](https://platform.openai.com/docs/guides/images), and the Embeddings API for [vector embeddings](https://platform.openai.com/docs/guides/embeddings/what-are-embeddings). 
+With the current version, Mendix supports the Chat Completions API for [text generation](https://platform.openai.com/docs/guides/text-generation), the Image Generations API for [images](https://platform.openai.com/docs/guides/images), the Embeddings API for [vector embeddings](https://platform.openai.com/docs/guides/embeddings/what-are-embeddings) as well as datasources via [Azure AI Search](https://learn.microsoft.com/en-us/azure/search/) for knowledge base retrieval.
 
 ### Prerequisites {#prerequisites}
 
@@ -214,11 +218,11 @@ For more information, see [Function Calling](/appstore/modules/genai/function-ca
 
 #### Datasources {#chatcompletions-datasources}
 
-Adding datasources to a call enables LLMs to retrieve information from them when a related topic is mentioned. Adding them to the request object with a name and description enables the model to intelligently decide when to let the Mendix app call one or more predefined datasources to gather additional information to include in the assistant's response.
+Adding Azure datasources to a call enables LLMs to retrieve information from them when a related topic is mentioned. Adding them to the request object with a name and description enables the model to intelligently decide when to let the Mendix app call one or more predefined datasources to gather additional information to include in the assistant's response.
 
-OpenAI does not directly connect to the Azure AI Search resource. The model returns a tool called JSON structure that is used to build the input of the retrieval (or retrievals) so that they can be executed as part of the chat completions operation. The OpenAI connector takes care of handling the tool call response as well as executing the function microflows until the API returns the assistant's final response. 
+OpenAI does not directly connect to the Azure AI Search resource. The model returns a tool called JSON structure that is used to build the input of the retrieval(s) so that they can be executed as part of the chat completions operation. The OpenAI connector takes care of handling the tool call response as well as executing the function microflows until the API returns the assistant's final response. 
 
-This is all part of the implementation that is executed by the GenAI Commons chat completions operations mentioned before. As a developer, you have to make the system aware of your datasources and what these do by registering them to the request. This is done using the GenAI Commons operation [Tools: Add Knowledge Base](/appstore/modules/genai/genai-for-mx/commons/#add-knowledge-base) once per datasource before passing the request to the chat completions operation.
+This is all part of the implementation that is executed by the GenAI Commons chat completions operations mentioned before. As a developer, you have to make the system aware of your datasources and what these do by registering them to the request. This is done using the GenAI Commons operation [Tools: Add Knowledge Base](/appstore/modules/genai/genai-for-mx/commons/#add-knowledge-base-to-request) once per datasource before passing the request to the chat completions operation. The retrieval is not connected to the model provider and can thus be used with different models as long as they support function calling.
 
 #### Vision {#chatcompletions-vision}
 

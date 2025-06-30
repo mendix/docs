@@ -328,6 +328,10 @@ All [tool choice types](/appstore/modules/genai/genai-for-mx/commons/#enum-toolc
 | none                   | none    |
 | tool                   | tool    |
 
+### Adding and Index to your call
+
+When adding a KnowledgeBaseRetrieval object to your request, there are some optional parameters in the microflow action. Currently, only the MaxNumberOfResults parameter can be added to the search call and the others (MinimumSimilarity, MetadataCollection) are not compatible with the OpenAI Connector.
+
 ## GenAI showcase Application {#showcase-application}
 
 For more inspiration or guidance on how to use those microflows in your logic, Mendix recommends downloading the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475), which demonstrates a variety of example use cases.

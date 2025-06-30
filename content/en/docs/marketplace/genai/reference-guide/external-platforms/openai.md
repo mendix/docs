@@ -147,11 +147,17 @@ The following inputs are required for the Azure OpenAI configuration:
 4. Make sure the right Azure OpenAI resource is selected.
 5. You can now view ({{% icon name="view" %}}) and copy ({{% icon name="copy" %}}) the value of the **key1** or **key2** field as your API key while setting up the configuration. Note that these keys might not be visible for everyone in the Azure OpenAI Portal, depending on your organization's security settings.
 
-##### Adding Azure AI Search Resources {#azure-ai-search}  
+##### Azure AI Search Resource {#azure-ai-search} 
 
-1. In the configuration page, go the "Azure AI Search Resources" tab
-2. Click "New" to add a new resource
-3. Fill in the details of the resource you would like to add.
+The following inputs are required for the Azure AI Search Resource: 
+
+| Parameter      | Value                                                        |
+| -------------- | ------------------------------------------------------------ |
+| Display name | This is the name identifier of a Azure AI Search Resource (for example, *MySearchResource*). |
+| Endpoint URL | This is the API endpoint (for example, `https://your-resource-name.search.windows.net`).<br />For details on how to obtain `your-resource-name`, see [Azure AI Search service in the Azure portal](https://learn.microsoft.com/en-us/azure/search/search-create-service-portal). |
+| API version | This is the version of the REST API. |
+| API key | This is the access token to authorize your API call. |
+
 After saving, the indexes in this resource will be automatically synced and displayed in the configuration page. They will all be separate indexes that can be added to the request when using Chat completions.
 
 {{% alert color="warning" %}}

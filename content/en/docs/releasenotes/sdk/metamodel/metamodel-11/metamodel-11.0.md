@@ -31,9 +31,11 @@ weight: 78
 * We deleted the `obsoleteEnableUrlEncoding` property. Info: "Encoding full url is no longer supported."
 
 #### WebUIProjectSettingsPart (Element)
+
 * We changed the default value of the `useOptimizedClient` property.
 
 #### WorkflowsProjectSettingsPart (Element)
+
 * We deleted the `workflowOnStateChangeEvent` property. 
 * We deleted the `usertaskOnStateChangeEvent` property. 
 
@@ -87,4 +89,3 @@ weight: 78
 
 * We deleted the `workflowOnStateChangeEvent` property. 
 * We deleted the `usertaskOnStateChangeEvent` property. 
-

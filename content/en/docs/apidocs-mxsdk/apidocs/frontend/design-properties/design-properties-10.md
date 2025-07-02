@@ -754,7 +754,6 @@ To provide translations for your design properties, create a file *locales/{lang
 
 These JSON files follow the format used by the i18next library, specifically v3. See the [the i18next JSON format documentation](https://www.i18next.com/misc/json-format) for more information. For example to translate a design property with the name **Text align** with the options **left**, **center** and **right**, the contents of *locales/ko-KR/translation.json* might look something like this:
 
-
 ```json
 {
     "Text align": "텍스트 정렬",

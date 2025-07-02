@@ -93,7 +93,7 @@ If need be, the layout can also be generated in the same way as the data. In mos
 
 Editing the JSON configuration in Studio Pro can be cumbersome. With the live preview editor, developers can directly see the output of their changes. 
 
-See (Chart advanced tuning)[/appstore/widgets/chart-advanced-tuning/] for more information on fine tuning **Custom Chart** with using **Chart Playground** widget.
+See [Chart advanced tuning](/appstore/widgets/chart-advanced-tuning/) for more information on fine tuning **Custom Chart** with using **Chart Playground** widget.
 
 {{% alert color="info" %}}
 Since the introduction of design mode, react-ready widgets can render data as it is entered. This makes it possible for user to see Static data and configurations directly in design mode without the needs of running the apps.
@@ -103,17 +103,16 @@ Since the introduction of design mode, react-ready widgets can render data as it
 
 These are the dimension configurations for custom charts:
 
-- **Width** — Determines the width size for the custom charts. User can choose to use either pixels (px) or percentage (%).
-- **Height** — Determine the height size for the custom charts. User can choose to use either pixels (px), percentage (%), or Viewport (vh). Choosing setting to **Auto** will allow user to set minimum and maximum height instead.
-- **Minimum Height** — Determines the minimum size for the custom charts container.
-- **Maximum Height** — Determines the maximum size for the custom charts container.
-- **Vertical Overflow** — If maximum height is set, vertical overflow will determine the widget's behavior to show overflowing content if it reached height size larger than the maximum height allowed.
-
+* **Width** — Determines the width size for the custom charts. User can choose to use either pixels (px) or percentage (%).
+* **Height** — Determine the height size for the custom charts. User can choose to use either pixels (px), percentage (%), or Viewport (vh). Choosing setting to **Auto** will allow user to set minimum and maximum height instead.
+* **Minimum Height** — Determines the minimum size for the custom charts container.
+* **Maximum Height** — Determines the maximum size for the custom charts container.
+* **Vertical Overflow** — If maximum height is set, vertical overflow will determine the widget's behavior to show overflowing content if it reached height size larger than the maximum height allowed.
 
 ## Events
 
-- **On Click** — Determines the actions that will be triggered if parts of the custom charts is clicked.
-- **Event data attribute** — The string value that the chart uses when click events occur. User can use this same attribute as the parameters for on-click events action to retrieve the data from the custom chart:
+* **On Click** — Determines the actions that will be triggered if parts of the custom charts is clicked.
+* **Event data attribute** — The string value that the chart uses when click events occur. User can use this same attribute as the parameters for on-click events action to retrieve the data from the custom chart:
 
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/charts/charts-tutorials/charts-any-usage/custom-chart-events-attribute.png" alt="Setup on click events" class="no-border" >}}
 

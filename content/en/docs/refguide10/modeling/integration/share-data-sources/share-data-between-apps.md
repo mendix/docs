@@ -46,7 +46,7 @@ Follow these steps to create a simple app in Studio Pro:
 
 6. Repeat steps 5a and 5b to create attributes *FirstName*, *LastName*, *CompanyName*, *Address* and set type to *String* for all of them. 
 
-    {{< figure src="/attachments/refguide10/modeling/integration/share-data/entity-properties-pane.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/integration/share-data-sources/share-data/entity-properties-pane.png" class="no-border" >}}
 
 7. Click **OK** to save your changes.
 8. Right-click the entity and select **Generate overview pages** from the drop-down list.
@@ -54,7 +54,7 @@ Follow these steps to create a simple app in Studio Pro:
 10. In the **Information** pop-up dialog, click **Close**. 
     Overview pages for the new entity are added in the **OverviewPages** folder of **MyFirstModule**.
 
-    {{< figure src="/attachments/refguide10/modeling/integration/share-data/overview-pages-for-customer-entity.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/integration/share-data-sources/share-data/overview-pages-for-customer-entity.png" class="no-border" >}}
 
 11. In the **App Explorer**, double-click **Home_Web** to open the Home_Web page. 
 12. From the **App Explorer**, drag **Customer_Overview** into the empty Auto-fill container under the Home banner.
@@ -75,25 +75,25 @@ Do the following:
 
 2. In the **Domain model**, right-click the **Customer** entity and select **Publish in OData service...**.
 
-    {{< figure src="/attachments/refguide10/modeling/integration/share-data/publish-in-odata-resource.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/integration/share-data-sources/share-data/publish-in-odata-resource.png" class="no-border" >}}
 
 3. In the **Select Published OData Service** dialog box, select the **MyFirstModule** > **APIs** folder and click **New** to add a new OData service to this folder.
 
-    {{< figure src="/attachments/refguide10/modeling/integration/share-data/select-published-odata-service.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/integration/share-data-sources/share-data/select-published-odata-service.png" class="no-border" >}}
 
 4. Name the published OData service *{yourname}CustomerODataService* and click **OK**. The new **{yourname}CustomerODataService** is added to the module.
 5. In the **Choose key** dialog box, move the attributes you want to be the key from **Available attributes** to **Key attributes**.
 
-    {{< figure src="/attachments/refguide10/modeling/integration/share-data/choose-key.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/integration/share-data-sources/share-data/choose-key.png" class="no-border" >}}
 6. Click **OK** to see the **Edit published entity** dialog. 
 
-    {{< figure src="/attachments/refguide10/modeling/integration/share-data/edit-published-resource-box.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/integration/share-data-sources/share-data/edit-published-resource-box.png" class="no-border" >}}
 
     {{% alert color="info" %}} Make a note of the **Exposed set name**. This defaults to the **Exposed name** with an "**s"** added to the end. When the service is registered in the Catalog, the **Exposed set name** will be displayed as the available **Dataset**. {{% /alert %}}
 
 7. Click **OK** to display the **OData Service** document that will be registered in the Catalog. In the **General** tab, notice the **Version** number. 
 
-    {{< figure src="/attachments/refguide10/modeling/integration/share-data/customer-odata-service-page.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/integration/share-data-sources/share-data/customer-odata-service-page.png" class="no-border" >}}
 
     Under **Entities**, the **Customer** entity is listed. The details of the entity are displayed on the right. To expose more entities in the service, add them in this field.
 
@@ -103,7 +103,7 @@ Do the following:
 10. On the app's home page, click **Customers Overview**.
 11. Add data to the app. Click **New** to add data for a customer entry.
 
-    {{< figure src="/attachments/refguide10/modeling/integration/share-data/add-data-in-app.png" alt="external entities" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/integration/share-data-sources/share-data/add-data-in-app.png" alt="external entities" class="no-border" >}}
 
 When this entity set is consumed by another app via the Catalog, the other app will see the data entered here.
 
@@ -118,13 +118,13 @@ Do the following:
 2. Click **Browse** and enter the search term *{yourname}*. All services and datasets that satisfy this search string are displayed in the search results pane.
 3. In this scenario, your app was deployed to the **Sandbox** environment. To search within this environment, click **Filter** > Check **Sandbox** > **Apply**.
 
-    {{< figure src="/attachments/refguide10/modeling/integration/share-data/filter-box.png" alt="Catalog screen" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/integration/share-data-sources/share-data/filter-box.png" alt="Catalog screen" class="no-border" >}}
 
 4. From the new search results list on the left, select the *{yourname}CustomerODataService* service. Full details from the OData contract for the service are displayed on the right.
 
 You have permissions edit the metadata for this service in the Catalog and are a **Technical Owner**. To edit the metadata, click the edit icon in the top-right corner of the Data Source field. 
 
-{{< figure src="/attachments/refguide10/modeling/integration/share-data/search-details-screen.png" alt="Catalog search details" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/integration/share-data-sources/share-data/search-details-screen.png" alt="Catalog search details" class="no-border" >}}
 
 {{% alert color="info" %}}For more information about roles in the Catalog, see [User Roles](/catalog/manage/user-roles/).{{% /alert %}}
 
@@ -141,7 +141,7 @@ To do this, follow the steps below:
 3. In the Integration pane, enter the search string *{yourname}*.
 4. By default, search in the Integration pane only shows services in **Production** environments. Your app was deployed as a **Sandbox** app. Click the **Filter** icon next to the search and check **Show development environments**.
 
-    {{< figure src="/attachments/refguide10/modeling/integration/share-data/filter-icon.png" alt="Filter Icon" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/integration/share-data-sources/share-data/filter-icon.png" alt="Filter Icon" class="no-border" >}}
 
     The search results now include **{yourname}CustomerOData_service** from your Mendix Cloud **Sandbox** environment.
 
@@ -179,7 +179,7 @@ You can view the two apps that you have created in the Landscape and see how the
 2. Find your service using the search pane. Remember to use the filter to ensure you can see **Sandbox** apps. 
 3. Click **Landscape View** to see a visual representation of your apps (rounded squares), services (circles), and connections (lines). The number of entity sets/datasets that have been exposed appears beneath the service. 
 
-    {{< figure src="/attachments/refguide10/modeling/integration/share-data/landscape-full-screen.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/integration/share-data-sources/share-data/landscape-full-screen.png" class="no-border" >}}
 
     The service **{yourname}CustomerODataAPI** is linked by a solid line to the running instance of **{yourname}CustomerCustomerServiceApp**, which is deployed as a Free App.
 

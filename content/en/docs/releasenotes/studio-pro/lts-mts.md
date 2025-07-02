@@ -50,6 +50,7 @@ These are the current LTS versions of Studio Pro:
 
 * [8.18](/releasenotes/studio-pro/8.18/) (started in March, 2021)
 * [9.24](/releasenotes/studio-pro/9.24/) (started in March, 2023)
+* [10.24](/releasenotes/studio-pro/10.24/) (started in June, 2025)
 
 Release notes for the current LTS versions are marked with an LTS badge (<text class="badge badge-pill badge-lts" style="margin-left:0px">LTS</text>) in the left sidebar.
 

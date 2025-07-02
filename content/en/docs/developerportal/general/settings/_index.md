@@ -33,7 +33,7 @@ The page header displays the following information:
 
 * The app image – You can change the image by clicking it.
 * The app name – You can change the name of the app by clicking the pencil icon next to it.    
-    Renaming the app in the Mendix Portal does not rename it in Studio Pro. The app name in Studio Pro is tied to its *.mpr* file. However, changing the name of the *.mpr* file is not supported, and we strongly advise against it. For more information, refer to the [Mendix MPR Storage ](/refguide/version-control/#mpr-format) section in *Version Control*. 
+    Renaming the app in the Mendix Portal does not rename it in Studio Pro. The app name in Studio Pro is tied to its *.mpr* file. However, changing the name of the *.mpr* file is not supported, and we strongly advise against it. For more information, refer to the [Mendix MPR Storage](/refguide/version-control/#mpr-format) section in *Version Control*. 
 * The company that owns the app.
 * The **Watch** / **Stop Watching** toggle – You can enable or disable notifications for this app.
 

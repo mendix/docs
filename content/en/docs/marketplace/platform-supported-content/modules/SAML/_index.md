@@ -129,7 +129,7 @@ Custom user provisioning flows created for a SAML V3.x are still supported in V4
         <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" /></rule>
     <rule name="submitloginform">
     <match  url="^(SubmitLoginForm)" />
-        <action type="Rewrite" url="http://localhost:8080/SubmitLoginForm>
+        <action type="Rewrite" url="http://localhost:8080/SubmitLoginForm">
     </rule>
     ```
 

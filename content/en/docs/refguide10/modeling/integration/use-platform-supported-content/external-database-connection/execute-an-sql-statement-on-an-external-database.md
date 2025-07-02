@@ -60,7 +60,7 @@ To use an **Execute statement** action in a microflow, follow these steps:
 
 2. Drag the **Execute statement** action into your microflow: 
 
-    {{< figure src="/attachments/refguide10/modeling/integration/execute-an-sql-statement-on-an-external-database/19399123.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/integration/use-platform-supported-content/execute-an-sql-statement-on-an-external-database/19399123.png" class="no-border" >}}
 
 3. Configure the statement:
     * Provide all the valid arguments to the statement action
@@ -69,7 +69,7 @@ To use an **Execute statement** action in a microflow, follow these steps:
     * Specify the **Output Variable name**
         * In the example below, the variable is **amountOfUpdatedRows**, which is the output of the SQL statement; this is also the output of the SQL statement provided for the **Sql** argument within the connector
 
-    {{< figure src="/attachments/refguide10/modeling/integration/execute-an-sql-statement-on-an-external-database/19399146.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/integration/use-platform-supported-content/execute-an-sql-statement-on-an-external-database/19399146.png" class="no-border" >}}
 
     The statement action's result is either an **Integer** or a **Long** value, which usually represents the amount of affected rows.
 

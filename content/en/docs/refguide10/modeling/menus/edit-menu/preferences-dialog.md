@@ -260,8 +260,6 @@ This option allows you to change the user interface language you work in while u
 | Korean                 | 10.17      | 10.24                |
 | Portuguese (Brazilian) | 10.23      | TBD                  |
 
-
-
 ### Editor Tabs Closing Policy {#closing-policy}
 
 It is recommended to limit the number of open tabs (open documents) to improve the performance of Studio Pro. This option is enabled by default and set to a limit of 15 tabs. However, you can disable this behavior completely or change the limit value.

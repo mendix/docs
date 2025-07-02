@@ -23,3 +23,21 @@ Most browsers have additional security to ensure that iframes are only allowed w
 When running your app in Mendix Cloud, you can set the SameSite cookie through a custom runtime setting as explained in the [Running Your App in an Iframe](/developerportal/deploy/environments-details/#iframe) section of *Environment Details*.
 
 If your app is deployed outside Mendix Cloud (on premises, for example), then you will need to configure your webserver to set the SameSite cookie to the correct value.
+
+## Limitations
+
+### Runtime Dependency
+
+Even when embedded, the web client must still communicate with the Mendix runtime to initiate sessions, execute microflows, and interact with data. Mendix cannot function as a standalone client-only solution directly integrating with third-party services.
+
+### Cross-Application Communication
+
+Mendix does not support native messaging between the embedded application and the host application or other iframed applications. Any such communication must be implemented manually using custom JavaScript.
+
+### Authentication Isolation
+
+Mendix applications embedded in iframes do not inherit the session or user credentials from the host application. To enable shared authentication, a secure custom mechanism, such as JWT-based authentication, must be implemented.
+
+### Content Security Policy (CSP) Requirements
+
+If the host application enforces a Content Security Policy, it must be configured to explicitly allow loading frames and scripts from the Mendix application’s URL.

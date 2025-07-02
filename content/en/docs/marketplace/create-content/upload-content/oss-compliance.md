@@ -44,7 +44,7 @@ To ensure your Marketplace contribution is OSS-compliant, you must include the f
     * List each OSS component, its license, and any required attributions.
     * Follow all license conditions around modification or redistribution.
     
- ## Prohibited or High-Risk OSS Licenses
+## Prohibited or High-Risk OSS Licenses
 
 Certain OSS licenses impose strong copyleft obligations that may conflict with how Mendix modules are distributed or used in customer environments.
 

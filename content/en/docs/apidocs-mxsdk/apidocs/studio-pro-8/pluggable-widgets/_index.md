@@ -8,4 +8,3 @@ description: "This API helps you to understand pluggable widgets, how they exten
 ---
 
 The following Mendix 8 pluggable widget API documents are available here:
-

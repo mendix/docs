@@ -25,11 +25,18 @@ These changes, listed below, are described in this document.
 
 If you want to deploy your app to a new licensed node in Mendix Cloud, Mendix Cloud Dedicated, or on-premises/virtual private cloud, you can request one from Mendix Support.
 
-Fill in the required details for the new licensed app node on the [Request New App Node](https://newnode.mendix.com/) page. If your request matches your entitlements, your Mendix Cloud node will be created automatically. Mendix Support will contact you via a ticket in the [Mendix Support Portal](https://support.mendix.com/) if more information is needed or to send you keys for apps deployed on-premises or to a virtual private cloud.
+Fill in the required details for the new licensed app node on the [Request New App Node](https://newnode.mendix.com/) page. If your request matches your entitlements, your Mendix Cloud node is created automatically. Mendix Support will contact you via a ticket in the [Mendix Support Portal](https://support.mendix.com/) if more information is needed or to send you keys for apps deployed on-premises or to a virtual private cloud.
 
 By default, all developers in your organization can create node requests. You can limit this to Mendix Admins only by contacting your Customer Success Manager or requesting it via a support ticket.
 
-If you have an app deployed to **SAP** and need a *Subscription Secret*, you need to choose the **Hosting type** *Virtual Private Cloud* and then, on the subsequent screen choose **Hosting type** *Cloud Foundry* and **Virtual Private Cloud Name** *SAP BTP*.  
+These are the hosting types that you can make requests for:
+
+* **Mendix Cloud** — Select this option for apps deployed to public Mendix Cloud.
+* **Mendix Cloud Dedicated** — Select this option for apps deployed to Mendix Cloud Dedicated.
+* **Mendix for Private Cloud** — Select this option for apps deployed to Kubernetes using the Mendix Operator. Refer to [Private Cloud](/developerportal/deploy/private-cloud/) for more information.
+* **Server-based (Windows Server)** — Select this option for apps deployed to Windows. You are required to enter the Server ID, which you can retrieve by following the steps in the [Windows Server](/developerportal/deploy/licensing-apps-outside-mxcloud/#windows-server) section of *Licensing Apps*.
+* **Container-based (Docker, Cloud Foundry, Kubernetes)** — Select this option for apps deployed to Docker, Cloud Foundry, or Kubernetes, without Mendix Operator).
+* **SAP** — Select this option for apps deployed to SAP.
 
 ## Resizing an Existing Environment{#resize}
 

@@ -8,7 +8,7 @@ weight: 15
 
 An XML schema is defined in an XML Schema Definition (XSD) file and can be imported in your model. It describes what a certain XML document should look like. The schema can then be used in [Import Mappings](/refguide/import-mappings/) and [Export Mappings](/refguide/export-mappings/).
 
-{{< figure src="/attachments/refguide/modeling/integration/xml-schemas/18582294.png" alt="Figure 1" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/integration/mapping-documents/xml-schemas/schema.png" alt="Figure 1" class="no-border" >}}
 
 ## XSD File Support
 
@@ -33,7 +33,7 @@ In the mapping editor for import mappings, you can check elements that can occur
 
 ### XSD Constraints
 
-* If the XSD contains any of the unsupported constructs, they will be highlighted in the mapping editor with this warning icon: {{< figure src="/attachments/refguide/modeling/integration/xml-schemas/xml-schema-support/16843903.png" class="no-border" >}}
+* If the XSD contains any of the unsupported constructs, they will be highlighted in the mapping editor with this warning icon: {{< figure src="/attachments/refguide/modeling/integration/mapping-documents/xml-schemas/warning.png" class="no-border" >}}
 
 * This will be next to each unsupported element or attribute. Checking any of such elements or attributes will result in consistency errors. 
 

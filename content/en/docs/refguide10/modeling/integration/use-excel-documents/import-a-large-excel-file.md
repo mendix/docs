@@ -24,7 +24,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 The Excel sheet you receive in this scenario contains almost every country in the world, as well as some supporting data. This data has to be imported into your application.
 
-You can find the Excel sheet here: [Countries](/attachments/refguide10/modeling/integration/import-a-large-excel-file/Countries.xlsx).
+You can find the Excel sheet here: [Countries](/attachments/refguide10/modeling/integration/use-excel-documents/import-a-large-excel-file/Countries.xlsx).
 
 You are going to make an XSD schema from the headers in the Excel sheet so you can import the data into the model.
 
@@ -33,9 +33,9 @@ To modify your Excel sheet, follow these steps:
 1. Select the header row with all the country names.
 2. Copy and paste them in a new sheet using the transpose function:
 
-    {{< figure src="/attachments/refguide10/modeling/integration/import-a-large-excel-file/transpose.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/integration/use-excel-documents/import-a-large-excel-file/transpose.png" class="no-border" >}}
 
-    Your headers should be listed vertically and your sheet should look like this: [Countries Transposed](/attachments/refguide10/modeling/integration/import-a-large-excel-file/CountriesTransposed.xlsx).
+    Your headers should be listed vertically and your sheet should look like this: [Countries Transposed](/attachments/refguide10/modeling/integration/use-excel-documents/import-a-large-excel-file/CountriesTransposed.xlsx).
 
     You are now ready to add some tags around the column.
 
@@ -48,7 +48,7 @@ To modify your Excel sheet, follow these steps:
 
 5. Drag the string all the way down to the last country.
 
-    {{< figure src="/attachments/refguide10/modeling/integration/import-a-large-excel-file/country-sheet.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/integration/use-excel-documents/import-a-large-excel-file/country-sheet.png" class="no-border" >}}
 
 6. In cell **C1**, enter the following string:
 
@@ -56,9 +56,9 @@ To modify your Excel sheet, follow these steps:
     "/>
     ```
 
-7. Like you did with the previous string, drag it down to the last country. The Excel sheet should now look like this: [Countries with Tags](/attachments/refguide10/modeling/integration/import-a-large-excel-file/CountriesWithTags.xlsx).
+7. Like you did with the previous string, drag it down to the last country. The Excel sheet should now look like this: [Countries with Tags](/attachments/refguide10/modeling/integration/use-excel-documents/import-a-large-excel-file/CountriesWithTags.xlsx).
 
-    {{< figure src="/attachments/refguide10/modeling/integration/import-a-large-excel-file/countries-with-tags.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/integration/use-excel-documents/import-a-large-excel-file/countries-with-tags.png" class="no-border" >}}
 
     Now, group the three different columns into one column. This is necessary to copy the whole column into an XSD file.
 
@@ -68,7 +68,7 @@ To modify your Excel sheet, follow these steps:
     =(A1&B1&C1)
     ```
 
-9. Drag the cells down like you’ve done with column **A1** and **C1**. Now, column **D** should have columns **A**, **B**, and **C** combined into one, and your sheet should look like this: [Countries with Tags and Column D](/attachments/refguide10/modeling/integration/import-a-large-excel-file/CountriesWithTagsAndColumnD.xlsx).
+9. Drag the cells down like you’ve done with column **A1** and **C1**. Now, column **D** should have columns **A**, **B**, and **C** combined into one, and your sheet should look like this: [Countries with Tags and Column D](/attachments/refguide10/modeling/integration/use-excel-documents/import-a-large-excel-file/CountriesWithTagsAndColumnD.xlsx).
 
 ## Preparing Your XSD File
 
@@ -98,7 +98,7 @@ You have used some of Excel's basic functionalities to create the first part of 
     </xs:schema>
     ```
 
-    Your file should look like this: [Country Import](/attachments/refguide10/modeling/integration/import-a-large-excel-file/CountryImport.xsd).
+    Your file should look like this: [Country Import](/attachments/refguide10/modeling/integration/use-excel-documents/import-a-large-excel-file/CountryImport.xsd).
 
 5. Click **Save**.
 
@@ -108,29 +108,29 @@ The XSD file is ready to be imported into your app. To import it, follow these s
 
 1. Open your app and create a new XSD schema. Do this by right-clicking the module and selecting **Add other** > **XML schema**.
 
-    {{< figure src="/attachments/refguide10/modeling/integration/import-a-large-excel-file/create-schema.png" class="no-border" width="600" >}}
+    {{< figure src="/attachments/refguide10/modeling/integration/use-excel-documents/import-a-large-excel-file/create-schema.png" class="no-border" width="600" >}}
 
 2. With the new XSD schema, create the XML-to-domain mapping by right-clicking the module > **Add other** > **Import mapping**.
 
-    {{< figure src="/attachments/refguide10/modeling/integration/import-a-large-excel-file/create-mapping.png" class="no-border" width="600" >}}
+    {{< figure src="/attachments/refguide10/modeling/integration/use-excel-documents/import-a-large-excel-file/create-mapping.png" class="no-border" width="600" >}}
 
 3. Check all the attributes listed. After clicking **OK**, you see a mapping entity with all your countries.
 
 4. You will now generate a real entity from it that you can use as an import table for your Excel sheet. Click **Map automatically**:
 
-    {{< figure src="/attachments/refguide10/modeling/integration/import-a-large-excel-file/map-automatically.png" class="no-border" width="400" >}}
+    {{< figure src="/attachments/refguide10/modeling/integration/use-excel-documents/import-a-large-excel-file/map-automatically.png" class="no-border" width="400" >}}
 
     Your entity is created:
 
-    {{< figure src="/attachments/refguide10/modeling/integration/import-a-large-excel-file/new-entity.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/integration/use-excel-documents/import-a-large-excel-file/new-entity.png" class="no-border" >}}
 
 5. Open your domain model and set the entity’s **Persistable** property to **Yes**. 
 
-    {{< figure src="/attachments/refguide10/modeling/integration/import-a-large-excel-file/persistable-properties.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide10/modeling/integration/use-excel-documents/import-a-large-excel-file/persistable-properties.png" class="no-border" >}}
 
 The data is imported to the page, as seen in the image below:  
 
-{{< figure src="/attachments/refguide10/modeling/integration/import-a-large-excel-file/large-file.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/integration/use-excel-documents/import-a-large-excel-file/large-file.png" class="no-border" >}}
 
 To keep your application clean, you can delete the XSD schema and XML-to-domain files from your app.
 
@@ -156,6 +156,6 @@ To create entity in your domain model using an Excel sheet, follow these steps:
    * If the column names do not conform to Mendix naming conventions, they will automatically be corrected.    
    * The extension identifies correct data types of each column (such as string, boolean, or date).
 6. After reviewing the preview, click **Create Entity** and a non-persistable entity (NPE) is created in your domain model.
-   {{< figure src="/attachments/refguide10/modeling/integration/import-a-large-excel-file/create-entity-using-excel-input.png" class="no-border" >}}
+   {{< figure src="/attachments/refguide10/modeling/integration/use-excel-documents/import-a-large-excel-file/create-entity-using-excel-input.png" class="no-border" >}}
 
     You can change the name of the entity or change its persistence later, if necessary.

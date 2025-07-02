@@ -35,7 +35,6 @@ Before requesting a plan change, verify the following:
 Changing your app environment's plan does not change the additional storage attached to it. To change the additional storage, you must request an [environment resize](/support/new-app-node-request-template/#resize) through [Mendix Support](https://support.mendix.com/).
 {{% /alert %}}
 
-
 ## Changing a Plan {#changing-plan}
 
 {{% alert color="info" %}}

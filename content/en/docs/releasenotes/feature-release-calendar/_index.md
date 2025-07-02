@@ -66,4 +66,3 @@ The new features were divided into major themes, which are described in the sect
 | Capability or Feature | Expected Release |
 | --- | --- |
 | Mendix Workstation Client | Private beta: Release 2.0: March 14th, 2025 <br/>Release 2.1: June 13th, 2025 <br/>Release 2.2: August 1st, 2025<br/>Limited Availability:  Release 3.0 September 2025<br/>General Availability: TBD |
-

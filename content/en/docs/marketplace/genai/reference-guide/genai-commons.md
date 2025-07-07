@@ -544,7 +544,7 @@ This tool adds a function that performs a retrieval from a knowledge base to a [
 | Name | Type | Notes | Description |
 |---|---|---|---|
 | `Request` | [Request](#request) | mandatory | The request to which the knowledge base should be added. |
-| `Name` | String | mandatory | The name of the knowledge base to use or call. Technically, this is the name of the tool that is passed to the LLM. This needs to be unique per request (if multiple tools/knowledge base retrievals are added) |
+| `Name` | String | mandatory | The name of the knowledge base to use or call. Technically, this is the name of the tool that is passed to the LLM. This needs to be unique per request (if multiple tools/knowledge base retrievals are added). |
 | `Description` | String | optional | A description of the knowledge base's purpose, used by the model to determine when and how to invoke it. |
 | `DeployedKnowledgeBase` | Object | mandatory | The knowledge base that is called within this tool. This object includes a `microflow`, which is executed when the knowledge base is invoked. |
 | `MaxNumberOfResults` | Integer | optional | This can be used to limit the number of results that should be retrieved. |

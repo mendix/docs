@@ -34,7 +34,7 @@ These are the limitations of using the private PDF Document Generation service:
 Before you start using the private PDF Document Generation service, make sure you meet these prerequisites:
 
 * You have a good understanding of how to run and manage Docker containers. 
-* You are familiar with the PDF Document Generation module. For more information, refer to [PDF Document Generation](/appstore/modules/document-generation/).
+* You are familiar with the PDF Document Generation module. For more information, refer to [PDF Document Generation](/appstore/modules/document-generation/). Make sure that you are using version 2.1.0 or higher of the module.
 * Your deployment environment needs to allow bidirectional communication between Mendix apps and the Docker containers running the private PDF Document Generation service.
 
 ## Installation {#installation}
@@ -58,8 +58,8 @@ The following artifact is available for installing the service:
 
 Follow these steps to install the service through Docker:
 
-1. Pull the Docker image using the following command: `docker pull private-cloud.registry.mendix.com/mendix/document-generation-service:<tag>`.
-2. Run the Docker container using the following command: `docker run -p 8085:8085 --name document-generation private-cloud.registry.mendix.com/mendix/document-generation-service:<tag>`. The `<tag>` component must be replaced with the version of the service, such as `1.0.0`. This creates a Docker container, which is exposed on port `8085`.
+1. Pull the Docker image using the following command: `docker pull private-cloud.registry.mendix.com/mendix/document-generation-service:1.0.0`.
+2. Run the Docker container using the following command: `docker run -p 8085:8085 --name document-generation private-cloud.registry.mendix.com/mendix/document-generation-service:1.0.0`. This creates a Docker container, which is exposed on port `8085`.
 
 ### Isolation
 

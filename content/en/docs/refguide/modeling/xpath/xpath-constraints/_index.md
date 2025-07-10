@@ -98,7 +98,7 @@ The XPath should be used in a [core.createXPathQuery](https://apidocs.rnd.mendix
 For example, to retrieve all customers named Jansen:
 
 ```java
-public getCustomersNameJansen(IContext context, ICore core, int value) {
+public List<IMendixObject> getCustomersNameJansen(IContext context, ICore core, int value) {
     List<IMendixObject> results = core.createXPathQuery("//Sales.Customer[Name='Jansen']")
         .execute(context);
     return results;

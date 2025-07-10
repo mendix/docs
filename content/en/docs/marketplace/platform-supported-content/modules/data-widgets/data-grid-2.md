@@ -320,11 +320,7 @@ When a drop-down filter is used in conjunction with an Association Filter data g
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-Due to current limitations, **Default value** property will be ignored when a drop-down filter is used in conjunction with an [Association Filter](#association-filter) data grid configuration.
-{{% /alert %}}
-
-{{% alert color="warning" %}}
-Due to current limitations, **Saved attribute** property will be ignored when a drop-down filter is used in conjunction with an [Association Filter](#association-filter) data grid configuration where **Use lazy load** is set to **Yes**. This limitation also applies when using page state, meaning that the filter value used in the drop-down filter will not persist when navigating between pages.
+When a drop-down filter is used in conjunction with an [Association Filter](#association-filter) data grid configuration, both **Default value** and **Saved attribute** properties will be ignored if **Use lazy load** is set to **Yes** in the column settings. This limitation also applies when using page state, meaning that the filter value used in the drop-down filter will not persist when navigating between pages.
 {{% /alert %}}
 
 When adding a new option, the following properties are required:

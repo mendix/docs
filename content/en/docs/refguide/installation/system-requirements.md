@@ -82,6 +82,13 @@ Studio Pro needs access to the following URLs in order to work. If your firewall
 * `*.teamserver.sprintr.com`
 * `*.api.mendix.com`
 
+If you have set up managed dependencies, you will need access to the following Gradle and Maven URLs:
+
+* `jcenter.bintray.com`
+* `plugins-artifacts.gradle.org`
+* `plugins.gradle.org`
+* `repo.maven.apache.org`
+
 If you have set up managed dependencies and are working behind a firewall or using a proxy, see the [Proxy Settings](/refguide/managed-dependencies/#proxy-settings) section of *Managed Dependencies* for advice on what you need to do to allow the managed dependencies to work.
 
 To run a Mendix app, Mendix Studio Pro uses the following ports by default. If your firewall is blocking these, you will need to open them:

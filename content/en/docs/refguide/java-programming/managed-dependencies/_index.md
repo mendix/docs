@@ -128,6 +128,8 @@ There are some dependencies that are required by Mendix. These need to be added 
 
 Your local setup might be configured to work with a proxy or it could be behind a firewall. This means your system will have restricted access to the internet. In such cases, Gradle cannot access external repositories to download the required dependencies to build the project. You will have to configure Gradle/JVM with the proxy settings on your system for it to be able to build and run the project on your local setup.
 
+Also ensure that you are not blocking any of the required Gradle and Maven URLs. These are listed in the [Firewall Settings](/refguide/system-requirements/#firewall-settings) section of *System Requirements*.
+
 Below are the few options you can try to configure Gradle with custom proxy settings:
 
 ### Gradle Proxy Settings

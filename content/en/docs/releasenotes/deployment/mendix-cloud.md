@@ -20,8 +20,8 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Bug Fixes
 
-* We have implemented strict validation on the [upload package api](https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api-2/#upload-package). Please note that request parameter keys now require exact name matching, especially for the file key.
-* We fixed an issue where the "Resource Mismatch" label was displayed incorrectly. This label will now appear only when the UI scale settings differ from the backend cloud resource settings.
+* We have implemented strict validation on the [Upload Package API](https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api-2/#upload-package). The request parameter keys now require exact name matching, especially for the file key.
+* We fixed an issue where the **Resource Mismatch** label was displayed incorrectly. This label will now appear only when the UI scale settings differ from the backend cloud resource settings.
 
 ### June 27, 2025
 

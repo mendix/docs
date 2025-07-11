@@ -137,7 +137,7 @@ To load Mendix Debugger password (`mx-debugger-password`) from CSI Secrets Stora
 
 ## Sample Implementations
 
-The following sections outline the process of implementing an external secret store with Vault and with AWS. You can refer to them as an example, and to help you troubleshoot your own implementation.
+The following sections outline the process of implementing an external secret store with Vault, AWS, Azure and Google Cloud. You can refer to them as an example, and to help you troubleshoot your own implementation.
 
 ### Configuring a Secret Store with HashiCorp Vault{#hashicorp}
 
@@ -729,7 +729,7 @@ To use this feature, you need to:
 * Use an Azure Postgres (Flexible Server) database
 * Use Mendix Operator version 2.17.0 and above.
 * Use Mendix 9.22 and above.
-* Complete the steps described in [Configuring a Secret Store with AWS Secrets Manager](#aws-secrets-manager).
+* Complete the steps described in [Configuring a Secret Store with Azure Key Vault](#azure-key-vault).
 
 After completing the prerequisites, follow these steps to switch from password-based authentication to managed identity authentication:
 
@@ -764,13 +764,13 @@ To use this feature, you need to:
 * Use an Azure SQL database.
 * Use Mendix Operator version 2.17.0 and above.
 * Use Mendix 10.10 and above.
-* Complete the steps described in [Configuring a Secret Store with AWS Secrets Manager](#aws-secrets-manager).
+* Complete the steps described in [Configuring a Secret Store with Azure Key Vault](#azure-key-vault).
 
 After completing the prerequisites, follow these steps to switch from password-based authentication to managed identity authentication:
 
 1. Remove or comment out `database-password` from the `SecretProviderClass` and the associated Key vault Secret.
 2. Write down the value of `database-username` - this username will need to be removed on step 5.
-3. Edit the `database-jdbc-url` and add a `authentication=ActiveDirectoryManagedIdentity` parameter to the JDBC URL value: the URL should look like `jdbc:sqlserver://example.database.windows.net:1433;encrypt=true;trustServerCertificate=false;authentication=ActiveDirectoryMSI;`.
+3. Edit the `database-jdbc-url` and add a `authentication=ActiveDirectoryManagedIdentity` parameter to the JDBC URL value: the URL should look like `jdbc:sqlserver://example.database.windows.net:1433;encrypt=true;trustServerCertificate=false;authentication=ActiveDirectoryManagedIdentity;`.
 4. Add yourself (or your Entra group) as an [Entra Admin user](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-configure?view=azuresql&tabs=azure-powershell#azure-portal-1) in the Azure SQL database.
    Azure SQL can only have one Entra Admin, and to add multiple users you'll need to do grant access through an Entra group.
 5. Connect to the database using [Azure Query Editor](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-configure?view=azuresql&tabs=azure-cli#use-microsoft-entra-identity-to-connect-using-azure-portal-query-editor-for-azure-sql-database) using Entra Authentication, and run the following query
@@ -795,7 +795,7 @@ To use this feature, you need to:
 * Use an Azure Blob Storage account.
 * Use Mendix Operator version 2.17.0 and above.
 * Use Mendix 10.10 and above.
-* Complete the steps described in [Configuring a Secret Store with AWS Secrets Manager](#aws-secrets-manager).
+* Complete the steps described in [Configuring a Secret Store with Azure Key Vault](#azure-key-vault).
 
 After completing the prerequisites, follow these steps to switch from password-based authentication to managed identity authentication:
 
@@ -973,7 +973,7 @@ To enable your environment to use [Google Secret Manager Provider](https://githu
 
 For more information, refer to the the official [Google Secret Manager Provider for Secret Store CSI Driver](https://github.com/GoogleCloudPlatform/secrets-store-csi-driver-provider-gcp) repository and [Google Secret Manager documentation](https://cloud.google.com/secret-manager/docs/overview).
 
-### Using an exixting Kubernetes Secret as an external secret source{#regular-k8s-secrets}
+### Using an existing Kubernetes Secret as an external secret source{#regular-k8s-secrets}
 
 {{% alert color="info" %}}
 This feature is only available in Mendix Operator version 2.22.0 or later.

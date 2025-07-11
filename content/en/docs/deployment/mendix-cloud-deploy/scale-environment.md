@@ -32,7 +32,7 @@ To scale your licensed app in Mendix Cloud, follow these steps:
 
 1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your licensed app.
 2. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the environment you want to scale.
-3. On the **General** tab, scroll down to the **Plan Details** row.
+3. On the **General** tab, scroll down to the **Plan Details** section.
 4. On the **Instances** row, click **Scale**.
 5. To set the **Memory per instance** that you want to use, drag the **Memory per instance** indicator bar.
 6. To set the number of **Instances** you want to use, drag the **Instances** indicator bar.

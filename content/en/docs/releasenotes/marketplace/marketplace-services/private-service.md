@@ -7,10 +7,10 @@ weight: 20
 numberless_headings: true
 ---
 
-## 2025
+## 1.0.0
 
-### June 27, 2025
+**Release date: June 27, 2025**
 
-#### New Feature: Private PDF Document Generation Service
+### Private PDF Document Generation Service
 
-* The [PDF Document Generation](/appstore/modules/document-generation/) module now supports the use of [private PDF document generation service instances](/appstore/modules/private-document-generation-service/). This flexible solution is based on Docker, and is hosted and managed by you. It allows you to run your own version of the PDF Document Generation service with additional control and configuration options, and it specifically targets air-gapped apps, or tailored performance and data sharing requirements.
+The [PDF Document Generation](/appstore/modules/document-generation/) module now supports the use of [private PDF document generation service instances](/appstore/modules/private-document-generation-service/). This flexible solution is based on Docker, and is hosted and managed by you. It allows you to run your own version of the PDF Document Generation service with additional control and configuration options, and it specifically targets air-gapped apps, or tailored performance and data sharing requirements.

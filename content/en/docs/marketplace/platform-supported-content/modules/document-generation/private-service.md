@@ -34,7 +34,8 @@ These are the limitations of using the private PDF Document Generation service:
 Before you start using the private PDF Document Generation service, make sure you meet these prerequisites:
 
 * You have a good understanding of how to run and manage Docker containers. 
-* You are familiar with the PDF Document Generation module. For more information, refer to [PDF Document Generation](/appstore/modules/document-generation/). Make sure that you are using version 2.1.0 or higher of the module.
+* You are familiar with the PDF Document Generation module. For more information, refer to [PDF Document Generation](/appstore/modules/document-generation/). 
+* You are using version 2.1.0 or higher of the PDF Document Generation module.
 * Your deployment environment needs to allow bidirectional communication between Mendix apps and the Docker containers running the private PDF Document Generation service.
 
 ## Installation {#installation}

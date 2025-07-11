@@ -15,4 +15,4 @@ The Marketplace release notes cover changes made to the following:
 * [Mendix Marketplace](/releasenotes/marketplace/)
 * [APD](/releasenotes/marketplace/apd/)
 * [ATS](/releasenotes/marketplace/ats/)
-* [Private PDF Document Generation Service](/releasenotes/marketplace/private-service/)
+* [Marketplace Services](/releasenotes/marketplace/marketplace-services/)

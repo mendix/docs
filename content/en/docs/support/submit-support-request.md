@@ -166,7 +166,7 @@ Mendix Support will only accept security findings for the Mendix platform. This 
 
 ### Team Server Problems and App Issues
 
-* [](/developerportal/settings/general-settings/)
+* [The project ID](/developerportal/settings/general-settings/)
 
 ### Studio Pro Problems
 

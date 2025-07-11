@@ -16,6 +16,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2025
 
+### July 13, 2025
+
+#### Bug Fixes
+
+* We have added strict validation on [upload package api](https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api-2/#upload-package)
+
 ### June 27, 2025
 
 #### Bug Fixes

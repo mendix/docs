@@ -1,7 +1,7 @@
 ---
 title: "Submit a Support Request"
 url: /support/submit-support-request/
-weight: 30
+weight: 20
 description: "Describes the details necessary for Mendix Support to process your request."
 aliases:
     - /developerportal/support/submit-support-request/

@@ -1,7 +1,7 @@
 ---
 title: "Support for Different Deployment Strategies"
 url: /support/deployment-strategy-support/
-weight: 10
+weight: 50
 description: "Describes which components are supported in the Mendix Support Portal."
 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

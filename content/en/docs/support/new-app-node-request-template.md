@@ -2,7 +2,7 @@
 title: "App Node Requests"
 url: /support/new-app-node-request-template/
 description: "Describes how to deploy a new licensed node in Mendix Cloud or on-premises/virtual Mendix on Kubernetes."
-weight: 40
+weight: 30
 aliases:
     - /developerportal/support/new-app-request-template.html
     - /developerportal/support/new-app-request-template/

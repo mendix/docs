@@ -74,7 +74,7 @@ Mendix supports the Mendix Platform, and we expect you to support the applicatio
 * Analyzing and troubleshooting the health and performance of your applications or your infrastructure, except when we suspect an underlying issue exists in the Mendix Platform
 * Troubleshooting Mendix community-developed components from the Mendix Marketplace
 
-For more information, see the [Support for Different Deployment Strategies](#support-by-strategy) section below.
+For more information, see [Support for Different Deployment Strategies](/support/deployment-strategy-support/).
 
 During the start phase, and through part of the scale phase, of your digital transformation journey, it might be best to let your development team (DevOps) handle the support of the applications. As the number of applications grows, it is best to let an expert service desk handle the support of your applications. You can involve your existing service desk team or outsource support to one of our support partners which you can find listed on the [Meet Our Partners](https://www.mendix.com/partners/find-a-partner/) page.
 

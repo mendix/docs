@@ -2,7 +2,7 @@
 title: "Frequently Asked Questions – Security"
 linktitle: "Security Findings FAQ"
 url: /support/security-findings-faq
-weight: 60
+weight: 70
 description: "FAQ about existing security findings and other security questions."
 aliases:
     - /developerportal/support/security-findings-faq/

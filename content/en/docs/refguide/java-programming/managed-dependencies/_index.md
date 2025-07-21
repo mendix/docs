@@ -78,7 +78,7 @@ Platform-supported Marketplace modules created by Mendix have been updated with 
 
 ## Custom Repositories{#custom-repos}
 
-By default, dependencies are downloaded from the [Maven Central](https://central.sonatype.com/) repository. In some scenarios, you may want to specify a custom location. For example, if your organization has its own repository to cache downloads or as an alternative if internet access is restricted in an air-gapped setup.
+By default, dependencies are downloaded from the [Maven Central](https://central.sonatype.com/) repository. In some scenarios, you may want to specify a custom location. For example, if your organization has its own repository to cache downloads or as an alternative if internet access is restricted in an air-gapped setup. More details on how to setup custom repositories can be found [here](/refguide/managed-dependencies/custom-repositories) 
 
 Custom repositories are configured in the **Repositories** setting of the **Deployment** tab in the [Preferences](/refguide/preferences-dialog/) dialog box. This setting uses the same syntax as Gradle. To configure a custom repository server that is accessible via URL, use the following configuration (credentials are optional):
 

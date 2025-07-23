@@ -106,7 +106,7 @@ The main things to keep in mind when styling are contrast and the focus indicato
 There’s two specific requirements to do with contrast.
 #### Text contrast
 
-Text contrast needs to be 4.5:1, the way this is calculated is described in the WCAG, but there are plenty of contrast checkers available (for example the WebAIM Contrast Checker). There are some exceptions for example for ‘big text’, but to err on the side of caution it’s best to just stick to 4.5:1.
+Text contrast needs to be 4.5:1, the way this is calculated is described in the WCAG, but there are plenty of contrast checkers available (for example the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)). There are some exceptions for example for ‘big text’, but to err on the side of caution it’s best to just stick to 4.5:1.
 
 In custom-variables.scss you can find the following for font color:
 // Default Font Size & Color
@@ -126,7 +126,7 @@ In this case with the text color being “#0a1325“ and background color being 
 Non text contrast needs to be 3:1, this means that any important inputs or buttons need to have this contrast with the background. An example could be an input field, there needs to be enough contrast there that it’s clear where the input field actually is. This could be the contrast of the field itself with the background, or a border line around the input field with the background.
 
 In custom-variables.scss the button background could be defined as such:
-//== Step 1: Brand Colors
+```//== Step 1: Brand Colors
 $brand-default: $gray-primary;
 $brand-primary: #264ae5;
 ...
@@ -138,6 +138,7 @@ $bg-color-secondary: #fff;
 // Button Background Color
 $btn-default-bg: #fff;
 $btn-primary-bg: $brand-primary;
+```
 
 Our button color is the same as $brand-primary and has the value 264AE5, the background is F8F8F8. The contrast here is 6.19:1. Also well over 3:1. 
 
@@ -160,7 +161,7 @@ $form-input-border-focus-color: $brand-primary;
 ## Other quick wins
 ### Page titled
 
-Set the title of every page, to ensure it doesn’t end up with the url in the tab. SC 2.4.2. Page titled
+Set the title of every page, to ensure it doesn’t end up with the url in the tab. SC 2.4.2. [Page titled](https://www.w3.org/TR/WCAG22/#page-titled)
 
 <add general page title input thing>
 
@@ -169,17 +170,14 @@ Set the title of every page, to ensure it doesn’t end up with the url in the t
 Make sure you’ve got comprehensive error messages, do they describe the situation clearly? Do they offer enough guidance on how the fix the error? An example of a bad error message here would be having an error “please fill in all required fields“. Since the user might be under the impression that they have already done that. Instead saying “Please fill in address“ would give the user more information on how they can resolve the error.
 
 (
-Web Content Accessibility Guidelines (WCAG) 2.2  , Web Content Accessibility Guidelines (WCAG) 2.2  , 
+[WCAG Error Identification](https://www.w3.org/TR/WCAG22/#error-identification), [WCAG Error Suggestion](https://www.w3.org/TR/WCAG22/#error-suggestion), [Error Prevention](https://www.w3.org/TR/WCAG22/#error-prevention-legal-financial-data)
 
-Web Content Accessibility Guidelines (WCAG) 2.2  )
 ### Link purpose
-Link purpose, instead of having a link say “click here“ it should be clear from the surrounding text where that link leads. Ideally, that description would be part of the link itself: 
-
-Web Content Accessibility Guidelines (WCAG) 2.2(since this is a level AAA Success Criteria, it’s usually not required). 
+[Link purpose](https://www.w3.org/TR/WCAG22/#link-purpose-in-context), instead of having a link say “click here“ it should be clear from the surrounding text where that link leads. Ideally, that description would be part of the link itself: https://www.w3.org/TR/WCAG22/#link-purpose-link-only (since this is a level AAA Success Criteria, it’s usually not required). 
 ## How to test whether your app is accessible
 ### Automated accessibility testing
 
-There’s multiple options to run automatic tests on your pages, these are great for giving you an indication on the accessibility of your website and can suggest things to improve. 
+There’s multiple options to run automatic tests on your pages, these are great for giving you an indication on the accessibility of your website and can suggest things to improve. W3C offers a list of such tools: [List of tools for checking if your web content meets accessibility guidelines.](https://www.w3.org/WAI/test-evaluate/tools/list/)
 ### Manual accessibility testing
 
 While also being the most time consuming, the best way to test your application for accessibility is to do a manual test. 
@@ -192,9 +190,11 @@ Doing just a few checks already goes a long way:
 
     Color contrast, does both text and nontext content have enough contrast? 
 
+More info on this can be found on this page by the W3C: [Easy Checks – A First Review of Web Accessibility](https://www.w3.org/WAI/test-evaluate/preliminary/)
+
 ## Read more
 
-For a more in depth look at the accessibility learning path at the Academy Accessibility learning path.
+For a more in depth look at the accessibility learning path at the [Academy Accessibility learning path](https://academy.mendix.com/link/paths/141/Improve-Your-App-Accessibility).
 
 Mendix' full accessibility report can be found here: 
 Mendix Accessibility Conformance: Ensure Your Apps Are Accessible 

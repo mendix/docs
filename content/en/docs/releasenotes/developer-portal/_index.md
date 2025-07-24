@@ -21,6 +21,16 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 ## 2025
 
+### July 27, 2025
+
+#### Improvements
+
+* We have improved the Projects Overview page with a new design. This is a first step for having a central place where users can see their most relevant project information at a glance.
+
+#### Fixes
+
+* We have fixed an issue in the `GET` operation of the [Projects API](/apidocs-mxsdk/apidocs/projects-api/). This issue prevented some user roles to be obtained correctly.
+
 ### July 10, 2025
 
 #### New Features

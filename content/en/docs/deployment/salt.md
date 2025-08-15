@@ -16,10 +16,21 @@ This guide provides instructions on how to deploy a Mendix application using a S
 
 ## Restrictions
 
-SALT Licenses have the following restrictions
+SALT Licenses have the following restrictions.
 
-* they are compatible with Mendix version 10.24 and above.
-* they cannot be used in the Mendix Public Cloud.
+### Mendix Version Restrictions
+
+SALT Licenses can only be used with the following Mendix versions:
+
+* **Mendix 10**: 10.24.4 and above
+* **Mendix 11**: 11.2.0 and above
+
+Older Mendix versions are not supported.
+
+### Deployment Restrictions
+
+Mendix applications using a SALT License cannot be deployed to the Mendix Public Cloud.
+
 
 ## Prerequisites
 
@@ -33,9 +44,17 @@ For detailed instructions on installing and configuring the license server, plea
 
 Ensure that all Mendix applications can access the license server.
 
+## License Installation
+
+Upon acquiring a SALT License, you will receive an email containing the license file. This file must be installed on the Siemens License Server, which will then distribute the license to all connected Mendix applications.
+
+For detailed instructions on installing the license file, refer to the official Siemens License Server documentation.
+
+During the license acquisition process, you may be required to provide a CID code. This code binds the license to the specific machine hosting the license server. To retrieve the CID code, please consult the Siemens License Server documentation.
+
 ## Application Configuration
 
-After deploying the license server you can  configure each Mendix application that uses a SALT license.
+After deploying the license server you must set configure each Mendix application that should use the SALT license provided by the license server as following:
 
 * Set runtime setting `License.SaltLicenseLocation` to `port@host`, where:
 

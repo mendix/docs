@@ -69,7 +69,7 @@ For application-based Azure Entra ID authentication:
 
 [Operations](/refguide/Operations/) define the operations that are executed in a microflow or a nanoflow.
 
-The Azure Blob Storage connector contains the following operations:
+The Azure Blob Storage Connector contains the following operations:
 
 * `PutBlob` - Allows you to upload, as a blob, a file of any type, to Azure Blob Storage. For more information, see [Put Blob to Azure Blob Storage](https://learn.microsoft.com/en-us/rest/api/storageservices/put-blob).
 * `GetBlob` - Allows you to retrieve a blob. For more information, see [Get Blob to Azure Blob Storage](https://learn.microsoft.com/en-us/rest/api/storageservices/get-blob).
@@ -183,3 +183,9 @@ The **Documentation** pane displays the documentation for the currently selected
 2. Click on the element for which you want to view the documentation.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
+
+### Known limitations
+This section lists all the known limitations of the Azure Blob Connector.
+
+#### Blob Size
+* The max size for a blob that you upload through the Azure Blob Connector is 1.49 GB.

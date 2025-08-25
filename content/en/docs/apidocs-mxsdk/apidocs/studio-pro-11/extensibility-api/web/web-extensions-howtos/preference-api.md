@@ -2,7 +2,6 @@
 title: "Show User's Preferences Using Web API"
 linktitle: "Show User's Preferences"
 url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/preference-api/
-weight: 30
 ---
 
 ## Introduction

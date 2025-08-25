@@ -3,12 +3,11 @@ title: "View Entities"
 url: /refguide10/view-entities/
 weight: 17
 cascade:
-    - beta: true
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 {{% alert color="info" %}}
-This feature was introduced in Studio Pro 10.19 and is currently in beta. For more information, see [Beta and Experimental Releases](/releasenotes/release-status/).
+View entities were introduced as a beta feature in Studio Pro 10.19, and released for general availability in Studio Pro 10.22 and above. For more information, see [Beta and Experimental Releases](/releasenotes/release-status/).
 {{% /alert %}}
 
 ## Introduction

@@ -12,271 +12,130 @@ aliases:
 
 ## Introduction
 
-The **Apps** page in Control Center gives an overview of all the apps belonging to your company. The page has the following tabs available: **Mendix Cloud**, **Mendix Free Cloud**, **Other Apps**, and **Deactivated Apps**.
+The **Apps** page in Control Center provides a central place to monitor, manage, and interact with all the apps belonging to your company. 
 
-{{% alert color="info" %}}
-Mendix will enhance this page to provide information about apps deployed on standalone private clouds. Stay tuned.
-{{% /alert %}} 
-
-The search bar at the top of the page allows you to find an app using either the app ID (which you can find under **Project ID** in your app’s [Settings](/developerportal/collaborate/general-settings/) in [Apps](https://sprintr.home.mendix.com/)) or the app name.
+Use the search bar at the top of the page to find an app using either its name or app ID (which you can find under **Project ID** in your app’s [Settings](/developerportal/collaborate/general-settings/) in [Apps](https://sprintr.home.mendix.com/)).
 
 {{< figure src="/attachments/control-center/apps/apps-overview/top-search-bar.png" >}}
 
-The search results apear in a pop-up window where you can apply filters for **AppName**, **AppID**, **Technical Contact**, **Last Commit**, **Created Date**, and **Deployment**. Clicking the app name opens the [app details](#app-details).
+Search results appear in a pop-up window where you can apply filters for **AppName**, **AppID**, **Technical Contact**, **Last Commit**, **Created Date**, and **Deployment**. Click the app name to open the [app details](#app-details).
+
+The **Apps** page includes the following tabs: **Mendix Cloud**, **Private Cloud**, **Mendix Free Cloud**, **Other Apps**, and **Deactivated Apps**.
+
+Each tab contains a table. By clicking the column selector ({{% icon name="view" %}}) in the upper-right corner of the table, you can choose which fields to display. You can also:
+
+* Filter the apps in a table. For details, refer to the [Filtering Apps in a Table](#filter-apps) section
+* Export app information to an Excel file. For details, refer to the [Exporting Apps to an Excel File](#export-to-excel) section
+
+Refer to the [Fields Glossary](#fields-glossary) section for descriptions of the table columns.
 
 ## Mendix Cloud
 
-The **Mendix Cloud** tab gives an overview of all the licensed apps that can be published on Mendix Cloud.
+The **Mendix Cloud** tab lists all licensed apps that can be deployed on Mendix Cloud.
 
-By default you only see apps and their production environments. Turn off the **Production** toggle on the right side above the table to see all the environments.
+By default, the table shows only apps deployed to the production environments. To view all environments, toggle off the **Production** switch in the upper-right corner of the table.
 
-You can customize the columns of the table by clicking the column selector (the {{% icon name="view" %}} icon) on the upper-right corner of the table. The items selected are shown as columns in the table.
+When you select apps using the checkboxes in the table, a context menu appears at the bottom of the screen. Use it to export the selected apps.
 
-{{< figure src="/attachments/control-center/apps/apps-overview/column-selection-public-cloud.png" >}}
+## Private Cloud (Connected) {#pc-connected}
 
-The description of the items that you can select are as follows:
-
-* **AppID**: the unique identifier of the app
-
-* **App Name**: the name of the app
-
-  {{% alert color="info" %}}
-  You can view the [app details](#app-details) by clicking the app name in the table.
-  {{% /alert %}}
-
-* **Technical Contact**: the technical contact of the app. 
-
-  {{% alert color="info" %}}
-  You can edit the Technical Contact of an app by clicking **Edit** ({{% icon name="pencil" %}}) next to the current Technical Contact in the table.
-  {{% /alert %}}
-
-* **EnvID**: the unique identifier of the environment.
-
-* **Environment**: the name of the environment
-
-* **Deployed Status**: whether the app has been deployed on this environment
-
-* **Mainline Version**: the Mendix version of the app on the mainline in the repository
-
-* **Deployed Version**: the Mendix version of the app deployed on this environment
-
-* **Last Commit**: the date of the last commit in the main line
-
-* **Members**: the number of the team members in the app development team
-
-* **Created Date**: the date the app was created
-
-* **Env Owner**: the company that owns the environments of this app
-
-    {{% alert color="info" %}}If the owner fo the environments is not your company, you have limited control over the deployment of your app. For information on how to resolve this, see [How to Resolve Shared Ownership of Apps](/control-center/resolve-shared-ownership-of-apps/).{{% /alert %}}
-
-* **Env Owner Id**: the ID of the company that owns the environments of this app 
-
-* **Cloud Resource Pack**: the resource pack for the cloud environment where the app is deployed
-
-    {{% alert color="info" %}}For the technical details of each cloud resource pack, see the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) section in *Mendix Cloud*.{{% /alert %}}
-
-* **Cloud Location**: the location of the environment
-
-* **App RAM**: the size of the RAM allocated for running the app
-
-* **DB RAM**: the size the RAM allocation for database operations
-
-* **DB Storage**: the size of the database storage
-
-* **DB Storage Extra**: the extra storage of the database
-
-* **File Storage**: the size of the storage allocated for storing files
-
-* **Fallback**: whether the data in the database is automatically copied to a database in a second availability zone.
-
-    {{% alert color="info" %}}For more information, see the [High Availability and Fallback](/developerportal/deploy/mendix-cloud-deploy/#fallback) section in *Mendix Cloud*.{{% /alert %}}
-
-You can filter the apps in the table. For details, see the [Filtering Apps in the Table](#filter-apps) section.
-
-You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
-
-## Mendix on Kubernetes (Connected) {#pc-connected}
-
-The **Mendix on Kubernetes** tab shows all the apps that are deployed on the Mendix on Kubernetes Connected.
-
-You can customize the columns of the table by clicking the column selector (the {{% icon name="view" %}} icon) on the upper-right corner of the table. The items selected are shown as columns in the table.
-
-{{< figure src="/attachments/control-center/apps/apps-overview/column-selection-private-cloud-connected.png"  max-width=50% >}}
-
-The description of the items that you can select are as follows:
-
-* **AppID**: the unique identifier of the app
-
-* **App Name**: the name of the app
-
-  {{% alert color="info" %}}You can view the [app details](#app-details) by clicking the app name in the table.{{% /alert %}}
-  
-* **Technical Contact**: the technical contact of the app
-
-    {{% alert color="info" %}}You can edit the Technical Contact of an app by clicking **Edit** ({{% icon name="pencil" %}}) next to the current Technical Contact in the table.{{% /alert %}}
-  
-* **EnvID**: the unique identifier of the environment
-
-* **Environment**: the name of the environment
-
-* **Env Status**: the app deployment status on environment
-
-* **Mainline Version**: the Mendix version of the app on the mainline in the repository
-
-* **Deployed Version**: the Mendix version of the deployed app
-
-* **Last Commit**: the date of the last commit in the main line
-
-* **Members**: the number of the team members in the app development team
-
-* **Created Date**: the date the app was created
-
-* **NamespaceID**: the ID of the namespace
-
-* **Namespace**: the Kubernetes namespace
-
-    {{% alert color="info" %}}For more information, see [How to Create a Cluster and Namespace](/developerportal/deploy/private-cloud-cluster/#create-cluster-namespace) in *Creating a Mendix on Kubernetes Cluster*.{{% /alert %}}
-
-* **Database Name**: the name of the database
-
-* **Storage Name**: the name of the storage
+The **Private Cloud** tab shows all the apps that are deployed on the Mendix Private Cloud Connected.
 
 ## Mendix Free Cloud
 
-The **Mendix Free Cloud** tab shows all the free apps that are deployed on Mendix Cloud.
+The **Mendix Free Cloud** tab shows all the free apps deployed on Mendix Cloud.
 
-You can customize the columns of the table by clicking the column selector (the {{% icon name="view" %}} icon) on the upper-right corner of the table. The items selected are shown as columns in the table.
-
-{{< figure src="/attachments/control-center/apps/apps-overview/column-selection-free-cloud.png" >}}
-
-The description of the items that you can select are as follows:
-
-* **AppID**: the unique identifier of the app
-
-* **App Name**: the name of the app
-
-    {{% alert color="info" %}}You can view the [app details](#app-details) by clicking the app name in the table.{{% /alert %}}
-
-* **Technical Contact**: the technical contact of the app. 
-
-    {{% alert color="info" %}}You can edit the Technical Contact of an app by clicking **Edit** ({{% icon name="pencil" %}}) next to the current Technical Contact in the table.{{% /alert %}}
-
-* **EnvID**: the unique identifier of the environment.
-
-* **Deployed Status**: whether the app has been deployed on this environment
-
-* **Mainline Version**: the Mendix version of the app on the mainline in the repository
-
-* **Deployed Version**: the Mendix version of the deployed app
-
-* **Last Commit**: the date of the last commit in the main line
-
-* **Members**: the number of the team members in the app development team
-
-* **Created Date**: the date the app was created
-
-* **Cloud Location**: the location of the environment
-
-* **Actions**: adding the action menu ({{% icon name="three-dots-menu-horizontal" %}}) to enable you to **Deactivate App** and **Delete App** (For more information, see the [Deactivating and Deleting Apps](#deactivate-delete-apps) section.)
-
-You can filter the apps in the table. For details, see the [Filtering Apps in the Table](#filter-apps) section.
-
-When you select the apps via the checkboxes in the table, a context menu appears at the bottom of the screen with the options for deactivating and deleting apps. For details, see [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
-
-You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
+{{% alert color="info" %}}
+When you select apps in the Mendix Free Cloud or the Other Apps tabs using the checkboxes in the table, a context menu appears at the bottom of the screen. Use it to deactivate, delete, or export selected apps. Refer to the [Deactivating and Deleting Apps](#deactivate-delete-apps) section for more details.
+{{% /alert %}}
 
 ## Other Apps
 
-The **Other Apps** tab shows the unlicensed apps that are not deployed and the apps that are deployed on an unconnected Mendix on Kubernetes environment.
-
-You can customize the columns of the table by clicking the column selector (the {{% icon name="view" %}} icon) on the upper-right corner of the table. The items selected are shown as columns in the table.
-
-{{< figure src="/attachments/control-center/apps/apps-overview/column-selection-other-apps.png" >}}
-
-The description of the items that you can select are as follows:
-
-* **AppID**: the unique identifier of the app
-* **App Name**: the name of the app
-
-    {{% alert color="info" %}}You can view the [app details](#app-details) by clicking the app name in the table.{{% /alert %}}
-* **Last Commit**: the date of the last commit in the main line
-* **Members**: the number of the team members in the app development team
-* **Created Date**: the date the app was created
-* **Actions**: adding the action menu ({{% icon name="three-dots-menu-horizontal" %}}) to enable you to **Deactivate App** and **Delete App**. (For more information, see the [Deactivating and Deleting Apps](#deactivate-delete-apps) section.)
-
-You can filter the apps in the table. For details, see the [Filtering Apps in the Table](#filter-apps)section.
-
-When you select the apps via the checkboxes in the table, a context menu appears at the bottom of the screen with the options for deactivating and deleting apps. For details, see [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
-
-You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
+The **Other Apps** tab shows unlicensed apps that are not deployed and apps deployed on a Private Cloud Connected .
 
 ## Deactivated Apps
 
-The **Deactivated Apps** tab shows all the deactivated apps that belong to your company.
+The **Deactivated Apps** tab shows all your company's deactivated apps.
 
-You can customize the columns of the table by clicking the column selector (the {{% icon name="view" %}} icon) on the upper-right corner of the table. The items selected are shown as columns in the table.
-
-{{< figure src="/attachments/control-center/apps/apps-overview/column-selection-deactivated-apps.png" >}}
-
-The description of the items that you can select are as follows:
-
-* **AppID**: the unique identifier of the app
-* **App Name**: the name of the app
-
-    {{% alert color="info" %}}You can view the [app details](#app-details) by clicking the app name in the table.{{% /alert %}}
-* **Created Date**: the date the app was created
-* **Mainline Version**: the Mendix version of the app on the mainline in the repository
-* **Last Commit**: the date of the last commit in the main line
-* **Members**: the number of the team members in the app development team
-* **Actions**: adding the action menu ({{% icon name="three-dots-menu-horizontal" %}}) to enable you to **Activate App** and **Delete App**. (For more information, see the [Deactivating and Deleting Apps](#deactivate-delete-apps) section.)
-
-You can filter the apps in the table. For details, see the [Filtering Apps in the Table](#filter-apps)section.
-
-When you select the apps via the checkboxes in the table, a context menu appears at the bottom of the screen with the option for activating and deleting apps. After you activate an app, the app will appear on the corresponding tab. For details about deleting apps, see [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
-
-You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
-
-## Filtering Apps in the Table {#filter-apps}
-
-On each tab with a table of apps, you can find filters on the top, which allows you to filter apps using different criteria. 
-
-With the filter as shown below, you can search for string matches on any of the string fields in the table, for example, the app ID, app name, or environment name. Clicking the button on the left allows you to use comparisons and string operations, such as **Contains**, **Starts with**, and **Greater than**. (This filter is available on the **Mendix Cloud**, **Mendix Free Cloud**, and **Other Apps** tabs.)
-
-{{< figure src="/attachments/control-center/apps/apps-overview/filter-apps.png" >}}
-
-With the filter as shown below, you can filter apps by the date of the last commit. Clicking the button on the left allows you to use comparisons and string operations, such as **Between** and **Empty**. (This filter is available on the **Mendix Cloud**, **Mendix Free Cloud**, **Other Apps**, and **Deactivated Apps** tabs.)
-
-{{< figure src="/attachments/control-center/apps/apps-overview/filter-last-commit.png" >}}
-
-The filter shown as below allows you to filter apps by **Deployed Status**. (This filter is only available on the **Mendix Cloud** tab.)
-
-{{< figure src="/attachments/control-center/apps/apps-overview/filter-mendix-cloud.png" >}}
+When you select apps using the checkboxes in the table, a context menu appears at the bottom of the screen. Use it to activate, delete, or export selected apps. After activation, the app appears on the corresponding active tab. Refer to the [Deactivating and Deleting Apps](#deactivate-delete-apps) section for more information.
 
 ## Viewing App Details {#app-details}
 
-If you click an app name on a tab or in the search results of the top search bar, a page opens and shows the details of this app.
+Clicking an app name in a tab or the search results opens its details page, which includes the following tabs:
 
-The app details page has the following tabs:
-
-* **App Info** – This tab has the **Description** and **App ID** fields, which are also available on the [Settings](/developerportal/collaborate/general-settings/) page for your app in [Apps](https://sprintr.home.mendix.com/).
-* **Members** – This tab presents the team members in the app development team.
+* **App Info** – Shows the **Description** and **App ID**, also found in your app's [Settings](/developerportal/collaborate/general-settings/).
+* **Members** – Lists the team members in the app development team.
     * You can directly deactivate a team member from the app by clicking their name and selecting **Deactivate Member**.
     * For other member management options, click **Manage Members**, which will open the [Team](/developerportal/general/team/#managing) page of the app. As a Mendix Admin, you can also add yourself to a team via this page.
-* **Environments** – This tab shows all Mendix Cloud environments. For the free Mendix Cloud environment, you can delete the environment on this tab. Once the free environment is deleted, all data will be removed. However, the app team members can still access the associated app repository in the Mendix Portal.
-* **App Roles** – This tab presents the app team roles defined via the **Default App Roles** feature on the [Roles & Permissions](/control-center/roles-and-permissions/) page.
+* **Environments** – Lists all Mendix Cloud environments. For the free Mendix Cloud environment, you can delete the environment on this tab. Once the free environment is deleted, all data will be removed. However, the app team members can still access the associated app repository in the Mendix Portal.
 
 If the app is not a licensed app, you can see the action menu ({{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner of the page. If the app is active, then you have the options to deactivate the app and delete the app; and if the app is deactivated, then you have the options to activate the app and delete the app.
 
 {{% alert color="info" %}}
-Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on Mendix Cloud. For the consequences of these operations, see the table in the [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
-{{% /alert %}} 
+You cannot deactivate or delete licensed apps or apps not hosted on Mendix Cloud. For the consequences of these operations, refer to the table in the [Deactivating and Deleting Apps](#deactivate-delete-apps) section for more information.
+{{% /alert %}}
 
-## Deactivating and Deleting Apps {#deactivate-delete-apps}
+## App Management
 
-You can delete or deactivate a single app, or deactivate (or activate) multiple apps in one go.
+This section details common functionalities for managing apps, including filtering, exporting, and deactivating, and a glossary of all the fields available across all tabs.
 
-The consequences of deactivating and deleting an app are as below:
+### Fields Glossary {#fields-glossary}
+
+This glossary describes all the fields that appear across all the tables in the **Mendix Cloud**, **Private Cloud**, **Mendix Free Cloud**, **Other Apps**, and **Deactivated Apps** tabs.
+
+| **Field**               | **Description**                                                                                                                                                                      | **Appears In**                                  |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------- |
+| **Action**              | The action menu ({{<icon name="three-dots-menu-horizontal">}}) which provides options to **Activate App** and **Delete App**. Refer to the [Deactivating and Deleting Apps](#deactivate-delete-apps) section | Mendix Free Cloud, Other Apps, Deactivated Apps |
+| **AppID**               | Unique identifier of the app                                                                                                                                                       | All tabs                                        |
+| **App Name**            | Name of the app. Click the name to view the [app details](#app-details)                                                                                                            | All tabs                                        |
+| **App RAM**             | RAM size allocated for running the app                                                                                                                                         | Mendix Cloud                                    |
+| **Cloud Location**      | Environment location                                                                                                                                                            | Mendix Cloud, Mendix Free Cloud                 |
+| **Cloud Resource Pack** | The resource pack for the cloud environment where the app is deployed. For details, refer to the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) section in *Mendix Cloud*  | Mendix Cloud              |
+| **Created Date**        | The date the app was created                                                                                                                                                        | All tabs                 |
+| **Database Name**       | The database name                                                                                                                                                                   | Private Cloud (Connected)                     |
+| **Action**              | The action menu ({{<icon name="three-dots-menu-horizontal">}}) which provides options to **Activate App** and **Delete App**. Refer to the [Deactivating and Deleting Apps](#deactivate-delete-apps) section | Mendix Free Cloud, Other Apps, Deactivated Apps |
+| **DB Storage**          | Database storage size                                                                                                                                                               | Mendix Cloud                    |
+| **DB Storage Extra**    | Extra database storage size                                                                                                                                                              | Mendix Cloud                    |
+| **Deployed Status**     | Whether the app is deployed                                                                                                                                                         | Mendix Cloud, Mendix Free Cloud                 |
+| **Deployed Version**    | Mendix version of the app currently deployed                                                                                                                                                  | Mendix Cloud, Mendix Free Cloud, Private Cloud (Connected)   |
+| **EnvID**               | Unique identifier of the environment                                                                                                                  | Mendix Cloud, Mendix Free Cloud, Private Cloud (Connected)   |
+| **Env Owner**           | The company that owns the environment. If it’s not your company, you have limited control over your app's deployment. Refer to [How to Resolve Shared Ownership of Apps](/control-center/resolve-shared-ownership-of-apps/)    | Mendix Cloud   |
+| **Environment**         | Name of the environment                                                                                                                                                             | Mendix Cloud, Private Cloud (Connected)                      |
+| **Env Owner ID**        | ID of the company that owns the environments of this app                                                                                                                                              | Mendix Cloud                                    |
+| **Env Status**          | The app deployment status on environment                                                                                                                                | Private Cloud (Connected)                                    |
+| **Fallback**            | Whether the data in the database is automatically copied to a database in a second availability zone. For more information, refer to the [High Availability and Fallback](/developerportal/deploy/mendix-cloud-deploy/#fallback) section in *Mendix Cloud* | Mendix Cloud |
+| **File Storage**        | Size of the storage allocated for storing files                                                                                                                                                            |    Mendix Cloud                                 |
+| **Last Commit**         | Date of the last commit in the main line                                                                                                                                           | All tabs                                        |
+| **Mainline Version**    | Mendix version of the app on the mainline in the repository                                                                                                                                         |         Mendix Cloud, Mendix Free Cloud, Private Cloud (Connected) ,  Deactivated Apps   |
+| **Members**             | Number of team members in the app development team                                                                                                                                                              | All tabs                                         |
+| **Namespace**           | Kubernetes namespace. Refer to [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/#create-cluster-namespace)                                                      |  Private Cloud  (Connected)                         |
+| **NamespaceID**         | Namespace ID                                                       |  Private Cloud (Connected)                         |
+| **Storage Name**        | Name of the storage                                                                                                                                                         |  Private Cloud                          |
+| **Technical Contact**   | Technical contact of the app. To edit, click **Edit** ({{<icon name="pencil">}}) next to the current Technical Contact’s name                                                    |  Mendix Cloud, Mendix Free Cloud, Private Cloud (Connected) |
+
+### Filtering Apps in a Table {#filter-apps}
+
+On each tab with a table of apps, you can find filters on the top, which allows you to view apps based on different criteria.
+
+With the filter as shown below, you can search for string matches on any of the string fields in the table, for example, the app name or environment name.
+
+Clicking the filter button allows you to use comparisons and string operations, such as **Contains**, **Starts with**, and **Greater than**.
+
+{{< figure src="/attachments/control-center/apps/apps-overview/filter-apps.png" >}}
+
+With the filter as shown below, you can filter apps by the date of the last commit. Clicking the button on the left allows you to use comparisons, such as **Between** and **Empty**. 
+
+{{< figure src="/attachments/control-center/apps/apps-overview/filter-last-commit.png" >}}
+
+The filter shown below allows you to filter apps by **Deployed Status**. 
+
+{{< figure src="/attachments/control-center/apps/apps-overview/filter-mendix-cloud.png" >}}
+
+### Deactivating and Deleting Apps {#deactivate-delete-apps}
+
+You can delete or deactivate a single free app, or deactivate (or activate) multiple free apps in one go.
+
+The consequences of deactivating and deleting a free app are as follows:
 
 |                                                             | Deactivating an App                                          | Deleting an App                                              |
 | ----------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -287,13 +146,18 @@ The consequences of deactivating and deleting an app are as below:
 | Cloud environment stays persistent                          | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
 
 {{% alert color="info" %}}
-Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on Mendix Cloud. Therefore, you do not see these options on the **Mendix Cloud** tab; and you also do not see these options on the **Other Apps** tab if you select apps that are deployed on a Mendix on Kubernetes environment.
+Deleting and deactivating apps is only supported in free apps. It is currently not supported for licensed apps or apps that are not running on Mendix Cloud.
 {{% /alert %}}
 
-## Exporting the Information About Apps to an Excel File {#export-to-excel}
+### Exporting the Information About Apps to an Excel File {#export-to-excel}
 
-On each tab with an overview of apps, you can export information of apps to an Excel file. To do so, select the apps in the table, and click **Selection Export** below the table. 
+You can export app data to Excel file from the table in any of the available tabs.
 
-To export information about ALL the apps in the table, click **Export All** on the upper-top corner. 
+* To export selected apps:
 
-The Excel file covers the following columns: **AppId**, **AppName**, **TechnicalContact**, **Environment**, **DeployedStatus**, **MendixVersionOnMainline**, **DeployedMendixVersion**, **LastCommit**, **Members**, **Production**, **AppCreatedDate**, **CloudLocation**, **Fallback**, **CloudResourcePack**, **AppRAM**, **DbRAM**, **DbStorage**, **DbStorageExtra**, and **FileStorage**.
+  1. Select the apps using the checkboxes in the table.
+  2. In the context menu that appears at the bottom of the screen, click **Selection Export**.
+
+* To export all apps: Click **Export All** in the upper-right corner of the table.
+
+The Excel file includes the following columns: **AppId**, **AppName**, **TechnicalContact**, **Environment**, **DeployedStatus**, **MendixVersionOnMainline**, **DeployedMendixVersion**, **LastCommit**, **Members**, **Production**, **AppCreatedDate**, **CloudLocation**, **Fallback**, **CloudResourcePack**, **AppRAM**, **DbRAM**, **DbStorage**, **DbStorageExtra**, and **FileStorage**.

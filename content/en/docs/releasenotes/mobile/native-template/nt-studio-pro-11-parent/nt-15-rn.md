@@ -5,14 +5,22 @@ weight: 10
 description: "Native Template 15"
 ---
 
+## 15.3.1 {#1530}
+
+**Release date: August 15, 2025**
+
+### Fixes
+
+- We removed the `USE_EXACT_ALARM` permission from the manifest to comply with updated Google Play policies.
+
 ## 15.3.0 {#1530}
 
 **Release date: June 23, 2025**
 
 ### Improvements
 
-- We migrated several libraries that had not been maintained to modern, actively-supported alternatives.
-- We improved the update process from an older version of Studio Pro to the latest version.
+* We migrated several libraries that had not been maintained to modern, actively-supported alternatives.
+* We improved the update process from an older version of Studio Pro to the latest version.
 
 ### Removed
 
@@ -34,11 +42,11 @@ description: "Native Template 15"
 
 ### Improvements
 
-- We updated one library.
+* We updated one library.
 
 ### Library Updates and Improvements
 
-- **@mendix/native**: 10.1.4
+* **@mendix/native**: 10.1.4
 
 ## 15.1.1 {#1511}
 
@@ -66,8 +74,8 @@ description: "Native Template 15"
 
 ### Improvements
 
-- We upgraded our Database Backend Library to the most recent version. This update brings better performance on database operations and performance improvements. 
+* We upgraded our Database Backend Library to the most recent version. This update brings better performance on database operations and performance improvements. 
 
 ### Library Updates and Improvements
 
-- **@op-engineering/op-sqlite**: 12.0.2
+* **@op-engineering/op-sqlite**: 12.0.2

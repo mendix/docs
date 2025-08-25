@@ -200,6 +200,10 @@ For reference, the table below gives an overview of attribute mapping when using
 | active| Active | true | true |
 
 {{% alert color="info" %}}
+The SCIM module only supports the IdP attributes (claims) listed in the table above. Any other claims in the SCIM payload will be ignored.
+{{% /alert %}}
+
+{{% alert color="info" %}}
  In the SCIM protocol, you can configure the `object ID` to identify a user for Microsoft. It is used as the value for the `externalID` claim in SCIM payloads by default. That means, use the `oid` claim as a user identifier to introduce SCIM. For more information, see the [Guidance on User Identifier](/appstore/modules/oidc/#guidance-user-identifier) section of the *OIDC SSO*.
 {{% /alert %}}
 

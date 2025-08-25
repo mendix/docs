@@ -12,7 +12,7 @@ aliases:
 ## Introduction
 
 {{% alert color="info" %}}
-Maia Chat is also available in the Mendix Portal. For more information, see the [Maia Chat](/portal/global-navigation/#maia-chat) section in *Global Navigation*.
+Maia Chat is also available in the Mendix Portal. For more information, refer to the [Maia Chat](/maia-mx-portal//#maia-chat) section in *Maia in Mendix Portal*.
 {{% /alert %}}
 
 {{% alert color="info" %}}

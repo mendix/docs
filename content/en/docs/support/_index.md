@@ -17,7 +17,7 @@ aliases:
 
 ## What You Can Expect from Mendix Support
 
-Mendix Support is here to answer any questions and solve any issues that you might have. We try to make your journey as frictionless as possible.
+Mendix Support strives to answer your questions and solve your problems whenever possible. We may not have every answer, but we will do our best to guide you in the right direction, while trying to make your journey as frictionless as possible.
 
 ### Service Level Agreements {#sla}
 

@@ -1,5 +1,5 @@
 ---
-title: "Email"
+title: "Email Connector"
 url: /appstore/modules/email-connector/
 description: "Describes the configuration and usage of the Email Connector module, which is available in the Mendix Marketplace."
 aliases:
@@ -10,18 +10,18 @@ aliases:
 
 ## Introduction
 
-The [Email Connector](https://marketplace.mendix.com/link/component/120739) allows you to send and receive emails on your own email server. It includes features such as sending emails using a template, or sending signed and encrypted emails.
+The [Email Connector](https://marketplace.mendix.com/link/component/120739) enables you to send and receive emails using your own email server. It supports features like template-based emails, as well as signed and encrypted email sending.
 
 ### Features
 
 The Email connector includes the following features:
 
 * Configuration of multiple email accounts
-    * Supports basic authentication and creating an account with OAuth 2.0 (via authorization code flow or client credentials flow) to configure Microsoft Entra ID (formerly known as Azure Active Directory) accounts
-    * Supports shared mailboxes using basic and OAuth 2.0 authentication
+    * Supports Basic Authentication or OAuth 2.0 (Authorization Code Flow or Client Credentials Flow) for Microsoft Entra ID (formerly Azure Active Directory) accounts
+    * Supports shared mailboxes with both Basic Authentication and OAuth 2.0
 * Digital signatures and encryption
 * Email templates
-* Sending and receiving emails with OAuth 2.0 Auth code grant or client credentials flow.
+* Sending and receiving emails using OAuth 2.0 Authorization Code Grant or Client Credentials Flow
 
 The Email connector supports the following protocols:
 
@@ -37,15 +37,16 @@ Follow these prerequisites carefully. Missing a step can lead to errors.
 
 Before you use the Email connector in your app, do the following:
 
-* Download and configure the latest version of the [Mx Model Reflection](/appstore/modules/model-reflection/) module. If you have the module already, ensure that it is up to date.
-* Download and configure the latest version of the [Encryption](/appstore/modules/encryption/) module. If you have the module already, ensure that it is up to date.
+* Download and configure the latest version of the [Mx Model Reflection](/appstore/modules/model-reflection/) module. If you have the module already, ensure it is up to date.
+* Download and configure the latest version of the [Encryption](/appstore/modules/encryption/) module. If you have the module already, ensure it is up to date.
+* Download and configure the latest version of the [Community Commons](/appstore/modules/community-commons-function-library/) module. If you have the module already, ensure that it is up to date.
 * Remove any existing email modules (such as [IMAP/POP3](https://marketplace.mendix.com/link/component/1042/) and [Email Module with Templates](https://marketplace.mendix.com/link/component/259/)).
 * Remove any orphaned JAR files (including *javax.mail-1.6.2.jar*, *activation-1.1.jar*, and *commons-email.jar*) from any old email modules in the *userlib* subdirectory.
 * [Clean the deployment directory](/refguide/app-menu/#clean-deployment-directory).
 
 ### Migrating from Another Module
 
-If you are migrating to the Email connector from another email module, consider testing your settings in a new app first.
+When migrating to the Email Connector from another email module, it is recommended to test your configuration in a separate app first to ensure a smooth transition.
 
 It is recommended to use the community-supported [Email Connector Migration Utility](https://marketplace.mendix.com/link/component/205008) module to migrate data from the [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) service.
 
@@ -55,6 +56,7 @@ The following widgets are bundled in the module:
 
 * [HTML Element](/appstore/widgets/htmlelement/)
 * [Rich Text](/appstore/widgets/rich-text/)
+* [Pop-Up Menu](/appstore/widgets/popup-menu/)
 
 {{% alert color="info" %}}If you already have these widgets in your app and they are not up to date, you will get a "Some widgets can not be read" error.{{% /alert %}}
 
@@ -62,12 +64,12 @@ The following widgets are bundled in the module:
 
 After you install the [Email](https://marketplace.mendix.com/link/component/120739) connector, configure the following in Studio Pro:
 
-1. Provide a value for the **EncryptionKey** constant provided by the **Encryption** module, if you did not complete this step in [Prerequisites](#prerequisites).
-2. Launch the user interface by using the **ACT_EmailAccount_LaunchEmailConnectorOverview** microflow in the **USEME** > **Microflows** folder.
+1. Set a value for the **EncryptionKey** constant provided by the **Encryption** module, if you have not already configured it in the [Prerequisites](#prerequisites).
+2. Launch the user interface by using the **ACT_EmailAccount_LaunchEmailConnectorOverview** microflow in the **USEME > Microflows** folder.
 
 ### Module Security and Roles
 
-The module comes with a default **EmailConnectorAdmin** module role. Access rights for this role have been set with wide use cases in mind. Confirm that the access rights fit your use case and security requirements before linking the module role to user roles in [App Security](/refguide/app-security/).
+The module includes a default **EmailConnectorAdmin** module role, which comes with access rights designed to cover common use cases. Review and confirm that the access rights meet your specific use case and security requirements before linking this module role to user roles in [App Security](/refguide/app-security/).
 
 ## Email Account Configuration {#accountconfig}
 
@@ -111,14 +113,14 @@ Even if you do not select **Use SSL** or **Use TLS** when you configure the **Em
 
 You can choose to adjust the following account settings:
 
-* **Subscribe to incoming emails** – By default, this is turned off. Turn it on if you want to get notifications about new incoming emails. For modeling, use the **SubscribeToIncomingEmail** Java action. Note that this setting is only supported for IMAP protocols, and some servers may not support it at all. For more information, see the [Subscribing to Incoming Email](#subscribe-incoming-email) section below.
-* **Sanitize email to prevent XSS attacks** – By default, this is turned off, but it is strongly recommended to turn it on. Turn it on if you want the connector to remove malicious scripts to prevent XSS attacks. To learn more about this option, see [Sanitize Untrusted HTML (To Prevent XSS)](https://jsoup.org/cookbook/cleaning-html/safelist-sanitizer).
-* **Replicate everything in 'Inbox' folder** – By default, this is turned off. When it is off, the connector will fetch the number of emails mentioned in the **Number of emails to retrieve from server** field, based on the selected **Fetch strategy**. Turn this setting on if you want the connector to fetch all the emails from the inbox (or another folder that you specify), in the batch size specified in the **Email batch size** field. The emails will be ordered from oldest to newest.
-* **Connection Timeout (milliseconds)** – By default, this is set to **20000**. If you want to adjust the connection timeout duration for sending and receiving emails, you can change this value in the account settings or the **EmailAccount** object.
+* **Subscribe to incoming emails** – Disabled by default. Enable this option if you want to receive notifications for new incoming emails. For modeling purposes, use the SubscribeToIncomingEmail Java action. This feature is supported only for IMAP protocols, and some mail servers may not support it. For more information, see [Subscribing to Incoming Email](#subscribe-incoming-email) section below.
+* **Sanitize email to prevent XSS attacks** – Disabled by default, but strongly recommended to enable. When turned on, the connector removes malicious scripts from email content to prevent XSS attacks. For more information, see [Sanitize Untrusted HTML (To Prevent XSS)](https://jsoup.org/cookbook/cleaning-html/safelist-sanitizer).
+* **Replicate everything in 'Inbox' folder** – Disabled by default. When turned off, the connector retrieves only the number of emails specified in the **Number of emails to retrieve from server** field, based on the chosen fetch strategy. When turned on, the connector replicates all emails from the specified folder (for example, Inbox) in batches defined by the **Email batch size** field. Emails are retrieved from oldest to newest.
+* **Connection Timeout (milliseconds)** –  The default value is **20000**. Adjust this value in the account settings or the **EmailAccount** object if you want to change the timeout duration for sending and receiving emails.
 
 ## Usage
 
-Once you have set up an account, you can use it in microflow activities to send and receive emails. The information in the following sections includes usage instructions for Studio Pro, as well as for when you run the connector in your app.
+Once you have set up an email account, you can use it in microflow activities to send and receive emails. The steps below cover both Studio Pro usage and runtime behavior for when the connector is running in your app.
 
 ### Sending Email
 
@@ -144,14 +146,14 @@ The input parameters for receiving email are the following:
 * **EmailAccount** – This is an email account consisting of the incoming email configuration.
 * **onEmailFetchMicroflow** – This is a microflow that is triggered when **List of EmailMessage** is fetched from the email server, as per the batch size specified in the email account settings. You can process the list according to your needs.
 
-    {{% alert color="warning" %}}If duplicating the **onEmailFetchMicroflow** microflow, do not change the input parameter name or data type. To prevent errors, make sure you have **List of Email_Connector.EmailMessage** as a parameter to this microflow.{{% /alert %}}
+  {{% alert color="warning" %}}If duplicating the **onEmailFetchMicroflow** microflow, do not change the input parameter name or data type. To prevent errors, make sure you have **List of Email_Connector.EmailMessage** as a parameter to this microflow.{{% /alert %}}
 
 * **onFetchCompleteMicroflow** – This is a microflow that is triggered when the fetch action is successfully completed.
 * **onFetchErrorMicroflow** – This is a microflow that is triggered if there are errors while fetching from the email server.
 
 ### Using Email Templates
 
-You can create and use templates for a specific email account.
+You can create and use templates with any email account.
 
 #### Creating an Email Template{#create-template}
 
@@ -202,7 +204,7 @@ You can import the exported email template into the same or a different deployme
 
 ### Signed and Encrypted Emails
 
-You can choose to configure a digital signature and email encryption when the module is running. Digital signatures help the receiver verify that you are the sender. Encryption scrambles the message and can only be deciphered with the correct key.  
+You can optionally configure a digital signature and email encryption while the module is running. A digital signature allows the recipient to verify the authenticity of the sender, while encryption ensures the message content is securely scrambled and can only be read with the correct decryption key.
 
 #### Digital Signing
 
@@ -226,15 +228,15 @@ The input parameters are the following:
 * **EmailAccount** – This is an email account consisting of the incoming email configuration.
 * **onNewEmailReceivedMicroflow** – This is a microflow that is triggered when new email is received from the server. You can process the list of emails according to your needs.
 
-    {{% alert color="warning" %}}If duplicating the **onNewEmailReceivedMicroflow** microflow, do not change the input parameter name or data type. To prevent errors, make sure you have **List of Email_Connector.EmailMessage** as a parameter to this microflow.{{% /alert %}}
+  {{% alert color="warning" %}}If duplicating the **onNewEmailReceivedMicroflow** microflow, do not change the input parameter name or data type. To prevent errors, make sure you have **List of Email_Connector.EmailMessage** as a parameter to this microflow.{{% /alert %}}
 
 * **onSubscriptionStateChangedMicroflow** – This is a microflow that is triggered when the subscription state is changed. The state can be any of the following values:
     * `SUBSCRIPTIONFAILED`
     * `CONNECTIONTOSERVERLOST`
     * `CONNECTIONRETRYEXHAUSTED`
 
-    {{% alert color="warning" %}}If duplicating the **onSubscriptionStateChangedMicroflow** microflow, do not change the input parameter names or data types. To prevent errors, the microflow must accept the string parameters **State** and **Comment**.{{% /alert %}}
-    
+  {{% alert color="warning" %}}If duplicating the **onSubscriptionStateChangedMicroflow** microflow, do not change the input parameter names or data types. To prevent errors, the microflow must accept the string parameters **State** and **Comment**.{{% /alert %}}
+
 #### Enabling Subscription in Email Settings
 
 For some use cases, like triggering actions when a new email is received, you need to enable the subscription to new emails in the email settings as well as in the subscription microflow documented in [Subscribing to Incoming Email](#subscribe-incoming-email).
@@ -255,7 +257,7 @@ There is one input parameter:
 
 * **EmailAccount** – email account consisting of the incoming email configuration
 
-### Configuring Azure OAuth 2.0 {#create-oauth}
+### Configuring Microsoft Entra ID OAuth 2.0 {#create-oauth}
 
 You can configure your account to authenticate with Microsoft Entra ID OAuth 2.0. Multiple OAuth 2.0 providers can be configured per app.
 
@@ -265,12 +267,12 @@ If no email accounts are configured, you can create a new OAuth configuration fr
 
 To configure an OAuth provider for the authentication code flow, provide the following details:
 
-* **Client ID** – available on the [Azure portal](https://portal.azure.com/) once you have registered your app
-* **Client Secret** – available on the Azure portal once you have registered your app
-* **Callback Path** – enter any string, and the callback URL will be autogenerated based on this string
-* **Callback URL** – available on the Azure portal as the **Redirect URI**, which is the URL where the OAuth provider will redirect with the authorization code
+* **Client ID** – Found in the [Microsoft Entra ID](https://portal.azure.com/) after registering your app
+* **Client Secret** – Available in the Microsoft Entra ID once the app is registered
+* **Callback Path** – Any string value; the system will auto-generate the callback URL based on this path
+* **Callback URL** – Known as the **Redirect URI** in the Microsoft Entra ID; this is the URL where the OAuth provider redirects after providing the authorization code
 
-To configure an OAuth provider for the client credentials grant flow, provide the following details, which are available on the Azure portal once you have registered your app:
+To configure an OAuth provider for the client credentials grant flow, provide the following details, which are available on the Microsoft Entra ID once you have registered your app:
 
 * **Client ID**
 * **Client Secret**
@@ -278,41 +280,73 @@ To configure an OAuth provider for the client credentials grant flow, provide th
 
 With Email Connector version 5.2.0 and newer, you can send emails using a client credentials flow.
 
-#### Settings in the Microsoft Azure Portal (Authentication Code Flow)
+#### Settings in the Microsoft Entra ID (Authentication Code Flow)
 
-To register your app on the Azure portal, follow Microsoft's tutorial [Register an app with Microsoft Entra ID](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory). As mentioned above in [OAuth Provider Configuration Details](#oauth-config-details), make sure to set the **Redirect URI** as the **Callback URL**.
+To register your app on the Microsoft Entra ID, follow Microsoft's tutorial [Register an app with Microsoft Entra ID](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory). As mentioned above in [OAuth Provider Configuration Details](#oauth-config-details), make sure to set the **Redirect URI** as the **Callback URL**.
 
 This connector contains functionality for sending and receiving emails, so during the OAuth process, the connector will ask for permissions for sending and receiving emails.
 
-On the [Azure portal](https://portal.azure.com/), ensure you have the following permissions enabled under the **API permissions** tab on the sidebar:
+On the [Microsoft Entra ID](https://portal.azure.com/), ensure you have the following permissions enabled under the **API permissions** tab on the sidebar:
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/email-connector/app-permissions.png" alt="API permissions for authentication code flow" class="no-border" >}}
+##### Send Emails
 
-#### Settings in the Microsoft Azure Portal (Client Credentials Flow)
+| Permission Name | Description |
+|-----------------|-------------|
+| SMTP.Send       | Send emails from mailboxes using SMTP AUTH. |
+| User.Read       | Sign in and read user profile (required for authentication). |
+| openid          | Sign users in (required for OAuth/OpenID Connect). |
+| offline_access  | Maintain access to data you have given it access to (for refresh tokens). |
+| profile         | View users' basic profile (often used during sign-in). |
+| email           | View users' email address (optional but helpful). |
 
-To register your app in the Azure portal, follow Microsoft's [Register an app with Microsoft Entra ID](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).
+##### Receive Emails
 
-This connector contains functionality for sending and receiving emails, so APIs related to Office 365 Exchange Online need to be given permission along with admin consent.
+| Permission Name          | Description |
+|--------------------------|-------------|
+| IMAP.AccessAsUser.All    | Read and write access to mailboxes via IMAP. |
+| POP.AccessAsUser.All     | Read and write access to mailboxes via POP. |
+| User.Read                | Sign in and read user profile (required for authentication). |
+| openid                   | Sign users in (required for OAuth/OpenID Connect). |
+| offline_access           | Maintain access to data you have given it access to (for refresh tokens). |
+| profile                  | View users' basic profile (often used during sign-in). |
+| email                    | View users' email address (optional but helpful). |
 
-On the [Azure portal](https://portal.azure.com/), ensure you have the following permissions enabled under **API permissions** tab on the sidebar:
+#### Settings in the Microsoft Entra ID (Client Credentials Flow)
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/email-connector/client-cred-api-permissions.png" alt="API permissions for client credentials flow" class="no-border" >}}
+To register your app in the Microsoft Entra ID portal, follow Microsoft's [Register an app with Microsoft Entra ID](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).
 
-Admin status is given on the added API permissions. The tenant admin must register the Azure application's service principal in Exchange via Exchange Online PowerShell, as described in [Register service principals in Exchange](https://learn.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth#register-service-principals-in-exchange).
+This connector contains functionality for sending and receiving emails. APIs related to Office 365 Exchange Online need to be given permission along with admin consent.
+
+On the [Microsoft Entra ID](https://portal.azure.com/), ensure you have the following permissions enabled under **API permissions** tab on the sidebar:
+
+##### Send Emails (Application Permissions)
+
+| Permission Name | Type        | Description                                     |
+|-----------------|-------------|-------------------------------------------------|
+| SMTP.SendAsApp  | Application | Sending email via SMTP AUTH.                    |
+
+##### Receive Emails (Application Permissions)
+
+| Permission Name    | Type        | Description |
+|--------------------|-------------|-------------|
+| IMAP.AccessAsApp   | Application | Read and write access to all mailboxes via IMAP. |
+| POP.AccessAsApp    | Application | Read and write access to all mailboxes via POP. |
+
+Admin status is given on the added API permissions. The tenant admin must register the Microsoft Entra ID application's service principal in Exchange via Exchange Online PowerShell, as described in [Register service principals in Exchange](https://learn.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth#register-service-principals-in-exchange).
 
 ### Queuing Emails
 
-Emails can be queued to be sent later. You can send the messages in the **Queued** folder at any time. If sending queued messages fails, the connector automatically tries resending it again until **Max. send attempts** is reached. After this limit is reached, any unsent messages are moved from the **Queued** tab to the **Failed** tab on the overview page.
+Emails can be stored in the **Queued** folder to be sent later. You can manually send them at any time. If sending fails, the connector will automatically retry until it reaches the **Max. send attempts** limit. Once this limit is reached, any unsent emails are moved from the **Queued** tab to the **Failed** tab on the overview page.
 
 ## Troubleshooting
 
 ### Sending or Receiving Email
 
-If you encounter any problems with sending or receiving emails, check the **Error logs** in the **Account Settings** and the logs in Studio Pro. If you have sent an email and it does not appear in your app, but there is nothing in the log file, then the error is not on the connector side.
+If you have issues sending or receiving emails, first check the **Error logs** in **Account Settings** and the logs in Studio Pro. If an email you sent does not appear in your app and there is nothing in the logs, the problem is not with the connector.
 
 ### Gmail Accounts {#gmail-accounts}
 
-Gmail no longer supports basic authentication (user names and passwords), but you may still be able to set up an account in the Email connector by doing the following:
+Gmail no longer supports basic authentication (usernames and passwords), but you may still be able to set up an account in the Email connector by doing the following:
 
 1. Read [Less secure apps & your Google Account](https://support.google.com/accounts/answer/6010255) and turn off the **Less secure app access** setting in your Google account.
 2. Set up an app password to sign in to the Email connector. For more information, see [Sign in with app passwords](https://support.google.com/accounts/answer/185833).
@@ -326,6 +360,10 @@ If you already have an email account configured using basic authentication in yo
 3. Associate the email account with your newly created OAuth provider.
 4. Navigate to the overview page, click **Manage Accounts**, and select the account.
 5. Go to the **Server Settings** tab in **Account Settings** and select **Re-authenticate Access**.
+
+### Deprecation of Basic authentication in Microsoft Exchange Online
+
+As of October 1, 2022, Microsoft has deprecated Basic Authentication, and it is no longer supported in Exchange Online, promoting Modern Authentication (OAuth 2.0) for enhanced security. From that date, Microsoft started disabling Basic Authentication for the following protocols: Outlook, EWS, RPS, POP, IMAP, and EAS.
 
 ### Deploying to On-Premises Cloud Environments
 
@@ -344,7 +382,7 @@ For more information, see the [Reverse Proxy Inbound Rules](/developerportal/dep
 
 Configuring local clients, such as [Papercut](https://github.com/ChangemakerStudios/Papercut-SMTP), is supported. If you are using a tool like Papercut, do the following:
 
-1. Follow the steps for [adding an email account](#adding-email-account). 
+1. Follow the steps for [adding an email account](#adding-email-account).
 2. Continue with manual configuration in the wizard. (Automatic configuration does not work for local clients.)
 3. Select the **Send emails** checkbox.
 4. Select **SMTP** for the **Protocol**, and enter *localhost* for the **Server host**. Enter the **Server port** number (for example, *25*).
@@ -358,7 +396,7 @@ To add attachments to the email message, do the following:
 
 1. Create an **Attachment** entity. The **Attachment** entity extends the **FileDocument** entity by making it usable in all the places where the **FileDocument** entity is required.
 
-    {{% alert color="info" %}}If you have a custom entity, you can extend it with the **Attachment** entity instead of **FileDocument**, or use the community commons **DuplicateFileDocument** function to create an **Attachment** from your custom entity.{{% /alert %}}
+   {{% alert color="info" %}}If you have a custom entity, you can extend it with the **Attachment** entity instead of **FileDocument**, or use the community commons **DuplicateFileDocument** function to create an **Attachment** from your custom entity.{{% /alert %}}
 
 2. Set the **Attachment_EmailMessage** association.
 
@@ -366,7 +404,7 @@ To add attachments to the email message, do the following:
 
 To add inline attachments to an email message, you can use the Rich text editor to insert an image (or images) into the email body. You can also insert inline attachments by using a microflow. To use a microflow, follow these steps:
 
-1. Create an EmailMessage with the *Content* property set as seen below:  
+1. Create an EmailMessage with the *Content* property set as seen below:
 
     ```
     'before inline image<br><img src="cid:mxcid:test.png" width="530" height="110"><br>after inline image'
@@ -374,7 +412,7 @@ To add inline attachments to an email message, you can use the Rich text editor 
 
 2. Specify the image's tag source using the **cid:mxcid** prefix before the source file to have the image added as inline image.
 3. Create the attachment with the Position attribute set to **ENUM_AttachmentPosition.Inline**.
-4. Associate the attachment with EmailMessage. You can then send the email using the **SUB_SendEmail** microflow. 
+4. Associate the attachment with EmailMessage. You can then send the email using the **SUB_SendEmail** microflow.
 
 ### Page Styling
 
@@ -392,7 +430,7 @@ If you already have the [included widgets](#included-widgets) in your app and th
 
 ### Consistency Error
 
-You may get a consistency error when importing the Email Connector module in Mendix 10.1 or above that states *"No argument has been selected for parameter "Token" and no default is available"*. This can be resolved by double-clicking the error, which takes you to the snippet **SNIP_EmailTemplate_NewEdit**. Double-click the **Edit [default]** button, then in the **Events** field under **Page settings**, click **Edit**. Once the **Page Settings** dialog box opens, click **OK**, as shown in the image below. The error should resolve. 
+You may get a consistency error when importing the Email Connector module in Mendix 10.1 or above that states *"No argument has been selected for parameter "Token" and no default is available"*. This can be resolved by double-clicking the error, which takes you to the snippet **SNIP_EmailTemplate_NewEdit**. Double-click the **Edit [default]** button, then in the **Events** field under **Page settings**, click **Edit**. Once the **Page Settings** dialog box opens, click **OK**, as shown in the image below. The error should resolve.
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/email-connector/consistency-error-token.png" class="no-border" >}}
 
@@ -414,6 +452,6 @@ To perform the clean up, follow these steps:
 
 1. Call the **DEL_DuplicateMxReflectionObjects** microflow from a page using the **Call microflow** button. Preferably, an Admin user should trigger this microflow. This is a one-time activity. This microflow identifies the duplicate records in the backend and removes them. Upon completion, you see a pop-up dialog stating that the process has been completed. You can see how many records were removed from respective table in the Console log, as shown below.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/email-connector/mx-reflection-objs-cleanup-logs.png" class="no-border" width="700" >}}
+   {{< figure src="/attachments/appstore/platform-supported-content/modules/email-connector/mx-reflection-objs-cleanup-logs.png" class="no-border" width="700" >}}
 
 2. After the cleanup, remove the **Call microflow** button from the page so the microflow cannot be triggered again. 

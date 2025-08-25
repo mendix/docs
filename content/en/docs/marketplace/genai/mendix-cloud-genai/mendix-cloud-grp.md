@@ -16,9 +16,9 @@ Mendix Cloud GenAI Resource Packs provide turn-key access to Generative AI techn
 
 Developers can use the Mendix Portal to manage their Mendix Cloud GenAI resources and seamlessly integrate model and knowledge base capabilities into their Mendix applications using the [Mendix Cloud GenAI Connector](/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/). Optimized for high performance and low latency, Mendix Cloud GenAI Resource Packs provide the easiest and fastest way to deliver end-to-end Generative AI solutions with Mendix.
 
-### Limited Availability
+### General Availability
 
-Mendix Cloud GenAI Resource Packs are currently available under limited availability. Mendix is collaborating with early adopters—including customers, partners, and ISVs—to drive successful project outcomes. Access to GenAI Resource Packs is evaluated on a case-by-case basis. To learn more about the conditions for access during the limited availability phase, contact [genai-resource-packs@mendix.com](mailto:genai-resource-packs@mendix.com) until the general availability release.
+Mendix Cloud GenAI Resource Packs is a premium Mendix product that requires an additional purchase. To start using GenAI Resource Packs or inquire about pricing, contact your Customer Success Manager (CSM). For more information, you can also reach out to [genai-resource-packs@mendix.com](mailto:genai-resource-packs@mendix.com).
 
 ## Models
 
@@ -35,6 +35,14 @@ The models are available through the Mendix Cloud, leveraging AWS's highly secur
 
 Customers looking to leverage other models in addition to the above can also take advantage of Mendix's [(Azure) OpenAI Connector](/appstore/modules/genai/reference-guide/external-connectors/openai/) and Amazon [Bedrock Connector](/appstore/modules/genai/reference-guide/external-connectors/bedrock/) to integrate numerous other models into their apps.
 
+### Technical Details for Model Resource Packs
+
+| GenAI Model Resource Pack Plan             | S                 | M                 | L                 |
+| ------------------------------------------ | ----------------- | ----------------- | ----------------- |
+| Anthropic Claude V3.5 (Tokens in/month)    | 2.5 million in    | 5 million         | 10 million        |
+| Anthropic Claude V3.5 (Tokens out/month)   | 1.25 million out  | 2.5 million       | 5 million         |
+| Cohere Embed V3 (Tokens in/month)          | 5 million in      | 10 million        | 20 million        |
+
 ## Knowledge Bases
 
 Mendix Cloud Knowledge Base Resource Packs provide customers with an elastic, logically isolated vector database, to use for standard Generative AI architectural patterns such as Retrieval-Augmented Generation (RAG), semantic similarity search, and other Generative AI use cases. The Knowledge Bases on Mendix Cloud are based on AWS's highly secure Amazon Bedrock Knowledge Bases capability, combined with AWS' OpenSearch Serverless database— a widely adopted standard infrastructure for Generative AI Knowledge Bases on AWS, ensuring fast & accurate information retrieval.
@@ -46,6 +54,14 @@ Knowledge bases enable you to bring your own data for RAG, semantic similarity s
 * Manage knowledge base content and add metadata labels
 
 Knowledge Bases are based on elastically scaling, serverless OpenSearch vector databases, to ensure high performance under load. The database is set up as a highly available cluster to ensure business continuity. Customer data is stored in logical isolation from other customers and is not used for model training, ensuring data security and privacy in compliance with industry standards.
+
+### Technical Details for Knowledge Base Resource Packs
+
+| GenAI Knowledge Base Resource Pack    | Standard      | 
+| ------------------------------------- | ------------- |
+| Compute                               | Elastic       |
+| Memory                                | Elastic       |
+| Disk Space                            | 10 GB         |
 
 ## Mendix Portal
 
@@ -66,6 +82,7 @@ The [Mendix Cloud GenAI connector](/appstore/modules/genai/mx-cloud-genai/MxGenA
 Mendix Cloud GenAI Resource Packs are available in the following regions of Mendix Cloud:
 
 * Europe (Frankfurt) - eu-central-1
+* Canada (Montreal) - ca-central-1
 
 ## Understanding Third-Party Requirements
 

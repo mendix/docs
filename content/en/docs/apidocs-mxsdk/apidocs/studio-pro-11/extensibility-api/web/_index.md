@@ -42,3 +42,4 @@ Here is a list of how-tos for you to begin with:
 * [How to Show a Popup Notification Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/notification-api/)
 * [How to View User Preferences Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/preference-api/)
 * [How to Show a Modal Dialog Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/dialog-api/)
+* [How to Open Documents Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/editor-api/)

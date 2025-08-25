@@ -1,7 +1,6 @@
 ---
 title: "Tracing"
 url: /refguide/tracing-in-runtime/
-beta: true
 description: "Describes how to setup and use tracing in the Mendix Runtime."
 ---
 

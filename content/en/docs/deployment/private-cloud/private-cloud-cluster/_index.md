@@ -53,7 +53,7 @@ Should you consider using a connected environment, the following URLs should be 
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/image4.png" class="no-border" >}}
 
-4. Open the [Global Navigation menu](/portal/global-navigation/) and select **Deployment**.
+4. Open the [Global Navigation menu](/global-navigation/) and select **Deployment**.
 5. Select **Mendix for Private Cloud** from the top menu bar in the Mendix Portal.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/cluster-manager.png" class="no-border" >}}

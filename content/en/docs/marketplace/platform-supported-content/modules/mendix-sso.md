@@ -101,6 +101,8 @@ To enable Mendix SSO in your app, follow these steps:
 
     {{% alert color="info" %}}If you are using Mendix SSO v2, you can use the *default* user administration pages. For more information, see the [Customizing Mendix SSO](#customizing) section below.{{% /alert %}}
 
+    Your app is now configured to use Mendix Single Sign-On (SSO) when deployed to the Mendix Cloud. For local environments or Free App environments, you can enable Mendix SSO by setting the constant `MendixSSO.SSOEnabled` to *True*. While this configuration is applied automatically during Mendix Cloud deployments, it must be set manually for local environments or Free App environments.
+
 4. Turn on the **Production** security level and configure **User roles** *User* and *Administrator* to have access to the appropriate **MendixSSO** module roles by performing the following steps:
     1. Open app **Security** from the **App Explorer**.
     2. Set **Security level** to **Production**.

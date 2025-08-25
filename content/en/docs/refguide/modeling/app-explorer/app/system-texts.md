@@ -7,9 +7,9 @@ url: /refguide/system-texts/
 ## Introduction
 
 {{% alert color="info" %}}
-The web version of the system texts editor is currently an [experimental](/releasenotes/release-status/) feature. You can enable it via **Preferences** > **New Features**. 
+The web version of the system texts editor is enabled by default. You can disable it via **Preferences** > **New Features**. 
 
-If Translation Generator is also enabled, you can use this AI-powered translation tool in the new editor to translate the system texts. For more information, see the [Generating Translation for System Texts](/refguide/translation-generator/#translate-system-text) section in *Translation Generator*.
+If Translation Generator is enabled, you can use this AI-powered translation tool in the new editor to translate the system texts. For more information, see the [Generating Translation for System Texts](/refguide/translation-generator/#translate-system-text) section in *Translation Generator*.
 {{% /alert %}}
 
 System texts are texts that are shown automatically to end-users by the server or the client. 

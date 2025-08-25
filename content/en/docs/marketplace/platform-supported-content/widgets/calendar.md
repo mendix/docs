@@ -1,68 +1,82 @@
 ---
 title: "Calendar"
 url: /appstore/widgets/calendar/
+deprecated: true
 description: "Describes the configuration and usage of the Calendar widget, which is available in the Mendix Marketplace."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## Introduction
 
+{{% alert color="info" %}}
+This documentation applies to version 1 of the Calendar widget. 
+
+For documentation on versions 2 and above of Calendar, refer to [Calendar module](/appstore/modules/calendar-module/).
+{{% /alert %}}
+
 The [Calendar](https://marketplace.mendix.com/link/component/107954/) widget can be used to display and manage calendar events.
 
 ### Features
 
-* Add and edit calendar events
-* Drag and drop calendar events
-* Change calendar event colors
-* Retrieve events based on selected date ranges
+* Add and edit calendar events.
+* Drag and drop calendar events.
+* Change calendar event colors.
+* Retrieve events based on selected date ranges.
 
 ## Basic Configuration
 
-Drag the widget into a data view which provides a calendar entity (containing calendar config attributes) as context. Next, use the configuration properties described in the following sections.
+Drag the widget into a data view that provides a calendar entity, which contains calendar config attributes, as context. Next, use the configuration properties described in the following sections.
 
 ### Data Source Tab
 
-* **Data source** – determines retrieval of the calendar events via context, database, microflow, or nanoflow
-    * Default: **Context**
-* **Event entity** – the entity that represents the event to be displayed by the calendar
-* **XPath** – filters the events retrieved from the database by the configured XPath
-    * Configurable when the **Data source** is set to **Database**
-* **Microflow** – The microflow executed to retrieve the calendar events
-    * Configurable when the **Data source** is set to **Microflow**
-* **Nanoflow** – the nanoflow executed to retrieve the calendar events
-    * Configurable when the **Data source** is set to **Nanoflow**
-* **Title attribute** – the String attribute containing the calendar event's title
-    * Configurable when the **Event entity** is configured
-* **All day attribute** – the Boolean attribute indicating if a calendar event takes a full day
-    * Configurable when the **Event entity** is configured
-* **Start attribute** – the DateTime attribute indicating the start of a calendar event
-    * Configurable when the **Event entity** is configured
-* **End attribute** – the DateTime attribute indicating the end of a calendar event
-    * Configurable when the **Event entity** is configured
-* **Color attribute** – the String attribute affecting the background of a calendar event
-    * Configurable when the **Event entity** is configured
-    * All HTML supported color formats are supported (for example "red", "#FF0000", "rgb(250,10,20)" or "rgba(10,10,10, 0.5)")
-* **Refresh data source on view** – enables the retrieval of a subset of a larger data set by doing the following:
-    * Updating the **View start attribute** and **View end attribute** values when the viewable calendar dates change.
-    * Repopulating the calendar with events by executing the **Microflow** which should use the **View start attribute** and **View end attribute** values as data retrieval constraints (for example `End > $CalenderView/StartAttribute` and `Start < $CalenderView/EndAttribute]`).
+* **Data source** – Determines the retrieval of the calendar events via context, database, microflow, or nanoflow.     
+    The default value is **Context**.
+* **Event entity** – The entity that represents the event to be displayed by the calendar.
+* **XPath** – Filters the events retrieved from the database by the configured XPath.    
+    This is configurable when the **Data source** is set to **Database**.
+* **Microflow** – The microflow executed to retrieve the calendar events.    
+    This is configurable when the **Data source** is set to **Microflow**.
+* **Nanoflow** – The nanoflow executed to retrieve the calendar events.    
+    This is configurable when the **Data source** is set to **Nanoflow**.
+* **Title attribute** – The String attribute containing the calendar event's title.    
+    This is configurable when the **Event entity** is configured.
+* **All day attribute** – The Boolean attribute indicating whether a calendar event takes a full day.    
+    This is configurable when the **Event entity** is configured.
+* **Start attribute** – The DateTime attribute indicating the start of a calendar event.    
+    This is configurable when the **Event entity** is configured.
+* **End attribute** – The DateTime attribute indicating the end of a calendar event.    
+    This is configurable when the **Event entity** is configured.
+* **Color attribute** – The String attribute affecting the background of a calendar event.    
+    This is configurable when the **Event entity** is configured.    
+    All HTML supported color formats are supported, for example, "red", "#FF0000", "rgb(250,10,20)" or "rgba(10,10,10, 0.5)".
+* **Refresh data source on view** – Enables the retrieval of a subset of a larger data set by doing the following:
+
+    * Updating the **View start attribute** and the **View end attribute** values when the viewable calendar dates change.
+    * Repopulating the calendar with events by executing the **Microflow** which should use the **View start attribute** and **View end attribute** values as data retrieval constraints. Example: `End > $CalenderView/StartAttribute` and `Start < $CalenderView/EndAttribute]`.
     * Default: **No**
-    * Configurable when the **Data source** is set to **Microflow**
-* **View start attribute** – the DateTime attribute that indicates the lower date and time boundary of events displayed on the calendar
-* **View end attribute** – the DateTime attribute that indicates the upper date and time boundary of events displayed on the calendar
+    * This is configurable when the **Data source** is set to **Microflow**.
+* **View start attribute** – The DateTime attribute that indicates the lower date and time boundary of events displayed on the calendar.
+* **View end attribute** – The DateTime attribute that indicates the upper date and time boundary of events displayed on the calendar.
 
 ### View Tab
 
-* **View** – determines the calendar's views:
-    * **Standard** – day, week, and month view only
-    * **Custom** – custom views configured in **Custom top bar views**
-    * Default: **Standard**
-* **Initial selected view** – determines the view when the calendar becomes visible for the first time
-    * Default: **Month**
-    * Options are **Day**, **Week**, **Month**, **Work week** (available as a custom view), **Agenda** (available as a custom view)
-* **Start date attribute** – the DateTime attribute indicating the start date of the current calendar view. Depending on the view, the actual view's start date may differ. For example, if a Wednesday is configured as the start date in a week view then the Monday just before that date is the actual start date.
-* **Custom top bar views** – the custom calendar views, which are configurable when **View** is set to **Custom**, offer the following options:
+* **View** – Determines the calendar's views:
+    
+    * **Standard** – Day, week, and month view only. This is the default value.
+    * **Custom** – Custom views configured in **Custom top bar views**.
+* **Initial selected view** – Determines the view when the calendar becomes visible for the first time. The available options are:
+    
+    * **Day**
+    * **Week**
+    * **Month**. This is the default.
+    * **Work week**. This is available as a custom view.
+    * **Agenda**. This is available as a custom view.
+* **Start date attribute** – The DateTime attribute indicating the start date of the current calendar view. Depending on the view, the actual view's start date may differ. For example, if a Wednesday is configured as the start date in a week view, then the Monday just before that date is the actual start date.
+* **Custom top bar views** – The custom calendar views, which are configurable when **View** is set to **Custom**, offer the following options:
+    
     * **Appearance** tab
-        * **Item** – the type of element and, thus supported calendar views, to be added to the top bar of the calendar. The default is **Month button**. The following types are supported: 
+        * **Item** – The type of element and the supported calendar views to be added to the top bar of the calendar. The default is **Month button**. The following types are supported: 
+
             * **Previous button**
             * **Today button**
             * **Next button**
@@ -72,69 +86,53 @@ Drag the widget into a data view which provides a calendar entity (containing ca
             * **Work week button**
             * **Day button**
             * **Agenda button**
-        * **Position** – determines the alignment of the buttons and text in the calendar's top bar
-            * Default: **Left**
-            * Options are **Left**, **Center**, **Right**
-        * **Caption** – the text for the button or title depending in the selected **Item** type
-        * **Render mode** – determines whether the button is rendered as an actual button or a link
-            * Default: **Button**
-        * **Button tooltip** – optional text shown in a tooltip when hovering the button
-        * **Button style** – sets the button's brand style
-            * Default: **Default**
+        * **Position** – Determines the alignment of the buttons and the text in the calendar's top bar. The options are:
+
+            * **Left**. This is the default.
+            * **Center**
+            * **Right**
+        * **Caption** – The text for the button or title, depending on the selected **Item** type.
+        * **Render mode** – Determines whether the button is rendered as an actual button or a link. The default value is **Button**.
+        * **Button tooltip** – Optional text shown in a tooltip when hovering over the button.
+        * **Button style** – Sets the button's brand style. The default value is **Default**.
     * **Custom formats** tab
-        * **Header day format** – the day formatting in the view's header columns
-            * Configurable when **Item** is set to **Day button**, **Week button**, **Work week button**, **Month button**, or **Agenda button**
-            * Use Mendix date formats (for example 'EEEE dd/MM'). 
-        * **Cell date format** – the day formatting of a certain day cell in a month view 
-            * Configurable when **Item** is set to **Month button** 
-            * Use Mendix date formats (for example 'dd')
-        * **Time gutter format** – the time formatting in the first column of the view
-            * Configurable when **Item** is set to **Day button**, **Week button**, **Work week button**, or **Agenda button** 
-            * Use Mendix date formats (for example 'HH:mm')
-        * **Date gutter format** – the date formatting in the first column of the view. Use Mendix date formats (for example 'EEE MMM d')
-            * Configurable when **Item** is set to **Agenda button** 
+        * **Header day format** – The day formatting in the view's header columns. This is configurable when **Item** is set to **Day button**, **Week button**, **Work week button**, **Month button**, or **Agenda button**.    
+            Use Mendix date formats, such as `EEEE dd/MM`. 
+        * **Cell date format** – The day formatting of a certain day cell in a month view. This is configurable when **Item** is set to **Month button**.    
+            Use Mendix date formats, such as `dd`.
+        * **Time gutter format** – The time formatting in the first column of the view. This is configurable when **Item** is set to **Day button**, **Week button**, **Work week button**, or **Agenda button**.     
+            Use Mendix date formats, such as `HH:mm`.
+        * **Date gutter format** – The date formatting in the first column of the view. This is configurable when **Item** is set to **Agenda button**.    
+            Use Mendix date formats, such as `EEE MMM d`. 
     * **Text** tab
-        * **Default all day text** – the text indicating an event will take a full day in the agenda view
-            * Configurable when **Item** is set to **Agenda button** 
-        * **Header date** – the text for the date column header in the agenda view
-            * Configurable when **Item** is set to **Agenda button** 
-        * **Header time** – the text for the time column header in the agenda view
-            * Configurable when **Item** is set to **Agenda button**
-        * **Header event** – the text for the event column header in the agenda view
-            * Configurable when **Item** is set to **Agenda button** 
-* **Editable** (default: **Default**) – determines whether the calendar is editable
-    * In the default mode, the surrounding data view's editability is decisive
-* **Enable create** – determines whether the calendar allows creation of new events by clicking on and dragging over date and time slots
-    * Default: **Yes**
+        * **Default all day text** – The text indicating that an event will take a full day in the agenda view. This is configurable when **Item** is set to **Agenda button**. 
+        * **Header date** – The text for the date column header in the agenda view. This is configurable when **Item** is set to **Agenda button**. 
+        * **Header time** – The text for the time column header in the agenda view. This is configurable when **Item** is set to **Agenda button**.
+        * **Header event** – The text for the event column header in the agenda view. This is configurable when **Item** is set to **Agenda button**. 
+* **Editable** – Determines whether the calendar is editable.     
+    The default value is **Default**. In the default mode, the surrounding data view's editability is decisive.
+* **Enable create** – Determines whether the calendar allows the creation of new events by clicking on and dragging over date and time slots.    
+    The default value is **Yes**.
 
 ### Events Tab
 
-* **On click** – determines the type of the executed action triggered when clicking a calendar event or day slot
-    * default: **Do nothing** 
-* **On click microflow** – the microflow executed when clicking a calendar event or day slot
-    * Configurable when **On click** is set to **Call a microflow** 
-* **On click nanoflow** – the nanoflow executed when clicking a calendar event or day slot
-    * Configurable when **On click** is set to **Call a nanoflow**
-* **On create** – determines the type of the executed action triggered when a date or time slot is selected and the **Enable create** is set to **Yes**
-    * Default: **Do nothing**
-* **Create association** – sets an association between the created event object and the calendar object which is provided with a data view as context to the widget
-* **On create microflow** – the microflow executed when a date or time slot is selected and the **Enable create** is set to **Yes**
-    * Configurable when **On create** is set to **Call a microflow**
-* **On create nanoflow** – the nanoflow executed when a date or time slot is selected and the **Enable create** is set to **Yes**
-    * Configurable when **On create** is set to **Call a nanoflow**
-* **On change** – determines the type of the executed action triggered when moving (by dragging) or resizing an event
-    * Default: **Do nothing**
-* **On change microflow** – the microflow executed when moving (by dragging) or resizing an event
-    * Configurable when **On change** is set to **Call a microflow**
-* **On change nanoflow** – the nanoflow executed when moving (by dragging) or resizing an event
-    * Configurable when **On change** is set to **Call a nanoflow**
+* **On click** – Determines the type of the executed action triggered when clicking a calendar event or day slot. The default value is **Do nothing**. 
+* **On click microflow** – The microflow executed when clicking a calendar event or day slot. This is configurable when **On click** is set to **Call a microflow**. 
+* **On click nanoflow** – The nanoflow executed when clicking a calendar event or day slot. This is configurable when **On click** is set to **Call a nanoflow**.
+* **On create** – Determines the type of the executed action triggered when a date or time slot is selected and when **Enable create** is set to **Yes**. The default value is **Do nothing**.
+* **Create association** – Sets an association between the created event object and the calendar object which is provided with a data view as context to the widget.
+* **On create microflow** – The microflow executed when a date or time slot is selected and when **Enable create** is set to **Yes**. This is configurable when **On create** is set to **Call a microflow**.
+* **On create nanoflow** – The nanoflow executed when a date or time slot is selected and when **Enable create** is set to **Yes**. This is configurable when **On create** is set to **Call a nanoflow**.
+* **On change** – Determines the type of the executed action triggered when moving, by dragging, or resizing an event. The default value is **Do nothing**.
+* **On change microflow** – The microflow executed when moving, by dragging, or resizing an event. This is configurable when **On change** is set to **Call a microflow**.
+* **On change nanoflow** – The nanoflow executed when moving, by dragging, or resizing an event. This is configurable when **On change** is set to **Call a nanoflow**.
 
 ### Size Tab
 
-* **Width unit** (default: **Percentage**) – determines whether the unit of the **Width** value is a percentage or a pixel amount
-* **Width** (default: **100**) – the width value of the calendar
-* **Height unit** (default: **Pixels**) – determines whether the unit of the **Width** value is a pixel amount, a percentage of the width, or a percentage of the parent height
-* **Height** (default: **580**) – the height value of the calendar
+* **Width unit** – Determines whether the unit of the **Width** value is a percentage or a pixel amount. The default value is **Percentage**.
+* **Width** – Determines the width value of the calendar. The default value is **100**.
+* **Height unit** – Determines whether the unit of the **Width** value is a pixel amount, a percentage of the width, or a percentage of the parent height. The default value is **Pixels**.
+* **Height** – Determines the height value of the calendar. The default value is **580**.
 
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/calendar/calendar2.gif" class="no-border" >}}
 
@@ -143,20 +141,21 @@ Drag the widget into a data view which provides a calendar entity (containing ca
 To configure an example Calendar widget in a basic way, follow these steps:
 
 1. Place the widget in a data container like a data view, list view, or template grid widget.
-1. Navigate to the **Data Source** tab and configure the data source type to retrieve a list of events. You can use a **Microflow** for this purpose.
-1. Configure the **Event** entity. For this example, create and select an entity named *Appointment* in your domain model with the following attributes: 
+2. Navigate to the **Data Source** tab and configure the data source type to retrieve a list of events. You can use a **Microflow** for this purpose.
+3. Configure the **Event** entity. For this example, create and select an entity named *Appointment* in your domain model with the following attributes: 
+
     * title (string)
     * start (data-time)
     * end (data-time)
     * allDay (Boolean)
     * color (string)
-1. Select or create a microflow that retrieves a list of the calendar events. Use the **Retrieve** action to retrieve a list of **Appointments** from the database, and define this list as a return type.
-1. Configure the title, all day, start, end, and color attribute fields in the **View** tab. Select these attributes from the **Appointment** entity.
+4. Select or create a microflow that retrieves a list of the calendar events. Use the **Retrieve** action to retrieve a list of **Appointments** from the database, and define this list as a return type.
+5. Configure the title, all day, start, end, and color attribute fields in the **View** tab. Select these attributes from the **Appointment** entity.
 
 Optionally, you can further configure the widget by following these steps:
 
 1. Choose the initial selected view in the **View** tab:
     1. Select a **Day**, **Week**, or **Month** view as the default.
-1. In the **Events** tab, choose the **On Create** event and select **Call a Microflow**: 
-1. Create this microflow so that it opens a new page, like an overview edit page of the **Appointment** entity mentioned above. This way, when a time slot in the calendar is selected, you can add or edit a new event.
-1. Navigate to the **Size** tab and define the width and height of the widget so it suits your page.
+2. In the **Events** tab, choose the **On Create** event and select **Call a Microflow**: 
+3. Create this microflow so that it opens a new page, like an overview edit page of the **Appointment** entity mentioned above. This way, when a time slot in the calendar is selected, you can add or edit a new event.
+4. Navigate to the **Size** tab and define the width and height of the widget so it suits your page.

@@ -7,13 +7,13 @@ description: "Describes the configuration and usage of the Data Grid 2 widget, w
 
 ## Introduction {#introduction}
 
-[Data Grid 2](https://marketplace.mendix.com/link/component/116540) is the successor to the standard data grid widget for displaying content in a tabular form. It comes with many powerful new features and settings like support for widgets, row and cell coloring, responsive layout, accessibility, and paging options like virtual scrolling. The Data Grid 2 widget offers personalization support so that end-users can show, hide, and re-order columns. Personalizations can be persisted in the database for flexibility and control. 
+[Data Grid 2](https://marketplace.mendix.com/link/component/116540) is the successor to the standard data grid widget for displaying content in a tabular form. It comes with many powerful new features and settings like support for widgets, row and cell coloring, responsive layout, accessibility, and paging options like virtual scrolling. The Data Grid 2 widget offers personalization support so that end-users can show, hide, and re-order columns. Personalizations can be persisted in the database for flexibility and control.
 
 This document focusing on explaining module features. For precise details on data grid 2 widget properties, see [Data Grid 2 Properties](/appstore/modules/data-grid-2-properties/).
 
 The data source determines which objects will be shown in a Data Grid 2 widget. In v2.3.0 and above, selecting the entity of the data source will automatically fill the contents, create columns with filters, and create buttons. You can also select which columns to use for the content generation.
 
-The widget also uses a flexible approach for filtering. You can drag data-grid-specific widgets into the header of the grid and tailor the behavior of the filters. There are filters for text, numbers, and dates, and there is an option to add drop-down filters for single or multiple selections.
+The widget uses a flexible, modular approach for filtering. You can place dedicated filter widgets (text filter, date filter, number filter, dropdown filter) in the filters placeholder above the grid, or within individual column headers. These specialized filter widgets provide tailored behavior for different data types and use cases. This system is superior to a built-in filtering system in that it allows for a more maintainable and customizable architecture.
 
 Here is an example of a data grid using filters:
 
@@ -21,13 +21,15 @@ Here is an example of a data grid using filters:
 
 You can enable these advanced options to customize your data grid:
 
-* Pagination type
-* Pagination position
+* Pagination type and positioning
+* Row count display
+* Loading state indicators
 * Empty list option
 * Dynamic row and cell class
 * Column capabilities
+* Filter personalization settings
 * Custom configuration
-* Header Filters
+* Modular filtering with dedicated filter widgets
 
 ## Capabilities
 
@@ -68,7 +70,7 @@ Here is an example of hiding button containing columns to be hidden:
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/hiding.png" alt="Example of hiding button containing columns to be hidden" class="no-border" >}}
 
 {{% alert color="info" %}}
-When a column is marked as “Yes, hidden by default” it will render differently in **Structure mode** and **Design mode** and to indicate that the column is hidden. **When running the application, the column will in fact be hidden by default**. 
+When a column is marked as “Yes, hidden by default” it will render differently in **Structure mode** and **Design mode** and to indicate that the column is hidden. **When running the application, the column will in fact be hidden by default**.
 {{% /alert %}}
 
 Here is an example containing a column with **Yes, hidden by default** in **Structure mode**:
@@ -85,7 +87,7 @@ Here is an example containing a column with **Yes, hidden by default** in **Desi
 **Allow Row Events** is only available when a column is set to **Custom Content**.
 {{% /alert %}}
 
-When set to **Yes**, default events such as On click action or selection will be triggered when the user interacts with the content. 
+When set to **Yes**, default events such as On click action or selection will be triggered when the user interacts with the content.
 
 {{% alert color="alert" %}}
 If a column contains interactive elements such as buttons, this might lead to unexpected behavior when both a click on the button and the action configured on the row are triggered. To prevent default events from triggering when interacting with content, set this setting to **No**.
@@ -110,13 +112,17 @@ You can configure pagination based on the following properties:
 * **Position** — The **Position of paging button** options allow you to position paging buttons above or below the data grid.
 * **Visibility** — The **Show paging buttons** options allow you to always show paging, or to automatically show and hide paging based on the amount of available data compared to the display limit per page.
 
-### Virtual Scrolling 
+### Virtual Scrolling
 
 The **Virtual Scrolling** option forces the data grid to show a fixed amount of items (defined in the page size option) within a scrollable container. When the end-user reaches the bottom of the scrollable container it fetches more items automatically.
 
 ### Load More
 
 This option functions similarly to the **Virtual Scrolling** feature, but instead of automatically loading data as the end-user scrolls, a button is displayed at the end of the list of items. Clicking this button enables the end-user to fetch more items.
+
+### Row Count Display
+
+When enabled, the pagination area displays the total number of rows alongside navigation controls. This provides users with context about the data set size. The counter shows information such as "1 to 20 of 150", and automatically updates when users navigate between pages, apply filters, or refresh data. This feature works with all pagination modes including virtual scrolling and load more.
 
 ## Columns
 
@@ -196,14 +202,16 @@ This property is not available if you enable **Custom content** for the column
 
 ### Association Filter {#association-filter}
 
-* **Reference** — this property defines the association that will be used for filtering. When set, it enables filtering over association with the Drop-down filter. Drop-down filter will prioritize this property over `Attribute` property.
-* **Data source** — defines data source for filter options. The data source should return list of all possible entities that could be associated with a parent.
-* **Use lazy load** — When set to **Yes**, data for the filter will be fetched only when the drop-down filter is opened. This improves the loading times of the data grid, but limits the functionality of saving filter values. For more details, see [Drop-down Filter](#drop-down-filter).
-* **Option caption** — the expression that will be used as caption for the option.
-
-{{% alert color="info" %}}
-This column configuration is intended to be used in conjunction with [Drop-down Filter](#drop-down-filter). Other filter types do not support association filtering.
+{{% alert color="warning" %}}
+Association filtering configuration has been moved from column properties to the dedicated dropdown filter widget. Configure association filtering directly in the dropdown filter widget properties when using custom mode.
 {{% /alert %}}
+
+The dropdown filter widget supports association filtering when configured in custom mode:
+
+* **Entity (Association)** — defines the association that will be used for filtering
+* **Selectable objects** — defines data source for filter options, returning list of all possible entities that could be associated
+* **Use lazy load** — controls when filter options are loaded. When set to **No** (recommended), data is fetched immediately providing better personalization support. When set to **Yes**, data is fetched only when the filter is opened, improving initial load times but limiting personalization capabilities
+* **Option caption** — expression used as caption for each option in the dropdown
 
 ### Visible {#visible-filter}
 
@@ -241,13 +249,23 @@ Triggers an action (such as a nanoflow, microflow, or Show page action) when the
 
 ## Filters {#filters}
 
-Sets of filters can be used in combination with data grids. To be able to use filters you need to select the option **Show column filters**. When this option is selected a drop-zone where you can place your desired filter widget will appear in each column header.
+Data Grid 2 uses a modular filtering system with dedicated filter widgets that can be placed in two locations:
+
+* **Column Headers**: Individual filters can be placed in column headers by enabling **Show column filters**. When this option is selected, a drop zone appears in each column header where you can place the appropriate filter widget.
+* **Filters Placeholder**: Grid-wide filters can be placed in the [filters placeholder](/appstore/modules/data-grid-2-properties/#filters-placeholder). This allows for filtering across multiple attributes and more complex filtering scenarios.
 
 {{% alert color="warning" %}}
-The type of your selected attribute should match the filter type. For example, a **Text filter** should be used for a String attribute.
+The type of your selected attribute should match the filter type. For example, a **Text filter** should be used for a string attribute.
 
 Also the desired attribute must be filterable. For example, not a value which is calculated.
 {{% /alert %}}
+
+### Filter Widget Configuration
+
+All filter widgets support two configuration modes:
+
+* **Auto Mode**: automatically detects filterable attributes from the parent grid (works when placed in grid columns)
+* **Custom Mode**: allows manual specification of target data source and attributes for more flexible filtering scenarios
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/settings-show-column-filters.png" alt="Settings for data grid 2" class="no-border" >}}
 
@@ -311,12 +329,24 @@ In this section you can select an action to be executed **On change** by the fil
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/dropdown-filter.png" alt="Example of default drop-down filter" class="no-border" >}}
 
-**Drop-down filter** allows users to match enumeration values, Boolean attributes, or an association attribute. To configure the available options when you press the drop-down filter, you can manually add them to the options list or select **Automatic options** to automatically load the values:
+**Drop-down filter** allows users to match enumeration values, Boolean attributes, or an association attribute. The filter can be configured to work in Auto mode (detecting attributes from grid context) or custom mode (manual data source and attribute specification).
+
+In custom mode, you can manually configure the data source and attributes, while Auto mode automatically inherits configuration from the parent column. The filter supports both attribute-based filtering (enumerations, booleans) and association-based filtering (references to other entities).
+
+For association filtering, you can configure:
+
+* **Filter by Association**: sets the filter to operate on entity associations
+* **Entity**: selects the target association for filtering
+* **Selectable objects**: configures the data source that provides available filter options
+* **Use lazy load**: controls when options are loaded (immediate vs on-demand)
+* **Option caption**: defines how each option is displayed to users
+
+The filter also supports enhanced features like multi-select, filterable options (combobox-style), and various selection methods (checkbox or row click).
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/dropdown-filter-settings.png" alt="Example of settings for drop-down filter" class="no-border" >}}
 
 {{% alert color="info" %}}
-When a drop-down filter is used in conjunction with an Association Filter data grid configuration, only **Automatic options** are supported. Any custom options will be ignored. To enable association filtering, see the [Association Filter](#association-filter) section.
+When using **Custom** mode, you can configure the target data source and attributes directly in the filter widget properties. **Auto** mode automatically inherits configuration from the parent column when the filter is placed in a column header.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
@@ -471,11 +501,11 @@ The Data Grid 2 widget ships with built-in functionality to export data from the
 
 To export data from the data grid, create a new nanoflow that calls *Export_To_Excel*. The *Export_To_Excel* action has a set of inputs:
 
-* **Datagrid name** - the name of the data grid from which data should be exported (the name can be found and copied from the data grid's settings (**Properties** > **Common** > **Name**))
-* **File name** - the file name to use for the exported document (does not require an appended file extension)
-* **Sheet name** - the name to use for the Excel sheet of the exported document
-* **Include column names** - a Boolean expression that, if true, tells the action to include column captions as the first row in the exported document
-* **Chunk size** - the number of rows fetched from the backend to the browser at a time.
+* **Datagrid name**: the name of the data grid from which data should be exported (the name can be found and copied from the data grid's settings (**Properties** > **Common** > **Name**))
+* **File name**: the file name to use for the exported document (does not require an appended file extension)
+* **Sheet name**: the name to use for the Excel sheet of the exported document.
+* **Include column names**: a Boolean expression that, if true, tells the action to include column captions as the first row in the exported document
+* **Chunk size**: the number of rows fetched from the backend to the browser at a time.
 
 {{% alert color="info" %}}
 The recommended value for **Chunk Size** is 200. However, because each data grid has a unique set of columns and varying amounts of data per row, a different chunk size might result in better performance.
@@ -508,9 +538,9 @@ The performance of the new data grid can be affected if sorting or filtering are
 If you are using Atlas v2.x and you cannot upgrade to Atlas 3 at the moment, please replace the line 3 `cssFiles` with the following code in the file `theme/settings.json`:
 
 ```json
-"cssFiles": [ 
-    "styles/web/css/main.css", 
-    "theme.compiled.css" 
+"cssFiles": [
+    "styles/web/css/main.css",
+    "theme.compiled.css"
 ],
 ```
 
@@ -526,7 +556,7 @@ Since the data grid widget keeps selected items in short-living memory that is c
 
 ### Selection Mode
 
-In **Single** selection mode, users are limited to selecting one row at a time. 
+In **Single** selection mode, users are limited to selecting one row at a time.
 
 In **Multi** mode, the user can select multiple rows.
 
@@ -548,44 +578,77 @@ The data grid settings support the case where it is possible to have both a sele
 
 The setting for action triggers is related to the selection method and can sometimes be ambiguous. See the table below to see which combinations of selection method and trigger are supported.
 
-| Selection method | Action trigger          | Selection trigger                                | Supported |
-| ---------------- | ----------------------- | ------------------------------------------------ | --------- |
+| Selection method | Action trigger          | Selection trigger                                                                                           | Supported |
+| ---------------- | ----------------------- | ----------------------------------------------------------------------------------------------------------- | --------- |
 | Checkbox         | Single click on the row | Click on the checkbox, <kbd>Ctrl</kbd> + click on the row (or <kbd>Command</kbd> + click on the row on Mac) | Yes       |
 | Checkbox         | Double-click on the row | Click on the checkbox, <kbd>Ctrl</kbd> + click on the row (or <kbd>Command</kbd> + click on the row on Mac) | Yes       |
-| Row              | Single click on the row |                                                  | No        |
-| Row              | Double-click on the row | <kbd>Ctrl</kbd> + click on the row (or <kbd>Command</kbd> + click on the row on Mac)                    | Yes       |
+| Row              | Single click on the row |                                                                                                             | No        |
+| Row              | Double-click on the row | <kbd>Ctrl</kbd> + click on the row (or <kbd>Command</kbd> + click on the row on Mac)                        | Yes       |
 
 To achieve this behavior, set the **On click trigger** to **Double click**. When a data grid is configured this way, the user may select a row by double-clicking it.
 
 ## Keyboard Support {#keyboard-support}
 
-| Key                      | Function                                                     |
-| ------------------------ | ------------------------------------------------------------ |
-| <kbd>→</kbd>              | Moves focus one cell to the right.                           |
-| <kbd>←</kbd>               | Moves focus one cell to the left.                            |
-| <kbd>↓</kbd>               | Moves focus one cell down.                                   |
-| <kbd>↑</kbd>                 | Moves focus one cell up.                                     |
-| <kbd>Page&nbsp;up</kbd>                  | Moves focus one page up.                                     |
-| <kbd>Page&nbsp;down</kbd>                | Moves focus once page down.                                  |
-| <kbd>Home</kbd>                     | Moves focus to the first cell in the row.                    |
-| <kbd>End</kbd>                      | Moves focus to the last cell in the row.                     |
-| <kbd>Ctrl</kbd> + <kbd>Home</kbd>              | Moves focus to the first cell in grid.                       |
-| <kbd>Ctrl</kbd> + <kbd>End</kbd>               | Moves focus to the last cell in grid.                        |
-| <kbd>Shift</kbd> + <kbd>Space</kbd>            | Selects current row. (1)                                     |
-| <kbd>Ctrl</kbd> + <kbd>A</kbd>             | Select all visible rows. (1)(2)                              |
-| <kbd>Shift</kbd> + <kbd>↑</kbd>/<kbd>↓</kbd> | Moves focus and selects current and row above/below. (1)(2)  |
-| <kbd>Shift</kbd> + <kbd>Page&nbsp;up</kbd>/<kbd>Page&nbsp;down</kbd>  | Moves focus one page up/down and selects all rows between current and final row. (1)(2) |
-| <kbd>Shift</kbd> + <kbd>Home</kbd>/<kbd>End</kbd>         | Moves focus to the start/end of the grid and selects all rows between current and final row. (1)(2) |
+| Key                                                                  | Function                                                                                            |
+| -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| <kbd>→</kbd>                                                         | Moves focus one cell to the right.                                                                  |
+| <kbd>←</kbd>                                                         | Moves focus one cell to the left.                                                                   |
+| <kbd>↓</kbd>                                                         | Moves focus one cell down.                                                                          |
+| <kbd>↑</kbd>                                                         | Moves focus one cell up.                                                                            |
+| <kbd>Page&nbsp;up</kbd>                                              | Moves focus one page up.                                                                            |
+| <kbd>Page&nbsp;down</kbd>                                            | Moves focus once page down.                                                                         |
+| <kbd>Home</kbd>                                                      | Moves focus to the first cell in the row.                                                           |
+| <kbd>End</kbd>                                                       | Moves focus to the last cell in the row.                                                            |
+| <kbd>Ctrl</kbd> + <kbd>Home</kbd>                                    | Moves focus to the first cell in grid.                                                              |
+| <kbd>Ctrl</kbd> + <kbd>End</kbd>                                     | Moves focus to the last cell in grid.                                                               |
+| <kbd>Shift</kbd> + <kbd>Space</kbd>                                  | Selects current row. (1)                                                                            |
+| <kbd>Ctrl</kbd> + <kbd>A</kbd>                                       | Select all visible rows. (1)(2)                                                                     |
+| <kbd>Shift</kbd> + <kbd>↑</kbd>/<kbd>↓</kbd>                         | Moves focus and selects current and row above/below. (1)(2)                                         |
+| <kbd>Shift</kbd> + <kbd>Page&nbsp;up</kbd>/<kbd>Page&nbsp;down</kbd> | Moves focus one page up/down and selects all rows between current and final row. (1)(2)             |
+| <kbd>Shift</kbd> + <kbd>Home</kbd>/<kbd>End</kbd>                    | Moves focus to the start/end of the grid and selects all rows between current and final row. (1)(2) |
 
 Legend:
 
-| Symbol    | Meaning   |
-| --- | --- |
-| 1 | Available only when selection is enabled. |
-| 2 | Available only when selection mode should be “Multi”. |
+| Symbol | Meaning                                               |
+| ------ | ---- |
+| 1      | Available only when selection is enabled.             |
+| 2      | Available only when selection mode should be **Multi**. |
 
 ## Resetting Filters
 
 Resetting filters is possible using **Reset_Filter** and **Reset_All_Filters** actions available as part of the Data Widgets module. Setting up these actions is a manual process that requires creating a nanoflow and setting the name of the filter or data grid to be reset.
 
 The name of the filter or data grid can be found at **Properties** > **Common** > **Name**.
+
+## Troubleshooting Runtime Errors {#troubleshooting-runtime-errors}
+
+### Filter Widget Errors {#filter-widget-errors}
+
+**Error**:
+> "The filter widget must be placed inside the column or header of the Data grid 2.0 or inside header of the Gallery widget."
+
+* Widget placement is incorrect.
+
+**Solution**:
+Place widget inside Gallery header, Data Grid 2 header, or Data Grid 2 column.
+
+**Error**:
+> "Unable to get filter store. Check parent widget configuration."
+
+* This error indicates that there is issue with widget settings. Most of the time this error happens when widget is placed in the header of Data Grid 2 or Gallery, but the **Filter attributes** setting is still set to **Auto**.
+
+**Solution**:
+Switch widget attributes setting to **Custom** and configure the attribute for filtering.
+
+**Error**:
+> "The [filter] is not compatible with [datatype] data type."
+
+* This error indicates that attribute configured in the Data Grid 2 for column is not compatible with current filter type.
+
+**Solution**: Change filter to appropriate filter type. For example for string attributes use text filter.
+
+> "The attribute is not filterable. Please choose a different attribute."
+
+* This error indicates that it is not possible to use current attribute for filtering due to technical limitations. 
+
+**Solution**: Read and understand why some attributes are filterable and other are not. Change the model or choose another attribute.

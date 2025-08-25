@@ -2,7 +2,6 @@
 title: "Show a Pop-up Notification Using Web API"
 linktitle: "Show Notification"
 url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/notification-api/
-weight: 30
 ---
 
 ## Introduction

@@ -17,6 +17,8 @@ For information on Mendix data storage policies and practices for Maia, see [Mai
 
 For information on what third-party services Maia uses and what data are sent to the third-party services, see the [Maia Third-Party Services](#maia-third-party-services) section below.
 
+For more information on how to ensure optimal performance of Maia, see the [Best Practice for Maia Performance](#maia-performance-best-practice) section below.
+
 ## Network Configuration Requirements {#maia-network-requirement}
 
 To ensure the smooth operation of Mendix AI Assistance (Maia), the following network requirements must be met:
@@ -56,7 +58,7 @@ Generators:
 
 ## Maia in Mendix Portal
 
-Various Maia features are available in Mendix Portal. For more information, see the [Maia in Mendix Portal](/portal/global-navigation/#maia-mx-portal) section in *Global Navigation*.
+Various Maia features are available in Mendix Portal. For more information, refer to [Maia in Mendix Portal](/maia-mx-portal/).
 
 ## Maia Third-Party Services {#maia-third-party-services}
 
@@ -80,3 +82,7 @@ The table below presents all the third-party services each Maia capability uses 
 | Maia Rewrite | [Mistral 7B](https://mistral.ai/news/announcing-mistral-7b/) hosted in Mendix AWS environment | The draft question description from users |
 | Maia Summarize | [Mistral 7B](https://mistral.ai/news/announcing-mistral-7b/) hosted in Mendix AWS environment | [Community](https://community.mendix.com/p/community) threads |
 | Maia Create User Story | [Mistral 7B](https://mistral.ai/news/announcing-mistral-7b/) hosted in Mendix AWS environment | User prompts |
+
+## Best Practice for Maia Performance {#maia-performance-best-practice}
+
+For optimal performance, Maia works best when handling focused, well-scoped requests. When working on complex or lengthy content generation tasks, you will get faster and more reliable results by breaking them into smaller, manageable steps. This approach not only reduces the risk of network issues, but often leads to higher-quality outputs that better meet your specific needs.

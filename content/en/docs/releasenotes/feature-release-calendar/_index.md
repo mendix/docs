@@ -12,7 +12,7 @@ With the release of Mendix 11, you can look forward to more new and exciting fea
 The new features were divided into major themes, which are described in the sections below.
 
 {{% alert color="info" %}}
-"GA" means general availability for all users. A GA release is different than a beta or experimental release. For more information, see [Release Status](/releasenotes/release-status/).
+General Availability means that a feature is available for all users. This type of release is different from a beta or experimental release. For more information, see [Release Status](/releasenotes/release-status/).
 {{% /alert %}}
 
 ## Enterprise Low-Code
@@ -20,7 +20,7 @@ The new features were divided into major themes, which are described in the sect
 | Capability or Feature | Expected Release |
 | --- | --- |
 | Module updates while retaining customizations                | General Availability: Q4 2025                             |
-| Easily comparing revisions                                   | Public beta: 2026                                            |
+| Easy comparison of revisions                                   | Public beta: 2026                                            |
 | Pull requests                                                | Public beta: 2026                                            |
 | Mendix on Azure                                              | Limited Availability: March 2025 <br/>General Availability: Summer 2025 |
 | Security Recommendations                                     | General Availability: 2026                                   |
@@ -30,20 +30,23 @@ The new features were divided into major themes, which are described in the sect
 | Start with Maia                                              | General Availability: Mx 11.0                                |
 | Menditect UI testing                                         | Public beta: Q2 2025<br/>General Availability H2 2025        |
 | Modernized Mendix unit testing                               | General Availability: April 2025                             |
-| Speed up role based access                                   | General Availability: February 2025                          |
+| Speed up role-based access                                   | General Availability: February 2025                          |
 | Software Composition                                         | General Availability: March 2025                             |
 | Software Composition Marketplace Outdated & Deprecated Findings | General Availability: September 2025                         |
 | Software Composition Marketplace Vulnerabilities             | General Availability: December 2025                          |
-| Policies                                                     | Public Beta: December 2025 <br/>General Availability: TBD    |
-| Optimized storage of association                             | General Availability: Mx 11.0                                |
+| Policies                                                     | Public beta: December 2025 <br/>General Availability: TBD    |
+| Cloud Tokens Dashboard                                      | General Availability: June 2025                              |
+| End Users Dashboard | Limited Availability: October 2025 |
+| Self-Service Provisioning & Deprovisioning of environments | General Availability: June 2025 |
+| Self-Service Resizing of environments | Limited Availability: July 2025 |
 | Bulk DML                                                     | General Availability: Q4 2025                             |
 | Increased decimal precision                                  | General Availability: Q4 2025                             |
 | Maia: text to OQL                                            | Public beta: Q2 2025<br/>General Availability: Q4 2025    |
 | Maia: generate test data                                     | Private beta: 2026                                           |
-| Consumed OpenAPI and API discovery                           | Released for public beta: Q2 2025<br/>General Availability: Q4 2025 |
-| Improved OpenAPI generation for REST publish                 | Released for General Availability:                         |
-| Visual query editor for view entities                        | Currently PoC <br/>General Availability: Q4 2025          |
-| Event broker HTTP Bridge                                     | Released public beta <br/>General Availability: Q4 2025   |
+| Consumed OpenAPI and API discovery                           | Public beta: Q2 2025<br/>General Availability: Q4 2025 |
+| Improved OpenAPI generation for REST publish                 | General Availability: June 2025                         |
+| Visual query editor for view entities                        | Proof of Concept: June 2025 <br/>General Availability: Q4 2025          |
+| Event broker HTTP Bridge                                     | Public beta: June 2025 <br/>General Availability: Q4 2025   |
 | Compass Maturity Assessment                                  | General Availability: July 28, 2025                      |
 | IdP-managed Admins                                           | Limited Availability: July 11, 2025                      |
 | Usage of keypairs for OIDC-based SSO to Mendix apps (OIDC SSO) | General Availability: May 15, 2025                      |

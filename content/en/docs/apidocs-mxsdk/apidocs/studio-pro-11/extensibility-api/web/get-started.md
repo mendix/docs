@@ -16,7 +16,6 @@ For more information, see the [Mendix Studio Pro Web Extensibility API](http://a
 You will need the following prerequisites:
 
 * Mendix Studio Pro version 10.21.0 or higher [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro). 
-* Install the latest Studio Pro version from the Mendix [Marketplace](https://marketplace.mendix.com/link/studiopro/).
 * A development IDE to develop your extensions. We recommend using [Visual Studio Code](https://code.visualstudio.com/).
 * Install the latest version 22.x.x of Node: https://nodejs.org/en/download.
 

@@ -21,7 +21,7 @@ Before you can use the Mendix Operator in your namespace you need to install it 
 
 If you are not already on the installation tab for your namespace, go to it by following these instructions:
 
-1. Go to the Cluster Manager page by opening the [Global Navigation Menu](/portal/global-navigation/), and then clicking **Deployment** > **Mendix on Kubernetes**.
+1. Go to the Cluster Manager page by opening the [Global Navigation Menu](/global-navigation/), and then clicking **Deployment** > **Mendix on Kubernetes**.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/cluster-manager.png" class="no-border" >}}
 

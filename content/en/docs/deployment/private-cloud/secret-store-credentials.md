@@ -769,11 +769,12 @@ To use this feature, you need to:
 After completing the prerequisites, follow these steps to switch from password-based authentication to managed identity authentication:
 
 1. Remove or comment out `database-password` from the `SecretProviderClass` and the associated Key vault Secret.
-2. Write down the value of `database-username` - this username will need to be removed on step 5.
-3. Edit the `database-jdbc-url` and add a `authentication=ActiveDirectoryManagedIdentity` parameter to the JDBC URL value: the URL should look like `jdbc:sqlserver://example.database.windows.net:1433;encrypt=true;trustServerCertificate=false;authentication=ActiveDirectoryManagedIdentity;`.
-4. Add yourself (or your Entra group) as an [Entra Admin user](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-configure?view=azuresql&tabs=azure-powershell#azure-portal-1) in the Azure SQL database.
+2. Write down the value of `database-username` - this username will need to be removed in step 6.
+3. Change the value of `database-username` to the environment's **Managed Identity Client ID**.
+4. Edit the `database-jdbc-url` and add a `authentication=ActiveDirectoryManagedIdentity` parameter to the JDBC URL value: the URL should look like `jdbc:sqlserver://example.database.windows.net:1433;encrypt=true;trustServerCertificate=false;authentication=ActiveDirectoryManagedIdentity;`.
+5. Add yourself (or your Entra group) as an [Entra Admin user](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-configure?view=azuresql&tabs=azure-powershell#azure-portal-1) in the Azure SQL database.
    Azure SQL can only have one Entra Admin, and to add multiple users you'll need to do grant access through an Entra group.
-5. Connect to the database using [Azure Query Editor](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-configure?view=azuresql&tabs=azure-cli#use-microsoft-entra-identity-to-connect-using-azure-portal-query-editor-for-azure-sql-database) using Entra Authentication, and run the following query
+6. Connect to the database using [Azure Query Editor](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-configure?view=azuresql&tabs=azure-cli#use-microsoft-entra-identity-to-connect-using-azure-portal-query-editor-for-azure-sql-database) using Entra Authentication, and run the following query
    (replace `<managed-identity-name>` with the **Name** of the environment's **Managed Identity**, and `<static-database-username>` with the `database-username` that was written down on step 2):
 
    ```sql
@@ -782,7 +783,7 @@ After completing the prerequisites, follow these steps to switch from password-b
    ALTER ROLE db_owner ADD MEMBER [<managed-identity-name>];
    ```
 
-6. Restart the Mendix app environment.
+7. Restart the Mendix app environment.
 
 Azure SQL database drivers have built-in support for Managed Identity authentication and use their local environment's Managed Identity.
 

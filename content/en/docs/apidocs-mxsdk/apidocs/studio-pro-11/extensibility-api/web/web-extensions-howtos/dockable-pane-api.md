@@ -2,7 +2,6 @@
 title: "Create a Dockable Pane Using Web API"
 linktitle: "Dockable Pane"
 url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/dockable-pane-api/
-weight: 10
 ---
 
 ## Introduction

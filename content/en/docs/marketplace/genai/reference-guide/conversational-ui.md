@@ -7,6 +7,7 @@ description: "Describes the Conversational UI marketplace module that assists de
 aliases:
    - /appstore/modules/genai/conversational-ui/
    - /appstore/modules/genai/conversational-ui-module/conversational-ui/
+   - /appstore/modules/genai/conversational-ui-module/
 ---
 
 ## Introduction {#introduction}
@@ -45,7 +46,8 @@ The Conversational UI module provides the following functionalities:
 
 ### Limitations {#limitations}
 
-This module is intended to enable building chat interactions between a human user and an AI model. It is not designed for conversations between two human users.
+* This module is intended to simplify the process of building chat interactions between a human user and an AI model. It is not designed to support conversations between two human users.
+* Currently, the chat interface does not work out of the box in Studio Pro 11, Atlas 4, or in React client enabled with the **Atlas_Topbar** and **Atlas_Sidebar** layouts.
 
 ### Prerequisites {#prerequisites}
 
@@ -259,6 +261,13 @@ You may need to use the following classes when building a more complex custom pa
 | `card--full-height` | To be added to a `card` container, in case the chat interface snippet needs to be displayed as a card | 
 | `layoutgrid--full-height` | To be added to any layoutgrid (1 row is supported) around the chat UI components |
 | `dataview--display-contents` | To be added to any data view around chat components to prevent it from breaking the flex-flow on the page | 
+| `chat-dataview--display-contents` | To be added to any data view around chat components and its direct child `div` containers to prevent them from breaking the flex-flow on the page | 
+| `chat-page--fullheight` | To be added to the container of a full-screen chat to ensure it fills available space and maintains proper flex layout with wrapping and padding | 
+| `chat-page--fullheight-centered` | To be added to a full-screen chat container to center it on the page with a maximum width, while preserving the full-height flex layout and wrapping | 
+
+#### Using a Custom Layout
+
+If you are using a custom layout in your application, you may need to use a layout other than **Atlas_Default**. For such scenarios, the module provides **Layout_MasterBase**—a layout derived from **Atlas_Default** that is applied to every page in the module. You can modify the properties of the master layout to change its appearance. Note that you need to reapply these customizations after each marketplace update.
 
 ### Token Consumption Monitor Snippets {#snippet-token-monitor}
 
@@ -288,13 +297,13 @@ The messages that are sent and received do not show up in the user interface, ev
 
 #### Cause 
 
-The chat UI snippets from this module rely on the height property of the parent element(s) to be defined. Any additional custom containers around the Conversational UI components might cause the `messages-container` element to shrink to zero height, which makes the messages disappear even in successful interactions.
+The chat UI snippets from this module rely on the height property of the parent element(s) to be defined. Any additional custom containers around the Conversational UI components might cause the `messages-container` element to shrink to zero height, which makes the messages disappear even in successful interactions. 
 
 #### Solution 
 
-Make sure that any custom containers and layout grids that were added on your page (or the page layout for that matter) around the Conversational UI components have their `height` property defined. Useful helper classes that could be used for this are `chat-container`, `chat-card--full-height`, and `layoutgrid--full-height`. 
+Make sure that any custom containers and layout grids that were added on your page (or the page layout for that matter) around the Conversational UI components have their `height` property defined. Useful helper classes that could be used for this are `chat-container`, `chat-card--full-height`, `chat-page--fullheight`, and `layoutgrid--full-height`. 
 
-If needed, verify that no data view widget is breaking the flow; for example, use `dataview--display-contents`. See the example page `ConversationalUI_FullScreenChat` for a basic implementation of the mentioned elements.
+If needed, verify that no data view widget is breaking the flow. For example, use `dataview--display-contents` or `chat-dataview--display-contents`, and set the direction to `Vertical` and the footer to `No Footer`. See the example page `ConversationalUI_FullScreenChat` for a basic implementation of the mentioned elements.
 
 ### Cannot Export Usage Data for the Token Consumption Monitor
 
@@ -307,3 +316,11 @@ The [Data Widgets](https://marketplace.mendix.com/link/component/116540) module 
 #### Solution 
 
 Update the [Data Widgets](https://marketplace.mendix.com/link/component/116540) module to version 2.22.0 or above.
+
+### Attribute or Reference Required Error Message After Upgrade 
+
+If you encounter an error stating that an attribute or a reference is required after an upgrade, first upgrade all modules by right-clicking the error, then upgrade Data Widgets.
+
+### Conflicted Lib Error After Module Import
+
+If you encounter an error caused by conflicting Java libraries, such as `java.lang.NoSuchMethodError: 'com.fasterxml.jackson.annotation.OptBoolean com.fasterxml.jackson.annotation.JsonProperty.isRequired()'`, try synchronizing all dependencies (**App** > **Synchronize dependencies**) and then restart your application.

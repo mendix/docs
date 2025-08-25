@@ -32,6 +32,7 @@ To create an app using **Start with Maia**, do the following:
     * A domain model with entities, attributes, and associations
     * Data management overview pages
     * Test data
+        {{% alert color="info" %}}In Studio Pro 11.1 and above, this step is optional, which allows you to continue without test data being successfully generated. {{% /alert %}}
     * A tailored homepage
 
 1. When your app is ready, you can click **OK** to close the dialog box and continue building in Studio Pro. Or you can click **OK & run app** to run the app locally and preview the generated pages with the randomly generated test data.

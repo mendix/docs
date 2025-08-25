@@ -74,6 +74,10 @@ The app is imported.
 
 Mendix modules can either be stored in a Mendix package (*.mpk*) file or have an *.mxmodule* extension if they are [add-on or solution modules](/refguide/configure-add-on-and-solution-modules/). 
 
+{{% alert color="warning" %}}
+For Git on Windows, there is a limit of 260 characters for a path to a module package file. To prevent an error, try moving the module package file to a location with a shorter path or keep the file names no longer than 260 symbols. You can also set the `core.longpaths` configuration to `true` in your Git configuration file.
+{{% /alert %}}
+
 #### Importing a Module Package Through the App Explorer
 
 To import module packages through the App Explorer in Studio Pro, follow these steps:

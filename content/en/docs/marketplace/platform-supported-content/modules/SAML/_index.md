@@ -487,6 +487,10 @@ It is possible to customize this microflow to determine the correct user. Whiche
 
 #### CustomUserProvisioning {#customuserprovisioning}
 
+{{% alert color="info" %}}
+Starting from version 4.0.0 of the SAML module, the `CustomUserProvisioning` microflow is deprecated.
+{{% /alert %}}
+
 When selecting in the SSO configuration to run the `customUserProvisioning` action (previously known as `CustomLoginLogic`), you can update the new or retrieved user with additional information from the assertion. All the assertions are passed into the microflow in the parameter `AssertionAttributeList`, and these can be transformed and stored in the user record. Also, additional roles can be granted to the users based on the assertion attributes.
 
 #### CustomAfterSigninLogic

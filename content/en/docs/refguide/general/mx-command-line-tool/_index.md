@@ -31,6 +31,7 @@ These are the available [app commands](/refguide/mx-command-line-tool/app/):
 | [show-version](/refguide/mx-command-line-tool/app/#show-version) | Shows the Studio Pro version that was last used to edit the app. |
 | [show-java-version](/refguide/mx-command-line-tool/app/#show-java-version) | Shows the configured Java version of the app. |
 | [sync-java-dependencies](/refguide/mx-command-line-tool/app/#java-dependencies) | Synchronizes the managed Java dependencies that are configured in the modules of the app. |
+| [translate](/refguide/mx-command-line-tool/app/#translate) | Exports and imports all translatable texts included in your application. |
 | [analyze-mpr](/refguide/mx-command-line-tool/analyze-mpr/) | Shows the contents of the MPR file and their contribution to file size. |
 
 ### Adaptable Solutions Commands

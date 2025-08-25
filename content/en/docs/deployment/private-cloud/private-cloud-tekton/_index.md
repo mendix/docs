@@ -6,9 +6,7 @@ description: "Describes how to use Tekton to create a CI/CD solution for Mendix 
 weight: 40
 ---
 {{% alert color="info" %}}
-The Tekton pipelines for Mendix are available to all customers using licensed Operators in Mendix on Kubernetes.
-
-Please make a request to your Customer Success Manager (CSM) to arrange for access to these pipelines.
+Tekton pipelines for Mendix on Kubernetes Standalone are no longer available to new customers. Customers seeking Tekton pipeline support are advised to consider Private Mendix Platform, which includes Tekton pipeline support.
 {{% /alert %}}
 
 ## Introduction

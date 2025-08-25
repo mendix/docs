@@ -12,6 +12,20 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 ## 2025
 
+### August 7, 2025
+
+#### Portal Improvements
+
+* The **Environment Details** page in the portal now displays a new field, **External Secret Store**, indicating the source from which the secret was loaded.
+* We have fixed an issue where starting an environment would display an incorrect error message when the agent was in a disconnected state.
+* The deployment package creation dialog now shows the date next to the Mendix version.
+* The **Branches** now shows the latest commit date for the branch.
+* The **Revisions** page now shows the commit date.
+
+#### Build API
+
+* We have fixed an issue where the POST `/apps/{appId}/packages/build` endpoint in the v4 API returned a location header containing `v3`, leading to 404 errors. The location header now correctly uses `v4`.
+
 ### July 10, 2025
 
 #### General
@@ -1580,4 +1594,4 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 
 #### Improvements
 
-* On the **General** page of [App Buzz](/developerportal/general/buzz/), we added a **Private Cloud** target. This will currently take you to a closed beta test that allows you to connect your private cluster to Mendix. You can ask to join the beta program, but places are currently limited.
+* On the **General** page of [App Buzz](/developerportal/general/overview/), we added a **Private Cloud** target. This will currently take you to a closed beta test that allows you to connect your private cluster to Mendix. You can ask to join the beta program, but places are currently limited.

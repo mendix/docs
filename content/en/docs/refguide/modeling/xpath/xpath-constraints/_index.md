@@ -93,7 +93,7 @@ You can type your constraint by selecting the option **XPath expression**.
 
 To apply XPath constraints in Java, you should use a complete XPath expression as described in [XPath](/refguide/xpath/). This includes the entity context plus your constraint expression and (optionally) an aggregate function and attribute to retrieve.
 
-The XPath should be used in a [core.createXPathQuery](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/Core.html#createXPathQuery(java.lang.String)) call. You can then call [XPathQueryBase.execute](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/datastorage/XPathQueryBase.html#execute(com.mendix.systemwideinterfaces.core.IContext)) which will return the list of objects filtered using the XPath you provided.
+The XPath should be used in a [core.createXPathQuery](https://apidocs.rnd.mendix.com/11/runtime/com/mendix/core/Core.html#createXPathQuery(java.lang.String)) call. You can then call [XPathQueryBase.execute](https://apidocs.rnd.mendix.com/11/runtime/com/mendix/datastorage/XPathQueryBase.html#execute(com.mendix.systemwideinterfaces.core.IContext)) which will return the list of objects filtered using the XPath you provided.
 
 For example, to retrieve all customers named Jansen:
 

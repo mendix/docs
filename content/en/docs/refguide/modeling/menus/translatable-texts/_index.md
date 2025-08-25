@@ -54,15 +54,17 @@ The **Language** menu allows you to manage additional languages and translations
 
 The **Language** menu items are described in the table below:
 
-| Menu Item | Description | Shortcut Key |
-| --- | --- | --- |
-| <a id="current-language"></a>**Current Language** | Choose the current language from one of the languages set up in **Language Settings…**. | *None* |
-| **Select Previous Language** | Choose the previous language in the list of languages chosen in **Language Settings…**. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd> |
-| **Select Next Language** | Choose the next language in the list of languages chosen in **Language Settings…**. | <kbd>Ctrl</kbd> + <kbd>L</kbd> |
-| [Language Settings…](/refguide/language-settings/) | Choose which languages are supported by the app and configure date and time settings. | *None* |
-| [Batch Replace…](/refguide/batch-replace/) | Change all occurrences of chosen translatable texts in the current language where they are identical. | *None* |
-| [Batch Translate…](/refguide/batch-translate/) | Add and edit translations from a selected source language to a selected target language | *None* |
-| [Language Operations…](/refguide/language-operations/) | Manipulate (for example, copy) translations between languages. | *None* |
+| Menu Item                                                               | Description                                                                                           | Shortcut Key |
+|-------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------| --- |
+| <a id="current-language"></a>**Current Language**                       | Choose the current language from one of the languages set up in **Language Settings…**.               | *None* |
+| **Select Previous Language**                                            | Choose the previous language in the list of languages chosen in **Language Settings…**.               | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd> |
+| **Select Next Language**                                                | Choose the next language in the list of languages chosen in **Language Settings…**.                   | <kbd>Ctrl</kbd> + <kbd>L</kbd> |
+| [Language Settings…](/refguide/language-settings/)                      | Choose which languages are supported by the app and configure date and time settings.                 | *None* |
+| [Batch Replace…](/refguide/batch-replace/)                              | Change all occurrences of chosen translatable texts in the current language where they are identical. | *None* |
+| [Batch Translate…](/refguide/batch-translate/)                          | Add and edit translations from a selected source language to a selected target language               | *None* |
+| [Language Operations…](/refguide/language-operations/)                  | Manipulate (for example, copy) translations between languages.                                        | *None* |
+| [Advanced Translations Import](/refguide/advanced-translations-import/) | Import translations from Excel or PO files.                                                           | *None* |
+| [Advanced Translations Export](/refguide/advanced-translations-export/) | Export translations as Excel or PO files.                                                             | *None* |
 
 ## Setting the End-User's Language
 

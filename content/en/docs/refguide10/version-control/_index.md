@@ -104,7 +104,9 @@ Studio Pro 10.18 introduced a public beta to convert *.mpr* to a new [MPRv2 stor
 
 {{% alert color="warning" %}}
 Manually modifying files belonging to the *.mpr* storage format such as the *.mpr* file or the *mprcontents* directory (for example, when resolving file conflicts through third-party tooling), will lead to a corrupted state. To recover from a corrupted state a previous commit will need to be restored. 
-This includes renaming the *.mpr* file itself. Renaming the app by renaming the *.mpr* file is not supported. Renaming your app when using version control is only supported via the Mendix Portal. For more information, see the [Page Header](/developerportal/collaborate/general-settings/#settings-page-header) section in *Settings*. 
+{{% /alert %}}
+{{% alert color="warning" %}}
+Renaming the app by renaming the *.mpr* file is not supported. Renaming your app when using version control is only supported via the Mendix Portal. For more information, see the [Page Header](/developerportal/collaborate/general-settings/#settings-page-header) section in *Settings*. 
 {{% /alert %}}
 
 ## Branches {#branches}

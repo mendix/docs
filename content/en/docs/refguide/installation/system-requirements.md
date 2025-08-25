@@ -68,10 +68,14 @@ These are the known limitations for Mac:
 Mendix Studio Pro will run on any machine which can run the [minimum requirements for running Windows 10 64-bit](https://www.microsoft.com/en-gb/windows/windows-10-specifications#primaryR2), with the following additional requirements:
 
 * **Disk Space** – Studio Pro requires 2GB disk space to install, and each app you create will vary in size depending on the functionality, but will take a minimum of around 150MB
-* **RAM** – 8GB
+* **RAM** – recommended 16GB or more depending on the size of your app and how many instances of Studio Pro you want to have open at the same time
 * **Display Resolution** – 1080p (1920x1080)
 
-Mendix Studio Pro on Mac (Beta) runs on any machine compatible with [macOS Sonoma](https://support.apple.com/en-us/105113)
+Mendix Studio Pro on Mac (Beta) runs on any machine compatible with [macOS Sonoma](https://support.apple.com/en-us/105113).
+
+These requirements also need to be taken into account when using a virtual machine.
+
+Studio Pro performance is strongly impacted by the disk performance. Using network storage will likely lead to poor performance. This is especially important in virtual desktop environments, where careful consideration should be given to disk performance.
 
 ### Firewall Settings {#firewall-settings}
 

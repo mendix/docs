@@ -20,7 +20,7 @@ The method for deploying an app to Mendix Cloud differs depending on whether you
 
 * For a licensed app, there are several deployment options:
     * Manual deployment – Create a deployment package via Studio Pro or the Mendix Portal, and then deploy the package to a node environment where you can run it. For details on how to do this, see [Deploying a Licensed App](#deploy-licensed-app), below. This is the simplest deployment method, especially if you are just getting started with Mendix.
-    * Pipelines built with low code – If you want to automate your build and deployment process, you can use [Pipelines](/developerportal/deploy/pipelines/) in the Mendix Portal to design and activate a pipeline with a set of configurable, low-code steps. The Pipelines feature makes it quick and easy for teams to automate their CI/CD process, without requiring any third-party tools or DevOps expertise.
+    * Pipelines built with low code – If you want to automate your build and deployment process, you can use [Pipelines](/developerportal/deploy/mendix-pipelines/) in the Mendix Portal to design and activate a Mendix Pipeline with a set of configurable, low-code steps. The Mendix Pipeline feature makes it quick and easy for teams to automate their CI/CD process, without requiring any third-party tools or DevOps expertise.
     * Pipelines built with APIs – If you use Jenkins, GitLab, or another CI/CD tool, you can use Mendix APIs to automate your build and deployment process. For details, see [Implement a Simple CI/CD Pipeline with Mendix APIs](/howto/integration/implement-cicd-pipeline/). This method is highly customizable but does require CI/CD tooling and DevOps expertise to set up.
 * For a Free App, you deploy the app directly from Studio Pro. For details on how to do this, see [Deploying a Free App](#deploy-free-app), below.
 
@@ -115,7 +115,6 @@ With a Free App, you can deploy your app to Mendix Cloud from Studio Pro by usin
 * In the top bar of Studio Pro, click **Run** > **Publish**. This automatically deploys your app to a Free App environment.
 
 * Alternatively, in the top bar of Studio Pro, click **Publish**.
-
 
 ## Deployment Status and Troubleshooting
 

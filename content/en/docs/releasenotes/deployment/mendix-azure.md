@@ -12,6 +12,14 @@ These release notes cover changes to deployment to [Mendix on Azure](/developerp
 
 For information on the current status of Mendix deployment, see [Mendix Status](https://status.mendix.com/).
 
+### Release date: August 7, 2025
+
+* Users with the Owner or Contributor roles can now view all uninitialized clusters within their subscription, ensuring better visibility and coordination.
+* The cluster deployment progress status now more accurately reflects the actual deployment status.
+* We have fixed an issue where new users had to first visit the Mendix on Kubernetes portal before initializing a cluster. They can now initialize a cluster directly in Mendix on Kubernetes.
+* We have improved the accuracy and consistency of Japanese and Korean translations in the Mendix on Azure portal.
+* Cluster initialization is now limited to users with the Owner role. This resolves a previous issue where users with the Contributor role were also able to initialize clusters.
+
 ### Release date: July 3, 2025
 
 * Mendix on Azure users can now create and restore environment backups through Mendix on Kubernetes Portal. For more information, see [Backups in Mendix on Azure](/developerportal/deploy/mendix-on-azure/backups/).

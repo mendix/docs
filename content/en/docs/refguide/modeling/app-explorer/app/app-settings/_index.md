@@ -10,6 +10,10 @@ aliases:
 
 ## Introduction
 
+View your App Settings by clicking **App Explorer** > **App** > **Settings**:
+
+{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/app-settings-location.png" width="200px"  >}}
+
 In the **App Settings** dialog box, you can alter the settings that are applicable to the whole app:
 
 {{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/app-settings-configuration.png" width="300px" class="no-border" >}}

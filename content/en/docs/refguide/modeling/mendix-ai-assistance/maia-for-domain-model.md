@@ -30,7 +30,9 @@ After clicking **Maia for Domain Model**, a dedicated chat interface will appear
 
 {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-for-domain-model/chat-interface.png" max-width=42% >}}
 
-Describe your application or its main goals in the chat. Maia will use this information to generate a relevant domain model for you. After a domain model is generated and if the dedicated chat is still active, you can continue asking Maia to add more entities and associations to the generated domain model. It also supports adding more attributes to an existing entity in the generated domain model.You can also ask Maia to explain or improve the generated domain model through further requests.
+Describe your application or its main goals in the chat. Maia will use this information to generate a relevant domain model for you. In Studio Pro 11.1 and above, you can also attach maximally one image and one PDF to help Maia better understand your request. For more information, see the [Attachment Requirements](#attachment-requirements) section below. 
+
+After a domain model is generated and if the dedicated chat is still active, you can continue asking Maia to add more entities and associations to the generated domain model. It also supports adding more attributes to an existing entity in the generated domain model.You can also ask Maia to explain or improve the generated domain model through further requests.
 
 {{% alert color="info" %}}
 Maia for Domain Model does not support deleting items in the domain model. You can always delete them manually. 
@@ -59,6 +61,15 @@ Below are examples of prompts you can use to ask Maia for explanations or sugges
 * I want to add an attribute `ATTRIBUTE_NAME` to the entity `ENTITY_NAME`.
 * I want to make the domain model more efficient. Can you suggest optimizations?
 * Could you identify any potential issues with this domain model and recommend solutions?
+
+### Attachment Requirements {#attachment-requirements}
+
+In Studio Pro 11.1 and above, Maia for Domain Model supports adding a maximal of one image and one PDF as attachments. The attachments must meet the following requirements:
+
+* The image format must be PNG or JPG.
+* The image file size must not exceed 512 KB.
+* The image resolution must be no greater than 3840 × 2400 pixels.
+* The PDF file size must not exceed 1024 KB.
 
 ## Limitations {#limitation}
 

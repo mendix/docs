@@ -40,7 +40,7 @@ Authentication for the API uses a personal access token (PAT).
 
 #### Generating a PAT
 
-To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
+To generate a PAT, see the [Personal Access Tokens](/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
 
 Select the following as scopes:
 

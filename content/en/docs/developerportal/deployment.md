@@ -29,7 +29,7 @@ Other platforms are not currently supported on the **Environments** page; instea
 
 ## Pipelines
 
-The **Pipelines** page is for licensed apps deployed to Mendix Cloud. For more information, see [Pipelines](/developerportal/deploy/pipelines/).
+The **Pipelines** page is for licensed apps deployed to Mendix Cloud, Mendix on Kubernetes, and Mendix on Azure. For more information, see [Mendix Pipelines](/developerportal/deploy/mendix-pipelines/).
 
 ## Software Composition
 

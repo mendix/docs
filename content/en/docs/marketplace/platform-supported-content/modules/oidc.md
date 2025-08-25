@@ -55,7 +55,7 @@ The OIDC SSO module supports the following features:
 1. IdP Integration Capabilities:
 
     * Supports SSO and API-security.
-    * Can be used with OIDC/OAuth-compatible IdPs, such as AWS Cognito, Google, Salesforce, Apple, Okta, Ping, Microsoft's Entra ID (formerly known as Azure AD), and SAP Cloud Identity Services. Moreover, the module also works with the [OIDC Provider](https://marketplace.mendix.com/link/component/214681) module.
+    * Can be used with OIDC/OAuth-compatible IdPs, such as AWS Cognito, Google, Salesforce, Apple, Okta, Ping, Microsoft's Entra ID (formerly known as Azure AD), and SAP Cloud Identity Services. Moreover, the module also works with the [OIDC Provider](https://marketplace.mendix.com/link/component/244687) module.
     * Comes with helper microflows (DELETE, GET, PATCH, POST, and PUT) which call an API with a valid token (and automate the token refresh process).
     * Easy configuration, by leveraging the so-called well-known discovery endpoint at your IdP.
         * For example, PKCE will be used automatically if it is detected.
@@ -537,7 +537,7 @@ By default, end-users are provisioned using the `Administration.Account` entity.
 
 #### Deploy-time Configuration of End-user Onboarding{#custom-provisioning-dep}
 
-You can set up custom user provisioning by setting constants when you deploy your app. You do not need a local MxAdmin user to do the necessary configurations. This is an automatable configuration in the CICD pipeline. However, the configuration has the following limitations compared to setting up provisioning using a microflow or changing the settings at runtime:
+You can set up custom user provisioning by setting constants when you deploy your app. You do not need a local MxAdmin user to do the necessary configurations. This is an automatable configuration in the CI/CD pipeline. However, the configuration has the following limitations compared to setting up provisioning using a microflow or changing the settings at runtime:
 
 * You need to restart your app to apply changes to the constants
 * You cannot set custom mapping of IdP claims to attributes of your custom user entity
@@ -615,6 +615,17 @@ You may need a different or custom attribute mapping, for example, if you are co
 
 In this case, you can modify the default attribute mapping.
 To do so, change the default **IdP Attribute** or the **Configured Entity Attribute**, by editing the mapping in the **Attribute Mapping** section within the **UserProvisioning** tab. 
+
+##### Creating IdP Attribute Manually
+
+IdP attributes will be automatically created from the list of `claims_supported` at the well-known endpoint. The module also allows manual creation of IdP attributes through the following steps:
+
+1. In the **Attribute Mapping** of the **UserProvisioning** tab, click **New** to add a new mapping.
+2. In the **Edit Claim Map** dialog, click **Search**.
+3. Under the **Claims for claim entity attribute**, click **New** to create a new claim.
+4. In the **IdP Attribute**, select the newly created claim from the dropdown, and click **Save**.
+
+Select the required attribute to use it in your mapping.
 
 ##### User Provisioning Using Your Custom User Entity{#custom_user_entity}
 

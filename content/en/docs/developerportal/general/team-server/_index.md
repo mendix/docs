@@ -13,9 +13,9 @@ aliases:
 
 ## Introduction
 
-Team Server is where all the committed versions of Mendix apps are stored. Mendix Studio Pro is integrated with the Team Server, and actions like creating a new app (including a versioned model repository), updating an app, committing changes, and merging model versions are all available from Mendix Studio Pro as single-click actions.
+Team Server is where all the committed versions of Mendix apps are stored. Mendix Studio Pro is integrated with the Team Server, and actions like creating a new app, which includes a versioned model repository, updating an app, committing changes, and merging model versions are all available from Mendix Studio Pro as single-click actions.
 
-When you commit your app model changes to the Team Server in Studio Pro, you can select user stories that you have been working on. Team Server automatically creates links between user stories and the model changes, allowing you to navigate from commits to the associated requirements. 
+When you commit your app model changes to the Team Server in Studio Pro, you can select stories that you have been working on. Team Server automatically creates links between stories and model changes, allowing you to navigate from commits to the associated requirements. 
 
 After opening your app in [Apps](https://sprintr.home.mendix.com/), on the **Team Server** page, you can see a URL to access you app, revision history, and revision details.
 
@@ -37,7 +37,7 @@ The URL can have the following form:
 You may have to add the final slash (`/`) manually to follow the link. You may also be asked to re-enter your Mendix credentials. Single sign-on (SSO) is not yet implemented for the Team Server. 
 {{% /alert %}}
 
-If you are connecting to Git, or connecting to SVN using a PAT, you need to create a PAT as described in the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*. The PAT must include the following scopes:
+If you are connecting to Git, or connecting to SVN using a PAT, you need to create a PAT as described in the [Personal Access Tokens](/mendix-profile/user-settings/#pat) section of *Mendix Profile*. The PAT must include the following scopes:
 
 * `mx:modelrepository:repo:write`, `mx:modelrepository:repo:read`, and/or `mx:modelrepository:write` under *Model Repository* – for accessing the Git Team Server
 * `mx:modelrepository:write` under *Model Repository* – for accessing the SVN Team Server

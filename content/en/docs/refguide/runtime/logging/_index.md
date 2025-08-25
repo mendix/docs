@@ -37,6 +37,10 @@ This should be used for debugging systems during development, but never in a pro
 
 This is the most verbose logging level, and can be used if you want even more fine-grained logging than debug.
 
+{{% alert color="warning" %}}
+Trace logs should be used with care, especially in production environments. Mendix recommends not including sensitive or unnecessary information in trace messages.
+{{% /alert %}}
+
 ## Log Nodes
 
 This section provides some details on specific log nodes used by Mendix. It is recommended that if you write your own [log messages](/refguide/log-message/) you use your own log node names to avoid confusion with the Mendix log messages.

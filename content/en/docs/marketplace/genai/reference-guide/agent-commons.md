@@ -134,7 +134,8 @@ For supported knowledge bases registered in your app, you can connect them to ag
 
 * [Mendix Cloud GenAI Connector](/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/#configuration)
 * [Amazon Bedrock Connector](/appstore/modules/aws/amazon-bedrock/#sync-models)
-* [OpenAI Connector](/appstore/modules/genai/reference-guide/external-connectors/openai/#general-configuration) (for Azure knowledge bases, available in an upcoming release)
+* [OpenAI Connector](/appstore/modules/genai/reference-guide/external-connectors/openai/#azure-ai-search)
+* [PgVector Knowledge Base](/appstore/modules/genai/reference-guide/external-connectors/pgvector/#general-configuration)
 
 To allow an agent to perform semantic searches, add the knowledge base to the agent definition and configure the retrieval parameters, such as the number of chunks to retrieve, and the threshold similarity. Multiple knowledge bases can be added to the agent to pick from. Give each knowledge base a name and description (in human language) so that the model can decide which retrieves are necessary based on the input it gets.
 
@@ -224,3 +225,13 @@ The **Documentation** pane displays the documentation for the currently selected
 2. Click the element for which you want to view the documentation.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/technical-reference/doc-pane.png" >}}
+
+## Troubleshooting
+
+### Attribute or Reference Required Error Message After Upgrade 
+
+If you encounter an error stating that an attribute or a reference is required after an upgrade, first upgrade all modules by right-clicking the error, then upgrade Data Widgets.
+
+### Conflicted Lib Error After Module Import
+
+If you encounter an error caused by conflicting Java libraries, such as `java.lang.NoSuchMethodError: 'com.fasterxml.jackson.annotation.OptBoolean com.fasterxml.jackson.annotation.JsonProperty.isRequired()'`, try synchronizing all dependencies (**App** > **Synchronize dependencies**) and then restart your application.

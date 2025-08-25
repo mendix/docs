@@ -44,7 +44,7 @@ To use PAT (or another equivalent), you need to specify it in the **Password** f
 
 {{< figure src="/attachments/refguide/version-control/on-premises-git/sign-in-dialog.png" alt="Sign In dialog" class="no-border"  width="600">}}
 
-{{% alert color="info" %}}When using a PAT for the Mendix platform, fill in your email in the **Username** field. For more information on how to create a PAT for the Mendix platform, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section in *User Settings*.{{% /alert %}}
+{{% alert color="info" %}}When using a PAT for the Mendix platform, fill in your email in the **Username** field. For more information on how to create a PAT for the Mendix platform, see the [Personal Access Tokens](/mendix-profile/user-settings/#pat) section in *User Settings*.{{% /alert %}}
 
 Currently Mendix keeps PAT using operating system supported solutions:
 

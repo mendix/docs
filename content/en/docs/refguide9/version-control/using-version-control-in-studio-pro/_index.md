@@ -402,7 +402,7 @@ Studio Pro automatically performs the necessary post-processing steps when you d
 
 When using external tools, you might be asked to authenticate separately to Team Server.
 
-Connecting to Git is done via a personal access token (PAT). For information on how to create a PAT, see [Mendix Profile: Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat).
+Connecting to Git is done via a personal access token (PAT). For information on how to create a PAT, see [Mendix Profile: Personal Access Tokens](/mendix-profile/user-settings/#pat).
 
 You must use the following credentials:
 

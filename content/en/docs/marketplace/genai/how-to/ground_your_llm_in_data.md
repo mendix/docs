@@ -62,7 +62,7 @@ To start, create a microflow that allows you to upload data into your knowledge 
 
 1. Create a new microflow, for example, `ACT_TicketList_LoadAllIntoKnowledgeBase`.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-goundllm/loaddataintokb_example.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-goundllm/loaddataintokb-example-replace.png" >}}
 
 2. Add the `Retrieve Objects` action. You can configure it as follows:
     
@@ -91,25 +91,14 @@ To start, create a microflow that allows you to upload data into your knowledge 
 
 6. Next, add the `DeployedKnowledgeBase: Get` action from the `Mendix Cloud Knowledge Base` category:
 
-    To edit the parameter value for `MxCloudKnowledgeBaseResource`, double-click its type, select `Variable`, and assign it the value `MxCloudKnowledgeBaseResource`. Similarly, for `CollectionName`, double-click its type, select `Expression`, and assign it the value `TicketSolutions`.
+    * **MxCloudKnowledgeBaseResource**: `MxCloudKnowledgeBaseResource` (as retrieved in the step above)
+    * **CollectionName**: `HistoricalTickets`
+    * Use return value: Yes, `DeployedKnowledgeBase`
 
-    You can keep the **Use return variable** as *Yes* and the object name `DeployedKnowledgeBase`.
+7. Add the `Embed & Replace` action to insert your knowledge into the knowledge base:
 
-7. Add the `Embed & Repopulate Collection` action to insert your knowledge into the knowledge base:
-
-    To edit the parameter value for `DeployedKnowledgeBase`, double-click its type, select `Variable`, and assign it the value `DeployedKnowledgeBase`. Similarly, for `ChunkCollection`, double-click its type, select `Variable`, and assign it the value `GenAICommons.ChunkCollection`.
-
-    You can keep the **Use return variable** as *Yes* and the variable name `IsSuccess`.
-
-8. Next (optional), include a decision:
-
-    * **Caption**: for example, `Replace Success`
-    * **Decision Type**: `Expression`
-    * **Expression**: `$IsSuccess`
-
-    If the decision is `true`, an `End event` action can be added where a microflow return value to `true`. You may add a message to inform the end user that the insertion was successful.
-
-    If the decision is `false`, an `End event` action can be added where a microflow return value to `false`. You may add a message to inform the end user that the insertion failed.
+    * **ChunkCollection**: `ChunkCollection` (as created earlier)
+    * **DeployedKnowledgeBase**: `DeployedKnowledgeBase`
 
 You have successfully implemented the knowledge base insertion microflow! If you do not have any data available in your app yet, you need to create a microflow to generate the dataset, as described in the [Data Set Microflow](#dataset) section below.
 
@@ -119,7 +108,7 @@ This microflow first checks whether a list of tickets already exists in the data
 
 1. Create a new microflow, for example, `Tickets_CreateDataset`.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-goundllm/loaddataintokb_example2.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-goundllm/loaddataintokb-example-demodata.png" >}}
 
 2. Add a `Retrieve` action:
     
@@ -155,7 +144,7 @@ With both microflows created, they must be combined and added to the homepage to
 
 1. Create a new microflow `ACT_TicketList_CreateData_InsertIntoKnowledgeBase`.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-goundllm/loaddataintokb_example3.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-goundllm/loaddataintokb-example-combine.png" >}}
 
 2. Add a `Call Microflow` action where you call the `MyFirstModule.Tickets_CreateDataset` microflow created above. 
 
@@ -181,20 +170,21 @@ To use the knowledge in a chat interface, create and adjust certain microflows a
 
     With the `MyFirstBot.ACT_FullScreenChat_Open microflow` configured, the `MyFirstBot.ChatContext_ChatWithHistory_ActionMicroflow` can now be adjusted to handle user-submitted messages in the chat interface.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-goundllm/chatcontext_microflow_example.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-goundllm/chatcontext-microflow-example.png" >}}
 
 4. Open your `MyFirstBot.ChatContext_ChatWithHistory_ActionMicroflow` microflow in your **MyFirstBot** module.
 
-5. After the `Request found` decision, add a `Retrieve` action. In this example, the first entry found in the database is used, just as in the insertion microflow.
+5. After the `Request found` decision, add a `Retrieve` action. In this example, we retrieve the same as in the insertion microflow.
     
     * **Source**: `From database`
-    * **Entity**: `MxGenAIConnector.MxCloudKnowledgeBaseResource`
+    * **Entity**: `GenAICommons.DeployedKnowledgeBase`
+    * **XPath constraint**: `[Name = 'HistoricalTickets']`
     * **Range**: `First`
-    * **Object name**: `MxCloudKnowledgeBaseResource`
+    * **Object name**: `DeployedKnowledgeBase_SimilarTickets`
 
-6. Add the `Tools: Add Mendix Cloud Knowledge Base` action with the settings shown in the image below:
+6. Add the `Tools: Add Knowledge Base` action with the settings shown in the image below:
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-goundllm/tool_mendixcloudgenai_example_action.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-goundllm/tool-addknowledgebase-example.png" >}}
 
 The rest of the actions can remain as they are currently set. Now that everything is implemented, you can test the chat with enriched knowledge.
 

@@ -14,7 +14,7 @@ The Mendix Portal home page is the entry point to all Mendix online services.
 The home page includes the following details about you:
 
 * Your [Mendix Academy certification](https://academy.mendix.com/link/certifications)
-* Your Mendix Community [point level](/community-tools/mendix-profile/#level)
+* Your Mendix Community [point level](/mendix-profile/#level)
 
 ### Home Page Actions
 

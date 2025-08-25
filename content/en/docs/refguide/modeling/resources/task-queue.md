@@ -87,7 +87,7 @@ Core.microflowCall("AModule.SomeMicroflow")
   .executeInBackground(context, "AModule.SomeQueueName");
 ```
 
-The method `executeInBackground` takes two parameters: a context and a queue name. The context is only used for creating the task; the task will run with a [new, but equivalent context](#context). See the [API documentation](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/Core.html#microflowCall(java.lang.String)) for more information.
+The method `executeInBackground` takes two parameters: a context and a queue name. The context is only used for creating the task; the task will run with a [new, but equivalent context](#context). See the [API documentation](https://apidocs.rnd.mendix.com/11/runtime/com/mendix/core/Core.html#microflowCall(java.lang.String)) for more information.
 
 ### Queueing Java Actions
 
@@ -109,7 +109,7 @@ Core.userActionCall("AModule.SomeJavaAction")
   .executeInBackground(context, "AModule.SomeQueueName");
 ```
 
-The method `executeInBackground` takes two parameters: a context and a queue name. The context is only used for creating the task; the task will be run with a [new, but equivalent context](#context). See the [API documentation](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/Core.html#userActionCall(java.lang.String)) for more information.
+The method `executeInBackground` takes two parameters: a context and a queue name. The context is only used for creating the task; the task will be run with a [new, but equivalent context](#context). See the [API documentation](https://apidocs.rnd.mendix.com/11/runtime/com/mendix/core/Core.html#userActionCall(java.lang.String)) for more information.
 
 ### Task scheduling {#scheduling}
 
@@ -189,7 +189,7 @@ In case where **Apply entity access** is set to *true*, the following rules appl
 
 There is one exception to the above rules:
 
-* When a system context is used to schedule the task using the [Mendix Runtime Java API](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/actionmanagement/ActionCallBuilder.html#executeInBackground(com.mendix.systemwideinterfaces.core.IContext,java.lang.String)), the task will be run in a new system context, regardless of the **Apply entity access** setting.
+* When a system context is used to schedule the task using the [Mendix Runtime Java API](https://apidocs.rnd.mendix.com/11/runtime/com/mendix/core/actionmanagement/ActionCallBuilder.html#executeInBackground(com.mendix.systemwideinterfaces.core.IContext,java.lang.String)), the task will be run in a new system context, regardless of the **Apply entity access** setting.
 
 ### Task Status
 

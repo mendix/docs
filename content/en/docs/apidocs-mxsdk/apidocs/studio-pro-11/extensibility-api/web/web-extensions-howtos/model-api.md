@@ -2,7 +2,6 @@
 title: "Access a Mendix Model Using Web API"
 linktitle: "Mendix Model"
 url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/model-api/
-weight: 40
 ---
 
 ## Introduction 

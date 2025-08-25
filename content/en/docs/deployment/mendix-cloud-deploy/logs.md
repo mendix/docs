@@ -30,8 +30,6 @@ To view logs, you must have **Access to Monitoring** permission. For more inform
 
 When your app is deployed to Mendix Cloud, it automatically creates daily app and access logs. On the **Logs** page, you can view archived logs, view the live log, and view log access activity.
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/logs/logs-archives.png" alt="Logs Page" class="no-border" >}}
-
 For apps deployed to Mendix Cloud, you can select which environment you want logs for. Viewing production logs requires [two-factor authentication](/developerportal/deploy/two-factor-authentication/).
 
 {{% alert color="info" %}}
@@ -42,11 +40,9 @@ Logging for apps deployed to Mendix Cloud is limited to 500 loglines per second.
 
 For each day, you can download the app log or the access log by clicking the corresponding **Download** button ({{% icon name="download-bottom" %}}).
 
-File sizes are displayed for archived logs, but in-progress logs show the label "Unknown" instead. You can download the in-progress app and access logs for the current day; however, these logs will contain incomplete records because the day's activity is not yet completed. 
+File sizes are displayed for archived logs, but in-progress logs show the **Unknown** label instead. You can download the in-progress app and access logs for the current day; however, these logs will contain incomplete records because the day's activity is not yet completed. 
 
 By default, archived logs are sorted by date; the current log is the first one listed. You can manually click through the archived logs or use the search field to find logs for a specific date.
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/logs/logs-filter.png" alt="" class="no-border" >}}
 
 #### Rotation and Retention Schedule{#retention-schedule}
 
@@ -70,12 +66,8 @@ At the bottom of the **Logs** page, there is an activity log. This section repor
 The activity log records access by team members as well as members of Mendix Support, who may view or download your app's logs in connection with any support tickets you have open. 
 {{% /alert %}}
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/logs/activity-log.png" alt="Activity log" >}}
-
 ## Free App
 
 Archived logs are not available for Free Apps. The **Logs** page displays sample data instead of archived data for your app.
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/logs/free-app.png" alt="" class="no-border" >}}
 
 You can still interact with the sample data, and you can click **View Live Log** to access a live log of your deployed Free App.

@@ -218,7 +218,7 @@ If you are encountering issues when using Git CLI, this is typically an issue yo
 
 ##### Prerequisites
 
-You need to setup a [Personal Access Token (PAT)](/community-tools/mendix-profile/user-settings/#pat) to work with Git on the command line. The following permissions should be configured while creating the PAT:
+You need to setup a [Personal Access Token (PAT)](/mendix-profile/user-settings/#pat) to work with Git on the command line. The following permissions should be configured while creating the PAT:
 
 ```
 Model Repository

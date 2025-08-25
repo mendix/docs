@@ -30,7 +30,7 @@ Authentication for the User Deactivation API uses a personal access token (PAT).
 
 ### Generating a PAT
 
-To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *User Settings*.
+To generate a PAT, see the [Personal Access Tokens](/mendix-profile/user-settings/#pat) section of *User Settings*.
 
 Select the following as **User Deactivation API** scopes:
 

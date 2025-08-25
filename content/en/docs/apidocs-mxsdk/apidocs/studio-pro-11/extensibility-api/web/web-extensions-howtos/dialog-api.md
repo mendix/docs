@@ -2,7 +2,6 @@
 title: "Open a Modal Dialog Using Web API"
 linktitle: "Open a Modal Dialog"
 url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/dialog-api/
-weight: 60
 ---
 
 ## Introduction

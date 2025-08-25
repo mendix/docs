@@ -71,17 +71,17 @@ Mendix connectors offer direct support for the following models:
 |--------------|---------------------|---------------------|-------------------|-----------|-------------------------|
 | Mendix Cloud GenAI | Anthropic Claude 3.5 Sonnet | Chat Completions | text, image, document | text | Function calling |
 | | Cohere Embed English, Cohere Embed Multilingual | Embeddings | text | embeddings | |
-| Azure / OpenAI | gpt-4, gpt-4-turbo, gpt-4o, gpt-4o mini, gpt-4.1, gpt-4.1-mini, gpt-4.1-nano | Chat completions | text, image, document (OpenAI only) | text | Function calling |
+| Azure / OpenAI | gpt-4, gpt-4-turbo, gpt-4o, gpt-4o mini, gpt-4.1, gpt-4.1-mini, gpt-4.1-nano, gpt-5.0, gpt-5.0-mini, gpt-5.0-nano | Chat completions | text, image, document (OpenAI only) | text | Function calling |
 | | DALL·E 2, DALL·E 3, gpt-image-1 | Image generation | text | image | |
 | | text-embedding-ada-002, text-embedding-3-small, text-embedding-3-large     | Embeddings | text | embeddings| |
 | Amazon Bedrock | Amazon Titan Text G1 - Express, Amazon Titan Text G1 - Lite, Amazon Titan Text G1 - Premier | Chat Completions | text, document (except Titan Premier) | text | |
 | | AI21 Jamba-Instruct | Chat Completions | text | text |  |
 | | AI21 Labs Jurassic-2 (Text) | Chat Completions | text | text |  |
-| | Amazon Nova Pro, Amazon Nova Lite | Chat Completion | text, image, document | text | Function calling |
+| | Amazon Nova Pro, Amazon Nova Lite | Chat Completions | text, image, document | text | Function calling |
 | | Amazon Titan Image Generator G1 | Image generation | text | image | |
 | | Amazon Titan Embeddings Text v2 | Embeddings | text | embeddings| |
 | | Anthropic Claude 2.0, Anthropic Claude 2.1| Chat Completions | text, document | text | |
-| | Anthropic Claude 3 Sonnet, Anthropic Claude 3.5 Sonnet, Anthropic Claude 3.5 Sonnet v2, Anthropic Claude 3 Haiku, Anthropic Claude 3 Opus, Anthropic Claude 3.5 Haiku, Anthropic Claude 3.7 Sonnet  | Chat Completions | text, image, document | text | Function calling |
+| | Anthropic Claude 3 Sonnet, Anthropic Claude 3.5 Sonnet, Anthropic Claude 3.5 Sonnet v2, Anthropic Claude 3 Haiku, Anthropic Claude 3 Opus, Anthropic Claude 3.5 Haiku, Anthropic Claude 3.7 Sonnet, Anthropic Claude 4 Sonnet  | Chat Completions | text, image, document | text | Function calling |
 | | Cohere Command | Chat Completions | text, document | text | |
 | | Cohere Command Light | Chat Completions | text | text | |
 | | Cohere Command R, Cohere Command R+ | Chat Completions | text, document | text | Function calling |
@@ -89,9 +89,10 @@ Mendix connectors offer direct support for the following models:
 | | DeepSeek, DeepSeek-R1 | Text | text | document | |
 | | Meta Llama 2, MetaLlama 3| Chat Completions | text, document | text | |
 | | Meta Llama 3.1| Chat Completions | text, document | text | Function calling |
-| | Mistral AI Instruct | Chat Completions | text. document | text | |
+| | Mistral AI Instruct | Chat Completions | text, document | text | |
 | | Mistral Large, Mistral Large 2 | Chat Completions | text, document | text | Function calling |
 | | Mistral Small | Chat Completions | text | text | Function calling |
+| | OpenAI gpt-oss-20B, gpt-oss-120b  | Chat Completions | text | text | |
 
 For more details on limitations and supported model capabilities for the Bedrock Converse API used in the ChatCompletions operations, see [Supported models and model features](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference-supported-models-features.html) in the AWS documentation.
 

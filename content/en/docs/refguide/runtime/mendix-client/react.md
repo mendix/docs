@@ -69,7 +69,7 @@ JavaScript actions must not use any of the following client APIs:
 
 These APIs are related to Dojo and are no longer needed. For opening pages, please use the nanoflow [Show Page](/refguide/show-page/) action instead.
 
-Fore more information on React and APIs in Mendix, see our [Mendix 10 React Client API](https://apidocs.rnd.mendix.com/10/client-react/index.html) documentation.
+Fore more information on React and APIs in Mendix, see our [Mendix 11 React Client API](https://apidocs.rnd.mendix.com/11/client-react/index.html) documentation.
 
 ### Enable React Client{#enable-react}
 
@@ -151,6 +151,10 @@ The deprecated feedback widget is not supported in the React client. It should b
 1. Edit the properties of the widget inside the `FeedbackWidget` snippet (use the Page Explorer or Structure Mode to see it).
 1. Set the **Modal pop-up type** to **Custom**.
 1. Set the **On click action** to **Show a page** and choose the page `FeedbackModule.ShareFeedback`.
+
+#### Sign In Widgets
+
+The React client does not support the default Sign In widgets (Username, Password, Sign In Button). Use a modeled login page instead, leveraging an NPE to store credentials and a Nanoflow for authentication. Refer to the Atlas login page template for implementation guidance.
 
 #### Custom Widgets{#custom-widgets}
 

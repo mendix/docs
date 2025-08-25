@@ -60,26 +60,26 @@ These release notes cover changes to the [Mendix Profile, Mendix Community, and 
 
 #### Improvements
 
-* You can now create and manage personal access tokens (PATs) in **User Settings** > **Developer Settings**. This location replaces the Warden tool that was previously used. For more information, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section in *User Settings*.
+* You can now create and manage personal access tokens (PATs) in **User Settings** > **Developer Settings**. This location replaces the Warden tool that was previously used. For more information, see the [Personal Access Tokens](/mendix-profile/user-settings/#pat) section in *User Settings*.
 
 ### March 9, 2023
 
 #### Improvements
 
-* We simplified the way your [Notification](/community-tools/mendix-profile/user-settings/#notifications) settings are stored.
+* We simplified the way your [Notification](/mendix-profile/user-settings/#notifications) settings are stored.
 
 ### February 23, 2023
 
 #### Fixes
 
-* We fixed an issue where the country of residence you selected during sign-up was not properly stored in your [Mendix Profile](/community-tools/mendix-profile/user-settings/#profile).
+* We fixed an issue where the country of residence you selected during sign-up was not properly stored in your [Mendix Profile](/mendix-profile/user-settings/#profile).
 
 ### February 13, 2023 {#feb-13-23}
 
 #### Improvements
 
-* We moved the notification settings you set for your app management to **Account Settings** > [Notifications](/community-tools/mendix-profile/user-settings/#notifications) (which you can access via the menu beneath your avatar in the top bar). This page includes a list of the apps you are watching.
-* In addition, personal **API Keys** are available via **Account Settings** > [Developer Settings](/community-tools/mendix-profile/user-settings/#dev-settings).
+* We moved the notification settings you set for your app management to **Account Settings** > [Notifications](/mendix-profile/user-settings/#notifications) (which you can access via the menu beneath your avatar in the top bar). This page includes a list of the apps you are watching.
+* In addition, personal **API Keys** are available via **Account Settings** > [Developer Settings](/mendix-profile/user-settings/#dev-settings).
 
 ## 2022
 
@@ -95,7 +95,7 @@ These release notes cover changes to the [Mendix Profile, Mendix Community, and 
 
 #### New Features
 
-* We released [Notifications](/portal/global-navigation/#notifications) for beta usage, which allows you to receive updates from Academy, Data Hub, Developer Portal, Epics, and Forum. Additionally, you can manage what kind of updates you will receive in the [Notification Settings](https://user-settings.mendix.com/link/notifications) page.
+* We released [Notifications](/global-navigation/#notifications) for beta usage, which allows you to receive updates from Academy, Data Hub, Developer Portal, Epics, and Forum. Additionally, you can manage what kind of updates you will receive in the [Notification Settings](https://user-settings.mendix.com/link/notifications) page.
 
 ### July 14, 2022
 
@@ -143,7 +143,7 @@ These release notes cover changes to the [Mendix Profile, Mendix Community, and 
 
 #### Improvements
 
-* Your [Mendix Profile](/community-tools/mendix-profile/) got a visual update.
+* Your [Mendix Profile](/mendix-profile/) got a visual update.
 * We removed the possibility to add a GitHub account to your Mendix Profile.
 
 ### May 17, 2021
@@ -156,7 +156,7 @@ These release notes cover changes to the [Mendix Profile, Mendix Community, and 
 
 #### Improvements
 
-* We removed support for the **Country** and **Skype** attributes in your [Mendix Profile](/community-tools/mendix-profile/).
+* We removed support for the **Country** and **Skype** attributes in your [Mendix Profile](/mendix-profile/).
 
 ## 2020
 
@@ -180,11 +180,11 @@ These release notes cover changes to the [Mendix Profile, Mendix Community, and 
 
 #### Mendix Shop
 
-* The [Mendix Shop](https://mendixshop.mendixcloud.com) is open for business! This is a web shop where you can spend the credits you have gained by completing various [challenges](/community-tools/mendix-profile/#challenges). The shop has cool products like Mendix t-shirts, socks, and sweatbands, so be sure to check it out.
+* The [Mendix Shop](https://mendixshop.mendixcloud.com) is open for business! This is a web shop where you can spend the credits you have gained by completing various [challenges](/mendix-profile/#challenges). The shop has cool products like Mendix t-shirts, socks, and sweatbands, so be sure to check it out.
 
 ### October 11, 2018
 
 #### Improvements
 
-* The Mendix Profile in the Developer Portal has been merged with the Community Profile. For more information, see [Mendix Profile](/community-tools/mendix-profile/).
-* The [People](https://developer.mendixcloud.com/link/people) overview has been redesigned. The same view on Mendix community members is available in the [Connections tab](/community-tools/mendix-profile/#connections) of your Mendix Profile.
+* The Mendix Profile in the Developer Portal has been merged with the Community Profile. For more information, see [Mendix Profile](/mendix-profile/).
+* The [People](https://developer.mendixcloud.com/link/people) overview has been redesigned. The same view on Mendix community members is available in the [Connections tab](/mendix-profile/#connections) of your Mendix Profile.

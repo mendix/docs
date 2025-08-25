@@ -1,7 +1,7 @@
 ---
 title: "Language Settings"
 url: /refguide/language-settings/
-weight: 50
+weight: 10
 ---
 
 ## Introduction

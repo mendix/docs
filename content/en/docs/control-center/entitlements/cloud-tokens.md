@@ -20,7 +20,7 @@ These are the details available for each transaction that uses Mendix Cloud Toke
 * **App** – The app that triggered the transaction.
 * **Transaction** – The type of transaction.
 * **Cloud Resource Pack** – The Cloud Resource Pack that corresponds to the transaction. For more information, refer to [Cloud Resource Packs](#crps).
-* **Cloud Credits** – The number of Mendix Cloud Tokens consumed by the transaction.
+* **Cloud Tokens** – The number of Mendix Cloud Tokens consumed by the transaction.
 * **Tokens Remaining** – The number of Mendix Cloud Tokens remaining after the transaction was completed.
 
 ## Mendix Cloud Tokens {#cloud-tokens}
@@ -30,10 +30,10 @@ Mendix Cloud Tokens are a type of Token that can be used within the Mendix Platf
 ## Cloud Resource Packs {#crps}
 
 {{% alert color="info" %}}
-For the technical details of each cloud resource pack, see the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) section of *Mendix Cloud*.
+For the technical details of each Cloud Resource Pack (CRP), refer to the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) section of *Mendix Cloud*.
 {{% /alert %}}
 
-The number of Mendix Cloud Tokens required for each type of Cloud Resource Pack is specified in the [Cloud Resource Packs](#crps) section of this document. All your current CRPs will be converted to their equivalent Mendix Cloud Tokens and aggregated with any other Mendix Cloud Tokens. You can then use these to provision Cloud resources of any type and size, as specified in your contracts. 
+All your current CRPs are converted to their equivalent Mendix Cloud Tokens and aggregated with any other Mendix Cloud Tokens. You can then use these to provision Cloud resources of any type and size, as specified in your contracts. 
 
 You can see available and used Mendix Cloud Tokens on the **Entitlements** page. If you cannot, contact your Customer Success Manager (CSM).
 
@@ -90,7 +90,10 @@ These tables show how many Mendix Cloud Tokens each CRP requires:
 | 3XL | 640 |
 
 {{% alert color="info" %}} 
-You can no longer purchase Legacy Cloud Resources Packs. You can now only purchase and provision Standard, Premium, and Premium Plus CRPs. Any legacy Cloud Resource Packs that you have already purchased will be converted into Mendix Cloud Tokens if they are deprovisioned. This will use the rate specified in the [Cloud Resource Packs](/control-center/cloud-tokens/#crps) section of *Cloud Tokens*, and the Mendix Cloud Tokens will be added to your Token pool.
+
+* You can no longer purchase legacy CRPs. You can now only purchase and provision Standard, Premium, and Premium Plus CRPs. Any legacy CRPs that you have already purchased will be converted into Mendix Cloud Tokens if they are deprovisioned. This will use the rate specified in the previous tables, and the Mendix Cloud Tokens will be added to your Token pool.
+* Self-service cloud consumption capabilities are exclusively available for Standard, Premium, and Premium Plus CRPs. If you are using a legacy CRP, you may experience consumption inaccuracies in the self-service tool. For access to the latest capabilities, Mendix recommends contacting your customer success manager to transition to a Standard, Premium, or Premium Plus CRP.
+
 {{% /alert %}}
 
 ## Key Takeaways
@@ -99,3 +102,5 @@ You can no longer purchase Legacy Cloud Resources Packs. You can now only purcha
 * The number of Mendix Cloud Tokens required depends on the CRP you want.
 * You buy Tokens in advance, and can use them to obtain CRPs.
 * If you no longer need those resources, you can reuse the Token to obtain other CRPs, or keep it to be used later.
+* Mendix Cloud Tokens expire on the end date of their associated contract. To ensure continued access, please renew your contract before it expires.
+* Mendix Cloud Token balances might be incorrect if you still use a legacy CRP.

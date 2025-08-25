@@ -36,10 +36,10 @@ You can see the following details for each environment shown in the **Overview**
 * The Studio Pro Target ({{< icon name="mendix-browser" >}}) – This is displayed if the environment is the designated Studio Pro target. For more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
 * Licensed badge – This is displayed if the environment is licensed.
 * The environment's status:
-    * {{< icon name="checkmark-circle-filled" color="green" >}} – The application in this environment is running.
-    * {{< icon name="subtract-circle-filled" color="gray" >}} – No application has been started yet in this environment, or the application has been turned off.
-    * {{< icon name="alert-circle-filled" color="yellow" >}} – The application in this environment is experiencing some difficulties. Check the alerts page or logs for more information.
-    * {{< icon name="remove-circle-filled" color="red" >}} – The application in this environment is unstable and probably not usable anymore.
+    * {{% icon name="checkmark-circle-filled" color="green" %}} – The application in this environment is running without any alerts.
+    * {{% icon name="subtract-circle-filled" color="gray" %}} – No application has been started yet in this environment, or the application has been turned off.
+    * {{% icon name="alert-circle-filled" color="yellow" %}} – The application in this environment is running, but has warning alerts, which might result in difficulties. For more information, refer to the [alerts page](/developerportal/operate/monitoring-application-health/#alerts-page) or [logs](/developerportal/operate/logs/).
+    * {{% icon name="remove-circle-filled" color="red" %}} – The application in this environment is running, but has critical alerts, which might make it unstable and not usable anymore. Refer to the [alerts page](/developerportal/operate/monitoring-application-health/#alerts-page) or [logs](/developerportal/operate/logs/) for more information.
 * The date and time the app was started, if it is running. This is set in the user's time zone.
 * The version of the deployment package
 * The name of the deployment package

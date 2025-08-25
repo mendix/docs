@@ -328,10 +328,17 @@ mx-pclm-cli license runtime list \
    -s <pclm-http-url> \
    -u <admin-user> \
    -p <admin-password> \
-   -t <custom-ca-cert-path>
+   -t <custom-ca-cert-path> \
+   --page <page-number> \
+   --limit <max-licenses-per-page>
 ```
 
 * `<custom-ca-cert-path>` - is only required if the PCLM server is configured with a custom certificate. Otherwise it is optional.
+* `<page-number>` specifies the page number to load, in case the number of licenses exceeds `<max-licenses-per-page>`. These parameters are optional and allow the licenses to be listed in batches.
+
+{{% alert color="info" %}}
+To get a full list of licenses with one command, use `--page 0 --limit 10000` to load 10000 licenses in one go. This can be useful when using a text editor to check if licenses are loaded correctly, or when collecting data for a support case.
+{{% /alert %}}
 
 You will receive the result in the following format:
 
@@ -354,10 +361,17 @@ mx-pclm-cli license operator list \
    -s <pclm-http-url> \
    -u <admin-user> \
    -p <admin-password> \
-   -t <custom-ca-cert-path>
+   -t <custom-ca-cert-path> \
+   --page <page-number> \
+   --limit <max-licenses-per-page>
 ```
 
 * `<custom-ca-cert-path>` - is only required if the PCLM server is configured with a custom certificate. Otherwise it is optional.
+* `<page-number>` specifies the page number to load, in case the number of licenses exceeds `<max-licenses-per-page>`. These parameters are optional and allow the licenses to be listed in batches.
+
+{{% alert color="info" %}}
+To get a full list of licenses with one command, use `--page 0 --limit 10000` to load 10000 licenses in one go. This can be useful when using a text editor to check if licenses are loaded correctly, or when collecting data for a support case.
+{{% /alert %}}
 
 You will receive the result in the following format:
 
@@ -470,7 +484,9 @@ You can see which licenses are currently used by which environments and operator
 mx-pclm-cli license list-usage -s <pclm-http-url> \
     -u <admin-user> \
     -p <admin-password> \
-    -t <custom-ca-cert-path>
+    -t <custom-ca-cert-path> \
+   --page <page-number> \
+   --limit <max-licenses-per-page>
 ```
 
 Where:
@@ -479,6 +495,11 @@ Where:
 * `<admin-user>` – is a user of type *admin* which can update users, default: `administrator` (overrides the config file)
 * `<admin-password>` – is the password for the chosen *admin* user (overrides the config file)
 * `<custom-ca-cert-path>` - is optional. Required only if the PCLM server is configured with custom cert.
+* `<page-number>` specifies the page number to load, in case the number of licenses exceeds `<max-licenses-per-page>`. These parameters are optional and allow to list license usage in batches.
+
+{{% alert color="info" %}}
+To get a full list of licenses with one command, use `--page 0 --limit 10000` to load 10000 licenses in one go. This can be useful when using a text editor to check if licenses are loaded correctly, or when collecting data for a support case.
+{{% /alert %}}
 
 Which would reply with something similar to this:
 

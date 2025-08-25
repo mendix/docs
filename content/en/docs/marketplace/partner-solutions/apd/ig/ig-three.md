@@ -17,7 +17,7 @@ Before starting this how-to, make sure you have completed the following prerequi
     * Write down the current values for the constant **APMAgent2.APMAPIKey** (and, if set, **APMAgent2.APMAdvancedSettings**),
     * Use the values for **APDAgent.APIKey** and, if applicable, **APDAgent.AdvancedSettings**
 * Remove APM 1 and/or APM 2 if they are installed (for details, see [Uninstall Steps APM 1](/appstore/partner-solutions/apd/ig-one-uninstall-steps/))
-* Create a [Mendix Personal Access Token](/community-tools/mendix-profile/user-settings/#pat) to retrieve your apps in APD:
+* Create a [Mendix Personal Access Token](/mendix-profile/user-settings/#pat) to retrieve your apps in APD:
     * Go to the [Developer Settings](https://user-settings.mendix.com/link/developersettings) page of your Mendix Developer Profile.
     * Click **New Token**.
     * Specify a token name, for example *APD Sync apps*.

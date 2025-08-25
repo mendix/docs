@@ -32,6 +32,9 @@ The ability to import an OpenAPI/Swagger contract is currently in beta.
 ### Limitations
 
 * To use the request response to create a data structure automatically in your domain model, the response data should be in JSON format. It is possible to process other formats, such as XML or raw text, but you will need to extract the data you are looking for in a microflow.
+* It is currently not possible to configure parameters in the Query Parameters tab.
+* Streaming responses from APIs are currently not supported.
+* A response can be mapped in a microflow only for responses with status code `200`. If a Send REST request action is executed in a microflow and the status code is in 2xx range, but different than `200`, use the latestHttpResponse to get the status code and response content.
 
 ### Prerequisites 
 
@@ -127,8 +130,6 @@ Parameters are not supported in the Authentication section.
 
 Parameters are fully supported in the path and query part of the URL, in the header value, and in the body. They are defined within curly brackets. For example, in the URL, defining `number` as parameter would be `http://numbersapi.com/{number}`. The parameters that are configured for the URL, headers, or body within curly brackets are automatically added to the parameters grid.
 
-{{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-service/get-header.png" class="no-border" >}}
-
 You can manually add new parameters to the parameters grid directly. To do so, follow these steps:
 
 1. Open the **Parameters** tab and click **Add parameter**.
@@ -149,6 +150,44 @@ You can add a Base URL as a parameter. To do this, follow these steps:
 {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-service/dynamic-base-url.png" class="no-border" width="600" >}}
 
 Your base URL is now considered as a parameter. You can change its value in the [Send REST Request](/refguide/send-rest-request/) microflow activity. 
+
+#### Adding Query Parameters
+
+{{% alert color="info" %}}
+
+Query parameters are available for Studio Pro 11.1 and above. 
+
+{{% /alert %}}
+
+{{% alert color="info" %}}
+
+Parameters are not supported in the Query Parameters table.
+
+{{% /alert %}}
+
+Query parameters can be configured in the **Parameters** tab in the **Query Parameters** table. You can define them directly in the URL or add them manually in the Query parameters field.
+
+##### Adding Query Parameter to URL
+
+To add query parameters to the end of a URL, add a question mark (?), followed immediately by the query parameter. 
+
+To add multiple parameters, add an ampersand (&) between each parameter, joining them to form a query string parameter. These can be created by any variation of object types or lengths such as strings, arrays, or numbers.
+
+{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-service/query-parameters.png" >}}
+
+##### Manually Add Query Parameters
+
+You can manually add new query parameters directly to the Query parameters grid. To do this, follow the steps below:
+
+1. Open the **Parameters** tab.
+2. Click **Add query parameter**.
+3. Name your query parameter and add a test value.
+
+In this case, the newly configured query parameter will be automatically added to the URL.
+
+By default, when a new query parameter is added to the grid, it is configured as a **Required** query parameter. You can change this setting to **Not required** by clicking the drop-down and changing the value of the required property to **No**.
+
+To include or exclude a query parameter from the URL, check or uncheck the checkbox of the specific query parameter.  
 
 ### Adding Headers {#add-headers}
 

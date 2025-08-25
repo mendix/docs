@@ -59,6 +59,20 @@ The title of the page that is shown using the [page title widget](/refguide/page
 
 The title can be overridden. For example, the [Create button](/refguide/control-bar/) and the [Edit button](/refguide/control-bar/) of a data grid can refer to the same page, but they override the titles to **New** and **Edit**, respectively.
 
+#### Autofocus {#autofocus}
+
+The **Autofocus** property determines which element (if any) receives focus when users first arrive on a page. When enabled, it automatically sets focus to the first interactive element on the page, such as a text field, button, or dropdown menu. When an element receives focus, it typically shows a visible outline and can be immediately interacted with using keyboard controls. This feature is particularly beneficial for deterministic UX scenarios such as login forms.
+
+However, autofocus can interfere with accessibility tools (particularly screen readers) and may disorient users by unexpectedly moving their focus position. Therefore, we recommended disabling it on most pages. Note that even with autofocus disabled, users can still navigate through interactive elements using the **Tab** key for keyboard navigation. You can choose to enable autofocus only for desktop platforms or across all devices, depending on your specific needs.
+
+| Value | Behavior |
+|-------|----------|
+| Off | No autofocus |
+| Desktop only | Autofocus is only enabled on desktop devices (computers/laptops) |
+| All platforms | Autofocus is enabled on all devices (desktop, mobile, tablets) |
+
+By default, **Autofocus** is set to "Off" for any newly created pages. For backwards compatibility, pages created in versions prior to Mendix 11.1 **Autofocus** default to "Desktop only", as this was the autofocus behavior in earlier versions.
+
 #### URL {#url}
 
 A page's URL allows end users to directly navigate to the page (for example, from external links or bookmarks). It will be shown in the address bar of the browser when you visit the page. When navigating to a page without a URL configured, the last visited URL is shown. Note that the full URL of the page will be the base URL of your application followed by `/p/` and then by the configured URL of the page (for example, `http://example.mendixcloud.com/p/home_page`).

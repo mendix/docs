@@ -50,7 +50,7 @@ Typically, feedback module usage has the following flow:
 
 * This module is compatible with Studio Pro 9.18.6 or higher.
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187) is required to apply the styling.
-* In native mobile apps, some of the feedback metadata such as username, email address, and document name will be hard-coded, as they cannot be retrieved dynamically (to address this you can use the [Native Feedback widget](/appstore/modules/native-mobile-resources/) instead, located in [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513)).
+* In native mobile apps, some of the feedback metadata, such as username, email address, and document name, will be hard-coded, as it cannot be retrieved dynamically.
 
 ## Installation
 

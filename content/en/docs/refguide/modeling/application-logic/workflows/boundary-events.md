@@ -60,6 +60,10 @@ To add a boundary event to the [above-listed activities](#supported-activities),
 
 To configure the properties of a boundary event, double-click the event to open its properties dialog box. For more information on how to configure the properties of a timer boundary event, see [Boundary Properties](/refguide/timer/#boundary-properties).
 
+#### Adding a Boundary Event to an Ongoing Activity
+
+When a boundary event is added to an ongoing activity, any workflow instances currently executing that activity will schedule the new boundary event accordingly. The only exception occurs when an ongoing boundary event is removed from the ongoing activity, the workflow is redeployed, and then the removal is reverted. In this case, the re-added boundary event will not be scheduled.
+
 #### Implications of Changing the Boundary Event Type
 
 For an existing boundary event, when you change its type from non-interrupting to interrupting or vice versa, you will be presented with a warning dialog. For example, when you change a boundary event from non-interrupting to interrupting, you will see the following warning dialog:
@@ -68,7 +72,7 @@ For an existing boundary event, when you change its type from non-interrupting t
 
 After you confirm the change:
 
-* The boundary event is re-created as the specified type.
+* The boundary event is re-created with the specified type. The new boundary event will be scheduled after the workflow is redeployed and becomes in progress.
 * The workflow will become incompatible if the changed boundary event has already been executed. The workflow becomes incompatible for the following reasons:
     * If the changed boundary event was non-interrupting, you will get the [Non-interrupting Boundary Event Path Removed](/refguide/workflow-versioning/#non-interrupting-boundary-event-path-removed) conflict.
     * If the changed boundary event was interrupting, you will get the [Current Activity Removed](/refguide/workflow-versioning/#current-activity-removed) conflict.
@@ -114,7 +118,7 @@ When there are multiple boundary events attached to an activity and an interrupt
 Boundary events come with a specific set of rules for jumps. These rules are applicable to both types of jumps - [Jumping to other activities in design time](/refguide/jump-activity/) and [Jumping in running workflow instances](/refguide/jump-to/). The rules are as follows:
 
 * Jump inside a boundary event: not possible
-* Jump outside a boundary event: not possible (a future plan is to make it possible to jump outside interrupting boundary events but only to the parent or grandparent path)
+* Jump outside a boundary event: only possible when jumping from an interrupting boundary event path to its parent or grandparent path
 * Jump within a boundary event: possible
 
 ## Boundary Event Variables

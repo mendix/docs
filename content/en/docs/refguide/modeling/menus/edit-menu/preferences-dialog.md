@@ -239,9 +239,7 @@ This option sets the default page editor mode that your page opens in: **Structu
 
 ### Language {#language}
 
-This feature is currently in beta.
-
-This option allows you to change the user interface language you work in while using Studio Pro. At this time, English, Japanese, Chinese, Korean, and Brazilian Portuguese are supported. You must restart Studio Pro in order to use this feature.
+This option allows you to change the user interface language you work in while using Studio Pro. At this time, English, Japanese, Chinese, Korean, and Brazilian Portuguese (Beta) are supported. You must restart Studio Pro in order to use this feature.
 
 ### Editor Tabs Closing Policy {#closing-policy}
 
@@ -311,7 +309,7 @@ This setting, currently in beta, allows entities to be used in offline navigatio
 
 ### System Texts Editor
 
-The web version of the system texts editor is currently an experimental feature. Enable this option to use the web version of the editor. 
+This option allows you to use the web version of the system texts editor. It is enabled by default.
 
 If Translation Generator is also enabled, you can use it in this editor as well. For more information, see the [Generating Translation for System Texts](/refguide/translation-generator/#translate-system-text) section in *Translation Generator*.
 

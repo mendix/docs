@@ -30,7 +30,7 @@ To view or manage access restriction profiles, follow these steps:
 
 When configuring an access restriction profile, keep the following considerations in mind:
 
-* Access restriction profiles are configured at the application level. They can be reused in all the environments (test, acceptance, production) of an app.
+* Access restriction profiles are configured at the application level. They can be reused in all the environments (for example test, acceptance, production) of an app.
 * Access restriction profiles can contain any number of IPv4 address ranges, client CAs, or both.
 * If an access restriction profile contains both IP address ranges and client CAs, then any match on either the IP range or the client certificate will grant access.
 

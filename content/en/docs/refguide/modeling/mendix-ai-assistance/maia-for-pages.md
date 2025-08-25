@@ -70,13 +70,11 @@ The image size is limited to 512 KB. Make sure to select a clear image to help M
 
 Keep in mind that Maia analyzes only the structure of the image. The theming of your app, such as the color scheme, will not be changed. This can cause some differences between the provided image and the generated page.
 
-## Limitations {#limitation}
+## Limitation {#limitation}
 
-Maia for Pages has some limitations.
+Maia for Pages does not support all widgets. 
 
-### Supported Widgets
-
-Not all widgets are supported. Currently the following widgets are supported:
+Currently the following widgets are supported:
 
 * [Container](/refguide/container/)
 * [Layout Grid](/refguide/layout-grid/)
@@ -88,6 +86,15 @@ Not all widgets are supported. Currently the following widgets are supported:
 * [Checkbox](/refguide/check-box/)
 * [Radio Buttons](/refguide/radio-buttons/)
 * [Date Picker](/refguide/date-picker/)
+
+The following widgets are supported if they have been installed:
+
+* [Data Grid 2](/appstore/modules/data-grid-2/)
+* [Combo Box](/appstore/widgets/combobox/)
+* [Image](/appstore/widgets/image/)
+* [Charts](/appstore/widgets/charts/)
+* [Progress Bar](/appstore/widgets/progress-bar/) (Studio Pro 11.1 and above)
+* [Progress Circle](/appstore/widgets/progress-circle/) (Studio Pro 11.1 and above)
 
 ## Read More
 

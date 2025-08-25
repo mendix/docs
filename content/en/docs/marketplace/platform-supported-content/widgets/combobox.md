@@ -95,7 +95,7 @@ The **Multi selection (reference set)** section allows you to configure combo bo
 * **Selection Method** – configures the behavior for selecting options
     * **Checkbox** – displays a checkbox on the left side of each option. Selected items will be marked by check marks.
     * **Row click** – each selected item will be filtered out from the displayed options. Items can deselected by clicking the {{% icon name="remove" %}} on each of the displayed selected items.
-* **Show selected item as** – you can choose to display selected item as labels with {{% icon name="remove" %}} buttons which allow those items to be deselected (shown at the top of this screenshot), or as simple comma-separated text (shown at the bottom): 
+* **Show selected item as** – you can choose to display selected item as labels with {{% icon name="remove" %}} buttons which allow those items to be deselected (shown at the top of this screenshot), or as simple comma-separated text (shown at the bottom):
 
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/combobox/combobox-showselected.png" alt="Show selected item as list or labels examples" class="no-border" >}}
     {{% alert color="info" %}}The **Show selected item as** property is only available for the **Checkbox** selection method without custom content.{{% /alert %}}
@@ -153,7 +153,7 @@ Using a **caption type** expression disables lazy load due to a technical limita
     This setting is only applicable for combo boxes with multiple item selections.
 
     * **Selected items sorting** – allows user to configure the sorting mechanism to display the selected items.
-        * **Caption** - if selected, this settings displays selected items based on their captions, regardless of user's selected sequence. 
+        * **Caption** - if selected, this settings displays selected items based on their captions, regardless of user's selected sequence.
         * **Default** - if selected, this settings does not do any sorting on the client side. Instead, it keeps the sorting from the saved values given from datasource.
             If the target attribute value is set (that is, if the multiple selection is set to **association**) the data will already sorted based on values from the API and combobox will display it as it is. Otherwise, if there is no target attribute (that is, if the multiple selection is set to **database**) the selected items are displayed based on user's selected sequence.
 
@@ -168,8 +168,19 @@ For more information, see [Common Section](/refguide/common-widget-properties/#c
 
 ### Design Properties Section {#design-properties}
 
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}}
 
 ### Common Section {#common-styling}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+
+## Limitations
+
+### Editable Behavior Without a Store Value
+
+When using a Combo Box inside a data view, the widget relies on a **store value attribute** to determine its editable state. If no store value attribute is configured, the **Editability** setting of the data view (set to *Never* or *Conditionally*) will not be applied to the Combo Box.
+
+This occurs because, without a target attribute, the Combo Box has no reference for whether it should be editable.
+
+**Workaround:** To ensure correct behavior, copy the **Editability** setting from the data view directly into each Combo Box individually.

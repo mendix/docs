@@ -7,7 +7,7 @@ description: "Describes the configuration and usage of the check box radio selec
 
 ## Introduction
 
-The [Checkbox radio selector](https://marketplace.mendix.com/link/component/000) widget displays a list of options that users can select from. This is useful in scenarios where end-users need to select their data through choices, such as being able to select or de-select different enumeration list.
+The [Checkbox radio selector](https://marketplace.mendix.com/link/component/245825) widget displays a list of options that users can select from. This is useful in scenarios where end-users need to select their data through choices, such as being able to select or de-select different enumeration list.
 The widget will automatically display a check box list for multi selection and radio button list for single selection with exception for boolean datasource, where user can choose the render type.
 
 ### Features

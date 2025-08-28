@@ -32,7 +32,7 @@ Please note that the Make It Native app has already the registered schema `makei
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Complete the [Prerequisites](/howto8/mobile/deploying-native-app/#prerequisites) section of *How to Build a Mendix Native App in the Cloud*
+* Complete the [Prerequisites](/refguide/mobile/getting-started-with-mobile/prerequisites/) of your app per its type
 * Make sure your [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module is up to date
 * Install Git [command line](https://git-scm.com/downloads) tool for working with the Native Mobile App Builder CLI
 * Install Mendix Studio Pro v 8.15.0 or above in order to use the Native Mobile App Builder

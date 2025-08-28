@@ -16,13 +16,13 @@ The table below can help you find the correct MxBuild. Copy a URL from the corre
 | Operating System | Mendix Version               | URL                                                          |
 | ---------------- | ---------------------------- | ------------------------------------------------------------ |
 | Linux (x64)      | All versions                 | `https://cdn.mendix.com/runtime/mxbuild-{mxversion}.tar.gz`  |
-| Windows (x64)    | All version of Studio Pro 10 | `https://cdn.mendix.com/runtime/win-mxbuild-{mxversion}.tar.gz` |
+| Windows (x64)    | All version of Studio Pro 11 | `https://cdn.mendix.com/runtime/win-mxbuild-{mxversion}.tar.gz` |
 
 {{% alert color="info" %}}
 
-A build number is included in the version, which has to be included in the link path mentioned above (for example, `10.0.0.9976` is the 9976 build of the 10.0.0 Studio Pro release).
+A build number is included in the version, which has to be included in the link path mentioned above (for example, `11.0.0.9976` is the 9976 build of the 11.0.0 Studio Pro release).
 
-You can find the build number in path of your Mendix installation (for example, if your installation looks like this `C:\Program Files\Mendix\10.0.0.9976`, use this URL to get your files: [https://cdn.mendix.com/runtime/mxbuild-10.0.0.9976.tar.gz](https://cdn.mendix.com/runtime/mxbuild-10.0.0.9976.tar.gz)).
+You can find the build number in path of your Mendix installation (for example, if your installation looks like this `C:\Program Files\Mendix\11.0.0.9976`, use this URL to get your files: [https://cdn.mendix.com/runtime/mxbuild-11.0.0.9976.tar.gz](https://cdn.mendix.com/runtime/mxbuild-11.0.0.9976.tar.gz)).
 
 Any public version of Studio Pro in this [Studio Pro Releases List](https://marketplace.mendix.com/link/studiopro/) will allow you to download MxBuild files. If you experience trouble downloading files, make sure your build is listed there.
 
@@ -34,6 +34,12 @@ For details on the system requirements for MxBuild, see [System Requirements](/r
 
 {{% alert color="info" %}}
 The examples used in this document are for Windows, except when specifically mentioned otherwise.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+For MxBuild and macOS users:
+
+If you are using the macOS version of Studio Pro and you store your project files on an external drive not formatted using the Apple File System, macOS can generate hidden files and folders that can make Windows versions of Studio Pro or MxBuild not work as expected.
 {{% /alert %}}
 
 ## Command Line
@@ -66,7 +72,8 @@ Command-line options are described in the table below:
 | `--write-errors=FILENAME` | Writes all errors, warnings, and deprecations encountered during deployment of the app to the specified file in JSON format.<br />This file is only written when the app contains errors.<br />If the file already exists, it will be overwritten without a warning.<br />For a description of the format of this file, see the [App Errors](#app-errors) section below. |
 | `--generate-sbom` | Generates a Software Bill of Materials (SBOM) file as a part of the `package` and `deployment` targets. The SBOM will be included in the deployment package if this option is used and is saved under its default location: `deployment\sbom.json` |
 | `--sbom-output-path=VALUE` | The file path to generate a bill of material file for the `package` and `deployment` targets. Use `--output` for the `sbom` target (Default value: `deployment\sbom.json`). <br>This parameter is deprecated and will be removed in Mendix 11 and replaced with the `sbom` target.</br> |
-| `--gradle-home` | Sets the Gradle home directory. This can be used when auto-detection of the Gradle installation fails. | 
+| `--gradle-home` | Sets the Gradle home directory. This can be used when auto-detection of the Gradle installation fails. |
+| `--extra-gradle-arguments` | Adds extra arguments to the Gradle process. |
 
 ### Options When Creating a Package
 

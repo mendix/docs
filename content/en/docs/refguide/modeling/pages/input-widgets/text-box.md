@@ -8,7 +8,7 @@ weight: 10
 
 ## Introduction
 
-A text box is used to display and, optionally, allow the end-user to edit the value of an attribute from an object in a textual form. It can be used to display attributes of the following [data types](/refguide/data-types/):
+A text box is used to display and, optionally, allow the end-user to edit the value of a variable or an attribute from an object in a textual form. It can be used to display variables or attributes of the following [data types](/refguide/data-types/):
 
 * Autonumber
 * Decimal
@@ -17,9 +17,15 @@ A text box is used to display and, optionally, allow the end-user to edit the va
 * Long
 * String
 
-A text box must be placed in a [data container](/refguide/data-widgets/) and displays an attribute of the object (or objects) retrieved by that container. The name of the attribute to be displayed is shown inside the text box, between square brackets, and colored blue.
+A text box must be placed within a data context to display or edit the intended value:
 
-For example, the following text box allows the end-user to see, and set, the **Name** of a customer.
+* A [data container](/refguide/data-widgets/) widget containing an object
+* A snippet containing one or more [parameters](/refguide/page-properties/#parameters)
+* A page or a snippet containing one or more [variables](/refguide/page-properties/#variables)
+
+The name of the configured value is shown inside the text box widget, between square brackets, and colored blue in the structure mode and black in design mode.
+
+For example, here are two text boxes shown in design mode that allow the end-user to see, and set, the **Name** of a customer. The difference is that the top text box in this example is configured with an attribute while the bottom uses a variable defined on the page.
 
 {{< figure src="/attachments/refguide/modeling/pages/input-widgets/text-box/text-box.png" class="no-border" >}}
 
@@ -55,12 +61,12 @@ Miscellaneous:
 
 #### Show as Password
 
-Attributes of the data type `String` or `Hashed string` can have their value hidden. This can be used for passwords, for example, to prevent bystanders from seeing them.
+Attributes or variables of the data type `String` or `Hashed string` can have their value hidden. This can be used for passwords, for example, to prevent bystanders from seeing them.
 
-| Value | Description |
-| --- | --- |
-| False *(default)*| Normal text box |
-| True | Typed characters are not shown to the end-user, instead an asterisk is shown for every typed character |
+| Value             | Description                                                                                            |
+|-------------------|--------------------------------------------------------------------------------------------------------|
+| False *(default)* | Normal text box                                                                                        |
+| True              | Typed characters are not shown to the end-user, instead an asterisk is shown for every typed character |
 
 #### Input Mask
 
@@ -86,15 +92,19 @@ For example, the input mask `99-LLL-9999` matches `24-apr-2008`.
 
 This property specifies the maximum number of characters that can be typed in this text box.
 
-| Value | Description |
-| --- | --- |
-| Attribute length *(default)* | The maximum number of characters is the same as the maximum length of the connected attribute |
-| Unlimited | The maximum number of characters is unlimited |
-| Custom | The maximum number of characters is specified in the widget properties |
+| Value                                        | Description                                                                                   |
+|----------------------------------------------|-----------------------------------------------------------------------------------------------|
+| Attribute length *(default with attributes)* | The maximum number of characters is the same as the maximum length of the connected attribute |
+| Unlimited *(default with variables)*         | The maximum number of characters is unlimited                                                 |
+| Custom                                       | The maximum number of characters is specified in the widget properties                        |
+
+{{% alert color="info" %}}
+Attribute length option is not available when the widget is configured with a variable.
+{{% /alert %}}
 
 #### Placeholder Text
 
-The placeholder text is shown when no text has been entered yet, or when a displayed attribute is empty.
+The placeholder text is shown when no text has been entered yet, or when a displayed attribute or variable is empty.
 
 It can be used, for example, to give a hint to the end-user what kind of text should be entered.
 
@@ -208,7 +218,7 @@ With **While user is entering data**, users now can adjust one more property cal
 
 ### Formatting Section{#formatting}
 
-The formatting section applies only to the way that numeric attributes are displayed. These are attributes of the following data types:
+The formatting section applies only to the way that numeric attributes or variables are displayed. These are attributes or variables of the following data types:
 
 * Decimal
 * Integer
@@ -221,3 +231,4 @@ The formatting section applies only to the way that numeric attributes are displ
 * [Data Types](/refguide/data-types/)  
 * [Data View](/refguide/data-view/)
 * [Attributes](/refguide/attributes/)
+* [Variables](/refguide/page-properties/#variables)

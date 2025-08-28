@@ -336,28 +336,45 @@ As the microflow has the parameter *Customer*, and the data view has the object 
 
 The best way to fix this error is to either change the microflow to accept *Photo* or put the button in a data container for a different entity.
 
+### Error Code: CE7007 {#error-code-ce7007}
+
+CE7007 error message: *Selected value is not valid for entity '{ENTITY_PATH}'. Please select the value again.*
+
+You get CE7007 if you have added a data widget but the configured value is not valid for the entity.
+
+To fix CE7007, you need to make sure that the widget is placed inside the correct data context that its configuration refers to.
+
 ## Input Widget Consistency Errors
 
 The most common errors for input elements, their causes, and ways to fix them are described in the following sub-sections. For more information on input elements, see [Input Elements](/refguide/input-widgets/). 
 
 ### Error Code: CE0544
 
-CE0544 error message: *This widget can only function inside a data container. Move it into a data view, list view or template grid.*
+CE0544 error message: *This widget can only function inside a data context — like a data view, list view, or a {document type} with variables.*
 
-You get CE0544 if you have added an input widget to a page but it is not inside a data container. Input elements need to refer to an attribute of a specific entity type and entities are only available via data containers. 
+You get CE0544 if you have added an input widget but it is not inside a data container or the page or snippet does not define any variables. Input elements either need to refer to a variable or an attribute of a specific entity type. 
 
-To fix CE0544, place this widget into a data container: a data view, list view, or template grid.
+To fix CE0544, place this widget into a data container such as a data view, list view, or use variables in the page or snippet that contains the widget.
 
-### Error Code: CE0545
+### Error Code: CE7005 {#error-code-ce7005}
 
-CE0545 error message: *Select an attribute for this {widget name}.*
+CE7005 error message: *No data source selection has been made. Please select a data source.*
 
-You get CE0545 if you have added an input widget and it is inside a data container, but an attribute is not selected for it.
+You get CE7005 if you have added an input widget but its data source is not configured. Input elements either need to refer to a variable or an attribute of a specific entity type.
 
-To fix CE0545, do one of the following:
+To fix CE7005, configure the data source property of the widget with a variable or an attribute of a specific entity type.
 
-* Right-click the widget, click **Select Attribute** in the drop-down list, and set an attribute. 
-* Or open widget's properties > the **Data source** section, and set an attribute in the **Attribute (path)** field.
+### Error Code: CE7006 {#error-code-ce7006}
+
+CE7006 error message: *Selected value is not valid for attribute '{ATTRIBUTE_PATH}'. Please select the value again.*
+
+You get CE7006 if you have added an input widget but the selected value is no longer valid for the attribute path. This might be because the input widget is moved out of its configured data context.
+
+To fix CE7006, you need to make sure that the input widget is placed inside the correct data context.
+
+{{% alert color="info" %}}
+Input widgets can directly use the page and snippet parameters without the need of a data container widget.
+{{% /alert %}}
 
 ### Incorrect Multiplicity for a Reference Selector {#incorrect-multiplicity-reference}
 

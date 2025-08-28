@@ -10,6 +10,10 @@ The Mendix Object Query Language (OQL) is a relational query language inspired b
 
 In addition, OQL can use predefined relations (associations) to easily join objects without having to calculate which columns should be coupled. Despite these differences, many SQL keywords also work in OQL.
 
+{{% alert color="info" %}}
+OQL can only be used on persistable and view entities and the associations between them. It cannot be used with non-persistable or external [entities](/refguide/entities/). 
+{{% /alert %}}
+
 Some examples of OQL queries are:
 
 * `SELECT LastName FROM Sales.Customer` – retrieves the family names of all customers
@@ -34,9 +38,9 @@ Here is a list of all OQL reserved words:
 
 `BOOLEAN`, `BY`
 
-`CASE`, `CAST`, `COUNT`
+`CASE`, `CAST`, `CONFLICT`, `COUNT`
 
-`DATEDIFF`, `DATEPART`, `DATETIME`, `DAY`, `DAYOFYEAR`, `DECIMAL`, `DESC`, `DISTINCT`
+`DATEDIFF`, `DATEPART`, `DATETIME`, `DAY`, `DAYOFYEAR`, `DECIMAL`, `DELETE`, `DESC`, `DISTINCT`, `DUPLICATE`
 
 `ELSE`, `END`, `EXISTS`
 
@@ -46,13 +50,15 @@ Here is a list of all OQL reserved words:
 
 `HAVING`, `HOUR`
 
-`IN`, `INNER`, `INTEGER`, `IS`
+`IGNORE`, `IN`, `INNER`, `INSERT`, `INTEGER`, `INTO`, `IS`
 
 `JOIN`
 
+`KEY`
+
 `LEFT`, `LIKE`, `LIMIT`, `LONG`
 
-`MAX`, `MILLISECOND`, `MIN`, `MINUTE`, `MONTH`
+`MATCHED`, `MAX`, `MERGE`, `MILLISECOND`, `MIN`, `MINUTE`, `MONTH`
 
 `NOT`, `NULL`
 
@@ -60,18 +66,24 @@ Here is a list of all OQL reserved words:
 
 `QUARTER`
 
-`RIGHT`
+`REPLACE`, `RIGHT`
 
-`SECOND`, `SELECT`, `STRING`, `SUM`
+`SECOND`, `SELECT`, `SET`, `SOURCE`, `STRING`, `SUM`
 
-`THEN`, `TRUE`
+`TARGET`, `THEN`, `TRUE`
 
-`UNION`
+`UNION`, `UPDATE`, `UPSERT`, `USING`
 
-`WEEK`, `WEEKDAY`, `WHEN`, `WHERE`
+`VALUES`
+
+`WEEK`, `WEEKDAY`, `WHEN`, `WHERE`, `WITH`
 
 `YEAR`
 
 {{% alert color="info" %}}
 In OQL, `FLOAT` is a reserved word for legacy reasons. Mendix no longer supports a Float data type. It should not be used.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+In OQL, `DELETE`, `INSERT`, `REPLACE`, `UPDATE`, `UPSERT`, `INTO`, `SET`, `VALUES`, `IGNORE`, `MATCHED`, `DUPLICATE`, `KEY`, `CONFLICT`, `MERGE`, `USING`, `SOURCE`, `TARGET`, and `WITH` are reserved but not yet used.
 {{% /alert %}}

@@ -22,16 +22,18 @@ Each row shows the following information about a story:
 * Linked epic
 * Tags
 * Number of comments
-* Number of the tasks
+* Number of tasks
 * Story points
 * To whom the story is assigned
 
-On the upper-left corner of the page, you can use the search box to search stories based on story title, tags, epic name, assignee (including unassigned stories), story type (type *bug* or *feature*) and story ID. You can use the search box in combination with the filter.
+In the upper-left corner of the page, you can use the search box to search stories based on story title, tags, epic name, assignee (including unassigned stories), story type (enter *bug* or *feature*) and story ID. You can use the search box in combination with the filter.
 
-On the upper-right corner of the page, you can see two buttons:
+In the upper-right corner of the page, you can see two buttons:
 
-* **Create Story** – Clicking this enables you to create a new story.
-* **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this shows the following options:
+* **Create Story** – Clicking this enables you to create a new story.    
+    You can also use Maia to create a story. Refer to the [Creating and Refining Stories with Maia](#create-with-maia) section.
+
+* **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this displays the following options:
     * **Create Epic** – This enable you to create an epic.
     * **Edit Sprint** (only available for [a Scrum workflow](#scrum-planning)) – This enables you to edit the current Sprint.
     * **End Sprint** (only available for [a Scrum workflow](#scrum-planning)) – This enables you to the current Sprint.
@@ -41,7 +43,22 @@ On the upper-right corner of the page, you can see two buttons:
     * **Board Settings** – Clicking this enables you configure the board settings.
         * For more information, see the [Board Settings](#settings) section.
 
-### Selecting, Moving, Archiving, and Deleting Stories 
+## Creating and Refining Stories with Maia {#create-with-maia}
+
+Follow these steps to create a story with Maia:
+
+1. Enable Maia in Epics. To do that:
+    
+    1. Click the **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) button and select **Settings**.
+    2. On the **Mendix AI Assistance** tab, toggle the option on.
+{{% alert color="info" %}}Only Scrum Masters can modify this setting.{{% /alert %}}
+2. Click **Create Story**, then click {{% icon name="sparkles" %}}**Create with Maia**. The **Maia Create Story** window is displayed.
+3. Enter your input, then click **Generate Story**.
+4. Check the suggestion provided by Maia. You can click **Apply to Story** if you agree with the suggestion, or you can choose to regenerate it.
+
+To refine an existing story using Maia, open it, and click **Refine with Maia** ({{% icon name="sparkles" %}}).
+
+## Selecting, Moving, Archiving, and Deleting Stories 
 
 To select a story, select the checkbox for the story when the mouse pointer becomes a pointing hand:
 
@@ -59,11 +76,11 @@ To move multiple stories, select these stories, choose the category name where t
 
 {{< figure src="/attachments/developerportal/project-management/epics/planning/move-multiple-stories.png" class="no-border" >}}
 
-To [archive](/developerportal/project-management/epics/archive/) or delete a story, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) at the end of the row, and then select the corresponding option:
+To [archive](/developerportal/project-management/epics/archive/) or delete a story, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) at the end of the row, then select the corresponding option:
 
 {{< figure src="/attachments/developerportal/project-management/epics/planning/archive-delete-story-kanban.png" class="no-border" >}}
 
-To archive or delete multiple stories, select these stories, and then click the corresponding option at the bottom of the page.
+To archive or delete multiple stories, select these stories, then click the corresponding option at the bottom of the page.
 
 #### Keyboard Shortcuts For Selecting Stories{#keyboard-shortcuts}
 
@@ -78,7 +95,7 @@ For Windows, you can use the following keyboard shortcuts to select stories on t
 
 ## Scrum Planning vs Kanban Planning {#different-plannings}
 
-The **Planning** page offers different features to accommodate two different workflows: Scrum or Kanban. Depending on your choice of board type – Scrum or Kanban, the **Board** page looks a bit different.
+The **Planning** page offers different features to accommodate two different workflows: Scrum or Kanban. Depending on your choice of board type — Scrum or Kanban —, the **Board** page looks a bit different.
 
 {{% alert color="info" %}}You can select your board type on the [Planning](/developerportal/project-management/epics/planning/#board-type) page.{{% /alert %}}
 
@@ -94,16 +111,16 @@ In the main area of the page, stories are grouped in these categories: **Active 
 
 On the upper-right corner, you can find these Scrum items if you click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}):
 
-* **Start Sprint** – Clicking this allows you to start a new Sprint. Once a Sprint is created, all the items in the **Next Sprint** are moved to the **Active Sprint** automatically. 
-    * This is available only when there is no Sprint running at this moment.
-* **Edit Sprint** – Clicking this allows you to edit the current Sprint. When you end a Sprint, the system shows you how many stories were completed in that Sprint. All the completed stories are archived automatically, and you can decide where the unfinished stories should go.
-    * This is available only when this is a Sprint running at this moment.
-* **End Sprint** – Clicking this allows you to end the current Sprint. 
-    * This is available only when this is a Sprint running at this moment.
+* **Start Sprint** – Clicking this allows you to start a new Sprint. Once a Sprint is created, all the items in the **Next Sprint** are moved to the **Active Sprint** automatically.     
+    This is available only when there is no Sprint running at that moment.
+* **Edit Sprint** – Clicking this allows you to edit the current Sprint.    
+    This is available only when there is a Sprint running at that moment.
+* **End Sprint** – Clicking this allows you to end the current Sprint. When you end a Sprint, the system shows you how many stories were completed in that Sprint. All the completed stories are archived automatically, and you can decide where the unfinished stories should go.     
+    This is available only when there is a Sprint running at that moment.
 
 ### Kanban Planning {#kanban-planning}
 
-If your board type is Kanban, the stories are grouped in these categories: **To Do**, **Refinement**, and **Backlog**. On the top of each category, you can see the total number of stories and points.
+If your board type is Kanban, the stories are grouped in these categories: **To Do**, **Refinement**, and **Backlog**. At the top of each category, you can see the total number of stories and points.
 
 {{< figure src="/attachments/developerportal/project-management/epics/planning/kanban-planning.png" class="no-border" >}}
 
@@ -111,7 +128,7 @@ If your board type is Kanban, the stories are grouped in these categories: **To 
 
 You can import your stories using an Excel file to Epics as follows:
 
-1. On the upper-right corner of the **Planning** page, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and then click **Import Stories**.
+1. In the upper-right corner of the **Planning** page, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and then click **Import Stories**.
 
    {{< figure src="/attachments/developerportal/project-management/epics/planning/import-stories.png" class="no-border" >}}
 
@@ -145,7 +162,7 @@ You can import your stories using an Excel file to Epics as follows:
 
 5. Go back to the **Import Stories from Excel** dialog box. 
 
-6. Click **Browse**, navigate to the Excel file, and then select it.
+6. Click **Browse**, navigate to the Excel file, then select it.
 
 7. Click **Continue**. The dialog box gives a preview of all the stories that will be imported.
 
@@ -157,16 +174,20 @@ You can find all the imported stories in the **Backlog**.
 
 You can export your stories on the **Planning** page to an Excel file as follows:
 
-1. On the upper-right corner of the **Planning** page, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and then click **Export Stories**.
+1. On the upper-right corner of the **Planning** page, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}), then click **Export Stories**.
 
    {{< figure src="/attachments/developerportal/project-management/epics/planning/export-stories.png" class="no-border" >}}
-2. Select from where you want to export stories.
+2. Select where you want to export stories from.
 3. Click **Continue** to see a preview of the Excel file.
 4. Click **Export to Excel**.
 
 ## Board Settings {#settings}
 
-When you click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner of the **Planning** page, and select **Board Settings**, a dialog box opens with four tabs: **Manage Tags**, **Board Type**, and **Toast Settings**. These tabs are described in the sections below.
+When you click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in the upper-right corner of the **Planning** page, and select **Board Settings**, a dialog box with these tabs opens: 
+
+* **Manage Tags**
+* **Board Type**
+* **Toast Settings**
 
 {{< figure src="/attachments/developerportal/project-management/epics/planning/board-settings.png" class="no-border" >}}
 
@@ -174,13 +195,15 @@ When you click **More Options** ({{% icon name="three-dots-menu-horizontal" %}})
 
 On this tab, you can add, rename, and delete tags, as well as change tag colors. The changes here affect all the tags in your app.
 
-To add a tag, click **+Add Tag**, enter the name, select a color, and then click **Save** {{% icon name="checkmark-circle" %}} to save it.
+#### Available Actions
 
-To rename a tag, double-click the tag name, change the name in the text box, and then click outside the text box to save it.
+* To add a tag, click **+Add Tag**, enter the name, select a color, then click **Save** {{% icon name="checkmark-circle" %}} to save it.
 
-To delete a tag, hover over the row of the tag, and then click the **Cancel** button ({{% icon name="remove" %}}) that appears at the end of the row.
+* To rename a tag, double-click the tag name, change the name in the text box, and then click outside the text box to save it.
 
-To change the tag color, click the current color, and then select the new color from the dialog box.
+* To delete a tag, hover over the row of the tag, and then click the **Cancel** button ({{% icon name="remove" %}}) that appears at the end of the row.
+
+* To change the tag color, click the current color, then select the new color from the dialog box.
 
 ### Board Type {#board-type}
 

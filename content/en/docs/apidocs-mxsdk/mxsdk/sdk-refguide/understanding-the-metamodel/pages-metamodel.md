@@ -226,7 +226,7 @@ a ListView widget).
 
 The data sources can be divided by how their retrieve their data:
 
-* Querying [the database](/refguide/database-source/), possibly with an [XPath constraint](/refguide/xpath-source/)
+* Querying [the database](/refguide/database-source/), possibly with an [XPath constraint](/refguide/xpath-constraints/)
 * By [context](/refguide/context-source/) from a surrounding data widget or a page (or snippet) parameter
 * By [association](/refguide/association-source/) to an object from a surrounding data widget
 * By a [microflow](/refguide/microflow-source/) or [nanoflow](/refguide/nanoflow-source/)

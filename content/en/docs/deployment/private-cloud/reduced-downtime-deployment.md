@@ -1,16 +1,16 @@
 ---
 title: "Reducing Deployment Downtime"
 url: /developerportal/deploy/private-cloud-reduced-downtime/
-description: "Describes how to reduce downtime when deploying apps in Private Cloud environments."
+description: "Describes how to reduce downtime when deploying apps in Mendix on Kubernetes environments."
 weight: 35
 ---
 ## Introduction
 
 Kubernetes allows to update an app without downtime by [performing a rolling update](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/). Instead of stopping an app and then starting it with an updated version or configuration, Kubernetes can replace pods (replicas) one by one with an updated version. Existing pods handle requests until the newer version is fully started. Any changes in the [Data in the Domain Model](/refguide/domain-model/) need a database (schema) update. While the update process runs, you cannot modify any persistent entities.
 
-The Private Cloud Operator uses a [recreate](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#recreate-deployment) strategy by default. That is, the current version (configuration) of an app stops, and then the new version starts. Alternatively, the Private Cloud Operator can use a **PreferRolling** strategy. That is, the Operator tries to perform a rolling update whenever possible. If the Operator detects that a database schema update is needed, it switches to a Recreate strategy to perform a full restart. If the new version of the app has model changes, deploying it requires a schema update. In this case, the Private Cloud Operator automatically stops all replicas of the app, causing downtime.
+The Mendix on Kubernetes Operator uses a [recreate](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#recreate-deployment) strategy by default. That is, the current version (configuration) of an app stops, and then the new version starts. Alternatively, the Mendix on Kubernetes Operator can use a **PreferRolling** strategy. That is, the Operator tries to perform a rolling update whenever possible. If the Operator detects that a database schema update is needed, it switches to a Recreate strategy to perform a full restart. If the new version of the app has model changes, deploying it requires a schema update. In this case, the Mendix on Kubernetes Operator automatically stops all replicas of the app, causing downtime.
 
-This feature works with Mendix for Private Cloud version 2.20 and later.
+This feature works with Mendix on Kubernetes version 2.20 and later.
 
 ## Prerequisites
 
@@ -78,7 +78,7 @@ spec:
 
 For more information on the `MendixApp` CR, see [Editing CR](/developerportal/deploy/private-cloud-operator/#edit-cr).
 
-If the `deploymentStrategy` is not specified, the Operator will use the Recreate strategy and perform a complete restart on any changes, causing downtime. This follows how updates were processed by Mendix for Private Cloud versions before 2.19 and earlier.
+If the `deploymentStrategy` is not specified, the Operator will use the Recreate strategy and perform a complete restart on any changes, causing downtime. This follows how updates were processed by Mendix on Kubernetes versions before 2.19 and earlier.
 
 You can specify the following options:
 
@@ -116,3 +116,4 @@ spec:
 * If the new app version has UI changes, all clients are automatically logged out and will need to sign back into the app.
 * Deploying a new version of the app will cause downtime if there are changes in the domain model, or the Mendix version.
 * If an app is based on Mendix 9.12 or a later version, a Rolling update can run scheduled events on any replica. During an update, scheduled events might use a newer or older version of their associated microflows, which will be random. If there are major changes in a scheduled event microflow, consider temporarily disabling scheduled events during an update.
+* To ensure that scheduled events [are correctly synchronized at startup](/releasenotes/studio-pro/10.20/#improvements), it is recommended to use Mendix 10.20 or later.

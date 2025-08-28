@@ -14,7 +14,7 @@ description: "How to configure Mendix Cloud to send your runtime application log
 Mendix provides integration with Splunk Cloud Platform; it does not currently integrate with other Splunk monitoring products. Mendix sends only the runtime application logs to Splunk.
 
 {{% alert color="info" %}}
-For support on other cloud deployment options, such as Private Cloud, refer to their dedicated documentation. For Private Cloud deployment, for example, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
+For support on other cloud deployment options, such as Mendix on Kubernetes, refer to their dedicated documentation. For deployment on Kubernetes, for example, see [Monitoring Environments in Mendix on Kubernetes](/developerportal/deploy/private-cloud-monitor/).
 {{% /alert %}}
 
 ## Prerequisites
@@ -32,7 +32,7 @@ To use the Splunk Cloud Platform and send data to Splunk Cloud Platform from you
 To send your runtime information to Splunk Cloud Platform, you need to set it up using environment variables in the Mendix Portal.
 
 1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
-1. Click **Details** on the environment you wish to monitor with Splunk Cloud Platform. 
+1. Click **Details** on the environment you wish to monitor with Splunk Cloud Platform.
 1. Switch to the [**Runtime** tab](/developerportal/deploy/environments-details/#runtime-tab).
 1. Add the following **Custom Environment Variables**.
 
@@ -42,6 +42,8 @@ To send your runtime information to Splunk Cloud Platform, you need to set it up
     | `SPLUNK_PORT` | The HTTP (or HTTPS) port of the Splunk Cloud Platform Controller. | `8088` |
     | `SPLUNK_TOKEN` | An access token to the Splunk Cloud Platform. To create a new token on the Splunk Cloud dashboard, open the Splunk Cloud dashboard in a browser, go to **Settings** > **Data Input** > **HTTP Event Collector**, and click **New Token** (on the upper-right corner of the page). | |
     | `LOGS_REDACTION` | Email addresses are automatically redacted before log entries are sent to Splunk Cloud Platform. To disable this redaction, set `LOGS_REDACTION` to `false`. The environment variable `SPLUNK_LOGS_REDACTION` is still supported, but it is now deprecated and will be removed in a later version. Its use is not recommended. | `true` |
+    | `FLUENTBIT_LOGS_BUFFER_SIZE` | Sets the maximum amount of data (in KB) that the TCP input plugin reads from the socket per read operation. Increasing this value can help to get rid of data flow delay, and errors related to queue buffer overflow.  | `128` |
+    | `FLUENTBIT_LOGS_MEM_BUF_LIMIT` | Defines the maximum total memory an input plugin can use for buffering log records before they are processed or flushed to storage/output. Limits memory which can be consumed by the Fluentbit agent | `50MB` |
 
 1. Return to the **Environments** page for your app and **Deploy** or **Transport** your app into the selected environment.
 
@@ -70,7 +72,7 @@ You can also set up custom tags in the format `key:value`. Mendix recommends add
 To set these tags, do the following:
 
 1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
-1. Click **Details** on an environment you are monitoring with Splunk. 
+1. Click **Details** on an environment you are monitoring with Splunk.
 1. Switch to the **Tags** tab.
 1. Click **Add** and type in the string to be sent to Splunk as a tag.
 1. Restart the app.

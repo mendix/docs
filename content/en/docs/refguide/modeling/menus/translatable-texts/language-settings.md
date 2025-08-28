@@ -1,7 +1,7 @@
 ---
 title: "Language Settings"
 url: /refguide/language-settings/
-weight: 50
+weight: 10
 ---
 
 ## Introduction
@@ -59,6 +59,8 @@ Type a format string in the relevant box and you will see an example of how a da
 Click **Edit…** to open a dialog box which will provide a full reference for the format string:
 
 {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/date-format.png" width="550px" alt="Date edit dialog" class="no-border" >}}
+
+The list of supported tokens can be found in [Parse and Format Date Function Calls](/refguide/parse-and-format-date-function-calls/).
 
 ## List of Supported Languages {#supported-languages}
 

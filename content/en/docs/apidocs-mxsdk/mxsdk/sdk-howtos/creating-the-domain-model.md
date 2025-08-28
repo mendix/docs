@@ -54,7 +54,7 @@ customer.location = { x: 100, y: 100 };
 With these ingredients, you can create the two entities. Replace the snippet that creates a single entity in the script that you created in the [previous how-to steps](/apidocs-mxsdk/mxsdk/creating-your-first-script/) with the following snippet to create the two new entities:
 
 ```ts
-const domainModel = await loadDomainModel(workingCopy); 
+const domainModel = await domainModelInterface.load();
 const customer = domainmodels.Entity.createIn(domainModel);
 customer.name = `Customer`;
 customer.location = { x: 100, y: 100 };
@@ -148,14 +148,16 @@ In the Model SDK, the [`Entity.generalization`](https://apidocs.rnd.mendix.com/m
 So, to set up entity `Customer` as a specialization of entity `Administration.Account`, you first need to look up the `Account` entity which [can be done in several ways](/apidocs-mxsdk/mxsdk/finding-things-in-the-model/). The following snippet looks up the `Account` entity in the `Administration` domain model, using the `findEntityByQualifiedName` function:
 
 ```ts
-const systemUser = workingCopy.model().findEntityByQualifiedName(`Administration.Account`);
+const systemUser = model.findEntityByQualifiedName(`Administration.Account`);
 ```
 
 The `domainmodels.Generalization` instance that will be used to configure the `Account` instance can now be created. The `generalization` property is set to the `System.User` entity instance that was looked up:
 
 ```ts
-const generalization = domainmodels.Generalization.createIn(customer);
-generalization.generalization = systemUser;
+if(systemUser){
+    const generalization = domainmodels.Generalization.createIn(customer);
+    generalization.generalization = systemUser;
+}
 ```
 
 Together, the creation of the `Customer` entity will look like the following code snippet. Replace the creation of the `customer` entity instance in the script with the following snippet:
@@ -166,8 +168,10 @@ customer.name = `Customer`;
 customer.location = { x: 100, y: 100 };
 
 const generalization = domainmodels.Generalization.createIn(customer);
-const systemUser = workingCopy.model().findEntityByQualifiedName(`Administration.Account`);
-generalization.generalization = systemUser;
+const systemUser = model.findEntityByQualifiedName(`Administration.Account`);
+if (systemUser) {
+    generalization.generalization = systemUser;
+}
 ```
 
 ### Resources

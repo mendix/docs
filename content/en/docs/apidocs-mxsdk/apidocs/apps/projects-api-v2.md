@@ -5,14 +5,15 @@ type: swagger
 description: "The Projects API manages your projects and their teams."
 weight: 100
 restapi: true
-beta: true
 ---
-
-{{% alert color="info" %}} This feature is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/). {{% /alert %}}
 
 ## Introduction
 
-The Mendix Projects API allows you to create, edit or delete your projects.
+The Mendix Projects API allows you to create, edit or delete your projects. It also allows you to manage members of those projects and assign project roles, such as Scrum Master.
+
+{{% alert color="warning" %}}
+If you want to automate the process of assigning the more coarse-grained Mendix Admin role, you can do so by configuring [Single Sign-On (SSO) to the platform (also known as BYOIdP)](/control-center/security/set-up-sso-byoidp/) and enabling the [IdP-managed Mendix Admins](/control-center/security-settings/#idp-managed-mendix-admins) feature.
+{{% /alert %}}
 
 ## Authentication {#authentication}
 
@@ -20,7 +21,7 @@ Authentication for the Projects API uses a personal access token (PAT).
 
 ### Generating a PAT {#generate}
 
-For details on how to generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *User Settings*.
+For details on how to generate a PAT, see the [Personal Access Tokens](/mendix-profile/user-settings/#pat) section of *User Settings*.
 
 Select the appropriate scopes, depending on the endpoints that need to be invoked. Refer to the [API Reference](#api-reference) for more information on which scopes to use in which endpoints.
 

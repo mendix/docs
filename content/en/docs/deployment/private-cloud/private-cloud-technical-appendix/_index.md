@@ -1,13 +1,13 @@
 ---
-title: "Technical Appendix for Mendix Private Cloud"
+title: "Technical Appendix for Mendix on Kubernetes"
 url: /developerportal/deploy/private-cloud-technical-appendix/
-description: "Landing page for the Private Cloud Technical Appendix"
+description: "Landing page for the Mendix on Kubernetes Technical Appendix"
 weight: 80
 ---
 
 ## Introduction
 
-The Technical Appendix for Mendix Private Cloud contains more technical information which explains how Mendix for Private Cloud works, and how you can make the best use of it in your landscape.
+The Technical Appendix for Mendix on Kubernetes contains more technical information which explains how Mendix on Kubernetes works, and how you can make the best use of it in your landscape.
 
 ## Technical Appendix Content
 

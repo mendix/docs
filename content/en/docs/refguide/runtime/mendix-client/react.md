@@ -1,13 +1,15 @@
 ---
 title: "Mendix React Client"
-url: /refguide/mendix-client/react
+url: /refguide/mendix-client/react/
 description: "Describes the React version of the Mendix Client."
 weight: 10
 ---
 
 ## Introduction
 
-In Studio Pro versions 10.7.0 and above, there is an alternative version of the Mendix Client written in React. You can enable this React client in [App Settings](/refguide/app-settings/#react-client).
+The Mendix Client has transitioned to a modern implementation using React. As of Mendix 11, the React Client is the default for all new applications created in Studio Pro, and the legacy Dojo client has been deprecated.
+
+You can enable the React client for existing applications in [App Settings](/refguide/app-settings/#react-client).
 
 The React client replaces [Dojo](https://dojotoolkit.org/) with [React](https://react.dev/) for the view layer. This change allows for improved performance, enables incremental loading, and future-proofs your application. For more information on these three aspects, see the sections below:
 
@@ -49,11 +51,7 @@ Finally, the React client allows Mendix to clean up our client and remove many l
 
 Review the prerequisites below that your application must fulfill before it can leverage the React client.
 
-### Mendix Version{#mendix-version}
-
-The React client was introduced in Mendix 10.7.0 as a [beta feature](/releasenotes/beta-features/). It became general availability in [Mendix 10.18](/releasenotes/studio-pro/10.18/) as an opt-in feature.
-
-### Widgets{#widgets}
+### Widgets{#widgets-prerequisites}
 
 Widgets must fulfill the following requirements to be compatible with apps leveraging the React client:
 
@@ -71,7 +69,7 @@ JavaScript actions must not use any of the following client APIs:
 
 These APIs are related to Dojo and are no longer needed. For opening pages, please use the nanoflow [Show Page](/refguide/show-page/) action instead.
 
-Fore more information on React and APIs in Mendix, see our [Mendix 10 React Client API](https://apidocs.rnd.mendix.com/10/client-react/index.html) documentation.
+Fore more information on React and APIs in Mendix, see our [Mendix 11 React Client API](https://apidocs.rnd.mendix.com/11/client-react/index.html) documentation.
 
 ### Enable React Client{#enable-react}
 
@@ -83,13 +81,13 @@ The migration mode will show deprecation warnings instead of errors for all inco
 
 Read further for guides that allow you convert your app so it is ready for the React client.
 
-### Custom `index.html`{#index}
+### Custom index.html{#index}
 
 The structure of the `index.html` file is different for React and Dojo clients. To make sure your application will work correctly, follow these steps:
 
-1. Delete the custom `index.html`, or rename it temporarily.
-2. Run the local deployment and copy the app/deployment/web/index-example.html to your app/theme/web/index.html. That will be your new `index.html`.
-3. Apply any changes you want.
+1. Delete the custom `app/theme/web/index.html`, or rename it temporarily.
+2. Run the local deployment and copy the `app/deployment/web/index-example.html` to your `app/theme/web/index.html`. That will be your new `index.html`.
+3. Apply customization where required.
 
 It is also possible to keep custom `index.html` files for both clients. To do this, name the React client index file *index-react.html*. This file will take precedence when the React client is enabled, while the `index.html` will be used for Dojo client deployments.
 
@@ -99,7 +97,7 @@ Not all Mendix Marketplace components are ready for the React client. Refer to [
 
 Mendix recommends refreshing all Marketplace components in your app before enabling the React client.
 
-### Widgets{#widgets}
+### Widgets{#supported-widgets}
 
 Not all widgets are supported by the React client. Mendix recommends migrating widgets in apps below [10.18](/releasenotes/studio-pro/10.18/) using the automatic conversion capabilities in Studio Pro (right-click a widget and select **Convert in-place**). For a list of configuration options unsupported by automatic conversions, see [Widget Conversion Limitations](/refguide/mendix-client/widget-conversion-limitations/).
 
@@ -109,7 +107,7 @@ The [Dynamic Image](/refguide/image-viewer/) and [Static Image](/refguide/image/
 
 To automatically convert a dynamic image or a static image, right-click the widget (or the error message) and select **Convert to Image**.
 
-#### Reference Selectors & Drop-down{#reference-selectors-drop-down}
+#### Reference Selectors & Drop-Down{#reference-selectors-drop-down}
 
 The reference selector widgets ([Reference Selector](/refguide/reference-selector/), [Reference Set Selector](/refguide/reference-set-selector/), and [Input Reference Set Selector](/refguide/input-reference-set-selector/)) and the [Drop-down](/refguide/drop-down/) widget are not supported in the React client. To leverage React, replace unsupported widgets with the combo box widget; it is documented [here](/appstore/widgets/combobox/), and downloadable [here](https://marketplace.mendix.com/link/component/219304). 
 
@@ -118,6 +116,13 @@ To automatically convert a reference selector widget or a drop-down to a combo b
 {{% alert color="warning" %}}
 Because the reference set selector widget is technically a grid, while combo box is a drop-down, only the applicable configuration options will be transferred to the resulting combo box during conversion.
 {{% /alert %}}
+
+#### HTML / JavaScript Snippet
+
+The [HTML/JavaScript snippet](/appstore/widgets/html-javascript-snippet/) widget is not supported in the React Client. To leverage React, this widget can be replaced using [HTML Element](/appstore/widgets/htmlelement/) widget or [JavaScript actions](/refguide/javascript-actions/):
+
+* **Content Type** HTML — The HTML Element can be downloaded [here](https://marketplace.mendix.com/link/component/204843).
+* **Content Type** JavaScript — Write the code inside the supported JavaScript actions. If the user needs to execute the code in a certain way, calling the JavaScript action via nanoflow that triggers by [Events](/appstore/widgets/events/) widget is recommended.
 
 #### Data Grid{#data-grid}
 
@@ -136,6 +141,20 @@ To replace a template grid widget, follow these steps:
 1. Configure the columns and any other properties to match the original widget.
 1. Add any actions that items from your original widget as icon buttons to the content area.
 1. Add any actions that do not affect rows as buttons to the gallery widget's header.
+
+#### Feedback Widget
+
+The deprecated feedback widget is not supported in the React client. It should be replaced with the [Mendix Feedback Module](https://marketplace.mendix.com/link/component/205506). This module requires some additional configuration to work with the React client:
+
+1. Install the latest version of the Feedback Module.
+1. Replace the widget or snippet on your main layout(s) with the snippet `FeedbackModule.FeedbackWidget`.
+1. Edit the properties of the widget inside the `FeedbackWidget` snippet (use the Page Explorer or Structure Mode to see it).
+1. Set the **Modal pop-up type** to **Custom**.
+1. Set the **On click action** to **Show a page** and choose the page `FeedbackModule.ShareFeedback`.
+
+#### Sign In Widgets
+
+The React client does not support the default Sign In widgets (Username, Password, Sign In Button). Use a modeled login page instead, leveraging an NPE to store credentials and a Nanoflow for authentication. Refer to the Atlas login page template for implementation guidance.
 
 #### Custom Widgets{#custom-widgets}
 

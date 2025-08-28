@@ -32,7 +32,7 @@ A control bar of a [template grid](/refguide/template-grid/), [data grid](/refgu
 
 {{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/control-bar/control-bar-example.png" alt="Data Grid Control Bar" class="no-border" >}}
 
-The control bar can also include a number of selection options and spreadsheet export buttons, as well as microflow buttons for custom actions. 
+The control bar can also include a number of selection options and spreadsheet export buttons, as well as microflow buttons for custom actions.
 
 ## Control Bar Buttons
 
@@ -57,10 +57,10 @@ Sections below describe the purpose of each control bar button and their specifi
 
 ### Search Button {#search-button}
 
-The **Search bar toggle** button (with default caption **Search**) opens or hides the [search bar](/refguide/search-bar/). It is only present if the **Show search bar** property of the grid is set to either *With button (initially open)* or *With button (initially closed)*.  
+The **Search bar toggle** button (with default caption **Search**) opens or hides the [search bar](/refguide/search-bar/). It is only present if the **Show search bar** property of the grid is set to either *With button (initially open)* or *With button (initially closed)*.
 
 {{% alert color="info" %}}
-In a [reference set selector](/refguide/reference-set-selector/) there will be no search fields set by default. See [Search Bar](/refguide/search-bar/) to learn more about search fields. 
+In a [reference set selector](/refguide/reference-set-selector/) there will be no search fields set by default. See [Search Bar](/refguide/search-bar/) to learn more about search fields.
 {{% /alert %}}
 
 ### Add Button {#add-button}
@@ -92,11 +92,11 @@ For example, you have an entity *Vehicle* and two specializations: *Bicycle* and
 
 ### Action Button {#grid-action-button}
 
-An action button is a button that can perform various actions, such as calling a microflow or opening a page. The **Edit** and **Delete** buttons are action buttons created by default in a data grid and template grid control bar. For more information on action buttons, see [Buttons](/refguide/button-widgets/). 
+An action button is a button that can perform various actions, such as calling a microflow or opening a page. The **Edit** and **Delete** buttons are action buttons created by default in a data grid and template grid control bar. For more information on action buttons, see [Buttons](/refguide/button-widgets/).
 
 ### Remove Button {#remove-button}
 
-The **Remove** button is a button specific for the reference set selector. With this button the end-user can remove objects that have been added to the reference set selector. For more information on a reference set selector, see [Reference Set Selector](/refguide/reference-set-selector/). 
+The **Remove** button is a button specific for the reference set selector. With this button the end-user can remove objects that have been added to the reference set selector. For more information on a reference set selector, see [Reference Set Selector](/refguide/reference-set-selector/).
 
 ### Select Button {#select-button}
 
@@ -104,7 +104,7 @@ The **Select** button confirms the choice of a row of a grid when it is used for
 
 ### Select All Button {#select-all-button}
 
-The **Select all** button allows an end-user to select all objects in a grid or a reference set selector. 
+The **Select all** button allows an end-user to select all objects in a grid or a reference set selector.
 
 #### Selection Type
 
@@ -116,7 +116,7 @@ The **Selection type** property determines whether the **Select all** button sho
 | Select all  | Clicking this button selects all objects.                    |
 
 {{% alert color="warning" %}}
-Due to technical limitations, a button with the **Select all** selection type cannot be combined with [Remove](#remove-button), [Delete](#grid-action-button), or [Select](#select-button) buttons. 
+Due to technical limitations, a button with the **Select all** selection type cannot be combined with [Remove](#remove-button), [Delete](#grid-action-button), or [Select](#select-button) buttons.
 
 An **Edit** button always behaves as if the selection type is **Select page**, regardless of the actual settings of the **Select all** button that had been used to select objects.
 {{% /alert %}}
@@ -127,10 +127,10 @@ The **Deselect all** button lets the user deselect all rows in the grid or a ref
 
 ### Export to Excel Button {#export-to-excel-button}
 
-The **Export to Excel** button allows end-users to export the contents of the grid or the reference set selector to an Excel file. 
+The **Export to Excel** button allows end-users to export the contents of the grid or the reference set selector to an Excel file.
 
 {{% alert color="info" %}}
-The Excel export function is only available in list widgets that have the [XPath data source](/refguide/xpath-source/). 
+The Excel export function is only available in list widgets that have an [XPath constraint](/refguide/xpath-constraints/).
 
 Constraints you are using for search fields and sorting will also be exported.
 {{% /alert %}}
@@ -152,10 +152,10 @@ When selecting **Date value**, dates will be shown only in the time zone of your
 
 ### Export to CSV Button {#export-to-csv-button}
 
-The **Export to CSV** button allows end-users to export the contents of the grid or the reference set selector to a CSV file. 
+The **Export to CSV** button allows end-users to export the contents of the grid or the reference set selector to a CSV file.
 
 {{% alert color="info" %}}
-The export to CSV function is only available in list widgets that have the [XPath data source](/refguide/xpath-source/). 
+The export to CSV function is only available in list widgets that have an [XPath constraint](/refguide/xpath-constraints/).
 
 Constraints you are using for search fields and sorting will also be exported.
 {{% /alert %}}

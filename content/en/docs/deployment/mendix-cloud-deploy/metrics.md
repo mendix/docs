@@ -37,9 +37,7 @@ If you meet the above conditions, you can find the graphs by following these ste
 
 1. Use the **Period** and **Group** drop-down menus to choose the time period (day, week, month, or quarter) and the group (application, database, or all) for the graphs that you want to view.
 
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/metrics-selection.png" >}}
-
-1. To view more information about any of the metrics, click **Documentation** ({{% icon name="info-circle" %}}) next to the relevant graph. To quickly scroll to the top of the page, click **Scroll to top** ({{% icon name="arrow-circle-up" %}}).
+1. To view more information about any of the metrics, click **Metric Documentation** ({{% icon name="book-open" %}}) next to the relevant graph. To quickly scroll to the top of the page, click **Scroll to top** ({{% icon name="arrow-circle-up" %}}).
 
 {{% alert color="info" %}}
 The **Metrics** page does not support multi-instance metrics. If you [horizontally scale](/developerportal/deploy/scale-environment/) your environment to multiple instances, you will be able to see metrics for only one of those instances. If you need data on multiple instances, consider using an [APM integration](/developerportal/operate/monitoring-with-apm/).
@@ -120,7 +118,7 @@ The **JVM Object Heap** graph shows the internal distribution of allocated memor
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/app-jvm-heap.png" >}}
 
-Note that the JVM does not immediately clean up objects that are no longer in use. This graph shows unused memory as still in use until the garbage collector—which analyzes the memory to free up space—is run. So, before a garbage collection, you cannot see how much of the JVM memory will be available after the garbage collection cycle. This is because the garbage collection process only finds that out when it actually runs.
+Note that the JVM does not immediately clean up objects that are no longer in use. This graph shows unused memory as still in use until the garbage collector, which analyzes the memory to free up space is run. So, before a garbage collection, you cannot see how much of the JVM memory will be available after the garbage collection cycle. This is because the garbage collection process only finds that out when it actually runs.
 
 These are the types of objects:
 

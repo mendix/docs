@@ -1,7 +1,7 @@
 ---
 title: "Running the Mendix Operator in Standard Mode"
 url: /developerportal/deploy/standard-operator/
-description: "Describes the processes of installing and configuring the Mendix Operator in the Private Cloud in Standard mode"
+description: "Describes the processes of installing and configuring the Mendix Operator for Mendix on Kubernetes in Standard mode"
 weight: 30
 ---
 
@@ -21,7 +21,7 @@ Before you can use the Mendix Operator in your namespace you need to install it 
 
 If you are not already on the installation tab for your namespace, go to it by following these instructions:
 
-1. Go to the Cluster Manager page by opening the [Global Navigation Menu](/developerportal/global-navigation/), and then clicking **Deployment** > **Private Cloud**.
+1. Go to the Cluster Manager page by opening the [Global Navigation Menu](/global-navigation/), and then clicking **Deployment** > **Mendix on Kubernetes**.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/cluster-manager.png" class="no-border" >}}
 
@@ -56,7 +56,7 @@ If you are not already on the installation tab for your namespace, go to it by f
 
 ## Signing in to the Platform {#openshift-signin}
 
-You will need to have administrator rights to your private cloud platform. This means you will have to log in before you run the Configuration Tool.
+You will need to have administrator rights to your Mendix on Kubernetes platform. This means you will have to log in before you run the Configuration Tool.
 
 These instructions are for the OpenShift platform; a similar process will be required for other platforms.
 
@@ -84,7 +84,7 @@ You can do this as follows:
 
 Once you are signed in to your cluster you can run the Configuration Tool.
 
-To install in non-interactive mode please see: [Install and Configure Mendix for Private Cloud Non-interactive Mode](/developerportal/deploy/private-cloud-cli-non-interactive/)
+To install in non-interactive mode please see: [Install and Configure Mendix on Kubernetes Non-interactive Mode](/developerportal/deploy/private-cloud-cli-non-interactive/)
 
 1. Copy the **Installation Command** by clicking **Copy to clipboard**.
 
@@ -108,7 +108,7 @@ If the Mendix Operator and the Mendix Gateway Agent have not been installed in y
 
 2. Select the required **Cluster Mode** – *connected* or *standalone*.
 
-    For more information, see [Connected and Standalone Clusters](/developerportal/deploy/private-cloud/#connected-standalone) in the *Private Cloud* documentation.
+    For more information, see [Connected and Standalone Clusters](/developerportal/deploy/private-cloud/#connected-standalone) in the *Mendix on Kubernetes* documentation.
 
 3. Select the required **Cluster Type** – *openshift* or *generic*.
 
@@ -199,7 +199,7 @@ See the [Blob storage plans](/developerportal/deploy/private-cloud-storage-plans
 **kubernetes-ingress** will configure ingress according to the additional domain name you supply. This option allows you to configure the ingress path and custom ingress class (dependent on the Ingress controller) and enable or disable TLS.
 
 **service-only** will create just a Kubernetes Service, without an Ingress or OpenShift route.
-This option enables you to use a Load Balancer without an Ingress, or to manually create and manage the Ingress object (an Ingress that is not managed by Mendix for Private Cloud).
+This option enables you to use a Load Balancer without an Ingress, or to manually create and manage the Ingress object (an Ingress that is not managed by Mendix on Kubernetes).
 
 {{% alert color="info" %}}
 When switching between Ingress, OpenShift Routes, and Service Only, you need to [restart the Mendix Operator](/developerportal/deploy/private-cloud-cluster/#restart-after-changing-network-cr) for the changes to be fully applied.
@@ -252,14 +252,18 @@ To use this option, [upgrade](/developerportal/deploy/private-cloud-upgrade-guid
 In Operator version 2.7.0 and above, the build pod will trust certificates from the custom TLS trust secret.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+When using Global Operator, you must create the custom TLS secret in both namespaces (Global and Managed), otherwise the Operator will show an error because the secret cannot be mounted. The same secret must be added for both Global and Managed namespaces, because Mendix does not support different custom TLS on different Managed namespaces.
+{{% /alert %}}
+
 To use encryption and avoid [MITM attacks](https://en.wikipedia.org/wiki/Man-in-the-middle_attack), communication with all external services should be done over TLS.
 By default, Mendix Operator trusts Certificate Authorities from the [Mozilla CA root bundle](https://wiki.mozilla.org/CA), as they are provided by default in the container image.
 
-If Mendix for Private Cloud needs to communicate with external services, some of those services might have TLS certificates signed by a custom (private) CA.
+If Mendix on Kubernetes needs to communicate with external services, some of those services might have TLS certificates signed by a custom (private) CA.
 In order for the Mendix Operator to trust such certificates, you need to add their root CAs to the Mendix Operator configuration.
 
 1. In another terminal, prepare the Kubernetes secret containing the custom root CAs list:
-    1. Create a `custom.crt` file, containing the public keys of all custom (private) CAs that Mendix for Private Cloud should trust:
+    1. Create a `custom.crt` file, containing the public keys of all custom (private) CAs that Mendix on Kubernetes should trust:
 
         ```text
         # Private CA 1

@@ -21,7 +21,7 @@ Authentication for the Epics API uses a personal access token (PAT).
 
 ### Generating a PAT {#generate}
 
-For details on how to generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section in *User Settings*.
+For details on how to generate a PAT, see the [Personal Access Tokens](/mendix-profile/user-settings/#pat) section in *User Settings*.
 
 Select at least the following as **Epics** scopes:
 
@@ -43,4 +43,8 @@ To authenticate calls when using the Open API specification below, click **Autho
 
 ## API Reference
 
-{{< swaggerui src="/openapi-spec/epics.yaml"  >}}
+{{% alert color="warning" %}}
+You cannot call endpoints from the Epics API Swagger UI.
+{{% /alert %}}
+
+{{< swaggerui-disable-try-it-out src="/openapi-spec/epics.yaml"  >}}

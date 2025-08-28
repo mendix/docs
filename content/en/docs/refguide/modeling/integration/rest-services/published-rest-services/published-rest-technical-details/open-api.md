@@ -15,10 +15,6 @@ Many of the popular API tools support OpenAPI 3.0, including [Postman](https://w
 
 A technical description is presented below, of which parts of the *openapi.json* file are generated.
 
-{{% alert color="info" %}}
-Exporting OpenAPI documentation in version 3.0 of the specification was introduced in Studio Pro [10.1.0](/releasenotes/studio-pro/10.1/).
-{{% /alert %}}
-
 ## Schema
 
 The main schema object documents the service.

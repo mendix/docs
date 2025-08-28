@@ -22,6 +22,8 @@ This how-to provides guidance on using the Platform SDK to do the following:
 The entry point for the Mendix Platform SDK is `MendixPlatformClient`. In most cases, you will need to instantiate a new object from this class:
 
 ```ts
+import { MendixPlatformClient } from "mendixplatformsdk";
+
 const client = new MendixPlatformClient();
 ```
 
@@ -31,6 +33,8 @@ The platform client allows you to create a new Mendix app by simply passing the 
 
 ```ts
 const app = await client.createNewApp("My new App");
+
+console.log(`App created with ID: ${app.appId}`);
 ```
 
 You can pass the following options to `createNewApp`:
@@ -45,15 +49,13 @@ You can pass the following options to `createNewApp`:
 
 If both `templateDownloadURL` and `templateId` are left blank, the app will be created using the standard blank app template in the latest Mendix version.
 
-Here is an example for creating a Mendix app based on the [Asset Manager App](https://marketplace.mendix.com/link/component/69674) template:
+Here is an example for creating a Mendix app based on version 2.1.0 of the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934) template:
 
 ```ts
-const app = await client.createNewApp("My Asset Management", {
-    templateId: "6e66fe4d-6e96-4eb8-a2b6-a61dec37a799"
+const app = await client.createNewApp("My GenAI App", {
+    templateId: "ba6ca01b-e2a4-45fa-870d-9e28b6acb845"
 });
 ```
-
-{{% alert color="warning" %}}The [Asset Manager App](https://marketplace.mendix.com/link/component/69674) template is deprecated and was created using Studio Pro 8.14.0. You cannot open it directly in Studio Pro 10 versions. To be able to use it in Studio Pro 10, you need to first upgrade it to a Studio Pro 9 app and then upgrade it to a Studio Pro 10 app. For more instructions, see the [Prerequisites](/refguide/extending-your-application-with-custom-java/#prerequisites) section in *Extending Your Application with Custom Java*.{{% /alert %}}
 
 ## Opening an Existing App {#opening-existing-app}
 
@@ -72,7 +74,13 @@ You can get the **App ID** (represented as **Project ID**) in the app's [Setting
 From the app object, you can get some information about its repository (such as the repository type, URL, and default branch name):
 
 ```ts
-const repositoryInfo = app.getRepositoryInfo();
+const repository = app.getRepository();
+    
+const repositoryInfo = await repository.getInfo();
+console.log("Repository Info: ", repositoryInfo);
+
+const commitMessages = (await repository.getBranchCommits("main")).items.map(commit => commit.message);
+console.log("Commit messages: ", commitMessages);
 ```
 
 ## Deleting an App {#deleting}
@@ -93,7 +101,13 @@ To change your app, you need to create a temporary working copy of a particular 
 
 ```ts
 const workingCopy = await app.createTemporaryWorkingCopy("main");
+
+console.log(`Working ID: ${workingCopy.workingCopyId}`);
 ```
+
+{{% alert color="warning" %}}
+Working copy creation a resource intensive process, consider reusing previously created ones by invoking `app.getOnlineWorkingCopy(workingCopyId)`. All working copies are automatically deleted after 24 hours.
+{{% /alert %}}
 
 You can pass the following options to `createTemporaryWorkingCopy`:
 

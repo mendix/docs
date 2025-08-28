@@ -6,7 +6,7 @@ deprecated: true
 ---
 
 {{% alert color="warning" %}}
-Mendix Platform SDK versions below 5.0 are deprecated. They depend on the [Projects API](/apidocs-mxsdk/apidocs/projects-api/) which will be removed early in 2024. A firm date will be communicated once a decision has been made.
+Mendix Platform SDK versions below 5.0 are deprecated.
 {{% /alert %}}
 
 The following how-tos present details for Mendix Platform SDK versions below 5.0:

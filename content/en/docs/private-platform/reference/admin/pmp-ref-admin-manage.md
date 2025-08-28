@@ -273,7 +273,7 @@ You can select how long the actions are kept in the logs, in days. The minimum n
 
 In the **Webhooks** tab, you can view and manage your webhooks.
 
-Webhooks allow you to send information about your licensed Mendix app deployed to Mendix Cloud or Mendix for Private Cloud to an external app or workflow. In Private Mendix Platform, you can use them to trigger a step in an automated [Build](/private-mendix-platform/reference-guide/admin/system/#build-steps) or [Deployment](/private-mendix-platform/reference-guide/admin/system/#deploy-steps) pipeline.
+Webhooks allow you to send information about your licensed Mendix app deployed to Mendix Cloud or Mendix on Kubernetes to an external app or workflow. In Private Mendix Platform, you can use them to trigger a step in an automated [Build](/private-mendix-platform/reference-guide/admin/system/#build-steps) or [Deployment](/private-mendix-platform/reference-guide/admin/system/#deploy-steps) pipeline.
 
 For more information about configuring webhooks, refer to [webhooks documentation](/developerportal/deploy/webhooks/).
 

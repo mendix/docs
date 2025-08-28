@@ -7,6 +7,15 @@ weight: 15
 numberless_headings: true
 ---
 
+## 3.0.2
+
+**Release date: May 13, 2025**
+
+### Fixes
+
+* We upgraded to Studio Pro [9.24.34](/releasenotes/studio-pro/9.24/#92434) for security fixes.
+* We updated dependencies for security fixes.
+
 ## 3.0.1
 
 **Release date: February 18, 2025**

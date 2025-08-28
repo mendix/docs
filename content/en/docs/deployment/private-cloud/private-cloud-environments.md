@@ -1,28 +1,28 @@
 ---
-title: "Environment Planning for Private Cloud Clusters"
+title: "Environment Planning for Mendix on Kubernetes Clusters"
 linktitle: "Environment Planning"
 url: /developerportal/deploy/private-cloud-environments/
-description: "Best Practices for Private Cloud Environments"
+description: "Best Practices for Mendix on Kubernetes Environments"
 weight: 70
 ---
 
 ## Introduction
 
-With Mendix for Private Cloud, you have more control over where the environments you need for your Mendix app are created. You can decide whether a cluster contains one namespace or several, whether a namespace contains one environment or several, and whether those environments are all for the same app, or for several.
+With Mendix on Kubernetes, you have more control over where the environments you need for your Mendix app are created. You can decide whether a cluster contains one namespace or several, whether a namespace contains one environment or several, and whether those environments are all for the same app, or for several.
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-environments/mx4pc-environments-minimal.png" alt="Example of distributing environments in different clusters" class="no-border" >}}
 
-This document discusses the recommended ways of configuring environments for Private Cloud clusters and the licensing requirements.
+This document discusses the recommended ways of configuring environments Mendix on Kubernetes clusters and the licensing requirements.
 
 ## Licensing Overview
 
-You need a copy of the Mendix Operator and (optionally) the Mendix Gateway Agent for each Namespace you create in your Private Cloud to create environments for Mendix apps. You can evaluate these without a license, but there are strict limitations on this.
+You need a copy of the Mendix Operator and (optionally) the Mendix Gateway Agent for each Namespace you create in Mendix on Kubernetes to create environments for Mendix apps. You can evaluate these without a license, but there are strict limitations on this.
 
-To run your Mendix apps using Mendix for Private Cloud, you need a license for the Mendix Operator. You will need to get one license for each namespace you want to manage and this license will be bound to the namespace. This license applies to the Mendix Operator only. You can get this license from [Mendix Support](https://support.mendix.com).
+To run your Mendix apps using Mendix on Kubernetes, you need a license for the Mendix Operator. You will need to get one license for each namespace you want to manage and this license will be bound to the namespace. This license applies to the Mendix Operator only. You can get this license from [Mendix Support](https://support.mendix.com).
 
 In addition, you need a runtime license for your app, in the same way as you would if you were deploying it to any other platform.
 
-See [Licensing Mendix for Private Cloud](/developerportal/deploy/private-cloud/#licensing) for more information on this subject.
+See [Licensing Mendix on Kubernetes](/developerportal/deploy/private-cloud/#licensing) for more information on this subject.
 
 ## Production Environments
 

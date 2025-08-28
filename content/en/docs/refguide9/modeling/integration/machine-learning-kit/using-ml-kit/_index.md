@@ -4,7 +4,7 @@ url: /refguide9/machine-learning-kit/using-ml-kit/
 weight: 15
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-{{% alert color="info" %}}Machine learning model support is currently in [beta](/releasenotes/beta-features/), and is available in Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above.{{% /alert %}}
+{{% alert color="info" %}}Machine learning model support is currently in [beta](/releasenotes/release-status/), and is available in Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above.{{% /alert %}}
 
 ## Introduction
 
@@ -242,7 +242,12 @@ The released versions of the *ML Kit* and supported ONNX Runtime versions can be
 
 | Mendix Studio Pro | ML Kit   | ONNX Runtime |
 | ----------------- | -------- | ------------ |
-| 9.23              | Public beta | 1.11.0       |
+| 9.23              | Public beta | 1.11.0    |
+| 9.24 LTS          | Public beta | 1.14.0    |
+
+{{% alert color="info" %}}
+Machine Learning Kit is released for general availability in Studio Pro 10 and above.
+{{% /alert %}}
 
 ## Monitoring and Troubleshooting
 

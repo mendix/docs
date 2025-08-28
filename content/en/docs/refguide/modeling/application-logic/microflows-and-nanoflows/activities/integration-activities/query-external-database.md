@@ -21,11 +21,26 @@ To learn how to use this activity in a microflow and configure other aspects of 
 
 Double-click the **Query External Database** activity to view its properties.
 
-In the **Query** section are the following properties:
+The **Query** section contains the following properties:
 
 * **Database** – the name of the database you want to query
 * **Query** – the saved SQL query from your configuration of the Database connector
 * **Parameters** – the saved parameters from your configuration of the Database connector
+
+The **Connection** section contains the following properties, which are used to provide dynamic connection parameter values:
+
+* **DBSource** – Enter the JDBC URL you want to use for connection during runtime
+* **DBUsername** – Enter the username you want to use for connection during runtime
+* **DBPassword** – Enter the password you want to use for connection during runtime
+
+If you are using SSL based authentication for Postgres, provide the value for
+
+* **ClientCertificateIdentifier**
+
+If you are using key-pair authentication for Snowflake, provide the value for:
+
+* **PrivateKey**
+* **Passphrase**
 
 In the **Output** section are the following properties:
 

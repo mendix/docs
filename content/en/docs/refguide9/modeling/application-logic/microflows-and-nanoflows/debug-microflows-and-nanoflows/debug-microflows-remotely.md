@@ -64,12 +64,12 @@ When your application is in Mendix Cloud, follow these steps:
 
 You will need to provide these credentials to Studio Pro to connect the debugger to the app running in the cloud.
 
-#### Obtain Debugging Credentials from Private Cloud Connected{#private-cloud}
+#### Obtain Debugging Credentials from Mendix on Kubernetes Connected{#private-cloud}
 
-If your application is on a connected Private Cloud, you can get the credentials from the Mendix Portal:
+If your application is on Mendix on Kubernetes connected, you can get the credentials from the Mendix Portal:
 
 {{% alert color="warning" %}}
-You can only remotely debug apps deployed to Private Cloud for Mendix if you are using Mendix Operator version 1.6.0 or above.
+You can only remotely debug apps deployed to Mendix on Kubernetes if you are using Mendix Operator version 1.6.0 or above.
 {{% /alert %}}
 
 1. Open your app in [Apps](https://sprintr.home.mendix.com/).

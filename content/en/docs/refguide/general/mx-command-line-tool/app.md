@@ -13,7 +13,7 @@ Typically, these commands require a path to the *.mpr* file as a parameter.
 
 ## mx create-project Command {#create-project}
 
-The `mx create-project` command creates a new app in Studio Pro. The app version depends on the version the tool was bundled with. For example, if you are using the mx tool for Studio Pro 10.0.0, `mx create project` will create a new app in that version. 
+The `mx create-project` command creates a new app in Studio Pro. The app version depends on the version the tool was bundled with. For example, if you are using the mx tool for Studio Pro 11.0.0, `mx create project` will create a new app in that version. 
 
 ### Usage
 
@@ -21,13 +21,14 @@ Use the following command pattern: `mx create-project [OPTIONS] [TEMPLATE-MPK-FI
 
 These are the `OPTIONS`:
 
-| Option | Default Value | Result |
-| --- | --- | --- |
-| `--app-name` | App | Assigns the specified app name to the app. |
-| `--help` | | Shows help for the `mx create-project` command and exits.|
-| `--language-code` | en_US | The default language of the app. | 
-| `--output-dir` | Current directory | The directory in which to create the app. |
-| `--sprintr-app-id` | Optional | Associates the app [feedback features](/developerportal/app-insights/feedback/) with the provided [app](/developerportal/#my-apps) in **Apps**. The value is a GUID. When accessing the app in [Apps](https://sprintr.home.mendix.com/), this ID can be found in the browser's URL (for example, `1a428ea7-b00e-4166-9b23-20b7be88a40e`). |
+| Option                 | Default Value     | Result                                                                                                                                                                                                                                                                                                                                    |
+|------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `--app-name`           | App               | Assigns the specified app name to the app.                                                                                                                                                                                                                                                                                                |
+| `--help`               |                   | Shows help for the `mx create-project` command and exits.                                                                                                                                                                                                                                                                                 |
+| `--language-code`      | en_US             | The default language of the app.                                                                                                                                                                                                                                                                                                          |
+| `--use-mpr-format-v1`  | MPRv2          | If specified, the app is created in MPRv1 format (otherwise, with MPRv2).                                                                                                                                                                                                                                                                  |
+| `--output-dir`         | Current directory | The directory in which to create the app.                                                                                                                                                                                                                                                                                                 |
+| `--sprintr-app-id`     | Optional          | Associates the app [feedback features](/developerportal/app-insights/feedback/) with the provided [app](/developerportal/#my-apps) in **Apps**. The value is a GUID. When accessing the app in [Apps](https://sprintr.home.mendix.com/), this ID can be found in the browser's URL (for example, `1a428ea7-b00e-4166-9b23-20b7be88a40e`). |
 
 `TEMPLATE-MPK-FILE` is an optional path to a Mendix app package *.mpk* file. If this argument is omitted, the app is created with a default empty project template.
 
@@ -94,11 +95,7 @@ These are the return codes:
 
 ## mx show-java-version Command{#show-java-version}
 
-{{% alert color="info" %}}
-This command is available from 10.14 onwards and in MTS versions 10.6.12+ and 10.12.2+.
-{{% /alert %}}
-
-The `mx show-java-version` command reports what the configured Java version of the app is.
+{The `mx show-java-version` command reports what the configured Java version of the app is.
 
 The input is a single MPR file.
 
@@ -133,7 +130,7 @@ Return codes are described in the table below:
 
 ## mx convert Command {#convert}
 
-The `mx convert` command converts the *.mpk* file (or files) of the app (or apps) to a specific Studio Pro version. For example, if you are using the mx command-line tool for Studio Pro 10.0.0, `mx convert` will convert the app to that version. 
+The `mx convert` command converts the *.mpk* file (or files) of the app (or apps) to a specific Studio Pro version. For example, if you are using the mx command-line tool for Studio Pro 11.0.0, `mx convert` will convert the app to that version. 
 
 The input can be a single file, directory, or multiple files.
 
@@ -310,10 +307,6 @@ These are the return codes:
 | `300` | Exception, something went wrong. |
 
 ## mx sync-java-dependencies Command {#java-dependencies}
-
-{{% alert color="info" %}}
-This command is available as of [Studio Pro 10.20](/releasenotes/studio-pro/10.20/).
-{{% /alert %}}
 
 The `mx sync-java-dependencies` command synchronizes the managed Java dependencies that are configured in the modules of the project.
 This results in the corresponding .*jar* files being added to the `vendorlib` directory in the project root.

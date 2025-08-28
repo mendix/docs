@@ -1,19 +1,17 @@
 ---
-title: "CI/CD for Mendix for Standalone Private Cloud Using Tekton"
+title: "CI/CD for Mendix for Standalone Mendix on Kubernetes Using Tekton"
 linktitle: "CI/CD with Tekton"
 url: /developerportal/deploy/private-cloud-tekton/
-description: "Describes how to use Tekton to create a CI/CD solution for Mendix environments in the Private Cloud"
+description: "Describes how to use Tekton to create a CI/CD solution for Mendix environments in Mendix on Kubernetes"
 weight: 40
 ---
 {{% alert color="info" %}}
-The Tekton pipelines for Mendix are available to all customers using licensed Operators in Mendix for Private Cloud.
-
-Please make a request to your Customer Success Manager (CSM) to arrange for access to these pipelines.
+Tekton pipelines for Mendix on Kubernetes Standalone are no longer available to new customers. Customers seeking Tekton pipeline support are advised to consider Private Mendix Platform, which includes Tekton pipeline support.
 {{% /alert %}}
 
 ## Introduction
 
-Mendix recommends using [Tekton](https://tekton.dev/) to create a CI/CD (Continuous Integration and Delivery/Deployment) solution for your Mendix for Standalone Private Cloud apps. This document explains how to install:
+Mendix recommends using [Tekton](https://tekton.dev/) to create a CI/CD (Continuous Integration and Delivery/Deployment) solution for your Mendix for Standalone Mendix on Kubernetes apps. This document explains how to install:
 
 * Tekton
 * Pipelines containing the appropriate tasks and steps to manage apps and environments
@@ -48,7 +46,7 @@ If you have any issues when following these instructions, see the [Troubleshooti
 The Tekton pipeline is compatible with Mendix Operator versions v2.20.0 and earlier. Future Mendix Operator versions might need an updated version of the pipeline.
 {{% /alert %}}
 
-## Overview of Tekton and the Mendix for Private Cloud Pipelines
+## Overview of Tekton and the Mendix on Kubernetes Pipelines
 
 ### Tekton Components
 
@@ -61,7 +59,7 @@ The Tekton pipeline is compatible with Mendix Operator versions v2.20.0 and earl
     
 ### Tekton Pipelines
 
-Each activity needed for management of Mendix for Private Cloud environments and apps is mapped to a Tekton pipeline. These pipelines are run when a trigger condition is met. Each pipeline needs its own trigger and cannot automatically run subsequent pipelines.
+Each activity needed for management of Mendix on Kubernetes environments and apps is mapped to a Tekton pipeline. These pipelines are run when a trigger condition is met. Each pipeline needs its own trigger and cannot automatically run subsequent pipelines.
 
 A *pipeline* is a collection of tasks in order. Tekton creates tasks in a number of Kubernetes pods and ensures that each pod successfully completes its task. 
 
@@ -71,7 +69,7 @@ A *step* is an operation in a CI/CD workflow. Tekton performs each step as a run
     
 Tasks and pipelines are specified as custom resources (CRs) in a Kubernetes cluster.
 
-### Tekton in Mendix for Private Cloud
+### Tekton in Mendix on Kubernetes
 
 Each Mendix pipeline can be run independently. However, the **create-app-pipeline** must be run first as the other pipelines have a dependency on the existence of an environment/app deployed in the namespace.
 
@@ -116,7 +114,7 @@ The example shows the following namespaces:
 ## Air-gapped Environments
 
 {{% alert color="info" %}}
-If your cluster is air-gapped and does not have access to the internet, you will need to follow a different set of installation instructions. These can be found in [Air-gapped Installation of Tekton CI/CD for Mendix for Private Cloud](/developerportal/deploy/private-cloud-tekton-airgapped/)
+If your cluster is air-gapped and does not have access to the internet, you will need to follow a different set of installation instructions. These can be found in [Air-gapped Installation of Tekton CI/CD for Mendix on Kubernetes](/developerportal/deploy/private-cloud-tekton-airgapped/)
     
 When you have followed those instructions, you can continue with [Installing Triggers](#installing-triggers), below.
 {{% /alert %}}

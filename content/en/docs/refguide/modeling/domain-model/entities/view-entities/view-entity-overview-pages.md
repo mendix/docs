@@ -245,7 +245,7 @@ Once the Product page is complete, update the related microflow. To do this, fol
   
 5. In the existing Change Product activity, click **New** and add the Category and Supplier associations and set them to their corresponding objects. 
 
-    {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/create-overview-pages//update-product-microflow.png" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/view-entities/create-overview-pages/update-product-microflow.png" >}}
 
 When you run your app, you should now be able to update the product’s category and supplier. 
 

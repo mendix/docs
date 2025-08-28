@@ -16,13 +16,17 @@ The User Identifiers API is available for Mendix Admins.
 
 The User Identifiers API allows Mendix admins to perform operations related to user identifiers within their company, such as obtaining the user UUIDs of specific email addresses.
 
+{{% alert color="info" %}}
+The User Identifiers API supports a maximum of 100 email addresses per request. Any email addresses exceeding this limit will be ignored.
+{{% /alert %}}
+
 ## Authentication{#authentication}
 
 Authentication for the User Identifiers API uses a personal access token (PAT).
 
 ### Generating a PAT
 
-To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *User Settings*.
+To generate a PAT, see the [Personal Access Tokens](/mendix-profile/user-settings/#pat) section of *User Settings*.
 
 Select the following as **User Identifiers API** scopes:
 
@@ -35,7 +39,7 @@ Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. Here is an example:
 
 ```http
-GET /api/user-identifiers/v1/uuids HTTP/1.1
+POST /api/user-identifiers/v1/uuids HTTP/1.1
 Authorization: MxToken 7LJE…vk
 ```
 
@@ -61,7 +65,7 @@ The following steps lead to retrieval of user's UUIDs of the email addresses pro
     }
     ```
 
-1. Call `GET /api/user-identifiers/v1/uuids` to get the UUIDs of the provided email addresses.
+1. Call `POST /api/user-identifiers/v1/uuids` to get the UUIDs of the provided email addresses.
 
 ## API Reference
 

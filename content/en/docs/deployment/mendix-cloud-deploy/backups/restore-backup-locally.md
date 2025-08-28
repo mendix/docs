@@ -8,7 +8,7 @@ description: "This page describes how to restore a backup."
 
 ## Introduction
 
-Restoring a backup locally can be useful if you want to test your cloud environment's data without interrupting your live cloud environment. This lets you see locally how your app behaves when using data in your cloud environment. By using Mendix Studio Pro and a PostgreSQL database, you can debug your app using backups of your cloud test/acceptance/production data.
+Restoring a backup locally can be useful if you want to test your cloud environment's data without interrupting your live cloud environment. This lets you see locally how your app behaves when using data in your cloud environment. By using Mendix Studio Pro and a PostgreSQL database, you can debug your app using backups of data from your cloud environments such as test/acceptance/production.
 
 This how-to explains how to do the following:
 
@@ -26,7 +26,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     {{% alert color="info" %}}You will need this password later to allow your Mendix app to access the restored data.{{% /alert %}}
 
-    {{% alert color="info" %}}This how-to was made with PostgreSQL version 9.6.5.{{% /alert %}}
+    {{% alert color="info" %}}This how-to was made with PostgreSQL version 15.14{{% /alert %}}
 
 * When you are restoring a database hosted in Mendix Cloud, or when downloading a full backup, your local machine must have [7-Zip](https://www.7-zip.org/) or another utility that can extract files from *.gz* and *.tar* archives.
 
@@ -40,26 +40,26 @@ If your backup came from Mendix Cloud, it will have been compressed as a *.gz* f
 If you have downloaded a full backup, this will also have been archived as a *.tar* file, which you need to extract to get your *.backup* file containing the database backup. The *.backup* file is in the **db** folder of the archive.
 {{% /alert %}}
 
-1. Start **pgAdmin 4** from the Windows start menu. 
-2. Click the **+** in the **Browser** pane to open the **Servers > PostgreSQL 9.6** menu.
-3. Right-click **Databases** and **Create** a new database.
+1. Open the **pgAdmin 4** application on your computer.
+2. In the navigation pane, select **Default Workspace**.
+3. Click the **Object Explorer** to open the **Servers** 
+4. Expand your specific PostgreSQL server instance. For example, PostgreSQL 15.
+5. Right-click the **Databases** and **Create** a new database.
 
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/backups/restore-backup-locally/add-database.png" class="no-border" >}}
+    {{< figure src="/attachments/deployment/mendix-cloud-deploy/backups/restore-backup-locally/create-database.png"  >}}
+6. Fill in the **Database** name.
+7. Select the correct **Owner** (the default is **postgres**)
+8. Click **Save**.
+9. Right-click the newly created database and click **Restore...**.
 
-4. Fill in the **Database** name.
-5. Select the correct owner (the default is **postgres**) and click **Save**.
-6. Right-click the newly created database and click **Restore**.
+    {{< figure src="/attachments/deployment/mendix-cloud-deploy/backups/restore-backup-locally/restore-db.png"  >}}
+10. Select the **.backup** file you downloaded.
+11. Click the **Data Options** tab.
+12. Under **Do not save**, enable **Owner**.
 
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/backups/restore-backup-locally/restore-database.png" class="no-border" >}}
-
-7. Select the **.backup** file you downloaded from the Team Server.
-8. Click the **Restore options** tab.
-9. Under **Do not save**, set **Owner** to **Yes**.
-
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/backups/restore-backup-locally/restore-options.png" class="no-border" >}}
-
-10. Click **Restore**.
-11. Wait until you see a message that the backup is "Successfully completed." This message appears in the right corner of the screen.
+    {{< figure src="/attachments/deployment/mendix-cloud-deploy/backups/restore-backup-locally/data-options.png"  >}}
+13. Click **Restore**.
+14. Wait until you see a "Process Completed" message about the backup on your screen.
 
 ## Linking the Database to the App in Mendix Studio Pro
 
@@ -72,7 +72,7 @@ After the backup has been restored as a local Postgres database, you have to lin
 
 3. Under the tab **Configurations**, click **New**.
 
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/backups/restore-backup-locally/add-configuration.png" class="no-border" >}}
+    {{< figure src="/attachments/deployment/mendix-cloud-deploy/backups/restore-backup-locally/studio-pro-config.png"  >}}
 
 4. Fill in the database information:
     * **Name**: *{a unique name}*
@@ -99,10 +99,7 @@ If you also want to restore the **FileDocuments**, follow these steps:
 
     {{< figure src="/attachments/deployment/mendix-cloud-deploy/backups/restore-backup-locally/backup-choice.png" width=75% alt="" class="no-border" >}}
 
-2. Select **App** > **Show App Directory in Explorer** from the Studio Pro menu:
-
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/backups/restore-backup-locally/project-directory.png" class="no-border" >}}
-
+2. From the Studio Pro menu, select **App** > **Show App Directory in Explorer** (Windows) or **App** > **Show App Directory in Finder** (macOS)
 3. Navigate to the **deployment/data/files** folder within your app.
 4. Extract the *{backup name}.tar* file from the *.gz* archive using a program like 7-Zip.
 5. Extract the contents of your **tree** folder from the backup archive to the  **deployment/data/files** folder within your app.

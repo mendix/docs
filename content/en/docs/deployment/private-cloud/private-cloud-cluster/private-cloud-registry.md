@@ -1,7 +1,7 @@
 ---
 title: "Registry Configuration"
 url: /developerportal/deploy/private-cloud-registry/
-description: "Describes how to configure the OCI image registry in Mendix for Private Cloud."
+description: "Describes how to configure the OCI image registry in Mendix on Kubernetes."
 weight: 11
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
@@ -17,7 +17,7 @@ To do this, the Mendix Operator needs to know which registry to use and how to a
 
 ### Supported Container Registries
 
-The [OCI Distribution Specification](https://github.com/opencontainers/distribution-spec) documents the standards and APIs that a container registry needs to support in order to be compliant. The Mendix Operator uses [go-containerregistry](https://github.com/google/go-containerregistry) to build and push images to a container registry. This allows Mendix for Private Cloud to support most container registries. In most cases, if a container registry supports basic authentication (static username and password), the Mendix Operator supports it.
+The [OCI Distribution Specification](https://github.com/opencontainers/distribution-spec) documents the standards and APIs that a container registry needs to support in order to be compliant. The Mendix Operator uses [go-containerregistry](https://github.com/google/go-containerregistry) to build and push images to a container registry. This allows Mendix on Kubernetes to support most container registries. In most cases, if a container registry supports basic authentication (static username and password), the Mendix Operator supports it.
 
 Some examples of such container registries are:
 
@@ -30,9 +30,9 @@ However, static credentials are often considered insecure, and cloud providers o
 
 ### Limitations
 
-Combining multiple authentication methods is not possible at the moment. For example, Nexus uses static username/password credentials, while ECR requires using an authentication plugin that integrates with AWS IAM; if you'd like to host [air-gapped images](/developerportal/deploy/private-cloud-migrating/) of Mendix for Private Cloud in a Nexus repository, you will need to use Nexus (or another registry supporting static credentials). Using ECR or ACR as the target registry will not be possible.
+Combining multiple authentication methods is not possible at the moment. For example, Nexus uses static username/password credentials, while ECR requires using an authentication plugin that integrates with AWS IAM; if you'd like to host [air-gapped images](/developerportal/deploy/private-cloud-migrating/) of Mendix on Kubernetes in a Nexus repository, you will need to use Nexus (or another registry supporting static credentials). Using ECR or ACR as the target registry will not be possible.
 
-The Docker image URL standard does not have an way to specify if a registry should be accessed over HTTP or HTTPS. Mendix for Private Cloud relies on heuristics from the [go-containerregistry](https://github.com/google/go-containerregistry/blob/a54d64203cffcbf94146e04069aae4a97f228ee2/pkg/name/registry.go#L81-L100) project.
+The Docker image URL standard does not have an way to specify if a registry should be accessed over HTTP or HTTPS. Mendix on Kubernetes relies on heuristics from the [go-containerregistry](https://github.com/google/go-containerregistry/blob/a54d64203cffcbf94146e04069aae4a97f228ee2/pkg/name/registry.go#L81-L100) project.
 The heuristics is based on the assumption that it is not possible to get a valid TLS certificate for local addresses. If the registry domain name matches any of these rules, TLS will be disabled and all communication with the registry will happen over unencrypted HTTP:
 
 * A private network RFC1918 IP address (`10.0.0.0/8`, `172.16.0.0/12` or `192.168.0.0/16`).
@@ -40,11 +40,11 @@ The heuristics is based on the assumption that it is not possible to get a valid
 * A `127.0.0.1` or `::1` IP address.
 * Subdomains of `.localhost` or `.local`.
 
-In all other cases, Mendix for Private Cloud will use HTTPS to access the registry.
+In all other cases, Mendix on Kubernetes will use HTTPS to access the registry.
 
 ### Push and Pull URLs
 
-Mendix for Private Cloud builds images from inside the cluster. After an image is built, the Mendix Operator sets (updates) image URLs of the app's Kubernetes Deployment resource;
+Mendix on Kubernetes builds images from inside the cluster. After an image is built, the Mendix Operator sets (updates) image URLs of the app's Kubernetes Deployment resource;
 to start a copy of the app, Kubernetes will pull the image directly from the registry.
 
 If the registry is hosted externally (outside the cluster), there is no difference between connecting to the registry from a pod in the cluster, or from the cluster node. However, if the registry is hosted in the cluster, there are the following differences:
@@ -65,7 +65,7 @@ The Mendix Operator needs to push images to one URL (the push URL), but needs to
 
 ### OpenShift 3 Registry {#openshift-3-registry}
 
-Mendix for Private Cloud will use the standard `builder` ServiceAccount, which is automatically created when a new OpenShift Project is created. This `builder` ServiceAccount has permissions to push to the Project's ImageStreams (OpenShift's built-in registry).
+Mendix on Kubernetes will use the standard `builder` ServiceAccount, which is automatically created when a new OpenShift Project is created. This `builder` ServiceAccount has permissions to push to the Project's ImageStreams (OpenShift's built-in registry).
 
 Before configuring the OpenShift 3 registry, run `oc get svc docker-registry -n default` to get the registry domain name and IP address.
 
@@ -78,7 +78,7 @@ Use the following configuration options:
 
 OpenShift 4 requires no configuration - all OpenShift 4 clusters use the same configuration.
 
-Mendix for Private Cloud will use the standard `builder` ServiceAccount, which is automatically created when a new OpenShift Project is created. This `builder` ServiceAccount has permissions to push to the Project's ImageStreams (OpenShift's built-in registry).
+Mendix on Kubernetes will use the standard `builder` ServiceAccount, which is automatically created when a new OpenShift Project is created. This `builder` ServiceAccount has permissions to push to the Project's ImageStreams (OpenShift's built-in registry).
 
 ### Amazon Elastic Container Registry
 
@@ -285,7 +285,7 @@ If you already have a existing `~/.docker/config.json` file, you can use it dire
 
 For more information on how create this type of secret, see the [Kubernetes documentation](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/).
 
-After creating the `dockerconfigjson` secret, you can configure Mendix for Private Cloud to use it:
+After creating the `dockerconfigjson` secret, you can configure Mendix on Kubernetes to use it:
 
 * **Push URL** - the registry domain name where the registry can be reached by pods inside the cluster.
     * If the registry is running outside the cluster, this would be the registry domain name, such as `registry.example.com`.
@@ -337,6 +337,6 @@ You can customize the registry **imageNameTemplate** in **OperatorConfiguration*
 
 * `{{.Name}}`: internal environment name.
 * `{{.Generation}}`: value of the Build CR’s [Generation](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/namespace#generation) attribute.
-* `{{.Version}}`: value of sourceVersion in MendixApp CR. The value will be automatically set to the MDA version if an MDA is deployed from the Private Cloud Portal.
+* `{{.Version}}`: value of sourceVersion in MendixApp CR. The value will be automatically set to the MDA version if an MDA is deployed from the Mendix on Kubernetes Portal.
 * `{{.UnixTimestamp}}`: current UNIX timestamp with at least millisecond precision for example, 1640615972.897.
 * `{{.Timestamp}}`: current timestamp in the following format 20211231.081224.789 for 2021-12-31 08:12:24.789.

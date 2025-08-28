@@ -13,6 +13,8 @@ deprecated: true
 This API is deprecated. If you are currently using this API or intend to start using it, please look at, and contribute to [this idea in the Mendix Community](https://community.mendix.com/link/space/user-experience/ideas/3962). This will allow us to understand your use case and will help us to prioritize a new API that is fit for purpose. 
 
 Alternatively, you can consider using the [Projects API](/apidocs-mxsdk/apidocs/projects-api/), which provides functionality to manage project memberships for platform users. Although it does not fully cover all kinds of platform users, it can still serve as a viable option for many use cases. Additionally, if you are using BYOIDP, you can restrict platform access to a designated group of users by creating a Mendix platform users group in your IdP. For more information, see [Set Up an SSO (BYOIDP)](/control-center/security/set-up-sso-byoidp/).
+
+You can also consider using the [User Deactivation API](/apidocs-mxsdk/apidocs/user-deactivation-api/) that allows Mendix admins to deactivate users within their company on the Mendix Platform.
 {{% /alert %}}
 
 The User Management API allows your company's user management systems to integrate with the Mendix Platform. Through this API, you can create and manage user accounts in your company. Additionally you can create and manage groups. In the Mendix Platform, you can define group policies for groups which grant access to your company's applications to their members.
@@ -27,7 +29,7 @@ The User Management API requires authentication via API keys that are bound to y
 
 ### Obtaining an API Key
 
-To obtain a Mendix API key, follow the instructions in the [API Keys](/community-tools/mendix-profile/user-settings/#profile-api-keys) section of *Mendix Profile*.
+To obtain a Mendix API key, follow the instructions in the [API Keys](/mendix-profile/user-settings/#profile-api-keys) section of *Mendix Profile*.
 
 ### Using Authentication Headers
 
@@ -124,6 +126,8 @@ Retrieves a user account's OpenID based on its email address.
  HTTP Method: GET
  URL: https://usermanagement.mendix.com/legacy-api/1/users/by-email/<emailAddress>
 ```
+
+The replacement for this deprecated endpoint is the [User Identifiers API](/apidocs-mxsdk/apidocs/user-identifiers-api/). 
 
 #### Can Be Invoked By
 
@@ -229,6 +233,8 @@ Activate/deactivate a user account in your company. Deactivating a user means th
  HTTP Method: PUT
  URL: https://usermanagement.mendix.com/legacy-api/1/users/<openId>
 ```
+
+The replacement for this deprecated endpoint is the [User Deactivation API](/apidocs-mxsdk/apidocs/user-deactivation-api/).
 
 #### Can Be Invoked By
 

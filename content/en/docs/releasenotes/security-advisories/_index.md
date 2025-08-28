@@ -20,8 +20,11 @@ Siemens publishes their common vulnerabilities and exposures (CVE) on the second
 
 | CVE ID | CVSS v3.1 Base Score | Siemens Security Advisory (SSA) Description | Notes |
 | --- | --- | ---  | --- |
-| CVE 2024-50313 | 5.3 | [Race Condition Vulnerability in Basic Authentication Implementation of Mendix Runtime](https://cert-portal.siemens.com/productcert/html/ssa-914892.html) | See the SSA description for remediation details. |
-| CVE-2024-56841 | 7.4 | [LDAP Injection Vulnerability in Mendix LDAP Module](https://cert-portal.siemens.com/productcert/html/ssa-314390.html) | See the SSA description for remediation details. |
+| <a id="40592">CVE-2025-40592 | 6.1 | [Zip Path Traversal Vulnerability in Mendix Studio Pro's Module Installation Process](https://cert-portal.siemens.com/productcert/html/ssa-627195.html) | See the SSA description for remediation details. |
+| <a id="40571">CVE-2025-40571 | 2.2 | [Incorrect Privilege Assignment Vulnerability in Mendix OIDC SSO Module](https://cert-portal.siemens.com/productcert/html/ssa-726617.html) | See the SSA description for remediation details. |
+| <a id="30280">CVE-2025-30280 | 5.3 | [Entity Enumeration Vulnerability in Mendix Runtime](https://cert-portal.siemens.com/productcert/html/ssa-874353.html) | See the SSA description for remediation details. |
+| <a id="50313">CVE-2024-50313 | 5.3 | [Race Condition Vulnerability in Basic Authentication Implementation of Mendix Runtime](https://cert-portal.siemens.com/productcert/html/ssa-914892.html) | See the SSA description for remediation details. |
+| <a id="56841">CVE-2024-56841 | 7.4 | [LDAP Injection Vulnerability in Mendix LDAP Module](https://cert-portal.siemens.com/productcert/html/ssa-314390.html) | See the SSA description for remediation details. |
 |  <a id="39888"></a>CVE-2024-39888 | 7.5 | [Hard-coded Default Encryption Key in Mendix Encryption Module v10.0.0 and v10.0.1](https://cert-portal.siemens.com/productcert/html/ssa-998949.html)  | See the SSA description for remediation details. |
 |  <a id="33500"></a>CVE-2024-33500 | 5.9 | [Improper Privilege Management Vulnerability in Mendix Runtime](https://cert-portal.siemens.com/productcert/html/ssa-540640.html)  | See the SSA description for remediation details. |
 |  <a id="49069"></a>CVE-2023-49069 | 5.3 | [Usernames Disclosure Vulnerability in Mendix Runtime](https://cert-portal.siemens.com/productcert/html/ssa-097435.html)  | See the SSA description for remediation details. |

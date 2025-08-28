@@ -2,7 +2,7 @@
 title: "Frequently Asked Questions – Security"
 linktitle: "Security Findings FAQ"
 url: /support/security-findings-faq
-weight: 60
+weight: 70
 description: "FAQ about existing security findings and other security questions."
 aliases:
     - /developerportal/support/security-findings-faq/
@@ -38,7 +38,7 @@ Mendix does not make compliance reports available publicly, you will need to be 
 
 ### Platform Support
 
-Mendix Support will only assist when using platform-supported components. See the table in the [Support for Different Deployment Strategies](/support/#support-by-strategy) section of the *Mendix Support* document for information on what is supported by Mendix and what you need to support yourself. For Marketplace components, you can check the support status of a component by finding it in the marketplace and looking at the **Support** section in the component details to the right of the component name.
+Mendix Support will only assist when using platform-supported components. See the table in [Support for Different Deployment Strategies](/support/deployment-strategy-support/) for information on what is supported by Mendix and what you need to support yourself. For Marketplace components, you can check the support status of a component by finding it in the marketplace and looking at the **Support** section in the component details to the right of the component name.
 
 ### Security Contact
 
@@ -221,9 +221,13 @@ For example, the old version of the [LDAP Synchronization module](https://market
 
 ### Dojo library 
 
+{{% alert color="info" %}}
+The Dojo library is only used with the Dojo Client and not with the React Client.
+{{% /alert %}}
+
 #### deepCopy Vulnerability - CVE-2020-5258
 
-The Mendix Client is bundled with the full dojo library. However, not all functionality of the Dojo library is used. The vulnerability is in the `deepCopy` util method of dojo; this method is not used in the Mendix Client. This vulnerability cannot be exploited in the client.
+When the Dojo client is used, the Mendix Client is bundled with the full dojo library. However, not all functionality of the Dojo library is used. The vulnerability is in the `deepCopy` util method of dojo; this method is not used in the Mendix Client. This vulnerability cannot be exploited in the client.
 
 #### Prototype Pollution Vulnerability - CVE-2021-23450
 

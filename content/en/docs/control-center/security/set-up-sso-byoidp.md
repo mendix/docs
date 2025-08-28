@@ -25,8 +25,9 @@ This document describes the steps to set up a single sign-on configuration in Me
 The benefits of using BYOIDP SSO are:
 
 * **Security** – You are in control of the credentials and authentication of your platform users. You can, for example, apply password complexity rules and two-factor authentication (2FA). Users do not need to have separate credentials in the Mendix Platform to access the Mendix Portal.
-* **Access governance** – You are in control of denying access to the platform via SSO, for example when an employee has left the company or your corporate policy does not allow an employee to develop Mendix applications.
-* **Convenience** – Platform users have the convenience of SSO and don't have to manage credentials for the Mendix Platform.
+* **Access governance for platform users** – You are in control of denying access to the platform via SSO, for example when an employee has left the company or your corporate policy does not allow an employee to develop Mendix applications.
+* **Access governance for Mendix Admins** – Optionally, you can control who is a Mendix Admin on the Mendix platform using groups in your IdP, and you can synchronize that information during SSO. For more information, see [IdP-managed Mendix Admins](/control-center/security-settings/#idp-managed-mendix-admins).
+* **Convenience** – Platform users have the convenience of SSO and do not have to manage credentials for the Mendix Platform.
 
 ### Features
 
@@ -40,7 +41,7 @@ BYOIDP SSO has the following features:
 
 * BYOIDP is based on the OpenID Connect (OIDC) protocol which supports corporate IdPs such as Entra ID.
 * Mendix Platform services and Studio Pro delegate authentication of platform users to your IdP.
-* Authentication is delegated for any user that has an email address where the email domain is associated with your company. This includes service accounts (for example non-personal accounts used for consuming APIs) that may have been created on the Mendix Platform. 
+* Authentication is delegated for any user that has an email address where the email domain is associated with your company. This includes service accounts (for example non-personal accounts used for consuming APIs) that may have been created on the Mendix Platform. For more information about email domains, refer to the [Company Email Domain](/control-center/company-settings/#company-email-domains) section in *Company Settings* within the Control Center.
 * When you add a domain to your company account, it is automatically added to the active IdP configuration. 
 * External users (with domains that are not part of your company) are unaffected. They still have access based on the way they normally sign in to Mendix.
 * When BYOIDP is used, a session at Mendix is valid for one hour. After the session has expired, Mendix will request a new `ID_token` from your IdP. If the user still has a session at your IdP, the token will be issued without any user input and the platform user continues to have access to the Mendix Platform. The effect of this mechanism is that users have access to the Mendix Platform as long as the session at your IdP is valid.
@@ -84,6 +85,7 @@ To set up an IdP configuration for the Mendix Platform and your Mendix app, you 
 * The URL for the so-called "well-known endpoint" of your IdP, where configuration details can be retrieved.
     * The IdP's well-known endpoint must have a URL for the JWKS endpoint.
 * The Mendix Portal needs to be registered as a client in your IdP, and you need to know the corresponding client ID and secret.
+* A [standard or premium](https://www.mendix.com/pricing/) platform license is required.
 
 ## Configuring Your BYOIDP Setup
 
@@ -234,14 +236,14 @@ Existing users of the Mendix Portal can continue to use their accounts, but they
 
 ### BYOIDP and Team Server {#team-server}
 
-Once BYOIDP is activated, direct access to the Team Server is no longer possible. To access code repositories from a pipeline, you need to use a [PAT](/community-tools/mendix-profile/user-settings/#pat).
+Once BYOIDP is activated, direct access to the Team Server is no longer possible. To access code repositories from a pipeline, you need to use a [PAT](/mendix-profile/user-settings/#pat).
 
 Before activating BYOIDP, your developers should set up PATs for direct access to repos (for example, from CI/CD pipelines and/or Tortoise SVN) instead of using usernames and passwords.
 
 If developers have not created a PAT before BYOIDP SSO is activated, they can do so later, if needed.
 
 {{% alert color="info" %}}
-Access to Team Server through other mechanisms, such as via Studio Pro or using Mendix for Private Cloud, is not affected.
+Access to Team Server through other mechanisms, such as via Studio Pro or using Mendix on Kubernetes, is not affected.
 {{% /alert %}}
 
 ### Changing the Client Secret {#client-secret}
@@ -294,3 +296,7 @@ Versions of Studio Pro below 9.18 use an embedded browser for login. This may no
 ### IdP Does Not Have JWKS Endpoint
 
 If the IdP's well-known endpoint does not have a URL for the JWKS endpoint, Mendix cannot validate the signature on the received ID-token, and the delegated authentication fails.
+
+### Mendix Platform Does Not Accept the IdP Client Secrets
+
+If client authentication at your IdP/token endpoint fails, check the client secret used in your Identity Provider (IdP) configuration. The issue may be caused by special characters in the client secret. Try using a client secret that contains only alphanumeric characters.

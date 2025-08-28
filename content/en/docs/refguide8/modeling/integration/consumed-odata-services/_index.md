@@ -6,9 +6,9 @@ description: "Overview of consumed OData services for Studio Pro"
 
 ## Introduction
 
-Data can be published from an app for use by other apps through [published OData services](/refguide8/published-odata-services/). Consumed OData services can be used to integrate external data sources in apps through [Mendix Data Hub](/data-hub/).
+Data can be published from an app for use by other apps through [published OData services](/refguide8/published-odata-services/). Consumed OData services can be used to integrate external data sources in apps through the [Catalog](/catalog/).
 
-Mendix Data Hub enables integration of available data sources from different sources in an organization into your Mendix apps.  OData services that are registered in the [Catalog](/catalog/) expose entities that can be dragged and dropped into your domain model through the [Data Hub pane](/refguide8/data-hub-pane/) as external entities. The OData service document that is added to your project provides the information for retrieving the metadata for the service and exposed entities.
+The Catalog enables integration of available data sources from different sources in an organization into your Mendix apps.  OData services that are registered in the [Catalog](/catalog/) expose entities that can be dragged and dropped into your domain model through the [Data Hub pane](/refguide8/data-hub-pane/) as external entities. The OData service document that is added to your project provides the information for retrieving the metadata for the service and exposed entities.
 
 For further details on the consumed OData service document and updating consumed OData services in your project, see [Consumed OData Service](/refguide8/consumed-odata-service/).
 
@@ -48,7 +48,7 @@ This means that the consumed service will have to be **Updated** to the new cont
 
 #### Limitations {#consumed-odata-service-limitations}
 
-When you update a [consumed OData service](/refguide8/consumed-odata-service/) with a new version from Mendix Data Hub, but close the document without saving, the blue arrow icon will no longer be shown to notify you about the available update for that service. Close your app and open it again and the error will be resolved.
+When you update a [consumed OData service](/refguide8/consumed-odata-service/) with a new version from the Catalog, but close the document without saving, the blue arrow icon will no longer be shown to notify you about the available update for that service. Close your app and open it again and the error will be resolved.
 
 ## Runtime Considerations
 

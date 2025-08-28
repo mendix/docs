@@ -74,12 +74,12 @@ The data source determines which object will be shown in the data view. For more
 
 The data view supports the following types of data source: context, microflow, nanoflow, and listen to widget. 
 
-| Data Source Type | Description                                                  |
-| ---------------- | ------------------------------------------------------------ |
+| Data Source Type | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Context          | A data source that uses a context object which is already available, such as a page parameter, snippet parameter or the object of a surrounding data container. Page parameters are passed to the page from another document, such as an [Show Page action](/refguide/on-click-event/#show-page) in another page or a [Show Page activity](/refguide/show-page/) in a microflow or nanoflow. In the case of a snippet parameter the data will come from a [Snippet Call](/refguide/snippet-call/) in a [page](/refguide/page/), [layout](/refguide/layout/), or another [snippet](/refguide/snippet/). If the context object comes from a data container, you must specify an entity path that starts in the context object and follows one or more associations. For more information on the context source, see [Context Source](/refguide/context-source/). |
-| Microflow        | A data source that runs a selected microflow and displays a return value. For more information on the microflow source, see [Microflow Source](/refguide/microflow-source/). |
-| Nanoflow         | A data source that runs a selected nanoflow and displays a return value. For more information on the nanoflow source, see [Nanoflow Source](/refguide/nanoflow-source/). |
-| Listen to widget | A data source that allows a data view to display detailed information on an object in the list widget on the same page. For more information on listen to widget source, see [Listen To Widget Source](/refguide/listen-to-grid-source/). |
+| Microflow        | A data source that runs a selected microflow and displays a return value. For more information on the microflow source, see [Microflow Source](/refguide/microflow-source/).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Nanoflow         | A data source that runs a selected nanoflow and displays a return value. For more information on the nanoflow source, see [Nanoflow Source](/refguide/nanoflow-source/).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Listen to widget | A data source that allows a data view to display detailed information on an object in the list widget on the same page. For more information on listen to widget source, see [Listen To Widget Source](/refguide/listen-to-grid-source/).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
 ### Editability Section {#editability}
 
@@ -87,20 +87,16 @@ The data view supports the following types of data source: context, microflow, n
 
 The editable property indicates whether the data view as a whole is editable or not.
 
-| Value   | Description   |
-|--------|---------|
-| Default  | The editability is the same as the editability of the containing data container. If there is no surrounding data container, then the data view will be editable by default.    |
-| Inherited from snippet call | The editability of the data view is the same as the editability of the containing data container of the snippet call (the default value for data views inside a snippet).    |
-| Never   | The data view is not editable; no widget inside the data view will be editable.  |
-| Conditionally  | The value is editable if the specified condition satisfies the specified criteria (see below). It will be combined with the conditions of the containing data containers. |
-
-{{% alert color="info" %}}
-The 'Conditionally' option was introduced in Mendix 10.7.0.
-{{% /alert %}}
+| Value                       | Description                                                                                                                                                                 |
+|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Default                     | The editability is the same as the editability of the containing data container. If there is no surrounding data container, then the data view will be editable by default. |
+| Inherited from snippet call | The editability of the data view is the same as the editability of the containing data container of the snippet call (the default value for data views inside a snippet).   |
+| Never                       | The data view is not editable; no widget inside the data view will be editable.                                                                                             |
+| Conditionally               | The value is editable if the specified condition satisfies the specified criteria (see below). It will be combined with the conditions of the containing data containers.   |
 
 ### Condition
 
-If the editable property is set to **Conditionally**, the widgets inside the data view are made editable only if the object of the data view satisfies the specified criteria.
+If the editable property is set to **Conditionally**, the widgets inside the data view are made editable only if the editability value satisfies the specified criteria.
 
 #### Based on Attribute Value
 
@@ -108,7 +104,7 @@ When selected, this enables the widgets in the data view when a particular attri
 
 #### Based on Expression
 
-When selected, this enables the widget when a provided [expression](/refguide/expressions/) evaluates to true. The object of the data view is available inside an expression as the `$currentObject` variable.
+When selected, this enables the widget when a provided [expression](/refguide/expressions/) evaluates to true. The object of the data view is available inside an expression as the `$currentObject` variable as well as any variables and parameters inside a page or snippet.
 
 The expression provided is evaluated in the browser. Currently it does not support all the functions that are available in microflows. The autocomplete function will only list those functions which are supported.
 
@@ -116,10 +112,10 @@ The expression provided is evaluated in the browser. Currently it does not suppo
 
 This property determines how input elements are rendered if they are read-only. 
 
-| Value   | Description                                                  |
-| ------- | ------------------------------------------------------------ |
-| Control *(default)*  | The widget is displayed but disabled, so the value cannot be modified. |
-| Text    | The widget is replaced by a textual representation of the value. |
+| Value               | Description                                                            |
+|---------------------|------------------------------------------------------------------------|
+| Control *(default)* | The widget is displayed but disabled, so the value cannot be modified. |
+| Text                | The widget is replaced by a textual representation of the value.       |
 
 {{% alert color="info" %}}Read-only style is not supported on native mobile pages.{{% /alert %}}
 

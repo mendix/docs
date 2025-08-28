@@ -4,7 +4,7 @@
     {{- $fill := "<path fill=\"" -}}
     {{- $color := .Get "color" -}}
 
-    <!--Colors are from the PDS guidelines: https://designsystem.mendix.com. -->
+    <!--Colors are from the PDS guidelines: https://designsystem.mendix.com. Text color is "dark" not "black" -->
     {{- $colorDictionary := dict 
         "green" "#0D990D"
         "red" "#D31E23"
@@ -12,6 +12,8 @@
         "purple" "#5b1bef"
         "blue" "#146ff4"
         "gray" "#9ea2a9"
+        "black" "#000000"
+        "dark" "#0a1325"
     -}}
 
     {{- if ne $color nil -}}

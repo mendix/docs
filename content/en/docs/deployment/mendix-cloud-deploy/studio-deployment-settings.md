@@ -14,7 +14,7 @@ If you have a licensed app in Mendix Cloud, you can deploy it directly to an env
 ## Selecting the Target Environment {#studio-pro-target}
 
 {{% alert color="info" %}}
-By default, the target environment is set to **Build Only**. If you have **Build Only** selected, clicking **App** > **Deploy to Licensed Cloud Node** places your MDA in the [Deployment Package Repository](/developerportal/deploy/environments/#package-repository) in the Mendix Portal rather than directly deploying it to an environment.
+By default, the target environment is set to **Build Only**. If you have **Build Only** selected, clicking **App** > **Deploy to Licensed Cloud Node** places your MDA in the [Deployment Packages](/developerportal/deploy/environments/#deployment-packages-tab) tab in the Mendix Portal rather than directly deploying it to an environment.
 
 If an environment is designated as the deployment target, you can see this on its [Environment Details](/developerportal/deploy/environments-details/) page; the **Studio Pro Target** line will read **Yes**.
 {{% /alert %}}

@@ -838,12 +838,18 @@ HAVING
 	)
 ```
 
-## `ORDER BY` Clause{#order-by}
+## `ORDER BY` Clause {#order-by}
 
 The `ORDER BY` clause specifies the sort order used on columns returned in a `SELECT` statement. Multiple columns can be specified. Columns are ordered in the sequence of the items in the `ORDER BY` clause.
 
 {{% alert color="info" %}}
 This clause can include items that do not appear in the `SELECT` clause, except when `SELECT DISTINCT` is specified or when a `GROUP BY` clause exists. When `UNION` is used, the column names or aliases must be those specified in the `SELECT` clause of the first part of the query. More information is presented in the [Union Clause](#oql-union) section.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+The `ORDER BY` clause cannot be used in view entities without a `LIMIT` or an `OFFSET` clause. See [Sorting of View Entity Results](/refguide/use-view-entities/#sorting) in *How To Use View Entities* for more details.
+
+If OQL v2 is enabled, an `ORDER BY` clause cannot be used in subqueries without a `LIMIT` or an `OFFSET` clause because the order of the subquery results may not be retained in the outer query. See the [`ORDER BY` in Subquery](/refguide/oql-v2/#order-by-in-subquery) section of *OQL Version 2 Features* for more details.
 {{% /alert %}}
 
 ### Syntax
@@ -1078,6 +1084,7 @@ The syntax is as follows:
 ### Result data type {#oql-union-type}
 
 The data types used in `select_query` statements are considered when determining the final return type of the `UNION` clause. All data types used in `select_query` statements must be compatible. All data types are compatible with themselves. Differing types are only compatible in these cases:
+
 * `UNION` of numeric types `INTEGER`, `LONG` and `DECIMAL`. The return type is the numeric type found in the `select_query` statements with the highest precedence (see [Type Precedence](/refguide/oql-expression-syntax/#type-coercion) for more information). 
 * `UNION` of limited and unlimited `STRING`. The return type is determined by the largest length of `STRING` attributes in the `select_query` statements.
 * `UNION` of any known type and a `NULL` literal. The result type is the known type.

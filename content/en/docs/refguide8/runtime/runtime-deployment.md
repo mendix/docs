@@ -35,10 +35,6 @@ This is the project model as created by Studio Pro. It cannot be directly interp
 
 This converts an app in mpk format to the mda format which can be interpreted by the Mendix Runtime.
 
-### Cloud Foundry
-
-This is the command line interpreter which allows Cloud Foundry environments to be created, and code to be pushed into the environments to be executed.
-
 ### Buildpack
 
 The buildpack is the Mendix script which controls the deployment of Mendix models to a cloud environment. It performs the following tasks:

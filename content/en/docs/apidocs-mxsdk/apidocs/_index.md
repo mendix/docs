@@ -9,6 +9,7 @@ aliases:
     - /apidocs/
     - /apidocs-mxsdk/apidocs/authentication/
     - /apidocs/index.html
+    - /apidocs-mxsdk/apidocs/runtime-api/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

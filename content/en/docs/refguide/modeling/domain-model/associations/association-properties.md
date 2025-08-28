@@ -19,7 +19,7 @@ Attributes properties for associated external entities are defined in the origin
 
 An example of the association properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/associations/association-properties/association-properties.png" alt="Association Properties" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/associations/association-properties/association-properties.png" alt="Association Properties" >}}
 
 Associations have the following properties:
 
@@ -28,6 +28,7 @@ Associations have the following properties:
 * [Multiplicity](#multiplicity)
 * [Navigability](#navigability)
 * [On Delete Behavior](#delete-behavior)
+* [Association storage](#storage)
 
 ### Name {#name}
 
@@ -103,7 +104,7 @@ When an object is deleted, the associated object (or objects) are also deleted.
 
 This delete behavior is used, for example, if you want to delete any associated **Profile** when a **Customer** is deleted:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/associations/association-properties/association-delete-both.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/associations/association-properties/association-delete-both.png" >}}
 
 {{% alert color="info" %}}
 This option is not available for associations that involve an external entity.
@@ -115,11 +116,20 @@ An object can only be deleted if it is not associated with any other object (or 
 
 This delete behavior is used, for example, if you want to be able to delete a **Customer** only if it is not associated with any **Order**. In this case you will be asked to enter an **Error message if 'Customer' object cannot be deleted** to inform the end user that this customer cannot be deleted and perhaps suggest a next course of action:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/associations/association-properties/association-prevent-delete.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/associations/association-properties/association-prevent-delete.png" >}}
 
 {{% alert color="info" %}}
 This option is not available for an external entity that is the [child](/refguide/association-member-properties/#parent-child) of an association to a local entity.
 {{% /alert %}}
+
+### Association Storage{#storage}
+
+You can choose to store associations directly in the owning entity, thus removing the need for an extra association table. For more information, see [Association Storage Options](/refguide/association-storage/).
+
+| Association storage | Description | Notes |
+| --- | --- | --- |
+| Direct associations | The associations to other entities are stored as columns in the table of the owner entity | Not available for many-to-many associations |
+| Association tables | Associations are stored in separate association tables | *Default* |
 
 ## Read More
 

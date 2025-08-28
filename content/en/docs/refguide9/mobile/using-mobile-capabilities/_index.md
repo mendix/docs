@@ -19,3 +19,37 @@ Guides in this section will help you implement key features of native apps and/o
 * [Augmented Reality](/refguide9/mobile/using-mobile-capabilities/augmented-reality/): native apps can render 3D objects in the physical environments via the camera stream of a mobile device
 * [App Permissions](/refguide9/mobile/using-mobile-capabilities/generic-permission-action/): this guide allows native apps to request permissions from iOS and Android device users
 * [Mobile Accessibility](/refguide9/mobile/using-mobile-capabilities/mobile-accessibility/): this guide allows you to customize accessibility options for native mobile applications
+
+## Mobile Library Compatibility Info
+
+This page outlines the compatibility between Mendix mobile development libraries and Mendix Studio Pro versions. For information pertaining to other major versions of Studio Pro, click here:
+
+* [Studio Pro 11](/refguide/mobile/using-mobile-capabilities/)
+* [Studio Pro 10](/refguide10/mobile/using-mobile-capabilities/)
+
+### Native Mobile Resources
+
+This module contains a powerful set of widgets and nanoflow actions created for native mobile. They enable authentication, network, platform capabilities, and more:
+
+* [Download from the Mendix Marketplace](https://marketplace.mendix.com/link/component/109513)
+* [GitHub Repository](https://github.com/mendix/native-widgets)
+
+| Module Version  | Compatible Studio Pro Versions |
+| --------------- | ------------------------------ |
+| 4.0.4 - 4.99.99 | 9.24.1 - 9.24.99               |
+| 4.0.0 - 4.0.3   | 9.24                           |
+
+### Nanoflow Commons
+
+This module contains nanoflow actions commonly used across mobile apps, enabling things such as client activities, geo-location, local storage, and more:
+
+* [Download from the Mendix Marketplace](https://marketplace.mendix.com/link/component/109515)
+* [GitHub Repository](https://github.com/mendix/native-widgets)
+
+| Module Version  | Compatible Studio Pro Versions |
+| --------------- | ------------------------------ |
+| 3.0.1 - 3.99.99 | 9.24.1 - 9.24.99               |
+
+### Native Template
+
+Detailed information about Native Template versions, including Studio Pro and React Native compatibility, can be found [here](https://mendix.github.io/native-template/version-compatibility/version-compatibility.html).

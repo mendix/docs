@@ -12,7 +12,7 @@ For on-premises and local deployments of Mendix, the Mendix Runtime monitoring a
 {{% alert color="info" %}}
 This is only available for local and on-premises deployments of your app.
 
-For deployments to other platforms (for example, Mendix for Private Cloud), you do not have access to the m2ee admin handler to make these requests.
+For deployments to other platforms (for example, Mendix on Kubernetes), you do not have access to the m2ee admin handler to make these requests.
 
 For deployments to Mendix Cloud, you can get the same information from various pages in the Mendix Portal. For more information, see:
 
@@ -27,7 +27,9 @@ The request needs to be of the **POST** type with **No Authorization** and the f
 * Content-Type: **application/json**
 * X-M2EE-Authentication: **yourM2EEPassword_Base64Encoded**
 
-The M2EE password is NOT the super administrator password, but a separate password. If you have the application deployed *on premises*, you can set this password in the **settings.yaml** file, which is located in the **Apps/YourProject** folder. If you are *running the application from Studio Pro*, the M2EE password is set automatically by Mendix, and you can retrieve it from the environment variables of your application process.
+    The M2EE password is NOT the super administrator password, but a separate password. This can be retrieved from the `M2EE_ADMIN_PASS` environment variable in your `javaw.exe` or `java` process.
+
+    Remember to Base64 encode the password before passing it as the value for `X-M2EE-Authentication`
 
 The next sections explain which monitoring actions are supported.
 

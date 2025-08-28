@@ -110,7 +110,7 @@ This operation takes a list and filters it based on two expressions: `offset` an
 
 ### Sort Strategies: Nanoflows vs. Microflows {#sort}
 
-Microflows provide locale-sensitive string comparison for a sort operation, ensuring strings are sorted according to the rules of a specific locale. Nanoflows do not have this capability. However, from Studio Pro version 10.10, nanoflows are updated to ignore case sensitivity during sorting.
+Microflows provide locale-sensitive string comparison for a sort operation, ensuring strings are sorted according to the rules of a specific locale. Nanoflows do not have this capability, and in nanoflows, case sensitivity is ignored during sorting.
 
 ### List Name, Object Name, or Variable Name
 

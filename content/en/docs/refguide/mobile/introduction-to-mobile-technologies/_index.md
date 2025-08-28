@@ -40,6 +40,10 @@ Building native mobile apps is inherently more complex than building web-based a
 
 For more information, see [Native Mobile](/refguide/mobile/introduction-to-mobile-technologies/native-mobile/).
 
+{{% alert color="info" %}}
+[What PWA Can Do Today](https://whatpwacando.today/) is a free service that lets you try out PWA capabilities on your devices of choice. Use it to determine which PWA features are possible on your app's target devices. Be aware that not all capabilities are supported by Mendix.
+{{% /alert %}}
+
 ## Deciding Between a PWA or Native Mobile App
 
 Mendix offers building native mobile apps and PWAs, enabling companies to choose the right technology for the right use case. Depending on your app's requirements or constraints, one or the other can be a better fit. It is also possible to have both native mobile and PWA profiles in a single app, running next to each other.
@@ -55,5 +59,7 @@ In general, Mendix recommends building a PWA for your mobile app project. PWAs a
 1. **Offline Data**: PWAs also allow offline-first operation. However, the size of the database is limited and cannot be stored securely. If your app requires storing large amounts of data reliably or requires that offline data is encrypted, build a native mobile app.
 
 1. **Developer Experience**: If most of your developers and designers are experienced in web technologies (and you have no developers familiar with building and publishing native mobile apps), you should build a PWA. Training your team to learn new native technologies while simultaneously developing apps can delay application production.
+
+1. **Maintenance**: Mobile operating systems evolve rapidly, requiring annual updates to native mobile apps for compatibility. In Mendix, this entails upgrading the native mobile app to the latest MTS or LTS version each year, followed by rebuilding and republishing the app. Browser are much more stable, allowing Mendix PWAs to follow the same update cycles as regular Mendix apps.
 
 If you decide to build a native mobile app after considering these requirements, please consult our documentation on [Building Efficient Mobile Apps](/refguide/mobile/building-efficient-mobile-apps/) and [Building, Testing, and Distributing Apps](/refguide/mobile/distributing-mobile-apps/).

@@ -75,11 +75,15 @@ The system uses the following criteria when determining if an app is unused:
 * The app was created more than a year ago
 * No commits since the app was created
 
+Once a project is marked for deletion, the system uses a grace period of 14 calendar days before it is permanently deleted.
+
 You can prevent this clean up by performing one of the following actions:
 
 * Make changes and commit them to the Team Server
 * [Pin your app](/developerportal/#app-tiles)
 * [Invite someone](/developerportal/general/team/#inviting) to collaborate with you on your app
+
+Pinning a project that has been marked for deletion unmarks it immediately. Changes to the other criteria do not effect the mark-for-deletion immediately, but are verified before the actual deletion.
 
 ### Licensed App
 
@@ -109,7 +113,7 @@ Apps that run on Mendix Cloud are automatically assigned their own URLs. The for
 | Licensed app | Test, acceptance, flexible environments | Depends on the region:<br /> `{app-name}-{environment-type}.mendixcloud.com`<br />or<br />`{app-name}-{environment-type}.apps.{region}.mendixcloud.com` | `myappname-accp.mendixcloud.com`, <br /> `myappname-accp.apps.ap-3a.mendixcloud.com` |
 | Free App     | N/A         | `{app-name}-sandbox.mxapps.io`<br />or<br />`{app-name}.mxapps.io` | `myfreeappname.mxapps.io` |
 
-{{% alert color="info" %}}Licensed apps run in Cloud Foundry clusters deployed on AWS. You can select the region for your app, but not for the cluster. Note that there can be multiple clusters in a region, and the URL of an app on some clusters in a region contains `apps.{region}`.{{% /alert %}}
+{{% alert color="info" %}}Licensed apps run in clusters deployed on AWS. You can select the region for your app, but not for the cluster. Note that there can be multiple clusters in a region, and the URL of an app on some clusters in a region contains `apps.{region}`.{{% /alert %}}
 
 For licensed apps, you can customize a URL by adding [custom domains](/developerportal/deploy/custom-domains/).
 
@@ -117,7 +121,7 @@ Mendix apps cannot use custom ports. They communicate on the standard HTTP and H
 
 ### Number of End-Users for Licensed Apps
 
-The number of end-users supported for your licensed app depends on your [pricing plan](#plans). End-users of your app are classified as either internal or external. You need to report this for licensing purposes, using either the [USAGE_METRICS_EMAIL_FIELDS custom variable](/developerportal/deploy/environments-details/#custom-environment-variables) (if you are using email domains to distinguish between end-users) or by [populating the user type](/howto/monitoring-troubleshooting/populate-user-type/) for each end-user of your app. Only end-users whose Mendix accounts are marked as **Active** are counted towards the number of end-users of the app.
+The number of end-users supported for your licensed app depends on your [pricing plan](#plans). End-users of your app are classified as either internal or external. You need to report this for licensing purposes, using either the [USAGE_METRICS_EMAIL_FIELDS custom variable](/developerportal/deploy/environments-details/#custom-environment-variables) (if you are using email domains to distinguish between end-users) or by [populating the user type](/developerportal/deploy/populate-user-type/) for each end-user of your app. Only end-users whose Mendix accounts are marked as **Active** are counted towards the number of end-users of the app.
 
 ### Supported Mendix Versions {#mendix-cloud-supported-versions}
 
@@ -145,7 +149,7 @@ For more information, see [Pricing](https://www.mendix.com/pricing/).
 
 ### Cloud Resource Packs {#resource-pack}
 
-Mendix environments are sized by reference to cloud resource packs. These resources are used for application runtime as well as anything else required to run your application, such as agents for any third-party integrations that you have added. The table below shows the current cloud resource packs for Standard, Premium, and Premium Plus plans. Resources for the Basic plan are fixed as described in [Mendix Basic Package](/developerportal/deploy/basic-package/).
+Mendix environments are sized by reference to cloud resource packs. These resources are used for application runtime as well as anything else required to run your application, such as agents for any third-party integrations that you have added. The table below shows the current cloud resource packs for Standard, Premium, and Premium Plus plans.
 
 If you have a Standard, Premium, or Premium Plus plan, you can redeem virtual credits known as cloud tokens to purchase cloud resource packs on the Mendix Platform. For more information about how this works, see [Entitlements](/control-center/entitlements/).
 
@@ -215,9 +219,9 @@ With Regional Fallback, a copy of your database and FileDocuments is maintained 
 
 Because this is designed for a catastrophic regional failure, there are some limitations to your normal operations. For example, you cannot deploy a new version of the app while it is running in the secondary region. The decision to switch to the secondary region is completely under your control.
 
-#### On-Premises and Private Cloud
+#### On-Premises and Mendix on Kubernetes
 
-If you want to deploy your Mendix apps to other environments, you can add these to your Mendix plan. For example, you can choose to deploy to [SAP BTP](/developerportal/deploy/sap-cloud-platform/). You can also choose to deploy to your own cloud using [Mendix for Private Cloud](/developerportal/deploy/private-cloud/).
+If you want to deploy your Mendix apps to other environments, you can add these to your Mendix plan. For example, you can choose to deploy to [SAP BTP](/developerportal/deploy/sap-cloud-platform/). You can also choose to deploy to your own cloud using [Mendix on Kubernetes](/developerportal/deploy/private-cloud/).
 
 ## Read More
 

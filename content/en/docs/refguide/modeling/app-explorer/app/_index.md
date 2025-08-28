@@ -9,11 +9,11 @@ aliases:
 
 ## Introduction
 
-A Mendix app consists of app-level documents and a number of modules. Each module can contain many documents. At the app level, there are some settings and documents that apply to your app as a whole. For example, navigation is an app-level document, and the menu bar is app-wide and can refer to functionality in all modules. However, most documents live at the level of a [module](/refguide/modules/).
+A Mendix app consists of app-level documents and a number of modules. Each module can contain many documents. At the app level, there are some settings and documents that apply to your app as a whole. For example, Navigation is an app-level document, and the menu bar is app-wide and can refer to functionality in all modules. However, most documents live at the level of a [module](/refguide/modules/).
 
 ## Settings
 
-Clicking **Settings** opens a dialog box with settings for the end-user languages, the app directory, and the database and server.
+In **Settings**, you can manage the settings for the end-user languages, the app directory, and the database and server.
 
 For more information, see [App Settings](/refguide/app-settings/).
 
@@ -31,7 +31,7 @@ For more information, see [Navigation](/refguide/navigation/).
 
 ## System Texts
 
-**System texts** are texts like information and error messages that are produced by the server or the client. You can translate these texts so that they appear in the preferred language of the user.
+**System texts** are texts such as information and error messages that are produced by the server or the client. You can translate these texts so  they appear in the user's preferred language.
 
 For more information, see [System Texts](/refguide/system-texts/).
 

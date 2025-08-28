@@ -15,7 +15,7 @@ This document explains how to configure your Mendix Cloud app to send data to Da
 For more information on the data you can send to Datadog, see [Monitoring Your Mendix Apps with an APM Tool](/developerportal/operate/monitoring-with-apm/).
 
 {{% alert color="info" %}}
-For support on other cloud deployment options, refer to their dedicated documentation. For Private Cloud deployment, for example, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
+For support on other cloud deployment options, refer to their dedicated documentation. For deployment on Kubernetes, for example, see [Monitoring Environments in Mendix on Kubernetes](/developerportal/deploy/private-cloud-monitor/).
 {{% /alert %}}
 
 ## Setting up Datadog for Your Mendix App

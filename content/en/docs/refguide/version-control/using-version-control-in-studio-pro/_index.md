@@ -143,7 +143,7 @@ A tool you can consider using is TortoiseGitMerge, shipped as part of [TortoiseG
 Comparing files on disk with the original is currently not supported on macOS.
 {{% /alert %}}
 
-Committing is only allowed if your working copy is up to date with the repository. If someone else committed a change since the last time you pulled, you will have to pull first. This is because the revision you create with the commit should incorporate both your changes and the changes by the other person. Updating will combine the latest changes in the repository with your changes. After reviewing the result and fixing any conflicts, you can commit again.
+Committing is only allowed if your working copy is up to date with the repository. If someone else committed a change since the last time you pulled, you will have to pull first (this process is called **Commit and Combine** in the [Commit](/refguide/commit-dialog/#combine) dialog box). This is because the revision you create with the commit should incorporate both your changes and the changes by the other person. Updating will combine the latest changes in the repository with your changes. After reviewing the result and fixing any conflicts, you can commit again. 
 
 ### Pushing {#pushing}
 
@@ -193,7 +193,13 @@ The history of the app is a list of all revisions that have been committed. To v
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/history-button.png" max-width=60% alt="History Button" >}}
 
-For Git-based applications, revisions are sorted according to the commit history, which sometimes does not reflect the chronological order due to Git's decentralized nature and local commits. The history dialog shows you revision number, date, time, author, and message of each revision.
+For Git-based applications, revisions are sorted according to the commit history, which sometimes does not reflect the chronological order due to Git's decentralized nature and local commits. The **History** dialog box shows the revision number, date, time, author, and message of each revision.
+
+{{% alert color="warning" %}}
+
+The [Name and Email settings](/refguide/preferences-dialog/#name) can be adjusted by the user and are not used for authenticating with the version control server. If you notice a suspicious value in the commit history, it is likely a private email address set through another tool in the global Git configuration, but the user has been authenticated as usual.
+
+{{% /alert %}}
 
 Select a revision to see additional details, such as related stories, changed documents, Studio Pro version, and changes on disk. Icons summarize the kinds of changes that happened in the app.
 
@@ -225,7 +231,8 @@ Select the **Version Control** menu > **Revert a Commit...** to revert a commit.
 
 {{% alert color="warning" %}}
 Reverting a commit creates a new commit that undoes the changes introduced by the original commit. This may lead to unexpected results depending on the context of the original commit.
-* **Port fix and reverting** – If you used [Port Fix](/refguide/merge-dialog/#port-fix) to apply a commit from another branch to the current branch, and then you revert that commit, the changes from the cherry-pick will not be reapplied when merging the full branch. This happens because the revert commit explicitly negates the cherry-picked changes, and Git recognizes them as already addressed.
+
+* **Cherry picking and reverting** – If you used [Cherry Pick](/refguide/merge-dialog/#cherry-pick) to apply a commit from another branch to the current branch, and then you revert that commit, the changes from the cherry-pick will not be reapplied when merging the full branch. This happens because the revert commit explicitly negates the cherry-picked changes, and Git recognizes them as already addressed.
 * **Merging and reverting** – If you [merged another branch](/refguide/version-control/#merging-branches) into the current branch and then reverted the merge commit, merging the same branch again will not reapply its changes. Git identifies that the merge was undone and prevents those changes from being reapplied.
 {{% /alert %}}
 
@@ -304,7 +311,7 @@ If you have multiple development lines, you sometimes want to merge changes from
 
 Merging is always done while you have a working copy open. The merge will result in extra local changes in that working copy. It is advisable to commit local changes first before merging extra changes into a working copy. Otherwise, the uncommitted local changes and the changes caused by the merge will be combined and it is very hard to untangle them if you are unhappy with the merge. Studio Pro will warn you if you have uncommitted changes.
 
-Select **Version Control** > **Merge Changes Here**, after that you can select **Port fix** or **Merge feature branch** options. For more information on merge settings, see [Merge Dialog](/refguide/merge-dialog/).
+Select **Version Control** > **Merge Changes Here**, after that you can select **Cherry Pick** or **Merge feature branch** options. For more information on merge settings, see [Merge Dialog](/refguide/merge-dialog/).
 
 #### Replacing the Main Line with a Branch Line
 
@@ -501,7 +508,7 @@ Studio Pro automatically performs the necessary post-processing steps when you d
 
 When using external tools, you might be asked to authenticate separately to Team Server.
 
-Connecting to Git is done using a personal access token (PAT). For more information on how to create a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
+Connecting to Git is done using a personal access token (PAT). For more information on how to create a PAT, see the [Personal Access Tokens](/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
 
 To connect to Git, you need to use the following URL and credentials:
 

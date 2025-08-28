@@ -60,7 +60,7 @@ If the selected object has local changes, the following steps are performed:
 1. The server database is updated with the changes from local database.
 2. The local database is updated from the server database. This is useful in case the selected object has calculated attributes or has been modified in a before/after event handler microflow.
 
-If the selected object originated from the server (not created on the device), and no longer exists on the server (or is inaccessible due to the access rules), the local changes are not applied and the object is removed from the local database. In this case the value of the variable in the nanoflow for that object becomes `empty`. The server stores the discarded changes in the `System.SynchronizationFailure` entity to prevent data loss.
+If the selected object originated from the server (not created on the device), and no longer exists on the server (or is inaccessible due to the access rules), the local changes are not applied and the object is removed from the local database. In this case the value of the variable in the nanoflow for that object becomes `empty`. The server stores the discarded changes in the `System.SynchronizationError` entity to prevent data loss.
 
 If the set of objects selected for synchronization contains objects without local changes, synchronization updates the local copy from the server database. If there is an object that has been deleted from the server or is no longer accessible due to access rules, that object will be removed from the local database too.
 
@@ -83,11 +83,19 @@ The **Action** section of the properties pane shows the action associated with t
 
 ## Limitations {#limitations}
 
+### Parallel Synchronization
+
 Running multiple synchronization processes at the same time is not supported, regardless of the synchronization mode.
 
 If you try to trigger another synchronization process while the synchronization is in progress, the following error message will be shown: "Performing simultaneous synchronizations is not supported. Please try again after the current synchronization is completed."
 
 Such an error can be handled in the nanoflow from which the synchronization attempt was triggered using [error handlers](/refguide/error-handling-in-nanoflows/#errorhandlers-nano).
+
+### Background Synchronization
+
+Avoid running synchronization processes in the background, such as scheduling periodic refreshes at fixed intervals. This approach can negatively impact application performance and may result in unclear or misleading error messages for users.
+
+Instead, trigger synchronization explicitly when data updates are required. Ensure that users are informed of the synchronization status by displaying progress indicators or relevant feedback during the process.
 
 ## Read More
 

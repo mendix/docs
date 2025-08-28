@@ -41,10 +41,6 @@ Every [published REST service](/refguide/published-rest-service/) is automatical
 
 The documentation of the services is available in the [OpenAPI 3.0](/refguide/open-api/) and [OpenAPI 2.0](/refguide/open-api-2/) formats, which is readable by many systems and tools. It contains [JSON Schemas](/refguide/published-rest-service-json-schema/) for the messages definitions.
 
-{{% alert color="info" %}}
-Exporting OpenAPI documentation in version 3.0 of the specification was introduced in Studio Pro [10.1.0](/releasenotes/studio-pro/10.1/).
-{{% /alert %}}
-
 ## Logging
 
 To log detailed information about interaction with your published REST service, [set the log level](/refguide/logging/) of the **REST Publish** log node to **Trace**.

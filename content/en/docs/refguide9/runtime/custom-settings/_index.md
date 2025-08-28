@@ -73,6 +73,7 @@ The following custom settings can be configured:
 | <a id="TaskQueueShutdownGracePeriod" href="#TaskQueueShutdownGracePeriod">TaskQueue.<wbr>ShutdownGracePeriod</a> | Time in ms to wait for task in a task queue to finish when shutting down. | 10000 (10 seconds) |
 | <a id="TempPath" href="#TempPath">TempPath</a> | The location of the temporary files. | [deployment folder]\data\tmp |
 | <a id="TrackWebServiceUserLastLogin" href="#TrackWebServiceUserLastLogin">TrackWebServiceUserLastLogin</a> | Defines whether to update the web service user's `LastLogin` field on each login. When this happens a database update query has to be sent and this can have performance consequences on heavy load systems. When this setting is set to false, no database interaction is necessary. | true |
+| <a id="TrackUserLastLoginForODataAndREST" href="#TrackUserLastLoginForODataAndREST">TrackUserLastLoginForODataAndREST</a> | Defines whether to update the user's `LastLogin` field on each interaction with a published OData and REST services. When this happens, a database update query has to be sent, which can have performance consequences on heavy load systems. When this setting is set to `false`, no database interaction is necessary. Ths setting is not available in Studio Pro 10, because this behavior is included in the [TrackWebServiceUserLastLogin](#TrackUserLastLoginForODataAndREST) setting. When setting this value to `false`, make sure to also set [TrackWebServiceUserLastLogin](#TrackUserLastLoginForODataAndREST) to `false` so a future upgrade to Studio Pro 10 keeps the behavior. *This setting was introduced in Studio Pro 9.24.34.* | true |
 | <a id="UploadedFilesPath" href="#UploadedFilesPath">UploadedFilesPath</a> | The location of the uploaded files. A valid path can be: `\\FileServer\CustomerPortalFiles`. | [deployment folder]\data\files |
 | <a id="mapping.import.MaxJsonReadingLength" href="#mapping.import.MaxJsonReadingLength">mapping.import.MaxJsonReadingLength</a> | The maximum length of the JSON string received from the remote which can be processed with import mapping. Use this setting when you expect a string which is longer than the default. See [Import Mappings](/refguide/import-mappings/#troubleshooting) for more information. <br />*This setting was introduced in Mendix version 9.24.17.* | 20000000 *(dependent on library version)* |
 
@@ -152,7 +153,7 @@ Before the data copying process starts, the main database structure will be gene
 The settings described below influence the behavior of the Amazon S3 Storage Service module. This module can be used for both Amazon S3 Storage and IBM Cloud Object Storage.
 
 {{% alert color="warning" %}}
-For deployments to Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you and cannot be overwritten.
+For deployments to Mendix Cloud, SAP BTP, and Mendix on Kubernetes these settings are managed for you and cannot be overwritten.
 {{% /alert %}}
 
 | Name | Description | Default Value |
@@ -179,7 +180,7 @@ For deployments to Mendix Cloud, SAP BTP, and Mendix for Private Cloud these set
 These settings can be changed to use a Microsoft Azure SQL database for your Mendix application.
 
 {{% alert color="warning" %}}
-For deployments to Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you and cannot be overwritten.
+For deployments to Mendix Cloud, SAP BTP, and Mendix on Kubernetes these settings are managed for you and cannot be overwritten.
 {{% /alert %}}
 
 First, you need to create an Azure SQL database (for information on how to do this, see this [SQL Database Tutorial](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/)). Make sure your Azure firewall settings allow your Mendix application to reach the Azure SQL database (by default, the Azure firewall does not allow external connections).
@@ -197,7 +198,7 @@ First, you need to create an Azure SQL database (for information on how to do th
 These settings can be used to store files using the Microsoft Azure blob storage service. Server-side encryption can be configured through the Azure Portal (for more information, see [Azure Storage encryption for data at rest](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)).
 
 {{% alert color="warning" %}}
-For deployments to Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you and cannot be overwritten.
+For deployments to Mendix Cloud, SAP BTP, and Mendix on Kubernetes these settings are managed for you and cannot be overwritten.
 {{% /alert %}}
 
 | Name | Description | Default Value |
@@ -225,8 +226,8 @@ The settings below influence the behavior of the Mendix web client.
 | Name | Description | Default Value |
 | --- | --- | --- |
 | <a id="EnableKeepAlive" href="#EnableKeepAlive">EnableKeepAlive</a> | Defines whether the web client sends a keep alive request every SessionTimeout/2 milliseconds, to prevent a session timeout. Each click in the browser also acts as KeepAlive. Disabling this property will result in a user being logged out automatically after 10 minutes of inactivity, even if the browser remains open. | true |
-| <a id="PhoneUserAgentRegEx" href="#PhoneUserAgentRegEx">PhoneUserAgentRegEx</a> | Defines the regular expression that is used to determine whether a user is visiting a Mendix application from a phone. The regular expression is matched against the user-agent header sent by the client's web browser. | Android, Mobile (iPhone, iPod, BlackBerry) |
-| <a id="TabletUserAgentRegEx" href="#TabletUserAgentRegEx">TabletUserAgentRegEx</a> | Defines the regular expression that is used to determine whether a user is visiting a Mendix application from a tablet. The regular expression is matched against the User-Agent header sent by the client's web browser. | Android, iPad |
+| <a id="PhoneUserAgentRegEx" href="#PhoneUserAgentRegEx">PhoneUserAgentRegEx</a> | *This method does not accurately identify devices. It is removed and an alternative method is used in 9.24.34 and above.*<br />Defines the regular expression that is used to determine whether a user is visiting a Mendix application from a phone. The regular expression is matched against the user-agent header sent by the client's web browser. | Android, Mobile (iPhone, iPod, BlackBerry) |
+| <a id="TabletUserAgentRegEx" href="#TabletUserAgentRegEx">TabletUserAgentRegEx</a> | *This method does not accurately identify devices. It is removed and an alternative method is used in 9.24.34 and above.*<br />Defines the regular expression that is used to determine whether a user is visiting a Mendix application from a tablet. The regular expression is matched against the User-Agent header sent by the client's web browser. | Android, iPad |
 | <a id="commendixwebuiHybridAppLoginTimeOut" href="#commendixwebuiHybridAppLoginTimeOut">com.<wbr>mendix.<wbr>webui.<wbr>HybridAppLoginTimeOut</a> | Determines how many minutes your token will remain valid before re-authenticating using your full credentials. By default the token will never expire. In Mendix versions below 9.13.0 you could specify no timeout by setting the value to `-1`.  | |
 | <a id="commendixwebuiFeedbackSizeWarningThreshold" href="#commendixwebuiFeedbackSizeWarningThreshold">com.<wbr>mendix.<wbr>webui.<wbr>FeedbackSizeWarningThreshold</a> | A warning is logged when the feedback size exceeds the threshold. Feedback is sent from server to client to instruct (for example, to refresh objects or to open a page). They are serialized as "instructions" in the server response. If there are too many instructions, this can have performance implications, as they all have to be serialized to the client. For this reason, a warning is logged when the threshold is exceeded. | 5000 |
 | <a id="commendixwebuiStateSizeWarningThreshold" href="#commendixwebuiStateSizeWarningThreshold">com.<wbr>mendix.<wbr>webui.<wbr>StateSizeWarningThreshold</a> | A warning is logged when the state size exceeds the threshold. The state consists of changes in objects and of objects not committed to the database (yet). If there is too much state, this will have performance implications, as the whole state has to be serialized to the client. For this reason, a warning is logged when the threshold is exceeded. | 100 |

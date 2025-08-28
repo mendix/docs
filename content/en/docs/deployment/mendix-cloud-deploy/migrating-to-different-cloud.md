@@ -73,26 +73,16 @@ Download the deployment package of your app hosted in the source node, and uploa
 
 To download a deployment package, follow these steps:
 
-1. Go to the **Environments** page of the source app.
-
-2. Click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) > **Details** for a deployment package.
-
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/migrating/deployment-details.png" alt="" class="no-border" >}}
-
-3. In the resulting **MDA Details** dialog box, click **Download**.
+1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+2. On the [Deployment Packages tab](/developerportal/deploy/environments/#deployment-packages-tab), choose your preferred deployment package.
+3. Click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) > **Download**.
 
 To upload the deployment package, follow these steps:
 
-1. Go to the **Environments** page of the app on your target node.
-
-2. In the **Deployment Package Repository** section, click **Upload**.
-
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/migrating/upload-package.png" class="no-border" >}}
-
+1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+2. On the [Deployment Packages tab](/developerportal/deploy/environments/#deployment-packages-tab), click **Upload a Package**.
 3. Browse and select the downloaded deployment package from your device.
-
-4. Deploy the uploaded package and confirm that it starts successfully.
-
+4. Deploy the uploaded package and confirm that it starts successfully. See [How to Deploy an App to Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/) for more details. 
 5. Stop the app so that you can upload the backup data.
 
 #### Backing Up
@@ -135,7 +125,7 @@ For a detailed example of how this works, see the [Exchanging Linked Apps Betwee
 
 ### Linking the App to the Target Node
 
-Follow these steps to link the app you detached from the source node, above, to the target node.
+Follow these steps to link the app you detached from the source node above, to the target node.
 
 {{% alert color="warning" %}}
 Make sure you have downloaded the latest backup and deployment package before linking your app to the target node.
@@ -153,12 +143,7 @@ For more information, see [Licensing Mendix Cloud Apps](/developerportal/deploy/
 
 ### Changing the App URL
 
-To change the app URL (if you are not using a custom domain), contact [Mendix Support](https://support.mendix.com). You will need to provide the following information:
-
-* **URL** for the new app, which is available from the **Environments** page for the new app
-* **URL** for the old app, which is available from the **Environments** page for the old app
-* **Project ID** for the new app, which is available from the **Settings** page for the new app
-* **Project ID** for the old app, which is available from the **Settings** page for the old app
+To change the app URL (if you are not using a custom domain), contact [Mendix Support](https://support.mendix.com). You will need to provide the **URLs** and **Project ID**s for the new and old apps, both available on the [Environment Details](/developerportal/deploy/environments-details/#general-tab) pages of the respective apps.
 
 ### Changing a Custom Domain{#custom-domain}
 
@@ -181,8 +166,6 @@ If you own the private key for your existing custom domain name, you can reuse i
 Or, if you made a certificate request to Mendix, the private key is stored in the Mendix Secure Keystore. In that case, ask Mendix Support to arrange for the certificate to be migrated to the target node.
 
 The two custom domain certificate options are shown below:
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/migrating/tls-certificates.png" alt="" width=75% >}}
 
 ### Offboarding the Source Node
 

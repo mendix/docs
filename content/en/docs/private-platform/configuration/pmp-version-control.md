@@ -13,6 +13,7 @@ Private Mendix Platform supports the following types of Git repositories as the 
 
 * GitLab (both SaaS and self-managed)
 * GitHub Enterprise Server
+* GitHub Enterprise Cloud
 * Bitbucket
 * Azure DevOps
 

@@ -25,7 +25,7 @@ Authentication for the Registration API requires the following:
 
 ### Generating a PAT 
 
-For details on how to generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *User Settings*.
+For details on how to generate a PAT, see the [Personal Access Tokens](/mendix-profile/user-settings/#pat) section of *User Settings*.
 
 Store the generated value {GENERATED_PAT} somewhere safe so you can use it to authorize your API calls.
 

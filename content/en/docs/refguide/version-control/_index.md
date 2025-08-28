@@ -99,11 +99,14 @@ The Repository Service manages communication between Studio Pro and other suppor
 An app modeled in Mendix is stored in an *.mpr* file, a database that contains data on all documents, such as microflows, workflows, pages. Studio Pro or the [mx Command-Line Tool](/refguide/mx-command-line-tool/) is required to inspect changes in the *.mpr*.
 
 {{% alert color="info" %}}
-Studio Pro 10.18 introduced a public beta to convert *.mpr* to a new [MPRv2 storage format](/refguide/troubleshoot-repository-size/#mpr-format) to slow down the repository growth and to prevent degrading performance.
+You can convert *.mpr* to a new [MPRv2 storage format](/refguide/troubleshoot-repository-size/#mpr-format) to slow down the repository growth and to prevent degrading performance. This is currently in beta.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-Manually modifying files belonging to the *.mpr* storage format such as the *.mpr* file or the *mprcontents* directory (for example, when resolving file conflicts through third-party tooling), will lead to a corrupted state. To recover from a corrupted state a previous commit will need to be restored.
+Manually modifying files belonging to the *.mpr* storage format such as the *.mpr* file or the *mprcontents* directory (for example, when resolving file conflicts through third-party tooling), will lead to a corrupted state. To recover from a corrupted state a previous commit will need to be restored. 
+{{% /alert %}}
+{{% alert color="warning" %}}
+Renaming the app by renaming the *.mpr* file is not supported. Renaming your app when using version control is only supported via the Mendix Portal. For more information, see the [Page Header](/developerportal/collaborate/general-settings/#settings-page-header) section in *Settings*. 
 {{% /alert %}}
 
 ## Branches {#branches}

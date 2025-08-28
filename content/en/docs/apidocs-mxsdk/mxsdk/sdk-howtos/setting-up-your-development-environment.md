@@ -34,7 +34,7 @@ To set up your development tools, follow these steps:
 
     ```bash
     $ node --version
-    v14.15.0
+    v18.20.8
     ```
 
     For Debian-based Linux distributions such as Ubuntu, please refer to [NodeSource Node.js Binary Distributions](https://github.com/nodesource/distributions#user-content-installation-instructions) to properly set up your apt-get sources.
@@ -42,7 +42,7 @@ To set up your development tools, follow these steps:
     In the rest of the how-tos, in blocks such as the above, lines starting with a `$` represent commands to type into a terminal. Sometimes a line follows without a $, represents output of the command.
 
 3. Install [Visual Studio Code](https://code.visualstudio.com/) (not to be confused with Visual Studio), a text editor/IDE with good support for [TypeScript](https://www.typescriptlang.org/). Make sure you have a recent version (v1.11.0+); check the version you are using through Help > About when you have Code opened.
-4. Install TypeScript 4.4.3 or higher with [`npm`](https://www.npmjs.com/) (or [`yarn`](https://yarnpkg.com/)), Node.js's package manager:
+4. Install TypeScript 4.6.2 or higher with [`npm`](https://www.npmjs.com/) (or [`yarn`](https://yarnpkg.com/)), Node.js's package manager:
 
     ```bash
     $ npm install -g typescript
@@ -52,7 +52,7 @@ To set up your development tools, follow these steps:
 
     ```bash
     $ tsc --version
-    Version 4.4.3 (or higher)
+    Version 4.6.2 (or higher)
     ```
 
     If the version number is much lower, it could be that you also have an outdated TypeScript SDK on your system, left over from a previous installation. You can either uninstall the old TypeScript SDK, or bypass it by removing the old TypeScript SDK from your system's PATH environment variable.

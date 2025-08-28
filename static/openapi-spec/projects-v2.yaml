@@ -50,6 +50,23 @@ paths:
         '500':
           $ref: '#/components/responses/Http500'
   '/projects/{project-id}':
+    get:
+      tags:
+        - Projects
+      summary: 'Get project details'
+      description: 'Returns full details of a single project.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:metadata:read`. Deactivated projects will only be returned for Mendix Administrators.'
+      operationId: get-project
+      parameters:
+        - $ref: '#/components/parameters/project-id'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProjectResponse'
+        '401':
+          $ref: '#/components/responses/Http401'
+        '404':
+          $ref: '#/components/responses/Http404'
+        '500':
+          $ref: '#/components/responses/Http500'
     delete:
       tags:
         - Projects
@@ -317,6 +334,12 @@ tags:
     description: 'Project roles'
 components:
   schemas:
+    UUID:
+      type: string
+      format: uuid
+      pattern: "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+      maxLength: 36
+      description: Unique identifier in the Mendix Platform.
     Account:
       type: object
       description: 'Account (or company) that owns the resource'
@@ -329,6 +352,20 @@ components:
           type: string
           description: 'Name of the account'
           maxLength: 100
+    User:
+      type: object
+      description: Details of a user.
+      properties:
+        userId:
+          $ref: "#/components/schemas/UUID"
+        fullName:
+          type: string
+          description: Full name of the member.
+        avatarUrl:
+          type: string
+          description: URL of the avatar image of the member.
+        account:
+          $ref: '#/components/schemas/Account'
     Page:
       type: object
       description: 'Contains information about the current page, and total elements to be retrieved'
@@ -553,7 +590,7 @@ components:
   securitySchemes:
     PersonalAccessToken:
       type: apiKey
-      description: "For more information about requesting and using a token see the [documentation](https://docs.mendix.com/community-tools/mendix-profile/user-settings/#pat).<br/>The header must be set to `MxToken <Your PAT>`."
+      description: "For more information about requesting and using a token see the [documentation](https://docs.mendix.com/mendix-profile/user-settings/#pat).<br/>The header must be set to `MxToken <Your PAT>`."
       name: Authorization
       in: header
   responses:
@@ -633,6 +670,139 @@ components:
                     createdBy:
                       userId: string
                       fullName: string
+    ProjectResponse:
+      description: Project details
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              projectId:
+                $ref: '#/components/schemas/UUID'
+              name:
+                type: string
+                description: Name of the project.
+                maxLength: 200
+              description:
+                type: string
+                description: Description of the project.
+              logo:
+                type: string
+                description: URL of the project image/logo.
+              createdOn:
+                type: string
+                description: Date and time in UTC when the project was created.
+              active:
+                type: boolean
+                description: Indicates whether a project is active or not. Inactive projects will only be returned to Mendix administrators.
+              createdBy:
+                type: object
+                description: Contains information about the person that created this project.
+                properties:
+                  userId:
+                    $ref: '#/components/schemas/UUID'
+                  fullName:
+                    type: string
+                    description: Full name of the member.
+                    maxLength: 200
+              versionStudioPro:
+                type: string
+                description: The Studio Pro version of the main branch of the project. Please note that this value could be empty or not up to date if the changes are not committed through Studio Pro.
+                minLength: 0
+                maxLength: 50
+              storyTool:
+                type: string
+                description: The tool or service used to manage the workload of the project. Could be empty if no tool has been chosen yet
+                enum:
+                - Epics
+                - Jira
+              storyBoardUrl:
+                type: string
+                description: Location of the story board used to manage the workload of the project
+              cloudProvider: 
+                type: string
+                description: Cloud deployment provider (Public Mendix, Private Mendix, SAP, on-prem, etc)
+                enum:
+                - Mendix
+                - SAP
+                - STACKIT
+                - Mendix_for_Private_Cloud
+              targetCloud: 
+                type: string
+                description: URL of the cloud portal the project is hosted on
+              members:
+                type: array
+                description: Array of members in the project. Inactive members will only be returned for Mendix Administrators
+                items:
+                  allOf:
+                    - $ref: '#/components/schemas/User'
+                    - type: object
+                      properties:
+                        isActive:
+                          type: boolean
+                          description: Indicator of whether the member is active.
+                        role:
+                          type: object
+                          description: Member role details
+                          properties:
+                            roleId:
+                              $ref: '#/components/schemas/UUID'
+                            roleName:
+                              type: string
+                              description: Role name
+                              maxLength: 200
+              technicalContact:
+                $ref: '#/components/schemas/User'
+              account: 
+                $ref: '#/components/schemas/Account'
+          examples:
+            Example 1:
+              value:
+                projectId: "123e4567-e89b-12d3-a456-426614174000"
+                name: "Example Project"
+                description: "An example project."
+                logo: "https://example.com/logo.png"
+                createdOn: "2025-01-28T15:05:58Z"
+                active: true
+                createdBy: 
+                  userId: "123e4567-e89b-12d3-a456-426614174000"
+                  fullName: "John Doe"
+                versionStudioPro: "9.24.32"
+                storyTool: "Epics"
+                storyBoardUrl: "https://epics.mendix.com/link/board/123e4567-e89b-12d3-a456-426614174000"
+                cloudProvider: "Mendix"
+                targetCloud: "https://cloud.example.com"
+                members:
+                  - userId: "123e4567-e89b-12d3-a456-426614174001"
+                    fullName: "John Doe"
+                    avatarUrl: "https://example.com/avatar1.png"
+                    account:
+                      accountId: "123e4567-e89b-12d3-a456-426614174000"
+                      accountName: "Example Account"
+                    isActive: true
+                    role:
+                      roleId: "123e4567-e89b-12d3-a456-426614174005"
+                      roleName: "Developer"
+                  - userId: "123e4567-e89b-12d3-a456-426614174002"
+                    fullName: "Jane Smith"
+                    avatarUrl: "https://example.com/avatar2.png"
+                    account:
+                      accountId: "UUID"
+                      accountName: "Example Account"
+                    isActive: false
+                    role:
+                      roleId: "123e4567-e89b-12d3-a456-426614174009"
+                      roleName: "Project Manager"
+                technicalContact:
+                  userId: "123e4567-e89b-12d3-a456-426614174003"
+                  fullName: "Technical Contact"
+                  avatarUrl: "https://example.com/avatar3.png"
+                  account:
+                    accountId: "123e4567-e89b-12d3-a456-426614174004"
+                    accountName: "Example Account"
+                account:
+                  accountId: "123e4567-e89b-12d3-a456-426614174004"
+                  accountName: "Example Account"
     ProjectMembersResponse:
       description: List of project members
       content:

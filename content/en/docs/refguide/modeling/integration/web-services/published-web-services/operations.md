@@ -13,7 +13,7 @@ An operation has the properties described below.
 
 ## General
 
-{{< figure src="/attachments/refguide/modeling/integration/published-web-services/operations/16843884.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/integration/web-services/operations/general.png" class="no-border" >}}
 
 ### Name
 
@@ -29,7 +29,7 @@ Describes the operation and is included in the WSDL.
 
 ## Parameters
 
-{{< figure src="/attachments/refguide/modeling/integration/published-web-services/operations/16843879.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/integration/web-services/operations/parameters.png" class="no-border" >}}
 
 ### Microflow Parameter
 
@@ -59,7 +59,7 @@ This is available when the parameter is a list, and can be used to name the obje
 The `CountCarsAndHp` operation takes a non-optional list of vehicles as a parameter, which is called *VehicleList* and consists of objects called *Vehicle*. This information is based on the microflow and entity model, but can be modified.
 {{% /alert %}}
 
-{{< figure src="/attachments/refguide/modeling/integration/published-web-services/operations/918221.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/integration/web-services/operations/microflow-example.png" class="no-border" >}}
 
 The microflow attached to the `CountCarsAndHp` operation. It takes a list of objects of the entity Vehicle as input and returns an object that holds the number of cars and the total amount of horsepower of those cars.
 
@@ -76,7 +76,7 @@ If you click **Select** in the **Parameter** tab, you can select individual memb
 | All nillable | Checks the Nillable box on every expanded node and visible leaf node. |
 | All non-nillable | Unchecks the Nillable box on every expanded node and visible leaf node. |
 
-{{< figure src="/attachments/refguide/modeling/integration/published-web-services/operations/16843878.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/integration/web-services/operations/attributes.png" class="no-border" >}}
 
 Here you can select which members of the entity can be passed and/or are optional or nillable, as well as set their names. Note that checking **Optional** or **Nillable** on the root element has no effect; set these values in the operation editor.
 
@@ -112,6 +112,6 @@ This determines if the element in the XML is sent as nil if the return value is 
 
 Optional and Nillable cannot both be checked.
 
-{{< figure src="/attachments/refguide/modeling/integration/published-web-services/operations/16843880.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/integration/web-services/operations/nillable.png" class="no-border" >}}
 
 Here, you can see an optional Order entity set as the return type of the operation ReturnsOrder.

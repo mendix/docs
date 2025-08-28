@@ -25,7 +25,7 @@ If you have an Azure organization, you can set Azure as your CI System in **Swit
 * [Azure blob settings](#blob)
 * [S3 bucket settings](#bucket)
 
-Finally, you must also [register your Kubernetes cluster](#register-cluster).
+Finally, you must also [register your Kubernetes cluster](/private-mendix-platform/reference-guide/admin/company/#cluster-manager).
 
 {{< figure src="/attachments/private-platform/pmp-cicd4.png" class="no-border" >}}
 
@@ -50,177 +50,17 @@ The settings in this section configure the S3 bucket.
 * **Access Key ID** - This ID value is used to access the S3 bucket.
 * **Secret Access Key** - This secret key value is used to access the S3 bucket.
 
-### Registering a Kubernetes Cluster {#register-cluster}
+### Building an App with the Azure DevOps Pipeline
 
-Before creating any environments, you must register your Kubernetes clusters by doing the following steps:
+To build an app with the Azure DevOps pipeline, perform the following steps:
 
-1. In **Switch to Admin Mode** > **Manage** > **Cluster Manager**, click **Register New Cluster**.
-2. Configure the following values:
-    
-    * **Cluster Name** - Specify a name for the cluster.
-    * **API Server** - Specify your Kubernetes API server.
-    * **Token** - You must first create a service account, cluster role, and cluster role binding in the cluster, and then get the service account's token. For reference, see the following shell script:
+1. In Admin mode, ensure that you have configured all required settings (Azure DevOps URL, Organization, PAT, Blob or S3 Storage), and then click **Save**.
+2. Switch to User mode
+3. Select the app where you want to create a package with the Azure DevOps build utility.
 
-        ```text
-        # create ServiceAccount, ClusterRole, and ClusterRoleBinding
-        kubectl apply -f << EOF -
-        apiVersion: v1
-        kind: ServiceAccount
-        metadata:
-          name: mxplatform-cicd
-          namespace: kube-system
-        ---
-        apiVersion: v1
-        kind: Secret
-        metadata:
-          name: mxplatform-cicd
-          namespace: kube-system
-          annotations:
-            kubernetes.io/service-account.name: mxplatform-cicd
-        type: kubernetes.io/service-account-token
-        ---
-        apiVersion: rbac.authorization.k8s.io/v1
-        kind: ClusterRole
-        metadata:
-          name: mxplatform-cicd
-        rules:
-        - apiGroups:
-          - ""
-          resources:
-          - namespaces
-          verbs:
-          - list
-        - apiGroups:
-          - privatecloud.mendix.com
-          resources:
-          - storageplans
-          verbs:
-          - list
-        - apiGroups:
-          - privatecloud.mendix.com
-          resources:
-          - mendixapps
-          verbs:
-          - '*'
-        ---
-        apiVersion: rbac.authorization.k8s.io/v1
-        kind: ClusterRoleBinding
-        metadata:
-          name: mxplatform-cicd
-        subjects:
-        - kind: ServiceAccount
-          name: mxplatform-cicd
-          namespace: kube-system
-        roleRef:
-          kind: ClusterRole
-          name: mxplatform-cicd
-          apiGroup: rbac.authorization.k8s.io
-        EOF
+#### Troubleshooting the App Package Build
 
-        # get service account token:
-        kubectl get secret mxplatform-cicd -nkube-system -o jsonpath='{.data.token}'|base64 -d
-        # for openshift cluster
-        kubectl get secret mxplatform-cicd -nkube-system -o jsonpath='{.metadata.annotations.openshift\.io/token-secret\.value}'
-        ```
-
-3. Optionally, enable the **Help Me** feature. For reference, see the following shell script:
-
-    ```text
-    # create ServiceAccount, ClusterRole, and ClusterRoleBinding
-    kubectl apply -f << EOF -
-    apiVersion: v1
-    kind: ServiceAccount
-    metadata:
-      name: mxplatform-cicd
-      namespace: kube-system
-    ---
-    apiVersion: v1
-    kind: Secret
-    metadata:
-      name: mxplatform-cicd
-      namespace: kube-system
-      annotations:
-        kubernetes.io/service-account.name: mxplatform-cicd
-    type: kubernetes.io/service-account-token
-    ---
-    apiVersion: rbac.authorization.k8s.io/v1
-    kind: ClusterRole
-    metadata:
-        name: mxplatform-cicd
-    rules:
-    - apiGroups:
-        - ""
-        resources:
-        - namespaces
-        verbs:
-        - list
-    - apiGroups:
-        - ""
-        resources:
-        - deployments
-        verbs:
-        - get
-        - list
-        - watch
-    - apiGroups:
-        - ""
-        resources:
-        - pods
-        verbs:
-        - get
-        - list
-    - apiGroups:
-        - ""
-        resources:
-        - pods/log
-        verbs:
-        - get
-    - apiGroups:
-        - ""
-        resources:
-        - events
-        verbs:
-        - get
-        - list
-    - apiGroups:
-        - privatecloud.mendix.com
-        resources:
-        - storageplans
-        verbs:
-        - list
-    - apiGroups:
-        - privatecloud.mendix.com
-        resources:
-        - mendixapps
-        verbs:
-        - '*'
-    ---
-    apiVersion: rbac.authorization.k8s.io/v1
-    kind: ClusterRoleBinding
-    metadata:
-        name: mxplatform-cicd
-    subjects:
-    - kind: ServiceAccount
-        name: mxplatform-cicd
-        namespace: kube-system
-    roleRef:
-        kind: ClusterRole
-        name: mxplatform-cicd
-        apiGroup: rbac.authorization.k8s.io
-    EOF
-
-    # get service account token:
-    kubectl get secret mxplatform-cicd -nkube-system -o jsonpath='{.data.token}'|base64 -d
-    # for openshift cluster
-    kubectl get secret mxplatform-cicd -nkube-system -o jsonpath='{.metadata.annotations.openshift\.io/token-secret\.value}'
-    ```
-
-4. Click **Save**.
-5. Click the newly created cluster and expand it, and then click **Retrieve Namespace(s)** to retrieve all the namespace and storage plans, or **Manually Register Namespace**. 
-    
-    Namespaces without any storage plan are skipped. This step requires the Mendix Operator to be installed and configured. You can repeat this step as required to retrieve additional namespaces.
-
-6. After the cluster is registered, create environments with the cluster, namespace and plans.
+If the app package build fails, you can view the error message on the Pipeline Build page of [Azure DevOps](https://dev.azure.com). If the error message is *No hosted parallelism has been purchased or granted*, you must buy or request a free parallelism grant from the Microsoft Azure DevOps service. After the request is granted, re-run your build.
 
 ## Architecture of the CI/CD Pipeline
 

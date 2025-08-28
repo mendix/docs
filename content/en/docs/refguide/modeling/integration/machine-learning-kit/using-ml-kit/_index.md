@@ -233,7 +233,7 @@ To learn more about design patterns that can be applied to the Inference process
 
 ### Model Building
 
-ML Kit comes with native support for the [ONNX Runtime](https://onnxruntime.ai/about.html) which means Mendix developers can use the native ONNX operators. However, Mendix developers are free to use their preferred machine learning framework or library such as Tensorflow, PyTorch, scikit-learn, and XGBoost to build their ML models, pre-processing, and post-processing actions.
+ML Kit comes with native support for the [ONNX Runtime](https://onnxruntime.ai/) which means Mendix developers can use the native ONNX operators. However, Mendix developers are free to use their preferred machine learning framework or library such as Tensorflow, PyTorch, scikit-learn, and XGBoost to build their ML models, pre-processing, and post-processing actions.
 
 Artifacts (including HDF5, protocol buffers, and pickle) should be converted to ONNX computation graphs in order to integrate them into Mendix. 
 
@@ -247,19 +247,22 @@ Use [ONNX versioning schemes](https://github.com/onnx/onnx/blob/main/docs/Versio
 
 In case of version conflicts in models (or pre- / post-processors), try the [version converter tool](https://github.com/onnx/onnx/blob/main/docs/VersionConverter.md) to align with the suggested IR and OpSets.
 
-The released versions of the *ML Kit* and supported ONNX Runtime versions can be found below.
+#### Supported ONNX Versions per Studio Pro Version
 
-| Mendix Studio Pro | ML Kit   | ONNX Runtime |
-| ----------------- | -------- | ------------ |
-| 9.23              | Public beta | 1.11.0       |
+The table below presents the compatibility list for your models per Studio Pro version. Each model you create should be compatible with the version you use. Otherwise, you will not be able to import it.
+
+| Studio Pro Version | ONNX Runtime Version |
+| --- | --- |
+| 11.0 | 1.17.3 |
+| 11.1 | 1.22.0 |
+
+ For more information on the required IR/ML opset versions, see [ONNX Runtime Compatibility](https://onnxruntime.ai/docs/reference/compatibility.html).
 
 ## Monitoring and Troubleshooting
 
 Machine learning models might be placed in the core of a Mendix application that makes automated decisions, and data quality is a crucial part of a machine learning system. Because of this, Mendix developers need to implement and configure monitoring tools that track not only service health but also the input and output of the *ML Kit* actions.
 
 In the section below, there are tips for Mendix developers to get insights about inference calls in the development and production phases. You might need to observe the inputs/outputs of a model that is used in an *ML Kit* activity, assess the performance (latency) of making a prediction, or debug an individual pre/post-processing unit on a test sample to verify that the Microflow works and to catch potential bugs in development time before rolling out the application to the production environments.
-
-See the [Monitoring and Troubleshooting](/howto/monitoring-troubleshooting/) guide for general monitoring and troubleshooting tips in Studio Pro.
 
 ### Troubleshooting
 
@@ -377,17 +380,6 @@ Mendix recommends turning the logs to trace level, as the ML Engine provides a g
 ### My Model Runs Locally but Not in Production
     
 The model you can run is limited to the maximum memory and storage space available in your environment.
-
-### Supported Onnx Versions per Studio Pro Version
-
-The table below presents the compatibility list for your models per Studio Pro version. Each model you create should be compatible with the version you use. Otherwise, you will not be able to import it.
-
-| Studio Pro Version | ONNX Version |
-| --- | --- |
-| LTS | 1.14.0 |
-| Latest | 1.17.3 |
-
- For more information on the required IR/ML opset versions, see [ONNX Runtime Compatibility](https://onnxruntime.ai/docs/reference/compatibility.html).
 
 ## Read More {#readmore}
 

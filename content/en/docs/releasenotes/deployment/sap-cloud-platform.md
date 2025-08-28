@@ -14,6 +14,46 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2025
 
+### July 17, 2025
+
+#### New Features
+
+* We added new actions to the [SAP OData Connector](https://marketplace.mendix.com/link/component/74525) to support [Batch Processing](/appstore/modules/sap/sap-odata-connector/#batch-processing).
+* We updated the [SAP Logging Connector](https://marketplace.mendix.com/link/component/110219) to support the **SAP Cloud Logging** service.
+
+### June 29, 2025
+
+#### New Features
+
+* We added a service configurator for the **SAP Cloud Logging** service.
+
+#### Bug Fixes
+
+* Fixed an issue where changes to the app health check **Timeout** value were not taking effect.
+
+### June 1, 2025
+
+#### New Features
+
+* We added a deprecation message banner for the SAP Application Logging service on the **Environment** details page.
+
+#### Bug Fixes
+
+* We fixed an issue where users were not able to delete redirect URIs from the XSUAA configuration.
+
+### May 25, 2025
+
+#### New Features
+
+* We introduced a new feature that allows users to select their preferred **Logging** service from the portal. For more information, see [Creating a New Environment](/developerportal/deploy/sap-cloud-platform/#NewEnvironment).
+
+### April 18, 2025
+
+#### Portal Improvements
+
+* We updated the portal configuration for the XSUAA service to include a default wildcard (`*`) in the redirect URL. This enables flexible pattern matching to support dynamic endpoints, as per SAP [mandates](https://help.sap.com/whats-new/cf0cb2cb149647329b5d02aa96303f56?locale=en-US&Component=Authorization+and+Trust+Management+Service).
+* We removed the `xsenablesyncservice` property from the XSUAA service configuration, as per SAP mandates.
+
 ### February 16, 2025
 
 #### Portal Improvements

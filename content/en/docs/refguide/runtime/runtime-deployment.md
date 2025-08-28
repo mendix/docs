@@ -35,9 +35,9 @@ This is the app model as created by Studio Pro. It cannot be directly interprete
 
 This converts an app in the *.mpk* format to the mda format which can be interpreted by the Mendix Runtime.
 
-### Cloud Foundry
+### Container Platform
 
-This is the command line interpreter which allows Cloud Foundry environments to be created, and code to be pushed into the environments to be executed.
+This is the command line interpreter which allows Kubernetes or Cloud Foundry environments to be created, and code to be pushed into the environments to be executed.
 
 ### Buildpack
 
@@ -58,7 +58,7 @@ This data repository stores components of the deployment process such as version
 
 ### Java RE
 
-This is the Java Runtime Environment (JRE) used to run the Runtime Server. The version of the JRE depends on the version of the Runtime Server. For example, Mendix 10 runs on JRE version 11.
+This is the Java Runtime Environment (JRE) used to run the Runtime Server. The version of the JRE depends on the version of the Runtime Server. For example, Mendix 11 runs on JRE version 21.
 
 ### M2ee
 

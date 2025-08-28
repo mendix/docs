@@ -1,8 +1,8 @@
 ---
-title: "Register Resources (On-Prem or Private Cloud)"
-description: "Describes how to use Catalog and external entities for local deployments, or for private cloud or on-premises solutions."
+title: "Register Resources (On-Prem or Mendix on Kubernetes )"
+description: "Describes how to use Catalog and external entities for local deployments, or  or on-premises solutions."
 url: /catalog/register/data-sources-without-mendix-cloud/
-linktitle: "Private Cloud/On-Premises Registration"
+linktitle: "Mendix on Kubernetes /On-Premises Registration"
 weight: 40
 aliases:
     - /data-hub/data-hub-without-mendix-cloud/
@@ -11,14 +11,14 @@ aliases:
 ---
 ## Introduction
 
-This guide explains how to use [published OData services](/refguide/published-odata-services/) and [external entities](/refguide/external-entities/) with or without the [Catalog](/catalog/) when deploying locally, to a Private Cloud or an On-Premises solution.
+This guide explains how to use [published OData services](/refguide/published-odata-services/) and [external entities](/refguide/external-entities/) with or without the [Catalog](/catalog/) when deploying locally, to a Mendix on Kubernetes or an On-Premises solution.
 
 ## Use Cases
 
 This document covers the following use cases:
 
-* You are developing both the service and the client on a local machine, without deploying to a cloud environment (deploying locally)
-* You are deploying to a [Private Cloud](/developerportal/deploy/private-cloud/) or [On-Premises](/developerportal/deploy/on-premises-design/), rather than Mendix Cloud
+* You are developing both the service and the client on a local machine, without deploying to a cloud environment (deploying locally).
+* You are deploying to [Kubernetes](/developerportal/deploy/private-cloud/) or [On-Premises](/developerportal/deploy/on-premises-design/), rather than Mendix Cloud.
 
 In these cases, you can still publish and consume external entities. This guide will explain how to work with the Catalog and external entities by taking a step back and distinguishing between design time (when you are modeling your app) and runtime (after it has been deployed to a development server).
 
@@ -26,7 +26,7 @@ In these cases, you can still publish and consume external entities. This guide 
 
 During design time, when you are [modeling](/refguide/modeling/) your app, you are finding, registering, or importing service [metadata](#metadata) into Studio Pro. This metadata is in the form of contracts, and is registered automatically in the Catalog if your application is hosted on Mendix Cloud. See the [Metadata Contracts](#metadata) section below for more details.
 
-If you will be deploying locally, to a Private Cloud, or On-Premises, you can add an app, the environments on which it is deployed, and the [published OData entity](/refguide/published-odata-entity/) it provides using the metadata contract. For general resources on using data when modeling your app during design time, check out [Share Data Between Apps](/data-hub/share-data/) and [Write Data to Another App](/catalog/write-data/).
+If you will be deploying locally, to Mendix on Kubernetes , or On-Premises, you can add an app, the environments on which it is deployed, and the [published OData entity](/refguide/published-odata-entity/) it provides using the metadata contract. For general resources on using data when modeling your app during design time, check out [Share Data Between Apps](/data-hub/share-data/) and [Write Data to Another App](/catalog/write-data/).
 
 ### Metadata Contracts {#metadata}
 
@@ -40,7 +40,7 @@ We support ZIP (for multiple file contracts) or XML (for single file contracts).
 
 ### Manually Registering Contracts to the Catalog with Team Server {#manual-team-server}
 
-If you deploy to a Private Cloud or On-Premises setup, and use the [Mendix Team Server](/refguide/version-control/#team-server), you can manually register applications, environments, services, or services to the Catalog. Registering the service contracts to the Catalog ensures that it can be found and imported into an application by members of the company that owns it. 
+If you deploy to a Mendix on Kubernetes  or On-Premises setup, and use the [Mendix Team Server](/refguide/version-control/#team-server), you can manually register applications, environments, services, or services to the Catalog. Registering the service contracts to the Catalog ensures that it can be found and imported into an application by members of the company that owns it. 
 
 To manually register an OData contract metadata file to the Catalog, follow these basic steps:
 
@@ -106,7 +106,7 @@ See the [Update or Switch](/refguide/consumed-odata-service/#update-switch) sect
 
 ## Using Data in Runtime {#dh-runtime}
 
-During runtime, after you have deployed your app to a development server, the exchange of external entities via OData services occurs between publishing and consuming apps. Anyone who deploys to a Private Cloud or On-Premises can consume the OData resources that are set up when [using data in design time](#dh-design-time). The Catalog is not involved during runtime.
+During runtime, after you have deployed your app to a development server, the exchange of external entities via OData services occurs between publishing and consuming apps. Anyone who deploys to a Mendix on Kubernetes  or On-Premises set-up can consume the OData resources that are set up when [using data in design time](#dh-design-time). The Catalog is not involved during runtime.
 
 {{% alert color="info" %}}
 Publishing and consuming services need to have network access to each other, but do not necessarily need to be on cloud or network. {{% /alert %}}

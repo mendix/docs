@@ -40,7 +40,7 @@ To set up your local app, do the following:
 1. When Mendix Native Mobile Builder launches you will see the home screen:
 
     {{< figure src="/attachments/howto9/mobile/native-mobile/distribution/build-native-apps/deploying-native-app/home-screen.png" alt="Mendix Native Mobile Builder Home Screen"   width="350"  class="no-border" >}}
-1. Select **Build app for distribution**.
+1. Select **Build app for local development**.
 1. Fill in your app's name and the app identifier. The wizard provides defaults, but you might want to align the app identifier to use your company's reversed URL, or change the app name in some other way:
 
     {{< figure src="/attachments/howto9/mobile/native-mobile/distribution/build-native-apps/deploying-native-app/wizard-app-details.png" alt="Wizard App Details"   width="350"  class="no-border" >}}
@@ -49,7 +49,7 @@ To set up your local app, do the following:
 1. In the **Build type** make sure the **Local** option is selected. 
     {{< figure src="/attachments/howto9/mobile/native-mobile/distribution/build-native-apps/native-build-locally/wizard-buildtype-local.png" alt="Build type"   width="350"  class="no-border" >}}
 1. Select the folder for your app's Native Template. Valid choices are an empty directory or a directory with an existing Native Template.
-1. Disable any service you do not wish to use. App Center requires GitHub as a service to work.
+1. Disable GitHub service if do not wish to use.
 1. Click **Next Step** until you reach the end of the wizard. Feel free to configure any step as needed.  
 1. Select **Build type** from the side bar. 
 

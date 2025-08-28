@@ -11,9 +11,15 @@ aliases:
 
 This document provides a comprehensive guide for installing Private Mendix Platform, along with its optional components, in your own Kubernetes environment.
 
+The installer is integrated with the AWS Secrets Manager. If required, you can store some configuration in the the AWS Secrets Manager without setting up a storage plan, database plan, PCLM admin and Mendix admin info in the Private Mendix Platform installer.
+ 
+{{% alert color="info" %}}
+Using a secret storage incorrectly may reduce the security of your app. Consult your secrets store provider to ensure that it is set up securely for your production environment.  
+{{% /alert %}}
+
 ### Prerequisites {#prerequisites}
 
-Private Mendix Platform depends on Mendix for Private Cloud for the installation and deployment of Mendix apps.
+Private Mendix Platform depends on Mendix on Kubernetes for the installation and deployment of Mendix apps.
 
 Before starting the installation process, make sure that you have all the necessary prerequisites:
 
@@ -24,7 +30,7 @@ Before starting the installation process, make sure that you have all the necess
 * A domain.
 * For the PCLM component:
 
-    * Mendix Operator in version 2.11.0 or above
+    * Mendix Operator in version 2.21.0 or above
     * A dedicated Postgres or SQLServer database server with public accessibility set to **Yes**.
 
 * Optionally, if your Private Mendix Platform app requires its own certificate: a TLS certificate with HTTPS support.
@@ -40,7 +46,9 @@ Before starting the installation process, make sure that you have all the necess
     * An existing PostgreSQL database instance.
     * An optional Redis server version 6.2.0 or higher, for the task queue and cache. Using Redis is recommended for high availability, where you expect a high volume of webhook calls, or if you have multiple Svix servers. As a best practice, enable persistence in Redis so that tasks are persisted across Redis server restarts and upgrades.
 
-## Installing and Configuring the Mendix Operator
+* If you plan to use the AWS Secret Manager, install an AWS provider at your cluster, as described in [Kubernetes Secrets Store CSI Driver](https://secrets-store-csi-driver.sigs.k8s.io/).
+
+## Installing and Configuring the Mendix Operator {#install-operator}
 
 To install and configure the Mendix Operator, perform the following steps:
 
@@ -100,11 +108,14 @@ To install and configure the Mendix Operator, perform the following steps:
 
 4. Perform the base installation by doing the following steps:
 
-    1. Run the following command, where `-n` indicates the namespace: `./installer operator configure -n=<namespace name>`
-    2. Click **Base Installation**, and then set the following settings:
+    1. Run one of the following commands, where `-n` indicates the namespace: 
+    
+        * `./mxpc-cli installer -n=<namespace name>` - To install the Operator in [Standard](/developerportal/deploy/standard-operator/) mode
+        * `./mxpc-cli installer --global -n=<namespace name>` - To install the Operator in [Global](/developerportal/deploy/global-operator/) mode; you must use a Global namespace for this installation type.
 
-        * **Cluster Mode** – Select **standalone**.
-        * **Cluster Type** – Select **openshift** or **generic**.
+            In order to install and configure a cluster with a Global installation of the Operator and the Agent, you must use Operator version 2.21.2 or above. 
+    
+    2. Click **Base Installation**, and then select the cluster type.
 
         {{< figure src="/attachments/private-platform/pmp-install1.png" class="no-border" >}}
 
@@ -113,25 +124,65 @@ To install and configure the Mendix Operator, perform the following steps:
 5. Configure the namespace by doing the following steps:
 
     1. Click **Configure Namespace**.
-    2. Click **Database Plan** and fill out the required information.
+    2. Optional: If you want to run the Operator in Global mode, click **Global Operator**.
+
+        You must use a different namespace here than the Global namespace that you selected in step 4 above. Ensure that you do not use a namespace that is intended to be a managed namespace, that is, a namespace where you plan to deploy a Mendix app. The Global Operator namespace must be separate from managed namespaces, otherwise you may encounter unexpected results.
+
+    3. Optional: If you are not using the AWS Secret Manager, click **Database Plan** and fill out the required information.
         
         {{< figure src="/attachments/private-platform/pmp-install2.png" class="no-border" >}}
 
-    3. Click **Storage Plan** and fill out the required information.
-    4. Click **Ingress** and fill out the required information.
+    4. Optional: If you are not using the AWS Secret Manager, click **Storage Plan** and fill out the required information.
+    5. Click **Ingress** and fill out the required information.
         
         {{< figure src="/attachments/private-platform/pmp-install3.png" class="no-border" >}}
     
-    5. Click **Registry** and fill out the required information.
-    6. Click **Review and Apply** > **Evaluate Configuration**.
-    7. Make any required changes or click **Apply Configuration**.
+    6. Click **Registry** and fill out the required information.
+    7. Click **Review and Apply** > **Evaluate Configuration**.
+    8. Make any required changes or click **Apply Configuration**.
         
         {{< figure src="/attachments/private-platform/pmp-install4.png" class="no-border" >}}
     
-    8. Click **Exit Installer** > **OK**.
+    9. Click **Exit Installer** > **OK**.
     
         {{< figure src="/attachments/private-platform/pmp-install5.png" class="no-border" >}}
-    
+
+## Optional: Configuring the AWS Secret Manager
+
+To use the secret provider option for your database plan or storage plan, configure the following keys in your AWS Secret Manager:
+
+### Database Plan Keys
+
+| Data Type | Key | Example Value |
+| --- | --- | --- |
+| Database type (for example, PostgreSQL) | **database-type** | `PostgreSQL` |
+| Database Jdbc Url    | **database-jdbc-url**    | `jdbc:postgresql://pg.example.com:5432/my-app-1?sslmode=prefer` |
+| Database host | **database-host**    | `pg.example.com:5432` |
+| Database name    | **database-name** | `my-app-1` |
+| Database user name | **database-username** | `my-app-user-1` |
+| Database password | **database-password**    |  |
+
+### Storage Plan Keys
+
+| Data Type | Key | Example Value |
+| --- | --- | --- |
+| Storage service name | **storage-service-name** | `com.mendix.storage.s3` |
+| S3 Storage endpoint | **storage-endpoint** | `https://my-app-bucket.s3.eu-west-1.amazonaws.com` |
+| S3 Storage access key id | **storage-access-key-id** | `AKIA################` |
+| S3 Storage secret access key | **storage-secret-access-key** | `A###################################` |
+| S3 subdirectory (or bucket name for S3-like storage systems) | **storage-bucket-name** | `subdirectory` |
+
+{{% alert color="info" %}}
+Currently, only AWS S3 or S3-compatible providers are supported.  
+{{% /alert %}}
+
+### Administrator Passwords
+
+| Data Type | Key |
+| --- | --- |
+| PCLM admin password | **pclm-admin-password** |
+| Private Mendix Platform admin password | **mx-admin-password** |
+
 ### Installing Private Cloud License Manager {#install-pclm}
 
 Private Cloud License Manager is a required component of Private Mendix Platform. Before you install the Platform, install PCLM by doing the following steps:
@@ -158,6 +209,8 @@ Private Cloud License Manager is a required component of Private Mendix Platform
     * **Admin Password** – A new PCLM admin password. When the PCLM server is set up, it contains an *administrator* user with a default password. This password should be modified immediately.
     * **PCLM Operator User** – A new PCLM operator user.
     * **PCLM Operator Password** – A new PCLM operator password.
+    * **Global Operator Namespace** - If you are using Mendix Operator in Global mode, enter the Global namespace information. If not, leave this field blank. 
+    * **Customized cluster domain** - The default is `cluster.local`. Change the value if you are using a different internal cluster domain.
 
 4. Click **Install PCLM**.
 
@@ -165,7 +218,17 @@ Private Cloud License Manager is a required component of Private Mendix Platform
 
 Svix is required if you want to use webhooks. Install the Svix component by doing the following steps:
 
-1. Optional: If you are using a self-signed TLS certificate, build and deploy a private Svix server with custom self-signed TLS certification by performing the following steps:
+1. Optional: If you want to use AWS Secret Manager, configure it by performing the following steps:
+
+    1. Configure the secret in AWS Secret Manager by providing the following information:
+
+        * **POSTGRES DSN** - The key is `svix-db-dsn`; an example value may be similar to `postgresql://postgres:postgres@pgbouncer/postgres`.
+        * **Redis DSN** - This value is only required if you also use Redis for Svix. The key is `svix-redis-dsn`; an example value may be similar to `redis://redis:6379`.
+    
+    2. Configure an IAM role with the **secretsmanager:GetSecretValue** and **secretsmanager:DescribeSecret** permissions and allow it to assume the Service Account which the Svix pod will use to retrieve the secret info.
+
+2. Optional: If you are using a self-signed TLS certificate, build and deploy a private Svix server with custom self-signed TLS certification by performing the following steps:
+
     1. Prepare the following Docker file to build a private Svix server image:
 
         ```text
@@ -197,17 +260,21 @@ Svix is required if you want to use webhooks. Install the Svix component by doin
         docker push {customer-private-image-registry-url}/svix/svix-server:v1.25.tls
         ```
     
-2. Run the command `./installer component -n=<namespace name>`, where `-n` indicates a namespace. The namespace must be the same as the namespace that you plan to use for Private Mendix Platform.
-3. Select **Svix**, and then specify the following parameters:
+3. Run the command `./installer component -n=<namespace name>`, where `-n` indicates a namespace. The namespace must be the same as the namespace that you plan to use for Private Mendix Platform.
+4. Select **Svix**, and then specify the following parameters:
 
-    * **POSTGRES_DSN** - A Postgres DSN, for example, `postgresql://postgres:postgres@pgbouncer/postgres`.
     * **Image** - The Svix image path. The default path is `svix/svix-server:v1.25.0`. If you are using a self-signed TLS certificate, set this path to `{customer-private-image-registry-url}/svix/svix-server:v1.25.tls`.
+    * **Use Secret Provider** - Optional. Select this option to use the AWS Secret Manager. Selecting this option enables the following additional fields:
+
+        * **Secret Provider** - Set to **AWS** by default.
+        * **AWS-Role-ARN** - An AWS role ARN which can access the specified Secret Manager.
+        * **AWS SecretManager Name** - The AWS Secret Manager name where the sensitive data is stored.
+
+    * **POSTGRES_DSN** - Available only if you do not use the AWS Secret Manager. A Postgres DSN, for example, `postgresql://postgres:postgres@pgbouncer/postgres`.
     * **Use Redis** - Optional. Select this check box if you want to use Redis for message cache and queues.
-    * **REDIS_DSN** - The Redis DSN, for example, `redis://redis:6379`. This field is only available if you select the **Use Redis** check box.
+    * **REDIS_DSN** - Available only if you do not use the AWS Secret Manager. The Redis DSN, for example, `redis://redis:6379`. This field is only available if you select the **Use Redis** check box.
 
-4. Click **Install Svix** or **Upgrade Svix**.
-
-{{< figure src="/attachments/private-platform/pmp-installer-update-svix.png" class="no-border" >}}
+5. Click **Install Svix** or **Upgrade Svix**.
 
 {{% alert color="info" %}}
 The installer does not catch your pod's running status. In case of issues, verify that the pod is running correctly.
@@ -225,7 +292,8 @@ Install the Private Mendix Platform by doing the following steps:
 3. Click **Configure**, and then specify the following parameters:
 
     * **AppName** - The default app name is `mxplatform`. You can change it as required.
-    * **DatabasePlan/Storageplan** - The name of the plan that you created previously.
+    * **DatabasePlan** - If you want to use AWS Secret Manager, select **USE-Secret-Provider**; the installer then uses the database configuration set in AWS Secret Manager. Otherwise, enter the name of the database plan that you created in [Installing and Configuring the Mendix Operator](#install-operator).
+    * **Storageplan** - If you want to use AWS Secret Manager, select **USE-Secret-Provider**; the installer then uses the storage configuration set in AWS Secret Manager. Otherwise, enter the name of the storage plan that you created in [Installing and Configuring the Mendix Operator](#install-operator).
     * **AppUrl** - The endpoint where you can connect to your running app. It must be a URL which is supported by your platform. If you leave it blank, Mendix Operator will create it.
     * **EnableTLS** - Allows you to enable or disable TLS for the Mendix app's Ingress or OpenShift Router. The default value is use the default settings.
     * **TLS option** - Allows you to use an existing `kubernetes.io/tls` secret containing the TLS certificate, or to provide the `tls.crt` and `tls.key` values directly.
@@ -238,11 +306,13 @@ Install the Private Mendix Platform by doing the following steps:
 
 4. Click **Runtime**, and then specify the following parameters:
 
-    * **MxAdminPassword** - The password for the admin user. It must have at least one number, one upper case letter, one lower case letter and one symbol, with a minimum length of 12 characters.
+    * **MxAdminPassword** - Optional. The password for the admin user, required if you are not planning to use the AWS Secret Manager. It must have at least one number, one upper case letter, one lower case letter and one symbol, with a minimum length of 12 characters.
     * **dtapmode** - For production deployments, leave this value set to **P**. For the development of the app, for example acceptance testing, set the value to **D**.
     * **ApplicationRootUrl** - Optional. Manually specify the URL of your Private Mendix Platform, for example, for use with SSO or when sending emails. For more information about this functionality, see [ApplicationRootUrl Needs to be Set Manually](/developerportal/deploy/private-cloud-operator/#applicationrooturl-needs-to-be-set-manually).
-
-    {{< figure src="/attachments/private-platform/pmp-install8.png" class="no-border" >}}
+    * **Use Secret Provider** - Optional. Select this option to use the AWS Secret Manager. Selecting this option enables the following additional fields:
+        * **Secret Provider** - Set to **AWS** by default.
+        * **AWS-Role-ARN** - An [AWS role ARN](https://docs.mendix.com/developerportal/deploy/secret-store-credentials/#aws-secrets-manager) which can access the specified Secret Manager.
+        * **AWS SecretManager Name** - The AWS Secret Manager name where the sensitive data is stored.
 
 5. In the **Enabled Functions** section, select or clear the functions that you want to enable or disable:
  

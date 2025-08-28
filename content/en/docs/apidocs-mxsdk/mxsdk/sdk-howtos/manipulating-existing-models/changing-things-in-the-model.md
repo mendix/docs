@@ -106,4 +106,4 @@ All the parts of a *deleted* element are also *deleted* and cannot be accessed. 
 
 ## Next Step
 
-Continue with [How to Close the Server Connection](/apidocs-mxsdk/mxsdk/closing-the-server-connection/).
+Continue with [How to Find Things in the Model](/apidocs-mxsdk/mxsdk/finding-things-in-the-model/).

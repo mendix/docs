@@ -45,9 +45,9 @@ For information about security practices for business-as-usual operations of you
 
 * [Secure Outgoing Connections from Your App](/developerportal/deploy/securing-outgoing-connections-from-your-application/ ) - An overview of the various scenarios for securing outgoing connections on the Mendix Cloud
 
-### On Mendix for Private Cloud
+### On Mendix on Kubernetes
 
-* [Mendix for Private Cloud: How Are My Apps and Data Secured in Mendix for Private Cloud?](https://www.mendix.com/evaluation-guide/deployment/private-cloud/mendix-private-cloud/) - An overview of the Mendix for Private Cloud offering and the security it offers 
+* [Mendix on Kubernetes: How Are My Apps and Data Secured in Mendix on Kubernetes?](https://www.mendix.com/evaluation-guide/deployment/private-cloud/mendix-private-cloud/) - An overview of the Mendix on Kubernetes offering and the security it offers 
 
 ### On Premises
 

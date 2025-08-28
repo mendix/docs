@@ -1,6 +1,6 @@
 ---
-title: "Mendix 10 Feature Release Calendar"
-linktitle: "Mx10 Feature Release Calendar"
+title: "Mendix 11 Feature Release Calendar"
+linktitle: "Mx11 Feature Release Calendar"
 url: /releasenotes/feature-release-calendar/
 weight: 45
 #layout: wide
@@ -8,79 +8,77 @@ weight: 45
 
 ## Introduction
 
-At the Mendix 10 launch event on June 27, 2023, there were a number of announcements for features that Mendix is releasing. This document contains the calendar of expected release dates for these features.
-
-The new features were divided into these major themes, which are described in the sections below:
-
-{{< figure src="/attachments/releasenotes/calendar/themes.png" alt="Themes are continuous collaboration, developer experience, composability, multi-cloud deployment, and governance and control." class="no-border" >}}
+With the release of Mendix 11, you can look forward to more new and exciting features in upcoming versions of Mendix 11. This document contains the calendar of expected release dates for these features.
+The new features were divided into major themes, which are described in the sections below.
 
 {{% alert color="info" %}}
-"GA" means general availability for all users. A GA release is different than a beta or experimental release. For more information, see [Beta and Experimental Releases](/releasenotes/beta-features/).
+General Availability means that a feature is available for all users. This type of release is different from a beta or experimental release. For more information, see [Release Status](/releasenotes/release-status/).
 {{% /alert %}}
 
-## Continuous Collaboration {#continuous}
+## Enterprise Low-Code
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Portfolio Management | Released for GA [Jun 22, 2023](/releasenotes/developer-portal/#june-22-2023) |
-| App Insights | Released for GA [Aug 12, 2023](/releasenotes/developer-portal/#august-12-2023) |
-| Jira integration | Released for GA [May 1, 2023](/releasenotes/developer-portal/#may-1-2024) |
-| Community spaces | Released for GA [March 30, 2023](/releasenotes/community-tools/#spaces-ga-release) |
+| Module updates while retaining customizations                | General Availability: Q4 2025                             |
+| Easy comparison of revisions                                   | Public beta: 2026                                            |
+| Pull requests                                                | Public beta: 2026                                            |
+| Mendix on Azure                                              | Limited Availability: March 2025 <br/>General Availability: Summer 2025 |
+| Security Recommendations                                     | General Availability: 2026                                   |
+| OpenTelemetry Tracing                                        | General Availability: 2026                                   |
+| Progressive Web Apps Store Publishing                        | Public beta: 2026                                            |
+| Maia Explain for Logic                                       | General Availability: March 2025                             |
+| Start with Maia                                              | General Availability: Mx 11.0                                |
+| Menditect UI testing                                         | Public beta: Q2 2025<br/>General Availability H2 2025        |
+| Modernized Mendix unit testing                               | General Availability: April 2025                             |
+| Speed up role-based access                                   | General Availability: February 2025                          |
+| Software Composition                                         | General Availability: March 2025                             |
+| Software Composition Marketplace Outdated & Deprecated Findings | General Availability: September 2025                         |
+| Software Composition Marketplace Vulnerabilities             | General Availability: December 2025                          |
+| Policies                                                     | Public beta: December 2025 <br/>General Availability: TBD    |
+| Cloud Tokens Dashboard                                      | General Availability: June 2025                              |
+| End Users Dashboard | Limited Availability: October 2025 |
+| Self-Service Provisioning & Deprovisioning of environments | General Availability: June 2025 |
+| Self-Service Resizing of environments | Limited Availability: July 2025 |
+| Bulk DML                                                     | General Availability: Q4 2025                             |
+| Increased decimal precision                                  | General Availability: Q4 2025                             |
+| Maia: text to OQL                                            | Public beta: Q2 2025<br/>General Availability: Q4 2025    |
+| Maia: generate test data                                     | Private beta: 2026                                           |
+| Consumed OpenAPI and API discovery                           | Public beta: Q2 2025<br/>General Availability: Q4 2025 |
+| Improved OpenAPI generation for REST publish                 | General Availability: June 2025                         |
+| Visual query editor for view entities                        | Proof of Concept: June 2025 <br/>General Availability: Q4 2025          |
+| Event broker HTTP Bridge                                     | Public beta: June 2025 <br/>General Availability: Q4 2025   |
+| Compass Maturity Assessment                                  | General Availability: July 28, 2025                      |
+| IdP-managed Admins                                           | Limited Availability: July 11, 2025                      |
+| Usage of keypairs for OIDC-based SSO to Mendix apps (OIDC SSO) | General Availability: May 15, 2025                      |
+| Easy (automated) rotation of keypairs for SSO security (OIDC SSO) | General Availability: May 15, 2025                   |
+| OIDC Provider goes from Limited Availability to General Availability | General Availability: ETA July 15, 2025           |
 
-## Developer Experience {#dev-exp}
-
-| Capability or Feature | Expected Release |
-| --- | --- |
-| Validation Assist | Released for GA [Sep 30, 2022](/releasenotes/studio-pro/9.18/#9180) |
-| Start from spreadsheet | Released for GA [Mar 28, 2023](/releasenotes/studio-pro/9.24/#9240) |
-| Studio Pro redesign | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| Improved Properties pane | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| Git version control (removal of SVN support) | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| Custom icons support | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| Flexible page URLs | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| Best Practice Recommender | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| Workflow enhancements (multi-user tasks,<br/>Wait for notification activity) | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| PDF Document Generation module | Released for GA [Aug 29, 2023](/appstore/modules/document-generation/) |
-| Managed Java dependencies | Released for GA [Sep 26, 2023](/releasenotes/studio-pro/10.3/#java-dependency-management) |
-| Insights into commits by peers| Released for GA [Sep 26, 2023](/releasenotes/studio-pro/10.3/#commit) |
-| Rich design properties | Released for GA [Dec 21, 2023](/releasenotes/studio-pro/10.6/) |
-| Visual data filters (visual builder) | Released for public beta [Nov 28, 2023](/releasenotes/studio-pro/10.5/)<br>GA: Q2 2024 |
-| Maia Chat | Released for GA [Jun 25, 2024](/releasenotes/studio-pro/10.12/) |
-| Mixed online and offline data | GA: Q4 2024 |
-| Mac support | Released for public beta [Jan 30, 2024](/releasenotes/studio-pro/10.7/) <br>GA: TBD |
-| Frictionless module updates while retaining customizations | GA: Q2 2025 |
-
-## Composability {#composability}
-
-| Capability or Feature | Expected Release |
-| --- | --- |
-| Mendix Connect – business events and Mendix Event Broker | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| Machine Learning Kit | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| Solutions Kit – protected modules | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| Solutions Kit – solution lifecycle management | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| Mendix Connect – new database connector | Released for GA [Dec 21, 2023](/releasenotes/studio-pro/10.6/) |
-| Mendix Connect – consumed REST service | Released for public beta [Dec 21, 2023](/releasenotes/studio-pro/10.6/)<br>GA: TBD |
-| Solutions Kit – adaptation insights | Currently in private beta<br>GA: TBD |
-| Studio Pro extensibility | Released for public beta [Jun 25, 2024](/releasenotes/studio-pro/extensibility-api/) <br>GA: TBD |
-| Mendix Connect – external actions | GA: TBD |
-
-## Multi-Cloud Deployment {#multi-cloud}
+## Agentic AI
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Mendix on AWS EKS (Private Cloud) | Released for GA [Feb 8, 2023](/releasenotes/developer-portal/mendix-for-private-cloud/#february-8-2023) |
-| Webhooks (Mendix Cloud, Cloud Dedicated, Private Cloud, Private Mendix Platform) | Released for GA [Jun 15, 2023](/releasenotes/developer-portal/mendix-cloud/#june-15-2023) |
-| Private Mendix Platform | Released [Nov 15, 2023](/releasenotes/private-platform/)   |
-| Multi-region failover (Mendix Cloud, Cloud Dedicated) | Released for GA [Dec 28, 2023](/releasenotes/developer-portal/mendix-cloud/#december-28-2023) |
-| Pipelines (Mendix Cloud, Cloud Dedicated) | Released for public beta [February 29, 2024](/releasenotes/developer-portal/mendix-cloud/#february-29-2024)<br>GA: TBD |
-| Pipelines (Private Cloud) | GA: TBD |
+| Mendix Agents Kit                 | General Availability: June 2025 |
+| Mendix Cloud GenAI Resource Packs | General Availability: July 2025 |
 
-## Governance and Control {#governance}
+## Process Automation
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| BYO IDP (Mendix Cloud, Cloud Dedicated) | Released for GA [May 16, 2023](/releasenotes/developer-portal/#byoidp) |
-| Landscape overview (Mendix Cloud, Cloud Dedicated) | Released for public beta [Aug 28, 2023](/releasenotes/control-center/#august-28-2023)<br>GA: TBD |
-| Cloud self-service (Mendix Cloud) | Currently in private beta<br>GA: TBD |
-| Software composition (Mendix Cloud, Cloud Dedicated) | Released for public beta [Jun 14, 2024](/releasenotes/control-center/#june-14-2024)<br />GA: Q1 2025 |
-| Cloud self-service (Cloud Dedicated) | Private beta: Q2 2024<br>GA: TBD |
+| Global Inbox                      | General Availability: H2 2025 |
+| Workflow Groups                   | Public beta: 11.1                         |
+| Ad-hoc tasks/event-subprocesses | Public beta: Q4 2025                      |
+
+## Industrial Market
+
+| Capability or Feature | Expected Release |
+| --- | --- |
+| Mendix Workstation Client | Private beta: Release 2.0: March 14th, 2025 <br/>Release 2.1: June 13th, 2025 <br/>Release 2.2: August 1st, 2025<br/>Limited Availability:  Release 3.0 September 2025<br/>General Availability: TBD |
+
+## Deployment
+
+| Capability or Feature | Expected Release |
+| --- | --- |
+| Private Connectivity for Mendix Cloud | Limited Availability: Q4 2025 <br/>General Availability: H1 2026 |
+| Landscape configuration management for Mendix Cloud | Limited Availability: Q4 2025 <br/>General Availability: H1 2026 |
+| Zero downtime deployment on Mendix Cloud | Limited Availability: Q4 2025 <br/>General Availability: H1 2026 |
+| REST GET and POST steps for Mendix Pipelines | Limited Availability: Q4 2025 <br/>General Availability: H1 2026 |

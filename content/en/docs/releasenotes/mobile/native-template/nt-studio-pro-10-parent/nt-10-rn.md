@@ -1,7 +1,7 @@
 ---
 title: "Native Template 10"
 url: /releasenotes/mobile/nt-10-rn/
-weight: 6
+weight: 60
 description: "Native Template 10 release notes."
 ---
 

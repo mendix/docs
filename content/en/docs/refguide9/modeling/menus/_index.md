@@ -23,7 +23,7 @@ The top-bar of Studio Pro contains the following menus:
 
 ## Global Navigation Menu {#global-navigation-menu}
 
-The **Global Navigation Menu** menu is located at the upper left of Studio Pro and is represented as a nine-dots icon. It contains links to various parts of the platform that will open in a new browser window. For more information on the **Global Navigation Menu** menu, see [Global Navigation](/developerportal/global-navigation/).
+The **Global Navigation Menu** menu is located at the upper left of Studio Pro and is represented as a nine-dots icon. It contains links to various parts of the platform that will open in a new browser window. For more information on the **Global Navigation Menu** menu, see [Global Navigation](/global-navigation/).
 
 ## File Menu {#file}
 
@@ -55,13 +55,14 @@ In the **Language** menu, you can add alternative languages to your app so that 
 
 ## Help Menu {#help}
 
-| Menu Item | Description | Shortcut Key |
-| --- | --- | --- |
-| **Help** | Opens the documentation page about the currently selected element. If an entity is selected, for example, the documentation for entities will be shown. | <kbd>F1</kbd> |
-| **Help Contents** | Opens the home page of the documentation in the default web browser. |   |
-| **Ask a Question** | Opens the Mendix Community in the default web browser. |   |
-| **Open Log File Directory** | Opens the log files for your app locally. |   |
-| **About Mendix Studio Pro** | Shows information about the current version of Mendix Studio Pro. |   |
+| Menu Item                   | Description                                                                                                                                             | Shortcut Key  |
+|-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
+| **Help**                    | Opens the documentation page about the currently selected element. If an entity is selected, for example, the documentation for entities will be shown. | <kbd>F1</kbd> |
+| **Help Contents**           | Opens the home page of the documentation in the default web browser.                                                                                    |               |
+| **Ask a Question**          | Opens the Mendix Community in the default web browser.                                                                                                  |               |
+| **Submit Feedback...**      | Opens the [Help us improve](/refguide9/feedback-survey/) dialog to gather input on your experience using Mendix Studio Pro.                             |               |
+| **Open Log File Directory** | Opens the log files for your app locally.                                                                                                               |               |
+| **About Mendix Studio Pro** | Shows information about the current version of Mendix Studio Pro.                                                                                       |               |
 
 ## Read More
 

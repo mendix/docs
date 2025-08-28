@@ -54,15 +54,17 @@ The **Language** menu allows you to manage additional languages and translations
 
 The **Language** menu items are described in the table below:
 
-| Menu Item | Description | Shortcut Key |
-| --- | --- | --- |
-| <a id="current-language"></a>**Current Language** | Choose the current language from one of the languages set up in **Language Settings…**. | *None* |
-| **Select Previous Language** | Choose the previous language in the list of languages chosen in **Language Settings…**. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd> |
-| **Select Next Language** | Choose the next language in the list of languages chosen in **Language Settings…**. | <kbd>Ctrl</kbd> + <kbd>L</kbd> |
-| [Language Settings…](/refguide/language-settings/) | Choose which languages are supported by the app and configure date and time settings. | *None* |
-| [Batch Replace…](/refguide/batch-replace/) | Change all occurrences of chosen translatable texts in the current language where they are identical. | *None* |
-| [Batch Translate…](/refguide/batch-translate/) | Add and edit translations from a selected source language to a selected target language | *None* |
-| [Language Operations…](/refguide/language-operations/) | Manipulate (for example, copy) translations between languages. | *None* |
+| Menu Item                                                               | Description                                                                                           | Shortcut Key |
+|-------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------| --- |
+| <a id="current-language"></a>**Current Language**                       | Choose the current language from one of the languages set up in **Language Settings…**.               | *None* |
+| **Select Previous Language**                                            | Choose the previous language in the list of languages chosen in **Language Settings…**.               | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd> |
+| **Select Next Language**                                                | Choose the next language in the list of languages chosen in **Language Settings…**.                   | <kbd>Ctrl</kbd> + <kbd>L</kbd> |
+| [Language Settings…](/refguide/language-settings/)                      | Choose which languages are supported by the app and configure date and time settings.                 | *None* |
+| [Batch Replace…](/refguide/batch-replace/)                              | Change all occurrences of chosen translatable texts in the current language where they are identical. | *None* |
+| [Batch Translate…](/refguide/batch-translate/)                          | Add and edit translations from a selected source language to a selected target language               | *None* |
+| [Language Operations…](/refguide/language-operations/)                  | Manipulate (for example, copy) translations between languages.                                        | *None* |
+| [Advanced Translations Import](/refguide/advanced-translations-import/) | Import translations from Excel or PO files.                                                           | *None* |
+| [Advanced Translations Export](/refguide/advanced-translations-export/) | Export translations as Excel or PO files.                                                             | *None* |
 
 ## Setting the End-User's Language
 
@@ -88,7 +90,7 @@ There are two options to ensure that the language is changed:
     1. Add the platform supported widget [HTML / JavaScript Snippet](https://marketplace.mendix.com/link/component/56/) to your app.
     2. Create a pop-up page.
     3. Place the HTMLSnippet widget on the pop-up page.
-    4. Add the **JavaScript** content `mx.reloadWithState();` to the widget.
+    4. Add the **JavaScript** content `window.reload();` to the widget.
     5. Open your new pop-up page from a microflow when you want to switch the user's language.
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/reload-with-state.png" alt="System Domain Model for User and Language" class="no-border" width="600" >}}

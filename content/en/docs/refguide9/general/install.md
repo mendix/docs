@@ -61,9 +61,13 @@ Sometimes you can run into problems when installing Studio Pro. One work-around 
 
 The prerequisites are the following:
 
-* [Microsoft .NET Desktop Runtime 6.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) – Mendix recommends using version 6.0.6 or above
+* | Studio Pro 9.0.0 - 9.24.33 | Studio Pro 9.24.34 and above |
+    | --- | --- |
+    |  [Microsoft .NET Desktop Runtime 6.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) – Mendix recommends using version 6.0.6 or above | [Microsoft .NET Desktop Runtime 8.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) – Mendix recommends using version 8.0.14 or above |
+    
 * Java JDK
-     
+
+    * For Mendix Studio Pro 9.24.34 and above - [Eclipse Temurin JDK 21 (x64)](https://github.com/adoptium/temurin21-binaries/releases)
     * For Mendix Studio Pro 9.24.16 and above – [Eclipse Temurin JDK 17 (x64)](https://github.com/adoptium/temurin17-binaries/releases)
     * For Mendix Studio Pro 9.18.0 and 9.24.15 – [Eclipse Temurin JDK 11 (x64)](https://github.com/adoptium/temurin11-binaries/releases)
     * For Mendix Studio Pro 9.14 to 9.17 – [Adoptium Temurin Java SDK](https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.14.1%2B1/OpenJDK11U-jdk_x64_windows_hotspot_11.0.14.1_1.msi)
@@ -72,14 +76,15 @@ The prerequisites are the following:
 * [Mendix Native Mobile Builder one-click Installer](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)
 * [Git for Windows (x64)](https://git-scm.com/download/win) using the following versions:
 
-    | 9.18.0 - 9.24.5 | 9.24.6 - onwards | 
+    | 9.18.0 - 9.24.5 | 9.24.6 - onwards |
     | --- | --- |
     | [2.37.1](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1) | [2.41.0](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3) |
 
 * [Microsoft Edge WebView2 Evergreen Runtime (x64 or ARM64) (Evergreen Standalone Installer version)](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
 * Mendix Studio Pro version 9.24.0 and above require the following versions of [Gradle](https://gradle.org/install/#manually) with Gradle extracted to the parent directory of the folder where Studio Pro is installed (usually `C:\Program Files\Mendix`) instead of `C:\Gradle`.
-    * Mendix Studio Pro versions 9.24.0 to 9.24.10 require Gradle version 7.6 or above
+    * Mendix Studio Pro version 9.24.34 and above require Gradle version 8.5 or above
     * Mendix Studio Pro version 9.24.11 and above require Gradle version 7.6.3 or above
+    * Mendix Studio Pro versions 9.24.0 to 9.24.10 require Gradle version 7.6 or above
 
 Based on the error message you get from the installer you can decide to install a single prerequisite, or you can try to manually install them all.
 
@@ -97,7 +102,8 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
 4. Download the prerequisites listed in the [Troubleshooting](#troubleshooting) section above and move them into the **Dependencies** folder.
 5. Rename the following dependencies:
     * The Microsoft .NET Desktop Runtime 6.0.x executable (*dotnet.exe*) to *windowsdesktop-runtime-6.0-x64.exe*
-    * The Java Development Kit 11 or 17 (x64) *msi* (for example, *OpenJDK17U-jdk_x64_windows_hotspot_17.0.10_7.msi*) to one of the following, depending on the Studio Pro version:
+    * The Java Development Kit 11, 17 or 21 (x64) *msi* (for example, *OpenJDK17U-jdk_x64_windows_hotspot_17.0.10_7.msi*) to one of the following, depending on the Studio Pro version:
+        * *adoptiumjdk_21_x64.msi* – for versions 9.24.34 and above
         * *adoptiumjdk_17_x64.msi* – for versions 9.24.16 and above
         * *adoptiumjdk_11_x64.msi* – for versions between 9.14.0 and 9.24.15 
         * *adoptopenjdk_11_x64.msi* – for versions 9.13.x and below
@@ -105,6 +111,7 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
     * The `latest` executable to *mendix_native_mobile_builder.exe*
     * The *Git-{version}-64-bit.exe* executable to *git_for_windows_installer.exe*
     * Do not rename the Microsoft Edge WebView2 Evergreen Runtime installer *MicrosoftEdgeWebview2Setup.exe*, keep it as is
+    * For Mendix 9 versions 9.24.34 and above, use Gradle version 8.5 in a zip file named *gradle-8.5-bin.zip*
     * For Mendix 9 versions 9.24.11 and above, use Gradle version 7.6.3 in a zip file named *gradle-7.6.3-bin.zip*
     * For Mendix versions 9.24.0 to 9.24.10, use Gradle version 7.6 in a zip file named *gradle-7.6-bin.zip*
 

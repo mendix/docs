@@ -23,7 +23,7 @@ Microflows can be triggered in many different ways. In this document, you will l
 To create a menu item, follow these steps:
 
 1. Open the **Navigation** editor.
-2. In the **Responsive** tab > the **Menu** section, click **New Item**:
+2. In the **Responsive** tab > the **Menu** section, click **New item**:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/triggering-microflow-from-menu-item/new-menu-item.jpg" class="no-border" >}}
 
@@ -35,7 +35,7 @@ To create a menu item, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/triggering-microflow-from-menu-item/call-microflow.png" class="no-border" >}}
 
-5. In the **Select Microflow** dialog box, select a microflow and then click **New**:
+5. In the **Select Microflow** dialog box, select **MyFirstModule** and then click **New**:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/triggering-microflow-from-menu-item/new-microflow.png" class="no-border" >}}
 
@@ -74,7 +74,7 @@ To edit the new microflow, follow these steps:
 6. Click **Run Locally** ({{% icon name="controls-play" %}}) and then **View App** to see the application in your default browser.
 7. Click the **Hello World** menu item in the menu bar to see the message:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/triggering-microflow-from-menu-item/hello-world-message.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/triggering-microflow-from-menu-item/hello-world-message.png" >}}
 
 Congratulations! You have created a menu item that triggers a microflow and shows a **Hello World** message to your end-users! 
 

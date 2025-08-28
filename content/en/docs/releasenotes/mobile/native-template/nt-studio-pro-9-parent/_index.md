@@ -1,7 +1,7 @@
 ---
 title: "Studio Pro 9 Compatible"
 url: /releasenotes/mobile/nt-studio-pro-9-parent/
-weight: 10
+weight: 70
 description: "Studio Pro 9 and 10 compatible Native Template release notes."
 ---
 

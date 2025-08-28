@@ -10,7 +10,7 @@ Running workflow instances can be manually changed while they are in progress. T
 
 {{% alert color="info" %}}
 
-This functionality is different from the [Jump activity](/refguide/jump-activity/) in workflows, which you can add from the **Toolbox** when you configure the workflow. The jumping to different activities functionality is something that you configure via microflow activities. 
+This functionality is different from the [Jump activity](/refguide/jump-activity/) in workflows, which you can add from the **Toolbox** when you configure the workflow. The jumping to different activities functionality is something that you configure via microflow activities.
 
 {{% /alert %}}
 
@@ -20,7 +20,7 @@ The [Generate Jump-to Option](/refguide/generate-jump-to-options/) microflow act
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/jump-to/jump-to-entities.jpg" class="no-border" >}}
 
-The **System.WorkflowJumpToDetails** object is associated with the **System.Workflow** through the **System.WorkflowJumpToDetails_Workflow** association, reflecting the workflow instance for which the information is generated. It also contains **System.WorkflowCurrentActivity** objects through the **System.WorkflowJumpToDetails_CurrentActivities** association. 
+The **System.WorkflowJumpToDetails** object is associated with the **System.Workflow** through the **System.WorkflowJumpToDetails_Workflow** association, reflecting the workflow instance for which the information is generated. It also contains **System.WorkflowCurrentActivity** objects through the **System.WorkflowJumpToDetails_CurrentActivities** association.
 
 The **System.WorkflowCurrentActivity** reflects the current activities of the workflow instance and gets the description of the current activity through the **System.WorkflowCurrentActivity_ActivityDetails** association. It also contains a list of activities which this activity can jump to through the **System.WorkflowCurrentActivity_ApplicableTargets** association. The **System.WorkflowCurrentActivity_JumpToTarget** association is empty.
 
@@ -42,7 +42,9 @@ After setting the objects, changes can be applied by calling a microflow contain
 
 ## Jumping to Other Activities in Parallel Splits or in Boundary Event Paths
 
-Jumping to other activities has a limitation in parallel splits and in non-interrupting boundary event paths: it is not possible to jump into or out of a current parallel split or a non-interrupting boundary event path. However, it is possible to jump to other activities within a current parallel split or a non-interrupting boundary event path, including the end of the path. Activities in other parallel split or boundary event paths, as well as activities outside of the current path, are not available in the **System.WorkflowCurrentActivity_ApplicableTargets** association.
+Jumping to other activities has a limitation in parallel splits and in boundary event paths: it is not possible to jump into or out of a current parallel split or boundary event path. However, it is possible to jump to other activities within a current parallel split or boundary event path, including the end of the path. Also, it is possible to jump from an interrupting boundary event path to its parent or grandparent path, since they are considered part of the same path. Activities in other parallel splits or boundary event paths, as well as activities outside the current path, are not available in the **System.WorkflowCurrentActivity_ApplicableTargets** association.
+
+For more information about jumping rules in a boundary event path, see the [Jump Rules](/refguide/workflow-boundary-events/#jump-rules) section in *Boundary Events*.
 
 ## Read More
 

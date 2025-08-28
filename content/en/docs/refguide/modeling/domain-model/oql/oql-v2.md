@@ -7,7 +7,7 @@ weight: 100
 
 ## Introduction
 
-In Studio Pro version 10.19, we introduced OQL v2. It can be enabled by setting the [OQL version 2](/refguide/app-settings/#oql-version-2) app setting to *Yes*. You will have to switch to OQL v2 in order to enable [View entities](/refguide/view-entities/).
+OQL v2 can be enabled by setting the [OQL version 2](/refguide/app-settings/#oql-version-2) app setting to *Yes*. You will have to switch to OQL v2 in order to enable [View entities](/refguide/view-entities/).
 
 OQL v2 syntax is the same as OQL. However, there are a few differences in the handling of specific, mostly not very common, cases.
 
@@ -44,11 +44,11 @@ OQL v2 has more strict data type validation of some functions and other expressi
 
 #### `CASE` {#case-validations}
 
-In OQL v2, all result expressions of a [CASE](/refguide/oql-expression-syntax/#case-expression) expression should have matching types or be Null. In OQL v1, there was no such validation, and handling of different types was delegated to the database, which made the behavior database-specific and unreliable.
+In OQL v2, all results of a [CASE](/refguide/oql-expression-syntax/#case-expression) expression should have matching types or be Null. In OQL v1, there was no such validation, and handling of different types was delegated to the database, which made the behavior database-specific and unreliable.
 
-Also, in OQL v2 it is no longer possible to have Null as the result of all result expressions of CASE. In OQL v1, that was allowed, but would lead to database-level exceptions for some database vendors.
+Also, in OQL v2 it is no longer possible to have Null as the only result a CASE expression. In OQL v1, that was allowed, but would lead to database-level exceptions for some database vendors.
 
-Numeric types Integer, Long and Decimal are considered matching. See [examples](/refguide/oql-expression-syntax/#case-expression-examples) of `CASE` expressions for details on how different numeric types are combined.
+Identical values of numeric types Integer, Long, and Decimal are considered matching. The type of the resulting expression is defined according to [type coercion precedence](/refguide/oql-expression-syntax/#type-coercion). In OQL v1, the type of the expression was defined based on the result of the first expression of `CASE`.
 
 #### `COALESCE` {#coalesce-validations}
 
@@ -58,7 +58,7 @@ In OQL v2, all arguments of a [COALESCE](/refguide/oql-expression-syntax/#coales
 
 Also, in OQL v2 it is no longer possible to have a COALESCE expression where all arguments are Null literals. In OQL v1, that was allowed, but would lead to database-level exceptions for some database vendors.
 
-Numeric types Integer, Long and Decimal are considered matching. See [examples](/refguide/oql-expression-syntax/#coalesce-expression-examples) of `COALESCE` for details on how different numeric types are combined.
+Identical values of numeric types Integer, Long, and Decimal are considered matching. The type of the resulting expression is defined according to [type coercion precedence](/refguide/oql-expression-syntax/#type-coercion). In OQL v1, the type of the expression was defined based on the result of the first expression of `COALESCE`.
 
 #### `LENGTH` {#length-validations}
 
@@ -183,7 +183,7 @@ JOIN (SELECT Name AS N FROM Module.City) C
 ON P/Residence = C/Name
 ```
 
-### `ORDER BY` in Subquery
+### `ORDER BY` in Subquery {#order-by-in-subquery}
 
 You must now have a `LIMIT` and/or `OFFSET` in subquery containing `ORDER BY`. Using `ORDER BY` in subquery makes sense only when it is combined with `LIMIT` and/or `OFFSET`. Without the limitations, database engines do not guarantee that the row order in the subquery will be preserved in the outer query.
 
@@ -216,7 +216,7 @@ FROM (
 
 For [view entities](/refguide/view-entities/), you must now have a `LIMIT` and `OFFSET` in all `ORDER BY` clauses, even for the top level query.
 
-This is because view entity results are not accessed directly. In the Runtime, a view entity is wrapped inside another `SELECT` query as a subquery, which allows further filtering and ordering. This makes it similar to the Subquery case, above.
+This is because view entities, like any other entity type, do not imply order of the results. See [Sorting of View Entity Results](/refguide/use-view-entities/#sorting) in *How To Use View Entities* for more details.
 
 ### Result Types from Arithmetic Functions
 
@@ -229,15 +229,11 @@ SELECT Attribute1 + Attribute2 AS SumAttr
 FROM Module.Entity
 ```
 
-In OQL v1, the result of the arithmetic operation will always be of type pf the first attribute in the expression because it is handled by the database. Therefore, the result would depend on the underlying database engine.
+In OQL v1, the type of the result of the arithmetic operation will always be the type of the first attribute in the expression. Therefore, the result would depend on the underlying database engine.
 
-When handling numeric types in OQL v2 (Integer, Long, and Decimal), the result of the operation is always the most precise attribute type, using the following precedence:
+When handling numeric types in OQL v2 (Integer, Long, and Decimal), the result type is defined according to [type coercion precedence](/refguide/oql-expression-syntax/#type-coercion).
 
-* Decimal (highest)
-* Long
-* Integer
-
-If any side of the operation is of a non-numeric type, no casting is performed, and the result is handled by the database, as in OQL v1. See [Expression syntax](/refguide/oql-expression-syntax/#type-coercion) for more information.
+No casting is performed if the type of either side of the operation is non-numeric, and the result is handled by the database, as in OQL v1.
 
 ### The Result Type of `ROUND` Is Now `Decimal`
 

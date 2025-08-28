@@ -11,6 +11,8 @@ OData is a set of best practices for building REST APIs that standardizes many a
 
 Published OData services are registered automatically in the [Catalog](/catalog/), making them usable in other Mendix apps. Discovering and using them in [external entities](/refguide/external-entities/) is made easy for users deploying to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), as [published OData Services](/refguide/published-odata-services/) are registered automatically in the [Catalog](/catalog/) and made available in the Studio Pro [Integration pane](/refguide/integration-pane/).
 
+## Read More
+
 To publish OData services, see:
 
 * [Published OData Services](/refguide/published-odata-services/), an overview in the Studio Pro guide

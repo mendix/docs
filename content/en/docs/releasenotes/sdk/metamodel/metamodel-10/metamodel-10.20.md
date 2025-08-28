@@ -43,4 +43,3 @@ weight: 80
 #### LinearRecurrence (Element)
 
 * We introduced this element. 
-

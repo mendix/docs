@@ -40,6 +40,10 @@ The selected page is opened.
 
 ### Creating a Page
 
+{{% alert color="info" %}}
+Alternatively, you can use Maia Page Generator, an AI-powered tool, to create pages by providing a description of your requirements and optional images. For more information, see [Page Generator](/refguide/page-generator/).
+{{% /alert %}}
+
 To create a new page, do the following:
 
 1. In the [App Explorer](/refguide/app-explorer/), right-click the module or a folder you want to create a page in and select **Add page**:
@@ -64,6 +68,10 @@ To delete a page, do the following:
 The selected page is deleted. 
 
 ### Adding Elements on a Page {#add-elements}
+
+{{% alert color="info" %}}
+You can also add elements through UI Recommender in **Design mode**. It allows you to easily add new widgets to a page without losing the context of what you are currently working on. For more information, see [UI Recommender](/refguide/ui-recommender/).
+{{% /alert %}}
 
 The way you can add an element on a page depends on a mode you are editing your page in. For more information on modes, see the [Page Editor Modes](#page-editor-modes) section.
 
@@ -99,10 +107,6 @@ In **Design mode**, you can add elements though the **Toolbox**. Do the followin
 1. Open the **Toolbox**, and select the **Widgets** or **Building blocks** tab. 
 1. Select an element you would like to add and drag this element onto your page.
 
-{{% alert color="info" %}}
-In Studio Pro 10.18 and above, you can also add elements through UI Recommender in **Design mode**. It allows you to easily add new widgets to a page without losing the context of what you are currently working on. For more information, see [UI Recommender](/refguide/ui-recommender/).
-{{% /alert %}}
-
 ### Viewing Element Properties {#view-properties}
 
 To view properties of an element, do one of the following:
@@ -124,9 +128,11 @@ You can cut/copy/paste elements on a page to different apps in Studio Pro if the
 
 To delete an element from a page, select this element and press <kbd>Delete</kbd> or right-click an element and select **Delete** in a drop-down menu. 
 
-### Changing the Parameters of a Page {#change-parameters}
+### Changing Page Parameters and Variables {#change-parameters}
 
-To change the parameters of the page, click the **Parameters** button in the top bar. This opens a dialog box which allows you to add, modify, and remove parameters. The **Parameters** button shows the current number of parameters in its caption, while its tooltip shows the name and type of each parameter. For more information about page parameters, see the [Parameters](/refguide/page-properties/#parameters) section in *Page Properties*.
+The top bar of the Page Editor features both the **Parameters** and **Variables** buttons. These allow you to change the parameters or variables for a page. Both buttons display the current number of parameters or variables in their caption. Additionally, the tooltip of the parameters button will list all parameters and their type, while the tooltip of the variables button lists each variable and its type.
+
+For more information about page parameters and variables, see the [Data](/refguide/page-properties/#data) section in *Page Properties*.
 
 ## Page Editor Modes {#page-editor-modes}
 

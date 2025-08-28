@@ -9,7 +9,7 @@ beta: true
 ---
 
 {{% alert color="info" %}}
-This feature is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).
+This feature is currently in beta. For more information, see [Release Status](/releasenotes/release-status/).
 {{% /alert %}}
 
 ## Introduction

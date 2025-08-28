@@ -19,21 +19,21 @@ The interface and functionality of these pages vary depending on where your app 
 
 For supported platforms, the **Environments** page allows you to review and configure different aspects of your app. It also allows you to deploy to your chosen platform, configure individual environments, and transport your app between staging environments.
 
-For details on the **Environments** pages for Mendix Cloud, Mendix for Private Cloud, and SAP deployments, see the following pages:
+For details on the **Environments** pages for Mendix Cloud, Mendix on Kubernetes, and SAP deployments, see the following pages:
 
 * Mendix Cloud deployments – [Environments](/developerportal/deploy/environments/)
-* Mendix for Private Cloud deployments – [Deploying a Mendix App to a Private Cloud Cluster](/developerportal/deploy/private-cloud-deploy/#environment-details)
+* Mendix on Kubernetes deployments – [Deploying a Mendix App to a Mendix on Kubernetes Cluster](/developerportal/deploy/private-cloud-deploy/#environment-details)
 * SAP deployments – [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/#EnvironmentDetails)
 
 Other platforms are not currently supported on the **Environments** page; instead, you must go to the relevant platform portal to monitor and configure your environments.
 
 ## Pipelines
 
-The **Pipelines** page is for licensed apps deployed to Mendix Cloud. For more information, see [Pipelines](/developerportal/deploy/pipelines/).
+The **Pipelines** page is for licensed apps deployed to Mendix Cloud, Mendix on Kubernetes, and Mendix on Azure. For more information, see [Mendix Pipelines](/developerportal/deploy/mendix-pipelines/).
 
 ## Software Composition
 
-The **Software Composition** page is for Free Apps and licensed apps running in Mendix Cloud or Mendix for Private Cloud. For more information, see [Software Composition](/developerportal/deploy/software-composition/).
+The **Software Composition** page is for Free Apps and licensed apps running in Mendix Cloud or Mendix on Kubernetes. For more information, see [Software Composition](/developerportal/deploy/software-composition/).
 
 ## Metrics
 
@@ -45,7 +45,7 @@ If your app is deployed to SAP Business Technology Platform (SAP BTP), the **Met
 
 The **Logs** page is for licensed apps deployed to Mendix Cloud. Logs are not available for Free Apps deployed to Mendix Cloud. For more information, see [Logs](/developerportal/operate/logs/).
 
-To configure logs if your app is running on a different cloud, go to the cloud management portal for the cloud to which your app is deployed. For more information, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/) or [Monitoring Environments in Mendix Apps on SAP BTP](/developerportal/deploy/sap-cloud-platform/sap-monitoring/).
+To configure logs if your app is running on a different cloud, go to the cloud management portal for the cloud to which your app is deployed. For more information, see [Monitoring Environments in Mendix on Kubernetes](/developerportal/deploy/private-cloud-monitor/) or [Monitoring Environments in Mendix Apps on SAP BTP](/developerportal/deploy/sap-cloud-platform/sap-monitoring/).
 
 ## Backups
 
@@ -65,4 +65,4 @@ On the **Mobile App** page, you can manage and publish your app in mobile app st
 
 ## Webhooks
 
-The **Webhooks** page is for licensed apps that are deployed to Mendix Cloud or Mendix for Private Cloud. For more information, see [Webhooks](/developerportal/deploy/webhooks/).
+The **Webhooks** page is for licensed apps that are deployed to Mendix Cloud or Mendix on Kubernetes. For more information, see [Webhooks](/developerportal/deploy/webhooks/).

@@ -42,7 +42,7 @@ In the **Change Password** tab, you can set a new password for your account. The
 
 Personal Access Tokens (PATs) are used as alternatives to passwords. They are designed to be used when the client application needs to get access on behalf of a specific platform user, but the user is not “present” at the time of access, so the user cannot login via a browser (web SSO). The client application can be any application (meaning, even an app not built with Mendix).
 
-For more information about Personal Access Tokens, as well as creating and using them, see [Personal Access Token](/community-tools/mendix-profile/user-settings/#pat).
+For more information about Personal Access Tokens, as well as creating and using them, see [Personal Access Token](/mendix-profile/user-settings/#pat).
 
 ### Service Credentials {#service-credentials}
 

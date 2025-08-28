@@ -181,8 +181,6 @@ The **Source** property sets which of the three ways to define the selectable ob
 
 * Database *(default)*
 * Microflow
-* XPath
-    {{% alert color="info" %}}From Mendix version 10.5, the reference selector does not have a separate XPath source, you can apply XPath constraints to the **Database** source.{{% /alert %}}
 
 #### Database
 
@@ -192,7 +190,7 @@ The **Source** property sets which of the three ways to define the selectable ob
 
 The XPath constraint limits the list of objects that can be selected. See the [constraints](/refguide/database-source/#constraints) section of *Database Source* for more information.
 
-From Mendix version 10.5, click **Edit** to edit the [XPath constraint](/refguide/xpath-constraints/). In Mendix versions below this, there is a separate **XPath** source.
+Click **Edit** to edit the [XPath constraint](/refguide/xpath-constraints/).
 
 For example, the XPath constraint `[InStock = true()]` on a reference selector for products will ensure that only products that are in stock are selectable.
 
@@ -229,14 +227,6 @@ Now the end-user will only see products in the selected category:
 
 {{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/orderline-with-constraint.png" alt="List of just products in the drink category" class="no-border" >}}
 
-{{% alert color="info" %}}
-If you use the **Database** source in Mendix versions below 10.5, you can also add constraints. The list of constraints is presented differently but you will be guided through making constraints in the **Edit Constraints** dialog box:
-
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/database-constraints.png" alt="Edit constraints dialog box" class="no-border" >}}
-
-Alternatively, you can use the XPath data source. This provides the same options in versions below Mendix 10.5 as are provided by the Database source in Mendix versions 10.5 and above.
-{{% /alert %}}
-
 ##### Sort Order
 
 The sort order specifies the order in which the items in the reference selector are shown. You can sort on multiple attributes in both directions (ascending and descending). If **(default)** sort order is specified, the reference selector sorts on the displayed attribute.
@@ -256,12 +246,6 @@ Microflow specifies the microflow which is run to return the list of objects.
 **Microflow Settings**
 
 In microflow settings you can specify what parameters are passed to the microflow, depending on the parameters specified in the microflow itself.
-
-#### XPath{#xpath-constraints}
-
-In Mendix versions below 10.5, there is a separate **XPath** source. Use this if you need to enter an XPath. See [XPath Constraints](/refguide/xpath-constraints/) for more information.
-
-If the source is XPath, the list of objects is taken from the database, but the objects which are displayed are chosen by an XPath Constraint.
 
 ## Styling
 

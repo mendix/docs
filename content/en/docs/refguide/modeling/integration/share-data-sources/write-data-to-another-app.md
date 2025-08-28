@@ -8,6 +8,7 @@ aliases:
     - /catalog/write-data/
     - /howto/integration/write-data/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+# SB: The images on this page are created using the Lato-LandscapeDemoApp (https://sprintr.home.mendix.com/link/project/1b515494-d818-4358-8c91-6c3d54e9cae5)
 ---
 
 ## Introduction
@@ -61,7 +62,7 @@ Notice the highlighted **CRUD** letters next to the entity name in the search pa
 
 Just like in the Catalog, you can see the **CRUD** capabilities of entities, attributes, and associations inside the [Integration pane](/refguide/integration-pane/) of Studio Pro.
 
-{{< figure src="/attachments/refguide/modeling/integration/write-data/crud-capabilities.png" alt="crud capabilities" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/integration/share-data-sources/write-data/crud-capabilities.png" alt="crud capabilities" class="no-border" >}}
 
 To consume an OData entity, do the following:
 
@@ -79,8 +80,8 @@ How does the published service know that an insert fails? In the publishing app,
 
 The domain model for the publishing app's validation message looks like this:
 
-{{< figure src="/attachments/refguide/modeling/integration/write-data/validate-data-publishing-app.png" alt="publishing app validation" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/integration/share-data-sources/write-data/validate-data-publishing-app.png" alt="publishing app validation" class="no-border" >}}
 
 In the client app, the error handler would look like this:
 
-{{< figure src="/attachments/refguide/modeling/integration/write-data/validate-data-client-app.png" alt="client app validation" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/integration/share-data-sources/write-data/validate-data-client-app.png" alt="client app validation" class="no-border" >}}

@@ -8,16 +8,18 @@ beta: true
 ---
 
 {{% alert color="warning" %}}
-Private Cloud License Manager is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).
+Private Cloud License Manager is currently in beta. For more information, see [Release Status](/releasenotes/release-status/).
+
+Mendix highly recommends that you upgrade to the latest available version to ensure that all apps get a valid, non-expired license. Newer versions contain bugfixes and improvements.
 {{% /alert %}}
 
 ## Introduction
 
-When deploying your Mendix app for production use, it needs to be licensed. This removes the restrictions which are placed on unlicensed apps. For more information, see [Licensing Mendix for Private Cloud](/developerportal/deploy/private-cloud/#licensing) in the *Private Cloud* documentation.
+When deploying your Mendix app for production use, it needs to be licensed. This removes the restrictions which are placed on unlicensed apps. For more information, see [Licensing Mendix on Kubernetes](/developerportal/deploy/private-cloud/#licensing) in the *Private Cloud* documentation.
 
-Apps which are deployed to Mendix Cloud have access to the internet and have licenses which work on a subscription basis, contacting the Mendix license server to validate the license. This method is not appropriate for apps which are deployed using Mendix for Private Cloud, and may even be in standalone mode and not connected to the internet (air-gapped).
+Apps which are deployed to Mendix Cloud have access to the internet and have licenses which work on a subscription basis, contacting the Mendix license server to validate the license. This method is not appropriate for apps which are deployed using Mendix on Kubernetes, and may even be in standalone mode and not connected to the internet (air-gapped).
 
-Rather than having to apply and update licenses for each environment individually, the Mendix **Private Cloud License Manager** (PCLM) provides a repository of offline Mendix licenses to enable you to manage these centrally. This reduces the possibility of errors, and enables the production of license usage reports.
+Rather than having to apply and update licenses for each environment individually, the Mendix **Mendix on Kubernetes License Manager** (PCLM) provides a repository of offline Mendix licenses to enable you to manage these centrally. This reduces the possibility of errors, and enables the production of license usage reports.
 
 The PCLM runs as a Kubernetes service on your cluster. This means that it can be used by all your Mendix apps which run in namespaces within that cluster.
 
@@ -25,9 +27,9 @@ The PCLM runs as a Kubernetes service on your cluster. This means that it can be
 
 To install and use the PCLM, you need the following prerequisites:
 
-* A Mendix for Private Cloud **Standalone** cluster 
+* A Mendix on Kubernetes **Standalone** cluster 
 * Mendix Operator in version 2.11.0 or above
-* Administrative rights to a Kubernetes namespace to install PCLM server (a dedicated namespace is recommended). This can be within your Mendix for Private Cloud cluster, or in another cluster which is accessible over HTTP
+* Administrative rights to a Kubernetes namespace to install PCLM server (a dedicated namespace is recommended). This can be within your Mendix on Kubernetes cluster, or in another cluster which is accessible over HTTP
 * A Postgres or SQLServer database server and within it:
     * A dedicated database with remote access which will be used to store your licenses, user authorization details, and usage information
         * The database server should be accessible to the cluster where the application is deployed.
@@ -93,7 +95,7 @@ Where you need to supply the following parameters
 
 By default, static credentials are used for authentication, meaning that if `--db-auth-mode` is not specified, you must provide `--db-password`. For enhanced security, AWS providers can use Postgres IAM authentication, while Azure providers can use Postgres managed identity authentication. When the authentication mode is set to `aws-irsa`, you need to specify `--db-aws-iam-role`, and the `--db-password` is no longer required. Similarly, for `azure-wi`, `--db-azure-client-id` must be provided, and `--db-password` is not necessary.
 
-To set up Postgres with IAM authentication, refer to the [Prerequisites](/developerportal/deploy/private-cloud-storage-plans/#prerequisites-1) for configuring the server. For instructions on configuring the database, see [Private Cloud Storage Plans: RDS Database](/developerportal/deploy/private-cloud-storage-plans/#rds-database).
+To set up Postgres with IAM authentication, refer to the [Prerequisites](/developerportal/deploy/private-cloud-storage-plans/#prerequisites-1) for configuring the server. For instructions on configuring the database, see [Mendix on Kubernetes Storage Plans: RDS Database](/developerportal/deploy/private-cloud-storage-plans/#rds-database).
 
 For setting up Postgres with Azure workload identity, follow the guide in [Azure azwi Postgres setup](/developerportal/deploy/private-cloud-storage-plans/#database-postgres-azwi).
 
@@ -166,7 +168,7 @@ You can confirm that you can connect to the PCLM server using the following URLs
 
 ### Using the Kubernetes Service
 
-If PCLM is installed in the same Kubernetes cluster as the Private Cloud environments, the PCLM server can be reached at `http://mx-privatecloud-license-manager.<namespace>.svc.cluster.local`, where `<namespace>` is the namespace where the PCLM Server was installed.
+If PCLM is installed in the same Kubernetes cluster as the Mendix on Kubernetes environments, the PCLM server can be reached at `http://mx-privatecloud-license-manager.<namespace>.svc.cluster.local`, where `<namespace>` is the namespace where the PCLM Server was installed.
 
 You can confirm that you can connect to the PCLM server using the following URLs:
 
@@ -209,7 +211,7 @@ Once the PCLM server is running, you can set up users.
 The PCLM server supports two **user types:**
 
 * Admin – this user type has read-write permissions of users and licenses resources. It should only be used from the cli.
-* Operator – this user type has only read-only permissions for license resources. This user is designed to allow the Mendix for Private Cloud Operator to obtain licenses.
+* Operator – this user type has only read-only permissions for license resources. This user is designed to allow the Mendix on Kubernetes Operator to obtain licenses.
 
 ### Administrator
 
@@ -326,10 +328,17 @@ mx-pclm-cli license runtime list \
    -s <pclm-http-url> \
    -u <admin-user> \
    -p <admin-password> \
-   -t <custom-ca-cert-path>
+   -t <custom-ca-cert-path> \
+   --page <page-number> \
+   --limit <max-licenses-per-page>
 ```
 
 * `<custom-ca-cert-path>` - is only required if the PCLM server is configured with a custom certificate. Otherwise it is optional.
+* `<page-number>` specifies the page number to load, in case the number of licenses exceeds `<max-licenses-per-page>`. These parameters are optional and allow the licenses to be listed in batches.
+
+{{% alert color="info" %}}
+To get a full list of licenses with one command, use `--page 0 --limit 10000` to load 10000 licenses in one go. This can be useful when using a text editor to check if licenses are loaded correctly, or when collecting data for a support case.
+{{% /alert %}}
 
 You will receive the result in the following format:
 
@@ -352,10 +361,17 @@ mx-pclm-cli license operator list \
    -s <pclm-http-url> \
    -u <admin-user> \
    -p <admin-password> \
-   -t <custom-ca-cert-path>
+   -t <custom-ca-cert-path> \
+   --page <page-number> \
+   --limit <max-licenses-per-page>
 ```
 
 * `<custom-ca-cert-path>` - is only required if the PCLM server is configured with a custom certificate. Otherwise it is optional.
+* `<page-number>` specifies the page number to load, in case the number of licenses exceeds `<max-licenses-per-page>`. These parameters are optional and allow the licenses to be listed in batches.
+
+{{% alert color="info" %}}
+To get a full list of licenses with one command, use `--page 0 --limit 10000` to load 10000 licenses in one go. This can be useful when using a text editor to check if licenses are loaded correctly, or when collecting data for a support case.
+{{% /alert %}}
 
 You will receive the result in the following format:
 
@@ -365,7 +381,7 @@ You will receive the result in the following format:
 
 ## Applying Licenses to Your Operator and Apps
 
-To use the licenses, you must add information to the operator configuration. For this, you need to have set up the operator in a namespace on your cluster. See [Installing and Configuring the Mendix Operator](/developerportal/deploy/private-cloud-cluster/#install-operator) in the *Private Cloud Cluster* documentation. Assume that the operator is running in the namespace `<operator-ns>`.
+To use the licenses, you must add information to the operator configuration. For this, you need to have set up the operator in a namespace on your cluster. See [Installing and Configuring the Mendix Operator](/developerportal/deploy/private-cloud-cluster/#install-operator) in the *Mendix on Kubernetes Cluster* documentation. Assume that the operator is running in the namespace `<operator-ns>`.
 
 ### Storing Operator User Credentials and Configuring the Mendix Operator
 
@@ -381,7 +397,7 @@ mx-pclm-cli config-namespace -n <operator-ns> \
 The default secret name is `mendix-operator-pclm`. If PCLM was previously configured manually, the existing secret name is used.
 
 {{% alert color="info" %}}
-For Global Operator installation, execute the above command in both the Global Operator namespace and its managed namespaces where the license is intended to be applied. Please make certain that identical PCLM license details are configured for both the managed and global operator namespaces to avoid unexpected outcomes. Global Operator is still in beta, and it does not currently fully supports PCLM.
+For Global Operator installation, execute the above command in both the Global Operator namespace and its managed namespaces where the license is intended to be applied. Please make certain that identical PCLM license details are configured for both the managed and global operator namespaces to avoid unexpected outcomes.
 {{% /alert %}}
 
 #### Sample Yaml Files
@@ -468,7 +484,9 @@ You can see which licenses are currently used by which environments and operator
 mx-pclm-cli license list-usage -s <pclm-http-url> \
     -u <admin-user> \
     -p <admin-password> \
-    -t <custom-ca-cert-path>
+    -t <custom-ca-cert-path> \
+   --page <page-number> \
+   --limit <max-licenses-per-page>
 ```
 
 Where:
@@ -477,6 +495,11 @@ Where:
 * `<admin-user>` – is a user of type *admin* which can update users, default: `administrator` (overrides the config file)
 * `<admin-password>` – is the password for the chosen *admin* user (overrides the config file)
 * `<custom-ca-cert-path>` - is optional. Required only if the PCLM server is configured with custom cert.
+* `<page-number>` specifies the page number to load, in case the number of licenses exceeds `<max-licenses-per-page>`. These parameters are optional and allow to list license usage in batches.
+
+{{% alert color="info" %}}
+To get a full list of licenses with one command, use `--page 0 --limit 10000` to load 10000 licenses in one go. This can be useful when using a text editor to check if licenses are loaded correctly, or when collecting data for a support case.
+{{% /alert %}}
 
 Which would reply with something similar to this:
 
@@ -553,6 +576,18 @@ This will indicate that licenses have been applied to the operator and apps in t
 | ------------------------------------ | ---------- | -------- | ----------- |
 | `<license-id>` | `<namepace>` | `<app-ID>` | mx-operator |
 | `<license-id>` | `<namepace>` | `<app-ID>` | mx-runtime  |
+
+## Upgrade PCLM Server
+
+To upgrade the PCLM server, update the image tag in the PCLM server deployment and restart it.
+
+It is also possible to upgrade the PCLM server using following command:
+
+```bash
+mx-pclm-cli server-upgrade \
+    -d <pclm-deployment-name> \
+    -n <pclm-server-namespace>
+```
 
 ## Troubleshooting
 

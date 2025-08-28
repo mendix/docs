@@ -8,7 +8,7 @@ description_list: true
 cascade:
     - content_type: "Studio Pro 8"
     - mendix_version: 8
-    - banner_8: true
+    - banner: "If you would like to upgrade to a newer <a href=\"/releasenotes/studio-pro/lts-mts/#lts\">long-term support version</a> of Studio Pro, see <a href=\"/refguide9/moving-from-8-to-9/\">Moving from Mendix Studio Pro 8 to 9</a>."
     - old_content: true
     - hide_feedback: true
     - notsitemap: true
@@ -18,7 +18,7 @@ cascade:
 ---
 
 {{% alert color="warning" %}}
-When Mendix 11 is released (expected in June 2025), Mendix 8 will go end of support. This means that Mendix 8 will no longer receive support, maintenance, or updates. To ensure continued access to the latest features and security enhancements, we recommend planning an upgrade to a more recent version of the platform.
+With Mendix 11.0.0 release in June 2025, Mendix 8 has reached its end of support. This means that Mendix 8 will no longer receive support, maintenance, or updates. To ensure continued access to the latest features and security enhancements, we recommend planning an upgrade to a more recent version of the platform.
 {{% /alert %}}
 
 ## Introduction

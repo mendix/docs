@@ -26,6 +26,18 @@ You can import and export the following:
 ## Importing Various Elements
 
 {{% alert color="warning" %}}
+Studio Pro prevents packages from unpacking content to undesired locations. If you cannot change the location, contact the content publisher to get the issue fixed.
+Current undesired locations:
+
+* directories starting with '.'
+* releases/
+* packages/
+* deployment/
+* nativemobile/builds/
+* vendorlib/temp/
+{{% /alert %}}
+
+{{% alert color="warning" %}}
 Be careful when importing elements, as you can overwrite your existing work. Pay attention to prompts and warnings along the way!
 {{% /alert %}}
 

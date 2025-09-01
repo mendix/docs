@@ -6,20 +6,26 @@ url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/documents-api/
 
 ## Introduction
 
-This how-to describes how to create context menus for a document editor that execute previously registered commands.
+This how-to describes how to create context menus for a document editor that execute previously registered commands. In the example below, you create a menu which is shown for each entity in the domain model of Studio Pro.
 
 ## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* This how-to uses the results of [Get Started with the Web Extensibility API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/getting-started/). Please complete that how-to before starting this one. 
+* This how-to uses the results of [Get Started with the Web Extensibility API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/getting-started/). Complete that how-to before starting this one. 
 * Make sure you are familiar with command registration as described in [Register a Command Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/command-api/).
 
 ## Creating a Context Menu
 
-In the example below, you create a menu which is shown for each entity in the Domain model editor of Studio Pro. In order to specify which type of document a menu should belong to, you need to use the full name of the document type, i.e. `DomainModels$Entity` for entities, `DomainModels$Annotation` for annotations, or  `DomainModels$DomainModel` for the editor canvas itself. For more information on these document types, see [Access a Mendix Model Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/model-api/).
+{{% alert color="info" %}}
+Use the full name of the document type (for example, `DomainModels$Entity` for entities, `DomainModels$Annotation` for annotations, or  `DomainModels$DomainModel` for the editor canvas itself). For more information about these document type names, see [Access a Mendix Model Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/model-api/).
+{{% /alert %}}
 
-First, a command must be registered through the [Commands API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/command-api/), then the `commandId` can be attached to the new menu. Afterwards, using the `documents` API's `addContextMenu` method, the menu can be added to an entity inside the Domain model editor.
+The code below does the following:
+
+1. Registers a command through the [Commands API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/command-api/)
+2. Attaches the `commandId` to the new menu
+3. Uses the `documents` API's `addContextMenu` method to add the menu to an entity inside the domain model editor
 
 ```typescript
 import { ComponentContext, IComponent, Menu, StudioProApi, getStudioProApi } from "@mendix/extensions-api";
@@ -56,6 +62,6 @@ The command must be registered before creating the menu.
 
 ## Extensibility Feedback
 
-If you would like to provide us with some additional feedback, please complete a short [survey](https://survey.alchemer.eu/s3/90801191/Extensibility-Feedback)
+If you would like to provide us with additional feedback, please complete a short [survey](https://survey.alchemer.eu/s3/90801191/Extensibility-Feedback).
 
-Any feedback is much appreciated.
+Any feedback is appreciated.

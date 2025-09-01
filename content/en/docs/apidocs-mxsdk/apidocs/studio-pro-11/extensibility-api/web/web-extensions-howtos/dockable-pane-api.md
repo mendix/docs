@@ -246,7 +246,7 @@ This ensures esbuild will consider these two `.tsx` files as entrypoints and pro
 
 You also must instruct Studio Pro to load the endpoint that you just created. To do this, modify the manifest file `src/manifest.json`.
 
-Alter the `"ui"` section by:
+Alter the `ui` section by:
 
 * Changing the `tab` endpoint
 * Adding the `dockablepane` endpoint

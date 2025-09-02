@@ -12,6 +12,12 @@ These release notes cover changes to deployment to [Mendix on Azure](/developerp
 
 For information on the current status of Mendix deployment, see [Mendix Status](https://status.mendix.com/).
 
+### Release date: September 4, 2025
+
+* We have improved the translations by adding support for error messages in Cluster Overview page.
+* We have fixed the translation issue where **Logging and Monitoring** was displayed twice in Cluster Details page.
+* We have fixed the issue where users in Admin/Contributor groups can now view the Managed app in the Cluster overview.
+
 ### Release date: August 7, 2025
 
 * Users with the Owner or Contributor roles can now view all uninitialized clusters within their subscription, ensuring better visibility and coordination.

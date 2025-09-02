@@ -11,7 +11,7 @@ description: "Native Template 15"
 
 ### Fixes
 
-- We removed the `USE_EXACT_ALARM` permission from the manifest to comply with updated Google Play policies.
+* We removed the `USE_EXACT_ALARM` permission from the manifest to comply with updated Google Play policies.
 
 ## 15.3.0 {#1530}
 

@@ -188,7 +188,6 @@ For MSSQL, for **INOUT** and **OUT** parameters of type Decimal, test values (in
 
     {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/ref03.png" width="600"  >}}
 
-
 ## Use the Query External Database Activity
 
 1. Add the [Query external database](/refguide/query-external-database/) activity into your microflow.

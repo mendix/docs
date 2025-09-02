@@ -34,17 +34,17 @@ Sets the initial text value that appears in the filter input when the page loads
 
 Determines the initial filter operation type when the widget loads. Available options include:
 
-- **Contains**: matches records where the attribute contains the search text
-- **Starts with**: matches records where the attribute begins with the search text
-- **Ends with**: matches records where the attribute ends with the search text
-- **Greater than**: matches records where the attribute value is alphabetically greater
-- **Greater than or equal**: matches records where the attribute value is alphabetically greater or equal
-- **Equal**: matches records where the attribute exactly equals the search text
-- **Not equal**: matches records where the attribute does not equal the search text
-- **Smaller than**: matches records where the attribute value is alphabetically smaller
-- **Smaller than or equal**: matches records where the attribute value is alphabetically smaller or equal
-- **Empty**: matches records where the attribute has no value
-- **Not empty**: matches records where the attribute has any value
+* **Contains**: matches records where the attribute contains the search text
+* **Starts with**: matches records where the attribute begins with the search text
+* **Ends with**: matches records where the attribute ends with the search text
+* **Greater than**: matches records where the attribute value is alphabetically greater
+* **Greater than or equal**: matches records where the attribute value is alphabetically greater or equal
+* **Equal**: matches records where the attribute exactly equals the search text
+* **Not equal**: matches records where the attribute does not equal the search text
+* **Smaller than**: matches records where the attribute value is alphabetically smaller
+* **Smaller than or equal**: matches records where the attribute value is alphabetically smaller or equal
+* **Empty**: matches records where the attribute has no value
+* **Not empty**: matches records where the attribute has any value
 
 #### Placeholder
 
@@ -81,5 +81,3 @@ Provides an accessible label for the filter type selection button. This label is
 #### Input Caption
 
 Defines the accessible label for the numeric input field. Screen readers announce this label when users focus on the input field. Supports localization with built-in translations for English, German, and Dutch. Can be customized to provide context-specific information about the expected numeric format or range.
-
-

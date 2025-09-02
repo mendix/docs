@@ -51,7 +51,7 @@ The Conversational UI module provides the following functionalities:
 
 ### Prerequisites {#prerequisites}
 
-To use the Conversational UI module, your Mendix Studio Pro version must be [9.24.2](/releasenotes/studio-pro/9.24/#9242) or higher.
+To use the Conversational UI module, your Mendix Studio Pro version must be 10.24.0 or above.
 
 You must also ensure you have the other prerequisite modules that Conversational UI requires. These modules are included by default in the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934), the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926), the [Support Assistant Starter App](https://marketplace.mendix.com/link/component/231035), and the [RFP Assistant Starter App](https://marketplace.mendix.com/link/component/235917). If not, you need to install them manually.
 

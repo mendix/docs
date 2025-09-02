@@ -69,7 +69,7 @@ Mendix connectors offer direct support for the following models:
 
 | Architecture | Models | Category | Input | Output | Additional capabilities |
 |--------------|---------------------|---------------------|-------------------|-----------|-------------------------|
-| Mendix Cloud GenAI | Anthropic Claude 3.5 Sonnet | Chat Completions | text, image, document | text | Function calling |
+| Mendix Cloud GenAI | Anthropic Claude 3.5 Sonnet, Anthropic Claude 3.7 Sonnet | Chat Completions | text, image, document | text | Function calling |
 | | Cohere Embed English, Cohere Embed Multilingual | Embeddings | text | embeddings | |
 | Azure / OpenAI | gpt-4, gpt-4-turbo, gpt-4o, gpt-4o mini, gpt-4.1, gpt-4.1-mini, gpt-4.1-nano, gpt-5.0, gpt-5.0-mini, gpt-5.0-nano | Chat completions | text, image, document (OpenAI only) | text | Function calling |
 | | DALL·E 2, DALL·E 3, gpt-image-1 | Image generation | text | image | |

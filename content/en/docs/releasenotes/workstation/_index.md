@@ -15,7 +15,7 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 ### Release date: August 20, 2025
 
 {{% alert color="info" %}}
-The third pre-release of the Mendix Workstation Client is available under the conditions of the Mendix Workstation Client Pre-Release Program. 
+The third pre-release of the Mendix Workstation Client is available under the conditions of the Mendix Workstation Client Pre-Release Program. Support is available only to members of the program. To become a program member, contact Mendix Sales.
 {{% /alert %}}
 
 #### New Features

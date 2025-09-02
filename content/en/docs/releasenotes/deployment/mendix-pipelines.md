@@ -53,7 +53,6 @@ To see the current status of the Mendix Pipelines, see [Mendix Status](https://s
 
 * Deployment packages generated via Mendix Pipelines now generate a Software Bill of Material (SBOM) under the hood; this is visible in Software Composition for Studio Pro LTS and MTS versions 9.24.26 and above, 10.6.12 and above, and 10.12.3 and above.
 
-
 ### August 22, 2024
 
 #### Fixes
@@ -63,7 +62,6 @@ To see the current status of the Mendix Pipelines, see [Mendix Status](https://s
 #### Improvements
 
 * In the **Pipelines** page's **Runs** tab, we changed a column name from **Last Run** to **Run** because this more accurately reflects what the column shows: it indicates when a Mendix Pipeline run occurred.
-
 
 ### August 15, 2024
 

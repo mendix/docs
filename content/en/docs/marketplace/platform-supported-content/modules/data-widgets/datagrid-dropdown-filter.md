@@ -122,4 +122,3 @@ Defines an action to be executed whenever the filter selection changes. This eve
 #### Input Caption
 
 Defines the accessible label for the dropdown input element. Screen readers announce this label when users focus on the dropdown. Employing this correctly is essential for users relying on assistive technology.
-

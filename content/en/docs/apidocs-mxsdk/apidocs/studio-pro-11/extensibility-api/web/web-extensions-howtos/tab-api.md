@@ -32,6 +32,7 @@ Whenever the tabs API `open` method is called, the `TabHandle` returned must be 
 {{% /alert %}}
 
 To open a tab called **My Extension Tab**, add the following code to the main entry point (`src/main/index.ts`)
+
 ```typescript
 import { IComponent, getStudioProApi, TabHandle, ComponentContext } from "@mendix/extensions-api";
 

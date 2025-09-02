@@ -23,9 +23,9 @@ Amazon Bedrock is a fully managed service that makes foundation models (FMs) fro
 
 ### Prerequisites {#prerequisites}
 
-The Amazon Bedrock connector requires Mendix Studio Pro version 9.24.2 or above.
+The Amazon Bedrock connector requires Mendix Studio Pro version 10.24.0 or above.
 
-To authenticate with Amazon Web Service (AWS), you must install and configure the [AWS Authentication connector version 3.0.0 or higher](https://marketplace.mendix.com/link/component/120333). It is crucial for the Amazon Bedrock connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
+To authenticate with Amazon Web Service (AWS), you must install and configure the [AWS Authentication connector version 4.1.1 or above](https://marketplace.mendix.com/link/component/120333). It is crucial for the Amazon Bedrock connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
 
 You must have the latest [GenAI Commons](https://marketplace.mendix.com/link/component/239448) version. To make integration of generative AI capabilities as easy as possible, the Amazon Bedrock connector depends on the generic domain model and operations provided by the GenAI Commons module.
 

@@ -174,7 +174,6 @@ For more information, see [Common Section](/refguide/common-widget-properties/#c
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-
 ## Limitations {#limitations}
 
 ### Editable Behavior Without a Store Value

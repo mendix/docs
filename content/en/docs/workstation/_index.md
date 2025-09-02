@@ -9,7 +9,7 @@ cascade:
     - content_type: "Mendix Workstation"
 ---
 {{% alert color="info" %}}
-Mendix Workstation is available only for members of the Mendix Workstation Client Pre-Release Program.
+Mendix Workstation is available only for members of the Mendix Workstation Client Pre-Release Program. Support is available only to members of the program. To become a program member, contact Mendix Sales.
 {{% /alert %}}
 
 ## Introduction

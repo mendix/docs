@@ -23,7 +23,9 @@ The current version has the following limitations:
 * Tools and prompt messages can only return String content.
 * Only HTTP+SSE transport is currently supported to communicate with MCP servers.
 
+{{% alert color="info" %}}
 Note that the MCP Client module is still in its early version, and newer versions may include breaking changes. Since both the open-source protocol and the Java SDK are still evolving and regularly updated, these changes may also affect this module.
+{{% /alert %}}
 
 ## Installation
 
@@ -31,47 +33,46 @@ If you are starting from the [Blank GenAI app](https://marketplace.mendix.com/li
 
 If you start from a standard Mendix blank app or have an existing project, you must install the MCP Client module manually. Follow the instructions in [How to Use Marketplace Content](/appstore/use-content/) to install the [MCP Client](https://marketplace.mendix.com/link/component/244893) module from the Marketplace.
 
-The module is currently not dependent on any other modules. However, if you would like to use it with the existing GenAI modules, it includes examples (excluded) and further explanations in the [Use with GenAI Commons](#use-with-genai-commons) section below.
+## Dependencies {#dependencies}
+
+* Mendix Studio Pro version 10.24.0 or above
+* [GenAI Commons module](/appstore/modules/genai/commons/)
 
 ## Configuration
 
 ### Client Connection Lifecycle {#client-connection-lifecycle}
 
-The `Create MCP Client` action creates a sync client that is connected to an (externally) running MCP server and returns the `MCPServer` object. The action requires an `MCPClientConfig` object that contains all required fields to facilitate the connection. If required (for example, for authentication), you can add HTTP headers via the `Config: Add Http Header` action from the toolbox when creating the input object.
+The `Create MCP Client` action creates a sync client that is connected to an (externally) running MCP server and returns the `MCPClient` object. The action requires an `MCPServerConfiguration` object that contains all required attributes to facilitate the connection.
 
-You can use the returned `MCPClient` object for all other actions, for example, to discover tools and prompts or to get a specific prompt or call a tool. An MCP Client can be reused across multiple actions or throughout an entire chat conversation. It is recommended to clean up connections after use by calling the `Close MCP Client` action.
+The `MCPServerConfiguration` objects can be created by users with the `MCPClient.Administrator` userrole via the `MCPServerConfiguration_Overview` page. If the MCP server expects HTTP headers (for example, for authentication), you can select a `GetCredentialsMicroflow` which should return a list of `System.HttpHeader` objects. You can use the `Config: Create Http Header and Add to List` toolbox action in this microflow. The `GetCredentialsMicroflow` cannot have any input parameters. Take a look at the `GetCredentials_EXAMPLE` in the **Example Implementations** folder for an example.
 
-For example, see the **Example Implementations** folder inside the module containing logic to connect to a server, use HTTP Headers for authentication, and discover tools and prompts.
+You can use the returned `MCPClient` object for all other actions, for example, to discover tools and prompts, to get a specific prompt, or call a tool. An MCP Client can be reused across multiple actions or throughout an entire chat conversation. It is recommended to close connections after use by calling the `Close MCP Client` action.
+
+See the **Example Implementations** folder inside the module containing example logic to connect to a server, get credentials, and discover tools and prompts.
 
 #### Protocol Version
 
-When creating an MCP client, specify a `ProtocolVersion`. On the official MCP documentation, you can review the differences between the protocol versions in the [changelog](https://modelcontextprotocol.io/specification/2025-03-26/changelog). The MCP Client module currently supports only `v2024-11-05` and the HTTP+SSE transport. MCP servers should support the same version as the client. Note that Mendix supports the capabilities provided by the MCP Java SDK.
+When creating an MCP client, specify a `ProtocolVersion`. On the official MCP documentation, you can review the differences between the protocol versions in the [changelog](https://modelcontextprotocol.io/specification/2025-03-26/changelog). The MCP Client module currently only supports `v2024-11-05` and the HTTP+SSE transport. MCP servers should support the same version as the client. Note that Mendix supports the capabilities provided by the MCP Java SDK.
 
 ### Discovering Resources {#discover-resources}
 
 The actions `List Prompts` and `List Tools` send a request to the MCP server to discover prompts and tools, respectively. Create the MCP Client beforehand and pass it as an input. Both actions create the necessary objects, such as `Prompt` and `PromptArgument` for prompts and `Tool`, `ToolArgument`, and `EnumValue` for tools. If the prompt or tool requires arguments, the objects help you understand what needs to be passed and how to format it.
 
-In general, prompts are often exposed to end-users in a chat to start or continue a conversation, while tools are passed to an LLM. You can learn more about this in the [Using MCP Client Module with GenAI Commons](#use-with-genai-commons) section below.
+In general, prompts are often exposed to end-users in a chat to start or continue a conversation, while tools are passed to an LLM. If you want users to be able to view tools and prompts, you can assign them the `User` userrole. For more information, see the [Using MCP Client Module with GenAI Commons](#use-with-genai-commons) section below.
 
-### Using Resources
+### Using Resources {#use-resources}
 
-To use a prompt from an MCP Server, you can use the `Get Prompt` action to receive one or multiple `Prompt Messages` from the server associated with the `PromptResult` object. Similarly, to use a tool, you can use the `Call Tool` action to receive a `ToolResult` object that contains the return message of the tool.
+To use a prompt from an MCP Server, you can use the `Get Prompt` action to receive one or multiple `PromptMessages` from the server associated with the `PromptResult` object. Similarly, to use a tool, you can use the `Call Tool` action to receive a `ToolResult` object that contains the return message of the tool.
 
 For both actions, you can pass an `ArgumentCollection` if the prompt or tool requires arguments (the information is available from the [discovered resources](#discover-resources)). The actions `Initialize Argument Collection` and `Argument Collection: Add New Input` help you construct the input for those actions.
 
-### Using MCP Client Module with GenAI Commons {#use-with-genai-commons}
+### Using MCP Client Module with GenAI Commons and Conversational UI {#use-with-genai-commons}
 
-The MCP Client module does not depend on any other modules. However, to make it easy to connect MCP tools with [GenAI Commons](/appstore/modules/genai/genai-for-mx/commons/) (and thus all platform-supported connectors), the module contains some examples to facilitate an integration between the MCP Client and GenAI Commons (and, for chat cases, with [ConversationalUI](/appstore/modules/genai/genai-for-mx/conversational-ui/)).
+To add all tools from an MCP server to a `GenAICommons.Request`, you can use the `Request: Add all tools from MCP server` toolbox action. This action will first list all tools from the provided MCP server configuration, iterate over them, and adding them one by one to the tool collection. The request can then be passed to a Chat Completions operation.
 
-In the **Map to GenAI Commons** folder, you can find three microflows that are excluded. You can copy them to your own application and include them. You need to fix a few errors by selecting the newly copied microflows again (same names, only the module is changed).
+You can also find an example [action microflow](/appstore/modules/genai/genai-for-mx/conversational-ui/#action-microflow) `ChatCompletions_MCPClient_ActionMicroflow` in the **Example Implementations** folder of the module. This microflow demonstrates how a Conversational UI chat action including MCP tools can be facilitated. Duplicate and include this microflow into your custom module and modify it according to your requirements.
 
-1. `Request_AddMCPTools` lists all tools from an MCP server and adds them to a `GenAICommons.Request` object. Call this microflow just before invoking [Chat Completions (with history)](/appstore/modules/genai/genai-for-mx/commons/#chat-completions-with-history), either in your [Conversational UI action microflow](/appstore/modules/genai/genai-for-mx/conversational-ui/#action-microflow) or within your custom logic. An example action microflow is available in the **Use in Conversational UI** folder.
-2. `Tool_OrchestrateToolCall` is an example microflow used at the end of `Request_AddMCPTools` microflow when adding a tool to the request. Each MCP tool is registered with the orchestration microflow, which is invoked when the LLM requests to use a tool.  The microflow handles the orchestration by passing the arguments from the tool to the MCP server, indicating which tool should be executed. The `ToolResult's` content is returned to the model to further processing of the user's request.
-3. `ToolCall_GetToolArgumentCollection` is a helper microflow to construct the `ArgumentCollection` for a tool based on a [Tool Call](/appstore/modules/genai/genai-for-mx/commons/#toolcall) and is called inside the orchestrate microflow.
-
-For `Request_AddMCPTools` and `Tool_OrchestrateToolCall` microflows above, configure the [MCPClientConfig](#client-connection-lifecycle) before establishing a connection. As the logic might be the same for both, you may create a sub-microflow to reuse it. By using the above microflows, you can integrate existing logic in your app or from the Conversational UI to facilitate a chat or any other GenAI use cases that involves tools.
-
-Currently, there is no out-of-the-box solution available for using prompts from MCP. You can get inspired by the MCP Client example in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475), where the prompts are displayed to the user to start a conversation in a chat interface.
+Currently, there is no out of the box solution available for using prompts from MCP. You can get inspired by the MCP Client example in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475), where the prompts are displayed to the user to start a conversation in a chat interface.
 
 ## Technical Reference
 

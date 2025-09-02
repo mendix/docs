@@ -19,9 +19,9 @@ We performed association storage type migration for associations in the domain m
 
 This domain model was used to measure migration time for the following cases:
 
-- **Many-to-one association:** Each of N objects of entity `Many` is associated to one of 10 objects of entity `ToOne`
-- **One-to-one association:** Each of N objects of entity `One` is associated to one of N objects of entity `ToOne`
-- **10 many-to-one associations in one entity:** Each of N objects of entity `Multiple` has 10 associations to objects of entities `Target01` to `Target10`. This means that there are 10*N associations being migrated.
+* **Many-to-one association:** Each of N objects of entity `Many` is associated to one of 10 objects of entity `ToOne`
+* **One-to-one association:** Each of N objects of entity `One` is associated to one of N objects of entity `ToOne`
+* **10 many-to-one associations in one entity:** Each of N objects of entity `Multiple` has 10 associations to objects of entities `Target01` to `Target10`. This means that there are 10*N associations being migrated.
 
 For every database vendor, we ran migrations for 3 different values of N. For each such configuration, we executed the migration 10 times and measured the average migration time over those 10 runs.
 

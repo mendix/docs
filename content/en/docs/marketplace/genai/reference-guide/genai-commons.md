@@ -23,7 +23,7 @@ The current scope of the module is focused on text and image generation, as well
 
 ### Dependencies {#dependencies}
 
-The GenAI Commons module requires Mendix Studio Pro version [9.24.2](/releasenotes/studio-pro/9.24/#9242) or above.
+The GenAI Commons module requires Mendix Studio Pro version 10.24.0 or above.
 
 You must also download the [Community Commons](/appstore/modules/community-commons-function-library/) module.
 

@@ -161,7 +161,7 @@ $form-input-border-focus-color: $brand-primary;
 ## Other quick wins
 ### Page titled
 
-Set the title of every page, to ensure it doesn’t end up with the url in the tab. SC 2.4.2. [Page titled](https://www.w3.org/TR/WCAG22/#page-titled)
+Every page needs a meaningful name that describes the page. Having just "Page" for example isn't enough to make the page easy to find between other tabs. SC 2.4.2. [Page titled](https://www.w3.org/TR/WCAG22/#page-titled)
 
 <add general page title input thing>
 

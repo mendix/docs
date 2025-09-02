@@ -8,7 +8,7 @@ weight: 45
 
 `HttpRequest` is a system entity that represents a request to a server. `HttpResponse` represents the response from the server. Use these entities when [publishing](/refguide10/published-rest-services/) or [consuming](/refguide10/consumed-rest-services/) REST services.
 
-{{< figure src="/attachments/refguide10/modeling/integration/http-request-and-response-entities/http-request-and-response-domain-model.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/integration/rest-services/http-request-and-response-entities/http-request-and-response-domain-model.png" class="no-border" >}}
 
 ## HttpRequest {#http-request}
 

@@ -1,13 +1,13 @@
 ---
 title: "Supported Providers"
 url: /developerportal/deploy/private-cloud-supported-environments/
-description: "Describes which providers are supported by Mendix for Private Cloud"
+description: "Describes which providers are supported by Mendix on Kubernetes"
 weight: 100
 ---
 
 ## Introduction
 
-Mendix for Private Cloud depends on external services to deploy and run Mendix apps.
+Mendix on Kubernetes depends on external services to deploy and run Mendix apps.
 This document covers which providers and services are officially supported by the Mendix Operator.
 
 ## Kubernetes Cluster Types
@@ -18,7 +18,7 @@ We currently support deploying to the following Kubernetes cluster types:
 
 * [Amazon Elastic Kubernetes Service](https://aws.amazon.com/eks/) (EKS)
 {{% alert color="info" %}}
-If you want to deploy your app to Amazon EKS, consider using the Mendix for Amazon EKS Reference Deployment. For more information, see [Mendix for Amazon EKS—Terraform module](https://aws.amazon.com/solutions/partners/terraform-modules/mendix-eks/).
+If you want to deploy your app to Amazon EKS, consider using the Mendix for Amazon EKS Reference Deployment. For more information, see [Mendix for Amazon EKS—Terraform module](https://registry.terraform.io/modules/aws-ia/mendix-private-cloud/aws/latest).
 {{% /alert %}}
 * [Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/)
 * [Red Hat OpenShift Container Platform](https://www.openshift.com/)
@@ -26,7 +26,7 @@ If you want to deploy your app to Amazon EKS, consider using the Mendix for Amaz
 * [k3s](https://k3s.io/)
 * [minikube](https://minikube.sigs.k8s.io/docs/)
 * [Google Cloud Platform](https://cloud.google.com/)
-* [Google Kubernetes Engine- Autopilot](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview). For more information, see [Private Cloud Cluster: GKE Autopilot Workarounds](/developerportal/deploy/private-cloud-cluster/#gke-autopilot-workarounds)
+* [Google Kubernetes Engine- Autopilot](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview). For more information, see [Mendix on Kubernetes Cluster: GKE Autopilot Workarounds](/developerportal/deploy/private-cloud-cluster/#gke-autopilot-workarounds)
 
 {{% alert color="warning" %}}
 If deploying to Red Hat OpenShift, you need to specify that specifically when creating your deployment. All other cluster types use generic Kubernetes operations.
@@ -34,25 +34,25 @@ If deploying to Red Hat OpenShift, you need to specify that specifically when cr
 
 #### Supported Versions{#supported-versions}
 
-Mendix for Private Cloud Operator `v2.*.*` is the latest version which officially supports:
+Mendix on Kubernetes Operator `v2.*.*` is the latest version which officially supports:
 
 * Kubernetes versions 1.19 through 1.33
-* OpenShift 4.6 through 4.18
+* OpenShift 4.6 through 4.19
 
 {{% alert color="warning" %}}
 Kubernetes 1.22 is a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
 
 This version of Kubernetes is not yet offered or fully supported by most distributions and providers.
 
-Mendix for Private Cloud Operator v2.*.*. extends support for Kubernetes versions starting from 1.20 onwards and is confirmed to work seamlessly with Kubernetes version 1.22.
+Mendix on Kubernetes Operator v2.*.*. extends support for Kubernetes versions starting from 1.20 onwards and is confirmed to work seamlessly with Kubernetes version 1.22.
 
-Existing clusters running Mendix for Private Cloud Operator v1.\*.\* will need to be upgraded to Kubernetes 1.21 and Mendix for Private Cloud Operator v2.\*.\* **before** upgrading to Kubernetes 1.22.
+Existing clusters running Mendix on Kubernetes Operator v1.\*.\* will need to be upgraded to Kubernetes 1.21 and Mendix on Kubernetes Operator v2.\*.\* **before** upgrading to Kubernetes 1.22.
 
 While EOLed components are expected to remain compatible, it is important to note that we do not actively test them. This is because vendors may remove End-of-Life (EOL) versions due to security vulnerabilities (CVEs).
 
 {{% /alert %}}
 
-Mendix for Private Cloud Operator `v1.12.*` is an LTS release which officially supports older Kubernetes versions:
+Mendix on Kubernetes Operator `v1.12.*` is an LTS release which officially supports older Kubernetes versions:
 
 * Kubernetes versions 1.13 through 1.21
 * OpenShift 3.11 through 4.7
@@ -84,23 +84,23 @@ Only core *Connected mode* features support *ARM64*. The following features **do
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-If the cluster is running nodes with multiple architectures (for example, *x86-64* and *ARM64*), the namespace where Mendix for Private Cloud is installed should use a fixed (specified) architecture. One way to do this is by configuring a [PodNodeSelector](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#podnodeselector) for that namespace, and only using nodes with a specific architecture (for example, `amd64`).
+If the cluster is running nodes with multiple architectures (for example, *x86-64* and *ARM64*), the namespace where Mendix on Kubernetes is installed should use a fixed (specified) architecture. One way to do this is by configuring a [PodNodeSelector](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#podnodeselector) for that namespace, and only using nodes with a specific architecture (for example, `amd64`).
 
 The image builder doesn't build multiple architecture images at the moment.
 {{% /alert %}}
 
 ### Unsupported Cluster Types
 
-It is not possible to use Mendix for Private Cloud in [OpenShift Online](https://www.openshift.com/products/online/) (all editions, including Starter and Pro) or [OpenShift Developer Sandbox](https://developers.redhat.com/developer-sandbox) because they don't allow the installation of Custom Resource Definitions.
+It is not possible to use Mendix on Kubernetes in [OpenShift Online](https://www.openshift.com/products/online/) (all editions, including Starter and Pro) or [OpenShift Developer Sandbox](https://developers.redhat.com/developer-sandbox) because they don't allow the installation of Custom Resource Definitions.
 
 Kubernetes included with [Docker Desktop](https://docs.docker.com/desktop/kubernetes/) is not officially supported.
 
 ## Container Registries{#container-registries}
 
-Mendix for Private Cloud builds container images for every app and pushes them to the registry. It needs credentials to access the registry and permissions to push images into the registry.
+Mendix on Kubernetes builds container images for every app and pushes them to the registry. It needs credentials to access the registry and permissions to push images into the registry.
 
-Images are pulled from the registry by Kubernetes, not by Mendix for Private Cloud.
-The configuration script for Mendix for Private Cloud can configure Kubernetes image pull secrets and use the same credentials it uses for pushing images (for all registries except EKS).
+Images are pulled from the registry by Kubernetes, not by Mendix on Kubernetes.
+The configuration script for Mendix on Kubernetes can configure Kubernetes image pull secrets and use the same credentials it uses for pushing images (for all registries except EKS).
 For large-scale or enterprise deployments, it may be better to configure image pulls on a cluster-wide level, or to configure separate, read-only image pull credentials.
 
 ### Local Registry
@@ -195,7 +195,7 @@ The following standard PostgreSQL databases are supported:
 * PostgreSQL 17
 
 {{% alert color="info" %}}
-While Mendix for Private Cloud supports all Postgres versions listed above, the Mendix Runtime might require a more specific Postgres version.
+While Mendix on Kubernetes supports all Postgres versions listed above, the Mendix Runtime might require a more specific Postgres version.
 
 For best compatibility, use the newest available version of Postgres.
 {{% /alert %}}
@@ -232,7 +232,7 @@ For every Mendix app environment, a new database schema and user (role) will be 
 By default, the Mendix Operator will first connect to the database server with TLS enabled; if the database server doesn't support TLS, the Mendix Operator will reconnect without TLS.
 To ensure compatibility with all PostgreSQL databases (including ones with self-signed certificates), all TLS CAs are trusted by default.
 
-If Strict TLS is enabled, Mendix for Private Cloud will connect to the PostgreSQL server with TLS and validate the PostgreSQL server's TLS certificate. In this case, the connection will fail if:
+If Strict TLS is enabled, Mendix on Kubernetes will connect to the PostgreSQL server with TLS and validate the PostgreSQL server's TLS certificate. In this case, the connection will fail if:
 
 * the PostgreSQL server has an invalid certificate
 * or its certificate is signed by an unknown certificate authority
@@ -270,7 +270,7 @@ For every Mendix app environment, a new database, user, and login will be create
 {{% /alert %}}
 
 {{% alert color="info" %}}
-By default, Mendix for Private Cloud will not enforce encryption. Encryption can be enforced in SQL Server if required.
+By default, Mendix on Kubernetes will not enforce encryption. Encryption can be enforced in SQL Server if required.
 
 If Strict TLS is enabled, the Mendix Operator will connect to SQL server with TLS and validate the SQL Server's TLS certificate. In this case, the connection will fail if
 
@@ -320,7 +320,7 @@ Without etcd, MinIO will disable its admin API – which is required by the Mend
 
 ### Amazon S3
 
-[Amazon S3](https://aws.amazon.com/s3/) is supported. Mendix for Private Cloud supports multiple ways of managing and accessing S3 buckets: from creating a new S3 bucket and IAM account per environment to sharing an account and bucket by all environments in a namespace.
+[Amazon S3](https://aws.amazon.com/s3/) is supported. Mendix on Kubernetes supports multiple ways of managing and accessing S3 buckets: from creating a new S3 bucket and IAM account per environment to sharing an account and bucket by all environments in a namespace.
 
 A complete list of supported S3 modes and their required IAM permissions for each one is available in [storage plan](/developerportal/deploy/standard-operator/#storage-plan)
 configuration details.
@@ -350,7 +350,7 @@ Mendix Operator will need the endpoint, access key, and secret key to access the
 
 {{% alert color="info" %}}
 DNS, load balancing and the ingress controller should be configured first for the whole Kubernetes cluster.
-Mendix for Private Cloud will use the existing ingress controller.
+Mendix on Kubernetes will use the existing ingress controller.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
@@ -384,7 +384,7 @@ It is also possible to provide a custom TLS configuration for individual environ
 
 ### Ingress
 
-Mendix for Private Cloud is compatible with the following ingress controllers:
+Mendix on Kubernetes is compatible with the following ingress controllers:
 
 * [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/)
 * [Traefik](https://traefik.io/traefik/)
@@ -422,21 +422,21 @@ Starting from Mendix Operator v1.11.0, Mendix app environments can use a [Linker
 
 ### Service Only
 
-Mendix for Private Cloud can create Services without an Ingress.
-In this way, the Ingress objects can be managed separately from Mendix for Private Cloud.
+Mendix on Kubernetes can create Services without an Ingress.
+In this way, the Ingress objects can be managed separately from Mendix on Kubernetes.
 
-Mendix for Private Cloud can create Services that are compatible with:
+Mendix on Kubernetes can create Services that are compatible with:
 
 * [AWS Network Load Balancer](https://docs.aws.amazon.com/eks/latest/userguide/network-load-balancing.html)
 * AWS Classic Load Balancer
 
 ### Service Mesh Support
 
-Starting with Mendix Operator v2.5.0, the following service meshes can be enabled for the entire Mendix for Private Cloud namespace:
+Starting with Mendix Operator v2.5.0, the following service meshes can be enabled for the entire Mendix on Kubernetes namespace:
 
 * [Istio](https://istio.io/)
 * [Linkerd](https://linkerd.io)
 
-If service mesh sidecar injection is enabled, all communication between pods in the Mendix for Private Cloud namespace will happen through the service mesh.
+If service mesh sidecar injection is enabled, all communication between pods in the Mendix on Kubernetes namespace will happen through the service mesh.
 
 Mendix Operator v1.11.0 added support for service mesh sidecar injection, but only for app environment pods.

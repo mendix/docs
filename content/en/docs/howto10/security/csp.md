@@ -36,7 +36,7 @@ To upgrade your theme directory to latest version, complete the following steps:
 #### In React Client
 
 {{% alert color="info" %}}
-In Mendix versions 10.7.0 and above, there is an alternative version of the Mendix Client written in React. This React client was released into [beta](/releasenotes/beta-features/) in Mendix 10.7. As of Mendix 10.18, it is in GA. 
+In Mendix versions 10.7.0 and above, there is an alternative version of the Mendix Client written in React. This React client was released into [beta](/releasenotes/release-status/) in Mendix 10.7. As of Mendix 10.18, it is in GA. 
 {{% /alert %}}
 
 Create a new file in your theme folder (*theme/web/appSetup.js*) with the following:

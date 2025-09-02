@@ -2,7 +2,6 @@
 title: "Show a Message Box Using Web API"
 linktitle: "Message Box"
 url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/messagebox-api/
-weight: 50
 ---
 
 ## Introduction
@@ -15,7 +14,7 @@ This how-to uses the results of [Get Started with the Web Extensibility API](/ap
 
 ## Showing a Message Box
 
-Firstly, you need to create a menu which will display a dialog with text. This is done in the `loaded` event in `Main`.
+First, create a menu which will display a dialog with text. This is done in the `loaded` method of your main entry point (`src/main/index.ts`)
 
 You can learn how to do that in [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/).
 
@@ -35,54 +34,55 @@ where
 * `<message>` is the message to display.
 * `<message-details>` is an optional extended message which is displayed in an expandable area which is initially collapsed.  
 
-The full typescript file to implement these three menu items and message boxes is as follows.
+The full TypeScript file (`src/main/index.ts`) to implement these three menu items and message boxes is as follows.
 
 ```typescript
-import { IComponent, Menu, studioPro } from "@mendix/extensions-api";
-const messageBoxApi = studioPro.ui.messageBoxes;
-const menuApi = studioPro.ui.extensionsMenu;
+import { IComponent, Menu, getStudioProApi } from "@mendix/extensions-api";
 
 const show_info_menu_id = "show-info-id";
 const show_error_menu_id = "show-error-id";
 const show_warning_menu_id = "show-warning-id";
 
-menuApi.addEventListener("menuItemActivated", (args) => {
-  if (args.menuId === show_info_menu_id)
-    messageBoxApi.show("info", "This is information.", "Extra info");
-  if (args.menuId === show_error_menu_id)
-    messageBoxApi.show("error", "This is an error.", "Extra error details");
-  if (args.menuId === show_warning_menu_id)
-    messageBoxApi.show(
-      "warning",
-      "This is a warning.",
-      "Extra warning details"
-    );
-});
+export const component: IComponent = {
+    async loaded(componentContext) {
+        const studioPro = getStudioProApi(componentContext);
 
-class Main implements IComponent {
-  async loaded() {
-    const infoMenu: Menu = {
-      caption: "Show Info",
-      menuId: show_info_menu_id,
-    };
+        const messageBoxApi = studioPro.ui.messageBoxes;
+        const menuApi = studioPro.ui.extensionsMenu;
 
-    const errorMenu: Menu = {
-      caption: "Show Error",
-      menuId: show_error_menu_id,
-    };
+        menuApi.addEventListener("menuItemActivated", (args) => {
+            if (args.menuId === show_info_menu_id)
+                messageBoxApi.show("info", "This is information.", "Extra info");
+            if (args.menuId === show_error_menu_id)
+                messageBoxApi.show("error", "This is an error.", "Extra error details");
+            if (args.menuId === show_warning_menu_id)
+                messageBoxApi.show(
+                    "warning",
+                    "This is a warning.",
+                    "Extra warning details"
+                );
+        });
 
-    const warningMenu: Menu = {
-      caption: "Show Warning",
-      menuId: show_warning_menu_id,
-    };
+        const infoMenu: Menu = {
+            caption: "Show Info",
+            menuId: show_info_menu_id,
+        };
 
-    await menuApi.add(infoMenu);
-    await menuApi.add(errorMenu);
-    await menuApi.add(warningMenu);
-  }
+        const errorMenu: Menu = {
+            caption: "Show Error",
+            menuId: show_error_menu_id,
+        };
+
+        const warningMenu: Menu = {
+            caption: "Show Warning",
+            menuId: show_warning_menu_id,
+        };
+
+        await menuApi.add(infoMenu);
+        await menuApi.add(errorMenu);
+        await menuApi.add(warningMenu);
+    }
 }
-
-export const component: IComponent = new Main();
 ```
 
 For example, the **Show Info** menu item will display the following message box.

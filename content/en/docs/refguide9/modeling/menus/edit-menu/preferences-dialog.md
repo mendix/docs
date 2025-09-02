@@ -197,7 +197,7 @@ Default: *enabled*
 ### Dark Mode Preview {#dark-mode}
 
 {{% alert color="info" %}}
-This functionality is currently in [beta](/releasenotes/beta-features/).
+This functionality is currently in [beta](/releasenotes/release-status/).
 {{% /alert %}}
 
 The **Dark mode** option allows you to preview to the dark mode of the Studio Pro user interface. 
@@ -217,7 +217,7 @@ Default: *enabled*
 ### Properties Pane {#properties}
 
 {{% alert color="info" %}}
-This functionality is currently in [beta](/releasenotes/beta-features/).
+This functionality is currently in [beta](/releasenotes/release-status/).
 {{% /alert %}}
 
 The **New Properties pane preview** option allows you to enable the overhauled UI for viewing and changing properties in Studio Pro.

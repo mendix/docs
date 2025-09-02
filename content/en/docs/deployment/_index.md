@@ -60,11 +60,11 @@ You can deploy your app to Insights Hub, the cloud-based, open IoT operating sys
 
 To find out how to do this, read [Siemens Insights Hub](/developerportal/deploy/deploying-to-mindsphere/).
 
-## Private Cloud
+## Mendix on Kubernetes
 
-Mendix for Private Cloud allows you to deploy and manage your Mendix apps in a Kubernetes private cloud cluster.
+Mendix on Kubernetes allows you to deploy and manage your Mendix apps in a private Kubernetes cluster.
 
-The instructions for doing this are in [Private Cloud](/developerportal/deploy/private-cloud/).
+The instructions for doing this are in [Mendix on Kubernetes](/developerportal/deploy/private-cloud/).
 
 ## Cloud Foundry
 
@@ -84,7 +84,7 @@ Deploying to Azure is possible from the [Azure Marketplace](https://azuremarketp
 
 ### Mendix on Azure
 
-Mendix on Azure is a deployment option that makes use of some of the features of Mendix for Private Cloud in an opinionated way. For more information, see [Mendix on Azure](/developerportal/deploy/mendix-on-azure/).
+Mendix on Azure is a deployment option that makes use of some of the features of Mendix on Kubernetes in an opinionated way. For more information, see [Mendix on Azure](/developerportal/deploy/mendix-on-azure/).
 
 {{% alert color="info" %}} This feature is currently available to participating customers. For more information, contact your Customer Success Manager. {{% /alert %}}
 

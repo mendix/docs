@@ -27,6 +27,22 @@ To fix this issue, do the following:
 4. Remove **config.json**.
 5. Reopen the Mendix Native Mobile Builder.
 
+## Release 1.0.138 {#10138}
+
+**Release date: August 5, 2025**
+
+### Fixes
+
+* We fixed an issue that caused slow initial build times when first using the Native Builder UI.
+
+## Release 1.0.137 {#10137}
+
+**Release date: July 15, 2025**
+
+### Fixes
+
+* We fixed an issue where the Native Builder UI was not replacing previously-added font files when updating font configurations.
+
 ## Release 1.0.136 {#10135}
 
 **Release date: April 1, 2025**

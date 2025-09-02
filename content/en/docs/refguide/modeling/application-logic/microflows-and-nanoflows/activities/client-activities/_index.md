@@ -10,7 +10,7 @@ weight: 50
 
 The following are the client activities you can use in your microflow or nanoflow:
 
-* [Nanoflow call](/refguide/nanoflow-call/) (nanoflows only) – calls another nanoflow
+* [Call nanoflow](/refguide/nanoflow-call/) (nanoflows only) – calls another nanoflow
 * [Close page](/refguide/close-page/) – closes the currently open page
 * [Download file](/refguide/download-file/) (microflows only) – downloads a file using the browser
 * [Show home page](/refguide/show-home-page/) (microflows only) – opens the home page for the end-user 

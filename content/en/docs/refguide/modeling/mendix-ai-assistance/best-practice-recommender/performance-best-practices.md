@@ -18,7 +18,7 @@ This section outlines performance issues and Mendix best practices for optimizin
 
 <a id="mxp002"></a>When an object has calculated attributes, each time this object is changed or retrieved from the storage, its calculated attributes are computed by calling a microflow. If the logic behind calculated attributes retrieves other objects or executes Integration activities, it will result in an extra load (and delay) while the outcome of the logic is not used. Creating calculated attributes always affects performance, so you should evaluate whether it is necessary to use them. For more information on attributes, see [Attributes](/refguide/attributes/).
 
-In most cases, the logic behind a calculated attribute is always executed when the object is used. It is executed whenever there is no retrieval schema for a Retrieve activity (which is the case with data grids). The logic behind calculated attributes is executed in the following elements:
+In most cases, the logic behind a calculated attribute is always executed when the object is used. It is executed whenever there is no retrieval schema for a Retrieve object(s) activity (which is the case with data grids). The logic behind calculated attributes is executed in the following elements:
 
 * Retrieve and change object activities in microflows
 * In UI widgets (for example, data views, custom widgets)

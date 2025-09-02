@@ -15,14 +15,6 @@ aliases:
 
 The **Settings** page in the [navigation pane](/developerportal/#navigation-pane) of **Apps** presents an overview of your app.
 
-On the top of the page, you can see the image of the app, the app name, and the company that owns the app. You can also find the **Watch** / **Stop Watching** toggle, which enables or disables notifications for this app.
-
-{{< figure src="/attachments/developerportal/general/settings/general-information.png"  class="no-border" >}}
-
-{{% alert color="info" %}}
-Only users with the **App Settings** permission can edit the image and the app name.
-{{% /alert %}}
-
 The **Settings** page always contains the following tabs:
 
 * **General**
@@ -34,6 +26,22 @@ These tabs are only available for users with the **App Settings** permission:
 * **Project Management**
 * **History**
 * **Story Archive**
+
+## Page Header {#settings-page-header}
+
+The page header displays the following information:
+
+* The app image – You can change the image by clicking it.
+* The app name – You can change the name of the app by clicking the pencil icon next to it.    
+    Renaming the app in the Mendix Portal does not rename it in Studio Pro. The app name in Studio Pro is tied to its *.mpr* file. However, changing the name of the *.mpr* file is not supported, and we strongly advise against it. For more information, refer to the [Mendix MPR Storage](/refguide/version-control/#mpr-format) section in *Version Control*. 
+* The company that owns the app.
+* The **Watch** / **Stop Watching** toggle – You can enable or disable notifications for this app.
+
+{{< figure src="/attachments/developerportal/general/settings/general-information.png"  class="no-border" >}}
+
+{{% alert color="info" %}}
+Only users with the **App Settings** permission can edit the image and the app name.
+{{% /alert %}}
 
 ## General {#general}
 
@@ -49,7 +57,10 @@ In this tab, you can find the following items:
     * **Delete Project**
 
 {{% alert color="info" %}}
-Only users with the **App Settings** permission can change the description of the project.<br/>Only users with the **App Settings** permission can deactivate or delete a project. For details, see [How to Leave, Delete, or Deactivate an App](/developerportal/general/leave-delete-app/).
+Only users with the **App Settings** permission can do the following:
+
+* Change the description of the project.
+* Deactivate or delete a project. For details, see [Leaving, Deleting, or Deactivating an App](/developerportal/general/leave-delete-app/).
 {{% /alert %}}
 
 ## Cloud Settings {#cloud-settings}
@@ -66,18 +77,18 @@ Specific steps for configuring different cloud platforms are provided here:
 
 * [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
 * [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/)
-* [Mendix Private Cloud](/developerportal/deploy/private-cloud/)
+* [Mendix on Kubernetes](/developerportal/deploy/private-cloud/)
 
 ## Access Management {#managing-app-users}
 
 On the **Access Management** tab, you can manage and invite app users. App users are end-users who can access the deployed app on specific environments. They can use and test your deployed app, and provide feedback.
 
-To manage users or invite users for an app deployed on a specific environment, click **Manage Users** or **Invite Users** for that environment. For more information, see the [Managing Users](#manage-users) and [Inviting Users](#invite-users) section below.
+To manage users or invite users for an app deployed on a specific environment, click **Manage Users** or **Invite Users** for that environment. For more information, see the [Managing Users](#manage-users) and [Inviting Users](#invite-users) sections on this page.
 
 On the tab, you can only see the environments that satisfy the following requirements:
 
-* [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/) is implemented in the app using the [Mendix SSO](/appstore/modules/mendix-sso/) module (for more information, see [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/))
-* You are currently assigned a user role in the app which allows you to manage other users (for more information, see the [User Management Properties](/refguide/user-roles/#user-management) section of *User Roles*)
+* [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/) is implemented in the app using the [Mendix SSO](/appstore/modules/mendix-sso/) module. For more information, refer to [Mendix Single Sign-On](/developerportal/deploy/mendix-sso/).
+* You are currently assigned a user role in the app which allows you to manage other users. For more information, refer to the [User Management Properties](/refguide/user-roles/#user-management) section of *User Roles*.
 
 {{% alert color="info" %}}
 When deploying your application to a non-production environment, the deploying user and the Technical Contact are always assigned the Administrator user role.
@@ -91,7 +102,7 @@ When you click **Manage Users** for your environment, a dialog box opens with a 
 
 To remove an app user from the environment, click **Remove** by their name.
 
-To edit an app user's roles, click **Edit** by their name. Permissions for these roles (for example, **User** or **Administrator**) correspond to what you have configured for your app's user roles in [App Security](/refguide/app-security/#user-roles) in Mendix Studio Pro. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
+To edit an app user's roles, click **Edit** by their name. Permissions for these roles, such as **User** or **Administrator**, correspond to what you have configured for your app's user roles in [App Security](/refguide/app-security/#user-roles) in Mendix Studio Pro. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
 
 {{% alert color="info" %}}
 If an app user has been granted access to an app environment through a [group](/control-center/groups/), only a Mendix Admin can remove them from that environment (by removing them from that group) or edit the roles granted by that group policy.
@@ -99,17 +110,15 @@ If an app user has been granted access to an app environment through a [group](/
 
 ### Inviting Users {#invite-users}
 
-To invite new app users to your app, click **Invite Users** for that environment or via the **Manage Users** and follow these steps:
+To invite new app users to your app, click **Invite Users** within that environment or in the **Manage Users** window, and follow these steps:
 
 1. Enter the email addresses of the end-users you want to invite.
 2. Click **Include your app team** to include invitations to all the members of your [Team](/developerportal/general/team/). This may be useful, because people invited to join your team are not added as app users automatically.
 3. Click **Add to invitee list**.
-4. Select the role for the App User (for example, **User** or **Administrator**). Permissions for these roles correspond to what you have configured for your app's user roles in [App Security](/refguide/app-security/#user-roles) in Mendix Studio Pro. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
+4. Select the role for the app user (for example, **User** or **Administrator**). Permissions for these roles correspond to what you have configured for your app's user roles in [App Security](/refguide/app-security/#user-roles) in Mendix Studio Pro. If you have created a customized role, you need to publish the app before you are able to see and assign it here.
 5. Click **Next** to send the invitation.
 
-The invitee will receive an email asking them to authorize access to their Mendix account on this screen.
-
-After they provide authorization, they will be brought to your deployed app.
+The invitee will receive an email asking them to authorize access to their Mendix account. After they provide authorization, they are directed to your deployed app.
 
 ## Project Management {#project-management}
 
@@ -133,7 +142,7 @@ The **History** tab presents the collaboration actions for the app. On this page
 
 {{< figure src="/attachments/developerportal/general/settings/history.png"   width="700"  class="no-border" >}}
 
-When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](/developerportal/app-insights/feedback/) will be presented.
+When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](/developerportal/app-insights/feedback/) are displayed.
 
 ## Read More
 

@@ -144,7 +144,9 @@ Each boundary event can have only one active instance of the event path at a tim
 
 If there are boundary event paths that have not yet been completed and the workflow's main path ends, the ongoing boundary event paths and their activities will be aborted. This will also occur if the workflow is aborted, retried, or restarted.
 
-With non-interrupting boundary events, the parent activity remains active/in-progress when an event is triggered (which means that the parent activity is not interrupted). For example, when a timer boundary event on a user task is triggered after 2 days, this task will remain in progress and the path defined below the timer boundary event is executed. When the boundary event path reaches the **End of Boundary Path**, the workflow will await the completion of the parent activity. 
+With non-interrupting boundary events, the parent activity remains active/in-progress when an event is triggered (which means that the parent activity is not interrupted). For example, when a timer boundary event on a user task is triggered after 2 days, this task will remain in progress and the path defined below the timer boundary event is executed. When the boundary event path reaches the **End of Boundary Path**, the workflow will await the completion of the parent activity.
+
+With interrupting boundary events, the parent activity is aborted and the alternative path defined by the boundary event will be executed. This path will then become the main path of the workflow. An interrupting boundary event has two possible ends (an End event or a [Jump activity](/refguide/jump-activity/)). The End event can be switched to a Jump activity in any scenario. However, when an interrupting boundary event is modelled in a parallel split or a non-interrupting boundary event path, only a Jump activity can be used.
 
 #### Measures Against Endless Loops
 
@@ -176,9 +178,13 @@ It is advised to not leave **Failed** or **Incompatible** workflows as **Failed*
 
 User task activities represent actions that have to be completed by a user. Therefore, user tasks can only be completed by named users in Mendix. User tasks are shown in a Task Inbox page from which they can be completed.
 
-#### Task Inbox
+#### Task Inbox {#task-inbox}
 
-The Task Inbox page shows objects from the **System.WorkflowUserTask** entity. The access rules allow to select only `InProgress` user tasks that either target the current user (the current user is part of the **System.WorkflowUserTask_TargetUsers** association) or are assigned to the current user (the current user is set in the **System.WorkflowUserTask_Assignee** association). For more information, see the access rules of the **System.WorkflowUserTask** entity.
+The Task Inbox page shows objects from the **System.WorkflowUserTask** entity.
+The access rules allow to select only `InProgress` user tasks that either target the current user (the current user is part of the **System.WorkflowUserTask_TargetUsers** association,
+or the current user is indirectly part of the **System.WorkflowGroup_User** association through the **System.WorkflowUserTask_TargetGroups** assocation)
+or are assigned to the current user (the current user is set in the **System.WorkflowUserTask_Assignee** association).
+For more information, see the access rules of the **System.WorkflowUserTask** entity.
 
 In case you want to show specific information from the **Workflow Context** object in the Task Inbox, there are two options:
 

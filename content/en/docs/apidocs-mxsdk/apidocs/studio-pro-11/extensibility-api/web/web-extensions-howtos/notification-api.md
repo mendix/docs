@@ -2,7 +2,6 @@
 title: "Show a Pop-up Notification Using Web API"
 linktitle: "Show Notification"
 url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/notification-api/
-weight: 30
 ---
 
 ## Introduction
@@ -32,34 +31,35 @@ With the notifications API, you can show a pop-up notification when your extensi
     export default { Check } as IIcons;
     ```
 
-5. Create an `images.d.ts` file. This is a `declaration` file, as indicated by the `d` file extension.
+5. Create an `images.d.ts` file inside the `assets` folder. This is a `declaration` file, as indicated by the `d` file extension.
 6. Add the line `declare module "*.png";` to the `images.d.ts` file. This tells TypeScript that any import ending in *.png* should be treated as a module. This enables TypeScript to handle *.png* files correctly when you import them in your code and allows you to use images in your extensions.
 7. Replace your `src/main/index.ts` file with the following, using the appropriate icon name in place of `Check`:
 
     ```typescript
-    import { IComponent, studioPro } from "@mendix/extensions-api";
+    import { IComponent, getStudioProApi } from "@mendix/extensions-api";
     import Icons from "../assets/Icons";
 
-    const notificationsApi = studioPro.ui.notifications;
-
-    class Main implements IComponent {
-        async loaded() {
+    export const component: IComponent = {
+        async loaded(componentContext) {
+            const studioPro = getStudioProApi(componentContext);
+            const notificationsApi = studioPro.ui.notifications;
             await notificationsApi.show({
-                title: "Extension Loaded",
-                message: "The extension was successfully loaded",
-                displayDurationInSeconds: 5,
-                icon: Icons.Check
+                    title: "Extension Loaded",
+                    message: "The extension was successfully loaded",
+                    displayDurationInSeconds: 5,
+                    icon: {
+                        relativePath: Icons.Check,
+                        componentName: "extension/myextension"
+                    }
             });
         }
     }
-
-    export const component: IComponent = new Main();
     ```
 
     This code does the following:
     
-    * It imports the `notificationsApi` from `studioPro.ui.notifications` to allow you to use the notifications API.
-    * It implements a `loaded` event, which calls the `show` method to show a pop-up notification for five seconds with the title `Extension Loaded`, a message, and the `check.png` icon you set up earlier. For more information, see the [Full Reference for Show Method](#reference) section below.
+    * It uses the `notificationsApi` from `studioPro.ui.notifications` to allow you to use the notifications API.
+    * It implements a `loaded` method, which calls the `show` method to show a pop-up notification for five seconds with the title `Extension Loaded`, a message, and the `check.png` icon you set up earlier. For more information, see the [Full Reference for Show Method](#reference) section below.
 
 Now, when the extension loads, your notification will show in the top-right corner of Studio Pro:
 

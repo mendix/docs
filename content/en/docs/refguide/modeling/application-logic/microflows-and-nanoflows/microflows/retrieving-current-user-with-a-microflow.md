@@ -31,9 +31,9 @@ Before you continue, make sure you have completed the following:
 To retrieve the currently logged-in user using the **Account** entity from the **Administration** module, do the following:
 
 1. Open an existing microflow or create a new one.
-2. Navigate to the **Toolbox** and search for the **Retrieve** activity.
-3. Drag the **Retrieve** activity into your microflow.
-4. Double-click the **Retrieve** activity to open its properties.
+2. Navigate to the **Toolbox** and search for the **Retrieve object(s)** activity.
+3. Drag the **Retrieve object(s)** activity into your microflow.
+4. Double-click the **Retrieve object(s)** activity to open its properties.
 5. Choose **From database** as the **Source**.
 6. Click **Select...** for **Entity**.
 7. In the **Select Entity** dialog box, go to **Marketplace modules** > **Administration**, and select **Account**.

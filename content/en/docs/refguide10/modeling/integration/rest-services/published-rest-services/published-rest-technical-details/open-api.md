@@ -54,3 +54,7 @@ Each operation generates an `Operation` object:
 | `parameters` | The path, query, and header parameters and their location and type information. |
 | `responses` | The OK response. If security is enabled, this is also the unauthorized response. |
 | `deprecated` | Set to true when the operation is marked as deprecated. |
+
+## Limitations
+
+- Certain [reserved keywords](https://swagger.io/docs/specification/v3_0/describing-parameters/#header-parameters) in OpenAPI 3.0 cannot be used as header parameter names. For example, using `Authorization` as a custom header key can cause conflicts since it is already reserved by the specification.

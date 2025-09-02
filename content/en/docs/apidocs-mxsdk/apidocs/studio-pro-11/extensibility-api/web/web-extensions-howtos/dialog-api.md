@@ -2,7 +2,6 @@
 title: "Open a Modal Dialog Using Web API"
 linktitle: "Open a Modal Dialog"
 url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/dialog-api/
-weight: 60
 ---
 
 ## Introduction
@@ -15,7 +14,7 @@ This how-to uses the results of [Get Started with the Web Extensibility API](/ap
 
 ## Opening a Modal Dialog
 
-Create a menu item to open the dialog. This is done inside the `loaded` event in `Main`. For more information, see [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/).
+Create a menu item to open the dialog. This is done inside the `loaded` event in the main entry point (`src/main/index.ts`). For more information, see [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/).
 
 In a listener event called `menuItemActivated`, the `studioPro.ui.dialogs.showModal(<dialogInfo>, <uiSpec>)` call opens a new tab where:
 
@@ -32,49 +31,49 @@ When the dialog's API `showModal` method is called, a `Promise` of `unknown` or 
 In the example below, the dialog will contain a form where an object is modified, then returned at closing time.
 {{% /alert %}}
 
-An example of the class `Main` to open a modal dialog called *My Extension Dialog* looks similar to the following:
+An example of the main entry point (`src/main/index.ts`) to open a modal dialog called *My Extension Dialog* looks similar to the following:
 
 ```typescript
-import { IComponent, studioPro, TabHandle } from "@mendix/extensions-api";
+import { IComponent, getStudioProApi } from "@mendix/extensions-api";
 
-class Main implements IComponent {
-  menuId = "myextension.ShowModalDialog";
+const menuId = "myextension.ShowModalDialog";
 
-  async loaded() {
-    // Add a menu item to the Extensions menu
-    await studioPro.ui.extensionsMenu.add({
-      menuId: menuId,
-      caption: "Show modal dialog",
-    });
+export const component: IComponent = {
+    async loaded(componentContext) {
+        const studioPro = getStudioProApi(componentContext);
 
-    // Open a modal dialog when the menu item is clicked
-    studioPro.ui.extensionsMenu.addEventListener(
-      "menuItemActivated",
-      async (args) => {
-        if (args.menuId === this.menuId) {
-          const result = await studioPro.ui.dialogs.showModal(
-            {
-              title: "Modal Dialog",
-              contentSize: { height: 170, width: 400 },
-            },
-            {
-              componentName: "extension/myextension",
-              uiEntrypoint: "dialog",
+        // Add a menu item to the Extensions menu
+        await studioPro.ui.extensionsMenu.add({
+            menuId: menuId,
+            caption: "Show modal dialog",
+        });
+
+        // Open a modal dialog when the menu item is clicked
+        studioPro.ui.extensionsMenu.addEventListener(
+            "menuItemActivated",
+            async (args) => {
+                if (args.menuId === menuId) {
+                    const result = await studioPro.ui.dialogs.showModal(
+                        {
+                            title: "Modal Dialog",
+                            contentSize: { height: 170, width: 400 },
+                        },
+                        {
+                            componentName: "extension/myextension",
+                            uiEntrypoint: "dialog",
+                        }
+                    );
+
+                    if (result !== null)
+                        await studioPro.ui.messageBoxes.show(
+                            "info",
+                            JSON.stringify(result)
+                    );
+                }
             }
-          );
-
-          if (result !== null)
-            await studioPro.ui.messageBoxes.show(
-              "info",
-              JSON.stringify(result)
-            );
-        }
-      }
-    );
-  }
+        );
+    }
 }
-
-export const component: IComponent = new Main();
 ```
 
 ## Filling the Dialog With Content
@@ -94,77 +93,109 @@ In the previous example, the `uiEntryPoint` property of the `<uispec>` object ha
 }
 ```
 
-1. Update `vite.config` to match the manifest with an entry for each tab. For example:
+1. Update `build-extension.mjs` to match the manifest with an entry for the new dialog entry point. Specifically, you need to add
+the `src/ui/dialog.tsx` endpoint to your build script and make sure the variable `appDir` stays unaltered. For example:
 
-   ```typescript
-   import { defineConfig, ResolvedConfig, UserConfig } from "vite";
+   ```typescript{hl_lines=["16-19"]}
+    import * as esbuild from 'esbuild'
+    import {copyToAppPlugin, copyManifestPlugin, commonConfig} from "./build.helpers.mjs"
+    import parseArgs from "minimist"
 
-   export default defineConfig({
-     build: {
-       lib: {
-         formats: ["es"],
-         entry: {
-           main: "src/main/index.ts",
-           dialog: "src/ui/dialog.tsx",
-         },
-       },
-       rollupOptions: {
-         external: ["@mendix/component-framework", "@mendix/model-access-sdk"],
-       },
-       outDir: "./dist/myextension",
-     },
-   } satisfies UserConfig);
+    const outDir = `dist/myextension`
+    const appDir = "<path to your application>"
+    const extensionDirectoryName = "extensions"
+
+    const entryPoints = [
+        {
+            in: 'src/main/index.ts',
+            out: 'main'
+        }   
+    ]
+
+    entryPoints.push({
+        in: 'src/ui/dialog.tsx',
+        out: 'dialog'
+    })
+
+    const args = parseArgs(process.argv.slice(2))
+    const buildContext = await esbuild.context({
+      ...commonConfig,
+      outdir: outDir,
+      plugins: [copyManifestPlugin(outDir), copyToAppPlugin(appDir, outDir, extensionDirectoryName)],
+      entryPoints
+    })
+
+    if('watch' in args) {
+        await buildContext.watch();
+    } 
+    else {
+        await buildContext.rebuild();
+        await buildContext.dispose();
+    }
    ```
 
-2. Add the `dialog.tsx` file for the web content:
+2. Add the `dialog.tsx` file for the web content inside the `src/ui` directory:
 
     ```typescript
-    import { studioPro } from "@mendix/extensions-api";
-    import { FormEvent, StrictMode } from "react";
-    import { createRoot } from "react-dom/client";
+      import { getStudioProApi, IComponent } from "@mendix/extensions-api";
+      import React, { FormEvent, StrictMode } from "react";
+      import { createRoot } from "react-dom/client";
 
-    const dialogId = new URLSearchParams(location.search).get("dialogId")!;
-    const person: { firstName?: string; lastName?: string } = {
-      firstName: undefined,
-      lastName: undefined,
-    };
+      const dialogId = new URLSearchParams(location.search).get("dialogId")!;
+      const person: { firstName?: string; lastName?: string } = {
+          firstName: undefined,
+          lastName: undefined,
+      };
 
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
-      studioPro.ui.dialogs.closeWithResult(dialogId, JSON.stringify(person));
-    };
+      export const component: IComponent = {
+          async loaded(componentContext) {
+              const studioPro = getStudioProApi(componentContext);
 
-    createRoot(document.getElementById("root")!).render(
-      <StrictMode>
-        <form onSubmit={handleSubmit}>
-          <p>
-            {" "}
-            <input
-              placeholder="First Name"
-              value={person.firstName}
-              onChange={(e) => (person.firstName = e.target.value)}
-            />
-          </p>
-          <p>
-            {" "}
-            <input
-              placeholder="Surname"
-              value={person.lastName}
-              onChange={(e) => (person.lastName = e.target.value)}
-            />
-          </p>
-          <p>
-            <button type="submit">Submit</button>
-            <button
-              type="button"
-              onClick={(_) => studioPro.ui.dialogs.close(dialogId)}
-            >
-              Cancel
-            </button>
-          </p>
-        </form>
-      </StrictMode>
-    );
+              const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+                  e.preventDefault();
+                  studioPro.ui.dialogs.closeWithResult(
+                      dialogId,
+                      JSON.stringify(person)
+                  );
+              };
+
+              createRoot(document.getElementById("root")!).render(
+                  <StrictMode>
+                      <form onSubmit={handleSubmit}>
+                          <p>
+                              {" "}
+                              <input
+                                  placeholder="First Name"
+                                  value={person.firstName}
+                                  onChange={(e) =>
+                                      (person.firstName = e.target.value)
+                                  }
+                              />
+                          </p>
+                          <p>
+                              {" "}
+                              <input
+                                  placeholder="Surname"
+                                  value={person.lastName}
+                                  onChange={(e) => (person.lastName = e.target.value)}
+                              />
+                          </p>
+                          <p>
+                              <button type="submit">Submit</button>
+                              <button
+                                  type="button"
+                                  onClick={(_) =>
+                                      studioPro.ui.dialogs.close(dialogId)
+                                  }
+                              >
+                                  Cancel
+                              </button>
+                          </p>
+                      </form>
+                  </StrictMode>
+              );
+          },
+      };
     ```
 
 Notice the `dialogId` property retrieved from the query parameters of the web page. This value is generated once the dialog API is first called. It is then passed back to the web content so the `close` or `closeWithResult` methods can be called successfully. The dialog's API needs this Id to close the correct dialog.

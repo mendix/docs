@@ -21,7 +21,7 @@ Available scenarios are described in sections below.
 ## Cherry Pick
 
 {{% alert color="info" %}}
-This functionality was known as **Port fix** in previous versions of Studio Pro. It has been renamed to **Cherry pick** to keep it more consistent with the native Git name for the operation.
+This functionality was known as **Port fix** in previous versions of Studio Pro. It has been renamed to **Cherry pick** to keep it more consistent with the native Git name.
 {{% /alert %}}
 
 This scenario allows you to move a fix from a maintenance branch line to the main line. If you just want to redo a small fix, a single commit is often enough.

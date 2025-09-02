@@ -59,7 +59,7 @@ Customers are responsible for developing, deploying, operating, integrating, and
 
 When a Mendix on Azure cluster is initialized, all components that are required to host Mendix apps are automatically deployed inside an Azure Resource group of your choosing. Mendix and Microsoft regularly push all required updates to your cluster to ensure that it remains compliant and secure.
 
-Because the updates are automated for all Mendix on Azure customers, you cannot modify any of these components directly in Azure. You also cannot influence the upgrade process. Because of that, you can only implement customizations that are offered in the Mendix on Azure and Private Cloud portals. Currently this includes the following customizations:
+Because the updates are automated for all Mendix on Azure customers, you cannot modify any of these components directly in Azure. You also cannot influence the upgrade process. Because of that, you can only implement customizations that are offered in the Mendix on Azure and Mendix on Kubernetes portals. Currently this includes the following customizations:
 
 * Adding custom tags to Azure resources
 * Changing the Azure Kubernetes Service tier
@@ -69,7 +69,7 @@ Because the updates are automated for all Mendix on Azure customers, you cannot 
 * Switching to internal load balancer exposure to enable apps that can only be reached privately
 * Changing IP address prefix of the subnet hosting AKS nodes (only at initial deployment)
 
-Any customization beyond what is offered as self-service through the Mendix on Azure and Mendix Private Cloud portal is not possible.
+Any customization beyond what is offered as self-service through the Mendix on Azure and Mendix on Kubernetes portal is not possible.
 
 ## Support Tickets
 
@@ -125,8 +125,8 @@ Mendix provides technical support for the following example scenarios:
 Mendix does not provide technical support in the following example scenarios:
 
 * Requests about how to integrate with other Azure Services that are beyond the scope of the product. Such requests can be supported by Mendix Expert Services or Mendix (infra) partners as part of (paid) consultancy engagements.
-* Requests to make configuration changes to underlying Azure services beyond what is offered as self-service in the Mendix on Azure and Mendix Private Cloud Portal. Since such changes are not possible with this service, customer may consider to adopt Mendix for Private Cloud instead.
-* Requests for any other type of customization on the resources deployed in customer's Azure subscription. Since such customization is not possible with this service, customer may consider to adopt Mendix for Private Cloud instead.
+* Requests to make configuration changes to underlying Azure services beyond what is offered as self-service in the Mendix on Azure and Mendix on Kubernetes Portal. Since such changes are not possible with this service, customer may consider to adopt Mendix on Kubernetes instead.
+* Requests for any other type of customization on the resources deployed in customer's Azure subscription. Since such customization is not possible with this service, customer may consider to adopt Mendix on Kubernetes instead.
 * Requests to fix security vulnerabilities in one of the managed components beyond what is automatically pushed during the weekly and quarterly update cycles. 
 
 ## Customer Responsibilities for Mendix on Azure Resources
@@ -160,5 +160,5 @@ There are some exceptions; for more information, see [SOC 2 Type 2 Compliance Ex
 ## Known Limitations
 
 * Mendix on Azure only supports hosting apps on Mendix versions 10.10 or later. Any app on an earlier version will fail to deploy successfully.
-* Due to the managed nature of this product, the following Private Cloud Deploy APIs are irrelevant and thus unavailable to customers: Create/Edit/Delete cluster and Create/Update/Delete namespace. All other build and deploy APIs are available and function as usual.
-* Because Mendix on Azure is directly dependent on Mendix for Private Cloud, issues that affect the Private Cloud may also affect Mendix on Azure deployments. For example, if the Private Cloud is down, it is not possible to create new Mendix on Azure clusters.
+* Due to the managed nature of this product, the following Mendix on Kubernetes Deploy APIs are irrelevant and thus unavailable to customers: Create/Edit/Delete cluster and Create/Update/Delete namespace. All other build and deploy APIs are available and function as usual.
+* Because Mendix on Azure is directly dependent on Mendix on Kubernetes, issues that affect the Mendix on Kubernetes may also affect Mendix on Azure deployments. For example, if the Mendix on Kubernetes is down, it is not possible to create new Mendix on Azure clusters.

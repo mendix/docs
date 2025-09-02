@@ -1,7 +1,7 @@
 ---
-title: "Creating a Private Cloud Cluster"
+title: "Creating a Mendix on Kubernetes Cluster"
 url: /developerportal/deploy/private-cloud-cluster/
-description: "Describes the processes for creating a Private Cloud cluster in the Mendix Portal"
+description: "Describes the processes for creating a Mendix on Kubernetes cluster in the Mendix Portal"
 weight: 10
 ---
 
@@ -16,7 +16,7 @@ This document explains how to set up the cluster in Mendix.
 Once you have created your namespace, you can invite additional team members who can then create or view environments in which their apps are deployed, depending on the rights you give them. For more information on the relationship between Mendix environments, Kubernetes namespaces, and Kubernetes clusters, see [Containerized Mendix App Architecture](#containerized-architecture), below.
 
 {{% alert color="info" %}}
-You can also create clusters and namespaces using the [Mendix for Private Cloud Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/).
+You can also create clusters and namespaces using the [Mendix on Kubernetes Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/).
 {{% /alert %}}
 
 ## Prerequisites for Creating a Cluster {#prerequisites}
@@ -53,7 +53,7 @@ Should you consider using a connected environment, the following URLs should be 
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/image4.png" class="no-border" >}}
 
-4. Open the [Global Navigation menu](/developerportal/global-navigation/) and select **Deployment**.
+4. Open the [Global Navigation menu](/global-navigation/) and select **Deployment**.
 5. Select **Mendix for Private Cloud** from the top menu bar in the Mendix Portal.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/cluster-manager.png" class="no-border" >}}
@@ -151,7 +151,7 @@ In the context of the Global Operator, it is necessary to configure both the man
 ## Advanced Operator Configuration
 
 {{% alert color="warning" %}}
-Before updating the Operator with the advanced configurations, make sure to go through the [Introduction to Operators](/developerportal/deploy/private-cloud-technical-appendix-01/) which explains how Operators work in Mendix for Private Cloud.
+Before updating the Operator with the advanced configurations, make sure to go through the [Introduction to Operators](/developerportal/deploy/private-cloud-technical-appendix-01/) which explains how Operators work in Mendix on Kubernetes.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -161,7 +161,7 @@ For Global Operator scenarios, if the Operator configuration in the managed name
 Some advanced configuration options of the Mendix Operator are not yet available in the **Configuration Tool**.
 These options can be changed by editing the `OperatorConfiguration` custom resource directly in Kubernetes.
 
-Look at [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) to ensure that your planned configuration is supported by Mendix for Private Cloud.
+Look at [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) to ensure that your planned configuration is supported by Mendix on Kubernetes.
 
 To start editing the `OperatorConfiguration`, use the following commands (replace `{namespace}` with the namespace where the operator is installed):
 
@@ -417,7 +417,7 @@ spec:
         livenessProbe:
           failureThreshold: 3
           httpGet:
-            path: /m2ee-sidecar/v1/healthz
+            path: /m2ee-sidecar/v1/livez
             port: 8800
             scheme: HTTP
           initialDelaySeconds: 60
@@ -427,8 +427,8 @@ spec:
         readinessProbe:
           failureThreshold: 3
           httpGet:
-            path: /
-            port: mendix-app
+            path: /m2ee-sidecar/v1/readyz
+            port: 8800
             scheme: HTTP
           initialDelaySeconds: 5
           periodSeconds: 1
@@ -539,6 +539,12 @@ An app will return a successful health check status if all of these conditions a
 3. If the Runtime is `running`, and a healthcheck microflow is configured, the healthcheck microflow needs to return a `healthy` state. If there is no `check_health` microflow configured, or the Runtime's state is not `running`, this condition is ignored.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+Starting from Mendix Operator 2.23.0, environments running in `leaderless` mode use the Mendix Runtime's built-in liveness and readiness checks.
+
+When another **runtimeLeaderSelection** mode is used (default, unspecified `assigned` mode, or `none`), the healthcheck microflow is used, as described above.
+{{% /alert %}}
+
 #### Customize Liveness Probe to Resolve Crash Loopback Scenarios
 
 The `liveness probe` informs the cluster whether the pod is dead or alive. If the pod fails to respond to the liveness probe, the pod will be restarted (this is called a `crash loopback`).
@@ -555,7 +561,7 @@ Let us now analyze the `liveness probe` section from the application deployment 
 livenessProbe:
   failureThreshold: 3
   httpGet:
-    path: /m2ee-sidecar/v1/healthz
+    path: /m2ee-sidecar/v1/readyz
     port: 8800
     scheme: HTTP
   initialDelaySeconds: 60
@@ -605,7 +611,7 @@ In this example, the application will have a maximum of 5 minutes (30 * 10 = 300
 {{% alert color="info" %}}
 If you misconfigure a startup probe, for example you don't allow enough time for the startup probe to succeed, the kubelet might restart the container prematurely, causing your container to continually restart.
 
-Startup probes are available in the Mendix for Private Cloud Operator version 2.6.0 and above.
+Startup probes are available in the Mendix on Kubernetes Operator version 2.6.0 and above.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
@@ -627,7 +633,7 @@ terminationGracePeriodSeconds: 300
 ```
 
 {{% alert color="info" %}}
-The `terminationGracePeriodSeconds` setting is available in the Mendix for Private Cloud Operator version 2.6.0 and above.
+The `terminationGracePeriodSeconds` setting is available in the Mendix on Kubernetes Operator version 2.6.0 and above.
 {{% /alert %}}
 
 #### Customize Container Resources: Memory and CPU
@@ -674,7 +680,7 @@ Modifying the resource configuration should be performed carefully as that might
 
 ### Customize Runtime Metrics {#customize-runtime-metrics}
 
-Mendix for Private Cloud provides a Prometheus API, which can be used to collect metrics from Mendix apps.
+Mendix on Kubernetes provides a Prometheus API, which can be used to collect metrics from Mendix apps.
 
 `runtimeMetricsConfiguration` allows you to specify the default metrics configuration for a namespace.
 Any configuration values from `runtimeMetricsConfiguration` can be overridden for an environment using the `MendixApp` CR (see [Generating Metrics](/developerportal/deploy/private-cloud-monitor/#generating) for more details).
@@ -716,20 +722,20 @@ spec:
 
 You can set the following metrics configuration values:
 
-* `mode`: metrics mode, `native` or `compatibility`. `native` mode is only available for Mendix 9.7 and above. See [Metrics Generation Modes](/developerportal/deploy/private-cloud-monitor/#metrics-generation-modes) in *Monitoring Environments in Mendix for Private Cloud* for more information.
+* `mode`: metrics mode, `native` or `compatibility`. `native` mode is only available for Mendix 9.7 and above. See [Metrics Generation Modes](/developerportal/deploy/private-cloud-monitor/#metrics-generation-modes) in *Monitoring Environments in Mendix on Kubernetes* for more information.
 * `interval`: Interval between Prometheus scrapes specified in ISO 8601 duration format (for example, 'PT1M' would be an interval of one minute). This should be aligned with your Prometheus configuration. If left empty it defaults to 1 minute (matching the default Prometheus scrape interval). This attribute is only applicable when `mode` is `native`.
 * `mxAgentConfig`: configuration for the [Java instrumentation agent](https://github.com/mendix/mx-agent); collects additional metrics such as microflow execution times; can be left empty to disable the instrumentation agent. This attribute is only applicable when `mode` is `native`.
 * `mxAgentInstrumentationConfig`: instrumentation configuration for the [Java instrumentation agent](https://github.com/mendix/mx-agent); collects additional metrics such as microflow execution times; can be left empty to use the default instrumentation config. This attribute is only applicable when `mode` is `native`, and `mxAgentConfig` is not empty.
 
 {{% alert color="warning" %}}
-MxAgent is a [Java instrumentation agent](https://docs.oracle.com/en/java/javase/21/docs/api/java.instrument/java/lang/instrument/Instrumentation.html) and is unrelated to the Mendix for Private Cloud Gateway Agent.
+MxAgent is a [Java instrumentation agent](https://docs.oracle.com/en/java/javase/21/docs/api/java.instrument/java/lang/instrument/Instrumentation.html) and is unrelated to the Mendix on Kubernetes Gateway Agent.
 {{% /alert %}}
 
 {{% alert color="info" %}}
 To disable the Prometheus metrics API, remove the `runtimeMetricsConfiguration` section or set `mode` to an empty string.
 {{% /alert %}}
 
-For more information about collecting metrics in Mendix for Private Cloud, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
+For more information about collecting metrics in Mendix on Kubernetes, see [Monitoring Environments in Mendix on Kubernetes](/developerportal/deploy/private-cloud-monitor/).
 
 ### Customize Service Account {#customize-service-account}
 
@@ -738,14 +744,14 @@ The Mendix environment can be configured to use a specific Kubernetes ServiceAcc
 To achieve this, you need to add the annotation `privatecloud.mendix.com/environment-account: true` (for security reasons, any account matching an environment name but without this annotation cannot be attached to environments).
 
 {{% alert color="info" %}}
-The service account can be customized for Private Cloud Operator version 2.7.0 and above.
+The service account can be customized Mendix on Kubernetes Operator version 2.7.0 and above.
 {{% /alert %}}
 
 If required, you can use additional annotations. For example, in order to authenticate with AWS services instead of with static credentials, you can attach an AWS IAM role to an environment and use [IRSA](https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/).
 
 ### Autoscaling
 
-Mendix for Private Cloud is compatible with multiple types of Kubernetes autoscalers.
+Mendix on Kubernetes is compatible with multiple types of Kubernetes autoscalers.
 
 {{% alert color="warning" %}}
 To optimize resource utilization, autoscaling can terminate running instances of an app.
@@ -757,7 +763,7 @@ When autoscaling scales down an app or Kubernetes node, microflows in affected p
 
 The Kubernetes [cluster autoscaler](https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler) monitors resource usage and automatically adjusts the size of the cluster based on its resource needs.
 
-Mendix for Private Cloud is compatible with cluster autoscaling. To install and enable cluster autoscaling, follow your cluster vendor's recommended way of configuring the cluster autoscaler.
+Mendix on Kubernetes is compatible with cluster autoscaling. To install and enable cluster autoscaling, follow your cluster vendor's recommended way of configuring the cluster autoscaler.
 
 #### Horizontal Pod Autoscaling {#horizontal-autoscaling}
 
@@ -956,7 +962,7 @@ Mendix app container images are locked down by default - they run as a non-root 
 
 Starting from Mendix Operator version 2.21.0, all system containers and pods use `readOnlyRootFilesystem` by default. It is possible to specify if an environment's app container should also have a read-only filesystem. For Mendix apps, the `readOnlyRootFilesystem` option is off by default, as some Java actions in marketplace modules might expect some paths to be writable.
 
-If you enable the `runtimeReadOnlyRootFilesystem` option in the MendixApp CRD (for standalone clusters) or in the Private Cloud Portal, the Mendix app container also uses a read-only root filesystem. As Mendix apps needs certain paths to be writable, an [emptyDir](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir) is used for writable paths. Each path is mounted as a separate `subPath` to keep data separated. The `emptyDir` size is set to the `ephemeral-storage` [resource limit](#advanced-resource-customization).
+If you enable the `runtimeReadOnlyRootFilesystem` option in the MendixApp CRD (for standalone clusters) or in the Mendix on Kubernetes Portal, the Mendix app container also uses a read-only root filesystem. As Mendix apps needs certain paths to be writable, an [emptyDir](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir) is used for writable paths. Each path is mounted as a separate `subPath` to keep data separated. The `emptyDir` size is set to the `ephemeral-storage` [resource limit](#advanced-resource-customization).
 
 In addition to internal Mendix Runtime paths, `/tmp` is mounted for any temporary files that might be created through Java actions. For Java actions to work correctly, ensure that they only create files in `/tmp`, for example, by using the `File.createTempFile` or `File.createTempDirectory` Java methods.
 
@@ -974,7 +980,7 @@ In GKE Autopilot, one of the key features is its ability to automatically adjust
 
 As a result, there can be a continuous back-and-forth interaction between Mx4PC and GKE Autopilot, where both entities engage in a loop, attempting to counteract each other's modifications to deployments and pods.
 
-To address this issue, you can configure the Mendix Operator to align with GKE's requirements. This involves setting the resources (specifically, the CPU, memory, and ephemeral storage) to be equal to the limits defined in the `OperatorConfiguration` for both the `sidecar` and `metrics-sidecar` containers. Along with this, you must ensure that the resource limits for the CPU, memory, and ephemeral storage are equal to the resource requests in the Private Cloud Portal. For more information on setting the core resources on the Portal, see [Custom Core Resource Plan](#custom-core-resource-plan).
+To address this issue, you can configure the Mendix Operator to align with GKE's requirements. This involves setting the resources (specifically, the CPU, memory, and ephemeral storage) to be equal to the limits defined in the `OperatorConfiguration` for both the `sidecar` and `metrics-sidecar` containers. Along with this, you must ensure that the resource limits for the CPU, memory, and ephemeral storage are equal to the resource requests in the Mendix on Kubernetes Portal. For more information on setting the core resources on the Portal, see [Custom Core Resource Plan](#custom-core-resource-plan).
 
 You must also create a patch file for configuring the core resources in the `OperatorConfiguration`, as in the following example:
 
@@ -1117,8 +1123,6 @@ You can also delete your namespace from the cluster manager by clicking **Delete
 If there are any environments associated with the namespace, you cannot delete the namespace until the environments associated with it are deleted.
 
 When you delete a namespace, this removes the namespace from the cluster in the Mendix Portal. However, it will not remove the namespace from your platform. You will need to explicitly delete the namespace using the tools provided by your platform.
-
-{{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/image26.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 In the case of a Global Operator managed namespace, the managed namespace will not be deleted from the cluster. You must delete it from the cluster manually. Additionally, you also need to remove the managed namespace from the list of managed namespaces in the Operator configuration of the main namespace. 
@@ -1273,7 +1277,7 @@ The new value for the annotation will only be applied when the application is re
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Mendix Operator version 2.14.0 (and older) don't remove ingress or service annotations when an annotation is removed from the Private Cloud Portal or in the `MendixApp` CR.
+Mendix Operator version 2.14.0 (and older) don't remove ingress or service annotations when an annotation is removed from the Mendix on Kubernetes Portal or in the `MendixApp` CR.
 
 This is addressed in Mendix Operator version 2.15.0; if you need to remove an ingress or service annotation, please upgrade to the latest Mendix Operator version first.
 {{% /alert %}}
@@ -1567,7 +1571,7 @@ Run PowerShell or the Windows Command Prompt terminal as a standalone app.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-Some previously released versions of Mendix for Private Cloud required using Git Bash in Windows.
+Some previously released versions of Mendix on Kubernetes required using Git Bash in Windows.
 Starting from Mendix Operator version 1.9.0, Git Bash is no longer required.
 {{% /alert %}}
 
@@ -1625,4 +1629,4 @@ Within your cluster you can run one, or several, Mendix apps. Each app runs in a
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/mx4pc-containerized-architecture.png" class="no-border" >}}
 
-To ensure that every app deployed to a namespace has a unique name, the environment will have an **Environment UUID** added to the environment name when it is deployed to ensure that it is unique in the project. This also ensures the app cannot have the same name as the Mendix tools used to deploy the app. See [Deploying a Mendix App to a Private Cloud Cluster](/developerportal/deploy/private-cloud-deploy/) for more information.
+To ensure that every app deployed to a namespace has a unique name, the environment will have an **Environment UUID** added to the environment name when it is deployed to ensure that it is unique in the project. This also ensures the app cannot have the same name as the Mendix tools used to deploy the app. See [Deploying a Mendix App to a Mendix on Kubernetes Cluster](/developerportal/deploy/private-cloud-deploy/) for more information.

@@ -10,7 +10,7 @@ aliases:
 
 ## Introduction
 
-Using server-side paging and sorting for a microflow data source, you can model out how you retrieve data to a single page and ensure it ends up in the correct sorting order. With this approach, you do not need to return all the data to the client — you can just return a single page. This can be helpful for getting data from external sources like a REST service, but can also be useful for a regular retrieve activity in a microflow. To do this, you must model the logic for getting the correct data in the microflow itself.
+Using server-side paging and sorting for a microflow data source, you can model out how you retrieve data to a single page and ensure it ends up in the correct sorting order. With this approach, you do not need to return all the data to the client — you can just return a single page. This can be helpful for getting data from external sources like a REST service, but can also be useful for a regular retrieve object(s) activity in a microflow. To do this, you must model the logic for getting the correct data in the microflow itself.
 
 This how-to teaches you how to do the following:
 
@@ -34,15 +34,15 @@ Once successful, your app should have the following elements:
 
 * A JSON structure based on the airport data:
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/json-structure.png" alt="json structure"   width="500"  class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/json-structure.png" alt="json structure"   width="500"  class="no-border" >}}
 
 * Import mapping:
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/import-mapping.png" alt="import mapping"   width="500"  class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/import-mapping.png" alt="import mapping"   width="500"  class="no-border" >}}
 
 * An input entity added to the domain model:
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/input-entity.png" alt="input entity"   width="500"  class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/input-entity.png" alt="input entity"   width="500"  class="no-border" >}}
 
 Now, you can start calling the REST service from your microflow data source. To create a microflow data source which returns a list of characters, do the following:
 
@@ -51,29 +51,29 @@ Now, you can start calling the REST service from your microflow data source. To 
 3. Double-click your **Call REST service** activity.
 4. Click the **Location** > **Edit** button: 
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/edit-call-rest.png" alt="edit call rest"   width="500"  class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/edit-call-rest.png" alt="edit call rest"   width="500"  class="no-border" >}}
 
 5. In the **Template** field, add `https://my-json-server.typicode.com/mendix/howto-api-data/airports` and click **OK**:
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/add-airport-url.png" alt="airport template"   width="500"  class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/add-airport-url.png" alt="airport template"   width="500"  class="no-border" >}}
 
 6. Click the **Response** tab:
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/response-tab.png" alt="response tab"   width="500"  class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/response-tab.png" alt="response tab"   width="500"  class="no-border" >}}
 
 7. Select **Apply import mapping** from the **Response handling** drop-down menu.
 8. Click **Mapping** > **Select** and select the import mapping you created.
 9. For **Variable Name**, type *Result*. Click **OK** to accept the changes:
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/call-rest-response.png" alt="variable result"   width="500"  class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/call-rest-response.png" alt="variable result"   width="500"  class="no-border" >}}
 
-10. From the **Toolbox**, drag the **Retrieve** activity into the microflow and double-click it.
+10. From the **Toolbox**, drag the **Retrieve object(s)** activity into the microflow and double-click it.
 11. Click **Association** > **Select**.
 12. Click **Expand All** and select **JsonObject_Summary (List of NativeMobile.JsonObject)**. 
 13. Click **OK** to accept this association.
-14. Right-click the **Retrieve** activity and select **Set $JsonObjectList as return value**:
+14. Right-click the **Retrieve object(s)** activity and select **Set $JsonObjectList as return value**:
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/call-rest-returned.png" alt="set return value"   width="500"  class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/call-rest-returned.png" alt="set return value"   width="500"  class="no-border" >}}
 
 ## Creating a Data Grid with a Microflow Data Source
 
@@ -83,22 +83,22 @@ In the previous section, you created a microflow which returns a list of charact
 2. Double-click the blue header of the newly-placed data grid.
 3. Click the **Data source** tab:
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/data-source.png" alt="data source tab" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/data-source.png" alt="data source tab" class="no-border" >}}
 
 4. Select **Type** > **Microflow**. 
 5. Click **Microflow** > **Select** and select the **Call_REST** microflow. 
 6. Click **OK** to accept the changes to the data source.
 7. When you see the **“Do you want to automatically fill the contents of the data grid?”** pop-up window, click **Yes**:
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/auto-fill.png" alt="click yes"   width="500"  class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/auto-fill.png" alt="click yes"   width="500"  class="no-border" >}}
 
 8. When you see the **“Do you want to generate controls for microflow source parameters of the data grid? This will enable server-side paging sorting and searching for the grid.”** pop-up window, click **Yes**:
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/question-dialog.png" alt="click yes again"   width="500"  class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/question-dialog.png" alt="click yes again"   width="500"  class="no-border" >}}
 
 This generates a data view around your data grid, creates the necessary widgets and nanoflows, and adds the **Paging** object as an input to your microflow:
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/paging.png" alt="paging object"   width="500"  class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/paging.png" alt="paging object"   width="500"  class="no-border" >}}
 
 ## Adding Paging Support to the Microflow Data Source
 
@@ -108,11 +108,11 @@ In the previous section, you added the **Paging** input parameter to your microf
 2. Double-click the **Call REST service** activity and click **Location** > **Edit**.
 3. Change **Template** to `https://my-json-server.typicode.com/mendix/howto-api-data/airports?_limit=5&_page={1}`:
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/template-param-one.png" alt="add page bit to template"   width="500"  class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/template-param-one.png" alt="add page bit to template"   width="500"  class="no-border" >}}
 
 4. Click **Parameters** > **New** for a new parameter and enter the expression `toString($Paging/PageNumber)` for this parameter:
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/page-parameter.png" alt="add page number parameter"   width="500"  class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/page-parameter.png" alt="add page number parameter"   width="500"  class="no-border" >}}
 
 5. Click **OK** > **OK** to accept this expression and in the location. 
 6. Click **OK** to accept the changes for the **Call REST service** activity. You are now back at your microflow.
@@ -131,23 +131,23 @@ Use these attributes when calling your REST service:
 2. Double-click the **Call REST service** activity and click **Location** > **Edit**.
 3. Add `&_sort={2}&_order={3}` to the end of your current **Template** address:
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/appended-template.png" alt="add sort and order bits to template"   width="500"  class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/appended-template.png" alt="add sort and order bits to template"   width="500"  class="no-border" >}}
 
 4. Click **Parameters** > **New** to add the second parameter and enter the expression `toLowerCase($Paging/SortAttribute)`:
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/second-param.png" alt="add second parameter"   width="500"  class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration//rest-services//consumed-rest-services/server-side-paging/second-param.png" alt="add second parameter"   width="500"  class="no-border" >}}
 
 5. Click **OK** to accept this expression.
 6. Click **Parameters** > **New** to add the third parameter and enter the expression `if $Paging/SortAscending then 'asc' else 'desc'`:
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/third-param.png" alt="add third parameter"   width="500"  class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/third-param.png" alt="add third parameter"   width="500"  class="no-border" >}}
 
 7. Click **OK** > **OK** to accept this expression and in the location. 
 8. Click **OK** to accept the changes in the **Call REST service** activity.
 
 Deploy your app again and navigate to the page with your data grid. Click the column headers to see your server-side sorting in action.
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/header-sorting-smaller2.gif" alt="click headers to sort" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/header-sorting-smaller2.gif" alt="click headers to sort" class="no-border" >}}
 
 ### Setting a Default Sort Order
 
@@ -158,19 +158,19 @@ You can set a default sort order for data. When a user has not clicked a header,
 3. Select **Go to data source nanoflow**.
 4. Double-click the **Create object** activity: 
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/create-nano.png" alt="create object activity one"   width="500"  class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/create-nano.png" alt="create object activity one"   width="500"  class="no-border" >}}
 
 5. Click **New** to set the value for a member of the **Paging** entity.  
 6. Click the **Member** drop-down menu and select **SortAttribute (String (200))**. 
 7. Set **Value** to `'Name'`:
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/name-value.png" alt="name value"   width="500"  class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/name-value.png" alt="name value"   width="500"  class="no-border" >}}
 
 8. Click **OK** > **OK** to accept the changes to the member and the **Create object** activity.
 
 Deploy your app again and navigate to the page with your data grid. The data is now ordered by **Name**.
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/data-by-name.png" alt="sorted by name"   width="500"  class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/data-by-name.png" alt="sorted by name"   width="500"  class="no-border" >}}
 
 ### Disabling Server-Side Sorting
 
@@ -183,13 +183,13 @@ Apps that use a REST service that does not support sorting, or apps that do not 
 5. Select **Member** > **IsSortable (Boolean)** from the drop-down menu.
 6. Type *false* into **Value**:
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/disable-sort.png" alt="value false" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/disable-sort.png" alt="value false" class="no-border" >}}
 
 7. Click **OK** > **OK** to accept the changes to the member and the **Create object** activity.
 
 Deploy your app again and navigate to the page with your data grid. The data is still ordered by **Name**, but you can no longer change the sorting by clicking the header. Note the lack of an arrow above the **Name** header.
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/sorting-disabled.png" alt="sorted but not clickable" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/sorting-disabled.png" alt="sorted but not clickable" class="no-border" >}}
 
 ## Adding Server-Side Searching
 
@@ -201,7 +201,7 @@ You only need to use this data in your microflow and pass the search criteria to
 2. Double-click the **Call REST service** activity and click **Location** > **Edit**.
 3. Add `&name_like={4}` to the end of your current **Template** address:
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/template-add-search.png" alt="add search bits to template"   width="500"  class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/template-add-search.png" alt="add search bits to template"   width="500"  class="no-border" >}}
 
 4. Click **Parameters** > **New** to add the fourth parameter and enter the following expression:
 
@@ -209,7 +209,7 @@ You only need to use this data in your microflow and pass the search criteria to
     if $Paging/Name = empty then '' else $Paging/Name
     ```
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/fourth-param.png" alt="add fourth parameter"   width="500"  class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/fourth-param.png" alt="add fourth parameter"   width="500"  class="no-border" >}}
 
 5. Click **OK** > **OK** to accept this expression and the changes in the location. 
 6. Click **OK** to accept the changes in the **Call REST service** activity.

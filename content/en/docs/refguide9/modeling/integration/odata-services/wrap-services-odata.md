@@ -178,7 +178,7 @@ Set up a connector module that communicates to the X API with OData by following
     {{< figure src="/attachments/refguide9/modeling/integration/wrap-services-odata/query-followers-microflow.png" alt="Microflow for querying followers." class="no-border" >}}
 6. Export the metadata file of the published OData service to be used in the client module. To do so, open the service and go to **Settings**, and click **Export** next to the **Metadata** field.
 
-    Since you are working in local development environment and not deploying locally, your published resource will not automatically be available in the Catalog or the Data Hub pane. See [Register Resources (On-Prem or Private Cloud)](/data-hub/data-hub-without-mendix-cloud/) to understand how to work with external entities and the Catalog for local deployments.
+    Since you are working in local development environment and not deploying locally, your published resource will not automatically be available in the Catalog or the Data Hub pane. See [Register Resources (On-Prem or Mendix on Kubernetes)](/data-hub/data-hub-without-mendix-cloud/) to understand how to work with external entities and the Catalog for local deployments.
 
 #### Building the Client
 

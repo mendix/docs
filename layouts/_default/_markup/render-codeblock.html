@@ -1,0 +1,6 @@
+<!-- MvM - added to prevent Shutto from translating codeblocks -->
+<!-- See documentation here: https://gohugo.io/render-hooks/code-blocks/ -->
+<span data-stt-ignore>
+{{ $result := transform.HighlightCodeBlock . }}
+{{ $result.Wrapped }}
+</span>

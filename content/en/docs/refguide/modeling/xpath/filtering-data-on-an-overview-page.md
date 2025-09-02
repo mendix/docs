@@ -34,7 +34,7 @@ For this how-to, it is necessary that you set up a test app with test data. To d
 
 1. Follow the guide [Configuring a Domain Model](/refguide/configuring-a-domain-model/) and create the following domain model:
 
-    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18581378.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/xpath/filtering-data-on-an-overview-page/domain-model.png" >}}
 
 2. [Create overview and detail pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/) to manage the **Customer** and the **Order** entities and their objects.
 3. [Create menu items](/refguide/setting-up-the-navigation-structure/#menu-items) to access the **Customer** and the **Order** overview pages.

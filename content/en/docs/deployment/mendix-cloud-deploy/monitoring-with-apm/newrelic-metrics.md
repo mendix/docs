@@ -17,7 +17,7 @@ New Relic logging and application metrics are supported in Mendix 9.7 and above.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-For support on other cloud deployment options, such as Private Cloud, refer to their dedicated documentation. For Private Cloud deployment, for example, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
+For support on other cloud deployment options, such as Kubernetes, refer to their dedicated documentation. For deployment on Kubernetes, for example, see [Monitoring Environments in Mendix on Kubernetes](/developerportal/deploy/private-cloud-monitor/).
 {{% /alert %}}
 
 For more information on the data you can send to New Relic, see [Monitoring Your Mendix Apps with an APM Tool](/developerportal/operate/monitoring-with-apm/).

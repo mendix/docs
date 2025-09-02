@@ -56,18 +56,18 @@ The responsibilities of a Technical Contact depend on whether you are hosting yo
 
 For apps in Mendix Cloud, the Technical Contact is the first point of contact for the app and can do the following:
 
-* Receive notifications for upcoming maintenance operations on the application
-* Configure the alert settings in the **Monitoring** tab of the cloud node
-* Receive alerts from the Mendix app when problems arise (for example, CPU load is high, running out of disk space)
-* Adjust environments (for example, resize and add new environments) 
+* Receive notifications for upcoming maintenance operations on the application.
+* Configure the alert settings in the **Monitoring** tab of the cloud node.
+* Receive alerts from the Mendix app when problems arise. Examples: CPU load is high, running out of disk space.
+* Adjust environments. Examples: resize and add new environments.
 
 As the Technical Contact, you can perform all the regular operations on the Mendix Cloud node in the Mendix Portal. Additionally, you can manage the access rights of your team members so that they can deploy, stop and start the app, and perform other actions. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
-The Technical Contact is also responsible for managing licenses (as in, renewals, activations, and upgrades) and is the first point of contact for the Mendix Support department. Note that Mendix is responsible for Mendix Cloud app renewals, and you can contact your Customer Success Manager (CSM) if you want to expand your license.
+The Technical Contact is also responsible for managing licenses, meaning renewals, activations, and upgrades. They are also the first point of contact for the Mendix Support department. Note that Mendix is responsible for Mendix Cloud app renewals, and you can contact your Customer Success Manager (CSM) if you want to expand your license.
 
 ### On-Premises Responsibilities
 
-When a Mendix app is on premises, it is running on the customer's own infrastructure. For managing licenses in this scenario, Mendix sends license renewal notifications to the Technical Contact via email. As a Technical Contact, if you want to expand the license (for example, for more users), you need to contact your Account Executive.
+When a Mendix app is deployed on-premises, it is running on the customer's own infrastructure. For managing licenses in this scenario, Mendix sends license renewal notifications to the Technical Contact via email. As a Technical Contact, if you want to expand the license, such as for more users, you need to contact your Account Executive.
 
 ### Changing the Technical Contact {#change-technical-contact}
 

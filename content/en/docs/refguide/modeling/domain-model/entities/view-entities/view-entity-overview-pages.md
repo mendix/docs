@@ -137,7 +137,7 @@ On the Product overview page above, there is no button to add or modify a produc
 
 1. Create a microflow and name it *ACT_UpdateProduct*. 
 2. Add a parameter and in the entity field and select **ProductOverviewVE**.
-3. Add a [retrieve](/refguide/retrieve/) activity. In this activity, retrieve a *Product* object from the database. Configure the activity with the following details: 
+3. Add a [retrieve object(s)](/refguide/retrieve-objects/) activity. In this activity, retrieve a *Product* object from the database. Configure the activity with the following details: 
 
     * Use the following XPath constraint:
 
@@ -222,7 +222,7 @@ The final data view should look like this:
 Once the Product page is complete, update the related microflow. To do this, follow the steps below: 
 
 1. Open the **ACT_UpdateProduct** microflow.
-2. Add a Retrieve activity after the existing Retrieve product activity. 
+2. Add a Retrieve object(s) activity after the existing Retrieve product activity. 
 3. Retrieve a Category object from the database. Configure the activity using the following details:
    
     * Use the following XPath constraint: 
@@ -233,7 +233,7 @@ Once the Product page is complete, update the related microflow. To do this, fol
 
     * In the Range field, select **First** 
 
-4. Add another Retrieve activity to retrieve the Supplier object. Configure the activity using the following details: 
+4. Add another Retrieve object(s) activity to retrieve the Supplier object. Configure the activity using the following details: 
 
     * Use the following XPath constraint: 
 

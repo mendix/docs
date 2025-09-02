@@ -1,8 +1,8 @@
 ---
-title: "Ingress Controllers in Mendix for Private Cloud"
+title: "Ingress Controllers in Mendix on Kubernetes"
 linktitle: "Ingress Controllers"
 url: /developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/controllers/
-description: "Describes how to configure various ingress controllers for Mendix for Private Cloud."
+description: "Describes how to configure various ingress controllers for Mendix on Kubernetes."
 weight: 10
 ---
 
@@ -38,7 +38,7 @@ The recommended way to install NGINX is [Helm](https://docs.nginx.com/nginx-ingr
 
 ##### Configuring NGINX in the Mxpc-cli Tool
 
-To configure NGINX for Mendix for Private Cloud, set up the following settings:
+To configure NGINX for Mendix on Kubernetes, set up the following settings:
 
 * **Ingress Type** - Select **kubernetes-ingress**; this option configures the Ingress according to the additional domain name you supply. 
 * **Ingress Domain Name** - Provide the domain name which you want to set for the Ingress resource file.
@@ -70,7 +70,7 @@ For more information about the recommended installation process, see [Install AW
 
 ##### Configuring AWS Load Balancer in the Mxpc-cli Tool
 
-To configure the AWS Load Balancer for Mendix for Private Cloud, perform the following steps:
+To configure the AWS Load Balancer for Mendix on Kubernetes, perform the following steps:
 
 1. Set up the following settings:
 
@@ -88,7 +88,7 @@ To configure the AWS Load Balancer for Mendix for Private Cloud, perform the fol
 
     * To update the settings for a specific app environment, use the Mendix Platform GUI:
 
-        1. In the **Global Navigation** top bar, click **Deployment** > **Private Cloud**.
+        1. In the **Global Navigation** top bar, click **Deployment** > **Mendix on Kubernetes**.
         2. Select your cluster and namespace.
         3. In the **Apps** section, click the **Configure App** icon.
 
@@ -153,7 +153,7 @@ Azure Gateway Ingress Controller needs up to 90 seconds to remove a pod from its
 
 #### Configuring AGIC in the Mxpc-cli Tool
 
-To configure AGIC for Mendix for Private Cloud, perform the following steps:
+To configure AGIC for Mendix on Kubernetes, perform the following steps:
 
 1. Set up the following settings:
 
@@ -171,7 +171,7 @@ To configure AGIC for Mendix for Private Cloud, perform the following steps:
 
     * To update the settings for a specific app environment, use the Mendix Platform GUI:
 
-        1. In the **Global Navigation** top bar, click **Deployment** > **Private Cloud**.
+        1. In the **Global Navigation** top bar, click **Deployment** > **Mendix on Kubernetes**.
         2. Select your cluster and namespace.
         3. In the **Apps** section, click the **Configure App** icon.
 
@@ -220,12 +220,12 @@ Traefik is a cloud-native reverse proxy and a load balancer. When deployed as an
 For information about installing the Traefik Ingress Controller, see [Traefik & Kubernetes](https://doc.traefik.io/traefik/providers/kubernetes-ingress/).
 
 {{% alert color="info" %}}
-Traefik uses 2 types of providers: CRDs or Kubernetes Ingress. Ensure that you install Kubernetes Ingress one, as it is the only one supported by Mendix for Private Cloud.
+Traefik uses 2 types of providers: CRDs or Kubernetes Ingress. Ensure that you install Kubernetes Ingress one, as it is the only one supported by Mendix on Kubernetes.
 {{% /alert %}}
 
 #### Configuring Traefik in the Mxpc-cli Tool
 
-To configure Traefik for Mendix for Private Cloud, set up the following settings:
+To configure Traefik for Mendix on Kubernetes, set up the following settings:
 
 * **Ingress Type** - Select **kubernetes-ingress**; this option configures the Ingress according to the additional domain name you supply. 
 * **Ingress Domain Name** - Provide the domain name which was registered for Traefik

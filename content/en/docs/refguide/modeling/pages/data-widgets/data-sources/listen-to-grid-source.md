@@ -14,7 +14,6 @@ A data view in an image above listens to a data grid. In this example, the data 
 
 List views, template grids, and data grids are list widgets and can be listened to. If no object is selected in the list widget, the data view will remain empty and unresponsive.
 
-
 To enable **Listen to widget** in common data sources, do the following per your use case: 
 
 * DataGrid2: Select **Selection** > **Single** and **Selection method** > **Row click**  to be able to select a  DataGrid2 as a **Listen to widget** data source in your dataview.

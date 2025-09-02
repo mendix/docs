@@ -15,7 +15,7 @@ To ensure the best user experience for your Mendix application, follow these bes
 * Synchronize large files or images using selective synchronization
 * Use an `isDeleted` Boolean attribute for delete functionality so that conflicts can be handled correctly on the server
 * Use before- and after-commit microflows to pre- or post-process data
-* Use a [microflow call](/refguide/microflow-call/) in your nanoflows to perform additional server-side logic such as retrieving data from a REST service, or accessing and using complex logic such as Java actions
+* Use a [Call microflow](/refguide/microflow-call/) activity in your nanoflows to perform additional server-side logic such as retrieving data from a REST service, or accessing and using complex logic such as Java actions
 * Help your user remember to synchronize their data so it is processed as soon as possible: you can check for connectivity and automatically synchronize in the nanoflow that commits your object, or remind a user to synchronize while using a notification or before signing out to ensure no data is lost
 
 ## Preventing Synchronization Issues
@@ -41,7 +41,7 @@ Mendix helps developers build rich offline-first apps. However, there are some l
 
 ### Microflows {#microflows}
 
-Microflows can be called from offline apps by using [microflow call](/refguide/microflow-call/) action in your nanoflows to perform logic on the server. However, it works a bit different from when used in online profiles, these differences are explained below:
+Microflows can be called from offline apps by using [Call microflow](/refguide/microflow-call/) activities in your nanoflows to perform logic on the server. However, it works a bit different from when used in online profiles, these differences are explained below:
 
 #### Microflow Arguments Type
 
@@ -139,3 +139,18 @@ Datagrids can not have columns with attributes from related entities in offline 
 ### Attribute Paths in Sort Orders
 
 Attribute paths can not be used in sort orderings in offline apps.
+
+## Enhancing Persistent Mode in File Storage {#persistent-mode}
+
+When using offline profiles, files are stored locally on a user's device in the browser Origin Private File System (OPFS). The OPFS can operate in two modes: **persistent** and **best-effort**. The **persistent** mode is preferable because it offers greater storage capacity and better data durability. While **persistent** mode is used by default, a browser may opt for **best-effort** mode if it assesses the site's importance as low. This assessment is made based on internal browser heuristics, which include the following:
+
+* The level of site engagement
+* Whether the site has been bookmarked
+* Whether permission for site notifications has been granted
+
+To enhance the likelihood of operating the OPFS in 'persistent' mode, consider taking the following actions:
+
+* Bookmark the site
+* Enable notifications for the site
+
+Firefox does not utilize heuristics but instead displays a popup requesting permission to use **persistent** mode. To proceed, simply click **Allow** in the popup.

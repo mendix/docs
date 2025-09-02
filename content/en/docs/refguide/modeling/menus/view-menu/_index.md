@@ -56,6 +56,10 @@ The [App Explorer](/refguide/app-explorer/) pane displays the complete structure
 
 For details on this virtual AI assistant, see [Best Practice Recommender](/refguide/best-practice-recommender/).
 
+### Call Hierarchy
+
+The **Call Hierarchy** pane displays the call hierarchy of a document (for example, a page, a microflow, a nanoflow, and more). This pane helps you understand the application connections, allowing you to visualize both incoming and outgoing calls. For more information on the **Call Hierarchy** pane and how to interact with it, see [Call Hierarchy Pane](/refguide/call-hierarchy-pane/). 
+
 ### Changes
 
 For version control-enabled apps (meaning, those with [Team Server](/developerportal/general/team-server/) or other Git servers), the [Changes pane](/refguide/changes-pane/) shows the local changes to the app since the last commit. You can commit changes, update to the latest revision, and view the history from here. 

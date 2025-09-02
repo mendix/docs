@@ -100,6 +100,10 @@ These activities can only be used in microflows.
 
 ## Document Generation Activities
 
+{{% alert color="warning" %}}
+Document generation using Document Templates was deprecated in 10.24.0. See [Document Templates](/refguide10/document-templates/) for alternatives.
+{{% /alert %}}
+
 | Graphic | Name | Description |
 | --- | --- | --- |
 | {{< figure src="/attachments/refguide10/modeling/application-logic/microflows-and-nanoflows/activities/generate-document.png" alt="generate document" link="/refguide10/generate-document/" max-width=60% class="no-border" >}} | [Generate document](/refguide10/generate-document/) (microflows only) | Allows you to create a document of a certain type based on a [template](/refguide10/document-templates/). |

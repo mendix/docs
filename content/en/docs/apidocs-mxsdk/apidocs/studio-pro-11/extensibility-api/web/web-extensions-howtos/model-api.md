@@ -2,7 +2,6 @@
 title: "Access a Mendix Model Using Web API"
 linktitle: "Mendix Model"
 url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/model-api/
-weight: 40
 ---
 
 ## Introduction 
@@ -26,7 +25,10 @@ The model is split in several components exposed via `studioPro.app.model` objec
 
 You can include these components using syntax as shown below, which includes pages and domain models.
 
+In the following, it is assumed you obtained the `studioPro` object by calling the factory function `getStudioProApi`, as in other tutorials. 
+
 ```ts
+const studioPro = getStudioProApi(componentContext);
 const { pages, domainModels } = studioPro.app.model;
 ```
 

@@ -34,7 +34,7 @@ There are three types of modules, and the choice of type depends on the purpose 
 * [Solution Module](#solution-module)
 
 {{% alert color="warning" %}}
-If for some reason you switch from an add-on or solution module to an app module, or from an app module to a solution or an add-on module, the module data is lost once the new version of the app is deployed. Switching from an add-on to a solution module and from a solution to an add-on module is possible without loss of data. 
+If you switch from an add-on or solution module to an app module, or from an app module to a solution or an add-on module, the module data is lost once the new version of the app is deployed. Switching from an add-on to a solution module and from a solution to an add-on module is possible without loss of data. 
 {{% /alert %}}
 
 #### App Module {#app-module}
@@ -55,7 +55,7 @@ When the module is set as the add-on module, it gets the letter **A** as an icon
 
 #### Solution Module {#solution-module}
 
-Solution modules are only used for developing a solution and are an inseparable part of it. The set of solution modules used for the solution form the solution core. Solution modules are exported as a solution package and distributed as a solution to multiple consumers. For more information, see [How to Create Solutions](/appstore/creating-content/sol-solutions-guide/) in the *Marketplace Guide*.
+Solution modules are only used for developing a solution and are an inseparable part of it. The set of solution modules used for the solution form the solution core. Solution modules are exported as a solution package and distributed as a solution to multiple consumers. For more information, see [Creationg Solutions](/appstore/creating-content/sol-solutions-guide/) in the *Marketplace Guide*.
 
 When the module is set as the solution module, it gets the letter **S** as an icon.
 
@@ -73,5 +73,5 @@ Mendix recommends setting a new version every time changes are made to the modul
 
 * [Modules](/refguide/modules/)
 * [Configure Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules/)
-* [IP Protection](/appstore/creating-content/sol-ip-protection/)
-* [Create Solutions](/appstore/creating-content/sol-solutions-guide/)
+* [Applying Intellectual Property Protection](/appstore/creating-content/sol-ip-protection/)
+* [Creating Solutions](/appstore/creating-content/sol-solutions-guide/)

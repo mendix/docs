@@ -2,7 +2,7 @@ openapi: 3.0.3
 x-stoplight:
   id: h451lkumf4xm6
 info:
-  title: Pipelines API
+  title: Mendix Pipelines API
   version: 1.0.0
   contact:
     name: Mendix Support
@@ -309,7 +309,7 @@ components:
   securitySchemes:
     PersonalAccessToken:
       type: apiKey
-      description: 'For more information about requesting and using a token, see the [documentation](https://docs.mendix.com/community-tools/mendix-profile/user-settings/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
+      description: 'For more information about requesting and using a token, see the [documentation](https://docs.mendix.com/mendix-profile/user-settings/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
       name: Authorization
       in: header
 security:

@@ -53,10 +53,10 @@ To perform an action on a row, select a row and right-click it. A list of action
 
 You can perform the following actions:
 
-* **Add column left** – creates a column to the left of the selected one
-* **Add column right** – creates a column to the right of the selected one
-* **Move left** – moves a column left in the row
-* **Move right** – moves a column right in the row
+* **Add row above** – creates a row above the selected one
+* **Add row below** – creates a row below the selected one
+* **Move up** – moves a row up
+* **Move down** – moves a row down
 
 ### Performing Actions on Columns
 
@@ -64,10 +64,10 @@ To perform an action on a column, select a column and right-click it. A list of 
 
 You can perform the following actions:
 
-* **Add row above** – creates a row above the selected one
-* **Add row below** – creates a row below the selected one
-* **Move up** – moves a row up
-* **Move down** – moves a row down
+* **Add column left** – creates a column to the left of the selected one
+* **Add column right** – creates a column to the right of the selected one
+* **Move left** – moves a column left
+* **Move right** – moves a column right
 
 ### Performing Actions on Cells
 

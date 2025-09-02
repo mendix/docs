@@ -128,7 +128,7 @@ A retrieve action is either an association-based retrieve or a database-based re
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
-| [Retrieve](/refguide/retrieve/) |[RetrieveSource](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.retrievesource.html) |
+| [Retrieve object(s)](/refguide/retrieve-objects/) |[RetrieveSource](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.retrievesource.html) |
 | [XPath](/refguide/xpath/) constraints |[AssociationRetrieveSource](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.associationretrievesource.html) |
 | |[DatabaseRetrieveSource](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.databaseretrievesource.html) |
 | |[Range](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.range.html), [ConstantRange](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.constantrange.html) and [CustomRange](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.customrange.html) |
@@ -144,7 +144,7 @@ Microflows can call other microflows by defining a mapping of expressions to par
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
-| [Microflow Call](/refguide/microflow-call/) |[MicroflowCallAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.microflowcallaction.html) |
+| [Call Microflow](/refguide/microflow-call/) |[MicroflowCallAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.microflowcallaction.html) |
 | |[MicroflowCall](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.microflowcall.html) |
 | |[MicroflowCallParameterMapping](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.microflowcallparametermapping.html) |
 
@@ -315,7 +315,7 @@ Java action calls point to a specific Java action and have a parameter mapping w
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
-| [Java Action Call](/refguide/java-action-call/) |[JavaAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/javaactions.javaaction.html) |
+| [Call Java Action](/refguide/call-java-action/) |[JavaAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/javaactions.javaaction.html) |
 | |[JavaActionParameter](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/javaactions.javaactionparameter.html) |
 | |[JavaActionCallAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.javaactioncallaction.html) |
 | |[JavaActionParameterMapping](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.javaactionparametermapping.html) |

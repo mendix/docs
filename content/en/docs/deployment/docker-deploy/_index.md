@@ -10,12 +10,12 @@ description: "Describes how to deploy using a Docker image."
 
 Docker is an open source container technology. With Mendix, you can use it for simple deployments, particularly when running local or development versions of your app. However, it lacks some scaling and integration features.
 
-The Docker Buildpack simplifies the creation of Docker images locally, but it falls short in terms of running, managing, and operating them effectively compared to the capabilities offered by Mendix for Private Cloud. Leveraging Mendix for Private Cloud means entrusting the Mendix Operator to automate these essential tasks whenever Kubernetes handles your containers. The following diagram illustrates the disparity between Docker Buildpack and Mendix Operator:
+The Docker Buildpack simplifies the creation of Docker images locally, but it falls short in terms of running, managing, and operating them effectively compared to the capabilities offered by Mendix on Kubernetes. Leveraging Mendix on Kubernetes means entrusting the Mendix Operator to automate these essential tasks whenever Kubernetes handles your containers. The following diagram illustrates the disparity between Docker Buildpack and Mendix Operator:
 
 {{< figure src="/attachments/deployment/docker-deploy/dockerbuildpack-vs-mxoperator.png" class="no-border" >}}
 
 {{% alert color="info" %}}
-Mendix suggests that, if you are planning to deploy to your own cloud platform at scale, a better solution for production apps is to use [Mendix for Private Cloud](/developerportal/deploy/private-cloud/). This provides you with structured and tested solutions for integrating with your own cloud infrastructure using comprehensive, automated, native functions, avoiding the need to create your own processes from scratch.
+Mendix suggests that, if you are planning to deploy to your own cloud platform at scale, a better solution for production apps is to use [Mendix on Kubernetes](/developerportal/deploy/private-cloud/). This provides you with structured and tested solutions for integrating with your own cloud infrastructure using comprehensive, automated, native functions, avoiding the need to create your own processes from scratch.
 {{% /alert %}}
 
 This page explains how to build a Docker image from your Mendix App. Every time you make changes to your app, you must create a new Docker image that can be pushed through the different stages of your application pipeline.

@@ -8,7 +8,7 @@ weight: 135
 
 Basic function to determine the length of a string or a list.
 
-## length
+## `length`
 
 Determines the length of a string or a list and outputs the value as an integer.
 

@@ -18,11 +18,15 @@ To access the **Merge** dialog box, open [Version Control](/refguide10/version-c
 
 Available scenarios are described in sections below.
 
-## Port Fix
+## Cherry Pick {#cherry-pick}
+
+{{% alert color="info" %}}
+This functionality was known as **Port fix** in previous versions of Studio Pro. It has been renamed to **Cherry pick** to keep it more consistent with the native Git name.
+{{% /alert %}}
 
 This scenario allows you to move a fix from a maintenance branch line to the main line. If you just want to redo a small fix, a single commit is often enough.
 
-Port fix transports the actual commit from one branch and directly applies it, including author and commit text to another branch. This means you do not need to explicitly commit your change.
+Cherry pick adds changes from the selected commit to your branch line. You will need to explicitly commit these changes after performing the cherry pick.
 
 ### Branch Line
 
@@ -30,7 +34,7 @@ Choose the branch line from which you want to merge the fix.
 
 ### Revision
 
-Choose a revision that you would like to port fix.
+Choose a revision that you would like to cherry pick.
 
 ## Merge Feature Branch
 

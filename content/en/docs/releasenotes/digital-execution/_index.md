@@ -3,7 +3,7 @@ title: "Digital Execution Release Notes"
 linktitle: "Digital Execution"
 url: /releasenotes/digital-execution/
 description: "Release notes for Compass and Portfolio Management"
-weight: 20
+weight: 27
 cascade:
     - numberless_headings: true
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.

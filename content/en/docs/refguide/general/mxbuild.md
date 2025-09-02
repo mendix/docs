@@ -7,7 +7,7 @@ description: "Describes MxBuild, which is a command-line tool for building and d
 
 ## Introduction
 
-MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package from a Mendix app.
+MxBuild is a Windows, Linux, and macOS command-line tool that can be used to build a Mendix Deployment Package from a Mendix app.
 
 The version of MxBuild you need depends on the version of the Mendix model you would like to build, as well as the host operating system you would like to use.
 
@@ -34,6 +34,14 @@ For details on the system requirements for MxBuild, see [System Requirements](/r
 
 {{% alert color="info" %}}
 The examples used in this document are for Windows, except when specifically mentioned otherwise.
+{{% /alert %}}
+
+On macOS, the MxBuild tool is distributed only within the `StudioPro.app` bundle. The Studio Pro installer automatically creates a symlink in `/usr/local/bin` with the format `mxbuild{mxversion}` (for example, `mxbuild11.0.0`), where `{mxversion}` does not include the build number. This symlink points to the `mxbuild` executable inside the app bundle, making it accessible from the command-line.
+
+{{% alert color="warning" %}}
+For MxBuild and macOS users:
+
+If you are using the macOS version of Studio Pro and you store your project files on an external drive not formatted using the Apple File System, macOS can generate hidden files and folders that can make Windows versions of Studio Pro or MxBuild not work as expected.
 {{% /alert %}}
 
 ## Command Line

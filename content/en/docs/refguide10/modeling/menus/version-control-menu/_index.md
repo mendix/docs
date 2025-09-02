@@ -49,7 +49,7 @@ The **Merge Changes Here** option allows you to merge changes that were committe
 
 ## Revert a Commit
 
-The **Reverse Merge Changes** option allows you to locally [roll back changes](/refguide10/using-version-control-in-studio-pro/#revert-changes) that were committed to the version control repository. These local changes can then be committed as a new revision.
+The **Revert a Commit** option allows you to locally [roll back changes](/refguide10/using-version-control-in-studio-pro/#revert-changes) that were committed to the version control repository. These local changes can then be committed as a new revision.
 
 ## Revert All Changes {#revert-all-changes}
 

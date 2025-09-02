@@ -1,25 +1,31 @@
 ---
 title: "Use Docker with Minikube"
 linktitle: "Run with Minikube"
-url: /developerportal/deploy/run-mendix-on-kubernetes/
+url: /developerportal/deploy/run-mendix-on-minikube/
 weight: 20
+aliases:
+    - /developerportal/deploy/run-mendix-on-kubernetes/
 ---
 
 ## Introduction
 
+{{% alert color="info" %}}
+This document is about local deployments on [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/). For the Mendix on Kubernetes solution, see [Mendix on Kubernetes](/developerportal/deploy/private-cloud/).
+{{% /alert %}}
+
 This how-to takes you through the process of deploying a Docker image of your Mendix app to [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/), a local version of [Kubernetes](https://kubernetes.io/docs/home/) which runs in a Windows container or virtual machine. Many of the operations you perform on Minikube are the same as those on a hosted environment and it provides a low-level entry to Kubernetes. For more information, see [Installing Kubernetes with Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/) on the Kubernetes documentation site.
 
-Kubernetes is a standard container orchestration platform supported by Mendix. For details on supported version of Kubernetes see [Mendix System Requirements](/refguide/system-requirements/). When publishing to your cloud infrastructure, Mendix suggests you use [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) to deploy Mendix apps to Kubernetes as this provides you with integration with the Mendix Portal and takes away much of the heavy lifting. 
+Kubernetes is a standard container orchestration platform supported by Mendix. For details on supported version of Kubernetes see [Mendix System Requirements](/refguide/system-requirements/). 
+
+{{% alert color="info" %}}
+Deploying a Docker image on Minikube is intended for test projects on a local machine. When publishing to your cloud infrastructure, Mendix suggests you use the [Mendix on Kubernetes](/developerportal/deploy/private-cloud/) solution, as this provides you with integration with the Mendix Portal and takes away much of the heavy lifting.
+{{% /alert %}}
 
 This how-to teaches you how to do the following:
 
-* Deploy and run a Mendix app on Kubernetes using Minikube
+* Deploy and run a Mendix app using Minikube
 * Separate the database deployment from your app 
 * Attach persistence storage to the app container
-
-{{% alert color="warning" %}}
-Do not use these instructions if you are using Mendix for Private Cloud — Mendix for Private Cloud performs many of the steps here for you. If deploying using Mendix for Private Cloud, follow the instructions in the [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) documentation.
-{{% /alert %}}
 
 ## Prerequisites
 
@@ -37,7 +43,7 @@ This how-to uses commands for a Unix-like system. The commands for Windows may b
 
 ## Architecture Overview{#architecture}
 
-Before you start, here is some background information on the components needed to deploy a Mendix app on Kubernetes.
+Before you start, here is some background information on the components needed to deploy a Mendix app with Minikube.
 
 A Mendix application needs, as a minimum, a database to run. In this example you provision a PostgreSQL database within the Kubernetes cluster. In production scenarios, the database is usually provided as a service by the cloud provider, like AWS RDS or Azure SQL. For supported databases see [Mendix System Requirements](/refguide/system-requirements/). 
 

@@ -20,7 +20,7 @@ Import mappings are used to define how incoming XML or JSON is converted into Me
 
 This is an example of an import mapping document that maps an **Order** from a web service to a **ReceivedOrder** entity:
 
-{{< figure src="/attachments/refguide/modeling/integration/mapping-documents/16843933.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/integration/mapping-documents/import-mapping.png" class="no-border" >}}
 
 For more details, see [Import Mappings](/refguide/import-mappings/).
 
@@ -33,7 +33,7 @@ Export mappings are used to define how Mendix objects can be converted to XML ac
 
 This is an example of an export mapping document:
 
-{{< figure src="/attachments/refguide/modeling/integration/mapping-documents/16843940.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/integration/mapping-documents/export-mapping.png" class="no-border" >}}
 
 In this example, a **Cheesecake** entity will be passed when the export mapping is called. Subsequently, the **Topping** entities will be fetched by following the **Topping_Cheesecake** association from the passed Cheesecake Mendix object. The result is passed to an XML document or sent to a web service.
 

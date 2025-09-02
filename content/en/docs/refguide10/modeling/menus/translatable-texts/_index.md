@@ -88,7 +88,7 @@ There are two options to ensure that the language is changed:
     1. Add the platform supported widget [HTML / JavaScript Snippet](https://marketplace.mendix.com/link/component/56/) to your app.
     2. Create a pop-up page.
     3. Place the HTMLSnippet widget on the pop-up page.
-    4. Add the **JavaScript** content `mx.reloadWithState();` to the widget.
+    4. Add the **JavaScript** content `window.reload();` to the widget.
     5. Open your new pop-up page from a microflow when you want to switch the user's language.
 
     {{< figure src="/attachments/refguide10/modeling/menus/translatable-texts/reload-with-state.png" alt="System Domain Model for User and Language" class="no-border" width="600" >}}

@@ -7,7 +7,7 @@ weight: 20
 {{% alert color="info" %}}
 Non-interrupting timer boundary events were introduced in beta in Studio Pro 10.15 and released in GA in Studio Pro 10.16.
 
-Interrupting timer boundary events were introduced in Studio Pro 10.20 and are currently in beta. Certain features or attributes are subject to change and may contain bugs. For more information, see [Beta and Experimental Releases](/releasenotes/beta-features/).
+Interrupting timer boundary events were introduced in Studio Pro 10.20 as a beta feature and released in GA in Studio Pro version 11. For more information on beta features, see [Beta and Experimental Releases](/releasenotes/release-status/).
 {{% /alert %}}
 
 ## Introduction
@@ -18,7 +18,7 @@ There are two main types of boundary events:
 
 * Non-interrupting boundary events: These events do not interrupt the ongoing activity. When triggered, they allow the activity to continue while simultaneously starting a new path from the boundary event. Use non-interrupting boundary events when the parent activity should remain active, but you would like to do something in parallel. For example, after 2 days, a reminder should be sent to the assigned user. As per BPMN 2.0 specification, non-interrupting boundary events are visualized as two dashed circles with an icon in the center.
 
-* Interrupting boundary events (currently in beta): When these events are triggered, they interrupt the activity they are attached to, meaning that this activity will be aborted. The process flow is redirected to the boundary event's outgoing sequence path. Use interrupting boundary event in situations where further execution of the activity (and other following activities) is not required and an alternative path should be taken. For example, use an interrupting boundary event to start an escalation or a fast-track path when an activity is not completed 2 days after the due date. Or when the assigned user does not make a decision within 5 days, you want to abort the user task and continue the process with a pre-set decision. As per BPMN 2.0 specification, interrupting boundary events are visualized as two solid circles.
+* Interrupting boundary events (generally available in Studio Pro 11): When these events are triggered, they interrupt the activity they are attached to, meaning that this activity will be aborted. The process flow is redirected to the boundary event's outgoing sequence path. Use interrupting boundary event in situations where further execution of the activity (and other following activities) is not required and an alternative path should be taken. For example, use an interrupting boundary event to start an escalation or a fast-track path when an activity is not completed 2 days after the due date. Or when the assigned user does not make a decision within 5 days, you want to abort the user task and continue the process with a pre-set decision. As per BPMN 2.0 specification, interrupting boundary events are visualized as two solid circles.
 
 Boundary Events are always displayed by 2 circles (either solid or dashed) and are linked by a dotted line to the parent activity. The icon inside the event indicates the type of event. For example, a clock indicates that it is a timer boundary event.
 
@@ -72,7 +72,7 @@ To configure the properties of a boundary event, double-click the event to open 
 While you can add up to five non-interrupting boundary events to an activity, only one interrupting boundary event is allowed per activity.
 {{% /alert %}}
 
-Interrupting boundary events are currently in beta. To enable this feature, go to Studio Pro **Preferences** -> **New features** -> **Workflow editor** > **Enable interrupting timer boundary events (beta)**:
+Interrupting boundary events are in beta in Studio Pro version 10. To enable this feature, go to Studio Pro **Preferences** -> **New features** -> **Workflow editor** > **Enable interrupting timer boundary events (beta)**:
 
 {{< figure src="/attachments/refguide10/modeling/application-logic/workflows/boundary-events/enable-interrupting-boundary-event.png" alt="Enable interrupting boundary event" width="450">}}
 
@@ -141,8 +141,6 @@ The list of variables is described below:
 * `$CalledWorkflowInstance` – the parent Call workflow activity of the attached boundary event
 
 ## Current Limitation {#limitation}
-
-The current release of boundary events is still under development and has the following limitation:
 
 * Non-interrupting timer boundary events currently have no recurrence (they are only executed once and will not repeat).
 

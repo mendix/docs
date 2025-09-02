@@ -1,7 +1,7 @@
 ---
 title: "Studio Pro 8 Compatible"
 url: /releasenotes/mobile/nt-studio-pro-8-parent/
-weight: 20
+weight: 80
 description: "Studio Pro 8 compatible Native Template release notes."
 ---
 

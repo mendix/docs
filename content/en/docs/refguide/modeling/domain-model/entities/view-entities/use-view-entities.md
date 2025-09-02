@@ -70,7 +70,7 @@ The original customer view included address information, but most database optim
 
 ## Sorting of View Entity Results {#sorting}
 
-Similar to other types of Mendix entity, view entities represent data without enforcing any specific order. As a result, it is not possible to use the `ORDER BY` clause in the view entity OQL to sort query results. However, data retrieved from a view entity can be sorted on retrieval (like regular entities) using options like the [Sorting](/refguide/retrieve/#sorting) feature in a Retrieve microflow activity.
+Similar to other types of Mendix entity, view entities represent data without enforcing any specific order. As a result, it is not possible to use the `ORDER BY` clause in the view entity OQL to sort query results. However, data retrieved from a view entity can be sorted on retrieval (like regular entities) using options like the [Sorting](/refguide/retrieve-objects/#sorting) feature in a Retrieve microflow activity.
 
 ### `ORDER BY` in Combination with `LIMIT` and `OFFSET`
 

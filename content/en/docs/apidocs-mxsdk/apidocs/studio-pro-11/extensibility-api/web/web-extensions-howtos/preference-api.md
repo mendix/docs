@@ -2,7 +2,6 @@
 title: "Show User's Preferences Using Web API"
 linktitle: "Show User's Preferences"
 url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/preference-api/
-weight: 30
 ---
 
 ## Introduction
@@ -18,42 +17,42 @@ Before starting this how-to, ensure you have:
 
 ## Set Up the Extension Structure 
 
-Create a menu that will display a dialog with text. This is done in the `loaded` event in `Main`. This can be done by following the steps in [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/).
+Create a menu that will display a dialog with text. This is done in the `loaded` method in the main entry point (`src/main/index.ts`). This can be done by following the steps in [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/).
 
 In the example below, you create one menu item that will show a message box.
 
 Replace your `src/main/index.ts` file with the following:
 
 ```typescript
-import { IComponent, Menu, studioPro } from "@mendix/extensions-api";
+import { IComponent, Menu, getStudioProApi } from "@mendix/extensions-api";
 
-const menuApi = studioPro.ui.extensionsMenu;
+export const component: IComponent = {
+    async loaded(componentContext) {
+        const studioPro = getStudioProApi(componentContext);
+        const menuApi = studioPro.ui.extensionsMenu;
 
-const messageBoxApi = studioPro.ui.messageBoxes;
-const menuId = "my-menu";
-const caption = "My Preferences";
+        const messageBoxApi = studioPro.ui.messageBoxes;
+        const menuId = "my-menu";
+        const caption = "My Preferences";
 
-// Open a message box when the menu item is clicked
-studioPro.ui.extensionsMenu.addEventListener("menuItemActivated", (args) => {
-  if (args.menuId === menuId) {
-    messageBoxApi.show("info", `User Preferences are:`);
-  }
-});
-class Main implements IComponent {
-  async loaded() {
-    const menu: Menu = {
-      caption: caption,
-      menuId: menuId,
-    };
+        // Open a message box when the menu item is clicked
+        studioPro.ui.extensionsMenu.addEventListener("menuItemActivated", async (args) => {
+            if (args.menuId === menuId) {
+                await messageBoxApi.show("info", `User Preferences are:`);
+            }
+        });
 
-    await menuApi.add(menu);
-  }
+        const menu: Menu = {
+            caption: caption,
+            menuId: menuId,
+        };
+
+        await menuApi.add(menu);
+    }
 }
-
-export const component: IComponent = new Main();
 ```
 
-The code imports the:
+The code uses the:
 
 * `menuApi` from `studioPro.ui.extensionsMenu` to allow you to use the menu API
 * `messageBoxApi` from `studioPro.ui.messageBoxes` to show a dialog
@@ -64,7 +63,7 @@ It listens to the `menuItemActivated` endpoint, which will notify the extension 
 
 Import the preferences API and use it to fetch the user’s preferences. 
 
-1. Add the following import at the top of the file:
+1. Add the following code after the introduction of `menuApi` variable on line 6.
 
     ```typescript
     const preferencesApi = studioPro.ui.preferences;
@@ -79,11 +78,9 @@ Import the preferences API and use it to fetch the user’s preferences.
         if (args.menuId === menuId) {
           const preferences = await preferencesApi.getPreferences();
 
-          messageBoxApi.show(
-            "info",
-            `User Preferences are:\n
-            Theme is: ${preferences.theme}\n
-            Language is: ${preferences.language}`
+          await messageBoxApi.show(
+              "info",
+              `User Preferences are:\n Theme is: ${preferences.theme}\n Language is: ${preferences.language}`
           );
         }
       }
@@ -104,43 +101,41 @@ The `getPreferences()` function returns an object with two properties:
 The complete `src/main/index.ts` file should now look like this:
 
 ```typescript
-import { IComponent, Menu, studioPro } from "@mendix/extensions-api";
+import { IComponent, Menu, getStudioProApi } from "@mendix/extensions-api";
 
-const menuApi = studioPro.ui.extensionsMenu;
+export const component: IComponent = {
+    async loaded(componentContext) {
+        const studioPro = getStudioProApi(componentContext);
+        const menuApi = studioPro.ui.extensionsMenu;
+        const preferencesApi = studioPro.ui.preferences;
 
-const messageBoxApi = studioPro.ui.messageBoxes;
-const preferencesApi = studioPro.ui.preferences;
-const menuId = "my-menu";
-const caption = "My Preferences";
+        const messageBoxApi = studioPro.ui.messageBoxes;
+        const menuId = "my-menu";
+        const caption = "My Preferences";
 
-// Open a message box when the menu item is clicked
-studioPro.ui.extensionsMenu.addEventListener(
-  "menuItemActivated",
-  async (args) => {
-    if (args.menuId === menuId) {
-      const preferences = await preferencesApi.getPreferences();
+        // Open a message box when the menu item is clicked
+        studioPro.ui.extensionsMenu.addEventListener(
+            "menuItemActivated",
+            async (args) => {
+                if (args.menuId === menuId) {
+                    const preferences = await preferencesApi.getPreferences();
 
-      messageBoxApi.show(
-        "info",
-        `User Preferences are:\n
-        Theme is: ${preferences.theme}\n
-        Language is: ${preferences.language}`
-      );
+                    await messageBoxApi.show(
+                        "info",
+                        `User Preferences are:\n Theme is: ${preferences.theme}\n Language is: ${preferences.language}`
+                    );
+                }
+            }
+        );
+
+        const menu: Menu = {
+            caption: caption,
+            menuId: menuId,
+        };
+
+        await menuApi.add(menu);
     }
-  }
-);
-class Main implements IComponent {
-  async loaded() {
-    const menu: Menu = {
-      caption: caption,
-      menuId: menuId,
-    };
-
-    await menuApi.add(menu);
-  }
 }
-
-export const component: IComponent = new Main();
 ```
 
 ## Extensibility Feedback

@@ -88,7 +88,7 @@ When **Microflow 1** starts with a button click, a savepoint is created at the v
 
 ### Error Handling - Continue
 
-The **Continue** option can only be set on a microflow call or on a loop.
+The **Continue** option can only be set on a Call microflow activity or on a loop.
 
 In this example, the error handling in **Microflow 2** is set to **Continue**.
 

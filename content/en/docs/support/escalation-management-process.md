@@ -1,7 +1,7 @@
 ---
 title: "Support Escalation Process"
 url: /support/escalation-management-process/
-weight: 50
+weight: 60
 description: "Describes how a support request can be escalated to bring your issue to closure."
 aliases:
     - /howtogeneral/support/index.html

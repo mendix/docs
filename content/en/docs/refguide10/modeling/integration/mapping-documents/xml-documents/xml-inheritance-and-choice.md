@@ -19,7 +19,7 @@ In Mendix, both inheritance and choice are mapped by entity specialization.
 
 In the image below, an example of an Export Mapping with inheritance is shown. For Import Mappings, the structure is the same, only the direction of the arrows is reversed. One Persons object has a one-to-many association to Person. The person can be either a Customer or Employee.
 
-{{< figure src="/attachments/refguide10/modeling/integration/mapping-documents/xml-inheritance-and-choice/16843946.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/integration/mapping-documents/xml-documents/xml-inheritance-and-choice/inheritance.png" class="no-border" >}}
 
 For Import Mappings, mapping the incoming XML to a specific XSD type is defined by the attribute *xsi:type*. However, this attribute is optional. When the *xsi:type* attribute is not present and the base type of the element is not abstract, that type will be used (in the example, that is Person). If the base type does not have a mapping defined in the import mapping document, it will be skipped. When the base type is abstract, an error will be thrown.
 
@@ -35,6 +35,6 @@ When the root element is an inheritance element, you can only maps the entire bo
 
 The image below shows an Export Mapping with a choice element. The schema specifies a choice with two alternatives: an employee id or member ID. In this image, a base entity Person is mapped to the choice element to serve as a generalization for the choice options. 
 
-{{< figure src="/attachments/refguide10/modeling/integration/mapping-documents/xml-inheritance-and-choice/16843945.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/integration/mapping-documents/xml-documents/xml-inheritance-and-choice/choice.png" class="no-border" >}}
 
 For exporting objects, optionality on choice elements is handled differently than for other elements because they do not explicitly occur in XML. There are two cases in which it is valid to export an empty object for a choice element: first, when the choice element itself is **Optional** and second, when at least one of the choice options is **Optional**. In these cases, no element will be created, otherwise an error is thrown. When one or more options of a choice element are **Nillable** and at the choice element you export an empty object, Mendix throws an **Unsupported** error because it is impossible to determine which XML element should be sent with the *xsi:nil* attribute.

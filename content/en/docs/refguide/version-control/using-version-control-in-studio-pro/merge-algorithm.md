@@ -312,8 +312,6 @@ The **Show file conflicts** button is shown when there are conflicts in files wh
 
 When clicked, it opens up a pop-up window with a list of all the files that are affected by the update process, with conflicted ones at the top of the list.
 
-You can also use the [Show Changes on Disk](/refguide/version-control-menu/#show-changes) menu item instead.
-
 ### Rebase-Specific Controls
 
 There are some buttons which are only shown when conflicts are found when doing a rebase.

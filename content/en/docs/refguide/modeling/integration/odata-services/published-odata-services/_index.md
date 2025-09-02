@@ -2,6 +2,8 @@
 title: "Published OData/GraphQL Services"
 url: /refguide/published-odata-services/
 weight: 10
+aliases:
+    - /refguide/published-odata-enumeration/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -182,12 +184,14 @@ This result is a header which looks like `Authorization: Basic QWxhZGRpbjpvcGVuI
 
 When you check this authentication method, the JavaScript in your app can access the REST service using the current user's session.
 
-To prevent cross-site request forgery, the `X-Csrf-Token` header needs to be set on each request, for example:
+To prevent cross-site request forgery, the `X-Csrf-Token` header needs to be set on each request. If you are using a JavaScript action, you can use an API to retrieve the token.
 
 ```js
+import getCSRFToken from "mx-api/session";
+
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.open("GET", "http://mysite/odata/myservice/myentity", false);
-xmlHttp.setRequestHeader("X-Csrf-Token", mx.session.getConfig("csrftoken"));
+xmlHttp.setRequestHeader("X-Csrf-Token", getCSRFToken());
 xmlHttp.send(null);
 ```
 
@@ -196,7 +200,7 @@ xmlHttp.send(null);
 Specify which microflow to use for custom authentication. The microflow may take the following as a parameter:
 
 * A list of [HttpHeader](/refguide/http-request-and-response-entities/#http-header). These are the HTTP headers in the client's request. Use this parameter for authentication schemes that are based on HTTP headers.
-* [HttpRequest](/refguide/http-request-and-response-entities/#http-request). Use this parameter for authentication schemes that are based on more than just the HTTP headers (for example, when the client supplies credentials in the request body). You cannot use this parameter together with a list of HttpHeader. Instead, use a [retrieve activity](/refguide/retrieve/) to retrieve the associated request headers.
+* [HttpRequest](/refguide/http-request-and-response-entities/#http-request). Use this parameter for authentication schemes that are based on more than just the HTTP headers (for example, when the client supplies credentials in the request body). You cannot use this parameter together with a list of HttpHeader. Instead, use a [retrieve object(s) activity](/refguide/retrieve-objects/) to retrieve the associated request headers.
 * [HttpResponse](/refguide/http-request-and-response-entities/#http-response). When the microflow sets the status code of this response to something other then **200**, this value is returned and the operation will not be executed. Any headers set on the response are returned (except when the microflow returns an empty user).
 
 The authentication microflow should return a User.

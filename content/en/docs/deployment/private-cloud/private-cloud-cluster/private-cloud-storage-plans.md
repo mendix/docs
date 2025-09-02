@@ -1,7 +1,7 @@
 ---
 title: "Storage Plans"
 url: /developerportal/deploy/private-cloud-storage-plans/
-description: "Describes how to configure storage plans in Mendix for Private Cloud."
+description: "Describes how to configure storage plans in Mendix on Kubernetes."
 weight: 10
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
@@ -157,7 +157,7 @@ The database plan does not include any functionality for backing up or restoring
 
 To create a new database, do the following steps:
 
-1. Give your plan a **Name** and choose the **Database Type**. See the information below for more help in setting up plans for the different types of database which are supported by Mendix for Private Cloud.
+1. Give your plan a **Name** and choose the **Database Type**. See the information below for more help in setting up plans for the different types of database which are supported by Mendix on Kubernetes.
 2. Apply two validation checks by clicking the **Validate** and **Connection Validation** buttons:
     * **Validate** – Checks that you have provided all the required values and that they are in the correct format.
     * **Connection validation** – Checks whether the specified storage plan has been successfully created. This does not guarantee that the storage instance will be created successfully when the configuration is applied, so to fully test a database plan, you will need to test it by [creating a temporary test environment](#typical-workflow).
@@ -902,7 +902,7 @@ When an existing environment is deleted, the Mendix Operator performs the follow
 
 ### Amazon S3 {#blob-s3}
 
-Mendix for Private Cloud provides a variety of options for storing files in Amazon S3. Each option uses its own approach to isolation between environments, and to attaching a bucket (and IAM user/policy) to a new environment.
+Mendix on Kubernetes provides a variety of options for storing files in Amazon S3. Each option uses its own approach to isolation between environments, and to attaching a bucket (and IAM user/policy) to a new environment.
 
 If you would like to have Mendix Operator with automation, and have full isolation between environments, use the [Create account with existing policy](#s3-create-account-existing-policy) option. This option works with the least possible AWS privileges.
 For apps using Mendix 9.22 (or a later version), the [IRSA Mode](#s3-irsa-mode) option provides the same features and additional security.
@@ -1282,7 +1282,7 @@ This basic, on-demand option allows you to attach an existing S3 bucket and IAM 
 * Access/Secret keys used by existing environments can only be rotated manually.
 * No isolation between environments using this blob storage plan (if the **Share bucket between environments** option is checked).
 * Configuration parameters will not be validated and will be provided to the Mendix app as-is. If the arguments are not valid or there is an issue with permissions, the Mendix Runtime will fail to start the and deployment will appear to be stuck with **Replicas running** and **Runtime** showing a spinner.
-* To configure the **Autogenerate Prefix** option you need Mendix Operator version 2.7.0 or above. See [Upgrading Private Cloud](/developerportal/deploy/private-cloud-upgrade-guide/) for instructions on upgrading the Mendix Operator.
+* To configure the **Autogenerate Prefix** option you need Mendix Operator version 2.7.0 or above. See [Upgrading Mendix on Kubernetes](/developerportal/deploy/private-cloud-upgrade-guide/) for instructions on upgrading the Mendix Operator.
 
 ##### Environment Isolation
 
@@ -1864,7 +1864,7 @@ This guide explains how to set up and use a database and blob file storage plan 
 This feature requires an Mendix app based on Mendix 9.22 (or later) and Mendix Operator version 2.12 (or later).
 {{% /alert %}}
 
-Before you begin, you need to create an EKS cluster and install Mendix for Private Cloud in that cluster.
+Before you begin, you need to create an EKS cluster and install Mendix on Kubernetes in that cluster.
 
 Navigate to the EKS cluster details and write down the **OpenID Connect provider URL**:
 
@@ -2151,7 +2151,7 @@ This guide explains how to set up and use a database and blob file storage plan 
 This feature requires an Mendix app based on Mendix 10.10 (or above) and Mendix Operator version 2.17 (or above).
 {{% /alert %}}
 
-Before you begin, you need to create an AKS cluster and install Mendix for Private Cloud in that cluster.
+Before you begin, you need to create an AKS cluster and install Mendix on Kubernetes in that cluster.
 
 {{% alert color="warning" %}}
 This walkthrough provides examples for two database types: Postgres and Azure SQL, and you only need to create one of them.

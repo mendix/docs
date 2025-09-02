@@ -27,9 +27,11 @@ Environment maintenance is a maintenance operation that will be (or has been) ca
 
 Whenever possible, environment maintenance is carried out within your preferred maintenance window.
 
+For more information about the status of environment maintenance, refer to the [Planned Maintenance](/developerportal/deploy/environments-details/#planned-maintenance) section in *Environment Details*.
+
 ### Mendix Cloud Maintenance
 
-Mendix Cloud must be updated regularly too. Platform infrastructure maintenance requires an update to an entire Mendix Cloud region at once, so it may occur outside of your preferred maintenance window.
+Mendix Cloud must be updated regularly too. Platform infrastructure maintenance requires an update to an entire Mendix Cloud region at once, so it may occur outside of your preferred maintenance window. Platform maintenance is announced on the [Mendix Platform Status](https://status.mendix.com/#) page.
 
 This infrastructure maintenance uses rolling updates, so multi-instance applications continue to be available. However, applications with a single instance see brief downtime (~1-2 minutes) when their instance is restarted.
 
@@ -47,19 +49,15 @@ Follow the instructions below to configure a maintenance window.
 
 1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
 
-1. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the environment that you want to configure.
+2. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the environment that you want to configure.
 
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/maintenance-windows/environment-details.png" alt="" class="no-border" >}}
+3. Go to the **Maintenance** tab.
 
-1. Go to the **Maintenance** tab.
+4. Click **Change** to modify the preferred maintenance window of your environment. To modify the window, you must have [transport rights](/developerportal/deploy/node-permissions/#transport-rights) for the environment.
 
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/maintenance-windows/maintenance.png" alt="" class="no-border" >}}
+5. Choose one of the maintenance windows from the drop-down menu.
 
-1. Click **Change** to modify the preferred maintenance window of your environment. To modify the window, you must have [transport rights](/developerportal/deploy/node-permissions/#transport-rights) for the environment.
-
-1. Choose one of the maintenance windows from the drop-down menu.
-
-1. Click **Save** to confirm your new preferred maintenance window.
+6. Click **Save** to confirm your new preferred maintenance window.
 
 ### Configuring Maintenance Window in a Week with Planned Maintenance
 

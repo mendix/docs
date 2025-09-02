@@ -36,7 +36,7 @@ The Deploy API v1 requires authentication via API keys that are bound to your Me
 
 ### Obtaining an API Key
 
-To obtain a Mendix API key, follow the instructions in the [API Keys](/community-tools/mendix-profile/user-settings/#profile-api-keys) section of *Mendix Profile*.
+To obtain a Mendix API key, follow the instructions in the [API Keys](/mendix-profile/user-settings/#profile-api-keys) section of *Mendix Profile*.
 
 ### Using Authentication Headers
 
@@ -64,13 +64,13 @@ Only *Retrieve apps*, *Create Free App environment*, and *Retrieve app* API call
 Retrieves all apps to which the authenticated user has access as a regular user that have environments created on Mendix Cloud. This includes all licensed apps and any Free Apps that have been deployed.
 
 {{% alert color="info" %}}
-This API call does not return the same results as you can see within the Mendix Portal. It includes all licensed and free apps on Mendix Cloud. Free apps include all apps that have been created or edited in Studio Pro, even if they have then been deployed to a different cloud, such as Mendix for Private Cloud.
+This API call does not return the same results as you can see within the Mendix Portal. It includes all licensed and free apps on Mendix Cloud. Free apps include all apps that have been created or edited in Studio Pro, even if they have then been deployed to a different cloud, such as Mendix on Kubernetes.
 
 In the Mendix Portal:
 
 * The [Nodes](/developerportal/deploy/node-permissions/#nodes) screen in the Mendix Portal shows all the licensed apps which are returned by this request, but does not show any Free Apps.
 
-* The [My Apps](/developerportal/#my-apps) screen shows both licensed apps and Free Apps, but also includes apps that are deployed to other platforms (such as Mendix for Private Cloud or SAP BTP) and Free Apps that have not yet been deployed and therefore have no environments set up for them.
+* The [My Apps](/developerportal/#my-apps) screen shows both licensed apps and Free Apps, but also includes apps that are deployed to other platforms (such as Mendix on Kubernetes or SAP BTP) and Free Apps that have not yet been deployed and therefore have no environments set up for them.
 {{% /alert %}}
 
 ```bash

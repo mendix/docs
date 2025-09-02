@@ -91,7 +91,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
         const url = "https://api.github.com/search/users?q=" + query;
         const response = await fetch(url); // Fetch returns a promise, gets the url and wait for result
         const jsonData = await response.json(); // Transform to JSON
-        logger.debug("count results", jsonData.total_count); // log to the console a successful result
+        console.log("count results", jsonData.total_count); // log to the console a successful result
         return []; // return an empty list for now...
         // END USER CODE
     }
@@ -104,6 +104,8 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 10. Finally, set a `Promise.all` return to wait for all promises to be resolved before the nanoflow can continue:
 
     ```javascript
+    import { create } from "mx-api/data"
+
     export async function SearchGitHubUsers(query) {
         // BEGIN USER CODE
         if (!query) {
@@ -112,24 +114,19 @@ To create a JavaScript action that can search for users on GitHub, follow the st
         const url = "https://api.github.com/search/users?q=" + query;
         const response = await fetch(url); 
         const jsonData = await response.json();
-        logger.debug("count", jsonData.total_count);
+        console.log("count", jsonData.total_count);
         const gitHubUsers = jsonData.items.map(createGitHubUser);
         return Promise.all(gitHubUsers);
 
-        function createGitHubUser(user) {
-            return new Promise(function (resolve, reject) {
-                mx.data.create({
-                    entity: "HowTo.GitHubUser",
-                    callback: function(mxObject) {
-                        mxObject.set("login", user.login);
-                        mxObject.set("avatar_url", user.avatar_url);
-                        resolve(mxObject);
-                    },
-                    error: function(e) {
-                        reject("Could not create object:" + error.message);
-                    }
-                });
-            });
+        async function createGitHubUser(user) {
+            try {
+                const mxObject = await create({ entity: "HowTo.GitHubUser" });
+                mxObject.set("login", user.login);
+                mxObject.set("avatar_url", user.avatar_url);
+                return mxObject;
+            } catch(err) {
+                throw new Error("Could not create object:" + err.message)
+            }
         }
         // END USER CODE
     }
@@ -140,6 +137,8 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 11. The function will only set the `login` and `avatar_url` properties. To make it more flexible, you will make the function discover the available attributes and set them. Extend the domain model with more attributes from the API like so:
 
     ```javascript
+    import { create } from "mx-api/data"
+
     export async function SearchGitHubUsers(query) {
         // BEGIN USER CODE
         if (!query) {
@@ -148,30 +147,25 @@ To create a JavaScript action that can search for users on GitHub, follow the st
         const url = "https://api.github.com/search/users?q=" + query;
         const response = await fetch(url); 
         const jsonData = await response.json();
-        logger.debug("count", jsonData.total_count);
+        console.log("count", jsonData.total_count);
         const gitHubUsers = jsonData.items.map(createGitHubUser);
         return Promise.all(gitHubUsers);
 
-        function createGitHubUser(user) {
-            return new Promise(function (resolve, reject) {
-                mx.data.create({
-                    entity: "HowTo.GitHubUser",
-                    callback: function(mxObject) {
-                        // Dynamically set attributes
-                        mxObject.getAttributes()
-                            .forEach(function(attributeName) {
-                                var attributeValue = user[attributeName];
-                                if (attributeValue) {
-                                    mxObject.set(attributeName, attributeValue);
-                                }
-                            });
-                        resolve(mxObject);
-                    },
-                    error: function(error) {
-                        reject("Could not create object:" + error.message);
-                    }
-                });
-            });
+        async function createGitHubUser(user) {
+            try {
+                const mxObject = await create({ entity: "HowTo.GitHubUser" });
+                // Dynamically set attributes
+                mxObject.getAttributes()
+                    .forEach(attributeName => {
+                        const attributeValue = user[attributeName];
+                        if (attributeValue) {
+                            mxObject.set(attributeName, attributeValue);
+                        }
+                    });
+                return mxObject;
+            } catch(err) {
+                throw new Error("Could not create object:" + err.message)
+            }
         }
         // END USER CODE
     }
@@ -196,9 +190,11 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 
     {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-github/select-user-entity.png" alt="select user entity" class="no-border" >}}
 
-15. Your final step is updating the code. The new `userEntity` parameter has already been added. In the `mx.data.create` function, set `userEntity` as the `entity` to be created. Then, add some documentation for future reference:
+15. Your final step is updating the code. The new `userEntity` parameter has already been added. In the `create` function, set `userEntity` as the `entity` to be created. Then, add some documentation for future reference:
 
     ```javascript
+    import { create } from "mx-api/data"
+
     /*
     Searching users on GitHub.com, it could find users via various criteria. This action returns up to 100 results.
     @param {string} query - The query contains one or more search keywords and qualifiers. Qualifiers allow you to limit your search to specific areas of GitHub.
@@ -225,37 +221,30 @@ To create a JavaScript action that can search for users on GitHub, follow the st
         const url = "https://api.github.com/search/users?q=" + query;
         const response = await fetch(url); 
         const jsonData = await response.json();
-        logger.debug("count", jsonData.total_count);
         const gitHubUsers = jsonData.items.map(createGitHubUser);
         return Promise.all(gitHubUsers);
 
-        function createGitHubUser(user) {
-            // Wrap the Mendix Client API in a promise
-            return new Promise(function (resolve, reject) {
-                mx.data.create({
-                    entity: userEntity,
-                    callback: function(mxObject) {
-                        // Dynamically set attributes
-                        mxObject.getAttributes()
-                            .forEach(function(attributeName) {
-                                const attributeValue = user[attributeName];
-                                if (attributeValue) {
-                                    mxObject.set(attributeName, attributeValue);
-                                }
-                            });
-                        resolve(mxObject);
-                    },
-                    error: function(error) {
-                        reject("Could not create object:" + error.message);
-                    }
-                });
-            });
+        async function createGitHubUser(user) {
+            try {
+                const mxObject = await create({ entity: userEntity });
+                // Dynamically set attributes
+                mxObject.getAttributes()
+                    .forEach(attributeName => {
+                        const attributeValue = user[attributeName];
+                        if (attributeValue) {
+                            mxObject.set(attributeName, attributeValue);
+                        }
+                    });
+                return mxObject;
+            } catch(err) {
+                throw new Error("Could not create object:" + err.message)
+            }
         }
         // END USER CODE
     }
     ```
 
-16. You have just implemented an advanced JavaScript action! Start using the action in your nanoflows by adding a **JavaScript action call**, and then selecting the newly created **SearchGitHubUsers** action:
+16. You have just implemented an advanced JavaScript action! Start using the action in your nanoflows by adding a **Call JavaScript action**, and then selecting the newly created **SearchGitHubUsers** action:
 
     {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-github/select-searchgithub-users.png" alt="select search GitHub users" class="no-border" >}}
 

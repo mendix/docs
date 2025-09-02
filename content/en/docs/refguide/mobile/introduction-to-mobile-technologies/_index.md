@@ -40,6 +40,10 @@ Building native mobile apps is inherently more complex than building web-based a
 
 For more information, see [Native Mobile](/refguide/mobile/introduction-to-mobile-technologies/native-mobile/).
 
+{{% alert color="info" %}}
+[What PWA Can Do Today](https://whatpwacando.today/) is a free service that lets you try out PWA capabilities on your devices of choice. Use it to determine which PWA features are possible on your app's target devices. Be aware that not all capabilities are supported by Mendix.
+{{% /alert %}}
+
 ## Deciding Between a PWA or Native Mobile App
 
 Mendix offers building native mobile apps and PWAs, enabling companies to choose the right technology for the right use case. Depending on your app's requirements or constraints, one or the other can be a better fit. It is also possible to have both native mobile and PWA profiles in a single app, running next to each other.

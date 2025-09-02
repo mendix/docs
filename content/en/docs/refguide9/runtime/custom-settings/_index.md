@@ -153,7 +153,7 @@ Before the data copying process starts, the main database structure will be gene
 The settings described below influence the behavior of the Amazon S3 Storage Service module. This module can be used for both Amazon S3 Storage and IBM Cloud Object Storage.
 
 {{% alert color="warning" %}}
-For deployments to Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you and cannot be overwritten.
+For deployments to Mendix Cloud, SAP BTP, and Mendix on Kubernetes these settings are managed for you and cannot be overwritten.
 {{% /alert %}}
 
 | Name | Description | Default Value |
@@ -180,7 +180,7 @@ For deployments to Mendix Cloud, SAP BTP, and Mendix for Private Cloud these set
 These settings can be changed to use a Microsoft Azure SQL database for your Mendix application.
 
 {{% alert color="warning" %}}
-For deployments to Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you and cannot be overwritten.
+For deployments to Mendix Cloud, SAP BTP, and Mendix on Kubernetes these settings are managed for you and cannot be overwritten.
 {{% /alert %}}
 
 First, you need to create an Azure SQL database (for information on how to do this, see this [SQL Database Tutorial](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/)). Make sure your Azure firewall settings allow your Mendix application to reach the Azure SQL database (by default, the Azure firewall does not allow external connections).
@@ -198,7 +198,7 @@ First, you need to create an Azure SQL database (for information on how to do th
 These settings can be used to store files using the Microsoft Azure blob storage service. Server-side encryption can be configured through the Azure Portal (for more information, see [Azure Storage encryption for data at rest](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)).
 
 {{% alert color="warning" %}}
-For deployments to Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you and cannot be overwritten.
+For deployments to Mendix Cloud, SAP BTP, and Mendix on Kubernetes these settings are managed for you and cannot be overwritten.
 {{% /alert %}}
 
 | Name | Description | Default Value |

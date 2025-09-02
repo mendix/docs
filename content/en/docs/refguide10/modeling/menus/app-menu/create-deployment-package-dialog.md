@@ -16,7 +16,7 @@ Most deployment targets have a limit on the uncompressed size of deployment pack
 | --- | --- |
 | Mendix Cloud | 1 GB |
 | SAP BTP | 1.5 GB |
-| Mendix for Private Cloud | 1024 MB |
+| Mendix on Kubernetes | 1024 MB |
 
 This is the uncompressed size of the deployment package (*.mda* file). You can find the uncompressed size by opening your package file in a file archiving program such as [7-Zip](https://www.7-zip.org/) and looking at the file properties or **Info**.
 

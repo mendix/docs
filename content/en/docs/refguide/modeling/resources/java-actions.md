@@ -8,7 +8,7 @@ description: "Describes using Java Actions to extend the functionality of your M
 
 ## Introduction
 
-With Java actions you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows. You can call a Java action from a microflow using the [Java action call](/refguide/java-action-call/).
+With Java actions you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows. You can call a Java action from a microflow using the [Call Java action](/refguide/call-java-action/).
 
 {{% alert color="info" %}}
 Each Java action defined in Studio Pro corresponds to a file *{name of Java action}.java* in the subdirectory *javasource/{module name}/actions* of the app directory.
@@ -28,7 +28,7 @@ A Java action has zero or more parameters. Parameters are the means by which you
 
 Each parameter has a name, type, category, and description. 
 
-Use categories to keep the parameters apart in the [Java action call](/refguide/java-action-call/). If you do not specify a category, the parameter will appear in the **Input** group.
+Use categories to keep the parameters apart in the [Call Java action](/refguide/call-java-action/). If you do not specify a category, the parameter will appear in the **Input** group.
 
 See [Data Types](/refguide/data-types/) for the possible standard parameter types. When the type is an Object or List, you must also select its Entity type, which can be either a specific entity or a type parameter. The type parameter postpones the selection of the actual entity type until the Java action is used in a microflow. This allows your Java action to accept a (list of) Mendix object (or objects) of an arbitrary entity type.
 

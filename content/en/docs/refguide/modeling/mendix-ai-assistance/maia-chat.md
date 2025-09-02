@@ -12,7 +12,7 @@ aliases:
 ## Introduction
 
 {{% alert color="info" %}}
-Maia Chat is also available in the Mendix Portal. For more information, see the [Maia Chat](/developerportal/global-navigation/#maia-chat) section in *Global Navigation*.
+Maia Chat is also available in the Mendix Portal. For more information, refer to the [Maia Chat](/maia-mx-portal//#maia-chat) section in *Maia in Mendix Portal*.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -20,7 +20,7 @@ To use Maia Chat, an internet connection and signing in to Studio Pro are requir
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Maia Chat does not use any project, customer, or company information. It only uses the data that you have entered in the Chat. Please do not enter any personal or sensitive data!
+Maia Chat does not use any project, customer, or company information. It only uses the data that you have entered in the Chat to fulfill the user request. Please do not enter any personal or sensitive data!
 {{% /alert %}}
  
 Maia Chat is a built-in chat interface in the Mendix Platform powered by generative AI. Developers can ask questions about all aspects of Mendix, including how to apply concepts, best practices, governance tools, and development patterns. It is based on large language models (LLMs) using data from various resources. 

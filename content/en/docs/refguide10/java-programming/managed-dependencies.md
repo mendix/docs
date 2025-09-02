@@ -132,7 +132,7 @@ For more details, refer to the Gradle documentation on [Declaring repositories](
 
 There are some dependencies that are required by Mendix. These need to be added to your configured repository. Below is a list of these dependencies:
 
-* The Gradle plugin [cyclonedx-gradle-plugin](https://github.com/CycloneDX/cyclonedx-gradle-plugin), which generates a Software Bill of Materials (SBoM) required in certain contexts
+* The Gradle plugin [cyclonedx-gradle-plugin](https://github.com/CycloneDX/cyclonedx-gradle-plugin), which generates a Software Bill of Materials (SBOM) required in certain contexts
 
 ## Proxy Settings{#proxy-settings}
 

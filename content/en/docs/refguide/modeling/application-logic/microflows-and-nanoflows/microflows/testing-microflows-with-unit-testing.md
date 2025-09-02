@@ -122,12 +122,12 @@ To create a sample test microflow, follow these steps:
 8. In the **Member** section of the activity, add another new member with the following properties:
     * **Level** – *MyFirstModule.Level.Junior*
     * **Member type** – **Enumeration 'Level'**
-9. In the **Test_PromoteEmployeeToMedior** microflow, call the **Promote** microflow by adding a **Microflow Call** activity with the following properties:
+9. In the **Test_PromoteEmployeeToMedior** microflow, call the **Promote** microflow by adding a **Call Microflow** activity with the following properties:
     * **Microflow** – **MyFirstModule.Promote**
     * **Parameter** – **Employee**
     * **Argument** –*$NewEmployee*
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/call-promote-microflow.png" alt="A microflow call activity with Employee as the parameter" max-width=70% >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/call-promote-microflow.png" alt="A call microflow activity with Employee as the parameter" max-width=70% >}}
 
 10. To test if the employee is promoted to the right level, add an **Assert using expression** activity with the following properties:
     * **Name** – *‘Promoted to Medior?’*

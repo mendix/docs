@@ -1,5 +1,5 @@
 ---
-title: "Advanced Ingress Settings in Mendix for Private Cloud"
+title: "Advanced Ingress Settings in Mendix on Kubernetes"
 linktitle: "Advanced Settings"
 url: /developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/advanced/
 description: "Describes how to configure advanced Ingress settings."
@@ -71,7 +71,7 @@ In this way, you can configure the following settings:
 
 ## Configuring Headers in NGINX Ingress
 
-For NGINX Ingress, you can set headers globally for all apps in a namespace by using a configuration snippet in the OperatorConfiguration object. Alternatively, you can configure headers for individual app environments by adding the `nginx.ingress.kubernetes.io/configuration-snippet` annotation in the Private Cloud Portal.
+For NGINX Ingress, you can set headers in a namespace which will further be propagated across all apps in that namespace by using a configuration snippet in the OperatorConfiguration object. Alternatively, you can configure headers for individual app environments by adding the `nginx.ingress.kubernetes.io/configuration-snippet` annotation in the Mendix on Kubernetes Portal.
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/private-cloud-networking/advanced-headers.png" class="no-border" >}}
 
@@ -113,7 +113,7 @@ To integrate the Istio Service Mesh with an Ingress Controller, perform the foll
 
 #### Configuring the Istio Service Mesh in the Mxpc-cli Tool
 
-To configure the Istio Service Mesh for Mendix for Private Cloud, set up the following settings:
+To configure the Istio Service Mesh for Mendix on Kubernetes, set up the following settings:
 
 * **Ingress Type** - Select **kubernetes-ingress**; this option configures the Ingress according to the additional domain name you supply. 
 * **Ingress Domain Name** - Provide the domain name which was configured for Istio.
@@ -143,7 +143,7 @@ To install Linkerd, perform the following steps:
 
 #### Configuring Linkerd Ingress in the Mxpc-cli Tool
 
-To configure Linkerd for Mendix for Private Cloud, set up the following settings:
+To configure Linkerd for Mendix on Kubernetes, set up the following settings:
 
 * **Ingress Type** - Select **kubernetes-ingress**; this option configures the Ingress according to the additional domain name you supply. 
 * **Ingress Domain Name** - Provide the domain name which was configured for Linkerd.

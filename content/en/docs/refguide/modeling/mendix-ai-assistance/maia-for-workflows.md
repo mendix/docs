@@ -12,11 +12,11 @@ description: "Describes the features in Maia for Workflows."
 To use Maia for Workflows, an internet connection and signing in to Studio Pro are required.
 {{% /alert %}}
 
-Maia for Workflows allows you to generate a [workflow](/refguide/workflows/) as well as explain and provide further improvements. It helps you configure workflows based on text or image input. To get a better understanding of what is generated, you can ask it for explanations. The current version has some known limitations. For example, it is currently intended only for use with empty workflows. Generated elements are appended to the end of the workflow, which may result in incorrectly modeled workflows if the workflow is not empty. For more details, see the [Limitations](#limitation) section below.
+Maia for Workflows helps you generate a [workflow](/refguide/workflows/). It can also provide explanations or further improvements based on the generated elements. The current version has some known limitations. For example, it is currently intended only for use with empty workflows. Generated elements are appended to the end of the workflow, which may result in incorrectly modeled workflows if the workflow is not empty. For more details, see the [Limitations](#limitation) section below.
 
 ## Using Maia for Workflows
 
-To enable Maia for Workflows, go to **Edit** > **Preferences** > the **New Features** tab > the **Maia** section.
+To enable Maia for Workflows, go to **Edit** > **Preferences** > the **Maia** tab and select **Enable Maia for Workflows**.
 
 Once enabled, you can find it in the the toolbar of a workflow:
 
@@ -26,9 +26,7 @@ After clicking **Maia for Workflow**, a dedicated chat interface appears at the 
 
 {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-for-workflows/chat-interface.png" max-width=42% >}}
 
-Describe a business process which you want to model and Maia uses this information to add relevant workflow activities, and tries to configure them where possible.
-
-You can also supplement text input with an image, which Maia uses to interpret your request more effectively. For example, it can analyze a BPMN image representing employee onboarding, rework it using Mendix Workflows terminology, and generate the corresponding activities for you. The image can be a screenshot, photo, BPMN schema, or drawing. Alongside the image, you can also use text input to specify how the generated workflow should differ from the provided image. For example, you might write: *Generate a workflows based on this BPMN image, but make sure it waits before sending an email to the new employee.*
+Describe a business process which you want to model and Maia uses this information to add relevant workflow activities, and tries to configure them where possible. You can also supplement text input with a maximum of one image and one PDF file, which Maia uses to interpret your request more effectively. For more information, see the [Attachment Requirements](#attachment-requirements) section below. 
 
 After a workflow is generated, you can continue asking Maia in the same session to further improve the workflow and provide explanations.
 
@@ -55,9 +53,20 @@ Below are some examples of prompts you can use to ask Maia for further explanati
 Requests for improvements or explanations currently only work within the same session where the workflow is generated. If you close the session and start a new session on that workflow, any attempts to make changes to the workflow will result in the removal of existing elements.
 {{% /alert %}}
 
-### Best Practices for Image Input
+### Attachment Requirements {#attachment-requirements}
 
-The image size is limited to 512 KB. Make sure to select a clear image to help Maia better understand your request. For example, you can provide a screenshot, a photo or a close-up picture of a drawing. Avoid heavily compressed or low quality images, as these may result in the loss of important details.
+Maia for Workflows supports adding a maximum of one image and one PDF as attachments. Support for adding a PDF file was introduced in Studio Pro 11.2.0.
+
+The attachments must meet the following requirements:
+
+* The image format must be PNG or JPG.
+* The image file size must not exceed 512 KB.
+* The image resolution must be no greater than 3840 × 2400 pixels.
+* The PDF file size must not exceed 1024 KB.
+
+For example, Maia for Workflows can analyze a BPMN image representing employee onboarding, rework it using Mendix Workflows terminology, and generate the corresponding activities for you. Alongside the image, you can also use text input to specify how the generated workflow should differ from the provided image. For example, you might write: *Generate a workflows based on this BPMN image, but make sure it waits before sending an email to the new employee.*
+
+Make sure to select a clear image to help Maia better understand your request. For example, you can provide a screenshot, a photo, BPMN schema, or a close-up picture of a drawing. Avoid heavily compressed or low quality images, as these may result in the loss of important details.
 
 ## Limitations {#limitation}
 
@@ -71,7 +80,7 @@ Requests for improvements and explanations currently only work within the same s
 
 ### Supported Workflow Elements
 
-Currently annotations are not supported, however most of the other workflow elements are supported. See below a list of supported workflow elements:
+Currently, annotations are not supported. However, most of the other workflow elements are supported. See below a list of supported workflow elements:
 
 * [User Task](/refguide/user-task/)
 * [Multi-user Task](/refguide/multi-user-task/)

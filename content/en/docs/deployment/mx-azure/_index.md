@@ -24,11 +24,11 @@ By eliminating manual setup and maintenance, Mendix on Azure allows your teams t
 * Eliminate the need for specialized cloud engineers and reduce setup time to under 30 minutes. 
 * Focus on innovation and deliver value faster, reduces labor costs, and ensure consistency, security, and compliance.
 
-## Mendix on Azure and Mendix for Private Cloud
+## Mendix on Azure and Mendix on Kubernetes
 
-Mendix on Azure is a new deployment option that makes use of some of the features of Mendix for Private Cloud, but does so in an opinionated way. 
+Mendix on Azure is a new deployment option that makes use of some of the features of Mendix on Kubernetes, but does so in an opinionated way. 
 
-Mendix for Private Cloud offers its users flexibility coupled with the ability to keep their deployment within their enterprise firewall, but requires more effort to configure and more time to value than deployments on Mendix Cloud. 
+Mendix on Kubernetes offers its users flexibility coupled with the ability to keep their deployment within their enterprise firewall, but requires more effort to configure and more time to value than deployments on Mendix Cloud. 
 
 Mendix on Azure builds on that by providing an automated, preconfigured solution with access to private customer networks, which can be deployed in 30 minutes by a user without IT skills at no extra operational costs. The architecture, its maintenance, updates, and security hardening are all fully managed by Mendix. This helps prevent issues with setting up the infrastructure, which can sometimes be very technical and complicated for citizen developers.
 
@@ -57,7 +57,7 @@ Mendix deploys, operates and is responsible for overall service functionality of
 * Mendix Operator
 * Mendix Agent
 
-You cannot alter these managed components yourself beyond what is offered in the Mendix on Azure and Mendix Private Cloud self-service portals. Mendix limits customization to ensure a consistent, predictable, and scalable customer experience.
+You cannot alter these managed components yourself beyond what is offered in the Mendix on Azure and Mendix on Kubernetes self-service portals. Mendix limits customization to ensure a consistent, predictable, and scalable customer experience.
 
 ### Diagram
 

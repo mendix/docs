@@ -1,8 +1,8 @@
 ---
-title: "Network Ingress Settings in Mendix for Private Cloud"
+title: "Network Ingress Settings in Mendix on Kubernetes"
 linktitle: "Network Ingress Settings"
 url: /developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/
-description: "Describes how to set up and configure various ingress options in Mendix for Private Cloud."
+description: "Describes how to set up and configure various ingress options in Mendix on Kubernetes."
 weight: 10
 ---
 
@@ -16,7 +16,7 @@ Ensure that you are familiar with the networking concepts applicable to Kubernet
 
 ## Supported Network Configurations
 
-Mendix for Private Cloud supports the following Ingress configurations:
+Mendix on Kubernetes supports the following Ingress configurations:
 
 * [Kubernetes Ingress](/developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/controllers/) - The standard Kubernetes way of managing external traffic seamlessly integrates with a cloud provider's load balancer, offering a rich feature set to route and secure application traffic effectively.
 
@@ -26,7 +26,7 @@ Mendix for Private Cloud supports the following Ingress configurations:
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/private-cloud-networking/openshift-routes.png" class="no-border" >}}
 
-* [Service Only](/developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/services-only/) - This approach involves creating only a Kubernetes Service, without an Ingress or OpenShift Route, allowing for greater control over the upstream networking configuration. This option enables the use of a Load Balancer without an Ingress Controller, or the manual creation and management of an Ingress object that is not managed by Mendix for Private Cloud.
+* [Service Only](/developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/services-only/) - This approach involves creating only a Kubernetes Service, without an Ingress or OpenShift Route, allowing for greater control over the upstream networking configuration. This option enables the use of a Load Balancer without an Ingress Controller, or the manual creation and management of an Ingress object that is not managed by Mendix on Kubernetes.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/private-cloud-networking/service-only.png" class="no-border" >}}
 

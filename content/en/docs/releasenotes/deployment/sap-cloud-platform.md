@@ -14,6 +14,23 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2025
 
+### July 17, 2025
+
+#### New Features
+
+* We added new actions to the [SAP OData Connector](https://marketplace.mendix.com/link/component/74525) to support [Batch Processing](/appstore/modules/sap/sap-odata-connector/#batch-processing).
+* We updated the [SAP Logging Connector](https://marketplace.mendix.com/link/component/110219) to support the **SAP Cloud Logging** service.
+
+### June 29, 2025
+
+#### New Features
+
+* We added a service configurator for the **SAP Cloud Logging** service.
+
+#### Bug Fixes
+
+* Fixed an issue where changes to the app health check **Timeout** value were not taking effect.
+
 ### June 1, 2025
 
 #### New Features

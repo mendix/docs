@@ -10,7 +10,7 @@ Please refer to [Mapping Documents](/refguide10/mapping-documents/) for an intro
 
 Figure 1 depicts an example of an Import Mapping document in which two elements from an XML Schema have been selected using the **Select elements...** dialog. Then, the ReceivedPartners and ReceivedClient entities were added and mapped to the Result and Client schema elements. Each time the Import Mapping is invoked, a new ReceivedPartners object is obtained.
 
-{{< figure src="/attachments/refguide10/modeling/integration/mapping-documents/import-mappings/16843942.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/integration/mapping-documents/import-mappings/im-example.png" class="no-border" >}}
 
 **Figure 1**
 
@@ -18,7 +18,7 @@ Figure 1 depicts an example of an Import Mapping document in which two elements 
 
 For each XML or JSON object, a Mendix object needs to be obtained. You can create one or find an existing object in the database. Alternatively, you can use a custom microflow that returns an object. You can define how a Mendix object is obtained in the window depicted in Figure 2, which is shown after double-clicking a specific mapping element.
 
-{{< figure src="/attachments/refguide10/modeling/integration/mapping-documents/import-mappings/16843943.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/integration/mapping-documents/import-mappings/mapping-entity.png" class="no-border" >}}
 
 **Figure 2**
 
@@ -42,8 +42,6 @@ In each case, if the object is found or created, mapped attributes will be given
 
 This is the action that the runtime will perform when an error occurred in the specified **Obtain Mendix Object** action.
 
-{{< figure src="/attachments/refguide10/modeling/integration/mapping-documents/import-mappings/no-object-found.png" class="no-border" >}}
-
 | Property | Description |
 | --- | --- |
 | **Create** | Create an object of the correct entity to map to and process as in **Create an object**, above. |
@@ -66,13 +64,13 @@ Be aware that lists are not stored ordered in the Mendix database. The XML schem
 
 Each schema value in a selected XML or JSON schema object needs to be mapped to an attribute of an entity to be used in your app. If you don't want to map certain values, uncheck them in the **Select elements...** dialog box. Configuring how to map the attributes is done in the screen depicted in Figure 3, which is shown after double-clicking a specific mapping element.
 
-{{< figure src="/attachments/refguide10/modeling/integration/mapping-documents/import-mappings/16843943.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/integration/mapping-documents/import-mappings/no-object-found.png" class="no-border" >}}
 
 **Figure 3**
 
 Having defined the mappings for the attributes, these mappings are also shown in the mapping document. When a specific attribute is selected, the schema element is also selected. This works the other way around too. An example of this is shown in Figure 4, where the **dati** attribute is selected in both the entity and the schema element (in this case, dati is mapped to dati).
 
-{{< figure src="/attachments/refguide10/modeling/integration/mapping-documents/import-mappings/16843944.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/integration/mapping-documents/import-mappings/schema-example.png" class="no-border" >}}
 
 **Figure 4**
 

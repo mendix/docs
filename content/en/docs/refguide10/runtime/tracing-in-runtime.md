@@ -29,9 +29,13 @@ Since Mendix 10.19.0,
 
 ### Minimal Configuration {#min-configuration}
 
-#### Mendix 10.19.0 and Above
+In Mendix 10.24, tracing can be enabled from the `App Settings` -> `Configuration` dialog. In the `Tracing` tab you can enable tracing and specify an **Endpoint** and **Service Name**.
 
-In Mendix 10.19 and above, tracing configuration is handled through the [OpenTelemetry Java Agent](https://opentelemetry.io/docs/zero-code/java/agent/). Use the following steps to set up a minimal tracing configuration:
+{{< figure src="/attachments/refguide10/runtime/tracing-in-runtime/tracing-configuration.png" >}}
+
+#### Mendix 10.19.0 to 10.23.x {#min-configuration-pre-10-24}
+
+Between Mendix 10.19 and 10.23.x, tracing configuration is handled through the [OpenTelemetry Java Agent](https://opentelemetry.io/docs/zero-code/java/agent/). Use the following steps to set up a minimal tracing configuration:
 
 1. Download [opentelemetry-javaagent.jar](https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/latest/download/opentelemetry-javaagent.jar) from the [OpenTelemetry Java Instrumentation release page](https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases).
 1. In the [Server settings](/refguide10/configuration/#server) of Studio Pro, locate the field **Extra JVM parameters** and add the following:

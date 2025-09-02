@@ -2,7 +2,6 @@
 title: "Open a Tab Using Web API"
 linktitle: "Open a Tab"
 url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/tab-api/
-weight: 60
 ---
 
 ## Introduction
@@ -15,7 +14,7 @@ This how-to uses the results of [Get Started with the Web Extensibility API](/ap
 
 ## Opening a Tab
 
-Firstly, create a menu item to open the tab. This is done inside the `loaded` event in `Main`. For more information see [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/).
+First, create a menu item to open the tab. This is done inside the `loaded` method in `Main` class, as described below. For more information see [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/).
 
 In a listener event called `menuItemActivated` the `studioPro.ui.tabs.open(<tabinfo>, <uispec>)` call opens a new tab where:
 
@@ -29,14 +28,16 @@ In a listener event called `menuItemActivated` the `studioPro.ui.tabs.open(<tabi
 Whenever the tabs API `open` method is called, the `TabHandle` returned must be tracked by the extension so that it can be closed later by calling the `close` method.
 {{% /alert %}}
 
-An example of the class `Main` to open a tab called **My Extension Tab** looks similar to the following:
+To open a tab called **My Extension Tab**, add the following code to the main entry point (`src/main/index.ts`)
 
 ```typescript
-import { IComponent, studioPro, TabHandle } from "@mendix/extensions-api";
+import { IComponent, getStudioProApi, TabHandle, ComponentContext } from "@mendix/extensions-api";
 
 class Main implements IComponent {
-  tabs: { [menuId: string]: Promise<TabHandle> } = {};
-  async loaded() {
+  tabs: { [menuId: string]: TabHandle } = {};
+  async loaded(componentContext: ComponentContext) {
+    const studioPro = getStudioProApi(componentContext);
+
     // Add menu items to the Extensions menu to open and close our tab
     await studioPro.ui.extensionsMenu.add({
       menuId: "myextension.MainMenu",
@@ -55,7 +56,7 @@ class Main implements IComponent {
       async (args) => {
         // Open a tab when the menu item is clicked
         if (args.menuId === "myextension.ShowTabMenuItem") {
-          const handle = studioPro.ui.tabs.open(
+          const handle = await studioPro.ui.tabs.open(
             {
               title: "My Extension Tab",
             },
@@ -71,7 +72,7 @@ class Main implements IComponent {
 
         // Close the tab opened previously
         if (args.menuId === "myextension.CloseTabMenuItem") {
-          studioPro.ui.tabs.close(await this.tabs["myextension.MainMenu"]);
+          studioPro.ui.tabs.close(this.tabs["myextension.MainMenu"]);
         }
       }
     );
@@ -113,14 +114,19 @@ To do this, follow these steps:
 1. Put the following code in each `index.tsx` file (this example is for **tab3**):
 
     ```typescript
-    import { StrictMode } from "react";
+    import React, { StrictMode } from "react";
     import { createRoot } from "react-dom/client";
+    import { IComponent } from "@mendix/extensions-api";
 
-    createRoot(document.getElementById("root")!).render(
-      <StrictMode>
-        <h1>tab3</h1>
-      </StrictMode>
-    );
+    export const component: IComponent = {
+        async loaded(componentContext) {
+            createRoot(document.getElementById("root")!).render(
+                <StrictMode>
+                    <h1>tab3</h1>
+                </StrictMode>
+            );
+        },
+    };
     ```
 
     In this example, we'll add 3 tabs: **tab1**, **tab2**, and **tab3**.
@@ -130,50 +136,54 @@ To do this, follow these steps:
 1. Create listener events in the `Main` class to open each of the three tabs. The `Main` class will then look like this:
 
     ```typescript
-    import { IComponent, studioPro, TabInfo, UISpec } from "@mendix/extensions-api";
+    import { IComponent, getStudioProApi, TabHandle, ComponentContext, TabInfo, UISpec } from "@mendix/extensions-api";
 
     class Main implements IComponent {
-      async loaded() {
-        // Add a menu item to the Extensions menu
-        await studioPro.ui.extensionsMenu.add({
-          menuId: "myextension.MainMenu",
-          caption: "Show Tabs",
-          subMenus: [
-            { menuId: "myextension.ShowTab1", caption: "Show tab 1" },
-            { menuId: "myextension.ShowTab2", caption: "Show tab 2" },
-            { menuId: "myextension.ShowTab3", caption: "Show tab 3" },
-          ],
-        });
+        tabs: { [menuId: string]: TabHandle } = {};
 
-        // Open a tab when the menu item is clicked
-        studioPro.ui.extensionsMenu.addEventListener(
-          "menuItemActivated",
-          async (args) => {
-            if (args.menuId === "myextension.ShowTab1") {
-              const tab1Spec = this.createTabSpec("tab1", "Tab 1 Title");
-              studioPro.ui.tabs.open(tab1Spec.info, tab1Spec.ui);
-            }
-            if (args.menuId === "myextension.ShowTab2") {
-              const tab2Spec = this.createTabSpec("tab2", "Tab 2 Title");
-              studioPro.ui.tabs.open(tab2Spec.info, tab2Spec.ui);
-            }
-            if (args.menuId === "myextension.ShowTab3") {
-              const tab3Spec = this.createTabSpec("tab3", "Tab 3 Title");
-              studioPro.ui.tabs.open(tab3Spec.info, tab3Spec.ui);
-            }
-          }
-        );
-      }
+        async loaded(componentContext: ComponentContext) {
+            const studioPro = getStudioProApi(componentContext);
 
-      createTabSpec(tab: string, title: string): { info: TabInfo; ui: UISpec } {
-        const info: TabInfo = { title };
-        const ui: UISpec = {
-          componentName: "extension/myextension",
-          uiEntrypoint: tab,
-        };
+            // Add a menu item to the Extensions menu
+            await studioPro.ui.extensionsMenu.add({
+                menuId: "myextension.MainMenu",
+                caption: "Show Tabs",
+                subMenus: [
+                    { menuId: "myextension.ShowTab1", caption: "Show tab 1" },
+                    { menuId: "myextension.ShowTab2", caption: "Show tab 2" },
+                    { menuId: "myextension.ShowTab3", caption: "Show tab 3" },
+                ],
+            });
 
-        return { info, ui };
-      }
+            // Open a tab when the menu item is clicked
+            studioPro.ui.extensionsMenu.addEventListener(
+                "menuItemActivated",
+                async (args) => {
+                    if (args.menuId === "myextension.ShowTab1") {
+                        const tab1Spec = this.createTabSpec("tab1", "Tab 1 Title");
+                        this.tabs["myextension.ShowTab1"] = await studioPro.ui.tabs.open(tab1Spec.info, tab1Spec.ui);
+                    }
+                    if (args.menuId === "myextension.ShowTab2") {
+                        const tab2Spec = this.createTabSpec("tab2", "Tab 2 Title");
+                        this.tabs["myextension.ShowTab2"] = await studioPro.ui.tabs.open(tab2Spec.info, tab2Spec.ui);
+                    }
+                    if (args.menuId === "myextension.ShowTab3") {
+                        const tab3Spec = this.createTabSpec("tab3", "Tab 3 Title");
+                        this.tabs["myextension.ShowTab3"] = await studioPro.ui.tabs.open(tab3Spec.info, tab3Spec.ui);
+                    }
+                }
+            );
+        }
+
+        createTabSpec(tab: string, title: string): { info: TabInfo, ui: UISpec } {
+            const info: TabInfo = { title };
+            const ui: UISpec = {
+                componentName: "extension/myextension",
+                uiEntrypoint: tab,
+            };
+
+            return { info, ui };
+        }
     }
 
     export const component: IComponent = new Main();
@@ -196,28 +206,46 @@ To do this, follow these steps:
     }
     ```
 
-1. Update `vite.config` to match the manifest with an entry for each tab. For example:
+1. Update `build-extension.mjs` to match the manifest with an entry for each tab. Specifically, you need to add entry points for each tab to
+   `entryPoints` array and make sure the variable `appDir` stays unaltered, as follows:
 
-    ```typescript
-    import { defineConfig, ResolvedConfig, UserConfig } from "vite";
-    
-    export default defineConfig({
-      build: {
-        lib: {
-          formats: ["es"],
-          entry: {
-            main: "src/main/index.ts",
-            tab1: "src/ui/tab1/index.tsx",
-            tab2: "src/ui/tab2/index.tsx",
-            tab3: "src/ui/tab3/index.tsx",
-          },
-        },
-        rollupOptions: {
-          external: ["@mendix/component-framework", "@mendix/model-access-sdk"],
-        },
-        outDir: "./dist/myextension",
-      },
-    } satisfies UserConfig);
+    ```javascript{hl_lines=["16-20"]}
+      import * as esbuild from 'esbuild'
+      import {copyToAppPlugin, copyManifestPlugin, commonConfig} from "./build.helpers.mjs"
+      import parseArgs from "minimist"
+
+      const outDir = `dist/myextension`
+      const appDir ="<path to your application>"
+      const extensionDirectoryName = "extensions"
+
+      const entryPoints = [
+          {
+              in: 'src/main/index.ts',
+              out: 'main'
+          }   
+      ]
+
+      const allTabs = ["tab1", "tab2", "tab3"]
+      entryPoints.push(...allTabs.map(tabName => ({
+          in: `src/ui/${tabName}/index.tsx`,
+          out: tabName
+      })))
+
+      const args = parseArgs(process.argv.slice(2))
+      const buildContext = await esbuild.context({
+        ...commonConfig,
+        outdir: outDir,
+        plugins: [copyManifestPlugin(outDir), copyToAppPlugin(appDir, outDir, extensionDirectoryName)],
+        entryPoints
+      })
+
+      if('watch' in args) {
+          await buildContext.watch();
+      } 
+      else {
+          await buildContext.rebuild();
+          await buildContext.dispose();
+      }
     ```
 
 After building and installing the extension in our Studio Pro app, each tab will display the content specified in the related `index.tsx` file.

@@ -69,6 +69,7 @@ The name of an enumeration value must be a technical name, starting with a lette
 * `changeddate`
 * `char`
 * `class`
+* `com`
 * `con`
 * `const`
 * `context`

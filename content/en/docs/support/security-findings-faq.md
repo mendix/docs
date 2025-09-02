@@ -2,7 +2,7 @@
 title: "Frequently Asked Questions – Security"
 linktitle: "Security Findings FAQ"
 url: /support/security-findings-faq
-weight: 60
+weight: 70
 description: "FAQ about existing security findings and other security questions."
 aliases:
     - /developerportal/support/security-findings-faq/
@@ -38,7 +38,7 @@ Mendix does not make compliance reports available publicly, you will need to be 
 
 ### Platform Support
 
-Mendix Support will only assist when using platform-supported components. See the table in the [Support for Different Deployment Strategies](/support/#support-by-strategy) section of the *Mendix Support* document for information on what is supported by Mendix and what you need to support yourself. For Marketplace components, you can check the support status of a component by finding it in the marketplace and looking at the **Support** section in the component details to the right of the component name.
+Mendix Support will only assist when using platform-supported components. See the table in [Support for Different Deployment Strategies](/support/deployment-strategy-support/) for information on what is supported by Mendix and what you need to support yourself. For Marketplace components, you can check the support status of a component by finding it in the marketplace and looking at the **Support** section in the component details to the right of the component name.
 
 ### Security Contact
 

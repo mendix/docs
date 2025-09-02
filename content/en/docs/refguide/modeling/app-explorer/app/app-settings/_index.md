@@ -10,9 +10,13 @@ aliases:
 
 ## Introduction
 
+View your App Settings by clicking **App Explorer** > **App** > **Settings**:
+
+{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/app-settings-location.png" width="200px"  >}}
+
 In the **App Settings** dialog box, you can alter the settings that are applicable to the whole app:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/app-settings-configuration.png" width="300px" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/app-settings-configuration.png" width="400" >}}
 
 The categories described below are available.
 
@@ -44,13 +48,13 @@ The resources are downloaded to the device once for each deployment and are reus
 
 ### Optimize Network Calls {#optimize-network-calls}
 
-If this option is enabled (**true** by default), Mendix analyzes every microflow that can be triggered from the client to minimize the number of objects required to be sent. This speeds up your app significantly.
+If this option is enabled (**yes** by default), Mendix analyzes every microflow that can be triggered from the client to minimize the number of objects required to be sent. This speeds up your app significantly.
 
-If you experience an issue while running your app in which objects seem to be lost, this option can be disabled to resolve that issue. If this does resolve the issue, please file a bug report so that we can fix the issue in the platform.
+If you experience an issue while running your app in which objects seem to be lost, this option can be disabled to resolve that issue. If this does resolve the issue, file a bug report so the issue can be fixed in the platform.
 
 ### URL Prefix{#url-prefix}
 
-Here you have the option to change the default URL prefix for all pages and microflows in your application. The default prefix value is `/p/`.
+You have the option to change the default URL prefix for all pages and microflows in your application. The default prefix value is `/p/`.
 
 {{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/url-prefix.png" width="300px" class="no-border" >}}
 
@@ -66,43 +70,43 @@ The URL prefix must be alphanumeric. It cannot be empty, contain whitespace, or 
 * "ws-doc"
 * "xas"
 
-Furthermore, static files are served on `/`. So any prefix that has the same name as a static folder located in `/deployment/web/` will cause an error.
+Furthermore, static files are served on `/`, so any prefix that has the same name as a static folder located in `/deployment/web/` will cause an error.
 
-If the URL prefix breaks any of the rules mentioned above, then you will get a consistency error.
+If the URL prefix breaks any of the rules mentioned above, you will get a consistency error.
 
 ### Java Version{#java-version}
 
-Here you can select which Java version to use for you application. For information on how the Java version can influence the behavior of an application, see [Java Version Migration](/refguide/java-version-migration/).
+You can select which Java version to use for you application. For information on how the Java version can influence the behavior of an application, see [Java Version Migration](/refguide/java-version-migration/).
 
 {{% alert color="info" %}}
 For Studio Pro 11, you should choose Java 21.
 {{% /alert %}}
 
-For local development the Java version configured here needs to have a corresponding JDK configured in the [Studio Pro preferences](/refguide/preferences-dialog/#jdk).
+For local development, the Java version configured here needs to have a corresponding JDK configured in the [Studio Pro preferences](/refguide/preferences-dialog/#jdk).
 
 Applications deployed to the cloud will use this setting to select which Java version to use.
 
 ### After Startup{#after-startup}
 
-Here you can select a microflow that is automatically executed immediately after the application has been started up.
+You can select a microflow that is automatically run immediately after the application has been started up.
 
 {{% alert color="warning" %}}
-There is a timeout of *11 minutes* on the after startup microflow. If your after startup microflow takes longer than 11 minutes your whole app will fail to start.
+There is a timeout of 11 minutes on the after startup microflow. If your after startup microflow takes longer than 11 minutes, your whole app will fail to start.
 
-**After startup** is designed to initialize the app and therefore runs *before* the app is able to respond to incoming service requests (for example, published REST services).
+After startup is designed to initialize the app and therefore runs before the app is able to respond to incoming service requests (for example, published REST services).
 {{% /alert %}}
 
 ### Before Shutdown
 
-Here you can select a microflow that is automatically executed when a shutdown command has been given, just before the application shuts down.
+You can select a microflow that is automatically run when a shutdown command has been given, just before the application shuts down.
 
 ### Health Check
 
-Here you can select a microflow which performs the checks on a running app that you think are required to assess the app's health.
+You can select a microflow which performs the checks on a running app that you think are required to assess the app's health.
 
 The result of each check is returned as a string, which is displayed in the [Mendix Portal](/developerportal/deploy/environments/). When the microflow returns an empty string, the application is healthy; otherwise, the string presents an explanation of why the application is not healthy.
 
-This microflow gets called every 10 seconds to check if the app is still healthy. This is done by executing it using m2ee on the admin port of your app. For more information, see the section [Health Check](/refguide/monitoring-mendix-runtime/#check-health) in *Monitoring Mendix Runtime*.
+This microflow is called every 10 seconds to check if the app is still healthy. This is done by executing it using m2ee on the admin port of your app. For more information, see [Health Check](/refguide/monitoring-mendix-runtime/#check-health) section *Monitoring Mendix Runtime*.
 
 {{% alert color="info" %}}
 
@@ -135,7 +139,7 @@ The **Scheduled event time zone** defines under which time zone scheduled events
 
 This affects time zone-related operations, such as parsing and formatting dates from/to strings and obtaining the beginning of the current day.
 
-If you run on-premises, then you can select the time zone to which the server is set. However, please note that no guarantees are given for the whereabouts of application servers in the cloud.
+If you run on-premises, you can select the time zone to which the server is set. However, note that no guarantees are given for the whereabouts of application servers in the cloud.
 
 ### Hash Algorithm{#hash-algorithm}
 
@@ -146,7 +150,13 @@ The **Hash algorithm** is used to generate hash values for attributes of the has
 | **BCrypt** (default, recommended) | Resistant to brute-force search attacks. |
 | **SSHA256** | Salted Secure Hash Algorithm 2, digest length 256 bits. |
 
-Mendix believes both algorithms are secure enough to store passwords within Mendix. The main difference between **BCrypt** and **SSHA256** is that the BCrypt algorithm has been configured so that it is relatively slow on purpose, since it was designed specifically to stop brute force attacks. That's why this results in a slight performance difference with the SSHA256 algorithm.
+{{% alert color="warning" %}}
+
+MD5 and SHA256 are only provided for backwards compatibility. They should not be used due to known vulnerabilities. 
+
+{{% /alert %}}
+
+Mendix believes both algorithms are secure enough to store passwords within Mendix. The main difference between **BCrypt** and **SSHA256** is that the BCrypt algorithm has been configured so it is relatively slow on purpose, since it was designed specifically to stop brute force attacks. That is why this results in a slight performance difference with the SSHA256 algorithm.
 
 #### BCrypt Cost {#bcrypt-cost}
 
@@ -158,16 +168,16 @@ If the BCrypt cost is low, the performance difference is hardly noticeable to a 
 
 #### Performance Tests
 
-A (web service) user will sign in to execute a web service operation, wait for the operation to finish, and finally get the result back (if any).
+A (web service) user will sign in to run a web service operation, wait for the operation to finish, and get the result back (if any).
 
-Imagine an empty microflow that returns nothing at all exposed as a published web service. We ask one user to execute this operation as many times as they can in one minute (simulated with SoapUI). First we set the hashing algorithm to **BCrypt** (with cost value 10), then we set it to **SSHA256**. Any extra overhead here (on top of establishing the connection, building the XML message and so forth) is basically the hashing algorithm, as the operation should take near zero milliseconds and there is no result. So that leaves only the login, or, more precisely, the hashing of the password.
+Imagine an empty microflow that returns nothing at all exposed as a published web service. We ask one user to execute this operation as many times as they can in one minute (simulated with SoapUI). First, we set the hashing algorithm to **BCrypt** (with cost value 10), then we set it to **SSHA256**. Any extra overhead here (on top of establishing the connection, building the XML message and so forth) is basically the hashing algorithm, as the operation should take near zero milliseconds and there is no result. So that leaves only the login, or, more precisely, the hashing of the password.
 
 | Hashing Algorithm | Total Operations Executed | Operation per Second | Overhead in Milliseconds |
 | --- | --- | --- | --- |
 | BCrypt | 654 | 10.88 | 91.9 |
 | SSHA256 | 7163 | 119.36 | 8.4 |
 
-So 80 milliseconds per operation is not that much, right? Well, that depends on how long the operation itself takes.
+80 milliseconds per operation does not appear to be much, but it depends on how long the operation itself takes.
 
 | Operation Duration in Seconds | Operations per Hour (BCrypt) | Operations per Hour (SSHA256) | Difference % |
 | --- | --- | --- | --- |
@@ -177,19 +187,19 @@ So 80 milliseconds per operation is not that much, right? Well, that depends on 
 | 5 | 707 | 719 | +1.67% |
 | 15 | 239 | 240 | +0.5% |
 
-The difference is noticeable when the operation takes less time. So if you expect a very high amount of concurrency in operations where hashing takes place (most commonly any place where login operations are involved), you might want to consider changing your hashing algorithm.
+The difference is noticeable when the operation takes less time. If you expect a very high amount of concurrency in operations where hashing takes place (most commonly any place where login operations are involved), you might want to consider changing your hashing algorithm.
 
 {{% alert color="info" %}}
 It is important to remember when changing hashing algorithms that any hashed attribute (like the `System$User` password attribute) has its algorithm set on hashing. In other words, for the hashing type to take effect, any existing hashed attribute will have to be reset using the new hashing type.
 {{% /alert %}}
 
-### Rounding Numbers{#rounding}
+### Round Numbers{#rounding}
 
 The **Round Numbers** setting is used to select how to round numbers when performing calculations.
 
 The rounding methods **Half away from zero** and **Half to the nearest even number** indicate how rounding is performed in the case of a tie (for example, 2.5).
 
-This table presents the results of rounding the input to one digit with the given method of rounding numbers:
+The table below presents the results of rounding the input to one digit with the given method of rounding numbers:
 
 | Input Number | Half Away from Zero  *(default)* | Half to the Nearest Even Number |
 | --- | --- | --- |
@@ -252,7 +262,7 @@ The **Default language** indicates the language that is used when a user has not
 
 This is the list of languages in which your application will be available for users.
 
-For each language, you can configure whether to check that all mandatory texts have a value. The default language is always checked. If a language is not checked and certain texts are not translated in Studio Pro, the default language is used as fall-back language. This means that you can run your application even though you have only partially translated your interface into a new language.
+For each language, you can configure whether to check that all mandatory texts have a value. The default language is always checked. If a language is not checked and certain texts are not translated in Studio Pro, the default language is used as fallback language. This means you can run your application even though you have only partially translated your interface into a new language.
 
 ## Certificates Tab
 
@@ -261,13 +271,13 @@ Certificates are used to connect to web services over HTTPS when the following r
 * The server uses a self-signed certificate authority, and/or
 * A client certificate (certificate with a private key) is required
 
-These certificates can be imported into Studio Pro using the **Import** button. Certificate authority files usually have a *.crt* extension, and client certificates usually have a *.p12* or *.pfx* extension. After importing, use **View details** to acquire more information concerning the certificate.
+These certificates can be imported into Studio Pro using the **Import** button. Certificate authority files usually have a *.crt* extension, and client certificates usually have a *.p12* or *.pfx* extension. After importing, use **View details** to get more information about the certificate.
 
 Client certificates added here will be used whenever a server accepts a client certificate. If you upload more than one client certificate, one of them will be chosen based on the requirements of the server. If you need more control over client certificates, you should not upload the certificates here, but use the [Runtime customization](/refguide/custom-settings/) *ClientCertificates*, *ClientCertificatePasswords*, and *ClientCertificateUsages* settings.
 
 {{% alert color="warning" %}}
 
-When running from Studio Pro or from Eclipse, the certificates will be used automatically to connect over *HTTPS*. When running on a server, the location of the certificate files has to be specified in the configuration file.
+When running from Studio Pro or from Eclipse, the certificates will be used automatically to connect over HTTPS. When running on a server, the location of the certificate files has to be specified in the configuration file.
 
 {{% /alert %}}
 {{% alert color="warning" %}}
@@ -314,13 +324,13 @@ Older apps may still use a theme ZIP file as the basis for their theme. In this 
 This practice is deprecated and will be removed in a future version.
 {{% /alert %}}
 
-Switching from a ZIP file to a UI resources package is straightforward:
+To switch from a ZIP file to a UI resources package, follow the steps below:
 
-1. Firstly, replace the contents of the theme folder with the contents of the desired ZIP file.
+1. Replace the contents of the theme folder with the contents of the desired ZIP file.
 
-2. Then, use the **UI resources package** setting described above to select a module. Ideally, this module should only contain UI documents, such as page templates and building blocks. This will allow you to export and import the module to other apps without worrying about reference errors.
+2. Use the **UI resources package** setting described above to select a module. Ideally, this module should only contain UI documents, such as page templates and building blocks. This will allow you to export and import the module to other apps without worrying about reference errors.
 
-3. Lastly, set the **Theme ZIP file** setting to **None**.
+3. Set the **Theme ZIP file** setting to **None**.
 
 ### Marking as a UI Resources Module
 
@@ -336,15 +346,20 @@ You can set an explicit order in the theme settings (**App Settings** > **Theme*
 
 {{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/app-theme-settings.png" alt="app theme settings" class="no-border" >}}
 
-## Workflows Tab {#workflows}
+## Workflow Tab {#workflows}
 
 ### User Entity
 
-**User entity** defines the entity which is used in [target-users-using](/refguide/user-task/#target-users). If you assign a user task using an XPath, you can use attributes of this entity. If you are using a microflow, the entity defines the return type the microflows expects. For more information, see the [Targeted Users Section](/refguide/user-task/#users) section in *User Task*.
+**User entity** defines the entity which is used in [user targeting](/refguide/user-task/#users). If you assign a user task using an XPath, you can use attributes of this entity. If you are using a microflow, the entity defines the return type the microflows expects. For more information, see the [Target User(s)](/refguide/user-task/#users) section in *User Task*.
+
+### Workflow Groups
+
+**Workflow group(s)** defines groups of users for [user task targeting](/refguide/user-task/#workflow-group). When users are added or removed from the group, the targeted users of a user task change accordingly. For more information, see [Workflow Groups](/refguide/workflow-groups/).
 
 ### Optimization
 
-Allows you to configure the maximum number of workflow and microflow threads that can be executed simultaneously by the Runtime. This is an advanced setting that gives developers control over app performance. Change these settings when you face performance issues on executing workflow instances or workflow-initiated microflows. The two values indicate the amount of threads that process the queues containing workflow instances or workflow-initiated microflows, for more information see [Workflow Instance Threads](#workflow-instance-threads) and [Microflow Threads](#microflow-threads) sections below. 
+This section allows you to configure the maximum number of workflow and microflow threads that can be executed simultaneously by the Runtime. This is an advanced setting that gives developers control over app performance. Change these settings when you face performance issues on executing workflow instances or workflow-initiated microflows. The two values in this field indicate the amount of threads that process the queues containing workflow instances or workflow-initiated microflows. For more information, see the [Workflow Instance Threads](#workflow-instance-threads) and [Microflow Threads](#microflow-threads) sections below. 
+
 App performance can be tracked (from Mendix 9.19 and above) using the following Task Queue metrics:
 
 * `mx.runtime.stats.taskqueue.queue-wait-time` – the amount of time a task has to wait for execution
@@ -360,11 +375,11 @@ If the waiting time of the queue increases and active threads in the queue reach
 
 #### Workflow Instance Threads {#workflow-instance-threads}
 
-Defines the maximum number of threads that can process active workflow instances simultaneously. This setting does not relate to the amount of workflow instances that are active in the system.
+This defines the maximum number of threads that can process active workflow instances simultaneously. This setting does not relate to the amount of workflow instances that are active in the system.
 
 #### Microflow Threads {#microflow-threads}
 
-Defines the maximum number of workflow-initiated microflows that the Runtime executes simultaneously. Workflow-initiated microflows are microflows defined as event handlers or microflow call activities defined in workflows. This setting has no influence on microflows executed by pages or other parts of the system.
+This defines the maximum number of workflow-initiated microflows that the Runtime executes simultaneously. Workflow-initiated microflows are microflows defined as event handlers or microflow call activities defined in workflows. This setting has no influence on microflows executed by pages or other parts of the system.
 
 ### Event Handlers {#event-handlers}
 
@@ -405,15 +420,15 @@ This tab can be used to view the managed dependencies in your app in one place a
 
 ### Overview
 
-This shows all the direct managed dependencies in your app listed by group and artifact. It shows which versions of the dependencies you have and which modules they are coming from. If your app reports multiple versions of the same group and artifact then the highest version is used, so having multiple versions of a dependency is not necessarily a problem.
+This shows all the direct managed dependencies in your app listed by group and artifact. It shows which versions of the dependencies you have and which modules they are coming from. If your app reports multiple versions of the same group and artifact, the highest version is used, so having multiple versions of a dependency is not necessarily a problem.
 
 ### Managed Dependency Exclusions
 
-This shows all the managed dependencies in your app listed by package name. This overview includes both direct and transitive dependencies. If you have conflicts between different dependencies, you can uncheck here any files which you want to exclude. Ensure you leave at least one dependency which supports any calls made by your app or its dependencies.
+This shows all the managed dependencies in your app listed by package name. This overview includes both direct and transitive dependencies. If you have conflicts between different dependencies, you can uncheck any files that you want to exclude. Ensure you leave at least one dependency which supports any calls made by your app or its dependencies.
 
 ### Userlib Exclusions
 
-This shows the libraries from the userlib directory and allows you to exclude them from deployment. Use this, for example, if there is an add-on module that ships with a different version of a library that is already in your 'userlib' folder.
+This shows the libraries from the userlib directory and allows you to exclude them from deployment. Use this, for example, if there is an add-on module that ships with a different version of a library that is already in your userlib folder.
 
 ## Solution Tab {#solution}
 
@@ -423,19 +438,27 @@ If you want to distribute your app as an adaptable solution package and allow up
 
 A distributable app must have a **Solution version** that you can set on this tab.
 
-If you are implementing a solution, **Based on** setting shows the version of the solution package your app is currently based on.
+If you are implementing a solution, the **Based on** setting shows the version of the solution package your app is currently based on.
 
 ## Miscellaneous Tab {#miscellaneous}
 
 These settings determine the behavior of Studio Pro for this app. The settings apply to everyone that is working on this app.
 
-### Bundle Widgets When Running Locally
+### Bundle Widgets When Running Locally 
+
+{{% alert color="info" %}}
+This setting is only available in the Dojo Client version of Studio Pro, which is deprecated. For more information, see [Mendix Client](/refguide/mendix-client/).
+{{% /alert %}}
 
 When deploying to the cloud, custom widgets are bundled to optimize client-server communication. When deploying locally, this step is skipped to accelerate startup duration. In some cases, this may obfuscate errors triggered by faulty custom widgets.
 
 If this option is set, custom widgets will also be bundled locally. This mimics the production deployment, eliminating risk at the cost of start-up time.
 
-### Use Data Grid 2, Combo Box, and Image Widgets for Content Generation{#use-dg-cb-i}
+### Use Data Grid 2, Combo Box, and Image Widgets for Content Generation {#use-dg-cb-i}
+
+{{% alert color="info" %}}
+This setting is only available in the Dojo Client version of Studio Pro, which is deprecated. For more information, see [Mendix Client](/refguide/mendix-client/).
+{{% /alert %}}
 
 If this setting is enabled, modern widgets like [Data Grid 2](/appstore/modules/data-grid-2/), [Combo Box](/appstore/widgets/combobox/), and [Image](/appstore/widgets/image/) will be used when generating overview pages or the content of data views. Existing generated content remains as is. 
 
@@ -449,7 +472,7 @@ See the list below for detailed information on which widgets are generated in va
 
 You can decide how associations are stored in the database.
 
-This option allows you to change the default for new associations. The initial defaults will be as follows:
+This option allows you to change the default for new associations. The initial defaults are as follows:
 
 * **New projects** – one-to-many and one-to-one associations are implemented as direct associations
 * **Upgraded projects** – for projects which are upgraded from an older version of Mendix, all new associations continue to be implemented as association tables
@@ -463,9 +486,3 @@ When enabled, the names that Studio Pro suggests in microflows will start with a
 ### Activity Default Colors
 
 This table allows you to select a default color for each microflow activity type that is available in your app. The selected color will be used as the background color for all microflow activities of that type in your app. It is possible to override this default value for individual activities in the microflow editor. If you change the default color for an activity type, and there are activities of that type present in the app that have an individual background color specified, a dialog will be shown that allows you to apply the new default color to these activities as well.
-
-### Automatically Encode Parameter Values in Send REST Request Microflow Activities
-
-You can disable the encoding of the URL parameters for the Send REST Request microflow activity. This allows parameter values to be used as provided.
-
-When enabled, the behavior will be inconsistent with the Consumed REST service.

@@ -69,7 +69,7 @@ JavaScript actions must not use any of the following client APIs:
 
 These APIs are related to Dojo and are no longer needed. For opening pages, please use the nanoflow [Show Page](/refguide/show-page/) action instead.
 
-Fore more information on React and APIs in Mendix, see our [Mendix 10 React Client API](https://apidocs.rnd.mendix.com/10/client-react/index.html) documentation.
+Fore more information on React and APIs in Mendix, see our [Mendix 11 React Client API](https://apidocs.rnd.mendix.com/11/client-react/index.html) documentation.
 
 ### Enable React Client{#enable-react}
 
@@ -121,8 +121,8 @@ Because the reference set selector widget is technically a grid, while combo box
 
 The [HTML/JavaScript snippet](/appstore/widgets/html-javascript-snippet/) widget is not supported in the React Client. To leverage React, this widget can be replaced using [HTML Element](/appstore/widgets/htmlelement/) widget or [JavaScript actions](/refguide/javascript-actions/):
 
-*  **Content Type** HTML — The HTML Element can be downloaded [here](https://marketplace.mendix.com/link/component/204843).
-*  **Content Type** JavaScript — Write the code inside the supported JavaScript actions. If the user needs to execute the code in a certain way, calling the JavaScript action via nanoflow that triggers by [Events](/appstore/widgets/events/) widget is recommended.
+* **Content Type** HTML — The HTML Element can be downloaded [here](https://marketplace.mendix.com/link/component/204843).
+* **Content Type** JavaScript — Write the code inside the supported JavaScript actions. If the user needs to execute the code in a certain way, calling the JavaScript action via nanoflow that triggers by [Events](/appstore/widgets/events/) widget is recommended.
 
 #### Data Grid{#data-grid}
 
@@ -141,6 +141,20 @@ To replace a template grid widget, follow these steps:
 1. Configure the columns and any other properties to match the original widget.
 1. Add any actions that items from your original widget as icon buttons to the content area.
 1. Add any actions that do not affect rows as buttons to the gallery widget's header.
+
+#### Feedback Widget
+
+The deprecated feedback widget is not supported in the React client. It should be replaced with the [Mendix Feedback Module](https://marketplace.mendix.com/link/component/205506). This module requires some additional configuration to work with the React client:
+
+1. Install the latest version of the Feedback Module.
+1. Replace the widget or snippet on your main layout(s) with the snippet `FeedbackModule.FeedbackWidget`.
+1. Edit the properties of the widget inside the `FeedbackWidget` snippet (use the Page Explorer or Structure Mode to see it).
+1. Set the **Modal pop-up type** to **Custom**.
+1. Set the **On click action** to **Show a page** and choose the page `FeedbackModule.ShareFeedback`.
+
+#### Sign In Widgets
+
+The React client does not support the default Sign In widgets (Username, Password, Sign In Button). Use a modeled login page instead, leveraging an NPE to store credentials and a Nanoflow for authentication. Refer to the Atlas login page template for implementation guidance.
 
 #### Custom Widgets{#custom-widgets}
 

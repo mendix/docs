@@ -12,8 +12,8 @@ Publishing developers can register services in the Catalog in different ways dep
 Common tasks for registering services include the following:
 
 * [Registering services automatically on Mendix Cloud](/catalog/register/register-data/#mendix-cloud)
-* [Registering services on-premises or on a Private Cloud](/catalog/register/data-sources-without-mendix-cloud/)
-* [Automating registration in a pipeline on a Private Cloud](/catalog/automate-registration/)
+* [Registering services on-premises or for Mendix on Kubernetes deployments](/catalog/register/data-sources-without-mendix-cloud/)
+* [Automating registration in a pipeline on a Mendix on Kubernetes deployment](/catalog/automate-registration/)
 * Manually uploading a metadata contract with the [Catalog UI form](/catalog/register/register-data/#registration-form)
 * Using the [Registration API](/apidocs-mxsdk/apidocs/registration-api/) (for any deployment method)
 

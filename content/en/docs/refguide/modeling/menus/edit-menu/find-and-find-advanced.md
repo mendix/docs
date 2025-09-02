@@ -35,7 +35,7 @@ You can search for microflows that have object activities in them. Do the follow
 1. Click **Edit** > **Find** **Advanced** in the top-bar or press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>.
     The **Find Advanced** dialog box will open:
     {{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/find-advanced-dialog-box.png" class="no-border" width="400" >}}
-2. In the **Search for** option, select **Microflow actions**:
+2. In the **Search for** option, select **Actions in microflows, nanoflows, and rules**:
     {{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/search-for-microflow-actions.png" class="no-border" width="400" >}}
 3. Select the entity for which you want to search for object activities, and click **Find**.
 
@@ -71,7 +71,7 @@ Any objects which are excluded from the app will not show up in the unused items
 Some pages and microflows are only used from Java code and will be listed as an unused item because Studio Pro cannot look into Java source code. To prevent anyone from removing these objects you can mark the page or microflow as used. Do the following:
 
 1. Open the page or microflow which needs to be marked as used.
-2. Navigate to properties and change the **Mark as used** property from **No** to **Yes**.
+2. Open the **Edit** menu and select **Properties**, then change the **Mark as used** property from **No** to **Yes**.
 
 ## Find Usages Option {#find-usages}
 

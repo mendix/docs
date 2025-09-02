@@ -8,7 +8,7 @@ description: "Describes the Epics page in Epics."
 
 ## Introduction
 
-The **Epics** page gives an overview of all the epics for your current app. You can use the filter on the upper-right corner to filter epics by their status: **All**, **Completed**, **In Progress**, or **Not Started**. Clicking the **Create Epics** button enables you create a new epic.
+The **Epics** page offers an overview of all the epics for your current app. You can use the filter on the upper-right corner to filter epics by their status: **All**, **Completed**, **In Progress**, or **Not Started**. Clicking the **Create Epics** button enables you create a new epic.
 
 Each row represents an epic. 
 
@@ -29,7 +29,7 @@ Clicking a row opens the [epic details](#epic-details) dialog box.
 
 When you click an epic, the epic details dialog box opens. 
 
-On the upper-right corner, there is a **Copy Link** icon ({{% icon name="hyperlink" %}}) and a **More Options** icon ({{% icon name="three-dots-menu-horizontal" %}}). Clicking **Copy Link** copies the link to the epic. Clicking **More Options** opens a pop-up menu that allows you to delete the epic.
+In the upper-right corner, there is a **Copy Link** icon ({{% icon name="hyperlink" %}}) and a **More Options** icon ({{% icon name="three-dots-menu-horizontal" %}}). Clicking **Copy Link** copies the link to the epic. Clicking **More Options** opens a pop-up menu that allows you to delete the epic.
 
 {{< figure src="/attachments/developerportal/project-management/epics/epics/epic-details-page-ellipsis.png" class="no-border" >}}
 

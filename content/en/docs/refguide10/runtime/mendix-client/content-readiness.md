@@ -43,7 +43,7 @@ The following table shows which of the more popular platform-supported Marketpla
 | [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [ObjectHandling](https://marketplace.mendix.com/link/component/37114) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [OData Connector for SAP solutions](https://marketplace.mendix.com/link/component/74525) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
-| [OIDC Provider](https://marketplace.mendix.com/link/component/214681) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
+| [OIDC Provider](https://marketplace.mendix.com/link/component/244687) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [OIDC SSO](https://marketplace.mendix.com/link/component/120371) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [Push Notifications Connector](https://marketplace.mendix.com/link/component/3003) | {{< icon name="checkmark-circle-filled" color="green" >}} | |
 | [SAML](https://marketplace.mendix.com/link/component/1174) | {{< icon name="checkmark-circle-filled" color="green" >}} | |

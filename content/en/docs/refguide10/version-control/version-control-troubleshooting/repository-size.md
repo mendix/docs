@@ -43,7 +43,7 @@ Version control systems like Git do not store a full copy of a document for ever
 #### MPRv2 Format {#mprv2}
 
 {{% alert color="info" %}}
-MPRv2 was released in Studio Pro 10.18.0 as [Public Beta](/releasenotes/beta-features/). In Studio Pro 10.21.0, MPRv2 was released for General Availability (GA) and is automatically used for new apps. When opening an existing app in Studio Pro 10.22 and above, it automatically converts to the MPRv2 format.
+MPRv2 was released in Studio Pro 10.18.0 as [Public Beta](/releasenotes/release-status/). In Studio Pro 10.21.0, MPRv2 was released for General Availability (GA) and is automatically used for new apps. When opening an existing app in Studio Pro 10.22 and above, it automatically converts to the MPRv2 format.
 {{% /alert %}}
 
 Studio Pro 10.18 introduced a new version of the *.mpr* format: MPRv2. The key difference is that all documents, such as microflows, are no longer stored as part of the *.mpr* file but as separate files in the *mprcontents* directory. The *.mpr* file functions as an index file pointing to all the different files on disk. 
@@ -231,7 +231,10 @@ When reaching out to Mendix Support, please include:
 
 In case you are still deciding whether to migrate from SVN to Git, or you are already on Git and want to get a recommendation on what steps to take to solve or prevent Git-related performance issues, please follow the decision trees in the image below:
 
-{{< figure src="/attachments/refguide10/version-control/troubleshoot-version-control-issues/migration-advice-combined.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/version-control/troubleshoot-version-control-issues/migration-advice-mx10.png" class="no-border" >}}
 
-In Studio Pro 10.18 and above, you can manually convert branches to MPRv2. In Studio Pro 10.22 and above, branch conversion happens automatically. For more information on the format, see the [MPRv2 Format](#mprv2) section.
-For more information on partial clone, see [Clone Type](/refguide10/clone-type/).
+\* In case your *.git* folder is less than 2GB but you are having performance issues when cloning, please see the [Verify Full Clone Through Git CLI](/refguide10/troubleshoot-team-server-issues/#verify-full-clone-through-git-cli) section in *Troubleshooting Team Server Issues* and contact Support with the relevant information.
+
+\** For more information on the partial clone, see [Clone Type](/refguide10/clone-type/).
+
+\*** For more information on Git cleanup, see the [Cleanup Tool](/refguide10/troubleshoot-repository-size/#cleanup-tool) section in *Troubleshooting Repository Size*.

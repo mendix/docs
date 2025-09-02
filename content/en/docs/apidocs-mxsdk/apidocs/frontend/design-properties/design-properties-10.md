@@ -744,6 +744,33 @@ In that situation, you can combine **Dropdown**, **Colorpicker**, **ToggleButton
 
 When the **Small** option is selected, the `borderRadiusSmall` class will be applied to the widget. On the other hand, when **Large** is selected, the `--radius-large` variable will be assigned to the `border-radius` property of the widget.
 
+## Translating Design Properties
+
+Design properties can be translated to match the end-user's preferred user interface language. This includes the name of the design property, its description, and any of its options (if it has any) as shown in the **Properties** tab. The provided translations do not affect the behavior of the design property.
+
+To provide translations for your design properties, create a file *locales/{language-code}/translation.json* in the **Styling** folder of your module. The language code can be any of the user interface languages supported by Studio Pro, such as *en-US*, *ja-JP*, *ko-KR*, or *zh-CN*. Other files in the **locales/{language-code}** folders will be ignored. As a result, custom namespaces cannot be used. As an example, a resulting structure could look like this:
+
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/translations.png" alt="A translation.json file in the Styling/locales/de-DE folder" class="no-border" max-width=50% >}}
+
+These JSON files follow the format used by the i18next library, specifically v3. See the [the i18next JSON format documentation](https://www.i18next.com/misc/json-format) for more information. For example to translate a design property with the name **Text align** with the options **left**, **center** and **right**, the contents of *locales/ko-KR/translation.json* might look something like this:
+
+```json
+{
+    "Text align": "텍스트 정렬",
+    "left": "왼쪽",
+    "center": "센터",
+    "right": "오른쪽"
+}
+```
+
+All design properties and options with the same name will be translated the same way, even if they are defined in different modules. When two or more modules define a translation for the same design property or design property option, the one used is not guaranteed to be the same as the one outlined in [Extending or Overriding Design Properties of Other Modules](#extend-existing-design-properties). As a result, we recommend to only translate design properties and design property options in the same module in which they are defined.
+
+If a translation is not available, the names and descriptions as defined in *design-properties.json* are used as a fallback instead. For example, the user changes their settings to work with Studio Pro in Korean, but the module does not have a *locales/ko-KR/translation.json* file. This can also happen if the name of a design property, any of its options or descriptions are missing from the corresponding *translation.json* file.
+
+{{% alert color="warning" %}}
+When adding translations for existing design properties, do not change the name of existing design properties or their options as defined in *design-properties.json*. Those names cannot be changed easily when there are apps already using them. For more information, see the [Renaming Design Properties](#old-names) section above.
+{{% /alert %}}
+
 ## Read More
 
 * [Native Styling](/refguide/mobile/designing-mobile-user-interfaces/native-styling/)

@@ -413,7 +413,7 @@ It is recommended to use a common prefix that uniquely defines your organization
 
 The following deprecated usages will be removed in the future releases,
 
-1. The [`Core.metrics()` Mendix Runtime Java API methods](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/metrics/Metrics.html) `counter()`, `timer()`, `gauges()`, and `sets()`, and the corresponding `Counters`, `Timers`, `Gauges` and `Sets` interfaces are deprecated.
+1. The [`Core.metrics()` Mendix Runtime Java API methods](https://apidocs.rnd.mendix.com/11/runtime/com/mendix/metrics/Metrics.html) `counter()`, `timer()`, `gauges()`, and `sets()`, and the corresponding `Counters`, `Timers`, `Gauges` and `Sets` interfaces are deprecated.
 
 ## Logging {#logging}
 

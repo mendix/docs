@@ -1,7 +1,7 @@
 ---
 title: "Running the Mendix Operator in Global Mode"
 url: /developerportal/deploy/global-operator/
-description: "Describes the processes of installing and configuring the Mendix Operator in the Private Cloud in Global Mode"
+description: "Describes the processes of installing and configuring the Mendix Operator for Mendix on Kubernetes in Global Mode"
 weight: 30
 ---
 
@@ -23,7 +23,7 @@ After configuring the Global Operator namespace, you must configure the *managed
 
 To install and configure the Global Operator, perform the following steps:
 
-1. In the Private Cloud Portal, create a cluster and select **Global Installation** as the **Installation Type**.
+1. In the Mendix on Kubernetes Portal, create a cluster and select **Global Installation** as the **Installation Type**.
 
     {{< figure src="/attachments/deployment/private-cloud/global-operator/global-operator1.png" >}}
 
@@ -69,17 +69,17 @@ To install and configure the Global Operator, perform the following steps:
     kubectl -n {globalOperatorNamespace} get pods
     ```
 
-9. In the Private Cloud Portal, verify that the status of the Global Operator main namespace is *Connected*, as in the following figure:
+9. In the Mendix on Kubernetes Portal, verify that the status of the Global Operator main namespace is *Connected*, as in the following figure:
 
     {{< figure src="/attachments/deployment/private-cloud/global-operator/global-operator7.png" class="no-border" >}}
 
 10. Click **Namespaces** to go to the **Namespaces Overview** page.
 
-    {{< figure src="/attachments/deployment/private-cloud/global-operator/global-operator8.png" >}}
+    {{< figure src="/attachments/deployment/private-cloud/global-operator/global-operator9.png" >}}
 
 11. Once the Global Operator main namespace is connected, the **Convert Namespace** and **Add Managed Namespace** buttons are enabled and you can install the managed namespace under the Global Operator namespace by clicking **Add Managed Namespace**.
 
-    {{< figure src="/attachments/deployment/private-cloud/global-operator/global-operator9.png" class="no-border" >}}
+    {{< figure src="/attachments/deployment/private-cloud/global-operator/global-operator8.png" class="no-border" >}}
 
     {{% alert color="warning" %}}Ensure that you use the same name for the managed namespace in the Portal and in the cluster while running the command. Using different names may result in unwanted issues.{{% /alert %}}
 
@@ -174,6 +174,10 @@ It is crucial to maintain consistent Operator configuration for PCLM in both the
 Licenses imported in the PCLM Server appear in the PCLM Statistics section of the Global Operator main namespace. You can see both **Runtime** and **Operator** license.
 
 Claimed licenses are visible in the PCLM Statistics section of the Managed namespace.
+
+### Offline License and Subscription Secret
+
+For Global operator, the Runtime and Operator licenses must be applied to all the managed namespaces separately. 
 
 ## Upgrading Managed Namespaces
 

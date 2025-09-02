@@ -47,6 +47,10 @@ disableKinds = ["taxonomy", "term"]
     [markup.goldmark]
         [markup.goldmark.renderer]
             unsafe = true
+        [markup.goldmark.extensions.typographer]
+            # Disable typographic replacements, such as smart quotes. MvM - Changed to disable=true to avoid issues with quotes being mismatched.
+            # See https://gohugo.io/configuration/markup/
+            disable = true
     [markup.highlight]
         # See a complete list of available styles at https://xyproto.github.io/splash/docs/all.html
         # See config options at https://gohugo.io/getting-started/configuration-markup/#highlight

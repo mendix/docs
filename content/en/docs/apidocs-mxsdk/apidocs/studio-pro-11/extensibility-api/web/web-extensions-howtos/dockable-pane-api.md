@@ -2,7 +2,6 @@
 title: "Create a Dockable Pane Using Web API"
 linktitle: "Dockable Pane"
 url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/dockable-pane-api/
-weight: 10
 ---
 
 ## Introduction
@@ -38,8 +37,9 @@ Use the 'paneHandle' you registered to interact with the dockable pane.
 
 After adding this call the `loaded()` method looks like this:
 
-```typescript {hl_lines=["11-19"]}
-    async loaded() {
+```typescript {hl_lines=["12-20"]}
+    async loaded(componentContext) {
+        const studioPro = getStudioProApi(componentContext);
         // Add a menu item to the Extensions menu
         await studioPro.ui.extensionsMenu.add({
             menuId: "myextension.MainMenu",
@@ -83,9 +83,9 @@ After adding this call the `loaded()` method looks like this:
 
 You will now add a menu that will open the pane when it is selected.
 
-1. Add a new submenu to the existing `extensionsMenu.add()` method on line 10.
+1. Add a new submenu to the existing `extensionsMenu.add()` method on line 7.
 
-    ```typescript {linenos=table linenostart=10}
+    ```typescript {linenos=table linenostart=6}
     // Add a menu item to the Extensions menu
     await studioPro.ui.extensionsMenu.add({
       menuId: "myextension.MainMenu",
@@ -124,8 +124,9 @@ You will now add a menu that will open the pane when it is selected.
 
 Your `loaded()` method should now look like this:
 
-```typescript {hl_lines=["3-10","22-41"]}
-    async loaded() {
+```typescript {hl_lines=["4-11","23-42"]}
+    async loaded(componentContext) {
+        const studioPro = getStudioProApi(componentContext);
         // Add a menu item to the Extensions menu
         await studioPro.ui.extensionsMenu.add({
             menuId: "myextension.MainMenu",
@@ -178,48 +179,74 @@ You must now create a new web view endpoint where the user interface to be rende
 1. Rename `ui/index.tsx` to `ui/tab.tsx`
 1. Add the new endpoint file, `ui/dockablepane.tsx` by copying `ui/tab.tsx`.
 
-You must also alter the `vite.config.ts` and `manifest.json` files to bind to the correct endpoint, as described in the following sections:
+You must also alter the `build-extension.mjs` and `manifest.json` files to make sure the new endpoint is built and bound to a name referenced in `uiEntrypoint` property in extensibility APIs, as described in the following sections:
 
-### Altering `vite.config.js`
+### Altering `build-extension.mjs`
 
-Replace the entry section of `vite.config.js` with the following:
+To instruct esbuild to produce JavaScript modules that correspond to `src/ui/tab.tsx` and `src/ui/dockablepane.tsx`,
+change the call to `entryPoints.push` in line 16 as follows:
 
 ```typescript
-        entry: {
-            main: "src/main/index.ts",
-            tab: "src/ui/tab.tsx",
-            dockablepane: "src/ui/dockablepane.tsx",
-        }
+entryPoints.push({
+    in: 'src/ui/tab.tsx',
+    out: 'tab'
+});
+entryPoints.push({
+    in: 'src/ui/dockablepane.tsx',
+    out: 'dockablepane'
+});
 ```
 
-This instructs vite that the tab endpoint is connected to `src/ui/tab.tsx` and the dockable pane endpoint is connected to `src/ui/dockablepane.tsx`.
+Your `build-extension.mjs` file should be like this (note that the variable `appDir` should retain its previous value):
 
-`vite.config.js` should now look like this:
+```javascript {hl_lines=["16-23"]}
+import * as esbuild from 'esbuild'
+import {copyToAppPlugin, copyManifestPlugin, commonConfig} from "./build.helpers.mjs"
+import parseArgs from "minimist"
 
-```typescript {hl_lines=["7-11"]}
-import { defineConfig, ResolvedConfig, UserConfig } from "vite";
+const outDir = `dist/myextension`
+const appDir = "<path to your application root directory>"
+const extensionDirectoryName = "extensions"
 
-export default defineConfig({
-  build: {
-    lib: {
-        formats: ["es"],
-        entry: {
-            main: "src/main/index.ts",
-            tab: "src/ui/tab.tsx",
-            dockablepane: "src/ui/dockablepane.tsx",
-        },
-    },
-    rollupOptions: {
-        external: ["@mendix/component-framework", "@mendix/model-access-sdk"],
-    },
-    outDir: "./dist/myextension",
-  },
-} satisfies UserConfig);
+const entryPoints = [
+    {
+        in: 'src/main/index.ts',
+        out: 'main'
+    }   
+]
+
+entryPoints.push({
+    in: 'src/ui/tab.tsx',
+    out: 'tab'
+});
+entryPoints.push({
+    in: 'src/ui/dockablepane.tsx',
+    out: 'dockablepane'
+});
+
+const args = parseArgs(process.argv.slice(2))
+const buildContext = await esbuild.context({
+  ...commonConfig,
+  outdir: outDir,
+  plugins: [copyManifestPlugin(outDir), copyToAppPlugin(appDir, outDir, extensionDirectoryName)],
+  entryPoints
+})
+
+if('watch' in args) {
+    await buildContext.watch();
+} 
+else {
+    await buildContext.rebuild();
+    await buildContext.dispose();
+}
 ```
 
-### Altering `public/manifest.json`
+This makes sure that esbuild will consider these two `.tsx` files as entrypoints and produce JavaScript modules in the 
+`dist` folder, corresponding to the name in `out`.
 
-You also need to instruct Studio Pro to load the endpoint that you just created. To do this, modify the manifest file `public/manifest.json`.
+### Altering `src/manifest.json`
+
+You also need to instruct Studio Pro to load the endpoint that you just created. To do this, modify the manifest file `src/manifest.json`.
 
 Alter the "ui" section by changing the `tab` endpoint and adding the `dockablepane` endpoint.
 
@@ -230,7 +257,7 @@ Alter the "ui" section by changing the `tab` endpoint and adding the `dockablepa
       }
 ```
 
-The `manifest.json file` should now look like this:
+The `manifest.json` file should now look like this:
 
 ```typescript {hl_lines=["5-8"]}
 {
@@ -248,13 +275,13 @@ The `manifest.json file` should now look like this:
 
 ## Closing the Dockable Pane
 
-Now that you have registered a pane and can open, it would also be a good idea to close it.
+Now that you have registered a pane and can open it, you can also close it.
 
 You will close your pane using a new menu item.
 
-First add a new sub menu item to the menu on line 11.
+First, add a new sub menu item to the menu on line 13.
 
-```typescript {linenos=table linenostart=11}
+```typescript {linenos=table linenostart=13}
                 { menuId: "myextension.HideDockMenuItem", caption: "Hide dock pane" },
 ```
 
@@ -286,10 +313,11 @@ You must also alter the event handler for the new menu at the end of the loaded 
         );
 ```
 
-The loaded method should now look like this:
+The `loaded` method should now look like this:
 
-```typescript {hl_lines=["9","24-45"]}
-    async loaded() {
+```typescript {hl_lines=["10","25-46"]}
+    async loaded(componentContext) {
+        const studioPro = getStudioProApi(componentContext);
         // Add a menu item to the Extensions menu
         await studioPro.ui.extensionsMenu.add({
             menuId: "myextension.MainMenu",

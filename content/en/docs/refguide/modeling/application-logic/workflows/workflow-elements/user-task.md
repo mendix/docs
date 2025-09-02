@@ -22,7 +22,7 @@ User task properties consist of the following sections:
 
 * [General](#general)
 * [Due date](#due-date)
-* [Targeted users](#users)
+* [Targeted users](#targeted-users)
 * [Outcomes](#outcomes)
 * [Task page](#task-page)
 * [Display information](#display-info)
@@ -46,33 +46,86 @@ The **Due date** section properties are described in the table below:
 | Duration | You can set the deadline for the user task with the **Due in** option, which indicates the number of hours, days, or weeks the task is due in. Possible values of the property are the following ones:<br /><ul><li>Hours</li><li>Days</li><li>Weeks</li> </ul> |
 | Expression | You can set a due date for the user task writing an expression. For example, to set a due date to tomorrow, you can use `addDays([%CurrentDateTime%], 1)`. |
 
-### Targeted Users Section {#users}
+### Targeted Users Section {#targeted-users}
 
-#### Target Users Using {#target-users}
+Targeted users are the users who can access and work on the user task. The **Targeted Users** section allows you to manage which users should see a user task in their inbox.
 
-**Target users using** allows you to manage what users will the task be assigned to. You can filter users using XPath, or implement more flexible logic and add several checks using a microflow.
+There are three options for targeting:
 
-Possible options of this property are described in the table below:
+* [Target User(s)](#users): This allows you to target users directly.
+* [Target Workflow group(s)](#workflow-group): This allows you to target users indirectly through a pre-defined group.
+* [No targeting](#no-targeting): This allows you to not immediately target users for the user task.
 
-| Option | Description |
+{{% alert color="info" %}}
+For information on how access rules are used to include tasks in the current user's inbox, see the [Task Inbox](/refguide/workflow-engine/#task-inbox) section in *Workflow Engine*.
+{{% /alert %}}
+
+#### Target User(s) {#users}
+
+This option lets you target users directly. You can use either an XPath constraint or a microflow, which results in a list of one or more **User Entity** objects. These objects are stored in the **WorkflowUserTask_TargetUsers** association, after which the user task will show up in the task inbox of those users.
+
+The following table lists the sources you can use to target users:
+
+| Source | Description |
 | --- | --- |
-| XPath | Allows you to filter users who should be assigned the user task. For example, you can assign a certain task only to users with the Manager user role. You can use attributes of the **User Entity** set in [App Settings](/refguide/app-settings/#workflows). |
-| Microflow | Allows you to assign the user task to certain users. Using microflow you can check, for example, which users have the right to approve user tasks and are currently not on vacation and assign the task only to users who passed the check.<br />The return type of the microflow should be the **User Entity** set in [App Settings](/refguide/app-settings/#workflows). |
-| No assignment | Allows you to not assign the user task to certain users immediately. This can be useful when you, for example, want the user task to be created but have an administrator assign it to certain users later. |
+| Database | Allows you to use XPath constraints to filter which users should see the user task in their inbox. For example, you can target a certain task only to users in a specific department (assuming such information is available in your domain model). You can use any attributes of the **User Entity** set in [App Settings](/refguide/app-settings/#workflows).|
+| Microflow | Allows you to use a microflow to target the user task to certain users. You can check, for example, which users have the right to approve user tasks and are currently not on vacation, and assign the task only to users who passed the check. <br/> The return type of the microflow should be a list of the **User Entity** set in [App Settings](/refguide/app-settings/#workflows). |
 
-In case **Target users using** (an XPath or a microflow) results in an empty list of users (0 users), the workflow fails. For more information on how to handle this kind of issues, see the [Operation](/refguide/change-workflow-state/#operation) section in *Change Workflow State*.
+{{% alert color="warning" %}}
+If an XPath constraint or a microflow results in an empty list (0 objects), the workflow fails. For more information on how to handle this kind of issues, see the [Operation](/refguide/change-workflow-state/#operation) section in *Change Workflow State*.
+{{% /alert %}}
 
-#### XPath Constraint {#xpath-constraint}
+##### Auto-Assign When Targeting Results In One User
 
-Specifies the expression used to assign the user task. This option is displayed only when the [Target users using](#target-users) is set to **XPath**. Click **Edit** to edit the [XPath constraint](/refguide/xpath-constraints/).
+When enabled, you can automatically assign a user task when a single user is targeted. This option is displayed only when the **Target** is set to **User(s)**.
 
-#### Microflow
+#### Target Workflow Group(s) {#workflow-group}
 
-Specifies the microflow used to assign the user task. This option is displayed only when the [Target users using](#target-users) is set to **Microflow**.
+{{% alert color="info" %}}
+**Target Workflow group(s)** was introduced in Studio Pro 11.2.0 as a beta feature. To enable this option, go to **Edit** > **Preferences** > the **New features** tab > the **Workflow** section. 
 
-#### Auto-Assign When Targeting Results In One User {#auto-assign}
+For more information on how to configure workflow groups, see [Workflow Groups](/refguide/workflow-groups/).
+{{% /alert %}}
 
-Enables automatically assigning a user task when a single user is targeted. This option is displayed only when the [Target users using](#target-users) is set to **XPath** or **Microflow**.
+This option lets you target users indirectly through **Workflow group(s)**. You can use either an XPath constraint or a microflow, which results in a list of one or more **System.WorkflowGroup** objects. These objects are stored in the **WorkflowUserTask_TargetGroups** association, after which the user task will show up in the task inbox of any user that is associated to those workflow groups.
+
+The following table lists the sources you can use to target groups of users:
+
+| Source | Description |
+| --- | --- |
+|Database | Allows you to use XPath constraints to filter groups of users who should see the user task in their inbox. For example, you can target a specific **Managers** group, which associates only the users with a management role. You should use workflow group tokens instead of the **Name** attribute. So, use `[ id = '[%WorkflowGroup_Managers%]' ]` instead of `[ Name = 'Managers' ]`. The latter will NOT be updated automatically if a group is renamed.|
+| Microflow | Allows you to use a microflow to target the user tasks to specific groups. You can check, for example, which groups are associated to a specific department (assuming such information is available in your domain model). <br/> The return type of the microflow should be a list of **System.WorkflowGroup** objects.  |
+
+{{% alert color="warning" %}}
+If an XPath constraint or a microflow results in an empty list (0 objects), the workflow fails. For more information on how to handle such issues, see the [Operation](/refguide/change-workflow-state/#operation) section in *Change Workflow State*.
+{{% /alert %}}
+
+#### No Targeting {#no-targeting}
+
+ This options allows you to not immediately target the user task when the user task is created. Instead, you must set the target manually by setting either *WorkflowUserTask_TargetUsers* or *WorkflowUserTask_TargetGroups*, or both yourself. Setting these associations can be done from the **On created** event handler or at some other time after the user task is created, for instance by an administrator.
+
+This can be useful when you, for example, want the user task to be created but have an administrator assign it to certain users and/or groups later. It should also be used if you want to have mixed targeting, containing both specific users and groups of users.
+
+#### Differences Between Targeting User(s) and Workflow Group(s)
+
+There is a fundamental difference between targeting **User(s)** and **Workflow group(s)**:
+
+* Targeting **User(s)** is static and associates only the users that match the targeting criteria at the moment when the user task is created. After that, the targeted users are NOT updated when new users are created (or when existing users are modified), even if these users would match the criteria.
+* Targeting **Workflow group(s)** is not static and dynamically gets updated when users are added to or removed from the targeted groups. Note that the targeted groups themselves are still static and will not be changed when new groups are added.
+
+#### FAQs
+
+##### When Should I Use User Targeting vs. Group Targeting?
+
+In general, we recommend always using group targeting as this provides the required flexibility most organizations need. Use user targeting when you want to assign a user task to specific individuals.
+
+##### Can I Set or Change Group Targeting at Runtime?
+
+Yes. Just like user targeting, you can change the group targeting at Runtime, for instance, by using the [Workflow Commons](/appstore/modules/workflow-commons/) module.
+
+##### How Do I Manage Users in a Group?
+
+The [Workflow Commons](/appstore/modules/workflow-commons/) module has a **Groups** function where you can manage group membership. You can also build your own logic to add members to certain groups based on directory information.
 
 ### Outcomes Section {#outcomes}
 

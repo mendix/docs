@@ -69,12 +69,14 @@ If authentication is required, you can select which authentication methods to su
 * Select **Active session** to allow access from JavaScript inside your current application
 * Once a user has logged into the browser, the JavaScript in your app can access the REST service using the current user's session
 * [Offline-first](/refguide/offline-first/) apps cannot use active session authentication, because they do not have sessions that stay active while the app is running
-* To prevent cross-site request forgery, the `X-Csrf-Token` header needs to be set on each request, for example:
+* To prevent cross-site request forgery, the `X-Csrf-Token` header needs to be set on each request; if you are using a JavaScript action, you can use an API to retrieve the token
 
     ```javascript
+    import getCSRFToken from "mx-api/session";
+
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", "http://mysite/rest/myservice/myresource", false);
-    xmlHttp.setRequestHeader("X-Csrf-Token", mx.session.getConfig("csrftoken"));
+    xmlHttp.setRequestHeader("X-Csrf-Token", getCSRFToken());
     xmlHttp.send(null);
     ```
 
@@ -134,7 +136,7 @@ When you select a resource, you see the [operations](/refguide/published-rest-op
 
 Resources and operations are appended to [Location](#location) to form a URL on which they can be accessed.
 
-{{< figure src="/attachments/refguide/modeling/integration/published-rest-services/published-rest-service/example-location-url.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/integration/rest-services/published-rest-services/published-rest-service/example-location-url.png" class="no-border" >}}
 
 ## Read More
 

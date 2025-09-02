@@ -39,7 +39,7 @@ These third-party integrations require an agent to run alongside your runtime co
 {{% /alert %}}
 
 {{% alert color="info" %}}
-For support on other cloud deployment options, such as Private Cloud, refer to their dedicated documentation. For Private Cloud deployment, for example, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
+For support on other cloud deployment options, such as Mendix  on Kubernetes, refer to their dedicated documentation. For Kubernetes deployment, for example, see [Monitoring Environments in Mendix on Kubernetes](/developerportal/deploy/private-cloud-monitor/).
 {{% /alert %}}
 
 ## What Information Can Mendix Supply to a SaaS-Based Data Analytics Platform?

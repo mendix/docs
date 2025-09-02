@@ -35,18 +35,6 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install the latest version of Mendix Studio Pro
 * Install the Mendix Make It Native app on a mobile device or an emulator.
 * Install the LTS version of [Node.js](https://nodejs.org).
-* Install the latest [Yeoman](https://yeoman.io/) with the following command:
-
-    ```shell
-    npm install -g yo
-    ```
-
-* Install the latest Mendix Pluggable Widget Generator for Yeoman with the following command:
-
-    ```shell
-    npm install -g @mendix/generator-widget
-    ```
-
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
 * Have a basic understanding of:
     * Microsoft's Command Prompt or the Unix command line
@@ -77,7 +65,7 @@ To scaffold your app folder for the group box widget, follow these steps:
 3. Start the generator by executing the following command:
 
     ```shell
-    yo @mendix/widget GroupBox
+    npx @mendix/generator-widget GroupBox
     ```
 
 4. The generator will ask you for some input during setup. Provide this information to the generator:
@@ -91,6 +79,7 @@ To scaffold your app folder for the group box widget, follow these steps:
     * Author: {*Mendix*}
     * Mendix app path: {*./test/MxTestApp/*}
     * Programming language: {**TypeScript**}
+    * Which type of components do you want to use? {**Function Components**}
     * Widget type: {**For native mobile apps**}
     * Widget template: {**Empty widget (recommended for more experienced developers)**}
     * Unit tests: {**No**}

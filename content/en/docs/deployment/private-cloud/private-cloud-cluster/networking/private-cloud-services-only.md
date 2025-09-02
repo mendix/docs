@@ -1,14 +1,14 @@
 ---
-title: "Service without Ingress in Mendix for Private Cloud"
+title: "Service without Ingress in Mendix on Kubernetes"
 linktitle: "Service Only"
 url: /developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/services-only/
-description: "Describes how to configure Mendix for Private Cloud to create services without an Ingress."
+description: "Describes how to configure Mendix on Kubernetes to create services without an Ingress."
 weight: 30
 ---
 
 ## Introduction
 
-Mendix for Private Cloud has the capability to create services without an Ingress, allowing Ingress objects to be managed independently from Mendix for Private Cloud. It is also technically possible to directly use an L4 load balancer without an ingress controller or service mesh, although this setup is very limited and only suitable for edge cases.
+Mendix on Kubernetes has the capability to create services without an Ingress, allowing Ingress objects to be managed independently from Mendix on Kubernetes. It is also technically possible to directly use an L4 load balancer without an ingress controller or service mesh, although this setup is very limited and only suitable for edge cases.
 
 This scenario is suitable for integrating Mendix applications with a service mesh, ensuring capabilities such as traffic encryption from the ingress controller to the application pods, among other benefits.
 

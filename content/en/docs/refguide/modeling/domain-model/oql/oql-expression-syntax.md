@@ -555,7 +555,7 @@ The `IS` operator can be used to filter out rows with values that are NULL. For 
 
 The `CASE` expression is a conditional expression, similar to if/else statements in other programming languages. If the result of a following `WHEN` condition is `TRUE`, the value of the `CASE` expression is the result that follows the condition and the remainder of the `CASE` expression is not processed. If the result is not `TRUE`, any subsequent `WHEN` clauses are examined in the same manner. If no `WHEN` condition yields `TRUE`, the value of the `CASE` expression is the result of the `ELSE` clause. If the `ELSE` clause is omitted and no condition is `TRUE`, the result is null.
 
-If [OQL v2](/refguide/oql-v2/) is enabled, additional data type validations apply to result expressions of `CASE`. See the corresponding [page](/refguide/oql-v2/#case-validations) for details.
+If [OQL v2](/refguide/oql-v2/) is enabled, additional data type validations apply to results of `CASE` expressions. See [`CASE`](/refguide/oql-v2/#case-validations) in *OQL Version 2 Features* for details.
 
 #### Syntax
 
@@ -625,7 +625,7 @@ FROM Sales.Order
 | Doe      | 2      | 5.0   | Regular   |
 | Moose    | 3      | 8.2   | Priority  |
 
-If result expressions have different numeric types, date type of the result expression in the first WHEN has priority, and the whole CASE expression has type of that result expression. This behavior matches the behavior of supported database vendors.
+If expression results have different numeric types, the data type of the expression result is defined based on [type coercion precedence](#type-coercion).
 
 ```sql
 SELECT
@@ -643,11 +643,13 @@ SELECT
 FROM Sales.Order
 ```
 
-| LastName | Number | Price | PriceOrNumber (type: Decimal) | NumberOrPrice (type: Integer) |
+| LastName | Number | Price | PriceOrNumber (type: Decimal) | NumberOrPrice (type: Decimal¹) |
 |:---------|-------:|------:|--------------:|--------------:|
-| Doe      | 7      | 1.5   | 1.5     | 7     |
-| Doe      | 2      | 5.0   | 5.0   | 2     |
-| Moose    | 3      | 8.2   | 3.0 | 8     |
+| Doe      | 7      | 1.5   | 1.5     | 7.0     |
+| Doe      | 2      | 5.0   | 5.0   | 2.0     |
+| Moose    | 3      | 8.2   | 3.0 | 8.0     |
+
+¹In OQL v1, the expression gets the type of the first argument. If you use OQL v1, the type of `NumberOrPrice` in the example above is Integer, not Decimal.
 
 ### Operator Precedence
 
@@ -723,9 +725,9 @@ The table below describes which `CAST` conversions are supported:
 
 | From \ To | BOOLEAN | DATETIME | DECIMAL | INTEGER | LONG | STRING (unlimited) | STRING (limited) |
 |------| :------: | :------: | :------: | :------: | :------: | :------: | :------: |
-| BOOLEAN | ✔ | ✘ | ✘ | ✘ | ✘ | ✔* | ✔*¹ |
-| DATETIME | ✘ | ✔ | ✘ | ✘ | ✘ | ✔* | ✔*² |
-| DECIMAL | ✘ | ✘ | ✔* | ✔* | ✔* | ✔* | ✔*² |
+| BOOLEAN | ✔ | ✘ | ✘ | ✘ | ✘ | ✔*³ | ✔*¹ ³ |
+| DATETIME | ✘ | ✔ | ✘ | ✘ | ✘ | ✔*³ | ✔*² ³ |
+| DECIMAL⁴ | ✘ | ✘ | ✔* | ✔* | ✔* | ✔* | ✔*² |
 | INTEGER | ✘ | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | LONG | ✘ | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | STRING | ✘ | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |
@@ -734,7 +736,19 @@ The table below describes which `CAST` conversions are supported:
 
 ²The conversion of DATETIME and DECIMAL to STRING (limited) is supported only if the value fully fits into the string length. The conversion can fail if the resulting string length is less than 20.
 
-Converting `DATETIME` or `BOOLEAN` to `STRING` returns different format per database.
+³Converting `DATETIME` or `BOOLEAN` to `STRING` returns different format per database.
+
+⁴See [`DECIMAL` precision](#dec-prec), below, for further information.
+
+##### `DECIMAL` precision{#dec-prec}
+
+`DECIMAL` data type can have precision and scale as parameters. This will have the following impact on the way data is converted:
+
+* `DECIMAL(<precision>, <scale>)` – when both parameters are specified, those values are used as precision and scale of the resulting data type
+* `DECIMAL(<precision>)` – when only precision is specified, scale is set to 0. The resulting data type in that case is `DECIMAL(<precision>, 0)`
+* `DECIMAL` – when no parameters are specified, default values are used. Precision is set to 28, and scale is set to 8: `DECIMAL(28, 8)`
+
+If the original value has more digits in the fractional part than required scale, the fractional part is rounded to the required scale. In that case, rounding is done according to the database configuration.
 
 #### Examples
 
@@ -755,6 +769,21 @@ SELECT (Number : 2) as Normal, (Cast(Number AS DECIMAL) : 2) as Casted FROM Sale
 | 3      | 3.5    |
 | 1      | 1.0      |
 | 1      | 1.5    |
+
+In the case of conversion to `DECIMAL`, scale and precision can be specified
+
+```sql
+SELECT
+	CAST('123.0987654321' AS DECIMAL) AS default_decimal,
+	CAST('123.0987654321' AS DECIMAL(20)) AS decimal_precision,
+	CAST('123.0987654321' AS DECIMAL(20, 6)) AS decimal_precision_scale
+FROM Sales.Order
+LIMIT 1
+```
+
+| default_decimal | decimal_precision  | decimal_precision_scale |        
+|------:|-------:|-------:|
+| 123.09876543      | 123    | 123.098765    |
 
 ### COALESCE {#coalesce-expression}
 
@@ -796,7 +825,7 @@ SELECT COALESCE(LastName, FirstName) AS Name FROM Sales.Customer
 | Doe  |
 | Jane |
 
-If arguments of `COALESCE` have different numeric types, the expression gets the type of the first argument. This behavior matches the behavior of supported database vendors.
+If all arguments have different numeric types, the data type of the expression result is defined based on [type coercion precedence](#type-coercion).
 
 ```sql
 SELECT
@@ -805,10 +834,12 @@ SELECT
 FROM Sales.Customer
 ```
 
-| AgeOrAmount (type: Integer) | AmountOrAge (type: Decimal) |
+| AgeOrAmount (type: Decimal) | AmountOrAge (type: Decimal²) |
 |------:|------:|
-| 25   | 25.0   |
-| 42   | 42.3   |
+| 25.0   | 25.0 |
+| 42.3   | 42.3 |
+
+²In OQL v1, the expression gets the type of the first argument. If you use OQL v1, the type of `AgeOrAmount` in the example above is Integer, not Decimal.
 
 ### DATEDIFF {#datediff-function}
 

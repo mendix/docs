@@ -54,8 +54,8 @@ jobs:
             ${{ env.VER }}
           branch: lint-docs
           committer: MarkvanMents <Mark.van.Ments@mendix.com>
-          assignees: MarkvanMents
-          reviewers: MarkvanMents
+          assignees: MarkvanMents,OlufunkeMoronfolu
+          reviewers: MarkvanMents,OlufunkeMoronfolu
           labels: Internal WIP
           add-paths: |
             content/en/docs/**/*.md

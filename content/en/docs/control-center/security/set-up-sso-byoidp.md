@@ -25,8 +25,9 @@ This document describes the steps to set up a single sign-on configuration in Me
 The benefits of using BYOIDP SSO are:
 
 * **Security** – You are in control of the credentials and authentication of your platform users. You can, for example, apply password complexity rules and two-factor authentication (2FA). Users do not need to have separate credentials in the Mendix Platform to access the Mendix Portal.
-* **Access governance** – You are in control of denying access to the platform via SSO, for example when an employee has left the company or your corporate policy does not allow an employee to develop Mendix applications.
-* **Convenience** – Platform users have the convenience of SSO and don't have to manage credentials for the Mendix Platform.
+* **Access governance for platform users** – You are in control of denying access to the platform via SSO, for example when an employee has left the company or your corporate policy does not allow an employee to develop Mendix applications.
+* **Access governance for Mendix Admins** – Optionally, you can control who is a Mendix Admin on the Mendix platform using groups in your IdP, and you can synchronize that information during SSO. For more information, see [IdP-managed Mendix Admins](/control-center/security-settings/#idp-managed-mendix-admins).
+* **Convenience** – Platform users have the convenience of SSO and do not have to manage credentials for the Mendix Platform.
 
 ### Features
 
@@ -235,14 +236,14 @@ Existing users of the Mendix Portal can continue to use their accounts, but they
 
 ### BYOIDP and Team Server {#team-server}
 
-Once BYOIDP is activated, direct access to the Team Server is no longer possible. To access code repositories from a pipeline, you need to use a [PAT](/community-tools/mendix-profile/user-settings/#pat).
+Once BYOIDP is activated, direct access to the Team Server is no longer possible. To access code repositories from a pipeline, you need to use a [PAT](/mendix-profile/user-settings/#pat).
 
 Before activating BYOIDP, your developers should set up PATs for direct access to repos (for example, from CI/CD pipelines and/or Tortoise SVN) instead of using usernames and passwords.
 
 If developers have not created a PAT before BYOIDP SSO is activated, they can do so later, if needed.
 
 {{% alert color="info" %}}
-Access to Team Server through other mechanisms, such as via Studio Pro or using Mendix for Private Cloud, is not affected.
+Access to Team Server through other mechanisms, such as via Studio Pro or using Mendix on Kubernetes, is not affected.
 {{% /alert %}}
 
 ### Changing the Client Secret {#client-secret}

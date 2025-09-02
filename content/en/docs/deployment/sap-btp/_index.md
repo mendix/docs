@@ -739,6 +739,7 @@ Since SAP Application Logging will soon be deprecated, you need to migrate your 
 3. Click **Connect Services** and restart your application to bind the new SAP Cloud logging service.
 4. At this point, both **application-logs** and **cloud-logging** services will be active for your application.
 5. Retain the **application-logs** service until its log retention period ends, to ensure access to existing log entries. Then, delete it following the instructions provided in the [Unbinding and Removing Services](/developerportal/deploy/sap-cloud-platform/#unbinding-and-removing-services) section above. After this, only the new SAP Cloud Logging service will remain active.
+6. When using the **cloud-logging** service, upgrade **SapApplicationLogs** to the latest version. If you are using an older version, update the **Default Value** of the **ApplicationLoggingService** constant to *cloud-logging* in the [SAP Logging Connector](https://marketplace.mendix.com/link/component/110219). For more information, refer to the [Using the Connector](/appstore/modules/sap/sap-logger/#using-the-connector) section of the *SAP Logging Connector* document.
 
 ## Troubleshooting
 

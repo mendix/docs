@@ -1,7 +1,7 @@
 ---
 title: "Consuming Add-on Modules and Solutions"
 url: /refguide/consume-add-on-modules-and-solutions/
-linktitle: "Consume Add-on Modules and Solutions"
+linktitle: "Consuming Add-on Modules and Solutions"
 weight: 30
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -20,6 +20,7 @@ When consuming add-on modules and solutions, you may come across the following l
 * If app modules and add-on modules or solutions have conflicting custom widgets, you are prompted with a warning showing the sources of the conflicts (module and widget package names) to find a workaround. An automatic fix is not implemented.
 * When a constant is hidden, you cannot configure its value in the **App settings**. For more information on app settings, see the [Configuration Tab](/refguide/app-settings/#configurations) section in *App Settings*. 
 * If there are add-on modules imported into Studio Pro and the application is deployed for Eclipse using menu option **App > Deploy for Eclipse**, there are known build failures in Java source code.
+* If you set the default language to something other than English, and if there is no translation for that language, an error is thrown. To avoid this, set English as the default language.
 
 ## Importing an Add-on Module 
 

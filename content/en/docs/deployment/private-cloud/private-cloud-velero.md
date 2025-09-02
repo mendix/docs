@@ -1,8 +1,8 @@
 ---
-title: "Use Velero to Back Up Private Cloud Namespaces"
+title: "Use Velero to Back Up Mendix on Kubernetes Namespaces"
 linktitle: "Use Velero to Back Up Namespaces"
 url: /developerportal/deploy/private-cloud-velero/
-description: "Describes the process for using Velero to create and restore backups of your Mendix app namespaces in private cloud"
+description: "Describes the process for using Velero to create and restore backups of your Mendix app namespaces in Mendix on Kubernetes"
 weight: 25
 ---
 
@@ -21,10 +21,10 @@ Velero enables you to back up and restore the following Mendix objects:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Ensure that the [Mendix Operator](/developerportal/deploy/private-cloud-technical-appendix-01/) for your private cloud cluster is in version 2.7.0 or above.
+* Ensure that the [Mendix Operator](/developerportal/deploy/private-cloud-technical-appendix-01/) for your Mendix on Kubernetes cluster is in version 2.7.0 or above.
 * Install the Velero client and server in version 1.9 or above. For more information, see [Velero documentation](https://velero.io/docs/).
 * Create a recovery cluster.
-    {{% alert color="info" %}}The process of creating a recovery cluster may vary depending on the platform that you use to host your private cloud. For more information, refer to the documentation supplied by your cloud provider.{{% /alert %}}
+    {{% alert color="info" %}}The process of creating a recovery cluster may vary depending on the platform that you use to host your Mendix on Kubernetes. For more information, refer to the documentation supplied by your cloud provider.{{% /alert %}}
 
 ## Creating a Velero Backup
 

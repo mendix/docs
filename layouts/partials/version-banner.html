@@ -3,11 +3,14 @@
     <!-- Check if the page has a banner: "string" set if yes, display a banner. -->
     <!-- safeHTML means you can include HTML. If you need to escape double quotes, use \" -->
     <!-- For example: banner: "Go <a href=\"/refguide9/moving-from-8-to-9/\">here</a>" -->
-    {{ with .Params.banner}}
-    <div class="pageinfo pageinfo-warning">
-        <p>{{ . | safeHTML }}</p>
-    </div>
-    {{end}}
+    <!-- Extra check for empty banner added to allow empty banners in front matter to get around bug in Hugo 0.123.0 (https://github.com/gohugoio/hugo/issues/12465) which is not fixed until 0.143.0 (https://github.com/gohugoio/hugo/releases/tag/v0.143.0) -->
+    {{ with .Params.banner }}
+       {{ if ne . "" }}
+            <div class="pageinfo pageinfo-warning">
+                <p>{{ . | safeHTML }}</p>
+            </div>
+       {{ end }}
+    {{ end }}
 
     <!-- If the page has draft: true set, display the following text as a banner. -->
     {{ with .Params.draft }}

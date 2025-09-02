@@ -2,7 +2,6 @@
 title: "Interact With Local App Files Using Web API"
 linktitle: "Local Files"
 url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/local-app-files-api/
-weight: 20
 ---
 
 ## Introduction
@@ -21,42 +20,48 @@ First, you will add all the code. The changes will then be explained so that you
 1. Replace the contents of the file with the following code:
 
 ```typescript
-import { studioPro } from "@mendix/extensions-api";
-import { StrictMode, useCallback } from "react";
+import React, { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { IComponent, getStudioProApi } from "@mendix/extensions-api";
 
-const saveFile = async () => {
-  await studioPro.app.files.putFile(
-    "HelloWorld.txt",
-    "Hello world from a file!"
-  );
-  studioPro.ui.messageBoxes.show("info", "Saving HelloWorld.txt");
+export const component: IComponent = {
+    async loaded(componentContext) {
+        const studioPro = getStudioProApi(componentContext);
+
+        const saveFile = async () => {
+            await studioPro.app.files.putFile(
+                "HelloWorld.txt",
+                "Hello world from a file!"
+            );
+            studioPro.ui.messageBoxes.show("info", "Saving HelloWorld.txt");
+        };
+
+        const loadFile = async () => {
+            const message = await studioPro.app.files.getFile("HelloWorld.txt");
+            studioPro.ui.messageBoxes.show(
+                "info",
+                `Loaded HelloWorld.txt it contained: ${message}`
+            );
+        };
+
+        const deleteFile = async () => {
+            await studioPro.app.files.deleteFile("HelloWorld.txt");
+            studioPro.ui.messageBoxes.show("info", "Deleted HelloWorld.txt");
+        };
+
+        createRoot(document.getElementById("root")!).render(
+            <StrictMode>
+                <h1>Mendix Studio Pro Extension</h1>
+                <p>Hello from an extension!</p>
+                <p>
+                    <button onClick={saveFile}>Save Hello world File</button>
+                    <button onClick={loadFile}>Load Hello world File</button>
+                    <button onClick={deleteFile}>Delete Hello world File</button>
+                </p>
+            </StrictMode>
+        );
+    },
 };
-
-const loadFile = async () => {
-  const message = await studioPro.app.files.getFile("HelloWorld.txt");
-  studioPro.ui.messageBoxes.show(
-    "info",
-    `Loaded HelloWorld.txt it contained: ${message}`
-  );
-};
-
-const deleteFile = async () => {
-  await studioPro.app.files.deleteFile("HelloWorld.txt");
-  studioPro.ui.messageBoxes.show("info", "Deleted HelloWorld.txt");
-};
-
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <h1>Mendix Studio Pro Extension</h1>
-    <p>Hello from an extension!</p>
-    <p>
-      <button onClick={saveFile}>Save Hello world File</button>
-      <button onClick={loadFile}>Load Hello world File</button>
-      <button onClick={deleteFile}>Delete Hello world File</button>
-    </p>
-  </StrictMode>
-);
 ```
 
 ## What Does the Code Do?

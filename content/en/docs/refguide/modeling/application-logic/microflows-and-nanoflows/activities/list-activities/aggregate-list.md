@@ -103,11 +103,11 @@ The name of the variable in which the result of the aggregation is stored. The v
 
 ## Optimizing Aggregate Activities
 
-In some apps, it is necessary to evaluate large datasets in a microflow (for example, for reporting purposes). If there are a lot of [retrieves](/refguide/retrieve/) and aggregates on large datasets in a microflow, it is easy to run into performance or memory problems.
+In some apps, it is necessary to evaluate large datasets in a microflow (for example, for reporting purposes). If there are a lot of [retrieves](/refguide/retrieve-objects/) and aggregates on large datasets in a microflow, it is easy to run into performance or memory problems.
 
 This section describes how Mendix Runtime optimizes **Aggregate list** activities with large datasets and some recommended approaches for optimization.
 
-When a database **Retrieve** activity is only used once in one **Aggregate list** activity, a custom range is not configured and the activity does not use an expression, the Mendix Runtime can automatically merge these two activities into a single action. This executes a single aggregate query on the database. So, if you retrieve all 100k log lines from a database and only do a count on the list, you will not receive a heap space. This is because the microflow never places all 100k records in memory.
+When a database **Retrieve object(s)** activity is only used once in one **Aggregate list** activity, a custom range is not configured and the activity does not use an expression, the Mendix Runtime can automatically merge these two activities into a single action. This executes a single aggregate query on the database. So, if you retrieve all 100k log lines from a database and only do a count on the list, you will not receive a heap space. This is because the microflow never places all 100k records in memory.
 
 For instance, in this microflow, the Mendix Runtime merges the two activities into one single count query:
 
@@ -135,4 +135,4 @@ Since the Mendix Runtime merges list retrieve and aggregate activities, you do n
 
 ## Read More
 
-* [Retrieve Activities](/refguide/retrieve/)
+* [Retrieve Activities](/refguide/retrieve-objects/)

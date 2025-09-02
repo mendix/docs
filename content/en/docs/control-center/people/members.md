@@ -6,7 +6,7 @@ weight: 10
 no_list: true 
 ---
 
-{{% alert color="info" %}}
+{{% alert color="warning" %}}
 A member in Control Center means a user of the Mendix platform who participates in the development process. It does not mean an end-user of an app built in the Mendix Platform.
 {{% /alert %}}
 
@@ -14,19 +14,40 @@ A member in Control Center means a user of the Mendix platform who participates 
 
 The **Members** page in Control Center allows you to manage active, deactivated, and external members of your company.
 
-## Active and Deactivated Members {#active-deactive-members}
+## Active Members
 
-On the **Active Members** tab and the **Deactivated Members** tab, you can see an overview of the active and deactivated members of your company.
+On the **Active Members** tab, you can see an overview of the active members of your company.
 
-When you click a member's name, a pop-up window opens with their member profile. The profile displays the apps of which they are a member as well as their **App role** for each app. Click **Remove** to remove the member from the app. Click an app name to go to the [details page](/control-center/apps-overview/#app-details) of this app.
+When you click a member's name, a pop-up window opens with their member profile. The profile displays the apps of which they are a member, as well as their **App role** for each app. These are the actions you can take in the profile window:
 
-When you select members in the lists on these tabs, a context menu appears with options for exporting member details to an *.xlsx* file and deactivating (on the **Active Members** tab) or activating (on the **Deactivated Members** tab) members.
+* Click **Remove** to remove the member from the app. 
+* Click an app name to go to its [details page](/control-center/apps-overview/#app-details).
 
-For security reasons, Mendix recommends deactivating an employee that is leaving your company (if the employee returns to your company, they can be activated as a member again).
+When you select members in the list on this tab, a context menu is displayed, providing the following options:
 
-{{% alert color="info" %}}
-You cannot deactivate yourself.
+* Export the selected members' details to an *.xlsx* file.
+* Deactivate the selected members. For security reasons, Mendix recommends deactivating an employee that is leaving your company. If the employee returns to your company, they can be reactivated as a member.
+
+{{% alert color="warning" %}}
+As a Mendix Admin:    
+
+* You cannot deactivate yourself.
+* You can remove Mendix Admins from the **Mendix Admins** tab of the Control Center [Company Settings](/control-center/company-settings/#mendix-admins) window.    
+  You cannot remove yourself as a Mendix Admin.
+* You can deactivate other users, but you cannot delete them.    
+  A user can delete their own account from the [User Settings](/mendix-profile/user-settings/#deleting-an-account) window of their Mendix profile.
 {{% /alert %}}
+
+## Deactivated Members
+
+On the **Deactivated Members** tab, you can see an overview of the deactivated members of your company.
+
+When you click a member's name, a pop-up window opens. It displays their profile, along with a button to **Activate** the member.
+
+When you select members in the list on this tab, a context menu is displayed, providing the following options:
+
+* Export the selected members' details to an *.xlsx* file.
+* Activate the selected members.
 
 ## External Members
 

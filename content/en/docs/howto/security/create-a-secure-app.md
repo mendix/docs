@@ -31,7 +31,7 @@ To see the results of this how-to, you must set up a test project with test data
 
 1. Create the following domain model:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581378.png" class="no-border" >}}
+    {{< figure src="/attachments/howto/security/create-a-secure-app/domain-model.png" >}}
 
 2. Create overview and detail pages to manage objects of **Customer** and **Order** type.
 3. Create menu items to access the **Customer** and **Order** overview pages.
@@ -225,16 +225,16 @@ To create access roles for the User module role, follow these steps:
     * **Default rights for new members**: Read, Write
     * **Access rights** for each member: **Read, Write**
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581534.png" class="no-border" >}} 
+    {{< figure src="/attachments/howto/security/create-a-secure-app/18581534.png" class="no-border" >}}
 
     {{< figure src="/attachments/howto/security/create-a-secure-app/18581533.png" class="no-border" >}}
 
 5. Deploy the application.
-6. Sign in with the different users and test the differences in your application. 
+6. Sign in with the different users and test the differences in your application.
 
 ## Defining the Access Rules on the Order Entity Using XPath
 
-In the previous section you set some access rules on your domain model. In this section you will define the access rules on the Order entity so that orders can only be viewed by a user if the payment status of the order is set to open. You will do this by adding an XPath constraint to the Order entity for the User module role. 
+In the previous section you set some access rules on your domain model. In this section you will define the access rules on the Order entity so that orders can only be viewed by a user if the payment status of the order is set to open. You will do this by adding an XPath constraint to the Order entity for the User module role.
 
 An XPath constraint can be used to constrain the set of objects to which the access rule applies. If the XPath constraint is empty, the rule applies to all the objects of the entity. For more information, see [XPath Constraints](/refguide/xpath-constraints/) in the *Studio Pro Guide*.
 
@@ -256,28 +256,38 @@ An XPath constraint can be used to constrain the set of objects to which the acc
 
 ### Set the Entity Access to Open Order Status
 
+1. Open the domain model.
+
 1. Double-click the **Order** entity:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581527.png" class="no-border" >}}
+1. On the **Properties of Entity 'MyFirstModule.Order'** editor, open the **Access rules** tab:
 
-2. On the **Properties of Entity 'MyFirstModule.Order'** editor, open the **Access rules** tab:
+    {{< figure src="/attachments/howto/security/create-a-secure-app/access-rules.png" class="no-border" >}}
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581525.png" class="no-border" >}}
+1. Double-click the column containing the **User** module role to open the **Edit Access Rule of Entity 'MyFirstModule.Order'** editor, or click **New** to create a new module role if the **User** module role does not yet exist.
 
-3. Double-click the **User** module role to open the **Edit Access Rule of Entity 'MyFirstModule.Order'** editor and select the **XPath constraint** tab:
+1. Set up the **User** role as follows:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581523.png" class="no-border" >}}
+    * **Rule applies to the following module roles** – **User**
+    * **Entity rights** – **Create objects** and **Delete objects**
+    * **Default rights for new members** – **Read, Write**
+    * **Set all to** – **Read** and **Write** to set access to all members (attributes and associations)
 
-4. To constrain the access of the financial administrator to only the open orders, add the following XPath statement:
+1. Click **Edit…** next to **XPath constraint**
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581522.png" class="no-border" >}}
+    {{< figure src="/attachments/howto/security/create-a-secure-app/order-access.png" class="no-border" >}}
 
-5. Click **OK**. The properties editor of your Order entity should look like this:
+1. Add the following XPath expression to constrain the access of the user module role to only the open orders:
 
-    {{< figure src="/attachments/howto/security/create-a-secure-app/18581521.png" class="no-border" >}}
+    ```json
+    [( OrderStatus = 'Open' )]
+    ```
 
-6. Re-deploy your application.
-7. If you sign in with the Test User account, you will see that only orders with the **Order status** of **Open** are shown in the overview:
+    {{< figure src="/attachments/howto/security/create-a-secure-app/order-xpath.png" class="no-border" >}}
+
+1. Save your changes.
+1. Re-deploy your application.
+1. If you sign in with the Test User account, you will see that only orders with the **Order status** of **Open** are shown in the overview:
 
     {{< figure src="/attachments/howto/security/create-a-secure-app/18581520.png" class="no-border" >}}
 

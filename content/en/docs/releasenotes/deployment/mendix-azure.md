@@ -18,6 +18,10 @@ For information on the current status of Mendix deployment, see [Mendix Status](
 * We have fixed the translation issue where **Logging and Monitoring** was displayed twice in Cluster Details page.
 * We have fixed the issue where users in Admin/Contributor groups can now view the Managed app in the Cluster overview.
 
+### Known issue:
+ 
+ * Currently, the tags when **updated** or **created** in the Edit screen of the cluster, are not attached to the cluster resources.
+
 ### Release date: August 7, 2025
 
 * Users with the Owner or Contributor roles can now view all uninitialized clusters within their subscription, ensuring better visibility and coordination.

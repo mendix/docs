@@ -14,6 +14,8 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 ### September 4, 2025
 
+#### Portal Improvements
+
 * We have updated the **Details** icon button in the Cluster Management and Environment Overview/Details page.
 * We have fixed the issue where browser console for Environment Overview page was spammed with multiple log warnings.
 

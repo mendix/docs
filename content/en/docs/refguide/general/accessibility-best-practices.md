@@ -1,17 +1,14 @@
 ---
 title: "Introduction to Accessibility in Mendix"
 linktitle: "Accessibility introduction"
-url: /howto/front-end/accessibility-introduction/
+url: /refguide/accessibility-introduction/
 weight: 10
 description: "Describes an introduction on accessibility in general and how to get started making your apps more accessible."
-aliases:
-    - /howtogeneral/bestpractices/accessibility-introduction.html
-    - /howtogeneral/bestpractices/accessibility-introduction
 ---
 
 ## Introduction
 
-This how-to we’ll go over what accessibility is, what the WCAG is and how it’s relevant to you. We'll also go over the accessibility options in Studio Pro. 
+This guide we’ll go over what accessibility is, what the WCAG is and how it’s relevant to you. We'll also go over the accessibility options in Studio Pro. 
 
 ## What is accessibility?
 

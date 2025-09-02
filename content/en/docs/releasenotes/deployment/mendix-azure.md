@@ -21,6 +21,7 @@ For information on the current status of Mendix deployment, see [Mendix Status](
 ### Known issue:
  
  * Currently, the tags when **updated** or **created** in the Edit screen of the cluster, are not attached to the cluster resources.
+ * Support ticket visibility is currently limited to tickets created by the individual user, rather than all tickets within their subscription.
 
 ### Release date: August 7, 2025
 

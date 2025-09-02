@@ -2,7 +2,7 @@
 title: "Dynamic Case Management"
 url: /appstore/partner-solutions/dcm/
 linktitle: "DCM"
-description: "Introduces Mendix Dynamic Case Management, which is a cloud service developed by Mendix and the Software Improvement Group (SIG), and the implemented checks for best practices."
+description: "Introduces Mendix Dynamic Case Management for complex processes."
 aliases:
     - /addons/dcm-addon/
     - /addons/dcm-addon/index.html

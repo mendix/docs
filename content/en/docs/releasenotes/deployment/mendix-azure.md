@@ -14,13 +14,13 @@ For information on the current status of Mendix deployment, see [Mendix Status](
 
 ### Release date: September 4, 2025
 
-* We have improved the translations by adding support for error messages in Cluster Overview page.
-* We have fixed the translation issue where **Logging and Monitoring** was displayed twice in Cluster Details page.
-* We have fixed the issue where users in Admin/Contributor groups can now view the Managed app in the Cluster overview.
+* We have improved the translations by adding support for error messages in the **Cluster Overview** page.
+* We have fixed a translation issue where **Logging and Monitoring** was displayed twice in Cluster Details page.
+* We have fixed the issue where users in Admin and Contributor groups could not view the managed app in the **Cluster Overview**.
 
-### Known issue:
+### Known issues:
  
- * Currently, the tags when **updated** or **created** in the Edit screen of the cluster, are not attached to the cluster resources.
+ * Currently, the **updated** or **created** tags in the **Edit** screen of the cluster are not attached to the cluster resources.
  * Support ticket visibility is currently limited to tickets created by the individual user, rather than all tickets within their subscription.
 
 ### Release date: August 7, 2025

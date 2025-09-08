@@ -580,16 +580,21 @@ Fields below are available in the **UserProvisioning** tab for the User Provisio
 * **User Type** – this allows you to configure end-users of your application as internal or external. It is created upon the creation of the user and updated each time the user logs in.
     * By default, the value is set to ***Internal***.
 
-Under **Attribute Mapping**, for each piece of information you want to add to your custom user entity, select an **IdP Attribute** (claim) and specify the **Configured Entity Attribute** where you want to store the information.
+* Under **Attribute Mapping**, for each piece of information you want to add to your custom user entity, select an **IdP Attribute** (claim) and specify the **Configured Entity Attribute** where you want to store the information.
 
-Note the following:
+    Note the following:
 
-* You cannot use the IdP claim which is the primary attribute identifying the user and you cannot use the attribute you set in **The attribute where the user principal is stored**.
-* You can map only one IdP claim to a Custom user Entity attribute.
-* The **IdP Attribute** is one of the fixed claims supported by the OIDC SSO module.
-* IdP Attributes(Claims) cannot be of type enum, autonumber, or an association.
+    * You cannot use the IdP claim which is the primary attribute identifying the user and you cannot use the attribute you set in **The attribute where the user principal is stored**.
+    * You can map only one IdP claim to a Custom user Entity attribute.
+    * The **IdP Attribute** is one of the fixed claims supported by the OIDC SSO module.
+    * IdP Attributes(Claims) cannot be of type enum, autonumber, or an association.
 
-Optionally, you can select the microflow in the **Custom UserProvisioning** field to use custom logic for user provisioning. For more information, see the [User Provisioning Using a Microflow at Runtime](#microflow-at-runtime) section below.
+* Optionally, you can select the microflow in the **Custom UserProvisioning** field to use custom logic for user provisioning. For more information, see the [User Provisioning Using a Microflow at Runtime](#microflow-at-runtime) section below.
+* To improve licensing and metering accuracy, a configuration requires to use a mandatory **User Metering Named Identifier** (for example, `email` or `sub`, etc.). 
+
+    * In the **UserProvisioning** tab, select the identifier in the **User Metering Named Identifier** field to be used for metering (default value is `email`).
+    * Ensure the selected IdP claim is mapped to the `NamedUserIdentifier` attribute of the `Usercommons.NamedUserIdentifier` entity during user provisioning.
+    * the metering sidecar prioritizes the selected identifier over the default `system.user.name` for accurate user tracking.
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/default_provisioning.png" >}}
 

@@ -209,7 +209,7 @@ The **Feedback** tab shows the following items:
 
 You can use Maia to create a story based on one or more feedback items. To do that, follow these steps:
 
-1. Enable Maia in [Project Settings](/developerportal/settings/general-settings/#maia-settings)
+1. Enable Maia in [Project Settings](/developerportal/settings/general-settings/#maia-settings).
 2. Select a feedback item from the list.
 3. Click **Create Story**. The **Create Story** window is displayed. 
 4. Click {{% icon name="sparkles" %}}**Create with Maia**. The **Create Story with Maia** window is displayed.

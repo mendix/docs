@@ -47,7 +47,7 @@ In the upper-right corner of the page, you can see two buttons:
 
 Follow these steps to create a story with Maia:
 
-1. Enable Maia in [Project Settings](/developerportal/settings/general-settings/#maia-settings)
+1. Enable Maia in [Project Settings](/developerportal/settings/general-settings/#maia-settings).
 2. Click **Create Story**, then click {{% icon name="sparkles" %}}**Create with Maia**. The **Maia Create Story** window is displayed.
 3. Enter your input, then click **Generate Story**.
 4. Check the suggestion provided by Maia. You can click **Apply to Story** if you agree with the suggestion, or you can choose to regenerate it.

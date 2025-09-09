@@ -470,7 +470,12 @@ You can set up custom user provisioning by selecting the **IdP Configuration** t
 
     The microflow must return a **System.User** object to ensure proper user provisioning and updates. It will be executed after user creation or update of user. However, starting from version 2.0.0 of the UserCommons module, this is no longer mandatory. If you have added a new microflow, you will need to refresh the module containing your microflow as described in the [Mx Model Reflection](/appstore/modules/model-reflection/). This selection can be blank if you do not want to add custom logic.
 
-4. Click **Save** to save the configuration.
+4. To improve licensing and metering accuracy, a configuration requires the use of a mandatory **User Metering Named Identifier**, for example, `email` or `sub`, etc. 
+
+    * In the **UserProvisioning** tab, select the identifier in the **User Metering Named Identifier** field to be used for metering (default value is `email`).
+    * This configuration prioritizes the selected identifier over the default `system.user.name` for accurate user tracking.
+
+5. Click **Save** to save the configuration.
 
 ### Custom Behavior
 

@@ -590,13 +590,12 @@ Fields below are available in the **UserProvisioning** tab for the User Provisio
     * IdP Attributes(Claims) cannot be of type enum, autonumber, or an association.
 
 * Optionally, you can select the microflow in the **Custom UserProvisioning** field to use custom logic for user provisioning. For more information, see the [User Provisioning Using a Microflow at Runtime](#microflow-at-runtime) section below.
-* To improve licensing and metering accuracy, a configuration requires to use a mandatory **User Metering Named Identifier** (for example, `email` or `sub`, etc.). 
+* To improve licensing and metering accuracy, a configuration requires the use of a mandatory **User Metering Named Identifier**, for example, `email` or `sub`, etc. 
 
     * In the **UserProvisioning** tab, select the identifier in the **User Metering Named Identifier** field to be used for metering (default value is `email`).
-    * Ensure the selected IdP claim is mapped to the `NamedUserIdentifier` attribute of the `Usercommons.NamedUserIdentifier` entity during user provisioning.
-    * the metering sidecar prioritizes the selected identifier over the default `system.user.name` for accurate user tracking.
+    * This configuration prioritizes the selected identifier over the default `system.user.name` for accurate user tracking.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/default_provisioning.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/default-provisioning.png" >}}
 
 {{% alert color="info" %}}
 If you are using module version 3.2.0 and below, you will need to refresh the module containing your microflow as described in the [Installing Mx Model Reflection](/appstore/modules/oidc/#mxmodelreflection) and select the microflow in the **Custom UserProvisioning** field.

@@ -277,7 +277,7 @@ In the **Provisioning** tab of the SCIM server configuration, you need to config
     * In the **UserProvisioning** tab, select the identifier in the **User Metering Named Identifier** field to be used for metering (default value is `email`).
     * This configuration prioritizes the selected identifier over the default `system.user.name` for accurate user tracking.
 
- {{< figure src="/attachments/appstore/platform-supported-content/modules/scim/user_commons.png" class="no-border" >}}
+ {{< figure src="/attachments/appstore/platform-supported-content/modules/scim/user-commons.png" >}}
 
 Save this configuration. Double-click on the **Alias** name and you will be able to copy the generated **API Key**.
 

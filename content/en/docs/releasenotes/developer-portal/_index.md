@@ -21,6 +21,20 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 ## 2025
 
+### September 10, 2025
+
+#### Improvements
+
+* Users can enable **Maia** directly from Epics and App Insights
+* Users can provide Project Description in Epics and App Insights while enabling Maia to help Maia understand the app context and provide better suggestions.
+* Users can edit the name of the **To Do** and **Done** swimlanes in Epics.
+* Users can edit the default status names in Feedback.
+
+#### Fixes
+
+* We have fixed the hidden dropdown menu issue in tag selector in Epics. 
+* We have fixed the responsiveness of the bulk actions bar in Epics Planning page
+
 ### August 31, 2025
 
 #### Improvements

@@ -25,15 +25,15 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 #### Improvements
 
-* Users can enable **Maia** directly from Epics and App Insights
-* Users can provide Project Description in Epics and App Insights while enabling Maia to help Maia understand the app context and provide better suggestions.
-* Users can edit the name of the **To Do** and **Done** swimlanes in Epics.
-* Users can edit the default status names in Feedback.
+* You can now enable Maia directly while creating a story.     
+  When you click **Create Story with Maia** in the **Create Story** window, we check whether Maia is enabled. If it is not, you are given the option to enable it on the spot. While doing that, you can provide a **Project Description** to help Maia understand the app context and provide better suggestions.
+* You can now edit the name of the **To Do** and **Done** swimlanes on the **Board** page.
+* You can now edit the default status names for feedback items.
 
 #### Fixes
 
-* We have fixed the hidden dropdown menu issue in tag selector in Epics. 
-* We have fixed the responsiveness of the bulk actions bar in Epics Planning page
+* We have fixed an issue where the tag selector drop-down menu was not displayed. 
+* We have fixed the responsiveness of the bulk actions bar on the **Planning** page.
 
 ### August 31, 2025
 

@@ -46,3 +46,4 @@ Here is a list of how-tos for you to begin with:
 * [How to Show a Modal Dialog Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/dialog-api/)
 * [How to Open Documents Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/editor-api/)
 * [How to Exchange Information Between Active Views Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/message-passing-api/)
+* [How to Show Version Control Information](/apidocs-mxsdk/apidocs/web-extensibility-api-11/version-control-api/)

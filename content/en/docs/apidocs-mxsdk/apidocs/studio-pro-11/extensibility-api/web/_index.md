@@ -47,6 +47,6 @@ Here is a list of how-tos for you to begin with:
 * [How to Show a Pop-up Notification](/apidocs-mxsdk/apidocs/web-extensibility-api-11/notification-api/)
 * [How to View User Preferences](/apidocs-mxsdk/apidocs/web-extensibility-api-11/preference-api/)
 * [How to Show a Modal Dialog](/apidocs-mxsdk/apidocs/web-extensibility-api-11/dialog-api/)
-* [How to Open Documents](/apidocs-mxsdk/apidocs/web-extensibility-api-11/editor-api/)
-* [How to Register a Command](/apidocs-mxsdk/apidocs/web-extensibility-api-11/command-api/)
 * [How to Open a Document Editor](/apidocs-mxsdk/apidocs/web-extensibility-api-11/editor-api/)
+* [How to Register a Command](/apidocs-mxsdk/apidocs/web-extensibility-api-11/command-api/)
+* [How to Create a Context Menu](/apidocs-mxsdk/apidocs/web-extensibility-api-11/documents-api/)

@@ -9,4 +9,4 @@ description_list: true
 
 ## Introduction
 
-The following how-tos teach you how to use the Extensibility API for Web Developers in different use cases.
+The following how-tos describe how to use the Extensibility API for Web Developers in different use cases:

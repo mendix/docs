@@ -122,7 +122,7 @@ While Java is likely going to be a primary choice for building your connector mo
 
 To ensure that end-users can reuse your Mendix build logic as easily as possible, you need to make microflows available as microflow or workflow activities. For details, see the [Triggering a Workflow via a Microflow](/refguide/perform-workflow-basic-functions/#trigger-microflow) section of *Performing Workflow Basic Functions*).
 
-Ensure that a microflow is visible in the **Toolbox**, in the [Expose as microflow action](/refguide/java-actions/#expose-microflow-action) section of the microflow properties. You can do this by right-clicking in your microflow working area. Additionally, you can specify a caption for the action, a category for the **Toolbox**, and an icon. These will be used in the **Toolbox**, and also in the microflows, so they need to be easy to read for the end-user:
+Ensure that a microflow is visible in the **Toolbox**, in the [Expose as microflow action](/refguide/java-actions/#expose-microflow-action) section of the microflow properties. You can do this by right-clicking in your microflow working area. Additionally, you can specify a caption for the action, a category for the **Toolbox**, and an icon. These will be used in the **Toolbox**, and also in the microflows, so they need to be easy to read for the end-user.
 
 {{< figure src="/attachments/appstore/create-content/create-connectors/connector-guide-best-practices/microflow-action.png" class="no-border" >}}
 

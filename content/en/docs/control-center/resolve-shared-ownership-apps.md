@@ -1,5 +1,5 @@
 ---
-title: "Resolve Shared Ownership of Apps"
+title: "Resolving Shared Ownership of Apps"
 url: /control-center/resolve-shared-ownership-of-apps
 description: "Describe how to address the issue that you own an app together with another company."
 weight: 90

@@ -1,13 +1,13 @@
 ---
 title: "Rules"
 url: /refguide/rules/
-weight: 30
+weight: 50
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## Introduction
 
-A rule is a special kind of microflow. Its result should be an enumeration or a Boolean and it can be used in a [decision](/refguide/decision/) to make a decision based on that result. The idea is that complicated decisions can be consolidated in rules and reused in various places.
+A rule is a special kind of microflow. Its result should be an enumeration or a Boolean and can be used in a [decision](/refguide/decision/) to make a decision based on that result. The idea is that complicated decisions can be consolidated in rules and reused in various places.
 
 ## Differences from Microflows
 
@@ -16,8 +16,8 @@ Rules are very similar to microflows; see the documentation on [Microflows](/ref
 * A rule can only be used in a decision
 * The return type has to be Boolean or enumeration
 * A rule cannot change data in the database; the actions to create, delete, change and rollback objects are not available in rules
-* A rule cannot interact with the client; the actions to show or close forms, show messages, send validation feedback and download files are not available in rules
-* A rule cannot call web services, generate documents or import XML
+* A rule cannot interact with the client; the actions to show or close forms, show messages, send validation feedback, and download files are not available in rules
+* A rule cannot call web services, generate documents, or import XML
 
 These differences mean that rules perform better than microflows if you don't need any of the additional features which microflows provide.
 

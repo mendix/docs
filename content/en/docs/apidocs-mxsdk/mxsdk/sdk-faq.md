@@ -24,7 +24,7 @@ The initial app *.mpk* file that is uploaded is not allowed to exceed 250 Mb (wi
 
 ### What Are the Limits on Working Copy Size?
 
-The maximum number of files allowed in a working copy is 10,000.
+The maximum number of files allowed in a working copy is 20,000.
 
 ### What Apps Can I Access With the Model API?
 

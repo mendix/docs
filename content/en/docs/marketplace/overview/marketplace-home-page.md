@@ -133,7 +133,7 @@ On this page, you can see all the content your company has published to the Mark
 
 Click the name of the component to access its [details page](/appstore/component-details/).
 
-Click the context menu to access options for managing this content:
+Click the context menu to access options for managing this content.
 
 {{< figure src="/attachments/appstore/marketplace-home-page/company-content.png"  width="400"  class="no-border" >}}
 
@@ -157,7 +157,7 @@ This table breaks down the roles and permissions for content groups:
 
 #### Content Tab {#group-content}
 
-On this tab, you can assign content that can only be managed by members of this group. To assign a component to a content group, click **Assign Content**, and select a Marketplace component from the dialog box:
+On this tab, you can assign content that can only be managed by members of this group. To assign a component to a content group, click **Assign Content**, and select a Marketplace component from the dialog box.
 
 {{< figure src="/attachments/appstore/marketplace-home-page/group-content.png"  width="400"  class="no-border" >}}
 
@@ -165,7 +165,7 @@ On this tab, you can assign content that can only be managed by members of this 
 A component can only be assigned to one content group at a time. If a component is already assigned to another content group, it will not be displayed in this dialog box.
 {{% /alert %}}
 
-Click the context menu to access options for managing this content:
+Click the context menu to access options for managing this content.
 
 {{< figure src="/attachments/appstore/marketplace-home-page/group-content-context.png" width="400" class="no-border" >}}
 

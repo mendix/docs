@@ -1,9 +1,11 @@
 ---
 title: "Launching Your First App"
 linktitle: "Launching Your First App"
-url: /launch-first-app/
+url: /developerportal/digital-execution/launch-first-app/
 weight: 105
 description: "Find out how to test, deploy, and promote your first app."
+aliases:
+    - /launch-first-app/
 ---
 
 ## Introduction

@@ -26,7 +26,7 @@ The **Archive** page shows all the archived stories.
 * Linked epic – Clicking this shows the epic details.
 * Archive date and time – Clicking this shows the story details.
 
-If a feedback item was linked to your archived story, you will see it with a purple icon:
+If a feedback item was linked to your archived story, it is accompanied by a purple icon.
 
 {{< figure src="/attachments/developerportal/project-management/epics/archive/archive.png" class="no-border" >}}
 

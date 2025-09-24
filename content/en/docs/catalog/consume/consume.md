@@ -1,5 +1,5 @@
 ---
-title: "Consume Registered Assets"
+title: "Consuming Registered Assets"
 url: /catalog/consume/consume-registered-assets/
 weight: 20
 description: "Describes how to use shared services and datasets through the Catalog."

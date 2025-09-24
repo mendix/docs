@@ -1,14 +1,79 @@
 ---
-title: "Mendix Workstation Release Notes"
-linktitle: Mendix Workstation
+title: "Mendix Workstation Client Release Notes"
+linktitle: Mendix Workstation Client
 url: /releasenotes/workstation/
-description: "Release notes for updates to the Mendix Workstation"
+description: "Release notes for updates to the Mendix Workstation Client"
 weight: 40
 cascade:
     - numberless_headings: true
 ---
 
 These release notes cover changes made to the [Mendix Workstation](/mendix-workstation/).
+
+## 2.6.0
+
+### Release date: September 12, 2025
+
+{{% alert color="info" %}}
+The fourth pre-release of the Mendix Workstation Client is available under the conditions of the Mendix Workstation Client Pre-Release Program. Support is available only to members of the program. To become a program member, contact Mendix Sales.
+{{% /alert %}}
+
+#### New Features
+
+##### Mendix Workstation Management Availability
+
+Mendix Workstation Management is now available for all Mendix users.
+
+{{% alert color="info" %}}
+Users from companies which does not have a Mendix Workstation Client license cannot add members to a workspace that they own.
+
+The Workstation Client and all other related Mendix Marketplace items are only available for members of the pre-release program.
+{{% /alert %}}
+
+##### Workstation Client Developer Mode
+
+For each station, developer mode can be switched on or off to control the availability of the following functions on Workstation Client:
+
+* **Quit Workstation Client** is not available in non-developer mode.
+* **Unlink Workstation Client** is not available in non-developer mode.
+* The **Developer tool** shortcut is not available in non-developer mode.
+
+It is recommended to disable developer mode for clients used in a production environment.
+
+##### Workstation Sample App
+
+The Mendix Workstation Client Sample App showcases how to build applications interacting with multiple peripheral devices.
+
+The app includes reusable peripheral modules for:
+
+* PC/SC Smartcard Reader (ADPU protocol), for example Omnikey, 5427 G2, ACR122U
+* Barcode Scanner (configured on Serial Port), for example, NETUM C750
+* Industrial Scale (MT-SICS protocol), for example, Mettler Toledo ICS425, OHAUS Scout STX 620, 6200
+* Label Printer (ZPL protocol), for example, Zebra ZD421D
+* USB Andon tower / Stack light, for example, ANDONT USB Stack LED Andon Tower Lights
+
+Each module includes a peripheral emulator to build apps without a physical device.
+
+The Sample App is available in the Mendix Marketplace.
+
+#### Improvements
+
+##### Workstation Management
+
+* We have added the Mendix Portal Global Navigation Menu top bar and menu.
+* We have made other usability improvements.
+
+##### Workstation Client
+
+* We have added a button to paste the registration token.
+
+##### Workstation Connector
+
+* We have added the SecurityAdministrator security role. Only users with this role can regenerate the `KeyPair` in the **Station connector Security** of an app.
+
+#### Fixes
+
+* We have fixed an issue in the Workstation Client where, when the client app closed and re-opened a connection, data buffered from the previous session was sent to the new session. The data buffer now is cleared when the connection is closed.
 
 ## 2.4.0
 

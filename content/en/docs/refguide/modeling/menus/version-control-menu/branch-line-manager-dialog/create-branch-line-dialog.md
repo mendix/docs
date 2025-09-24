@@ -51,7 +51,9 @@ Select from which tagged version you want to create a branch line. Every time yo
 Enter a name for the new branch line.
 
 {{% alert color="warning" %}}
-Branch names cannot include special characters (for example, `@`, `$`, `#`). 
+While creating a branch, avoid using invalid characters such as `\`, `^`, `~`, `[`, `:`, `?`, `*`, `<space>`, or consecutive dots `..`. These characters are not permitted by Git and will automatically be replaced with a dash `-`.
+
+Mendix also recommends not using other special characters such as `@`, `$`, and `#` as a best practice.
 {{% /alert %}}
 
 ## Existing Branch Lines

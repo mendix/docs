@@ -3,7 +3,7 @@ title: "Company Brand"
 linktitle: "Brand"
 url: /control-center/company-brand/
 description: "Describes the Brand page in the Mendix Control Center."
-weight: 30
+weight: 40
 ---
 
 ## Introduction

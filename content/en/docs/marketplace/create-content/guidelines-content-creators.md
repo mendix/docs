@@ -46,7 +46,7 @@ To create a new component release for the Mendix Marketplace, follow these steps
 3. In this GitHub release, provide an official name and write the release notes.  
    You can use these for the Marketplace release as well.
 
-4. If you add the *.mpk* binary file to the release tag, the Mendix Marketplace automatically syncs the *.mpk* to your new draft:
+4. If you add the *.mpk* binary file to the release tag, the Mendix Marketplace automatically syncs the *.mpk* to your new draft.
 
    {{< figure src="/attachments/appstore/submit-content/github-releases.png" >}}
 

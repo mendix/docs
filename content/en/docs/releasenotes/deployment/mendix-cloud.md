@@ -16,6 +16,28 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2025
 
+### September 21, 2025
+
+#### Improvements
+
+* We have renamed the **Request Overview** tab on the **Environments** page to **Change Requests**.
+
+### September 9, 2025
+
+#### New Features
+
+* We have added support for sending logs to Splunk for apps deployed on Kubernetes. This enables apps using Splunk to be migrated from Cloud Foundry to Kubernetes.
+
+#### Improvements
+
+* For Kubernetes deployments, the `SPLUNK_LOGS_REDACTION` environment variable is not available. Use the `LOGS_REDACTION` variable instead.
+
+### August 17, 2025
+
+#### New Features
+
+You can now change your plan from the [Plan Details](/developerportal/deploy/environments-details/#plan-details) section in the **Environment Details** window. To do that, click **Change Plan** next to the plan name.
+
 ### July 27, 2025
 
 #### New Features
@@ -40,7 +62,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 #### New Features
 
 * We have added a new beta feature in the [environment UI](/developerportal/deploy/environments/). This feature allows Technical Contacts to [change app's environment plan](/developerportal/deploy/change-plan/) to a higher-resource plan.
-    * Additionally, a new tab ([Request Overview](/developerportal/deploy/environments/#request-overview)) has been introduced where Technical Contacts can view and manage plan change requests and track the status of their pending requests awaiting a Mendix Admin review from the [Control Center](/control-center/approval-requests/).
+    * Additionally, a new tab ([Change Requests](/developerportal/deploy/environments/#change-requests)) has been introduced where Technical Contacts can view and manage plan change requests and track the status of their pending requests awaiting a Mendix Admin review from the [Control Center](/control-center/approval-requests/).
 
 ### May 25, 2025
 

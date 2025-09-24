@@ -66,8 +66,6 @@ For design-time adaptations, Mendix recommends referencing [How to Set Up a Solu
 
 The customer model instances run with [IP protection](/appstore/creating-content/sol-ip-protection/) enabled. This means that parts of the original solution model can be hidden. Once the solution is published with the protected solution models, the consumer of the solution model can no longer unhide the implementation.
 
-{{< figure src="/attachments/appstore/create-content/create-solutions/sol-adapt/solution-deployment.png" alt="Development and deployment model for Solution Implementation"  width="50%" class="no-border" >}}
-
 ### Customers Without Adaptation
 
 Not all customers might require model adaptation. This means they can run on an unmodified version of the original solution model. In this case, Mendix recommends distributing and deploying a deployment package (MDA), which also prevents inspection in the Mendix model and ensures seamless upgrades. This can be combined with [flexible environments](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments) and/or a multi-tenancy setup.

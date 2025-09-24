@@ -78,7 +78,7 @@ When you complete a challenge, click **Claim Credits** to claim your Mendix cred
 
 ## Connections {#connections}
 
-One of the greatest strengths of Mendix is our awesome developers community, and the **Connections** card is the perfect place to start connecting to other Mendix developers. When you get an invitation to connect, you can check out their profile and decide whether to accept or ignore it. 
+One of the greatest strengths of Mendix is our developer community, and the **Connections** card is the perfect place to start connecting to other Mendix developers. When you get an invitation to connect, you can check out their profile and decide whether to accept or ignore it. 
 
 You can also see a list of people you may know, so that you can add further connections to your profile. To connect with someone, click the plus icon to send an invitation.
 

@@ -166,7 +166,7 @@ On the **Enable** page, in the **Documentation** section, you can enter details 
 
 The editor comes with a set of basic formatting tools, such as bold, bullet lists, and URL links.
 
-<a id="screenshot"></a>2. Click **Upload Screenshot** to upload images of the component from your computer. This is required for submitting a new component, and is especially important for configuration steps:
+<a id="screenshot"></a>2. Click **Upload Screenshot** to upload images of the component from your computer. This is required for submitting a new component, and is especially important for configuration steps.
 
 {{< figure src="/attachments/appstore/submit-content/enable.png"  >}}
 

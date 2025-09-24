@@ -49,7 +49,7 @@ To download content in Studio Pro [9.19](/releasenotes/studio-pro/9.19/) and abo
     * Filter via the **Categories** and **Subcategories** drop-down menus, which correspond to the [Marketplace content types](/appstore/overview/).
     * Filter for **All Content**, **My Company Content**, or **Platform-Supported Content**.
 
-5. Select a component from the pane to see its details:
+5. Select a component from the pane to see its details.
 
     {{< figure src="/attachments/appstore/use-content/component-details.png" alt="Details of Blank App example component" class="no-border" >}}
 
@@ -78,7 +78,7 @@ If you download a module, the **Import Module** dialog box opens, where you shou
 
    * **Add as a new module** (default option when the module is downloaded to your app for the first time ) – If you select this option, new entities and attributes are created in your app.
 
-   * **Replace existing module** (default option when the module already exists in your app) – If you select this option, you need to specify which **Module to replace**
+   * **Replace existing module** (default option when the module already exists in your app) – If you select this option, you need to specify which **Module to replace**.
 
      {{% alert color="warning" %}}If you have made any changes to the existing module, selecting the **Replace existing module** option replaces all the changes that you made. For example, your renamed entities, attributes, and associations, as well as their respective tables and columns represented in the database will all be replaced. If you have changed data types, your user data can be influenced as well. User data will not be changed, though, if you have not changed entities, attributes, or associations. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration/).{{% /alert %}}
 
@@ -99,7 +99,7 @@ If you download an [extension](/appstore/modules/#introduction), a warning dialo
 Click **OK** in the confirmation pop-up window. Your extension is now installed and ready to use.    
 Depending on the extension that you have installed, the functionality appears in a certain location of your app. Read the extension-specific documentation to get more information on how to use it.
 
-If you do not want to trust the extension and would prefer to remove the extension altogether, you can remove the add-on module that was added.
+If you do not want to trust the extension and would prefer to remove it altogether, you can remove the add-on module.
 
 {{< figure src="/attachments/appstore/use-content/trust-extension.png" alt="trust extension" >}}
 
@@ -145,12 +145,8 @@ To import content downloaded from the online Mendix Marketplace into Studio Pro,
 2. Search in the online Marketplace for the component you want to download, and open the [component details page](/appstore/component-details/).
 3. Access **Usage**, then **Version** to see the required Studio Pro version for the component. Do not download a component that requires a higher version than the one you are using.
 4. Go to the **Releases** tab and **Download** the desired version. Mendix recommends using the latest version of the component if possible.
-5. In the **App Explorer**, right-click the app, then click **Import module package**, and select the component you downloaded:
-
-    {{< figure src="/attachments/appstore/use-content/import-module-in-app-explorer.png" alt="import-module-in-app-explorer" class="no-border" >}}
-
-    The **Import Module** dialog box opens. 
-
+5. In the **App Explorer**, right-click the app, then click **Import module package**, and select the component you downloaded.    
+   The **Import Module** dialog box opens. 
 6. In the **Import Module** dialog box, select one of these options:
 
     * **Add as a new module** (default option when the module is downloaded to your app for the first time ) – If you select this option, new entities and attributes are created in your app.
@@ -236,7 +232,7 @@ After you place the widget on your page, some new errors can appear in the [Erro
 
 To configure the widget, follow these steps:
 
-1. Go to the **Errors** pane and check the error message. This error shows after you drop the **Rating** widget into the page:
+1. Go to the **Errors** pane and check the error message. This error shows after you drop the **Rating** widget into the page.
 
     {{< figure src="/attachments/appstore/use-content/widget-errors.png" alt="Errors pane" class="no-border" >}}
 

@@ -91,7 +91,7 @@ If you try to trigger another synchronization process while the synchronization 
 
 Such an error can be handled in the nanoflow from which the synchronization attempt was triggered using [error handlers](/refguide/error-handling-in-nanoflows/#errorhandlers-nano).
 
-### Background Synchronization
+### Background Synchronization {#background-sync}
 
 Avoid running synchronization processes in the background, such as scheduling periodic refreshes at fixed intervals. This approach can negatively impact application performance and may result in unclear or misleading error messages for users.
 

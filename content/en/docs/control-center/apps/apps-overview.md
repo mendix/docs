@@ -14,7 +14,7 @@ aliases:
 
 The **Apps** page in Control Center provides a central place to monitor, manage, and interact with all the apps belonging to your company. 
 
-Use the search bar at the top of the page to find an app using either its name or app ID (which you can find under **Project ID** in your app’s [Settings](/developerportal/collaborate/general-settings/) in [Apps](https://sprintr.home.mendix.com/)).
+Use the search bar at the top of the page to find an app using either its name or app ID. You can find the app ID under **Project ID** in your app’s [Settings](/developerportal/collaborate/general-settings/) in [Apps](https://sprintr.home.mendix.com/).
 
 {{< figure src="/attachments/control-center/apps/apps-overview/top-search-bar.png" >}}
 

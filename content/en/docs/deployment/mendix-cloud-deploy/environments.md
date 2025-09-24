@@ -20,7 +20,7 @@ The **Environments** page has the following tabs:
 * **Deployment Packages**
 * **Permissions**
 * **Activity**
-* **Request Overview**
+* **Change Requests**
     
 ### Overview Tab{#overview-tab}
 
@@ -172,9 +172,9 @@ If you are the [Technical Contact](/developerportal/general/app-roles/#technical
 2. Select the period for which you want to download log entries.
 3. Click **Download**.
 
-### Request Overview Tab {#request-overview}
+### Change Requests Tab {#change-requests}
 
-On the **Request Overview** tab, the Technical Contact can view details of all past and current [Change Plan](/developerportal/deploy/change-plan/) requests and perform certain actions based on the current request status.
+On the **Change Requests** tab, the Technical Contact can view details of all past and current [Change Plan](/developerportal/deploy/change-plan/) requests and perform certain actions based on the current request status.
 
 For each submitted plan change request you can see the following information:
 
@@ -191,9 +191,9 @@ For each submitted plan change request you can see the following information:
     * **Completed** – Mendix Admin has approved the change, Technical Contact has scheduled and applied the changes, and the new plan has been successfully applied to the environment
     * **Rejected** – Request was denied
     * **Failed** – Plan change did not complete successfully
-* **Action** – Shows more details of each plan request and provides options based on the request status. For more information, see [Request Overview Action](#request-overview-action)
+* **Action** – Shows more details of each plan request and provides options based on the request status. For more information, see [Change Requests Action](#change-requests-action)
 
-#### Request Overview Action {#request-overview-action}
+#### Change Requests Action {#change-requests-action}
 
  Click **Details** on any request to view the **name** of the requester and the reviewer and other request details, including:
 

@@ -14,6 +14,12 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 ## 2025
 
+### September 4, 2025
+
+#### Improvements
+
+We have moved the **Mendix Admins** tab out of **Company Settings**, and into its own page. The new [Mendix Admins](/control-center/mendix-admins-page/) page is available under the **Company** menu in Control Center.
+
 ### July 18, 2025
 
 #### New Features

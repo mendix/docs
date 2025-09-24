@@ -153,7 +153,8 @@ In this section, you can find information about the deployment package that is l
 
 #### Plan Details
 
-This section shows details of the plan that applies to this environment.
+This section shows details of the plan that applies to this environment.    
+It also includes the option to change your plan. For details, refer to [Changing Plan](/developerportal/deploy/change-plan/).
 
 #### License
 

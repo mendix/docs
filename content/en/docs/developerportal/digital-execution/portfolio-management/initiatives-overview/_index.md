@@ -87,8 +87,6 @@ In the **Edit Initiative** side pane, click **Manage tags** ({{% icon name="cog"
 
 The **Manage Tags** dialog box opens.
 
-{{< figure src="/attachments/developerportal/portfolio-management/manage-tags-dialog-box.png" max-width="70%" >}}
-
 To create a new tag, do as follows:
 
 1. Click **Add Tag**. A text box appears, with a colored circle indicating the color of the new tag.
@@ -169,9 +167,7 @@ Now you can proceed to [add planning information](#add-planning-information).
 
 #### Differences Among Initiatives, Apps, and Epics {#differences-initiatives-apps-epics}
 
-An initiative is usually worked upon in several epics. Initiatives are bigger projects that could span across multiple apps, systems, and services, while epics are related to a single app only and bundle user stories together. To learn more about the differences among initiatives, epics, and user stories, check out our [learning path](https://academy.mendix.com/link/modules/599/lectures/4660/2.2-The-Role-of-Portfolio-Management-in-the-Application-Lifecycle) and the examples below:
-
-{{< figure src="/attachments/developerportal/portfolio-management/initiative-epic-user-story.png" >}}
+An initiative is usually worked upon in several epics. Initiatives are bigger projects that could span across multiple apps, systems, and services, while epics are related to a single app and bundle user stories together. To learn more about the differences among initiatives, epics, and user stories, check out our [learning path](https://academy.mendix.com/link/modules/599/lectures/4660/2.2-The-Role-of-Portfolio-Management-in-the-Application-Lifecycle).
 
 The following figure shows examples of three portfolios. The first portfolio is to add a feature to an app, the second example is a minimal viable product (MVP) of an app, and the last example is to build an integration between two apps.
 
@@ -229,8 +225,6 @@ At the bottom of the **Edit Initiative** side pane, click **Save**. Now all the 
 
 To change your view on the **Initiatives Overview** page, click the drop-down list on the upper-right corner, and then select one of the following views:
 
-{{< figure src="/attachments/developerportal/portfolio-management/switch-view.png" >}}
-
 * [Kanban view](#kanban-view)
 * [List view](#list-view)
 * [WSJF Prioritization](#wsjf) or [RICE Prioritization](#rice) (the section you see here depends on the prioritization model selected in [Portfolio Settings](/developerportal/portfolio-management/portfolio-settings/))
@@ -272,7 +266,7 @@ Each initiative card shows the following information:
 
 ### List View {#list-view}
 
-In the list view, initiatives are shown in a list. Clicking the header of a column sequences the initiatives using the values in that column.
+In the list view, initiatives are shown in a list. If you click the header of a column, initiatives are sorted based on the values in that column.
 
 {{< figure src="/attachments/developerportal/portfolio-management/list-view.png" >}}
 

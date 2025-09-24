@@ -68,7 +68,7 @@ If you click the component name in a request on the **Pending Approvals** list, 
 
 On the top, you can find following buttons:
 
-* **Approval** – Click this button to approve the request. After you approve the request, the submitter will receive a notification, and the component will be published in the private Marketplace of your company.
+* **Approve** – Click this button to approve the request. After you approve the request, the submitter will receive a notification, and the component will be published in the private Marketplace of your company.
 * **Decline** – Click this button to reject the request. You can also add a reason. After you decline the request, the submitter will receive a notification.
 * **Download** – Click this button to download the *.mpk* file of the component.
 

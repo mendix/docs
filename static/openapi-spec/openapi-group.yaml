@@ -4,7 +4,7 @@ info:
   title: Group Service
   description: The Group API is for managing the governance for certain resources. Group can be used to restrict access and modification of a set of apps or marketplace contents to a specific set of people.
 servers:
-  - url: 'https://mpp.mendix-dev.tencent-cloud.com/groupservice/v1'
+  - url: 'https://pmp-demo.privateplatform.mendix.com/groupservice/v1'
 paths:
   '/groups/{groupId}':
     get:
@@ -31,7 +31,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/groupservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/groupservice/v1'
     put:
       tags:
         - groups
@@ -70,7 +70,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/groupservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/groupservice/v1'
       x-codegen-request-body-name: GroupInput
     delete:
       tags:
@@ -98,7 +98,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/groupservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/groupservice/v1'
   /groups:
     get:
       tags:
@@ -118,7 +118,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/groupservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/groupservice/v1'
     post:
       tags:
         - groups
@@ -154,7 +154,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/groupservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/groupservice/v1'
       x-codegen-request-body-name: GroupInput
   '/groups/{groupId}/members':
     get:
@@ -181,7 +181,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/groupservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/groupservice/v1'
   '/groups/members/{memberId}/{groupId}':
     patch:
       tags:
@@ -222,7 +222,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/groupservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/groupservice/v1'
   '/groups/{groupId}/requests':
     post:
       tags:
@@ -281,7 +281,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/groupservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/groupservice/v1'
       x-codegen-request-body-name: objectInputList
 tags:
   - name: groups
@@ -439,12 +439,12 @@ components:
             x-examples:
               Example 1:
                 - id: 7f040a46-b222-4e3e-bf9a-dd8b12babfe5
-                  name: testdaisy
-                  description: testdaisy
+                  name: GroupC
+                  description: GroupC changed
                   memberCount: 3
                 - id: 34f14ca6-1369-4bbe-9715-35e9ec635f64
                   name: GroupB
-                  description: GroupB
+                  description: GroupB changed
                   memberCount: 4
                 - id: 36279c9b-9b5a-4599-b548-7fe09d792f76
                   name: GroupA
@@ -454,12 +454,12 @@ components:
             Group list:
               value:
                 - id: 7f040a46-b222-4e3e-bf9a-dd8b12babfe5
-                  name: testdaisy
-                  description: testdaisy
+                  name: GroupC
+                  description: GroupC changed
                   memberCount: 3
                 - id: 34f14ca6-1369-4bbe-9715-35e9ec635f64
                   name: GroupB
-                  description: GroupB
+                  description: GroupB changed
                   memberCount: 4
                 - id: 36279c9b-9b5a-4599-b548-7fe09d792f76
                   name: GroupA
@@ -490,46 +490,46 @@ components:
             x-examples:
               Example 1:
                 - id: c963c178-7cba-49f8-baf2-1c1ae64ed63c
-                  name: Daisy
-                  email: test
+                  name: tom
+                  email: tom@lato-bycicles.com
                   roles:
                     - role: Group_Member
                 - id: 4cf55181-cfea-47bc-b798-3a51a8e5fff6
                   name: kean
-                  email: kean.li@mendix.com
+                  email: kean.li@lato-bycicles.com
                   roles:
                     - role: Group_Member
                 - id: cdcbd426-dfb7-4689-9939-3312521f13ff
-                  name: muhong00
-                  email: muhong0@163.com
+                  name: john
+                  email: john@lato-bycicles.com
                   roles:
                     - role: Group_Admin
                 - id: af50eaf8-ff62-4910-b5b0-3e685f520fc8
-                  name: pmt_test
-                  email: pmt_test@mendix.local
+                  name: jack
+                  email: jack@lato-bycicles.com
                   roles:
                     - role: Group_Member
           examples:
             Group member list:
               value:
                 - id: c963c178-7cba-49f8-baf2-1c1ae64ed63c
-                  name: Daisy
-                  email: test
+                  name: tom
+                  email: tom@lato-bycicles.com
                   roles:
                     - role: Group_Member
                 - id: 4cf55181-cfea-47bc-b798-3a51a8e5fff6
                   name: kean
-                  email: kean.li@mendix.com
+                  email: kean.li@lato-bycicles.com
                   roles:
                     - role: Group_Member
                 - id: cdcbd426-dfb7-4689-9939-3312521f13ff
-                  name: muhong00
-                  email: muhong0@163.com
+                  name: john
+                  email: john@lato-bycicles.com
                   roles:
                     - role: Group_Admin
                 - id: af50eaf8-ff62-4910-b5b0-3e685f520fc8
-                  name: pmt_test
-                  email: pmt_test@mendix.local
+                  name: jack
+                  email: jack@lato-bycicles.com
                   roles:
                     - role: Group_Member
     member:
@@ -556,7 +556,7 @@ components:
               Example 1:
                 id: 4cf55181-cfea-47bc-b798-3a51a8e5fff6
                 name: kean
-                email: kean.li@mendix.com
+                email: kean.li@lato-bycicles.com
                 roles:
                   - role: Group_Member
           examples:
@@ -564,7 +564,7 @@ components:
               value:
                 id: 4cf55181-cfea-47bc-b798-3a51a8e5fff6
                 name: kean
-                email: kean.li@mendix.com
+                email: kean.li@lato-bycicles.com
                 roles:
                   - role: Group_Member
   schemas:

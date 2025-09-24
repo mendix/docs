@@ -21,7 +21,6 @@ In the upper-right corner of the page, you can find the following items:
         * Configure tags.
         * Switch between the Scrum and Kanban board types.
         * Configure toast notifications.
-        * Choose whether to use Maia in Epics.
   
 * Search box — You can search stories based on story title, tags, epic name, assignee (including unassigned stories), and story ID. You can use the search box in combination with the filter.
 
@@ -29,12 +28,10 @@ In the upper-right corner of the page, you can find the following items:
 
 Follow these steps to create a story with Maia:
 
-1. Enable Maia in Epics. To do that:
-    
-    1. Click the **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) button and select **Settings**.
-    2. On the **Mendix AI Assistance** tab, toggle the option on.
-{{% alert color="info" %}}Only Scrum Masters can modify this setting.{{% /alert %}}
-2. Click **Create Story**, then click {{% icon name="sparkles" %}}**Create with Maia**. The **Maia Create Story** window is displayed.
+1. Enable Maia in the app [Settings](/developerportal/collaborate/general-settings/#maia-settings) page.
+2. Click **Create Story**, then click {{% icon name="sparkles" %}}**Create with Maia**.     
+   If Maia is enabled, the **Create Story with Maia** window is displayed.    
+   If Maia is not enabled, you are given the option to activate it on the spot, from the **Enable Maia** window.
 3. Enter your input, then click **Generate Story**.
 4. Check the suggestion provided by Maia. You can click **Apply to Story** if you agree with the suggestion, or you can choose to regenerate it.
 
@@ -62,7 +59,7 @@ You can move a swimlane by dragging it to the new location.
 
 ### Story Cards {#story-card}
 
-Each card in a swimlane represents a story:
+Each card in a swimlane represents a story.
 
 {{< figure src="/attachments/developerportal/project-management/epics/board/story-card.png" class="no-border" >}}
 
@@ -78,7 +75,7 @@ A story card shows the following details:
 * ⑧ Points of the story
 * ⑨ To whom the story is assigned
 
-You can [archive](/developerportal/project-management/epics/archive/) or delete a story as follows: click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner of the card, and then select the corresponding option:
+You can [archive](/developerportal/project-management/epics/archive/) or delete a story by clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in the upper-right corner of the card, then selecting the corresponding option.
 
 {{< figure src="/attachments/developerportal/project-management/epics/board/archive-delete-story.png" class="no-border" >}}
 

@@ -13,10 +13,6 @@ This page provides information and guidance on how to set up and upgrade a solut
 
 ## Solution Lifecycle
 
-This image presents the typical solution lifecycle:
-
-{{< figure src="/attachments/appstore/create-content/implement-solutions/solution-lifecycle.png" alt="Adaptable Solution Lifecycle" class="no-border" >}}
-
 There are three main stages a solution goes through during its lifecycle:
 
 * **Build** – This stage is performed by an ISV, who creates a solution and releases new versions with improvements. Mendix recommends releasing a new solution version along with a [Studio Pro LTS](/releasenotes/studio-pro/lts-mts/#lts) release.

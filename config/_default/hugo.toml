@@ -157,7 +157,9 @@ replacements = "github.com/FortAwesome/Font-Awesome -> ., github.com/twbs/bootst
         footer_about_disable = true
         # NK - set sidebar to be foldable
         sidebar_menu_foldable = true
-
+        # MvM - don't truncate sidebar tree items: see https://github.com/google/docsy/issues/1026
+        sidebar_menu_truncate = 100
+        
     # Adds a H2 section titled "Feedback" to the bottom of each doc. The responses are sent to Google Analytics as events.
     # This feature depends on [services.googleAnalytics] and will be disabled if "services.googleAnalytics.id" is not set.
     # If you want this feature, but occasionally need to remove the "Feedback" section from a single page,

@@ -10,11 +10,11 @@ aliases:
 
 ## Introduction
 
-The [Mendix Cloud GenAI connector](https://marketplace.mendix.com/link/component/239449) lets you utilize Mendix Cloud GenAI resource packs directly within your Mendix application. It allows you to integrate generative AI by dragging and dropping common operations from its toolbox. Feel free to contact [genai-resource-packs@mendix.com](mailto:genai-resource-packs@mendix.com) to learn more.
+The [Mendix Cloud GenAI connector](https://marketplace.mendix.com/link/component/239449) lets you utilize Mendix Cloud GenAI resource packs directly within your Mendix application. It allows you to integrate generative AI by dragging and dropping common operations from its toolbox. 
 
 ### Typical Use Cases
 
-The Mendix Cloud GenAI Connector is commonly used for text generation, embeddings, and knowledge bases. These use cases are described in more detail below:
+The Mendix Cloud GenAI Connector is commonly used for text generation, embeddings generation, and knowledge bases. These use cases are described in more detail below:
 
 #### Text Generation
 
@@ -31,19 +31,8 @@ The Mendix Cloud GenAI Connector is commonly used for text generation, embedding
     * Translate languages
     * Simulate characters for games
     * Image to text
-
-#### Knowledge Base
-
-The module enables tailoring generated responses to specific contexts by grounding them in data inside of a collection belonging to a Mendix Cloud GenAI knowledge base resource. This allows for the secure use of private company data or other non-public information when interacting with GenAI models within the Mendix app. It provides a low-code solution to store discrete data (commonly called chunks) in the knowledge base and retrieves relevant information for end-user actions or application processes.
-
-Knowledge bases are often used for:
-
-1. [Retrieval Augmented Generation (RAG)](/appstore/modules/genai/rag/) retrieves relevant knowledge from the knowledge base, incorporates it into a prompt, and sends it to the model to generate a response.
-2. Semantic search enables advanced search capabilities by considering the semantic meaning of the text, going beyond exact and approximate matching. It allows the knowledge base to be searched for similar chunks effectively.
-
-If you are looking for a step-by-step guide on how to get your application data into a Mendix Cloud Knowledge Base, refer [Grounding Your Large Language Model in Data – Mendix Cloud GenAI](/appstore/modules/genai/how-to/howto-groundllm/). Note that the Mendix Portal also provides options for importing data into your knowledge base, such as file uploads. For more information, see [Navigate through the Mendix Cloud GenAI Portal](/appstore/modules/genai/mx-cloud-genai/Navigate-MxGenAI/). This documentation focuses solely on adding data from an application using the connector.
-
-#### Embeddings
+ 
+#### Embeddings Generation
 
 Convert strings into vector embeddings for various purposes based on the relatedness of texts.
 
@@ -59,8 +48,23 @@ Embeddings are commonly used for the following:
 You can combine embeddings with text generation capabilities and leverage specific sources of information to create a smart chat functionality tailored to your knowledge base.
 
 {{% alert color="info" %}}
-The Mendix Cloud GenAI Connector module generates embeddings internally when interacting with the knowledge base. Pure embedding operations are only required if additional processes, such as using the generated vectors instead of text, are needed. For example, a similar search algorithm could use vector distances to calculate relatedness.
+The Mendix Cloud GenAI Connector module generates embeddings internally when interacting with a knowledge base. Pure embedding operations are only required if additional processes, such as using the generated vectors instead of text, are needed. For example, a similar search algorithm could use vector distances to calculate relatedness.
 {{% /alert %}}
+
+#### Knowledge Base
+
+The module enables tailoring generated responses to specific contexts by grounding them in data inside of a collection belonging to a Mendix Cloud GenAI knowledge base resource. This allows for the secure use of private company data or other non-public information when interacting with GenAI models within the Mendix app. It provides a low-code solution to store discrete data (commonly called chunks) in the knowledge base and retrieves relevant information for end-user actions or application processes.
+
+Knowledge bases are often used for:
+
+1. [Retrieval Augmented Generation (RAG)](/appstore/modules/genai/rag/) retrieves relevant knowledge from the knowledge base, incorporates it into a prompt, and sends it to the model to generate a response.
+2. Semantic search enables advanced search capabilities by considering the semantic meaning of the text, going beyond exact and approximate matching. It allows the knowledge base to be searched for similar chunks effectively.
+
+If you are looking for a step-by-step guide on how to get your application data into a Mendix Cloud Knowledge Base, refer [Grounding Your Large Language Model in Data – Mendix Cloud GenAI](/appstore/modules/genai/how-to/howto-groundllm/). Note that the Mendix Portal also provides options for importing data into your knowledge base, such as file uploads. For more information, see [Navigate through the Mendix Cloud GenAI Portal](/appstore/modules/genai/mx-cloud-genai/Navigate-MxGenAI/). This documentation focuses solely on adding data from an application using the connector. 
+
+##### Architecture
+
+A Knowledge Base resource can comprise several collections. Each collection is specifically designed to hold numerous documents, serving as a logical grouping for related information based on its shared domain, purpose, or thematic focus. While collections provide a mechanism for data separation, with each corresponding to a [DeployedKnowledgebase](/appstore/modules/genai/genai-for-mx/commons/#deployed-knowledge-base), it is not best practice to create a large number of collections within a single Knowledge Base resource. A more performant and practical approach for achieving fine-grained data separation is through the strategic use of metadata. To learn more, see [Retrieve and Generate](/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/#retrieve-and-generate).
 
 ### Features
 

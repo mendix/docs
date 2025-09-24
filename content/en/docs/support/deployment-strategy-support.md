@@ -37,6 +37,19 @@ In the diagrams below, the following colors are used:
 
 {{< figure src="/attachments/support/legend.png"   width="50%"  class="no-border" >}}
 
+The concepts in the diagrams are described in the [Components of the Mendix Stack](/support/#components) section of *Mendix Support*, as follows:   
+ 
+* <sup>1</sup>[Database, File Storage, and Network](/support/#database-file-storage-and-network)    
+* <sup>2</sup>[Infrastructure](/support/#infrastructure)    
+* <sup>3</sup>[Container Runtime Platform](/support/#container-runtime-platform)    
+* <sup>4</sup>[Buildpack, m2ee, and Service Console](/support/#buildpack-m2ee-and-service-console)    
+* <sup>5</sup>[Application Operation](/support/#application-operation)    
+* <sup>6</sup>[Logs and Metrics](/support/#logs-and-metrics)    
+* <sup>7</sup>[Deployment Pipeline](/support/#deployment-pipeline)    
+* <sup>8</sup>[Runtime](/support/#runtime)    
+* <sup>9</sup>[Marketplace Components](/support/#marketplace-components)    
+* <sup>10</sup>[Application](/support/#application)     
+
 ## Mendix Public and Dedicated Cloud
 
 The Mendix Public and Dedicated Clouds are an integrated part of the Mendix Platform and are therefore fully supported as described in the SLA.
@@ -64,7 +77,7 @@ This offering is delivered, managed and supported by Certified Partners (or Cert
 ## SAP Business Technology Platform
 
 Mendix provides an integration with the SAP Cloud Foundry environment of SAP Business Technology Platform (SAP BTP). Mendix applications are built to run on SAP BTP using the Mendix Cloud Foundry buildpack. Please check out the supported components in [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/).
-Mendix Support does not have access to app health, logs, graphs and monitoring – for support on these components, please contact [SAP Support](https://launchpad.support.sap.com/#/incident/create/prefilled/comp_name=XX-PART-MDX-RAD). If you run into issues or want to ask a question on the supported components, please always provide relevant logs, data, and your own analysis that explains why you suspect the issue is caused by one of our supported components
+Mendix Support does not have access to app health, logs, graphs and monitoring – for support on these components, please contact [SAP Support](https://launchpad.support.sap.com/#/incident/create/prefilled/comp_name=XX-PART-MDX-RAD). If you run into issues or want to ask a question on the supported components, please always provide relevant logs, data, and your own analysis that explains why you suspect the issue is caused by one of our supported components.
 
 {{< figure src="/attachments/support/sap-cloud-platform.png"   width="40%"  class="no-border" >}}
 

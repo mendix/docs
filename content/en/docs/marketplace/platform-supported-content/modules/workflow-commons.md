@@ -22,6 +22,7 @@ This module allows Mendix developers with little or no experience in building wo
 * Audit trail for tracking workflows
 * Task assignment to manage user assignment and targeting. For example, when users leaving the organization or change their roles
 * Workflow group management
+* Workflow conflict resolution
 
 {{% alert color="info" %}}For Workflow Commons version 2.4.0 and above, attachments are (an optional) part of comments. This means that the WorkflowAttachment entity is associated with the WorkflowComment entity. Security settings for the WorkflowAttachment entity are based on the workflows in which a user is involved, since the context of a specific workflow is not known in advance in Workflow Commons. If you would like to set custom security for attachments, you need to configure the attachment entity in your domain model and associate it with the workflow context entity of the workflow. {{% /alert %}}
 
@@ -70,6 +71,13 @@ You can find the following pages in Workflow Commons:
     * **Targeted tasks** – Shows a list of all tasks that the selected user is a target user of (the administrator can re-target these tasks to another user).
     * The **Groups** section – In this section, administrator can view the groups a user belongs to, add the user to new groups, or remove them from existing ones.
 * **WorkflowGroup_Overview** - This page allows the workflow administrator to manage workflow groups and their members. The administrator can add or remove users from groups. Workflow groups can be used for task targeting, enabling members to view and pick up tasks targeted to their group. You can add groups to your project via Studio Pro under **App Settings** > the **Workflows** tab > the **Workflow groups** section. To allow group targeting in a user task, make sure to enable the **Workflow groups** feature in Studio Pro **Preferences** > **New features**.
+* **ConflictResolution** - This page allows the workflow administrator to resolve incompatible workflows in groups. These groups can be formed based on conflict reasons, current activities, or the execution path. Depending on the selected workflow(s), the administrator can choose one of the allowed resolution actions: Continue, Jump to Activity, Restart, or Abort. For more information on when these options are available for workflow instances, see the [Workflow Versioning Conflict Types](/refguide/workflow-versioning/#conflict-types) section in *Workflow Versioning and Conflict Mitigation*.
+    * **Continue** – Resumes processing workflow instances from the point they had reached before a new version of the workflow definition was deployed.
+    * **Jump to Activity** – Displays a list of activities that the workflow instances can jump to. After selecting an activity, the changes will be applied to the workflow instances.
+    * **Restart** – Stops the current task of the workflow instances and restarts them from the initial task in the workflow definition.
+    * **Abort** – Aborts workflow instances along with all of their currently running user tasks.
+    
+        {{% alert color="info" %}} The **Jump to Activity** option is available only if all selected workflow instances share the same current activities. {{% /alert %}}  
 
 ### Page Templates
 

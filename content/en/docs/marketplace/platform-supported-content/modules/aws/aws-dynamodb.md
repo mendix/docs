@@ -212,6 +212,8 @@ The Amazon DynamoDB connector contains the following activities:
 * `DescribeTable` - Get a description from a given table inside DynamoDB.
 * `BatchWriteItem` - Put or delete multiple items from DynamoDB in a single call.
 * `DeleteItem` - Delete an item from a given table from your DynamoDB environment. 
-* `ScanTable` - Retrieve items from an Amazon DynamoDB table.
-* `PutItem` - Put and update an item in DynamoDB.
-* `GetItem` - Get an item from DynamoDB.
+* `Query` - Retrieve multiple items from a single table or index using the table's primary key and an optional sort key.
+* `Scan` - Get one or more items and item attributes by accessing every item in a table or a secondary index.
+* `PutItem` - Create a new item, or replace an old item with a new item.
+* `GetItem` - Get a set of attributes for the item with the given primary key.
+* `UpdateItem` - Modify the attributes of an existing item or add a new item if it does not already exist.

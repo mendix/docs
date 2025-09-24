@@ -21,6 +21,21 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 ## 2025
 
+### September 11, 2025
+
+#### New Features
+
+* We have added a new section to the app **Settings** page, namely [Maia Settings](/developerportal/collaborate/general-settings/#maia-settings). This consolidates and replaces the **Mendix AI Assistance** sections which were previously available in the **Board**, **Planning**, and **Feedback** settings. Now, you can enable and disable Maia assistance for your app from one unified location.
+* You can now enable Maia directly while creating a story.     
+  When you click **Create Story with Maia** in the **Create Story** window, we check whether Maia is enabled. If it is not, you are given the option to enable it on the spot. While doing that, you can provide a **Project Description** to help Maia understand the app context and provide better suggestions.
+* You can now edit the name of the **To Do** and **Done** swimlanes on the **Board** page.
+* You can now edit the default status names for feedback items.
+
+#### Fixes
+
+* We have fixed an issue where the tag selector drop-down menu was not displayed. 
+* We have fixed the responsiveness of the bulk actions bar on the **Planning** page.
+
 ### August 31, 2025
 
 #### Improvements

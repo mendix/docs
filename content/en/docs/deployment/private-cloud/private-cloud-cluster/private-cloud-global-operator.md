@@ -7,7 +7,7 @@ weight: 30
 
 ## Introduction
 
-When running the Mendix Operator in Global mode, one installation of the Mendix Operator and Agent is sufficient to manage applications across multiple namespaces. This Operator mode is recommended for new customers, or customers that want to streamline and simplify their deployments and operations. For existing customers, and for use cases that require having a separate Operator instance for every namespace, the [Standard mode](/developerportal/deploy/standard-operator/) is still available and supported.
+When running the Mendix Operator in Global mode, one installation of the Mendix Operator and Agent is sufficient to manage applications across multiple namespaces.
 
 {{% alert color="warning" %}}
 It is essential to ensure that each namespace is exclusively managed by a single Operator. The deployment of two Operators, particularly with distinct versions, to manage the same namespace, may lead to conflicts, resulting in the cancellation and rollback of each operator's modifications.

@@ -37,15 +37,13 @@ The page header displays the following information:
 * The company that owns the app.
 * The **Watch** / **Stop Watching** toggle – You can enable or disable notifications for this app.
 
-{{< figure src="/attachments/developerportal/general/settings/general-information.png"  class="no-border" >}}
-
 {{% alert color="info" %}}
 Only users with the **App Settings** permission can edit the image and the app name.
 {{% /alert %}}
 
 ## General {#general}
 
-In this tab, you can find the following items:
+On this tab, you can find the following items:
 
 * Logo of the project
 * **Description** of the project
@@ -130,7 +128,15 @@ On the **Project Management** tab, you can select your team's planning tool for 
 
 If you manage your projects in Jira, you can connect your apps in **Apps** to Jira. For more information, see [Jira Connector](/developerportal/project-management/jira-connector/).
 
-{{< figure src="/attachments/developerportal/general/settings/story-switcher.png" width="700"  class="no-border" >}}
+## Maia Settings {#maia-settings}
+
+{{% alert color="info" %}}
+Only users with the **App Settings** permission can toggle this setting.
+{{% /alert %}}
+
+The **Maia Settings** tab allows you to enable or disable Maia features for your app.    
+
+When you enable Maia, you are prompted to provide a description for your project. That way, the Mendix AI assisted responses will be more accurate and more relevant to your app.
 
 ## History {#history}
 
@@ -138,9 +144,7 @@ If you manage your projects in Jira, you can connect your apps in **Apps** to Ji
 Only users with the **App Settings** permission can view the history.
 {{% /alert %}}
 
-The **History** tab presents the collaboration actions for the app. On this page, you can see what change was made, who performed it, and when it occurred:
-
-{{< figure src="/attachments/developerportal/general/settings/history.png"   width="700"  class="no-border" >}}
+The **History** tab presents the collaboration actions for the app. On this page, you can see what change was made, who performed it, and when it occurred.
 
 When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](/developerportal/app-insights/feedback/) are displayed.
 

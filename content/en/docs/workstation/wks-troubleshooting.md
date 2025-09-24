@@ -1,13 +1,14 @@
 ---
-title: "Troubleshooting Mendix Workstation"
+title: "Troubleshooting Mendix Workstation Client"
+linktitle: "Troubleshooting"
 url: /mendix-workstation/troubleshooting/
-description: "Describes how to solve potential issues with Mendix Workstation."
+description: "Describes how to solve potential issues with Mendix Workstation Client."
 weight: 40
 ---
 
 ## Introduction
 
-If you encounter any issues with your Mendix Workstation Management, Connector, or Client, use the following troubleshooting tips to help you solve them.
+If you encounter any issues with your Workstation Management, Connector, or Client, use the following troubleshooting tips to help you solve them.
 
 ## Workstation Management
 
@@ -33,7 +34,7 @@ The Client retains logs for the last eight days. You can access the logs by clic
 
 You can also find log files by day in the Client's app data folder. To do so on Windows, press **Win + R**. If you installed the Client using the installer for all users, enter `%ProgramData%\Mendix Workstation\logs`. If you are using the portable version, enter `%AppData%\Mendix Workstation\logs`. On Linux the Mendix *Workstation/logs* folder is either located at `$XDG_CONFIG_HOME` or `~/.config`.
 
-Alternatively, you can start the Mendix Workstation Client from Powershell to view logs: `start "C:\Program Files\Mendix Workstation\Mendix Workstation.exe" -ArgumentList "--log-level=debug" -wait`.
+Alternatively, you can start the Workstation Client from Powershell to view logs: `start "C:\Program Files\Mendix Workstation\Mendix Workstation.exe" -ArgumentList "--log-level=debug" -wait`.
 
 ### Registration Token Could Not Be Parsed
 
@@ -85,7 +86,7 @@ The connection between the Client and the Connector cannot be established either
 
 #### Solution
 
-* Verify that the Mendix Workstation Client is running and registered on the same computer as the browser that is trying to establish a connection via the StationConnector.
+* Verify that the Workstation Client is running and registered on the same computer as the browser that is trying to establish a connection via the StationConnector.
 * Verify that the Client is registered in the correct Workspace by comparing the Workspace name and ID displayed in the Client UI with the Workspace in the Management. 
 * Verify that the application that is attempting a connection is properly configured as an allowed app in the Workspace and on the Station. To do so check that your application, for example, running on `http://localhost:8080`, is added in the **Apps** section of your Workspace. If the app is added, check that the public key of the configured workspace app is up to date with the public key displayed in your app that is using the connector. If not, update the public key value of the workspace app with the latest value displayed in the app. Next, check that the app is also enabled as an allowed app in the Station configuration by going to the respective Station detail page in that workspace. Always press the **Refresh** button in the Workstation Client after applying any changes in the Management.  
 

@@ -86,7 +86,7 @@ The `Search Datasets` allows you to generate the domain model and microflow to s
 
 ### Get Datasets for Item Revision {#getdatasetsfromitemrevision}
 
-The `Get Datasets from Item Revision` action allows you to generate the domain model and microflow to retrieve datasets for an Item Revision and subsequently download files inside the dataset.
+The `Get Datasets for Item Revision` action allows you to generate the domain model and microflow to retrieve datasets for an Item Revision and subsequently download files inside the dataset.
 
 ### Attach Datasets to Item Revision {#attachdatasetstoitemrevision}
 

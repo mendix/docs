@@ -1,5 +1,5 @@
 ---
-title: "Submit a Support Request"
+title: "Submitting a Support Request"
 url: /support/submit-support-request/
 weight: 20
 description: "Describes the details necessary for Mendix Support to process your request."
@@ -41,11 +41,7 @@ To submit a request with Mendix Support, follow these steps:
 
 2. Log in to the [Mendix Support Portal](https://support.mendix.com).
 3. Click **Submit request**.
-4. Select an issue from the drop-down menu:
-
-    {{< figure src="/attachments/support/submit-support-request/issue.png" class="no-border" >}}
-
-    You can select from the following issues:
+4. Select an issue from the drop-down menu. You can choose from the following issues:
 
     * **Request for Information** – general questions about Mendix
     * **Incident** – if your app is down, or you are experiencing another platform issue
@@ -230,11 +226,11 @@ Not all Marketplace content is compatible with every version of Studio Pro, and 
 
 ## Overview of Requests
 
-By clicking your name on the upper-right side of the screen, you can select **My activities** and see all the requests that you have submitted (**My requests**) as well as all the requests that have been submitted on the apps to which you have access:
+By clicking your name on the upper-right side of the screen, you can select **My activities** and see all the requests that you have submitted (**My requests**), as well as all the requests that have been submitted on the apps to which you have access.
 
 {{< figure src="/attachments/support/submit-support-request/activities.png" class="no-border" >}}
 
-On the **All requests** tab, you can click **Follow** for an app to be informed of all the changes on requests on that specific app:
+On the **All requests** tab, you can click **Follow** for an app to be informed of all the changes on requests on that specific app.
 
 {{< figure src="/attachments/support/submit-support-request/follow.png" class="no-border" >}}
 

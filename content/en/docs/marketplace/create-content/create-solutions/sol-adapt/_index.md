@@ -15,7 +15,8 @@ While [Mendix best practices for development](/refguide/dev-best-practices/) app
 
 ## What Is an Adaptable Solution?
 
-In an adaptable solution, up to 20% of the end solution can be adapted through customizations, extensions, integrations, or new customer-specific modules. Instead of being tied to a prescriptive software-as-a-service (SaaS) solution that only allows for configuration at runtime, adaptable solutions allow for design-time adaptation through model-level changes to cater to the needs of your specific implementation.
+In an adaptable solution, up to 20% of the end solution can be adapted through customizations, extensions, integrations, or new customer-specific modules. The 80% that is left is the core solution, which is shared across all customers without any changes.    
+Instead of being tied to a prescriptive software-as-a-service (SaaS) solution that only allows for configuration at runtime, adaptable solutions allow for design-time adaptation through model-level changes to cater to the needs of your specific implementation. They can be sold to multiple customers, and can be upgraded to new versions.
 
 {{< figure src="/attachments/appstore/create-content/create-solutions/sol-adapt/sol-architecting/adaptable-solution-architecture.png" alt="Adaptable Solution architecture" class="no-border" >}}
 

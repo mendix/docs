@@ -92,7 +92,7 @@ Note that enabling this feature on the Mendix platform may affect your existing 
 * If a user logs in and is not a member of the Mendix-admin group in your IdP, Mendix will revoke their Mendix Admin role.
 * If a user logs in and is a member of the Mendix-admin group in your IdP, Mendix will either assign the Mendix Admin role or retain the existing assignment.
 
-As a result, the overview of [Mendix Admins](/control-center/company-settings/#mendix-admins) will gradually synchronize with the Mendix-admin group in your IdP.
+As a result, the overview of [Mendix Admins](/control-center/mendix-admins-page/) will gradually synchronize with the Mendix-admin group in your IdP.
 
 #### Onboarding Prerequisites
 

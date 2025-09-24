@@ -61,7 +61,7 @@ On the **Inbox** tab, everyone from your team can view all the unarchived feedba
 
 {{< figure src="/attachments/developerportal/app-insights/feedback/feedback-items.png" alt="inbox tab" >}}
 
-In the list on the **Inbox** tab, you can find the following information for each feedback:
+In the list on the **Inbox** tab, you can find the following information for each feedback item:
 
 * **ID** – the unique number that is assigned to the feedback
 * **Subject** – the title of the feedback given by the reporter
@@ -103,21 +103,21 @@ If you select feedback, you can see the following items:
 
   {{% alert color="info" %}}When you open a linked feedback, you can click **Make [the linked feedback] the Primary feedback** to make this feedback the primary feedback of the feedback group instead.{{% /alert %}}
 
-* **Move** – Clicking this moves the selected feedback to any other app of which you are a member. Whenever you move feedback, you also move all linked feedback. If you only want to move one feedback item, you need to unlink the feedback from the group first.
+* **Move** – Clicking this moves the selected feedback item to any other app of which you are a member. Whenever you move feedback, you also move all linked feedback. If you only want to move one feedback item, you need to unlink the feedback from the group first.
 
-* **Create Stories** – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button converts the selected feedback to stories on the designated board in Epics or Jira.
+* **Create Stories** – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button converts the selected feedback item to stories on the designated board in Epics or Jira.
 
-* Status drop-down list – You can select a status from the drop-down list and then click **Apply** to change the status of the selected feedback.
+* Status drop-down list – You can select a status from the drop-down list and then click **Apply** to change the status of the selected feedback item.
 
-* **Archive** – Clicking this sets the selected feedback as archived.
+* **Archive** – Clicking this sets the selected feedback item as archived.
 
-* **Delete** – Clicking this deletes the selected feedback permanently. The result is irreversible.
+* **Delete** – Clicking this deletes the selected feedback item permanently. The result is irreversible.
 
 ## Archive {#archive}
 
 On the **Archive** tab, everyone in your team can view all the archived feedback.
 
-In the list on the **Archive** tab, you can find the following information for each feedback:
+In the list on the **Archive** tab, you can find the following information for each feedback item:
 
 * **ID** – the unique number that is assigned to the feedback
 * **Subject** – the title of the feedback given by the reporter
@@ -159,7 +159,9 @@ The **Feedback** tab shows the following items:
 
 * **Priority** – This shows the priority that the feedback has.
 
-* **Status** – This is the status of the feedback. There are two default statuses: **New** and **Closed**. Whenever feedback arrives in the app, it is set to **New**. When you close feedback, it is set to **Closed** and moved to the **Archived** page. You can also add custom statuses by clicking **Settings** ({{% icon name="cog" %}}) and adding the new statuses in the new dialog box. Custom statuses can only be used for feedback items that are not archived. You can filter your feedback based on the status.
+* **Status** – This is the status of the feedback. There are two default statuses: **New** and **Closed**. Whenever feedback arrives in the app, it is set to **New**. When you close feedback, it is set to **Closed** and moved to the **Archived** page.    
+   You can add custom statuses by clicking **Manage Statuses** ({{% icon name="cog" %}}) and adding the new statuses in the dialog box. Custom statuses can only be used for feedback items that are not archived. You can filter your feedback based on the status.    
+    You can edit the default status name by clicking **Manage Statuses** ({{% icon name="cog" %}}), then clicking the status name.
 
 * **Tags** – These are the tags assigned to the feedback. You can select a tag from the drop-down list or create new tags by typing the tag name inside the text box and then clicking **create [the tag name]**. A tag should contain maximum 50 characters. You can assign multiple tags.
 
@@ -209,10 +211,12 @@ The **Feedback** tab shows the following items:
 
 You can use Maia to create a story based on one or more feedback items. To do that, follow these steps:
 
-1. Enable Maia in **Feedback**. To do that, access the {{% icon name="cog" %}}**Settings** menu, and toggle on the Maia option on the **Mendix AI Assistance** tab.
+1. Enable Maia in the app [Settings](/developerportal/collaborate/general-settings/#maia-settings) page.
 2. Select a feedback item from the list.
 3. Click **Create Story**. The **Create Story** window is displayed.
-4. Click {{% icon name="sparkles" %}}**Create with Maia**. The **Create Story with Maia** window is displayed.
+4. Click {{% icon name="sparkles" %}}**Create with Maia**.     
+   If Maia is enabled, the **Create Story with Maia** window is displayed.    
+   If Maia is not enabled, you are given the option to activate it on the spot, from the **Enable Maia** window.
 5. Check the suggested story description.    
    If you do not agree with the suggestion, click **Regenerate Response** to obtain a different suggestion.
    If you agree with the suggestion, click **Apply to Story**.
@@ -231,7 +235,7 @@ For more information, see the [What Happens to a User After They Submit Feedback
 
 #### Managing Tags {#manage-tags}
 
-From the [feedback details](#feedback-details) page, you can manage tags by clicking **Settings** ({{% icon name="cog" %}}) next to the **Tags** text box:
+From the [feedback details](#feedback-details) page, you can manage tags by clicking **Settings** ({{% icon name="cog" %}}) next to the **Tags** text box.
 
   {{< figure src="/attachments/developerportal/app-insights/feedback/tag-management-settings.png" alt="tag management setting" >}}
 

@@ -182,10 +182,10 @@ This query retrieves all users that have the role Administrator:
 {{< tabpane >}}
   {{% tab header="Environments:" disabled=true /%}}
   {{< tab header="Studio Pro" lang="StudioPro" >}}
-    [id = '[%UserRole_Administrator%]']
+    [System.UserRoles/System.UserRole[id = '[%UserRole_Administrator%]']]
     {{% /tab %}}
   {{< tab header="Java" lang="JavaQuery" >}}
-     //Sales.User[id = '[%UserRole_Administrator%]']
+     //Sales.User[System.UserRoles/System.UserRole[id = '[%UserRole_Administrator%]']]
     {{% /tab %}}
 {{< /tabpane >}}
 

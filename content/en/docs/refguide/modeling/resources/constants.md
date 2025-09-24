@@ -1,7 +1,7 @@
 ---
 title: "Constants"
 url: /refguide/constants/
-weight: 60
+weight: 70
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -9,9 +9,9 @@ weight: 60
 
 Constants are used to define configuration values. These can differ per environment.
 
-When running the application on a licensed Mendix Cloud environment, SAP BTP, or Mendix on Kubernetes you can configure the constant values for each environment separately using the [Model Options](/developerportal/deploy/environments-details/#model-options) tab of the **Environment Details** page to set your constants.
+When running the application on a licensed Mendix Cloud environment, SAP BTP, or Mendix on Kubernetes, you can configure the constant values for each environment separately using the [Model Options](/developerportal/deploy/environments-details/#model-options) tab of the **Environment Details** page to set your constants.
 
-For other cloud environments – for example, Siemens [Insights Hub](/partners/siemens/mindsphere/) – the constants can be accessed as **Environment Variables** in, for instance, Cloud Foundry. The constant is exposed with the name **module** + **.** + **constant** (for example, `mymodule.myconstant`).
+For other cloud environments (for example, Siemens [Insights Hub](/partners/siemens/mindsphere/)), the constants can be accessed as **Environment Variables** in, for instance, Cloud Foundry. The constant is exposed with the name *module* + *.* + *constant* (for example, `mymodule.myconstant`).
 
 When running the application locally or in a Free App environment, the values defined in Studio Pro are used.
 
@@ -47,7 +47,7 @@ This property is only available for add-on and solution modules. For more inform
 
 ### Documentation
 
-This field is for documentation purposes only: end-users will never see it, and it does not influence the behavior of your application
+This field is for documentation purposes only. End-users will never see it, and it does not influence the behavior of your application.
 
 ## Type Properties
 
@@ -71,7 +71,7 @@ This property defines whether the constant is accessible from client-side expres
 | No *(default)* | The constant will not be sent to the client and will be only accessible from [microflow](/refguide/microflows/) expressions |
 
 {{% alert color="warning" %}}
-When a constant is exposed to the client, Mendix Runtime sends its value to the client so that in addition to microflow expressions, it will also be accessible from nanoflows and page expressions. This means that you should not use sensitive data or secrets such as passwords when a constant is exposed to the client.
+When a constant is exposed to the client, the Mendix Runtime sends its value to the client so that in addition to microflow expressions, it will also be accessible from nanoflows and page expressions. This means you should not use sensitive data or secrets such as passwords when a constant is exposed to the client.
 
 For a web app, changes to a constant's values are reflected when the end-user refreshes the browser or restarts the app. For an offline-first PWA or native application, the app stores the constants' values for offline use. The app updates the constant's values in the following cases:
 

@@ -51,11 +51,8 @@ To connect your app to Jira, perform the following steps:
 
 3. Go to the **Project Management** tab.
 
-4. Click **Connect Jira**. The **Set Up Jira Configuration** dialog box opens.
-
-    {{< figure src="/attachments/developerportal/project-management/jira-connector/set-up-jira-configuration.png"   class="no-border" >}}
-
-    Fill in the information as follows:
+4. Click **Connect Jira**. The **Set Up Jira Configuration** dialog box opens.    
+   Fill in the information as follows:
 
     * **URL Jira Environment**: This is the URL of your company’s environment within the Jira platform, as provided by Jira. This URL usually looks like this: `https://my-company.atlassian.net`.
     * **Project Key**: This is the unique key of your project within the Jira platform.
@@ -65,8 +62,6 @@ To connect your app to Jira, perform the following steps:
 5. Click **Next**. 
 
 6. If your Jira project has several boards configured, from the drop-down list, select one of the Jira boards to connect. We support the Scrum, simplified Scrum, and Kanban board types.
-
-    {{< figure src="/attachments/developerportal/project-management/jira-connector/connect-jira-board.png" >}}
 
 7. Click **Activate** to activate the connection. 
 
@@ -86,7 +81,7 @@ Once the activation is completed, your app is connected to Jira. You can see the
 
     {{< figure src="/attachments/developerportal/project-management/jira-connector/navigation-jira.png" >}}
 
-## View Settings
+## Viewing Settings
 
 After you activated the Jira connector, you can review the configuration details any time.
 

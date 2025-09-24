@@ -84,9 +84,6 @@ To start setting up your app, open Studio Pro and do the following:
 
 1. Create a [new app](/refguide/new-app/) for your connector.
 2. Create a module to contain your connector. To do this, right-click anywhere in the **App Explorer** outside of existing modules, and choose **Add Module**.
-
-    {{< figure src="/attachments/appstore/create-content/create-connectors/add-module.png" class="no-border" >}}
-
 3. Give your module a name fitting for the type of connector you are building.
 4. Create the basic folder structure at root level. 
 

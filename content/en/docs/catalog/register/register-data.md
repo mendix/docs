@@ -1,5 +1,5 @@
 ---
-title: "Register Resources in the Catalog"
+title: "Registering Resources in the Catalog"
 linktitle: "Register Resources"
 url: /catalog/register/register-data/
 description: "Describes how to register resources in the Catalog: through Mendix Cloud or in the UI form."

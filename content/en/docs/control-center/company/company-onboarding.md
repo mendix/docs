@@ -2,7 +2,7 @@
 title: "Company Onboarding"
 url: /control-center/company-onboarding/
 description: "Describes the Company Onboarding page in the Mendix Control Center."
-weight: 40
+weight: 50
 ---
 
 ## Introduction

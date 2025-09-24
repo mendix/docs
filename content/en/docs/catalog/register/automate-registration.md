@@ -1,5 +1,5 @@
 ---
-title: "Automate Catalog Registration"
+title: "Automating Catalog Registration"
 linktitle: "Automate Catalog Registration"
 url: /catalog/register/automate-registration/
 description: "Learn how to automate Catalog registration in a pipeline deploying to a (virtual) Mendix on Kubernetes deployment."

@@ -18,8 +18,6 @@ Click **Create a Post** to ask a question, start an exchange with the community,
 
 ## Personal
 
-Under **PERSONAL**, you can find [Community Feed](#community-feed), [Saved](#bookmarks), and [Posts](#posts).
-
 ### Community Feed {#community-feed}
 
 Clicking **Community Feed** brings you back to the home page of the Mendix Community.

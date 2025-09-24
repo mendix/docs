@@ -12,6 +12,27 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 ## 2025
 
+### September 16, 2025
+
+#### Mendix Operator v2.23.1 {#2.23.1}
+
+* We have updated storage provisioners that create Azure Workload identitites. This update helps ensure that errors like *Cannot validate Microsoft Entra ID user ... because the OID isn't found in the tenant* are detected and handled correctly.
+
+    After creating a new workload identity, it might take some time before the workload identity (user) becomes fully functional. This error is not an issue (just a temporary status) and in this situation the Mendix Operator can just retry after waiting for some time.
+
+  Because Microsoft Azure previously changed the error text, older Mendix Operator versions might not correct this error.
+
+### September 4, 2025
+
+#### Portal Improvements
+
+* We have updated the **Details** icon in the **Cluster Management**, **Environment Overview**, and **Environment Details** pages.
+* We have fixed an issue where the browser console for the **Environment Overview** page was spammed with multiple log warnings.
+
+#### Build API
+
+* We have fixed an intermittent issue where the authentication failed with a 401 error when valid PAT tokens were provided in the API requests (Ticket 256946,Ticket 257444, Ticket 258196).
+
 ### August 29, 2025
 
 #### Mendix Operator v2.23.0 {#2.23.0}
@@ -40,6 +61,7 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 * If an app pod crashes or restarts, the MendixApp CR now shows the reason for the restart and the Mendix Runtime's UNIX exit code.
 * We have addressed a rare bug where the Agent sometimes crashed with a panic when a network connection was lost.
 * Upgrading to Mendix Operator v2.23.0 from a previous version will restart environments managed by that version of the Operator. Environments with two or more replicas and a **PreferRolling** update strategy are restarted without downtime.
+* Emails are now supported in Japanese and Korean languages, based on the language set in **User Settings**.
 
 ### August 7, 2025
 

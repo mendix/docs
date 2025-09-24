@@ -1,7 +1,7 @@
 ---
 title: "Regular Expressions"
 url: /refguide/regular-expressions/
-weight: 70
+weight: 80
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -33,9 +33,9 @@ Here are two post code examples: **3072AP** and **7500 AH**.
 These are the criteria:
 
 * The first character is a digit in the range 1 to 9
-* The second, third and fourth characters are digits in the range 0 to 9
+* The second, third, and fourth characters are digits in the range 0 to 9
 * The last two characters are letters, as expressed by the last two subexpression [A-Za-z], which indicate that the last two characters should be in the range A-Z or the range a-z
-* Between the digits and the letters there can be a space, as expressed by the subexpression which consists of a space and a question mark; the question mark indicates that the space is optional
+* There can be a space between the digits and the letters, as expressed by the subexpression which consists of a space and a question mark; the question mark indicates that the space is optional
 {{% /alert %}}
 
 The following sections give a summary of regular expressions that can be used in Mendix. This description also applies to regular expression strings used in functions such as *isMatch()*.
@@ -52,7 +52,7 @@ A regular expression can contain the following types of subexpressions:
 
     {{% alert color="info" %}}These forms can be mixed: `[abcx-z]` matches "*a*", "*b*", "*c*", "*x*", "*y*", or "*z*", and is equivalent to `[a-cx-z]`. The `-` character is treated as a literal character if it is the last or the first character within the brackets, or if it is escaped with a backslash.{{% /alert %}}
 
-* `[^ ]` – matches a single character that is NOT contained within the brackets, for example:
+* `[^ ]` – matches a single character that is not contained within the brackets, for example:
     * `[^abc]` matches any character other than "a", "b", or "c"
     * `[^a-z]` matches any single character that is not a lowercase letter from "a" to "z"
 
@@ -68,10 +68,10 @@ A regular expression can contain the following types of subexpressions:
 * A literal character – this is a character that does not have a special meaning in the regular expression language and it matches itself; this is effectively any character except `\[](){}^-$?*+|.`, for example:
     * The *`space`* in the Dutch post code example is a literal character that just matches itself
 
-    {{% alert color="info" %}}If you need to match one of the characters which is not a literal, prefix it with a backslash.{{% /alert %}}
+    {{% alert color="info" %}}If you need to match one of the characters that is not a literal, prefix it with a backslash.{{% /alert %}}
 
 * `\w` – a word: a letter, digit, or underscore; `\w` is an abbreviation for `[A-Za-z0-9_]`
-* `\d` – a digit" an abbreviation for `[0-9]`
+* `\d` – a digit; an abbreviation for `[0-9]`
 
 ### Quantifiers
 
@@ -81,10 +81,10 @@ The following quantifiers can be used:
 
 | Quantifier | Description  |
 | --- | --- |
-| ? | The preceding sub-expression should occur not or once. |
-| * | The preceding sub-expression occurs any number of times. |
-| + | The preceding sub-expression should occur once or more. |
-|   | No quantifier means that the preceding sub-expression should occur exactly once. |
+| ? | The preceding subexpression should occur not or once. |
+| * | The preceding subexpression occurs any number of times. |
+| + | The preceding subexpression should occur once or more. |
+|   | No quantifier means that the preceding subexpression should occur exactly once. |
 
 ## Read More
 

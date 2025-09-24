@@ -8,7 +8,7 @@ weight: 40
 
 ## Introduction
 
-To communicate with your devices, you must ensure that the messages you send have the correct syntax. This syntax varies depending on the type of device. The following sections show the required syntax for file system, smart card, and Bluetooth devices.
+To enable Mendix Workstation Client to communicate with your devices, you must ensure that the messages you send have the correct syntax. This syntax varies depending on the type of device. The following sections show the required syntax for file system, smart card, and Bluetooth devices.
 
 ## Bluetooth
 

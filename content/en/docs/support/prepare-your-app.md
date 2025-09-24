@@ -1,5 +1,5 @@
 ---
-title: "Prepare Your App for Support"
+title: "Preparing Your App for Support"
 url: /support/prepare-your-app/
 weight: 10
 description: "Describes how to configure app authorization to select the affected app (or apps) in the Mendix Support Portal."

@@ -40,7 +40,7 @@ Mendix Admins can edit and create new team roles within the company in [Control 
 
 ## Technical Contact {#technical-contact}
 
-Every deployed app has a Technical Contact. When you view the [Settings](/developerportal/collaborate/general-settings/#general) for a deployed app, you can see the app's Technical Contact. The Technical Contact is the user you can contact with questions related to the app. 
+Every deployed app has a Technical Contact. When you view the [Settings](/developerportal/collaborate/general-settings/#general) for a deployed app, you can see the app's Technical Contact. The Technical Contact is the user you can get in touch with for questions related to the app. 
 
 {{< figure src="/attachments/developerportal/general/team/app-roles/technical-contact.png" alt="" class="no-border" >}}
 

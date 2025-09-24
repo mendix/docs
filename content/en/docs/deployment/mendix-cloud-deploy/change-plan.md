@@ -58,12 +58,12 @@ To change an environment's plan, follow these steps:
     * To compare plans, click **Show Comparison**. This opens a comparison page where the Technical Contact can evaluate the current plan against other available options. The last selected comparison will populate the form. Alternatively, select a new plan directly from the **Plan** dropdown without comparing.
     * Enter a reason for plan change.
 
-9. All submitted plan change requests appear in the [Control Center](/control-center/approval-requests/) for the [Mendix Admin](/control-center/company-settings/#mendix-admins) review. To view the list of approvers, click **Mendix Admin** at the bottom of the **New Plan** form. When ready, click **Submit Request** to submit your plan change request. 
+9. All submitted plan change requests appear in the [Control Center](/control-center/approval-requests/) for the [Mendix Admin](/control-center/mendix-admins-page/) review. To view the list of approvers, click **Mendix Admin** at the bottom of the **New Plan** form. When ready, click **Submit Request** to submit your plan change request. 
 
     {{% alert color="info" %}}Approval from a Mendix Admin only authorizes the plan change but does not immediately apply it. As a result, the environment will remain on its current plan until the new plan is [approved](/control-center/approval-requests/#approving-a-request), [scheduled](#scheduling-a-plan-change) and [successfully applied](#after-schedule).
     {{% /alert %}}
 
-11. [Track and manage](#manage-plan-requests) your plan change requests from the [Request Overview](/developerportal/deploy/environments/#request-overview) tab on your app's environment's page. 
+11. [Track and manage](#manage-plan-requests) your plan change requests from the [Change Requests](/developerportal/deploy/environments/#change-requests) tab on your app's environment's page. 
 
 {{% alert color="info" %}}
 Changing plan consumes [Mendix Cloud Tokens](/control-center/cloud-tokens/#cloud-tokens). Only one plan change request can exist per environment at a time. As a result, new requests cannot be submitted for the same environment until the current one is completed.
@@ -71,15 +71,15 @@ Changing plan consumes [Mendix Cloud Tokens](/control-center/cloud-tokens/#cloud
 
 ## Managing Plan Requests {#manage-plan-requests}
 
-The **Request Overview** tab allows Technical Contacts to view all submitted plan change requests (both past and current) and track pending request status.
+The **Change Requests** tab allows Technical Contacts to view all submitted plan change requests (both past and current) and track pending request status.
 
 To access it:
 
 1. Go to [Apps](https://sprintr.home.mendix.com/).
 2. Click **Environments** on your app.
-3. Open the **Request Overview** tab.
+3. Open the **Change Requests** tab.
 
-For detailed information on the **Request Overview** tab, refer to the [Request Overview](/developerportal/deploy/environments/#request-overview) section in *Environments and Deployment*.
+For detailed information on the **Change Requests** tab, refer to the [Change Requests](/developerportal/deploy/environments/#change-requests) section in *Environments and Deployment*.
 
 This diagram shows the progress of the request status from plan change submission to fulfilled (approved, rejected, completed, or failed):
 
@@ -101,7 +101,7 @@ If the Technical Contact cancels a request, the plan change process is canceled 
 
 If your request status is **Pending Schedule**:
 
-1. Open **Request Details** by clicking **Details** in the **Request Overview** tab.
+1. Open **Request Details** by clicking **Details** in the **Change Requests** tab.
 2. Click **Schedule Change**.
 3. Choose from the following options:
    * **Execute Now** to apply the change immediately

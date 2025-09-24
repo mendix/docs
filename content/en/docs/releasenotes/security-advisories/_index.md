@@ -20,6 +20,7 @@ Siemens publishes their common vulnerabilities and exposures (CVE) on the second
 
 | CVE ID | CVSS v3.1 Base Score | Siemens Security Advisory (SSA) Description | Notes |
 | --- | --- | ---  | --- |
+| <a id="40758">CVE-2025-40758 | 8.7 | [Account Hijacking Vulnerability in Mendix SAML Module](https://cert-portal.siemens.com/productcert/html/ssa-395458.html) | See the SSA description for remediation details. |
 | <a id="40592">CVE-2025-40592 | 6.1 | [Zip Path Traversal Vulnerability in Mendix Studio Pro's Module Installation Process](https://cert-portal.siemens.com/productcert/html/ssa-627195.html) | See the SSA description for remediation details. |
 | <a id="40571">CVE-2025-40571 | 2.2 | [Incorrect Privilege Assignment Vulnerability in Mendix OIDC SSO Module](https://cert-portal.siemens.com/productcert/html/ssa-726617.html) | See the SSA description for remediation details. |
 | <a id="30280">CVE-2025-30280 | 5.3 | [Entity Enumeration Vulnerability in Mendix Runtime](https://cert-portal.siemens.com/productcert/html/ssa-874353.html) | See the SSA description for remediation details. |

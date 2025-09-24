@@ -13,7 +13,7 @@ The global navigation top bar and menu are available throughout Mendix Portal, a
 
 ## Global Navigation Menu {#global-navigation}
 
-On the left side of the top bar, click **Open Global Navigation** ({{% icon name="layout-rounded-1" %}}) to access the main menu:
+On the left side of the top bar, click **Open Global Navigation** ({{% icon name="layout-rounded-1" %}}) to access the main menu.
 
 {{< figure src="/attachments/developerportal/global-nav/navigation-menu.png" width="250" class="no-border" >}}
 
@@ -23,7 +23,7 @@ Click the menu items to navigate to different parts of Mendix Portal, or hover o
 
 In the **Search** box, you can search the portal for **Docs**, **Forum** posts, public **Marketplace** content, and **Academy** content.
 
-Use the various filters to refine your search results:
+Use the various filters to refine your search results.
 
 {{< figure src="/attachments/mendix-portal/global-nav/portal_search.png" class="no-border" >}}
 

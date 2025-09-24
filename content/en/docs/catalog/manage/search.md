@@ -1,5 +1,5 @@
 ---
-title: "Search in the Catalog"
+title: "Searching in the Catalog"
 url: /catalog/manage/search/
 description: "Describes how to find services and datasets in the Catalog."
 aliases:
@@ -70,13 +70,13 @@ The **Search** screen is divided into the [search](#search-pane) pane on the lef
 
 ### Search Pane {#search-pane}
 
-The collapsible **Search** pane is used to search for registered assets in the Catalog:
+The collapsible **Search** pane is used to search for registered assets in the Catalog.
 
 {{< figure src="/attachments/catalog/search/search-pane.png" alt="search pane"   width="300"  class="no-border" >}}
 
 #### Specifying the Search
 
-Enter a search string in the **Search** area with a minimum of 3 alphanumeric characters. Searching for the wildcard `*` or the empty string `''` will return all registered items.
+Enter a search string in the **Search** area with a minimum of 3 alphanumeric characters. Searching for the wildcard `*` or the empty string `''` returns all registered items.
 
 #### Filters {#filter}
 
@@ -217,11 +217,11 @@ The environment type indicates the quality and the status of the data that the e
 
 ### Curation Option {#curation-option}
 
-The **Curation Option** is displayed in the asset detail screen if you are the owner of the selected asset or a curator. In **Edit**, you can edit the information that is displayed in the Catalog for an asset:
+The **Curation Option** is displayed in the asset detail screen if you are the owner of the selected asset or a curator. In **Edit**, you can edit the information that is displayed in the Catalog for an asset.
 
 {{< figure src="/attachments/catalog/search/curation-option.png" alt="curation option"   width="300"  >}}
 
-* For the selected service, you can edit [Application Details](/catalog/manage/curate/#curate-application), [Service Details](/catalog/manage/curate/#service-details), and Authentication
+For the selected service, you can edit the [Application Details](/catalog/manage/curate/#curate-application), the [Service Details](/catalog/manage/curate/#service-details), and the Authentication.
 
 For further details, see the [Discoverable and Validated](/catalog/manage/curate/#discoverability) section of *Curate Registered Assets*.
 
@@ -231,7 +231,7 @@ The service URI is the location of the service contract of the service, also kno
 
 ### Download the Contract of a Service {#download-contract}
 
-For a selected service, you can click **Download** to download the service contract that is located at the service endpoint. A ZIP file that includes the all the files that make up the full contract is generated and downloaded.
+For a selected service, you can click **Download Contract** to download the service contract that is located at the service endpoint. A ZIP file that includes the all the files that make up the full contract is generated and downloaded.
 
 The resulting ZIP file is named `DataHub_<service_name>_<service_version>_<technology>.zip` where the string `<technology>` identifies the service protocol.
 

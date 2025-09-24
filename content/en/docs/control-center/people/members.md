@@ -32,7 +32,7 @@ When you select members in the list on this tab, a context menu is displayed, pr
 As a Mendix Admin:    
 
 * You cannot deactivate yourself.
-* You can remove Mendix Admins from the **Mendix Admins** tab of the Control Center [Company Settings](/control-center/company-settings/#mendix-admins) window.    
+* You can remove Mendix Admins from the [Mendix Admins](/control-center/mendix-admins-page/) page in the Control Center.    
   You cannot remove yourself as a Mendix Admin.
 * You can deactivate other users, but you cannot delete them.    
   A user can delete their own account from the [User Settings](/mendix-profile/user-settings/#deleting-an-account) window of their Mendix profile.

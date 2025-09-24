@@ -53,13 +53,19 @@ To import a complete app or solution package, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/import-and-export/file-import-app-project.png" class="no-border" >}}
 
-2. Select your Mendix app package file and click **Open**. The **Import App Package** dialog box will appear:
+2. Select your Mendix app package file and click **Open**. 
 
-    {{< figure src="/attachments/refguide/modeling/import-and-export/import-app-package.png" class="no-border" >}}
+    * If you select a *.mpk file*, the **Import App Package** dialog box appears:
 
-    You have the following options in this dialog box:
+        {{< figure src="/attachments/refguide/modeling/import-and-export/import-app-package.png" max-width=90% >}}
 
-    * Decide whether to store your app in a **New Mendix Team Server** (recommended), an **Existing Mendix Team Server**, **Private server**, or **Locally on disk**
+    * If you select a solution package (*.mxsolution*), the **Import Solution App Package** dialog box appears:
+
+       {{< figure src="/attachments/refguide/modeling/import-and-export/import-solution-app-package.png" max-width=90% >}}
+
+    You have the following options in the dialog box:
+
+    * Decide whether to store your app in a **New Mendix Team Server** (recommended), an **Existing Mendix Team Server** (only when a *.mpk file* is selected), **Private server** (if [Private Version Control with Git](/refguide/preferences-dialog/#enable-with-Git) is enabled in Studio Pro **Preferences**), or **Locally on disk**
 
     {{% alert color="info" %}} For a solution to be compatible with future upgrades, it must be set up using **New Mendix Team Server** (recommended) or **Private server** only. Solutions stored **Locally on disk** cannot be upgraded.{{% /alert %}}
 

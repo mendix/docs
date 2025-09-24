@@ -24,12 +24,13 @@ Mendix Cloud GenAI Resource Packs is a premium Mendix product that requires an a
 
 Mendix Cloud Model Resource Packs provide customers with a monthly quota of input and output tokens for Anthropic's Claude and Cohere's Embed models. This allows customers to implement typical Generative AI use cases using text generation, embeddings, and knowledge bases.
 
-### Supported models
+### Supported Models
 
 The Mendix Cloud GenAI Resource Packs provide access to the following models:
 
-* Anthropic Claude v3.5 Sonnet v1
-* Cohere Embed v3 (English & multilingual options)
+* Anthropic Claude 3.5 Sonnet v1
+* Anthropic Claude 3.7 Sonnet (Cross-region inference profile)
+* Cohere Embed v3 (English and multilingual options)
 
 The models are available through the Mendix Cloud, leveraging AWS's highly secure Amazon Bedrock multi-tenant architecture. This architecture employs advanced logical isolation techniques to effectively segregate customer data, requests, and responses, ensuring a level of data protection that aligns with global security compliance requirements. Customer prompts, requests, and responses are neither stored nor used for model training. Your data remains your data.
 
@@ -39,8 +40,8 @@ Customers looking to leverage other models in addition to the above can also tak
 
 | GenAI Model Resource Pack Plan             | S                 | M                 | L                 |
 | ------------------------------------------ | ----------------- | ----------------- | ----------------- |
-| Anthropic Claude V3.5 (Tokens in/month)    | 2.5 million in    | 5 million         | 10 million        |
-| Anthropic Claude V3.5 (Tokens out/month)   | 1.25 million out  | 2.5 million       | 5 million         |
+| Anthropic Claude (any version) (Tokens in/month)    | 2.5 million in    | 5 million         | 10 million        |
+| Anthropic Claude (any version) (Tokens out/month)   | 1.25 million out  | 2.5 million       | 5 million         |
 | Cohere Embed V3 (Tokens in/month)          | 5 million in      | 10 million        | 20 million        |
 
 ## Knowledge Bases
@@ -75,7 +76,11 @@ The Mendix Portal allows easy access to manage the resources, through the GenAI 
 
 ## Mendix Cloud GenAI Connector
 
-The [Mendix Cloud GenAI connector](/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/) lets you utilize Mendix Cloud GenAI resource packs directly within your Mendix application. It allows you to integrate generative AI by dragging and dropping common operations from its toolbox.
+The [Mendix Cloud GenAI connector](/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/) lets you utilize Mendix Cloud GenAI resource packs directly within your Mendix application. It allows you to integrate generative AI by dragging and dropping common operations from its toolbox. Note that any versions older than the ones listed below are no longer functional:  
+
+* GenAI for Mendix bundle v2.4.1 (Mendix 9) (contains Mendix Cloud GenAI connector) or
+* Mendix Cloud GenAI connector v3.1.1 (no `DeployedKnowledgeBase` support) or
+* Mendix Cloud GenAI connector v4.4.0 (`DeployedKnowledgeBase` support).
 
 ## Regional Availability
 

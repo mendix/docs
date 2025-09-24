@@ -64,7 +64,7 @@ In case **Target users using** (an XPath or a microflow) results in an empty lis
 
 Specifies the expression used to assign the multi-user task. This option is displayed only when the [Target users using](#target-users) is set to **XPath**. Click **Edit** to edit the [XPath constraint](/refguide/xpath-constraints/).
 
-#### Microflow
+#### Microflow {#microflow-targeting}
 
 Specifies the microflow used to assign the multi-user task. This option is displayed only when the [Target users using](#target-users) is set to **Microflow**.
 

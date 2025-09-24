@@ -12,6 +12,67 @@ aliases:
 
 These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
+### September 8, 2025
+
+#### Improvements
+
+In an effort to keep the Mendix Marketplace clean, trustworthy, and compliant with open-source standards, we have retired the following components:
+
+* Antd Segmented
+* App Guide  
+* Attribute Helper  
+* Azure Face API  
+* Bootstrap Wysiwyg Editor  
+* Collaboration Portal  
+* Collapsible Header for Mendix Native  
+* Confetti  
+* D3 Matrix  
+* D3 Network  
+* Digital Investment Advice as a Service  
+* Dropbox Connector  
+* Element Animator  
+* eTeller  
+* Expand Text Native (Read More)  
+* Focus Helper  
+* Horizontal Native Chart  
+* Imburse  
+* Inclination Test Preparation  
+* Institutional Onboarding  
+* JavaScript Actions How-To Advanced  
+* JSON To Tree  
+* Konami Code Widget  
+* Lottie Animations  
+* Lottie Animations (Native)  
+* Marine Issue Management  
+* MFI Stencil Management  
+* Multi tenant administration  
+* MxHackathon  
+* Native Calendar  
+* Native Content Renderer  
+* Native Segmented Progress Bar  
+* OAuth  
+* Parallax Header  
+* Ping One Authentication  
+* Planner Widget  
+* PLM, ERP and LAB Connect  
+* Portfolio Manager  
+* Radio Button Native  
+* Senseye Connector  
+* Set Attribute  
+* ShiftSwap  
+* Shrinking header  
+* Skip Link | Skip Navigation | A11Y Widget  
+* Smart Warehousing  
+* Smooth List  
+* Sparklines  
+* StyleSheetSwitcher  
+* SVGRenderer  
+* Tag Selector  
+* Text Template  
+* University - Event App  
+* Vertical Timeline  
+* Workforce Management  
+
 ### June 25, 2025
 
 #### New Features

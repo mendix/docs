@@ -92,7 +92,7 @@ These tables show how many Mendix Cloud Tokens each CRP requires:
 {{% alert color="info" %}} 
 
 * You can no longer purchase legacy CRPs. You can now only purchase and provision Standard, Premium, and Premium Plus CRPs. Any legacy CRPs that you have already purchased will be converted into Mendix Cloud Tokens if they are deprovisioned. This will use the rate specified in the previous tables, and the Mendix Cloud Tokens will be added to your Token pool.
-* Self-service cloud consumption capabilities are exclusively available for Standard, Premium, and Premium Plus CRPs. If you are using a legacy CRP, you may experience consumption inaccuracies in the self-service tool. For access to the latest capabilities, Mendix recommends contacting your customer success manager to transition to a Standard, Premium, or Premium Plus CRP.
+* Self-service cloud consumption capabilities are exclusively available for Standard, Premium, and Premium Plus CRPs. If you are using a legacy CRP in combination with fallback, you may experience consumption inaccuracies in the self-service tool. For access to the latest capabilities, Mendix recommends contacting your customer success manager to transition to a Standard, Premium, or Premium Plus CRP.
 
 {{% /alert %}}
 
@@ -103,4 +103,4 @@ These tables show how many Mendix Cloud Tokens each CRP requires:
 * You buy Tokens in advance, and can use them to obtain CRPs.
 * If you no longer need those resources, you can reuse the Token to obtain other CRPs, or keep it to be used later.
 * Mendix Cloud Tokens expire on the end date of their associated contract. To ensure continued access, please renew your contract before it expires.
-* Mendix Cloud Token balances might be incorrect if you still use a legacy CRP.
+* Mendix Cloud Token balances might be incorrect if you still use a legacy CRP with fallback.

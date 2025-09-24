@@ -1,14 +1,14 @@
 ---
 title: "Java Actions"
 url: /refguide/java-actions/
-weight: 10
+weight: 20
 description: "Describes using Java Actions to extend the functionality of your Mendix app."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## Introduction
 
-With Java actions you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows. You can call a Java action from a microflow using the [Call Java action](/refguide/call-java-action/).
+With Java actions you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows. You can call a Java action from a microflow using the [Call Java action](/refguide/call-java-action/) activity.
 
 {{% alert color="info" %}}
 Each Java action defined in Studio Pro corresponds to a file *{name of Java action}.java* in the subdirectory *javasource/{module name}/actions* of the app directory.

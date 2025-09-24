@@ -572,7 +572,7 @@ Cache busting is where a browser is told by the web server to re-download page r
 Mendix is able to add the `?638184496048312490` query parameter because of the use of a dynamic parameter called `{{cachebust}}` in */deployment/web/index-example.html*, which looks like this:
 
 ```html
-<script src="mxclientsystem/mxui/mxui.js?{{cachebust}}></script>
+<script src="mxclientsystem/mxui/mxui.js?{{cachebust}}"></script>
 ```
 
 {{% alert color="info" %}}

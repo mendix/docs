@@ -1,1 +1,12 @@
+---
+title: "Altair"
+url: /partners/altair/
+description: "Presents information about the strategic alliance between Mendix and Altair."
+weight: 15
+---
 
+## Introduction
+
+Mendix has a strategic alliance with Altair to make Mendix the fastest and easiest way to develop enterprise-grade applications that seamlessly integrate with Altair's powerful machine learning models capabilities.
+
+## How-To Documents in This Category

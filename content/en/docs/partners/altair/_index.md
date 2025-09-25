@@ -9,4 +9,4 @@ weight: 15
 
 Mendix has a strategic alliance with Altair to make Mendix the fastest and easiest way to develop enterprise-grade applications that seamlessly integrate with Altair's powerful machine learning models capabilities.
 
-## How-To Documents in This Category
+## Documents in this Category

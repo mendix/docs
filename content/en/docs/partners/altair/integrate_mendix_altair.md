@@ -32,7 +32,7 @@ In this document, you will:
 
 Before implementing this integration, ensure you meet the following requirements:
 
-* Access to [Altair AI Studio](https://docs.rapidminer.com/latest/studio/) with appropriate licensing
+* Access to [Altair AI Studio](https://docs.rapidminer.com/latest/studio/) with appropriate licensing (a trial license is sufficient)
 * **Optional but recommended for Mendix integration**: Access to [Altair AI Hub](https://docs.rapidminer.com/latest/hub/) for model management and deployment
 * Familiarity with data preparation and feature selection
 * Basic understanding of machine learning concepts and predictive modeling
@@ -43,17 +43,23 @@ Before implementing this integration, ensure you meet the following requirements
 **AI Hub for Mendix Integration**: While you can explore AI Studio and build models without AI Hub, you will need AI Hub access to create deployable endpoints for Mendix integration. If you're just getting started with Altair AI Studio, you can skip the AI Hub sections initially and focus on model building.
 {{% /alert %}}
 
+## Altair Products
+
+Altair offers a comprehensive suite of data science and analytics products. This document focuses on two key components for machine learning integration with Mendix:
+
+* **[Altair AI Studio](https://docs.rapidminer.com/latest/studio/)** - Your development environment where you build, train, and test machine learning models. AI Studio provides a visual, drag-and-drop interface that makes machine learning accessible without requiring extensive programming knowledge. Python code can be inserted into your processes, similar as Java in Mendix.
+
+* **[Altair AI Hub](https://docs.rapidminer.com/latest/hub/)** - Your production platform where you deploy and manage models. AI Hub is essential for creating web service endpoints that external applications (like Mendix) can consume. AI Hub is also used to collaborate with your team on the same projects.
+
+While Altair offers many other products for various data science and engineering needs, this integration guide focuses specifically on these two platforms.
+
 ## Setting Up Your AI Hub Project {#ai-hub-project}
 
 If you plan to integrate your models with Mendix applications, you'll need to set up an AI Hub project first. This section can be skipped if you're only exploring model building capabilities and not integrating the model into your Mendix app.
 
 ### Installing AI Hub
 
-### Installing AI Hub
-
-[AI Hub](https://docs.rapidminer.com/latest/hub/index.html) is Altair's centralized platform for collaboration and model deployment. Think of AI Studio as your development environment where you build models, and AI Hub as your production platform where you deploy and manage them. AI Hub is essential for creating web service endpoints that external applications (like Mendix) can consume.
-
-AI Hub needs to be hosted on your own infrastructure, and the installation process depends on your specific requirements. This tutorial assumes you have access to a running AI Hub instance. For installation details, follow the official [Install Altair AI Hub](https://docs.rapidminer.com/latest/hub/install/index.html) documentation.
+[AI Hub](https://docs.rapidminer.com/latest/hub/index.html) is Altair's centralized platform for collaboration and model deployment. AI Hub needs to be hosted on your own infrastructure, and the installation process depends on your specific requirements. This tutorial assumes you have access to a running AI Hub instance. For installation details, follow the official [Install Altair AI Hub](https://docs.rapidminer.com/latest/hub/install/index.html) documentation.
 
 ### Creating a New Project
 
@@ -91,7 +97,10 @@ The following steps provide specific guidance for working with the Employee Attr
 2. On the **Select Task** page:
    * Click **Predict** to set up a predictive modeling task
    * On the right side, select the **Status** column as your target variable
-   * The **Status** column represents if the employee is still employed by the company with the values *Current* for yes *Past* for no. This Status is the the attribute we plan to predict for new employee data based on the other existing variables, such as demographics, salary, etc. Based on this information, the models can calculate how the other attributes influence the status by finding correlations.
+   * The **Status** column represents the attrition value: if the employee is likely to stay employed by the company with the values *Current* for yes and *Past* for no. This Status is the the attribute we plan to predict for new employee data based on the other existing variables, such as demographics, salary, etc. Based on this information, the models can calculate how the other attributes influence the status by finding correlations.
+{{% alert color="info" %}}
+Status is the attribute that gets predicted based on input parameters passed to the model. The status translates to **Attrition**.
+{{% /alert %}}
 3. Click **Next** to navigate to the **Prepare Target** page. The default settings are sufficient for this use case.
 4. Click **Next** to navigate to the **Select Inputs** page
 5. Review all available input features that will be used to predict employee attrition. For this specific dataset, deselect the following columns to improve model performance:
@@ -163,7 +172,7 @@ This final step on the Altair side transforms your trained models into callable 
 Now that your model (or rather the scoring process) is accessible for external invocation, you can first perform a test.
 
 1. Navigate to your project's **Endpoints** section and click the **Test** button in the endpoint you just configured.
-2. For input data, paste the following JSON as an example (note that the typo in `TrainingRecieved` comes from the dataset):
+2. For input data, paste the following JSON as an example (note that the typo in `TrainingRecieved` comes from the dataset). The `Status` fields needs to be included for the model to predict the outcome.
 
     ```json
     {
@@ -199,6 +208,8 @@ For a complete implementation example, refer to the [example application](https:
 {{% /alert %}}
 
 ### Preparing Your Mendix Domain Model
+
+{{< figure src="/attachments/partners/Altair/How-To-Employee-Attrition/domain-model.png" >}}
 
 Before consuming the AI Hub endpoint, ensure your Mendix application contains the proper data structures:
 

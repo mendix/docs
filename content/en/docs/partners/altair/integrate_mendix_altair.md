@@ -172,7 +172,7 @@ This final step on the Altair side transforms your trained models into callable 
 Now that your model (or rather the scoring process) is accessible for external invocation, you can first perform a test.
 
 1. Navigate to your project's **Endpoints** section and click the **Test** button in the endpoint you just configured.
-2. For input data, paste the following JSON as an example (note that the typo in `TrainingRecieved` comes from the dataset). The `Status` fields needs to be included for the model to predict the outcome.
+2. For input data, paste the following JSON as an example (note that the typo in `TrainingRecieved` comes from the dataset). The `Status` fields needs to be included for the model to predict the outcome (employee attrition).
 
     ```json
     {

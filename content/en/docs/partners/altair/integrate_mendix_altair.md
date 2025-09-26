@@ -172,7 +172,7 @@ This final step on the Rapidminer side transforms your trained models into calla
 Now that your model (or rather the scoring process) is accessible for external invocation, you can first perform a test.
 
 1. Navigate to your project's **Endpoints** section and click the **Test** button in the endpoint you just configured.
-2. For input data, paste the following JSON as an example (note that the typo in `TrainingRecieved` comes from the dataset). The `Status` fields needs to be included for the model to predict the outcome.
+2. For input data, paste the following JSON as an example (note that the typo in `TrainingRecieved` comes from the dataset). The `Status` fields needs to be included for the model to predict the outcome (employee attrition).
 
     ```json
     {
@@ -283,13 +283,13 @@ After successfully calling your AI Hub endpoint, you need to process the respons
    * Implement logic to find and update the correct records in your domain model
    * Consider using loops and retrieve actions to process each prediction result individually
 
-## Next Steps
-
 After successfully implementing this integration:
 
 * You can build powerful machine learning models with your own data
 * Make the model available to external services
 * Connect from Mendix to your model for seamless integration and thus make your apps even smarter
+
+## Additional Material
 
 For additional support and documentation, refer to:
 * [AI Studio Documentation](https://docs.rapidminer.com/latest/studio/)

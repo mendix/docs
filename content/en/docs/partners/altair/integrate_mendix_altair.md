@@ -11,7 +11,7 @@ no_list: false
 
 This document guides you through the process of creating machine learning models using Altair AI Studio and deploying them through AI Hub for integration with your Mendix applications. Using a practical employee attrition prediction example, you will learn how to build predictive models, manage them in a centralized repository, and create endpoints for seamless integration.
 
-The tutorial walks you through building a model that predicts whether an employee will leave the company based on various factors such as demographics, job satisfaction, and compensation details. While HR managers often have intuitive feelings about which employees might be at risk of leaving, machine learning provides significant advantages by enabling data-driven decisions and uncovering patterns that human intuition might miss. Even though we may not have access to comprehensive present-day data about employees (such as daily working hours, recent reviews, or real-time performance metrics), this model still provides valuable insights into the likelihood of employees staying with the company, allowing HR teams to proactively prevent churn.
+The tutorial walks you through building a model that predicts whether an employee will leave the company based on various factors such as demographics, job satisfaction, and compensation details. While HR managers often have intuitive feelings about which employees might be at risk of leaving, machine learning provides significant advantages by enabling data-driven decisions and uncovering patterns that human intuition might miss. Even though we may not have access to comprehensive present-day data about employees (such as daily working hours, recent reviews, or real-time performance metrics), this model still provides valuable insights into the likelihood of employees staying with the company, allowing HR teams to proactively prevent churn. The dataset is a sample available in Altair's AI Studio.
 
 This real-world use case demonstrates the complete workflow from data exploration to production deployment.
 
@@ -34,8 +34,10 @@ Before implementing this integration, ensure you meet the following requirements
 
 * Access to [Altair AI Studio](https://docs.rapidminer.com/latest/studio/) with appropriate licensing
 * **Optional but recommended for Mendix integration**: Access to [Altair AI Hub](https://docs.rapidminer.com/latest/hub/) for model management and deployment
-* Basic understanding of machine learning concepts and predictive modeling
 * Familiarity with data preparation and feature selection
+* Basic understanding of machine learning concepts and predictive modeling
+* Basic understanding of REST integration in Mendix
+
 
 {{% alert color="info" %}}
 **AI Hub for Mendix Integration**: While you can explore AI Studio and build models without AI Hub, you will need AI Hub access to create deployable endpoints for Mendix integration. If you're just getting started with Altair AI Studio, you can skip the AI Hub sections initially and focus on model building.
@@ -43,7 +45,7 @@ Before implementing this integration, ensure you meet the following requirements
 
 ## Setting Up Your AI Hub Project {#ai-hub-project}
 
-If you plan to integrate your models with Mendix applications, you'll need to set up an AI Hub project first. This section can be skipped if you're only exploring model building capabilities.
+If you plan to integrate your models with Mendix applications, you'll need to set up an AI Hub project first. This section can be skipped if you're only exploring model building capabilities and not integrating the model into your Mendix app.
 
 ### Installing AI Hub
 
@@ -89,13 +91,14 @@ The following steps provide specific guidance for working with the Employee Attr
 2. On the **Select Task** page:
    * Click **Predict** to set up a predictive modeling task
    * On the right side, select the **Status** column as your target variable
-   * The **Status** column represents if the employee is still employed by the company (*Current*) or not (*Past*). Based on this information, the models can calculate how the other attributes influence the status by finding correlations.
+   * The **Status** column represents if the employee is still employed by the company with the values *Current* for yes *Past* for no. This Status is the the attribute we plan to predict for new employee data based on the other existing variables, such as demographics, salary, etc. Based on this information, the models can calculate how the other attributes influence the status by finding correlations.
 3. Click **Next** to navigate to the **Prepare Target** page. The default settings are sufficient for this use case.
 4. Click **Next** to navigate to the **Select Inputs** page
 5. Review all available input features that will be used to predict employee attrition. For this specific dataset, deselect the following columns to improve model performance:
-   * **Marital** - Not needed to predict the status of an employee.
+   * **Marital** - Not needed to predict the attrition of an employee.
    * **CanDoBetter** - Not part of our use case. The data represents textual feedback written by the employees.
 6. Keep all other relevant features selected, as they provide valuable predictive information such as employee demographics and compensation details. The traffic-lights below *Status* and the *Quality* column indicate how well the attributes fit for a prediction of the employee attrition.
+{{< figure src="/attachments/partners/Altair/How-To-Employee-Attrition/select-inputs-example.png" >}}
 7. Click **Next** to navigate to the **Model Types** page. You can choose which models should be run for a later comparison. Keep the default settings and click **Run** to navigate to the results.
 8. Auto Model will run various algorithms including:
    * Decision Tree
@@ -107,7 +110,7 @@ The following steps provide specific guidance for working with the Employee Attr
    * Dataset size and complexity
    * Number of algorithms being tested
    * Available computing resources
-10. Review the model performance results displayed in the interface. Auto Model compares how well each model was able to predict the status by automatically dividing the dataset into training and test subsets, validating if the model can predict the test results well enough. The classification error may indicate which model fits best for this use case (the smaller the better). You can dive deeper into each model's results and compare different parameters.
+10. Review the model performance results displayed in the interface. Auto Model compares how well each model was able to predict the status by automatically dividing the dataset into training and test subsets, verifying if the model can predict the test results well enough. The *classification error* value may indicate which model fits best for this use case (the smaller the better). You can dive deeper into each model's results and compare different parameters.
 
 #### Saving Results
 
@@ -115,7 +118,7 @@ After reviewing model performance, you need to **Save Results** in the bottom-le
 * If you have access to an [AI Hub project](#ai-hub-project), select the respective repository
 * Otherwise, you can store the results on your local machine
 
-The results contain all needed documents to apply preprocessing of the data, train the model and scoring new data. For each model that was selected in the auto model wizard, an individual folder is created containing the relevant documents.
+The results contain all needed documents to apply preprocessing of the data, train the model and scoring new data. For each model that was selected in the auto model wizard, an individual folder is created containing the relevant documents. You can review each document thoroughly by opening them. Feel free to adapt to your use case, either by using the operators provided by AI Studio or by calling your custom [Python code](https://docs.rapidminer.com/latest/python/index.html).
 
 
 ## Managing Models in AI Hub Repository
@@ -144,7 +147,8 @@ This final step on the Altair side transforms your trained models into callable 
    * Choose a snapshot, for example your latest commit
    * It is recommended to restrict access, for example using the `Long-living API token` option which you should store in a safe vault for later use
 4. Click **Add Endpoint Configuration** and select the right process you want to deploy. In our case, the *Gradient Boosted Trees* performed the best. Select the `score_set.rmp` document which you can review in AI Studio as a visual process. This process accepts input data, applies preprocessing and predicts the *Status* attribute of an employee.
-5. In this example, no parameter needs to be mapped, so you can skip step 2. In the last step **Dependencies**, you need to select every item from the project that the *score_set* depends on by navigating to the designated model and selecting the following AI Studio artifacts:
+5. In this example, no query parameters need to be mapped, so you can skip step 2. There might be cases where you need additional information in the query parameters to make your process work.
+6. In the last step **Dependencies**, you need to select every item from the project that the *score_set* depends on by navigating to the designated model and selecting the following AI Studio artifacts:
     * **Encoding Processing.rmmodel** - Handles categorical data encoding
     * **Known Values.rmmodel** - Manages known value mappings
     * **Missing Processing.rmmodel** - Processes missing data
@@ -152,7 +156,7 @@ This final step on the Altair side transforms your trained models into callable 
     * **Production Model.rmmodel** - The trained machine learning model
     * **Production Statistics.rmstats** - Statistical information about the training data
     * **Text Processing.rmmodel** - Handles text data preprocessing
-6. Finally, you can click **Save & Deploy**. In a few moments, your endpoint will be ready to be consumed.
+7. Finally, you can click **Save & Deploy**. In a few moments, your endpoint will be ready to be consumed.
 
 ### Testing Model Endpoint {#testing-endpoint}
 

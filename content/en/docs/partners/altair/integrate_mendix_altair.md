@@ -1,7 +1,7 @@
 ---
-title: "How to Integrate with Altair AI Studio and AI Hub"
+title: "How to Integrate with Altair Rapidminer"
 url: /partners/altair/how-to-integrate-mendix-altair
-linktitle: "How to Integrate with Altair AI"
+linktitle: "How to Integrate with Altair Rapidminer"
 weight: 20
 description: "Learn how to build and deploy machine learning models using Altair AI Studio and AI Hub, and integrate them with your Mendix applications"
 no_list: false
@@ -9,9 +9,9 @@ no_list: false
 
 ## Introduction
 
-This document guides you through the process of creating machine learning models using Altair AI Studio and deploying them through AI Hub for integration with your Mendix applications. Using a practical employee attrition prediction example, you will learn how to build predictive models, manage them in a centralized repository, and create endpoints for seamless integration.
+This document guides you through the process of creating machine learning models using Altair Rapidminer AI Studio and deploying them through AI Hub for integration with your Mendix applications. Using a practical employee attrition prediction example, you will learn how to build predictive models, manage them in a centralized repository, and create endpoints for seamless integration.
 
-The tutorial walks you through building a model that predicts whether an employee will leave the company based on various factors such as demographics, job satisfaction, and compensation details. While HR managers often have intuitive feelings about which employees might be at risk of leaving, machine learning provides significant advantages by enabling data-driven decisions and uncovering patterns that human intuition might miss. Even though we may not have access to comprehensive present-day data about employees (such as daily working hours, recent reviews, or real-time performance metrics), this model still provides valuable insights into the likelihood of employees staying with the company, allowing HR teams to proactively prevent churn. The dataset is a sample available in Altair's AI Studio.
+The tutorial walks you through building a model that predicts whether an employee will leave the company based on various factors such as demographics, job satisfaction, and compensation details. While HR managers often have intuitive feelings about which employees might be at risk of leaving, machine learning provides significant advantages by enabling data-driven decisions and uncovering patterns that human intuition might miss. Even though we may not have access to comprehensive present-day data about employees (such as daily working hours, recent reviews, or real-time performance metrics), this model still provides valuable insights into the likelihood of employees staying with the company, allowing HR teams to proactively prevent churn. The dataset is a sample available in AI Studio.
 
 This real-world use case demonstrates the complete workflow from data exploration to production deployment.
 
@@ -19,33 +19,33 @@ This real-world use case demonstrates the complete workflow from data exploratio
 
 In this document, you will:
 
-* Learn how to build predictive models using Altair AI Studio's Auto Model feature with the Employee Attrition dataset
+* Learn how to build predictive models using AI Studio's Auto Model feature with the Employee Attrition dataset
 * Discover how to manage and version your models using AI Hub
 * Create deployable endpoints for integration with Mendix applications
 * Understand the process from model development to production deployment
 
 {{% alert color="info" %}}
-**Example Application**: A complete [example application](https://marketplace.mendix.com/link/component/247304) demonstrating the Mendix-Altair integration is available in the Mendix Marketplace. This sample app shows how to consume Altair AI Hub endpoints within a Mendix application via REST and can serve as a reference implementation.
+**Example Application**: A complete [example application](https://marketplace.mendix.com/link/component/247304) demonstrating the Mendix-Altair-Rapidminer integration is available in the Mendix Marketplace. This sample app shows how to consume AI Hub endpoints within a Mendix application via REST and can serve as a reference implementation.
 {{% /alert %}}
 
 ### Prerequisites
 
 Before implementing this integration, ensure you meet the following requirements:
 
-* Access to [Altair AI Studio](https://docs.rapidminer.com/latest/studio/) with appropriate licensing (a trial license is sufficient)
-* **Optional but recommended for Mendix integration**: Access to [Altair AI Hub](https://docs.rapidminer.com/latest/hub/) for model management and deployment
+* Access to [AI Studio](https://docs.rapidminer.com/latest/studio/) with appropriate licensing (a trial license is sufficient)
+* **Optional but recommended for Mendix integration**: Access to [AI Hub](https://docs.rapidminer.com/latest/hub/) for model management and deployment
 * Familiarity with data preparation and feature selection
 * Basic understanding of machine learning concepts and predictive modeling
 * Basic understanding of REST integration in Mendix
 
 
 {{% alert color="info" %}}
-**AI Hub for Mendix Integration**: While you can explore AI Studio and build models without AI Hub, you will need AI Hub access to create deployable endpoints for Mendix integration. If you're just getting started with Altair AI Studio, you can skip the AI Hub sections initially and focus on model building.
+**AI Hub for Mendix Integration**: While you can explore AI Studio and build models without AI Hub, you will need AI Hub access to create deployable endpoints for Mendix integration. If you're just getting started with AI Studio, you can skip the AI Hub sections initially and focus on model building.
 {{% /alert %}}
 
-## Altair Products
+## Altair Rapidminer Products
 
-Altair offers a comprehensive suite of data science and analytics products. This document focuses on two key components for machine learning integration with Mendix:
+Altair Rapidminer offers a comprehensive suite of data science and analytics products. This document focuses on two key components for machine learning integration with Mendix:
 
 * **[Altair AI Studio](https://docs.rapidminer.com/latest/studio/)** - Your development environment where you build, train, and test machine learning models. AI Studio provides a visual, drag-and-drop interface that makes machine learning accessible without requiring extensive programming knowledge. Python code can be inserted into your processes, similar as Java in Mendix.
 
@@ -59,7 +59,7 @@ If you plan to integrate your models with Mendix applications, you'll need to se
 
 ### Installing AI Hub
 
-[AI Hub](https://docs.rapidminer.com/latest/hub/index.html) is Altair's centralized platform for collaboration and model deployment. AI Hub needs to be hosted on your own infrastructure, and the installation process depends on your specific requirements. This tutorial assumes you have access to a running AI Hub instance. For installation details, follow the official [Install Altair AI Hub](https://docs.rapidminer.com/latest/hub/install/index.html) documentation.
+[AI Hub](https://docs.rapidminer.com/latest/hub/index.html) is Altair's centralized platform for collaboration and model deployment. AI Hub needs to be hosted on your own infrastructure, and the installation process depends on your specific requirements. This tutorial assumes you have access to a running AI Hub instance. For installation details, follow the official [Install AI Hub](https://docs.rapidminer.com/latest/hub/install/index.html) documentation.
 
 ### Creating a New Project
 
@@ -87,7 +87,7 @@ To get started with model building, you'll use the sample employee attrition dat
 
 ### Creating an Auto Model
 
-Altair AI Studio's Auto Model feature simplifies the machine learning process by automatically testing multiple algorithms and selecting the best performing model. It does not require users to have extensive knowledge about data science. For comprehensive information about the Auto Model feature, its capabilities, and general usage guidelines, refer to the [Altair AI Studio Auto Model documentation](https://docs.rapidminer.com/latest/studio/guided/auto-model/).
+AI Studio's Auto Model feature simplifies the machine learning process by automatically testing multiple algorithms and selecting the best performing model. It does not require users to have extensive knowledge about data science. For comprehensive information about the Auto Model feature, its capabilities, and general usage guidelines, refer to the [AI Studio Auto Model documentation](https://docs.rapidminer.com/latest/studio/guided/auto-model/).
 
 The following steps provide specific guidance for working with the Employee Attrition dataset:
 
@@ -147,10 +147,10 @@ After exporting your model results to AI Hub:
 
 ### Creating Model Endpoints
 
-This final step on the Altair side transforms your trained models into callable web services that can be accessed from Mendix applications:
+This final step on the Rapidminer side transforms your trained models into callable web services that can be accessed from Mendix applications:
 
 1. In AI Hub, navigate to your project where you committed the model snapshots
-2. Go to the **Endpoints** section. For more information follow [Altair's endpoint creation guide](https://docs.rapidminer.com/latest/hub/endpoints/create/index.html)
+2. Go to the **Endpoints** section. For more information follow [Rapidminer's endpoint creation guide](https://docs.rapidminer.com/latest/hub/endpoints/create/index.html)
 3. Configure the deployment:
    * Choose a deployment path, for example `employeeattrition`
    * Choose a snapshot, for example your latest commit
@@ -292,6 +292,6 @@ After successfully implementing this integration:
 * Connect from Mendix to your model for seamless integration and thus make your apps even smarter
 
 For additional support and documentation, refer to:
-* [Altair AI Studio Documentation](https://docs.rapidminer.com/latest/studio/)
-* [Altair AI Hub Documentation](https://docs.rapidminer.com/latest/hub/)
-* [Altair AI Example App](https://marketplace.mendix.com/link/component/247304)
+* [AI Studio Documentation](https://docs.rapidminer.com/latest/studio/)
+* [AI Hub Documentation](https://docs.rapidminer.com/latest/hub/)
+* [Altair Rapidminer AI Example App](https://marketplace.mendix.com/link/component/247304)

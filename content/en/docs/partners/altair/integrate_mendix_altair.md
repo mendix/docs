@@ -283,13 +283,13 @@ After successfully calling your AI Hub endpoint, you need to process the respons
    * Implement logic to find and update the correct records in your domain model
    * Consider using loops and retrieve actions to process each prediction result individually
 
-## Next Steps
-
 After successfully implementing this integration:
 
 * You can build powerful machine learning models with your own data
 * Make the model available to external services
 * Connect from Mendix to your model for seamless integration and thus make your apps even smarter
+
+## Additional Material
 
 For additional support and documentation, refer to:
 * [Altair AI Studio Documentation](https://docs.rapidminer.com/latest/studio/)

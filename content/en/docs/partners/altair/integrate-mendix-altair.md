@@ -1,61 +1,59 @@
 ---
-title: "How to Integrate with Altair Rapidminer"
-url: /partners/altair/how-to-integrate-mendix-altair
-linktitle: "How to Integrate with Altair Rapidminer"
+title: "Integrating Mendix with Altair RapidMiner"
+url: /partners/altair/integrate-mendix-altair
+linktitle: "Altair RapidMiner"
 weight: 20
-description: "Learn how to build and deploy machine learning models using Altair AI Studio and AI Hub, and integrate them with your Mendix applications"
-no_list: false
+description: "Learn how to build and deploy machine learning models using Altair AI Studio and AI Hub, and integrate them with your Mendix applications."
 ---
 
 ## Introduction
 
-This document guides you through the process of creating machine learning models using Altair Rapidminer AI Studio and deploying them through AI Hub for integration with your Mendix applications. Using a practical employee attrition prediction example, you will learn how to build predictive models, manage them in a centralized repository, and create endpoints for seamless integration.
+Altair RapidMiner lets you create machine learning models using Altair RapidMiner AI Studio and deploy them through AI Hub, enabling smooth integration with your Mendix applications. 
 
-The tutorial walks you through building a model that predicts whether an employee will leave the company based on various factors such as demographics, job satisfaction, and compensation details. While HR managers often have intuitive feelings about which employees might be at risk of leaving, machine learning provides significant advantages by enabling data-driven decisions and uncovering patterns that human intuition might miss. Even though we may not have access to comprehensive present-day data about employees (such as daily working hours, recent reviews, or real-time performance metrics), this model still provides valuable insights into the likelihood of employees staying with the company, allowing HR teams to proactively prevent churn. The dataset is a sample available in AI Studio.
+Using a practical example of employee attrition prediction, you will learn how to build predictive models, manage them in a centralized repository, and create endpoints for seamless integration. You can build a model that predicts whether an employee will leave the company based on various factors such as demographics, job satisfaction, and compensation details. While HR managers often have intuitive feelings about which employees might be at risk of leaving, machine learning provides significant advantages by enabling data-driven decisions and uncovering patterns that human intuition might miss. Even though the model may not have access to comprehensive data about employees (such as daily working hours, recent reviews, or real-time performance metrics), this model still provides valuable insights into the likelihood of employees staying with the company, allowing HR teams to proactively prevent churn. The dataset is a sample available in AI Studio.
 
 This real-world use case demonstrates the complete workflow from data exploration to production deployment.
 
-{{< figure src="/attachments/partners/Altair/How-To-Employee-Attrition/mendix-altair-integration-flow.png" >}}
+{{< figure src="/attachments/partners/altair/mendix-altair-integration-flow.png" >}}
 
 In this document, you will:
 
-* Learn how to build predictive models using AI Studio's Auto Model feature with the Employee Attrition dataset
-* Discover how to manage and version your models using AI Hub
-* Create deployable endpoints for integration with Mendix applications
-* Understand the process from model development to production deployment
+* Learn how to build predictive models using AI Studio's Auto Model feature with the Employee Attrition dataset.
+* Discover how to manage and version your models using AI Hub.
+* Create deployable endpoints to enable integration with Mendix applications.
+* Understand the process from model development to production deployment.
 
 {{% alert color="info" %}}
-**Example Application**: A complete [example application](https://marketplace.mendix.com/link/component/247304) demonstrating the Mendix-Altair-Rapidminer integration is available in the Mendix Marketplace. This sample app shows how to consume AI Hub endpoints within a Mendix application via REST and can serve as a reference implementation.
+A complete [Example Application](https://marketplace.mendix.com/link/component/247304) demonstrating the Mendix-Altair RapidMiner integration is available in the Mendix Marketplace. This sample app shows how to consume AI Hub endpoints within a Mendix application via REST and can serve as a reference implementation.
 {{% /alert %}}
 
 ### Prerequisites
 
 Before implementing this integration, ensure you meet the following requirements:
 
-* Access to [AI Studio](https://docs.rapidminer.com/latest/studio/) with appropriate licensing (a trial license is sufficient)
-* **Optional but recommended for Mendix integration**: Access to [AI Hub](https://docs.rapidminer.com/latest/hub/) for model management and deployment
-* Familiarity with data preparation and feature selection
-* Basic understanding of machine learning concepts and predictive modeling
-* Basic understanding of REST integration in Mendix
-
+* Access to [AI Studio](https://docs.rapidminer.com/latest/studio/) with appropriate licensing (a trial license is sufficient).
+* Access to [AI Hub](https://docs.rapidminer.com/latest/hub/) for model management and deployment (optional but recommended for Mendix integration).
+* Familiarity with data preparation and feature selection.
+* Basic understanding of machine learning concepts and predictive modeling.
+* Basic understanding of REST integration in Mendix.
 
 {{% alert color="info" %}}
-**AI Hub for Mendix Integration**: While you can explore AI Studio and build models without AI Hub, you will need AI Hub access to create deployable endpoints for Mendix integration. If you're just getting started with AI Studio, you can skip the AI Hub sections initially and focus on model building.
+While you can explore AI Studio and build models without AI Hub, you will need AI Hub access to create deployable endpoints for Mendix integration. If you are just getting started with AI Studio, you can skip the AI Hub sections initially and focus on model building.
 {{% /alert %}}
 
-## Altair Rapidminer Products
+## Altair RapidMiner Products
 
-Altair Rapidminer offers a comprehensive suite of data science and analytics products. This document focuses on two key components for machine learning integration with Mendix:
+Altair RapidMiner offers two key components for machine learning integration with Mendix:
 
-* **[Altair AI Studio](https://docs.rapidminer.com/latest/studio/)** - Your development environment where you build, train, and test machine learning models. AI Studio provides a visual, drag-and-drop interface that makes machine learning accessible without requiring extensive programming knowledge. Python code can be inserted into your processes, similar as Java in Mendix.
+* [Altair AI Studio](https://docs.rapidminer.com/latest/studio/): Your development environment where you build, train, and test machine learning models. AI Studio provides a visual, drag-and-drop interface that makes machine learning accessible without requiring extensive programming knowledge. You can insert Python code into your processes, similar to Java in Mendix.
 
-* **[Altair AI Hub](https://docs.rapidminer.com/latest/hub/)** - Your production platform where you deploy and manage models. AI Hub is essential for creating web service endpoints that external applications (like Mendix) can consume. AI Hub is also used to collaborate with your team on the same projects.
+* [Altair AI Hub](https://docs.rapidminer.com/latest/hub/): Your production platform where you deploy and manage models. AI Hub is essential for creating web service endpoints that external applications (like Mendix) can consume. AI Hub is also used to collaborate with your team on the same projects.
 
-While Altair offers many other products for various data science and engineering needs, this integration guide focuses specifically on these two platforms.
+While Altair offers a range of products for various data science and engineering needs, this integration guide primarily focuses on these two platforms.
 
 ## Setting Up Your AI Hub Project {#ai-hub-project}
 
-If you plan to integrate your models with Mendix applications, you'll need to set up an AI Hub project first. This section can be skipped if you're only exploring model building capabilities and not integrating the model into your Mendix app.
+If you plan to integrate your models with Mendix applications, you will need to set up an AI Hub project first. You can skip this section if you are only exploring model-building capabilities and not integrating the model into your Mendix app.
 
 ### Installing AI Hub
 
@@ -65,76 +63,73 @@ If you plan to integrate your models with Mendix applications, you'll need to se
 
 Proper project organization in AI Hub is essential for model lifecycle management and deployment:
 
-1. Create a new project in AI Hub following the [project creation guide](https://docs.rapidminer.com/latest/hub/projects/index.html)
-2. Choose a descriptive project name that reflects your use case (e.g., "Employee-Attrition-Prediction")
+1. Create a new project in AI Hub by following the [project creation guide](https://docs.rapidminer.com/latest/hub/projects/index.html).
+2. Choose a descriptive project name that reflects your use case (for example, "Employee Attrition Prediction").
 
 ### Connecting AI Studio to AI Hub
 
 If you created an AI Hub project, establish the connection between your development environment and the centralized repository:
 
-1. In AI Studio, connect to your AI Hub instance
-2. Follow the detailed [AI Studio project connection guide](https://docs.rapidminer.com/latest/studio/projects/index.html)
-3. Ensure proper authentication and permissions are configured
+1. In AI Studio, connect to your AI Hub instance.
+2. Follow the detailed [AI Studio project connection guide](https://docs.rapidminer.com/latest/studio/projects/index.html).
+3. Ensure proper authentication and permissions are configured.
 
 ## Building Predictive Models with AI Studio
 
 ### Accessing Sample Data
 
-To get started with model building, you'll use the sample employee attrition dataset provided in AI Studio:
+To get started with model building, you will use the sample employee attrition dataset provided in the AI Studio:
 
-1. Navigate to **Community Samples** > **Community Real World Use Cases** > **Employee Attrition**
-2. Open and inspect the **EmployeeData** dataset
+1. Navigate to **Community Samples** > **Community Real World Use Cases** > **Employee Attrition**.
+2. Open and inspect the **EmployeeData** dataset.
 
 ### Creating an Auto Model
 
-AI Studio's Auto Model feature simplifies the machine learning process by automatically testing multiple algorithms and selecting the best performing model. It does not require users to have extensive knowledge about data science. For comprehensive information about the Auto Model feature, its capabilities, and general usage guidelines, refer to the [AI Studio Auto Model documentation](https://docs.rapidminer.com/latest/studio/guided/auto-model/).
+Auto Model feature in the AI Studio simplifies the machine learning process by automatically testing multiple algorithms and selecting the best performing model. It does not require users to have extensive knowledge about data science. For comprehensive information about the Auto Model feature, its capabilities, and general usage guidelines, refer to the [AI Studio Auto Model documentation](https://docs.rapidminer.com/latest/studio/guided/auto-model/).
 
 The following steps provide specific guidance for working with the Employee Attrition dataset:
 
 #### Starting the Auto Model Process
 
-1. In the **EmployeeData** dataset view, select **Auto Model** from the top toolbar. The wizard will guide you through the machine learning pipeline setup
+1. In the **EmployeeData** dataset view, select **Auto Model** from the top toolbar. The wizard guides you through the machine learning pipeline setup.
 2. On the **Select Task** page:
-   * Click **Predict** to set up a predictive modeling task
-   * On the right side, select the **Status** column as your target variable
-   * The **Status** column represents the attrition value: if the employee is likely to stay employed by the company with the values *Current* for yes and *Past* for no. This Status is the the attribute we plan to predict for new employee data based on the other existing variables, such as demographics, salary, etc. Based on this information, the models can calculate how the other attributes influence the status by finding correlations.
-{{% alert color="info" %}}
-Status is the attribute that gets predicted based on input parameters passed to the model. The status translates to **Attrition**.
-{{% /alert %}}
+   * Click **Predict** to set up a predictive modeling task.
+   * On the right side, select the **Status** column as your target variable.
+   * The **Status** column represents the attrition value. If the employee is likely to stay employed by the company with the values *Current* for yes and *Past* for no. This Status is the the attribute you plan to predict for new employee data based on the other existing variables, such as demographics, salary, etc. Based on this information, the models can calculate how the other attributes influence the status by finding correlations.
+
+   {{% alert color="info" %}}
+   Status is the attribute that gets predicted based on input parameters passed to the model. The status translates to **Attrition**.
+   {{% /alert %}}
+
 3. Click **Next** to navigate to the **Prepare Target** page. The default settings are sufficient for this use case.
-4. Click **Next** to navigate to the **Select Inputs** page
+4. Click **Next** to navigate to the **Select Inputs** page.
 5. Review all available input features that will be used to predict employee attrition. For this specific dataset, deselect the following columns to improve model performance:
    * **Marital** - Not needed to predict the attrition of an employee.
-   * **CanDoBetter** - Not part of our use case. The data represents textual feedback written by the employees.
-6. Keep all other relevant features selected, as they provide valuable predictive information such as employee demographics and compensation details. The traffic-lights below *Status* and the *Quality* column indicate how well the attributes fit for a prediction of the employee attrition.
-{{< figure src="/attachments/partners/Altair/How-To-Employee-Attrition/select-inputs-example.png" >}}
+   * **CanDoBetter** - Not a part of this use case. The data represents textual feedback written by the employees.
+6. Keep all other relevant features selected, as they provide valuable predictive information. Traffic lights below the **Status** and the **Quality** column indicate how well the attributes fit for a prediction of the employee attrition.
+
+   {{< figure src="/attachments/partners/Altair/How-To-Employee-Attrition/select-inputs-example.png" >}}
+
 7. Click **Next** to navigate to the **Model Types** page. You can choose which models should be run for a later comparison. Keep the default settings and click **Run** to navigate to the results.
-8. Auto Model will run various algorithms including:
+8. Auto Model runs various algorithms including:
    * Decision Tree
    * Random Forest
    * Gradient Boosted Trees
    * Logistic Regression
    * Deep Learning
-9. Wait for the training process to complete - this typically takes a few minutes depending on:
+9. Wait for the training process to complete. This typically takes a few minutes depending on:
    * Dataset size and complexity
    * Number of algorithms being tested
    * Available computing resources
-10. Review the model performance results displayed in the interface. Auto Model compares how well each model was able to predict the status by automatically dividing the dataset into training and test subsets, verifying if the model can predict the test results well enough. The *classification error* value may indicate which model fits best for this use case (the smaller the better). You can dive deeper into each model's results and compare different parameters.
+10. Review the model performance results displayed in the interface. Auto Model compares how well each model was able to predict the status by automatically dividing the dataset into training and test subsets, verifying if the model can predict the test results well enough. The **Classification Error** value may indicate which model fits best for this use case (the smaller the better). You can dive deeper into each model's results and compare different parameters.
 
 #### Saving Results
 
 After reviewing model performance, you need to **Save Results** in the bottom-left corner:
+* If you have access to an [AI Hub project](#ai-hub-project), select the respective repository
+* Otherwise, you can store the results on your local machine
 
-**If you have access to an [AI Hub project](#ai-hub-project):**
-1. First, ensure you have created a folder in your AI Hub repository to organize your models, e.g., `EmployeeAttrition`
-2. Select the respective repository and navigate to your created folder
-3. Save the results to this organized location
-
-**Otherwise:**
-* You can store the results on your local machine
-
-The results contain all needed documents to apply preprocessing of the data, train the model and scoring new data. For each model that was selected in the auto model wizard, an individual folder is created containing the relevant documents. You can review each document thoroughly by opening them. Feel free to adapt to your use case, either by using the operators provided by AI Studio or by calling your custom [Python code](https://docs.rapidminer.com/latest/python/index.html).
-
+The results contain all required documents to apply preprocessing of the data, train the model, and score new data. For each model that was selected in the auto model wizard, an individual folder is created containing the relevant documents. You can open each document and review it thoroughly. Adapt to your use case, either by using the operators provided by AI Studio or by calling your custom [Python code](https://docs.rapidminer.com/latest/python/index.html).
 
 ## Managing Models in AI Hub Repository
 

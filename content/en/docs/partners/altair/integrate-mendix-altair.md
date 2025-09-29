@@ -96,10 +96,10 @@ The following steps provide specific guidance for working with the Employee Attr
 
    * Click **Predict** to set up a predictive modeling task.
    * On the right side, select the **Status** column as your target variable.
-   * The **Status** column represents the attrition value. If the employee is likely to stay employed by the company, with the values *Current* for yes and *Past* for no. This Status is the attribute you plan to predict for new employee data based on the other existing variables, such as demographics, salary, etc. Based on this information, the models can calculate how the other attributes influence the status by finding correlations.
-
+   * The **Status** column represents the attrition value. A value of *Current* indicates employee is expected to stay with the company, whereas *Past* signifies the employee has left or is likely to leave. This Status is the attribute you plan to predict for new employee data based on the other existing variables, such as demographics, salary, etc. Based on this information, the models can calculate how the other attributes influence the status by finding correlations.
+ 
    {{% alert color="info" %}}
-   Status is the attribute that gets predicted based on input parameters passed to the model. The status translates to **Attrition**.
+   Status is the attribute that gets predicted based on input parameters passed to the model. The **Status** indicates the attrition.
    {{% /alert %}}
 
 3. Click **Next** to navigate to the **Prepare Target** page. The default settings are sufficient for this use case.
@@ -169,7 +169,10 @@ This final step on the RapidMiner side transforms your trained models into calla
    * It is recommended to restrict access, for example, using the `Long-living API token` option, which you should store in a safe vault for later use.
 
 4. Click **Add Endpoint Configuration** and select the right process you want to deploy. In this case, the Gradient Boosted Trees performed the best. Select the `score_set.rmp` document, which you can review in the AI Studio as a visual process. This process accepts input data, applies preprocessing, and predicts the **Status** attribute of an employee.
-5. In this example, no query parameters need to be mapped, so you can skip step 2. There might be cases where you need additional information in the query parameters to make your process work.
+
+   {{< figure src="/attachments/partners/altair/endpoint-setup.png" >}}
+
+5. In this example, no query parameters need to be mapped, so you can skip **Parameter mapping**. There might be cases where you need additional information in the query parameters to make your process work.
 6. In the last step, **Dependencies**, you need to select every item from the project that the *score_set* depends on by navigating to the designated model folder and selecting the whole folder.
 7. Finally, click **Save & Deploy**. In a few moments, your endpoint is ready to be consumed.
 
@@ -202,7 +205,7 @@ Now that your model (or rather the scoring process) is accessible for external i
     ```
 
 3. Paste your token in the **Token** textbox.
-4. Click **Run Test**. In the **Test Result** section, you can view the result of the model, indicating if the employee will stay with the company or rather quit soon, also providing a *confidence* factor.
+4. Click **Run Test**. In the **Test Result** section, you can view the result of the model, indicating if the employee will stay with the company or rather quit soon, also providing a **Confidence** factor.
 
 A successful test indicates the successful integration of the model into your Mendix app. 
 

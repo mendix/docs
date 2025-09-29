@@ -24,7 +24,7 @@ In this document, you will:
 * Understand the process from model development to production deployment.
 
 {{% alert color="info" %}}
-A complete [Example Application](https://marketplace.mendix.com/link/component/247304) demonstrating the Mendix-Altair RapidMiner integration is available in the Mendix Marketplace. This sample app shows how to consume AI Hub endpoints within a Mendix application via REST and can serve as a reference implementation.
+For an example integration between Mendix and RapidMiner, you can check out the [Altair RapidMiner Showcase App](https://marketplace.mendix.com/link/component/247304) in the Mendix Marketplace. This sample app shows how to consume AI Hub endpoints within a Mendix application via REST and can serve as a reference implementation.
 {{% /alert %}}
 
 ### Prerequisites
@@ -214,7 +214,7 @@ A successful test indicates the successful integration of the model into your Me
 Once your endpoint in AI Hub is deployed and tested, you can integrate the machine learning model into your Mendix application. This section provides a high-level overview of the integration process. Read [Call REST Service](/refguide/call-rest-action/) to learn more about REST integrations in general.
 
 {{% alert color="info" %}}
-For a complete implementation example, refer to the [Example Application](https://marketplace.mendix.com/link/component/247304). This app demonstrates all the integration steps with working code examples.
+For a complete implementation example, refer to the [Altair RapidMiner Showcase App](https://marketplace.mendix.com/link/component/247304). This app demonstrates all the integration steps with working code examples.
 {{% /alert %}}
 
 ### Preparing Your Mendix Domain Model
@@ -315,4 +315,4 @@ After successfully implementing this integration:
 
 * [AI Hub Documentation](https://docs.rapidminer.com/latest/hub/)
 
-* [Altair RapidMiner AI Example App](https://marketplace.mendix.com/link/component/247304)
+* [Altair RapidMiner Showcase App](https://marketplace.mendix.com/link/component/247304)

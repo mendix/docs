@@ -3,6 +3,8 @@ title: "Altair"
 url: /partners/altair/
 description: "Presents information about the strategic alliance between Mendix and Altair."
 weight: 15
+no_list: false
+description_list: true
 ---
 
 ## Introduction

@@ -82,7 +82,7 @@ If you created an AI Hub project, establish the connection between your developm
 
 To get started with model building, you'll use the sample employee attrition dataset provided in AI Studio:
 
-1. Navigate to **Data** > **Community Samples** > **Community Real World Use Cases** > **Employee Attrition**
+1. Navigate to **Community Samples** > **Community Real World Use Cases** > **Employee Attrition**
 2. Open and inspect the **EmployeeData** dataset
 
 ### Creating an Auto Model
@@ -124,8 +124,14 @@ Status is the attribute that gets predicted based on input parameters passed to 
 #### Saving Results
 
 After reviewing model performance, you need to **Save Results** in the bottom-left corner:
-* If you have access to an [AI Hub project](#ai-hub-project), select the respective repository
-* Otherwise, you can store the results on your local machine
+
+**If you have access to an [AI Hub project](#ai-hub-project):**
+1. First, ensure you have created a folder in your AI Hub repository to organize your models, e.g., `EmployeeAttrition`
+2. Select the respective repository and navigate to your created folder
+3. Save the results to this organized location
+
+**Otherwise:**
+* You can store the results on your local machine
 
 The results contain all needed documents to apply preprocessing of the data, train the model and scoring new data. For each model that was selected in the auto model wizard, an individual folder is created containing the relevant documents. You can review each document thoroughly by opening them. Feel free to adapt to your use case, either by using the operators provided by AI Studio or by calling your custom [Python code](https://docs.rapidminer.com/latest/python/index.html).
 
@@ -138,7 +144,7 @@ This section applies only if you have access to AI Hub and exported your results
 
 ### Committing Models to Repository
 
-After exporting your model results to AI Hub:
+After exporting your model results to your local repository managed by AI Hub, you need to commit it to the [remote repository](https://docs.rapidminer.com/2025.1/studio/projects/index.html):
 
 1. In AI Studio, verify that all your model results are now in the connected repository
 2. Create a new snapshot by right-clicking your repository and selecting **Create snapshot and add it to the AI Hub**
@@ -157,14 +163,7 @@ This final step on the Rapidminer side transforms your trained models into calla
    * It is recommended to restrict access, for example using the `Long-living API token` option which you should store in a safe vault for later use
 4. Click **Add Endpoint Configuration** and select the right process you want to deploy. In our case, the *Gradient Boosted Trees* performed the best. Select the `score_set.rmp` document which you can review in AI Studio as a visual process. This process accepts input data, applies preprocessing and predicts the *Status* attribute of an employee.
 5. In this example, no query parameters need to be mapped, so you can skip step 2. There might be cases where you need additional information in the query parameters to make your process work.
-6. In the last step **Dependencies**, you need to select every item from the project that the *score_set* depends on by navigating to the designated model and selecting the following AI Studio artifacts:
-    * **Encoding Processing.rmmodel** - Handles categorical data encoding
-    * **Known Values.rmmodel** - Manages known value mappings
-    * **Missing Processing.rmmodel** - Processes missing data
-    * **Optimal Feature Set.rmfeatset** - Contains selected features for the model
-    * **Production Model.rmmodel** - The trained machine learning model
-    * **Production Statistics.rmstats** - Statistical information about the training data
-    * **Text Processing.rmmodel** - Handles text data preprocessing
+6. In the last step **Dependencies**, you need to select every item from the project that the *score_set* depends on by navigating to the designated model folder and selecting the whole folder.
 7. Finally, you can click **Save & Deploy**. In a few moments, your endpoint will be ready to be consumed.
 
 ### Testing Model Endpoint {#testing-endpoint}

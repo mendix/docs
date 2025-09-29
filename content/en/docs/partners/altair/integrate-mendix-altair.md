@@ -125,9 +125,15 @@ The following steps provide specific guidance for working with the Employee Attr
 
 #### Saving Results
 
-After reviewing model performance, you need to **Save Results** in the bottom-left corner:
-* If you have access to an [AI Hub project](#ai-hub-project), select the respective repository
-* Otherwise, you can store the results on your local machine
+After reviewing model performance, click **Save Results**:
+
+**If you have access to an [AI Hub project](#ai-hub-project):**
+1. First, ensure you have created a folder in your AI Hub repository to organize your models, e.g., `EmployeeAttrition`
+2. Select the respective repository and navigate to your created folder
+3. Save the results to this organized location
+
+**Otherwise:**
+* You can store the results on your local machine
 
 The results contain all required documents to apply preprocessing of the data, train the model, and score new data. For each model that was selected in the auto model wizard, an individual folder is created containing the relevant documents. You can open each document and review it thoroughly. Adapt to your use case, either by using the operators provided by AI Studio or by calling your custom [Python code](https://docs.rapidminer.com/latest/python/index.html).
 

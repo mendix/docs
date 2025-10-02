@@ -35,18 +35,17 @@ For detailed information on how to get started with extensions, see [Get Started
 
 ## How-tos
 
-Here is a list of how-tos for you to begin with:
+Below is a list of how-tos for you to begin with:
 
-* [How to Use the App Explorer](/apidocs-mxsdk/apidocs/web-extensibility-api-11/app-explorer-api/)
 * [How to Create a Dockable Pane](/apidocs-mxsdk/apidocs/web-extensibility-api-11/dockable-pane-api/)
 * [How to Interact With Local App Files](/apidocs-mxsdk/apidocs/web-extensibility-api-11/local-app-files-api/)
 * [How to Create a Menu](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/)
 * [How to Show a Message Box](/apidocs-mxsdk/apidocs/web-extensibility-api-11/messagebox-api/)
 * [How to Access a Mendix Model](/apidocs-mxsdk/apidocs/web-extensibility-api-11/model-api/)
 * [How to Open a Tab](/apidocs-mxsdk/apidocs/web-extensibility-api-11/tab-api/)
-* [How to Show a Pop-up Notification](/apidocs-mxsdk/apidocs/web-extensibility-api-11/notification-api/)
+* [How to Show a Popup Notification](/apidocs-mxsdk/apidocs/web-extensibility-api-11/notification-api/)
 * [How to View User Preferences](/apidocs-mxsdk/apidocs/web-extensibility-api-11/preference-api/)
 * [How to Show a Modal Dialog](/apidocs-mxsdk/apidocs/web-extensibility-api-11/dialog-api/)
-* [How to Open a Document Editor](/apidocs-mxsdk/apidocs/web-extensibility-api-11/editor-api/)
-* [How to Register a Command](/apidocs-mxsdk/apidocs/web-extensibility-api-11/command-api/)
-* [How to Create a Context Menu](/apidocs-mxsdk/apidocs/web-extensibility-api-11/documents-api/)
+* [How to Open Documents](/apidocs-mxsdk/apidocs/web-extensibility-api-11/editor-api/)
+* [How to Exchange Information Between Active Views](/apidocs-mxsdk/apidocs/web-extensibility-api-11/message-passing-api/)
+* [How to Show Version Control Information](/apidocs-mxsdk/apidocs/web-extensibility-api-11/version-control-api/)

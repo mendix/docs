@@ -41,7 +41,7 @@ If you want to leave, delete, or deactivate your app, follow these steps:
     * Click **Deactivate Project** to deactivate the app.
     * Click **Delete Project** to delete the app.
 
-    {{% alert color="warning" %}}Only Free Apps can be deleted. App deletion cannot be undone, which means that ALL DATA WILL BE LOST, including all files on the [Team Server](/developerportal/general/team-server/) and all data in the Free App node.{{% /alert %}}
+    {{% alert color="warning" %}}Only Free Apps can be deleted. App deletion cannot be undone, which means that ALL DATA WILL BE LOST, including all files on the [Team Server](/developerportal/repository/team-server/) and all data in the Free App node.{{% /alert %}}
 
 ## Alternative Method
 
@@ -49,5 +49,5 @@ If you are the only team member of an app, you can also leave and delete the app
 
 ## Read More
 
-* [Settings](/developerportal/collaborate/general-settings/)
+* [Settings](/developerportal/general-settings/)
 * [App Roles](/developerportal/general/app-roles/)

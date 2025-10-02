@@ -13,7 +13,7 @@ aliases:
 
 ## Introduction
 
-While working on your changes you may find that your local copy of the app model does not have all the changes that other team members have [committed](/refguide/commit-dialog/) to the server (the [Mendix Team Server](/developerportal/general/team-server/), or an [on-premises server](/refguide/on-premises-git/)). In Git terminology this is called being behind.
+While working on your changes you may find that your local copy of the app model does not have all the changes that other team members have [committed](/refguide/commit-dialog/) to the server (the [Mendix Team Server](/developerportal/repository/team-server/), or an [on-premises server](/refguide/on-premises-git/)). In Git terminology this is called being behind.
 
 When this happens, Mendix Studio Pro offers two ways to combine your changes with changes from the server: [Rebase](#rebase) and [Merge commit](#merge). 
 

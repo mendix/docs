@@ -13,4 +13,4 @@ The **Project Management** category in the [navigation pane](/developerportal/#n
 * [Epics](/developerportal/project-management/epics/)
 * [Jira](/developerportal/project-management/jira-connector/)
 
-{{% alert color="info" %}}If you are the Scrum Master of your app, you can select which tool your team uses for project management on the [Project Management](/developerportal/collaborate/general-settings/#project-management) tab of your app's **Settings** page. {{% /alert %}}
+{{% alert color="info" %}}If you are the Scrum Master of your app, you can select which tool your team uses for project management on the [Project Management](/developerportal/general-settings/#project-management) tab of your app's **Settings** page. {{% /alert %}}

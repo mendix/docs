@@ -17,7 +17,7 @@ The **Pull** option updates the local app to the latest revision that was commit
 
 ## Commit
 
-The **Commit** option commits all local changes made to the app since the previous commit to the version control server. For more information, see [Commit](/refguide/commit-dialog/).
+The **Commit** option commits all local changes made to the app since the previous commit to the version control server. For more information, see [Commit](/refguide/commit-dialog/). The committing process starts by handling asynchronous content generation by waiting for completion, preventing unexpected post-commit file changes (such as *theme.compiled.css.map*), and providing troubleshooting options if errors or timeouts occur. See [Synchronizing Commit Content](/refguide/commit-dialog/#sync-commit-content) in *Commit* for more information.
 
 ## Push{#push}
 

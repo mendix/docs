@@ -1,5 +1,5 @@
 ---
-title: "Project Overview"
+title: "Overview"
 url: /developerportal/general/overview/
 weight: 1
 description: "Describes the Mendix Overview, which is the landing page for working on a Mendix app."
@@ -14,7 +14,7 @@ Located in the [navigation pane](/developerportal/#navigation-pane) of **Apps**,
 
 {{< figure src="/attachments/developerportal/general/overview/project-overview.png" >}}
 
-At the top of the page, you can find key information about your app, such as its logo, name, and description. If no description is provided, there is a placeholder text. With the **App Settings** permission, you can change the logo, name, and description of the app on the [Settings](/developerportal/collaborate/general-settings/) page.
+At the top of the page, you can find key information about your app, such as its logo, name, and description. If no description is provided, there is a placeholder text. With the **App Settings** permission, you can change the logo, name, and description of the app on the [Settings](/developerportal/general-settings/) page.
 
 On the right side of the page, you can find the following information about your app:
 

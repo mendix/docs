@@ -122,6 +122,8 @@ You can filter on the attributes of an associated entity. The syntax depends on 
 
 Filtering on an associated object or list in this way is possible only when you [expose associations as a link](/refguide10/odata-representation/#associations). It is not possible when you expose associations as an associated object ID.
 
+For many-to-many associations, some expressions that filter on an associated list are not supported. An example of such an unsupported filter is `City?$filter=HasLivedIn/any(person:person/Year le 1919 and person/Name eq Name)`, where the `HasLivedIn` association is many-to-many. For this request, the service will respond with `501 Not Implemented`. In general, an associated list filter on a many-to-many association that uses the variable (in this example, `person`) more than once and refers back over the association (in this example, to the `Name` of the person) will result in `501 Not Implemented`.
+
 ##### Arithmetic Operators
 
 The use of arithmetic operators such as `add`, `sub`, `mul`, `div`, and `mod` in filter expressions is not supported.

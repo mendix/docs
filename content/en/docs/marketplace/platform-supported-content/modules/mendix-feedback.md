@@ -78,7 +78,7 @@ To configure the Feedback widget, double-click it to open the **Edit Feedback** 
 
 * **Configuration** tab
     * **Model pop-up type** – This controls what happens once you click the **Feedback** button. By default, it opens the **Share Feedback** page. If you select **Custom**, you can select a different **On click** action.
-    * **App ID** – This is the unique identifier of your app. You can find it under **Project ID** in your app’s [General Settings](/developerportal/collaborate/general-settings/) in Apps.
+    * **App ID** – This is the unique identifier of your app. You can find it under **Project ID** in your app’s [Settings](/developerportal/general-settings/) in Apps.
     
         {{% alert color="info" %}}The original value of **App ID** is *1*, but this value should automatically change to your correct app ID. If it does not change automatically, see [Updating App ID](#update-app-id) below.
         {{% /alert %}}
@@ -143,7 +143,7 @@ If you are using MendixSSO3 for authentication, after upgrading to the module yo
 
 The value of the **App ID** on the **Project** tab will be changed to your correct app ID automatically from the original value 1. 
 
-If it did not change to your app ID because of an unexpected error, you can update the app ID manually. You can find the app ID in your app's [Settings](/developerportal/collaborate/general-settings/) in [Apps](https://sprintr.home.mendix.com/).
+If it did not change to your app ID because of an unexpected error, you can update the app ID manually. You can find the app ID in your app's [Settings](/developerportal/general-settings/) in [Apps](https://sprintr.home.mendix.com/).
 
 ### Feedback Item Does Not Show in Apps
 
@@ -220,7 +220,7 @@ The Mendix Feedback widget is easy to set up and automatically attaches addition
 You can configure the widget for certain actions in your app. All the configuration properties are explained on the various tabs of the properties dialog box for the widget. The feedback feature requires the following properties to be set:
 
 * **Project** tab
-    * **App ID** – the unique identifier of your app, which you can find under **Project ID** in your app’s [Settings](/developerportal/collaborate/general-settings/) in [Apps](https://sprintr.home.mendix.com/)l
+    * **App ID** – the unique identifier of your app, which you can find under **Project ID** in your app’s [Settings](/developerportal/general-settings/) in [Apps](https://sprintr.home.mendix.com/)l
 
         {{% alert color="info" %}}The original value of **App ID** is 1, but this value should automatically change to your correct app ID. If it does not change automatically, see [Updating App ID](#legacy-update-app-id) below.
         {{% /alert %}}
@@ -295,7 +295,7 @@ When this happens, right-click the error message, and choose **Update widget** o
 
 The value of the **App ID** on the **Project** tab will be changed to your correct app ID automatically from the original value 1. 
 
-If it did not change to your app ID because of an unexpected error, you can update the app ID manually. You can find the app ID in your app's [Settings](/developerportal/collaborate/general-settings/) in [Apps](https://sprintr.home.mendix.com/).
+If it did not change to your app ID because of an unexpected error, you can update the app ID manually. You can find the app ID in your app's [Settings](/developerportal/general-settings/) in [Apps](https://sprintr.home.mendix.com/).
 
 #### Page Does Not Scroll in the Screenshot Image
 

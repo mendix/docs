@@ -15,7 +15,7 @@ Follow the links in the table below to see the release notes you want:
 
 | Type of Deployment | Last Updated |
 | --- | --- |
-| [Mendix Cloud](/releasenotes/developer-portal/mendix-cloud/) | September 21, 2025 |
+| [Mendix Cloud](/releasenotes/developer-portal/mendix-cloud/) | October 1, 2025 |
 | [Mendix on Kubernetes](/releasenotes/developer-portal/mendix-for-private-cloud/) | September 4, 2025 |
 | [Mendix on Azure](/releasenotes/developer-portal/mendix-on-azure/) | August 7, 2025 |
 | [SAP Business Technology Platform (SAP BTP)](/releasenotes/developer-portal/sap-cloud-platform/) | August 27, 2024 |

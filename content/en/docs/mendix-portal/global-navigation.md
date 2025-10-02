@@ -46,7 +46,7 @@ To configure what types of notifications you receive, click **Settings** ({{% ic
 {{< figure src="/attachments/developerportal/global-nav/notifications.png" width="500" class="no-border" >}}
 
 {{% alert color="info" %}}
-To stop receiving notifications when new feedback is submitted for a specific app, go to the [Settings](/developerportal/collaborate/general-settings/) page for that app and click **Stop Watching**. To disable notifications for multiple apps on one page, use the **Stop Watching** option on the [My Apps](/developerportal/#my-apps) page.
+To stop receiving notifications when new feedback is submitted for a specific app, go to the [Settings](/developerportal/general-settings/) page for that app and click **Stop Watching**. To disable notifications for multiple apps on one page, use the **Stop Watching** option on the [My Apps](/developerportal/#my-apps) page.
 {{% /alert %}}
 
 ## Profile Menu

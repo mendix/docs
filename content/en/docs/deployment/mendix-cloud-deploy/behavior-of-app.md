@@ -48,6 +48,10 @@ Apps running in Mendix Cloud are subject to certain limitations. These behaviors
 
 * The platform automatically restarts application instances during routine platform updates, which can occur several times a week. If your application logs indicate a series of instance restarts for no apparent reason, the restarts are probably due to platform updates. This is normal and OK! The platform usually starts a new instance of your application before stopping the old one, thus ensuring that there is no downtime. You can verify this in your application logs.
 
+## Instance Shutdown
+
+* Mendix Cloud (running on Cloud Foundry or Kubernetes) enforces a strict shutdown timeout. When an application instance receives a stop or restart command, the container is shut down after approximately 10-12 seconds. If your `Before-Shutdown` microflow is configured for a longer duration, for example, 60 seconds, this platform timeout overrides that setting. Mendix recommends designing your `Before-Shutdown` microflows to complete their tasks well within this 10-12 second limit.
+
 ## WebSocket Connections
 
 * Mendix Cloud supports long-running WebSocket connections. However, multiple network components are involved in the WebSocket connections between your Mendix Cloud application and the client. These components can time out or the networks can fail, causing connections to drop.

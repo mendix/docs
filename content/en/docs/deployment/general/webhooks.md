@@ -167,7 +167,7 @@ This webhook is not visible to first-time Mendix Pipeline users.
 For existing Mendix Pipeline users who can view this webhook, do not delete it. Deleting it causes failures for Mendix Pipelines that rely on the Teamserver push (Git) trigger.
 {{% /alert %}}
 
-When you push a model change to the [Git Team Server](/developerportal/general/team-server/), and the webhook responds to the event **Teamserver push (Git)**, request content is sent to the configured endpoint. The request content contains a payload with the following format:
+When you push a model change to the [Git Team Server](/developerportal/repository/team-server/), and the webhook responds to the event **Teamserver push (Git)**, request content is sent to the configured endpoint. The request content contains a payload with the following format:
 
 ```json
 {

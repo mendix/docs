@@ -136,7 +136,12 @@ For more technical details, see the [Function Calling](/appstore/modules/genai/f
 
 ##### Adding tools from MCP servers
 
-Besides microflow tools, exposed tools from MCP servers are supported. To add MCP tools to an agent version, you need to select an MCP server configuration from the [MCP client module](/appstore/modules/genai/mcp-modules/mcp-client/). Once the agent is called, all currently available tools are added to the request from the server and are thus available to the model.
+Besides microflow tools, tools exposed by MCP servers are also supported. To add MCP tools to an agent version, select an MCP server configuration from the [MCP client module](/appstore/modules/genai/mcp-modules/mcp-client/). You can then choose one of two import types: 
+
+* Server: imports the entire server, including all tools it provides.
+* Tools: allows you to import specific tools from the server.
+
+Once the agent is called, all tools currently available from the server are added to the request and are available to the model.
 
 #### Adding Knowledge Bases
 

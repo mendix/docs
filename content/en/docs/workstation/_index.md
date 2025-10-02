@@ -9,7 +9,7 @@ cascade:
     - content_type: "Mendix Workstation"
 ---
 {{% alert color="info" %}}
-Mendix Workstation Client is available only for members of the Mendix Workstation Client Pre-Release Program. Support is available only to members of the program. To become a program member, contact Mendix Sales.
+Mendix Workstation Client is [Limited Availability](https://docs.mendix.com/releasenotes/release-status/#limited-availability) for production use. Support is provided according to your Mendix SLA if you purchased a Workstation license. If you want to take the Mendix Workstation Client into production, contact your CSM to see what arrangements are possible. Without a license you can use the Mendix Workstation Client for development, but workspaces are individual and cannot be shared.
 {{% /alert %}}
 
 ## Introduction
@@ -63,8 +63,8 @@ Mendix Workstation Client can be used to create apps that handle use cases such 
 Mendix Workstation Client consists of the following components:
 
 * [Workstation Management](https://workstation.home.mendix.com/) - Allows centralized configuration.
-* [Workstation Client](https://marketplace.mendix.com/link/component/241063) - Allows real-time communication with local hardware.
-* [Workstation Connector](https://marketplace.mendix.com/link/component/241058) - Allows app integration. 
+* [Workstation Client](https://marketplace.mendix.com/link/component/247448) - Allows real-time communication with local hardware.
+* [Workstation Connector](https://marketplace.mendix.com/link/component/247460) - Allows app integration.
 
 Together, these components enable Mendix applications to securely and efficiently integrate with local devices, bridging the gap between digital workflows and physical operations.
 

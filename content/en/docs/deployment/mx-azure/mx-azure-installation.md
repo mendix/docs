@@ -55,15 +55,11 @@ To create a cluster for your Mendix on Azure app, perform the following steps:
 
 7. In the **Actions** column, click the icon, and then select **Initialize**. 
 
-    The preflight check launches to verify that the required resources can be registered in the cluster. The check also validates if there are valid (trial) service entitlements for Mendix on Azure assigned to your company, or sufficient cloud tokens to initialise the cluster. Finally, the preflight checks validates if the Azure account used for the initialization has the Owner role.
+    The preflight check launches to verify that the required resources can be registered in the cluster.  The check also validates if the Azure account used for the initialization has the Owner role.
 
    Mendix apps are hosted with virtual machines, so the preflight check determines whether the cluster contains the required type of virtual machine. To view a list of the required resource providers, hover your cursor over the **Information** icon. If required, you can register any missing providers in the **Resource providers** section of the Microsoft Azure portal.
 
     {{< figure src="/attachments/deployment/mx-azure/preflight-check.png" class="no-border" >}}
-
-    If the number of cloud tokens is not sufficient, the following error message is shown:
-
-    {{< figure src="/attachments/deployment/mx-azure/clusterInitializeFailedQuota.png" class="no-border" >}}
 
 9. In the **Preflight Check** screen, click **Next** to be redirected to the **Provision** screen. When all preflight checks are passed, the status is displayed as **Done** in the **Preflight Check** section, as in the following figure:
 
@@ -119,15 +115,17 @@ To fix the issue, you can click **Rerun** to manually re-run the cluster. If a c
 
 If required, you can change the following options for your cluster. The **Edit** page might take few second to open.
 
-* AKS service tier
-* AKS node size
-* VM type
+* AKS Service Tier
+* AKS Node VM size
+* AKS Maximum Node Count
 * Load balancer type
+* AKS Node CIDR IP Range
 * Managed Grafana
-* Postgres compute SKU
-* Postgres Performance tier for storage IOPS
-* Postgres Compute tier
-* Postgres Compute size
+* Postgres Compute SKU
+* Postgres Storage Performance Tier
+* Postgres Compute Tier
+* Postgres Compute Size
+* Enable Read Replica
 
 {{< figure src="/attachments/deployment/mx-azure/editClusterPage.png" class="no-border" >}}
 

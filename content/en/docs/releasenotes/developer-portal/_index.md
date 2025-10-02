@@ -21,11 +21,27 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 ## 2025
 
+### September 28, 2025
+
+#### Improvements
+
+* We have updated our [navigation pane](/developerportal/#navigation-pane) in an effort to logically group items and better align with our Software Development Lifecycle (SDLC) vision. The new layout makes it even easier to find what you need at a glance. Check out the [Apps](/developerportal/) section for details.
+
+#### Fixes
+
+* We have fixed an issue that prevented you from saving a project with an empty description.
+
+### September 25, 2025
+
+#### Improvements
+
+* We have updated the look of the [feedback details](/developerportal/app-insights/feedback/#feedback-details) side panel. 
+
 ### September 11, 2025
 
 #### New Features
 
-* We have added a new section to the app **Settings** page, namely [Maia Settings](/developerportal/collaborate/general-settings/#maia-settings). This consolidates and replaces the **Mendix AI Assistance** sections which were previously available in the **Board**, **Planning**, and **Feedback** settings. Now, you can enable and disable Maia assistance for your app from one unified location.
+* We have added a new section to the app **Settings** page, namely [Maia Settings](/developerportal/general-settings/#maia-settings). This consolidates and replaces the **Mendix AI Assistance** sections which were previously available in the **Board**, **Planning**, and **Feedback** settings. Now, you can enable and disable Maia assistance for your app from one unified location.
 * You can now enable Maia directly while creating a story.     
   When you click **Create Story with Maia** in the **Create Story** window, we check whether Maia is enabled. If it is not, you are given the option to enable it on the spot. While doing that, you can provide a **Project Description** to help Maia understand the app context and provide better suggestions.
 * You can now edit the name of the **To Do** and **Done** swimlanes on the **Board** page.
@@ -277,7 +293,7 @@ It is turned off by default. Scrum Master can switch it on in the Project Manage
 
 #### Fixes
 
-* We fixed a bug where the commit dates for git-enabled apps on the [Team Server](https://docs.mendix.com/developerportal/general/team-server/#revision-history) page were not correctly localized in some cases.
+* We fixed a bug where the commit dates for git-enabled apps on the [Team Server](https://docs.mendix.com/developerportal/repository/team-server/#revision-history) page were not correctly localized in some cases.
 
 ### September 26, 2024
 
@@ -293,7 +309,7 @@ It is turned off by default. Scrum Master can switch it on in the Project Manage
 
 #### Fixes
 
-* We fixed a bug where the commit dates for git-enabled apps on the [Team Server](/developerportal/general/team-server/#revision-history) page were not localized.
+* We fixed a bug where the commit dates for git-enabled apps on the [Team Server](/developerportal/repository/team-server/#revision-history) page were not localized.
 
 ### August 22, 2024
 
@@ -368,7 +384,7 @@ It is turned off by default. Scrum Master can switch it on in the Project Manage
 #### Fixes
 
 * We fixed an issue where app team members were unable to download [documents](/developerportal/general/documents/) uploaded to the Developer Portal.
-* We fixed an issue where the app administrator was not able to change the [logo of an app](/developerportal/collaborate/general-settings/#general).
+* We fixed an issue where the app administrator was not able to change the [logo of an app](/developerportal/general-settings/#general).
 * We fixed an issue where under certain circumstances the [Technical Contact](/developerportal/general/app-roles/#technical-contact) of an app was not displayed correctly.
 
 ### May 1, 2024
@@ -467,7 +483,7 @@ It is turned off by default. Scrum Master can switch it on in the Project Manage
 
 #### Fixes
 
-* We fixed an issue where under certain circumstances the **Manage Users** overview of the app [access management](/developerportal/collaborate/general-settings/#managing-app-users) would not show.
+* We fixed an issue where under certain circumstances the **Manage Users** overview of the app [access management](/developerportal/general-settings/#managing-app-users) would not show.
 
 ### January 18, 2024
 
@@ -508,8 +524,8 @@ It is turned off by default. Scrum Master can switch it on in the Project Manage
 
 #### Improvements
 
-* We display a warning sign on the [Settings](/developerportal/collaborate/general-settings/) page in the Developer Portal if an app has no Scrum Master or if a licensed app has no Technical Contact. This can happen if a person with those roles submits a "forget me" request with us.
-* We merged the **History** tab on the [Teams](/developerportal/general/team/) page and the [History](/developerportal/collaborate/general-settings/#history) tab on the **Settings** page into one and we made sure you can download the history log. This is to prepare for the implementation of an audit trail retention policy sometime soon.
+* We display a warning sign on the [Settings](/developerportal/general-settings/) page in the Developer Portal if an app has no Scrum Master or if a licensed app has no Technical Contact. This can happen if a person with those roles submits a "forget me" request with us.
+* We merged the **History** tab on the [Teams](/developerportal/general/team/) page and the [History](/developerportal/general-settings/#history) tab on the **Settings** page into one and we made sure you can download the history log. This is to prepare for the implementation of an audit trail retention policy sometime soon.
 * If you have [connected your project to a Jira](/developerportal/project-management/jira-connector/) board, you can now alter the settings without having to deactivate the connection first.
 * We have stopped support for IBM as a cloud target. All projects currently deployed to the IBM cloud have been enabled for the [Mendix Cloud](/deployment/#mendix-cloud).
 
@@ -569,7 +585,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* When your company has connected its own [Identity Provider](/control-center/security/set-up-sso-byoidp/) to the Developer Portal, you should be using [personal access tokens](/mendix-profile/user-settings/#pat) to connect to the Team Server. To reflect this, we show a different URL on the [Team Server](/developerportal/general/team-server/) page.
+* When your company has connected its own [Identity Provider](/control-center/security/set-up-sso-byoidp/) to the Developer Portal, you should be using [personal access tokens](/mendix-profile/user-settings/#pat) to connect to the Team Server. To reflect this, we show a different URL on the [Team Server](/developerportal/repository/team-server/) page.
 
 #### Fixes
 
@@ -754,7 +770,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### New Features
 
-* With both Epics and Jira connector as new options to plan your work, we are getting ready to say goodbye to Mendix Stories on October 1, 2023. As of today, once you switch to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), we will archive all your work in Mendix Stories and you will not be able to switch back to Mendix Stories anymore. The Scrum Master of your team can choose the right project management tool for you on the [Project Management](/developerportal/collaborate/general-settings/#project-management) tab on the **General Settings** page.
+* With both Epics and Jira connector as new options to plan your work, we are getting ready to say goodbye to Mendix Stories on October 1, 2023. As of today, once you switch to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), we will archive all your work in Mendix Stories and you will not be able to switch back to Mendix Stories anymore. The Scrum Master of your team can choose the right project management tool for you on the [Project Management](/developerportal/general-settings/#project-management) tab on the **General Settings** page.
 * To highlight the story tool you choose for your app, we gave it its own section in the navigation, called [Project Management](/developerportal/project-management/).
 * With these changes, navigation in Epics works a bit differently than before: the navigation items are on a pane on the left now instead of at the top, so it is easier for you to get from one part of the Developer Portal to another. (If you need more space on the screen, you can always collapse the navigation pane.)
 * Speaking of Epics, we have released the new public API. You can find all the information in our [documentation](/apidocs-mxsdk/apidocs/epics-api/).
@@ -772,10 +788,10 @@ We have made the following improvements to the **Access Management** page in Por
     * You can now request access to restricted portfolios in your company.
     * Filters in the **Initiatives Overview** are now preserved when switching views.
 * We simplified the [app invitation flow](/developerportal/general/team/#inviting). If someone from your own company invites you to an app that also belongs to your company, you will no longer have to accept the pending invitation. Instead, you will be immediately added to the team.
-* You can now see everyone who was invited to the app and by whom. You will find this information on the [History](/developerportal/collaborate/general-settings/#history) tab of the **General Settings** page.
+* You can now see everyone who was invited to the app and by whom. You will find this information on the [History](/developerportal/general-settings/#history) tab of the **General Settings** page.
 * We had a close look at the messages we post on the [History](/developerportal/general/team/) tab of the **Team** page and revised some of them to make them more readable.
 * You can now see all pending invitations to your app on the [Team](/developerportal/general/team/) page.
-* We fixed an issue where, under certain circumstances, the app logo was not updated in Studio Pro after you changed it in the [General Settings](/developerportal/collaborate/general-settings/) page.
+* We fixed an issue where, under certain circumstances, the app logo was not updated in Studio Pro after you changed it on the [Settings](/developerportal/general-settings/) page.
 
 ### June 15, 2023
 
@@ -799,7 +815,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### New Features
 
-* You can now use a [Personal Access Token](/mendix-profile/user-settings/#pat) to access SVN repositories in [Team Server](/developerportal/general/team-server/) without using your personal Mendix credentials.
+* You can now use a [Personal Access Token](/mendix-profile/user-settings/#pat) to access SVN repositories in [Team Server](/developerportal/repository/team-server/) without using your personal Mendix credentials.
 
 ### May 4, 2023
 
@@ -872,7 +888,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Fixes
 
-* We fixed an issue where the users you administered for your app's [environment](/developerportal/collaborate/general-settings/#manage-users) were not displayed in the correct order.
+* We fixed an issue where the users you administered for your app's [environment](/developerportal/general-settings/#manage-users) were not displayed in the correct order.
 
 ### February 23, 2023
 
@@ -896,7 +912,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* We overhauled the entire [Project Management](/developerportal/collaborate/general-settings/#project-management) to a completely new design. This design brings the benefit of using the full body width of your screen, scales much better across several devices and screen resolutions, and is dark-mode ready.
+* We overhauled the entire [Project Management](/developerportal/general-settings/#project-management) to a completely new design. This design brings the benefit of using the full body width of your screen, scales much better across several devices and screen resolutions, and is dark-mode ready.
 * Have you lost track of where your apps live? We now display the cloud plan on the app tile in [My Apps](/developerportal/#my-apps).
 * We simplified the [team member invitation](/developerportal/general/team/#inviting) flow from a multi-step wizard to a single page.
 * We moved the **Pending Invites** to a tab on the [My Apps](/developerportal/#my-apps) page. You will find both the pending invitations to apps that you have received (which you can **Accept** or **Decline**) in addition to the invitations you have sent.
@@ -984,7 +1000,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* You can now see your app history under the [General Settings](/developerportal/collaborate/general-settings/#history) page. Previously this was located under the **Stories** page.
+* You can now see your app history under the [Settings](/developerportal/general-settings/#history) page. Previously, this was located under the **Stories** page.
 
 #### Fixes
 
@@ -1016,18 +1032,18 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### New Features
 
-* We added the option to watch and unwatch an app. You can find this option on the [General Settings](/developerportal/collaborate/general-settings/) page for an app as well as when you click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in an app tile on the [My Apps](/developerportal/#my-apps) page. Watching an app means that you will receive feedback notifications for this app, while unwatching an app turns off the notifications.
+* We added the option to watch and unwatch an app. You can find this option on the [General Settings](/developerportal/general-settings/) page for an app as well as when you click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in an app tile on the [My Apps](/developerportal/#my-apps) page. Watching an app means that you will receive feedback notifications for this app, while unwatching an app turns off the notifications.
 
 #### Fixes
 
 * We fixed an issue where users were not able to delete an app, if other users were still members of this app.
-* We fixed a navigation issue that would occur when users click **Go to Environments** in [Cloud Settings](/developerportal/collaborate/general-settings/#cloud-settings).
+* We fixed a navigation issue that would occur when users click **Go to Environments** in [Cloud Settings](/developerportal/general-settings/#cloud-settings).
 
 ### August 25, 2022
 
 #### Fixes
 
-* We fixed a pagination issue on the [user management overview](/developerportal/collaborate/general-settings/#manage-users) in your **Access Management** settings.
+* We fixed a pagination issue on the [user management overview](/developerportal/general-settings/#manage-users) in your **Access Management** settings.
 
 ### August 22, 2022
 
@@ -1077,7 +1093,7 @@ We have made the following improvements to the **Access Management** page in Por
     * Archive single stories or whole swimlanes
     * Easily search through your completed stories and get an overview of completed Sprints in the archive
 
-  You can try it out for any Mendix app. Your Scrum Master just needs to enable Epics in the [General Settings](/developerportal/collaborate/general-settings/#project-management). Please note it is not yet possible to migrate the data from Stories into Epics, so Mendix recommends using it for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.
+  You can try it out for any Mendix app. Your Scrum Master just needs to enable Epics on the [Settings](/developerportal/general-settings/#project-management) page. Please note it is not yet possible to migrate the data from Stories into Epics, so Mendix recommends using it for new projects or iterations first – in this way you do not have to worry about the stories in your current backlog.
 
 ### June 30, 2022
 
@@ -1087,7 +1103,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### New Features
 
-* We redesigned the [General Settings](/developerportal/collaborate/general-settings/) section to make it more intuitive and user-friendly.
+* We redesigned the [General Settings](/developerportal/general-settings/) section to make it more intuitive and user-friendly.
 * We prepared the integration of Studio Pro with our new project management tool, Epics (coming soon!).
 
 ### June 16, 2022
@@ -1227,7 +1243,7 @@ We have made the following improvements to the **Access Management** page in Por
 #### Improvements
 
 * We noticed our **API Keys** overview was not telling the exact truth and made some changes accordingly. Because API keys are cached by our user-provisioning system, when you revoke an API key, it takes a certain amount of time before this is reflected across the platform. A new confirmation message warns you of this.
-* We added a [Team Server revision history](/developerportal/general/team-server/#revision-history) overview page for your Git-enabled apps. This allows you to have an overview of the last 40 commits made in your app. You can filter the overview per branch. When a revision is linked to a user story, the Team Server page can bring you to the story details page.
+* We added a [Team Server revision history](/developerportal/repository/team-server/#revision-history) overview page for your Git-enabled apps. This allows you to have an overview of the last 40 commits made in your app. You can filter the overview per branch. When a revision is linked to a user story, the Team Server page can bring you to the story details page.
 
 #### Fixes
 
@@ -1301,7 +1317,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Fixes
 
-* We fixed a broken link to the documentation on the [Team Server](/developerportal/general/team-server/) page.
+* We fixed a broken link to the documentation on the [Team Server](/developerportal/repository/team-server/) page.
 
 ### June 1, 2021
 
@@ -1375,7 +1391,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* We made some minor changes to the look and feel over several pages, most notably the [General Settings](/developerportal/collaborate/general-settings/) page.
+* We made some minor changes to the look and feel over several pages, most notably the [General Settings](/developerportal/general-settings/) page.
 * We made some preparations for Git support.
 * We improved the sharing of data across the Developer Portal so that it is more stable and secure.
 
@@ -1483,8 +1499,8 @@ We have made the following improvements to the **Access Management** page in Por
 #### Fixes
 
 * We fixed an issue where the default avatar of a team member who committed a revision was not properly displayed in the revision overview of the story details.
-* We fixed an issue where a Company Admin was no longer able to open the [General Settings](/developerportal/collaborate/general-settings/) of an app they for a team in which they were not a member.
-* We repaired a dead link to the documentation on the [App User Management](/developerportal/collaborate/general-settings/#managing-app-users) page.
+* We fixed an issue where a Company Admin was no longer able to open the [Settings](/developerportal/general-settings/) of an app they for a team in which they were not a member.
+* We repaired a dead link to the documentation on the [App User Management](/developerportal/general-settings/#managing-app-users) page.
 
 ### August 25, 2020
 
@@ -1647,7 +1663,7 @@ We have made the following improvements to the **Access Management** page in Por
 #### Launchpad Removal and App User Management Update
 
 * We removed the old launchpad page, as we have moved to a new SSO architecture. The old URL `launchpad.mendix.com` now links to your [My Apps](/developerportal/#my-apps) page.
-* We moved the App User management functionality of the launchpad to the **General** app settings in the Developer Portal. For more information, see the [Managing App Users](/developerportal/collaborate/general-settings/#managing-app-users) section of *How to Manage General App Settings*.
+* We moved the App User management functionality of the launchpad to the **General** app settings in the Developer Portal. For more information, see the [Managing App Users](/developerportal/general-settings/#managing-app-users) section of *How to Manage General App Settings*.
 
 ### August 9, 2019
 

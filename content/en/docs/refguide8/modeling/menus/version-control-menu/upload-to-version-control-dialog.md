@@ -20,7 +20,7 @@ Use this setting to select the location where you want to store your app. There 
 
 ### New Mendix Team Server
 
-You can create a new app on [Mendix Team Server](/developerportal/general/team-server/).
+You can create a new app on [Mendix Team Server](/developerportal/repository/team-server/).
 
 * Select **New Mendix Team Server**
 * Enter the name for the new Team Server project and repository in the **App name** field

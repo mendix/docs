@@ -64,7 +64,7 @@ This list is currently incomplete and is being updated.
 | Connector | |
 | Core | Logs messages from the core runtime. This can be startup of the runtime, version of the runtime, license being used and issues related to interpreting the model. |
 | DataStorage_QueryHandling | Logs messages related to the queries that are being executed. |
-| DataStorage_QueryPlan | Query execution plan information for installations (currently only supported for PostgreSQL databases). |
+| DataStorage_QueryPlan | Logs the query plan used by the database for every query (currently only supported for PostgreSQL databases). {{% alert color="warning" %}}The `DataStorage_QueryPlan` log node has a very large performance impact and should never be enabled in production.{{% /alert %}} |
 | DocumentExporter | Logs messages related to the templating engine that generates documents. |
 | FileDocumentSizesPopulateJob | Logs messages for a background job that populates the file-size field in the database for documents that do not have that field filled (used during legacy migration). |
 | IDResolution | Information on retrieval queries and runtime operations that are being executed. |

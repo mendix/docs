@@ -34,13 +34,13 @@ Within a team, there are predefined roles that can be provisioned to team member
 * Who can edit the backlog and current [Sprint](/developerportal/project-management/epics/planning/)
 * Who can edit the app model
 * Who has the [node permissions](/developerportal/deploy/node-permissions/) for access to the node information
-* Who can change the app's [Settings](/developerportal/collaborate/general-settings/)
+* Who can change the app's [Settings](/developerportal/general-settings/)
 
 Mendix Admins can edit and create new team roles within the company in [Control Center](/control-center/roles-and-permissions/).
 
 ## Technical Contact {#technical-contact}
 
-Every deployed app has a Technical Contact. When you view the [Settings](/developerportal/collaborate/general-settings/#general) for a deployed app, you can see the app's Technical Contact. The Technical Contact is the user you can get in touch with for questions related to the app. 
+Every deployed app has a Technical Contact. When you view the [Settings](/developerportal/general-settings/#general) for a deployed app, you can see the app's Technical Contact. The Technical Contact is the user you can get in touch with for questions related to the app. 
 
 {{< figure src="/attachments/developerportal/general/team/app-roles/technical-contact.png" alt="" class="no-border" >}}
 

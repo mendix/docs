@@ -8,7 +8,7 @@ weight: 30
 
 ## Introduction
 
-After you have [installed the Workstation Client](/mendix-workstation/installation/), you must either build a Mendix application that will send data or commands to your devices, or extend an existing app accordingly. In order to do that, you must download, install, and configure the [Mendix Workstation Connector](https://marketplace.mendix.com/link/component/241058) from the Mendix Marketplace.
+After you have [installed the Workstation Client](/mendix-workstation/installation/), you must either build a Mendix application that will send data or commands to your devices, or extend an existing app accordingly. In order to do that, you must download, install, and configure the [Mendix Workstation Connector](https://marketplace.mendix.com/link/component/247460) from the Mendix Marketplace.
 
 ### How the Connection Works
 
@@ -33,8 +33,8 @@ To install and configure the Workstation Connector, perform the following steps:
 
     The starter template is suitable for new users who want a good starting point. Alternatively, you can also add the connector to an existing app.
 
-2. If you did not use the starter template, download the [Mendix Workstation Connector](https://marketplace.mendix.com/link/component/241058).
-3. Configure the application in Workstation Management by performing the following steps:
+2. If you did not use the starter template, download the [Mendix Workstation Connector](https://marketplace.mendix.com/link/component/247460).
+3. Configure the Station in Workstation Management by performing the following steps:
 
     1. Navigate to the **Workspaces** page in the [Workstation Management](https://workstation.home.mendix.com/) (default home page).
     2. Click **Create Workspace** or click on an existing Workspace in the overview.
@@ -45,15 +45,20 @@ To install and configure the Workstation Connector, perform the following steps:
     8. Click **Download** to navigate to the Workstation Client listing in the marketplace, download the Client installer for Windows, install, and launch it.
     9. Copy and paste the registration token into the [Workstation Client](/mendix-workstation/installation/) registration field.
 
-4. Set up the private key by performing the following steps:
+4. Configure your app as an allowed app by performing the following steps:
 
-    1. In your app add the microflow **ASU_AppKeyPair_Initialize** as an after startup microflow and add the page **AppKeyPair_ShowPublicKey** to your navigation or link to it from a button for an admin role.
-    2. Run the app.
-    3. Navigate to the page you added in step 1 and copy the shown public key. If there is no key shown click **Regenerate KeyPair**. 
-    4. On the **Apps** page in your workspace in the Workstation Management, click **Create App**.
-    5. Paste the copied public key into the **Public Key** field.  
-    6. In the station configuration, enable your newly created application (for example, `http://localhost:8080`, which is the default when running an app locally).
-    7. Refresh the Workstation Client.
+    1. In your app go to [App Security](https://docs.mendix.com/refguide/app-security/#user-roles) and assign the module role **StationConnector.Administrator** to the Administrator user role.
+    2. In your app add the page **StationConnector_Security** to your navigation or link to it from an 'Open page button'. Alternatively, place the snippet **SNIPPET_StationAdminPage** on a page available to the Adminstrator user role.
+    3. Run the app.
+    4. Login as an Administrator, navigate to the page you added in step 2 and copy the shown public key.
+    6. Go back to the [Workstation Management](https://workstation.home.mendix.com/) and navigate to the workspace you created in step 3.2.
+    7. Go to the **Apps** page in your workspace and click **Create App**.
+    8. Enter your app's URL (for example, `http://localhost:8080`, which is the default when running an app locally) and paste the copied public key into the **Public Key** field.
+    9. Perform one of the following actions:
+        * To enable the app for all stations, select **Enable in all stations**
+        * To enable it for a specific station, go to **Stations** and navigate to your station. You will find the created app under the **Apps** section. Here you can enable the application just for this station by pressing the toggle.
+    10. Refresh the Workstation Client.
+    11. Optional: To recreate the key pair, additionally assign the module role **StationConnector.SecurityAdministrator** to your Administrator role. This adds a **Regenerate KeyPair** button to the **StationConnector_Security** page. Be mindful when using this button in a production scenario to avoid the need to reconfigure the app in the Management, and refresh all Workstation Clients.  
 
 ## Managing Apps
 

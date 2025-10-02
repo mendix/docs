@@ -1,6 +1,6 @@
 ---
 title: "Team Server"
-url: /developerportal/general/team-server/
+url: /developerportal/repository/team-server/
 weight: 12
 description: "Describes the overview of Team Server revisions and commits."
 aliases:
@@ -8,6 +8,7 @@ aliases:
     - /developerportal/develop/team-server.html
     - /refguide/team-server
     - /developerportal/develop/team-server
+    - /developerportal/general/team-server
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -75,7 +76,7 @@ When you click **Details** for a revision, you can see the stories related to th
 
 Related stories will only appear if you select them in the **Commit** dialog box of Mendix Studio Pro when committing:
 
-{{< figure src="/attachments/developerportal/general/team-server/commit-story.png" class="no-border" >}}
+{{< figure src="/attachments/developerportal/repository/team-server/commit-story.png" class="no-border" >}}
 
 ## Read More
 

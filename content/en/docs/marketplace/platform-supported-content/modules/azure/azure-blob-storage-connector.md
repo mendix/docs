@@ -82,6 +82,7 @@ The Azure Blob Storage connector contains the following operations:
 * `GetBlob` - Allows you to retrieve a blob. For more information, see [Get Blob to Azure Blob Storage](https://learn.microsoft.com/en-us/rest/api/storageservices/get-blob).
 * `DeleteBlob` - Allows you to delete a blob. For more information, see [Delete Blob from Azure Blob Storage](https://learn.microsoft.com/en-us/rest/api/storageservices/delete-blob).
 * `ListBlobs` - Allows you to list the blobs in a specified container. For more information, see [List Blobs from a Azure Blob Storage container](https://learn.microsoft.com/en-us/rest/api/storageservices/list-blobs?tabs=microsoft-entra-id).
+* `ListContainers` - Allows you to list the containers you have access to in your Azure account. For more information, see [List Containers](https://learn.microsoft.com/en-us/rest/api/storageservices/list-containers2).
 * `GetApplicationBearerToken` - Allows the application to request a bearer token. The response is mapped to a **EntraCredentials** object that can be used to authenticate calls to Blob Storage.
 * `GetUserDelegationKey` - Allows you to retrieve a user delegation key. For more information, see [Get User Delegation Key](https://learn.microsoft.com/en-us/rest/api/storageservices/get-user-delegation-key).
 * `Create_SAS_Token_Blob` - Allows you to create an SAS with which to access a specific Blob.
@@ -174,6 +175,25 @@ To use this operation in your microflow, perform the following steps:
 4. Call the **GET_v1_Azure_ListBlobs** action in your microflow.
 
 The operation returns a list of **Blob** objects associated to the **ListBlobResponse**, which is a generalization of **AbstractResponse** and contains the **StatusCode** and **ReasonPhrase**.
+
+#### GET_v1_Azure_ListContainers
+
+Lists all containers within the specified Azure Blob Storage account. This operation requires a valid `ListContainersRequest` object and an appropriate credentials object (either `SASCredentials` or `EntraCredentials`). For more information, see [List Containers from Azure Blob Storage](https://learn.microsoft.com/en-us/rest/api/storageservices/list-containers2).
+
+To use this operation in your microflow, perform the following steps:
+
+1. Create a **ListContainersRequest** object and populate the following attributes:
+
+    * `StorageAccount` - Required; storage account name you want to perform Blob Storage operations on
+    * `VersionAPI` - Required; API version for the Azure Storage service (for example, `2021-04-01`)
+    * `Prefix` - Optional; filters the results to return only containers whose names begin with the specified prefix
+    * `MaxResults` - Optional; the maximum number of results listed by the **ListContainers** operation
+    * `Marker` - Optional; the marker used to get the next (sub)set of containers from the specified location.
+
+2. Provide a valid credentials object by using the **AbstractCredentials** parameter.
+3. Call the **GET_v1_Azure_ListContainers** action in your microflow.
+
+The operation returns a list of **Container** objects associated to the **ListContainersResponse**, which is a generalization of **AbstractResponse** and contains the **StatusCode** and **ReasonPhrase**.
 
 #### POST_v1_Azure_GetApplicationBearerToken
 

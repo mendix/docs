@@ -14,9 +14,9 @@ Mendix Cloud is the default deployment option for Mendix applications. It is a p
 
 There are several options for deployment with Mendix Cloud:
 
-* [Mendix Free](https://www.mendix.com/pricing/start-for-free/) – If you are new to the Mendix community and would like to create, deploy, and share your own app, you can do so for free using Mendix's limited Free App environment. Note that Free Apps do not support complex or large applications, only run for a couple of hours before shutting down, cannot be scaled, and provide limited operational information.
+* [Mendix Free](https://www.mendix.com/pricing/start-for-free/) – If you are new to the Mendix community and want to create, deploy, and share your own app, you can do so for free using Mendix's limited Free App environment. Note that Free Apps do not support complex or large applications, only run for a couple of hours before shutting down, cannot be scaled, and provide limited operational information.
 * [Mendix Cloud with licensed nodes](https://www.mendix.com/evaluation-guide/app-lifecycle/mendix-cloud-features/) – With a license, you can take advantage of Mendix Cloud's full features, including deep insights, alerting, high availability, and backups.
-* [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-lifecycle/mendix-cloud-overview/#mendix-cloud-vpc) – Organizations can also have their own Mendix Cloud. Mendix Cloud Dedicated is a single-tenant instance of the public Mendix Cloud, running the apps of only one organization.
+* [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-lifecycle/mendix-cloud-overview/#mendix-cloud-vpc) – Organizations can have their own Mendix Cloud through Mendix Cloud Dedicated, a single-tenant instance of the public Mendix Cloud that runs only that organization's applications.
 
 ### Free App {#free-app}
 
@@ -45,17 +45,17 @@ Free Apps make it possible to start creating and deploying apps with Mendix for 
 
 #### Sleep Mode
 
-As noted in the table above, a Free App goes into sleep mode after about an hour of inactivity. If you access the app while it is inactive, it displays the following message: 
+Due to the limitations of a Free App, it enters sleep mode after about an hour of inactivity. If you access the app during this time, it displays the following message: 
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/appresumed.png" alt="A Resuming app message" width=60% class="no-border" >}}
 
-If, after a couple of minutes, your app does not wake up, contact [Mendix Support](https://support.mendix.com).
+If your app does not wake up after a few minutes, contact [Mendix Support](https://support.mendix.com).
 
-You can upgrade a Free App to a licensed app running on a node in Mendix Cloud. For more information, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
+To prevent your Free App going into sleep mode, upgrade to a licensed app running on a node in Mendix Cloud. For more information, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
 
 #### Archiving of Free Apps {#free-apps-archival}
 
-If a Free App has been in sleep mode for three months or longer, it may be archived. For Free Apps that are going to be archived, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) is informed two weeks beforehand. Upon archiving, the project on the Mendix Platform and repository on the [Team Server](/developerportal/general/team-server/) are retained and will remain active and accessible, but the running app, database, files, and backups for the Free App are deleted.
+If a Free App has been in sleep mode for three months or longer, it may be archived. For Free Apps that are going to be archived, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) is informed two weeks beforehand. Upon archiving, the project on the Mendix Platform and repository on the [Team Server](/developerportal/repository/team-server/) are retained and will remain active and accessible, but the running app, database, files, and backups for the Free App are deleted.
 
 There are two ways to prevent your Free App from being archived:
 
@@ -64,7 +64,7 @@ There are two ways to prevent your Free App from being archived:
 
 #### Deletion of Unused Projects {#projects-deletion}
 
-If a project has never seen any activity since it was created, it is kept on the Team Server for a maximum of one year. After this, the project on the Mendix Platform, its repository on the Team Server, and any Mendix Cloud resources will be permanently deleted.
+If a project has never seen any activity since it was created, it is kept on the Team Server for a maximum of one year. After this, the project on the Mendix Platform, its repository on the Team Server, and any Mendix Cloud resources associated with the project will be permanently deleted.
 
 The system uses the following criteria when determining if an app is unused:
 
@@ -75,7 +75,7 @@ The system uses the following criteria when determining if an app is unused:
 * The app was created more than a year ago
 * No commits since the app was created
 
-Once a project is marked for deletion, the system uses a grace period of 14 calendar days before it is permanently deleted.
+Once a project is marked for deletion, the system applies a grace period of 14 calendar days before it is permanently deleted.
 
 You can prevent this clean up by performing one of the following actions:
 
@@ -95,7 +95,7 @@ Each environment can only run a single version of an app. Additionally, all the 
 
 #### Flexible Environments {#flexible-environments}
 
-If the standard environments that you get with a licensed app do not meet your requirements, you can request a Mendix Cloud node with Flexible Environments. With Flexible Environments, you can specify how many environments you want in your node. You can also decide what they should be called.
+If the standard environments that you get with a licensed app do not meet your requirements, you can request a Mendix Cloud node with Flexible Environments. With Flexible Environments, you can specify how many environments you want in your node. You can also decide what to call them.
 
 ### Database
 
@@ -215,13 +215,13 @@ With a premium plan, you can replicate application data in Mendix Cloud to anoth
 
 You can also purchase a Premium Plus plan, which provides all the features of the Premium plan, with the addition of Regional Fallback.
 
-With Regional Fallback, a copy of your database and FileDocuments is maintained in a completely separate region. For example, if your app normally runs in us-east-1, a copy of your data is made in us-west-2. If all the AZs in the primary region become unavailable, you can then choose to run your app temporarily in the secondary region with the data that has been copied to that region. Once the primary region is back online, you can then revert your app to running in the primary region.
+With Regional Fallback, a copy of your database and FileDocuments is maintained in a completely separate region. For example, if your app normally runs in us-east-1, a copy of your data is made in us-west-2. If all the AZs in the primary region become unavailable, you can choose to run your app temporarily in the secondary region with the data that has been copied to that region. Once the primary region is back online, you can revert your app to run in the primary region.
 
 Because this is designed for a catastrophic regional failure, there are some limitations to your normal operations. For example, you cannot deploy a new version of the app while it is running in the secondary region. The decision to switch to the secondary region is completely under your control.
 
 #### On-Premises and Mendix on Kubernetes
 
-If you want to deploy your Mendix apps to other environments, you can add these to your Mendix plan. For example, you can choose to deploy to [SAP BTP](/developerportal/deploy/sap-cloud-platform/). You can also choose to deploy to your own cloud using [Mendix on Kubernetes](/developerportal/deploy/private-cloud/).
+If you want to deploy your Mendix apps to other environments, you can add these to your Mendix plan. For example, you can deploy to [SAP BTP](/developerportal/deploy/sap-cloud-platform/) or your own cloud using [Mendix on Kubernetes](/developerportal/deploy/private-cloud/).
 
 ## Read More
 

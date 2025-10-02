@@ -67,7 +67,7 @@ When Context source is selected, the **Data source** section (required) configur
 
 The database source type can be used to set the value of a string or integer attribute with options fetched from an attribute with the same type.
 
-* **Selection type** – (available in 2.0 and above) determines how other [listen to widget](/refguide/listen-to-grid-source/) data sources perceive the data. This property can only be used with widgets using a [database data source](/refguide/database-source/).
+* **Selection type** (available in 2.0 and above) –  Determines how other [listen to widget](/refguide/listen-to-grid-source/) data sources perceive the data. This property can only be used with widgets using a [database data source](/refguide/database-source/).
     * **Single** – Allows only a single item to be selected from the options list.
     * **Multi** – Allows multiple items to be selected from the options list.
 * **Caption** – Allows custom captions to be displayed on the options list.
@@ -81,26 +81,28 @@ The static source type can be used to set the value of a string attribute with m
 
 The **General** section allows you to configure general behavior and captions for the combo box. The following configurations are available:
 
-* **Placeholder text** – captions that will be displayed when there is no data being selected
-* **No options text** – captions that will be used when filter results are empty, or shown when there is no data displayed in the combo box's options
-* **Clearable** – if enabled, this allows selected data to be cleared all at once
-* **Custom content** – allows custom widgets to be displayed in the combo box instead of normal text values
-* **Show footer** – if enabled, this allows custom widgets to be placed in a combo box's footer (as shown below). For example, you can include a link, button, or image in the footer. A popular choice is including a "new item" button in the footer:
+* **Placeholder text** – Captions that will be displayed when there is no data being selected
+* **No options text** – Captions that will be used when filter results are empty, or shown when there is no data displayed in the combo box's options
+* **Clearable** – If enabled, this allows selected data to be cleared all at once
+* **Custom content** – Allows custom widgets to be displayed in the combo box instead of normal text values
+* **Show footer** – If enabled, this allows custom widgets to be placed in a combo box's footer (as shown below). For example, you can include a link, button, or image in the footer. A popular choice is including a "new item" button in the footer:
+
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/combobox/show-footer.png" alt="Shows a footer which can house custom widgets." class="no-border" >}}
 
 #### Multi Selection (Reference Set)
 
 The **Multi selection (reference set)** section allows you to configure combo box behavior for reference set type datasource. The following configurations are available:
 
-* **Selection Method** – configures the behavior for selecting options
-    * **Checkbox** – displays a checkbox on the left side of each option. Selected items will be marked by check marks.
-    * **Row click** – each selected item will be filtered out from the displayed options. Items can deselected by clicking the {{% icon name="remove" %}} on each of the displayed selected items.
-* **Show selected item as** – you can choose to display selected item as labels with {{% icon name="remove" %}} buttons which allow those items to be deselected (shown at the top of this screenshot), or as simple comma-separated text (shown at the bottom):
+* **Selection Method** – Configures the behavior for selecting options.
+    * **Checkbox** – Displays a checkbox on the left side of each option. Selected items will be marked by check marks.
+    * **Row click** – Each selected item will be filtered out from the displayed options. Items can deselected by clicking the {{% icon name="remove" %}} on each of the displayed selected items.
+* **Show selected item as** – Allows you to display selected items as labels with {{% icon name="remove" %}} buttons which allow those items to be deselected (shown at the top of this screenshot), or display selected items as simple comma-separated text (shown at the bottom):
 
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/combobox/combobox-showselected.png" alt="Show selected item as list or labels examples" class="no-border" >}}
+
     {{% alert color="info" %}}The **Show selected item as** property is only available for the **Checkbox** selection method without custom content.{{% /alert %}}
 
-* **Show Select All** – you can choose to enable a "Show select all" button that will be displayed on the top of the options list. It allows the end-user to click it and select or deselect all options at once:
+* **Show Select All** – Allows you can choose to enable a "Show select all" button that will be displayed on the top of the options list. It allows the end-user to click it and select or deselect all options at once:
 
     {{< figure src="/attachments/appstore/platform-supported-content/widgets/combobox/select-all.png" alt="Show select or unselect button header" class="no-border" >}}
 
@@ -120,9 +122,10 @@ For more information, see [Editability Section](/refguide/common-widget-properti
 
 The following configurations are available:
 
-* **On change** – executes an action when the attribute value changes
-* **On enter action** – executes an action when the user sets focus on the widget
-* **On leave action** – executes an action when the user moves focus away from the widget
+* **On change** – Executes an action when the attribute value changes.
+* **On enter action** – Executes an action when the user sets focus on the widget.
+* **On leave action** – Executes an action when the user moves focus away from the widget.
+* **On filter input change** – Executes an action when the filter input value changes.
 
 ### Accessibility Tab {#accessibility}
 
@@ -134,8 +137,8 @@ The **Advanced** tab allows you to configure settings for features that is beyon
 
 * **Performance group**
 
-    * **Lazy loading** – allows the user to configure when to load the combo box's options data. Set it to **yes** to ensure that the data is not loaded until the user opens the options menu.
-    * **Loading type** – allows the user to configure the loading animation of a combo box.
+    * **Lazy loading** – Allows the user to configure when to load the combo box's options data. Set it to **yes** to ensure that the data is not loaded until the user opens the options menu.
+    * **Loading type** – Allows the user to configure the loading animation of a combo box.
 
 {{% alert color="info" %}}
 Lazy loading always fetches 100 data items for each request. Pagination is triggered when the user scrolls to the bottom of the options menu.
@@ -152,13 +155,14 @@ Using a **caption type** expression disables lazy load due to a technical limita
 * **Multiple selection**
     This setting is only applicable for combo boxes with multiple item selections.
 
-    * **Selected items sorting** – allows user to configure the sorting mechanism to display the selected items.
-        * **Caption** - if selected, this settings displays selected items based on their captions, regardless of user's selected sequence.
-        * **Default** - if selected, this settings does not do any sorting on the client side. Instead, it keeps the sorting from the saved values given from datasource.
-            If the target attribute value is set (that is, if the multiple selection is set to **association**) the data will already sorted based on values from the API and combobox will display it as it is. Otherwise, if there is no target attribute (that is, if the multiple selection is set to **database**) the selected items are displayed based on user's selected sequence.
+    * **Selected items sorting** – Allows user to configure the sorting mechanism to display the selected items.
+        * **Caption** - If selected, this settings displays selected items based on their captions, regardless of user's selected sequence.
+        * **Default** - If selected, this settings does not do any sorting on the client side. Instead, it keeps the sorting from the saved values given from data source.
+            If the target attribute value is set (that is, if the multiple selection is set to **association**) the data will already sorted based on values from the API and combo box will display it as it is. Otherwise, if there is no target attribute (that is, if the multiple selection is set to **database**) the selected items are displayed based on user's selected sequence.
 
 * **Filter**
-    * **Filter type** – allows the user to type into the input and filter displayable options on the combo box.
+    * **Filter type** – Allows the user to type into the input and filter displayable options on the combo box.
+    * **Debounce interval** – The debounce interval (default 200 ms) delays applying filters while the user types to reduce server requests and unnecessary filtering. It debounces both data source filter operations (lazy-loading database queries), and **On filter input change** event action triggers.
 
 ### Common Tab {#common}
 

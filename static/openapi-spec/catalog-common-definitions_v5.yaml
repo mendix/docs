@@ -681,6 +681,15 @@ components:
     Details_Rest:
       type: object
       description: List of REST resources
+      properties:
+        totalOperations:
+          type: integer
+          description: The total number of OpenAPI operations at this data source (endpoint)
+          example: 1
+        operations:
+          type: array
+          items:
+            $ref: "#/components/schemas/Operation"
     Documents:
       type: object
       required:
@@ -1108,6 +1117,139 @@ components:
           type: string
           format: uuid
           description: The UUID of the owner. Will only be available if the owner has a Mendix Platform account.
+    OpenAPIRequestBody:
+      type: object
+      required:
+        - required
+      properties:
+        description:
+          type: string
+          maxLength: 1000
+          description: Description of the request
+          example: "Information of the Employee"
+        required:
+          type: boolean
+          description: Parameter is required or not
+          example: True
+    OpenAPIResponse:
+      type: object
+      description: Details of the response
+      required:
+        - statusCode
+        - description
+      properties:
+        statusCode:
+          type: string
+          description: Status code of response..
+          example: "200"
+        description:
+          type: string
+          maxLength: 1000
+          description: Description of the response
+          example: "Employee details Updated"
+    OpenAPIParameter:
+      type: object
+      description: Details of the parameter
+      required:
+        - name
+        - in
+        - required
+      properties:
+        name:
+          type: string
+          maxLength: 200
+          description: The name of the parameter
+          example: "employeeId"
+        in:
+          type: string
+          enum: ["path", "formData", "query", "header"]
+          description: The location of the parameter
+          example: "path"
+        required:
+          type: boolean
+          description: Parameter is required or not
+          example: True
+        type:
+          type: string
+          enum:
+            [
+              "boolean",
+              "string",
+              "number",
+              "integer",
+              "array",
+              "file",
+              "object",
+            ]
+          description: Required if 'in' is not body. Defines the type of the parameter
+          example: "string"
+        description:
+          type: string
+          maxLength: 1000
+          description: A brief description of the parameter
+          example: "ID of the employee"
+    Operation:
+      type: object
+      description: Details of the operation
+      required:
+        - method
+        - path
+        - responses
+      properties:
+        operationId:
+          type: string
+          maxLength: 200
+          description: The name of the operation
+          example: "EmployeeUpdate"
+        method:
+          type: string
+          maxLength: 200
+          description: Operation HTTP method type
+          example: "PUT"
+        description:
+          type: string
+          maxLength: 10000
+          description: Description of the OpenAPI operation.
+          example: "This endpoint allows clients to update one or more details of a specific employee, such as name, contact information, job title, department, or address. The employee is identified using a unique employee ID provided in the path parameter. Only the fields provided in the request body will be updated; all other details will remain unchanged"
+        summary:
+          type: string
+          maxLength: 500
+          description: Summary of the OpenAPI operation.
+          example: "Updates the information of an existing employee in the system"
+        path:
+          type: string
+          description: Path of the OpenAPI operation
+          example: "/employee/{employeeId}"
+        tags:
+          type: array
+          items:
+            $ref: "#/components/schemas/Tag"
+          example:
+            - name: "HR"
+            - name: "Employee"
+        requestBody:
+          allOf:
+            - $ref: "#/components/schemas/OpenAPIRequestBody"
+            - type: object
+          description: Details of request
+        totalResponses:
+          type: integer
+          description: The total number of responses in this operation at this data source (endpoint)
+          example: 1
+        responses:
+          type: array
+          items:
+            $ref: "#/components/schemas/OpenAPIResponse"
+          description: "List of responses belonging to this operation"
+        totalParameters:
+          type: integer
+          description: The total number of parameters in this operation at this data source (endpoint)
+          example: 1
+        parameters:
+          type: array
+          items:
+            $ref: "#/components/schemas/OpenAPIParameter"
+          description: "List of parameters belonging to this operation"
     Parameter:
       allOf:
         - $ref: "#/components/schemas/ActionInputOutput"

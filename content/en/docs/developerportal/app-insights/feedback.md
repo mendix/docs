@@ -211,7 +211,7 @@ The **Feedback** tab shows the following items:
 
 You can use Maia to create a story based on one or more feedback items. To do that, follow these steps:
 
-1. Enable Maia in the app [Settings](/developerportal/collaborate/general-settings/#maia-settings) page.
+1. Enable Maia in the app [Settings](/developerportal/general-settings/#maia-settings) page.
 2. Select a feedback item from the list.
 3. Click **Create Story**. The **Create Story** window is displayed.
 4. Click {{% icon name="sparkles" %}}**Create with Maia**.     
@@ -261,7 +261,7 @@ From the [feedback details](#feedback-details) page, you can manage tags by clic
 
 You can receive a notification when new feedback lands in **Inbox** or when a reporter replies to their feedback. To receive notifications, follow these steps:
 
-1. Watch the app on the [Settings](/developerportal/collaborate/general-settings/) page after you open it in [Apps](https://sprintr.home.mendix.com/).
+1. Watch the app on the [Settings](/developerportal/general-settings/) page after you open it in [Apps](https://sprintr.home.mendix.com/).
 2. Go to **Feedback** again.
 3. Click the **Settings** {{% icon name="cog" %}} icon in the upper-right corner of the page.
 4. Turn on the toggle to receive notifications.

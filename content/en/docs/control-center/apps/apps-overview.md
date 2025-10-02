@@ -14,7 +14,7 @@ aliases:
 
 The **Apps** page in Control Center provides a central place to monitor, manage, and interact with all the apps belonging to your company. 
 
-Use the search bar at the top of the page to find an app using either its name or app ID. You can find the app ID under **Project ID** in your app’s [Settings](/developerportal/collaborate/general-settings/) in [Apps](https://sprintr.home.mendix.com/).
+Use the search bar at the top of the page to find an app using either its name or app ID. You can find the app ID under **Project ID** in your app’s [Settings](/developerportal/general-settings/) in [Apps](https://sprintr.home.mendix.com/).
 
 {{< figure src="/attachments/control-center/apps/apps-overview/top-search-bar.png" >}}
 
@@ -63,7 +63,7 @@ When you select apps using the checkboxes in the table, a context menu appears a
 
 Clicking an app name in a tab or the search results opens its details page, which includes the following tabs:
 
-* **App Info** – Shows the **Description** and **App ID**, also found in your app's [Settings](/developerportal/collaborate/general-settings/).
+* **App Info** – Shows the **Description** and **App ID**, also found in your app's [Settings](/developerportal/general-settings/).
 * **Members** – Lists the team members in the app development team.
     * You can directly deactivate a team member from the app by clicking their name and selecting **Deactivate Member**.
     * For other member management options, click **Manage Members**, which will open the [Team](/developerportal/general/team/#managing) page of the app. As a Mendix Admin, you can also add yourself to a team via this page.

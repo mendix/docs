@@ -45,7 +45,7 @@ You can use authentication in both online and offline apps to remember the end-u
 
 ### Authentication Token Expiry
 
-There is a custom runtime setting, [`com.mendix.webui.HybridAppLoginTimeOut`](/refguide/custom-settings/#commendixwebuiHybridAppLoginTimeOut) that determines how long the authentication token is valid for. If no value is set, the token remains valid for one year.
+There is a custom runtime setting, [`com.mendix.webui.AuthTokenTimeout`](/refguide/custom-settings/#commendixwebuiAuthTokenTimeout) that determines how long the authentication token is valid for. If no value is set, the token remains valid for one year. Prior to Mendix 11.3, use the legacy runtime setting [`com.mendix.webui.HybridAppLoginTimeOut`](/refguide/custom-settings/#commendixwebuiHybridAppLoginTimeOut) instead.
 
 ## Application Behavior
 

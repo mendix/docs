@@ -1,12 +1,14 @@
 ---
 title: "Teamcenter Extension"
-url: /appstore/modules/teamcenter-extension/
-description: "Describes Teamcenter Extension from the Mendix Marketplace. Teamcenter Extension facilitates a low-code approach to integrating with Teamcenter."
+url: /appstore/modules/siemens-plm/teamcenter-extension/
+description: "Describes Teamcenter Extension from the Mendix Marketplace. Teamcenter Extension facilitates a low-code approach to integrating with Siemens Teamcenter."
+aliases:
+    - /appstore/modules/teamcenter-extension/
 ---
 
 ## Introduction {#introduction}
 
-[Teamcenter Extension](https://marketplace.mendix.com/link/component/225544) is a Mendix Extension built using the Mendix Extensibility Framework to provide you with an effortless means to harness the capabilities of [Teamcenter Connector](https://marketplace.mendix.com/link/component/111627) for Mendix. Teamcenter Extension is built on Teamcenter Connector. It provides a low-code experience by making it easier to visualize and access Teamcenter data models and automating creation of Mendix domain models and microflows.
+[Teamcenter Extension](https://marketplace.mendix.com/link/component/225544) is a Mendix Extension built using the Mendix Extensibility Framework to provide you with an effortless means to harness the capabilities of [Teamcenter Connector](https://marketplace.mendix.com/link/component/111627) for Mendix. Teamcenter Extension is built on Teamcenter Connector. It provides a low-code experience by making it easier to visualize and access Siemens Teamcenter data models and automating creation of Mendix domain models and microflows.
 
 {{% alert color="info" %}}Teamcenter Extension V 3.0.0 and above is also supported on macOS.{{% /alert %}}
 

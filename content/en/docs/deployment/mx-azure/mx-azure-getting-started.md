@@ -21,8 +21,6 @@ To adopt Mendix on Azure, you need to have the following:
     * Permission to grant admin consent on the Mendix on Azure portal app registration
     * Owner role assigned on the target subscription
 
-After you obtain an Azure subscription, you can [find your Subsciption ID](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id#find-your-azure-subscription) and provide this information to the Mendix representative.
-
 ## Next Steps
 
 Once all the prerequisites are met, you will be granted access to the [Mendix on Azure](https://portal.azure.com/#create/mendixtechbv.mxonazure) offering in Azure Marketplace. You must use this listing to purchase and deploy to a resource group of your choice.

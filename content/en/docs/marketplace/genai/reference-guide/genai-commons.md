@@ -67,7 +67,7 @@ The technical purpose of the GenAI Commons module is to define a common domain m
 
 The domain model in Mendix is a data model that describes the information in your application domain in an abstract way. For more general information, see the [Data in the Domain Model](/refguide/domain-model/) documentation. To learn about where the entities from the domain model are used and relevant during implementation, see the [Microflows](#microflows) section below.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genaicommons/domain-model.png" alt="" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genaicommons/GenAICommonsDM.png" alt="" >}}
 
 #### `DeployedModel` {#deployed-model}
 

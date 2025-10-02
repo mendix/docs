@@ -1,11 +1,12 @@
 ---
 title: "Settings"
-url: /developerportal/collaborate/general-settings/
-weight: 14
+url: /developerportal/general-settings/
+weight: 11
 description: "Describes the Settings page of your app."
 aliases:
     - /developerportal/settings/general-settings
     - /developerportal/settings/api-key
+    - /developerportal/collaborate/general-settings
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor #managing-app-users below is mapped from App > General > Settings > Manage App Users and the Mendix SSO module, so it should not be removed or changed.

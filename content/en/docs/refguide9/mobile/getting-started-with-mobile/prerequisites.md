@@ -117,6 +117,8 @@ For the Windows Defender firewall, the most common firewall, do the following:
 
 1. Windows distinguishes between two types of networks: private and public. Windows Defender Firewall applies stricter regulations for public networks. If, and only if, you are connected to a trusted network, configure the network as **Private** on your computer.
 
+1. It is also needed to allow port 8080 connection in Firewall - create a new Inbound rule and add allow TCP port 8080, it can be named Mendix App.
+
 #### Error: Unable to Detect Studio Pro
 
 If your port forwarding settings are correct but you still get an error that the Make It Native app **cannot detect Studio Pro**, please reinstall the Make It Native app on your mobile device.

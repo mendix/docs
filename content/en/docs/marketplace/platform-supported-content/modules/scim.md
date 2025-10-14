@@ -272,10 +272,10 @@ In the **Provisioning** tab of the SCIM server configuration, you need to config
 
     The microflow must return a `System.User` object to ensure proper user provisioning and updates. It will be executed after user creation or update of user. However, starting from version 2.0.0 of the UserCommons module, this is no longer mandatory. If you have added a new microflow, you need to refresh the module containing your microflow as described in the [Mx Model Reflection](/appstore/modules/model-reflection/). The selection can be blank if you do not want to add custom logic.
 
-* To improve licensing and metering accuracy, a configuration requires the use of a mandatory **User Metering Named Identifier**, for example, `email` or `sub`, etc. 
+* To facilitate future improvements in the user metering capabilities of the Mendix Platform, you can configure which claim you want to map to the **User Metering Named Identifier**, for example, `email` or `sub`, etc. This is particularly relevant if a multi-app user license is allocated to your application and you need to ensure that a multi-app user receives the same value for the **User Metering Named Identifier** in each of the apps for that user. 
 
-    * In the **UserProvisioning** tab, select the identifier in the **User Metering Named Identifier** field to be used for metering (default value is `email`).
-    * This configuration prioritizes the selected identifier over the default `system.user.name` for accurate user tracking.
+    * In the **UserProvisioning** tab, select the identifier in the **User Metering Named Identifier** field to be used for metering (In most cases, the end user's email address is the best choice, so the default value is `email`).
+    * The Platform's current user metering mechanism is using the `system.user.name` to count users. It is often used for technical user identifiers, for example, the `oid` value when using the OIDC SSO module. For more information, see [Guidance on User Identifier](/appstore/modules/oidc/#guidance-user-identifier). The **User Metering Named Identifier** prioritizes the selected identifier over the default `system.user.name` for accurate user tracking.
 
  {{< figure src="/attachments/appstore/platform-supported-content/modules/scim/user-commons.png" >}}
 

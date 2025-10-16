@@ -20,11 +20,11 @@ These are the general guidelines for creating new Marketplace content:
 * Your product must be complete and fully functional, as advertised upon submission.
 * In Mendix 10.21.0 and above, do not use direct associations in your module, as this can cause issues when it is imported.
 
-When you add content to the Marketplace, include in the component [documentation](/appstore/submit-content/#doc) any information that the end-user should know.
+When you add content to the Marketplace, include in the component documentation any information that the end-user should know.
 
 ## Using a GitHub Repository {#github}
 
-You can set up a GitHub repository to contain the development content for your Marketplace component. During the submission process, you can share the repository URL as the component source on the [Package](/appstore/submit-content/#package) page.
+You can set up a GitHub repository to contain the development content for your Marketplace component. During the submission process, you can share the repository URL as the component source on the [Upload Component](/appstore/submit-content/#general) tab.
 
 ### GitHub Repository Guidelines
 
@@ -50,7 +50,7 @@ To create a new component release for the Mendix Marketplace, follow these steps
 
    {{< figure src="/attachments/appstore/submit-content/github-releases.png" >}}
 
-5. Link this GitHub release to the upcoming Mendix Marketplace release by mentioning the GitHub release number in the description. For more details, see the [Package](/appstore/submit-content/#package) and [Updating Existing Marketplace Content](/appstore/submit-content/#updating) sections in *Upload to the Marketplace*.
+5. Link this GitHub release to the upcoming Mendix Marketplace release by mentioning the GitHub release number in the description. For more details, see the [Uploading a Component](/appstore/submit-content/#general) and [Updating Existing Marketplace Content](/appstore/submit-content/#updating) sections in *Upload to the Marketplace*.
 
 ## Preparing Your Submission
 

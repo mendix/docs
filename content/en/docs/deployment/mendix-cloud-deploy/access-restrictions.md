@@ -115,6 +115,10 @@ These are the default settings:
 * All paths ending in `-doc` have a preset **Deny all access** profile set by default
 * All the remaining paths have no restriction applied by default
 
+{{% alert color="info" %}}
+Following the migration from Cloud Foundry to Kubernetes, access rule violations are now logged in the **Access Log** instead of the **App Log**. For more details on logs, refer to the [Apps Deployed to Mendix Cloud](/developerportal/operate/logs/#apps-deployed-to-mendix-cloud) section of *Logs*.
+{{% /alert %}}
+
 ## Use Cases for Access Restrictions
 
 Two scenarios in which you can use access restrictions are described below.

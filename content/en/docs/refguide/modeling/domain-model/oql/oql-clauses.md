@@ -670,7 +670,7 @@ GROUP BY
 ```
 
 {{% alert color="info" %}}
-The `GROUP BY` clause is usually used in combination with [aggregations](/refguide/oql-expressions/#aggregates): `AVG`, `COUNT`, `MAX`, `MIN`, `SUM`.
+The `GROUP BY` clause is usually used in combination with [aggregations](/refguide/oql-expressions/#aggregates): `AVG`, `COUNT`, `MAX`, `MIN`, `STRING_AGG`, `SUM`.
 {{% /alert %}}
 
 ### Using `GROUP BY`

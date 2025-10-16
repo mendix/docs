@@ -21,6 +21,14 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 ## 2025
 
+### September 29, 2025
+
+#### New Features
+
+* The Mendix platform is now generally available in Korean and Japanese.    
+  You can set the language from the [User Settings](/mendix-profile/user-settings/) page of your Mendix Profile. The language you choose is then applied once you sign out and sign back in.    
+  Note that user-created content and system-generated content, such as app logs, is not translated.
+
 ### September 28, 2025
 
 #### Improvements

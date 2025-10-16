@@ -68,7 +68,7 @@ Here is a list of all OQL reserved words:
 
 `REPLACE`, `RIGHT`
 
-`SECOND`, `SELECT`, `SET`, `SOURCE`, `STRING`, `SUM`
+`SECOND`, `SELECT`, `SET`, `SOURCE`, `STRING`, `STRING_AGG`, `SUM`
 
 `TARGET`, `THEN`, `TRUE`
 

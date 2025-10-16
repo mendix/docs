@@ -78,9 +78,7 @@ STRING_AGG ( attribute_path, separator )
 
 `separator` is any expression of type `STRING`. 
 
-{{% alert color="info" %}}
-This aggregate function is only supported in Java actions.
-{{% /alert %}}
+This aggregate function is supported in View Entities and Datasets starting from Mendix 11.2.0, whereas previously it was only available in Java actions.
 
 ### Examples
 

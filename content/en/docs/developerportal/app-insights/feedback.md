@@ -135,13 +135,14 @@ Clicking the filter bar opens the **Filter by** side panel. In this side panel, 
 
 ## Feedback Details {#feedback-details}
 
-On the [Inbox](#inbox) and [Archive](#archive) tabs, you can open a feedback item by clicking it in the list. If you click the **ID** of the feedback, the feedback details page opens. If you click a place other than the **ID** of the feedback, a side panel opens. Either the feedback details page or the side panel contains two tabs: [Feedback](#feedback) and [Reporter Comments](#contact-reporter).
+On the [Inbox](#inbox) and the [Archive](#archive) tabs, you can open feedback details by clicking the feedback item in the list:
 
-### Feedback Tab {#feedback}
+* If you click the **ID** of the feedback item, the feedback details open in a new page. 
+* If you click a place other than the **ID** of the feedback item, the feedback details open as a side panel. 
 
 {{% alert color="info" %}}If your [role](/developerportal/general/app-roles/) has the **Can edit ‘Stories, Documents and Feedback'** permission, you can edit the feedback details on the **Feedback** tab.{{% /alert %}}
 
-The **Feedback** tab shows the following items: 
+The following items are available: 
 
 * Buttons ({{% icon name="view-off" %}} {{% icon name="view" %}} {{% icon name="hyperlink" %}} {{% icon name="three-dots-menu-horizontal" %}}) in the upper-right corner
     * {{% icon name="view-off" %}} – Click this button to start receiving [notifications](#notifications) for this feedback. You also automatically start receiving notifications for this feedback whenever you respond to the reporter of the feedback or leave a comment for your team in the **Communications** section within the feedback.
@@ -152,8 +153,6 @@ The **Feedback** tab shows the following items:
         * **Create Story** – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button converts the feedback to a story on the designated board in Epics or Jira. Once the story is created, clicking this button brings you to the story on the board right away.    
           You can also create feedback-based stories using Maia. For details, refer to the [Creating Stories with Maia](#create-with-maia) section.
         * **Delete** – Click this button to remove the feedback permanently from **Feedback**. The result is irreversible.
-    
-* **Last activity** – This shows when the last edit to the feedback was made.
 
 * **Assigned To** – This shows to whom the feedback is assigned. When you assign the feedback to someone, they get an email notification.
 
@@ -167,7 +166,7 @@ The **Feedback** tab shows the following items:
 
     {{< figure src="/attachments/developerportal/app-insights/feedback/tags.png" class="no-border" >}}
 
-    {{% alert color="info" %}}For more information about how to manage tags, see the [Managing Tags](#manage-tags) section.{{% /alert %}}
+    {{% alert color="info" %}}For more information about how to manage tags, refer to the [Managing Tags](#manage-tags) section.{{% /alert %}}
 
 * **Summary** – This is the summary of the feedback. Only your team members can see this summary.
 
@@ -205,9 +204,14 @@ The **Feedback** tab shows the following items:
 
 * **Attachments** – This contains attachments to this feedback. To upload an attachment, click **Add** ({{% icon name="add" %}}) and select the file. The following formats are supported: .*peg*, *.png*, and *.gif*. Each attachment can be a maximum of 5 MB in size. Once an attachment is uploaded, only your team members can view, download, and delete the attachment.
 
-* **Communication** – This section shows all the comments on this feedback from your team. You can leave comments here and attach attachments to each comment. Comments submitted to this section are only visible to your team members.
+* **Communication** – This section is made up of the following tabs:
 
-#### Creating Stories with Maia {#create-with-maia}
+    * **Team Comments** — Displays all the comments left by your team for this feedback. You can leave comments here and add attachments to each comment.     
+      Comments submitted to this tab are only visible to your team members.
+    * **Contact Submitter** — Allows you to read messages from the reporter and reply to them. Whenever the reporter sends a message, it is shown in this section. Once you reply to a message from the reporter, they receive an email. When multiple feedback items are linked, the system only sends an email to the reporter of this specific feedback item, not other associated feedback items in the same group.    
+      For more information, see the [What Happens to a User After They Submit Feedback](#what-happens-to-user) section.
+
+### Creating Stories with Maia {#create-with-maia}
 
 You can use Maia to create a story based on one or more feedback items. To do that, follow these steps:
 
@@ -227,13 +231,7 @@ A banner at the bottom of the window shows you that the story has been created. 
 
 You can select several feedback items to create a story based on all of them.
 
-### Reporter Comments Tab {#contact-reporter}
-
-The **Reporter Comments** tab allows you to read messages from the reporter and reply to them. Whenever the reporter sends a message, it is shown in this section. Once you reply to a message from the reporter, they receive an email. When multiple feedback items are linked, the system only sends an email to the reporter of this specific feedback item, not other associated feedback items in the same group.
-
-For more information, see the [What Happens to a User After They Submit Feedback](#what-happens-to-user) section.
-
-#### Managing Tags {#manage-tags}
+### Managing Tags {#manage-tags}
 
 From the [feedback details](#feedback-details) page, you can manage tags by clicking **Settings** ({{% icon name="cog" %}}) next to the **Tags** text box.
 
@@ -273,4 +271,5 @@ You can receive a notification when new feedback lands in **Inbox** or when a re
 
 ### Receiving Notifications for an Individual Feedback Item {#notifications-individual-feedback}
 
-You can also just receive notifications for an individual feedback item. Set this up by clicking the {{% icon name="view-off" %}} icon in the upper-right corner of the [Feedback](#feedback) tab after you open the feedback. You also automatically start receiving notifications for an individual feedback item once you [respond to the reporter](#contact-reporter) of the feedback or leave a comment for your team in the **Communications** section within the feedback.
+You can receive notifications for an individual feedback item. To set this up, click the {{% icon name="view-off" %}} icon in the upper-right corner of the **Feedback** tab after you open the feedback item.     
+You also automatically start receiving notifications for an individual feedback item once you respond to the reporter of the feedback or leave a comment for your team in the **Communications** section of the feedback details window.

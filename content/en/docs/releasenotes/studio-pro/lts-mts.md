@@ -8,11 +8,11 @@ weight: 1
 
 The goal of this document is to clarify Mendix Studio Pro version options and help you decide which version to run your applications on.
 
-To understand the different types of versions and releases, consider the example of Studio Pro [9.24.1](/releasenotes/studio-pro/9.24/#9241) and see the sections below.
+To understand the different types of versions and releases, consider the example of Studio Pro [11.0.3](/releasenotes/studio-pro/11.3/) and see the sections below.
 
 ### Major Version {#major-version}
 
-In the 9.24.1 example, the first number (**9**) indicates the major version.
+In the 11.0.3 example, the first number (**11**) indicates the major version.
 
 Mendix supports three major versions at a time. To clarify our current offering and in relation to our SLA, today Mendix supports major versions 9, 10, and 11. 
 
@@ -34,13 +34,13 @@ For Mendix 10 and 11, we are planning to follow this release timeline:
 
 ### Minor Version
 
-In the 9.24.1 example, the second number (**24**) indicates the minor version. 
+In the 11.0.3 example, the second number (**0**) indicates the minor version. 
 
 A minor version is generally released every month. It includes new features and fixes, but it does not include breaking changes.
 
 ### Patch Version {#patch-version}
 
-In the 9.24.1 example, the third number (**1**) indicates the patch version. 
+In the 11.0.3 example, the third number (**3**) indicates the patch version. 
 
 A patch version is released on an as-needed basis. It includes security fixes and critical bug fixes, but it does not include new features or breaking changes (unless these address security issues).
 
@@ -93,11 +93,7 @@ The impact of upgrading from an LTS to an LTS is often the lowest of these optio
 
 An MTS is a minor version released approximately every 6 months after a new major version release for general availability.
 
-These are the current MTS version of Studio Pro:
-
-* [10.6](/releasenotes/studio-pro/10.6/) (started in December, 2023)
-* [10.12](/releasenotes/studio-pro/10.12/) (started in June, 2024)
-* [10.18](/releasenotes/studio-pro/10.18/) (started in December, 2024)
+There are currently no MTS versions of Studio Pro. The next one that will occur is 11.6, planned for release in [December, 2025](#major-version).
 
 Release notes for the current MTS version are marked with an MTS badge (<text class="badge badge-pill badge-mts" style="margin-left:0px">MTS</text>) in the left sidebar.
 
@@ -111,7 +107,7 @@ Mendix recommends using the latest patch version of the release as the latest ve
 
 ### Support Duration
 
-Support for an MTS version ends three months after the LTS version of that major version is released. For example, version 10.24 is released in June 2025. Support for the 10.6, 10.12 and 10.18 MTS versions will then end in September 2025.
+Support for an MTS version ends three months after the LTS version of that major version is released. 
 
 ### Release Cycle
 

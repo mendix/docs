@@ -92,7 +92,7 @@ replacements = "github.com/FortAwesome/Font-Awesome -> ., github.com/twbs/bootst
 # These are mainly (all?) Docsy settings
 
 [params]
-    copyright = "© Mendix Technology BV 2021. All rights reserved."
+    copyright = "© Siemens Industry Software Netherlands B.V. 2025. All rights reserved."
     privacy_policy = "http://www.mendix.com/privacy-policy/"
 
     # Menu title if your navbar has a versions selector to access old versions of your site.

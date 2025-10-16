@@ -29,7 +29,7 @@ The search box at the top of the page allows you to explore the Mendix Marketpla
 You can refine search results using the following filters:
 
 * **Support** – Select between the available support categories. For details, see the [Marketplace Content Support](/appstore/marketplace-content-support/).
-* **Visibility** – Choose whether you want to display [public](/appstore/submit-content/#public) or [private](/appstore/submit-content/#private) content.
+* **Visibility** – Choose whether you want to display [public or private](/appstore/submit-content/#support-licensing) content.
 * **Content Types** – Choose the type of content to display. For details, see the [Types of Marketplace Components](/appstore/#components-type) section in *Marketplace*.
 * **Category** – Select specific domains in which components or services share characteristics, functions, or purposes.
 * **Industry** – Select specific sectors or business domains in which components or services are used.
@@ -44,7 +44,7 @@ For details on finding and installing Marketplace content in Studio Pro, see the
 
 Share new Marketplace content you have developed.
 
-For details, see [Upload to the Marketplace](/appstore/submit-content/).
+For details, see [Uploading Content to the Marketplace](/appstore/submit-content/).
 
 ## Get Studio Pro
 

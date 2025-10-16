@@ -5,7 +5,28 @@ weight: 10
 description: "Native Template 15"
 ---
 
-## 15.3.1 {#1530}
+## 15.4.1 {#1541}
+
+**Release date: October 7, 2025**
+
+### Improvements
+
+- We migrated from `react-native-camera` to `react-native-vision-camera` for new architecture compatibility.
+
+## 15.4.0 {#1540}
+
+**Release date: October 2, 2025**
+
+### Improvements
+
+- We migrated from `react-native-push-notification` to `@notifee/react-native` for improved architecture compatibility and enhanced push notification features.
+- We upgraded `react-native-permissions` to version 5.4.2.
+- We removed `react-native-schedule-exact-alarm-permission` dependency.
+- We added a `USE_BIOMETRIC` permission in Android.
+- We migrated from `react-native-fast-image` to `@d11/react-native-fast-image` for new architecture compatibility.
+- We upgraded `react-native-reanimated` to v3.16.7.
+
+## 15.3.1 {#1531}
 
 **Release date: August 15, 2025**
 

@@ -35,7 +35,6 @@ It performs the following actions:
 
 Replace your `src/main/index.ts` file with the following:
 
-
 ```typescript
 import { IComponent, getStudioProApi } from "@mendix/extensions-api";
 

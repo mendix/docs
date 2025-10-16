@@ -17,7 +17,7 @@ Before starting the installation and implementation process, make sure that you 
 
 * Obtain and configure a Microsoft Azure account. For more information, refer to the the Microsoft Azure documentation.
 * Purchase the Mendix on Azure offering in the [Azure Marketplace](https://azuremarketplace.microsoft.com/).
-* You must buy cloud tokens (min. 14 cloud tokens per environment) to consume Mendix on Azure platform services. Cloud tokens are not utilized during an active trial.
+* Cloud tokens are not required for trial deployment.
 * You must sign in to the Mendix on Azure portal with the same Azure account that was used to purchase the offering. If you sign in with another account, the cluster is not visible for initialization.
 
 {{< figure src="/attachments/deployment/mx-azure/coadmin-permission.png" class="no-border" >}}
@@ -76,6 +76,7 @@ To create a cluster for your Mendix on Azure app, perform the following steps:
     * Postgres Flexible Server - Under this, you can update Compute Tier, Compute Size and Storage Performance Tier.
     * AKS Node IP Address 
     * Managed Grafana
+    * Enable Read Replica
 
     {{% alert color="info" %}}If you plan to use [virtual network peering](#network-peering), you must set the **Load Balancer Type** to **Private (Internal)**.{{% /alert %}}
 
@@ -249,6 +250,8 @@ For more information about backing up and restoring Mendix on Azure environments
 
 Once the cluster is successfully created and initialized in the Mendix on the Azure portal, you can [add additional cluster managers](/developerportal/deploy/private-cloud-cluster/#managing-the-cluster). 
 
-After being added, the new cluster manager has the ability to view and manage the cluster within the Mendix on the Azure portal. They can also access and update the support ticket associated with the cluster in the Mendix on Azure portal. However, the newly added cluster manager does not have access to the Zendesk ticket linked to the cluster's support ticket.  
+After being added, the new cluster manager has the ability to view and manage the cluster within the Mendix on the Azure portal. They can also access and update the support ticket associated with the cluster in the Mendix on Azure portal. However, the newly added cluster manager does not have access to the Zendesk ticket linked to the cluster's support ticket.
+
+{{% alert color="info" %}}Before adding a cluster manager, ensure that the invited user signs in to the Mendix on Azure portal (https://mendixonazure.mendix.com) before accepting the invitation. If they do not, the invitation may show as accepted, but the user will not have access to resources on Mendix on Azure.{{% /alert %}}
 
 If a cluster manager is deleted, they can no longer view the associated cluster or its support ticket in the Mendix on Azure portal.

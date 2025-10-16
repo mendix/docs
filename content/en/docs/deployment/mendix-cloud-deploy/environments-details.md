@@ -483,6 +483,8 @@ Click **Add** and select **Supported** to choose from the following variables:
 
 * **APPMETRICS_TARGET** – This enables sending application runtime and custom business metrics to HTTP endpoints of different monitoring solutions, such as [InfluxDB](https://www.influxdata.com/), while ignoring micrometer endpoints.
 * **DD_API_KEY** – This is the API key used with Datadog.
+* **DD_ENV** – Specifies the application environment for Datadog.
+* **DD_TRACE_ENABLED** – Enables or disables tracing. By default, the value is set to `false`, which means data collection remains active, but no trace is sent to the trace agent.
 * **DD_SITE** – This directs metrics to a specific Datadog region.
 * **DATABASE_CONNECTION_PARAMS** – These are additional JDBC parameters for PostgreSQL databases. For more information, see the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack).
 * **JVM_GARBAGE_COLLECTOR** – This overrides the automatic configuration of the Java garbage collector. Accepted values are `Serial` or `G1`.

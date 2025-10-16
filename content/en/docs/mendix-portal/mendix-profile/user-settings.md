@@ -16,21 +16,19 @@ On the [User Settings](https://user-settings.mendix.com/link/profile) page, you 
 
 This is what you can do on the [Profile](https://user-settings.mendix.com/link/profile) page:
 
-* Upload your profile image.
-* Fill in your personal and work details.
-* Tell the Mendix community about yourself and your work experience. Let everyone know your area of expertise by filling in your **Industry** and **Skills**.  
-* Connect your social accounts via **Twitter URL** and **LinkedIn URL**.
-* Choose to make your profile public by clicking **Make Profile Public**. This allows the Mendix community to view your profile. Be sure to do the following to make your profile public:
-
-    * Add an avatar.
-    * Enter a **Job Title**, **Department**, and **Country of Residence**.
-    * Add some details **About You**.
-    * Add at least one **Skill**.
-    * Add at least one **Industry Experience** item.
-
+* Upload a profile image.
+* Enter your name.
+* Add your work details, meaning **Job Title** and **Department**.
+* Select your **Country of Residence**.
+* Select the **Language** in which to display Mendix Portal content. Language selection is applied after signing out and signing back in.       
   {{% alert color="info" %}}
-  To make your public profile private again, click **Make Profile Private**. 
+  User-created content and system-generated content, such as app logs, is not translated. 
   {{% /alert %}}
+* Tell the Mendix community about yourself and your work experience. Let everyone know your area of expertise by filling in the **About You** field, and your **Industry** and **Skills**.  
+* Connect your LinkedIn account through the **LinkedIn URL**.
+* Choose to make your profile public by clicking **Make Profile Public**. This allows the Mendix community to view your profile.    
+  To make your public profile private again, click **Make Profile Private**. 
+
 
 * Add a **Recovery Email** address, which is useful if you lose access to your account or Mendix Profile. You can provide a non-business email address for this.
 

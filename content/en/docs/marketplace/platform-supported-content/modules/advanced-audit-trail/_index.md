@@ -45,7 +45,8 @@ Features of Advanced Audit Trail include the following:
 
 ### Limitations
 
-Advanced Audit Trail has the limitation that on Mendix Cloud XS [resource packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) your app may run out of memory due to too many objects of the `ScheduledEventInformation` type being created.
+* Advanced Audit Trail snapshot creation is implemented using event handlers. Since the Mendix Runtime does not run event handlers upon autocommit, any autocommitted changes made to a tracked entity will not be captured in the audit trail. Audit snapshots are only created for objects that are explicitly committed by the user or through application logic.
+* Advanced Audit Trail has the limitation that on Mendix Cloud XS [resource packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) your app may run out of memory due to too many objects of the `ScheduledEventInformation` type being created.
 
 ### Prerequisites
 

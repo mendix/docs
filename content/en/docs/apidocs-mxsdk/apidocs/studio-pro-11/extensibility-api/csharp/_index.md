@@ -66,5 +66,3 @@ Review the following reference guides to explore additional Extensibility API to
 * [Extension Points](/apidocs-mxsdk/apidocs/csharp-extensibility-api-11/extension-points/)
 * [Extensibility Services](/apidocs-mxsdk/apidocs/csharp-extensibility-api-11/services/)
 * [Extensibility Web Views](/apidocs-mxsdk/apidocs/csharp-extensibility-api-11/web-views/)
-
-

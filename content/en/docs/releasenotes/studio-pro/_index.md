@@ -6,6 +6,8 @@ weight: 5
 aliases:
     - /releasenotes/desktop-modeler/index.html
     - /releasenotes/desktop-modeler/
+cascade:
+    banner: "With the October 14 update of Windows 11, Studio Pro 9, 10, and 11 can become unusable. Studio Pro shows errors in different panels (for example design properties and toolbox) and editors (for example page, microflow, nanoflow, and rule editor).<br/>If you see the message <code>Hmmm... can't reach this page</code> with an error code of <code>ERR_CONNECTION_RESET</code>, in a tool panel or editor, your workstation is probably affected.<br/>The current known workaround is to uninstall the following Windows updates: KB5066835, KB5066131, and KB5065789.<br/>See the <a href=\"https://status.mendix.com/\" target=\"_blank\">status page</a> for more information."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

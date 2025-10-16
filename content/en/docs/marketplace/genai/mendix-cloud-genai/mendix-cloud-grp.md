@@ -29,7 +29,6 @@ Mendix Cloud Model Resource Packs provide customers with a monthly quota of inpu
 
 The Mendix Cloud GenAI Resource Packs provide access to the following models:
 
-
 * Anthropic Claude 3.7 Sonnet (Cross-region inference profile)
 * Anthropic Claude 4 Sonnet (Cross-region inference profile)
 * Cohere Embed v3 (English and multilingual options)

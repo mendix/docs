@@ -14,7 +14,12 @@
 
 
 <div id="mx-footer" class="mx-footer" data-test-id="mx-footer">
-     <p class="mx-footer__copyright">© Mendix Technology BV <span id="mx-footer__copyright-year"></span>. All rights reserved</p>
+     <p class="mx-footer__copyright">© Siemens Industry Software Netherlands B.V.
+          <script type="text/javascript">
+               var d=new Date();
+               document.write(d.getFullYear() + ".");
+          </script>
+     All rights reserved</p>
         <ul class="mx-footer__links-list">
     <li>
         <a
@@ -67,9 +72,5 @@
     </li>
          </ul>
     </div>
-
-<script>
-     document.getElementById("mx-footer__copyright-year").textContent = new Date().getFullYear();
-</script>
 
 <script src="https://dock-static.mendix.com/main.js" async></script>

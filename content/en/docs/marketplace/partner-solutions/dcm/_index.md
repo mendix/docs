@@ -25,6 +25,7 @@ For more information, refer to [DCM for Mendix](https://www.casefabric.com/#mend
 
 CaseFabric’s DCM solution brings powerful case modeling capabilities to Studio Pro, using the [CMMN (Case Management Model and Notation)](https://www.omg.org/spec/CMMN/1.1) standard. This means you can build flexible, event-driven case models that work seamlessly with Mendix elements like your domain model, entities, pages, and microflows, making your app smarter and more responsive.
 The Mendix DCM module provides Studio Pro with a modeler specifically for case models. This lets you:
+
 * Map your domain model to the case file model.
 * Use existing entities directly within your case model.
 * Trigger your case model based on entity changes. This currently requires explicit modeling.

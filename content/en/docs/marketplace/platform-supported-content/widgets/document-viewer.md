@@ -53,7 +53,6 @@ The **Advanced** tab allows you to configure settings for features beyond the no
     * If left empty, the document viewer widget will retrieve PDF.js from CDN `http://unpkg.com/pdfjs-dist@4.8.69/build/pdf.worker.min.mjs`.
     * Alternatively, users can grab `pdf.worker.mjs` from `{LOCAL DEV PROJECT FOLDER HERE}/deployment/web/widgets/com/mendix/shared/pdfjs/pdf.worker.mjs`, put it into their own `App Module -> Styling/web/js/pdf.worker.mjs` file, and then set `./js/pdf.worker.mjs` as the worker URL configuration. This is the recommended practice to support [CSP](/howto/security/csp/).
 
-
 ### Common Tab
 
 For more information, see [Common Section](/refguide/common-widget-properties/#common-properties) in *Properties Common in the Page Editor*.

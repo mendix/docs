@@ -12,6 +12,25 @@ aliases:
 
 These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
+### October 9, 2025
+
+#### Improvements
+
+We have made several improvements aimed at streamlining the experience of uploading content to the Marketplace and improving quality control:
+
+* The upload flow is now completely revamped, featuring a new interface and additional features, such as:
+
+    * Adding multiple resource links, such as websites, to provide additional information.
+    * Assigning multiple developers from your company as component owners.
+    * Adding support information.
+    * Control over the image size, allowing you to crop screenshots for a better visual experience.
+    * Support for rich text in the release notes field.
+    * A new **Component Tagline** field, allowing you to add a short description that will be displayed on your component's card in the Marketplace.
+    * A new preview page, allowing you to see exactly what the component will look like once published.
+
+* New component versions are now also scanned, and automatically uploaded if no vulnerabilities are found.
+* The email announcing a new version of a component now also includes release notes.
+
 ### September 8, 2025
 
 #### Improvements
@@ -266,12 +285,12 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 * There are now user trials available for **Premium** app services, such as Email Service and Speech to Text. This self-service experience helps you to evaluate the capabilities offered with these components and realize the value of premium content.
 * User trial subscriptions are now listed under My Subscriptions, and company trial and paid subscriptions are now listed under Company Subscriptions.
-* For new uploads of public components, you can now optionally share a [virus scan report](/appstore/submit-content/#package) to speed up the governance process.
+* For new uploads of public components, you can now optionally share a virus scan report to speed up the governance process.
 * For solutions and solution templates, you can now add a use case relevant to the component. The use case is displayed in the component listing and includes header text and an external link.
 
 #### Improvements
 
-* We made performance improvements for when a large source file is [uploaded](/appstore/submit-content/#package), specifically on the navigation steps.
+* We made performance improvements for when a large source file is uploaded, specifically on the navigation steps.
 * We improved the UI for self-service uploading your component to the Marketplace.
 
 ### February 10, 2022
@@ -302,8 +321,8 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### Improvements
 
-* You can now add [release notes](/appstore/submit-content/#package) for your new component version without uploading a new source file.
-* You can now skip uploading a source file on the [Package](/appstore/submit-content/#package) page for **App Service** and **Solution Template** component types if your component is not downloadable.
+* You can now add [release notes](/appstore/submit-content/#general) for your new component version without uploading a new source file.
+* You can now skip uploading a source file on the [Upload Component](/appstore/submit-content/#general) tab for **App Service** and **Solution Template** component types if your component is not downloadable.
 
 ### September 7, 2021
 
@@ -436,7 +455,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### Fixes {#private-fix}
 
-* Downloading [private content](/appstore/submit-content/#private) from the App Store available in Studio Pro/Desktop Modeler has been temporarily disabled due to a security vulnerability.
+* Downloading private content from the App Store available in Studio Pro/Desktop Modeler has been temporarily disabled due to a security vulnerability.
     * You will be able to download private content from the App Store available in Studio Pro/Desktop Modeler again once a fix is released in a future [8.x](/releasenotes/studio-pro/8/), [8.6.x](/releasenotes/studio-pro/8.6/), and 7.23.x release. This functionality will then only be available in those specific versions with the fix and subsequent versions. This functionality will not be available again for the App Store in Desktop Modeler version 6.
     * You can continue downloading the latest version of private App Store content from the [Company Content](/appstore/home-page/#company-content) page in the [Mendix Marketplace](https://marketplace.mendix.com/) and use it in the respective versions of Studio Pro/Desktop Modeler.
 

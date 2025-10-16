@@ -74,4 +74,3 @@ Some operations take an object ID as parameter. Many Capital objects have a `Bas
 ## Resources
 
 For information about the Capital REST API, please refer to the REST API documentation of your Capital instance. This is available by accessing `{protocol}://{host}:{port}/restapidocs/`.
-

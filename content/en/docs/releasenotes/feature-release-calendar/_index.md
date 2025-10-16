@@ -43,7 +43,7 @@ General Availability means that a feature is available for all users. This type 
 | MCP Client                                    | General Availability: Mx 11.2 + Mx 10.24 |
 | Mendix Cloud GenAI Resource Packs             | General Availability: Mx 11.2 + Mx 10.24 |
 | Mendix Cloud GenAI Resource Packs Guardrails  | Public Beta: Mx 11.9 |
-| Agent Builder in Studio Pro                   | Public Beta: Mx 11.6 |
+| Agent Builder in Studio Pro                   | Private Beta: Mx 11.6 |
 | Agent Observability                           | Public Beta: Mx 11.9 |
 
 ## Developer Experience (Studio Pro)

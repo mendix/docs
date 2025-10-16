@@ -532,11 +532,24 @@ Page URLs and Microflow URLs are supported with SAML for Mendix version 10.6 and
 
 1. To use the Page URL functionality, replace the content of *login.html* with the content of *login-with-mendixsso-automatically.html* (located in the **resources** > **mendixsso** > **templates** folder) without changing the file name. 
 2. To implement the SSO redirection, replace the code in the `<script>` tag your login page (for example, *login.html*) with the following code:
+
     * For automatic redirection: use `window.onload` to automatically redirect users to the SSO login page.
-    `const returnURL = encodeURIComponent(window.location.search+window.location.hash);`
-     `self.location = '/SSO/login?cont='+returnURL;`
+
+    ```javascript
+    window.onload = function () {
+    const returnURL = encodeURIComponent(window.location.search + window.location.hash);
+    location.replace('/SSO/login?cont=' + returnURL);
+    };
+    ```
+
     * For manual redirection: add an onclick event to the button that manually triggers the SSO login.
-    `window.location.href='/SSO/login?cont=' + encodeURIComponent(window.location.search + window.location.hash);`
+
+    ```javascript
+    function SSOlogin() {
+    const returnURL = encodeURIComponent(window.location.search + window.location.hash);
+    location.replace('/SSO/login?cont=' + returnURL);
+    }
+    ```
 
 Once the above changes are applied, end users can directly navigate to the desired page. If not logged in, they will be redirected to the IdP login page for authentication. After successful log in, they will be directed to the desired page using page and microflow URLs.
 

@@ -118,7 +118,7 @@ The page is divided into two tabs: **Findings** and **Component Usage**. For det
 
 ## Components {#all-components}
 
-The **Components** tab gives an overview of all the unique components used in the selected package. 
+The **Components** tab gives an overview of all the unique components deployed in all the combined app environments. 
 
 {{< figure src="/attachments/control-center/security/software-composition/deployment_sw_comp_components.png" >}}
 

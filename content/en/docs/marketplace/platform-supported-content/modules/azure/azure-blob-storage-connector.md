@@ -18,7 +18,12 @@ The Azure Blob Storage service is an object storage service offering industry-le
 
 ### Prerequisites {#prerequisites}
 
-The Azure Blob Storage Connector requires Mendix Studio Pro version 9.24.2 or above.
+The Azure Blob Storage connector requires Mendix Studio Pro version 9.24.2 or above.
+
+To use the Azure Blob Storage connector, you must also install and configure the following modules:
+
+* [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
+* [Events] (https://marketplace.mendix.com/link/component/224259)
 
 ### Licensing and Cost
 

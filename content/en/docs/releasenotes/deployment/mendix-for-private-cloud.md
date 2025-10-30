@@ -12,6 +12,14 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 ## 2025
 
+### November ???, 2025
+
+#### Documentation Improvements
+
+* We have updated documentation on setting HTTP(S) headers.
+   The instructions now include a new Mendix 10.24.1 Runtime feature allowing to set custom headers directly in the Mendix Runtime, without having to configure the ingress controller.
+   For more information, see [Advanced Ingress Settings in Mendix on Kubernetes](developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/advanced/).
+
 ### November 7, 2025
 
 #### Portal Hotfix

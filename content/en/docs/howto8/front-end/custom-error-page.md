@@ -1,12 +1,10 @@
 ---
 title: "Create Custom Error Pages"
 url: /howto8/front-end/custom-error-page/
-category: "Front End"
 weight: 55
-tags: ["theming", "UX", "Error page", "offline", "404", "403", "front end"]
 ---
 
-## 1 Introduction
+## Introduction
 
 Whenever your application is stopped, you are presented with the infamous green monsters. To present your app users with a more professional looking page when the application is down, Mendix enables the creation of custom error pages on *Mendix Cloud*.
 
@@ -20,33 +18,33 @@ The different files serve different purposes:
 
 If you do not create these files, the default "green monsters" will be used instead for each scenario.
 
-{{< figure src="/attachments/howto8/front-end/custom-error-page/monsters.png" >}}
+{{< figure src="/attachments/howto8/front-end/custom-error-page/monsters.png" class="no-border" >}}
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Create a custom error page
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a local repository of the app
-* Have your app *hosted in the Mendix Cloud*
+* Have your app *hosted in Mendix Cloud*
 
-## 3 Create a Custom Error Page
+## Create a Custom Error Page
 
 1. Open the local folder of your app.
 2. Go to **theme**:
 
-    {{< figure src="/attachments/howto8/front-end/custom-error-page/theme.png" >}}
+    {{< figure src="/attachments/howto8/front-end/custom-error-page/theme.png" class="no-border" >}}
 
 3. Create a new folder named *error_page*:
 
-    {{< figure src="/attachments/howto8/front-end/custom-error-page/error-page.png" >}}
+    {{< figure src="/attachments/howto8/front-end/custom-error-page/error-page.png" class="no-border" >}}
 
 4. In the **error_page** folder, place your *offline.html* file:
 
-    {{< figure src="/attachments/howto8/front-end/custom-error-page/offline.png" >}}
+    {{< figure src="/attachments/howto8/front-end/custom-error-page/offline.png" class="no-border" >}}
 
     Optionally, you can also create *404.html* and *403.html* pages.
 
@@ -58,7 +56,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 It might take up to an hour to before the custom error page is visible when the app is offline.
 {{% /alert %}}
 
-### 3.1 Example Offline Page
+### Example Offline Page
 
 An example `offline.html/404.html/403.html` page could look like this:
 

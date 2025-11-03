@@ -1,4 +1,8 @@
 {{- if (ne hugo.Environment "production") -}}
-<div class="alert alert-warning todo" role="alert">To Do<br /><strong>{{.Inner}}</strong></div>
+<div class="alert alert-warning todo" role="alert" style="flex-direction: column;">
+    To do
+    <br>
+    <strong>{{ .Inner }}</strong>
+</div>
 {{ warnf "File %s \n\t\t\t\tTO DO item: %s\n " .Page.File.Path .Inner }}
 {{- end -}}

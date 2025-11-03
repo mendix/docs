@@ -2,15 +2,10 @@
 title: "Object Activities"
 url: /refguide8/object-activities/
 weight: 10
-tags: ["studio pro", "microflow", "object"]
 #To update screenshots of these microflows in Studio Pro, use the Microflow Screenshots app.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/object-activities.pdf).
-{{% /alert %}}
-
-## 1 Introduction
+## Introduction
 
 When working with the Mendix Platform, objects of entities are always being manipulated. This happens implicitly within [data widgets](/refguide8/data-widgets/) on a page, or explicitly using activities in microflows and nanoflows.
 
@@ -18,7 +13,7 @@ The activities in this section of the microflow and nanoflow toolbox generally w
 
 The activities described in this document are in the **Object Activities** section of the **Toolbox**:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/object-activities-toolbox.png" alt="Object activities toolbox"   width="40%"  >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/object-activities-toolbox.png" alt="Object activities toolbox"   width="40%"  class="no-border" >}}
 
 The following are the object activities you can use in your microflow or nanoflow:
 
@@ -30,6 +25,6 @@ The following are the object activities you can use in your microflow or nanoflo
 * [Retrieve](/refguide8/retrieve/) – gets one or more objects of an entity
 * [Rollback object](/refguide8/rollback-object/) – undoes uncommitted changes made to an object
 
-## 2 Read More
+## Read More
 
 * [Activities](/refguide8/activities/)

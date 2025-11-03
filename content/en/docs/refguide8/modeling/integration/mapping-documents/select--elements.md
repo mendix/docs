@@ -1,22 +1,17 @@
 ---
 title: "Select Elements"
 url: /refguide8/select--elements/
-tags: ["studio pro"]
 aliases:
     - /refguide8/Select++Elements.html
     - /refguide8/Select++Elements
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/select--elements.pdf).
-{{% /alert %}}
-
-## 1 Introduction
+## Introduction
 
 For both [import](/refguide8/import-mappings/)and [export mappings](/refguide8/export-mappings/) you need to specify the elements structure you want to map. You do this in the **Select schema elements** window. An example of this screen is shown below.
 
-{{< figure src="/attachments/refguide8/modeling/integration/mapping-documents/select--elements/19399143.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/mapping-documents/select--elements/19399143.png" class="no-border" >}}
 
 Perform the following steps in the **Select schema elements** window:
 
@@ -30,7 +25,7 @@ If the contents of the used schema source change, the mapping document does not 
 Schema contents can change by importing a changed XML schema, WSDL or by changing a JSON structure.
 {{% /alert %}}
 
-## 2 Rules and Restrictions
+## Rules and Restrictions
 
 Keep in mind the following rules and restrictions for element selection:
 
@@ -52,9 +47,10 @@ When working on an import mapping you are allowed to skip elements in the hierar
 You may encounter element selection checkboxes that are greyed out. If you hover the mouse over the checkbox, you see which rule or restriction prevents you from changing the checkbox value. For example, you may need to select a parent node first before you can select a child node.
 {{% /alert %}}
 
-## 3 Convenience functions
+## Convenience functions
 
 {{% alert color="info" %}}
+
 | Function | Description |
 | --- | --- |
 | Filter | Expand and filter the tree nodes based on whether the name contains the filter text. Because the filtering behavior relies on the 'Expand All' behavior, in very big schemas all elements matching the filter are not guaranteed to be found. |
@@ -62,4 +58,5 @@ You may encounter element selection checkboxes that are greyed out. If you hover
 | Collapse all | Collapses the entire tree, so that only the root node remains visible |
 | Check all | Checks the box next to every expanded node and visible leaf node. Collapsed nodes and their children are not affected. |
 | Uncheck all | Unchecks the box next to every expanded node and visible leaf node. Collapsed nodes and their children are not affected. |
+
 {{% /alert %}}

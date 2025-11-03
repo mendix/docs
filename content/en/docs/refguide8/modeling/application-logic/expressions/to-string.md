@@ -2,24 +2,19 @@
 title: "To String"
 url: /refguide8/to-string/
 weight: 130
-tags: ["studio pro", "to string", "expression", "expressions"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/to-string.pdf).
-{{% /alert %}}
-
-## 1 Intriduction
+## Introduction
 
 Basic functions to convert values of various data types to string.
 
-## 2 toString
+## toString
 
 Converts the specified value to a string representation.
 
 If you need full control over the output format, consider using the data type specific format functions. For example, for decimal, use [formatDecimal](/refguide8/parse-and-format-decimal-function-calls/).
 
-### 2.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -27,40 +22,40 @@ The input parameters are described in the table below:
 | --------------------------------------------- | ------------------------------------------------------------ |
 | A value that should be converted to a string. | Integer/Long, Decimal, Date and time, Boolean and Enumeration.<br />In case of enumeration, the expression returns the key of the enumeration value, not the caption. More information, see [Enumerations in expressions](/refguide8/enumerations-in-expressions/). |
 
-### 2.2 Example
+### Example
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 toString(1.4)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 '1.4'
 ```
 
 If you type in an input with a Date and time type:
 
-```java {linenos=false}
+```java
 toString(dateTime(2007))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 'Mon Jan 01 00:00:00 CET 2007'
 ```
 
 If you type in an input with a Boolean:
 
-```java {linenos=false}
+```java
 toString(true)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 'true'
 ```

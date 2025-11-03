@@ -1,16 +1,12 @@
 ---
 title: "Integration"
 url: /refguide8/integration/
-category: "App Modeling"
 weight: 110
-tags: ["studio pro"]
+no_list: false
+description_list: true 
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/integration.pdf).
-{{% /alert %}}
-
-## 1 Introduction
+## Introduction
 
 Integration with other applications (other than Mendix) can be done using REST or SOAP/Web Services. Mendix can import and export data from XML and JSON.
 
@@ -22,12 +18,4 @@ For a [call REST service](/refguide8/call-rest-action/) activity and JSON suppor
 For a [call web service](/refguide8/call-web-service-action/) activity and support for SOAP web services/XML, see [Consumed Web Services](/refguide8/consumed-web-services/).
 {{% /alert %}}
 
-## 2 Other Documents in This Section
-
-* [Consumed App Services](/refguide8/consumed-app-services/)
-* [HttpRequest and HttpResponse System Entities](/refguide8/http-request-and-response-entities/)
-* [JSON Structures](/refguide8/json-structures/)
-* [Message Definitions](/refguide8/message-definitions/)
-* [Published App Services](/refguide8/published-app-services/)
-* [Published OData Services](/refguide8/published-odata-services/)
-* [XML Schemas](/refguide8/xml-schemas/)
+## Documents in This Section

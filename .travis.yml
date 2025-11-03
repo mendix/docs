@@ -1,22 +1,23 @@
 language: node_js
 node_js:
-  - 18             # latest LTS version ('node' will give latest version, 'lts/*' will give LTS version )
+  - 20.9             # latest LTS version ('node' will give latest version, 'lts/*' will give LTS version )
 arch: amd64           # optional, this is default, routes to a full VM
 # arch: arm64         # this is the recommended LXD container - faster spin up but some limitations Not used as it seems very unstable.
 os: linux             # optional, this is default
 dist: jammy          # or bionic | xenial | trusty | precise with xenial as default - Recommended here: https://docs.travis-ci.com/user/reference/overview/#deprecated-virtualization-environments
 
 git:
-  depth: 20000 # We're cloning a max of xxx commits, so the author date is correct
+  depth: 20000 # We're cloning this many commits as it is roughly covering the last 4 years of commits, thus letting us show the last changed date on the documentation pages.
   quiet: true # prevent commit numbers appearing in the log and being flagged as potential security leaks.
-  submodules: false # turn off submodules and specifically update them in before_install - preventing the commit numbers appearing in the log
+  submodules: false # turn off submodules
 
 env:
   global:
-# =============================================
-# UPDATE VERSION MANUALLY AND TEST BEFORE MERGE
-# =============================================
-    - HUGO_VERSION=0.91.0 # Choose Hugo version explicitly, in case there is an issue with published version.
+# Global variables can go here, for example HUGO_VERSION if we were using Netlify to publish.
+
+# add group: previous to see if this fixes the stalled npm build - 2025-04-14
+# remove again 2025-05-08 as builds started breaking again.
+# group: previous
 
 branches:
 # build only development and production
@@ -49,13 +50,8 @@ branches:
 
 before_install:
 ###############
-  # Added the submodule update here so that I can add the --quiet flag
-  - git submodule update --init --recursive --quiet
-  #
+  # Hugo, Docsy and dependencies are installed via npm
   - npm install # use npm rather than yarn - HUGO doesn't have that many dependencies
-  #
-  - travis_retry curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz | tar xz # Install Hugo manually - Snap is too fragile
-  - chmod +x ./hugo # installed into $TRAVIS_BUILD_DIR/hugo
   #
   # Currently will use custom version of htmltest stored in /htmltest/htmltest
   # This version makes the html.Parse much smaller
@@ -67,26 +63,35 @@ install:
   # ------------------------
   - mkdir public  # This because <Maybe> the process of syncing to public is probably deadlocked behind waiting for the public folder to be made, and is never signalled that the folder is created, which ends up stalling the build on Travis CI.
   # ------------------------
-  - ./hugo config --environment $TRAVIS_BRANCH # report the config we are using
-  - echo "HUGO was run for environment $TRAVIS_BRANCH" > $TRAVIS_BUILD_DIR/hugo.log
+  -  ./node_modules/.bin/hugo config --environment $TRAVIS_BRANCH # report the config we are using
+  # Output header in bold white on green
+  - printf '\033[37;42;1m' > $TRAVIS_BUILD_DIR/hugo.log
+  - echo "HUGO was run for environment $TRAVIS_BRANCH" >> $TRAVIS_BUILD_DIR/hugo.log
+  - printf '\033[0;22m' >> $TRAVIS_BUILD_DIR/hugo.log
   # Set pipefail so that if Hugo fails the whole job fails
   - set -o pipefail
   # put the flags in different config files controlled by environment matching $TRAVIS_BRANCH
   # Append output to hugo.log file to print at the end of the travis job
   # (see https://stackoverflow.com/questions/418896/how-to-redirect-output-to-a-file-and-stdout)
-  - ./hugo --environment $TRAVIS_BRANCH 2>&1 | tee -a $TRAVIS_BUILD_DIR/hugo.log
-  #
+
+  -  ./node_modules/.bin/hugo --environment $TRAVIS_BRANCH 2>&1 | tee -a $TRAVIS_BUILD_DIR/hugo.log
+
   # normal htmltest takes too much memory - using a modified version which strips <aside> tag content
   # NB - Set pipefail so that Travis CI sees the return code from `tee` and not from `htmltest` so it will always build.
   - set +o pipefail
+  # Additional info  in bold white on green
+  - printf '\033[37;42;1m' >> $TRAVIS_BUILD_DIR/hugo.log
   - echo "Any errors from HTMLTEST will be treated as warnings - the build will continue." >> $TRAVIS_BUILD_DIR/hugo.log 
+  - printf '\033[0;22m' >> $TRAVIS_BUILD_DIR/hugo.log
   - chmod +x ./htmltest/htmltest
-  - ./htmltest/htmltest 2>&1 | tee -a $TRAVIS_BUILD_DIR/hugo.log
+  # Run htmltest - convert red (91) and green (92) aixterm colors with 8-bit versions (31 and 32).
+
+  - ./htmltest/htmltest 2>&1 | sed "s/\o033\[91/\o033\[31/g; s/\o033\[92/\o033\[32/g" |tee -a $TRAVIS_BUILD_DIR/hugo.log
 
 before_script:
 ##############
   - pyenv versions # list python versions supported by pyenv in case version in next command is removed
-  - pyenv global 3.7.13 # this version needs to be already installed in the travis build
+  - pyenv global 3.8 # this version needs to be already installed in the travis build
   - python -V
 
 script:
@@ -117,7 +122,7 @@ script:
 #  - pwd
 # NB: Have to have something here, otherwise Travis tries to run "npm test"
 # Display the output from hugo and htmltest so it is not folded and hidden, and is at the end of the log.
-  - echo "$(<$TRAVIS_BUILD_DIR/hugo.log)"
+  - printf '\n\n%s\n\n' "$(<$TRAVIS_BUILD_DIR/hugo.log)"
 
 # before_cache
 ############## Skipped
@@ -144,14 +149,14 @@ deploy:
 #
 # Need to decide where to deploy to, so need to do the actual deployment in a script https://docs.travis-ci.com/user/job-lifecycle#complex-build-commands
 #  - aws s3 sync . s3://$TARGETAWSBUCKET --delete --only-show-errors
-  - provider: script
-    script:
-      - $TRAVIS_BUILD_DIR/_scripts/deploy.sh
-    skip_cleanup: true
-    on:
-      branch:
-        - production
-        - development
+  provider: script
+  # ⋮
+  edge: true
+  script: $TRAVIS_BUILD_DIR/_scripts/deploy.sh
+  on:
+    branch:
+      - production
+      - development
 
 after_deploy:
 ############# Skipped

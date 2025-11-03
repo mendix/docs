@@ -2,18 +2,13 @@
 title: "Events"
 url: /refguide8/events/
 weight: 90
-tags: ["studio pro", "event", "events"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/events.pdf).
-{{% /alert %}}
-
-## 1 Introduction
+## Introduction
 
 Events are elements that are displayed as circles on a flow of your microflow and are usually placed at the end or the beginning of the flow:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/events/events.png"   width="200"  >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/events/events.png"   width="200"  class="no-border" >}}
 
 For example, they are used to start or end your microflow, to break an iteration in a loop, or continue this iteration, depending on the type of the event. All of the events can be used both in a microflow or nanoflow, except for the error event. 
 

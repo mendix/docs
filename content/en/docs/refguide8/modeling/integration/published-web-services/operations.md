@@ -1,14 +1,9 @@
 ---
 title: "Operations"
 url: /refguide8/operations/
-tags: ["studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/operations.pdf).
-{{% /alert %}}
-
-## 1 Introduction
+## Introduction
 
 Provides the actual methods of which the webservice is composed.
 
@@ -16,47 +11,47 @@ Looking at an operation in more detail, you can see that a microflow can be sele
 
 An operation has the following properties:
 
-## 2 General
+## General
 
-{{< figure src="/attachments/refguide8/modeling/integration/published-web-services/operations/16843884.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/published-web-services/operations/16843884.png" class="no-border" >}}
 
-### 2.1 Name
+### Name
 
 This is what the operation is called in the WSDL.
 
-### 2.2 Microflow
+### Microflow
 
 Defines which microflow will be executed when this webservice is called.
 
-### 2.3 Documentation
+### Documentation
 
 Describes the operation and is included in the WSDL.
 
-## 3 Parameters
+## Parameters
 
-{{< figure src="/attachments/refguide8/modeling/integration/published-web-services/operations/16843879.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/published-web-services/operations/16843879.png" class="no-border" >}}
 
-### 3.1 Microflow Parameter
+### Microflow Parameter
 
 Defines the name of the parameter in the microflow
 
-### 3.2 Type
+### Type
 
 Defines which type the parameter is, for example a List of Vehicle entities.
 
-### 3.3 Optional
+### Optional
 
 Defines whether this parameter is optional in the webservice call.
 
-### 3.4 Nillable
+### Nillable
 
 Defines whether this parameter can have a nil value in the webservice call.
 
-### 3.5 Operation Parameter
+### Operation Parameter
 
 Defines the name of the parameter in the webservice call. This is initially copied from the microflow parameter name but can be modified.
 
-### 3.6 Operation Object Name
+### Operation Object Name
 
 Is available when the parameter is a list, and can be used to name the object in the list.
 
@@ -66,12 +61,12 @@ The CountCarsAndHp operation. It takes a non-optional list of Vehicle as a param
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide8/modeling/integration/published-web-services/operations/918221.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/published-web-services/operations/918221.png" class="no-border" >}}
 
 The microflow attached to the CountCarsAndHp operation. It takes a list of objects of the entity Vehicle as input and returns an object that holds the number of cars and the total amount of horsepower of those cars.
 {{% /alert %}}
 
-### 3.7 Exposed Attributes and Associations
+### Exposed Attributes and Associations
 
 If you click 'Select...' in the parameter tab, you can select individual members of the entity that is being passed as a parameter. The toolbar buttons are available to help you quickly perform operations that would otherwise be laborious.
 
@@ -86,7 +81,7 @@ If you click 'Select...' in the parameter tab, you can select individual members
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide8/modeling/integration/published-web-services/operations/16843878.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/published-web-services/operations/16843878.png" class="no-border" >}}
 
 Here you can select which members of the entity can be passed and/or are optional or nillable, as well as set their names. Note that checking Optional or Nillable on the root element has no effect; you should set these values in the operation editor.
 {{% /alert %}}
@@ -101,23 +96,23 @@ New attributes from entities will appear as new elements *below* members that ar
 If you expose the Password (hashed string) attribute of a System.User entity (or a specialization thereof), a warning appears that there is a risk that someone does a brute-force attack to obtain the original plain-text password. The risk is considerably less when you use a strong hashing algorithm (preferably 'BCrypt'). The hashing algorithm can be set in the Project settings.
 {{% /alert %}}
 
-## 4 Return Type
+## Return Type
 
 This section pertains to the return type of the microflow and how it is transformed back to XML.
 
-### 4.1 Type
+### Type
 
 Defines what kind of object will be returned by the microflow. If the returned type is a complex type (as in, something from your entity model) you can use the Members button to select which members will be returned in the same way as parameters.
 
-### 4.2 Name
+### Name
 
 The name of the return type. This determines the output element name in the XML that results from a webservice call.
 
-### 4.3 Optional
+### Optional
 
 This determines if the element in the XML can be left out if the return value is empty.
 
-### 4.4 Nillable
+### Nillable
 
 This determines if the element in the XML is sent as nil if the return value is empty.
 
@@ -125,7 +120,7 @@ Optional and Nillable cannot be checked both.
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide8/modeling/integration/published-web-services/operations/16843880.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/published-web-services/operations/16843880.png" class="no-border" >}}
 
 Here, you can see an optional Order entity set as the return type of the operation ReturnsOrder.
 

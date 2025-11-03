@@ -6,7 +6,7 @@ weight: 94
 
 ## 9.6.0
 
-**Release date: September 17th, 2021**
+**Release date: September 17, 2021**
 
 ### CodeActions
 

@@ -1,27 +1,40 @@
 ---
 title: "Security Advisories"
 url: /releasenotes/security-advisories/
-tags: ["security", "security advisories", "cve", "cvss", "ssa", "siemens security advisory"]
 weight: 50
-#notoc: true
+numberless_headings: true
 #layout: wide
 ---
 
-## 1 Introduction
+## Introduction
 
-Mendix publishes security advisories by leveraging [Siemens ProductCERT](https://new.siemens.com/global/en/products/services/cert.html), which is a dedicated team of seasoned security experts that manages the receipt, investigation, internal coordination, and public reporting of security issues related to Siemens products, solutions, and services.
+Mendix publishes security advisories by leveraging [Siemens ProductCERT](https://www.siemens.com/global/en/products/services/cert.html), which is a dedicated team of seasoned security experts that manages the receipt, investigation, internal coordination, and public reporting of security issues related to Siemens products, solutions, and services.
 
 Mendix adds the CVSS score and CVSS vector for security vulnerabilities described in the Studio Pro release notes. Mendix also adds the Mendix-specific CVE IDs when they become available.
 
 {{% alert color="warning" %}}
-Siemens publishes their CVEs on the second Tuesday of every month.
+Siemens publishes their common vulnerabilities and exposures (CVE) on the second Tuesday of every month.
 {{% /alert %}}
 
-## 2 Security Advisory Details
+## Security Advisory Details {#details}
 
 | CVE ID | CVSS v3.1 Base Score | Siemens Security Advisory (SSA) Description | Notes |
 | --- | --- | ---  | --- |
-| To be published by [Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications) | 9.1 | To be published by [Siemens](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications) | Fixed in [SAML Module](https://marketplace.mendix.com/link/component/1174) versions 3.3.0, 2.3.0, and 1.17.3. |
+| <a id="40758">CVE-2025-40758 | 8.7 | [Account Hijacking Vulnerability in Mendix SAML Module](https://cert-portal.siemens.com/productcert/html/ssa-395458.html) | See the SSA description for remediation details. |
+| <a id="40592">CVE-2025-40592 | 6.1 | [Zip Path Traversal Vulnerability in Mendix Studio Pro's Module Installation Process](https://cert-portal.siemens.com/productcert/html/ssa-627195.html) | See the SSA description for remediation details. |
+| <a id="40571">CVE-2025-40571 | 2.2 | [Incorrect Privilege Assignment Vulnerability in Mendix OIDC SSO Module](https://cert-portal.siemens.com/productcert/html/ssa-726617.html) | See the SSA description for remediation details. |
+| <a id="30280">CVE-2025-30280 | 5.3 | [Entity Enumeration Vulnerability in Mendix Runtime](https://cert-portal.siemens.com/productcert/html/ssa-874353.html) | See the SSA description for remediation details. |
+| <a id="50313">CVE-2024-50313 | 5.3 | [Race Condition Vulnerability in Basic Authentication Implementation of Mendix Runtime](https://cert-portal.siemens.com/productcert/html/ssa-914892.html) | See the SSA description for remediation details. |
+| <a id="56841">CVE-2024-56841 | 7.4 | [LDAP Injection Vulnerability in Mendix LDAP Module](https://cert-portal.siemens.com/productcert/html/ssa-314390.html) | See the SSA description for remediation details. |
+|  <a id="39888"></a>CVE-2024-39888 | 7.5 | [Hard-coded Default Encryption Key in Mendix Encryption Module v10.0.0 and v10.0.1](https://cert-portal.siemens.com/productcert/html/ssa-998949.html)  | See the SSA description for remediation details. |
+|  <a id="33500"></a>CVE-2024-33500 | 5.9 | [Improper Privilege Management Vulnerability in Mendix Runtime](https://cert-portal.siemens.com/productcert/html/ssa-540640.html)  | See the SSA description for remediation details. |
+|  <a id="49069"></a>CVE-2023-49069 | 5.3 | [Usernames Disclosure Vulnerability in Mendix Runtime](https://cert-portal.siemens.com/productcert/html/ssa-097435.html)  | See the SSA description for remediation details. |
+|  CVE-2023-4863  | 7.5 | [Code Execution Vulnerability (libwebp CVE-2023-4863) in Mendix Studio Pro](https://cert-portal.siemens.com/productcert/html/ssa-268517.html)  | See the SSA description for remediation details. |
+| CVE-2023-45794  | 6.8 | [Privilege Escalation Vulnerability in Mendix Runtime](https://cert-portal.siemens.com/productcert/html/ssa-084182.html)  | See the SSA description for remediation details. |
+| CVE-2023-43623 | 5.3 | [User Enumeration Vulnerability in Mendix Forgot Password Module](https://cert-portal.siemens.com/productcert/html/ssa-295483.html) | See the SSA description for remediation details. |
+| CVE-2023-29129 | 9.1 | [Authentication Bypass Vulnerability in Mendix SAML Module](https://cert-portal.siemens.com/productcert/html/ssa-851884.html) | See the SSA description for remediation details. |
+| CVE-2023-25957 | 9.1 | [Authentication Bypass Vulnerability in Mendix SAML Module](https://cert-portal.siemens.com/productcert/html/ssa-851884.html) | See the SSA description for remediation details. |
+| CVE-2023-27464 | 5.3 | [Observable Response Discrepancy in Mendix Forgot Password Module](https://cert-portal.siemens.com/productcert/html/ssa-699404.html) | See the SSA description for remediation details. |
 | <a id="23835"></a>CVE-2023-23835 | 5.9 | [XPath Constraint Vulnerability in Mendix Runtime](https://cert-portal.siemens.com/productcert/pdf/ssa-252808.pdf) | See the SSA description for remediation details. |
 | CVE-2022-46823 | 9.3 | [Cross-Site Scripting Vulnerability in Mendix SAML Module](https://cert-portal.siemens.com/productcert/html/ssa-496604.html) | See the SSA description for remediation details. |
 | CVE-2022-46664 | 8.1 | [Improper Access Control Vulnerability in Mendix Workflow Commons Module](https://cert-portal.siemens.com/productcert/pdf/ssa-210822.pdf) | See the SSA description for remediation details. |
@@ -49,8 +62,8 @@ Siemens publishes their CVEs on the second Tuesday of every month.
 | CVE-2021-27394 | 8.1 | [Privilege Escalation Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-875726.pdf) | See the SSA description for remediation details. |
 | CVE-2021-25672 | 6.8 | [Mendix Forgot Password App Store Module](https://cert-portal.siemens.com/productcert/pdf/ssa-917115.pdf) | See the SSA description for remediation details. |
 
-## 3 More Information
+## More Information
 
 * [Siemens ProductCERT and Siemens CERT](https://new.siemens.com/global/en/products/services/cert.html)
-    * [Search](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications) for relevant security advisories  with the keyword "Mendix"
+    * [Search](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications) for relevant security advisories with the keyword "Mendix"
 * Mendix-specific security advisories can be read using an [Atom feed](https://cert-portal.siemens.com/productcert/rss/advisories_mendix_products.atom) and an [RSS feed](https://cert-portal.siemens.com/productcert/rss/advisories_mendix_products.rss)

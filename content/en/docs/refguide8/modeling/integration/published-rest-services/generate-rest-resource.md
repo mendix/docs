@@ -3,34 +3,29 @@ title: "Generate a Published REST Resource"
 url: /refguide8/generate-rest-resource/
 weight: 20
 description: "Generate a published REST resource from an entity"
-tags: ["published REST", "resource", "entity", "operations", "expose", "studio pro"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # linked from DM: domain model > entity (right-click) > Expose as REST resource > Help (integration)
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/generate-rest-resource.pdf).
-{{% /alert %}}
-
-## 1 Introduction
+## Introduction
 
 You can publish a REST resource with basic operations based on an entity by right-clicking an entity in the domain model and selecting **Expose as REST resource**. Alternatively, you can drag an entity or message definition onto the list of resources of a published REST service. This page describes the options you have once you perform one of these actions.
 
-## 2 REST Service
+## REST Service
 
 This only shows up when you click **Expose as REST resource** in the domain model. Next, choose a service in which to generate the resource and operation.
 
-## 3 General
+## General
 
-### 3.1 Resource Name
+### Resource Name
 
 Type the name of the resource that you want to publish.
 
-### 3.2 Key Attribute
+### Key Attribute
 
 To be able to create a **Get by key**, a **Patch** or a **Delete** operation, there needs to be a unique attribute on the entity. Select that attribute here.
 
-## 4 Operations
+## Operations
 
 Check the operations that you want to generate:
 

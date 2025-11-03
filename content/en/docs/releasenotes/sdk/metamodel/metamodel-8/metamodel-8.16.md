@@ -6,7 +6,7 @@ weight: 85
 
 ## 8.16.0
 
-**Release date: November 23rd, 2020** 
+**Release date: November 23, 2020** 
 
 ### Microflows
 
@@ -22,7 +22,7 @@ weight: 85
 
 #### ODataRemoteAssociationSource (Element)
 
-* We introduced the `navigability` property to answer: "In which direction(s) can this association be traversed?"
+* We introduced the `navigability` property to answer: "In which direction (or directions) can this association be traversed?"
 
 #### ODataMappedValue (Element)
 

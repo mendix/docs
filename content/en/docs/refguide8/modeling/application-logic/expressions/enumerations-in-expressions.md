@@ -2,14 +2,9 @@
 title: "Enumerations in Expressions"
 url: /refguide8/enumerations-in-expressions/
 weight: 170
-tags: ["studio pro", "expression", "enumeration", "expressions"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/enumerations-in-expressions.pdf).
-{{% /alert %}}
-
-## 1 Introduction
+## Introduction
 
 Enumerations are referenced by `<modulename>.<enumerationname>.<enumerationvalue>`.
 
@@ -30,15 +25,15 @@ else
   OrderProcessing.Status.started
 ```
 
-## 2 getCaption
+## getCaption
 
 The `getCaption` function takes an enumeration value and returns the caption of this value. The *caption* is a translatable string and the result of this function depends on the current language.
 
-### 2.1 Input Parameters
+### Input Parameters
 
 As an input parameter you can use an enumeration value of any enumeration.
 
-### 2.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -46,7 +41,7 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------ |
 | The caption of the enumeration value in the current language. | String |
 
-### 2.3 Example
+### Example
 
 If you use the following input:
 
@@ -60,15 +55,15 @@ The output can be:
 Gouden
 ```
 
-## 3 getKey
+## getKey
 
 The `getKey` function takes an enumeration value and returns the key (called *Name* in Studio Pro) of this value. The key is the technical name for the enumeration value and is language independent. For more information, see [Enumerations](/refguide8/enumerations/).
 
-### 3.1 Input Parameters
+### Input Parameters
 
 As an input parameter you can use an enumeration value of any enumeration.
 
-### 3.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -76,7 +71,7 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------ |
 | The key (name) of the enumeration value in the current language. | String |
 
-### 3.3 Example
+### Example
 
 If you use the following input:
 
@@ -90,6 +85,6 @@ The output can be:
 Golden
 ```
 
-## 4 Read More
+## Read More
 
 * [Enumerations](/refguide8/enumerations/)

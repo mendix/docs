@@ -1,18 +1,13 @@
 ---
 title: "OQL Where Clause"
 url: /refguide8/oql-where-clause/
-tags: ["studio pro", "queries", "where"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/oql-where-clause.pdf).
-{{% /alert %}}
 
 The WHERE clause specifies how the data being retrieved must be constrained.
 
 The syntax is as following:
 
-```sql {linenos=false}
+```sql
 WHERE <constraint>
 ```
 

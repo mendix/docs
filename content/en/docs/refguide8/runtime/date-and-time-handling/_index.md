@@ -1,15 +1,13 @@
 ---
 title: "Date and Time Handling"
 url: /refguide8/date-and-time-handling/
-category: "Mendix Runtime"
-tags: ["studio pro"]
 ---
 
-## 1 Introduction
+## Introduction
 
 The Mendix Server operations use the time zone of the user instead of the server time zone. Previously operations like generating documents, exporting to Excel/CSV and date computations in microflows/OQL all used the server time zone. This is fine if the server and all users of your application are in the same time zone. If they are not, however, generated output can contain unexpected results.
 
-## 2 Relevant Time Zones
+## Relevant Time Zones
 
 There are three time zones that come into play in a Mendix application:
 
@@ -19,7 +17,7 @@ There are three time zones that come into play in a Mendix application:
 
 For brevity we will call these time zones user time, UTC and server time.
 
-## 3 Changes
+## Changes
 
 The server needs to know the time zone of each user. Unfortunately, the web browser cannot report this information. It only reports the current offset to UTC. This is not enough to determine the exact time zone and properly deal with daylight saving time of future and past dates. For this reason web applications often offer you the option of setting your time zone and we have now built this option into Mendix, too. You can explicitly set a time zone for each user and this time zone is then used for server operations.
 
@@ -29,11 +27,11 @@ In the Administration module the Account_NewEdit page adds a time zone selector 
 
 Studio Pro adds a setting to the project Settings dialog. On the 'Model' tab you can specify a default time zone. This time zone is used for new users, but it is also applied to all users that do not have a time zone yet when starting your application.
 
-## 4 Existing Projects
+## Existing Projects
 
 To make use of the new date/time handling you have to take some action after converting your existing project. Those actions depend on the type of the project: single time zone or multiple time zone. In a single time zone project all users are in the time zone or they are at least willing to use the same time zone. The time zone of the server is not important, so a project is still single time zone if all users are in the Netherlands but the server is in England. Multiple time zone projects have users in different time zones. Let us see what you need to do in each case.
 
-### 4.1 Single Time Zone Project
+### Single Time Zone Project
 
 If you do nothing in a single time zone project where the server is also in that time zone the situation for server operations is actually slightly worse than before. Users will not have a time zone and if that is the case the server uses the current offset from UTC sent by the web browser. This offset is not enough to determine the exact time zone and this means that daylight saving time (DST) will not be taken into account. In practice this means that dates and times in the future and past - past DST changes - are one hour off.
 
@@ -41,7 +39,7 @@ To make sure that all users have their time zone set, you have to set the defaul
 
 In summary, in a single time zone project all you have to do is to set the default time zone in Studio Pro and you are done.
 
-### 4.2 Multiple Time Zone Project
+### Multiple Time Zone Project
 
 If you do nothing in a multiple time zone project the situation for server operations improves automatically. Before, the server time zone would be used for operations like generating Excel exports and other documents. This meant that if a user in China generated a report and the server was in the United States dates and times would be way off. The server will at least use the browser's UTC offset. Only daylight saving time will not be handled properly yet. To get proper DST handling as well, the time zone of users needs to be set.
 
@@ -56,16 +54,16 @@ There are several things you can do in a multiple time zone project:
 Do NOT use the default time zone setting in Studio Pro for multiple time zone projects because that will set the default time zone for all users!
 {{% /alert %}}
 
-## 5 Anonymous users
+## Anonymous users
 
 If your application is accessible without signing in, those anonymous users will get the default time zone that is set in Studio Pro. If no time zone is set in Studio Pro they will use the offset reported by the browser. Only DST for dates in the future and past will not be handled properly.
 
-## 6 To Localize or Not to Localize
+## To Localize or Not to Localize
 
 Per attribute of type **Date and time** you can specify whether you want the date and time to be localized. This is not a new feature but worth mentioning on this page. Both localized and non-localized attributes are stored in UTC but only localized attributes are converted to the time zone of the user when displaying their value. Use non-localized attributes if you are not interested in the time component (for example, birthdays) or if you want a date to look exactly the same all over the world.
 
 See the documentation of the Localize property of [Attributes](/refguide8/attributes/) for more information.
 
-## 7 Tokens
+## Tokens
 
 Tokens for referring to specific moments like [%BeginOfCurrentDay%] now refer to the user time zone. Where it makes sense, UTC versions of tokens have been added, for example, [%BeginOfCurrentDayUTC%]].

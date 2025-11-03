@@ -1,20 +1,19 @@
 ---
 title: "Build Widgets with XML"
 url: /howto8/extensibility/use-xml-widget/
-tags: ["xml", "widget"]
 ---
 
-## 1 Requirements
+## Requirements
 
-This document assumes you have a basic understanding of XML and Mendix Studio Pro. For more information on XML, visit [W3 Schools - XML](http://w3schools.com/xml/).
+This document assumes you have a basic understanding of XML and Mendix Studio Pro. For more information on XML, visit [W3 Schools - XML](https://w3schools.com/xml/).
 
-## 2 Start of the Widget XML
+## Start of the Widget XML
 
 An XML file always starts with the XML version and encoding declaration. These are standard and should be present in every XML file. Mendix Studio Pro uses the widget XML file to create the property input fields, which show up when you add your widget to a form. Our widget declaration XML starts at the `<widget>` element. This is the root element that will contain all our settings for this widget.
 
-## 3 Widget Element {#Widgets-XMLreferenceguide-Widgetattributes}
+## Widget Element {#Widgets-XMLreferenceguide-Widgetattributes}
 
-### 3.1 Attributes
+### Attributes
 
 | Attribute | Description |
 | --- | --- |
@@ -23,7 +22,7 @@ An XML file always starts with the XML version and encoding declaration. These a
 | offlineCapable | This Boolean determines whether your widget can be used on pages that are accessible through the offline profile. If this attribute is not set, or set to "false", the widget cannot be used offline. If set to "true", the widget can be used offline. Keep in mind that there are a number of restrictions when working offline. Calling a microflows or fetching data using XPath are examples of features that are not supported offline. For more information, see the [Ensuring Your App Is Offline-First](/refguide8/offline-first/#limitations) section of *Offline First*. |
 | xmlns | The XML namespace used by the widget. The value of this attribute is the same for every widget. `<widget id="HelloWorld.widget.helloworld" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">` |
 
-### 3.2 Child elements {#Widgets-XMLreferenceguide-id}
+### Child elements {#Widgets-XMLreferenceguide-id}
 
 Inside the widget element are 4 child elements.
 
@@ -31,7 +30,7 @@ Inside the widget element are 4 child elements.
 | --- | --- |
 | Name | The name property is what your widget will be called in Mendix Studio Pro. It will also be used to name the different instances of your widget by adding a number to the end of it each time it is used in a form. |
 | Description | The description determines the mouse-over tooltip over your widget in the Custom Widgets toolbar. |
-| Icon | Every element or widget in Studio Pro has its own icon. Your new widget's icon can be defined with this property. It is a [Base64](http://en.wikipedia.org/wiki/Base64) representation of the image, so that it can be used in an XML file. |
+| Icon | Every element or widget in Studio Pro has its own icon. Your new widget's icon can be defined with this property. It is a [Base64](https://en.wikipedia.org/wiki/Base64) representation of the image, so that it can be used in an XML file. |
 | Properties | The individual property elements will be grouped inside the “properties” element as in the code snippet below. |
 
 ```xml
@@ -45,11 +44,11 @@ Inside the widget element are 4 child elements.
 </widget>
 ```
 
-## 4 Property element {#Widgets-XMLreferenceguide-Name}
+## Property element {#Widgets-XMLreferenceguide-Name}
 
 Any properties you define in your widget XML file can be set using Mendix Studio Pro and they will be passed to your JavaScript file, so you can use them in your widget.
 
-### 4.1 Child elements
+### Child elements
 
 Every property element contains at least the following 3 child elements.
 
@@ -59,7 +58,7 @@ Every property element contains at least the following 3 child elements.
 | Category | This element defines in what category this property will be shown in the Properties list in Mendix Studio Pro. Common categories are “Behavior”, “Appearance” and “Data source”. |
 | Description | This element is used to add a useful description of the property, so the end-user knows what it’s for. |
 
-### 4.2 Attributes
+### Attributes
 
 All property elements define at least 2 attributes: **key** and **type**. The value of **key** is the name of the property in your widget, so use a descriptive name. The value of **type** refers to the type of the property, for example “string” or “integer”. Based on the type of the property, you may have to define additional attributes and/or child elements.
 
@@ -68,7 +67,7 @@ Other possible attributes are:
 | Attribute | Description |
 | --- | --- |
 | isList | Only used for the Object property type. |
-| entityProperty | Assigns a entity to a property. This should point to the **key** attribute of the **entity** to which it is related.  This could also be relative (like `"../entityName"`) when the attribute is inside a object list: `<property key="key" type="object" isList="true">`|
+| entityProperty | Assigns an entity to a property. This should point to the **key** attribute of the **entity** to which it is related.  This could also be relative (like `"../entityName"`) when the attribute is inside an object list: `<property key="key" type="object" isList="true">`|
 | allowNonPersistableEntities | Allows the selection of a non-persistable entity. (By default this is false.) |
 | defaultValue | The default value that a property starts with when it is created. |
 | required | Specifies if the property is a required field or not. Defaults to "True" if not present. |
@@ -80,7 +79,7 @@ Other possible attributes are:
 
 The different property types and their respective required attributes are discussed below.
 
-## 5 Property Types {#Widgets-XMLreferenceguide}
+## Property Types {#Widgets-XMLreferenceguide}
 
 Every property requires the  **key** and **type** attribute.
 
@@ -90,7 +89,7 @@ Any property can have the  **isDefault**  or  **required**  attribute.
 The **required** attribute defaults to "true".
 {{% /alert %}}
 
-### 5.1 Attribute
+### Attribute
 
 A property of type Attribute is always related to an entity: it uses the entityContext if it is set on true, otherwise an entityProperty is required. It enables the user in Mendix Studio Pro to select one of the attributes of the related entity (optionally over an association).
 
@@ -118,7 +117,7 @@ An attribute property has an extra required child element: a list of attributeTy
 * Long
 * String
 
-### 5.2 Boolean
+### Boolean
 
 A property of type Boolean requires the attribute defaultValue.
 
@@ -132,9 +131,9 @@ A property of type Boolean requires the attribute defaultValue.
 
 What it looks like in Mendix Studio Pro:
 
-{{< figure src="/attachments/howto8/extensibility/widget-development/use-xml-widget/16844049.png" >}}
+{{< figure src="/attachments/howto8/extensibility/widget-development/use-xml-widget/16844049.png" class="no-border" >}}
 
-### 5.2.1 Entity
+### Entity
 
 A property of the type Entity allows the user to configure a non-persistable entity in Mendix Studio Pro. This entity can then be used in your JavaScript to retrieve all the necessary information.
 
@@ -146,7 +145,7 @@ A property of the type Entity allows the user to configure a non-persistable ent
 </property>
 ```
 
-### 5.2.2 EntityConstraint
+### EntityConstraint
 
 The EntityConstraint lets you put a constraint on either the entity you specify with entityProperty or, if needsEntityContext is set to true and no entityProperty is defined, to the entity passed as context.
 
@@ -154,11 +153,11 @@ The EntityConstraint lets you put a constraint on either the entity you specify 
 <property key="constraint" type="entityConstraint" entityProperty="color">
  <caption>Color constraint</caption>
  <category>Data source</category>
- <description>The xpath constraint on the entity.</description>
+ <description>The XPath constraint on the entity.</description>
 </property>
 ```
 
-### 5.2.3 Enumeration
+### Enumeration
 
 The enumeration property has an extra required child element: a list of enumerationValues. An enumerationValue contains a **key** attribute and a **caption** within their tag.
 
@@ -181,9 +180,9 @@ It requires a default value to be set, which should correspond with one of the e
 
 What it looks like in Mendix Studio Pro:
 
-{{< figure src="/attachments/howto8/extensibility/widget-development/use-xml-widget/16844042.jpg" >}}
+{{< figure src="/attachments/howto8/extensibility/widget-development/use-xml-widget/16844042.jpg" class="no-border" >}}
 
-### 5.2.4 Form
+### Form
 
 The form property lets you pass a form to the widget. If needsEntityContext is set to "true", it automatically receives the object context.
 
@@ -196,10 +195,10 @@ The form property lets you pass a form to the widget. If needsEntityContext is s
 ```
 
 {{% alert color="info" %}}
-For forms containing a data view, remember that calling a form  with a dataview, if needsEntityContext is set to "false" in your widget, still requires an object to work.
+For forms containing a data view, remember that calling a form with a dataview, if needsEntityContext is set to "false" in your widget, still requires an object to work.
 {{% /alert %}}
 
-### 5.2.5 Image
+### Image
 
 The image property lets the user select an image from Mendix Studio Pro's images to pass it to the widget.
 
@@ -211,7 +210,7 @@ The image property lets the user select an image from Mendix Studio Pro's images
 </property>
 ```
 
-### 5.2.6 Integer {#Widgets-XMLreferenceguide-Integer}
+### Integer {#Widgets-XMLreferenceguide-Integer}
 
 The integer property lets you to pass an integer to the widget.  This property requires the attribute defaultValue.
 
@@ -223,7 +222,7 @@ The integer property lets you to pass an integer to the widget.  This property r
 </property>
 ```
 
-### 5.2.7 Microflow
+### Microflow
 
 The Microflow property allows a user to select a microflow in Mendix Studio Pro. There are three options:
 
@@ -251,7 +250,7 @@ Possible return types are shown below:
 * String
 * Object
 
-### 5.2.8 Nanoflow
+### Nanoflow
 
 The Nanoflow property allows a user to select a nanoflow in Mendix Studio Pro. There are three options:
 
@@ -279,7 +278,7 @@ Possible return types:
 * String
 * Object
 
-### 5.2.9 Object
+### Object
 
 The object property is an array of packaged sub-properties. It packages multiple other properties into an object, of which multiple can be passed to the widget. It always requires the isList attribute, which needs to be set to "true".
 
@@ -306,9 +305,9 @@ The object property is an array of packaged sub-properties. It packages multiple
 
 What it looks like in Mendix Studio Pro:
 
-{{< figure src="/attachments/howto8/extensibility/widget-development/use-xml-widget/16844048.png" >}}
+{{< figure src="/attachments/howto8/extensibility/widget-development/use-xml-widget/16844048.png" class="no-border" >}}
 
-### 5.2.10 String
+### String
 
 The string property lets you to pass a string to the widget.
 
@@ -320,7 +319,7 @@ The string property lets you to pass a string to the widget.
 </property>
 ```
 
-### 5.2.11 TranslatableString
+### TranslatableString
 
 The translatableString property is similar to a normal string property, except you can add translated versions of the default value for different languages. To achieve this, the `translatableString` property has an extra required child element: a list of translations. The Mendix Studio Pro language will match the assigned <translation> value.
 
@@ -338,8 +337,8 @@ The translatableString property is similar to a normal string property, except y
 
 What it looks like in Mendix Studio Pro:
 
-{{< figure src="/attachments/howto8/extensibility/widget-development/use-xml-widget/16844045.png" >}}
+{{< figure src="/attachments/howto8/extensibility/widget-development/use-xml-widget/16844045.png" class="no-border" >}}
 
 {{% alert color="info" %}}
-Remember to use the correct language notation according to the [Java supported locales](http://java.sun.com/javase/6/docs/technotes/guides/intl/locale.doc.html).
+Remember to use the correct language notation according to the [Java supported locales](https://www.oracle.com/java/technologies/javase/locales.html).
 {{% /alert %}}

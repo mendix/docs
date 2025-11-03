@@ -2,10 +2,14 @@
 title: "SDK Documentation"
 url: /apidocs-mxsdk/mxsdk/
 description_list: true
-tags: ["sdk", "platform sdk", "model sdk"]
+description: "Presents documentation for Mendix SDKs, including Mendix Platform SDK and Mendix Model SDK."
 ---
 
-## 1 Introduction
+{{% alert color="warning" %}}
+Mendix Platform SDK versions below 5.0 are deprecated.
+{{% /alert %}}
+
+## Introduction
 
 The Mendix SDK documentation is divided into the sections described below.
 
@@ -15,33 +19,33 @@ The Mendix SDK documentation is divided into the sections described below.
 * For details on the releases of the Mendix SDKs, check the [Mendix Platform SDK Release Notes](/releasenotes/sdk/platform-sdk/) and the [Mendix Model SDK Release Notes](/releasenotes/sdk/model-sdk/).
 {{% /alert %}}
 
-## 2 SDK Introduction
+## SDK Introduction
 
 The Mendix SDKs consist of [Mendix Platform SDK](https://apidocs.rnd.mendix.com/platformsdk/latest/index.html) and [Mendix Model SDK](https://apidocs.rnd.mendix.com/modelsdk/latest/index.html). Before diving right into the details of SDKs, you can start with the [SDK Introduction](/apidocs-mxsdk/mxsdk/sdk-intro/).
 
-## 3 SDK Use Cases
+## SDK Use Cases
 
 The [Use Case Examples](/apidocs-mxsdk/mxsdk/sdk-use-cases/) provide examples from the four basic categories of actions performed with the Mendix SDK: analyzing, exporting, modifying and importing.
 
-## 4 SDK FAQ and Troubleshooting
+## SDK FAQ and Troubleshooting
 
 This document provides the FAQs and troubleshooting information for common error messages.
 
-If you need help with the SDKs, check whether your question is answered in the [SDK FAQ](/apidocs-mxsdk/mxsdk/sdk-faq/). Otherwise, ask your question in the [Mendix Forum](https://forum.mendixcloud.com/). 
+If you need help with the SDKs, check whether your question is answered in the [SDK FAQ](/apidocs-mxsdk/mxsdk/sdk-faq/). Otherwise, ask your question in the [Mendix Community](https://community.mendix.com/). 
 
-## 5 SDK Reference Guide
+## SDK Reference Guide
 
 Browse the reference documentation below about the Mendix Metamodel:
 
 * [Mendix Metamodel](/apidocs-mxsdk/mxsdk/mendix-metamodel/) – explains the basic components of the Mendix Metamodel as well as the domain model, microflows, pages, and apps in the Mendix Metamodel
 * [JavaScript & TypeScript Resources](/apidocs-mxsdk/mxsdk/javascript-typescript-resources/) – summarizes TypeScript and provides links to useful resources for learning more
 
-## 6 SDK How-tos
+## SDK How-tos
 
 Follow these step-by-step guides to learn everything you need about using the SDK:
 
 * [Set Up Your Development Environment](/apidocs-mxsdk/mxsdk/setting-up-your-development-environment/) – leads you through the process of setting up everything you need to start working with the Mendix Platform SDK
-* [Set Up Your Personal Access Token](/apidocs-mxsdk/mxsdk/setup-your-pat/) – guides you in the process of creating and saving your personal access token, which is required to authenticate your script
+* [Set Up Your Personal Access Token](/apidocs-mxsdk/mxsdk/set-up-your-pat/) – guides you in the process of creating and saving your personal access token, which is required to authenticate your script
 * [Create Your First Script](/apidocs-mxsdk/mxsdk/creating-your-first-script/) – teaches you how to write a script that will use the Mendix Platform SDK
 * [Use Mendix Platform SDK](/apidocs-mxsdk/mxsdk/using-platform-sdk/) – guides you on how to use the Platform SDK to create, open, and delete Mendix apps as well as how to make changes to your app
 * [Create the Domain Model](/apidocs-mxsdk/mxsdk/creating-the-domain-model/) – guides you in the process of creating a more extensive domain model

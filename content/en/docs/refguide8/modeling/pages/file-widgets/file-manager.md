@@ -1,21 +1,16 @@
 ---
 title: "File Manager"
 url: /refguide8/file-manager/
-tags: ["studio pro", "file manager", "file widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/file-manager.pdf).
-{{% /alert %}}
-
 {{% alert color="warning" %}}The file manager widget is not supported on native mobile pages.{{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 A file manager is used to upload and/or download files.
 
-{{< figure src="/attachments/refguide8/modeling/pages/file-widgets/file-manager/file-manager.png" alt="File Manager" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/file-widgets/file-manager/file-manager.png" alt="File Manager" class="no-border" >}}
 
 It must be placed inside a data view connected to the entity System.FileDocument or a specialization thereof.
 
@@ -23,11 +18,11 @@ It must be placed inside a data view connected to the entity System.FileDocument
 When uploading a file through the file manager, the FileDocument object will be committed immediately.
 {{% /alert %}}
 
-## 2 Properties
+## Properties
 
 An example of file manager properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/file-widgets/file-manager/file-manager-properties.png" alt="File Manager Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/file-widgets/file-manager/file-manager-properties.png" alt="File Manager Properties"   width="250"  class="no-border" >}}
 
 File manager properties consist of the following sections:
 
@@ -43,21 +38,21 @@ File manager properties consist of the following sections:
 
 * [Visibility](#visibility)
 
-### 2.1 Common Section {#common}
+### Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide8/common-section-link.md" %}}
 
-### 2.2 Design Properties Section {#design-properties}
+### Design Properties Section {#design-properties}
 
 {{% snippet file="/static/_includes/refguide8/design-section-link.md" %}} 
 
-### 2.3 Editability Section {#editability}
+### Editability Section {#editability}
 
 {{% snippet file="/static/_includes/refguide8/editability-section-link.md" %}}
 
-### 2.4 General Section {#general}
+### General Section {#general}
 
-#### 2.4.1 Type
+#### Type
 
 The **Type** property indicates how the end-user will be able to use the file manager.
 
@@ -67,13 +62,13 @@ The **Type** property indicates how the end-user will be able to use the file ma
 | Download | The file manager can only be used to download a file. |
 | Both *(default)*  | The file manager can be used to both upload and download a file. |
 
-#### 2.4.2 Max File Size (MB)
+#### Max File Size (MB)
 
 **Max file size (MB)** determines the maximum size of files (in megabytes) that can be uploaded.
 
 Default: *5*
 
-#### 2.4.3 Allowed Extensions
+#### Allowed Extensions
 
 You can specify file extensions that users are allowed to upload. If no extension is specified, all file extensions are allowed. Separate multiple extensions by a semi-colon, for example, `txt;doc`
 
@@ -87,21 +82,21 @@ The feature to allow extensions is not meant as a security feature, as the file 
 Although it is **not** in the list of approved file extensions, File Manager erroneously allows the *.xls* extension. This happens when the *.xlsx* extension is in the accepted list and an *.xls* file is selected from the **All files** option. This is due to your operating system's way of handling the **All files** option, and it cannot be changed.
 {{% /alert %}}
 
-#### 2.4.4 Show File in Browser
+#### Show File in Browser
 
 **Show file in browser** indicates whether a file will be shown in the browser instead of being downloaded.
 
 Default: *False*
 
-### 2.5 Label Section {#label}
+### Label Section {#label}
 
 {{% snippet file="/static/_includes/refguide8/label-section-link.md" %}}
 
-### 2.6 Visibility Section {#visibility}
+### Visibility Section {#visibility}
 
 {{% snippet file="/static/_includes/refguide8/visibility-section-link.md" %}}
 
-## 3 Read More
+## Read More
 
 * [Page](/refguide8/page/)
 * [File Widgets](/refguide8/file-widgets/)

@@ -3,18 +3,18 @@ title: "Part 3: Actions"
 url: /howto8/mobile/local-notif-action/
 weight: 30
 description: A tutorial for making your push notifications trigger actions when tapped.
-tags: ["mobile", "push notification", "local", "push", "notification"]
+canonical_url: "https://docs.mendix.com/refguide/mobile/using-mobile-capabilities/local-notifications/local-notif-action/"
 ---
 
-## 1 Introduction
+## Introduction
 
-Several apps which use push notifications will also need actions to trigger after a user taps a notification. This step-by-step guide will teach you to make a tapped notification show a specific page.
+Several apps which use push notifications will also need actions to trigger after a user taps a notification. This step-by-step guide teaches you how to make a tapped notification show a specific page.
 
 {{% alert color="warning" %}}
 The Make It Native app is currently experiencing limitations which interfere with notifications. We are currently fixing those limitations. To test your local notification actions, please use a native release app installed on a mobile testing device instead of the Make It Native app. To build a native release app, please complete [How to Deploy a Native App](/howto8/mobile/deploying-native-app/) and use that app to test local notification actions.
 {{% /alert %}}
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -22,13 +22,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install the [Make It Native](/refguide8/getting-the-make-it-native-app/) app on your mobile device
 * Complete the preceding tutorials in this [Use Local Notifications](/howto8/mobile/local-notif-parent/) series
 
-## 3 Setting an Action for When a Notification is Tapped
+## Setting an Action for When a Notification is Tapped
 
 In this section you will learn to show a page when a user taps a notification.
 
 1. Drag a **Notifications** widget onto your native home page. 
 
-    {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-action/notif-widget.png" alt="notifications widget"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-action/notif-widget.png" alt="notifications widget"   width="400"  class="no-border" >}}
 
 2. Double-click the widget.
 3. Click **Actions** > **New**. 
@@ -41,11 +41,11 @@ In this section you will learn to show a page when a user taps a notification.
 10. Drag an **Open page button** widget onto **NotifPage**.
 11. When prompted, click your **Home_Native** page:
 
-    {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-action/home-native-select.png" alt="click home page"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-action/home-native-select.png" alt="click home page"   width="400"  class="no-border" >}}
 
 12. Click **Select**. Now you have a button which will bring you back to your home screen when you are testing:
 
-    {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-action/nav-button.png" alt="click home page" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-action/nav-button.png" alt="click home page" class="no-border" >}}
 
 13. Navigate back to your **ACT_CreateAndSendNotification** nanoflow. 
 
@@ -53,15 +53,15 @@ In **ACT_CreateAndSendNotification** you will set up the logic for tapping a not
 
 1. Double-click your **Display Notification** activity:
 
-    {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-action/set-action-name-display.png" alt="click display notification" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-action/set-action-name-display.png" alt="click display notification" class="no-border" >}}
 
 2. Click **Action Name** > **Edit** 
 
-    {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-action/add-action-name.png" alt="edit action name"   width="500"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-action/add-action-name.png" alt="edit action name"   width="500"  class="no-border" >}}
 
 3. Type `'show_page'` into the expression field:
 
-    {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-action/show-page-exp.png" alt="show page expression"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/local-notif-parent/local-notif-action/show-page-exp.png" alt="show page expression"   width="400"  class="no-border" >}}
 
 4. Click the **OK** buttons until you are back at your nanoflow.
 
@@ -75,7 +75,7 @@ Great job setting up your notification. Now you can test it:
 
 Now you can show pages after notifications are tapped. Next, in [How to Use Local Notifications Part 4: Data](/howto8/mobile/local-notif-data/), you will learn to pass data to such pages.
 
-## 4 Read More
+## Read More
 
 * [Implement Push Notifications](/howto8/mobile/implementation-guide/)
 * [Build JavaScript Actions](/howto8/extensibility/build-javascript-actions/)

@@ -1,0 +1,14 @@
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+<path d="M13 4H19V6H13V4Z"/>
+<path d="M19 9H13V11H19V9Z"/>
+<path d="M9 15H3V17H9V15Z"/>
+<path d="M3 21H9V23H3V21Z"/>
+<path d="M3 27H9V29H3V27Z"/>
+<path d="M13 27H19V29H13V27Z"/>
+<path d="M29 27H23V29H29V27Z"/>
+<path d="M19 21H13V23H19V21Z"/>
+<path d="M23 21H29V23H23V21Z"/>
+<path d="M13 15H19V17H13V15Z"/>
+<path d="M29 15H23V17H29V15Z"/>
+<path d="M23 9H29V11H23V9Z"/>
+</svg>

@@ -1,19 +1,25 @@
 ---
 title: "XPath true"
 url: /refguide/xpath-true/
-tags: ["studio pro"]
+weight: 1
 ---
 
-## 1 Overview
+## Overview
 
 The function `true()` returns the Boolean value `true`.
 
 To use the values `true` or `false` in XPath queries, it is necessary to either call `true()` or `false()` functions, or to enclose the values in quotation marks.
 
-## 2 Example
+## Example
 
 This query returns all the customers who are classified as "gold customers":
 
-```java {linenos=false}
-//Sales.Customer[IsGoldCustomer = true()]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [IsGoldCustomer = true()]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Sales.Customer[IsGoldCustomer = true()]
+    {{% /tab %}}
+{{< /tabpane >}}

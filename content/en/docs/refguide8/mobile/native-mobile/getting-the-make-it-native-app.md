@@ -2,10 +2,9 @@
 title: "Getting the Make It Native App"
 url: /refguide8/getting-the-make-it-native-app/
 weight: 10
-tags: ["Android", "iOS", "native", "debug"]
 ---
 
-## 1 Introduction
+## Introduction
 
 The Make It Native app allows developers to preview, test, and debug native mobile apps in conjunction with Mendix Studio Pro. It is available for both Android and iOS devices.
 
@@ -18,8 +17,8 @@ To download the Make It Native app, search for *Make It Native 8* in your device
 * [Download for Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp)
 * [Download for iOS](https://apps.apple.com/app/make-it-native/id1334081181)
 
-## 2 Read More
+## Read More
 
-* [How to Deploy Your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app/)
+* [How to Build a Mendix Native App in the Cloud](/howto8/mobile/deploying-native-app/)
 * [How to Create a Custom Developer App](/howto8/mobile/how-to-devapps/)
 * [How to Debug Native Mobile Apps (Advanced)](/howto8/mobile/native-debug/)

@@ -6,7 +6,7 @@ weight: 96
 
 ## 8.5.0
 
-**Release date: December 13th, 2019**
+**Release date: December 13, 2019**
 
 ### CodeActions
 
@@ -22,11 +22,11 @@ weight: 96
 
 #### WebServiceCallAction (Element)
 
-* We changed the default value of  the `useRequestTimeOut`, `timeOutModel`, and `timeOutExpression` properties.
+* We changed the default value of the `useRequestTimeOut`, `timeOutModel`, and `timeOutExpression` properties.
 
 #### RestCallAction (Element)
 
-* We changed the default value of  the `useRequestTimeOut`, `timeOutModel`, and `timeOutExpression` properties.
+* We changed the default value of the `useRequestTimeOut`, `timeOutModel`, and `timeOutExpression` properties.
 
 ### Projects
 

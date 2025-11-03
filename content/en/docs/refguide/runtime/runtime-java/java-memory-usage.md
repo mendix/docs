@@ -2,10 +2,9 @@
 title: "Java Memory Usage"
 url: /refguide/java-memory-usage/
 weight: 2
-tags: ["runtime", "java", "memory usage", "memory", "studio pro"]
 ---
 
-## 1 Introduction
+## Introduction
 
 The Java memory is divided in different Memory Usage blocks. Each of these blocks are a snapshot of the actual memory usage of that segment. Each of the memory usage blocks can be broken down into four different values
 
@@ -18,23 +17,23 @@ The Java memory is divided in different Memory Usage blocks. Each of these block
 
 For all Mendix applications the value for init and max start with identical values. Immediately after startup the JVM can execute the garbage collection and correct the memory usage.
 
-## 2 Memory Segments
+## Memory Segments
 
-### 2.1 Metaspace and Code Cache
+### Metaspace and Code Cache
 
 Classes and libraries within the JVM are allocated in metaspace. This is a separate part of native memory. The memory allocated to metaspace stays fairly static and only increases when new libraries or classes are loaded into the application. Metaspace is not part of the heap, but is kept in the native OS memory.
 
 In JVM version 7 and before, this data was stored in what was called the permanent generation (perm gen). In contrast to the perm gen, metaspace is able to collect classes that are no longer used and thus reduce memory impact.
 
-The image below shows in detail how data moves through the memory. The Stack is made up of all threads and classes and, in case of Mendix,  information about microflows, the domain model, and all other Mendix-specific information.
+The image below shows in detail how data moves through the memory. The Stack is made up of all threads and classes and, in case of Mendix, information about microflows, the domain model, and all other Mendix-specific information.
 
-{{< figure src="/attachments/refguide/runtime/runtime-java/java-memory-usage/16844065.png" >}}
+{{< figure src="/attachments/refguide/runtime/runtime-java/java-memory-usage/16844065.png" class="no-border" >}}
 
 All information regarding the stack is stored in memory. All runtime information is stored in the Heap, all program or JVM specific information is stored in the Non Heap.
 
-All classes from the Mendix Platform, the custom java code, and user libraries are stored in the Non Heap. This also holds the information from the deployment archive.
+All classes from the Mendix Platform, the custom Java code, and user libraries are stored in the Non Heap. This also holds the information from the deployment archive.
 
-{{< figure src="/attachments/refguide/runtime/runtime-java/java-memory-usage/16844066.png" >}}
+{{< figure src="/attachments/refguide/runtime/runtime-java/java-memory-usage/16844066.png" class="no-border" >}}
 
 All data in the Heap only moves to a different segment when the garbage collection executes. We can see a difference between a minor garbage collection run and a major collection run.
 
@@ -52,13 +51,13 @@ The Major Garbage Collection process is optimized for speedy garbage collection 
 
 The **Old / Tenured Generation** will be cleaned less frequently by the garbage collector. The Tenured Generation space will, generally, steadily increase until the GC is triggered and will usually drop considerably after garbage collection.
 
-### 2.2 Examples
+### Examples
 
-{{< figure src="/attachments/refguide/runtime/runtime-java/java-memory-usage/16844068.png" >}}
+{{< figure src="/attachments/refguide/runtime/runtime-java/java-memory-usage/16844068.png" class="no-border" >}}
 
 A healthy Mendix application that consumes a small amount of memory will show a graph similar to the graph above.
 
-{{< figure src="/attachments/refguide/runtime/runtime-java/java-memory-usage/16844067.png" >}}
+{{< figure src="/attachments/refguide/runtime/runtime-java/java-memory-usage/16844067.png" class="no-border" >}}
 
 This second graph, above, shows an application which becomes unhealthy. As can be seen here, the memory usage steadily increases throughout the span of one week. This can only be caused by a process that keeps consuming memory.
 

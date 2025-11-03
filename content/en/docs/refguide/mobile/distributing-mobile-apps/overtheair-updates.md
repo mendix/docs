@@ -3,16 +3,15 @@ title: "Updating Native Apps"
 url: /refguide/mobile/distributing-mobile-apps/overtheair-updates/
 weight: 30
 description: "Describes enabling over the air updates using built-in functionality."
-tags: ["ota", "over the air", "update"]
 aliases:
     - /howto/mobile/how-to-ota/
     - /howto/mobile/how-to-ota-appcenter/
 ---
-## 1 Introduction
+## Introduction
 
 Native apps can be updated by building and releasing an updated version to the appropriate app stores. The app-users are then asked to update their app and once they choose so the updated app is installed.
 
-Using Mendix Studio Pro v9.7 and above, you can also update your Mendix native apps over-the-air (OTA). OTA updates are a fast and painless way of updating elements like layouts, pages, assets, or even your app's business logic (such as nanoflows and JavaScript actions) without going through the entire release process.
+Using Mendix Studio Pro, you can also update your Mendix native apps over-the-air (OTA). OTA updates are a fast and painless way of updating elements like layouts, pages, assets, or even your app's business logic (such as nanoflows and JavaScript actions) without going through the entire release process.
 
 Native apps are separated into two parts: a wrapper that functions as a native iOS or Android app, and a bundle loaded dynamically by the wrapper. Elements like your business logic and static assets are part of this dynamically-loaded bundle. 
 
@@ -23,17 +22,17 @@ Currently OTA does not update your app while the app is open or minimized.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Mendix OTA updates are the replacement for the deprecated [Release Over the Air Updates with App Center's CodePush (Deprecated)](/refguide/mobile/distributing-mobile-apps/overtheair-updates/). When opting in for OTA updates via the Mendix Runtime, CodePush OTA updates will be disabled. 
+Mendix OTA updates are the replacement for the deprecated [Release Over the Air Updates with App Center's CodePush (Deprecated)](/howto8/mobile/how-to-ota/). When opting in for OTA updates via the Mendix Runtime, CodePush OTA updates will be disabled. 
 {{% /alert %}}
 
-This guide will teach you how to do the following:
+This guide teaches you how to do the following:
 
 * Understand the rational behind Mendix's OTA solution
 * Enable OTA updates in your Native Mobile Profile
 * Build your app 
 * Preserve your model's integrity
 
-## 2 Why You Should Use Mendix's OTA Update Solution
+## Why You Should Use Mendix's OTA Update Solution
 
 Third-party OTA update solutions present the following shortcomings: 
 
@@ -44,31 +43,32 @@ Third-party OTA update solutions present the following shortcomings:
 
 With these shortcomings in mind, we developed a Mendix OTA update mechanism which solves these issues. Your Mendix server is the single source of truth, as OTA updates are served from the same endpoint. In addition, instead of thinking of OTA packages and deployments, we merged both actions into one. Instead of deploying a new application to your server, the native apps can simply be updated the next time they are restarted and the devices are updated. As your Mendix server is the one providing the OTA bundles, no third-party service is required. Finally, by developing an in-house solution we can continuously improve it based on your feedback.
 
-## 3 Prerequisites {#prerequisites}
+## Prerequisites {#prerequisites}
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
-* Use Mendix Studio Pro v9.7 and above.
+* Use Mendix Studio Pro.
 * Deploy your app by completing [Build a Mendix Native App Locally](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/).
 * Install your app on a test device or emulator.
 * Read the [Offline-First](/refguide/offline-first/) guide. Understand this document before issuing OTA updates or releasing new versions.
 
-## 4 When to Use OTA Updates
+## When to Use OTA Updates{#when-to-use-ota}
 
-### 4.1 Use Cases for OTA Updates {#safeToUpdate}
+### Use Cases for OTA Updates {#safeToUpdate}
 
 OTA updates are useful in the following app development cases:
 
 * Style changes
 * Static image, text, or other static asset changes
 * Layout changes
-* Nanoflow changes
+* Adding/Editing Nanoflow or Microflow
 * JavaScript action changes
 * Widgets added or removed
-* A new custom Javascript-only widget or module added
+* You added a new custom JavaScript-only widget or module 
+* You added a page with no additional logic
 * Non-destructive model changes (for more information, see [Offline-First](/refguide/offline-first/))
 
-### 4.2 When a Full Release Is Required
+### When a Full Release Is Required
 
 If you have made any changes directly to your iOS or Android app, you will have to fully redeploy your app to the app stores for the changes to take effect. OTA updates do not suffice and a full release is required in the following cases:
 
@@ -79,16 +79,17 @@ If you have made any changes directly to your iOS or Android app, you will have 
 * The app has been renamed
 * The app's launcher icons have been changed
 * The splash screen has been changed
+* The native template was updated (NT patch updates also require a full release)
 
-## 5 Enabling and Building an App with Mendix OTA Updates Enabled {#build-with-ota-support}
+## Enabling and Building an App with Mendix OTA Updates Enabled {#build-with-ota-support}
 
 By default OTA updates are disabled for your Native Mobile Profile. To enable them, do the following: 
 
-1. Open your app in Studio Pro v9.7 or above.
+1. Open your app in Studio Pro.
 1. Navigate to the Native Mobile Profile.
 1. Select **Enable over-the-air updates**: 
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/distribution/how-to-ota/ota-profile-screen.png" alt="Startup option ota checkbox"   width="400"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/distribution/how-to-ota/ota-profile-screen.png" alt="Startup option ota checkbox"   width="400"  class="no-border" >}}
 
 1. Deploy your app to the cloud.
 
@@ -99,11 +100,11 @@ Next you must build new binaries with this capability toggled on, and then relea
 
 To make the OTA update functionality available to your users, release the new binaries via the appropriate app stores. If you are testing the functionality you can now install the apps on your test devices.
 
-## 6 Deploying an OTA Update
+## Deploying an OTA Update
 
 OTA updates let you correct mistakes in your published apps without issuing a new release. For example, imagine you issued a new release and later found a spelling mistake on your welcome screen:
 
-{{< figure src="/attachments/howto/mobile/native-mobile/distribution/how-to-ota-appcenter/phone-error-text.png" alt="Typo in welcome screen"   width="300"  >}}
+{{< figure src="/attachments/howto/mobile/native-mobile/distribution/how-to-ota-appcenter/phone-error-text.png" alt="Typo in welcome screen"   width="300"  class="no-border" >}}
 
 Before OTA updates, you would have to make a new release and configure it in the app stores. But OTA updates make fixing such a mistake easy.
 

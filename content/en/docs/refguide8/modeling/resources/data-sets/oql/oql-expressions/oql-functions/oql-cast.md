@@ -1,20 +1,15 @@
 ---
 title: "OQL CAST"
 url: /refguide8/oql-cast/
-tags: ["studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/oql-cast.pdf).
-{{% /alert %}}
-
-## 1 Introduction
+## Introduction
 
 The CAST function converts an expression to a specific data type.
 
 The syntax is as follows:
 
-```sql {linenos=false}
+```sql
 CAST ( expression AS data_type )
 ```
 
@@ -27,7 +22,7 @@ CAST ( expression AS data_type )
     * LONG
     * STRING
 
-## 2 Supported Conversions
+## Supported Conversions
 
 The table below describes which CAST conversions are supported:
 
@@ -37,10 +32,11 @@ The table below describes which CAST conversions are supported:
 
 | From \ To | BOOLEAN | DATETIME | DECIMAL | INTEGER | LONG | STRING (unlimited) | STRING (limited) |
 |------| :------: | :------: | :------: | :------: | :------: | :------: | :------: |
-| BOOLEAN | ✔ | ✘ | ✘ | ✘ | ✘ | ✔* | ✔*<sup><small>1</small></sup> |
-| DATETIME | ✘ | ✔ | ✘ | ✘ | ✘ | ✔* | ✔*<sup><small>2</small></sup> |
-| DECIMAL | ✘ | ✘ | ✔* | ✔* | ✔* | ✔* | ✔*<sup><small>2</small></sup> |
+| BOOLEAN | ✔ | ✘ | ✘ | ✘ | ✘ | ✔* | ✔*¹ |
+| DATETIME | ✘ | ✔ | ✘ | ✘ | ✘ | ✔* | ✔*² |
+| DECIMAL | ✘ | ✘ | ✔* | ✔* | ✔* | ✔* | ✔*² |
 | INTEGER | ✘ | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | LONG | ✘ | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | STRING | ✘ | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |
+
 <Small>[1] BOOLEAN to STRING (limited) is supported only if the resulting string length is ≥ 5.<br />[2] The conversion of DATETIME and DECIMAL to STRING (limited) is supported only if the value fully fits into the string length. The conversion can fail if the resulting string length is less than 20.</small>

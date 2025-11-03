@@ -1,13 +1,11 @@
 ---
 title: "Optimize Microflow Aggregates"
 url: /howto8/logic-business-rules/optimizing-microflow-aggregates/
-category: "Logic and Business Rules"
 weight: 7
-tags: ["microflow", "aggregate"]
 #To update screenshots of these microflows in , use the Microflow Screenshots app.
 ---
 
-## 1 Optimization
+## Optimization
 
 In some projects, it is necessary to evaluate large datasets in a microflow (for example, for reporting purposes). If all those microflows do a lot of retrieves and aggregates on large datasets, it is easy to run into performance or memory problems. 
 
@@ -17,9 +15,9 @@ The Mendix Platform only creates an optimized SQL query if the list is not used 
 
 If you do want to use the list but you also want the optimized query, do two separate retrieves. This will do the optimized query, and you can use the second retrieve in your microflow.
 
-{{< figure src="/attachments/howto8/logic-business-rules/optimizing-microflow-aggregates/18580944.png" >}}
+{{< figure src="/attachments/howto8/logic-business-rules/optimizing-microflow-aggregates/18580944.png" class="no-border" >}}
 
-## 2 Read More
+## Read More
 
 * [Define Access Rules Using XPath](/howto8/logic-business-rules/define-access-rules-using-xpath/)
 * [Extend Your Application with Custom Java](/howto8/logic-business-rules/extending-your-application-with-custom-java/)

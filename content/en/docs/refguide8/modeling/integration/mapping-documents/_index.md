@@ -1,19 +1,14 @@
 ---
 title: "Mapping Documents"
 url: /refguide8/mapping-documents/
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/mapping-documents.pdf).
-{{% /alert %}}
-
-## 1 Introduction
+## Introduction
 
 Mapping documents are used to define how Mendix objects can be converted to and from XML or JSON, according to a specific XML schema or JSON structure. There are two types of mappings: [Import Mappings](/refguide8/import-mappings/) and [Export Mappings](/refguide8/export-mappings/).
 
-## 2 Import Mappings
+## Import Mappings
 
 Import mappings are used to define how incoming XML or JSON is converted into Mendix objects, according to a specific XML schema or JSON structure. This is needed to be able to interpret data received from other systems. In Mendix there are three basic scenarios for creating Mendix objects from XML or JSON:
 
@@ -23,11 +18,11 @@ Import mappings are used to define how incoming XML or JSON is converted into Me
 
 This is an example of an import mapping document that maps an **Order** from a web service to a **ReceivedOrder** entity:
 
-{{< figure src="/attachments/refguide8/modeling/integration/mapping-documents/16843933.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/mapping-documents/16843933.png" class="no-border" >}}
 
 For more details, see [Import Mappings](/refguide8/import-mappings/).
 
-## 3 Export Mappings
+## Export Mappings
 
 Export mappings are used to define how Mendix objects can be converted to XML according to a specific XML schema. This is needed to be able to send data to other systems in a format the other system can process. In Mendix there are two basic scenarios for converting Mendix objects to XML:
 
@@ -36,13 +31,13 @@ Export mappings are used to define how Mendix objects can be converted to XML ac
 
 This is an example of an export mapping document:
 
-{{< figure src="/attachments/refguide8/modeling/integration/mapping-documents/16843940.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/mapping-documents/16843940.png" class="no-border" >}}
 
 In this example, a **Cheesecake** entity will be passed when the export mapping is called. Subsequently, the **Topping** entities will be fetched by following the **Topping_Cheesecake** association from the passed Cheesecake Mendix object. The result is passed to an XML document or sent to a web service.
 
 For more details, see [Export Mappings](/refguide8/export-mappings/).
 
-## 4 Creating a New Mapping Document
+## Creating a New Mapping Document
 
 To specify an import or export mapping, the user needs to do a number of things:
 
@@ -65,19 +60,19 @@ To specify an import or export mapping, the user needs to do a number of things:
 
 5. Finally the user needs to configure how entity attributes should be transformed into the XML or JSON structure.
 
-## 5 Convenience Functions
+## Convenience Functions
 
 * Map automatically: Automatically look for entities and associations in the domain model that can be used in the mapping. If a matching entity or association is not found, it is created in the domain model. This function is explained in more detail in the [Map Automatically](/refguide8/map-automatically/) section.
 * Clear mappings: Disconnects all mapping elements in the document from entities and associations. They are not deleted in the domain model.
 
-## 6 Tip: Important Windows
+## Tip: Important Windows
 
 Mapping documents rely heavily on two windows. If they are not visible in Studio Pro, they can be enabled from the **View menu**.
 
 * **Properties window**. Details of individual mapping elements are shown here.
 * **Connector window**. Entities from the connector window are dragged into the mapping document.
 
-## 7 User Interactions
+## User Interactions
 
 * Dragging entities. Drag an entity from the Connector Window and drop it on an entity placeholder (dashed box) to relate it to an XML element. 
 * Double clicking on a mapping element (on either the entity side or the XML side). Opens a dialog that allows you to specify details for the individual mapping. If the element is not yet related to an entity, a dialog appears that lets you select the entity first.
@@ -88,7 +83,7 @@ Mapping documents rely heavily on two windows. If they are not visible in Studio
 * Left mouse click "-" icon (below mapping element). Makes underlying elements invisible.
 * Left mouse, click "+" icon (below mapping element). Makes underlying elements visible again.
 
-## 8 Properties
+## Properties
 
 | Property | Description |
 | --- | --- |

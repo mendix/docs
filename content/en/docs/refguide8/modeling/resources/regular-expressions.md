@@ -2,31 +2,26 @@
 title: "Regular Expressions"
 url: /refguide8/regular-expressions/
 weight: 70
-tags: ["studio pro", "regular expressions", "regular expression"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/regular-expressions.pdf).
-{{% /alert %}}
-
-## 1 Introduction
+## Introduction
 
 A regular expression resource document is used in the [validation rules](/refguide8/validation-rules/) of an entity to describe a set of criteria that a string must match.
 
 A regular expression has the properties described below.
 
-## 2 Common
+## Common
 
-### 2.1 Name
+### Name
 
 The name can be used to refer to the regular expression from a [validation rule](/refguide8/validation-rules/) of an entity.
 
-### 2.2 Documentation
+### Documentation
 
 This is for documentation purpose only; it is not visible in the end-user application that you are modeling.
 
-## 3 Expression{#expression}
+## Expression{#expression}
 
 The expression defines the criteria that a string should be checked against in a [formal, internationally standardized regular expression language](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html).
 
@@ -45,7 +40,7 @@ These are the criteria:
 
 The following sections give a summary of regular expressions that can be used in Mendix. This description also applies to regular expression strings used in functions such as *isMatch()*.
 
-### 3.1 Subexpressions
+### Subexpressions
 
 A regular expression consists of a sequence of subexpressions. A string matches a regular expression if all parts of the string match these subexpressions in the same order.
 
@@ -80,7 +75,7 @@ A regular expression can contain the following types of subexpressions:
 * `\w` – a word: a letter, digit, or underscore; `\w` is an abbreviation for `[A-Za-z0-9_]`
 * `\d` – a digit" an abbreviation for `[0-9]`
 
-### 3.2 Quantifiers
+### Quantifiers
 
 The number of times that a subexpression may occur in a string is indicated by a quantifier after the subexpression. If no quantifier is present, the subexpression must occur exactly once.
 
@@ -93,7 +88,7 @@ The following quantifiers can be used:
 | + | The preceding sub-expression should occur once or more. |
 |   | No quantifier means that the preceding sub-expression should occur exactly once. |
 
-## 4 Read More
+## Read More
 
 * [Class Pattern](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#matches-java.lang.String-java.lang.CharSequence-) – information from the Oracle Java SE documentation
-* [Using Regular Expressions in Java](http://www.regular-expressions.info/java.html)  – information about regular expressions in Java from the *Regular-Expressions.info* website
+* [Using Regular Expressions in Java](https://www.regular-expressions.info/java.html) – information about regular expressions in Java from the *Regular-Expressions.info* website

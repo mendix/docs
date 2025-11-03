@@ -4,18 +4,18 @@ url: /apidocs-mxsdk/mxsdk/creating-your-first-script/
 weight: 20
 ---
 
-## 1 Introduction
+## Introduction
 
-In [How to Set Up Your Development Environment](/apidocs-mxsdk/mxsdk/setting-up-your-development-environment/) and [How to Set Up Your Personal Access Token](/apidocs-mxsdk/mxsdk/setup-your-pat/), you set up all the development tools and security settings. Now you will create an SDK script that automatically bootstraps a new Mendix app.
+In [How to Set Up Your Development Environment](/apidocs-mxsdk/mxsdk/setting-up-your-development-environment/) and [How to Set Up Your Personal Access Token](/apidocs-mxsdk/mxsdk/set-up-your-pat/), you set up all the development tools and security settings. Now you will create an SDK script that automatically bootstraps a new Mendix app.
 
-## 2 Writing a First Script
+## Writing a First Script
 
 After setting up all the prerequisites, you can start writing a first script that will use the Mendix Platform SDK.
 
 1. In VS Code, create a file named `script.ts` in the same directory as where your other files live.
 
     The following script creates a new app, adds a new entity to the domain model, and commits the changes to the Team Server.
-2. Copy the following code to the  `script.ts` file:
+2. Copy the following code to the `script.ts` file:
 
     ```ts
     import { domainmodels } from "mendixmodelsdk";
@@ -45,11 +45,15 @@ After setting up all the prerequisites, you can start writing a first script tha
     main().catch(console.error);
     ```
 
-Don't forget to [Setup your Personal Access Token](/apidocs-mxsdk/mxsdk/setup-your-pat/) before executing the script.
+Do not forget to [set up your personal access token](/apidocs-mxsdk/mxsdk/set-up-your-pat/) before executing the script.
 
-### 2.1 Code Explanation
+{{% alert color="warning" %}}
+Working copy creation is a resource-intensive process. Consider reusing previously-created ones by invoking `app.getOnlineWorkingCopy(workingCopyId)`. All working copies are automatically deleted after 24 hours.
+{{% /alert %}}
 
-Here are some explanations about the script:
+### Code Explanation
+
+Here are some explanations about the script.
 
 ```ts
 const client = new MendixPlatformClient();
@@ -86,26 +90,22 @@ await workingCopy.commitToRepository("main");
 
 Once you are done with the model changes, you can flush the changes to make sure they have been sent, and then commit the working copy back to the Team Server by calling `workingCopy.commitToRepository()`.
 
-## 3 Compiling and Running the Script
+## Compiling and Running the Script
 
-1. Compile the script with the TypeScript compiler into JavaScript using the following command:
+1. Add the following section to `package.json`:
 
-    ```bash {linenos=false}
-    $ tsc
+    ```json
+    "scripts": {
+        "start": "tsc && node script.js"
+    }
     ```
 
-    A file named `script.js` should appear (or, if you named the original TypeScript file for example, `app.ts`, then it would be named `app.js`.
+    This command first compiles your TypeScript code into JavaScript using the TypeScript compiler. After the compilation, a file named `script.js` is generated. The script will then be executed using Node.js.
 
-    The TypeScript compiler will execute in a single run to compile all files configured in *tsconfig.json*. While developing your script, it can be practical to have the compiler immediately run once you make changes to your code. Use the `--watch` flag for `tsc` to monitor the files configured in the *tsconfig.json* file for changes and immediately run the compiler when you save the file:
-
-    ```bash {linenos=false}
-    $ tsc --watch
-    ```
-
-2. Run the script with `node` to see the results:
+2. Run the script to see the results:
 
     ```text
-    $ node script.js
+    $ npm run start
     Creating new app 'NewApp-1637595970665'...
     Successfully created app with id '64760e41-9507-42d3-99da-3950454dd40a'
     Creating temporary working copy for branch 'main'...
@@ -114,8 +114,8 @@ Once you are done with the model changes, you can flush the changes to make sure
     Successfully committed the working copy with id 'c70b078e-a323-42a7-b95d-7407a0e611d3' to branch 'main'
     ```
 
-Note that the steps for app creation and committing to the Team Server can take some time, so please be patient.
+The steps for app creation and committing to the Team Server can take some time. Please be patient.
 
-## 4 Next Step
+## Next Step
 
 Continue with [How to Create the Domain Model](/apidocs-mxsdk/mxsdk/creating-the-domain-model/).

@@ -1,12 +1,10 @@
 ---
 title: "Use the Java API"
 url: /howto8/logic-business-rules/java-api-tutorial/
-category: "Logic and Business Rules"
 weight: 13
-tags: ["microflow", "logic", "java", "API"]
 ---
 
-## 1 Introduction
+## Introduction
 
 This tutorial contains some examples of how to use the Java API provided by the Mendix Runtime. The tutorial assumes you have basic Java knowledge as well as basic Mendix modeling knowledge.
 
@@ -14,12 +12,12 @@ To avoid cluttering the tutorial, only the relevant code will be shown, not the 
 
 When you look at these examples, often an IContext will be used. This is the context in which something can be done. For example, it holds access rights to objects. If you do something with an object that requires access rights, the context in which you're working will determine if you have these rights and can perform that action.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Execute microflows and commit objects
 * Copy FileDocuments
 
-## 2 Executing Microflows and Committing Objects
+## Executing Microflows and Committing Objects
 
 There are cases in which you'd like to execute a microflow in a Java Action. This case will explain how to do this, including how to pass parameters and obtain the return value. Additionally, the result will be saved in an object and the object will be committed.
 
@@ -51,7 +49,7 @@ testObject.setTestString(context, formattedString);
 Core.commit(context, testObject.getMendixObject());
 ```
 
-## 3 Copying FileDocuments
+## Copying FileDocuments
 
 A FileDocument is a system module entity that holds the content of a file (for example, a text file or Excel sheet). For this case, we assume we have an entity called `GenericObject` that has a relation with an `Attachment` entity. The `Attachment` entity inherits from `FileDocument`. One `GenericObject` can have multiple `Attachments`. We'd like to copy the `Attachments` from one `GenericObject` to another so that they can be independently modified later.
 
@@ -104,14 +102,14 @@ for (IMendixObject iMendixObject: getAttachments(sourceObject, context))
 | 1 | Declaring an `Attachment` variable named `newAttachment`. |
 | 2 | Declaring an `InputStream` variable named `inputStream`. |
 | 3 | Starting to loop through a list of `IMendixObjects` returned by our helper method. |
-| 5 | Here we use the `Core` method `getFileDocumentContent()`, passing our retrieved `Attachment` object to retrieve the `InputStream` of the actual file. |
+| 5 | Here the `Core` method `getFileDocumentContent()` is used, passing the retrieved `Attachment` object to retrieve the `InputStream` of the actual file. |
 | 6 | A new `Attachment` is instanced. |
 | 7 | The relation to the destination object is set on our new `Attachment`. |
 | 8 | The content of the retrieved `InputStream` is stored in our new `Attachment` using the `Core` method `storeFileDocumentContent()`. This method takes a number of parameters: the context in which you are performing this store; the `IMendixObject` of the `Attachment` proxy, which is retrieved by calling `getMendixObject()` on the `Attachment` proxy; the file name of the `FileDocument` in string format, which is copied from the attachment you're copying from by using the `getValue()` method passing the member name you wish to know the value of; and the `InputStream` containing the actual file. |
 
 After this, all `Attachments` belonging to one `GenericObject` have been copied to another.
 
-## 4 Read More
+## Read More
 
 * [Create a Custom Save Button](/howto8/logic-business-rules/create-a-custom-save-button/)
 * [Trigger a Microflow From a Menu Item](/howto8/logic-business-rules/trigger-microflow-from-menu-item/)

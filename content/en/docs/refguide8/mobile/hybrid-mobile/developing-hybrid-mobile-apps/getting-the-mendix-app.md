@@ -1,7 +1,6 @@
 ---
 title: "Getting the Mendix Developer App"
 url: /refguide8/getting-the-mendix-app/
-tags: ["studio pro"]
 aliases: 
     - /refguide/getting-the-mendix-app.html
     - /refguide/getting-the-mendix-app

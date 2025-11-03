@@ -1,25 +1,21 @@
 ---
 title: "Send External Object"
 url: /refguide/send-external-object/
-tags: ["studio pro", "integration activity"]
 ---
-{{% alert color="warning" %}}
-These activities can only be used in **Microflows**.
-{{% /alert %}}
-
-## 1 Introduction
-
-The **Send external object** activity can be used to persist changes to an external object. It can be used to send objects that have been first retrieved and then changed, or to to send newly created objects.
 
 {{% alert color="info" %}}
-The ability to send attributes using this activity was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6/). The sending of association members was added in Studio Pro [9.8.0](/releasenotes/studio-pro/9.8/), and sending a new object was added in Studio Pro [9.12.0](/releasenotes/studio-pro/9.12/).
+This activity can only be used in microflows.
 {{% /alert %}}
 
-## 2 Using the **Send external object** Activity
+## Introduction
 
-Use this activity with [updatable exernal entities](#updatable-entities) to send objects that have been first retrieved and then changed, or with [creatable external entities](#creatable-entities) to send newly created objects.
+The **Send external object** activity can be used to persist changes to an external object. It can be used to send objects that have been first retrieved and then changed, or to send newly created objects.
 
-### 2.1 Updatable External Entities {#updatable-entities}
+## Using This Activity
+
+Use this activity with [updatable external entities](#updatable-entities) to send objects that have been first retrieved and then changed, or with [creatable external entities](#creatable-entities) to send newly created objects.
+
+### Updatable External Entities {#updatable-entities}
 
 External entities may have updatable attributes. The values of these attributes can change; for example, in a widget, or by using the [change object activity](/refguide/change-object/). Associations between two external entities from the same OData service may be updatable as well.
 
@@ -35,33 +31,31 @@ This activity can only send objects from an OData service.
 Some services may have updatable attributes that are part of the key of the entity. Services published by Mendix apps do not have this, but other services might. It is not recommended to change those attributes.
 {{% /alert %}}
 
-### 2.2 Creatable External Entities {#creatable-entities}
+### Creatable External Entities {#creatable-entities}
 
 This activity sends new objects and their attributes and owned associations to be inserted in the external app.
 
-## 3 Activity Properties
+## Activity Properties
 
-To manage the properties of the activity, double click the **Send external object** activity, or right-click the activity and select **Properties**. 
+To manage the properties of the activity, double-click the **Send external object** activity, or right-click the activity and select **Properties**. 
 
 Single-clicking on the activity displays the properties in the **Properties** pane.
 
-### 3.1 Object
+### Object
 
 Choose a variable that contains a single insertable or updatable external object.
 
-### 3.2 Refresh in Client
+### Refresh in Client
 
 This setting defines how changes are reflected in the pages presented to the end-user. The default for this setting is *No*.
 
-## 4 After the Activity
+## After the Activity
 
 After this activity, the `$latestHttpResponse` variable (of the [HttpResponse](/refguide/http-request-and-response-entities/#http-response) type) is available to inspect the response returned by the service.
 
-{{% alert color="info" %}}
-The feature to set `$latestHttpResponse` was introduced in Studio Pro [9.15.0](/releasenotes/studio-pro/9.15/).
-{{% /alert %}}
+After this activity, an external object is updated based on the received response.
 
-## 5 Related
+## Related
 
 Persistable objects are persisted by using the [commit](/refguide/committing-objects/) activity. External entities cannot be committed. Use this activity instead.
 

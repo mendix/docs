@@ -3,12 +3,7 @@ title: "Published REST Request Routing"
 url: /refguide8/published-rest-routing/
 weight: 10
 description: "A flow chart which shows how an example request is processed, what security is applied, and what is returned by the service."
-tags: ["flow chart", "processing", "security", "service", "resource", "operation", "method", "authentication", "return code", "published REST", "studio pro"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-rest-routing.pdf).
-{{% /alert %}}
 
 When a REST HTTP request arrives at the server, the server needs to determine which [operation](/refguide8/published-rest-operation/) to execute and what security to apply.
 
@@ -28,4 +23,4 @@ Consult this flow chart to answer questions like:
 
 The example request is `GET /rest/petstore/pet/12`.
 
-{{< figure src="/attachments/refguide8/modeling/integration/published-rest-services/published-rest-technical-details/published-rest-routing/determine-operation.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/published-rest-services/published-rest-technical-details/published-rest-routing/determine-operation.png" class="no-border" >}}

@@ -4,14 +4,13 @@ linktitle: "Native App with Push Notifications"
 url: /howto8/mobile/notif-build-native/
 weight: 60
 description: Tutorial for building a native app with push notifications enabled.
-tags: ["mobile", "native", "push", "local", "firebase"]
 ---
 
-## 1 Introduction
+## Introduction
 
 Now that you have implemented push notifications, it is time to build and deploy the native mobile app. Deploying your iOS or Android app allows the server to send push notifications to mobile devices which have your app installed.
 
-## 2 Build Your Native App {#build-native-app}
+## Build Your Native App {#build-native-app}
 
 1. In Studio Pro top bar navigation, click **App** > **Build Native Mobile App**: </br>
     * If you are building your native app for the first time, click [here](/howto8/mobile/native-build-locally/) for instructions.</br>

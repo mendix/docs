@@ -2,42 +2,37 @@
 title: "Batch Translate"
 url: /refguide8/batch-translate/
 weight: 30
-tags: ["studio pro", "translation", "languages", "translatable text"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/batch-translate.pdf).
-{{% /alert %}}
-
-## 1 Introduction
+## Introduction
 
 **Batch translate** allows you to enter texts in one language which correspond to texts in another language.
 
 Usually you will want to translate from the default language to a second language, but you can use any other dictionary of texts. For example, if your default language is *English, United States* you may already have translated the text into *Dutch, Netherlands* and you can use this as a reference for translating into *Dutch, Belgium* as there are likely to be more similarities.
 
-{{< figure src="/attachments/refguide8/modeling/menus/translatable-texts/batch-translate/batch-translate.png" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/translatable-texts/batch-translate/batch-translate.png" class="no-border" >}}
 
-## 2 Using Batch Translate
+## Using Batch Translate
 
 Batch translate translates between two languages. When you select batch translate you will be asked to select the two languages you wish to use, a **Source language** to use as a reference, and a **Destination language** which is the one you want to update.
 
-{{< figure src="/attachments/refguide8/modeling/menus/translatable-texts/batch-translate/batch-translate-languages.png" alt="Select source and destination languages" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/translatable-texts/batch-translate/batch-translate-languages.png" alt="Select source and destination languages" class="no-border" >}}
 
-### 2.1 Documents/Modules
+### Documents/Modules
 
 You can select one or more modules you want to use for batch translate. For example, you may have already got translations for imported and system modules and want to concentrate on translating your own modules.
 
 Click **Select…** and check the modules you want to work on.
 
-{{< figure src="/attachments/refguide8/modeling/menus/translatable-texts/batch-replace/batch-replace-modules.png" alt="Module selection screen" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/translatable-texts/batch-replace/batch-replace-modules.png" alt="Module selection screen" class="no-border" >}}
 
 The default is to work on all modules in the app.
 
-### 2.2 Source Text Contains
+### Source Text Contains
 
 To search for a particular phrase in the source language text, type what you want to search for. It is not possible to search for text in the destination language.
 
-{{< figure src="/attachments/refguide8/modeling/menus/translatable-texts/batch-translate/batch-translate-search.png" alt="Batch translate search" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/translatable-texts/batch-translate/batch-translate-search.png" alt="Batch translate search" class="no-border" >}}
 
 By default, all the translatable text from the selected module(s) will be shown.
 
@@ -50,37 +45,37 @@ If you select a line, you can look in the **Show occurrence** section to see the
 Tip: move the dialog box to one side to get a better look at the document.
 {{% /alert %}}
 
-### 2.3 Translation
+### Translation
 
 In **Translation**, type new text that you want to use instead of the existing text. Click **Translate** to confirm the replacement.
 
-{{< figure src="/attachments/refguide8/modeling/menus/translatable-texts/batch-translate/batch-translate-translate.png" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/translatable-texts/batch-translate/batch-translate-translate.png" class="no-border" >}}
 
 If you have two texts which are identical in the source language but different in the translation language, you will have to review and change these individually. This is not very common but imagine, for example, you have used `Order Lines` to both *describe the lines on an order* and to *label a button which sorts some lines*. See [Working in the Currently Selected Language](/refguide8/translatable-texts/#selected-language) in *Language Menu* to find how to change individual texts.
 
-## 3 Exporting and Importing Text{#export-import}
+## Exporting and Importing Text{#export-import}
 
 If you want to translate a language outside Studio Pro, you can export the translatable texts to the Microsoft Excel (*.xlsx*) format, make changes, and then import the changes from the updated Excel file.
 
 This is particularly useful if you are working on multiple apps and you want to apply your translations to a different app.
 
-### 3.1 Export to Excel
+### Export to Excel
 
 Click **Export to Excel…** to export the currently displayed text items to a Microsoft Excel (*.xlsx*) format file.
 
 The file will be in the format shown below:
 
-{{< figure src="/attachments/refguide8/modeling/menus/translatable-texts/batch-translate/batch-translate-excel.png" alt="Sample Excel file" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/translatable-texts/batch-translate/batch-translate-excel.png" alt="Sample Excel file" class="no-border" >}}
 
 **Row 1** – *Filter:* indicates the modules which are included in the exported file.
 
-**Row 2**  – indicates the source and translation language. The first column represents the current text, the second column the *translation* text.
+**Row 2** – indicates the source and translation language. The first column represents the current text, the second column the *translation* text.
 
-**Rows 3+**  – show the current texts
+**Rows 3+** – show the current texts
 
 You can make changes in column B which will be processed if the file is imported.
 
-### 3.2 Import from Excel
+### Import from Excel
 
 Click **Import from Excel…** to import a correctly-constructed Microsoft Excel (*.xlsx*) format file.
 

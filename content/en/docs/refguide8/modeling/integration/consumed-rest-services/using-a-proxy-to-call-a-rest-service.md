@@ -1,18 +1,13 @@
 ---
 title: "Using a Proxy to Call a REST Service"
 url: /refguide8/using-a-proxy-to-call-a-rest-service/
-tags: ["studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/using-a-proxy-to-call-a-rest-service.pdf).
-{{% /alert %}}
-
-## 1 Introduction
+## Introduction
 
 In some cases, you will be stuck behind a firewall and thus unable to call a REST service directly. This page shows you how to configure your app to use a proxy to call such services.
 
-## 2 Proxy Host and Proxy Port
+## Proxy Host and Proxy Port
 
 There are two parameters that specify which proxy server to use when making REST calls: `http.proxyHost` and `http.proxyPort`. Some proxies require authentication, which you may specify as `http.proxyUser` and `http.proxyPassword`.
 
@@ -22,11 +17,11 @@ You can either specify these as custom settings or as JVM parameters, which are 
 If you specify a setting both as a custom setting and as a JVM parameter, the custom setting will be used.
 {{% /alert %}}
 
-### 2.1 Custom Settings
+### Custom Settings
 
 REST proxy settings can be configured as custom settings on the **Project** > **Settings** > **Configurations** > **Custom** tab. For more information, see the [Custom](/refguide8/configuration/#custom) section of *Configurations*.
 
-### 2.2 JVM Parameters
+### JVM Parameters
 
 REST proxy settings can be configured in the **Project** > **Settings** > **Configurations** > **Server** tab > **Extra JVM parameters** field. For more information, see the [Server](/refguide8/configuration/#server) section of *Configurations*.
 

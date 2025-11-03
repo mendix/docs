@@ -1,18 +1,18 @@
 ---
 title: "Make It Native Apps"
 url: /releasenotes/mobile/make-it-native-parent/
-category: "Mobile"
-weight: 8
-description: "Make It Native apps information."
+weight: 7
+description: "Information on various Make It Native apps by platform and version."
 ---
 
-Mendix offers two apps for you to view and test your native mobile apps:
+## Introduction
 
-* [Make It Native 9 App](/releasenotes/mobile/make-it-native-9/): Use this app for projects in Mendix Studio Pro v9
-* [Make It Native 8 App](/releasenotes/mobile/make-it-native-app/): Use this app for projects in Mendix Studio Pro v8
+Depending on the Mendix version your app is developed in and the device you want to run on, you need a different Make It Native app. For more information on how to download the correct version, see the [Getting the Make It Native App](/refguide/mobile/getting-started-with-mobile/prerequisites/#get-min-app) section in *Native App Prerequisites and Troubleshooting*.
 
-For more information on both versions of the Make It Native apps, see [Getting the Make It Native App](/refguide/getting-the-make-it-native-app/).
+## Make It Native Versions
 
-You can download the Make It Native 9 app for [iOS](https://apps.apple.com/us/app/make-it-native-9/id1542182000) or [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9).
+We currently provide 3 different versions of the Make It Native App. These are their release notes:
 
-You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp).
+1. [Make It Native](/releasenotes/mobile/make-it-native/)
+1. [Make It Native 9](/releasenotes/mobile/make-it-native-9/)
+1. [Make It Native 8](/releasenotes/mobile/make-it-native-app/)

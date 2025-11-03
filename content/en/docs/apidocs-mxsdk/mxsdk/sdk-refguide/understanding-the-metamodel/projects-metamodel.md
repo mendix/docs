@@ -6,66 +6,66 @@ description: "This document describes how the Mendix Metamodel handles projects 
 weight: 1
 ---
 
-## 1 Introduction
+## Introduction
 
 A Mendix app model starts with a project. A project contains several top-level or project documents such as settings and security, and it contains the modules that make up a Mendix app.
 
-### 1.1 Graphical Overview
+### Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/projects-metamodel/16842800.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/projects-metamodel/16842800.svg" class="no-border" >}}
 
 Studio Pro Guide | Model SDK API docs
 | --- | --- |
 | [App](/refguide/app/) | TypeScript module [projects](https://apidocs.rnd.mendix.com/modelsdk/latest/modules/projects.html) |
-| [Modules](/refguide/modules/) |[Project](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.project.html) |
-| |[Module](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.module.html) | |
-| |[ProjectDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.projectdocument.html) | |
+| [Modules](/refguide/modules/) |[Project](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.Project.html) |
+| |[Module](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.Module.html) |
+| |[ProjectDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.ProjectDocument.html) |
 
-### 1.2 Project Documents
+### Project Documents
 
-Project-level documents describe project security, app settings, app navigation (for the different modes of navigation) and translations of the texts in your app.
+Project-level documents describe app security, app settings, app navigation (for the different modes of navigation) and translations of the texts in your app.
 
-#### 1.2.1 Graphical Overview
+#### Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/projects-metamodel/16842801.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/projects-metamodel/16842801.svg" class="no-border" >}}
 
 Studio Pro Guide | Model SDK API docs
 | --- | --- |
-| | [App Settings](/refguide/app-settings/) | [ProjectDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.projectdocument.html) and its inheritance hierarchy |
-| [App Security](/refguide/app-security/) | |
-| [Navigation](/refguide/navigation/) | |
-| [System Texts](/refguide/system-texts/) | |
+|[App Settings](/refguide/app-settings/)| [ProjectSettings](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/settings.ProjectSettings.html) |
+| [App Security](/refguide/app-security/) | [ProjectSecurity](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/security.ProjectSecurity.html)|
+| [Navigation](/refguide/navigation/) |[NavigationDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/navigation.NavigationDocument.html)|
+| [System Texts](/refguide/system-texts/) |[SystemTextCollection](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/texts.SystemTextCollection.html) |
 
-## 2 Modules
+## Modules
 
-### 2.1 Overview
+### Overview
 
 A module consists of a domain model, model security settings and zero or more documents (for example, microflows, pages).
 
-#### 2.1.1 Graphical Overview
+#### Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/projects-metamodel/18582255.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/projects-metamodel/18582255.svg" class="no-border" >}}
 
 Studio Pro Guide | Model SDK API docs
 | --- | --- |
-| [Domain Model](/refguide/domain-model/) | Property [`domainModel`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.module.html#domainmodel) of Project |
-| [Module Security](/refguide/module-security/) | Property [`moduleSecurity`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.module.html#modulesecurity) of Project |
+| [Domain Model](/refguide/domain-model/) | Property [`domainModel`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.Module.html#domainModel) of Project |
+| [Module Security](/refguide/module-security/) | Property [`moduleSecurity`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.Module.html#moduleSecurity) of Project |
 
-### 2.2 Documents
+### Documents
 
 Modules consist of documents, for example, microflows, pages or published or consumed services. These documents can be organized with folders.
 
 In this sense, Module and Folder behave in the exact same way, and thus inherit from FolderBase: they both contain documents and folders.
 
-#### 2.2.1 Graphical Overview
+#### Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/projects-metamodel/18582254.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/projects-metamodel/18582254.svg" class="no-border" >}}
 
 Studio Pro Guide | Model SDK API docs
 | --- | --- |
-| [Modules](/refguide/modules/) | Property [`modules`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.project.html#modules) of Project |
-| [Module](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.module.html) | |
-| [FolderBase](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.folderbase.html) | |
-| [Folder](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.folder.html) | |
-| [ModuleDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.moduledocument.html) | |
-| [Document](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.document.html) | |
+| [Modules](/refguide/modules/) | Property [`modules`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.Project.html#modules) of Project |
+| [Module](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.Module.html) | |
+| [FolderBase](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.FolderBase.html) | |
+| [Folder](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.Folder.html) | |
+| [ModuleDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.ModuleDocument.html) | |
+| [Document](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.Document.html) | |

@@ -1,12 +1,10 @@
 ---
 title: "Login Behavior"
 url: /refguide8/login-behavior/
-category: "Mendix Runtime"
 description: "Describes default and customized login behavior in Runtime."
-tags: ["Runtime", "login", "studio pro"]
 ---
 
-## 1 Default Login Behavior
+## Default Login Behavior
 
 A user is blocked after 3 consecutive bad login attempts, regardless of the time between the login attempts. The failed login count is reset after a successful login attempt or when a blocked user is unblocked. Blocking users only occurs when the project security level is set to 'Production'.
 
@@ -20,7 +18,7 @@ The cluster manager does more than just unblocking users. For example, it also r
 If a user is blocked just 1 second before the cluster manager starts to unblock all blocked users, the lock is removed after 1 second.
 {{% /alert %}}
 
-## 2 Customizing Login Behavior
+## Customizing Login Behavior
 
 Login behavior can be customized by implementing a custom Java action and registering it to be used instead of the default login action.
 

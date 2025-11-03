@@ -3,22 +3,17 @@ title: "Any Chart Cheat Sheet"
 url: /refguide8/charts-any-cheat-sheet/
 description: "Shows, with examples, how the most common types of chart can be configured using the Any Chart Widget"
 weight: 50
-tags: ["Any Chart", "Examples", "Charts", "Widget", "studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/charts-any-cheat-sheet.pdf).
-{{% /alert %}}
+## Introduction
 
-## 1 Introduction
+This *cheat sheet* lists the most common chart types, together with a visual sample and the JSON required to create them. More chart types can be found at [https://plot.ly/javascript/](https://plot.ly/javascript/).
 
-This *cheat sheet* lists the most common chart types, together with a visual sample and the json required to create them. More chart types can be found at [https://plot.ly/javascript/](https://plot.ly/javascript/).
+## Basic Charts
 
-## 2 Basic Charts
+### Line Chart {#line-chart}
 
-### 2.1 Line Chart {#line-chart}
-
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/line-chart2.png" alt="LineChartProperties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/line-chart2.png" alt="LineChartProperties" class="no-border" >}}
 
 ``` json
 [
@@ -35,9 +30,9 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 ]
 ```
 
-### 2.2 Bubble Chart
+### Bubble Chart
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/bubble-chart.png" alt="BubbleChartProperties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/bubble-chart.png" alt="BubbleChartProperties" class="no-border" >}}
 
 ``` json
 [ {
@@ -51,9 +46,9 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 } ]
 ```
 
-### 2.3 Scatter Chart
+### Scatter Chart
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/scatter-plot.png" alt="ScatterPlotProperties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/scatter-plot.png" alt="ScatterPlotProperties" class="no-border" >}}
 
 ``` json
 [ {
@@ -65,9 +60,9 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 } ]
 ```
 
-### 2.4 Heatmap
+### Heatmap
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/heat-map2.png" alt="HeatMapProperties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/heat-map2.png" alt="HeatMapProperties" class="no-border" >}}
 
 ``` json
 [ {
@@ -76,9 +71,9 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 } ]
 ```
 
-### 2.5 Bar Chart
+### Bar Chart
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/bar-chart2.png" alt="BarChartProperties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/bar-chart2.png" alt="BarChartProperties" class="no-border" >}}
 
 ``` json
 [ {
@@ -89,9 +84,9 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 } ]
 ```
 
-### 2.6 Column Chart
+### Column Chart
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/column-chart2.png" alt="ColumnChartProperties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/column-chart2.png" alt="ColumnChartProperties" class="no-border" >}}
 
 ``` json
 [ {
@@ -102,9 +97,9 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 } ]
 ```
 
-### 2.7 Pie Chart
+### Pie Chart
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/pie-chart2.png" alt="PieChartProperties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/pie-chart2.png" alt="PieChartProperties" class="no-border" >}}
 
 ``` json
 [ {
@@ -114,9 +109,9 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 } ]
 ```
 
-### 2.8 Doughnut Chart
+### Doughnut Chart
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/doughnut-chart.png" alt="DoughNutChartProperties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/doughnut-chart.png" alt="DoughNutChartProperties" class="no-border" >}}
 
 ```json
 [ {
@@ -127,9 +122,9 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 } ]
 ```
 
-### 2.9 Area Chart
+### Area Chart
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/area-chart2.png" alt="AreaChartProperties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/area-chart2.png" alt="AreaChartProperties" class="no-border" >}}
 
 ``` json
 [ {
@@ -140,11 +135,11 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 } ]
 ```
 
-## 3 Statistical Charts
+## Statistical Charts
 
-### 3.1 Histograms
+### Histograms
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/histogram.png" alt="HistogramProperties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/histogram.png" alt="HistogramProperties" class="no-border" >}}
 
 ``` json
 [ {
@@ -153,9 +148,9 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 } ]
 ```
 
-### 3.2 Box Chart
+### Box Chart
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/box-plot.png" alt="BoxPlotProperties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/box-plot.png" alt="BoxPlotProperties" class="no-border" >}}
 
 ``` json
 [ {
@@ -164,9 +159,9 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 } ]
 ```
 
-### 3.3 2D Histogram
+### 2D Histogram
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/2d-histogram.png" alt="2DHistogramProperties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/2d-histogram.png" alt="2DHistogramProperties" class="no-border" >}}
 
 ``` json
 [ {
@@ -176,11 +171,11 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 } ]
 ```
 
-## 4 Maps
+## Maps
 
-### 4.1 Bubble Map
+### Bubble Map
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/bubble-map.png" alt="BubbleMapProperties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/bubble-map.png" alt="BubbleMapProperties" class="no-border" >}}
 
 ``` json
 [ {
@@ -195,11 +190,11 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 } ]
 ```
 
-### 4.2 Choropleth Map
+### Choropleth Map
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/choropleth-map.png" alt="ChoroplethMapProperties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/choropleth-map.png" alt="ChoroplethMapProperties" class="no-border" >}}
 
-#### 4.2.1 Choropleth Map Data
+#### Choropleth Map Data
 
 ``` json
 [ {
@@ -211,7 +206,7 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 } ]
 ```
 
-#### 4.2.2 Choropleth Map Layout
+#### Choropleth Map Layout
 
 ``` json
 { 
@@ -221,9 +216,9 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 }
 ```
 
-### 4.3 Scatter Map
+### Scatter Map
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/scatter-map.png" alt="ScatterMapProperties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/scatter-map.png" alt="ScatterMapProperties" class="no-border" >}}
 
 ``` json
 [ {
@@ -235,11 +230,11 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 } ]
 ```
 
-## 5 3D Charts
+## 3D Charts
 
-### 5.1 3D Surface Chart
+### 3D Surface Chart
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/3d-surface-plot.png" alt="3DSurfacePlotProperties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/3d-surface-plot.png" alt="3DSurfacePlotProperties" class="no-border" >}}
 
 ``` json
 [ {
@@ -249,9 +244,9 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 } ]
 ```
 
-### 5.2 3D Line Chart
+### 3D Line Chart
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/3d-line-chart.png" alt="3DLineChartProperties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/3d-line-chart.png" alt="3DLineChartProperties" class="no-border" >}}
 
 ``` json
 [ {
@@ -263,9 +258,9 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 } ]
 ```
 
-### 5.3 3D Scatter Chart
+### 3D Scatter Chart
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/3d-scatter-plot.png" alt="3DScatterPlotProperties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/3d-scatter-plot.png" alt="3DScatterPlotProperties" class="no-border" >}}
 
 ``` json
 [ {
@@ -277,11 +272,11 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 } ]
 ```
 
-## 6 Other Charts
+## Other Charts
 
-### 6.1 Contour Chart
+### Contour Chart
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/contour.png" alt="ContourProperties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/contour.png" alt="ContourProperties" class="no-border" >}}
 
 ``` json
 [ {
@@ -290,9 +285,9 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 } ]
 ```
 
-### 6.2 Time Series
+### Time Series
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/time-series2.png" alt="TimeSeriesProperties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/time-series2.png" alt="TimeSeriesProperties" class="no-border" >}}
 
 ``` json
 [ {
@@ -303,9 +298,9 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 } ]
 ```
 
-### 6.3 Group By Chart
+### Group By Chart
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/group-by-chart.png" alt="GroupByChartProperties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/group-by-chart.png" alt="GroupByChartProperties" class="no-border" >}}
 
 ``` json
 [ {
@@ -316,9 +311,9 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 } ]
 ```
 
-### 6.4 Symmetric Error Bar
+### Symmetric Error Bar
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/error-bar.png" alt="ErrorBarProperties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/error-bar.png" alt="ErrorBarProperties" class="no-border" >}}
 
 ``` json
 [ {
@@ -332,9 +327,9 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 } ]
 ```
 
-### 6.5 Polar Chart
+### Polar Chart
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/polar-chart.png" alt="PolarChartProperties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/polar-chart.png" alt="PolarChartProperties" class="no-border" >}}
 
 ``` json
 [ {
@@ -345,11 +340,11 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 } ]
 ```
 
-### 6.6 Ternary Plot
+### Ternary Plot
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/ternary-plot.png" alt="TernaryPlotProperties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-any-cheat-sheet/ternary-plot.png" alt="TernaryPlotProperties" class="no-border" >}}
 
-#### 6.6.1 Ternary Plot Data
+#### Ternary Plot Data
 
 ``` json
 [{
@@ -362,7 +357,7 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 }]
 ```
 
-#### 6.6.2 Ternary Plot Layout
+#### Ternary Plot Layout
 
 ```json
 {
@@ -372,7 +367,7 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 }
 ```
 
-## 7 Read More
+## Read More
 
 * Full chart documentation is here: [https://plot.ly/javascript/](https://plot.ly/javascript/)
 * [Any Chart Widget](/refguide8/charts-any-configuration/)

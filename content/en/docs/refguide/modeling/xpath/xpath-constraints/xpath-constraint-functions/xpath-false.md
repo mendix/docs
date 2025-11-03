@@ -1,19 +1,25 @@
 ---
 title: "XPath false"
 url: /refguide/xpath-false/
-tags: ["studio pro"]
+weight: 2
 ---
 
-## 1 Overview
+## Overview
 
 The function `false()` returns the Boolean value `false`.
 
 To use the values `true` or `false` in XPath queries, it is necessary to either use the `true()` and `false()` functions or to enclose the values in quotation marks.
 
-## 2 Example
+## Example
 
 This query returns all the customers who are not classified as gold customers:
 
-```java {linenos=false}
-//Sales.Customer[IsGoldCustomer = false()]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [IsGoldCustomer = false()]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Sales.Customer[IsGoldCustomer = false()]
+    {{% /tab %}}
+{{< /tabpane >}}

@@ -1,14 +1,14 @@
 ---
-title: "Mendix Mobile App"
+title: "Mendix Mobile App Release Notes"
+linktitle: Mendix Mobile App
 url: /releasenotes/mobile/mendix-mobile-app/
-category: "Mobile"
 weight: 20
 description: "These are the release notes for the Mendix Mobile app."
 ---
 
 ## Android 4.7.1 / iOS 4.7.1
 
-**Release date: March 26th, 2018**
+**Release date: March 26, 2018**
 
 ### Fixes
 
@@ -21,7 +21,7 @@ description: "These are the release notes for the Mendix Mobile app."
 
 ## Android 4.7.0 / iOS 4.7.0
 
-**Release date: March 23rd, 2018**
+**Release date: March 23, 2018**
 
 ### New Functionality
 
@@ -42,7 +42,7 @@ description: "These are the release notes for the Mendix Mobile app."
 
 ## Android 4.6.0 / iOS 4.6.0
 
-**Release date: November 30th, 2017**
+**Release date: November 30, 2017**
 
 ### New Functionality
 
@@ -54,7 +54,7 @@ description: "These are the release notes for the Mendix Mobile app."
 
 ## Android 4.5.0 / iOS 4.5.0
 
-**Release date: October 24th, 2017**
+**Release date: October 24, 2017**
 
 ### New Functionality
 
@@ -65,7 +65,7 @@ description: "These are the release notes for the Mendix Mobile app."
 
 ### Deprecations and Removals
 
-* We removed support for custom profiles (which were deprecated with Mendix [7.4](/releasenotes/studio-pro/7.4/).
+* We removed support for custom profiles that were deprecated with Mendix 7.4.
 
 ### Limitation
 
@@ -73,7 +73,7 @@ description: "These are the release notes for the Mendix Mobile app."
 
 ## iOS 4.4.1 {#RN441}
 
-**Release date: October 2nd, 2017**
+**Release date: October 2, 2017**
 
 ### Bug Fixes
 
@@ -85,7 +85,7 @@ description: "These are the release notes for the Mendix Mobile app."
 
 ## Android 4.4.0 / iOS 4.4.0
 
-**Release date: July 21st, 2017**
+**Release date: July 21, 2017**
 
 ### New Functionality
 
@@ -108,18 +108,18 @@ description: "These are the release notes for the Mendix Mobile app."
 
 ## Android 4.3.0
 
-**Release date: July 10th, 2017**
+**Release date: July 10, 2017**
 
 ### New Functionality
 
-We have added two new features to accelerate your app delivery projects:
+We added two new features to accelerate your app delivery projects:
 
 * Easily test your hybrid mobile Mendix apps on your phone by scanning the QR code shown in the Mendix Modeler from the convenience of the Mendix Mobile app.
 * Review the capabilities of Atlas UI and the Mendix Platform through the showcases accessible through the Mendix Mobile app. The above features are available without logging in. However, you still need to log in if you want to use **Buzz**.
 
 ## Android 4.1.0 / iOS 4.3.0
 
-**Release date: April 7th, 2017**
+**Release date: April 7, 2017**
 
 With this release, we greatly improved the user experience of the Mendix Mobile app.
 

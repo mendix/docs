@@ -2,36 +2,35 @@
 title: "Parse and Format Decimal Function Calls"
 url: /refguide/parse-and-format-decimal-function-calls/
 weight: 150
-tags: ["studio pro", "expression", "parsing", "formatting"]
 ---
 
-## 1 Introduction
+## Introduction
 
-This document describes parsing and formatting decimal function calls. For details on all the pattern possibilities, see [Class DecimalFormat](https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html).
+This document describes parsing and formatting decimal function calls. For details on all the pattern possibilities, see [Class DecimalFormat](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/text/DecimalFormat.html).
 
 {{% alert color="warning" %}}
 In nanoflows, it is not possible to use parsing and formatting decimal function calls with optional format string (for example, `'#,###.##'`) within a text parameter on a page. The text parameter works the same way as a nanoflow and is restricted to only using the format appropriate to the locale from the language of the current user in Mendix apps.
 {{% /alert %}}
 
-## 2 parseDecimal
+## `parseDecimal` {#parseDecimal}
 
 Parses a string value to a decimal value according to a specified format.
 
-### 2.1 Input Parameters
+### Input Parameters
 
 The functionality of `parseDecimal()` depends on whether it is used in a microflow or a nanoflow.
 
-#### 2.1.1 Input Parameters in Microflows
+#### Input Parameters in Microflows
 
 The input parameters in microflows are described in the table below:
 
 | Value                                                        | Type             |
 | ------------------------------------------------------------ | ---------------- |
 | Value to parse                                               | String           |
-| Format for the input value based on the Java library `DecimalFormat` (for more information, see [Class DecimalFormat](https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html)) | String           |
+| Format for the input value based on the Java library `DecimalFormat` (for more information, see [Class DecimalFormat](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/text/DecimalFormat.html)) | String           |
 | Default value **(optional)**                                 | Decimal or empty |
 
-#### 2.1.2 Input Parameters in Nanoflows
+#### Input Parameters in Nanoflows
 
 The input parameters in nanoflows are described in the table below:
 
@@ -40,7 +39,7 @@ The input parameters in nanoflows are described in the table below:
 | Value to parse                                               | String           |
 | Default value **(optional)**                                 | Decimal or empty |
 
-### 2.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -48,7 +47,7 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------- |
 | The output is a decimal value that matches the supplied string value. If the value cannot be parsed (meaning, it does not match the format parameter or contains illegal characters), the default value will be returned. If no default value is provided, an error occurs. | Decimal |
 
-### 2.3 Examples
+### Examples
 
 The following examples apply to both microflows and nanoflows. They demonstrate which output you get depending on input parameters. 
 
@@ -66,25 +65,25 @@ The following example only applies to microflows, given that in nanoflows, you c
 
 * `parseDecimal('3,241.98', '#,###.##')` returns `3241.98`
 
-## 3 formatDecimal
+## `formatDecimal` {#formatDecimal}
 
 Converts a decimal value to a string value according to a specified format.
 
-### 3.1 Input Parameters
+### Input Parameters
 
 The functionality of `formatDecimal()` depends on whether it is used in a microflow or a nanoflow.
 
-#### 3.1.1 Input Parameters in Microflows
+#### Input Parameters in Microflows
 
 The input parameters in microflows are described in the table below:
 
 | Value                                                        | Type    |
 | ------------------------------------------------------------ | ------- |
 | Value to convert                                             | Decimal |
-| Format for the result based on the Java library `DecimalFormat` (for details, see [Class DecimalFormat](https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html)) | String  |
-| Locale in which the results should be formatted **(optional)**. For the more information on supported values, see [forLanguageTag](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#forLanguageTag-java.lang.String-). When omitted, the user configured locale is used. | String  |
+| Format for the result based on the Java library `DecimalFormat` (for details, see [Class DecimalFormat](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/text/DecimalFormat.html)) | String  |
+| Locale in which the results should be formatted **(optional)**. For the more information on supported values, see [forLanguageTag](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Locale.html#forLanguageTag(java.lang.String)). When omitted, the user configured locale is used. | String  |
 
-#### 3.1.2 Input Parameters in Nanoflows
+#### Input Parameters in Nanoflows
 
 In nanoflows, this function only takes a single parameter described below:
 
@@ -92,7 +91,7 @@ In nanoflows, this function only takes a single parameter described below:
 | ---------------- | ------- |
 | Value to convert | Decimal |
 
-### 3.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -100,7 +99,9 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------ |
 | A string representation of the decimal in the format specified by the `format` parameter. | String |
 
-### 3.3 Microflow Examples
+Note that the exact output may depend on the Java version and user locale, depending on the passed format.
+
+### Microflow Examples
 
 The examples below illustrate which value the expression returns:
 
@@ -140,6 +141,6 @@ The examples below illustrate which value the expression returns:
     '% 56' 
     ```
 
-### 3.4 Nanoflow Examples
+### Nanoflow Examples
 
 In a nanoflow, this will format the decimal using the format appropriate to the locale from the language of the current user in Mendix apps.

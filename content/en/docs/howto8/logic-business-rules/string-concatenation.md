@@ -1,12 +1,10 @@
 ---
 title: "Configure String Concatenation"
 url: /howto8/logic-business-rules/string-concatenation/
-category: "Logic and Business Rules"
 weight: 11
-tags: ["microflow", "logic", "string", "concatenation"]
 ---
 
-## 1 Introduction
+## Introduction
 
 In every project, you will need to concatenate some text together. Common cases are when you want to assemble the full name of a person based on the first and last name.
 
@@ -22,15 +20,15 @@ Every string attribute will start out as an empty field, whenever the users or t
 
 Whenever you want to check if a string contains text it won't be sufficient to execute the expression: `$Account/Firstname != empty` nor will  `$Account/Firstname != ''` cover all cases. Every string needs to be checked for both values to be sure that a field really is empty.  
 
-## 2 Breaking Down into Separate Decisions
+## Breaking Down into Separate Decisions
 
 An inefficient example on how to check for text and create a combined messages based on the outcome. Building out all combinations is a lot of work, and if something need to change it will be a lot of work to change and it is prone to errors. 
 
 Reference this microflow:
 
-{{< figure src="/attachments/howto8/logic-business-rules/string-concatenation/bco_contactperson_createfullname_inefficient.jpg" >}}
+{{< figure src="/attachments/howto8/logic-business-rules/string-concatenation/bco_contactperson_createfullname_inefficient.jpg" class="no-border" >}}
 
-## 3 A Single Expression
+## A Single Expression
 
 This example contains a single expression which can become difficult to read if the expression becomes larger and more complicated. As long as you are just combining 2 or 3 fields this is a good workable solution. But keep in mind when you are concatenating more fields it is better to use the best practices below.
 
@@ -53,18 +51,18 @@ else '')
 
 Reference this microflow:
 
-{{< figure src="/attachments/howto8/logic-business-rules/string-concatenation/bco_contactperson_createfullname_hardtoread.jpg" >}}
+{{< figure src="/attachments/howto8/logic-business-rules/string-concatenation/bco_contactperson_createfullname_hardtoread.jpg" class="no-border" >}}
 
-## 4 Best Practices for Expression Breakdown
+## Best Practices for Expression Breakdown
 
 The most flexible solution is to break the string concatenate down into separate activities. This allows to easily add or remove text from the concatenate function. It should not create an additional level of complexity either, simply create a subflow to combine the string values and use that in your microflow.
 
 In this example we went even one step further in the stability of the expression. By adding an additional trim to the attribute we prevent adding additional white spaces that might have been added by the user. Using the microflow below we are absolutely sure never to get any white spaces or null values in our text.
 
-```text {linenos=false}
+```text
 trim(  $ContactPerson/Fullname + ' ' + trim(  $ContactPerson/Firstname ) )
 ```
 
 Reference this microflow:
 
-{{< figure src="/attachments/howto8/logic-business-rules/string-concatenation/bco_contactperson_createfullname.jpg" >}}
+{{< figure src="/attachments/howto8/logic-business-rules/string-concatenation/bco_contactperson_createfullname.jpg" class="no-border" >}}

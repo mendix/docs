@@ -12,9 +12,13 @@ aliases:
     - /howto/mobile/local-notif-schedule-cancel/
 ---
 
-These step-by-step guides will teach you to build local notifications for native mobile applications. Local notifications will only allow you to schedule and send notifications confined to one mobile device. These notifications do not use an internet connection. One use of a local notification might be an alarm app which sends a notification after an amount of time has elapsed.
+These step-by-step guides teach you how to build local notifications for native mobile applications. Local notifications will only allow you to schedule and send notifications confined to one mobile device. 
 
-**These guides will teach you how to do the following:**
+Local push notifications only work in native apps, not PWAs.
+
+These notifications do not use an internet connection, making them useful for internal app use-cases. For example, a local notification might be an alarm app which sends a local notification after an amount of time has elapsed.
+
+These guides teach you how to do the following:
 
 * [Part 1: Local Notifications](/refguide/mobile/using-mobile-capabilities/local-notifications/native-local-notifications/) – Trigger native notifications from Mendix app's microflow, configure your notification permissions, and test the notifications on a device.
 * [Part 2: Badges](/refguide/mobile/using-mobile-capabilities/local-notifications/local-notif-badges/) – Make your notifications leave badge indicators on your application's icon.

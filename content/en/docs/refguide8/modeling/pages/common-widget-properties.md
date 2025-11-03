@@ -223,11 +223,6 @@ The template for the label can contain parameters that are written as a number b
 
 For each parameter in the template, you define an attribute of the context entity or an associated entity. The value of this attribute will be inserted at the position of the parameter.
 
-### Label Position
-
-{{% todo %}}Explain what the **default** is here, as well as what **before control** and **after control** constitute.
-{{% /todo %}}
-
 ## Formatting Section{#numeric-formatting}
 
 {{< figure src="/attachments/refguide8/modeling/pages/common-widget-properties/numeric-formatting-section.png" alt="Numeric Formatting Section" class="no-border" >}}

@@ -150,7 +150,7 @@ Here is an example of custom content using new Badge widget in **Structure mode*
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/column-custom-content.png" alt="Example of custom content using new Badge widget in Structure mode" class="no-border" >}}
 
-For more information on configuring various widget properties, see [Common Widget Properties](/refguide/common-widget-properties/).
+For more information on configuring various widget properties, see [Properties Common in the Page Editor](/refguide/common-widget-properties/).
 
 ### Column Width
 

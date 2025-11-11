@@ -27,7 +27,7 @@ To fix this issue, do the following:
 4. Remove **config.json**.
 5. Reopen the Mendix Native Mobile Builder.
 
-## Release 1.0.139 {#10138}
+## Release 1.0.140 {#10140}
 
 **Release date: November 11, 2025**
 

@@ -27,6 +27,14 @@ To fix this issue, do the following:
 4. Remove **config.json**.
 5. Reopen the Mendix Native Mobile Builder.
 
+## Release 1.0.139 {#10138}
+
+**Release date: November 11, 2025**
+
+### Fixes
+
+* Updated the react-native-firebase to ensure that the Native Template and Native Builder are updated accordingly.
+
 ## Release 1.0.138 {#10138}
 
 **Release date: August 5, 2025**

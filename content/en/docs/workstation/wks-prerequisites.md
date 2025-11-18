@@ -29,6 +29,10 @@ Before implementing Mendix Workstation Client, perform the following steps:
 2. Open the required ports for communication (for example, TCP 443 for HTTPS).
 3. Add the Workstation Client to the Allow list for any firewall or antivirus software, if applicable.
 
+### Custom Certificates and Proxy Settings
+
+Note that the Workstation Client uses the operating system's certificates and proxy environment variables to establish a connection with Workstation Management. In most controlled corporate environemnts these settings are preconfigured on employee computers by their IT. If you want to use a custom proxy configuration, you must start the Workstation Client from the command line and set the environment variables as described [here](https://github.com/nodejs/undici/blob/main/docs/docs/api/EnvHttpProxyAgent.md#class-envhttpproxyagent). 
+
 ## Device Connectivity
 
 Before connecting devices with Mendix Workstation Client perform the following steps:

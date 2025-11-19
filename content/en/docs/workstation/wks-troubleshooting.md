@@ -72,6 +72,42 @@ This error occurs if the credentials provided by the Workstation Client are no l
 
 You can continue using the Workstation Client with the current configuration, but it will no longer receive updates. To fix this, press **Unlink** in the Workstation Client and then re-register the workstation.
 
+### HTTPError: Request failed with status code 503 Service Temporarily Unavailable
+
+The Client shows an error like the following: *Station could not be synchronized with Management. Error invoking remote method 'refresh-station-config': HTTPError: Request failed with status code 503 Service Temporarly Unavailable: GET.*
+
+#### Cause
+
+Workstation Management is temporarly offline, most likely due to maintenance. 
+
+#### Solution 
+
+Check out the [Mendix Status Page](https://status.mendix.com/) to see if there is a scheduled maintenance for the Workstation Management. If there is no maintenance message and the issue perists after a few minutes, report an incident via the status page.
+
+### TimeoutError: Request timed out
+
+The Client shows an error like the following: *Station could not be synchronized with Management. Error invoking remote method 'refresh-station-config': TimeoutError: Request timed out: GET [yourStationURL]*
+
+#### Cause
+
+The Client request to the Workstation Management is not forwarded to the Workstation Management server and times out. This issue might occur if you network traffic is routed over a proxy server as common in protected corporate IT environments and if the proxy server is offline.  
+
+#### Solution 
+
+Validate if the network traffic of your computer is routed via proxy server and configure your computer's proxy settings accordingly, c.f. [Network Configuration](/mendix-workstation/prerequisites/#network-configuration).
+
+### Workstation Management URL cannot be resolved
+
+The Client shows an error like the following: *Station could not be synchronized with Management. Error invoking remote method 'refresh-station-config': Error: Workstation Management URL cannot be resolved. This might be an DNS issue or the host is offline.*
+
+#### Cause
+
+The Client cannot resolve the URL to the Workstation Management. There might be several reasons for this. Most commonly, the machine the Workstation Client is running on has no connection to the internet. 
+
+#### Solution 
+
+As a first step, check that you have a working connection to the internet before diving deeper. Next, check if you can reach the [Workstation Management](https://workstation.home.mendix.com/) from your browser. If your browser cannot resolve that address, there might be an issue with your DNS Server or configuration. On Windows, validate your DNS settings of your Ethernet or Wireless LAN adapter using the command prompt and typing in `ipconfig`. Entering the command `nslookup www.mendix.com` gives you further information about the IP address your DNS server resolved the Mendix domain. 
+
 ## Workstation Connector
 
 Logs for the Connector can be found in Studio Pro's console during local development or within the environment logs of your running environment. Since the Connector performs most operations client-sided in nanoflows, you can also inspect the local logs that can be found in the browser console.

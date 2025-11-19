@@ -16,6 +16,12 @@ This document presents the system requirements for Mendix Workstation Client.
 * Memory - Minimum 4 GB RAM (8 GB recommended for optimal performance)
 * Disk Space - 400 MB of free disk space for installation
 
+ Mendix Workstation Client can be downloaded from the Mendix Marketplace:
+
+* [Microsoft Windows (global installer)](https://marketplace.mendix.com/link/component/247448)
+* [Microsoft Windows (portable)](https://marketplace.mendix.com/link/component/247456)
+* [Linux ARM 64](https://marketplace.mendix.com/link/component/247459)
+
 ## Access Requirements
 
 * A Mendix account

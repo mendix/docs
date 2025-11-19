@@ -30,7 +30,7 @@ Raise a ticket to support to transfer Workspace ownership.
 
 ## Workstation Client
 
-The Client retains logs for the last eight days. You can access the logs by clicking the **Logs** button on the Client UI, and then optionally selecting the level of logs that you want to see. Opening the client's console through the browser developer tools (**Ctrl + Shift + I**) can also provide additional information about encountered errors in the UI of the Client.
+The Client retains logs for the last eight days locally on your computer. You can access the logs by clicking the **Logs** button on the Client UI, and then optionally selecting the level of logs that you want to see. Opening the client's console through the browser developer tools (**Ctrl + Shift + I**) can also provide additional information about encountered errors in the UI of the Client.
 
 You can also find log files by day in the Client's app data folder. To do so on Windows, press **Win + R**. If you installed the Client using the installer for all users, enter `%ProgramData%\Mendix Workstation\logs`. If you are using the portable version, enter `%AppData%\Mendix Workstation\logs`. On Linux the Mendix *Workstation/logs* folder is either located at `$XDG_CONFIG_HOME` or `~/.config`.
 

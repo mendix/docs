@@ -161,6 +161,10 @@ This is the pattern from which the arguments are derived that are passed to the 
 * `{0}` – this is replaced with the name of the original file before the arguments are passed to the file comparison program
 * `{1}` – this is replaced with the name of the changed file before the arguments are passed to the file comparison program
 
+#### History {#history-pane}
+
+Select this option to use the blocking History window pop-up, instead of the non-blocking, searchable History pane.
+
 #### Solution Warning
 
 Select **Show warning on updating marketplace modules** to display a warning message when updating a Marketplace module. 
@@ -290,10 +294,6 @@ When **Extension Development** mode is enabled, you can start Studio Pro without
 ### App Explorer
 
 Select this option to use the modernized version of the App Explorer. You must restart Studio Pro to use this feature.
-
-### History Pane {#history-pane}
-
-Select this option to use the non-blocking, searchable History pane instead of the blocking History window. This feature is currently in beta.
 
 ### Errors Pane
 

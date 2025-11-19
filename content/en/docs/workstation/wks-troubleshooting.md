@@ -74,7 +74,7 @@ You can continue using the Workstation Client with the current configuration, bu
 
 ### HTTPError: Request failed with status code 503 Service Temporarily Unavailable
 
-The Client shows an error like the following: *Station could not be synchronized with Management. Error invoking remote method 'refresh-station-config': HTTPError: Request failed with status code 503 Service Temporarly Unavailable: GET.*
+The Client shows an error like the following: *Station could not be synchronized with Management. Error invoking remote method 'refresh-station-config': HTTPError: Request failed with status code 503 Service Temporarily Unavailable: GET.*
 
 #### Cause
 

@@ -103,9 +103,9 @@ To set headers, use the [Headers](/refguide/custom-settings/#Headers) Custom Run
 
 The `Headers` Custom Runtime Setting accepts a JSON map where the keys are header names and values are header values.
 
-The `Content-Security-Policy` header supports [additional custom handling](/refguide/configuration/#headers) to process `nonce` valuues.
+The `Content-Security-Policy` header supports [additional custom handling](/refguide/configuration/#headers) to process `nonce` values.
 
-For example, here's an example value of the `Headers` Custom Runtime Setting that can be usedhow to specify a few typical security headers:
+For example, here's an example value of the `Headers` Custom Runtime Setting that can be used how to specify a few typical security headers:
 
 ```json
 {

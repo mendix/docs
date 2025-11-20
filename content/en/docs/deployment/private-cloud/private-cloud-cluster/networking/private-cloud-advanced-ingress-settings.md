@@ -69,17 +69,19 @@ In this way, you can configure the following settings:
 * Specify the name of an existing TLS certificate secret.
 * Provide TLS Certificate and Private Key values directly in the environment specification.
 
-## Configuring HTTP headers
+## Configuring HTTP Headers
 
-### Configuring headers in NGINX Ingress
+You can configure HTTP headers for NGINX Ingress and for Mendix Runtime. For more information, refer to the following sections.
 
-For NGINX Ingress, you can set headers in a namespace which will further be propagated across all apps in that namespace by using a configuration snippet in the OperatorConfiguration object. Alternatively, you can configure headers for individual app environments by adding the `nginx.ingress.kubernetes.io/configuration-snippet` annotation in the Mendix on Kubernetes Portal.
+### Configuring Headers in NGINX Ingress
+
+For NGINX Ingress, you can use a configuration snippet in the `OperatorConfiguration` object to set headers in a namespace. The headers that you set are then further propagated across all apps in that namespace. Alternatively, you can configure headers for individual app environments by adding the `nginx.ingress.kubernetes.io/configuration-snippet` annotation in the Mendix on Kubernetes Portal.
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/private-cloud-networking/advanced-headers.png" class="no-border" >}}
 
-Mendix only supports unencrypted HTTP between the Ingress controller and the app. However, there is no higher level of security with service-to-service encryption and policy controls. In such situation, integrating Ingress controllers with Istio Service Mesh or Linkerd can help you manage both external traffic entering your Kubernetes cluster (by using an Ingress Controller) and internal traffic between services (by using Istio or Linkerd).
+Mendix only supports unencrypted HTTP between the Ingress controller and the app. However, there is no higher level of security with service-to-service encryption and policy controls. In such situations, integrating Ingress controllers with Istio Service Mesh or Linkerd can help you manage both external traffic entering your Kubernetes cluster (by using an Ingress Controller) and internal traffic between services (by using Istio or Linkerd).
 
-Istio Service Mesh and Linkerd help manage service-to-service communication within a Kubernetes cluster. It provides features such as the following:
+Istio Service Mesh and Linkerd help manage service-to-service communication within a Kubernetes cluster. It provides the following features:
 
 * Traffic management (for example, canary releases)
 * Service discovery
@@ -93,11 +95,11 @@ In an Istio- or Linkerd-enabled Kubernetes cluster, an Ingress controller can be
 AWS Application Load Balancer and Azure Application Gateway Ingress Controller only work with Istio.
 {{% /alert %}}
 
-### Configuring headers in the Mendix Runtime
+### Configuring Headers in the Mendix Runtime
 
-Starting from Mendix 10.24.1, the Mendix Runtime can set headers natively, without relying on an external ingress controller.
+Starting from Mendix 10.24.1, the Mendix Runtime can set headers natively, without relying on an external Ingress controller.
 
-This allows specifying security headers such as `Content-Security-Policy` with any ingress controller, not just NGINX Ingress.
+This allows specifying security headers such as `Content-Security-Policy` with any Ingress controller, not just NGINX Ingress.
 
 To set headers, use the [Headers](/refguide/custom-settings/#Headers) Custom Runtime Setting on the [Runtime Tab](/developerportal/deploy/private-cloud-deploy/#runtime-tab) (for Connected environments) or in the [.spec.runtime.customConfiguration field](/developerportal/deploy/private-cloud-operator/#edit-cr) in the MendixApp CR.
 
@@ -105,7 +107,7 @@ The `Headers` Custom Runtime Setting accepts a JSON map where the keys are heade
 
 The `Content-Security-Policy` header supports [additional custom handling](/refguide/configuration/#headers) to process `nonce` values.
 
-For example, here's an example value of the `Headers` Custom Runtime Setting that can be used how to specify a few typical security headers:
+The following is an example value of the `Headers` Custom Runtime Setting that can be used how to specify a few typical security headers:
 
 ```json
 {

@@ -150,24 +150,106 @@ Different device types have different requirements for the message syntax. For m
 
 ### Quitting the Workstation Client
 
-The **Close** button closes the Client window but does not terminate the application; it continues to run in the background. To completely quit the Client, right-click its icon in the Windows systray and select **Quit**. This action is only available if *Developer Mode* is enabled on your **Station** page (where the **Enable Developer Mode** toggle is set to **On**). For production environments, it is recommended to disable *Developer Mode* to prevent Workstation operators from accidentally quitting the Workstation Client. Alternatively, the Workstation Client process can always be stopped via Windows Task Manager.
+The **Close** button closes the Client window but does not terminate the application; it continues to run in the background. To completely quit the Client, right-click its icon in the Windows systray and select **Quit**. This action is only available if [Developer Mode](/mendix-workstation/installation#developer-mode) is enabled. Alternatively, the Workstation Client process can always be stopped via Windows Task Manager.
 
 ## Advanced Configurations
 
-### Advanced Workspace Settings
-
 ### Workspace Apps
 
-### Workspace Team & Collaboration
+It is crucial to configure the Mendix apps that are allowed to connect to the Workstation Client via the Workstation Connector. To do so, apps are managed on a workspace level and can be enabled or disabled for all stations in workspace, by station station groups, or individually per station.
 
 ### Workspace Settings
 
-#### Logging
+Navigate to the **Settings** page in a workspace to configure settings that are applied to all stations in that workspace.
+
+#### Log Settings
+
+The Workstation Client always stores logs to the file system it is installed on (c.f. [here](/mendix-workstation/troubleshooting/#workstation-client)). No logs are send to the Workstation Management. However, you can configure the log level and retention policy of all the Workstation Clients that are registered to stations in the workspace.
+
+##### Log Level
+
+Configure the log level of the logs stored by the Workstation Client(s).
+
+* Info (default): Logs normal operation and key application events. For example, the time when the Client was launched or terminated.
+* Warn: Info logs and potential issues or suboptimal conditions. For example, if a request to refresh the Client's configuration timed out.
+* Error: Warning logs and visible problem, something is not working as expected. For example, if a port to connect to a device is already in use.
+* Debug: Error logs and detailed internal state for developer diagnostics. For example, requests to the Workstation Management, communication with devices.
+
+#### Retention Policy
+
+Verbosity and thus log file size increases with each log level. To constrain this, the logs are limited to 10 MB in size and stored for 7 days by default. 
+
+Modify these settings to the needs of your logging policy, especially if you require to keep debug level logs in production for retrospective troubleshooting.
 
 #### Local Device Testing
 
+By default, the Workstation Management is pre-configured as an allowed app to connect to the Workstation Client on the **Test your Station** page in a workspace. To disable this, navigate to the tab "Local Device Testing" on the **Settings** page and toggle it off. 
+
+
+### Workspace Team and Collaboration
+
+Note: Collaborating with other users in a workspace requires a Workstation license. 
+
+Invite and manage members of a Workspace on the Team page. Only users who have signed into Workstation Management can be invited via email. One of the following roles can be assigned:
+
+* Owner - The owner has full rights to manage the workspace. They can read and edit configurations, manage the team, register computers, and manage workspace settings. They can also delete a workspace or transfer ownership to a new owner. By default, the user who created a workspace is assigned the owner role. Contact Mendix Support if a Workspace owner has left the company to transfer the ownership.
+* Workspace admin - The workspace admin can manage the workspace in the same way as the owner, but they cannot delete the workspace or change its ownership.
+* Station admin - Station admins can view and edit station configurations. They can also register computers to stations. They cannot manage any other settings.
+* Computer admin - Computer admins can view configurations without editing them. They can also register computers to stations.
+* View only - This role grants access to viewing the configuration but cannot perform any actions.
+
+All members but the Workspace owner an leave a workspace. 
+
+
 ### Advanced Station Settings
 
-#### Developer Mode
+#### Station Developer Mode
+
+Developer mode can be configured on a **Station** page by toggling **Enable Developer Mode**. 
+
+*Developer Mode* is enabled by default for each station. This allows users of the Workstation Client to 
+* quit the program from the start menu, 
+* unlink the Workstation Client so that it can be registered to another station,
+* gives access to debug level live logs displayed in the **Logs** pane of the Workstation Client even if the workspace's log level is set to a different level,
+* give access to developer tools (available by pressing *Ctrl + Shift + I*). 
+
+For production environments, it is recommended to disable *Developer Mode* to prevent Workstation operators from accidentally quitting or unlinking the Workstation Client. 
 
 #### Device Settings
+
+##### Card Readers
+
+Card reader devices cannot be configured as separate devices in the **Devices** overview of a **Station** page. Instead, they are automatically detected by the Workstation Client and added to the device list of the Client. 
+
+Auto detecting card readers is enabled by default. This setting can be configured on a **Station** page by toggling **Detect Card Readers**. 
+
+##### File Device
+
+###### Allowed Folder Configuration
+
+The *Allowed Folder* feature supports flexible path configuration through environment variables, providing cross-platform compatibility for both Windows and Unix-based systems. This functionality allows administrators to define the allowed folder where the Workstation Client can perform actions.
+
+###### Environment Variable Support
+
+The system accepts environment variables in the allowed folder configuration within the Workstation Management interface. Both Windows and Unix syntax formats are supported on all platforms, meaning you can use Windows-style environment variables on Unix systems and vice versa.
+
+###### Supported Path Formats
+
+Windows and Unix-style paths can be used independently of the operating system the Workstation Client is running on. The following examples demonstrate the various syntax options available:
+
+###### Basic Examples
+
+* **Windows-style with backslash**: `%AppData%\test`
+* **Windows-style with forward slash**: `%AppData%/test`
+* **Unix-style with backslash**: `$EnvVar\test`
+* **Unix-style with forward slash**: `$EnvVar/test`
+
+###### Allowed Actions
+
+The administrator can choose to allow either one or a combination of the following permissions: subscribe to change events, read files, and write files.
+
+##### Bluetooth Devices
+
+Simply add Bluetooth LE (BLE) devices that use the ATT protocol by entering the exact device name as displayed in your OS' device manager 
+
+

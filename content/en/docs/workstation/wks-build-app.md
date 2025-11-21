@@ -32,7 +32,7 @@ To install and configure the Workstation Connector, perform the following steps:
 1. Open an existing app you want to extend with Workstation features in Mendix Studio Pro or create a new app using a blank starter template.
 2. Download the [Mendix Workstation Connector](https://marketplace.mendix.com/link/component/247460).
 3. Configure the station in Workstation Management by performing the following steps:
-
+ 
     1. Navigate to the **Workspaces** page in [Workstation Management](https://workstation.home.mendix.com/) (default home page).
     2. Click **Create Workspace** or click an existing workspace in the overview.
     4. Click **Create Station**.

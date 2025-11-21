@@ -8,17 +8,17 @@ weight: 30
 
 ## Introduction
 
-The next step after [installing the Workstation Client](/mendix-workstation/installation/) is to build a Mendix application that sends data or commands to your devices, or extend an existing app accordingly. To do so, this guide explains how to download, install, and configure the [Mendix Workstation Connector](https://marketplace.mendix.com/link/component/247460) from the Mendix Marketplace.
+After [installing the Workstation Client](/mendix-workstation/installation/), the next step is to build a Mendix application that can send data or commands to devices, or to extend an existing app accordingly. This guide explains how to install and configure the [Mendix Workstation Connector](https://marketplace.mendix.com/link/component/247460) from the Mendix Marketplace.
 
 ### How the Connection Works
 
-The Workstation Connector must authenticate itself to the Workstation Client so that the Client trusts the app using the Connector and establishes a connection. To achieve this, the Workstation Connector must generate a key pair with a private and a public key. The public key must be configured in the corresponding app in Workstation Management. The Workstation Client configuration must be up-to-date so that the public key can be verified.
+The Workstation Connector must authenticate with the Workstation Client, ensuring the Client trusts the application using the Connector and establishes a connection. To accomplish this, the Workstation Connector generates a key pair consisting of a private key and a public key. The public key is then configured in the corresponding app in Workstation Management. The Workstation Client configuration must be current to ensure the public key can be verified.
 
 The Workstation Connector establishes a connection with devices through the Workstation Client when needed. The connection is closed when it is no longer required.
 
-When a client browser or tab instance tries to connect to a device, any previously connected browser or tab instances are disconnected from the device.
+When a browser or tab instance attempts to connect to a device, all previously connected browser or tab instances are automatically disconnected from the device.
 
-The Workstation Connector connects with the Workstation Client using a local websocket on port 8094. Communication with each configured device uses another websocket on port *8095* for the first device, *8096* for the second, and so on, so that the range of ports used is *8094* to *8094+n*, where *n* is the number of devices you have. Make sure that the Runtime or Admin port of your local development server in Studio Pro (**App Settings** > **Configurations** > **Server**) is not configured on a port greater than or equal to *8094*.  
+The Workstation Connector connects with the Workstation Client using a local WebSocket on port *8094*. Communication with each configured device uses a separate WebSocket on port *8095* for the first device, *8096* for the second, and so on, meaning the port range used is *8094* to *8094+n*, where *n* is the number of devices configured. Ensure that the Runtime or Admin port of your local development server in Studio Pro (**App Settings** > **Configurations** > **Server**) is not configured to use a port greater than or equal to *8094* to avoid conflicting ports.  
 
 ## Prerequisites
 
@@ -29,18 +29,18 @@ The Workstation Connector connects with the Workstation Client using a local web
 
 To install and configure the Workstation Connector, perform the following steps:
 
-1. Open an existing app you want to extend with Workstation features in Mendix Studio Pro or create a new app using a blank starter template.
-2. Download the [Mendix Workstation Connector](https://marketplace.mendix.com/link/component/247460).
+1. Open an existing app to extend with Workstation functionality in Mendix Studio Pro, or create a new app.
+2. Import the [Mendix Workstation Connector](https://marketplace.mendix.com/link/component/247460) from the Mendix Marketplace.
 3. Configure the station in Workstation Management by performing the following steps:
- 
-    1. Navigate to the **Workspaces** page in [Workstation Management](https://workstation.home.mendix.com/) (default home page).
-    2. Click **Create Workspace** or click an existing workspace in the overview.
-    4. Click **Create Station**.
-    5. Give the station an identifying name and optionally select or create a group to categorize it, such as *Assembly*.
-    6. Add your devices in the **Devices** section.
-    7. Register your computer by clicking **Register Computer**.
-    8. Click **Download** to navigate to the Workstation Client listing in the Marketplace, download the Client installer for Windows, install it, and launch it.
-    9. Copy and paste the registration token into the [Workstation Client](/mendix-workstation/installation/) registration field.
+
+    1. Navigate to the **Workspaces** page in [Workstation Management](https://workstation.home.mendix.com/).
+    2. Click **Create Workspace**, or select an existing workspace from the overview.
+    3. Click **Create Station**.
+    4. Enter a name for the station and optionally select or create a group to categorize it, such as *Assembly*.
+    5. Add devices in the **Devices** section.
+    6. Click **Register Computer** to register your computer.
+    7. Click **Download** to navigate to the Workstation Client listing in the Marketplace, download the Client installer for Windows, install it, and launch it.
+    8. Copy the registration token and paste it into the [Workstation Client](/mendix-workstation/installation/) registration field.
 
 4. Configure your app as an allowed app by performing the following steps:
 
@@ -48,69 +48,71 @@ To install and configure the Workstation Connector, perform the following steps:
     2. In your app, add the page **StationConnector_Security** to your navigation or link to it from an *Open page* button. Alternatively, place the snippet **SNIPPET_StationAdminPage** on a page available to the Administrator user role.
     3. Run the app.
     4. Log in as an Administrator, navigate to the page you added in step 2, and copy the displayed public key.
-    6. Go back to [Workstation Management](https://workstation.home.mendix.com/) and navigate to the workspace you created in step 3.2.
-    7. Go to the **Apps** page in your workspace and click **Create App**.
-    8. Enter your app's URL (for example, `http://localhost:8080`, which is the default when running an app locally) and paste the copied public key into the **Public Key** field.
-    9. Perform one of the following actions:
+    5. Return to [Workstation Management](https://workstation.home.mendix.com/) and navigate to the workspace you created above.
+    6. Navigate to the **Apps** page in your workspace and click **Create App**.
+    7. Enter your app URL (such as `http://localhost:8080`, the default when running an app locally) and paste the copied public key into the **Public Key** field.
+    8. Perform one of the following actions:
         * To enable the app for all stations, select **Enable in all stations**.
-        * To enable it for a specific station, go to **Stations** and navigate to your station. You will find the created app under the **Apps** section. Here, you can enable the application for only this station by toggling it on.
-    10. Refresh the Workstation Client.
-    11. Optional: To recreate the key pair, additionally assign the module role **StationConnector.SecurityAdministrator** to your Administrator role. This adds a **Regenerate KeyPair** button to the **StationConnector_Security** page. Be careful when using this button in a production scenario to avoid the need to reconfigure the app in Workstation Management and refresh all Workstation Clients.  
+        * To enable the app for a specific station, navigate to **Stations** and select your station. The created app appears under the **Apps** section. Enable the application for this station only by toggling it on.
+    9. Refresh the Workstation Client.
+    10. (Optional) To recreate the key pair, also assign the module role **StationConnector.SecurityAdministrator** to your Administrator role. This action adds a **Regenerate KeyPair** button to the **StationConnector_Security** page. Use caution when regenerating keys in production environments, as this requires reconfiguring the app in Workstation Management and refreshing all Workstation Clients.
 
 ## Managing Apps
 
-The app that you created in the previous section is available on the **Apps** page, which you can access through the left navigation menu in your workspace. To enable or disable the app for all your stations or groups of stations, click the icon in the right column of the app list, and then click **Manage App**.
+Apps you create appear on the **Apps** page, accessible through the left navigation menu in your workspace. To enable or disable an app for all stations or specific station groups, click the three-dot icon in the right column of the app list, then click **Manage App**.
 
 ## Managing Users
 
-Invite other Workstation Management users to your workspace to share your configurations and collaborate with them (requires a Workstation license). To do so, click **Team** in the left navigation menu, and then click **Invite Team Member**. Enter the email of the Workstation Management user and select a role. You can grant your users one of the following predefined roles as described [here](/mendix-workstation/installation/#workspace-team-and-collaboration).
+You can invite other Workstation Management users to your workspace to share configurations and collaborate. This feature requires a Workstation license.
 
-To change a user's role or remove them from the workspace, click the three-dot icon in the right column of the user list (prerequisite: Owner or Workspace admin role).
+To invite a user, click **Team** in the left navigation menu, then click **Invite Team Member**. Enter the user's email address and select a role. Available roles are described in the [installation guide](/mendix-workstation/installation/#workspace-team-and-collaboration).
 
-## Getting Started with Custom Logic for Device Interaction
+To change a user's role or remove them from the workspace, click the three-dot icon in the right column of the user list. This action requires the Owner or Workspace Admin role.
 
-Now that you are ready to start using the Mendix Workstation Client, you can implement your own custom logic for interacting with devices. The following nanoflows and Java actions are essential for establishing connections, sending or receiving messages, and managing device interactions:
+## Implementing Custom Device Interaction Logic
 
-* **GetStation** - Retrieves the computer information connected to the Client.
-* **SendMessage** - Sends data or commands to the connected device. For more information about the supported message syntax, see [Message Syntax for File, Smart Card, and Bluetooth Devices](/mendix-workstation/device-syntax/).
-* **SubscribeToMessages** - Subscribes a nanoflow to be called when the device sends a message.
-* **SubscribeToErrors** - Subscribes a nanoflow to be called on device connection errors.
-* **Unsubscribe** - Ends the subscription to device messages or errors.
-* **UnsubscribeByContext** - Ends all subscriptions related to a context object.
-* **UnsubscribeByDevice** - Ends all subscriptions related to a specific device.
-* **DisconnectDevice** - Unsubscribes and completely disconnects from a specific device.
+Once you have configured Mendix Workstation Client, you can implement custom logic for interacting with devices. The following nanoflows and Java actions are essential for establishing connections, sending and receiving messages, and managing device interactions:
 
-These nanoflows and actions serve as the core building blocks for integrating devices into your Mendix applications and tailoring the functionality to your specific requirements.
+* **GetStation** – Retrieves information about the computer connected to the Client.
+* **SendMessage** – Sends data or commands to a connected device. For more information about supported message syntax, see [Message Syntax for File, Smart Card, and Bluetooth Devices](/mendix-workstation/device-syntax/).
+* **SubscribeToMessages** – Subscribes to device messages and triggers a nanoflow when messages are received.
+* **SubscribeToErrors** – Subscribes to device connection errors and triggers a nanoflow when errors occur.
+* **Unsubscribe** – Ends a subscription to device messages or errors.
+* **UnsubscribeByContext** – Ends all subscriptions related to a context object.
+* **UnsubscribeByDevice** – Ends all subscriptions related to a specific device.
+* **DisconnectDevice** – Unsubscribes and disconnects from a specific device.
+
+These nanoflows and actions serve as the core building blocks for integrating devices into your Mendix applications and tailoring functionality to your specific requirements.
 
 ### Understanding the Domain Model
 
 The domain model contains the following entities:
 
-* **Station** - Includes the station name, computer name, workspace name, and client version (non-persistent entities).
-* **Device** - A list of devices associated with the station; includes device names and properties required to establish a connection (non-persistent entities).
-* **AppKeyPair** - A persistent entity to store the app's key pair. The public key needs to be entered in the corresponding app in Workstation Management. 
+* **Station** – Contains the station name, computer name, workspace name, and client version (non-persistent entity).
+* **Device** – Contains a list of devices associated with the station, including device names and properties required to establish connections (non-persistent entity).
+* **AppKeyPair** – Stores the application's key pair (persistent entity). The public key must be configured in the corresponding app in Workstation Management. 
 
 ### Using the Nanoflows and Actions
 
-The following section provides more information about using the nanoflows and Java actions in your Mendix application.
+The following section describes how to use the nanoflows and Java actions.
 
 #### GetStation
 
-Call `GetStation` to retrieve the configuration of the Client computer via the Workstation Client. `GetStation` can be used multiple times, but it queries the Workstation Client only the first time. Subsequent calls return the current object loaded in the session. If the connection with the Workstation Client does not work, `GetStation` returns an empty object.
+Call `GetStation` to retrieve the configuration of the Client computer via the Workstation Client. `GetStation` can be called multiple times, but it queries the Workstation Client only on the first call. Subsequent calls return the current object loaded in the session. If the connection with the Workstation Client fails, `GetStation` returns an empty object.
 
 #### SendMessage
 
-Call `SendMessage` to send a message to a device. `SendMessage` includes the option to wait for the device's response in the current nanoflow.
+Call `SendMessage` to send a message to a device. `SendMessage` provides an option to wait for the device's response within the current nanoflow.
 
 #### SubscribeToMessages
 
-Call `SubscribeToMessages` to trigger a nanoflow when a message is received from a device. `SubscribeToMessages` includes the option to configure a context object to be passed to the callback nanoflow each time a message is received.
+Call `SubscribeToMessages` to trigger a nanoflow when a message is received from a device. `SubscribeToMessages` provides an option to specify a context object that will be passed to the callback nanoflow whenever a message is received.
 
 The callback nanoflow must have the following parameters:
 
-* `Device` (object)
+* `Device` (Object)
 * `Message` (String)
-* `Context object` (same as the name used when subscribing)
+* `Context Object` (same as the name used when subscribing)
 
 #### SubscribeToErrors
 
@@ -118,10 +120,10 @@ Call `SubscribeToErrors` to trigger a nanoflow on device connection errors.
 
 The callback nanoflow must have the following parameters:
 
-* `Device` (object)
+* `Device` (Object)
 * `ErrorMessage` (String)
 * `ErrorCode` (Integer)
-* `Context object` (same as the name used when subscribing)
+* `Context Object` (same as the name used when subscribing)
 
 #### Unsubscribe
 
@@ -133,4 +135,4 @@ Call `UnsubscribeByContext` to end all subscriptions related to a context object
 
 ## Error Logs
 
-Logs for the Workstation Management, Client, and Connector are available in case of issues. For more information about accessing the logs, see [Troubleshooting Mendix Workstation Client](/mendix-workstation/troubleshooting/).
+Log files are available for troubleshooting issues with Workstation Management, the Client, and the Connector. For more information about accessing logs, see [Troubleshooting Mendix Workstation Client](/mendix-workstation/troubleshooting/).

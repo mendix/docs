@@ -12,7 +12,8 @@ This document outlines the installation and basic configuration of the Mendix Wo
 
 ## Quick Start Guide 
 
-This guide will help you configure and test a minimum working version of the Mendix Workstation Client. By following these steps, you will:
+This guide helps you configure and test a minimum working version of the Mendix Workstation Client. By following these steps, you will complete the following:
+
 * Create a basic configuration within Workstation Management.
 * Set up a pair of virtual TCP/IP Client and Server devices for testing.
 * Install the Workstation Client on your computer.
@@ -20,7 +21,7 @@ This guide will help you configure and test a minimum working version of the Men
 
 ### Creating a Workspace and Station
 
-A *station* represents a workstation on the shopfloor. It can connect to one or more apps or devices. A *workspace* is a grouping of one or more stations. For example, a workspace may group together all the stations which belong to the same factory or factory line.
+A *station* represents a workstation on the shop floor. It can connect to one or more apps or devices. A *workspace* is a grouping of one or more stations. For example, a workspace may group together all the stations which belong to the same factory or factory line.
 
 1. Go to [Mendix Workstation Management](https://workstation.home.mendix.com/) and sign in with your Mendix account.
 2. In **Workspace Overview**, click **Create Workspace**.
@@ -39,7 +40,7 @@ A *station* represents a workstation on the shopfloor. It can connect to one or 
 
     {{< figure src="/attachments/workstation/wks-install4.png" class="no-border" >}}
 
-6. Optional: If you do not want Workstation Management to detect smart card readers, in **Station** view, set the **Detect Card Readers** toggle to **Off**.
+6. (Optional) To prevent Workstation Management from detecting smart card readers, set the **Detect Card Readers** toggle to **Off** in the **Station** view.
 
     {{< figure src="/attachments/workstation/wks-install16.png" class="no-border" >}}
 
@@ -51,7 +52,7 @@ The Workstation Client is a connector between the devices and your local PC. You
 
     {{< figure src="/attachments/workstation/wks-install5.png" class="no-border" >}}
 
-2. In the **Computer Registration** dialog, click **Download**. This will open the Mendix Marketplace page for the [Workstation Client Windows Installer](https://marketplace.mendix.com/link/component/247448). Alternatively, you can find the component on the Mendix Marketplace by searching for "Workstation Client". You can also find the [portable](https://marketplace.mendix.com/link/component/247456) and [Linux](https://marketplace.mendix.com/link/component/247459) version by searching the Marketplace or using the direct links provided. 
+2. In the **Computer Registration** dialog, click **Download**. This will open the Mendix Marketplace page for the [Workstation Client Windows Installer](https://marketplace.mendix.com/link/component/247448). Alternatively, you can find the component on the Mendix Marketplace by searching for "Workstation Client". The [portable](https://marketplace.mendix.com/link/component/247456) and [Linux](https://marketplace.mendix.com/link/component/247459) versions are also available by searching the Marketplace or using the direct links provided. 
 
     {{< figure src="/attachments/workstation/wks-install6.png" class="no-border" >}}
 
@@ -63,11 +64,11 @@ The Workstation Client is a connector between the devices and your local PC. You
         * If you do not have administrator rights for your computer, download the [Workstation Client Portable](https://marketplace.mendix.com/link/component/247456) instead. As a best practice, create a new folder (e.g., within your Documents directory) for the portable Client, and then run the .exe file from there.
     
     * For Linux:
-        * Download the [Linux](https://marketplace.mendix.com/link/component/247459) version of the Client
-        * Install: `sudo apt install ./workstation_X.X.X_arm64.deb` (replace *X.X.X* with the actual version number of the downloaded .deb package).
-        * Install card reader dependencies: `sudo apt install pcscd libcap2-bin`
+        * Download the [Linux](https://marketplace.mendix.com/link/component/247459) version of the Client.
+        * Run the following command to install: `sudo apt install ./workstation_X.X.X_arm64.deb` (replace *X.X.X* with the actual version number of the downloaded .deb package).
+        * Install card reader dependencies with: `sudo apt install pcscd libcap2-bin`
         * Enable card reader dependencies: `sudo systemctl enable pcscd --now`
-        * Start the application from the applications menu > Accessories > Mendix Workstation
+        * Start the application from the applications menu > Accessories > Mendix Workstation.<>
         * Bluetooth support requires starting the application with `CAP_NET_RAW` privilege (for raw network packet access): `sudo capsh --user=$(whoami) --iab="^cap_net_raw" -- -c "'/opt/Mendix Workstation/Mendix Workstation'"`
     
 ### Registering your Computer
@@ -164,7 +165,7 @@ Navigate to the **Settings** page in a workspace to configure settings that are 
 
 #### Log Settings
 
-The Workstation Client always stores logs to the file system it is installed on (c.f. [here](/mendix-workstation/troubleshooting/#workstation-client)). No logs are send to the Workstation Management. However, you can configure the log level and retention policy of all the Workstation Clients that are registered to stations in the workspace.
+The Workstation Client always stores logs to the file system it is installed on (c.f. [Troubleshooting - Workstation Client](/mendix-workstation/troubleshooting/#workstation-client)). No logs are send to the Workstation Management. However, you can configure the log level and retention policy of all the Workstation Clients that are registered to stations in the workspace.
 
 ##### Log Level
 
@@ -198,7 +199,7 @@ Invite and manage members of a Workspace on the Team page. Only users who have s
 * Computer admin - Computer admins can view configurations without editing them. They can also register computers to stations.
 * View only - This role grants access to viewing the configuration but cannot perform any actions.
 
-All members but the Workspace owner an leave a workspace. 
+All members but the Workspace owner can leave a workspace. 
 
 
 ### Advanced Station Settings
@@ -223,11 +224,15 @@ Card reader devices cannot be configured as separate devices in the **Devices** 
 
 Auto detecting card readers is enabled by default. This setting can be configured on a **Station** page by toggling **Detect Card Readers**. 
 
+Refer to [Message Syntax - Card Readers](mendix-workstation/device-syntax/#card-readers) for a more in-depth explaination how to communicate with card readers.
+
 ##### File Device
+
+This section explains the configuration of a file device. Refer to [Message Syntax - File Device](mendix-workstation/device-syntax/#file-device) for a more in-depth explaination how to communicate with file devices.
 
 ###### Allowed Folder Configuration
 
-The *Allowed Folder* feature supports flexible path configuration through environment variables, providing cross-platform compatibility for both Windows and Unix-based systems. This functionality allows administrators to define the allowed folder where the Workstation Client can perform actions.
+The *Allowed Folder* feature supports flexible path configuration through environment variables, providing cross-platform compatibility for both Windows and Unix-based systems. This functionality allows administrators to define the allowed folder where the Workstation Client can perform actions. 
 
 ###### Environment Variable Support
 
@@ -252,4 +257,4 @@ The administrator can choose to allow either one or a combination of the followi
 
 Simply add Bluetooth LE (BLE) devices that use the ATT protocol by entering the exact device name as displayed in your OS' device manager 
 
-
+Refer to [Message Syntax - Bluetooth](mendix-workstation/device-syntax/#bluetooth) for a more in-depth explaination how to communicate with bluetooth devices.

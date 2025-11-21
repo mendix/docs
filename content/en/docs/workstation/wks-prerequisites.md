@@ -8,15 +8,15 @@ weight: 10
 
 ## Introduction
 
-This document presents the system requirements for Mendix Workstation Client.
+This document describes the system requirements for Mendix Workstation Client.
 
 ## System Requirements
 
-* Operating System - Windows 10 or Windows 11 (64-bit);  Linux ARM64
-* Memory - Minimum 4 GB RAM (8 GB recommended for optimal performance)
-* Disk Space - 400 MB of free disk space for installation
+* **Operating System** – Windows 10 or Windows 11 (64-bit); Linux ARM64
+* **Memory** – Minimum 4 GB RAM (8 GB recommended for optimal performance)
+* **Disk Space** – 400 MB free space for installation
 
- Mendix Workstation Client can be downloaded from the Mendix Marketplace:
+Mendix Workstation Client can be downloaded from the Mendix Marketplace:
 
 * [Microsoft Windows (global installer)](https://marketplace.mendix.com/link/component/247448)
 * [Microsoft Windows (portable)](https://marketplace.mendix.com/link/component/247456)
@@ -25,44 +25,44 @@ This document presents the system requirements for Mendix Workstation Client.
 ## Access Requirements
 
 * A Mendix account
-* Access to the Mendix Workstation Management for configuration
+* Access to Mendix Workstation Management for configuration
 
 ## Network Configuration
 
 Before implementing Mendix Workstation Client, perform the following steps:
 
 1. Ensure that the Workstation user can access the Mendix Cloud.
-2. Open the required ports for communication (for example, TCP 443 for HTTPS).
-3. Add the Workstation Client to the Allow list for any firewall or antivirus software, if applicable.
+2. Open the required ports for communication (such as TCP 443 for HTTPS).
+3. Add the Workstation Client to the Allow list for any firewall or antivirus software, as needed.
 
 ### Custom Certificates and Proxy Settings
 
-Note that the Workstation Client uses the operating system's certificates and proxy environment variables to establish a connection with Workstation Management. In most controlled corporate environemnts these settings are preconfigured on employee computers by their IT. 
+The Workstation Client uses the operating system's certificates and proxy environment variables to establish a connection with Workstation Management. In most controlled corporate environments, these settings are preconfigured on employee computers by IT departments.
 
-To use a custom proxy configuration, you must start the Workstation Client from the command line and set the environment variables as described [here](https://github.com/nodejs/undici/blob/main/docs/docs/api/EnvHttpProxyAgent.md#class-envhttpproxyagent). For example from the Windows Command Prompt:
+To use a custom proxy configuration, you must start the Workstation Client from the command line and set the environment variables as described [here](https://github.com/nodejs/undici/blob/main/docs/docs/api/EnvHttpProxyAgent.md#class-envhttpproxyagent). For example, from the Windows Command Prompt:
 ```
 set HTTPS_PROXY=[PROXY_IP_ADDRESS] && "C:\Program Files\Mendix Workstation\Mendix Workstation.exe"
 ```
 
 ## Device Connectivity
 
-Before connecting devices with Mendix Workstation Client perform the following steps:
+Before connecting devices to Mendix Workstation Client, complete the following steps:
 
-* Make sure the devices are correctly set up and connected to your computer.
-* Verify that the device driver is installed and up to date.
-* Take a note of the connection parameters used by the devices:
+* Ensure the devices are correctly set up and connected to your computer.
+* Verify that device drivers are installed and up to date.
+* Note the connection parameters used by the devices:
 
-    * For Serial Port connection - baud rate, data bits, parity and stop bits, flow control.
-    * For TCP/IP connection - IP address and port.
+    * For Serial Port connection – baud rate, data bits, parity and stop bits, flow control
+    * For TCP/IP connection – IP address and port
 
-* Obtain the manual and technical documentation for your devices, including chapters describing the communication protocol and how to configure it.
-* Test the connection and protocol on your operating system using the tool recommended in the device technical documentation or using common tool such as PuTTY.
-    * For Serial Port connection - Open the device and test device basic commands.
-    * For TCP/IP connection - Ping the device to make sure that it is reachable on the network and not blocked by a firewall, and then test the basic device commands.
+* Obtain manuals and technical documentation for your devices, including chapters describing the communication protocol and configuration instructions.
+* Test the connection and protocol on your operating system using the tool recommended in the device technical documentation or using a common tool such as PuTTY:
+    * For Serial Port connection – Open the device and test basic device commands
+    * For TCP/IP connection – Ping the device to verify it is reachable on the network and not blocked by a firewall, then test basic device commands
 
-## Best Practices for Working with Mendix Workstation Client
+## Best Practices
 
-As you begin your work with Mendix Workstation Client, keep in mind the following best practices to help you.
+When working with Mendix Workstation Client, follow these best practices.
 
 ### Security Recommendations
 

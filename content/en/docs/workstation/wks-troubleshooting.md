@@ -8,13 +8,13 @@ weight: 40
 
 ## Introduction
 
-If you encounter any issues with your Workstation Management, Connector, or Client, use the following troubleshooting tips to help you solve them.
+If you encounter issues with Workstation Management, the Connector, or the Client, use the following troubleshooting steps to resolve them.
 
 ## Workstation Management
 
 ### Station Status of Unlinked Workstation Client Is Still "Computer Registered"
 
-This issue might occur if your Workstation Client could not establish a connection to the Workstation Management, for example, because the computer was not connected to a network. 
+This issue may occur if the Workstation Client cannot establish a connection to Workstation Management, such as when the computer is not connected to a network. 
 
 #### Solution
 
@@ -22,19 +22,26 @@ Manually unregister the station in Workstation Management.
 
 ### Workspace Owner Account Deactivated 
 
-The Workspace's owner account has been deactivated and the owner did not transfer the ownership to another Workspace member.
+The workspace owner's account has been deactivated, and the owner did not transfer ownership to another workspace member.
 
 #### Solution
 
-Raise a ticket to support to transfer Workspace ownership.
+Contact Mendix Support to transfer workspace ownership.
 
 ## Workstation Client
 
-The Client retains logs for the last eight days locally on your computer. You can access the logs by clicking the **Logs** button on the Client UI, and then optionally selecting the level of logs that you want to see. Opening the client's console through the browser developer tools (**Ctrl + Shift + I**) can also provide additional information about encountered errors in the UI of the Client.
+By default, the Client retains logs of up to 10 MB for the past seven days locally on your computer. Access logs by clicking the **Logs** button on the Client UI, then optionally selecting the level of logs you want to see. Opening the Client's console through the browser developer tools (**Ctrl + Shift + I**) can also provide additional information about encountered errors in the UI of the Client.
 
-You can also find log files by day in the Client's app data folder. To do so on Windows, press **Win + R**. If you installed the Client using the installer for all users, enter `%ProgramData%\Mendix Workstation\logs`. If you are using the portable version, enter `%AppData%\Mendix Workstation\logs`. On Linux the Mendix *Workstation/logs* folder is either located at `$XDG_CONFIG_HOME` or `~/.config`.
+Log files are also available by day in the Client's app data folder. On Windows, press **Win + R** and enter:
 
-Alternatively, you can start the Workstation Client from Powershell to view logs: `start "C:\Program Files\Mendix Workstation\Mendix Workstation.exe" -ArgumentList "--log-level=debug" -wait`.
+* If you installed the Client using the installer for all users: `%ProgramData%\Mendix Workstation\logs`
+* If you are using the portable version: `%AppData%\Mendix Workstation\logs`
+
+On Linux, the *Mendix Workstation/logs* folder is located at either `$XDG_CONFIG_HOME` or `~/.config`.
+
+**Live logs** are available in two ways:
+* Start the Workstation Client. Click the three-dot icon in the top tight, then click **Logs**. Debug level logs are only available in *Developer Mode*
+* Start the Workstation Client from PowerShell: `start "C:\Program Files\Mendix Workstation\Mendix Workstation.exe" -ArgumentList "--log-level=debug" -wait`.
 
 ### Registration Token Could Not Be Parsed
 
@@ -42,11 +49,11 @@ The Client shows an error like the following: *Registration token could not be p
 
 #### Cause 
 
-You entered a registration token with an invalid format. 
+The registration token has an invalid format. 
 
 #### Solution
 
-Ensure that you copied and pasted the token as displayed by the management and that you did not enter additional characters by accident. Create a new registration token if the issue persists. 
+Ensure you copied and pasted the token exactly as displayed in Workstation Management without any additional characters. Create a new registration token if the issue persists. 
 
 ### Registration Token Denied by Workstation Management
 
@@ -54,11 +61,15 @@ The Client shows an error like the following: *Register token denied by Workstat
 
 #### Cause 
 
-The registration token is no longer valid because it has either expired after one hour, the token was recreated in the Management application (using the **Refresh** button or reopening the registration window) or the token has already been used by another Workstation Client.
+The registration token is no longer valid. This can occur if:
+
+* The token expired after one hour
+* The token was recreated in Workstation Management (using the **Refresh** button or reopening the registration window)
+* The token has already been used by another Workstation Client
 
 #### Solution
 
-If the status of the Station displayed in the Management is still *No computer registered*, regenerate the token and try again. Otherwise, check if the correct computer and Client is registered to that station and unregister it if not.  
+If the station status in Workstation Management is still *No computer registered*, regenerate the token and try again. Otherwise, verify the correct computer and Client are registered to that station and unregister if not.  
 
 ### Access Denied by Workstation Management
 
@@ -66,11 +77,11 @@ The Client shows an error like the following: *Station could not be synchronized
 
 #### Cause
 
-This error occurs if the credentials provided by the Workstation Client are no longer valid, for example, if it got deregistered in the Management or if the APIKey is expired.
+This error occurs when the credentials provided by the Workstation Client are no longer valid, such as when it was deregistered in Workstation Management or the API key has expired.
 
 #### Solution
 
-You can continue using the Workstation Client with the current configuration, but it will no longer receive updates. To fix this, press **Unlink** in the Workstation Client and then re-register the workstation.
+You can continue using the Workstation Client with the current configuration, but it will no longer receive updates. To resolve this, click **Unlink** in the Workstation Client, then re-register the workstation.
 
 ### HTTPError: Request failed with status code 503 Service Temporarily Unavailable
 
@@ -78,11 +89,11 @@ The Client shows an error like the following: *Station could not be synchronized
 
 #### Cause
 
-Workstation Management is temporarly offline, most likely due to maintenance. 
+Workstation Management is temporarily offline, most likely due to maintenance. 
 
 #### Solution 
 
-Check out the [Mendix Status Page](https://status.mendix.com/) to see if there is a scheduled maintenance for the Workstation Management. If there is no maintenance message and the issue perists after a few minutes, report an incident via the status page.
+Check out the [Mendix Status Page](https://status.mendix.com/) to see if there is a scheduled maintenance for the Workstation Management. If there is no maintenance message and the issue persists after a few minutes, report an incident via the status page.
 
 ### TimeoutError: Request timed out
 
@@ -90,11 +101,11 @@ The Client shows an error like the following: *Station could not be synchronized
 
 #### Cause
 
-The Client request to the Workstation Management is not forwarded to the Workstation Management server and times out. This issue might occur if you network traffic is routed over a proxy server as common in protected corporate IT environments and if the proxy server is offline.  
+The Client request to Workstation Management is not forwarded to the Workstation Management server and times out. This issue may occur if your network traffic is routed through a proxy server, as is common in protected corporate IT environments, and the proxy server is offline.  
 
 #### Solution 
 
-Validate if the network traffic of your computer is routed via proxy server and configure your computer's proxy settings accordingly, c.f. [Network Configuration](/mendix-workstation/prerequisites/#network-configuration).
+Verify whether your computer's network traffic is routed through a proxy server and configure your proxy settings accordingly. See [Network Configuration](/mendix-workstation/prerequisites/#network-configuration).
 
 ### Workstation Management URL cannot be resolved
 
@@ -102,29 +113,29 @@ The Client shows an error like the following: *Station could not be synchronized
 
 #### Cause
 
-The Client cannot resolve the URL to the Workstation Management. There might be several reasons for this. Most commonly, the machine the Workstation Client is running on has no connection to the internet. 
+The Client cannot resolve the URL to Workstation Management. This can have several causes, most commonly when the machine running the Workstation Client has no internet connection. 
 
 #### Solution 
 
-As a first step, check that you have a working connection to the internet before diving deeper. Next, check if you can reach the [Workstation Management](https://workstation.home.mendix.com/) from your browser. If your browser cannot resolve that address, there might be an issue with your DNS Server or configuration. On Windows, validate your DNS settings of your Ethernet or Wireless LAN adapter using the command prompt and typing in `ipconfig`. Entering the command `nslookup www.mendix.com` gives you further information about the IP address your DNS server resolved the Mendix domain. 
+First, verify you have a working internet connection. Then verify you can access [Workstation Management](https://workstation.home.mendix.com/) from your browser. If your browser cannot resolve that address, there may be an issue with your DNS server or configuration. On Windows, verify your DNS settings for your Ethernet or wireless LAN adapter using the command prompt and entering `ipconfig`. The command `nslookup www.mendix.com` provides further information about the IP address your DNS server resolved for the Mendix domain. 
 
 ## Workstation Connector
 
-Logs for the Connector can be found in Studio Pro's console during local development or within the environment logs of your running environment. Since the Connector performs most operations client-sided in nanoflows, you can also inspect the local logs that can be found in the browser console.
+Connector logs are available in Studio Pro's console during local development or in the environment logs of your running environment. Since the Connector performs most operations client-side in nanoflows, you can also inspect local logs in the browser console.
 
 ### Workstation Client Did Not Respond Within 3 Seconds. Connection Failed.
 
-If the **StationConnector.GetStation** nanoflow fails to connect to your Workstation Client, this error log message is visible in the browser console and in the Studio Pro's Console on the **Client_Nanoflow** log node.  
+If the **StationConnector.GetStation** nanoflow fails to connect to the Workstation Client, this error appears in the browser console and in Studio Pro's Console on the **Client_Nanoflow** log node.  
 
 #### Cause
 
-The connection between the Client and the Connector cannot be established either because the Workstation Client cannot be found on the local computer or the current application is not allowed to establish a connection. 
+The connection between the Client and Connector cannot be established. This occurs either because the Workstation Client cannot be found on the local computer, or because the current application is not allowed to establish a connection. 
 
 #### Solution
 
-* Verify that the Workstation Client is running and registered on the same computer as the browser that is trying to establish a connection via the StationConnector.
-* Verify that the Client is registered in the correct Workspace by comparing the Workspace name and ID displayed in the Client UI with the Workspace in the Management. 
-* Verify that the application that is attempting a connection is properly configured as an allowed app in the Workspace and on the Station. To do so check that your application, for example, running on `http://localhost:8080`, is added in the **Apps** section of your Workspace. If the app is added, check that the public key of the configured workspace app is up to date with the public key displayed in your app that is using the connector. If not, update the public key value of the workspace app with the latest value displayed in the app. Next, check that the app is also enabled as an allowed app in the Station configuration by going to the respective Station detail page in that workspace. Always press the **Refresh** button in the Workstation Client after applying any changes in the Management.  
+* Verify the Workstation Client is running and registered on the same computer as the browser attempting to connect via the StationConnector.
+* Verify the Client is registered in the correct workspace by comparing the workspace name and ID displayed in the Client UI with the workspace in Workstation Management.
+* Verify the application attempting to connect is properly configured as an allowed app in the workspace and on the station. To do so, check that your application (such as `http://localhost:8080`) is added in the **Apps** section of your workspace. If the app is added, verify the public key of the configured workspace app matches the public key displayed in your app using the Connector. If not, update the public key value of the workspace app with the latest value displayed in the app. Next, verify the app is also enabled as an allowed app in the station configuration by navigating to the respective station detail page in that workspace. Always click the **Refresh** button in the Workstation Client after applying any changes in Workstation Management.  
 
 ### The Client Requested a Session for a Time That Is Ahead of the Server
 
@@ -132,20 +143,20 @@ This is a warning log for the Mendix runtime on the **StationConnector - GetWebs
 
 #### Cause 
 
-For security reasons, the Connector only allows the time of the computer running the Workstation Client to be 24 hours behind the Mendix runtime server that hosts the app before establishing a session. 
+For security reasons, the Connector only allows establishing a session when the computer running the Workstation Client has a time within 24 hours of the Mendix runtime server hosting the app. 
 
 #### Solution
 
-Change the time of the computer running the Workstation Client to be within 24 hours of the Mendix runtime server. If that is not an option, you can customize this yourself in the **StationConnector.GetWebsocketsSession** microflow, but must maintain this setting after updating the module to a newer version.
+Set the time on the computer running the Workstation Client to within 24 hours of the Mendix runtime server. If this is not possible, you can customize this behavior in the **StationConnector.GetWebsocketsSession** microflow, but you must maintain this customization when updating the module to a newer version.
 
 ### Context Entity Is Not Updated After Sending a Message
 
-The Context Entity on your page is not getting updated after sending a message. More specifically, modifying a context entity shortly after sending a message for the first time does not always work.
+The context entity on your page is not updated after sending a message. Specifically, modifying a context entity shortly after sending a message for the first time does not always work.
 
 #### Cause
 
-Sending a message for the first time sets the Connected state to true and triggers a commit on the device. This in turn refreshes the device and all data sources that are nested within a device data source. Some of these data sources may create a new blank entity instead of showing the updated entity. 
+Sending a message for the first time sets the **Connected** state to **true** and triggers a commit on the device. This refreshes the device and all data sources nested within a device data source. Some of these data sources may create a new blank entity instead of displaying the updated entity. 
 
 #### Solution
 
-Make sure that all data sources nested within a device data source follow a Singleton (also: GetCreate) pattern, where an entity is created if it does not exist and retrieved if it does.
+Ensure all data sources nested within a device data source follow a Singleton (also known as GetCreate) pattern, where an entity is created if it does not exist or retrieved if it does.

@@ -80,9 +80,9 @@ For more information about the requirements for other releases, see the releases
 
 3D Viewer is a **premium** Siemens product and requires a valid **purchase and commercial license** for production use.
 
-- You can use 3D Viewer **without a license** in your local development environment with [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro), for more details see [Run Locally or Preview](https://docs.mendix.com/deployment/#run-locally-or-preview).
+- You can use 3D Viewer **without a license** in your local development environment with [Mendix Studio Pro](/releasenotes/studio-pro/), for more details see [Run Locally or Preview](/deployment/#run-locally-or-preview/).
 
-- However, to deploy your application to **[Mendix Cloud](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy/)**, **[Private Cloud](https://www.mendix.com/evaluation-guide/deployment/private-cloud/)**, or **[On-Premises](https://docs.mendix.com/developerportal/deploy/on-premises-design/)**, **a license is required**.
+- However, to deploy your application to **[Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)**, **Private Cloud**, or **[On-Premises](/developerportal/deploy/on-premises-design/)**, **a license is required**.
 
 To request a **trial license token**, click the **Contact Us** button on the [3D Viewer Marketplace page](https://marketplace.mendix.com/link/component/118345) or send d an email to MX3DViewerHelp.sisw@siemens.com.
 
@@ -335,7 +335,7 @@ Before you deploy your app, configure the app **Constants** in the deployment pa
 
 {{< figure src="/attachments/partners/siemens/3d-viewer/licensetoken-cloudportal.jpg" alt="licensetoken-cloudportal" class="no-border" >}}
 
-If you have already deployed your app, change the existing **LicenseToken** constant value on the **[Model Options](https://docs.mendix.com/developerportal/deploy/environments-details/#model-options)** tab and restart the app.
+If you have already deployed your app, change the existing **LicenseToken** constant value on the **[Model Options](/developerportal/deploy/environments-details/#model-options)** tab and restart the app.
 
 {{< figure src="/attachments/partners/siemens/3d-viewer/licensetoken-envdetails.jpg" alt="licensetoken-envdetails" class="no-border" >}}
 

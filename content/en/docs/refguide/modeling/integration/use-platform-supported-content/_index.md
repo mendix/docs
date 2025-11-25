@@ -4,6 +4,7 @@ url: /refguide/use-platform-supported-content/
 aliases: 
    - /howto/integration/use-extensions/
    - /refguide/use-extensions/
+weight: 80
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team (buildpack) know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

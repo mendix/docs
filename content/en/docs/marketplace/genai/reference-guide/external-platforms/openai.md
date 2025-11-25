@@ -13,29 +13,7 @@ aliases:
 
 The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) allows you to integrate generative AI into your Mendix app. It is compatible with [OpenAI's platform](https://platform.openai.com/) as well as [Azure's OpenAI service](https://oai.azure.com/). 
 
-The current scope covers text generation use cases based on the [OpenAI Chat Completions API](https://platform.openai.com/docs/api-reference/chat), image generation use cases based on the [Image Generations API](https://platform.openai.com/docs/api-reference/images), and embedding use cases based on the [Embeddings API](https://platform.openai.com/docs/api-reference/embeddings). Furthermore, indexes via [Azure AI Search](https://learn.microsoft.com/en-us/azure/search/) can be used for knowledge base retrieval.
-
-Mendix provides dual-platform support for both OpenAI and Azure OpenAI.
-
-### Typical Use Cases {#use-cases}
-
-The OpenAI Connector is commonly used for text generation, image generation, and embeddings. These use cases are described in more detail below.
-
-#### Text Generation {#use-cases-text}
-
-* Develop interactive AI chatbots and virtual assistants that can carry out conversations in a natural and engaging manner. 
-* Use OpenAI’s large language models (LLMs) for text comprehension and analysis use cases such as summarization, synthesis, and answering questions about large amounts of text.
-* Fine-tune the OpenAI models on a specific task or domain by training them on custom data to improve their performance. 
-* Integrate more easily with OpenAI’s platform. By providing text generation models, this allows you to build applications with the following features:
-    * Draft documents 
-    * Write computer code 
-    * Answer questions about a knowledge base 
-    * Analyze texts
-    * Give software a natural language interface 
-    * Tutor in a range of subjects 
-    * Translate languages 
-    * Simulate characters for games
-    * Image to text
+### Features {#features}
 
 OpenAI provides market-leading LLM capabilities with GPT-4:
 
@@ -43,38 +21,15 @@ OpenAI provides market-leading LLM capabilities with GPT-4:
 * Creativity – Generate, edit, and iterate with end-users on creative and technical writing tasks, such as composing songs, writing screenplays, or learning an end-user’s writing style.
 * Longer context – GPT-4 can handle over 25,000 words of text, allowing for use cases like long-form content creation, extended conversations, and document search and analysis. 
 
-#### Image Generation {#use-cases-images}
-
-Generate one or more completely new, original images and art from a text description. Powered by the OpenAI DALL-E models, the connector enables developers to generate these images by combining concepts, attributes, and styles.
-
-#### Embeddings {#use-cases-embeddings}
-
-Convert strings into vector embeddings for various purposes based on the relatedness of texts.
-
-Embeddings are commonly used for the following:
-
-* Search 
-* Clustering 
-* Recommendations 
-* Anomaly detection 
-* Diversity measurement 
-* Classification 
-
-Combine embeddings with text generation capabilities and leverage specific sources of information to create a smart chat functionality tailored to your own knowledge base.
-
-{{% alert color="info" %}}
-For more information on how to set up a vector database, see [Retrieval Augmented Generation (RAG)](/appstore/modules/genai/rag/). Also, check out the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) from the Marketplace for an example implementation.
-{{% /alert %}}
-
-#### Knowledge Base
-
-By integrating Azure AI Search, the OpenAI Connector allows for knowledge base retrieval from Azure datsources. The most common use case is retrieval augmented generation (RAG) to retrieve relevant knowledge from the knowledge base, incorporating it into a prompt, and sending it to the model to generate a response.
-
-### Features {#features}
-
 Mendix provides dual-platform support for both [OpenAI](https://platform.openai.com/) and [Azure OpenAI](https://oai.azure.com/). 
 
 With the current version, Mendix supports the Chat Completions API for [text generation](https://platform.openai.com/docs/guides/text-generation), the Image Generations API for [images](https://platform.openai.com/docs/guides/images), the Embeddings API for [vector embeddings](https://platform.openai.com/docs/guides/embeddings/what-are-embeddings), and indexes via [Azure AI Search](https://learn.microsoft.com/en-us/azure/search/) for knowledge base retrieval.
+
+Typical use cases for generative AI are described in the [Typical LLM Use Cases](/appstore/modules/genai/get-started/#llm-use-cases).
+
+#### Knowledge Base
+
+By integrating Azure AI Search, the OpenAI Connector enables knowledge base retrieval from Azure data sources. For Retrieval Augmented Generation (RAG) scenarios, chat completions with (Azure) OpenAI can also be combined with knowledge bases by other provider such as Mendix Cloud.
 
 ### Prerequisites {#prerequisites}
 
@@ -228,7 +183,7 @@ OpenAI does not directly connect to the Azure AI Search resource. The model retu
 
 This functionality is part of the implementation executed by the GenAI Commons Chat Completions operations mentioned earlier. As a developer, you need to make the system aware of your indexes and their purpose by registering them with the request. This is done using the GenAI Commons operation [Tools: Add Knowledge Base](/appstore/modules/genai/genai-for-mx/commons/#add-knowledge-base-to-request), which must be called once per index before passing the request to the Chat Completions operation.
 
-Note that the retrieval process is independent of the model provider and can be used with any model that supports function calling.
+Note that the retrieval process is independent of the model provider and can be used with any model that supports function calling, as it relies on the generalized `GenAICommons.DeyploedKnowledgeBase`entity.
 
 #### Vision {#chatcompletions-vision}
 

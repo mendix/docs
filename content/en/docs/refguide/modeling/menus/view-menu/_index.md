@@ -70,8 +70,6 @@ This pane has two levels, so when you zoom into a changed document, you can revi
 
 ### History {#history-pane}
 
-### History
-
 The non-blocking History pane shows commits in your repository and allows you to search and navigate to modified documents without closing the history view.
 
 ### Connector {#connector}

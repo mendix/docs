@@ -10,6 +10,38 @@ cascade:
 
 These release notes cover changes made to the [Mendix Workstation](/mendix-workstation/).
 
+## 3.1.0
+
+#### Release date: November 7, 2025
+
+### Workstation Management
+
+### New Features
+
+#### Copying Station Configuration
+
+You can now copy the station configuration to the clipboard, or download it to a file. When creating a new station, it can be generated from either the copied configuration, or the downloaded file. All properties of the copied station are duplicated, including associated apps, station groups, and device classes. The registered computer is not copied, and newly created stations are set to **No computer registered**.
+
+#### Fixes
+
+* We have fixed an issue in Workstation Management where the side panel for device editing would not open or required a second click to open, particularly noticeable on slow networks.
+
+#### Known Bugs and Limitations
+
+* When creating a station from a copy, the associated applications are created even if the user does not have the necessary workspace permission to create apps.
+
+### Workstation Client
+
+#### Improvements
+
+* We have made system logs more readable and concise, simplifying the process of monitoring activity and troubleshooting any potential issues.
+
+#### Fixes
+
+* Computer registration: We fixed an issue where the Workstation Client could not connect to Workstation Management over a network connection that required a certificate. With this new release, the Workstation Client now uses the client operating system's certificates to establish a connection with Workstation Management.
+* Smartcard reader interface: We fixed an issue in the Workstation Client where the client would freeze if **Detect card readers** was enabled and the operating system's smartcard service was stopped.
+* Bluetooth LE interface: We fixed issues in the Workstation Client and Connector when subscribing to Bluetooth properties. Wait and sleep times between subscriptions are no longer required, and multiple series of subscriptions and unsubscriptions are supported.
+
 ## 3.0.0
 
 ### Release date: September 25, 2025

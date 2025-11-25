@@ -5,6 +5,18 @@ weight: 10
 description: "Native Template 15"
 ---
 
+## 15.4.4 {#1544}
+
+**Release date: November 10, 2025**
+
+* We updated the version of @mendix/native to 10.3.1 to update op-sqlite version to 15.0.7.
+
+## 15.4.3 {#1543}
+
+**Release date: November 5, 2025**
+
+* We updated the version of @mendix/native to 10.3.0 to fix the `components.json` errors.
+
 ## 15.4.2 {#1542}
 
 **Release date: October 27, 2025**
@@ -103,7 +115,7 @@ description: "Native Template 15"
 
 ### Improvements
 
-* We upgraded our Database Backend Library to the most recent version. This update brings better performance on database operations and performance improvements. 
+* We upgraded our Database Backend Library to the most recent version. This update brings better performance on database operations and performance improvements.
 
 ### Library Updates and Improvements
 

@@ -25,6 +25,10 @@ Operators and functions in OQL use expressions as inputs to perform mathematical
 
 This document details the use and syntax of expressions in an OQL query.
 
+The domain model used in the various examples is shown below:
+
+{{< figure src="/attachments/refguide/modeling/domain-model/oql/oql-expression-syntax-domain-model.png" >}}
+
 ## Data Types
 
 OQL supports a set of data types that differ slightly from [Mendix data types](/refguide/data-types/). The supported data types are:
@@ -544,7 +548,7 @@ Where `expression` is an expression of any datatype.
 The `IS` operator can be used to filter out rows with values that are NULL. For example:
 
 ```sql
-	SELECT Revenue, Cost FROM Sales.Finance WHERE Revenue IS NOT NULL 
+	SELECT Revenue, Cost FROM Sales.Finances WHERE Revenue IS NOT NULL 
 ```
 
 | Revenue | Cost |
@@ -672,7 +676,7 @@ This does not apply to the `=` and `!=` operators. Handling of `NULL` in [other 
 
 In some databases, using `STRING` type variables in place of numeric, `DATETIME` or `BOOLEAN` values in operators and functions that explicitly require those types, causes the database to perform an implicit conversion. A common example would be the use of a `STRING` representation of a `DATETIME` variable inside a `DATEPART` function. Mendix recommends that you always [cast](#cast) strings to the exact type the operator or functions.
 
-## Functions
+## Functions {#functions}
 
 These are the currently supported functions:
 
@@ -803,10 +807,10 @@ COALESCE ( expression [ ,...n ] )
 
 #### Examples {#coalesce-expression-examples}
 
-Assume entity `Sales.Customer` entity now has some `NULL` values:
+Assume entity `Sales.CustomerInfo` entity now has some `NULL` values:
 
 ```sql
-SELECT * FROM Sales.Customer
+SELECT * FROM Sales.CustomerInfo
 ```
 
 | ID | LastName | FirstName | Age  | TotalOrderAmount |
@@ -817,7 +821,7 @@ SELECT * FROM Sales.Customer
 Selecting a non-null name for a customer, ignoring if it is the first name or last name, can be done with `COALESCE`:
 
 ```sql
-SELECT COALESCE(LastName, FirstName) AS Name FROM Sales.Customer
+SELECT COALESCE(LastName, FirstName) AS Name FROM Sales.CustomerInfo
 ```
 
 | Name |                                                         
@@ -831,7 +835,7 @@ If all arguments have different numeric types, the data type of the expression r
 SELECT
 	COALESCE(Age, TotalOrderAmount) AS AgeOrAmount,
 	COALESCE(TotalOrderAmount, Age) AS AmountOrAge,
-FROM Sales.Customer
+FROM Sales.CustomerInfo
 ```
 
 | AgeOrAmount (type: Decimal) | AmountOrAge (type: Decimal²) |
@@ -1168,7 +1172,7 @@ For example, a space delimited list can be converted to one with commas to be us
 SELECT * FROM Sales.Raw
 ```
 
-| ID | Import            |                                                         
+| ID | RawImport            |                                                         
 |----|-------------------|
 | -  | "6 D10 machinery" |
 | -  | "1 A15 tools"     |
@@ -1176,10 +1180,10 @@ SELECT * FROM Sales.Raw
 The text can be converted with `REPLACE` as follows:
 
 ```sql
-SELECT REPLACE(Import, ' ', ',') FROM Sales.Raw
+SELECT REPLACE(RawImport, ' ', ',') FROM Sales.Raw
 ```
 
-| Import            |                                                         
+| RawImport            |                                                         
 |-------------------|
 | "6,D10,machinery" |
 | "1,A15,tools"     |

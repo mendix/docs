@@ -13,30 +13,38 @@ This feature is in Public Beta. For more information, see [Release Status](/rele
 
 ## Introduction
 
-The **Approval Requests** page allows you to manage all approval requests created for your company. 
+The **Approval Requests** page allows you to manage all approval requests created for your company.     
+It is made up of the **Active Requests** and **Resolved Requests** tabs.
 
-## Request Details
+## Active Requests
 
-These are the details shown for each request:
+This tab displays all requests that have not yet been acted upon, with the following details for each request:
 
-* **Submitted On** – The date when the request was submitted.
-* **App Name** – The name of the app for which the request is submitted.
-* **Environment** – The app environment for which the request is submitted.
-* **Request Type** – The type of request being submitted.    
-    The only available option is **Plan Upgrade**.
-* **Production** – This column displays a green checkmark if the environment for which the request is submitted is production.
-* **Current Plan** – The plan that the environment is currently on.
-* **Requested Plan** – The plan that the environment should be moved to.
-* **Status** – The current status of the request, which can be one of the following:
+* **Request ID** – The unique identification code of the request.
+* **Request Type** – The type of request being submitted. 
+* **Requester** – The name of the person who made the request.
+* **Requested Date** – The date when the request was submitted.
+* **Actions** – Allows you to **Reject** or **Approve** the request.    
+    Click the **Details** button next to the request to access further details.
 
-    * **Pending Approval**
+## Resolved Requests
+
+This tab displays all requests that have been acted upon, with the following details for each request:
+
+* **Request ID** – The unique identification code of the request.
+* **Request Type** – The type of request being submitted.
+* **Requester** – The name of the person who made the request.
+* **Requested Date** – The date when the request was submitted.
+* **Status** – The status of the request, which can be one of the following:
+
     * **Approved**
     * **Canceled**
     * **Rejected**
     * **Expired**
-* **Action** – Click the **Details** button next to the request to access further details, such as the cost of the plan change and the reason for the request.
 
-You can filter requests by status and type.
+* **Reviewer** – The name of the person who reviewed and approved, canceled, or rejected the request.
+* **Resolved Date** – The date when the request was acted upon, and its status was changed.
+* **Action** – Click the **Details** button next to the request to access further details.
 
 ## Approving a Request
 

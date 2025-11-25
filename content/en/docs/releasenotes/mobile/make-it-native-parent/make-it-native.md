@@ -8,6 +8,19 @@ description: "These release notes showcase each release of the iOS and Android M
 
 Depending on the Mendix version your app is developed in and the device you want to run on, you need a different Make It Native app. For more information on how to download the correct version, see the [Getting the Make It Native App](/refguide/mobile/getting-started-with-mobile/prerequisites/#get-min-app) section in *Native App Prerequisites and Troubleshooting*.
 
+## Android 11.4.1 / iOS 11.4.1
+
+**Release date: November 11, 2025**
+
+* We updated the version of @mendix/native to 10.3.1 to update op-sqlite version to 15.0.7.
+
+## Android 11.4.0 / iOS 11.4.0
+
+**Release date: November 5, 2025**
+
+* We updated the version of @mendix/native to 10.3.0 to fix the `components.json` errors.
+* We updated Firebase packages to newer versions.
+
 ## Android 11.3.1 / iOS 11.3.1
 
 **Release date: October 8, 2025**

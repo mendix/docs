@@ -31,7 +31,14 @@ For performance reasons, Mendix recommends at least the following minimum hardwa
 | Memory | 2 GB |
 | Database HA | CPU: 1 core; Memory: 2x2 GB |
 
-[Additional services](/developerportal/deploy/private-cloud-monitor/) (Prometheus, Grafana, Loki) for observability are recommended.
+### Additional Recommendations
+
+[Additional services](/developerportal/deploy/private-cloud-monitor/) (Prometheus, Grafana, Loki) for observability are recommended. The following versions are currently validated for Private Mendix Platform:
+
+| Tool | Version |
+| --- | --- |
+| Grafana | 10.3.3 |
+| Prometheus | 2.41.0 |
 
 ## General Requirements
 

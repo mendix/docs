@@ -12,6 +12,34 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 ## 2025
 
+### November 7, 2025
+
+#### Portal Hotfix
+
+* We have fixed an issue where, in Operator versions older than 2.24.0, runtime licenses were being converted to trial licenses. This hotfix resolves the problem and introduces a new field, **Enable Fallback License**, in the **Environment Details** section. When enabled, this option allows Connected environments using subscription secrets to use a fallback license if communication with the licensing server fails, preventing the system from switching to Trial mode. This option should only be enabled if your Operator version is 2.24.0 and above.
+
+### November 6, 2025
+
+#### Mendix Operator v2.24.1 {#2.24.1}
+
+* We have updated components to use Go 1.25 and the latest dependency versions in order to improve security score ratings for container images.
+
+#### License Manage CLI v0.10.5
+
+* We have updated this CLI to use Go 1.25 and the latest dependency versions in order to improve security score ratings for container images.
+
+#### Portal Improvements
+
+* Reduced Downtime Feature is Now Production Ready. This enhancement ensures your Mendix applications can achieve uninterrupted availability during updates. It will be automatically activated when:
+
+    * Your Mendix Operator version is 2.24 or higher.
+    * Your application is configured with 2 or more replicas.
+    
+    Under these conditions, you can expect no downtime during the update process, as long as the application is using the same MDA and base OS image.
+
+*   Exporting **Scheduled events**, **Application details**, **PCLM Statistics** is now possible in CSV format, replacing the XLSX format.
+*   We have incorporated the use of fallback license for Connected environments using Subscription Secrets. If an environment fails to communicate with the licensing server, it will use the fallback license instead of switching into Trial mode. This option is enabled by default.
+
 ### October 21, 2025
 
 #### Mendix Operator v2.24.0 {#2.24.0}
@@ -47,6 +75,10 @@ For information on the current status of deployment to Mendix on Kubernetes and 
   Because Microsoft Azure previously changed the error text, older Mendix Operator versions might not correct this error.
 
 ### September 4, 2025
+
+#### License Manage CLI v0.10.4
+
+* We have updated this CLI to use Go 1.24 and the latest dependency versions in order to improve security score ratings for container images.
 
 #### Portal Improvements
 

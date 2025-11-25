@@ -7,25 +7,32 @@ weight: 11
 
 ## Introduction
 
-After you create some basic extensions, you want to interact with the Studio Pro model in order to make changes to your app. The Model API allows you to do just that. The model representation is exposed via the `Mendix.StudioPro.ExtensionsAPI.Model` namespace.
+Once you have created basic extensions, you may want to interact with the Studio Pro model to make changes to your app. The Model API enables this functionality and is exposed via the` Mendix.StudioPro.ExtensionsAPI.Model` namespace.
 
 ## Gaining Access to the Mendix Model SDK
 
-The easiest way to gain access to the model is by using the `CurrentApp` property of Extension class. All extension classes implement the [`Mendix.StudioPro.ExtensionsAPI.UI.UIExtensionBase`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.UI/UIExtensionBase.md) base class which provides this access.
+To access the model, use the `CurrentApp` property of your extension class. All extension classes implement the [`Mendix.StudioPro.ExtensionsAPI.UI.UIExtensionBase`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.UI/UIExtensionBase.md) base class, which provides access to `CurrentApp`.
 
-The `CurrentApp` property exposes an implementation of [`IModel`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Model/IModel.md). With a `IModel` reference you can gain access to any other model elements. However, any changes that you introduce must be contained within a model transaction.
+The `CurrentApp` property exposes an implementation of [`IModel`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Model/IModel.md). This gives you access to all model elements. 
+
+{{% alert type="info" %}}
+Any changes made to the model must be contained within a model transaction.
+{{% /alert %}}
 
 ## Interacting with Model Elements
 
-Any modification to the model must be done within a transaction; otherwise, a `System.InvalidOperationException` is thrown. There can be only a single active (i.e. not committed or rolled back) `ITransaction` for the whole app.
+Any modification to the model must be done within a transaction; otherwise, a `System.InvalidOperationException` is thrown. There can be only a single active (for example, not committed or rolled back) `ITransaction` for the whole app.
 
-Transactions do not provide a way to isolate changes, but to group them. That is, any change to a model is immediately visible to all code working with the model. When transaction is rolled back programmatically or is undone by a user, all changes included in it are reverted.
+Transactions group changes, but do not provide a way to isolate them. Changes to a model are immediately visible to all code interacting with the model. When transaction is rolled back or is undone by a user, all included changes are reverted.
 
-To create transaction you can call [`IModel.StartTransaction`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Model/IModel/StartTransaction.md). This method will return a transaction object which implements [`ITransaction`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Model/ITransaction.md).
+
+## Start a Transaction
+
+To create transaction, call [`IModel.StartTransaction`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Model/IModel/StartTransaction.md). This method returns a transaction object that implements [`ITransaction`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Model/ITransaction.md).
 
 For your changes to reflect within the model, you must first commit the transaction by calling [`ITransaction.Commit`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Model/ITransaction/Commit.md).
 
-Alternatively, if you wish to abort or revert your changes, you can call [`ITransaction.Rollback`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Model/ITransaction/Rollback.md).
+If you wish to abort or revert your changes, call [`ITransaction.Rollback`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Model/ITransaction/Rollback.md).
 
 ## Examples
 
@@ -41,7 +48,7 @@ using (var transaction = model.StartTransaction("rename folder"))
 }
 ```
 
-Here is another simple example. It adds an entity named `testEntity` and adds an attribute called `testAttribute` to it.
+The next example below adds an entity named `testEntity` and adds an attribute called `testAttribute` to it.
 
 ```csharp
 using (var transaction = model.StartTransaction("add entity"))
@@ -55,7 +62,3 @@ using (var transaction = model.StartTransaction("add entity"))
     transaction.Commit();
 }
 ```
-
-## Read More
-
-* [Understanding the Mendix Metamodel](/apidocs-mxsdk/mxsdk/mendix-metamodel/)

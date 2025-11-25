@@ -75,3 +75,6 @@ The Amazon Translate connector contains the following activities:
 
 * `ListLanguages` - This action allows you to retrieve a list of supported languages that can used for translation.
 * `TranslateText` - This action allow you to retrieve the translation of the input text.
+* `ListTerminologies` – This action allows you to retrieve a list of custom terminologies available in your AWS account.
+* `UploadTerminology` – This action allows you to upload a new custom terminology file to Amazon Translate or update an existing one.
+* `DeleteTerminology` – This action allows you to permanently delete a custom terminology from your Amazon Translate account.

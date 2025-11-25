@@ -31,8 +31,11 @@ The **Team Server URL** can be used to manually access the repo (using the Git/S
 The URL can have the following form:
 
 * `https://git.api.mendix.com/<your AppID>.git` if it is a Git-enabled app
-* `https://teamserver.sprintr.com/<your AppID>/` if it is an SVN-enabled app that you access using your Mendix credentials
-* `https://svn.home.mendix.com/<your AppID>/` if it is an SVN-enabled app that you access using a personal access token (PAT) — this will be the case, for example, if your company has enabled [BYOIDP SSO](/control-center/security/set-up-sso-byoidp/)
+* `https://svn.home.mendix.com/<your AppID>/` if it is an SVN-enabled app 
+
+{{% alert color="warning" %}}
+The `https://teamserver.sprintr.com/<your AppID>/` endpoint is deprecated.
+{{% /alert %}}
 
 {{% alert color="info" %}}
 You may have to add the final slash (`/`) manually to follow the link. You may also be asked to re-enter your Mendix credentials. Single sign-on (SSO) is not yet implemented for the Team Server. 

@@ -10,6 +10,17 @@ These release notes cover changes to deployment to [Mendix on Azure](/developerp
 
 For information on the current status of Mendix deployment, see [Mendix Status](https://status.mendix.com/).
 
+### Release date: November 6, 2025
+
+* We have resolved an issue where the AKS Node VM Size field sometimes appeared empty if the corresponding Microsoft endpoint was unavailable. Now, in such cases, the field will not be available for selection, and the value chosen during the cluster's initialization will be automatically considered.
+* You can now easily view both the AKS Node VM Size and Postgres Compute Size directly within the Cluster Details section, giving you more immediate insight into your cluster's configuration.
+* We have resolved an issue where newly added Cluster Managers could not view clusters in Mendix on Azure Portal until after their initial visit to the portal.
+* The AKS Network Isolation feature has been disabled within the Edit Cluster flow.
+* For better clarity, we have updated the text from **Managed Grafana** to **Managed Grafana Accessibility** on both the **Initialize Cluster** and **Edit Cluster** pages.
+* If your PostgreSQL quota is not available in a chosen region, you will now receive a clear error message, helping you understand and resolve the situation more quickly.
+* In the **Initialize Cluster** flow, we have updated the labels for Preflight checks from **Provisioning** to **Checking** for more accurate status indication.
+* We have resolved an issue that prevented cluster initialization from proceeding when two or more clusters were being initialized concurrently within the same subscription. You can now initialize multiple clusters without issue.
+
 ### Release date: October 23, 2025 - [General Availability (GA) Release](/releasenotes/release-status/#general-availability)
 
 * In order to minimize the risk of security breaches and networking issues, we have added a new **Enable AKS Network Isolation** feature when creating new clusters. Please note that this feature can be enabled in the Initialize cluster and Edit cluster flow. However, once enabled in Initialize flow, it cannot be disabled in the Edit Cluster flow.

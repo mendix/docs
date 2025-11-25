@@ -10,69 +10,23 @@ aliases:
 
 ## Introduction
 
-The [Mendix Cloud GenAI connector](https://marketplace.mendix.com/link/component/239449) lets you utilize Mendix Cloud GenAI resource packs directly within your Mendix application. It allows you to integrate generative AI by dragging and dropping common operations from its toolbox. 
-
-### Typical Use Cases
-
-The Mendix Cloud GenAI Connector is commonly used for text generation, embeddings generation, and knowledge bases. These use cases are described in more detail below:
-
-#### Text Generation
-
-* Develop interactive AI chatbots and virtual assistants that can carry out conversations naturally and engagingly.
-* Use state-of-the-art large language models (LLMs) by providers like Anthropic for text comprehension and analysis use cases such as summarization, synthesis, and answering questions about large amounts of text.
-* By using text generation models, you can build applications with features such as:
-
-    * Draft documents
-    * Write computer code
-    * Answer questions about a knowledge base
-    * Analyze texts
-    * Give the software a natural language interface
-    * Tutor in a range of subjects
-    * Translate languages
-    * Simulate characters for games
-    * Image to text
- 
-#### Embeddings Generation
-
-Convert strings into vector embeddings for various purposes based on the relatedness of texts.
-
-Embeddings are commonly used for the following:
-
-* Search 
-* Clustering 
-* Recommendations 
-* Anomaly detection 
-* Diversity measurement 
-* Classification 
-
-You can combine embeddings with text generation capabilities and leverage specific sources of information to create a smart chat functionality tailored to your knowledge base.
-
-{{% alert color="info" %}}
-The Mendix Cloud GenAI Connector module generates embeddings internally when interacting with a knowledge base. Pure embedding operations are only required if additional processes, such as using the generated vectors instead of text, are needed. For example, a similar search algorithm could use vector distances to calculate relatedness.
-{{% /alert %}}
-
-#### Knowledge Base
-
-The module enables tailoring generated responses to specific contexts by grounding them in data inside of a collection belonging to a Mendix Cloud GenAI knowledge base resource. This allows for the secure use of private company data or other non-public information when interacting with GenAI models within the Mendix app. It provides a low-code solution to store discrete data (commonly called chunks) in the knowledge base and retrieves relevant information for end-user actions or application processes.
-
-Knowledge bases are often used for:
-
-1. [Retrieval Augmented Generation (RAG)](/appstore/modules/genai/rag/) retrieves relevant knowledge from the knowledge base, incorporates it into a prompt, and sends it to the model to generate a response.
-2. Semantic search enables advanced search capabilities by considering the semantic meaning of the text, going beyond exact and approximate matching. It allows the knowledge base to be searched for similar chunks effectively.
-
-If you are looking for a step-by-step guide on how to get your application data into a Mendix Cloud Knowledge Base, refer [Grounding Your Large Language Model in Data – Mendix Cloud GenAI](/appstore/modules/genai/how-to/howto-groundllm/). Note that the Mendix Portal also provides options for importing data into your knowledge base, such as file uploads. For more information, see [Navigate through the Mendix Cloud GenAI Portal](/appstore/modules/genai/mx-cloud-genai/Navigate-MxGenAI/). This documentation focuses solely on adding data from an application using the connector. 
-
-##### Architecture
-
-A Knowledge Base resource can comprise several collections. Each collection is specifically designed to hold numerous documents, serving as a logical grouping for related information based on its shared domain, purpose, or thematic focus. While collections provide a mechanism for data separation, with each corresponding to a [DeployedKnowledgebase](/appstore/modules/genai/genai-for-mx/commons/#deployed-knowledge-base), it is not best practice to create a large number of collections within a single Knowledge Base resource. A more performant and practical approach for achieving fine-grained data separation is through the strategic use of metadata. To learn more, see [Retrieve and Generate](/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/#retrieve-and-generate).
+The [Mendix Cloud GenAI connector](https://marketplace.mendix.com/link/component/239449) lets you utilize [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/) directly within your Mendix application. It allows you to integrate generative AI by dragging and dropping common operations from its toolbox. 
 
 ### Features
 
 In the current version, Mendix supports text generation (including function/tool calling, chat with images, and chat with documents), vector embedding generation, knowledge base storage, and retrieval of knowledge base chunks.
 
+Typical use cases for generative AI are described in more detail in the [Typical LLM Use Cases](/appstore/modules/genai/get-started/#llm-use-cases) section of the *GenAI Concepts*.
+
 ### Prerequisites
 
-To use this connector, you need configuration keys to authenticate to the Mendix Cloud GenAI services. You can generate keys in the [developer portal](https://genai.home.mendix.com) or ask someone with access to either generate them for you or be added to the team to generate keys yourself. 
+To use this connector, you need configuration keys to authenticate to the Mendix Cloud GenAI services. You can generate keys in the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com) or ask someone with access to either generate them for you or add you to their team so you can generate keys yourself. 
+
+{{% alert color="info" %}}
+
+The Mendix Cloud GenAI Connector module generates embeddings internally when interacting with a knowledge base. This means that you do not need to create embedding keys yourself when interacting with a Mendix Cloud knowledge base. Direct embedding operations are only required if additional processes, such as using the generated vectors instead of text, are needed. For example, a similar search algorithm could use vector distances to calculate relatedness.
+
+{{% /alert %}}
 
 ### Dependencies {#dependencies}
 
@@ -93,7 +47,11 @@ Follow the steps below to get started:
 * Make sure to configure the [Encryption module](/appstore/modules/encryption/#configuration) before you connect your app to Mendix Cloud GenAI.
 * Add the module role `MxGenAIConnector.Administrator` to your Administrator **User roles** in the **Security** settings of your app. 
 * Add the `Configuration_Overview` page (**USE_ME** > **Configuration**) to your navigation, or add the `Snippet_Configuration` to a page that is already part of your navigation. Alternatively, you can register your key by using the `Configuration_RegisterByString` microflow.
-* Complete the runtime setup of Mendix Cloud GenAI configuration by navigating to the page mentioned above. Import a key generated in the [portal](https://genai.home.mendix.com) or provided to you and click **Test Key** to validate its functionality. Note that this key establishes a connection between the Mendix Cloud resources and your application. It contains all the information required to set up the connection.
+* Complete the runtime setup of the Mendix Cloud GenAI configuration by navigating to the page mentioned above. Import a key generated in the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com) or provided to you and click **Test Key** to validate its functionality. Note that this key establishes a connection between the Mendix Cloud resources and your application. It contains all the information required to set up the connection.
+
+{{% alert color="info" %}}
+When using an Embeddings Model Resource together with a Knowledge Base Resource, you do not need to import both keys. Importing the Knowledge Base Resource key automatically generates the connection details for the embeddings generation model.
+{{% /alert %}}
 
 ## Operations
 
@@ -101,9 +59,15 @@ Follow the steps below to get started:
 
 Configuration keys are stored persistently after they are imported (either via the UI or the exposed microflow). There are three different types of configurations that reflect the use cases this service supports. The specific operations are described below.
 
-To use the operations, either a `DeployedModel` (text, embeddings) or a `DeployedKnowledgeBase` must always be passed as input. The DeployedModel will be created automatically when importing keys at runtime and needs to be retrieved from the database. To initialize a knowledge base operation, use the `DeployedKnowledgeBase: Get` toolbox action to retrieve the DeployedKnowledgeBase object for a specified collection. It requires the collection's Name (string) as input. 
+To use the operations, either a `DeployedModel` (text, embeddings) or a `DeployedKnowledgeBase` must always be passed as input. 
 
-In Mendix Cloud GenAI, a single knowledge base resource (MxCloudKnowledgeBaseResource) can contain multiple collections (tables). As a result, several DeployedKnowledgeBase objects may belong to the same resource.
+### How to get the `DeployedModel` in scope
+
+The `DeployedModel` object will be created automatically when importing keys at runtime and needs to be retrieved from the database. 
+
+### How to get the `DeployedKnowledgeBase` in scope 
+
+In Mendix Cloud GenAI, a single knowledge base resource (`MxCloudKnowledgeBaseResource`) can contain multiple `DeployedKnowledgeBase` objects (tables, referred to as 'collections'). As a result, several collections may belong to the same resource. You can use the `DeployedKnowledgeBase: Get` toolbox action to retrieve the right collection and initialize a knowledge base operation. It requires the `Collection.Name` (string) as input (which is usually different from the `Collection.DisplayName` attribute).
 
 ### Chat Completions Operation
 
@@ -176,6 +140,48 @@ In the entire conversation, you can pass up to five documents that are smaller t
 The model uses the file name when analyzing documents, which may introduce a potential vulnerability to prompt injection. To reduce this risk, consider modifying file names before including them in the request.
 {{% /alert %}}
 
+### About Knowledge Bases
+
+#### Data Separation with Collections and Metadata
+
+##### Collections 
+
+A Knowledge Base resource can comprise several collections. Each collection is specifically designed to hold numerous documents, serving as a logical grouping for related information based on its shared domain, purpose, or thematic focus.
+
+Below is a diagram showing how resources are organized into separate collections. This approach allows multiple use cases to share a common resource while the option to only add the required collections to the conversation context is preserved. For example, both employee onboarding and IT ticket support require information about IT setup and equipment. However, only onboarding needs knowledge about the company culture and values, while only IT support requires access to historical support ticket data.
+
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/GenAIKnowledgeBaseResource.png" >}}
+
+While collections provide a mechanism for data separation, it is not best practice to create a large number of collections within a single Knowledge Base resource. A more performant and practical approach for achieving fine-grained data separation is through the strategic use of metadata. 
+
+##### Metadata 
+
+Metadata is additional information that can be attached to data in a GenAI knowledge base. Unlike the actual content, metadata provides structured details that help in organizing, searching, and filtering information more efficiently. It helps manage large datasets by allowing the retrieval of relevant data based on specific attributes rather than relying solely on similarity-based searches.
+
+Metadata consists of key-value pairs and serves as additional information connected to the data, though it is not part of the vectorization itself.
+
+In the employee onboarding and IT ticket support example, instead of having two different collections, such as IT setup, and equipment and historical support tickets, there could be one named 'Company IT'. To retrieve tickets only and no other information from this collection, add the metadata below during insertion.
+
+```text
+key: `Category`, value: `Ticket`
+```
+
+The model then generates its response using the specified metadata instead of solely the input text. 
+
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/GenAIKBMetadataSeparation.png" >}}
+
+Using metadata, even more fine-grained filtering becomes feasible. Each ticket may have associated metadata, such as
+
+* key: `Ticket Type`, value: `Bug`
+* key: `Status`, value: `Solved`
+* key: `Priority`, value: `High`
+
+Instead of relying solely on similarity-based searches of ticket descriptions, users can then filter for specific tickets, such as 'Bug' tickets with the status set to 'Solved'. You can add [MetaData](/appstore/modules/genai/genai-for-mx/commons/#chunkcollection-add-knowledgebasechunk) with the respective key to each chunk during insertion. 
+
+#### How to get data into a knowledge base 
+
+If you are looking for a step-by-step guide on how to get your application data into a collection inside of a Mendix Cloud Knowledge Base Resource, refer to [Grounding Your Large Language Model in Data – Mendix Cloud GenAI](/appstore/modules/genai/how-to/howto-groundllm/). Note that the Mendix Portal also provides options for importing data into your knowledge base, such as file uploads. For more information, see [Navigate through the Mendix Cloud GenAI Portal](/appstore/modules/genai/mx-cloud-genai/Navigate-MxGenAI/). This documentation focuses solely on adding data from inside a Mendix application and using the connector. 
+
 ### Knowledge Base Operations
 
 To implement knowledge base logic into your Mendix application, you can use the actions in the **USE_ME** > **Knowledge Base** folder or under the **GenAI Knowledge Base (Content)** or **Mendix Cloud Knowledge Base** categories in the **Toolbox**. These actions require a specialized [DeployedKnowledgeBase](/appstore/modules/genai/genai-for-mx/commons/#deployed-knowledge-base) of type `Collection` that determines the model and endpoint to use. Additionally, the collection name must be passed when creating the object and it must be associated with a `Configuration` object. Please note that for Mendix Cloud GenAI a knowledge base resource may contain several collections (tables). 
@@ -185,7 +191,7 @@ Dealing with knowledge bases involves two main stages:
 1. [Insertion of knowledge](#knowledge-base-insertion)
 2. [Retrieval of knowledge (Nearest neighbor)](#knowledge-base-retrieval)
 
-You do not need to manually add embeddings to a chunk, as the connector handles this internally. To see all existing knowledge bases for a configuration, go to the **Knowledge Base** tab on the [Mendix Cloud GenAI Configuration](#configuration) page and refresh the view on the right. Alternatively, use the `Get Collections` action to retrieve a synchronized list of collections inside of your knowledge base resource to include in your module. Lastly, you can delete a collection using the `Delete Collection` action.
+You do not need to manually add embeddings to a chunk, as the connector handles this internally. To see all existing collections for a knowledge base configuration, go to the **Knowledge Base** tab on the [Mendix Cloud GenAI Configuration](#configuration) page and refresh the view on the right. Alternatively, use the `Get Collections` action to retrieve a synchronized list of collections inside your knowledge base resource to include in your module. Lastly, you can delete a collection using the `Delete Collection` action.
 
 {{% alert color="warning" %}}
 The knowledge chunks are stored in an AWS OpenSearch Serverless database to ensure scalable and high-performance vector calculations—for example, retrieving the nearest neighbors of a given input. Inserted or modified chunks are only available for read operations (retrieval) in the knowledge base within 60-120 seconds. For more information, see [AWS documentation](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-vector-search.html#serverless-vector-limitations).

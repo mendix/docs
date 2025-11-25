@@ -235,7 +235,7 @@ When turning on the automatic cleanup after having used tasks for a long time, t
 
 ### Logging
 
-A [Log Node](/refguide/logging/#mendix-nodes) named `Queue` exists specifically for all actions related to Task Queues.
+A [Log Node](/refguide/logging/#mendix-nodes) named `TaskQueue` exists specifically for all actions related to Task Queues.
 
 ## Other
 

@@ -10,6 +10,7 @@ For more information on native mobile app development, see the [native-template]
 
 Compatible with Studio Pro 11:
 
+* Native Template versions of [16](/releasenotes/mobile/nt-16-rn/) are compatible with apps built using Studio Pro 11.5 and above.
 * Native Template versions of [15](/releasenotes/mobile/nt-15-rn/) are compatible with apps built using Studio Pro [11.0](/releasenotes/studio-pro/11.0/) and above.
 
 Compatible with Studio Pro 10:

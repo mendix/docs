@@ -11,29 +11,11 @@ weight: 20
 
 The [Mistral Connector](https://marketplace.mendix.com/link/component/248276) allows you to integrate generative AI capabilities into your Mendix application. Since the Mistral API is compatible with [OpenAI API](https://platform.openai.com/), this module mainly focuses on Mistral specific UI while reusing the operations inside of the OpenAI connector. 
 
-The current scope covers text generation use cases based on the [Chat Completions API](https://docs.mistral.ai/api/endpoint/chat) and embedding use cases based on the [Embeddings API](https://docs.mistral.ai/api/endpoint/embeddings). 
+### Features {#features}
 
-### Typical Use Cases
+The Mistral Connector is commonly used for text generation based on the [Chat Completions API](https://docs.mistral.ai/api/endpoint/chat) and embeddings generation with the [Embeddings API](https://docs.mistral.ai/api/endpoint/embeddings). Typical use cases for generative AI are described in the [Typical LLM Use Cases](/appstore/modules/genai/get-started/#llm-use-cases).
 
-The Mistral Connector is commonly used for text generation and embeddings. These use cases are described in more detail below.
-
-#### Text Generation {#use-cases-text}
-
-* Develop interactive AI chatbots and virtual assistants that can carry out conversations in a natural and engaging manner. 
-* Use Mistral’s large language models (LLMs) for text comprehension and analysis use cases such as summarization, synthesis, and answering questions about large amounts of text.
-* Tailor the Mistral models on a specific task or domain by adding custom data to improve their performance. 
-* Integrate more easily with Mistral’s platform. By providing text generation models, this allows you to build applications with the following features:
-    * Draft documents 
-    * Write computer code 
-    * Answer questions about a knowledge base 
-    * Analyze texts
-    * Give software a natural language interface 
-    * Tutor in a range of subjects 
-    * Translate languages 
-    * Simulate characters for games
-    * Image to text
-
-For more information, see [Mistral models](https://docs.mistral.ai/getting-started/models).
+For more information about the models, see [Mistral models](https://docs.mistral.ai/getting-started/models).
 
 #### Image Generation {#use-cases-images}
 
@@ -42,10 +24,6 @@ Mistral does not currently offer image generation models out of the box. It is p
 #### Knowledge Base
 
 The Mistral connector supports Knowledge bases from providers such as pgVector, Mendix Cloud, Amazon Bedrock, and Azure AI Search to be added to a conversation.
-
-### Features {#features}
-
-With the current version, Mendix supports the Chat Completions API for [text generation](https://docs.mistral.ai/api/endpoint/chat) and the Embeddings API for [vector embeddings](https://docs.mistral.ai/api/endpoint/embeddings).
 
 ### Prerequisites
 
@@ -63,7 +41,7 @@ To use this connector, you need to sign up for a Mistral account and create an A
 
 Install all required modules from the Mendix Marketplace as listed in the [Dependencies](#dependencies) section above.
 
-To import the [Mistral Connector](https://marketplace.mendix.com/link/component/248276) into your app, follow the instructions in [How to Use Marketplace Content](/appstore/use-content/).
+To import the [Mistral Connector](https://marketplace.mendix.com/link/component/248276) and the other modules into your app, follow the instructions in [How to Use Marketplace Content](/appstore/use-content/).
 
 ## Configuration {#configuration}
 
@@ -74,7 +52,7 @@ After you install the Mistral and OpenAI connector, you can find them in the **M
 1. Add the module roles `OpenAIConnector.Administrator` and `MistralConnector.Administrator` to your Administrator **User roles** in the **Security** settings of your app. 
 2. Add the **MistralConfiguration_Overview** page from the Mistral connector module (**USE_ME > MistralConfiguration**) to your navigation, or add the `Snippet_MistralConfigurations` to a page that is already part of your navigation. 
 3. Continue setting up your Mistral configuration at runtime. For more information, follow the instructions in the [Mistral Configuration](#mistral-configuration) section below.
-4. Configure the models you need to use for your use case.
+4. Configure the models you need for your use case.
 
 #### Mistral Configuration {#mistral-configuration} 
 
@@ -151,7 +129,7 @@ Mistral does not directly connect to the knowledge resources. The model returns 
 
 This functionality is part of the implementation executed by the GenAI Commons Chat Completions operations mentioned earlier. As a developer, you need to make the system aware of your indexes and their purpose by registering them with the request. This is done using the GenAI Commons operation [Tools: Add Knowledge Base](/appstore/modules/genai/genai-for-mx/commons/#add-knowledge-base-to-request), which must be called once per knowledge resource before passing the request to the Chat Completions operation.
 
-Note that the retrieval process is independent of the model provider and can be used with any model that supports function calling.
+Note that the retrieval process is independent of the model provider and can be used with any model that supports function calling, as it relies on the generalized `GenAICommons.DeployedKnowledgeBase` input parameter.
 
 #### Vision {#chatcompletions-vision}
 
@@ -236,10 +214,6 @@ Mistral supports the following [tool choice types](/appstore/modules/genai/genai
 | any                    | any     |
 | none                   | none    |
 
-### Knowledge Base Retrieval
-
-When adding a [KnowledgeBaseRetrieval](/appstore/modules/genai/genai-for-mx/commons/#add-knowledge-base-to-request) object to your request, there are some optional parameters. Currently, only the MaxNumberOfResults parameter can be added to the search call and the others (`MinimumSimilarity` and `MetadataCollection`) are not compatible with the Mistral API.
-
 ## GenAI Showcase Application {#showcase-application}
 
 For more inspiration or guidance on how to use those microflows in your logic, Mendix recommends downloading the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475), which demonstrates a variety of example use cases.
@@ -260,10 +234,4 @@ If you encounter an error caused by conflicting Java libraries, such as `java.la
 
 ## Read More {#read-more}
 
-* [Prompt Engineering – OpenAI Documentation](https://platform.openai.com/docs/guides/prompt-engineering)
-* [Introduction to Prompt Engineering – Microsoft Azure Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering)
-* [Prompt Engineering Techniques – Microsoft Azure Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/advanced-prompt-engineering?pivots=programming-language-chat-completions)
-* [ChatGPT Prompt Engineering for Developers - DeepLearning.AI](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers)
-* [Function Calling - OpenAI Documentation](https://platform.openai.com/docs/guides/function-calling)
-* [Vision - OpenAI Documentation](https://platform.openai.com/docs/guides/vision)
-* [Vision - Azure OpenAI Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/gpt-with-vision)
+* [Mistral AI Cookbooks](https://docs.mistral.ai/cookbooks)

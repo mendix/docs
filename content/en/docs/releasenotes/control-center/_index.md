@@ -14,6 +14,12 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 ## 2025
 
+### November 9, 2025
+
+#### Improvements
+
+* The [Approval Requests](/control-center/approval-requests/) page is now divided into two distinct tabs: **Active Requests** and **Resolved Requests**. This allows you to easily stay on top of all approval requests created for your company.
+
 ### September 29, 2025
 
 #### New Features

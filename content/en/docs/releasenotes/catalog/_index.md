@@ -14,6 +14,13 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2025
 
+### November 6, 2025
+
+#### Fixes
+
+* We fixed an issue impacting search results.
+* We corrected the icon alignment in the search bar.
+
 ### September 25, 2025
 
 #### Features

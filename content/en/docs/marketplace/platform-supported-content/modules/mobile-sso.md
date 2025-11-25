@@ -20,7 +20,7 @@ There are below versions of the Mobile SSO module, compatible with Mendix and OI
 
 | Mobile SSO Version | Mendix Version | OIDC SSO Version |
 | --- | --- | --- |
-| 2.1.0 | 10.12.3 and above | 3.0.0 and above |
+| 2.1.0 | 10.12.3 and above | from 3.0.0 to 4.1.2 |
 | 2.0.0 | 10.9.0 and above | 2.4.0 and above |
 | 1.1.0 | 9.24.2 | 3.0.0 and above |
 | 1.0.1 | 9.24.2 | 2.4.0 and above |

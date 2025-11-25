@@ -52,6 +52,7 @@ paths:
                   useAppTemplate: true
                   appTemplate:
                     templateId: string
+                    templateVersion: string
       responses:
         '202':
           $ref: '#/components/responses/job'
@@ -454,6 +455,8 @@ components:
                     reason: Invalid project name
                   - name: templateId
                     reason: Invalid project template id
+                  - name: templateVersion
+                    reason: Invalid project template version
             400 - Invalid project owner change request:
               value:
                 status: 400
@@ -731,6 +734,9 @@ components:
             templateId:
               type: string
               description: App template id.
+            templateVersion:
+              type: string
+              description: App template version.
       required:
         - name
       x-examples:
@@ -740,6 +746,7 @@ components:
           useAppTemplate: true
           appTemplate:
             templateId: '438'
+            templateVersion: '10.24.81004'
     ProjectInput:
       type: object
       description: Project change request

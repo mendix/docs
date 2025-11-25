@@ -48,7 +48,7 @@ To change an environment's plan, follow these steps:
 3. On the **Environments** page, click the **Overview** tab to view your environments.
 4. Find your target environment.
 5. Use the **Expand** ({{< icon name="chevron-down" >}}) toggle to view detailed information about each environment, such as the environment resources and deployed package.
-6. In the environment resource section, click **Change Plan**. 
+6. In the environment resources section, click **Change Plan**. 
 7. On the left side of the form that appears, review your current plan details. These include:
     * **Name** – Plan name.
     * **Environment** – Plan environment (such as, staging or acceptance).
@@ -69,6 +69,23 @@ To change an environment's plan, follow these steps:
 Changing plan consumes [Mendix Cloud Tokens](/control-center/cloud-tokens/#cloud-tokens). Only one plan change request can exist per environment at a time. As a result, new requests cannot be submitted for the same environment until the current one is completed.
 {{% /alert %}}
 
+### Plan Change Request Status {#plan-change-status}
+
+This diagram illustrates the lifecycle of a plan change request, from its submission to its final resolution (rejected, completed, or failed).
+
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/plan-change-status.png" >}}
+
+A Technical Contact initiates the process by submitting a plan change request.
+
+1. **Pending Approval** – After submission, the request enters a **Pending Approval** status. The request is then sent to a Mendix Admin for review.
+    * If the Mendix Admin rejects the request, its status changes to **Rejected**.
+    * If the Mendix Admin approves the request, the status changes to **Pending Schedule**.
+2. **Pending Schedule** – The plan change application is awaiting scheduling by the Technical Contact.
+3. **Scheduled** – Plan change is scheduled for the next maintenance window.
+4. **In Progress** – The plan change is actively being applied to the environment.
+5. **Completed** – Plan change was successfully applied to the environment
+6. **Failed** – The plan change did not complete successfully.
+
 ## Managing Plan Requests {#manage-plan-requests}
 
 The **Change Requests** tab allows Technical Contacts to view all submitted plan change requests (both past and current) and track pending request status.
@@ -79,15 +96,26 @@ To access it:
 2. Click **Environments** on your app.
 3. Open the **Change Requests** tab.
 
-For detailed information on the **Change Requests** tab, refer to the [Change Requests](/developerportal/deploy/environments/#change-requests) section in *Environments and Deployment*.
+Plan change requests have **Plan Upgrade** as the **Request Type**. For more information on the **Change Requests** tab, refer to the [Change Requests](/developerportal/deploy/environments/#change-requests) section in *Environments and Deployment*.
 
-This diagram shows the progress of the request status from plan change submission to fulfilled (approved, rejected, completed, or failed):
+### Plan Change Requests Details {#change-requests-action}
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/plan-change-status.png" >}}
+Click **Details** on any plan change request to view the **name** of the requester, reviewer details and other request information, including:
 
-### Available Actions by Status {#available-actions-by-status}
+* Status of the request
+* Current plan
+* Requested plan
+* Reason for resizing
+* Date of request creation
+* Date the request was scheduled
+* Request ID
+* Request type
+* App name
+* Environment
 
-Depending on the request's status, Technical Contacts can perform the following actions:
+#### Available Actions by Status {#available-actions-by-status}
+
+In the **Request Details** page, depending on the request's [status](#plan-change-status), Technical Contacts can perform the following actions:
 
 * **Pending approval** – Click **Cancel Request** to cancel the entire request.
 * **Pending schedule** – Click **Cancel Request** to cancel the entire request, or click **Schedule Change** to set execution timing for when the approved plan will be applied. For more details on how to schedule a plan change, see [Scheduling a Plan Change](#scheduling-a-plan-change).

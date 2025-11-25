@@ -6,6 +6,8 @@ description: "Describes the processes for setting up a monitoring solution for M
 weight: 50
 ---
 
+{{% alert color="warning" %}}The upstream Loki Helm chart referenced in below documentation is now deprecated and unmaintained. While it can still be installed, we recommend exploring other (open-source) options for installing a monitoring stack. This document is provided on an as-is basis, and for reference and inspiration purposes only. We will not address support queries related to this example implementation.{{% /alert %}}
+
 ## Introduction
 
 {{% alert color="info" %}}To monitor Mendix on Kubernetes environments, install Mendix Operator v2.1.0 or above.{{% /alert %}}

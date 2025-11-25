@@ -11,7 +11,6 @@ aliases:
 
 ## Introduction
 
-
 OQL statements are translated to SQL statements that are sent to the database.
 This can be much faster than retrieving the objects in a microflow and then updating or deleting the resulting list.
 
@@ -66,15 +65,15 @@ The syntax of `UPDATE` statements is:
 
 ```sql
 UPDATE <entity>
-SET { <attribute> = <expression> } [ ,...n ]
+SET { { <attribute> | <association> } = <expression> } [ ,...n ]
 WHERE <condition>
 ```
 
 `entity` is the entity whose objects are being updated.
 
-`attribute` is an attribute of the entity that is being updated. Multiple attributes can be updated in the same statement.
+`attribute` is an attribute of the entity that is being updated. `association` is an association that is being updated. Multiple attributes and associations can be updated in the same statement.
 
-`expression` is a new value of an attribute. Any [OQL expression](/refguide/oql-expressions/) is allowed. The value type of the expression should match the attribute type according to [type coercion precedence](/refguide/oql-expression-syntax/#type-coercion).
+`expression` is a new value of an attribute or association. Any [OQL expression](/refguide/oql-expressions/) is allowed. When updating attributes, the value type of the expression should match the attribute type according to [type coercion precedence](/refguide/oql-expression-syntax/#type-coercion). In the case of associations, association and entity expressions must match the target association type. Values of type LONG can also be used as association values, but they must be valid ids of associations which are of the target association type.
 
 `condition` can be anything that can appear in an OQL [WHERE clause](/refguide/oql-clauses/#where).
 
@@ -89,9 +88,17 @@ SET
         FROM Module.Order
         WHERE Module.Order_Customer/Module.Customer/ID = Module.Customer/ID
     ),
-    Location = Module.Customer_Address/Module.Address/City,
-    Name = UPPER(Name)
+    Location = Module.Customer_Address/Module.Address/AddressString,
+    Name = UPPER(Name),
+    Module.Customer_Branch = Module.Customer_Address/Module.Address/Module.Address_City/Module.City/Module.Branch_City
 ```
+
+In the example above, attributes of entity `Module.Customer` are updated using different capabilities of `OQL UPDATE` functionality:
+
+* `TotalAmount` attribute is set to a [subqery](/refguide/oql-clauses/#subquery-in-select) with aggregate function
+* `Location` is set to a [path](/refguide/oql-clauses/#longpath) over association to attribute
+* `Name` is set using a [function](/refguide/oql-expression-syntax/#functions)
+* Association `Module.Customer_Branch` is set to a [path](/refguide/oql-clauses/#longpath) over association to an entity
 
 {{% alert color="info" %}}
 Updating attributes was introduced in Mendix 11.3.

@@ -276,6 +276,46 @@ To run the HTTP bridge from your client, include a Bearer token in the request h
 
 {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/http/event_broker_bridges_create_7_http.png" class="no-border" >}}
 
+#### Editing an HTTP Bridge
+
+After creating an HTTP Bridge, you can modify its event configuration by adding or removing events as your integration requirements evolve, without needing to recreate the bridge.
+
+{{% alert color="info" %}}You can only edit an HTTP Bridge when its status is **Running**.{{% /alert %}}
+
+To edit an HTTP Bridge:
+
+1. On the [Event Broker Manager](https://broker.mendix.com/) page, navigate to the **Event Broker Bridges** tab.
+2. Click the HTTP Bridge you want to modify.
+3. Click **Edit** to enter editing mode.
+
+    {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/edit-bridge/http_overview-edit.png" class="no-border" >}}
+
+    In editing mode, you can perform the following actions:
+
+      * **Add Business Events**:
+
+          1. Click **Add Business Events** to open a dialog that displays available events.
+          2. Select the events you want to add and click **Select**. Added events will display an **Added** badge and can be removed before applying changes.
+
+      * **Remove Business Events**:
+
+          1. Navigate to the event you want to remove and click **Remove**. Removed events will display a **Removed** badge, and their name and metadata will appear grayed out.
+          2. Re-add a removed event by clicking **Add** before applying changes.
+
+        {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/edit-bridge/http_edit_mode.png" class="no-border" >}}
+
+4. Once you have made your changes, you can:
+   * Click **Apply** to save and apply the changes. A confirmation message will indicate if the changes were successful. Changes to the event configuration take effect they are applied.
+   * Click **Cancel** to exit editing mode without saving any changes.
+
+{{% alert color="info" %}}
+The **Apply** button is only enabled when changes have been made to the bridge configuration.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+If an error occurs during the editing process, the bridge will automatically roll back to its previous running state to ensure continuity of service.
+{{% /alert %}}
+
 ## Externally Defined Events {#externally-defined-events}
 
 Externally defined events refer to events that are defined outside the Mendix application, specifically outside Studio Pro.

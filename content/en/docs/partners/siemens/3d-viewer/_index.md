@@ -80,13 +80,13 @@ For more information about the requirements for other releases, see the releases
 
 3D Viewer is a **premium** Siemens product and requires a valid **purchase and commercial license** for production use.
 
-- You can use 3D Viewer **without a license** in your local development environment with [Mendix Studio Pro](/releasenotes/studio-pro/), for more details see [Run Locally or Preview](/deployment/#run-locally-or-preview/).
+- You can use 3D Viewer **without** a license in your **local development environment** with [Mendix Studio Pro](/releasenotes/studio-pro/), for more details see [Run Locally or Preview](/deployment/#run-locally-or-preview/).
 
-- However, to deploy your application to **[Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)**, **Private Cloud**, or **[On-Premises](/developerportal/deploy/on-premises-design/)**, **a license is required**.
+- A license is **required** to deploy your application to any **server environment**. This includes [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) as well as all self-managed or [on-premises](/developerportal/deploy/on-premises-design/) infrastructures(such as [Kubernetes](/developerportal/deploy/private-cloud/), [Docker](/developerportal/deploy/docker-deploy/), [Azure](/developerportal/deploy/mendix-on-azure/), [SAP BTP](/developerportal/deploy/sap-cloud-platform/) etc.), for more details see [Deploying Apps](/deployment/).
 
-To request a **trial license token**, click the **Contact Us** button on the [3D Viewer Marketplace page](https://marketplace.mendix.com/link/component/118345) or send d an email to MX3DViewerHelp.sisw@siemens.com.
+To request a **trial license token**, click the **Contact Us** button on the [3D Viewer Marketplace page](https://marketplace.mendix.com/link/component/118345) or send an email to MX3DViewerHelp.sisw@siemens.com.
 
-Once you have obtained a license token, configure it as described in[Configuring the License Token](#configure-license-token).
+Once you have obtained a license token, configure it as described in [Configuring the License Token](#configure-license-token).
 
 
 ### Installing the Component in Your App

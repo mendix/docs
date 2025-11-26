@@ -3,9 +3,9 @@ title: "Version Pinning"
 linktitle: "Version Pinning"
 url: /developerportal/deploy/version-pinning/
 weight: 80
-description: ""
+description: "Version Pinning guarantees consistent platform configurations across environments. Deploy your app on the exact same tested versions for predictable, secure, and stable results."
 
-#Do NOT remove any of the anchors in this document as they are all referenced from other documents
+# The anchors in this document are referenced from other documents. Do NOT remove!
 ---
 
 {{% alert color="warning" %}}
@@ -14,7 +14,7 @@ This feature is in Limited Availability. For more information, see [Release Stat
 
 ## Introduction
 
-Mendix Cloud provides version pinning to guarantee consistency and predictability when promoting your Mendix applications between different environments on Mendix Cloud (Kubernetes). For example, when you move an application from an acceptance environment to a production environment, version pinning ensures that the exact same underlying platform configuration is reused. This includes components critical to how your application runs in Mendix Cloud, such as runtime images, buildpacks, and supporting services, all of which remain identical across environments.
+Mendix Cloud(Kubernetes) provides version pinning to guarantee consistent and predictable application behavior across all environments. For example, when you promote a Mendix application from acceptance to production, version pinning ensures that the same underlying platform configuration is reused across both environments. This configuration includes components critical to how your application runs in Mendix Cloud, such as runtime images, buildpacks, and supporting services, all of which remain identical across environments.
 
 By maintaining a consistent runtime stack, version pinning effectively eliminates subtle environmental differences, leading to more reliable and predictable application behavior throughout your development and deployment landscape.
 
@@ -67,8 +67,6 @@ Initiate a promotion directly through the Mendix Cloud Portal:
 
 ### Option 2 – Deployment via API
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/version-pinning/version-pinning-using-start-api.png" >}}
-
 For automated or programmatic deployments, use the Mendix Cloud API:
 
 1. **API call** – Call the Mendix Cloud Start API, specifying the target environment and including the `pinEnvironment` parameter to indicate the source environment from which to pin the configuration.
@@ -89,5 +87,3 @@ The following table summarizes the expected behavior of version pinning in diffe
 | :------------------------------------------ | :------------------------------------------------------------ |
 | Deploying a new MDA or first-time deployment | Uses the latest Mendix Cloud platform configuration           |
 | Promoting between environments              | Uses the same platform configuration as the source environment |
-
-

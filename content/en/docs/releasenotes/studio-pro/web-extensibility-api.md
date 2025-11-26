@@ -8,6 +8,10 @@ numberless_headings: true
 
 These release notes cover changes to the [Extensibility API for Web Developers](/apidocs-mxsdk/apidocs/extensibility-api/).
 
+## Version 11.5.0
+
+* You can now see all the extensions of your application by clicking **View** > **Extensions**. 
+* We introduced a new Document Selector API under `studioPro.ui.elementSelectors` that allows the user to choose a document or an entity from the project's structure. For more information, see [Using the Element Selector API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/element-selector-api/).
 
 ## Version 11.4.0
 

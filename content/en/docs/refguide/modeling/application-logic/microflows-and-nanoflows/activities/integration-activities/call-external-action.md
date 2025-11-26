@@ -69,8 +69,18 @@ Every parameter must have a value specified unless the service indicates that th
 
 When the service indicates that a value cannot be empty (with `Nullable="false"`), the microflow will throw an error if the value evaluates to `empty`.
 
-If you have selected a variable for an entity that has associations, you can select which associations you want to include in the arguments that you call the external action with.
+{{% alert color="info" %}}
+The ability to not specify a value for optional parameters was introduced in [Studio Pro 11.4.0](/releasenotes/studio-pro/11.4/).
+{{% /alert %}}
+
+### Additional Attributes
+
+If you have selected a variable for an entity that is an open type (`OpenType="true"`), you can add additional attributes. The runtime adds these attributes to the attributes of the object when calling the action.
 
 {{% alert color="info" %}}
-The possibility to not specify a value for optional parameters was introduced in Studio Pro 11.4.0.
+The ability to add additional attributes was introduced in [Studio Pro 11.5.0](/releasenotes/studio-pro/11.5/).
 {{% /alert %}}
+
+### Associations to Include
+
+If you have selected a variable for an entity that has associations, you can select the associations you want to include in the arguments that you call the external action with.

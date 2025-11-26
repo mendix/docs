@@ -9,7 +9,7 @@ weight: 20
 
 Studio Pro supports a number of dockable window panes, such as the **Changes** and **Errors** panes. You can close some panes to just show the ones you need at the moment, but you can always reopen them via the **View** menu. 
 
-Via this menu you can also enable or disable the [full screen mode](#full-screen) or [reset the layout](#reset-layout) of your app to the default.  
+Via this menu you can also enable or disable the [full screen mode](#full-screen) or [reset the layout](#restore-default-layout) of your app to the default.  
 
 {{< figure src="/attachments/refguide/modeling/menus/view-menu/view-menu.png" alt="View Menu" width="300" >}}
 
@@ -160,9 +160,12 @@ The **Distraction Free Mode** does the same as the **Full Screen** mode above, b
 
 Shortcut key: <kbd>Shift</kbd> + <kbd>F11</kbd>
 
-### Reset Layout {#reset-layout}
+### Restore Default Layout {#restore-default-layout}
 
-Resets the layout of dockable window panes to factory defaults.
+This option allows you to reset the following layout settings to their default values:
+
+* The size, location, and visibility of the dockable window panes
+* The sizes of pop-up dialogs that are stored after they are resized manually
 
 ## Read More
 

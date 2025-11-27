@@ -76,10 +76,10 @@ paths:
       summary: Create a custom field for a company
       description: |
         Creates a custom field for the company. The field must include at least 2 inner values.
-        Validation: A company will be able to have a maximum of 5 custom fields.
+        Validation: A company can have a maximum of 5 custom fields.
         The user PAT needs to have the scope `mx:app:customfields:write`.
         The user must be a company admin.
-        The code of the provided values can be past as an empty string. A code will be generated based on the provided value of the values.
+        The code of the provided values can be passed as an empty string. A code will be generated based on the provided input for the values.
       operationId: createCompanyCustomField
       parameters:
         - name: company-id
@@ -251,7 +251,7 @@ paths:
         Validation: A company allows a maximum of 250 values per custom field.
         The user PAT needs to have the scope `mx:app:customfields:write`.
         The user must be a company admin.
-        The code of the provided values can be past as an empty string. A code will be generated based on the provided value of the values.
+        The code of the provided values can be passed as an empty string. A code will be generated based on the provided input for the values.
       operationId: addCustomFieldValues
       parameters:
         - name: field-id
@@ -302,7 +302,7 @@ paths:
         Updates the value of a custom field.
         The user PAT needs to have the scope `mx:app:customfields:write`.
         The user must be a company admin.
-        The code of the provided value can be passed as an empty string. A code will be generated based on the provided value of the values.
+        The code of the provided value can be passed as an empty string. A code will be generated based on the provided input of the values.
       operationId: updateCustomFieldValue
       parameters:
         - name: field-id
@@ -465,7 +465,7 @@ components:
               description: Number of items skipped before starting to collect the result set
             elements:
               type: integer
-              description: Number of elements returned in this page
+              description: Number of elements returned on this page
   responses:
     Http400:
       description: 'Bad Request'

@@ -302,7 +302,7 @@ paths:
         Updates the value of a custom field.
         The user PAT needs to have the scope `mx:app:customfields:write`.
         The user must be a company admin.
-        The code of the provided value can be past as an empty string. A code will be generated based on the provided value of the values.
+        The code of the provided value can be passed as an empty string. A code will be generated based on the provided value of the values.
       operationId: updateCustomFieldValue
       parameters:
         - name: field-id

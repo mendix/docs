@@ -12,6 +12,14 @@ To see the current status of the Mendix Pipelines, see [Mendix Status](https://s
 
 ## 2025
 
+### November 27, 2025
+
+#### Improvements
+
+* We have updated Mendix Pipelines deeplinks to improve navigation. Old links using `/link/` have been replaced with `/p/`. Update any bookmarked pipeline pages to use the new URL format. For example:
+    * Old format – `https://pipeline-portal.home.mendix.com/link/project/{ProjectID}`
+    * New format – `https://pipeline-portal.home.mendix.com/p/project/{ProjectID}`
+
 ### August 7, 2025
 
 #### New Features

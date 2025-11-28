@@ -597,8 +597,10 @@ If you change the data type and value in the .mpr file, the changes are visible 
 
 ### Network Tab
 
-On the Network tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections. This works in the same way as the Network tab for deployments to Mendix Cloud. For more details on these, see the [Network Tab](/developerportal/deploy/environments-details/#network-tab) section of *Environment Details*.
+On the Network tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections. This works in the same way as the Network tab for deployments to Mendix Cloud. 
+Starting from Mendix 10.24.1, the Mendix Runtime can set Custom Http Headers natively, without relying on an Ingress controller. For more details on these, see the [Network Tab](/developerportal/deploy/environments-details/#network-tab) section of **Environment Details**.
 
+For security reasons, root CAs can only be enabled in custom [TLS section](/developerportal/deploy/standard-operator/#custom-tls) in mxpc-cli. The root CAs need to be configured before creating an environment. 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/network-tab.png" class="no-border" >}}
 
 ### Runtime Tab {#runtime-tab}

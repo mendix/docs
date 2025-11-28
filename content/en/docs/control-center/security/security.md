@@ -19,7 +19,12 @@ The **Settings** page in the **Security** category in Control Center allows you 
 
 ### Password Policy
 
-With the **Password Policy** setting, you can set the password expiration policy for all company members. If you do not want the passwords to expire, toggle **Passwords of company members never expire** to **On**.
+Mendix enforces a 90-day password validity period for all platform passwords used to sign in to the Mendix Platform or Studio Pro. 
+If Mendix Admins [set up SSO (BYOIDP)](/control-center/security/set-up-sso-byoidp/), the organization's IdP manages all sign-ins and passwords. In this case, the Mendix Platform's password validity policy no longer applies. 
+
+{{% alert color="info" %}}
+The Mendix Platform no longer allows you to configure a password validity period other than 90 days or to disable password expiry. This capability will be removed on March 31, 2026.
+{{% /alert %}}
 
 ### Email Signing {#disable-enable-digital-signing-emails}
 

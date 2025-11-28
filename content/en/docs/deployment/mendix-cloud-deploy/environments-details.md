@@ -7,7 +7,7 @@ aliases:
     - /developerportal/deploy/environments-details-redesign/
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #The anchor #connection-safelist below is mapped from the Mendix Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
-#The anchor #services below is mapped from the Mendix Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
+#The anchor #services below is mapped from the Mendix Portal (Mendix Cloud Environment Details), so it should not be removed or changed. 
 ---
 
 ## Introduction
@@ -102,7 +102,11 @@ In the **Application Status** section of the **General** tab, you can find the f
 * **Region** – the data center region where the app is hosted (for the full list of Mendix Cloud regions, see [Outgoing IP](/developerportal/deploy/mendix-ip-addresses/#outgoing))
 * **Data Backup Secondary Location** – the region where the backup is stored (for more information, see [Data Location](/developerportal/operate/backups/#data-location) in the *Backups* documentation)
 
-#### Naming of Environments – Flexible Environments in Mendix Cloud {#naming}
+#### Naming of Environments - Flexible Applications in Mendix Cloud {#naming}
+
+{{% alert color="info" %}}
+Renaming an environment's subdomain suffix or display name is only applicable to flexible applications.
+{{% /alert %}}
 
 If you are the app's [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can rename the environment’s **Subdomain Suffix** or **Display Name** by clicking **Change** next to either of the options.
 

@@ -41,6 +41,28 @@ For more information, see [Configuring Ingress and Egress](/developerportal/depl
 | AKS Maximum Node Count | The number of available cluster nodes will be increased and decreased automatically based on the combined capacity requirement of all deployed Mendix apps. This setting controls the upper limit to the number of available nodes in order to avoid cost surprises.    | Yes    |
 | AKS Service Tier    | The [AKS service tier](https://learn.microsoft.com/en-us/azure/aks/free-standard-pricing-tiers) determines the service level Microsoft provides on the Mendix on Azure Kubernetes cluster control plane. This does not impact application performance, only Microsoft's SLA. The Free tier is sufficient in most situations. Standard can be considered by organizations that value a financially backed SLA. For information about the associated costs, refer to Microsoft documentation. The Premium tier does not offer any additional value in combination with Mendix on Azure and is not recommended. | Yes |
 
+### Redundancy
+
+| Advanced Option | Description | Editable after Initial Creation |
+| --- | --- | --- |
+| Application Layer Redundancy | Defines Azure Availability Zones for AKS node pools to enhance resilience by distributing nodes across zones. | Yes |
+| Database Layer Redundancy | Configures high availability (HA) for the PostgreSQL database by setting the Azure Availability Zone for the standby replica. **HA Modes**: **SameZone** (Primary and standby in the same zone, protects against instance failure); **ZoneRedundant** (Primary and standby in different zones protects against zone-wide failures). | Yes |
+| Storage Layer Redundancy | Defines the data replication strategy for the application's storage account to ensure durability and availability. **Options**: **LRS** (Locally Redundant Storage, 3 copies in one datacenter in the same region); **ZRS** (Zone-Redundant Storage, 3 copies across 3 availability zones in the same region); **GRS** (Geo-Redundant Storage, 3 LRS copies in the primary region and 3 asynchronous copies in the paired secondary region);  **RA-GRS** (Read-Access Geo-Redundant Storage, GRS with read access to the secondary region); **GZRS** (Geo-Zone-Redundant Storage, ZRS in the primary region and 3 asynchronous copies in the paired secondary region); **RA-GZRS** (Read-Access Geo-Zone-Redundant Storage, GZRS with read access to the secondary region). **Upgrade Paths (No Recreation)**: - LRS → GRS → RA-GRS - ZRS → GZRS → RA-GZRS | Yes |
+| Backup Storage Redundancy | Specifies the replication strategy for the backup storage account. **Options**: Same as application storage redundancy (LRS, ZRS, GRS, RA-GRS, GZRS, RA-GZRS). | Yes |
+
+#### Restrictions and Limitations when Editing a Cluster
+
+The following restrictions and limitations apply:
+
+* You cannot change the database layer cannot change from Zone Redundant to Same Zone. You must first disable High Availability (HA), and then enable it with Same Zone.
+* You cannot change the database layer to HA and the Postgres Compute tier to Burstable during same edit. You must first upgrade to GP/MO, and then enable HA in the next edit.
+* You can only upgrade the storage layer and backup layer redundancy in the following ways:
+
+    * LRS → GRS → RAGRS
+    * ZRS → GZRS → RAGZRS
+
+{{< figure src="/attachments/deployment/mx-azure/infraredundancy.png" class="no-border" >}}
+
 ### Database Settings
 
 | Advanced Option | Description    | Editable after initial creation |

@@ -203,7 +203,7 @@ It is possible to use more complex expressions in `SELECT`. This is explained in
 
 It is also possible to use a subquery. See [Subquery in `SELECT`](/refguide/oql-clauses/#subquery-in-select) for more details.
 
-### Selecting Attributes over Associations
+### Selecting Attributes over Associations {#longpath}
 
 A unique feature of OQL is the ability to access attributes of associated objects using paths. For example:
 

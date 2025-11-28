@@ -260,24 +260,30 @@ In the **Provisioning** section of the SCIM server configuration, you need to co
     * By default, the value is set to ***Internal***.
 * **Attribute Mapping**: under **Attribute Mapping**, select an **IdP Attribute** (claim) for each piece of information you want to add to your custom user entity. Specify the **Configured Entity Attribute** where you want to store the information.
 
-Note the following:
+    Note the following:
 
-* You cannot use the IdP claim which is the primary attribute identifying the user and you cannot use the attribute you set in **The attribute where the user principal is stored**.
-* You can map only one IdP claim to a **Custom user Entity** attribute.
-* The **IdP Attribute** is one of the fixed claims supported by the SCIM module.
-* **IdP attribute** (Claim) cannot be of type enum, autonumber, or an association.
-* Use custom logic in the **User Provisioning** (Optional) – In **Custom UserProvisioning**, select a microflow you want to run for custom user provisioning.
+    * You cannot use the IdP claim which is the primary attribute identifying the user and you cannot use the attribute you set in **The attribute where the user principal is stored**.
+    * You can map only one IdP claim to a **Custom user Entity** attribute.
+    * The **IdP Attribute** is one of the fixed claims supported by the SCIM module.
+    * **IdP attribute** (Claim) cannot be of type enum, autonumber, or an association.
+    * Use custom logic in the **User Provisioning** (Optional) – In **Custom UserProvisioning**, select a microflow you want to run for custom user provisioning.
 
-The custom microflow name must begin with the string `UC_CustomProvisioning`. Starting from version 4.0.0, you can find a reference microflow (`SCIM.UC_CustomProvisioning`) in the **MOVE ME** folder. The custom microflow requires the following parameters:
+* The custom microflow name must begin with the string `UC_CustomProvisioning`. Starting from version 4.0.0, you can find a reference microflow (`SCIM.UC_CustomProvisioning`) in the **MOVE ME** folder. The custom microflow requires the following parameters:
 
-1. **UserInfoParameter(UserCommons.UserInfoParam)**: A Mendix object containing user claims information through its associated objects. You can use this  parameter to retrieve user provisioning configuration information.
-2. **User(System.User)**: A Mendix object representing the user to be provisioned. Ensure that the selected microflow matches this parameter signature.
+    1. **UserInfoParameter(UserCommons.UserInfoParam)**: A Mendix object containing user claims information through its associated objects. You can use this  parameter to retrieve user provisioning configuration information.
+    2. **User(System.User)**: A Mendix object representing the user to be provisioned. Ensure that the selected microflow matches this parameter signature.
 
-The microflow must return a **System.User** object to ensure proper user provisioning and updates. It will be executed after user creation or update of user. However, starting from version 2.0.0 of the UserCommons module, this is no longer mandatory. If you have added a new microflow, you need to refresh the module containing your microflow as described in the [Mx Model Reflection](/appstore/modules/model-reflection/).
+    The microflow must return a `System.User` object to ensure proper user provisioning and updates. It will be executed after user creation or update of user. However, starting from version 2.0.0 of the UserCommons module, this is no longer mandatory. If you have added a new microflow, you need to refresh the module containing your microflow as described in the [Mx Model Reflection](/appstore/modules/model-reflection/). The selection can be blank if you do not want to add custom logic.
+
+* To facilitate upcoming enhancements to the platform, you need to perform some configuration so that Mendix can correctly identify end users. Correct identification is crucial for ensuring consistent and accurate end user metering and deduplication of end users across multiple applications in your landscape. For this reason, the UserCommons module features the **User Metering Named Identifier** entity in version 2.2.0 and above. If you have a multi-app internal user license or an external user license, you must persist the same value for the same end user across different apps, regardless of which modules you use. In most cases, the end user's email address is a good choice. Currently, Mendix uses the `system.user.name` to identify users, it will use the **User Metering Named Identifier** instead, unless it is not populated. For accurate user metering, you do not need to change what value is persisted in the `system.user.name`. You can continue to persist whatever value you are using there today. The `system.user.name` is often used for technical user identifiers. Both `system.user.name` and `userCommons.NamedUserIdentifier.value` have a uniqueness constraint for the named user identifier. This means an app cannot have two users who share the same identifier value.
+
+    * If you want to use a user attribute other than email address for the **User Metering Named Identifier**, you can configure it on the **UserProvisioning** tab:
+
+    * Select the identifier in the **User Metering Named Identifier** field to be used for metering.
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/scim/user-commons.png" >}}
 
-This selection can be blank if you do not want to add custom logic. Save this configuration. Double-click on the **Alias** name and you will be able to copy the generated **API Key**.
+Save this configuration. Double-click on the **Alias** name and you will be able to copy the generated **API Key**.
 
 ### Deploy-time Configuration {#deploy-time}
 

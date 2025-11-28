@@ -7,15 +7,19 @@ weight: 15
 
 ## Introduction
 
-This how-to describes how you can add a menu that contains submenus, some of which also contain submenus of their own. Before you start this how-to, it is recommended to [Create a Menu Extension Using C#](/apidocs-mxsdk/apidocs/csharp-extensibility-api-10/create-menu-extension/) first.
+This how-to describes how to add a menu that contains sub-menus, some of which also contain sub-menus of their own. 
 
 You can download the example in this how-to in [this GitHub repository](https://github.com/mendix/ExtensionAPI-Samples).
 
+## Prerequisites
+
+This how-to uses the results of [Create a Menu Extension Using C#](/apidocs-mxsdk/apidocs/csharp-extensibility-api-10/create-menu-extension/). Complete that how-to before starting this one.
+
 ## Creating Menu Extension Class
 
-1. Open the project that you previously created when you followed [Create a Menu Extension Using C#](/apidocs-mxsdk/apidocs/csharp-extensibility-api-10/create-menu-extension/).
-2. Add a new class to the project and name it `MyMenuExtension.cs`.
-3. Replace the code in the file with the following code:
+1. Open the project you created when following [Create a Menu Extension Using C#](/apidocs-mxsdk/apidocs/csharp-extensibility-api-10/create-menu-extension/).
+2. Add a new class to the project and name it *MyMenuExtension.cs*.
+3. Replace the code in the file with the following:
 
     ```csharp
     using Mendix.StudioPro.ExtensionsAPI.UI.Menu;
@@ -57,10 +61,41 @@ You can download the example in this how-to in [this GitHub repository](https://
     }
     ```
 
-The code above creates a single menu, `Beverages`, which contains the submenus `Hot` and `Cold`, both of which contain some submenus. Note that when you are creating this menu structure, you only return the main parent menu (in this example, the `Beverages` menu) from the `GetMenus` method. You should only return the topmost parents in your list, so only the ones that do not have a parent should be returned. In the example above, there is only one.
+### Menu Structure Overview
 
-If an app contains one or more extensions, a top-level menu named `Extensions` will appear in the main menu bar of Studio Pro. Menus that are created from `MenuExtension` implementations will be grouped by their extension entry point name (in this example, `MyCompany`), and then placed under their own dedicated submenu under the main `Extensions` top-level menu. For example, the `MyMenuExtension` above will be placed as follows: **Extensions** > **MyCompany** > **MyMenuExtension**.
+The code above creates a single menu, `Beverages`. This menu contains the following:
 
-A menu can only be a parent (namely, a menu that contains submenus) or have an action. You cannot create a menu with an action which also contains submenus.
+* `Beverages` contain two sub-menus: `Hot` and `Cold`
+* `Hot` contains `Coffee` and `Tea`
+* `Coffee` contains `Black Coffee`, `Decaf`, and `Espresso` 
+* `Espresso` contains `Regular Espresso` and `Ristretto` 
+* `Cold` contains `Soda`
 
-You can add a `MenuSeparator` to a menu, via the `Separator` property. Options are `After`, `Before` or `None`. The default value is `None`. You can also disable a menu by setting its `IsEnabled` property to `false`. Menus are enabled by default.
+Only the top-most parent menu (`Beverages`) is returned from the `GetMenus` method. You should only return menus that do not have a parent.
+
+### Menu Placement
+
+If an app contains one or more extensions, a top-level menu named `Extensions` will appear in the main menu bar of Studio Pro. 
+
+Menus that are created from `MenuExtension` implementations are grouped by their extension entry point name (in this example, `MyCompany`), and are placed under a dedicated sub-menu. For example, `MyMenuExtension` will be placed as follows: **Extensions** > **MyCompany** > **MyMenuExtension**.
+
+### Menu Properties
+
+A menu can either:
+
+* Be a parent (a menu that contains sub-menus), or 
+* Have an action
+
+You cannot create a menu that both contains sub-menus and has an action.
+
+#### Separators
+
+You can add a `MenuSeparator` to a menu using the `Separator` property. The options include:
+
+* `After`
+* `Before` 
+* `None` (default). 
+
+#### Enabling and Disabling Menus
+
+Menus are enabled by default. To disable a menu, set its `IsEnabled` property to `false`.

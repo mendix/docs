@@ -36,13 +36,14 @@ Apps running in Mendix Cloud are subject to certain limitations. These behaviors
     * Update all Marketplace modules to the latest version. Older versions may not close file connections correctly.
     * Increase the number of available file connections (the default is 50) by adding the **com.mendix.storage.s3.MaxConnections** setting in the environment's Custom Runtime Settings. You can access this by going to the **Runtime** tab on the [Environment Details](/developerportal/deploy/environments-details/) page. For more information, see the [S3 Storage Service Settings](/refguide/custom-settings/#amazon-s3-storage-service-settings) section of the *Runtime Customization* page.
 
-## HTTP Headers, Responses, and REST Connections
+## HTTP Connections and Timeouts
 
 * **Call REST** connections are eventually closed by the cloud infrastructure if left idle. This is because Mendix Cloud uses AWS NAT gateways for outgoing traffic, and these gateways drop connections that are idle for more than 350 seconds.
     * Mendix recommends [setting the timeout](/refguide/call-rest-action/#timeout) for calls to consumed REST or web services to less than 350. Set the timeout to a higher value only if you are sure that traffic will go back and forth at least every 350 seconds.
     * If you have a REST or web service call that will be idle (waiting) for 350 seconds or more, try to minimize the wait time. For example, you could make multiple requests for smaller amounts of data instead of a single request for a large amount of data, or you could make the call asynchronously.
-
+* Mendix recommends [using the asynchronous microflow call type](/refguide/on-click-event/#microflow-call-type) for microflows that are expected to run longer than 5 seconds. Mendix Cloud has a timeout for inactive HTTP connections, closing these connections automatically. This might result in a microflow being executed multiple times, if the synchronous call takes a long time to finish.
 * The Mendix Cloud web server replaces any custom `ReasonPhrase` on an HTTP response (returned by, for example, a published REST service) with a standard reason phrase. For example, for status code `200`, any custom `ReasonPhrase` that you set will be replaced by `OK`.
+* Request header names are case-insensitive, as defined by [RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html#sec4.2). This means that headers such as `X-Header-Key`, `x-header-key`, and `X-HEADER-KEY` must be processed in the same way.
 
 ## Instance Restarts
 

@@ -26,8 +26,8 @@ General Availability means that a feature is available for all users. This type 
 | Maia: Plan — Gathering requirements with AI,<br/>bridging plan to build               | Private Beta: Mx 11.6  |
 | Maia: Text to OQL                                            | Public Beta: Q2 2025 <br/>General Availability: Q4 2025 |
 | Maia: Generate test data                                     | Private Beta: 2026   |
-| Maia for Workflows                                           | Public Beta: Mx 11.0  |
-| Maia for Microflows                                          | Public Beta: Mx 11.6 |
+| Maia for Workflows                                           | General Availability: Mx 11.0  |
+| Maia for Microflows                                          | Private Beta: Mx 11.6 |
 | Maia Feedback Story Creation (App Insights)                  | General Availability: Mx 11.0 |
 | Maia Feedback Grouping (App Insights)                        | General Availability: Mx 11.6 |
 | Maia for Pipeline Logs                                       | General Availability: Mx 11.9  |
@@ -53,10 +53,10 @@ General Availability means that a feature is available for all users. This type 
 | Studio Pro Enhancements | Included in monthly releases.<br/>Refer to release blogs. |
 | Multilingual Studio Pro and Platform: Chinese, Japanese, Korean | General Availability: Mx 11.0 |
 | Multilingual Studio Pro and Platform: Portuguese | Public Beta: Mx 11.0 |
-| Module updates while retaining customizations | General Availability: Mx 11.9 |
-| Easy comparison of revisions (textual diffing) | Public Beta: Mx 11.0 |
-| Searchable commit history | Public Beta: Mx 11.5 |
-| Pull requests | Public Beta: H2 2026 |
+| Module updates while retaining customizations | General Availability: Mx 11.12 |
+| Easy comparison of revisions (textual diffing) | Public Beta: Mx 11.7 |
+| Searchable commit history | Public Beta: Mx 11.4 <br/>General Availability: Mx 11.6 |
+| Merge Requests (aka Pull requests) | Public Beta: H2 2026 |
 | OpenTelemetry Tracing | General Availability: Mx 11.6 |
 | Atlas 4 UI Framework | General Availability: Mx 11.0 |
 | Progressive Web Apps Store Publishing | Public Beta: Mx 11.6 |
@@ -81,10 +81,11 @@ General Availability means that a feature is available for all users. This type 
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Workflow Groups | Public Beta: Mx 11.1 |
+| Workflow Groups | General Availability: Mx 11.6 |
 | Dynamic Case Management | Private Beta: Mx 11.3 + Mx 10.24 |
-| Global Inbox | Public Beta: Mx 11.6 |
-| Ad-hoc tasks/event subprocesses | Public Beta: Mx 11.6 |
+| Global Inbox | Public Beta: Mx 11.9 |
+| Workflow Event Subprocesses | Public Beta: Mx 11.6 |
+| Workflow Message Events | General Availability Mx 11.9 |
 
 ## Governance
 

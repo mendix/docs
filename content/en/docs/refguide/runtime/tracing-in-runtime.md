@@ -6,7 +6,7 @@ description: "Describes how to setup and use tracing in the Mendix Runtime."
 
 ## Introduction
 
-Mendix now supports tracing via OpenTelemetry. When tracing is enabled, the runtime generates traces that help you analyze errors and performance.
+Mendix supports tracing via OpenTelemetry. When tracing is enabled, the runtime generates traces that help you analyze errors and performance.
 These traces can be sent to observability tools like [Jaeger](https://www.jaegertracing.io/) or [Datadog](https://www.datadoghq.com/).
 
 {{% alert color="warning" %}}
@@ -15,7 +15,7 @@ Tracing is currently not supported on Mendix Cloud and Mendix Cloud Dedicated.
 
 ## Generated spans
 
-The runtime generates spans for:
+The runtime generates spans for the following:
 
 * Runtime operations coming from the front end, for example, microflow calls, retrieves, commits, and deletes
 * Microflow execution within the runtime, including sub-microflow calls
@@ -26,21 +26,39 @@ The runtime generates spans for:
 
 ### Minimal Configuration {#min-configuration}
 
-Tracing can be enabled from the `App Settings` -> `Configuration` dialog. In the `Tracing` tab, you can enable tracing and specify an **Endpoint** and **Service Name**.
+You can enable tracing from the `App Settings` -> `Configuration` dialog. In the `Tracing` tab, you can enable tracing and specify an **Endpoint** and **Service Name**.
 
 {{< figure src="/attachments/refguide/runtime/tracing-in-runtime/tracing-configuration.png" >}}
 
+### Filtering
+
+{{% alert color="info" %}}
+Filtering was introduced in Mendix 11.5.0.
+{{% /alert %}}
+
+You can filter out specific traces using the `mendix.tracing.filter` system property. The specified spans and their sub-spans will be filtered out.
+
+`matchType` specifies how the name of the span is matched. The `matchType` must be set to `partial`. This checks if the span name contains the provided value.
+
+```json
+[
+  {
+    "type": "drop", "matchType": "partial", "spanName": "Loop"
+  }
+]
+```
+
 ### Testing
 
-To test the tracing you can use [Jaeger](https://www.jaegertracing.io/). For example, the all-in-one binary or Docker image. Jaeger will listen to the above endpoint by default.
+You can test the tracing using [Jaeger](https://www.jaegertracing.io/). For example, you can use the all-in-one binary or Docker image. Jaeger will listen to endpoint `http://localhost:4318/v1/traces` by default.
 
 Alternatively, you can set up the [OpenTelemetry collector](https://opentelemetry.io/docs/collector/), which will also listen to the default endpoint and can be configured to send to backends which support OpenTelemetry. Check with your APM vendor to confirm that OpenTelemetry is supported. The free online collector configuration tool [OTelBin](https://github.com/dash0hq/otelbin) can help with collector configuration.
 
 ### All settings
 
-Below we list the ones that are supported by the Mendix runtime. See [Configure the SDK](https://opentelemetry.io/docs/languages/java/configuration/#environment-variables-and-system-properties) for a reference on the settings that are prefixed with `otel.`.
+The following settings are supported by the Mendix runtime. See [Configure the SDK](https://opentelemetry.io/docs/languages/java/configuration/#environment-variables-and-system-properties) for more information about the settings that are prefixed with `otel.`.
 
-The Java Agent can be configured through system properties, which can be added to the **Extra JVM parameters** field (for example, `-Dotel.exporter.otlp.traces.endpoint`), or set through environment variables. 
+You can configure the Java Agent through system properties which can be added to the **Extra JVM parameters** field (for example, `-Dotel.exporter.otlp.traces.endpoint`), or set through environment variables. 
 
 | Name | Description | Default |
 |------|-------------|---------|
@@ -57,7 +75,7 @@ The Java Agent can be configured through system properties, which can be added t
 
 ## Enabling Tracing for Deployed Applications
 
-To enable tracing for your deployed Mendix application, configure the following JVM parameters:
+You enable tracing for your deployed Mendix application, by the following JVM parameters:
 
 ```
 -javaagent:mxinstallation/runtime/agents/opentelemetry-javaagent.jar
@@ -99,20 +117,20 @@ Replace `MyServiceName` with a meaningful identifier for your service, and `coll
 
 ## Sending Traces to Datadog
 
-There are two options for exporting OpenTelemetry traces to Datadog: 
+You can export OpenTelemetry traces to Datadog using one of the following two ways: 
 
 * Datadog Distribution of OpenTelemetry (DDOT) 
 * OpenTelemetry Collector
 
 ### Datadog Distribution of OpenTelemetry (DDOT)
 
-DDOT can be deployed to Kubernetes or Linux (Preview). The default setup provides minimal configuration, allowing it to receive OpenTelemetry traces or logs from your Mendix app and send them to Datadog. With this default configuration, the collector listens on the same ports as your Mendix application.
+You can deploy DDOT to Kubernetes or Linux (Preview). The default setup provides minimal configuration, allowing it to receive OpenTelemetry traces or logs from your Mendix app and send them to Datadog. With this default configuration, the collector listens on the same ports as your Mendix application.
 
 For installation instructions, refer to the official [DDOT documentation](https://docs.datadoghq.com/opentelemetry/setup/ddot_collector/install).
 
 ### OpenTelemetry Collector
 
-The OpenTelemetry Collector can be installed on various operating systems, including Windows, macOS, and Linux. 
+You can install the OpenTelemetry Collector on various operating systems, including Windows, macOS, and Linux. 
 
 To use the OpenTelemetry Collector with Datadog, follow these steps:  
 

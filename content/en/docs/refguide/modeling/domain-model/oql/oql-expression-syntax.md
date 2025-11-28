@@ -676,7 +676,7 @@ This does not apply to the `=` and `!=` operators. Handling of `NULL` in [other 
 
 In some databases, using `STRING` type variables in place of numeric, `DATETIME` or `BOOLEAN` values in operators and functions that explicitly require those types, causes the database to perform an implicit conversion. A common example would be the use of a `STRING` representation of a `DATETIME` variable inside a `DATEPART` function. Mendix recommends that you always [cast](#cast) strings to the exact type the operator or functions.
 
-## Functions
+## Functions {#functions}
 
 These are the currently supported functions:
 

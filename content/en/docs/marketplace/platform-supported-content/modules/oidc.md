@@ -581,18 +581,24 @@ Fields below are available in the **UserProvisioning** tab for the User Provisio
 * **User Type** – this allows you to configure end-users of your application as internal or external. It is created upon the creation of the user and updated each time the user logs in.
     * By default, the value is set to ***Internal***.
 
-Under **Attribute Mapping**, for each piece of information you want to add to your custom user entity, select an **IdP Attribute** (claim) and specify the **Configured Entity Attribute** where you want to store the information.
+* Under **Attribute Mapping**, for each piece of information you want to add to your custom user entity, select an **IdP Attribute** (claim) and specify the **Configured Entity Attribute** where you want to store the information.
 
-Note the following:
+    Note the following:
 
-* You cannot use the IdP claim which is the primary attribute identifying the user and you cannot use the attribute you set in **The attribute where the user principal is stored**.
-* You can map only one IdP claim to a Custom user Entity attribute.
-* The **IdP Attribute** is one of the fixed claims supported by the OIDC SSO module.
-* IdP Attributes(Claims) cannot be of type enum, autonumber, or an association.
+    * You cannot use the IdP claim which is the primary attribute identifying the user and you cannot use the attribute you set in **The attribute where the user principal is stored**.
+    * You can map only one IdP claim to a Custom user Entity attribute.
+    * The **IdP Attribute** is one of the fixed claims supported by the OIDC SSO module.
+    * IdP Attributes(Claims) cannot be of type enum, autonumber, or an association.
 
-Optionally, you can select the microflow in the **Custom UserProvisioning** field to use custom logic for user provisioning. For more information, see the [User Provisioning Using a Microflow at Runtime](#microflow-at-runtime) section below.
+* Optionally, you can select the microflow in the **Custom UserProvisioning** field to use custom logic for user provisioning. For more information, see the [User Provisioning Using a Microflow at Runtime](#microflow-at-runtime) section below.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/default_provisioning.png" >}}
+* To facilitate upcoming enhancements to the platform, you need to perform some configuration so that Mendix can correctly identify end users. Correct identification is crucial for ensuring consistent and accurate end user metering and deduplication of end users across multiple applications in your landscape. For this reason, the UserCommons module features the **User Metering Named Identifier** entity in version 2.2.0 and above. If you have a multi-app internal user license or an external user license, you must persist the same value for the same end user across different apps, regardless of which modules you use. In most cases, the end user's email address is a good choice. Currently, Mendix uses the `system.user.name` to identify users, it will use the **User Metering Named Identifier** instead, unless it is not populated. For accurate user metering, you do not need to change what value is persisted in the `system.user.name`. You can continue to persist whatever value you are using there today. The `system.user.name` is often used for technical user identifiers, for example, the `oid` value when using the OIDC SSO module. For more information, see [Guidance on User Identifier](#guidance-user-identifier). Both `system.user.name` and `userCommons.NamedUserIdentifier.value` have a uniqueness constraint for the named user identifier. This means an app cannot have two users who share the same identifier value.
+
+    * If you want to use a user attribute other than email address for the **User Metering Named Identifier**, you can configure it on the **UserProvisioning** tab:
+
+    * Select the identifier in the **User Metering Named Identifier** field to be used for metering. Click **Save** to save the configuration.
+
+{{< figure src="/attachments/appstore/platform-supported-content/modules/oidc/default-provisioning.png" >}}
 
 {{% alert color="info" %}}
 If you are using module version 3.2.0 and below, you will need to refresh the module containing your microflow as described in the [Installing Mx Model Reflection](/appstore/modules/oidc/#mxmodelreflection) and select the microflow in the **Custom UserProvisioning** field.

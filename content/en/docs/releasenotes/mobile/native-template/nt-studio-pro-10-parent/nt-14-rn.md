@@ -5,6 +5,18 @@ weight: 6
 description: "Native Template 14"
 ---
 
+## 14.1.8 {#1418}
+
+**Release date: November 21, 2025**
+
+### Improvements
+
+* We updated the `react-native-firebase` to v20.1.0 with BOM v33.1.1, adding support for 16KB page size alignment.
+
+### Fixes
+
+* We have migrated to `react-native-vision-camera` to fix barcode scanner issues on Android.
+
 ## 14.1.7 {#1417}
 
 **Release date: October 27, 2025**

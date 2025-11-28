@@ -16,6 +16,14 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2025
 
+### November 23, 2025
+
+#### New Features
+
+* We have introduced [Version Pinning](/developerportal/deploy/version-pinning/) for deployment components on Kubernetes to ensure consistency across customer environments and avoid unexpected deployment behavior. You can use this feature by promoting an application from one environment to a higher environment.
+
+* It is now possible to deploy Mendix applications with [Zero-Downtime](/developerportal/deploy/zero-downtime/) without any service interruption in certain cases. You can enable this by selecting the **Deploy without downtime** option in the **Options Tab** of the [Deploy Wizard](/developerportal/deploy/environments/#deploy-wizard). This feature applies to changes that do not rebuild or replace your app package.
+
 ### November 9, 2025
 
 #### New Features

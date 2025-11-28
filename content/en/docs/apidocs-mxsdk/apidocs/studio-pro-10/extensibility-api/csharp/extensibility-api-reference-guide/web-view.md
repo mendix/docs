@@ -7,20 +7,19 @@ weight: 12
 
 ## Introduction
 
-In all places where the Studio Pro Extensibility API allows you to add custom UI, you can use web technology to implement the UI.
+Wherever the Studio Pro Extensibility API allows you to add custom UI, you can implement it using web technologies.
 
-Studio Pro contains a built-in web view that you can leverage to show your web-based UI.
-Studio Pro also contains a built-in web server that can be used to serve the web UI, as well as to serve data to the web UI.
+Studio Pro includes a built-in web view for displaying your web-based UI. It also provides a built-in web server that can be used to serve both the web UI and the data it requires.
 
-In addition, there is a two-way message passing mechanism for direct communication between the web content and the C# part of your extension.
+Additionally, a two-way message passing mechanism enables direct communication between the web content and the C# part of your extension.
 
 ## Showing a Web View in the UI
 
-There are a number of places where the Studio Pro Extensibility API allows you to add custom UI.
+There are a number of places where the Extensibility API allows you to add custom UI.
 
-Typically, the Extensibility API requires you to return a view model for your UI, and for every view model type, there is a corresponding base class for showing the UI in a web view.
+Typically, the Extensibility API requires you to return a view model for your UI. Every view model type has a corresponding base class used to display the UI in a web view.
 
-The following table shows the APIs that allow you to add custom UI, and the corresponding view model base class:
+The following table lists the APIs that allow you to add custom UI and the corresponding view model base class:
 
 | UI element                     | API for adding UI                        | Base class for view model      |
 |--------------------------------|------------------------------------------|--------------------------------|

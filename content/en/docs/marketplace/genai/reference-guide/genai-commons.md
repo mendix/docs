@@ -53,11 +53,9 @@ Traceability was introduced in version 5.3.0 of the GenAI Commons module.
 
 By default, the chat completions operations of GenAI Commons store data in your application's database for traceability reasons. This makes it easier to understand the usage of GenAI in your app and why the model behaved in a certain way, for example, by reviewing tool usage. Trace data is only persisted if the constant `StoreTraces` is set to *true*. 
 
-As traces may contain sensitive and personally identifiable information, you should determine, on a case-by-case basis, whether storing this data is compliant.
+As traces may contain sensitive and personally identifiable information, you should determine, on a case-by-case basis, whether storing this data is compliant. To enable read-access to a user (typically an admin user), grant the module role `TraceMonitoring` to the applicable project roles.
 
 To clean up trace data in a deployed app, you can enable the daily scheduled event `ScE_Trace_Cleanup` in the [Mendix Cloud Portal](https://genai.home.mendix.com/). Use the `Trace_CleanUpAfterDays` constant to control the retention period of the trace data.
-
-Currently, there are no out of the box UI snippets or building blocks available to view the traces. A future release will include them. For now, you can just add a data grid to any page to display the data. To enable read-access to a user (typically an admin user), grant the module role `TraceMonitoring` to the applicable project roles.
 
 ## Technical Reference {#technical-reference}
 
@@ -67,7 +65,7 @@ The technical purpose of the GenAI Commons module is to define a common domain m
 
 The domain model in Mendix is a data model that describes the information in your application domain in an abstract way. For more general information, see the [Data in the Domain Model](/refguide/domain-model/) documentation. To learn about where the entities from the domain model are used and relevant during implementation, see the [Microflows](#microflows) section below.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genaicommons/GenAICommonsDM.png" alt="" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genaicommons/GenAICommons_domain_model.png" >}}
 
 #### `DeployedModel` {#deployed-model}
 
@@ -142,6 +140,7 @@ The data stored in this entity is to be used later on for traceability use cases
 | `DurationMilliseconds` | The duration between the start and end of the whole model invocation. |
 | `Input` | The initial input of the model invocation (usually a user prompt). |
 | `Output` | The response of the final message sent by the model (usually an assistant message). |
+| `SystemPrompt` | The system prompt that was used for the model invocation. |
 | `HasError` | Indicates if any span call has failed. |
 | `_AgentVersionId` | The id of the agent version (if applicable) as sent via the request. |
 | `_ConversationId` | The id of the conversation (if applicable) as sent via the request. This is usually created by the model provider. |
@@ -150,22 +149,21 @@ The data stored in this entity is to be used later on for traceability use cases
 
 A span is created for each interaction between Mendix and the LLM (such as chat completions, tool calling, etc.). The generalized object is typically not used; instead, its specializations are used.
 
-`Span` was introduced in version 5.3.0.
-
 | Attribute | Description |
 | --- | --- |
 | `SpanId` | The span ID is set internally to identify a span. |
 | `StartTime` | The start time of the model invocation. |
 | `EndTime` | The end time after the model invocation is completed. |
 | `DurationMilliseconds` | The duration between the start and end of the whole model invocation. |
+| `Input` | The input of the span. |
 | `Output` | The output of the span. |
 | `IsError` | Indicates if the call failed. If so, the span's output will contain the error message that was also logged. |
+
+`Span` was introduced in version 5.3.0.
 
 #### `ModelSpan` {#model-span}
 
 A model span is created for each interaction between Mendix and the LLM where content is generated (sent as the assistant's message). Typically, this is a request for text generation. In addition to the [Span's](#span) attributes, it also contains the following:
-
-`ModelSpan` was introduced in version 5.3.0.
 
 | Attribute | Description |
 | --- | --- |
@@ -173,30 +171,42 @@ A model span is created for each interaction between Mendix and the LLM where co
 | `OutputTokens` | Number of tokens in the generated response. |
 | `_DeploymentIdentifier` | Internal object used to identify the `DeployedModel` that was used. |
 
+`ModelSpan` was introduced in version 5.3.0.
+
 #### `ToolSpan` {#tool-span}
 
 A tool span is created for each tool call requested by the LLM. The tool call is processed in GenAI Commons, and the result is sent back to the model. In addition to the [Span's](#span) attributes, it also contains the following:
 
-`ToolSpan` was introduced in version 5.3.0.
-
 | Attribute | Description |
 | --- | --- |
 | `ToolName` | The name of the tool that was called. |
+| `ToolDescription` | The description of the tool. |
 | `_ToolCallId` | The ID of the tool call used by the model to map an assistant message containing a tool call with the output of the tool call (tool message). |
-| `Input` | The input of the tool call as passed by the LLM. |
+
+`ToolSpan` was introduced in version 5.3.0.
 
 #### `KnowledgeBaseSpan` {#knowledge-base-span}
 
-A knowledge base span is created for each knowledge base retrieval tool call requested by the LLM. The tool call is processed in GenAI Commons, and the result is sent back to the model. It does not contain any additional attributes compared to [ToolSpan](#tool-span).
-
-`KnowledgebaseSpan` was introduced in version 5.3.0.
+A knowledge base span is created for each knowledge base retrieval tool call requested by the LLM. The tool call is processed in GenAI Commons, and the result is sent back to the model. In addition to the [ToolSpan's](#tool-span) attributes, it also contains the following:
 
 | Attribute | Description |
 | --- | --- |
-| `ToolName` | The name of the tool that was called. |
-| `_ToolCallId` | The ID of the tool call used by the model to map an assistant message containing a tool call with the output of the tool call (tool message). |
-| `Input` | The input of the tool call as passed by the LLM. |
-| `IsError` | Indicates if the tool call failed. If so, the span's output will contain the error message that was also logged and sent to the LLM as a tool result. |
+| `Architecture` | The architecture of the knowledge base, defined by the [DeployedKnowledgeBase](#deployed-knowledge-base) specialization. |
+| `MinimumSimilarity` | The minimum similarity score that was specified during the retrieval (usually 0,0 - 1,0). |
+| `MaxNumberOfResults` | The maximum number of results that was specified during the retrieval. |
+| `KBDisplayName` | The display name of the deployed knowledge base that was specified during the retrieval. |
+
+`KnowledgebaseSpan` was introduced in version 5.3.0.
+
+#### `MCPSpan` {#mcp-span}
+
+An MCP span is created for each tool invocation over the Model Context Protocol via the [MCP Client module](/appstore/modules/genai/mcp-modules/mcp-client/). The tool call is processed on the MCP server, usually outside of this application, and the result is sent back to the model. In addition to the [ToolSpan's](#tool-span) attributes, it also contains the following:
+
+| Attribute | Description |
+| --- | --- |
+| `ServerName` | The name of the server where the tool resides. |
+
+`MCPSpan` was introduced in version 5.4.0.
 
 #### `Request` {#request} 
 
@@ -254,6 +264,7 @@ A tool in the tool collection. This is sent along with the request to expose a l
 | `Description` | An optional description of the tool, used by the model in addition to the name attribute to choose when and how to call the tool. | 
 | `ToolType` | The type of the tool. Refer to the documentation supplied by your AI provider for information about the supported types. |
 | `Microflow` | The name (string) of the microflow that this tool represents. |
+| `MCPServerName` | The name of the MCP server (only appliable for MCP Tools). |
 
 #### `Function` {#function}
 

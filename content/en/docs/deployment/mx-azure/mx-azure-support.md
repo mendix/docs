@@ -228,6 +228,10 @@ To ensure consistent and prioritised support, we classify issues based on the fo
 | Medium | Next business day | Best effort | Non-production environments (Test or Acceptance) experience significant disruption to operational functionality. Operational functionality in production is moderately impacted but not critical. |
 | Low | Reasonable effort | Best effort | Minor issues with minimal impact on operational functionality. Cosmetic issues, minor performance degradation, or general inquiries. |
 
+{{% alert color="warning" %}}  
+The above SLA differs from the standard Mendix Platform Support SLA, as issues related to Mendix on Azure are resolved on a best-effort basis.
+{{% /alert %}}
+
 ## Off-boarding from the Service
 
 Customers can completely off-board from the service by deleting the Managed Application from their Azure subscription (for example by using the Azure Portal). This will immediately perform the following actions:

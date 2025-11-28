@@ -10,6 +10,16 @@ These release notes cover changes to deployment to [Mendix on Azure](/developerp
 
 For information on the current status of Mendix deployment, see [Mendix Status](https://status.mendix.com/).
 
+### Release date: November 27, 2025
+
+* Operator, Agent, Build, Sidecars, and NGINX logs are now directly accessible within Grafana for monitoring and troubleshooting.
+* We have introduced a new Infrastructure Redundancy configuration option, available during cluster initialization and cluster edit, to enhance resilience and provide clearer control over VM, Storage, and Database redundancy.
+* We have fixed an issue where Terraform apply fails when Read replica is enabled. (Ticket 458)
+
+### Known issues:
+
+* In some scenarios, the initialized cluster may be visible to other users under the same subscription immediately after creation, depending on the logged-in account. We are actively working on a fix for this issue.
+
 ### Release date: November 6, 2025
 
 * We have resolved an issue where the AKS Node VM Size field sometimes appeared empty if the corresponding Microsoft endpoint was unavailable. Now, in such cases, the field will not be available for selection, and the value chosen during the cluster's initialization will be automatically considered.

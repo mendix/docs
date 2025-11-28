@@ -7,7 +7,7 @@ weight: 60
 ---
 ## Introduction
 
-{{% alert color="warning" %}}This tool is provided as-is, and no additional features or enhancements will be implemented in the future. {{% /alert %}}
+{{% alert color="warning" %}}This tool is provided as-is, and no additional features or enhancements will be implemented in the future. If you want to migrate data, we recommend that you reach out to Expert Services, or use [MendixOnAzure](/developerportal/deploy/mendix-on-azure/backups/).{{% /alert %}}
 
 The Mendix on Kubernetes data migration tool allows you to:
 
@@ -161,7 +161,7 @@ spec:
   terminationGracePeriodSeconds: 0
   containers:
   - name: pgtools
-    image: docker.io/bitnami/postgresql:12
+    image: docker.io/library/postgresql:12
     command: ["sleep", "infinity"]
     lifecycle:
       preStop:
@@ -223,7 +223,7 @@ If you need to export or import data from an environment that uses AWS IRSA auth
 4. Add the `eks.amazonaws.com/role-arn` annotation to the `mendix-backup-restore` service account and set it to the role ARN value from the previous step.
 
 This configuration creates a pod which includes `pgtools` (PostgreSQL tools such as `pg_dump` and `pg_restore`), and a Service Account that can get the database credentials from an environment.
-If your database is using another PostgreSQL version (for example, PostgreSQL 13), change the `image: docker.io/bitnami/postgresql:12` to match the target PostgreSQL version (for example, `docker.io/bitnami/postgresql:13`).
+If your database is using another PostgreSQL version (for example, PostgreSQL 13), change the `image: docker.io/library/postgresql:12` to match the target PostgreSQL version (for example, `docker.io/library/postgresql:13`).
 
 {{% alert color="warning" %}}
 Before importing a backup file into an environment, the environment should be stopped (scaled down to 0 replicas).

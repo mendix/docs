@@ -23,13 +23,49 @@ One of the most important components for generative AI is the Large Language Mod
 For example, you can use an LLM to do:
 
 * **Text Generation:** Creating coherent and contextually relevant text from a prompt.
-* **Content Creation:** Assisting in writing articles, stories, and marketing copy.
-* **Translation:** Translating text from one language to another.
-* **Summarization:** Condensing long documents into concise summaries.
-* **Conversational Interaction:** Powering chatbots and virtual assistants to interact naturally with users.
 * **Data Generation:** Generating Mendix objects by combining JSON generation and [Import mappings](/refguide/import-mapping-action/).
 
+### Typical LLM Use Cases {#llm-use-cases}
+
+#### Text Generation
+
+* Develop interactive AI chatbots and virtual assistants that can carry out conversations naturally and engagingly.
+* By using text generation models, you can build applications with features such as:
+
+    * Draft documents (for example, content creation: Assist in writing articles, stories, and marketing copy)
+    * Write computer code
+    * Answer questions about a knowledge base or (large) texts
+    * Analyze texts
+    * Give software a natural language interface
+    * Tutor in a range of subjects
+    * Translate languages
+    * Simulate characters for games
+ 
 Some LLMs, such as [Anthropic Claude](/appstore/modules/aws/amazon-bedrock/) and [GPT-4o](/appstore/modules/genai/openai/), can also use one or more images as input, allowing you to ask questions about images for use cases such as object recognition, image to text (OCR), and validating whether an image is as intended.
+ 
+#### Embeddings Generation
+
+Convert strings into vector embeddings for various purposes based on the relatedness of texts.
+
+Embeddings are commonly used for the following:
+
+* Semantic Search (Meaning-based Similarity)
+* Clustering 
+* Recommendations 
+* Anomaly detection 
+* Diversity measurement 
+* Classification 
+
+You can combine embeddings with text generation capabilities and leverage specific sources of information to create a smart chat functionality tailored to your knowledge base.
+
+#### Knowledge Base
+
+Adding knowledge bases helps to tailor response generation to specific contexts by grounding them in data. Knowledge bases can store discrete data (commonly called chunks) and relevant information for end-user actions or application processes can be retrieved from them.
+
+Knowledge bases are often used for:
+
+1. [Retrieval Augmented Generation (RAG)](/appstore/modules/genai/rag/) retrieves relevant knowledge from the knowledge base, incorporates it into a prompt, and sends it to the model to generate a response.
+2. Semantic search enables advanced search capabilities by considering the semantic meaning of the text, going beyond exact and approximate matching. It allows the knowledge base to be searched for similar chunks effectively.
 
 ### What is an LLM Not?
 

@@ -35,7 +35,7 @@ The Mendix Cloud GenAI Resource Packs provide access to the following models:
 
 The models are available through the Mendix Cloud, leveraging AWS's highly secure Amazon Bedrock multi-tenant architecture. This architecture employs advanced logical isolation techniques to effectively segregate customer data, requests, and responses, ensuring a level of data protection that aligns with global security compliance requirements. Customer prompts, requests, and responses are neither stored nor used for model training. Your data remains your data.
 
-Customers looking to leverage other models in addition to the above can also take advantage of Mendix's [(Azure) OpenAI Connector](/appstore/modules/genai/reference-guide/external-connectors/openai/) and Amazon [Bedrock Connector](/appstore/modules/genai/reference-guide/external-connectors/bedrock/) to integrate numerous other models into their apps.
+Customers looking to leverage other models in addition to the above can also take advantage of Mendix's [(Azure) OpenAI Connector](/appstore/modules/genai/reference-guide/external-connectors/openai/), Amazon [Bedrock Connector](/appstore/modules/genai/reference-guide/external-connectors/bedrock/), and [Mistral Connector](/appstore/modules/genai/reference-guide/external-connectors/mistral/) to integrate numerous other models into their apps.
 
 ### Technical Details for Model Resource Packs
 
@@ -65,30 +65,14 @@ Knowledge Bases are based on elastically scaling, serverless OpenSearch vector d
 | Memory                                | Elastic       |
 | Disk Space                            | 10 GB         |
 
-## Mendix Portal
-
-The Mendix Portal allows easy access to manage the resources, through the GenAI Resources section in the portal.
-
-* Get insight into the consumption of input/output tokens against entitlements for Models
-* Manage content for Knowledge Bases
-* Manage team access to all resources
-* Create and manage connection keys to connect your apps with all resources
-* Track activity logs for team access and connection key management
-
-## Mendix Cloud GenAI Connector
-
-The [Mendix Cloud GenAI connector](/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/) lets you utilize Mendix Cloud GenAI resource packs directly within your Mendix application. It allows you to integrate generative AI by dragging and dropping common operations from its toolbox. Note that any versions older than the ones listed below are no longer functional:  
-
-* GenAI for Mendix bundle v2.4.1 (Mendix 9) (contains Mendix Cloud GenAI connector) or
-* Mendix Cloud GenAI connector v3.1.1 (no `DeployedKnowledgeBase` support) or
-* Mendix Cloud GenAI connector v4.4.0 (`DeployedKnowledgeBase` support).
-
 ## Regional Availability
 
 Mendix Cloud GenAI Resource Packs are available in the following regions of Mendix Cloud:
 
 * Europe (Frankfurt) - eu-central-1
 * Canada (Montreal) - ca-central-1
+
+The availability of model versions depends on the selected region.
 
 ## Understanding Third-Party Requirements
 
@@ -108,6 +92,28 @@ Save these links for future reference. Always review the terms before starting d
 {{% alert color="warning" %}}
 Compliance with these terms is mandatory to maintain access to the services.
 {{% /alert %}}
+
+## More resources
+
+### Mendix Cloud GenAI Portal
+
+The [Mendix Cloud GenAI Portal](https://genai.home.mendix.com/) allows easy access to manage the resources through the GenAI Resources section of the portal.
+
+* Get insight into the consumption of input/output tokens for Text and Embeddings Generation Resources.
+* Manage content for Knowledge Bases.
+* Manage team access to all resources.
+* Create and manage connection keys to connect your apps with all resources.
+* Track activity logs for team access and connection key management.
+
+For more information, see [Navigate through the Mendix Cloud GenAI Portal](/appstore/modules/genai/mx-cloud-genai/Navigate-MxGenAI/).
+
+### Mendix Cloud GenAI Connector
+
+The [Mendix Cloud GenAI connector](/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/) lets you utilize Mendix Cloud GenAI resource packs directly within your Mendix application. It allows you to integrate generative AI by dragging and dropping common operations from its toolbox. Note that any versions older than the ones listed below are no longer functional:  
+
+* GenAI for Mendix bundle v2.4.1 (Mendix 9) (contains Mendix Cloud GenAI connector) or
+* Mendix Cloud GenAI connector v3.1.1 (no `DeployedKnowledgeBase` support) or
+* Mendix Cloud GenAI connector v4.4.0 (`DeployedKnowledgeBase` support).
 
 ## FAQ
 

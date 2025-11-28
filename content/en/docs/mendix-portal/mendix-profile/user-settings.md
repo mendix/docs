@@ -269,6 +269,10 @@ Content-Type: application/json
 
 For information on other PAT usages, see the [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/) and [Projects API](/apidocs-mxsdk/apidocs/projects-api/).
 
+{{% alert color="warning" %}}
+To ensure robust security, Mendix recommends checking the policy your company has for credential renewal and updating or regenerating your configured PAT every six months.
+{{% /alert %}}
+
 ## Personal Data
 
 On the [Personal Data](https://user-settings.mendix.com/link/notifications) page, you can view and download your personal data. The Mendix Platform stores certain personal information about you. You can view this information on the page or download it by clicking  **Download Personal Data**.

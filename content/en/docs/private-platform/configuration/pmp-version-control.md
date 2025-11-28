@@ -40,6 +40,17 @@ When the **Automatic Access Provisioning** is disabled, private platform users n
 * **User ID** - The user ID (integer number) of this GitLab user. It is not the user name. You can obtain the value from the user profile page.
 * **Personal Access Token** - The access token of this GitLab user.
 
+### Supported Predefined Push Rules
+
+Private Mendix Platform supports only the following predefined GitLab push rules:
+
+* Reject unverified users. 
+    Users can only push commits to this repository if the committer email is one of their own verified emails.
+* Reject inconsistent user names. 
+    Users can only push commits to this repository if the commit author name is consistent with their GitLab account name.
+* Check whether the commit author is a GitLab user.
+    Commits are restricted to existing GitLab users.
+
 ## GitHub
 
 This section describes the configuration of a GitHub repository.

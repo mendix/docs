@@ -229,7 +229,7 @@ This option is available when the [Enable automatic repository optimization](#op
 
 ## Work Environment Tab
 
-### Studio Pro Theme {#studio-pro-theme}
+### Theme {#studio-pro-theme}
 
 This option allows user to choose between Studio Pro themes: **Auto (System theme)**, **Light**, or **Dark**. The default is **Auto (System theme)**, which detects the theme set in the operating system and uses an appropriate theme for Studio Pro (**Light** or **Dark**). Changing this option requires a restart of Studio Pro to take effect.
 
@@ -249,9 +249,13 @@ It is recommended to limit the number of open tabs (open documents) to improve t
 The closing policy is not applied to tabs with unsaved changes.
 {{% /alert %}}
 
-### Navigation
+### Navigation {#navigation}
 
 This setting allows you to move forward and backward through your editing history to show the documents you have recently worked on. This feature is enabled by default. 
+
+### Dialogs {#dialogs}
+
+When a pop-up dialog is resized, Studio Pro will remember the new size and use it when the same dialog is opened again. This option allows you to disable this behavior and always show the dialogs at their default size.
 
 ## Advanced Tab
 

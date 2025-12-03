@@ -86,6 +86,7 @@ The finding list contains the following information:
 
     * Deprecated components: The current date - The date when the component was deprecated    
     * Outdated components: The current date - The publish date of the first higher runtime compatible version
+    * Vulnerable components: The number of days since the date when the CVSS score was computed
 
 * Column customization ({{% icon name="view" %}}) — You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
 

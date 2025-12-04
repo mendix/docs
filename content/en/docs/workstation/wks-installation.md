@@ -65,7 +65,7 @@ The Workstation Client is a connector between the devices and your local PC. You
     
     * For Linux:
         * Download the [Linux](https://marketplace.mendix.com/link/component/247459) version of the Client.
-        * Run the following command to install: `sudo apt install ./workstation_X.X.X_arm64.deb` (replace *X.X.X* with the actual version number of the downloaded .deb package).
+        * Run the following command to install: `sudo apt install ./MendixWorkstation_X.X.X.X_arm64.deb` (replace *X.X.X.X* with the actual version and build number of the downloaded .deb package).
         * Install card reader dependencies with: `sudo apt install pcscd libcap2-bin`
         * Enable card reader dependencies: `sudo systemctl enable pcscd --now`
         * Start the application from the applications menu > Accessories > Mendix Workstation.<>

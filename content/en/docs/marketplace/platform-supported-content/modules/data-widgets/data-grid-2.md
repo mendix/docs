@@ -604,9 +604,6 @@ To achieve this behavior, set the **On click trigger** to **Double click**. When
 
 When the button is placed in a grid header, the assigned action can receive the currently selected rows as a parameter.
 
-#### Header Action buttons
-Header action buttons are placed in the **Header** above the grid. These buttons are used to perform actions on selected rows.
-
 #### How Selection is passed to Actions
 When a header action button triggers a **microflow** or **nanoflow**, the selected rows are passed as input:
 

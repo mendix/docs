@@ -602,7 +602,7 @@ To achieve this behavior, set the **On click trigger** to **Double click**. When
 
 ### Selection and Header Actions
 
-Selected rows can be passed to actions triggered by buttons in the grid header.
+When the button is placed in a grid header, the assigned action can receive the currently selected rows as a parameter.
 
 #### Header Action buttons
 Header action buttons are placed in the **Header** above the grid. These buttons are used to perform actions on selected rows.

@@ -605,7 +605,7 @@ To achieve this behavior, set the **On click trigger** to **Double click**. When
 When the button is placed in a grid header, the assigned action can receive the currently selected rows as a parameter.
 
 #### How Selection is passed to Actions
-When a header action button triggers a **microflow** or **nanoflow**, the selected rows are passed as input:
+When a button placed in header triggers a **microflow** or **nanoflow**, the selected rows are passed as input:
 
 - If **Single Selection** is enabled:
   - The action receives a **single object**.

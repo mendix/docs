@@ -16,6 +16,14 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2025
 
+### December 11, 2025
+
+#### New Features
+
+* Software Composition is now enhanced with the ability to view details on components marked as **Vulnerable** and act upon them.    
+    For details, refer to [Software Composition](/developerportal/deploy/software-composition/).    
+    For background information on the Control Center options that power this new feature, refer to [Findings](/control-center/findings-tab/).
+
 ### November 23, 2025
 
 #### New Features

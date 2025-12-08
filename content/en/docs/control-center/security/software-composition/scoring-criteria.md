@@ -26,7 +26,7 @@ The types of findings that you can adjust for are **Outdated** and **Deprecated*
 
 ### Vulnerable
 
-A finding is generated when a component is published on the [Security Advisories](/releasenotes/security-advisories/) page, and it is assigned a specific CVSS score. CVSS scores are based on the [NVD Vulnerability Metrics](https://nvd.nist.gov/vuln-metrics) framework, and cannot be orverriden.
+A finding is generated when a component is published on the [Security Advisories](/releasenotes/security-advisories/) page, and is assigned a specific CVSS score. CVSS scores are based on the [NVD Vulnerability Metrics](https://nvd.nist.gov/vuln-metrics) framework, and cannot be orverriden.
 
 You can choose the combination of CVSS range and severity for which you want a component to be marked as vulnerable.
 

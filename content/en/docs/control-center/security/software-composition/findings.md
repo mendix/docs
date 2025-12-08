@@ -36,7 +36,8 @@ The findings list contains the following information:
 
 ## Finding Overview
 
-The **Finding Overview** page displays detailed information about the selected finding, as well as appropriate actions to take on it.
+The **Finding Overview** page displays detailed information about the selected finding, as well as appropriate actions to take on it.    
+To access this page, click **View Details & Edit** for a finding in the list.
 
 ### Finding Details
 
@@ -68,4 +69,5 @@ This section contains the following:
 
 * **Status** – <!-- what are the possible statuses? Active/Snoozed/Done? --> The status of the finding.    
     You can choose to ignore the finding, and come back to it after a predefined time. To do that, click **Snooze**, then select a snooze duration, and add a reason.
-* **Mendix Admin Guidance** – An AI generated text containing information about what the vulnerability is, why it is important to fix it, and how it can be fixed. You can edit this text.
+* **Mendix Admin Guidance** – An AI generated text containing information about what the vulnerability is, why it is important to fix it, and how it can be fixed.     
+    You can edit this text.

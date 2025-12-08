@@ -116,6 +116,25 @@ The page is divided into two tabs: **Findings** and **Component Usage**. For det
 * [Findings](/control-center/overview-tab/#overview-findings)
 * [Component Usage](/control-center/overview-tab/#overviw-component-usage)
 
+#### Finding and Component Details
+
+If a finding is marked as **Vulnerable**, its corresponding component has a **View Details** button. Clicking it opens a window which includes two sections:
+
+* **Finding Details** – This includes the following details:
+
+    * **Severity** – The severity of the finding, as computed on the [Scoring Criteria](/control-center/scoring-criteria-tab/) tab.
+    * **CVE-ID** – The unique ID which identifies the finding on the **Security Advisories** page.
+    * **CVSS Score** – The CVSS score, as computed based on the [NVD Vulnerability Metrics](https://nvd.nist.gov/vuln-metrics) framework.
+    * **Age** – The number of days since the date when the CVSS score was computed.
+    * **Created on** – The date when the component was created.
+    * **Description** – The reason why the component was marked as vulnerable.
+
+* **Components Details** – This includes the following details:
+
+    * **Current Version** – The version of the component affected by this finding.
+    * **Type** – The type of the component affected by this finding.
+    * **Publisher** – The entity that published the component affected by this finding.
+
 ## Components {#all-components}
 
 The **Components** tab gives an overview of all the unique components deployed in all the combined app environments. 
@@ -202,6 +221,25 @@ The finding list contains the following information:
     * Outdated components: The current date - The publish date of the first higher runtime compatible version
 
 * Column customization ({{% icon name="view" %}}) — You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
+
+##### Finding and Component Details
+
+If a finding is marked as **Vulnerable**, its corresponding component has a **View Details** button. Clicking it opens a window which includes two sections:
+
+* **Finding Details** – This includes the following details:
+
+    * **Severity** – The severity of the finding, as computed on the [Scoring Criteria](/control-center/scoring-criteria-tab/) tab.
+    * **CVE-ID** – The unique ID which identifies the finding on the **Security Advisories** page.
+    * **CVSS Score** – The CVSS score, as computed based on the [NVD Vulnerability Metrics](https://nvd.nist.gov/vuln-metrics) framework.
+    * **Age** – The number of days since the date when the CVSS score was computed.
+    * **Created on** – The date when the component was created.
+    * **Description** – The reason why the component was marked as vulnerable.
+
+* **Components Details** – This includes the following details:
+
+    * **Current Version** – The version of the component affected by this finding.
+    * **Type** – The type of the component affected by this finding.
+    * **Publisher** – The entity that published the component affected by this finding.
 
 #### Component Usage {#component-component-usage}
 

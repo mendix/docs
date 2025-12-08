@@ -30,7 +30,7 @@ This section will show you how to build and test an extension.
 ### Create a Test App
 
 1. Create a new app using the **Blank Web App** template.
-1. Install the [Studio Pro Web Extension Template](https://github.com/mendix/web-extension-template) from GitHub using the instructions in the repository.
+2. Install the [Studio Pro Web Extension Template](https://github.com/mendix/web-extension-template) from GitHub using the instructions in the repository.
 
 ### Building the Extension
 
@@ -54,7 +54,7 @@ You can explore the extension to understand what it does when it is installed. D
 
     Reading through the source code you should see the following:
 
-      a. Line 7 adds a menu
+    a. Line 7 adds a menu
 
       ```typescript
       await studioPro.ui.extensionsMenu.add({
@@ -64,24 +64,24 @@ You can explore the extension to understand what it does when it is installed. D
       });
       ```
 
-      2. Line 14 opens a tab
-   
-        ```typescript
-        // Open a tab when the menu item is clicked
-        studioPro.ui.extensionsMenu.addEventListener("menuItemActivated", (args) => {
-          if (args.menuId === "myextension.ShowTabMenuItem") {
-            studioPro.ui.tabs.open(
-              {
-                title: "My Extension Tab",
-              },
-              {
-                componentName: "extension/myextension",
-                uiEntrypoint: "tab",
-              }
-            );
-          }
-        });
-          ```
+    b. Line 14 opens a tab
+
+      ```typescript
+      // Open a tab when the menu item is clicked
+      studioPro.ui.extensionsMenu.addEventListener("menuItemActivated", (args) => {
+        if (args.menuId === "myextension.ShowTabMenuItem") {
+          studioPro.ui.tabs.open(
+            {
+              title: "My Extension Tab",
+            },
+            {
+              componentName: "extension/myextension",
+              uiEntrypoint: "tab",
+            }
+          );
+        }
+      });
+      ```
 
 When you install the extension, you will see a new menu item within Studio Pro.
 

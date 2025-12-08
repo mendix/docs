@@ -241,8 +241,9 @@ Customers can completely off-board from the service by deleting the Managed Appl
 * Delete the cluster registration from the Mendix on Azure and Mendix on Kubernetes Portals. 
 * While Mendix does have an emergency procedure available to help revive an environment and restore data in case the Managed Application gets deleted by accident, it is a higheffort manual process requiring close collaboration between Mendix and the customer. Given this, we advise customers to exercise extreme caution when deleting the Managed Application from their Azure subscription to avoid the need of this emergency procedure to be executed.
 
-## Known Limitations
+## Known Limitations {#limitations}
 
 * Only apps on Mendix version 10.10 or later are supported. Deployment for earlier versions will fail.
 * Certain Mendix on Kubernetes APIs (Create, Edit, or Delete cluster and namespace operations) are unavailable in Mendix on Azure due to managed architecture. Other APIs function normally.
 * Downtime or issues with Mendix on Kubernetes may affect Mendix on Azure availability (for example, cluster creation may not be  possible).
+* [Remote microflow debugging](/refguide/debug-microflows-remotely/) is not currently available for Mendix on Azure, because the remote debugger does not support single-instance apps. This issue will be resolved in a future release.

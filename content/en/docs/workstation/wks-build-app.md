@@ -38,12 +38,12 @@ To install and configure the Workstation Connector, perform the following steps:
 
     1. Navigate to the **Workspaces** page in the [Workstation Management](https://workstation.home.mendix.com/) (default home page).
     2. Click **Create Workspace** or click on an existing Workspace in the overview.
-    4. Click **Create Station**.
-    5. Give the station an identifying name, and optionally select or create a group to categorize it, such as *Assembly*.
-    6. Add your devices in the **Devices** section.
-    7. Register your computer by clicking **Register Computer**.
-    8. Click **Download** to navigate to the Workstation Client listing in the marketplace, download the Client installer for Windows, install, and launch it.
-    9. Copy and paste the registration token into the [Workstation Client](/mendix-workstation/installation/) registration field.
+    3. Click **Create Station**.
+    4. Give the station an identifying name, and optionally select or create a group to categorize it, such as *Assembly*.
+    5. Add your devices in the **Devices** section.
+    6. Register your computer by clicking **Register Computer**.
+    7. Click **Download** to navigate to the Workstation Client listing in the marketplace, download the Client installer for Windows, install, and launch it.
+    8. Copy and paste the registration token into the [Workstation Client](/mendix-workstation/installation/) registration field.
 
 4. Configure your app as an allowed app by performing the following steps:
 
@@ -51,14 +51,14 @@ To install and configure the Workstation Connector, perform the following steps:
     2. In your app add the page **StationConnector_Security** to your navigation or link to it from an 'Open page button'. Alternatively, place the snippet **SNIPPET_StationAdminPage** on a page available to the Adminstrator user role.
     3. Run the app.
     4. Login as an Administrator, navigate to the page you added in step 2 and copy the shown public key.
-    6. Go back to the [Workstation Management](https://workstation.home.mendix.com/) and navigate to the workspace you created in step 3.2.
-    7. Go to the **Apps** page in your workspace and click **Create App**.
-    8. Enter your app's URL (for example, `http://localhost:8080`, which is the default when running an app locally) and paste the copied public key into the **Public Key** field.
-    9. Perform one of the following actions:
+    5. Go back to the [Workstation Management](https://workstation.home.mendix.com/) and navigate to the workspace you created in step 3.2.
+    6. Go to the **Apps** page in your workspace and click **Create App**.
+    7. Enter your app's URL (for example, `http://localhost:8080`, which is the default when running an app locally) and paste the copied public key into the **Public Key** field.
+    8. Perform one of the following actions:
         * To enable the app for all stations, select **Enable in all stations**
         * To enable it for a specific station, go to **Stations** and navigate to your station. You will find the created app under the **Apps** section. Here you can enable the application just for this station by pressing the toggle.
-    10. Refresh the Workstation Client.
-    11. Optional: To recreate the key pair, additionally assign the module role **StationConnector.SecurityAdministrator** to your Administrator role. This adds a **Regenerate KeyPair** button to the **StationConnector_Security** page. Be mindful when using this button in a production scenario to avoid the need to reconfigure the app in the Management, and refresh all Workstation Clients.  
+    9. Refresh the Workstation Client.
+    10. Optional: To recreate the key pair, additionally assign the module role **StationConnector.SecurityAdministrator** to your Administrator role. This adds a **Regenerate KeyPair** button to the **StationConnector_Security** page. Be mindful when using this button in a production scenario to avoid the need to reconfigure the app in the Management, and refresh all Workstation Clients.  
 
 ## Managing Apps
 

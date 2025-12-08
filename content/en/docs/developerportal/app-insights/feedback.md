@@ -133,7 +133,8 @@ On the **Groups** tab, you can open group details by clicking the group in the l
 The following options are available: 
  
 * **Ungroup** – Ungroup all feedback in the group. This action does not delete the group.
-* **Delete Group** – Delete the group and all feedback within it. This action is destructive and, once you delete a group with feedback, the feedback is also deleted.
+* **Delete Group** – Delete the group.    
+  {{% alert color="warning" %}}<ul><li>This action is destructive and, once you delete a group, all metadata belonging to the group is also deleted.</li> <li>The feedback within the group is not deleted.</li></ul>{{% /alert %}}
 * **Group Name** – The name of the group, which you can edit by clicking it.
     * **Description** – The description of the group.
 * **Tags** – Any tags assigned to the group.     

@@ -270,7 +270,10 @@ The operator throws an error in PostgresSQL and SQL Server when one of the opera
 
 #### = (Equal To)
 
-Returns `TRUE` if both `expression` inputs are equal. When used with `NULL`, it will always return a `FALSE` result. To compare to `NULL` values, use the [IS](#is-operator) operator.
+Returns `TRUE` if both `expression` inputs are equal. 
+
+When used with a `NULL` literal or a parameter with a `NULL` value, the condition will be converted to use the [IS NULL](#is-operator) operator. 
+In other cases when comparing to a `NULL` value, it will always return a `FALSE` result.
 
 {{% alert color="info" %}}
 Note that `DECIMAL` values have to match exactly. Use [`ROUND`](#round) to compare with less precision.

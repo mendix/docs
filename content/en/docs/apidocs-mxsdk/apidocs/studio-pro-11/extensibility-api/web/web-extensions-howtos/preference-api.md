@@ -87,16 +87,12 @@ Import the preferences API and use it to fetch the user’s preferences.
     );
     ```
 
-{{% alert color="info" %}}
-The function is `async` in order for you to use `await` when fetching the preferences.
-{{% /alert %}}
+    {{% alert color="info" %}} The function is `async` in order for you to use `await` when fetching the preferences.
+    {{% /alert %}}
 
-3. Use the fetched preferences to update the text in the message box so you can see the user's current theme and language.
-
-The `getPreferences()` function returns an object with two properties:
-
-* Theme — either **Light** or **Dark**, representing the current theme setting in Studio Pro
-* Language — a string representing the current language setting, such as `en_US` for English (United States)
+3. Use the fetched preferences to update the text in the message box so you can see the user's current theme and language. The `getPreferences()` function returns an object with two properties:
+    * Theme – either **Light** or **Dark**, representing the current theme setting in Studio Pro
+    * Language – a string representing the current language setting, such as `en_US` for English (United States)
 
 The complete `src/main/index.ts` file should now look like this:
 

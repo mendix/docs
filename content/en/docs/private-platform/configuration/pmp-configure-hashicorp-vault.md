@@ -52,9 +52,10 @@ Do not use a nested `value=` key structure.
 1. Log in to the Vault CLI with appropriate permissions (for example, `set VAULT_ADDR` and `VAULT_TOKEN`).
 2. If your target mount path (for example, `pmp-dev/`) does not exist, or is not a KV v2 engine, run the following command:
 
-```bash
-vault secrets enable -path=pmp-dev kv-v2
-```
+    ```bash
+    vault secrets enable -path=pmp-dev kv-v2
+    ```
+
     If the path is already in use, the command fails safely.
 
 3. Run the `vault kv put` command once for the central secret path (for example, `pmp-dev/admin`), listing all non-empty key-value pairs as arguments.
@@ -159,10 +160,10 @@ Configure the Kubernetes authentication method to allows pod to authenticate usi
 
 1. Enable the Kubernetes authentication method by running the following command:
 
-```bash
-# Ensure VAULT_ADDR and VAULT_TOKEN are set appropriately
-vault auth enable kubernetes
-```
+    ```bash
+    # Ensure VAULT_ADDR and VAULT_TOKEN are set appropriately
+    vault auth enable kubernetes
+    ```
 
 2. Configure the following properties to enable Vault to find and trust your Kubernetes cluster's API server and OIDC issuer:
 
@@ -235,9 +236,8 @@ vault auth enable kubernetes
             kubernetes_ca_cert="$K8S_CA_CERT"
         ```
 
-{{% alert color="info" %}}
-For AKS without OIDC, if OIDC Issuer is unavailable, use the Token Reviewer JWT method. For more information, see *For generic Kubernetes* below.
-{{% /alert %}}
+        {{% alert color="info" %}} For AKS without OIDC, if OIDC Issuer is unavailable, use the Token Reviewer JWT method. For more information, see *For generic Kubernetes* below.
+        {{% /alert %}}
 
     * For Openshift:
 
@@ -353,7 +353,6 @@ For AKS without OIDC, if OIDC Issuer is unavailable, use the Token Reviewer JWT 
         ```
 
 4. Create a `pmp-policy.hcl` Vault Terraform policy.
-
     Grant read-only access to the single central secret path. If the central path is pmp-dev/admin, the policy path is pmp-dev/data/admin.
 
     ```terraform
@@ -410,18 +409,18 @@ To configure the Mendix Operator, perform the following steps:
 
 1. To ensure that the Mendix Operator allows pods to mount their Service Account token, edit the `OperatorConfiguration`:
 
-        ```bash
-        # Replace <your-operator-ns> with the namespace where the Mendix Operator runs
-        kubectl edit operatorconfiguration mendix-operator-configuration -n <your-operator-ns>
-        ```
+    ```bash
+    # Replace <your-operator-ns> with the namespace where the Mendix Operator runs
+    kubectl edit operatorconfiguration mendix-operator-configuration -n <your-operator-ns>
+    ```
 
 2. Add or confirm the following line in the `spec:` section:
 
-        ```yaml
-        spec:
-            runtimeAutomountServiceAccountToken: true
-            # ... other existing spec fields ...
-        ```
+    ```yaml
+    spec:
+        runtimeAutomountServiceAccountToken: true
+        # ... other existing spec fields ...
+    ```
 
 #### Choosing and Configuring the Service Account
 
@@ -440,6 +439,7 @@ Using a custom Service Account, for example, `pmp-secret-accessor`, is recommend
     ```bash
     kubectl create serviceaccount pmp-secret-accessor --namespace feature-test --dry-run=client -o yaml | kubectl apply -f -
     ```
+
 2. Assign the Service Account to your Mendix app by editing the Mendix Runtime custom resource. Replace `mxplatform` and `feature-test` with your own values if needed.
 
     ```bash

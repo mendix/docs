@@ -24,7 +24,6 @@ Even custom developer apps on iOS must be provisioned and signed. However, we do
 Instead, use an ad-hoc provisioning profile, which allows you to register your testers' devices with Apple and distribute the app outside the App Store. For more information on ad-hoc provisioning, see [Apple's documentation](https://developer.apple.com/help/account/provisioning-profiles/create-an-ad-hoc-provisioning-profile/).
 {{% /alert %}}
 
-
 ## Building Your Developer App with Bitrise {#build-your-developer-app}
 
 When using Bitrise to build your native mobile app in the cloud, you can configure the settings below to generate a custom developer app instead of a release app. Once configured, the app can be built and installed similarly to a release version.

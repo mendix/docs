@@ -43,12 +43,12 @@ To connect your Mendix application to Databricks with the External Database conn
 
    {{< figure src="/attachments/appstore/platform-supported-content/modules/databricks/PAT.png" >}}
    
-7. In your Databricks account find the JDBC URL related to the SQL warehouse or cluster which you are using.
-8. Copy the URL into the **JDBC URL** field and add *UID=token;PWD=`PAT`*, where `PAT` is your actual PAT.
+6. In your Databricks account find the JDBC URL related to the SQL warehouse or cluster which you are using.
+7. Copy the URL into the **JDBC URL** field and add *UID=token;PWD=`PAT`*, where `PAT` is your actual PAT.
 
    {{< figure src="/attachments/appstore/platform-supported-content/modules/databricks/JDBC_URL.png" >}}
   
-9. Click **Test Connection** to verify the connection details, and then click **Save**.
+8. Click **Test Connection** to verify the connection details, and then click **Save**.
 
 Your Mendix app now connects to Databricks with the provided connection details. When the connection is successful, you can see your Databricks tables in your Mendix app.
 
@@ -112,11 +112,11 @@ After you have created a table with some entries, you can now be query from your
     5. Double-click the **Query External Database** microflow activity to configure the required parameters.
     6. In the **Database** section, select your Databricks database.
     7. In the **Query** list, select the query name that you entered in step 2.
-    10. In the **Output** section, provide the following values:
+    8. In the **Output** section, provide the following values:
         * **Return type** - **List of *{your module name}*.customerdata**
         * **Use return value** - set to **Yes**
         * **List name** - enter *Customerdata_list*
-    11. Click **OK**.
+    9. Click **OK**.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/databricks/JA_Query.png" >}}
 

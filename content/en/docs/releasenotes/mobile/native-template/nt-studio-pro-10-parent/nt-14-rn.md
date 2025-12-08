@@ -5,6 +5,14 @@ weight: 6
 description: "Native Template 14"
 ---
 
+## 14.1.9 {#1419}
+
+**Release date: December 3, 2025**
+
+### Improvements
+
+* We improved the styling when edge-to-edge mode is enabled.
+
 ## 14.1.8 {#1418}
 
 **Release date: November 21, 2025**

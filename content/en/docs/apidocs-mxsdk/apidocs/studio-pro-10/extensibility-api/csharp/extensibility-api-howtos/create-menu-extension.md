@@ -26,7 +26,7 @@ You can download the example in this how-to in [this GitHub repository](https://
         { "mx_extensions": [ "<name_of_your_project>.dll" ] }
         ```
 
-    3. For the `manifest.json` file, right-click **Solution Explorer** > **Properties** and change the **Copy to Output Directory** property to **Copy always**.
+    4. For the `manifest.json` file, right-click **Solution Explorer** > **Properties** and change the **Copy to Output Directory** property to **Copy always**.
 
 ## Creating a Test Mendix App
 

@@ -88,16 +88,16 @@ To define what information is included in your events and what the service will 
 
 1. Define what information is included in this event.
 
-* In the **General** field, provide the **Event name** and **Description** to let others know what the service is about.
-* In the **Attributes** field, click **Add** to define attributes. 
-    * Changes you make here later could lead to breaking changes if the entity the attribute belongs to is consumed. Related entities will be updated automatically.
+    * In the **General** field, provide the **Event name** and **Description** to let others know what the service is about.
+    * In the **Attributes** field, click **Add** to define attributes. 
+        * Changes you make here later could lead to breaking changes if the entity the attribute belongs to is consumed. Related entities will be updated automatically.
 
     {{< figure src="/attachments/appstore/platform-supported-content/services/business-events/wizard-step-1.png" class="no-border" width="400" >}}
 
 2. Decide what other apps can do and what service this will implement.
 
-* In the **Other apps can** field, you can select how other apps can use the service. The **This Business Events service implements** field defines whether the service will be responsible for publishing events, subscribing to events, or both.
-* Below is an explanation of the possibilities for what other apps can do and what the service implements:
+    * In the **Other apps can** field, you can select how other apps can use the service. The **This Business Events service implements** field defines whether the service will be responsible for publishing events, subscribing to events, or both.
+    * Below is an explanation of the possibilities for what other apps can do and what the service implements:
 
     | If you say that other apps can: | Then the service itself must implement: | The service could also implement: | The following are automatically created: |
     | ---------- | ---------- | ---------- | ---------- |
@@ -107,7 +107,7 @@ To define what information is included in your events and what the service will 
 
 3. Click **Done** to exit the wizard and view the defined service document.
 
-* **Export AsyncAPI Document** exports the YAML file of the business event service so other apps can [use your newly created service](#two-way-be-existing).
+    * **Export AsyncAPI Document** exports the YAML file of the business event service so other apps can [use your newly created service](#two-way-be-existing).
 
 ### Attribute Types {#attribute-types}
 

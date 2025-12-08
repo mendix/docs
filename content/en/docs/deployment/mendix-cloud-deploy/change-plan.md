@@ -63,7 +63,7 @@ To change an environment's plan, follow these steps:
     {{% alert color="info" %}}Approval from a Mendix Admin only authorizes the plan change but does not immediately apply it. As a result, the environment will remain on its current plan until the new plan is [approved](/control-center/approval-requests/#approving-a-request), [scheduled](#scheduling-a-plan-change) and [successfully applied](#after-schedule).
     {{% /alert %}}
 
-11. [Track and manage](#manage-plan-requests) your plan change requests from the [Change Requests](/developerportal/deploy/environments/#change-requests) tab on your app's environment's page. 
+10. [Track and manage](#manage-plan-requests) your plan change requests from the [Change Requests](/developerportal/deploy/environments/#change-requests) tab on your app's environment's page. 
 
 {{% alert color="info" %}}
 Changing plan consumes [Mendix Cloud Tokens](/control-center/cloud-tokens/#cloud-tokens). Only one plan change request can exist per environment at a time. As a result, new requests cannot be submitted for the same environment until the current one is completed.

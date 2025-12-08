@@ -23,17 +23,17 @@ Create a single view entity and expose it as an OData resource. To do this, foll
 1. Open your domain model and create a view entity called *ProductCategoryVE*.
 2. Add the following query to the OQL editor:
 
-  ```sql
-  SELECT
-    p.ProductId as ProductId
-    , p.ProductName as ProductName
-    , p.QuantityPerUnit as QuantityPerUnit
-    , p.Discontinued as Discontinued
-    , c.CategoryName as Category
-    , c.CategoryId as CategoryId
-  FROM Shop.Product as p
-    JOIN p/Shop.Product_Category/Shop.Category as c
-  ```
+    ```sql
+    SELECT
+      p.ProductId as ProductId
+      , p.ProductName as ProductName
+      , p.QuantityPerUnit as QuantityPerUnit
+      , p.Discontinued as Discontinued
+      , c.CategoryName as Category
+      , c.CategoryId as CategoryId
+    FROM Shop.Product as p
+      JOIN p/Shop.Product_Category/Shop.Category as c
+    ```
 
 3. Right-click this entity and select **Publish in OData service**. Name this service *POS_ProductCategory*.
 4. Add `ProductId` as a key attribute, then click **OK**.

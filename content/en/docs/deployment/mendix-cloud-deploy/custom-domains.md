@@ -126,22 +126,25 @@ Once you have a signed SSL/TLS certificate, you can upload it by following these
 
 6. Paste the signed **TLS Certificate** (in PEM format).
 
-7. Paste an **Intermediate Certificate Chain**. This is optional, but highly recommended. The intermediate certificate chain is provided by your certificate authority.
+7. Paste an **Intermediate Certificate Chain**. While optional for modern browsers, it is mandatory for programmatic access and service consumption (like [OData services](/refguide/consumed-odata-services/)). The intermediate certificate chain is provided by your certificate authority.
 
     {{< figure src="/attachments/deployment/mendix-cloud-deploy/custom-domains/signed-certificate.png" width=80% class="no-border" >}}
 
 8. Click **Save** to complete the process.
 
 {{% alert color="warning" %}}
-The intermediate certificates of the main certificate authorities are included in the built-in CA databases of modern browsers. Therefore, you do not need to include an intermediate certificate to serve your website through SSL/TLS to users of modern browsers. 
+The intermediate certificates of the main certificate authorities are included in the built-in CA databases of modern browsers. Therefore, you do not need to include an intermediate certificate to serve your website through SSL/TLS for users with modern browsers. 
 
-However, you cannot predict how your users will attempt to connect to your website; not including an intermediate certificate may result in connection issues for some users.
+However, intermediate certificate chains are mandatory for programmatic access and [service consumption](https://www.mendix.com/evaluation-guide/app-lifecycle/develop/integration/service-exposure/), and missing intermediate certificates will cause service consumption failures even when browser access works normally. Tools such as curl, programming languages, and operating systems do not automatically resolve missing intermediate certificates.
 
-Tools such as curl do not recognize intermediate certificates automatically. Because of this, intermediate certificates are highly recommended but optional.
-    
+You cannot predict how your users will attempt to connect to your website, and not including an intermediate certificate may result in connection issues for some users. To this end, Mendix recommends always including the intermediate certificate chain to ensure reliable connectivity for all use cases.
 {{% /alert %}}
 
 You can now configure your custom domain. See [Configuring a Custom Domain](#Configuring), below.
+
+{{% alert color="info" %}}
+After uploading, always verify your certificate using an SSL checker to identify any missing intermediate certificates before they cause service disruptions.
+{{% /alert %}}
 
 ## Uploading Your Own Custom Domain Certificate{#Uploading}
 
@@ -163,7 +166,7 @@ To upload the custom domain certificate, follow these steps:
 
 5. Paste the **TLS Private Key**.
 
-6. Paste an **Intermediate Certificate Chain**. This is optional, but most browsers require it. The intermediate certificate chain is provided by your certificate authority.
+6. Paste an **Intermediate Certificate Chain**. While optional for modern browsers, it is mandatory for programmatic access and service consumption (like [OData services](/refguide/consumed-odata-services/)). The intermediate certificate chain is provided by your certificate authority.
 
     {{< figure src="/attachments/deployment/mendix-cloud-deploy/custom-domains/new-certificate.png" width=60% class="no-border" >}}
 
@@ -204,7 +207,7 @@ You can do this by editing an existing custom domain certificate. To update an e
 1. Click the **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) icon on the CSR of interest.
 2. Select **Edit**.
 3. Paste the signed **TLS Certificate**.
-4. Paste the **Intermediate Certificate Chain**. This is optional, but most browsers require it. The intermediate certificate chain is provided by your certificate authority.
+4. Paste an **Intermediate Certificate Chain**. While optional for modern browsers, it is mandatory for programmatic access and service consumption (like [OData services](/refguide/consumed-odata-services/)). The intermediate certificate chain is provided by your certificate authority.
 
 {{% alert color="warning" %}}
 To edit an existing custom domain certificate, you need the following:

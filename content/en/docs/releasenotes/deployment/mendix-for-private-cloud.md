@@ -50,8 +50,8 @@ For information on the current status of deployment to Mendix on Kubernetes and 
     
     Under these conditions, you can expect no downtime during the update process, as long as the application is using the same MDA and base OS image.
 
-*   Exporting **Scheduled events**, **Application details**, **PCLM Statistics** is now possible in CSV format, replacing the XLSX format.
-*   We have incorporated the use of fallback license for Connected environments using Subscription Secrets. If an environment fails to communicate with the licensing server, it will use the fallback license instead of switching into Trial mode. This option is enabled by default.
+* Exporting **Scheduled events**, **Application details**, **PCLM Statistics** is now possible in CSV format, replacing the XLSX format.
+* We have incorporated the use of fallback license for Connected environments using Subscription Secrets. If an environment fails to communicate with the licensing server, it will use the fallback license instead of switching into Trial mode. This option is enabled by default.
 
 ### October 21, 2025
 

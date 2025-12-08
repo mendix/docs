@@ -116,7 +116,6 @@ It returns a list of `IMicroflowParameterObject`, which includes:
 * Description
 * `DataType`
 
-
 ```csharp
 IReadOnlyList<IMicroflowParameterObject> parameters = _microflowService.GetParameters(microflow);
 ```

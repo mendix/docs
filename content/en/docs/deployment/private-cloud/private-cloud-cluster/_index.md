@@ -1359,14 +1359,14 @@ You can invite additional members to the namespace, and configure their role dep
     2. **Administrator** – a standard set of rights needed by an administrator, these are listed on the screen
     3. **Custom** – This option is now deprecated.
 
-{{% alert color="info" %}}
-The custom permission if needed to be edited, a role need to be assigned with appropriate permissions. See [Roles and Permissions](/developerportal/deploy/private-cloud-cluster/#rolesandpermissions) for more information.
-{{% /alert %}}
+    {{% alert color="info" %}}
+    The custom permission if needed to be edited, a role need to be assigned with appropriate permissions. See [Roles and Permissions](/developerportal/deploy/private-cloud-cluster/#rolesandpermissions) for more information.
+    {{% /alert %}}
 
-{{% alert color="info" %}}
-If an application is in the Stopped state, the scaling does not come into effect until the application is Started. This means that you have to click **Start application** in order for the changes to be sent to the cluster.
-Along with this, we have also decoupled the permission for modifying the MxAdmin password and managing environments.
-{{% /alert %}}
+    {{% alert color="info" %}}
+    If an application is in the Stopped state, the scaling does not come into effect until the application is Started. This means that you have to click **Start application** in order for the changes to be sent to the cluster.
+    Along with this, we have also decoupled the permission for modifying the MxAdmin password and managing environments.
+    {{% /alert %}}
 
 6. Click **Send Invite** to send an invite to this person.
 

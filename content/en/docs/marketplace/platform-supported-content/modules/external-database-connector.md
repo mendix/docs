@@ -215,20 +215,20 @@ To test SSL-based connections from the Database Connection wizard, use the Certi
 1. Import the CA certificate file
     {{% /alert %}}
 
-2. If the PostgreSQL server requires Mendix to authenticate using a client certificate, add the client certificate details to the App Settings by clicking **Configuration** > **Edit** > **Custom**. See the [Running Locally](/developerportal/deploy/use-a-client-certificate/) section of *Use a Client Certificate* for further instructions of how to add the certificate details.
+1. If the PostgreSQL server requires Mendix to authenticate using a client certificate, add the client certificate details to the App Settings by clicking **Configuration** > **Edit** > **Custom**. See the [Running Locally](/developerportal/deploy/use-a-client-certificate/) section of *Use a Client Certificate* for further instructions of how to add the certificate details.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/edit-configuration.png" class="no-border" >}}
 
-3. Add the connection details to the [Database Connection wizard](#connect-database). Fill in the following details:
+1. Add the connection details to the [Database Connection wizard](#connect-database). Fill in the following details:
     * Set SSL encryption to **Yes**
     * Set SSL mode as per your requirement
     * Add the Client certificate identifier; this must match the value provided in the custom settings dialog
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/example-SSL-connection.png" class="no-border" >}}
 
-4. Click **Test Connection**.
+1. Click **Test Connection**.
 
-5. Run your application to test the connection for local runtime.
+1. Run your application to test the connection for local runtime.
 
 ### Running in the Cloud
 

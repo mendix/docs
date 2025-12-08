@@ -25,17 +25,18 @@ You must have **Manage Apps Backups** permission for the namespace to use this f
 2. Click **Backups** in the navigation pane.
 3. Choose the environment to back up from the environment dropdown.
 
-{{% alert color="info" %}} 
+    {{% alert color="info" %}}
+<!-- Need to do it this way to satisfy linter and get correct format-->
 Backups cannot be created while the environment is in any of these states:
 
 * Creation in progress
 * Creation failed
 * Deployment package is being deployed
-* Environment is in transition state (runtime processing) 
-{{% /alert %}}
+* Environment is in transition state (runtime processing)
+    {{% /alert %}}
 
-4. Click **Create Backup**.
-5. Monitor progress in the **Status** column.
+1. Click **Create Backup**.
+1. Monitor progress in the **Status** column.
 
 {{% alert color="info" %}} 
 Tables are locked during backup creation, so if you attempt to start the environment while a backup is in progress, you may encounter a timeout error. Wait for backup completion before restarting. 

@@ -77,7 +77,7 @@ OpenShift Routes remain a suitable choice if meet your current needs and you do 
 
 ## Known Issues
 
-* Application load balancers do not work correctly with HTTP2 WebSockets.
+* AWS Application Load Balancers do not work correctly with HTTP2 WebSockets.
 
     As a workaround, you can use HTTP1 as the ingress backend protocol: `alb.ingress.kubernetes.io/backend-protocol-version: HTTP1`
 

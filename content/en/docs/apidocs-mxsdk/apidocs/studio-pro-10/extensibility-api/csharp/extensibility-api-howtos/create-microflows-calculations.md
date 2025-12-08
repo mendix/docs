@@ -165,7 +165,7 @@ You can also see that the `DataType` of both parameters is integer.
 
  {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/multiplication-microflow.png" >}}
 
- ### Addition Microflow
+### Addition Microflow
 
 To create a microflow that performs addition between two decimal values, use the code below:
 

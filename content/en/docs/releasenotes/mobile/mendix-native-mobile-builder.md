@@ -33,7 +33,7 @@ To fix this issue, do the following:
 
 ## Fixes
 
-- We fixed an issue where native builds failed with the error "`@notifee/react-native` is not a known dependency."
+* We fixed an issue where native builds failed with the error "`@notifee/react-native` is not a known dependency."
 
 ## Release 1.0.142 {#10142}
 

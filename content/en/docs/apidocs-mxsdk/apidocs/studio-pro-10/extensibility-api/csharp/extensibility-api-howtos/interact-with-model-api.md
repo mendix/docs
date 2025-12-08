@@ -7,7 +7,7 @@ weight: 11
 
 ## Introduction
 
-Once you have created basic extensions, you may want to interact with the Studio Pro model to make changes to your app. The Model API enables this functionality and is exposed via the` Mendix.StudioPro.ExtensionsAPI.Model` namespace.
+Once you have created basic extensions, you may want to interact with the Studio Pro model to make changes to your app. The Model API enables this functionality and is exposed via the`Mendix.StudioPro.ExtensionsAPI.Model` namespace.
 
 ## Gaining Access to the Mendix Model SDK
 
@@ -24,7 +24,6 @@ Any changes made to the model must be contained within a model transaction.
 Any modification to the model must be done within a transaction; otherwise, a `System.InvalidOperationException` is thrown. There can be only a single active (for example, not committed or rolled back) `ITransaction` for the whole app.
 
 Transactions group changes, but do not provide a way to isolate them. Changes to a model are immediately visible to all code interacting with the model. When transaction is rolled back or is undone by a user, all included changes are reverted.
-
 
 ## Start a Transaction
 

@@ -2,7 +2,7 @@
 title: "Mendix Best Practices for Development"
 linktitle: "Best Practices for Development"
 url: /refguide/dev-best-practices/
-weight: 12
+weight: 30
 description: "Describes Mendix best practices for developing Mendix applications."
 aliases:
     - /howto/general/dev-best-practices/

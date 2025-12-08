@@ -30,7 +30,7 @@ By default, the read replica for Postgres database is disabled. To enable it, pe
 
 1. On the **Provision > Database Settings** section of the **Initialize Cluster** page, set the **Enable Read Replica** option to **Yes**.
 
-{{% alert color="info" %}} For existing clusters, you can also enable or disable the read replica in the **Edit Cluster** flow.{{% /alert %}}
+    {{% alert color="info" %}} For existing clusters, you can also enable or disable the read replica in the **Edit Cluster** flow.{{% /alert %}}
 
 2. Click **Next** to initialize the cluster.
 

@@ -174,7 +174,7 @@ Your `loaded()` method should now look like this:
 Create a new web view endpoint where you define the user interface that will be rendered within the pane. You can use and rename the existing endpoint. Follow the steps below:
 
 1. Rename `ui/index.tsx` to `ui/tab.tsx`.
-1. Add the new endpoint file, `ui/dockablepane.tsx`, by copying `ui/tab.tsx`.
+2. Add the new endpoint file, `ui/dockablepane.tsx`, by copying `ui/tab.tsx`.
 
 You must also alter the `vite.config.ts` and `manifest.json` files to bind to the correct endpoint, as described in the following sections:
 
@@ -255,13 +255,13 @@ You will close your pane using a new menu item. Follow the steps below:
 
 1. Add a new sub-menu item to the menu on line 11.
 
-```typescript {linenos=table linenostart=11}
-                { menuId: "myextension.HideDockMenuItem", caption: "Hide dock pane" },
-```
+    ```typescript {linenos=table linenostart=11}
+    { menuId: "myextension.HideDockMenuItem", caption: "Hide dock pane" },
+    ```
 
 2. Alter the event handler for the new menu at the end of the loaded method:
 
-```typescript
+    ```typescript
         // Open a tab when the menu item is clicked
         studioPro.ui.extensionsMenu.addEventListener(
             "menuItemActivated",
@@ -285,7 +285,7 @@ You will close your pane using a new menu item. Follow the steps below:
                 }
             }
         );
-```
+    ```
 
 The loaded method should now look like this:
 

@@ -24,6 +24,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
     For details, refer to [Software Composition](/developerportal/deploy/software-composition/).    
     For background information on the Control Center options that power this new feature, refer to [Findings](/control-center/findings-tab/).
 
+### December 06, 2025
+
+#### Improvements
+
+* We have upgraded Mendix Dock to support contract expiry banners. Mendix Cloud can now provide timely information when contracts are approaching their expiry dates.
+
 ### November 23, 2025
 
 #### New Features

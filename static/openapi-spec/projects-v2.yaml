@@ -104,28 +104,28 @@ paths:
               properties:
                 categories:
                   type: array
-                  description: 'Array of category assignments. Each item identifies a company custom field (fieldId) and the Code/Value to assign. Used when updating `category`.'
+                  description: 'Array of category assignments. Each item identifies a company category (cateboryId) and the Code/Value to assign. Used when updating `category`.'
                   items:
                     type: object
                     required:
-                      - fieldId
+                      - categoryId
                       - value
                     properties:
-                      fieldId:
+                      categoryId:
                         type: string
-                        description: 'Identifier of the company custom field'
+                        description: 'Identifier of the company category'
                         maxLength: 36
                       value:
                         type: string
-                        description: 'The Code or Value to assign to the custom field. An empty string clears the assignment.'
+                        description: 'The Code or Value to assign to the category. An empty string clears the assignment.'
                         maxLength: 500
             examples:
               category-update:
                 value:
                   categories:
-                    - fieldId: '123456789'
+                    - categoryId: '123456789'
                       value: 'NLD'
-                    - fieldId: '987654321'
+                    - categoryId: '987654321'
                       value: ''
       responses:
         '204':
@@ -819,7 +819,7 @@ components:
                       maxLength: 500
                     categoryId:
                       type: string
-                      description: ID of the category (also known as 'FieldId')
+                      description: ID of the category (also known as 'categoryId')
                       maxLength: 36
                     values:
                       type: array

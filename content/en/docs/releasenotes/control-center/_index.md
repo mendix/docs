@@ -14,6 +14,12 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 ## 2025
 
+### December 11, 2025
+
+#### New Features
+
+* Software Composition is now enhanced with the ability to view details on vulnerabilities and act upon them. This option is available through the new [Findings](/control-center/findings-tab/) tab, which provides a list of vulnerable components across all your apps. You can therefore easily identify components that require action, and take the appropriate measures to ensure uninterrupted app service.
+
 ### November 9, 2025
 
 #### Improvements

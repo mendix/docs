@@ -191,8 +191,9 @@ The expression provided is evaluated in the browser and, currently, does not sup
 
 ### Label Position
 
-{{% todo %}}Explain what the **default** is here, as well as what **before control** and **after control** constitute.
-{{% /todo %}}
+* **Default** — 
+* **Before control** — The label is placed before the check box.
+* **After control** — The label is placed after the check box.
 
 ## Editability Section{#editability}
 
@@ -333,19 +334,19 @@ There are two settings in the validation section which are described below:
 
 This property indicates whether this widget value should be validated and, if so, how. These are the possible options:
 
-* No validation – the data has to be the correct [data type](/refguide/data-types/) for the widget, but otherwise there is no further validation
-* A [predefined validation](#predefined-validation) – see description below
-* A [custom validation](#custom-validation) – see description below
+* No validation – The data has to be the correct [data type](/refguide/data-types/) for the widget, but otherwise there is no further validation.
+* A [predefined validation](#predefined-validation) – See description below.
+* A [custom validation](#custom-validation) – See description below.
 
 #### Predefined Validation{#predefined-validation}
 
 The possible values of a predefined validation are the following:
 
-* **Required** – can be used for values of *all* data types
-* **E-mail** – applies to *String* values
-* **Positive number** – applies to *Decimal*, *Integer*, and *Long* values
-* **Date in the future** – applies to *Date and time* values — compares the date *and time* to `[%CurrentDateTime%]`
-* **Date in the past** – applies to *Date and time* values — compares the date *and time* to `[%CurrentDateTime%]`
+* **Required** – Can be used for values of all data types.
+* **E-mail** – Applies to *String* values.
+* **Positive number** – Applies to *Decimal*, *Integer*, and *Long* values.
+* **Date in the future** – Applies to *Date and time* values — compares the date *and time* to `[%CurrentDateTime%]`.
+* **Date in the past** – Applies to *Date and time* values — compares the date *and time* to `[%CurrentDateTime%]`.
 
 #### Custom Validation{#custom-validation}
 
@@ -353,16 +354,16 @@ Custom validation is an expression that follows the [Microflow expression](/refg
 
 There are a number of variables you can use in your expression:
 
-* `$currentObject` – the current object
-* `$value` – variable or the current member (attribute or association) value
+* `$currentObject` – The current object.
+* `$value` – Variable or the current member (attribute or association) value.
 
 {{% alert color="info" %}}
 The expression can access objects of **all** the data containers enclosing the input widget and variables defined on the page or snippet. The objects are given the name of the widget they originate from (for example, `$dataView1`).
 {{% /alert %}}
 
-When a validation is set and it fails for this widget, the message you specify will be shown before the user can use the value in the app.
+When a validation is set and it fails for this widget, the message you specify will be shown before the user can use the value in the app* 
 
-Default: *(none)*
+* Default validation message: *(none)*
 
 ### Message
 

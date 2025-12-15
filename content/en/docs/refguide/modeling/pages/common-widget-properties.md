@@ -191,7 +191,9 @@ The expression provided is evaluated in the browser and, currently, does not sup
 
 ### Label Position
 
-* **Default** — 
+This property can be configured in the following ways:
+
+* **Default** — The position of the label is determined by the read-only style configuration. In the control case, the label is positioned after the control; in the text case, it is positioned before the control.
 * **Before control** — The label is placed before the check box.
 * **After control** — The label is placed after the check box.
 

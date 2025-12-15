@@ -20,7 +20,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* We enhanced the security infrastructure with stronger access controls for internal data objects
+* We enhanced the security infrastructure with stronger access controls for internal data objects.
 
 ### December 06, 2025
 

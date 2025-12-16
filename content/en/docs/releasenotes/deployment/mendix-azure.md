@@ -13,7 +13,7 @@ For information on the current status of Mendix deployment, see [Mendix Status](
 ### Release date: December 18, 2025
 
 * We have added option to enable setting custom CAs via Mendix on Azure portal.
-* We have added a video ink in the Cluster Overview page of Mx on Azure when a certain cluster initialization process in under Progress.
+* We have added a video link in the Cluster Overview page of Mx on Azure when a certain cluster initialization process in under Progress.
 * We have fixed platform account preflight check failure issue which was creating support tickets unnecessarily.
 * We have fixed the cluster association issue where deploying account was not being able to view the cluster.
 

@@ -12,6 +12,12 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 ## 2025
 
+### December 18, 2025
+
+#### Portal Improvements
+* We added activity logs for actions editing any values from reduced downtime options.
+* We added fix for issues with inconsistent commit times to the team server.
+
 ### November 27, 2025
 
 #### Portal Improvements

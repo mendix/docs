@@ -41,6 +41,11 @@ For more information, see [Configuring Ingress and Egress](/developerportal/depl
 | AKS Maximum Node Count | The number of available cluster nodes will be increased and decreased automatically based on the combined capacity requirement of all deployed Mendix apps. This setting controls the upper limit to the number of available nodes in order to avoid cost surprises.    | Yes    |
 | AKS Service Tier    | The [AKS service tier](https://learn.microsoft.com/en-us/azure/aks/free-standard-pricing-tiers) determines the service level Microsoft provides on the Mendix on Azure Kubernetes cluster control plane. This does not impact application performance, only Microsoft's SLA. The Free tier is sufficient in most situations. Standard can be considered by organizations that value a financially backed SLA. For information about the associated costs, refer to Microsoft documentation. The Premium tier does not offer any additional value in combination with Mendix on Azure and is not recommended. | Yes |
 
+### Custom CA Certificate
+
+Custom CA certificates can now be set during initilzation and advanced option.
+{{< figure src="/attachments/deployment/mx-azure/customca.png" class="no-border" >}}
+
 ### Redundancy
 
 | Advanced Option | Description | Editable after Initial Creation |

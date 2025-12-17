@@ -43,8 +43,8 @@ For more information, see [Configuring Ingress and Egress](/developerportal/depl
 
 ### Custom CA Certificate
 
-Custom CA certificates can now be set during initilzation and advanced option.
-For more information, see [Custom-tls](developerportal/deploy/standard-operator/#custom-tls)
+When initializing your cluster, you can now select a custom CA certificate. For more information, see [Custom TLS](developerportal/deploy/standard-operator/#custom-tls).
+
 {{< figure src="/attachments/deployment/mx-azure/customca.png" class="no-border" >}}
 
 ### Redundancy

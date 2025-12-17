@@ -12,14 +12,14 @@ For information on the current status of Mendix deployment, see [Mendix Status](
 
 ### Release date: December 18, 2025
 
-* We have added option to upload and enable setting for custom CAs via Mendix on Azure portal.
-* A video link, guiding you through the next steps after cluster initialization, is now available on the Mx on Azure Cluster Overview page.
-* The platform account preflight check failure issue has been fixed, eliminating the creation of unnecessary support tickets.
-* We have fixed an issue that sometimes prevented cluster managers from viewing the clusters they had initialized.
+* We have added an option to upload and enable setting for custom CA certificates in the Mendix on Azure portal.
+* A video link, guiding you through the next steps after cluster initialization, is now available on the **Cluster Overview** page in the Mendix on Azure portal.
+* We have fixed an issue where the platform account preflight check would fail. This fix prevents the creation of unnecessary support tickets.
+* We have fixed an issue that sometimes prevented cluster managers from viewing the clusters which they had initialized.
 
 ### Known issues:
 
-* Please note that fields like 'Infrastructure Redundancy' and 'Custom CA certificates' do not yet have available translations.
+* Fields such as **Infrastructure Redundancy** and **Custom CA Certificates** do not have translations available yet.
 
 ### Release date: November 27, 2025
 

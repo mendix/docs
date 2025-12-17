@@ -233,6 +233,8 @@ In the **Actions** tab, you can also log out all users currently logged in to yo
 
 In the **Group Management** tab, you can create and edit user groups. These groups typically reflect your organization's structure. You can also use the **Automation Settings** option to automatically assign users to groups based on their profile attributes.
 
+For more information about group management in Private Mendix Platform version 2.0 and newer, see [Dynamic Role Management in Private Mendix Platform](/private-mendix-platform/dynamic-role-management/).
+
 ### Platform
 
 In the **Deployment** section, administrators can view and manage statistics, activity logs, webhooks, and licenses.

@@ -18,6 +18,22 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 * We have implemented activity logging for all changes made to "Reduced Downtime Options".
 * We have resolved the issues causing inconsistent commit times on the team server.
 
+### December 15, 2025
+
+#### Mendix Operator v2.24.2 {#2.24.2}
+
+* We have fixed an issue when it would be impossible to set the `maxUnavailable` attribute for Pod Disruption Budgets.
+* We have fixed an issue where using regular Kubernetes secrets in place of Kubernetes CSI Secrets Store would only work if a CSI Secrets Store driver is installed in the cluster.
+
+    With this release, installing the CSI Secrets Store driver is not necessary to use a Kubernets secret (Ticket 265568).
+
+* For Mendix on Azure, we have added an option to remove custom TLS trust certificates.
+* We have updated components to use the latest dependency versions in order to improve security score ratings for container images.
+
+#### License Manager CLI v0.10.6 {#0.10.6}
+
+* We have updated components to use the latest dependency versions in order to improve security score ratings for container images.
+
 ### November 27, 2025
 
 #### Portal Improvements
@@ -29,7 +45,7 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 #### Known Issues
 
-* Currently, if you adjust your Pod Disruption Budget settings, those modifications will not take effect until our next Operator release (2.25.0).
+* Currently, if you adjust your Pod Disruption Budget settings, those modifications will not take effect until our next Operator release (2.24.2).
 
 ### November 7, 2025
 
@@ -69,6 +85,10 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 * We have added a fallback license for Connected environments using Subscription Secrets. If an environment fails to communicate with the licensing server, it will use the fallback license instead of switching into Trial mode. This feature will become available for use with a future release of the Mendix on Kubernetes portal.
 * We have updated documentation to indicate that Kubernetes 1.34 is supported by the Mendix Operator.
 * We have made a few adjustments to support changes in upcoming Studio Pro version numbers.
+
+#### Known Issues
+
+* Currently, if you adjust your Pod Disruption Budget settings, those modifications will not take effect until our next Operator release (2.24.2).
 
 ### September 25, 2025
 

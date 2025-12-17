@@ -29,9 +29,14 @@ Mendix Cloud Model Resource Packs provide customers with a monthly quota of inpu
 
 The Mendix Cloud GenAI Resource Packs provide access to the following models:
 
-* Anthropic Claude 3.7 Sonnet (Cross-region inference profile)
-* Anthropic Claude 4 Sonnet (Cross-region inference profile)
-* Cohere Embed v3 (English and multilingual options)
+| Model                       | Model Type | Region(s)                             | Available Only via Cross-Region Inference (CRI) | AWS Inference Regions |
+| ---------------------------- | ---------- | ------------------------------------- | ------------------------------------------ | ---------------------- |
+| Anthropic Claude 4.5 Sonnet | Text       |  Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
+| Anthropic Claude 4 Sonnet   | Text       |  Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Frankfurt),<br> eu-north-1,<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Paris) |
+| Anthropic Claude 3.7 Sonnet | Text       |  Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Frankfurt),<br> eu-north-1,<br> Europe (Ireland),<br> Europe (Paris) |
+| Anthropic Claude 3 Sonnet   | Text       |  Mendix Cloud Canada (Montreal)       | NO | ca-central-1 |
+| Cohere Embed v4             | Embeddings |  Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
+| Cohere Embed v3 <br> English and multilingual      | Embeddings      |  Mendix Cloud EU (Frankfurt, Germany) <br> Mendix Cloud Canada (Montreal) | NO | Europe (Frankfurt),<br> ca-central-1 |
 
 The models are available through the Mendix Cloud, leveraging AWS's highly secure Amazon Bedrock multi-tenant architecture. This architecture employs advanced logical isolation techniques to effectively segregate customer data, requests, and responses, ensuring a level of data protection that aligns with global security compliance requirements. Customer prompts, requests, and responses are neither stored nor used for model training. Your data remains your data.
 
@@ -43,7 +48,7 @@ Customers looking to leverage other models in addition to the above can also tak
 | ------------------------------------------ | ----------------- | ----------------- | ----------------- |
 | Anthropic Claude (any version) (Tokens in/month)    | 2.5 million    | 5 million         | 10 million        |
 | Anthropic Claude (any version) (Tokens out/month)   | 1.25 million   | 2.5 million       | 5 million         |
-| Cohere Embed V3 (Tokens in/month)                   | 5 million      | 10 million        | 20 million        |
+| Cohere Embed (any version) (Tokens in/month)        | 5 million      | 10 million        | 20 million        |
 
 ## Accessing GenAI Resources
 
@@ -86,15 +91,6 @@ Knowledge Bases are based on elastically scaling, serverless OpenSearch vector d
 | Compute                               | Elastic       |
 | Memory                                | Elastic       |
 | Disk Space                            | 10 GB         |
-
-## Regional Availability
-
-Mendix Cloud GenAI Resource Packs are available in the following regions of Mendix Cloud:
-
-* Europe (Frankfurt) - eu-central-1
-* Canada (Montreal) - ca-central-1
-
-The availability of model versions depends on the selected region.
 
 ## Understanding Third-Party Requirements
 

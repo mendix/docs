@@ -65,6 +65,16 @@ For more details, see [Mendix Community](/community-tools/mendix-community/).
 
 You can access the Mendix Support team through the [Mendix Support Portal](https://support.mendix.com/), via email (`support@mendix.com`), or by phone (phone numbers are listed in the Support Portal). Please note that critical tickets always need to be accompanied by a phone call to speed up the triage of the issue. In the Support Portal, you can check the status of your personal tickets, check all the submitted tickets for your applications, and provide updates on them.
 
+### Attachments
+
+When submitting support tickets, attachments are uploaded via SendSafely, a secure file transfer service. SendSafely may be blocked by your network, which prevents the widget from displaying. In that case, the page shows a `Could not render widget 'SupportPortal.SendSafely.sendSafelyDropzone1'` error. 
+
+To resolve that error, please make sure that the following URLs are allowlisted in your network's security settings:
+
+- `https://mendix.sendsafely.eu`
+- `https://static-mendix.sendsafely.eu`
+- `https://sendsafely-dual-region-eu.s3-accelerate.amazonaws.com`
+
 ## What We Expect from You
 
 Mendix supports the Mendix Platform, and we expect you to support the applications that you build on the platform. The standard SLA does not include the following:

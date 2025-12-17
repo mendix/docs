@@ -43,7 +43,7 @@ For more information, see [Configuring Ingress and Egress](/developerportal/depl
 
 ### Custom CA Certificate
 
-When initializing your cluster, you can now select a custom CA certificate. For more information, see [Custom TLS](developerportal/deploy/standard-operator/#custom-tls).
+When initializing your cluster, you can now select a custom CA certificate. For more information, see [Custom TLS](/developerportal/deploy/standard-operator/#custom-tls).
 
 {{< figure src="/attachments/deployment/mx-azure/customca.png" class="no-border" >}}
 

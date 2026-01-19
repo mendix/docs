@@ -10,7 +10,7 @@ aliases:
 
 ## Introduction {#intro}
 
-When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/general/team-server/) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see the [Version Control Reference Guide](/refguide/version-control/).
+When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/repository/team-server/) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see the [Version Control Reference Guide](/refguide/version-control/).
 
 While using Team Server is the recommended for most Mendix developers, you may prefer to store your application's files in a system controlled by your own organization. For version control, Mendix uses [Git](/refguide/on-premises-git/). This document describes how to work with Git version control system.
 
@@ -44,7 +44,7 @@ To use PAT (or another equivalent), you need to specify it in the **Password** f
 
 {{< figure src="/attachments/refguide/version-control/on-premises-git/sign-in-dialog.png" alt="Sign In dialog" class="no-border"  width="600">}}
 
-{{% alert color="info" %}}When using a PAT for the Mendix platform, fill in your email in the **Username** field. For more information on how to create a PAT for the Mendix platform, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section in *User Settings*.{{% /alert %}}
+{{% alert color="info" %}}When using a PAT for the Mendix platform, fill in your email in the **Username** field. For more information on how to create a PAT for the Mendix platform, see the [Personal Access Tokens](/mendix-profile/user-settings/#pat) section in *User Settings*.{{% /alert %}}
 
 Currently Mendix keeps PAT using operating system supported solutions:
 
@@ -162,7 +162,7 @@ For the previous local disk method do the following:
 Once you have an unversioned app, you can upload it to your private team server. 
 
 {{% alert color="warning" %}}
-The repository has to be completely empty (this includes the `README.md` and `.gitignore` files) and have no commmits in the history, or the upload will fail.
+The repository has to be completely empty (this includes the `README.md` and `.gitignore` files) and have no commits in the history, or the upload will fail.
 {{% /alert %}}
 
 To upload your app, do the following:
@@ -226,5 +226,5 @@ Note that your previous app still exists, **Studio Pro** will simply make an unv
 ## Read More
 
 * [Version Control Reference Guide](/refguide/version-control/)
-* [Team Server](/developerportal/general/team-server/)
+* [Team Server](/developerportal/repository/team-server/)
 * [Upload to Version Control Server Reference Guide](/refguide/upload-to-version-control-dialog/)

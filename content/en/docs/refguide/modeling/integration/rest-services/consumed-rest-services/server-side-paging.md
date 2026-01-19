@@ -10,7 +10,7 @@ aliases:
 
 ## Introduction
 
-Using server-side paging and sorting for a microflow data source, you can model out how you retrieve data to a single page and ensure it ends up in the correct sorting order. With this approach, you do not need to return all the data to the client — you can just return a single page. This can be helpful for getting data from external sources like a REST service, but can also be useful for a regular retrieve activity in a microflow. To do this, you must model the logic for getting the correct data in the microflow itself.
+Using server-side paging and sorting for a microflow data source, you can model out how you retrieve data to a single page and ensure it ends up in the correct sorting order. With this approach, you do not need to return all the data to the client — you can just return a single page. This can be helpful for getting data from external sources like a REST service, but can also be useful for a regular retrieve object(s) activity in a microflow. To do this, you must model the logic for getting the correct data in the microflow itself.
 
 This how-to teaches you how to do the following:
 
@@ -67,11 +67,11 @@ Now, you can start calling the REST service from your microflow data source. To 
 
     {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/call-rest-response.png" alt="variable result"   width="500"  class="no-border" >}}
 
-10. From the **Toolbox**, drag the **Retrieve** activity into the microflow and double-click it.
+10. From the **Toolbox**, drag the **Retrieve object(s)** activity into the microflow and double-click it.
 11. Click **Association** > **Select**.
 12. Click **Expand All** and select **JsonObject_Summary (List of NativeMobile.JsonObject)**. 
 13. Click **OK** to accept this association.
-14. Right-click the **Retrieve** activity and select **Set $JsonObjectList as return value**:
+14. Right-click the **Retrieve object(s)** activity and select **Set $JsonObjectList as return value**:
 
     {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-services/server-side-paging/call-rest-returned.png" alt="set return value"   width="500"  class="no-border" >}}
 

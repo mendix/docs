@@ -44,13 +44,13 @@ For example, the query below retrieves a list of RequestedProductRequirement whe
 `Select requestedProductRequirement from productlines where productLine = {productLine}`
 ```
 
-{{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/4.png" width="700" >}}
+{{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/4.png" width="700" >}}
 
 ### Typecast Parameter Data Type
 
 You can typecast `String` into UUID, as shown below:
 
-{{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/13.png" width="700" >}}
+{{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/13.png" width="700" >}}
 
 ## Save Query
 
@@ -60,23 +60,23 @@ You can typecast `String` into UUID, as shown below:
 
 2. In the **Response Structure** tab, you can choose **New Entity** or **Reuse Entity**.
 
-   a. If **New Entity** is selected, you can view the entity in the **Response structure** tab. Click **Save Query & Create Entity** to save the query and the newly created entity in the domain model. 
+   a. If **New Entity** is selected, you can view the entity in the **Response structure** tab. Click **Create Entity** to save the query and the newly created entity in the domain model. 
 
-    {{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/5.png" width="600" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/5.png" width="600" >}}
 
-   b. If **Reuse Entity** is selected, all entities mapped to other queries of same document are listed in the drop-down list. Select the entity you want to reuse and click **Save Query**.
+   b. If **Reuse Entity** is selected, all entities mapped to other queries of same document are listed in the drop-down list. Select the entity you want to reuse and click **Reuse Entity**.
 
-    {{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/5a.png" width="600" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/5a.png" width="600" >}}
 
 ### Save DML Query
 
 1. For DML queries, *Number of affected rows* will be displayed as a response.
 
-    For example, `INSERT INTO classicmodels.productlines(productLine, requestedProductRequirement)VALUES({productLine}, {requestedProductRequirement})`
+    For example, `INSERT INTO classicmodels.productlines(productLine, textDescription) VALUES( {productLine}, {textDescription} )`
 
-2. Click **Save Query**.
+2. Click **Update Query**.
 
-    {{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/6.png" width="600" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/6.png" width="600" >}}
 
 {{% alert color="info" %}} For all DML Queries, changes made to database in the Mendix Design phase are automatically rolled back. {{% /alert %}}
 
@@ -86,9 +86,17 @@ You can use the existing entity when updating a existing query.
 
 For example, you can modify the query below to retrieve a list of `productLine`, `textDescription`, and `htmlDescription` columns from `productLines` where the `productLine` is **Planes**.
 
-SQL Query:
-Existing Query: `Select requestedProductRequirement from productlines where productLine = {productLine}`
-Modified Query: `Select productLine, textDescription, htmlDescription from productlines where productLine = {productLine}`
+Existing Query: 
+
+```sql
+Select productLine, textDescription from productlines
+``` 
+
+Modified Query: 
+
+```sql
+Select productLine, textDescription, htmlDescription from productlines
+```
 
 Do the following:
 
@@ -98,13 +106,15 @@ Do the following:
 
 3. Use the existing entity or create a new entity.
 
-   a. If **New Entity** is selected, you can view the entity in the **Response structure** tab. Click **Save Query & Create Entity** to save the query and the newly created entity in the domain model.
+   a. If **New Entity** is selected, you can view the entity in the **Response structure** tab. Click **Create Entity** to save the query and the newly created entity in the domain model.
 
    b. If **Update Entity** is selected, you can see changes that will be made to the existing entity. Click **Update Entity** to save the query and the changes made to the entity in the domain model.
 
-    {{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/5b.png" width="600" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/5b.png" width="600" >}}
 
 ## Call Stored Procedure
+
+{{% alert color="info" %}} Stored procedures with primitive datatype parameters and Ref Cursors are supported on databases that allow this feature.{{% /alert %}}
 
 To call a stored procedure, do the following:
 
@@ -112,23 +122,27 @@ To call a stored procedure, do the following:
 
 2. Enter the query to call a stored procedure. Add a schema name with the stored procedure name. For example, use the following syntax, where `latest_schema` is the schema name, and `InsertDataIntoTable1` is the stored procedure: `Call latest_schema.InsertDataIntoTable1({1},{2})`. 
 
-    {{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/9.png" width="600" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/9.png" width="600" >}}
 
 3. Create **IN**, **OUT**, and **INOUT** parameters for all parameters present in the stored procedure. Make sure the **Name in DB** is the same as the name of parameter in the stored procedure.
    
-    {{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/10.png" width="600" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/10.png" width="600" >}}
 
 4. Click **Run Query**. This returns an entity with the number of affected rows and all INOUT and OUT parameters. If the stored procedure returns a **Result set**, an associated entity is created.
 
-    {{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/11.png" width="600"  >}}
+    **OUT parameters**:
 
-5. Click **Use Response** > **Save Query & Create Entity** to save the query and the newly-created entities in the domain model.
+    {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/11.png" width="600"  >}}
+
+     **Result set**:
+
+    {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/11a.png" width="600" >}}
+
+5. Click **Use Response** > **Create Entity** to save the query and the newly-created entities in the domain model.
    
-    {{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/12.png" width="600"  >}}
+    {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/12.png" width="600"  >}}
 
 {{% alert color="info" %}}DML commands within a stored procedure are rolled back if they are not committed by a stored procedure, but DDL commands are not.{{% /alert %}}
-
-{{% alert color="info" %}} Only stored procedures with primitive datatype parameters are supported.{{% /alert %}}
 
 For Postgres, Mendix supports the following parameters:
 
@@ -150,7 +164,29 @@ For Postgres, Mendix supports the following parameters:
 * Time without timezone
 * Time with timezone
 
-For MSSQL, for **INOUT** and **OUT** parameters of type Decimal, test values (in design time) are rounded off. 
+For MSSQL, for **INOUT** and **OUT** parameters of type Decimal, test values (in design time) are rounded off.
+
+### Using a Ref Cursor as an OUT Parameter
+
+1. Select the **Stored procedure** checkbox.
+
+2. Enter the query to call a stored procedure. For example, `CALL GET_SCHEMA_DATA( {num_products}, {ref_regions}, {ref_countries}, {ref_products}, {ref_orders})`. 
+
+    {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/ref00.png" width="600"  >}}
+
+3. Create **IN**, **OUT**, and **INOUT** parameters for all parameters present in the stored procedure. Ensure the **Name in DB** matches the parameter name in the stored procedure. To use a Ref cursor, select **OUT** in the **Data Type** column.
+
+    {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/ref01.png" width="600"  >}}
+
+4. Click **Run Query**. This returns an entity with the number of affected rows and all **INOUT** and **OUT** parameters. To view the result set of the Ref cursor, select the appropriate item from the drop-down list. The drop-down includes an entity with all **OUT** parameters and Ref cursors as associated entities.
+
+    {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/ref02.png" width="600"  >}}
+
+    {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/ref02a.png" width="600"  >}}
+
+5. Click **Use Response** > **Create Entity** to save the query and the newly-created entities in the domain model. To modify the entity name, click the pen icon.
+
+    {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/ref03.png" width="600"  >}}
 
 ## Use the Query External Database Activity
 
@@ -160,11 +196,13 @@ For MSSQL, for **INOUT** and **OUT** parameters of type Decimal, test values (in
 
 3. In the **Query** field, select the required query from the drop-down.
 
-4. Assign values to the parameters using the **Expression editor**.
+4. Assign values to the query parameters using the Expression editor.
 
-5. Output details for the selected query auto-populate.
+5. Assign values to the connection parameters that will be used to make a connection during runtime using the Expression editor.
+   
+6. Output details for the selected query auto-populate.
 
-    {{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/7.png" width="600"  >}}
+    {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/8.png" width="600"  >}}
 
 You are now ready to use data from an external database in your Mendix App.
 

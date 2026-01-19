@@ -26,6 +26,18 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="warning" %}}
+The **control bar** widget is a Dojo widget.
+
+This widget is not supported on native mobile pages. Mendix recommends that you use the [Gallery](/appstore/modules/gallery/) or [List View](/refguide/list-view/) instead to display data. See the Mendix React Client's [Migration Guide](/refguide/mendix-client/react/#data-grid).
+
+This widget is not supported in the [React client](/refguide/mendix-client/react/). To upgrade it to the recommended React widget ([Data Grid 2](/appstore/modules/data-grid-2/)), see the Mendix React Client's [Migration Guide](/refguide/mendix-client/react/#data-grid).
+
+If you [switch to the React client](/refguide/app-settings/#react-client), the widget will not appear in the **Toolbox**.
+
+The Dojo client is deprecated and will be removed in Mendix 12. It continues receiving security and stability updates until the end of support of Mendix 11.24.
+{{% /alert %}}
+
 ## Introduction
 
 A control bar of a [template grid](/refguide/template-grid/), [data grid](/refguide/data-grid/), and [reference set selector](/refguide/reference-set-selector/) allows you to manipulate the objects displayed by means of buttons. By default, both grids will be created with [Search](#search-button), [New](#create-button), [Edit](#grid-action-button), and [Delete](#grid-action-button) buttons in the control bar:
@@ -40,7 +52,7 @@ Most properties of control bar buttons are the same as properties of buttons. Fo
 
 To add additional buttons to the control bar, do the following:
 
-1. Right-click on the control bar while it is highlighed.
+1. Right-click on the control bar while it is highlighted.
 1. Select **Add button**.
 1. Select the new type of button.
 1. Double-click on the new button to customize.

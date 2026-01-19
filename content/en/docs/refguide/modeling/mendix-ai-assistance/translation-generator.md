@@ -43,9 +43,7 @@ Currently, if you encounter an error after clicking **Generate Translations...**
 
 You can also use Translation Generator in the web version of the [system texts](/refguide/system-texts/) editor. 
 
-The web-based system texts editor is currently an experimental feature. You can enable it via **Preferences** > the **New Features** tab > the **System Texts Editor** section.
-
-After enabling the new editor and Translation Generator, make sure to restart Studio Pro. You will then see the **Generate translation** option from **App Explorer** > **App '*APP_NAME*'** > **System texts**.
+After enabling Translation Generator, you will see the **Generate translation** option from **App Explorer** > **App '*APP_NAME*'** > **System texts**:
 
 {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/translation-generator/translate-system-text.png" max-width=80% >}}
 

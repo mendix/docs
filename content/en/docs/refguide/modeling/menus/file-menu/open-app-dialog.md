@@ -51,6 +51,10 @@ Clicking **Preferences** opens a dialog box with a subset of the preferences you
 * Rendering
 * [Clone type](/refguide/preferences-dialog/#clone)
 
+### Open Studio Pro
+
+Open the full Studio Pro IDE directly by clicking **Open Studio Pro** without selecting or creating an app. This gives you immediate access to development tools such as the Log Directory and the **Preferences** dialog.
+
 ## Read More
 
 * [Import App Package](/refguide/import-app-package-dialog/)

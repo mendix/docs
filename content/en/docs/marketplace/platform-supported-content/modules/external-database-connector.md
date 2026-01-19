@@ -87,15 +87,18 @@ For example: `*Database*_DBsource.`
 Values for these constants are stored in the active configuration of the user. The password is stored as a private value.
 
 {{% alert color="info" %}}
-Constants are an environment variable whose values can differ per environment, When you deploy an app on Mendix Cloud, values for constants are not added. For more information, see [Constants](https://docs.mendix.com/refguide/configuration/#constants).
+Constants are an environment variable whose values can differ per environment, When you deploy an app on Mendix Cloud, values for constants are not added. For more information, see [Constants](/refguide/configuration/#constants).
 
-For free apps, make sure to add the default values to the constant in Studio Pro. For more information, see the [Deploying a Free App](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/#deploy-free-app) section below. {{% /alert %}}
+For free apps, make sure to add the default values to the constant in Studio Pro. For more information, see the [Deploying a Free App](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/#deploy-free-app) section of *Deploying an App to Mendix Cloud*. {{% /alert %}}
+
+{{% alert color="info" %}}
+From Studio Pro 11.1, you can provide dynamic values to connection properties using connection parameters in the Query External Database activity. {{% /alert %}}
 
 ### Exploring Schemas of a Connected Database
 
 When the connection is successful and saved, you can search the **Browse database** tab for Tables, Views, Procedures, and Functions.
 
-{{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/3.png" width="700" >}}
+{{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-external-database-connector/3.png" width="700" >}}
 
 ## Querying a Database {#query-database}
 
@@ -150,7 +153,7 @@ In the **Response Structure** tab, there is a preview of the queried data in an 
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/response-structure.png" class="no-border" >}}
 
-Click **Save Query & Create Entity** to create the entity and add it to your domain model:
+Click **Create Entity** to create the entity and add it to your domain model:
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/entity-created-from-database.png" class="no-border" >}}
 
@@ -165,12 +168,13 @@ Use the [Query External Database](/refguide/query-external-database/) activity t
 2. Double-click the activity and in the **Database** field, click **Select** to choose the database you want to query.
 3. Select the **Query** you want to include in the activity (that you saved while [querying the database](#query-database)).
 4. Include any [parameters](#parameters).
-5. In the **Output** field, choose if you want to **Use return value**.
+5. Modify values for connection parameters, if you want to use a different set of connection details during runtime.
+6. In the **Output** field, choose if you want to **Use return value**.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/return-type.png" class="no-border" >}}
 
-6. Click **OK**.
-7. Configure the end event (such as displaying a list, if you are selecting data to appear in a list). 
+7. Click **OK**.
+8. Configure the end event (such as displaying a list, if you are selecting data to appear in a list). 
 
 You can now use the microflow in your app. Below is an example of a configured microflow:
 
@@ -211,20 +215,20 @@ To test SSL-based connections from the Database Connection wizard, use the Certi
 1. Import the CA certificate file
     {{% /alert %}}
 
-2. If the PostgreSQL server requires Mendix to authenticate using a client certificate, add the client certificate details to the App Settings by clicking **Configuration** > **Edit** > **Custom**. See the [Running Locally](/developerportal/deploy/use-a-client-certificate/) section of *Use a Client Certificate* for further instructions of how to add the certificate details.
+1. If the PostgreSQL server requires Mendix to authenticate using a client certificate, add the client certificate details to the App Settings by clicking **Configuration** > **Edit** > **Custom**. See the [Running Locally](/developerportal/deploy/use-a-client-certificate/) section of *Use a Client Certificate* for further instructions of how to add the certificate details.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/edit-configuration.png" class="no-border" >}}
 
-3. Add the connection details to the [Database Connection wizard](#connect-database). Fill in the following details:
+1. Add the connection details to the [Database Connection wizard](#connect-database). Fill in the following details:
     * Set SSL encryption to **Yes**
     * Set SSL mode as per your requirement
     * Add the Client certificate identifier; this must match the value provided in the custom settings dialog
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/external-database-connector/example-SSL-connection.png" class="no-border" >}}
 
-4. Click **Test Connection**.
+1. Click **Test Connection**.
 
-5. Run your application to test the connection for local runtime.
+1. Run your application to test the connection for local runtime.
 
 ### Running in the Cloud
 

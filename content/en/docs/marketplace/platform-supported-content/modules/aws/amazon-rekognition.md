@@ -74,9 +74,9 @@ After you configure the authentication profile for Amazon Rekognition, you can i
     2. Drag the one you would like to use to the beginning of your microflow.
     3. Double-click the microflow action to configure the required parameters and provide a value for the AWS Region.
 8. The `DetectLabelResponse` object is returned by the **DetectLabels** activity.   
-9. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow work area.
-10. Position the **Retrieve** activity between the **DetectLabels** activity and the microflow end event.
-11. Double-click the **Retrieve** activity.
+9. In the **Toolbox** pane, search for the **Retrieve object(s)** activity and drag it onto the microflow work area.
+10. Position the **Retrieve object(s)** activity between the **DetectLabels** activity and the microflow end event.
+11. Double-click the **Retrieve object(s)** activity.
 12. In the **Select Association** dialog box, in the **Association** section, click **Select**, and then select **DetectLabels** as the association.
 13. Click **OK**.
 14. Configure a method for triggering the **ACT_DetectLabels** microflow. For example, you can trigger a Microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).

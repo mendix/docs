@@ -11,7 +11,7 @@ Association storage options give you more control over how associations are impl
 
 ## Association Tables vs. Direct Associations
 
-You can choose whether to implement some associations as direct associations as opposed to using association tables. This means that the ID of the **Child** object is stored as a foreign key column of the **Parent** object (for example the "many" side of the association) in the underlying database table. This removes the need for an association table.
+You can choose whether to implement some associations as direct associations as opposed to using association tables. This means that the ID of the **Child** object is stored as a foreign key column of the **Parent** object (for example the "many" side of the association) in the underlying database table. This removes the need for an association table. In most cases, this is the recommended option.
 
 Association tables have the advantage that you don't have to worry about the [multiplicity](/refguide/association-properties/#multiplicity) or [navigability](/refguide/association-properties/#navigability) of the associations. You can change things as your domain model evolves.
 
@@ -25,7 +25,7 @@ When working on projects, the following defaults for association storage apply:
 * **Upgraded projects** – for projects which are upgraded from an older version of Mendix, all new associations continue to be implemented as association tables
 
 {{% alert color="info" %}}
-In your app settings you can [change the default](/refguide/app-settings/#miscellaneous) for all new associations. This does not affect existing associations.
+In your app settings you can [change the default](/refguide/app-settings/#miscellaneous) for all new associations. Existing associations will not be affected. Please note that some associations managed in the System module will be updated even if you haven't created new associations.
 {{% /alert %}}
 
 ## Advantages of Direct Associations
@@ -58,6 +58,6 @@ For more information, see the [Association Storage](/refguide/association-proper
 Before deciding to switch from an association table to a direct association, bear the following in mind:
 
 * Do not use direct associations in modules which are designed to be imported into apps (for example, Marketplace modules) as this could cause unexpected migrations in an app the module is being imported into.
-* Associations have to be rewritten to the database so migration can take a long time, especially where you have a large amount of data already stored in your database
+* Associations have to be rewritten to the database so migration can take a long time, especially where you have a large amount of data already stored in your database — Mendix has done some testing around this and you can find the results in [Association Storage Migration Time](/refguide/association-storage-migration-time/)
 * Queries are not always faster, and might not be faster in your use case
 * If you have written any custom SQL that accesses Mendix tables directly, this might break, but existing XPaths and OQL queries will not be affected

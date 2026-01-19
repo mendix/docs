@@ -6,11 +6,11 @@ description: A guide to understanding the list of objects for the datasource pro
 
 ## Introduction
 
-`ListValue` is used to represent a list of objects for the [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#datasource) property. Corresponding list item values represent properties of different types linked to a [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#datasource) property.
+`ListValue` is used to represent a list of objects for the [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#datasource) property. Corresponding list item values represent properties of different types linked to a [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#datasource) property.
 
 ## ListValue {#listvalue}
 
-When a [`datasource`](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#datasource) property with `isList="true"` is configured for a widget, the client component gets a list of objects represented as a `ListValue`. This type allows detailed access and control over the data source.
+When a [`datasource`](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#datasource) property with `isList="true"` is configured for a widget, the client component gets a list of objects represented as a `ListValue`. This type allows detailed access and control over the data source.
 
 ```ts
 export interface ObjectItem {
@@ -315,7 +315,7 @@ It is possible to reload items of a datasource. The `reload()` method triggers a
 
 ### Working With Actual Data
 
-The `items` property contains all the requested data items of the datasource. However, it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`attribute`](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#attribute), [`action`](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#action), or [`widgets`](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#widgets). See the next section for detailed information about working with different property types in combination with `ListValue`.
+The `items` property contains all the requested data items of the datasource. However, it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`attribute`](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#attribute), [`action`](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#action), or [`widgets`](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#widgets). See the next section for detailed information about working with different property types in combination with `ListValue`.
 
 ### View State {#view-state}
 
@@ -390,11 +390,11 @@ const actionOnFirstItem = this.props.myListAction.get(this.props.myDataSource.it
 actionOnFirstItem.execute();
 ```
 
-In this code sample, checks of status `myDataSource` and availability of items are omitted for simplicity. See the [ActionValue section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#actionvalue) for more information about the usage of `ActionValue`.
+In this code sample, checks of status `myDataSource` and availability of items are omitted for simplicity. See the [ActionValue section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-10/#actionvalue) for more information about the usage of `ActionValue`.
 
 ### ListAttributeValue {#listattributevalue}
 
-`ListAttributeValue` represents an [attribute property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#attribute) that is linked to a data source.
+`ListAttributeValue` represents an [attribute property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#attribute) that is linked to a data source.
 This allows the client component to access attribute values on individual items from a `ListValue`. `ListAttributeValue` is an object and its definition is as follows:
 
 ```ts
@@ -435,7 +435,7 @@ The following code sample shows how to get an `EditableValue<string>` that repre
 const attributeValue = this.props.myAttributeOnDatasource.get(this.props.myDataSource.items[0]);
 ```
 
-Note: in this code sample checks of status of `myDataSource` and availability of items are omitted for simplicity. See [EditableValue section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#editable-value) for more information about usage of `EditableValue`.
+Note: in this code sample checks of status of `myDataSource` and availability of items are omitted for simplicity. See [EditableValue section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-10/#editable-value) for more information about usage of `EditableValue`.
 
 #### Attribute ID, Sortable and Filterable Flags {#listattributevalue-id-sortable-filterable}
 
@@ -445,7 +445,7 @@ Fields `sortable` and `filterable` specify if the attribute could be used for so
 
 #### Attribute Type
 
-The [attribute](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#attribute) property defines which attribute types can be configured for that property. For example, an attribute property may be configured to allow attributes of type `String` and `Integer` in order to present progress. While this is convenient for users, it may require additional work for developers by processing different data types.
+The [attribute](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#attribute) property defines which attribute types can be configured for that property. For example, an attribute property may be configured to allow attributes of type `String` and `Integer` in order to present progress. While this is convenient for users, it may require additional work for developers by processing different data types.
 
 It is possible to determine the type of attribute by checking the `type` field on an attribute property. The following code sample shows how to check the attribute type on the property named `myAttributeOnDatasource`:
 
@@ -463,11 +463,11 @@ if (this.props.myAttributeOnDatasource.type === "String") {
 
 The `formatter` field represents the default formatter used on values obtained by the `get` function.
 
-The optional `universe` field represents an array of possible values for an attribute. For more information, see the `universe` field of [EditableValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#editable-value).
+The optional `universe` field represents an array of possible values for an attribute. For more information, see the `universe` field of [EditableValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-10/#editable-value).
 
 ### ListReferenceValue and ListReferenceSetValue {#listassociationvalue}
 
-`ListReferenceValue` and `ListReferenceSetValue` are both used to represent an [association property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#association) that is linked to a data source. This allows the client component to access associated values of individual items from a `ListValue`. `ListReferenceValue` and `ListReferenceSetValue` are both objects and their definitions are as follows:
+`ListReferenceValue` and `ListReferenceSetValue` are both used to represent an [association property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#association) that is linked to a data source. This allows the client component to access associated values of individual items from a `ListValue`. `ListReferenceValue` and `ListReferenceSetValue` are both objects and their definitions are as follows:
 
 ```ts
 export type ListReferenceValue = ListAssociationValue<ObjectItem> & { type: "Reference" };
@@ -505,9 +505,9 @@ The following code example shows how to get a `DynamicValue<ObjectItem>` that re
 const associationValue = this.props.myAssociationOnDatasource.get(this.props.myDataSource.items[0]);
 ```
 
-This will return an `ObjectItem` representing the associated object, because in this example the widget is configured to allow only singular associations. If you want to access the individual attribute values of this associated object, you may use an attribute property linked to the selectable objects data source and pass the associated object to it. For more information, see [Obtaining Attribute Value section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#obtaining-attribute-value).
+This will return an `ObjectItem` representing the associated object, because in this example the widget is configured to allow only singular associations. If you want to access the individual attribute values of this associated object, you may use an attribute property linked to the selectable objects data source and pass the associated object to it. For more information, see [Obtaining Attribute Value section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values-10/#obtaining-attribute-value).
 
-Please note these code samples omit checks of `myDataSource` status and availability of items for simplicity. See [DynamicValue section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#dynamic-value) for more information on the usages of `DynamicValue`.
+Please note these code samples omit checks of `myDataSource` status and availability of items for simplicity. See [DynamicValue section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-10/#dynamic-value) for more information on the usages of `DynamicValue`.
 
 #### Association ID and Filterable Flags {#listassociationvalue-id-filterable}
 
@@ -517,7 +517,7 @@ The `filterable` field specifies if the association can be used for filtering. T
 
 #### Association Type {#association-type}
 
-The [association](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#association) property determines which association types could be configured for that property. For example, an association property may be configured to allow associations of type `Reference` and not `ReferenceSet`.
+The [association](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#association) property determines which association types could be configured for that property. For example, an association property may be configured to allow associations of type `Reference` and not `ReferenceSet`.
 
 It is possible to determine the type of association by checking the `type` field on an association property. This is useful if the property has been configured to allow both references and reference sets. The following code sample shows how to check the association type on the property named `myAssociationOnDatasource`:
 
@@ -532,7 +532,7 @@ if (this.props.myAssociationOnDatasource.type === "Reference") {
 
 ### ListWidgetValue {#listwidgetvalue}
 
-`ListWidgetValue` represents a [widget property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#widgets) that is linked to a data source. This allows the client component to render child widgets with items from a `ListValue`.
+`ListWidgetValue` represents a [widget property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#widgets) that is linked to a data source. This allows the client component to render child widgets with items from a `ListValue`.
 `ListWidgetValue` is an object and its definition is as follows:
 
 ```ts
@@ -560,7 +560,7 @@ When the `widgets` property is not required, there may not be any child widgets 
 
 ### ListExpressionValue {#listexpressionvalue}
 
-`ListExpressionValue` represents an [expression property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#expression) or [text template property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#texttemplate) that is linked to a data source. This allows the client component to access expression or text template values for individual items from a `ListValue`. `ListExpressionValue` is an object and its definition is as follows:
+`ListExpressionValue` represents an [expression property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#expression) or [text template property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#texttemplate) that is linked to a data source. This allows the client component to access expression or text template values for individual items from a `ListValue`. `ListExpressionValue` is an object and its definition is as follows:
 
 ```ts
 export interface ListExpressionValue<T extends AttributeValue> {

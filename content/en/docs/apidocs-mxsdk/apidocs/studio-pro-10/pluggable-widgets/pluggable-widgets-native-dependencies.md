@@ -23,7 +23,7 @@ Where you place the file depends on your situation:
 
 ### Naming Conventions
 
-For pluggable widgets, the declaration file should be named after the [Widget Definition XML File](/apidocs-mxsdk/apidocs/pluggable-widgets/#widget-definition), but should use a *.json* extension.
+For pluggable widgets, the declaration file should be named after the [Widget Definition XML File](/apidocs-mxsdk/apidocs/pluggable-widgets-10/#widget-definition), but should use a *.json* extension.
 
 For JavaScript actions, the declaration file should be named after the name of a `.js` file of the action, but should use a *.json* extension.
 
@@ -62,5 +62,5 @@ It is not possible to include different versions of the same native dependency i
 
 ## Read More
 
-* [Pluggable Widget API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets/)
+* [Pluggable Widget API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets-10/)
 * [Build JavaScript Actions for Native Mobile](/howto/extensibility/create-native-javascript-action/)

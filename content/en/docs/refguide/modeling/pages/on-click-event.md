@@ -98,7 +98,7 @@ The **Show a page** event opens the specified page. Select the page which opens 
 
 #### Page Arguments
 
-**Page arguments** are automatically configured based on the parameters of the selected page and the available arguments. In general, arguments are taken from any enclosing data widget. If the data widget enclosing the widget calling a page is inside another (nested) data widget, then objects from that data widget and any others in which it is nested can also be passed.
+**Page arguments** are automatically configured based on the [parameters](/refguide/page-parameter/) of the selected page and the available arguments. In general, arguments are taken from any enclosing data widget or the page itself.
 
 ### Call a Microflow {#call-microflow}
 

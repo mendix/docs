@@ -23,7 +23,7 @@ The current scope of the module is focused on text and image generation, as well
 
 ### Dependencies {#dependencies}
 
-The GenAI Commons module requires Mendix Studio Pro version [9.24.2](/releasenotes/studio-pro/9.24/#9242) or above.
+The GenAI Commons module requires Mendix Studio Pro version 10.24.0 or above.
 
 You must also download the [Community Commons](/appstore/modules/community-commons-function-library/) module.
 
@@ -41,21 +41,31 @@ Although GenAI Commons technically defines additional capabilities typically fou
 
 ### Token Usage
 
-GenAI Commons can help store usage data which allows admins to understand the token usage. Usage data is only persisted if the constant `StoreUsageMetrics` is set to `true` and the GenAI connector of choice has implemented the operation to store token usage. In general, this is only supported for chat completions and embedding operations.
+GenAI Commons can help store usage data, allowing admins to understand token usage. Usage data is persisted only if the constant `StoreUsageMetrics` is set to *true* (exception in version 5.3.0 and above: if [StoreTraces](#traceability) is set to *true*, Usage data is stored as well). In general, this is only supported for chat completions and embedding operations.
 
 To clean up usage data in a deployed app, you can enable the daily scheduled event `ScE_Usage_Cleanup` in the Mendix Cloud Portal. Use the `Usage_CleanUpAfterDays` constant to control for how long token usage data should be persisted. 
 
 Lastly, the [Conversational UI module](/appstore/modules/genai/conversational-ui/) provides pages, snippets, and logic to display and export token usage information. For this to work, the module roles `UsageMonitoring` from both Conversational UI as well as GenAI Commons need to be assigned to the applicable project roles.
 
+### Traceability {#traceability}
+
+Traceability was introduced in version 5.3.0 of the GenAI Commons module.
+
+By default, the chat completions operations of GenAI Commons store data in your application's database for traceability reasons. This makes it easier to understand the usage of GenAI in your app and why the model behaved in a certain way, for example, by reviewing tool usage. Trace data is only persisted if the constant `StoreTraces` is set to *true*. 
+
+As traces may contain sensitive and personally identifiable information, you should determine, on a case-by-case basis, whether storing this data is compliant. To enable read-access to a user (typically an admin user), grant the module role `TraceMonitoring` to the applicable project roles.
+
+To clean up trace data in a deployed app, you can enable the daily scheduled event `ScE_Trace_Cleanup` in the [Mendix Cloud Portal](https://genai.home.mendix.com/). Use the `Trace_CleanUpAfterDays` constant to control the retention period of the trace data.
+
 ## Technical Reference {#technical-reference}
 
 The technical purpose of the GenAI Commons module is to define a common domain model for generative AI use cases in Mendix applications. To help you work with the **GenAI Commons** module, the following sections list the available [entities](#domain-model), [enumerations](#enumerations), and [microflows](#microflows) to use in your application. 
 
-### Domain Model {#domain-model} 
+### Domain Model {#domain-model}
 
 The domain model in Mendix is a data model that describes the information in your application domain in an abstract way. For more general information, see the [Data in the Domain Model](/refguide/domain-model/) documentation. To learn about where the entities from the domain model are used and relevant during implementation, see the [Microflows](#microflows) section below.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genaicommons/demain-model.png" alt="" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genaicommons/GenAICommons_domain_model.png" >}}
 
 #### `DeployedModel` {#deployed-model}
 
@@ -99,9 +109,9 @@ Accepted input modality of the associated deployed model.
 
 #### `Usage` {#Usage}
 
-This entity represents usage statistics of a call to an LLM. It refers to a complete LLM interaction; in case there are several iterations (e.g. recursive processing of function calls), everything should be aggregated into one Usage record.
+This entity represents usage statistics of a call to an LLM. It refers to a complete LLM interaction; in case there are several iterations (for example, recursive processing of function calls), everything should be aggregated into one Usage record.
 
-Following the principles of GenAI Commons, it must be stored based on the response for every successful call to a system of an LLM provider. This is only applicable to text & file operations and embedding operations. It is the responsibility of connector developers implementing the GenAI principles in their GenAI operations to include the right microflows to ensure the storage of Usage details after successful calls.
+Following the principles of GenAI Commons, it must be stored based on the response for every successful call to a system of an LLM provider. This is only applicable to text and file operations and embedding operations.
 
 The data stored in this entity is to be used later on for token consumption monitoring.
 
@@ -115,9 +125,88 @@ The data stored in this entity is to be used later on for token consumption moni
 | `DurationMilliseconds` | The duration in milliseconds of the technical part of the call to the system of the LLM provider. This excludes custom pre and postprocessing but corresponds to a complete LLM interaction. |
 | `_DeploymentIdentifier` | Internal object used to identify the DeployedModel used. |
 
-#### `Connection` {#connection}
+#### `Trace` {#trace}
 
-The Connection entity was previously used as an input parameter for Chat completions, Embeddings, and Image Generation operations, but it has been replaced by the `DeployedModel` entity. It was also used as a general connection entity for Knowledge Base interactions, which is now replaced with the `DeployedKnowledgeBase` entity.
+A trace represents the whole LLM interaction from the first user message until the final assistant's response was returned, including tool calls.
+The data stored in this entity is to be used later on for traceability use cases.
+
+`Trace` was introduced in version 5.3.0.
+
+| Attribute | Description |
+| --- | --- |
+| `TraceId` | The trace ID is set internally to identify a trace. |
+| `StartTime` | The start time of the initial model invocation. |
+| `EndTime` | The end time after the final model invocation is completed. |
+| `DurationMilliseconds` | The duration between the start and end of the whole model invocation. |
+| `Input` | The initial input of the model invocation (usually a user prompt). |
+| `Output` | The response of the final message sent by the model (usually an assistant message). |
+| `SystemPrompt` | The system prompt that was used for the model invocation. |
+| `HasError` | Indicates if any span call has failed. |
+| `_AgentVersionId` | The id of the agent version (if applicable) as sent via the request. |
+| `_ConversationId` | The id of the conversation (if applicable) as sent via the request. This is usually created by the model provider. |
+
+#### `Span` {#span}
+
+A span is created for each interaction between Mendix and the LLM (such as chat completions, tool calling, etc.). The generalized object is typically not used; instead, its specializations are used.
+
+| Attribute | Description |
+| --- | --- |
+| `SpanId` | The span ID is set internally to identify a span. |
+| `StartTime` | The start time of the model invocation. |
+| `EndTime` | The end time after the model invocation is completed. |
+| `DurationMilliseconds` | The duration between the start and end of the whole model invocation. |
+| `Input` | The input of the span. |
+| `Output` | The output of the span. |
+| `IsError` | Indicates if the call failed. If so, the span's output will contain the error message that was also logged. |
+
+`Span` was introduced in version 5.3.0.
+
+#### `ModelSpan` {#model-span}
+
+A model span is created for each interaction between Mendix and the LLM where content is generated (sent as the assistant's message). Typically, this is a request for text generation. In addition to the [Span's](#span) attributes, it also contains the following:
+
+| Attribute | Description |
+| --- | --- |
+| `InputTokens` | Number of tokens in the request. |
+| `OutputTokens` | Number of tokens in the generated response. |
+| `_DeploymentIdentifier` | Internal object used to identify the `DeployedModel` that was used. |
+
+`ModelSpan` was introduced in version 5.3.0.
+
+#### `ToolSpan` {#tool-span}
+
+A tool span is created for each tool call requested by the LLM. The tool call is processed in GenAI Commons, and the result is sent back to the model. In addition to the [Span's](#span) attributes, it also contains the following:
+
+| Attribute | Description |
+| --- | --- |
+| `ToolName` | The name of the tool that was called. |
+| `ToolDescription` | The description of the tool. |
+| `_ToolCallId` | The ID of the tool call used by the model to map an assistant message containing a tool call with the output of the tool call (tool message). |
+
+`ToolSpan` was introduced in version 5.3.0.
+
+#### `KnowledgeBaseSpan` {#knowledge-base-span}
+
+A knowledge base span is created for each knowledge base retrieval tool call requested by the LLM. The tool call is processed in GenAI Commons, and the result is sent back to the model. In addition to the [ToolSpan's](#tool-span) attributes, it also contains the following:
+
+| Attribute | Description |
+| --- | --- |
+| `Architecture` | The architecture of the knowledge base, defined by the [DeployedKnowledgeBase](#deployed-knowledge-base) specialization. |
+| `MinimumSimilarity` | The minimum similarity score that was specified during the retrieval (usually 0,0 - 1,0). |
+| `MaxNumberOfResults` | The maximum number of results that was specified during the retrieval. |
+| `KBDisplayName` | The display name of the deployed knowledge base that was specified during the retrieval. |
+
+`KnowledgebaseSpan` was introduced in version 5.3.0.
+
+#### `MCPSpan` {#mcp-span}
+
+An MCP span is created for each tool invocation over the Model Context Protocol via the [MCP Client module](/appstore/modules/genai/mcp-modules/mcp-client/). The tool call is processed on the MCP server, usually outside of this application, and the result is sent back to the model. In addition to the [ToolSpan's](#tool-span) attributes, it also contains the following:
+
+| Attribute | Description |
+| --- | --- |
+| `ServerName` | The name of the server where the tool resides. |
+
+`MCPSpan` was introduced in version 5.4.0.
 
 #### `Request` {#request} 
 
@@ -125,11 +214,13 @@ The `Request` is an input object for the chat completions operations defined in 
 
 | Attribute | Description |
 | --- | --- |
+| `_Id` | The Id attribute describes the unique identifier of the session. Reuse the same value to continue the same session. |
 | `SystemPrompt` | A `SystemPrompt` provides the model with context, instructions, or guidelines. |
 | `MaxTokens` | Maximum number of tokens per request. |
 | `Temperature` | `Temperature` controls the randomness of the model response. Low values generate a more predictable output, while higher values allow creativity and diversity. It is recommended to steer either the temperature or `TopP`, but not both. |
 | `TopP` | `TopP` is an alternative to temperature for controlling the randomness of the model response. `TopP` defines a probability threshold so that only words with probabilities greater than or equal to the threshold will be included in the response. It is recommended to steer either the temperature or `TopP`, but not both. |
 | `ToolChoice` | Controls which (if any) tool is called by the model. For more information, see the [ENUM_ToolChoice](#enum-toolchoice) section containing a description of the possible values. |
+| `_AgentVersionId` | The `AgentVersionId` is set if the execution of the request was called from an Agent. |
 
 #### `Message` {#message}
 
@@ -173,6 +264,7 @@ A tool in the tool collection. This is sent along with the request to expose a l
 | `Description` | An optional description of the tool, used by the model in addition to the name attribute to choose when and how to call the tool. | 
 | `ToolType` | The type of the tool. Refer to the documentation supplied by your AI provider for information about the supported types. |
 | `Microflow` | The name (string) of the microflow that this tool represents. |
+| `MCPServerName` | The name of the MCP server (only appliable for MCP Tools). |
 
 #### `Function` {#function}
 
@@ -191,6 +283,24 @@ A tool of the type *function*. This is a specialization of [Tool](#tool) and rep
 | `MinimumSimilarity` | Specifies the minimum similarity score (usually 0-1) of the passed chunk and the knowledge chunks in the knowledge base. |
 | `MaxNumberOfResults` | Specifies the maximum number of results that should be retrieved from the knowledge base. |
 
+#### `ArgumentInput` {#argument-input}
+
+For tools which are not executed in the same Mendix application, but still registered with the request and called from the application, `ArgumentInput` objects are added to the [Tool](#tool). When the tool is called, the arguments are not passed directly to the microflow, but can be extracted from the [Argument](#argument) of the [ToolCall](#toolcall).
+
+| Attribute | Description |
+| --- | --- |
+| `Name` | Name of the argument. |
+| `_Type` | Data type of the argument, for example, string, number, boolean, enum. |
+| `Required` | Indicates if the argument is required for calling the tool. |
+
+#### `EnumValue` {#enum-value}
+
+The `EnumValue` specifies available keys for "enum" [ArgumentInput](#argument-input) data types, so that the model is restricted to use valid input.
+
+| Attribute | Description |
+| --- | --- |
+| `Key` | Key of an enumeration. |
+
 #### `StopSequence` {#stopsequence}
 
 For many models, `StopSequence` can pass a list of character sequences (for example a word) along with the request. The model will stop generating content when a word of that list occurs next.
@@ -205,6 +315,7 @@ The response returned by the model contains usage metrics and a response message
 
 | Attribute | Description |
 | --- | --- |
+| `_ID_` | The ID attribute describes the unique identifier of the session. Reuse the same value to continue the same session. If no ID was set by the LLM connector, an internal ID is created. | 
 | `RequestTokens` | Number of tokens in the request. | 
 | `ResponseTokens` | Number of tokens in the generated response. |
 | `TotalTokens` | Total number of tokens (request + response). |
@@ -219,9 +330,17 @@ A tool call object may be generated by the model in certain scenarios, such as a
 | Attribute | Description |
 | --- | --- |
 | `Name` | The name of the tool to call. This refers to the `Name` attribute of one of the [Tools](#tool) in the Request. |
-| `Arguments` | The arguments with which the tool is to be called, as generated by the model in JSON format. Note that the model does not always generate valid JSON and may hallucinate parameters that are not defined by your tool's schema. Mendix recommends validating the arguments in the code before calling the tool.
 | `ToolType` | The type of the tool. View AI provider documentation for supported types. |
 | `ToolCallId` | This is a model-generated ID of the proposed tool call. It is used by the model to map an assistant message containing a tool call with the output of the tool call (tool message). |
+
+#### `Argument` {#argument}
+
+The arguments are used to call the tool, generated by the model in JSON format. Note that the model does not always generate valid JSON and may hallucinate parameters that are not defined by your tool's schema. Mendix recommends validating the arguments in the code before calling the tool. One argument is generated for each primitive input parameter of the selected microflow.
+
+| Attribute | Description |
+| --- | --- |
+| `Key` | The name of the input parameter as given in the microflow. |
+| `Value` | The value that is passed to the input parameter. |
 
 #### `Reference` {#reference}
 
@@ -233,6 +352,7 @@ An optional reference for a response message.
 | `Content` | The content of the reference. |
 | `Source` | The source of the reference, e.g. a URL. | 
 | `SourceType` | The type of the source. For more information, see [ENUM_SourceType](#enum-sourcetype). |
+| `Index` | Used to make references identifiable and sortable.| 
 
 #### `Citation` {#citation}
 
@@ -496,7 +616,7 @@ To include files within a message, you must provide them in the form of a file c
 
 ##### Tools: Add Function to Request {#add-function-to-request}
 
-Adds a new Function to a [ToolCollection](#toolcollection) that is part of a Request. Use this microflow when you have microflows in your application that may be called to retrieve the required information as part of a GenAI interaction. If you want the model to be aware of these microflows, you can use this operation to add them as functions to the request. If supported by the LLM connector, the chat completion operation calls the right functions based on the LLM response and continues the process until the assistant's final response is returned.
+Adds a new Function to a [ToolCollection](#toolcollection) that is part of a Request. Use this action to expose microflows as tools to the LLM via [function calling](/appstore/modules/genai/function-calling/). If supported by the LLM connector, the chat completion operation calls the right functions based on the LLM response and continues the process until the assistant's final response is returned.
 
 ###### Input Parameters
 
@@ -505,10 +625,12 @@ Adds a new Function to a [ToolCollection](#toolcollection) that is part of a Req
 | `Request` | [Request](#request) | mandatory | The request to add the function to. |
 | `ToolName` | String | mandatory | The name of the tool to use/call. |
 | `ToolDescription` | String | optional | An optional description of what the tool does, used by the model to choose when and how to call the tool. |
-| `FunctionMicroflow` | Microflow | mandatory | The microflow that is called within this function. A function microflow can only have a single string input parameter or no input parameter and returns a string. |
+| `FunctionMicroflow` | Microflow | mandatory | The microflow that is called within this function. |
 
 {{% alert color="info" %}}
 Since this microflow runs in the context of the user, you can make sure that it only shows data that is relevant to the current user.
+The microflow can have none, a single, or multiple primitive input parameters such as Boolean, Datetime, Decimal, Enumeration, Integer or String. Additionally, they may accept the [Request](#request) or [Tool](#tool) objects as inputs. The microflow can only return a String value. 
+Note that calling the microflow may fail if the model passes parameters in the wrong format, for example, a decimal number for an integer parameter. Such errors are logged and returned to the model, which may either inform the user or retry the tool call. The model can also pass empty values, so proper validation is recommended.
 {{% /alert %}}
 
 ###### Return Value
@@ -908,3 +1030,7 @@ The process may look like this:
 3. Download the module from the marketplace; note that the module is from now on located under the “Marketplace modules” category in the app explorer.
 4. Test your application locally and verify that everything works as before.
 5. Restore lost data on deployed environments. Usually incoming associations to the protected modules need to be reset.
+
+### Conflicted Lib Error After Module Import
+
+If you encounter an error caused by conflicting Java libraries, such as `java.lang.NoSuchMethodError: 'com.fasterxml.jackson.annotation.OptBoolean com.fasterxml.jackson.annotation.JsonProperty.isRequired()'`, try synchronizing all dependencies (**App** > **Synchronize dependencies**) and then restart your application.

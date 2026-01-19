@@ -64,9 +64,9 @@ For example, to list all existing Amazon SQS subscriptions, implement the **List
 14. Set the value of the **Region** parameter in the same way as for the **GetStaticCredentials** or **GetTemporaryCredentials** activity.
 15. Click **Edit parameter value**, edit the **ListQueuesRequest** parameter, and let it auto-fill.
 16. Click **Edit parameter value**, edit the **Credentials** parameter, and let it auto-fill.
-17. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
-18. Position the **Retrieve** activity between the **ListQueue** activity and the microflow end event.
-19. Double-click the **Retrieve** activity.
+17. In the **Toolbox** pane, search for the **Retrieve object(s)** activity and drag it onto the microflow area.
+18. Position the **Retrieve object(s)** activity between the **ListQueue** activity and the microflow end event.
+19. Double-click the **Retrieve object(s)** activity.
 20. In the **Select Association** dialog box, in the **Association** section, click **Select**, and then under **ListQueueResponse** select *ListQueue_ListQueuesResponse* as the association.
 21. Click **OK**.
 22. Configure a method for triggering the **ACT_ListQueues** microflow.

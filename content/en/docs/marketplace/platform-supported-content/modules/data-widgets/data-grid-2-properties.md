@@ -5,7 +5,7 @@ description: "This document describes the properties of the Data Grid 2 and thei
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## Introduction 
+## Introduction
 
 This guide lists all the properties of the Data Grid 2 widget located inside the [Data Widgets](/appstore/modules/data-widgets/) module. Because data grids also contain columns and rows, properties for those [columns](#columns) and [rows](#rows) are also described below.
 
@@ -51,6 +51,12 @@ This property is available only when **Selection method** is set to **Checkbox**
 
 When set to **Yes**, the data grid displays a checkbox in the header that, when selected, selects all visible rows. Clearing it will clear the selected rows.
 
+#### Loading Type
+
+This property controls how loading states are displayed during data operations such as pagination, filtering, and refresh. 
+
+Available options include spinner (rotating overlay) and skeleton (placeholder content). Loading indicators automatically appear during initial data load, pagination navigation, filter operations, sorting, and export operations. The system includes smart timing to prevent flickering on fast operations, and also provides appropriate timeout handling for slow operations.
+
 ### Columns Tab {#columns}
 
 #### Columns
@@ -77,7 +83,13 @@ When the property is set to **Virtual scrolling**, then the navigation buttons a
 
 #### Show Paging Buttons
 
-This property controls the visibility of navigation buttons. If set to "Auto", navigation buttons are only visible when the number of elements in the data source exceeds the page size.
+This property controls the visibility of navigation buttons. If set to **Auto**, navigation buttons are only visible when the number of elements in the data source exceeds the page size.
+
+#### Show Number of Rows
+
+This property displays the total number of rows in the pagination area, providing users with context about the dataset size. 
+
+When enabled, it shows information such as **1 to 20 of 150**. It works with virtual scrolling, load more pagination, and standard pagination modes. On large datasets, the total count calculation may impact initial load time.
 
 #### Empty List Message
 
@@ -91,7 +103,7 @@ An expression that returns the CSS class for the row. The data source entity is 
 
 #### On Click Trigger
 
-This property determines how the click action is triggered. 
+This property determines how the click action is triggered.
 
 The default option is **Single click**, which triggers the action on a single click on a row. If set to **Double click**, the action is triggered when the row is double-clicked.
 
@@ -102,6 +114,12 @@ This property sets the action to be performed when the row is clicked.
 #### On Selection Change
 
 This property sets the action to be performed when the row is selected or unselected.
+
+#### Filters  {#filters-placeholder}
+
+This placeholder acts as a container for filter widgets that operate on the entire grid. This placeholder provides a designated area for placing filter widgets (text filter, date filter, number filter, drop-down filter) that filter across all grid data rather than being limited to individual columns. 
+
+Filter widgets placed here automatically link to the grid's datasource, and changes immediately affect the grid data. Still, widgets should be configured to work properly. Multiple filters work together using **AND** logic by default.
 
 ### Column Capabilities Tab
 
@@ -123,6 +141,12 @@ This flag controls column hiding for the entire data grid. If set to **No**, the
 
 ### Configuration Tab
 
+#### Store Filters in Personalization
+
+This property controls whether filter states are saved as part of user personalization settings or not. When enabled, the system preserves filter input values, selected filter types, applied filter combinations, filter visibility states, and custom filter configurations in the user's personalization profile. 
+
+Filter states can be stored in browser localStorage or database attributes depending on personalization configuration. When enabled, users' filter preferences persist across sessions and page refreshes. When disabled, filters reset to default values on every page load — useful for shared screens, dashboards, or public interfaces.
+
 #### Attribute
 
 This property sets the entity attribute that is used to store custom visual settings for the data grid.
@@ -133,12 +157,8 @@ This property sets the action to be performed when the **Attribute** value is ch
 
 ### Grid Wide Filtering
 
-#### Filters
-
-A list of filters that can be used in the header of the data grid. Each filter defines an attribute that is used as part of a joined query to select data from the data source.
-
-{{% alert color="info" %}}
-This property requires advanced knowledge of data grid widget. Please read [Grid Wide Filtering](/appstore/modules/data-grid-2/#grid-wide-filtering) and view its examples for additional guidance.
+{{% alert color="warning" %}}
+Grid Wide Filtering has been deprecated and removed. Use the [Filters Placeholder](#filters-placeholder) along with dedicated filter widgets ([Text Filter](/appstore/modules/datagrid-text-filter/), [Date Filter](/appstore/modules/datagrid-date-filter/), [Number Filter](/appstore/modules/datagrid-number-filter/), and [Dropdown Filter](/appstore/modules/datagrid-dropdown-filter/)) for filtering functionality.
 {{% /alert %}}
 
 ### Aria Labels
@@ -158,6 +178,12 @@ Defines a string value that labels the cancel export button of the export dialog
 #### Select Row
 
 Defines a string value that labels the checkbox of the row when the selection is enabled. Used by assistive technologies and screen readers.
+
+#### Select All Rows
+
+This property provides an ARIA label for the **Select All** checkbox in the grid header. This ARIA label is announced by screen readers when users navigate to the select all checkbox. 
+
+The label integrates with three-state checkbox functionality (unchecked, checked, indeterminate) and supports localization through text templates. Screen readers announce appropriate state changes when the checkbox is toggled, improving accessibility compliance for bulk-selection operations.
 
 ## Column Properties {#column-properties}
 
@@ -183,18 +209,6 @@ Text to be displayed in the column header.
 
 Text to display when hovering over column header.
 
-#### Reference
-
-This property is used to select the reference entity that can be used for association filtering. Useful only in conjunction with the dropdown filter widget.
-
-#### Data Source
-
-A data source that should return a list of entities selected in the reference property. All items in this list will be available in the dropdown filter.
-
-#### Option Caption
-
-An expression used to create a caption for each reference. This text is then visible as an option in the dropdown filter.
-
 #### Visible
 
 A Boolean expression that controls the visibility of columns in the data grid. If the expression returns **false**, then the column is hidden and remains hidden unless the expression value is changed to **true**.
@@ -215,9 +229,9 @@ If set to **Yes**, then the column position in the grid can be changed by the us
 
 #### Can Hide
 
-If set to **Yes**, the column can be hidden in the view settings. 
+If set to **Yes**, the column can be hidden in the view settings.
 
-If hidden by default, column is hidden on first render and can be shown using view settings. 
+If hidden by default, column is hidden on first render and can be shown using view settings.
 
 If set to **No**, column cannot be hidden in view settings.
 
@@ -227,7 +241,7 @@ If set to **No**, column cannot be hidden in view settings.
 
 This property controls how the column width is calculated.
 
- **Auto-fill** fills the available space. **Auto-fit content** uses just enough space to display the column content. **Manual** is used to set the number for the flex-grow CSS property.
+**Auto-fill** fills the available space. **Auto-fit content** uses just enough space to display the column content. **Manual** is used to set the number for the flex-grow CSS property.
 
 #### Alignment
 

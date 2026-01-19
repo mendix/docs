@@ -2,7 +2,7 @@
 title: "Frequently Asked Questions – Security"
 linktitle: "Security Findings FAQ"
 url: /support/security-findings-faq
-weight: 60
+weight: 70
 description: "FAQ about existing security findings and other security questions."
 aliases:
     - /developerportal/support/security-findings-faq/
@@ -38,7 +38,7 @@ Mendix does not make compliance reports available publicly, you will need to be 
 
 ### Platform Support
 
-Mendix Support will only assist when using platform-supported components. See the table in the [Support for Different Deployment Strategies](/support/#support-by-strategy) section of the *Mendix Support* document for information on what is supported by Mendix and what you need to support yourself. For Marketplace components, you can check the support status of a component by finding it in the marketplace and looking at the **Support** section in the component details to the right of the component name.
+Mendix Support will only assist when using platform-supported components. See the table in [Support for Different Deployment Strategies](/support/deployment-strategy-support/) for information on what is supported by Mendix and what you need to support yourself. For Marketplace components, you can check the support status of a component by finding it in the marketplace and looking at the **Support** section in the component details to the right of the component name.
 
 ### Security Contact
 
@@ -74,9 +74,9 @@ Hiding pages for end-users is not the way to restrict access to data, you should
 
 When an XPath query is received by the runtime, the runtime will always apply entity access to the XPath query, based on the access rules connected with the role (or roles) of the end-user making the request. So, although an end-user might be able to change the XPath query before sending it to the runtime, the runtime will still apply access rules, and only return data the end-user is allowed to access.
 
-### HTTP Verb Tampering
+### HTTP Message Tampering
 
-The `/xas/` request handler is not a RESTful API, so the conventions that you would usually apply to RESTful APIs, do not apply in this case. The `/xas/` API does not look at the HTTP verb used, this is ignored. Only published REST services make a distinction between HTTP verbs.
+The `/xas/` request handler is not a RESTful API, so the conventions that you would usually apply to RESTful APIs, do not apply in this case. The `/xas/` API does not look at the HTTP verb used, this is ignored. If the content of the HTTP message is altered, security restrictions continue to be applied server-side and the end-user will only see data which they have access to. See the example below.
 
 ### Example
 

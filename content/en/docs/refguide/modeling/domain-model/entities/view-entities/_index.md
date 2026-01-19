@@ -99,7 +99,7 @@ An OQL query can begin with either a `SELECT` clause or a `FROM` clause, as both
 
 #### `ORDER BY` Is Only Needed with `LIMIT` or `OFFSET`
 
-Similar to other types of Mendix entity, view entities represent data without enforcing any specific order. Therefore, using the `ORDER BY` clause in the view entity query to sort query results is neither possible nor necessary. Data retrieved from a view entity can be sorted on retrieval (like regular entities) using options like the [Sorting](/refguide/retrieve/#sorting) feature in a Retrieve microflow activity.
+Similar to other types of Mendix entity, view entities represent data without enforcing any specific order. Therefore, using the `ORDER BY` clause in the view entity query to sort query results is neither possible nor necessary. Data retrieved from a view entity can be sorted on retrieval (like regular entities) using options like the [Sorting](/refguide/retrieve-objects/#sorting) feature in a Retrieve microflow activity.
 
 The `ORDER BY` clause is only required in a view entity when using `LIMIT` or `OFFSET` to create data subsets. For example, you might need to use `ORDER BY` when retrieving:
 

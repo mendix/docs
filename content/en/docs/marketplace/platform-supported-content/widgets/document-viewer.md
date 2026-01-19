@@ -45,6 +45,14 @@ These are the dimension configurations for document viewer:
 * **Maximum Height** — Determines the maximum size for the custom charts container.
 * **Vertical Overflow** — If maximum height is set, vertical overflow will determine the widget's behavior to show overflowing content if that content exceeded the maximum height allowed.
 
+## Advanced {#advanced}
+
+The **Advanced** tab allows you to configure settings for features beyond the normal configurations:
+
+* **PDF.js worker URL** — Configures the path for PDF.js worker script. This worker script is needed to render PDF type document using a [PDF.js](https://github.com/mozilla/pdf.js?tab=readme-ov-file#including-via-a-cdn) library. 
+    * If left empty, the document viewer widget will retrieve PDF.js from CDN `http://unpkg.com/pdfjs-dist@4.8.69/build/pdf.worker.min.mjs`.
+    * Alternatively, users can grab `pdf.worker.mjs` from `{LOCAL DEV PROJECT FOLDER HERE}/deployment/web/widgets/com/mendix/shared/pdfjs/pdf.worker.mjs`, put it into their own `App Module -> Styling/web/js/pdf.worker.mjs` file, and then set `./js/pdf.worker.mjs` as the worker URL configuration. This is the recommended practice to support [CSP](/howto/security/csp/).
+
 ### Common Tab
 
 For more information, see [Common Section](/refguide/common-widget-properties/#common-properties) in *Properties Common in the Page Editor*.

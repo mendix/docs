@@ -161,6 +161,10 @@ This is the pattern from which the arguments are derived that are passed to the 
 * `{0}` – this is replaced with the name of the original file before the arguments are passed to the file comparison program
 * `{1}` – this is replaced with the name of the changed file before the arguments are passed to the file comparison program
 
+#### History {#history-pane}
+
+Select this option to use the blocking History dialog instead of the non-blocking, searchable History pane.
+
 #### Solution Warning
 
 Select **Show warning on updating marketplace modules** to display a warning message when updating a Marketplace module. 
@@ -173,7 +177,7 @@ This setting allows users to specify a path for Git installation in their system
 
 #### Enable Private Version Control with Git {#enable-with-Git}
 
-Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/general/team-server/), but in a private Git server, which you have access to. This allows you to specify the location of the app on the Git server when opening, downloading, or uploading the app. With this setting you also need to specify [name and email](#name) that will be used to identify your commits with Git.
+Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/repository/team-server/), but in a private Git server, which you have access to. This allows you to specify the location of the app on the Git server when opening, downloading, or uploading the app. With this setting you also need to specify [name and email](#name) that will be used to identify your commits with Git.
 
 #### Name and Email {#name}
 
@@ -229,7 +233,7 @@ This option is available when the [Enable automatic repository optimization](#op
 
 ## Work Environment Tab
 
-### Studio Pro Theme {#studio-pro-theme}
+### Theme {#studio-pro-theme}
 
 This option allows user to choose between Studio Pro themes: **Auto (System theme)**, **Light**, or **Dark**. The default is **Auto (System theme)**, which detects the theme set in the operating system and uses an appropriate theme for Studio Pro (**Light** or **Dark**). Changing this option requires a restart of Studio Pro to take effect.
 
@@ -239,9 +243,7 @@ This option sets the default page editor mode that your page opens in: **Structu
 
 ### Language {#language}
 
-This feature is currently in beta.
-
-This option allows you to change the user interface language you work in while using Studio Pro. At this time, English, Japanese, Chinese, Korean, and Brazilian Portuguese are supported. You must restart Studio Pro in order to use this feature.
+This option allows you to change the user interface language you work in while using Studio Pro. At this time, English, Japanese, Chinese, Korean, and Brazilian Portuguese (Beta) are supported. You must restart Studio Pro in order to use this feature.
 
 ### Editor Tabs Closing Policy {#closing-policy}
 
@@ -251,9 +253,13 @@ It is recommended to limit the number of open tabs (open documents) to improve t
 The closing policy is not applied to tabs with unsaved changes.
 {{% /alert %}}
 
-### Navigation
+### Navigation {#navigation}
 
 This setting allows you to move forward and backward through your editing history to show the documents you have recently worked on. This feature is enabled by default. 
+
+### Dialogs {#dialogs}
+
+When a pop-up dialog is resized, Studio Pro will remember the new size and use it when the same dialog is opened again. This option allows you to disable this behavior and always show the dialogs at their default size.
 
 ## Advanced Tab
 
@@ -283,11 +289,23 @@ When the **Show feedback survey periodically** setting is enabled, Studio Pro wi
 
 When the **Do not show antivirus exclusion notifications** setting is enabled, Studio Pro will not display notifications related to antivirus exclusions. For more information, see [Antivirus Exclusion](/refguide/antivirus-exclusion/).
 
+### Extension Development 
+
+When **Extension Development** mode is enabled, you can start Studio Pro without using the extensibility feature flag, which allows you to develop extensions for Studio Pro. You must restart Studio Pro to use this feature.
+
 ## New Features Tab {#new-features}
 
 ### App Explorer
 
 Select this option to use the modernized version of the App Explorer. You must restart Studio Pro to use this feature.
+
+### History Pane {#history-pane}
+
+Select this option to use the non-blocking, searchable History pane instead of the blocking History window. This feature is currently in beta.
+
+### Runtime Console
+
+Select this option to use the modernized (web) Runtime console. You must restart Studio Pro to use this feature. 
 
 ### Errors Pane
 
@@ -311,7 +329,7 @@ This setting, currently in beta, allows entities to be used in offline navigatio
 
 ### System Texts Editor
 
-The web version of the system texts editor is currently an experimental feature. Enable this option to use the web version of the editor. 
+This option allows you to use the web version of the system texts editor. It is enabled by default.
 
 If Translation Generator is also enabled, you can use it in this editor as well. For more information, see the [Generating Translation for System Texts](/refguide/translation-generator/#translate-system-text) section in *Translation Generator*.
 

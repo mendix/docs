@@ -59,8 +59,6 @@ The downloaded *ios_development.cer* and *private.key* file must now be packaged
 2. Convert the downloaded certificate to *pem* format with this command: `"C:\OpenSSL\bin\openssl.exe" x509 -in "C:\ios_development.cer" -inform der -out "C:\ios_development.pem"`.
 3. Package your private key and certificate. The command will ask you for a password for the package: `"C:\OpenSSL\bin\openssl.exe" pkcs12 -export -inkey "C:\private.key" -in "C:\ios_development.pem" -out "C:\key_and_certificate.p12"`. The same password will be used later by the Mendix Native Mobile Builder.
 
-The resulting *key_and_certificate.p12* will be used by the Mendix Native Mobile Builder to sign your apps.
-
 ### Creating the Required Distribution Profile
 
 Once you have the certificate file, you need to obtain a distribution profile. The Apple Developer Member Center allows you to define an app identifier, a test device, and finally a distribution profile. For more information, check the Apple documentation on how to [maintain identifiers, devices and profiles](https://developer.apple.com/help/account/configure-app-capabilities/create-order-type-identifiers-and-certificates/).

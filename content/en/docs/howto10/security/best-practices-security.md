@@ -245,7 +245,7 @@ An example of an attack is when an application is embedded in an iframe. Applica
 
 By sending a header to the user’s browser, it can block the use of the Mendix application within an iframe and avoid this type of attack. The header is set by default to block embedding within an iframe. For Mendix Cloud, this can be configured using [HTTP Headers](/developerportal/deploy/environments-details/#http-headers) in your node’s environment details within the Mendix Portal. If you change this value, you will also need to ensure that *SameSite* cookies are set to the correct value. See [Iframes and Running Apps](/developerportal/deploy/running-in-iframe/) for more information.
 
-If you are running your Mendix app on Mendix for Private Cloud, you can configure the HTTP headers as part of advanced operator configuration. See the [Endpoint (network) Configuration](/developerportal/deploy/private-cloud-cluster/#advanced-network-settings) section of *Creating a Private Cloud Cluster*.
+If you are running your Mendix app on Mendix on Kubernetes, you can configure the HTTP headers as part of advanced operator configuration. See the [Endpoint (network) Configuration](/developerportal/deploy/private-cloud-cluster/#advanced-network-settings) section of *Creating a Mendix on Kubernetes Cluster*.
 
 The Mendix Cloud Foundry Buildpack and Mendix Docker Buildpack also provide [an option to configure HTTP headers](https://github.com/mendix/cf-mendix-buildpack#built-in-proxy-configuration).
 

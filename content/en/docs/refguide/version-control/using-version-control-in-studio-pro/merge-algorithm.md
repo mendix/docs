@@ -13,7 +13,7 @@ aliases:
 
 ## Introduction
 
-While working on your changes you may find that your local copy of the app model does not have all the changes that other team members have [committed](/refguide/commit-dialog/) to the server (the [Mendix Team Server](/developerportal/general/team-server/), or an [on-premises server](/refguide/on-premises-git/)). In Git terminology this is called being behind.
+While working on your changes you may find that your local copy of the app model does not have all the changes that other team members have [committed](/refguide/commit-dialog/) to the server (the [Mendix Team Server](/developerportal/repository/team-server/), or an [on-premises server](/refguide/on-premises-git/)). In Git terminology this is called being behind.
 
 When this happens, Mendix Studio Pro offers two ways to combine your changes with changes from the server: [Rebase](#rebase) and [Merge commit](#merge). 
 
@@ -311,8 +311,6 @@ Click this button to bring the **Changes** pane into the view, as this is the pl
 The **Show file conflicts** button is shown when there are conflicts in files which are not directly linked to your application.
 
 When clicked, it opens up a pop-up window with a list of all the files that are affected by the update process, with conflicted ones at the top of the list.
-
-You can also use the [Show Changes on Disk](/refguide/version-control-menu/#show-changes) menu item instead.
 
 ### Rebase-Specific Controls
 

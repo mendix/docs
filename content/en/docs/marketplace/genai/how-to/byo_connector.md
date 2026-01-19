@@ -12,7 +12,7 @@ If you want to create your own connection to the LLM model of your choice while 
 
 Building your own GenAI Commons connector offers several practical benefits that streamline development and enhance flexibility. You can reuse [ConversationalUI](/appstore/modules/genai/genai-for-mx/conversational-ui/) components, quickly set up with [starter apps](/appstore/modules/genai/how-to/starter-template/), and switch providers effortlessly. This guide will help you integrate your preferred LLM while maintaining a seamless and user-friendly chat experience.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-byo/connectors_diagram.jpg" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-byo/connectors_diagram.png" >}}
 
 ### Prerequisites
 

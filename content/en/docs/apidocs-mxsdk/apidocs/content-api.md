@@ -22,7 +22,7 @@ If you have Marketplace content, this API can help you get the following informa
 
 ### Generating a PAT
 
-For details on how to generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *User Settings*.
+For details on how to generate a PAT, see the [Personal Access Tokens](/mendix-profile/user-settings/#pat) section of *User Settings*.
 
 Select at least the following as the **Marketplace** scope:
 

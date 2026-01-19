@@ -7,19 +7,16 @@ weight: 14
 
 ## Introduction
 
-The `IMicroflowService` is the service used to perform actions related to microflows. This how-to describes how you can create a new microflow and add some activities to it.
+ This how-to describes how to create a new microflow and add activities to it. The `IMicroflowService` is used to perform actions related to microflows.
 
-## `Initialize`
+## Creating and Initializing a Microflow Using `Initialize`
 
-The `Initialize` method initializes a microflow that was previously created. It is part of a series of steps required for adding a microflow to the model:
+The `Initialize` method initializes a microflow that was previously created. Follow the steps below:
 
-1. Start a transaction (`IModel.StartTransaction`).
-2. Create a microflow and add it to the module (`IModel.Create<IMicroflow>`).
-3. Call `IMicroflowService.Initialize`. 
-
-Internally, the `Initialize` method sets up the start and end flows, and adds any parameters that might be passed in (in the example below, you are passing a single parameter `boolParameter` of `DataType.Boolean`).
-
-In the example below, you also add activities to the microflow, with `IMicroflowService.TryInsertAfterStart` (adding an activity as the first) or `IMicroflowService.TryInsertBeforeActivity` (adding an activity before another).
+1. Start a transaction using `IModel.StartTransaction`.
+2. Create a microflow and add it to the module. Use `IModel.Create<IMicroflow>` to create the microflow and add it to the desired module.
+3. Initialize the microflow by calling `IMicroflowService.Initialize`. The `Initialize` method sets up the start and end flows, and adds any parameters (for example, `boolParameter` of `DataType.Boolean`).
+4. Insert activities into the microflow using `IMicroflowService.TryInsertAfterStart` to add the first activity, and `IMicroflowService.TryInsertBeforeActivity` to insert activities before others.
 
 ```csharp
 public void Initialize(IModel currentApp, params IActionActivity[] actionActivities)
@@ -47,16 +44,22 @@ public void Initialize(IModel currentApp, params IActionActivity[] actionActivit
 }
 ```
 
-As you can see, this `IMicroflowService.Initialize` method can be cumbersome to use, since it is only part of the whole process of creating a new microflow. To have an easier method of creating microflows, use the `MicroflowService.CreateMicroflow` method. This method is described in the next section.
+Note that this `IMicroflowService.Initialize` method requires multiple manual steps. For a simpler approach, use the `MicroflowService.CreateMicroflow`, described in the section below.
 
-## `CreateMicroflow`
+## Creating a Microflow Using `CreateMicroflow`
 
-The `CreateMicroflow` method is the more advanced and comprehensive method to create microflows. It is a good alternative to the `IMicroflowService.Initialize` method.
-The `CreateMicroflow` takes care of initialization and adding everything to the model in one single step. It requires the current `IModel`, the `IFolderBase` (module or folder) in which to save the microflow, a name, an optional `MicroflowReturnValue`, and an optional list of parameters. See the code below for a few examples.
+The `CreateMicroflow` method is the more advanced and comprehensive method to create microflows. It is an alternative to the `IMicroflowService.Initialize` method. The `CreateMicroflow` method handles initialization and model integration in one step. It requires:
+
+* The current `IModel`
+* `IFolderBase` (module or folder)
+* A name
+* Optional: 
+    * `MicroflowReturnValue`
+    * List of parameters
 
 ### Creating a Simple Microflow
 
-As shown in the code below, all that is required to create a microflow and add it to the model is the `IModel`, the `IFolderBase` in which to add the microflow, and its name.
+As seen in the code below, the only requirements are `IModel`, the `IFolderBase`, and its name.
 
 ```csharp
 public void CreateMicroflow(IModel currentApp)
@@ -73,7 +76,7 @@ public void CreateMicroflow(IModel currentApp)
 
 ### Creating Microflow with Return Type and Parameters
 
-In this more advanced example, you will see the `IMicroflowExpressionService.CreateFromString` method, which allows you to create expressions that can be then used as the `MicroflowReturnValue` of the microflow. Here, the expression is a simple addition of two values, and the return type is of `DataType.Integer`.
+In this more advanced example, you see the `IMicroflowExpressionService.CreateFromString` method, which allows you to create expressions that can be then used as the `MicroflowReturnValue` of the microflow. Here, the expression is a simple addition of two values, and the return type is of `DataType.Integer`.
 
 ```csharp
  void CreateMicroflow(IModel currentApp)
@@ -88,36 +91,46 @@ In this more advanced example, you will see the `IMicroflowExpressionService.Cre
  }
 ```
 
-The `IMicroflowService.CreateMicroflow` method is a bit easier to use than the `IMicroflowService.Initialize` method because it doesn't require manually creating the microflow with `IModel.Create<IMicroflow>` and then manually adding it to the `IFolderBase` container. It can do everything behind the scenes as long as everything is supplied to it. For a comprehensive example on how to create microflows, see [Create Microflows for Calculations Using C#](/apidocs-mxsdk/apidocs/csharp-extensibility-api-10/create-microflows-for-calculations/).
+The `IMicroflowService.CreateMicroflow` method does not require manually creating the microflow with `IModel.Create<IMicroflow>`, then manually adding it to the `IFolderBase` container. For a comprehensive example on how to create microflows, see [Create Microflows for Calculations Using C#](/apidocs-mxsdk/apidocs/csharp-extensibility-api-10/create-microflows-for-calculations/)
 
-## `TryInsertAfterStart` and `TryInsertBeforeActivity`
+## Inserting Activities
 
-The `TryInsertAfterStart` and `TryInsertBeforeActivity` methods enable inserting an activity in the flow. It can be added right after the start event of the microflow, or be inserted before another specific activity.
+Use the following methods to insert activities into microflows:
+
+* `TryInsertAfterStart` – adds an immediately after the start event 
+* `TryInsertBeforeActivity` – inserts an actvitiy before another specific activity
 
 ```csharp
 microflowService.TryInsertAfterStart(microflow, newActivity);
 microflowService.TryInsertBeforeActivity(newAactivity, existingActivity);
 ```
 
-## `GetParameters`
+## Retrieving Microflow Parameters
 
-The `GetParameters` method enables retrieving all the parameters that are inputs into a microflow. It returns a list of `IMicroflowParameterObject`, which is composed of its name, its `IQualifiedName` identifier, a description, and its `DataType`. Any parameters passed into the microflow will be returned here together with their type.
+Use `GetParameters` method to retrieve all the input parameters of a microflow. 
+
+It returns a list of `IMicroflowParameterObject`, which includes:
+
+* Name
+* `IQualifiedName` identifier
+* Description
+* `DataType`
 
 ```csharp
 IReadOnlyList<IMicroflowParameterObject> parameters = _microflowService.GetParameters(microflow);
 ```
 
-## `GetAllMicroflowActivities`
+## Retrieving Microflow Activities
 
-The `GetAllMicroflowActivities` method enables retrieving all the activities in the flow of a microflow. It returns a list of `IActivity`.
+Use the `GetAllMicroflowActivities` method to retrieve all the activities in the flow of a microflow. It returns a list of `IActivity`.
 
 ```csharp
 IReadOnlyList<IActivity> activities = _microflowService.GetAllMicroflowActivities(microflow);
 ```
 
-## `IsVariableNameInUse`
+## Checking for Variable Name Conflicts
 
-The `IsVariableNameInUse` method can check if the microflow already contains a variable with the name provided. This can be called before adding a new activity to the flow whose output variable name can overlap with existing variables. An example is as follows:
+Use the `IsVariableNameInUse` method to check if the microflow already contains a variable with the name provided. This can be called before adding a new activity to the flow whose output variable name can overlap with existing variables. 
 
 ```csharp
 public void AddNewActivity(IModel currentApp, IMicroflow microflow, string activityName)

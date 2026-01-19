@@ -271,7 +271,7 @@ When the Mendix client is running, it sets a number of technical cookies to reco
 | **XASSESSIONID**² | Runtime | Holds the ID of the user's session | `/` | 1 year for offline sessions¹, otherwise based on the session timeout |  `true` | 
 | **useAuthToken** | Runtime | Lets the runtime know whether to generate an authtoken or not | `/` | until the end-user closes their browser (session cookie) |  `true` | 
 | **authtoken** | Runtime | Used to hold the authentication token | `/` | until the authentication token expires |  `true` | 
-| **clear_cache** | Runtime | Instructs the client to clear the cached session data whenever a new end-user signs in to an offline application. If the client is not directly used for the sign-in functionality, you can use the newly added Java API, [addSessionCookies](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/m2ee/api/IMxRuntimeResponse.html#addSessionCookies), which sets all necessary cookies related to the session. | `/` | until client starts or end-user closes their browser | `false`³ | 
+| **clear_cache** | Runtime | Instructs the client to clear the cached session data whenever a new end-user signs in to an offline application. If the client is not directly used for the sign-in functionality, you can use the newly added Java API, [addSessionCookies](https://apidocs.rnd.mendix.com/11/runtime/com/mendix/m2ee/api/IMxRuntimeResponse.html#addSessionCookies), which sets all necessary cookies related to the session. | `/` | until client starts or end-user closes their browser | `false`³ | 
 
 ¹*Offline sessions* are sessions created for users using an offline or native mobile [navigation profile](/refguide/navigation/#profiles).
 

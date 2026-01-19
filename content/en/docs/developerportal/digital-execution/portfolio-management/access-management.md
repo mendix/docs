@@ -101,7 +101,7 @@ The **Access Requests** tab is only visible to Portfolio Managers.
 
 Users from the same company can request to join a restricted or open portfolio.
 
-For restricted portfolios, you can request to join from the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) by clicking **Request to Join** on the portfolio card. For open portfolios, you can request to join by clicking **Request to Join** on the lower-left corner after opening the portfolio. Access requests need to be approved by a Portfolio Manager. Portfolio Managers automatically get a [notification](/portal/global-navigation/#notifications) for a new access request.
+For restricted portfolios, you can request to join from the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) by clicking **Request to Join** on the portfolio card. For open portfolios, you can request to join by clicking **Request to Join** on the lower-left corner after opening the portfolio. Access requests need to be approved by a Portfolio Manager. Portfolio Managers automatically get a [notification](/global-navigation/#notifications) for a new access request.
 
 {{< figure src="/attachments/developerportal/portfolio-management/access-requests.png" >}}
 

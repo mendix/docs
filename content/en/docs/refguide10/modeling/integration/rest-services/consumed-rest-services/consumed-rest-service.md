@@ -36,6 +36,9 @@ The ability to import an OpenAPI/Swagger contract was introduced as a beta featu
 ### Limitations
 
 * To use the request response to create a data structure automatically in your domain model, the response data should be in JSON format. It is possible to process other formats, such as XML or raw text, but you will need to extract the data you are looking for in a microflow.
+* It is currently not possible to configure parameters in the Query Parameters tab.
+* Streaming responses from APIs are currently not supported.
+* A response can be mapped in a microflow only for responses with status code `200`. If a Send REST request action is executed in a microflow and the status code is in 2xx range, but different than `200`, use the latestHttpResponse to get the status code and response content.
 
 ### Prerequisites 
 

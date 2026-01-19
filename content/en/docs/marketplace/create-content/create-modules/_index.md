@@ -8,7 +8,7 @@ tags: ["marketplace", "content creation", "guidelines", "modules"]
 
 ## Introduction
 
-Follow these guidelines when developing modules and submitting them to the Marketplace:
+Follow these guidelines when developing modules for the Marketplace:
 
 * Create a folder named **USE_ME**, and add the microflows and pages that are relevant for the user.
 * Create an empty folder with the version number as its name, which will appear in Studio Pro's App Explorer.

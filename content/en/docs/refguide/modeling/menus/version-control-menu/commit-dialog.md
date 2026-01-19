@@ -66,3 +66,13 @@ After you reviewed the changes, you will need to push your changes, as **Commit 
 If there are changes on disk this tab shows a summary of those changes. Click **Open containing folder** to open the folder containing the selected file in Windows Explorer.
 
 The tab page is hidden if there are no disk changes. Often, there are model changes but the only change on disk is the app file (*.mpr*) reflecting these model changes. In this case, it is also hidden, because it does not add useful information.
+
+### Synchronizing Commit Content {#sync-commit-content}
+
+There are several components in Studio Pro where files on disk need to be generated for the App to function. For example: theme cache, JavaScript actions, and Java Actions. 
+
+These files are generated based on the Documents in the app. In some cases generation of these files takes a long time. Typically, the time taken is proportional to the app size. These files are included as part of the commit so that the existing version can be used when the app is opened, preventing errors or delays in testing the app locally while new versions of the files are being generated.
+
+To ensure generated content is up to date and generation is complete before committing the changes to the repository, Mendix has introduced an additional step in **Prepare commit process**. This last step of the commit synchronizes the commit content. The **Progress** section shows the current type of synchronization.
+
+If any synchronization fails during this step, you are asked if the commit should continue or be cancelled, along with an explanation of the failures and statuses. Only synchronizations that have failed are shown.

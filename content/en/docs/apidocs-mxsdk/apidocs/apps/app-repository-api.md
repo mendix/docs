@@ -8,7 +8,7 @@ weight: 10
 
 ## Introduction
 
-The App Repository API enables retrieving information (branches, commits) of application models stored in our [Team Server](/developerportal/general/team-server/).
+The App Repository API enables retrieving information (branches, commits) of application models stored in our [Team Server](/developerportal/repository/team-server/).
 
 ## Base URL
 
@@ -35,7 +35,7 @@ Authentication for the App Repository API uses a personal access token (PAT).
 
 ### Generating a PAT
 
-For details on how to generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section in *User Settings*. When you define the new PAT, choose at least this scope:
+For details on how to generate a PAT, see the [Personal Access Tokens](/mendix-profile/user-settings/#pat) section in *User Settings*. When you define the new PAT, choose at least this scope:
 
 * `mx:modelrepository:repo:read`.
 
@@ -107,7 +107,7 @@ Returns information about the version control repository for a Mendix app.
 
 |Name|Type|Required|Description|
 |---|---|---|---|
-|`AppId`|String|Yes|The App ID of the Mendix app for which the repository information should be returned. You can find this under **Project ID** in the [General](/developerportal/collaborate/general-settings/) tab of the **Settings** page after you open your app in [Apps](https://sprintr.home.mendix.com/). |
+|`AppId`|String|Yes|The App ID of the Mendix app for which the repository information should be returned. You can find this under **Project ID** in the [General](/developerportal/general-settings/) tab of the **Settings** page after you open your app in [Apps](https://sprintr.home.mendix.com/). |
 
 ##### Example
 

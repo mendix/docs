@@ -10,7 +10,7 @@ aliases:
 
 ## Introduction
 
-Use the **Download from Version Control Server** menu item to download an app from a version control server (for example, [Team Server](/developerportal/general/team-server/)). If you are currently editing an app, the app will be closed (after prompting to save any changes) and the newly downloaded app will be opened using the current version of Studio Pro.
+Use the **Download from Version Control Server** menu item to download an app from a version control server (for example, [Team Server](/developerportal/repository/team-server/)). If you are currently editing an app, the app will be closed (after prompting to save any changes) and the newly downloaded app will be opened using the current version of Studio Pro.
 
 {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/download-from-version-control-dialog/download-from-version-control-server.png" alt="Download from Version Control Server dialog box" class="no-border" width="600" >}}
 
@@ -32,7 +32,7 @@ If **Enable private version control with Git** is set in the app [Preferences](/
 
 Use the **Team Server App** dropdown to choose the Git app you want to download.
 
-For more information about the Mendix Team Server, see [Team Server](/developerportal/general/team-server/).
+For more information about the Mendix Team Server, see [Team Server](/developerportal/repository/team-server/).
 
 ### Private Server
 

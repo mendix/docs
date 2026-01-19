@@ -22,7 +22,7 @@ On the [Catalog](/control-center/catalog-admin/) page of Control Center, you can
 
 ## Curators {#curator}
 
-A Mendix Admin sees the **Curators** tab displaying the list of Curators for the organization:
+A Mendix Admin can see the **Curators** tab, which displays the list of Curators for the organization.
 
 {{< figure src="/attachments/control-center/content-curation/catalog-admin/curators.png" alt="Curators" class="no-border" >}}
 
@@ -46,7 +46,7 @@ Custom owners are owners that have been added as contacts for a registered app. 
 
 Custom owners are only the contact people for registered assets. Adding a custom owner does not give them access rights to the Catalog, as they are not able to log in to the Mendix Platform and curate registered assets in the Catalog. Custom owners appear in the Catalog with their name and initials, or with their personalized avatar if they are a Mendix user.
 
-Mendix Admins and Curators can manage the custom owner list on the **Owners** tab:
+Mendix Admins and Curators can manage the custom owner list on the **Owners** tab.
 
 {{< figure src="/attachments/control-center/content-curation/catalog-admin/owners.png" alt="Owners" class="no-border" >}}
 
@@ -73,7 +73,7 @@ To invite a new user, on the Catalog screen, click **Invite External Users**. In
 You can only invite users with a Mendix account. The invitation email will not be sent to email addresses that are not associated with any Mendix account.
 {{% /alert %}}
 
-Once the external user receives the invitation, they log into the Catalog with their Mendix credentials and accept. An external user can only access resources from one organization at a time; therefore, they need to select the company that sent the invitation in the **Company** drop-down list in the Catalog [Home](/catalog/#catalog-home) page:
+Once the external user receives the invitation, they log into the Catalog with their Mendix credentials and accept. An external user can only access resources from one organization at a time. Therefore, they need to select the company that sent the invitation from the **Company** drop-down list in the Catalog [Home](/catalog/#catalog-home) page.
 
 {{< figure src="/attachments/control-center/content-curation/catalog-admin/company_selector.png" alt="Company selector" class="no-border" >}}
 

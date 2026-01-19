@@ -1,9 +1,11 @@
 ---
 title: "Delving Into the Mendix Ecosystem"
 linktitle: "Delving Into the Mendix Ecosystem"
-url: /mendix-ecosystem/
+url: /developerportal/digital-execution/mendix-ecosystem/
 weight: 55
 description: "Find out about the 3 S's and the 5 P's of digital execution."
+aliases:
+    - /mendix-ecosystem/
 ---
 
 ## Introduction
@@ -31,7 +33,7 @@ Your company needs at least one Admin. This is normally someone from the company
 
 If you already have at least one Admin, you can see them in the list when you open [Control Center](https://controlcenter.mendix.com/index.html).
 
-If you do not have an Admin, you can assign one through [Mendix Support](https://support.mendix.com/hc/en-us/requests/new), by selecting **Standard Change: Assign Mendix Admin** from the drop-down list. This first admin can then [add other admins](/control-center/company-settings/#mendix-admins). 
+If you do not have an Admin, you can assign one through [Mendix Support](https://support.mendix.com/hc/en-us/requests/new), by selecting **Standard Change: Assign Mendix Admin** from the drop-down list. This first admin can then [add other admins](/control-center/mendix-admins-page/). 
 
 ### Digital Execution Practice (DEP)
 
@@ -106,17 +108,17 @@ The following leadership roles are essential to the success of any new platform 
 
 * Center of Excellence (COE) lead – larger organizations appoint a Mendix COE to help define and enforce good governance, development, and enablement practices that can evolve with the business and technological changes over time. The COE lead ensures the Mendix COE is properly staffed to support, oversee, and enable development teams, and ensures the products are of high-quality, and follow best practices for high re-usability, maintainability, and return on investment. This person generally has sufficient senior-level technical and managerial skills to oversee the COE’s Enterprise and Solution Architects, DevOps technical leads, trainers, mentors, and other experienced staff.
 
-* Product owner – they have in-depth knowledge of the business, the product, and its users, as well as insight into the value that it will create. If possible, make sure that your first product owner comes from your own organization, and is familiar with the problem you are setting out to solve with your first app. The product owner does not hold a leadership role, but they are crucial for the success of your first app. They are also part of the agile scrum team, so will come up again in the [Identify Your First Mendix Project Team](/start-program/#identify-first-mendix-team) section.
+* Product owner – they have in-depth knowledge of the business, the product, and its users, as well as insight into the value that it will create. If possible, make sure that your first product owner comes from your own organization, and is familiar with the problem you are setting out to solve with your first app. The product owner does not hold a leadership role, but they are crucial for the success of your first app. They are also part of the agile scrum team, so will come up again in the [Identify Your First Mendix Project Team](/developerportal/digital-execution/start-program/#identify-first-mendix-team) section.
 
 * Architect – they help establish a target architecture, infrastructure, and governance. 
 
 * App development manager – they need to spearhead the initiative, and drive the program and the cross-functional teams who will deliver on those projects. 
 
-At first, it is likely that not all these people will come from your own organization—the [Review Options for Development Resources](/getting-started-plan/#review-options-for-development-resources) section offers information about this.
+At first, it is likely that not all these people will come from your own organization—the [Review Options for Development Resources](/developerportal/digital-execution/getting-started-plan/#review-options-for-development-resources) section offers information about this.
 
 It is important to keep your team small as you build your Mendix COE, which is your central repository of development expertise, reusable components, and governance guidance that business teams can access as they build their specialized solutions. With a small team, you can deliver new app quickly, avoiding much of the miscommunication and delays that often come with larger development teams. Smaller teams encourage productivity and creativity. Amazon CEO Jeff Bezos’ “two pizza rule” states that you should never have a meeting where two pizzas couldn’t feed the entire group. The smaller the team, the more room for brainstorming and peer review. 
 
-Mendix recommends that you start thinking about who you need to kick off building your first app, and that you start talking to them about it. More information about who you need is available in the [Identifying Your First Mendix Project Team](/start-program/#identify-first-mendix-team) section.
+Mendix recommends that you start thinking about who you need to kick off building your first app, and that you start talking to them about it. More information about who you need is available in the [Identifying Your First Mendix Project Team](/developerportal/digital-execution/start-program/#identify-first-mendix-team) section.
 
 ##### Process
 

@@ -15,7 +15,7 @@ This document doesn’t explain LDAP in detail. We assume that, if you want to u
 
 ### Typical Usage Scenarios
 
-You will typically use the LDAP module when you are building Mendix apps that you want to deploy on-premises rather than in the cloud. In the on-premises scenario, the end-users for your app may be stored in an on-prem Microsoft Active Directory or another user store that supports the LDAP protocol. This makes the LDAP module interesting for Mendix customers that are using [On-Premises](/developerportal/deploy/on-premises-design/) or [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) deployment models.
+You will typically use the LDAP module when you are building Mendix apps that you want to deploy on-premises rather than in the cloud. In the on-premises scenario, the end-users for your app may be stored in an on-prem Microsoft Active Directory or another user store that supports the LDAP protocol. This makes the LDAP module interesting for Mendix customers that are using [On-Premises](/developerportal/deploy/on-premises-design/) or [Mendix on Kubernetes](/developerportal/deploy/private-cloud/) deployment models.
 
 #### Synchronize End-Users of a Mendix App with LDAP
 

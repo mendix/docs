@@ -17,7 +17,7 @@ New Relic logging and application metrics are supported in Mendix 9.7 and above.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-For support on other cloud deployment options, such as Private Cloud, refer to their dedicated documentation. For Private Cloud deployment, for example, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
+For support on other cloud deployment options, such as Kubernetes, refer to their dedicated documentation. For deployment on Kubernetes, for example, see [Monitoring Environments in Mendix on Kubernetes](/developerportal/deploy/private-cloud-monitor/).
 {{% /alert %}}
 
 For more information on the data you can send to New Relic, see [Monitoring Your Mendix Apps with an APM Tool](/developerportal/operate/monitoring-with-apm/).
@@ -66,8 +66,9 @@ To help you with analyzing your app metrics as described in the [App Metrics](/d
 In addition to the runtime application logs, the following JSON-formatted metadata is automatically sent to New Relic:
 
 * `environment_id` – unique identifier of the environment
-* `instance_index` – number of the application instance
-* `hostname` – name of the application host
+* `instance_index` – number of the application instance (available only in Cloud Foundry deployments)
+* `pod_name` – name of the application pod (available only in Kubernetes deployments)
+* `hostname` – name of the application host 
 * `application_name` – default application name, retrieved from the domain name
 * `model_version` – model version of the Mendix runtime
 * `runtime_version` – version of the Mendix runtime

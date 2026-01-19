@@ -7,7 +7,7 @@ weight: 20
 
 ## Introduction
 
-Add-on and solution modules are special types of modules that are developed to add functionality to an app. They have [intellectual property (IP) protection](/appstore/creating-content/sol-ip-protection/) enabled, and they have the *.mxmodule* extension. For more information on IP protection, see . 
+Add-on and solution modules are special types of modules that are developed to add functionality to an app. They have intellectual property (IP) protection enabled and have the *.mxmodule* extension. For more information on IP protection, see [Applying Intellectual Property Protection](/appstore/creating-content/sol-ip-protection/). 
 
 The main difference between an add-on and a solution module is their purpose. An add-on module is developed to be a standalone functionality that other users can consume in the their apps (for example, an add-on can be a connector). 
 
@@ -15,7 +15,7 @@ Solution modules are always part of a solution, which is any Mendix app that is 
 
 ## Configuring Add-on and Solution Modules
 
-You can mark a standard module (app module) as an add-on or solution module at any time, but Mendix recommends doing so right as you start developing. Mendix also recommends changing the module version for add-on and solution modules every time you make changes to them. 
+You can mark a standard module (app module) as an add-on or solution module at any time, but it is recommended to do so right as you start developing. Mendix also recommends changing the module version for add-on and solution modules every time you make changes to them. 
 
 All the content in add-on and solution modules is set to be hidden from consumers by default (as modules have IP protection enabled). You can then decide what parts of the module you would like to make as usable, if any. For example, you can allow consumers to use certain entities and attributes. 
 
@@ -30,7 +30,7 @@ The **Export level** has two values:
 
 To change the **Export level** and mark documents/elements as **Usable**, do the following:
 
-1. In **App Explorer**, double-click **Settings** for the module you would like to set as an add-on or solution module. 
+1. In the **App Explorer**, double-click **Settings** for the module you would like to set as an add-on or solution module. 
 2. In the **Module settings** dialog box, select the type of the module and click **OK**.
 3. Open the document/element that you would like to mark as **Usable**.
 4. Navigate to its properties.
@@ -52,7 +52,7 @@ Below is the list of documents and elements that can be mark as **Usable**:
 * Microflow
 * Rules
 * Enumeration
-* Constants (when a constant is hidden, a consumer is not able to configure its value in the **App settings**)
+* Constants (when a constant is hidden, a consumer is not able to configure its value in the app settings)
 * Java Action
 * Regular expressions
 * Image collections
@@ -65,7 +65,7 @@ Pages cannot be made **Usable**. Instead, a navigation microflow that opens the 
 ## Exporting Add-on Modules and Solutions {#export}
 
 {{% alert color="info" %}}
-Before exporting an add-on module or a solution to customers, note that only English (US) is shipped by default. This may be important if your app is in another language (meaning, not English (US)) and your customers decide to translate the consumed solution or add-on to other languages. To avoid confusion, open [Language](/refguide/translatable-texts/) > **Language Operations** and select the **Delete** operation for English (US). For details on performing a certain operation, see [Language Operations](/refguide/language-operations/).
+Before exporting an add-on module or a solution to customers, note that only English (US) is shipped by default. This may be important if your app is in another language (meaning, not English (US)) and your customers decide to translate the consumed solution or add-on to other languages. To avoid confusion, open the[Language menu > **Language Operations** and select the **Delete** operation for English (US). For details on performing a certain operation, see [Language Operations](/refguide/language-operations/).
 {{% /alert %}}
 
 ### Exporting Add-on Module Package

@@ -23,7 +23,7 @@ To get started with machine learning models, check out [Using ML Kit](/refguide/
 ### Action
 
 * **ML model mapping** – the [ML model mapping](/refguide/ml-model-mapping/) model
-* **Input object** – the inputObject, defined in the microflow with a [Create Object](/refguide/create-object/) or [Java Action Call](/refguide/java-action-call/), and expects the same object type (not the entity) as in the **model mapping**
+* **Input object** – the inputObject, defined in the microflow with a [Create Object](/refguide/create-object/) or [Call Java Action](/refguide/call-java-action/), and expects the same object type (not the entity) as in the **model mapping**
 
 ### Output
 

@@ -1,7 +1,7 @@
 ---
-title: "Document Templates"
+title: "Document Templates (Deprecated)"
 url: /refguide/document-templates/
-weight: 90
+weight: 100
 aliases:
     - /refguide/Document+Templates.html
     - /refguide/Document+Templates
@@ -55,4 +55,4 @@ Generating Microsoft Word documents is no longer supported by Mendix. However, t
 
 ### Other Formats
 
-Other formats, including Rich Text Format (.rtf) and OpenDocument Text (.odt), are no longer supported by Mendix and do not have official alternatives. We understand this may impact certain use cases, and we recommend exploring whether supported formats like PDF or HTML can meet your current needs.
+Other formats, including Rich Text Format (*.rtf*) and OpenDocument Text (*.odt*), are no longer supported by Mendix and do not have official alternatives. We understand this may impact certain use cases and recommend exploring whether supported formats like PDF or HTML can meet your current needs.

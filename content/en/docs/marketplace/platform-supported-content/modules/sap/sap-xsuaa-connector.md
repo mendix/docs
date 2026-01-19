@@ -128,6 +128,8 @@ By default, the Mendix login page will not allow the user to enter their SSO cre
 To configure a page/microflow URL, follow the steps mentioned in the subsections below. If you are using the Deep Link module, make sure the **LoginLocation** constant is set to `/xsauaalogin/login?ret=`.
 {{% /alert %}}
 
+After XSUAA login, the `SetAccessTokenCookie` constant is used to determine whether to set the access token in a cookie. By default, this constant is set to `True`. If you do not want to set the access token in a cookie, change the value of this constant to `False`.
+
 #### Adding the SSO Login Button to the Login Page {#adding}
 
 {{% alert color="info" %}}

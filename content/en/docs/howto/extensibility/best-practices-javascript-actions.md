@@ -381,7 +381,7 @@ Consider these additional technical suggestions for best API practices:
 
 ### Exposing JavaScript Actions
 
-JavaScript Actions can be used in a nanoflow with a JavaScript action call activity. It is also possible to expose the actions in the activity list. This will make it easier for developers to find the actions. It is recommended to expose only the actions that will be reused often. 
+JavaScript Actions can be used in a nanoflow with a Call JavaScript action activity. It is also possible to expose the actions in the activity list. This will make it easier for developers to find the actions. It is recommended to expose only the actions that will be reused often. 
 
 Use **Category** to group actions, **Icon** and **Image** to give the exposed nanoflow action easy recognition inside the nanoflow:
 

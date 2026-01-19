@@ -14,39 +14,39 @@ The LLM (e.g. OpenAI ChatGPT, Anthropic Claude) does not call the function. The 
 
 ## High-level flow {#high-level}
 
-If you use the `Chat Completions (without history)` or `Chat Completions (with history)` actions for text generation with function calling, the LLM connector (OpenAI Connector or Amazon Bedrock Connector) will handle the whole process for you in just one step:
+If you use the `Chat Completions (without history)` or `Chat Completions (with history)` actions for text generation with function calling, the LLM connector will handle the whole process for you in just one step:
 
 1. Invoke the chat completions API with a user prompt and a collection of available functions (microflows) with their expected input parameter.
 
     The model will decide which function (microflow) should be called within the LLM connector, if any. The response of the operation will be based on the information you provide and the response of any function (microflow) that was called.
 
-This automates the following process happening inside the LLM connector (OpenAI Connector, Amazon Bedrock Connector):
+This automates the following process happening inside the LLM connector:
 
 1. Invoke the chat completions API with a user prompt and a collection of available functions (microflows) with their expected input parameters.
-2. The model decides which function (microflow) should be called, if any, based on the user prompt and the available functions. If a function should be called, the content of the assistant's response will be a stringified JSON object containing the input parameter of the function as described in the request.  Note that the LLM can possibly hallucinate parameters, so they should be validated inside the function microflow before being used.
-3. The LLM connector parses the string into JSON and executes the function microflow with its input parameter. 
+2. The model decides which function (microflow) should be called, if any, based on the user prompt and the available functions. If a function should be called, the content of the assistant's response will be a stringified JSON object containing the input parameters of the function as described in the request.  Note that the LLM can possibly hallucinate parameters, so they should be validated inside the function microflow before being used.
+3. The LLM connector parses the string into JSON and executes the function microflow with its input parameters. 
 4. The existing list of messages is appended with a new tool message containing the function response. Then, the chat completions API is invoked again and the model can answer the initial prompt with the new information provided by the function.
 
 For more general information on this topic, see [OpenAI: Function Calling](https://platform.openai.com/docs/guides/function-calling) or [Anthropic Claude: Tool Use](https://docs.anthropic.com/en/docs/tool-use).
 
 ## Function Calling with the GenAI Commons Module and the LLM Connectors {#llm-connector}
 
-Both the [OpenAI Connector](/appstore/modules/genai/openai/) and [Amazon Bedrock Connector](/appstore/modules/aws/amazon-bedrock/) support function calling by leveraging the [GenAI Commons module](/appstore/modules/genai/commons/). In both connectors, function calling is supported for all chat completions operations. All entity, attribute and activity names in this section refer to the GenAI Commons module. 
+All platform-supported connectors ([Mendix Cloud GenAI](/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/), [OpenAI](/appstore/modules/genai/openai/), and [Amazon Bedrock Connector](/appstore/modules/aws/amazon-bedrock/)) support function calling by leveraging the [GenAI Commons module](/appstore/modules/genai/commons/). Function calling is supported for all chat completions operations. All entity, attribute, and activity names in this section refer to the GenAI Commons module. 
 
-Functions in Mendix are essentially microflows that can be registered within the request to the LLM​. The LLM connector takes care of handling the tool call response as well as executing the function microflow(s) until the LLM returns the final assistant's response. Currently, function microflows can either have no input parameters or one input parameter of type string and must return a string.
+Functions in Mendix are essentially microflows that can be registered within the request to the LLM​. The LLM connector takes care of handling the tool call response as well as executing the function microflows until the LLM returns the final assistant's response. Function microflows can have none, a single, or multiple primitive input parameters such as Boolean, Datetime, Decimal, Enumeration, Integer or String. Additionally, they may accept the [Request](/appstore/modules/genai/genai-for-mx/commons/#request) or [Tool](/appstore/modules/genai/genai-for-mx/commons/#tool) objects as inputs. The microflow can only return a String value.
 
 To enable function calling, a `ToolCollection` object must be added to the request, which is associated to one or many `Function` objects. 
 
 A helper operation is available in [GenAI Commons](/appstore/modules/genai/commons/) to construct the `ToolCollection` with a list of `Functions`:
 
-* Tools: Add Function to Request can be used to initialize a new `ToolCollection` and add a new `Function` to it in order to enable function calling.
+* `Tools: Add Function to Request` can be used to initialize a new `ToolCollection` and add a new `Function` to it in order to enable function calling.
 
 Depending on the user prompt and the available functions, the model can suggest one or multiple tool calls to the same or different functions or there might be multiple API calls followed by new tools calls until the model returns the final assistant's response.
 A way to steer the function calling process is the `ToolChoice` parameter. This optional attribute on the Request entity controls which (if any) function is called by the model.
 
 A helper operation is available in GenAI Commons to define the Tool Choice: 
 
-* Tools: Set Tool Choice can be used to set the `ToolChoice` parameter and the `ToolCollection_ToolChoice` association accordingly.
+* `Tools: Set Tool Choice` can be used to set the `ToolChoice` parameter and the `ToolCollection_ToolChoice` association accordingly.
 
 {{% alert color="warning" %}}
 Function calling is a very powerful capability, but may be used with caution. Please note that function microflows run in the context of the current user without enforcing entity-access. You can use `$currentUser` in XPath queries to ensure you retrieve and return only information that the end-user is allowed to view; otherwise confidential information may become visible to the current end-user in the assistant's response.
@@ -62,7 +62,7 @@ For models used through Azure OpenAI, feature availability is currently differen
 
 ### Supported Amazon Bedrock models {#supported-models-bedrock}
 
-Multiple models available on Amazon Bedrock support function calling. In Bedrock documentation, function calling is often addressed as *Tool Use*, which describes the same concept.
+Multiple models available on Amazon Bedrock support function calling. In the Bedrock documentation, function calling is often addressed as *Tool Use*, which describes the same concept.
 A detailed overview showing which models support function calling (tool use) can be found [here](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features).
  
 ## Use cases {#use-cases}
@@ -70,7 +70,7 @@ A detailed overview showing which models support function calling (tool use) can
 Function calling can be used for a variety of use cases including the following:
 
 * Creating assistants that can answer questions about data from your Mendix database or a knowledge base
-    * for example, getTicketById (string identifier) or findSimilarTickets (string description)
+    * for example, getTicketById (integer identifier) or findSimilarTickets (string description)
 * Creating assistants that can get information from external APIs
     * for example, getCurrentWeather (string location)
 * Extracting structured data from natural language

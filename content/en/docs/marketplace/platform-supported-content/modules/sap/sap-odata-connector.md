@@ -145,132 +145,29 @@ You can run OData actions asynchronously by using the [Mendix Task Queue](/refgu
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/sap-odata-connector/task-queue.png" class="no-border" >}}
 
-## Troubleshooting
+#### Batch Processing
 
-If you encounter any issues while using the OData Connector for SAP solutions, use the following troubleshooting tips to help you solve them.
+The SAP OData connector supports batch processing, which allows you to combine multiple operations, such as GET, CREATE, DELETE, UPDATE, and UPDATE_PATCH, into a single HTTP POST request.
 
-### Getting Destination Failed
+This reduces the number of service calls and improves performance, especially when handling multiple entity operations as part of the same logical unit of work. SAP recommends using batch processing when operations are interdependent or must be processed as a group.  
 
-If you cannot fetch the destination, it could be for one of the following reasons.
+To execute a batch process, follow the steps below in sequence using batch actions from the SAP OData connector.
 
-#### XSUAA token failed
+1. Initiate the batch processing by creating a batch context using the **Initialize Batch Context** action. This sets up a temporary scope where multiple operations can be grouped before execution.
 
-The JWT token for the currently signed-in user is not valid. You can resolve this by getting a valid token for the user.
+2. Add one or more batch operations to the batch context using the **Add Batch Operation** action. Each operation can be a GET, CREATE, UPDATE, DELETE, or UPDATE_PATCH.
 
-Firstly, refresh the token to fetch a valid token for the user.
+3. After all operations have been added to the batch context, trigger the batch request to send all grouped operations in a single HTTP POST using the **Invoke Batch** action. This executes the batch.
 
-If refreshing the token does not work, check that the user is a valid SAP Business Technology Platform (SAP BTP) user.
+4. Once the batch call is executed, you can parse the batch response to retrieve individual responses for each operation using the **Fetch Batch Response** actions. According to the operation or query, you can use the **Fetch Batch Response (List)** or **Fetch Batch Response (Single)** option.
 
-#### Destination name not found
+{{% alert color="info" %}}
+The batch processing solution is currently limited to OData V2.
+{{% /alert %}}
 
-The destination name is provided in the ‘GetDestination’ Java action. Check that a valid destination is provided in a ‘GetDestination’ Java action in the microflow.
+When using batch processing with the OData connector, you must generate the SAP model for the service using the [SAP Model Creator](https://sap-model-creator.home.mendix.com/index.html). This process adds a new module to the Mendix project that lists all entities associated with the OData service.
 
-#### Unauthorized error
-
-This might happen if the client ID and secret pair is invalid. The client ID and secret are fetched from SAP Cloud Portal using the VCAP environment details.
-
-### HTTP 401 Error While Running OData Function 
-
-If you receive a 401 error code from your OData call, it could be for one of the following reasons.
-
-#### Invalid credentials while using Basic Authentication with request params
-
-Check that the correct username and password are set on the ‘Add basic authentication’ activity when using request params in the microflow.
-
-#### Destination service is not set up correctly
-
-Destination services are defined in SAP BTP. Check that the destination service is running correctly and you can establish a connection with the credentials provided.
-
-#### Invalid bearer token sent
-
-In case of OAuth authentication, the bearer token received with the destination might be invalid or expired. Retry or check the destination service created.
-
-#### User permissions not provided
-
-The role given to the user on SAP BTP might not allow them to access the destination service or the database.
-
-### HTTP 500 Error While Running OData Function 
-
-If you receive a 500 error code from your OData call, check the issue below.
-
-#### Database is not running 
-
-The Database exposed using OData might not be running as expected. Check the database connection.
-
-### HTTP 503 Error While Running OData Function 
-
-If you receive a 503 error code from your OData call, check the issue below.
-
-#### OData application is down
-
-The OData application which is exposing the service is not running as expected. Check the application status.
-
-### HTTP 404 Error While Running OData Function 
-
-If you receive a 404 error code from your OData call, it could be for one of the following reasons.
-
-#### Destination service is not running
-
-Destination services are defined in SAP Cloud Portal. Check that the destination service is running correctly.
-
-#### Invalid Query
-
-Check the base URL (while using Request Params) and parameters inside the Query text in any OData function Java action.
-
-### Other Issues
-
-The following techniques can help in identifying issues which are causing your OData connector to fail.
-
-#### Setting Application Log level
-
-You can get more information from your app by setting the log level. For this you will need to have the Marketplace module [SAP Logging Connector](https://marketplace.mendix.com/link/component/110219/) set up in your app. For more information see the [SAP Logging Connector](/appstore/modules/sap/sap-logger/) documentation.
-
-To set log level for an application deployed to SAP BTP, go to ‘Model Options’ in the environment and set ‘SapApplicationLogs.SapLogLevel’ to the required level. (Debug, Info, Error, Warn, or Trace).
-
-#### Remote Debugging
-
-To perform Java debugging, you must do the following:
-
-1. Set the following environment properties.
-
-    ```yaml
-    DEVELOPMENT_MODE= true
-    JAVA_OPTS : ["-agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=n"]
-    ```
-
-    This can be done through directly in SAP BTP or manifest.yml.
-
-    1. In SAP BTP, the options can be set as shown below:
-
-        {{< figure src="/attachments/appstore/platform-supported-content/modules/sap-odata-connector/sap-btp-options.png" class="no-border" >}}
-
-    2. In the manifest file, you need to set the options as shown below:
-
-        {{< figure src="/attachments/appstore/platform-supported-content/modules/sap-odata-connector/manifest-options.png" class="no-border" >}}
-
-2. Restart the application to apply the changes.
-
-    The logs will indicate whether the application is started in debug mode, as shown below:
-
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/sap-odata-connector/debug-mode-indication.png" class="no-border" >}}
-
-3. Enable SSH for the application using the Cloud Foundry command
-
-    `cf enable-ssh \<application-name\>`
-
-4. Restart the app using the following command to activate the enabled ssh statement. 
-
-    `cf restart \<application-name\>`
-
-    This needs to be done before you can go over to the actual port forwarding.
-
-5. Open an SSH tunnel for remote connection using the following command.
-
-    `cf ssh \<application-name\> -N -T -L 8000:localhost:8000`
-
-6. Set up remote Debugging in the Eclipse IDE as shown in the image below:
-
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/sap-odata-connector/debug-in-ide.png" alt="Debug configuration screen in Eclipse" class="no-border" >}}
+For more information, see the [Batch Processing Actions](#batch-processing-actions) section below.
 
 ## Technical Reference
 
@@ -306,7 +203,7 @@ The Get List action gets a list of objects described by a type of entity in the 
     * Query (required) - the query which will return a list of objects from the OData service. See the section [Query](#Query), below, for more information
     * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to *empty*
     * Parent - If the Get List action returns a list of objects which all have a single parent object (an object which is linked as one parent to many objects of Response type) then you can pass the parent object here and Get List will make the associations. Set this to *empty* if it is not required
-    * Result info - This is an object of type ResultInfo where the number of items in the list is returned. Note that the query should include $inlinecount=allpages in order to return the total number of items in the list. Set this to *empty* if it is not required
+    * Result info - This is an object of type ResultInfo where the number of items in the list is returned. Note that the query should include `$inlinecount=allpages` in order to return the total number of items in the list. Set this to *empty* if it is not required
 * Output
     * Return type - List
     * Variable - the name which you would like to give to the list of objects which was returned from the query
@@ -554,6 +451,97 @@ This creates a **CloudConnectorInfo** object and fills the values for **ProxyHos
 {{% alert color="warning" %}}
 If your app is not running on SAP BTP, this action will throw an error.
 {{% /alert %}}
+
+#### Batch Processing Actions {#batch-processing-actions}
+
+You need the following actions to run the batch processing using the OData Connector.
+
+##### Initialize Batch Context {#initialize-batch-context}
+
+You need to initialize a batch context for every batch call, via a new action, **Initialize Batch Context**. 
+
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-odata-connector/initiaze-batch-context.png" >}}
+
+* Input
+
+Enable change set – When set to `true`, all consecutive write operations are included in a common change set. The default is `false`.
+
+* Output
+
+    * Return Type – SAPODataConnector.BatchContext
+    * Object name: The name of an object you set during activity initialization.
+
+##### Add Batch Operation
+
+You can include one or more of the GET, CREATE, DELETE, UPDATE (PUT), and UPDATE (PATCH) actions in the batch processing. For more details on these actions, refer to the [Entity and Attribute Manipulation](/appstore/modules/sap/sap-odata-connector/#EntityManipulation) section above.
+
+Use the **Add Batch Operation** action to add any of the above operations to the `batchContext`.
+
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-odata-connector/add-batch.png" >}}
+
+* Input
+
+    * Batch Context – The object created during the initialization of the batch context. See the [Initialize Batch Context](#initialize-batch-context) section above for details.
+    * Operation Type – Select the type of operation to perform (e.g., GET, CREATE, UPDATE, DELETE, PATCH).
+    * Query – The OData query required for the operation (excluding the service URL).
+    * OData Object – This refers to the OData entity object used specifically for CREATE and UPDATE operations. It should be a generalization of the `ODataObject` entity.
+    
+* Output
+
+    * Return Type – String 
+    * Variable Name – The name you want to assign to the output string variable.
+
+The **Add Batch Operation** action appends an operation to the request body within the `batchContext` and returns an `OperationId` associated with that operation. This Operation ID will be later used to fetch from the batch response.
+
+##### Invoke Batch
+
+After all operations are added, use the **Invoke Batch** action to perform the batch request.
+
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-odata-connector/invoke-batch.png" >}}
+
+* Input
+
+    * Batch context - The object created during the initialization of the batch context.
+
+    * Service url – The URL of the OData service. This is optional if a destination is provided.
+
+    * Destination – The OData destination endpoint object, typically retrieved using the Get Destination action.
+
+    * Request parameters – Request parameters to control the request.
+
+* Output
+
+    * Return type – List of `SAPODataConnector.BatchResponse`.
+
+    * List name – Name of the batch response list.
+
+##### Fetch Batch Response
+
+The **Invoke Batch** action returns a list of `BatchResponse` objects, each containing the raw response for a corresponding batch operation.
+
+To retrieve the response as a specific OData entity (or list of entities), use the **Fetch Batch Response** action. This action takes the entity (or list) associated with a batch operation and extracts the relevant response.
+
+The result of the Fetch Batch Response may be either a single object or a list, depending on the action you choose below to fetch the batch response.
+
+* Fetch_Batch_Response_List
+* Fetch_Batch_Response_Single
+
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-odata-connector/fetch-batch-list.png" >}}
+
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-odata-connector/fetch-batch-single.png" >}}
+
+* Input
+
+    * Batch context - The object created during the initialization of the batch context. See the section above for details.
+
+    * Batch operation id – The ID of the batch operation, returned by the Add Batch Operation action. Also present in the BatchResponse entity from the Invoke Batch action.
+
+    * Response type – The type of OData object expected in the response.
+
+* Output
+
+    * Return type -  Response Type provided in the input.
+    * List name or Object name – The name to assign to the returned list or single object, depending on the return type.
 
 ### Parameters {#parameters}
 
@@ -827,7 +815,7 @@ In addition to the SAP Service Domain Model, there is a domain model which is us
 
 Here is the domain model of the OData Connector for SAP solutions:
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-odata-connector/domainmodel-sapodataconnector.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/sap-odata-connector/domainmodel-odataconnector.png" class="no-border" >}}
 
 This domain model is part of the OData Connector for SAP solutions module and can be found in **App** > **Marketplace modules** > **SAPODataConnector**. Each [entity](/refguide/entities/) contains one or more [attributes](/refguide/attributes/):
 
@@ -863,6 +851,153 @@ This domain model is part of the OData Connector for SAP solutions module and ca
     * JsonObject
     * AuthTokens
     * Root
+
+* **BatchContext** – contains batch context details to group single or multiple operations before their execution
+    * **OperationCount** – total number of operations added so far in the **BatchContext**
+    * **BatchSeparator** – the unique string used to separate each operation in the batch payload
+    * **EnableChangeSet** – a Boolean flag indicating whether consecutive write operations should be grouped in the same change set
+    * **ChangeSetSeparator**  a string marking the start or end of the change set, used to create request body
+    * **RequestBody** – the complete raw HTTP body sent in the batch request when invoking the batch
+    * **ResponseBody** – the complete raw HTTP response body from the OData service after batch invoke. 
+
+* **BatchResponse** – contains details of each operation executed in a batch
+
+    * **OperationID** – a unique ID which identifies the operation in the batch
+    * **Status** –  the HTTP status code returned by the OData service for the operation 
+    * **Message** – the textual description or reason phrase from the HTTP status line
+    * **Payload** –  the raw HTTP response content for the operation. Internally parsed by:
+
+        * Fetch Batch Response (Single) — for individual entity responses
+        * Fetch Batch Response (List) — for list-type responses
+        
+    * **ChangeSet** – indicates whether the **BatchResponse** is part of a ChangeSet, a grouped set of write operations
+
+## Troubleshooting
+
+If you encounter any issues while using the OData Connector for SAP solutions, use the following troubleshooting tips to help you solve them.
+
+### Getting Destination Failed
+
+If you cannot fetch the destination, it could be for one of the following reasons.
+
+#### XSUAA token failed
+
+The JWT token for the currently signed-in user is not valid. You can resolve this by getting a valid token for the user.
+
+Firstly, refresh the token to fetch a valid token for the user.
+
+If refreshing the token does not work, check that the user is a valid SAP Business Technology Platform (SAP BTP) user.
+
+#### Destination name not found
+
+The destination name is provided in the ‘GetDestination’ Java action. Check that a valid destination is provided in a ‘GetDestination’ Java action in the microflow.
+
+#### Unauthorized error
+
+This might happen if the client ID and secret pair is invalid. The client ID and secret are fetched from SAP Cloud Portal using the VCAP environment details.
+
+### HTTP 401 Error While Running OData Function 
+
+If you receive a 401 error code from your OData call, it could be for one of the following reasons.
+
+#### Invalid credentials while using Basic Authentication with request params
+
+Check that the correct username and password are set on the ‘Add basic authentication’ activity when using request params in the microflow.
+
+#### Destination service is not set up correctly
+
+Destination services are defined in SAP BTP. Check that the destination service is running correctly and you can establish a connection with the credentials provided.
+
+#### Invalid bearer token sent
+
+In case of OAuth authentication, the bearer token received with the destination might be invalid or expired. Retry or check the destination service created.
+
+#### User permissions not provided
+
+The role given to the user on SAP BTP might not allow them to access the destination service or the database.
+
+### HTTP 500 Error While Running OData Function 
+
+If you receive a 500 error code from your OData call, check the issue below.
+
+#### Database is not running 
+
+The Database exposed using OData might not be running as expected. Check the database connection.
+
+### HTTP 503 Error While Running OData Function 
+
+If you receive a 503 error code from your OData call, check the issue below.
+
+#### OData application is down
+
+The OData application which is exposing the service is not running as expected. Check the application status.
+
+### HTTP 404 Error While Running OData Function 
+
+If you receive a 404 error code from your OData call, it could be for one of the following reasons.
+
+#### Destination service is not running
+
+Destination services are defined in SAP Cloud Portal. Check that the destination service is running correctly.
+
+#### Invalid Query
+
+Check the base URL (while using Request Params) and parameters inside the Query text in any OData function Java action.
+
+### Other Issues
+
+The following techniques can help in identifying issues which are causing your OData connector to fail.
+
+#### Setting Application Log level
+
+You can get more information from your app by setting the log level. For this you will need to have the Marketplace module [SAP Logging Connector](https://marketplace.mendix.com/link/component/110219/) set up in your app. For more information see the [SAP Logging Connector](/appstore/modules/sap/sap-logger/) documentation.
+
+To set log level for an application deployed to SAP BTP, go to ‘Model Options’ in the environment and set ‘SapApplicationLogs.SapLogLevel’ to the required level. (Debug, Info, Error, Warn, or Trace).
+
+#### Remote Debugging
+
+To perform Java debugging, you must do the following:
+
+1. Set the following environment properties.
+
+    ```yaml
+    DEVELOPMENT_MODE= true
+    JAVA_OPTS : ["-agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=n"]
+    ```
+
+    This can be done through directly in SAP BTP or manifest.yml.
+
+    1. In SAP BTP, the options can be set as shown below:
+
+        {{< figure src="/attachments/appstore/platform-supported-content/modules/sap-odata-connector/sap-btp-options.png" class="no-border" >}}
+
+    2. In the manifest file, you need to set the options as shown below:
+
+        {{< figure src="/attachments/appstore/platform-supported-content/modules/sap-odata-connector/manifest-options.png" class="no-border" >}}
+
+2. Restart the application to apply the changes.
+
+    The logs will indicate whether the application is started in debug mode, as shown below:
+
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/sap-odata-connector/debug-mode-indication.png" class="no-border" >}}
+
+3. Enable SSH for the application using the Cloud Foundry command
+
+    `cf enable-ssh \<application-name\>`
+
+4. Restart the app using the following command to activate the enabled ssh statement. 
+
+    `cf restart \<application-name\>`
+
+    This needs to be done before you can go over to the actual port forwarding.
+
+5. Open an SSH tunnel for remote connection using the following command.
+
+    `cf ssh \<application-name\> -N -T -L 8000:localhost:8000`
+
+6. Set up remote Debugging in the Eclipse IDE as shown in the image below:
+
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/sap-odata-connector/debug-in-ide.png" alt="Debug configuration screen in Eclipse" class="no-border" >}}
 
 ## Read More
 

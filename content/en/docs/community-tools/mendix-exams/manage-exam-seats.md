@@ -1,5 +1,5 @@
 ---
-title: "Manage Exam Seats"
+title: "Managing Exam Seats"
 url: /community-tools/purchasing-exams/manage-exam-seats/
 weight: 10
 description: "Describes how an exam admin in an organization can manage exam seats."
@@ -39,7 +39,7 @@ To manage exam seats, you must have a Mendix account and be an exam admin.
 
    {{< figure src="/attachments/community-tools/order-exams-in-bulk/manage-exam-seats/expiry-date.png" >}}
 
-   {{% alert color="info" %}}The student must register for the exam before the expiry date. If the student fails to register before the expiry day, the seat will added to the **Remaining Seats** and can be reassigned.{{% /alert %}}
+   {{% alert color="info" %}}The student must register for the exam before the expiry date. If the student fails to register before the expiry day, the seat is added to the **Remaining Seats** and can be reassigned.{{% /alert %}}
 
 6. Click **Send Invites**.
 
@@ -55,15 +55,15 @@ In the **Invited Students** section, you can check the status of the invitations
 
 An invitation can have one of the following statuses:
 
-* **NOT ACCEPTED YET**: The student has not accepted the invitation. You can still [remind the student](#remind-student) or [withdraw the invitation](#withdraw-invitation).
-* **REGISTERED**: The student has registered but has not yet completed the exam.
-* **UNDISCLOSED**: The student has taken the exam but has not shared the result. A student can choose not to share the result with the exam admin when they register for the exam.
-* **CERTIFIED**: The student has passed the exam and is certified.
-* **FAILED**: The student has taken the exam and failed. 
+* **NOT ACCEPTED YET** – The student has not accepted the invitation. You can still [remind the student](#remind-student) or [withdraw the invitation](#withdraw-invitation).
+* **REGISTERED** – The student has registered but has not yet completed the exam.
+* **UNDISCLOSED** – The student has taken the exam but has not shared the result. A student can choose not to share the result with the exam admin when they register for the exam.
+* **CERTIFIED** – The student has passed the exam and is certified.
+* **FAILED** – The student has taken the exam and failed. 
 
 ### Reminding Students to Accept an Invitation {#remind-student}
 
-If a student has not accepted the invitation, you can send a reminder email to encourage the student to register for the exam. To do so, click **Remind Student**.
+If a student has not accepted the invitation, you can send a reminder email to encourage them to register for the exam. To do so, click **Remind Student**.
 
 ### Withdrawing an Invitation {#withdraw-invitation}
 

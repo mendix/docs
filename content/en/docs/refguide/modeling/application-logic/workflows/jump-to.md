@@ -42,9 +42,17 @@ After setting the objects, changes can be applied by calling a microflow contain
 
 ## Jumping to Other Activities in Parallel Splits or in Boundary Event Paths
 
-Jumping to other activities has a limitation in parallel splits and in boundary event paths: it is not possible to jump into or out of a current parallel split or boundary event path. However, it is possible to jump to other activities within a current parallel split or boundary event path, including the end of the path. Activities in other parallel splits or boundary event paths, as well as activities outside the current path, are not available in the **System.WorkflowCurrentActivity_ApplicableTargets** association.
+Jumping to other activities has a limitation in parallel splits and in boundary event paths: it is not possible to jump into or out of a current parallel split or boundary event path. However, it is possible to jump to other activities within a current parallel split or boundary event path, including the end of the path. Also, it is possible to jump from an interrupting boundary event path to its parent or grandparent path, since they are considered part of the same path. Activities in other parallel splits or boundary event paths, as well as activities outside the current path, are not available in the **System.WorkflowCurrentActivity_ApplicableTargets** association.
 
 For more information about jumping rules in a boundary event path, see the [Jump Rules](/refguide/workflow-boundary-events/#jump-rules) section in *Boundary Events*.
+
+## Jumping from Current Activity to Itself
+
+It is possible to jump from an active [Multi-user task](/refguide/multi-user-task/) back to itself. When this occurs, the following behavior applies:
+
+* All individually selected outcomes are reset.
+* Targeted and assigned users are cleared, and user targeting will be executed again.
+* Any existing timer boundary events that were already scheduled will continue running and are not canceled. After the jump is executed, these same boundary events are scheduled again. This may result in duplicate timer events being scheduled. These duplicate events will remain pending until the original events expire, at which point the newly scheduled ones are automatically aborted.
 
 ## Read More
 

@@ -7,7 +7,7 @@ description: "Describes the commands related to package export for the mx comman
 
 ## Introduction
 
-The commands in this group enable exporting different kids of packages from your app.
+The commands in this group enable exporting different kinds of packages from your app.
 
 ## mx create-project-package Command {#create-project-package}
 

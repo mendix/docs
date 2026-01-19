@@ -26,10 +26,6 @@ The rows in the table are CDs. The type of the two rows is *CD* and this is the 
 
 ## Types of Entities {#entity-types}
 
-{{% alert color="info" %}}
-View entities is currently in beta. 
-{{% /alert %}}
-
 The entity type defines how the data is handled and there are four types:
 
 1. Persistable entity
@@ -38,7 +34,7 @@ The entity type defines how the data is handled and there are four types:
     * Non-persistable entities are stored in the runtime memory and never get committed to the database. These type of entities are colored *orange* in the domain model.
 3. External entity
     * External entities represent the link to datasets that are made available through shared data sources registered in Mendix Catalog. These type of entities are colored *purple* in the domain model. 
-4. View entity (beta)
+4. View entity 
     * View entities represent the result sets of stored OQL queries on one or more entities, similar to database views, and are read-only. These entities are colored *green* in the domain model.
 
 {{< figure src="/attachments/refguide/modeling/domain-model/entities/type-of-entities.png" width=="300" >}}
@@ -130,7 +126,7 @@ Data grids do not directly display this date.
 
 #### Store 'changedDate'
 
-This property defines whether the entity contains the system attribute 'changedDate'. This is an attribute of type **Date and time** that stores the most recent date and time when the object was changed.
+This property defines whether the entity contains the system attribute 'changedDate'. This is an attribute of type **Date and time** that stores the date and time when the changed object was committed.
 
 | Option | Description |
 | --- | --- |
@@ -143,10 +139,6 @@ Data grids do not directly display this date.
 
 {{% alert color="info" %}}
 The 'changedDate' attribute is updated when the changed object is committed.
-{{% /alert %}}
-
-{{% alert color="warning" %}}
-The `changedDate` value is not updated if you update the object directly in Java using calls which resolve to use the [`com.mendix.systemwideinterfaces.core.IMendixObject.setValue​(IContext context, java.lang.String memberName, java.lang.Object value)`](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/systemwideinterfaces/core/IMendixObject.html#setValue(com.mendix.systemwideinterfaces.core.IContext,java.lang.String,java.lang.Object)) method (for example, `Entity.setValue(IContext, String)`). If you need `changedDate` to be updated when using Java, use the [`com.mendix.core.Core.change​(IContext context, IMendixObject object, java.util.Map<java.lang.String,​java.lang.String> changes)`](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/Core.html#change(com.mendix.systemwideinterfaces.core.IContext,com.mendix.systemwideinterfaces.core.IMendixObject,java.util.Map)) method.
 {{% /alert %}}
 
 #### Store 'owner' {#store-owner}

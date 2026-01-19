@@ -13,7 +13,7 @@ description: "How to configure Mendix Cloud to enable monitoring and analysis wi
 This document explains how to configure your Mendix Cloud app to send data to AppDynamics.
 
 {{% alert color="info" %}}
-For support on other cloud deployment options, such as Private Cloud, refer to their documentation. For Private Cloud deployment, for example, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
+For support on other cloud deployment options, such as on Kubernetes, refer to their documentation. For deployment on Kubernetes, for example, see [Monitoring Environments in Mendix on Kubernetes](/developerportal/deploy/private-cloud-monitor/).
 {{% /alert %}}
 
 {{% alert color="info" %}}

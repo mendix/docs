@@ -1,20 +1,16 @@
 ---
-title: "Mendix for Private Cloud Build API"
+title: "Mendix on Kubernetes Build API"
 url: /apidocs-mxsdk/apidocs/private-cloud-build-api/
 type: swagger
-description: "This Private Cloud Build API manages deployment packages which can later be used in the environments deployed in your private cloud."
+description: "This Mendix on Kubernetes Build API manages deployment packages which can later be used in the environments deployed in your Mendix on Kubernetes."
 restapi: true
 weight: 70
-linktitle: "Private Cloud Build API"
+linktitle: "Kubernetes Build API"
 ---
-
-{{% alert color="info" %}}
-This document is about [Private Cloud](/developerportal/deploy/private-cloud/) API. For Private Mendix Platform API, see [Private Mendix Platform API Documentation](/apidocs-mxsdk/apidocs/private-platform/).
-{{% /alert %}}
 
 ## Introduction
 
-The Mendix for Private Cloud Build API allows you to manage deployment packages which can later be used in the environments deployed in your private cloud. You can use the API to do the following:
+The Mendix on Kubernetes Build API allows you to manage deployment packages which can later be used in the environments deployed in your Mendix on Kubernetes. You can use the API to do the following:
 
 * Retrieve all deployment packages of an application
 * Retrieve a single deployment package based on the package ID
@@ -23,12 +19,12 @@ The Mendix for Private Cloud Build API allows you to manage deployment packages 
 * Delete a deployment package
 
 {{% alert color="info" %}}
-The Mendix for Private Cloud Build API is available only for connected private cloud clusters.
+The Mendix on Kubernetes Build API is available only for connected clusters.
 {{% /alert %}}
 
 ## Using the API
 
-To help you work with the Mendix for Private Cloud Build API, the following sections of this document describe how to authenticate for the API, and how to manage asynchronous API calls.
+To help you work with the Mendix on Kubernetes Build API, the following sections of this document describe how to authenticate for the API, and how to manage asynchronous API calls.
 
 ### Authentication
 
@@ -36,7 +32,7 @@ Authentication for the API uses a personal access token (PAT).
 
 #### Generating a PAT
 
-You can generate a PAT in the **Developer Settings** section of your Mendix Profile. For details, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
+You can generate a PAT in the **Developer Settings** section of your Mendix Profile. For details, see the [Personal Access Tokens](/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
 
 Select the following as scopes:
 
@@ -44,7 +40,7 @@ Select the following as scopes:
 * `mx:privatecloud-build:write` – to perform all operations (`GET`, `POST` and `DELETE`)
 * `mx:modelrepository:write` – under `Model Repository` – to perform build package operation 
 
-Store the `{GENERATED_PAT}` in a safe location, so you can use it to authorize your Mendix for Private Cloud API calls.
+Store the `{GENERATED_PAT}` in a safe location, so you can use it to authorize your Mendix on Kubernetes API calls.
 
 #### Scopes Explanation
 
@@ -108,11 +104,11 @@ If you are trying to build a deployment package for the `Main line` and the buil
 Follow the steps below to upload a deployment package by using the API.
 
 1. Set up your authentication PAT.
-2. Prepare the `multipart/form-data` request for your deployment package, as seen in the OpenAPI specification file. The `file` indicates the *.mda* file of the deployment package that you want to upload, and `fileName` represents the name with which the deployment package will be displayed in the Private Cloud Portal. If you do not provide the *.mda* extension to the *filename*, it is added automatically.
+2. Prepare the `multipart/form-data` request for your deployment package, as seen in the OpenAPI specification file. The `file` indicates the *.mda* file of the deployment package that you want to upload, and `fileName` represents the name with which the deployment package will be displayed in the Mendix on Kubernetes Portal. If you do not provide the *.mda* extension to the *filename*, it is added automatically.
 3. Make the API call `POST /apps/{appId}/packages` using the request created in the previous step to upload the new deployment package.
 4. Verify that the job is successful using the process described in [Managing Asynchronous Jobs](#async-jobs).
 5. Once the previous job is successful, you will see a `id` in the response. You can then call `GET /apps/{appId}/packages/{id}` to get the deployment package details and verify the uploaded file.
-    You can use the same `id` when deploying an app through the [Mendix for Private Cloud Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/#api-deploy).
+    You can use the same `id` when deploying an app through the [Mendix on Kubernetes Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/#api-deploy).
 
 ## API Reference
 

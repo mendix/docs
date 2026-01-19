@@ -1,13 +1,13 @@
 ---
 title: "Running the Mendix Operator in Global Mode"
 url: /developerportal/deploy/global-operator/
-description: "Describes the processes of installing and configuring the Mendix Operator in the Private Cloud in Global Mode"
+description: "Describes the processes of installing and configuring the Mendix Operator for Mendix on Kubernetes in Global Mode"
 weight: 30
 ---
 
 ## Introduction
 
-When running the Mendix Operator in Global mode, one installation of the Mendix Operator and Agent is sufficient to manage applications across multiple namespaces. This Operator mode is recommended for new customers, or customers that want to streamline and simplify their deployments and operations. For existing customers, and for use cases that require having a separate Operator instance for every namespace, the [Standard mode](/developerportal/deploy/standard-operator/) is still available and supported.
+When running the Mendix Operator in Global mode, one installation of the Mendix Operator and Agent is sufficient to manage applications across multiple namespaces.
 
 {{% alert color="warning" %}}
 It is essential to ensure that each namespace is exclusively managed by a single Operator. The deployment of two Operators, particularly with distinct versions, to manage the same namespace, may lead to conflicts, resulting in the cancellation and rollback of each operator's modifications.
@@ -23,7 +23,7 @@ After configuring the Global Operator namespace, you must configure the *managed
 
 To install and configure the Global Operator, perform the following steps:
 
-1. In the Private Cloud Portal, create a cluster and select **Global Installation** as the **Installation Type**.
+1. In the Mendix on Kubernetes Portal, create a cluster and select **Global Installation** as the **Installation Type**.
 
     {{< figure src="/attachments/deployment/private-cloud/global-operator/global-operator1.png" >}}
 
@@ -51,7 +51,7 @@ To install and configure the Global Operator, perform the following steps:
     2. [Sign into the Platform](/developerportal/deploy/standard-operator/#openshift-signin).
     3. Perform the [Base Installation](/developerportal/deploy/standard-operator/#base-installation).
 
-    {{< figure src="/attachments/deployment/private-cloud/global-operator/global-operator6.png" class="no-border" >}}
+        {{< figure src="/attachments/deployment/private-cloud/global-operator/global-operator6.png" class="no-border" >}}
 
     4. You can apply the custom TLS and proxy settings in the Global Operator main namespace by just selecting only the **Custom TLS** and **Proxy** options in the Configuration Tool.
 
@@ -69,17 +69,17 @@ To install and configure the Global Operator, perform the following steps:
     kubectl -n {globalOperatorNamespace} get pods
     ```
 
-9. In the Private Cloud Portal, verify that the status of the Global Operator main namespace is *Connected*, as in the following figure:
+9. In the Mendix on Kubernetes Portal, verify that the status of the Global Operator main namespace is *Connected*, as in the following figure:
 
     {{< figure src="/attachments/deployment/private-cloud/global-operator/global-operator7.png" class="no-border" >}}
 
 10. Click **Namespaces** to go to the **Namespaces Overview** page.
 
-    {{< figure src="/attachments/deployment/private-cloud/global-operator/global-operator8.png" >}}
+    {{< figure src="/attachments/deployment/private-cloud/global-operator/global-operator9.png" >}}
 
 11. Once the Global Operator main namespace is connected, the **Convert Namespace** and **Add Managed Namespace** buttons are enabled and you can install the managed namespace under the Global Operator namespace by clicking **Add Managed Namespace**.
 
-    {{< figure src="/attachments/deployment/private-cloud/global-operator/global-operator9.png" class="no-border" >}}
+    {{< figure src="/attachments/deployment/private-cloud/global-operator/global-operator8.png" class="no-border" >}}
 
     {{% alert color="warning" %}}Ensure that you use the same name for the managed namespace in the Portal and in the cluster while running the command. Using different names may result in unwanted issues.{{% /alert %}}
 

@@ -147,14 +147,14 @@ Before use, please ensure you meet the following prerequisites:
 * Prior to adding a new font, the font files and font family have to already be included in your project. To add font files into the project, you can put the font files inside your styles/web directory.
 * Define font family in styling. You will need to define the new font by adding the font face custom styling.
 
-	```css
+    ```css
 	@font-face {
 	  font-family: 'Your-font-family-name';
 	  src: url('YourFontFile.ttf') format('truetype');
 	  font-weight: 100;
 	  font-style: normal;
 	}
-	```
+    ```
 
 #### Adding a Custom Font 
 

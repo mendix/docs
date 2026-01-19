@@ -1,19 +1,17 @@
 ---
-title: "CI/CD for Mendix for Standalone Private Cloud Using Tekton"
+title: "CI/CD for Mendix for Standalone Mendix on Kubernetes Using Tekton"
 linktitle: "CI/CD with Tekton"
 url: /developerportal/deploy/private-cloud-tekton/
-description: "Describes how to use Tekton to create a CI/CD solution for Mendix environments in the Private Cloud"
+description: "Describes how to use Tekton to create a CI/CD solution for Mendix environments in Mendix on Kubernetes"
 weight: 40
 ---
-{{% alert color="info" %}}
-The Tekton pipelines for Mendix are available to all customers using licensed Operators in Mendix for Private Cloud.
-
-Please make a request to your Customer Success Manager (CSM) to arrange for access to these pipelines.
+{{% alert color="warning" %}}
+Tekton pipelines for Mendix on Kubernetes Standalone are no longer available to new customers. Customers seeking Tekton pipeline support are advised to consider Private Mendix Platform, which includes Tekton pipeline support.
 {{% /alert %}}
 
 ## Introduction
 
-Mendix recommends using [Tekton](https://tekton.dev/) to create a CI/CD (Continuous Integration and Delivery/Deployment) solution for your Mendix for Standalone Private Cloud apps. This document explains how to install:
+This document explains how to install:
 
 * Tekton
 * Pipelines containing the appropriate tasks and steps to manage apps and environments
@@ -39,7 +37,6 @@ To follow these instructions you will need:
 * A [namespace added](/developerportal/deploy/private-cloud-cluster/#add-namespace) to the cluster
 * The [Mendix Operator v2.8.0+ installed](/developerportal/deploy/private-cloud-cluster/#install-operator) and configured in the cluster
 * The [Helm](https://helm.sh) package manager
-* The Mendix Tekton pipelines – these can be requested through your CSM
 * Access to the internet to copy images to your air-gapped registry, or to install images directly onto your cluster
 
 If you have any issues when following these instructions, see the [Troubleshooting](#troubleshooting) section to see if there is a solution.
@@ -48,7 +45,7 @@ If you have any issues when following these instructions, see the [Troubleshooti
 The Tekton pipeline is compatible with Mendix Operator versions v2.20.0 and earlier. Future Mendix Operator versions might need an updated version of the pipeline.
 {{% /alert %}}
 
-## Overview of Tekton and the Mendix for Private Cloud Pipelines
+## Overview of Tekton and the Mendix on Kubernetes Pipelines
 
 ### Tekton Components
 
@@ -61,7 +58,7 @@ The Tekton pipeline is compatible with Mendix Operator versions v2.20.0 and earl
     
 ### Tekton Pipelines
 
-Each activity needed for management of Mendix for Private Cloud environments and apps is mapped to a Tekton pipeline. These pipelines are run when a trigger condition is met. Each pipeline needs its own trigger and cannot automatically run subsequent pipelines.
+Each activity needed for management of Mendix on Kubernetes environments and apps is mapped to a Tekton pipeline. These pipelines are run when a trigger condition is met. Each pipeline needs its own trigger and cannot automatically run subsequent pipelines.
 
 A *pipeline* is a collection of tasks in order. Tekton creates tasks in a number of Kubernetes pods and ensures that each pod successfully completes its task. 
 
@@ -71,7 +68,7 @@ A *step* is an operation in a CI/CD workflow. Tekton performs each step as a run
     
 Tasks and pipelines are specified as custom resources (CRs) in a Kubernetes cluster.
 
-### Tekton in Mendix for Private Cloud
+### Tekton in Mendix on Kubernetes
 
 Each Mendix pipeline can be run independently. However, the **create-app-pipeline** must be run first as the other pipelines have a dependency on the existence of an environment/app deployed in the namespace.
 
@@ -116,7 +113,7 @@ The example shows the following namespaces:
 ## Air-gapped Environments
 
 {{% alert color="info" %}}
-If your cluster is air-gapped and does not have access to the internet, you will need to follow a different set of installation instructions. These can be found in [Air-gapped Installation of Tekton CI/CD for Mendix for Private Cloud](/developerportal/deploy/private-cloud-tekton-airgapped/)
+If your cluster is air-gapped and does not have access to the internet, you will need to follow a different set of installation instructions. These can be found in [Air-gapped Installation of Tekton CI/CD for Mendix on Kubernetes](/developerportal/deploy/private-cloud-tekton-airgapped/)
     
 When you have followed those instructions, you can continue with [Installing Triggers](#installing-triggers), below.
 {{% /alert %}}
@@ -152,7 +149,7 @@ At the moment we support Red Hat OpenShift Pipelines v1.9.2.
 Before you install the Mendix pipelines, which contain all Tekton-related objects, you need to do the following:
 
 1. Install [helm](https://helm.sh).
-2. Create a folder containing helm charts for configuring the Mendix Tekton pipelines – you can get these by making a request to your CSM, who can arrange for access to them.
+2. Create a folder containing helm charts for configuring the Mendix Tekton pipelines.
 
 To install a pipeline you need to provide the url to your private images repository without a tag. For example: `my.private.registry.com/mxapp`. The images that the pipeline builds will be stored in this repository.  
 

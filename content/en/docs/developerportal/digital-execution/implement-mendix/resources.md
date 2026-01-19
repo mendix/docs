@@ -1,9 +1,11 @@
 ---
 title: "Resources"
 linktitle: "Resources"
-url: /resources/
+url: /developerportal/digital-execution/resources/
 weight: 125
 description: "Find resources related to the Mendix platform."
+aliases:
+    - /resources/
 ---
 
 ## Introduction

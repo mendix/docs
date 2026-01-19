@@ -26,7 +26,7 @@ Other places where you might encounter performance issues or timeouts are the fo
 
 * Retrieving a list of branches
 * Cloning on the command line or in a CI/CD pipeline
-* [Team Server](/developerportal/general/team-server/) page in **Apps** in the Mendix Portal, if you are using Team Server as your Git server
+* [Team Server](/developerportal/repository/team-server/) page in **Apps** in the Mendix Portal, if you are using Team Server as your Git server
 
 ## Preventing and Mitigating a Large Repository Size
 

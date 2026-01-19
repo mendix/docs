@@ -1,5 +1,5 @@
 ---
-title: "Consume Services"
+title: "Consuming Services"
 url: /catalog/consume/
 weight: 20
 aliases:

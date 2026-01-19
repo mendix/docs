@@ -32,7 +32,7 @@ The Data Importer document can be used along with the [Import data from file](/r
 
 Right-click the module you want to add the Data Importer document to and click **Add other** > **Data Importer**.
 
-{{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/data-importer-menu.png" class="no-border" width="600" >}}
+{{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/data-importer-menu.png" class="no-border" width="600" >}}
 
 Name the document, then click **OK**, and the new Data Importer document opens.
 
@@ -40,7 +40,7 @@ Name the document, then click **OK**, and the new Data Importer document opens.
 
 Click **Select a local file** to import an Excel file (*.xls* or *.xslx*).
 
-{{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/select-file-for-preview.png" class="no-border" width="600" >}}
+{{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/select-file-for-preview.png" class="no-border" width="600" >}}
 
 Select or drop the file in the **Select Source File** field. An Excel workbook can have single or multiple sheets; you can choose which sheet to import data from and specify the header row and starting data row.
 
@@ -48,7 +48,7 @@ Select or drop the file in the **Select Source File** field. An Excel workbook c
 * **Header Row No.** – row number of the file header; the default is 1
 * **Read Data From Row No.** – starting line for reading data; the default is 2
 
-{{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/select-sheet-and-header-data-row.png" class="no-border" width="600" >}}
+{{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/select-sheet-and-header-data-row.png" class="no-border" width="600" >}}
 
 Click **Preview Source Data & Entity** to view the data from the file. The first 10 data rows from the source file are shown in the data preview section. If there are less than 10 data rows in the sample file, only the available rows are shown. The column names correspond to the attribute name within the entity, and the sheet name is used to define the entity.
 
@@ -56,7 +56,7 @@ All the columns are automatically selected (checked) for import. You can uncheck
 
 {{% alert color="warning" %}} Column names that do not adhere to Mendix naming conventions will be autocorrected. For **Number** cell-types, the target Mendix type is mapped to **Decimal** to accommodate to integers and decimals. {{% /alert %}}
 
-{{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/preview-data-and-entity.png" class="no-border" width="600" >}}
+{{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/preview-data-and-entity.png" class="no-border" width="600" >}}
 
 ### Previewing CSV Data {#preview-csv-data}
 
@@ -77,11 +77,11 @@ All the columns are selected (checked) by default. You can uncheck the columns y
 
 For example, for the following source data (CSV), the separator is specified as Comma and Quote, and the Escape Character is Double Quote and Header. This is already part of the input file.
 
-{{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/source-csv-data.png" class="no-border" width="600" >}}
+{{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/source-csv-data.png" class="no-border" width="600" >}}
 
 The data preview and resulting entity are seen below:
 
-{{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/preview-csv-data-and-entity.png" class="no-border" width="600" >}}
+{{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/preview-csv-data-and-entity.png" class="no-border" width="600" >}}
 
 ### Editing an Entity {#edit-entity}
 
@@ -93,7 +93,7 @@ You can edit the entity in the **Entity Preview** section. The Data Importer sup
 
 Click **Edit** at top-right corner of **Entity Preview**. This will render a pop-up window where you can change the name of the entity. You can also change the name of the attribute; *Original Name* is the name of the column from input file and *Attribute Name* will be the new name that you want to assign to this column. You can also change the data type of this attribute by selecting a relevant value from the drop-down as shown below.
 
-{{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/edit-csv-entity.png" class="no-border" width="600" >}}
+{{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/edit-csv-entity.png" class="no-border" width="600" >}}
 
 Once you are satisfied with the changes, click **OK** to save or **Cancel** to discard your changes.
 
@@ -131,7 +131,7 @@ When you are done editing the entity, click **Create Entity** > **OK**. This wil
 
 When the entity is created, you can view the mapping of the source columns to the target entity attributes. 
 
-{{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/source-to-target-mapping.png" class="no-border" width="600" >}}
+{{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/source-to-target-mapping.png" class="no-border" width="600" >}}
 
 The Data Importer document creation is complete and can be used to import data in a microflow.
 
@@ -143,7 +143,7 @@ The newly-created Data Importer document allows you to periodically import data 
 
 The **Import data from file** activity is found under **Integration activities** in the **Toolbox**. Double-click to view its properties:
 
-{{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/custom-activity-params.png" class="no-border" width="600" >}}
+{{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/custom-activity-params.png" class="no-border" width="600" >}}
 
 The **Input** section includes:
 
@@ -163,17 +163,17 @@ The **Import data from file** custom activity needs an input file to import data
 2. Double-click the button and in the **Events** field under the **On click** drop-down, select **Create object** to create a `System.FileDocument` entity.
 3. Pass the control to a new page (**UploadCustomerData**) where the file is uploaded.
 
-    {{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/home-page-button.png" class="no-border" width="600" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/home-page-button.png" class="no-border" width="600" >}}
 
 4. On the **UploadCustomerData** page, include a data view for the *FileDocument* and include a 'File Manager' to assist with a file upload.
 
-    {{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/data-view-file-manager.png" class="no-border" width="600" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/data-view-file-manager.png" class="no-border" width="600" >}}
 
 5. Open the **Toolbox** and add a **Call microflow button**. 
 
 6. Click **New** and name the microflow *Import Customer Data*. You also see **FileDocument** in the parameters section; make sure this box is checked to include it as a parameter and click **OK**.
 
-{{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/add-parameter.png" class="no-border" width="600" >}}
+{{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/add-parameter.png" class="no-border" width="600" >}}
 
 ### Configuring the Import data from file Activity in a Microflow 
 
@@ -183,39 +183,39 @@ The steps below are shown using an Excel input file with its corresponding Data 
 
 1. In the created microflow, drag the **Import data from file** activity into it. You can find this activity in the **Toolbox** under **Integration activities**.
 
-   {{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/integration-activity.png" class="no-border" width="600" >}}
+   {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/integration-activity.png" class="no-border" width="600" >}}
 
 2. When the **Import data from file** activity is added into microflow, you see three errors in the console:
 
-   {{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/custom-activity.png" class="no-border" width="600" >}}
+   {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/custom-activity.png" class="no-border" width="600" >}}
 
     To address these errors, double-click the activity and in the **File** field, choose the input file that is passed from the file upload page to this microflow as a parameter.
 
 3. In the **Data Importer document** field, click **Select** and choose the Data Importer document you want to use.
 
-    {{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/choose-data-importer-template.png" class="no-border" width="600" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/choose-data-importer-template.png" class="no-border" width="600" >}}
 
     After selecting the Data Importer document, the **Return type** and **Variable name** auto-populates. You can change the name of the output variable if you wish.
 
 4. Click **OK**. The custom activity is configured and all the errors will resolve.
 
-    {{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/configured-custom-activity.png" class="no-border" width="600" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/configured-custom-activity.png" class="no-border" width="600" >}}
 
 5. Add an **Aggregate list** activity and configure it to count the size of the 'CustomerList', which is returned from the previous activity.
 
-   {{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/aggregate-list.png" class="no-border" width="600" >}}
+   {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/aggregate-list.png" class="no-border" width="600" >}}
 
 6. Configure a **Show message** activity. You can use a template message and a parameter, such as in the example below.
 
-   {{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/show-message-with-list-size.png" class="no-border" width="600" >}}
+   {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/show-message-with-list-size.png" class="no-border" width="600" >}}
 
 7. Set '$CustomerList' as the return value from the **Import data from file** activity to be used later. Your completed microflow should look like the image below.
 
-   {{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/example-microflow.png" class="no-border" width="600" >}}
+   {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/example-microflow.png" class="no-border" width="600" >}}
 
 8. Deploy your app locally. Browse and upload an input file, which is similar to the file that was used as a template while creating Data Importer document.
 9. Check that you see a message that states **Imported xx rows from input file into a list of NPEs**.
 
-   {{< figure src="http://attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/local-app-run.png" class="no-border" width="600" >}}
+   {{< figure src="/attachments/refguide/modeling/integration/use-platform-supported-content/use-the-data-importer/local-app-run.png" class="no-border" width="600" >}}
 
 You have successfully configured and used the Data Importer extension. You can extend this as per your requirements. For example, you can convert the list of NPEs into persistable entities by providing a message definition, or use each loop construct and individually create and commit entities into your database.

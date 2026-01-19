@@ -32,7 +32,7 @@ You can use the Catalog with any deployment method, though there are differences
 | Deployment Method | How are Services Registered? | 
 | --- | --- |
 | [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) | Published OData/REST services and Business Events services in a deployed app are [registered automatically](/catalog/register/register-data/#mendix-cloud) as services in the Catalog <br> [Register Services using the Registration API](/apidocs-mxsdk/apidocs/registration-api/) |
-| [Private Cloud](/developerportal/deploy/private-cloud/) | Using the [Registration API](/apidocs-mxsdk/apidocs/registration-api/) |
+| [Mendix on Kubernetes](/developerportal/deploy/private-cloud/) | Using the [Registration API](/apidocs-mxsdk/apidocs/registration-api/) |
 | [On-Premises](/developerportal/deploy/on-premises-design/) | Using the [Registration API](/apidocs-mxsdk/apidocs/registration-api/) |
 
 Once services are registered, the metadata is stored in the Catalog so that you can share these sources with authorized users in your company.

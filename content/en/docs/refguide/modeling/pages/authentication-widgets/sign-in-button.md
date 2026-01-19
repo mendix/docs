@@ -4,7 +4,19 @@ url: /refguide/sign-in-button/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="warning" %}}The **Sign-in button** is not supported on native mobile pages.{{% /alert %}}
+{{% alert color="warning" %}}
+The **sign-in button** widget is a Dojo widget.
+
+This widget is not supported on native mobile pages.
+
+This widget is not supported in the [React client](/refguide/mendix-client/react/).
+
+Upgrade it to the normal input and action widgets as shown in the Atlas login page template. See the Mendix React Client's [Migration Guide](/refguide/mendix-client/react/#sign-in-widgets) for more information.
+
+If you [switch to the React client](/refguide/app-settings/#react-client), the widget will not appear in the **Toolbox**.
+
+The Dojo client is deprecated and will be removed in Mendix 12. It continues receiving security and stability updates until the end of support of Mendix 11.24.
+{{% /alert %}}
 
 ## Introduction
 

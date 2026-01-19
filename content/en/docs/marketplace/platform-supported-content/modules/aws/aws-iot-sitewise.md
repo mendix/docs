@@ -60,9 +60,9 @@ After you configure the authentication profile for AWS IoT SiteWise, you can imp
 6. Double-click the **ListAssetModels** microflow activity to configure the required parameters.
 7. In the **Edit parameters** section, edit the **ENUM_Region** parameter, and provide a value by using a variable or an expression.
 8. Click **OK**.
-9. In the **Toolbox** pane, search for the **Retrieve** activity and drag it onto the microflow area.
-10. Position the **Retrieve** activity between the **ListAssetModels** activity and the microflow end event.
-11. Double-click the **Retrieve** activity.
+9. In the **Toolbox** pane, search for the **Retrieve object(s)** activity and drag it onto the microflow area.
+10. Position the **Retrieve object(s)** activity between the **ListAssetModels** activity and the microflow end event.
+11. Double-click the **Retrieve object(s)** activity.
 12. In the **Select Association** dialog box, in the **Association** section, click **Select**, and then select **ListAssetModels** as the association.
 13. Click **OK**.
 14. Configure a method for triggering the **ACT_ListAssetModels** microflow. For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).

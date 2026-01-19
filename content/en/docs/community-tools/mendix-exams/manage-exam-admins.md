@@ -1,5 +1,5 @@
 ---
-title: "Manage Exam Admins"
+title: "Managing Exam Admins"
 url: /community-tools/purchasing-exams/manage-exam-admins/
 weight: 20
 description: "Describes how to manage exam admins in an organization."
@@ -15,11 +15,9 @@ As an exam admin, you can add exam admins to, or remove them from, an exam order
 
 All exam admins must have a Mendix account.
 
-To manage exam admins, you must also be an exam admin. If your name is associated with an order for exam seats, then you will be made an exam admin as part of the order fulfilment process.
+To manage exam admins, you must also be an exam admin. If your name is associated with an order for exam seats, then you will be made an exam admin as part of the order fulfillment process.
 
-## Managing Exam Admins
-
-### Adding an Exam Admin
+## Adding an Exam Admin
 
 To add an exam admin, do the following:
 
@@ -27,7 +25,7 @@ To add an exam admin, do the following:
 
      {{< figure src="/attachments/community-tools/order-exams-in-bulk/manage-exam-admins/access-management.png" >}}
 
-2. Click **Add Exam Admin** on the upper-right of the page. The **Add Exam Admin** dialog box opens.
+2. Click **Add Exam Admin** in the upper right corner of the page. The **Add Exam Admin** dialog box opens.
 
 3. In the **User** field, enter the email addresses of the exam admins who you want to add. If you enter multiple email addresses, separate them by commas.
 
@@ -37,12 +35,13 @@ To add an exam admin, do the following:
 
 5. Click **Add**.
 
-The exam admins who are added will receive an email with a link that directs them to the [Overview](https://academy.mendix.com/link/examadmin) page for exam administration.
+The exam admins who are added receive an email with a link that directs them to the [Overview](https://academy.mendix.com/link/examadmin) page for exam administration.
 
-### Removing an Exam Admin
+## Removing an Exam Admin
 
 {{% alert color="info" %}}
-You cannot remove an exam admin if they are the only admin for an order. Nor can you remove yourself as an exam admin.
+You cannot remove an exam admin if they are the only admin for an order.    
+You cannot remove yourself as an exam admin.
 {{% /alert %}}
 
 To remove an exam admin, do the following:

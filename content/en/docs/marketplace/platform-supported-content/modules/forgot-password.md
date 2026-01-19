@@ -19,7 +19,7 @@ There are below versions of the Forgot Password module, depending on whether you
 
 | Mendix Version | Forgot Password Version |
 | --- | --- |
-| 10.21.01 and above | 6.3.0 |
+| 10.21.01 and above | 6.4.0 |
 | 10.12.10 and above | 6.1.0 |
 | 10.6.0 and above | 6.0.0 |
 | 9.20.0 and above | 5.1.0 |
@@ -33,9 +33,10 @@ If you already use the Forgot Password module in your Mendix 8 app, you can find
 The Forgot Password module has the following dependencies:
 
 * [Email Connector](/appstore/modules/email-connector/) – Versions of the Forgot Password module below 4.1.0 (for Mendix 8), and 5.1.0 (for Mendix 9 and above) have a dependency on the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module. If you are using Mendix 8 and above, Mendix recommends upgrading to the latest version using the instructions in the [Migrate from Email Module with Templates to Email Connector](#migrate-email) section below.
-* [Deep Link](/appstore/modules/deep-link/) – Version of the Forgot Password module 6.0.0 and above (for Mendix 10.6.0 and above) does not require Deep Link module as a dependency.
+* [Deep Link](/appstore/modules/deep-link/) – Version of the Forgot Password module 6.0.0 and above (for Mendix 10.6.0 and above) does not require the Deep Link module as a dependency.
 * [Encryption](/appstore/modules/encryption/)
 * [Mx Model Reflection](/appstore/modules/model-reflection/)
+* [Community Commons](/appstore/modules/community-commons-function-library/) (For Email Connector module version 6.3.0 and above)
 
 ### Features
 
@@ -43,10 +44,12 @@ The Forgot Password module has the following dependencies:
 * Allows end-users to sign up for your app by validating that the end-user has access to the email address they enter by sending a password reset email
 * Supports email aliases, in other words, the from address in email templates can be different from the SMTP account used to send the email
 * Supports multi-language email templates for sending password reset emails
+* Automatically deletes expired or previously used password reset links.
+* Supports multi-instance apps (horizontal scaling)
 
 ### Limitation
 
-The Forgot Password module does not support multiple instances if any are present in the node.
+When changing the encryption key for the Encryption module, all previously sent password reset email links become invalid. Users must request a new password reset link.
 
 ## Installing the Forgot Password Module{#installing}
 
@@ -62,7 +65,7 @@ In these instructions, it is assumed that your main module is **MyFirstModule**.
 1. Open the [App Settings](/refguide/app-settings/) and make the following changes:
     * In the [Configurations](/refguide/configuration/) tab, edit the current configuration to add a 32-character string value for the constant **Encryption.EncryptionKey**.
         {{< figure src="/attachments/appstore/platform-supported-content/modules/forgot-password/encryption-key.png" class="no-border" >}}
-    * In the **Runtime** tab, add the microflow **Deeplink.StartDeeplink** as the **After startup** microflow or as a sub-microflow to an existing after startup microflow.
+    * In the **Runtime** tab, add the microflow **Deeplink.StartDeeplink** and **ForgotPassword.ASU_Startup** as the **After startup** microflow or as a sub-microflow to an existing after startup microflow.
     {{% alert color="warning" %}}For the Forgot Password module version 6.0.0 (Mendix 10.6.0 and above), do not add the **Deeplink.StartDeeplink** microflow as the **After startup** microflow.{{% /alert %}}
     * If you are changing the **URL prefix** value in the **Runtime** tab, ensure that you use the same value in the URLPrefix constant of the Forgot Password module. Otherwise, the signup and reset URLs will not work.
 1. Open [App Security](/refguide/app-security/) and do the following:
@@ -76,7 +79,7 @@ In these instructions, it is assumed that your main module is **MyFirstModule**.
             * **Email_Connector.EmailConnectorAdmin** or **EmailTemplate.Administrator** - **Email_Connector** permissions are needed if you are using version 4.1.0 or above (for Mendix 8) or version 5.1.0 or above (for Mendix 9 and above). **EmailTemplate** permissions are only needed if using a version which uses the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module
             * **Encryption.user**
             * **ForgotPassword.Administrator**
-            * **MxModelReflection.ModeAdministrator**
+            * **MxModelReflection.ModelAdministrator**
             * **System.Administrator**
             * **MyFirstModule.Administrator**
         * Guest

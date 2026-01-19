@@ -1,5 +1,5 @@
 ---
-title: "Submit a Support Request"
+title: "Submitting a Support Request"
 url: /support/submit-support-request/
 weight: 20
 description: "Describes the details necessary for Mendix Support to process your request."
@@ -41,11 +41,7 @@ To submit a request with Mendix Support, follow these steps:
 
 2. Log in to the [Mendix Support Portal](https://support.mendix.com).
 3. Click **Submit request**.
-4. Select an issue from the drop-down menu:
-
-    {{< figure src="/attachments/support/submit-support-request/issue.png" class="no-border" >}}
-
-    You can select from the following issues:
+4. Select an issue from the drop-down menu. You can choose from the following issues:
 
     * **Request for Information** – general questions about Mendix
     * **Incident** – if your app is down, or you are experiencing another platform issue
@@ -124,9 +120,9 @@ The [ticket priority](/support/ticket-priority/) that Mendix Support validates i
 
 {{< figure src="/attachments/support/submit-support-request/204371729-pic5.png" class="no-border" >}}
 
-## Providing Attachments and Additional Information
+## Providing Attachments, Logs, and Additional Information
 
-Depending on the type of request, providing attachments and additional information may be helpful. The scenarios below list what additional information should be provided.
+Providing attachments, logs, and additional information is helpful for streamlining the support process. The following scenarios list what additional information should be provided.
 
 ### Attachments
 
@@ -135,6 +131,48 @@ You can add large attachments such as app files to the request. Please note that
 {{% alert color="info" %}}
 Attachments added to Mendix Support requests will be automatically deleted after 365 days.
 {{% /alert %}}
+
+Attachments are uploaded via SendSafely, a secure file transfer service. SendSafely may be blocked by your network, which prevents the widget from displaying. In that case, the page shows a `Could not render widget 'SupportPortal.SendSafely.sendSafelyDropzone1'` error. 
+
+To resolve that error, please make sure that the following URLs are allowlisted in your network's security settings:
+
+* `https://mendix.sendsafely.eu`
+* `https://static-mendix.sendsafely.eu`
+* `https://sendsafely-dual-region-eu.s3-accelerate.amazonaws.com`
+
+### Logs
+
+It is important to provide app logs when submitting a support request. This allows the support team to better assess and work towards fixing the issue. The following sections include information on retrieving logs per deployment model.
+
+#### Retrieving Logs for Apps Deployed to Mendix Cloud
+
+Follow the steps on the [Logs](/developerportal/operate/logs/) page to retrieve logs for an app deployed to Mendix Cloud.
+
+#### Retrieving Logs for Apps Deployed to Windows
+
+Follow these steps to retrieve logs for an app deployed to Windows:
+
+1. In the Mendix Service Console, select the app for which you want to retrieve logs, then click **Preferences**.    
+    The **Preferences** dialog is displayed.
+2. In the **Preferences** dialog, look at the **Location of apps and server files** field. This is the path where your logs are located.
+3. Navigate to that path, and access the **Apps** > **{AppName}** > **Log** folder. **{AppName}** stands for the name of the app for which you want to retrieve logs.    
+    The app logs and M2EE logs are available in *.txt* format.
+
+#### Retrieving Logs for Apps Deployed to SAP
+
+Follow these steps to retrieve logs for an app deployed to SAP:
+
+1. On the Mendix Portal, go to your SAP-deployed app in [Apps](https://sprintr.home.mendix.com), and click **Environments**.
+2. Click **Details** ({{% icon name="notes-paper-edit" %}}) next to the environment you want to view details for.
+3. Click **View Recent Log**.
+
+To retrieve **Debug**, **Info**, **Trace**, and **Warning** logs, [SAP Logging Connector](/appstore/modules/sap/sap-logger/) must be configured in your app.
+
+Alternatively, you can retrieve logs from the SAP BTP. For more information, refer to the [Viewing the Logs](/developerportal/deploy/sap-cloud-platform/sap-monitoring/#viewing-the-logs) section in *Monitoring Environments in Mendix Apps on SAP BTP*. 
+
+#### Retrieving Logs for Apps Deployed to Kubernetes
+
+Follow the steps in the [Collecting Diagnostic Data for a Support Ticket](/developerportal/deploy/private-cloud-deploy/#collecting-diagnostic-data-for-a-support-ticket) section of *Deploying a Mendix App to a Mendix on Kubernetes Cluster* to retrieve logs for an app deployed to Mendix on Kubernetes.
 
 ### Requirements for Security Support Tickets{#security-tickets}
 
@@ -166,7 +204,7 @@ Mendix Support will only accept security findings for the Mendix platform. This 
 
 ### Team Server Problems and App Issues
 
-* [](/developerportal/settings/general-settings/)
+* [The project ID](/developerportal/settings/general-settings/)
 
 ### Studio Pro Problems
 
@@ -196,11 +234,11 @@ Not all Marketplace content is compatible with every version of Studio Pro, and 
 
 ## Overview of Requests
 
-By clicking your name on the upper-right side of the screen, you can select **My activities** and see all the requests that you have submitted (**My requests**) as well as all the requests that have been submitted on the apps to which you have access:
+By clicking your name on the upper-right side of the screen, you can select **My activities** and see all the requests that you have submitted (**My requests**), as well as all the requests that have been submitted on the apps to which you have access.
 
 {{< figure src="/attachments/support/submit-support-request/activities.png" class="no-border" >}}
 
-On the **All requests** tab, you can click **Follow** for an app to be informed of all the changes on requests on that specific app:
+On the **All requests** tab, you can click **Follow** for an app to be informed of all the changes on requests on that specific app.
 
 {{< figure src="/attachments/support/submit-support-request/follow.png" class="no-border" >}}
 

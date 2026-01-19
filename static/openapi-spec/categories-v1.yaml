@@ -1,0 +1,601 @@
+openapi: 3.0.0
+info:
+  version: '1.0'
+  title: categories-api
+  termsOfService: https://www.mendix.com/terms-of-use/
+  description: API for managing company categories.
+  contact:
+    name: Mendix Support
+    url: 'https://support.mendix.com'
+    email: support@mendix.com
+servers:
+  - url: 'https://categories-api.home.mendix.com/v1'
+security:
+  - PersonalAccessToken: []
+paths:
+  /companies/{company-id}/categories:
+    get:
+      tags:
+        - Companies
+      summary: Get categories for a company
+      description: |
+        Returns the list of categories for the company.
+        The user PAT needs to have the scope `mx:app:categories:read`.
+      operationId: getCompanyCategories
+      parameters:
+        - name: company-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 5
+          description: Maximum number of items to return
+        - name: offset
+          in: query
+          required: false
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+          description: Number of items to skip before starting to collect the result set
+      responses:
+        '200':
+          description: List of categories
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  links:
+                    $ref: '#/components/schemas/PaginationLinks'
+                  meta:
+                    $ref: '#/components/schemas/PaginationMeta'
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Category'
+        '400':
+          $ref: '#/components/responses/Http400'
+        '401':
+          $ref: '#/components/responses/Http401'
+        '404':
+          $ref: '#/components/responses/Http404'
+        '500':
+          $ref: '#/components/responses/Http500'
+
+    post:
+      tags:
+        - Companies
+      summary: Create a category for a company
+      description: |
+        Creates a category for the company. The category must include at least 2 inner values.
+        Validation: A company can have a maximum of 5 categories.
+        The user PAT needs to have the scope `mx:app:categories:write`.
+        The user must be a company admin.
+        The code of the provided values can be passed as an empty string. A code will be generated based on the provided input for the values.
+      operationId: createCompanyCategory
+      parameters:
+        - name: company-id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CategoryCreate'
+      responses:
+        '201':
+          description: Category created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  categoryId:
+                    type: string
+                    description: Unique identifier for the category
+                  name:
+                    type: string
+                    description: Name of the category
+                  values:
+                    type: array
+                    description: List of values for the category
+                    items:
+                      $ref: '#/components/schemas/CategoryValue'
+        '400':
+          $ref: '#/components/responses/Http400'
+        '401':
+          $ref: '#/components/responses/Http401'
+        '404':
+          $ref: '#/components/responses/Http404'
+        '409':
+          $ref: '#/components/responses/Http409'
+        '422':
+          $ref: '#/components/responses/Http422'
+        '500':
+          $ref: '#/components/responses/Http500'
+  /categories/{category-id}:
+    put:
+      tags:
+        - Categories
+      summary: Update a category
+      description: |
+        Updates a category.
+        The user PAT needs to have the scope `mx:app:categories:write`.
+        The user must be a company admin.
+      operationId: updateCategory
+      parameters:
+        - name: category-id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CategoryNameUpdate'
+      responses:
+        '200':
+          description: category updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Category'
+        '400':
+          $ref: '#/components/responses/Http400'
+        '401':
+          $ref: '#/components/responses/Http401'
+        '404':
+          $ref: '#/components/responses/Http404'
+        '409':
+          $ref: '#/components/responses/Http409'
+        '500':
+          $ref: '#/components/responses/Http500'
+
+    delete:
+      tags:
+        - Categories
+      summary: Delete a category
+      description: Deletes a category. The user needs to have the scope `mx:app:categories:write`. The user must be a company admin.
+      operationId: deleteCategory
+      parameters:
+        - name: category-id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Category deleted
+        '401':
+          $ref: '#/components/responses/Http401'
+        '404':
+          $ref: '#/components/responses/Http404'
+        '500':
+          $ref: '#/components/responses/Http500'
+  /categories/{category-id}/values:
+    get:
+      tags:
+        - Categories
+      summary: Get values for a category
+      description: |
+        Returns the list of values for a category. A maximum of 100 values can be returned per page.
+        The user PAT needs to have the scope `mx:app:categories:read`.
+      operationId: getCategoryValues
+      parameters:
+        - name: category-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 100
+          description: Maximum number of items to return
+        - name: offset
+          in: query
+          required: false
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+          description: Number of items to skip before starting to collect the result set
+      responses:
+        '200':
+          description: List of values
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  links:
+                    $ref: '#/components/schemas/PaginationLinks'
+                  meta:
+                    $ref: '#/components/schemas/PaginationMeta'
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/CategoryValue'
+        '400':
+          $ref: '#/components/responses/Http400'
+        '401':
+          $ref: '#/components/responses/Http401'
+        '404':
+          $ref: '#/components/responses/Http404'
+        '500':
+          $ref: '#/components/responses/Http500'
+
+    post:
+      tags:
+        - Categories
+      summary: Add values to a category
+      description: |
+        Adds values to a category.
+        Validation: A company allows a maximum of 250 values per category.
+        The user PAT needs to have the scope `mx:app:categories:write`.
+        The user must be a company admin.
+        The code of the provided values can be passed as an empty string. A code will be generated based on the provided input for the values.
+      operationId: addCategoryValues
+      parameters:
+        - name: category-id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                values:
+                  type: array
+                  minItems: 1
+                  maxItems: 250
+                  items:
+                    $ref: '#/components/schemas/CategoryValueCreate'
+      responses:
+        '201':
+          description: Values added
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CategoryValue'
+        '400':
+          $ref: '#/components/responses/Http400'
+        '401':
+          $ref: '#/components/responses/Http401'
+        '404':
+          $ref: '#/components/responses/Http404'
+        '409':
+          $ref: '#/components/responses/Http409'
+        '422':
+          $ref: '#/components/responses/Http422'
+        '500':
+          $ref: '#/components/responses/Http500'
+  /categories/{category-id}/values/{value-id}:
+    put:
+      tags:
+        - Categories
+      summary: Update a value of a category
+      description: |
+        Updates the value of a category.
+        The user PAT needs to have the scope `mx:app:categories:write`.
+        The user must be a company admin.
+        The code of the provided value can be passed as an empty string. A code will be generated based on the provided input for the values.
+      operationId: updateCategoryValue
+      parameters:
+        - name: category-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: value-id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CategoryValueCreate'
+      responses:
+        '200':
+          description: Value updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CategoryValue'
+        '400':
+          $ref: '#/components/responses/Http400'
+        '401':
+          $ref: '#/components/responses/Http401'
+        '404':
+          $ref: "#/components/responses/Http404"
+        '409':
+          $ref: '#/components/responses/Http409'
+        '500':
+          $ref: '#/components/responses/Http500'
+
+    delete:
+      tags:
+        - Categories
+      summary: Delete a value of a category
+      description: |
+        Deletes a value of a category.
+        Validation: At least two values must remain.
+        The user PAT needs to have the scope `mx:app:categories:write`.
+        The user must be a company admin.
+      operationId: deleteCategoryValue
+      parameters:
+        - name: category-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: value-id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Value deleted (at least two values must remain)
+        '401':
+          $ref: '#/components/responses/Http401'
+        '404':
+          $ref: '#/components/responses/Http404'
+        '409':
+          $ref: '#/components/responses/Http409'
+        '500':
+          $ref: '#/components/responses/Http500'
+tags:
+  - name: Companies
+    description: 'Companies in the Mendix platform'
+  - name: Categories
+    description: 'Company categories'
+
+components:
+  securitySchemes:
+    PersonalAccessToken:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: 'MxToken <Your PAT>'
+  schemas:
+    CategoryCreate:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name of the category
+        values:
+          type: array
+          description: List of values for the category
+          minItems: 2
+          items:
+            $ref: '#/components/schemas/CategoryValueCreate'
+    CategoryValueCreate:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Code for the value
+        value:
+          type: string
+          description: The actual value
+    Category:
+      type: object
+      properties:
+        categoryId:
+          type: string
+          description: Unique identifier for the category
+        name:
+          type: string
+          description: Name of the category
+    CategoryValue:
+      type: object
+      properties:
+        valueId:
+          type: string
+          description: Unique identifier for the value
+        code:
+          type: string
+          description: Code for the value
+        value:
+          type: string
+          description: The actual value
+    CategoryNameUpdate:
+      type: object
+      properties:
+        name:
+          type: string
+          description: New name for the category
+    PaginationLinks:
+      type: object
+      properties:
+        self:
+          type: string
+          description: URL to the current page of results
+        next:
+          type: string
+          description: URL to the next page of results
+        prev:
+          type: string
+          description: URL to the previous page of results
+        first:
+          type: string
+          description: URL to the first page of results
+        last:
+          type: string  
+          description: URL to the last page of results
+    PaginationMeta:
+      type: object
+      properties:
+        page:
+          type: object
+          properties:
+            totalElements:
+              type: integer
+              description: Total number of elements available
+            offset:
+              type: integer
+              description: Number of items skipped before starting to collect the result set
+            elements:
+              type: integer
+              description: Number of elements returned on this page
+  responses:
+    Http400:
+      description: 'Bad Request'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                description: 'Detailed information on the error'
+                properties:
+                  message:
+                    type: string
+                    description: 'A short, human-readable title for the general error type'
+                    default: 'Bad Request'
+                  detail:
+                    type: string
+                    description: 'A human-readable description of the specific error'
+                  code:
+                    type: integer
+                    description: 'HTTP status code'
+                    default: 400
+    Http401:
+      description: 'Unauthorized'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                description: 'Detailed information on the error'
+                properties:
+                  message:
+                    type: string
+                    description: 'A short, human-readable title for the general error type'
+                    default: 'Unauthorized'
+                  detail:
+                    type: string
+                    description: 'A human-readable description of the specific error'
+                  code:
+                    type: integer
+                    description: 'HTTP status code'
+                    default: 401
+    Http404:
+      description: 'Not Found'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                description: 'Detailed information on the error'
+                properties:
+                  message:
+                    type: string
+                    description: 'A short, human-readable title for the general error type'
+                    default: 'Not Found'
+                  detail:
+                    type: string
+                    description: 'A human-readable description of the specific error'
+                  code:
+                    type: integer
+                    description: 'HTTP status code'
+                    default: 404
+    Http422:
+      description: 'Unprocessable content'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                description: 'Detailed information on the error'
+                properties:
+                  message:
+                    type: string
+                    description: 'A short, human-readable title for the general error type'
+                    default: 'Exceeding the number of objects allowed'
+                  detail:
+                    type: string
+                    description: 'A human-readable description of the specific error'
+                  code:
+                    type: integer
+                    description: 'HTTP status code'
+                    default: 422
+    Http409:
+      description: 'Conflict'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                description: 'Detailed information on the error'
+                properties:
+                  message:
+                    type: string
+                    description: 'A short, human-readable title for the general error type'
+                    default: 'Conflict'
+                  detail:
+                    type: string
+                    description: 'A human-readable description of the specific error'
+                  code:
+                    type: integer
+                    description: 'HTTP status code'
+                    default: 409
+    Http500:
+      description: 'Internal Server Error'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                description: 'Detailed information on the error'
+                properties:
+                  message:
+                    type: string
+                    description: 'A short, human-readable title for the general error type'
+                    default: 'Internal Server Error'
+                  detail:
+                    type: string
+                    description: 'A human-readable description of the specific error'
+                  code:
+                    type: integer
+                    description: 'HTTP status code'
+                    default: 500

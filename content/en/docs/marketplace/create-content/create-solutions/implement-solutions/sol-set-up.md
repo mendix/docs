@@ -23,7 +23,7 @@ To set up a Mendix solution, make sure the following prerequisites are met:
 
 To set up a solution, follow these steps:
 
-1. Open Studio Pro and [import](/refguide/import-and-export/) the *.mxsolution* package:
+1. Open Studio Pro and [import](/refguide/import-and-export/) the *.mxsolution* package.
 
     {{< figure src="/attachments/appstore/create-content/implement-solutions/solution-import.png" alt="Import Solution" class="no-border" >}}
 

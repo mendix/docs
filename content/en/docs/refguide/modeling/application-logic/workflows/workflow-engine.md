@@ -178,9 +178,13 @@ It is advised to not leave **Failed** or **Incompatible** workflows as **Failed*
 
 User task activities represent actions that have to be completed by a user. Therefore, user tasks can only be completed by named users in Mendix. User tasks are shown in a Task Inbox page from which they can be completed.
 
-#### Task Inbox
+#### Task Inbox {#task-inbox}
 
-The Task Inbox page shows objects from the **System.WorkflowUserTask** entity. The access rules allow to select only `InProgress` user tasks that either target the current user (the current user is part of the **System.WorkflowUserTask_TargetUsers** association) or are assigned to the current user (the current user is set in the **System.WorkflowUserTask_Assignee** association). For more information, see the access rules of the **System.WorkflowUserTask** entity.
+The Task Inbox page shows objects from the **System.WorkflowUserTask** entity.
+The access rules allow to select only `InProgress` user tasks that either target the current user (the current user is part of the **System.WorkflowUserTask_TargetUsers** association,
+or the current user is indirectly part of the **System.WorkflowGroup_User** association through the **System.WorkflowUserTask_TargetGroups** assocation)
+or are assigned to the current user (the current user is set in the **System.WorkflowUserTask_Assignee** association).
+For more information, see the access rules of the **System.WorkflowUserTask** entity.
 
 In case you want to show specific information from the **Workflow Context** object in the Task Inbox, there are two options:
 

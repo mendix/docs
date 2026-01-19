@@ -25,7 +25,7 @@ Authentication for the Webhooks API uses a personal access token (PAT).
 
 ### Generating a PAT
 
-To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section in *User Settings*.
+To generate a PAT, see the [Personal Access Tokens](/mendix-profile/user-settings/#pat) section in *User Settings*.
 
 Select the following as scopes:
 

@@ -1,9 +1,11 @@
 ---
 title: "Setting Up Governance and Control in Mendix"
 linktitle: "Setting Up Governance and Control in Mendix"
-url: /governance-control/
+url: /developerportal/digital-execution/governance-control/
 weight: 85
 description: "Find out how to incorporate governance in your process."
+aliases:
+    - /governance-control/
 ---
 
 ## Introduction

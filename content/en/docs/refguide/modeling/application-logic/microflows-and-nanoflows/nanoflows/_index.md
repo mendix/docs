@@ -28,7 +28,7 @@ The following activities interact with the database:
 
 * [Create object](/refguide/create-object/)
 * [Commit object(s)](/refguide/committing-objects/)
-* [Retrieve](/refguide/retrieve/)
+* [Retrieve object(s)](/refguide/retrieve-objects/)
 * [Rollback object](/refguide/rollback-object/)
 
 Therefore, the best practice is to use nanoflows in online applications when they do not contain the above activities.

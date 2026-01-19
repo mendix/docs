@@ -20,6 +20,6 @@ For information on new releases of the Extensibility API see:
 
 ## Introduction
 
-Extensions are self-contained modules which users can add to Studio Pro. This means that with extensibility you can add new features and functionality to Studio Pro. The Extensibility API is an API that allows developers to interact with a curated list of internal systems of Studio Pro. This documentation provides guides and reference documentation for the Extensibility API.
+Extensions are self-contained modules that enhance Studio Pro by adding new features and functionality. The Extensibility API allows you to interact with a curated set of internal systems, extending Studio Pro’s capabilities with functionality you can define yourself.
 
-The API is provided in two flavors, depending which language you are developing in. C# and web based (via Typescript):
+The API is provided in two versions, depending on the language you are developing in:

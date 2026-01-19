@@ -242,7 +242,12 @@ The released versions of the *ML Kit* and supported ONNX Runtime versions can be
 
 | Mendix Studio Pro | ML Kit   | ONNX Runtime |
 | ----------------- | -------- | ------------ |
-| 9.23              | Public beta | 1.11.0       |
+| 9.23              | Public beta | 1.11.0    |
+| 9.24 LTS          | Public beta | 1.14.0    |
+
+{{% alert color="info" %}}
+Machine Learning Kit is released for general availability in Studio Pro 10 and above.
+{{% /alert %}}
 
 ## Monitoring and Troubleshooting
 

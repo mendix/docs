@@ -8,7 +8,7 @@ weight: 20
 
 ## Introduction
 
-The main API the Mendix Platform provides to a pluggable widget client component is the props the component receives. These props resemble the structure of properties specified in the widget definition XML file (a structure described in [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets/)). A property's attribute type affects how the property will be represented to the client component. Simply, an attribute's type defines what will it be. You can find the more details on property types and the interfaces that property value can adhere to in [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/). To see examples of pluggable widgets in action, see [How To Build Pluggable Widgets](/howto/extensibility/pluggable-widgets/)
+The main API the Mendix Platform provides to a pluggable widget client component is the props the component receives. These props resemble the structure of properties specified in the widget definition XML file (a structure described in [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets-10/)). A property's attribute type affects how the property will be represented to the client component. Simply, an attribute's type defines what will it be. You can find the more details on property types and the interfaces that property value can adhere to in [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/). To see examples of pluggable widgets in action, see [How To Build Pluggable Widgets](/howto/extensibility/pluggable-widgets/)
 
 The Mendix Platform also exposes a few JavaScript modules, specifically extra Mendix APIs as well as existing libraries, like React, that client components must share with the platform to function properly. For more information on exposed libraries, see the [Exposed Libraries](#exposed-libraries) section below.
 
@@ -38,7 +38,7 @@ On native pages, the meaning of a `style` prop is very different. First of all, 
 
 ### TabIndex
 
-If a widget uses a TabIndex prop [system property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#tabindex), then it will receive a configured `Tab index` through a `number` `tabIndex` property, except in the case when a configured tab index is on its default value of 0. Currently, `tabIndex` is not passed to widgets used on native pages. 
+If a widget uses a TabIndex prop [system property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#tabindex), then it will receive a configured `Tab index` through a `number` `tabIndex` property, except in the case when a configured tab index is on its default value of 0. Currently, `tabIndex` is not passed to widgets used on native pages. 
 
 ## Property Values
 
@@ -60,7 +60,7 @@ The flag `canExecute` indicates if an action can be run under current conditions
 
 You can also employ this flag when using a **Call microflow** action triggering a microflow with a parameter. Such an action cannot be run until a parameter object is available, for example when a parent data view has finished loading. Attempting to `execute` an action that cannot be run will have no effect, and generates a debug-level warning message.
 
-The exception to this behavior is when the `ActionValue` is returned by [`ListActionValue.get()`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listactionvalue). In this case, the flag will be true when not all arguments have been loaded. Calling `execute()` for an action with loading arguments will run the action as soon as all arguments become available. While waiting, `isExecuting` will be set to `true` and subsequent calls to `execute()` are ignored. If any arguments become unavailable after loading, the action will not run and a debug-level warning message will be logged.
+The exception to this behavior is when the `ActionValue` is returned by [`ListActionValue.get()`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values-10/#listactionvalue). In this case, the flag will be true when not all arguments have been loaded. Calling `execute()` for an action with loading arguments will run the action as soon as all arguments become available. While waiting, `isExecuting` will be set to `true` and subsequent calls to `execute()` are ignored. If any arguments become unavailable after loading, the action will not run and a debug-level warning message will be logged.
 
 #### isExecuting {#isexecuting}
 
@@ -72,7 +72,7 @@ Note that `isExecuting` indicates only whether the current action is running. It
 
 The method `execute` triggers the action. It returns nothing and does not guarantee that the action will be started synchronously. But when the action does start, the component will receive a new prop with the `isExecuting` flag set.
 
-When the action property [defines action variables](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#action-xml-elements), the `execute()` method expects an object map containing a property for each variable. The variables may be passed as undefined, but need to be set explicitly.
+When the action property [defines action variables](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#action-xml-elements), the `execute()` method expects an object map containing a property for each variable. The variables may be passed as undefined, but need to be set explicitly.
 
 Given an action property that defines two `Decimal` variables `lat` and `long`, and a `String` variable named `label`, its `execute()` method accepts the following input:
 
@@ -87,6 +87,10 @@ onClick.execute({
     label: undefined
 });
 ```
+
+{{% alert color="info" %}}
+Action variables were introduced in Mendix [10.21](/releasenotes/studio-pro/10.21/#pluggable-widget-api-action-variables). Earlier versions of Mendix take 0 arguments for `execute()` and do not offer a direct way to pass variables to actions. Instead, use [attribute properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#attribute) to set relevant values before calling `execute()`.
+{{% /alert %}}
 
 ### DynamicValue {#dynamic-value}
 
@@ -105,7 +109,7 @@ export const enum ValueStatus {
 }
 ```
 
-A component will receive a `DynamicValue<X>`  where type `X` depends on a property configuration. For example, for the [TextTemplate property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#texttemplate) it will be `DynamicValue<string>`, but for the [expression property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#expression) `X` will depend on a configured `returnType`.
+A component will receive a `DynamicValue<X>`  where type `X` depends on a property configuration. For example, for the [TextTemplate property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#texttemplate) it will be `DynamicValue<string>`, but for the [expression property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#expression) `X` will depend on a configured `returnType`.
 
 Though the type definition above looks complex, it is fairly simply to use because a component can always read `DynamicValue.value`. This field either contains an actual value, such as an interpolated `string` in the case of a Text template, or the last known correct value if the value is being recomputed, such as when a parent Data view reloads its Data source. In other cases the value is set as `undefined`.
 
@@ -119,7 +123,7 @@ Though the type definition above looks complex, it is fairly simply to use becau
 
 ### EditableValue {#editable-value}
 
-`EditableValue` is used to represent values, either an attribute or a variable, that can be changed by a pluggable widget client component and is passed only to [attribute properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#attribute). It is defined as follows:
+`EditableValue` is used to represent values, either an attribute or a variable, that can be changed by a pluggable widget client component and is passed only to [attribute properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#attribute). It is defined as follows:
 
 ```ts
 export interface EditableValue<T extends AttributeValue> {
@@ -161,7 +165,7 @@ The optional field `universe` is used to indicate the set of all possible values
 
 ### ModifiableValue {#modifiable-value}
 
-`ModifiableValue` is used to represent values that can be changed by a pluggable widget client component. It is passed only to [association properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#association), and is defined as follows:
+`ModifiableValue` is used to represent values that can be changed by a pluggable widget client component. It is passed only to [association properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#association), and is defined as follows:
 
 ```ts
 export interface ModifiableValue<T> {
@@ -198,7 +202,7 @@ if (association.type === "Reference") {
 
 The flag `readOnly` indicates whether a value can actually be edited. It will be true, for example, when a widget is placed inside a data view that is not [editable](/refguide/data-view/#editable), or when a selected attribute is not editable due to [access rules](/refguide/access-rules/). The `readOnly` flag is always true when a `status` is not `ValueStatus.Available`. Any attempt to edit a value set to read-only will have no affect and incur a debug-level warning message.
 
-The value can be read from the `value` field and modified using the `setValue` function.  The `value` contains an `ObjectItem` or an `ObjectItem[]` based on the configured association. The `ObjectItem` can be passed to the `get` function of any [linked property value](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#linked-values) which is linked to the selectable object's datasource. 
+The value can be read from the `value` field and modified using the `setValue` function.  The `value` contains an `ObjectItem` or an `ObjectItem[]` based on the configured association. The `ObjectItem` can be passed to the `get` function of any [linked property value](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values-10/#linked-values) which is linked to the selectable object's datasource. 
 
 When setting a value, the `ObjectItem` must be items from the selectable object's data source. Note that `setValue` returns nothing and does not guarantee that the value is changed synchronously. But when a change is propagated, a component receives a new prop reflecting the change.
 
@@ -206,7 +210,7 @@ It is possible for a component to extend the defined set of validation rules. A 
 
 ### IconValue {#icon-value}
 
-`DynamicValue<IconValue>` is used to represent icons: small pictograms in the Mendix Platform. Those can be static or dynamic file- or font-based images. An icon can only be configured through an [icon](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#icon) property. `IconValue` is defined as follows:
+`DynamicValue<IconValue>` is used to represent icons: small pictograms in the Mendix Platform. Those can be static or dynamic file- or font-based images. An icon can only be configured through an [icon](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#icon) property. `IconValue` is defined as follows:
 
 ```ts
 interface GlyphIcon {
@@ -238,7 +242,7 @@ In practice, `WebIcon` and `NativeIcon` are usually passed to a `Icon` component
 
 ### ImageValue{#imagevalue}
 
-`DynamicValue<ImageValue>` is used to represent static or dynamic images. An image can be configured only through an [image](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#image) property. `ImageValue` is defined as follows:
+`DynamicValue<ImageValue>` is used to represent static or dynamic images. An image can be configured only through an [image](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#image) property. `ImageValue` is defined as follows:
 
 ```ts
 export interface WebImage {
@@ -254,7 +258,7 @@ export type ImageValue = WebImage | NativeImage;
 
 ### FileValue {#filevalue}
 
-`DynamicValue<FileValue>` is used to represent files. A file can be configured only through a [file](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#file) property. `FileValue` is defined as follows:
+`DynamicValue<FileValue>` is used to represent files. A file can be configured only through a [file](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#file) property. `FileValue` is defined as follows:
 
 ```ts
 export interface FileValue {
@@ -265,11 +269,11 @@ export interface FileValue {
 
 ### List values{#list-values}
 
-`ListValue` is used to represent a list of objects for the [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#datasource) property. See [List Values](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/) for more information about usage of `ListValue` and associated property values.
+`ListValue` is used to represent a list of objects for the [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#datasource) property. See [List Values](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values-10/) for more information about usage of `ListValue` and associated property values.
 
 ### SelectionValue {#selection-value}
 
-`SelectionValue` is used to represent selections. It is passed only to [selection properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#selection), and is defined as follows:
+`SelectionValue` is used to represent selections. It is passed only to [selection properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/#selection), and is defined as follows:
 
 ```ts
 declare interface SelectionValue<T> {
@@ -319,11 +323,11 @@ The Mendix Platform uses [big.js](https://www.npmjs.com/package/big-js) to repre
 
 ## Native Dependencies
 
-Sometimes for widgets it is necessary to rely on the existing community libraries of `react` and `react-native`. With widgets targeting a web platform it is easy to include those libraries as they can be shipped together with a widget by bundling them into the widget's package. That is often not the case with libraries targeting a native platform, as some of them require a setup of Android- and iOS-specific code into a Mendix native app or [Make It Native](/refguide/getting-the-make-it-native-app/) app. For more information, see [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/).
+Sometimes for widgets it is necessary to rely on the existing community libraries of `react` and `react-native`. With widgets targeting a web platform it is easy to include those libraries as they can be shipped together with a widget by bundling them into the widget's package. That is often not the case with libraries targeting a native platform, as some of them require a setup of Android- and iOS-specific code into a Mendix native app or [Make It Native](/refguide/getting-the-make-it-native-app/) app. For more information, see [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies-10/).
 
 ## Read More
 
-* [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets/)
-* [Pluggable Widget Property Types Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/)
+* [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets-10/)
+* [Pluggable Widget Property Types Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-10/)
 * [How to Build Pluggable Widgets](/howto/extensibility/pluggable-widgets/)
-* [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/)
+* [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies-10/)

@@ -4,7 +4,7 @@ info:
   title: Marketplace Service
   description: 'Use Marketplace Service API to manage marketplace contents (Packages and Versions) creation and modification, access and share by user and groups.'
 servers:
-  - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+  - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
 paths:
   /packages:
     get:
@@ -95,7 +95,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
     post:
       tags:
         - packages
@@ -153,7 +153,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
       x-codegen-request-body-name: PackageInput
   '/packages/{packageId}/versions':
     get:
@@ -178,7 +178,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
     post:
       tags:
         - packages
@@ -238,7 +238,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
       x-codegen-request-body-name: VersionInput
   '/packages/{packageId}':
     get:
@@ -265,7 +265,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
     put:
       tags:
         - packages
@@ -330,7 +330,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
       x-codegen-request-body-name: PackageInput
     delete:
       tags:
@@ -358,7 +358,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
   '/packages/{packageId}/groups':
     get:
       tags:
@@ -384,7 +384,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
   '/packages/{packageId}/requests':
     post:
       tags:
@@ -442,7 +442,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
       x-codegen-request-body-name: ObjectInput
   '/packages/{packageId}/owner':
     put:
@@ -483,7 +483,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
       x-codegen-request-body-name: UserInput
   '/packages/{packageId}/request':
     put:
@@ -527,7 +527,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
   '/versions/{versionId}/download':
     get:
       tags:
@@ -562,7 +562,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
   '/versions/{versionId}':
     get:
       tags:
@@ -588,7 +588,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
     put:
       tags:
         - version
@@ -641,7 +641,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
       x-codegen-request-body-name: VersionInput
     delete:
       tags:
@@ -669,7 +669,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
   '/versions/{versionId}/request':
     put:
       tags:
@@ -708,7 +708,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
   /categories:
     get:
       tags:
@@ -728,7 +728,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
   '/subcategories/{subcategoryId}':
     get:
       tags:
@@ -762,7 +762,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
     put:
       tags:
         - subcategory
@@ -802,7 +802,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
       x-codegen-request-body-name: SubcategoryInput
     delete:
       tags:
@@ -830,7 +830,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
   /subcategories:
     post:
       tags:
@@ -865,7 +865,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/marketplaceservice/v1'
       x-codegen-request-body-name: SubcategoryInput
 tags:
   - name: packages
@@ -1106,9 +1106,9 @@ components:
                   supportedStudioPro: 9.24.3
                   defaultVersion: true
                   versionStatus: Published
-                  logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
-                  appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
-                  appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                  logoUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/packages/448/logo'
+                  appViewUrl: 'https://pmp-demo.privateplatform.mendix.com/link/component/448'
+                  appDownloadUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
                   fileName: VideoPlayer_1.0.0.mpk
                   releaseNotes: Play you video v1.0.0
                   documentation: 'Play you video, those things on youtube'
@@ -1138,9 +1138,9 @@ components:
                   supportedStudioPro: 9.24.3
                   defaultVersion: true
                   versionStatus: Published
-                  logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
-                  appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
-                  appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                  logoUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/packages/448/logo'
+                  appViewUrl: 'https://pmp-demo.privateplatform.mendix.com/link/component/448'
+                  appDownloadUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
                   fileName: VideoPlayer_1.0.0.mpk
                   releaseNotes: Play you video v1.0.0
                   documentation: 'Play you video, those things on youtube'
@@ -1169,9 +1169,9 @@ components:
                   supportedStudioPro: 9.24.3
                   defaultVersion: true
                   versionStatus: Draft
-                  logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
-                  appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
-                  appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                  logoUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/packages/448/logo'
+                  appViewUrl: 'https://pmp-demo.privateplatform.mendix.com/link/component/448'
+                  appDownloadUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
                   fileName: VideoPlayer_1.0.0.mpk
                   releaseNotes: Play you video v1.0.0
                   documentation: 'Play you video, those things on youtube'
@@ -1200,9 +1200,9 @@ components:
                   supportedStudioPro: 9.24.3
                   defaultVersion: true
                   versionStatus: WaitingForApproval
-                  logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
-                  appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
-                  appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                  logoUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/packages/448/logo'
+                  appViewUrl: 'https://pmp-demo.privateplatform.mendix.com/link/component/448'
+                  appDownloadUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
                   fileName: VideoPlayer_1.0.0.mpk
                   releaseNotes: Play you video v1.0.0
                   documentation: 'Play you video, those things on youtube'
@@ -1231,9 +1231,9 @@ components:
                   supportedStudioPro: 9.24.3
                   defaultVersion: true
                   versionStatus: Declined
-                  logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
-                  appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
-                  appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                  logoUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/packages/448/logo'
+                  appViewUrl: 'https://pmp-demo.privateplatform.mendix.com/link/component/448'
+                  appDownloadUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
                   fileName: VideoPlayer_1.0.0.mpk
                   releaseNotes: Play you video v1.0.0
                   documentation: 'Play you video, those things on youtube'
@@ -1262,9 +1262,9 @@ components:
                   supportedStudioPro: 9.24.3
                   defaultVersion: true
                   versionStatus: Retired
-                  logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
-                  appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
-                  appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                  logoUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/packages/448/logo'
+                  appViewUrl: 'https://pmp-demo.privateplatform.mendix.com/link/component/448'
+                  appDownloadUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
                   fileName: VideoPlayer_1.0.0.mpk
                   releaseNotes: Play you video v1.0.0
                   documentation: 'Play you video, those things on youtube'
@@ -1361,9 +1361,9 @@ components:
                     supportedStudioPro: 9.24.3
                     defaultVersion: true
                     versionStatus: Published
-                    logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/438/logo'
-                    appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/438'
-                    appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/e2cf13c0-9596-4331-b814-c39d08db99a4/download'
+                    logoUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/packages/438/logo'
+                    appViewUrl: 'https://pmp-demo.privateplatform.mendix.com/link/component/438'
+                    appDownloadUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/version/e2cf13c0-9596-4331-b814-c39d08db99a4/download'
                     fileName: Blank_Web_App9_24_3.mpk
                     releaseNotes: Blank Web App release notes
                     documentation: Blank Web App documentation
@@ -1390,9 +1390,9 @@ components:
                     supportedStudioPro: 9.24.3
                     defaultVersion: true
                     versionStatus: Published
-                    logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
-                    appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
-                    appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                    logoUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/packages/448/logo'
+                    appViewUrl: 'https://pmp-demo.privateplatform.mendix.com/link/component/448'
+                    appDownloadUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
                     fileName: VideoPlayer_1.0.0.mpk
                     releaseNotes: Play you video v1.0.0
                     documentation: 'Play you video, those things on youtube'
@@ -1422,9 +1422,9 @@ components:
                     supportedStudioPro: 9.24.3
                     defaultVersion: true
                     versionStatus: Published
-                    logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/438/logo'
-                    appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/438'
-                    appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/e2cf13c0-9596-4331-b814-c39d08db99a4/download'
+                    logoUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/packages/438/logo'
+                    appViewUrl: 'https://pmp-demo.privateplatform.mendix.com/link/component/438'
+                    appDownloadUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/version/e2cf13c0-9596-4331-b814-c39d08db99a4/download'
                     fileName: Blank_Web_App9_24_3.mpk
                     releaseNotes: Blank Web App release notes
                     documentation: Blank Web App documentation
@@ -1451,9 +1451,9 @@ components:
                     supportedStudioPro: 9.24.3
                     defaultVersion: true
                     versionStatus: Published
-                    logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
-                    appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
-                    appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                    logoUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/packages/448/logo'
+                    appViewUrl: 'https://pmp-demo.privateplatform.mendix.com/link/component/448'
+                    appDownloadUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
                     fileName: VideoPlayer_1.0.0.mpk
                     releaseNotes: Play you video v1.0.0
                     documentation: 'Play you video, those things on youtube'
@@ -1517,9 +1517,9 @@ components:
                 supportedStudioPro: 9.24.3
                 defaultVersion: true
                 versionStatus: Published
-                logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
-                appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
-                appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                logoUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/packages/448/logo'
+                appViewUrl: 'https://pmp-demo.privateplatform.mendix.com/link/component/448'
+                appDownloadUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
                 fileName: VideoPlayer_1.0.1.mpk
                 releaseNotes: Play you video v1.0.0
                 documentation: 'Play you video, those things on youtube'
@@ -1539,9 +1539,9 @@ components:
                 supportedStudioPro: 9.24.3
                 defaultVersion: true
                 versionStatus: Published
-                logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
-                appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
-                appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                logoUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/packages/448/logo'
+                appViewUrl: 'https://pmp-demo.privateplatform.mendix.com/link/component/448'
+                appDownloadUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
                 fileName: VideoPlayer_1.0.0.mpk
                 releaseNotes: Play you video v1.0.0
                 documentation: 'Play you video, those things on youtube'
@@ -1560,9 +1560,9 @@ components:
                 supportedStudioPro: 9.24.3
                 defaultVersion: true
                 versionStatus: Draft
-                logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
-                appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
-                appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                logoUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/packages/448/logo'
+                appViewUrl: 'https://pmp-demo.privateplatform.mendix.com/link/component/448'
+                appDownloadUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
                 fileName: VideoPlayer_1.0.0.mpk
                 releaseNotes: Play you video v1.0.0
                 documentation: 'Play you video, those things on youtube'
@@ -1628,9 +1628,9 @@ components:
                   supportedStudioPro: 9.24.3
                   defaultVersion: true
                   versionStatus: Published
-                  logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
-                  appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
-                  appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                  logoUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/packages/448/logo'
+                  appViewUrl: 'https://pmp-demo.privateplatform.mendix.com/link/component/448'
+                  appDownloadUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
                   fileName: VideoPlayer_1.0.1.mpk
                   releaseNotes: Play you video v1.0.1
                   documentation: 'Play you video, those things on youtube'
@@ -1647,9 +1647,9 @@ components:
                   supportedStudioPro: 9.19.1
                   defaultVersion: true
                   versionStatus: Published
-                  logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
-                  appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
-                  appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                  logoUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/packages/448/logo'
+                  appViewUrl: 'https://pmp-demo.privateplatform.mendix.com/link/component/448'
+                  appDownloadUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
                   fileName: VideoPlayer_1.0.0.mpk
                   releaseNotes: Play you video v1.0.0
                   documentation: 'Play you video, those things on youtube'
@@ -1669,9 +1669,9 @@ components:
                   supportedStudioPro: 9.24.3
                   defaultVersion: true
                   versionStatus: Published
-                  logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
-                  appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
-                  appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                  logoUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/packages/448/logo'
+                  appViewUrl: 'https://pmp-demo.privateplatform.mendix.com/link/component/448'
+                  appDownloadUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
                   fileName: VideoPlayer_1.0.1.mpk
                   releaseNotes: Play you video v1.0.1
                   documentation: 'Play you video, those things on youtube'
@@ -1688,9 +1688,9 @@ components:
                   supportedStudioPro: 9.19.1
                   defaultVersion: true
                   versionStatus: Published
-                  logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
-                  appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
-                  appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                  logoUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/packages/448/logo'
+                  appViewUrl: 'https://pmp-demo.privateplatform.mendix.com/link/component/448'
+                  appDownloadUrl: 'https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
                   fileName: VideoPlayer_1.0.0.mpk
                   releaseNotes: Play you video v1.0.0
                   documentation: 'Play you video, those things on youtube'

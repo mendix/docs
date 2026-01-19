@@ -7,13 +7,13 @@ weight: 7
 
 ## Introduction
 
-This how-to describes how you can create a new web view hosted inside a modal dialog. You will then open the modal from a new menu item.
+This how-to describes how to create a new web view hosted inside a modal dialog, and how to open the modal from a new menu item.
 
 You can download the example in this how-to in [this GitHub repository](https://github.com/mendix/ExtensionAPI-Samples)
 
 ## Adding a View Model for Your New Modal
 
-Add a view model for your new model. The view model takes care of the messages and the overall lifecycle of the modal web view.
+Create a view model for your new model to manage the lifecycle and messaging of the modal web view.
 
 ```csharp
 namespace MyCompany.MyProject.MendixExtension;
@@ -55,7 +55,7 @@ class MyModalWebViewViewModel(
 
 ## Adding a Controller Class
 
-You are creating a controller to delegate specific tasks, allowing you to keep the menu item free of unrelated business logic, for instance, conducting basic setup and displaying the web view. This approach is recommended, but not mandatory.
+Create a controller to delegate tasks, allowing you to keep the menu item free of unrelated business logic (for example, conducting basic setup and displaying the web view). This approach is recommended, but not mandatory.
 
 {{% alert color="info" %}}
 Specify both `Height` and `Width` properties; otherwise, they will default to 0,0.
@@ -82,7 +82,7 @@ class MyModalWebViewController(IDialogService dialogService, IMessageBoxService 
 
 ## Adding a Content Server
 
-To open static pages, you need to source them from either a file system path or via the `WebServerExtension` route.  This document covers the latter, as this is the preferred way to provide static web content to an extension. 
+Use the `WebServerExtension` route to provide static web content to the extension. 
 
 ```csharp
 namespace MyCompany.MyProject.MendixExtension;
@@ -149,9 +149,9 @@ class ContentServer : WebServerExtension
 }
 ```
 
-## Adding a Menu Item That Opens the Modal Dialog
+## Adding a Menu Item to Opens the Modal Dialog
 
-Finally, you need to add a menu item to open the dialog. Replace the contents of `MyMenuExtension.cs` with the code below:
+Replace the contents of `MyMenuExtension.cs` with the code below to add a menu item to open the dialog:
 
 ```csharp
 namespace MyCompany.MyProject.MendixExtension;
@@ -167,6 +167,8 @@ class MyMenuExtension(MyModalWebViewController myModalWebViewController) : MenuE
 }
 ```
 
-These changes inject your new controller class into the `MyMenuExtension` class. Then you add a new menu item called `Create Entity From Dialog` and call the controller's `ShowDialog` method.
+This code injects your controller class into the `MyMenuExtension` class. It adds a new menu item called `Create Entity From Dialog` and calls the controller's `ShowDialog` method.
 
-Note that in this example, the parameter `currentApp` will be necessary, if the dialog needs to interact with the model. Additionally, `WebServerBaseUrl` is crucial, because, without the base path, navigating to the route you defined in the web server extension would not be possible.
+{{% alert type="info" %}}
+In this example, the `currentApp` parameter is required if the dialog needs to interact with the model. Additionally, `WebServerBaseUrl` is crucial; without the base path, navigating to the route defined in the web server extension would not be possible.
+{{% /alert %}}

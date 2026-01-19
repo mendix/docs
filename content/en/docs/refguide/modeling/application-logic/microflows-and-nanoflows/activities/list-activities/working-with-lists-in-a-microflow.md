@@ -67,7 +67,7 @@ Before you continue, you should first set up a test app, and populate it with te
 
 ## Retrieving and Filtering a List of Objects from the Database
 
-Use a microflow with a [Retrieve](/refguide/retrieve/) activity to retrieve a list of objects, and then filter that list by applying an [XPath constraint](/refguide/xpath-constraints/). For example, the microflow can retrieve all orders from the database, and then filter that list to only the orders with the **Processing** status.
+Use a microflow with a [Retrieve object(s)](/refguide/retrieve-objects/) activity to retrieve a list of objects, and then filter that list by applying an [XPath constraint](/refguide/xpath-constraints/). For example, the microflow can retrieve all orders from the database, and then filter that list to only the orders with the **Processing** status.
 
 1. Create a new microflow by right-clicking your module and selecting **Add** > **Microflow**.
 2. In the **Add Microflow** dialog box, in the **Name** field, enter *IVK_SetOrderToComplete*, and then click **OK**.
@@ -81,12 +81,12 @@ Use a microflow with a [Retrieve](/refguide/retrieve/) activity to retrieve a li
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/working-with-lists-in-a-microflow/18581054.png" alt="Selecting the caption and microflow" class="no-border" >}}
 
 6. Open the **IVK_SetOrderToComplete** microflow by right-clicking the new button and selecting **Go to microflow**.
-7. Open the **Toolbox** and search for the **Retrieve** activity.
-8. Drag a **Retrieve** activity from the **Toolbox** to the line between the start and end events.
+7. Open the **Toolbox** and search for the **Retrieve object(s)** activity.
+8. Drag a **Retrieve object(s)** activity from the **Toolbox** to the line between the start and end events.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/working-with-lists-in-a-microflow/18581091.png" alt="A view of the microflow with the Retrieve activity" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/working-with-lists-in-a-microflow/18581091.png" alt="A view of the microflow with the Retrieve object(s) activity" class="no-border" >}}
 
-9. Double-click the **Retrieve** activity, and then set the following properties:
+9. Double-click the **Retrieve object(s)** activity, and then set the following properties:
     * **Source** – select **From database**
     * **Entity** – select **Order**
     * **List** – enter *OrderList*
@@ -103,7 +103,7 @@ After retrieving a list of orders with the status **Processing**, use a [loop](/
 1. Open the **IVK_SetOrderToComplete** microflow that you created in the previous section.
 2. Drag a **Loop** activity from the **Toolbox**, and place it between the **OrderProcessingList** activity and the end event of the microflow.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/working-with-lists-in-a-microflow/18581086.png" alt="Microflow with a Retrieve activity followed by a Loop activity" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/working-with-lists-in-a-microflow/18581086.png" alt="Microflow with a Retrieve object(s) activity followed by a Loop activity" class="no-border" >}}
 
 3. Double-click the **Loop** activity.
 4. In the **Iterate over** list, select **OrderList**, and then click **OK**.
@@ -138,18 +138,18 @@ To calculate the total sum of all your orders via a loop, create a variable whic
 1. On the **Orders** overview page, add a new **Call microflow** button with the following settings:
     * **Caption** – enter *Calculate Total Order Price*
     * **Name** – enter *IVK_CalculateTotalPriceOrders*
-2. In the **IVK_CalculateTotalPriceOrders** microflow, add a **Retrieve** activity from the **Toolbox** to the line between the start and end events.
-3. Double-click the **Retrieve** activity, and then set the following properties:
+2. In the **IVK_CalculateTotalPriceOrders** microflow, add a **Retrieve object(s)** activity from the **Toolbox** to the line between the start and end events.
+3. Double-click the **Retrieve object(s)** activity, and then set the following properties:
     * **Source** – select **From database**
     * **Entity** – select **Order**
     * **List** – enter *OrderList*
-4. Drag a **Loop** activity from the **Toolbox**, and place it between the **Retrieve** activity and the end event of the microflow.
+4. Drag a **Loop** activity from the **Toolbox**, and place it between the **Retrieve object(s)** activity and the end event of the microflow.
 5. Double-click the **Loop** activity.
 6. In the **Iterate over** list, select **OrderList**, and then click **OK**.
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/working-with-lists-in-a-microflow/18581106.png" alt="Configuring the Loop activity to iterate over a list" class="no-border" >}}
 
-7. Drag a **Create variable** activity from the **Toolbox** and place it before the **Retrieve** activity.
+7. Drag a **Create variable** activity from the **Toolbox** and place it before the **Retrieve object(s)** activity.
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/working-with-lists-in-a-microflow/18581073.png" alt="A microflow with a Create variable activity" class="no-border" >}}
 

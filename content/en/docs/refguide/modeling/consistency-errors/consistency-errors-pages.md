@@ -28,13 +28,13 @@ The most common errors which can occur when configuring a list view, the causes 
 
 ### Error Code: CE0488
 
-CE0488 error message in a list view : *No entity configured for the data source of this list view. Select an entity or change the data source.*
+CE0488 error message in a list view: *No entity configured for the data source of this list view. Select an entity or change the data source.*
 
-You get CE0488 in a list view if the **Database/XPath/Association** option is selected as a data source for a list view, but no entity is specified. 
+You incur error CE0488 if the **Database/XPath/Association** option is selected as a data source for a list view, but no entity is specified. 
 
-To fix CE0488, do one of the following:
+To fix CE0488, do **one** of the following:
 
-* Open the list view's properties > **Data source** and select an entity in the **Entity (path)** field.
+* Open the list view's **Properties** > **Data source** and select an entity in the **Entity (path)** field.
 * Change the type of the data source.
 
 ### Error Code: CE2633
@@ -49,7 +49,7 @@ You get this error if the data source is set to **Microflow**, but no microflow 
 
 To fix this error, do one of the following:
 
-* Open the list view's properties > **Data source** and select a microflow in the **Microflow** field.
+* Open the list view's **Properties** > **Data source** and select a microflow in the **Microflow** field.
 * Change the type of the data source.
 
 #### No Nanoflow Configured for the Data Source of a List View
@@ -60,7 +60,7 @@ You get this error if the data source is set to **Nanoflow**, but no nanoflow is
 
 To fix this error, do one of the following:
 
-* Open the list view's properties > **Data source** and select a nanoflow in the **Nanoflow** field.
+* Open the list view's **Properties** > **Data source** and select a nanoflow in the **Nanoflow** field.
 * Change the type of the data source.
 
 ### Error Code: CE0595
@@ -69,7 +69,7 @@ CE0595 error message: *Attribute {AttributeName} is not an attribute of entity {
 
 You get CE0595 if you have changed the target entity of a list view without updating its contents. The list view is filled with attributes of another entity.
 
-To fix CE0595, open the widget's properties > **Data source** and select another attribute for **Attribute (path)**.
+To fix CE0595, open the widget's **Properties** > **Data source** and select another attribute for **Attribute (path)**.
 
 ## Data View Consistency Errors 
 
@@ -89,7 +89,7 @@ You get CE0488 in a data view if **Context** is selected as a data source for a 
 
 To fix CE0488, do one of the following:
 
-* Open the data view's properties > **Data Source** and select an entity in the **Entity** field.
+* Open the data view's **Properties** > **Data Source** and select an entity in the **Entity** field.
 * Change the type of the data source.
 
 ### Error Code: CE2633 
@@ -104,7 +104,7 @@ You get this error if the data source is set to **Microflow**, but no microflow 
 
 To fix this error, do one of the following:
 
-* Open the data view's properties > **Data source** and select a microflow in the **Microflow** field.
+* Open the data view's **Properties** > **Data source** and select a microflow in the **Microflow** field.
 * Change the type of the data source.
 
 #### No Nanoflow Configured for the Data Source of a Data View
@@ -115,7 +115,7 @@ You get this error if the data source is set to **Nanoflow**, but no nanoflow is
 
 To fix this error, do one of the following:
 
-* Open the data view's properties > **Data source** and select a nanoflow in the **Nanoflow** field.
+* Open the data view's **Properties** > **Data source** and select a nanoflow in the **Nanoflow** field.
 * Change the type of the data source.
 
 ### Error Code: CE0536
@@ -336,6 +336,14 @@ As the microflow has the parameter *Customer*, and the data view has the object 
 
 The best way to fix this error is to either change the microflow to accept *Photo* or put the button in a data container for a different entity.
 
+### Error Code: CE7007 {#error-code-ce7007}
+
+CE7007 error message: *Selected value is not valid for entity '{ENTITY_PATH}'. Please select the value again.*
+
+You get CE7007 if you have added a data widget but the configured value is not valid for the entity.
+
+To fix CE7007, you need to make sure that the widget is placed inside the correct data context that its configuration refers to.
+
 ## Input Widget Consistency Errors
 
 The most common errors for input elements, their causes, and ways to fix them are described in the following sub-sections. For more information on input elements, see [Input Elements](/refguide/input-widgets/). 
@@ -348,20 +356,35 @@ You get CE0544 if you have added an input widget but it is not inside a data con
 
 To fix CE0544, place this widget into a data container such as a data view, list view, or use variables in the page or snippet that contains the widget.
 
+### Error Code: CE7005 {#error-code-ce7005}
+
+CE7005 error message: *No data source selection has been made. Please select a data source.*
+
+You get CE7005 if you have added an input widget but its data source is not configured. Input elements either need to refer to a variable or an attribute of a specific entity type.
+
+To fix CE7005, configure the data source property of the widget with a variable or an attribute of a specific entity type.
+
+### Error Code: CE7006 {#error-code-ce7006}
+
+CE7006 error message: *Selected value is not valid for attribute '{ATTRIBUTE_PATH}'. Please select the value again.*
+
+You get CE7006 if you have added an input widget but the selected value is no longer valid for the attribute path. This might be because the input widget is moved out of its configured data context.
+
+To fix CE7006, you need to make sure that the input widget is placed inside the correct data context.
+
 {{% alert color="info" %}}
-Input widgets can directly use the snippet parameters without the need of a data container widget.
+Input widgets can directly use the page and snippet parameters without the need of a data container widget.
 {{% /alert %}}
 
-### Error Code: CE0545
+### Error Code: CE9900 {#error-code-ce9900}
 
-CE0545 error message: *Select a value for this {widget name}.*
+CE9900 error message: *Selection pages are not supported in the React client.*
 
-You get CE0545 if you have added an input widget inside a data context, but haven't selected an attribute or a variable for it.
+You incur CE9900 if you enable the React client and have an association widget, such as a reference selector, configured with a selection page.
 
-To fix CE0545, do one of the following:
+The selector widgets are not supported in the React client. Furthermore, if you attempt to convert them to their React client replacement (the combo box widget) no configured selection page is going to be transferred. To prevent any leftover stale pages after converting your project, you can repurpose and use the pages in other parts or delete them.
 
-* Right-click the widget, click **Select Value** in the drop-down list, and set an attribute or a variable.
-* Or open widget's properties > the **Data source** section, and set an attribute or a variable in the **Value** field.
+To fix CE9900, you need to configure the selector widget without a selection page. You can right-click on the error to see the usages of the selection page.
 
 ### Incorrect Multiplicity for a Reference Selector {#incorrect-multiplicity-reference}
 
@@ -456,7 +479,7 @@ CE0489 error message: *Select an entity for the data source of this [dynamic ima
 
 You get CE0489 if you have added a dynamic image to a page, it is placed inside a data view or a list view, but an entity for the dynamic image is not specified.
 
-To fix CE0489, open dynamic image properties > the **Data source** section and select an entity in the **Entity (path)** field.
+To fix CE0489, open the dynamic image's **Properties** > the **Data source** section and select an entity in the **Entity (path)** field.
 
 ## Image Widget Consistency Errors
 
@@ -466,7 +489,7 @@ Error message: *No image selected.*
 
 You get this error message if you have added an image widget to a page, but do not select an image itself. 
 
-To fix this error, open the image properties > **General** > **Image** and select an image. For more information on an image widget, see [Image](/refguide/image/).
+To fix this error, open the image's **Properties** > **General** > **Image** and select an image. For more information on an image widget, see [Image](/refguide/image/).
 
 ## On Click Event Consistency Errors 
 

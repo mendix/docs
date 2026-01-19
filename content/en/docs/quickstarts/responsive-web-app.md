@@ -65,7 +65,7 @@ To select the best app template, follow these steps:
 
     {{< figure src="/attachments/quickstarts/responsive-web-app/3-createnameapp3.png" width="400px" alt="Create app" class="no-border" >}}
 
-4. Wait a few minutes for your app to be created, its [Team Server](/developerportal/general/team-server/) to be initialized, and a local copy of the app to be downloaded to your machine. After that, the app opens with your app’s home page called **Home_Web**.
+4. Wait a few minutes for your app to be created, its [Team Server](/developerportal/repository/team-server/) to be initialized, and a local copy of the app to be downloaded to your machine. After that, the app opens with your app’s home page called **Home_Web**.
 
     {{< figure src="/attachments/quickstarts/responsive-web-app/home-web.png" width="400px" alt="Home Web page" class="no-border" >}}
     

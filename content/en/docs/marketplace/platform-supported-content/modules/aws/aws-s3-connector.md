@@ -43,6 +43,10 @@ Follow the instructions in [How to Use Marketplace Content](/appstore/use-conten
 
 After you install the connector, you can find it in the **App Explorer**, in the **AmazonS3Connector** section. The connector provides a [domain model and several activities](#technical-reference) that you can use to connect your app to Amazon S3. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
+{{% alert color="info" %}}
+If you are using [Outgoing Connections Safelisting](/developerportal/deploy/environments-details/#connection-safelist) on Mendix Cloud Dedicated, make sure to safelist AWS S3 IPs.
+{{% /alert %}}
+
 ### Configuring AWS Authentication
 
 In order to use the Amazon S3 service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.

@@ -10,11 +10,13 @@ aliases:
 
 ## Introduction
 
-You can use Google's Firebase Cloud Messaging (FCM) service to send push notifications to both Android and iOS devices. To send push notifications using FCM from the Push Notifications Connector module, you must set up a Firebase account with FCM enabled. This section teaches you how to register for FCM and configure the service in your app.
+This guide teaches you how to register native or progressive web apps (PWAs) for FCM and configure the service in your app.
+
+You can use Google's Firebase Cloud Messaging (FCM) service to send push notifications to both Android and iOS devices. To send push notifications using FCM from the Push Notifications Connector module, you must set up a Firebase account with FCM enabled.
 
 ## Prerequisites
 
-Before starting this section, make sure you have completed the following prerequisites:
+Before starting this guide, make sure you have completed the following prerequisites:
 
 * Have a Firebase account (https://firebase.google.com)
 
@@ -59,7 +61,7 @@ To create a project, do the following:
 
 ## Adding an App {#native-apps}
 
-Before you add a native app to FCM, you must retrieve your app's bundle ID. Its location depends on your type of your mobile app. This is not needed for a progressive web app.
+Before you add a native app to FCM, you must retrieve your app's bundle ID. Its location depends on your type of your mobile app. For PWAs, this is not needed.
 
 For a native mobile app, your bundle ID will be what you specify for the **App identifier** in the NBUI. You can find this ID later in your generated GitHub repo:
 
@@ -113,7 +115,7 @@ The file you just created gives API access to all available Firebase services fo
 
 ## Downloading the Google Services Config Files {#downloading-the-google-services-config-files}
 
-In addition to the back-end configuration set up in the previous steps, you will need additional files that will be bundled as part of your native mobile application. For progressive web apps, you can skip this step. To obtain these, again click the cogwheel on the upper-left side of the screen and select **Project settings**. Then navigate to the **General** tab:
+In addition to the back-end configuration set up in the previous steps, you will need additional files that will be bundled as part of your native mobile application. For PWAs, you can skip this step. To obtain these, again click the cogwheel on the upper-left side of the screen and select **Project settings**. Then navigate to the **General** tab:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/setting-up-google-firebase-cloud-messaging-server/push_notifications_platforms.png"   width="350"  class="no-border" >}}
 
@@ -125,7 +127,7 @@ Only create an iOS application in your Firebase project when you plan on using F
 
 ## Copy the PWA Configuration {#copy-pwa-config}
 
-For progressive web apps, a configuration object is required to set up notifications in the web client. You can skip this step for native mobile apps. To obtain the configuration, again click the cogwheel on the upper-left side of the screen and select **Project settings**. Then navigate to the **General** tab and click on **Config**:
+For PWAs, a configuration object is required to set up notifications in the web client. You can skip this step for native mobile apps. To obtain the configuration, again click the cogwheel on the upper-left side of the screen and select **Project settings**. Then navigate to the **General** tab and click on **Config**:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/setting-up-google-firebase-cloud-messaging-server/push_notifications_web_config.png"   width="350"  class="no-border" >}}
 
@@ -133,7 +135,7 @@ Copy the text that is highlighted in the screenshot above and store it somewhere
 
 ## Set up Web Push Certificate {#set-web-push}
 
-For progressive web apps, an additional certificate is needed. You can skip this step for native mobile apps. To generate the certificate and obtain its public key, again click the cogwheel on the upper-left side of the screen and select **Project settings**. Then navigate to the **Cloud Messaging** tab and click on **Generate Key Pair**:
+For PWAs, an additional certificate is needed. You can skip this step for native mobile apps. To generate the certificate and obtain its public key, again click the cogwheel on the upper-left side of the screen and select **Project settings**. Then navigate to the **Cloud Messaging** tab and click on **Generate Key Pair**:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/setting-up-google-firebase-cloud-messaging-server/push_notifications_web_certificate.png"   width="350"  class="no-border" >}}
 

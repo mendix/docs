@@ -1,9 +1,11 @@
 ---
 title: "Getting Started With Your First Project"
 linktitle: "Getting Started With Your First Project"
-url: /first-project/
+url: /developerportal/digital-execution/first-project/
 weight: 95
 description: "Find out how to get started with your first Mendix project."
+aliases:
+    - /first-project/
 ---
 
 ## Introduction

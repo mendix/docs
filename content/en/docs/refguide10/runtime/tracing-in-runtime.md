@@ -25,8 +25,6 @@ In Mendix 10.18.0 and above, the runtime generates spans for:
 
 ## Configuration
 
-Since Mendix 10.19.0, 
-
 ### Minimal Configuration {#min-configuration}
 
 In Mendix 10.24, tracing can be enabled from the `App Settings` -> `Configuration` dialog. In the `Tracing` tab you can enable tracing and specify an **Endpoint** and **Service Name**.

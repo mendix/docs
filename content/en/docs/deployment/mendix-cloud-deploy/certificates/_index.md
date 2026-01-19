@@ -61,9 +61,7 @@ You can upload a PKCS12 file by following these steps:
 1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
 1. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the relevant environment.
 1. Select the **Network** tab of an application environment.
-1. Below **Outgoing Connections Certificates**, click **Add Client Certificate**.
-
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/certificates/certificate.png" class="no-border" >}}
+1. In the **Outgoing Connections Certificates** section, click **Add Client Certificate**.
 
 1. Upload the client certificate as a PKCS12 (.pfx or .p12) container.
 1. Enter the password to unlock the certificate container.
@@ -92,7 +90,7 @@ To upload a certificate authority, follow these steps:
 
 1. Select the **Network** tab of an application environment.
 
-1. Below **Outgoing Connections Certificates**, click **Add Authority**.
+1. In the **Outgoing Connections Certificates** section, click **Add Authority**.
 
 1. Upload a certificate authority in the PEM format.
 

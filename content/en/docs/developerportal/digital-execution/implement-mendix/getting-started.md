@@ -1,9 +1,11 @@
 ---
 title: "Creating a Getting Started Plan"
 linktitle: "Creating a Getting Started Plan"
-url: /getting-started-plan/
+url: /developerportal/digital-execution/getting-started-plan/
 weight: 65
 description: "Learn why and how to create an effective getting started plan."
+aliases:
+    - /getting-started-plan/
 ---
 
 ## Introduction
@@ -232,7 +234,7 @@ Mendix apps can be deployed in different ways, mainly:
 * Private 
 * On-premises
 
-Mendix can also be deployed to any cloud platform which supports a version of Kubernetes or Cloud Foundry. With **Mendix for Private Cloud**, you can choose the cloud provider of your preference, e.g. your own Azure or AWS infrastructures. If there already is access to an on-premise hosting environment, Mendix can also be deployed on-premise.
+Mendix can also be deployed to any cloud platform which supports a version of Kubernetes or Cloud Foundry. With **Mendix on Kubernetes**, you can choose the cloud provider of your preference, e.g. your own Azure or AWS infrastructures. If there already is access to an on-premise hosting environment, Mendix can also be deployed on-premise.
 
 When setting up your deployment strategy, it is important to look at the features that are needed, as some features that rely on the target platform can work differently.
 
@@ -248,18 +250,28 @@ This is a great option for your first app if you do not have any specific privat
 * Pros: Fast and easy, all hosting is taken care of.  It has the best utilization rate for your infrastructure, allowing you to maintain optimal flexibility and to convert your capital investment into operational expenses. This option is supported by Mendix, and it is the most optimized cloud to run Mendix apps.
 * Cons: Some organizations don’t allow shared cloud usage, and require air-gapped or private-cloud options.
 
-#### Mendix for Private Cloud
+#### Mendix on Kubernetes
 
-With Mendix for Private Cloud, you can choose the cloud provider of your preference, such as your own Azure or AWS infrastructures.   
+With Mendix on Kubernetes, you can choose the cloud provider of your preference, such as your own Azure or AWS infrastructures.   
 
 * Pros: Your DevOps team has complete control over app deployment and app lifecycle, with centralized management. It is cloud-agnostic, and you can choose on-premises or your chosen cloud provider.
 * Cons: Requires your own experienced staff to set up and maintain with reduced Mendix Support due to lack of access and visibility.
 
 For Private deployment, you need to be ready to start that process immediately in order to avoid development and go-live date delays. 
 
-This is the Private Cloud responsibility matrix:
+This table outlines the Mendix on Kubernetes responsibility matrix:
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/responsibility-matrix.png"  >}}
+| Service | Mendix | Customer |
+| --- | --- | --- |
+| Mendix for Private Cloud | {{< icon name="remove-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| Mendix Operator | {{< icon name="remove-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| Online Platform Services | {{< icon name="remove-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| Mendix Gateway Agent | {{< icon name="remove-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| Kubernetes-based Cluster | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="green" >}} |
+| Data Storage | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="green" >}} |
+| Networking | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="green" >}} |
+| Monitoring and Logging | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="green" >}} |
+| Registry | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="green" >}} |
 
 ### Options for Development Resources {#review-options-for-development-resources}
 

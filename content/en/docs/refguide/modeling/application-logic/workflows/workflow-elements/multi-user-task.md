@@ -64,7 +64,7 @@ In case **Target users using** (an XPath or a microflow) results in an empty lis
 
 Specifies the expression used to assign the multi-user task. This option is displayed only when the [Target users using](#target-users) is set to **XPath**. Click **Edit** to edit the [XPath constraint](/refguide/xpath-constraints/).
 
-#### Microflow
+#### Microflow {#microflow-targeting}
 
 Specifies the microflow used to assign the multi-user task. This option is displayed only when the [Target users using](#target-users) is set to **Microflow**.
 
@@ -78,18 +78,18 @@ Specifies the microflow used to assign the multi-user task. This option is displ
 
 #### Participant Input {#participant-input}
 
-This property determines the maximum number of targeted users that are required to select an outcome to complete the multi-user task. The targeted users that are required to select an outcome for the multi-user task are participants of the multi-user task.
+This property determines the maximum number of participants that are required to select an outcome to complete the multi-user task. The participants are the targeted and assigned users of the user task.
 
 Possible options of participant input are described in the table below:
 
 | Participant Input | Description |
 | --- | --- |
-| All target users | All targeted users should select an outcome to complete the multi-user task. |
-| Absolute number | The specified amount of targeted users who should select an outcome to complete the multi-user task.<br><br>**Amount**: The property that defines the absolute number. |
-| Percentage | The specified percentage of targeted users who should select an outcome to complete the multi-user task. The result of applying the percentage will be rounded upwards to the nearest mathematical integer value.<br><br>For example, when there are 19 targeted users and the **Percentage** is set to `50%`, then 10 targeted users need to select an outcome to complete the multi-user task. |
+| All target users | All participants should select an outcome to complete the multi-user task. |
+| Absolute number | The specified amount of participants who should select an outcome to complete the multi-user task.<br><br>**Amount**: The property that defines the absolute number. |
+| Percentage | The specified percentage of participants who should select an outcome to complete the multi-user task. The result of applying the percentage will be rounded upwards to the nearest mathematical integer value.<br><br>For example, when there are 19 participants and the **Percentage** is set to `50%`, then 10 participants need to select an outcome to complete the multi-user task. |
 
 {{% alert color="warning" %}}
-If the number of [targeted users](#users) is less than the absolute number specified in the [Participant input](#participant-input) section, it is impossible to complete the multi-user task and the workflow will fail.
+If the number of [particpants](#users) is less than the absolute number specified in the [Participant input](#participant-input) section, it is impossible to complete the multi-user task and the workflow will fail.
 {{% /alert %}}
 
 #### Decision Method {#decision-method}

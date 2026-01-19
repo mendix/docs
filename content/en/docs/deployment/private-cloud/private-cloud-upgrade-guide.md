@@ -1,5 +1,5 @@
 ---
-title: "Upgrading Private Cloud"
+title: "Upgrading Mendix on Kubernetes"
 url: /developerportal/deploy/private-cloud-upgrade-guide/
 description: "Describes how to upgrade the Mendix Operator"
 weight: 90
@@ -7,9 +7,9 @@ weight: 90
 
 ## Introduction
 
-This document describes how an existing installation of Mendix for Private Cloud can be upgraded.
+This document describes how an existing installation of Mendix on Kubernetes can be upgraded.
 
-This procedure allows you to upgrade to any supported (v1.9.0 and later) version of the Mendix for Private Cloud Operator.
+This procedure allows you to upgrade to any supported (v1.9.0 and later) version of the Mendix on Kubernetes Operator.
 
 {{% alert color="warning" %}}
 There are special considerations that you must be aware of in the following cases:
@@ -17,7 +17,7 @@ There are special considerations that you must be aware of in the following case
 * when using the `mxpc-cli` installation and configuration tool version 2.20.1 or earlier.
 * when manually installing or upgrading CRDs with `kubectl apply`.
 
-Upgrading the Mendix for Private Cloud Operator in a namespace will modify global resources such as Mendix Custom Resource Definitions in the cluster.
+Upgrading the Mendix on Kubernetes Operator in a namespace will modify global resources such as Mendix Custom Resource Definitions in the cluster.
 
 [Custom Resource Definitions](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) allow Mendix applications to be managed with Kubernetes APIs and tools such as `kubectl` and `oc`.
 
@@ -27,14 +27,14 @@ Starting from `mxpc-cli` version 2.21.0, the installation or upgrade process che
 {{% /alert %}}
 
 If you are using your own private registry, follow the [Migrating to Your Own Registry](/developerportal/deploy/private-cloud-migrating/) guide first
-to migrate new component versions of Mendix for Private Cloud into your private registry.
+to migrate new component versions of Mendix on Kubernetes into your private registry.
 
 {{% alert color="warning" %}}
-If you're using Mendix for Private Cloud Operator v1.\*.\* and are planning to upgrade to Kubernetes 1.22, follow these steps first:
+If you're using Mendix on Kubernetes Operator v1.\*.\* and are planning to upgrade to Kubernetes 1.22, follow these steps first:
 
 1. Upgrade your cluster to Kubernetes 1.21
-2. Upgrade all namespaces in your cluster to Mendix for Private Cloud Operator v2.\*.\*
-3. Validate that Mendix for Private Cloud is working correctly in all namespaces
+2. Upgrade all namespaces in your cluster to Mendix on Kubernetes Operator v2.\*.\*
+3. Validate that Mendix on Kubernetes is working correctly in all namespaces
 
 Kubernetes 1.22 [deprecated](https://kubernetes.io/blog/2021/07/14/upcoming-changes-in-kubernetes-1-22/) multiple APIs;
 upgrading to Kubernetes 1.21 and Mendix Operator v2.\*.\* will prepare resources such as ingresses to be compatible with APIs available in Kubernetes 1.22.
@@ -51,7 +51,7 @@ If you're using an OpenShift cluster, follow the [Signing in to OpenShift](/deve
 
 ### CLI Availability
 
-You must have the *OpenShift CLI* installed for upgrading Mendix for Private Cloud on OpenShift, or the *Kubectl CLI* installed if you are upgrading Mendix for Private Cloud on another Kubernetes platform. In both cases, ensure that they are connected to the correct cluster.
+You must have the *OpenShift CLI* installed for upgrading Mendix on Kubernetes on OpenShift, or the *Kubectl CLI* installed if you are upgrading Mendix on Kubernetes on another Kubernetes platform. In both cases, ensure that they are connected to the correct cluster.
 
 ## Upgrade Namespace{#upgrade-cluster}
 
@@ -67,13 +67,13 @@ You must have the *OpenShift CLI* installed for upgrading Mendix for Private Clo
 This mode will automatically upgrade components in the namespace.
 
 1. Select your current required **Cluster Type** – *openshift* or *generic*.
-2. Click **Run Upgrade** to upgrade Mendix for Private Cloud components in the namespace.
+2. Click **Run Upgrade** to upgrade Mendix on Kubernetes components in the namespace.
 
     {{% alert color="info" %}}The upgrade is successful if the **Upgrade output** ends with **Done**.{{% /alert %}}
 
 ### Manual Upgrade Mode
 
-This mode allows you to review and audit any changes the Configuration Tool would need to perform to upgrade Mendix for Private Cloud in your namespace.
+This mode allows you to review and audit any changes the Configuration Tool would need to perform to upgrade Mendix on Kubernetes in your namespace.
 
 {{% alert color="info" %}}
 Manual upgrade is an alternative to automatic upgrade mode. If you have already performed an automatic upgrade, you don't need to follow the instructions in this section.

@@ -55,7 +55,7 @@ The Mendix SSO module has the following limitations:
 
 Your app has to be deployed on Mendix Cloud in order to use this module. Mendix SSO is only activated when your app is deployed to Mendix Cloud.
 
-When you run your app locally, you will need to use local credentials. If it is deployed to a different cloud platform (for example, [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) or [SAP BTP](/developerportal/deploy/sap-cloud-platform/)), you can use the Mendix [Administration](/appstore/modules/administration/) module, or connect to a central IdP using [OIDC SSO](/appstore/modules/oidc/) or [SAML](/appstore/modules/saml/).
+When you run your app locally, you will need to use local credentials. If it is deployed to a different cloud platform (for example, [Mendix on Kubernetes](/developerportal/deploy/private-cloud/) or [SAP BTP](/developerportal/deploy/sap-cloud-platform/)), you can use the Mendix [Administration](/appstore/modules/administration/) module, or connect to a central IdP using [OIDC SSO](/appstore/modules/oidc/) or [SAML](/appstore/modules/saml/).
 
 ## Installation and Configuration
 
@@ -100,6 +100,8 @@ To enable Mendix SSO in your app, follow these steps:
 3. Add your own administration pages to monitor usage, if required.
 
     {{% alert color="info" %}}If you are using Mendix SSO v2, you can use the *default* user administration pages. For more information, see the [Customizing Mendix SSO](#customizing) section below.{{% /alert %}}
+
+    Your app is now configured to use Mendix Single Sign-On (SSO) when deployed to the Mendix Cloud. For local environments or Free App environments, you can enable Mendix SSO by setting the constant `MendixSSO.SSOEnabled` to *True*. While this configuration is applied automatically during Mendix Cloud deployments, it must be set manually for local environments or Free App environments.
 
 4. Turn on the **Production** security level and configure **User roles** *User* and *Administrator* to have access to the appropriate **MendixSSO** module roles by performing the following steps:
     1. Open app **Security** from the **App Explorer**.

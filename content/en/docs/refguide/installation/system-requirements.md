@@ -316,6 +316,22 @@ Depending on your app's complexity, these minimum hardware requirements might no
 
 Developing native mobile apps with Mendix comes with special requirements explained in [Native App Prerequisites and Troubleshooting](/refguide/mobile/getting-started-with-mobile/prerequisites/).
 
+## LLM Providers
+Mendix supports connectivity to a broad set of models. Maia has been standardized on Claude Sonnet 3.7.
+It is possible to connect to the following models:
+
+* Anthropic
+  * Claude Sonnet 3.7
+* [AWS Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/models-regions.html)
+  * Claude Sonnet 3.7
+  * Claude Sonnet 4.0
+  * Claude Sonnet 4.5
+  * GPT-OSS-120B
+* [Azure](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure)
+  * 03-mini
+* OpenAI
+  * GPT-5-Mini
+
 ## MxBuild {#mxbuild}
 
 MxBuild is a Windows, Linux, and macOS command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](/refguide/mxbuild/).

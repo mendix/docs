@@ -15,7 +15,9 @@ The batch conversion feature automatically identifies all non-React widgets in y
 Custom widgets and some platform-supported widgets cannot be converted automatically. You will need to review these and replace them with the equivalent React-compatible widgets.
 {{% /alert %}}
 
-The batch conversion feature was introduced in Mendix version 11.4.0.
+{{% alert color="info" %}}
+The batch conversion feature was introduced in Mendix version [10.24.13](/releasenotes/studio-pro/10.24/#102413).
+{{% /alert %}}
 
 ## Supported Widget Conversions
 

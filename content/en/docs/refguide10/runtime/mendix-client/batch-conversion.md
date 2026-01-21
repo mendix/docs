@@ -7,7 +7,7 @@ weight: 40
 
 ## Introduction
 
-When migrating your application to the [React client](/refguide/mendix-client/react/), you may need to convert multiple widgets that are not compatible with the React client. Studio Pro's batch conversion feature allows you to efficiently convert multiple unsupported widgets at once, rather than converting them individually.
+When migrating your application to the [React client](/refguide10/mendix-client/react/), you may need to convert multiple widgets that are not compatible with the React client. Studio Pro's batch conversion feature allows you to efficiently convert multiple unsupported widgets at once, rather than converting them individually.
 
 The batch conversion feature automatically identifies all non-React widgets in your application which have an automatic conversion defined for React client compatibility and provides options to convert them in bulk. This significantly reduces the time and effort required to migrate large applications to the React client.
 

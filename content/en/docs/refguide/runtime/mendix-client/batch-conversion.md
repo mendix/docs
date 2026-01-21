@@ -12,7 +12,7 @@ When migrating your application to the [React client](/refguide/mendix-client/re
 The batch conversion feature automatically identifies all non-React widgets in your application which have an automatic conversion defined for React client compatibility and provides options to convert them in bulk. This significantly reduces the time and effort required to migrate large applications to the React client.
 
 {{% alert color="info" %}}
-Custom widgets and some platform-supported widgets cannot be converted automatically. You will need to review these and replace them with the equivalent React-compatible widgets.
+Custom widgets and some platform-supported widgets cannot be converted automatically. You will need to manually review these and replace them with the equivalent React-compatible widgets.
 {{% /alert %}}
 
 The batch conversion feature was introduced in Mendix version 11.4.0.

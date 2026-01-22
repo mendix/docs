@@ -205,11 +205,11 @@ Current support:
 
 * [IBM DB2](/refguide8/db2/) 11.5 for Linux, Unix, and Windows
 * [MariaDB](/refguide9/mysql/): 10.6, 10.11, 11.4, 11.8
-* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2019, 2022
+* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2022, 2025
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
 * [MySQL](/refguide9/mysql/): 8.4
-* [Oracle Database](/refguide9/oracle/): 19, 21c
-* PostgreSQL: 13, 14, 15, 16, 17
+* [Oracle Database](/refguide9/oracle/): 19, 21c, 23ai (including 26ai)
+* PostgreSQL: 13, 14, 15, 16, 17, 18
 * [SAP HANA](/refguide9/saphana/): 2.00.076.00.1705400033
 
 {{% alert color="warning" %}}

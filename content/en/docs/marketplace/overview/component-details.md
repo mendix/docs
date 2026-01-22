@@ -10,8 +10,6 @@ description: "Presents information on the component details page."
 
 Clicking the tile of a [Marketplace](https://marketplace.mendix.com/) component brings you to its details page with the sections described in this document.
 
-{{< figure src="/attachments/appstore/component-details/marketplace_module.png">}}
-
 ## Component Header {#header}
 
 The header for a component includes the following details:
@@ -32,6 +30,15 @@ The header for a component includes the following details:
     * **Download** for other content types – Click this to download the component.
     * **Contact Us** – Click this to contact Mendix or the community supplier.
 
+* Contextual menu – Allows you to perform the following actions on the component:
+
+    * **Add New Release** – Add a new version of the component.
+    * **Manage Versions** – Edit or unpublish any version of the component.
+    * **Deprecate Component** – Deprecate the component, and select alternatives.     
+    For details on deprecating components, refer to [Deprecating Marketplace Content](/appstore/deprecate-content/).
+  
+  If a component has already been deprecated, the only option available in the contextual menu is **Unpublish Component**.
+
 The **Publisher** section includes the following information, depending on the type of component:
 
 * The name of the company that created the component
@@ -45,9 +52,9 @@ The **Requirements** section includes the following:
 * The Studio Pro version required for the component to work
 * The type of [license](/appstore/submit-content/#license) for the component
 
-The **Support** section presents the category of support Mendix offers for the component (for more details, see the [Marketplace Content Support](/appstore/marketplace-content-support/) section below).
+The **Support** section presents the category of support Mendix offers for the component. For more details, refer to the [Marketplace Content Support](/appstore/marketplace-content-support/) section.
 
-A **GitHub** link will take you to the GitHub source files of the component.
+A **GitHub** link takes you to the GitHub source files of the component.
 
 ## Component Tabs
 

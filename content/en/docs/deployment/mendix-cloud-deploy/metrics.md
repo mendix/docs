@@ -442,9 +442,9 @@ For more information, see the AWS Database blog [Understanding Burst vs. Baselin
 
 Burst balance metrics are not available for databases with the gp3 storage instance type.
 
-As of [October 25, 2023](/releasenotes/developer-portal/mendix-cloud/#october-25-2023), whenever you create a new DB instance, it will be provisioned with a gp3 storage instance if it meets the eligibility criteria defined in the table below. This also occurs if your database is recreated.
+As of [October 25, 2023](/releasenotes/developer-portal/mendix-cloud/2023/#october-25-2023), whenever you create a new DB instance, it will be provisioned with a gp3 storage instance if it meets the eligibility criteria defined in the table below. This also occurs if your database is recreated.
 
-As of [March 26, 2024](/releasenotes/developer-portal/mendix-cloud/#march-26-2024), all existing databases of environments on eligible plans in Mendix Cloud (as specified in the table below) have also been migrated to gp3 storage instances.
+As of [March 26, 2024](/releasenotes/developer-portal/mendix-cloud/2024/#march-26-2024), all existing databases of environments on eligible plans in Mendix Cloud (as specified in the table below) have also been migrated to gp3 storage instances.
 
 | Storage Size           | Storage Instance Type | Baseline Storage Performance | Provisioned IOPS Range | Provisioned Throughput Range |
 |------------------------|-----------------------|------------------------------|------------------------|------------------------------|

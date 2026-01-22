@@ -78,18 +78,18 @@ Specifies the microflow used to assign the multi-user task. This option is displ
 
 #### Participant Input {#participant-input}
 
-This property determines the maximum number of targeted users that are required to select an outcome to complete the multi-user task. The targeted users that are required to select an outcome for the multi-user task are participants of the multi-user task.
+This property determines the maximum number of participants that are required to select an outcome to complete the multi-user task. The participants are the targeted and assigned users of the user task.
 
 Possible options of participant input are described in the table below:
 
 | Participant Input | Description |
 | --- | --- |
-| All target users | All targeted users should select an outcome to complete the multi-user task. |
-| Absolute number | The specified amount of targeted users who should select an outcome to complete the multi-user task.<br><br>**Amount**: The property that defines the absolute number. |
-| Percentage | The specified percentage of targeted users who should select an outcome to complete the multi-user task. The result of applying the percentage will be rounded upwards to the nearest mathematical integer value.<br><br>For example, when there are 19 targeted users and the **Percentage** is set to `50%`, then 10 targeted users need to select an outcome to complete the multi-user task. |
+| All target users | All participants should select an outcome to complete the multi-user task. |
+| Absolute number | The specified amount of participants who should select an outcome to complete the multi-user task.<br><br>**Amount**: The property that defines the absolute number. |
+| Percentage | The specified percentage of participants who should select an outcome to complete the multi-user task. The result of applying the percentage will be rounded upwards to the nearest mathematical integer value.<br><br>For example, when there are 19 participants and the **Percentage** is set to `50%`, then 10 participants need to select an outcome to complete the multi-user task. |
 
 {{% alert color="warning" %}}
-If the number of [targeted users](#users) is less than the absolute number specified in the [Participant input](#participant-input) section, it is impossible to complete the multi-user task and the workflow will fail.
+If the number of [particpants](#users) is less than the absolute number specified in the [Participant input](#participant-input) section, it is impossible to complete the multi-user task and the workflow will fail.
 {{% /alert %}}
 
 #### Decision Method {#decision-method}
@@ -375,7 +375,12 @@ To add a parameter to the **Task name** or the **Task description**, do the foll
 
    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/parameter-example.jpg" alt="Parameter Example" class="no-border" >}}
 
-   {{% alert color="info" %}}Make sure that the attribute you use in the expression is of the string type.{{% /alert %}}
+   {{% alert color="info" %}}
+   Make sure that the attribute you use in the expression is of the **String** type. If your attribute is of a different data type, you must convert it using a build-in function:
+
+   * For **Date and time** attributes, use the `formatDateTime()` function to define the desired display format.
+   * For all other types (such as **Integer**, **Decimal**, or **Boolean**), use the `toString()` function.
+   {{% /alert %}}
 
 4. In the **Template** setting, write the text you would like to display and type **Index** of the parameter you would like to include. For example, you can add a template for the **Task description** specifying the name of the workflow and what the workflow due date is :
 

@@ -56,8 +56,8 @@ For an advanced setup, useful when modifying the context entity is not possible,
 
 ##### Upload mode
 
-* **Files** - Allows all file types by default, and adds a configuration option to specify a custom set of allowed file types.
-* **Images** - Limits uploads to images and shows a preview thumbnail.
+* **Files** — Allows all file types by default, and adds a configuration option to specify a custom set of allowed file types.
+* **Images** — Limits uploads to images and shows a preview thumbnail.
 
 ##### Associated Files / Associated Images
 
@@ -81,9 +81,21 @@ This configuration sets a limit on how many files can be uploaded at once.
 
 This configuration sets a maximum limit on the file size of uploaded files.
 
-#### Text Tab {#general}
+#### Text Tab {#texttab}
 
 Configures the displayed text used in **File Uploader**.
+
+#### Advanced Tab {#advanced}
+
+* **Object creation timeout** — Configures the timeouts to wait until object creation has failed. The value is in seconds.
+* **Enable custom buttons** — Allows the use of custom action buttons that will be displayed on the right side of file list instead of the standard 
+buttons. If set to **Yes**, the default action buttons will be hidden.
+* **Custom buttons** — Adds custom buttons that will be used in file uploader.
+    * **Caption** — Captions text configuration for the custom button.
+    * **Icon** — Provides icon configuration for the custom button.
+    * **Action** — Provides **On click** action configuration for the custom button.
+    * **Default file action** — If set to **Yes**, the action in the button will be use as default click action for the file.
+    * **Visible** — If set to **False**, the button will be hidden.
 
 ### Nanoflows
 

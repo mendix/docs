@@ -553,6 +553,8 @@ If you need to enter or change the subscription secret, then you can do that her
 
 Subscription secrets are obtained from [Mendix support](https://support.mendix.com/). You can use subscription secrets in [standalone mode](/developerportal/deploy/private-cloud-technical-appendix-02/).
 
+For Operator version 2.24.0 and newer, we have introduced a new field, **Enable Fallback License**, in the **Environment Details** section. When enabled, this option allows Connected environments using subscription secrets to use a fallback license if communication with the licensing server fails, preventing the system from switching to Trial mode. 
+
 We have also released an alternate way of licensing your apps in Mendix on Kubernetes by using PCLM. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
 
 For users of the Private Cloud License Manager who wish to set the product type for the Runtime license in a particular environment, it can be done by editing the Product type. This ensures that the associated environment obtains the license from the license bundle with the specified Product type. By default, the value is set to the one defined in the Namespace configuration page.
@@ -595,8 +597,10 @@ If you change the data type and value in the .mpr file, the changes are visible 
 
 ### Network Tab
 
-On the Network tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections. This works in the same way as the Network tab for deployments to Mendix Cloud. For more details on these, see the [Network Tab](/developerportal/deploy/environments-details/#network-tab) section of *Environment Details*.
+On the Network tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections. This works in the same way as the Network tab for deployments to Mendix Cloud. 
+Starting from Mendix 10.24.1, the Mendix Runtime can set Custom Http Headers natively, without relying on an Ingress controller. For more details on these, see the [Network Tab](/developerportal/deploy/environments-details/#network-tab) section of **Environment Details**.
 
+For security reasons, root CAs can only be enabled in custom [TLS section](/developerportal/deploy/standard-operator/#custom-tls) in mxpc-cli. The root CAs need to be configured before creating an environment. 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/network-tab.png" class="no-border" >}}
 
 ### Runtime Tab {#runtime-tab}

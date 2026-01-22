@@ -25,6 +25,10 @@ Operators and functions in OQL use expressions as inputs to perform mathematical
 
 This document details the use and syntax of expressions in an OQL query.
 
+The domain model used in the various examples is shown below:
+
+{{< figure src="/attachments/refguide/modeling/domain-model/oql/oql-expression-syntax-domain-model.png" >}}
+
 ## Data Types
 
 OQL supports a set of data types that differ slightly from [Mendix data types](/refguide/data-types/). The supported data types are:
@@ -38,7 +42,7 @@ OQL supports a set of data types that differ slightly from [Mendix data types](/
 | `LONG`     | Integer/Long     | 5                     | 64 bit width integer data                  |
 | `STRING`   | String           | 'my_string'           | Textual data                               |
 
-## Literals
+## Literals {#oql-literals}
 
 Literals represent values that are constant and are part of the query itself. The supported literals are detailed below:
 
@@ -116,7 +120,7 @@ FROM
 	Sales.Person
 ```
 
-## Operators
+## Operators {#oql-operators}
 
 Operators perform common operations and, unlike functions, do not put their parameters in parentheses. They take `expression` as input, which can be other operator results, functions, columns and literals.
 
@@ -266,7 +270,10 @@ The operator throws an error in PostgresSQL and SQL Server when one of the opera
 
 #### = (Equal To)
 
-Returns `TRUE` if both `expression` inputs are equal. When used with `NULL`, it will always return a `FALSE` result. To compare to `NULL` values, use the [IS](#is-operator) operator.
+Returns `TRUE` if both `expression` inputs are equal. 
+
+When used with a `NULL` literal or a parameter with a `NULL` value, the condition will be converted to use the [IS NULL](#is-operator) operator. 
+In other cases when comparing to a `NULL` value, it will always return a `FALSE` result.
 
 {{% alert color="info" %}}
 Note that `DECIMAL` values have to match exactly. Use [`ROUND`](#round) to compare with less precision.
@@ -544,7 +551,7 @@ Where `expression` is an expression of any datatype.
 The `IS` operator can be used to filter out rows with values that are NULL. For example:
 
 ```sql
-	SELECT Revenue, Cost FROM Sales.Finance WHERE Revenue IS NOT NULL 
+	SELECT Revenue, Cost FROM Sales.Finances WHERE Revenue IS NOT NULL 
 ```
 
 | Revenue | Cost |
@@ -672,7 +679,7 @@ This does not apply to the `=` and `!=` operators. Handling of `NULL` in [other 
 
 In some databases, using `STRING` type variables in place of numeric, `DATETIME` or `BOOLEAN` values in operators and functions that explicitly require those types, causes the database to perform an implicit conversion. A common example would be the use of a `STRING` representation of a `DATETIME` variable inside a `DATEPART` function. Mendix recommends that you always [cast](#cast) strings to the exact type the operator or functions.
 
-## Functions
+## Functions {#functions}
 
 These are the currently supported functions:
 
@@ -803,10 +810,10 @@ COALESCE ( expression [ ,...n ] )
 
 #### Examples {#coalesce-expression-examples}
 
-Assume entity `Sales.Customer` entity now has some `NULL` values:
+Assume entity `Sales.CustomerInfo` entity now has some `NULL` values:
 
 ```sql
-SELECT * FROM Sales.Customer
+SELECT * FROM Sales.CustomerInfo
 ```
 
 | ID | LastName | FirstName | Age  | TotalOrderAmount |
@@ -817,7 +824,7 @@ SELECT * FROM Sales.Customer
 Selecting a non-null name for a customer, ignoring if it is the first name or last name, can be done with `COALESCE`:
 
 ```sql
-SELECT COALESCE(LastName, FirstName) AS Name FROM Sales.Customer
+SELECT COALESCE(LastName, FirstName) AS Name FROM Sales.CustomerInfo
 ```
 
 | Name |                                                         
@@ -831,7 +838,7 @@ If all arguments have different numeric types, the data type of the expression r
 SELECT
 	COALESCE(Age, TotalOrderAmount) AS AgeOrAmount,
 	COALESCE(TotalOrderAmount, Age) AS AmountOrAge,
-FROM Sales.Customer
+FROM Sales.CustomerInfo
 ```
 
 | AgeOrAmount (type: Decimal) | AmountOrAge (type: Decimal²) |
@@ -1168,7 +1175,7 @@ For example, a space delimited list can be converted to one with commas to be us
 SELECT * FROM Sales.Raw
 ```
 
-| ID | Import            |                                                         
+| ID | RawImport            |                                                         
 |----|-------------------|
 | -  | "6 D10 machinery" |
 | -  | "1 A15 tools"     |
@@ -1176,10 +1183,10 @@ SELECT * FROM Sales.Raw
 The text can be converted with `REPLACE` as follows:
 
 ```sql
-SELECT REPLACE(Import, ' ', ',') FROM Sales.Raw
+SELECT REPLACE(RawImport, ' ', ',') FROM Sales.Raw
 ```
 
-| Import            |                                                         
+| RawImport            |                                                         
 |-------------------|
 | "6,D10,machinery" |
 | "1,A15,tools"     |

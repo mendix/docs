@@ -33,6 +33,10 @@ To create a cluster in your OpenShift context, you need the following:
 
 Should you consider using a connected environment, the following URLs should be safelisted in your cluster's operating system, as these URLs point to services or resources required by the *Connected Environments'* infrastructure.
 
+{{% alert color="info" %}}
+All services listed in the table below use the HTTPS protocol (port 443).
+{{% /alert %}}
+
 | URL | Description |
 |-----|-------------|
 | `https://interactor-bridge.private-cloud.api.mendix.com` | Websocket based main communication API |
@@ -739,9 +743,11 @@ For more information about collecting metrics in Mendix on Kubernetes, see [Moni
 
 ### Customize Service Account {#customize-service-account}
 
-The Mendix environment can be configured to use a specific Kubernetes ServiceAccount instead of the default ServiceAccount.
+The Mendix environment can be configured to use a specific Kubernetes ServiceAccount instead of the default ServiceAccount. 
 
-To achieve this, you need to add the annotation `privatecloud.mendix.com/environment-account: true` (for security reasons, any account matching an environment name but without this annotation cannot be attached to environments).
+In order to ensure that every environment uses a unique account, the Kubernetes service account must have the same name as the Mendix App environment name (environment ID). This ensures that one service account cannot be used for multiple environments.
+
+To achieve this, you need to add the annotation `privatecloud.mendix.com/environment-account: true`. For security reasons, any account matching an environment name but without this annotation cannot be attached to environments.
 
 {{% alert color="info" %}}
 The service account can be customized Mendix on Kubernetes Operator version 2.7.0 and above.
@@ -1286,7 +1292,12 @@ You can configure the runtime metrics for the environment in the **Runtime** sec
 
 You can also configure the pod labels for the environment in the **Labels** section. For more information, see [App Pod Labels](#pod-labels).
 
-Starting from Operator 2.20.0 onwards, it is now also possible to set the deployment strategy for an environment. This allows you to update an app with reduced downtime by performing a rolling update. To use this feature, you must enable the **Reduced App Downtime Strategy** option.  For more information, see [Deployment Strategy](/developerportal/deploy/private-cloud-reduced-downtime/)
+Starting from Operator 2.20.0 onwards, you can set the deployment strategy for an environment. This allows you to update an app with reduced downtime by performing a rolling update. To use this feature, you must enable the **Custom Options** under Reduced downtime options.
+
+The deployment strategy now includes the following options under the **Deployment Strategy Options** subheader:
+
+* **Max Surge** - Specifies the maximum number of pods that can be created above the desired number of pods during a rolling update.
+* **Max Unavailable** - Specifies the maximum number of pods that can be unavailable during a rolling update.
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/deploymentStrategy.png" class="no-border" >}}
 
@@ -1348,14 +1359,14 @@ You can invite additional members to the namespace, and configure their role dep
     2. **Administrator** – a standard set of rights needed by an administrator, these are listed on the screen
     3. **Custom** – This option is now deprecated.
 
-{{% alert color="info" %}}
-The custom permission if needed to be edited, a role need to be assigned with appropriate permissions. See [Roles and Permissions](/developerportal/deploy/private-cloud-cluster/#rolesandpermissions) for more information.
-{{% /alert %}}
+    {{% alert color="info" %}}
+    The custom permission if needed to be edited, a role need to be assigned with appropriate permissions. See [Roles and Permissions](/developerportal/deploy/private-cloud-cluster/#rolesandpermissions) for more information.
+    {{% /alert %}}
 
-{{% alert color="info" %}}
-If an application is in the Stopped state, the scaling does not come into effect until the application is Started. This means that you have to click **Start application** in order for the changes to be sent to the cluster.
-Along with this, we have also decoupled the permission for modifying the MxAdmin password and managing environments.
-{{% /alert %}}
+    {{% alert color="info" %}}
+    If an application is in the Stopped state, the scaling does not come into effect until the application is Started. This means that you have to click **Start application** in order for the changes to be sent to the cluster.
+    Along with this, we have also decoupled the permission for modifying the MxAdmin password and managing environments.
+    {{% /alert %}}
 
 6. Click **Send Invite** to send an invite to this person.
 
@@ -1530,6 +1541,10 @@ If Global Operator is configured with [Private Cloud License Manager](/developer
 {{% /alert %}}
 
 ## Current Limitations
+
+### Environment Number Limitations
+
+Configuring a standard or global Operator to manage more than 350 app environments may lead to performance issues, and is not supported. Mendix recommends deploying additional Operator-Agent combinations when the number of environments that need to be managed exceeds 350.
 
 ### Storage Provisioning
 

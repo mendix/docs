@@ -28,7 +28,7 @@ To use the C# API, you must have:
 
 * A basic understanding of the Mendix platform
 * Some understanding of the Mendix Model
-* Come C# development experience
+* Some C# development experience
 
  Extensions are developed using [C#](https://docs.microsoft.com/en-us/dotnet/) and compiled into a `.dll` assembly file.
 
@@ -66,5 +66,3 @@ Review the following reference guides to explore additional Extensibility API to
 * [Extension Points](/apidocs-mxsdk/apidocs/csharp-extensibility-api-11/extension-points/)
 * [Extensibility Services](/apidocs-mxsdk/apidocs/csharp-extensibility-api-11/services/)
 * [Extensibility Web Views](/apidocs-mxsdk/apidocs/csharp-extensibility-api-11/web-views/)
-
-

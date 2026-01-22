@@ -116,6 +116,23 @@ With a Free App, you can deploy your app to Mendix Cloud from Studio Pro by usin
 
 * Alternatively, in the top bar of Studio Pro, click **Publish**.
 
-## Deployment Status and Troubleshooting
+## Deployment Status
 
 The [Mendix Platform Status page](https://status.mendix.com/) shows the current status of Mendix services. If you have issues with deployment, you can check the status page to see if deployment is operational (under **Mendix Services**) or if there are other Mendix issues that may be affecting your deployment. For more information, see [Mendix Cloud Status](/developerportal/deploy/mendix-cloud-status/).
+
+## Troubleshooting
+
+### Build Output Warning: "A Shortened Revision Hash Was Provided" During Deployment
+
+When you deploy an application to Mendix Cloud from Studio Pro, you might encounter a warning in your build output stating: "`WARNING: A shortened revision hash was provided: [id] forcing the infrastructure to do a clone of the entire history`."
+
+This warning indicates that a short commit hash was provided when building your deployment package, forcing the build infrastructure to perform a full clone of your repository's entire history. If your repository is large, this can significantly increase build times, potentially leading to a timeout and preventing successful deployment package creation.
+
+To resolve this issue, try one of the following solutions:
+
+* **For Studio Pro versions 9.12.0 – 9.16.1** – Create your deployment package directly from the Mendix Cloud Portal.
+{{% alert color="info" %}}
+This option is not available for Free or Sandbox apps.
+{{% /alert %}}
+* **Update your Mendix application** – Update your Mendix application to use Studio Pro version 9.17.x or higher.
+* **When using the Build API** – If your application uses Git for version control, specify a full commit hash for the `Revision` value in the [Build API](/apidocs-mxsdk/apidocs/build-api/#payload).

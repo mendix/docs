@@ -162,7 +162,7 @@ For the previous local disk method do the following:
 Once you have an unversioned app, you can upload it to your private team server. 
 
 {{% alert color="warning" %}}
-The repository has to be completely empty (this includes the `README.md` and `.gitignore` files) and have no commmits in the history, or the upload will fail.
+The repository has to be completely empty (this includes the `README.md` and `.gitignore` files) and have no commits in the history, or the upload will fail.
 {{% /alert %}}
 
 To upload your app, do the following:

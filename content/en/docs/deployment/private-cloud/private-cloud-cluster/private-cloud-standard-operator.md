@@ -7,9 +7,7 @@ weight: 30
 
 ## Introduction
 
-When running the Mendix Operator in Standard mode, you must install it separately for every namespace where a Mendix app is deployed. However, the [Custom Resource Definitions (CRDs)](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) are global and installed at the cluster level - shared and visible among all namespaces in a given Kubernetes/OpenShift cluster. This can potentially lead to redundancies and conflicts, as well as issues when upgrading a single Mendix Operator installation.
-
-To avoid these potential issues, you can [run the Mendix Operator in Global mode](/developerportal/deploy/global-operator/). However, the Standard mode is still available for existing customers, and to support use cases that require having a separate Operator instance for every namespace.
+When running the Mendix Operator in Standard mode, you must install it separately for every namespace where a Mendix app is deployed. 
 
 {{% alert color="warning" %}}
 It is essential to ensure that each namespace is exclusively managed by a single Operator. The deployment of two Operators, particularly with distinct versions, to manage the same namespace, may lead to conflicts, resulting in the cancellation and rollback of each operator's modifications.

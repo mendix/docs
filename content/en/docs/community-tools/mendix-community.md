@@ -320,6 +320,12 @@ To submit your own idea to the Mendix Community, follow these steps:
 3. To save the post as a draft, click **Save as Draft**. To check your draft, go to [Posts](#posts), then **Drafts**.
 4. To publish the idea, click **Share Idea**.
 
+### Tags
+
+The **Tags** page includes all tags used to categorize posts. They are displayed as cards, and can be sorted by usage or name.  
+
+You can choose to be notified of any changes to posts flagged with a specific tag. To do that, click **Notify Me** on the card corresponding to the tag that interests you.
+
 ## Spaces
 
 In the Mendix Community spaces, you can have discussions around the topics that interest you the most. The spaces that you have joined are shown under **SPACES** on the left navigation menu.

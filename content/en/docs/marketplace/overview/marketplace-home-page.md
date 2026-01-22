@@ -29,7 +29,7 @@ The search box at the top of the page allows you to explore the Mendix Marketpla
 You can refine search results using the following filters:
 
 * **Support** – Select between the available support categories. For details, see the [Marketplace Content Support](/appstore/marketplace-content-support/).
-* **Visibility** – Choose whether you want to display [public](/appstore/submit-content/#public) or [private](/appstore/submit-content/#private) content.
+* **Visibility** – Choose whether you want to display [public or private](/appstore/submit-content/#support-licensing) content.
 * **Content Types** – Choose the type of content to display. For details, see the [Types of Marketplace Components](/appstore/#components-type) section in *Marketplace*.
 * **Category** – Select specific domains in which components or services share characteristics, functions, or purposes.
 * **Industry** – Select specific sectors or business domains in which components or services are used.
@@ -40,27 +40,15 @@ You can refine search results using the following filters:
 For details on finding and installing Marketplace content in Studio Pro, see the [Finding and Downloading Content in Studio Pro](/appstore/use-content/#downloading) section of *Using Marketplace Content*.
 {{% /alert %}}
 
-## Add Content
-
-Share new Marketplace content you have developed.
-
-For details, see [Upload to the Marketplace](/appstore/submit-content/).
-
-## Get Studio Pro
-
-Download the latest version of [Studio Pro](/releasenotes/studio-pro/).    
-
 ## Personal {#personal}
 
 The **Personal** category contains the items described in the following sections.
 
-### My Drafts {#my-drafts}
+### Drafts {#my-drafts}
 
-On this page, you can see and manage the drafts for all the Marketplace content you have started.
+Clicking **Drafts** opens the **My Drafts** page, where you can see and manage the drafts for all the Marketplace content you have started.
 
 You can also find details on how many total drafts you have, which drafts are ready to publish or are awaiting approval, and which drafts have been declined.
-
-{{< figure src="/attachments/appstore/marketplace-home-page/my-drafts.png" class="no-border" >}}
 
 These are the possible **Status** entries for each item:
 
@@ -76,29 +64,36 @@ Click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on a com
 * **Withdraw Draft** – Withdraw content from the review process after you have submitted it for approval. This returns the content to draft state.
 * **Delete** – Delete the draft.
 
-### My Content {#my-content}
+Keep in mind the following: 
 
-On this page, you can see the Marketplace content for which you have created at least one version.
+* Only one draft version of a component can exist at a time, so when one draft version is in progress, you cannot initiate another.
+* If there is a draft version in progress, you can edit or delete it.
+* If there is a draft version in progress, and it is assigned to another user, you can reassign it to to yourself. 
 
-Click the name of the component to access its [details page](/appstore/component-details/).
+For more information on creating a draft version, refer to the [Updating Existing Marketplace Content](/appstore/submit-content/#updating) section of *Uploading to the Marketplace*.  
 
-Click the context menu to access options for managing your content:
+### Components {#my-content}
 
-{{< figure src="/attachments/appstore/marketplace-home-page/my-content.png"  width="400"  class="no-border" >}}
+Clicking **Components** opens the **My Components** page, where you can see a list of the Marketplace components for which you have created at least one version.    
+Clicking the name of a component in the list opens its [details page](/appstore/component-details/).
 
-* **Manage Drafts** – Manage the drafts of the component.
-    * Only one draft version of a component can exist at a time, so when one draft version is in progress, you cannot initiate another.
-    * If there is a draft version in progress, you can edit or delete it.
-    * If there is a draft version in progress, and it is assigned to another user, you can reassign it to to yourself. 
+Click the contextual **Actions** menu to access options for managing your content:
 
-    For more information on creating a draft version, see the [Updating Existing Marketplace Content](/appstore/submit-content/#updating) section of *Uploading to the Marketplace*.
-* **Edit a Version** – Edit the component. For details on editing, see the [Adding New Marketplace Content](/appstore/submit-content/#adding) section of *Uploading to the Marketplace*.
-* **Unpublish a Version** – Remove one or all versions of the component.
+* **Add New Release** – Add a new version of the component.
+* **Manage Versions** – Edit or unpublish any version of the component.      
+    Keep in mind the following:
+
     * If the component is [protected](#group-content) within a [content group](#content-groups), a [group member](#members) can unpublish any version.
     * If the component is not protected within a content group, you can only unpublish a version that you have published yourself.
-    * Select **Unpublish All My Versions** to remove all your versions of the component.
+    * Select **Unpublish** to remove all your versions of the component.
+    * The option to unpublish is only available for deprecated components.
 
-A **Private** label on a component means the component is your company's private Marketplace content. For details on how this is configured, see the [Adding New Marketplace Content](/appstore/submit-content/#adding) section of *Uploading to the Marketplace*. This content can be shared with [guests](#guests).
+    For details on editing, refer to the [Adding New Marketplace Content](/appstore/submit-content/#adding) section of *Uploading to the Marketplace*.    
+    
+* **Deprecate Component** – Deprecate the component, and select alternatives.    
+    For details on deprecating components, refer to [Deprecating Marketplace Content](/appstore/deprecate-content/).
+
+A **Private** label on a component means the component is your company's private Marketplace content. For details on how this is configured, refer to the [Adding New Marketplace Content](/appstore/submit-content/#adding) section of *Uploading to the Marketplace*. This content can be shared with [guests](#guests).
 
 A component assigned as [group content](#group-content) will have a label for the [content group](#content-groups) to which it is assigned.
 
@@ -106,48 +101,44 @@ A component assigned as [group content](#group-content) will have a label for th
 
 This page contains private content shared with you by other companies who have marked you as a [guest](#guests).
 
-### Saved Content {#saved-components}
+### Saved {#saved-components}
 
-This page presents the Marketplace content you have [saved](/appstore/component-details/). 
+Clicking **Saved** opens the **Saved Content** page, which presents the Marketplace content you have [saved](/appstore/component-details/). 
 
 Click the name of the component to access its [details page](/appstore/component-details/).
 
-Click the context menu to access options for managing this component:
-
-{{< figure src="/attachments/appstore/marketplace-home-page/saved.png"  width="400"  class="no-border" >}}
+Click the contextual menu to access options for managing this component:
 
 * **Receive/Stop Email Notifications** – Start receiving email notifications, or stop the notifications if they are enabled.
 * **Unsave** – Remove the component from your saved content.
 
-### My Reviews {#my-reviews}
+### Reviews {#my-reviews}
 
-This page contains reviews of [My Content](#my-content) by other users, as well as **My reviews** that you have written for other content.
+Clicking **Reviews** opens the **My Reviews** page, which contains reviews of [My Components](#my-content) by other users, as well as **My reviews** that you have written for other content.
 
 ## Company {#company}
 
 The **Company** category contains the items described in the following sections.
 
-### Company Content {#company-content}
+### Components {#company-content}
 
-On this page, you can see all the content your company has published to the Marketplace as private.
+Clicking **Components** opens the **My Company Components** page, where you can see all the content your company has published to the Marketplace as private.
 
 Click the name of the component to access its [details page](/appstore/component-details/).
 
-Click the context menu to access options for managing this content.
+Click the contextual menu to access options for managing this content.
 
-{{< figure src="/attachments/appstore/marketplace-home-page/company-content.png"  width="400"  class="no-border" >}}
+The options in this menu are the same as those for the [My Components](#my-content) section.
 
-The options in this menu are the same as those for the [My Content](#my-content) section. However, the **Edit a Version** and **Unpublish a Version** options are only available for your own versions of company content.
+### Groups {#content-groups}
 
-### Content Group {#content-groups}
-
-The **Content Group** menu item and page are visible to all users. However, only [Mendix Admins](/control-center/company-settings/) can create and delete content groups. Both [Group Admins](#members) and Mendix Admins can manage content group members. 
+Clicking **Groups** opens the **Content Groups** page. This is visible to all users, but only [Mendix Admins](/control-center/company-settings/) can create and delete content groups. Both [Group Admins](#members) and Mendix Admins can manage content group members. 
 
 You can configure content groups for various levels of access to your company content. The available configuration tabs for each content group page are described in the following sections.
 
 This table breaks down the roles and permissions for content groups:
 
-| Roles                                       | Manage Groups (Create & Delete) | Manage Group Members | Assign Content to Group | Manage Content (Edit, Add New Version & Unpublish) | View & Download Group Content | View Group List |
+| Roles                                       | Manage Groups (Create & Delete) | Manage Group Members | Assign Content to Group | Manage Content (Add New Release, Manage Versions) | View & Download Group Content | View Group List |
 | ------------------------------------------- | ------------------------------- | -------------------- | ----------------------- | -------------------------------------------------- | ----------------------------- | --------------- |
 | Mendix Admin                                | ✔                               | ✔                    | ✔                       | ✔                                                  | ✔                             | ✔               |
 | Group Admin                                 | ✘                               | ✔                    | ✔                       | ✔                                                  | ✔                             | ✔               |
@@ -159,17 +150,13 @@ This table breaks down the roles and permissions for content groups:
 
 On this tab, you can assign content that can only be managed by members of this group. To assign a component to a content group, click **Assign Content**, and select a Marketplace component from the dialog box.
 
-{{< figure src="/attachments/appstore/marketplace-home-page/group-content.png"  width="400"  class="no-border" >}}
-
 {{% alert color="info" %}}
 A component can only be assigned to one content group at a time. If a component is already assigned to another content group, it will not be displayed in this dialog box.
 {{% /alert %}}
 
-Click the context menu to access options for managing this content.
+Click the contextual menu to access options for managing this content.
 
-{{< figure src="/attachments/appstore/marketplace-home-page/group-content-context.png" width="400" class="no-border" >}}
-
-The options in this menu are the same as those for the [My Content](#my-content) section. The **Unassign from Group** button is only available for [Group Admins](#members), and can be used to remove content from the content group.
+The options in this menu are the same as those for the [My Components](#my-content) section. The **Unassign from Group** button is only available for [Group Admins](#members), and can be used to remove content from the content group.
 
 #### Members Tab {#members}
 
@@ -203,8 +190,12 @@ On this tab, you can enter a **Group Name** and a **Group Description**.
 
 To delete a content group, a Group Admin or Mendix Admin can click **Delete Group**.
 
-## Data {#data}
+## Download Studio Pro
 
-The **Data** category contains the following items:
+Download the latest version of [Studio Pro](/releasenotes/studio-pro/).    
 
-* Catalog – Open the [Mendix Catalog](https://catalog.mendix.com/).
+## Publish Component
+
+Share new Marketplace content that you have developed.
+
+For details, refer to [Uploading Content to the Marketplace](/appstore/submit-content/).

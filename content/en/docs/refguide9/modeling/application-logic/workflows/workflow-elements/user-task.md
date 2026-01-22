@@ -70,7 +70,12 @@ To add a parameter to the **Task name** or the **Task description**, do the foll
 
     {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-elements/user-task/parameter-example.jpg" alt="Parameter Example" class="no-border" >}}
 
-    {{% alert color="info" %}}Make sure that the attribute you use in the expression is of the string type.{{% /alert %}}
+   {{% alert color="info" %}}
+   Make sure that the attribute you use in the expression is of the **String** type. If your attribute is of a different data type, you must convert it using a build-in function:
+   
+   * For **Date and time** attributes, use the `formatDateTime()` function to define the desired display format.
+   * For all other types (such as **Integer**, **Decimal**, or **Boolean**), use the `toString()` function.
+   {{% /alert %}}
 
 4. In the **Template** setting, write the text you would like to display and type **Index** of the parameter you would like to include. For example, you can add a template for the **Task description** specifying the name of the workflow and what the workflow due date is :
 

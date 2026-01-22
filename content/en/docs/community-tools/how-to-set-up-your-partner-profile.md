@@ -1,17 +1,19 @@
 ---
-title: "Setting Up Your Partner Profile"
+title: "Using the Partner Finder"
 url: /community-tools/how-to-set-up-your-partner-profile/
 weight: 5
-description: "Describes how to configure the various parts of your Mendix Partner Profile."
+description: "Describes how to configure the various parts of your Mendix Partner Profile, and how to use the Partner Finder to identify the right partner."
 aliases:
     - /developerportal/community-tools/how-to-set-up-your-partner-profile/
 ---
 
 ## Introduction
 
-The Partner Finder allows Mendix partners to showcase their organization, services, and successful customer projects.  
+The Partner Finder is an essential tool within the Mendix ecosystem:
 
-A Partner Profile within the Partner Finder is a simple and clear way for each partner to present themselves through such details as the number of developers in the organization, the company's projects, customer reviews, contact information, a company video, and a description.
+* If you are a customer or a prospect looking for a Mendix partner, you can use the Partner Finder to search for and connect with certified partners worldwide. It allows you to filter by country, industry, and expertise, and to view detailed profiles, ultimately identifying the right partner for your needs. For instance, if you are looking for a Mendix partner in Brazil, for your retail business, you can use the filters to adjust the search results to your specific scenario.
+
+* If you are a Mendix partner, the Partner Finder allows you to showcase your organisation, services, and successful projects. A [Partner Profile](#profile) is a simple and straightforward way to present your company, including the number of developers, customer reviews, completed projects, contact details, and videos.
 
 ## Prerequisites
 
@@ -30,7 +32,7 @@ Follow these steps to access the Partner Finder:
 2. Click on your picture in the top right corner.
 3. Select **Partner Admin** from the dropdown menu.
 
-## Setting Up Your Profile
+## Setting Up Your Profile {#profile}
 
 Access the Profile page and add the following information:
 

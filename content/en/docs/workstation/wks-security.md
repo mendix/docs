@@ -1,16 +1,16 @@
 ---
-title: "Security Best Practices for Mendix Workstation Client"
+title: "Security Best Practices for Mendix Workstation"
 linktitle: "Security Best Practices"
 url: /mendix-workstation/security/
-description: "Provides information about best-practice security configuration for the Mendix Workstation Client."
+description: "Provides information about best-practice security configuration for Mendix Workstation."
 weight: 15
 ---
 
 ## Introduction
 
-Security is one of the most important aspects of a deployment, because misconfiguration or failing security can have large consequences. The Mendix Workstation Client gives many configuration options for permissions that can have an impact on the security of your deployment.
+Security is one of the most important aspects of a deployment, because misconfiguration or failing security can have large consequences. Mendix Workstation gives many configuration options for permissions that can have an impact on the security of your deployment.
 
-This document describes the common aspects you should consider when deploying the Mendix Workstation Client in production.
+This document describes the security aspects you should consider when deploying Mendix Workstation in production.
 
 ## Assignment of Workspace Roles {#workspace-roles}
 
@@ -22,13 +22,13 @@ Workspace roles should be assigned following the principle of least privilege. A
     * Workspace Admins can allow Workstation Clients to access malicious apps.
 * Conduct regular permissions audits to make sure that temporary privilege elevations are reverted once they are no longer necessary.
 
-## Station Set Up {#setup-stations}
+## Station Setup {#setup-stations}
 
 Setting up stations involves a variety of options, some of which have important security implications. To help ensure a secure deployment, follow these best practices:
 
 * Keep stations lean by disabling unused apps and deleting unused devices.
     * Any unused device represents a potential attack surface (for example, a forgotten card reader that leaks a token, or a TCP device that exposes a device on the network).
-    * Any unused but enabled app may gain unintended access to devices that were not meant to be exposed to it.
+    * Any enabled but unused app may gain unintended access to devices that were not meant to be exposed to it.
 * Verify that all devices configured on a station are safe for all enabled applications.
     * Devices are shared across all applications in a station. If a device should not be accessible by a particular app, it should not be present on that station.
 * Configure File devices carefully.

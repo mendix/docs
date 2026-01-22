@@ -66,8 +66,9 @@ To help you with analyzing your app metrics as described in the [App Metrics](/d
 In addition to the runtime application logs, the following JSON-formatted metadata is automatically sent to New Relic:
 
 * `environment_id` – unique identifier of the environment
-* `instance_index` – number of the application instance
-* `hostname` – name of the application host
+* `instance_index` – number of the application instance (available only in Cloud Foundry deployments)
+* `pod_name` – name of the application pod (available only in Kubernetes deployments)
+* `hostname` – name of the application host 
 * `application_name` – default application name, retrieved from the domain name
 * `model_version` – model version of the Mendix runtime
 * `runtime_version` – version of the Mendix runtime

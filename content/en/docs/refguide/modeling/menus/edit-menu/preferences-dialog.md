@@ -161,6 +161,10 @@ This is the pattern from which the arguments are derived that are passed to the 
 * `{0}` – this is replaced with the name of the original file before the arguments are passed to the file comparison program
 * `{1}` – this is replaced with the name of the changed file before the arguments are passed to the file comparison program
 
+#### History {#history-pane}
+
+Select this option to use the blocking History dialog instead of the non-blocking, searchable History pane.
+
 #### Solution Warning
 
 Select **Show warning on updating marketplace modules** to display a warning message when updating a Marketplace module. 
@@ -229,7 +233,7 @@ This option is available when the [Enable automatic repository optimization](#op
 
 ## Work Environment Tab
 
-### Studio Pro Theme {#studio-pro-theme}
+### Theme {#studio-pro-theme}
 
 This option allows user to choose between Studio Pro themes: **Auto (System theme)**, **Light**, or **Dark**. The default is **Auto (System theme)**, which detects the theme set in the operating system and uses an appropriate theme for Studio Pro (**Light** or **Dark**). Changing this option requires a restart of Studio Pro to take effect.
 
@@ -249,9 +253,13 @@ It is recommended to limit the number of open tabs (open documents) to improve t
 The closing policy is not applied to tabs with unsaved changes.
 {{% /alert %}}
 
-### Navigation
+### Navigation {#navigation}
 
 This setting allows you to move forward and backward through your editing history to show the documents you have recently worked on. This feature is enabled by default. 
+
+### Dialogs {#dialogs}
+
+When a pop-up dialog is resized, Studio Pro will remember the new size and use it when the same dialog is opened again. This option allows you to disable this behavior and always show the dialogs at their default size.
 
 ## Advanced Tab
 
@@ -281,11 +289,23 @@ When the **Show feedback survey periodically** setting is enabled, Studio Pro wi
 
 When the **Do not show antivirus exclusion notifications** setting is enabled, Studio Pro will not display notifications related to antivirus exclusions. For more information, see [Antivirus Exclusion](/refguide/antivirus-exclusion/).
 
+### Extension Development 
+
+When **Extension Development** mode is enabled, you can start Studio Pro without using the extensibility feature flag, which allows you to develop extensions for Studio Pro. You must restart Studio Pro to use this feature.
+
 ## New Features Tab {#new-features}
 
 ### App Explorer
 
 Select this option to use the modernized version of the App Explorer. You must restart Studio Pro to use this feature.
+
+### History Pane {#history-pane}
+
+Select this option to use the non-blocking, searchable History pane instead of the blocking History window. This feature is currently in beta.
+
+### Runtime Console
+
+Select this option to use the modernized (web) Runtime console. You must restart Studio Pro to use this feature. 
 
 ### Errors Pane
 

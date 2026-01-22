@@ -105,7 +105,7 @@ In simple e-commerce applications, the URLs can be configured as follows:
 
 #### Parameters {#parameters}
 
-The list of parameters that this page expects. These parameters can be used by [data views](/refguide/data-view/) with a page parameter data source.
+The list of [parameters](/refguide/page-parameter/) that this page expects. These parameters can be used by widgets on the page.
 
 A page parameter is an input that needs to be passed from the calling page, microflow, or nanoflow to the current page. Page parameters determine information that can be reused on the page. For example, if you want to build an **Employee_Details_Edit** page, the page will have a parameter **Employee**. Thus when this page is called an Employee object needs to be passed to it to show the corresponding Employee data.
 

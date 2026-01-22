@@ -38,16 +38,17 @@ The Conversational UI module provides the following functionalities:
     * Pages that you can use in your navigation for chat
     * Snippets that you can use directly on your pages, for example, to display messages or a history sidebar
     * A floating button for opening a pop-up chat
-    * Pages, snippets, and logic to display and export token usage data (if enabled in GenAI Commons and supported by the GenAI Connector of choice)
+    * Pages, snippets, and logic to display and export token usage data (if enabled in GenAI Commons)
+    * Traceability pages for monitoring and analyzing GenAI interactions (if enabled in GenAI Commons)
 
 * Operations to set up your context, interact with the model, and add the data to be displayed in the UI
-* Domain model to store the chat conversations and additional information
+* Domain model to store the chat conversations and additional information  
 * Integration with any model that is compatible with [GenAI Commons](/appstore/modules/genai/commons/)
+* Support for comprehensive traceability and monitoring of GenAI interactions
 
 ### Limitations {#limitations}
 
-* This module is intended to simplify the process of building chat interactions between a human user and an AI model. It is not designed to support conversations between two human users.
-* Currently, the chat interface does not work out of the box in Studio Pro 11, Atlas 4, or in React client enabled with the **Atlas_Topbar** and **Atlas_Sidebar** layouts.
+This module is intended to simplify the process of building chat interactions between a human user and an AI model. It is not designed to support conversations between two human users.
 
 ### Prerequisites {#prerequisites}
 
@@ -56,6 +57,7 @@ To use the Conversational UI module, your Mendix Studio Pro version must be 10.2
 You must also ensure you have the other prerequisite modules that Conversational UI requires. These modules are included by default in the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934), the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926), the [Support Assistant Starter App](https://marketplace.mendix.com/link/component/231035), and the [RFP Assistant Starter App](https://marketplace.mendix.com/link/component/235917). If not, you need to install them manually.
 
 * [GenAI Commons](https://marketplace.mendix.com/link/239448)
+* [Agent Commons](https://marketplace.mendix.com/link/component/240371)
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187)
 * [Data Widgets](https://marketplace.mendix.com/link/component/116540) 
 * [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
@@ -85,13 +87,14 @@ The main entities are shown for reference in the diagram below. For technical do
 
 ### Configuring the Roles {#module-roles}
 
-Make sure that the module role `User` is part of the user roles that are intended to chat with the model. Optionally, you can grant the `_addOn_ReadAll` role to Admins, so that users with that role can read all messages. A role for usage monitoring is related only to the [Token consumption monitor snippets](#snippet-token-monitor).
+Make sure that the module role `User` is part of the user roles that are intended to chat with the model. Optionally, you can grant the `_addOn_ReadAll` role to Admins, so that users with that role can read all messages. Roles for usage monitoring and traceability are related to the respective monitoring snippets and pages.
 
 | Module role | Description |
 | --- | --- |
 | `User` | Role needed for every user that should be able to interact with the chat components. Users can only read their messages (and related data). |
 | `_addOn_ReadAll` | Role can be granted additionally. Users with both roles can read all chat data. |
 | `UsageMonitoring` | Can view and export all token usage data. This is related to a module role with the same name in the GenAI Commons module. |
+| `TraceMonitoring` | Can view and access traceability data for monitoring and debugging purposes. This is related to the traceability functionality introduced with the GenAI Commons module. |
 
 ### Creating the Chat UI {#ui-components} 
 
@@ -275,6 +278,48 @@ A separate set of snippets has been made available to display and export token u
 
 * **Snippet_TokenMonitor** - This snippet can be used to display token usage information in charts and contains several other snippets that you can use to build your token consumption monitor dashboard. To display the token usage data, users will need the `UsageMonitoring` user role.
 * **Snippet_TokenMonitor_Export** - This snippet can be used to display token usage information in a grid and export it as *.xlsx*. 
+
+### Traceability {#traceability}
+
+The ConversationalUI module supports traceability functionality that helps you monitor and analyze GenAI interactions for debugging and compliance purposes. This functionality builds on the [traceability features](/appstore/modules/genai/genai-for-mx/commons/#traceability) provided by the GenAI Commons module.
+
+#### Overview {#traceability-overview}
+
+Traceability allows you to track the complete lifecycle of GenAI interactions, including:
+
+* Full conversation traces from initial user input to final assistant response
+* Individual spans for each model interaction, tool call, and knowledge base retrieval
+* Detailed logging of inputs, outputs, and performance metrics
+* Error tracking and debugging information
+
+The traceability data is stored in your application's database and can be used for:
+
+* Monitoring and Analytics: Understanding how users interact with your GenAI features
+* Debugging: Investigating issues with model responses or tool calls
+* Compliance: Maintaining audit trails for GenAI usage in regulated environments
+* Performance Analysis: Optimizing response times and token usage
+
+{{% alert color="warning" %}}
+Trace data may contain sensitive and personally identifiable information. You should determine, on a case-by-case basis, whether storing this data is compliant with your data governance and privacy requirements.
+{{% /alert %}}
+
+#### Configuration {#traceability-configuration}
+
+Traceability is controlled by the `StoreTraces` constant in the GenAI Commons module. When set to *true*, detailed trace information will be stored for all GenAI operations. For more information about configuring traceability, see the [Traceability](/appstore/modules/genai/genai-for-mx/commons/#traceability) section of *GenAI Commons*.
+
+To enable users to view traceability data, grant the `TraceMonitoring` module role to the applicable user roles.
+
+To manage trace data retention, you can enable the daily scheduled event `ScE_Trace_Cleanup` in the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com). Use the `Trace_CleanUpAfterDays` constant in GenAI Commons to control how long trace data should be persisted. 
+
+#### Traceability Page {#traceability-pages}
+
+The ConversationalUI module includes a dedicated page in the **USE_ME > Traceability** folder for viewing trace data. the page **Trace_Overview** provides a high-level view of all traces in the system, allowing administrators to browse and search through GenAI traces. It displays key information such as trace ID, agent information (if applicable), start time, duration. You can filter for specific traces and agents' invocations. The data can be visualized over time to identify patterns or anomalies. By double-clicking, users are navigated to the details page to learn more about a particular trace, including all associated spans, tool calls, and performance metrics.
+
+These pages are designed for administrators and developers who need to monitor GenAI usage and investigate specific interactions. They provide the primary interface for accessing traceability data without requiring custom development.
+
+{{% alert color="info" %}}
+If you are using the GenAI Commons module version 5.3.0 and set the `StoreTraces` constant to true, traces that contain errors might not be shown in the traceability UI. To migrate existing data, you need to create Usage objects for those [Traces](/appstore/modules/genai/genai-for-mx/commons/#trace), setting the tokens to 0 and associating them to the trace.
+{{% /alert %}}
 
 ## Technical Reference {#technical-reference}
 

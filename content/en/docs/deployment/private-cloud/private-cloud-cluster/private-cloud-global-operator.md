@@ -51,7 +51,7 @@ To install and configure the Global Operator, perform the following steps:
     2. [Sign into the Platform](/developerportal/deploy/standard-operator/#openshift-signin).
     3. Perform the [Base Installation](/developerportal/deploy/standard-operator/#base-installation).
 
-    {{< figure src="/attachments/deployment/private-cloud/global-operator/global-operator6.png" class="no-border" >}}
+        {{< figure src="/attachments/deployment/private-cloud/global-operator/global-operator6.png" class="no-border" >}}
 
     4. You can apply the custom TLS and proxy settings in the Global Operator main namespace by just selecting only the **Custom TLS** and **Proxy** options in the Configuration Tool.
 

@@ -43,11 +43,9 @@ Create a view entity that combines only the relevant attributes of the entities 
       JOIN p/Shop.Product_Category/Shop.Category as c
     ```
 
-{{% alert color="info" %}}
+    {{% alert color="info" %}} This query uses OQL to take the four attributes of each product and combines them with the associated supplier and category. If there is no supplier or category, the product will not be included. For more information, see [OQL Expressions](/refguide/oql-expressions/).
 
-This query uses OQL to take the four attributes of each product and combines them with the associated supplier and category. If there is no supplier or category, the product will not be included. For more information, see [OQL Expressions](/refguide/oql-expressions/).
-
-{{% /alert %}}
+    {{% /alert %}}
 
 4. Click **OK**. The view entity is added to your domain model.
 
@@ -120,12 +118,11 @@ You can calculate the total value of an order by joining the `OrderLine` and `Or
       JOIN o/Shop.OrderLine_Order/Shop.OrderLine as ol
     GROUP BY o.OrderId, o.OrderDate, o.RequiredDate, o.ShippedDate
     ```
- 
-This results in a view entity that shows the total value of every order.  
+    
+    This results in a view entity that shows the total value of every order.  
 
-{{% alert color="info" %}} 
-Notice the quotation marks in `Shop.”Order”`. This is because `Order` is a reserved keyword in OQL. To avoid ambiguity, quotation marks are put around the word. 
-{{% /alert %}}
+    {{% alert color="info" %}} Notice the quotation marks in `Shop.”Order”`. This is because `Order` is a reserved keyword in OQL. To avoid ambiguity, quotation marks are put around the word. 
+    {{% /alert %}}
 
 3. Generate an overview page by right-clicking the view entity > **Generate overview pages**.
 4. Add the new overview page to the navigation.

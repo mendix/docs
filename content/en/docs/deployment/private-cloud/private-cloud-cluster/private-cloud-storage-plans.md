@@ -145,6 +145,22 @@ If you delete an environment, make sure that it is completely deleted by running
 
 If the commands return a *not found* response, your environment database and blob file storage have been fully removed. If either the database or the blob file storage were not deleted, you must find and troubleshoot the reason, and then do a [manual cleanup](/developerportal/deploy/private-cloud-deploy/#delete-storage) if necessary. Until the cleanup is done, you should not create a new environment that uses the same name as the environment that is still being deleted.
 
+#### S3 Bucket Region Might Need to Be Set Manually
+
+In Studio Pro version 11.6, the AWS S3 library was updated from version 1 to version 2. This new AWS library version can no longer automatically detect an S3 bucket's region from its endpoint address, and needs the bucket endpoint to be specified manually. The AWS S3 library is also updated in the latest LTS versions of Studio Pro.
+
+Mendix Operator 2.25 (or later versions) will automatically recognise an S3 bucket's region from its endpoint address:
+
+* If the bucket endpoint has a `<subdomains>.<region>.amazonaws.com` format (or `<subdomains>.<region>.amazonaws.com.<suffix>` format for AWS China regions),
+the Operator uses `<region>` as the S3 region name.
+* If the S3 bucket endpoint does not match this format, the Mendix Operator will use a default `us-east-1` region, as this works with most S3-compatible buckets like [Minio](#blob-minio) and [Google Cloud Storage](#blob-gcp-storage-bucket).
+
+In some scenarios (legacy or custom S3 endpoints), this autodetection might not work correctly. In this case, you can manually specify the S3 bucket region by setting the [com.mendix.storage.s3.Region](/refguide/custom-settings/#commendixstorages3Region) Custom Runtime Setting. A manually specified `com.mendix.storage.s3.Region` will override the autodetected bucket region.
+
+Mendix Operator versions 2.24.2 (and older) does not autodetect S3 bucket regions. To use Mendix 11.6 (or the latest LTS versions), manually set the `com.mendix.storage.s3.Region` custom Runtime setting. You can also consider upgrading to Mendix Operator 2.25.0 or newer.
+
+This issue does not affect [Azure Blob Storage](#blob-azure) or [ephemeral](#blob-ephemeral) data storage plans.
+
 ## Database Plans {#database}
 
 Every Mendix app needs a database to store persistable and non-persistable entities. A database plan tells the Mendix Operator how to provide a database to a new Mendix app environment.
@@ -912,6 +928,18 @@ If you would like to simply share a bucket between environments, or to manually 
 {{% alert color="info" %}}
 Although we offer additional flexibility and provide other options, Mendix recommends using one of the options listed above.
 {{% /alert %}}
+
+{{% alert color="warning" %}}
+In Studio Pro version 11.6, the AWS S3 library was updated from version 1 to version 2. This new AWS library version can no longer automatically detect an S3 bucket's region from its endpoint address. You must specify the bucket endpoint manually.
+
+Mendix Operator 2.25 (or later versions) will automatically recognise an S3 bucket's region from its endpoint address:
+
+* If the bucket endpoint has a `<subdomains>.<region>.amazonaws.com` format (or `<subdomains>.<region>.amazonaws.com.<suffix>` format for AWS China regions),
+the Operator will use the `<region>` part.
+* If the S3 bucket endpoint does not match this format, the Mendix Operator will use a default `us-east-1` region, as this works with most S3-compatible buckets like [Minio](#blob-minio) and [Google Cloud Storage](#blob-gcp-storage-bucket).
+
+In some scenarios (legacy or custom S3 endpoints), this autodetection might not work correctly. In this case, you can manually specify the S3 bucket region by setting the [com.mendix.storage.s3.Region](/refguide/custom-settings/#commendixstorages3Region) Custom Runtime Setting. A manually specified `com.mendix.storage.s3.Region` will override the autodetected bucket region.
+{{% /alert %}}.
 
 #### Create Account with Existing Policy {#s3-create-account-existing-policy}
 
@@ -1887,7 +1915,7 @@ To configure the required settings for an RDS database, do the following steps:
 2. Enable [IAM authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.DBAccounts.html#UsingWithRDS.IAMDBAuth.DBAccounts.PostgreSQL) and grant `rds_iam` role to `database-username` role by using the below `psql` commandline to run the following jump pod commands (replacing `<database-username>` with the username specified in `database-username` and `<database-host>` with the database host):
 
     ```sql
-    kubectl run postgrestools docker.io/bitnami/postgresql:14 -ti --restart=Never --rm=true -- /bin/sh
+    kubectl run postgrestools docker.io/library/postgresql:14 -ti --restart=Never --rm=true -- /bin/sh
     export PGDATABASE=postgres
     export PGUSER=<database-username>
     export PGHOST=<database-host>

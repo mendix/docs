@@ -184,7 +184,7 @@ For the current question, please base the answer on the following pieces of info
 </information>
 ```
 
-### Let the model assume a role
+### Let the Model Assume a Role
 
 You can prime the model by explaining what it does. This will create a bias in the model towards specific reasoning and increase the quality of their answer based on what you expect from the (stereotypical) persona.
 
@@ -256,5 +256,5 @@ Check out the [GenAI](https://marketplace.mendix.com/link/component/220475) show
 
 * [OpenAI](https://platform.openai.com/docs/guides/prompt-engineering)
     * [Examples](https://platform.openai.com/docs/examples)
-* [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering)
+* [Microsoft Foundry](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering)
 * [Prompt Engineering Guide](https://www.promptingguide.ai/)

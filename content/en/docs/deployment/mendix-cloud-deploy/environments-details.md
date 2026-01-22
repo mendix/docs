@@ -7,7 +7,7 @@ aliases:
     - /developerportal/deploy/environments-details-redesign/
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #The anchor #connection-safelist below is mapped from the Mendix Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
-#The anchor #services below is mapped from the Mendix Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
+#The anchor #services below is mapped from the Mendix Portal (Mendix Cloud Environment Details), so it should not be removed or changed. 
 ---
 
 ## Introduction
@@ -92,7 +92,8 @@ In the **Application Status** section of the **General** tab, you can find the f
 * **Project ID** – the unique identifier of the app
 * **Environment ID** – the unique identifier of the environment
 * **Running Since** – the date the app was started, if it is running
-* **Name** – the type of environment (Acceptance, Production, Test, or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments)); for more information, see the [Naming of Environments](#naming) section below
+* **Display Name** – the type of environment (Acceptance, Production, Test, or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments)); for more information, see the [Naming of Environments](#naming) section below
+* **Subdomain Suffix** – the application's subdomain name
 * **URL** – the URL of the app
 * **Custom Domains** – any [custom domains](/developerportal/deploy/custom-domains/) of the app; to add a new domain, click **Add Custom Domain**
 * **Studio Pro Target** – a **Yes** or **No** value indicating whether the environment is the designated deployment target from Studio Pro; for more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/)
@@ -101,20 +102,25 @@ In the **Application Status** section of the **General** tab, you can find the f
 * **Region** – the data center region where the app is hosted (for the full list of Mendix Cloud regions, see [Outgoing IP](/developerportal/deploy/mendix-ip-addresses/#outgoing))
 * **Data Backup Secondary Location** – the region where the backup is stored (for more information, see [Data Location](/developerportal/operate/backups/#data-location) in the *Backups* documentation)
 
-#### Naming of Environments – Flexible Environments in Mendix Cloud {#naming}
-
-If you are the app's [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can rename the environments.
-
-To rename an environment, follow these steps:
-
-1. Click **Change** next to the name of the environment.
-2. Enter the new name, which must meet the following requirements:
-    * Consists of at least two characters.
-    * Consists of only alphanumeric characters and hyphens (`a-z`, `A-Z`, `0-9`, and `-`).
-    * Does not begin or end with a hyphen.
+#### Naming of Environments - Flexible Applications in Mendix Cloud {#naming}
 
 {{% alert color="info" %}}
-After you rename an environment, it may take up to 15 minutes before you can access an app via its URL. This is because the URL includes the name of the environment, and the old value needs to be removed from the DNS cache. It may take considerably longer for the change to be visible worldwide.
+Renaming an environment's subdomain suffix or display name is only applicable to flexible applications.
+{{% /alert %}}
+
+If you are the app's [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can rename the environment’s **Subdomain Suffix** or **Display Name** by clicking **Change** next to either of the options.
+
+* **Display Name requirements**:
+    * Must start and end with an alphanumeric or non-latin character
+    * Must contain two or more alphanumeric or non-latin characters and hyphens (–)
+    * Maximum of 200 characters are allowed
+* **Subdomain Suffix requirements** 
+    * Consists of at least two characters
+    * Consists of only alphanumeric characters and hyphens (`a-z`, `A-Z`, `0-9`, and `-`)
+    * Does not begin or end with a hyphen
+
+{{% alert color="info" %}}
+After you rename an environment’s subdomain suffix, it may take up to 15 minutes before you can access an app via its URL. This is because the URL includes the subdomain name of the environment, and the old value needs to be removed from the DNS cache. It may take considerably longer for the change to be visible worldwide.
 {{% /alert %}}
 
 ### Deployment Package Details
@@ -139,7 +145,6 @@ It also includes the option to change your plan. For details, refer to [Changing
 * **Database Plan Space** – the storage capacity of the database
 * **Database Plan Memory** – the database's RAM size
 * **File Storage** – available size for storing blobs
-* **Backup Storage** – total size available for database backup files
 * **Multi-AZ Enabled** –  a **Yes** or **No** value indicating whether multiple availability zones are enabled
 
 #### Scaling {#scaling}
@@ -335,6 +340,32 @@ default-src 'self' ; script-src 'self' 'unsafe-inline' 'unsafe-eval' ; connect-s
 
 If you have issues that appear to be related to a content security policy, you can use the console of your browser to investigate them.
 
+### Outgoing Connections Certificates
+
+Add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format). These are used when your application initiates SSL/TLS connections.
+
+## The Connectivity Tab {#connectivity-tab}
+
+On the **Connectivity** tab, you can manage the elements described below.
+
+### Connections {#connections}
+
+You can connect from your applications on Mendix Cloud to resources on your own infrastructure using Mendix Cloud Private Connectivity.
+
+The **Connections** tab contains the following information:
+
+* **Resource** – The name of the connected service
+* **Network** – The name of the network associated with the connection
+* **Status** – The connection's current state, such as **Pending Approval**, **Approved** or **Rejected**
+
+You can perform the following actions for connections:
+
+* **Add** a new connection
+* **Cancel** a connection request
+* **Delete** a connection
+
+For more information, refer to [Connecting to External Resources](/developerportal/deploy/connecting-to-external-resource/).
+
 ### Outgoing Connections Safelisting (Mendix Cloud Dedicated) {#connection-safelist}
 
 If you are deploying your apps to [Mendix Cloud Dedicated](/deployment/#mendix-cloud-dedicated), all outgoing IP addresses are allowed by default.
@@ -372,6 +403,19 @@ IP addresses must be within the following ranges:
 | 172.32.0.0  | 192.167.255.255 |
 | 192.169.0.0 | 255.255.255.255 |
 
+### IP Access Restrictions {#ip-access-restrictions}
+
+You can define IP profiles to deny access to your application from specific IP addresses or ranges.
+
+The **IP Access Restrictions** overview contains the following information:
+
+* **Current Restriction Profile**
+* **New Restriction Profile**
+
+You can also **Delete**, **Add**, or **Edit** an IP based access restriction.
+
+For more information, refer to the [IP Restriction Profile](/developerportal/deploy/access-restrictions/#ip-restriction-profiles) section of *Restricting Access for Incoming Requests*.
+
 ### Path-Based Access Restrictions {#path-based-restrictions}
 
 You can restrict access to your application using Client Certificates or IP ranges.
@@ -393,11 +437,7 @@ You can **Delete** a path or you can **Add** and **Edit** a path with the follow
 * Custom Profile for Client Certificates and/or IP ranges
 * N/A (inherit)
 
-For more information, see [How to Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions/).
-
-### Outgoing Connections Certificates
-
-Add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format). These are used when your application initiates SSL/TLS connections.
+For more information, refer to the [Access Restriction Profiles](/developerportal/deploy/access-restrictions/#access-restriction-profiles) section of *Restricting Access for Incoming Requests*.
 
 ## The Log Levels Tab {#log-levels}
 
@@ -483,6 +523,8 @@ Click **Add** and select **Supported** to choose from the following variables:
 
 * **APPMETRICS_TARGET** – This enables sending application runtime and custom business metrics to HTTP endpoints of different monitoring solutions, such as [InfluxDB](https://www.influxdata.com/), while ignoring micrometer endpoints.
 * **DD_API_KEY** – This is the API key used with Datadog.
+* **DD_ENV** – Specifies the application environment for Datadog.
+* **DD_TRACE_ENABLED** – Enables or disables tracing. By default, the value is set to `false`, which means data collection remains active, but no trace is sent to the trace agent.
 * **DD_SITE** – This directs metrics to a specific Datadog region.
 * **DATABASE_CONNECTION_PARAMS** – These are additional JDBC parameters for PostgreSQL databases. For more information, see the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack).
 * **JVM_GARBAGE_COLLECTOR** – This overrides the automatic configuration of the Java garbage collector. Accepted values are `Serial` or `G1`.

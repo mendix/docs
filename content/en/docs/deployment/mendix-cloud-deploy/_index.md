@@ -2,7 +2,7 @@
 title: "Mendix Cloud"
 url: /developerportal/deploy/mendix-cloud-deploy/
 weight: 8
-description: "Describes what Mendix Cloud is."
+description: "This document describes Mendix Cloud, the default AWS-powered deployment for Mendix applications. It also provides information about Free App features, limitations, manual and automatic deletion policies, and archiving. This document also provides information to learn about Licensed App capabilities, including resource packs, high availability, regional fallback, database configurations, URLs, and Mendix pricing plans to optimize your app deployment and management."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor #plans, below, is mapped from Control Center within the Mendix Portal.
@@ -53,16 +53,32 @@ If your app does not wake up after a few minutes, contact [Mendix Support](https
 
 To prevent your Free App going into sleep mode, upgrade to a licensed app running on a node in Mendix Cloud. For more information, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
 
-#### Archiving of Free Apps {#free-apps-archival}
+#### Deleting Free Apps
 
-If a Free App has been in sleep mode for three months or longer, it may be archived. For Free Apps that are going to be archived, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) is informed two weeks beforehand. Upon archiving, the project on the Mendix Platform and repository on the [Team Server](/developerportal/repository/team-server/) are retained and will remain active and accessible, but the running app, database, files, and backups for the Free App are deleted.
+This section outlines the different ways Free Apps can be deleted from the Mendix Platform.
+
+##### Manually Deleting Free Apps {#free-apps-manual-deletion}
+
+As a [Technical Contact](/developerportal/general/app-roles/#technical-contact) you can manually delete a Free App after publishing it from Studio Pro by following these steps:
+
+1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+2. Click **More Options** ({{< icon name="three-dots-menu-horizontal" >}}) on the **Sandbox** environment.
+3. Click **Delete**.
+
+Deleting a Free App deletes the running app, its database, files, and backups. However, the project on the Mendix Platform and its repository on the [Team Server](/developerportal/repository/team-server/) remain active and accessible.
+
+##### Automatic Archiving of Free Apps {#free-apps-archival}
+
+If a Free App has been in sleep mode for three months or longer, it may be archived. For Free Apps that are going to be archived, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) is informed two weeks beforehand. 
+
+Upon archiving, the project on the Mendix Platform and repository on the [Team Server](/developerportal/repository/team-server/) are retained and will remain active and accessible, but the running app, database, files, and backups for the Free App are deleted.
 
 There are two ways to prevent your Free App from being archived:
 
 * Visit the Free App
 * Deploy a new version of your app to your Free App environment
 
-#### Deletion of Unused Projects {#projects-deletion}
+##### Automatic Deletion of Unused Projects {#projects-deletion}
 
 If a project has never seen any activity since it was created, it is kept on the Team Server for a maximum of one year. After this, the project on the Mendix Platform, its repository on the Team Server, and any Mendix Cloud resources associated with the project will be permanently deleted.
 
@@ -83,7 +99,7 @@ You can prevent this clean up by performing one of the following actions:
 * [Pin your app](/developerportal/#app-tiles)
 * [Invite someone](/developerportal/general/team/#inviting) to collaborate with you on your app
 
-Pinning a project that has been marked for deletion unmarks it immediately. Changes to the other criteria do not effect the mark-for-deletion immediately, but are verified before the actual deletion.
+Pinning a project that has been marked for deletion unmarks it immediately. Changes to the other criteria do not affect the mark-for-deletion immediately, but are verified before the actual deletion.
 
 ### Licensed App
 

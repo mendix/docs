@@ -7,6 +7,10 @@ weight: 10
 
 ## Introduction
 
+{{% alert color="warning" %}}
+The Dojo client is deprecated and will be removed in Mendix 12. It continues receiving security and stability updates until the end of support of Mendix 11.24. 
+{{% /alert %}}
+
 The Mendix Client has transitioned to a modern implementation using React. As of Mendix 11, the React Client is the default for all new applications created in Studio Pro, and the legacy Dojo client has been deprecated.
 
 You can enable the React client for existing applications in [App Settings](/refguide/app-settings/#react-client).

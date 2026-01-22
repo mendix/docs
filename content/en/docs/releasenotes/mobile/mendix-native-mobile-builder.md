@@ -27,6 +27,42 @@ To fix this issue, do the following:
 4. Remove **config.json**.
 5. Reopen the Mendix Native Mobile Builder.
 
+## Release 1.0.144 {#10143}
+
+**Release date: December 23, 2025**
+
+## Improvements
+
+* Notifee is now installed for push notifications when using Studio Pro 11 and above. This does not affect previous versions.
+
+## Fixes
+
+* We fixed an issue where, after building in iOS, `RUNTIME_URL` would not get the slash separator properly escaped if it included extra path parts.
+
+## Release 1.0.143 {#10143}
+
+**Release date: November 21, 2025**
+
+## Fixes
+
+* We fixed an issue where native builds failed with the error "`@notifee/react-native` is not a known dependency."
+
+## Release 1.0.142 {#10142}
+
+**Release date: November 19, 2025**
+
+### Fixes
+
+* We fixed an issue where the Native Build UI referenced an outdated notification dependency.
+
+## Release 1.0.141 {#10141}
+
+**Release date: November 11, 2025**
+
+### Fixes
+
+* We updated `react-native-firebase` dependencies.
+
 ## Release 1.0.138 {#10138}
 
 **Release date: August 5, 2025**

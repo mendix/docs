@@ -1,0 +1,299 @@
+openapi: 3.0.4
+info:
+  title: Pipeline Service v1
+  description: "The Pipeline API is for managing the Pipeline resources. The Pipeline can be used to build app package and deploy app package image into a specific environment. \r\n"
+  version: 1.0.0
+servers:
+- url: https://pmp-demo.mxplatform.net/pipelineservice
+security:
+- {}
+- basicAuth: []
+- mxtoken: []
+tags:
+- name: pipelines
+  description: ""
+- name: pipeline
+  description: ""
+paths:
+  /pipelines/{pipelineId}:
+    get:
+      tags:
+      - pipelines
+      description: Get pipeline running information.
+      operationId: getPipelineInfo
+      parameters:
+      - name: pipelineId
+        in: path
+        description: get current status of a pipeline
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          $ref: "#/components/responses/GetPipeline"
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+    put:
+      tags:
+      - pipelines
+      summary: Set the current step status of the pipeline
+      description: Set the current run step status of the pipeline to Success or Failed.
+      operationId: putPipelineStatus
+      parameters:
+      - name: pipelineId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/pipeline_set_status_body"
+            examples:
+              Set pipeline successful status:
+                value:
+                  stepStatus: Success
+                  callFrom: QA Team
+              Set pipeline failed status:
+                value:
+                  stepStatus: Failed
+                  callFrom: Dev Team
+      responses:
+        "200":
+          description: successful operation
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+  /pipelines:
+    post:
+      tags:
+      - pipelines
+      summary: Create a pipeline
+      description: Create a pipeline for build or deployment. This API is only available when Build Utility is "Kubernetes" and Deployment Method is "Private Cloud Standalone".
+      operationId: CreatePipeline
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/pipeline_creation_request_body"
+            examples:
+              Request a pipeline for build:
+                value:
+                  pipelineType: Deploy
+                  appId: ff4c5472-50bc-45ad-b1e1-817217111628
+                  packageName: sgp-v1069-c6d5bd3.mda
+                  envInternalName: sgpv1069
+              Request a pipeline for deploy:
+                value:
+                  pipelineType: Deploy
+                  appId: ff4c5472-50bc-45ad-b1e1-817217111628
+                  packageName: sgp-v1069-c6d5bd3.mda
+                  envInternalName: sgpv1069
+      responses:
+        "200":
+          $ref: "#/components/responses/CreatePipeline"
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+  /pipelines/manual_approve:
+    post:
+      tags:
+      - pipelines
+      summary: Approve or reject a manual step of pipeline
+      description: Approve or reject a manual step of a waiting pipeline.
+      operationId: approvePipelineStep1
+      parameters:
+      - name: pipelineId
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: approve
+        in: query
+        required: false
+        schema:
+          type: boolean
+          default: false
+      responses:
+        "200":
+          description: successful operation
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+  /pipeline/manual_approve:
+    post:
+      tags:
+      - pipeline
+      summary: Approve or reject a manual step of pipeline
+      description: Approve or reject a manual step of a waiting pipeline.
+      operationId: ApprovePipelineStep2
+      parameters:
+      - name: pipelineId
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: approve
+        in: query
+        required: false
+        schema:
+          type: boolean
+          default: false
+      responses:
+        "200":
+          description: successful operation
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+      security:
+      - basicAuth: []
+components:
+  schemas:
+    pipeline_set_status_body:
+      type: object
+      properties:
+        stepStatus:
+          type: string
+        callFrom:
+          type: string
+      x-examples:
+        Example 1:
+          stepStatus: Success
+          callFrom: R&D Team
+    pipeline_creation_request_body:
+      type: object
+      properties:
+        pipelineType:
+          type: string
+        pipelineType_copy:
+          type: string
+        appId:
+          type: string
+        branchName:
+          type: string
+        revisionId:
+          type: string
+        packageName:
+          type: string
+        envInternalName:
+          type: string
+      x-examples:
+        Example 1:
+          pipelineType: Build
+          appId: ff4c5472-50bc-45ad-b1e1-817217111628
+          branchName: main
+          revisionId: c6d5bd3d
+          packageName: sgp-v1069-c6d5bd3.mda
+          envInternalName: sgpv1069
+  responses:
+    UnauthorizedError:
+      description: Authentication information is missing or invalid
+      headers:
+        WWW-Authenticate:
+          schema:
+            type: string
+    GetPipeline:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              PipelineType:
+                type: string
+              DTAPMode:
+                type: string
+              Source:
+                type: string
+              Status:
+                type: string
+              PipelineTemplateGuid:
+                type: integer
+              Step_2:
+                type: object
+                properties:
+                  Name:
+                    type: string
+                  Category:
+                    type: string
+                  Arguments:
+                    type: string
+                  Wait:
+                    type: boolean
+                  Status:
+                    type: string
+                  StepTemplateGuid:
+                    type: integer
+                  ExecutionTime:
+                    type: integer
+                  StartTime:
+                    type: string
+            x-examples:
+              Example 1:
+                PipelineType: Deploy
+                DTAPMode: D
+                Source: CreateEnvironment
+                Status: Success
+                PipelineTemplateGuid: 217017207047961020
+                Step_2:
+                  Name: Deploy Artifact to Target Environment
+                  Category: DeployApp
+                  Arguments: "{}"
+                  Wait: false
+                  Status: Success
+                  StepTemplateGuid: 263179103229699200
+                  ExecutionTime: 4514
+                  StartTime: 2025-10-29T10:42:03.535Z
+          examples:
+            Get build pipeline information:
+              value:
+                PipelineType: Build
+                Source: UI
+                Status: Success
+                PipelineTemplateGuid: 217017207047974100
+                Step_2:
+                  Name: K8S Pod Build
+                  Category: K8sPodBuild
+                  Arguments: "{}"
+                  Wait: true
+                  Status: Success
+                  StepTemplateGuid: 263179103229674700
+                  ExecutionTime: 175
+                  StartTime: 2025-10-29T10:23:14.589Z
+            Get deploy pipeline information:
+              value:
+                PipelineType: Deploy
+                DTAPMode: D
+                Source: CreateEnvironment
+                Status: Success
+                PipelineTemplateGuid: 217017207047961020
+                Step_2:
+                  Name: Deploy Artifact to Target Environment
+                  Category: DeployApp
+                  Arguments: "{}"
+                  Wait: false
+                  Status: Success
+                  StepTemplateGuid: 263179103229699200
+                  ExecutionTime: 4514
+                  StartTime: 2025-10-29T10:42:03.535Z
+    CreatePipeline:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              pipelineId:
+                type: integer
+            x-examples:
+              Example 1:
+                pipelineId: 144678138035242200
+          examples:
+            Response for a pipeline creation:
+              value:
+                pipelineId: 144678138035242200
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    mxtoken:
+      type: apiKey
+      name: apiKey
+      in: header

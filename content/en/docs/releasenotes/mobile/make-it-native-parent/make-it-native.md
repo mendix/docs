@@ -8,17 +8,60 @@ description: "These release notes showcase each release of the iOS and Android M
 
 Depending on the Mendix version your app is developed in and the device you want to run on, you need a different Make It Native app. For more information on how to download the correct version, see the [Getting the Make It Native App](/refguide/mobile/getting-started-with-mobile/prerequisites/#get-min-app) section in *Native App Prerequisites and Troubleshooting*.
 
+## Android 11.4.1 / iOS 11.4.1
+
+**Release date: November 11, 2025**
+
+* We updated the version of @mendix/native to 10.3.1 to update op-sqlite version to 15.0.7.
+
+## Android 11.4.0 / iOS 11.4.0
+
+**Release date: November 5, 2025**
+
+* We updated the version of @mendix/native to 10.3.0 to fix the `components.json` errors.
+* We updated Firebase packages to newer versions.
+
+## Android 11.3.1 / iOS 11.3.1
+
+**Release date: October 8, 2025**
+
+* We migrated from `react-native-camera` to `react-native-vision-camera` for new architecture compatibility.
+
+## Android 11.3.0 / iOS 11.3.0
+
+**Release date: October 3, 2025**
+
+* We updated the outdated dependencies for new architecture compatibility.
+
 ## Android 11.1.0 / iOS 11.1.0
 
 **Release date: July 31, 2025**
 
-* Renamed the app to "Make It Native" and aligned its versioning with Studio Pro, so each Studio Pro version (for example, 11.1.x) now uses the matching Make It Native version (for example, 11.1.x).
+* We renamed the app to "Make It Native" and aligned its versioning with Studio Pro, so each Studio Pro version (for example, 11.1.x) now uses the matching Make It Native version (for example, 11.1.x).
+
+## Android 10.24.4 / iOS 10.24.4
+
+**Release date: November 25, 2025**
+
+* We migrated to `react-native-vision-camera` to fix barcode scanner issues on Android.
+
+## Android 10.24.3
+
+**Release date: November 14, 2025**
+
+* We fixed an issue where text inputs would not receive focus on Android when running apps through Make it Native 10 on physical devices.
+
+## Android 10.24.1
+
+**Release date: October 29, 2025**
+
+* We added support for 16KB page size alignment.
 
 ## Android 10.24.0 / iOS 10.24.0
 
 **Release date: July 31, 2025**
 
-* Renamed the app to "Make It Native" and aligned its versioning with Studio Pro, so each Studio Pro version (for example, 10.24.x) now uses the matching Make It Native version (for example, 10.24.x).
+* We renamed the app to "Make It Native" and aligned its versioning with Studio Pro, so each Studio Pro version (for example, 10.24.x) now uses the matching Make It Native version (for example, 10.24.x).
 
 ## Android 5.0.2 / iOS 5.0.2
 
@@ -26,7 +69,7 @@ Depending on the Mendix version your app is developed in and the device you want
 
 ### Improvements
 
-* This new version is compatible with Mendix 10.24.
+* We made this new version is compatible with Mendix 10.24.
 
 ## Android 5.0.1 / iOS 5.0.1
 

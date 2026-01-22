@@ -11,31 +11,9 @@ aliases:
 
 ## Introduction {#introduction}
 
-The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) allows you to integrate generative AI into your Mendix app. It is compatible with [OpenAI's platform](https://platform.openai.com/) as well as [Azure's OpenAI service](https://oai.azure.com/). 
+The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) allows you to integrate generative AI into your Mendix app. It is compatible with [OpenAI's platform](https://platform.openai.com/) and [Microsoft Foundry](https://learn.microsoft.com/en-us/azure/ai-foundry/what-is-ai-foundry), where you can access OpenAI models. 
 
-The current scope covers text generation use cases based on the [OpenAI Chat Completions API](https://platform.openai.com/docs/api-reference/chat), image generation use cases based on the [Image Generations API](https://platform.openai.com/docs/api-reference/images), and embedding use cases based on the [Embeddings API](https://platform.openai.com/docs/api-reference/embeddings). Furthermore, indexes via [Azure AI Search](https://learn.microsoft.com/en-us/azure/search/) can be used for knowledge base retrieval.
-
-Mendix provides dual-platform support for both OpenAI and Azure OpenAI.
-
-### Typical Use Cases {#use-cases}
-
-The OpenAI Connector is commonly used for text generation, image generation, and embeddings. These use cases are described in more detail below.
-
-#### Text Generation {#use-cases-text}
-
-* Develop interactive AI chatbots and virtual assistants that can carry out conversations in a natural and engaging manner. 
-* Use OpenAI’s large language models (LLMs) for text comprehension and analysis use cases such as summarization, synthesis, and answering questions about large amounts of text.
-* Fine-tune the OpenAI models on a specific task or domain by training them on custom data to improve their performance. 
-* Integrate more easily with OpenAI’s platform. By providing text generation models, this allows you to build applications with the following features:
-    * Draft documents 
-    * Write computer code 
-    * Answer questions about a knowledge base 
-    * Analyze texts
-    * Give software a natural language interface 
-    * Tutor in a range of subjects 
-    * Translate languages 
-    * Simulate characters for games
-    * Image to text
+### Features {#features}
 
 OpenAI provides market-leading LLM capabilities with GPT-4:
 
@@ -43,42 +21,19 @@ OpenAI provides market-leading LLM capabilities with GPT-4:
 * Creativity – Generate, edit, and iterate with end-users on creative and technical writing tasks, such as composing songs, writing screenplays, or learning an end-user’s writing style.
 * Longer context – GPT-4 can handle over 25,000 words of text, allowing for use cases like long-form content creation, extended conversations, and document search and analysis. 
 
-#### Image Generation {#use-cases-images}
-
-Generate one or more completely new, original images and art from a text description. Powered by the OpenAI DALL-E models, the connector enables developers to generate these images by combining concepts, attributes, and styles.
-
-#### Embeddings {#use-cases-embeddings}
-
-Convert strings into vector embeddings for various purposes based on the relatedness of texts.
-
-Embeddings are commonly used for the following:
-
-* Search 
-* Clustering 
-* Recommendations 
-* Anomaly detection 
-* Diversity measurement 
-* Classification 
-
-Combine embeddings with text generation capabilities and leverage specific sources of information to create a smart chat functionality tailored to your own knowledge base.
-
-{{% alert color="info" %}}
-For more information on how to set up a vector database, see [Retrieval Augmented Generation (RAG)](/appstore/modules/genai/rag/). Also, check out the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) from the Marketplace for an example implementation.
-{{% /alert %}}
-
-#### Knowledge Base
-
-By integrating Azure AI Search, the OpenAI Connector allows for knowledge base retrieval from Azure datsources. The most common use case is retrieval augmented generation (RAG) to retrieve relevant knowledge from the knowledge base, incorporating it into a prompt, and sending it to the model to generate a response.
-
-### Features {#features}
-
-Mendix provides dual-platform support for both [OpenAI](https://platform.openai.com/) and [Azure OpenAI](https://oai.azure.com/). 
+Mendix provides support for [OpenAI](https://platform.openai.com/) and [Microsoft Foundry](https://learn.microsoft.com/en-us/azure/ai-foundry/what-is-ai-foundry) (formerly known as Azure OpenAI or Cognitive Services). Microsoft Foundry is Microsoft's unified AI platform that streamlines the creation and management of AI agents and models, including the OpenAI models.
 
 With the current version, Mendix supports the Chat Completions API for [text generation](https://platform.openai.com/docs/guides/text-generation), the Image Generations API for [images](https://platform.openai.com/docs/guides/images), the Embeddings API for [vector embeddings](https://platform.openai.com/docs/guides/embeddings/what-are-embeddings), and indexes via [Azure AI Search](https://learn.microsoft.com/en-us/azure/search/) for knowledge base retrieval.
 
+Typical use cases for generative AI are described in the [Typical LLM Use Cases](/appstore/modules/genai/get-started/#llm-use-cases).
+
+#### Knowledge Base
+
+By integrating Azure AI Search, the OpenAI Connector enables knowledge base retrieval from Azure data sources. For Retrieval Augmented Generation (RAG) scenarios, chat completions with (Azure) OpenAI can also be combined with knowledge bases by other provider such as Mendix Cloud.
+
 ### Prerequisites {#prerequisites}
 
-To use this connector, you need to either sign up for an [OpenAI account](https://platform.openai.com/) or have access to deployments at [Azure OpenAI](https://oai.azure.com/).
+To use this connector, you need to either sign up for an [OpenAI account](https://platform.openai.com/) or have access to a [Microsoft Foundry](https://learn.microsoft.com/en-us/azure/ai-foundry/what-is-ai-foundry) project with OpenAI models deployed.
 
 ### Dependencies {#dependencies}
 
@@ -105,7 +60,7 @@ After you install the OpenAI Connector, you can find it in the **App Explorer**,
 
 1. Add the module role **OpenAIConnector.Administrator** to your Administrator user role in the security settings of your app. 
 2. Add the **Configuration_Overview** page (**USE_ME > Configuration**) to your navigation, or add the **Snippet_Configurations** to a page that is already part of your navigation. 
-3. Continue setting up your OpenAI configuration at runtime. Follow the instructions in either [OpenAI Configuration](#openai-configuration) or [Azure OpenAI Configuration](#azure-openai-configuration), depending on which platform you are using.
+3. Continue setting up your OpenAI configuration at runtime. Follow the instructions in either [OpenAI Configuration](#openai-configuration) or [Microsoft Foundry Configuration](#azure-openai-configuration), depending on which platform you are using.
 4. Configure the models you need to use for your use case.
 
 #### OpenAI Configuration {#openai-configuration} 
@@ -119,37 +74,33 @@ The following inputs are required for the OpenAI configuration:
 | Endpoint    | This is the API endpoint (for example, `https://api.openai.com/v1`)   |
 | Token     | This is the access token to authorize your API call. <br />To get an API, follow these steps:<ol><li>Create an account and sign in at [OpenAI](https://platform.openai.com/).</li><li> Go to the [API key page](https://platform.openai.com/account/api-keys) to create a new secret key. </li><li>Copy the API key and save this somewhere safe.</li></ol> |
 
-#### Azure OpenAI Configuration {#azure-openai-configuration} 
+#### Microsoft Foundry Configuration {#azure-openai-configuration} 
 
-The following inputs are required for the Azure OpenAI configuration: 
+The following inputs are required for the Microsoft Foundry configuration: 
 
-| Parameter      | Value                                                        |
+| Parameter | Value |
 | -------------- | ------------------------------------------------------------ |
 | Display name | This is the name identifier of a configuration (for example, *MyConfiguration*). |
-| API type | Select `AzureOpenAI`. |
-| Endpoint | This is the API endpoint (for example, `https://your-resource-name.openai.azure.com/openai/deployments/`).<br />For details on how to obtain `your-resource-name`, see the [Obtaining Azure OpenAI Resource Name](#azure-resource-name) section below. |
-| Azure key type | This is the type of token that is entered in the API key field. For Azure OpenAI, two types of keys are currently supported: Microsoft Entra token and API key. <br />For details on how to generate a Microsoft Entra access token, see [How to Configure Azure OpenAI Service with Managed Identities](https://learn.microsoft.com/en-gb/azure/ai-services/openai/how-to/managed-identity). Alternatively, if your organization allows it, you could use the Azure `api-key` authentication mechanism. For details on how to obtain an API key, see the [Obtaining Azure OpenAI API keys](#azure-api-keys) section below. For more information, see the [Technical Reference](#technical-reference) section. |
+| API type | Select `AzureOpenAI` for Microsoft Foundry deployments. |
+| Endpoint | This is the API endpoint (for example, `https://your-resource-name.openai.azure.com/openai/deployments/`).<br />For details on how to obtain `your-resource-name`, see the [Obtaining Resource Name](#azure-resource-name) section below. |
+| Azure key type | This is the type of token that is entered in the API key field. For Azure OpenAI, two types of keys are currently supported: Microsoft Entra token and API key. <br />For details on how to generate a Microsoft Entra access token, see [How to Configure Azure OpenAI Service with Managed Identities](https://learn.microsoft.com/en-gb/azure/ai-services/openai/how-to/managed-identity). Alternatively, if your organization allows it, you could use the Azure `api-key` authentication mechanism. For details on how to obtain an API key, see the [Obtaining API keys](#azure-api-keys) section below. For more information, see the [Technical Reference](#technical-reference) section. |
 | Token / API key | This is the access token to authorize your API call. |
 
-##### Obtaining the Azure OpenAI Resource Name {#azure-resource-name}
+##### Obtaining the Resource Name {#azure-resource-name}
 
-1. Go to the [Azure OpenAI portal](https://oai.azure.com/) and sign in.
-2. In the upper-right corner, next to your Avatar, click on the scope dropdown. 
-3. The tab shows your Directory, Subscription, and Azure OpenAI resource.
-4. Make sure the right Azure OpenAI resource is selected.
-5. Use the copy icon ({{% icon name="copy" %}}) and use it as your resource name in the endpoint URL.
+1. Go to the [Microsoft Foundry portal](https://ai.azure.com/) and sign in.
+2. Select the right resource in the upper right corner.
+3. The home page should show **Resource configuration** where you can find the **Microsoft Foundry endpoint**.
+4. Use the copy icon ({{% icon name="copy" %}}) and use it as your resource name in the endpoint URL.
 
-##### Obtaining the Azure OpenAI API Keys {#azure-api-keys}
+##### Obtaining API Keys {#azure-api-keys}
 
-1. Go to the [Azure OpenAI portal](https://oai.azure.com/) and sign in.
-2. In the upper-right corner, next to your Avatar, click on the scope dropdown. 
-3. The tab shows your Directory, Subscription, and Azure OpenAI resource.
-4. Make sure the right Azure OpenAI resource is selected.
-5. You can now view ({{% icon name="view" %}}) and copy ({{% icon name="copy" %}}) the value of the **key1** or **key2** field as your API key while setting up the configuration. Note that these keys might not be visible for everyone in the Azure OpenAI Portal, depending on your organization's security settings. 
+1. On the same page where the resource name is located, you can find your API key information.
+2. You can now view ({{% icon name="view" %}}) and copy ({{% icon name="copy" %}}) the value of the **key1** or **key2** field as your API key while setting up the configuration. Note that these keys might not be visible for everyone in the portal, depending on your organization's security settings. 
 
 ##### Adding Azure AI Search Resources {#azure-ai-search}  
 
-| Parameter      | Value                                                        |
+| Parameter | Value |
 | -------------- | ------------------------------------------------------------ |
 | Display name | This is the name identifier of a Azure AI Search Resource (for example, *MySearchResource*). |
 | Endpoint URL | This is the API endpoint (for example, `https://your-resource-name.search.windows.net`).<br />For details on how to obtain `your-resource-name`, see [Azure AI Search service in the Azure portal](https://learn.microsoft.com/en-us/azure/search/search-create-service-portal). |
@@ -164,18 +115,18 @@ Currently, the only supported authorization method for Azure AI Search resources
 
 #### Configuring the OpenAI Deployed Models
 
-A [Deployed Model](/appstore/modules/genai/genai-for-mx/commons/#deployed-model) represents a GenAI model instance that can be used by the app to generate text, embeddings, or images. For every model you want to invoke from your app, you need to create a `OpenAIDeployedModel` record, a specialization of `DeployedModel`. In addition to the model display name and a technical name/identifier, an OpenAI deployed model contains a reference to the additional connection details as configured in the previous step. For OpenAI, a set of common models will be prepopulated automatically upon saving the configuration. If you want to use additional models that are made available by OpenAI you need to configure additional OpenAI deployed models in your Mendix app. For Azure OpenAI no deployed models are created by default. The technical model names depend on the deployment names that were chosen while deploying the models in the [Azure Portal](https://oai.azure.com/resource/deployments). Therefore in this case you always need to configure the deployed models manually in your Mendix app.
+A [Deployed Model](/appstore/modules/genai/genai-for-mx/commons/#deployed-model) represents a GenAI model instance that can be used by the app to generate text, embeddings, or images. For every model you want to invoke from your app, you need to create a `OpenAIDeployedModel` record, a specialization of `DeployedModel`. In addition to the model display name and a technical name/identifier, an OpenAI deployed model contains a reference to the additional connection details as configured in the previous step. For OpenAI, a set of common models can be created automatically using the designated button. If you want to use additional models that are made available by OpenAI you need to configure additional OpenAI deployed models in your Mendix app. For Microsoft Foundry, the model names can be different. The technical model names depend on the deployment names that were chosen while deploying the models in the [Microsoft Foundry portal](https://ai.azure.com/). Therefore in this case you always need to configure the deployed models manually in your Mendix app.
 
-1. If needed, click the three dots for an OpenAI configuration to open the "Manage Deployed Models" pop-up.
+1. If needed, click the three dots ({{% icon name="three-dots-menu-horizontal" %}}) icon for an OpenAI configuration to open the **Manage Deployed Models** pop-up.
 2. For every additional model, add a record. The following fields are required:
 
-    | Field      | Description                                                        |
+    | Field | Description |
     | -------------- | ------------------------------------------------------------ |
     | Display name | This is the reference to the model for app users in case they have to select which one is to be used. |
-    | Deployment name / Model name | This is the technical reference for the model. For OpenAI this is equal to the [model aliases](https://platform.openai.com/docs/models#current-model-aliases). For Azure OpenAI this is the deployment name from the [Azure Portal](https://oai.azure.com/resource/deployments).
-    | Output modality| Describes what the output of the model is. This connector currently supports Text, Embedding, and Image.
-    | Input modality| Describes what input modalities are accepted by the model. This connector currently supports Text and Image.
-    | Azure API version    | Azure OpenAI only. This is the API version to use for this operation. It follows the `yyyy-MM-dd` format. For supported versions, see [Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference). The supported versions can vary depending on the type of model, so make sure to look for the right section (such as Chat Completions, Image Generation, or Embeddings) on that page. |
+    | Deployment name / Model name | This is the technical reference for the model. For OpenAI this is equal to the [model aliases](https://platform.openai.com/docs/models#current-model-aliases). For Microsoft Foundry this is the deployment name from the [Microsoft Foundry portal](https://ai.azure.com/).
+    | Output modality | Describes what the output of the model is. This connector currently supports Text, Embedding, and Image.
+    | Input modality | Describes what input modalities are accepted by the model. This connector currently supports Text and Image.
+    | Azure API version | Azure OpenAI only. This is the API version to use for this operation. It follows the `yyyy-MM-dd` format. For supported versions, see [Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference). The supported versions can vary depending on the type of model, so make sure to look for the right section (such as Chat Completions, Image Generation, or Embeddings) on that page. |
 
 3. Close the popup and test the configuration with the newly created deployed models.
 
@@ -228,7 +179,7 @@ OpenAI does not directly connect to the Azure AI Search resource. The model retu
 
 This functionality is part of the implementation executed by the GenAI Commons Chat Completions operations mentioned earlier. As a developer, you need to make the system aware of your indexes and their purpose by registering them with the request. This is done using the GenAI Commons operation [Tools: Add Knowledge Base](/appstore/modules/genai/genai-for-mx/commons/#add-knowledge-base-to-request), which must be called once per index before passing the request to the Chat Completions operation.
 
-Note that the retrieval process is independent of the model provider and can be used with any model that supports function calling.
+Note that the retrieval process is independent of the model provider and can be used with any model that supports function calling, as it relies on the generalized `GenAICommons.DeyploedKnowledgeBase`entity.
 
 #### Vision {#chatcompletions-vision}
 
@@ -241,12 +192,12 @@ For `Chat Completions with History`, `FileCollection` can optionally be added to
 Use the two OpenAI-specific microflow actions from the toolbox [Files: Initialize Collection with OpenAI File](#initialize-filecollection) and [Files: Add OpenAIFile to Collection](#add-file) to construct the input with either `FileDocuments` (for vision, it needs to be of type `Image`) or `URLs`. There are similar file operations exposed by the GenAI commons module that can be used for vision requests with the OpenAIConnector; however, these generic operations do not support the optional OpenAI-specific `Detail` attribute.
 
 {{% alert color="info" %}}
-OpenAI and Azure OpenAI for vision do not necessarily all models provide feature parity when it comes to combining functionalities. In other words, Azure OpenAI does not support the use of JSON mode and function calling in combination with image (vision) input for certain models, so make sure to check the [Azure Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models).
+OpenAI and Microsoft Foundry do not necessarily provide feature parity across all models when it comes to combining functionalities. In other words, Microsoft Foundry does not support the use of JSON mode and function calling in combination with image (vision) input for certain models, so make sure to check the [Azure Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models).
 
-When you use Azure OpenAI, it is recommended to set the optional `MaxTokens` input parameter; otherwise, the return output may be cut off.
+When you use Microsoft Foundry, it is recommended to set the optional `MaxTokens` input parameter; otherwise, the response may be cut off.
 {{% /alert %}}
 
-For more information on vision, see [OpenAI](https://platform.openai.com/docs/guides/vision) and [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/gpt-with-vision) documentation.
+For more information on vision, see [OpenAI](https://platform.openai.com/docs/guides/vision) and [Microsoft Foundry](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/gpt-with-vision) documentation.
 
 #### Document Chat {#chatcompletions-document}
 
@@ -257,7 +208,7 @@ For [Chat Completions (without history)](/appstore/modules/genai/genai-for-mx/co
 You can send up to 100 pages across multiple files, with a maximum combined size of 32 MB per conversation.  Currently, processing multiple files with OpenAI is not always guaranteed and can lead to unexpected behavior (for example, only one file being processed).
 
 {{% alert color="info" %}}
-Azure OpenAI does not currently support file input.
+Microsoft Foundry does not currently support file input.
 
 Note that the model uses the file name when analyzing documents, which may introduce a potential vulnerability to prompt injection. To reduce this risk, consider modifying the string or not passing it at all.
 {{% /alert %}}
@@ -368,13 +319,13 @@ To check your JDK version and update it if necessary, follow these steps:
     2. You may also need to update Gradle. To do this, go to **Edit** > **Preferences** > **Deployment** > **Gradle directory**. Click **Browse** and select the appropriate Gradle version from the Mendix folder. For Mendix 10.10 and above, use Gradle 8.5. For Mendix 10 versions below 10.10, use Gradle 7.6.3. Then save your settings by clicking **OK**.
     3. Rerun the project.
 
-### Chat Completions with Vision and JSON Mode (Azure OpenAI)
+### Chat Completions with Vision and JSON Mode (Microsoft Foundry)
 
-Azure OpenAI does not support the use of JSON mode and function calling in combination with image (vision) input and will return a `400 - model error`. Make sure the optional input parameters `ResponseFormat` and `FunctionCollection` are set to `empty` for all chat completion operations if you want to use vision with Azure OpenAI.
+Microsoft Foundry does not support the use of JSON mode and function calling in combination with image (vision) input and will return a `400 - model error`. Make sure the optional input parameters `ResponseFormat` and `ToolCollection` are set to `empty` for all chat completion operations if you want to use vision with Microsoft Foundry.
 
-### Chat Completions with Vision Response is Cut Off (Azure OpenAI)
+### Chat Completions with Vision Response is Cut Off (Microsoft Foundry)
 
-When you use Azure OpenAI, it is recommended to set the optional `MaxTokens` input parameter; otherwise, the response may be cut off. For more details, see the [Azure OpenAI Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/gpt-with-vision?tabs=rest%2Csystem-assigned%2Cresource#call-the-chat-completion-apis).
+When you use Microsoft Foundry, it is recommended to set the optional `MaxTokens` input parameter; otherwise, the response may be cut off. For more details, see the [Microsoft Foundry Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/gpt-with-vision?tabs=rest%2Csystem-assigned%2Cresource#call-the-chat-completion-apis).
 
 ### Attribute or Reference Required Error Message After Upgrade 
 
@@ -387,9 +338,9 @@ If you encounter an error caused by conflicting Java libraries, such as `java.la
 ## Read More {#read-more}
 
 * [Prompt Engineering – OpenAI Documentation](https://platform.openai.com/docs/guides/prompt-engineering)
-* [Introduction to Prompt Engineering – Microsoft Azure Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering)
-* [Prompt Engineering Techniques – Microsoft Azure Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/advanced-prompt-engineering?pivots=programming-language-chat-completions)
+* [Introduction to Prompt Engineering – Microsoft Foundry Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering)
+* [Prompt Engineering Techniques – Microsoft Foundry Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/advanced-prompt-engineering?pivots=programming-language-chat-completions)
 * [ChatGPT Prompt Engineering for Developers - DeepLearning.AI](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers)
 * [Function Calling - OpenAI Documentation](https://platform.openai.com/docs/guides/function-calling)
 * [Vision - OpenAI Documentation](https://platform.openai.com/docs/guides/vision)
-* [Vision - Azure OpenAI Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/gpt-with-vision)
+* [Vision - Microsoft Foundry Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/gpt-with-vision)

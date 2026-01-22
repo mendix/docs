@@ -52,7 +52,7 @@ For any additional feedback, send a message in the [#genai-connectors](https://m
 * [AI Model Training: What it is and How it Works](https://www.mendix.com/blog/ai-model-training/)
 * [What Are the Different Types of AI Models?](https://www.mendix.com/blog/what-are-the-different-types-of-ai-models/)
 * [OpenAI Using the ‘GenAI for Mendix’ Module](https://www.mendix.com/blog/openai-using-the-genai-for-mendix-module/)
-* [How to Configure Azure OpenAI Models in Mendix](https://www.mendix.com/blog/how-to-configure-azure-openai-models-in-mendix/)
+* [How to Configure Microsoft Foundry OpenAI Models in Mendix](https://www.mendix.com/blog/how-to-configure-azure-openai-models-in-mendix/)
 
 #### Building your own Connector
 

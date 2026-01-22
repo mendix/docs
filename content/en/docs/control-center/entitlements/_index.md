@@ -2,7 +2,7 @@
 title: "Entitlements"
 url: /control-center/entitlements/
 description: "Describes the Entitlements category in the Mendix Control Center."
-weight: 10
+weight: 30
 no_list: false 
 ---
 

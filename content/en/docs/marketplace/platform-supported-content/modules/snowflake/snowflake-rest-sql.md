@@ -14,12 +14,12 @@ The [Snowflake REST SQL connector](https://marketplace.mendix.com/link/component
 
 The Snowflake REST SQL connector supports the following:
 
-1. **Authentication:**
+* Authentication:
 
     * Key-pair authentication (using PKCS #8 standard RSA keys)
     * OAuth authentication
 
-2. **Functionality:** Execute SQL statements on Snowflake via REST calls from your Mendix application. These statements allow you to perform the following tasks:
+* Functionality: Execute SQL statements on Snowflake via REST calls from your Mendix application. These statements allow you to perform the following tasks:
 
     * Read data from Snowflake.
     * Write data to Snowflake.
@@ -54,11 +54,7 @@ To use the Snowflake REST SQL connector, you must also install and configure the
 
 * [Community Commons](https://marketplace.mendix.com/link/component/170) – This module is a required dependency for the Snowflake REST SQL connector.
 * [Encryption](https://marketplace.mendix.com/link/component/1011) – This module is a required dependency for the Snowflake REST SQL connector. The EncryptionKey constant must be set up in your application settings.
-* GenAI Commons module ver. 3.x from the [GenAI For Mendix](https://marketplace.mendix.com/link/component/227931) bundle – This module is a required dependency for the Snowflake Cortex Analyst.
-
-{{% alert color="info" %}}
-The Snowflake REST SQL connector currently requires version 3.x of the GenAI Commons module. Newer versions of the module are not supported yet.
-{{% /alert %}}
+* GenAI Commons module from the [GenAI For Mendix](https://marketplace.mendix.com/link/component/227931) bundle – Only required for the Snowflake REST Connector version 2.x. This module is a required dependency for the Snowflake Cortex Analyst.
 
 ### Licensing and Cost
 
@@ -215,6 +211,19 @@ This table maps Mendix attribute types to Snowflake data types, along with commo
 | DateTime | `TIMESTAMP_TZ` | TIMESTAMP_TZ / TEXT | Time zone-aware; stored in UTC. |
 | DateTime | `TIMESTAMP_LTZ` | TIMESTAMP_LTZ / TEXT | Local time zone; stored in UTC. |
 | DateTime | `TIMESTAMP_NTZ` | TIMESTAMP_NTZ / TEXT | No time zone; stored in UTC. |
+
+## Proxy Usage
+
+Since version 3.1.0, the Snowflake REST SQL Connector supports using a proxy to make your REST calls. You can use the new `ProxySettings` entity to enable a proxy by performing the following steps: 
+
+1. Create a **ProxySettings** object.
+2. Set the `Host` and `Port` attributes to the host of the proxy and the port on which the proxy is listening.
+3. Optional: Set the `User` and `Password` to authenticate against your proxy.
+4. Associate the **ProxySettings** to your **ConnectionDetails** object (when using the **POST_v1_ExecuteStatement** operation), or the **CortexConnection** object (when using the **CortexAnalyst** operation).
+
+Once configured, the connector automatically detects the `ProxySettings` object and routes REST requests through the specified proxy.
+
+ {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-rest-sql/ProxyExample.png" >}}
 
 ## Technical Reference
 

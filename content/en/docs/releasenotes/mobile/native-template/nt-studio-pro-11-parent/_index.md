@@ -9,3 +9,7 @@ These are the current Native Template versions for Studio Pro 11 in active devel
 
 * Native Template versions of [15](/releasenotes/mobile/nt-15-rn/) are compatible with apps built using the following versions of Studio Pro:
     * Studio Pro 11.0 and above.
+* Native Template versions of [16](/releasenotes/mobile/nt-16-rn/) are compatible with apps built using the following versions of Studio Pro:
+    * Studio Pro 11.5 and above.
+* Native Template versions of [17](/releasenotes/mobile/nt-17-rn/) are compatible with apps built using the following versions of Studio Pro:
+    * Studio Pro 11.6 and above.

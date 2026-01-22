@@ -149,6 +149,54 @@ The attribute can be of one of the following [data types](/refguide/data-types/)
 * Long
 * String
 
+## Label Section {#label}
+
+{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/label-section.png" alt="Label Section" class="no-border" >}}
+
+A label can be used to described the purpose of the widget to the user. The label is shown next to the widget in the user interface. If a label is configured, the widget will be rendered in the browser wrapped in a form group. See [Bootstrap documentation](https://getbootstrap.com/css/#forms).
+
+{{% alert color="info" %}}
+The position of the label in relation to the widget is configured in the **Form orientation** and **Label width (weight)** properties of the data container.
+{{% /alert %}}
+
+### Show Label
+
+This property determines whether the label is rendered and the widget is wrapped in a form group.
+
+### Label Caption
+
+This property is shown only when Show label is Yes. It specifies what text is rendered within a label.
+
+#### Text Template
+
+The template for the label can contain parameters that are written as a number between braces (for example, `{1}`). The first parameter has the number `1`, the second `2`, etc. Note that to use template parameters, the widget must be placed in the context of an entity (for example, inside a data container).
+
+#### Parameters
+
+For each parameter in the template, you define a source for the value. The value of the parameter will be inserted at the position of the parameter placeholder.
+
+##### Value Parameter Type
+
+When selected, the chosen value is used as the value of the parameter. The source of the value can be an attribute of an enclosing data container. Number and date value types offer formatting options.
+
+##### Expression Parameter Type
+
+When selected, the result of the given [expression](/refguide/expressions/) is used as the value of the parameter. The expression may use the variables listed in the expression editor, including:
+
+* `$currentObject`, representing the object of the closest enclosing data container.
+* The objects of any enclosing data container, available under the name of the widget that exposes them (for example `$dataView1`).
+* [Parameters](/refguide/page-properties/#parameters) and [variables](/refguide/page-properties/#variables) defined on the page or snippet.
+
+The expression provided is evaluated in the browser and, currently, does not support all the functions that are available in microflows. The autocomplete function will only list those functions which are supported.
+
+### Label Position
+
+This property can be configured in the following ways:
+
+* **Default** — The position of the label is determined by the read-only style configuration. In the control case, the label is positioned after the control; in the text case, it is positioned before the control.
+* **Before control** — The label is placed before the check box.
+* **After control** — The label is placed after the check box.
+
 ## Editability Section{#editability}
 
 {{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/editability-section.png" alt="Common Section" class="no-border" >}}
@@ -202,48 +250,9 @@ This property determines how the widget is rendered if it is read-only.
 | Inherited from snippet call      | Set to `Control` or `Text` by the containing data container of the snippet call, or `Text` when the snippet call is not enclosed by a data container. *(Default value for widgets outside a data container inside a snippet)* |
 | Control                          | Widget is displayed but disabled so the value cannot be modified.                                                                                                                                                             |
 | Text                             | Widget is replaced by a textual representation of the value.                                                                                                                                                                  |
-
-{{% alert color="info" %}}Read-only style is not supported on native mobile pages.{{% /alert %}}
-
-## Label Section {#label}
-
-{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/label-section.png" alt="Label Section" class="no-border" >}}
-
-A label can be used to described the purpose of the widget to the user. The label is shown next to the widget in the user interface. If a label is configured, the widget will be rendered in the browser wrapped in a form group. See [Bootstrap documentation](https://getbootstrap.com/css/#forms).
-
 {{% alert color="info" %}}
-The position of the label in relation to the widget is configured in the **Form orientation** and **Label width (weight)** properties of the data container.
+Read-only style is not supported on native mobile pages.
 {{% /alert %}}
-
-### Show Label
-
-This property determines whether the label is rendered and the widget is wrapped in a form group.
-
-### Label Caption
-
-This property is shown only when Show label is Yes. It specifies what text is rendered within a label.
-
-#### Text Template
-
-The template for the label can contain parameters that are written as a number between braces (for example, `{1}`). The first parameter has the number `1`, the second `2`, etc. Note that to use template parameters, the widget must be placed in the context of an entity (for example, inside a data container).
-
-#### Parameters
-
-For each parameter in the template, you define a source for the value. The value of the parameter will be inserted at the position of the parameter placeholder.
-
-##### Value Parameter Type
-
-When selected, the chosen value is used as the value of the parameter. The source of the value can be an attribute of an enclosing data container. Number and date value types offer formatting options.
-
-##### Expression Parameter Type
-
-When selected, the result of the given [expression](/refguide/expressions/) is used as the value of the parameter. The expression may use the variables listed in the expression editor, including:
-
-* `$currentObject`, representing the object of the closest enclosing data container.
-* The objects of any enclosing data container, available under the name of the widget that exposes them (for example `$dataView1`).
-* [Parameters](/refguide/page-properties/#parameters) and [variables](/refguide/page-properties/#variables) defined on the page or snippet.
-
-The expression provided is evaluated in the browser and, currently, does not support all the functions that are available in microflows. The autocomplete function will only list those functions which are supported.
 
 ## Formatting Section{#numeric-formatting}
 
@@ -328,19 +337,19 @@ There are two settings in the validation section which are described below:
 
 This property indicates whether this widget value should be validated and, if so, how. These are the possible options:
 
-* No validation – the data has to be the correct [data type](/refguide/data-types/) for the widget, but otherwise there is no further validation
-* A [predefined validation](#predefined-validation) – see description below
-* A [custom validation](#custom-validation) – see description below
+* No validation – The data has to be the correct [data type](/refguide/data-types/) for the widget, but otherwise there is no further validation.
+* A [predefined validation](#predefined-validation) – See description below.
+* A [custom validation](#custom-validation) – See description below.
 
 #### Predefined Validation{#predefined-validation}
 
 The possible values of a predefined validation are the following:
 
-* **Required** – can be used for values of *all* data types
-* **E-mail** – applies to *String* values
-* **Positive number** – applies to *Decimal*, *Integer*, and *Long* values
-* **Date in the future** – applies to *Date and time* values — compares the date *and time* to `[%CurrentDateTime%]`
-* **Date in the past** – applies to *Date and time* values — compares the date *and time* to `[%CurrentDateTime%]`
+* **Required** – Can be used for values of *all* data types.
+* **E-mail** – Applies to *String* values.
+* **Positive number** – Applies to *Decimal*, *Integer*, and *Long* values.
+* **Date in the future** – Applies to *Date and time* values — compares the date *and time* to `[%CurrentDateTime%]`.
+* **Date in the past** – Applies to *Date and time* values — compares the date *and time* to `[%CurrentDateTime%]`.
 
 #### Custom Validation{#custom-validation}
 
@@ -348,16 +357,16 @@ Custom validation is an expression that follows the [Microflow expression](/refg
 
 There are a number of variables you can use in your expression:
 
-* `$currentObject` – the current object
-* `$value` – variable or the current member (attribute or association) value
+* `$currentObject` – The current object.
+* `$value` – Variable or the current member (attribute or association) value.
 
 {{% alert color="info" %}}
 The expression can access objects of **all** the data containers enclosing the input widget and variables defined on the page or snippet. The objects are given the name of the widget they originate from (for example, `$dataView1`).
 {{% /alert %}}
 
-When a validation is set and it fails for this widget, the message you specify will be shown before the user can use the value in the app.
+When a validation is set and it fails for this widget, the message you specify will be shown before the user can use the value in the app:
 
-Default: *(none)*
+* Default validation message: *(none)*
 
 ### Message
 

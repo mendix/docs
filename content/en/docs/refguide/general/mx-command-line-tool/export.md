@@ -25,6 +25,7 @@ These are the `OPTIONS`:
 | --- | --- |
 | `-s, --include-snapshot` | Includes a snapshot in the app package. |
 | `-d, --package-dir` | Exports the package to the directory. |
+| `-k, --skip-managed-dependency-sync` | Do not synchronize managed dependencies; use existing files in `vendorlib` instead. |
 | `--help` | Displays the help screen. |
 
 For `TARGET-FILE`, specify the *.mpr* app you want to export.
@@ -104,6 +105,7 @@ These are the `OPTIONS`:
 | --- | --- |
 | `-s, --include-snapshot` | Includes a snapshot in the app package. |
 | `-d, --package-dir` | Exports the package to the directory. |
+| `-k, --skip-managed-dependency-sync` | Do not synchronize managed dependencies; use existing files in `vendorlib` instead. |
 | `--help` | Displays the help screen. |
 
 For `TARGET-FILE`, specify the *.mpr* app you want to export.

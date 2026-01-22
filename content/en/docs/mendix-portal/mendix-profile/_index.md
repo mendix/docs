@@ -12,12 +12,12 @@ aliases:
 
 ## Introduction
 
-Your Mendix Profile displays your activities on the Mendix Platform and includes details about your background. 
+Your Mendix profile displays your activities on the Mendix Platform and includes details about your background. 
 
 You can access your Mendix profile by clicking your picture in the upper-right corner of the Mendix Portal, then selecting **See Your Profile**. 
 
 {{% alert color="info" %}}
-By default, all newly created Mendix accounts come with their own Mendix Profile.
+By default, all newly created Mendix accounts come with their own Mendix profile.
 {{% /alert %}}
 
 ## Header {#header}
@@ -151,8 +151,8 @@ These are points you can gain through activity in the [Mendix Marketplace](https
 | Win a Mendix Hackathon! | 300 | N/A |
 | Reach the [Mendix MVP](https://www.mendix.com/mvp-program/) status | 300 | N/A |
 | Be the runner-up in a Mendix Hackathon | 150 | N/A |
-| Complete your Mendix Profile | 50 | N/A |
-| Make your Mendix Profile public | 50 | N/A |
+| Complete your Mendix profile | 50 | N/A |
+| Make your Mendix profile public | 50 | N/A |
 | Attend a Mendix Hackathon | 50 | N/A |
 | Successfully refer a friend to Mendix | 25 | N/A |
 | Invite a friend to Mendix | 5 | 50 |

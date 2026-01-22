@@ -36,4 +36,8 @@ Authorization: MxToken 7LJE…vk
 
 ## API Reference{#api-reference}
 
-{{< swaggerui src="/openapi-spec/pipelines.yaml"  >}}
+{{% alert color="warning" %}}
+You cannot call endpoints from the Mendix Pipelines API Swagger UI.
+{{% /alert %}}
+
+{{< swaggerui-disable-try-it-out src="/openapi-spec/pipelines.yaml"  >}}

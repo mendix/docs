@@ -139,6 +139,8 @@ Make sure you have downloaded the latest backup and deployment package before li
 
 4. Select the target node by clicking **Use this Node** and linking it to your app. The currently linked (temporary) app will unlink automatically and can be deleted.
 
+5. (Re)Deploy your app.
+
 For more information, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
 
 ### Changing the App URL

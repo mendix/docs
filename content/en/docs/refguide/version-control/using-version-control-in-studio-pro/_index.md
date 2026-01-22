@@ -223,7 +223,7 @@ You can revert changes in the **Changes** pane, from **Version Control** > **Rev
 You can also **Revert All Changes** while [merging](#merge). This will restore your app to the most recent commit, discarding changes creating by the merging process.
 {{% /alert %}}
 
-### Reverting a Previous Commit
+### Reverting a Previous Commit {#revert-previous-commit}
 
 Changes that have been committed and pushed to the server can never be deleted from the history. However, you can make another commit to revert the changes. This is called **Reverse commit** in Studio Pro.
 
@@ -331,36 +331,9 @@ The second method should be used if the first method is not possible for some re
 
 #### Merging Using Git in the Command Line
 
-For merging *.mpr* files using Git in the command line to work, it is necessary to attach *mx.exe* merge to Git as a driver.
+Merging using Git in the command line or a third-party tool is not supported after the introduction of [MPRv2](/refguide/troubleshoot-repository-size/#mpr-format). External tools cannot correctly merge the *.mpr* and *.mxunit* files, which can lead to a corrupted branch.
 
-When doing a **git merge** operation on two branches in the command line, Git attempts to merge the binaries of *.mpr* files, which does not work. You need to apply Studio Pro merge algorithm and that is where *mx.exe* as a driver is needed.
-
-Navigate to the *.gitconfig* file in C:/Users/[USER_NAME] and add the following:
-
-```text
-[core]
-  attributesfile = ~/.gitattributes
-[merge "custom"]
-  name = custom merge driver for specific files
-  driver = [MX.EXE_PATH] merge %O %A %B
-```
-
-`[MX.EXE_PATH]` should be replaced by the *mx.exe* path with only forward slashes pointing to a drive using `/C/` instead of `C:/`.
-
-You can also configure the Git driver locally per repository using the following commands:
-
-```text
-git config merge.custom.name "custom merge driver for specific files"
-git config merge.custom.driver "[MX.EXE_PATH] merge %O %A %B"
-```
-
-After setting up the driver either locally or globally, create a *.gitattributes* file in the same folder with the following contents:
-
-```text
-*.mpr merge=custom
-```
-
-Save the files and now when **git merge** is run and it involves *.mpr* files, the *mx.exe* merge will run Studio Pro merge algorithm before Git finishes the merge.
+In a future release, we are planning to introduce a separate command as part of the [mx Command-Line Tool](/refguide/mx-command-line-tool/) to allow merging on the command line.
 
 ### Branching Best-Practices {#branching-best-practices}
 

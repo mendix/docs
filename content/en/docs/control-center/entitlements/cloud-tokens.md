@@ -96,6 +96,26 @@ These tables show how many Mendix Cloud Tokens each CRP requires:
 
 {{% /alert %}}
 
+## GenAI Resource Packs {#grps}
+
+GenAI Resource Packs provide turn-key access to Generative AI technology, delivered through Mendix Cloud. For the technical details of each GenAI Resource Pack (GRP), refer to [GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/).
+
+| GenAI Model Resource Pack – Anthropic Claude Sonnet | Mendix Cloud Tokens |
+| --- | --: |
+| S | 30 |
+| M | 60 |
+| L | 120 |
+
+| GenAI Model Resource Pack – Cohere Embed | Mendix Cloud Tokens |
+| --- | --: |
+| S | 6 |
+| M | 12 |
+| L | 24 |
+
+| GenAI Knowledge Base Resource Packs | Mendix Cloud Tokens |
+| --- | --: |
+| Standard | 48 |
+
 ## Key Takeaways
 
 * Mendix Cloud Tokens are a specific type of Token used to access Cloud Resources in the Mendix Platform.

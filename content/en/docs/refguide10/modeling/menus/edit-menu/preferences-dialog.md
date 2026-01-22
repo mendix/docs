@@ -192,7 +192,7 @@ Changing these values for another application will also affect the commits made 
 #### Enable Current Windows User Authentication {#enable-windows-authentication}
 
 {{% alert color="info" %}}
-This setting is available in Studio Pro MTS versions 10.6.21 and above, 10.12.14 and above, 10.18.3 and above.
+This setting is available in Studio Pro versions 10.6.x (10.6.21 and above), 10.12.x (10.12.14 and above), and 10.18.3 and above.
 {{% /alert %}}
 
 When this option is selected, the application automatically uses credentials of the currently logged-in Windows user to authenticate and connect to the on-premises Git server. This feature streamlines the authentication process by eliminating the need for users to manually enter their credentials, enhancing both security and user convenience. By leveraging Windows authentication, organizations can ensure that access to the Git server is seamlessly integrated with their existing IT infrastructure, providing a smooth and efficient workflow for development teams.
@@ -245,10 +245,6 @@ This option allows user to choose between Studio Pro themes: **Auto (System them
 
 This option sets the default page editor mode that your page opens in: **Structure mode** (the default) or **Design mode**. For more information on page editor modes, see the [Page Editor Modes](/refguide10/page/#page-editor-modes) section in *Page*.
 
-### Rendering {#rendering}
-
-Hardware and driver issues may cause performance problems when running Studio Pro. These issues can appear in form of dialog boxes opening and closing much more slowly than expected, and general slowness of the UI. In case the hardware problems cannot be solved, it is possible to mitigate these issues by turning the **Enable software rendering mode** setting on. Enabling this setting requires a restart of Studio Pro to take effect. Running the application with this setting on may increase the CPU usage.
-
 ### Language {#language}
 
 This option allows you to change the user interface language you work in while using Studio Pro. At this time, English, Japanese, Chinese, Korean, and Brazilian Portuguese (Beta) are supported. You must restart Studio Pro in order to use this feature.
@@ -273,6 +269,12 @@ The closing policy is not applied to tabs with unsaved changes.
 This setting allows you to move forward and backward through your editing history to show the documents you have recently worked on. This feature is enabled by default. 
 
 ## Advanced Tab
+
+### Rendering {#rendering}
+
+Hardware and driver issues may cause performance problems when running Studio Pro. These issues can appear in form of dialog boxes opening and closing much more slowly than expected, and general slowness of the UI. If case the hardware problems cannot be solved, it is possible to mitigate these issues by turning the **Enable software rendering mode** setting on. This option is available for Native UI and Web Content. For Web Content, you can select **Auto**, which enables software rendering mode automatically when running on Parallels or another virtual machine.
+
+Enabling this setting requires a restart of Studio Pro to take effect. Running the application with this setting on may increase the CPU usage.
 
 ### Proxy Server
 

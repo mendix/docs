@@ -83,6 +83,7 @@ For easy configuration, the SAML module offers the following:
 * The SAML module keeps a log/audit trail of login attempts. These can be downloaded.
 * The SAML module allows you to have an SSO connection with multiple SAML IdPs. Each IdP can have its own keypair.
 * SAML module versions 3.5.0 and above (compatible with Mendix version 9.22.0 and above) support multiple keypairs.
+* Starting from version 4.2.0, the SAML module supports multi-instance apps (horizontal scaling).
 
 ### Limitations{#limitations}
 
@@ -203,9 +204,9 @@ If you use this method, do not forget to set the **SSOLandingPage** constant to 
 
 The table below introduces you to several key updates when you upgrade the SAML module from V3.x to V4.x.
 
-| Feature | Changes in Version 4.0.0 |
+| Feature | Changes in Version 4.X |
 | --- | --- |
-| SSO Configuration | You can now perform SSO configuration during design time and deploy time. <br>Introduced deploy-time configuration and `Custom_Create_IdPConfiguration` microflow for customized SSO configuration. |
+| SSO Configuration | You can perform SSO configuration during design time and deploy time. <br>For versions below 4.2.0, the module introduced deploy-time configuration and `Custom_Create_IdPConfiguration` microflow for customized SSO configuration. <br> From version 4.2.0 onwards, you can instead use the `IdPConfiguration_MicroflowName` constant and configure your custom microflow name in it. |
 | Admin Screen Restructuring | The **Mapping** tab has been removed. Equivalent configurations can now be completed on the **User Provisioning configuration** tab. <br> `evaluateMultipleUserMatches` microflow is now moved to the **User Commons**. |
 | User Commons Module Integration | 1. From versions 4.0.0 and above, SAML2.0 is compatible with the UserCommons v2.0.0. <br> 2. The SAML module now integrates with the User Commons module, offering a more uniform experience with the OIDC SSO module. <br> 3. A new method for creating custom user provisioning microflows using User Commons simplifies development and allows you to automatically set the user-type for users <br> 4. Deprecated: SAML 3.x provisioning flows will be unsupported in future versions. It’s recommended to create new provisioning flows using User Commons after upgrading.<br> 5. From UserCommons 2.0.0, new users without IdP-specified time zone or language will use default App settings; existing users retain their previously set values.|
 | InCommon Federation Support | Pre-configured support for InCommon Federation has been removed. You now need to create custom user provisioning microflows in version 4.0.0 |
@@ -286,7 +287,9 @@ After configuring the eight constants, you need to deploy the application. For d
 
 The [Easy Default Flow](#easy-flow) section above, gives you an overview of the default settings. If you have requirements to deviate from these defaults, for example, to enable Force Authentication, change encryption settings from the default, or support multiple Identity Providers (IdPs), Non-default configuration setup offers advanced options for your SAML integration needs. With these features, you can customize the SAML configuration to meet your specific requirements.
 
-In this configuration, you have several options to customize the Identity Provider (IdP) settings. Firstly, you can configure the IdP using constants. Additionally, the SAML module supports further customization of the IdP configuration through the implementation of a custom microflow called `Custom_Create_IdPConfiguration`. To do this, create a new object in the `Custom_Create_IdPConfiguration` microflow and add your own custom values to it. `Dep_IdPConfiguration.return` microflow returns a list of configured IdPs, which the SAML module then uses to generate the necessary SSO configurations for multiple IdPs.
+In this configuration, you have several options to customize the Identity Provider (IdP) settings. Firstly, you can configure the IdP using constants. Additionally, the SAML module supports further customization of the IdP configuration. From version 4.2.0 onward, you can define your custom microflow name in the `IdPConfiguration_MicroflowName` constant. The custom microflow must return a list of configured IdPs (`Dep_IdPConfiguration.return`), which the SAML module then uses to generate the necessary SSO configurations for multiple IdPs. The default value of the `IdPConfiguration_MicroflowName` constant is `SAML.Default_CreateIDPConfiguration`.
+
+In versions earlier than 4.2.0, IdP customization was supported through the implementation of a custom microflow called `Custom_Create_IdPConfiguration`. However, this microflow has been deprecated as of version 4.2.0.
 
 In this configuration, users have the flexibility to introduce their own constants by creating custom IdP configurations. To enable this configuration, you need the IdP metadata obtained by creating an SSO app in the IdP without complete dependency on SP metadata.
 
@@ -310,6 +313,8 @@ The below table shows you the different attributes and their values for quick re
 | IDPConfiguration(Non-Persistable entity) | Description | Default Value |
 | --- | --- | --- |
 | **Alias** (mandatory) | This represents IdPconfiguration Alias | |
+| **IdPMetadataURL** (mandatory) | This represents the URL of the IdPMetadataURL | |
+| **IdPConfiguration_MicroflowName**  | This constant specifies a custom microflow that returns a list of IdP configurations and is used to create SAML IdP configurations at deploy time. | `SAML.Default_CreateIDPConfiguration` |
 | **ResponseProtocolBinding**  | Response protocol binding contains a caption value of SAML20.Enum_ProtocolBinding | POST_BINDING |
 | **EnableAssertionConsumerServiceIndex** | EnableAssertionConsumerService Concept contains caption value of SAML20.Enum_AssertionConsumerServiceIndex | NO |
 | **AssertionConsumerServiceIndex** | This should hold the same value for the SAML configuration and the IdPs. | 0 |
@@ -321,7 +326,6 @@ The below table shows you the different attributes and their values for quick re
 | **InSessionServiceName** | It represents the In-Session Attribute Consuming Service name | Service2 |  
 | **InSessionAttributeConsumingServiceIndex** |  It represents the In-Session Attribute Consuming Service Index | 2 | 
 | **InSessionDep_SPAttribute_Dep_IdPConfiguration**| It will display the details of Value, Name, IsRequired details | | 
-| **IdPMetadataURL** (mandatory) | This represents the URL of the IdPMetadataURL | | 
 | **PreferredEntityDescriptor** | It represents the entityID of the EntityDescriptor | | 
 | **AllowIdpInitiatedAuthentication** | Authentication should start at this application, which generates an ID. The authenticated response should match this generated Id. If no request can be found that matches the response Id the information is rejected. If your IdP can initiate a new transaction (with a new or no Id) and you want to allow this you can check this box. | FALSE |
 | **EnableForceAuthentication** | will force the SAML IdP to (re)authenticate end-users, even if they are already signed in at the SAML IdP. | FALSE |
@@ -463,14 +467,20 @@ You can set up custom user provisioning by selecting the **IdP Configuration** t
     * The IdP Attribute is one of the fixed claims supported by the [OIDC SSO](/appstore/modules/oidc/) module.
     * **IdP Attributes**(Claims) cannot be of type enum, autonumber, or an association.
 
-3. Optionally, you can use the custom logic in the **User Provisioning**. In the **Custom UserProvisioning** field, select a microflow you want to run for custom user provisioning. The custom microflow name must begin with the string `UC_CustomProvisioning` and requires the following parameters:
+3. Optionally, you can use the custom logic in the **User Provisioning**. In the **Custom UserProvisioning** field, select a microflow you want to run for custom user provisioning. The custom microflow name must begin with the string `UC_CustomProvisioning`. Starting from version 4.0.3 and 4.1.2 of the module, you can find a reference microflow (`SAML.UC_CustomProvisioning`) in the **MOVE ME** folder. The custom microflow requires the following parameters:
 
-    1. **UserInfoParameter(UserCommons.UserInfoParam)**: A Mendix object containing user claims information through its associated objects. You can use this  parameter to retrieve user provisioning configuration information.
+    1. **UserInfoParameter(UserCommons.UserInfoParam)**: A Mendix object containing user claims information through its associated objects. You can use this parameter to retrieve user provisioning configuration information.
     2. **User(System.User)**: A Mendix object representing the user to be provisioned. Ensure that the selected microflow matches this parameter signature.
 
     The microflow must return a **System.User** object to ensure proper user provisioning and updates. It will be executed after user creation or update of user. However, starting from version 2.0.0 of the UserCommons module, this is no longer mandatory. If you have added a new microflow, you will need to refresh the module containing your microflow as described in the [Mx Model Reflection](/appstore/modules/model-reflection/). This selection can be blank if you do not want to add custom logic.
 
-4. Click **Save** to save the configuration.
+4. To facilitate upcoming enhancements to the platform, you need to perform some configuration so that Mendix can correctly identify end users. Correct identification is crucial for ensuring consistent and accurate end user metering and deduplication of end users across multiple applications in your landscape. For this reason, the UserCommons module features the **User Metering Named Identifier** entity in version 2.2.0 and above. If you have a multi-app internal user license or an external user license, you must persist the same value for the same end user across different apps, regardless of which modules you use. In most cases, the end user's email address is a good choice. Currently, Mendix uses the `system.user.name` to identify users; it will use the **User Metering Named Identifier** instead, unless it is not populated. For accurate user metering, you do not need to change what value is persisted in the `system.user.name`. You can continue to persist whatever value you are using there today. The `system.user.name` is often used for technical user identifiers. Both `system.user.name` and `userCommons.NamedUserIdentifier.value` have a uniqueness constraint for the named user identifier. This means an app cannot have two users who share the same identifier value.
+
+    * If you want to use a user attribute other than email address for the **User Metering Named Identifier**, you can configure it on the **UserProvisioning** tab:
+
+    * Select the identifier in the **User Metering Named Identifier** field to be used for metering.
+
+5. Click **Save** to save the configuration.
 
 ### Custom Behavior
 
@@ -514,29 +524,28 @@ Page URLs and Microflow URLs are supported with SAML for Mendix version 10.6 and
 1. In the **Runtime** tab of the **App Settings**, configure the page **URL prefix** to **link** instead of the default **P** to maintain compatibility with existing URLs.
 2. Ensure to remove the Deep Link module from your app to start the app successfully. For more information, see the [Migrating to Page and Microflow URLs](/appstore/modules/deep-link/#migrate-page-micro) section of the *Deep Link*.
 
-#### Steps for SAML Versions Below v3.6.15 and v4.0.0
-
-1. To implement the SSO redirection, add the following lines of code to your login page (for example, `login.html`):
-    * Extract the return URL: `var returnURL = window.location.hash.substring(1) + window.location.search;`
-    * For automatic redirection: use `window.onload` to automatically redirect users to the SSO login page.
-    `window.location.href = 'sso/login' + (returnURL ? '?cont=link' + encodeURIComponent(returnURL) : '');` or, 
-    * For manual redirection: add an onclick event to the button that manually triggers the SSO login.
-    `this.href = 'sso/login' + (returnURL ? '?cont=link' + encodeURIComponent(returnURL) : '');`
-2. To allow the end users to navigate to the desired page, URL can be formed as follows:
-    * If a single IdP is configured, the URL will be the base URL of your application followed by `SSO/login?cont={page/Microflowurl}`.
-    For example, `http://localhost:8080/SSO/login?cont=link/pagepath`.
-    * If Multiple IdPs are configured, you can specify which IdP should be used by adding the alias (MyIdPAlias) `SSO/login?_idp_id={MyIdPAlias}&cont={page/Microflowurl}`.
-    For example, `http://localhost:8080/SSO/login?_idp_id=Okta&cont=link/pagepath`.
-
 #### Steps for SAML Versions above v3.6.17 and v4.0.1
 
 1. To use the Page URL functionality, replace the content of *login.html* with the content of *login-with-mendixsso-automatically.html* (located in the **resources** > **mendixsso** > **templates** folder) without changing the file name. 
 2. To implement the SSO redirection, replace the code in the `<script>` tag your login page (for example, *login.html*) with the following code:
+
     * For automatic redirection: use `window.onload` to automatically redirect users to the SSO login page.
-    `const returnURL = encodeURIComponent(window.location.search+window.location.hash);`
-     `self.location = '/SSO/login?cont='+returnURL;`
+
+    ```javascript
+    window.onload = function () {
+    const returnURL = encodeURIComponent(window.location.search + window.location.hash);
+    location.replace('/SSO/login?cont=' + returnURL);
+    };
+    ```
+
     * For manual redirection: add an onclick event to the button that manually triggers the SSO login.
-    `window.location.href='/SSO/login?cont=' + encodeURIComponent(window.location.search + window.location.hash);`
+
+    ```javascript
+    function SSOlogin() {
+    const returnURL = encodeURIComponent(window.location.search + window.location.hash);
+    location.replace('/SSO/login?cont=' + returnURL);
+    }
+    ```
 
 Once the above changes are applied, end users can directly navigate to the desired page. If not logged in, they will be redirected to the IdP login page for authentication. After successful log in, they will be directed to the desired page using page and microflow URLs.
 

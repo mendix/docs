@@ -2,7 +2,7 @@
 title: "Partner Solutions"
 url: /appstore/partner-solutions/
 description: "Presents details on the partner solutions available in the Mendix Marketplace."
-weight: 6
+weight: 8
 no_list: false
 description_list: true
 ---

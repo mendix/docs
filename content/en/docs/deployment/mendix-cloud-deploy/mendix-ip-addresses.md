@@ -78,9 +78,9 @@ For Mendix apps deployed to the Kubernetes infrastructure:
 
 To find whether your app uses Kubernetes or Cloud Foundry, go to [Apps](https://sprintr.home.mendix.com/link/myapps) and check the **Infrastructure** label for your environment.
 
-### Global Platform {#global-platform-ips}
+### Mendix Portal {#global-platform-ips}
 
-Some services running on our global platform infrastructure (such as the PDF Document Generation service) use a fixed set of inbound and outbound IP addresses. If you use these services and you apply IP restrictions to your app, you must ensure that the IP addresses listed below are allowed in your policy.
+Some services running on Mendix Portal (such as the PDF Document Generation service) use a fixed set of inbound and outbound IP addresses. If you use these services and apply IP restrictions to your app, you must ensure that the IP addresses listed below are allowed in your policy.
 
 {{% alert color="info" %}}
 While these IP addresses are static, there may still change under exceptional circumstances. In these cases, a notification will be listed on [Mendix Platform Status](https://status.mendix.com) at least 48 hours ahead of time.

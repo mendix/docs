@@ -19,10 +19,8 @@ At the top of the page, you can find key information about your app, such as its
 On the right side of the page, you can find the following information about your app:
 
 * The size of your **Team** and your team members. Up to 5 team members can be displayed here at a time.
-* The name of the **Company** owning the app.
-* The **Deployment Provider** where your app is deployed, and, if the target is the public Mendix Cloud, the **License State** of the app.
-* The date of the **Last Commit to the Main Line** of your app. This is only available if you have access to the app on the Team Server.
-* The **Mendix Version** of your app on main line. This is only available if you have access to the app on the Team Server.
+* The **Project Details** section, which displays the categories assigned to the project. The assigned categories allow you to easily classify and search apps on the [Apps](/developerportal/) page.     
+    If you have the **App Settings** permission, you can change the assigned categories on the [Settings](/developerportal/general-settings/) page.
 
 Click **Invite someone to your team** ({{% icon name="add-circle" %}}) to invite new members to your team directly. 
 

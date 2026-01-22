@@ -10,7 +10,7 @@ This how-to describes how to show a simple pop-up notification in Studio Pro.
 
 ## Prerequisites
 
-This guide uses the results of [Get Started with the Web Extensibility API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/getting-started/). Please complete that how-to before starting this one.
+This how-to uses the results of [Get Started with the Web Extensibility API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/getting-started/). Make sure to complete that how-to before starting this one.
 
 ## Showing a Notification
 
@@ -76,6 +76,6 @@ The show method has the following parameters:
 
 ## Extensibility Feedback
 
-If you would like to provide us additional feedback, you can complete a small [survey](https://survey.alchemer.eu/s3/90801191/Extensibility-Feedback).
+If you would like to provide additional feedback, you can complete a small [survey](https://survey.alchemer.eu/s3/90801191/Extensibility-Feedback).
 
 Any feedback is appreciated.

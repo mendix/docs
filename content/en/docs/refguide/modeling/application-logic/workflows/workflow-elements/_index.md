@@ -33,7 +33,7 @@ The elements of this category are described in the table below:
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/parallel-split.png" alt="Parallel Split" class="no-border" >}} | [Parallel split](/refguide/parallel-split/)  | Adds two parallel paths to your workflow.                    |
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/jump.png" alt="Jump Activity" class="no-border" >}} | [Jump](/refguide/jump-activity/)             | Allows you to jump to other activities in the workflow.      |
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/wait-for-notification.png" alt="Wait for notification activity" class="no-border" >}} | [Wait for notification](/refguide/wait-for-notification/)             | Allows you to suspend a workflow’s execution until the workflow is notified.      | 
-| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/end-event.png" alt="End event" class="no-border" >}} | End event                      | Ends the path of the workflow                                |
+| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/end-event.png" alt="End event" >}} | [End event](/refguide/end-event-in-workflows/)           | Ends the path of the workflow.                                |
 
 {{% alert color="info" %}}
 You can add customized activities to this section if you use the **Expose as a workflow action** setting in microflows. For more information see the [Expose as Workflow Action](/refguide/microflow/#expose-as-workflow-action) section in *Microflow Properties*.

@@ -14,6 +14,10 @@ SCIM is an abbreviation for System for Cross-domain Identity Management; a proto
 
 The SCIM module allows you to integrate your app with the Joiner, Mover, Leaver (JML) process in your organization. It enables the assignment of tasks to users before their first login to the app. Additionally, based on the information in your IdP (for example, user groups), the SCIM module automatically creates and deactivates users in your app. This functionality helps you to control Mendix user licensing costs.
 
+{{% alert color="warning" %}}
+SCIM module versions 1.0.0 to 2.0.0 were released as protected modules. Starting from version 3.0.0, the module is unprotected, and Studio Pro treats this unprotected version as a new module within your app model. Direct migration to the unprotected version of the module is not supported. As a result, transitioning requires you to remove the existing SCIM module and configure version 3.0.0 as a new module.
+{{% /alert %}}
+
 {{% alert color="info" %}}
 Before you include the SCIM module in your app, you need to check if your IdP supports SCIM protocol. If you want to integrate with an on-premises AD or similar, you may need to use the [LDAP module](/appstore/modules/ldap/) instead.
 {{% /alert %}}
@@ -57,6 +61,7 @@ If you are using the SCIM module in combination with Entra ID and OIDC SSO, you 
 * Each application within your organization using the SCIM module must undergo a separate configuration. This allows the selection of the right target group of users for each app.
 * Synchronization of users from multiple SCIM clients is currently in beta.
 * The module supports deployment-time configuration using constants, eliminating a need for runtime configuration by a local admin user.
+* The SCIM module simplifies the deletion of all (test) users provisioned by a SCIM (test) client, and then the IdP SCIM test client itself.
 
 ### Limitations
 
@@ -65,7 +70,6 @@ The SCIM module has the following limitations:
 * The SCIM module does not sync groups (or group memberships) to your app. This means you cannot use the SCIM module to assign user roles to your app’s users. Instead, you can assign user roles using the features offered by [SAML SSO](/appstore/modules/saml/) or [OIDC SSO](/appstore/modules/oidc/) modules.
 * If you want to do **Provision on demand** from Entra ID to test the SCIM integration of your app you cannot trigger a partial sync based on a group. This will trigger Entra ID to invoke a `/groups` endpoint, which is not yet supported.
 * The module does not support the development of a SCIM client application.
-* By default, the SCIM module’s admin screen is displayed in English. Users cannot add additional languages to the module, as it is protected and does not support language modification. 
 * Multiple clients can be configured only at runtime via the admin screen.
 
 ### SCIM Protocol Adherence
@@ -131,13 +135,13 @@ If you are using Mendix version 10.21.1, use User Commons module version 2.1.0 o
 This section provides an overview of updates for the SCIM and UserCommons modules across different versions. It includes several key updates to ensure a smooth transition while migrating to higher module versions.
 
 {{% alert color="info" %}}
-When upgrading to version 2.0.0 of the SCIM module, ensure you are also using version 2.0.0 of the UserCommons module.
+When upgrading to version 4.0.0 of the SCIM module, ensure you are also using version 2.0.0 of the UserCommons module.
 {{% /alert %}}
 
 | Mendix Version | SCIM Module Version | UserCommons Version | SCIM Information|
 | --- | --- | --- | --- |
-| 10.12.10 and above | 2.0.0 | 2.0.0 | SCIM module is ready for the React client. |
-| 9.24.2 and above | 1.0.2 | 1.0.2 | – |
+| 10.24 LTS and above | 4.0.1 | 2.2.0 | Compatible with 11.6 MTS. SCIM module is ready for the React client. |
+| 9.24 LTS and above | 3.0.0 | 1.0.2 | – |
 
 ## Configuration
 
@@ -193,11 +197,22 @@ For reference, the table below gives an overview of attribute mapping when using
 | **SCIM payload** (IdP Attribute) | **Configured Entity Attribute** | **Typical value with Okta** (IdP Attribute) | **Typical value with EntraID** (IdP Attribute) |
 | --- | --- | --- | --- |
 | externalID | Name | 00ctc4pufr85d7 | ObjectID (configured, non-default) For example, `550e8400-e29b-41d4-a716-446655440000` |
-| familyName| lastname | Doe | Doe John |
-| givenName| firstname | John |  |
-| emails| Email | `john.doe@companyA.com` | `johndoe@companyA.com` |
-| userName| FullName | `johndoe@companyA.com` | `johndoe@companyA.com` |
-| active| Active | true | true |
+| familyName | lastname | Doe | Doe |
+| givenName | firstname | John | John |
+| emails | Email | `john.doe@company.com` | `johndoe@company.com` |
+| userName | FullName | `johndoe@company.com` | `johndoe@company.com` |
+| active | Active | true | true |
+| displayName | DisplayName | John Doe | John Doe |
+| middleName | MiddleName | William | William |
+| honorificPrefix | HonorificPrefix | Mr. | Mr. |
+| honorificSuffix | HonorificSuffix | Jr. | Jr. |
+| nickName | NickName | Johnny | Johnny |
+| profileUrl | ProfileUrl | https://www.linkedin.com/in/john-doe-12345678/ | https://www.linkedin.com/in/john-doe-12345678/ |
+| title | Title | Mr. | Mr. |
+| preferredLanguage | PreferredLanguage | en-US | en-US |
+| timeZone | TimeZone | CET | CET |
+| userType | UserType | External | External |
+| locale | Locale | en-US | en-US |
 
 {{% alert color="info" %}}
 The SCIM module only supports the IdP attributes (claims) listed in the table above. Any other claims in the SCIM payload will be ignored.
@@ -236,7 +251,7 @@ Ensure that only legitimate SCIM clients can interact with your app via the SCIM
 
     * **API Key**: Used as a token for header-based authentication. IdP will send this as the authorization header parameter in the request.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/scim/alias.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/scim/alias-api-key.png" >}}
 
 2. Configuring API-Key via Pipeline
 
@@ -246,7 +261,7 @@ Another option is to generate an API key yourself and submit it to the SCIM modu
 
 #### User Provisioning
 
-In the **Provisioning** tab of the SCIM server configuration, you need to configure the following fields:
+In the **Provisioning** section of the SCIM server configuration, you need to configure the following fields:
 
 * **Custom user Entity (extension of System.User)**: the entity in which you will store and look up the user account. If you are using the Administration module this would be `Administration.Account`.
 * **The attribute where the user principal is stored** (primary attribute): unique identifier associated with an authenticated user.
@@ -257,28 +272,40 @@ In the **Provisioning** tab of the SCIM server configuration, you need to config
     * By default, the value is set to ***Internal***.
 * **Attribute Mapping**: under **Attribute Mapping**, select an **IdP Attribute** (claim) for each piece of information you want to add to your custom user entity. Specify the **Configured Entity Attribute** where you want to store the information.
 
-Note the following:
+    Note the following:
 
-* You cannot use the IdP claim which is the primary attribute identifying the user and you cannot use the attribute you set in **The attribute where the user principal is stored**.
-* You can map only one IdP claim to a **Custom user Entity** attribute.
-* The **IdP Attribute** is one of the fixed claims supported by the SCIM module.
-* **IdP attribute** (Claim) cannot be of type enum, autonumber, or an association.
-* Use custom logic in the **User Provisioning** (Optional) – In **Custom UserProvisioning**, select a microflow you want to run for custom user provisioning.
+    * You cannot use the IdP claim which is the primary attribute identifying the user and you cannot use the attribute you set in **The attribute where the user principal is stored**.
+    * You can map only one IdP claim to a **Custom user Entity** attribute.
+    * The **IdP Attribute** is one of the fixed claims supported by the SCIM module.
+    * **IdP attribute** (Claim) cannot be of type enum, autonumber, or an association.
+    * Use custom logic in the **User Provisioning** (Optional) – In **Custom UserProvisioning**, select a microflow you want to run for custom user provisioning.
 
-The custom microflow name must begin with the string `UC_CustomProvisioning` and requires the following parameters:
+* The custom microflow name must begin with the string `UC_CustomProvisioning`. Starting from version 4.0.0, you can find a reference microflow (`SCIM.UC_CustomProvisioning`) in the **MOVE ME** folder. The custom microflow requires the following parameters:
 
-1. **UserInfoParameter(UserCommons.UserInfoParam)**: A Mendix object containing user claims information through its associated objects. You can use this  parameter to retrieve user provisioning configuration information.
-2. **User(System.User)**: A Mendix object representing the user to be provisioned. Ensure that the selected microflow matches this parameter signature.
+    1. **UserInfoParameter(UserCommons.UserInfoParam)**: A Mendix object containing user claims information through its associated objects. You can use this  parameter to retrieve user provisioning configuration information.
+    2. **User(System.User)**: A Mendix object representing the user to be provisioned. Ensure that the selected microflow matches this parameter signature.
 
- The microflow must return a **System.User** object to ensure proper user provisioning and updates. It will be executed after user creation or update of user. However, starting from version 2.0.0 of the UserCommons module, this is no longer mandatory. If you have added a new microflow, you need to refresh the module containing your microflow as described in the [Mx Model Reflection](/appstore/modules/model-reflection/).
+    The microflow must return a `System.User` object to ensure proper user provisioning and updates. It will be executed after user creation or update of user. However, starting from version 2.0.0 of the UserCommons module, this is no longer mandatory. If you have added a new microflow, you need to refresh the module containing your microflow as described in the [Mx Model Reflection](/appstore/modules/model-reflection/). The selection can be blank if you do not want to add custom logic.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/scim/user_commons.png" class="no-border" >}}
+* To facilitate upcoming enhancements to the platform, you need to perform some configuration so that Mendix can correctly identify end users. Correct identification is crucial for ensuring consistent and accurate end user metering and deduplication of end users across multiple applications in your landscape. For this reason, the UserCommons module features the **User Metering Named Identifier** entity in version 2.2.0 and above. If you have a multi-app internal user license or an external user license, you must persist the same value for the same end user across different apps, regardless of which modules you use. In most cases, the end user's email address is a good choice. Currently, Mendix uses the `system.user.name` to identify users, it will use the **User Metering Named Identifier** instead, unless it is not populated. For accurate user metering, you do not need to change what value is persisted in the `system.user.name`. You can continue to persist whatever value you are using there today. The `system.user.name` is often used for technical user identifiers. Both `system.user.name` and `userCommons.NamedUserIdentifier.value` have a uniqueness constraint for the named user identifier. This means an app cannot have two users who share the same identifier value.
 
-This selection can be blank if you do not want to add custom logic. Save this configuration. Double-click on the **Alias** name and you will be able to copy the generated **API Key**.
+    * If you want to use a user attribute other than email address for the **User Metering Named Identifier**, you can configure it on the **UserProvisioning** tab:
+
+    * Select the identifier in the **User Metering Named Identifier** field to be used for metering.
+
+{{< figure src="/attachments/appstore/platform-supported-content/modules/scim/usercommons.png" >}}
+
+Save this configuration. Double-click on the **Alias** name and you will be able to copy the generated **API Key**.
+
+#### Deleting Users and Clients
+
+The SCIM Module supports deleting all users provisioned by an IdP using the **Delete All Users** button in the **IdP Configuration**. After you have deleted all the associated users, you can delete the IdP using the **Delete** button. This is particularly convenient when you are moving your app to production and want to delete all test users created during development and testing, without loosing other data in your application.
+
+{{< figure src="/attachments/appstore/platform-supported-content/modules/scim/delete-test-users.png" >}}
 
 ### Deploy-time Configuration {#deploy-time}
 
-Starting from version 1.0.2, you can configure the SCIM module using app [constants](https://docs.mendix.com/refguide/constants/) instead of the app administration pages. As an app developer that uses SCIM, you can set default values. These values can be overridden at deploy-time using the app constants.
+Starting from version 3.0.0, you can configure the SCIM module using app [constants](https://docs.mendix.com/refguide/constants/) instead of the app administration pages. As an app developer that uses SCIM, you can set default values. These values can be overridden at deploy-time using the app constants.
 
 To enable app constants for configuring the SCIM module, set your app to run the after-startup microflow in the OIDC module (`SCIM.ASU_StartUp`).
 
@@ -289,12 +316,15 @@ Use the following security best practices when setting up your constants:
 
 #### Customizing Default Deploy-time Configuration
 
+In this configuration, you have several options to customize the Identity Provider (IdP) settings. Firstly, you can configure the IdP using constants. Additionally, the SCIM module supports further customization of the IdP configuration through the implementation of a custom microflow. Use the `IdPConfiguration_MicroflowName` constant and configure your custom microflow name in it. The custom microflow must return a list of configured IdPs (`Dep_IdPConfiguration.return`), which the SCIM module then uses to generate the necessary IdP Configurations for multiple IdPs. The default value of the `IdPConfiguration_MicroflowName` constant is `SCIM.Default_CreateIDPConfiguration`.
+
 The table below lists all supported constants. Mandatory constants must be set at deploy-time, while optional constants can typically be set at design time but, if necessary, can be overridden at deploy-time.
 
 | Constants | Description | Mandatory/Optional | Default Value |
 | --- | --- | --- | --- |
 | `Default_APIKey_Value` | **API Key** (token) for the authentication | Mandatory | No default value |
 | `Default_IdPConfiguration_Name` | default IdP Configuration name. Since only one default deploy-time configuration constant is supported, it cannot be modified or deleted.| Mandatory | No default Value |
+| **IdPConfiguration_MicroflowName** | This constant specifies a custom microflow that returns a list of IdP configurations and is used to create SCIM IdP configurations at deploy time. | Optional | `SCIM.Default_CreateIDPConfiguration` |
 | `Default_AllowCreateUsers` | allows to create users in the application | Optional | `True` |
 | `Default_CustomEntity_Name` | custom Entity name that can be specified for provisioning | Optional | `Administration.Account` |
 | `Default_DeleteUserPermanently` | a flag to delete users permanently or not | Optional | `False` |
@@ -307,6 +337,8 @@ The table below lists all supported constants. Mandatory constants must be set a
 | `Default_UserRole` | sets the mapping entity attribute to the Identity provider attribute | Optional | `User` |
 | `Default_UserType` | sets the mapping entity attribute to the Identity provider attribute | Optional | `Internal` |
 | `DisableMxAdmin` | deactivates Mx admin | Optional | `True` |
+| `RefreshCustomModule` | synchronizes the specified module | Optional | |
+| `Default_NamedUserIdentifier` | a user identifier added to the IdP configuration so the Mendix platform can identify multi-app users | Optional | Email |
 
 {{% alert color="info" %}}
 You may have a requirement that users log in to your application only via SSO. However, when you deploy your app on the Mendix Cloud, the platform may still create an MxAdmin user with a local password. From version 2.1.0 of the UserCommons module, if the flag for the `DisableMxAdmin` constant is set to `True`, the MxAdmin user will be deactivated via the startup microflow `ASU_UserCommons_StartUp`.
@@ -324,7 +356,7 @@ Setting up connectivity with an IdP varies depending on the vendor. The followin
 3. Configure the SCIM server (Mendix SCIM Application) with the following details:
 
     * **Tenant URL**: `https://{host name}/scim/v2`. Replace `{host name}` with your intranet domain. For example, `https://intranet.acme.com/scim/v2`.
-    * **Secret Token**: copy the **API Key** (token) from the **IdPConfiguration** page of User Commons, as described in the [API Security](#api_security) section above.
+    * **Secret Token**: copy the **API Key** (token) from the **IdPConfiguration** section of User Commons, as described in the [API Security](#api_security) section above.
     * Click **Test Connection**.
 
 4. Configure **Mappings** and **Settings**.

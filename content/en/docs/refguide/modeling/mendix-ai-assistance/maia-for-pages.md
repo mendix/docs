@@ -96,6 +96,10 @@ The following widgets are supported if they have been installed:
 * [Progress Bar](/appstore/widgets/progress-bar/) (Studio Pro 11.1 and above)
 * [Progress Circle](/appstore/widgets/progress-circle/) (Studio Pro 11.1 and above)
 
+{{% alert color="info" %}}
+In Studio Pro 11.6 and above, Maia can understand customized pluggable widgets when you enhance your widget definition XML file with the `<prompt>` element. For more information, see the [How to Enhance Your Pluggable Widget for Maia by Using `<prompt>`](/apidocs-mxsdk/apidocs/pluggable-widgets/#using-prompt-for-maia) section in *Pluggable Widgets API*.
+{{% /alert %}}
+
 ## Read More
 
 * [Pages](/refguide/page/)

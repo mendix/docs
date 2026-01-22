@@ -5,7 +5,48 @@ weight: 10
 description: "Native Template 15"
 ---
 
-## 15.3.1 {#1530}
+## 15.4.4 {#1544}
+
+**Release date: November 10, 2025**
+
+* We updated the version of @mendix/native to 10.3.1 to update op-sqlite version to 15.0.7.
+
+## 15.4.3 {#1543}
+
+**Release date: November 5, 2025**
+
+* We updated the version of @mendix/native to 10.3.0 to fix the `components.json` errors.
+
+## 15.4.2 {#1542}
+
+**Release date: October 27, 2025**
+
+### Improvements
+
+* We have installed react-native-edge-to-edge to ensure proper layout behavior and visual consistency on Android 15 and newer devices.
+
+## 15.4.1 {#1541}
+
+**Release date: October 7, 2025**
+
+### Improvements
+
+* We migrated from `react-native-camera` to `react-native-vision-camera` for new architecture compatibility.
+
+## 15.4.0 {#1540}
+
+**Release date: October 2, 2025**
+
+### Improvements
+
+* We migrated from `react-native-push-notification` to `@notifee/react-native` for improved architecture compatibility and enhanced push notification features.
+* We upgraded `react-native-permissions` to version 5.4.2.
+* We removed `react-native-schedule-exact-alarm-permission` dependency.
+* We added a `USE_BIOMETRIC` permission in Android.
+* We migrated from `react-native-fast-image` to `@d11/react-native-fast-image` for new architecture compatibility.
+* We upgraded `react-native-reanimated` to v3.16.7.
+
+## 15.3.1 {#1531}
 
 **Release date: August 15, 2025**
 
@@ -74,7 +115,7 @@ description: "Native Template 15"
 
 ### Improvements
 
-* We upgraded our Database Backend Library to the most recent version. This update brings better performance on database operations and performance improvements. 
+* We upgraded our Database Backend Library to the most recent version. This update brings better performance on database operations and performance improvements.
 
 ### Library Updates and Improvements
 

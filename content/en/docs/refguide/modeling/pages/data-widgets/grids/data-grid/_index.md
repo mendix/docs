@@ -5,9 +5,17 @@ weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="warning" %}}The data grid widget is not supported on native mobile pages.{{% /alert %}}
+{{% alert color="warning" %}}
+The **data grid** widget is a Dojo widget.
 
-{{% alert color="warning" %}}The data grid widget is not supported when using the [React client](/refguide/mendix-client/react/). Please use the [data grid 2 widget](/appstore/modules/data-grid-2/) instead. It is possible to convert existing data grid widgets to data grid 2 as explained in the [React Migration Guide](/refguide/mendix-client/react/#data-grid){{% /alert %}}
+This widget is not supported on native mobile pages. Mendix recommends that you use the [Gallery](/appstore/modules/gallery/) or [List View](/refguide/list-view/) instead to display data. See the Mendix React Client's [Migration Guide](/refguide/mendix-client/react/#data-grid).
+
+This widget is not supported in the [React client](/refguide/mendix-client/react/). To upgrade it to the recommended React widget ([Data Grid 2](/appstore/modules/data-grid-2/)), see the Mendix React Client's [Migration Guide](/refguide/mendix-client/react/#data-grid).
+
+If you [switch to the React client](/refguide/app-settings/#react-client), the widget will not appear in the **Toolbox**.
+
+The Dojo client is deprecated and will be removed in Mendix 12. It continues receiving security and stability updates until the end of support of Mendix 11.24.
+{{% /alert %}}
 
 ## Introduction
 

@@ -50,6 +50,7 @@ On this tab, you can find the following items:
 * **Description** of the project
 * **Project ID**
 * [Technical Contact](/developerportal/general/app-roles/#technical-contact) of the app
+* **Categories**
 * **Danger Zone**
     * **Leave Project**
     * **Deactivate Project**
@@ -59,7 +60,8 @@ On this tab, you can find the following items:
 Only users with the **App Settings** permission can do the following:
 
 * Change the description of the project.
-* Deactivate or delete a project. For details, see [Leaving, Deleting, or Deactivating an App](/developerportal/general/leave-delete-app/).
+* Change the category assignment of the project.
+* Deactivate or delete a project. For details, refer to [Leaving, Deleting, or Deactivating an App](/developerportal/general/leave-delete-app/).
 {{% /alert %}}
 
 ## Cloud Settings {#cloud-settings}

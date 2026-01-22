@@ -173,6 +173,7 @@ When you push a model change to the [Git Team Server](/developerportal/repositor
 {
   "after": "4b76061182bf183281b5107cd753c6071ed00040",
   "before": "0b9cb7a3e9a5ccfffa6c79435441999543ccb8c9",
+  "userId": "b1234df1-1234-1234-1234-12aa345c12e1",
   "branchName": "main",
   "commits": [
     {

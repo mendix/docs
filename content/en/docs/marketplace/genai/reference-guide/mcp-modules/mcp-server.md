@@ -23,11 +23,11 @@ The current version has the following limitations:
 
 * Tools can only return String values, either directly as String type or using the `TextContent` entity.
 * Prompts can only return a single message.
-* The client connection remains active for only 15 minutes, as the Mendix runtime currently does not support async requests.
 * Running an MCP Server is currently only supported on single-instance environments.
-* User authorization can currently only be applied on request but not at the tool/prompt level. As a result, the current user is not available within tool/prompt microflows, and entity access or XPath constraints can not be enabled out of the box. This is due to the capabilities offered by the official MCP Java SDK which does not support reusing a Mendix user session in the executed tools/prompts.
 
+{{% alert color="info" %}}
 Note that the MCP Server module is still in its early version and latest versions may include breaking changes. Since both the open-source protocol and the Java SDK are still evolving and regularly updated, these changes may also affect this module.
+{{% /alert %}}
 
 ## Installation
 
@@ -39,7 +39,7 @@ If you start from a standard Mendix blank app, or have an existing project, you 
 
 ### Create MCP Server {#create-server}
 
-The `Create MCP Server` action initializes an MCP server in the Mendix runtime, creates and returns the `MCPServer` object. You can use the created `MCPServer` to add tools or prompts. The `Path` attribute determines how external systems can reach the MCP server, that means this value needs to be known to the the MCP Client (usually set in a configuration file). After the action gets triggered, the server becomes available for external clients to connect. As mentioned in the [limitations](#limitations) section above, the connection remains active for only 15 minutes.
+The `Create MCP Server` action initializes an MCP server in the Mendix runtime, creates and returns the `MCPServer` object. You can use the created `MCPServer` to add tools or prompts. The `Path` attribute determines how external systems can reach the MCP server, that means this value needs to be known to the the MCP Client (usually set in a configuration file). After the action gets triggered, the server becomes available for external clients to connect. Note that the path cannot be `mcp` and cannot end on `/mcp`, because those are reserved endpoints. 
 
 Based on your use case, this action can be triggered manually by an admin if wrapped around a microflow accessible in the UI, via an after start-up microflow, or by any other microflow such as a scheduled event.
 
@@ -56,11 +56,17 @@ The selected microflow must adhere to the following principles:
 * The Input type should be `MCPServer` and/or `System.HttpRequest`, to extract required values, such as HttpHeaders from the request.
 * The return value needs to be a `System.User` object which represents the user who sent the request.
 
-Inside of your microflow, you can implement your custom logic to authenticate the user. For example, you can use username and password (basic auth), Mendix SSO, or external identity providers (IdP) as long as a `User` is returned. Note that the example authentication microflow within the module only implements the most basic authentication.
+Within your microflow, you can implement your custom logic to authenticate the user. For example, you can use username and password (basic auth), Mendix SSO, or external identity providers (IdP) as long as a `User` is returned. Note that the example authentication microflow within the module only implements basic authentication.
+
+The `User` returned in the microflow is used for all subsequent prompt and tool microflows within the same session. This makes the `currentUser` and `currentSession` variables available, allowing you to apply entity access for user-based access control based on the default Mendix entity access settings.
 
 #### Protocol Version
 
-When creating an MCP server, you need to specify a `ProtocolVersion`. On the official MCP documentation, you can review the differences between the protocol versions in the [changelog](https://modelcontextprotocol.io/specification/2025-03-26/changelog). The MCP Server module currently only supports `v2024-11-05` and the HTTP+SSE transport. MCP Clients, that need to connect to a Mendix MCP server, should support the same version. Note that Mendix follows the offered capabilities of the MCP Java SDK.
+When creating an MCP server, you need to specify a `ProtocolVersion`. On the official MCP documentation, you can review the differences between the protocol versions in the [changelog](https://modelcontextprotocol.io/specification/2025-03-26/changelog). The latest version of the MCP Server module currently only supports `v2025-03-26` and the Streamable HTTP transport. MCP Clients that need to connect to a Mendix MCP server should support the same version. Note that Mendix follows the offered capabilities of the MCP Java SDK.
+
+{{% alert color="info" %}}
+Since version 4.0.0 of the module, the protocol version `v2024-11-05` was replaced by `v2025-03-26`, which changed the transport from HTTP + SSE to Streamable HTTP because HTTP + SSE is officially deprecated. Most clients already support the new transport, such as the Mendix [MCP Client](/appstore/modules/genai/mcp-modules/mcp-client/) module.
+{{% /alert %}}
 
 ### Add Tools
 
@@ -68,13 +74,13 @@ After the [Create MCP Server](#create-server) action, you can add one or multipl
 
 The selected microflow must adhere to the following principles:
 
-* Input needs to be the same as described in the `Schema` attribute (only primitives and/or an object of type `MCPServer.Tool` are supported). If no Schema is passed in the `Add tool` action, it will be automatically created based on the microflow's input parameters.
+* Input needs to be the same as described in the `Schema` attribute (only primitives and/or an object of type `MCPServer.Tool` are supported). If no Schema is passed in the `Add tool` action, it will be automatically created based on the microflow's input parameters, by setting all of them as required.
 * The return value must be either of type `String` or `TextContent`. You can create a `TextContent` object within the microflow to return the relevant information to the model based on the outcome of the microflow.
 
 For an example, see the `Example Implementations` folder inside of the module.
 
 {{% alert color="warning" %}}
-Function calling is a highly effective capability and should be used with caution. Tool microflows currently do not run in the context of the authenticated user, and thus cannot apply entity access. 
+Function/tool calling is a highly effective capability and should be used with caution.
 
 Mendix strongly recommends keeping the user in the loop (such as by using confirmation logic which is integrated into many MCP clients), if the tool microflows have a potential impact on the real world on behalf of the end-user. Examples include sending emails, posting content online, or making purchases. In such cases, evaluate the use cases and implement security measures when exposing these tools to external AI systems via MCP.
 {{% /alert %}}

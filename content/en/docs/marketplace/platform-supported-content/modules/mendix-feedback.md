@@ -12,7 +12,7 @@ This document is for the Mendix Feedback module which is compatible with Studio 
 
 If you are using the deprecated Mendix Feedback widget (compatible with Studio Pro 8.6.0 and above), see the [Legacy Feedback Widget Docs](#legacy-feedback-docs) sections below.
 
-All [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widgets with versions lower than 8.4.0 are disabled as of October 1, 2022. If you are using one of these versions, [upgrade your current Mendix Feedback widget with the latest version of this module](#upgrade).
+All Mendix Feedback widgets with versions lower than 8.4.0 are disabled as of October 1, 2022. If you are using one of these versions, [upgrade your current Mendix Feedback widget with the latest version of this module](#upgrade).
 
 Mendix recommends using the newer Mendix Feedback module, as the deprecated Feedback widget will no longer receive regular updates.
 {{% /alert %}}
@@ -180,13 +180,13 @@ To show the Feedback button, do as follows:
 2. In your **Apps** [navigation pane](/developerportal/#navigation-pane), go to **Environments**.
 3. Go to the environment where you want to fix this issue and click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
 4. Go to the **Network** tab.
-5. Under **HTTP Headers**, select **Content-Secutiry-Policy** and click **Edit**.
-6. Add the following code: `img-src: blob:;`.
+5. Under **HTTP Headers**, select **Content-Security-Policy** and click **Edit**.
+6. Add the following code: `img-src 'self' data: blob:;`.
 
 ## Legacy Feedback Widget Docs {#legacy-feedback-docs}
 
 {{% alert color="warning" %}}
-**All Mendix Feedback widgets with versions lower than 8.4.0 are disabled as of October 1, 2022. If you are using one of these versions, download and replace your current [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget with version 8.4.0 or higher.**
+**All Mendix Feedback widgets with versions lower than 8.4.0 are disabled as of October 1, 2022. If you are using one of these versions, download and replace your current Mendix Feedback widget with version 8.4.0 or higher.**
 
 The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/app-insights/feedback/) page for your app in [Apps](https://sprintr.home.mendix.com/), but your app will keep working as usual.
 
@@ -195,7 +195,7 @@ If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-r
 
 ### Introduction
 
-The [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget allows end-users of your application to directly submit feedback into your app. The feedback widget is fully integrated with the [Feedback](/developerportal/app-insights/feedback/) page in [Apps](https://sprintr.home.mendix.com/), where you can review feedback and convert it into [user stories](/developerportal/project-management/epics/planning/) to improve your app.
+The Mendix Feedback widget allows end-users of your application to directly submit feedback into your app. The feedback widget is fully integrated with the [Feedback](/developerportal/app-insights/feedback/) page in [Apps](https://sprintr.home.mendix.com/), where you can review feedback and convert it into [user stories](/developerportal/project-management/epics/planning/) to improve your app.
 
 {{< figure src="/attachments/appstore/platform-supported-content/widgets/mendix-feedback/feedback-in-app.png" width="350px" class="no-border" >}}
 

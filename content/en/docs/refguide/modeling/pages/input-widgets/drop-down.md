@@ -9,9 +9,17 @@ aliases:
 ---
 
 {{% alert color="warning" %}}
-The drop-down widget is not compatible with the modern version of the Mendix React Client. Depending on your app version, you may wish to convert the widget to a combo box widget using the context menu in Studio Pro. 
+The **drop-down** widget is a Dojo widget.
 
-For more information on converting a drop-down widget into its more modern combo box counterpart, see the Mendix React Client's [Migration Guide](/refguide/mendix-client/react/#migration-guide).
+This widget is not supported on native mobile pages.
+
+This widget is not supported in the [React client](/refguide/mendix-client/react/).
+
+To upgrade it to the recommended React-compliant widget ([Combo Box](/appstore/widgets/combobox/)), see the Mendix React Client's [Migration Guide](/refguide/mendix-client/react/#reference-selectors-drop-down).
+
+If you [switch to the React client](/refguide/app-settings/#react-client), the widget will not appear in the **Toolbox**.
+
+The Dojo client is deprecated and will be removed in Mendix 12. It continues receiving security and stability updates until the end of support of Mendix 11.24.
 {{% /alert %}}
 
 ## Introduction

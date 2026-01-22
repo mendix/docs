@@ -101,11 +101,11 @@ If there is an issue with the Mendix Platform that affects multiple customers, o
 
 ### Reporting Issues
 
-If, after your analysis, you suspect there is an issue with the Mendix Platform (or if you have questions about your analysis), you can reach out to Mendix Support. We will provide pointers on how to solve the issues yourself or redirect you to Expert Services for further assistance. If we suspect a platform issue, we will involve second- and third-line support for confirmation and, if it is a platform issue, we will fix it. If the issue is commercial (for example, because your app requires a larger app container or more file storage), we may refer you to your Customer Success Manager directly.
+If, after your analysis, you suspect there is an issue with the Mendix Platform (or if you have questions about your analysis), you can reach out to Mendix Support. We will provide guidance on how to resolve the issues yourself or direct you to Expert Services for further assistance. If we suspect a platform issue, we will involve second- and third-line support for confirmation and, if it is a platform issue, we will fix it. If the issue is commercial (for example, because your app requires a larger app container or additional file storage), we may refer you directly to your Customer Success Manager.
 
 ### Large-Scale Testing
 
-You may sometimes want to perform testing on your app which could impact cloud operations. This might include the following:
+You may want to perform testing on your app, which could impact cloud operations. This might include the following:
 
 * Load test
 * Performance test
@@ -115,7 +115,7 @@ Your SLA contains the following clause:
 
 > Without first obtaining the prior written consent of Mendix, Customer may not intentionally perform any actions, such as load tests, performance tests, or similar tests that might interfere with or disrupt the integrity or performance of the App Platform or Cloud Services.
 
-If you are planning this sort of testing you must raise a ticket with Mendix Support and include as much information as possible, including:
+If you are planning this sort of testing, you must raise a ticket with Mendix Support and include as much information as possible, including:
 
 * type of test
 * IP addresses
@@ -123,7 +123,7 @@ If you are planning this sort of testing you must raise a ticket with Mendix Sup
 * exact timings
 * contact details of parties directly involved – including any third parties who are assisting
 
-Please provide this information as early as possible, at least two weeks in advance of the test date. Mendix may refuse permission to do some kinds of test if they break local laws or pose too high a risk to the Mendix infrastructure or other customers.
+Please provide this information as early as possible, at least two weeks in advance of the test date. Mendix may refuse permission to conduct certain types of tests if they violate local laws or pose an excessive risk to the Mendix infrastructure or other customers.
 
 If you want to perform penetration tests, your Customer Success Manager (CSM) can provide you with an indemnification agreement. This should be signed by all parties, confirming the information above, and agreeing that your tests are legal and do not impact other customers. If you don't know who your CSM is, Mendix Support can provide you with their contact details. 
 
@@ -135,7 +135,7 @@ Mendix cannot change any standard settings for your environments to support your
 
 ## Product Support Period
 
-Mendix supports the current major release and the two prior major releases (and we support each major release for a minimum of 24 months). Because of this, Mendix recommends upgrading your apps to the latest version of Studio Pro at least once a year. We will reach out to you in time if you are running on a version that will become unsupported so that you have ample time to perform an upgrade.
+Mendix supports the current major release and the two prior major releases (and we support each major release for a minimum of 24 months). Because of this, Mendix recommends upgrading your apps to the latest version of Studio Pro at least once a year. We will reach out to you in time if you are running on a version that will become unsupported, so that you have ample time to perform an upgrade.
 
 ## Components of the Mendix Stack {#components}
 
@@ -143,76 +143,82 @@ These are the components of the Mendix stack described in the section above. Ple
 
 ### Database, File Storage, and Network
 
-The database component includes the database service and the creating, storing, downloading, uploading, and restoring of backups.
-The file storage component refers to the file storage service and the creating, storing, downloading, uploading, and restoring of backups.
-The network component consists of the connection between the front-facing web server and the application, between the application and an external end point.
+The database component includes the database service and the creation, storage, downloading, uploading, and restoration of backups.
+The file storage component refers to the file storage service and the creation, storage, downloading, uploading, and restoration of backups.
+The network component consists of the connection between the front-facing web server and the application, between the application and an external endpoint.
 
 Mendix Support can analyze this component if your app is running on Mendix Cloud or Mendix Cloud Dedicated.
 
 ### Infrastructure
 
-The infrastructure component includes all web servers, runtime servers, and database servers, with their Operating Systems and configuration.
+The infrastructure component includes all web servers, runtime servers, and database servers, with their Operating Systems and configurations.
 
 Mendix Support can analyze this component if your app is running on Mendix Cloud or Mendix Cloud Dedicated.
+
+Mendix is responsible for setting up and maintaining the component, as well as applying the default configuration. This component cannot be customized or optimized for individual customers or applications outside the supported configuration options available to our customers.
 
 ### Container Runtime Platform
 
 The container runtime platform refers to the platform for managing, creating, destroying, and scaling of runtime containers. In Mendix Cloud and Mendix Cloud Dedicated, Kubernetes is used.
 
-Mendix Support can analyze this component if your app is running on Mendix Cloud or Mendix Cloud Dedicated. If it is running on SAP BTP instead, the selected third party can analyze this component.
+Mendix Support can analyze this component if your app is running on Mendix Cloud or Mendix Cloud Dedicated.
+
+Mendix is responsible for setting up and maintaining the component, as well as applying the default configuration. This component cannot be customized or optimized for individual customers or applications outside the supported configuration options available to our customers. If it is running on SAP BTP instead, the selected third party can analyze this component.
 
 ### Buildpack, m2ee, and Service Console
 
-The Mendix buildpacks for [Cloud Foundry](https://github.com/mendix/cf-mendix-buildpack) and [Docker](https://github.com/mendix/docker-mendix-buildpack) are available in GitHub repositories. The documentation for the buildpacks and m2ee tools is contained within these GitHub repositories and, because they are released under an Open Source license, the code can be inspected and the functionality and options can be understood by customers who wish to use these buildpacks.
+The Mendix buildpacks for [Cloud Foundry](https://github.com/mendix/cf-mendix-buildpack) and [Docker](https://github.com/mendix/docker-mendix-buildpack) are available in GitHub repositories. The documentation for the buildpacks and m2ee tools is contained within these GitHub repositories. Because they are released under an open-source license, the code can be inspected, and the functionality and options can be understood by customers who wish to use these buildpacks.
 
-If you want to run Mendix apps on a Unix-like server you will need the [m2ee tools](https://github.com/mendix/m2ee-tools), available on GitHub. Read more about installing on systems running Unix-like operating systems in [Linux Deployment](/developerportal/deploy/linux/).
+If you want to run Mendix apps on a Unix-like server, you will need the [m2ee tools](https://github.com/mendix/m2ee-tools), available on GitHub. Read more about installing on systems running Unix-like operating systems in [Linux Deployment](/developerportal/deploy/linux/).
 
-Mendix Support can analyze these components if your app is running on Mendix Cloud or Mendix Cloud Dedicated. Because Mendix has no control over the context in which the buildpack or m2ee tools are run outside of Mendix Cloud and Mendix Cloud Dedicated, you will have to demonstrate that the bug is in the supported component by showing the behavior independently from the context in which you are using it.
+Mendix Support can analyze these components if your app is running on Mendix Cloud or Mendix Cloud Dedicated. Mendix is responsible for setting up and maintaining the component, as well as applying the default configuration. This component cannot be customized or optimized for individual customers or applications outside the supported configuration options available to our customers.
 
-If you want additional features or some other change in a buildpack or m2ee tools, you can make a Pull Request, create an Issue in the GitHub repository, or contact [Mendix Support](https://support.mendix.com/).
+Because Mendix has no control over the context in which the buildpack or m2ee tools are run outside of Mendix Cloud and Mendix Cloud Dedicated, you will have to demonstrate that the bug is in the supported component by showing the behavior independently from the context in which you are using it.
 
-If you wan to run Mendix apps on Windows server you will need the [Windows Service](/releasenotes/studio-pro/windows-service/). The release notes and installation manual can be found in the [Windows Service](/releasenotes/studio-pro/windows-service/) release notes. Read more about installing on systems running Windows operating systems in [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/).
+If you require additional features or other changes in a buildpack or m2ee tools, you can submit a Pull Request, create an Issue in the GitHub repository, or contact [Mendix Support](https://support.mendix.com/).
 
-If you want additional features or some other change in the Windows Service, you can contact [Mendix Support](https://support.mendix.com/).
+If you want to run Mendix apps on a Windows server, you will need the [Windows Service](/releasenotes/studio-pro/windows-service/). The release notes and installation manual can be found in the [Windows Service](/releasenotes/studio-pro/windows-service/) release notes. Read more about installing on systems running Windows operating systems in [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/).
+
+For additional features or other changes in the Windows Service, contact [Mendix Support](https://support.mendix.com/).
 
 ### Application Operation
 
 The application operation component is used for stopping and starting environments and configuring constants, scheduled events, and runtime settings.
 
-Mendix Support can analyze this component if your app is running on Mendix Cloud, Mendix Cloud Dedicated, Mendix on Kubernetes Connected, or SAP BTP through the Mendix Portal.
+Mendix Support can analyze this component if your app is running on Mendix Cloud, Mendix Cloud Dedicated, Mendix on Kubernetes Connected, or SAP BTP through the Mendix Portal. Mendix is responsible for setting up and maintaining the component, as well as applying default configuration. This component cannot be customized or optimized for individual customers or applications outside the supported configuration options available to our customers.
 
 ### Logs and Metrics
 
-The logs component takes care of viewing and downloading application log files.
+The logs component handles viewing and downloading application log files.
 The metrics component refers to viewing application metrics.
 
-Mendix Support can analyze these components if your app is running on Mendix Cloud or Mendix Cloud Dedicated.
+Mendix Support can analyze these components if your app is running on Mendix Cloud or Mendix Cloud Dedicated. Mendix is responsible for setting up and maintaining the component, as well as applying the default configuration. This component cannot be customized or optimized for individual customers or applications outside the supported configuration options available to our customers.
 
 ### Deployment Pipeline
 
-The deployment pipeline takes care of creating and deploying deployment packages. Read more about deployment options in [Deploying Apps](/deployment/).
+The deployment pipeline handles creating and deploying deployment packages. Read more about deployment options in [Deploying Apps](/deployment/).
 
 Mendix Support can analyze this component if your app is running on Mendix Cloud, Mendix Cloud Dedicated, Mendix on Kubernetes Connected, or SAP BTP through the Mendix Portal.
 
 ### Runtime
 
-The runtime component includes the Mendix Runtime, and all of its supported features.
+The runtime component includes the Mendix Runtime and all of its supported features.
 Please read all about the Mendix Runtime in [Mendix Runtime](/refguide/runtime/).
 
 Mendix Support needs application logs to analyze this component. Because Mendix has no control over the context in which the runtime is run, outside of Mendix Cloud and Mendix Cloud Dedicated, you will have to demonstrate that the bug is in the supported component by showing the behavior independently from the context in which you are using it.
 
 ### Marketplace Components
 
-Platform-supported Marketplace content refers to all Marketplace content marked as platform-supported in the Mendix Marketplace. Community-supported Marketplace content includes all Marketplace content not marked as platform-supported in the Mendix Marketplace
+Platform-supported Marketplace content refers to all Marketplace content marked as platform-supported in the Mendix Marketplace. Community-supported Marketplace content includes all Marketplace content not marked as platform-supported in the Mendix Marketplace.
 
-For details about the levels of Support for Marketplace components, see the [Marketplace Content Support](/appstore/marketplace-content-support/) section in *Marketplace Overview*.
+For details about the levels of Support for Marketplace components, refer to the [Marketplace Content Support](/appstore/marketplace-content-support/) section in *Marketplace Overview*.
 
-Mendix Support needs application logs to analyze these components. Because Mendix has no control over the context in which the Marketplace content is run outside of Mendix Cloud and Mendix Cloud Dedicated, you will have to demonstrate that the bug is in the supported component by showing the behavior independently from the context in which you are using it.
+Mendix Support needs application logs to analyze these components. Because Mendix has no control over the context in which the Marketplace content is run outside of Mendix Cloud and Mendix Cloud Dedicated, you will have to demonstrate that the bug is in the supported component by showing the behavior independently of the context in which you are using it.
 
 ### Application
 
 This includes the implementation and configuration of features, as well as the data and files in the Mendix app itself.
 
-These components are not accessible for Mendix Support and issues in the application are out of the scope of Mendix Support, although we will gladly assist in case of questions.
+These components are not accessible to Mendix Support, and issues in the application are outside the scope of Mendix Support, although we will gladly assist with any questions.
 
 ## Documents in This Category

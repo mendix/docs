@@ -184,7 +184,7 @@ Settings in this section allow you to configure your CI/CD capabilities and Buil
 
 ##### Build Method
 
-Configure CI/CD capabilities for your app. If you enable this option, you must also specify your CI system, configure the necessary settings, and register a Kubernetes cluster. Tekton, Jenkins, [AzureDevops](/private-mendix-platform/configure-azure/) and [Kubernetes](/private-mendix-platform-configure-k8s/) are supported. You can also configure a [custom template](/private-mendix-platform/reference-guide/admin/company/#manual-deployment) for your CI/CD capabilities.
+Configure CI/CD capabilities for your app. If you enable this option, you must also specify your CI system, configure the necessary settings, and register a Kubernetes cluster. Jenkins, [AzureDevops](/private-mendix-platform/configure-azure/) and [Kubernetes](/private-mendix-platform-configure-k8s/) are supported. You can also configure a [custom template](/private-mendix-platform/reference-guide/admin/company/#manual-deployment) for your CI/CD capabilities.
 
 ##### Build Steps {#build-steps}
 

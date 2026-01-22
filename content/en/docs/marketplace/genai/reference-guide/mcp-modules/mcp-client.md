@@ -18,10 +18,7 @@ If the tool resides within the same Mendix application, you can integrate it wit
 
 ### Limitations {#limitations}
 
-The current version has the following limitations:
-
-* Tools and prompt messages can only return String content.
-* Only HTTP+SSE transport is currently supported to communicate with MCP servers.
+The current version has the following limitation: Tools and prompt messages can only return String content.
 
 {{% alert color="info" %}}
 Note that the MCP Client module is still in its early version, and newer versions may include breaking changes. Since both the open-source protocol and the Java SDK are still evolving and regularly updated, these changes may also affect this module.
@@ -52,7 +49,7 @@ See the **Example Implementations** folder inside the module containing example 
 
 #### Protocol Version
 
-When creating an MCP client, specify a `ProtocolVersion`. On the official MCP documentation, you can review the differences between the protocol versions in the [changelog](https://modelcontextprotocol.io/specification/2025-03-26/changelog). The MCP Client module currently only supports `v2024-11-05` and the HTTP+SSE transport. MCP servers should support the same version as the client. Note that Mendix supports the capabilities provided by the MCP Java SDK.
+When creating an MCP client, specify a `ProtocolVersion`. On the official MCP documentation, you can review the differences between the protocol versions in the [changelog](https://modelcontextprotocol.io/specification/2025-03-26/changelog). The MCP Client module currently supports `v2024-11-05` with the HTTP+SSE transport and `v2025-03-26` with the streamable HTTP transport, which is the new standard method. MCP servers should support the same version as the client. Note that Mendix supports the capabilities provided by the MCP Java SDK.
 
 ### Discovering Resources {#discover-resources}
 
@@ -64,11 +61,11 @@ In general, prompts are often exposed to end-users in a chat to start or continu
 
 To use a prompt from an MCP Server, you can use the `Get Prompt` action to receive one or multiple `PromptMessages` from the server associated with the `PromptResult` object. Similarly, to use a tool, you can use the `Call Tool` action to receive a `ToolResult` object that contains the return message of the tool.
 
-For both actions, you can pass an `ArgumentCollection` if the prompt or tool requires arguments (the information is available from the [discovered resources](#discover-resources)). The actions `Initialize Argument Collection` and `Argument Collection: Add New Input` help you construct the input for those actions.
+For both actions, you can pass an `ArgumentCollection` if the prompt or tool requires arguments (the information is available from the [discovered resources](#discover-resources)). The actions `Argument Collection: Initialize` and `Argument Collection: Add New Input` help you construct the input for those actions.
 
 ### Using MCP Client Module with GenAI Commons and Conversational UI {#use-with-genai-commons}
 
-To add all tools from an MCP server to a `GenAICommons.Request`, you can use the `Request: Add all tools from MCP server` toolbox action. This action will first list all tools from the provided MCP server configuration, iterate over them, and adding them one by one to the tool collection. The request can then be passed to a Chat Completions operation.
+To add all tools from an MCP server to a `GenAICommons.Request`, you can use the `Request: Add all tools from MCP server` toolbox action. This action will first list all tools from the provided MCP server configuration, iterate over them, and adding them one by one to the tool collection. The request can then be passed to a Chat Completions operation. 
 
 You can also find an example [action microflow](/appstore/modules/genai/genai-for-mx/conversational-ui/#action-microflow) `ChatCompletions_MCPClient_ActionMicroflow` in the **Example Implementations** folder of the module. This microflow demonstrates how a Conversational UI chat action including MCP tools can be facilitated. Duplicate and include this microflow into your custom module and modify it according to your requirements.
 
@@ -89,7 +86,7 @@ The **Documentation** pane displays the documentation for the currently selected
 
 ### MCP Client Cannot Connect to the MCP Server
 
-There are several possible reasons why the client cannot connect to your server. First, check the MCP Client logs. Then, verify that the endpoint is set to the correct URL and that the server supports the same protocol version and transport method (HTTP + SSE) as the client. If authentication is required, make sure to pass the necessary information via HTTP headers.
+There are several possible reasons why the client cannot connect to your server. First, check the MCP Client logs. Then, verify that the endpoint is set to the correct URL and that the server supports the same protocol version and transport method (HTTP + SSE or Streamable HTTP) as the client. If authentication is required, make sure to pass the necessary information via HTTP headers.
    
 ## Read More
 

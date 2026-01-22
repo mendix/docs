@@ -47,6 +47,7 @@ Before starting the installation process, make sure that you have all the necess
     * An optional Redis server version 6.2.0 or higher, for the task queue and cache. Using Redis is recommended for high availability, where you expect a high volume of webhook calls, or if you have multiple Svix servers. As a best practice, enable persistence in Redis so that tasks are persisted across Redis server restarts and upgrades.
 
 * If you plan to use the AWS Secret Manager, install an AWS provider at your cluster, as described in [Kubernetes Secrets Store CSI Driver](https://secrets-store-csi-driver.sigs.k8s.io/).
+* If you plan to use Azure Key Vault, see [Configuring a Secret Store with Azure Key Vault](/developerportal/deploy/secret-store-credentials/#azure-key-vault).
 
 ## Installing and Configuring the Mendix Operator {#install-operator}
 
@@ -156,7 +157,7 @@ To use the secret provider option for your database plan or storage plan, config
 | Data Type | Key | Example Value |
 | --- | --- | --- |
 | Database type (for example, PostgreSQL) | **database-type** | `PostgreSQL` |
-| Database Jdbc Url    | **database-jdbc-url**    | `jdbc:postgresql://pg.example.com:5432/my-app-1?sslmode=prefer` |
+| Database Jdbc URL | **database-jdbc-url**    | `jdbc:postgresql://pg.example.com:5432/my-app-1?sslmode=prefer` |
 | Database host | **database-host**    | `pg.example.com:5432` |
 | Database name    | **database-name** | `my-app-1` |
 | Database user name | **database-username** | `my-app-user-1` |
@@ -183,7 +184,43 @@ Currently, only AWS S3 or S3-compatible providers are supported.
 | PCLM admin password | **pclm-admin-password** |
 | Private Mendix Platform admin password | **mx-admin-password** |
 
-### Installing Private Cloud License Manager {#install-pclm}
+## Optional: Configuring Azure Key Vault
+
+To use the secret provider option for your database plan or storage plan, configure the following keys in your Azure Key Vault. All keys are required unless noted otherwise.
+
+### Database Plan Keys
+
+| Data Type | Key | Example Value |
+| --- | --- | --- |
+| Database type (for example, SQLSERVER or PostgreSQL) | **database-type** | `PostgreSQL` |
+| Database Jdbc URL | **database-jdbc-url** | `jdbc:postgresql://test.database.azure.com:5432/testpmp?sslmode=prefer` |
+| Database host | **database-host** | `test.database.azure.com:5432` |
+| Database name | **database-name** | `testpmp` |
+| Database user name | **database-username** | `pxx` |
+| Database password | **database-password**    | `passxx` |
+
+### Storage Plan Keys
+
+| Data Type | Key | Example Value | Notes |
+| --- | --- | --- | --- |
+| Storage service name | **storage-service-name** | `com.mendix.storage.azure` | |
+| Azure storage account | **storage-azure-account-name** | `examplename` | This value is required only for Azure Blob Storage with the static authentication method. |
+| Azure storage account key | **storage-azure-account-key** | `examplekey` | This value is required only for Azure Blob Storage with the static authentication method. |
+| Azure storage container name | **storage-azure-container** | `examplecontainer` | |
+| Use configured CA trust for file storage | **storage-use-ca-certificates** | `true` | |
+| Use HTTP for Azure | **storage-azure-use-https** | `true` | |
+| Delete files from storage when deleted in the app | **storage-perform-delete** | `true` | |
+| Use managed identity authentication for Azure Blob Storage | **storage-azure-use-default-azure-credential** | `false` | Set to `true` to use managed identity authentication for Azure Blob Storage. |
+| Azure Blob Storage endpoint | **storage-azure-blob-endpoint** | `https://example.blob.core.windows.net/` | |
+
+### Administrator Passwords
+
+| Data Type | Key |
+| --- | --- |
+| PCLM admin password | **pclm-admin-password** |
+| Private Mendix Platform admin password | **mx-admin-password** |
+
+## Installing Private Cloud License Manager {#install-pclm}
 
 Private Cloud License Manager is a required component of Private Mendix Platform. Before you install the Platform, install PCLM by doing the following steps:
 
@@ -264,11 +301,21 @@ Svix is required if you want to use webhooks. Install the Svix component by doin
 4. Select **Svix**, and then specify the following parameters:
 
     * **Image** - The Svix image path. The default path is `svix/svix-server:v1.25.0`. If you are using a self-signed TLS certificate, set this path to `{customer-private-image-registry-url}/svix/svix-server:v1.25.tls`.
-    * **Use Secret Provider** - Optional. Select this option to use the AWS Secret Manager. Selecting this option enables the following additional fields:
+    * **Use Secret Provider** - Optional. Select this option to use the AWS Secret Manager or the Azure Key Vault. Selecting this option enables the following additional fields:
 
-        * **Secret Provider** - Set to **AWS** by default.
-        * **AWS-Role-ARN** - An AWS role ARN which can access the specified Secret Manager.
-        * **AWS SecretManager Name** - The AWS Secret Manager name where the sensitive data is stored.
+        * For AWS Secret Manager:
+
+            * **Secret Provider** - Set to **AWS**.
+            * **AWS-Role-ARN** - An AWS role ARN which can access the specified Secret Manager.
+            * **AWS SecretManager Name** - The AWS Secret Manager name where the sensitive data is stored.
+
+        * For Azure Key Vault:
+
+            * **Secret Provider** - Set to **Azure**.
+            * **Client ID** - Enter a Client ID assigned to the Azure Managed Identity which enables Private Mendix Platform to access Azure resources.
+            * **Tenant ID** - Enter the Directory ID of the key vault.
+            * **Key Vault Name** - Enter the key vault name.
+            * **Use identity auth for Blob** - Set to **True** if you use the Azure Blob Storage with managed identity auth; the default value is **false**.
 
     * **POSTGRES_DSN** - Available only if you do not use the AWS Secret Manager. A Postgres DSN, for example, `postgresql://postgres:postgres@pgbouncer/postgres`.
     * **Use Redis** - Optional. Select this check box if you want to use Redis for message cache and queues.
@@ -309,10 +356,21 @@ Install the Private Mendix Platform by doing the following steps:
     * **MxAdminPassword** - Optional. The password for the admin user, required if you are not planning to use the AWS Secret Manager. It must have at least one number, one upper case letter, one lower case letter and one symbol, with a minimum length of 12 characters.
     * **dtapmode** - For production deployments, leave this value set to **P**. For the development of the app, for example acceptance testing, set the value to **D**.
     * **ApplicationRootUrl** - Optional. Manually specify the URL of your Private Mendix Platform, for example, for use with SSO or when sending emails. For more information about this functionality, see [ApplicationRootUrl Needs to be Set Manually](/developerportal/deploy/private-cloud-operator/#applicationrooturl-needs-to-be-set-manually).
-    * **Use Secret Provider** - Optional. Select this option to use the AWS Secret Manager. Selecting this option enables the following additional fields:
-        * **Secret Provider** - Set to **AWS** by default.
-        * **AWS-Role-ARN** - An [AWS role ARN](https://docs.mendix.com/developerportal/deploy/secret-store-credentials/#aws-secrets-manager) which can access the specified Secret Manager.
-        * **AWS SecretManager Name** - The AWS Secret Manager name where the sensitive data is stored.
+    * **Use Secret Provider** - Optional. Select this option to use the AWS Secret Manager or the Azure Key Vault. Selecting this option enables the following additional fields:
+
+        * For AWS Secret Manager:
+
+            * **Secret Provider** - Set to **AWS**.
+            * **AWS-Role-ARN** - An [AWS role ARN](https://docs.mendix.com/developerportal/deploy/secret-store-credentials/#aws-secrets-manager) which can access the specified Secret Manager.
+            * **AWS SecretManager Name** - The AWS Secret Manager name where the sensitive data is stored.
+
+        * For Azure Key Vault:
+
+            * **Secret Provider** - Set to **Azure**.
+            * **Client ID** - Enter a Client ID assigned to the Azure Managed Identity which enables Private Mendix Platform to access Azure resources.
+            * **Tenant ID** - Enter the Directory ID of the key vault.
+            * **Key Vault Name** - Enter the key vault name.
+            * **Use identity auth for Blob** - Set to **True** if you use the Azure Blob Storage with managed identity auth; the default value is **false**.
 
 5. In the **Enabled Functions** section, select or clear the functions that you want to enable or disable:
  

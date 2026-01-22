@@ -133,6 +133,7 @@ The list below is provided to enable you to quickly evaluate if Mendix supports 
 | French | France | fr_FR | 9.0.5 |
 | French | Luxembourg | fr_LU | 9.0.5 |
 | French | Switzerland | fr_CH | 9.0.5 |
+| Georgian | Georgia | ka_GE | 11.5.0 |
 | German | Austria | de_AT | 9.0.5 |
 | German | Germany | de_DE | 9.0.5 |
 | German | Luxembourg | de_LU | 9.0.5 |

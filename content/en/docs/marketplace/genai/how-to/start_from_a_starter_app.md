@@ -46,7 +46,7 @@ Selecting the infrastructure for integrating GenAI into your Mendix application 
 
 * [Mendix Cloud GenAI Resources Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/): The [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) integrates LLMs by dragging and dropping common operations from its toolbox in Studio Pro.
 
-* [OpenAI](/appstore/modules/genai/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) supports OpenAI’s platform and Azure’s OpenAI service.
+* [OpenAI](/appstore/modules/genai/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) supports OpenAI's platform and Microsoft Foundry.
 
 * [Amazon Bedrock](/appstore/modules/genai/bedrock/): The [Amazon Bedrock Connector](https://marketplace.mendix.com/link/component/215042) allows you to leverage Amazon Bedrock’s fully managed service to integrate foundation models from Amazon and leading AI providers. 
 
@@ -90,7 +90,7 @@ Follow the steps below to configure OpenAI for your application. For more inform
      * **API Type**: Choose between **OpenAI** or **Azure OpenAI**.
      * **Endpoint**: Enter the endpoint URL for your selected API type.
      * **API key**: Provide the API key for authentication.
-         * If using Azure OpenAI, add the **Azure key type** by choosing between **OpenAI** or **Azure OpenAI**.
+         * If using Microsoft Foundry, add the **Azure key type** by choosing between **OpenAI** or **Azure OpenAI**.
 
      * After saving the changes, a new pop-up will appear to add the deployment models. Select **Add deployed model** and provide the following details (optional for the OpenAI API Type):
          * **Display name**: A reference name for the deployed model (e.g., "GPT-4 Conversational").

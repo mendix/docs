@@ -7,7 +7,6 @@ info:
   contact:
     name: Mendix Support
     url: 'https://support.mendix.com'
-    email: support@mendix.com
 servers:
   - url: 'https://projects-api.home.mendix.com/v2'
 paths:
@@ -84,6 +83,59 @@ paths:
           $ref: '#/components/responses/Http404'
         '409':
           $ref: '#/components/responses/Http409'
+        '500':
+          $ref: '#/components/responses/Http500'
+    patch:
+      tags:
+        - Projects
+      summary: 'Update project attributes'
+      description: >
+        Updates project attributes.</br></br>Requests must be authenticated by a Personal Access Token containing the scope `mx:app:write`
+      operationId: patch-project
+      parameters:
+        - $ref: '#/components/parameters/project-id'
+      requestBody:
+        description: 'Object containing a categories array used to update project categories.'
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                categories:
+                  type: array
+                  description: 'Array of category assignments. Each item identifies a company category (categoryId) and the Code/Value to assign. Used when updating `category`.'
+                  items:
+                    type: object
+                    required:
+                      - categoryId
+                      - value
+                    properties:
+                      categoryId:
+                        type: string
+                        description: 'Identifier of the company category'
+                        maxLength: 36
+                      value:
+                        type: string
+                        description: 'The Code or Value to assign to the category. An empty string clears the assignment.'
+                        maxLength: 500
+            examples:
+              category-update:
+                value:
+                  categories:
+                    - categoryId: '123456789'
+                      value: 'NLD'
+                    - categoryId: '987654321'
+                      value: ''
+      responses:
+        '204':
+          $ref: '#/components/responses/Http204'
+        '400':
+          $ref: '#/components/responses/Http400'
+        '401':
+          $ref: '#/components/responses/Http401'
+        '404':
+          $ref: '#/components/responses/Http404'
         '500':
           $ref: '#/components/responses/Http500'
   '/projects/{project-id}/members':
@@ -211,7 +263,7 @@ paths:
       tags:
         - Projects
       summary: 'Get the status of a job creating a project'
-      description: 'Returns the status of the process that creates a project.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:create`.'
+      description: 'Returns the status of the process that creates a project.</br>Every request must be authenticated through a Personal Access Token containing the `mx:app:create` scope.'
       operationId: get-project-job
       parameters:
         - $ref: '#/components/parameters/job-id'
@@ -229,13 +281,13 @@ paths:
       tags:
         - Users
       summary: 'Get a list of projects the user is a team member of'
-      description: 'Returns a list of projects that the specified user is a team member of. The output is restricted based on the authorization of the calling user. Mendix administrators will get a list of all projects (active or inactive) owned by their company for the specified user. This includes external users hired by them to work on their projects. Project members must be active and will get a list of all active projects that they themselves are a team member of. Project members cannot request a list of projects on behalf of someone else.<br/>The result is sorted alphabetically by project name in ascending order.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:metadata:read`.'
+      description: 'Returns a list of projects that the specified user is a team member of. The output is restricted based on the authorization of the calling user. Mendix administrators will get a list of all projects (active or inactive) owned by their company for the specified user. This includes external users hired by them to work on their projects. Project members must be active and will get a list of all active projects that they themselves are a team member of. Project members cannot request a list of projects on behalf of someone else.<br/>The result is sorted alphabetically by project name in ascending order.</br>Every request must be authenticated through a Personal Access Token containing the `mx:app:metadata:read` scope.'
       operationId: get-user-projects
       parameters:
         - $ref: '#/components/parameters/user-id'
         - name: permissions
           in: query
-          description: 'A comma separated list of permissions the user has within the project. Possible values are `administrator`, `technicalcontact`, `repositoryaccess`, `cloudaccess`, `storyaccess`, `invitationrights`. The values are applied to the query using the AND operator'
+          description: 'A comma-separated list of permissions that the user has within the project. Possible values are `administrator`, `technicalcontact`, `repositoryaccess`, `cloudaccess`, `storyaccess`, `invitationrights`. The values are applied to the query using the AND operator.'
           schema:
             type: string
         - name: isPinnedByUser
@@ -245,6 +297,7 @@ paths:
             type: boolean
         - $ref: '#/components/parameters/limit'
         - $ref: '#/components/parameters/offset'
+        - $ref: '#components/parameters/categories'
       responses:
         '200':
           $ref: '#/components/responses/UserProjectsResponse'
@@ -259,13 +312,13 @@ paths:
       tags:
         - Accounts
       summary: 'Get a list of project roles for a specified account.'
-      description: 'Returns a list of project roles for a specified account (or company). The output is restricted based on the authorization of the calling user. The calling user must be a member of the specified company.</br></br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:roles:read`.'
+      description: 'Returns a list of project roles for a specified account or company. The output is restricted based on the authorization of the calling user. The calling user must be a member of the specified company.</br></br>Every request must be authenticated through a Personal Access Token containing the `mx:app:roles:read` scope.'
       operationId: get-company-roles
       parameters: 
         - $ref: '#/components/parameters/account-id'
         - name: changedSince
           in: query
-          description: 'If supplied only roles created or changed since this date will be returned. This date time should be provided in the ISO 8601 format, for example `2024-08-21T11:07:00Z`'
+          description: 'If supplied, only roles created or changed since this date will be returned. The date and time should be provided in the ISO 8601 format, for example `2024-08-21T11:07:00Z`.'
           schema:
             type: string
             format: date-time
@@ -287,16 +340,17 @@ paths:
       tags:
         - Accounts
       summary: 'Get a list of company-owned projects'
-      description: 'Returns a list of projects owned by the company of the requesting user. Inactive projects are only returned if the requesting user is a Mendix Administrator.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:metadata:read`.'
+      description: 'Returns a list of projects owned by the company of the requesting user. Inactive projects are only returned if the requesting user is a Mendix Admin.</br>Every request must be authenticated through a Personal Access Token containing the `mx:app:metadata:read` scope.<br/>The result is sorted by the created date in descending order.'
       operationId: get-account-projects
       parameters:
         - name: createdSince
           in: query
-          description: 'Retrieve all projects created after this date. Time is in UTC and must be provided in this format: 2020-01-16T05:53:28Z'
+          description: 'Retrieve all projects created after this date. Time is in UTC and must be provided in this format: 2020-01-16T05:53:28Z.'
           schema:
             type: string
         - $ref: '#components/parameters/limit'
         - $ref: '#components/parameters/offset'
+        - $ref: '#components/parameters/categories'
       responses:
         '200':
           $ref: '#/components/responses/AccountProjectsResponse'
@@ -342,7 +396,7 @@ components:
       description: Unique identifier in the Mendix Platform.
     Account:
       type: object
-      description: 'Account (or company) that owns the resource'
+      description: 'Account or company that owns the resource'
       properties:
         accountId: 
           type: string
@@ -368,7 +422,7 @@ components:
           $ref: '#/components/schemas/Account'
     Page:
       type: object
-      description: 'Contains information about the current page, and total elements to be retrieved'
+      description: 'Contains information about the current page, and the total number of elements to be retrieved.'
       properties:
         totalElements:
           type: integer
@@ -379,6 +433,30 @@ components:
         elements:
           type: integer
           description: 'Number of items in this current page'
+    PaginationLinks:
+      type: object
+      description: 'Reusable pagination links object used in list responses.'
+      properties:
+        self:
+          type: string
+          format: uri
+          description: 'URL of the current page of results.'
+        first:
+          type: string
+          format: uri
+          description: 'URL of the first page of results.'
+        last:
+          type: string
+          format: uri
+          description: 'URL of the last page of results.'
+        prev:
+          type: string
+          format: uri
+          description: 'URL of the previous page of results, if any.'
+        next:
+          type: string
+          format: uri
+          description: 'URL of the next page of results, if any.'
     Project:
       type: object
       description: 'The organization of a team and resources to achieve a goal within a time.'
@@ -400,7 +478,7 @@ components:
           description: 'URL of the cloud portal the project is hosted on.'
         active:
           type: boolean
-          description: 'Indicates whether a project is active and can be maintained by a team. Inactive projects will only be returned to Mendix administrators. Note this attribute does not indicate whether the project is actively deployed or running in the cloud.'
+          description: 'Indicates whether a project is active and can be maintained by a team. Inactive projects will only be returned to Mendix Admins. Note this attribute does not indicate whether the project is actively deployed or running in the cloud.'
         account:
           $ref: "#/components/schemas/Account"
     ProjectRole:
@@ -446,13 +524,13 @@ components:
             properties:
               environmentType:
                 type: string
-                description: 'Type of the environment.'
+                description: 'The type of environment.'
                 enum:
                 - non_production
                 - production
               accessType:
                 type: string
-                description: 'Type of the access.'
+                description: 'The type of access.'
                 enum:
                 - no_access
                 - access
@@ -465,7 +543,7 @@ components:
                 description: 'Indicates whether the role has environment transportation rights.'
               hasBackupAccess:
                 type: boolean
-                description: 'Indicates whether the role is allowed to access the environment'' backups.'
+                description: 'Indicates whether the role is allowed to access the environment''s backups.'
               hasMonitoringAccess:
                 type: boolean
                 description: 'Indicates whether the role has access to the environment''s monitoring.'
@@ -525,6 +603,13 @@ components:
       description: The zero-based index of the first item to be returned on the page. The default value is 0.
       schema:
         type: integer
+    categories:
+      name: categories
+      in: query
+      description: 'A comma separated list of categories accomponied by an array of values. The values can be either the name or the code. The parameter needs to be provided in this format: `categoryName1["value1", "value2"], categoryName2["value3"]`'
+      schema:
+        type: string
+        pattern: '^(?:[A-Za-z_][A-Za-z0-9_]*|"[^"]+")\["[^"]+"(?:\s*,\s*"[^"]+")*\](?:\s*,\s*(?:[A-Za-z_][A-Za-z0-9_]*|"[^"]+")\["[^"]+"(?:\s*,\s*"[^"]+")*\])*$' 
   requestBodies:
     ProjectMember:
       description: ''
@@ -538,7 +623,7 @@ components:
                 description: Unique identifier of the member
               roleId:
                 type: string
-                description: Unique identifier of the role that will be assigned to the member
+                description: The unique identifier of the role that will be assigned to the member.
             x-examples:
               Example 1:
                 memberId: d207ff9b-3603-4060-aa0a-62d5b264bac7
@@ -556,7 +641,7 @@ components:
             properties:
               name:
                 type: string
-                description: Name of the project
+                description: The name of the project.
                 maxLength: 100
               summary:
                 type: string
@@ -565,10 +650,10 @@ components:
                 maxLength: 400
               image:
                 type: string
-                description: 'Base-64 encoded string of the project icon image. The file size is limited to 5MB, minimum of 200 x 200 px and amaximum of 400 x 400 px.'
+                description: 'Base-64 encoded string of the project icon image. The file size is limited to 5MB, minimum of 200 x 200 px and maximum of 400 x 400 px.'
               templateId:
                 type: string
-                description: 'Identifier of the template that the project will be copied from. If empty, the default template will be used.'
+                description: 'Identifier of the template that the project will be copied from. If empty, the default template is used.'
                 format: uuid
                 pattern: '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
                 maxLength: 36
@@ -590,7 +675,7 @@ components:
   securitySchemes:
     PersonalAccessToken:
       type: apiKey
-      description: "For more information about requesting and using a token see the [documentation](https://docs.mendix.com/mendix-profile/user-settings/#pat).<br/>The header must be set to `MxToken <Your PAT>`."
+      description: "For more information about requesting and using a token, refer to the [documentation](https://docs.mendix.com/community-tools/mendix-profile/user-settings/#pat).<br/>The header must be set to `MxToken <Your PAT>`."
       name: Authorization
       in: header
   responses:
@@ -603,6 +688,8 @@ components:
             properties:
               page:
                 $ref: "#/components/schemas/Page"
+              links:
+                $ref: '#/components/schemas/PaginationLinks'
               items:
                 type: array
                 description: 'Array of projects.'
@@ -626,7 +713,7 @@ components:
                       description: Date and time in UTC when the project was created.
                     active:
                       type: boolean
-                      description: 'Indicates whether a project is active or not. Inactive projects will only be returned to Mendix administrators.'
+                      description: 'Indicates whether a project is active or not. Inactive projects will only be returned to Mendix Admins.'
                     createdBy:
                       type: object
                       description: Contains information about the person that created this project.
@@ -643,6 +730,12 @@ components:
                   totalElements: 101
                   offset: 0
                   elements: 100
+                links:
+                  self: "https://projects-api.home.mendix.com/v2/accounts/xxx/projects?limit=100"
+                  first: "https://projects-api.home.mendix.com/v2/accounts/xxx/projects?limit=100"
+                  last: "https://projects-api.home.mendix.com/v2/accounts/xxx/projects?limit=100"
+                  prev: "https://projects-api.home.mendix.com/v2/accounts/xxx/projects?limit=100"
+                  next: "https://projects-api.home.mendix.com/v2/accounts/xxx/projects?limit=100"
                 items:
                   - projectId: Unique UUID
                     name: Project Name
@@ -660,6 +753,12 @@ components:
                   totalElements: 0
                   offset: 0
                   elements: 0
+                links:
+                  self: "https://projects-api.home.mendix.com/v2/accounts/xxx/projects?limit=100"
+                  first: "https://projects-api.home.mendix.com/v2/accounts/xxx/projects?limit=100"
+                  last: "https://projects-api.home.mendix.com/v2/accounts/xxx/projects?limit=100"
+                  prev: "https://projects-api.home.mendix.com/v2/accounts/xxx/projects?limit=100"
+                  next: "https://projects-api.home.mendix.com/v2/accounts/xxx/projects?limit=100"
                 items:
                   - projectId: string
                     name: string
@@ -691,10 +790,10 @@ components:
                 description: URL of the project image/logo.
               createdOn:
                 type: string
-                description: Date and time in UTC when the project was created.
+                description: Date and time when the project was created, expressed in UTC.
               active:
                 type: boolean
-                description: Indicates whether a project is active or not. Inactive projects will only be returned to Mendix administrators.
+                description: Indicates whether a project is active or not. Inactive projects will only be returned to Mendix Admins.
               createdBy:
                 type: object
                 description: Contains information about the person that created this project.
@@ -712,7 +811,7 @@ components:
                 maxLength: 50
               storyTool:
                 type: string
-                description: The tool or service used to manage the workload of the project. Could be empty if no tool has been chosen yet
+                description: The tool or service used to manage the workload of the project. Can be empty if no tool has been chosen yet.
                 enum:
                 - Epics
                 - Jira
@@ -729,10 +828,10 @@ components:
                 - Mendix_for_Private_Cloud
               targetCloud: 
                 type: string
-                description: URL of the cloud portal the project is hosted on
+                description: URL of the cloud portal where the project is hosted
               members:
                 type: array
-                description: Array of members in the project. Inactive members will only be returned for Mendix Administrators
+                description: Array of members in the project. Inactive members will only be returned to Mendix Admins.
                 items:
                   allOf:
                     - $ref: '#/components/schemas/User'
@@ -755,6 +854,34 @@ components:
                 $ref: '#/components/schemas/User'
               account: 
                 $ref: '#/components/schemas/Account'
+              categories:
+                type: array
+                description: Array of categories associated with the project
+                items:
+                  type: object
+                  properties:
+                    categoryName:
+                      type: string
+                      description: Name of the category
+                      maxLength: 500
+                    categoryId:
+                      type: string
+                      description: ID of the category (also known as categoryId)
+                      maxLength: 36
+                    values:
+                      type: array
+                      description: Array of assigned category values
+                      items:
+                        type: object
+                        properties:
+                          code:
+                            type: string
+                            description: Code of the value
+                            maxLength: 3
+                          value:
+                            type: string
+                            description: Value of the value
+                            maxLength: 500
           examples:
             Example 1:
               value:
@@ -803,6 +930,12 @@ components:
                 account:
                   accountId: "123e4567-e89b-12d3-a456-426614174004"
                   accountName: "Example Account"
+                categories:
+                  - categoryName: "Country"
+                    categoryId: "123e4567-e89b-12d3-a456-426614174007" 
+                    values:
+                      - code: "NLD"
+                        value: "The Netherlands"
     ProjectMembersResponse:
       description: List of project members
       content:
@@ -829,7 +962,7 @@ components:
                       description: URL of the avatar image of the member.
                     isActive:
                       type: boolean
-                      description: Indicator of whether the member is an active member on the platform
+                      description: Indicates whether the member is an active member on the platform.
                     company:
                       type: object
                       description: Contains information of the company to which the member belongs.
@@ -873,7 +1006,7 @@ components:
             properties:
               jobId:
                 type: string
-                description: Unique identifier of the job that creates the project. Use this ID to query the status of the process.
+                description: Unique identifier of the job that created the project. Use this ID to query the status of the process.
                 format: uuid
                 pattern: '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
                 minLength: 36
@@ -901,7 +1034,7 @@ components:
                 description: Error message provided in case the job has failed
               projectId:
                 type: string
-                description: Identifier of the new created project
+                description: Identifier of the newly created project
                 format: uuid
                 pattern: '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
                 maxLength: 36
@@ -925,6 +1058,8 @@ components:
             properties:
               page:
                 $ref: "#/components/schemas/Page"
+              links:
+                $ref: '#/components/schemas/PaginationLinks'
               items:
                 type: array
                 description: 'Array of projects.'
@@ -953,7 +1088,7 @@ components:
                           description: 'Indicates whether the user is allowed to make changes to the project''s model.'
                         hasCloudAccess:
                           type: boolean
-                          description: 'Indicates whether the user has access to the cloud environments.'
+                          description: 'Indicates whether the user has access to cloud environments.'
                         hasStoryAccess:
                           type: boolean
                           description: 'Indicates whether the user has access to Stories and Feedback of the project.'
@@ -967,6 +1102,12 @@ components:
                   totalElements: 1
                   offset: 0
                   elements: 1
+                links:
+                  self: "https://projects-api.home.mendix.com/v2/users/xxx/projects?limit=100"
+                  first: "https://projects-api.home.mendix.com/v2/users/xxx/projects?limit=100"
+                  last: "https://projects-api.home.mendix.com/v2/users/xxx/projects?limit=100"
+                  prev: "https://projects-api.home.mendix.com/v2/users/xxx/projects?limit=100"
+                  next: "https://projects-api.home.mendix.com/v2/users/xxx/projects?limit=100"
                 items:
                   - projectId: '647966c7-7152-466a-9d51-f834ea883dcc'
                     name: 'My Project'

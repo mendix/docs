@@ -63,7 +63,7 @@ In addition to specifying the owner, you can also assign ownership of the app to
 
 ##### Sharing the App with Selected User Groups {#share}
 
-You can share your app with any user groups by selecting the **More Actions** > **Share with Groups** option from the **App Management** page.
+You can share your app with any user groups by selecting the **More Actions** > **Share with Groups** option from the **App Management** page. Sharing makes the app visible to groups that otherwise may not be able to see or access your app. Members of the group with which you have shared the app do not have automatic access. Instead, they can request access from the app's owner.
 
 ##### Archiving the App {#archive}
 
@@ -232,6 +232,8 @@ In the **Actions** tab, you can also log out all users currently logged in to yo
 #### Group Management
 
 In the **Group Management** tab, you can create and edit user groups. These groups typically reflect your organization's structure. You can also use the **Automation Settings** option to automatically assign users to groups based on their profile attributes.
+
+For more information about group management in Private Mendix Platform version 2.0 and newer, see [Dynamic Role Management in Private Mendix Platform](/private-mendix-platform/dynamic-role-management/).
 
 ### Platform
 

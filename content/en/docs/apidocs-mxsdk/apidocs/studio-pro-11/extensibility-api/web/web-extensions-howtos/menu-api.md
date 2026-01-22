@@ -6,20 +6,29 @@ url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/
 
 ## Introduction
 
-This how-to shows you how to create both a simple menu item and a menu item with subsidiary items beneath it using the web extension API.
+This how-to describes how to create menus using the web extensibility API. In this example, you will:
+
+* Create a simple menu item
+* Add menu items with sub-menus
+* Update a menu
 
 ## Prerequisites
 
-This how-to uses the results of [Get Started with the Web Extensibility API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/getting-started/). Please complete that how-to before starting this one.
+{{% alert="info" %}}
+If you are using Studio Pro 11.0–11.5 and your extension includes menus, your existing menu code will not work when you upgrade to Studio Pro 11.6. To restore full functionality and support, upgrade to the Extensibility API 11.6 and follow the steps in the [Migration Guide](/apidocs-mxsdk/apidocs/web-extensibility-api-11/migration-guide/).
+{{% /alert%}}
+
+* This how-to uses the results of [Get Started with the Web Extensibility API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/getting-started/). Make sure to complete that how-to before starting this one.
+* Review [how menus work](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu/) in the Web Extensibility API.
 
 ## Creating a Simple Menu
 
-In this section, you will add a simple menu to your extension.
+The code below adds a simple menu to your extension. The code will:
 
-The code below will:
-
-* create a menu item with the caption "My First Menu"
-* show a dialog when the menu is clicked
+* Create a menu item with the caption *My First Menu*
+* Show a dialog when the menu is clicked
+* Import `menuApi` from `studioPro.ui.extensionsMenu` to allow you to use the menu API
+* Import `messageBoxApi` from `studioPro.ui.messageBoxes` to show a dialog
 
 Replace your `src/main/index.ts` file with the following:
 
@@ -56,43 +65,28 @@ export const component: IComponent = {
 }
 ```
 
-The code imports the following:
+When this code is added, it does the following:
 
-* `menuApi` from `studioPro.ui.extensionsMenu` to allow you to use the menu API
-* `messageBoxApi` from `studioPro.ui.messageBoxes` to show a dialog.
-
-It starts listening to the `menuItemActivated` endpoint which will notify the extension when **My First Menu** is clicked.
-
-The `menuItemActivated` listener event handles the actual function of the menu. The arguments `args` contain the data returned by Studio Pro to the extension, notifying it which menu item was activated (clicked). This is passed as the `menuId` that was used when creating the menu item and the `menuId` in the `if` statement is used to identify this. In this example it is `"my-menu-unique-id"` and the handler calls the `messageBoxApi` to show an information dialog.
+1. Studio Pro starts listening to the `menuItemActivated` endpoint. This notifies the extension when **My First Menu** is clicked.
+2. The `args` parameter contains the information sent from Studio Pro to the extension, indicating which menu item was clicked.
+3. The listener checks if the clicked `menuId` matches your defined ID. If it does, it calls `messageBoxApi.show()`.
+4. Studio Pro displays an information dialog with the message you provided.
 
 Your extensions should now appear like this:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/web/menus/my_first_menu.png" >}}
-
-## Menu Properties
-
-The menu has the following properties:
-
-* `caption` – the text of the menu item
-* `menuId` – a unique id for the menu item
-* `subMenus` – a list of menus subsidiary to this menu item
-* `hasSeparatorBefore` (default: `false`) – shows a visual separator before this menu item
-* `hasSeparatorAfter` (default: `false`) – shows a visual separator after this menu item
-* `enabled` (default: `true`) – indicates that this menu item notifies the listener when clicked
-
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/web/menus/grouped_menus.png" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/web/menus/my_first_menu.png" width="200" >}}
 
 ## Creating a Menu with Submenus
 
-You can also have a number of submenus that branch out your menu.
+You can also include multiple sub-menus to expand your menu structure.
 
-To do so, add additional menu items to your code and add these to the `subMenus` array for the relevant menu item. These child menus can in turn have their own submenus, and so on. Only parent menus (menus that are not sub menus to any others) should be added through the `await menuApi.add()` call, as shown in the code sample below.
+To do this, add additional menu items to your code and add them to the `subMenus` array for the relevant menu item. These child menus can have their own sub-menus, and so on. Only parent menus (menus that are not sub-menus to any others) should be added through the `await menuApi.add()` call, as shown in the code sample below.
 
 {{% alert color="info" %}}
-Parent menus (with `subMenus`) do not create `menuItemActivated` events. These only get sent when a leaf menu (a menu that does not have any submenus) is clicked.
+Parent menus (with `subMenus`) do not create `menuItemActivated` events. These are only sent when a leaf menu (a menu that does not have any sub-menus) is clicked.
 {{% /alert %}}
 
-The following `src/main/index.ts` generates one menu item with sub menus and one menu item without sub menus.
+The following `src/main/index.ts` generates one menu item with sub-menus, and one menu item without sub-menus.
 
 ```typescript
 import { IComponent, Menu, getStudioProApi } from "@mendix/extensions-api";
@@ -142,15 +136,15 @@ export const component: IComponent = {
 }
 ```
 
-The menu hierarchy will then be displayed like this:
+The menu hierarchy will be displayed like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/web/menus/child_menus.png" >}}
 
-## Updating a menu
+## Updating a Menu
 
-Sometimes you might want to disable a menu or update its caption depending on a condition. You can do so by calling the menu API's `updateMenu` method.
+You can disable a menu or update its caption, depending on a condition. You can do this by calling the menu API's `updateMenu` method.
 
-An example is shown in the code below. If you click on the menu item, it will be disabled and its caption will be updated.
+An example is shown in the code below. If you click the menu item, it will be disabled and its caption will be updated.
 
 {{% alert color="info" %}}
 Only `caption` and `enabled` can be updated.
@@ -191,23 +185,43 @@ export const component: IComponent = {
 }
 ```
 
-The disabled state is shown in the image below.
+The disabled state is shown in the image below:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/web/menus/disabled_menu.png" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/web/menus/disabled_menu.png" width="300" >}}
 
-## Attaching a Command to the Menu
+## Setting the Action Property on the Menu
 
-Instead of listening to the `menuItemActivated` event, it is possible to register a command, then attach the `commandId` of the new command to your menu. When the menu is clicked, if its `commandId` property has been set, the backend will execute the command instead of firing the `menuItemActivated` event. 
+You can also set the `action` property on the menu directly.
 
-For a full explanation on how to register commands, see the [Commands API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/command-api/).
+```typescript
+import { IComponent, Menu, getStudioProApi } from "@mendix/extensions-api";
 
-## Conclusion
+export const component: IComponent = {
+    async loaded(componentContext) {
+        const studioPro = getStudioProApi(componentContext);
+        const menuApi = studioPro.ui.extensionsMenu;
 
-You have seen how to create simple menu items and menu items with sub menus.
-You can also dynamically change the enabled status and caption of a menu item.
+        const menuId = "my-menu-unique-id";
+        const caption = "Menu with Action";
+
+        const menu: Menu = {
+            caption: caption,
+            menuId: menuId,
+            action: async () => {
+                await menuApi.update(menuId, {
+                    caption: `${caption} (Disabled)`,
+                    enabled: false
+                });
+            }
+        };
+
+        await menuApi.add(menu);
+    }
+}
+```
 
 ## Extensibility Feedback
 
-If you would like to provide us with some additional feedback you can complete a small [Survey](https://survey.alchemer.eu/s3/90801191/Extensibility-Feedback)
+If you would like to provide additional feedback, you can complete a small [survey](https://survey.alchemer.eu/s3/90801191/Extensibility-Feedback).
 
-Any feedback is much appreciated.
+Any feedback is appreciated.

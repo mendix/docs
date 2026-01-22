@@ -23,7 +23,7 @@ The type of agent you can build is a single-turn agent, which means that:
 * It focuses on specific task completion. 
 * It uses a knowledge base and function calling to retrieve data or perform actions.
 
-This document covers two approaches to defining an agent for your Mendix app. Both approaches leverage the capabilities of Mendix Agents Kit:
+This document covers two approaches to defining an agent for your Mendix app. Both approaches leverage the capabilities of Mendix' Agents Kit:
 
 * The first approach uses the [Agent Builder UI to define agents](#define-agent-commons) at runtime by the principles of Agent Commons. It enables versioning, development iteration and refinement at runtime, separate from the traditional app logic development cycle. 
 * The second approach [defines the agent programmatically](#define-genai-commons) using the building blocks of GenAI Commons, and is more useful for very specific use cases and when the agent needs to be part of the code repository of the app.
@@ -34,9 +34,9 @@ Before building an agent in your app, make sure your scenario meets the followin
 
 * An existing app: start either from your existing app or by building from a pre-configured setup [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934) where the marketplace modules are already installed.
 
-* It is recommended to start in Mendix Studio Pro 10.21.0 or above to use the latest versions of the GenAI modules.
+* It is recommended to start in Mendix Studio Pro 10.24.0 or above to use the latest versions of the GenAI modules.
 
-* Installation: install the [GenAI Commons](https://marketplace.mendix.com/link/component/239448), [Agent Commons](https://marketplace.mendix.com/link/component/240371), [MxGenAI Connector](https://marketplace.mendix.com/link/component/239449), and [ConversationalUI](https://marketplace.mendix.com/link/component/239450) modules from the Mendix Marketplace. If you start from the Blank GenAI App, skip this installation.
+* Installation: install the [GenAI Commons](https://marketplace.mendix.com/link/component/239448), [Agent Commons](https://marketplace.mendix.com/link/component/240371), [MxGenAI Connector](https://marketplace.mendix.com/link/component/239449), and [ConversationalUI](https://marketplace.mendix.com/link/component/239450) modules from the Mendix Marketplace. If you want to empower your agent with tools available through the Model Context Protocol (MCP), you will also need to download the [MCP Client](https://marketplace.mendix.com/link/component/244893) module. However, if you start with a Blank GenAI App, you can skip installing the specified modules.
 
 * Intermediate understanding of Mendix: knowledgeable of simple page building, microflow modelling, domain model creation and import/export mappings.
 
@@ -45,6 +45,8 @@ Before building an agent in your app, make sure your scenario meets the followin
 * Basic understanding of GenAI concepts: review the [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/) page for foundational knowledge and familiarize yourself with the [concepts of GenAI](/appstore/modules/genai/using-gen-ai/) and [agents](/appstore/modules/genai/agents/).
 
 * Basic understanding of Function Calling and Prompt Engineering: learn about [Function Calling](/appstore/modules/genai/function-calling/) and [Prompt Engineering](/appstore/modules/genai/get-started/#prompt-engineering) to use them within the Mendix ecosystem.
+
+* Optional Prerequisites: Basic understanding of the [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) and the available Mendix modules—[MCP Server module](https://docs.mendix.com/appstore/modules/genai/mcp-modules/mcp-server/) and [MCP Client module](https://docs.mendix.com/appstore/modules/genai/mcp-modules/mcp-client/).
 
 ## Agent Use Case
 
@@ -201,6 +203,17 @@ You have now successfully created your first function microflow that you will li
 
 As a result of this function, users will be able to ask for information for a specific ticket by providing a ticket identifier, for example, by asking `What is ticket 42 about?`.
 
+#### Access function microflows via MCP 
+
+Instead of (or alongside) configuring functions directly within your application, you can access them via the Model Context Protocol (MCP). This approach requires an MCP server to be running and exposing the desired functions.
+
+To get started:
+
+* Review the MCP Server example in our showcase app to learn how to expose functions.
+* Check the MCP Client showcase for configuration details and implementation guidance.
+
+This method provides greater flexibility in managing and sharing functions across different applications and environments.
+
 ## Define the Agent Using Agent Commons {#define-agent-commons}
 
 The main approach to set up the agent and build logic to generate responses is based on the logic part of the Agent Commons module. Start by defining an agent with a prompt at runtime, then, through the same UI, add tools, (microflows as functions) and knowledge bases to the agent version.
@@ -260,13 +273,13 @@ Create an agent that can be called to interact with the LLM. The [Agent Commons]
 
 In order to let the agent generate responses based on specific data and information, you will connect it to two function microflows and a knowledge base. Even though the implementation is not complex—you only need to link it in the front end—it is highly recommended to be familiar with the [Integrate Function Calling into Your Mendix App](/appstore/modules/genai/how-to/howto-functioncalling/) and [Grounding Your Large Language Model in Data – Mendix Cloud GenAI](/appstore/modules/genai/how-to/howto-groundllm/#chatsetup) documents. These guides cover the foundational concepts for function calling and knowledge base retrieval. 
 
-You will now use the function microflows that were created in earlier steps. In order to make use of the function calling pattern, you just need to link them to the agent as *Tools*, so that the agent can autonomously decide how and when to use the function microflows. As mentioned, the final result can be found in the **ExampleMicroflows** folder of the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) for reference. 
+You will now use the function microflows that were created in earlier steps. To make use of the function calling pattern, you just need to link them to the agent as *Tools*, so that the agent can autonomously decide how and when to use the function microflows. As mentioned, you can find the final result in the **ExampleMicroflows** folder of the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) for reference. Note that tools can also be added when published from an MCP server. However, this scenario is not covered in this document.
 
-#### Connect Function: Get Number of Tickets by Status
+#### Connect Function: Get Number of Tickets by Status (Without MCP Server)
 
 1. From the **Agent Overview**, click the `IT-Ticket Helper` agent to view it. If it does not show the draft version, click the button next to the version dropdown to create it. 
 
-2. In the second half of the page, under **Tools**, add a new tool:
+2. In the second half of the page, under **Tools**, add a new tool of type `Microflow tool`:
 
     * Name: `RetrieveNumberOfTicketsInStatus` (expression)
     * Description: `Get number of tickets in a certain status. Only the following values for status are available: ['Open', 'In Progress', 'Closed']` (expression)
@@ -275,9 +288,9 @@ You will now use the function microflows that were created in earlier steps. In 
 
 3. Click **Save**.
 
-#### Connect Function: Get Ticket by Identifier
+#### Connect Function: Get Ticket by Identifier (Without MCP Server)
 
-1. From the agent view page for the `IT-Ticket Helper` agent, under **Tools**, add another tool:
+1. From the agent view page for the `IT-Ticket Helper` agent, under **Tools**, add another tool of type `Microflow tool`:
 
     * Name: `RetrieveTicketByIdentifier` (expression)
     * Description: `Get ticket details based on a unique ticket identifier (passed as a string). If there is no information for this identifier, inform the user about it.` (expression)
@@ -285,6 +298,18 @@ You will now use the function microflows that were created in earlier steps. In 
     * Function microflow: select the module in which the function microflows reside, then select the microflow called `Ticket_GetTicketByID`. When starting from the Blank GenAI App, this module should be **MyFirstModule**
 
 2. Click **Save**.
+
+#### Connect Functions via MCP
+
+Before adding tools via MCP, ensure you have at least one `MCPClient.MCPServerConfiguration` object in your database that contains the connection details for the MCP Server you want to use.
+
+   1. Navigate to the agent view page for the IT-Ticket Helper agent and go to the Tools section. Add a new tool of type MCP tools.
+   2. Select the appropriate MCP server configuration from the available options.
+   3. Choose your import type:
+        * `server`: imports all tools exposed by the server
+        * `tools`: allows you to select specific tools from the server
+   4. If you selected import type `tools`, you can choose to enable all available tools or select only the specific ones you need.
+   5. Click **Save**. The connected server or your selected tools will now appear in the agent's tool section.
 
 #### Include Knowledge Base Retrieval: Similar Tickets
 
@@ -443,7 +468,7 @@ In this section, you will enable the agent to call two microflows as functions, 
 
 All components used in this document can be found in the **ExampleMicroflows** folder of the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) for reference. This example focuses only on retrieval functions, but you can also expose functions that perform actions on behalf of the user. An example of this is creating a new ticket, as demonstrated in the [Agent Builder Starter App](https://marketplace.mendix.com/link/component/240369).
 
-#### Connect Function: Get Number of Tickets by Status
+#### Connect Function: Get Number of Tickets by Status (Without MCP Server)
 
 The first function enables the user to ask questions about the ticket dataset, for example, how many tickets are in a specific status. Since this is private data specific to your application, an LLM cannot answer such questions on its own. Instead, the model acts as an agent by calling a designated microflow within your application to retrieve the information. For more information, see [Function Calling](/appstore/modules/genai/function-calling/).
 
@@ -456,7 +481,7 @@ The first function enables the user to ask questions about the ticket dataset, f
 
 When you restart the app and ask the agent "How many tickets are open?", a log should appear in your Studio Pro console indicating that your microflow was executed.
 
-#### Connect Function: Get Ticket by Identifier
+#### Connect Function: Get Ticket by Identifier (Without MCP Server)
 
 As a second function, the model can pass an identifier if the user asked for details of a specific ticket and the function returns the whole object as JSON to the model.
 
@@ -467,6 +492,15 @@ As a second function, the model can pass an identifier if the user asked for det
     * Tool description: `Get ticket details based on a unique ticket identifier (passed as a string). If there is no information for this identifier, inform the user about it.` (expression)
     * Function microflow: select the microflow called `Ticket_GetTicketByID`
     * Use return value: `no`
+  
+#### Connect Functions via MCP 
+
+Instead of using local functions, you can also add functions available via MCP. To add them in `ACT_TicketHelper_CallAgent`, you have two options available in the **USE_ME** folder of the MCP Client module.
+ 
+* Use `Request_AddAllMCPToolsFromServer` to add all functions available on a selected MCP server to the request.
+* Use `Request_AddSpecificMCPToolFromServer` to specify individual functions by name (for example, `RetrieveTicketByIdentifier`) and optionally override their tool descriptions.
+
+For both approaches, you need an `MCPClient.MCPServerConfiguration` object containing the connection details to your MCP server. This object must be in scope and selected as input to access the desired tools.
 
 #### Include Knowledge Base Retrieval: Similar Tickets
 

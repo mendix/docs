@@ -250,6 +250,93 @@ This section is represented by the `properties` tag in the widget XML file. It d
     </properties>
 ```
 
+### How to Enhance Your Pluggable Widget for Maia by Using `<prompt>` {#using-prompt-for-maia}
+
+Maia can help developers and users work more effectively with pluggable widgets when it understands their purpose and configuration options. To enable this, you can enhance your widget definition XML file with prompt elements that describe your widget's functionality in natural language.
+
+Maia uses these prompts to understand what your widget does and how its properties should be configured, allowing it to provide better assistance when users are building their applications.
+
+#### Adding Prompts to Widgets
+
+You can add a `<prompt>` element to describe the overall purpose and functionality of your widget. This prompt should be placed after the widget description and before the properties section:
+
+```xml
+<widget id="com.mendix.widget.web.datagrid.Datagrid" pluginWidget="true" offlineCapable="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>Data grid 2</name>
+    <description />
+    <prompt>Add a data grid 2 widget to the page.</prompt>
+    <properties>
+        <!-- Properties definition -->
+    </properties>
+</widget>
+```
+
+#### Adding Prompts to Properties
+
+Individual properties can also have `<prompt>` elements that explain their purpose and expected values. Property prompts are particularly useful for complex configuration options that might not be immediately clear from the caption alone:
+
+```xml
+<property key="itemSelection" type="selection" dataSource="datasource">
+    <caption>Selection</caption>
+    <description />
+    <prompt>Determines whether the user can select rows in the grid.</prompt>
+    <selectionTypes>
+        <selectionType name="None" />
+        <selectionType name="Single" />
+        <selectionType name="Multi" />
+    </selectionTypes>
+</property>
+```
+
+### Best Practices for Writing Prompts {#prompt-best-practices}
+
+Well-written prompts help Maia provide accurate and helpful assistance to developers using your pluggable widget. Follow these best practices when writing prompts for your widgets:
+
+#### Guidelines for Widget Prompts
+
+* **Be concise and action-oriented**: Start with an action verb and keep the prompt under 20 words when possible
+* **Focus on use cases**: Describe when and why someone would use this widget
+* **Use plain language**: Avoid technical jargon
+* **Be specific**: Instead of "displays data," write "displays tabular data with sorting and filtering capabilities"
+
+**Good examples:**
+
+* `"Add a data grid widget to display tabular data with sorting and pagination."`
+* `"Create a progress bar to show task completion status."`
+* `"Insert a chart widget to visualize numerical data as graphs."`
+
+**Poor examples:**
+
+* `"Widget for data"` (too vague)
+* `"Implements advanced data visualization paradigms using reactive patterns"` (too technical)
+
+#### Guidelines for Property Prompts
+
+* **Explain the impact**: Describe how the property affects the widget's behavior or appearance
+* **Mention key values**: If the property has important values or ranges, include them
+* **Use present tense**: Write as if describing current behavior, not future actions
+* **Be specific about relationships**: If a property depends on others, mention that relationship
+
+**Good examples:**
+
+* `"Determines whether users can select single or multiple rows in the table."`
+* `"Sets the refresh interval in seconds; 0 disables automatic refresh."`
+* `"Controls the color of the progress bar using CSS color values."`
+
+**Poor examples:**
+
+* `"Selection stuff"` (too vague)
+* `"Will configure selection"` (wrong tense)
+* `"Property for selection configuration management"` (too wordy)
+
+#### General Writing Guidelines
+
+* **Use consistent terminology**: Match the language used in Mendix documentation and Studio Pro
+* **Avoid redundancy**: Do not repeat information that is already clear from the caption
+* **Keep it updated**: Update prompts when widget functionality changes
+
+By following these guidelines, you help Maia understand your widget's capabilities and provide better assistance to developers using your pluggable widget.
+
 ## Property Groups {#property-groups}
 
 Before examining properties themselves, it is useful to understand property groups. Property groups are formed by properties wrapped in a `propertyGroup` tag. Studio Pro uses the property groups to render how the widget configuration UI appears in Studio Pro. Grouping can be used to help the modeling developer understand the configuration of a more complex widget. It is best practice to both use property groups and group properties based on their purposes. The property groups from the code in [Widget Properties Definition](#properties-definition) above forms the following structure:

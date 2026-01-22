@@ -56,9 +56,9 @@ We also strongly advise that you build user confirmation logic into function mic
 
 ### Supported OpenAI models {#supported-models-openai}
 
-OpenAI's latest GPT-3.5 Turbo, GPT-4 Turbo and GPT-4o models are trained with function calling data. Older model versions may not support parallel function calling. For more details view [OpenAI Documentation](https://platform.openai.com/docs/guides/function-calling/supported-models).
+OpenAI's latest GPT-3.5 Turbo, GPT-4 Turbo and GPT-4o models are trained with function calling data. Older model versions may not support parallel function calling. For more details, see [OpenAI Documentation](https://platform.openai.com/docs/guides/function-calling/supported-models).
 
-For models used through Azure OpenAI, feature availability is currently different depending on method of input and deployment type. For details view [Azure OpenAI Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#differences-between-openai-and-azure-openai-gpt-4-turbo-ga-models).
+For models used through Microsoft Foundry, feature availability is currently different depending on method of input and deployment type. For details, see [Microsoft Foundry Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#differences-between-openai-and-azure-openai-gpt-4-turbo-ga-models).
 
 ### Supported Amazon Bedrock models {#supported-models-bedrock}
 

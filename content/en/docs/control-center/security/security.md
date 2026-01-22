@@ -19,7 +19,12 @@ The **Settings** page in the **Security** category in Control Center allows you 
 
 ### Password Policy
 
-With the **Password Policy** setting, you can set the password expiration policy for all company members. If you do not want the passwords to expire, toggle **Passwords of company members never expire** to **On**.
+Mendix enforces a 90-day password validity period for all platform passwords used to sign in to the Mendix Platform or Studio Pro. 
+If Mendix Admins [set up SSO (BYOIDP)](/control-center/security/set-up-sso-byoidp/), the organization's IdP manages all sign-ins and passwords. In this case, the Mendix Platform's password validity policy no longer applies. 
+
+{{% alert color="info" %}}
+The Mendix Platform no longer allows you to configure a password validity period other than 90 days or to disable password expiry. This capability will be removed on March 31, 2026.
+{{% /alert %}}
 
 ### Email Signing {#disable-enable-digital-signing-emails}
 
@@ -73,7 +78,7 @@ You can turn application data replication back on by clicking **Activate**.
 
 On the **Single Sign-On** tab, you can set up an identity federation between the Mendix Platform and your corporate identity provider. This feature is called [Bring Your Own Identity Provider (BYOIDP)](/control-center/security/set-up-sso-byoidp/).
 
-### IdP-managed Mendix Admins
+### IdP-managed Mendix Admins {#idp-managed-mendix-admins}
 
 Once you have set up Single Sign-On (SSO) for the Mendix platform, you can extend this Identity Provider (IdP) integration to control who is granted the Mendix Admin role. From an access management perspective, central management of privileged roles, such as the Mendix Admin, is a recognized best practice. This approach mitigates the risk of privilege creep, where existing Mendix Admins can freely give admin rights to others without proper control.
 
@@ -96,18 +101,20 @@ As a result, the overview of [Mendix Admins](/control-center/mendix-admins-page/
 
 #### Onboarding Prerequisites
 
-Before you request to be onboarded to the IdP-managed Mendix Admins feature, please ensure the following prerequisites are met:
+Before you request to be onboarded to the IdP-managed Mendix Admins feature, ensure the following prerequisites are met:
 
-1. You have a Premium platform license to use this feature.
+1. You have a premium platform license to use this feature.
 2. You have set up an active SSO or BYO-IdP configuration, as described in [Set Up an SSO (BYOIDP)](/control-center/security/set-up-sso-byoidp/).
-3. You have a user group in your IdP that includes your current Mendix Admins. Typically, your IT department should manage this group, possibly with a request/approval process.
+3. You have a user group in your IdP that includes your current Mendix Admins. Typically, your IT department should manage this group, possibly with a request or approval process.
 4. The ID token sent by your IdP to the Mendix platform during SSO must include a claim that indicates whether a user is a member of the Mendix Admin group. For configuration, Mendix needs to know the name of the claim and the expected value. When using Entra ID, a typical setup should have the following claim in the ID token:
 
     ```text
     “roles” : “Mendix-admin”
     ```
 
-The Mendix platform has the flexibility of using any claim name and value.
+    The Mendix platform has the flexibility of using any claim name and value.
+
+5. Note that when using the BYOIDP feature to manage your Mendix Admins (see the [IdP-managed Mendix Admins](#idp-managed-mendix-admins) section above), the Mendix platform does not include anything specific in the SSO request (such as a specific scope value or claims request parameter). It expects that your IdP includes the required claim based on the configurations in your IdP for Mendix as a client.
 
 ## Security History Tab
 

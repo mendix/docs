@@ -7,7 +7,7 @@ weight: 2
 
 ## Introduction
 
-Studio Pro extensions can be developed using TypeScript and use standard web development technologies to extend the Studio Pro development environment. This guide shows you how to set up a basic development environment for building an extension using the web extensibility API.
+Studio Pro extensions can be developed using TypeScript and use standard web development technologies to extend the Studio Pro development environment. This document describes how to set up a basic development environment for building an extension using the web extensibility API.
 
 For more detailed information, see the [Mendix Studio Pro Web Extensibility API reference documentation](http://apidocs.rnd.mendix.com/11/extensions-api/index.html).
 
@@ -16,15 +16,15 @@ For more detailed information, see the [Mendix Studio Pro Web Extensibility API 
 You will need the following prerequisites:
 
 * [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro) version 11.2.0 or higher. 
-* A development IDE to develop your extensions. We recommend using [Visual Studio Code](https://code.visualstudio.com/).
-* Install the latest version 22.x.x of Node: https://nodejs.org/en/download.
+* A development IDE to develop your extensions. Mendix recommends using [Visual Studio Code](https://code.visualstudio.com/).
+* The latest version 22.x.x of Node: https://nodejs.org/en/download.
 
 {{% alert color="info" %}}
-Extensions can be built on any operating system as the underlying framework is cross-platform.
+Extensions can be built on any operating system, as the underlying framework is cross-platform.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Extension development is only possible by starting Studio Pro with the `--enable-extension-development` feature flag.
+Extension development is only possible by enabling the [Extension Development](/refguide/preferences-dialog/#extension-development) setting in your app's Preferences, or by starting Studio Pro with the `--enable-extension-development` feature flag.
 {{% /alert %}}
 
 ## Creating Your First Extension
@@ -35,28 +35,26 @@ This section will show you how to build and test an extension.
 
 Create a new app using the **Blank Web App** template.
 
-{{% alert color="info" %}}
 You can also open the application directory containing the application `.mpr` file by clicking the **App** menu > **Show App Directory in Explorer** (or **Show App Directory in Finder**) in Studio Pro.
-{{% /alert %}}
 
 ### Creating the Extension
 
-To accelerate your extension development, we provide an extension generator that creates a customizable sample extension.
+To accelerate your extension development, Mendix provides an extension generator that creates a customizable sample extension.
 
 To use the generator, navigate to your desired source code directory and run the command `npm create @mendix/extension`. You may be prompted by `npm` to grant permission to install the generator. After installation, you will be guided through a series of questions to help configure your extension.
 
 You will be asked the following:
 
-* Select the programming language (TypeScript is used in our tutorials)
+* Select the programming language (TypeScript is used in the tutorials)
 * Specify the extension name
-* Choose if you  will use React for the extension’s UI
+* Choose if you will use React for the extension’s UI
   
-The next two questions, while optional, are highly recommended, as they enable direct debugging and deployment from Visual Studio Code.
+The next two questions, while optional, are highly recommended, as they enable direct debugging and deployment from Visual Studio Code:
 
 * Specify the path to the Studio Pro executable (this allows Visual Studio Code to automatically attach to Studio Pro for debugging)
-* Specify the location of the application `.mpr` package. (This allows for automatic deployment of your extension build to your app)
+* Specify the location of the application `.mpr` package (this allows for automatic deployment of your extension build to your app)
 
- The final question allows you to select the Studio Pro version you are targeting; we recommend you choose version 11.
+ The last question allows you to select the Studio Pro version you are targeting; Mendix recommends choosing version 11.
 
 {{% alert color="info" %}}
 On a Windows machine, the Studio Pro executable is typically located at `C:\Program Files\Mendix\<version>\modeler\studiopro.exe`. To find the exact path, follow these steps:
@@ -77,54 +75,47 @@ Before you begin, your extension will have to get an instance of the Studio Pro 
 
 In the source code, you should see the following:
 
-1. Line 6 gets an instance of the Studio Pro API by calling `getStudioProApi`.
+1. You get an instance of the Studio Pro API by calling `getStudioProApi`.
    
     ```typescript
     export const component: IComponent = {
         async loaded(componentContext) {
             const studioPro = getStudioProApi(componentContext);
 
-2. Line 7 adds a menu:
+2. A menu is added that opens a tab:
 
     ```typescript
     await studioPro.ui.extensionsMenu.add({
         menuId: "myextension.MainMenu",
         caption: "MyExtension Menu",
         subMenus: [
-            { menuId: "myextension.ShowMenu", caption: "Show tab" },
+            {
+                menuId: "myextension.ShowMenu",
+                caption: "Show tab",
+                // Open a tab when the menu item is clicked
+                action: async () => {
+                    await studioPro.ui.tabs.open(
+                        {
+                            title: "MyExtension tab"
+                        },
+                        {
+                            componentName: "extension/myextension",
+                            uiEntrypoint: "tab"
+                        }
+                    )
+                }
+            }
         ],
     });
     ```
 
-3. Line 16 opens a tab.
-
-    ```typescript
-    // Open a tab when the menu item is clicked
-    studioPro.ui.extensionsMenu.addEventListener(
-        "menuItemActivated",
-        (args) => {
-            if (args.menuId === "myextension.ShowMenu") {
-                studioPro.ui.tabs.open(
-                    {
-                        title: "MyExtension Tab"
-                    },
-                    {
-                        componentName: "extension/myextension",
-                        uiEntrypoint: "tab",
-                    }
-                );
-            }
-        }
-    );
-    ```
-
-4. If you navigate to `build-extension.mjs`, you can choose the directory to which the extension will be installed to after being built by changing line 6:
+3. If you navigate to `build-extension.mjs`, you can choose the directory where the extension will be installed to after being built by changing line 6:
 
      ```typescript
      const appDir = "C:\\TestApps\\AppTestExtensions"
      ```
 
-5. The file `.vscode\launch.json` specifies the launch configuration and enables debugging. The following lines specify how Studio Pro will be run:
+4. The file `.vscode\launch.json` specifies the launch configuration and enables debugging. The following lines specify how Studio Pro will be run:
      
      ```json
      …
@@ -155,17 +146,8 @@ If the last two questions of the extension generator were answered and you have 
 
 This will run Studio Pro in extension development mode and open the configured application. You will see a new `Extensions` item in the top menu.
 
-## Conclusion
-
-Using this guide we have:
-
-* Created a new app
-* Used the extension generator to get started with extension development
-* Built the extension and installed it in our app
-* Tested and debugged our extension from within Visual Studio Code
-
 ## Extensibility Feedback
 
-If you would like to provide us with some additional feedback you can complete a small [Survey](https://survey.alchemer.eu/s3/90801191/Extensibility-Feedback)
+If you would like to provide additional feedback, you can complete a small [survey](https://survey.alchemer.eu/s3/90801191/Extensibility-Feedback).
 
-Any feedback is much appreciated.
+Any feedback is appreciated.

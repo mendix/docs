@@ -10,35 +10,32 @@ aliases:
 
 ## Introduction {#settings}
 
-On the [User Settings](https://user-settings.mendix.com/link/profile) page, you can edit your [Mendix Profile](/mendix-profile/).
+On the [User Settings](https://user-settings.mendix.com/link/profile) page, you can edit your [Mendix profile](/mendix-profile/).
 
 ## Profile {#profile}
 
 This is what you can do on the [Profile](https://user-settings.mendix.com/link/profile) page:
 
-* Upload your profile image.
-* Fill in your personal and work details.
-* Tell the Mendix community about yourself and your work experience. Let everyone know your area of expertise by filling in your **Industry** and **Skills**.  
-* Connect your social accounts via **Twitter URL** and **LinkedIn URL**.
-* Choose to make your profile public by clicking **Make Profile Public**. This allows the Mendix community to view your profile. Be sure to do the following to make your profile public:
-
-    * Add an avatar.
-    * Enter a **Job Title**, **Department**, and **Country of Residence**.
-    * Add some details **About You**.
-    * Add at least one **Skill**.
-    * Add at least one **Industry Experience** item.
-
+* Upload a profile image.
+* Enter your name.
+* Add your work details, meaning **Job Title** and **Department**.
+* Select your **Country of Residence**.
+* Select the **Language** in which to display Mendix Portal content. Language selection is applied after signing out and signing back in.       
   {{% alert color="info" %}}
-  To make your public profile private again, click **Make Profile Private**. 
+  User-created content and system-generated content, such as app logs, is not translated. 
   {{% /alert %}}
+* Tell the Mendix community about yourself and your work experience. Let everyone know your area of expertise by filling in the **About You** field, and your **Industry** and **Skills**.  
+* Connect your LinkedIn account through the **LinkedIn URL**.
+* Choose to make your profile public by clicking **Make Profile Public**. This allows the Mendix community to view your profile.    
+  To make your public profile private again, click **Make Profile Private**. 
 
-* Add a **Recovery Email** address, which is useful if you lose access to your account or Mendix Profile. You can provide a non-business email address for this.
+* Add a **Recovery Email** address, which is useful if you lose access to your account or Mendix profile. You can provide a non-business email address for this.
 
 ### Merging Profiles {#merging-profiles}
 
-If you own two or more user accounts, Mendix recommends merging the profiles of these user accounts with each other. This saves you from having to maintain multiple profiles, and your community contributions will be stored with the one profile you actively use. As a result, you will have a stronger single Mendix Profile, and you will not have to keep track of your progress scattered in multiple profiles in the platform.
+If you own two or more user accounts, Mendix recommends merging the profiles of these user accounts with each other. This saves you from having to maintain multiple profiles, and your community contributions will be stored with the one profile you actively use. As a result, you will have a stronger single Mendix profile, and you will not have to keep track of your progress scattered in multiple profiles in the platform.
 
-The **Merge Profile** process merges the information associated with the merged profiles, resulting in a single Mendix Profile with two or more user accounts related to it. For details on what information ends up in the resulting merged profile, see the [Results of Merge Process](#merge-profile-result) section.
+The **Merge Profile** process merges the information associated with the merged profiles, resulting in a single Mendix profile with two or more user accounts related to it. For details on what information ends up in the resulting merged profile, see the [Results of Merge Process](#merge-profile-result) section.
 
 These are the prerequisites for the profile merge actions:
 
@@ -46,23 +43,21 @@ These are the prerequisites for the profile merge actions:
 * Have platform access with at least one of these user accounts.
 * Be able to receive emails for the user profiles that will be merged. This can be your email address used to log in or a profile email address.
 
-{{% alert color="warning" %}}
-You should also prepare for the merge by adding your new account to the relevant apps of your old account. Mendix recommends doing this so that you do not lose access to the apps in your old account, and so you do not need a new invitation to those apps to gain access.
-{{% /alert %}}
-
 Before you start with a new profile merge action, it is important to understand what scenarios are possible, and what it means for the profile merge process. The following starting scenarios are possible:
 
 * **All user accounts give you access to the Mendix Platform** – If you have access to the platform with all your user accounts, you are able to initiate a merge after signing in with any of the accounts. For the other profile, a confirmation email message is sent that enables starting the merge action.
 * **One of the user accounts gives you access to the Mendix Platform** – If you have access to only one of your user accounts, the profile merge process can only be initiated from that account. Furthermore, the user account you signed in with determines what profile information ends up in the resulting merged profile in the case of properties where the system cannot determine the information that should be kept. For the other profile, a confirmation email message is sent that enables starting the merge action. 
 * **None of the user accounts gives you access to the Mendix Platform** – You should own at least one user account that provides access to the Mendix Platform.
 
-{{% alert color="warning" %}}
-If you do not have access to any of the email addresses linked to the user accounts/profiles that you want to merge, and you cannot log in with the Mendix Profile you want to merge, click **Create Support Request** to go to Mendix Support. Mendix Support will contact you to change the profile recovery email. Once this is done, you will be able to follow the next steps. 
-{{% /alert %}}
+#### Important Considerations
 
-{{% alert color="warning" %}}
-When merging user profiles, a merge confirmation is needed for the user account you are not signed in with. The verification code that you need to confirm the merge operation will arrive by email. Therefore, you must be able to receive the verification email in an email inbox that is associated with the user account or the associated profile.  
-{{% /alert %}}
+Please keep the following in mind before merging your Mendix profiles:
+
+* When you merge Mendix profiles as a result of moving from one company to another, Marketplace components uploaded under your previous company’s account are not transferred automatically to the merged profile.    
+  To request a transfer, file a support ticket listing the components. The transfer will be completed once approved by the Company Admin of your previous company.
+* If you do not have access to any of the email addresses linked to the user accounts/profiles that you want to merge, and you cannot log in with the Mendix profile you want to merge, click **Create Support Request** to go to Mendix Support. Mendix Support will contact you to change the profile recovery email. Once this is done, you will be able to follow the next steps.
+* When merging user profiles, a merge confirmation is needed for the user account you are not signed in with. The verification code that you need to confirm the merge operation will arrive by email. Therefore, you must be able to receive the verification email in an email inbox that is associated with the user account or the associated profile.
+* Prepare for the merge by adding your new account to the relevant apps of your old account. Mendix recommends doing this so that you do not lose access to the apps in your old account, and so you do not need a new invitation to those apps to gain access.
 
 #### Merge Process {#merge-process}
 
@@ -70,7 +65,7 @@ Follow these steps to merge your profiles:
 
 1. Click **Merge Profile**.
 2. In the dialog box that is displayed, enter the email address of one of the accounts linked to the profile you want to transfer information from, then click **Next**.
-3. Choose an email address to receive a verification code. Make sure this is an email address you have access to. This step is needed to verify that you are the owner of the Mendix Profile you are trying to merge.
+3. Choose an email address to receive a verification code. Make sure this is an email address you have access to. This step is needed to verify that you are the owner of the Mendix profile you are trying to merge.
 4. Enter the verification code you received via the selected email address.
 5. After clicking **Verify**, you will see an overview of the profile information that will be deleted and kept. This includes earned points, achievements, certifications, and Academy progress that will be merged to your target profile. Note that credits cannot be merged — they remain on the accounts where they were earned.
 6. To proceed with the merge, click **Merge**. You will be notified once the merge is completed.
@@ -81,7 +76,7 @@ With the merge, the accounts of both profiles are kept. None of the accounts wil
 
 #### Merge Result {#merge-profile-result}
 
-The result of the profile merge process is that the information of the profiles is merged into one profile. The information that can be added to the profile will be associated with the resulting Mendix Profile. However, in a situation where there is conflicting data for the two profiles to be merged, the system uses the profile data of the user account you are signed in with. 
+The result of the profile merge process is that the information of the profiles is merged into one profile. The information that can be added to the profile will be associated with the resulting Mendix profile. However, in a situation where there is conflicting data for the two profiles to be merged, the system uses the profile data of the user account you are signed in with. 
 
 The following details may have conflicts, but these can easily be updated after the merge process: 
 
@@ -99,7 +94,7 @@ It is not possible to separate profiles after they have been merged. Double-chec
 
 ## Accounts
 
-The [Accounts](https://user-settings.mendix.com/link/account) page is an overview of all the accounts you own and that are linked to your Mendix Profile. You can see which account you are logged in with, the company associated with each user account, if single sign-on is enabled, and the status of each user account (**Active** or **Deactivated**).
+The [Accounts](https://user-settings.mendix.com/link/account) page is an overview of all the accounts you own and that are linked to your Mendix profile. You can see which account you are logged in with, the company associated with each user account, if single sign-on is enabled, and the status of each user account (**Active** or **Deactivated**).
 
 ### Managing Account Passwords
 
@@ -130,14 +125,14 @@ You can only remove the account with which you are logged in. If you do not have
 
 If you already have a profile and want to add a new account to it, you can create the new account on your profile's **Accounts** overview. This action combines signing up for a new Mendix Platform account and [merging your profiles](#merging-profiles). After successfully completing the flow, the new account appears in the **Accounts** overview.
 
-Follow these steps to add a new account to your Mendix Profile:
+Follow these steps to add a new account to your Mendix profile:
 
 1. Click **Create Account**.
 2. In the dialog box that appears, enter the email address of the account you want to create, then click **Next**.
 3. In the next dialog box, enter a secure **Password** and indicate whether you want to receive marketing communications from Mendix on this account, then click **Next**.
 4. Enter the verification code you receive via the selected email address.
 5. Click **Verify**. You will see a loader while your account is created in the background.
-6. If all went well, the new account is visible in the list of accounts that are part of your Mendix Profile.
+6. If all went well, the new account is visible in the list of accounts that are part of your Mendix profile.
 
 {{% alert color="warning" %}}
 This feature is not available if your company has enabled single sign-on. If this is the case, you have to follow the regular sign up process and then [merge the new account to your profile](#merging-profiles) when the sign-up is completed.
@@ -191,7 +186,7 @@ For more information, refer to the following:
 
 ### Personal Access Tokens {#pat}
 
-On the **Personal Access Tokens** section of the [Developer Settings](https://user-settings.mendix.com/link/developersettings) page, you can view, create, and manage your PATs.
+In the **Personal Access Tokens** section of the [Developer Settings](https://user-settings.mendix.com/link/developersettings) page, you can view, create, and manage your PATs.
 
 Some platform APIs use personal access tokens (PATs) rather than API keys. This section explains the concept of PATs, how you can obtain one, and how you can use this security token to give an application access to Mendix Platform services on your behalf.
 
@@ -272,9 +267,16 @@ Content-Type: application/json
 
 For information on other PAT usages, see the [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/) and [Projects API](/apidocs-mxsdk/apidocs/projects-api/).
 
+{{% alert color="warning" %}}
+To ensure robust security, Mendix recommends checking the policy your company has for credential renewal and updating or regenerating your configured PAT every six months.
+{{% /alert %}}
+
 ## Personal Data
 
-On the [Personal Data](https://user-settings.mendix.com/link/notifications) page, you can view and download your personal data. The Mendix Platform stores certain personal information about you. You can view this information on the page or download it by clicking  **Download Personal Data**.
+On the [Personal Data](https://user-settings.mendix.com/link/notifications) page, you can view and download your personal data.     
+The Mendix Platform stores certain personal information about you, which you can see on the page, or download by clicking  **Download Personal Data**. 
+
+The information on this page consists of the data you have entered on the [Profile](#profile) page, along with your **OpenID**. The **OpenID** is your unique user identification code, which you can copy and provide if needed in specific support scenarios.
 
 {{% alert color="info" %}}
 Mendix has been tracking these data changes since November 2018.

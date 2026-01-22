@@ -46,7 +46,11 @@ The values for the platform property are:
 
 #### Parameters {#parameters}
 
-**Snippet Parameters** works the same way as [Page Parameter](/refguide/page-properties/#parameters) with the difference that a snippet's parameter can be accessed at the top level, for example when creating expressions or selecting attributes.
+**Snippet parameters** allow snippets to be re-used with different data. They work the same way as [Page Parameters](/refguide/page-properties/#parameters).
+
+{{% alert color="info" %}}
+Snippet parameters do not support primitive types and cannot be made optional, like [page parameters](/refguide/page-parameter/) do.
+{{% /alert %}}
 
 #### Variables {#variables}
 

@@ -14,6 +14,8 @@ For Dynatrace monitoring, [Dynatrace OneAgent](https://www.dynatrace.com/platfor
 
 In addition to auto-instrumented built-in metrics collected by OneAgent, Mendix apps can also collect custom application metrics. Custom application metrics are supported in Mendix 9.7 and above. For more information on the custom metrics you can send to Dynatrace, see [Monitoring Your Mendix Apps with an APM Tool](/developerportal/operate/monitoring-with-apm/).
 
+For Dynatrace SaaS customers, application logs can also be viewed by setting environment variable `DT_ENABLE_LOGS` to `true`.
+
 ## Prerequisites
 
 To use Dynatrace and send data to Dynatrace from your Mendix app, you need the following:
@@ -30,20 +32,21 @@ To use Dynatrace and send data to Dynatrace from your Mendix app, you need the f
 To start sending your Mendix app's metrics to Dynatrace, you need to set some environment variables in the Mendix Portal. Follow these steps:
 
 1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
-1. Click **Details** on the environment you wish to monitor with Dynatrace. 
-1. Switch to the [**Runtime** tab](/developerportal/deploy/environments-details/#runtime-tab).
-1. Add the following **Custom Environment Variables**.
+2. Click **Details** on the environment you wish to monitor with Dynatrace. 
+3. Switch to the [**Runtime** tab](/developerportal/deploy/environments-details/#runtime-tab).
+4. Add the following **Custom Environment Variables**.
 
     | Variable | Required? | Description | Details |
-    | --- | --- | --- | --- |
-    | `DT_SAAS_URL` | Yes | The URL of Dynatrace environment | The format when using the Dynatrace SaaS environment is similar to `https://<your-environment-id>.live.dynatrace.com`. If you are using a Dynatrace managed environment, just provide the full URL of the Dynatrace domain, like `https://<your-dynatrace-domain>`. |
-    | `DT_TENANT` | Yes | The Dynatrace Environment ID | For more information, see the [Environment ID](https://www.dynatrace.com/support/help/get-started/monitoring-environment/environment-id) Dynatrace documentation. |
-    | `DT_PAAS_TOKEN` | Yes | The access token for integrating your Mendix app with Dynatrace | Create this on the Dynatrace environment. For more information, see [Generate an Access Token](https://www.dynatrace.com/support/help/get-started/access-tokens#create-api-token). The token must include the `PaaS integration - Installer download` and `Ingest metrics` scopes. |
-    | `DT_IS_MANAGED` | No | Set this to `true` if you are using Dynatrace Managed. The default is assumed to be Dynatrace SaaS and set to `false`. | This variable is only needed for custom application metrics ingestion. |
-    | `DT_CLUSTER_ID` | No | You can use this to tag your cluster, process group, or deployment group. | |
-    | `DT_CUSTOM_PROP` | No | This can be used to provide metadata for your process group. | For more information, see [Define Your Own Process Group Metadata](https://www.dynatrace.com/support/help/platform-modules/infrastructure-monitoring/process-groups/configuration/define-your-own-process-group-metadata). |
+    | --- |-----------| --- | --- |
+    | `DT_SAAS_URL` | Yes       | The URL of Dynatrace environment | The format when using the Dynatrace SaaS environment is similar to `https://<your-environment-id>.live.dynatrace.com`. If you are using a Dynatrace managed environment, just provide the full URL of the Dynatrace domain, like `https://<your-dynatrace-domain>`. |
+    | `DT_TENANT` | Yes       | The Dynatrace Environment ID | For more information, see the [Environment ID](https://www.dynatrace.com/support/help/get-started/monitoring-environment/environment-id) Dynatrace documentation. |
+    | `DT_PAAS_TOKEN` | Yes       | The access token for integrating your Mendix app with Dynatrace | Create this on the Dynatrace environment. For more information, see [Generate an Access Token](https://www.dynatrace.com/support/help/get-started/access-tokens#create-api-token). The token must include the `PaaS integration - Installer download` and `Ingest metrics` scopes. For logging integration, `Ingest logs` scope is also required. |
+    | `DT_ENABLE_LOGS` | No        | Set this to `true` to enable logging | Only supported for Dynatrace SaaS. `Ingest logs` scope is required to be included in the access token. |
+    | `DT_IS_MANAGED` | No        | Set this to `true` if you are using Dynatrace Managed. The default is assumed to be Dynatrace SaaS and set to `false`. | This variable is only needed for custom application metrics ingestion. |
+    | `DT_CLUSTER_ID` | No        | You can use this to tag your cluster, process group, or deployment group. | |
+    | `DT_CUSTOM_PROP` | No        | This can be used to provide metadata for your process group. | For more information, see [Define Your Own Process Group Metadata](https://www.dynatrace.com/support/help/platform-modules/infrastructure-monitoring/process-groups/configuration/define-your-own-process-group-metadata). |
 
-1. Return to the **General** tab and restart your environment.
+5. Return to the **General** tab and restart your environment.
 
 ## Additional Information {#additional-info}
 
@@ -70,10 +73,10 @@ You can set extra dimensions as tags in the Mendix Portal. Mendix recommends at 
 To set this tag, do the following:
 
 1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
-1. Click **Details** ({{% icon name="notes-paper-edit" %}}) on an environment you are monitoring with Dynatrace. 
-1. Switch to the **Tags** tab.
-1. Click **Add** and type in a string to be sent to Dynatrace as a dimension. For more information, see the [**Tags** tab](/developerportal/deploy/environments-details/#tags) documentation in *Environment Details*.
-1. Restart the app.
+2. Click **Details** ({{% icon name="notes-paper-edit" %}}) on an environment you are monitoring with Dynatrace. 
+3. Switch to the **Tags** tab.
+4. Click **Add** and type in a string to be sent to Dynatrace as a dimension. For more information, see the [**Tags** tab](/developerportal/deploy/environments-details/#tags) documentation in *Environment Details*.
+5. Restart the app.
 
 Setting this value for your app causes all metrics from this environment of your app to have these tags. For example, the tags for `mx.microflow.time.avg` for this set of metrics include `env:accp`.
 

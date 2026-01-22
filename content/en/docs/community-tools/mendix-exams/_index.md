@@ -20,21 +20,23 @@ You can register yourself for the certification exams online by following the **
 
 For free certification, as is the case with the [Rapid Developer Certification](https://academy.mendix.com/link/certifications/23/rapid), you just need to agree to the terms. You are then sent an email with instructions on how to take the exam. You will also be able to continue directly to take the exam if you want to.
 
-You have 30 days to start the exam. When you start, you will be able to choose one of the supported languages. 
+You can choose the language during the registration process.    
+You have 30 days to start the exam.  
 
 #### Paid Certification
 
-For paid certification, as is the case with the [Intermediate Developer Certification](https://academy.mendix.com/link/certifications/22/intermediate) you will need to arrange payment. Do the following:
+For paid certification, as is the case with the [Intermediate Developer Certification](https://academy.mendix.com/link/certifications/22/intermediate) you need to arrange payment. Follow these steps:
 
 1. Fill in the **Billing information**.
-1. Review the **Payment Summary** and enter **Voucher** information if appropriate. The voucher details may be prefilled, depending on your organization.
-1. Click **Run System Test** to ensure your system is compatible with the exam platform.
-1. Confirm that you understand the terms and that your system is capable of supporting the exam.
-1. Click **Register**.
+2. Review the **Payment Summary** and enter **Voucher** information if appropriate. The voucher details may be prefilled, depending on your organization.
+3. Click **Run System Test** to ensure your system is compatible with the exam platform.
+4. Confirm that you understand the terms and that your system is capable of supporting the exam.
+5. Click **Register**.
 
 You will be taken to the start page of the exam, and will also receive a confirmation email with details of the exam you have purchased.
 
-You have 30 days to start the exam. When you start, you will be able to choose one of the supported languages.
+You can choose the language during the registration process.    
+You have 30 days to start the exam. 
 
 ### Booking for Other People
 

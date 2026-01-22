@@ -5,6 +5,22 @@ weight: 8
 description: "Native Template 17"
 ---
 
+## 17.0.4 {#1704}
+
+**Release date: January 22, 2026**
+
+### Improvements
+
+* We added the LocationWhenInUse permission to the iOS configuration to support react-native-permissions.
+
+## 17.0.3 {#1703}
+
+**Release date: January 15, 2026**
+
+### Improvements
+
+* We removed leftover Detox references from the Android build files. This fixes an issue where generating Android APKs would fail due to Detox dependencies not being found.
+
 ## 17.0.2 {#1702}
 
 **Release date: January 12, 2026**

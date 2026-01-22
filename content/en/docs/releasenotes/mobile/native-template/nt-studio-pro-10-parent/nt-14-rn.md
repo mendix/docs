@@ -5,6 +5,14 @@ weight: 6
 description: "Native Template 14"
 ---
 
+## 14.1.12 {#1422}
+
+**Release date: January 22, 2026**
+
+### Improvements
+
+* We added the `LocationWhenInUse` permission to the iOS configuration to support react-native-permissions.
+
 ## 14.1.11 {#1421}
 
 **Release date: January 12, 2026**

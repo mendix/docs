@@ -8,10 +8,6 @@ weight: 20
 
 ## Introduction
 
-This document outlines the installation and basic configuration of Mendix Workstation. It provides a quick-start guide for initial setup, followed by detailed instructions on advanced configurations for workspaces and stations.
-
-## Quick Start Guide 
-
 This guide helps you configure and test a minimum working version of Mendix Workstation. By following these steps, you will complete the following:
 
 * Create a basic configuration within Workstation Management.

@@ -1,25 +1,25 @@
 ---
-title: "Snowflake REST SQL Connector"
-url: /appstore/connectors/snowflake/snowflake-rest-sql/
-description: "Describes the configuration and usage of the Mendix-Snowflake REST SQL connector from the Mendix Marketplace." 
+title: "Snowflake AI Data Connector"
+url: /appstore/connectors/snowflake/snowflake-ai-data-connector/
+description: "Describes the configuration and usage of the Mendix-Snowflake AI Data connector from the Mendix Marketplace." 
 weight: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## Introduction
 
-The [Snowflake REST SQL connector](https://marketplace.mendix.com/link/component/225717) allows you to use data from Snowflake in your Mendix application and enrich your app with the capabilities that Snowflake provides.
+The [Snowflake AI Data connector](https://marketplace.mendix.com/link/component/225717) allows you to use data from Snowflake in your Mendix application and enrich your app with the AI capabilities that Snowflake provides.
 
 ### Typical Use Cases
 
-The Snowflake REST SQL connector supports the following:
+The Snowflake AI Data connector supports the following:
 
-* Authentication:
+1. **Authentication:**
 
     * Key-pair authentication (using PKCS #8 standard RSA keys)
     * OAuth authentication
 
-* Functionality: Execute SQL statements on Snowflake via REST calls from your Mendix application. These statements allow you to perform the following tasks:
+2. **Functionality:** Execute SQL statements on Snowflake via REST calls from your Mendix application. These statements allow you to perform the following tasks:
 
     * Read data from Snowflake.
     * Write data to Snowflake.
@@ -48,13 +48,13 @@ The current version of the connector supports the following:
 
 ### Prerequisites {#prerequisites}
 
-The Snowflake REST SQL connector requires Mendix Studio Pro version 9.18.0 or above.
+The Snowflake AI data connector requires Mendix Studio Pro version 9.18.0 or above.
 
-To use the Snowflake REST SQL connector, you must also install and configure the following modules from the Mendix marketplace:
+To use the Snowflake AI data connector, you must also install and configure the following modules from the Mendix marketplace:
 
-* [Community Commons](https://marketplace.mendix.com/link/component/170) – This module is a required dependency for the Snowflake REST SQL connector.
-* [Encryption](https://marketplace.mendix.com/link/component/1011) – This module is a required dependency for the Snowflake REST SQL connector. The EncryptionKey constant must be set up in your application settings.
-* GenAI Commons module from the [GenAI For Mendix](https://marketplace.mendix.com/link/component/227931) bundle – Only required for the Snowflake REST Connector version 2.x. This module is a required dependency for the Snowflake Cortex Analyst.
+* [Community Commons](https://marketplace.mendix.com/link/component/170) – This module is a required dependency for the Snowflake AI data connector.
+* [Encryption](https://marketplace.mendix.com/link/component/1011) – This module is a required dependency for the Snowflake AI data connector. The EncryptionKey constant must be set up in your application settings.
+* From version 4.0.0 and up the Snowflake AI data connector is no longer dependend on the [GenAI Commons](https://marketplace.mendix.com/link/component/227931) module.
 
 ### Licensing and Cost
 
@@ -64,19 +64,21 @@ Depending on your use case, your deployment environment, and the type of app tha
 
 ## Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Snowflake REST SQL connector into your app.
+Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Snowflake AI data connector into your app.
 
 ## Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **SnowflakeRESTSQL** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use. 
+After you install the connector, you can find it in the **App Explorer**, in the **Marketplace modules** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use. 
 
 ### Configuring Snowflake Authentication
 
-To use the capabilities of Snowflake in a Mendix app with the Snowflake REST SQL connector, you must use either OAUTH authentication or RSA key-pair authentication.
+To use the capabilities of Snowflake in a Mendix app with the Snowflake AI data connector, you must use either OAUTH authentication or RSA key-pair authentication.
 
 #### Configuring OAUTH Authentication {#setup-OAUTH-snowflake}
 
 To find out how configure the OAUTH Authentication method, see [Role-based Access Control](/appstore/modules/snowflake/snowflake-rbac/).
+
+When using an OAuth token to authenticate REST calls, use the **JWT_GetCreate** microflow from the Utils folder to get or create a JWT object and set your OAuth token and expiration date on the Token and ExpirationDate attributes of the returned JWT object. In the **POST_v1_ExecuteStatement** and **CortexAnalyst** operations the JWT will be retrieved from the ConnectionDetails and used for authentication. Be aware that **GET_v1_RetrievePartition** should be edited when using OAuth for authentication. Further instructions on what to change is annotated in the microflow.
 
 #### Configuring Key-Pair Authentication in Snowflake {#setup-key-pair-snowflake}
 
@@ -90,15 +92,15 @@ For more details about each step, refer to the official [Snowflake documentation
 
 #### Setting up the Key-Pair Authentication in a Mendix App {#setup-key-pair-mendix}
 
-To make it easier for users to configure the key-pair authentication in a Mendix app, the Snowflake REST SQL connector includes pages and microflows that you can simply drag and drop them into your own modules.
+To make it easier for users to configure the key-pair authentication in a Mendix app, the Snowflake AI data connector includes pages and microflows that you can simply drag and drop them into your own modules.
 
 To configure the authentication, perform the following steps:
 
-1. In the **App Explorer**, under the **SnowflakeRESTSQL** section, find the **SNIPPET_SnowflakeConfiguration** snippet and drag and drop it into a page in your module.
+1. In the **App Explorer**, under the **SnowflakeAIDataConnector** section, find the **SNIPPET_SnowflakeConfiguration** snippet and drag and drop it into a page in your module.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-rest-sql/drag_snippet_to_page.png" >}}
 
-2. Assign the module role **SnowflakeRESTSQL.Administrator** to the application role that will be used to set up the configuration, so that the added logic will be usable.
+2. Assign the module role **SnowflakeAIDataConnector.Administrator** to the application role that will be used to set up the configuration, so that the added logic will be usable.
 3. Run the application and go to the page where you added the snippet.
 4. Click **New**. 
 5. On the **Connection details** page, fill out all fields with the details of your Snowflake account. For more information, see [ConnectionDetails](#connection-details).
@@ -118,7 +120,7 @@ To configure the authentication, perform the following steps:
 
 ### Configuring a Microflow for the Service
 
-After you configure the authentication for Snowflake, you can implement the functions of the connector by using the provided activities in microflows. An extended microflow has been implemented and added to the Snowflake REST SQL connector as an example for users that would like to retrieve a list of objects from an existing table in Snowflake. In the **SnowflakeRESTSQL** module, see the **ExampleImplementation** microflow and the **ExampleObject** domain model entity to learn how the [**TransformResponsesToMxObjects** operation](#transform-response-to-mx-object) can be used to easily convert the data received in **HttpResponse** objects into Mendix objects. 
+After you configure the authentication for Snowflake, you can implement the functions of the connector by using the provided activities in microflows. An extended microflow has been implemented and added to the Snowflake AI data connector as an example for users that would like to retrieve a list of objects from an existing table in Snowflake. In the **SnowflakeAIDataConnector** module, see the **EXAMPLE_ExecuteStatement** microflow and the **ExampleObject** domain model entity to learn how the [**TransformResponsesToMxObjects** operation](#transform-response-to-mx-object) can be used to easily convert the data received in **HttpResponse** objects into Mendix objects. 
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-rest-sql/example_implementation.png" >}}
 
@@ -137,13 +139,13 @@ Your custom microflows should consist of the following:
 * **A request call microflow** – Sends the request and returns the request ID.
 * **A polling microflow** – Uses the request ID to check if the response is available, and then returns the response once it is ready.
 
-This approach allows you to achieve asynchronous behavior while leveraging the Snowflake REST SQL Connector.
+This approach allows you to achieve asynchronous behavior while leveraging the Snowflake AI Data Connector.
 
 #### Programmatic Triggering of Ingestion Jobs
 
-The Snowflake REST SQL connector can be used to trigger data ingestion jobs with an SQL statement. For more information, see [Mendix Data Loader: Programmatically Triggering an Ingestion Job From a Mendix App](/appstore/modules/snowflake/mendix-data-loader/#trigering-jobs).
+The Snowflake AI data connector can be used to trigger data ingestion jobs with an SQL statement. For more information, see [Mendix Data Loader: Programmatically Triggering an Ingestion Job From a Mendix App](/appstore/modules/snowflake/mendix-data-loader/#trigering-jobs).
 
-## Binding Variables in Snowflake using the Snowflake REST SQL Connector
+## Binding Variables in Snowflake using the Snowflake AI data Connector
 
 When executing SQL statements from Mendix into Snowflake, *binding variables* is a critical concept that improves security, performance, and maintainability of your database interactions.
 
@@ -227,68 +229,7 @@ Once configured, the connector automatically detects the `ProxySettings` object 
 
 ## Technical Reference
 
-To help you work with the Snowflake REST SQL connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.
-
-### Domain Model {#domain-model}
-
-The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Data in the Domain Model](/refguide/domain-model/).
-
-#### ConnectionDetails {#connection-details}
-
-| Name | Description |
-| --- | --- |
-| `Name` | An identifier of the connection inside the Mendix app. This property is not passed to Snowflake. |
-| `AccountURL` | The unique account URL of the Snowflake account within your organization to connect to the [Snowflake API](https://sdc-prd.snowflakecomputing.com). For more information, refer to the Snowflake documentation about [account identifiers](https://docs.snowflake.com/en/user-guide/admin-account-identifier#finding-the-organization-and-account-name-for-an-account). |
-| `ResourcePath` | The path to a resource in Snowflake API, for example, `/api/v2/statements`. |
-| `AccountIdentifier` | A unique account identifier that identifies a Snowflake account within your organization, as well as throughout the global network of Snowflake-supported cloud platforms and cloud regions, for example, `<orgname>-<account_name>`. For more information, refer to the Snowflake documentation about [account identifiers](https://docs.snowflake.com/en/user-guide/admin-account-identifier#finding-the-organization-and-account-name-for-an-account). |
-| `Username` | The username with which you sign in to your Snowflake account. |
-
-#### PrivateKey {#private-key}
-
-| Name | Description |
-| --- | --- |
-| `Passphrase` | A passphrase which is used to encode and decode the private key file. |
-
-#### JWT {#jwt}
-
-| Name | Description |
-| --- | --- |
-| `Token` | Value of the JSON Web Token as a string. |
-| `ExpirationDate` | Expiration date of the JSON Web Token.  |
-
-#### Statement {#statement}
-
-| Name | Description |
-| --- | --- |
-| `SQLStatement` | The SQL statement to execute. |
-| `Timeout` | The amount of seconds after which the connection will be closed. |
-| `Database` | The database to use. |
-| `Schema` | The database schema to use, for example `PUBLIC`. |
-| `Warehouse` | The warehouse to use for computations. |
-| `Role` | The role to use to execute the SQL statement. The role sufficient permissions to execute the statement. |
-
-#### Binding {#binding}
-
-| **Attribute**   | **Description**                                                       |
-|----------------|------------------------------------------------------------------------|
-| `createdDate`  | The timestamp when this binding was generated.                         |
-| `BindingType`  | The Snowflake data type used in binding (e.g., `FIXED`, `TEXT`).       |
-| `value`        | The actual value passed into the query for that position.              |
-
-#### ResultSet {#result-set}
-
-| Name | Description |
-| --- | --- |
-| `Code` | Code that is returned from Snowflake as a response to the executed statement. |
-| `StatementHandle` | Unique handle given to the statement that has been executed. It is saved as part of the `ResultSet` object. It can be used to retrieve the `ResultSet` object for each request. |
-| `Message` | Message that is returned from Snowflake as a response to the executed statement. |
-| `NumRows` | The amount of rows which will be returned by the executed statement. This is a sum of all the rows in the partitions. |
-
-#### PartitionInfo {#partition-info}
-
-| Name | Description |
-| --- | --- |
-| `RowCount` | The number of rows within this partition. The sum of all `PartitionInfo.RowCount` corresponds to `ResultSet.NumRows`. |
+To help you work with the Snowflake AI data connector, the following sections of this document list the available activities that you can use in your application.
 
 ### Activities {#activities}
 
@@ -296,7 +237,7 @@ Activities define the actions that are executed in a microflow or a nanoflow.
 
 #### ExecuteStatement {#execute-statement}
 
-The `ExecuteStatement` activity allows you to execute a command in Snowflake using the SQL statement and the configuration details given in a `Statement` object. It requires a `Statement` object and returns a list of `HttpResponse` objects.
+The `ExecuteStatement` activity allows you to execute a command in Snowflake using the SQL statement and the configuration details given in a `Statement` and `ConfigurationDetails` objects and returns a list of `HttpResponse` objects. Please make sure that a JWT object containing your KEYPAIR_JWT or OAuth token is associated to your connection details before using the `ExecuteStatement` activity.
 
 The input and output for this service are shown in the table below:
 
@@ -357,30 +298,23 @@ Snowflake Cortex Analyst is currently in open preview. For more information, ref
 * Create the semantic model for Cortex Analyst. For more information, refer to [Creating Semantic Models for Snowflake Cortex Analyst](https://developers.snowflake.com/solution/creating-semantic-models-for-snowflakes-cortex-analyst/) in the Snowflake Cortex Analyst documentation.
 * Set up one of the following supported authentication methods for Cortex Analyst:
     * OAUTH
-    * WT-Keypair
+    * KEYPAIR_JWT
 
 ### Configuration 
 
 To configure your Mendix app for Snowflake Cortex Analyst, perform the following steps:
 
-1. Create a microflow and add the **Cortex Analyst: Create Cortex Analyst Connection** action from the **Toolbox**.
-2. Provide the following mandatory information:
-    * **Token** – The authentication token created from the OIDC provider, or the JWT Token
-    * **AccountURL** – The URL of the Snowflake account that has access to Snowflake Cortex Analyst
-    * **Authentication Type**
-3. Add the **Cortex Analyst: Create Request** action from the **Toolbox**, and then configure the **Request** to contain the path to the Snowflake semantic model file.
-4. Add the **Chat: Add Message to Request** action from the Toolbox and provide the following information:
+1. Create a microflow and retrieve your **ConnectionDetails** object.
+2. When using KEYPAIR_JWT as your authentication type use the **Generate JWT** action from the **Toolbox** to generate a JWT object. When using OAuth as authentication type please use the **Get or Create JWT** action from the **Toolbox** to create a JWT object and set your OAuth token and expiration date on that object.
+3. Add the **Cortex Analyst: Create Request** action from the **Toolbox**, and then configure the **Request** to contain the path to the Snowflake semantic model file and your question/prompt for the model.
+4. Add the **Snowflake Cortex Analyst** action from the Toolbox and provide the following information:
+    * **ConnectionDetails** – The connection details that you configured
     * **Request** – The request that you configured for the **Cortex Analyst: Create Request** action
-    * **ENUM_MessageRole** – The role of the entity that creates the message; in the current version, the role must be set to **user**
-    * **ContentString** – The text of the question for Cortex Analyst
-5. Add the **Snowflake Cortex Analyst** action from the Toolbox and provide the following information:
-    * **Connection** – The Cortex Analyst connection that you configured for the **Cortex Analyst: Create Cortex Analyst Connection** action
-    * **Request** – The request that you configured for the **Cortex Analyst: Create Request** action
-6. To get the response message from the response, add the **Response: Get Cortex Analyst Response Message** action from the Toolbox, and then add the **Response** entity as a parameter. The message contains the following information:
+5. To get the response message from the response, add the **Response: Get Cortex Analyst Response Message** action from the Toolbox, and then add the **Response** entity as a parameter. The message contains the following information:
     * **Content** – This is the content of the response message. It includes the text and the SQL, or the suggestions if no SQL is returned
     * **Cortex Role** – The entity that produced the message; possible values are *user* or *analyst*
     * **SQLText** – The returned SQL suggestion
-7. To get the Cortex Analyst Response entity, add the **Response: Get Cortex Analyst Response** action from the Toolbox, and then add the **Response** entity as a parameter. The response contains the following information:
+6. To get the Cortex Analyst Response entity, add the **Response: Get Cortex Analyst Response** action from the Toolbox, and then add the **Response** entity as a parameter. The response contains the following information:
     * **Request_ID** – The returned *RequestId*
    
  {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-rest-sql/CortexAnalystRequestExample.png" >}}

@@ -308,9 +308,13 @@ Snowflake Cortex Analyst is currently in open preview. For more information, ref
 To configure your Mendix app for Snowflake Cortex Analyst, perform the following steps:
 
 1. Create a microflow and retrieve your **ConnectionDetails** object.
-2. When using KEYPAIR_JWT as your authentication type use the **Generate JWT** action from the **Toolbox** to generate a JWT object. When using OAuth as authentication type please use the **Get or Create JWT** action from the **Toolbox** to create a JWT object and set your OAuth token and expiration date on that object.
-3. Add the **Cortex Analyst: Create Request** action from the **Toolbox**, and then configure the **Request** to contain the path to the Snowflake semantic model file and your question/prompt for the model.
-4. Add the **Snowflake Cortex Analyst** action from the Toolbox and provide the following information:
+2. Depending on your authentication type, do one of the following:
+
+    * For KEYPAIR_JW, use the **Generate JWT** action from the **Toolbox** to generate a JWT object.
+    * For OAuth, use the **Get or Create JWT** action from the **Toolbox** to create a JWT object and set your OAuth token and expiration date on that object.
+
+3. Add the **Cortex Analyst: Create Request** action from the **Toolbox**, and then configure the **Request** to contain the path to the Snowflake semantic model file and your prompt for the model.
+4. Add the **Snowflake Cortex Analyst** action from the **Toolbox** and provide the following information:
     * **ConnectionDetails** – The connection details that you configured
     * **Request** – The request that you configured for the **Cortex Analyst: Create Request** action
 5. To get the response message from the response, add the **Response: Get Cortex Analyst Response Message** action from the Toolbox, and then add the **Response** entity as a parameter. The message contains the following information:

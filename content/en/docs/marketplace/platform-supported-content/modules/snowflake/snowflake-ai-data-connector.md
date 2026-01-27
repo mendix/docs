@@ -240,7 +240,7 @@ Activities define the actions that are executed in a microflow or a nanoflow.
 
 #### ExecuteStatement {#execute-statement}
 
-The `ExecuteStatement` activity allows you to execute a command in Snowflake using the SQL statement and the configuration details given in a `Statement` and `ConfigurationDetails` objects and returns a list of `HttpResponse` objects. Please make sure that a JWT object containing your KEYPAIR_JWT or OAuth token is associated to your connection details before using the `ExecuteStatement` activity.
+The `ExecuteStatement` activity allows you to execute a command in Snowflake using the SQL statement and the configuration details given in a `Statement` and `ConfigurationDetails` objects and returns a list of `HttpResponse` objects. Ensure that a JWT object containing your `KEYPAIR_JWT` or OAuth token is associated to your connection details before using the `ExecuteStatement` activity.
 
 The input and output for this service are shown in the table below:
 

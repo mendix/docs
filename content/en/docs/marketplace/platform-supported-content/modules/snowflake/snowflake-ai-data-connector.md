@@ -73,9 +73,15 @@ To use the capabilities of Snowflake in a Mendix app with the Snowflake AI data 
 
 #### Configuring OAUTH Authentication {#setup-OAUTH-snowflake}
 
-To find out how configure the OAUTH Authentication method, see [Role-based Access Control](/appstore/modules/snowflake/snowflake-rbac/).
+To use an OAuth token to authenticate REST calls, perform the following steps:
 
-When using an OAuth token to authenticate REST calls, use the **JWT_GetCreate** microflow from the Utils folder to get or create a JWT object and set your OAuth token and expiration date on the Token and ExpirationDate attributes of the returned JWT object. In the **POST_v1_ExecuteStatement** and **CortexAnalyst** operations the JWT will be retrieved from the ConnectionDetails and used for authentication. Be aware that **GET_v1_RetrievePartition** should be edited when using OAuth for authentication. Further instructions on what to change is annotated in the microflow.
+1. Configure the OAUTH Authentication method as described in [Role-based Access Control](/appstore/modules/snowflake/snowflake-rbac/).
+2. Use the **JWT_GetCreate** microflow from the **Utils** folder to get or create a **JWT** object.
+3. Set your OAuth token and expiration date in the **Token** and **ExpirationDate** attributes of the returned **JWT** object.
+
+    In the **POST_v1_ExecuteStatement** and **CortexAnalyst** operations, the JWT object will be retrieved from the ConnectionDetails and used for authentication.
+   
+4. Edit the **GET_v1_RetrievePartition** as described in the microflow annotations.
 
 #### Configuring Key-Pair Authentication in Snowflake {#setup-key-pair-snowflake}
 

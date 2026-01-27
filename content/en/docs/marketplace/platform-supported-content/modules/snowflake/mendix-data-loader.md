@@ -187,7 +187,7 @@ Programmatically triggering an ingestion job can meet data ingestion requirement
 
 ### Triggering the Ingestion
 
-To trigger an ingestion job programmatically, use the `ExecuteStatement` operation available in the [Snowflake REST SQL connector](/appstore/connectors/snowflake/snowflake-rest-sql/).
+To trigger an ingestion job programmatically, use the `ExecuteStatement` operation available in the [Snowflake REST SQL connector](/appstore/connectors/snowflake/snowflake-ai-data-connector/).
 
 1. Obtain the Snowflake data source ID by performing the following steps:
 

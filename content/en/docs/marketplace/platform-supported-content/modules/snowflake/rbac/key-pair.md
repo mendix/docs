@@ -16,7 +16,7 @@ In the context of integration between Snowflake and Mendix, RBAC helps ensure th
 
 ### Prerequisites
 
-To enable key-pair RBAC for your Mendix app, you must first install and configure the [Snowflake REST SQL Connector](/appstore/connectors/snowflake/snowflake-rest-sql/).
+To enable key-pair RBAC for your Mendix app, you must first install and configure the [Snowflake REST SQL Connector](/appstore/connectors/snowflake/snowflake-ai-data-connector/).
 
 ## Configuring the Connection Details {#connection-details}
 
@@ -66,12 +66,12 @@ To interact with Snowflake, you must configure your Mendix app to execute SQL qu
 
     This ensures that the connection details are the ones associated with the current user account, so that the user can only access the data to which they have access in Snowflake.
 
-7. Add an **Execute Statement** action provided by the [Rest SQL Connector](/appstore/connectors/snowflake/snowflake-rest-sql/) after the **Retrieve Objects** action.
+7. Add an **Execute Statement** action provided by the [Rest SQL Connector](/appstore/connectors/snowflake/snowflake-ai-data-connector/) after the **Retrieve Objects** action.
 8. Configure the **Statement** and **ConnectionDetails** parameters as shown in the following figure:
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-rest-sql/execute-statement.png" >}}
 
-9. If required, map the HTTP Response to an MxObject by using an [import mapping](/refguide/import-mappings/), or by adding a [Transform Responses to MxObjects](/appstore/connectors/snowflake/snowflake-rest-sql/#transform-response-to-mx-object) microflow action, as shown in the following figure:
+9. If required, map the HTTP Response to an MxObject by using an [import mapping](/refguide/import-mappings/), or by adding a [Transform Responses to MxObjects](/appstore/connectors/snowflake/snowflake-ai-data-connector/#transform-response-to-mx-object) microflow action, as shown in the following figure:
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-rest-sql/execute-statement-microflow.png" >}}
 

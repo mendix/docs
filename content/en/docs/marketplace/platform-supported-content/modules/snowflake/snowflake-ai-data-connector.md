@@ -68,7 +68,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 ## Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **Marketplace modules** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use. 
+After you install the connector, you can find it in the **App Explorer**, in the **Marketplace modules** section. The connector provides a domain model and several [activities](#activities) that you can use. 
 
 ### Configuring Snowflake Authentication
 
@@ -103,7 +103,7 @@ To configure the authentication, perform the following steps:
 2. Assign the module role **SnowflakeAIDataConnector.Administrator** to the application role that will be used to set up the configuration, so that the added logic will be usable.
 3. Run the application and go to the page where you added the snippet.
 4. Click **New**. 
-5. On the **Connection details** page, fill out all fields with the details of your Snowflake account. For more information, see [ConnectionDetails](#connection-details).
+5. On the **Connection details** page, fill out all fields with the details of your Snowflake account.
 6. In the Snowflake console, click **Copy account URL**. This URL will be used as the **Account URL** parameter for **Connection details**.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-rest-sql/snowsight-account-url.png" >}}

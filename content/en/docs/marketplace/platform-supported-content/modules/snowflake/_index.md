@@ -43,7 +43,7 @@ The [REST SQL connector](https://marketplace.mendix.com/link/component/225717), 
 
 With the REST SQL connector, authentication can be done either on system or on end-user level, and the connector supports role-based access control (RBAC) per end user as well.
 
-The REST SQL connector requires an additional step to transform data rows received from the REST SQL API into Mendix objects. For more information, see [Snowflake REST SQL Connector](/appstore/connectors/snowflake/snowflake-rest-sql/).
+The REST SQL connector requires an additional step to transform data rows received from the REST SQL API into Mendix objects. For more information, see [Snowflake REST SQL Connector](/appstore/connectors/snowflake/snowflake-ai-data-connector/).
 
 ##### Role Base Access Control (RBAC)
 

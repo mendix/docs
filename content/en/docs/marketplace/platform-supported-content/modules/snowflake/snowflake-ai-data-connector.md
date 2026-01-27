@@ -148,7 +148,7 @@ This approach allows you to achieve asynchronous behavior while leveraging the S
 
 The Snowflake AI data connector can be used to trigger data ingestion jobs with an SQL statement. For more information, see [Mendix Data Loader: Programmatically Triggering an Ingestion Job From a Mendix App](/appstore/modules/snowflake/mendix-data-loader/#trigering-jobs).
 
-## Binding Variables in Snowflake using the Snowflake AI data Connector
+## Binding Variables in Snowflake using the Snowflake AI Data Connector
 
 When executing SQL statements from Mendix into Snowflake, *binding variables* is a critical concept that improves security, performance, and maintainability of your database interactions.
 

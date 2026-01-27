@@ -14,15 +14,16 @@ The [Snowflake AI Data connector](https://marketplace.mendix.com/link/component/
 
 The Snowflake AI Data connector supports the following:
 
-1. **Authentication:**
+* Authentication:
 
-    * Key-pair authentication (using PKCS #8 standard RSA keys)
-    * OAuth authentication
+    * Authentication with an RSA key pair according to the PKCS #8 standard
+    * Authentication with OAUTH through an OIDC provider
 
-2. **Functionality:** Execute SQL statements on Snowflake via REST calls from your Mendix application. These statements allow you to perform the following tasks:
+* Functionality: Execute SQL statements on Snowflake via REST calls from your Mendix application. These statements allow you to perform the following tasks:
 
     * Read data from Snowflake.
     * Write data to Snowflake.
+    * Synchronously execute calls.
     * Trigger the following [Snowflake Cortex ML functions](https://docs.snowflake.com/en/guides-overview-ml-functions):
         * [Forecasting](https://docs.snowflake.com/en/user-guide/ml-functions/forecasting) – Predicts future metric values from past trends in time-series data.
         * [Anomaly Detection](https://docs.snowflake.com/en/user-guide/ml-functions/anomaly-detection) – Flags metric values that differ from typical expectations.
@@ -34,17 +35,10 @@ The Snowflake AI Data connector supports the following:
         * [TRANSLATE](https://docs.snowflake.com/en/sql-reference/functions/translate-snowflake-cortex) – Translates given text from any supported language to any other.
         * [EMBED_TEXT_768](https://docs.snowflake.com/en/sql-reference/functions/embed_text-snowflake-cortex) – Given a piece of text, returns a vector embedding of 768 dimensions that represents that text.
         * [EMBED_TEXT_1024](https://docs.snowflake.com/en/sql-reference/functions/embed_text_1024-snowflake-cortex) – Given a piece of text, returns a vector embedding of 1024 dimensions that represents that text. 
-    * Use [Snowflake Cortex Analyst](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst) – This Snowflake Cortex feature is used to get information/insights out of structured data sets using natural language instead of sql.
+    * Use [Snowflake Cortex Analyst](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst) – This Snowflake Cortex feature is used to get insights out of structured data sets using natural language instead of SQL.
+    * Execute Cortex Analyst queries.
 
 For more use cases and examples for [Snowflake Cortex LLM functions](https://docs.snowflake.com/en/user-guide/snowflake-cortex/llm-functions), written by the Head of Snowflake Tech Consulting, see [Karthik S Raman's Medium profile](https://medium.com/@karthiksraman).
-
-The current version of the connector supports the following:
-
-* Authentication with an RSA key pair according to PKCS #8 standard
-* Authentication with OAUTH through an OIDC provider
-* Execution of single SQL statements
-* Synchronous execution of calls
-* Execution of a Cortex Analyst query
 
 ### Prerequisites {#prerequisites}
 
@@ -54,7 +48,10 @@ To use the Snowflake AI data connector, you must also install and configure the 
 
 * [Community Commons](https://marketplace.mendix.com/link/component/170) – This module is a required dependency for the Snowflake AI data connector.
 * [Encryption](https://marketplace.mendix.com/link/component/1011) – This module is a required dependency for the Snowflake AI data connector. The EncryptionKey constant must be set up in your application settings.
-* From version 4.0.0 and up the Snowflake AI data connector is no longer dependend on the [GenAI Commons](https://marketplace.mendix.com/link/component/227931) module.
+
+{{% alert color="info" %}}
+Starting in version 4.0.0, the Snowflake AI data connector is no longer dependend on the [GenAI Commons](https://marketplace.mendix.com/link/component/227931) module.
+{{% /alert %}}
 
 ### Licensing and Cost
 
@@ -136,8 +133,8 @@ To set this up:
 
 Your custom microflows should consist of the following:
 
-* **A request call microflow** – Sends the request and returns the request ID.
-* **A polling microflow** – Uses the request ID to check if the response is available, and then returns the response once it is ready.
+* A request call microflow – Sends the request and returns the request ID.
+* A polling microflow – Uses the request ID to check if the response is available, and then returns the response once it is ready.
 
 This approach allows you to achieve asynchronous behavior while leveraging the Snowflake AI Data Connector.
 
@@ -163,10 +160,10 @@ Make sure the number of bindings matches the number of `?` placeholders in your 
 
 Binding variables provides the following benefits:
 
-* **Security** - Prevents SQL injection attacks by treating values as data, not code.
-* **Reusability** - You can reuse the same SQL template with different values.
-* **Performance** - Snowflake can cache and reuse execution plans for bound SQL.
-* **Clarity** - Keeps SQL readable and separates logic from values—easier to debug and maintain.
+* Security - Prevents SQL injection attacks by treating values as data, not code.
+* Reusability - You can reuse the same SQL template with different values.
+* Performance - Snowflake can cache and reuse execution plans for bound SQL.
+* Clarity - Keeps SQL readable and separates logic from values—easier to debug and maintain.
 
 ## Sample SQL for Variable Binding
 

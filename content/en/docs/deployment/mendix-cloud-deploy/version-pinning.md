@@ -24,7 +24,7 @@ This feature is only applicable to promotions between environments on Mendix Clo
 
 You must meet the following conditions to use version pinning:
 
-* **Mendix Cloud (Kubernetes) environment** – Your Mendix applications must be deployed to and running within environments hosted on Mendix Cloud (Kubernetes)
+* **Mendix Cloud(Kubernetes) environment** – Your Mendix applications must be deployed to and running within environments hosted on Mendix Cloud (Kubernetes)
 * **Environment promotion** – You must be promoting an application from one environment to another (for example from test to acceptance, or acceptance to production).
 * **Same application, same company** – Both the source and target environments must belong to the same application within the same company.
 

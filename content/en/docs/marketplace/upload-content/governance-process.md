@@ -20,18 +20,14 @@ Mendix checks the following:
 * The licenses used in the uploaded *.mpk* files, using the [Fossology](https://fossology.osuosl.org/repo/) tool .   
   There should be no use of GPL, LGPL, or MPL licenses.    
   For more details, refer to [Open-Source Software Licenses](/appstore/submit-content/#license).
-* For malware in the *.mpk* files, using the [VirusTotal](https://www.virustotal.com/gui/home/upload) tool.
-* For third-party vulnerabilities, using the [Snyk](https://snyk.io/) tool.
-* That the component can be used without errors in a specific Studio Pro version, if the component is a widget, a module, a connector, or an industry template.
-* That the documentation mentions all the details per the template, for example, dependencies, configuration, and how to use the component.
-* That the grammar, alignment, and spelling for the component's description and documentation are correct.
+* For third-party vulnerabilities, using QSM. If critical or high vulnerabilities are found, the component is rejected.
 * That the logo is related to the component's functionality.
 * That the screenshots are related to the configuration required to use the component in the end-user's app.
 
 It may sometimes take a few iterations for a component to be approved, depending on the issues identified. To avoid a high number of necessary iterations, make sure you have followed the [Guidelines for Content Creators](/appstore/guidelines-content-creators/) and have performed the checks above before you submit a component for approval.
 
 {{% alert color="info" %}}
-Review and approval by Mendix is required only for the first version of a publicly-listed component. Subsequent versions of a public component do not need review or approval by Mendix.
+All subsequently uploaded versions of a public component must be scanned and approved by Mendix.
 
 Private Marketplace content does not require any review or approval.
 {{% /alert %}}

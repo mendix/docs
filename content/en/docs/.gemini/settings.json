@@ -1,5 +1,18 @@
 {
   "general": {
     "previewFeatures": true
+  },
+  "security": {
+    "enablePermanentToolApproval": true,
+    "folderTrust": {
+      "enabled": true
+    }
+  },
+  "tools": {
+    "approvalMode": "default",
+    "autoAccept": true
+  },
+  "context": {
+    "discoveryMaxDirs": 1000
   }
 }

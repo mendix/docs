@@ -1,0 +1,36 @@
+---
+title: "Static Label (Document Template)"
+url: /refguide8/static-label-document-template/
+aliases:
+    - /refguide8/Static+label+(document+template).html
+    - /refguide8/static-label-(document-template).html
+    - /refguide8/Static+label+(document+template)
+    - /refguide8/static-label-(document-template)
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+---
+
+## 소개
+
+Static Label은 정적 텍스트 한 줄을 표시합니다. Data View, Template Grid 또는 Table 내부에 사용자 정의 텍스트를 배치하는 데 사용할 수 있습니다.
+
+예를 들어, 'Customer name' 텍스트가 있는 레이블은 다음과 같이 표시됩니다:
+
+{{< figure src="/attachments/refguide8/modeling/resources/document-templates/918130.png" class="no-border" >}}
+
+문서에 현재 페이지 번호 또는 총 페이지 수를 삽입하려면 Static Label(Static Label에서만 가능) 내에서 토큰을 사용할 수 있습니다.
+
+예를 들어, Static Label 내용 `Page [%pageNumber%] of [%totalPageCount%]`는 **Page 2 of 4**로 인쇄됩니다.
+
+## 공통 속성
+
+{{% snippet file="/static/_includes/refguide8/name-property.md" %}}
+
+## 외관 속성
+
+### 캡션
+
+문서에 표시될 값입니다.
+
+### 스타일
+
+자세한 내용은 [Style](/refguide8/style/)을 참조하십시오.

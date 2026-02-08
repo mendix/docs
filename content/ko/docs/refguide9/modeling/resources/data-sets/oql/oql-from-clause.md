@@ -1,0 +1,128 @@
+---
+title: "OQL From 절"
+url: /refguide9/oql-from-clause/
+---
+
+## 설명
+
+`FROM` 절은 데이터가 검색되어야 하는 Entity 또는 기타 소스를 지정합니다. 이 절은 `FROM` 키워드로 시작하고 Entity 이름이 뒤따릅니다. 다른 Entity에서 데이터를 선택하려면 `JOIN` 키워드를 통해 이러한 Entity를 추가하십시오. 이 구문은 공식 `SQL FROM` 절 구문보다 약간 더 엄격합니다.
+
+## 구문
+
+전체 구문의 예시입니다:
+
+```sql
+FROM
+	{
+		entity_name | ( sub_oql_query )
+	}
+	[ [ AS ] from_alias ]
+
+	{
+		{ INNER | { { LEFT | RIGHT | FULL } [ OUTER ] } } JOIN
+		entity_path [ [ AS ] from_alias ]
+		[ ON <constraint> ]
+	} [ ,...n ]
+```
+
+### entity_name
+
+`entity_name`은 데이터가 검색되어야 하는 Entity를 지정합니다. Entity 이름은 선택적으로 이중 따옴표로 캡슐화할 수 있습니다. Entity 이름이 예약된 OQL 단어(`Order` 또는 `Group` 등)인 경우 이중 따옴표는 필수입니다. 자세한 내용은 *OQL*의 [예약어](/refguide9/oql/#reserved-oql-words) 섹션을 참조하십시오.
+
+### ( sub_oql_query )
+
+`( sub_oql_query )`는 데이터가 검색되어야 하는 다른 OQL 쿼리를 지정합니다. 이것은 현재 쿼리의 소스가 됩니다. 하위 쿼리는 괄호 안에 배치해야 합니다.
+
+### JOIN
+
+네 가지 다른 `JOIN` 유형이 지원됩니다:
+
+* `INNER JOIN`
+* `LEFT OUTER JOIN`
+* `RIGHT OUTER JOIN`
+* `FULL JOIN`
+
+구문은 다음과 같습니다:
+
+```sql
+{ INNER | { { LEFT | RIGHT | FULL } [ OUTER ] } } JOIN
+		entity_path [ [ AS ] from_alias ]
+		[ ON <constraint> ]
+```
+
+#### entity_path
+
+`entity_path`는 조인할 Entity와 `FROM` 절에서 이전에 정의된 Entity에서 이 Entity까지의 경로를 지정합니다.
+
+예시 경로 `Crm.Customer/Crm.Customer_Address/Crm.Address`는 Entity **Crm.Customer**에서 새 Entity **Crm.Address**까지의 경로를 정의합니다.
+
+`entity_name`과 유사하게 이중 따옴표를 사용할 수 있습니다.
+
+#### \[ ON \<constraint\> \]
+
+`[ ON <constraint> ]`는 `FROM` 절의 `JOIN` 부분에서 지정된 Entity를 제한합니다. 제약 조건 구문은 `WHERE` 절과 유사합니다. 현재 및 이전 `JOIN` 요소의 Entity와 `FROM` 별칭만 제약 조건에서 사용할 수 있습니다.
+
+제약 조건 사용은 선택적입니다. 시스템은 지정된 `entity_path`를 기반으로 적절한 `JOIN` 조건을 생성합니다.
+
+#### JOIN 유형
+
+##### INNER JOIN
+
+`INNER JOIN`은 Entity 간의 가장 일반적인 조인 작업이며 기본 조인 유형입니다. 쿼리는 Entity A의 각 행을 Entity B의 각 행과 비교하여 연관이 있고 `JOIN` 술어를 만족하는 모든 행 쌍을 찾습니다. 연관이 존재하고 `JOIN` 술어가 만족되면 A와 B의 일치하는 각 행 쌍의 열 값이 결과 행으로 결합됩니다.
+
+구문은 다음과 같습니다:
+
+```sql
+[ INNER ] JOIN entity_path [ ON <constraint> ]
+```
+
+##### LEFT OUTER JOIN
+
+`LEFT OUTER JOIN` 쿼리는 Entity A의 각 행을 Entity B의 각 행과 비교하여 연관이 있고 `JOIN` 술어를 만족하는 모든 행 쌍을 찾습니다. 연관이 존재하고 `JOIN` 술어가 만족되면 A와 B의 일치하는 각 행 쌍의 열 값이 결과 행으로 결합됩니다.
+
+그러나 `INNER JOIN` 구성과 달리 쿼리는 Entity B와 일치하지 않는 Entity A의 행도 반환합니다. Entity B의 열이 지정된 경우 이러한 행에 대해 해당 열은 null 값을 포함합니다.
+
+구문은 다음과 같습니다:
+
+```sql
+LEFT [ OUTER ] JOIN entity_path [ ON <constraint> ]
+```
+
+##### RIGHT OUTER JOIN
+
+`RIGHT OUTER JOIN` 쿼리는 Entity A의 각 행을 Entity B의 각 행과 비교하여 연관이 있고 `JOIN` 술어를 만족하는 모든 행 쌍을 찾습니다. 연관이 존재하고 `JOIN` 술어가 만족되면 A와 B의 일치하는 각 행 쌍의 열 값이 결과 행으로 결합됩니다.
+
+그러나 `INNER JOIN` 구성과 달리 Entity A와 일치하지 않는 Entity B의 행도 반환됩니다. Entity A의 열이 지정된 경우 이러한 행에 대해 해당 열은 null 값을 포함합니다.
+
+구문은 다음과 같습니다:
+
+```sql
+RIGHT [ OUTER ] JOIN entity_path [ ON <constraint> ]
+```
+
+##### FULL OUTER JOIN
+
+`FULL OUTER JOIN` 쿼리는 Entity A의 각 행을 Entity B의 각 행과 비교하여 연관이 있고 `JOIN` 술어를 만족하는 모든 행 쌍을 찾습니다. 연관이 존재하고 `JOIN` 술어가 만족되면 A와 B의 일치하는 각 행 쌍의 열 값이 결과 행으로 결합됩니다.
+
+그러나 `INNER JOIN` 구성과 달리 일치하지 *않는* Entity의 데이터도 반환됩니다. 이러한 행의 경우 누락된 Entity의 열은 null 값을 포함합니다.
+
+구문은 다음과 같습니다:
+
+```sql
+FULL [ OUTER ] JOIN entity_path [ ON <constraint> ]
+```
+
+#### 예시
+
+이 시나리오에서는 `LEFT OUTER JOIN`을 사용하여 테이블 B에 연관이 없는 테이블 A의 레코드를 가져옵니다.
+
+예를 들어, **Customer** 및 **Order** Entity가 있으며 고객은 여러 주문에 대한 연관을 가질 수 있습니다. 주문이 전혀 없는 모든 고객을 검색하려고 합니다.
+
+```sql
+SELECT 
+  Customer/Name as Name,
+  Customer/<anyotherattribute> as <anyotherattribute>
+FROM MyModule.Customer
+  LEFT OUTER JOIN Customer/MyModule.Customer_Order/MyModule."Order" as "Order"
+WHERE "Order"/ID IS NULL
+```

@@ -15,9 +15,9 @@ refLinksErrorLevel = "WARNING"
 enableGitInfo = true
 
 # Language settings
-contentDir = "content/en"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
+contentDir = "content/kr"
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
 languageCode = "en-us"
@@ -37,6 +37,16 @@ disableKinds = ["taxonomy", "term"]
         languageName ="English"
         # Weight used for sorting.
         weight = 1
+  #  [languages.ko]
+  #      languageName ="한국어"
+  #      contentDir = "content/ko"
+  #      languageCode = "ko-kr"
+  #      weight = 2 # 메뉴에서 두 번째로 표시
+  #      title = "Mendix 기술 문서"
+  #      # 한국어 환경 전용 UI 파라미터 오버라이드
+  #      [languages.ko.params.ui.feedback]
+  #          yes = '도움이 되어 기쁩니다! 의견을 주셔서 감사합니다.'
+  #          no = '아쉬운 소식이네요. 개선 방향을 <a href="https://github.com/mendix/docs/issues/new">GitHub 이슈</a>로 알려주세요.'
 
 [markup]
     [markup.goldmark]

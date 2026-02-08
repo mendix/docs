@@ -1,0 +1,10 @@
+The directory `/Users/junsang.park/personal/mendix/docs/content/kr/docs/releasenotes/studio-pro/9` is still empty. There are no markdown files in that specific directory.
+
+However, the parent directory `/Users/junsang.park/personal/mendix/docs/content/kr/docs/releasenotes/studio-pro/` contains the following markdown files:
+- _index.md
+- csharp-extensibility-api.md
+- lts-mts.md
+- web-extensibility-api.md
+- windows-service.md
+
+Would you like to read any of these files, or perhaps files from a different location?

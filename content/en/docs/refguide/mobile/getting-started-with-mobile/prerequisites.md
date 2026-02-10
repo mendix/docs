@@ -64,7 +64,7 @@ Depending on your app's Mendix version, you must use a different version of the 
     * **11.6.x** - MTS version of Make It Native ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10), [iOS](https://apps.apple.com/us/app/make-it-native/id6450037464))
 
 * Mendix 10:
-    * **10.24.x** - Make It Native LTS is part of Github releases and Testflight (previous) builds ([Android](https://github.com/mendix/make-it-native/releases), [iOS](_you must build your own custom developer app using details below_))
+    * **10.24.x** - Make It Native LTS is part of Github releases and Testflight (previous) builds ([Android](https://github.com/mendix/make-it-native/releases), [iOS]([_build your own custom developer app_](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/)))
     * **Other** – [Creating a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) or [Building Your Own Make It Native App](https://github.com/mendix/make-it-native)
 
 For information on which mobile operating systems are supported by the Mendix native mobile apps, see the [Mobile Operating Systems](/refguide/system-requirements/#mobile) section of *System Requirements*.
@@ -89,13 +89,13 @@ Download the LTS version of Make it Native using these QR codes:
 
 The latest version of Make It Native app receives monthly updates, and is compatible exclusively with the latest minor release of Mendix. We recommend using this version only if you intend to update your application regularly.
 
-To access the LTS version of Make It Native, you must join our official beta testing programs on the Apple App Store and use Github Releases for the Android APK. To do so, click the [relevant links above](#get-min-app) and follow the instructions.
+To access the LTS version of Make It Native, you can use Github Releases for the Android APK and building your own custom developer app for iOS. To do so, click the [relevant links above](#get-min-app) and follow the instructions.
 
 Note that it is not possible to install both **LTS** and **MTS** versions on the same device.
 
 ### Recommendations
 
-When working with applications on a Long-Term Support (LTS) version of Mendix, use the corresponding LTS version of Make It Native. All patch versions of the Mendix LTS version can be used.
+When working with applications on a Long-Term Support (LTS) version of Mendix, on Android you can find the APK as part of [Github Releases](https://github.com/mendix/make-it-native/releases). For iOS, please make use of the custom developer app by building it following the steps [here](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/).
 
 When working with applications on a Mid-Term Support (MTS) version, it is important to anticipate updating your application every 6 months. The MTS version of Make It Native exclusively supports the most recent MTS version of Mendix and receives updates one month after a new Mendix MTS version is released. We recommend performing the update during this month and using the latest version of Make It Native during the update process.
 

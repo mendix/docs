@@ -39,6 +39,16 @@ Mendix AI Assistance (Maia) in Studio Pro has the following capabilities:
 Starting point for app creation:
 
 * **Start with Maia** - a starting point in Studio Pro that helps you to start the app development process. Based on a required text description and an optional image or PDF, it generates an app that includes a domain model, data management overview pages, test data, and a tailored homepage. For more information, see [Start with Maia](/refguide/start-with-maia/).
+* **Maia Make** - A single conversational UI in Studio Pro. With Maia Make, everything happens in one place. Start a conversation, describe what you need, and let Maia do the rest. Whether that's scaffolding a new domain model, generating pages, or explaining complex logic. Released as of version 11.8.
+
+Maia Make Capabilities:
+
+* **Domain Model Creation** - Describe your data structure, and Maia creates the entities and associations you need.
+* **Page generation** - Overview Pages.
+* **Microflow generation** - CRUD microflows, Enumerations, XPath constraints, Expressions.
+* **MCP Client** - Connect to compatible MCP Servers to leverage tools such as Playwright or Figma to improve the capabilities of Maia.
+* **Document Upload ** - Upload a PDF or image, so you can ask Maia to use this in your app creation. 
+* **User Story linking** - Select an existing story in Studio Pro, so Maia can help you realize it. 
 
 Guidance:
 

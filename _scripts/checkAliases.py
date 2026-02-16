@@ -23,6 +23,8 @@ def addItem(post):
     map = post.get("mapped")
     # Creates a dictionary entry for file with aliases
     append =  False
+    if url is None:
+        return
     itemDict = {"Title": title, "URL": "docs.mendix.com" + url, "Front matter": "", "aliases": aliases}
 
     # If 'aliases' exists in front matter

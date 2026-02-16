@@ -25,4 +25,4 @@ The script has been tested on Python version 3.10.5.
 
 The package dependencies for the script can be found in file checkAliases-requirements.txt. To install dependencies for running the script via pip run:
 
-`python -m pip install -r checkAliases-requirements.txt`
+`python3 -m pip install -r checkAliases-requirements.txt`

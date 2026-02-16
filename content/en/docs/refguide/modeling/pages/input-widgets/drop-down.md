@@ -9,16 +9,30 @@ aliases:
 ---
 
 {{% alert color="warning" %}}
-The drop-down widget is not compatible with the modern version of the Mendix React Client. Depending on your app version, you may wish to convert the widget to a combo box widget using the context menu in Studio Pro. 
+The **drop-down** widget is a Dojo widget.
 
-For more information on converting a drop-down widget into its more modern combo box counterpart, see the Mendix React Client's [Migration Guide](/refguide/mendix-client/react/#migration-guide).
+This widget is not supported on native mobile pages.
+
+This widget is not supported in the [React client](/refguide/mendix-client/react/).
+
+To upgrade it to the recommended React-compliant widget ([Combo Box](/appstore/widgets/combobox/)), see the Mendix React Client's [Migration Guide](/refguide/mendix-client/react/#reference-selectors-drop-down).
+
+If you [switch to the React client](/refguide/app-settings/#react-client), the widget will not appear in the **Toolbox**.
+
+The Dojo client is deprecated and will be removed in Mendix 12. It continues receiving security and stability updates until the end of support of Mendix 11.24.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
-A **drop-down** is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](/refguide/data-types/) *enumeration*.
+A **drop-down** is used to display and, optionally, allow the end-user to edit the value of an attribute or variable of [data type](/refguide/data-types/) *enumeration*.
 
-A drop-down must be placed in a [data container](/refguide/data-widgets/) and displays an attribute of the object (or objects) retrieved by that container. The name of the attribute to be displayed is shown inside the drop-down, between square brackets, and colored blue.
+A drop-down must be placed within a data context to display or edit the intended value:
+
+* A [data container](/refguide/data-widgets/) widget containing an object
+* A snippet containing one or more [parameters](/refguide/page-properties/#parameters)
+* A page or a snippet containing one or more [variables](/refguide/page-properties/#variables)
+
+The name of the configured value is shown inside the drop-down widget, between square brackets, and colored blue.
 
 {{% alert color="info" %}}
 A drop-down should not be confused with a [reference selector](/refguide/reference-selector/), which is used to select an [association](/refguide/associations/) to another object.
@@ -28,7 +42,7 @@ For example, the following drop-down allows the end-user to see, and set, the **
 
 {{< figure src="/attachments/refguide/modeling/pages/input-widgets/drop-down/drop-down.png" class="no-border" >}}
 
-## 2 Properties Pane
+## Properties Pane
 
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Drop-down properties consist of the following sections:
 
@@ -49,11 +63,11 @@ Styling:
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
 
-## 3 Properties
+## Properties
 
-### 3.1 General Section{#general}
+### General Section{#general}
 
-#### 3.1.1 Empty Option Caption
+#### Empty Option Caption
 
 Empty option caption is the text that is shown for the empty option in the drop-down shown to the end-user. This is a translatable text. For more details, see [Language Menu](/refguide/translatable-texts/).
 
@@ -63,51 +77,51 @@ For example, the drop-down that allows the end-user to select the region allocat
 
 {{< figure src="/attachments/refguide/modeling/pages/input-widgets/drop-down/select-a-region.png" class="no-border" >}}
 
-### 3.2 Data Source Section{#data-source}
+### Data Source Section{#data-source}
 
 {{% snippet file="/static/_includes/refguide/data-source-section-link.md" %}}
 
-### 3.3 Label Section{#label}
+### Label Section{#label}
 
 {{% snippet file="/static/_includes/refguide/label-section-link.md" %}}
 
-### 3.4 Editability Section{#editability}
+### Editability Section{#editability}
 
 {{% snippet file="/static/_includes/refguide/editability-section-link.md" %}}
 
-### 3.5 Visibility Section{#visibility}
+### Visibility Section{#visibility}
 
 {{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
-### 3.6 Validation Section{#validation}
+### Validation Section{#validation}
 
 {{% snippet file="/static/_includes/refguide/widget-validation-link.md" %}}
 
-### 3.7 Accessibility Section{#accessibility}
+### Accessibility Section{#accessibility}
 
-#### 3.7.1 Aria Required
+#### Aria Required
 
 In a text area widget, when **Aria required** is set to **Yes** then assistive technologies will read out the field that is required. When set to **No** then assistive technologies will not read the field out.
 
-### 3.8 Common Section{#common}
+### Common Section{#common}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-### 3.9 Events Section{#events}
+### Events Section{#events}
 
-#### 3.9.1 On Change{#on-change}
+#### On Change{#on-change}
 
 The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
 
 {{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
-#### 3.9.2 On Enter
+#### On Enter
 
 The on-enter property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it with the mouse.
 
 {{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
-#### 3.9.3 On Leave
+#### On Leave
 
 The on-leave property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
 
@@ -115,17 +129,18 @@ This differs from the [On change](#on-change) property in that the event will al
 
 {{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
-## 4 Styling
+## Styling
 
-### 4.1 Design Properties Section{#design-properties}
+### Design Properties Section{#design-properties}
 
 {{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
 
-### 4.2 Common Section{#common-styling}
+### Common Section{#common-styling}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-## 5 Read More
+## Read More
 
 * [Data View](/refguide/data-view/)
 * [Attributes](/refguide/attributes/)
+* [Variables](/refguide/page-properties/#variables)

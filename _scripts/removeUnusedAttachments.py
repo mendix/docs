@@ -61,6 +61,6 @@ for file in dirList_2:
             break
     # Delete files that are in dirList2 and not in the attachment list
     if deleteFlag is True:
-        # Make sure that it is not a directory
-        if pathlib.Path.is_file(file):
+        # Make sure that it is not a directory and not a .drawio file
+        if pathlib.Path.is_file(file) and not file.name.endswith('.drawio'):
             pathlib.Path.unlink(file)

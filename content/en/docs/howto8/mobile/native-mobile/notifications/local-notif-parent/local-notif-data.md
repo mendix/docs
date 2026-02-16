@@ -5,7 +5,7 @@ weight: 40
 description: A tutorial for integrating data into your push notifications.
 ---
 
-## 1 Introduction
+## Introduction
 
 Several apps make it so that when user taps a notification, the user is taken to specific page with specific parameters set. You can achieve this by sending data along with a notification. 
 
@@ -20,7 +20,7 @@ You will create the following things to send data to pages:
 * **One microflow** – *DS_TestEntity* to create dummy data for testing
 * **Three nanoflows** – *DS_Notification* to create a dummy notification object, *ACT_PassGUIDToNotification* to pass a GUID, and *On_tapNotification* to process data from your notification
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -28,7 +28,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install the [Make It Native](/refguide8/getting-the-make-it-native-app/) app on your mobile device
 * Complete the preceding tutorials in this [Use Local Notifications](/howto8/mobile/local-notif-parent/) series
 
-## 3 Sending Data to Pages
+## Sending Data to Pages
 
 To make your two entities, do the following:
 
@@ -239,7 +239,7 @@ Great job! Now you will test your data notification functionality.
 
 Congratulations! You have harnessed the power of data to enhance your push notifications. Next, in [How to Use Local Notifications Part 5: Scheduling](/howto8/mobile/local-notif-schedule-cancel/), you will learn how to schedule notifications for specific times and cancel them.
 
-## 4 Read More
+## Read More
 
 * [Implement Push Notifications](/howto8/mobile/implementation-guide/)
 * [Build JavaScript Actions](/howto8/extensibility/build-javascript-actions/)

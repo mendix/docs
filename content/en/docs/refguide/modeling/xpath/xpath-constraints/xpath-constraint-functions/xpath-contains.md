@@ -1,14 +1,19 @@
 ---
 title: "XPath contains"
+linktitle: "contains"
 url: /refguide/xpath-contains/
 weight: 16
 ---
 
-## 1 Overview
+## Overview
 
-The `contains()` function tests whether a string attribute contains a specific string (case-insensitive) as a sub-string.
+The `contains()` function tests whether a string attribute contains a specific string as a sub-string.
 
-## 2 Example
+{{% alert color="info" %}}
+String comparisons in XPath constraints are generally case-insensitive, but this can depend on the collation setting for some databases. See [Case-Sensitive Database Behavior](/refguide/case-sensitive-database-behavior/) for more information.
+{{% /alert %}}
+
+## Example
 
 This query returns all the customers from which the name contains the string `an`:
 

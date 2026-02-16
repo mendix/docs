@@ -2,7 +2,6 @@
 title: "Installing Mendix Studio Pro"
 url: /refguide9/install/
 linktitle: "Install Mendix Studio Pro"
-
 weight: 15
 description: "Describes how to install Mendix Studio Pro."
 aliases:
@@ -11,7 +10,7 @@ aliases:
 
 {{% button color="info" href="https://marketplace.mendix.com/link/studiopro/" text="Go to Marketplace" title="Download Studio Pro from the Marketplace" %}}
 
-## 1 Introduction
+## Introduction
 
 Mendix Studio Pro enables you to build apps on the Mendix Platform. This document will guide you through the steps of installing **Studio Pro 9.24 LTS**. For the full list of supported systems and required frameworks, see [System Requirements](/refguide9/system-requirements/). 
 
@@ -21,7 +20,7 @@ For a deep-dive demonstration of how to install Studio Pro, follow along in this
 
 {{< vidyard "WUp2tLi68nXFQd7xhPbDtt" >}}
 
-## 2 Downloading Mendix Studio Pro
+## Downloading Mendix Studio Pro
 
 Mendix Studio Pro can be installed on your machine with a Windows executable file. This executable file can be downloaded from the Mendix Marketplace. Follow these steps to download Mendix Studio Pro:
 
@@ -29,7 +28,7 @@ Mendix Studio Pro can be installed on your machine with a Windows executable fil
 2. Go to the **LTS/MTS Releases** tab and find the latest **9.24** patch.
 3. Click **Download** for the latest 9.24 LTS patch version of Mendix Studio Pro.
 
-## 3 Installing Mendix Studio Pro {#install}
+## Installing Mendix Studio Pro {#install}
 
 Mendix Studio Pro needs to be installed on your computer before you can start building apps. Follow these steps to install Mendix Studio Pro:
 
@@ -56,15 +55,19 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 
 7. If you are asked to restart your computer, make a selection and click **Finish**. Otherwise, check **Launch Mendix 9.X.X** and click **Finish** to finish the installation and launch Studio Pro.
 
-## 4 Troubleshooting {#troubleshooting}
+## Troubleshooting {#troubleshooting}
 
 Sometimes you can run into problems when installing Studio Pro. One work-around is to restart your system and install the prerequisites separately if they are not installed yet. 
 
 The prerequisites are the following:
 
-* [Microsoft .NET Desktop Runtime 6.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) – Mendix recommends using version 6.0.6 or above
+* | Studio Pro 9.0.0 - 9.24.33 | Studio Pro 9.24.34 and above |
+    | --- | --- |
+    |  [Microsoft .NET Desktop Runtime 6.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) – Mendix recommends using version 6.0.6 or above | [Microsoft .NET Desktop Runtime 8.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) – Mendix recommends using version 8.0.14 or above |
+    
 * Java JDK
-     
+
+    * For Mendix Studio Pro 9.24.34 and above - [Eclipse Temurin JDK 21 (x64)](https://github.com/adoptium/temurin21-binaries/releases)
     * For Mendix Studio Pro 9.24.16 and above – [Eclipse Temurin JDK 17 (x64)](https://github.com/adoptium/temurin17-binaries/releases)
     * For Mendix Studio Pro 9.18.0 and 9.24.15 – [Eclipse Temurin JDK 11 (x64)](https://github.com/adoptium/temurin11-binaries/releases)
     * For Mendix Studio Pro 9.14 to 9.17 – [Adoptium Temurin Java SDK](https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.14.1%2B1/OpenJDK11U-jdk_x64_windows_hotspot_11.0.14.1_1.msi)
@@ -73,20 +76,21 @@ The prerequisites are the following:
 * [Mendix Native Mobile Builder one-click Installer](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)
 * [Git for Windows (x64)](https://git-scm.com/download/win) using the following versions:
 
-    | 9.18.0 - 9.24.5 | 9.24.6 - onwards | 
+    | 9.18.0 - 9.24.5 | 9.24.6 - onwards |
     | --- | --- |
     | [2.37.1](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1) | [2.41.0](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3) |
 
 * [Microsoft Edge WebView2 Evergreen Runtime (x64 or ARM64) (Evergreen Standalone Installer version)](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
 * Mendix Studio Pro version 9.24.0 and above require the following versions of [Gradle](https://gradle.org/install/#manually) with Gradle extracted to the parent directory of the folder where Studio Pro is installed (usually `C:\Program Files\Mendix`) instead of `C:\Gradle`.
-    * Mendix Studio Pro versions 9.24.0 to 9.24.10 require Gradle version 7.6 or above
+    * Mendix Studio Pro version 9.24.34 and above require Gradle version 8.5 or above
     * Mendix Studio Pro version 9.24.11 and above require Gradle version 7.6.3 or above
+    * Mendix Studio Pro versions 9.24.0 to 9.24.10 require Gradle version 7.6 or above
 
 Based on the error message you get from the installer you can decide to install a single prerequisite, or you can try to manually install them all.
 
 After that you can retry installing Studio Pro.
 
-## 5 Installing Mendix Studio Pro Offline {#offline}
+## Installing Mendix Studio Pro Offline {#offline}
 
 The Mendix Studio Pro installation experience includes all the tools and frameworks required to run the application. If any of the prerequisites are not found at the moment of installation, the Studio Pro setup process will attempt to download and install the missing elements automatically. The Mendix Studio Pro installer does not include all dependencies and relies on internet connectivity to obtain them if any of the required pieces of software are missing. 
 
@@ -98,7 +102,8 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
 4. Download the prerequisites listed in the [Troubleshooting](#troubleshooting) section above and move them into the **Dependencies** folder.
 5. Rename the following dependencies:
     * The Microsoft .NET Desktop Runtime 6.0.x executable (*dotnet.exe*) to *windowsdesktop-runtime-6.0-x64.exe*
-    * The Java Development Kit 11 or 17 (x64) *msi* (for example, *OpenJDK17U-jdk_x64_windows_hotspot_17.0.10_7.msi*) to one of the following, depending on the Studio Pro version:
+    * The Java Development Kit 11, 17 or 21 (x64) *msi* (for example, *OpenJDK17U-jdk_x64_windows_hotspot_17.0.10_7.msi*) to one of the following, depending on the Studio Pro version:
+        * *adoptiumjdk_21_x64.msi* – for versions 9.24.34 and above
         * *adoptiumjdk_17_x64.msi* – for versions 9.24.16 and above
         * *adoptiumjdk_11_x64.msi* – for versions between 9.14.0 and 9.24.15 
         * *adoptopenjdk_11_x64.msi* – for versions 9.13.x and below
@@ -106,6 +111,7 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
     * The `latest` executable to *mendix_native_mobile_builder.exe*
     * The *Git-{version}-64-bit.exe* executable to *git_for_windows_installer.exe*
     * Do not rename the Microsoft Edge WebView2 Evergreen Runtime installer *MicrosoftEdgeWebview2Setup.exe*, keep it as is
+    * For Mendix 9 versions 9.24.34 and above, use Gradle version 8.5 in a zip file named *gradle-8.5-bin.zip*
     * For Mendix 9 versions 9.24.11 and above, use Gradle version 7.6.3 in a zip file named *gradle-7.6.3-bin.zip*
     * For Mendix versions 9.24.0 to 9.24.10, use Gradle version 7.6 in a zip file named *gradle-7.6-bin.zip*
 
@@ -117,7 +123,7 @@ If the **AdoptOpenJDK 11 x64 failed; code 1639** error occurs during installatio
 * Install the Adopt Open JDK dependency manually from the dependencies folder using Administrator privileges
 * Try to install Studio Pro again
 
-## 6 Signing In
+## Signing In
 
 When starting Studio Pro for the first time after installation, it will ask you to sign in to the Mendix Platform. This allows you to get access to Mendix platform services from within Studio Pro, such as Team Server, Marketplace, and app deployment to the cloud.
 
@@ -133,7 +139,7 @@ To continue, you may accept the certificate for the current session by clicking 
 Accepting untrusted certificates can bring security risks. You should only do so after having received confirmation from your network administrator.
 {{% /alert %}}
 
-## 7 Read More
+## Read More
 
 * [Studio Pro Overview](/refguide9/studio-pro-overview/)
 * [App Modeling](/refguide9/modeling/)

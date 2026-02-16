@@ -1,13 +1,12 @@
 ---
 title: "Runtime Customization"
 url: /refguide9/custom-settings/
-
 description: "Describes custom settings for server, log file, database, Amazon S3 storage service, IBM Cloud Object Storage, Microsoft Azure, IBM Bluemix object storage, web client, and proxy server in Mendix."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor #amazon-s3-storage-service-settings below is mapped, so it should not be removed or changed.
 ---
 
-## 1 Introduction
+## Introduction
 
 You can use custom server settings to configure Mendix Runtime beyond the standard possibilities offered by Studio Pro.
 
@@ -17,16 +16,16 @@ Only use this functionality if you know exactly what you are doing. Incorrect va
 
 Each custom setting consists of a name and a value. For example, to set the hash algorithm to BCRYPT you add a custom setting with name `HashAlgorithm` and value `BCRYPT`. For a more detailed list of settings and example values, consult [full-documented-m2ee.yaml](https://github.com/mendix/m2ee-tools/blob/master/examples/full-documented-m2ee.yaml).
 
-If you are running your app on the Mendix Cloud or SAP Business Technology Platform, you can access these settings in the Developer Portal via **Environments** > **Environment Details** > **Runtime** > **Custom Runtime Settings**. For more information see:
+If you are running your app on Mendix Cloud or SAP Business Technology Platform, you can access these settings in [Apps](https://sprintr.home.mendix.com/) via **Environments** > **Environment Details** > **Runtime** > **Custom Runtime Settings**. For more information see:
 
-* the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details* for information about the Mendix Cloud
+* the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details* for information about Mendix Cloud
 * the [Runtime tab](/developerportal/deploy/sap-cloud-platform/#runtime-tab) section of *SAP Business Technology Platform* for information about the SAP BTP
 
 When you are running your app locally, you can set these values in a [Configuration](/refguide9/configuration/#custom).
 
 There is more information on how this is done in the Cloud Foundry buildpack in [Custom Runtime Settings](https://github.com/mendix/cf-mendix-buildpack#custom-runtime-settings) in the GitHub repo.
 
-### 1.1 Duration/Interval Settings
+### Duration/Interval Settings
 
 In versions of Mendix below 9.13.0, durations, intervals, and timeouts have to be specified as a number. This can be somewhat confusing because
 different units are used for different settings. Also, specifying long durations in milliseconds can be a bit cumbersome.
@@ -35,7 +34,7 @@ In Mendix 9.13.0 and above it is possible to specify durations in more user-frie
 * **ISO 8601 Periods**, such as `P7D`, `PT1H30M`, or `PT1S` (See https://en.wikipedia.org/wiki/ISO_8601#Durations for more information)
 * **HOCON durations**, such as `7 days`, `90m`, or `1 second` (See https://github.com/lightbend/config/blob/main/HOCON.md#duration-format for more information)
 
-## 2 General Settings {#general}
+## General Settings {#general}
 
 The following custom settings can be configured:
 
@@ -66,18 +65,22 @@ The following custom settings can be configured:
 | <a id="httpclientMaxConnectionsTotal" href="#httpclientMaxConnectionsTotal">http.<wbr>client.<wbr>MaxConnectionsTotal</a> | The [maximum number of connections allowed across all routes](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnTotal(int)) for the call REST service and call web service activities.<br/>{{% alert color="warning" %}}If you change the value of `http.client. MaxConnectionsPerRoute`, you will need to increase this value in line with that, up to a maximum of 250.{{% /alert %}} | 20 |
 | <a id="JavaKeyStorePassword" href="#JavaKeyStorePassword">JavaKeyStorePassword</a> | Password for the default Java keystore. | changeit |
 | <a id="LongLivedSessionTimeout" href="#LongLivedSessionTimeout">LongLivedSessionTimeout</a> | This setting is the same as `SessionTimeout`, but specific to offline-first progressive web apps. | 604800000 (7 days) |
-| <a id="MyScheduledEvents" href="#MyScheduledEvents">MyScheduledEvents</a> | A comma-separated string with the names of the events. Please don't forget the name of the module (a name can be, for example, `CRM.UpdateCustomerStatistics`). |   |
+| <a id="MyScheduledEvents" href="#MyScheduledEvents">MyScheduledEvents</a> | A comma-separated string with the names of the events. Please don't forget the name of the module (a name can be, for example, `CRM.UpdateCustomerStatistics`). {{% alert color="warning" %}}When running in multiple nodes, each node should have the same value for all runtime settings. Setting different values for different nodes to force specific scheduled events to be executed by specific nodes is not supported. It will not work and can lead to unexpected runtime errors.{{% /alert %}}|   |
 | <a id="RequestHandlingAllowLegacyCookies" href="#RequestHandlingAllowLegacyCookies">RequestHandling.<wbr>AllowLegacyCookies</a> | Allows violations of RFC 6265 which is enforced since the following versions of Studio Pro: 9.6.18, 9.12.15, 9.18.8, and 9.24.0. See [RFC6265_LEGACY CookieCompliance mode](https://www.eclipse.org/jetty/javadoc/jetty-10/org/eclipse/jetty/http/CookieCompliance.html#RFC6265_LEGACY) for more information. Be aware of the fact that enabling this custom setting exposes your app to CVE-2023-26049. This setting is available in the following versions and above: 9.6.18, 9.12.15, 9.18.8, and 9.24.3. | false |
-| <a id="ScheduledEventExecution" href="#ScheduledEventExecution">ScheduledEventExecution</a> | Specify which scheduled events should be executed. Choices are `ALL`, `NONE`, or `SPECIFIED`. In the case of `SPECIFIED`, enumerate the scheduled events using the `MyScheduledEvents` configuration option described below. {{% alert color="warning" %}}This setting cannot be configured when running locally. To enable and disable scheduled events when running locally, please use the 'Enabled' setting on the [Scheduled Events execution properties](/refguide9/scheduled-events-task-queue/) in Studio Pro.{{% /alert %}} | NONE |
+| <a id="ScheduledEventExecution" href="#ScheduledEventExecution">ScheduledEventExecution</a> | Specify which scheduled events should be executed. Choices are `ALL`, `NONE`, or `SPECIFIED`. In the case of `SPECIFIED`, enumerate the scheduled events using the `MyScheduledEvents` configuration option described below. {{% alert color="warning" %}}This setting cannot be configured when running locally. To enable and disable scheduled events when running locally, please use the 'Enabled' setting on the [Scheduled Events execution properties](/refguide9/scheduled-events-task-queue/) in Studio Pro.{{% /alert %}} {{% alert color="warning" %}}When running in multiple nodes, each node should have the same value for all runtime settings. Setting different values for different nodes to force specific scheduled events to be executed by specific nodes is not supported. It will not work and can lead to unexpected runtime errors.{{% /alert %}} | NONE |
 | <a id="SessionKeepAliveUpdatesInterval" href="#SessionKeepAliveUpdatesInterval">SessionKeepAliveUpdatesInterval</a> | Defines how often a runtime writes session LastActive dates in its memory back to the database. | one sixth of the value configured for the `SessionTimeout` setting; if the `SessionTimeout` is not set, this value defaults to 100000 (100 seconds) |
 | <a id="SessionTimeout" href="#SessionTimeout">SessionTimeout</a> | Defines after how much time session becomes invalid (in milliseconds). After that timeout a session becomes applicable for removal. The session will not be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 (10 minutes) |
+| <a id="SessionValidationTimeout" href="#SessionValidationTimeout">SessionValidationTimeout</a> | Defines the maximum caching time (in milliseconds) for sessions. This means that after signing out of a session, the session might still be accessible for the configured time on other nodes of the cluster, but only if that node has handled a previous request on that session just before the logout happened. Lowering it makes the cluster more secure, because the chance that the session is still accessible within the configured time window is smaller. However, this also requires more frequent roundtrips to the database (which impacts performance). Increasing the timeout has the opposite effect | 30000 (30 seconds) |
 | <a id="TaskQueueShutdownGracePeriod" href="#TaskQueueShutdownGracePeriod">TaskQueue.<wbr>ShutdownGracePeriod</a> | Time in ms to wait for task in a task queue to finish when shutting down. | 10000 (10 seconds) |
 | <a id="TempPath" href="#TempPath">TempPath</a> | The location of the temporary files. | [deployment folder]\data\tmp |
 | <a id="TrackWebServiceUserLastLogin" href="#TrackWebServiceUserLastLogin">TrackWebServiceUserLastLogin</a> | Defines whether to update the web service user's `LastLogin` field on each login. When this happens a database update query has to be sent and this can have performance consequences on heavy load systems. When this setting is set to false, no database interaction is necessary. | true |
+| <a id="TrackUserLastLoginForODataAndREST" href="#TrackUserLastLoginForODataAndREST">TrackUserLastLoginForODataAndREST</a> | Defines whether to update the user's `LastLogin` field on each interaction with a published OData and REST services. When this happens, a database update query has to be sent, which can have performance consequences on heavy load systems. When this setting is set to `false`, no database interaction is necessary. Ths setting is not available in Studio Pro 10, because this behavior is included in the [TrackWebServiceUserLastLogin](#TrackUserLastLoginForODataAndREST) setting. When setting this value to `false`, make sure to also set [TrackWebServiceUserLastLogin](#TrackUserLastLoginForODataAndREST) to `false` so a future upgrade to Studio Pro 10 keeps the behavior. *This setting was introduced in Studio Pro 9.24.34.* | true |
 | <a id="UploadedFilesPath" href="#UploadedFilesPath">UploadedFilesPath</a> | The location of the uploaded files. A valid path can be: `\\FileServer\CustomerPortalFiles`. | [deployment folder]\data\files |
 | <a id="mapping.import.MaxJsonReadingLength" href="#mapping.import.MaxJsonReadingLength">mapping.import.MaxJsonReadingLength</a> | The maximum length of the JSON string received from the remote which can be processed with import mapping. Use this setting when you expect a string which is longer than the default. See [Import Mappings](/refguide/import-mappings/#troubleshooting) for more information. <br />*This setting was introduced in Mendix version 9.24.17.* | 20000000 *(dependent on library version)* |
+| <a id="LastActionExecutionUpdateBatchSize" href="#LastActionExecutionUpdateBatchSize">LastActionExecutionUpdateBatchSize</a> | This setting specifies how many sessions should be updated per batch when updating the `LastActionExecution` attribute in the periodic system task. | 1000 *Introduced in Mendix 9.24.41.* |
+| <a id="SessionKeepAliveUpdateBatchSize" href="#SessionKeepAliveUpdateBatchSize">SessionKeepAliveUpdateBatchSize</a> | This setting specifies how many sessions should be updated per batch when updating the `LastActive` attribute in the periodic system task. | 1000 *Introduced in Mendix 9.24.41.* |
 
-## 3 Log File Settings
+## Log File Settings
 
 The settings below influence the behavior of the log files. These settings can only be used on premises. In the cloud, these settings do not change any behavior.
 
@@ -87,9 +90,9 @@ The settings below influence the behavior of the log files. These settings can o
 | <a id="MaxLogFileSize" href="#MaxLogFileSize">MaxLogFileSize</a> | The maximum size per log file. When the log file reaches this maximum size, the log file will be backed up and a new empty log file will be used. | 2097152 (2 MB) |
 | <a id="MaxLogFileCount" href="#MaxLogFileCount">MaxLogFileCount</a> | The maximum count of log files preserved (actual file plus back-up files). When the maximum count is reached, the oldest backup file will be removed. | 10 |
 
-## 4 Database Settings
+## Database Settings
 
-### 4.1 Common Settings
+### Common Settings
 
 | Name | Description | Default Value |
 | --- | --- | --- |
@@ -97,8 +100,8 @@ The settings below influence the behavior of the log files. These settings can o
 | <a id="DatabaseType" href="#DatabaseType">DatabaseType</a> | Defines the database engine which is used as the Mendix database. Valid values are `DB2`, `HSQLDB`, `MYSQL`, `ORACLE`, `POSTGRESQL`, `SAPHANA`, and `SQLSERVER`. | |
 | <a id="DatabaseUserName" href="#DatabaseUserName">DatabaseUserName</a> | Name required for authentication to the database. | |
 | <a id="DatabasePassword" href="#DatabasePassword">DatabasePassword</a> | Password for the `DatabaseUserName` supplied above. | |
-| <a id="DatabaseHost" href="#DatabaseHost">DatabaseHost</a> | The host name and optionally the TCP port number of the database. Use a colon (`:`) as separator between the host name and port number. Possible values are: `db.url.org`, `db.url.org:1521`, `10.0.0.5`,  and`10.0.0.5:1433`\. It is possible to use a plain IPv6 address by enclosing it in brackets (for example, `[::1]:5432`).<br/>This will be overridden if you supply `DatabaseJdbcUrl`. | |
-| <a id="DatabaseName" href="#DatabaseName">DatabaseName</a> | The name of the database or schema used by the Mendix app <br/>This will be overridden if you supply **DatabaseJdbcUrl**. | |
+| <a id="DatabaseHost" href="#DatabaseHost">DatabaseHost</a> | The host name and optionally the TCP port number of the database. Use a colon (`:`) as separator between the host name and port number. Possible values are: `db.url.org`, `db.url.org:1521`, `10.0.0.5`, and`10.0.0.5:1433`\. It is possible to use a plain IPv6 address by enclosing it in brackets (for example, `[::1]:5432`).<br/>This will be overridden if you supply [DatabaseJdbcUrl](#DatabaseJdbcUrl). | |
+| <a id="DatabaseName" href="#DatabaseName">DatabaseName</a> | The name of the database or schema used by the Mendix app <br/>Some database types require this even if a `DatabaseJdbcUrl` is defined. | |
 | <a id="DatabaseJdbcUrl" href="#DatabaseJdbcUrl">DatabaseJdbcUrl</a> | Defines the JDBC URL to use for the database connection (which overrides the other database connection settings). |   |
 | <a id="DatabaseUseSsl" href="#DatabaseUseSsl">DatabaseUseSsl</a> | For PostgreSQL databases, defines whether the connection will be made using SSL without certificate validation. If you need certificate validation, use **DatabaseJdbcUrl** instead. | false |
 | <a id="DatabaseUseIntegratedSecurity" href="#DatabaseUseIntegratedSecurity">DatabaseUseIntegratedSecurity</a> | This setting defines whether integrated security will be used to authenticate to SQL Server. If true, user name and password will not be used.<br />If the runtime is not running on Windows, it must be instructed to use JavaKerberos authentication: for versions of Mendix below 9.23.0, add `;integratedSecurity=true;authenticationScheme=JavaKerberos` to **DatabaseJdbcUrl**. In addition, ensure that the proper domain user for accessing the SQL Server is authenticated on the runtime server using the `kinit` command. | false |
@@ -109,9 +112,9 @@ The settings below influence the behavior of the log files. These settings can o
 | <a id="JdbcLoginTimeout" href="#JdbcLoginTimeout">JdbcLoginTimeout</a> | This setting defines the database connection establishment time in milliseconds. | 5000 (5 seconds) |
 | <a id="SynchronizationCleanupInterval" href="#SynchronizationCleanupInterval">com.mendix.offline.SynchronizationCleanupInterval</a> | This setting defines how often objects of type `System.OfflineSynchronizationHistory` are cleaned up. | 90 (90 days) |
 
-### 4.2 Connection Pooling {#connection-pooling}
+### Connection Pooling {#connection-pooling}
 
-The settings below are used to define the database connection pooling behavior. Mendix Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](https://commons.apache.org/pool/) . 
+The settings below are used to define the database connection pooling behavior. Mendix Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](https://commons.apache.org/pool/). 
 
 These settings are configured *per runtime instance*. If you have [scaled your application](/developerportal/deploy/scale-environment/), the number of connections on the database side will be multiplied by the number of runtime instances. For example, if you set `ConnectionPoolingMaxIdle` to `50` and scale your app to 2 runtime instances, each runtime instance will create at most 50 connections, but on the database side this will lead to a maximum of 100 connections.
 
@@ -129,7 +132,7 @@ These settings are configured *per runtime instance*. If you have [scaled your a
 | <a id="ConnectionPoolingTestOnReturn" href="#ConnectionPoolingTestOnReturn">ConnectionPoolingTestOnReturn</a> | If `true`, a database connection will be validated by the connection pool when it is returned to the pool by the application. Supported in Mendix versions 9.24.16 and above. | false |
 | <a id="ConnectionPoolingTestWhileIdle" href="#ConnectionPoolingTestWhileIdle">ConnectionPoolingTestWhileIdle</a> | If `true`, all idle database connections will be validated when the idle object evictor runs. Supported in Mendix versions 9.24.16 and above. | false |
 
-### 4.3 Migration Settings
+### Migration Settings
 
 The settings below are used to define the source database from which all data should be copied to the main database. You have to specify the settings below only once. The main database should exist and should be empty. During the app start-up, the data will be copied if the settings below are specified. Remove the settings afterwards, because they are not needed anymore.
 
@@ -148,12 +151,12 @@ Before the data copying process starts, the main database structure will be gene
 | <a id="SourceDatabaseUserName" href="#SourceDatabaseUserName">SourceDatabaseUserName</a> | The user name for the connection to the source database. |   |
 | <a id="SourceOracleServiceName" href="#SourceOracleServiceName">SourceOracleServiceName</a> | Defines the `SERVICE_NAME` when you have a connection with an Oracle DBMS as source. |   |
 
-## 5 S3 Storage Service Settings {#amazon-s3-storage-service-settings}
+## S3 Storage Service Settings {#amazon-s3-storage-service-settings}
 
 The settings described below influence the behavior of the Amazon S3 Storage Service module. This module can be used for both Amazon S3 Storage and IBM Cloud Object Storage.
 
 {{% alert color="warning" %}}
-For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you and cannot be overwritten.
+For deployments to Mendix Cloud, SAP BTP, and Mendix on Kubernetes, these settings are managed for you and cannot be overwritten.
 {{% /alert %}}
 
 | Name | Description | Default Value |
@@ -163,10 +166,10 @@ For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these
 | <a id="commendixstorages3BucketName" href="#commendixstorages3BucketName">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>BucketName</a> | Name of the bucket where the files are stored on S3. |   |
 | <a id="commendixstorages3ResourceNamePrefix" href="#commendixstorages3ResourceNamePrefix">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>ResourceNamePrefix</a> | Prefix for the keys under which objects are stored. Separators are not added automatically to keys. For keys like `prefix/key1`, `com.mendix.storage.s3.ResourceNamePrefix` should have value `prefix/`. This setting is available in Mendix version 9.24.16 and above. |   |
 | <a id="commendixstorages3ResourceNameSuffix" href="#commendixstorages3ResourceNameSuffix">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>ResourceNameSuffix</a> | Suffix for the keys under which objects are stored. This can be used when S3 buckets are divided into different segments for different users with different credentials (for example, store objects as `[key].customer1` for customer1 and as `[key].customer2` for customer2). Separators are not added automatically to keys. For keys like `key1.customer1`, `com.mendix.storage.s3.ResourceNameSuffix` should have value `.customer1`. |   |
-| <a id="commendixstorages3Region" href="#commendixstorages3Region">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>Region</a> | Sets the region in which the S3 bucket is located. This will be used to determine the service endpoint, unless overridden in **com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>EndPoint**. This setting will also be used as the signing region for requests. ||
+| <a id="commendixstorages3Region" href="#commendixstorages3Region">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>Region</a> | Sets the region in which the S3 bucket is located. This will be used to determine the service endpoint, unless overridden in **com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>EndPoint**. This setting will also be used as the signing region for requests.<br/><br/>In Mendix version 9.24.41 and above, this setting is mandatory. The runtime will not start if this setting is not configured. {{% alert color="warning" %}}Using an incorrect region can lead to the following errors:<br/><br/>`Unable to load region from any of the providers in the chain.`<br/><br/>`The bucket you are attempting to access must be addressed using the specified endpoint.`<br/><br/>`The authorization header is malformed; the region 'us-east-1' is wrong.`{{% /alert %}} |   |
 | <a id="commendixstorages3EndPoint" href="#commendixstorages3EndPoint">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>EndPoint</a> | Overrides the default endpoint. This setting is required when the storage is on a non-AWS location (for example, IBM Cloud Object Storage). Both the endpoint (for example, `s3.example.com`) or the full URL (including the protocol) are supported (for example, `https://s3.example.com`). Note that when setting a custom endpoint, path style access will be enabled. For more information, see [Class S3ClientOptions](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/S3ClientOptions.html#withPathStyleAccess(boolean)). |   |
-| <a id="commendixstorages3UseV2Auth" href="#commendixstorages3UseV2Auth">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>UseV2Auth</a> | Lets the authentication policy use `Signature Version 2` instead of the default `Signature Version 4`. Set this setting to `true` when the endpoint does not support `Signature Version 4`. | false |
-| <a id="commendixstorages3EncryptionKeys" href="#commendixstorages3EncryptionKeys">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>EncryptionKeys</a> | List of keys which can be used to encrypt and decrypt data at rest in S3. The right key to decrypt the data with is automatically selected depending on with which key it was encrypted. Each encryption key consists of a key id, the encryption algorithm and the actual key (Base64 encoded). Example: {{< figure src="/attachments/refguide9/runtime/custom-settings/code_snippet_2.png" class="no-border" >}} |   |
+| <a id="commendixstorages3UseV2Auth" href="#commendixstorages3UseV2Auth">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>UseV2Auth</a> | Lets the authentication policy use `Signature Version 2` instead of the default `Signature Version 4`. Set this setting to `true` when the endpoint does not support `Signature Version 4`.<br/><br/>This setting is not supported in Mendix version 9.24.41 and above. | false |
+| <a id="commendixstorages3EncryptionKeys" href="#commendixstorages3EncryptionKeys">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>EncryptionKeys</a> | List of keys which can be used to encrypt and decrypt data at rest in S3. The right key to decrypt the data with is automatically selected depending on with which key it was encrypted. Each encryption key consists of a key id, the encryption algorithm and the actual key (Base64 encoded).<br/><br/>In Mendix version 9.24.41 and above, only AES encryption algorithm is supported. See [S3 Encryption Key Update](/refguide9/s3-encryption-key-update/) for migration information and how to configure the setting. |   |
 | <a id="commendixstorages3ForceGlobalBucketAccessEnabled" href="#commendixstorages3ForceGlobalBucketAccessEnabled">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>ForceGlobalBucketAccessEnabled</a> | The value `true` allows the server to route requests to a different region than specified in these settings (`false` disallows it). | true |
 | <a id="commendixstorages3MaxConnections" href="#commendixstorages3MaxConnections">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>MaxConnections</a> | Overrides the default maximum connections limit in the S3 service. The default value is enough for most applications, so we do not recommend explicitly setting this to a custom value unless a larger maximum connections limit is absolutely necessary. | [DEFAULT_MAX_CONNECTIONS](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#DEFAULT_MAX_CONNECTIONS) field of the ClientConfiguration interface in the AWS SDK for Java. |
 | <a id="commendixstorages3ClientExecutionTimeout" href="#commendixstorages3ClientExecutionTimeout">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>ClientExecutionTimeout</a> | Sets the amount of time (in milliseconds) to allow a call to the storage service to complete. A value of `0` means no timeout. For more information, see the [AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setClientExecutionTimeout-int-). | 0 (no timeout) |
@@ -175,12 +178,12 @@ For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these
 | <a id="commendixstorages3RequestTimeout" href="#commendixstorages3RequestTimeout">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>RequestTimeout</a> | Sets the amount of time to wait (in milliseconds) for the request to complete before giving up and timing out. A value of `0` means no timeout. For more information, see [the AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setRequestTimeout-int-). | 0 (no timeout) |
 | <a id="commendixstorages3UseCACertificates" href="#commendixstorages3UseCACertificates">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>UseCACertificates</a> | Set this value to `true` to use the configured [CACertificates](#CACertificates) for the connection to the S3 service. | false |
 
-## 6 Microsoft Azure SQL
+## Microsoft Azure SQL
 
 These settings can be changed to use a Microsoft Azure SQL database for your Mendix application.
 
 {{% alert color="warning" %}}
-For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you and cannot be overwritten.
+For deployments to Mendix Cloud, SAP BTP, and Mendix on Kubernetes these settings are managed for you and cannot be overwritten.
 {{% /alert %}}
 
 First, you need to create an Azure SQL database (for information on how to do this, see this [SQL Database Tutorial](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/)). Make sure your Azure firewall settings allow your Mendix application to reach the Azure SQL database (by default, the Azure firewall does not allow external connections).
@@ -193,12 +196,12 @@ First, you need to create an Azure SQL database (for information on how to do th
 | <a id="AzureDatabaseUserName" href="#AzureDatabaseUserName">DatabaseUserName</a> | `your-username` |   |
 | <a id="AzureDatabasePassword" href="#AzureDatabasePassword">DatabasePassword</a> | `your-password` |   |
 
-## 7 Microsoft Azure Blob Storage Settings{#azure-blob}
+## Microsoft Azure Blob Storage Settings{#azure-blob}
 
 These settings can be used to store files using the Microsoft Azure blob storage service. Server-side encryption can be configured through the Azure Portal (for more information, see [Azure Storage encryption for data at rest](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)).
 
 {{% alert color="warning" %}}
-For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you and cannot be overwritten.
+For deployments to Mendix Cloud, SAP BTP, and Mendix on Kubernetes these settings are managed for you and cannot be overwritten.
 {{% /alert %}}
 
 | Name | Description | Default Value |
@@ -219,21 +222,21 @@ For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these
 Azure blob storage's default connection protocol is HTTPS in order to encourage secure connections by default. This is a highly recommended best practice (for more information, see [Configure Azure Storage Connection Strings](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)). This should now be transparent, unless you use custom domain names (for details, see [Require Secure Transfer](https://docs.microsoft.com/en-us/azure/storage/common/storage-require-secure-transfer)). In that case, you should use the `UseHttps` setting above to revert to the previous default behavior and disable HTTPS.
 {{% /alert %}}
 
-## 8 Web Client Settings{#web-client-settings}
+## Web Client Settings{#web-client-settings}
 
 The settings below influence the behavior of the Mendix web client.
 
 | Name | Description | Default Value |
 | --- | --- | --- |
-| <a id="EnableKeepAlive" href="#EnableKeepAlive">EnableKeepAlive</a> | Defines whether the web client sends a keep alive request every SessionTimeout/2 milliseconds, to prevent a session timeout. Each click in the browser also acts as KeepAlive. Disabling this property will result in a user being logged out automatically after 10 minutes of inactivity, even if the browser remains open. | true |
-| <a id="PhoneUserAgentRegEx" href="#PhoneUserAgentRegEx">PhoneUserAgentRegEx</a> | Defines the regular expression that is used to determine whether a user is visiting a Mendix application from a phone. The regular expression is matched against the user-agent header sent by the client's web browser. | Android, Mobile (iPhone, iPod, BlackBerry) |
-| <a id="TabletUserAgentRegEx" href="#TabletUserAgentRegEx">TabletUserAgentRegEx</a> | Defines the regular expression that is used to determine whether a user is visiting a Mendix application from a tablet. The regular expression is matched against the User-Agent header sent by the client's web browser. | Android, iPad |
+| <a id="EnableKeepAlive" href="#EnableKeepAlive">EnableKeepAlive</a> | Defines whether the web client sends a keep alive request every SessionTimeout/2 milliseconds, to prevent a session timeout. Each interaction of the client with the runtime also acts as KeepAlive. Disabling this property will result in a user being logged out automatically after 10 minutes of inactivity, even if the browser remains open. | true |
+| <a id="PhoneUserAgentRegEx" href="#PhoneUserAgentRegEx">PhoneUserAgentRegEx</a> | *This method does not accurately identify devices. It is removed and an alternative method is used in 9.24.34 and above.*<br />Defines the regular expression that is used to determine whether a user is visiting a Mendix application from a phone. The regular expression is matched against the user-agent header sent by the client's web browser. | Android, Mobile (iPhone, iPod, BlackBerry) |
+| <a id="TabletUserAgentRegEx" href="#TabletUserAgentRegEx">TabletUserAgentRegEx</a> | *This method does not accurately identify devices. It is removed and an alternative method is used in 9.24.34 and above.*<br />Defines the regular expression that is used to determine whether a user is visiting a Mendix application from a tablet. The regular expression is matched against the User-Agent header sent by the client's web browser. | Android, iPad |
 | <a id="commendixwebuiHybridAppLoginTimeOut" href="#commendixwebuiHybridAppLoginTimeOut">com.<wbr>mendix.<wbr>webui.<wbr>HybridAppLoginTimeOut</a> | Determines how many minutes your token will remain valid before re-authenticating using your full credentials. By default the token will never expire. In Mendix versions below 9.13.0 you could specify no timeout by setting the value to `-1`.  | |
 | <a id="commendixwebuiFeedbackSizeWarningThreshold" href="#commendixwebuiFeedbackSizeWarningThreshold">com.<wbr>mendix.<wbr>webui.<wbr>FeedbackSizeWarningThreshold</a> | A warning is logged when the feedback size exceeds the threshold. Feedback is sent from server to client to instruct (for example, to refresh objects or to open a page). They are serialized as "instructions" in the server response. If there are too many instructions, this can have performance implications, as they all have to be serialized to the client. For this reason, a warning is logged when the threshold is exceeded. | 5000 |
 | <a id="commendixwebuiStateSizeWarningThreshold" href="#commendixwebuiStateSizeWarningThreshold">com.<wbr>mendix.<wbr>webui.<wbr>StateSizeWarningThreshold</a> | A warning is logged when the state size exceeds the threshold. The state consists of changes in objects and of objects not committed to the database (yet). If there is too much state, this will have performance implications, as the whole state has to be serialized to the client. For this reason, a warning is logged when the threshold is exceeded. | 100 |
 | <a id="commendixwebuiCommittedObjectsThreshold" href="#commendixwebuiCommittedObjectsThreshold">com.<wbr>mendix.<wbr>webui.<wbr>CommittedObjectsThreshold</a> | The threshold controls how much data is sent back to the client after executing a microflow. By default, we send back full objects when they are changed or committed. When this threshold is reached, only object GUIDs are sent back instead so that the client knows about the changes while the amount of data sent over the network is reduced. The client will then retrieve the objects later on, if needed. | 100 |
 
-## 9 Metrics Settings{#metrics-settings}
+## Metrics Settings{#metrics-settings}
 
 The settings below configure metrics through [micrometer](https://micrometer.io/docs). See [Metrics](/refguide9/metrics/) for more information and the specification of the settings format. 
 
@@ -243,7 +246,7 @@ The settings below configure metrics through [micrometer](https://micrometer.io/
 | <a id="MetricsRegistries" href="#MetricsRegistries">Metrics.Registries</a> | Registries to send metrics to |   |
 | <a id="MetricsApplicationTags" href="#MetricsApplicationTags">Metrics.ApplicationTags</a> | Common tags used for every meter |   |
 
-## 10 Proxy Settings
+## Proxy Settings
 
 The settings below allow you to use a proxy. 
 

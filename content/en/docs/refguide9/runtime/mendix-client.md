@@ -1,18 +1,17 @@
 ---
 title: "Mendix Client"
 url: /refguide9/mendix-client/
-
 description: "Describes the Mendix Client part of the Mendix Runtime and how it functions."
 weight: 20
 ---
 
-## 1 Introduction
+## Introduction
 
 The Mendix Client runs on the end-user's device and handles the interface between the end-user and the app. Sometimes it can run completely independently of the Runtime Server and perform all processing locally. Mostly, it interacts with the Runtime Server to get or update shared data, or perform additional application logic.
 
 This description of the Mendix Client is based on using the Runtime Server of an app running in the cloud. You can also run Mendix locally for testing, but this is conceptually the same.
 
-## 2 Description {#description}
+## Description {#description}
 
 The Mendix Client is a part of every application built with Mendix: web, mobile, and hybrid.
 
@@ -34,7 +33,7 @@ Below is a chart showing the components of the Mendix Client. Each of the compon
 
 {{< figure src="/attachments/refguide9/runtime/mendix-client/mendix-client.png" alt="The makeup of the Mendix Client" class="no-border" >}}
 
-### 2.1 Client Core
+### Client Core
 
 This can be seen as the interpreter of the client. It uses the client config and client state to decide how to process a request from the end-user.
 The client core controls the various processes which need to take place to service the request. These processes include data fetching and manipulation, client-side expressions, and navigation.
@@ -43,57 +42,57 @@ The client core is written in JavaScript.
 
 Mendix apps do not modify the client core, all logic is held in the model. However, each patch version of Mendix comes with its own version of the client core.
 
-### 2.2 Widgets
+### Widgets
 
 These are the fundamental building blocks of the Mendix Client. All the actions which the client takes are controlled by widgets. They are responsible for what is displayed on pages, and how user input is managed. There is a more detailed description of widgets in [Widgets](#widgets), below.
 
-### 2.3 JavaScript Actions
+### JavaScript Actions
 
 This runs custom JavaScript, added by the app developer, which is held as JavaScript actions in the client config.
 
-### 2.4 UI Layer
+### UI Layer
 
 The UI layer performs navigation, resource loading, and platform integration. It is responsible for building the page which is presented to the end-user in response to the actions of the Mendix Client, using the correct language and other locale settings.
 
-### 2.5 HTTPS Server
+### HTTPS Server
 
 The HTTPS server serves pages, widgets, and JavaScript actions, held in the model, to the end-user of the app.
 
-### 2.6 Logic
+### Logic
 
 This runs client-side logic which is defined in the nanoflows in the model.
 
-### 2.7 Platform APIs
+### Platform APIs
 
 These are functions of the environment in which the Mendix Client is running. In most cases this will be a function of a mobile device such as the camera or GPS location, but it can also include making calls to Mendix Native APIs or browser functions such as accessing an image file.
 
-### 2.8 Client Config
+### Client Config
 
 This is the static data which is needed by the Mendix Client. For a browser-based client, this data is held online, with the Runtime Server. For native mobile apps, this is held locally on the device.
 
 These include the initial environment (for example, the browser shell page) needed to start the Mendix Client, Cascading Style Sheets (CSS files) which define the app’s theme, and JavaScript files which define client-side logic.
 
-### 2.9 Data API
+### Data API
 
 This allows the Mendix Client to fetch and manipulate data in offline storage or the Mendix Runtime.
 
-### 2.10 Object Cache
+### Object Cache
 
 This holds and manages objects which are being used by the Mendix Client in memory – for example non-persistable objects, new objects, and objects returned by the Runtime Server to be displayed on a page. It also holds changes to attributes and associations for these objects.
 
 State handling will perform garbage collection to ensure that memory is released when it is no longer needed.
 
-### 2.11 Offline Storage
+### Offline Storage
 
 This is permanent storage, usually on a mobile device, where data can be stored for apps which are running in offline mode. It differs from the temporary object storage in that data here is not lost at the end of a session, but is kept until it can be synced to the Runtime Server.
 
-### 2.12 State/Sync/Session
+### State/Sync/Session
 
 This manages requests to the Runtime Server. Note that some actions in the Mendix Client will not require access to the Runtime Server. For example, if the Object Cache already has access to the required data in the temporary object storage, or if the app is written as “offline-first”.
 
 For more information about the communication between the Mendix Client and the Runtime Server, see [Communication Patterns in the Mendix Runtime](/refguide9/communication-patterns/).
 
-#### 2.12.1 State Handling
+#### State Handling
 
 This communicates the current state of the app (held in the object cache) to the Runtime Server. As the state is held in the Mendix Client, the Runtime Server can be stateless. This ensures that it is easier to scale your app horizontally by adding more instances as any instance can handle any request.
 
@@ -113,15 +112,15 @@ For more detailed information about state, see this blog: [https://www.mendix.co
 
 State handling is also responsible for garbage collection. If you want to know more about this aspect, see this blog: [https://www.mendix.com/blog/the-art-of-state-part-2-garbage-collection/](https://www.mendix.com/blog/the-art-of-state-part-2-garbage-collection/).
 
-#### 2.12.2 Synchronization
+#### Synchronization
 
 Where an app is “offline-first”, data created and changed in the app is stored locally until it is synchronized with the Runtime Server. This job is carried out by the synchronization process. This synchronizes the offline storage and object cache with the Runtime Server. For more information on offline-first apps and synchronization, see [Offline-First](/refguide9/offline-first/).
 
-#### 2.12.3 Session
+#### Session
 
 This ensures that any session with the runtime is kept alive and restored if necessary. It also acts as the authentication for all communications with the runtime which require it.
 
-### 2.13 Runtime Server
+### Runtime Server
 
 The Runtime Server waits for requests from the Mendix Client, processes the request, and returns the requested data, plus any additional state information where appropriate. This is done through a private API called *xas*.
 
@@ -131,7 +130,7 @@ Because all information is sent to the Mendix Client to build pages, everything 
 
 For a description of the Runtime Server, see [Runtime Server](/refguide9/runtime-server/).
 
-## 3 Widgets{#widgets}
+## Widgets{#widgets}
 
 Mendix pages are constructed from individual widgets. A widget can be of one of the following types:
 
@@ -141,13 +140,13 @@ Mendix pages are constructed from individual widgets. A widget can be of one of 
 
 These are described in the sections below.
 
-### 3.1 Core Widgets
+### Core Widgets
 
 Mendix has a number of core widgets which support the standard functions of Mendix pages. Core widgets are part of the core client. Most of these widgets have native and web implementations, though some are limited only to one platform.
 
 In native mobile applications an implementation based on React Native framework is used. In web applications, implementation is based on either React or Dojo. Widgets that use Dojo have some limitations, for example they cannot be used inside a [pluggable widget](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#widgets). These Dojo implementations are gradually being replaced.
 
-### 3.1 Pluggable Widgets {#pluggable-widgets}
+### Pluggable Widgets {#pluggable-widgets}
 
 You can also write your own widgets, called **Pluggable widgets**, in cases where Core widgets do not suffice. Pluggable widgets can be downloaded through the Marketplace. They are based on React (in web applications) or React Native (in native mobile applications) and are the recommended way of writing widgets. They replace Custom widgets, described below.
 
@@ -168,11 +167,11 @@ Mendix supports the following third-party libraries:
 
 For more information, see [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets/).
 
-### 3.2 Custom Widgets
+### Custom Widgets
 
 You can also write **Custom widgets**. These are based on Dojo framework and run only in web applications. They have access to a different, more low-level, API than pluggable widgets. Custom widgets should only be used if you cannot create the functionality in a Pluggable widget.
 
-## 4 Mendix Client Startup
+## Mendix Client Startup
 
 When an end-user wants to use a Mendix app, they need to start up the client on their device before they can connect to the Runtime Server. The way this works depends on the method used to run the client. This can be one of the following:
 
@@ -181,11 +180,11 @@ When an end-user wants to use a Mendix app, they need to start up the client on 
 
 How the Mendix Client is launched is described in the sections below.
 
-### 4.1 Launching Mendix Client in a Browser
+### Launching Mendix Client in a Browser
 
 In a browser, the environment is built on an initial page, the "shell", on which code is bootstrapped.
 
-#### 4.1.1 Launch Flow
+#### Launch Flow
 
 When the end-user launches an app in the browser, it triggers the following flow.
 
@@ -205,7 +204,7 @@ When the end-user launches an app in the browser, it triggers the following flow
 11. The Mendix Client displays the page to the end-user.
 12. The Mendix Client processes input from the end-user and repeats the steps above to show the correct page.
 
-#### 4.1.2 Location of Mendix Client Resources
+#### Location of Mendix Client Resources
 
 When the app is deployed, the static resources are placed in a separate structure. This includes the following:
 
@@ -215,26 +214,30 @@ When the app is deployed, the static resources are placed in a separate structur
 * widgets – both native and web core widgets which are used by this app
 * page definitions – xml page definitions which tell the Mendix Client what the pages for this app look like
 
-#### 4.1.3 Cookies{#cookies}
+#### Cookies{#cookies}
 
 When the Mendix client is running, it sets a number of technical cookies to record information about the session. These can include:
+
 | Name  | Source | Purpose | Path | Duration | HttpOnly | 
 | --- | --- | --- | --- | --- | --- |
 | **mx-cookie-test** | Client | Tests whether the browser supports cookies | `/` | deleted immediately after setting it | `false` |
-| **OfflineLogout** | Client | Used in offline applications when there is no connection and tells the runtime to logout on the next request | `/` | 1 year for offline sessions<sup><small>1</small></sup> |  `false` | 
+| **OfflineLogout** | Client | Used in offline applications when there is no connection and tells the runtime to logout on the next request | `/` | 1 year for offline sessions¹ |  `false` | 
 | **originURI** | index.html | Tells the client where to redirect to if a user is required to log in | `/` | until user closes their browser (session cookie) |  `false` | 
-| **DeviceType** | Runtime | Holds the type of the device used for the session | `/` | until user closes their browser (session cookie) |  `true` | 
-| **Profile** | Runtime | Holds the navigation profile that is being accessed within the session | `/` | until user closes their browser (session cookie) |  `true` | 
+| **DeviceType** | Runtime | Holds the type of the device used for the session | `/` | In Mendix 9.12 and above, 1 year. Below Mendix 9.12, until user closes their browser (session cookie) |  `true` | 
+| **Profile** | Runtime | Holds the navigation profile that is being accessed within the session | `/` | In Mendix 9.12 and above, 1 year. Below Mendix 9.12, until user closes their browser (session cookie) |  `true` | 
 | **SessionTimeZoneOffset** | Runtime | Holds the time zone offset for the session | `/` | until user closes their browser (session cookie) |  `true` | 
 | **xasid** | Runtime | Used for multi-instance fail-over | `/` | until user closes their browser (session cookie) |  `true` | 
 | **reloginReason** | Runtime | Used to let the client know that a relogin reason should be displayed on the sign in page | `/` | until user closes their browser (session cookie) |  `true` | 
-| **XASSESSIONID**<sup><small>2</small></sup> | Runtime | Holds the ID of the user's session | `/` | 1 year for offline sessions<sup><small>1</small></sup>, otherwise based on the session timeout |  `true` | 
+| **XASSESSIONID**² | Runtime | Holds the ID of the user's session | `/` | 1 year for offline sessions¹, otherwise based on the session timeout |  `true` | 
+| **clear_cache** | Runtime | Instructs the client to clear the cached session data whenever a new end-user signs in to an offline application—*introduced for apps created in Mendix version 9.24.24 and above* | `/` | until client starts or end-user closes their browser | `false`³ | 
 
-<sup><small>1</small></sup>*Offline sessions* are sessions created for users using an offline or native mobile [navigation profile](/refguide9/navigation/#profiles).
+¹*Offline sessions* are sessions created for users using an offline or native mobile [navigation profile](/refguide9/navigation/#profiles).
 
-<sup><small>2</small></sup>The name of the **XASSESSIONID** can be changed by changing the value of the **com.mendix.core.SessionIdCookieName** [custom setting](/refguide9/custom-settings/).
+²The name of the **XASSESSIONID** can be changed by changing the value of the **com.mendix.core.SessionIdCookieName** [custom setting](/refguide9/custom-settings/).
 
-### 4.2 Launching Native Mendix Client
+³The **clear_cache** cookie does not contain any sensitive information and always has value of 1. Therefore, there is no need for this cookie to be marked as **Secure** or **HttpOnly**.
+
+### Launching Native Mendix Client
 
 The flow when launching a native mobile app is different from launching in a browser. More information is stored locally as part of the app, and a native mobile app can even be designed to run “offline-first”, which means that it can still be run without any connection to the Runtime Server.
 
@@ -244,10 +247,9 @@ The flow described here is for production apps. During development, the flow is 
 2. The shell app loads a native bundle. This is the equivalent of the Mendix Client resources used by the Mendix Client running in a browser. It contains, for example, the Mendix Client code and page definitions. However, it is held locally on the device rather than centrally with the Runtime Server.
 3. If there is not a valid authentication token on the device, the Mendix Client contacts the Runtime Server and authenticates the end-user and gets any additional configuration required from the Runtime Server.
 4. If this is the first time the app has been started, or the first time after an update to the app, the Mendix Client performs a synchronization with the Runtime Server.
-5. The Mendix Client checks the resources stored in Visual Studio App Center for updates to the native bundle. This enables the app to keep up-to-date without needing to download new versions of the app from the app store.
 
     *The Mendix Client is now ready to start interacting with the end-user and will repeat the following steps for as long as the continues to run.*
 
-6. The Mendix Client prepares a page using the data on the device.
-7. The Mendix Client presents the page to the end-user.
-8. The Mendix Client reacts to the end-user input.
+5. The Mendix Client prepares a page using the data on the device.
+6. The Mendix Client presents the page to the end-user.
+7. The Mendix Client reacts to the end-user input.

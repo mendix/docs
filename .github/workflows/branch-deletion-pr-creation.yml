@@ -1,0 +1,110 @@
+name: Branch Deletion Phase One (PR Creation)
+permissions:
+  contents: write
+  pull-requests: write
+on:
+  schedule:
+    - cron: '00 22 1 * *'  # 10PM on 1st of every month
+  workflow_dispatch:
+    inputs:
+      min_age_days:
+        description: "Minimum age in days since merge"
+        required: true
+        default: 27
+        type: number
+
+jobs:
+  identify-branches:
+    if: github.repository_owner == 'mendix'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
+
+      - name: Setup jq
+        run: sudo apt-get install -y jq
+
+      - name: Create timestamp file
+        run: |
+          echo "Last scan for stale merged branches: $(TZ='Europe/Amsterdam' date +'%Y-%m-%d %H:%M:%S %Z (UTC%:z)')" > branch-cleanup-timestamp.txt
+
+      - name: Fetch all branches
+        run: |
+          git fetch origin '+refs/heads/*:refs/remotes/origin/*' --prune
+
+      - name: Process branches
+        id: branch-data
+        run: |
+          set -e
+          ALL_BRANCHES=$(git branch -r | grep -v "origin/HEAD" | sed 's/origin\///')
+          MIN_AGE_DAYS=${{ github.event.inputs.min_age_days || 27 }}
+
+          PROTECTED_BRANCHES=()
+          MERGED_BRANCHES_TO_PROCESS=()
+          BRANCHES_TO_DELETE=()
+          BRANCHES_TOO_RECENT=()
+          UNMERGED_BRANCHES=()
+
+          CURRENT_DATE=$(date +%Y%m%d)
+          echo "CURRENT_DATE=$CURRENT_DATE" >> $GITHUB_ENV
+
+          for BRANCH in $ALL_BRANCHES; do
+            branch_lower=$(echo "$BRANCH" | tr '[:upper:]' '[:lower:]')
+            if [[ $branch_lower =~ (backup|development|main|master|production) ]]; then
+              PROTECTED_BRANCHES+=("$BRANCH (protected)")
+            elif git branch -r --merged origin/development | grep -q "origin/$BRANCH"; then
+              MERGED_BRANCHES_TO_PROCESS+=("$BRANCH")
+            else
+              UNMERGED_BRANCHES+=("$BRANCH (not merged)")
+            fi
+          done
+
+          for BRANCH in "${MERGED_BRANCHES_TO_PROCESS[@]}"; do
+            MERGE_HASH=$(git log --grep="Merge branch.*$BRANCH" origin/development -n 1 --pretty=format:"%H" || true)
+            [ -z "$MERGE_HASH" ] && MERGE_HASH=$(git log -n 1 origin/$BRANCH --pretty=format:"%H")
+            
+            MERGE_DATE=$(git show -s --format=%ct $MERGE_HASH)
+            DAYS_AGO=$(( ($(date +%s) - MERGE_DATE) / 86400 ))
+            
+            if [[ $DAYS_AGO -ge $MIN_AGE_DAYS ]]; then
+              BRANCHES_TO_DELETE+=("$BRANCH")
+            else
+              BRANCHES_TOO_RECENT+=("$BRANCH (too recent: ${DAYS_AGO}d)")
+            fi
+          done
+
+           ALL_NON_DELETED=(
+            "${PROTECTED_BRANCHES[@]}" 
+            "${BRANCHES_TOO_RECENT[@]}"
+            "${UNMERGED_BRANCHES[@]}"
+          )
+
+          echo "HAS_BRANCHES=$([ ${#BRANCHES_TO_DELETE[@]} -gt 0 ] && echo true || echo false)" >> $GITHUB_ENV
+          echo "BRANCHES_TO_DELETE=$(printf -- '- %s\n' "${BRANCHES_TO_DELETE[@]}" | jq -Rs .)" >> $GITHUB_ENV
+          echo "ALL_NON_DELETED=$(printf -- '- %s\n' "${ALL_NON_DELETED[@]}" | jq -Rs .)" >> $GITHUB_ENV
+
+      - name: Create Deletion PR
+        if: env.HAS_BRANCHES == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: "[Auto] Branch Deletion Candidates - ${{ env.CURRENT_DATE }}"
+          body: |
+            ### Branches for Deletion
+            ${{ fromJSON(env.BRANCHES_TO_DELETE) }}
+
+            ### Protected/Recent Branches
+            ${{ fromJSON(env.ALL_NON_DELETED) }}
+          base: development
+          labels: Internal WIP
+          assignees: MarkvanMents,OlufunkeMoronfolu
+          reviewers: MarkvanMents,OlufunkeMoronfolu
+          commit-message: "Add branch cleanup candidates for ${{ env.CURRENT_DATE }}"
+          add-paths: |
+            branch-cleanup-timestamp.txt
+          author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+          committer: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"

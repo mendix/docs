@@ -8,7 +8,7 @@ aliases:
     - /howto9/logic-business-rules/server-side-paging/
 ---
 
-## 1 Introduction
+## Introduction
 
 Using server-side paging and sorting for a microflow data source, you can model out how you retrieve data to a single page and ensure it ends up in the correct sorting order. With this approach, you do not need to return all the data to the client — you can just return a single page. This can be helpful for getting data from external sources like a REST service, but can also be useful for a regular retrieve activity in a microflow. To do this, however, you must model the logic for getting the correct data in the microflow itself.
 
@@ -17,14 +17,14 @@ This how-to teaches you how to do the following:
 * Create a data grid with a microflow data source which retrieves data from a REST service
 * Add server-side paging and sorting to that data grid
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * If you are not familiar with using data from REST services, read [Consume a REST Service](/howto9/integration/consume-a-rest-service/)
 * Install Studio Pro [8.2.0 or above](https://marketplace.mendix.com/link/studiopro/)
 
-## 3 Creating a Microflow Data Source
+## Creating a Microflow Data Source
 
 In this section, you will create a JSON structure and import mapping for a REST service. To do this, complete the first four sections of [Consume a REST Service](/howto9/integration/consume-a-rest-service/) — (until **Adding an Input Entity to the Domain Model** is done). 
 
@@ -74,7 +74,7 @@ Now, you can start calling the REST service from your microflow data source. To 
 
     {{< figure src="/attachments/refguide9/modeling/integration/consumed-rest-services/server-side-paging/call-rest-returned.png" alt="set return value"   width="500"  class="no-border" >}}
 
-## 4 Creating a Data Grid with a Microflow Data Source
+## Creating a Data Grid with a Microflow Data Source
 
 In the previous section, you created a microflow which returns a list of characters. Now, you will use this microflow as a data source for a data grid:
 
@@ -99,7 +99,7 @@ This generates a data view around your data grid, creates the necessary widgets 
 
 {{< figure src="/attachments/refguide9/modeling/integration/consumed-rest-services/server-side-paging/paging.png" alt="paging object"   width="500"  class="no-border" >}}
 
-## 5 Adding Paging Support to the Microflow Data Source
+## Adding Paging Support to the Microflow Data Source
 
 In the previous section, you added the **Paging** input parameter to your microflow. This parameter contains the **PageNumber** attribute which is updated when you navigate through the pages with the paging bar in the client. In this section, you will use the **PageNumber** attribute to retrieve a specified page from your REST service:
 
@@ -119,7 +119,7 @@ In the previous section, you added the **Paging** input parameter to your microf
 
 Deploy your app and navigate to the page where you added your data grid. You can now use your newly added server-side paging by using the paging bar buttons above the data grid. 
 
-## 6 Adding Server-Side Sorting Support to the Microflow Data Source
+## Adding Server-Side Sorting Support to the Microflow Data Source
 
 Now, you have service-side paging for your data grid. Next, add server-side sorting to it.
 
@@ -151,7 +151,7 @@ Deploy your app again and navigate to the page with your data grid. Click the co
 
 {{< figure src="/attachments/refguide9/modeling/integration/consumed-rest-services/server-side-paging/header-sorting-smaller2.gif" alt="click headers to sort" class="no-border" >}}
 
-### 6.1 Setting a Default Sort Order
+### Setting a Default Sort Order
 
 You can set a default sort order for data. When a user has not clicked a header, the data will be ordered in the default sort order:
 
@@ -174,7 +174,7 @@ Deploy your app again and navigate to the page with your data grid. The data is 
 
 {{< figure src="/attachments/refguide9/modeling/integration/consumed-rest-services/server-side-paging/data-by-name.png" alt="sorted by name"   width="500"  class="no-border" >}}
 
-### 6.2 Disabling Server-Side Sorting
+### Disabling Server-Side Sorting
 
 Apps that use a REST service which does not support sorting, or apps which do not enable users to change sorting order, require special functionality. In these cases, disable sorting so that clicking the header has no effect:
 
@@ -193,7 +193,7 @@ Deploy your app again and navigate to the page with your data grid. The data is 
 
 {{< figure src="/attachments/refguide9/modeling/integration/consumed-rest-services/server-side-paging/sorting-disabled.png" alt="sorted but not clickable" class="no-border" >}}
 
-## 7 Adding Server-Side Searching
+## Adding Server-Side Searching
 
 Generating controls also generates input fields for all your attributes of the entity the microflow returns. These inputs can be used by your user to enter search criteria, which can be used to filter the data set on the server. Any data entered in the input fields by the user is set in the **Paging** entity which is passed to the data source microflow. 
 
@@ -208,7 +208,7 @@ You only need to use this data in your microflow and pass the search criteria to
 
 5. Click **Parameters** > **New** to add the fourth parameter and enter the following expression:
 
-    ```text {linenos=false}
+    ```text
     if $Paging/Name = empty then '' else $Paging/Name
     ```
 
@@ -220,7 +220,7 @@ You only need to use this data in your microflow and pass the search criteria to
 
 Deploy your app again and navigate to the page with your data grid. Enter a value for a part of the name, for example, *International*, and click **Search** to see your server-side searching in action!
 
-## 8 Read More
+## Read More
 
 * [Consume a REST Service](/howto9/integration/consume-a-rest-service/)
 * [JSON Structures Guide](/refguide9/json-structures/)

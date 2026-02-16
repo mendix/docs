@@ -1,12 +1,11 @@
 ---
 title: "REST Services"
 url: /refguide9/integration/rest-services/
-
 weight: 51
 description: "Introduces REST."
 ---
 
-## 1 Introduction
+## Introduction
 
 Representational state transfer (REST) is an approach to consuming or exposing resources. It has gained popularity because of its simplicity, because no extensive schemas or contracts are needed to transfer data between endpoints. It uses the following:
 

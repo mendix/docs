@@ -5,7 +5,7 @@ weight: 2
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 An end event defines where the flow will stop. 
 
@@ -19,9 +19,9 @@ The number of end events depends on the number of possible outcomes of the micro
 
 {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/events/end-event/end-events.png" class="no-border" >}}
 
-## 2 Behavior Properties
+## Behavior Properties
 
-### 2.1 Return Value {#return-value}
+### Return Value {#return-value}
 
 The return value is the value that is returned to the flow that called the current flow. If you have several end events and they have a return value, they all need to return a value of the same type. For example, if one of the end events returns an object of type *Entity*, the others need to return the same type: 
 
@@ -37,7 +37,7 @@ The return value can be entered as an [expression](/refguide9/expressions/).
 If you are calling a microflow from another microflow, note that a *calling* microflow cannot control what is returned. It is controlled by the *called* microflow. 
 {{% /alert %}}
 
-## 3 Read More
+## Read More
 
 * [Start Event](/refguide9/start-event/)
 * [Microflow Call](/refguide9/microflow-call/)

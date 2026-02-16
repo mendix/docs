@@ -7,7 +7,7 @@ aliases:
     - /howto/logic-business-rules/extract-and-use-sub-microflows/
 ---
 
-## 1 Introduction
+## Introduction
 
 When building microflows that span multiple functions, the best practice is to break down the large microflow into sub-microflows. Sub-microflows represent individual parts of the whole microflow, for example, specific functions. 
 
@@ -25,7 +25,7 @@ This document teaches you how to do the following:
 * Troubleshoot extractions of sub-microflows
 * Use existing microflows as sub-microflows
 
-## 2 Creating Sub-Microflows
+## Creating Sub-Microflows
 
 You can create a sub-microflow by extracting a part of an existing microflow. The following example microflow checks to see if a registration has a trainee assigned and a registration date. If the registration passes both checks, the registration is committed to the database.
 
@@ -45,7 +45,7 @@ To extract the validation steps into a sub-microflow, follow these steps:
 
 3. In the **Add microflow** dialog box, enter a name for the sub-microflow.
 
-    {{% alert color="info" %}}As a best practice, use a consistent naming scheme that clearly identifies the sub-microflow, for example, *SUB_{MicroflowDescription}*. For more naming best practices, see [Microflow Naming Conventions](/refguide/dev-best-practices/#microflow-naming-conventions).{{% /alert %}}
+    {{% alert color="info" %}}As a best practice, use a consistent naming scheme that clearly identifies the sub-microflow, for example, *SUB_{Microflow description}*. For more naming best practices, see [Microflow Naming Conventions](/refguide/dev-best-practices/#microflow-naming-conventions).{{% /alert %}}
 
 4. Click **OK**.
 5. Open the sub-microflow by right-clicking the sub-microflow call and selecting **Go to microflow**.
@@ -60,7 +60,7 @@ To extract the validation steps into a sub-microflow, follow these steps:
 
     To stop or continue your microflow based on the sub-microflow's outcome, right-click the **Create Boolean Variable** activity and select **Set $isValid as return value**.
 
-### 2.1 Troubleshooting Sub-Microflow Creation
+### Troubleshooting Sub-Microflow Creation
 
 If you get errors while extracting a sub-microflow, follow these steps:
 
@@ -68,7 +68,7 @@ If you get errors while extracting a sub-microflow, follow these steps:
 2. Check if the parameters are correctly configured.
 3. Make sure that you highlighted the correct activities to turn into a sub-microflow.
 
-## 3 Using Existing Microflows as Sub-Microflows
+## Using Existing Microflows as Sub-Microflows
 
 You can use an existing microflow as a sub-microflow. For example, after creating the validation sub-microflow, you can reuse it wherever you need to do a registration validation.
 
@@ -79,6 +79,6 @@ To reuse an existing microflow, follow these steps:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/extracting-and-using-sub-microflows/reuse-microflow.gif" alt="Dragging a microflow onto the working area of another microflow" class="no-border" >}}
 
-## 4 Read More
+## Read More
 
 * [Microflows](/refguide/microflows/)

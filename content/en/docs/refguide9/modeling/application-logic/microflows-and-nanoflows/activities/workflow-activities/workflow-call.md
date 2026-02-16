@@ -9,13 +9,13 @@ weight: 10
 This activity can only be used in **Microflows**.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The **Workflow call** activity can be used to call and trigger a [workflow](/refguide9/workflows/). 
 
 {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/workflow-call/workflow-call.jpg" class="no-border" >}}
 
-## 2 Properties
+## Properties
 
 An example of Workflow call properties is represented in the image below:
 
@@ -28,7 +28,7 @@ The **Workflow call** properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section {#action}
+## Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -36,18 +36,18 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Workflow {#workflow}
+### Workflow {#workflow}
 
 The workflow that is called by this activity. 
 
-### 3.2 Context Object
+### Context Object
 
 The object which you want to use as a context. It should be of the entity type set in the [Workflow](#workflow) property.
 
-### 3.3 Variable Name, Object Name, or List Name {#name}
+### Variable Name, Object Name, or List Name {#name}
 
 The name of the variable, list, or object returned by the activity.
 
-## 4 Common Section {#common}
+## Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}

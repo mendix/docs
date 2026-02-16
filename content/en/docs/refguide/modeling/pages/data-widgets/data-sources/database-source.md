@@ -4,15 +4,15 @@ url: /refguide/database-source/
 weight: 10
 ---
 
-## 1 Introduction
+## Introduction
 
 If **Database** is selected as the data source for a widget then an object or objects shown are retrieved directly from the database with a query. This data source is also supported in [offline](/refguide/offline-first/) applications in which case the data will come from the database on the mobile device.
 
-You can filter data shown with the help of database [constraints](#constraints). However, if you want to restrict data not for a single widget, but for several, you may want to apply [access rules](/refguide/access-rules/) for entities instead of database constraints. This way you know that the objects will always be constrained by these rules . Access rules will also be applied when executing microflows which saves you from repeating constraints.
+You can filter data shown with the help of database [constraints](#constraints). However, if you want to restrict data not for a single widget, but for several, you may want to apply [access rules](/refguide/access-rules/) for entities instead of database constraints. This way you know that the objects will always be constrained by these rules. Access rules will also be applied when executing microflows which saves you from repeating constraints.
 
-## 2 Properties
+## Properties
 
-### 2.1 Entity (Path)
+### Entity (Path)
 
 The **Entity (path)** property specifies the target of the database query. If you have a top-level data widget, **Entity (path)** will get objects of the selected entity directly. If you have a nested data widget, you can also select an entity of a parent data container. In this case objects are retrieved following the association path and the association is parsed as an extra constraint in the database query. 
 
@@ -22,27 +22,17 @@ The **Entity (path)** property specifies the target of the database query. If yo
 This differs from the [association data source](/refguide/association-source/) when objects are retrieved from the memory, not database.
 {{% /alert %}}
 
-### 2.2 Constraints{#constraints}
+### XPath Constraint{#constraints}
 
-Constraints allow for custom, hard-coded limitations on the data displayed. This constraint will be applied on top of security constraints. For example, if your entity has an access rule that makes it read-only for the user and/or has an XPath constraint, the XPath constraint will be applied first.
-
-{{% alert color="warning" %}}
-Constraints are applied equally to all users and only apply to the data displayed in a single data widget. If the goal is to restrict access to a particular subset of the data for users then [access rules](/refguide/access-rules/) for entities should be used as they can be applied to an individual user role and they apply system-wide.
-{{% /alert %}}
+You can add a full XPath constraint to a Database source; click **Edit…** next to the **XPath constraint** field. See [XPath Constraints](/refguide/xpath-constraints/) for more information. This constraint will be applied on top of security constraints. For example, if your entity has an access rule that makes it read-only for the user and/or has an XPath constraint, the entity access rule will be applied first.
 
 {{% alert color="info" %}}
-In Mendix version 10.5 and above, you can add a full XPath constraint to a Database source; click **Edit…** next to the **XPath constraint** field. There is no separate **XPath** source. See [XPath Constraints](/refguide/xpath-constraints/) for more information.
+If the goal is to restrict access to a particular subset of the data for users then [access rules](/refguide/access-rules/) for entities should be used as they can be applied to an individual user role and they apply system-wide.
 {{% /alert %}}
 
-For Mendix versions below 10.5, each constraint consists of an **Attribute**, an **Operator**, and a **Value**:
+### Show Search Bar {#show-search-bar}
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/database-source/constraint-example.png" alt="Constraint Example" class="no-border" >}}
-
-Multiple constraints will limit the data even more (the logical operator **AND**). There is no way to use the logical operator **OR** in database constraints in versions of Mendix below 10.5, but you can switch to an [XPath data source](/refguide/xpath-source/) and create an XPath constraint.
-
-### 2.3 Show Search Bar {#show-search-bar}
-
-**Show search bar** is only available for data grids. You can select if and when the **[Search bar](/refguide/search-bar/)** of the data grid is shown.
+**Show search bar** is only available for a **Data grid**. You can select if and when the **[Search bar](/refguide/search-bar/)** of the data grid is shown.
 
 | Value | Description |
 | --- | --- |
@@ -51,7 +41,7 @@ Multiple constraints will limit the data even more (the logical operator **AND**
 | With button (initially closed) *(default)*  | The user can open and close the search bar using the search button; the search bar is initially closed. |
 | Always | The search bar is always visible and cannot be close, nor is there a search button. |
 
-### 2.4 Wait for Search
+#### Wait for Search
 
 The **Wait for search** property is available if **[Show search bar](#show-search-bar)** is set to *With button (initially open)* or to *Always*. 
 
@@ -59,7 +49,11 @@ When **Wait for search** is set to *Yes*, the grid will remain empty of contents
 
 Default: *false*
 
-## 3 Read More
+### Sort Order
+
+**Sort order** is only available for a [**Data grid 2**](/appstore/modules/data-grid-2/) widget. Click **Edit…** to select attributes to sort on, and choose whether to sort in **Ascending** or **Descending** order.
+
+## Read More
 
 * [Data Containers](/refguide/data-widgets/)
 * [Data Grid](/refguide/data-grid/)

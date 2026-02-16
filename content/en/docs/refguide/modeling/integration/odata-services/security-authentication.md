@@ -4,7 +4,7 @@ url: /refguide/security-shared-datasets/
 weight: 75
 ---
 
-## 1 Introduction
+## Introduction
 
 For Mendix apps that publish or consume [external entities](/refguide/external-entities/) and/or actions (abstracted OData services), the following security is applied:
 
@@ -29,11 +29,11 @@ For Mendix apps that publish or consume [external entities](/refguide/external-e
 
 For further details, see the [Entity Access](/refguide/module-security/#entity-access) section of *Module Security*.
 
-## 2 Using Custom HTTP Header Validation for Published Entities {#http-header-validation}
+## Using Custom HTTP Header Validation for Published Entities {#http-header-validation}
 
 Access to the data by specific users of the final app is defined in the publishing app of the data source.
 
-### 2.1 Implementing Authentication with an OpenID Connect Capable IDP and OIDC
+### Implementing Authentication with an OpenID Connect Capable IDP and OIDC
 
 You can use a custom HTTP headers microflow and a custom HTTP validation microflow to generate, set, and validate authentication tokens. 
 

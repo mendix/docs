@@ -6,7 +6,7 @@ weight: 15
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 REST {#rest}
+## REST {#rest}
 
 Representational state transfer (REST) is an approach to consuming or exposing resources. It has gained popularity because of its simplicity, because no extensive schemas or contracts are needed to transfer data between endpoints. It uses the following:
 
@@ -18,11 +18,11 @@ Lack of contracts and schemas give you an easy start to using REST. However, man
 
 The [JSON Structure](/refguide9/json-structures/) document helps with giving structure to JSON data: from an example JSON snippet, a lightweight schema is extracted that is used in [Mapping Documents](/refguide9/mapping-documents/). The [Import Mapping](/refguide9/import-mappings/) document converts JSON (or XML) to Mendix objects, and the [Export Mapping](/refguide9/export-mappings/) document serializes Mendix objects to JSON (or XML).
 
-### 1.1 Content Types {#content-types}
+### Content Types {#content-types}
 
 Content types are included in [custom HTTP headers](/refguide9/call-rest-action/#custom-http-headers) to specify the output of the call, including media type or data format. For more information on content types, see [Content Negotiation in REST](https://restfulapi.net/content-negotiation/).
 
-## 2 JSON
+## JSON
 
 JavaScript object notation (JSON) is a lightweight representation of data. 
 

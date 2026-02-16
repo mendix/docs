@@ -4,13 +4,13 @@ url: /refguide9/http-request-and-response-entities/
 weight: 45
 ---
 
-## 1 Introduction
+## Introduction
 
 `HttpRequest` is a system entity that represents a request to a server. `HttpResponse` represents the response from the server. Use these entities when [publishing](/refguide9/published-rest-services/) or [consuming](/refguide9/consumed-rest-services/) REST services.
 
 {{< figure src="/attachments/refguide9/modeling/integration/http-request-and-response-entities/http-request-and-response-domain-model.png" class="no-border" >}}
 
-## 2 HttpRequest {#http-request}
+## HttpRequest {#http-request}
 
 The `HttpRequest` entity has the following attributes:
 
@@ -22,7 +22,7 @@ The `HttpRequest` entity has the following attributes:
 
 You can retrieve the request headers via the `HttpHeaders` association.
 
-## 3 HttpResponse {#http-response}
+## HttpResponse {#http-response}
 
 The `HttpResponse` entity has the following attributes:
 
@@ -36,7 +36,7 @@ The `HttpResponse` entity has the following attributes:
 For more information on HTTP status codes, see the [W3C Specification of Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).
 
 {{% alert color="warning" %}}
-If you deploy to the Mendix Cloud you cannot set a custom `ReasonPhrase` as it will be replaced by a standard reason phrase by the web server. For example, for StatusCode `200`, any custom ReasonPhrase you set will be replaced by `OK`.
+If you deploy to Mendix Cloud you cannot set a custom `ReasonPhrase` as it will be replaced by a standard reason phrase by the web server. For example, for StatusCode `200`, any custom ReasonPhrase you set will be replaced by `OK`.
 {{% /alert %}}
 
 You can retrieve or create response headers via the `HttpHeaders` association.

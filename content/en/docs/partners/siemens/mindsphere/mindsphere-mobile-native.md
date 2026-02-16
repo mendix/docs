@@ -5,7 +5,7 @@ weight: 200
 description: "Explain how to create your own Native Mobile application for Insights Hub and what needs to be considered for development"
 ---
 
-## 1 Introduction
+## Introduction
 
 This documentation describes the adaptations needed to develop Mendix native mobile apps for Insights Hub. Native mobile apps do not render inside a web view - they use native UI elements. This enables fast performance, smooth animations, and allows access to all native device capabilities.
 Details about building native mobile apps with Mendix can be found in [Building Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/).
@@ -23,7 +23,7 @@ This documentation is structured into two main parts:
 * [Setup Development Environment](#setupdevenv) - explains everything to get you started
 * [Module Details](#moduledetails) - describes the solution and what should be considered during development
 
-## 2 Setup Development Environment{#setupdevenv}
+## Setup Development Environment{#setupdevenv}
 
 The setup of your development environment consists of the following steps:
 
@@ -32,7 +32,7 @@ The setup of your development environment consists of the following steps:
 3. Build your own development app
 4. Try it out
 
-### 2.1 Registering your Mobile App in Developer Cockpit
+### Registering your Mobile App in Developer Cockpit
 
 The **Siemens Insights Hub Mobile Starter Application** template provides the ability for a user to sign in to Insights Hub from within a mobile application. To get the mobile authentication running, it is necessary that the application itself is registered within Insights Hub. This registration can be done with the Insights Hub Developer Cockpit by following the steps below.
 
@@ -90,10 +90,10 @@ You now have successfully registered your application within the Developer Cockp
 {{% alert color="info" %}}
 The [Insights Hub Mobile Starter Application](https://marketplace.mendix.com/link/component/118164) can be used to build applications for both native mobile apps and 'normal' web applications.
 
-Currently you can register either a mobile app or a web app in the Insights Hub Developer Cockpit but not both together. If you need access in a web browser, please push your application to the Mendix cloud and set up another registration via the Auto Registration for your web application as described in [Setting up Insights Hub Launchpad](/developerportal/deploy/deploying-to-mindsphere/#launchpad). This app can then be added to the Insights Hub Launchpad. Please note, pushing a Mendix Mobile Native application to the Insights Hub Cloud Foundry is currently not supported, as the Native applications needing an unprotected endpoint to any time.
+Currently you can register either a mobile app or a web app in the Insights Hub Developer Cockpit but not both together. If you need access in a web browser, please push your application to Mendix Cloud and set up another registration via the Auto Registration for your web application as described in [Setting up Insights Hub Launchpad](/developerportal/deploy/deploying-to-mindsphere/#launchpad). This app can then be added to the Insights Hub Launchpad. Please note, pushing a Mendix Mobile Native application to the Insights Hub Cloud Foundry is currently not supported, as the Native applications needing an unprotected endpoint to any time.
 {{% /alert %}}
 
-### 2.2 Start Developing your App with Mendix Studio Pro
+### Start Developing your App with Mendix Studio Pro
 
 Create a new Mendix Team Server app based on the [Siemens Insights Hub Mobile Starter Application](https://marketplace.mendix.com/link/component/118164) template.
 
@@ -118,7 +118,7 @@ In the **NativeMobile** folder:
 * **ClientSecret** = **client_secret** from app registration in Developer Cockpit
 * **Scheme** = **custom_scheme** from app registration in Developer Cockpit
 
-### 2.3 Building your Own Development App{#buildcustomapp}
+### Building your Own Development App{#buildcustomapp}
 
 In this section you will create your own custom development app and register a deep link.
 
@@ -126,7 +126,7 @@ In principle, you have to follow the description of how to create a [Custom Deve
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-mobile-native/StudioPro_NativeBuilder.png" alt="Studio Pro SSO configuration" >}}
 
-### 2.4 Try out your application
+### Try out your application
 
 You should now be ready to start your application for the very first time on your mobile phone. For this, click **Run Locally** ({{% icon name="controls-play" %}}) so that your own native application can connect to your Mendix Studio Pro.
 
@@ -145,7 +145,7 @@ After a successful login, your app will be restarted and a session created. Then
 If you have trouble signing in to your application, it is a good idea to clear the cookies of your mobile browser. See your browser's documentation for further information.
 {{% /alert %}}
 
-### 2.5 Next steps
+### Next steps
 
 You now have a blank application which supports authentication for your specific Insights Hub application, which is an excellent starting point for developing your app further. We also recommend investigating the basic tutorial for Insights Hub web applications [Build an Insights Hub app with Mendix](https://academy.mendixcloud.com/link/path/80/Build-a-MindSphere-app-with-Mendix) to learn more about Insights Hub application development in general.
 
@@ -154,13 +154,13 @@ When you enhance your application with Insights Hub API calls to use the IoT cap
 * Authorize your Insights Hub API calls.
 * Add Insights Hub API roles to your existing Insights Hub gateway registration.
 
-#### 2.5.1 Authorize your Insights Hub API calls
+#### Authorize your Insights Hub API calls
 
 With each Insights Hub API call you have to ensure that the corresponding user token is part of the request. Do this by adding the **Access Token** action before your REST calls and set the **Authorization** header accordingly.
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-development-considerations/delete-mindspheretoken.png" alt="Mobile" >}}
 
-#### 2.5.2 Extend your application registration with Insights Hub API roles
+#### Extend your application registration with Insights Hub API roles
 
 As of now your application has the user roles **admin** and **user**, but none of those roles has the rights to access Insights Hub APIs. Perform the following steps to achieve this.
 
@@ -185,15 +185,15 @@ As of now your application has the user roles **admin** and **user**, but none o
 
     {{% alert color="info" %}}To enable this for your local test session you have to force a logout of the user. For this, tap the logout button within your mobile application and clear the cookies within your mobile browser. Afterwards sign in again. The token now includes the added API roles.{{% /alert %}}
 
-### 2.6 Deploying your app
+### Deploying your app
 
 Just simply press the **Run** button within your Mendix Studio Pro to use the [Free App](/developerportal/deploy/mendix-cloud-deploy/) feature. Deployment of a Mendix Mobile native application to the Insights Hub Cloud Foundry environment is currently not supported, so please use always one of the Mendix cloud environments.
 
-## 3 Module Details{#moduledetails}
+## Module Details{#moduledetails}
 
 The **Siemens Insights Hub SSO** module provides a couple of nanoflows which should be used to achieve a seamless integration with Insights Hub. These nanoflows can be found in the folder `_Use me/NativeMobile` of the SSO module. The **Siemens Insights Hub Mobile Starter Application** contains the SSO module and uses the provided nanoflows. The starter template just needs to be configured to get an application running. Nevertheless we would like to explain some details here.
 
-### 3.1 Authentication
+### Authentication
 
 Authentication is based on the usage of **Anonymous** users and is enabled in the **App Security** dialog box.
 
@@ -209,7 +209,7 @@ At the end of the authentication process the app will be restarted and show the 
 
 If something went wrong during the authentication process, the corresponding error code will be displayed on the Login page.
 
-### 3.2 Insights Hub APIs and Token Handling
+### Insights Hub APIs and Token Handling
 
 If you have already developed a Web application for Insights Hub, you will be aware that you need to use the included **Access Token** action with your REST calls.
 
@@ -252,6 +252,6 @@ As you need a valid Insights Hub token to call Insights Hub APIs, it is very imp
 You will want to change the home page to fit with the rest of your app. Please do this, but do not delete the initially provided Data view and App events.
 {{% /alert %}}
 
-### 3.3 Additional User Role Home Pages
+### Additional User Role Home Pages
 
 If you want to create new home pages for different user roles, please ensure that they also include the data view with the `OnSessionStartup` nanoflow and the **AppEvents** as provided in the default mobile home page. This ensures that the Insights Hub token handling also works properly for this user role.

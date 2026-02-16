@@ -5,7 +5,7 @@ weight: 40
 description: "How to set up a theme which will be applied to all the charts created with charts widgets in an app"
 ---
 
-## 1 Introduction
+## Introduction
 
 The look of individual **Charts** widgets can be fine tuned with advanced settings. A theme allows developers to create global settings that apply to all charts. In this way color, language, font and many more things can be set for all the charts in an app.
 
@@ -14,20 +14,20 @@ This how-to teaches you how to do the following:
 * Change the font style for all charts
 * Add a theme configuration
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Download the latest [Chart Widget](/appstore/widgets/charts/) from the Mendix Marketplace
-* Setup a chart: see [How to create a charts](/howto8/front-end/charts-basic-create/)
+* Set up a chart: see [How to create a charts](/howto8/front-end/charts-basic-create/)
 
-## 3 Creating a Chart Theme
+## Creating a Chart Theme
 
 This is how the original chart looks:
 
 {{< figure src="/attachments/howto8/front-end/charts-tutorials/charts-advanced-tuning/charts-toggle-editor.png" alt="chart" class="no-border" >}}
 
-### 3.1 Creating an Advanced Custom Configuration
+### Creating an Advanced Custom Configuration
 
 To create the required custom configuration easily, follow these steps:
 
@@ -64,7 +64,7 @@ To create the required custom configuration easily, follow these steps:
 
     {{% alert color="warning" %}}Please note that the theme settings only apply to charts in Advanced or Developer mode.{{% /alert %}}
 
-### 3.2 Adding a Theme Configuration
+### Adding a Theme Configuration
 
 To add a theme file which will apply to all charts in the app, follow these steps:
 
@@ -78,7 +78,7 @@ To add a theme file which will apply to all charts in the app, follow these step
     * the file must contain a *json* object, even if this is empty — for example `{ }`
     {{% /alert %}}
 
-### 3.3 Changing the Font Globally
+### Changing the Font Globally
 
 To change the font in all charts in the app, follow these steps:
 
@@ -102,7 +102,7 @@ To change the font in all charts in the app, follow these steps:
 
     {{< figure src="/attachments/howto8/front-end/charts-tutorials/charts-theme/charts-toggle-editor-changed.png" alt="chart updated" class="no-border" >}}
 
-## 4 Read More
+## Read More
 
 * [Charts](/refguide8/chart-widgets/)
 * [Layout samples](/refguide8/charts-advanced-cheat-sheet/#layout-all)

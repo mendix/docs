@@ -5,7 +5,7 @@ weight: 50
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix is designed so that it is easy to present the same information to users who have different language requirements. To support this, all texts that are presented to the end-user can be translated to different languages.
 
@@ -18,7 +18,7 @@ These *translatable texts* include the following:
 * [messages](/refguide/show-message/) that are sent from a [microflow](/refguide/microflows/)
 * [text](/refguide/text/)
 
-## 2 Working in the Currently Selected Language{#selected-language}
+## Working in the Currently Selected Language{#selected-language}
 
 You can see the language you are currently working in at the bottom right of the screen.
 
@@ -28,7 +28,7 @@ When you have multiple languages set up in your app, you can choose a language t
 
 * selecting it from the **Language > Current Language** menu
 * using the drop-down in the lower-right corner of Studio Pro's main window
-* using the <kbd>Ctrl</kbd>+<kbd>L</kbd> or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd> keyboard shortcut combinations, which cycle through the configured languages
+* using the <kbd>Ctrl</kbd> + <kbd>L</kbd> or <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd> keyboard shortcut combinations, which cycle through the configured languages
 
 When working in a language which is not the default, you can identify texts that have not been translated yet. These show the text in the default language between angle brackets. For example, `<Name>`. You can replace the text with the appropriate translation, and it will be replaced for the currently selected language.
 
@@ -44,27 +44,29 @@ If you plan to export your module/app as an add-on/solution, the best practice i
 If there is no text in the default language, the end-user will see `[no translation]`. If you want the text to be blank, set the default language text to be a space rather than empty.
 {{% /alert %}}
 
-## 3 The Language Menu
+## The Language Menu
 
 The **Language** menu allows you to manage additional languages and translations for your app. This includes features to help you to translate a text in all places where it appears with a single change instead of having to change each occurrence individually:
 
 {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-menu.png" alt="Language Menu" class="no-border" >}}
 
-### 3.1 Menu Items Overview
+### Menu Items Overview
 
 The **Language** menu items are described in the table below:
 
-| Menu Item | Description | Shortcut Key |
-| --- | --- | --- |
-| **Current Language** | Choose the current language from one of the languages set up in **Language Settings…**. | *None* |
-| **Select Previous Language** | Choose the previous language in the list of languages chosen in **Language Settings…**. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd> |
-| **Select Next Language** | Choose the next language in the list of languages chosen in **Language Settings…**. | <kbd>Ctrl</kbd> + <kbd>L</kbd> |
-| [Language Settings…](/refguide/language-settings/) | Choose which languages are supported by the app and configure date and time settings. | *None* |
-| [Batch Replace…](/refguide/batch-replace/) | Change all occurrences of chosen translatable texts in the current language where they are identical. | *None* |
-| [Batch Translate…](/refguide/batch-translate/) | Add and edit translations from a selected source language to a selected target language | *None* |
-| [Language Operations…](/refguide/language-operations/) | Manipulate (for example, copy) translations between languages. | *None* |
+| Menu Item                                                               | Description                                                                                           | Shortcut Key |
+|-------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------| --- |
+| <a id="current-language"></a>**Current Language**                       | Choose the current language from one of the languages set up in **Language Settings…**.               | *None* |
+| **Select Previous Language**                                            | Choose the previous language in the list of languages chosen in **Language Settings…**.               | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd> |
+| **Select Next Language**                                                | Choose the next language in the list of languages chosen in **Language Settings…**.                   | <kbd>Ctrl</kbd> + <kbd>L</kbd> |
+| [Language Settings…](/refguide/language-settings/)                      | Choose which languages are supported by the app and configure date and time settings.                 | *None* |
+| [Batch Replace…](/refguide/batch-replace/)                              | Change all occurrences of chosen translatable texts in the current language where they are identical. | *None* |
+| [Batch Translate…](/refguide/batch-translate/)                          | Add and edit translations from a selected source language to a selected target language               | *None* |
+| [Language Operations…](/refguide/language-operations/)                  | Manipulate (for example, copy) translations between languages.                                        | *None* |
+| [Advanced Translations Import](/refguide/advanced-translations-import/) | Import translations from Excel or PO files.                                                           | *None* |
+| [Advanced Translations Export](/refguide/advanced-translations-export/) | Export translations as Excel or PO files.                                                             | *None* |
 
-## 4 Setting the End-User's Language
+## Setting the End-User's Language
 
 The language which is displayed to the end-user is determined by the **Language** object which is associated with the **User** object for the current end-user via the association **User_Language**.
 
@@ -88,7 +90,7 @@ There are two options to ensure that the language is changed:
     1. Add the platform supported widget [HTML / JavaScript Snippet](https://marketplace.mendix.com/link/component/56/) to your app.
     2. Create a pop-up page.
     3. Place the HTMLSnippet widget on the pop-up page.
-    4. Add the **JavaScript** content `mx.reloadWithState();` to the widget.
+    4. Add the **JavaScript** content `window.reload();` to the widget.
     5. Open your new pop-up page from a microflow when you want to switch the user's language.
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/reload-with-state.png" alt="System Domain Model for User and Language" class="no-border" width="600" >}}
@@ -99,7 +101,7 @@ There are two options to ensure that the language is changed:
 The above only applies to pages *within* your Mendix application (meaning, pages that are created in Studio Pro). The labels for static pages (such as the *index.html* and *login.html* pages in the **theme** folder of your app) are generated when you create a deployment package using the default language of your app. The labels on those pages will not change for different users, they will always be the same.
 {{% /alert %}}
 
-## 5 Read More
+## Read More
 
 * [Translating Your App Content](/refguide/translate-your-app-content/) – a worked example of adding a translation 
 * [Using Translatable Validation Messages](/refguide/translatable-validation-messages/)

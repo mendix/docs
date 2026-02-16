@@ -8,7 +8,7 @@ aliases:
     - /howto/mobile/distribution/
 ---
 
-## 1 Introduction
+## Introduction
 
 Guides in this section will help you build, test and distribute mobile apps. While web-based applications, including Progressive Web Apps, can be distributed using our built-in publishing process, distributing a Native App requires a few additional steps. Therefore, the guides in this section focus on Native Apps.
 

@@ -5,7 +5,7 @@ weight: 30
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 **Attributes** are characteristics that describe and/or identify an entity. Each of these attributes is given a name.
 
@@ -24,7 +24,7 @@ The domain model editor uses the following symbols to help visualize attribute p
 Attributes for external entities are specified in the **External Entity Properties**. These attributes are defined in the originating app and the only local changes that can be applied to these entities is a local name and description. For further information see the [Attributes](/refguide/external-entities/#attributes) section of *External Entities*.
 {{% /alert %}}
 
-## 2 Properties
+## Properties
 
 You can add attributes to an entity from the [entity properties dialog box](/refguide/entities/#dialog-box). You can also edit them from this dialog box, or by double-clicking the attribute name in the domain model.
 
@@ -43,17 +43,17 @@ Attribute properties consist of the following sections:
 * [Value](#value)
 * [Limitations](#limitations)
 
-### 2.1 Common Section {#common}
+### Common Section {#common}
 
-#### 2.1.1 Name
+#### Name
 
 The **Name** property specifies the name of the attribute. This name is used to refer to the attribute in forms, microflows, queries, constraints, and so forth.
 
 {{% alert color="warning" %}}
-If you delete an attribute in your entity and then create a new attribute with the same name, Mendix will consider it a new and different attribute. This means that upon deployment the old column will be dropped, including its data. Then a new, empty, column with the same name will be created.
+If you delete an attribute in your entity and then create a new attribute with the same name, Mendix will consider it a new and different attribute. This means that upon deployment the old database column will be dropped, including its data. Then a new, empty, column with the same name will be created.
 {{% /alert %}}
 
-#### 2.1.2  Export Level 
+#### Export Level 
 
 {{% alert color="info" %}}
 
@@ -70,13 +70,13 @@ This property will not be shown for attributes if the entity is set to **Hidden*
 | Hidden *(default)* | The document/element content is hidden from a consumer.      |
 | Usable             | Consumers can see the attribute in the domain model and use it in their app. |
 
-#### 2.1.3 Documentation
+#### Documentation
 
 This allows you to describe aspects of the entity which may be useful to you or other team members when using the entity within the app.
 
-### 2.2 Type Section {#type}
+### Type Section {#type}
 
-#### 2.2.1 Type
+#### Type
 
 The type property defines the type of data that can be stored in the attribute. These are related to the data types described in [Data Types](/refguide/data-types/), but there is not a one-to-one mapping.
 
@@ -88,24 +88,24 @@ An attribute has one of the following types:
 
 Type | Possible values | Maps to Mendix data type |
 --- | --- | --- |
-AutoNumber | A positive or negative whole number.<br/>AutoNumber attributes are automatically generated numbers. The default value of the attribute determines the first number that will be generated. Each created object will have an AutoNumber that is one greater than the previous one. AutoNumbers can only be used for persistable entities as the AutoNumber value is computed in the database. | Integer/Long |
-Binary<sup><small>[1]</small></sup> | Binary data. Can only be used for persistable entities as the data is stored in the database. For example an entire file. In most cases you want to use an association to a FileDocument or Image to store file contents. | Binary |
+AutoNumber | A positive or negative whole number.<br/>AutoNumber attributes are automatically generated numbers. The default value of the attribute determines the first number that will be generated. Each created object will have an AutoNumber that is greater than the previous one. AutoNumbers can only be used for persistable entities as the AutoNumber value is computed in the database. | Integer/Long |
+Binary¹ | Binary data. Can only be used for persistable entities as the data is stored in the database. For example an entire file. In most cases you want to use an association to a FileDocument or Image to store file contents. | Binary |
 Boolean | True or false. | Boolean | 
 Date and time | A point in time consisting of a date and a time component accurate up to milliseconds. | Date and time |
 Decimal | A positive or negative number that can have digits after the decimal point. The Decimal type can be used for high-precision calculations. Use this type to represent amounts of money for example. When a Decimal type attribute is persisted in the database its value is validated against 2 conditions. In case the number of digits of the integral part (before the decimal separator) is more than 20, an exception is thrown. In case the number of digits of the fractional part (after the decimal separator) is more than 8, the fractional value is automatically rounded according to [the round half to even rule (also known as bankers' rounding)](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even). Therefore, the maximum allowable value for the Decimal type is 99999999999999999999.99999999. | Decimal |
 Enumeration | A list of predefined attributes. For more information, see [Enumerations](/refguide/enumerations/). | Enumeration |
 Hashed string | A string which is hashed using the algorithm specified in the [app settings](/refguide/app-settings/#hash-algorithm). This can be used to store password hashes, for example, so that the original password is not recorded in the database.  | String |
-Integer | A whole number that can be positive (maximum 2<sup>31</sup>-1, thus 2147483647), negative (minimum -2<sup>31</sup>, thus -2147483648), or zero. | Integer/Long<sup><small>[2]</small></sup> |
-Long | A whole number that can be positive (maximum 2<sup>63</sup>-1), negative (minimum -2<sup>63</sup>), or zero. | Integer/Long |
+Integer | A whole number that can be positive (maximum 2³¹-1, thus 2147483647), negative (minimum -2³¹, thus -2147483648), or zero. | Integer/Long² |
+Long | A whole number that can be positive (maximum 2⁶³-1), negative (minimum -2⁶³), or zero. | Integer/Long |
 String *(default)* | A text containing letters, spaces, numbers and other characters. | String |
 
-<sup><small>[1]</small></sup> The approximate maximum size that can be stored in an attribute of type binary depends on the database:
+¹ The approximate maximum size that can be stored in an attribute of type binary depends on the database:
 
 | HSQLDB | PostgreSQL | SQL Server | Oracle |
 | --- | --- | --- | --- |
 | 1 MB | 1 GB | 2 GB | 128 TB or limited by hard disk of server |
 
-<sup><small>[2]</small></sup> You will get an error if you assign a value outside the permitted values for an integer to an integer attribute.
+² You will get an error if you assign a value outside the permitted values for an integer to an integer attribute.
 
 **Example**
 
@@ -123,7 +123,7 @@ A customer can be active or inactive, which is stored in an attribute named **Ac
 
 {{< figure src="/attachments/refguide/modeling/domain-model/entities/attributes/customer-attribute-examples.png" class="no-border" >}}
 
-#### 2.2.2 Localize {#localize}
+#### Localize {#localize}
 
 {{% alert color="info" %}}
 This property is shown if **Type** is set to **Date and time**.
@@ -135,7 +135,7 @@ In technical terms, this property indicates whether the client assumes that the 
 
 Default: *enabled*
 
-#### 2.2.3 Enumeration
+#### Enumeration
 
 {{% alert color="info" %}}
 This property is shown if **Type** is set to **Enumeration**.
@@ -143,7 +143,7 @@ This property is shown if **Type** is set to **Enumeration**.
 
 The enumeration property indicates which enumeration defines the possible values for this attribute.
 
-#### 2.2.4 Length
+#### Length
 
 {{% alert color="info" %}}
 This property is shown if **Type** is set to **String**.
@@ -153,7 +153,7 @@ This property specifies whether the length of a String is limited or unlimited. 
 
 Default: *Limited*
 
-#### 2.2.5 Max Length (Only for String Attribute Type)
+#### Max Length (Only for String Attribute Type)
 
 {{% alert color="info" %}}
 This property is shown if **Type** is set to **String**.
@@ -163,9 +163,9 @@ The 'Max length' property specifies the number of characters that can be stored 
 
 Default: *200*
 
-### 2.3 Value Section {#value}
+### Value Section {#value}
 
-#### 2.3.1 Value
+#### Value
 
 The **Value** determines whether the value of the attribute is **Calculated** by a microflow or **Stored** in the database.
 
@@ -176,7 +176,7 @@ Take note of the following things when using **Calculated** attributes:
 * It is not possible to sort on an attribute for which this property is used, because sorting is done by the database engine.
 * Uncommitted associated objects cannot be retrieved in calculated attributes.
 
-#### 2.3.2 Microflow
+#### Microflow
 
 {{% alert color="info" %}}
 This property is shown if **Value** is set to **Calculated**.
@@ -188,7 +188,7 @@ For example, in a web shop, you want to show the total expenses for each custome
 
 {{< figure src="/attachments/refguide/modeling/domain-model/entities/attributes/917570.png" class="no-border" >}}
 
-#### 2.3.3 Default Value
+#### Default Value
 
 {{% alert color="info" %}}
 This property is shown if **Value** is set to **Stored**.
@@ -213,7 +213,7 @@ Default value property is not supported for offline-first apps created in Mendix
 | Long | 0 |   |
 | String | (empty) |   |
 
-### 2.4 Limitations {#limitations}
+### Limitations {#limitations}
 
 The **Limitations** property specifies whether the attribute can be used for filtering and sorting:
 

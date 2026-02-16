@@ -8,13 +8,13 @@ url: /refguide/change-variable/
 This activity can be used in both microflows and nanoflows.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The **Change variable** activity allows you to change the value of an existing variable. 
 
 For example, if you have a *$Discount* variable that gives customers a 50% discount on certain items, you can change this variable and assign a new value to it. You can use this value to give new customers a bigger discount
 
-## 2 Properties
+## Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
@@ -25,20 +25,20 @@ The **Change variable** properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section {#action}
+## Action Section {#action}
 
-### 3.1 Variable
+### Variable
 
 The variable which you want to change the value of.
 
-### 3.2 Value
+### Value
 
 The new value for the variable. The value is entered using an [expression](/refguide/expressions/). The type of the expression must be the same as the type of the selected variable.
 
-## 4 Common Section {#common}
+## Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
 
-## 5 Read More
+## Read More
 
 * [Activities](/refguide/activities/)

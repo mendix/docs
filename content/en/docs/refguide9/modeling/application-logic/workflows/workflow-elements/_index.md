@@ -4,7 +4,7 @@ url: /refguide9/workflow-elements/
 weight: 10
 ---
 
-## 1 Introduction
+## Introduction
 
 A workflow is composed of elements that you can drag on a path from the **Toolbox** or that you can see in the working area of the editor (. Below is a categorized overview of all elements. The following categories are used:
 
@@ -13,12 +13,12 @@ A workflow is composed of elements that you can drag on a path from the **Toolbo
 * [User tasks](#user-tasks)
 * [System actions](#system)
 
-## 2 Workflow Parameters {#parameters}
+## Workflow Parameters {#parameters}
 
 A [workflow parameter](/refguide9/workflow-parameters/) is input data for your workflow. The **WorkflowContext** parameter is a business-related data that travels through the workflow:
 {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-elements/workflow-context.png" alt="Workflow Context Example" class="no-border" >}}
 
-## 3 General {#general}
+## General {#general}
 
 Elements in the general category help you control the workflow path, for example, add parallel paths or end them. 
 
@@ -37,13 +37,13 @@ The elements of this category are described in the table below:
 You can add customized activities to this section if you use the **Expose as a workflow action** setting in microflows. For more information see the [Expose as Workflow Action](/refguide9/microflow/#expose-as-workflow-action) section in *Microflow Properties*.
 {{% /alert %}}
 
-## 4 User Tasks {#user-tasks}
+## User Tasks {#user-tasks}
 
 [User task](/refguide9/user-task/) – a central element in a workflow that allows you to assign a task to a certain user or a group of users using filters or microflows. 
 
 {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-elements/user-task.png" alt="User Task" class="no-border" >}}
 
-## 5 System Actions {#system}
+## System Actions {#system}
 
 Elements in this category allow you to call a microflow or another workflow.
 

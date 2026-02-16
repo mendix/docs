@@ -6,15 +6,15 @@ description: "Configure a published REST Operation by adding parameters to an op
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 When a client calls a published REST operation, it calls a URL with an optional query string and possibly a body. These parameters can be passed to the microflow and import mapping as query parameters, path parameters, body parameters, header parameters, and form parameters.
 
 When you add or edit a parameter in a published REST operation, you can specify the settings described below. These settings are in the **Add parameter** section of the **Add operation for resource** dialog box.
 
-## 2 General
+## General
 
-### 2.1 Parameter Type
+### Parameter Type
 
 Specify where the parameter comes from. Possible values are the following:
 
@@ -24,29 +24,29 @@ Specify where the parameter comes from. Possible values are the following:
 * **Header** – The value of a header parameter is taken from the (first) request header with that name.
 * **Form** – The value of a form parameter is taken from the body part with that name (these are available for `multipart/form-data` requests).
 
-### 2.2 Name
+### Name
 
 The name of the parameter. For a header parameter, this should be the name of the request header.
 
-### 2.3 Type
+### Type
 
 Specify the type of the parameter. Object or list parameters can only come from the body of the request.
 
-### 2.4 Microflow Parameter
+### Microflow Parameter
 
 Specify the microflow parameter that will be filled with the value from this operation parameter. You should always select one, except for when you defined a path parameter to be passed to the import mapping.
 
-## 3 Mapping
+## Mapping
 
 The mapping group is only shown for body parameters.
 
-### 3.1 Import Mapping
+### Import Mapping
 
 Specify the import mapping that converts the body of the request (JSON or XML) into an Object or a List.
 
 You can use an import mapping that takes a primitive parameter (string, integer, etcetera) if the operation has no more than one path parameter with that type. The value of that path parameter will be passed to the microflow. If there is no path parameter, and empty value will be passed to the import mapping.
 
-### 3.2 If No Object Was Found
+### If No Object Was Found
 
 This sets the behavior of the operation when a find operation does not find an existing object.
 
@@ -58,7 +58,7 @@ If the import mapping has **Decide this at the place where the mapping gets used
 * Ignore – don't map this element and continue parsing
 * Error – stop parsing the XML and throw an error — typically used for **PUT** and **PATCH** operations
 
-### 3.3 Commit
+### Commit
 
 You can indicate whether the import mapping should commit the objects that it creates or changes. You can choose between the following:
 
@@ -66,7 +66,7 @@ You can indicate whether the import mapping should commit the objects that it cr
 * **Yes without events** – commits the changes without triggering events such as validation rules
 * **No** – does not commit the changes, so you can commit them in your microflow. This is useful if you want to add some additional checks in your microflow, and skip the commit if one of those checks fail
 
-## 4 Public Documentation
+## Public Documentation
 
 Provide a **Description** of the parameter. You can use [GitHub-flavored Markdown](/refguide8/gfm-syntax/) for rich text.
 

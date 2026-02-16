@@ -6,11 +6,11 @@ weight: 54
 description: Tutorial for implementing the push notification module.
 ---
 
-## 1 Introduction
+## Introduction
 
 Now that you have implemented the prerequisites in your app, you must implement the [Push Notifications Connector](/appstore/modules/push-notifications/) module. Complete the steps below to enable the basic configuration.
 
-## 2 Download From Marketplace
+## Download From Marketplace
 
 If you have not done so, make sure to download the **Push Notification Connector** module from the Marketplace:
 
@@ -19,7 +19,7 @@ If you have not done so, make sure to download the **Push Notification Connector
 1. Open the **Push Notification Connector** module.
 1. Click **Download**.
 
-## 3 Configure Your App {#config}
+## Configure Your App {#config}
 
 In order for your app to use to use the Push Connections Module, configure the following things:
 
@@ -34,7 +34,7 @@ In order for your app to use to use the Push Connections Module, configure the f
 1. Open up **Project** > **Navigation** in the App Explorer.
 1. Add a new open page navigation item to the **Responsive** navigation profile.
 1. Select the **Administration** page from the **PushNotifications** module. This page is located in the **_USE ME/Web** folder of the **PushNotifications** module.
-1. Add a microflow sub-call to your **Afterstartup** microflow for the microflow **AfterStartup_PushNotifications**:<br />
-    * If you do not have an **Afterstartup** microflow configured yet, read the [After Startup](/refguide8/project-settings/#after-startup) section of *App Settings* for more information.
+1. Add a microflow sub-call to your **AfterStartup** microflow for the microflow **AfterStartup_PushNotifications**:<br />
+    * If you do not have an **AfterStartup** microflow configured yet, read the [After Startup](/refguide8/project-settings/#after-startup) section of *App Settings* for more information.
 
 Now you are able to start your app and move on to the next step: [Set Up the Google Firebase Cloud Messaging Server](/howto8/mobile/setting-up-google-firebase-cloud-messaging-server/).

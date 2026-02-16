@@ -7,7 +7,7 @@ weight: 40
 
 {{% alert color="warning" %}}The file manager widget is not supported on native mobile pages.{{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 A file manager is used to upload and/or download files.
 
@@ -25,7 +25,7 @@ When uploading a file through the file manager, the FileDocument object will be 
 A form is submitted just before a microflow or nanoflow is called or when the page is saved.
 {{% /alert %}}
 
-## 2 Properties
+## Properties
 
 An example of file manager properties is represented in the image below:
 
@@ -45,21 +45,21 @@ File manager properties consist of the following sections:
 
 * [Visibility](#visibility)
 
-### 2.1 Common Section {#common}
+### Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-### 2.2 Design Properties Section {#design-properties}
+### Design Properties Section {#design-properties}
 
 {{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
 
-### 2.3 Editability Section {#editability}
+### Editability Section {#editability}
 
 {{% snippet file="/static/_includes/refguide/editability-section-link.md" %}}
 
-### 2.4 General Section {#general}
+### General Section {#general}
 
-#### 2.4.1 Type
+#### Type
 
 The **Type** property indicates how the end-user will be able to use the file manager.
 
@@ -69,7 +69,7 @@ The **Type** property indicates how the end-user will be able to use the file ma
 | Download | The file manager can only be used to download a file. |
 | Both *(default)*  | The file manager can be used to both upload and download a file. |
 
-#### 2.4.2 Max File Size (MB)
+#### Max File Size (MB)
 
 **Max file size (MB)** determines the maximum size of files (in megabytes) that can be uploaded.
 
@@ -79,7 +79,7 @@ Default: *5*
 This value cannot be set arbitrarily high as the platform to which the app is deployed may also impose a limitation on the size of the files that can be uploaded or downloaded.
 {{% /alert %}}
 
-#### 2.4.3 Allowed Extensions{#allowed-extensions}
+#### Allowed Extensions{#allowed-extensions}
 
 You can specify file extensions that users are allowed to upload. If no extension is specified, all file extensions are allowed. Separate multiple extensions by a semi-colon, for example, `txt;doc`
 
@@ -89,21 +89,21 @@ If a file with an extension that is not allowed is selected, a [system text](/re
 The feature to allow extensions is not meant as a security feature, as the file manager widget does not check the contents of a file to see if they match the provided extension. For more information, see the [Scanning Uploaded Files for Malicious Content](/howto/security/best-practices-security/#scanning-for-malicious-content) section of *How to Implement Best Practices for App Security*.
 {{% /alert %}}
 
-#### 2.4.4 Show File in Browser
+#### Show File in Browser
 
 **Show file in browser** indicates whether a file will be shown in the browser instead of being downloaded.
 
 Default: *False*
 
-### 2.5 Label Section {#label}
+### Label Section {#label}
 
 {{% snippet file="/static/_includes/refguide/label-section-link.md" %}}
 
-### 2.6 Visibility Section {#visibility}
+### Visibility Section {#visibility}
 
 {{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
-## 3 Example of File Manager Usage
+## Example of File Manager Usage
 
 A file manager needs to be placed in a data view or a snippet that is connected to System.File or is a specialization of it. 
 
@@ -131,7 +131,7 @@ Do the following:
 
    {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/file-manager/page-example.png" class="no-border" >}}
 
-## 4 Read More
+## Read More
 
 * [Page](/refguide/page/)
 * [Images, Videos, and Files](/refguide/image-and-file-widgets/)

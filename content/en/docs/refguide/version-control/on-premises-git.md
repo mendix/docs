@@ -8,9 +8,9 @@ aliases:
     - /howto/collaboration-requirements-management/on-premises-git-howto/
 ---
 
-## 1 Introduction {#intro}
+## Introduction {#intro}
 
-When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/general/team-server/) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see the [Version Control Reference Guide](/refguide/version-control/).
+When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/repository/team-server/) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see the [Version Control Reference Guide](/refguide/version-control/).
 
 While using Team Server is the recommended for most Mendix developers, you may prefer to store your application's files in a system controlled by your own organization. For version control, Mendix uses [Git](/refguide/on-premises-git/). This document describes how to work with Git version control system.
 
@@ -20,30 +20,48 @@ This document does not describe how to set up a Git server from scratch; typical
 
 {{% alert color="info" %}}When you use a third-party Git version control repository, the following products and capabilities are not available:
 
-* Deployment using the Developer Portal directly from the Team Server
-* Integrated platform APIs such as the [App repository API](/apidocs-mxsdk/apidocs/app-repository-api/), [Build API](/apidocs-mxsdk/apidocs/build-api/), [Platform SDK](/apidocs-mxsdk/mxsdk/), [Permissions API](/apidocs-mxsdk/apidocs/permissions-api/), [Projects API](/apidocs-mxsdk/apidocs/projects-api/), [Epics API](/apidocs-mxsdk/apidocs/epics-api/), and [User management API](/apidocs-mxsdk/apidocs/user-management-api/)
+* Publishing and deploying to Mendix Cloud directly from Studio Pro
+* Building deployment packages on the Mendix Portal directly from the Team Server
+* Using integrated platform APIs such as the [App repository API](/apidocs-mxsdk/apidocs/app-repository-api/), [Build API](/apidocs-mxsdk/apidocs/build-api/), [Platform SDK](/apidocs-mxsdk/mxsdk/), [Projects API](/apidocs-mxsdk/apidocs/projects-api/), [Epics API](/apidocs-mxsdk/apidocs/epics-api/), and [User management API](/apidocs-mxsdk/apidocs/user-management-api/)
 * [AQM](/addons/aqm-addon/){{% /alert %}}
 
-## 2 Prerequisites
+## Prerequisites
 
 Make sure you have completed the following prerequisites:
 
 * Make sure you have the right server provider. We currently only support Git Private Server. For more information, see the [Preparing Your Repository](#preparing-your-repo) section. 
 * You have an unversioned Mendix app. For more information, see the [Creating an App](#create-app) section.
 
-## 3 Supported Authentication Mechanisms
+## Supported Authentication Mechanisms
 
-Currently, we only support HTTP Basic authentication for Git service providers. With most providers, this takes the form of using of personal access tokens (PATs).
+Currently, Mendix only supports [HTTP Basic authentication](#http) and [Windows Authentication](#windows) for Git service providers. 
+
+### HTTP Basic Authentication {#http}
+
+With most providers, HTTP basic authentication takes the form of using of personal access tokens (PATs).
 
 To use PAT (or another equivalent), you need to specify it in the **Password** field when Studio Pro requests credentials for the version control server:
 
-{{< figure src="/attachments/refguide/version-control/on-premises-git/sign-in-dialog.png" alt="Sign In dialog" class="no-border" >}}
+{{< figure src="/attachments/refguide/version-control/on-premises-git/sign-in-dialog.png" alt="Sign In dialog" class="no-border"  width="600">}}
 
-## 4 Setting Up the Environment
+{{% alert color="info" %}}When using a PAT for the Mendix platform, fill in your email in the **Username** field. For more information on how to create a PAT for the Mendix platform, see the [Personal Access Tokens](/portal/user-settings/#pat) section in *User Settings*.{{% /alert %}}
+
+Currently Mendix keeps PAT using operating system supported solutions:
+
+* For Windows, Mendix uses a credential locker mechanism, accessible to users by using Credential Manager.
+* For MacOs, Mendix uses keychains, accessible to users by using Keychain Access.
+
+### Windows Authentication {#windows}
+
+Studio Pro can use Windows Authentication for Git service providers that support it. When you use Windows Authentication, you do not need to provide a password. 
+
+You can enable Windows Authentication in [Git Preferences settings](/refguide/preferences-dialog/#enable-windows-authentication).
+
+## Setting Up the Environment
 
 This section describes how to configure a Git versioned app in Studio Pro. You need a Git server and an initially unversioned Mendix app.
 
-### 4.1 Preparing Your Repository {#preparing-your-repo}
+### Preparing Your Repository {#preparing-your-repo}
 
 Mendix supports multiple Git service providers that are listed below. For more information on a specific provider and requirements for it, see [System Requirements](/refguide/system-requirements/). 
 
@@ -56,9 +74,9 @@ Studio Pro is able to use the following Git server providers:
 * GitLab.com
 * GitLab EE
 * GitLab CE
-* BitBucket.org
-* BitBucket Server
-* BitBucket Data Center
+* Bitbucket.org
+* Bitbucket Server
+* Bitbucket Data Center
 
 {{% alert color="info" %}} Please note that some Git server providers have added additional limitations to their Git offering, such as a limit on the size of individual files. In some cases the Mendix .MPR file can grow larger than 100MB. Please take this into account when choosing a provider. {{% /alert %}}
 
@@ -66,26 +84,26 @@ You need to create a private repository in the selected provider and create a pe
 
 To interact with this private repository from Studio Pro, you need a link to the repository and a PAT.
 
-### 4.2 Preparing Studio Pro for Git {#preparing-git-support}
+### Preparing Studio Pro for Git {#preparing-git-support}
 
 To use on-premise Git, you need to configure name and email values that will be used to identify your commit in Studio Pro by navigating to **Edit** > **Preferences** > **Version Control**:
 
-{{< figure src="/attachments/refguide/version-control/on-premises-git/preferences-git.png" alt="Preferences dialog" class="no-border" >}}
+{{< figure src="/attachments/refguide/version-control/on-premises-git/preferences-git.png" alt="Preferences dialog" class="no-border" width="800" >}}
 
 Studio Pro now is set up to support Git.
 
-### 4.3 Creating an App {#create-app}
+### Creating an App {#create-app}
 
 Create an unversioned app in Studio Pro:
 
-{{< figure src="/attachments/refguide/version-control/on-premises-git/app-settings.png" alt="App Settings dialog" class="no-border" >}}
+{{< figure src="/attachments/refguide/version-control/on-premises-git/app-settings.png" alt="App Settings dialog" class="no-border" width="600">}}
 
 Once the app is created, you can upload it to your private Git repository. For more information on how to upload it, see the [Uploading to the Private Git Server](#upload-to-private-git-server) section below.
 
-### 4.4 Downloading from a Private Repository
+### Downloading from a Private Repository
 
 {{% alert color="info" %}}
-Please note that the libraries Mendix uses to operate Git do not support <kbd>{Space}</kbd> characters in Git repo URLs.
+Please note that the libraries Mendix uses to operate Git do not support <kbd>Space</kbd> characters in Git repo URLs.
 {{% /alert %}}
 
 Now that you have a Git app on your server, you can download it to another directory or one of your team members can download it on their machine. Follow the steps below:
@@ -98,25 +116,25 @@ Now that you have a Git app on your server, you can download it to another direc
 1. Click **OK**. 
 1. In the **Sign In** dialog box, enter your credentials:
 
-    {{< figure src="/attachments/refguide/version-control/on-premises-git/sign-in-dialog.png" alt="Sign In dialog" class="no-border" >}}
+    {{< figure src="/attachments/refguide/version-control/on-premises-git/sign-in-dialog.png" alt="Sign In dialog" class="no-border" width="600">}}
 
-1. Enter username (it can be anything except empty) and use the PAT you saved earlier as the password. 
+1. Enter username (it can be anything except empty) and use PAT from your Git provider you created earlier as the password. 
 
 The app is downloaded and ready to be used with version control.
 
-### 4.5 Opening the Existing Git App
+### Opening the Existing Git App
 
 There are a few ways to open a Git Mendix app, as long as you have Studio Pro [Git support activated](#preparing-git-support).
 
-#### 4.5.1 Recent Apps List
+#### Recent Apps List
 
 In your **Recent Apps** list, you can click the app name and the app will open.
 
-#### 4.5.2 Recent Apps Menu
+#### Recent Apps Menu
 
 Under **File** > **Recent Apps**, you can select the app and open it.
 
-#### 4.5.3 Open App Form
+#### Open App Form
 
 The **Open App** form is accessible from two different places:
 
@@ -130,9 +148,7 @@ For the previous checkout method do the following:
 1. Open from previous checkout.
 2. Enable the **Private server** radio button and enter the link to the repository. 
 3. Click **Connect**. 
-4. If you have checked out the app at least once, you can then pick one of the existing locations on disk and the app will open (shown here with two previous checkouts):
-
-    {{< figure src="/attachments/refguide/version-control/on-premises-git/open-app-dialog.png" alt="Open App dialog" class="no-border" >}}
+4. If you have checked out the app at least once, you can then pick one of the existing locations on disk and the app will open.
 
 For the previous local disk method do the following:
 
@@ -141,38 +157,44 @@ For the previous local disk method do the following:
 
     {{< figure src="/attachments/refguide/version-control/on-premises-git/open-app-select-file.png" alt="Open App Select File" class="no-border" >}}
 
-### 4.6 Uploading to the Private Git Server {#upload-to-private-git-server}
+### Uploading to the Private Git Server {#upload-to-private-git-server}
 
 Once you have an unversioned app, you can upload it to your private team server. 
 
 {{% alert color="warning" %}}
-The repository has to be completely empty (including README.md and. gitignore files), or the upload will fail.
+The repository has to be completely empty (this includes the `README.md` and `.gitignore` files) and have no commits in the history, or the upload will fail.
 {{% /alert %}}
 
 To upload your app, do the following:
 
-1. Open the app in Studio Pro and go to **Version Control > Upload to Version Control Server**:
-
-    {{< figure src="/attachments/refguide/version-control/on-premises-git/upload-to-vc-menu.png" alt="Upload to Version Control Server Menu" class="no-border" >}}
-
+1. Open the app in Studio Pro and go to **Version Control** > **Upload to Version Control Server**.
 2. In the **Upload to Version Control Server** dialog box, select **Private server**. 
-3. Select **Git** as the private server type (if you have both **Subversion** and **Git** enabled in the **Preferences Form**). 
-4. Enter the link to the repository you want to upload this app to and click **OK**:
+3. Enter the link to the repository you want to upload this app to and click **OK**:
 
     {{< figure src="/attachments/refguide/version-control/on-premises-git/upload-to-vc-server.png" alt="Upload to Version Control Server dialog" class="no-border" >}}
     It might ask you to sign into the server, depending on whether you have previously signed in and choose to stay logged in.
-5. You can see the upload process in the **Upload Project to Team Server** pop-up window.
+4. You can see the upload process in the **Upload Project to Team Server** pop-up window.
 
 The app is uploaded successfully. You can check on your private server and see that the app is now on the selected repository:
 
 {{< figure src="/attachments/refguide/version-control/on-premises-git/project-uploaded-confirmation.png" alt="App Uploaded confirmation window" class="no-border" >}}
 
-### 4.7 Moving a Subversion App to Git
+### Moving an Existing Versioned App to Private Git
 
-If you already have an existing versioned app (with Subversion) that you would like to upload to your Git private server instead, you can export it, then re-import it, and uploading it to your server.
+If you already have an existing versioned app that you would like to upload to your Git private server, you can fully migrate the history or start with a fresh repository.
+
+#### Retaining History
+
+To migrate a repository from one Git server to another private Git server, follow your new Git provider's documentation for transferring a complete repository clone to their platform.
+
+After migration, download a fresh clone in Studio Pro from your private Git server.
+
+{{% alert color="warning" %}} After migrating from Mendix Team Server, to link an existing folder to a new repository and avoid errors in Studio Pro, remove the `sprintr-project-id` setting from the *.git/config* file in your local repository clone.{{% /alert %}}
+
+#### Starting with a Fresh Repository
 
 {{% alert color="info" %}}
-This creates an unversioned app, based on the branch you are working on in Studio Pro. This means that you will not get version history or other branches in the Git repo.
+This process creates an unversioned app, based on the branch you are working on in Studio Pro. This means that you will not get version history or other branches in the Git repo.
 
 You can move the whole app, including branches and history, to the Mendix Git repository by following the instructions in [Migrate to Git](/developerportal/general/migrate-to-git/)
 {{% /alert %}}
@@ -184,31 +206,25 @@ Follow the steps below:
 
     {{< figure src="/attachments/refguide/version-control/on-premises-git/export-project-package-dialog.png" alt="Export App Package dialog" class="no-border" >}}
 
-3. The **Progress** pop-up window appears, and once it is completed, you can close the app in **Studio Pro**:
+3. The **Progress** pop-up window appears, and once it is completed, you can close the app in **Studio Pro**.
 
-    {{< figure src="/attachments/refguide/version-control/on-premises-git/progress-dialog.png" alt="Progress dialog" class="no-border" >}}
-
-4. Now you can import the package again, and from there you can choose to upload it to your Git private server. Go to **File** > **Import App Package**:
-
-    {{< figure src="/attachments/refguide/version-control/on-premises-git/import-project-package-menu.png" alt="Import App Package menu"   width="250"  class="no-border" >}}
-
+4. Now you can import the package again, and from there you can choose to upload it to your Git private server. Open **File** > **Import App Package**.
 5. Once the file browser dialog box is open, navigate to the location you save the *.mpk* file during the export process.
 6. In the **Import App Package** dialog box, select **Private server** option in the **Where should we store your App?** section. 
-7. In the **Private Server Type** option, select **Git** (if you have both **Subversion** and **Git** enabled in the **Preferences** form).  
-8. Enter the link to the private repository in the address textbox and click **OK**. Remember, the repository **must be completely empty**, or **Studio Pro** will not be able to upload an app to it:
+7. Enter the link to the private repository in the **App repository address** field and click **OK**. Please note that the repository must be completely empty, or Studio Pro will not be able to upload an app to it:
 
     {{< figure src="/attachments/refguide/version-control/on-premises-git/import-project-package-git-dialog.png" alt="Import Git Package menu" class="no-border" >}}
 
-9. Click **OK**. 
+8. Click **OK**. 
 
-After the import process is completed, your previous Subversion app will be now versioned using Git.
+After the import process is completed, your previously version controlled app will be now versioned using Private Git.
 
 Note that your previous app still exists, **Studio Pro** will simply make an unversioned copy and upload it to your private Git server. So, in your **Recent Apps** list, you will still see both:
 
-{{< figure src="/attachments/refguide/version-control/on-premises-git/recent-apps.png" alt="Recent Apps form" class="no-border" >}}
+{{< figure src="/attachments/refguide/version-control/on-premises-git/recent-apps.png" alt="Recent Apps form" class="no-border" width="600">}}
 
-## 5 Read More
+## Read More
 
 * [Version Control Reference Guide](/refguide/version-control/)
-* [Team Server](/developerportal/general/team-server/)
+* [Team Server](/developerportal/repository/team-server/)
 * [Upload to Version Control Server Reference Guide](/refguide/upload-to-version-control-dialog/)

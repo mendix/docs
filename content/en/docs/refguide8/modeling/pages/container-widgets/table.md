@@ -8,7 +8,7 @@ weight: 60
 {{% alert color="warning" %}}The table widget is not supported on native mobile pages.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 Tables can be used to give structure to a page. They contain [rows](/refguide8/table/#rows), columns, and [cells](/refguide8/table/#cells). Each cell can contain widgets. 
 
@@ -16,11 +16,11 @@ For example, you can create a table with text widgets, a logo, and a data view i
 
 {{< figure src="/attachments/refguide8/modeling/pages/container-widgets/table/table.png" class="no-border" >}}
 
-## 2 Components
+## Components
 
 A table consist of [rows](#rows), columns, and [cells](#cells). 
 
-### 2.1 Rows and Their Properties {#rows}
+### Rows and Their Properties {#rows}
 
 A table can contain one or more rows. Each row contains columns and the number of columns can differ per row.
 
@@ -32,7 +32,7 @@ A row has the following properties:
 
 For more information on properties listed above, see [Properties Common in the Page Editor](/refguide8/common-widget-properties/).
 
-### 2.2 Cells and Their Properties {#cells}
+### Cells and Their Properties {#cells}
 
 Each section of a table row or column is called a cell. Cells can contain widgets.
 
@@ -47,9 +47,9 @@ A cell has the following properties:
     * **Normal** – ordinary cell containing data
     * **Header** – a table header cell
 
-### 2.3 Performing Actions on Rows
+### Performing Actions on Rows
 
-To perform an action on a row , select a row and right-click it. A list of actions will open. 
+To perform an action on a row, select a row and right-click it. A list of actions will open. 
 
 You can perform the following actions:
 
@@ -58,9 +58,9 @@ You can perform the following actions:
 * **Move left** – moves a column left in the row
 * **Move right** – moves a column right in the row
 
-### 2.4 Performing Actions on Columns
+### Performing Actions on Columns
 
-To perform an action on a column , select a column and right-click it. A list of actions will open. 
+To perform an action on a column, select a column and right-click it. A list of actions will open. 
 
 You can perform the following actions:
 
@@ -69,7 +69,7 @@ You can perform the following actions:
 * **Move up** – moves a row up
 * **Move down** – moves a row down
 
-### 2.5 Performing Actions on Cells
+### Performing Actions on Cells
 
 To perform an action on a cell, select a cell and right-click it. A list of actions will open. 
 
@@ -93,7 +93,7 @@ To merge cells to the right, left, up, or down, you can also click the correspon
 
 {{< figure src="/attachments/refguide8/modeling/pages/container-widgets/table/merge-icons.png" alt="Merge Icons" class="no-border" >}}
 
-## 3 Properties
+## Properties
 
 An example of table properties is represented in the image below:
 
@@ -106,17 +106,17 @@ Table properties consist of the following sections:
 * [General](#general)
 * [Visibility](#visibility)
 
-### 3.1 Common Section {#common}
+### Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide8/common-section-link.md" %}}
 
-### 3.2 Design Properties Section {#design-properties}
+### Design Properties Section {#design-properties}
 
 {{% snippet file="/static/_includes/refguide8/design-section-link.md" %}} 
 
-### 3.3 General Section {#general}
+### General Section {#general}
 
-#### 3.3.1 Width Unit
+#### Width Unit
 
 The **Width Unit** defines whether the [Column widths](#column-widths) property is set in percentage or in pixels. 
 
@@ -125,7 +125,7 @@ The **Width Unit** defines whether the [Column widths](#column-widths) property 
 | Percentage  *(default)* | The **Column widths** property is specified in percentages. When resizing, columns will become wider/narrower while keeping the same relative widths. |
 | Pixels | The **Column widths** property is specified in pixels. When resizing, the pixel width columns will keep the same size; auto columns will become wider/narrower. |
 
-#### 3.3.2 Column Widths {#column-widths}
+#### Column Widths {#column-widths}
 
 The **Column widths** property defines the widths of each column as a list of numbers separated by semi-colons. The **Width unit** (described above) determines if these numbers mean percentages or pixels. 
 
@@ -138,11 +138,11 @@ When **Width unit** is set to *Pixels*, you can set column width to the followin
 
 For example, you can you can have three columns of which the first is 200 pixels wide (*Fixed* width), the second is 100 pixels (*Fixed* width), and the last one is set to *Auto* which means that it will take up the rest of the space in the row.
 
-### 3.4 Visibility Section {#visibility}
+### Visibility Section {#visibility}
 
 {{% snippet file="/static/_includes/refguide8/visibility-section-link.md" %}}
 
-## 4 Read More
+## Read More
 
 * [Page](/refguide8/page/)
 * [Container Widgets](/refguide8/container-widgets/)

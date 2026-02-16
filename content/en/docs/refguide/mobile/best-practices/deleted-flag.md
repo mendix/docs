@@ -5,19 +5,19 @@ weight: 10
 description: "This pattern lets you remove deleted objects from the offline database via Sync-to-device."
 ---
 
-## 1 Introduction
+## Introduction
 
 This pattern lets you remove deleted objects from the offline database via the [Synchronize to Device](/refguide/synchronize-to-device/) action.
 
-## 2 Challenge
+## Challenge
 
 Using **Synchronize to device from a Microflow** allows for fine-grained control over which objects are synchronized. However, it cannot be used to synchronize deleted objects to the offline database. This means that if an object is deleted on the server, it will remain on the client unless a full synchronization is run.
 
-## 3 Solution
+## Solution
 
 The deleted flag overcomes this limitation by introducing a new Boolean attribute (the deleted flag). This attribute is used to flag deleted objects instead of actually deleting them. This is achieved by configuring access rules for all user roles to prevent access to all flagged objects. This lets you flag objects for deletion on the server and synchronize these objects to the offline database, removing them in the process.
 
-## 4 Implementation
+## Implementation
 
 To implement this pattern, do the following:
 
@@ -26,7 +26,7 @@ To implement this pattern, do the following:
 1. Replace any logic that deletes objects of the target entity with a microflow that sets this attribute to *true.*
 1. Add the following XPath constraint to all access rules of the target entity to limit access to objects that are not flagged as deleted: `[not(IsDeleted)]`.
 
-## 5 Recommendations
+## Recommendations
 
 To improve your apps further, consult the following recommendations:
 
@@ -34,7 +34,6 @@ To improve your apps further, consult the following recommendations:
 * Deny read or write access to the created attribute for all roles.
 * Objects using this pattern are no longer deleted from the server database, which can lead to performance and storage problems. Cleaning up flagged objects after a set time can overcome this, but you must ensure that all clients are synchronized before cleaning up. Not doing so can lead to synchronization errors.
 
-## 6 Read More
+## Read More
 
-* To increase the clarity, organization, and documentation of your apps, see [Mendix Best Practices for Development
-](/refguide/dev-best-practices/)
+* To increase the clarity, organization, and documentation of your apps, see [Mendix Best Practices for Development](/refguide/dev-best-practices/)

@@ -5,11 +5,11 @@ weight: 42
 description: "This how-to teaches you how to enrich the design of your native mobile app with custom fonts."
 ---
 
-## 1 Introduction
+## Introduction
 
 Good typography plays a major role in conveying your app's message while reinforcing your company's brand identity. Setting up the fonts you need is as simple as dragging and dropping the required fonts and setting your app's style. As you can see in the [Prerequisites](#prerecs) section below, Mendix offers two ways for you to add custom fonts: using the Mendix Native Mobile Builder or manually.
 
-### 1.2 Introduction to Fonts in Mendix Native Mobile Apps
+### Introduction to Fonts in Mendix Native Mobile Apps
 
 When it comes to fonts files, several standards and types are common. True Type (*.ttf*), Open Type (*.otf* or *.ttf*), and Web Open Font Format (*.woff*) are the most common. 
 
@@ -37,7 +37,7 @@ For example, what would happen if you were to use the following snippet in your 
 
 Your font, when running app on Android, would end up looking regular instead of the semi-bold font you would expect. This is because Android would first look up the available font styles registered. Unable to resolve the weight, it would fall back to the next best option. The same applies to styles.
 
-In addition, Android expects the font filename to be a combination of the actual font family name, weight, and style. For example for Time New Roman bold italic, it expects something like *TimeNewRoman_bold_italic.ttf*. Failing to comply with these naming conventions makes the `fontFamily`, `fontWeight`, and `fontStyle` attributes fail to style text correctly.
+In addition, Android expects the font filename to be a combination of the actual font family name, weight, and style. For example, for Times New Roman bold italic, it expects something like *TimesNewRoman_bold_italic.ttf*. Failing to comply with these naming conventions makes the `fontFamily`, `fontWeight`, and `fontStyle` attributes fail to style text correctly.
 
 So how can these issues be mitigated? First of all, explicitly styling text using the common CSS text attributes `fontWeight` and `fontStyle` should be avoided. The results will vary per platform. Instead, use postscript names. Specifically, instead of a single `fontFamily` attribute with multiple weights and styles, a font family needs to be defined per weight and style combination.
 
@@ -71,7 +71,7 @@ export const boldText = {
 
 Now wherever you use `boldText`, you will get the expected result on both platforms consistently.
 
-## 2 Prerequisites {#prerecs}
+## Prerequisites {#prerecs}
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -84,9 +84,9 @@ Before [adding fonts manually](#manual):
 * Understand the native mobile [local build process](/howto8/mobile/native-build-locally/)
 * Locally check out your repository 
 * Understand Git and have a Git tool installed
-* Have XCode installed for the iOS sections below
+* Have Xcode installed for the iOS sections below
 
-## 3 Add Custom Fonts With the Mendix Native Mobile Builder {#fonts-nbui}
+## Add Custom Fonts With the Mendix Native Mobile Builder {#fonts-nbui}
 
 The Mendix Native Mobile Builder simplifies adding custom fonts to your app. It configures both Android and iOS apps and also provides the snippets needed to simply copy and paste in your Mendix app's native styles. To add custom fonts to your app, follow these steps: 
 
@@ -112,7 +112,7 @@ The Mendix Native Mobile Builder simplifies adding custom fonts to your app. It 
 
 1. Build your app to get a new binary with fonts included. 
 
-## 4 Use Custom Fonts in Your App
+## Use Custom Fonts in Your App
 
 To use the new fonts to style your content, follow these instructions:
 
@@ -128,11 +128,11 @@ To use the new fonts to style your content, follow these instructions:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/custom-style.png" alt="Custom style"   width="350"  class="no-border" >}}
 
-## 5 Add Custom Fonts Manually {#manual}
+## Add Custom Fonts Manually {#manual}
 
 While the Mendix Native Mobile Builder simplifies adding fonts, you might find yourself in a situation where you must add fonts manually instead.
 
-### 5.1 Add Custom Fonts to an Android App
+### Add Custom Fonts to an Android App
 
 To manually add custom fonts to your Android app, follow these instructions: 
 
@@ -148,15 +148,15 @@ To manually add custom fonts to your Android app, follow these instructions:
 1. Copy the renamed fonts to the `android\app\src\main\assets\fonts` folder.
 1. If you plan on using the tool to build your app, commit your changes:
 
-    {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/custom-fonts-android-repo.png" alt="GitHub repo after uploading cutom fonts"   width="350"  class="no-border" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/custom-fonts-android-repo.png" alt="GitHub repo after uploading custom fonts"   width="350"  class="no-border" >}}
 
 1. Build your Android app using your preferred method.
 
 Congratulations, you have learned how to add fonts to an Android app.
 
-### 5.2 Add Custom Fonts to an iOS App
+### Add Custom Fonts to an iOS App
 
-Use XCode to manually add fonts to an iOS app:
+Use Xcode to manually add fonts to an iOS app:
 
 1. Collect all the fonts you would like to use.
 1. Use a tool like [Open Type Inspector](https://opentype.js.org/font-inspector.html) and derive the PostScript names for each font:
@@ -167,19 +167,19 @@ Use XCode to manually add fonts to an iOS app:
     * TimesNewRomanPSMT, for regular
     * TimesNewRomanPS-BoldMT, for bold
 
-1. Open XCode and select the workspace at **ios\NativeTemplate.xcworkspace**.
+1. Open Xcode and select the workspace at **ios\NativeTemplate.xcworkspace**.
 1. Drag the renamed fonts into the **Resources/Fonts** folder in Project Explorer. 
 1. Select both targets from the dialog box that shows up:
 
-    {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/custom-fonts-xcode-dialog.png" alt="XCode option dialog for adding files"   width="350"  class="no-border" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/custom-fonts-xcode-dialog.png" alt="Xcode option dialog for adding files"   width="350"  class="no-border" >}}
 
 1. Your folder structure should look like this:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/custom-fonts-project-explorer-filled.png" alt="Project explorer with fonts"   width="350"  class="no-border" >}}
 
-1. Open the *Info.plist* file by pressing <kbd>{⌘}</kbd> + <kbd>{Shift}</kbd> + <kbd>{0}</kbd> and searching for the file. Press <kbd>{Enter}</kbd> to open it:
+1. Open the *Info.plist* file by pressing <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>0</kbd> and searching for the file. Press <kbd>Enter</kbd> to open it:
 
-    {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/xcode-open-infoplist.png" alt="XCode Open file dialog"   width="350"  class="no-border" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/xcode-open-infoplist.png" alt="Xcode Open file dialog"   width="350"  class="no-border" >}}
 
 1. Find the key `Fonts provided by the application`. Expand it if needed:
 
@@ -192,13 +192,13 @@ Use XCode to manually add fonts to an iOS app:
 
 1. If you plan on using the tool to build your app, commit your changes:
 
-    {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/custom-fonts-ios-repo.png" alt="GitHub repo after uploading cutom fonts"   width="350"  class="no-border" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/native-custom-fonts/custom-fonts-ios-repo.png" alt="GitHub repo after uploading custom fonts"   width="350"  class="no-border" >}}
 
 1. Build your iOS app with your preferred method.
 
 Congratulations, you have learned how to add fonts to an iOS app. 
 
-## 6 Read More
+## Read More
 
 * [Implement Native Mobile Styling](/howto8/mobile/native-styling/)
 * [Troubleshoot Common Native Mobile Issues](/howto8/mobile/common-issues/)

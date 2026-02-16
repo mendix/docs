@@ -12,7 +12,7 @@ This activity was introduced in Studio Pro [9.17.0](/releasenotes/studio-pro/9.1
 
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The **Generate jump-to options** activity allows you to generate a list of workflow activities where the workflow can jump to as its next step. The [Apply jump-to option](/refguide9/apply-jump-to-option/) activity should be used after the **Generate jump-to options** to let the workflow continue from the selected activity. This is useful when, for example, the workflow is in incompatible state and the Workflow Administrator or any other user should be able to select a specific activity where the workflow can continue. 
 
@@ -32,7 +32,7 @@ This functionality is different from the [Jump activity](/refguide9/jump-activit
 
 {{% /alert %}}
 
-## 2 Properties
+## Properties
 
 An example of **Generate jump-to options** properties is represented in the image below:
 
@@ -45,7 +45,7 @@ The **Generate Jump-To Options** properties pane consists of the following secti
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section {#action}
+## Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -53,18 +53,18 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Workflow Object
+### Workflow Object
 
 A workflow object of the **System.Workflow** entity available from the microflow parameters.
 
-### 3.2 Variable Name or Object Name
+### Variable Name or Object Name
 
 The name of the variable or the object returned by the activity. This is an object of the **System.WorkflowJumpToDetails** entity which can be used by the [Apply jump-to option](/refguide9/apply-jump-to-option/) activity.
 
-## 4 Common Section {#common}
+## Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}
 
-## 5 Read More
+## Read More
 
 * [Jumping to Different Activities in a Workflow](/refguide9/jump-to/)

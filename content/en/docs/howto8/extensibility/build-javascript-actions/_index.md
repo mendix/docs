@@ -1,7 +1,6 @@
 ---
 title: "Build JavaScript Actions"
 url: /howto8/extensibility/build-javascript-actions/
-
 weight: 40
 ---
 

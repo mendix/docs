@@ -4,7 +4,7 @@ url: /refguide8/published-app-services/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 {{% alert color="info" %}}
 App services are deprecated and were removed in Studio Pro 9. Use a [published web service](/refguide8/published-web-services/) or a [published REST service](/refguide8/published-rest-services/) instead.
@@ -16,14 +16,14 @@ Names of published app service documents must be unique (also with regard to pub
 
 {{< figure src="/attachments/refguide8/modeling/integration/published-app-services/16843911.png" class="no-border" >}}
 
-## 2 Create Version
+## Create Version
 
 The **Create version** button instantiates a new app service version. For more information, see [Published App Service](/refguide8/published-app-service/).
 
-## 3 Edit
+## Edit
 
 This button opens the selected app service version dialog box. Only **Draft** versions are editable. The settings of **Consumable** versions can only be viewed.
 
-## 4 Delete
+## Delete
 
 This button deletes the selected app service version.

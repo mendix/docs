@@ -1,7 +1,6 @@
 ---
 title: "Manage App Performance"
 url: /howto8/monitoring-troubleshooting/manage-app-performance/
-
 weight: 12
 ---
 

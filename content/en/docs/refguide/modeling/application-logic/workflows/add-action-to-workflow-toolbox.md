@@ -3,12 +3,12 @@ title: "Adding a Custom Action to the Workflow Toolbox"
 linktitle: "Add Custom Action to Workflow Toolbox"
 url: /refguide/add-action-to-workflow-toolbox/
 description: "Describes how to expose a microflow as a workflow action in Mendix Studio Pro."
-weight: 80
+weight: 100
 aliases:
     - /howto/logic-business-rules/add-action-to-workflow-toolbox/
 ---
 
-## 1 Introduction 
+## Introduction 
 
 You can expose a microflow as a workflow action and add it to the workflow toolbox. This is particularly useful if you plan to reuse the microflow logic several times, turning it into a custom workflow action is a good alternative to using the [Call microflow](/refguide/call-microflow/) action. There are the following advantages to having the custom workflow action: 
 
@@ -22,7 +22,7 @@ This how-to teaches you how to do the following:
 * Add microflow input parameters and return values
 * Expose the microflow as the workflow action
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -30,7 +30,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install Atlas 3 from the Mendix Marketplace. As a result of installing Atlas 3, your app should contain the following modules that Workflow Commons depends on: Atlas_Core, Atlas_Web_Content, and DataGrid.
 * Your app has the following optional modules [Workflow Commons](https://marketplace.mendix.com/link/component/117066) and [Mendix SSO](https://marketplace.mendix.com/link/component/111349) modules for better developer experience. For more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Using Workflow Commons](/refguide/workflow-setting-up-app/).
 
-## 3 Exposing the Microflow as the Workflow Action
+## Exposing the Microflow as the Workflow Action
 
 For example, you have the Employee Onboarding process set up in your app. You have an integration with the SAP system and have a microflow called **ACT_SAP_INVENTORY_LAPTOP_CHECK** that checks if the employee has a laptop already assigned to them and returns `true` or `false` value. To be able to reuse the logic of this microflow in the **Employee_Onboarding** workflow, you can expose this microflow as a workflow action.
 
@@ -44,11 +44,11 @@ To create the calling microflow and add it as the custom action to the workflow 
 
 1. Create a new microflow that calls **ACT_SAP_INVENTORY_LAPTOP_CHECK**. Name the new microflow **WFS_MY_SYSTEM_TASK**.
 2. Make sure that the input parameters of the **WFS_MY_SYSTEM_TASK** microflow are mapped to the workflow definition. For the **Employee_Onboarding** workflow, add the EmployeeOnboarding parameter because the **EmployeeOnboarding** entity is set as the **Workflow entity**. 
-3. In **Toolbox**, select **Microflow call** and drag it to the flow:
+3. In **Toolbox**, select **Call microflow** and drag it to the flow:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/add-action-to-workflow-toolbox/microflow-call.png" alt="Microflow call action" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/add-action-to-workflow-toolbox/microflow-call.png" alt="Call microflow activity" class="no-border" >}}
 
-4. Double-click the **Microflow call** activity to open its properties and set **Microflow** to **ACT_SAP_INVENTORY_LAPTOP_CHECK**.
+4. Double-click the **Call microflow** activity to open its properties and set **Microflow** to **ACT_SAP_INVENTORY_LAPTOP_CHECK**.
 5. Click the **End event** and navigate to the **Properties** pane.
 6. Set the **Return value** for it to **Boolean**.
 7. Right-click the working area of the microflow and select **Properties**.
@@ -71,7 +71,7 @@ To create the calling microflow and add it as the custom action to the workflow 
 
 Good job! You have configured the custom workflow action.
 
-## 4 Using the Custom Action in Workflows
+## Using the Custom Action in Workflows
 
 Now that you have exposed the microflow as the custom workflow action, you can use it directly from the workflow toolbox. Do the following:
 
@@ -84,7 +84,7 @@ Now that you have exposed the microflow as the custom workflow action, you can u
 
 Congratulations! You have turned the microflow into the custom workflow action and can easily use it in the workflow editor.
 
-## 5 Read More
+## Read More
 
 * [Microflow Properties](/refguide/microflow/)
 * [Adding a Workflow to an Existing App: Using Workflow Commons](/refguide/workflow-setting-up-app/)

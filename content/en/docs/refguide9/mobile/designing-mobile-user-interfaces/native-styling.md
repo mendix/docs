@@ -8,7 +8,7 @@ aliases:
     - /howto9/mobile/how-to-use-native-styling/
 ---
 
-## 1 Introduction
+## Introduction
 
 You can build native mobile apps with custom styling in Mendix Studio Pro. Styling native mobile apps uses JavaScript style sheets, which are new to Mendix Studio Pro. 
 
@@ -20,7 +20,7 @@ Consult these sections below for information on theme folder structure, classes,
 
 Read [Using Native Styling](#using-styling) to practice basic Mendix styling tasks in a simple app.
 
-## 2 Theme Folder Structure {#folder-structure}
+## Theme Folder Structure {#folder-structure}
 
 For each app, styling is stored in the **theme** and **themesource** folders. From there styling is split into **native** and **web** folders. Both have the same structure. 
 
@@ -42,25 +42,25 @@ The **themesource/atlas_core/native/core/widgets** folder contains the default w
 
 In **themesource/atlas_nativemobile_content/native** you will find resource package styling. Here you can find all styling related to building blocks, page templates and layouts.
 
-## 3 Classes {#classes}
+## Classes {#classes}
 
 Default class names—which are the class names set by Mendix Studio Pro—will always be named in Pascal case. All other classes will be in lowerCamelCase. This keeps changes to default widget styles clear.
 
-## 4 Design Properties {#design-properties}
+## Design Properties {#design-properties}
 
 Design properties are an easier way to apply classes. Atlas already offers several useful design properties out of the box. You can see them by clicking on a widget and looking at the **Properties** panel. A design property can be either a drop-down menu or a toggle. A toggle will toggle one class, while a drop-down menu will apply a different class for each drop-down item. 
 
-## 5 Using Native Styling {#using-styling}
+## Using Native Styling {#using-styling}
 
 You have the capacity to alter design properties with Mendix Studio Pro. Furthermore, because all native mobile styling is written in JavaScript, you have new ways of applying your styling customizations. For more details on native styling, class names, and widget styling, see the [Widget Styling Guide](/refguide9/mobile/designing-mobile-user-interfaces/widget-styling-guide/).
 
-### 5.1 Prerequisites 
+### Prerequisites 
 
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
 * Create a Mendix app based on the Blank Native Mobile App template by following the [Creating a New App Based on the Quickstarter App](/refguide9/mobile/getting-started-with-mobile/#quickstartapp) section of *Get Started with Native Mobile*
 * Download the Make It Native 9 app on your mobile device via either the [Google Play](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9) store or the [Apple App Store](https://apps.apple.com/us/app/make-it-native-9/id1542182000) so you can text your app and see your styling changes
 
-### 5.2 Customizing the Quickstarter App
+### Customizing the Quickstarter App
 
 The [Blank Native Mobile App](https://marketplace.mendix.com/link/component/109511/) is styled using an Atlas UI resources package. This package consists of:
 
@@ -97,7 +97,7 @@ These resources let you style your app with a wide variety of interface parts. H
 
     You have successfully altered a default button to look rosy brown These screenshots employ the Make It Native app's [Dark Mode](/releasenotes/mobile/make-it-native-app/#new-features-5).
 
-### 5.3 Classes
+### Classes
 
 Classes are groups of styling properties which define how certain elements of your app will be rendered. Once you make a class, one which applies to a button for example, you can reuse that class to easily style subsequent buttons in the same way. To learn how to apply a class to a widget, follow the steps below.
 
@@ -114,7 +114,7 @@ Classes are groups of styling properties which define how certain elements of yo
 
     You have successfully applied an Atlas-provided class to a button widget.
 
-### 5.4 Design Properties
+### Design Properties
 
 Design properties are easy-to-use classes in Mendix Studio Pro which you do not need to look up before using. Design properties are present inside Mendix Studio Pro with every widget they apply to. They can be accessed in the **Properties** panel, or by double-clicking the widget and clicking the **Appearance** tab for more advanced options. Design properties are particularly useful for creating generic styling for use on multiple widgets. Below you will use design properties to alter a button widget.
 
@@ -130,7 +130,7 @@ Design properties are easy-to-use classes in Mendix Studio Pro which you do not 
 
     Using design properties, you have changed the blue default button widget to orange. For any other warning buttons, you could easily apply the same design property.
 
-### 5.6 Creating Your Own Classes {#creating-your-own-classes}
+### Creating Your Own Classes {#creating-your-own-classes}
 
 When you have specific design requirements, you will need to build custom classes to fit. To harness the power of custom classes, follow the instructions below.
 
@@ -187,7 +187,7 @@ When you have specific design requirements, you will need to build custom classe
 
     You have successfully customized a simple button widget. Using these basic principles, you can go on to customize widgets with distinct looks.
 
-### 5.7 Implementing Custom Design Properties
+### Implementing Custom Design Properties
 
 In this section you will learn to turn the class you made into a design property, so that it can be easily used by other people.
 

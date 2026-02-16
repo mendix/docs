@@ -1,12 +1,17 @@
 ---
 title: "Platform SDK"
 url: /releasenotes/sdk/platform-sdk/
-
 weight: 2
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
 These are the [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/) release notes, including all minor versions and patches.
+
+## 5.2.0
+
+**Release date: Jun 18, 2025**
+
+* We upgraded Node.js version to 22.
 
 ## 5.1.3
 

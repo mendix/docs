@@ -1,0 +1,64 @@
+@font-face { // LZ - Added for MxDock by request 2024-01-30
+    font-family: "noto-sans";
+    src: local("noto-sans"), url("/fonts/noto-sans/noto-sans-400.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "noto-sans";
+    src: local("noto-sans"), url("/fonts/noto-sans/noto-sans-400-italic.woff2") format("woff2");
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "noto-sans";
+    src: local("noto-sans"), url("/fonts/noto-sans/noto-sans-600.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "noto-sans";
+    src: local("noto-sans"), url("/fonts/noto-sans/noto-sans-600-italic.woff2") format("woff2");
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+  }
+  
+  /* Medium */
+  @font-face {
+    font-family: "Patron";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local("Patron Medium"), local("Patron-Medium"),
+      url("/fonts/patron/PatronWEB-Medium.woff2") format("woff2");
+  }
+  
+  /* Light */
+  @font-face {
+    font-family: "Patron";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local("Patron Light"), local("Patron-Light"),
+      url("/fonts/patron/PatronWEB-Light.woff2") format("woff2");
+  }
+  
+  /* The main font is Noto Sans */
+  body {
+    font-family: "noto-sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.5; // LZ - line height 1.5 (Regular) according to PDS
+  }
+  
+  /* Page Title H1 use Patron Medium. The rest of headings on your page should use Noto Sans */
+  .page-title {
+    font-family: "Patron", "noto-sans", sans-serif;
+    font-weight: 500;
+  }  

@@ -3,11 +3,11 @@ title: "Numeric Formatting"
 url: /refguide/numeric-formatting/
 ---
 
-## 1 Behavior in Your Mendix Application
+## Behavior in Your Mendix Application
 
 A number will be translated into XML untouched, except that any trailing zeroes will be stripped and the representation will always be in non-scientific notation. The rounding mode used is configured in the [App Settings](/refguide/app-settings/).
 
-## 2 XML Schema Facets
+## XML Schema Facets
 
 How numbers in XML should be represented can be specified in an XSD (or WSDL) by using schema facets.
 

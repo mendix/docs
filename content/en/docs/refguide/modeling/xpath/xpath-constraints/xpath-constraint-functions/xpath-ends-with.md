@@ -1,14 +1,19 @@
 ---
 title: "XPath ends-with"
+linktitle: "ends-with"
 url: /refguide/xpath-ends-with/
 weight: 18
 ---
 
-## 1 Overview
+## Overview
 
-The `ends-with()` function checks whether a string attribute ends with a specific string (case-insensitive) as a sub-string.
+The `ends-with()` function checks whether a string attribute ends with a specific string as a sub-string.
 
-## 2 Example
+{{% alert color="info" %}}
+String comparisons in XPath constraints are generally case-insensitive, but this can depend on the collation setting for some databases. See [Case-Sensitive Database Behavior](/refguide/case-sensitive-database-behavior/) for more information.
+{{% /alert %}}
+
+## Example
 
 This query returns all customers whose name ends with the sub-string `sen`:
 

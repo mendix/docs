@@ -1,8 +1,11 @@
 ---
-title: "Deployment"
+title: "Deployment Release Notes"
+linktitle: "Deployment"
 url: /releasenotes/developer-portal/deployment/
 description: "Release notes for deployment capabilities managed in the Mendix Developer Portal"
-weight: 25
+weight: 26
+cascade:
+    - numberless_headings: true
 #This document is mapped to the landing page, featured.html. Update the link there if renaming or moving the doc file.
 ---
 
@@ -12,14 +15,17 @@ Follow the links in the table below to see the release notes you want:
 
 | Type of Deployment | Last Updated |
 | --- | --- |
-| [Mendix Cloud](/releasenotes/developer-portal/mendix-cloud/) | May 14, 2024 |
-| [Mendix for Private Cloud](/releasenotes/developer-portal/mendix-for-private-cloud/) | April 4, 2024 |
-| [SAP Business Technology Platform (SAP BTP)](/releasenotes/developer-portal/sap-cloud-platform/) | November 17, 2022 |
-| [Other Deployment Options](/releasenotes/developer-portal/on-premises/) | December 12, 2022 |
+| [Mendix Cloud](/releasenotes/developer-portal/mendix-cloud/) | February 1, 2026 |
+| [Mendix on Kubernetes](/releasenotes/developer-portal/mendix-for-private-cloud/) | January 29, 2026 |
+| [Mendix on Azure](/releasenotes/developer-portal/mendix-on-azure/) | January 29, 2026 |
+| [SAP Business Technology Platform (SAP BTP)](/releasenotes/developer-portal/sap-cloud-platform/) | September 28, 2025 |
+| [Other Deployment Options](/releasenotes/developer-portal/on-premises/) | September 15, 2023 |
 
 The release notes for the buildpacks are held in their respective GitHub repos:
 
 * [Mendix Cloud Foundry Buildpack – cf-mendix-buildpack](https://github.com/mendix/cf-mendix-buildpack/releases)
 * [Mendix Buildpack for Docker – docker-mendix-buildpack](https://github.com/mendix/docker-mendix-buildpack/releases)
 
-To see the current status of the Mendix Clouds and Mendix for Private Cloud, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
+You can find the release notes for the Windows service on the [Marketplace](https://marketplace.mendix.com/link/component/223425). 
+
+To see the current status of the Mendix Clouds and Mendix on Kubernetes, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.

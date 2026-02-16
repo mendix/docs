@@ -5,7 +5,7 @@ weight: 70
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The **access rules** of an entity define what a user is allowed to do with objects of the entity. Users can be allowed to create and/or delete objects, and to view and/or edit member values. A member is an attribute or an association of an entity. Furthermore, the set of objects available for viewing, editing, and removing can be limited by means of an [XPath constraint](/refguide8/xpath-constraints/).
 
@@ -17,7 +17,7 @@ Access rules are not inherited from an entity's [generalization](/refguide8/enti
 If the entity has a generalization with access rules defining XPath constraints, these will not apply to its specializations and will therefore not limit its visibility.
 {{% /alert %}}
 
-## 2 Properties
+## Properties
 
 Access rules are defined via entity's **Properties** > **Access rules**, or on the **Access rules** tab of the entity dialog. 
 
@@ -40,37 +40,37 @@ Access rules properties consist of the following sections:
 * [Access rights](#access-rights)
 * [XPath constraint](#xpath-constraint)
 
-### 2.1 Documentation Section {#documentation}
+### Documentation Section {#documentation}
 
 In **Documentation**, you can describe the intention of the access rule. This helps to keep access rules comprehensible, especially in the case of non-trivial XPath constraints.
 
-### 2.2 Rule Applies to the Following Module Roles Section {#module-roles}
+### Rule Applies to the Following Module Roles Section {#module-roles}
 
-#### 2.2.1 Roles
+#### Roles
 
 All module roles are listed, and those to which this access rule applies are checked. All users that have at least one of the checked module roles get the access rights that the rule defines.
 
-#### 2.2.2 Select / Deselect All
+#### Select / Deselect All
 
 You can easily select, or deselect, all module roles using this checkbox.
 
-### 2.3 Access Rights Tab{#access-rights}
+### Access Rights Tab{#access-rights}
 
 The **Access rights** tab allows you to assign rights to users with the selected module roles.
 
-#### 2.3.1 Create and Delete Rights Section
+#### Create and Delete Rights Section
 
-##### 2.3.1.1 Allow creating new objects
+##### Allow creating new objects
 
 If **Allow creating new objects** is checked, users are allowed to create new objects of this entity.
 
-##### 2.3.1.2 Allow deleting existing objects
+##### Allow deleting existing objects
 
 If **Allow deleting existing objects** is checked, users are allowed to delete existing objects of this entity.
 
 The set of objects that can be deleted can be limited by using an [XPath constraint](#xpath-constraint).
 
-#### 2.3.2 Member Read and Write Rights Section
+#### Member Read and Write Rights Section
 
 **Member read and write rights** define the access rights for every member ([attribute](/refguide8/attributes/) or [association](/refguide8/associations/)) of the entity. These access rights indicate whether users are allowed to view and/or edit the member's value. The set of objects to which these rights apply can be limited by using an [XPath constraint](#xpath-constraint).
 
@@ -92,7 +92,7 @@ For example, a customer is allowed to view the discount, but is not allowed to e
 
 {{< figure src="/attachments/refguide8/modeling/domain-model/entities/access-rules/access-rule-discount-read.png" class="no-border" >}}
 
-### 2.4 XPath Constraint Tab {#xpath-constraint}
+### XPath Constraint Tab {#xpath-constraint}
 
 An [XPath constraint](/refguide8/xpath-constraints/) can be used to constrain the set of objects to which the access rule applies. If the XPath constraint is empty, the rule applies to all objects of the entity.
 
@@ -102,7 +102,7 @@ For example, the **Customer** entity is a specialization of the **User** entity.
 
 A logged-in customer is allowed to view personal orders, but is not allowed to view the orders of other customers. This is accomplished by using the following XPath constraint in the access rule of the **Order** entity:
 
-```java {linenos=false}
+```java
 [Module.Order_Customer = '[%CurrentUser%]']
 ```
 

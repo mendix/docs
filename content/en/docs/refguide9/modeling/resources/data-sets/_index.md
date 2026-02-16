@@ -5,20 +5,20 @@ weight: 50
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 A dataset can be used to define the data shown in [reports](/refguide9/report-widgets/) in [pages](/refguide9/pages/).
 
 A dataset is defined using either an [OQL query](/refguide9/oql/) or a custom [Java action](/refguide9/java-actions/). To constrain a dataset, parameters can be defined which can be used in the OQL query or Java action.
 
-## 2 General
+## General
 
 Fields for datasets contain the following properties:
 
 * **Name** – This is the name of the dataset.
 * **Description** – This is the description of the dataset, it is only relevant as documentation.
 
-## 3 Source
+## Source
 
 * **OQL query** – This is the [OQL query](/refguide9/oql/) which defines the dataset.
 * **Java action** – This is the interface of the Java action which returns a dataset. The columns and [data types](/refguide9/data-types/) of the columns need to be specified in Studio Pro. Based on this specification, Studio Pro will create a template for this action.
@@ -33,7 +33,7 @@ GROUP BY CustomerObj/Name
 SELECT CustomerObj/Name As Name, SUM(OrderObj/TotalAmount) As TotalAmount
 ```
 
-## 4 Parameters
+## Parameters
 
 A dataset can have multiple parameters. Parameters are used to filter / manipulate datasets. Security on datasets is configured based on the parameters. In a Java action, the parameters are used in the generated template.
 

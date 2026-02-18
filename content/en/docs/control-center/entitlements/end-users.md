@@ -1,7 +1,7 @@
 ---
-title: "Users"
-url: /control-center/users/
-description: "Describes the Users page in the Mendix Control Center."
+title: "End-Users"
+url: /control-center/end-users/
+description: "Describes the End-Users page in the Mendix Control Center."
 weight: 30
 no_list: false 
 beta: true
@@ -14,6 +14,8 @@ This feature is in Private Beta. For more information, refer to [Release Status]
 ## Introduction
 
 End-user metering is a process that accurately measures the number and types of users interacting with Mendix apps. This is important for ensuring transparency and compliance with license agreements, while optimizing licensing costs. 
+
+The **End-Users** page allows you to keep track of end-user licenses and usage for all apps across your company.
 
 ### User Types
 
@@ -30,24 +32,42 @@ For details, refer to [...](link to the main User Metering page in Deployment/Li
 
 ### User Metering Process
 
-User metering consists of an automated four-step process:
+User metering consists of an automated five-step process:
 
-1. Data collection – All apps deployed to Mendix Cloud and Mendix Cloud Dedicated automatically send usage data to the Mendix platform.
-2. Data processing – The Mendix platform processes the data collected during the first step.
-3. User classification – Mendix classifies users as:
+1. In-app user classification – Your app logic is responsible for creating and maintaining user records.
+2. Data collection – All apps deployed to Mendix Cloud and Mendix Cloud Dedicated automatically send usage data to the Mendix platform.
+3. Data aggregation and deduplication – The Mendix platform processes the data collected during the first step.
+4. User classification – Mendix classifies users as:
 
     * External users
     * Single-App users
     * Multi-App internal users    
-    For details, refer to [...](link to the main User Metering page in Deployment/Licensing).
 
-4. Reporting – End-of-month usage reports are generated and made available on the 1st of every month for the previous month.
+5. Reporting – End-of-month usage reports are generated and made available on the 1st of every month for the previous month.
 
 For details on the user metering process, refer to [[...](link to the main User Metering page in Deployment/Licensing).
 
 ## Overview Tab
 
-[...]
+The **Overview** tab displays end-user entitlements, and named user details. It also allows you to assign Internal single-app user packs.
+
+### End-User Entitlements
+
+The card in this section display the number of users who have licensing entitlements, grouped by user type. Each card also includes the expiration date of those licenses.
+
+The information is updated daily.
+
+### Named Users
+
+[…]
+
+### Assigning Single-App Internal User Packs
+
+If you have single-app internal user packs in your account, you can assign them to apps deployed to production. Follow these steps to do that:
+
+1. In the **Named Users** list, identify the app to which you want to assign a single-app internal user pack, and click **Assign** at the end of its row.
+2. In the **Assign Internal Single-App User Pack** dialog box, select a pack from the **Select Single-app User Pack** list.
+3. Click **Confirm**.
 
 ## Usage Report Tab
 

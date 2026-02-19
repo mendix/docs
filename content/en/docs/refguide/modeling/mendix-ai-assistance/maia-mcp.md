@@ -13,45 +13,45 @@ description: "Describes the features in Maia MCP Client."
 To use Maia MCP Client, an internet connection and signing in to Studio Pro are required.
 {{% /alert %}}
 
-Maia MCP Client, available from Studio Pro 11.8, helps you connect Maia to external [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) servers. Once connected, Maia can call tools provided by these servers during chat — for example, querying an external API, looking up design assets, or interacting with third-party services. You can find available MCP servers on the [MCP servers directory](https://modelcontextprotocol.io/examples). For more details on what is not yet supported, see the [Limitations](#limitations) section below.
+Maia MCP Client, available from Studio Pro 11.8, helps you connect Maia to external [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) servers. Once connected, Maia can call tools provided by these servers during chat — for example, querying an external API, looking up design assets, or interacting with third-party services. You can find available MCP servers on the [MCP servers directory](https://modelcontextprotocol.io/examples). 
+
+For information on the current limitations, see the [Limitations](#limitations) section below.
 
 ## Using MCP Client {#using-mcp-client}
 
-To open the MCP Client panel, click the **Configure MCP Connections** ({{% icon name="plug" %}}) icon in the Maia toolbar.
+To open the MCP Client panel, click the **Configure MCP Connections** ({{% icon name="plug" %}}) icon in the **Maia** toolbar.
 
 ### Adding an MCP Server {#adding-server}
 
 To add a server, fill in the following fields and click **Add**:
 
-| Field | Description |
-| --- | --- |
-| **Server Name** | A display name. Must be unique among your configured servers. |
-| **URL** | The server endpoint. Must use `https://` or `http://`. |
-| **Connection type** | **HTTP (Streamable)** for most servers, or **SSE (Legacy)** for older servers that use Server-Sent Events instead of Streamable HTTP. |
-| **Authentication** | See [Authentication](#authentication) below. |
+* **Server Name** — A display name. Must be unique among your configured servers.
+* **URL** — The server endpoint. Must use `https://` or `http://`.
+* **Connection type** — **HTTP (Streamable)** for most servers, or **SSE (Legacy)** for older servers that use Server-Sent Events instead of Streamable HTTP.
+* **Authentication** — See the [Authentication](#authentication) section below.
 
 #### Authentication {#authentication}
 
 Choose how Studio Pro authenticates with the MCP server:
 
-* **No Auth** — for servers that do not require credentials.
+* **No Auth** — select this for servers that do not require credentials.
 * **Bearer Token** — paste an API token or personal access token. The token is stored securely and is not exposed after entry.
 * **OAuth 2.1** — a browser window opens so you can authorize Studio Pro with the server's provider. Two optional fields appear:
     * **Client ID** — required if the server does not support automatic client registration.
     * **Client Secret** — required by some providers (for example, GitHub).
 
-Most major providers — including GitHub and Figma — do not support automatic client registration. For these, you must create an OAuth application in the provider's developer portal first and enter the **Client ID** (and **Client Secret** if required).
+Most major providers — including GitHub and Figma — do not support automatic client registration. For these, you must first create an OAuth application in the provider's developer portal and then enter the **Client ID** (and **Client Secret** if required).
 
 ##### Example: Connecting to GitHub Copilot MCP {#github-example}
 
 1. Go to [GitHub Developer Settings](https://github.com/settings/developers) and click **New OAuth App**.
-2. Fill in:
-    * **Application name** — for example `Mendix Studio Pro`
-    * **Homepage URL** — for example `https://mendix.com`
-    * **Authorization callback URL** — `http://localhost:{port}/mcp/oauth/callback` (see [Callback URL](#callback-url))
+2. Fill in the following information:
+    * **Application name** — for example, `Mendix Studio Pro`
+    * **Homepage URL** — for example, `https://mendix.com`
+    * **Authorization callback URL** — `http://localhost:{port}/mcp/oauth/callback` (see the [Callback URL](#callback-url) section below)
 3. Click **Register application**, then copy the **Client ID**.
 4. Click **Generate a new client secret** and copy it — GitHub shows it only once.
-5. In Studio Pro, add a server with:
+5. In Studio Pro, add a server with the following details:
     * **URL** — `https://api.githubcopilot.com/mcp/`
     * **Authentication** — **OAuth 2.1**
     * **Client ID** and **Client Secret** — from the steps above
@@ -63,7 +63,7 @@ For Figma MCP, the simplest option is to generate a personal access token in Fig
 
 ##### Callback URL {#callback-url}
 
-The OAuth callback URL format is `http://localhost:{port}/mcp/oauth/callback`. The port is assigned by Studio Pro's built-in web server. You can find the actual port in the callback URL that Studio Pro generates when you add the server.
+The OAuth callback URL format is `http://localhost:{port}/mcp/oauth/callback`. The port is assigned by Studio Pro's built-in web server. You can find the actual port within the callback URL that Studio Pro generates when you add the server.
 
 {{% alert color="info" %}}
 If your OAuth app requires a fixed callback URL, you can start Studio Pro with the `--web-server-port=45678` command-line flag to use a specific port.
@@ -73,7 +73,7 @@ If your OAuth app requires a fixed callback URL, you can start Studio Pro with t
 
 Each server appears as a card in the MCP Client panel:
 
-* **Enable or disable** a server using the checkbox. Disabling disconnects it and removes its tools from Maia.
+* **Enable or disable** a server using the checkbox. Disabling a server disconnects it and removes its tools from Maia.
 * **Expand** the card to see its tools.
 * **Remove** a server from the expanded view.
 
@@ -87,7 +87,7 @@ Each server appears as a card in the MCP Client panel:
 | Red | Error. Check the error message for details. |
 | Grey | Disconnected or disabled. |
 
-If a connection drops, Studio Pro reconnects automatically. During reconnection, the status shows the retry progress, for example **Retrying (2/5)...**. If all retries fail, disable and re-enable the server to try again.
+If a connection drops, Studio Pro reconnects automatically. During reconnection, the status shows the retry progress (for example, **Retrying (2/5)...**). If all retries fail, disable and re-enable the server to try again.
 
 ### Managing Tools {#managing-tools}
 
@@ -109,7 +109,7 @@ You see the answer from Maia, not the raw tool output.
 
 | Problem | Solution |
 | --- | --- |
-| "This server requires manual OAuth client registration" | Register an OAuth app with the provider and enter the Client ID. See the [GitHub example](#github-example). |
+| "This server requires manual OAuth client registration" | Register an OAuth app with the provider and enter the Client ID. See the [GitHub example](#github-example) given above. |
 | "Token exchange failed" or "incorrect_client_credentials" | Verify your Client ID and Client Secret. Check that the callback URL matches. |
 | Authentication stuck in "Authenticating..." | Check that no firewall blocks localhost. Remove the server and add it again to restart the flow. |
 | Connection fails immediately | Verify the URL. Try switching between **HTTP (Streamable)** and **SSE (Legacy)**. |
@@ -118,10 +118,10 @@ You see the answer from Maia, not the raw tool output.
 
 Maia MCP Client has the following limitations:
 
-* Only MCP tools are supported. Other MCP capabilities such as resources and prompts are not available.
-* Only remote servers (HTTP or SSE). Local stdio servers are not supported.
+* Only MCP tools are supported. Other MCP capabilities, such as resources and prompts, are not available.
+* Only remote servers (HTTP or SSE) are supported. Local stdio servers are not supported.
 * Tools from new servers are disabled by default.
-* OAuth requires localhost access for the callback URL.
+* OAuth requires localhost access for the [callback URL](#callback-url).
 * Server configurations are stored per project and are not shared across projects.
 
 ## Read More

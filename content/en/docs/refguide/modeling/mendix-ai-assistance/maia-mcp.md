@@ -27,7 +27,7 @@ To add a server, fill in the following fields and click **Add**:
 | --- | --- |
 | **Server Name** | A display name. Must be unique among your configured servers. |
 | **URL** | The server endpoint. Must use `https://` or `http://`. |
-| **Connection type** | **HTTP (Streamable)** for most servers, or **SSE (Legacy)** for older servers that do not support Streamable HTTP. |
+| **Connection type** | **HTTP (Streamable)** for most servers, or **SSE (Legacy)** for older servers that use Server-Sent Events instead of Streamable HTTP. |
 | **Authentication** | See [Authentication](#authentication) below. |
 
 #### Authentication {#authentication}

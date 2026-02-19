@@ -30,7 +30,7 @@ To achieve the best results when using Maia to generate microflows, consider the
 
 ### Destructive Operations Are Not Supported
 
-Maia for Microflows can create objects and flows and change simple ("primitive") settings, but it cannot delete objects or replace complex configuration settings.
+Maia for Microflows can create objects and flows and change simple ("primitive") settings, but it cannot delete objects or replace complex configuration settings. For example, for existing objects, Maia can change variable names, move objects, or reconnect flows, but it cannot delete objects or flows, or change the activity types.
 
 ### Variability in Results
 

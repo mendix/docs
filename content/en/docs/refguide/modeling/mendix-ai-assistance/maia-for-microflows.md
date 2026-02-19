@@ -3,35 +3,34 @@ title: "Maia for Microflows"
 url: /refguide/maia-for-microflows/
 weight: 75
 description: "Describes the features in Maia for Microflows."
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 ## Introduction
 
 {{% alert color="info" %}}
-To use Maia for Microflows, an internet connection and signing in to Studio Pro are required.
+This feature is released as part of [Make Make](/refguide/maia-make/) capabilities in Studio Pro 11.8. 
 {{% /alert %}}
 
-Maia for Microflows is an AI-powered feature designed to assist users in generating microflow logic. By leveraging AI, it aims to streamline the process of creating microflows, making development more efficient.
+Maia for Microflows is an AI-powered capability that is available when using [Maia Make](/refguide/maia-make/) in Studio Pro. Maia Make is a unified conversational interface within Studio Pro that consolidates all AI-assisted development capabilities into a single chat experience. 
+
+With the microflow generation capability, you can leverage Maia to generate microflow logic efficiently from your text input. It is a powerful tool for quickly setting up both simple and complex microflows, with the goal of providing ready-to-use logic that minimizes the need for manual adjustments.
 
 ## Using Maia for Microflows
 
-Maia for Microflows leverages can generate microflow logic efficiently from your text input. It is a powerful tool for quickly setting up both simple and complex microflows, with the goal of providing ready-to-use logic that minimizes the need for manual adjustments.
+Open the Maia Make conversational interface in Studio Pro to access its microflow generation capability. Use natural language to describe your goal, Maia will generate the microflows for you, including XPath constraints and expressions. See the section below for text input best practices.
 
 ### Best Practices for Text Input
 
-To achieve the best results when using Maia for Microflows, consider the following guidelines for your text input:
+To achieve the best results when using Maia to generate microflows, consider the following guidelines for your text input:
 
-Be specific: Clearly describe the desired outcome and the steps involved. For example, instead of "create a user," try "create a new user object, set its name attribute to 'John Doe', and commit it."
-
-Use keywords: Incorporating terms relevant to microflow actions, such as "create object," "retrieve," "change object," "show message," "loop," or "decision," can help correct microflow generation.
-
-Provide context: If your microflow interacts with existing entities or attributes, mention them in your input.
+* Be specific: Clearly describe the desired outcome and the steps involved. For example, instead of using *Create a user*, use *Create a new user object, set its name attribute to 'John Doe', and commit it*.
+* Use keywords: Incorporate terms relevant to microflow activities, such as *create object*, *retrieve*, *change object*, *show message*, *loop*, or *decision*. This can help with correct microflow generation.
+* Provide context: If your microflow interacts with existing entities or attributes, mention them in your text input.
 
 ## Limitations
 
-### Destructive operations are not supported
+### Destructive Operations Are Not Supported
 
-Maia for Microflows can create objects and flows and change simple ("primitive") settings, but cannot delete objects or replace complex configuration settings.
+Maia for Microflows can create objects and flows and change simple ("primitive") settings, but it cannot delete objects or replace complex configuration settings.
 
 ### Variability in Results
 

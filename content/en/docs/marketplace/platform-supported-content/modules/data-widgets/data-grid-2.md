@@ -617,7 +617,7 @@ This allows developers to build logic that operates on one or many items.
 #### Example use cases
 - **Mark as Done**: A button triggers a microflow that updates the status of selected tasks.
 - **Delete Selected**: A button deletes all selected records.
-- **Export Selected**: A button exports selected rows to a file.
+- **Export Selected**: A button triggers a microflow or nanoflow that exports the selected list to a file.
 
 #### Configuration
 1. Enable selection in the Data Grid 2 widget.

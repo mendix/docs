@@ -31,17 +31,7 @@ To install and configure the Workstation Connector, perform the following steps:
 
 1. Open an existing app to extend with Workstation functionality in Mendix Studio Pro, or create a new app.
 2. Import the [Mendix Workstation Connector](https://marketplace.mendix.com/link/component/247460) from the Mendix Marketplace.
-3. Configure the station in Workstation Management by performing the following steps:
-
-    1. Navigate to the **Workspaces** page in [Workstation Management](https://workstation.home.mendix.com/).
-    2. Click **Create Workspace**, or select an existing workspace from the overview.
-    3. Click **Create Station**.
-    4. Enter a name for the station and optionally select or create a group to categorize it, such as *Assembly*.
-    5. Add devices in the **Devices** section.
-    6. Click **Register Computer** to register your computer.
-    7. Click **Download** to navigate to the Workstation Client listing in the Marketplace, download the Client installer for Windows, install it, and launch it.
-    8. Copy the registration token and paste it into the [Workstation Client](/mendix-workstation/installation/) registration field.
-
+3. Register one or more Workstation Clients. For more information, see [Registering Workstation Clients](/mendix-workstation/register/).
 4. Configure your app as an allowed app by performing the following steps:
 
     1. In your app go to [App Security](/refguide/app-security/#user-roles) and assign the module role **StationConnector.Administrator** to the Administrator user role.

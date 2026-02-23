@@ -329,20 +329,21 @@ Mendix Pipeline failure notifications only send if the user who triggered the Me
 
 ## Additional Notes
 
-Mendix Pipelines time out if they run for more than three hours. In other words, if the operations in your Mendix Pipeline cumulatively take longer than three hours to complete, then the Mendix Pipeline will fail.
+Mendix Pipelines time out if they run for more than three hours. In other words, if the cumulative execution time of all operations in your Mendix Pipeline exceeds this limit, the Mendix Pipeline will fail.
 
-Mendix automatically creates a webhook on your behalf to trigger Mendix Pipelines based on [Teamserver push (Git)](/developerportal/deploy/webhooks/#teamserver-push-git):
+Existing Mendix Pipeline users can view previously created webhooks that trigger Mendix Pipelines from [Teamserver push (Git)](/developerportal/deploy/webhooks/#teamserver-push-git) by clicking **Webhooks** in the [navigation pane](/developerportal/#navigation-pane).
 
-* This webhook is not visible to first-time Mendix Pipeline users. 
-* For existing Mendix Pipeline users, you can view this webhook by clicking **Webhooks** in the [navigation pane](/developerportal/#navigation-pane). Do not delete this webhook. Deleting it causes failures for Mendix Pipelines that rely on the Teamserver push (Git) trigger.
+These webhooks can be safely deleted without affecting the functionality of your Teamserver push (Git) triggers and are not visible to first-time Mendix Pipeline users.
 
 ### Known Issues and Limitations
 
-Mendix Pipeline runs are not picked up and executed if the Mendix Pipelines functionality is undergoing maintenance.
+* **Mendix Pipelines maintenance behavior** – Mendix Pipeline runs are not picked up and executed if the Mendix Pipelines functionality is undergoing maintenance.
 
-It is not currently possible to add the same Mendix Pipeline step more than once in a Mendix Pipeline. This will be improved in the future.
+* **Duplicate pipeline steps not supported** – It is not currently possible to add the same Mendix Pipeline step more than once in a Mendix Pipeline. This will be improved in the future.
 
-In case of a system outage, Mendix Pipelines triggered during that time are not executed.
+* **System outages prevent pipeline execution** – In case of a system outage, Mendix Pipelines triggered during that time are not executed.
+
+* **Pipelines continue to run after app offboarding** – If an app is offboarded while pipelines are still configured, they will continue to run on their automated schedules and generate failure notifications. To prevent this, active pipelines must be deactivated during the app offboarding process, before the app is removed.
 
 ## Read More
 

@@ -113,10 +113,10 @@ The **Generative AI** section contains the following settings:
 * **Enable Start with Maia** – When enabled, you can use the **Start with Maia** starting point in Studio Pro to help you create an app. For more information on how to use this feature, see [Start with Maia](/refguide/start-with-maia/). It is enabled by default.
 * **Enable Maia Explain** – When enabled, you can use it to explain a microflow or a nanoflow in the logic editors. For more information on how to use this feature, see [Maia Explain](/refguide/maia-explain/). It is enabled by default.
 * **Enable Maia for Domain Model** – when enabled, you can use it to generate a new domain model or to explain and improve an existing one. For more information on how to use this feature, see [Maia for Domain Model](/refguide/maia-for-domain-model/). It is enabled by default.
-* **Enable Maia for OQL**– when enabled, you can use it to generate and manage OQL (Object Query Language) queries through an intuitive interface. For more information on how to use this feature, see [Maia for OQL](/refguide/maia-for-oql/). It is disabled by default.
+* **Enable Maia for OQL Generation**– when enabled, you can use it to generate and manage OQL (Object Query Language) queries through an intuitive interface. For more information on how to use this feature, see [Maia for OQL](/refguide/maia-for-oql/). It is disabled by default.
 * **Enable Maia for Pages** – when enabled, you can use it to generate a new page or to explain and improve an existing one. For more information on how to use this feature, see [Maia for Pages](/refguide/maia-for-pages/). It is disabled by default.
 * **Enable Maia for Workflows** – when enabled, you can use it to generate workflows by adding and configuring activities. For more information on how to use this feature, see [Maia for Workflows](/refguide/maia-for-workflows/). It is disabled by default.
-* **Enable Translation Generator** – when enabled, you can use it to translate your model into different languages through the **Batch translate** option under the **Language** menu, or to translate [system texts](/refguide/system-texts/) for you. For more information, see [Translation Generator](/refguide/translation-generator/). It is disabled by default.
+* **Enable translation generator** – when enabled, you can use it to translate your model into different languages through the **Batch translate** option under the **Language** menu, or to translate [system texts](/refguide/system-texts/) for you. For more information, see [Translation Generator](/refguide/translation-generator/). It is disabled by default.
 
 ### In-Editor Recommender
 
@@ -136,7 +136,9 @@ The **Best Practice Recommender** section contains the following settings:
 
 ## Model Tab
 
-### When Prompted by a Widget to Automatically Fill Its Contents, Select 'Yes' by Default
+### Pages
+
+#### When Prompted by a Widget to Automatically Fill Its Contents, Select 'Yes' by Default
 
 This setting defines the default response to the question whether to automatically fill the contents of a data widget. This question is asked, for example, when dragging an Entity onto a Data View widget. When enabled, the pre-selected answer is **yes**; otherwise, it is **no**.
 
@@ -263,7 +265,7 @@ When a pop-up dialog is resized, Studio Pro will remember the new size and use i
 
 ## Advanced Tab
 
-### Rendering {#rendering}
+### Rendering Settings {#rendering}
 
 Hardware and driver issues may cause performance problems when running Studio Pro. These issues can appear in form of dialog boxes opening and closing much more slowly than expected, and general slowness of the UI. If case the hardware problems cannot be solved, it is possible to mitigate these issues by turning the **Enable software rendering mode** setting on. This option is available for Native UI and Web Content. For Web Content, you can select **Auto**, which enables software rendering mode automatically when running on Parallels or another virtual machine.
 
@@ -277,7 +279,7 @@ Sometimes the computer running Studio Pro cannot access the internet directly, b
 
 When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro sends usage data to Mendix that allows Mendix to identify issues and improve the user experience. The usage data does not contain sensitive information. It is possible to disable this feature, but it may affect the behavior of some features, prevent Mendix from identifying issues reported by the user, or affect tracking issues that are not reported yet. This setting is machine-specific and changing this feature does not affect any existing installed version.
 
-### Visual Builder for XPath Constraints{#visual-builder}
+### XPath {#visual-builder}
 
 **Visual Builder** is the default way to construct XPath constraints, but you can change the default by clearing **Enable the XPath Builder as the default XPath constraint editor**.
 
@@ -299,11 +301,7 @@ When **Extension Development** mode is enabled, you can start Studio Pro without
 
 Select this option to use the modernized version of the App Explorer. You must restart Studio Pro to use this feature.
 
-### History Pane {#history-pane}
-
-Select this option to use the non-blocking, searchable History pane instead of the blocking History window. This feature is currently in beta.
-
-### Runtime Console
+### Console
 
 Select this option to use the modernized (web) Runtime console. You must restart Studio Pro to use this feature. 
 
@@ -323,19 +321,11 @@ You can publish data as a GraphQL service. When you enable this feature, you can
 
 This setting allows you to set the beta version as the default editor.
 
-### Online Synchronization Mode
-
-This setting, currently in beta, allows entities to be used in offline navigation profiles without requiring data synchronization. This enables app developers to use entity data on pages without synchronizing the data of those entities to the offline database. This mode requires an available connection to the server. For more details, see [Online Synchronization Mode](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/online-sync-mode/).
-
 ### System Texts Editor
 
 This option allows you to use the web version of the system texts editor. It is enabled by default.
 
 If Translation Generator is also enabled, you can use it in this editor as well. For more information, see the [Generating Translation for System Texts](/refguide/translation-generator/#translate-system-text) section in *Translation Generator*.
-
-### Toolbox
-
-Enable this setting to use the modernized toolbox. This requires restart of Studio Pro.
 
 ## Read More
 

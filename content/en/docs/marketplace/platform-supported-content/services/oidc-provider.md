@@ -176,7 +176,7 @@ Every end-user that is known in **Admin** module also needs to be known in the O
     1. **Edit** the **Administrator** module role.
     1. Give **Read** **Access rights** to the **AccountDetail_Account** association.
 1. Open the **Runtime** tab of the app's **Settings**.
-1. Add the **OpenIDConnectProvider.ASU_Start_All** microflow as an [After Startup](/refguide/app-settings/#after-startup) microflow.
+1. Add the **OpenIDConnectProvider.ASU_Start_All** microflow as an [After Startup](/refguide/runtime-tab/#after-startup) microflow.
 1. Finally, ensure that your app has the following Administration navigation items:
 
     | Caption | Action | User Roles |
@@ -193,20 +193,14 @@ Every end-user that is known in **Admin** module also needs to be known in the O
 
 Perform the rest of configuration through the app:
 
-1. Deploy and run the app.
-1. Login as an administrator.
-1. Use the **Accounts** navigation item.
-1. Click **New** and create the user account (or accounts) you need in your IAM Broker — for example, a new active account with the **User role** set to **User**.
-1. Use the **OpenID Connect** navigation item.
-1. Open the **Server Keys** tab.
-1. Click **New Key**.
-1. Open the **Scopes** tab.
-1. For the authorization code grant, create **New** scopes, enter `openid` as the **Name**, and set the **Scope type** to **Standard**. You need to use your own value in the **Name** field for the client credential grant type.
+1. Deploy your application and log in with the application Admin account. 
+2. Click **New** in the **Accounts** navigation item to create the user account (or accounts) you need in your IAM Broker. For example, a new active account with the **User role** set to **User**.
+3. Click **New Key** on **Server Keys** tab of the **OpenID Connect** navigation item.
+4. For the authorization code grant, create **New** scopes, enter `openid` as the **Name**, and set the **Scope type** to **Standard**. You need to use your own value in the **Name** field for the client credential grant type.
 
     This page sets up a single list of all the scopes that are known to the OIDC Provider service. For each client, you can then choose the scopes used by that specific client. See [Configuring Centralized Authorization](#configuring-authorization) for more information on which scopes you should set.
 
-1. Open the **Clients** tab.
-1. Click **New Client Registration**.
+5. Open the **Clients** tab and click **New Client Registration**.
 
     You can register a new client (an app using the OIDC SSO module for sign in which identifies this app as its IdP) in one of the two ways shown below in [Automatic Client Registration](#automatic-client-registration).
 
@@ -459,7 +453,7 @@ You need to configure the OIDC SSO module in your app which is using the IAM bro
 1. Create an app containing the OIDC SSO module as described in [OIDC SSO](/appstore/modules/oidc/).
 
     {{% alert color="info" %}}If you are testing locally, you will need to run your OIDC client in a separate copy of Studio Pro and on a different port from the IAM broker.
-    In the [Server](/refguide/configuration/#server) tab of the active configuration of your client app, change the **Runtime port** and **Admin port** to be different from those of your IAM broker app. For example, if your IAM broker is running using `8080` and `8090`, you could use `8081` and `8091` respectively.
+    In the [Server](/refguide/configurations-tab/#server) tab of the active configuration of your client app, change the **Runtime port** and **Admin port** to be different from those of your IAM broker app. For example, if your IAM broker is running using `8080` and `8090`, you could use `8081` and `8091` respectively.
     {{% /alert %}}
 
     1. When you get to [IdP Configuration](/appstore/modules/oidc/#idpconfiguration), you already have the values from the previous section.

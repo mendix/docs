@@ -10,11 +10,11 @@ description: "Describes how to use Teamcenter services that are not included in 
 
 The Teamcenter connector provides two APIs for calling any service operation that is part of Teamcenter Services.
 
-* **CallTeamcenterService** — Java action
+* **CallTeamcenterService** – Java action
 
   This Java action can be used directly in any microflow and maps the Mendix domain entities to or from the JSON data structures that are used by Teamcenter Services operations.
 
-* **TcConnection.callTeamcenterService** — Java method
+* **TcConnection.callTeamcenterService** – Java method
 
   This Java method can only be used from within the Java code and requires that the caller create and parse JSONObjects directly for the call. The **TcConnector** class also exposes an entity version of the **callTeamcenterService** method that matches the Java action.
 
@@ -178,7 +178,7 @@ Following is the operation mapping file for createWorkflow SOA call:
 
 Mendix Domain Model entities are mapped to Teamcenter service operation data structures based on naming conventions. The Teamcenter structure element names (keys in JSON document) map one-to-one to the entity member (attributes or associations) names, with the following caveats:
 
-* The entity member name is prefixed with an underscore '_', for example '_type'. In this case the '_' is ignored, thus matching the Teamcenter name of 'type'.
+* The entity member name is prefixed with an underscore '\_', for example '\_type'. In this case the '\_' is ignored, thus matching the Teamcenter name of 'type'.
 * The entity member name is suffixed with '__XXX', for example, 'phone__Home'. In this case the '__Home' is ignored, thus matching the Teamcenter name of 'phone'.
 
 When traversing entities across associations, the entity names are not used. Only the associations between entities must match or be mappable.

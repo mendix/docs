@@ -53,17 +53,17 @@ General Availability means that a feature is available for all users. This type 
 | Studio Pro Enhancements | Included in monthly releases.<br/>Refer to release blogs. |
 | Multilingual Studio Pro and Platform: Chinese, Japanese, Korean | General Availability: Mx 11.0 |
 | Multilingual Studio Pro and Platform: Portuguese | Public Beta: Mx 11.0 |
-| Module updates while retaining customizations | General Availability: Mx 11.12 |
-| Easy comparison of revisions (textual diffing) | Public Beta: Mx 11.9 |
+| Module updates while retaining customizations | Public Beta: Mx 11.21 |
+| Easy comparison of revisions (textual diffing) | Public Beta: Mx 11.10 |
 | Searchable commit history | Public Beta: Mx 11.4 <br/>General Availability: Mx 11.6 |
-| Merge Requests (aka Pull requests) | Public Beta: H2 2026 |
+| Merge Requests (aka Pull requests) | Public Beta: Mx 12.x |
 | OpenTelemetry Tracing | General Availability: Mx 11.12 |
 | Atlas 4 UI Framework | General Availability: Mx 11.0 |
 | Progressive Web Apps Store Publishing | Public Beta: Mx 11.12 |
 | Access data in offline apps while syncing | General Availability: Mx 11.6 |
 | Embed a Mendix application into another Mendix application as a web component | Public Beta: 2027 |
 | Theme Customizer | General Availability: Mx 11.9 |
-| Menditect UI testing | Public Beta: Q2 2025<br/>General Availability: H2 2025 |
+| Menditect UI testing | Public Beta: Q2 2025<br/>General Availability: December 2025 |
 | Bulk DML | General Availability: Mx 11.7 |
 | Increased decimal precision | General Availability: Mx 11.6 |
 | Consumed OpenAPI and API discovery | Public Beta: Q2 2025<br/>General Availability: H2 2026 |
@@ -105,7 +105,7 @@ General Availability means that a feature is available for all users. This type 
 | Central Certificate Management | General Availability: Mx 11.6 |
 | Project Categorization | General Availability: Mx 11.4 |
 | Policies | Public Beta: Mx 11.12 |
-| Central Audit Logs | General Availability: Mx 11.6 |
+| Central Audit Logs | General Availability: Mx 11.10 |
 | Mendix Cloud on AWS European Sovereign Cloud | General Availability: Mx 11.6 |
 
 ## Deployment

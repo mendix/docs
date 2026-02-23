@@ -157,7 +157,6 @@ After scheduling, once the plan change process starts:
 2. If the request fails required validations, the status changes to **Ineligible**.
 3. If the request passes all required validations, the status progresses to **Completed** (if successful) or **Failed** (if an execution error occurs).
  
-
 {{% alert color="info" %}}
 After a plan change is applied, you cannot change to a new plan for the same environment for the next 6 hours.
 {{% /alert %}}

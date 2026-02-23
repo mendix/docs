@@ -177,7 +177,7 @@ Because Mendix has no control over the context in which the buildpack or m2ee to
 
 If you require additional features or other changes in a buildpack or m2ee tools, you can submit a Pull Request, create an Issue in the GitHub repository, or contact [Mendix Support](https://support.mendix.com/).
 
-If you want to run Mendix apps on a Windows server, you will need the [Windows Service](/releasenotes/studio-pro/windows-service/). The release notes and installation manual can be found in the [Windows Service](/releasenotes/studio-pro/windows-service/) release notes. Read more about installing on systems running Windows operating systems in [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/).
+If you want to run Mendix apps on a Windows server, you will need the [Windows Service](/developerportal/deploy/deploy-mendix-on-microsoft-windows/). The release notes and installation manual can be found in the [Windows Service](https://marketplace.mendix.com/link/component/223425) release notes. Read more about installing on systems running Windows operating systems in [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/).
 
 For additional features or other changes in the Windows Service, contact [Mendix Support](https://support.mendix.com/).
 

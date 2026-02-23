@@ -57,41 +57,44 @@ In some situations, it can be beneficial to designate a single machine for build
 
 The Make It Native app allows developers to preview, test, and debug native mobile apps in conjunction with Mendix Studio Pro. This app is available for both Android and iOS devices.
 
-Depending on the Mendix version used to build your app, you have to use a different version of Make It Native. The following list explains which version to use:
+Depending on your app's Mendix version, you must use a different version of the Make It Native app:
 
-* Mendix 11 (11.0.0 is not supported):
-    * **11.1.0 to 11.x.x** - Latest version of Make It Native ([Android](https://play.google.com/apps/testing/com.mendix.developerapp.mx10), [iOS](https://testflight.apple.com/join/bQfLf27w))
+* Mendix 11:
+    * **11.7.0 - 11.x.x** — Use the latest version of Make It Native ([Android](https://play.google.com/apps/testing/com.mendix.developerapp.mx10), [iOS](https://testflight.apple.com/join/bQfLf27w))
+    * **11.6.x** - MTS version of Make It Native ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10), [iOS](https://apps.apple.com/us/app/make-it-native/id6450037464))
 
 * Mendix 10:
-    * **10.24.x** - Make It Native LTS ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10), [iOS](https://apps.apple.com/app/make-it-native-10/id6450037464))
-    * **10.6.x to 10.23.x** – These versions are no longer supported by Make It Native. Please make your own [custom MIN app](/refguide/mobile/distributing-mobile-apps/use-min-older-sp/) from open source.
+    * **10.24.x** - Make It Native LTS is part of Github releases and Testflight (previous) builds ([Android](https://github.com/mendix/make-it-native/releases), [iOS](https://testflight.apple.com/join/bQfLf27w)).  
+        * **Previous Builds** on Testflight can be found here:
+            {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/min-testflight.png" alt="Previous Builds on Testflight MIN" class="no-border" >}}
+
     * **Other** – [Creating a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) or [Building Your Own Make It Native App](https://github.com/mendix/make-it-native)
 
 For information on which mobile operating systems are supported by the Mendix native mobile apps, see the [Mobile Operating Systems](/refguide/system-requirements/#mobile) section of *System Requirements*.
 
 ### Direct Download Links {#direct-links}
 
-Download the latest version of Make It Native using these QR codes:
+Download the latest version (current MTS) of Make It Native using these QR codes:
 
 |                                  Android                                  |                                iOS                                |
 | :-----------------------------------------------------------------------: | :---------------------------------------------------------------: |
 | {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/android-min-10.png" alt="Android QR Code" class="no-border" >}} | {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/ios-min-10.png" alt="iOS QR Code" class="no-border" >}} |
-|   [Latest Version](https://play.google.com/apps/testing/com.mendix.developerapp.mx10)    |        [Latest Version](https://testflight.apple.com/join/bQfLf27w)         |
+|   [Latest Version](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10)    |        [Latest Version](https://apps.apple.com/us/app/make-it-native/id6450037464)         |
 
 Download the LTS version of Make it Native using these QR codes:
 
 |                                  Android                                  |                                iOS                                |
 | :-----------------------------------------------------------------------: | :---------------------------------------------------------------: |
 | {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/android-min-10.png" alt="Android QR Code" class="no-border" >}} | {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/ios-min-10.png" alt="iOS QR Code" class="no-border" >}} |
-|   [MTS Version](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10)    |        [MTS Version](https://apps.apple.com/us/app/make-it-native-10/id6450037464)         |
+|   [LTS Version](https://github.com/mendix/make-it-native/releases)    |        [LTS Version (previous builds)](https://testflight.apple.com/join/bQfLf27w)         |
 
-### Using the Latest Version of Make It Native
+### Using the Versions of Make It Native
 
 The latest version of Make It Native app receives monthly updates, and is compatible exclusively with the latest minor release of Mendix. We recommend using this version only if you intend to update your application regularly.
 
-To access the latest version of Make It Native, you must join our official beta testing programs on the Google Play store and the Apple App Store. To do so, click the [relevant links above](#get-min-app) and follow the instructions.
+To access the LTS version of Make It Native, you must join our official beta testing programs on the Apple App Store and use Github Releases for the Android APK. To do so, click the [relevant links above](#get-min-app) and follow the instructions.
 
-Note that it is not possible to install both **Latest** and **MTS** versions on the same device.
+Note that it is not possible to install both **LTS** and **MTS** versions on the same device.
 
 ### Recommendations
 
@@ -113,7 +116,7 @@ To troubleshoot issues related to the Make it Native app, see the sections below
 
 #### Port Issues
 
-Mendix recommends keeping the **Runtime port** in your [configuration](/refguide/configuration/#server) on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
+Mendix recommends keeping the **Runtime port** in your [configuration](/refguide/configurations-tab/#server) on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
 
 #### Wifi Network Settings
 

@@ -55,4 +55,3 @@ If you have setup multiple Teamcenter configurations, you can choose a specific 
 4. From the configurations list, click **Login** against the configuration that you want to use.
     {{< figure src="/attachments/partners/siemens/teamcenter/image016.png" alt="" class="no-border" >}}
 5. In the page that appears, log on to the chosen configuration.
-

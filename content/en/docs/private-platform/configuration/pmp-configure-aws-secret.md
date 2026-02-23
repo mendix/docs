@@ -126,12 +126,13 @@ When creating a property to use as a key for external secret storage, use the fo
         * **CIAdmin.AzureAwsS3SK** - Name of the Azure DevOps organization
 
     * Cluster Manager
-
-        * **ClusterManager.KubernetesApiToken** - Token for the Kubernetes admin user
-        * **ClusterSettings.KubernetesAdminPassword** - Password for the Kubernetes admin user
-        * **ClusterSettings.GrafanaAPIKey** - Password for the Grafana admin user
-        * **ClusterSettings.MDAAWSS3AccessKey** - Password for the Prometheus admin user
-        * **ClusterSettings.OCIRegistryPassword** - Password for the Prometheus admin user
+        
+        * **ClusterManager.OCIRegistryAWSSK** - OCI Registry: AWS secret access key for the OCI registry
+        * **serverClusterManager.OCIBasicAuthPassword** - OCI Registry: Password for the OCI registry
+        * **serverClusterManager.MDAAWSSK** - MDA Storage: AWS secret access key for the MDA file
+        * **serverClusterManager.MDAFileBasicAuthPassword** - MDA Storage: Password for the MDA file
+        * **serverClusterManager.KubernetesApiToken** - Kubernetes API: Token for accessing the Kubernetes API
+        * **serverClusterManager.GrafanaAPIKey** - Grafana: API key for accessing the Grafana server
 
     * Marketplace
 
@@ -140,6 +141,13 @@ When creating a property to use as a key for external secret storage, use the fo
     * Email
 
         * **Email.SMTPPassword** - Password for the SMTP server
+
+    * Maia
+
+        * **AmazonBedrockApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom AWS Bedrock LLM
+        * **AzureAiApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
+        * **AnthropicApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
+        * **OpenAiApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
 
 The following is a JSON template. Copy this template into your secret, and set the values that you want to use. Leave those you do not want to use empty.
 
@@ -183,19 +191,24 @@ The following is a JSON template. Copy this template into your secret, and set t
     "AzureAwsS3SK": ""
   },
   "ClusterManager": {
-    "KubernetesApiToken": ""
-  },
-  "ClusterSettings": {
-    "KubernetesAdminPassword": "",
-    "GrafanaAPIKey": "",
-    "MDAAWSS3AccessKey": "",
-    "OCIRegistryPassword": ""
+    "KubernetesApiToken": "",
+    "GrafanaAPIKey":"",
+    "MDAFileBasicAuthPassword": "",
+    "MDAAWSSK": "",
+    "OCIBasicAuthPassword": "",
+    "OCIRegistryAWSSK": ""
   },
   "Marketplace": {
     "ImportCDNPassword": ""
   },
   "Email": {
     "SMTPPassword": ""
+  },
+  "Maia": {
+    "AmazonBedrockApiKey": "",
+    "AzureAiApiKey": "",
+    "AnthropicApiKey": "",
+    "OpenAiApiKey": ""
   }
 }
 ```

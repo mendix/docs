@@ -162,9 +162,9 @@ Make sure to use the correct key names when using this payload information to ca
 ## Teamserver Push (Git)
 
 {{% alert color="info" %}}
-This webhook is not visible to first-time Mendix Pipeline users. 
+This webhook is not visible to first-time [Mendix Pipeline](/developerportal/deploy/mendix-pipelines/) users. 
 
-For existing Mendix Pipeline users who can view this webhook, do not delete it. Deleting it causes failures for Mendix Pipelines that rely on the Teamserver push (Git) trigger.
+Existing Mendix Pipeline users can view this webhook, but it can be safely deleted without affecting the functionality of the Teamserver push (Git) triggers.
 {{% /alert %}}
 
 When you push a model change to the [Git Team Server](/developerportal/repository/team-server/), and the webhook responds to the event **Teamserver push (Git)**, request content is sent to the configured endpoint. The request content contains a payload with the following format:

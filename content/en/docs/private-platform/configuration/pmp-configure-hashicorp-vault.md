@@ -108,51 +108,59 @@ Use the exact key names specified by Private Mendix Platform, with dots (`.`) as
 
 * **VCS**
 
-    * `VCS.BitbucketProjectAdminPAT`
-    * `VCS.BitbucketAdminPassword`
-    * `VCS.GitlabGroupOwnerPAT`
-    * `VCS.GitlabAdminPAT`
-    * `VCS.GithubOrgOwnerPAT`
-    * `VCS.GithubAdminPAT`
-    * `VCS.GithubEnterpriseClientSecret`
-    * `VCS.AzureDevOpsOrgAdminPAT`
-    * `VCS.AzureAuthSecret`
+    * **VCS.BitbucketProjectAdminPAT**
+    * **VCS.BitbucketAdminPassword**
+    * **VCS.GitlabGroupOwnerPAT**
+    * **VCS.GitlabAdminPAT**
+    * **VCS.GithubOrgOwnerPAT**
+    * **VCS.GithubAdminPAT**
+    * **VCS.GithubEnterpriseClientSecret**
+    * **VCS.AzureDevOpsOrgAdminPAT**
+    * **VCS.AzureAuthSecret**
 
 * **Kubernetes Build Settings**
 
-    * `BuildPackage.FileBasicAuthPassword`
-    * `BuildPackage.AwsSecretAccessKey`
-    * `RuntimeBaseImage.PrivateRegistryPassword`
-    * `RuntimeBaseImage.S3CompatibleAccessKey`
-    * `MDAStorage.FileBasicAuthPassword`
-    * `MDAStorage.AwsSecretAccessKey`
-    * `OCIRegistry.PrivateRegistryPassword`
-    * `OCIRegistry.S3CompatibleAccessKey`
+    * **BuildPackage.FileBasicAuthPassword**
+    * **BuildPackage.AwsSecretAccessKey**
+    * **RuntimeBaseImage.PrivateRegistryPassword**
+    * **RuntimeBaseImage.S3CompatibleAccessKey**
+    * **MDAStorage.FileBasicAuthPassword**
+    * **MDAStorage.AwsSecretAccessKey**
+    * **OCIRegistry.PrivateRegistryPassword**
+    * **OCIRegistry.S3CompatibleAccessKey**
 
 * **Build Cluster Settings**
 
-    * `BuildCluster.KubernetesConfigureToken`
-    * `CIAdmin.JenkinsConfigureAPIToken`
-    * `CIAdmin.JenkinsTriggerAuthToken`
-    * `CIAdmin.AzureOrgAdminPAT`
-    * `CIAdmin.AzureBlobStorageToken`
-    * `CIAdmin.AzureAwsS3SK`
+    * **BuildCluster.KubernetesConfigureToken**
+    * **CIAdmin.JenkinsConfigureAPIToken**
+    * **CIAdmin.JenkinsTriggerAuthToken**
+    * **CIAdmin.AzureOrgAdminPAT**
+    * **CIAdmin.AzureBlobStorageToken**
+    * **CIAdmin.AzureAwsS3SK**
 
 * **Cluster Manager**
-
-    * `ClusterManager.KubernetesApiToken`
-    * `ClusterSettings.KubernetesAdminPassword`
-    * `ClusterSettings.GrafanaAPIKey`
-    * `ClusterSettings.MDAAWSS3AccessKey`
-    * `ClusterSettings.OCIRegistryPassword`
+        
+    * **ClusterManager.OCIRegistryAWSSK** - OCI Registry: AWS secret access key for the OCI registry
+    * **serverClusterManager.OCIBasicAuthPassword** - OCI Registry: Password for the OCI registry
+    * **serverClusterManager.MDAAWSSK** - MDA Storage: AWS secret access key for the MDA file
+    * **serverClusterManager.MDAFileBasicAuthPassword** - MDA Storage: Password for the MDA file
+    * **serverClusterManager.KubernetesApiToken** - Kubernetes API: Token for accessing the Kubernetes API
+    * **serverClusterManager.GrafanaAPIKey** - Grafana: API key for accessing the Grafana server
 
 * **Marketplace**
 
-    * `Marketplace.ImportCDNPassword`
+    * **Marketplace.ImportCDNPassword** - Personal access token for the Marketplace admin
 
 * **Email**
 
-    * `Email.SMTPPassword`
+    * **Email.SMTPPassword** - Password for the SMTP server
+
+* **Maia**
+
+    * **AmazonBedrockApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom AWS Bedrock LLM
+    * **AzureAiApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
+    * **AnthropicApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
+    * **OpenAiApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
 
 ### Configuring the Kubernetes Authentication Method {#configure-k8s-auth}
 

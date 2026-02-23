@@ -108,11 +108,11 @@ You can specify the following options:
     For example, setting this to **50%** will switch all clients to the updated app version once 50% of all replicas are running the updated version. If not otherwise specified, 50% is used as the default value. This option is only used if the strategy **type** is set to **PreferRolling**.
 * **rollingUpdate** - Specifies parameters for rolling updates if the Operator is able to perform the update without a restart. These parameters are used as Kubernetes [rollingUpdate](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#rolling-update-deployment) parameters:
     * **maxSurge** – Specifies an absolute or percentage value for how many additional replicas can be added during the deployment process.
-      * For apps with 1 replica, the default value is **1**, to run an updated (replacement) replica in addition to the current replica, and prevent any downtime when possible.
-      * For apps with 2 or more replicas, the default value is **0**, so that no additional replicas are added during the rollout process, and instead existing replicas are stopped to avoid using additional cluster resources.
+        * For apps with 1 replica, the default value is **1**, to run an updated (replacement) replica in addition to the current replica, and prevent any downtime when possible.
+        * For apps with 2 or more replicas, the default value is **0**, so that no additional replicas are added during the rollout process, and instead existing replicas are stopped to avoid using additional cluster resources.
     * **maxUnavailable** – Specifies an absolute or percentage value for how many replicas can be stopped to be replaced with updated versions during the rollout process. Increasing this value speeds up the rollout process, but can cause performance issues.
-      * For apps with 1 replica, the default value is **0**, to ensure that at least one replica is running, and prevent downtime.
-      * For apps with 2 or more replicas, the default value is **1**, so that at most one replicas would be stopped during the update process.
+        * For apps with 1 replica, the default value is **0**, to ensure that at least one replica is running, and prevent downtime.
+        * For apps with 2 or more replicas, the default value is **1**, so that at most one replicas would be stopped during the update process.
 
 ## Configuring Pod Disruption Budget parameters in Standalone Environments {#pod-disruption-budget-in-standalone}
 
@@ -143,9 +143,9 @@ spec:
 You can specify the following options:
 
 * **maxUnavailable** – Specifies an absolute or percentage value for how many replicas can be stopped if Kubernetes needs to evict them from a node.
-  * For apps with 2 or more replicas, the default value is **1** and means that at most 1 replica can be stopped, and that Kubernetes needs to wait until a replacement replica becomes available. Increasing this value speeds up the rollout process, but can cause performance issues.
+    * For apps with 2 or more replicas, the default value is **1** and means that at most 1 replica can be stopped, and that Kubernetes needs to wait until a replacement replica becomes available. Increasing this value speeds up the rollout process, but can cause performance issues.
 * **minAvailable** – Specifies an absolute or percentage value for how many replicas need to be remain available if Kubernetes needs to evict them from a node. Increasing this value slows down the rollout process, but ensures that less replicas can be disrupted.
-  * For apps with 1 replica, the default value is **1** to ensure that at least one replica is always available, and prevent downtime.
+    * For apps with 1 replica, the default value is **1** to ensure that at least one replica is always available, and prevent downtime.
 
 {{% alert color="warning" %}}
 Kubernetes doesn't allow specifying values for both `maxUnavailable` and `minAvailable`, and specifying values for both of them will [result in an error](https://kubernetes.io/docs/tasks/run-application/configure-pdb/#specifying-a-poddisruptionbudget).

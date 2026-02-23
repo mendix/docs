@@ -169,6 +169,15 @@ The following options are available:
 * **Group Team Comments** – Displays all the comments left by your team for this group. You can leave comments here and add attachments to each comment.         
   Comments submitted here are only visible to your team members.
 
+## Organizing Feedback with Maia
+
+You can use Maia to organize unsorted feedback. To do that, click {{% icon name="sparkles" %}} (**Ask Maia**), then select one of these options:
+
+* **Suggest Groups** – Maia analyzes ungrouped feedback, and defines new groups for similar items. 
+* **Add Feedback to Group** – Maia analyzes ungrouped feedback, and suggests existing groups where it can be added.     
+
+In both cases, you can accept Maia's suggestion, or ask it to broaden or tighten the results it provides.
+
 ## Archive {#archive}
 
 On the **Archive** tab, everyone in your team can view all the archived feedback.

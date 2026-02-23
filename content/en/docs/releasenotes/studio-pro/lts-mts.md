@@ -8,11 +8,11 @@ weight: 1
 
 The goal of this document is to clarify Mendix Studio Pro version options and help you decide which version to run your applications on.
 
-To understand the different types of versions and releases, consider the example of Studio Pro [11.0.3](/releasenotes/studio-pro/11.3/) and see the sections below.
+To understand the different types of versions and releases, consider the example of Studio Pro [11.6.1](/releasenotes/studio-pro/11.6/#1161) and see the sections below.
 
 ### Major Version {#major-version}
 
-In the 11.0.3 example, the first number (**11**) indicates the major version.
+In the 11.6.1 example, the first number (**11**) indicates the major version.
 
 Mendix supports three major versions at a time. To clarify our current offering and in relation to our SLA, today Mendix supports major versions 9, 10, and 11. 
 
@@ -28,16 +28,17 @@ For Mendix 10 and 11, we are planning to follow this release timeline:
 | 11.12 MTS | June 2026 |
 | 11.18 MTS | December 2026 |
 | 11.24 LTS | June 2027 |
+| 12.0 GA | June 2027 |
 
 ### Minor Version
 
-In the 11.0.3 example, the second number (**0**) indicates the minor version. 
+In the 11.6.1 example, the second number (**6**) indicates the minor version. 
 
 A minor version is generally released every month. It includes new features and fixes, but it does not include breaking changes.
 
 ### Patch Version {#patch-version}
 
-In the 11.0.3 example, the third number (**3**) indicates the patch version. 
+In the 11.6.1 example, the third number (**1**) indicates the patch version. 
 
 A patch version is released on an as-needed basis. It includes security fixes and critical bug fixes, but it does not include new features or breaking changes (unless these address security issues).
 
@@ -62,9 +63,11 @@ Mendix recommends using the latest patch version of the release as the latest ve
 
 ### Support Duration
 
-Support for an LTS version ends when a third consecutive major version is released for general availability (for example, support on version 6 ended with the GA release of version 9).
+Support for an LTS version ends when a third consecutive major version is released for general availability (for example, support on version 8 ended with the GA release of version 11).
 
 This diagram illustrates the LTS concept with version and [end of support](#end) examples:
+
+[//]: # (Original image in Powerpoint /static/originals/refguide/lts-support.pptx)
 
 {{< figure src="/attachments/releasenotes/studio-pro/lts-mts/lts.png" class="no-border" >}}
 
@@ -90,7 +93,7 @@ Upgrading from an LTS to an LTS often has the lowest impact compared to other up
 
 An MTS is a minor version released approximately every 6 months after a new major version release for general availability.
 
-There are currently no MTS versions of Studio Pro. The next one that will occur is 11.6, planned for release in [December, 2025](#major-version).
+For example, version 11.6 is an MTS version which was released in [December, 2025](#major-version).
 
 Release notes for any current MTS versions are marked with an MTS badge (<text class="badge badge-pill badge-mts" style="margin-left:0px">MTS</text>) in the left sidebar.
 
@@ -124,9 +127,9 @@ A monthly release is a non-MTS/LTS minor release that only receives patches for 
 
 ### Support Duration
 
-Monthly release versions do not enjoy regular patch releases like MTS and LTS versions do. Bugs found in monthly release versions are directly resolved in the subsequent monthly release. 
+Monthly release versions do not enjoy regular patch releases like MTS and LTS versions do. Most bugs found in monthly release versions are resolved in the subsequent monthly release. However, high impact bugs which are found before the next minor (monthly) release may lead to a patch release.
 
-For example, if a bug is found in version 9.1, it will only be fixed in the next monthly release, which would be version 9.2.
+For example, if a bug is found in version 10.1.0 before version 10.2.0 is released, it will usually only be fixed in the next monthly release, that is version 10.2.0. If the bug is judged to have a high impact and can be fixed quickly, then a patched version 10.1.1 may be released. 
 
 ### Release Cycle
 
@@ -136,9 +139,9 @@ This is a monthly release that includes new features as well as security patches
 
 A monthly release only receives patches for critical/security issues if they can be released earlier and faster than the next minor version release. Otherwise, bugs found in a monthly release will only be fixed rolling forward to the next minor version. 
 
-For example, if you are using version 9.1 after 9.2 has been released and you find a critical issue in 9.1, that fix will only be released in the next monthly release, which would be 9.3.
+For example, if you are using version 10.1.0 after 10.2.0 has been released and you find a critical issue in 10.1.0, that fix will only be released in the next monthly release, which would be 10.3.0.
 
-If a bug is found in a monthly-release version for an older major version, it will only be fixed as a patch on the existing LTS (for example, a bug found in 9.16 will only be fixed for a patch release on the LTS version 9.24). 
+If a bug is found in a monthly-release version for an older major version, it will only be fixed as a patch on the existing LTS (for example, a bug found in 10.16 will only be fixed for a patch release on the LTS version 10.24). 
 
 ### Upgrading Impact
 

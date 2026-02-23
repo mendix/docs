@@ -31,7 +31,7 @@ Follow these steps to connect your Mendix app to Teamcenter:
 1. Log in to your Mendix app with the **Administrator** user role.
 2. Use the **NAV_AdminHomePage** button to navigate to the overview page of all Teamcenter configurations.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/siemens/teamcenter-connector/configuration/teamcenter-new-configuration.png">}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/siemens/teamcenter-connector/configuration/teamcenter-new-configuration.png">}}
 
 3. Click **+ New configuration** to create a new configuration.    
     All configurations require the following fields:
@@ -242,7 +242,7 @@ Make sure the SSO setup on your local machine works before working on a deployed
 The SSO setup of the Teamcenter Connector uses deep links to access the Mendix app. We use the following paths:
 
 * `/rest`
-* `/{url_prefix}`, where the default value for `{url_prefix}` is	`/p`.
+* `/{url_prefix}`, where the default value for `{url_prefix}` is    `/p`.
 
 If the URL prefix is changed from `/p`, make sure `CONST_Deeplink_Url_Prefix` matches this URL prefix.
 

@@ -80,7 +80,7 @@ Since a full SBOM contains all project details, this is only a partial represent
 
 The table below describes what components are currently covered in the generated SBOM, and from what version. It is recommended to use version `10.10`, `9.24.22`, or `10.6.9` and above.
 
-| Feature | Description | Version
+| Feature | Version | Description
 | --- | --- | --- |
 | Mendix Modules | `9.24.14`, `10.4.0` | Mendix Modules imported from the Marketplace. This does not include Add-on Modules, Solutions, Extensions, or manually imported modules. |
 | [Java Dependencies](/refguide/managed-dependencies/) | `9.24.14`, `10.4.0` | Java libraries imported into your project using [Managed Dependencies](/refguide/managed-dependencies/), or those manually added in the `userlib` folder. Libraries added through managed dependencies will have access to information of the package manager and will include more details, such as the used license. |

@@ -36,6 +36,11 @@ Identifiers are used for module, entity, attribute, association, and alias names
 
 Multiple identifiers can be composed into a path, separated by special characters `.` and `/`. The `.` special character can be used to indicate the module and entity in the form `Module.Entity`. The `/` special character can be used to indicate the attribute of an entity in the form `Module.Entity/Attribute` and it can be used for separating associations in long paths. Examples of paths can be seen in the [Select from Multiple Tables using JOIN](/refguide/oql-clauses/#join) section of *OQL Clauses*.
 
+In Mendix version 11.7.0 and above, comments can be used in OQL queries to improve readability. Comments are ignored during query execution. There are two ways to add comments:
+
+* Single-line comments start with `--`.
+* Multi-line comments are enclosed by `/*` and `*/` and support nesting. 
+
 ### Reserved Words {#reserved-oql-words}
 
 Words with a specific purpose in OQL are reserved. If you use reserved words for entity, variable, or attribute names in an OQL query, they must be wrapped in double quotes `" "`. For example, in the OQL query `SELECT AVG(TotalPrice) FROM Sales."Order" WHERE IsPaid = 1`, `Order` needs to be wrapped in quotes because it is a reserved word, as it can be used to `ORDER BY`.

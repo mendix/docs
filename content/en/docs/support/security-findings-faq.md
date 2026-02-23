@@ -192,7 +192,7 @@ The default timeout for sessions in Mendix is 10 minutes. This timeout can be ch
 
 ### Concurrent Login for Admin Accounts
 
-By default, end-users are allowed to have multiple sessions simultaneously. This allows them to sign in to the application in multiple browsers at the same time. This can be configured by changing the [Multiple sessions per user](/refguide/app-settings/#multiple-sessions) in the project settings of an application. This setting applies to all end-users. If you only want to disallow multiple sessions for administrator end-users, you will have to implement [a custom solution](https://bartgroot.nl/mendix/custom-checks-on-login/). 
+By default, end-users are allowed to have multiple sessions simultaneously. This allows them to sign in to the application in multiple browsers at the same time. This can be configured by changing the [Multiple sessions per user](/refguide/runtime-tab/#multiple-sessions) in the project settings of an application. This setting applies to all end-users. If you only want to disallow multiple sessions for administrator end-users, you will have to implement [a custom solution](https://bartgroot.nl/mendix/custom-checks-on-login/). 
 
 ### Bootstrap Vulnerabilities 
 

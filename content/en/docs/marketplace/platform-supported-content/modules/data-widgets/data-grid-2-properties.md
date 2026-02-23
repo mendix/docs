@@ -27,11 +27,12 @@ The time (in seconds) the grid waits between refreshing the data. Auto-refreshin
 
 This property controls row selection capabilities. Selection is turned off by default, but can be enabled by choosing ether **Single** or **Multi**:
 
-* The **Single** selection is selection type where only one row can be selected at the time
-* The **Multi** type support selecting several rows at the time
+- The **Single** selection is selection type where only one row can be selected at the time
+- The **Multi** type support selecting several rows at the time
 
 {{% alert color="info" %}}
-Data grid currently supports only in-memory selection. This implies some limitation which allows selecting only visible rows. If you change a data grid page or reload the browser window, then selection will be cleared.{{% /alert %}}
+Data grid currently supports in-memory selection. When the **Keep Selection** property is disabled, selection is limited to visible rows and will be cleared when you change a data grid page or reload the browser window. When **Keep Selection** is enabled, selections persist across page navigation, data refreshes, filter operations, and sorting changes.
+{{% /alert %}}
 
 #### Selection Method
 
@@ -53,9 +54,29 @@ When set to **Yes**, the data grid displays a checkbox in the header that, when 
 
 #### Loading Type
 
-This property controls how loading states are displayed during data operations such as pagination, filtering, and refresh. 
+This property controls how loading states are displayed during data operations such as pagination, filtering, and refresh.
 
 Available options include spinner (rotating overlay) and skeleton (placeholder content). Loading indicators automatically appear during initial data load, pagination navigation, filter operations, sorting, and export operations. The system includes smart timing to prevent flickering on fast operations, and also provides appropriate timeout handling for slow operations.
+
+### Behavior Tab
+
+#### Selection
+
+This section contains properties related to selection behavior when **Selection** is set to **Single** or **Multi**.
+
+#### Keep Selection
+
+{{% alert color="info" %}}
+This property is only available when **Selection** is set to **Single** or **Multi**.
+{{% /alert %}}
+
+By default, this property is set to **No**, which clears the selection when the items are not in the current set of datasource items. 
+
+When set to **Yes**, selected items persist across page navigation, data refreshes, filter operations, and sorting changes. When enabled, selections remain active until manually cleared by the user or through a nanoflow action.
+
+{{% alert color="warning" %}}
+**Keep Selection** cannot be used with non-persistent entities (NPEs) or view entities, as their IDs change on refresh.
+{{% /alert %}}
 
 ### Columns Tab {#columns}
 
@@ -87,7 +108,7 @@ This property controls the visibility of navigation buttons. If set to **Auto**,
 
 #### Show Number of Rows
 
-This property displays the total number of rows in the pagination area, providing users with context about the dataset size. 
+This property displays the total number of rows in the pagination area, providing users with context about the dataset size.
 
 When enabled, it shows information such as **1 to 20 of 150**. It works with virtual scrolling, load more pagination, and standard pagination modes. On large datasets, the total count calculation may impact initial load time.
 
@@ -115,9 +136,9 @@ This property sets the action to be performed when the row is clicked.
 
 This property sets the action to be performed when the row is selected or unselected.
 
-#### Filters  {#filters-placeholder}
+#### Filters {#filters-placeholder}
 
-This placeholder acts as a container for filter widgets that operate on the entire grid. This placeholder provides a designated area for placing filter widgets (text filter, date filter, number filter, drop-down filter) that filter across all grid data rather than being limited to individual columns. 
+This placeholder acts as a container for filter widgets that operate on the entire grid. This placeholder provides a designated area for placing filter widgets (text filter, date filter, number filter, drop-down filter) that filter across all grid data rather than being limited to individual columns.
 
 Filter widgets placed here automatically link to the grid's datasource, and changes immediately affect the grid data. Still, widgets should be configured to work properly. Multiple filters work together using **AND** logic by default.
 
@@ -143,7 +164,7 @@ This flag controls column hiding for the entire data grid. If set to **No**, the
 
 #### Store Filters in Personalization
 
-This property controls whether filter states are saved as part of user personalization settings or not. When enabled, the system preserves filter input values, selected filter types, applied filter combinations, filter visibility states, and custom filter configurations in the user's personalization profile. 
+This property controls whether filter states are saved as part of user personalization settings or not. When enabled, the system preserves filter input values, selected filter types, applied filter combinations, filter visibility states, and custom filter configurations in the user's personalization profile.
 
 Filter states can be stored in browser localStorage or database attributes depending on personalization configuration. When enabled, users' filter preferences persist across sessions and page refreshes. When disabled, filters reset to default values on every page load — useful for shared screens, dashboards, or public interfaces.
 
@@ -181,7 +202,7 @@ Defines a string value that labels the checkbox of the row when the selection is
 
 #### Select All Rows
 
-This property provides an ARIA label for the **Select All** checkbox in the grid header. This ARIA label is announced by screen readers when users navigate to the select all checkbox. 
+This property provides an ARIA label for the **Select All** checkbox in the grid header. This ARIA label is announced by screen readers when users navigate to the select all checkbox.
 
 The label integrates with three-state checkbox functionality (unchecked, checked, indeterminate) and supports localization through text templates. Screen readers announce appropriate state changes when the checkbox is toggled, improving accessibility compliance for bulk-selection operations.
 

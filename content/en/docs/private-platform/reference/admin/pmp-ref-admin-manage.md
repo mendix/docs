@@ -294,3 +294,7 @@ When valid, licenses can have the following statuses:
 * Active (shown in green)
 * About to expire (shown in yellow)
 * Expired (shown in red)
+
+#### Maia
+
+On this page, you can connect Mendix AI Assistance (Maia) to your own Large Language Model (LLM). It enables Maia to use your custom LLM for processing and generating responses. For more information, see [Maia in Private Mendix Platform](/private-mendix-platform/maia/).

@@ -47,7 +47,7 @@ To create a new business service in Studio Pro 9.24 and above, right-click on a 
 
 {{< figure src="/attachments/refguide9/modeling/integration/business-event-services/new-business-event-service.png" class="no-border" >}}
 
-See the [Creating a New Business Event Service](/appstore/services/business-events/#two-way-be-create) section of *Mendix Business Events* for more extensive documentation.
+See the [Creating a New Business Event Service](/appstore/services/business-events-configuration/#two-way-be-create) section of *Mendix Business Events* for more extensive documentation.
 
 ##### Using an Existing Business Event Service {#use-existing}
 
@@ -55,4 +55,4 @@ To create a new business service in Studio Pro 9.24 and above, right-click on a 
 
 {{< figure src="/attachments/refguide9/modeling/integration/business-event-services/existing-business-event-service.png" class="no-border" >}}
 
-See the [Using an Existing Business Event Service](/appstore/services/business-events/#two-way-be-existing) section of *Mendix Business Events* for more extensive documentation.
+See the [Using an Existing Business Event Service](/appstore/services/business-events-configuration/#two-way-be-existing) section of *Mendix Business Events* for more extensive documentation.

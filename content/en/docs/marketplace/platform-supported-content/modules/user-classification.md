@@ -55,6 +55,10 @@ For new users created after the User Classification module is implemented, confi
 
 For users provisioned before the User Classification module is implemented, trigger a one-time classification. You can do this by adding a button on an admin screen that triggers a `UserClassification.UpdateUsersClassificationType` microflow. The execution of this microflow may take some time, depending on the number of users to be classified.
 
+{{% alert color="info" %}}
+A benchmark test on a small node (S) demonstrates that your app can approximately bulk update 250 users per second when using userrole-based classification.
+{{% /alert %}}
+
 ### Configuring Classification Logic {#configure-classification-logic}
 
 Based on your use case, choose the classification logic that best suits your needs:

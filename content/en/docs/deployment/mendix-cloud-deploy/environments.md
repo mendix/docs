@@ -192,9 +192,25 @@ If you click **Cloud Settings** ({{< icon name="settings-slider-1" >}}) from any
 
 ### Custom Domains
 
-On the **Custom Domains** tab, the Technical Contact can manage custom domain certificates either centrally or at the application level. They can also access an overview of all the linked custom domains.
+On the **Custom Domains** tab, the Technical Contact can perform the following actions:
 
-When you need your Mendix app to be accessible via your own URL (for example, `https://myapp.mycompany.com/`), you must provide a custom SSL/TLS certificate for your domain. This ensures a secure connection to your Mendix app. For more information, refer to [Custom Domains](/developerportal/deploy/custom-domains/).
+* Request a new application-level certificate
+* Upload a new application-level certificate
+* Edit, delete, and view application-level certificates
+* View centralized certificates created by a Mendix Admin through **Certificate Management**
+* View the custom domains associated with each certificate
+
+To make your Mendix application accessible through a custom URL (for example, `https://myapp.mycompany.com`), you must configure a custom domain secured with an SSL/TLS certificate. In Mendix Cloud, certificates can be created in one of the following ways:
+
+* **Application level** – Technical Contacts can create and manage application-level certificates, which are marked as **Local**. For more information, refer to [Application-Level Certificates](/developerportal/deploy/application-level-certificates/).
+
+* **Central level** – Mendix Admins can upload and manage SSL/TLS certificates centrally in Control Center using [Certificate Management](/control-center/certificate-management/). These certificates can be reused across multiple applications and are marked as **Central**.
+
+{{% alert color="info" %}}
+Certificates created through **Certificate Management** can only be managed by Mendix Admins. Technical Contacts can view these certificates, but cannot edit or delete them.
+{{% /alert %}}
+
+For step-by-step instructions on configuring custom domains for your Mendix application, refer to [Custom Domains](/developerportal/deploy/custom-domains/).
 
 ### Access Restriction Profiles
 

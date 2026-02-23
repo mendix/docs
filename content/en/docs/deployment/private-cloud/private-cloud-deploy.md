@@ -138,9 +138,9 @@ All environments are defined as production environments, which means that [secur
 
     There are three pre-defined sets of resources, **Small**, **Medium**, and **Large**. Choosing these will set the **CPU** and **Memory** values automatically.
 
-    | **Name** | **CPU cores**: Limit | **Memory (GB)**: Limit |  **Ephemeral Storage (GB)**: Limit | **CPU cores**: Request | **Memory (GB)**: Request | **Ephemeral Storage (GB)**: Request |
+    | **Name** | **CPU cores**: Limit | **Memory (GB)**: Limit | **Ephemeral Storage (GB)**: Limit | **CPU cores**: Request | **Memory (GB)**: Request | **Ephemeral Storage (GB)**: Request |
     | --- | --- | --- | --- | --- | --- | --- |
-    | Small | 1 | 0.5 | 1 | 0.1 |0.5 | 1 |
+    | Small | 1 | 0.5 | 1 | 0.1 | 0.5 | 1 |
     | Medium | 2 | 2 | 1 | 1 | 1 | 1 |
     | Large | 4 | 4 | 1 | 2 | 2 | 1 |
     | Custom | own choice | own choice | own choice | own choice | own choice | own choice |
@@ -425,17 +425,17 @@ If you have any outstanding changes to your environment the page will display a 
 
 The environment details page consists of seven tabs:
 
-* General
-* Model Options
-* Network
-* Runtime
-* Log Levels
-* TLS
-* Debugger
+* [General](#general-tab)
+* [Model Options](#model-options-tab)
+* [Network](#network-tab)
+* [Runtime](#runtime-tab)
+* [Log Levels](#log-levels-tab)
+* [TLS](#tls-tab)
+* [Debugger](#debugger-tab)
 
 These tabs are described below.
 
-### General Tab
+### General Tab {#general-tab}
 
 The general tab shows information about your running app.
 
@@ -545,7 +545,7 @@ If any of these garbage collection steps fail, you will no longer see the enviro
 
 ##### Deployment Strategy 
 
-Starting from Operator 2.20.0 onwards, it is now also possible to set the deployment strategy for an environment on the cluster details page. This stategy can be enabled by the cluster manager. This feature allows to update an app with reduced downtime by performing a rolling update. By default, it is set to Recreate strategy.
+Starting from Operator 2.20.0 onwards, it is now also possible to set the deployment strategy for an environment on the cluster details page. This strategy can be enabled by the cluster manager. This feature allows to update an app with reduced downtime by performing a rolling update. By default, it is set to Recreate strategy.
 
 ##### License Mendix{#license-mendix}
 
@@ -577,7 +577,7 @@ Your environment will be created as a Production environment.
 Your app can only be deployed to a production environment if [security in the app is set on](/refguide/app-security/). You will not receive an error if security is set off, but the deployment will appear to hang with a spinner being displayed.
 {{% /alert %}}
 
-### Model Options Tab
+### Model Options Tab {#model-options-tab}
 
 The **Model Options** tab allows you to change the configuration of scheduled events and constants in your app.
 
@@ -595,7 +595,7 @@ If the MxApp constants are configured in both the CSI Secrets Storage and anothe
 If you change the data type and value in the .mpr file, the changes are visible in the Portal. Changes that only affect the data value without altering the data type are not visible in the Portal.
 {{% /alert %}}
 
-### Network Tab
+### Network Tab {#network-tab}
 
 On the Network tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections. This works in the same way as the Network tab for deployments to Mendix Cloud. 
 Starting from Mendix 10.24.1, the Mendix Runtime can set Custom Http Headers natively, without relying on an Ingress controller. For more details on these, see the [Network Tab](/developerportal/deploy/environments-details/#network-tab) section of **Environment Details**.
@@ -605,19 +605,37 @@ For security reasons, root CAs can only be enabled in custom [TLS section](/deve
 
 ### Runtime Tab {#runtime-tab}
 
-On the Runtime tab, you can change various runtime settings for your app environment. This works in the same way as the Runtime tab for deployments to Mendix Cloud. For more details on these, see the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details*.
-
-{{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/runtime-tab.png" class="no-border" >}}
+On the **Runtime** tab, you can add [Custom Runtime Settings](#custom-environment-variables) and [Custom Environment Variables](#custom-environment-variables). You can also use it to enable [leaderless mode](#leaderless-mode) for the environment.
 
 {{% alert color="info" %}}
 When you use some settings on the Runtime tab for Mendix on Kubernetes they may work differently from how they work in Mendix Cloud.
 {{% /alert %}}
 
+### Leaderless Mode {#leaderless-mode}
+
+In leaderless mode, the leader node is selected dynamically. To enable it for your environment, set the **Enable Leaderless Mode** to **On**.
+
+{{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/runtime-tab.png" class="no-border" >}}
+
+### Custom Runtime Settings {#custom-runtime-settings}
+
+Use the **Custom Runtime Settings** section to perform the following actions:
+
+* **Add** a new runtime setting
+* **Edit** the runtime setting
+* **Delete** the runtime setting
+
+For more information, see [Environment Details: Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) in the Mendix Cloud documentation.
+
 {{% alert color="info" %}}
 If the custom runtime settings are configured in both the CSI Secrets Storage and another location (such as the Mendix Portal or MendixApp CR), the secret storage configuration has a higher priority and overrides the value specified elsewhere.
 {{% /alert %}}
 
-### Log Levels Tab
+### Custom Environment Variables {#custom-environment-variables}
+
+Use the **Custom Environment Variables** section to add, edit, or delete an environment variable. For more information, see [Environment Details: Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) in the Mendix Cloud documentation.
+
+### Log Levels Tab {#log-levels-tab}
 
 On the **Log Levels** tab, you can change the log levels which are used for the log nodes in your app.
 
@@ -639,7 +657,7 @@ This might produce the log below for the example described above.
 
 For more information, see the [Log Levels Tab](/developerportal/deploy/environments-details/#log-levels) section of *Environment Details*.
 
-### TLS
+### TLS {#tls-tab}
 
 If you are using Mendix Operator version 1.5.0 or above, you can configure TLS for your environment from the Mendix Portal.
 
@@ -671,7 +689,7 @@ Click **Save** to confirm your new configuration.
 
 You will receive a warning that you have made some changes. Click **Apply Changes** to restart the app and apply the changes.
 
-### Debugger
+### Debugger {#debugger-tab}
 
 On the Debugger tab you can set up and view the credentials you need to debug your app when it is running in your private cloud. For more information see [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/#private-cloud).
 
@@ -765,7 +783,7 @@ This workaround is only required for Mendix Operator versions below 1.10.0. Mend
 
 In some cases, your Mendix app will need to know its own URL – for example when using SSO or sending emails.
 
-For this to work properly, you need to set the [ApplicationRootUrl](/refguide/custom-settings/#general) **Custom Runtime Setting** in the **Runtime** tab to the app's URL.
+For this to work properly, you need to set the [ApplicationRootUrl](/refguide/custom-settings/#applicationrooturl-section) **Custom Runtime Setting** in the **Runtime** tab to the app's URL.
 
 To add this setting:
 

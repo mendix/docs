@@ -16,7 +16,7 @@ To open the **Environment Details** page, go to [Apps](https://sprintr.home.mend
 
 {{% alert color="info" %}}You must have permissions for **Transport Rights** to view the **Environment Details** page. For details on configuring permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).{{% /alert %}}
 
-The **Environment Details** page shows information about the selected environment and includes eight tabs: **General**, **Model Options**, **Network**, **Log Levels**, **Runtime**, **Maintenance**, **Tags**, and **Services**. You can also use this page to manage and debug several aspects of the environment.
+The **Environment Details** page shows information about the selected environment and includes nine tabs: **General**, **Model Options**, **Network**, **Connectivity**, **Log Levels**, **Runtime**, **Maintenance**, **Tags**, and **Services**. You can also use this page to manage and debug several aspects of the environment.
 
 ## Actions {#actions}
 
@@ -329,7 +329,7 @@ document.cookie = "originURI=/login.html" + (window.location.protocol === "https
 A Content Security Policy (CSP) informs the client (browser) where your page loads resources from. Setting this can make your app more secure by declaring trusted sources for your resources. For more information, see the W3C recommendation [Content Security Policy Level 2](https://www.w3.org/TR/CSP2/).
 
 {{% alert color="info" %}}
-For complete CSP support, including nonce-based CSP, use the [Headers](/refguide/configuration/#headers) custom runtime setting instead of the HTTP Headers UI. For detailed implementation instructions, see [Content Security Policy](/howto/security/csp/).
+For complete CSP support, including nonce-based CSP, use the [Headers](/refguide/configurations-tab/#headers) custom runtime setting instead of the HTTP Headers UI. For detailed implementation instructions, see [Content Security Policy](/howto/security/csp/).
 {{% /alert %}}
 
 The process for setting a full content security policy depends on what your app does. However, a starting point that declares the content security policy that works with a basic Mendix app is given below:

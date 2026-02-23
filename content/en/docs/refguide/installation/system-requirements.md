@@ -37,7 +37,12 @@ If you were using Parallels and enabled port forwarding, but then upgraded and w
 
 The following frameworks are required. They will be installed automatically by the Studio Pro installer, if necessary:
 
-* Microsoft .NET Desktop Runtime 8.0.x (x64) and all applicable Windows security patches
+* Microsoft .NET Desktop Runtime (x64) and all applicable Windows security patches
+
+    | Studio Pro 11.0.0 - 11.6.2 | Studio Pro 11.6.3 and above |
+    | --- | --- |
+    | .NET 8 Desktop Runtime | .NET 10 Desktop Runtime |
+
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
 * A Java Developer Kit (JDK) version 11, 17, or 21 - if not yet installed on your machine, Mendix will install 'Eclipse Temurin JDK 21 (x64 or ARM64)'
 * Gradle version 8.5 or above - if Gradle is not yet installed on your machine, Mendix will install Gradle version 8.5
@@ -47,7 +52,12 @@ The following frameworks are required. They will be installed automatically by t
 
 When you are running Studio Pro on a Parallels virtual machine on an ARM64 device (for example, an M1 Mac), you need the following dependencies in addition to the x64 version listed above:
 
-* Microsoft .NET Desktop Runtime 8.0.x (ARM64)
+* .NET Desktop Runtime (ARM64)
+
+    | Studio Pro 11.0.0 - 11.6.2 | Studio Pro 11.6.3 and above |
+    | --- | --- |
+    | .NET 8 Desktop Runtime | .NET 10 Desktop Runtime |
+
 * Microsoft Edge WebView2 Evergreen Runtime (ARM64)
 
 {{% alert color="info" %}}
@@ -320,7 +330,12 @@ Developing native mobile apps with Mendix comes with special requirements explai
 
 MxBuild is a Windows, Linux, and macOS command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](/refguide/mxbuild/).
 
-* .NET 8
+* .NET
+
+    | Studio Pro 11.0.0 - 11.6.2 | Studio Pro 11.6.3 and above |
+    | --- | --- |
+    | .NET 8 | .NET 10 |
+
 * JDK 21
 
 ## mx Command-Line Tool {#mxtool}

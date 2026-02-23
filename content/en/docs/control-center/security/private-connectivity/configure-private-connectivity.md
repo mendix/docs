@@ -19,7 +19,7 @@ To connect from a Mendix app to a resource on your internal network, you need to
 2. Add an agent. This is done on the Mendix platform.
 3. Install an agent. This is done on your internal infrastructure.
 4. Run the agent. This is done on your internal infrastructure.
-5. Expose resources. This is done on the Mendix platform.
+5. Expose resources. This is done on your internal infrastructure.
 6. Enable resources. This is done on the Mendix platform.
 7. Request a connection. This is done on the Mendix platform.
 8. Approve the connection. This is done on the Mendix platform.
@@ -40,8 +40,8 @@ On the **Networks** tab of the **Private Connectivity** page, you can see all th
 
     * **Details**    
     <!-- * **Add DNS** -->
-	* **Add Agent**
-	<!-- * **Edit**
+    * **Add Agent**
+    <!-- * **Edit**
 	* **Delete** -->
 
 ### Adding a Network {#private-connectivity-networks-add}
@@ -71,7 +71,7 @@ To view and edit an existing network, follow these steps:
     * **Network** – The name you gave to the network. This field is editable.
     * **Network ID** – The internal ID of your network. You can copy this if, for example, you want to provide it in a support ticket for any issues with the network.
     * **External Agents** – A list of all external agents that run on your own internal infrastructure, and that have access to the network.    
-	  This field also displays the status of each agent.
+      This field also displays the status of each agent.
     <!-- * **DNS Details** – A list of domains for which you have [configured DNS](#private-connectivity-networks-dns). -->
     * **Environment Details** – A list of app environments that are using the network to connect to a resource, as well as the environment's status.
     <!-- * **Show Logs** – This allows you to see [the flow logs](https://tailscale.com/kb/1219/network-flow-logs) for your network. They can help you troubleshoot issues with connectivity on your network. -->
@@ -151,7 +151,7 @@ On the **Agents** tab of the **Private Connectivity** page, you can see all the 
 * **Status (Last seen)** – The status of the agent, or the last time it was connected to the network:
 
     * **Connected** – The agent is currently connected to the network.
-    * Date and time – The last time the agent was connected to the network. The agent is not connected at this time.
+    * Date and time – The last time the agent was connected to the network. 
 
 ### Adding an Agent {#private-connectivity-agents-add}
 
@@ -165,11 +165,8 @@ To add a new agent to a network, follow these steps:
     * On the **Agents** tab, click **Add Agent**.
 
 2. On the **Add Agent** tab, select the network to which you want to add the agent.
-3. Provide a descriptive and recognizable name for the agent.
-4. Select the infrastructure type for your agent.
-5. Click **Create**.
-
-Your agent is now added. You can continue with [installing the agent](#private-connectivity-agents-install) in your own infrastructure.
+3. Select the infrastructure type for your agent.
+4. Continue with [installing the agent](#private-connectivity-agents-install) in your own infrastructure.
 
 ### Viewing and Editing Agents {#private-connectivity-agents-details}
 
@@ -180,8 +177,6 @@ To view and edit an existing agent, follow these steps:
 
     * **Agent Name** – The name you gave to the agent. This field is editable.
     * **Agent ID** – The internal ID of your agent. You can copy this if, for example, you want to provide it in a support ticket for any issues with the agent.
-    * **Agent Key** – The authentication key of your agent. You can copy this authentication key for use when [starting an agent](#private-connectivity-agents-run).     
-	  This key should be treated as confidential.
     * **Network** – The network to which the agent is connected.
     * **Status (Last seen)** – The status of the agent, or the last time it was connected to the network:
 
@@ -189,11 +184,11 @@ To view and edit an existing agent, follow these steps:
         * Date and time – The last time the agent was connected to the network. The agent is not connected at this time.
 
     * **Resource Details** – A list of the resources exposed via the agent.
-    * **DERP Details** – Information on the preferred Tailscale [Designated Encrypted Relay for Packets (DERP) server](https://tailscale.com/kb/1232/derp-servers).
+    <!-- * **DERP Details** – Information on the preferred Tailscale [Designated Encrypted Relay for Packets (DERP) server](https://tailscale.com/kb/1232/derp-servers). -->
 
 3. Click **Save** to save any changes you have made.
 
-### Deleting an Agent {#private-connectivity-agents-delete}
+<!-- ### Deleting an Agent {#private-connectivity-agents-delete}
 
 To delete an existing agent, follow these steps:
 
@@ -210,7 +205,7 @@ When you delete an agent, the following actions occur automatically:
 {{% alert color="warning" %}}
 Deleting an agent does not uninstall the agent from your own infrastructure.    
 Refer to the instructions for [uninstalling an agent](#private-connectivity-agents-uninstall). 
-{{% /alert %}}
+{{% /alert %}} -->
 
 ### Installing an Agent on your Infrastructure {#private-connectivity-agents-install}
 
@@ -240,18 +235,18 @@ Continue with [starting the agent](#private-connectivity-agents-run).
 
 ### Starting an Agent on your Infrastructure {#private-connectivity-agents-run}
 
-Once you have installed your agent, you can start the agent and connect to your network. To do this, you need an authentication key, which was created when you [added the agent](#private-connectivity-agents-add). You can find and copy the authentication key for your agent on [the agent details page](#private-connectivity-agents-details).
+Once you have installed your agent, you can start the agent and connect to your network. To do this, you need an authentication key, which was created when you [added the agent](#private-connectivity-agents-add). 
 
 To start an agent and to connect it to your network, run the following script on the machine where the agent is installed.    
 You need to replace `AUTH_KEY` with the authentication key of your agent.
 
-```
+```You can expose a single IP range
 tailscale up --auth-key=<AUTH_KEY>
 ```
 
 ### Uninstalling an Agent from your Infrastructure {#private-connectivity-agents-uninstall}
 
-After [deleting an agent](#private-connectivity-agents-delete), you can uninstall it from your infrastructure. Uninstalling an agent is typically done by your internal IT department, Infra department, or Network team.
+Uninstalling an agent is typically done by your internal IT department, Infra department, or Network team.
 
 #### Uninstalling an Agent on a Windows server {#private-connectivity-agents-uninstall-windows}
 
@@ -311,7 +306,7 @@ The page displays the following information for each resource:
 * **Status** – The status of the resource. This can be one of the following:
 
     * Enabled – Technical Contacts can request connections to the resource.
-	* Disabled – Technical Contacts cannot request connections to the resource.
+    * Disabled – Technical Contacts cannot request connections to the resource.
 
 * **Environments** – The number of app environments on Mendix Cloud that have an approved connection to the resource.
 
@@ -334,8 +329,8 @@ To view and edit a resource, follow these steps:
     * **Network** – The name of the network to which the agent exposing the resource is connected.
     * **Status** – The status of the resource. This can be one of the following:
 
-	    * **Enabled** – Users can request connections to the resource.
-	    * **Disabled** – Users cannot request connections to the resource.
+        * **Enabled** – Users can request connections to the resource.
+        * **Disabled** – Users cannot request connections to the resource.
 
     * **Environment Details** – A list of app environments that have an approved connection to the resource.
 
@@ -345,7 +340,11 @@ To view and edit a resource, follow these steps:
 
 Before you can connect to resources running on your own infrastructure, you have to expose these resources through an agent. This requires you to install an agent on the machine running the resource, or on a machine that has access to the resource.
 
-Mendix Cloud Private Connectivity currently supports exposing physical [subnet routes](https://tailscale.com/kb/1019/subnets) to your network via an agent. You can expose a single IP range, such as `192.0.2.0/24`, or multiple IP ranges separated by a colon, such as `192.0.2.0/24,198.51.100.0/24`.
+Mendix Cloud Private Connectivity currently supports exposing physical [subnet routes](https://tailscale.com/kb/1019/subnets) to your network via an agent. This is what you can expose:
+
+* A single IP range, such as `192.0.2.0/24` 
+* Multiple IP ranges separated by a colon, such as `192.0.2.0/24,198.51.100.0/24`
+* A single IP address, such as `10.100.0.5/32`
 
 #### Exposing Subnet Routes on a Windows Server {#private-connectivity-resources-expose-routes-windows}
 
@@ -409,8 +408,8 @@ On the **Connections** tab of the **Private Connectivity** page, you can see all
 * **Status** – The status of the connection. This can be one of the following:
 
     * **Pending** – The connection was requested, but not yet approved. The app environment cannot connect to the resource using this connection.
-	* **Approved** – The connection is approved. The app environment can connect to the resource using this connection.
-	* **Rejected** – The connection is rejected. The app environment cannot connect to the resource using this connection.
+    * **Approved** – The connection is approved. The app environment can connect to the resource using this connection.
+    * **Rejected** – The connection is rejected. The app environment cannot connect to the resource using this connection.
 
     For details on how Technical Contacts request connections for a specific environment, refer to [Connecting to External Resources](/developerportal/deploy/connecting-to-external-resource/).
 
@@ -423,14 +422,14 @@ To view an existing connection, follow these steps:
 
     * **Request Details** – The details of the connections request:
 
-	    * **Name** – The name of the user that requested this connection.
-	    * **Status** – The status of the connection request. This can be one of the following:
+        * **Name** – The name of the user that requested this connection.
+        * **Status** – The status of the connection request. This can be one of the following:
 
-		    * **Pending** – The connection was requested, but not yet approved. The app environment cannot connect to the resource using this connection.
-		    * **Approved** – The connection is approved. The app environment can connect to the resource using this connection.
-		    * **Rejected** – The connection is rejected. The app environment cannot connect to the resource using this connection.
+            * **Pending** – The connection was requested, but not yet approved. The app environment cannot connect to the resource using this connection.
+            * **Approved** – The connection is approved. The app environment can connect to the resource using this connection.
+            * **Rejected** – The connection is rejected. The app environment cannot connect to the resource using this connection.
 
-	    * **Date** – The date and time when the connection was requested.
+        * **Date** – The date and time when the connection was requested.
 
     * **App** – The name of the app for the connection.
     * **Environment** – The name of the environment for the connection.
@@ -448,17 +447,19 @@ Once a connection is requested, it must be approved before the app environment c
 
 To approve a connection, follow these steps:
 
-1. On the **Connections** tab, find the connection you want to enable.
-2. Click **Approve**.
+1. In **Control Center**, access the **Entitlements** section, then go to the **Approval Requests** page.
+2. On the **Active Requests** tab, identify the connection you want to approve.
+3. Click **Approve**.
 
 {{% alert color="warning" %}}
-If this is the first connection that is approved for an app environment, the Technical Contact must [redeploy](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/) the environment to be able to use the connection. 
+Approval of a connection does not automatically activate it. For every approved connection, the Technical Contact must [redeploy the environment](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/) for it to become active and usable. 
 {{% /alert %}}
 
 To disable a connection, follow these steps:
 
-1. On the **Connections** tab, find the connection you want to disable.
-2. Click **Reject**.
+1. In **Control Center**, access the **Entitlements** section, then go to the **Approval Requests** page.
+2. On the **Active Requests** tab, identify the connection you want to reject.
+3. Click **Reject**.
 
 <!-- ## Activities
 

@@ -1369,7 +1369,7 @@ You can invite additional members to the namespace, and configure their role dep
 
 {{% alert color="info" %}}The **Automatically accept invites** option is applicable only when the invited users have the same email domain as yours.{{% /alert %}}
 
-5. Give them the rights they need. This can be:
+1. Give them the rights they need. This can be:
 
     1. **Developer** – a standard set of rights needed by a developer, these are listed on the screen
     2. **Administrator** – a standard set of rights needed by an administrator, these are listed on the screen
@@ -1384,11 +1384,11 @@ If an application is in the Stopped state, the scaling does not come into effect
 Along with this, we have also decoupled the permission for modifying the MxAdmin password and managing environments.
 {{% /alert %}}
 
-6. Click **Send Invite** to send an invite to this person.
+1. Click **Send Invite** to send an invite to this person.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/AutoAcceptInvite.png" class="no-border" >}}
 
-7. If you have not enabled the **Automatically accept invites** option, the user will receive an email and will be required to follow a link to confirm that they want to join this namespace. They will need to be logged in to Mendix when they follow the confirmation link.
+2. If you have not enabled the **Automatically accept invites** option, the user will receive an email and will be required to follow a link to confirm that they want to join this namespace. They will need to be logged in to Mendix when they follow the confirmation link.
 
 ##### Editing and Removing Members
 

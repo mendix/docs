@@ -150,4 +150,3 @@ As a workaround, you can restore a backup across clusters by performing the foll
 1. Download the backup snapshot from your source environment to your local machine.
 2. Upload the downloaded backup snapshot from your local machine to the target environment.
 3. Begin the restore process within the target environment using the newly uploaded backup snapshot.
-

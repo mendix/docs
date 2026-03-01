@@ -68,7 +68,7 @@ If you want to use specific resources, you should instead expose a new endpoint 
 9. Click **Back** to return to the **Details** page.
 10. Click the **Ingestion Configuration** tab to set up your ingestion destination table.
 11. Click **Create** to start setting up the Ingestion Configuration.
-    * **Target Database** – Name of the database for data ingestion
+    ***Target Database** – Name of the database for data ingestion
     * **Target Schema** – Target schema where all data will be ingested
 12. Click **Save**.
 13. Click the **Data Ingestion** tab, where you can start your data ingestion or set up a schedule.

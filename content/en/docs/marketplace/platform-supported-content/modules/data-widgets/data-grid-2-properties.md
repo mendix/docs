@@ -27,8 +27,8 @@ The time (in seconds) the grid waits between refreshing the data. Auto-refreshin
 
 This property controls row selection capabilities. Selection is turned off by default, but can be enabled by choosing ether **Single** or **Multi**:
 
-- The **Single** selection is selection type where only one row can be selected at the time
-- The **Multi** type support selecting several rows at the time
+* The **Single** selection is selection type where only one row can be selected at the time
+* The **Multi** type support selecting several rows at the time
 
 {{% alert color="info" %}}
 Data grid currently supports in-memory selection. When the **Keep Selection** property is disabled, selection is limited to visible rows and will be cleared when you change a data grid page or reload the browser window. When **Keep Selection** is enabled, selections persist across page navigation, data refreshes, filter operations, and sorting changes.

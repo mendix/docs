@@ -16,13 +16,13 @@ These are the common properties for microflows and nanoflows:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflow-element-common-properties/microflow-element-common-properties.png" alt="Common properties in properties pane"   width="300px"  class="no-border" >}}
 
-- [Introduction](#introduction)
-- [Caption {#caption}](#caption)
-- [Auto-Generate Caption {#auto-generate-caption}](#auto-generate-caption)
-- [Background Color {#color}](#color)
-- [Error Handling Type {#error-handling}](#error-handling)
-- [Disabled {#disabled}](#disabled)
-- [Read More](#read-more)
+* [Introduction](#introduction)
+* [Caption {#caption}](#caption)
+* [Auto-Generate Caption {#auto-generate-caption}](#auto-generate-caption)
+* [Background Color {#color}](#color)
+* [Error Handling Type {#error-handling}](#error-handling)
+* [Disabled {#disabled}](#disabled)
+* [Read More](#read-more)
 
 ## Caption {#caption}
 

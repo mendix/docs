@@ -21,15 +21,15 @@ Here is an example of a data grid using filters:
 
 You can enable these advanced options to customize your data grid:
 
-- Pagination type and positioning
-- Row count display
-- Loading state indicators
-- Empty list option
-- Dynamic row and cell class
-- Column capabilities
-- Filter personalization settings
-- Custom configuration
-- Modular filtering with dedicated filter widgets
+* Pagination type and positioning
+* Row count display
+* Loading state indicators
+* Empty list option
+* Dynamic row and cell class
+* Column capabilities
+* Filter personalization settings
+* Custom configuration
+* Modular filtering with dedicated filter widgets
 
 ## Capabilities
 
@@ -39,9 +39,9 @@ In the new data grid, you are able to choose how users can iterate within the gr
 
 **Sorting** enables the header to be clickable. When clicked it will switch between ascending, descending, and no sorting. This functionality can be discerned according to the arrows on the right side:
 
-- Arrow up: ascending sorting applied
-- Arrow down: descending sorting applied
-- Double-sided arrow: no sorting is applied
+* Arrow up: ascending sorting applied
+* Arrow down: descending sorting applied
+* Double-sided arrow: no sorting is applied
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/sorting-asc.png" alt="Ascending sort" class="no-border" >}}
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/sorting-desc.png" alt="Descending sort" class="no-border" >}}
@@ -109,8 +109,8 @@ The **Paging Buttons** option will render the default buttons as the previous da
 
 You can configure pagination based on the following properties:
 
-- **Position** — The **Position of paging button** options allow you to position paging buttons above or below the data grid.
-- **Visibility** — The **Show paging buttons** options allow you to always show paging, or to automatically show and hide paging based on the amount of available data compared to the display limit per page.
+* **Position** — The **Position of paging button** options allow you to position paging buttons above or below the data grid.
+* **Visibility** — The **Show paging buttons** options allow you to always show paging, or to automatically show and hide paging based on the amount of available data compared to the display limit per page.
 
 ### Virtual Scrolling
 
@@ -158,9 +158,9 @@ You can define how each cell will be rendered in the data grid. We offer three c
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/column-width.png" alt="Settings for column width for each column item" class="no-border" >}}
 
-- **Auto-fill** — With this option it will auto define the width of your column, if all columns are using auto-fill, it will divide evenly the same width, if another column is configured with auto-fit or manual, it will fill the available space.
-- **Auto-fit** — Content With this option it will calculate the width of your column based on the content of each row.
-- **Manual** — With this option you will manually define the size of your column based of flexbox grow values, for more information, please [check here](https://www.w3.org/TR/css-flexbox-1/).
+* **Auto-fill** — With this option it will auto define the width of your column, if all columns are using auto-fill, it will divide evenly the same width, if another column is configured with auto-fit or manual, it will fill the available space.
+* **Auto-fit** — Content With this option it will calculate the width of your column based on the content of each row.
+* **Manual** — With this option you will manually define the size of your column based of flexbox grow values, for more information, please [check here](https://www.w3.org/TR/css-flexbox-1/).
 
 ### Alignment
 
@@ -208,10 +208,10 @@ Association filtering configuration has been moved from column properties to the
 
 The dropdown filter widget supports association filtering when configured in custom mode:
 
-- **Entity (Association)** — defines the association that will be used for filtering
-- **Selectable objects** — defines data source for filter options, returning list of all possible entities that could be associated
-- **Use lazy load** — controls when filter options are loaded. When set to **No** (recommended), data is fetched immediately providing better personalization support. When set to **Yes**, data is fetched only when the filter is opened, improving initial load times but limiting personalization capabilities
-- **Option caption** — expression used as caption for each option in the dropdown
+* **Entity (Association)** — defines the association that will be used for filtering
+* **Selectable objects** — defines data source for filter options, returning list of all possible entities that could be associated
+* **Use lazy load** — controls when filter options are loaded. When set to **No** (recommended), data is fetched immediately providing better personalization support. When set to **Yes**, data is fetched only when the filter is opened, improving initial load times but limiting personalization capabilities
+* **Option caption** — expression used as caption for each option in the dropdown
 
 ### Visible {#visible-filter}
 
@@ -251,8 +251,8 @@ Triggers an action (such as a nanoflow, microflow, or Show page action) when the
 
 Data Grid 2 uses a modular filtering system with dedicated filter widgets that can be placed in two locations:
 
-- **Column Headers**: Individual filters can be placed in column headers by enabling **Show column filters**. When this option is selected, a drop zone appears in each column header where you can place the appropriate filter widget.
-- **Filters Placeholder**: Grid-wide filters can be placed in the [filters placeholder](/appstore/modules/data-grid-2-properties/#filters-placeholder). This allows for filtering across multiple attributes and more complex filtering scenarios.
+* **Column Headers**: Individual filters can be placed in column headers by enabling **Show column filters**. When this option is selected, a drop zone appears in each column header where you can place the appropriate filter widget.
+* **Filters Placeholder**: Grid-wide filters can be placed in the [filters placeholder](/appstore/modules/data-grid-2-properties/#filters-placeholder). This allows for filtering across multiple attributes and more complex filtering scenarios.
 
 {{% alert color="warning" %}}
 The type of your selected attribute should match the filter type. For example, a **Text filter** should be used for a string attribute.
@@ -264,8 +264,8 @@ Also the desired attribute must be filterable. For example, not a value which is
 
 All filter widgets support two configuration modes:
 
-- **Auto Mode**: automatically detects filterable attributes from the parent grid (works when placed in grid columns)
-- **Custom Mode**: allows manual specification of target data source and attributes for more flexible filtering scenarios
+* **Auto Mode**: automatically detects filterable attributes from the parent grid (works when placed in grid columns)
+* **Custom Mode**: allows manual specification of target data source and attributes for more flexible filtering scenarios
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/settings-show-column-filters.png" alt="Settings for data grid 2" class="no-border" >}}
 
@@ -279,13 +279,13 @@ Here is an example of dropzones for filters in **Structure mode**:
 
 **Date filter** allows users to match date attributes based on these predefined criteria:
 
-- Between
-- Greater than
-- Greater than or equal
-- Equal
-- Not equal
-- Smaller than
-- Smaller than or equal
+* Between
+* Greater than
+* Greater than or equal
+* Equal
+* Not equal
+* Smaller than
+* Smaller than or equal
 
 Here is an example of **Date filter** as **Between**:
 
@@ -319,7 +319,7 @@ When **Default filter** is defined as **Between** these fields will appear to de
 
 In this section you can select a **Saved attribute** in order to save the current value of the filter. However, the value is not automatically applied to the widget. To restore the previously saved value of the filter, you must configure the same attribute as the **Default value** of the widget. The attribute available in this section must be this type:
 
-- Date & Time
+* Date & Time
 
 #### Events
 
@@ -335,11 +335,11 @@ In custom mode, you can manually configure the data source and attributes, while
 
 For association filtering, you can configure:
 
-- **Filter by Association**: sets the filter to operate on entity associations
-- **Entity**: selects the target association for filtering
-- **Selectable objects**: configures the data source that provides available filter options
-- **Use lazy load**: controls when options are loaded (immediate vs on-demand)
-- **Option caption**: defines how each option is displayed to users
+* **Filter by Association**: sets the filter to operate on entity associations
+* **Entity**: selects the target association for filtering
+* **Selectable objects**: configures the data source that provides available filter options
+* **Use lazy load**: controls when options are loaded (immediate vs on-demand)
+* **Option caption**: defines how each option is displayed to users
 
 The filter also supports enhanced features like multi-select, filterable options (combobox-style), and various selection methods (checkbox or row click).
 
@@ -355,8 +355,8 @@ When a drop-down filter is used in conjunction with an [Association Filter](#ass
 
 When adding a new option, the following properties are required:
 
-- **Caption** — The text being rendered for each option in the drop-down.
-- **Value** — The corresponding value that will be compared, if a value is being compared with an enumeration, it should match exactly the enumeration value. This property allows the usage of expression (you can use conditionals to apply dynamic values).
+* **Caption** — The text being rendered for each option in the drop-down.
+* **Value** — The corresponding value that will be compared, if a value is being compared with an enumeration, it should match exactly the enumeration value. This property allows the usage of expression (you can use conditionals to apply dynamic values).
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/data-grid-2/dropdown-filter-item.png" alt="Example of settings for new option" class="no-border" >}}
 
@@ -370,7 +370,7 @@ You can also define the empty option caption, which will be rendered as the firs
 
 In this section you can select a **Saved attribute** in order to save the current value of the filter. However, the value is not automatically applied to the widget. To restore the previously saved value of the filter, you must configure the same attribute as the **Default value** of the widget. The attribute available in this section must be this type:
 
-- String
+* String
 
 {{% alert color="warning" %}}
 If **Multiselect** is enabled you must select a String attribute containing `Unlimited` in its size.
@@ -386,12 +386,12 @@ In this section you can select an action to be executed **On change** by the fil
 
 The **Number filter** allows users to match decimal, integer, and long attributes based on these predefined criteria:
 
-- Greater than
-- Greater than or equal
-- Equal
-- Not equal
-- Smaller than
-- Smaller than or equal
+* Greater than
+* Greater than or equal
+* Equal
+* Not equal
+* Smaller than
+* Smaller than or equal
 
 You can select your filter criteria in the **Number Filter** settings:
 
@@ -415,10 +415,10 @@ To have better control of when the filter will be applied, we offer a **Apply af
 
 In this section you can select a **Saved attribute** in order to save the current value of the filter. However, the value is not automatically applied to the widget. To restore the previously saved value of the filter, you must configure the same attribute as the **Default value** of the widget. The attribute available in this section must be one of the following types:
 
-- Autonumber
-- Decimal
-- Integer
-- Long
+* Autonumber
+* Decimal
+* Integer
+* Long
 
 #### Events
 
@@ -430,15 +430,15 @@ In this section you can select an action to be executed **On change** by the fil
 
 **Text filter** allows users to match string attributes based on these predefined criteria:
 
-- Contains
-- Starts with
-- Ends with
-- Greater than
-- Greater than or equal
-- Equal
-- Not equal
-- Smaller than
-- Smaller than or equal
+* Contains
+* Starts with
+* Ends with
+* Greater than
+* Greater than or equal
+* Equal
+* Not equal
+* Smaller than
+* Smaller than or equal
 
 You can select your filter criteria in the **Text filter** settings:
 
@@ -462,8 +462,8 @@ To have better control of when the filter will be applied, we offer a **Apply af
 
 In this section you can select a **Saved attribute** in order to save the current value of the filter. However, the value is not automatically applied to the widget. To restore the previously saved value of the filter, you must configure the same attribute as the **Default value** of the widget. The attribute available in this section must be one of the following types:
 
-- Hashed string
-- String
+* Hashed string
+* String
 
 #### Events
 
@@ -473,15 +473,15 @@ In this section you can select an action to be executed **On change** by the fil
 
 In order to enable filtering within the data grid header (outside the columns) you need to enable `Grid wide filters` and select the desired attributes to be filtered in the **Filtering** tab. You can select attributes of the following types:
 
-- Autonumber
-- Boolean
-- Date & time
-- Decimal
-- Enumeration
-- Hashed string
-- Integer
-- Long
-- String
+* Autonumber
+* Boolean
+* Date & time
+* Decimal
+* Enumeration
+* Hashed string
+* Integer
+* Long
+* String
 
 The attributes selected here will be used for the matching filter placed inside the composable region. Only the first keyword in the filter will be considered when filtering multiple attributes in grid wide filtering
 
@@ -501,11 +501,11 @@ The Data Grid 2 widget ships with built-in functionality to export data from the
 
 To export data from the data grid, create a new nanoflow that calls **Export_To_Excel**. The **Export_To_Excel** action has a set of inputs:
 
-- **Datagrid name**: the name of the data grid from which data should be exported (the name can be found and copied from the data grid's settings (**Properties** > **Common** > **Name**))
-- **File name**: the file name to use for the exported document (does not require an appended file extension)
-- **Sheet name**: the name to use for the Excel sheet of the exported document.
-- **Include column names**: a Boolean expression that, if true, tells the action to include column captions as the first row in the exported document
-- **Chunk size**: the number of rows fetched from the backend to the browser at a time.
+* **Datagrid name**: the name of the data grid from which data should be exported (the name can be found and copied from the data grid's settings (**Properties** > **Common** > **Name**))
+* **File name**: the file name to use for the exported document (does not require an appended file extension)
+* **Sheet name**: the name to use for the Excel sheet of the exported document.
+* **Include column names**: a Boolean expression that, if true, tells the action to include column captions as the first row in the exported document
+* **Chunk size**: the number of rows fetched from the backend to the browser at a time.
 
 {{% alert color="info" %}}
 The recommended value for **Chunk Size** is 200. However, because each data grid has a unique set of columns and varying amounts of data per row, a different chunk size might result in better performance.
@@ -634,7 +634,7 @@ The name of the filter or data grid can be found at **Properties** > **Common** 
 
 > "The filter widget must be placed inside the column or header of the Data Grid 2.0 or inside header of the Gallery widget."
 
-- Widget placement is incorrect.
+* Widget placement is incorrect.
 
 **Solution**:
 Place widget inside Gallery header, Data Grid 2 header, or Data Grid 2 column.
@@ -643,7 +643,7 @@ Place widget inside Gallery header, Data Grid 2 header, or Data Grid 2 column.
 
 > "Unable to get filter store. Check parent widget configuration."
 
-- This error indicates that there is issue with widget settings. Most of the time this error happens when widget is placed in the header of Data Grid 2 or Gallery, but the **Filter attributes** setting is still set to **Auto**.
+* This error indicates that there is issue with widget settings. Most of the time this error happens when widget is placed in the header of Data Grid 2 or Gallery, but the **Filter attributes** setting is still set to **Auto**.
 
 **Solution**:
 Switch widget attributes setting to **Custom** and configure the attribute for filtering.
@@ -652,12 +652,12 @@ Switch widget attributes setting to **Custom** and configure the attribute for f
 
 > "The [filter] is not compatible with [datatype] data type."
 
-- This error indicates that attribute configured in the Data Grid 2 for column is not compatible with current filter type.
+* This error indicates that attribute configured in the Data Grid 2 for column is not compatible with current filter type.
 
 **Solution**: Change filter to appropriate filter type. For example for string attributes use text filter.
 
 > "The attribute is not filterable. Please choose a different attribute."
 
-- This error indicates that it is not possible to use current attribute for filtering due to technical limitations.
+* This error indicates that it is not possible to use current attribute for filtering due to technical limitations.
 
 **Solution**: Read and understand why some attributes are filterable and other are not. Change the model or choose another attribute.

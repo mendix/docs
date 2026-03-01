@@ -41,16 +41,16 @@ Generators:
 Starting in Private Mendix Platform 2.6, instead of usign the default Large Language Model, you can connect Maia to several different models of your choice. Currently this includes the following LLMs:
 
 * Anthropic
-  * Small text model - Claude Haiku 4.5
-  * Large text model - Claude Opus 4.6
+    * Small text model - Claude Haiku 4.5
+    * Large text model - Claude Opus 4.6
 * [AWS Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/models-regions.html)
-  * Small text model - Claude Haiku 4.5
-  * Large text model - Claude Sonnet 4.5
-  * Fallback model - Claude Sonnet 4
+    * Small text model - Claude Haiku 4.5
+    * Large text model - Claude Sonnet 4.5
+    * Fallback model - Claude Sonnet 4
 * [Azure](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure)
-  * o3-mini
+    * o3-mini
 * OpenAI
-  * GPT-5-Mini
+    * GPT-5-Mini
 
 ### Feature Comparison
 

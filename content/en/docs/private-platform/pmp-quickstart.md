@@ -451,7 +451,7 @@ To install the Private Cloud components, perform the following steps:
 To allow other clusters to connect to Private Mendix Platform, you must expose the Interactor Bridge Service. Currently, the installer only supports using the generic Ingress template to expose the service. If you want to expose the Interactor Bridge with other method (for example, Openshift Route), contact the Private Mendix Platform team.
 {{% /alert %}}
 
-10. Click **Review and Apply > Apply Configuration**.
+1. Click **Review and Apply > Apply Configuration**.
 
 ### Uninstalling the Private Cloud Components
 

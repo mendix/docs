@@ -76,5 +76,4 @@ Instead of reassigning computers to stations manually after the bulk import, you
 You can also specify this name during station creation.
 {{% /alert %}}
 
-
 Computers with this name are automatically assigned to the station during the bulk import.

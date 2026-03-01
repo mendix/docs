@@ -485,7 +485,7 @@ To edit a bridge:
 **AWS S3** 
     {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/edit-bridge/ebb_aws_s3_edit_mode.png" class="no-border" >}}
 
-4. Once you have made your changes, you can:
+1. Once you have made your changes, you can:
    * Click **Apply** to save and apply the changes. A confirmation message will indicate if the changes were successful. Changes to the event configuration take effect when applied. After applying changes, the bridge status will change to **Reconfiguring** and will return to **Running** once the reconfiguration is complete.
    * Click **Cancel** to exit editing mode without saving any changes.
 

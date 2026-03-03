@@ -18,17 +18,19 @@ Maia for Domain Model helps you generate new [domain model](/refguide/domain-mod
 
 ## Using Maia for Domain Model
 
-Maia for Domain Model is enabled by default.
+{{% alert color="info" %}}
+In Studio Pro 11.8 and above, Maia for Domain Model is incorporated into the unified Maia Make capabilities, which are enabled by default. There is no dedicated interface only for Maia for Domain Model. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
+{{% /alert %}}
 
-You can find it in the the toolbar of a domain model:
+In Studio Pro 11.7 and below, Maia for Domain Model is enabled by default. You can find it in the the toolbar of a domain model:
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-for-domain-model/maia-for-domain-model.png" max-width=80% >}}
+{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-make/maia-for-domain-model/maia-for-domain-model.png" max-width=80% >}}
 
 If you want to disable this feature, go to **Edit** > **Preferences** > the **Maia** tab and clear the **Enable Maia for Domain Model** checkbox.
 
 After clicking **Maia for Domain Model**, a dedicated chat interface will appear at the right side of Studio Pro under the **Maia** tab:
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-for-domain-model/chat-interface.png" max-width=42% >}}
+{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-make/maia-for-domain-model/chat-interface.png" max-width=42% >}}
 
 Describe your application or its main goals in the chat. Maia will use this information to generate a relevant domain model for you. In Studio Pro 11.1 and above, you can also attach maximally one image and one PDF to help Maia better understand your request. For more information, see the [Attachment Requirements](#attachment-requirements) section below. 
 

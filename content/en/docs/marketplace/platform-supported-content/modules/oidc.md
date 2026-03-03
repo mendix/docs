@@ -96,6 +96,7 @@ For readers with more knowledge of the OAuth and OIDC protocol:
     For signing into the app, the OIDC SSO module will not use token introspection and will always validate against the published `jwks` endpoint.
 
 * Stores an access token for each end-user that can be used to make API calls on their behalf.
+* The OIDC SSO module supports ‘bearer’ Access Token type and does not support the Message Authentication Code (MAC) when making calls to resource servers or APIs as defined in [RFC6749 section 7.1](https://datatracker.ietf.org/doc/html/rfc6749#section-7.1).
 * Can be configured to use either `client_secret_post`, `client_secret_basic`, or `private_key_jwt` as the client authentication method.
 * It supports nine signing algorithms: ECC SHA-256 (ES256), ECC SHA-384 (ES384), ECC SHA-512 (ES512), RSASSA-PSS SHA-256 (PS256), RSASSA-PSS SHA-384 (PS384), RSASSA-PSS SHA-512 (PS512), RSA SHA-256 (RS256), RSA SHA-384 (RS384), RSA SHA-512 (RS512), and automatically regenerates a new key pair upon expiry.
 * Supports ACR in authorization requests. The ACR in OIDC protocol is used to indicate the desired level of assurance or strength of authentication during the authentication process. It allows the relying party (your application) to request a specific level of authentication assurance from the identity provider (IdP) (version 2.3.0 and above).

@@ -12,6 +12,10 @@ description: "Describes the features in Maia for Workflows."
 To use Maia for Workflows, an internet connection and signing in to Studio Pro are required.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+In Studio Pro 11.8, Maia for Workflows is not available.
+{{% /alert %}}
+
 Maia for Workflows helps you generate a [workflow](/refguide/workflows/). It can also provide explanations or further improvements based on the generated elements. The current version has some known limitations. For example, it is currently intended only for use with empty workflows. Generated elements are appended to the end of the workflow, which may result in incorrectly modeled workflows if the workflow is not empty. For more details, see the [Limitations](#limitation) section below.
 
 ## Using Maia for Workflows

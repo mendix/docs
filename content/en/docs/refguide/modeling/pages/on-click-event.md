@@ -69,6 +69,7 @@ When an event is triggered, you can choose what action is triggered. Possible op
 * [Show user task page](#show-user-task-page)
 * [Show workflow admin page](#show-workflow-page)
 * [Complete user task](#complete-task)
+* [Cancel synchronization](#cancel-synchronization)
 
 ### Do Nothing {#do-nothing}
 
@@ -345,6 +346,10 @@ The following properties are specific for this event:
 * **Outcome** – Lists the outcomes of the selected [user task](/refguide/user-task/) and follows the selected outcome. If the user task has only one outcome, the **Default** is set as an outcome and the property cannot be edited. 
 * **Close page** – Specifies whether the current page should be closed.
 * **Commit** – Specifies whether the data container object should be committed when marking the task as completed.
+
+### Cancel Synchronization {#cancel-synchronization}
+
+The **Cancel synchronization** event cancels a running synchronization. You can trigger another synchronization later.
 
 ## Read More
 

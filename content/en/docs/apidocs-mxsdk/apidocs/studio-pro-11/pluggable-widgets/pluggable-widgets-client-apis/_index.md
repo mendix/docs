@@ -121,7 +121,7 @@ Though the type definition above looks complex, it is fairly simply to use becau
 
 ### EditableValue {#editable-value}
 
-`EditableValue` is used to represent values, either an attribute or a variable, that can be changed by a pluggable widget client component and is passed only to [attribute properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#attribute). It is defined as follows:
+`EditableValue` is used to represent a value (either an attribute or a variable) that can be changed by a pluggable widget client component and is passed only to [attribute properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#attribute). It is defined as follows:
 
 ```ts
 export interface EditableValue<T extends AttributeValue> {
@@ -145,21 +145,66 @@ export interface EditableValue<T extends AttributeValue> {
 
 A component will receive `EditableValue<X>` where `X` depends on the configured `attributeType`.
 
-`status` is similar to one exposed for `DynamicValue`. It indicates if the value's loading has finished and if loading was successful. Similarly to `DynamicValue`, `EditableValue` keeps returning the previous `value` when `status` changes from `Available` to `Loading` to help a widget avoid flickering.
+`status` is similar to the one exposed for `DynamicValue`. It indicates if the value's loading has finished, and if loading was successful. Similarly to `DynamicValue`, `EditableValue` keeps returning the previous `value` when `status` changes from `Available` to `Loading` to help a widget avoid flickering.
 
 The flag `readOnly` indicates whether a value can actually be edited. It will be true, for example, when a widget is placed inside a Data view that is not [editable](/refguide/data-view/#editable), or when a selected attribute is not editable due to [access rules](/refguide/access-rules/). The `readOnly` flag is always true when a `status` is not `ValueStatus.Available`. Any attempt to edit a value set to read-only will have no affect and incur a debug-level warning message.
 
 The value can be read from the `value` field and modified using `setValue` function. Note that `setValue` returns nothing and does not guarantee that the value is changed synchronously. But when a change is propagated, a component receives a new prop reflecting the change.
 
-When setting a value, a new value might not satisfy certain validation rules — for example when an attribute is selected and the new value is bigger than the underlying attribute allows. In this case, your change will affect only `value` and `displayValue` received through a prop. Your change will not be propagated to an object’s attribute and will not be visible outside of your component. The component will also receive a validation error text through the `validation` field of `EditableValue`.
+When setting a value, a new value might not satisfy certain validation rules — for example, when an attribute is selected and the new value is bigger than the underlying attribute allows. In this case, your change will affect only `value` and `displayValue` received through a prop. Your change will not be propagated to an object’s attribute and will not be visible outside of your component. The component will also receive a validation error text through the `validation` field of `EditableValue`.
 
-It is possible for a component to extend the defined set of validation rules. A new validator — a function that checks a passed value and returns a validation message string if any — can be provided through the `setValidator` function. A component can have only a single custom validator. The Mendix Platform ensures that custom validators are run whenever necessary, for example when a page is being saved by an end-user. It is best practice to call `setValidator` early in a component's lifecycle — specifically in the [componentDidMount](https://en.reactjs.org/docs/react-component.html#componentdidmount) function.
+It is possible for a component to extend the defined set of validation rules. A new validator (a function that checks a passed value and returns a validation message string if any) can be provided through the `setValidator` function. A component can have only a single custom validator. The Mendix Platform ensures that custom validators are run whenever necessary, for example when a page is being saved by an end-user. It is best practice to call `setValidator` early in a component's lifecycle — specifically in the [componentDidMount](https://en.reactjs.org/docs/react-component.html#componentdidmount) function.
 
-In practice, many client components present values as nicely formatted strings which take locale-specific settings into account. To facilitate such cases `EditableValue` exposes a field `displayValue` which is the formatted version of `value`, and a method `setTextValue` — a version of `setValue` that takes care of parsing. `setTextValue` also validates that a passed value can be parsed and assigned to the target's value type. Similarly to `setValue`, a change to an invalid value will not be propagated further than the prop itself, but a `validation` is reported. Note that if a value cannot be parsed, the prop will contain only a `displayValue` string and `value` will become undefined.
+In practice, many client components present values as nicely formatted strings which take locale-specific settings into account. To facilitate such cases, `EditableValue` exposes a field `displayValue` (which is the formatted version of `value`), and a method `setTextValue` (a version of `setValue` that takes care of parsing). `setTextValue` also validates that a passed value can be parsed and assigned to the target's value type. Similarly to `setValue`, a change to an invalid value will not be propagated further than the prop itself, but a `validation` is reported. Note that if a value cannot be parsed, the prop will contain only a `displayValue` string and `value` will become undefined.
 
 There is a way to use more the convenient `displayValue`  and `setTextValue` while retaining control over the format. A component can use a `setFormatter` method passing a formatter object: an object with `format` and `parse` methods. The Mendix Platform provides a convenient way of creating such objects for simple cases. An existing formatter exposed using a `EditableValue.formatter` field can be modified using its `withConfig` method. For complex cases formatters still can be created manually. A formatter can be reset back to default settings by calling `setFormatter(undefined)`.
 
 The optional field `universe` is used to indicate the set of all possible values that can be passed to a `setValue` if a set is limited. Currently, `universe` is provided only when the edited value is of the Boolean or enumeration [types](/refguide/attributes/#type).
+
+### EditableFileValue {#editable-file-value}
+
+`EditableFileValue` is used to represent file values, that can be changed by a pluggable widget client component and is passed only to [file](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#file). It is defined as follows:
+
+```ts
+export interface EditableFileValue<T = FileValue> {
+    readonly status: ValueStatus;
+    readonly readOnly: boolean;
+
+    readonly validation: Option<string>;
+    setValidator: (validator?: (value: Option<T>) => Option<string>) => void;
+
+    readonly value: Option<T>;
+    setValue: (value: Option<T>) => void;
+}
+```
+
+Member `status` is similar to one exposed for `DynamicValue`. It indicates if the value's loading has finished and if loading was successful. Similarly to `DynamicValue`, `EditableFileValue` keeps returning the previous `value` when `status` changes from `Available` to `Loading` to help a widget avoid flickering.
+
+The flag `readOnly` indicates whether a value can actually be edited. The `readOnly` flag is always true when a `status` is not `ValueStatus.Available`. Any attempt to edit a value set to read-only will have no affect and incur a debug-level warning message.
+
+The value can be read from the `value` field and modified using `setValue` function. Note that `setValue` returns nothing and does not guarantee that the value is changed synchronously. But when a change is propagated, a component receives a new prop reflecting the change.
+
+When setting a value, a new value might not satisfy certain validation rules — for example when a file is selected and the new value is bigger than the underlying file allows, or the file type is not allowed. In this case, your change will affect only `value` received through a prop. Your change will not be propagated to an object and will not be visible outside of youAllowUpload (Optional)
+
+This component. The component will also receive a validation error text through the `validation` field of `EditableFileValue`.
+
+It is possible for a component to extend the defined set of validation rules. A new validator — a function that checks a passed value and returns a validation message string if any — can be provided through the `setValidator` function. A component can have only a single custom validator. The Mendix Platform ensures that custom validators are run whenever necessary, for example when a page is being saved by an end-user. It is best practice to call `setValidator` early in a component's lifecycle — specifically in the [componentDidMount](https://en.reactjs.org/docs/react-component.html#componentdidmount) function.
+
+### EditableImageValue {#editable-image-value}
+
+`EditableImageValue` is used to represent image values, that can be changed by a pluggable widget client component and is passed only to [image](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#image). It acts as an extension of [EditableFileValue](#editable-file-value) it is defined as follows:
+
+```ts
+export interface EditableImageValue<T extends ImageValue> extends EditableFileValue<T> {
+    setThumbnailSize: (width: Option<number>, height: Option<number>) => void;
+}
+```
+
+`EditableImageValue` provides upload capabilities to [`ImageValue`](#imagevalue), similarly to how [`EditableFileValue`](#editable-file-value) for [`FileValue`](#filevalue). Also it adds `setThumbnailSize`  method which enables a component to request the Mendix Platform to return an image with specific dimensions. The Mendix Platform will take care of resizing the image while keeping the aspect ratio intact. When a thumbnail size is set, the `value` field of `EditableImageValue` will contain a resized image. When a thumbnail size is not set, the `value` field will contain an original image.
+
+{{% alert color="warning" %}}
+`EditableImageValue` does not support `NativeImage`.
+{{% /alert %}}
 
 ### ModifiableValue {#modifiable-value}
 

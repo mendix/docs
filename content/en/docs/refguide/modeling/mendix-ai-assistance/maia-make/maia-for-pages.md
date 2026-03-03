@@ -18,11 +18,15 @@ Maia for Pages helps you generate a [page](/refguide/page/) by adding and config
 
 ## Using Maia for Pages
 
-To enable Maia for Pages, go to **Edit** > **Preferences** > the **Maia** tab and select **Enable Maia for Pages**.
+{{% alert color="info" %}}
+In Studio Pro 11.8 and above, Maia for Pages is incorporated into the unified Maia Make capabilities, which are enabled by default. There is no dedicated interface only for Maia for Pages. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
+{{% /alert %}}
+
+In Studio Pro 11.7 and below, to enable Maia for Pages, go to **Edit** > **Preferences** > the **Maia** tab and select **Enable Maia for Pages**.
 
 Once enabled, you can find it in the the toolbar of a page:
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-for-pages/maia-for-pages.png" max-width=80% >}}
+{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-make/maia-for-pages/maia-for-pages.png" max-width=80% >}}
 
 {{% alert color="info" %}}
 Maia for Pages is available in both the **Structure mode** and **Design mode**.
@@ -30,7 +34,7 @@ Maia for Pages is available in both the **Structure mode** and **Design mode**.
 
 After clicking **Maia for Pages**, a dedicated chat interface appears at the right side of Studio Pro under the **Maia** tab:
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-for-pages/chat-interface.png" max-width=42% >}}
+{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-make/maia-for-pages/chat-interface.png" max-width=42% >}}
 
 Describe your page or its main goals in the chat. Maia uses this information to add relevant widgets to the page and configure them for you. When generating a page, Maia knows about the domain model of the module you are currently working on. For example, it might include a [Data View](/refguide/data-view/) with some [Text Box](/refguide/text-box/) widgets for an attribute of an entity.
 

@@ -36,20 +36,24 @@ See below a list of Maia Chat's data sources:
  
 ## Using Maia Chat in Studio Pro
 
-There are two ways to access Maia Chat in Studio Pro:
+{{% alert color="info" %}}
+In Studio Pro 11.8 and above, Maia Chat is incorporated into the unified Maia Make capabilities, which are enabled by default. There is no dedicated interface only for Maia Chat. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
+{{% /alert %}}
+
+In Studio Pro 11.7 and below, there are two ways to access Maia Chat in Studio Pro:
 
 * Click the **Maia** ({{% icon name="sparkles" %}}) icon to the right of the top bar.
 * Go to the **View** menu and click **Maia**.
 
 The chat interface appears at the right side of Studio Pro under the **Maia** pane:
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-chat/maia-chat-interface.png" width="250px">}}
+{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-make/maia-chat/maia-chat-interface.png" width="250px">}}
 
 You can start using Maia Chat by clicking one of the demo questions. Alternatively, you can ask your own question, and press <kbd>Enter</kbd> or click **Ask** to send the question. For information on the supported shortcut keys in Maia Chat, see the [Maia Chat Shortcut Keys](/refguide/keyboard-shortcuts/#maia-chat-shortcuts) section in *Keyboard Shortcuts*.
 
 For more information on Maia Chat features in Studio Pro, see the sub-sections below.
 
-If Maia is not giving you a good answer, check the [best practices](/portal/maia/#best-practices) in *Maia in Mendix Portal*. If you still can't get a good answer, please see [Giving Feedback](#feedback), below for information on how to let Mendix know.
+If Maia is not giving you a good answer, check the [best practices](/portal/maia/#best-practices) in *Maia in Mendix Portal*. If you still can not get a good answer, please see the [Giving Feedback](#feedback) section below for information on how to let Mendix know.
 
 ### Maia Chat Features in Studio Pro
 
@@ -72,7 +76,7 @@ There are several ways to give feedback on the generated answer:
 * Click the thumbs up icon ({{% icon name="thumbs-up" %}}) or the thumbs down icon ({{% icon name="thumbs-down" %}})
 * To provide more detailed feedback, click the add feedback icon ({{% icon name="notes-paper-edit" %}}). A detailed **Feedback** section shows below the answer:
 
-    {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-chat/feedback-section.png" width="250px" >}}
+    {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-make/maia-chat/feedback-section.png" width="250px" >}}
 
     * You can rate the **correctness**, **completeness**, and **readability** of the provided answer.
     * You can also provide **Additional feedback** if you want to.

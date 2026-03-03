@@ -12,20 +12,29 @@ description: "Describes the features in Maia Explain."
 To use Maia Explain, an internet connection and signing in to Studio Pro are required.
 {{% /alert %}}
 
-Maia Explain helps you easily understand a microflow or a nanoflow. It explains the general purpose of the logic and highlights specific technical details to help you understand the logic further.
+## Using Maia Explain in Studio Pro 11.8 and Above
 
-## Using Maia Explain
+In Studio Pro 11.8 and above, Maia Explain is incorporated into the unified Maia Make capabilities, which are enabled by default. There is no dedicated interface only for Maia Explain. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
 
-Maia Explain is enabled by default. If you want to disable this feature, go to **Edit** > **Preferences** > the **Maia** tab and clear the **Enable Maia Explain** checkbox.
+There are two ways to use Maia Explain:
 
-There are two ways to launch Maia Explain:
+* Use the chat interface directly to get explanations of your microflows or pages.
+* In the App Explorer, right-click a microflow or a page to open its context menu, and click **Maia Explain**.
+
+Nanoflows are not supported by Maia Explain in Studio Pro 11.8.
+
+## Using Maia Explain in Studio Pro 11.7 and Below
+
+In Studio Pro 11.7 and below, Maia Explain is enabled by default. If you want to disable this feature, go to **Edit** > **Preferences** > the **Maia** tab and clear the **Enable Maia Explain** checkbox.
+
+There are two ways to use Maia Explain:
 
 * In the toolbar of the microflow or nanoflow editor, click **Explain**.
 * In the App Explorer, right-click a microflow or a nanoflow to open its context menu, and click **Explain**.
 
 A message is sent to Maia and a chat interface with an initial answer appears on the right side of Studio Pro under the **Maia** tab:
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-explain/maia-explain-interface.png" width="300px">}}
+{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-make/maia-explain/maia-explain-interface.png" width="300px">}}
 
 The initial answer consists of two parts: 
 
@@ -44,4 +53,5 @@ In this dedicated chat, only requests related to Maia Explain will be properly h
 
 ## Read More
 
+* [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)
 * [Maia Chat](/refguide/maia-chat/)

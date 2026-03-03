@@ -108,6 +108,10 @@ You can specify which repositories to use for Gradle. The content of this field 
 
 ### Generative AI
 
+* **Enable Maia** - When enabled, you can access all Maia capabilities in Studio Pro. It is enabled by default.
+
+In Studio Pro 11.7 and below, the **Generative AI** section contains the following settings:
+
 The **Generative AI** section contains the following settings:
 
 * **Enable Start with Maia** – When enabled, you can use the **Start with Maia** starting point in Studio Pro to help you create an app. For more information on how to use this feature, see [Start with Maia](/refguide/start-with-maia/). It is enabled by default.
@@ -326,6 +330,10 @@ This setting allows you to set the beta version as the default editor.
 This option allows you to use the web version of the system texts editor. It is enabled by default.
 
 If Translation Generator is also enabled, you can use it in this editor as well. For more information, see the [Generating Translation for System Texts](/refguide/translation-generator/#translate-system-text) section in *Translation Generator*.
+
+### Workflow
+
+Select this option to allow adding [event sub-processes](/refguide/workflow-event-sub-processes/) to your workflow in the workflow editor.
 
 ## Read More
 

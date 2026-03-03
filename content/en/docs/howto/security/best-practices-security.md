@@ -177,7 +177,7 @@ You may need to store sensitive information, such as credentials, in your app. T
 * Credentials are recorded in [constants](/refguide/constants/) which can be set when your app is deployed—in the [Mendix Portal](/developerportal/deploy/environments-details/#constants), for example, if you are deploying to Mendix Cloud.
 * The constants should be blank by default (not populated with the credentials) in the app.
 
-    * Values for the constants can be provided during testing by creating a [configuration](/refguide/configuration/#constants).
+    * Values for the constants can be provided during testing by creating a [configuration](/refguide/configurations-tab/#constants).
 
 * Only authorized people should be given access to set the constants when the app is deployed. This is done through the [app roles](/developerportal/general/app-roles/) and (for Mendix Cloud) the [node permissions](/developerportal/deploy/node-permissions/).
 

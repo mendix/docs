@@ -110,7 +110,7 @@ The fallback page is a page or microflow that can be used to customize the appli
 
 ### Authentication {#authentication}
 
-If an [anonymous user](/refguide/anonymous-users/) tries to access a resource to which the user has no access, the configured [sign-in page](/refguide/authentication-widgets/) will be displayed, prompting the user to sign in.
+If a user, [anonymous](/refguide/anonymous-users/) or authenticated, tries to access a resource to which the user has no access, the configured [sign-in page](/refguide/authentication-widgets/) will be displayed, prompting the user to sign in.
 
 If the sign-in page is set to none, a built-in pop-up window will appear instead. The page title is translatable and may be overridden.
 

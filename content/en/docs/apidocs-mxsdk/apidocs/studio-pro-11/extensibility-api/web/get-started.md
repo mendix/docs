@@ -41,7 +41,7 @@ You can also open the application directory containing the application `.mpr` fi
 
 To accelerate your extension development, Mendix provides an extension generator that creates a customizable sample extension.
 
-To use the generator, navigate to your desired source code directory and run the command `npm create @mendix/extension`. You may be prompted by `npm` to grant permission to install the generator. After installation, you will be guided through a series of questions to help configure your extension.
+To use the generator, navigate to your desired source code directory and run the command `npm create @mendix/extension@latest`. You may be prompted by `npm` to grant permission to install the generator. After installation, you will be guided through a series of questions to help configure your extension.
 
 You will be asked the following:
 

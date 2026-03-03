@@ -128,6 +128,15 @@ When creating the JSON structure for your secret, you must use a flat key-value 
         * **CIAdmin.AzureBlobStorageToken** - SAS token for the Azure Blob Storage
         * **CIAdmin.AzureAwsS3SK** - Name of the Azure DevOps organization
 
+    * **Cluster Manager**
+        
+        * **ClusterManager.OCIRegistryAWSSK** - OCI Registry: AWS secret access key for the OCI registry
+        * **serverClusterManager.OCIBasicAuthPassword** - OCI Registry: Password for the OCI registry
+        * **serverClusterManager.MDAAWSSK** - MDA Storage: AWS secret access key for the MDA file
+        * **serverClusterManager.MDAFileBasicAuthPassword** - MDA Storage: Password for the MDA file
+        * **serverClusterManager.KubernetesApiToken** - Kubernetes API: Token for accessing the Kubernetes API
+        * **serverClusterManager.GrafanaAPIKey** - Grafana: API key for accessing the Grafana server
+
     * Marketplace
 
         * **Marketplace.ImportCDNPassword** - Personal access token for the Marketplace admin
@@ -135,6 +144,13 @@ When creating the JSON structure for your secret, you must use a flat key-value 
     * Email
 
         * **Email.SMTPPassword** - Password for the SMTP server
+    
+    * Maia
+
+        * **AmazonBedrockApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom AWS Bedrock LLM
+        * **AzureAiApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
+        * **AnthropicApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
+        * **OpenAiApiKey** - An API key to allow [Maia](/private-mendix-platform/maia/) to connect to a custom Azure LLM
 
 ### Configuring Azure AD Workload Identity
 

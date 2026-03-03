@@ -73,7 +73,7 @@ To install the component, follow the instructions in the [Importing Content from
 
 ## Configuration
 
-1. Configure the **Startup** microflow in the Advanced Audit Trail module (`AdvancedAuditTrail.ConfigureAuditTrail`) to run as (part of) the [After Startup](/refguide/app-settings/#after-startup) microflow.
+1. Configure the **Startup** microflow in the Advanced Audit Trail module (`AdvancedAuditTrail.ConfigureAuditTrail`) to run as (part of) the [After Startup](/refguide/runtime-tab/#after-startup) microflow.
 2. Set up your application roles to include the right module roles. For more information, see the [Configuring Module Roles](#module-roles) section below.
 3. Configure the right constant values for the right snapshots. For more information, see the [Configuring Constants](#constants) section below.
 4. Implement the **Before Commit** (**BCo**) and **Before Delete** (**Bde**) events. Use the events on the domain model settings (**BCo** / **BDe**). For example, the configuration in the image below is for the **Before Commit** handler, whereas for the **Before Delete** handler, the value of **Is delete** should be set to *true*.

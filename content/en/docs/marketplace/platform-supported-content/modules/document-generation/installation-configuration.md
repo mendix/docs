@@ -79,9 +79,9 @@ To allow the module to send and receive document generation requests on your Men
     
     2. On the **Overview** tab, click **Details** for the respective environment.
     
-    3. In the specific **Environment Details** page, select the **Network** tab.
+    3. In the specific **Environment Details** page, select the **Connectivity** tab.
     
-    4. Scroll down to **Path Based Access Restrictions** and click **Add**. The **Edit Path Based Access Restriction** dialog box opens.
+    4. Scroll down to **Path Based Access Restrictions** and click **Add**. The **New Path Based Access Restriction** dialog box opens.
     
     5. Fill in the fields as follows:
         * In the **Path** field, enter */docgen/*.

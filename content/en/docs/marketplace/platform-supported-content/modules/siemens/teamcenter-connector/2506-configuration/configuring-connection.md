@@ -5,6 +5,8 @@ weight: 3
 description: "Describes the connection configuration steps for Teamcenter."
 ---
 
+{{% alert color="info" %}} This page describes the steps needed to configure the connection between your Mendix app and your Teamcenter instance using Teamcenter Connector 2506.0.0 and below. For information applying to Teamcenter Connector 2512.0.0 and above, refer to [Configuring the Connection to Teamcenter with Teamcenter Connector 2512.0.0 and Above](/appstore/modules/siemens-plm/configuring-connection-2512/). {{% /alert %}}
+
 ## Configuring the Connection to Teamcenter
 
 To help administrators configure the connection to Teamcenter, the Teamcenter Connector contains configuration microflows and pages. To configure the connection to Teamcenter, the Mendix administrator must do the following:

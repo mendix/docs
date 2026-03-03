@@ -138,6 +138,10 @@ You can install and run the Mendix Operator in either Global or Standard mode. I
 * [Running the Mendix Operator in Global Mode](/developerportal/deploy/global-operator/)
 * [Running the Mendix Operator in Standard Mode](/developerportal/deploy/standard-operator/)
 
+{{% alert color="info" %}}
+For Mendix version 11.5.0 and above, you will need to install Mendix Operator version 2.24 or above.
+{{% /alert %}}
+
 ### Licensing the Application with Private Cloud License Manager
 
 You can license the Operator and Runtime of your application by configuring the Operator configuration with License Manager details. In order to start using Private Cloud License Manager, you need to first download the PCLM executable available in the Installation page. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/). The PCLM executable is available for download from this page.
@@ -1111,18 +1115,30 @@ Click the **Details** button for the namespace you want to manage.
 
 On the namespace management page, there are a number of tabs which allow you to manage aspects of your namespace :
 
-* Apps
-* Members
-* Operate
-* Plans
-* Installation
-* Additional information
-* Customization
-* PCLM Statistics
+* [Apps](#apps)
+* [Members](#members)
+* [Operate](#operate)
+* [Plans](#plans)
+* [Installation](#installation)
+* [Additional information](#additional-information)
+* [Customization](#customization)
+* [PCLM Statistics](#pclm-statistics)
 
 See the sections below for more information.
 
-You can also delete your namespace from the cluster manager by clicking **Delete Namespace** ({{% icon name="trash-can" %}}) in the top right.
+You can also [rotate your credentials](#rotate-credentials), or [delete](#delete-namespace) your namespace from the cluster manager.
+
+#### Rotating Credentials {#rotate-credentials}
+
+Rotating your credentials means replacing your current Mendix Agent secret with a new one. Rotate your credentials to ensure that your environment is secure, for example, in case of a credentials leak.
+
+To rotate the credentials, click **Rotate Credentials** in the top right, and then follow the on-screen wizard.
+
+{{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/RotateCredential.png" class="no-border" >}}
+
+#### Deleting Namespaces {#delete-namespace}
+
+To delete a namespace, click **Delete Namespace** ({{% icon name="trash-can" %}}) in the top right.
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/image25.png" class="no-border" >}}
 
@@ -1247,7 +1263,7 @@ You can also see an activity log containing the following information for all na
 * When deployment strategy is enabled for an environment in a namespace
 * When deployment strategy is disabled for an environment in a namespace
 
-#### Apps
+#### Apps {#apps}
 
 The **Apps** tab of namespace details in the cluster manager page lists all the app environments which are deployed to this namespace.
 
@@ -1301,7 +1317,7 @@ The deployment strategy now includes the following options under the **Deploymen
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/deploymentStrategy.png" class="no-border" >}}
 
-#### Members
+#### Members {#members}
 
 By default, the cluster manager, who created the cluster in Mendix, and anyone added as a cluster manager has full administration rights to the cluster and its namespaces. These cluster managers will also need to be given the appropriate permissions on the Kubernetes or OpenShift Cluster. The administration rights are:
 
@@ -1351,7 +1367,7 @@ You can invite additional members to the namespace, and configure their role dep
 3. Enter the **Email** of the person you want to invite.
 4. If you prefer the individual to join as a namespace member automatically, without requiring them to manually accept the invitation, you can enable the **Automatically accept invites** option.
 
-    {{% alert color="info" %}}The **Automatically accept invites** option is applicable only when the invited users have the same email domain as yours.{{% /alert %}}
+{{% alert color="info" %}}The **Automatically accept invites** option is applicable only when the invited users have the same email domain as yours.{{% /alert %}}
 
 5. Give them the rights they need. This can be:
 
@@ -1359,14 +1375,14 @@ You can invite additional members to the namespace, and configure their role dep
     2. **Administrator** – a standard set of rights needed by an administrator, these are listed on the screen
     3. **Custom** – This option is now deprecated.
 
-    {{% alert color="info" %}}
-    The custom permission if needed to be edited, a role need to be assigned with appropriate permissions. See [Roles and Permissions](/developerportal/deploy/private-cloud-cluster/#rolesandpermissions) for more information.
-    {{% /alert %}}
+{{% alert color="info" %}}
+The custom permission if needed to be edited, a role need to be assigned with appropriate permissions. See [Roles and Permissions](/developerportal/deploy/private-cloud-cluster/#rolesandpermissions) for more information.
+{{% /alert %}}
 
-    {{% alert color="info" %}}
-    If an application is in the Stopped state, the scaling does not come into effect until the application is Started. This means that you have to click **Start application** in order for the changes to be sent to the cluster.
-    Along with this, we have also decoupled the permission for modifying the MxAdmin password and managing environments.
-    {{% /alert %}}
+{{% alert color="info" %}}
+If an application is in the Stopped state, the scaling does not come into effect until the application is Started. This means that you have to click **Start application** in order for the changes to be sent to the cluster.
+Along with this, we have also decoupled the permission for modifying the MxAdmin password and managing environments.
+{{% /alert %}}
 
 6. Click **Send Invite** to send an invite to this person.
 
@@ -1402,7 +1418,7 @@ Open the **Operate** tab, enter the URLs relevant to your namespace, and click *
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/image32.png" class="no-border" >}}
 
-#### Plans
+#### Plans {#plans}
 
 The **Plans** tab shows you the database and storage plans which are currently configured for your namespace.
 
@@ -1439,7 +1455,7 @@ kubectl -n {namespace} delete storageplan {StoragePlanName}
 
 {{% /alert %}}
 
-#### Custom Core Resource Plan {#custom-core-resource-plan}
+##### Custom Core Resource Plan {#custom-core-resource-plan}
 
 Here, you can create customized plan for your core resources.
 
@@ -1468,7 +1484,7 @@ Ephemeral Storage is a temporary storage attached to the lifecycle of a pod. Hen
 Once you enable the **Use custom core resources plans** button, you cannot switch back to the default core plans until you delete all the environments using the custom core plans and disable **Use custom core resources plans** button. A warning message with the same information is displayed when trying to enable this feature.
 {{% /alert %}}
 
-#### Installation
+#### Installation {#installation}
 
 The **Installation** tab shows you the Configuration Tool which you used to create the namespace, together with the parameters which are used to configure the agent. You can use the Configuration Tool again to change the configuration of your namespace by pasting the command into a command line terminal as described in [Running the Configuration Tool](/developerportal/deploy/standard-operator/#running-the-tool), above. You can also download the Configuration Tool again, if you wish.
 
@@ -1476,11 +1492,11 @@ The **Installation** tab shows you the Configuration Tool which you used to crea
 In case of Global Operator Managed namespace, you will see the Configuration tab instead of the Installation tab. For more information, see [Global Operator Namespace](/developerportal/deploy/global-operator/)
 {{% /alert %}}
 
-#### Additional Information
+#### Additional Information {#additional-information}
 
 This tab shows information on the versions of the various components installed in your namespace.
 
-#### Customization
+#### Customization {#customization}
 
 This tab allows the cluster manager to customize the enablement of the secret store, developer mode for the developers, and product type for the PCLM Runtime License.
 
@@ -1508,7 +1524,7 @@ The selected product type will be applied to all environments within this namesp
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/Customization.png" class="no-border" >}}
 
-#### PCLM Statistics
+#### PCLM Statistics {#pclm-statistics}
 
 This tab shows information about claimed licenses, operator licenses and runtime licenses.
 

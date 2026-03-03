@@ -9,7 +9,7 @@ beta: true
 ---
 
 {{% alert color="warning" %}}
-This feature is in Public Beta. For more information, see [Release Status](/releasenotes/release-status/).
+This feature is in Public Beta. For more information, refer to [Release Status](/releasenotes/release-status/).
 {{% /alert %}}
 
 ## Introduction
@@ -55,7 +55,7 @@ Contact your Mendix Admin if the resource you want is not on the list.
 1. Click **Save** to submit your connection request for approval. All submitted connection requests appear in the [Control Center](/control-center/configure-private-connectivity/) for the Mendix Admin review.
 1. [Track and manage](#manage-connection-requests) your connection requests.
 {{% alert color="info" %}}
-If this is the first connection approved for an application environment, you must redeploy that environment for the connection to become active and usable.
+Approval of a connection does not automatically activate it. For every approved connection, the Technical Contact must [redeploy the environment](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/) for it to become active and usable.
 {{% /alert %}}
 
 ### Connection Request Status

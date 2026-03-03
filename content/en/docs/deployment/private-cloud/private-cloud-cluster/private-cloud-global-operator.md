@@ -15,6 +15,10 @@ It is essential to ensure that each namespace is exclusively managed by a single
 
 Global Operator installation is supported officially from Operator version v2.20.0 and above.
 
+{{% alert color="info" %}}
+For Mendix version 11.5.0 and above, you will need to install Mendix Operator version 2.24 or above.
+{{% /alert %}}
+
 ## Installing the Global Operator
 
 While installing the Mendix Operator in Global mode, you must first deploy the Mendix Operator and Agent within the *Global Operator namespace*. A Global Operator namespace comprises the Operator itself, the Agent, and the configuration that instructs the Operator on the namespaces it should oversee.

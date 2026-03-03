@@ -553,7 +553,7 @@ For that you need to do three things:
 
  [//]: # (<!-- markdownlint-disable no-duplicate-heading -->)
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -579,7 +579,7 @@ If the `feedback` is not empty use the name of your current log subscriber in th
 {"action": "remove_log_subscriber", "params": {"name": "ConsoleLogSubscriber"}}
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -590,7 +590,7 @@ If the `feedback` is not empty use the name of your current log subscriber in th
 
 It is possible to have multiple log subscribers running simultaneously, if several log subscribers were created then each of them will be writing the same log lines. 
 
-### Request to Create New Log Subscriber in Json Format
+### Request to Create New Log Subscriber in JSON Format
 
 ```json
 {
@@ -607,7 +607,7 @@ It is possible to have multiple log subscribers running simultaneously, if sever
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -616,7 +616,7 @@ It is possible to have multiple log subscribers running simultaneously, if sever
 }
 ```
 
-This will write logs to standard output in Json format. If you need to add extra static fields to tag logs then you can add them into `tags`, in this example `ddtags` and `service` are added.
+This will write logs to standard output in JSON format. If you need to add extra static fields to tag logs then you can add them into `tags`, in this example `ddtags` and `service` are added.
 This configuration will produce logs similar to these:
 
 ```json
@@ -637,7 +637,7 @@ This configuration will produce logs similar to these:
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -649,3 +649,27 @@ This configuration will produce logs similar to these:
 This will write logs to standard output in simple text format.
 
 [//]: # (<!-- markdownlint-enable no-duplicate-heading -->)
+
+### Request to Create New Log Subscriber in Open Telemetry Format {#new-log-sub-opentelemetry}
+
+```json
+{
+  "action": "create_log_subscriber",
+  "params": {
+    "type": "opentelemetry",
+    "name": "OpenTelemetrySubscriber",
+    "autosubscribe": "INFO"
+  }
+}
+```
+
+#### Example Response
+
+```json
+{
+  "feedback": {},
+  "result": 0
+}
+```
+
+This will send logs to the registered OpenTelemetry collector. See [Tracing](/refguide/tracing-in-runtime/) for a guide on how to enable OpenTelemetry.

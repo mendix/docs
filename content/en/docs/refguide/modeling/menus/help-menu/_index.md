@@ -8,6 +8,8 @@ description: "Describes the Help Menu in Studio-Pro."
 
 In the **Help** menu, you can ask questions and find answers to common problems you may experience while using Studio Pro. 
 
+{{< figure src="/attachments/refguide/modeling/menus/help-menu/help-menu.png" alt="Help Menu" class="no-border" width="300" >}}
+
 ## Menu Items Overview
 
 The **Help** menu items are described in the table below:

@@ -200,7 +200,9 @@ Invite and manage members of a Workspace on the Team page. Only users who have s
 
     * Reading and editing configurations
     * Managing the team
-    * Registering computers
+    * Registering and deregistering computers to and from stations
+    * Refreshing computer configurations
+    * Managing bulk registration tokens
     * Managing workspace settings
     * Deleting a workspace or transfering ownership to a new owner
     
@@ -214,14 +216,18 @@ Invite and manage members of a Workspace on the Team page. Only users who have s
 * Station admin - Station admins can perform the following tasks:
 
     * Viewing and editing station configurations
-    * Registering computers to stations
+    * Registering and deregistering computers to and from stations
+    * Refreshing computer configurations
+    * Managing bulk registration tokens
     * Exporting and importing stations (single and in bulk)
     * Linking imported stations to existing workspace apps. 
 
 * Computer admin - Computer admins can perform the following tasks:
 
     * Viewing configurations without editing them
-    * Registering computers to stations
+    * Registering and deregistering computers to and from stations
+    * Refreshing computer configurations
+    * Viewing bulk registration tokens
     * Exporting stations (single and in bulk).
 
 * View only - This role can perform the following tasks:

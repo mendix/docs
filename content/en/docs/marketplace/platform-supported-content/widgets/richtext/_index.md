@@ -289,7 +289,7 @@ This code will trigger a new event called **imageSelected** and bubble up the ev
 
 Rich Text version 4 still has limitations that we will continue improving in the future. Current notable limitations are as follows:
 
-- Tables only support basic formatting. The following formatting options are not yet supported:
-    - Nested tables
-    - Table header
-    - Table caption
+* Tables only support basic formatting. The following formatting options are not yet supported:
+    * Nested tables
+    * Table header
+    * Table caption

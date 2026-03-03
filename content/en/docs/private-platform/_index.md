@@ -27,6 +27,11 @@ Exact feature support varies depending on chosen configuration. Please consult f
 {{% /alert %}}
 
 * Mendix Studio Pro integration and one-click app deployment even with no access to public internet
+
+{{% alert color="info" %}}
+The integration with Studio Pro does not currently support using the [Integration pane](/refguide/integration-pane/). This feature will be added in a future release. 
+{{% /alert %}}
+
 * Mendix developer experience hosted entirely within any virtual private cloud
 * Support for SSO authentication for Private Mendix Platform and Studio Pro through your own identity provider (IdP)
 * A private version of the Mendix Marketplace, with all contents hosted entirely within your Private Mendix Platform, accessible in-browser and directly from Studio Pro

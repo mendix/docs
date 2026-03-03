@@ -58,20 +58,9 @@ Building native mobile apps is not supported on the [Private Mendix Platform](/p
 
 ## Getting the Make It Native App {#get-min-app}
 
-The Make It Native app allows developers to preview, test, and debug native mobile apps in conjunction with Mendix Studio Pro. Use the **Make It Native 9 app** for Studio Pro 9.24.0 and above.
-
-This app is available for both Android and iOS devices.
-
-For information on which mobile operating systems are supported by the Make It Native app, see the [Mobile Operating Systems](/refguide9/system-requirements/#mobile) section of *System Requirements*.
-
-### Direct Download Links {#direct-links}
-
-For Make it Native 9 apps, download the following Android or iOS Make It Native apps directly using these QR codes:
-
-|                                  Android                                  |                                iOS                                |
-| :-----------------------------------------------------------------------: | :---------------------------------------------------------------: |
-| {{< figure src="/attachments/refguide9/mobile/native-mobile/getting-the-make-it-native-app/android-min-qr-code.png" alt="Android QR Code" class="no-border" >}} | {{< figure src="/attachments/refguide9/mobile/native-mobile/getting-the-make-it-native-app/ios-min-qr-code.png" alt="iOS QR Code" class="no-border" >}} |
-|   [Link](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9&hl=en_US&gl=US)    |        [Link](https://apps.apple.com/us/app/make-it-native-9/id1542182000)         |
+{{% alert color="warning" %}}
+The Make It Native app is no longer supported for Mendix 9. Please create a [custom developer app](/refguide9/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) instead.
+{{% /alert %}}
 
 ## Troubleshooting Common Mobile Issues {#troubleshooting}
 

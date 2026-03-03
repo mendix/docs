@@ -73,7 +73,7 @@ This section contains information about the nanoflow actions included in the Nat
 
 These are the nanoflow actions in the client activities category:
 
-* **Download file** – lets the user save a file to the device or cloud storage, or let the user open it in another app
+* **Download native file** – lets the user save a file to the device or cloud storage, or let the user open it in another app
 
 ### Native Authentication Category
 

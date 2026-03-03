@@ -1,5 +1,6 @@
 ---
 title: "Any Chart Widgets"
+deprecated: true
 url: /refguide/charts-any-configuration/
 description: "A reference for the configuration of the Any Chart widget to pass the correct values to plotly. This enables you to draw a wide variety of charts"
 weight: 30

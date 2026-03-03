@@ -17,12 +17,12 @@ Here is an example of a Gallery widget using filters:
 
 The gallery has an option to enable advanced options. When this option is toggled on, it enables numerous features to customize your gallery:
 
-* Pagination type
-* Pagination position
-* Empty list option
-* Dynamic item class
-* Filtering
-* Sorting
+- Pagination type
+- Pagination position
+- Empty list option
+- Dynamic item class
+- Filtering
+- Sorting
 
 ## Configuration
 
@@ -84,15 +84,15 @@ Triggers an action (such as a nanoflow, microflow, or Show page action) when the
 
 In order to enable filtering within the gallery items you need to select the desired attributes to be filtered in the **Filtering** tab. You can select attributes of the following types:
 
-* Autonumber
-* Boolean
-* Date & time
-* Decimal
-* Enumeration
-* Hashed string
-* Integer
-* Long
-* String
+- Autonumber
+- Boolean
+- Date & time
+- Decimal
+- Enumeration
+- Hashed string
+- Integer
+- Long
+- String
 
 The attributes selected here will be used for the matching filter placed inside the composable region. When using multiple attributes, the filters will automatically select the matching attributes and then compose the desired filter value in an `OR expression`. Make sure you just have one filter widget for each type, for example `Text Filter` and `Number Filter`.
 
@@ -108,7 +108,7 @@ An example of text filter being used in the composable region combined with a dr
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/gallery/filter-region.png" alt="Example of filtering composable region"   width="300"  class="no-border" >}}
 
-For more information about filters, see the [Filters](/appstore/modules/data-grid-2/#filters) section of *Data Grid 2*.
+For more information about filters, see the [Filters](/appstore/modules/data-grid-2/#filters) section of _Data Grid 2_.
 
 ## Sorting
 
@@ -128,8 +128,92 @@ The Drop-Down Sort widget is a widget you can use in combination with the Galler
 
 The Drop-Down Sort widget has two options you can set:
 
-* Empty option caption: value to be used when no value is selected
-* Screen reader caption: value to be announced by screen readers when using assistive technology
+- Empty option caption: value to be used when no value is selected
+- Screen reader caption: value to be announced by screen readers when using assistive technology
+
+## Selection
+
+Enabling **Selection** allows users to select gallery items via clicking. Selection is disabled by default and can be activated by changing the **Selection** setting from **None** to either **Single** or **Multi**.
+
+The Gallery widget keeps selected items in memory and supports selection persistence across page navigation when the **Keep selection** option is enabled. This allows users to maintain their selections while browsing through paginated data or navigating between different pages in your application. See [Keep Selection](#keep-selection) for more information about managing selection persistence and its limitations.
+
+### Selection Property
+
+The **Selection** property determines what type of selection is available to users:
+
+- **None**: Selection is disabled. Users cannot select gallery items.
+- **Single**: Users can select only one item at a time. Selecting a new item automatically deselects the previously selected item.
+- **Multi**: Users can select multiple items simultaneously using various interaction methods.
+
+When **Selection** is enabled, the Gallery automatically provides visual feedback to indicate selected items and supports keyboard navigation for accessibility.
+
+### Selection and Click Actions Constraint
+
+{{% alert color="info" %}}
+It is not possible to use both selection and onClick actions simultaneously when the **On click trigger** is set to **Single click**. This constraint prevents ambiguous user interactions where a single click could both select an item and trigger an action.
+{{% /alert %}}
+
+#### Supported Combinations
+
+| Selection Mode | On Click Trigger | Selection Method | Click Action                                  | Supported |
+| -------------- | ---------------- | ---------------- | --------------------------------------------- | --------- |
+| None           | Single click     | N/A              | ✓ Click triggers action                       | ✓ Yes     |
+| None           | Double click     | N/A              | ✓ Double-click triggers action                | ✓ Yes     |
+| Single/Multi   | Single click     | Item click       | ✗ Ambiguous interaction                       | ✗ No  |
+| Single/Multi   | Double click     | Item click       | ✓ Click selects, double-click triggers action | ✓ Yes     |
+
+#### Error Prevention
+
+If you attempt to configure both selection (Single or Multi) and an onClick action with **Single click** trigger, the Gallery will display a design-time error:
+
+> "The item click action is ambiguous. Change 'On click trigger' to 'Double click' or set 'Selection' to 'None'."
+
+#### Recommended Approach
+
+For galleries that need both selection and click actions:
+
+1. Set **On click trigger** to **Double click**.
+1. Configure your desired selection mode (**Single** or **Multi**).
+1. Users can then select items with single clicks and trigger actions with double clicks.
+
+### Selection with Action Buttons in Header
+
+Gallery selection works seamlessly with action buttons and other widgets placed in the gallery header. This pattern enables powerful bulk operation workflows.
+
+#### Selection Helper Integration
+
+Place a **Selection Helper** widget in the gallery header to provide bulk selection controls:
+
+- **Select All**: Quickly select all visible items
+- **Clear Selection**: Remove all current selections
+- **Selection Status**: Visual indicator of current selection state (all, some, or none selected)
+
+#### Selection Count Display
+
+Enable the **Show selection count** property to display the number of selected items:
+
+- **Top**: Shows count above the gallery items
+- **Bottom**: Shows count below the gallery items
+- **Off**: Hides the selection count
+
+The selection count automatically updates as users select or deselect items and includes a "Clear selection" button for easy deselection.
+
+#### Event Handling
+
+Use the **On selection change** action to trigger custom logic when selection changes:
+
+- Update UI elements based on selection state
+- Enable/disable action buttons
+- Load additional data for selected items
+- Validate selection before allowing operations
+
+### Keep Selection
+
+If this setting is enabled, then selected items persist across page navigation, data refreshes, filtering, and sorting operations. By default, Keep selection is disabled and the selection is cleared when the items are not in the current set of datasource items. When enabled, selected items remain selected until manually cleared by the user or through a nanoflow action.
+
+{{% alert color="warning" %}}
+Keep Selection cannot be used with non-persistent entities (NPEs) or view entities, as their IDs change on refresh.
+{{% /alert %}}
 
 ## Keyboard Navigation and Selection
 
@@ -141,8 +225,8 @@ You can also see when an item is selected: an item with a light gray background 
 
 For the keyboard navigation and keyboard selection to work, the user must open the **General** tab and then set the **Selection** property to one of the following:
 
-* **Single**: enables keyboard navigation with just single selection
-* **Multi**: to enable keyboard navigation with multi-selection
+- **Single**: enables keyboard navigation with just single selection
+- **Multi**: to enable keyboard navigation with multi-selection
 
 ### Keyboard Navigation
 
@@ -166,5 +250,5 @@ Employing keyboard navigation is an effective way of ensuring users who cannot u
 
 The new Gallery widget uses [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) as its base for styling. If you need to combine rows or columns you can achieve this using the following helper classes in the `Dynamic item class`:
 
-* `widget-gallery-column-span-1` until `widget-gallery-column-span-12`: these classes merge column spaces, pushing items to a new row when the selected amount is reached for each platform
-* `widget-gallery-row-span-1` until `widget-gallery-row-span-12`: these classes merge row spaces, pushing items into new columns or rows when needed
+- `widget-gallery-column-span-1` until `widget-gallery-column-span-12`: these classes merge column spaces, pushing items to a new row when the selected amount is reached for each platform
+- `widget-gallery-row-span-1` until `widget-gallery-row-span-12`: these classes merge row spaces, pushing items into new columns or rows when needed

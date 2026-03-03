@@ -3854,7 +3854,7 @@ Boolean
 #### Java action `ExpandPSAllLevels`
 
 SOA URL:  
-`Cad-2007-01-StructureManagement/expandPSAllLevels ` 
+`Cad-2007-01-StructureManagement/expandPSAllLevels` 
   
 Description:  
 This actions finds the chilren at all levels given parent bomline.  

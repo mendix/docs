@@ -168,7 +168,7 @@ There are different versions of the SAML module, depending on which version of M
 
 By default, the SAML module will be installed as the **SAML20** module in your app’s Marketplace modules. You can find all microflows and other configuration elements in this module.
 
-1. Configure the **Startup** microflow in the SAML module (**SAML20.Startup**) to run as (part of) the [After startup](/refguide/app-settings/#after-startup) microflow. This microflow will initialize the custom request handler `/SSO/` (please note the importance of using the final `/` for all instances of `/SSO/`), validate all IdP configurations, and prepare the configuration entities required during the configuration.
+1. Configure the **Startup** microflow in the SAML module (**SAML20.Startup**) to run as (part of) the [After startup](/refguide/runtime-tab/#after-startup) microflow. This microflow will initialize the custom request handler `/SSO/` (please note the importance of using the final `/` for all instances of `/SSO/`), validate all IdP configurations, and prepare the configuration entities required during the configuration.
 2. If you have set up path-based access restrictions in your cloud (for example [Path-Based Access Restrictions](/developerportal/deploy/environments-details/#path-based-restrictions) in Mendix Cloud), ensure that access to `/SSO/` is allowed.
 3. Add the **OpenConfiguration** microflow to the navigation, and then allow the administrator to access this microflow.
 4. Review and configure all the constants:
@@ -210,6 +210,7 @@ The table below introduces you to several key updates when you upgrade the SAML 
 | Admin Screen Restructuring | The **Mapping** tab has been removed. Equivalent configurations can now be completed on the **User Provisioning configuration** tab. <br> `evaluateMultipleUserMatches` microflow is now moved to the **User Commons**. |
 | User Commons Module Integration | 1. From versions 4.0.0 and above, SAML2.0 is compatible with the UserCommons v2.0.0. <br> 2. The SAML module now integrates with the User Commons module, offering a more uniform experience with the OIDC SSO module. <br> 3. A new method for creating custom user provisioning microflows using User Commons simplifies development and allows you to automatically set the user-type for users <br> 4. Deprecated: SAML 3.x provisioning flows will be unsupported in future versions. It’s recommended to create new provisioning flows using User Commons after upgrading.<br> 5. From UserCommons 2.0.0, new users without IdP-specified time zone or language will use default App settings; existing users retain their previously set values.|
 | InCommon Federation Support | Pre-configured support for InCommon Federation has been removed. You now need to create custom user provisioning microflows in version 4.0.0 |
+| MxModeleReflection | In the **MxObjects_Overview** page, the MxModeleReflection module refresh is no longer required. It is handled automatically in the **SAML20.Startup**. |
 
 ## Configuring SAML Module{#config}
 
@@ -362,9 +363,14 @@ Deploy your application and log in with the application Admin account. Click **S
 
 #### Configuring Steps
 
-1. Navigate to the **Model Reflection**, select the required module from the left navigation pane, and select **Click to refresh** to synchronize entities and microflows.
-2. In the **SP Configuration** tab, provide the necessary values and click **Save**. You need to complete this step before proceeding with IdP Configuration.
+1. Navigate to the **Model Reflection**, select the required module from the left navigation pane, and select **Click to refresh** to synchronize entities and microflows. In version 4.x, refreshing the module is no longer required.
+2. In the **SP Configuration** tab, provide the necessary values and click **Save**. Complete this step before proceeding with IdP Configuration.
 3. In the IdP Configuration tab, click **New** and provide the necessary details. For more information on IdP configuration tabs, see the [Reference Guide for SAML IdP Configuration](/appstore/modules/saml/idp-attributes/) document.
+
+    {{% alert color="info" %}}
+The `SAML20.DefaultEntity` constant is used at runtime to prefill the default user provisioning entity when creating a new SAML IdP configuration, with `Administration.Account` set as the default value.
+{{% /alert %}}
+
 4. From version 4.0.0 of the SAML module, you have the option to download the SP Metadata from the **Encryption Settings** tab, **Identity Provider Metadata** tab, and at the end of the configuration process.
 
 #### Downloading and Uploading SP Metadata Manually
@@ -498,7 +504,8 @@ It is possible to customize this microflow to determine the correct user. Whiche
 #### CustomUserProvisioning {#customuserprovisioning}
 
 {{% alert color="info" %}}
-Starting from version 4.0.0 of the SAML module, the `CustomUserProvisioning` microflow is deprecated.
+Starting from version 4.0.0 of the SAML module, the `CustomUserProvisioning` microflow is deprecated. To show custom user-facing error messages, call `SAML20.ThrowSAMLFeedbackException` from a custom microflow (`UC_CustomProvisioning`) configured in the **Custom UserProvisioning** field of the **UserProvisioning** tab. For more information, refer to the [Custom User Provisioning at Runtime](/appstore/modules/saml/#custom-provisioning-rt) section above.
+
 {{% /alert %}}
 
 When selecting in the SSO configuration to run the `customUserProvisioning` action (previously known as `CustomLoginLogic`), you can update the new or retrieved user with additional information from the assertion. All the assertions are passed into the microflow in the parameter `AssertionAttributeList`, and these can be transformed and stored in the user record. Also, additional roles can be granted to the users based on the assertion attributes.

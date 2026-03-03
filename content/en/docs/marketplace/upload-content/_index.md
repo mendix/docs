@@ -191,7 +191,7 @@ Note that it may take a short while before the component becomes visible.
 
 For details on the approval process, refer to [Governance Process](/appstore/submit-content/governance-process/).
 
-Every new public component or component version is scanned through QSM, and, if no vulnerabilities are found, it is automatically uploaded. In case of vulnerabilities, Mendix manually checks the component or component version.
+Every new public component or component version is scanned through [QSM](/appstore/partner-solutions/qsm/), and, if no vulnerabilities are found, it is automatically uploaded. In case of vulnerabilities, Mendix manually checks the component or component version.
 
 ## Updating Existing Marketplace Content {#updating}
 

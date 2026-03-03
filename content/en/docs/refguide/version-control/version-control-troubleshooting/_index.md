@@ -99,7 +99,7 @@ When filing a Git support issue with Mendix Support, attach the log files by doi
 
 1. Navigate to the **Help** menu > **Open Log File Directory**:
 
-   {{< figure src="/attachments/refguide/version-control/on-premises-git/troubleshoot-git-issues/open-log-file-directory-menu.png" alt="Download from Version Control Server dialog" class="no-border" >}}
+   {{< figure src="/attachments/refguide/version-control/on-premises-git/troubleshoot-git-issues/open-log-file-directory-menu.png" alt="Download from Version Control Server dialog" class="no-border" width="250" >}}
 
 2. Copy the file called *log.txt* into your ticket. You can also attach additional *log.X.txt* files if they exist.
 
@@ -109,13 +109,28 @@ When filing a Git support issue with Mendix Support, attach the log files by doi
 The properties described below might contain personal information. We advise you to make sure that all the private information is removed before sharing them. 
 {{% /alert %}}
 
-There are properties of the Git repository that provide you with information useful for troubleshooting different issues. Execute the following using the command line in the app’s folder:
+Several properties of the Git repository can provide you with information useful for troubleshooting different [general](#general-properties) and [configuration](#config-properties) issues. You can view them by executing the commands from the command line in the app's folder.
 
-`git status -b` — provides information on the current state of the repository
+#### General {#general-properties}
 
-`git remote -v` — lists the remotes specified for the repository
+The following properties provide general information about the repository status and remotes.
 
-`git config --list --show-origin --show-scope` — provides information on user's Git config
+* `git status -b` - Provides information on the current state of the repository.
+* `git remote -v` - Lists the remotes specified for the repository.
+
+#### Configuration {#config-properties}
+
+Git stores configuration at several levels:
+
+* System - Affects the entire Git installation.
+* Global - Affects the current user.
+* Local - Affects a specific repository.
+
+More specific configuration overrides more generic configuration (for example, local overrides global). You can inspect the configuration and see where each value is defined by using the following command:
+
+`git config --list --show-origin --show-scope`
+
+This command shows all active configuration values along with the file and scope they come from.
 
 ### Cannot Create Package from a Revision{#cannot-create-package}
 

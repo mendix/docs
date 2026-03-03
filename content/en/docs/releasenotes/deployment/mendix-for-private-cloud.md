@@ -12,6 +12,54 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 ## 2026
 
+### February 25, 2026
+
+#### Mendix Operator v2.26.0 {#2.26.0}
+
+* We have adjusted default Java memory allocation to use more of a container's available memory. This aligns memory usage rules with Mendix Public Cloud and reduces unused memory, especially in containers with more than 1GB memory.
+    For more information, see [JVM memory tuning](/developerportal/deploy/private-cloud-jvm-memory-tuning/).
+* We have updated the Agent to load cluster credentials from a mounted Kubernetes secret instead of using environment variables.
+* We have addressed a *license decode error* error message that appeared in the Operator logs when using a fallback license. (Ticket 271720)
+* We have updated components to use the latest dependency versions in order to improve security score ratings for container images.
+
+#### License Manager CLI v0.10.8 {#0.10.8}
+
+* We have updated components to use the latest dependency versions in order to improve security score ratings for container images.
+
+### February 19, 2026
+
+#### Portal Improvements
+
+* Integrated business events in Portunus now synchronize technical contacts with Apps and the Private Cloud Portal.
+* We have added support for customers to easily rotate cluster credentials (that is, replace the Agent secret with a new one).
+* We have added an option to enable leaderless mode. This option is supported for Studio Pro 10.24 and newer.
+* We have fixed an issue where creating and deleting custom core resource plans was not logged in Portunus and audit logs.
+* We have improved the user experience for core resources configuration.
+* We have added the option to automatically delete activity log records older than one year.
+
+### Deploy API
+
+* We have added the capability to retrieve all environments within a namespace.
+
+### February 5, 2026
+
+#### Portal Improvements
+
+* We have enabled the license fallback mechanism for Operator versions 2.24.0 and newer. This prevents environments from switching to trial mode when the license server is unreachable.
+* We have reenabled single-replica support for Mendix deployments on Azure, allowing the creation or scaling to one replica, consistent with non-Azure environments.
+
+### January 29, 2026
+
+#### Portal Improvements
+
+* We have fixed an issue where an incorrect time was displayed while creating a deployment package in the Mendix on Kubernetes portal.
+
+### January 26, 2026
+
+#### License Manager CLI v0.10.7 {#0.10.7}
+
+* To enhance security, we now automatically disable API credential automounting for PCLM deployments, significantly limiting unnecessary access to the Kubernetes API.
+
 ### January 23, 2026
 
 #### Hotfix Release

@@ -30,7 +30,7 @@ When you do not enter search text in the Integration pane, then the **Used in th
 
 {{< figure src="/attachments/refguide/modeling/menus/view-menu/integration-pane/used-in-your-app.png" alt="User in Your App Section" class="no-border" width="300" >}}
 
-For more information on how to add entities and actions to your app, see [Adding an External Entity to an App](/refguide/external-entities/#adding-external-entities) section in *External Entities* or [Call external action](/refguide/call-external-action/). For working with business events, see [Using Business Events](/appstore/services/business-events/#two-way-be).
+For more information on how to add entities and actions to your app, see [Adding an External Entity to an App](/refguide/external-entities/#adding-external-entities) section in *External Entities* or [Call external action](/refguide/call-external-action/). For working with business events, see [Using Business Events](/appstore/services/business-events-configuration/#two-way-be).
 
 ## Searching Catalog Sources {#search}
 
@@ -153,5 +153,5 @@ A business event can be **Pub**lished or **Sub**scribed to, or both.
 * [External Entities](/refguide/external-entities/)
 * [Consumed OData Service](/refguide/consumed-odata-service/)
 * [Business Event Services](/refguide/business-event-services/)
-* [Using Business Events](/appstore/services/business-events/#two-way-be)
+* [Using Business Events](/appstore/services/business-events-configuration/#two-way-be)
 * [How to Consume Registered Assets](/catalog/consume/)

@@ -84,6 +84,8 @@ spec:
       cpu: 250m
       memory: 256Mi
       ephemeral-storage: 256Mi
+  jvmMemorySettings: # Optional, can be omitted: set custom Java VM memory configuration
+    heapLimit: 100Mi # set heap limit to 100 megabytes
   runtimeDeploymentPodAnnotations: # Optional, can be omitted : set custom annotations for Mendix Runtime Pods
     # example: inject the Linkerd proxy sidecar
     linkerd.io/inject: enabled
@@ -195,6 +197,7 @@ You must make the following changes:
 * **certificate** and **key** - Not recommended for production environments. Provide the `tls.crt` and `tls.key` values directly. Cannot be used together with **secretName**.
 * **replicas** - By default, one replica is started when you deploy your app.
 * **resources** - Change the minimum and maximum container resources your app requires.
+* **jvmMemorySettings** - Change the JVM memory configuration. For more information, see [JVM memory tuning](/developerportal/deploy/private-cloud-jvm-memory-tuning/).
 * **serviceAnnotations** - Set custom annotations for network Services. These annotations are applied on top of [default annotations](/developerportal/deploy/private-cloud-cluster/#advanced-network-settings) from `OperatorConfiguration`.
 * **endpointAnnotations** - Set custom annotations for Ingress (or OpenShift Route) objects. These annotations are applied on top of [default annotations](/developerportal/deploy/private-cloud-cluster/#advanced-network-settings) from `OperatorConfiguration`.
 * **ingressPath** - Specify a custom Ingress path. This overrides the [default ingress path](/developerportal/deploy/private-cloud-cluster/#advanced-network-settings) from `OperatorConfiguration`.
@@ -384,7 +387,7 @@ All names beginning **openshift-** are reserved for use by OpenShift if you are 
 
 In some cases, your Mendix app will need to know its own URL – for example when using SSO or sending emails.
 
-For this to work properly, you need to set the [ApplicationRootUrl variable](/refguide/custom-settings/#general) in `customConfiguration` to the app's URL. For example:
+For this to work properly, you need to set the [ApplicationRootUrl variable](/refguide/custom-settings/#applicationrooturl-section) in `customConfiguration` to the app's URL. For example:
 
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1

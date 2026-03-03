@@ -21,6 +21,8 @@ Your Mendix subscription is categorized into three main statuses: Active, Expiri
 | **Expiring (Orange)** | From 30 days before contract expiry until contract end date | All services continue to function normally. You receive email reminders, notifications, and banner alerts on Mendix Platform about your upcoming renewal. |
 | **Expired (Red)** | From the day after contract expiry up to 60 days | Your account and applications are downgraded to **Unlicensed** mode. You can manually restart apps, but they will automatically shut down after 2-4 hours and are limited to 6 concurrent users. Platform features are not disabled.|
 
+Mendix Admins can view all contracts associated with their company in the **Contract Information** section of the [company dashboard](/control-center/dashboard/#contract-info) in Control Center.
+
 ## Contract Timeline and Milestones{#contract-timeline-and-milestones}
 
 Mendix Platform provides proactive communication to simplify the renewal process. The following timeline outlines key milestones and required actions:
@@ -33,6 +35,10 @@ These milestones provide ample opportunity to discuss renewal options and take n
 
 * **Email notification** – You receive emails providing information about your upcoming contract renewal
 * **Action required** – Contact your (Partner) Account Team to discuss renewal options and next steps. Early engagement allows for a smoother process
+
+{{% alert color="info" %}}
+The contract renewal email is sent to your primary contacts (Customer License Contact, Payer/Reseller Contact, and Platform Owner) and provides details of the expiring contract, the contract number, and the relevant Mendix (Partner) Account Team contact for renewal assistance. Always reference this contract number when contacting your (Partner) Account Team regarding renewal or expiry. 
+{{% /alert %}}
 
 #### 30 Days Before Contract Expiry{#30-days-before-contract-expiry}
 

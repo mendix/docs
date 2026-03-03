@@ -37,4 +37,3 @@ Teamcenter Connector for Mendix is available on the [Mendix Marketplace](https:/
 
     * (Optional) Siemens PLM Software UI Resources. This application should be in the project that contains the Teamcenter Connector.
     * (Optional) Teamcenter Connector Sample Application. The Sample Application contains sample microflows. You do not require to download the Sample Application in the same project that also contains the Teamcenter Connector.
-

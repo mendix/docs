@@ -10,6 +10,20 @@ These release notes cover changes to deployment to [Mendix on Azure](/developerp
 
 For information on the current status of Mendix deployment, see [Mendix Status](https://status.mendix.com/).
 
+### Release date: February 26, 2026
+
+* We have improved the handling of PostgreSQL HA unavailability issues in certain Azure regions to prevent failed Spacelift Stack runs when infrastructure redundancy is enabled.
+
+### Known issues:
+
+* The initialised cluster is visible to multiple logged in users within a subscription on the Mendix on Azure portal.
+
+### Release date: January 29, 2026
+
+* To improve your sign-in experience, we have eliminated an unnecessary pop-up that previously appeared after successfully signing into Azure.
+* You can now view the Azure Resource Group name for a cluster directly on the Cluster Overview page.
+* We have resolved an issue that caused users to get stuck on the preflight check for Platform accounts when initializing clusters.  
+
 ### Release date: January 22, 2026
 
 * We have fixed an issue that prevented custom CA certificates from being added during new cluster initialisation.

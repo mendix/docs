@@ -15,6 +15,10 @@ This feature is in Public Beta. For more information, refer to [Release Status](
 
 The **Private Connectivity** page allows you to view and manage your company's Private Connectivity assets: networks, agents, resources, and connections.
 
+{{% alert color="info" %}}
+If you cannot access the **Private Connectivity** page, contact your CSM or Mendix Support.
+{{% /alert %}}
+
 ## Use Cases
 
 Many apps running on Mendix Cloud have integrations with external resources, such as databases, services, and other applications. Some of these resources are public, accessible via the public internet. Others are running on your internal networks, either on-premises or on cloud infrastructure, as PaaS/SaaS. You can connect to these resources over the public internet as well, [securing](/developerportal/deploy/securing-outgoing-connections-from-your-application/) them with HTTPS, a reverse proxy, and client certificates. This scenario requires you to expose your internal resource to the public internet. However, due to security, compliance, or legacy reasons, not everyone wants to or is able to do this. 

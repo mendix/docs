@@ -83,10 +83,12 @@ To configure the Feedback widget, double-click it to open the **Edit Feedback** 
         {{% alert color="info" %}}The original value of **App ID** is *1*, but this value should automatically change to your correct app ID. If it does not change automatically, see [Updating App ID](#update-app-id) below.
         {{% /alert %}}
         
-    * **Show advanced settings** – The advanced settings control html2canvas, a backup screen capture tool the Mendix Feedback widget uses when the default browser screenshot tool fails. By default, this is set to **No**. If you select **Yes**, the following items appear:
+    * **Show advanced settings** – These advanced settings allow you to customize where the widget renders and how screenshots are captured when the default behavior does not work as expected. By default, this is set to **No**. If you select **Yes**, the following items are displayed:
       
+        * **Target container selector** – This allows you to manually choose where the feedback widget is displayed within the app. To do that, add a CSS selector here to specify the location.    
+            By default, this field is set to `.mx-scrollcontainer-center`.
         * **Enable object rendering** – By default, this is set to **No**. Only select **Yes**, when you experience problems with creating screenshots. Then it will enable the `foreignObjectRendering` method which helps rendering complex HTML, including styles, SVGs, and embedded elements.
-        * **CSS scrollable area**– If your app does not use the default scrolling behavior in Studio Pro, the screenshot feature may not work correctly. You can add a CSS selector here to specify which element on your page scrolls the content.
+        * **CSS scrollable area** – If your app does not use the default scrolling behavior in Studio Pro, the screenshot feature may not work correctly. You can add a CSS selector here to specify which element on your page scrolls the content.
 * **Customize Button** tab
     * **Feedback and screenshot button labels** – These are the labels for the buttons on the feedback form. You can change the captions for those button here.
     * **Feedback Button Styling** – This controls how the **Feedback** button is rendered. There are three options:

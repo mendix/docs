@@ -9,7 +9,7 @@ aliases:
 
 ## Introduction
 
-Mendix AI Assistance (Maia) refers to Mendix Platform capabilities that leverage [artificial intelligence (AI)](https://www.mendix.com/glossary/artificial-intelligence-ai/) and [machine learning (ML)](https://www.mendix.com/glossary/machine-learning/) to assist developers in application development. Maia is designed to help development teams in modeling and delivering Mendix applications faster, more consistently, and with higher quality. 
+Mendix AI Assistance (Maia) refers to Mendix Platform capabilities that leverage [artificial intelligence (AI)](https://www.mendix.com/glossary/artificial-intelligence-ai/) and [machine learning (ML)](https://www.mendix.com/glossary/machine-learning/) to assist developers in application development. Maia is designed to help development teams in modeling and delivering Mendix applications faster, more consistently, and with higher quality.
 
 {{< figure src="/attachments/developerportal/global-nav/maia-mendix-portal.jpg" width="500" >}}
 
@@ -31,6 +31,8 @@ These are the tasks you can achieve with Maia in Mendix Portal:
     * On the [Board](/developerportal/project-management/epics/board/) page
     * On the [Planning](/developerportal/project-management/epics/planning/) page
 
+* **Maia for Feedback** – An AI-assisted tools that help you organize unsorted feedback into groups and themes. This is available on the [Feedback](/developerportal/app-insights/feedback/#organizing-feedback-with-maia) page.
+
 ## Maia Chat {#maia-chat}
 
 {{% alert color="info" %}}
@@ -51,9 +53,9 @@ For information on Mendix data storage policies and practices for Maia, see [Mai
 
 You can access Maia Chat in Mendix Portal by clicking the **Maia** ({{% icon name="sparkles" %}}) icon to the right of the top bar.
 
-The chat interface appears at the right side of your browser window. You can start using Maia Chat either by clicking one of the demo questions or by asking your own question in the chatbox. 
+The chat interface appears at the right side of your browser window. You can start using Maia Chat either by clicking one of the demo questions or by asking your own question in the chatbox.
 
-### Asking Follow-Up Questions
+### Asking Follow-Up Questions {#follow-up}
 
 Maia Chat supports asking follow-up questions based on your previous question and the answer you have received. For example, you can ask it to summarize the latest answer you received by typing *Can you summarize that?*.
 
@@ -62,3 +64,49 @@ Maia Chat supports asking follow-up questions based on your previous question an
 Maia Chat only keeps track of a conversation history within a session on a page in Mendix Portal.
 
 {{% /alert %}}
+
+## Best Practices {#best-practices}
+
+Maia can normally provide a good answer to any question you pose. However, it may sometimes not give you the information you are looking for. You may get a better answer if you consider the following best practices.
+
+### Asking Questions in English
+
+Maia is trained on data which is primarily in English. Although Maia can cope with questions in other languages, the imprecision of (particularly machine-) translation means there is more chance of Maia misunderstanding or giving a less precise answer.
+
+### Asking Direct Questions
+
+Maia uses the Mendix documentation and the Mendix Community when producing an answer. The documentation is addressed to you, the reader, and questions to the Community are usually asked directly by the person who is asking. Maia therefore gives better answers if you put yourself in the position of asking the question.
+
+So, for example, ask "How can I do something" rather than "How can my colleague do something" or "How does Mendix do something".
+
+### Asking Specific Questions
+
+Try to make your question as specific as possible. If your question is too vague or is very general Maia can find it difficult to get the right context.
+
+### Giving Relevant Information
+
+Maia needs to know as much as possible about what you are doing. However, it can be sidetracked if you include information which is not directly relevant to what you are asking. So ensure that you do not include irrelevant information.
+
+However, do include enough information for context. For questions about errors, specific code behavior, or complex configurations, include concrete examples if possible, remembering to redact any sensitive information.
+
+For example, if you ask "How do I sign in to Mendix" it will not necessarily be clear whether you are talking about the Mendix Portal, Studio Pro, or perhaps even your deployed Mendix App, so give Maia the complete context to ensure the answer is relevant.
+
+### Using Mendix Terminology
+
+Maia will provide better answers if you use Mendix terminology which it can recognize from the documentation and Community. If you use different terms, Maia may struggle to find the right answer, and is more likely to get confused about the subject of your question.
+
+In addition, some terms in Mendix might have slightly different meanings depending on the context. If you suspect your term might be ambiguous, try to add a small clarifying detail.
+
+For example, use "Studio Pro" rather than "the IDE" when talking about working on a Mendix model. If you have a question about a Marketplace module, make sure you give the exact name of the module.
+
+### Using Follow Up Questions
+
+If Maia does not give a response which clearly answers your question, try following up to ensure that it has understood the context and terminology you are using. Try rephrasing your question, adding more details, or focusing on a different aspect of your query.
+
+### Separating Different Questions
+
+If you are asking a second, unrelated, question, start a new interaction with Maia. If you continue in the same chat with Maia, it will remember what you asked before and the answers it gave. This may lead to it using the information from the previous interactions as input to your new question. See [Asking Follow-Up Questions](#follow-up) to see when Maia keeps track of conversation history.
+
+### Looking at the Source Material
+
+Remember that Maia is an AI and can make mistakes. Maia will give references to the source of the information. The reference titles can indicate whether the information is relevant to your case, and following the links may give additional help.

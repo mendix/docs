@@ -16,9 +16,12 @@ The solution consists of two main components: the Helm charts themselves, and a 
 
 Using the solution offers the following advantages when compared to the traditional method of using the mxpc-cli tool:
 
-* By using Helm charts, customers can integrate configuration deployment into their existing pipelines. This reduces the need for manual intervention.
-* The deployment process is streamlined. For customers who are already familiar with Helm charts, it is a more intuitive and preferred method compared to manual CLI operations.
-* The Mendix CLI tool provides a user-friendly interface for customers to input configurations.
+* Helm-based installation does not require elevated permissions, and can be run on individual workstations. Because of that, it can be implemented by customers who use GitOps and similar DevOps practices.
+* By using Helm charts, customers can integrate configuration deployment into their existing pipelines. This reduces the need for manual intervention. For customers who are already familiar with Helm charts, it is a more intuitive and preferred method compared to manual CLI operations.
+* The deployment process is streamlined, consistent, and repeatable. 
+* Configuration is easy and can be fine-tuned to specific requirements.
+* The upgrade process is simplified.
+* Components can be cleanly uninstalled when no longer needed.
 
 ### Current Limitations
 

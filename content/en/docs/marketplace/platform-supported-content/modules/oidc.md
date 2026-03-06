@@ -927,7 +927,7 @@ If you are using Microsoft Entra ID, ensure you have followed the instructions f
 
 You can find a sample microflow for parsing access tokens, `OIDC.ACT_Token_CustomATPRetrieveRoles` in the OIDC module.
 
-Your custom microflow should use the access token/id token to create a list of user roles. Your token will contain one of the following:
+Your custom microflow should use the access token or ID-token to create a list of user roles. Your token will contain one of the following:
 
 * the UUIDs of the user roles in your app which map to the `System.UserRole/ModelGUID` attribute
 * the name of the user role in the app, which can be used to find the `System.UserRole` within the app itself using the `Name` attribute

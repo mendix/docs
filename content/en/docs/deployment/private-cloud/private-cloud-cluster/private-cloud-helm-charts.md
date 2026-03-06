@@ -27,8 +27,8 @@ Using the solution offers the following advantages when compared to the traditio
 
 The solution currently has the following limitations compared to using the mxpc-cli tool:
 
-* The Helm chart UI cannot be used to configure the Global Operator. Global Operator is currently only supported by mxpc-cli.
-* Upgrating namespaces is not supported.
+* The Helm chart UI cannot be used to configure the Global Operator.
+* Upgrading namespaces is not supported.
 * Namespaces initially created with mxpc-cli cannot be migrated and managed with Helm charts.
 
 ## Installing the Operator with Helm Charts

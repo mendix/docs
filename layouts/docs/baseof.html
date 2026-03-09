@@ -12,8 +12,23 @@
 */}}
     <div class="container-fluid td-outer">
       <div class="td-main">
-        <div class="row flex-xl-nowrap stretch-main">
-          <main class="col-12 col-lg-8 col-xl-6 order-2" role="main"> <!-- NK - adjusted resizing for different screens; placed first in DOM for SEO, visually ordered with Bootstrap -->
+        <div class="row flex-md-nowrap stretch-main">
+          <aside data-stt-ignore class="d-none d-md-block col-md-4 col-lg-4 col-xl-3 td-sidebar d-print-none order-1" data-proofer-ignore> <!-- Show sidebar at md+ -->
+            {{ partial "sidebar.html" . }}
+          </aside>
+
+          <main class="col-12 col-md-8 col-lg-5 col-xl-6 order-2" role="main"> <!-- Adjusted: show sidebar at md, 3-col layout at lg+ -->
+        <!-- Olu - Mobile header row: hamburger + breadcrumb/banner (mobile only) -->
+        <div class="d-flex d-md-none align-items-center td-content">
+          <button id="td-mobile-sidebar-btn" class="btn btn-link p-0 me-2 align-self-center" aria-label="Open sidebar">
+            <span class="fas fa-bars text-dark fs-4 fa-fw" aria-hidden="true"></span>
+            <span class="sr-only">Menu</span>
+          </button>
+          <div class="flex-grow-1">
+            {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
+            {{ partial "version-banner.html" . }}
+          </div>
+        </div>
         <!-- MvM - Do a test for missing Title -->
         {{ if not .Title }}
             {{ warnf "File %s \n\t\t\t\thas no title in the front matter\n " .Page.File.Path }}
@@ -22,22 +37,20 @@
         taken from themes\docsy\layouts\partials\navbar.html, 
         this might get moved again, with further styling changes -->
             {{ if  .Site.Params.versions }}
-            <li class="nav-item dropdown mr-4 d-none d-lg-block">
+            <li class="nav-item dropdown mr-4 d-none d-md-block">
                 {{ partial "navbar-version-selector.html" . }}
             </li>
             {{ end }}
           <!-- END of addition -->
-          <!-- MvM: Move breadcrumb above banner -->
-          {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
-          
-          {{ partial "version-banner.html" . }}
+          <!-- MvM: Move breadcrumb above banner (tablet and up) -->
+          <div class="d-none d-md-block w-100">
+            {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
+            {{ partial "version-banner.html" . }}
+          </div>
           
             {{ block "main" . }}{{ end }}
           </main>
-          <aside data-stt-ignore class="d-none d-lg-block col-lg-4 col-xl-3 td-sidebar d-print-none order-1" data-proofer-ignore> <!-- NK - adjusted resizing for different screens/MvM - ignore for htmltest and translation -->
-            {{ partial "sidebar.html" . }}
-          </aside>
-          <aside data-stt-ignore class="d-none d-xl-block col-xl-3 td-sidebar-toc d-print-none order-3" data-proofer-ignore> <!-- NK - adjusted resizing for different screens/MvM - ignore for htmltest and translation -->
+          <aside data-stt-ignore class="d-none d-lg-block col-lg-3 col-xl-3 td-sidebar-toc d-print-none order-3" data-proofer-ignore> <!-- Show ToC at lg+ -->
             {{ partial "page-meta-links.html" . }}
                 <!-- NK - insert of layout element for line break and ToC title -->
                 <span class="d-block p-2">
@@ -49,6 +62,7 @@
           </aside>
         </div>
       </div>
+      <div id="td-sidebar-overlay" class="td-sidebar-overlay d-md-none" aria-hidden="true"></div>
       {{ partial "footer.html" . }}
     </div>
     {{ partial "scripts.html" . }}

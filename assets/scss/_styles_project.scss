@@ -464,6 +464,28 @@ img {
     }
   }
 
+    /* Olu - Position the mobile close button and remove extra top spacing so content aligns */
+    #td-sidebar-menu > .d-flex.d-md-none {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        z-index: 1060;
+    }
+
+    #td-sidebar-menu {
+        padding-top: 0;
+    }
+
+    #td-sidebar-menu .td-sidebar__search {
+        margin-top: 0; /* ensure search sits at top level */
+        padding-top: 0;
+    }
+
+    #td-sidebar-menu nav.td-sidebar-nav {
+        margin-top: 0;
+        padding-top: 0.25rem;
+    }
+
   // Responsive tables
   //
   // Generate series of `.table-responsive-*` classes for configuring the screen
@@ -607,4 +629,54 @@ img.ToC-icon{
     &:hover {
         background-color: $gray-light;
     };
+}
+
+// Olu - Mobile sidebar open/close behaviour (apply to small and medium screens)
+@include media-breakpoint-down(md) {
+    body.td-sidebar-open {
+        overflow: hidden;
+    }
+
+    .td-sidebar {
+        display: block !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 80%;
+        max-width: 340px;
+        z-index: 1055;
+        background-color: $td-sidebar-bg-color;
+        transform: translateX(-100%);
+        transition: transform .25s ease-in-out;
+        box-shadow: 0 0 0.5rem rgba(0,0,0,0.2);
+    }
+
+    body.td-sidebar-open .td-sidebar {
+        transform: translateX(0);
+    }
+
+    .td-sidebar-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 1050;
+        background: rgba(0,0,0,0.45);
+    }
+
+    body.td-sidebar-open .td-sidebar-overlay {
+        display: block;
+    }
+
+    /* adjustment for the close button in the sidebar */
+    #td-mobile-sidebar-close {
+        font-size: 1.1rem;
+    }
+
+    // Ensure the scrolling container inside the off-canvas sidebar fills more of the viewport
+    .td-sidebar__inner {
+        height: calc(100vh - 1.5rem) !important;
+        overflow-y: auto;
+        padding-top: 1.25rem;
+    }
 }

@@ -20,7 +20,6 @@ To leverage the benefits of zero-downtime deployment, your Mendix application an
 
 * **Mendix runtime version** – Must be running on Mendix Runtime version 10.24 or above.
 * **Change type** – The deployment must involve only [configuration-level changes](/developerportal/deploy/zero-downtime/#zdt-application).
-* **Deployment platform** – Must be deployed on Mendix Cloud(Kubernetes).
 
 {{% alert color="info" %}}
 No special setup is required to enable ZDT. When your application and deployment meet these prerequisites, ZDT is automatically available for eligible changes.

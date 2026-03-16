@@ -6,7 +6,12 @@
 hugo.exe
 /htmltest.exe
 /.hugo_build.lock
-
+/_scripts/venv/
+/_scripts/aliasLinkWarnings.log
+/_scripts/compareDocsToExcel.log
+ 
+/_scripts/~$aliases-list.xlsx
+ 
 # For Mac users
 .DS_Store
 

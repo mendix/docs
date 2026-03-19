@@ -12,8 +12,7 @@ cascade:
     - notsitemap: true
     - sitemap:
         priority: 0.4
-    - banner: ""
-# Empty banner added to get around bug in Hugo 0.123.0 (https://github.com/gohugoio/hugo/issues/12465) which is not fixed until 0.143.0 (https://github.com/gohugoio/hugo/releases/tag/v0.143.0)
+    - banner: "If you would like to upgrade to a newer <a href=\"/releasenotes/studio-pro/lts-mts/#lts\">long-term support version</a> of Studio Pro, see <a href=\"/refguide10/upgrading-from-9-to-10/\">Upgrading from Mendix Studio Pro 9 to 10</a>."
 ---
 
 ## Introduction

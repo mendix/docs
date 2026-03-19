@@ -202,12 +202,16 @@ Invite and manage members of a Workspace on the Team page. Only users who have s
     * Managing the team
     * Registering and deregistering computers to and from stations
     * Refreshing computer configurations
-    * Managing bulk registration tokens
     * Managing workspace settings
     * Deleting a workspace or transfering ownership to a new owner
     
         By default, the user who created a workspace is assigned the owner role. Contact Mendix Support if a Workspace owner has left the company to transfer the ownership. 
     
+    * Viewing bulk registration tokens
+    * Copying existing bulk registration tokens
+    * Creating new bulk registration tokens
+    * Modifying bulk registration tokens
+    * Revoking bulk registration tokens
     * Exporting and importing stations (single and in bulk)
     * Linking imported stations to existing workspace apps
     * Creating apps during station import.
@@ -218,7 +222,11 @@ Invite and manage members of a Workspace on the Team page. Only users who have s
     * Viewing and editing station configurations
     * Registering and deregistering computers to and from stations
     * Refreshing computer configurations
-    * Managing bulk registration tokens
+    * Viewing bulk registration tokens
+    * Copying existing bulk registration tokens
+    * Creating new bulk registration tokens
+    * Modifying bulk registration tokens
+    * Revoking bulk registration tokens
     * Exporting and importing stations (single and in bulk)
     * Linking imported stations to existing workspace apps. 
 
@@ -228,6 +236,7 @@ Invite and manage members of a Workspace on the Team page. Only users who have s
     * Registering and deregistering computers to and from stations
     * Refreshing computer configurations
     * Viewing bulk registration tokens
+    * Copying existing bulk registration tokens
     * Exporting stations (single and in bulk).
 
 * View only - This role can perform the following tasks:

@@ -1,11 +1,13 @@
 ---
-title: "Purchase Mendix Exam Seats"
+title: "Purchasing Mendix Exam Seats"
 linktitle: "Mendix Exam Seats"
-url: /community-tools/purchasing-exams/
+url: /academy/purchasing-exams/
 weight: 60
 description: "Describes how to make a bulk order for exam seats and introduces the documents in this category."
 no_list: false
 description_list: true
+aliases:
+    - /community-tools/purchasing-exams/
 ---
 
 ## Introduction

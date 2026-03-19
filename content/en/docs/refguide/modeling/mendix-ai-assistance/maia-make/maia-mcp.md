@@ -38,6 +38,7 @@ Choose how Studio Pro authenticates with the MCP server:
 
 * **No Auth** — select this for servers that do not require credentials.
 * **Bearer Token** — paste an API token or personal access token. The token is stored securely and is not exposed after entry.
+    {{% alert color="warning" %}}Currently, when using Bearer Token based authentication for the [MCP client](/refguide/maia-mcp/#authentication), the token information is not being sent, leading to failed authentication.{{% /alert %}}
 * **OAuth 2.1** — a browser window opens so you can authorize Studio Pro with the server's provider. Two optional fields appear:
     * **Client ID** — required if the server does not support automatic client registration.
     * **Client Secret** — required by some providers (for example, GitHub).

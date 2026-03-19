@@ -10,6 +10,30 @@ cascade:
 
 These release notes cover changes made to the [Mendix Workstation](/mendix-workstation/).
 
+## 3.5.0
+
+### Release date: March 12, 2026
+
+### Workstation Management
+
+#### New Features
+
+* Updated access controls for Computer Admin role - The Computer Admin role now has updated access permissions, allowing them only to read and view existing bulk registration tokens and their associated details.
+
+* Improved UI for bulk registration token management - We have updated the user interface for managing bulk registration tokens, enhancing the overall user experience and making it more intuitive to work with.
+
+#### Fixes
+
+* Unassigned computers excluded from station export - We have fixed an issue where unassigned computers were incorrectly included in station exports. Now, unassigned computers are no longer exportable as stations and will not appear in the list of stations available for download, ensuring cleaner and more accurate exports.
+
+* Duplicate station naming in single import - The single import behavior has been updated to accept duplicate names by automatically adding a numeric suffix when a station with the same name is imported, ensuring unique identification and smoother workflow. We have addressed an issue where empty stations were unintentionally created.
+
+### Workstation Client
+
+#### Fixes
+
+* Robust remote deregistration error handling - We have fixed an issue where an uncaught error pop-up could occasionally appear if Workstation Management crashed immediately after a remote deregistration of a station. This ensures a more stable and resilient client experience.
+
 ## 3.4.0
 
 ### Release date: February 12, 2026
@@ -71,7 +95,7 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 
 #### Fixes
 
-* Enhanced eport and import experience - We have revised the UI for the import and export process for a better user experience.
+* Enhanced export and import experience - We have revised the UI for the import and export process for a better user experience.
     * The **Select individual stations** dropdown has been reworked for better usability.
     * The **Import summary** now provides clearer insights into your import operations.
 * Runtime error prevention - We have addressed and fixed several issues that were causing runtime errors, leading to a more stable experience.

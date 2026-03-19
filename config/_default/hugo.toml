@@ -84,7 +84,7 @@ replacements = "github.com/FortAwesome/Font-Awesome -> ., github.com/twbs/bootst
 
 # Olu - Minification configuration
 [minify]
-    minifyOutput = true
+    minifyOutput = false
 
 # Everything below this are Site Params
 # ======================================

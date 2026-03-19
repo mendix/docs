@@ -51,7 +51,11 @@ To install and configure the Workstation Connector, perform the following steps:
 
 The app that you created in the previous section is available on the **Apps** page that you can access through the left navigation menu. To enable or disable the app for all your stations or groups of stations, click the icon in the right column of the app list, and then click **Manage App**.
 
-## Managing Users
+## Managing Users {#invite-users}
+
+{{% alert color="info" %}}
+This feature is only available to licensed Mendix Workstation users. For more information about obtaining a Workstation license, see [Mendix Workstation](/mendix-workstation/).
+{{% /alert %}}
 
 You can invite other Workstation Management users to your workspace to share configurations and collaborate. This feature requires a Workstation license.
 

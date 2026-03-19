@@ -44,7 +44,9 @@ A patch version is released on an as-needed basis. It includes security fixes an
 
 ## Long-Term Support Version (LTS) {#lts}
 
-An LTS version is the last minor release of a major version. Its release is aligned with the GA release of the next major version. For example, the 10.24 LTS version was released in the same month as Mendix 11 GA. Once a minor version becomes an LTS, it will not have new features added to it. 
+Both LTS and MTS versions are production-grade and fully supported for production use. LTS versions are supported for the longest period of time, allowing to upgrade at a slower pace.
+
+An LTS version is the last minor release of a major version. Its release is aligned with the GA release of the next major version. For example, the 10.24 LTS version was released in the same month as Mendix 11 GA. Once a minor version becomes an LTS, it will not have new features added to it.
 
 These are the current LTS versions of Studio Pro:
 
@@ -53,12 +55,10 @@ These are the current LTS versions of Studio Pro:
 
 Release notes for the current LTS versions are marked with an LTS badge (<text class="badge badge-pill badge-lts" style="margin-left:0px">LTS</text>) in the left sidebar.
 
-Mendix advises using LTS versions for all production apps, as LTS versions of Studio Pro enjoy the highest security and stability. LTS versions also have the longest support duration compared to other versions.
+Recommended LTS upgrade Cycle: 2 to 4 years.
 
 {{% alert color="info" %}}
-
 Mendix recommends using the latest patch version of the release as the latest version will contain the latest fixes.
-
 {{% /alert %}}
 
 ### Support Duration
@@ -91,7 +91,7 @@ Upgrading from an LTS to an LTS often has the lowest impact compared to other up
 
 ## Medium-Term Support Version (MTS) {#mts}
 
-An MTS is a minor version released approximately every 6 months after a new major version release for general availability.
+MTS versions are production-grade and give teams access to new capabilities on a regular cadence. A new MTS version is released every 6 months within the same major version, keeping upgrades straightforward. You can also skip one or more MTS cycles to fit your team's schedule.
 
 For example, version 11.6 is an MTS version which was released in [December, 2025](#major-version).
 
@@ -99,10 +99,10 @@ Release notes for any current MTS versions are marked with an MTS badge (<text c
 
 Mendix MTS versions offer a balance between getting the latest and greatest Mendix has to offer every month, and security and stability.
 
+Recommended MTS upgrade cycle: 6 to 18 months.
+
 {{% alert color="info" %}}
-
 Mendix recommends using the latest patch version of the release as this will contain the latest fixes.
-
 {{% /alert %}}
 
 ### Support Duration

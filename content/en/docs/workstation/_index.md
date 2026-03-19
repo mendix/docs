@@ -8,9 +8,6 @@ description_list: true
 cascade:
     - content_type: "Mendix Workstation"
 ---
-{{% alert color="info" %}}
-Mendix Workstation is [Limited Availability](https://docs.mendix.com/releasenotes/release-status/#limited-availability) for production use. Support is provided according to your Mendix SLA if you purchased a Workstation license. If you want to take Mendix Workstation into production, contact your CSM to see what arrangements are possible. Without a license you can use Mendix Workstation for development, but workspaces are individual and cannot be shared.
-{{% /alert %}}
 
 ## Introduction
 
@@ -21,6 +18,16 @@ By connecting applications directly to the PC's local resources, Workstation all
 Workstation is especially valuable in manufacturing and industrial environments where precision, speed, and reliability are key to operator efficiency.
 
 In addition to connectivity features, Workstation supports enterprise-grade deployment of projects across multiple environments and sites. It enables distributed teams to collaborate effectively and centrally manage connections to a wide range of heterogeneous equipment assets in a controlled and secure manner.
+
+## Licensing Mendix Workstation
+
+Mendix Workstation is [Limited Availability](https://docs.mendix.com/releasenotes/release-status/#limited-availability) for production use. Support is provided according to your Mendix SLA if you purchased a Workstation license. If you want to take Mendix Workstation into production, contact your CSM to see what arrangements are possible. Without a license you can use Mendix Workstation for development, but workspaces are individual and cannot be shared.
+
+The following functionalities are only available with a license:
+
+* [Bulk import of stations](/mendix-workstation/import-export/)
+* [Bulk registration of Workstation Clients](/mendix-workstation/register/)
+* [Inviting users](/mendix-workstation/build-app/#invite-users)
 
 ## Features of Mendix Workstation
 

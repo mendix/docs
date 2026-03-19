@@ -1,8 +1,10 @@
 ---
 title: "Managing Exam Seats"
-url: /community-tools/purchasing-exams/manage-exam-seats/
+url: /academy/purchasing-exams/manage-exam-seats/
 weight: 10
 description: "Describes how an exam admin in an organization can manage exam seats."
+aliases:
+    - /community-tools/purchasing-exams/manage-exam-seats/
 ---
 
 ## Introduction

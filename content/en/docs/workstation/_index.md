@@ -19,7 +19,7 @@ Workstation is especially valuable in manufacturing and industrial environments 
 
 In addition to connectivity features, Workstation supports enterprise-grade deployment of projects across multiple environments and sites. It enables distributed teams to collaborate effectively and centrally manage connections to a wide range of equipment in a controlled and secure manner.
 
-## Features of Mendix Workstation
+## Capabilities Overview
 
 Mendix Workstation has the following features:
 
@@ -35,7 +35,7 @@ Mendix Workstation has the following features:
 
 * Can emulate and simulate interfaces.
 
-## Use Cases
+### Use Cases
 
 You can use Mendix Workstation to create apps that handle use cases such as the following:
 

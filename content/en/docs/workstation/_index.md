@@ -54,8 +54,6 @@ Mendix Workstation consists of the following components:
 * [Workstation Client](/mendix-workstation/client/) - Allows real-time communication with local hardware.
 * [Workstation Connector](/mendix-workstation/connector/) - Allows app integration.
 
-Together, these components enable Mendix applications to securely and efficiently integrate with local devices, bridging the gap between digital workflows and physical operations.
-
 {{< figure src="/attachments/workstation/WorkstationDiagram.png" class="no-border" >}}
 
 ## Licensing Mendix Workstation

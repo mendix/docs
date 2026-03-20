@@ -69,35 +69,12 @@ Mendix Workstation can be used to create apps that handle use cases such as the 
 
 Mendix Workstation consists of the following components:
 
-* [Workstation Management](https://workstation.home.mendix.com/) - Allows centralized configuration.
-* [Workstation Client](https://marketplace.mendix.com/link/component/247448) - Allows real-time communication with local hardware.
-* [Workstation Connector](https://marketplace.mendix.com/link/component/247460) - Allows app integration.
+* [Workstation Management](/mendix-workstation/management/) - Allows centralized configuration.
+* [Workstation Client](/mendix-workstation/client/) - Allows real-time communication with local hardware.
+* [Workstation Connector](/mendix-workstation/connector/) - Allows app integration.
 
 Together, these components enable Mendix applications to securely and efficiently integrate with local devices, bridging the gap between digital workflows and physical operations.
 
-### Architecture Diagram
-
 {{< figure src="/attachments/workstation/WorkstationDiagram.png" class="no-border" >}}
-
-### Workstation Management (Mendix Service)
-
-Used by central IT and application support teams. Workstation Management is a Mendix Platform application which provides a centralized interface to configure and monitor all workstations and devices across the organization. Whether managing a few stations or hundreds across multiple global sites, administrators can register computers, assign devices, group them into workspaces, and remotely troubleshoot connection issues.
-
-This makes it easier to manage a large, diverse fleet of devices without the need for manual setup or on-site support.
-
-### Workstation Client (Native Application)
-
-Used by central IT, support teams, operators, and supervisors. Installed on each local workstation, the Workstation Client acts as a bridge between the Mendix client app and local hardware. It handles the traffic between connected devices and the client application using the configurations provided by the Workstation Management.
-
-### Workstation Connector (Mendix Module)
-
-Used by Mendix developers. The App Connector is a plug-and-play Mendix module that allows developers to connect their apps to local devices using nanoflows. It establishes a connection with the Workstation Client, which acts as the intermediary between the Mendix app and the local devices. Once this connection is established, the module facilitates seamless data exchange by routing messages and events back and forth between the app and the devices.
-
-The connector handles the following tasks:
-
-* Retrieving local station configuration (name and device list)
-* Connecting and disconnecting devices
-* Exchanging messages with devices
-* Subscribing for triggering app logic on event when receiving messages from a device
 
 ## Read More

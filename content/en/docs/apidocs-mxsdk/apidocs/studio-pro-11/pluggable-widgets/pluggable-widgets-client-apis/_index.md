@@ -489,6 +489,167 @@ if (selection.type === "Single") {
 
 ## Exposed Modules
 
+ ### Session {#session}
+
+The Mendix Platform exposes a `mendix/session` module for inspecting the current user session. It is available in both web and native.
+
+```ts
+import { getUserId, getUserName, getUserRoleNames, isGuest, getCSRFToken } from "mendix/session";
+```
+
+#### getUserId {#getuserid}
+
+Returns the current user's GUID as a `string`.
+
+```ts
+function getUserId(): GUID;
+```
+
+#### getUserName {#getusername}
+
+Returns the `Name` attribute of the current user.
+
+```ts
+function getUserName(): string;
+```
+
+#### getUserRoleNames {#getuserrolenames}
+
+Returns the names of the current user's roles.
+
+```ts
+function getUserRoleNames(): string[];
+```
+
+#### isGuest {#isguest}
+
+Returns `true` if the current session is anonymous, `false` otherwise.
+
+```ts
+function isGuest(): boolean;
+```
+
+#### getCSRFToken {#getcsrftoken}
+
+Returns the CSRF token for the current session.
+
+```ts
+function getCSRFToken(): string;
+```
+
+---
+
+### Parser {#parser}
+
+The Mendix Platform exposes a `mendix/parser` module that provides locale-aware formatting and parsing of attribute values. These functions use the same locale and formatting settings of the built-in Mendix widgets. It is available in both web and native.
+
+```ts
+import { formatValue, parseValue } from "mendix/parser";
+```
+
+Both functions accept an optional configuration object:
+
+```ts
+interface FormatValueConfig {
+    selector?: "date" | "time" | "datetime";
+    datePattern?: string;
+    places?: number;
+    groups?: boolean;
+}
+```
+
+#### formatValue {#formatvalue}
+
+Converts a value to its locale-formatted string representation.
+
+```ts
+function formatValue(value: unknown, type: AttributeType, config?: FormatValueConfig): string;
+```
+
+| Parameter | Type                | Description                                                                                                 |
+|:----------|:--------------------|:------------------------------------------------------------------------------------------------------------|
+| `value`   | `unknown`           | The value to format.                                                                                        |
+| `type`    | `AttributeType`     | The attribute type to use when interpreting the value (for example `"Decimal"`, `"DateTime"`, `"Boolean"`). |
+| `config`  | `FormatValueConfig` | Optional formatting configuration.                                                                          |
+
+**Configuration options:**
+
+* `config.selector` — for date conversions: format only the `"date"`, `"time"`, or `"datetime"` part.
+* `config.datePattern` — for date conversions: a custom date pattern (see the date pattern table below).
+* `config.places` — for numeric conversions: number of decimal digits to display (`-1` to keep original precision).
+* `config.groups` — for numeric conversions: whether to include group separators.
+
+```ts
+formatValue(Big(3000), "Decimal", { places: 2 }); // "3,000.00"
+formatValue(+new Date(1980, 7, 23), "DateTime", { datePattern: "dd-MM-yyyy" }); // "23-08-1980"
+```
+
+#### parseValue {#parsevalue}
+
+Converts a locale-formatted string back to a typed value.
+
+```ts
+function parseValue(value: string, type: AttributeType, config?: FormatValueConfig): Option<AttributeValue>;
+```
+
+| Parameter | Type                | Description                                                        |
+|:----------|:--------------------|:-------------------------------------------------------------------|
+| `value`   | `string`            | The string to parse.                                               |
+| `type`    | `AttributeType`     | The attribute type to use when interpreting the value.             |
+| `config`  | `FormatValueConfig` | Optional formatting configuration (same options as `formatValue`). |
+
+The return type depends on the attribute type:
+
+| Attribute Type               | Return Type |
+|:-----------------------------|:------------|
+| `Integer`, `Long`, `Decimal` | `Big`       |
+| `AutoNumber`                 | `string`    |
+| `DateTime`                   | `Date`      |
+| `Enum`                       | `string`    |
+| `String`                     | `string`    |
+| `Boolean`                    | `boolean`   |
+
+If the string cannot be parsed, the function returns `undefined`.
+
+```ts
+parseValue("3,000.00", "Decimal"); // Big(3000)
+parseValue("23-8-1980", "DateTime", { datePattern: "dd-M-yyyy" }); // Date(1980, 7, 23)
+```
+
+#### Date Pattern Reference {#date-pattern}
+
+The `datePattern` option accepts a string composed of the following tokens:
+
+| Letter | Date or Time Component                              | Examples |
+|:-------|:----------------------------------------------------|:---------|
+| `M`    | Month in year, digit                                | 1        |
+| `MM`   | Month in year, digit with leading zero              | 01       |
+| `MMM`  | Month in year, abbreviated (context sensitive)      | Nov      |
+| `MMMM` | Month in year (context sensitive)                   | November |
+| `L`    | Month in year, digit (standalone)                   | 1        |
+| `LL`   | Month in year, digit with leading zero (standalone) | 01       |
+| `LLL`  | Month in year, abbreviated (standalone)             | Nov      |
+| `LLLL` | Month in year (standalone)                          | November |
+| `yy`   | Year, two digits                                    | 01       |
+| `yyyy` | Year, four digits                                   | 2001     |
+| `G`    | Era designator                                      | AD       |
+| `E`    | Day name in week, abbreviated                       | Tue      |
+| `EEEE` | Day name in week                                    | Tuesday  |
+| `u`    | Day of week (1 = Monday, …, 7 = Sunday)             | 5        |
+| `w`    | Week in year                                        | 11       |
+| `W`    | Week in month                                       | 2        |
+| `D`    | Day in year                                         | 133      |
+| `d`    | Day in month                                        | 7        |
+| `F`    | Day of week in month                                | 1        |
+| `a`    | AM/PM marker                                        | PM       |
+| `H`    | Hour in day (0–23)                                  | 0        |
+| `k`    | Hour in day (1–24)                                  | 24       |
+| `K`    | Hour in AM/PM (0–11)                                | 0        |
+| `h`    | Hour in AM/PM (1–12)                                | 12       |
+| `m`    | Minute in hour                                      | 24       |
+| `s`    | Second in minute                                    | 50       |
+| `S`    | Millisecond                                         | 201      |
+
 ### Icon {#icon}
 
 Mendix Platform exposes two versions of an `Icon` react component: `mendix/components/web/Icon` and `mendix/components/native/Icon`. Both components are useful helpers to render `WebIcon` and `NativeIcon` values respectively. They should be passed through an `icon` prop. The native `Icon` component additionally accepts `color` (`string`) and `size` (`number`) props.

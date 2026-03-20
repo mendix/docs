@@ -96,6 +96,7 @@ For readers with more knowledge of the OAuth and OIDC protocol:
     For signing into the app, the OIDC SSO module will not use token introspection and will always validate against the published `jwks` endpoint.
 
 * Stores an access token for each end-user that can be used to make API calls on their behalf.
+* The OIDC SSO module supports ‘bearer’ Access Token type and does not support the Message Authentication Code (MAC) when making calls to resource servers or APIs as defined in [RFC6749 section 7.1](https://datatracker.ietf.org/doc/html/rfc6749#section-7.1).
 * Can be configured to use either `client_secret_post`, `client_secret_basic`, or `private_key_jwt` as the client authentication method.
 * It supports nine signing algorithms: ECC SHA-256 (ES256), ECC SHA-384 (ES384), ECC SHA-512 (ES512), RSASSA-PSS SHA-256 (PS256), RSASSA-PSS SHA-384 (PS384), RSASSA-PSS SHA-512 (PS512), RSA SHA-256 (RS256), RSA SHA-384 (RS384), RSA SHA-512 (RS512), and automatically regenerates a new key pair upon expiry.
 * Supports ACR in authorization requests. The ACR in OIDC protocol is used to indicate the desired level of assurance or strength of authentication during the authentication process. It allows the relying party (your application) to request a specific level of authentication assurance from the identity provider (IdP) (version 2.3.0 and above).
@@ -202,15 +203,16 @@ If your app is already developed using Mendix 9 or above, but uses the community
 
 This section provides an overview of updates for the OIDC SSO module across different versions. It includes new dependencies, snippet replacements, and microflow renaming to ensure a smooth transition while migrating to higher module versions.
 
-| Mendix Version | OIDC SSO Module Version | Important Migration Changes | Additional Information|
+| Mendix Version | OIDC SSO Module Version | Important Migration Changes | Additional Information |
 | --- | --- | --- | --- |
+| 10.24.0 and above | 4.3.0 | - | Supporting multi-domain and sub-path |
 | 10.24.0 and above | 4.2.1 | In version 4.2.1, automatic migration of the UserCommons has been removed. | Since migration steps were removed in 4.2.1, you must upgrade to OIDC SSO version 4.2.0 first to prevent data loss. This applies to the UserCommons, if you are migrating from any version below 3.0.0, always upgrade to 4.2.0 first, then move to the latest v4.2.1. |
 | 10.21.01 and above | 4.2.0 | In version 4.2.0, the module no longer automatically executes the UserCommons migration in the startup microflow. The migration step has been moved to a dedicated microflow, which you can trigger via a widget. | The `ASU_STARTUP` microflow has been moved under the **USE_ME** folder. |
 | 10.12.10 and above | 4.0.0 | Set `OIDC.ASU_OIDC_Startup` microflow as part of the after-startup microflow | From UserCommons 2.0.0, new users without IdP-specified time zone or language will use default App settings; existing users retain their previously set values. |
 | | | For module version 4.0.0 and above, use User Commons module version 2.0.0 and above, and vice versa. | Deprecated Mx Model Reflection module; maintained for compatibility but will be removed in future versions. |
 | | | | Default user roles in UserProvisioning will be assigned along with roles from the access token. |
 | | | | The `OIDC.ACT_Account_RetrieveAccount` microflow, located in the **USE_ME** folder, has been removed as it is no longer required. |
-| 9.24.18 and above | 3.2.0 | Select and refresh the Administration and System modules manually in the `MxModelReflection.MxObjects_Overview` page| Added a new heading for selected scopes: *Your app will request the following scopes at IdP*. |
+| 9.24.18 and above | 3.2.0 | Select and refresh the Administration and System modules manually in the `MxModelReflection.MxObjects_Overview` page | Added a new heading for selected scopes: *Your app will request the following scopes at IdP*. |
 | 9.24.2 and above | 3.1.0 | Set `OIDC.ASU_OIDC_Startup` microflow as part of the after-startup microflow | `OIDC.Startup` microflow renamed to `OIDC.ASU_OIDC_Startup` |
 | 9.24.2 and above | 3.0.1 | Use `Snip_Login_Button` snippet instead of `Snip_Login_Automatic` | `Snip_Login_Automatic` snippet removed from the module |
 | 9.24.2 and above | 3.0.0 (migrating to 3.0.0 and above) | Include [UserCommons](https://marketplace.mendix.com/link/component/223053) module as a dependency. | New UserCommons module |
@@ -333,17 +335,22 @@ In this case, the OIDC client is the app you are making.
     The options are:
     * `client_secret_basic`: Your app will use the HTTP Basic Authentication scheme to authenticate itself at your IdP. This is the default. The `client_secret_basic` makes use of the `client-id` and `client-secret`.
     * `client_secret_post`: Your app will authenticate itself by including its `client_id` and `client_secret` in the payload of token requests. (Older versions of the OIDC SSO module used this method.)
-    * `private_key_jwt`: This method, introduced in version 4.1.0, uses asymmetric key cryptography (algorithm) for authentication. This is the best option for security. When you select the `private key` option, you can configure the following fields:
-        * **Key Pair Expiration Days**: (default `90`)
-        * **JWT ALG(Signing Algorithm)**: (default `RS256`)
+    * `private_key_jwt`: This method introduced in version 4.1.0 and uses asymmetric key cryptography (algorithm) for authentication (also known as key pair based authentication). This is the best option for security. It has the following options to share your application's public key with your IdP. Choose the right option depending on your IdP's capabilities:
+        * JWKS URI: This option assumes that your IdP can fetch the public key from the JWKS endpoint of your application. Most IdPs aupport this capability, and it is the preffered approach as it eliminates the need to manually exchange keys during the setup. When you select the **JWKS URI** from the **Public Key Exchange** configure the following fields:
+            * Key Pair Expiration Days: (default 90)
+            * JWT (Signing Algorithm): (default RS256)
 
-        {{% alert color="info" %}}`private_key_jwt` is not yet supported with Entra ID due to the specific way of Microsoft's implementation, which requires enhancements to the OIDC SSO module.{{% /alert %}}
- 
-    Once you **Save** the configuration, a key pair is automatically generated. Before you set up the private key authentication in your Mendix App, complete the JWKS configuration at your IdP. Check the documentation of your IdP for details. If you are using Okta, you can refer to the [Configuring JWKS at Your IdP (Okta)](#jwks-okta) section. 
+        Once you **Save** the configuration, a key pair is automatically generated. Before you set up the private key authentication in your Mendix App, complete the JWKS configuration at your IdP. Check the documentation of your IdP for details. If you are using Okta, you can refer to the [Configuring JWKS at Your IdP (Okta)](#jwks-okta) section. 
+
+        * X. 509 Certificate: This will use a certificate to transfer the public key of your application to the IdP. Choose this method if you are using Entra ID as your IdP. Once the configuration is ready, download the certificate in the `pre`, `cer`, or `cer` format. You can also download it by editing the configuration and clicking **Download**. It is supported from version 4.3.0 of the OIDC module.
+
+            {{% alert color="info" %}}X. 509 Certificate supports only the RS256 Signing Algorithm. {{% /alert %}}
+
+            {{% alert color="info" %}}If you regenerate the key pair for your existing configuration, make sure to download the updated certificate from the configuration edit page and upload it to the Azure portal to ensure successful authentication. {{% /alert %}}
 
     {{% alert color="info" %}}After a key renewal, some SSO requests may fail if your IdP does not immediately refresh its key cache. {{% /alert %}}
 
-5. Add the **Client Secret**.
+5. Add the **Client Secret** if you choose `client_secret_basic` or `client_secret_post` as client authentication method.
 6. If you have the **Automatic Configuration URL** (also known as the *well-known endpoint*), enter it and click **Import Configuration** to automatically fill the other endpoints.
 
     {{% alert color="info" %}} If the endpoint URL does not already end with `/.well-known/openid-configuration`, include it at the end. According to the specifications, the URL you need to enter typically ends with `/.well-known/openid-configuration`. {{% /alert %}}
@@ -478,6 +485,10 @@ when you set **ClientAuthenticationMethod** as `private_key_jwt`, you do not nee
 
     Example: `OIDC.Default_SAM_TokenProcessing_CustomATP`
 
+* **CustomATPTokenType**: an optional deploy-time constant — when **CustomATP** is enabled, optionally, **CustomATPTokenType** can be set to `ID-TOKEN`. Default is `ACCESS-TOKEN`.
+
+    Example: `ID-TOKEN`
+    
 * **CustomCallbackURL** – the custom callback URL
 
 * **SelectedClaim** – selected claim values — multiple values can be separated by a space
@@ -870,6 +881,10 @@ To parse access tokens, you need to do the following:
 This section is only relevant if you are a Mendix partner and you want to integrate your app with the Siemens SAM IdP.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+From version 4.3.0 of the OIDC SSO module, optionally, you can select `ID-TOKEN` as a **Custom ATP Token Type** for all custom access token parsing. Default is `ACCESS-TOKEN`.
+{{% /alert %}}
+
 To parse of SAM access tokens you need to do the following when performing [Runtime Configuration of Your IdP at Your App](#runtime-idp-app):
 
 1. Select *OIDC.Default_SAM_TokenProcessing_CustomATP* as the **custom AccessToken processing microflow**.
@@ -918,7 +933,7 @@ If you are using Microsoft Entra ID, ensure you have followed the instructions f
 
 You can find a sample microflow for parsing access tokens, `OIDC.ACT_Token_CustomATPRetrieveRoles` in the OIDC module.
 
-Your custom microflow should use the access token to create a list of user roles. Your token will contain one of the following:
+Your custom microflow should use the access token or ID-token to create a list of user roles. Your token will contain one of the following:
 
 * the UUIDs of the user roles in your app which map to the `System.UserRole/ModelGUID` attribute
 * the name of the user role in the app, which can be used to find the `System.UserRole` within the app itself using the `Name` attribute
@@ -976,19 +991,17 @@ You can disable this setting by navigating to **Security > Anonymous users** and
 2. To implement the SSO redirection, you will need to replace the code in the `<script>` tag of your login page (for example, `login.html`) with code which does one of the following, depending on whether you want automatic or manual redirection:
 
     * For automatic redirection, you can use `window.onload` to automatically redirect users to the SSO login page. You could, for example, use the following code:
-    
+
         ```javascript
-        const returnURL = encodeURIComponent(window.location.search+window.location.hash);
-        self.location = '/oauth/v2/login?cont='+returnURL;
+        const cont = window.location.search + window.location.hash;
+        const base = window.location.pathname.replace(/\/login\.html$/, '');
+        const loginUrl = base + '/oauth/v2/login';
+        window.location.href = cont ? loginUrl + '?cont=' + encodeURIComponent(cont) : loginUrl;
         ```
 
-    * For manual redirection, you can add an onclick event to a button that manually triggers the SSO login. For example:
-    
-        ```javascript
-        window.location.href='/oauth/v2/login?cont=' + encodeURIComponent(window.location.search + window.location.hash);
-        ```
+    * For manual redirection, you can use the same code above and add an onclick event to a button that manually triggers the SSO login.
 
-Once the above changes are applied, end users can directly navigate to the desired page. If not logged in, they will be redirected to the IdP login page for authentication. After successful log in, they will be directed to the desired page using page and microflow URLs.
+Once the above changes are applied, end users can directly navigate to the desired page. If not logged in, they will be redirected to the IdP login page for authentication. After successful login, they will be directed to the desired page using page and microflow URLs.
 
 #### Using Deep Link Module{#using-deep-link}
 

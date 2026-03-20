@@ -30,7 +30,7 @@ REST API best practices usually include some of the following:
 
 This document uses the following domain model as an example: 
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/example-domain-model.png" width="500" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/example-domain-model.png" width="500" class="no-border" alt="Example domain model" >}}
 
 REST APIs, and especially OData APIs, often provide access to data within the app. Mendix OData APIs are excellent for providing APIs for entities, but can also be used for accessing other types of data. For more information, see the [API-First](#api-first) section to learn about decoupling APIs from the domain model. 
 
@@ -42,7 +42,7 @@ Create OData APIs by right-clicking on an entity > **Publish in OData service** 
 
 In the [published OData service](/refguide/published-odata-services/) document, select which attributes and associations are available in the API:
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/select-attributes-associations.png" class="no-border" >}} 
+{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/select-attributes-associations.png" class="no-border" alt="Published OData service general settings" >}} 
 
 For every published entity, you can define what functionality is available: 
 
@@ -57,19 +57,19 @@ You can also define other capabilities, such as if you can count results (using 
 
 When you start your app, you see the Swagger UI documentation and test page:
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/swagger-doc.png" width="400" class="no-border" >}} 
+{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/swagger-doc.png" width="400" class="no-border" alt="Customer API swagger page" >}} 
 
 The test page lists all accepted parameters and example payloads for regular responses and error payloads:
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/test-page.png" width="500" class="no-border" >}} 
+{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/test-page.png" width="500" class="no-border" alt="" >}} 
 
 It provides a JSON schema of all the payload types:
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/json-schema.png" width="400" class="no-border" >}} 
+{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/json-schema.png" width="400" class="no-border" alt="" >}} 
 
 And it provides an OpenAPI 3.0.1 contract:
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/openapi-contract.png" class="no-border" >}} 
+{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/openapi-contract.png" class="no-border" alt="" >}} 
 
 ## Retrieving Data {#retrieving-data}
 
@@ -85,7 +85,35 @@ GET http://localhost:8080/odata/CustomerApi/v1/Customers
 
 The response is as follows:
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/fetch-all-customers.png" width="400" class="no-border" >}} 
+```json
+HTTP/1.1 200 OK
+Date: Wed, 08 Feb 2023 15:33:34 GMT
+Connection: close
+Content-Type: application/json;charset=utf-8
+OData-Version: 4.0
+Content-Length: 293
+
+
+{
+  "@odata.context": "http://localhost:8080/odata/CustomerApi/v1/$metadata#Customers",
+  "value": [
+    {
+      "CustomerId": 1,
+      "FirstName": "John",
+      "Lastname": "Smith",
+      "Title": "Engineer",
+      "CompanyName": "CustKo"
+    },
+    {
+      "CustomerId": 2,
+      "FirstName": "Pete",
+      "Lastname": "Arnhold",
+      "Title": "Sales Manager",
+      "CompanyName": "Devco"
+    }
+  ]
+}
+```
 
 ### Getting a Resource by Identifier
 
@@ -97,7 +125,25 @@ GET http://localhost:8080/odata/CustomerApi/v1/Customers(1)
 
 The response is as follows:
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/fetch-single-customer.png" width="500" class="no-border" >}} 
+```json
+HTTP/1.1 200 OK
+Date: Wed, 08 Feb 2023 16:12:13 GMT
+Connection: close
+Content-Type: application/json;charset=utf-8
+OData-Version: 4.0
+Content-Length: 186
+
+
+{
+  "@odata.context": "http://localhost:8080/odata/CustomerApi/v1/$metadata#Customers/$entity",
+  "CustomerId": 1,
+  "FirstName": "John",
+  "Lastname": "Smith",
+  "Title": "Engineer",
+  "CompanyName": "CustKo"
+}
+
+```
 
 OData also supports using multi-field IDs by providing the required attributes as a key value list between the brackets.
 
@@ -124,7 +170,32 @@ GET http://localhost:8080/odata/CustomerApi/v1/Customers?$filter=contains(Lastna
 
 The response is as follows:
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/filter-sort-page-attribute.png" width="500" class="no-border" >}} 
+```json
+HTTP/1.1 200 OK
+Date: Thu, 09 Feb 2023 08:16:33 GMT
+Connection: close
+Content-Type: application/json;charset=utf-8
+OData-Version: 4.0
+Content-Length: 273
+
+
+{
+  "@odata.context": "http://localhost:8080/odata/CustomerApi/v1/$metadata#Customers(FirstName,Lastname,CompanyName)",
+  "value": [
+    {
+      "FirstName": " Irène",
+      "Lastname": "Aisha",
+      "CompanyName": "Foster Hale"
+    },
+    {
+      "FirstName": "Angela",
+      "Lastname": "Naja ",
+      "CompanyName": "Mimosa Advertising"
+    }
+  ]
+}
+
+```
 
 Alternatively, you can specify the query in the payload of a `POST` call, which is useful if you have a long complex query.
 
@@ -151,7 +222,13 @@ POST http://localhost:8080/odata/CustomerApi/v1/Customers
 
 The response is as follows:
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/insert-new-data.png" class="no-border" >}} 
+```json
+HTTP/1.1 201 OK
+Date: Wed, 08 Feb 2023 16:13:32 GMT
+Connection: close
+Cache-Control: no-store
+Location: Customers(5)
+```
 
 The following `GET` request uses the returned location header to query the new resource at its endpoint:
 
@@ -161,7 +238,25 @@ GET http://localhost:8080/odata/CustomerApi/v1/Customers(5)
 
 The response is as follows:
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/query-resource-endpoint.png" class="no-border" >}} 
+```json
+HTTP/1.1 200 OK
+Date: Wed, 08 Feb 2023 16:14:26 GMT
+Connection: close
+Content-Type: application/json;charset=utf-8
+OData-Version: 4.0
+Content-Length: 188
+
+
+{
+  "@odata.context": "http://localhost:8080/odata/CustomerApi/v1/$metadata#Customers/$entity",
+  "CustomerId": 5,
+  "FirstName": "Jimmy",
+  "Lastname": "Smooth",
+  "Title": "Engineer",
+  "CompanyName": "CustKo"
+}
+
+```
 
 #### Using a Prefer Header
 
@@ -183,7 +278,25 @@ Prefer: return=representation
 
 The following is the response:
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/prefer-header.png" class="no-border" >}} 
+```json
+HTTP/1.1 200 OK
+Date: Mon, 13 Mar 2023 13:38:20 GMT
+Connection: close
+Cache-Control: no-store
+Content-Type: application/json;charset=utf-8
+Location: Customers(15)
+
+
+{
+  "@context": "http://localhost:8080/odata/CustomerApi/v1/$metadata#Customers/$entity",
+  "CustomerId": 15,
+  "FirstName": "Alexis",
+  "Lastname": "Sweeper",
+  "Title": "Ir.",
+  "CompanyName": "GadgetsAndBeers"
+}
+
+```
 
 #### Creating Resources with Associations
 
@@ -193,7 +306,7 @@ If you want to create a new resource associated with another resource, you can r
 POST http://localhost:8080/odata/CustomerApi/v1/Addresses
 Prefer: return=representation
 
-{ 
+{
     "Country: "UK",
     "HouseNumber":"11",
     "PhoneNumber":"123123",
@@ -207,7 +320,29 @@ Prefer: return=representation
 
 The response is as follows:
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/create-resources-associations.png" class="no-border" >}} 
+```json
+HTTP/1.1 200 OK
+Date: Wed, 15 Mar 2023 13:39:18 GMT
+Connection: close
+Cache-Control: no-store
+Content-Type: application/json;charset=utf-8
+Location: Addresses(8)
+Content-Length: 235
+
+
+{
+  "@context": "http://localhost:8080/odata/CustomerApi/v1/$metadata#Addresses/$entity",
+  "AddressId": 8,
+  "Street": "Mainstreet",
+  "HouseNumber": "11",
+  "Zipcode": "13423",
+  "City": "Bristol",
+  "Country": "Uk",
+  "PhoneNumber": " 123123",
+  "AddressType": "Home"
+}
+
+```
 
 ### Modifying Existing Data
 
@@ -225,7 +360,11 @@ PATCH http://localhost:8080/odata/CustomerApi/v1/Customers(5)
 
 The response is as follows:
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/modify-existing-data-1.png" class="no-border" >}} 
+```json
+HTTP/1.1 204 No Content
+Date: Wed, 08 Feb 2023 16:16:20 GMT
+Connection: close
+```
 
 And a subsequent `GET` request:
 
@@ -235,7 +374,25 @@ GET http://localhost:8080/odata/CustomerApi/v1/Customers(5)
 
 The response is as follows:
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/modify-existing-data-2.png" class="no-border" >}} 
+```json
+HTTP/1.1 200 OK
+Date: Wed, 08 Feb 2023 16:16:46 GMT
+Connection: close
+Content-Type: application/json;charset=utf-8
+OData-Version: 4.0
+Content-Length: 189
+
+
+{
+  "@odata.context": "http://localhost:8080/odata/CustomerApi/v1/$metadata#Customers/$entity",
+  "CustomerId": 5,
+  "FirstName": "Jimmy2",
+  "Lastname": "Smooth",
+  "Title": "Engineer",
+  "CompanyName": "CustKo"
+}
+
+```
 
 [Validation rules](#validation-rules) defined on the entity will be respected automatically. You can use a [validation microflow](#validation-microflows) if you want to enrich the default behavior, including adding additional validations. 
 
@@ -243,7 +400,7 @@ The response is as follows:
 
 When changing data with `POST`, `PUT`, or `DELETE`, validation rules specified on the underlying entities are applied automatically. A failed validation rule will result in a HTTP status code 422. The error message will be included in the response payload:
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/validation-rules.png" width="400" class="no-border" >}} 
+{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/validation-rules.png" width="400" class="no-border" alt="Sample domain model with its entity property settings" >}} 
 
 The validation rules on **Customer** show that both `Firstname` and `Lastname` are mandatory. When you try to create a new customer without a last name, this will fail with status code 422, and the error message as defined in the validation rule will be returned in the response. See the following `POST` request:
 
@@ -259,7 +416,31 @@ POST http://localhost:8080/odata/CustomerApi/v1/Customers
 
 The response is as follows:
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/error-422.png" width="350" class="no-border" >}} 
+```json
+HTTP/1.1 422 Unprocessable Entity
+Date: Wed, 08 Feb 2023 16:22:09 GMT
+Connection: close
+Cache-Control: no-store
+Content-Language: en-US
+Content-Type: application/json;charset=utf-8
+Content-Length: 141
+
+
+{
+  "error": {
+    "code": "422",
+    "message": "Validation failed",
+    "details": [
+      {
+        "code": "VE001",
+        "target": "Lastname",
+        "message": "Please provide a lastname"
+      }
+    ]
+  }
+}
+
+```
 
 #### Validation Microflows {#validation-microflows}
 
@@ -267,17 +448,17 @@ You can generate and reuse generated validation microflows. The following exampl
 
 1. On a save button, right-click and select **Generate validation microflow**. The resulting validation microflow looks like this:
 
-     {{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/validation-microflow.png" class="no-border" >}} 
+     {{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/validation-microflow.png" class="no-border" alt="Sample validation microflow" >}} 
 
 2. Use the **Show validation message** activity to set the errors to be shown in the UI in this generated validation microflow. This microflow will be called in the insert microflow displayed below.
 
 3. Specify that you want to use a microflow to insert a new **Customer** resource via the OData API. This microflow will be called when you do a `POST` operation on the endpoint of the resource:
 
-     {{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/specify-use-microflow.png" class="no-border" >}} 
+     {{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/specify-use-microflow.png" class="no-border" alt="Published service general settings dialog" >}} 
 
 4. In the insert microflow, call the generated validation microflow and commit the object if the validation succeeds:
 
-     {{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/insert-microflow.png" class="no-border" >}} 
+     {{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/insert-microflow.png" class="no-border" alt="Sample microflow" >}} 
 
      If validation fails, the show validation message texts are provided automatically in the response payload. See the following `POST` request:
 
@@ -294,7 +475,36 @@ You can generate and reuse generated validation microflows. The following exampl
 
      The response is as follows:
 
-     {{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/validation-response-payload.png" width="300" class="no-border" >}} 
+     ```json
+    HTTP/1.1 422 Unprocessable Entity
+    Date: Fri, 10 Feb 2023 18:41:17 GMT
+    Connection: close
+    Cache-Control: no-store
+    Content-Language: en-US
+    Content-Type: application/json;charset=utf-8
+    Content-Length: 201
+
+    
+    {
+    "error": {
+        "code": "422",
+        "message": "Validation failed",
+        "details": [
+        {
+            "code": "VE001",
+            "target": "CompanyName",
+            "message": "Company name is empty"
+        },
+        {
+            "code": "VE001",
+            "target": "Title",
+            "message": "Title is empty"
+        }
+        ]
+    }
+    }
+     ```
+
 
 ### Deleting Data
 
@@ -316,7 +526,23 @@ DELETE http://localhost:8080/odata/CustomerApi/v1/Customers(5)
 
 The response is as follows:
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/standard-error-codes.png" class="no-border" >}} 
+```json
+HTTP/1.1 404 Not Found
+Date: Wed, 08 Feb 2023 16:19:30 GMT
+Connection: close
+Content-Language: en-US
+Content-Type: application/json;charset=utf-8
+Content-Length: 67
+
+{
+  "error": {
+    "code": "404",
+    "message": "Entity with key '5' not found."
+  }
+}
+
+
+```
 
 ## Performance
 
@@ -330,7 +556,44 @@ GET http://localhost:8080/odata/CustomerApi/v1/Customers(1)?$expand=Addresses,No
 
 The response is as follows:
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/expand-expression.png" width="300" class="no-border" >}} 
+```json
+
+HTTP/1.1 200 OK
+Date: Wed, 08 Feb 2023 16:27:06 GMT
+Connection: close
+Content-Type: application/json;charset=utf-8
+OData-Version: 4.0
+Content-Length: 442
+
+{
+  "@odata.context": "http://localhost:8080/odata/CustomerApi/v1/$metadata#Customers/$entity",
+  "CustomerId": 1,
+  "FirstName": "John",
+  "Lastname": "Smith",
+  "Title": "Engineer",
+  "CompanyName": "CustKo",
+  "Addresses": [
+    {
+      "AddressId": 1,
+      "Street": "Middlesquare",
+      "HouseNumber": "4",
+      "Zipcode": "12334",
+      "City": "Middletown",
+      "Country": "United Kingdom",
+      "PhoneNumber": "1231233",
+      "AddressType": "Office"
+    }
+  ],
+  "Notes": [
+    {
+      "NoteId": 1,
+      "Summary": "Tried calling",
+      "Note": "Not available"
+    }
+  ]
+}
+
+```
 
 You can use `select` and `expand` in combination with `filter`, `orderby`, `top`, and `skip`. For more information, see the [Filtering, Sorting, Paginating, and Selecting Data](#filter-sort-page-select-data) section below. 
 
@@ -345,7 +608,36 @@ GET http://localhost:8080/odata/CustomerApi/v1/Customers
             &$top=1
 ```
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/sort-top-skip.png" class="no-border" >}} 
+```json
+
+HTTP/1.1 200 OK
+Date: Sat, 11 Feb 2023 08:49:50 GMT
+Connection: close
+Content-Type: application/json;charset=utf-8
+OData-Version: 4.0
+
+{
+  "@odata.context": "http://localhost:8080/odata/CustomerApi/v1/$metadata#Customers(CustomerId,Lastname)",
+  "value": [
+    {
+      "CustomerId": 3,
+      "Lastname": "Naja ",
+      "Addresses": [
+        {
+          "AddressId": 3,
+          "City": "New York"
+        },
+        {
+          "AddressId": 4,
+          "City": "Gouda"
+        }
+      ],
+      "Notes": []
+    }
+  ]
+}
+
+```
 
 For long queries, place the query in the request body. You can do this by using `POST` and adding `$query` to the endpoint. See the following `POST` request:
 
@@ -356,7 +648,39 @@ Content-Type: text/plain
 
 The response is as follows:
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/long-queries.png" class="no-border" >}} 
+```json
+
+HTTP/1.1 200 OK
+Date: Sat, 11 Feb 2023 08:52:46 GMT
+Connection: close
+Cache-Control: no-store
+Content-Type: application/json;charset=utf-8
+OData-Version: 4.0
+
+
+{
+  "@odata.context": "http://localhost:8080/odata/CustomerApi/v1/$metadata#Customers(CustomerId,Lastname)",
+  "value": [
+    {
+      "CustomerId": 3,
+      "Lastname": "Naja ",
+      "Addresses": [
+        {
+          "AddressId": 3,
+          "City": "New York"
+        },
+        {
+          "AddressId": 4,
+          "City": "Gouda"
+        }
+      ],
+      "Notes": []
+    }
+  ]
+}
+
+
+```
 
 This result is very similar to using GraphQL, where you can query a graph of objects and limit the attributes returned to only those that you need. 
 
@@ -389,17 +713,17 @@ In this example, you can publish a single REST resource that combines data from 
 
 2. Use an OQL dataset to define the query to fetch this information from your entities:
 
-    {{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/oql-database.png" class="no-border" >}} 
+    {{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/oql-database.png" class="no-border" alt="Domain model with four entities"  >}} 
 
 3. Define a microflow that will fetch the correct data when a user does a `GET` on the **CustomerHomeAddress** resource:
 
-    {{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/get-microflow.png" width="400" class="no-border" >}} 
+    {{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/get-microflow.png" width="400" class="no-border" alt="OQL source code for entity" >}} 
 
     The microflow uses a Java action to translate the OData query to an OQL expression using the OQL Dataset as the base query. This ensures that filtering, sorting, and paging work as expected. 
  
     {{% alert color="info" %}}This action can be built using custom Java actions. This action will be updated in the second half of 2024.{{% /alert %}}
 
-    {{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/translate-to-odl-expression.png" class="no-border" >}} 
+    {{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/translate-to-odl-expression.png" class="no-border" alt="Published resource properties" >}} 
 
 4. Do a REST `GET` call and define which attributes you need, how you want it sorted, and how many objects you need:
 
@@ -409,17 +733,65 @@ In this example, you can publish a single REST resource that combines data from 
 
     The response is as follows:
 
-    {{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/get-call.png" class="no-border" >}} 
+    ```json
+
+    HTTP/1.1 200 OK
+    Date: Wed, 08 Feb 2023 22:35:13 GMT
+    Connection: close
+    Cache-Control: no-store
+    Content-Type: application/json;charset=utf-8
+    OData-Version: 4.0
+    Content-Length: 295
+
+    {
+    "@odata.context": "http://localhost:8080/odata/CustomerApi/v1/$metadata#CustomerHomeAddresses(CustomerId,FullName,Street,City)",
+    "value": [
+        {
+        "CustomerId": 8,
+        "FullName": "Jimmy2 Johnson",
+        "Street": null,
+        "City": null
+        },
+        {
+        "CustomerId": 4,
+        "FullName": "Irène Aisha",
+        "Street": "Conifer Drive",
+        "City": "Seattle"
+        }
+    ]
+    }
+
+    ```
+
+    {{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/get-call.png" class="no-border" alt="Microflow with query OQL dataset settings" >}} 
 
 5. You have decoupled your REST resource from your domain model persistable entities. You can change your entities and use the OQL query to ensure the published data remains backwards compatible.
 
     The Java action used above adds the OData query to the original OQL query as follows:
 
-    {{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/view-log-line-details.png" class="no-border" >}} 
+    {{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/view-log-line-details.png" class="no-border" alt="OQL query log details"  >}} 
 
     With some formatting, it can be more readable. The original OQL query is used as a subquery (inline view) for the OData query. All the expressions will be pushed down into the database and benefit from the performance of the database optimizer:
 
-    {{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/subquery.png" class="no-border" >}} 
+    ```sql
+    
+    select  bq.CustomerId   as CustomerId,
+            bq.FullName     as FullName,
+            bq.Street       as Street,
+            bq.City         as City
+    from (
+            select  cust.CustomerId              as CustomerId,
+                    cust.FirstName + ' ' + cust.Lastname  as FullName,
+                    addr.Street                  as Street,
+                    addr.City                    as City
+            from    CustomerService.Customer as cust
+            left join cust/CustomerService.Address_Customer/CustomerService.Address as addr
+            where   addr.AddressType = 'Home'
+        ) as bq
+    order by City desc
+    limit 2
+
+    ```
 
 ### Defining Logic in an Insert Microflow
 
@@ -431,11 +803,11 @@ This example shows a **CustomerEmailRequest** entity that a client can create us
 
 1. The API will execute the logic to send the customer an email when this resource is created:
 
-     {{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/create-customer-email-request-entity.png" class="no-border" >}} 
+     {{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/create-customer-email-request-entity.png" class="no-border" alt="Domain model with five entities" >}} 
 
 2. Define the logic as the insert (`POST`) action:
 
-     {{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/define-insert-action.png" class="no-border" >}} 
+     {{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/define-insert-action.png" class="no-border" alt="Published resource general settings" >}} 
 
 ### Running Operations Asynchronously 
 
@@ -443,7 +815,7 @@ Consider running operations that take longer to complete [asynchronously](https:
 
 The last activity of the insert microflow calls the SendCustomerEmail microflow using the task queue:
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/task-queue.png" class="no-border" >}} 
+{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/task-queue.png" class="no-border" alt="Two microflows" >}} 
 
 The `POST` response provides the location where the client can retrieve request status. See the following `POST` request:
 
@@ -459,7 +831,21 @@ POST http://localhost:8080/odata/CustomerApi/v1/CustomerEmailRequests
 
 The response is as follows:
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/call-send-email-logic.png" width="300" class="no-border" >}} 
+```json
+POST http://localhost:8080/odata/CustomerApi/v1/CustomerEmailRequests
+
+{
+  "Subject": "Test email",
+  "EmailText": "Hello",
+  "CustomerId": 1
+}
+
+HTTP/1.1 201 Created
+Date: Fri, 10 Feb 2023 10:07:37 GMT
+Connection: close
+Cache-Control: no-store
+Location: CustomerEmailRequests(12)
+```
 
 When you `GET` the resource from the location provided, the status has the value **Sent**, indicating that the logic has completed. See the following `GET` request:
 
@@ -469,7 +855,24 @@ GET http://localhost:8080/odata/CustomerApi/v1/CustomerEmailRequests(12)
 
 The response is as follows:
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/get-resource-sent.png" class="no-border" >}} 
+```json
+HTTP/1.1 200 OK
+Date: Fri, 10 Feb 2023 10:08:23 GMT
+Connection: close
+Content-Type: application/json;charset=utf-8
+OData-Version: 4.0
+
+
+{
+  "@odata.context": "http://localhost:8080/odata/CustomerApi/v1/$metadata#CustomerEmailRequests/$entity",
+  "CustomerEmailRequestId": 12,
+  "Subject": "Test email",
+  "EmailText": "Hello",
+  "CustomerId": 1,
+  "Status": "Sent"
+}
+
+```
 
 ## Versioning {#versioning}
 
@@ -479,7 +882,7 @@ With OData, similar to REST APIs in Studio Pro, you have full control over how y
 
 If you need to introduce breaking changes, duplicate the entire OData service and change the major version:
 
-{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/versioning.png" class="no-border" >}} 
+{{< figure src="/attachments/refguide/modeling/integration/odata-services/build-odata-apis/versioning.png" class="no-border" alt="Entity general settings" >}} 
 
 This approach ensures customer applications can migrate at their own pace because you will have the old version and the new major version of the API in your application. Once all customer applications have migrated, you can remove the old API from your application.
 

@@ -40,7 +40,7 @@ We support ZIP (for multiple file contracts) or XML (for single file contracts).
 
 ### Manually Registering Contracts to the Catalog with Team Server {#manual-team-server}
 
-If you deploy to a Mendix on Kubernetes  or On-Premises setup, and use the [Mendix Team Server](/refguide/version-control/#team-server), you can manually register applications, environments, services, or services to the Catalog. Registering the service contracts to the Catalog ensures that it can be found and imported into an application by members of the company that owns it. 
+If you deploy to a Mendix on Kubernetes  or On-Premises setup, and use the [Mendix Team Server](/refguide//version-control/glossary/#team-server), you can manually register applications, environments, services, or services to the Catalog. Registering the service contracts to the Catalog ensures that it can be found and imported into an application by members of the company that owns it. 
 
 To manually register an OData contract metadata file to the Catalog, follow these basic steps:
 

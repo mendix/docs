@@ -41,12 +41,12 @@ The following frameworks are required. They will be installed automatically by t
 
 * Microsoft .NET desktop runtime (x64) and all applicable Windows security patches
 
-    | Studio Pro 10.0.0 - 10.10.0 | Studio Pro 10.11.0 and above |
-    | --- | --- |
-    | .NET 6 Desktop Runtime | .NET 8 Desktop Runtime |
+    | Studio Pro 10.0.0 - 10.10.0 | Studio Pro 10.11.0 - 10.24.15 | Studio Pro 10.24.16 and above |
+    | --- | --- | --- |
+    | .NET 6 Desktop Runtime | .NET 8 Desktop Runtime | .NET 10 Desktop Runtime |
     
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
-* A Java Developer Kit (JDK) version 11, 17, or 21 - if not yet installed on your machine, Mendix will install 'Eclipse Temurin JDK 21 (x64 or ARM64)'
+* A Java Developer Kit (JDK) - if not yet installed on your machine, Mendix will install Eclipse Temurin (x64 or ARM64) - see [Java](#java) for the exact version required.
 * Gradle version 8.5 or above - if Gradle is not yet installed on your machine, Mendix will install Gradle version 8.5
 * Git for Windows (x64) version 2.41.0 or above (for more information, see the [Prerequisites](/refguide10/install/#prerequisites) section in *Installing Mendix Studio Pro*)
 * Mendix Native Mobile Builder
@@ -56,9 +56,9 @@ When you are running Studio Pro on a Parallels virtual machine on an ARM64 devic
 
 * .NET Desktop Runtime (arm64)
 
-    | Studio Pro 10.0.0 - 10.10.0 | Studio Pro 10.11.0 and above |
-    | --- | --- |
-    | .NET 6 Desktop Runtime | .NET 8 Desktop Runtime |
+    | Studio Pro 10.0.0 - 10.10.0 | Studio Pro 10.11.0 - 10.24.15 | Studio Pro 10.24.16 and above |
+    | --- | --- | --- |
+    | .NET 6 Desktop Runtime | .NET 8 Desktop Runtime | .NET 10 Desktop Runtime |
 
 * Microsoft Edge WebView2 Evergreen Runtime (arm64)
 
@@ -140,7 +140,7 @@ You can find a list of known limitations below, however, we advise you to check 
 
 | Vendor      | Repository Size Limit                      | Push Limit      | Non-LFS File Size Limit | LFS File Size Limit |
 | ----------- | ------------------------------------------ | --------------- | ----------------------- | ------------------- |
-| GitHub      | Warnings on 5 GB, 100 GB theoretical limit | Information n/a | 100 MB¹ (warning 50 MB)  | 5 GB                |
+| GitHub      | Warnings on 5 GB, 100 GB theoretical limit | Information n/a | 100 MB¹ (warning 50 MB) | 5 GB                |
 | GitLab      | 5 GB (free) and 250 GB (enterprise)        | 5 GB            | None                    | 5 GB                |
 | Azure Repos | 250 GB                                     | 5 GB            | None                    | 50 GB               |
 | Bitbucket   | 4 GB                                       | 3.5 GB          | None                    | 10 + 100 GB         |

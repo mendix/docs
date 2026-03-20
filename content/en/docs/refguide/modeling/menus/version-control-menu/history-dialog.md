@@ -95,3 +95,4 @@ This tab shows a list of stories that are related to the changes.
 
 * [Version Control](/refguide/version-control/)
 * [Stories Pane](/refguide/stories-pane/)
+* [Using Version Control History](/refguide/version-control-using-history/)

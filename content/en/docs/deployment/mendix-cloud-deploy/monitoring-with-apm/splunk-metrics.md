@@ -9,7 +9,7 @@ description: "How to configure Mendix Cloud to send your runtime application log
 
 ## Introduction
 
-[Splunk Cloud Platform](https://www.splunk.com/en_us/products/splunk-cloud-platform.html) is a monitoring and analysis tool for cloud applications. This document explains how to configure your Mendix Cloud application to send runtime application logs and metrics to Splunk Cloud Platform to provide additional search, analysis, and visualization of your runtime application logs and metrics.
+[Splunk Cloud Platform](https://www.splunk.com/en_us/products/splunk-cloud-platform.html) is a monitoring and analysis tool for cloud applications. This document explains how to configure your Mendix Cloud application to send runtime application logs, access logs and metrics to Splunk Cloud Platform to provide additional search, analysis, and visualization of your runtime application logs and metrics.
 
 Mendix provides integration with Splunk Cloud Platform; it does not currently integrate with other Splunk monitoring products.
 
@@ -43,8 +43,9 @@ To send your runtime information to Splunk Cloud Platform, you need to set it up
     | `SPLUNK_TOKEN`                 | An access token to the Splunk Cloud Platform. To create a new token on the Splunk Cloud dashboard, open the Splunk Cloud dashboard in a browser, go to **Settings** > **Data Input** > **HTTP Event Collector**, and click **New Token** (on the upper-right corner of the page).                                                      |         |
     | `LOGS_REDACTION`               | Email addresses are automatically redacted before log entries are sent to Splunk Cloud Platform. To disable this redaction, set `LOGS_REDACTION` to `false`. The environment variable `SPLUNK_LOGS_REDACTION` is now deprecated in Cloud Foundry and is not supported for apps with Kubernetes deployment. Its use is not recommended. | `true`  |
     | `FLUENTBIT_LOGS_BUFFER_SIZE`   | Sets the maximum amount of data (in KB) that the TCP input plugin reads from the socket per read operation. Increasing this value can help to get rid of data flow delay, and errors related to queue buffer overflow.                                                                                                                 | `128`   |
-    | `FLUENTBIT_LOGS_MEM_BUF_LIMIT` | Defines the maximum total memory an input plugin can use for buffering log records before they are processed or flushed to storage/output. Limits memory which can be consumed by the Fluentbit agent                                                                                                                                  | `50MB`  |
-    | `SPLUNK_ENABLE_METRICS`        | Sends application metrics to Splunk when it's set to `true`. Disabled by default.                                                                                                                                                                                                                                                       | `false` |
+    | `FLUENTBIT_LOGS_MEM_BUF_LIMIT` | Defines the maximum total memory an input plugin can use for buffering log records before they are processed or flushed to storage/output. Limits memory which can be consumed by the Fluentbit agent.                                                                                                                                  | `50MB`  |
+    | `SPLUNK_ENABLE_METRICS`        | Sends application metrics to Splunk when it's set to `true`. Disabled by default.                                                                                                                                                                                                                                                      | `false` |
+    | `APM_ENABLE_ACCESS_LOGS`       | Sends access logs to Splunk when it's set to `true`. Disabled by default.                                                                                                                                                                                                                                                               | `false` |
 
 5. Return to the **Environments** page for your app and **Deploy** or **Transport** your app into the selected environment.
 
@@ -61,6 +62,7 @@ In addition to the runtime application logs, the following JSON-formatted metada
 * `application_name` – default application name, retrieved from domain name
 * `model_version` – model version of the Mendix runtime
 * `runtime_version` – version of the Mendix runtime
+* `log_type` – type of the log, which can be `mx.applicationlogs` or `mx.accesslogs`
 
 You can filter the data by these fields.
 

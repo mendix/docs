@@ -148,15 +148,15 @@ In Mendix 11.0 you won’t run into any ambiguity around this anymore.
 #### Example 3
 
 ```
-$User/Name + "@mendix.com"
+$User/Name + "@siemens.com"
 ```
 
-In this example, Mendix will handle string concatenation correctly no matter if `$User/Name` is `empty` or `''`. The resulting string will be `@mendix.com`.
+In this example, Mendix will handle string concatenation correctly no matter if `$User/Name` is `empty` or `''`. The resulting string will be `@siemens.com`.
 
 In this particular example, if you want to prevent the generation of email addresses without the first part you should add a validation check before doing concatenation: 
 
 ```
-if trim($User/Name) = '' then '' else $User/Name + "@mendix.com"
+if trim($User/Name) = '' then '' else $User/Name + "@siemens.com"
 ```
 
 ### React 19 {#react-19}

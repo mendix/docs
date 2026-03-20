@@ -65,14 +65,10 @@ The Echo connector is a module in the [GenAI Showcase App](https://marketplace.m
 
 ### Chat Completions: With History
 
-This section allows you to focus on implementing chat completions, a fundamental capability supported by most LLMs. To make the process more practical, develop an example connector—the Echo Connector. This simple connector returns the similar text as output provided as input while remaining fully compatible with the chat capabilities of GenAICommons and ConversationalUI.
+This section allows you to focus on implementing chat completions, a fundamental capability supported by most LLMs. To make the process more practical, Mendix has developed an example connector—the Echo Connector. This simple connector returns the similar text as output provided as input while remaining fully compatible with the chat capabilities of GenAICommons and ConversationalUI.
 During development, you will get the key considerations to keep in mind when creating your own connector. You can either start from scratch and build your own connector or use the finished Echo Connector from the GenAI Showcase App and modify it to fit your use case.
 
-To enable chat completion, the key microflow to consider is `ChatCompletions_WithHistory`, located in the GenAICommons module. 
-
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-byo/ChatCompletions_WithHistory.png" >}}
-
-This microflow plays a crucial role as it derives and calls the appropriate microflow from the provided DeployedModel, ensuring that the module remains independent of individual connectors. This is especially important for modules like ConversationalUI, which should work seamlessly with any connector following the same principles.
+To enable chat completion, the key microflow to consider is `ChatCompletions_WithHistory`, located in the GenAICommons module. This microflow plays a crucial role as it derives and calls the appropriate microflow from the provided DeployedModel, ensuring that the module remains independent of individual connectors. This is especially important for modules like ConversationalUI, which should work seamlessly with any connector following the same principles.
 
 To integrate properly, the microflow must supply two essential input objects:
 
@@ -91,7 +87,7 @@ Just as the `Request` entity structures input for the LLM, the Response entity d
 
 The `Response` entity includes key attributes such as:
 
-* Messages - A single message that the model generated. 
+* Message - A single message that the model generated. 
 * Tool Call - A request from the model to call one or multiple tools, for example, a microflow. Available tools are defined in the request via the [ToolCollection](/appstore/modules/genai/genai-for-mx/commons/#toolcollection).
 
 Since different providers return responses in different formats, when implementing a new connector, map the provider’s response to match the `Response` entity’s structure. If it is required to have additional attributes on the `Request` or `Response` entity, it is recommended to extend those entities in your own connector by either creating an association or a specialization. For example, you can find both patterns being applied in the OpenAIConnector (association to `Request`) and AmazonBedrockConnector (specialization of `Response`).
@@ -102,7 +98,7 @@ Since different providers return responses in different formats, when implementi
 
 The `Request` and `Response` objects are essential for enabling chat functionalities in ConversationalUI. However, to correctly call and interact with an LLM, the model must be properly configured. This is where the `DeployedModel` entity becomes essential.
 
-The `DeployedModel` represents a GenAI model that the Mendix application can invoke, ensuring connector knows which microflow to call and how to communicate with the model. It also includes a set of generic attributes commonly used across different LLM providers. However, since each provider may require additional model-specific details, the `DeployedModel` entity does not cover all necessary attributes.
+The `DeployedModel` represents a GenAI model that the Mendix app can invoke, ensuring your app module knows which microflow to call and how to communicate with the model. It also includes a set of generic attributes commonly used across different LLM providers. However, since each provider may require additional model-specific details, the `DeployedModel` entity does not cover all necessary attributes.
 
 To accommodate this, you will need to create a new entity within your connector that inherits from `GenAICommons.DeployedModel`. This allows you to extend it with any provider-specific attributes required for your integration.
 

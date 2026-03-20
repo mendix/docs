@@ -179,7 +179,7 @@ OpenAI does not directly connect to the Azure AI Search resource. The model retu
 
 This functionality is part of the implementation executed by the GenAI Commons Chat Completions operations mentioned earlier. As a developer, you need to make the system aware of your indexes and their purpose by registering them with the request. This is done using the GenAI Commons operation [Tools: Add Knowledge Base](/appstore/modules/genai/genai-for-mx/commons/#add-knowledge-base-to-request), which must be called once per index before passing the request to the Chat Completions operation.
 
-Note that the retrieval process is independent of the model provider and can be used with any model that supports function calling, as it relies on the generalized `GenAICommons.DeyploedKnowledgeBase`entity.
+Note that the retrieval process is independent of the model provider and can be used with any model that supports function calling, as it relies on the generalized `GenAICommons.ConsumedKnowledgeBase`entity. For Azure indexes specifically, as part of this module, when collection identifiers needs to be passed to operations, the `Name` of the `Index` should be used. 
 
 #### Vision {#chatcompletions-vision}
 

@@ -1,8 +1,8 @@
 ---
 title: "Dynamic Case Management"
 url: /appstore/partner-solutions/dcm/
-linktitle: "DCM"
 description: "Introduces Mendix Dynamic Case Management for complex processes."
+weight: 30
 beta: true
 ---
 {{% alert color="warning" %}} This feature is in Private Beta. For more information, refer to [Release Status](/releasenotes/release-status/). {{% /alert %}}

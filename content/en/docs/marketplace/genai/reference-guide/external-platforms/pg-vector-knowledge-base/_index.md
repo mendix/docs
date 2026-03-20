@@ -77,7 +77,7 @@ Additionally, there is one activity to prepare the connection input, which is a 
 
 #### `DeployedKnowledgeBase: Create` {#create-pgvectordeployedknowledgebase}
 
-All operations that include knowledge base interaction need the connection details to the knowledge base. Adhering to the GenAI Commons standard, this information is conveyed in a specialization of the GenAI Commons [DeployedKnowledgeBase](/appstore/modules/genai/genai-for-mx/commons/#deployed-knowledge-base) entity (see the [Technical Reference](#technical-reference) section). After instantiating the `PgVectorKnowledgeBase` based on custom logic and/or front-end logic, this object can be used for the actual knowledge base operations.
+All operations that include knowledge base interaction need the connection details to the knowledge base. Adhering to the GenAI Commons standard, this information is conveyed in a specialization of the GenAI Commons [DeployedKnowledgeBase](/appstore/modules/genai/genai-for-mx/commons/#deployed-knowledge-base) entity and the [ConsumedKnowledgeBase](/appstore/modules/genai/genai-for-mx/commons/#consumed-knowledge-base) (see the [Technical Reference](#technical-reference) section). After instantiating the `PgVectorKnowledgeBase` based on custom logic and/or front-end logic, this object can be used for the actual knowledge base operations. For operations where collection identifiers are needed in combination with a `ConsumedKnowledgeBase` object, the `Name` of the KnowledgeBase (see the `PgVectorKnowledgeBase` entity) needs to be passed as string.
 
 ### (Re)populate Operations {#repopulate-operations-configuration}
 

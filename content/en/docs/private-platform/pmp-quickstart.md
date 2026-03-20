@@ -274,7 +274,7 @@ Private Cloud License Manager is a required component of Private Mendix Platform
 
 4. Click **Install PCLM**.
 
-#### Uninstalling PCLM
+### Uninstalling PCLM
 
 If you want to uninstall Svix, run the following commands:
 
@@ -447,9 +447,7 @@ To install the Private Cloud components, perform the following steps:
     * **Enable TLS** - Enable this option if your TLS Certifcate is bound to Ingress 
     * **TLS secret** - The TLS secret name   
 
-{{% alert color="info" %}}
-To allow other clusters to connect to Private Mendix Platform, you must expose the Interactor Bridge Service. Currently, the installer only supports using the generic Ingress template to expose the service. If you want to expose the Interactor Bridge with other method (for example, Openshift Route), contact the Private Mendix Platform team.
-{{% /alert %}}
+        {{% alert color="info" %}} To allow other clusters to connect to Private Mendix Platform, you must expose the Interactor Bridge Service. Currently, the installer only supports using the generic Ingress template to expose the service. If you want to expose the Interactor Bridge with other method (for example, Openshift Route), contact the Private Mendix Platform team.{{% /alert %}}
 
 10. Click **Review and Apply > Apply Configuration**.
 

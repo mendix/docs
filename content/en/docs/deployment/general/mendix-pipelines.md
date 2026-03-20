@@ -49,11 +49,9 @@ The search and filter options allow you to review specific run types. You can do
 * Filter by trigger: All triggers, recurring schedule, Teamserver push (Git), or manual
 * Filter by status: All statuses, pending, succeeded, in progress, or failed
 
-### Run Results
+### Run Details{#run-results}
 
 To see the results of a particular run, click **Details** ({{% icon name="paper-clipboard" %}}).
-
-This page provides an overview of the run details. Clicking an entry expands the executed step, revealing more information about the run; this is particularly useful for debugging failed Mendix Pipeline runs. When a step is expanded, a **View Parameters** button becomes visible, use this to view the input and output parameters and their values.
 
 At the top of the page, there are several cards that display important information, such as whether the run succeeded or failed. If it failed, it includes information about the error that caused the run failure. There are two types of errors: step-level errors and system-level errors.
 
@@ -70,6 +68,18 @@ If a step fails, that step is flagged with an error icon ({{% icon name="alert-t
 System-level errors occur if [user settings](#configure-settings) have not been configured or if an internal Mendix component is down.
 
 If a system-level error occurs, the card in the upper-left corner of the **Details** page identifies the error that caused the run to fail. Click **See details** on the card to view more information about the error.
+
+The run details page also provides an overview of the run. Clicking an entry expands the executed step, revealing more information about the run; this is particularly useful for debugging failed Mendix Pipeline runs. When a step is expanded, a **View Parameters** button becomes visible, use this to view the input and output parameters and their values.
+
+#### AI Log Summary
+
+In addition to **View parameters** button, every executed step, whether successful or failed, includes a **Summarize** button, which when clicked, generates an AI-powered summary of the step run. For failed steps, the summary explains the error and suggests next steps to help resolve the issue.
+
+The summary pane, also includes the following actions:
+
+* **Retry** to regenerate a new AI log summary
+* **Like** or **Dislike** to provide feedback on the AI-generated response
+* **Copy** the AI summary to clipboard
  
 ## The Designs Tab{#designs-tab}
 

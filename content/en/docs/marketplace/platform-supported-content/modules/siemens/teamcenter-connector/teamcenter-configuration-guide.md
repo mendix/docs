@@ -2,7 +2,7 @@
 title: "Configuring the Connection to Teamcenter with Teamcenter Connector 2512.0.0 and Above"
 linktitle: "Connecting with Teamcenter Connector 2512.0.0 and Above"
 url: /appstore/modules/siemens-plm/configuring-connection-2512/
-weight: 1
+weight: 2
 description: "Describes the steps to configure the connection to your Teamcenter instance using Teamcenter Connector 2512.0.0 and above."
 ---
 

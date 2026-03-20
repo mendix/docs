@@ -2,7 +2,7 @@
 title: "Using Teamcenter Services Not Included with the Teamcenter Connector"
 linktitle: "Using Teamcenter Services Not Included"
 url: /appstore/modules/siemens-plm/services-not-included/
-weight: 6
+weight: 8
 description: "Describes how to use Teamcenter services that are not included in the connector."
 ---
 

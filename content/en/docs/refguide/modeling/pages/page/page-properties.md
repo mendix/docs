@@ -97,6 +97,10 @@ In simple e-commerce applications, the URLs can be configured as follows:
 
 * *category/{Category/Code}/product/{Product/Name}* - the URL for a page that shows a product and a category (in a browser, the URL will look like `http://example.mendixcloud.com/p/category/tools/product/hammer` where `tools` is used to retrieve the `Category` by its `Code`, and `hammer` is used to retrieve the `Product` by its `Name`)
 
+{{% alert color="warning" %}}
+Mendix does not recommend configuring page URLs for pages that are displayed as a pop-up. Navigating to such a URL will result in layout issues.
+{{%/alert %}}
+
 ### Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}

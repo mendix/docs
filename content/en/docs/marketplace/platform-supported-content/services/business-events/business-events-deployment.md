@@ -7,7 +7,7 @@ description: "Describes modeling and deployment of the Mendix Business Events se
 
 ## Introduction
 
-Once you have created a service in [Studio Pro 9.24 and above](/appstore/services/business-events-configuration/#two-way-be), you can start modeling with them in your app and deploy your Business Event.
+Once you have created a service in [Studio Pro 9.24 and above](/appstore/services/business-events-configuration/#two-way-be), you can start modeling with it in your app and deploy your Business Event.
 
 ## Modeling with Business Events (All Supported Studio Pro Versions) {#be-modelling}
 
@@ -78,7 +78,7 @@ Events are placed in channels (also known as topics). Apps subscribed to a chann
 
 Events published by Free Apps are published to one shared company channel on a multitenant free Event Broker. Events published by apps running on licensed nodes are published to their own channels on the company Event Broker. These channels, implemented as topics on Kafka, are automatically created upon deployment of the app publishing the events.
 
-For information on setting topics and channels for your own Kafka clusters ("Bring Your Own Kafka"), see [Configuring Deployment Constants for Own Kafka Cluster](#deployment-constants).
+For information on setting topics and channels for your own Kafka clusters ("Bring Your Own Kafka"), see [Configuring Deployment Constants for Your Own Kafka Cluster](#deployment-constants).
 
 ### Error Handling
 
@@ -136,27 +136,48 @@ When this occurs, do the following:
 1. Ensure **app A** has started in the same space as **app B**.
 2. Restart **app B**.
 
-### Apps Running Own Kafka Cluster (Bring Your Own Kafka) {#byok}
+### Apps Running in Your Own Kafka Cluster (Bring Your Own Kafka) {#byok}
 
-Business events are powered by Apache Kafka (see [Mendix Event Broker](#mendix-event-broker)). If you want to use your own Kafka cluster instead of the [Mendix Event Broker](#mendix-event-broker), see [Configuring Deployment Constants for Own Kafka Cluster](#deployment-constants). Running your own cluster is referred to as Bring Your Own Kafka (BYOK).
+Business events are powered by Apache Kafka (see [Mendix Event Broker](#mendix-event-broker)). If you want to use your own Kafka cluster instead of the [Mendix Event Broker](#mendix-event-broker), see [Configuring Deployment Constants for Your Own Kafka Cluster](#deployment-constants). Running your own cluster is referred to as Bring Your Own Kafka (BYOK).
 
-#### Configuring Deployment Constants for Own Kafka Cluster {#deployment-constants}
+#### Configuring Deployment Constants for Your Own Kafka Cluster {#deployment-constants}
 
 Business Events service exposes configuration via [constants](/refguide/constants/). These are set up during deployment to connect to your Kafka cluster.
 
 All the constants are part of the Mendix Business Events service.
 
 * `BusinessEvents.ServerUrl` – Configure your Kafka bootstrap servers here as `host1:port1,host2:port2,...`. The setting is used to connect the app.
-* `BusinessEvents.Username` and `BusinessEvents.Password` – The service supports Kafka’s SASL/SCRAM SHA-512 authentication mechanism, and the Kafka cluster should be set up to authenticate clients with this. See [Configuring Kafka Brokers](https://kafka.apache.org/documentation/#security_sasl_scram_brokerconfig) in the Apache Kafka documentation for further instructions.
+* `BusinessEvents.Username` and `BusinessEvents.Password` – The service supports various Kafka authentication mechanisms, Below version 3.12.0, only the SASL/SCRAM SHA-512 authentication mechanism is supported. 
 * `BusinessEvents.EventBrokerSpace` – This setting helps you group events into Kafka [topics](#topics-channels). With this setting, each business event will be put in its own topic. Set the `EventBrokerSpace` value to your environment names (or Kubernetes namespaces) like `test` or `production`. Doing so ensures that when each business event that is defined in an app is deployed to a specific environment, it will have its own topic. For example, an `OrdersReceived` business event defined in an app when deployed to two different environments will have two topics. A topic is named in the form of `businessevents.<channel>.<EventBrokerSpace>`. A channel is written as a UUID and is used to group events.
+
+    For further explanation on topics and channels, see [Topics and Channels](#topics-channels), above.
+
 * `TruststoreLocation` and `TruststorePassword` (optional) – The service supports adding a Truststore and password in order to allow for SSL verification of the server.
 * `ConsumerStartupDelaySeconds` (optional) – Business Event consumers are started automatically as part of the after startup microflow. Delaying their startup is possible by setting this constant. The startup happens in a separate thread, which means the after startup microflow can finish even though the Business Event consumers are still waiting to be started. Only values above 1 will have any effect.
 
 {{% alert color="warning" %}} Special characters are not allowed in the `BusinessEvents.EventBrokerSpace` constant. {{% /alert %}}
 
-For further explanation on topics and channels, see [Topics and Channels](#topics-channels) and [Mendix Event Broker](#mendix-event-broker).
+##### Additional Authentication Mechanisms
 
-#### DevOps Tasks Not Covered When Running Own Kafka Cluster
+In versions 3.12.0 and above of the module, you can configure different authentication mechanism using additional constants.
+
+A typical Kafka client authentication details may look like the following:
+
+```
+security.protocol=SASL_SSL
+sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username='my-user' password='my-password';
+sasl.mechanism=PLAIN
+```
+
+You would use the following constants to configure this in the module:
+
+* `AuthnOverrideSecurityProtocol` with value `SASL_SSL`
+* `AuthnOverrideSaslJaasConfigClassName` with value `org.apache.kafka.common.security.plain.PlainLoginModule`
+* `AuthnOverrideSaslMechanism` with value `PLAIN`
+* `Username` with value `my-user`
+* `Password` with value `my-password`
+
+#### DevOps Tasks Not Covered When Running Your Own Kafka Cluster
 
 As operating your own Kafka cluster falls outside of the scope of the Mendix Cloud environment, the following `DevOps` tasks should be taken into consideration (this list is not extensive):
 
@@ -164,11 +185,20 @@ As operating your own Kafka cluster falls outside of the scope of the Mendix Clo
 * Topic creation on Kafka – Unless the Kafka cluster is configured with `auto.create.topics.enable` set to true (default setting in Apache Kafka), topics will need to be created by the customer. See [Topics and Channels](#topics-channels) for more details.
 * Access Control – Unless the Kafka cluster is configured with `allow.everyone.if.no.acl.found` is set to true (default setting in Apache Kafka), the ACLs need to be maintained by the customer.
 
-#### Managing Topics on Own Kafka Cluster
+#### Managing Topics and Consumer Groups on Your Own Kafka Cluster
 
 The channel UUID can be retrieved by inspecting the exported AsyncAPI document under the channels section of the document.
 
 A topic is named in the form of `businessevents.<channel>.<EventBrokerSpace>`. A channel is written as a UUID and is used to group events.
+
+In version 3.12.0 and above of the module, additional constants are exposed to make further configuration of topics and consumers easier:
+
+* `ByokTopicPrefix` - This constant can be added when `EventBrokerSpace` prefix is configured. It makes sure that all topics are prefixed by the value of the this constant followed by a dot and rest of the topic name.
+
+    For example, if the value of `ByokTopicPrefix` is `myawesomeproject` and `EventBrokerSpace` has the value as `acceptance` then you can expect topic name(s) to be of the form `myawesomeproject.businessevents.<channel>.acceptance`
+
+* `CustomConsumerGroupIdPrefix` - If your app is consuming business events and you require your consumer groups to have a certain fixed prefix value then this constant can be configured for it
+* `OverrideHeartbeatTopic` - When the business events module is producing events, to check its connection to Kafka, it produces ping messages to a topic which is called as heartbeat topic. This defaults to topic `_mx_heartbeat_producer_connection`. You can configure this constant to override the default heartbeat topic.  
 
 ## Local Testing {#local-testing}
 

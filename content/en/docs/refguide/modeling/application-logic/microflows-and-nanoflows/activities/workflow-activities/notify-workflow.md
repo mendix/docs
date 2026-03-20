@@ -11,13 +11,29 @@ This activity can only be used in microflows.
 
 ## Introduction {#introduction}
 
-The **Notify workflow** activity can be used to notify a [workflow](/refguide/workflows/) that is suspended on the [Wait for notification](/refguide/wait-for-notification/) workflow activity.
+The **Notify workflow** activity is used to resume or trigger logic within a [workflow](/refguide/workflows/). It specifically targets two types of elements:
 
-If the workflow is suspended on the specified wait for notification activity, then this activity will return `true` and the workflow execution will continue further. Otherwise, it will simply return `false`.
+* A [Wait for notification](/refguide/wait-for-notification/) workflow activity currently suspended in a flow.
+* A [Notification event sub-process](/refguide/workflow-event-sub-processes/) defined within the workflow.
+
+When the **Notify workflow** activity is executed, the Workflow Engine checks for an active receiver. If a valid **Wait for notification** activity or a **Notification event sub-process** is found and successfully triggered, the activity returns `true`. If no active receiver is found, it returns `false`.
 
 {{% alert color="warning" %}}
-When you try to notify a workflow which is already `Completed` or `Aborted`, it will result in a Runtime error. For information on how to handle the error, see [Error Handling in Microflows](/refguide/error-handling-in-microflows/).
+Attempting to notify a workflow that is already `Completed` or `Aborted` results in a runtime error. For information on how to handle these cases, see [Error Handling in Microflows](/refguide/error-handling-in-microflows/).
 {{% /alert %}}
+
+### Execution Behavior
+
+The table below describes how the Workflow Engine responds when a **Notify workflow** activity is called, depending on the state of the workflow and the type of receiver configured.
+
+| Workflow/Element State | Action Result | System Behavior |
+| --- | --- | --- |
+| Aborted or Completed | Error | The activity fails. An error is logged indicating the workflow is no longer in an active state and cannot be notified. |
+| Paused, Failed, or Incompatible | True | The notification is accepted and "queued." The targeted activity or event sub-process is triggered automatically once the workflow is resumed or resolved. |
+| Wait for notification (Active) | True | The workflow resumes execution from the point of the **Wait for notification** activity. |
+| Event sub-process (Inactive) | True | The event sub-process is triggered immediately and its execution path begins. |
+| Event sub-process (In Progress) | False | The notification is ignored because an instance of this specific sub-process is already running. No new instance is created. |
+| No matching receiver | False | If the workflow is active but does not contain the specified **Wait for notification** activity or **Event sub-process**, the activity returns `false`. |
 
 ## Properties
 

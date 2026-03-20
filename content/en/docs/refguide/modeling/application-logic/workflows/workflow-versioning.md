@@ -54,25 +54,26 @@ The Workflow Versioning Conflict Detection system detects different types of con
 
 Conflicts with the possible mitigations listed above can be summarized in the following matrix (you can see details for each conflict in the sections below):
 
-| **Conflict Type/Mitigation**                        | **Abort**                                                    | **Restart**                                                  | **Mark-as-Resolved**                                         | **Jump To Different Activities**                             |
-| --------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| *Non-resolvable:*                                   |                                                              |                                                              |                                                              |                                                              |
-| Context Entity Replaced                             | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A                                                          | N/A                                                          | N/A                                                          |
-| Context Object Not Found                            | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A                                                          | N/A                                                          | N/A                                                          |
-| Workflow Definition Deleted                         | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A                                                          | N/A                                                          | N/A                                                          |
-| *Partially resolvable*:                             |                                                              |                                                              |                                                              |                                                              |
-| Current Activity Removed                            | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A                                                          | {{< icon name="checkmark-circle-filled" color="green" >}} |
-| Current Parallel Split Removed                    | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A                                                          | N/A                                                          |
-| Current Activity Moved out of Path                | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A                                                          | N/A                                                          |
-| Parallel Split Introduced in Executed Path          | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A                                                          | N/A                                                          |
-| *Resolvable*:                                       |                                                              |                                                              |                                                              |                                                              |
-| Parallel Path Introduced                          | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A                                                          |
-| Selected Outcome Replaced                           | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
-| Multi-User Task Outcome Changed                           | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| Conflict Type/Mitigation | Abort | Restart | Mark-as-Resolved | Jump To Different Activities |
+| --- | --- | --- | --- | --- |
+| *Non-resolvable:* |  |  |  |  |
+| Context Entity Replaced | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A | N/A | N/A |
+| Context Object Not Found | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A | N/A | N/A |
+| Workflow Definition Deleted | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A | N/A | N/A |
+| *Partially resolvable*: |  |  |  |  |
+| Current Activity Removed | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| Current Parallel Split Removed | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A | N/A |
+| Current Activity Moved out of Path | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A | N/A |
+| Parallel Split Introduced in Executed Path | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A | N/A |
+| *Resolvable*: |  |  |  |  |
+| Parallel Path Introduced | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A |
+| Selected Outcome Replaced | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| Multi-User Task Outcome Changed | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
 | Activities Introduced in Executed Path              | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
 | Executed Activities Moved to Re-executable Position | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
-| Parallel Split Path Removed                       | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
-| Non-Interrupting Boundary Event Path Removed                       | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| Parallel Split Path Removed                         | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| Non-Interrupting Boundary Event Path Removed        | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| Current Event Sub-Process Removed | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
 
 #### Context Entity Replaced
 
@@ -151,7 +152,10 @@ You can do one of the following:
 
 #### Current Activity Moved out of Path
 
-When an app developer moves activities out of a **Parallel Split** path or a non-interrupting boundary event path, currently running workflow instances that are executing the moved activity cannot complete the **Parallel Split** or the non-interrupting boundary event. Similarly, if an activity is moved from the parent path into a boundary event path, the currently running workflow instances may not be able to complete properly.
+A conflict occurs when an activity is moved outside of its original execution scope. This applies to activities moved between the main path, parallel split paths, boundary event paths, or sub-processes.
+If a currently running workflow instance is executing an activity that is moved out of its scope, it may lose its connection to necessary synchronization points. For example, the instance may not be able to merge a Parallel Split, complete a non-interrupting boundary event, or finish a sub-process execution.
+
+Conversely, moving an activity from a parent path into a nested scope, such as a boundary event path or a sub-process, can also prevent the workflow from progressing. In these scenarios, the Workflow Engine cannot guarantee the integrity of the execution flow. This can result in the workflow instance remaining stuck in the **In Progress** state indefinitely, preventing it from ever reaching a completed state.
 
 You can do one of the following:
 
@@ -245,3 +249,14 @@ You can do one of the following:
 * The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
 * The Administrator can use **Mark-as-Resolved** to fix this issue (the currently running activity within the removed boundary event path will be aborted).
 * The app developer can revert the change (which adds the boundary event path back) and deploy it.
+
+#### Current Event Sub-Process Removed
+
+When an app developer removes an ongoing event sub-process and then deploys this change, the currently running workflow instances that are executing activities within that sub-process cannot be continued.
+
+You can do one of the following:
+
+* The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
+* The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
+* The Administrator can use **Mark-as-Resolved** to fix this issue (the currently running activity within the removed sub-process will be aborted).
+* The app developer can revert the change (which adds the event sub-process back) and deploy it.

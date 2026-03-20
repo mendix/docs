@@ -64,16 +64,22 @@ Some fields only apply to specific component types, so follow the on-screen prom
     If you are uploading a solution, the **Upload Component Source** section is not displayed.    
     If you are uploading an industry template, selecting a component source in the **Upload Component Source** section is optional.    
 
-5. Select the **Studio Pro Version** on which you built the content.    
+5. Select the purpose of this release:
 
-6. If you are uploading a widget, select the **Compatible with Mendix React Client** checkbox to indicate compatibility.    
+    * **Regular Release** – If you select this option, continue with the next steps.
+    * **Security Fix Release** – Select this option if your upload includes security fixes, then continue with the steps in the [Releasing Security Fixes](#security-fixes) section.     
+        Note that this option is only displayed when uploading a new component version.
+
+6. Select the **Studio Pro Version** on which you built the content.    
+
+7. If you are uploading a widget, select the **Compatible with Mendix React Client** checkbox to indicate compatibility.    
    This checkbox is mandatory starting with Studio Pro 11.
    
-7. Add a version for your component.  
+8. Add a version for your component.  
 
-8. Enter **Release Notes** for the component in the box provided, describing what is new in that release. This field supports rich text.
+9. Enter **Release Notes** for the component in the box provided, describing what is new in that release. This field supports rich text.
 
-9. If you are uploading a solution or an industry template, the **Business Connect** section is displayed. Enter one or more email addresses in the **Contact Email(s)** field, then click **Add Email**. These email addresses will be used by prospects to reach out to you.     
+10. If you are uploading a solution or an industry template, the **Business Connect** section is displayed. Enter one or more email addresses in the **Contact Email(s)** field, then click **Add Email**. These email addresses will be used by prospects to reach out to you.     
    This field is only available for public components.    
    {{% alert color="warning" %}}Please note that potential customers can contact you directly. If you start talking to the customer, it is your responsibility to provide access to the product for them. Mendix is not involved in such customer interactions. {{% /alert %}}
 
@@ -219,9 +225,9 @@ To update content that has already been published, follow these steps:
 
 2. Click the menu item next to the component you want to update and select the appropriate option, depending on your access rights: 
 
-   * **Edit**
-   * **Unpublish Component**
-   * **Add New Version**
+    * **Add New Release**
+    * **Manage Versions** – This option gives you access to the **Edit** and **Unpublish** actions for each version of the component.
+    * **Unpublish Component**
 
     {{% alert color="info" %}}Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be started. If there is a draft version in progress, click **Edit Draft** on the page where you manage the component in order to see the draft.{{% /alert %}}
 
@@ -242,3 +248,25 @@ These fields cannot be edited while updating a component:
 * **Studio Pro Version**
 * **Release Version**
 * **License Type**
+
+## Releasing Security Fixes {#security-fixes}
+
+You can highlight releases that include security fixes. This allows component users to see which older versions are not safe, as well as which version they need to update to in order to solve security issues.
+
+This option is only available in the following scenarios:
+
+* While adding a new component version 
+* For components that allow uploading a component source file
+
+Follow these steps to release a version that includes security fixes:
+
+1. Follow steps 1 through 5 of the [Uploading a Component](#general) workflow.
+2. At step 5, in the **Version & Release** section, under **Release Purpose**, select **Security Fix Release**.    
+    Two new fields are displayed: **CVE/CWE Identifier(s)** and **Impacted Versions**.
+3. In the **CVE/CWE Identifier(s)**, add the CVE or CWE identifiers of the security vulnerabilities which are fixed through this version. You can add multiple identifiers separated by commas.     
+    You can add these identifiers as plain text, and Mendix will link them back to the corresponding CVE or CWE on the [National Vulnerability Database](https://nvd.nist.gov/vuln/detail/CVE-2026-24515) or the [Common Weakness Enumeration](https://cwe.mitre.org/data/definitions/476.html) website.
+4. From the **Impacted Versions** list, select all component versions that include the security vulnerabilities which are fixed through this version.
+5. In the **Release Notes** field, add details about the fix.
+6. Click **Preview**, **Save and Exit**, or **Next**, depending on what you want your next step to be. 
+
+The component's Marketplace entry will display the security fixes, as well as a suggested update version.

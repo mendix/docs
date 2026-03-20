@@ -13,140 +13,50 @@ description_list: true
 
 Version Control allows you to manage your app development in two ways:
 
-* Firstly, it allows you to store ([commit](#commit)) the current revision of your model and all its resources. You give it an identifier so that you can get that revision again and share it with other team members.
-* Secondly, it allows work to take place on multiple [development lines](#development-line) so that several different features can be worked on at once. These development lines can then be [merged](#merge) back together so that your [main line](#main-line) contains all the completed features that have been worked on separately.
+* Firstly, it allows you to store ([commit](/refguide/version-control/glossary/#commit)) the current revision of your model and all its resources. You give it an identifier so that you can get that revision again and share it with other team members.
+* Secondly, it allows work to take place on multiple [development lines](/refguide/version-control/glossary/#development-line) so that several different features can be worked on at once. These development lines can then be [merged](/refguide/version-control/glossary/#merge) back together so that your [main line](/refguide/version-control/glossary/#main-line) contains all the completed features that have been worked on separately.
 
 Version control in Mendix is built on top [Git](https://git-scm.com). The concepts will be familiar to seasoned users of these version control systems (VCS). Mendix simplifies the VCS commands by building them into Studio Pro and the Mendix Portal.
 
-## Concepts {#concepts}
+## Mendix Team Server
 
-### Team Server {#team-server}
+[Mendix Team Server](/developerportal/repository/team-server/) is the Mendix-hosted environment that stores all Mendix apps. It facilitates versioning your apps by integrating them into a version control system. Mendix Studio Pro integrates with the Team Server allowing you to create and update apps, commit changes, and merge model versions with one click.
 
-[Team Server](/developerportal/repository/team-server/) is where all the committed versions of Mendix apps are stored. If you commit a revision of an app, it is stored on the Team Server.
+## Peer Review and Merging
 
-To commit to the Team Server you will need to have a role in the app which allows you to edit the app. For more information, see the [Team Roles](/developerportal/general/app-roles/#team-roles) section *App Roles*.
+Studio Pro supports peer review and merging through the version control functionalities available in Studio Pro. For more information on how to set this process up, see [Using Version Control in Studio Pro](/refguide/using-version-control-in-studio-pro/).
 
-For more information on the Team Server and technologies involved, see [Version Control FAQ](/refguide/version-control-faq/).
+Currently, Mendix does not support pull or merge requests through the Team Server for Mendix. When using third-party tools it is possible to review the following code extensions:
 
-### Repository {#repository}
+* code for Java and JavaScript actions
+* HTML/CSS for theming
 
-Within the [Team Server](#team-server) each app is stored in a repository. This repository contains all the [committed revisions](#commit) for the [Branches](#branches) of the app.
+## Frequently Asked Questions
 
-### Revision {#revision}
+### What Version Control System Is Team Server Built On? {#which-team-server}
 
-A revision is the version of your app at a moment in time, stored on the [Team Server](#team-server).
+Mendix Team Server is based on proven technology. Initially it was based only on top of Subversion (SVN), also called Team Server SVN. The Team Server only supports storing apps using Git technology, referred to as Team Server Git. 
 
-Each revision of your app is given a unique alphanumeric identifier which enables you to find it in future. A new revision is created from Studio Pro when the app is committed to the repository.
+### How Much Storage Space Is Provided with Team Server?
 
-### Working Copy {#working-copy}
+Storage space is unlimited for apps connected to a commercial license. 1 GB of free storage is provided for your company account for apps not (yet) connected to a commercial license.
 
-A working copy is the version of your app which is currently being worked on in Studio Pro. There is one working copy for each development line of the app. This model is held locally, on each computer where development work is taking place.
+### What Happens with My Valuable and Confidential Data?
 
-### Merge {#merge}
+Mendix adheres to strict security standards and considers you the sole owner of your data. Only Mendix Cloud Infrastructure Engineers can access data and will only do so for troubleshooting. Your data is backed up for one year, and the backups are retained for one year after app deletion. You can get a backup of your data at any time by using default Git tools, or, if your app was deleted, by filing a [Mendix Support](https://support.mendix.com/) ticket.
 
-Merging is the action of taking one [revision](#revision) of an app and applying the differences which have been made in a different revision. See the [Merging Branches](#merging-branches) section for more information.
+### Can I Use the Subversion Version of the Team Server?
 
-If any of the differences cannot be applied, then there is a [conflict](#conflict).
+No, in Mendix 11, we are supporting only Git-versioned apps. You need to migrate your SVN app to Git to use Mendix 11. For more information on how to migrate, see [Migrate to Git](/developerportal/general/migrate-to-git/) in *Apps*.
 
-### Conflict {#conflict}
+### Can I Use Third-Party Tools to Connect to the Team Server? {#third-party-tools}
 
-A conflict occurs when two versions of the app cannot be combined automatically. This happens when the same document has been changed in a Studio Pro working copy and a committed [revision](#revision) and these changes cannot be reconciled. These are some examples:
+Yes, as the Team Server is based on a full implementation of Git. You can directly use third-party tools like GitHub Desktop. For more information on how to set this up, see the [External Tools](/refguide/version-control-external-tools/#external-tools) section in *Using Version Control in Studio Pro*. 
 
-* The properties of a widget are changed in the revision and the working copy but to different settings
-* A document is moved or deleted in the revision but has been changed in a different way in the working copy
+### Is It Possible to Connect to a Third-Party or On-Premises Version Control Server?
 
-When a conflict occurs, a developer has to intervene to decide how it should be resolved before it can be committed to the Team Server as a new revision.
+Yes, it is possible to connect to a third-party Git version control repository, which is often called BYO-GIT (Bring Your Own Git).
 
-### Pull {#pull}
-
-Pulling is the action, invoked in Studio Pro, which gets the latest revision of the current [development line](#development-line) from the repository and merges the differences into the current working copy.
-
-### Commit/Push {#commit}
-
-Committing is the action, invoked in Studio Pro, of creating a set of changes and pushing all your changes to the [repository](#repository) and making a new [revision](#revision). It is possible to store the committed data in a local repository, but not yet push it to the central [repository](#repository).
-
-If there are no conflicts, the changes are then sent to the repository to make a new revision.
-
-### Development Line {#development-line}
-
-Development of an app is done in a development line where a set of related changes is made. There are two types of development lines: the [main line](#main-line) and [branch lines](#branch-line).
-
-#### Main Line {#main-line}
-
-The main line is the initial development line for the app and is usually kept as the version which will be deployed to the production environment. Simple apps, and apps which do not require a high degree of collaboration, may only have a main line.
-
-#### Branch Line {#branch-line}
-
-A branch line is a way of making an independent set of changes which can be tested away from the main line.
-
-See the [Branches](#branches) section below for more information on how branch lines can be used.
-
-### Tag {#tag}
-
-A Tag is a way of identifying a commit in addition to the [revision](#revision) number. It is specified by the developer and has four parts:
-
-* Major: used to identify significant new functionality, a new user interface, or other important change
-* Minor: used to identify new functionality which augments the main function of the app
-* Patch: used to identify a fix to an error in a previously-released app
-* Revision: this is added automatically and is the revision number of the commit
-
-### Repository Service
-
-The Repository Service manages communication between Studio Pro and other supporting services (for example, Team Server). The developer will not generally be aware that they are communicating via the Repository Service.
-
-### Mendix MPR Storage {#mpr-format}
-
-An app modeled in Mendix is stored in an *.mpr* file, a database that contains data on all documents, such as microflows, workflows, pages. Studio Pro or the [mx Command-Line Tool](/refguide/mx-command-line-tool/) is required to inspect changes in the *.mpr*.
-
-{{% alert color="warning" %}}
-Manually modifying files belonging to the *.mpr* storage format such as the *.mpr* file or the *mprcontents* directory (for example, when resolving file conflicts through third-party tooling), will lead to a corrupted state. To recover from a corrupted state a previous commit will need to be restored. 
-{{% /alert %}}
-{{% alert color="warning" %}}
-Renaming the app by renaming the *.mpr* file is not supported. Renaming your app when using version control is only supported via the Mendix Portal. For more information, see the [Page Header](/developerportal/general-settings/#settings-page-header) section in *Settings*. 
-{{% /alert %}}
-
-## Branches {#branches}
-
-With more complex apps, you may want to manage your code in a more sophisticated way. For example, you may want to develop new features separately from the currently deployed version of your app so that you can fix any bugs without having to release all the new features. This is done using [Branch Lines](#branch-line).
-
-If you are already familiar with using branches, you can check the [Branching Best-Practices](/refguide/using-version-control-in-studio-pro/#branching-best-practices) section of *Using Version Control in Studio Pro* for advice on how to use branches when developing your Mendix app.
-
-### Main Line
-
-All apps are developed along the main line. Here you have all development happening along a single line, with all changes built upon the previous revision:
-
-{{< figure src="/attachments/refguide/version-control/image7.png" class="no-border" >}}
-
-### Branch Line
-
-When you add a branch line, you take a copy of an existing [revision](#revision) and work separately on that copy. Changes made to one branch do not impact any other branches.
-
-In Mendix each commit within a [repository](#repository) is given a unique identifier. 
-
-{{< figure src="/attachments/refguide/version-control/image8.png" class="no-border" >}}
-
-### Merging Branches {#merging-branches}
-
-You may have a branch line which will continue independently and never need to be combined with any other development lines. For example, you may create a branch for a particular release of your app and only ever use it to fix bugs in that release.
-
-On the other hand, you may want to add the features from one branch line into another development line. These are two cases for doing this:
-
-* You develop new features in a branch line and want to include them in your main development line
-* You want to take advantage of a bug fix which was made on another branch line
-
-You can merge a specific revision of a branch line into your current [working copy](#working-copy). If, for example, you were working on the main line updated to revision 6, you can [merge](#merge) revision 5 from another branch line into your working copy. Then you can commit the result to create revision 7. If you want to merge several different committed changes from a branch, you will need to select a range of revisions which includes all the changes.
-
-{{< figure src="/attachments/refguide/version-control/image9.png" class="no-border" >}}
-
-{{% alert color="info" %}}
-
-You are expected to merge branch lines into the main line before upgrading to a version that is one or more **major** versions newer than the current one. 
-It is also highly recommended to either commit or revert all changes before such an upgrade so there are no uncommitted changes during the upgrade.
-
-{{% /alert %}}
-
-There may be conflicts during the merge, and these will have to be resolved before you can commit the changes to your app.
-
-Note that errors can be introduced by the [merge](#merge) process even if no conflicts are identified during the merge. Errors are inconsistencies which are flagged in Studio Pro and will prevent the app from being deployed. They could lead to a revision not being deployable, so it is important to check for errors after you have done a merge.
+For more information about limitations and the supported Git repositories, see the [Introduction](/refguide/on-premises-git/#intro) and [Preparing Your Repository](/refguide/on-premises-git/#preparing-your-repo) sections in *Working with Git On-Premises Version Control Server*.
 
 ## Documents in This Category

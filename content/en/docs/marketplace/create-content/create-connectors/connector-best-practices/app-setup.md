@@ -58,7 +58,7 @@ Use as few dependency modules as possible. When you must use one, make sure it i
 
 ## Adding the App to Version Control
 
-If you have not already added your app, add it to the [Team Server](/refguide/version-control/#team-server). An alternative solution that Mendix recommends is having a separate public Git repository next to your private Team Server Git repository. This way, you can continue committing and applying changes while you only push to the public repository for a new release to the Marketplace. The automated integration with GitHub from the Marketplace makes this a good option for your public-facing Git repository.
+If you have not already added your app, add it to the [Team Server](/refguide/version-control/glossary/#team-server). An alternative solution that Mendix recommends is having a separate public Git repository next to your private Team Server Git repository. This way, you can continue committing and applying changes while you only push to the public repository for a new release to the Marketplace. The automated integration with GitHub from the Marketplace makes this a good option for your public-facing Git repository.
 
 ## Working with Java-Intensive Apps
 

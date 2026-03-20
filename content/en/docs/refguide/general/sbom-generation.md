@@ -46,10 +46,10 @@ Since a full SBOM contains all project details, this is only a partial represent
       "author": "",
       "publisher": "",
       "name": "Mendix-Runtime",
-      "version": "10.10.0.34429",
+      "version": "11.10.0.34429",
       "licenses": [],
       "copyright": "",
-      "purl": "pkg:mendix/Mendix-Runtime@10.10.0.34429?type=framework",
+      "purl": "pkg:mendix/Mendix-Runtime@11.10.0.34429?type=framework",
       "components": []
     },
     {

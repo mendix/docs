@@ -73,15 +73,11 @@ There are two function types. XPath aggregate functions are for use in Java code
 
 For details, see [XPath aggregate functions](/refguide/xpath-aggregate-functions/) and [XPath constraint functions](/refguide/xpath-constraint-functions/). 
     
-## Example
+## Video Tutorial
 
-**How to find the right path to XPath**
+**Master Mendix XPath**
 
-{{% alert color="info" %}}
-This video was done with [Studio Pro 8](/refguide8/), but the concepts remain applicable.
-{{% /alert %}}
-
-{{< youtube sdabUY-w4ZU >}}
+{{< vidyard "a3nrrw95bKkSFfJc9SW7tg" >}}
 
 ## Read More
 

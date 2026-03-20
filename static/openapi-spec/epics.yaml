@@ -552,6 +552,220 @@ paths:
                 status: 404
                 title: Not Found
                 detail: The app does not exist or you do not have access to it.
+    post:
+        tags:
+          - epics
+        summary: Create a single epic for an app
+        description: Returns the created epic.
+        operationId: postProjectEpics
+        parameters:
+          - in: path
+            name: appId
+            description: The ID of the app
+            required: true
+            schema: 
+              type: string
+              format: uuid
+        requestBody:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    example: My first epic
+                  objective:
+                    type: string
+                    example: Objective of the whole epic is...
+                  labels:
+                    type: array
+                    items:
+                      type:
+                        string
+                    example: ["Security", "Phase-2"]
+                  assigneeId:
+                    type: string
+                    example: f97dde36-9fa2-4f7c-8c3d-93efb61fbc79
+                required: [name]
+        responses:
+          '200':
+            description: Successful operation
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/epic'
+          '400':
+            description: |-
+              The request likely contains invalid data or is missing data.
+              The error response includes additional feedback.
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/error'
+                example:
+                  status: 400
+                  title: Bad Request
+                  detail: The request is malformed and could not be read.
+          '401':
+            description: |-
+              The required item could not be found.
+              The error response includes additional feedback.
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/error'
+                example:
+                  status: 401
+                  title: Unauthorized
+                  detail: Credentials could not be authenticated.
+          '404':
+            description: |-
+              The required item could not be found.
+              The error response includes additional feedback.
+            content:
+              application/json:
+                schema: 
+                  $ref: '#/components/schemas/error'
+                example:
+                  status: 404
+                  title: Not Found
+                  detail: The app does not exist or you do not have access to it.
+  /projects/{appId}/epics/{epicUUID}:
+    patch:
+        tags:
+          - epics
+        summary: Patch an epic by the epic UUID
+        description: Returns the status code 204.
+        operationId: patchProjectEpics
+        parameters:
+          - in: path
+            name: appId
+            description: The ID of the app
+            required: true
+            schema: 
+              type: string
+              format: uuid
+          - in: path
+            name: epicUUID
+            description: The UUID of the epic
+            required: true
+            schema: 
+              type: string
+              format: uuid
+        requestBody:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    example: My first epic
+                  objective:
+                    type: string
+                    example: Objective of the whole epic is...
+                  labels:
+                    type: array
+                    items:
+                      type:
+                        string
+                    example: ["Security", "Phase-2"]
+                  assigneeId:
+                    type: string
+                    example: f97dde36-9fa2-4f7c-8c3d-93efb61fbc79
+        responses:
+          '204':
+            description: Successful operation
+          '400':
+            description: |-
+              The request likely contains invalid data or is missing data.
+
+              The error response gives additional feedback.
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/error'
+                examples:
+                  Example 1:
+                    value:
+                      status: 400
+                      title: Bad Request
+                      detail: The request is malformed and could not be read.
+          '401':
+            description: |-
+              The required item could not be found.
+              The error response includes additional feedback.
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/error'
+                example:
+                  status: 401
+                  title: Unauthorized
+                  detail: Credentials could not be authenticated.
+          '404':
+            description: |-
+              The required item could not be found.
+              The error response includes additional feedback.
+            content:
+              application/json:
+                schema: 
+                  $ref: '#/components/schemas/error'
+                example:
+                  status: 404
+                  title: Not Found
+                  detail: The app does not exist or you do not have access to it.
+    delete:  
+        tags:
+          - epics
+        summary: Delete epic by the epic UUID
+        description: Returns the status code 204.
+        operationId: deleteProjectEpics
+        parameters:
+          - in: path
+            name: appId
+            description: The ID of the app
+            required: true
+            schema: 
+              type: string
+              format: uuid
+          - in: path
+            name: epicUUID
+            description: The ID of the epic
+            required: true
+            schema: 
+              type: string
+              format: uuid
+        responses:
+          '204':
+            description: Successful operation
+          '401':
+            description: |-
+              The required item could not be found.
+              The error response includes additional feedback.
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/error'
+                example:
+                  status: 401
+                  title: Unauthorized
+                  detail: Credentials could not be authenticated.
+          '404':
+            description: |-
+              The required item could not be found.
+              The error response includes additional feedback.
+            content:
+              application/json:
+                schema: 
+                  $ref: '#/components/schemas/error'
+                example:
+                  status: 404
+                  title: Not Found
+                  detail: The app does not exist or you do not have access to it.
   /projects/{appId}/stories/{storyId}/tasks:
     get:
       tags:
@@ -1008,6 +1222,18 @@ components:
           format: int64
           minimum: 0
           example: 0
+    epic:
+      type: object
+      properties:
+        epicId:
+          type: string
+          example: 'd9c57d74-f06b-4e1b-91c7-c79375e23927'
+        readableEpicId:
+          type: string
+          example: 'EPI-TEST-1'
+        epicUrl:
+          type: string
+          example: 'https://epics.mendix.com/link/epic/TES-EP-1--d9c57d74-f06b-4e1b-91c7-c79375e23927'
     epics:
       type: object
       properties:

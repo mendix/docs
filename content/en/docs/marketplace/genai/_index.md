@@ -72,8 +72,8 @@ Mendix connectors offer direct support for the following models:
 
 | Architecture | Models | Category | Input | Output | Additional capabilities |
 | -------------- | --------------------- | --------------------- | ------------------- | ----------- | ----------------------- |
-| Mendix Cloud GenAI | Anthropic Claude 3.5 Sonnet, Anthropic Claude 3.7 Sonnet, Anthropic Claude 4.0 Sonnet, Anthropic Claude 4.5 Sonnet | Chat Completions | text, image, document | text | Function calling |
-| | Cohere Embed v3 English and multilangual, Cohere Embed v4 | Embeddings | text | embeddings | |
+| Mendix Cloud GenAI | [Anthropic Claude Sonnet Models](/appstore/modules/genai/mx-cloud-genai/resource-packs/#supported-models) | Chat Completions | text, image, document | text | Function calling |
+| | [Cohere Embed Models](/appstore/modules/genai/mx-cloud-genai/resource-packs/#supported-models) | Embeddings | text | embeddings | |
 | Microsoft Foundry (OpenAI) / OpenAI | gpt-4, gpt-4-turbo, gpt-4o, gpt-4o mini, gpt-4.1, gpt-4.1-mini, gpt-4.1-nano, gpt-5.0, gpt-5.0-mini, gpt-5.0-nano, gpt-5.1, gpt-5.2, o1, o1-mini, o3, o3-mini, o4-mini | Chat completions | text, image, document (OpenAI only) | text | Function calling |
 | | DALL·E 2, DALL·E 3, gpt-image-1 | Image generation | text | image | |
 | | text-embedding-ada-002, text-embedding-3-small, text-embedding-3-large | Embeddings | text | embeddings | |
@@ -110,5 +110,5 @@ The available showcase applications offer implementation inspiration for many of
 In addition to the models listed above, you can also connect to other models by implementing one of the following options:
 
 * To connect to other [foundation models](https://docs.aws.amazon.com/bedrock/latest/userguide/models-features.html) and implement them in your app, use the [Amazon Bedrock connector](/appstore/modules/aws/amazon-bedrock/).
-* To connect to [Snowflake Cortex LLM](https://docs.snowflake.com/en/sql-reference/functions/complete-snowflake-cortex) functions, [configure the Snowflake REST SQL connector for Snowflake Cortex Analyst](/appstore/connectors/snowflake/snowflake-rest-sql/#cortex-analyst).
+* To connect to [Snowflake Cortex LLM](https://docs.snowflake.com/en/sql-reference/functions/complete-snowflake-cortex) functions, [configure the Snowflake AI Data Connector for Snowflake Cortex Analyst](/appstore/connectors/snowflake/snowflake-ai-data-connector/#cortex-analyst).
 * To implement your connector compatible with the other components, use the [GenAI Commons](/appstore/modules/genai/commons/) interface and follow the how-to [Build Your Own GenAI Connector](/appstore/modules/genai/how-to/byo-connector/).

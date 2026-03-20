@@ -476,14 +476,14 @@ To edit a bridge:
           * **Azure Blob Storage** – update the Storage Account, Storage SAS Token, Container Path, or Prefix Path as needed
           * **AWS S3** – update the Bucket, AWS Region for Bucket, or Prefix Path as needed
 
-**HTTP** 
-    {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/edit-bridge/ebb_http_edit_mode.png" class="no-border" >}}
+        **HTTP** 
+        {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/edit-bridge/ebb_http_edit_mode.png" class="no-border" >}}
 
-**Azure Blob Storage** 
-    {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/edit-bridge/ebb_azure_blob_edit_mode.png" class="no-border" >}}
+        **Azure Blob Storage** 
+        {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/edit-bridge/ebb_azure_blob_edit_mode.png" class="no-border" >}}
 
-**AWS S3** 
-    {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/edit-bridge/ebb_aws_s3_edit_mode.png" class="no-border" >}}
+        **AWS S3** 
+        {{< figure src="/attachments/appstore/platform-supported-content/services/event-broker/bridges/edit-bridge/ebb_aws_s3_edit_mode.png" class="no-border" >}}
 
 4. Once you have made your changes, you can:
    * Click **Apply** to save and apply the changes. A confirmation message will indicate if the changes were successful. Changes to the event configuration take effect when applied. After applying changes, the bridge status will change to **Reconfiguring** and will return to **Running** once the reconfiguration is complete.

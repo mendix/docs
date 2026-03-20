@@ -343,7 +343,7 @@ Before you can connect to resources running on your own infrastructure, you have
 Mendix Cloud Private Connectivity currently supports exposing physical [subnet routes](https://tailscale.com/kb/1019/subnets) to your network via an agent. This is what you can expose:
 
 * A single IP range, such as `192.0.2.0/24` 
-* Multiple IP ranges separated by a colon, such as `192.0.2.0/24,198.51.100.0/24`
+* Multiple IP ranges separated by a comma, such as `192.0.2.0/24,198.51.100.0/24`
 * A single IP address, such as `10.100.0.5/32`
 
 #### Exposing Subnet Routes on a Windows Server {#private-connectivity-resources-expose-routes-windows}
@@ -469,6 +469,8 @@ On the **Activities** tab, you can view a log of activities performed on your Pr
 
 The Mendix internal systems operate on the following subnets:
 
+* 127.0.0.0/8
+* 169.254.0.0/16
 * 10.10.0.0/16
 * 10.11.0.0/16
 * 172.20.0.0/16

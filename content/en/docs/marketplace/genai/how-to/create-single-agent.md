@@ -150,7 +150,7 @@ We will add two microflows that the agent can leverage to use live app data:
 * One microflow will cover the count of tickets in the database that have a specific status. 
 * The other microflow will cover the details of a specific ticket, given that the identifier is known. 
 
-The final result for the function microflows used in this document can be found in the **ExampleMicroflows** folder of the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) for reference. This example focuses only on retrieval functions, but you can also expose functions that perform actions on behalf of the user—for example, creating a new ticket, as demonstrated in the [Agent Builder Starter App](https://marketplace.mendix.com/link/component/240369).
+The final result for the function microflows used in this document can be found in the **ExampleMicroflows** module of the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) for reference. This example focuses only on retrieval functions, but you can also expose functions that perform actions on behalf of the user—for example, creating a new ticket, as demonstrated in the [Agent Builder Starter App](https://marketplace.mendix.com/link/component/240369).
 
 #### Function Microflow: Get Number of Tickets by Status
 
@@ -269,7 +269,7 @@ Create an agent that can be called to interact with the LLM. The [Agent Commons]
     4. Choose the version you want to set as `In Use`. 
     5. Select the *Initial agent with prompt* version and click **Select**. 
 
-### Empower the Agent
+### Empower the Agent {#empower-agent}
 
 In order to let the agent generate responses based on specific data and information, you will connect it to two function microflows and a knowledge base. Even though the implementation is not complex—you only need to link it in the front end—it is highly recommended to be familiar with the [Integrate Function Calling into Your Mendix App](/appstore/modules/genai/how-to/howto-functioncalling/) and [Grounding Your Large Language Model in Data – Mendix Cloud GenAI](/appstore/modules/genai/how-to/howto-groundllm/#chatsetup) documents. These guides cover the foundational concepts for function calling and knowledge base retrieval. 
 
@@ -305,11 +305,10 @@ Before adding tools via MCP, ensure you have at least one `MCPClient.MCPServerCo
 
    1. Navigate to the agent view page for the IT-Ticket Helper agent and go to the Tools section. Add a new tool of type MCP tools.
    2. Select the appropriate MCP server configuration from the available options.
-   3. Choose your import type:
-        * `server`: imports all tools exposed by the server
-        * `tools`: allows you to select specific tools from the server
-   4. If you selected import type `tools`, you can choose to enable all available tools or select only the specific ones you need.
-   5. Click **Save**. The connected server or your selected tools will now appear in the agent's tool section.
+   3. Choose **Tool selection** option:
+        * **Use all available tools**: imports the entire server, including all tools it provides. This also means that less control over individual tools and if tools are added in the future, they get added automatically on agent execution.
+        * **Select tools**: allows you to import specific tools from the server and changing specific fields for individual tools.
+   4. Click **Save**. The connected server or your selected tools will now appear in the agent's tool section.
 
 #### Include Knowledge Base Retrieval: Similar Tickets
 
@@ -317,7 +316,7 @@ You will also connect the agent to our knowledge base, so that it can use histor
 
 1. From the agent view page for the `IT-Ticket Helper` agent, under **Knowledge bases**, add a new knowledge base:
 
-    * Knowledge base: select the knowledge base created in a previous step. For Mendix Cloud GenAI in particular, look for the collection `HistoricalTickets`. If nothing appears in the list, refer to the documentation of the connector on how to set it up correctly.
+    * Consumed Knowledge base: select the knowledge base resource created in a previous step. Next, look for the collection `HistoricalTickets`. If nothing appears in the list, refer to the documentation of the connector on how to set it up correctly.
     * Name: `RetrieveSimilarTickets` (expression)
     * Description: `Similar tickets from the database` (expression)
     * MaxNumberOfResults: empty (expression; optional)
@@ -367,7 +366,28 @@ The button does not perform any actions yet, so you need to create a microflow t
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-singleagent/Microflow_AgentCommons.png" >}}
 
-Run the app to see the agent integrated in the use case. From the **TicketHelper_Agent** page, the user can ask the model questions and receive responses. When it deems it relevant, it uses the functions or knowledge base.  If you ask the agent "How many tickets are open?", a log should appear in your Studio Pro console indicating that the function microflow was executed. Furthermore, when a user submits a request like, "My VPN crashes all the time and I need it to work on important documents", the agent will search the knowledge base for similar tickets and provide a relevant solution.
+Run the app to see the agent integrated in the use case. From the **TicketHelper_Agent** page, the user can ask the model questions and receive responses. When it deems it relevant, it uses the functions or the knowledge base. If you ask the agent "How many tickets are open?", a log should appear in your Studio Pro console indicating that the function microflow was executed. Furthermore, when a user submits a request like "My VPN crashes all the time and I need it to work on important documents", the agent will search the knowledge base for similar tickets and provide a relevant solution.
+
+#### Enable User Confirmation for Tools {#user-confirmation}
+
+This is an optional step to use the human-in-the-loop pattern to give users control over tool executions. When [adding tools to the agent](#empower-agent) you can configure a **User Access and Approval** setting to either make the tools visible to the user or require the user to confirm or reject a tool call. This way, the user is in control of actions that the LLM requested to perform.
+
+For more information, refer to [Human in the loop](/appstore/modules/genai/genai-for-mx/conversational-ui/#human-in-the-loop)
+
+Follow the steps below:
+
+1. Change the **User Access and Approval** setting for one of the tools to **User Confirmation Required** in the agent editor. You may want to add a display title and description to make it more human-readable. Make sure to save the version and mark it as **In Use**.
+2. In Studio Pro, modify your microflow that calls the agent. After the agent retrieval step, add the `Create Request` action from the toolbox. All parameters can be empty except the ID, which you can get from the `TicketHelper` object.
+3. Add the microflow `Request_AddMessage_ToolMessages` from the ConversationalUI module and pass the message that is associated with your `TicketHelper`.
+4. Duplicate the `Request_CallAgent_ToolUserConfirmation_Example` microflow from ConversationalUI in your own module and include it in the project. Call this microflow instead of `Call Agent Without History` action. Make some modifications to it (the annotations show the position):
+    * Add your context object `TicketHelper` as an input parameter and pass it in the first `Call Agent Without History` action.
+    * Change the message retrieval to retrieve a `Message` from your `TicketHelper` via association.
+    * After calling the microflow `Response_CreateOrUpdateMessage`, add a `Change object` action to set the association `TicketHelper_Message` to the `Message_ConversationalUI` object. Additionally set the `RequestId` derived from the `ResponseId`.
+    * After the decision, add an action to call the `ACT_TicketHelper_CallAgent_Commons` again to ensure that updated tool messages are sent back to the LLM.
+    * Inside the loop in the `false` path, you can open a page for the user to decide if the tool should be executed or not. For this, you may want to add the `ToolMessage_UserConfirmation_Example` page to your module.
+5. Create microflows for the **Confirm** and **Reject** buttons that should update the status of the tool message, for example, by calling the `ToolMessage_UpdateStatus` microflow. If no more pending tool messages are available, you can call the **ACT_TicketHelper_Agent_UserConfirmation_AgentCommons** again. Make sure to always close the popup page on decisions.
+
+You can find examples for both Agent Commons and GenAI Commons in the `ExampleMicroflows` module of [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475).
 
 ## Define the Agent Using Microflows {#define-genai-commons}
 
@@ -506,13 +526,12 @@ For both approaches, you need an `MCPClient.MCPServerConfiguration` object conta
 
 Finally, you can add a tool for knowledge base retrieval. This allows the agent to query the knowledge base for similar tickets and thus tailor a response to the user based on private knowledge. Note that the knowledge base retrieval is only supported for [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/).
 
-1. In the microflow `ACT_TicketHelper_CallAgent`, add a `Retrieve` action, before the request is created, to retrieve a **Deployed Knowledge Base** object:
+1. To retrieve a **Consumed Knowledge Base** object, add a `Retrieve` action in the `_ACT_TicketHelper_Agent_GenAICommons` microflow before the request is created. 
 
     * Source: `From database`
-    * Entity: `GenAICommons.DeployedKnowledgeBase` (search for *DeployedKnowledgeBase*)
-    * Xpath: `[Name = 'HistoricalTickets']` (name that was used in the [Ingest Data into Knowledge Base](#ingest-knowledge-base))
+    * Entity: `GenAICommons.ConsumedKnowledgeBase` (search for `ConsumedKnowledgeBase`)
     * Range: `First`
-    * Object name: `DeployedKnowledgeBase` (default)
+    * Object name: `ConsumedKnowledgeBase` (default)
 
 2. Add the `Tools: Add Knowledge Base` action after the **Request** creation microflow:
 
@@ -522,12 +541,15 @@ Finally, you can add a tool for knowledge base retrieval. This allows the agent 
     * MetadataCollection: empty (expression; optional)
     * Name: `RetrieveSimilarTickets` (expression)
     * Description: `Similar tickets from the database` (expression)
-    * DeployedKnowledgeBase: `DeployedKnowledgeBase` (as retrieved in step 1)
+    * ConsumedKnowledgeBase: `ConsumedKnowledgeBase` (as retrieved in step above)
+    * CollectionIdentifier: `'HistoricalTickets'` (name that was used in the [Ingest Data into Knowledge Base](#ingest-knowledge-base))
     * Use return value: `no`
 
 You have successfully integrated a knowledge base into your agent interaction. Run the app to see the agent integrated in the use case. Using the **TicketHelper_Agent** page, the user can ask the model questions and receive responses. When it deems it relevant, it will use the functions or the knowledge base. If you ask the agent "How many tickets are open?", a log should appear in your Studio Pro console indicating that the function microflow was executed. Now, when a user submits a request like "My VPN crashes all the time and I need it to work on important documents", the agent will search the knowledge base for similar tickets and provide a relevant solution. 
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-singleagent/Microflow_GenAICommons.png" >}}
+
+If you would like to learn how to [Enable User Confirmation for Tools](#user-confirmation) similar as described for agent above, you can find examples in the `ExampleMicroflows` module of the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475).
 
 ## Testing and Troubleshooting
 

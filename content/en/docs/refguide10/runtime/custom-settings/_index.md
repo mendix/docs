@@ -282,15 +282,7 @@ The settings below influence the behavior of the Mendix web client.
 | <a id="commendixwebuiFeedbackSizeWarningThreshold" href="#commendixwebuiFeedbackSizeWarningThreshold">com.<wbr>mendix.<wbr>webui.<wbr>FeedbackSizeWarningThreshold</a> | A warning is logged when the feedback size exceeds the threshold. Feedback is sent from server to client to instruct (for example, to refresh objects or to open a page). They are serialized as "instructions" in the server response. If there are too many instructions, this can have performance implications, as they all have to be serialized to the client. For this reason, a warning is logged when the threshold is exceeded. | 5000 |
 | <a id="commendixwebuiStateSizeWarningThreshold" href="#commendixwebuiStateSizeWarningThreshold">com.<wbr>mendix.<wbr>webui.<wbr>StateSizeWarningThreshold</a> | A warning is logged when the state size exceeds the threshold. The state consists of changes in objects and of objects not committed to the database (yet). If there is too much state, this will have performance implications, as the whole state has to be serialized to the client. For this reason, a warning is logged when the threshold is exceeded. | 100 |
 | <a id="commendixwebuiCommittedObjectsThreshold" href="#commendixwebuiCommittedObjectsThreshold">com.<wbr>mendix.<wbr>webui.<wbr>CommittedObjectsThreshold</a> | The threshold controls how much data is sent back to the client after executing a microflow. By default, we send back full objects when they are changed or committed. When this threshold is reached, only object GUIDs are sent back instead so that the client knows about the changes while the amount of data sent over the network is reduced. The client will then retrieve the objects later on, if needed. | 100 |
-| <a id="MaxRetrieveSize" href="#MaxRetrieveSize">MaxRetrieveSize</a> | The maximum number of objects the client is allowed to retrieve in a single [XAS request](/refguide10/communication-patterns/#RO). This limit exists to prevent malicious actors from being able to overload the runtime by requesting a large number of objects in a single request. | 1000 |
-
-### Max Retrieve Size{#MaxRetrieveSize}
-
-The `MaxRetrieveSize` limits the number of objects that the runtime will return in a single request.
-
-When requesting more objects than allowed with a `retrieve_by_ids` XAS request, the runtime will throw an error: ``retrieve_by_ids action tried to retrieve more objects than allowed by the `MaxRetrieveSize`. Amount of guids requested: (...), max amount of objects allowed: (...)``
-
-When requesting more objects than allowed with a `retrieve`, `retrieve_by_path`, or `retrieve_by_xpath` XAS requests, the runtime will enforce the `MaxRetrieveSize` by setting a limit on the query and will log the following warning: ``A retrieve action requested more objects than allowed by the `MaxRetrieveSize` runtime setting. Amount requested: (...), allowed: (...).``
+| <a id="MaxRetrieveAmount" href="#MaxRetrieveAmount">MaxRetrieveAmount</a> | The maximum number of objects the client is allowed to retrieve by list widgets using database datasource runtime operation.<br/>When requesting more objects than allowed, the runtime will enforce the `MaxRetrieveAmount` by setting a limit on the query and will log the following warning: `A retrieve action requested more objects than allowed by the `MaxRetrieveAmount` runtime setting. Amount requested: (...), MaxRetrieveAmount: (...).`<br />*This setting was introduced in Mendix version 10.24.16* |  |
 
 ## Metrics Settings{#metrics-settings}
 
@@ -304,11 +296,16 @@ The settings below configure metrics through [micrometer](https://micrometer.io/
 
 ## Proxy Settings {#proxy-settings}
 
-The settings below allow you to use a proxy. 
+### Http(s) Connections
 
-{{% alert color="warning" %}}
-These settings have to be set as JVM properties, not as custom Runtime settings.
-{{% /alert %}}
+The settings below configure the app to use a proxy for all connections, whether they are using the HTTP or HTTPS protocol. They are used in the following circumstances:
+
+  1. In the integration microflow activities [call web service](/refguide10/call-web-service-action/), [call REST service](/refguide10/call-rest-action/), [send REST request](/refguide10/send-rest-request/), and  [call external action](/refguide10/call-external-action/).
+  2. In the external object microflow activities [send external object](/refguide10/send-external-object/) and [delete external object](/refguide10/delete-external-object/).
+  3. When retrieving an external entity data using a [consumed OData service](/refguide10/consumed-odata-service/).
+  4. When calling the Mendix runtime API [Core.Http().executeHttpRequest](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/http/Http.html) and [HttpConfiguration.getInstance().getProxyConfiguration()](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/http/IHttpConfiguration.html).
+
+These settings can be set either as JVM properties or as custom Runtime settings. When both the JVM property and custom runtime setting are set, the app uses the custom runtime setting.
 
 | Name | Description | Default Value |
 | --- | --- | --- |
@@ -316,9 +313,27 @@ These settings have to be set as JVM properties, not as custom Runtime settings.
 | <a id="httpproxyPort" href="#httpproxyPort">http.proxyPort</a> | Defines the port number of the HTTP proxy server. | |
 | <a id="httpproxyUser" href="#httpproxyUser">http.proxyUser</a> | Defines the user of the HTTP proxy server. | | 
 | <a id="httpproxyPassword" href="#httpproxyPassword">http.proxyPassword</a> | Defines the password of the HTTP proxy server. | | 
+
+{{% alert color="info" %}}
+The `http.` part of the names of these settings does not imply anything about whether the `HTTP` or `HTTPS` protocol is used - it is just the name of the setting.
+{{% /alert %}}
+
+### License Server
+
+The settings below configure the app to use a proxy to reach the Mendix license server.
+
+{{% alert color="info" %}}
+These settings have to be set as JVM properties, not as custom runtime settings.
+{{% /alert %}}
+
+| Name | Description | Default Value |
+| --- | --- | --- |
 | <a id="httpsproxyHost" href="#httpsproxyHost">https.proxyHost</a> | Defines the hostname of the HTTPS proxy server. | |
 | <a id="httpsproxyPort" href="#httpsproxyPort">https.proxyPort</a> | Defines the port number of the HTTPS proxy server. | |
 | <a id="httpsproxyUser" href="#httpsproxyUser">https.proxyUser</a> | Defines the user of the HTTPS proxy server. | | 
 | <a id="httpsproxyPassword" href="#httpsproxyPassword">https.proxyPassword</a> | Defines the password of the HTTPS proxy server. | | 
+| <a id="httpsnonProxyHosts" href="#httpsnonProxyHosts">https.nonProxyHosts</a> | Defines a list of hosts that should be reached directly, bypassing the proxy. This is a list of patterns separated by '&#x007C;'. The patterns may start or end with a '*' for wildcards. | | 
 
-{{% alert color="info" %}} `http.nonProxyHosts` only affects the license server. {{% /alert %}}
+{{% alert color="info" %}}
+The `https.` part of the names of these settings does not imply anything about whether the `HTTP` or `HTTPS` protocol is used - it is just the name of the setting.
+{{% /alert %}}

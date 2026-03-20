@@ -49,31 +49,27 @@ All services listed in the table below use the HTTPS protocol (port 443).
 ### Creating a Cluster {#create-cluster}
 
 1. Click [Cloud Settings](/developerportal/general-settings/#cloud-settings) on the **Settings** page of your Mendix app.
-2. Click **Mendix for Private Cloud**.
+2. In the **Mendix on Kubernetes / Mendix on Azure** section, click **Set Up**.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/image3.png" class="no-border" >}}
 
-3. Click **Set up Mendix for Private Cloud**.
-
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/image4.png" class="no-border" >}}
-
-4. Open the [Global Navigation menu](/portal/global-navigation/) and select **Deployment**.
-5. Select **Mendix for Private Cloud** from the top menu bar in the Mendix Portal.
+3. Open the [Global Navigation menu](/portal/global-navigation/) and select **Deployment**.
+4. Select **Mendix on Kubernetes / Mendix on Azure** from the top menu bar in the Mendix Portal.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/cluster-manager.png" class="no-border" >}}
 
-6. Click **Register Cluster**.
+5. Click **Register Cluster**.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/image6.png" class="no-border" >}}
 
-7. Enter the following information:
+6. Enter the following information:
 
     * **Installation Type** – Choose **Global Installation** if you want a single Operator namespace to manage multiple namespaces, or **Namespace Installation** if you want the Operator to only manage one namespace. For more information, see [Global Operator](/developerportal/deploy/global-operator/).
     * **Cluster Name** – The name that you want to give the cluster which you are creating.
     * **Cluster Type** – Choose the correct type for your cluster. For more information, see [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/).
     * **Description** – An optional description of the cluster which will be displayed under the cluster name in the Cluster Manager.
 
-8. Click **Create**.
+7. Click **Create**.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/create-cluster.png" class="no-border" >}}
 
@@ -1367,7 +1363,7 @@ You can invite additional members to the namespace, and configure their role dep
 3. Enter the **Email** of the person you want to invite.
 4. If you prefer the individual to join as a namespace member automatically, without requiring them to manually accept the invitation, you can enable the **Automatically accept invites** option.
 
-{{% alert color="info" %}}The **Automatically accept invites** option is applicable only when the invited users have the same email domain as yours.{{% /alert %}}
+    {{% alert color="info" %}}The **Automatically accept invites** option is applicable only when the invited users have the same email domain as yours.{{% /alert %}}
 
 5. Give them the rights they need. This can be:
 
@@ -1375,14 +1371,12 @@ You can invite additional members to the namespace, and configure their role dep
     2. **Administrator** – a standard set of rights needed by an administrator, these are listed on the screen
     3. **Custom** – This option is now deprecated.
 
-{{% alert color="info" %}}
-The custom permission if needed to be edited, a role need to be assigned with appropriate permissions. See [Roles and Permissions](/developerportal/deploy/private-cloud-cluster/#rolesandpermissions) for more information.
-{{% /alert %}}
+    {{% alert color="info" %}}The custom permission if needed to be edited, a role need to be assigned with appropriate permissions. See [Roles and Permissions](/developerportal/deploy/private-cloud-cluster/#rolesandpermissions) for more information.
+    {{% /alert %}}
 
-{{% alert color="info" %}}
-If an application is in the Stopped state, the scaling does not come into effect until the application is Started. This means that you have to click **Start application** in order for the changes to be sent to the cluster.
-Along with this, we have also decoupled the permission for modifying the MxAdmin password and managing environments.
-{{% /alert %}}
+    {{% alert color="info" %}}If an application is in the Stopped state, the scaling does not come into effect until the application is Started. This means that you have to click **Start application** in order for the changes to be sent to the cluster.
+    Along with this, we have also decoupled the permission for modifying the MxAdmin password and managing environments.
+    {{% /alert %}}
 
 6. Click **Send Invite** to send an invite to this person.
 

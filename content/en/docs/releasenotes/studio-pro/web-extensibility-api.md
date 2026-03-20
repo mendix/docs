@@ -8,6 +8,10 @@ numberless_headings: true
 
 These release notes cover changes to the [Extensibility API for Web Developers](/apidocs-mxsdk/apidocs/extensibility-api/).
 
+## Version 11.8.0
+
+* We introduced a change in the [Progress Dialog API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/dialog-api/), so when the progress dialog only has one step, only the progress bar is shown.
+
 ## Version 11.7.0
 
 * We added functionality to select a **Custom Blob** document by using its registered name in our [Element Selector](/apidocs-mxsdk/apidocs/web-extensibility-api-11/element-selector-api/) API.

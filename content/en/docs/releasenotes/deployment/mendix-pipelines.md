@@ -10,6 +10,14 @@ These release notes cover changes to the functionality and other features of the
 
 To see the current status of the Mendix Pipelines, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
+## 2026
+
+### February 26, 2026
+
+#### New Features
+
+* We have added [AI-powered log summary](/developerportal/deploy/mendix-pipelines/#ai-log-summary) to all Mendix Pipeline steps to provide insights into pipeline operations.
+
 ## 2025
 
 ### November 27, 2025

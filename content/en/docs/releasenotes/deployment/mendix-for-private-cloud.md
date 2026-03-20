@@ -12,6 +12,20 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 ## 2026
 
+### February 25, 2026
+
+#### Mendix Operator v2.26.0 {#2.26.0}
+
+* We have adjusted default Java memory allocation to use more of a container's available memory. This aligns memory usage rules with Mendix Public Cloud and reduces unused memory, especially in containers with more than 1GB memory.
+    For more information, see [JVM memory tuning](/developerportal/deploy/private-cloud-jvm-memory-tuning/).
+* We have updated the Agent to load cluster credentials from a mounted Kubernetes secret instead of using environment variables.
+* We have addressed a *license decode error* error message that appeared in the Operator logs when using a fallback license. (Ticket 271720)
+* We have updated components to use the latest dependency versions in order to improve security score ratings for container images.
+
+#### License Manager CLI v0.10.8 {#0.10.8}
+
+* We have updated components to use the latest dependency versions in order to improve security score ratings for container images.
+
 ### February 19, 2026
 
 #### Portal Improvements

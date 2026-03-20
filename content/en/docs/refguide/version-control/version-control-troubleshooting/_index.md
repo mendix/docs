@@ -1,11 +1,12 @@
 ---
 title: "Troubleshooting Version Control"
 url: /refguide/troubleshoot-version-control-issues/
-linktitle: "Troubleshoot Version Control"
-weight: 20
+weight: 90
 description: "Presents a list of problems and fixes for version control issues."
 aliases:
     - /howto/collaboration-requirements-management/troubleshoot-version-control-issues/
+no_list: false
+description_list: true
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor #cannot-create-package below is mapped from Studio Pro, so it should not be removed or changed.
 ---
@@ -21,7 +22,11 @@ For more information and general help on version control, see the following docu
 
 ## Troubleshooting {#troubleshooting}
 
-### Getting an Unexpected Error: `The project contains changes that have not been committed yet. Please commit first before attempting to merge again.` {#css-error}
+### Team Server Connectivity Issues
+
+Mendix Studio Pro needs to connect to the Team Server, where all your apps are stored. If you are having issues connecting to the Team Server, see [Troubleshooting Team Server Issues](/refguide/troubleshoot-team-server-issues/).
+
+### Getting a Changes Have Not Been Committed Error {#css-error}
 
 {{% alert color="info" %}}
 This is a known issue for Mendix version 10.0 and above. For more information, see [10.0](/releasenotes/studio-pro/10.0/#css-ki) release notes.
@@ -99,7 +104,7 @@ When filing a Git support issue with Mendix Support, attach the log files by doi
 
 1. Navigate to the **Help** menu > **Open Log File Directory**:
 
-   {{< figure src="/attachments/refguide/version-control/on-premises-git/troubleshoot-git-issues/open-log-file-directory-menu.png" alt="Download from Version Control Server dialog" class="no-border" >}}
+   {{< figure src="/attachments/refguide/version-control/on-premises-git/troubleshoot-git-issues/open-log-file-directory-menu.png" alt="Download from Version Control Server dialog" class="no-border" width="250" >}}
 
 2. Copy the file called *log.txt* into your ticket. You can also attach additional *log.X.txt* files if they exist.
 
@@ -177,6 +182,16 @@ Other tools on your machine that use the Git configuration, such as a traditiona
 
 To fix the issue, ensure that responsible users change their Git configuration in [Preferences](/refguide/preferences-dialog/#name). Changing historical commits is not possible within Studio Pro. 
 
+### Retrieve and Commit + Push Actions Are Getting Slower
+
+This may be caused by the way the storage format of Git interacts with the way the Mendix model stores changes, which can accumulate substantial disk space over time. Studio Pro periodically optimizes your repository if [automatic repository optimization](/refguide/preferences-dialog/#optimization) is enabled.
+
+You can run `git gc` in the command line to manually optimize the repository. `git gc` runs a number of housekeeping tasks, but primarily pack files are created. Pack files store just the changes to the files, which reduces the amount of data which needs to be stored. 
+
+### Cloning my Project Takes a Long Time
+
+Cloning or downloading your app consists of several steps. First the required data is downloaded from the server and then a local unpacking process is executed. The duration of the clone process depends on your repository size, internet connection and computer performance. In case cloning is taking a very long time, consider changing the [clone type](/refguide/clone-type/), or follow the steps described in [Troubleshooting Repository Size](/refguide/troubleshoot-repository-size/).
+
 ### Unable to Save Conflicting Files
 
 When performing operations such as rebase, merge, cherry-pick, revert, or merging a feature branch, you may encounter an error stating that access to a certain path is denied, or see a a message like the following: *Saving the conflicting mpr files failed, please abort and try again.*
@@ -192,3 +207,5 @@ To solve this issue, perform the following steps:
 1. Close the error dialog.
 2. Abort the current operation in Studio Pro.
 3. Retry the operation. 
+
+## Read More

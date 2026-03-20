@@ -182,12 +182,12 @@ Programmatically triggering an ingestion job can meet data ingestion requirement
 ### Prerequisites
 
 * A fully configured data source in the Mendix Data Loader
-* A Mendix app equipped with the Snowflake REST SQL connector
+* A Mendix app equipped with the Snowflake AI Data Connector
 * An authenticated user that is allowed to trigger stored procedures
 
 ### Triggering the Ingestion
 
-To trigger an ingestion job programmatically, use the `ExecuteStatement` operation available in the [Snowflake REST SQL connector](/appstore/connectors/snowflake/snowflake-rest-sql/).
+To trigger an ingestion job programmatically, use the `ExecuteStatement` operation available in the [Snowflake AI Data Connector](/appstore/connectors/snowflake/snowflake-ai-data-connector/).
 
 1. Obtain the Snowflake data source ID by performing the following steps:
 
@@ -196,7 +196,7 @@ To trigger an ingestion job programmatically, use the `ExecuteStatement` operati
     3. Click **View** by the configured data source.
     4. Copy the value for the `ID` key.
 
-2. In the Snowflake REST SQL connector, use the `ExecuteStatement` operation to execute the following statement:
+2. In the Snowflake AI Data Connector, use the `ExecuteStatement` operation to execute the following statement:
 
 ```sql
 CALL {NAME_OF_THE_MENDIX_DATA_LOADER}.MX_FUNCTIONS.RUN_INGESTION_JOB('{DATASOURCE_ID}','');
@@ -338,7 +338,24 @@ The **Documentation** pane displays the documentation for the currently selected
 
 If you encounter any issues while using the Mendix Data Loader, use the following troubleshooting tips to help you solve them.
 
-For any additional troubleshooting, contact the [development team](mailto:sa_dev_team@mendix.com).
+For any additional troubleshooting, contact the [development team](mailto:mendix-tech-alliance-dev-team.disw@siemens.com).
+
+### Accessing the Snowflake Logs
+
+Snowflake works with a logging table. To view the logs, create a Snowflake worksheet and use it to execute SQL commands like the following. 
+
+To create a log table if it does not exist:
+
+```sql
+CREATE EVENT TABLE <Db_Name>.<Schema_Name>.LogTable;
+ALTER ACCOUNT SET EVENT_TABLE = <Db_Name>.<Schema_Name>.LogTable;
+```
+
+To view the logs in the log table:
+
+```sql
+SELECT * FROM <Db_Name>.<Schema_Name>.LogTable WHERE TIMESTAMP BETWEEN '2024-07-01 00:00:01' AND '2024-07-02 23:59:59' ORDER BY TIMESTAMP DESC;
+```
 
 ### Ingestion Fails at RETRIEVING_METADATA
 
@@ -390,4 +407,4 @@ Enable the **changedDate** system member on the exposed entity and expose it on 
 
 ## Contact Information
 
-For support or queries regarding the Mendix Data Loader, email the development team at [SA_Dev_Team@mendix.com](mailto:sa_dev_team@mendix.com).
+For support or queries regarding the Mendix Data Loader, email the development team at [mendix-tech-alliance-dev-team.disw@siemens.com](mailto:mendix-tech-alliance-dev-team.disw@siemens.com).

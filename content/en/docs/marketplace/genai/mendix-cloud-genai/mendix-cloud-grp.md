@@ -29,26 +29,31 @@ Mendix Cloud Model Resource Packs provide customers with a monthly quota of inpu
 
 The Mendix Cloud GenAI Resource Packs provide access to the following models:
 
-| Model                       | Model Type | Region(s)                             | Available Only via Cross-Region Inference (CRI) | AWS Inference Regions |
-| ---------------------------- | ---------- | ------------------------------------- | ------------------------------------------ | ---------------------- |
-| Anthropic Claude 4.5 Sonnet | Text       |  Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
-| Anthropic Claude 4 Sonnet   | Text       |  Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Frankfurt),<br> eu-north-1,<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Paris) |
-| Anthropic Claude 3.7 Sonnet | Text       |  Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Frankfurt),<br> eu-north-1,<br> Europe (Ireland),<br> Europe (Paris) |
-| Anthropic Claude 3 Sonnet   | Text       |  Mendix Cloud Canada (Montreal)       | NO | ca-central-1 |
-| Cohere Embed v4             | Embeddings |  Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
-| Cohere Embed v3 <br> English and multilingual      | Embeddings      |  Mendix Cloud EU (Frankfurt, Germany) <br> Mendix Cloud Canada (Montreal) | NO | Europe (Frankfurt),<br> ca-central-1 |
+| Model | Model Type | Region(s) | Available Only via Cross-Region Inference (CRI) | AWS Inference Regions |
+| ----- | ---------- | --------- | ----------------------------------------------- | --------------------------- |
+| Anthropic Claude 4.6 Sonnet | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
+| Anthropic Claude 4.5 Sonnet | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
+| Anthropic Claude 4 Sonnet | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Frankfurt),<br> eu-north-1,<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Paris) |
+| Anthropic Claude 3.7 Sonnet | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Frankfurt),<br> eu-north-1,<br> Europe (Ireland),<br> Europe (Paris) |
+| Anthropic Claude 3 Sonnet | Text | Mendix Cloud Canada (Montreal) | NO | ca-central-1 |
+| Cohere Embed v4 | Embeddings | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
+| Cohere Embed v3 <br> English and multilingual | Embeddings | Mendix Cloud EU (Frankfurt, Germany) <br> Mendix Cloud Canada (Montreal) | NO | Europe (Frankfurt),<br> ca-central-1 |
 
 The models are available through the Mendix Cloud, leveraging AWS's highly secure Amazon Bedrock multi-tenant architecture. This architecture employs advanced logical isolation techniques to effectively segregate customer data, requests, and responses, ensuring a level of data protection that aligns with global security compliance requirements. Customer prompts, requests, and responses are neither stored nor used for model training. Your data remains your data.
 
 Customers looking to leverage other models in addition to the above can also take advantage of Mendix's [(Azure) OpenAI Connector](/appstore/modules/genai/reference-guide/external-connectors/openai/), Amazon [Bedrock Connector](/appstore/modules/genai/reference-guide/external-connectors/bedrock/), and [Mistral Connector](/appstore/modules/genai/reference-guide/external-connectors/mistral/) to integrate numerous other models into their apps.
 
+{{% alert color="info" %}}
+Additional regions will be available in the future. If you have questions about upcoming regions, or would like to explore making models available in your specific region, reach out to `genai-resource-packs@mendix.com`.
+{{% /alert %}}
+
 ### Technical Details for Model Resource Packs
 
-| GenAI Model Resource Pack Plan             | S                 | M                 | L                 |
-| ------------------------------------------ | ----------------- | ----------------- | ----------------- |
-| Anthropic Claude (any version) (Tokens in/month)    | 2.5 million    | 5 million         | 10 million        |
-| Anthropic Claude (any version) (Tokens out/month)   | 1.25 million   | 2.5 million       | 5 million         |
-| Cohere Embed (any version) (Tokens in/month)        | 5 million      | 10 million        | 20 million        |
+| GenAI Model Resource Pack Plan | S | M | L |
+| ------------------------------------------------ | ------ | ----- | ---- |
+| Anthropic Claude (any version) (Tokens in/month) | 2.5 million | 5 million | 10 million |
+| Anthropic Claude (any version) (Tokens out/month) | 1.25 million | 2.5 million | 5 million |
+| Cohere Embed (any version) (Tokens in/month) | 5 million | 10 million | 20 million |
 
 ## Accessing GenAI Resources
 
@@ -151,3 +156,5 @@ Data sent to the Knowledge Base (vectors, chunks) is stored in a logically isola
 
 * [Enrich your Mendix app with GenAI capabilities](/appstore/modules/genai/)
 * [Build a Chatbot Using the AI Bot Starter App](/appstore/modules/genai/how-to/starter-template/)
+* [Create Your First Agent](/appstore/modules/genai/how-to/howto-single-agent/)
+* [Grounding Your Large Language Model in Data – Mendix Cloud GenAI](/appstore/modules/genai/how-to/howto-groundllm/)

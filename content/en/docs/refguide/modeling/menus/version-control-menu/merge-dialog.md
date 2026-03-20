@@ -6,7 +6,7 @@ url: /refguide/merge-dialog/
 
 ## Introduction
 
-With the **Merge** dialog you can [merge](/refguide/version-control/#merge) changes from a branch line to the main line. For example, a fix that you applied in a maintenance branch line can be merged back to the main line so that you do not have to apply the fix by hand again. Also if you completed developing a large feature in a separate branch line you can use merge to incorporate that feature into the main line.
+With the **Merge** dialog you can [merge](/refguide/version-control/glossary/#merge) changes from a branch line to the main line. For example, a fix that you applied in a maintenance branch line can be merged back to the main line so that you do not have to apply the fix by hand again. Also if you completed developing a large feature in a separate branch line you can use merge to incorporate that feature into the main line.
 
 {{% alert color="warning" %}}
 Before continuing with the merge action, make sure you are currently working in the development line to which you want to merge.
@@ -17,7 +17,7 @@ To access the **Merge** dialog box, open [Version Control](/refguide/version-con
 {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/merge-dialog/merge-dialog.png" alt="Merge Dialog" class="no-border" >}}
 
 {{% alert color="info" %}}
-Git ensures that changes are applied in the correct order and are not duplicated. This may lead to unexpected results if your branch reverts a previous commit. See [Reverting Uncommitted Changes](/refguide/using-version-control-in-studio-pro/#revert-previous-commit) in *Using Version Control in Studio Pro* for more information.
+Git ensures that changes are applied in the correct order and are not duplicated. This may lead to unexpected results if your branch reverts a previous commit. See [Reverting Uncommitted Changes](/refguide/reverting-changes/#revert-previous-commit) in *Using Version Control in Studio Pro* for more information.
 {{% /alert %}}
 
 Available scenarios are described in sections below.
@@ -60,3 +60,8 @@ To merge the whole branch back to the main line to integrate a new feature there
 ### Branch Line
 
 Choose the branch line that you want to merge. It is not necessary to select individual revisions in this case, because all revisions of the branch line are merged automatically.
+
+## Read More
+
+* [Pulling, Committing, and Pushing](/refguide/pushing-pulling/)
+* [Combining Changes and Resolving Conflicts](/refguide/resolving-conflicts/)

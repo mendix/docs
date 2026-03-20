@@ -33,6 +33,8 @@ While the data that should be viewable and editable in which role is application
 * Constraints on widgets in pages should not be used as a measure of security, but can filter out irrelevant data for the context of the page
 * Keep your attributes editable within data views, because if an access rule prohibits write access, your client will display it as non-editable – this way you are aware of the (correct) working of an access rule
 
+You can review and manage your entity access settings in the Security Overview in Mendix Studio Pro. This overview shows you your application's security configuration and allows you to verify which roles have access to specific entities and attributes (for more information, see [Security Overview](/refguide/security-overview/)).
+
 ## Avoiding Injection
 
 Injection occurs when (user) input can be misused to influence the behavior of a system. Common cases are parameters for queries (to influence the results of database queries) or HTML with JavaScript contents (to influence browser behavior).
@@ -276,3 +278,9 @@ To scan uploaded files for malicious content, do one of the following:
 
 * Create a custom module and configure the functionality yourself, for example, by using a [before commit event](/refguide/setting-up-data-validation/#validation-before-commit-event).
 * Check available modules in the [Mendix Marketplace](https://marketplace.mendix.com/). For more information on how to use the Mendix Marketplace content, see [How to Use Marketplace Content](/appstore/use-content/).
+
+## Enable Strict Mode
+
+Enable [strict mode](/refguide/strict-mode/) in your application. Strict mode helps ensure that entities are accessible only in the ways defined within your model, through microflows, nanoflows, widgets, or pages, by restricting certain client APIs.
+
+Configuring access rules is essential for the security of your app. However, accurately setting up these rules can be challenging. By enabling strict mode, you add a safety net in case access rules are misconfigured when your application is deployed, helping to reduce the risk of unintended data access. 

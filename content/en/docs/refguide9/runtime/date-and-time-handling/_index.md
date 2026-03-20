@@ -22,7 +22,7 @@ For brevity we will call these time zones user time, UTC, and server time.
 
 The server needs to know the time zone of each end-user. On startup, the browser reports both the current offset to UTC and, when available, a time zone identifier (for example, `Europe/Amsterdam`) from the underlying platform. When available, the runtime uses the identifier to properly handle DST for future and past dates. If no identifier is available, it falls back to the offset. You can explicitly set a time zone for each end-user, and that configured value takes precedence for server operations.
 
-The `System` module contains the entity `TimeZone` which has an association with the `User` entity. `TimeZone` has three attributes: a code (based on the[ Olson database](https://en.wikipedia.org/wiki/Tz_database)), a description suitable for showing to the end-user (for example "(GMT-05:00) New York") and a raw offset that is using for sorting the list of time zones.
+The `System` module contains the entity `TimeZone` which has an association with the `User` entity. `TimeZone` has three attributes: a code (based on the[Olson database](https://en.wikipedia.org/wiki/Tz_database)), a description suitable for showing to the end-user (for example "(GMT-05:00) New York") and a raw offset that is using for sorting the list of time zones.
 
 In the `Administration` module, the `Account_NewEdit` page adds a time zone selector to set the time zone of the end-user. By default, the `MyAccount` page does not have this selector. It is the administrator's task to correctly set the time zone. You can add it yourself if you want your end-users to be able to set their time zone.
 

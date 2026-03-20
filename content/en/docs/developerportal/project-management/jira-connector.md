@@ -22,6 +22,7 @@ If you are a Scrum Master of a Mendix app, you can link your app to Jira if you 
     * For a Kanban board, the **Stories** pane shows all stories from your board, taking the sub-query of the board settings into account, ordered by story key.
     * For a team-managed board, the **Stories** pane shows all stories from your board, which may include your backlog. If you do not wish to see backlog stories in Studio Pro, consider setting up your board without a backlog, and using a separate board to manage your backlog.
 
+* Allows you to change the status of a story or mark a task as **Done** from the [Stories pane](/refguide/stories-pane/) in Studio Pro.
 * Converting your [feedback items](/developerportal/app-insights/feedback/) in App Insights will result in a story in Jira.
 
 ## Limitations

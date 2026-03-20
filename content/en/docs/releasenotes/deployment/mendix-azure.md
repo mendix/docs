@@ -10,6 +10,14 @@ These release notes cover changes to deployment to [Mendix on Azure](/developerp
 
 For information on the current status of Mendix deployment, see [Mendix Status](https://status.mendix.com/).
 
+### Release date: February 26, 2026
+
+* We have improved the handling of PostgreSQL HA unavailability issues in certain Azure regions to prevent failed Spacelift Stack runs when infrastructure redundancy is enabled.
+
+### Known issues:
+
+* The initialised cluster is visible to multiple logged in users within a subscription on the Mendix on Azure portal.
+
 ### Release date: January 29, 2026
 
 * To improve your sign-in experience, we have eliminated an unnecessary pop-up that previously appeared after successfully signing into Azure.

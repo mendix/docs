@@ -129,7 +129,7 @@ Mistral does not directly connect to the knowledge resources. The model returns 
 
 This functionality is part of the implementation executed by the GenAI Commons Chat Completions operations mentioned earlier. As a developer, you need to make the system aware of your indexes and their purpose by registering them with the request. This is done using the GenAI Commons operation [Tools: Add Knowledge Base](/appstore/modules/genai/genai-for-mx/commons/#add-knowledge-base-to-request), which must be called once per knowledge resource before passing the request to the Chat Completions operation.
 
-Note that the retrieval process is independent of the model provider and can be used with any model that supports function calling, as it relies on the generalized `GenAICommons.DeployedKnowledgeBase` input parameter.
+Note that the retrieval process is independent of the model provider and can be used with any model that supports function calling, as it relies on the generalized `GenAICommons.ConsumedKnowledgeBase` input parameter.
 
 #### Vision {#chatcompletions-vision}
 

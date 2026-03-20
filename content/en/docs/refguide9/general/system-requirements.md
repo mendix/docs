@@ -22,9 +22,9 @@ The following frameworks are required. They will be installed automatically by t
 
 * Microsoft .NET desktop runtime (x64) and all applicable Windows security patches
 
-    | Studio Pro 9.0.0 - 9.24.33 | Studio Pro 9.24.34 and above |
-    | --- | --- |
-    | .NET 6 Desktop Runtime | .NET 8 Desktop Runtime |
+    | Studio Pro 9.0.0 - 9.24.33 | Studio Pro 9.24.34 - 9.24.41 | Studio Pro 9.24.42 and above |
+    | --- | --- | --- |
+    | .NET 6 Desktop Runtime | .NET 8 Desktop Runtime | .NET 10 Desktop Runtime |
     
 * Microsoft Visual C++ 2015 Redistributable Package (x64)
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
@@ -40,9 +40,9 @@ The following frameworks are required. They will be installed automatically by t
 
 If you are running Studio Pro on an ARM64 device (for example, an M1 Mac), you need the following version of .NET in addition to the x64 version listed above:
 
-| Studio Pro 9.0.0 - 9.24.33 | Studio Pro 9.24.34 and above |
-| --- | --- |
-| .NET 6 Desktop Runtime (arm64) | .NET 8 Desktop Runtime (arm64) |
+| Studio Pro 9.0.0 - 9.24.33 | Studio Pro 9.24.34  - 9.24.41 | Studio Pro 9.24.42 and above |
+| --- | --- | --- |
+| .NET 6 Desktop Runtime (arm64) | .NET 8 Desktop Runtime (arm64) | .NET 10 Desktop Runtime (arm64) |
 
 {{% alert color="info" %}}
 You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in Studio Pro.

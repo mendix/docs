@@ -177,10 +177,9 @@ To use the knowledge in a chat interface, create and adjust certain microflows a
 5. After the `Request found` decision, add a `Retrieve` action. In this example, we retrieve the same as in the insertion microflow.
     
     * **Source**: `From database`
-    * **Entity**: `GenAICommons.DeployedKnowledgeBase`
-    * **XPath constraint**: `[Name = 'HistoricalTickets']`
+    * **Entity**: `GenAICommons.ConsumedKnowledgeBase`
     * **Range**: `First`
-    * **Object name**: `DeployedKnowledgeBase_SimilarTickets`
+    * **Object name**: `ConsumedKnowledgeBase_SimilarTickets`
 
 6. Add the `Tools: Add Knowledge Base` action with the settings shown in the image below:
 

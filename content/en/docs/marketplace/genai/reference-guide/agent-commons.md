@@ -136,12 +136,10 @@ For more technical details, see the [Function Calling](/appstore/modules/genai/f
 
 ##### Adding tools from MCP servers
 
-Besides microflow tools, tools exposed by MCP servers are also supported. To add MCP tools to an agent version, select an MCP server configuration from the [MCP client module](/appstore/modules/genai/mcp-modules/mcp-client/). You can then choose one of two import types: 
+Besides microflow tools, tools exposed by MCP servers are also supported. To add MCP tools to an agent version, select an MCP server configuration from the [MCP client module](/appstore/modules/genai/mcp-modules/mcp-client/). You can then choose one of two to add MCP tools: 
 
-* Server: imports the entire server, including all tools it provides.
-* Tools: allows you to import specific tools from the server.
-
-Once the agent is called, all tools currently available from the server are added to the request and are available to the model.
+* **Use all available tools**: imports the entire server, including all tools it provides. This also means less control over individual tools and if tools are added in the future, that they get added automatically on agent execution.
+* **Select Tools**: allows you to import specific tools from the server and changing specific fields for individual tools.
 
 #### Adding Knowledge Bases
 
@@ -153,6 +151,8 @@ For supported knowledge bases registered in your app, you can connect them to ag
 * [PgVector Knowledge Base](/appstore/modules/genai/reference-guide/external-connectors/pgvector/#general-configuration)
 
 To allow an agent to perform semantic searches, add the knowledge base to the agent definition and configure the retrieval parameters, such as the number of chunks to retrieve, and the threshold similarity. Multiple knowledge bases can be added to the agent to pick from. Give each knowledge base a name and description (in human language) so that the model can decide which retrieves are necessary based on the input it gets.
+
+Note that [user access approval](/appstore/modules/genai/genai-for-mx/commons/#enum-useraccessapproval) can only be set to `HiddenForUser` or `VisibleForUser` for knowledge base retrievals.
 
 #### Testing and Refining the Agent
 
@@ -178,7 +178,7 @@ For most use cases, a `Call Agent` microflow activity can be used. You can find 
 
 ##### Call Agent with History {#call-agent-with-history}
 
-This action uses all defined settings, including the selected model, system prompt, tools, knowledge base, and model parameters to call the Agent using the specified `Request` and execute a `Chat Completions` operation. If a `Request` object is passed that already contains a system prompt, or a value for the parameters temperature, top P or max tokens, those values have priority and will not be overwritten by the agent configurations. If a context entity is configured, the corresponding context object must be passed so that variables in the system prompt can be replaced. The operation returns a `Response` object containing the assistant’s final message, consistent with the chat completions operations from GenAI Commons.
+This action uses all defined settings, including the selected model, system prompt, tools, knowledge base, and model parameters to call the Agent using the specified `Request` and execute a `Chat Completions` operation. If a `Request` object is passed that already contains a system prompt, or a value for the parameters temperature, top P, or max tokens, those values have priority and will not be overwritten by the agent configurations. If a context entity is configured, the corresponding context object must be passed so that variables in the system prompt can be replaced. The operation returns a `Response` object containing the assistant’s final message, consistent with the chat completions operations from GenAI Commons. If there are tool calls requested by the model and set for visibility to the user, the response will contain those instead, see [Human in the loop](/appstore/modules/genai/genai-for-mx/conversational-ui/#human-in-the-loop), for more information.
 
 To use it:
 
@@ -196,7 +196,7 @@ Download the [Agent Builder Starter App](https://marketplace.mendix.com/link/com
 
 ##### Call Agent without History {#call-agent-without-history}
 
-This action is only supported by Single-call agents which have a user prompt defined as part of the agent version. It uses all defined settings, including the selected model, system prompt, user prompt, tools, knowledge base, and model parameters to call the agent by executing a `Chat Completions` operation. If any of the parameters (system prompt, temperature, top P or max tokens) should be overwritten or you want to pass an additional knowledge base or tool that is not already defined with the agent, you can do this by creating a request and adding these properties before passing it as `OptionalRequest` to the operation. If a context entity was configured, the corresponding context object must be passed so that variables in the system prompt can be replaced. The operation returns a `Response` object containing the assistant’s final message, similar to the chat completions operations from GenAI Commons.
+This action is only supported by Single-call agents which have a user prompt defined as part of the agent version. It uses all defined settings, including the selected model, system prompt, user prompt, tools, knowledge base, and model parameters to call the agent by executing a `Chat Completions` operation. If any of the parameters (system prompt, temperature, top P, or max tokens) should be overwritten or you want to pass an additional knowledge base or tool that is not already defined with the agent. You can do this by creating a request and adding these properties before passing it as `OptionalRequest` to the operation. If a context entity was configured, the corresponding context object must be passed so that variables in the system prompt can be replaced. The operation returns a `Response` object containing the assistant’s final message, similar to the chat completions operations from GenAI Commons. If there are tool calls requested by the model and set for visibility to the user, the response will contain those instead, see [Human in the loop](/appstore/modules/genai/genai-for-mx/conversational-ui/#human-in-the-loop), for more information.
 
 To use it:
 

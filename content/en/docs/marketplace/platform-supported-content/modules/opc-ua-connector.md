@@ -87,7 +87,7 @@ Once the configuration is saved, the APIs can be used in your application.
 ## Advanced Connection {#advanced-connection}
 
 This section shows you how to configure a connection to an OPC-UA server without the discovery service.
-If you have succesfully set up your configuration in the Basic Configuration section, this section can be omited and please continue to section [Using Services](#using-services)
+If you have successfully set up your configuration in the **Basic Configuration** section, you can omit this step and continue to section [Using Services](#using-services).
 
 1. Create a microflow to set up a manual connection. Make sure that the microflow do the following in order:
 
@@ -156,10 +156,12 @@ If you ever want to reject a certificate from the server, remove it from the lis
 
 ### Advanced Server Certificate Validation
 
-Setting the `AdvancedConfiguration` constant to *true* enables advanced server certificate validation options during configuration. This allows developers to customize validation checks, for example by making checks more strict or by disabling specific checks.
+Setting the `AdvancedConfiguration` constant to *true* enables advanced server certificate validation options during configuration. This allows developers to customize validation checks, such as making checks more strict or disabling specific checks.    
 By default, only `ApplicationUri` validation is enabled. According to OPC UA specifications, this check should not be disabled. Other checks that can be enabled are hostname, validity, revocation status, certificate revocation lists (CRLs), end-entity key usage, and end-entity extended key usage.
 
-{{% alert color="warning" %}}Disabling server validation checks completely reduces connection security.{{% /alert %}}
+{{% alert color="warning" %}}
+Disabling server validation checks completely reduces connection security.
+{{% /alert %}}
 
 ## Using Services {#using-services}
 

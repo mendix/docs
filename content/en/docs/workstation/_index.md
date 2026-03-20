@@ -23,9 +23,8 @@ In addition to connectivity features, Workstation supports enterprise-grade depl
 
 Mendix Workstation has the following features:
 
-* Direct local device access - Mendix Workstation allows Mendix client applications to send and receive messages directly from the PC's local hardware.
-* No server detour - Communication happens between the client app and local devices — without routing through a central server, network overload, or any additional intermediate systems.
-* Interactions with the local PC, such as sending and receiving on-event messages, are handled with Mendix nanoflows.
+* Enables Mendix applications to communicate with local devices without routing through a central server, network overload, or any additional intermediate systems.
+* Uses Mendix nanoflows to handle interactions with the local PC, such as sending and receiving on-event messages.
 * Supports multiple interfaces:
 
     * PCSC (smart card Reader) - APDU protocol

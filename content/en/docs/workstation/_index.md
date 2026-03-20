@@ -38,7 +38,7 @@ Mendix Workstation has the following features:
 
 ## Use Cases
 
-Mendix Workstation can be used to create apps that handle use cases such as the following:
+You can use Mendix Workstation to create apps that handle use cases such as the following:
 
 * Printing labels on an industrial thermal label printer (for example, a Zebra printer)
 * Badge operators with an NFC smart card reader and PC/SC specification

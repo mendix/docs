@@ -45,7 +45,7 @@ You can use Mendix Workstation to create apps that handle use cases such as the 
 * Weighing materials with an industrial scale (for example, a Mettler Toledo SICS-compatible scale)
 * Connected smart tools (for example, screwdrivers with torque control)
 
-## Components of Mendix Workstation
+## Key Components
 
 Mendix Workstation consists of the following components:
 

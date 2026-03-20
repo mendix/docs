@@ -11,23 +11,13 @@ cascade:
 
 ## Introduction
 
-Mendix Workstation is designed to help you build smarter, faster, and more operator-friendly applications for shop floor operators. It enables Mendix cloud applications to directly interact with peripheral devices on a local workstation, without relying on intermediate servers or heavy network traffic.
+Mendix Workstation helps you build applications for shop floor operators. It enables Mendix applications to directly interact with peripheral devices on a local workstation, without relying on intermediate servers or heavy network traffic.
 
-By connecting applications directly to the PC's local resources, Workstation allows for near real-time communication with devices like printers, barcode scanners, smart card readers, and industrial scales, all from within a Mendix app. This setup ensures low-latency performance and reduces infrastructure complexity.
+By connecting applications directly to the PC's local resources, Workstation allows Mendix apps to communicate in near real-time with devices like printers, barcode scanners, smart card readers, and industrial scales. This setup ensures low-latency performance and reduces infrastructure complexity.
 
 Workstation is especially valuable in manufacturing and industrial environments where precision, speed, and reliability are key to operator efficiency.
 
-In addition to connectivity features, Workstation supports enterprise-grade deployment of projects across multiple environments and sites. It enables distributed teams to collaborate effectively and centrally manage connections to a wide range of heterogeneous equipment assets in a controlled and secure manner.
-
-## Licensing Mendix Workstation
-
-Mendix Workstation is [Limited Availability](https://docs.mendix.com/releasenotes/release-status/#limited-availability) for production use. Support is provided according to your Mendix SLA if you purchased a Workstation license. If you want to take Mendix Workstation into production, contact your CSM to see what arrangements are possible. Without a license you can use Mendix Workstation for development, but workspaces are individual and cannot be shared.
-
-The following functionalities are only available with a license:
-
-* [Bulk import of stations](/mendix-workstation/import-export/)
-* [Bulk registration of Workstation Clients](/mendix-workstation/register/)
-* [Inviting users](/mendix-workstation/build-app/#invite-users)
+In addition to connectivity features, Workstation supports enterprise-grade deployment of projects across multiple environments and sites. It enables distributed teams to collaborate effectively and centrally manage connections to a wide range of equipment in a controlled and secure manner.
 
 ## Features of Mendix Workstation
 
@@ -45,15 +35,6 @@ Mendix Workstation has the following features:
     * File System
 
 * Can emulate and simulate interfaces.
-
-## Benefits of Using Mendix Workstation
-
-* Improve operator user experience and efficiency.
-* Renovate home-grown application and get control of legacy systems.
-* Keep core systems clean.
-* Create apps adapted to the operator's job, instead of forcing the operator to adapt their job to the software.
-* Compose new forms of user experience tailored to manufacturing processes, equipment and environment.
-* Expand to adjacent users and domains of your core systems and cross boundaries between silos.
 
 ## Use Cases
 
@@ -76,5 +57,15 @@ Mendix Workstation consists of the following components:
 Together, these components enable Mendix applications to securely and efficiently integrate with local devices, bridging the gap between digital workflows and physical operations.
 
 {{< figure src="/attachments/workstation/WorkstationDiagram.png" class="no-border" >}}
+
+## Licensing Mendix Workstation
+
+Mendix Workstation is [Limited Availability](https://docs.mendix.com/releasenotes/release-status/#limited-availability) for production use. Support is provided according to your Mendix SLA if you purchased a Workstation license. If you want to take Mendix Workstation into production, contact your CSM to see what arrangements are possible. Without a license you can use Mendix Workstation for development, but workspaces are individual and cannot be shared.
+
+The following functionalities are only available with a license:
+
+* [Bulk import of stations](/mendix-workstation/import-export/)
+* [Bulk registration of Workstation Clients](/mendix-workstation/register/)
+* [Inviting users](/mendix-workstation/build-app/#invite-users)
 
 ## Read More

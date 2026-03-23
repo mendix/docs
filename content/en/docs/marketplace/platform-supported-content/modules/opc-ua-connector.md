@@ -60,7 +60,7 @@ The descriptions of the actions are as follows:
 3. Run the app locally and open the app.
 4. Log in as a user with the `CanConfigure` user role.
 5. Go to the added **Configurations** page.
-6. If you want to connect to a server with a message security mode `Sign` or `Sign&Encrypt`, add your client certificate by clicking **Update application certificate** in the upper-right corner of the page.
+6. If you want to connect to a server with a message security mode `Sign` or `Sign&Encrypt`, open the `Certifcates` page by clicking **Manage certificates** and then add your client certificate by clicking **Update application certificate** in the upper-right corner of the page. 
 
 7. Click **New configuration** in the upper-right corner of the page.
 

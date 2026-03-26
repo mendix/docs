@@ -67,6 +67,6 @@ To install the solution, perform the following steps:
 
 The installer performs the basic installation and applies the configurations at the same time.
 
-## Upgrading the Operator with Helm Charts
+## Applying the Configuration Changes with Helm Charts
 
 If you want to update your configuration (for example, change the database), recreate the yaml file by using the same wizard as above, and then run the following command: `helm update -n <your namespace> -f <yaml file name> <your namespace> ./mx-privatecloud-operator-installer`.

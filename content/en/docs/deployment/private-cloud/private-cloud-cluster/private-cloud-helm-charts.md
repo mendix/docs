@@ -22,9 +22,8 @@ Using the solution offers the following advantages when compared to the traditio
 * Helm-based installation does not require elevated permissions, and can be run on individual workstations. Because of that, you can implement them if you use GitOps and similar DevOps practices.
 * By using Helm charts, you can integrate configuration deployment into their existing pipelines. This reduces the need for manual intervention. For users who are familiar with Helm charts, it is a more intuitive and preferred method compared to manual CLI operations.
 * The deployment process is streamlined, consistent, and repeatable. 
-* Configuration is easy and can be fine-tuned to specific requirements.
-* The upgrade process is simplified.
-* Components can be cleanly uninstalled when no longer needed.
+* Managing the configurations is easy.
+* In future releases, upgrade process will be simplified.
 
 ### Current Limitations
 

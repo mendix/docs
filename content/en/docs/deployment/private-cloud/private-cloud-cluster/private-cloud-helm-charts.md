@@ -7,16 +7,20 @@ weight: 50
 
 ## Introduction
 
-By default, Mendix on Kubernetes uses the mxpc-cli tool for configuring namespaces and performing base installations. However, customers can also integrate Helm charts into their pipelines in order to directly install components and run the configurations through the Helm chart UI.
+By default, Mendix on Kubernetes uses the mxpc-cli tool for configuring namespaces and performing base installations. However, you can also integrate Helm charts into your pipelines in order to directly install components and run the configurations through the Helm chart UI.
 
-The solution consists of two main components: the Helm charts themselves, and a tool called Mendix CLI. The Mendix CLI acts as a UI for customers, allowing them to input configurations and then generate Helm charts values from the helm charts.
+The solution consists of two main components: the Helm charts themselves, and a tool called Mendix CLI. The Mendix CLI acts as a user interface, allowing you to input configurations and then generate Helm charts values from the helm charts.
+
+{{% alert color="info" %}}
+Before using Helm charts, make sure to review the official Helm documentation.
+{{% /alert %}}
 
 ### Benefits of Using the Helm Charts
 
 Using the solution offers the following advantages when compared to the traditional method of using the mxpc-cli tool:
 
-* Helm-based installation does not require elevated permissions, and can be run on individual workstations. Because of that, it can be implemented by customers who use GitOps and similar DevOps practices.
-* By using Helm charts, customers can integrate configuration deployment into their existing pipelines. This reduces the need for manual intervention. For customers who are already familiar with Helm charts, it is a more intuitive and preferred method compared to manual CLI operations.
+* Helm-based installation does not require elevated permissions, and can be run on individual workstations. Because of that, you can implement them if you use GitOps and similar DevOps practices.
+* By using Helm charts, you can integrate configuration deployment into their existing pipelines. This reduces the need for manual intervention. For users who are familiar with Helm charts, it is a more intuitive and preferred method compared to manual CLI operations.
 * The deployment process is streamlined, consistent, and repeatable. 
 * Configuration is easy and can be fine-tuned to specific requirements.
 * The upgrade process is simplified.

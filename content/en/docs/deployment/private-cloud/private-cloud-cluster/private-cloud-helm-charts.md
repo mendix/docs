@@ -30,10 +30,12 @@ Using the solution offers the following advantages when compared to the traditio
 The solution currently has the following limitations compared to using the mxpc-cli tool:
 
 * The Helm chart UI cannot be used to configure the Global Operator.
-* Upgrading namespaces is not supported.
-* Namespaces initially created with mxpc-cli cannot be migrated and managed with Helm charts.
+* We do not have any UI-driven upgrade approach.
+* With the current release, namespaces initially created with mxpc-cli cannot be migrated and managed with Helm charts.
+* The Helm chart does not cover [advanced operator configurations](/developerportal/deploy/private-cloud-cluster/#advanced-operator-configuration).
+* Currently, we do not provide a public repository to download the Helm chart. The Helm charts are currently only be downloaded through our in house mx-ops-cli web UI.
 
-## Installing the Operator with Helm Charts
+## Installing and Configuring the Mendix on Kubernetes with Helm Charts
 
 To install the solution, perform the following steps:
 
@@ -60,6 +62,8 @@ To install the solution, perform the following steps:
 8. Click **Generate & Download** to generate the yaml file with the configurations that you provided.
 
 9. Run the following command: `helm install -n <your namespace> -f <yaml file name> <your namespace> ./mx-privatecloud-operator-installer`.
+
+10. Ensure that your cluster have access to the Mendix on Kubernetes Portal for adding the storage plans, and that the Private Cloud Portal is safelisted in the cluster.
 
 The installer performs the basic installation and applies the configurations at the same time.
 

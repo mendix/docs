@@ -9,7 +9,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 A static label shows a line of static text. You can use it to place custom text inside a data view, template grid or table.
 
@@ -21,16 +21,16 @@ If you want to insert the current page number or the total page count in your do
 
 For example, static label content `Page [%pageNumber%] of [%totalPageCount%]` will print **Page 2 of 4**.
 
-## 2 Common Properties
+## Common Properties
 
 {{% snippet file="/static/_includes/refguide8/name-property.md" %}}
 
-## 3 Appearance Properties
+## Appearance Properties
 
-### 3.1 Caption
+### Caption
 
 This is the value that will be displayed in the document.
 
-### 3.2 Style
+### Style
 
 For details, see [Style](/refguide8/style/).

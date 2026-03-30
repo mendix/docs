@@ -7,14 +7,14 @@ weight: 10
 
 {{% alert color="warning" %}}The data grid widget is not supported on native mobile pages.{{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 shows a list of objects in a table format. For example, a data grid can show customer's name, grade, and all the orders a customer has placed:
 
 {{< figure src="/attachments/refguide8/modeling/pages/data-widgets/grids/data-grid/data-grid.png" class="no-border" >}}
 Using controls provided by the data grid you can browse, search, and edit those objects.
 
-## 2 Components
+## Components
 
 A data grid contains the following components: 
 
@@ -24,7 +24,7 @@ A data grid contains the following components:
 4. [Grid Columns](/refguide8/columns/) – allows end-users to set properties for a data grid column
     {{< figure src="/attachments/refguide8/modeling/pages/data-widgets/grids/data-grid/data-grid-components.png" class="no-border" >}}
 
-## 3 Properties
+## Properties
 
 An example of data grid properties is represented in the image below:
 
@@ -38,15 +38,15 @@ Data grid properties consist of the following sections:
 * [General](#general)
 * [Visibility](#visibility)
 
-### 3.1 Common Section {#common}
+### Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide8/common-section-link.md" %}}
 
-### 3.2 Data Source Section {#data-source}
+### Data Source Section {#data-source}
 
 The data source determines which objects will be shown in a list view. For general information on data sources, see [Data Sources](/refguide8/data-sources/).
 
-#### 3.2.1 Type
+#### Type
 
 The list view supports the following types of data sources: 
 
@@ -57,13 +57,13 @@ The list view supports the following types of data sources:
 
 The database and XPath sources retrieve objects from the database and supports searching and sorting. 
 
-### 3.3 Design Properties Section {#design-properties}
+### Design Properties Section {#design-properties}
 
 {{% snippet file="/static/_includes/refguide8/design-section-link.md" %}} 
 
-### 3.4 General Section {#general}
+### General Section {#general}
 
-#### 3.4.1 Show Control Bar Buttons {#show-control-bar}
+#### Show Control Bar Buttons {#show-control-bar}
 
 This property indicates whether the control bar buttons will be visible in the end-user interface.
 
@@ -73,7 +73,7 @@ Even if the control bar buttons are invisible, there can still be a default butt
 
 Default: *True*
 
-#### 3.4.2 Show Paging Buttons {#show-paging-buttons}
+#### Show Paging Buttons {#show-paging-buttons}
 
 {{% alert color="warning" %}}
 This property is not available in Mendix 8.13 and above. Use the [Show Paging Bar](#show-paging-bar) property instead.
@@ -83,7 +83,7 @@ This property indicates with the buttons to page through the information in the 
 
 Default: *True*
 
-#### 3.4.3 Show Paging Bar {#show-paging-bar}
+#### Show Paging Bar {#show-paging-bar}
 
 {{% alert color="info" %}}
 This property was introduced in Mendix 8.13. It replaces the [Show Paging Buttons](#show-paging-buttons) property.
@@ -103,19 +103,19 @@ Default: *Yes (with total count)*
 Hiding the control bar also hides the paging buttons. For details, see [Show Control Bar Buttons](#show-control-bar).
 {{% /alert %}}
 
-#### 3.4.4 Number of Rows {#number-of-rows}
+#### Number of Rows {#number-of-rows}
 
 With this property you can change the number of rows that will be shown in one page. See also the property 'Show empty rows'.
 
 Default: *20*
 
-#### 3.4.5 Show Empty Rows {#show-empty-rows}
+#### Show Empty Rows {#show-empty-rows}
 
 If you choose to show empty rows there will always be the grid will always show the same number of rows (see 'Number of rows') even if there are less objects to show on the page.
 
 Default: *False*
 
-#### 3.4.6 Selection Mode {#selection-mode}
+#### Selection Mode {#selection-mode}
 
 The selection mode determines whether and how the user can select items in the grid.
 
@@ -127,13 +127,13 @@ The selection mode determines whether and how the user can select items in the g
 | Multi-selection | The user can select multiple items by clicking the first one and holding the 'Ctrl' key while clicking on other items. Simply clicking an item will deselect all items and make the clicked item the selection. |
 | Simple multi-selection | The user can select multiple items by simply clicking on them. |
 
-#### 3.4.7 Select First {#select-first}
+#### Select First {#select-first}
 
 This property indicates whether the first item will be selected initially. This is especially useful if there is a data view listening to this grid.
 
 Default: *False*
 
-#### 3.4.8 Default Button Trigger {#default-button-trigger}
+#### Default Button Trigger {#default-button-trigger}
 
 The default button can be triggered by a single or a double click a row.
 
@@ -142,29 +142,29 @@ The default button can be triggered by a single or a double click a row.
 | Single click | A single click triggers the default button. This cannot be used in combination with allowing the user to select rows. |
 | Double click  *(default)* | A double click triggers the default button. |
 
-#### 3.4.9 Refresh Time (in Seconds) {#refresh-time}
+#### Refresh Time (in Seconds) {#refresh-time}
 
 If the refresh time is non-zero, the data grid will refresh its contents every given number of seconds. For example, a task list could be refreshed every minute so that you know when new tasks arrive. By default the refresh time is zero and this means that the grid will not automatically refresh itself.
 
 Default: *0*
 
-#### 3.4.10 Tooltip Page {#tooltip-page}
+#### Tooltip Page {#tooltip-page}
 
 A tooltip page is a page that appears when you hover your mouse over a row. The tooltip page should consist of a data view on the same entity as the data grid. Besides creating and connecting a tooltip page you also have to specify on which columns the tooltip will appear. See the property 'Show tooltip' of [data grid columns](/refguide8/columns/).
 
-### 3.5 Visibility Section {#visibility}
+### Visibility Section {#visibility}
 
 {{% snippet file="/static/_includes/refguide8/visibility-section-link.md" %}}
 
-## 4 Performing Specific Actions
+## Performing Specific Actions
 
 To perform actions on a data grid, select it on a page and right-click it. The list of possible actions opens. While some actions from this list, such as **Select data source**, **Edit condition for visible**, are a quick way to set the properties, the following actions are specific actions that you can perform:
 
-* **Go to entity** – opens a domain model and highlights an an entity that is used as the data source 
+* **Go to entity** – opens a domain model and highlights an entity that is used as the data source 
 * **Go to data source microflow** – this action is only displayed when a microflow is set as the data source and opens this microflow 
 * **Go to tooltip page** – opens a page select as the [tooltip page](#tooltip-page) in properties
 
-## 5 Read More
+## Read More
 
 * [Page](/refguide8/page/)
 * [Data Widgets](/refguide8/data-widgets/)

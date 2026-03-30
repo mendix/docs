@@ -3,7 +3,7 @@ title: "XPath Expressions"
 url: /refguide8/xpath-expressions/
 ---
 
-## 1 Overview
+## Overview
 
 Expressions are used within constraints to generate a value that is true.
 
@@ -13,11 +13,11 @@ There are three types of expressions usable for constraints:
 * Functions
 * Exist-expressions
 
-## 2 Comparisons
+## Comparisons
 
 A comparison expression consists of two attributes or values separated by a comparison [operator](/refguide8/xpath-operators/) like `=`, `<=,` and `>`.
 
-### 2.1 Examples
+### Examples
 
 For example, this query retrieves all customers whose name is "Jansen":
 
@@ -57,15 +57,15 @@ The same result can be retrieved by doing the following query:
 
 However, it is strongly recommended not to use the notation above. This is because its execution is inefficient and will result in a lower performance due to the manner in which it is processed by the database.
 
-## 3 Functions
+## Functions
 
 For information on the available functions, see [XPath Constraint Functions](/refguide8/xpath-constraint-functions/).
 
-## 4 Exist-Expressions {#exist}
+## Exist-Expressions {#exist}
 
 The last type of expression is the exist-expression, which can be used to check whether a specific association is filled or not.
 
-### 4.1 Examples
+### Examples
 
 This query retrieves all the customers who have placed at least one order:
 

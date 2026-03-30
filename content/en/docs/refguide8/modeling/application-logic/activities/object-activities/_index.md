@@ -5,7 +5,7 @@ weight: 10
 #To update screenshots of these microflows in Studio Pro, use the Microflow Screenshots app.
 ---
 
-## 1 Introduction
+## Introduction
 
 When working with the Mendix Platform, objects of entities are always being manipulated. This happens implicitly within [data widgets](/refguide8/data-widgets/) on a page, or explicitly using activities in microflows and nanoflows.
 
@@ -25,6 +25,6 @@ The following are the object activities you can use in your microflow or nanoflo
 * [Retrieve](/refguide8/retrieve/) – gets one or more objects of an entity
 * [Rollback object](/refguide8/rollback-object/) – undoes uncommitted changes made to an object
 
-## 2 Read More
+## Read More
 
 * [Activities](/refguide8/activities/)

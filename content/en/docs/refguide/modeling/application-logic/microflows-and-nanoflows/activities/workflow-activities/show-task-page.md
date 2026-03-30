@@ -9,11 +9,11 @@ weight: 50
 This activity can only be used in microflows.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The **Show user task page** activity can be used to open a user task page defined in the user task properties. 
 
-## 2 Properties
+## Properties
 
 An example of show user task page properties is represented in the image below:
 
@@ -26,7 +26,7 @@ The **Show user task page** properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section {#action}
+## Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -34,11 +34,11 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
-### 3.1 User Task Object
+### User Task Object
 
 The user task object of the System.WorkflowUserTask entity available from the microflow parameters.
 
-### 3.2 Auto-Assign {#auto-assign}
+### Auto-Assign {#auto-assign}
 
 With this option, you can automatically assign the user task to the user who has opened the task page.
 
@@ -52,7 +52,7 @@ This option is enabled by default.
 Only the user who is assigned to the task can complete it (otherwise, it results in a Runtime error). If you choose to not automatically assign the user to the task when the page is opened, make sure that the user is assigned before the task is completed. For example, you can add the **Assign to me** button to the page.
 {{% /alert %}}
 
-### 3.3 Who Can Open
+### Who Can Open
 
 This option specifies who is able to open the user task page when a user has already been assigned to it.
 
@@ -65,6 +65,6 @@ This option specifies who is able to open the user task page when a user has alr
 For a multi-user task, this setting has no effect if the [Auto-Assign](#auto-assign) is enabled.
 {{% /alert %}}
 
-## 4 Common Section {#common}
+## Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}

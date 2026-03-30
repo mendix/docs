@@ -5,7 +5,7 @@ weight: 31
 description: "These documents explain how to best arrange data syncing, startups, and improve other aspects of mobile apps."
 ---
 
-## 1 Introduction
+## Introduction
 
 The following documents will help you understand data syncing, accelerate your app's performance, and more:
 

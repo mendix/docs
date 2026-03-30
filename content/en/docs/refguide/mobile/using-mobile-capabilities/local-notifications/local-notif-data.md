@@ -5,7 +5,7 @@ weight: 40
 description: A tutorial for integrating data into your push notifications.
 ---
 
-## 1 Introduction
+## Introduction
 
 Several apps make it so that when user taps a notification, the user is taken to specific page with specific parameters set. You can achieve this by sending data along with a notification. 
 
@@ -20,7 +20,7 @@ You will create the following things to send data to pages:
 * **One microflow** – Create *DS_TestEntity* to create dummy data for testing.
 * **Three nanoflows** – Create *DS_Notification* to create a dummy notification object *ACT_PassGUIDToNotification* to pass a GUID, and *On_tapNotification* to process data from your notification.
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
@@ -28,7 +28,7 @@ Before starting this guide, make sure you have completed the following prerequis
 * Install the [Make It Native](/refguide/getting-the-make-it-native-app/) app on your mobile device
 * Complete the preceding tutorials in this [Use Local Notifications](/refguide/mobile/using-mobile-capabilities/local-notifications/) series
 
-## 3 Sending Data to Pages
+## Sending Data to Pages
 
 To make your two entities, do the following:
 
@@ -116,11 +116,11 @@ To make your page, do the following:
 Next you will learn how to pass data to pages after you have tapped a notification. First, make a nanoflow:
 
 1. Create a nanoflow named *ACT_PassGUIDToNotification*.
-2. Add a retrieve action to your nanoflow, set **Source** to **From Database**, and set **Range** to **First**. Click **Entity** > **Select** and select the **TestEntity**. In **Object name** type *FirstTestEntityObject*. Then click **OK**. This will be the object that gets the GUID: 
+2. Add a **Retrieve object(s)** activity to your nanoflow, set **Source** to **From database**, and set **Range** to **First**. Click **Entity** > **Select** and select the **TestEntity**. In **Object name** type *FirstTestEntityObject*. Then click **OK**. This will be the object that gets the GUID: 
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/retrieve-object.png" alt="retrieve object" class="no-border" >}}
 
-3. Add a JavaScript Action Call activity to your nanoflow.
+3. Add a **Call JavaScript action** activity to your nanoflow.
 4. Double-click the action call activity.
 5. Click **JavaScript Action** > **Select**.
 6. Type *GetGuid* into the search field, click **GetGuid**, and click **Select**. (You are able to find the GetGuid JavaScript action because it is included in the NanoflowCommons module inside the Native Quickstarter template.)
@@ -141,7 +141,7 @@ Next you will learn how to pass data to pages after you have tapped a notificati
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/guid-nano-with-four-strings.png" alt="actionname"   width="500"  class="no-border" >}}
 
-11. Drag a JavaScript action call activity into your nanoflow. 
+11. Drag a **Call JavaScript action** activity into your nanoflow. 
 12. Double-click the action call.
 13. Click **JavaScript action** > **Select**.
 14. Type *DisplayNotification* into the search field, click the corresponding JavaScript action, and click **Select**.
@@ -164,8 +164,8 @@ Good job! When a user taps a notification from the **Pass GUID to Notification**
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-data/notif-entity.png" alt="guid button" class="no-border" >}}
 
-6. Drag a JavaScript action call into your nanoflow.
-7. Double-click the JavaScript action call, then click **Select**. 
+6. Drag a **Call JavaScript action** activity into your nanoflow.
+7. Double-click the Call JavaScript action activity, then click **Select**. 
 8. Type *GetObjectByGuid* into the search field, click that action, then click **Select**. 
 9. Click **TestEntity** and then click **Select**.
 10. Next to the **Object guid** drop-down menu click **Edit**.
@@ -238,6 +238,6 @@ Great job! Now test your data notification functionality:
 
 Congratulations! You have harnessed the power of data to enhance your push notifications. Next, in [How to Use Local Notifications Part 5: Scheduling](/refguide/mobile/using-mobile-capabilities/local-notifications/local-notif-schedule-cancel/), you will learn how to schedule notifications for specific times and cancel them.
 
-## 4 Read More
+## Read More
 
 * [Build JavaScript Actions](/howto/extensibility/build-javascript-actions/)

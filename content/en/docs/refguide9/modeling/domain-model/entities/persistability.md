@@ -4,7 +4,7 @@ url: /refguide9/persistability/
 weight: 20
 ---
 
-## 1 Introduction
+## Introduction
 
 The **Persistable** property of an entity in the domain model defines whether an object can be committed to the database.
 
@@ -12,19 +12,19 @@ Persistable entities are colored blue in the domain model. Non-persistable entit
 
 {{< figure src="/attachments/refguide9/modeling/domain-model/entities/persistability/persistable-vs-non-persistable.png" alt="Picture of a persistable and a non-persistable entity" class="no-border" >}}
 
-## 2 Persistable Entities {#persistable}
+## Persistable Entities {#persistable}
 
 When an entity is declared persistable, a database table is created for the entity.
 
 Committing an object of this entity type results in a row being inserted into the table. The attribute and association values for the object are saved in the database as well.
 
-### 2.1 Autocommitted Objects
+### Autocommitted Objects
 
 Usually, a rollback reverts changes in memory since the last commit.
 
 However, performing a rollback on persistable autocommitted objects or objects with the state "NEW" deletes the row corresponding with this object from the database table for the associated entity. See [Object Activities](/refguide9/object-activities/) for more information about autocommitted objects.
 
-## 3 Non-Persistable Entities {#non-persistable}
+## Non-Persistable Entities {#non-persistable}
 
 Non-persistable entities are stored in the runtime memory and never get committed to the database. Therefore, they have no table in the database and the only way to retrieve them is [over associations](/refguide9/retrieve/#association).
 

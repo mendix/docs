@@ -1,0 +1,220 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: User Deactivation API
+  description: The API allows a Mendix Admin to deactivate user of company by providing UUID of the user.
+  termsOfService: 'https://www.mendix.com/terms-of-use/'
+  contact:
+    name: Mendix Support
+    url: 'https://support.mendix.com'
+    email: support@mendix.com
+servers:
+  - url: 'https://users-status-api.home.mendix.com/v1'
+paths:
+  '/platform-users/{uuid}':
+    patch:
+      tags:
+        - User Deactivation API
+      summary: Deactivate the user based on UUID provided
+      description: This API deactivates user of the company based on the UUID provided as parameter
+      operationId: user-deactivation-api
+      parameters:
+        - name: uuid
+          in: path
+          description: UUID of the user
+          required: true
+          schema:
+            type: string
+            pattern: '^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$'
+            minLength: 36
+            maxLength: 36
+            example: c5f3afba-cc28-4f56-b922-1e606807bed4
+      requestBody:
+        description: |-
+          Request payload containing the Active attribute. It should be false to deactivate the user
+          Note: The API only allows 'false' as value
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/requestPayload'
+            examples:
+              requestPayload:
+                value:
+                  active: false
+      responses:
+        '204':
+          description: No Content
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                payloadNotJSON:
+                  value:
+                    error:
+                      code: 400
+                      message: 'Error parsing JSON. com.mendix.systemwideinterfaces.core.UserException: A problem occurred parsing attribute ''Active'' of object of type ''CompanyService.PatchUserRequest''. The value was ''fal''. This isn''t allowed by the schema.'
+                invalidPayload:
+                  value:
+                    error:
+                      message: The request data did not validate
+                      detail: Request payload is invalid.
+                      code: 400
+                      instance: 'urn:uuid:d18fb790-05e7-4cd1-8f36-31326a894778'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: '#/components/schemas/error'
+                  - $ref: '#/components/schemas/patError'
+              examples:
+                invalidAccessToken:
+                  value:
+                    error:
+                      message: Unauthorized
+                      detail: Access token is non-existent or expired.
+                      code: 401
+                      instance: 'urn:uuid:766f0ee2-e9a2-445b-bbc5-93dfdc5b5d22'
+                wrongPATtoken:
+                  value: Supplied personal access token is invalid.
+                emptyToken:
+                  value:
+                    error:
+                      message: Unauthorized
+                      detail: No access token provided in the request.
+                      code: 401
+                      instance: 'urn:uuid:6472756a-a65a-4a32-8ff7-372d5deef7f5'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                requestorNotAdmin:
+                  summary: 403 Forbidden wrong admin
+                  value:
+                    error:
+                      message: Forbidden
+                      detail: Requestor is not Mendix Admin for the company
+                      code: 403
+                      instance: 'urn:uuid:0e5d5395-da05-4f27-86b3-cc5e559af5ab'
+                personDeactivatingHimself:
+                  summary: 403 member Cannot deactivate Himself
+                  value:
+                    error:
+                      message: Forbidden
+                      detail: '{"status":403,"title":"Forbidden","detail":"Member cannot (de)active himself"}'
+                      code: 403
+                      instance: 'urn:uuid:9d13b5a2-47be-495d-a4f8-321de86b7e47'
+                forbiddenScope:
+                  value:
+                    error:
+                      message: Forbidden
+                      detail: Access token does not include the required scope.
+                      code: 403
+                      instance: 'urn:uuid:0cbe900c-6656-447d-8e51-54097cdfcd65'
+        '429':
+          description: Too Many Requests
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                x-examples:
+                  Example 1:
+                    message: API rate limit exceeded
+              examples:
+                RateLimitExceeded:
+                  value:
+                    message: API rate limit exceeded
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                InternalServerError:
+                  value:
+                    error:
+                      message: Internal Server Error
+                      detail: Internal Server error
+                      code: 500
+                      instance: 'urn:uuid:dab1c9ba-1b2a-423a-8a56-4f627a571740'
+        '503':
+          description: Service Unavailable
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  requestId:
+                    type: string
+                x-examples:
+                  Example 1:
+                    message: failure to get a peer from the ring-balancer
+                    request_id: 960c04249094f36ecf89252924e61571
+              examples:
+                ServerUnavailable:
+                  value:
+                    message: failure to get a peer from the ring-balancer
+                    request_id: 960c04249094f36ecf89252924e61571
+      security:
+        - PersonalAccessToken: []
+      servers:
+        - url: 'https://users-status-api.home.mendix.com/v1'
+          description: ''
+components:
+  securitySchemes:
+    PersonalAccessToken:
+      type: apiKey
+      description: 'For more information about requesting and using a token see [Create a Personal Access Token with Warden](https://docs.mendix.com/developerportal/community-tools/warden).<br/> The header must be set to `MxToken <Your PAT>`'
+      name: Authorization
+      in: header
+  schemas:
+    requestPayload:
+      type: object
+      description: The payload format
+      properties:
+        active:
+          type: boolean
+      x-examples:
+        Example 1:
+          active: false
+    error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            message:
+              type: string
+            detail:
+              type: string
+            code:
+              type: integer
+            instance:
+              type: string
+      x-examples:
+        Example 1:
+          error:
+            message: Unauthorized
+            detail: Access token is non-existent or expired.
+            code: 401
+            instance: 'urn:uuid:766f0ee2-e9a2-445b-bbc5-93dfdc5b5d22'
+    patError:
+      type: string
+      title: patError
+      x-examples:
+        WrongPATToken: Supplied personal access token is invalid.
+security:
+  - PersonalAccessToken: []

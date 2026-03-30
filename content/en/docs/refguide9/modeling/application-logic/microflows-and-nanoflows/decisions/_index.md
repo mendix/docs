@@ -5,7 +5,7 @@ weight: 50
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-## 1 Introduction
+## Introduction
 
 Decisions are elements that split or merge sequence flows based on conditions set for these elements. Decisions have a shape of a diamond.
 

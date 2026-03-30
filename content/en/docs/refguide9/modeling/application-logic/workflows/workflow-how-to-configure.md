@@ -8,7 +8,7 @@ aliases:
     - /howto9/logic-business-rules/workflow-how-to-configure/
 ---
 
-## 1 Introduction 
+## Introduction 
 
 Workflow is a new visual language in Mendix Studio Pro that allows you to build extendable processes. It is fully integrated with other visual languages, such as microflow editor and page editor. 
 
@@ -28,7 +28,7 @@ The how-to describes the following use case:
 
 You would like to build an employee onboarding process. At first, an HR specialist needs to initiate the onboarding process for a new employee. The employee's manager then steps in and select devices for the employee. The manager also needs to specify whether the new hire is working from the office or home. The Facilities department will then need to prepare a workspace. Depending on where the new hire works from (the office or home), the Facilities department will either prepare a desk or ship the devices to the employee's address. 
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -68,9 +68,9 @@ Before starting this how-to, make sure you have completed the following prerequi
     * WorkflowDashboard
     * WorkflowAdminCenter
 
-## 3 Setting Up Security 
+## Setting Up Security 
 
-### 3.1 Configuring User Roles
+### Configuring User Roles
 
 Administrator and User roles are part of your app by default. Now you need to create three app roles for a manager, Facilities, and HR and configure them correctly. 
 
@@ -116,21 +116,21 @@ Do the following:
 
 You have configured new app roles for Facilities, Manager, and HR, and enabled the Administrator role to monitor workflows, view their progress, and change their settings. 
 
-### 3.2 Configuring Demo Users
+### Configuring Demo Users
 
 You need to create demo users for the newly created app roles to be able to test your app later. For more information, see the [Testing Workflow](#test-workflow) section. Follow the steps below: 
 
 1. In the App Explorer, open **App** > **Security** > the **Demo users** tab. 
 2. Click **New**.
 3. In the **Add Demo User** dialog box, set the **User name** to **demo_facilities**.
-4. Set the same entity you selected for the **User entity** setting in  [App Settings](/refguide9/app-settings/#workflows) > **Workflows** tab: set **Entity** to **Administration.Account**.
+4. Set the same entity you selected for the **User entity** setting in [App Settings](/refguide9/app-settings/#workflows) > **Workflows** tab: set **Entity** to **Administration.Account**.
 5. Assign the corresponding user role in the **User roles** section: select the **Facilities** role and click **OK**.
 6. Repeat steps 2-5 to add the **demo_manager** demo user.
 7. Repeat steps 2-5 to add the **demo_hr** demo user.
 
 You have configured demo users for your app. 
 
-### 3.3 Configuring Entity Access
+### Configuring Entity Access
 
 The next step in setting up security is to configure the entity access otherwise you might run into consistency errors and the users of your app may see too much or too little information. For more information on what the entity access is, see the [Entity Access](/refguide9/module-security/#entity-access) section in *Module Security*. Follow the steps below:
 
@@ -178,7 +178,7 @@ You have set up the entity access.
 In some cases you may want to restrict access to the entity or to some of its attributes by configuring the access rules more specifically.
 {{% /alert %}}
 
-## 4 Creating a Workflow
+## Creating a Workflow
 
 To create a workflow that you will add activities to and create pages for, do the following:
 
@@ -197,7 +197,7 @@ Good job! You have created a workflow and configured parameter properties.
 
 {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-how-to-configure/newly-created-workflow.png" alt="Newly Created Workflow" class="no-border" >}}
 
-## 5 Triggering the Workflow from a Page
+## Triggering the Workflow from a Page
 
 To start you workflow, you need to trigger it. In this use case, the workflow is started by an HR specialist who should fill in the new hire's name, the first day, and then click the **Start Onboarding** button that will trigger the workflow. 
 
@@ -221,7 +221,7 @@ Good job! Now when the HR specialist clicks the button, the workflow will start:
 
 {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-how-to-configure/employees-page-configured.png" class="no-border" >}} 
 
-## 6 Selecting a Device and a Location for the New Hire {#select-device}
+## Selecting a Device and a Location for the New Hire {#select-device}
 
 The manager of a new employee will get a task to specify devices for the new hire and indicate whether the new hire is working from home or in the office. For this functionality you need to add activities to the workflow. Follow the steps below: 
 
@@ -274,7 +274,7 @@ Great job! You have configured the user task for the Manager role:
 
 This can be also a good time to test your app: you can create an employee, start the onboarding process, and test the first task for the Manager demo user. For more information, see the [Testing the Workflow](#test-workflow) section. 
 
-## 7 Following Different Paths for the Hire's Location
+## Following Different Paths for the Hire's Location
 
 Depending on whether the new hire is working from the office or home, there are two different processes to onboard this hire: prepare a desk in the office or send the laptop and phone to the new hire's home address. This step of the onboarding process should be done by the Facilities department.
 
@@ -323,7 +323,7 @@ Do the following:
 
 Great job! You have configured the decision and user tasks on whether the new hire is working from the office or from home. 
 
-## 8 Extending Workflow Logic
+## Extending Workflow Logic
 
 You can extend workflow logic by calling a microflow. If the new employee works from the office, you would like to show in the system that the desk prepared by the Facilities department is assigned to this new employee. This way, HR and Management will see where the new colleagues is sitting in the office. You have an **Assign_Desk** microflow that you can use. 
 
@@ -345,7 +345,7 @@ Now if the manager indicates that the new employee works from home, the desk pre
 
 Congratulations! The onboarding workflow is completed, and you can test it with different roles by running your application locally. 
 
-## 9 Testing the Workflow {#test-workflow}
+## Testing the Workflow {#test-workflow}
 
 Now you can test your workflow from the perspective of different users. 
 
@@ -386,6 +386,6 @@ To test your workflow, you need to switch between different user roles. Follow t
 
 Great job! You have deployed your app locally and tested your workflow from the perspective of different users. You can now work on adding more functionality to your app. 
 
-## 10 Read More
+## Read More
 
 * [Adding a Workflow to an Existing App: Using Workflow Commons](/refguide9/workflow-setting-up-app/)

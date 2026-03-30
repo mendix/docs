@@ -55,7 +55,7 @@ This alert is indented to match the sub-list item.
 
 ```json
 {
-     "Status" :  "Stopped" ,
+     "Status" :  "Stopped",
      "EnvironmentId" :  "cd5fc610-edb0-43c5-a374-0439a6411ace",
      "Mode" :  "Acceptance",
      "Url" :  "https://calc-accp.mendixcloud.com",
@@ -65,16 +65,16 @@ This alert is indented to match the sub-list item.
 }
 ```
 
-#### HTTP Code Block with Line Numbers Disabled
+#### OQL Code Block
 
-```http {linenos=false}
-GET /projects/d92064a5-b1fd-4be4-97db-53fc90201d1c/epics HTTP/1.1
-Authorization: MxToken 7LJE…vk
+```sql
+ALTER DATABASE [YourDatabase] SET READ_COMMITTED_SNAPSHOT ON;
+CREATE ASSEMBLY [Mendix.SqlServerExtensions] FROM [a dll file] WITH PERMISSION_SET = SAFE;
 ```
 
-#### Java Code Block with Lines 4-6 Highlighted, and Line Numbering Starting at 33
+#### Java Code Block with Lines 1 and 4-6 Highlighted
 
-```java {hl_lines=["4-6"], linenostart=33}
+```java {hl_lines=[1,"4-6"]}
 @java.lang.Override
 public java.lang.String executeAction() throws Exception
 {
@@ -84,17 +84,17 @@ public java.lang.String executeAction() throws Exception
 }
 ```
 
-#### Plain Text Code Block
+#### Diff Code Block
 
-```text
-ALTER DATABASE [YourDatabase] SET READ_COMMITTED_SNAPSHOT ON;
-CREATE ASSEMBLY [Mendix.SqlServerExtensions] FROM [a dll file] WITH PERMISSION_SET = SAFE;
-```
-
-#### Plain Text Code Block Missing the "text" Parameter
-
-```
-If you don't specify any programming language, the code block looks a bit different. To keep the code blocks consistent throughout the docs, use "text" (as shown in the example above) if you aren't sure what programming language to specify.
+```diff
+public class Hello1
+{
+   public static void Main()
+   {
+-      System.Console.WriteLine("Hello, World!");
++      System.Console.WriteLine("Rock all night long!");
+   }
+}
 ```
 
 #### Code Block Indented in List
@@ -187,13 +187,9 @@ If the tab pane contains code with an asterisk (`*`) in it, the linter rule for 
 
 ### Videos
 
-#### Vidyard Video
+Mendix videos are hosted on Vidyard. For more information, see [the Videos section of the Style Guide](https://mendix.atlassian.net/wiki/spaces/RNDHB/pages/2510061889/Images+Icons+and+Videos#Videos).
 
 {{< vidyard "GwE17mzGma5NAvDnXrVdFA" >}}
-
-#### YouTube Video
-
-{{< youtube 5tznw5ZUQgk >}}
 
 ## Other Markdown and HTML Guidelines
 
@@ -286,11 +282,11 @@ For collapsible content, use the HTML `<details>` and `<summary>` tags:
 
 ### Footnotes
 
-For footnotes, use the HTML `<sup>` and `<small>` tags:
+For footnotes, use Unicode superscript characters (¹²³ etc.) and `<small>` tags:
 
 | Mendix Data Type | Edm Type | Attribute Value | Atom XML Representation |
 | --- | --- | --- | --- |
-| ID <sup>1</sup>| Edm.Int64 | 3940649673954387 | 3940649673954387 |
+| ID ¹| Edm.Int64 | 3940649673954387 | 3940649673954387 |
 | Autonumber | Edm.Int64 | 1 | 1 |
 | Binary (not supported) |   |   |   |
 | Boolean | Edm.Boolean | true | true |
@@ -299,10 +295,10 @@ For footnotes, use the HTML `<sup>` and `<small>` tags:
 | Big decimal  | Edm.Decimal | 0.3333333333333333333333333333333333 | 0.3333333333333333333333333333333333 |
 | Hashed string | Edm.String | HashPassword | HashPassword |
 | Integer  | Edm.Int64 | 50 | 50 |
-| Long <sup>1</sup> | Edm.Int64 | 3940649673954387 | 3940649673954387 |
+| Long ¹ | Edm.Int64 | 3940649673954387 | 3940649673954387 |
 | String | Edm.String | John | John |
 
-<small><sup>1</sup> When using Excel to import an OData source, long numbers may seem cut off. This is due to a restriction in the data type Microsoft uses. For more information, see [Last digits are changed to zeroes when you type long numbers in cells of Excel](https://support.microsoft.com/en-us/kb/269370).</small>
+<small>¹ When using Excel to import an OData source, long numbers may seem cut off. This is due to a restriction in the data type Microsoft uses. For more information, see [Last digits are changed to zeroes when you type long numbers in cells of Excel](https://support.microsoft.com/en-us/kb/269370).</small>
 
 ### Inline Code
 
@@ -315,7 +311,7 @@ For code snippets that are not part of a sentence or that span multiple lines, u
 Use HTML `<kbd>` tags to refer to keyboard keys:
 
 * Press <kbd>Enter</kbd> to select the highlighted item.
-* Stop the log capturing in your command-line tool by pressing <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+* Stop the log capturing in your command-line tool by pressing <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
 ### Links
 

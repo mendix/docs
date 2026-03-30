@@ -2,7 +2,7 @@
 title: "APIs and SDK"
 url: /apidocs-mxsdk/
 description: "Presents the Mendix API documentation and the Mendix SDK documentation."
-weight: 55
+weight: 51
 no_list: false
 description_list: true
 cascade:
@@ -10,4 +10,4 @@ cascade:
     - mendix_version: 10
 ---
 
-The *APIs and SDK* are divided into the following categories:
+The *APIs and SDK* documentation is divided into the following categories:

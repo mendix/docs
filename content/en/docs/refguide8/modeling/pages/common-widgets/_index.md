@@ -4,7 +4,7 @@ url: /refguide8/common-widgets/
 weight: 20
 ---
 
-## 1 Introduction
+## Introduction
 
 Common widgets category contain widgets that are commonly used. This category contains the following widgets:
 
@@ -26,11 +26,11 @@ Common widgets category contain widgets that are commonly used. This category co
 
     {{< figure src="/attachments/refguide8/modeling/pages/common-widgets/page-title-design-properties-example.png" class="no-border" >}}
 
-## 2 Performing Basic Functions
+## Performing Basic Functions
 
 {{% snippet file="/static/_includes/refguide8/performing-basic-functions-widgets.md" %}}
 
-## 3 Read More
+## Read More
 
 * [Page](/refguide8/page/)
 * [Pages](/refguide8/pages/)

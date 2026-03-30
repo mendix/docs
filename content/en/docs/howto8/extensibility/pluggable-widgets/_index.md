@@ -1,7 +1,6 @@
 ---
 title: "Build Pluggable Web Widgets"
 url: /howto8/extensibility/pluggable-widgets/
-
 weight: 20
 ---
 

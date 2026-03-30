@@ -5,7 +5,7 @@ weight: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 A **text area** is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](/refguide8/data-types/) *String*. It differs from a [text box](/refguide8/text-box/) In that the value can be displayed over several lines.
 
@@ -15,7 +15,7 @@ For example, the following text area allows the end-user to see, and set, the **
 
 {{< figure src="/attachments/refguide8/modeling/pages/input-widgets/text-area/text-area.png" class="no-border" >}}
 
-## 2 Properties
+## Properties
 
 An example of text area properties is represented in the image below:
 
@@ -33,37 +33,37 @@ Text area properties consist of the following sections:
 * [Validation](#validation)
 * [Visibility](#visibility)
 
-### 2.1 Common Section{#common}
+### Common Section{#common}
 
 {{% snippet file="/static/_includes/refguide8/common-section-link.md" %}}
 
-### 2.2 Data Source Section{#data-source}
+### Data Source Section{#data-source}
 
 {{% snippet file="/static/_includes/refguide8/data-source-section-link.md" %}}
 
-### 2.3 Design Properties Section{#design-properties}
+### Design Properties Section{#design-properties}
 
 {{% snippet file="/static/_includes/refguide8/design-section-link.md" %}} 
 
-### 2.4 Editability Section{#editability}
+### Editability Section{#editability}
 
 {{% snippet file="/static/_includes/refguide8/editability-section-link.md" %}}
 
-### 2.5 Events Section{#events}
+### Events Section{#events}
 
-#### 2.5.1 On Change{#on-change}
+#### On Change{#on-change}
 
 The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
 
 {{% snippet file="/static/_includes/refguide8/events-section-link.md" %}}
 
-#### 2.5.2 On Enter
+#### On Enter
 
 The on-enter property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it with the mouse.
 
 {{% snippet file="/static/_includes/refguide8/events-section-link.md" %}}
 
-#### 2.5.3 On Leave
+#### On Leave
 
 The on-leave property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
 
@@ -71,9 +71,9 @@ This differs from the [On change](#on-change) property in that the event will al
 
 {{% snippet file="/static/_includes/refguide8/events-section-link.md" %}}
 
-### 2.6 General Section{#general}
+### General Section{#general}
 
-#### 2.6.1 Grow Automatically
+#### Grow Automatically
 
 {{% alert color="info" %}}The grow automatically property does not impact the behavior of native mobile pages. On iOS, the text area will always grow automatically
 {{% /alert %}}
@@ -82,13 +82,13 @@ This property defines whether the text area grows automatically depending on the
 
 Default: *No*
 
-#### 2.6.2 Number of Lines
+#### Number of Lines
 
 **Number of lines** determines the size of the text area, based on the height of the lines. If the text in the text area contains more lines, a scroll bar will enable the end-user to see it all. This property is only used if **Grow automatically** is set to *No*.
 
 Default: *5*
 
-#### 2.6.3 Counter Message
+#### Counter Message
 
 {{% alert color="info" %}}Counter message is not supported on native mobile pages.{{% /alert %}}
 
@@ -98,7 +98,7 @@ For example, if you use the counter message `You've used {1} characters of the {
 
 {{< figure src="/attachments/refguide8/modeling/pages/input-widgets/text-area/counter-message.png" class="no-border" >}}
 
-#### 2.6.4 Text Too Long Message
+#### Text Too Long Message
 
 {{% alert color="info" %}}Text too long message is not supported on native mobile pages.{{% /alert %}}
 
@@ -106,7 +106,7 @@ This is the text displayed when the number of characters is higher than the maxi
 
 This type of message can also occur when a loaded or stored value exceeds the character limit
 
-#### 2.6.5 Maximum Length
+#### Maximum Length
 
 This property specifies the maximum number of characters that can be typed in this text area.
 
@@ -116,32 +116,32 @@ This property specifies the maximum number of characters that can be typed in th
 | Unlimited | The maximum number of characters is unlimited |
 | Custom | The maximum number of characters is specified in the widget properties |
 
-#### 2.6.6 Placeholder Text
+#### Placeholder Text
 
 The placeholder text is shown when no text has been entered yet, or when a displayed attribute is empty.
 
 It can be used, for example, to give a hint to the end-user what kind of text should be entered.
 
-#### 2.6.7 Autocomplete
+#### Autocomplete
 
 The autocomplete property specifies if a text area should have autocomplete enabled. The autocomplete attribute also improves mobile devices' ability to pre-populate fields.
 
 {{% alert color="info" %}}This option is only available in native pages.{{% /alert %}}
 {{% alert color="info" %}}In Android when autocomplete is turned off it will remove support for new lines.{{% /alert %}}
 
-### 2.8 Label Section{#label}
+### Label Section{#label}
 
 {{% snippet file="/static/_includes/refguide8/label-section-link.md" %}}
 
-### 2.8 Validation Section{#validation}
+### Validation Section{#validation}
 
 {{% snippet file="/static/_includes/refguide8/widget-validation-link.md" %}}
 
-### 2.9 Visibility Section{#visibility}
+### Visibility Section{#visibility}
 
 {{% snippet file="/static/_includes/refguide8/visibility-section-link.md" %}}
 
-## 3 Read More
+## Read More
 
 * [Data view](/refguide8/data-view/)
 * [Attributes](/refguide8/attributes/)

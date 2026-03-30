@@ -8,7 +8,7 @@ description_list: true
 cascade:
     - content_type: "Studio Pro 8"
     - mendix_version: 8
-    - banner_8: true
+    - banner: "Studio Pro 8 has reached its <a href=\"/releasenotes/studio-pro/lts-mts/#end\">end of support</a>. To upgrade to a supported version, see <a href=\"/refguide9/moving-from-8-to-9/\">Moving from Mendix Studio Pro 8 to 9</a>."
     - old_content: true
     - hide_feedback: true
     - notsitemap: true
@@ -17,10 +17,14 @@ cascade:
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-## 1 Introduction
+{{% alert color="warning" %}}
+With the Mendix 11.0.0 release in June 2025, Mendix 8 has reached its end of support. This means that Mendix 8 will no longer receive support, maintenance, or updates. To ensure continued access to the latest features and security enhancements, we recommend planning an upgrade to a more recent version of the platform.
+{{% /alert %}}
+
+## Introduction
 
 Browse the *Studio Pro 8 How-tos* to find step-by-step guides that teach you how to build and customize apps with Mendix.
 
-## 2 How-to Categories
+## How-to Categories
 
 The *Studio Pro 8 How-tos* are divided into the following categories:

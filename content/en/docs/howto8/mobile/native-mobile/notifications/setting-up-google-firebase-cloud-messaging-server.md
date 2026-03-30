@@ -5,29 +5,29 @@ url: /howto8/mobile/setting-up-google-firebase-cloud-messaging-server/
 weight: 55
 ---
 
-## 1 Introduction
+## Introduction
 
 You can use Google's Firebase Cloud Messaging (FCM) service to send push notifications to both Android and iOS devices. To send push notifications using FCM from the Push Notifications Connector module, you must set up a Firebase account with FCM enabled. This how-to teaches you how to register for FCM and configure the service in your app.
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a Firebase account (https://firebase.google.com)
 
-## 3 Setting up a Firebase Project
+## Setting up a Firebase Project
 
 There are two possible scenarios: you can create a new FCM project, or you can update your existing GCM project to FCM. Both scenarios are described below.
 
-### 3.1 Migrating a GCM project to FCM
+### Migrating a GCM project to FCM
 
 To prevent the degraded reliability of push notifications delivery, you should migrate existing GCM projects to FCM and upgrade credentials if needed.
 
-#### 3.1.1 Sign into the Developer's Console
+#### Sign into the Developer's Console
 
 Open the [Firebase developer's console](https://console.firebase.google.com/) and sign in with your Google ID.
 
-#### 3.1.2 Importing the Project
+#### Importing the Project
 
 To import your project, do the following:
 
@@ -38,13 +38,13 @@ To import your project, do the following:
 
 With that done, continue with [Configuring APNs Credentials](#configuring) below.
 
-### 3.2 Creating a New FCM Project
+### Creating a New FCM Project
 
-#### 3.2.1 Signing into the Developers Console
+#### Signing into the Developers Console
 
 Open up the [Firebase developers console](https://console.firebase.google.com/) and sign in with your Google ID.
 
-#### 3.2.2 Creating the Project
+#### Creating the Project
 
 To create a project, do the following:
 
@@ -54,7 +54,7 @@ To create a project, do the following:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/notifications/setting-up-google-firebase-cloud-messaging-server/Create_Firebase_Project.png"   width="350"  class="no-border" >}}
 
-## 4 Adding an Android or iOS App {#native-apps}
+## Adding an Android or iOS App {#native-apps}
 
 Before you add an app to FCM, you must retrieve your app's bundle ID. Its location depends on your type of your mobile app.
 
@@ -83,9 +83,9 @@ Do the following to add your app to FCM:
 
 Bundle ID must be matching with your package ID. Make sure to repeat this step for iOS as well.
 
-## 5 Configuring APNs Credentials (Optional) {#configuring}
+## Configuring APNs Credentials (Optional) {#configuring}
 
-If you wish to send push notifications to iOS devices through FCM, you will need to configure your APNs credentials:
+If you wish to send push notifications to iOS devices through FCM (for native mobile apps), you will need to configure your APNs credentials:
 
 1. Click in the upper-left corner of the screen and select **Project settings**.
 1. Navigate to the **Cloud messaging** tab:
@@ -94,7 +94,7 @@ If you wish to send push notifications to iOS devices through FCM, you will need
 
 1. On this tab, upload either your APNs key or your APNs certificate(s) as configured in your [Apple Developer account](https://developer.apple.com).
 
-## 6 Setting Up a Service Account {#setting-up-a-service-account}
+## Setting Up a Service Account {#setting-up-a-service-account}
 
 In the upper-left corner of the screen, click the cogwheel and select **Project settings**. Then navigate to the **Service accounts** tab.
 
@@ -104,7 +104,7 @@ On this page, press **Generate new private key**. Store the resulting file in a 
 
 The file you just created gives API access to all available Firebase services for your app. If you want a more restrictive service account, click **Manage all service accounts** in the top-right of the screen, then create a service account that is restricted to using the Cloud Messaging functionality.
 
-## 7 Downloading the Google Services Config Files {#downloading-the-google-services-config-files}
+## Downloading the Google Services Config Files {#downloading-the-google-services-config-files}
 
 In addition to the back-end configuration set up in the previous steps, you will need additional files that will be bundled as part of your mobile application. To obtain these, again click the cogwheel in the upper-left of the screen and select **Project settings**. Then navigate to the **General** tab:
 
@@ -116,7 +116,7 @@ The list at the bottom shows the Android and iOS applications that you have conf
 Only create an iOS application in your Firebase project when you plan on using FCM for sending push notifications to iOS devices. If you plan on keeping using APNS to send push notifications to iOS devices, you do not have to create an iOS application in your Firebase project, and you do not have to download a *GoogleService-Info.plist* config file.
 {{% /alert %}}
 
-## 8 Read More
+## Read More
 
 * [Set Up Push Notifications](/howto8/mobile/notifications/)
 * [Set Up Hybrid Push Notifications](/howto8/mobile/setting-up-hybrid-push-notifications/)

@@ -5,7 +5,7 @@ weight: 10
 description: "This document teaches you how to use Calypso, a tool which improves the way you edit styling."
 ---
 
-## 1 Introduction
+## Introduction
 
 Calypso is a tool which makes it easier for you to customize your Mendix apps' styling. Designers and front-end specialists, Mac users and Windows users — everyone can easily use this tool without installing any external dependencies. Everything is packaged inside Calypso. You simply need to install Calypso, choose your Mendix app, and start customizing. As you customize, Calypso eases your work by doing the following:
 
@@ -21,11 +21,11 @@ For a deep-dive look into styling with Calypso, check out this video:
 
 {{< vidyard "M2NCccTnfnh7Yx2gjEyBpf" >}}
 
-## 2 Prerequisites
+## Prerequisites
 
 * Download Calypso [here](https://github.com/mendix/Atlas-UI-Framework/releases/download/calypso-v1/Calypso.Setup.1.0.0.exe)
 
-## 3 Setting Up Calypso
+## Setting Up Calypso
 
 1. Install Calypso.
 2. Open Calypso:
@@ -65,7 +65,7 @@ For a deep-dive look into styling with Calypso, check out this video:
 
     {{< figure src="/attachments/howto8/front-end/customize-styling/calypso/console.png" alt="console" class="no-border" >}}
 
-## 4 Testing Calypso
+## Testing Calypso
 
 With your Mendix app and Calypso running, complete the steps below to see how Calypso works:
 
@@ -86,7 +86,7 @@ With your Mendix app and Calypso running, complete the steps below to see how Ca
 
 Good job! You've installed Calypso and used it to customize your styling quickly and easily.
 
-## 5 Read More
+## Read More
 
 * [Get Started with Atlas UI](/howto8/front-end/get-started-with-atlasui/)
 * [Migrate Existing Apps to Atlas UI](/howto8/front-end/migrate-existing-projects-to-atlasui/)

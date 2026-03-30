@@ -4,7 +4,7 @@ url: /apidocs-mxsdk/mxsdk/using-platform-sdk/
 weight: 12
 ---
 
-## 1 Introduction 
+## Introduction 
 
 This how-to provides guidance on using the Platform SDK to do the following:
 
@@ -17,20 +17,24 @@ This how-to provides guidance on using the Platform SDK to do the following:
 * [Commit a temporary working copy](#committing)
 * [Change the Platform SDK configurations](#changing)
 
-## 2 Platform Client
+## Platform Client
 
 The entry point for the Mendix Platform SDK is `MendixPlatformClient`. In most cases, you will need to instantiate a new object from this class:
 
 ```ts
+import { MendixPlatformClient } from "mendixplatformsdk";
+
 const client = new MendixPlatformClient();
 ```
 
-## 3 Creating a New App {#creating-app}
+## Creating a New App {#creating-app}
 
 The platform client allows you to create a new Mendix app by simply passing the app name:
 
 ```ts
 const app = await client.createNewApp("My new App");
+
+console.log(`App created with ID: ${app.appId}`);
 ```
 
 You can pass the following options to `createNewApp`:
@@ -45,17 +49,15 @@ You can pass the following options to `createNewApp`:
 
 If both `templateDownloadURL` and `templateId` are left blank, the app will be created using the standard blank app template in the latest Mendix version.
 
-Here is an example for creating a Mendix app based on the [Asset Manager App](https://marketplace.mendix.com/link/component/69674) template:
+Here is an example for creating a Mendix app based on version 2.1.0 of the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934) template:
 
 ```ts
-const app = await client.createNewApp("My Asset Management", {
-    templateId: "6e66fe4d-6e96-4eb8-a2b6-a61dec37a799"
+const app = await client.createNewApp("My GenAI App", {
+    templateId: "ba6ca01b-e2a4-45fa-870d-9e28b6acb845"
 });
 ```
 
-{{% alert color="warning" %}}The [Asset Manager App](https://marketplace.mendix.com/link/component/69674) template is deprecated and was created using Studio Pro 8.14.0. You cannot open it directly in Studio Pro 10 versions. To be able to use it in Studio Pro 10, you need to first upgrade it to a Studio Pro 9 app and then upgrade it to a Studio Pro 10 app. For more instructions, see the [Prerequisites](/refguide/extending-your-application-with-custom-java/#prerequisites) section in *Extending Your Application with Custom Java*.{{% /alert %}}
-
-## 4 Opening an Existing App {#opening-existing-app}
+## Opening an Existing App {#opening-existing-app}
 
 The platform client allows you to open an existing app using the app ID:
 
@@ -64,18 +66,24 @@ const app = client.getApp("33118fbf-7053-482a-8aff-7bf1c626a6d9");
 ```
 
 {{% alert color="info" %}}
-You can get the **App ID** in the app's [General Settings](/developerportal/collaborate/general-settings/) in the Developer Portal.
+You can get the **App ID** (represented as **Project ID**) in the app's [Settings](/developerportal/general-settings/) page after opening your app in **Apps**.
 {{% /alert %}}
 
-## 5 Getting Information About the Repository of the App {#getting}
+## Getting Information About the Repository of the App {#getting}
 
 From the app object, you can get some information about its repository (such as the repository type, URL, and default branch name):
 
 ```ts
-const repositoryInfo = app.getRepositoryInfo();
+const repository = app.getRepository();
+    
+const repositoryInfo = await repository.getInfo();
+console.log("Repository Info: ", repositoryInfo);
+
+const commitMessages = (await repository.getBranchCommits("main")).items.map(commit => commit.message);
+console.log("Commit messages: ", commitMessages);
 ```
 
-## 6 Deleting an App {#deleting}
+## Deleting an App {#deleting}
 
 The app object allows you to delete the corresponding Mendix app. 
 
@@ -87,20 +95,27 @@ await app.delete();
 All resources of this app will be deleted permanently!
 {{% /alert %}}
 
-## 7 Creating a Temporary Working Copy {#creating-temp}
+## Creating a Temporary Working Copy {#creating-temp}
 
 To change your app, you need to create a temporary working copy of a particular Team Server branch, make the changes there, and then submit that working copy to Team Server:
 
 ```ts
 const workingCopy = await app.createTemporaryWorkingCopy("main");
+
+console.log(`Working ID: ${workingCopy.workingCopyId}`);
 ```
 
+{{% alert color="warning" %}}
+Working copy creation a resource intensive process, consider reusing previously created ones by invoking `app.getOnlineWorkingCopy(workingCopyId)`. All working copies are automatically deleted after 24 hours.
+{{% /alert %}}
+
 You can pass the following options to `createTemporaryWorkingCopy`:
+
 | Name | Description |
 |--- | --- |
 | `commitId` | The ID of the commit on which the working copy should be based. If not passed, the working copy is created from the last commit in the specified branch. |
 
-## 8 Opening the Working Copy Model {#opening-working-copy}
+## Opening the Working Copy Model {#opening-working-copy}
 
 After creating the working copy, you can load the model to make changes:
 
@@ -108,7 +123,7 @@ After creating the working copy, you can load the model to make changes:
 const model = await workingCopy.openModel();
 ```
 
-## 9 Committing a Temporary Working Copy {#committing}
+## Committing a Temporary Working Copy {#committing}
 
 After making changes, you need to commit the changes back to Team Server. Make sure to call `await model.flushChanges()` when committing right after making changes, as this makes sure that the SDK has been able to send the changes:
 
@@ -126,7 +141,7 @@ You can pass the following options to `commitToRepository`:
 | `targetCommitId` | This commit ID will be set to the working copy base commit ID if not specified. |
 | `force` | Set to `true` to commit to a branch that is different from the working copy's base branch. |
 
-## 10 Changing the Platform SDK Configurations {#changing}
+## Changing the Platform SDK Configurations {#changing}
 
 By default, the Platform SDK reads your personal access token from the environment variable (for more details, see [How to Set Up your Personal Access Token](/apidocs-mxsdk/mxsdk/set-up-your-pat/)). However, you can change this configuration. For example, you can load it from a file, as in this example:
 

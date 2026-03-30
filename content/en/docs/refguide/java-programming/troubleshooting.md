@@ -2,7 +2,6 @@
 title: "Troubleshooting"
 url: /refguide/troubleshooting/
 weight: 10
-
 description: "Lists the problematic JAR files and the known workarounds."
 # See Jira issue IDS-807, compatibility list might need update
 ---

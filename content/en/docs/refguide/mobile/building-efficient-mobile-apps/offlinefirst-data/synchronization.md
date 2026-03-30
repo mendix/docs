@@ -7,7 +7,7 @@ aliases:
     - /refguide/mobile/using-mobile-capabilities/offlinefirst-data/synchronization/
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix automatically analyzes your app's data model to determine which entities should be synchronized based on the pages and nanoflows used within your offline navigation profile. In addition, the platform takes entity access into account so that only the data the user is allowed to access is synchronized.
 
@@ -20,7 +20,7 @@ Synchronization is automatically triggered during the following scenarios:
     * The domain model used in the offline-first app has changed (note that the Mendix Client can sometimes optimize the process for certain domain model changes and will skip this automatic synchronization leading to a faster startup time)
 * After the app user logs in or out (note that synchronization after log out does not synchronize the data of the logged-out user, but rather synchronizes the data for the anonymous user)
 
-## 2 Synchronization{#synchronization}
+## Synchronization{#synchronization}
 
 Synchronization can also be configured via different places in your Mendix app, for example:
 
@@ -30,7 +30,7 @@ Synchronization can also be configured via different places in your Mendix app, 
 
 Synchronization is performed on the database level. This means if you synchronize while having some uncommitted changes for an object, the attribute values in local database will be synchronized, ignoring the uncommitted changes. Uncommitted changes are still available after a synchronization.
 
-### 2.1 Synchronization Types{#synchronization-types}
+### Synchronization Types{#synchronization-types}
 
 There are three different types of synchronization that can be triggered from the client:
 
@@ -38,15 +38,15 @@ There are three different types of synchronization that can be triggered from th
 * [Synchronize unsynchronized objects](#unsynchronized-objects)
 * [Selective synchronization](#selective-sync)
 
-#### 2.1.1 Full Synchronization {#full-sync}
+#### Full Synchronization {#full-sync}
 
 This mode performs both the upload and the download phases for all entities used in the offline-first app. You can customize the behavior of each entity with [customizable synchronization](#customizable-synchronization).
 
-#### 2.1.2 Synchronize Unsynchronized Objects {#unsynchronized-objects}
+#### Synchronize Unsynchronized Objects {#unsynchronized-objects}
 
 This type of synchronization can only be done through a **Synchronize** action inside a nanoflow. In this mode, all objects with changes committed to the offline database are synchronized. Information about objects deleted since the last synchronization is also sent to the server.
 
-#### 2.1.3 Selective Synchronization {#selective-sync}
+#### Selective Synchronization {#selective-sync}
 
 Selective synchronization can only be done through a **Synchronize** action inside a nanoflow. In this mode, a specific set of objects will be synchronized. These objects can be either all unsynchronized objects when the [synchronize unsynchronized objects](/refguide/synchronize/#unsynchronized-objects) mode is selected, or a manually selected set of objects when the [synchronize selected object (or objects)](/refguide/synchronize/#selected-objects) mode is selected.
 
@@ -54,11 +54,11 @@ Deleted objects cannot be synchronized using selective synchronization.
 
 Synchronization performed using a UI element (for example, a button or an on-change action) performs the full synchronization.
 
-### 2.2 Synchronization Phases
+### Synchronization Phases
 
 The synchronization process consists of two phases. In the [upload phase](#upload), your app updates the server database with the new or changed objects that are committed. In the [download phase](#download), your app updates its local database using data from the server database. Note that synchronization only works at the database level. That means that new uncommitted objects and attribute changes are not synchronized.
 
-#### 2.2.1 Upload Phase {#upload}
+#### Upload Phase {#upload}
 
 The upload phase executes the following operations:
 
@@ -70,14 +70,14 @@ The upload phase executes the following operations:
     This means that any further changes you make to the synced objects in the event handlers will be applied to the device database during the download phase. There is one exception to this rule: changing the contents of a file entity is not applied when you attempt to change them in the event handlers.
     Before- and after-commit event handlers for new objects will also be executed.
 
-#### 2.2.2 Download Phase {#download}
+#### Download Phase {#download}
 
 If the upload phase was successful, the download phase starts in which the local database is updated with the newest data from the server database. The behavior of download phase differs per synchronization type:
 
 * **Full synchronization** – A network request is made to the server per entity to retrieve the newest data from the server database. You can manage which entities are synchronized to the local database by customizing your app's synchronization behavior. For more details on this procedure, see the [Customizable Synchronization](#customizable-synchronization) section below. The download process also downloads the file entities' contents and saves that to your device storage. This process is incremental. The app only downloads the contents of a file object if the file has not been downloaded before, or if the file has been changed since it was last downloaded. The changed date attribute of the file entity is used to determine if the contents of a file object have changed.
 * **Selective synchronization** – Only the objects selected for synchronization are synchronized to the local database. There are no extra network requests made to retrieve these objects. The objects are returned in the response of a network request made during the upload phase. If a file entity is selected for synchronization, its content is also updated on the device storage incrementally. The logic is the same in the full synchronization.
 
-### 2.3 After Synchronization
+### After Synchronization
 
 After synchronization is completed, the widgets on your app's current page will be refreshed to reflect the latest data. If the synchronization is triggered from a nanoflow, all nanoflow object/list variables are updated (uncommitted changes are still preserved).
 
@@ -89,7 +89,7 @@ Please note that a nanoflow object variable's value might become `empty` after s
 * The entity is configured with **Nothing (clear data)** option on the customizable synchronization screen
 * The upload phase fails for the object—for example when a before commit event handler returns false, or committing fails due to violation of a unique validation
 
-### 2.4 Customizable Synchronization {#customizable-synchronization}
+### Customizable Synchronization {#customizable-synchronization}
 
 {{% alert color="warning" %}}
 These settings are not applied for [selective synchronization](#selective-sync).
@@ -109,7 +109,9 @@ If you have custom widgets or JavaScript actions which use an entity that cannot
 
 {{< figure src="/attachments/refguide/mobile/offline-first/custom-synchronization-configs.png" alt="custom synchronization"   width="450"  class="no-border" >}}
 
-### 2.5 Limitations
+For each entity the **Synchronization mode** is shown. A default is automatically determined by analyzing the model, but can be overridden by the developer in which case the setting will appear in boldface. 
+
+### Limitations
 
 Please be aware of the following limitation affecting synchronization: 
 
@@ -124,11 +126,11 @@ Please be aware of the following limitation affecting synchronization:
 * Deleted objects configured with **Never** will be ignored during Startup Synchronization, [Synchronize all Objects](/refguide/synchronize/#all-objects), or [Synchronize Unsynchronized Objects](/refguide/synchronize/#unsynchronized-objects).
 * If the offline database is reset (for example, because of a domain model change), all offline objects of entities configured with **Never** will be removed. To avoid data loss, only use the synchronization mode **Never** for objects you can recreate.
 
-### 2.6 Error Handling {#error-handling}
+### Error Handling {#error-handling}
 
 During synchronization, errors might occur. This section describes how Mendix handles these errors and how you can prevent them.
 
-#### 2.6.1 Network-Related Errors {#network-errors}
+#### Network-Related Errors {#network-errors}
 
 Synchronization requires a connection to the server, so during synchronization, errors may occur due to failing or poor network connections. Network errors may involve a dropped connection or a timeout. For native apps, there is no default timeout, and the timeout is determined by the platform and OS version.
 
@@ -144,7 +146,7 @@ If a network error occurs during the download phase, no data is updated on the d
 
 If the synchronization is called from a nanoflow, the error can be handled using nanoflow error handling. In other cases (for example, if synchronization is called from a button or at startup), a message will be displayed to the user that the data could not be synchronized.
 
-#### 2.6.2 Model- or Data-Related Errors {#othererrors}
+#### Model- or Data-Related Errors {#othererrors}
 
 During the synchronization, changed and new objects are committed. An object's synchronization might encounter problems due to the following reasons:
 
@@ -156,7 +158,7 @@ During the synchronization, changed and new objects are committed. An object's s
 
 {{% alert color="warning" %}}When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server. To prevent data loss, the attribute values for such objects are stored in the `System.SynchronizationError` entity (since Mendix 8.12).  {{% /alert %}}
 
-#### 2.6.3 Broken or Missing File Contents
+#### Broken or Missing File Contents
 
 The client downloads the contents of file objects during synchronization. Errors may occur while downloading a file, such as:
 
@@ -176,7 +178,7 @@ Secondly, the client will skip the file object and continue synchronization for 
 "Could not download the file content for the object with guid {OBJECT-GUID} due to an error. This may be due to broken file content on the server. Synchronization will continue and ignore this object."
 {{% /alert %}}
 
-#### 2.6.4 Dangling References {#dangling-references}
+#### Dangling References {#dangling-references}
 
 During synchronization, the server performs referential integrity validation of the new or changed objects that are being synchronized to the server. This validation ensures that none of the synchronized objects have associations pointing to an object that exists only on the device. If an association does not satisfy this condition, it is a dangling reference.
 
@@ -190,7 +192,7 @@ To prevent dangling reference errors during full synchronization, make sure both
 
 When some of the synchronized objects have dangling references, the server will synchronize all other objects except the ones with dangling references. For the objects with dangling references, the server will create a synchronization error and store it in the `System.SynchronizationError` entity. In such a situation you will see an error message like this:
 
-```text {linenos=false}
+```text
 Synchronizing an object of type City with GUID {123} has failed due to a modelling error. The object has a reference to other objects (City_Country) that have not been synchronized to the runtime yet. This breaks referential integrity of the object because it references a non-existing object in the runtime database. Please make sure that you synchronize the referenced object together with the City or before synchronizing the City.
 ```
 

@@ -5,7 +5,7 @@ weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 {{% alert color="info" %}}
 
@@ -15,7 +15,7 @@ This document describes basic functions you can perform in the page editor and i
 
 Pages define the end-user interface of a Mendix application. Every page is based on a [layout](/refguide8/layout/). A page fills the "gaps" defined by a layout with widgets such as the [data view](/refguide8/data-view/) and [data grid](/refguide8/data-grid/).
 
-## 2 Performing Basic Functions
+## Performing Basic Functions
 
 You can perform the following basic function when working in the page editor:
 
@@ -26,7 +26,7 @@ You can perform the following basic function when working in the page editor:
 * View element properties
 * Arrange elements on a page
 
-### 2.1 Opening a Page
+### Opening a Page
 
 To open a page in Studio Pro, do the following:
 
@@ -39,7 +39,7 @@ To open a page in Studio Pro, do the following:
 
 The selected page is opened. 
 
-### 2.2 Creating a Page
+### Creating a Page
 
 To create a new page, do the following:
 
@@ -55,7 +55,7 @@ To create a new page, do the following:
 
 A new page is created.
 
-### 2.3 Deleting a Page
+### Deleting a Page
 
 To delete a page, do the following:
 
@@ -64,7 +64,7 @@ To delete a page, do the following:
 
 The selected page is deleted. 
 
-### 2.4 Adding Elements on a Page {#add-elements}
+### Adding Elements on a Page {#add-elements}
 
 The way you can add an element on a page depends on a mode you are editing your page in. For more information on modes, see the [Page Editor Modes](#page-editor-modes) section.
 
@@ -103,7 +103,7 @@ In **Design mode**, you can add elements though the Toolbox. Do the following:
 1. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there. 
 2. Select an element you would like to add and drag this element onto your page.
 
-### 2.5 Viewing Element Properties {#view-properties}
+### Viewing Element Properties {#view-properties}
 
 To view properties of an element, do one of the following:
 
@@ -111,12 +111,12 @@ To view properties of an element, do one of the following:
 2. Right-click an element and select **Properties** from the list of options that opens.
 3. Double-click an element.
 
-### 2.6 Arranging Elements on a Page {#arrange-elements}
+### Arranging Elements on a Page {#arrange-elements}
 
 To cut/copy/paste you can use the following shortcuts:
 
 * <kbd>Ctrl</kbd> + <kbd>Z</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd>  
-* <kbd>Cmd</kbd> + <kbd>Z</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>
+* <kbd>Command</kbd> + <kbd>Z</kbd> /  <kbd>Command</kbd> + <kbd>C</kbd> / <kbd>Command</kbd> + <kbd>V</kbd>
 
 {{% alert color="info" %}}
 You can cut/copy/paste elements on a page to different apps in Studio Pro if they have the same Mendix version. However, you cannot cut/copy/paste the whole page.
@@ -125,7 +125,7 @@ You can cut/copy/paste elements on a page to different apps in Studio Pro if the
 
 To delete an element from a page, select this element and press <kbd>Delete</kbd> or right-click an element and select **Delete** in a drop-down menu. 
 
-## 3 Page Editor Modes {#page-editor-modes}
+## Page Editor Modes {#page-editor-modes}
 
 There are two different ways to edit your page:
 
@@ -144,7 +144,7 @@ Both modes allow you to edit your page by doing the following:
 * Viewing and editing properties of each widget in the **Properties** pane
 * Opening a **Properties** dialog box from the menu you get when you right-click the widget
 
-### 3.1 Structure Mode {#structure-mode}
+### Structure Mode {#structure-mode}
 
 In **Structure mode**, the page widgets are laid out so that it is easy to see the logical relationship between them. It has the following features which are not available in **Design mode**:
 
@@ -162,7 +162,7 @@ In **Structure mode**, the page widgets are laid out so that it is easy to see t
 
     {{< figure src="/attachments/refguide8/modeling/pages/page/show-styles.png" alt="Show styles button" class="no-border" >}}
 
-### 3.2 Design Mode {#design-mode}
+### Design Mode {#design-mode}
 
 In **Design mode**, the page is laid out as it will appear when published so that it is easy to see the spatial relationship between the elements.
 
@@ -182,7 +182,7 @@ It has the following features which are not available in **Structure mode**:
 
     {{< figure src="/attachments/refguide8/modeling/pages/page/conditional-visibility.jpg" alt="Show conditional visibility" class="no-border" >}}
 
-## 4 Read More
+## Read More
 
 * [Pages](/refguide8/pages/)
 * [Page Properties](/refguide8/page-properties/)

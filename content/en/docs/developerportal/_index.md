@@ -1,82 +1,127 @@
 ---
-title: "Developer Portal Guide"
+title: "Apps"
 url: /developerportal/
-description: "Describes the sections of the Mendix Developer Portal and links to more detailed documents in the guide."
+description: "Describes the home page of Apps and links to more detailed documents in the guide."
 weight: 30
 no_list: false
 description_list: true
 cascade:
-    - content_type: "Developer Portal Guide"
-    - mendix_version: 10
+  - content_type: "Apps"
+  - mendix_version: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-## 1 What Is the Developer Portal?
+## Introduction
 
-The [Developer Portal](https://sprintr.home.mendix.com) is one of the key components of the Mendix Platform. In the Developer Portal, Mendix users can collaborate, deploy, manage their apps. 
+[Apps](https://sprintr.home.mendix.com) is one of the key components of the Mendix Portal. In **Apps**, you can create, deploy, and manage apps, as well as collaborate with others. **Apps** provides a summary of your current apps, your company apps, and your pending invites.
 
-The Developer Portal also offers open, well-defined APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
+{{< figure src="/attachments/developerportal/apps-overview.png" alt="Apps Overview" >}}
 
-## 2 Creating a New App
+## Creating an App {#create-app}
 
-To get started with building an app, click **Create App** to open a page where you can choose a starting point:
+There are two ways to create apps:
 
-{{< figure src="/attachments/developerportal/create-app.png" width="150" class="no-border" >}}
+* Using Maia to plan and build your app.
+* Using a starter app template.
 
-## 3 My Apps {#my-apps}
+The following sections describe the process for each option.
 
-When you open the Developer Portal, you are brought to the **My Apps** page, which shows you a summary of your current apps:
+### Creating an App with Maia
 
-{{< figure src="/attachments/developerportal/app-tiles.png" alt="Apps tiles" class="no-border" >}}
+{{% alert color="warning" %}}
+This feature is in Public Beta. For more information, refer to [Release Status](/releasenotes/release-status/).
+{{% /alert %}}
 
-The **All** tab displays all the apps for which you are a [Team](/developerportal/general/team/) member. 
+Follow the steps in [Maia Plan](/developerportal/maia-plan/) to enlist Maia's help in planning and creating an app.
 
-Any app tile you pin by clicking **Pin** ({{% icon name="pin" %}}) will appear in the **Pinned** tab. 
+### Creating an App from a Starter App Template
 
-Use the drop-down menu on the right side of the page to sort the apps by **Most Recent** or in alphabetical order of **App Name**.
+Follow these steps to use a starter app:
 
-The **Pending Invites** tab presents the pending invitations to apps that you have received (which you can **Accept** or **Decline**) in addition to the invitations you have sent.
+1. In **Apps**, click **Create App** in the upper right corner. 
 
-### 3.1 App Tiles
+2. Select **Use a Starter App**. A screen opens to guide you through the process.
 
-Click an app tile to see the app [Buzz](/developerportal/general/buzz/).
+3. Enter the following information for your app:
 
-By clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in the app tile, you can quickly perform a number of actions:
+    * **App name** – Every app must have a name that abides by these requirements:
 
-{{< figure src="/attachments/developerportal/quick-action-menu.png" alt="Quick actions menu for an app" width="50%" class="no-border" >}}
+        * It cannot be longer than 200 characters, but Mendix recommends no more than 40 characters. 
+        * It can contain letters, numbers, underscores (`_`), dashes (`-`), or white spaces ().
+        * It must not start with a white space.
 
-The actions available depend on the app selected. The default actions available are **Edit in Mendix Studio Pro** and **Leave App**.
+    * **App description (Optional)** – Give your app a short description. This is optional.
+    
+    * **App icon** – Mendix has generated an icon for your app. You can change the color of the icon if you like. You can upload a custom icon in the [App Settings](/developerportal/general-settings/#general) page once you have created the app.
+
+4. Click **Next** to go to step 2.
+
+5. Select a starter app template on which the app will be based. The most used starter app templates are displayed.    
+
+    Some templates offer multiple versions for you to choose from, which are displayed as selectable options. By default, the stable version is pre-selected.    
+    
+    If you want to choose a different starter app template than the ones displayed, click the **discover community starter apps** link at the top. This takes you to the Marketplace, where you can browse through all available starter app templates and select one that suits your needs.
+    
+6. After selecting a starter app template, click **Create App**. Based on the starter app template you selected, it can take some time to set up the app, its repository, and access to the collaboration tools. After it is completed, the app is created.
+
+## My Apps {#my-apps}
+
+The **My Apps** tab displays all the apps for which you are a [Team](/developerportal/general/team/) member.
+
+You can filter the overview to display only the apps that are marked for deletion. Read more about how we mark apps for deletion in the [Deletion of Unused Projects](/developerportal/deploy/mendix-cloud-deploy/#projects-deletion) section of *Mendix Cloud*.
+
+Use the drop-down menu on the right side of the page to sort the apps by **Pinned**, **Recent Activity** or in alphabetical order of **App Name**.
+
+You can filter by the assigned **Project Categories** by clicking the **Filter** ({{% icon name="filter" %}}) button on the right side. The available categories are displayed in a side panel.     
+Categories are maintained by the [Mendix Admins](/control-center/mendix-admins-page/) of your company, on the [Project Categories](/control-center/project-categories/) page in Control Center.     
+If you have the **App Settings** permission, you can assign categories to an app on the app's [Settings](/developerportal/general-settings/) page, helping to improve classification and searchability.
+
+{{< figure src="/attachments/developerportal/general/apps/myapps-filter.png" >}}
+
+### App Tiles {#app-tiles}
+
+You can pin an app tile by clicking **Pin** ({{% icon name="pin" %}}). Pinned apps appear at the top of the list.
 
 To stop watching an app and disable notifications for that app, click the {{% icon name="view" %}} icon so that you see the **You are not watching this app** tooltip. To return to watching that app, click the {{% icon name="view-off" %}} icon so that you see the **You are watching this app** tooltip.
 
+By clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in the app tile, you can quickly perform the actions **Edit in Mendix Studio Pro** and **Leave App**.
+
 To go to the [licensed environments](/developerportal/deploy/environments/) of your deployed app, click **Environments** at the bottom of the app tile.
 
-## 4 Navigation Pane {#navigation-pane}
+### Navigation Pane {#navigation-pane}
 
-When you open an app in the Developer Portal, you can navigate between sections using the navigation pane on the left side of the screen. 
+You can open an app in [Apps](https://sprintr.home.mendix.com/) by clicking the app tile. After an app is open, you can navigate between sections using the navigation pane on the left side of the screen. 
 
-The navigation pane is divided into four main categories, which correspond with the documentation in this guide:
+The navigation pane is divided into these main categories:
 
 * [General](/developerportal/general/)
 * [Project Management](/developerportal/project-management/)
 * [App Insights](/developerportal/app-insights/)
+* [Repository]()
 * [Deployment](/developerportal/deploy/general/)
+* [Monitoring]()
 
-{{< figure src="/attachments/developerportal/navigation-pane.png" alt="The navigation pane" width="45%" class="no-border" >}}
+{{% alert color="info" %}}
+The features in the navigation pane can also be accessed via APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
+{{% /alert %}}
 
-## 5 Company Apps {#my-company-apps}
+### Pending Invitations {#pending-invitations}
 
-In the top bar of the Developer Portal, an additional menu item is available for **Company Apps**:
+If you are invited to collaborate on an app, your invitation is displayed at the top of the **My Apps** page. You can accept or decline the invitation.
 
-{{< figure src="/attachments/developerportal/company-apps.png"  width=80%  alt="Company Apps in MxDock" >}}
+{{% alert color="info" %}}
+You get an invitation only when someone invites you to an app from a different company. If someone invites you to an app from your company, you will be added automatically.
+{{% /alert %}}
 
-Click **Company Apps** to see a list of all the apps created by members of your [company](/control-center/company-settings/).
+## Company Apps {#my-company-apps}
 
-There are also details on the app's [Target Cloud](/developerportal/deploy/), the [Total Members](/control-center/members/) who can view and/or edit the app, a **Summary** description of the app, and the [Technical Contact](/developerportal/general/app-roles/#technical-contact) for the app.
+The **Company Apps** tab displays all the apps created by members of your [company](/control-center/company-settings/).
 
-You can also sort the order of the apps here by **Most Recent** or **App Name**.
+There are also details on the app's [Target Cloud](/deployment/), and the [Total Members](/control-center/members/) who can view or edit the app.
 
-## 6 Guide Categories
+You can also sort the order of the apps here by **Recent Activity**, **Created Date**, **Name**.
 
-The *Developer Portal Guide* is divided into the following categories:
+## Guide Categories
+
+The documentation of **Apps** is divided into the following categories:

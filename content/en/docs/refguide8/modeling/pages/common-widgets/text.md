@@ -5,7 +5,7 @@ weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The text widget displays a text which can contain parameters if necessary. Every attribute is replaced with the value of this attribute. For example, you can show a greeting message to a user by placing a text widget in a [data view](/refguide8/data-view/) and adding parameters to it.
 
@@ -13,7 +13,7 @@ The text widget displays a text which can contain parameters if necessary. Every
 
 If you start typing in any empty container, Studio Pro will automatically generate a text widget to display your text.
 
-## 2 Properties
+## Properties
 
 An example of text properties is represented in the image below:
 
@@ -26,23 +26,23 @@ Text properties consist of the following sections:
 * [General](#general)
 * [Visibility](#visibility)
 
-### 2.1 Common Section {#common}
+### Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide8/common-section-link.md" %}}
 
-### 2.2 Design Properties Section {#design-properties}
+### Design Properties Section {#design-properties}
 
 {{% snippet file="/static/_includes/refguide8/design-section-link.md" %}} 
 
-### 2.3 General Section {#general}
+### General Section {#general}
 
-#### 2.3.1 Caption {#caption}
+#### Caption {#caption}
 
 **Caption** defines a text that will be shown. The caption can contain parameters that are written between braces, for example, {1}.  
 
 For more information on using parameters, see the [Parameters](#parameters) section below. 
 
-#### 2.3.2 Parameters {#parameters}
+#### Parameters {#parameters}
 
 Parameters are attributes the value of which will be displayed. To view **Parameters**, do one of the following:
 
@@ -59,7 +59,7 @@ Parameters have the following settings:
 
     {{< figure src="/attachments/refguide8/modeling/pages/common-widgets/text/parameter-settings.png" alt="Parameter Settings" class="no-border" >}}
 
-##### 2.3.2.1 Adding New Parameters
+##### Adding New Parameters
 
 To use parameters, do the following:
 
@@ -74,7 +74,7 @@ To use parameters, do the following:
 
     {{< figure src="/attachments/refguide8/modeling/pages/common-widgets/text/parameters-example.png" alt="Parameter Example" class="no-border" >}}
 
-##### 2.3.2.2 Performing Other Actions on Parameters
+##### Performing Other Actions on Parameters
 
 In addition to adding new parameters, you can perform the following actions on parameters:
 
@@ -85,7 +85,7 @@ In addition to adding new parameters, you can perform the following actions on p
 
     {{< figure src="/attachments/refguide8/modeling/pages/common-widgets/text/parameter-actions.png" alt="Parameter Actions" class="no-border" >}}
 
-#### 2.3.3 Render Mode
+#### Render Mode
 
 The render mode determines how the text will be displayed. 
 
@@ -95,11 +95,11 @@ The render mode determines how the text will be displayed.
 | Paragraph | The text will be rendered as a separate paragraph (`<p>` tag in HTML). |
 | Heading 1 - Heading 6 | The text will be rendered as a selected heading (for example, `<h1>` tag in HTML). **Heading 1** is the largest type of heading, **Heading 6** is the smallest one. |
 
-### 2.4 Visibility Section {#visibility}
+### Visibility Section {#visibility}
 
 {{% snippet file="/static/_includes/refguide8/visibility-section-link.md" %}}
 
-## 3 Read More
+## Read More
 
 * [Page](/refguide8/page/)
 * [Common Widgets](/refguide8/common-widgets/)

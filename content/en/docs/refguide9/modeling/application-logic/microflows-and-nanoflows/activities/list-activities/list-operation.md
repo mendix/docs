@@ -9,7 +9,7 @@ weight: 4
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The **List operation** activity can perform various actions on a list. The result of the action is returned as a new list in contrast to the [Change list](/refguide9/change-list/) activity.
 
@@ -31,7 +31,7 @@ The actions which can be performed are:
 
 See below for details on these actions.
 
-## 2 Properties
+## Properties
 
 An example of list operation properties is represented in the image below:
 
@@ -44,7 +44,7 @@ The list operation properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section {#action}
+## Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -52,7 +52,7 @@ You can open a dialog box to configure this action by clicking the ellipsis (**�
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Operation
+### Operation
 
 A list operation action can execute any of the following operations. The operations are categorized by the type of operands they have:
 
@@ -60,7 +60,7 @@ A list operation action can execute any of the following operations. The operati
 * Member Inspections – operations which work with specified elements (attributes and associations) of the objects in the list
 * Unary – operations which work on the list with no other operands
 
-#### 3.1.1 Binary
+#### Binary
 
 These binary operations have as an input a list and either another list or an object. They return another list or a Boolean, depending on the operation. All lists and objects must relate to the same entity.
 
@@ -72,7 +72,7 @@ These binary operations have as an input a list and either another list or an ob
 | Contains | Checks whether all elements of the second parameter are present in the first parameter. | Boolean |
 | Equals | Checks whether the lists contain the same elements. | Boolean |
 
-#### 3.1.2 Member Inspections
+#### Member Inspections
 
 These operations takes a list and one or more members (attributes or associations) as input. They return either an object or another list, depending on the operation.
 
@@ -82,7 +82,7 @@ These operations takes a list and one or more members (attributes or association
 | Find | Finds the first object of which the member has the given value. | Object |
 | Filter | Finds all objects of which the member has the given value. | List |
 
-#### 3.1.3 Unary
+#### Unary
 
 These unary operations have a list as the single operand and return either an object or another list, depending on the operation.
 
@@ -91,7 +91,7 @@ These unary operations have a list as the single operand and return either an ob
 | Head | The result is the first element of the list, or empty if the parameter contains zero elements or was initialized as empty. | Object |
 | Tail | The result is a list containing all elements of the parameter except the first, or an empty list if the parameter contains zero elements or was initialized as empty. | List |
 
-#### 3.1.4 Expression
+#### Expression
 
 These operations take a list and filter it based on an expression. Inside the expression, `$currentObject` can be used to perform the filtering.
 
@@ -100,7 +100,7 @@ These operations take a list and filter it based on an expression. Inside the ex
 | Find by expression | Finds the first object that matches the given expression. | Object |
 | Filter by expression | Finds all the objects that match the given expression. | List |
 
-#### 3.1.5 Range {#range}
+#### Range {#range}
 
 {{% alert color="info" %}}
 This list operation action was introduced in Studio Pro 9.24.
@@ -112,10 +112,10 @@ This operation takes a list and filters it based on two expressions: `offset` an
 | --- | --- | --- |
 | Range | Retrieve a given number of objects (**Amount**) starting at a given index (**Offset**). The `amount` and `offset` are expressions that should result in a number. Note that the first object has an offset of 0. An amount of 0 means that all objects are retrieved. | List |
 
-### 3.2 List Name, Object Name, or Variable Name
+### List Name, Object Name, or Variable Name
 
 This is the name of the resulting List, Object, or Boolean variable. The result can be used by all activities that follow this activity.
 
-## 4 Common Section {#common}
+## Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}

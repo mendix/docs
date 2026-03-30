@@ -1,7 +1,8 @@
 ---
-title: "9"
+title: "Mendix Metamodel Version 9 Release Notes"
+linktitle: "9"
 url: /releasenotes/sdk/metamodel-9/
-weight: 1
+weight: 99
 no_list: false
 simple_list: true
 ---

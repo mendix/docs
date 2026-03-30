@@ -3,7 +3,7 @@ title: "OQL"
 url: /refguide8/oql/
 ---
 
-## 1 Introduction
+## Introduction
 
 The Mendix Object Query Language (OQL) is a relational query language just like [SQL](https://en.wikipedia.org/wiki/Sql). The major advantage of OQL is that it uses entity and association names instead of actual database table names.
 
@@ -11,9 +11,9 @@ In addition, OQL can use predefined relations (associations) to easily join obje
 
 These are some examples of OQL queries:
 
-* `SELECT Name FROM Sales.Customer` –  retrieves the names of all customers
-* `SELECT FirstName FROM Sales.Customer WHERE Name = 'Jansen'`  –  retrieves the first name of all customers with name "Jansen"
-* `SELECT AVG(TotalPrice) FROM Sales."Order" WHERE IsPaid = 1`  –  retrieves the average of the total prices of all paid orders (`Order` needs to be encapsulated in quotes because it is a reserved word, meaning it can be used for `ORDER BY`)
+* `SELECT Name FROM Sales.Customer` – retrieves the names of all customers
+* `SELECT FirstName FROM Sales.Customer WHERE Name = 'Jansen'` – retrieves the first name of all customers with name "Jansen"
+* `SELECT AVG(TotalPrice) FROM Sales."Order" WHERE IsPaid = 1` – retrieves the average of the total prices of all paid orders (`Order` needs to be encapsulated in quotes because it is a reserved word, meaning it can be used for `ORDER BY`)
 
 {{% alert color="info" %}}
 OQL queries do not take security into account out-of-the-box. This means that you can use OQL to manually define custom security expressions. In some cases, handling security yourself using OQL (instead of using the out-of-the-box security of XPath) may result in faster queries.
@@ -21,7 +21,7 @@ OQL queries do not take security into account out-of-the-box. This means that yo
 
 Try your OQL example online with the [OQL Playground](https://mydemoversion8-sandbox.mxapps.io/p/OQL) demo app. 
 
-## 2 Query Components
+## Query Components
 
 An OQL query can use these components:
 

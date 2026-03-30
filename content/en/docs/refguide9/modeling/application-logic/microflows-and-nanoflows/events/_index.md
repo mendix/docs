@@ -4,7 +4,7 @@ url: /refguide9/events/
 weight: 90
 ---
 
-## 1 Introduction
+## Introduction
 
 Events are elements that are displayed as circles on a flow of your microflow and are usually placed at the end or the beginning of the flow:
 

@@ -7,7 +7,7 @@ The DATEPART function retrieves a specified element from a date/time values. Thi
 
 The syntax is as follows:
 
-```sql {linenos=false}
+```sql
 DATEPART ( datepart , date_expression )
 ```
 

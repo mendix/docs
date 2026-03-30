@@ -28,7 +28,7 @@ The following activities interact with the database:
 
 * [Create object](/refguide/create-object/)
 * [Commit object(s)](/refguide/committing-objects/)
-* [Retrieve](/refguide/retrieve/)
+* [Retrieve object(s)](/refguide/retrieve-objects/)
 * [Rollback object](/refguide/rollback-object/)
 
 Therefore, the best practice is to use nanoflows in online applications when they do not contain the above activities.
@@ -140,18 +140,9 @@ Nanoflows are executed in the context of the current user. Any operation for whi
 
 ## Converting a Nanoflow to a Microflow {#convert-to-microflow}
 
-In Studio Pro 10.19 and below, you can use the **Convert to microflow** functionality to create a new microflow based on the original nanoflow. There are two ways to find this option:
+Right-click anywhere in the nanoflow editor, or right-click a nanoflow in the **App Explorer**, you will find the following two options in the context menu:
 
-* Right-click anywhere in the nanoflow editor and click **Convert to microflow**. 
-* Alternatively, in the **App Explorer**, right-click on the name of the nanoflow you want to convert, and click **Convert to microflow**.
-
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/nanoflows/convert-to-microflow.PNG" alt="Convert to microflow" width="550px" class="no-border" >}}
-
-Afterwards, a new microflow is created and added to the same directory, and you can get consistency errors if there are elements that are not supported by microflows.
-
-Starting from Studio Pro 10.20, there are two options available:
-
-* **Duplicate as microflow**: This option creates a new microflow based on the original nanoflow. This works the same as the **Convert to microflow** functionality in Studio Pro 10.19 and below.
+* **Duplicate as microflow**: This option creates a new microflow based on the original nanoflow.
 * **Convert to microflow**: This option removes the original nanoflow and replaces it with a new microflow. All possible usages throughout your app are updated and any non-replaceable usages remain as they are. When some usages cannot be replaced because they are not allowing microflows, a warning dialog appears. See below as an example:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/nanoflows/warning-dialog.png" alt="Conversion warning dialog" width="550px" >}}
@@ -159,12 +150,12 @@ Starting from Studio Pro 10.20, there are two options available:
     In the warning dialog, you have the following options:
 
     * **Convert**: The original nanoflow is removed, only replaceable usages are updated, and any non-replaceable usages remain as they are.
-    * **Find usages**: Stops the conversion and finds usages of the original nanoflow.
+    * **Show usages**: Stops the conversion and shows the irreplaceable usages of the original nanoflow.
     * **Cancel**: The conversion is cancelled and no changes are made.
 
 ## Canvas Interaction
 
-In the nanoflow editor from Studio Pro 10.6, you can use common patterns like unlimited canvas, enhanced zoom and scroll, and a snap-to-flow to make new activities from the toolbox and toolbar always well aligned in your flow.
+In the nanoflow editor, you can use common patterns like unlimited canvas, enhanced zoom and scroll, and a snap-to-flow to make new activities from the toolbox and toolbar always well aligned in your flow.
 
 ## Exporting a Nanoflow to an Image {#export-nanoflow}
 

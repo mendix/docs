@@ -14,7 +14,7 @@ cascade:
 
 ## Introduction
 
-There are multiple ways to deploy a Mendix application. You can deploy to your local machine for development and testing. You can deploy to Mendix Cloud, which is the default location for both free and licensed apps. You can also deploy to SAP Business Technology (SAP BTP) Platform, Cloud Foundry-based platforms, Docker containers, Azure, or to a server you configured yourself.
+There are multiple ways to deploy a Mendix application. You can deploy to your local machine for development and testing. You can deploy to Mendix Cloud, which is the default location for both free and licensed apps. You can also deploy to SAP Business Technology (SAP BTP) Platform, Kubernetes and Cloud Foundry-based platforms, Docker containers, Azure, or to a server you configured yourself.
 
 {{% alert color="warning" %}}
 Each app can only be deployed to one type of target platform (such as Mendix Cloud nodes) in addition to local testing.
@@ -60,11 +60,11 @@ You can deploy your app to Insights Hub, the cloud-based, open IoT operating sys
 
 To find out how to do this, read [Siemens Insights Hub](/developerportal/deploy/deploying-to-mindsphere/).
 
-## Private Cloud
+## Mendix on Kubernetes
 
-Mendix for Private Cloud allows you to deploy and manage your Mendix apps in a Kubernetes private cloud cluster.
+Mendix on Kubernetes allows you to deploy and manage your Mendix apps in a private Kubernetes cluster.
 
-The instructions for doing this are in [Private Cloud](/developerportal/deploy/private-cloud/).
+The instructions for doing this are in [Mendix on Kubernetes](/developerportal/deploy/private-cloud/).
 
 ## Cloud Foundry
 
@@ -84,13 +84,13 @@ Deploying to Azure is possible from the [Azure Marketplace](https://azuremarketp
 
 ### Mendix on Azure
 
-Mendix on Azure is a deployment option that makes use of some of the features of Mendix for Private Cloud in an opinionated way. For more information, see [Mendix on Azure](/developerportal/deploy/mendix-on-azure/).
+Mendix on Azure is a deployment option that makes use of some of the features of Mendix on Kubernetes in an opinionated way. For more information, see [Mendix on Azure](/developerportal/deploy/mendix-on-azure/).
 
 {{% alert color="info" %}} This feature is currently available to participating customers. For more information, contact your Customer Success Manager. {{% /alert %}}
 
 ## On-Premises
 
-To learn how to deploy your Mendix application on premises, see [How to Deploy Mendix on Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/) and [Unix-Like Deployment](/developerportal/deploy/unix-like/).
+To learn how to deploy your Mendix application on premises, see [How to Deploy Mendix on Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/) and [Linux Deployment](/developerportal/deploy/linux/).
 
 ## Mendix Applications on Industrial Edge
 

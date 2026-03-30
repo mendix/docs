@@ -1,7 +1,7 @@
 ---
 title: "Best Practice Recommender"
 url: /refguide/best-practice-recommender/
-weight: 10
+weight: 15
 description: "Describes Best Practice Recommender in Mendix Studio Pro."
 aliases:
     - /refguide/mx-assist-performance-bot/
@@ -9,10 +9,6 @@ aliases:
 ---
 
 ## Introduction 
-
-{{% alert color="info" %}}
-Best Practice Bot was rebranded to Best Practice Recommender in Studio Pro 10.12.0.
-{{% /alert %}}
 
 {{% alert color="info" %}}
 Best Practice Recommender works both online and offline. No internet connection or signing-in is required.

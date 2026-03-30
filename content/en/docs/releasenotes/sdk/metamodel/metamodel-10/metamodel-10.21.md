@@ -107,4 +107,3 @@ weight: 79
 #### Outcome (Element)
 
 * We introduced the `persistentId` property. 
-

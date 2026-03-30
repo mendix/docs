@@ -119,7 +119,7 @@ To create a JavaScript action that can synthesize text to speech, follow these s
     }
     ```
 
-9. You have just implemented your first JavaScript action! You can start using the action in your nanoflows by adding a **JavaScript action call** and selecting the newly created **SpeechToText** action: 
+9. You have just implemented your first JavaScript action! You can start using the action in your nanoflows by adding a **Call JavaScript action** and selecting the newly created **SpeechToText** action: 
 
     {{< figure src="/attachments/howto/extensibility/build-javascript-actions/write-javascript-actions/selectjsactioncalldetail.png" alt="select text to speech action" class="no-border" >}}
 

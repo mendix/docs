@@ -11,7 +11,9 @@ aliases:
 
 ## Introduction
 
-Certificates are used to authenticate users to apps. They can be used on both incoming and outgoing connections.
+Certificates are used to authenticate users to apps and secure communication. In Mendix Cloud, certificates can be used for both incoming and outgoing connections.
+
+Incoming connection certificates can be managed either at the [application level](/developerportal/deploy/application-level-certificates/) by Technical Contacts, or centrally by Mendix Admins via [Certificate Management](/control-center/certificate-management/). Outgoing connection certificates are solely managed at the application level.
 
 {{% alert color="info" %}}
 Custom certificates cannot be configured for Free Apps.
@@ -61,9 +63,7 @@ You can upload a PKCS12 file by following these steps:
 1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
 1. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the relevant environment.
 1. Select the **Network** tab of an application environment.
-1. Below **Outgoing Connections Certificates**, click **Add Client Certificate**.
-
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/certificates/certificate.png" class="no-border" >}}
+1. In the **Outgoing Connections Certificates** section, click **Add Client Certificate**.
 
 1. Upload the client certificate as a PKCS12 (.pfx or .p12) container.
 1. Enter the password to unlock the certificate container.
@@ -92,9 +92,30 @@ To upload a certificate authority, follow these steps:
 
 1. Select the **Network** tab of an application environment.
 
-1. Below **Outgoing Connections Certificates**, click **Add Authority**.
+1. In the **Outgoing Connections Certificates** section, click **Add Authority**.
 
 1. Upload a certificate authority in the PEM format.
+
+## Frequently Asked Questions
+
+### Can You Create a `*.mycompany.com` Wildcard Certificate? {#wildcard}
+
+Yes. For [application-level certificates](/developerportal/deploy/application-level-certificates/), a wildcard certificate can only be used within the environments of a single app. This is because the private key is stored securely and cannot be accessed outside the app.
+
+To reuse a wildcard certificate across multiple apps or environments, Mendix Admins can create a central certificate in [Certificate Management](/control-center/certificate-management/). Central certificates can then be selected by Technical Contacts across different apps and environments.
+
+Technical Contacts can select the same wildcard certificate for different environments of the same app by using it with different subdomains. For example, `test.mycompany.com`, `accp.mycompany.com`, and `app.mycompany.com`.
+
+### How Do You Construct an Intermediate Certificate Chain Properly?
+
+Your certificate is signed by a certificate authority (CA) using the CA's intermediate certificate. The intermediate certificate is signed with the CA’s root certificate.
+
+To reach the root certificate, you must link your certificate through the intermediate certificate chain, usually just one intermediate certificate. Occasionally, a CA requires multiple intermediate certificates.
+
+* For application-level certificates, you provide the intermediate certificate chain when uploading the certificate at the application level
+* For central certificates, the chain is uploaded by the Mendix Admin
+
+You do not need to provide the root certificate, because every web browser has it in its trusted keystore.
 
 ## Read More
 

@@ -12,7 +12,7 @@ aliases:
 As Mendix applications grow in complexity and scale, optimizing performance is essential for a smooth user experience. The Hermes engine, an optimized JavaScript engine designed for React Native, offers significant performance enhancements — particularly in terms of application startup time and runtime efficiency. This guide will introduce the Hermes engine, describe its benefits, and explain its impact on code.
 
 {{% alert color="info" %}}
-Hermes is enabled for all projects in Mendix 10.18.0 or above with no option to disable it.
+Hermes is enabled for all projects with no option to disable it.
 {{% /alert %}}
 
 ## Performance Gain from Enabling Hermes

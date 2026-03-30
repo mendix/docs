@@ -27,11 +27,16 @@ Exact feature support varies depending on chosen configuration. Please consult f
 {{% /alert %}}
 
 * Mendix Studio Pro integration and one-click app deployment even with no access to public internet
+
+{{% alert color="info" %}}
+The integration with Studio Pro does not currently support using the [Integration pane](/refguide/integration-pane/). This feature will be added in a future release. 
+{{% /alert %}}
+
 * Mendix developer experience hosted entirely within any virtual private cloud
 * Support for SSO authentication for Private Mendix Platform and Studio Pro through your own identity provider (IdP)
 * A private version of the Mendix Marketplace, with all contents hosted entirely within your Private Mendix Platform, accessible in-browser and directly from Studio Pro
 * SCM repository support for GitLab, GitHub, Bitbucket and Azure DevOps, to be used as source code repository for your projects
-* CI/CD capabilities out-of-the-box, with additional support for integrations with Jenkins and Tekton; leverage our predefined templates or implement your own custom templates
+* CI/CD capabilities out-of-the-box, with additional support for integrations with Jenkins, Kubernetes, and Azure DevOps; leverage our predefined templates or implement your own custom templates
 * Operational capabilities such as basic log browsing and metrics through integrations with Loki and Grafana
 * Governance features like application landscape management, marketplace administration, user group management, as well as various developer platform feature settings and action logs
 

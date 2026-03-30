@@ -13,7 +13,7 @@ Typically, these commands require a path to the *.mpr* file as a parameter.
 
 ## mx create-project Command {#create-project}
 
-The `mx create-project` command creates a new app in Studio Pro. The app version depends on the version the tool was bundled with. For example, if you are using the mx tool for Studio Pro 10.0.0, `mx create project` will create a new app in that version. 
+The `mx create-project` command creates a new app in Studio Pro. The app version depends on the version the tool was bundled with. For example, if you are using the mx tool for Studio Pro 11.0.0, `mx create project` will create a new app in that version. 
 
 ### Usage
 
@@ -95,11 +95,7 @@ These are the return codes:
 
 ## mx show-java-version Command{#show-java-version}
 
-{{% alert color="info" %}}
-This command is available from 10.14 onwards and in MTS versions 10.6.12+ and 10.12.2+.
-{{% /alert %}}
-
-The `mx show-java-version` command reports what the configured Java version of the app is.
+{The `mx show-java-version` command reports what the configured Java version of the app is.
 
 The input is a single MPR file.
 
@@ -134,7 +130,7 @@ Return codes are described in the table below:
 
 ## mx convert Command {#convert}
 
-The `mx convert` command converts the *.mpk* file (or files) of the app (or apps) to a specific Studio Pro version. For example, if you are using the mx command-line tool for Studio Pro 10.0.0, `mx convert` will convert the app to that version. 
+The `mx convert` command converts the *.mpk* file (or files) of the app (or apps) to a specific Studio Pro version. For example, if you are using the mx command-line tool for Studio Pro 11.0.0, `mx convert` will convert the app to that version. 
 
 The input can be a single file, directory, or multiple files.
 
@@ -311,10 +307,6 @@ These are the return codes:
 | `300` | Exception, something went wrong. |
 
 ## mx sync-java-dependencies Command {#java-dependencies}
-
-{{% alert color="info" %}}
-This command is available as of [Studio Pro 10.20](/releasenotes/studio-pro/10.20/).
-{{% /alert %}}
 
 The `mx sync-java-dependencies` command synchronizes the managed Java dependencies that are configured in the modules of the project.
 This results in the corresponding .*jar* files being added to the `vendorlib` directory in the project root.

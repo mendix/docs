@@ -7,7 +7,7 @@ description: "Describes the commands related to package export for the mx comman
 
 ## Introduction
 
-The commands in this group enable exporting different kids of packages from your app.
+The commands in this group enable exporting different kinds of packages from your app.
 
 ## mx create-project-package Command {#create-project-package}
 
@@ -25,6 +25,7 @@ These are the `OPTIONS`:
 | --- | --- |
 | `-s, --include-snapshot` | Includes a snapshot in the app package. |
 | `-d, --package-dir` | Exports the package to the directory. |
+| `-k, --skip-managed-dependency-sync` | Do not synchronize managed dependencies; use existing files in `vendorlib` instead. |
 | `--help` | Displays the help screen. |
 
 For `TARGET-FILE`, specify the *.mpr* app you want to export.
@@ -63,6 +64,7 @@ These are the `OPTIONS`:
 | `-l, --filter-required-libs` | Includes all the files except the userlibs that do not have an accompanying `[ModuleName].RequiredLib` file. | 
 | `-e, --exclude-files` | Excludes all the files that match the given regular expression. |
 | `-d, --package-dir` | Exports the module package to the directory. |
+| `-m, --exclude-managed-dependencies` | Excludes managed dependencies from synchronization and the exported module package. Note that this will prevent the module from being used if Gradle synchronization is disabled in Studio Pro. |
 | `--help` | Displays the help screen. |
 
 For `TARGET-FILE`, specify the *.mpr* app you want to export.
@@ -103,6 +105,7 @@ These are the `OPTIONS`:
 | --- | --- |
 | `-s, --include-snapshot` | Includes a snapshot in the app package. |
 | `-d, --package-dir` | Exports the package to the directory. |
+| `-k, --skip-managed-dependency-sync` | Do not synchronize managed dependencies; use existing files in `vendorlib` instead. |
 | `--help` | Displays the help screen. |
 
 For `TARGET-FILE`, specify the *.mpr* app you want to export.

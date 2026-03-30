@@ -158,16 +158,12 @@ Disabling local file encryption is not supported and may cause unexpected behavi
 ## Encrypting Session Cookies {#encrypting-session-cookies}
 
 {{% alert color="info" %}}
-This feature is present in [Native Template Version 13.0.0](/releasenotes/mobile/nt-13-rn/#1300) (Studio Pro 10.21) and above.
+This feature is present in [Native Template Version 13.0.0](/releasenotes/mobile/nt-13-rn/#1300) and above and is disabled by default.
+
+If your app both has File Encryption and Database Encryption enabled, the cookie encryption will also be enabled.
 {{% /alert %}}
 
-You can now enable cookie encryption for both new and existing Android apps. When enabled, the cookies stored in the device are encrypted using the AES encryption algorithm instead of being stored as is. 
-
-{{% alert color="warning" %}}
-This feature was enabled by default in Mendix applications before Studio Pro 10.21. Within 10.21, the option by default is disabled.
-
-If your app both has File Encryption and Database Encryption enabled, the cookie encryption will also be enabled upon upgrading the project to version 10.12 or above.
-{{% /alert %}}
+You can enable cookie encryption for both new and existing Android apps. When enabled, the cookies stored in the device are encrypted using the AES encryption algorithm instead of being stored as is.
 
 ### Defining Cookie Encryption
 

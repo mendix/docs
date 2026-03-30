@@ -31,16 +31,16 @@ Before you continue, make sure you have completed the following:
 To retrieve the currently logged-in user using the **Account** entity from the **Administration** module, do the following:
 
 1. Open an existing microflow or create a new one.
-2. Navigate to the **Toolbox** and search for the **Retrieve** activity.
-3. Drag the **Retrieve** activity into your microflow.
-4. Double-click the **Retrieve** activity to open its properties.
+2. Navigate to the **Toolbox** and search for the **Retrieve object(s)** activity.
+3. Drag the **Retrieve object(s)** activity into your microflow.
+4. Double-click the **Retrieve object(s)** activity to open its properties.
 5. Choose **From database** as the **Source**.
 6. Click **Select...** for **Entity**.
 7. In the **Select Entity** dialog box, go to **Marketplace modules** > **Administration**, and select **Account**.
 8. Choose **First** as the **Range**. This is because what you are looking for is the currently logged-in user, which is always only one object.
 9. In the **XPath Constraint** box, type in `[id = $currentUser]` and click **OK**.
-    
-    {{% alert color="info" %}}For Studio Pro 10.5 and above, click **Edit…** next to **XPath constraint** to open a dialog box where you can enter your constraint in **XPath expression** mode.{{% /alert %}}
+
+    For Studio Pro 11, click **Edit…** next to **XPath constraint** to open a dialog box where you can enter your constraint in **XPath expression** mode.
 
 Now you have the microflow that retrieves the current user!
 

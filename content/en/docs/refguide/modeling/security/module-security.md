@@ -37,7 +37,7 @@ For each combination you can indicate whether or not the page is visible for the
 
 A page that is not visible for a specific role will not show up in navigation structures, and **Open Page** buttons leading to that page will not be rendered by default.
 
-Page access settings do not restrict users from navigating to a page through other means, for example through a deeplink or through a button that is forced to be visible (for more information, see [Common Widget Properties](/refguide/common-widget-properties/)). If you want to ensure that specific roles cannot access parts of your data or logic, than this must be expressed through **entity access** and **microflow access** constraints.
+Page access settings do not restrict users from navigating to a page through other means, for example through a deeplink or through a button that is forced to be visible (for more information, see [Properties Common in the Page Editor](/refguide/common-widget-properties/)). If you want to ensure that specific roles cannot access parts of your data or logic, than this must be expressed through **entity access** and **microflow access** constraints.
 
 ## Microflow Access
 
@@ -66,12 +66,6 @@ For each combination you can indicate whether or not the module role has access 
 ## Entity Access {#entity-access}
 
 **Entity Access** defines for each module role whether users with this role are authorized to **Create**, **Read**, **Write** and/or **Delete** objects of the entity. You can also write an XPath constraint to restrict the set of objects to which the access rule applies. 
-
-{{% alert color="info" %}}
-
-From Mendix 10.21 and above editing access rules uses the [new access rule editor](/refguide/access-rules/#new-editor). 
-
-{{% /alert %}}
 
 The **Entity Access** tab is displayed as a matrix showing access rules that apply to entities:
 

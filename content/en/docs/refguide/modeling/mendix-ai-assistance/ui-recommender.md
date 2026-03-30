@@ -8,10 +8,6 @@ description: "Describes UI Recommender in Mendix Studio Pro."
 ## Introduction
 
 {{% alert color="info" %}}
-UI Recommender is available in Studio Pro 10.18 and above. 
-{{% /alert %}}
-
-{{% alert color="info" %}}
 UI Recommender works both online and offline. No internet connection or signing-in is required.
 {{% /alert %}}
 

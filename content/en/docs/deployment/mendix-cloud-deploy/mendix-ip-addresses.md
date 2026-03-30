@@ -64,13 +64,23 @@ key can be used in a policy to allow principals (Mendix apps and end-users) to m
 
 If you apply IP restrictions to your AWS IAM user or role, you must ensure that the following IP ranges for API requests are allowed in your policy:
 
+For Mendix apps deployed to the Cloud Foundry infrastructure:
+
 * `10.10.128.0/21`
 * `10.10.136.0/21`
 * `10.10.144.0/21`
 
-### Global Platform {#global-platform-ips}
+For Mendix apps deployed to the Kubernetes infrastructure:
 
-Some services running on our global platform infrastructure (such as the PDF Document Generation service) use a fixed set of inbound and outbound IP addresses. If you use these services and you apply IP restrictions to your app, you must ensure that the IP addresses listed below are allowed in your policy.
+* `10.11.64.0/18`
+* `10.11.128.0/18`
+* `10.11.192.0/18`
+
+To find whether your app uses Kubernetes or Cloud Foundry, go to [Apps](https://sprintr.home.mendix.com/link/myapps) and check the **Infrastructure** label for your environment.
+
+### Mendix Portal {#global-platform-ips}
+
+Some services running on Mendix Portal (such as the PDF Document Generation service) use a fixed set of inbound and outbound IP addresses. If you use these services and apply IP restrictions to your app, you must ensure that the IP addresses listed below are allowed in your policy.
 
 {{% alert color="info" %}}
 While these IP addresses are static, there may still change under exceptional circumstances. In these cases, a notification will be listed on [Mendix Platform Status](https://status.mendix.com) at least 48 hours ahead of time.

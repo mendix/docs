@@ -1,14 +1,14 @@
 ---
 title: "Language Settings"
 url: /refguide/language-settings/
-weight: 50
+weight: 10
 ---
 
 ## Introduction
 
 Mendix is designed to be used by users in multiple languages. The **Languages** tab of the **App Settings** allows you to select which languages your app will support.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/app-settings.png" width="550px" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/app-settings.png" width="550px" >}}
 
 You can reach this tab in two ways:
 
@@ -30,7 +30,7 @@ The initial default language is *English, United States*.
 
 You can add as many languages as you like from the list of supported languages by clicking **Add**, selecting the desired language, and clicking **OK**.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/add-language.png" width="500px" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/add-language.png" width="500px" >}}
 
 Most languages will be added with an empty dictionary, although some translations have already been set up in the Dutch dictionary. 
 
@@ -38,7 +38,7 @@ Most languages will be added with an empty dictionary, although some translation
 
 You can set each language in your app to have additional settings.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/edit-language.png" width="550px" alt="Edit Language" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/edit-language.png" width="550px" alt="Edit Language" >}}
 
 ### Check Completeness
 
@@ -58,7 +58,9 @@ Type a format string in the relevant box and you will see an example of how a da
 
 Click **Edit…** to open a dialog box which will provide a full reference for the format string:
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/date-format.png" width="550px" alt="Date edit dialog" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/date-format.png" width="550px" alt="Date edit dialog" >}}
+
+The list of supported tokens can be found in [Parse and Format Date Function Calls](/refguide/parse-and-format-date-function-calls/).
 
 ## List of Supported Languages {#supported-languages}
 
@@ -131,6 +133,7 @@ The list below is provided to enable you to quickly evaluate if Mendix supports 
 | French | France | fr_FR | 9.0.5 |
 | French | Luxembourg | fr_LU | 9.0.5 |
 | French | Switzerland | fr_CH | 9.0.5 |
+| Georgian | Georgia | ka_GE | 11.5.0 |
 | German | Austria | de_AT | 9.0.5 |
 | German | Germany | de_DE | 9.0.5 |
 | German | Luxembourg | de_LU | 9.0.5 |

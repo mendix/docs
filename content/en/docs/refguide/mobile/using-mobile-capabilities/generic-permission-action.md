@@ -11,10 +11,10 @@ Advanced features in mobile apps often require permission from users. Apps need 
 
 ## Prerequisites
 
-* Complete the [Prerequisites](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Build a Mendix Native App in the Cloud*.
+* Complete the [Prerequisites](/refguide/mobile/getting-started-with-mobile/prerequisites/) of your app per its type
 * Install Mendix Studio Pro to use the Native Mobile App Builder and the latest Nanoflow Commons module.
 * Confirm your [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module is up to date.
-* Confirm you are using the latest version of the [Make It Native 10 app](/releasenotes/mobile/make-it-native-parent/).
+* Confirm you are using the latest version of the [Make It Native app](/releasenotes/mobile/make-it-native-parent/).
 
 ## Using a Generic Permission Action
 

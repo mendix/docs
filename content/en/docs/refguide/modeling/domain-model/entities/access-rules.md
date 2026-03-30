@@ -30,20 +30,6 @@ The **System.User** entity has inbuilt access rules where access is given to its
 
 ## Defining Access Rules {#new-editor}
 
-{{% alert color="warning" %}}
-The modernized access rule editor was made generally available in Studio Pro version 10.21.0, replacing the old editor. It was also available from Studio Pro version 10.6.0, as a [beta](/releasenotes/beta-features/). The old editor is deprecated and will be removed in Studio Pro version 11.0.0, but you can revert to the old editor in the [Preferences Dialog](/refguide/preferences-dialog/#new-features)
-
-For guidance on using the old editor, see [Defining Access Rules Using the Old Editor](#old-editor), below.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-In preparation for making the modernized access rule editor generally available, the features and interface were modified in Studio Pro version 10.17.0. The description below describes that version of the interface and does not fully describe the previous beta interface (Studio Pro versions 10.6.0 through 10.16.0).
-{{% /alert %}}
-
-{{% alert color="info" %}}
-For Studio Pro versions 10.6.0 through 10.16.0, the modernized access rule editor worked with normalized access rules. A normalized access rule is an access rule that has exactly one module role attached to it. See [Access Rule Normalization](#normalization), below, for the implications when you switch to the new editor for those versions.
-{{% /alert %}}
-
 You can view access rules in the **Access rules** tab of the entity properties dialog. Open this by double clicking on an entity in the domain model.
 
 {{% alert color="info" %}}
@@ -127,13 +113,13 @@ Because of this XPath constraint, access defined in the access rule is only appl
 
 #### Entity Rights
 
-You can add or edit entity rights using the **Create objects** and **Delete objects** checkboxes  next to **Entity rights**.
+You can add or edit entity rights using the **Create objects** and **Delete objects** checkboxes next to **Entity rights**.
 
 XPath constraints are not applied to create operations, meaning that if you enable create access in an access rule which applies to a certain module role, any end-user with this module role can create objects of this entity.
 
 XPath constraints are applied to delete operations, unlike create operations.
 
-#### Default rights for new members
+#### Default Rights for New Members{#default-rights}
 
 Specifies the rights which are applied to new attributes or associations of this entity. This option was absent from the new Access Rule Editor before version 10.19 and in these versions the rights always defaulted to no access for any module roles.
 
@@ -148,12 +134,6 @@ You cannot set *Write* access to attributes which are calculated. This includes 
 {{% /alert %}}
 
 See [Attribute Changes and Security Constraints](#attribute-changes), below, for important considerations about giving access to attributes.
-
-### Access Rule Normalization{#normalization}
-
-Older beta versions of the new access rule editor, those in Studio Pro versions 10.6 through 10.16, worked with normalized access rules. A normalized access rule is an access rule that has exactly one module role attached to it. This change was made because the editor used to work with a table where the entity members make use of the rows and module roles (optionally with XPaths) use the columns.
-
-In those versions, access rules were automatically normalized when first using the new editor for an entity. Alternatively, all access rules in a project could be normalized at once by going to *App* *Tools* > *Normalize access rules*.
 
 ## Access Rule Evaluation
 
@@ -184,125 +164,3 @@ As for new objects the result of this access rule evaluation is stored in memory
 ### Non-Persistable Objects
 
 Non-persistable objects cannot have XPath constraints.
-
-## Defining Access Rules using the Old Editor {#old-editor}
-
-{{% alert color="warning" %}}
-The old editor is the only one available in versions of Studio Pro below 10.6. From Studio Pro 10.21 it is deprecated and it will be removed in 11.0.0. In the meantime it can still be used by disabling the modern editor in the [Preferences Dialog](/refguide/preferences-dialog/#new-features).
-{{% /alert %}}
-
-An example of the access rules properties is represented in the image below:
-
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-properties.png" alt="Access Rules for Entities" width="700px" class="no-border" >}}
-
-Access rules properties consist of the following sections:
-
-* [Documentation](#documentation)
-* [Module Roles](#module-roles)
-* [Access rights](#access-rights)
-* [XPath constraint](#xpath-constraint)
-
-### Documentation Section {#documentation}
-
-In **Documentation**, you can describe the intention of the access rule. This helps to keep access rules comprehensible, especially in the case of non-trivial XPath constraints.
-
-### Rule Applies to the Following Module Roles Section {#module-roles}
-
-{{% alert color="info" %}}
-To apply an access rule to an entity, you need to have at least one of the following Access rights selected:
-
-* Allow creating new objects
-* Allow deleting existing objects
-* An Entity Member (attribute or association) with `Read` or `Read, Write` rights
-{{% /alert %}}
-
-#### Roles
-
-All module roles are listed, and those to which this access rule applies are checked. All end-users that have at least one of the checked module roles get the access rights that the rule defines.
-
-#### Select / Deselect All
-
-You can easily select, or deselect, all module roles using this checkbox.
-
-### Access Rights {#access-rights}
-
-The **Access rights** tab allows you to assign rights to end-users with the selected module roles.
-
-#### Create and Delete Rights Section
-
-##### Allow Creating New Objects
-
-If **Allow creating new objects** is checked, end-users are allowed to create new objects of this entity. This is not restricted by any configured XPath constraints.
-
-##### Allow Deleting Existing Objects
-
-If **Allow deleting existing objects** is checked, end-users are allowed to delete existing objects of this entity.
-
-The set of objects that can be deleted can be limited by using an [XPath constraint](#xpath-constraint).
-
-#### Member Read and Write Rights Section {#member-access}
-
-**Member read and write rights** define the access rights for every member ([attribute](/refguide/attributes/) or [association](/refguide/associations/)) of the entity. These access rights indicate whether end-users are allowed to view and/or edit the member's value. The set of objects to which these rights apply can be limited by using an [XPath constraint](#xpath-constraint).
-
-| Value | Description |
-| --- | --- |
-| - | End-users are not allowed to view or edit the value of the member. |
-| Read | End-users are allowed to view the value of this member, but cannot edit it. |
-| Read, Write | End-users are allowed to view and edit the value of this member. |
-
-{{% alert color="info" %}}
-You cannot set *Write* access to attributes which are calculated. This includes both attributes where the attribute value is set to **Calculated** and attributes of type *Autonumber*.
-{{% /alert %}}
-
-**Default rights for new members** specifies the rights which are applied to new attributes or associations of this entity.
-
-**Set all to** allows you to quickly set all the access rights for members to **None**, **Read**, or **Read, Write**.
-
-For example, a customer is allowed to view the discount, but is not allowed to edit it. The access rights for the discount attribute are **Read**.
-
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-discount-read.png" class="no-border" >}}
-
-See [Attribute Changes and Security Constraints](#attribute-changes), below, for important considerations about giving access to attributes.
-
-#### XPath Constraint {#xpath-constraint}
-
-An [XPath constraint](/refguide/xpath-constraints/) can be used to constrain the set of objects to which the access rule applies. If the constraint rule is true, the rule applies to that object. If the XPath constraint is empty, the rule applies to all objects of the entity.
-
-Click **Edit…** to edit the XPath constraint.
-
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-xpath-tab.png" width="450px" class="no-border" >}}
-
-{{% alert color="warning" %}}
-XPath constraints can only be applied to persistable entities as they are applied by the database. Defining XPath constraints for non-persistable entities results in consistency errors.
-{{% /alert %}}
-
-There are two constraints that can be appended easily with a single button click.
-
-##### Owner
-
-The **Owner** button adds an XPath constraint so the access rule is only applied if the current end-user is the object owner.
-
-```java
-[System.owner='[%CurrentUser%]']
-```
-
-This constraint is only valid when the [Store 'owner'](/refguide/entities/#store-owner) checkbox in the **System members** section of the entity properties is checked.
-
-##### Path to User
-
-The **Path to user...** button adds an XPath constraint so the access rule is only applied when a User object which is associated (directly or indirectly) with the current object is the current end-user. When you click **Path to user...**, you can select a path to an associated entity that is either a `System.User` or a specialization of `System.User`. This is then converted into an XPath constraint for the access rule.
-
-For example:
-
-1. Assume that the **Customer** entity is a specialization of the **User** entity. The **Order** entity is associated with the **Customer** entity via the **Order_Customer** association.
-2. Assume that a logged-in customer is only allowed to view their orders, but is not allowed to view the orders of other customers.
-
-The XPath constraint can be constructed easily using the **Path to user...** button by selecting the **Customer** entity in the **Order** entity access rule. The created rule will look like this:
-
-```xpath
-[Module.Order_Customer = '[%CurrentUser%]']
-```
-
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-order-xpath.png" width="1000px" class="no-border" >}}
-
-Because of this XPath constraint, access defined in the **Access rights** tab is only applied to orders for which the customer is the current end-user.

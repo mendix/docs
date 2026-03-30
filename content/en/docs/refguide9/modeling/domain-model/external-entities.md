@@ -6,17 +6,13 @@ weight: 15
 ---
 ## Introduction
 
-External entities can be added to the Domain Model through the [Data Hub pane](/refguide9/data-hub-pane/). They are displayed as *purple* entity containers in the Domain Model. External entities represent the link to the datasets that are made available through the shared data sources registered in [Mendix Data Hub](/data-hub/). Data sources are collections of entity sets (that are referred to as datasets) are published in OData services. 
+External entities can be added to the Domain Model through the [Data Hub pane](/refguide9/data-hub-pane/). They are displayed as *purple* entity containers in the Domain Model. External entities represent the link to the datasets that are made available through the shared data sources registered in the [Catalog](/catalog/). Data sources are collections of entity sets (that are referred to as datasets) are published in OData services. 
 
 Datasets are maintained and updated in the source application. You can integrate or consume these datasets through external entities in your app development, and any changes to the data in the originating app is automatically updated in the consuming apps. 
 
 External entities can be used with local entities. However, as the datasets are maintained in the source applications, not all properties can be changed in the consuming app.
 
 To follow how to add external entities from the **Data Hub** pane, see [Adding External Entities](#adding-external-entities).
-
-{{% alert color="info" %}}
-A license is required to use Mendix Data Hub and connect to external data sources through consumed OData services in your apps.
-{{% /alert %}}
 
 ## Adding an External Entity to an App {#adding-external-entities}
 
@@ -54,7 +50,7 @@ You can make local changes to the properties of external entities that only affe
 If you delete an external entity from the Domain Model, the service documents remain in the App Explorer list and the service continues to be listed in the Data Hub App pane. You can delete the two service documents if you are no longer going to be using any entities from the Consumed service.
 {{% /alert %}}
 
-For more information on using published OData services and entities through the Catalog, see [How to Consume Registered Assets](/catalog/consume/) in the *Data Hub Guide*.
+For more information on using published OData services and entities through the Catalog, see [Consume Services](/catalog/consume/).
 
 ## Properties of External Entities {#properties}
 
@@ -192,5 +188,6 @@ Furthermore, external entities cannot be committed. Use the [Send External Objec
 
 * The **Commit** activity does not work. Use **Send External Object** instead.
 * On pages, the [Save button](/refguide9/button-widgets/) and the [Save Changes event](/refguide9/on-click-event/#save-changes) do not work when the page contains widgets that update external entities. Call a microflow that persists the changes using **Send External Object** instead.
+* Mendix tracks external entities it has processed by mapping their OData keys to local Mendix identifiers. This prevents duplicating objects and ensures correct association resolution. However, services that delete and recreate objects with the same OData key can cause inconsistencies, as Mendix assumes these keys remain unique. For better compatibility, use services that implement soft deletes, marking objects as inactive instead of removing them.
 
-For more details on consuming services and exposed entities, including operations that can be performed on external entities, see [Consume Registered Assets](/catalog/consume/) in the *Data Hub Guide*.
+For more details on consuming services and exposed entities, including operations that can be performed on external entities, see [Consume Services](/catalog/consume/).

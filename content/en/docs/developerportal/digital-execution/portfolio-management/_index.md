@@ -1,14 +1,14 @@
 ---
 title: "Portfolio Management"
 url: /developerportal/portfolio-management/
-weight: 25
+weight: 35
 description: "Describes the Mendix Portfolio Management app."
 #The anchor #portfolios-settings and #privacy-settings below is mapped, so it should not be removed or changed. If changing the URL of this document, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## Introduction
 
-The [Portfolio Management](https://portfolio.mendix.com) tool is available to all Mendix users. It enables staying informed about initiatives and managing them in the different development stages. It provides portfolio managers, business stakeholders, and developers with everything they need to collaborate effectively in one place and bring new initiatives to the Mendix Platform. 
+The [Portfolio Management](https://portfolio.mendix.com) tool is available to all Mendix users. It allows you to stay informed about initiatives and to manage them in the different development stages. It provides portfolio managers, business stakeholders, and developers with everything they need to collaborate effectively in one place and bring new initiatives to the Mendix Platform. 
 
 With the Portfolio Management tool, you can manage [active initiatives](/developerportal/portfolio-management/initiatives-overview/) and [archived initiatives](/developerportal/portfolio-management/archive/) in a portfolio. If you are Portfolio Managers, you can [manage access](/developerportal/portfolio-management/access-management/) and configure [portfolio settings](/developerportal/portfolio-management/portfolio-settings/) of a portfolio.
 
@@ -36,15 +36,15 @@ The **Portfolio Landscape Overview** page contains two sections: **My Portfolios
 
 ### Portfolio Cards {#portfolio-card}
 
-On the **Portfolio Landscape Overview** page, each card represents a portfolio. On a portfolio card, you can see the name of the portfolio, the company to which it belongs, the [privacy settings](#privacy-settings), and the avatars of Portfolio Managers (up to avatars of four Portfolio Managers).
+On the **Portfolio Landscape Overview** page, each card represents a portfolio. On a portfolio card, you can see the name of the portfolio, the company to which it belongs, the [privacy settings](#privacy-settings), and the avatars of Portfolio Managers. Up to four avatars can be displayed.
 
 #### Different Privacy Settings of a Portfolio {#privacy-settings}
 
-{{% alert color="info" %}}A Portfolio Manager change the **Privacy Settings** on the [Portfolio Settings](/developerportal/portfolio-management/portfolio-settings/) page.{{% /alert %}}
+{{% alert color="info" %}}A Portfolio Manager can change the **Privacy Settings** on the [Portfolio Settings](/developerportal/portfolio-management/portfolio-settings/) page.{{% /alert %}}
 
 Currently, the privacy settings of a portfolio can be private, restricted, or open. The table below shows their differences:
 
-| Portfolio type | Visible in the **Company Portfolios** section?         | Can users access the portfolio without joining the portfolio? | Can Portfolio Manager add users to the portfolio? * | Can users apply to join the portfolio? ** | Can Mendix Admins govern the creation of the portfolio? *** |
+| Portfolio type | Visible in the **Company Portfolios** section?         | Can users access the portfolio without joining the portfolio? | Can Portfolio Managers add users to the portfolio? * | Can users apply to join the portfolio? ** | Can Mendix Admins govern the creation of the portfolio? *** |
 |-|-|-|-|-|-|
 | Private        | {{< icon name="remove-circle-filled" color="red" >}}      | {{< icon name="remove-circle-filled" color="red" >}} |{{< icon name="checkmark-circle-filled" color="green" >}}|{{< icon name="remove-circle-filled" color="red" >}}|{{< icon name="remove-circle-filled" color="red" >}}|
 | Restricted     | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |{{< icon name="checkmark-circle-filled" color="green" >}}|{{< icon name="checkmark-circle-filled" color="green" >}}|{{< icon name="remove-circle-filled" color="green" >}}|
@@ -54,7 +54,7 @@ Currently, the privacy settings of a portfolio can be private, restricted, or op
 
 ** A user can apply to join the portfolio by clicking the **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](/developerportal/portfolio-management/access-management/#access-requests).
 
-\*** If the toggle on the [Privacy Requests](/control-center/portfolios/#privacy-requests) tab is turned on in Control Center, a Mendix Admin needs to approve the creation of a restricted or open portfolio. In that case, a Mendix Admin will receive a notification about the request and can approve or reject the request from the [Control Center](/control-center/portfolios/#privacy-requests). The **Privacy Settings** of the portfolio will be **Private** until a Mendix Admin approves the request.
+\*** If the toggle on the [Privacy Requests](/control-center/portfolios/#privacy-requests) tab is turned on in Control Center, a Mendix Admin needs to approve the creation of a restricted or open portfolio. In that case, a Mendix Admin receives a notification about the request, and can approve or reject the request from the [Control Center](/control-center/portfolios/#privacy-requests). The **Privacy Settings** of the portfolio are **Private** until a Mendix Admin approves the request.
 
 {{< figure src="/attachments/developerportal/portfolio-management/opened-portfolio.png"  >}}
 

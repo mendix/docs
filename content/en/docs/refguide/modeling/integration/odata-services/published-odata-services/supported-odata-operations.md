@@ -122,6 +122,8 @@ You can filter on the attributes of an associated entity. The syntax depends on 
 
 Filtering on an associated object or list in this way is possible only when you [expose associations as a link](/refguide/odata-representation/#associations). It is not possible when you expose associations as an associated object ID.
 
+For many-to-many associations, some expressions that filter on an associated list are not supported. An example of such an unsupported filter is `City?$filter=HasLivedIn/any(person:person/Year le 1919 and person/Name eq Name)`, where the `HasLivedIn` association is many-to-many. For this request, the service will respond with `501 Not Implemented`. In general, an associated list filter on a many-to-many association that uses the variable (in this example, `person`) more than once and refers back over the association (in this example, to the `Name` of the person) will result in `501 Not Implemented`.
+
 ##### Arithmetic Operators
 
 The use of arithmetic operators such as `add`, `sub`, `mul`, `div`, and `mod` in filter expressions is not supported.
@@ -339,9 +341,3 @@ If the action returns a value, it will always be contained in a JSON object with
 If the return value is an entity or a list of entities, it is possible to retrieve objects that are associated to this return entity. To do so, pass the `$expand` query parameter when sending the request. Note that this can only be included in the URI, and not in the request body (as is the case for retrieving objects).
 
 For example, imagine your microflow **FindEmployee** returning an entity **Employee**, that has an association to **Address**. You could retrieve the associated Address object by passing `/odata/myservice/v1/FindEmployee?$expand=Address`.
-
-{{% alert type="info" %}}
-The functionality for [publishing microflows in your OData service](/refguide/published-odata-microflow/) was introduced in Studio Pro [10.2.0](/releasenotes/studio-pro/10.2/).
-Support for publishing entities without the **Readable** capability was introduced in Studio Pro [10.8.0](/releasenotes/studio-pro/10.8/).
-Retrieving associated objects using the `$expand` query parameter is supported in Studio Pro [10.12.0](/releasenotes/studio-pro/10.12/) and later.
-{{% /alert %}}

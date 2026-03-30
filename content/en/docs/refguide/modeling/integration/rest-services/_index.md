@@ -42,7 +42,7 @@ Above, the object `person` is described with the corresponding values for the at
 
 REST calls that output JSON need to declare the [content type](#content-types) as `application/JSON`. 
 
-## Documents in This Category
+## Read More
 
 To publish REST services, see:
 

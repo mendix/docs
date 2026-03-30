@@ -33,10 +33,6 @@ In the **Public documentation** tab, you can provide a summary and a description
 
 ## Selecting Published Attributes and Associations {#exatass}
 
-{{% alert type="info" %}}
-Support for publishing associations to and from entities that do not have the **Readable** capability was introduced in Studio Pro [10.11.0](/releasenotes/studio-pro/10.11/).
-{{% /alert %}}
-
 When you have selected an entity in the list to the left, its published attributes and associations are shown in the list to the right. In this list, you can add, edit, delete, and move these attributes and associations.
 
 Attributes of published entities are **Nillable** by default. This means if their value is empty, they will be encoded as explicit nulls in the response content. If **Nillable** is unchecked for an attribute, the attribute cannot be empty (as this will result in a runtime error).
@@ -132,10 +128,6 @@ You can also set the [query options](#query-options) for each request.
 A published entity is readable by default. It is possible to disable this capability, which means the service only exposes the type and structure of the entity, not the data. You can use the entity as a parameter or return type of a published microflow.
 
 When **Readable** is enabled, you can configure how data is queried in the [exposed data](#exposed-data) section. Note that **Readable** must be enabled in order to enable the other capabilities.
-
-{{% alert type="info" %}}
-Support for publishing entities without the **Readable** capability was introduced in Studio Pro [10.8.0](/releasenotes/studio-pro/10.8/).
-{{% /alert %}}
 
 #### Query Options {#query-options}
 

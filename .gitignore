@@ -6,6 +6,8 @@
 hugo.exe
 /htmltest.exe
 /.hugo_build.lock
+/.claude/audit.log
+/.claude/settings.local.json
 
 # For Mac users
 .DS_Store

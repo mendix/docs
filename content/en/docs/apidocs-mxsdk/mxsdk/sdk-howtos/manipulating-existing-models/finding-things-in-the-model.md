@@ -5,7 +5,7 @@ url: /apidocs-mxsdk/mxsdk/finding-things-in-the-model/
 
 ## Introduction
 
-The `model` object you get back from `workingCopy.model()` can be used to find and even manipulate units and elements. It provides three different means with which you can find units and elements.
+The `model` object you get back from `workingCopy.openModel()` can be used to find and even manipulate units and elements. It provides three different means with which you can find units and elements.
 
 ## The model.root Property
 
@@ -14,7 +14,8 @@ The `root` object refers to the `root` app node in the **App Explorer** in Studi
 For example, this snippet finds the name of the first attribute of the `Customer` entity in the first module of your app:
 
 ```js
-const model = workingCopy.model();
+const model = await workingCopy.openModel();
+
 const domainModel = model.root.modules[0].domainModel;
 const customerEntity = domainModel.entities.filter(entity => entity.name === "Customer")[0]
 
@@ -40,7 +41,9 @@ For all the referable concepts in a model (both units, such as a page, as well a
 
 ```js
 const customerEntity = model.findEntityByQualifiedName("Customers.Customer");
-const attributeName = customerEntity.attributes[0].name;
+if (customerEntity) {
+    const attributeName = customerEntity.attributes[0].name;
+}
 ```
 
 For more information, see [How to Load Units and Elements](/apidocs-mxsdk/mxsdk/loading-units-and-elements/).
@@ -50,7 +53,7 @@ For more information, see [How to Load Units and Elements](/apidocs-mxsdk/mxsdk/
 Implement this snippet to fetch information on all the Marketplace modules used in your app:
 
 ```js
-const model = workingCopy.model();
+const model = await workingCopy.openModel();
 model.allModules()
 	.filter(module => module.fromAppStore === true)
 	.forEach(module =>

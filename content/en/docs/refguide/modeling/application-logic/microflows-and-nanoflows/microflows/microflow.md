@@ -42,7 +42,7 @@ For example, in the URL `product/{Product/Name}`, the `Name` attribute of the pa
 
 You can also use `Id` as an attribute to include the entity's identifier in the URL. This would appear as `product/{Product/Id}` for example. 
 
-Alternatively, starting from Studio Pro 10.9.0, primitive parameters can be used as **Query string** parameters. Check the checkbox in the parameter's table to configure a microflow parameter to be used as a query string parameter. A query string parameter will be included in the query section of the URL, for example, `?MyParameter=MyValue&MyParameter_2=MySecondValue`. The ordering of query string parameters in the URL does not matter. If a query string parameter is missing in the URL, `empty` is passed to the microflow as the value for the parameter.
+Alternatively, primitive parameters can be used as **Query string** parameters. Check the checkbox in the parameter's table to configure a microflow parameter to be used as a query string parameter. A query string parameter will be included in the query section of the URL, for example, `?MyParameter=MyValue&MyParameter_2=MySecondValue`. The ordering of query string parameters in the URL does not matter. If a query string parameter is missing in the URL, `empty` is passed to the microflow as the value for the parameter.
 
 In the **Edit Microflow URL** dialog box, the configured URL is shown together with an example URL with example values filled in for the parameters. It also shows how the parameter will be retrieved:
 
@@ -89,7 +89,7 @@ Default: *disabled*
 
 #### Apply Entity Access
 
-**Apply entity access** indicates whether entity access based on the current user is applied when performing operations on objects. Enabling this setting limits the objects that are retrieved by the [retrieve activity](/refguide/retrieve/) to only those that the current user is allowed to see. Similarly, when reading and writing attributes and associations, the entity access of the current user is applied. Conversely, if entity access is not applied, all operations are allowed and all objects are retrieved.
+**Apply entity access** indicates whether entity access based on the current user is applied when performing operations on objects. Enabling this setting limits the objects that are retrieved by the [retrieve object(s) activity](/refguide/retrieve-objects/) to only those that the current user is allowed to see. Similarly, when reading and writing attributes and associations, the entity access of the current user is applied. Conversely, if entity access is not applied, all operations are allowed and all objects are retrieved.
 
 | Option | Description |
 | --- | --- |

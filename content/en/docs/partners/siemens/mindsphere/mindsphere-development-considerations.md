@@ -120,7 +120,7 @@ Contact your local IT department for the `proxyHost` and `proxyPort` values you 
 {{% alert color="info" %}}
 Proxy settings for version control used in Mendix Studio Pro:
 
-For more information about the version control used by Mendix apps, see [Using Version Control in Studio Pro](/refguide/using-version-control-in-studio-pro/#working-outside-studio-pro). Depending on your local development environment, you may have to configure your version control client to use a proxy as well. You may need to do this to solve a merge conflict manually.
+For more information about the version control used by Mendix apps, see [Version Control](/refguide/version-control/). Depending on your local development environment, you may have to configure your version control client to use a proxy as well. You may need to do this to solve a merge conflict manually.
 {{% /alert %}}
 
 ### Application Credentials{#app-creds}

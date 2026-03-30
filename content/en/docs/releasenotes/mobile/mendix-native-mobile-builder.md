@@ -2,14 +2,104 @@
 title: "Mendix Native Mobile Builder Release Notes"
 linktitle: "Mendix Native Mobile Builder"
 url: /releasenotes/mobile/mendix-native-mobile-builder/
+aliases:
+    - /releasenotes/mobile/mendix-mobile-native-builder
 weight: 11
 description: "Mendix Native Mobile Builder release notes."
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
+## Introduction
+
 The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Studio Pro, which helps you build your Mendix native mobile app. After the Mendix Native Mobile Builder simplifies your build process, you can do what you want most: test and publish your app. 
 
-The Mendix Native Mobile Builder uses MxBuild, GitHub, and App Center to simplify the app building process and is directly accessible via Mendix Studio Pro. For best results, we recommend using the latest version of the Native Mobile Builder.
+The Mendix Native Mobile Builder uses MxBuild and GitHub to simplify the app building process and is directly accessible via Mendix Studio Pro. For best results, we recommend using the latest version of the Native Mobile Builder.
+
+### Troubleshooting
+
+#### OTA Update Caught in a Loop
+
+If you built your app using a version of the Native Template that no longer exists (such as a beta version that was rolled out previously), then it is possible your app gets caught in an unresolved loop when you update it [OTA](/refguide/mobile/distributing-mobile-apps/overtheair-updates/#when-to-use-ota). This problem can affect any NMB version, as the problems stem from the unsupported Native Template. 
+
+To fix this issue, do the following:
+
+1. Navigate to the NMB's previous build output folder.
+2. Open the **template_version** file.
+3. Remove the content of the file.
+4. Remove **config.json**.
+5. Reopen the Mendix Native Mobile Builder.
+
+## Release 1.0.145 {#10145}
+
+**Release date: January 28, 2026**
+
+### iOS Location Permission Change
+
+* We changed the criterion for location permissions on iOS. It used to be required by default, but can now be opted in or out of from the **Native Permissions** screen.
+
+### Features
+
+* We added support for `MEDIA` permissions on Android targeting OS 13+. The permissions are now shown in the Native Builder. Subsequently, this also fixes cases of these permissions not working correctly on these devices.
+
+## Release 1.0.144 {#10143}
+
+**Release date: December 23, 2025**
+
+## Improvements
+
+* Notifee is now installed for push notifications when using Studio Pro 11 and above. This does not affect previous versions.
+
+## Fixes
+
+* We fixed an issue where, after building in iOS, `RUNTIME_URL` would not get the slash separator properly escaped if it included extra path parts.
+
+## Release 1.0.143 {#10143}
+
+**Release date: November 21, 2025**
+
+## Fixes
+
+* We fixed an issue where native builds failed with the error "`@notifee/react-native` is not a known dependency."
+
+## Release 1.0.142 {#10142}
+
+**Release date: November 19, 2025**
+
+### Fixes
+
+* We fixed an issue where the Native Build UI referenced an outdated notification dependency.
+
+## Release 1.0.141 {#10141}
+
+**Release date: November 11, 2025**
+
+### Fixes
+
+* We updated `react-native-firebase` dependencies.
+
+## Release 1.0.138 {#10138}
+
+**Release date: August 5, 2025**
+
+### Fixes
+
+* We fixed an issue that caused slow initial build times when first using the Native Builder UI.
+
+## Release 1.0.137 {#10137}
+
+**Release date: July 15, 2025**
+
+### Fixes
+
+* We fixed an issue where the Native Builder UI was not replacing previously-added font files when updating font configurations.
+
+## Release 1.0.136 {#10135}
+
+**Release date: April 1, 2025**
+
+#### Breaking Changes
+
+* Building mobile apps with App Center (the **Cloud Build** option) has been removed. Customers who previously used **Cloud Build** will be able to select **Local Build**.
 
 ## Release 1.0.135 {#10135}
 

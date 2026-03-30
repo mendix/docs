@@ -14,7 +14,7 @@ Microflows run in the runtime server and can therefore not be used in offline ap
 
 This page is a summary of the elements which make up a microflow, together with their visual representation within the microflow. It also covers [keyboard support](#keyboard) when editing microflows.
 
-For the properties of the microflow itself, see [Microflow Properties](/refguide/microflow/). For microflow best practices, see [Microflow Naming Conventions](/refguide/dev-best-practices/#microflow-naming-conventions), [Microflow General Best Practices](/refguide/dev-best-practices/#microflow-dev-best-practices), and [Microflow Best Practices from the Community](/refguide/community-best-practices-for-app-performance/#microflow-community-best-practices).
+For the properties of the microflow itself, see [Microflow Properties](/refguide/microflow/). For microflow best practices, see the[Microflows](/refguide/naming-convention-best-practices/#microflow-naming-conventions) section of *Naming Convention Best Practices*, [Microflow General Best Practices](/refguide/general-best-practices/#microflow-dev-best-practices), and [Microflow Best Practices from the Community](/refguide/community-best-practices-for-app-performance/#microflow-community-best-practices).
 
 For information on using microflows as data sources, see [Microflow Source](/refguide/microflow-source/).
 
@@ -112,18 +112,9 @@ If you want to see what happens while a microflow is executing, you can use the 
 
 ## Converting a Microflow to a Nanoflow {#convert-to-nanoflow}
 
-In Studio Pro 10.19 and below, you can use the **Convert to nanoflow** functionality to create a new nanoflow based on the original microflow. There are two ways to find this option:
+Right-click anywhere in the microflow editor, or right-click a microflow in the **App Explorer**, you will find the following two options in the context menu:
 
-* Right-click anywhere in the microflow editor and click **Convert to nanoflow**. 
-* Alternatively, in the **App Explorer**, right-click on the name of the microflow you want to convert, and click **Convert to nanoflow**.
-
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/convert-to-nanoflow.PNG" alt="Convert to nanoflow" width="550px" class="no-border" >}}
-
-Afterwards, a new nanoflow is created and added to the same directory, and you can get consistency errors if there are actions that are not supported by nanoflows.
-
-Starting from Studio Pro 10.20, there are two options available:
-
-* **Duplicate as nanoflow**: This option creates a new nanoflow based on the original microflow. This works the same as the **Convert to nanoflow** functionality in Studio Pro 10.19 and below.
+* **Duplicate as nanoflow**: This option creates a new nanoflow based on the original microflow.
 * **Convert to nanoflow**: This option removes the original microflow and replaces it with a new nanoflow. All possible usages throughout your app are updated and any non-replaceable usages remain as they are. When some usages cannot be replaced because they are not allowing nanoflows, a warning dialog appears. See below as an example:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/warning-dialog.png" alt="Conversion warning dialog" width="550px" >}}
@@ -131,12 +122,12 @@ Starting from Studio Pro 10.20, there are two options available:
     In the warning dialog, you have the following options:
 
     * **Convert**: The original microflow is removed, only replaceable usages are updated, and any non-replaceable usages remain as they are.
-    * **Find usages**: Stops the conversion and finds usages of the original microflow.
+    * **Show usages**: Stops the conversion and shows the irreplaceable usages of the original microflow.
     * **Cancel**: The conversion is cancelled and no changes are made.
 
 ## Canvas Interaction {#canvas-interaction}
 
-In the microflow editor from Studio Pro 10.6, you can use common patterns like unlimited canvas, enhanced zoom and scroll, and a snap-to-flow to make new activities from the toolbox and toolbar always well aligned in your flow. 
+In the microflow editor, you can use common patterns like unlimited canvas, enhanced zoom and scroll, and a snap-to-flow to make new activities from the toolbox and toolbar always well aligned in your flow. 
 
 ## Exporting a Microflow to an Image {#export-microflow}
 

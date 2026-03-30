@@ -1,6 +1,6 @@
 ---
 title: "Debugging Microflows and Nanoflows"
-url: /refguide/debug-microflows-and-nanoflows//
+url: /refguide/debug-microflows-and-nanoflows/
 weight: 120
 ---
 
@@ -19,6 +19,10 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Read [Configuring a Domain Model](/refguide/configuring-a-domain-model/)
 * Read [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)
+
+{{% alert color="info" %}}
+Debugging with breakpoints is not supported for microflows executed during application startup (for example, the [After startup](/refguide/runtime-tab/#after-startup) microflow and any microflows it calls).
+{{% /alert %}}
 
 ## Debugging Overview
 
@@ -82,7 +86,7 @@ Breakpoints are points in a microflow/nanoflow where the application will halt e
         * **Step over** moves the debugger to the next step in the same microflow/nanoflow
     * Click **Step out** to instruct the debugger to leave the sub microflow/nanoflow or loop (this is basically the opposite of **Step Into**)
     * Click **Continue** to instruct the debugger to continue until it reaches another breakpoint
-    * Click **Continue all** to instruct the debugger to continue all currently paused microflows/nanoflows until it reaches another breakpoint (this option was introduced in Studio Pro 10.9.0.).
+    * Click **Continue all** to instruct the debugger to continue all currently paused microflows/nanoflows until it reaches another breakpoint
 
 To debug a microflow from a nanoflow you need to add a separate breakpoint to the microflow. Stepping into the microflow won't work in this situation.
 

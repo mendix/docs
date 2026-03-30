@@ -59,6 +59,20 @@ The title of the page that is shown using the [page title widget](/refguide/page
 
 The title can be overridden. For example, the [Create button](/refguide/control-bar/) and the [Edit button](/refguide/control-bar/) of a data grid can refer to the same page, but they override the titles to **New** and **Edit**, respectively.
 
+#### Autofocus {#autofocus}
+
+The **Autofocus** property determines which element (if any) receives focus when users first arrive on a page. When enabled, it automatically sets focus to the first interactive element on the page, such as a text field, button, or dropdown menu. When an element receives focus, it typically shows a visible outline and can be immediately interacted with using keyboard controls. This feature is particularly beneficial for deterministic UX scenarios such as login forms.
+
+However, autofocus can interfere with accessibility tools (particularly screen readers) and may disorient users by unexpectedly moving their focus position. Therefore, we recommended disabling it on most pages. Note that even with autofocus disabled, users can still navigate through interactive elements using the **Tab** key for keyboard navigation. You can choose to enable autofocus only for desktop platforms or across all devices, depending on your specific needs.
+
+| Value | Behavior |
+|-------|----------|
+| Off | No autofocus |
+| Desktop only | Autofocus is only enabled on desktop devices (computers/laptops) |
+| All platforms | Autofocus is enabled on all devices (desktop, mobile, tablets) |
+
+By default, **Autofocus** is set to "Off" for any newly created pages. For backwards compatibility, pages created in versions prior to Mendix 11.1 **Autofocus** default to "Desktop only", as this was the autofocus behavior in earlier versions.
+
 #### URL {#url}
 
 A page's URL allows end users to directly navigate to the page (for example, from external links or bookmarks). It will be shown in the address bar of the browser when you visit the page. When navigating to a page without a URL configured, the last visited URL is shown. Note that the full URL of the page will be the base URL of your application followed by `/p/` and then by the configured URL of the page (for example, `http://example.mendixcloud.com/p/home_page`).
@@ -83,6 +97,10 @@ In simple e-commerce applications, the URLs can be configured as follows:
 
 * *category/{Category/Code}/product/{Product/Name}* - the URL for a page that shows a product and a category (in a browser, the URL will look like `http://example.mendixcloud.com/p/category/tools/product/hammer` where `tools` is used to retrieve the `Category` by its `Code`, and `hammer` is used to retrieve the `Product` by its `Name`)
 
+{{% alert color="warning" %}}
+Mendix does not recommend configuring page URLs for pages that are displayed as a pop-up. Navigating to such a URL will result in layout issues.
+{{%/alert %}}
+
 ### Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
@@ -91,7 +109,7 @@ In simple e-commerce applications, the URLs can be configured as follows:
 
 #### Parameters {#parameters}
 
-The list of parameters that this page expects. These parameters can be used by [data views](/refguide/data-view/) with a page parameter data source.
+The list of [parameters](/refguide/page-parameter/) that this page expects. These parameters can be used by widgets on the page.
 
 A page parameter is an input that needs to be passed from the calling page, microflow, or nanoflow to the current page. Page parameters determine information that can be reused on the page. For example, if you want to build an **Employee_Details_Edit** page, the page will have a parameter **Employee**. Thus when this page is called an Employee object needs to be passed to it to show the corresponding Employee data.
 
@@ -101,15 +119,11 @@ You can also use multiple page parameters. Multiple page parameters allow you to
 
 The list of variables defined on this page. The variables can be used by widgets directly without the need for a [data view](/refguide/data-view/).
 
-Variables represent non-persistent, primitive values that are available to widgets on a page. Widgets can read and write to them as they were attributes, supporting features like formatting and validation. Variables are also available in expressions, so you can use them for page logic, such as conditional visibility, editability, text template parameters, and as arguments to microflows and nanoflows.
+Variables represent non-persistent, primitive values that are available to widgets on a page. Widgets can read and write to them as they were attributes, supporting features like formatting and validation. Variables are also available in expressions, so you can use them for page logic, such as conditional visibility, editability, text template parameters, XPath constraints, and as arguments to microflows and nanoflows.
 
 You can also define a default value for variables. The expression is used to instantiate the variable at runtime and can make use of page parameters. 
 
 Note that the default value is only set once for the lifetime of the page. Thus, a variable using the attribute of a page parameter will not receive updates made to the attribute as long as the page is open.
-
-{{% alert color="info" %}}
-Variables for pages were introduced in Mendix Studio Pro 10.21.
-{{% /alert %}}
 
 {{% alert color="info" %}}
 For apps with [React Client](/refguide/mendix-client/react/) set to **Yes** or **Migration mode**, all widgets can use variables. When set to **No**, widgets built with Dojo cannot use variables. If present, unsupported widgets will be listed on the variables dialog.  

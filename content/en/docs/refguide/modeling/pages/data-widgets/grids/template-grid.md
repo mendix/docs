@@ -5,7 +5,17 @@ weight: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="warning" %}}The template grid widget is not supported on native mobile pages.{{% /alert %}}
+{{% alert color="warning" %}}
+The **template grid** widget is a Dojo widget.
+
+This widget is not supported on native mobile pages. Mendix recommends that you use the [Gallery](/appstore/modules/gallery/) or [List View](/refguide/list-view/) instead to display data. See the Mendix React Client's [Migration Guide](/refguide/mendix-client/react/#data-grid).
+
+This widget is not supported in the [React client](/refguide/mendix-client/react/). To upgrade it to the recommended React widget ([Data Grid 2](/appstore/modules/data-grid-2/)), see the Mendix React Client's [Migration Guide](/refguide/mendix-client/react/#data-grid).
+
+If you [switch to the React client](/refguide/runtime-tab/#react-client), the widget will not appear in the **Toolbox**.
+
+The Dojo client is deprecated and will be removed in Mendix 12. It continues receiving security and stability updates until the end of support of Mendix 11.24.
+{{% /alert %}}
 
 ## Introduction
 
@@ -23,7 +33,7 @@ For more information, see [Control Bar](/refguide/control-bar/).
 
 ### Search Bar
 
-**Search Bar** is only available for **Database** and, below version 10.5, **XPath** [data sources](#data-source). For more information on a search bar and its settings, see [Search Bar](/refguide/search-bar/).
+**Search Bar** is only available for **Database** [data source](#data-source). For more information on a search bar and its settings, see [Search Bar](/refguide/search-bar/).
 
 ## Properties
 
@@ -54,12 +64,10 @@ The data source determines which objects will be shown in the template grid. For
 The template grid supports the following types of data sources: 
 
 * [Database source](/refguide/database-source/) – objects are retrieved directly form the database
-* [XPath source](/refguide/xpath-source/) – objects are retrieved directly form the database
-    {{% alert color="info" %}}From Mendix version 10.5, the template grid widget does not have a separate XPath source, you can apply XPath constraints to the **Database** source.{{% /alert %}}
 * [Microflow source](/refguide/microflow-source/) – calculates the list of objects by executing a microflow
 * [Association source](/refguide/association-source/) – follows an association to get to objects
 
-The database and, below version 10.5, XPath sources retrieve objects from the database and supports searching and sorting. 
+The database source retrieves objects from the database and supports searching and sorting. 
 
 ### Design Properties Section {#design-properties}
 

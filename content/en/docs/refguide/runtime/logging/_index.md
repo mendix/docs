@@ -37,6 +37,10 @@ This should be used for debugging systems during development, but never in a pro
 
 This is the most verbose logging level, and can be used if you want even more fine-grained logging than debug.
 
+{{% alert color="warning" %}}
+Trace logs should be used with care, especially in production environments. Mendix recommends not including sensitive or unnecessary information in trace messages.
+{{% /alert %}}
+
 ## Log Nodes
 
 This section provides some details on specific log nodes used by Mendix. It is recommended that if you write your own [log messages](/refguide/log-message/) you use your own log node names to avoid confusion with the Mendix log messages.
@@ -52,6 +56,8 @@ This list is currently incomplete and is being updated.
 | Log Node | Description|
 | --- | --- |
 | ActionManager | Logs messages related to action scheduling (for example, scheduled events) and action execution (for example, running microflows). |
+| Client | Logs from the Mendix client. |
+| Client_\* | For example *Client_NanoflowDebugger* are logs from specific parts of the Mendix client.  |
 | Configuration | Logging related to the configuration of the Mendix app that is read in at startup. |
 | ConnectionBus | General logging related to database startup, synchronization and connections management for Mendix. |
 | ConnectionBus_Mapping | Information relating to the translations of XPath Queries and OQL text queries to OQL Queries. |
@@ -64,7 +70,7 @@ This list is currently incomplete and is being updated.
 | Connector | Logs when standard or custom request handlers (added through Core#addRequestHandler) are registered, or when a path is called that does not have a registered request handler. |
 | Core | Logs messages from the core runtime. This can be startup of the runtime, version of the runtime, license being used and issues related to interpreting the model. |
 | DataStorage_QueryHandling | Logs messages related to the queries that are being executed. |
-| DataStorage_QueryPlan | Query execution plan information for installations (currently only supported for PostgreSQL databases). |
+| DataStorage_QueryPlan | Query execution plan information for installations (currently only supported for PostgreSQL databases). {{% alert color="warning" %}}The `DataStorage_QueryPlan` log node has a very large performance impact and should never be enabled in production.{{% /alert %}} |
 | DocumentExporter | Logs messages related to the templating engine that generates documents. |
 | FileDocumentSizesPopulateJob | Logs messages for a background job that populates the file-size field in the database for documents that do not have that field filled (used during legacy migration). |
 | InvalidRequestLimiter | Logs messages related to responses being throttled due to invalid requests. |
@@ -82,6 +88,7 @@ This list is currently incomplete and is being updated.
 | MicroflowDebugger | Logs messages related to the status of the microflow debugger (for example, connection status, incoming and outgoing requests). |
 | MicroflowEngine | Logs messages related to microflow execution (for example, which microflow or microflow action is being executed and errors that occur during the execution). |
 | MicroflowStructureOptimizer | Logs messages related to microflow structure optimization performed during startup. |
+| ML Engine | Log messages produced by ML Kit activities. |
 | ModelStore | Logs debug messages related to synchronizing User Role and language information to the system tables. |
 | Module | Logs messages for modules that are loaded on-demand in the core runtime like the microflow-engine. |
 | ObjectManagement | Logs errors relating to attempts to make associations to non-existent object |
@@ -89,7 +96,6 @@ This list is currently incomplete and is being updated.
 | OData Publish | Logs messages related to published OData/GraphQL services. |
 | OrphanFileCleaner | Logs messages related the orphan file cleaning background task. |
 | QueryParser | Logs messages related to the parsing or interpretation of XPath and OQL queries. |
-| TaskQueue | All actions related to Task Queues |
 | REST Consume | Logs messages related to the Call REST service activity. |
 | REST Publish | Logs messages related to published REST services. |
 | RequestStatistics | Logs if thresholds related to state defined in [Client Runtime Settings](/refguide/custom-settings/#web-client-settings) have exceeded the defined threshold. |
@@ -98,6 +104,8 @@ This list is currently incomplete and is being updated.
 | StorageAzure | Logs messages related to file handling if you are using Azure system as your file store. |
 | StorageLocal | Logs messages related to file handling if you are using the local file system as your file store. |
 | StorageS3 | Logs messages related to file handling if you are using Amazon S3 system as your file store. |
+| SystemTask | Logs system management actions on clusters and nodes. *Moved from Core in Mendix version 11.6.1* |
+| TaskQueue | All actions related to Task Queues |
 | WebServices | Traces SOAP call request and response contents. |
 | WebUI | Logs if thresholds related to feedback size defined in [Client Runtime Settings](/refguide/custom-settings/#web-client-settings) have exceeded the defined threshold, or creating a valid session has failed. |
 | Workflow Engine | Logs messages related to workflow executions, for example, lifecycle events, such as a start or an end of a workflow, execution of workflow actions, and errors that occur during the execution. |

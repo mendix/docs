@@ -7,7 +7,7 @@ weight: 80
 
 ## Introduction
 
-Features released in Studio Pro [9.17](/releasenotes/studio-pro/9.17/) expand on existing OData capabilities in Studio Pro. These features allow you to wrap any non-OData service, API, or database with OData, ensuring compatibility with the [Mendix Data Hub](/data-hub/) ([external entities](/refguide9/external-entities/) and the [Catalog](/catalog/)). 
+Features released in Studio Pro [9.17](/releasenotes/studio-pro/9.17/) expand on existing OData capabilities in Studio Pro. These features allow you to wrap any non-OData service, API, or database with OData, ensuring compatibility with [external entities](/refguide9/external-entities/) and the [Catalog](/catalog/)). 
 
 You can also use these features to more easily [build connectors](/appstore/creating-content/connector-guide-build/) that access external data. This set of features adds to the tools described in [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/), and are collectively referred to as *Connector Kit 2.0*.
 
@@ -31,9 +31,9 @@ Before you read this guide, do the following:
 
 OData is a set of best practices for building REST APIs that standardizes many aspects of REST APIs. It describes how you should provide filtering, sorting, and pagination on your resources, as well as how you should provide nested data structures. Using OData best practices ensures that your APIs are compatible with tools like Excel and PowerBI out of the box (see [Expose Data to BI Tools Using OData](/howto9/integration/exposing-data-to-bi-tools-using-odata/)), and also ensures that API clients can optimize payload size and minimize roundtrips for the best possible usage performance. 
 
-### Compatibility with Data Hub
+### Compatibility with the Catalog
 
-Wrapping a service, API, or database in OData ensures compatibility with the [Mendix Data Hub](/data-hub/). Published OData services are registered automatically in the [Catalog](/catalog/), making them easily usable in other Mendix apps. Discovering and using OData resources in [external entities](/refguide9/external-entities/) is made easy for licensed users on a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), as [published OData Services](/refguide9/published-odata-services/) are registered automatically in the [Catalog](/catalog/) and made available in the Studio Pro [Data Hub pane](/refguide9/data-hub-pane/).
+Wrapping a service, API, or database in OData ensures compatibility with the [Catalog](/catalog/). Published OData services are registered automatically in the [Catalog](/catalog/), making them easily usable in other Mendix apps. Discovering and using OData resources in [external entities](/refguide9/external-entities/) is made easy for licensed users on a [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), as [published OData Services](/refguide9/published-odata-services/) are registered automatically in the [Catalog](/catalog/) and made available in the Studio Pro [Data Hub pane](/refguide9/data-hub-pane/).
   
 ## Non-Persistable Entities as Published OData Resources {#npe-published-odata}
 
@@ -178,7 +178,7 @@ Set up a connector module that communicates to the X API with OData by following
     {{< figure src="/attachments/refguide9/modeling/integration/wrap-services-odata/query-followers-microflow.png" alt="Microflow for querying followers." class="no-border" >}}
 6. Export the metadata file of the published OData service to be used in the client module. To do so, open the service and go to **Settings**, and click **Export** next to the **Metadata** field.
 
-    Since you are working in local development environment and not deploying locally, your published resource will not automatically be available in the Catalog or the Data Hub pane. See [Data Hub without Mendix Cloud](/data-hub/data-hub-without-mendix-cloud/) to understand how to work with Data Hub (external entities and the Catalog) for local deployments.
+    Since you are working in local development environment and not deploying locally, your published resource will not automatically be available in the Catalog or the Data Hub pane. See [Register Resources (On-Prem or Mendix on Kubernetes)](/data-hub/data-hub-without-mendix-cloud/) to understand how to work with external entities and the Catalog for local deployments.
 
 #### Building the Client
 

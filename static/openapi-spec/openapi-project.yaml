@@ -4,7 +4,7 @@ info:
   title: Project Service
   description: Use Project Service API to manage Project app and team members access.
 servers:
-  - url: 'https://mpp.mendix-dev.tencent-cloud.com/projectservice/v1'
+  - url: 'https://pmp-demo.privateplatform.mendix.com/projectservice/v1'
 paths:
   /projects:
     get:
@@ -30,7 +30,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/projectservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/projectservice/v1'
     post:
       tags:
         - projects
@@ -52,6 +52,7 @@ paths:
                   useAppTemplate: true
                   appTemplate:
                     templateId: string
+                    templateVersion: string
       responses:
         '202':
           $ref: '#/components/responses/job'
@@ -66,7 +67,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/projectservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/projectservice/v1'
       x-codegen-request-body-name: ProjectRequest
   '/projects/jobs/{jobId}':
     get:
@@ -139,7 +140,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/projectservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/projectservice/v1'
   '/projects/{projectId}':
     get:
       tags:
@@ -171,7 +172,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/projectservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/projectservice/v1'
     patch:
       tags:
         - projects
@@ -204,7 +205,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/projectservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/projectservice/v1'
     delete:
       tags:
         - projects
@@ -231,7 +232,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/projectservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/projectservice/v1'
   '/projects/{projectId}/owner':
     put:
       tags:
@@ -271,7 +272,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/projectservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/projectservice/v1'
       x-codegen-request-body-name: OwnerInput
   '/projects/{projectId}/groups':
     get:
@@ -298,7 +299,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/projectservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/projectservice/v1'
   '/projects/{projectId}/members':
     get:
       tags:
@@ -324,7 +325,7 @@ paths:
       security:
         - mxtoken: []
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/projectservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/projectservice/v1'
   '/projects/requests/{project Id}':
     post:
       tags:
@@ -401,7 +402,7 @@ paths:
       security:
         - {}
       servers:
-        - url: 'https://mpp.mendix-dev.tencent-cloud.com/projectservice/v1'
+        - url: 'https://pmp-demo.privateplatform.mendix.com/projectservice/v1'
       x-codegen-request-body-name: objectInput
 tags:
   - name: projects
@@ -454,6 +455,8 @@ components:
                     reason: Invalid project name
                   - name: templateId
                     reason: Invalid project template id
+                  - name: templateVersion
+                    reason: Invalid project template version
             400 - Invalid project owner change request:
               value:
                 status: 400
@@ -567,7 +570,7 @@ components:
                   memberCount: 2
                   repositoryId: '172'
                   repositoryName: App-test-1
-                  repositoryURL: 'https://mendixcloud.com.cn/muhong0/App-test-1.git'
+                  repositoryURL: 'https://gitlab.com/lato/App-test-1.git'
                   isActive: true
                   createdDate: '2023-08-13T06:06:55.196Z'
                 - id: c6af395b-be22-4cfc-a473-5e30d255fb6d
@@ -578,7 +581,7 @@ components:
                   memberCount: 2
                   repositoryId: '552'
                   repositoryName: App-test-2
-                  repositoryURL: 'https://mendixcloud.com.cn/org/App-test-2.git'
+                  repositoryURL: 'https://gitlab.com/org/App-test-2.git'
                   isActive: true
                   createdDate: '2023-08-13T06:06:55.211Z'
           examples:
@@ -592,7 +595,7 @@ components:
                   memberCount: 2
                   repositoryId: '172'
                   repositoryName: App-test-1
-                  repositoryURL: 'https://mendixcloud.com.cn/muhong0/App-test-1.git'
+                  repositoryURL: 'https://gitlab.com/lato/App-test-1.git'
                   isActive: true
                   createdDate: '2023-08-13T06:06:55.196Z'
                 - id: c6af395b-be22-4cfc-a473-5e30d255fb6d
@@ -603,7 +606,7 @@ components:
                   memberCount: 2
                   repositoryId: '552'
                   repositoryName: App-test-2
-                  repositoryURL: 'https://mendixcloud.com.cn/org/App-test-2.git'
+                  repositoryURL: 'https://gitlab.com/org/App-test-2.git'
                   isActive: true
                   createdDate: '2023-08-13T06:06:55.211Z'
     job:
@@ -661,7 +664,7 @@ components:
                 memberCount: 2
                 repositoryId: '172'
                 repositoryName: App-test-1
-                repositoryURL: 'https://mendixcloud.com.cn/muhong0/App-test-1.git'
+                repositoryURL: 'https://gitlab.com/lato/App-test-1.git'
                 isActive: true
                 createdDate: '2023-08-13T06:06:55.196Z'
           examples:
@@ -675,7 +678,7 @@ components:
                 memberCount: 2
                 repositoryId: '172'
                 repositoryName: App-test-1
-                repositoryURL: 'https://mendixcloud.com.cn/muhong0/App-test-1.git'
+                repositoryURL: 'https://gitlab.com/lato/App-test-1.git'
                 isActive: true
                 createdDate: '2023-08-13T06:06:55.196Z'
     objects:
@@ -731,6 +734,9 @@ components:
             templateId:
               type: string
               description: App template id.
+            templateVersion:
+              type: string
+              description: App template version.
       required:
         - name
       x-examples:
@@ -740,6 +746,7 @@ components:
           useAppTemplate: true
           appTemplate:
             templateId: '438'
+            templateVersion: '10.24.81004'
     ProjectInput:
       type: object
       description: Project change request

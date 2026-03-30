@@ -82,7 +82,7 @@ One-way navigable associations are associations that allow navigation to associa
 
 You can retrieve data from all other domain model associations in both directions.
 
-One-way navigable associations are represented by a dashed arrow in Domain model editor. An icon shows the direction of its navigability.
+One-way navigable associations are represented by an icon next to the association name showing the direction of its navigability. In Mendix versions below 11.6.0, they are also shown with a dashed arrow.
 
 ### On Delete Behavior {#delete-behavior}
 
@@ -124,16 +124,12 @@ This option is not available for an external entity that is the [child](/refguid
 
 ### Association Storage{#storage}
 
-{{% alert color="info" %}}
-Association storage was introduced in Mendix 10.21.
-{{% /alert %}}
-
-In Mendix 10.20 and below, associations are always stored in association tables. This enables you to change the multiplicity easily if your design changed. In Mendix 10.21 and above, you can choose to store associations directly in the owning entity, thus removing the need for an extra association table. For more information, see [Association Storage Options](/refguide/association-storage/).
+You can choose to store associations directly in the owning entity, thus removing the need for an extra association table. For more information, see [Association Storage Options](/refguide/association-storage/).
 
 | Association storage | Description | Notes |
 | --- | --- | --- |
-| Direct associations | The associations to other entities are stored as columns in the table of the owner entity | Mendix 10.21 and above<br />Not available for many-to-many associations |
-| Association tables | Associations are stored in separate association tables | *Default*
+| Direct associations | The associations to other entities are stored as columns in the table of the owner entity | Not available for many-to-many associations |
+| Association tables | Associations are stored in separate association tables | *Default* |
 
 ## Read More
 

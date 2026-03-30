@@ -25,6 +25,10 @@ Operators and functions in OQL use expressions as inputs to perform mathematical
 
 This document details the use and syntax of expressions in an OQL query.
 
+The domain model used in the various examples is shown below:
+
+{{< figure src="/attachments/refguide/modeling/domain-model/oql/oql-expression-syntax-domain-model.png" >}}
+
 ## Data Types
 
 OQL supports a set of data types that differ slightly from [Mendix data types](/refguide/data-types/). The supported data types are:
@@ -38,7 +42,7 @@ OQL supports a set of data types that differ slightly from [Mendix data types](/
 | `LONG`     | Integer/Long     | 5                     | 64 bit width integer data                  |
 | `STRING`   | String           | 'my_string'           | Textual data                               |
 
-## Literals
+## Literals {#oql-literals}
 
 Literals represent values that are constant and are part of the query itself. The supported literals are detailed below:
 
@@ -116,7 +120,7 @@ FROM
 	Sales.Person
 ```
 
-## Operators
+## Operators {#oql-operators}
 
 Operators perform common operations and, unlike functions, do not put their parameters in parentheses. They take `expression` as input, which can be other operator results, functions, columns and literals.
 
@@ -266,7 +270,10 @@ The operator throws an error in PostgresSQL and SQL Server when one of the opera
 
 #### = (Equal To)
 
-Returns `TRUE` if both `expression` inputs are equal. When used with `NULL`, it will always return a `FALSE` result. To compare to `NULL` values, use the [IS](#is-operator) operator.
+Returns `TRUE` if both `expression` inputs are equal. 
+
+When used with a `NULL` literal or a parameter with a `NULL` value, the condition will be converted to use the [IS NULL](#is-operator) operator. 
+In other cases when comparing to a `NULL` value, it will always return a `FALSE` result.
 
 {{% alert color="info" %}}
 Note that `DECIMAL` values have to match exactly. Use [`ROUND`](#round) to compare with less precision.
@@ -544,7 +551,7 @@ Where `expression` is an expression of any datatype.
 The `IS` operator can be used to filter out rows with values that are NULL. For example:
 
 ```sql
-	SELECT Revenue, Cost FROM Sales.Finance WHERE Revenue IS NOT NULL 
+	SELECT Revenue, Cost FROM Sales.Finances WHERE Revenue IS NOT NULL 
 ```
 
 | Revenue | Cost |
@@ -555,7 +562,7 @@ The `IS` operator can be used to filter out rows with values that are NULL. For 
 
 The `CASE` expression is a conditional expression, similar to if/else statements in other programming languages. If the result of a following `WHEN` condition is `TRUE`, the value of the `CASE` expression is the result that follows the condition and the remainder of the `CASE` expression is not processed. If the result is not `TRUE`, any subsequent `WHEN` clauses are examined in the same manner. If no `WHEN` condition yields `TRUE`, the value of the `CASE` expression is the result of the `ELSE` clause. If the `ELSE` clause is omitted and no condition is `TRUE`, the result is null.
 
-If [OQL v2](/refguide/oql-v2/) is enabled, additional data type validations apply to result expressions of `CASE`. See the corresponding [page](/refguide/oql-v2/#case-validations) for details.
+If [OQL v2](/refguide/oql-v2/) is enabled, additional data type validations apply to results of `CASE` expressions. See [`CASE`](/refguide/oql-v2/#case-validations) in *OQL Version 2 Features* for details.
 
 #### Syntax
 
@@ -625,7 +632,7 @@ FROM Sales.Order
 | Doe      | 2      | 5.0   | Regular   |
 | Moose    | 3      | 8.2   | Priority  |
 
-If result expressions have different numeric types, date type of the result expression in the first WHEN has priority, and the whole CASE expression has type of that result expression. This behavior matches the behavior of supported database vendors.
+If expression results have different numeric types, the data type of the expression result is defined based on [type coercion precedence](#type-coercion).
 
 ```sql
 SELECT
@@ -643,11 +650,13 @@ SELECT
 FROM Sales.Order
 ```
 
-| LastName | Number | Price | PriceOrNumber (type: Decimal) | NumberOrPrice (type: Integer) |
+| LastName | Number | Price | PriceOrNumber (type: Decimal) | NumberOrPrice (type: Decimal¹) |
 |:---------|-------:|------:|--------------:|--------------:|
-| Doe      | 7      | 1.5   | 1.5     | 7     |
-| Doe      | 2      | 5.0   | 5.0   | 2     |
-| Moose    | 3      | 8.2   | 3.0 | 8     |
+| Doe      | 7      | 1.5   | 1.5     | 7.0     |
+| Doe      | 2      | 5.0   | 5.0   | 2.0     |
+| Moose    | 3      | 8.2   | 3.0 | 8.0     |
+
+¹In OQL v1, the expression gets the type of the first argument. If you use OQL v1, the type of `NumberOrPrice` in the example above is Integer, not Decimal.
 
 ### Operator Precedence
 
@@ -670,7 +679,7 @@ This does not apply to the `=` and `!=` operators. Handling of `NULL` in [other 
 
 In some databases, using `STRING` type variables in place of numeric, `DATETIME` or `BOOLEAN` values in operators and functions that explicitly require those types, causes the database to perform an implicit conversion. A common example would be the use of a `STRING` representation of a `DATETIME` variable inside a `DATEPART` function. Mendix recommends that you always [cast](#cast) strings to the exact type the operator or functions.
 
-## Functions
+## Functions {#functions}
 
 These are the currently supported functions:
 
@@ -723,9 +732,9 @@ The table below describes which `CAST` conversions are supported:
 
 | From \ To | BOOLEAN | DATETIME | DECIMAL | INTEGER | LONG | STRING (unlimited) | STRING (limited) |
 |------| :------: | :------: | :------: | :------: | :------: | :------: | :------: |
-| BOOLEAN | ✔ | ✘ | ✘ | ✘ | ✘ | ✔* | ✔*¹ |
-| DATETIME | ✘ | ✔ | ✘ | ✘ | ✘ | ✔* | ✔*² |
-| DECIMAL | ✘ | ✘ | ✔* | ✔* | ✔* | ✔* | ✔*² |
+| BOOLEAN | ✔ | ✘ | ✘ | ✘ | ✘ | ✔*³ | ✔*¹ ³ |
+| DATETIME | ✘ | ✔ | ✘ | ✘ | ✘ | ✔*³ | ✔*² ³ |
+| DECIMAL⁴ | ✘ | ✘ | ✔* | ✔* | ✔* | ✔* | ✔*² |
 | INTEGER | ✘ | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | LONG | ✘ | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | STRING | ✘ | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |
@@ -734,7 +743,19 @@ The table below describes which `CAST` conversions are supported:
 
 ²The conversion of DATETIME and DECIMAL to STRING (limited) is supported only if the value fully fits into the string length. The conversion can fail if the resulting string length is less than 20.
 
-Converting `DATETIME` or `BOOLEAN` to `STRING` returns different format per database.
+³Converting `DATETIME` or `BOOLEAN` to `STRING` returns different format per database.
+
+⁴See [`DECIMAL` precision](#dec-prec), below, for further information.
+
+##### `DECIMAL` precision{#dec-prec}
+
+`DECIMAL` data type can have precision and scale as parameters. This will have the following impact on the way data is converted:
+
+* `DECIMAL(<precision>, <scale>)` – when both parameters are specified, those values are used as precision and scale of the resulting data type
+* `DECIMAL(<precision>)` – when only precision is specified, scale is set to 0. The resulting data type in that case is `DECIMAL(<precision>, 0)`
+* `DECIMAL` – when no parameters are specified, default values are used. Precision is set to 28, and scale is set to 8: `DECIMAL(28, 8)`
+
+If the original value has more digits in the fractional part than required scale, the fractional part is rounded to the required scale. In that case, rounding is done according to the database configuration.
 
 #### Examples
 
@@ -756,6 +777,21 @@ SELECT (Number : 2) as Normal, (Cast(Number AS DECIMAL) : 2) as Casted FROM Sale
 | 1      | 1.0      |
 | 1      | 1.5    |
 
+In the case of conversion to `DECIMAL`, scale and precision can be specified
+
+```sql
+SELECT
+	CAST('123.0987654321' AS DECIMAL) AS default_decimal,
+	CAST('123.0987654321' AS DECIMAL(20)) AS decimal_precision,
+	CAST('123.0987654321' AS DECIMAL(20, 6)) AS decimal_precision_scale
+FROM Sales.Order
+LIMIT 1
+```
+
+| default_decimal | decimal_precision  | decimal_precision_scale |        
+|------:|-------:|-------:|
+| 123.09876543      | 123    | 123.098765    |
+
 ### COALESCE {#coalesce-expression}
 
 Returns the value of the first `expression` that is not NULL. Can be used with columns.
@@ -774,10 +810,10 @@ COALESCE ( expression [ ,...n ] )
 
 #### Examples {#coalesce-expression-examples}
 
-Assume entity `Sales.Customer` entity now has some `NULL` values:
+Assume entity `Sales.CustomerInfo` entity now has some `NULL` values:
 
 ```sql
-SELECT * FROM Sales.Customer
+SELECT * FROM Sales.CustomerInfo
 ```
 
 | ID | LastName | FirstName | Age  | TotalOrderAmount |
@@ -788,7 +824,7 @@ SELECT * FROM Sales.Customer
 Selecting a non-null name for a customer, ignoring if it is the first name or last name, can be done with `COALESCE`:
 
 ```sql
-SELECT COALESCE(LastName, FirstName) AS Name FROM Sales.Customer
+SELECT COALESCE(LastName, FirstName) AS Name FROM Sales.CustomerInfo
 ```
 
 | Name |                                                         
@@ -796,19 +832,21 @@ SELECT COALESCE(LastName, FirstName) AS Name FROM Sales.Customer
 | Doe  |
 | Jane |
 
-If arguments of `COALESCE` have different numeric types, the expression gets the type of the first argument. This behavior matches the behavior of supported database vendors.
+If all arguments have different numeric types, the data type of the expression result is defined based on [type coercion precedence](#type-coercion).
 
 ```sql
 SELECT
 	COALESCE(Age, TotalOrderAmount) AS AgeOrAmount,
 	COALESCE(TotalOrderAmount, Age) AS AmountOrAge,
-FROM Sales.Customer
+FROM Sales.CustomerInfo
 ```
 
-| AgeOrAmount (type: Integer) | AmountOrAge (type: Decimal) |
+| AgeOrAmount (type: Decimal) | AmountOrAge (type: Decimal²) |
 |------:|------:|
-| 25   | 25.0   |
-| 42   | 42.3   |
+| 25.0   | 25.0 |
+| 42.3   | 42.3 |
+
+²In OQL v1, the expression gets the type of the first argument. If you use OQL v1, the type of `AgeOrAmount` in the example above is Integer, not Decimal.
 
 ### DATEDIFF {#datediff-function}
 
@@ -1137,7 +1175,7 @@ For example, a space delimited list can be converted to one with commas to be us
 SELECT * FROM Sales.Raw
 ```
 
-| ID | Import            |                                                         
+| ID | RawImport            |                                                         
 |----|-------------------|
 | -  | "6 D10 machinery" |
 | -  | "1 A15 tools"     |
@@ -1145,10 +1183,10 @@ SELECT * FROM Sales.Raw
 The text can be converted with `REPLACE` as follows:
 
 ```sql
-SELECT REPLACE(Import, ' ', ',') FROM Sales.Raw
+SELECT REPLACE(RawImport, ' ', ',') FROM Sales.Raw
 ```
 
-| Import            |                                                         
+| RawImport            |                                                         
 |-------------------|
 | "6,D10,machinery" |
 | "1,A15,tools"     |

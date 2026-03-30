@@ -22,7 +22,7 @@ If you have not done so, make sure to download the **Push Notification Connector
 1. Click **Download**.
 
 {{% alert color="info" %}}
-When importing the module in Mendix 10.6.0 or above, you might get consistency error CE6087 for renamed design properties. Right-click and update all renamed design properties in the project.
+When importing the module, you might get consistency error CE6087 for renamed design properties. Right-click and update all renamed design properties in the project.
 {{% /alert %}}
 
 ## Configuring Your App {#config}
@@ -41,6 +41,6 @@ In order for your app to use to use the Push Connections Module, configure the f
 1. Add a new open page navigation item to the **Responsive** navigation profile.
 1. Select the **Administration** page from the **PushNotifications** module. This page is located in the **_USE ME/Admin** folder of the **PushNotifications** module.
 1. Add a microflow sub-call to your **AfterStartup** microflow for the microflow **AfterStartup_PushNotifications**:<br />
-    * If you do not have an **AfterStartup** microflow configured yet, read the [After Startup](/refguide/app-settings/#after-startup) section of *App Settings* for more information.
+    * If you do not have an **AfterStartup** microflow configured yet, read the [After Startup](/refguide/runtime-tab/#after-startup) section of *App Settings* for more information.
 
 Now you are able to start your app and move on to the next section.

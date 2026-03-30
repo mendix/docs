@@ -122,7 +122,7 @@ You can configure this behavior either on Close page actions that you have model
 
 The **All** option can be used to close all pages in the current stack.
 
-#### Combining Closing and Opening Pages
+#### Combining Closing and Opening Pages {#combining-closing-and-opening-pages}
 
 For more complex scenarios, it is possible to transparently remove one or more pages from the history from the current stack when navigating to a new page. Doing so ensures that users cannot inadvertently navigate back to pages that are no longer relevant. For example, when a user reaches the end of a three-step wizard flow, you can configure the Open page activity to open the third page and close the previous two pages at the same time. As a result, the user will see a single transition, and navigating back will not lead them to the first two pages.
 

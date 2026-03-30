@@ -16,58 +16,52 @@ Mendix Studio Pro has the requirements listed in the following sections.
 
 ### Software Specifications {#software}
 
-[Mendix Studio Pro](/refguide/modeling/) 10 is supported on 64-bit versions of Windows 10 release 1809 and above; this also includes Windows 11. 
+[Mendix Studio Pro](/refguide/modeling/) 11 is supported on 64-bit versions of Windows 10 release 1809 and above; this also includes Windows 11. 
 We support running on Windows locally, or locally virtualized.
 
-Studio Pro 10.7 and above can run in beta mode on an ARM Mac and Intel Mac running macOS Sonoma 14.0 and above. For information on known limitation, see the [Known Limitations for Mac](#mac-limitations) section below. 
+Mendix Studio Pro 11 can run in beta mode on an ARM Mac and Intel Mac running macOS Sonoma 14.0 and above. For information on known limitation, see the [Known Limitations for Mac](#mac-limitations) section below. 
 
 {{% alert color="info" %}}
-While Studio Pro on Mac is in [public beta](/releasenotes/beta-features/), Mendix can only verify support for the latest macOS version available. Support for earlier versions is not guaranteed and it is best to update macOS to the newest version when using Studio Pro. 
+While Studio Pro on Mac is in [public beta](/releasenotes/release-status/), Mendix can only verify support for the latest macOS version available. Support for earlier versions is not guaranteed and it is best to update macOS to the newest version when using Studio Pro. 
 {{% /alert %}}
 
 {{% alert color="warning" %}}
 Administrator rights are required to install Mendix Studio Pro on Mac (Beta).
 {{% /alert %}}
 
-Studio Pro versions 10.0 and above can run on the M series Apple Silicon Mac using [Parallels 17](https://www.parallels.com/) and Windows 11. Earlier versions of Studio Pro can run on Apple Mac [using Parallels](/refguide/using-mendix-studio-pro-on-a-mac/). 
+Studio Pro 11 can run on the M series Apple Silicon Mac using [Parallels 17](https://www.parallels.com/) and Windows 11. It can also run on Apple Mac [using Parallels](/refguide/using-mendix-studio-pro-on-a-mac/). 
 
 {{% alert color="info" %}}
-
 If you were using Parallels and enabled port forwarding, but then upgraded and would like to use Studio Pro on Mac, make sure to quit Parallels to be able to sign in to Studio Pro. 
-
 {{% /alert %}}
 
 The following frameworks are required. They will be installed automatically by the Studio Pro installer, if necessary:
 
-* Microsoft .NET desktop runtime (x64) and all applicable Windows security patches
+* Microsoft .NET Desktop Runtime (x64) and all applicable Windows security patches
 
-    | Studio Pro 10.0.0 - 10.10.0 | Studio Pro 10.11.0 and above |
+    | Studio Pro 11.0.0 - 11.6.2 | Studio Pro 11.6.3 and above |
     | --- | --- |
-    | .NET 6 Desktop Runtime | .NET 8 Desktop Runtime |
-    
+    | .NET 8 Desktop Runtime | .NET 10 Desktop Runtime |
+
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
-* A Java Developer Kit (JDK) version 11, 17, or 21 - if not yet installed on your machine, Mendix will install 'Eclipse Temurin JDK 21 (x64 or ARM64)'
+* A Java Developer Kit (JDK) - if not yet installed on your machine, Mendix will install Eclipse Temurin (x64 or ARM64) - see [Java](#java) for the exact version required.
 * Gradle version 8.5 or above - if Gradle is not yet installed on your machine, Mendix will install Gradle version 8.5
-* Git for Windows (x64) version 2.41.0 or above (for more information, see the [Prerequisites](/refguide/install/#prerequisites) section in *Installing Mendix Studio Pro*)
+* Git for Windows (x64) version 2.48.1 or above (for more information, see the [Prerequisites](/refguide/install/#prerequisites) section in *Installing Mendix Studio Pro*)
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
 
 When you are running Studio Pro on a Parallels virtual machine on an ARM64 device (for example, an M1 Mac), you need the following dependencies in addition to the x64 version listed above:
 
-* .NET Desktop Runtime (arm64)
+* .NET Desktop Runtime (ARM64)
 
-    | Studio Pro 10.0.0 - 10.10.0 | Studio Pro 10.11.0 and above |
+    | Studio Pro 11.0.0 - 11.6.2 | Studio Pro 11.6.3 and above |
     | --- | --- |
-    | .NET 6 Desktop Runtime | .NET 8 Desktop Runtime |
+    | .NET 8 Desktop Runtime | .NET 10 Desktop Runtime |
 
-* Microsoft Edge WebView2 Evergreen Runtime (arm64)
+* Microsoft Edge WebView2 Evergreen Runtime (ARM64)
 
 {{% alert color="info" %}}
 You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in Studio Pro.
-{{% /alert %}}
-
-{{% alert color="warning" %}}
-Please note the limitation that the database viewer built into Studio Pro (as described in [How to Share the Development Database](/howto/data-models/sharing-the-development-database/)) does not work with JDK 11.06 or 11.07.
 {{% /alert %}}
 
 #### Known Limitations for Mac {#mac-limitations}
@@ -78,17 +72,30 @@ These are the known limitations for Mac:
 * No support for document templates
 * Start from spreadsheet cannot be used at this time 
 * If you have already installed JDK previously, it may not be picked up properly during installation. You can either configure this manually or remove all references to JDK and run the installer again.
-    * The limitation that the JDK did not get installed while installing Studio Pro on macOS was removed in [10.8.0](/releasenotes/studio-pro/10.8/).
+
+#### Known Issues with Windows Patches
+
+##### Unexpected Error `ERR_CONNECTION_RESET` in Panels and Editors
+
+With the October 14, 2025 update of Windows 11, Studio Pro 9, 10, and 11 can become unusable. Studio Pro shows errors in different panels (for example design properties and toolbox) and editors (for example page, microflow, nanoflow, and rule editor).
+
+If you see the message `Hmmm... can't reach this page` with an error code of `ERR_CONNECTION_RESET`, in a tool panel or editor, your workstation is probably affected.
+
+The fix for this is to install *Security Intelligence Update for Microsoft Defender Antivirus - KB2267602 (Version 1.439.210.0 or above)*.
 
 ### Hardware Specifications {#hardware}
 
 Mendix Studio Pro will run on any machine which can run the [minimum requirements for running Windows 10 64-bit](https://www.microsoft.com/en-gb/windows/windows-10-specifications#primaryR2), with the following additional requirements:
 
 * **Disk Space** – Studio Pro requires 2GB disk space to install, and each app you create will vary in size depending on the functionality, but will take a minimum of around 150MB
-* **RAM** – 8GB
+* **RAM** – recommended 16GB or more depending on the size of your app and how many instances of Studio Pro you want to have open at the same time
 * **Display Resolution** – 1080p (1920x1080)
 
-Mendix Studio Pro on Mac (Beta) runs on any machine compatible with [macOS Sonoma](https://support.apple.com/en-us/105113)
+Mendix Studio Pro on Mac (Beta) runs on any machine compatible with [macOS Sonoma](https://support.apple.com/en-us/105113).
+
+These requirements also need to be taken into account when using a virtual machine.
+
+Studio Pro performance is strongly impacted by the disk performance. Using network storage will likely lead to poor performance. This is especially important in virtual desktop environments, where careful consideration should be given to disk performance.
 
 ### Firewall Settings {#firewall-settings}
 
@@ -98,6 +105,13 @@ Studio Pro needs access to the following URLs in order to work. If your firewall
 * `*.mendixcloud.com`
 * `*.teamserver.sprintr.com`
 * `*.api.mendix.com`
+
+If you have set up managed dependencies, you will need access to the following Gradle and Maven URLs:
+
+* `jcenter.bintray.com`
+* `plugins-artifacts.gradle.org`
+* `plugins.gradle.org`
+* `repo.maven.apache.org`
 
 If you have set up managed dependencies and are working behind a firewall or using a proxy, see the [Proxy Settings](/refguide/managed-dependencies/#proxy-settings) section of *Managed Dependencies* for advice on what you need to do to allow the managed dependencies to work.
 
@@ -109,6 +123,8 @@ To run a Mendix app, Mendix Studio Pro uses the following ports by default. If y
 * 8100 – sign-in port
 
 For more information on ports and modifying Studio Pro's default ports, see [Configurations](/refguide/configuration/) and the [Troubleshooting Common Mobile Issues](/refguide/mobile/getting-started-with-mobile/prerequisites/#troubleshooting) section of *Native App Prerequisites and Troubleshooting*.
+
+For information on how to ensure the smooth operation of Mendix AI Assistance (Maia), see the [Network Configuration Requirements](/refguide/mendix-ai-assistance/#maia-network-requirement) section in *Mendix AI Assistance (Maia)*.
 
 ### File Comparison
 
@@ -138,7 +154,7 @@ You can find a list of known limitations below, however, we advise you to check 
 
 | Vendor      | Repository Size Limit                      | Push Limit      | Non-LFS File Size Limit | LFS File Size Limit |
 | ----------- | ------------------------------------------ | --------------- | ----------------------- | ------------------- |
-| GitHub      | Warnings on 5 GB, 100 GB theoretical limit | Information n/a | 100 MB¹ (warning 50 MB)  | 5 GB                |
+| GitHub      | Warnings on 5 GB, 100 GB theoretical limit | Information n/a | 100 MB¹ (warning 50 MB) | 5 GB                |
 | GitLab      | 5 GB (free) and 250 GB (enterprise)        | 5 GB            | None                    | 5 GB                |
 | Azure Repos | 250 GB                                     | 5 GB            | None                    | 50 GB               |
 | Bitbucket   | 4 GB                                       | 3.5 GB          | None                    | 10 + 100 GB         |
@@ -187,7 +203,7 @@ If you are using the Intel® UHD Graphics 630 graphics processor, please ensure 
 
 ## Team Server {#ts}
 
-The [Team Server](/developerportal/general/team-server/) is implemented using Git, and Studio Pro uses the HTTPS protocol to communicate with that server. To access the Team Server from within Studio Pro, the network at your location needs the following settings:
+The [Team Server](/developerportal/repository/team-server/) is implemented using Git, and Studio Pro uses the HTTPS protocol to communicate with that server. To access the Team Server from within Studio Pro, the network at your location needs the following settings:
 
 * The HTTPS port (TCP 443) needs to be open
 * The HTTP port (TCP 80) needs to be open
@@ -213,8 +229,7 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 ### Operating System {#server-os}
 
 * Microsoft Windows Server 2012 and above
-* The following Unix-like operating systems:
-    * [Debian OldOldStable (LTS)](https://wiki.debian.org/DebianOldOldStable), [Debian OldStable, Debian Stable](https://wiki.debian.org/DebianReleases#Current_Releases.2FRepositories)
+* Linux: [Debian 10 (Buster)](https://www.debian.org/releases/buster/)
 
 ### Web Server
 
@@ -224,14 +239,12 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 ### Java {#java}
 
-When running Mendix on a server, you need Java Runtime Environment (JRE). To download an Eclipse Temurin OpenJDK distribution from Adoptium, see [Eclipse Temurin™ Latest Releases](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html). The following list explains which version to use:
+When running Mendix on a server, you will need Java Runtime Environment 21 (JRE). To download an Eclipse Temurin OpenJDK distribution from Adoptium, see [Eclipse Temurin™ Latest Releases](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
-* Mendix 9.24 LTS: Java 11, optionally use Java 21 in 9.24.23 and later
-* (Future) Mendix 10.24 LTS: Java 21
-
-{{% alert color="warning" %}}
-Studio Pro 10.21 and above (including the future 10.24 LTS) does not support Java 11. Upgrade your application to Java 21 before migrating.
-{{% /alert %}}
+{{% alert type="info" %}}
+A Java Runtime Environment (JRE) is the environment needed to run Mendix on a server. This is not to be confused with a Java Development Kit (JDK), which is supported by Studio Pro and used to create and develop apps. To learn more about JDKs, see 
+[Getting Started with Java](https://dev.java/learn/getting-started/). For information on installing a JDK to use with your Mendix app, see [JDK Installation](/refguide/jdk-installation/).
+{{% /alert %}} 
 
 ## Databases {#databases}
 
@@ -239,20 +252,20 @@ Mendix tries to support the most recent and patched database server versions fro
 
 Current support:
 
-* [MariaDB](/refguide/mysql/): 10.4, 10.5, 10.6, 10.11, 11.4
-* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2019, 2022
+* [MariaDB](/refguide/mysql/): 10.6, 10.11, 11.4, 11.8
+* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2022, 2025
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
-* [MySQL](/refguide/mysql/): 8.0, 8.4
-* [Oracle Database](/refguide/oracle/): 19, 21c
-* PostgreSQL: 12, 13, 14, 15, 16, 17
+* [MySQL](/refguide/mysql/): 8.4
+* [Oracle Database](/refguide/oracle/): 19, 21c, 23ai (including 26ai)
+* PostgreSQL: 13, 14, 15, 16, 17, 18
 * [SAP HANA](/refguide/saphana/): 2.00.076.00.1705400033
 
 {{% alert color="warning" %}}
 Each app must have its own database. Mendix apps cannot share data by sharing the same database.
 
-If you want two apps to share the same database, then you need to share the data from one app to the other using APIs. In Mendix, these are supported by [Data Hub](/data-hub/share-data/) or the REST and OData services described in the [Integration](/refguide/integration/) section of the *Studio Pro Guide*. This is referred to as a microservices architecture.
+If you want two apps to share the same database, then you need to share the data from one app to the other using APIs. In Mendix, these are supported by the [Catalog](/refguide/share-data/) or the REST and OData services described in the [Integration](/refguide/integration/) section of the *Studio Pro Guide*. This is referred to as a microservices architecture.
 
-For more information on why data cannot be shared between apps see [Data Storage](/refguide/data-storage/#databases). Use the [Database Replication](/appstore/modules/database-replication/) module if you need to copy the data from one app to another.
+For more information on why data cannot be shared between apps, see [Data Storage](/refguide/data-storage/#databases). Use the [Database Replication](/appstore/modules/database-replication/) module if you need to copy the data from one app to another.
 {{% /alert %}}
 
 ## File Storage {#file-storage}
@@ -267,7 +280,7 @@ For container-based deployments using Docker, Kubernetes, or Cloud Foundry, the 
 * SAP AWS S3 Object Storage
 * SAP Azure Blob Storage
 
-For container-mounted storage in Kubernetes, provided by an external storage class, see also [Use Docker with Minikube](/developerportal/deploy/run-mendix-on-kubernetes/).
+For container-mounted storage in Kubernetes, provided by an external storage class, see also [Use Docker with Minikube](/developerportal/deploy/run-mendix-on-minikube/).
 
 ### Storage Types for Servers
 
@@ -290,7 +303,7 @@ AWS S3 is also supported in the Windows Service Console.
 * Microsoft Edge (latest stable desktop version)
 
 {{% alert color="warning" %}}
-Internet Explorer is not supported in Studio Pro 10.
+Internet Explorer is not supported.
 {{% /alert %}}
 
 ## Mobile {#mobile}
@@ -302,7 +315,7 @@ For native and progressive web apps built with Mendix, the following operating s
 
 Only devices running on these operating system versions receive up-to-date security fixes from their vendors and thus minimize being vulnerable to known exploits.
 
-You can build native and progressive web apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version. The oldest operating system version where Mendix native mobile apps can run is determined by [React Native](https://github.com/facebook/react-native?tab=readme-ov-file#-requirements).
+You can build native and progressive web apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support, you must demonstrate that your problem also occurs on a supported operating system version. The oldest operating system version where Mendix native mobile apps can run is determined by [React Native](https://github.com/facebook/react-native?tab=readme-ov-file#-requirements).
 
 Mendix recommends the following minimum hardware requirements for all mobile devices running native and progressive web Mendix apps:
 
@@ -315,18 +328,22 @@ Developing native mobile apps with Mendix comes with special requirements explai
 
 ## MxBuild {#mxbuild}
 
-MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](/refguide/mxbuild/).
+MxBuild is a Windows, Linux, and macOS command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](/refguide/mxbuild/).
 
 * .NET
 
-    | Studio Pro 10.0.0 - 10.10.0 | Studio Pro 10.11.0 and above |
+    | Studio Pro 11.0.0 - 11.6.2 | Studio Pro 11.6.3 and above |
     | --- | --- |
-    | .NET 6 | .NET 8 |
+    | .NET 8 | .NET 10 |
 
-* The appropriate JDK, 11, 17, or 21, see [Java](#java), above for more information.
+* JDK 21
 
 ## mx Command-Line Tool {#mxtool}
 
-The **mx** command-line tool is a Windows and Linux command-line tool that can be used to do useful things with your Mendix app. For more information, see [mx Command-Line Tool](/refguide/mx-command-line-tool/).
+The **mx** command-line tool is a Windows, Linux, and macOS command-line tool that can be used to do useful things with your Mendix app. For more information, see [mx Command-Line Tool](/refguide/mx-command-line-tool/).
 
 * Mono v5.20.x or .NET v4.7.2
+
+## Geographic Limitations
+
+The Mendix platform is commercially available in China. However [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) and [Mendix Portal](/portal/) are not offered in China.

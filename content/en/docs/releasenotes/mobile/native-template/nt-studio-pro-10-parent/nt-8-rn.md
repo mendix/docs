@@ -1,7 +1,7 @@
 ---
 title: "Native Template 8"
 url: /releasenotes/mobile/nt-8-rn/
-weight: 8
+weight: 80
 description: "Native Template 8 release notes."
 ---
 

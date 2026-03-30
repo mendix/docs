@@ -38,6 +38,10 @@ Clauses must be presented in the following order, but can be left out if they ar
 
 The `UNION` clause defies the usual order presented above. It will be presented in a [Union Clause](#oql-union) section at the end.
 
+The domain model used in the various examples is shown below:
+
+{{< figure src="/attachments/refguide/modeling/domain-model/oql/oql-clauses-domain-model.png" >}}
+
 ## `SELECT` Clause {#select}
 
 The `SELECT` clause specifies which entity attributes or other specified data must be retrieved. The clause returns all the requested values of objects which match the `SELECT` clause.
@@ -111,7 +115,7 @@ The following query returns all attributes of objects of `Sales.Request` that ar
 ```
 SELECT Sales.Request/*
 FROM Sales.Customer
-JOIN Sales.Customer/Sales.Customer_Request/Sales.Request
+JOIN Sales.Customer/Sales.Request_Customer/Sales.Request
 ```
 
 The following query is equivalent to the previous one, but it uses table aliases
@@ -119,7 +123,7 @@ The following query is equivalent to the previous one, but it uses table aliases
 ```
 SELECT Req/*
 FROM Sales.Customer Cust
-JOIN Cust/Sales.Customer_Request/Sales.Request Req
+JOIN Cust/Sales.Request_Customer/Sales.Request Req
 ```
 
 ### Selecting Distinct Values with `DISTINCT` {#distinct}
@@ -199,7 +203,7 @@ It is possible to use more complex expressions in `SELECT`. This is explained in
 
 It is also possible to use a subquery. See [Subquery in `SELECT`](/refguide/oql-clauses/#subquery-in-select) for more details.
 
-### Selecting Attributes over Associations
+### Selecting Attributes over Associations {#longpath}
 
 A unique feature of OQL is the ability to access attributes of associated objects using paths. For example:
 
@@ -670,7 +674,7 @@ GROUP BY
 ```
 
 {{% alert color="info" %}}
-The `GROUP BY` clause is usually used in combination with [aggregations](/refguide/oql-expressions/#aggregates): `AVG`, `COUNT`, `MAX`, `MIN`, `SUM`.
+The `GROUP BY` clause is usually used in combination with [aggregations](/refguide/oql-expressions/#aggregates): `AVG`, `COUNT`, `MAX`, `MIN`, `STRING_AGG`, `SUM`.
 {{% /alert %}}
 
 ### Using `GROUP BY`
@@ -838,12 +842,18 @@ HAVING
 	)
 ```
 
-## `ORDER BY` Clause{#order-by}
+## `ORDER BY` Clause {#order-by}
 
 The `ORDER BY` clause specifies the sort order used on columns returned in a `SELECT` statement. Multiple columns can be specified. Columns are ordered in the sequence of the items in the `ORDER BY` clause.
 
 {{% alert color="info" %}}
 This clause can include items that do not appear in the `SELECT` clause, except when `SELECT DISTINCT` is specified or when a `GROUP BY` clause exists. When `UNION` is used, the column names or aliases must be those specified in the `SELECT` clause of the first part of the query. More information is presented in the [Union Clause](#oql-union) section.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+The `ORDER BY` clause cannot be used in view entities without a `LIMIT` or an `OFFSET` clause. See [Sorting of View Entity Results](/refguide/use-view-entities/#sorting) in *How To Use View Entities* for more details.
+
+If OQL v2 is enabled, an `ORDER BY` clause cannot be used in subqueries without a `LIMIT` or an `OFFSET` clause because the order of the subquery results may not be retained in the outer query. See the [`ORDER BY` in Subquery](/refguide/oql-v2/#order-by-in-subquery) section of *OQL Version 2 Features* for more details.
 {{% /alert %}}
 
 ### Syntax
@@ -972,7 +982,7 @@ In the example below `Sales.Customer` object for Jim Elk does not have any assoc
 ```sql
 SELECT LastName
 FROM Sales.Customer
-ORDER BY Sales.Customer/Sales.Customer_Request/Sales.Request/Number
+ORDER BY Sales.Customer/Sales.Request_Customer/Sales.Request/Number
 ```
 
 | LastName     |

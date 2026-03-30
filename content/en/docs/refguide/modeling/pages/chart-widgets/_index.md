@@ -39,6 +39,10 @@ From version 1.4 of the basic charts you can create charts with a variable numbe
 
 ## Any Chart {#any-chart}
 
+{{% alert color="warning" %}}
+The Any Chart widget is not compatible with the [Mendix React Client](/refguide/mendix-client/react/). We have published a version of Any Chart that supports the React client called Custom Chart. Update your [Charts](/appstore/widgets/charts/) widget (to version 6.0 or above) to use the Custom Chart feature.
+{{% /alert %}}
+
 With *Any Chart* you can build all the chart types that are possible with Plotly.js up to the version supported by the widget (see the widget description in the Marketplace for more details). If you want to build a chart which is not available in the Basic charts, *Any Chart* is your friend.
 
 {{< figure src="/attachments/refguide/modeling/pages/chart-widgets/contour.png" alt="Sample Contour Chart made with Any Chart"   width="400"  class="no-border" >}}

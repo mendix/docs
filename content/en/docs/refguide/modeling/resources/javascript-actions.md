@@ -1,7 +1,7 @@
 ---
 title: "JavaScript Actions"
 url: /refguide/javascript-actions/
-weight: 20
+weight: 30
 description: "This reference guide details the ways JavaScript Actions can extend the functionality of your Mendix app."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -12,7 +12,7 @@ This activity can only be used in **Nanoflows**.
 
 ## Introduction
 
-With JavaScript actions, you can extend your application's functionality in ways nanoflows alone cannot. To use a JavaScript action, call it from a nanoflow using the [JavaScript Action Call](/refguide/javascript-action-call/).
+With JavaScript actions, you can extend your application's functionality in ways nanoflows alone cannot. To use a JavaScript action, call it from a nanoflow using the [Call JavaScript Action](/refguide/call-javascript-action/) activity.
 
 {{% alert color="info" %}}
 
@@ -26,7 +26,7 @@ To learn how to create, configure, and use a JavaScript action, see these [Build
 
 ## General Settings
 
-After double-clicking a JavaScript action in your **App Explorer** you will see the JavaScript action's settings: 
+Double-click the JavaScript action in your **App Explorer** to open the action's settings: 
 
 {{< figure src="/attachments/refguide/modeling/resources/javascript-actions/javascript-action-settings-no-para.png" alt="javascript settings" width="600"  class="no-border" >}}
 
@@ -64,7 +64,7 @@ This setting handles the parameter's name. A name is required. Names must start 
 |   List   |   The list parameter type allows you to pass a list of Mendix objects to a JavaScript action. You must also select its entity type, which can be either a specific entity or a type parameter. In the generated JavaScript action template code, this type is represented as an array of MxObjects. |
 |   Entity   |   The entity parameter type is a placeholder. It stands in for an entity that will be replaced with a new entity's name when it is called in a nanoflow. Additionally, the entity type can be used to fill in a type parameter. In the generated JavaScript action template code, this type is represented as a string.  |
 |   Nanoflow   |   The nanoflow parameter type allows you to pass a nanoflow that you can call from your JavaScript action. The value of the parameter is an async function, where calling triggers the configured nanoflow. You can specify parameters as a JavaScript object, and capture the return value of the nanoflow once execution finishes. For example, you can call a nanoflow that has a string `Name` parameter and returns a `User` object with this given name: `const user = await nanoflowParameter({ Name: "John Doe" });`. |
-|   Microflow (introduced in Studio Pro 10.21.0 )  |   The microflow parameter type allows you to pass a microflow that you can call from your JavaScript action. The value of the parameter is an async function, where calling triggers the configured microflow. You can specify parameters as a JavaScript object, and capture the return value of the microflow once execution finishes. For example, you can call a microflow that has a string `Name` parameter and returns a `User` object with this given name: `const user = await microflowParameter({ Name: "John Doe" });`. Calling a microflow from a JavaScript action with a microflow parameter uses a [runtime operation](/refguide/communication-patterns/#RO) and is [strict mode](/refguide/strict-mode/) compliant. |
+|   Microflow  |   The microflow parameter type allows you to pass a microflow that you can call from your JavaScript action. The value of the parameter is an async function, where calling triggers the configured microflow. You can specify parameters as a JavaScript object, and capture the return value of the microflow once execution finishes. For example, you can call a microflow that has a string `Name` parameter and returns a `User` object with this given name: `const user = await microflowParameter({ Name: "John Doe" });`. Calling a microflow from a JavaScript action with a microflow parameter uses a [runtime operation](/refguide/communication-patterns/#RO) and is [strict mode](/refguide/strict-mode/) compliant. |
 |   Boolean   |   The Boolean parameter type allows you to pass a Boolean value to a JavaScript action.  |
 |   Date and Time   |  The date and time parameter type allows you to pass a date and time value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a JavaScript `Date`.  |
 |   Decimal   |  The decimal parameter type allows you to pass a decimal value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a [Big](https://www.npmjs.com/package/big-js) object.  |
@@ -74,7 +74,7 @@ This setting handles the parameter's name. A name is required. Names must start 
 
 #### Category
 
-Use categories to keep parameters apart in a [JavaScript Action Call](/refguide/javascript-action-call/). Categories are useful for making logical groups of parameters when your app has several parameters. If you do not specify a category, the parameter will appear in the **Input** group.
+Use categories to keep parameters apart in a [Call JavaScript Action](/refguide/call-javascript-action/). Categories are useful for making logical groups of parameters when your app has several parameters. If you do not specify a category, the parameter will appear in the **Input** group.
 
 #### Description
 
@@ -201,8 +201,8 @@ export async function Hello(message) {
 
 ## Read More
 
-* [JavaScript Action Call](/refguide/javascript-action-call/)
+* [Call JavaScript Action](/refguide/call-javascript-action/)
 * [Nanoflows](/refguide/nanoflows/)
 * [Build JavaScript Actions](/howto/extensibility/build-javascript-actions/)
-* [Java Action Call](/refguide/java-action-call/)
-* [Microflow Call](/refguide/microflow-call/)
+* [Call Java Action](/refguide/call-java-action/)
+* [Call Microflow](/refguide/microflow-call/)

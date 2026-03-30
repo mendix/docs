@@ -34,13 +34,13 @@ Within a team, there are predefined roles that can be provisioned to team member
 * Who can edit the backlog and current [Sprint](/developerportal/project-management/epics/planning/)
 * Who can edit the app model
 * Who has the [node permissions](/developerportal/deploy/node-permissions/) for access to the node information
-* Who can change the app's [Settings](/developerportal/collaborate/general-settings/)
+* Who can change the app's [Settings](/developerportal/general-settings/)
 
 Mendix Admins can edit and create new team roles within the company in [Control Center](/control-center/roles-and-permissions/).
 
 ## Technical Contact {#technical-contact}
 
-Every deployed app has a Technical Contact. When you view the [Settings](/developerportal/collaborate/general-settings/#general) for a deployed app, you can see the app's Technical Contact. The Technical Contact is the user you can contact with questions related to the app. 
+Every deployed app has a Technical Contact. When you view the [Settings](/developerportal/general-settings/#general) for a deployed app, you can see the app's Technical Contact. The Technical Contact is the user you can get in touch with for questions related to the app. 
 
 {{< figure src="/attachments/developerportal/general/team/app-roles/technical-contact.png" alt="" class="no-border" >}}
 
@@ -56,18 +56,18 @@ The responsibilities of a Technical Contact depend on whether you are hosting yo
 
 For apps in Mendix Cloud, the Technical Contact is the first point of contact for the app and can do the following:
 
-* Receive notifications for upcoming maintenance operations on the application
-* Configure the alert settings in the **Monitoring** tab of the cloud node
-* Receive alerts from the Mendix app when problems arise (for example, CPU load is high, running out of disk space)
-* Adjust environments (for example, resize and add new environments) 
+* Receive notifications for upcoming maintenance operations on the application.
+* Configure the alert settings in the **Monitoring** tab of the cloud node.
+* Receive alerts from the Mendix app when problems arise. Examples: CPU load is high, running out of disk space.
+* Adjust environments. Examples: resize and add new environments.
 
 As the Technical Contact, you can perform all the regular operations on the Mendix Cloud node in the Mendix Portal. Additionally, you can manage the access rights of your team members so that they can deploy, stop and start the app, and perform other actions. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
-The Technical Contact is also responsible for managing licenses (as in, renewals, activations, and upgrades) and is the first point of contact for the Mendix Support department. Note that Mendix is responsible for Mendix Cloud app renewals, and you can contact your Customer Success Manager (CSM) if you want to expand your license.
+The Technical Contact is also responsible for managing licenses, meaning renewals, activations, and upgrades. They are also the first point of contact for the Mendix Support department. Note that Mendix is responsible for Mendix Cloud app renewals, and you can contact your Customer Success Manager (CSM) if you want to expand your license.
 
 ### On-Premises Responsibilities
 
-When a Mendix app is on premises, it is running on the customer's own infrastructure. For managing licenses in this scenario, Mendix sends license renewal notifications to the Technical Contact via email. As a Technical Contact, if you want to expand the license (for example, for more users), you need to contact your Account Executive.
+When a Mendix app is deployed on-premises, it is running on the customer's own infrastructure. For managing licenses in this scenario, Mendix sends license renewal notifications to the Technical Contact via email. As a Technical Contact, if you want to expand the license, such as for more users, you need to contact your Account Executive.
 
 ### Changing the Technical Contact {#change-technical-contact}
 
@@ -80,7 +80,7 @@ You can only change the Technical Contact for licensed Mendix apps. You cannot c
 If you are the current Technical Contact for an app, you can transfer your Technical Contact role to another team member as follows:
 
 1. Go to your app's [Environments](/developerportal/deploy/environments/) page.
-2. Switch to the [Permissions](/developerportal/deploy/environments/#permissions) tab.
+2. Switch to the [Permissions](/developerportal/deploy/environments/#permissions-tab) tab.
 3. Click **Change to Technical Contact** for the team member who should be the new Technical Contact. You may have to authenticate first to perform this action. If so, click **Change to Technical Contact** again after successful authentication to finish this action.
 
 This action changes the Technical Contact for all environments.

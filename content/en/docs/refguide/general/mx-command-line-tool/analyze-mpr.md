@@ -7,12 +7,7 @@ description: "Describes MPR analyze command, which shows the contents of the MPR
 
 ## Introduction
 
-The `mx analyze-mpr` command enables you to show information about the MPR file in the form of plaintext. 
-
-{{% alert color="info" %}}
-This command is available in `mx.exe` from Studio Pro 10.17.0 and above.
-However, it can also be used to analyze MPR files created in older versions starting from Studio Pro 9.24.
-{{% /alert %}}
+The `mx analyze-mpr` command enables you to show information about the MPR file in the form of plaintext.
 
 {{% alert color="warning" %}}
 We do not recommend building custom tooling on top of this outpur, as the output and the format may change over time.
@@ -46,7 +41,6 @@ Valid examples are given below:
 * `mx analyze-mpr temp.mpr > analysis.txt`, to output to a text file
 
 An example of the output is presented below:
-
 <details>
 
 <summary>Expand for code sample</summary>

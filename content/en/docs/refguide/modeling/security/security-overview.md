@@ -2,12 +2,7 @@
 title: "Security Overview"
 url: /refguide/security-overview/
 weight: 20
-beta: true
 ---
-
-{{% alert color="info" %}}
-This feature was introduced in Mendix 10.18 and is currently in beta. For more information, see [Beta and Experimental Releases](/releasenotes/beta-features/).
-{{% /alert %}}
 
 ## Introduction
 
@@ -25,8 +20,6 @@ The **Security Overview** summarizes the app's security for a selected user role
 2. In the **Show access for user role** list, select the user role for which you want to view the security summary.  (The anonymous and administrator user roles are marked with  `(Anonymous)` and `(Administrator)` respectively).
 3. Optionally, select a module in the sidebar of the overview.
     Selecting a module filters the content in the **Entity access**, **Page access**, **Microflow access**, and **Nanoflow access** tabs. The list of modules does not show the System module or any protected modules.
-
-
 
 ## Security Overview Contents
 
@@ -80,11 +73,11 @@ To export the **Security Overview**, click the **Export to Excel** button. This 
     2. Module: The module containing the entity.
     3. Entity: The name of the entity.
     4. Can create:  Specifies wether create access has been granted
-    4. Can delete:  Specifies wether delete access has been granted
-    5. XPath: The XPath constraint.
-    6. XPath Caption:  The XPath constraint caption, when set.
-    7. Access: The access level (None, Read or ReadWrite).
-    8. Anonymous role: Specifies whether this access is connected to an anonymous user role.
+    5. Can delete:  Specifies wether delete access has been granted
+    6. XPath: The XPath constraint.
+    7. XPath Caption:  The XPath constraint caption, when set.
+    8. Access: The access level (None, Read or ReadWrite).
+    9. Anonymous role: Specifies whether this access is connected to an anonymous user role.
 3. Document Access -- This sheet includes the accessible pages, microflows and nanoflows, including the following:
     1. Document type -- The type of the accessible document (page, microflow, nanoflow).
     2. User Role.
@@ -98,6 +91,10 @@ To export the **Security Overview**, click the **Export to Excel** button. This 
     3. Module Role.
     4. Anonymous role: Specifies whether this user roles is an anonymous user role.
     5. Administrator role: Specifies whether this user role is the administrator user role.
+
+## CLI export
+
+The security overview can be exported to a JSON or xlsx file with the `mx` command line tool. See the [export-security-overview](/refguide/mx-command-line-tool/security/#export-security-overview) command.
 
 ## Read More
 

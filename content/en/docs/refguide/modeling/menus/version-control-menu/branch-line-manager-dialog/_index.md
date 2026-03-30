@@ -6,7 +6,7 @@ weight: 80
 
 ## Introduction
 
-The **Branch Line Manager** is used to manage the [branch lines](/refguide/version-control/#branches) of an app that are stored on a version control server. You can create or delete branch lines for your app, and you can change the branch line that you are working on.
+The **Branch Line Manager** is used to manage the [branch lines](/refguide/version-control/glossary/#branches) of an app that are stored on a version control server. You can create or delete branch lines for your app, and you can change the branch line that you are working on.
 
 To view the **Branch Line Manager** dialog box, open **Version Control** > **Manage Branch Lines**.
 
@@ -31,7 +31,7 @@ Use this setting to select the location where your app is stored. This can be ei
 
 Select the Team Server Git app for which you want to manage the branch lines. If you have an app open in Studio Pro, it will be selected automatically. However, you can also manage branch lines without opening an app first, in which case no app will be selected.
 
-For more information about the Mendix Team Server, see [Team Server](/developerportal/general/team-server/).
+For more information about the Mendix Team Server, see [Team Server](/developerportal/repository/team-server/).
 
 ### Bring Your Own (BYO) Git Server App {#byo-server-app}
 

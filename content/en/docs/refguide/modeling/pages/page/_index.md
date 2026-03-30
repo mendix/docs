@@ -41,7 +41,7 @@ The selected page is opened.
 ### Creating a Page
 
 {{% alert color="info" %}}
-In Studio Pro 10.21 and above, you can use Maia Page Generator, an AI-powered tool, to create pages by providing a description of your requirements and optional images. For more information, see [Page Generator](/refguide/page-generator/).
+Alternatively, you can use Maia Page Generator, an AI-powered tool, to create pages by providing a description of your requirements and optional images. For more information, see [Page Generator](/refguide/page-generator/).
 {{% /alert %}}
 
 To create a new page, do the following:
@@ -70,7 +70,7 @@ The selected page is deleted.
 ### Adding Elements on a Page {#add-elements}
 
 {{% alert color="info" %}}
-In Studio Pro 10.18 and above, you can also add elements through Maia UI Recommender in **Design mode**. It allows you to easily add new widgets to a page without losing the context of what you are currently working on. For more information, see [UI Recommender](/refguide/ui-recommender/).
+You can also add elements through UI Recommender in **Design mode**. It allows you to easily add new widgets to a page without losing the context of what you are currently working on. For more information, see [UI Recommender](/refguide/ui-recommender/).
 {{% /alert %}}
 
 The way you can add an element on a page depends on a mode you are editing your page in. For more information on modes, see the [Page Editor Modes](#page-editor-modes) section.
@@ -131,7 +131,6 @@ To delete an element from a page, select this element and press <kbd>Delete</kbd
 ### Changing Page Parameters and Variables {#change-parameters}
 
 The top bar of the Page Editor features both the **Parameters** and **Variables** buttons. These allow you to change the parameters or variables for a page. Both buttons display the current number of parameters or variables in their caption. Additionally, the tooltip of the parameters button will list all parameters and their type, while the tooltip of the variables button lists each variable and its type.
-
 
 For more information about page parameters and variables, see the [Data](/refguide/page-properties/#data) section in *Page Properties*.
 

@@ -188,5 +188,6 @@ Furthermore, external entities cannot be committed. Use the [Send External Objec
 
 * The **Commit** activity does not work. Use **Send External Object** instead.
 * On pages, the [Save button](/refguide9/button-widgets/) and the [Save Changes event](/refguide9/on-click-event/#save-changes) do not work when the page contains widgets that update external entities. Call a microflow that persists the changes using **Send External Object** instead.
+* Mendix tracks external entities it has processed by mapping their OData keys to local Mendix identifiers. This prevents duplicating objects and ensures correct association resolution. However, services that delete and recreate objects with the same OData key can cause inconsistencies, as Mendix assumes these keys remain unique. For better compatibility, use services that implement soft deletes, marking objects as inactive instead of removing them.
 
 For more details on consuming services and exposed entities, including operations that can be performed on external entities, see [Consume Services](/catalog/consume/).

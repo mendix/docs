@@ -139,7 +139,17 @@ This authentication option is not available for Published Web Services and can o
 
 If you choose this option, the API will expect a "X-Csrf-Token" HTTP request header to be set on each incoming request. This authentication option is particularly interesting for custom JavaScript and widget implementations.
 
-The session token can be acquired by calling `mx.session.getConfig("csrftoken")` in JavaScript. This method call should be used before each API call to prevent cross-site request forgery (CSRF/XSRF).
+The session token can be acquired by calling a Mendix Client API method to get the current CSRF token. This method should be called before each API call in your widget or JavaScript action to prevent cross-site request forgery (CSRF/XSRF).
+
+In Mendix versions below 10.23 you can call `mx.session.getConfig("csrftoken")` in your widget or JavaScript action.
+
+In Mendix versions 10.23 and above:
+
+```javascript
+import getCSRFToken from "mx-api/session";
+
+const token = getCSRFToken();
+```
 
 #### Authentication Option 3, Custom {#custom}
 
@@ -235,7 +245,7 @@ An example of an attack is when an application is embedded in an iframe. Applica
 
 By sending a header to the user’s browser, it can block the use of the Mendix application within an iframe and avoid this type of attack. The header is set by default to block embedding within an iframe. For Mendix Cloud, this can be configured using [HTTP Headers](/developerportal/deploy/environments-details/#http-headers) in your node’s environment details within the Mendix Portal. If you change this value, you will also need to ensure that *SameSite* cookies are set to the correct value. See [Iframes and Running Apps](/developerportal/deploy/running-in-iframe/) for more information.
 
-If you are running your Mendix app on Mendix for Private Cloud, you can configure the HTTP headers as part of advanced operator configuration. See the [Endpoint (network) Configuration](/developerportal/deploy/private-cloud-cluster/#advanced-network-settings) section of *Creating a Private Cloud Cluster*.
+If you are running your Mendix app on Mendix on Kubernetes, you can configure the HTTP headers as part of advanced operator configuration. See the [Endpoint (network) Configuration](/developerportal/deploy/private-cloud-cluster/#advanced-network-settings) section of *Creating a Mendix on Kubernetes Cluster*.
 
 The Mendix Cloud Foundry Buildpack and Mendix Docker Buildpack also provide [an option to configure HTTP headers](https://github.com/mendix/cf-mendix-buildpack#built-in-proxy-configuration).
 

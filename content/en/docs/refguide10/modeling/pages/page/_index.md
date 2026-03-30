@@ -132,7 +132,6 @@ To delete an element from a page, select this element and press <kbd>Delete</kbd
 
 The top bar of the Page Editor features both the **Parameters** and **Variables** buttons. These allow you to change the parameters or variables for a page. Both buttons display the current number of parameters or variables in their caption. Additionally, the tooltip of the parameters button will list all parameters and their type, while the tooltip of the variables button lists each variable and its type.
 
-
 For more information about page parameters and variables, see the [Data](/refguide10/page-properties/#data) section in *Page Properties*.
 
 ## Page Editor Modes {#page-editor-modes}

@@ -35,9 +35,9 @@ This is the app model as created by Studio Pro. It cannot be directly interprete
 
 This converts an app in the *.mpk* format to the mda format which can be interpreted by the Mendix Runtime.
 
-### Cloud Foundry
+### Container Platform
 
-This is the command line interpreter which allows Cloud Foundry environments to be created, and code to be pushed into the environments to be executed.
+This is the command line interpreter which allows Kubernetes or Cloud Foundry environments to be created, and code to be pushed into the environments to be executed.
 
 ### Buildpack
 

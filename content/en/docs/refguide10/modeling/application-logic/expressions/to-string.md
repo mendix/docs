@@ -8,7 +8,7 @@ weight: 130
 
 Basic functions to convert values of various data types to string.
 
-## toString
+## `toString`
 
 Converts the specified value to a string representation.
 

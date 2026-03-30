@@ -9,13 +9,13 @@ This document describes the properties of a published web service. If you want a
 
 ## Operations
 
-{{< figure src="/attachments/refguide10/modeling/integration/published-web-services/published-web-service/16843888.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/integration/web-services/published-web-service/16843888.png" class="no-border" >}}
 
 Provide the actual [operations](/refguide10/operations/) of which the web service is composed. Each of these operations is a microflow.
 
 ## Settings
 
-{{< figure src="/attachments/refguide10/modeling/integration/published-web-services/published-web-service/16843887.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/integration/web-services/published-web-service/16843887.png" class="no-border" >}}
 
 ### Validate Against WSDL
 

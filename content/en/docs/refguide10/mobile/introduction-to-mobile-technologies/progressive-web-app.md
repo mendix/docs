@@ -44,7 +44,7 @@ Within the navigation profiles the following PWA features can be configured:
 
 {{< figure src="/attachments/refguide10/mobile/progressive-web-app/settings.png" alt="PWA settings"   width="350"  class="no-border" >}}
 
-To be able to fully test PWA functionalities, the app needs to be deployed to the cloud. This is because the service worker is only enabled in the cloud over HTTPS.
+To be able to fully test PWA functionalities, the app needs to be deployed to the cloud. This is because some PWA features are only available over HTTPS protocol. For more information, see [Accessing Device Features](#accessing-device-features) below.
 
 ### Publishing as a Progressive Web App
 
@@ -148,7 +148,7 @@ Offline-first PWAs use long-lived sessions, which keep users logged in for a lon
 
 For more information on sessions and how to customize the timeout, see the [Session Duration](/refguide10/tricky-custom-runtime-settings/#session-duration) section of the *Advanced Custom Settings in Mendix Runtime Reference Guide*.
 
-## Accessing Device Features
+## Accessing Device Features {#accessing-device-features}
 
 Browsers offer access to device features through APIs that can be leveraged in PWAs. These device features can be used by available widgets and nanoflow actions. It is also possible to leverage additional device features by extending the platform using [JavaScript Actions](/refguide10/javascript-actions/) or [Pluggable Widgets](/howto10/extensibility/pluggable-widgets/).
 

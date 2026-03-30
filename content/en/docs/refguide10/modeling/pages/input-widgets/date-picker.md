@@ -10,6 +10,7 @@ weight: 60
 A **date picker** is used to display and, optionally, allow the end-user to edit the value of an attribute or a variable of [data type](/refguide10/data-types/) *Date and Time*. It uses the values set in the **Languages** tab of **App Settings** to display a correctly localized value to the end-user, using the **Language** object associated with the end-user.
 
 A date picker must be placed within a data context to display or edit the intended value:
+
 * A [data container](/refguide10/data-widgets/) widget containing an object
 * A snippet containing one or more [parameters](/refguide10/page-properties/#parameters)
 * A page or a snippet containing one or more [variables](/refguide10/page-properties/#variables)

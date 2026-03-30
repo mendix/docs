@@ -9,7 +9,7 @@ weight: 5
 
 The **File** menu allows you to manage documents and apps, for example, to create a new app or save changes:
 
-{{< figure src="/attachments/refguide10/modeling/menus/file-menu/file-menu.png" alt="File Menu" class="no-border" width="300" >}}
+{{< figure src="/attachments/refguide10/modeling/menus/file-menu/file-menu.png" alt="File Menu" width="400" >}}
 
 ## Menu Items Overview {#overview}
 

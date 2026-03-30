@@ -34,7 +34,7 @@ When you do not enter search text in the Integration pane, then the **Used in th
 
 {{< figure src="/attachments/refguide10/modeling/menus/view-menu/integration-pane/used-in-your-app.png" alt="User in Your App Section" class="no-border" width="300" >}}
 
-For more information on how to add entities and actions to your app, see [Adding an External Entity to an App](/refguide10/external-entities/#adding-external-entities) section in *External Entities* or [Call external action](/refguide10/call-external-action/). For working with business events, see [Using Business Events](/appstore/services/business-events/#two-way-be).
+For more information on how to add entities and actions to your app, see [Adding an External Entity to an App](/refguide10/external-entities/#adding-external-entities) section in *External Entities* or [Call external action](/refguide10/call-external-action/). For working with business events, see [Using Business Events](/appstore/services/business-events-configuration/#two-way-be).
 
 ## Searching Catalog Sources {#search}
 
@@ -139,7 +139,7 @@ By clicking the expand button next to the action, the parameters and return type
 
 ### Business Events {#business-events}
 
-Business event services have a single folder, named **Events**, which contains the business events available in the service. These events can be consumed by dragging one into your domain model and choosing whether you want to __Publish events__ and / or __Subscribe to events__. Clicking OK will create entities that represent the payload of the event you want to publish or subscribe to. In case of subscribing to an event, it will also create a microflow in which you can model how to handle this event.
+Business event services have a single folder, named **Events**, which contains the business events available in the service. These events can be consumed by dragging one into your domain model and choosing whether you want to **Publish events** and / or **Subscribe to events**. Clicking OK will create entities that represent the payload of the event you want to publish or subscribe to. In case of subscribing to an event, it will also create a microflow in which you can model how to handle this event.
 
 Note that in the case of both publishing and subscribing to business events, there will be two different entities in your domain model. If your app does any operation on that event, it will show he green checkmark in the integration pane. As long as the event is not yet published or subscribed to by your app, but it is a [capability](#capabilities) the business event offers, you can drag it to your domain model.
 
@@ -157,5 +157,5 @@ A business event can be **Pub**lished or **Sub**scribed to, or both.
 * [External Entities](/refguide10/external-entities/)
 * [Consumed OData Service](/refguide10/consumed-odata-service/)
 * [Business Event Services](/refguide10/business-event-services/)
-* [Using Business Events](/appstore/services/business-events/#two-way-be)
+* [Using Business Events](/appstore/services/business-events-configuration/#two-way-be)
 * [How to Consume Registered Assets](/catalog/consume/)

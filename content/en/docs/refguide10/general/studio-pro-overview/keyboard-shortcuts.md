@@ -146,6 +146,7 @@ The tables in the following sub-sections present the shortcut keys that can be u
 | <kbd>F2</kbd> | <kbd>Fn</kbd> + <kbd>F2</kbd> | Rename the variable returned by the selected element. |
 | <kbd>Shift</kbd> + <kbd>F2</kbd> (or just start typing: in Studio Pro 10.22 and above) | <kbd>Shift</kbd> + <kbd>Fn</kbd> + <kbd>F2</kbd> (or just start typing: in Studio Pro 10.22 and above) | Open the **Properties** pane and edit the caption of the selected element. |
 | Context-menu key (or <kbd>Shift</kbd> + <kbd>F10</kbd>: in Studio Pro 10.22 and above)  | <kbd>Shift</kbd> + <kbd>Fn</kbd> + <kbd>F10</kbd> (in Studio Pro 10.22 and above) | Open the context-menu for the currently selected element. |
+| <kbd>Shift</kbd> (in Studio Pro 10.24 and above) | <kbd>Shift</kbd> (in Studio Pro 10.24 and above) | When holding <kbd>Shift</kbd>, connection points are shown while hovering over elements.<br><br>{{% alert color="info" %}}This keyboard shortcut does not work out of the box when running Studio Pro in Parallels on MacOS. To resolve the issue, navigate to the virtual machine **configuration** > **Hardware** > **Mouse & Keyboard** and enable the **Optimize for games** option. This ensures that an event is sent to the virtual machine whenever a modifier key is pressed.{{% /alert %}}|
 
 ### Studio Pro 10.5 and Below
 

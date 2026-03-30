@@ -13,14 +13,14 @@ aliases:
 
 These are the [Mendix Studio Pro](/refguide/) major version release notes:
 
-* [11](/releasenotes/studio-pro/11/) (Beta)
+* [11](/releasenotes/studio-pro/11/)
 * [10](/releasenotes/studio-pro/10/)
 * [9](/releasenotes/studio-pro/9/)
 * [8](/releasenotes/studio-pro/8/)
 
 For details on title long-term support, medium-term support, and monthly release versions, see [LTS, MTS, and Monthly Release Versions](/releasenotes/studio-pro/lts-mts/).
 
-The Windows Service release notes can be found in [Windows Service](/releasenotes/studio-pro/windows-service/).
+The Windows Service release notes can be found in [Windows Service](https://marketplace.mendix.com/link/component/223425).
 
 For updates on the status of Team Server as well as deployment options and other Mendix services, see [Mendix Status](https://status.mendix.com/).
 

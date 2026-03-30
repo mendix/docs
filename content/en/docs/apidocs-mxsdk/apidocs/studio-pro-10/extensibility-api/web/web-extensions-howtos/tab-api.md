@@ -7,29 +7,32 @@ weight: 60
 
 ## Introduction
 
-This how-to shows you how to open a tab in Studio Pro from an extension. This tab will contain your web content.
+This how-to describes how to open a tab in Studio Pro from an extension. This tab will contain your web content.
 
 ## Prerequisites
 
-This how-to uses the results of [Get Started with the Web Extensibility API](/apidocs-mxsdk/apidocs/web-extensibility-api-10/getting-started/). Please complete that how-to before starting this one. You should also be familiar with creating menus as described in [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-10/menu-api/).
+Before starting this how-to, make sure you have completed the following prerequisites:
+
+* This how-to uses the results of [Get Started with the Web Extensibility API](/apidocs-mxsdk/apidocs/web-extensibility-api-10/getting-started/). Complete that how-to before starting this one. 
+* Make sure you are familiar with creating menus as described in [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-10/menu-api/).
 
 ## Opening a Tab
 
-Firstly, create a menu item to open the tab. This is done inside the `loaded` event in `Main`. For more information see [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-10/menu-api/).
+Create a menu item to open the tab. This is done inside the `loaded` event in `Main`, as described below. For more information. see [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-10/menu-api/).
 
-In a listener event called `menuItemActivated` the `studioPro.ui.tabs.open(<tabinfo>, <uispec>)` call opens a new tab where:
+In a listener event called `menuItemActivated`, the `studioPro.ui.tabs.open(<tabinfo>, <uispec>)` call opens a new tab where:
 
-* `<TabInfo>` is an object containing the `title` of the tab, which will be shown in the title bar of your tab in Studio Pro.
+* `<TabInfo>` is an object containing the `title` of the tab, which will be shown in the title bar of your tab in Studio Pro
 * `<uispec>` is an object containing two required properties:
 
-    * `componentName` which is the name of the extension prefixed with "extension/". For example "extension/myextension" in the following example.
-    * `uiEntryPoint` which is the name mapped from the `manifest.json` file. See below for examples with multiple tabs.
+    * `componentName` – the name of the extension prefixed with "extension/"; for example,"extension/myextension" in the following example
+    * `uiEntryPoint` – the name mapped from the `manifest.json` file
 
 {{% alert color="info" %}}
-Whenever the tabs API `open` method is called, the `TabHandle` returned must be tracked by the extension so that it can be closed later by calling the `close` method.
+Whenever the tabs API `open` method is called, the `TabHandle` returned must be tracked by the extension so it can be closed later by calling the `close` method.
 {{% /alert %}}
 
-An example of the class `Main` to open a tab called **My Extension Tab** looks similar to the following:
+To open a tab called *My Extension Tab*, add the following code to the main entry point:
 
 ```typescript
 import { IComponent, studioPro, TabHandle } from "@mendix/extensions-api";
@@ -88,11 +91,9 @@ export const component: IComponent = new Main();
 
 ## Filling the Tabs With Content
 
-In the previous example, the `uiEntryPoint` property of the `<uispec>` object had the value "tab". This value must match the one from the manifest.
+In the previous example, the `uiEntryPoint` property of the `<uispec>` object had the value `tab`. This value must match the one from the manifest.
 
-If you want to have multiple tabs in your extension, you need to structure the folders and set up the manifest file correctly.
-
-To do this, follow these steps:
+If you want multiple tabs in your extension, you need to structure the folders and set up the manifest file correctly. To do this, follow these steps:
 
 1. Add a new method `createTabSpec` in your `Main` class.
 
@@ -108,9 +109,9 @@ To do this, follow these steps:
         }
     ```
 
-1. Add three folders inside the `ui` folder, one for each tab you want to display contents for.
-1. Create an `index.tsx` file in each folder.
-1. Put the following code in each `index.tsx` file (this example is for **tab3**):
+2. Add three folders inside the `ui` folder, one for each tab you want to display contents for.
+3. Create an `index.tsx` file in each folder.
+4. Put the following code in each `index.tsx` file (this example is for **tab3**):
 
     ```typescript
     import { StrictMode } from "react";
@@ -127,7 +128,7 @@ To do this, follow these steps:
 
     {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/web/tabs/ui_folder_structure.png" >}}
 
-1. Create listener events in the `Main` class to open each of the three tabs. The `Main` class will then look like this:
+5. Create listener events in the `Main` class to open each of the three tabs. The `Main` class will then look like this:
 
     ```typescript
     import { IComponent, studioPro, TabInfo, UISpec } from "@mendix/extensions-api";
@@ -179,7 +180,7 @@ To do this, follow these steps:
     export const component: IComponent = new Main();
     ```
 
-1. Ensure the tabs are added to the `manifest.json` file. Here is an example of three tabs under the `ui` property.
+6. Ensure the tabs are added to the `manifest.json` file. Below is an example of three tabs under the `ui` property.
 
     ```json
     {
@@ -196,7 +197,7 @@ To do this, follow these steps:
     }
     ```
 
-1. Update `vite.config` to match the manifest with an entry for each tab. For example:
+7. Update `vite.config` to match the manifest with an entry for each tab. For example:
 
     ```typescript
     import { defineConfig, ResolvedConfig, UserConfig } from "vite";
@@ -220,14 +221,10 @@ To do this, follow these steps:
     } satisfies UserConfig);
     ```
 
-After building and installing the extension in our Studio Pro app, each tab will display the content specified in the related `index.tsx` file.
-
-## Conclusion
-
-You now know how to create tabs and populate them with content.
+After building and installing the extension in your Studio Pro app, each tab will display the content specified in the related `index.tsx` file.
 
 ## Extensibility Feedback
 
-If you would like to provide us with some additional feedback you can complete a small [Survey](https://survey.alchemer.eu/s3/90801191/Extensibility-Feedback)
+If you would like to provide additional feedback, you can complete a small [survey](https://survey.alchemer.eu/s3/90801191/Extensibility-Feedback).
 
-Any feedback is much appreciated.
+Any feedback is appreciated.

@@ -23,7 +23,7 @@ The **Members** tab lists all the users that have portfolio access. You can sear
 
 * **Status** – This shows whether the user is active or deactivated.
 
-  {{% alert color="info" %}}A Mendix Admin can activate or deactivate a user on the [Members](/control-center/members/#active-deactive-members) page in Control Center.{{% /alert %}}
+  {{% alert color="info" %}}A Mendix Admin can activate or deactivate a user on the [Members](/control-center/members/) page in Control Center.{{% /alert %}}
 
 * **Role** – This is the role of the user. A user can be a Portfolio Manager, Contributor, or Viewer. For more information about the permissions of each role, see the table below in this section.
 
@@ -101,7 +101,7 @@ The **Access Requests** tab is only visible to Portfolio Managers.
 
 Users from the same company can request to join a restricted or open portfolio.
 
-For restricted portfolios, you can request to join from the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) by clicking **Request to Join** on the portfolio card. For open portfolios, you can request to join by clicking **Request to Join** on the lower-left corner after opening the portfolio. Access requests need to be approved by a Portfolio Manager. Portfolio Managers automatically get a [notification](/developerportal/global-navigation/#notifications) for a new access request.
+For restricted portfolios, you can request to join from the [Portfolio Landscape Overview](/developerportal/portfolio-management/#portfolio-landscape) by clicking **Request to Join** on the portfolio card. For open portfolios, you can request to join by clicking **Request to Join** on the lower-left corner after opening the portfolio. Access requests need to be approved by a Portfolio Manager. Portfolio Managers automatically get a [notification](/portal/global-navigation/#notifications) for a new access request.
 
 {{< figure src="/attachments/developerportal/portfolio-management/access-requests.png" >}}
 

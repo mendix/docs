@@ -9,7 +9,7 @@ weight: 35
 
 The **Run** menu allows you to deploy and monitor your app:
 
-{{< figure src="/attachments/refguide10/modeling/menus/run-menu/run-menu.png" alt="Run Menu" class="no-border" width="400" >}}
+{{< figure src="/attachments/refguide10/modeling/menus/run-menu/run-menu.png" alt="Run Menu" width="300" >}}
 
 ## Menu Items Overview 
 

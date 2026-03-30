@@ -116,7 +116,7 @@ The **Committing** state of the **IMendixObject** is deprecated.
 {{% alert color="warning" %}}
 The **Delete object(s)** activity also removes the object or list reference from the microflow. Be careful not to use the object or list anymore after using it in a **Delete object(s)** activity.
 
-There is an exception to this in the case of lists in loops. When **Delete object(s)** is used on a list in a loop, the reference is not removed, but is changed to an empty list. This means that you can add new objects to the list within the loop and the following activities can act on the objects in these lists. You can temporarily revert to the earlier behavior using the [Microflows.<wbr>RemoveVariableOnDeleteObjectsActivity](/refguide/custom-settings/#MicroflowsRemoveVariableOnDeleteObjectsActivity) runtime setting.
+There is an exception to this in the case of lists in loops. When **Delete object(s)** is used on a list in a loop, the reference is not removed, but is changed to an empty list. This means that you can add new objects to the list within the loop and the following activities can act on the objects in these lists. 
 {{% /alert %}}
 
 * Events:

@@ -19,7 +19,7 @@ Mendix Studio Pro uses the HTTPS (TCP) to communicate with the Team Server. To a
 * The HTTPS port (TCP 443) needs to be open
 * The HTTP port (TCP 80) needs to be open
 
-Mendix Studio Pro connects to `https://teamserver.sprintr.com/` and with the domains shown in the diagram below over HTTPS on port 443. These domains should be added to the firewall white list:
+Mendix Studio Pro connects to `https://teamserver.sprintr.com/` and with the domains shown in the diagram below over HTTPS on port 443. These domains should be added to the firewall safe list:
 
 {{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/networkaccessmendixplatform.png" alt="Domains home.mendix.com, cloud.mendix.com, and git.api.mendix.com need to be accessible on port 443 from your network" class="no-border" >}}
 
@@ -85,12 +85,14 @@ To determine which area has an issue there are three diagnosing steps:
 ##### CURL over HTTP
 
 The first step is to validate whether CURL is able to reach the Team Server over HTTP.
+
 * Why – Git uses the CURL library to do network operations over HTTP or HTTPS. If CURL does not work the network infrastructure is interfering. 
 * How – Store the output of the following command on the command line: ```curl -v http://git.api.mendix.com```.
 * Validate the output – An expected response is given below. Lines to note:
     * Line 6 – You see the request connected to `https://git.api.mendix.com`. This means the request has reached the server and was not interrupted.
     * Line 13 – You see the request returned a permanent redirect. This is expected as CURL is reaching the HTTP URL, which should redirect to the HTTPS variant.
 * Actions to take if something is wrong – Request your internal IT department to look into this and contact Mendix once the CURL request returns an expected request. 
+
     ```
     curl -v git.api.mendix.com
     * Host git.api.mendix.com:80 was resolved.
@@ -123,7 +125,9 @@ The first step is to validate whether CURL is able to reach the Team Server over
     ```
 
 ##### CURL over HTTPS
+
 The second step is to validate whether CURL is able to reach the Team Server over HTTPS.
+
 * Why  – Git uses the CURL library to do network operations over HTTP or HTTPS. If CURL does not work the network infrastructure is interfering. 
 * How – Store the output of the following command on the command line: ```curl -v https://git.api.mendix.com```.
 * Validate the output – An expected response is given below. Lines to note:
@@ -132,6 +136,7 @@ The second step is to validate whether CURL is able to reach the Team Server ove
     * Line 13 – You see the request returned a permanent redirect. This is expected as CURL is reaching the HTTP URL, which should redirect to the HTTPS variant.
     * Line 23 – Even though this line says 400 Bad Request, this is expected as the teams server is no HTTP server. This line tells you the request made it to the server and a response was given. 
 * Actions to take if something is wrong – Request your internal IT department to look into this and get back to Mendix once the CURL request returns an expected request. 
+
     ```
     curl -v https://git.api.mendix.com
     * Host git.api.mendix.com:443 was resolved.
@@ -166,6 +171,7 @@ The second step is to validate whether CURL is able to reach the Team Server ove
     ```
 
 ##### VPN, Proxy or Zscaler
+
 The next step is to verify whether you are behind a VPN, Proxy or Zscaler.
 
 * Why – Git uses the CURL library to do network operations over HTTP or HTTPS. If CURL does not work the network infrastructure may be interfering.  
@@ -173,11 +179,13 @@ The next step is to verify whether you are behind a VPN, Proxy or Zscaler.
     * Check whether you are behind a VPN or proxy. Reach out to your internal IT department if you are not sure. Alternatively you can try a website to detect a VPN.
     * Perform the following line on `cmd` and store the output: ```netsh.exe winhttp show proxy```.
 * Validate the output – A system with no proxy should show the following:
+
     ```
     C:\Users\UserName>netsh.exe winhttp show proxy
     Current WinHTTP proxy settings:
     Direct access (no proxy server).
     ```
+
 * Actions to take if something is wrong – do one of the following:
     * If you are behind a proxy:  
         * Retry without VPN or proxy and see if that solves the issue. Reach out to your internal IT department if you are not sure how to test it.
@@ -195,6 +203,7 @@ The next step is to verify whether you are behind a VPN, Proxy or Zscaler.
 #### GIT CLI Interaction with the Team Server {#team-server}
 
 In the section above, you checked: 
+
 * The ability of CURL to access the Team Server through HTTP and HTTPS
 * Proxy/VPN 
 * Internet speed
@@ -209,7 +218,8 @@ If you are encountering issues when using Git CLI, this is typically an issue yo
 
 ##### Prerequisites
 
-You need to setup a [Personal Access Token (PAT)](/community-tools/mendix-profile/user-settings/#pat) to work with Git on the command line. The following permissions should be configured while creating the PAT:
+You need to setup a [Personal Access Token (PAT)](/portal/user-settings/#pat) to work with Git on the command line. The following permissions should be configured while creating the PAT:
+
 ```
 Model Repository
 mx:modelrepository:repo:write
@@ -237,38 +247,44 @@ The troubleshooting commands should be executed in `cmd` or `command prompt` in 
 
 * Why – Validate if a Git clone works as intended outside Studio Pro.
 * How – Replace `[PROJECT_ID]` with your project ID and perform the following command in `cmd`:
+
     ```
     set GIT_TRACE_PACKET=1
     set GIT_TRACE=1
     set GIT_CURL_VERBOSE=1
     git clone https://git.api.mendix.com/[PROJECT_ID].git 
     ```
+
 * Validate the output – If this succeeded, please continue with troubleshooting the [Studio Pro Connectivity](#studio-pro-connectivity).
 * Actions to take if something is wrong – Save the output and try the next step below, verifying shallow clone through Git CLI.
-
 
 ##### Verify Shallow Clone Through Git CLI
 
 * Why – If a full clone fails it can be due to the size of the repository. A shallow clone only retrieves all files for 1 commit, reducing the amount of data needed to transfer by magnitudes.
 * How – Replace `[PROJECT_ID]` with your project ID and perform the following command in `cmd`:
+
     ```
     set GIT_TRACE_PACKET=1
     set GIT_TRACE=1
     set GIT_CURL_VERBOSE=1
     git clone --depth 1 https://git.api.mendix.com/[PROJECT_ID].git 
     ```
+
 * Validate the output – If this succeeded, there is a connectivity issue causing a full clone to fail. Contact your internal IT department to discuss the situation.
 * Actions to take if something is wrong – Save the output and try the next step below, verifying a shallow clone without using HTTPS.
 
 ##### Verify Shallow Clone Through Git CLI Without HTTPS
+
 * Why – If a shallow clone fails it can still be that the SSL handling is failing. This canbe due to a proxy, ZScaler or a VPN.
 * How – Replace `[PROJECT_ID]` with your project ID and perform the following command in `cmd`:
+
     ```
     set GIT_TRACE_PACKET=1
     set GIT_TRACE=1
     set GIT_CURL_VERBOSE=1
     git -c http.sslVerify=false clone --depth 1 https://git.api.mendix.com/[PROJECT_ID].git 
     ```
+
 * Validate the output – If this succeeded, there is an issue with SSL handling. Please take a look at your git config.
     * If you are using a proxy – Setting up a `http.proxy` in the git config might address this issue.
     * If you are seeing a warning on SSL on windows – Setting the `http.sslbackend` to `schannel` by running the following command might improve your experience: `git config --global http.sslbackend schannel`
@@ -309,4 +325,4 @@ Gather all files from the log and provide them to Mendix Support. Please mention
 
 ## Read More
 
-* [Version Control FAQ](/refguide/version-control-faq/)
+* [Version Control FAQ](/refguide/version-control/)

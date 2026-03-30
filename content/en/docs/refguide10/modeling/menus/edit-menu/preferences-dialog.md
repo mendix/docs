@@ -94,6 +94,14 @@ This option controls the synchronization of managed dependencies. For more infor
 
 A directory where Gradle is located on the computer that you use to deploy the application. The correct directory is usually located automatically.
 
+#### Extra Arguments {#extra-arguments}
+
+{{% alert color="info" %}}
+This option is available for Studio Pro 10.23.0 and above.
+{{% /alert %}}
+
+This option can be used to add extra arguments to the Gradle process.
+
 #### Use Custom Repositories
 
 Enabling this option allows you to specify which repositories should be used by Gradle. For more information, see the [Custom Repositories](/refguide10/managed-dependencies/#custom-repos) section in *Managed Dependencies*.
@@ -161,7 +169,7 @@ This setting allows users to specify a path for Git installation in their system
 
 #### Enable Private Version Control with Git {#enable-with-Git}
 
-Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/general/team-server/), but in a private Git server, which you have access to. This allows you to specify the location of the app on the Git server when opening, downloading, or uploading the app. With this setting you also need to specify [name and email](#name) that will be used to identify your commits with Git.
+Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/repository/team-server/), but in a private Git server, which you have access to. This allows you to specify the location of the app on the Git server when opening, downloading, or uploading the app. With this setting you also need to specify [name and email](#name) that will be used to identify your commits with Git.
 
 #### Name and Email {#name}
 
@@ -184,7 +192,7 @@ Changing these values for another application will also affect the commits made 
 #### Enable Current Windows User Authentication {#enable-windows-authentication}
 
 {{% alert color="info" %}}
-This setting is available in Studio Pro MTS versions 10.6.21 and above, 10.12.14 and above, 10.18.3 and above.
+This setting is available in Studio Pro versions 10.6.x (10.6.21 and above), 10.12.x (10.12.14 and above), and 10.18.3 and above.
 {{% /alert %}}
 
 When this option is selected, the application automatically uses credentials of the currently logged-in Windows user to authenticate and connect to the on-premises Git server. This feature streamlines the authentication process by eliminating the need for users to manually enter their credentials, enhancing both security and user convenience. By leveraging Windows authentication, organizations can ensure that access to the Git server is seamlessly integrated with their existing IT infrastructure, providing a smooth and efficient workflow for development teams.
@@ -237,15 +245,16 @@ This option allows user to choose between Studio Pro themes: **Auto (System them
 
 This option sets the default page editor mode that your page opens in: **Structure mode** (the default) or **Design mode**. For more information on page editor modes, see the [Page Editor Modes](/refguide10/page/#page-editor-modes) section in *Page*.
 
-### Rendering {#rendering}
-
-Hardware and driver issues may cause performance problems when running Studio Pro. These issues can appear in form of dialog boxes opening and closing much more slowly than expected, and general slowness of the UI. In case the hardware problems cannot be solved, it is possible to mitigate these issues by turning the **Enable software rendering mode** setting on. Enabling this setting requires a restart of Studio Pro to take effect. Running the application with this setting on may increase the CPU usage.
-
 ### Language {#language}
 
-This beta feature is available from Studio Pro 10.17. 
+This option allows you to change the user interface language you work in while using Studio Pro. At this time, English, Japanese, Chinese, Korean, and Brazilian Portuguese (Beta) are supported. You must restart Studio Pro in order to use this feature.
 
-This option allows you to change the user interface language you work in while using Studio Pro. At this time, German, English, Japanese, Chinese, and Korean are supported. You must restart Studio Pro in order to use this feature.
+| Language               | Introduced | General Availability |
+| ---------------------- | ---------- | -------------------- |
+| Chinese                | 10.17      | 10.24                |
+| Japanese               | 10.17      | 10.24                |
+| Korean                 | 10.17      | 10.24                |
+| Portuguese (Brazilian) | 10.23      | TBD                  |
 
 ### Editor Tabs Closing Policy {#closing-policy}
 
@@ -260,6 +269,12 @@ The closing policy is not applied to tabs with unsaved changes.
 This setting allows you to move forward and backward through your editing history to show the documents you have recently worked on. This feature is enabled by default. 
 
 ## Advanced Tab
+
+### Rendering {#rendering}
+
+Hardware and driver issues may cause performance problems when running Studio Pro. These issues can appear in form of dialog boxes opening and closing much more slowly than expected, and general slowness of the UI. If case the hardware problems cannot be solved, it is possible to mitigate these issues by turning the **Enable software rendering mode** setting on. This option is available for Native UI and Web Content. For Web Content, you can select **Auto**, which enables software rendering mode automatically when running on Parallels or another virtual machine.
+
+Enabling this setting requires a restart of Studio Pro to take effect. Running the application with this setting on may increase the CPU usage.
 
 ### Proxy Server
 
@@ -315,6 +330,10 @@ Publishing data as a GraphQL service is available as of Studio Pro 10.14. When y
 
 ### Maia
 
+### Enable Maia Explain
+
+Maia Explain was introduced in Studio Pro 10.21.0. Enable this option to let Maia explain a microflow or a nanoflow in the logic editors for you. For more information on how to use this feature, see [Maia Explain](/refguide10/maia-explain/). It is enabled by default.
+
 #### Enable Maia for Domain Model
 
 Maia for Domain Model was introduced in Studio Pro 10.13.0. Enable this option to help you generate entities and associations for your domain models. For more information on how to use this feature, see [Maia for Domain Model](/refguide10/maia-for-domain-model/).
@@ -337,13 +356,17 @@ This setting, introduced in 10.19 and currently in beta, allows entities to be u
 
 ### System Texts Editor
 
-In Studio Pro 10.14.0, the web version of the system texts editor was released as an experimental feature. Enable this option to use the web version of the editor. 
+This setting, introduced as an experimental feature in Studio Pro 10.14.0, allows you to use the web version of the system texts editor. In Studio Pro 10.17.0 and above, it is enabled by default.
 
 If Translation Generator is also enabled, you can use it in this editor as well. For more information, see the [Generating Translation for System Texts](/refguide10/translation-generator/#translate-system-text) section in *Translation Generator*.
 
 ### Toolbox
 
 Enable this setting to use the modernized toolbox. This requires restart of Studio Pro.
+
+### Workflow Editor
+
+Interrupting timer boundary event was released as a beta feature in Studio Pro 10.20.0. Enable this option to be able to use interrupting timer boundary events in the workflow editor. For more information, see [Boundary Events](/refguide10/workflow-boundary-events/).
 
 ## Read More
 

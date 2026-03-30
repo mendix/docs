@@ -8,7 +8,7 @@ description: "Describes the Epics page in Epics."
 
 ## Introduction
 
-The **Epics** page gives an overview of all the epics for your current app. You can use the filter on the upper-right corner to filter epics by their status: **All**, **Completed**, **In Progress**, or **Not Started**. Clicking the **Create Epics** button enables you create a new epic.
+The **Epics** page offers an overview of all the epics for your current app. You can use the filter on the upper-right corner to filter epics by their status: **All**, **Completed**, **In Progress**, or **Not Started**. Clicking the **Create Epics** button enables you create a new epic.
 
 Each row represents an epic. 
 
@@ -29,13 +29,13 @@ Clicking a row opens the [epic details](#epic-details) dialog box.
 
 When you click an epic, the epic details dialog box opens. 
 
-On the upper-right corner, there is a **Copy Link** icon ({{% icon name="hyperlink" %}}) and a **More Options** icon ({{% icon name="three-dots-menu-horizontal" %}}). Clicking **Copy Link** copies the link to the epic. Clicking **More Options** opens a pop-up menu that allows you to delete the epic.
+In the upper-right corner, there is a **Copy Link** icon ({{% icon name="hyperlink" %}}) and a **More Options** icon ({{% icon name="three-dots-menu-horizontal" %}}). Clicking **Copy Link** copies the link to the epic. Clicking **More Options** opens a pop-up menu that allows you to delete the epic.
 
 {{< figure src="/attachments/developerportal/project-management/epics/epics/epic-details-page-ellipsis.png" class="no-border" >}}
 
 The epic details dialog box shows the following items:
 
-* **Objective** – This is the description of the epic:
+* **Objective** – This is the description of the epic.
     * You can edit the objective of the epic by clicking **Edit Objective** and making changes in the WYSIWYG editor. The editor supports different text formats, including code blocks
     * You can link a story in the editor by typing *#* and the story title, and then selecting the right story from the list.
     * You can type a person in the editor by typing *@* and the person's name, and then selecting the right person from the list. Once you save the epic, the system will send a notification to the tagged person.

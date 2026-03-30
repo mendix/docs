@@ -2,15 +2,18 @@
 title: "Studio Pro 10 Guide"
 url: /refguide10/
 description: "The various sections of the Mendix Studio Pro Guide provide details on the features and functionality of the Mendix Platform."
-weight: 15
+weight: 53
 no_list: false
 description_list: true
 cascade:
     - content_type: "Studio Pro 10"
     - mendix_version: 10
+    - old_content: true
     - notsitemap: true
     - sitemap:
         priority: 0.8
+    - banner: ""
+# Empty banner added to get around bug in Hugo 0.123.0 (https://github.com/gohugoio/hugo/issues/12465) which is not fixed until 0.143.0 (https://github.com/gohugoio/hugo/releases/tag/v0.143.0)
 ---
 
 ## Introduction

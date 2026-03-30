@@ -10,6 +10,10 @@ aliases:
 
 ## Introduction
 
+View your App Settings by clicking **App Explorer** > **App** > **Settings**:
+
+{{< figure src="/attachments/refguide10/modeling/app-explorer/app/app-settings/app-settings-location.png" width="200px"  >}}
+
 In the **App Settings** dialog box, you can alter the settings that are applicable to the whole app:
 
 {{< figure src="/attachments/refguide10/modeling/app-explorer/app/app-settings/app-settings-configuration.png" width="300px" class="no-border" >}}
@@ -33,12 +37,6 @@ This setting enables the new React version of the Mendix Client. This React clie
 * **No**: Do not use the React client (default).
 * **Yes**: Use the React client. In this mode, you will get consistency errors for incompatible widgets.
 * **Migration mode**: Use the React client and ignore incompatible widgets. Placeholders are displayed in the case of incompatible widgets. Recommended when trying out the new client.
-
-### Static Resources from Disk
-
-If this option is enabled, the static resources for your mobile application are downloaded as soon as you open your application rather than bit by bit as you navigate through the app. This can drastically cut down the number of network requests, as the files can be retrieved from the disk rather than from the server.
-
-The resources are downloaded to the device once for each deployment and are reused for subsequent runs of your app. This affects a number of files, including your theme, the JavaScript client, CSS files, and pages.
 
 ### Optimize Network Calls {#optimize-network-calls}
 
@@ -152,11 +150,11 @@ Mendix believes both algorithms are secure enough to store passwords within Mend
 
 **BCrypt cost** is used to specify the cost of the BCrypt algorithm. The default value is 12, and can go up to 30. The higher the value is, the slower the process of hashing values. For more information, see the subsections below.
 
-#### Performance
+##### Performance
 
 If the BCrypt cost is low, the performance difference is hardly noticeable to a single user when signing in (meaning, the password you enter when signing in is hashed using the selected algorithm). This means performance alone is not a reason to choose **SSHA256** over **BCrypt**. The situation can change when dealing with high concurrency of hashing operations, for example, published web services exposing operations that compute quickly, like short-running microflows.
 
-#### Performance Tests
+##### Performance Tests
 
 A (web service) user will sign in to execute a web service operation, wait for the operation to finish, and finally get the result back (if any).
 
@@ -204,14 +202,6 @@ This table presents the results of rounding the input to one digit with the give
 | -2.5 | -3 | -2 |
 | -5.5 | -6 | -6 |
 
-### OQL version 2 {#oql-version-2}
-
-If this option is set to **Yes**, your app will use version 2 of the OQL syntax. This setting must be enabled to use [view entities](/refguide10/view-entities/). Make sure your app is ready to use the new syntax before making the switch. 
-
-For more information about the differences, see [OQL Version 2 Features](/refguide10/oql-v2/).
-
-Default: *No*
-
 ### Multiple Sessions per User {#multiple-sessions}
 
 If this option is enabled, users can sign in multiple times through different clients (for example, desktop browser and tablet). Otherwise, an existing session for a user is signed out when the user signs in somewhere else.
@@ -227,6 +217,14 @@ To force a query to the runtime, use microflows. For example, create a microflow
 {{% /alert %}}
 
 Default: *Yes*
+
+### OQL version 2 {#oql-version-2}
+
+If this option is set to **Yes**, your app will use version 2 of the OQL syntax. This setting must be enabled to use [view entities](/refguide10/view-entities/). Make sure your app is ready to use the new syntax before making the switch. 
+
+For more information about the differences, see [OQL Version 2 Features](/refguide10/oql-v2/).
+
+Default: *No*
 
 ### Foreign Key Constraints {#database-fkc}
 
@@ -478,4 +476,3 @@ When enabled, the names that Studio Pro suggests in microflows will start with a
 ### Activity Default Colors
 
 This table allows you to select a default color for each microflow activity type that is available in your app. The selected color will be used as the background color for all microflow activities of that type in your app. It is possible to override this default value for individual activities in the microflow editor. If you change the default color for an activity type, and there are activities of that type present in the app that have an individual background color specified, a dialog will be shown that allows you to apply the new default color to these activities as well.
-

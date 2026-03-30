@@ -232,7 +232,7 @@ Select the **Version Control** menu > **Revert a Commit...** to revert a commit.
 {{% alert color="warning" %}}
 Reverting a commit creates a new commit that undoes the changes introduced by the original commit. This may lead to unexpected results depending on the context of the original commit.
 
-* **Port fix and reverting** – If you used [Port Fix](/refguide10/merge-dialog/#port-fix) to apply a commit from another branch to the current branch, and then you revert that commit, the changes from the cherry-pick will not be reapplied when merging the full branch. This happens because the revert commit explicitly negates the cherry-picked changes, and Git recognizes them as already addressed.
+* **Cherry pick and reverting** – If you used [Cherry Pick](/refguide10/merge-dialog/#cherry-pick) to apply a commit from another branch to the current branch, and then you revert that commit, the changes from the cherry-pick will not be reapplied when merging the full branch. This happens because the revert commit explicitly negates the cherry-picked changes, and Git recognizes them as already addressed.
 * **Merging and reverting** – If you [merged another branch](/refguide10/version-control/#merging-branches) into the current branch and then reverted the merge commit, merging the same branch again will not reapply its changes. Git identifies that the merge was undone and prevents those changes from being reapplied.
 {{% /alert %}}
 
@@ -311,7 +311,7 @@ If you have multiple development lines, you sometimes want to merge changes from
 
 Merging is always done while you have a working copy open. The merge will result in extra local changes in that working copy. It is advisable to commit local changes first before merging extra changes into a working copy. Otherwise, the uncommitted local changes and the changes caused by the merge will be combined and it is very hard to untangle them if you are unhappy with the merge. Studio Pro will warn you if you have uncommitted changes.
 
-Select **Version Control** > **Merge Changes Here**, after that you can select **Port fix** or **Merge feature branch** options. For more information on merge settings, see [Merge Dialog](/refguide10/merge-dialog/).
+Select **Version Control** > **Merge Changes Here**, after that you can select **Cherry Pick** or **Merge feature branch** options. For more information on merge settings, see [Merge Dialog](/refguide10/merge-dialog/).
 
 #### Replacing the Main Line with a Branch Line
 
@@ -331,36 +331,9 @@ The second method should be used if the first method is not possible for some re
 
 #### Merging Using Git in the Command Line
 
-For merging *.mpr* files using Git in the command line to work, it is necessary to attach *mx.exe* merge to Git as a driver.
+Merging using Git in the command line or a third-party tool is not supported after the introduction of [MPRv2](/refguide/troubleshoot-repository-size/#mpr-format), which is the default format as of Studio Pro 10.22. External tools cannot correctly merge the *.mpr* and *.mxunit* files, which can lead to a corrupted branch.
 
-When doing a **git merge** operation on two branches in the command line, Git attempts to merge the binaries of *.mpr* files, which does not work. You need to apply Studio Pro merge algorithm and that is where *mx.exe* as a driver is needed.
-
-Navigate to the *.gitconfig* file in C:/Users/[USER_NAME] and add the following:
-
-```text
-[core]
-  attributesfile = ~/.gitattributes
-[merge "custom"]
-  name = custom merge driver for specific files
-  driver = [MX.EXE_PATH] merge %O %A %B
-```
-
-`[MX.EXE_PATH]` should be replaced by the *mx.exe* path with only forward slashes pointing to a drive using `/C/` instead of `C:/`.
-
-You can also configure the Git driver locally per repository using the following commands:
-
-```text
-git config merge.custom.name "custom merge driver for specific files"
-git config merge.custom.driver "[MX.EXE_PATH] merge %O %A %B"
-```
-
-After setting up the driver either locally or globally, create a *.gitattributes* file in the same folder with the following contents:
-
-```text
-*.mpr merge=custom
-```
-
-Save the files and now when **git merge** is run and it involves *.mpr* files, the *mx.exe* merge will run Studio Pro merge algorithm before Git finishes the merge.
+For Mendix 11, a command will be introduced as part of the [mx Command-Line Tool](/refguide/mx-command-line-tool/) to allow merging on the command line.
 
 ### Branching Best-Practices {#branching-best-practices}
 
@@ -508,7 +481,7 @@ Studio Pro automatically performs the necessary post-processing steps when you d
 
 When using external tools, you might be asked to authenticate separately to Team Server.
 
-Connecting to Git is done using a personal access token (PAT). For more information on how to create a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
+Connecting to Git is done using a personal access token (PAT). For more information on how to create a PAT, see the [Personal Access Tokens](/portal/user-settings/#pat) section of *Mendix Profile*.
 
 To connect to Git, you need to use the following URL and credentials:
 

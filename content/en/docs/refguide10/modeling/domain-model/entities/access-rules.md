@@ -31,7 +31,7 @@ The **System.User** entity has inbuilt access rules where access is given to its
 ## Defining Access Rules {#new-editor}
 
 {{% alert color="warning" %}}
-The modernized access rule editor was made generally available in Studio Pro version 10.21.0, replacing the old editor. It was also available from Studio Pro version 10.6.0, as a [beta](/releasenotes/beta-features/). The old editor is deprecated and will be removed in Studio Pro version 11.0.0, but you can revert to the old editor in the [Preferences Dialog](/refguide10/preferences-dialog/#new-features)
+The modernized access rule editor was made generally available in Studio Pro version 10.21.0, replacing the old editor. It was also available from Studio Pro version 10.6.0, as a [beta](/releasenotes/release-status/). The old editor is deprecated and will be removed in Studio Pro version 11.0.0, but you can revert to the old editor in the [Preferences Dialog](/refguide10/preferences-dialog/#new-features)
 
 For guidance on using the old editor, see [Defining Access Rules Using the Old Editor](#old-editor), below.
 {{% /alert %}}

@@ -96,7 +96,7 @@ These are the return codes:
 ## mx show-java-version Command{#show-java-version}
 
 {{% alert color="info" %}}
-This command is available from 10.14 onwards and in MTS versions 10.6.12+ and 10.12.2+.
+This command is available from 10.14 onwards and in versions 10.6.12+ and 10.12.2+.
 {{% /alert %}}
 
 The `mx show-java-version` command reports what the configured Java version of the app is.

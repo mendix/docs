@@ -10,6 +10,7 @@ description: "Widgets which can be added to pages to view and edit attributes of
 Input elements show data to the end-user and, optionally, allow them to edit the data.
 
 In order to function, input elements need to be linked to a value, either a variable inside a page or snippet or an attribute of an entity. As such, they must be placed within a data context:
+
 * A [data container](/refguide10/data-widgets/) widget containing an object
 * A snippet containing one or more [parameters](/refguide10/page-properties/#parameters)
 * A page or a snippet containing one or more [variables](/refguide10/page-properties/#variables)

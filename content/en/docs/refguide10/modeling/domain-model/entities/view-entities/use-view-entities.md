@@ -46,6 +46,25 @@ Age is determined for each customer by calculating the difference in years betwe
 
 The original customer view included address information, but most database optimizers will see that this information is not relevant when counting customers by age, so this information is excluded when retrieving the data. However, the information is still present and can be generated, if requested. 
 
+## Sorting of View Entity Results {#sorting}
+
+Similar to database views, view entities represent data without enforcing any specific order. As a result, it is not possible to use the `ORDER BY` clause in the view entity OQL to sort query results. However, data retrieved from a view entity can be sorted on retrieval (like regular entities) using options like the [Sorting](/refguide10/retrieve/#sorting) feature in a Retrieve microflow activity.
+
+### `ORDER BY` in Combination with `LIMIT` and `OFFSET`
+
+The `ORDER BY` clause can be used in a view entity in combination with `LIMIT` or `OFFSET` clauses to define a specific set of data to retrieve. If you do this, you still should not rely on the order of the output. If you want the results in particular order, they can be sorted on retrieval.
+
+For example, the following OQL query defines a view entity `Books.Bestseller`, which contains data of the ten books which have sold the most copies. When using this view entity in your app, you should still explicitly specify sorting of the results.
+
+```sql
+FROM Books.Book
+SELECT Name AS Name,
+       ISBN AS ISBN,
+       Sold AS Sold
+ORDER BY Sold DESC
+LIMIT 10
+```
+
 ## View Entities and Parameters
 
 You may have previously used the OQL module or datasets to execute OQL queries. There, you use parameters to configure the query to retrieve the correct data. View entities do not have parameters, but you can dynamically specify what data you want to retrieve.
@@ -105,7 +124,11 @@ The database follows the below process:
 
 Even though the query is using a view that also includes address information, the database ignores this information, as it is not relevant when counting customers by age.
 
-If you set the `DataStorage_QueryPlan` log node to Trace, you see the query plan for your queries in the Mendix Runtime log.
+If you set the `DataStorage_QueryPlan` log node to Trace, you see the query plan for all your queries in the Mendix Runtime log.
+
+{{% alert color="warning" %}}
+The `DataStorage_QueryPlan` log node has a very large performance impact and should never be enabled in production.
+{{% /alert %}}
 
 ## Read More
 

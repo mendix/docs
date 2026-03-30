@@ -18,6 +18,7 @@ A text box is used to display and, optionally, allow the end-user to edit the va
 * String
 
 A text box must be placed within a data context to display or edit the intended value:
+
 * A [data container](/refguide10/data-widgets/) widget containing an object
 * A snippet containing one or more [parameters](/refguide10/page-properties/#parameters)
 * A page or a snippet containing one or more [variables](/refguide10/page-properties/#variables)

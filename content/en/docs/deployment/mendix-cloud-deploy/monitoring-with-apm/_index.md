@@ -12,17 +12,17 @@ There are several application performance monitoring (APM) tools for cloud appli
 
 Mendix provides out-of-the-box configuration to use Datadog, AppDynamics, Dynatrace, Splunk Cloud Platform, and New Relic to provide additional monitoring for your Mendix Apps running on Mendix Cloud.
 
-{{% alert color="info" %}}
-[AppDynamics](https://www.appdynamics.com/) application monitoring is fully supported in Mendix 9.7 and above. For older supported versions, only the basic AppDynamics Java Agent metrics are available, along with the `postgresql` and `mx.client` namespaces.
+The table below summarizes the monitoring capabilities each tool supports:
 
-[Dynatrace](https://www.dynatrace.com/) OneAgent is used to collect metrics. Additionally, in Mendix 9.7 and above, custom application runtime and database metrics are supported.
+| APM Tool | Logs | Metrics | Traces | Min. Mendix Version |
+| --- | :---: | :---: | :---: | --- |
+| [AppDynamics](https://www.appdynamics.com/) | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | 9.7 |
+| [Dynatrace](https://www.dynatrace.com/) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | 9.7 |
+| [Datadog](https://www.datadoghq.com/) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | 7.15 ¹ |
+| [Splunk Cloud Platform](https://www.splunk.com/en_us/products/splunk-cloud-platform.html) | {{< icon name="checkmark-circle-filled" color="green" >}} |{{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | 9.7 |
+| [New Relic](https://www.newrelic.com/) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | 9.7 |
 
-[Datadog](https://www.datadoghq.com/) logging and application metrics are supported in Mendix 7.15 and above.
-
-[Splunk Cloud Platform](https://www.splunk.com/en_us/products/splunk-cloud-platform.html) is supported for analyzing runtime application logs.
-
-[New Relic](https://www.newrelic.com/) logging and application metrics are supported in Mendix 9.7 and above. Custom application runtime and database metrics are supported.
-{{% /alert %}}
+<small>¹ Logs and metrics are available from Mendix 7.15 and above. Tracing requires Mendix 10.24.12 or 11.5 and above.</small>
 
 This document explains what information can be provided to a SaaS-based data analytics platform.
 
@@ -39,7 +39,7 @@ These third-party integrations require an agent to run alongside your runtime co
 {{% /alert %}}
 
 {{% alert color="info" %}}
-For support on other cloud deployment options, such as Private Cloud, refer to their dedicated documentation. For Private Cloud deployment, for example, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
+For support on other cloud deployment options, such as Mendix  on Kubernetes, refer to their dedicated documentation. For Kubernetes deployment, for example, see [Monitoring Environments in Mendix on Kubernetes](/developerportal/deploy/private-cloud-monitor/).
 {{% /alert %}}
 
 ## What Information Can Mendix Supply to a SaaS-Based Data Analytics Platform?
@@ -50,7 +50,7 @@ The integration with Splunk Cloud Platform sends only runtime application logs. 
 
 Mendix provides two types of monitoring data:
 
-* Data from the Mendix Runtime, the Java Virtual Machine (JVM), the database, and the SaaS (for example, Cloud Foundry) environment – this is described in [Environment Metrics](#environment), below
+* Data from the Mendix Runtime, the Java Virtual Machine (JVM), the database, and the SaaS (for example, Kubernetes or Cloud Foundry) environment – this is described in [Environment Metrics](#environment), below
 * Data from within the Mendix app itself – this is described in [App Metrics](#app-metrics), below
 
 ## Environment Metrics{#environment}

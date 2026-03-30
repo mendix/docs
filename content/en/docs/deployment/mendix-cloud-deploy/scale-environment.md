@@ -31,16 +31,14 @@ Before following the steps outlined on this page, make sure you meet the followi
 To scale your licensed app in Mendix Cloud, follow these steps:
 
 1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your licensed app.
-1. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the environment you want to scale.
-1. On the **General** tab, scroll down to the **Instances** row. Click **Change scaling**.
+2. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the environment you want to scale.
+3. On the **General** tab, scroll down to the **Plan Details** section.
+4. On the **Instances** row, click **Scale**.
+5. To set the **Memory per instance** that you want to use, drag the **Memory per instance** indicator bar.
+6. To set the number of **Instances** you want to use, drag the **Instances** indicator bar.
+7. Click **Apply**. This restarts your environment to apply the changes.
 
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/scale-environment/change-scaling.png" alt="" >}}
-
-1. To set the **Memory per instance** that you want to use, drag the **Memory per instance** indicator bar.
-1. To set the number of **Instances** you want to use, drag the **Instances** indicator bar.
-1. Click **Apply**. This restarts your environment to apply the changes.
-
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/scale-environment/scale.png" alt="Scaling dashboard" max-width=75% >}}
+    {{< figure src="/attachments/deployment/mendix-cloud-deploy/scale-environment/scale-instance.png" alt="Scaling dashboard" max-width=75% >}}
 
 ### Scaling Notes
 
@@ -62,8 +60,6 @@ You can spread the 8 GiB RAM across 4 instances. For example, you can create 4 i
 You do not need to allocate all the available memory at once. You can just allocate part of it and then use the rest of the memory later by allocating more memory per instance or creating more instances.
 
 For example, you can use one instance with 2 GiB RAM. The remaining 6 GiB in your cloud resource pack will be unused.
-
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/scale-environment/scaling-example.png" alt="Scaling dashboard with 2 out of 8 GB of total allocated memory used" max-width=75% >}}
 
 ## Read More
 

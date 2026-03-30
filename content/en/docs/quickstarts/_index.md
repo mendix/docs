@@ -15,16 +15,16 @@ numberless_headings: true
 Welcome to the Mendix quick starts for building an app! These tutorials cover the essentials of Mendix development:
 
 * [Creating and Deploying a Hello World App](/quickstarts/hello-world/)
-* [Building a Responsive Web App](/quickstarts/responsive-web-app/)
-* [Adding a Native Mobile App](/quickstarts/native-mobile-app/)
+* [Building a Responsive Web App](/quickstarts/part1/)
+* [Adding a Native Mobile App](/quickstarts/part2/)
 
-The [Creating and Deploying a Hello World App](/quickstarts/hello-world/) video quick start takes about two minutes to complete. The [Building a Responsive Web App](/quickstarts/responsive-web-app/) and [Adding a Native Mobile App](/quickstarts/native-mobile-app/) quick starts take about 25 minutes each to complete.
+The [Creating and Deploying a Hello World App](/quickstarts/hello-world/) video quick start takes about two minutes to complete. The [Building a Responsive Web App](/quickstarts/part1/) and [Adding a Native Mobile App](/quickstarts/part2/) quick starts take about 25 minutes each to complete.
 
-While you can jump straight into [Adding a Native Mobile App](/quickstarts/native-mobile-app/), Mendix recommends going through [Building a Responsive Web App](/quickstarts/responsive-web-app/) first to understand the basics of Mendix.
+While you can jump straight into [Adding a Native Mobile App](/quickstarts/part2/), Mendix recommends going through [Building a Responsive Web App](/quickstarts/part1/) first to understand the basics of Mendix.
 
 When you are done, you will have mastered the basics of building and hosting apps with Mendix, and you will have your first app.
 
-Let's get started with [Creating and Deploying a Hello World App](/quickstarts/hello-world/) or [Building a Responsive Web App](/quickstarts/responsive-web-app/)!
+Let's get started with [Creating and Deploying a Hello World App](/quickstarts/hello-world/) or [Building a Responsive Web App](/quickstarts/part1/)!
 
 ## More Ways to Learn with Mendix
 

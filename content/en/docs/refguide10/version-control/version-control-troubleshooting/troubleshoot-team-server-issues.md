@@ -19,7 +19,7 @@ Mendix Studio Pro uses the HTTPS (TCP) to communicate with the Team Server. To a
 * The HTTPS port (TCP 443) needs to be open
 * The HTTP port (TCP 80) needs to be open
 
-Mendix Studio Pro connects to `https://teamserver.sprintr.com/` and with the domains shown in the diagram below over HTTPS on port 443. These domains should be added to the firewall white list:
+Mendix Studio Pro connects to `https://teamserver.sprintr.com/` and with the domains shown in the diagram below over HTTPS on port 443. These domains should be added to the firewall safe list:
 
 {{< figure src="/attachments/refguide10/version-control/troubleshoot-version-control-issues/networkaccessmendixplatform.png" alt="Domains home.mendix.com, cloud.mendix.com, and git.api.mendix.com need to be accessible on port 443 from your network" class="no-border" >}}
 
@@ -92,8 +92,8 @@ The first step is to validate whether CURL is able to reach the Team Server over
 
 * Validate the output – An expected response is given below. Lines to note:
 
-  * Line 6 – You see the request connected to `https://git.api.mendix.com`. This means the request has reached the server and was not interrupted.
-  * Line 13 – You see the request returned a permanent redirect. This is expected as CURL is reaching the HTTP URL, which should redirect to the HTTPS variant.
+    * Line 6 – You see the request connected to `https://git.api.mendix.com`. This means the request has reached the server and was not interrupted.
+    * Line 13 – You see the request returned a permanent redirect. This is expected as CURL is reaching the HTTP URL, which should redirect to the HTTPS variant.
 
 * Actions to take if something is wrong – Request your internal IT department to look into this and contact Mendix once the CURL request returns an expected request. 
 
@@ -138,10 +138,10 @@ The second step is to validate whether CURL is able to reach the Team Server ove
 
 * Validate the output – An expected response is given below. Lines to note:
 
-  * Line 2 – You see the host/domain is resolved.
-  * Line 6 – You see the request connected to `https://git.api.mendix.com` on port 443. This means the request hit the server and was not interrupted.
-  * Line 13 – You see the request returned a permanent redirect. This is expected as CURL is reaching the HTTP URL, which should redirect to the HTTPS variant.
-  * Line 23 – Even though this line says 400 Bad Request, this is expected as the teams server is no HTTP server. This line tells you the request made it to the server and a response was given. 
+    * Line 2 – You see the host/domain is resolved.
+    * Line 6 – You see the request connected to `https://git.api.mendix.com` on port 443. This means the request hit the server and was not interrupted.
+    * Line 13 – You see the request returned a permanent redirect. This is expected as CURL is reaching the HTTP URL, which should redirect to the HTTPS variant.
+    * Line 23 – Even though this line says 400 Bad Request, this is expected as the teams server is no HTTP server. This line tells you the request made it to the server and a response was given. 
 
 * Actions to take if something is wrong – Request your internal IT department to look into this and get back to Mendix once the CURL request returns an expected request. 
 
@@ -186,8 +186,8 @@ The next step is to verify whether you are behind a VPN, Proxy or Zscaler.
 
 * How – do the following: 
 
-  * Check whether you are behind a VPN or proxy. Reach out to your internal IT department if you are not sure. Alternatively you can try a website to detect a VPN.
-  * Perform the following line on `cmd` and store the output: ```netsh.exe winhttp show proxy```.
+    * Check whether you are behind a VPN or proxy. Reach out to your internal IT department if you are not sure. Alternatively you can try a website to detect a VPN.
+    * Perform the following line on `cmd` and store the output: ```netsh.exe winhttp show proxy```.
 
 * Validate the output – A system with no proxy should show the following:
 
@@ -199,12 +199,12 @@ The next step is to verify whether you are behind a VPN, Proxy or Zscaler.
 
 * Actions to take if something is wrong – do one of the following:
 
-  * If you are behind a proxy:  
-    * Retry without VPN or proxy and see if that solves the issue. Reach out to your internal IT department if you are not sure how to test it.
-    * Set up the proxy in Git following the [Proxy Servers Are Not Supported](/refguide10/troubleshoot-version-control-issues/#proxy-servers-are-not-supported) section in *Troubleshooting Version Control*.
+    * If you are behind a proxy:  
+        * Retry without VPN or proxy and see if that solves the issue. Reach out to your internal IT department if you are not sure how to test it.
+        * Set up the proxy in Git following the [Proxy Servers Are Not Supported](/refguide10/troubleshoot-version-control-issues/#proxy-servers-are-not-supported) section in *Troubleshooting Version Control*.
       A correct example command looks like this: ```git config --global http.proxy https://username:mypassword@someproxyurl.com:123123```
       Please note, if the username or password contains a `:` or a `@`, it might not work.
-  * In case ```netsh.exe winhttp show proxy``` gives an output that implies there is no proxy active. If the Git CLI is able to work with Git, but Studio Pro is not, then you can try ```netsh.exe winhttp reset proxy``` to reset your local proxy setting.
+    * In case ```netsh.exe winhttp show proxy``` gives an output that implies there is no proxy active. If the Git CLI is able to work with Git, but Studio Pro is not, then you can try ```netsh.exe winhttp reset proxy``` to reset your local proxy setting.
 
 ##### Validate Network Speed
 
@@ -230,7 +230,7 @@ If you are encountering issues when using Git CLI, this is typically an issue yo
 
 ##### Prerequisites
 
-You need to setup a [Personal Access Token (PAT)](/community-tools/mendix-profile/user-settings/#pat) to work with Git on the command line. The following permissions should be configured while creating the PAT:
+You need to setup a [Personal Access Token (PAT)](/portal/user-settings/#pat) to work with Git on the command line. The following permissions should be configured while creating the PAT:
 
 ```
 Model Repository
@@ -272,7 +272,6 @@ The troubleshooting commands should be executed in `cmd` or `command prompt` in 
 
 * Actions to take if something is wrong – Save the output and try the next step below, verifying shallow clone through Git CLI.
 
-
 ##### Verify Shallow Clone Through Git CLI
 
 * Why – If a full clone fails it can be due to the size of the repository. A shallow clone only retrieves all files for 1 commit, reducing the amount of data needed to transfer by magnitudes.
@@ -305,10 +304,10 @@ The troubleshooting commands should be executed in `cmd` or `command prompt` in 
 
 * Validate the output – If this succeeded, there is an issue with SSL handling. Please take a look at your git config.
 
-  * If you are using a proxy – Setting up a `http.proxy` in the git config might address this issue.
-  * If you are seeing a warning on SSL on windows – Setting the `http.sslbackend` to `schannel` by running the following command might improve your experience: `git config --global http.sslbackend schannel`
-  * If you are using a VPN – Try again without VPN
-  * If Zscaler or any other network filtering/security tool is active – Check whether SSL inspection is enabled. Try disabling SSL inspection or adding an exception for git.api.mendix.com.
+    * If you are using a proxy – Setting up a `http.proxy` in the git config might address this issue.
+    * If you are seeing a warning on SSL on windows – Setting the `http.sslbackend` to `schannel` by running the following command might improve your experience: `git config --global http.sslbackend schannel`
+    * If you are using a VPN – Try again without VPN
+    * If Zscaler or any other network filtering/security tool is active – Check whether SSL inspection is enabled. Try disabling SSL inspection or adding an exception for git.api.mendix.com.
 
 * Actions to take if something is wrong – Save the output and reach out to Mendix Support with all information that you have gathered to discuss the situation.
 

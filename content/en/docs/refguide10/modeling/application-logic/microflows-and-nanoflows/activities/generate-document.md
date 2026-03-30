@@ -6,13 +6,13 @@ description: "Describes generating documents from a microflow. "
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-This activity can only be used in microflows.
+{{% alert color="warning" %}}
+Document generation using Document Templates was deprecated in 10.24.0. See [Document Templates](/refguide10/document-templates/) for alternatives.
 {{% /alert %}}
 
 ## Introduction
 
-The **Generate document** activity is used to write a document to a file, based on a [document template](/refguide10/document-templates/). 
+The **Generate document** microflow activity is used to write a document to a file, based on a [document template](/refguide10/document-templates/). 
 
 For more information on which types of documents can be created, see [Document Type](#document-type).
 

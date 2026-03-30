@@ -5,12 +5,35 @@ weight: 90
 aliases:
     - /refguide10/Document+Templates.html
     - /refguide10/Document+Templates
+    - /refguide10/creating-your-own-documents/
+    - /refguide10/data-view-document-template/
+    - /refguide10/document-template/
+    - /refguide10/dynamic-image-document-template/
+    - /refguide10/dynamic-label-document-template/
+    - /refguide10/footer-document-template/
+    - /refguide10/header-document-template/
+    - /refguide10/line-break-document-template/
+    - /refguide10/page-break-document-template/
+    - /refguide10/static-image-document-template/
+    - /refguide10/static-label-document-template/
+    - /refguide10/style/
+    - /refguide10/template-grid-document-template/
+    - /refguide10/title-document-template/
+    - /refguide10/data-grid-document-template/
+    - /refguide10/columns-document-template/
+    - /refguide10/table-document-template/
+    - /refguide10/row-document-template/
+    - /refguide10/cell-document-template/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="warning" %}}
+The use of **Document Templates** and the **Generate Document** microflow action is deprecated and will be removed in a future version of Mendix. If you wish to use non-deprecated solutions, see the [Alternatives](#alternatives) section below.
+{{% /alert %}}
+
 ## Introduction
 
-Document Templates are used to model a template required as input for a document export action which can generate all kinds of documents based on application data. They are composed much in the same way as [Pages](/refguide10/pages/).
+Document Templates are used to model a template required as input for a document export action which can generate all kinds of documents based on application data. They are composed much in the same way as [Pages](/refguide10/pages/). However, document templates were deprecated in 10.24. If you wish to use non-deprecated solutions, see the [Alternatives](#alternatives) section below.
 
 {{% alert color="warning" %}}
 This page describes what document templates are for and what kind of widgets can be placed on them. If you want to see the properties of the document template you can check the documentation for a [document template](/refguide10/document-template/) itself.
@@ -181,3 +204,23 @@ For more information, see [Static Image (Document Template)](/refguide10/static-
 A static image inside a table cell.
 
 {{% /alert %}}
+
+## Alternatives {#alternatives}
+
+Document Templates in Mendix allowed the generation of various document types. This section explains the appropriate replacement options for each previously supported document type.
+
+### PDF
+
+To generate PDF documents, use the [PDF Document Generation](/appstore/modules/document-generation/) capability, which allows you to define PDFs based on standard Mendix pages. This approach offers significantly greater flexibility and control over the layout and design of your PDF documents compared to the deprecated Document Templates.
+
+### HTML
+
+To generate HTML documents, create the HTML manually and use the token replacement capabilities of the [Mx Model Reflection](/appstore/modules/model-reflection/#token-configuration) module to insert application data. Open source tools such as [MJML](https://mjml.io/) can assist in designing visually appealing HTML, especially for email templates.
+
+### Microsoft Word
+
+Generating Microsoft Word documents is no longer supported by Mendix. However, there are several alternative solutions available — both free and paid — maintained by Mendix partners and the community that support Word document generation. These can be found in the [Mendix Marketplace](https://marketplace.mendix.com/link/search/word).
+
+### Other Formats
+
+Other formats, including Rich Text Format (.rtf) and OpenDocument Text (.odt), are no longer supported by Mendix and do not have official alternatives. We understand this may impact certain use cases, and we recommend exploring whether supported formats like PDF or HTML can meet your current needs.

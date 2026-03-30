@@ -30,8 +30,8 @@ When you create a module, it has a default **app module** type. The type can be 
 There are the following type of modules:
 
 * [App modules](/refguide9/module-settings/#app-module) (standard modules)
-* [Add-on modules](/refguide9/module-settings/#add-on-module) 
-* [Solution modules](/refguide9/module-settings/#solution-module)
+* [Add-on modules](/refguide9/module-settings/#add-on-module) (available starting with Studio Pro 9.12.0)
+* [Solution modules](/refguide9/module-settings/#solution-module) (available starting with Studio Pro 9.12.0)
 
 ## Common
 

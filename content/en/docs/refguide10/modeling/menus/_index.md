@@ -9,7 +9,7 @@ weight: 20
 
 The top-bar of Studio Pro contains the following menus:
 
-{{< figure src="/attachments/refguide10/modeling/menus/menu-bar.png" alt="Menu-bar" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/menus/menu-bar.png" alt="Menu-bar" >}}
 
 * [Global Navigation Menu](#global-navigation-menu) – allows you to navigate to other parts of the platform
 * [File](#file) – allows you to manage documents and apps
@@ -23,7 +23,7 @@ The top-bar of Studio Pro contains the following menus:
 
 ## Global Navigation Menu {#global-navigation-menu}
 
-The **Global Navigation Menu** menu is located at the upper left of Studio Pro and is represented as a nine-dots icon. It contains links to various parts of the platform that will open in a new browser window. For more information, see [Global Navigation](/developerportal/global-navigation/) in *Apps*.
+The **Global Navigation Menu** menu is located at the upper left of Studio Pro and is represented as a nine-dots icon. It contains links to various parts of the platform that will open in a new browser window. For more information, see [Global Navigation](/portal/global-navigation/).
 
 ## File Menu {#file}
 

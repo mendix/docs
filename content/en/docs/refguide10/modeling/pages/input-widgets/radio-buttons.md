@@ -16,6 +16,7 @@ When the page is displayed to the end-user, all the possible values are listed, 
 {{< figure src="/attachments/refguide10/modeling/pages/input-widgets/radio-buttons/radio-buttons-displayed.png" class="no-border" >}}
 
 A radio button must be placed within a data context to display or edit the intended value:
+
 * A [data container](/refguide10/data-widgets/) widget containing an object
 * A snippet containing one or more [parameters](/refguide10/page-properties/#parameters)
 * A page or a snippet containing one or more [variables](/refguide10/page-properties/#variables)

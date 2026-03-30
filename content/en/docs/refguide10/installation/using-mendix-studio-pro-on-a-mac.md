@@ -12,7 +12,6 @@ aliases:
 
 {{% alert color="info" %}}
 From Mendix 10.7.0 and above, you can run Mendix Studio Pro natively on macOS. This means you no longer need to follow the guide below to get started on Mac. If you are using versions of Studio Pro below 10.7.0, follow the guide to get started.
-Since the Studio Pro macOS client is still in beta, you will need to right-click the installer to open and run it.
 {{% /alert %}}
 
 Using Parallels, you can run Mendix Studio Pro on your Mac device using a Windows virtual machine.
@@ -27,7 +26,7 @@ This how-to teaches you how to do the following:
 * Run a Mendix app on a test device using your Windows virtual machine
 * Make changes to your app, then view those changes on your test device
 
-For a deep-dive look into installing Studio Pro on a Mac, check out this video:
+For a deep dive into installing and configuring Parallels on Mac to run Studio Pro, check out this video:
 
 {{< vidyard "nJ9Tz8VnHPPKPrtSBgHv3U" >}}
 

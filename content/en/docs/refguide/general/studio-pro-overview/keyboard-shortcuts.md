@@ -142,6 +142,7 @@ The tables in the following sub-sections present the shortcut keys that can be u
 | <kbd>F2</kbd> | <kbd>Fn</kbd> + <kbd>F2</kbd> | Rename the variable returned by the selected element. |
 | <kbd>Shift</kbd> + <kbd>F2</kbd> or just start typing | <kbd>Shift</kbd> + <kbd>Fn</kbd> + <kbd>F2</kbd> or just start typing | Open the **Properties** pane and edit the caption of the selected element. |
 | Context-menu key or <kbd>Shift</kbd> + <kbd>F10</kbd> | <kbd>Shift</kbd> + <kbd>Fn</kbd> + <kbd>F10</kbd> | Open the context-menu for the currently selected element. |
+| <kbd>Shift</kbd> | <kbd>Shift</kbd> | When holding <kbd>Shift</kbd>, connection points are shown while hovering over elements.<br><br>{{% alert color="info" %}}This keyboard shortcut does not work out of the box when running Studio Pro in Parallels on MacOS. To resolve the issue, navigate to the virtual machine **configuration** > **Hardware** > **Mouse & Keyboard** and enable the **Optimize for games** option. This ensures that an event is sent to the virtual machine whenever a modifier key is pressed.{{% /alert %}}|
 
 ## Workflow Editor Shortcut Keys {#workflow-editor-shortcut-keys}
 

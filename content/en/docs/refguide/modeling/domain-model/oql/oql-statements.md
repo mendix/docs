@@ -1,0 +1,232 @@
+---
+title: "OQL Statements"
+url: /refguide/oql-statements/
+beta: true
+weight: 50
+aliases:
+    - /refguide/oql-delete-statement/
+---
+
+{{% alert color="warning" %}} This feature is experimental. For more information, see [Release Status](/releasenotes/release-status/). {{% /alert %}}
+
+## Introduction
+
+OQL statements are translated to SQL statements that are sent to the database.
+This can be much faster than retrieving the objects in a microflow and then updating or deleting the resulting list.
+
+This feature is experimental and currently only accessible through the Java API by writing a Java action.
+
+{{% alert color="info" %}}
+From Mendix version 11.1, you can delete objects in bulk using OQL `DELETE` statements.
+
+From Mendix version 11.3, you can also update object attributes in bulk using OQL `UPDATE` statements.
+
+From Mendix version 11.4, you can update object associations as well as attributes in bulk using OQL `UPDATE` statements.
+
+From Mendix version 11.6, you can insert new objects with attributes in bulk using OQL `INSERT` statements.
+
+{{% /alert %}}
+
+## Java API for OQL updates
+
+OQL Statements can be executed using the `Core.createOqlStatement` Java API. For example:
+
+```java
+Core.createOqlStatement("DELETE FROM Module.Customer WHERE Name = 'Mary'").execute(context) 
+```
+
+You can pass values as parameters to the query. For example:
+
+```java
+Core.createOqlStatement("DELETE FROM Module.Customer WHERE Name = $nameParam")
+    .setVariable("nameParam", customerName)
+    .execute(context)
+```
+
+The `execute()` method returns the number of objects that were affected by the statement.
+
+## `DELETE` Statement {#oql-delete}
+
+{{% alert color="info" %}}
+Available from Mendix version 11.1.0
+{{% /alert %}}
+
+The syntax of `DELETE` statements is:
+
+```sql
+DELETE FROM <entity> WHERE <condition>
+```
+
+* `entity` is the entity whose objects are being deleted.
+* `condition` can be anything that can appear in an OQL [WHERE clause](/refguide/oql-clauses/#where).
+
+### OQL `DELETE` Limitations
+
+* You cannot use OQL `DELETE` with entities that have associations with non-default delete behavior. These are associations that use either "Delete as well" or "Delete only if not associated".
+* You cannot use OQL DELETE to delete objects of type `System.FileDocument` or any specialization of it.
+* The general limitations for OQL statements also apply. See [General Limitations for OQL Statements](#oql-limitations), below.
+
+## `UPDATE` Statement {#oql-update}
+
+{{% alert color="info" %}}
+Available from Mendix version 11.3.0
+{{% /alert %}}
+
+The syntax of `UPDATE` statements is:
+
+```sql
+UPDATE <entity>
+SET { { <attribute> | <association> } = <expression> } [ , …n ]
+WHERE <condition>
+```
+
+* `entity` is the entity whose objects are being updated.
+
+* `attribute` is an attribute of the entity that is being updated.
+
+    An attribute of type `autonumber` can not be updated. The `ID` attribute of an entity cannot be updated.
+
+* `association` is an association that is being updated. Associations can be updated in Mendix version 11.4.0 and above.
+
+    Multiple attributes and associations can be updated in the same statement. 
+
+* `expression` is a new value of an attribute or association. Any [OQL expression](/refguide/oql-expressions/) is allowed.
+
+    * When updating attributes, the value type of the expression should match the attribute type according to [type coercion precedence](/refguide/oql-expression-syntax/#type-coercion).
+    * When updating an enumeration attribute using a literal, the literal must be a valid value for the enumeration.
+    * When updating an enumeration attribute using another enumeration, the expression enumeration must be a subset of the attribute enumeration.
+    * When updating a string attribute using a string literal, the literal length must be equal to or less than the length of the attribute.
+    * In the case of associations, association and entity expressions must match the target association type.
+    
+        Values of type LONG can also be used as association values, but they must be valid ids of associations which are of the target association type.
+
+* `condition` can be anything that can appear in an OQL [WHERE clause](/refguide/oql-clauses/#where).
+
+Example:
+
+```sql
+UPDATE
+    Module.Customer
+SET
+    TotalAmount = (
+        SELECT SUM(Amount)
+        FROM Module.Order
+        WHERE Module.Order_Customer/Module.Customer/ID = Module.Customer/ID
+    ),
+    Location = Module.Customer_Address/Module.Address/AddressString,
+    Name = UPPER(Name),
+    Module.Customer_Branch = Module.Customer_Address/Module.Address/Module.Address_City/Module.City/Module.Branch_City
+```
+
+In the example above, attributes of entity `Module.Customer` are updated using different capabilities of `OQL UPDATE` functionality:
+
+* `TotalAmount` attribute is set to a [subqery](/refguide/oql-clauses/#subquery-in-select) with aggregate function
+* `Location` is set to a [path](/refguide/oql-clauses/#longpath) over association to attribute
+* `Name` is set using a [function](/refguide/oql-expression-syntax/#functions)
+* Association `Module.Customer_Branch` is set to a [path](/refguide/oql-clauses/#longpath) over association to an entity
+
+{{% alert color="info" %}}
+Updating attributes was introduced in Mendix 11.3.
+
+Updating associations was added in Mendix 11.4.
+{{% /alert %}}
+
+### OQL `UPDATE` Limitations
+
+* If a subquery or a long path over a many-to-one or many-to-many association is used as `expression`, it can result in multiple values. In that case, a database-level exception will occur when running the statement.
+* In the case of inheritance, it is not possible to simultaneously update an attribute and use that attribute in an expression to update an attribute on another inheritance level. See the example in [Mixed Attribute Update](#inheritance), below.
+* The general limitations for OQL statements also apply. See [General Limitations for OQL Statements](#oql-limitations), below.
+
+#### Example of Mixed Attribute Update{#inheritance}
+
+To clarify the limitation on simultaneous update of different levels of inheritance, let's use the following model as an example.
+
+An entity `SuperEntity` with an integer attribute `GeneralizationAttribute` has a specialization entity `SubEntity` with an integer attribute `SpecializationAttribute`. They are both in module `Module`.
+
+{{< figure src="/attachments/refguide/modeling/domain-model/oql/oql-update-mixed-attr.png" >}}
+
+The following statement will pass. It uses an attribute on one level of inheritance to update the attribute on the other level, which is allowed as long as that attribute is not being updated too.
+
+```sql
+UPDATE
+    Module.SubEntity
+SET
+    GeneralizationAttribute = SpecializationAttribute
+```
+
+The following statement will fail. This time, the attribute that is used to update the attribute. on another inheritance level is being updated itself.
+
+```sql
+UPDATE
+    Module.SubEntity
+SET
+    GeneralizationAttribute = SpecializationAttribute,
+    SpecializationAttribute = 1
+```
+
+## `INSERT` Statement {#oql-insert}
+
+{{% alert color="info" %}}
+Available from Mendix version 11.6.0
+{{% /alert %}}
+
+The syntax of `INSERT` statements is:
+
+```sql
+INSERT INTO <entity> ( <attribute | <association> [ , …n ] ) <oql-query>
+```
+
+* `entity` is the entity for which new objects will be created.
+
+* `attribute` is an attribute of the entity that will be inserted.
+
+* `association` is an association to an existing object of associated entity. Associations can be inserted in Mendix version 11.7.0 and above.
+
+* `oql-query` is any OQL query that returns same number of columns as the number of attributes and associations that will be inserted.
+This query can select data from persistable entities and/or [view entities](/refguide/view-entities/).
+
+Example:
+
+```sql
+INSERT INTO Module.Order ( OrderNumber, CustomerNumber, Module.Order_Customer )
+SELECT NewOrderNumber, Loader.TemporaryData_Customer/Loader.Customer/Number, Loader.TemporaryData_Customer FROM Loader.TemporaryData
+```
+
+### OQL `INSERT` Limitations
+
+* Only a single value can be specified per association.
+
+  If you need to set multiple values in a many-to-many association, we recommend doing that in two stages. First, use `INSERT` to create required objects and then set associations using `UPDATE`.
+* Attributes of type "Date and time" with a default value of `'[%CurrentDateTime%]'` will not have their default values set when the `INSERT` statement does not specify them.
+
+  As a workaround, explicitly insert the attribute with a value of `'[%CurrentDatetime%]'` in the `SELECT` part.
+* When using Oracle, due to database limitations, inserting attributes of type unlimited string or binary is not supported.
+* The general limitations for OQL statements also apply. See [General Limitations for OQL Statements](#oql-limitations), below.
+
+## General Limitations for OQL Statements {#oql-limitations}
+
+* OQL statements can be used only with persistable entities.
+* Entity access rules are not applied to any OQL statements.
+* No event handlers will be executed.
+* Runtime and client state will not be updated with the changes.
+
+### Joins
+
+You cannot directly join other entities in the `FROM` clause of OQL `DELETE` or in the `UPDATE` clause of OQL `UPDATE`. However, you can achieve the same result using long paths or subqueries. For example:
+
+```sql
+DELETE FROM Module.Order
+WHERE Module.Order_Customer/Module.Customer/Name = 'Mary'
+```
+
+or
+
+```sql
+UPDATE Module.Order
+SET CustomerName = 'Mary'
+WHERE ID IN (
+        SELECT ID
+        FROM Module.Order
+        INNER JOIN Module.Customer ON Module.Customer/CustomerID = Module.Order/CustomerID
+        WHERE Module.Customer/Name = 'Mary' )
+```

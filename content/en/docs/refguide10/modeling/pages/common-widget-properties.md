@@ -414,9 +414,9 @@ The visibility of the billing address depends whether the customer checks that t
 
 When selected, this shows the widget while a provided [expression](/refguide10/expressions/) evaluates to true. The expression may use the variables listed in the expression editor, including:
 
-- `$currentObject`, representing the object of the closest enclosing data container.
-- The objects of any enclosing data container, available under the name of the widget that exposes them (for example `$dataView1`).
-- [Parameters](/refguide10/page-properties/#parameters) and [variables](/refguide10/page-properties/#variables) defined on the page or snippet.
+* `$currentObject`, representing the object of the closest enclosing data container.
+* The objects of any enclosing data container, available under the name of the widget that exposes them (for example `$dataView1`).
+* [Parameters](/refguide10/page-properties/#parameters) and [variables](/refguide10/page-properties/#variables) defined on the page or snippet.
 
 For example, you might want a button to only be visible if a condition is met. Assume the object has an attribute called `myAttribute`, and you want the button to be visible only if `myAttribute` actually has a value stored. To achieve this goal put this expression into the field: `$currentObject/myAttribute != empty`.
 

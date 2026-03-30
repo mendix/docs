@@ -7,7 +7,7 @@ weight: 60
 
 ## Introduction
 
-When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/general/team-server/) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see [Version Control](/refguide8/version-control/).
+When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/repository/team-server/) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see [Version Control](/refguide8/version-control/).
 
 While this is the recommended way of working for almost all Mendix developers, you may prefer to store your application's files in a system that is controlled by your own organization.
 
@@ -86,5 +86,5 @@ For the purpose of creating an app to store in your on-premises SVN server, this
 ## Read More
 
 * [Version Control](/refguide8/version-control/)
-* [Team Server](/developerportal/general/team-server/)
+* [Team Server](/developerportal/repository/team-server/)
 * [Upload to Version Control Server](/refguide8/upload-to-version-control-dialog/)

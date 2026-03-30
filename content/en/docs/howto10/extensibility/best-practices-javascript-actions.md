@@ -180,21 +180,22 @@ For information on how to use *Big.js*, consult the [big.js API](https://mikemcl
 
 #### Creating Objects
 
-Use the following code to create objects:
+Use the following code to create objects in Mendix version 10.23 and above:
 
 ```javascript
-mx.data.create({
-    entity: "MyFirstModule.Cat",
-    callback: function(object) {
-        console.log("Object created on server");
-    },
-    error: function(error) {
-        console.error("Could not commit object:", error);
-    }
-});
+import { create } from "mx-api/data"
+
+try {
+    const cat = await create({ entity: "MyFirstModule.Cat" })
+    console.log("Object created on server:", cat);
+} catch (err) {
+    console.error("Could not commit object:", err);
+}
 ```
 
-For more information on creating objects, consult the [Create](https://apidocs.rnd.mendix.com/10/client/mx.data.html#.create) section of the *Mendix Client API*.
+For more information on creating objects, consult the [Create](https://apidocs.rnd.mendix.com/10/client-mx-api/module-mx-api_data.html#.create) section of the *Mendix Client API*.
+
+If you are using Mendix version 10.22 or below, you will need to use [`mx.data.create`](https://apidocs.rnd.mendix.com/10/client/mx.data.html#.create).
 
 #### Changing Objects
 
@@ -290,11 +291,17 @@ Use the following code to employ an asynchronous return for when your nanoflow n
 
 Many APIs and functions are designed in an asynchronous way, and use callback functions or promises. A JavaScript action expects a promise to be returned. The promise should be resolved with the return value as expected in the action.
 
+Explaining the callback code: 
+
+* Use the standard Mendix Client to show a confirmation dialog box with an **OK** and a **Cancel** button (the execution of the nanoflow halts until the user clicks one of the buttons) 
+* The resolve will return a Boolean value, which is used as the return value of the action 
+* In the nanoflow, the return variable can be used for an alternative flow for confirmation and cancel
+
 #### Understanding Promises
 
-A `Promise` object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+If you are using Mendix version 10.22 or below, you will need to use promises. A `Promise` object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
 
-Use the following code to wrap a callback API in a promise:
+Use the following code in Mendix versions 10.23 or below to wrap a callback API in a promise:
 
 ```javascript
 function AskConfirmation(question) {
@@ -313,12 +320,6 @@ function AskConfirmation(question) {
     // END USER CODE
 }
 ```
-
-Explaining the callback code: 
-
-* Use the standard Mendix Client to show a confirmation dialog box with an **OK** and a **Cancel** button (the execution of the nanoflow halts until the user clicks one of the buttons) 
-* The resolve will return a Boolean value, which is used as the return value of the action 
-* In the nanoflow, the return variable can be used for an alternative flow for confirmation and cancel
 
 #### Understanding Promise API
 

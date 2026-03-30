@@ -1,5 +1,5 @@
 ---
-title: "Manage Services"
+title: "Managing Services"
 url: /catalog/manage/
 weight: 30
 aliases:

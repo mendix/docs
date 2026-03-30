@@ -26,8 +26,6 @@ The **Security Overview** summarizes the app's security for a selected user role
 3. Optionally, select a module in the sidebar of the overview.
     Selecting a module filters the content in the **Entity access**, **Page access**, **Microflow access**, and **Nanoflow access** tabs. The list of modules does not show the System module or any protected modules.
 
-
-
 ## Security Overview Contents
 
 The **Security Overview** page has the following tabs:
@@ -80,11 +78,11 @@ To export the **Security Overview**, click the **Export to Excel** button. This 
     2. Module: The module containing the entity.
     3. Entity: The name of the entity.
     4. Can create:  Specifies wether create access has been granted
-    4. Can delete:  Specifies wether delete access has been granted
-    5. XPath: The XPath constraint.
-    6. XPath Caption:  The XPath constraint caption, when set.
-    7. Access: The access level (None, Read or ReadWrite).
-    8. Anonymous role: Specifies whether this access is connected to an anonymous user role.
+    5. Can delete:  Specifies wether delete access has been granted
+    6. XPath: The XPath constraint.
+    7. XPath Caption:  The XPath constraint caption, when set.
+    8. Access: The access level (None, Read or ReadWrite).
+    9. Anonymous role: Specifies whether this access is connected to an anonymous user role.
 3. Document Access -- This sheet includes the accessible pages, microflows and nanoflows, including the following:
     1. Document type -- The type of the accessible document (page, microflow, nanoflow).
     2. User Role.

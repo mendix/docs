@@ -12,6 +12,7 @@ A **Check box** widget is used to display and, optionally, allow the end-user to
 {{% alert color="info" %}}In native mobile applications, the checkbox widget can be rendered as either a switch (default) or a checkbox. If checkbox, it displays a tick if the value is true and remains empty if it is false. If switch, it displays a track with right-positioned thumb button if the value is true and a left-positioned thumb button if it is false.{{% /alert %}}
 
 A checkbox must be placed within a data context to display or edit the intended value:
+
 * A [data container](/refguide10/data-widgets/) widget containing an object
 * A snippet containing one or more [parameters](/refguide10/page-properties/#parameters)
 * A page or a snippet containing one or more [variables](/refguide10/page-properties/#variables)

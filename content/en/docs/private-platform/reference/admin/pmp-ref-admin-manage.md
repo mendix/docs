@@ -63,7 +63,7 @@ In addition to specifying the owner, you can also assign ownership of the app to
 
 ##### Sharing the App with Selected User Groups {#share}
 
-You can share your app with any user groups by selecting the **More Actions** > **Share with Groups** option from the **App Management** page.
+You can share your app with any user groups by selecting the **More Actions** > **Share with Groups** option from the **App Management** page. Sharing makes the app visible to groups that otherwise may not be able to see or access your app. Members of the group with which you have shared the app do not have automatic access. Instead, they can request access from the app's owner.
 
 ##### Archiving the App {#archive}
 
@@ -233,6 +233,8 @@ In the **Actions** tab, you can also log out all users currently logged in to yo
 
 In the **Group Management** tab, you can create and edit user groups. These groups typically reflect your organization's structure. You can also use the **Automation Settings** option to automatically assign users to groups based on their profile attributes.
 
+For more information about group management in Private Mendix Platform version 2.0 and newer, see [Dynamic Role Management in Private Mendix Platform](/private-mendix-platform/dynamic-role-management/).
+
 ### Platform
 
 In the **Deployment** section, administrators can view and manage statistics, activity logs, webhooks, and licenses.
@@ -273,7 +275,7 @@ You can select how long the actions are kept in the logs, in days. The minimum n
 
 In the **Webhooks** tab, you can view and manage your webhooks.
 
-Webhooks allow you to send information about your licensed Mendix app deployed to Mendix Cloud or Mendix for Private Cloud to an external app or workflow. In Private Mendix Platform, you can use them to trigger a step in an automated [Build](/private-mendix-platform/reference-guide/admin/system/#build-steps) or [Deployment](/private-mendix-platform/reference-guide/admin/system/#deploy-steps) pipeline.
+Webhooks allow you to send information about your licensed Mendix app deployed to Mendix Cloud or Mendix on Kubernetes to an external app or workflow. In Private Mendix Platform, you can use them to trigger a step in an automated [Build](/private-mendix-platform/reference-guide/admin/system/#build-steps) or [Deployment](/private-mendix-platform/reference-guide/admin/system/#deploy-steps) pipeline.
 
 For more information about configuring webhooks, refer to [webhooks documentation](/developerportal/deploy/webhooks/).
 
@@ -292,3 +294,7 @@ When valid, licenses can have the following statuses:
 * Active (shown in green)
 * About to expire (shown in yellow)
 * Expired (shown in red)
+
+#### Maia
+
+On this page, you can connect Mendix AI Assistance (Maia) to your own Large Language Model (LLM). It enables Maia to use your custom LLM for processing and generating responses. For more information, see [Maia in Private Mendix Platform](/private-mendix-platform/maia/).

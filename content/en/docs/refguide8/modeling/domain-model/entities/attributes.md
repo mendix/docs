@@ -71,7 +71,7 @@ An attribute has one of the following types:
 
 Type | Possible values | Maps to Mendix data type |
 --- | --- | --- |
-AutoNumber | A positive or negative whole number.<br/>AutoNumber attributes are automatically generated numbers. The default value of the attribute determines the first number that will be generated. Each created object will have an AutoNumber that is one greater than the previous one. AutoNumbers can only be used for persistable entities as the AutoNumber value is computed in the database. | Integer/Long |
+AutoNumber | A positive or negative whole number.<br/>AutoNumber attributes are automatically generated numbers. The default value of the attribute determines the first number that will be generated. Each created object will have an AutoNumber that is greater than the previous one. AutoNumbers can only be used for persistable entities as the AutoNumber value is computed in the database. | Integer/Long |
 Binary¹ | Binary data. Can only be used for persistable entities as the data is stored in the database. For example an entire file. In most cases you want to use an association to a FileDocument or Image to store file contents. | Binary |
 Boolean | True or false. | Boolean | 
 Date and time | A point in time consisting of a date and a time component accurate up to milliseconds. | Date and time |

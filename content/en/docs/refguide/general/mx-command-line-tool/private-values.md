@@ -9,7 +9,7 @@ description: "Describes the commands related to private values for the mx comman
 
 The commands in this group are related to showing and deleting private values.
 
-Studio Pro stores private values, such as values for [private constants](/refguide/configuration/#constants), in an encrypted way in the user's local app data. These private values are defined by:
+Studio Pro stores private values, such as values for [private constants](/refguide/configurations-tab/#constants), in an encrypted way in the user's local app data. These private values are defined by:
 
 * The path of the `.mpr` file of the app
 * The version of Studio Pro

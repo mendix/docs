@@ -14,22 +14,18 @@ aliases:
     - /data-hub/data-hub-catalog/
 ---
 
-{{% alert color="info" %}}
-The Mendix Portal is the online platform of Mendix. It includes [Apps](/developerportal/), [Control Center](/control-center/), [Community](/community-tools/), [Marketplace](/appstore/), Catalog, and [Mendix Support](/support/).
-{{% /alert %}}
-
 ## Introduction
 
 The [Catalog](https://catalog.mendix.com) is a development tool provided in Mendix Cloud. 
 
-{{< figure src="/attachments/catalog/catalog-home.png" class="no-border" >}}
+{{< figure src="/attachments/catalog/catalog-home.png" alt="Catalog home page" class="no-border" >}}
 
 REST services provided by Mendix Apps running in Mendix Cloud (published [OData](/refguide/published-odata-services/) and OpenAPI REST Services), Web Services, and Business Events are automatically registered in your organization's Catalog upon deployment. This provides you with an up-to-date view of all the OData, OpenAPI, Web Service and Business Event endpoints published and consumed by your Mendix apps. These assets can be [curated](/catalog/manage/curate/) in the Catalog to ensure that they are exposed to the relevant users and can be found easily. 
 
 Learn about updates and improvements in the [Catalog](/releasenotes/data-hub/) release notes.
 
 {{% alert color="info" %}}
-If you deploy your Mendix apps in an alternative environment, like on-prem or private cloud, you can use the Catalog APIs to register your apps and services in the Catalog to enable visibility of your deployed APIs. For information about using Catalog for local deployment, see [Register Services without Mendix Cloud](/catalog/data-sources-without-mendix-cloud/).{{% /alert %}}
+If you deploy your Mendix apps in an alternative environment, like on-prem or Mendix on Kubernetes, you can use the Catalog APIs to register your apps and services in the Catalog to enable visibility of your deployed APIs. For information about using Catalog for local deployment, see [Register Services without Mendix Cloud](/catalog/data-sources-without-mendix-cloud/).{{% /alert %}}
 
 {{% alert color="info" %}}
 The Catalog and [external entities](/refguide/external-entities/) are supported in Studio Pro [8.14](/releasenotes/studio-pro/8.14/) and above.{{% /alert %}}

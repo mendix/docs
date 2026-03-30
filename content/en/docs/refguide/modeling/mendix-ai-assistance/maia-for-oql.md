@@ -8,10 +8,6 @@ description: "Describes the features in Maia for OQL Generation."
 ## Introduction
 
 {{% alert color="info" %}}
-Maia for OQL was introduced in Studio Pro 11 beta 1.
-{{% /alert %}}
-
-{{% alert color="info" %}}
 An internet connection and signing in to Studio Pro are required to use Maia for OQL.
 {{% /alert %}}
 
@@ -19,7 +15,7 @@ Maia for OQL is a powerful feature that enables you to generate and manage OQL (
 
 ## Using Maia for OQL
 
-To enable this feature, navigate to **Edit** > **Preferences** > the **New Features** tab, and enable it under the **Maia** section.
+To enable this feature, navigate to **Edit** > **Preferences** > the **Maia** tab and select **Enable Maia for OQL Generation**.
 
 Once enabled, you can access it from the toolbar in the **OQL Editor**:
 

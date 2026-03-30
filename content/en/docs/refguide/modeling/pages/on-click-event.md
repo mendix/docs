@@ -69,6 +69,7 @@ When an event is triggered, you can choose what action is triggered. Possible op
 * [Show user task page](#show-user-task-page)
 * [Show workflow admin page](#show-workflow-page)
 * [Complete user task](#complete-task)
+* [Cancel synchronization](#cancel-synchronization)
 
 ### Do Nothing {#do-nothing}
 
@@ -98,7 +99,7 @@ The **Show a page** event opens the specified page. Select the page which opens 
 
 #### Page Arguments
 
-**Page arguments** are automatically configured based on the parameters of the selected page and the available arguments. In general, arguments are taken from any enclosing data widget. If the data widget enclosing the widget calling a page is inside another (nested) data widget, then objects from that data widget and any others in which it is nested can also be passed.
+**Page arguments** are automatically configured based on the [parameters](/refguide/page-parameter/) of the selected page and the available arguments. In general, arguments are taken from any enclosing data widget or the page itself.
 
 ### Call a Microflow {#call-microflow}
 
@@ -345,6 +346,10 @@ The following properties are specific for this event:
 * **Outcome** – Lists the outcomes of the selected [user task](/refguide/user-task/) and follows the selected outcome. If the user task has only one outcome, the **Default** is set as an outcome and the property cannot be edited. 
 * **Close page** – Specifies whether the current page should be closed.
 * **Commit** – Specifies whether the data container object should be committed when marking the task as completed.
+
+### Cancel Synchronization {#cancel-synchronization}
+
+The **Cancel synchronization** event cancels a running synchronization. You can trigger another synchronization later.
 
 ## Read More
 

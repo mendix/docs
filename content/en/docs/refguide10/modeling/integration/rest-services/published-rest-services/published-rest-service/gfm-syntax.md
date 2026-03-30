@@ -12,4 +12,4 @@ Several places in published REST services indicate that you can use [GitHub-flav
 
 This is especially useful in case you want to include JSON example payload in your rest documentation. To do this, add three backticks, `json`, the JSON structure, and three backticks to close the code, as illustrated in this example:
 
-{{< figure src="/attachments/refguide10/modeling/integration/published-rest-services/published-rest-service/gfm-syntax/snippet.png" class="no-border" >}}
+{{< figure src="/attachments/refguide10/modeling/integration/rest-services/gfm-syntax/snippet.png" class="no-border" >}}

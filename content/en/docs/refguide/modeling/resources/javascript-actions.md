@@ -1,7 +1,7 @@
 ---
 title: "JavaScript Actions"
 url: /refguide/javascript-actions/
-weight: 20
+weight: 30
 description: "This reference guide details the ways JavaScript Actions can extend the functionality of your Mendix app."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -12,7 +12,7 @@ This activity can only be used in **Nanoflows**.
 
 ## Introduction
 
-With JavaScript actions, you can extend your application's functionality in ways nanoflows alone cannot. To use a JavaScript action, call it from a nanoflow using the [JavaScript Action Call](/refguide/javascript-action-call/).
+With JavaScript actions, you can extend your application's functionality in ways nanoflows alone cannot. To use a JavaScript action, call it from a nanoflow using the [Call JavaScript Action](/refguide/call-javascript-action/) activity.
 
 {{% alert color="info" %}}
 
@@ -26,7 +26,7 @@ To learn how to create, configure, and use a JavaScript action, see these [Build
 
 ## General Settings
 
-After double-clicking a JavaScript action in your **App Explorer** you will see the JavaScript action's settings: 
+Double-click the JavaScript action in your **App Explorer** to open the action's settings: 
 
 {{< figure src="/attachments/refguide/modeling/resources/javascript-actions/javascript-action-settings-no-para.png" alt="javascript settings" width="600"  class="no-border" >}}
 
@@ -74,7 +74,7 @@ This setting handles the parameter's name. A name is required. Names must start 
 
 #### Category
 
-Use categories to keep parameters apart in a [JavaScript Action Call](/refguide/javascript-action-call/). Categories are useful for making logical groups of parameters when your app has several parameters. If you do not specify a category, the parameter will appear in the **Input** group.
+Use categories to keep parameters apart in a [Call JavaScript Action](/refguide/call-javascript-action/). Categories are useful for making logical groups of parameters when your app has several parameters. If you do not specify a category, the parameter will appear in the **Input** group.
 
 #### Description
 
@@ -201,8 +201,8 @@ export async function Hello(message) {
 
 ## Read More
 
-* [JavaScript Action Call](/refguide/javascript-action-call/)
+* [Call JavaScript Action](/refguide/call-javascript-action/)
 * [Nanoflows](/refguide/nanoflows/)
 * [Build JavaScript Actions](/howto/extensibility/build-javascript-actions/)
-* [Java Action Call](/refguide/java-action-call/)
-* [Microflow Call](/refguide/microflow-call/)
+* [Call Java Action](/refguide/call-java-action/)
+* [Call Microflow](/refguide/microflow-call/)

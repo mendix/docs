@@ -13,4 +13,4 @@ numberless_headings: true
 
 ## Continuing with the Next Tutorial
 
-To continue learning, see [Building a Responsive Web App](/quickstarts/responsive-web-app/).
+To continue learning, see [Building a Responsive Web App](/quickstarts/part1/).

@@ -3,9 +3,17 @@ title: "ATS Release Notes"
 linktitle: "ATS"
 url: /releasenotes/marketplace/ats/
 description: "The release notes for Mendix Application Test Suite (ATS) with details on new features, bug fixes, and known issues."
-weight: 15
+weight: 45
 numberless_headings: true
 ---
+
+## 3.0.3
+
+**Release date: February 9, 2026**
+
+### Fixes
+
+* We have fixed an issue that prevented execution logs from being deleted.
 
 ## 3.0.2
 

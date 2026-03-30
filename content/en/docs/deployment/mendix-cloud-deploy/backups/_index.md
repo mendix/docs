@@ -153,6 +153,7 @@ Where possible, application data is replicated to a secondary region in the same
 * Application data in the Cape Town region, including backups, is replicated to the Frankfurt region
 * Application data in the Jakarta region, including backups, is replicated to the Singapore region
 * Application data in the São Paulo region, including backups, is replicated to the N. Virginia region
+* Application data in the London region, including backups, is replicated to the Frankfurt region
 * Application data in the Seoul region, including backups, is replicated to the Singapore region
 * Application data in the Singapore region, including backups, is replicated to the Sydney region
 * Application data in the UAE region, including backups, is replicated to the Mumbai region

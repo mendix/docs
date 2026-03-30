@@ -83,11 +83,19 @@ The **Action** section of the properties pane shows the action associated with t
 
 ## Limitations {#limitations}
 
+### Parallel Synchronization
+
 Running multiple synchronization processes at the same time is not supported, regardless of the synchronization mode.
 
 If you try to trigger another synchronization process while the synchronization is in progress, the following error message will be shown: "Performing simultaneous synchronizations is not supported. Please try again after the current synchronization is completed."
 
 Such an error can be handled in the nanoflow from which the synchronization attempt was triggered using [error handlers](/refguide/error-handling-in-nanoflows/#errorhandlers-nano).
+
+### Background Synchronization {#background-sync}
+
+Avoid running synchronization processes in the background, such as scheduling periodic refreshes at fixed intervals. This approach can negatively impact application performance and may result in unclear or misleading error messages for users.
+
+Instead, trigger synchronization explicitly when data updates are required. Ensure that users are informed of the synchronization status by displaying progress indicators or relevant feedback during the process.
 
 ## Read More
 

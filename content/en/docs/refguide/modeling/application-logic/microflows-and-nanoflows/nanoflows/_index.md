@@ -28,7 +28,7 @@ The following activities interact with the database:
 
 * [Create object](/refguide/create-object/)
 * [Commit object(s)](/refguide/committing-objects/)
-* [Retrieve](/refguide/retrieve/)
+* [Retrieve object(s)](/refguide/retrieve-objects/)
 * [Rollback object](/refguide/rollback-object/)
 
 Therefore, the best practice is to use nanoflows in online applications when they do not contain the above activities.
@@ -150,7 +150,7 @@ Right-click anywhere in the nanoflow editor, or right-click a nanoflow in the **
     In the warning dialog, you have the following options:
 
     * **Convert**: The original nanoflow is removed, only replaceable usages are updated, and any non-replaceable usages remain as they are.
-    * **Find usages**: Stops the conversion and finds usages of the original nanoflow.
+    * **Show usages**: Stops the conversion and shows the irreplaceable usages of the original nanoflow.
     * **Cancel**: The conversion is cancelled and no changes are made.
 
 ## Canvas Interaction

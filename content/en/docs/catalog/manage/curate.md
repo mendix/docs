@@ -1,5 +1,5 @@
 ---
-title: "Curate Registered Assets"
+title: "Curating Registered Assets"
 url: /catalog/manage/curate/
 description: "Describes how to curate and enhance data assets in Catalog, and make them easier to find and understand."
 aliases:
@@ -25,9 +25,9 @@ Information that is added or changed during curation is stored in the Catalog fo
 
 ## Curate List {#curatelist}
 
-Owners and curators of registered assets can click **Curate** from the Catalog home page to see the curation list screen. This page provides an overview of all the registered assets you can curate as an owner under the **My Assets** tab. Curators will also see the **Company Assets** tab that lists all the registered assets:
+Owners and curators of registered assets can click **Curate** from the Catalog home page to see the curation list screen. This page provides an overview of all the registered assets you can curate as an owner under the **My Assets** tab. Curators will also see the **Company Assets** tab that lists all the registered assets.
 
-{{< figure src="/attachments/catalog/curate/curate-list.png" alt="curate list" class="no-border" >}}
+{{< figure src="/attachments/catalog/curate/curate-list.png" alt="List of company assets with filters settings" class="no-border" >}}
 
 These lists include registered service and also individual datasets that are exposed for the service.
 
@@ -63,15 +63,7 @@ When a dataset is selected, click **Edit the dataset** to do the following:
 
 The curate functions that are available for a selected service are to change **Service**, **Application**, and **Authentication** details This section describes the application details that can be changed: changing owners or changing the application icon.
 
-You can curate application details from the **Application** tab as follows:
-
-1. Click **Edit** > **Application** tab.
-
-    {{< figure src="/attachments/catalog/search/curation-option.png" alt="app edit screen" >}}
-
-2. The **Application** tab is displayed:
-
-    {{< figure src="/attachments/catalog/curate/edit-application.png" alt="app edit screen" >}}
+You can curate application details from the **Application** tab. To do that, click **Edit**, then go to the **Application** tab.
 
 ### Changing Owners of an App {#changing-owners}
 
@@ -130,9 +122,9 @@ When you want to upload a custom icon or image, the following apply:
 
 To **Upload a different icon** for the app, follow these steps:
 
-1. In the **Application** tab of the selected service, click **Upload a different icon** to display the **Upload Application Icon** pop up:
+1. In the **Application** tab of the selected service, click **Upload a different icon** to display the **Upload Application Icon** pop-up window.
 
-    {{< figure src="/attachments/catalog/curate/icon-upload-dialog.png" alt="upload icon"   width="300"  class="no-border" >}}
+    {{< figure src="/attachments/catalog/curate/icon-upload-dialog.png" alt="Upload icon dialog box"   width="300"  class="no-border" >}}
 
 2. Drag the image file into the upload area or click **Upload** to browse and select a file from your file system. Click **Step 2: Crop image** to proceed.
 3. Move the wire-frame to select an area of the loaded image and change the size of the wire-frame to crop the image to the area that you want to use. When you are satisfied, click **Apply Changes**.
@@ -141,11 +133,11 @@ To **Upload a different icon** for the app, follow these steps:
 
 4. A preview of the application icon is shown. Click **Save** to upload the selected icon.
 
-    {{< figure src="/attachments/catalog/curate/icon-preview.png" alt="upload icon"   width="300"  class="no-border" >}}
+    {{< figure src="/attachments/catalog/curate/icon-preview.png" alt="Preview of sample application icon"   width="300"  class="no-border" >}}
 
-5. The **Application** tab will now show the selected icon:
+5. The **Application** tab now displays the selected icon.
 
-    {{< figure src="/attachments/catalog/curate/asset-metadata-new-icon.png" alt="upload icon" class="no-border" >}}
+    {{< figure src="/attachments/catalog/curate/asset-metadata-new-icon.png" alt="" class="no-border" >}}
 
 6. Click **Save** to return to the Service details page. The custom icon will be stored in the **Icon Library**.
 
@@ -165,8 +157,8 @@ If a description was included in the contract, it will be displayed in the Servi
 
 To edit the asset metadata, follow these steps:
 
-1. On the **Curate** page, click **Edit** to display the Edit Service
-    {{< figure src="/attachments/catalog/curate/service-metadata-box.png" alt="service metadata" class="no-border" >}}
+1. On the **Curate** page, click **Edit** to display the Edit Service screen.
+    {{< figure src="/attachments/catalog/curate/service-metadata-box.png" alt="Data source description box" class="no-border" >}}
 
 2. The description from the service metadata is displayed in the **Description provided by the contract**. This cannot be changed, as it is part of the service definition. You can provide an alternative description in the **Description** box.
 
@@ -178,9 +170,9 @@ To edit the asset metadata, follow these steps:
 Add tags to categorize a registered service and provide additional means for finding the service. Tags that are specified for a service also apply to the datasets and attributes that are exposed in the service. Specify tags for the selected service by following these steps:
 
 1. On the Service details page of a selected service, click **Edit** to display the Edit Service screen.
-2. To add tags, click the empty **Tags** input area:
+2. To add tags, click the empty **Tags** input area.
 
-    {{< figure src="/attachments/catalog/curate/service-metadata-tags.png" alt="tags" class="no-border" >}}
+    {{< figure src="/attachments/catalog/curate/service-metadata-tags.png" alt="List of tag suggestions" class="no-border" >}}
 
 3. To add or edit the tags, enter a tag string and press <kbd>Enter</kbd> or select one from the list of existing tags that are used in the Catalog. To separate multiple tags, use spaces.
 

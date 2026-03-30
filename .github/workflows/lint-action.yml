@@ -53,9 +53,10 @@ jobs:
           body: |
             ${{ env.VER }}
           branch: lint-docs
-          committer: MarkvanMents <Mark.van.Ments@mendix.com>
-          assignees: MarkvanMents
-          reviewers: MarkvanMents
+          author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+          committer: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+          assignees: MarkvanMents,OlufunkeMoronfolu
+          reviewers: MarkvanMents,OlufunkeMoronfolu
           labels: Internal WIP
           add-paths: |
             content/en/docs/**/*.md

@@ -36,6 +36,12 @@ For details on the system requirements for MxBuild, see [System Requirements](/r
 The examples used in this document are for Windows, except when specifically mentioned otherwise.
 {{% /alert %}}
 
+{{% alert color="warning" %}}
+For MxBuild and macOS users:
+
+If you are using the macOS version of Studio Pro and you store your project files on an external drive not formatted using the Apple File System, macOS can generate hidden files and folders that can make Windows versions of Studio Pro or MxBuild not work as expected.
+{{% /alert %}}
+
 ## Command Line
 
 To build your package, specify the Mendix app file (*.mpr*) for which you want to build the deployment package (*.mda*) on the command-line. The file name may be preceded by a relative or absolute path. The app file should be located inside a Mendix app directory.
@@ -67,6 +73,7 @@ Command-line options are described in the table below:
 | `--generate-sbom` | Generates a Software Bill of Materials (SBOM) file as a part of the `package` and `deployment` targets. The SBOM will be included in the deployment package if this option is used and is saved under its default location: `deployment\sbom.json` |
 | `--sbom-output-path=VALUE` | The file path to generate a bill of material file for the `package` and `deployment` targets. Use `--output` for the `sbom` target (Default value: `deployment\sbom.json`). <br>This parameter is deprecated and will be removed in Mendix 11 and replaced with the `sbom` target.</br> |
 | `--gradle-home` | Sets the Gradle home directory. This can be used when auto-detection of the Gradle installation fails. | 
+| `--extra-gradle-arguments` | Adds extra arguments to the Gradle process (available for Studio Pro 10.23 and above). | 
 
 ### Options When Creating a Package
 

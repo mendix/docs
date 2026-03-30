@@ -209,4 +209,3 @@ Now, if you open you app on the **Main** branch, you should see the following:
 {{% alert color="info" %}}
 When you get a different output, the custom merge drive is not configured correctly. Abort the merge using the command `$git merge --abort` and close the Git command line tool before making changes to the configuration. Changes made to the configuration *config* and *.gitattributes* files are picked up by reopening the Git command line tool.
 {{% /alert %}}
-

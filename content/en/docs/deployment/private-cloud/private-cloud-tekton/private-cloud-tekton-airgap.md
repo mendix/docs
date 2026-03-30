@@ -1,24 +1,28 @@
 ---
-title: "Air-Gapped Installation of Tekton CI/CD for Mendix for Private Cloud"
+title: "Air-Gapped Installation of Tekton CI/CD for Mendix on Kubernetes"
 linktitle: "Air-Gapped Tekton Installation"
 url: /developerportal/deploy/private-cloud-tekton-airgapped/
-description: "Describes how to use Tekton to create a CI/CD solution for Mendix environments in the Private Cloud"
+description: "Describes how to use Tekton to create a CI/CD solution for Mendix environments in Mendix on Kubernetes"
 weight: 10
 ---
 
+{{% alert color="info" %}}
+Tekton pipelines for Mendix on Kubernetes Standalone are no longer available to new customers. Customers seeking Tekton pipeline support are advised to consider Private Mendix Platform, which includes Tekton pipeline support.
+{{% /alert %}}
+
 ## Introduction
 
-The instructions for setting up Tekton CI/CD for Mendix for Private Cloud differ between environments which are connected to the internet and air-gapped environments. 
+The instructions for setting up Tekton CI/CD for Mendix on Kubernetes differ between environments which are connected to the internet and air-gapped environments. 
 
 This document explains how to install the following on your **air-gapped** environment:
 
 * Tekton
 * Pipelines containing the appropriate tasks and steps to manage apps and environments
 
-After following the steps in this document you con continue with the instructions in [Installing Triggers](/developerportal/deploy/private-cloud-tekton/#installing-triggers) in the *CI/CD for Mendix for Private Cloud using Tekton* document.
+After following the steps in this document you con continue with the instructions in [Installing Triggers](/developerportal/deploy/private-cloud-tekton/#installing-triggers) in the *CI/CD for Mendix on Kubernetes using Tekton* document.
 
 {{% alert color="info" %}}
-Please read [CI/CD for Mendix for Private Cloud using Tekton](/developerportal/deploy/private-cloud-tekton/) first, using these instructions when asked to.
+Please read [CI/CD for Mendix on Kubernetes using Tekton](/developerportal/deploy/private-cloud-tekton/) first, using these instructions when asked to.
 
 All commands used in this document should be executed in a Bash (or bash-compatible) terminal.
 {{% /alert %}}
@@ -27,9 +31,12 @@ All commands used in this document should be executed in a Bash (or bash-compati
 
 To install Tekton and your CI/CD Pipeline in air-gapped environment you need to provision a list of images in your registry. Mendix has created a tool, **aip**, to perform this on different operating systems. You will need to download it using one of the following links:
 
-* [Aip for Mac (amd64)](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.2-macos-amd64.tar.gz)
-* [Aip for Windows](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.2-windows-amd64.zip)
-* [Aip for Linux (amd64)](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.2-linux-amd64.tar.gz)
+* [Aip for Mac (amd64)](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.5-macos-amd64.tar.gz)
+* [[Aip for Mac (arm64)]](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.5-macos-arm64.tar.gz)
+* [Aip for Windows (amd64)](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.5-windows-amd64.zip)
+* [Aip for Windows (arm64)](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.5-windows-arm64.zip)
+* [Aip for Linux (amd64)](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.5-linux-amd64.tar.gz)
+* [Aip for Linux (arm64)](https://cdn.mendix.com/mendix-for-private-cloud/airgapped-image-package/airgapped-image-package-0.0.5-linux-arm64.tar.gz)
 
 {{% alert color="info" %}}
 The following steps in this section must be done in an environment which has internet access.
@@ -210,7 +217,7 @@ helm install -n $NAMESPACE_WITH_PIPELINES mx-tekton-pipeline ./pipeline/ \
 
 ## Installing Triggers{#installing-triggers}
 
-After following the steps in this document you con continue with the instructions in [Installing Triggers](/developerportal/deploy/private-cloud-tekton/#installing-triggers) in the *CI/CD for Mendix for Private Cloud using Tekton* document. The remaining instructions are the same for both air-gapped and connected environments.
+After following the steps in this document you con continue with the instructions in [Installing Triggers](/developerportal/deploy/private-cloud-tekton/#installing-triggers) in the *CI/CD for Mendix on Kubernetes using Tekton* document. The remaining instructions are the same for both air-gapped and connected environments.
 
 ## Troubleshooting{#troubleshooting}
 

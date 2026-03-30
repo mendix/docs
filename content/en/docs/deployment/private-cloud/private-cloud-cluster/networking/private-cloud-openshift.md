@@ -1,8 +1,8 @@
 ---
-title: "OpenShift Route in Mendix for Private Cloud"
+title: "OpenShift Route in Mendix on Kubernetes"
 linktitle: "OpenShift Route"
 url: /developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/openshift/
-description: "Describes how to configure OpenShift routes for Mendix for Private Cloud."
+description: "Describes how to configure OpenShift routes for Mendix on Kubernetes."
 weight: 20
 ---
 

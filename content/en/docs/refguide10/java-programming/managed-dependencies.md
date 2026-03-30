@@ -64,9 +64,13 @@ Exclusions are identified through their [Maven naming convention](https://maven.
 
 ## Dependency Synchronization {#dependency-synchronization}
 
-When a change is made to a specified dependency, for example, the dependency is removed or the module is updated from the Marketplace, dependency synchronization will automatically run in the background.
+When a change is made to a specified dependency, for example, the dependency is removed or the module is updated from the Marketplace, dependency synchronization will automatically run in the background. Dependency synchronization will also run every time you open your app in Studio Pro.
 
-Dependency synchronization also occurs when you open your app in Studio Pro.
+{{% alert color="info" %}}
+Each time dependency synchronization is run, Studio Pro retrieves the latest compatible versions of all managed dependencies. If a package receives frequent patches, this can result in regular updates if no exact version is specified. Since each update must be committed to version control, this may lead to a high volume of commits over time.
+
+To reduce the frequency of updates and associated version control commits, you can configure your managed dependencies to use exact version numbers. This prevents automatic updates during dependency synchronization and helps maintain a more stable and predictable build environment. You can read about gradle's version ranges on [gradle.org](https://docs.gradle.org/current/userguide/dependency_versions.html)
+{{% /alert %}}
 
 You can trigger a manual synchronization in the menu **App** > **Synchronize dependencies**. You may want to do this, for example, when synchronization failed due to connectivity issues.
 
@@ -90,15 +94,23 @@ Platform-supported Marketplace modules created by Mendix have been updated with 
 
 By default, dependencies are downloaded from the [Maven Central](https://central.sonatype.com/) repository. In some scenarios, you may want to specify a custom location. For example, if your organization has its own repository to cache downloads or as an alternative if internet access is restricted in an air-gapped setup.
 
-Custom repositories are configured in the **Repositories** setting of the **Deployment** tab in the [Preferences](/refguide10/preferences-dialog/) dialog box. This setting uses the same syntax as Gradle. For internal usage of the platform, some dependencies are required which are also resolved using the configured repositories. For example:
+Custom repositories are configured in the **Repositories** setting of the **Deployment** tab in the [Preferences](/refguide10/preferences-dialog/) dialog box. This setting uses the same syntax as Gradle. To configure a custom repository server that is accessible via URL, use the following configuration (credentials are optional):
 
 ```groovy
 maven {
-    url '{url to your custom remote repository}'
+    url 'url to your custom remote repository'
        credentials {
         username 'user'
         password 'password'
     }
+}
+```
+
+To configure a local directory to serve the required JAR files, use the following configuration:
+
+```groovy
+flatDir {
+    dirs 'local path of folder that contains jar files'
 }
 ```
 
@@ -124,7 +136,7 @@ For more details, refer to the Gradle documentation on [Declaring repositories](
 
 There are some dependencies that are required by Mendix. These need to be added to your configured repository. Below is a list of these dependencies:
 
-* The Gradle plugin [cyclonedx-gradle-plugin](https://github.com/CycloneDX/cyclonedx-gradle-plugin), which generates a Software Bill of Materials (SBoM) required in certain contexts
+* The Gradle plugin [cyclonedx-gradle-plugin](https://github.com/CycloneDX/cyclonedx-gradle-plugin), which generates a Software Bill of Materials (SBOM) required in certain contexts
 
 ## Proxy Settings{#proxy-settings}
 

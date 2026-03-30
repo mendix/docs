@@ -12,7 +12,7 @@ The Mendix Client runs on the end-user's device and serves as the interface betw
 The above description of the Mendix Client is based on using the Runtime Server of an app running in the cloud. You can also run Mendix locally for testing, which works in a conceptually similar way.
 
 {{% alert color="info" %}}
-There is an alternative version of the Mendix Client written in React. This is currently a [beta](/releasenotes/beta-features/). You can enable this React client in [App Settings](/refguide/app-settings/#react-client).
+The Mendix Client has transitioned to a modern implementation using React. In Mendix 11.0 and above, the React Client is the default for new applications and the legacy Dojo Client is deprecated.
 
 The React client replaces [Dojo](https://dojotoolkit.org/) with [React](https://react.dev/) for the view layer. This means that widgets based on Dojo will no longer work. You will get consistency errors if your app contains Dojo widgets, or you can choose **Migration mode** which will allow you to build your app but will replace incompatible widgets with a placeholder.
 
@@ -121,6 +121,10 @@ Firstly, during deployment, all microflows “reachable” from the client are a
 
 This analysis is done based on the microflow parameters and their usages throughout the microflow. Any time an association is used in the microflow, the association is marked, and will also be sent in the request if needed. In some cases, such as Java actions, the analysis is not done as it would be too performance heavy. In that case, all objects associated with the microflow parameters will be sent.
 
+{{% alert color="warning" %}}
+When an object is retrieved in a Java Action or in a microflow that was called dynamically in a Java Action, it is not part of the analyzed state and changes made in the client are not applied. This mainly occurs when objects associated with the current user or session object are updated in the client and are subsequently retrieved from the database in a Java Action. Commit changes to these kinds of objects before calling the Java Action when issue arise from this.
+{{% /alert %}}
+
 Secondly, for other (non-microflow) actions such as committing or deleting objects, a simpler analysis is performed on the client side to determine which associations should be included in the request.
 
 For more detailed information about state, see this blog: [https://www.mendix.com/blog/the-art-of-state-part-1-introduction-to-the-client-state/](https://www.mendix.com/blog/the-art-of-state-part-1-introduction-to-the-client-state/). This also includes a worked example where you can see, and duplicate for yourself, how state is passed to the Runtime Server.
@@ -215,6 +219,10 @@ When the end-user launches an app in the browser, it triggers the following flow
     The Mendix Client is now ready to start interacting with the end-user.
 
 ##### Dojo Client
+
+{{% alert color="warning" %}}
+In Mendix 11.0 and above, the Dojo Client is deprecated.
+{{% /alert %}}
     
 The Mendix Dojo Client, which is not built entirely using React, will repeat the following steps for as long as the end-user’s session continues.
 
@@ -227,7 +235,7 @@ The Mendix Dojo Client, which is not built entirely using React, will repeat the
 
 ##### React Client
 
-The React client works differently than the Dojo client.
+The React client is the default client used for new applications created with Mendix 11.0 and above, and it works differently than the Dojo client.
 
 During the build process, Studio Pro exports JavaScript files containing JavaScript and React components into the `pages`, `layouts` and `nanoflows` folders. The contents of those folders are bundled into the `dist` folder using [Rollup](https://rollupjs.org/), which generates *chunks*.
 
@@ -263,7 +271,7 @@ When the Mendix client is running, it sets a number of technical cookies to reco
 | **XASSESSIONID**² | Runtime | Holds the ID of the user's session | `/` | 1 year for offline sessions¹, otherwise based on the session timeout |  `true` | 
 | **useAuthToken** | Runtime | Lets the runtime know whether to generate an authtoken or not | `/` | until the end-user closes their browser (session cookie) |  `true` | 
 | **authtoken** | Runtime | Used to hold the authentication token | `/` | until the authentication token expires |  `true` | 
-| **clear_cache** | Runtime | Instructs the client to clear the cached session data whenever a new end-user signs in to an offline application. If the client is not directly used for the sign-in functionality, you can use the newly added Java API, [addSessionCookies](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/m2ee/api/IMxRuntimeResponse.html#addSessionCookies), which sets all necessary cookies related to the session. | `/` | until client starts or end-user closes their browser | `false`³ | 
+| **clear_cache** | Runtime | Instructs the client to clear the cached session data whenever a new end-user signs in to an offline application. If the client is not directly used for the sign-in functionality, you can use the newly added Java API, [addSessionCookies](https://apidocs.rnd.mendix.com/11/runtime/com/mendix/m2ee/api/IMxRuntimeResponse.html#addSessionCookies), which sets all necessary cookies related to the session. | `/` | until client starts or end-user closes their browser | `false`³ | 
 
 ¹*Offline sessions* are sessions created for users using an offline or native mobile [navigation profile](/refguide/navigation/#profiles).
 

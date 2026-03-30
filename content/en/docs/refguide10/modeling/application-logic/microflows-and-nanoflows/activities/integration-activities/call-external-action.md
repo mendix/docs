@@ -69,7 +69,7 @@ In the **Documentation** tab, you can find a **Summary** and a **Description**. 
 
 The **Edit External Action Parameter Mapping** dialog allows you to set the value of the parameter you pass to an external action. You can either select a **Variable** from the dropdown field, or write a custom [microflow expression](/refguide10/expressions/) that returns a value of the expected type.
 
-Every parameter must have a value specified. When **Can be empty** is true, the selected variable or expression may evaluate to `empty`. When the value cannot be empty, the microflow will throw an error if the value evaluates to `empty`.
+Every parameter must have a value specified. When the service indicates that a value cannot be empty (with `Nullable="false"`), the microflow will throw an error if the value evaluates to `empty`.
 
 If you have selected a variable for an entity that has associations, you can select which associations you want to include in the arguments that you call the external action with.
 

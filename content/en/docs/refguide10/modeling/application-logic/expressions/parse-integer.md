@@ -9,7 +9,7 @@ description: "Describes the function for parsing integer from strings in Mendix.
 
 This document describes the function that converts a string to a value that is of data type [Integer/Long](/refguide10/data-types/#integer-long).
 
-## parseInteger
+## `parseInteger`
 
 Takes a string and parses it to an Integer/Long.
 

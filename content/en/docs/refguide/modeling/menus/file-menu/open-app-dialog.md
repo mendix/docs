@@ -26,7 +26,7 @@ Apps can be located on the Team Server, on another Git server, or on the local d
 
 ### Selecting an App {#select-app}
 
-You can select an app from the list of your apps. Once you have selected an app, you can either choose a [branch line](/refguide/version-control/#branches) that you would like to open or click **Open in Studio Pro** and the branch that is indicated in the **Current Branch** column will open:
+You can select an app from the list of your apps. Once you have selected an app, you can either choose a [branch line](/refguide/version-control/glossary/#branches) that you would like to open or click **Open in Studio Pro** and the branch that is indicated in the **Current Branch** column will open:
 
 {{< figure src="/attachments/refguide/modeling/menus/file-menu/open-app-dialog/select-app.png" class="no-border" width="700" >}}
 
@@ -50,6 +50,10 @@ Clicking **Preferences** opens a dialog box with a subset of the preferences you
 * Default Page Editor
 * Rendering
 * [Clone type](/refguide/preferences-dialog/#clone)
+
+### Open Studio Pro
+
+Open the full Studio Pro IDE directly by clicking **Open Studio Pro** without selecting or creating an app. This gives you immediate access to development tools such as the Log Directory and the **Preferences** dialog.
 
 ## Read More
 

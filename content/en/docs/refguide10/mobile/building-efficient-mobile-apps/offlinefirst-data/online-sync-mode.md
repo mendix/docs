@@ -5,7 +5,6 @@ description: "Describes the online sync mode, which allows entities to be used i
 no_list: false
 description_list: true 
 weight: 20
-beta: true
 aliases:
     - /refguide10/mobile/using-mobile-capabilities/offlinefirst-data/online-sync-mode/
 ---
@@ -14,17 +13,9 @@ aliases:
 
 Introduced Mendix 10.19, the online synchronization mode allows entities to be used in offline navigation profiles without requiring data synchronization. When online entities are used in offline pages, then they require a connection to the server before the data can be shown. This allows apps to be partially offline instead of either fully offline or fully online.
 
-{{% alert color="warning" %}}
-This feature is currently in beta. It needs to be explicitly enabled (see below). This feature may change in the future and may not yet work completely as expected.
-{{% /alert %}}
-
 Creating offline-first apps enhances user experience by enabling mobile app usage without connectivity. However, offline-first apps often demand more effort to design and maintain due to the complexity of synchronization. At the same time, not all parts of an application benefit equally from offline accessibility. By incorporating online data in offline-first apps, you can define which parts of your application can function offline and which require an online connection. This approach can streamline development while maintaining a high user experience and essential offline capabilities.
 
 ## Using Online Sync Mode
-
-### Enabling the Feature
-
-It requires to be explicitly enabled via the "Edit" menu -> "Preferences" item -> "New features" tab -> "Offline" section.
 
 ### Configuring Entities to Have Online Sync Mode
 
@@ -44,13 +35,11 @@ Online entities can specialize from Offline entities and vice versa. However, wh
 
 ### Associations Between Offline and Online Entities
 
-Associations from offline entities to online entities are allowed. 
-
-Associations from online entities to offline entities are prohibited.
+The use of associations between online and offline (and vice-versa) in XPath constraints in pages and nanoflows reachable from an offline profile are prohibited. This applies both the XPath constrains on offline entities as on online entities. For offline entities, this is technically impossible (the associated online data is not available in the offline database). For online entities this is prohibited as the offline data may be different then the server side version of the data, which may lead to inconsistent and unexpected results.
 
 ### Microflows
 
-Using microflows on pages used from an offline navigation profile is allowed. However, calling a microflow from a nanoflow with an online entity as parameter or return value is prohibited. This is a temporary limitation which we expect to lift soon.
+Associations from online entities to offline entities are set to read-only when loaded from an offline profile. This is done to prevent issues while saving or executing microflows when an online entity instance is getting associated to a yet unsynchronized, newly instantiated, offline entity instance.
 
 ## Best Practices
 

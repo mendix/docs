@@ -34,7 +34,7 @@ description: "Native Template 7 release notes."
 
 **Release date: December 23, 2024**
 
-* We updated **min sdk** to 23 on android.
+* We updated minSDK to 23 on android.
 
 ## 7.0.19 {#719}
 

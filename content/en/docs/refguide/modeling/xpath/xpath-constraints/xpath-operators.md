@@ -5,7 +5,7 @@ url: /refguide/xpath-operators/
 
 ## For XPath Query Constraints
 
-The following operators can be used in XPath query constraints, both in Studio Pro and in Java code:
+The following operators can be used in XPath query constraints, both in Mendix Studio Pro and in Java code:
 
 | Operator | Description | Example | Return value |
 | --- | --- | --- | --- |
@@ -18,9 +18,13 @@ The following operators can be used in XPath query constraints, both in Studio P
 | `or` | Or | `price = 9.80 or price = 9.70` | true if price is 9.80, false if price is 9.60 |
 | `and` | And | `price = 9.80 and amount = 1` | true if price is 9.80 and amount is 1, false if price is 9.70 and amount is 1, false if price is 9.80 and amount is 2, false if price is 9.70 and amount is 2 |
 
-## For Java Code
+## Mathematical operators
 
-Additionally, the following operators are supported in Java code only:
+In Studio Pro, mathematical operators can be used in XPath constraints that are defined in the model such as the [Retrieve object(s)](/refguide/retrieve-objects/) microflow activity or access rule [constraints](/refguide/access-rules/#xpath-constraints).
+
+Mathematical operators are not allowed in queries that come from the client. For example, they cannot be used in [widgets](/appstore/widgets/).
+
+The following mathematical operators are supported:
 
 | Operator | Description | Example | Return value |
 | --- | --- | --- | --- |
@@ -28,6 +32,14 @@ Additionally, the following operators are supported in Java code only:
 | `-` | Subtraction | `6 - 4` | 2 |
 | `*` | Multiplication | `6 * 4` | 24 |
 | `div` | Division | `8 div 4` | 2 |
+
+ In Java code, mathematical operators are disabled by default for the `XPathQuery` API, but can be enabled using the `allowMathOperators` method. For example:
+
+```java
+Core.createXPathQuery("//Module.Entity[attr1 + attr2 = 42]")
+    .allowMathOperators(true)
+    .execute(context);
+```
 
 ## Operator Behavior
 

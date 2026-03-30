@@ -35,10 +35,11 @@ This module contains a powerful set of widgets and nanoflow actions created for 
 * [Download from the Mendix Marketplace](https://marketplace.mendix.com/link/component/109513)
 * [GitHub Repository](https://github.com/mendix/native-widgets)
 
+|    | |
 | --------------- | ------------------------------ |
-| 9.*             | 10.17 and above                |
+| 9.*| 10.17 and above                |
 | 8.*             | 10.13 - 10.16                  |
-| 7.*             | 10.12                          |
+| 7.*| 10.12                          |
 | 6.*             | 10.6 - 10.11                   |
 | 5.*             | 10 - 10.5                      |
 

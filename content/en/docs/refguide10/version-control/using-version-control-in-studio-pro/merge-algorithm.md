@@ -13,7 +13,7 @@ aliases:
 
 ## Introduction
 
-While working on your changes you may find that your local copy of the app model does not have all the changes that other team members have [committed](/refguide10/commit-dialog/) to the server (the [Mendix Team Server](/developerportal/general/team-server/), or an [on-premises server](/refguide10/on-premises-git/)). In Git terminology this is called being behind.
+While working on your changes you may find that your local copy of the app model does not have all the changes that other team members have [committed](/refguide10/commit-dialog/) to the server (the [Mendix Team Server](/developerportal/repository/team-server/), or an [on-premises server](/refguide10/on-premises-git/)). In Git terminology this is called being behind.
 
 When this happens, Mendix Studio Pro offers two ways to combine your changes with changes from the server: [Rebase](#rebase) and [Merge commit](#merge). 
 
@@ -113,6 +113,7 @@ Your work is now labelled *Theirs*, while the server changes are labelled *Mine*
 
 When merge conflicts are automatically resolved, Studio Pro adds a **#Conflicts** tag to the commit message. The **#Conflicts** tag in Studio Pro serves as a smart indicator, highlighting files that encountered conflicts during the rebase process. This feature is particularly valuable as it maintains a record of auto-merged conflicts, giving developers clear insight into the merge history.
 Key benefits of this approach are the following:
+
 * Transparency – It clearly shows which files required conflict resolution.
 * Efficiency – Auto-merging saves time while still flagging areas for review.
 * Traceability – It maintains conflict history to support code reviews and troubleshooting.

@@ -13,7 +13,7 @@ Typically, these commands require a path to the *.mpr* file as a parameter.
 
 ## mx create-project Command {#create-project}
 
-The `mx create-project` command creates a new app in Studio Pro. The app version depends on the version the tool was bundled with. For example, if you are using the mx tool for Studio Pro 10.0.0, `mx create project` will create a new app in that version. 
+The `mx create-project` command creates a new app in Studio Pro. The app version depends on the version the tool was bundled with. For example, if you are using the mx tool for Studio Pro 11.0.0, `mx create project` will create a new app in that version. 
 
 ### Usage
 
@@ -21,13 +21,14 @@ Use the following command pattern: `mx create-project [OPTIONS] [TEMPLATE-MPK-FI
 
 These are the `OPTIONS`:
 
-| Option | Default Value | Result |
-| --- | --- | --- |
-| `--app-name` | App | Assigns the specified app name to the app. |
-| `--help` | | Shows help for the `mx create-project` command and exits.|
-| `--language-code` | en_US | The default language of the app. | 
-| `--output-dir` | Current directory | The directory in which to create the app. |
-| `--sprintr-app-id` | Optional | Associates the app [feedback features](/developerportal/app-insights/feedback/) with the provided [app](/developerportal/#my-apps) in **Apps**. The value is a GUID. When accessing the app in [Apps](https://sprintr.home.mendix.com/), this ID can be found in the browser's URL (for example, `1a428ea7-b00e-4166-9b23-20b7be88a40e`). |
+| Option                 | Default Value     | Result                                                                                                                                                                                                                                                                                                                                    |
+|------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `--app-name`           | App               | Assigns the specified app name to the app.                                                                                                                                                                                                                                                                                                |
+| `--help`               |                   | Shows help for the `mx create-project` command and exits.                                                                                                                                                                                                                                                                                 |
+| `--language-code`      | en_US             | The default language of the app.                                                                                                                                                                                                                                                                                                          |
+| `--use-mpr-format-v1`  | MPRv2          | If specified, the app is created in MPRv1 format (otherwise, with MPRv2).                                                                                                                                                                                                                                                                  |
+| `--output-dir`         | Current directory | The directory in which to create the app.                                                                                                                                                                                                                                                                                                 |
+| `--sprintr-app-id`     | Optional          | Associates the app [feedback features](/developerportal/app-insights/feedback/) with the provided [app](/developerportal/#my-apps) in **Apps**. The value is a GUID. When accessing the app in [Apps](https://sprintr.home.mendix.com/), this ID can be found in the browser's URL (for example, `1a428ea7-b00e-4166-9b23-20b7be88a40e`). |
 
 `TEMPLATE-MPK-FILE` is an optional path to a Mendix app package *.mpk* file. If this argument is omitted, the app is created with a default empty project template.
 
@@ -94,11 +95,7 @@ These are the return codes:
 
 ## mx show-java-version Command{#show-java-version}
 
-{{% alert color="info" %}}
-This command is available from 10.14 onwards and in MTS versions 10.6.12+ and 10.12.2+.
-{{% /alert %}}
-
-The `mx show-java-version` command reports what the configured Java version of the app is.
+{The `mx show-java-version` command reports what the configured Java version of the app is.
 
 The input is a single MPR file.
 
@@ -133,7 +130,7 @@ Return codes are described in the table below:
 
 ## mx convert Command {#convert}
 
-The `mx convert` command converts the *.mpk* file (or files) of the app (or apps) to a specific Studio Pro version. For example, if you are using the mx command-line tool for Studio Pro 10.0.0, `mx convert` will convert the app to that version. 
+The `mx convert` command converts the *.mpk* file (or files) of the app (or apps) to a specific Studio Pro version. For example, if you are using the mx command-line tool for Studio Pro 11.0.0, `mx convert` will convert the app to that version. 
 
 The input can be a single file, directory, or multiple files.
 
@@ -251,6 +248,10 @@ For example:
 The `mx translate` command allows you to export and import all translatable texts included in your Mendix application.
 This command is currently in public beta.
 
+{{% alert color="warning" %}}
+A limitation of this command is that the default behavior is to exclude Marketplace modules from the exported texts. When they are updated, the texts from a previous export will not be imported correctly. Your translations will also be lost when importing a new version of a Marketplace module.
+{{% /alert %}}
+
 {{% alert color="info" %}}
 The *.mpr* file must be the same version as the mx tool.
 {{% /alert %}}
@@ -279,6 +280,7 @@ These are the `OPTIONS`:
 | --- | --- | --- |
 | `--force-import`  | `-f` | Accepts some warnings and errors and tries to continue the import process. |
 | `--loose-version-check`  | `-l` | Converts the project to the version of the mx.exe, if it is a different version. |
+| `--include-marketplace-modules` | `-m` | By default, the export does not include Marketplace modules. Adding this option will include them in the output. |
 
 {{% alert color="info" %}}
 Errors in the *.mpr* are always reported.
@@ -303,3 +305,39 @@ These are the return codes:
 | `0` | No issues found. |
 | `100` | Validation error on the input. |
 | `300` | Exception, something went wrong. |
+
+## mx sync-java-dependencies Command {#java-dependencies}
+
+The `mx sync-java-dependencies` command synchronizes the managed Java dependencies that are configured in the modules of the project.
+This results in the corresponding .*jar* files being added to the `vendorlib` directory in the project root.
+
+The input is a single .*mpr* file.
+
+{{% alert color="info" %}}
+The .*mpr* file must be the same version as mx.
+{{% /alert %}}
+
+### Usage
+
+Use the following command pattern for `mx sync-java-dependencies`:
+
+`mx sync-java-dependencies INPUT`
+
+For `INPUT`, enter an *.mpr* file.
+
+### Examples
+
+These are example commands:
+
+| Example | Result |
+| --- | --- |
+| `mx sync-java-dependencies C:\Mendix\App1\App1.mpr` | Synchronizes the managed Java dependencies of the project. |
+
+### Return Codes
+
+These are the return codes:
+
+| Return Code | Description |
+| --- | --- |
+| 0 | The command ran successfully. |
+| 1 | The command failed. For example, because the *.mpr* file could not be found. |

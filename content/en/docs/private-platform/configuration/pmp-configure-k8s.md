@@ -31,7 +31,7 @@ Finally, you must also [register your Kubernetes cluster](#register-cluster).
 
 ### Obtaining and Configuring the CA Certificate {#ca-certificate}
 
-Most Kubernetes cluster API servers use self-signed certificates. In order to access the API server from Private Mendix Platform, you must add its CA certificate to the operator configuration of the namespace where Private Mendix Platform is installed. For more information, see [Creating a Private Cloud Cluster: Custom TLS](/developerportal/deploy/standard-operator/#custom-tls).
+Most Kubernetes cluster API servers use self-signed certificates. In order to access the API server from Private Mendix Platform, you must add its CA certificate to the operator configuration of the namespace where Private Mendix Platform is installed. For more information, see [Creating a Mendix on Kubernetes Cluster: Custom TLS](/developerportal/deploy/standard-operator/#custom-tls).
 
 You can obtain the CA certificate by running the following commands:
 
@@ -432,7 +432,7 @@ Before creating any environments, you must register your Kubernetes clusters by 
 
 4. Click **Save**.
 
-5. Click the newly created cluster and expand it, and then click **Retrieve Namespace(s)** to retrieve all the namespace and storage plans. 
+5. Click the newly created cluster and expand it, and then click **Retrieve Namespace(s)** to retrieve all the namespace and storage plans, or **Manually Register Namespace**. 
     
     Namespaces without any storage plan are skipped. This step requires the Mendix Operator to be installed and configured. You can repeat this step as required to retrieve additional namespaces.
 

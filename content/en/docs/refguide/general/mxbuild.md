@@ -7,7 +7,7 @@ description: "Describes MxBuild, which is a command-line tool for building and d
 
 ## Introduction
 
-MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package from a Mendix app.
+MxBuild is a Windows, Linux, and macOS command-line tool that can be used to build a Mendix Deployment Package from a Mendix app.
 
 The version of MxBuild you need depends on the version of the Mendix model you would like to build, as well as the host operating system you would like to use.
 
@@ -15,14 +15,13 @@ The table below can help you find the correct MxBuild. Copy a URL from the corre
 
 | Operating System | Mendix Version               | URL                                                          |
 | ---------------- | ---------------------------- | ------------------------------------------------------------ |
-| Linux (x64)      | All versions                 | `https://cdn.mendix.com/runtime/mxbuild-{mxversion}.tar.gz`  |
-| Windows (x64)    | All version of Studio Pro 10 | `https://cdn.mendix.com/runtime/win-mxbuild-{mxversion}.tar.gz` |
+| Linux (x64)      | All                          | `https://cdn.mendix.com/runtime/mxbuild-{mxversion}.tar.gz`  |
+| Windows (x64)    | 11                           | `https://cdn.mendix.com/runtime/win-mxbuild-{mxversion}.tar.gz` |
 
 {{% alert color="info" %}}
+In Mendix version 11.5.0 and above, `{mxversion}` follows a SemVer pattern `major.minor.patch` with the occasional pre-release suffix (for example, `11.5.0` or `11.6.0-beta.1` for planned pre-releases).
 
-A build number is included in the version, which has to be included in the link path mentioned above (for example, `10.0.0.9976` is the 9976 build of the 10.0.0 Studio Pro release).
-
-You can find the build number in path of your Mendix installation (for example, if your installation looks like this `C:\Program Files\Mendix\10.0.0.9976`, use this URL to get your files: [https://cdn.mendix.com/runtime/mxbuild-10.0.0.9976.tar.gz](https://cdn.mendix.com/runtime/mxbuild-10.0.0.9976.tar.gz)).
+In Mendix versions below 11.5.0, a build number is included in the version, which has to be included in `{mxversion}` in the link path mentioned above (for example, `11.0.0.73100` is the 73100 build of the 11.0.0 Studio Pro release). You can find the build number in the path of your Mendix installation (for example, if your installation looks like this `C:\Program Files\Mendix\11.0.0.73100`, use this URL to get your files: [https://cdn.mendix.com/runtime/mxbuild-11.0.0.73100.tar.gz](https://cdn.mendix.com/runtime/mxbuild-11.0.0.73100.tar.gz)).
 
 Any public version of Studio Pro in this [Studio Pro Releases List](https://marketplace.mendix.com/link/studiopro/) will allow you to download MxBuild files. If you experience trouble downloading files, make sure your build is listed there.
 
@@ -34,6 +33,14 @@ For details on the system requirements for MxBuild, see [System Requirements](/r
 
 {{% alert color="info" %}}
 The examples used in this document are for Windows, except when specifically mentioned otherwise.
+{{% /alert %}}
+
+On macOS, the MxBuild tool is distributed only within the `StudioPro.app` bundle. The Studio Pro installer automatically creates a symlink in `/usr/local/bin` with the format `mxbuild{mxversion}` (for example, `mxbuild11.0.0`), where `{mxversion}` does not include the build number. This symlink points to the `mxbuild` executable inside the app bundle, making it accessible from the command-line.
+
+{{% alert color="warning" %}}
+For MxBuild and macOS users:
+
+If you are using the macOS version of Studio Pro and you store your project files on an external drive not formatted using the Apple File System, macOS can generate hidden files and folders that can make Windows versions of Studio Pro or MxBuild not work as expected.
 {{% /alert %}}
 
 ## Command Line
@@ -66,7 +73,8 @@ Command-line options are described in the table below:
 | `--write-errors=FILENAME` | Writes all errors, warnings, and deprecations encountered during deployment of the app to the specified file in JSON format.<br />This file is only written when the app contains errors.<br />If the file already exists, it will be overwritten without a warning.<br />For a description of the format of this file, see the [App Errors](#app-errors) section below. |
 | `--generate-sbom` | Generates a Software Bill of Materials (SBOM) file as a part of the `package` and `deployment` targets. The SBOM will be included in the deployment package if this option is used and is saved under its default location: `deployment\sbom.json` |
 | `--sbom-output-path=VALUE` | The file path to generate a bill of material file for the `package` and `deployment` targets. Use `--output` for the `sbom` target (Default value: `deployment\sbom.json`). <br>This parameter is deprecated and will be removed in Mendix 11 and replaced with the `sbom` target.</br> |
-| `--gradle-home` | Sets the Gradle home directory. This can be used when auto-detection of the Gradle installation fails. | 
+| `--gradle-home` | Sets the Gradle home directory. This can be used when auto-detection of the Gradle installation fails. |
+| `--extra-gradle-arguments` | Adds extra arguments to the Gradle process. |
 
 ### Options When Creating a Package
 

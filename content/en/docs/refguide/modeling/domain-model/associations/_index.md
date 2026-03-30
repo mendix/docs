@@ -77,20 +77,24 @@ Your mouse pointer should not activate a white dot. This indicates the creation 
 
 ### Reverse the Association Direction
 
-In Mendix 10.3.0 and above, you can reverse an association direction by right-clicking the association and selecting **Reverse direction**.
+You can reverse an association direction by right-clicking the association and selecting **Reverse direction**.
+
+{{% alert color="warning" %}}
+Reversing the association in the domain model will result in the loss of existing association links between objects, but the objects themselves will not be deleted.
+{{% /alert %}}
 
 Reversing the direction of an association creates a new association structure and exchanges the ownership of the association. It will also change the name of the association to reflect this change. This means you need to change how you access the associated entities.
 
 For example, say you have a (`1-*`) **Order_Customer** association, meaning one `Customer` object is associated with multiple `Order` objects so a customer can have multiple orders, but an order can only have one customer. When you reverse the association direction, it will be changed to (`*-1`) **Customer_Order**, indicating that one `Order` object is associated with multiple `Customer` objects so an order can have multiple customers, but a customer can only have one order.
 
-In cases of bidirectional associations, such as many-to-many or one-to-one associations, where both entities refer to each other mutually, reversing the association has no significant impact on the association itself because both entities are owners.
+In cases of bidirectional associations, such as many-to-many or one-to-one associations, where both entities refer to each other mutually, reversing the association is not needed because both entities are owners. If you want to change the name, it is better to rename the association as reversing the association will lose existing associations between objects.
 
-In all cases, you should change how you access data, using the new association name to be able to access the associated entities.
+In all cases, you should change how you access data, using the new association name to be able to access the associated entities. However the existing attribute data in the objects (the `Order` and `Customer` objects in the following example), is not affected. 
 
 {{< figure src="/attachments/refguide/modeling/domain-model/associations/reverse-association-direction.png" class="no-border" >}}
 
-{{% alert color="warning" %}}
-Reversing the association will result in the loss of existing associations, but the objects themselves (the `Order` and `Customer` objects in the above example) will not be deleted.
+{{% alert color="info" %}}
+It is possible to have direct associations. If you reverse these, the new associations will be created using association tables.
 {{% /alert %}}
 
 ## Association Examples {#examples}

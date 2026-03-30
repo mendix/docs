@@ -24,7 +24,7 @@ Team Server is implemented using Subversion and Mendix Studio Pro uses the HTTPS
 * The HTTP port (TCP 80) needs to be open
 * WebDAV (verbs within the HTTP protocol) needs to be enabled on any proxy server
 
-Mendix Studio Pro connects to `https://teamserver.sprintr.com/` and with the domains shown in the diagram below over HTTPS on port 443. These domains should be added to the firewall white list:
+Mendix Studio Pro connects to `https://teamserver.sprintr.com/` and with the domains shown in the diagram below over HTTPS on port 443. These domains should be added to the firewall safe list:
 
 {{< figure src="/attachments/howto8/collaboration-requirements-management/troubleshoot-network-issues-for-team-server/networkaccessmendixplatform.jpg" alt="Domains home.mendix.com, cloud.mendix.com, and teamserver.sprintr.com need to be accessible on port 443 from your network" class="no-border" >}}
 

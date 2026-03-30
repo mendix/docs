@@ -1,7 +1,9 @@
 ---
-title: "Retrieve"
-url: /refguide/retrieve/
+title: "Retrieve Object(s)"
+url: /refguide/retrieve-objects/
 weight: 60
+aliases:
+    - /refguide/retrieve/
 #To update screenshots of these microflows in Studio Pro, use the Microflow Screenshots app.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -12,17 +14,17 @@ This activity can be used in both microflows and nanoflows.
 
 ## Introduction
 
-A **Retrieve** activity can be used to get one or more objects, either by directly traversing an association of another object, or by retrieving objects from the database.
+A **Retrieve object(s)** activity can be used to get one or more objects, either by directly traversing an association of another object, or by retrieving objects from the database.
 
 ## Properties
 
-An example of retrieve activity properties is represented in the image below:
+An example of retrieve object(s) activity properties is represented in the image below:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/retrieve/retrieve-properties.png" alt="retrieve properties" width="700px" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
-The retrieve properties pane consists of the following sections:
+The retrieve object(s) properties pane consists of the following sections:
 
 * [Action](#action)
 * [Common](#common)
@@ -58,7 +60,7 @@ Any changes made to an object are visible in all widgets. This is because change
 
 #### Association
 
-This property specifies which association is followed. The association must be an association from an object that is already available to the retrieve activity. Associations can be followed in both directions.
+This property specifies which association is followed. The association must be an association from an object that is already available to the retrieve object(s) activity. Associations can be followed in both directions.
 
 ### Retrieve from Database Properties {#from-database}
 
@@ -71,7 +73,7 @@ This property specifies the entity from which to retrieve instances (objects).
 The [XPath constraint](/refguide/xpath-constraints/) defines the condition the objects need to fulfill to be retrieved. If there is no XPath constraint, all objects of the entity are retrieved.
 
 {{% alert color="info" %}}
-Date functions, user-role tokens, computations based on tokens, and following associations are not supported in XPath constraints when the retrieve activity is in a nanoflow.
+Date functions, user-role tokens, computations based on tokens, and following associations are not supported in XPath constraints when the retrieve object(s) activity is in a nanoflow.
 {{% /alert %}}
 
 #### Range
@@ -132,7 +134,7 @@ As we can see in the example below, the **GetCustomerPrimaryAddress** sub-microf
 
 Sometimes you only need to retrieve a specific instance of an object. Building a sub-microflow for just one retrieve-and-create action is too much work. An alternative way is to build your own loop, which allows you to have one main microflow but still be able to find and create objects during this process.
 
-However, there is the risk of creating an infinite loop if the retrieve activity applies a constraint that is not set correctly during the create activity. So, always make sure to print a log message so that you can easily identify any problems in your design.
+However, there is the risk of creating an infinite loop if the retrieve object(s) activity applies a constraint that is not set correctly during the create activity. So, always make sure to print a log message so that you can easily identify any problems in your design.
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/retrieve/retrieve-one-object-instance.png" width="400px" class="no-border" >}}
 

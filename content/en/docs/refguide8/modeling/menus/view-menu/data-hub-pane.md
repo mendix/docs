@@ -7,13 +7,9 @@ description: "Describes the Data Hub pane in Mendix Studio Pro."
 
 ## Introduction 
 
-[Mendix Data Hub](/data-hub/) enables integration of available data sources from the different applications in an organization into your Mendix apps. This means that new apps can be created using shared datasets that are registered in the [Catalog](/catalog/). In Studio Pro, this is possible using the integrated functionality of Catalog through the **Data Hub** pane.
+The [Catalog](/catalog/) enables integration of available data sources from the different applications in an organization into your Mendix apps. This means that new apps can be created using shared datasets that are registered in the Catalog. In Studio Pro, this is possible using the integrated functionality of Catalog through the **Data Hub** pane.
 
-You can search in the Catalog through the **Data Hub** pane to discover data sources that you can use in your project. Via this pane you can add the entities that are exposed in the registered OData services—called **Data Sources** in Data Hub—into your app's domain model. These entities are called [external entities](/refguide8/external-entities/) and are different because they enable the connection to the data associated with the entities in the originating app.
-
-{{% alert color="info" %}}
-In the Catalog, registered published services are referred to as *data sources*. Exposed entities will show the **Entity set** name and are called *datasets.*
-{{% /alert %}}
+You can search in the Catalog through the **Data Hub** pane to discover data sources that you can use in your project. Via this pane you can add the entities that are exposed in the registered OData services into your app's domain model. These entities are called [external entities](/refguide8/external-entities/) and are different because they enable the connection to the data associated with the entities in the originating app.
 
 To display the **Data Hub** pane, click **View** > **Data Hub**:
 
@@ -94,7 +90,7 @@ The search results and Project pane will show the following at a service level:
     * **View in Catalog** – click this to go to the **Data Source Details** page in the Catalog
     * **Go to connection settings** – click this to open the [consumed OData service](/refguide8/consumed-odata-service/) document
 
-* **Blue** **Update Service** icon to indicate that there is another version of the consumed service available in the Data Hub. Click to update the service that is consumed in the project to the contract that is now available:
+* **Blue** **Update Service** icon to indicate that there is another version of the consumed service available in the Catalog. Click to update the service that is consumed in the project to the contract that is now available:
 
     {{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/data-hub-pane-update.png" alt="Data Hub Pane update" class="no-border" >}}
 

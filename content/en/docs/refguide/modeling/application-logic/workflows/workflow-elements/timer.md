@@ -9,10 +9,6 @@ aliases:
 
 ## Introduction
 
-{{% alert color="info" %}}
-**Wait for timer** was renamed to **Timer** in Studio Pro 10.14.0.
-{{% /alert %}}
-
 **Timer** allows you to configure a certain duration or a specific date and time in a workflow.
 
 It can be used in the following two ways:
@@ -21,7 +17,7 @@ It can be used in the following two ways:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/timer/standalone-timer-activity.png" alt="Standalone Timer activity" width="250" >}}
 
-* **Timer** can also be attached to another workflow activity as a [Boundary Event](/refguide/workflow-boundary-events/) (in Studio Pro 10.15.0 and above):
+* **Timer** can also be attached to another workflow activity as a [Boundary Event](/refguide/workflow-boundary-events/):
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/timer/timer-boundary-event.png" alt="Timer boundary event" width="300" >}}
 
@@ -30,12 +26,24 @@ It can be used in the following two ways:
 **Timer** properties consist of the following sections:
 
 * [General](#general)
+* [Boundary properties](#boundary-properties)
 * [Timer](#timer)
+* [Recurrence](#recurrence)
 * [Common](#common)
 
 ### General Section {#general}
 
 The **Caption** describes what happens in this element. It is displayed under the workflow element to make the **Timer** easier to read and understand without the need to add annotations.
+
+### Boundary Properties Section {#boundary-properties}
+
+{{% alert color="info" %}}
+This section is only applicable when **Timer** is used as a timer boundary event.
+{{% /alert %}}
+
+The **Interrupting** property sets the timer boundary event to be either interrupting or non-interrupting.
+
+By default, it is set to **No**, which means that the timer boundary event is non-interrupting. When it is set to **Yes**, the timer boundary event is interrupting. For more information, see [Boundary Events](/refguide/workflow-boundary-events/).
 
 ### Timer Section {#timer}
 
@@ -47,6 +55,27 @@ The **Timer** properties are described in the table below:
 | --- | --- |
 | Duration | You can set a certain duration for the timer. With the **Continue after** setting, you can indicate the number of seconds, minutes, hours, days, weeks or months the timer's duration is. Possible values for the setting are:<br /><ul><li>Seconds</li><li>Minutes</li><li>Hours</li><li>Days</li><li>Weeks</li><li>Months</li> </ul> |
 | Expression | You can set a certain date and time for the timer by writing an expression via the **Continue at** setting.<br><br>For example, you can write `addDays([%CurrentDateTime%], 1)` to set tomorrow as the due date and time. To set a static date and time, you can use the expression `parseDateTimeUTC('2023-12-10T17:12:00.000', 'yyyy-MM-dd''T''HH:mm:ss.SSS')`.<br><br>You can also create a more complex timer. For example, you can set a timer based on a Boolean value (in this example, `isVIPUser`) from the provided workflow context entity: `if $WorkflowContext/isVIPUser then addDays([%CurrentDateTime%], 2) else addWeeks([%CurrentDateTime%], 2])`.<br><br>For more information on available expressions in Mendix, see [Expressions](/refguide/expressions/). |
+
+{{% alert color="info" %}}
+When the expression evaluates to `empty` or `null`, no timer is scheduled. If the timer is a standalone activity, execution continues with the next activity. If it is a timer boundary event, the boundary event is skipped.
+{{% /alert %}}
+
+### Recurrence Section {#recurrence}
+
+{{% alert color="info" %}}
+The **Recurrence** property is only applicable when **Timer** is used as a non-interrupting timer boundary event.
+{{% /alert %}}
+
+The **Recurrence** property allows a non-interrupting timer boundary event to run multiple times when the specified interval has elapsed. The following parameters can be set.
+
+| Type | Description |
+| --- | --- |
+| Interval | You can set a certain duration for the timer. With the **Repeat every** setting, you can indicate the number of minutes, hours, days, weeks or months the timer interval duration is. Possible values for the setting are:<br /><ul><li>Minutes</li><li>Hours</li><li>Days</li><li>Weeks</li><li>Months</li> </ul> |
+| Max occurrences | The maximum number of occurrences, including the first boundary event execution.|
+
+{{% alert color="info" %}}
+When recurrence is set, the non-interrupting boundary event is first executed after the specified timer duration. From that point onward, it recurs with the set interval.
+{{% /alert %}}
 
 ### Common Section {#common}
 

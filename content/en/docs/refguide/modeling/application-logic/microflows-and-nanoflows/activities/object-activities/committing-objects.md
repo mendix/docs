@@ -41,7 +41,7 @@ You can also open the dialog box by double-clicking the activity, or right-click
 
 The object or list of objects that you want to commit.
 
-### With Events
+### With Events{#with-events}
 
 {{% alert color="info" %}}
 This property is for microflows only.
@@ -50,6 +50,10 @@ This property is for microflows only.
 Indicates whether or not to execute the commit event handlers of the objects.
 
 Default: **Yes**
+
+{{% alert color="warning" %}}
+Most validation rules are not triggered if you do a commit and **With events** is set to *No*. In most cases, validation rules will have been triggered when members (for example, an attribute) are changed, but Mendix advises that you set **With events** to *Yes* if you want to ensure that validations are always carried out. See [data validation](/refguide/setting-up-data-validation/) for more information.
+{{% /alert %}}
 
 #### Events in Nanoflows
 
@@ -106,6 +110,10 @@ When you commit an object, the current value is saved. This means that you canno
 However, a Mendix commit is not the same as a database commit. For an object of a persistable entity, the saved value is not committed to the database until the microflow and any microflows from which it is called, complete. This means that errors in a microflow can initiate a rollback. If a microflow activity errors and has **Error handling** set to **Rollback** or **Custom with rollback**, the value of the object is rolled back to the value it had at the start of the microflow. See [Error Handling in Microflows](/refguide/error-handling-in-microflows/) for more information.
 
 Mendix mimics this behavior for non-persistable entities. Committing a non-persistable entity means that you cannot use a rollback object activity to go back to the previous values, although the rollback error handling in a microflow rolls back to the original values.
+
+{{% alert color="warning" %}}
+Deleting an object and then committing it can have different outcomes depending on whether the object has already been committed or not. If the object has already been committed, the delete will remove the object from the database, and the subsequent commit will have no effect. If the object is new (that is, it has not been committed before), the delete will do nothing, but the commit will store the object in the database. Therefore, this sequence of actions (a delete followed by a commit) may lead to unexpected results if the object has not been committed before.
+{{% /alert %}}
 
 ### Autocommit and Associated Objects {#autocommit-and-associated-objects}
 

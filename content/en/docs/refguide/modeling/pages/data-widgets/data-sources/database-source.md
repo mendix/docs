@@ -22,27 +22,17 @@ The **Entity (path)** property specifies the target of the database query. If yo
 This differs from the [association data source](/refguide/association-source/) when objects are retrieved from the memory, not database.
 {{% /alert %}}
 
-### Constraints{#constraints}
+### XPath Constraint{#constraints}
 
-Constraints allow for custom, hard-coded limitations on the data displayed. This constraint will be applied on top of security constraints. For example, if your entity has an access rule that makes it read-only for the user and/or has an XPath constraint, the XPath constraint will be applied first.
-
-{{% alert color="warning" %}}
-Constraints are applied equally to all users and only apply to the data displayed in a single data widget. If the goal is to restrict access to a particular subset of the data for users then [access rules](/refguide/access-rules/) for entities should be used as they can be applied to an individual user role and they apply system-wide.
-{{% /alert %}}
+You can add a full XPath constraint to a Database source; click **Edit…** next to the **XPath constraint** field. See [XPath Constraints](/refguide/xpath-constraints/) for more information. This constraint will be applied on top of security constraints. For example, if your entity has an access rule that makes it read-only for the user and/or has an XPath constraint, the entity access rule will be applied first.
 
 {{% alert color="info" %}}
-In Mendix version 10.5 and above, you can add a full XPath constraint to a Database source; click **Edit…** next to the **XPath constraint** field. There is no separate **XPath** source. See [XPath Constraints](/refguide/xpath-constraints/) for more information.
+If the goal is to restrict access to a particular subset of the data for users then [access rules](/refguide/access-rules/) for entities should be used as they can be applied to an individual user role and they apply system-wide.
 {{% /alert %}}
-
-For Mendix versions below 10.5, each constraint consists of an **Attribute**, an **Operator**, and a **Value**:
-
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/database-source/constraint-example.png" alt="Constraint Example" class="no-border" >}}
-
-Multiple constraints will limit the data even more (the logical operator **AND**). There is no way to use the logical operator **OR** in database constraints in versions of Mendix below 10.5, but you can switch to an [XPath data source](/refguide/xpath-source/) and create an XPath constraint.
 
 ### Show Search Bar {#show-search-bar}
 
-**Show search bar** is only available for data grids. You can select if and when the **[Search bar](/refguide/search-bar/)** of the data grid is shown.
+**Show search bar** is only available for a **Data grid**. You can select if and when the **[Search bar](/refguide/search-bar/)** of the data grid is shown.
 
 | Value | Description |
 | --- | --- |
@@ -51,13 +41,17 @@ Multiple constraints will limit the data even more (the logical operator **AND**
 | With button (initially closed) *(default)*  | The user can open and close the search bar using the search button; the search bar is initially closed. |
 | Always | The search bar is always visible and cannot be close, nor is there a search button. |
 
-### Wait for Search
+#### Wait for Search
 
 The **Wait for search** property is available if **[Show search bar](#show-search-bar)** is set to *With button (initially open)* or to *Always*. 
 
 When **Wait for search** is set to *Yes*, the grid will remain empty of contents the end-user initiates a search. This can be useful if the target entity contains an extremely large set of objects but most mutations only require a subset of the data. Waiting for search will ensure that no database query is performed until the desired subset is specified, thus skipping the initial loading period associated with major data retrievals.
 
 Default: *false*
+
+### Sort Order
+
+**Sort order** is only available for a [**Data grid 2**](/appstore/modules/data-grid-2/) widget. Click **Edit…** to select attributes to sort on, and choose whether to sort in **Ascending** or **Descending** order.
 
 ## Read More
 

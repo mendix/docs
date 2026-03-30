@@ -7,6 +7,12 @@ weight: 2
 
 These are the [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/) release notes, including all minor versions and patches.
 
+## 5.2.0
+
+**Release date: Jun 18, 2025**
+
+* We upgraded Node.js version to 22.
+
 ## 5.1.3
 
 **Release date: May 13, 2024**

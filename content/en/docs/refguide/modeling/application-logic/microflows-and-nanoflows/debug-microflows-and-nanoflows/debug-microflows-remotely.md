@@ -37,7 +37,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 In Mendix Cloud, the debugger is always listening for connections so you cannot turn it on or off. To debug your app in the cloud, you need to get a URL and a password from the app environment and provide that information to Studio Pro. The steps below explain how to do this.
 
 {{% alert color="info" %}}
-The debugger supports only debugging of single-instance environments. Multi-instance environments need to be scaled down to one instance before the debugger can be used. See [Scaling Your Environment in Mendix Cloud](/developerportal/deploy/scale-environment/) for more information.
+The debugger supports only debugging of single-instance environments. Multi-instance environments need to be scaled down to one instance before the debugger can be used. See [Scaling Your Environment in Mendix Cloud](/developerportal/deploy/scale-environment/) for more information. Because of this, remote debugging is not currently available for [Mendix on Azure](/developerportal/deploy/mendix-on-azure/support/#limitations).
 {{% /alert %}}
 
 ### Obtain Debugging Credentials
@@ -64,12 +64,12 @@ When your application is in Mendix Cloud, follow these steps:
 
 You will need to provide these credentials to Studio Pro to connect the debugger to the app running in the cloud.
 
-#### Obtain Debugging Credentials from Private Cloud Connected{#private-cloud}
+#### Obtain Debugging Credentials from Mendix on Kubernetes Connected{#private-cloud}
 
-If your application is on a connected Private Cloud, you can get the credentials from the Mendix Portal:
+If your application is on a connected Mendix on Kubernetes instance, you can get the credentials from the Mendix Portal:
 
 {{% alert color="warning" %}}
-You can only remotely debug apps deployed to Private Cloud for Mendix if you are using Mendix Operator version 1.6.0 or above.
+You can only remotely debug apps deployed to Mendix on Kubernetes if you are using Mendix Operator version 1.6.0 or above.
 {{% /alert %}}
 
 1. Open your app in [Apps](https://sprintr.home.mendix.com/).

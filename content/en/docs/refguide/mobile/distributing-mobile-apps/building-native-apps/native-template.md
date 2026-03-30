@@ -650,8 +650,7 @@ A CI environment needs to be able to do the following to successfully configure 
 * Set up the configuration and move assets as needed (this can be done with simple shell scripts or any other solution, and is the implementer's choice) 
 * Run `npm i` and `npm run configure` to configure the app using Mendix Mobile Toolkit before the build.
 
-How to build the apps is a choice for the implementer. Mendix Native App Builder use App Center for convenience. There are multiple other 
-solutions, on premise or as a service, that can be used for this purpose. We do not endorse one over the other.
+How to build the apps is a choice for the implementer. There are multiple solutions, on premise or as a service, that can be used for this purpose. We do not endorse one over the other.
 
 ## Read More
 

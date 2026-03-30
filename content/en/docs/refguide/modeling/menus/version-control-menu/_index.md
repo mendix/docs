@@ -17,15 +17,11 @@ The **Pull** option updates the local app to the latest revision that was commit
 
 ## Commit
 
-The **Commit** option commits all local changes made to the app since the previous commit to the version control server. For more information, see [Commit](/refguide/commit-dialog/).
+The **Commit** option commits all local changes made to the app since the previous commit to the version control server. For more information, see [Commit](/refguide/commit-dialog/). The committing process starts by handling asynchronous content generation by waiting for completion, preventing unexpected post-commit file changes (such as *theme.compiled.css.map*), and providing troubleshooting options if errors or timeouts occur. See [Synchronizing Commit Content](/refguide/commit-dialog/#sync-commit-content) in *Commit* for more information.
 
 ## Push{#push}
 
-The **Push** option sends your local changes to the version control server. For more information, see the [Commit/Push](/refguide/version-control/#commit) section in *Version Control*.
-
-## Show Changes on Disk {#show-changes}
-
-**Show Changes on Disk** opens a dialog that shows which files on disk have been changed since the last commit.  
+The **Push** option sends your local changes to the version control server. For more information, see the [Commit/Push](/refguide/version-control/glossary/#commit) section in *Version Control*.
 
 ## History
 
@@ -49,11 +45,11 @@ The **Merge Changes Here** option allows you to merge changes that were committe
 
 ## Revert a Commit
 
-The **Revert a Commit** option allows locally rolling back changes that were committed to the version control repository. These local changes can then be committed as a new revision.
+The **Revert a Commit** option allows you to locally [roll back changes](/refguide/reverting-changes/) that were committed to the version control repository. These local changes can then be committed as a new revision.
 
 ## Revert All Changes {#revert-all-changes}
 
-The **Revert All Changes** option allows rolling back all local changes, both in the app and in files on disk, that have been introduced since the last commit.
+The **Revert All Changes** option allows you to [roll back all local changes](/refguide/reverting-changes/), both in the project and in files on disk, that have been introduced since the last commit.
 
 ## Optimize Storage Repository {#optimize-storage}
 
@@ -80,3 +76,4 @@ The **Add Snapshot of Data** option creates a snapshot of the built-in database 
 
 * [Studio Pro Overview](/refguide/studio-pro-overview/)
 * [Version Control](/refguide/version-control/)
+* [Pulling, Committing, and Pushing](/refguide/pushing-pulling/)

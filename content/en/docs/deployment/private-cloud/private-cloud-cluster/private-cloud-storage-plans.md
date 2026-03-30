@@ -1,7 +1,7 @@
 ---
 title: "Storage Plans"
 url: /developerportal/deploy/private-cloud-storage-plans/
-description: "Describes how to configure storage plans in Mendix for Private Cloud."
+description: "Describes how to configure storage plans in Mendix on Kubernetes."
 weight: 10
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
@@ -145,6 +145,27 @@ If you delete an environment, make sure that it is completely deleted by running
 
 If the commands return a *not found* response, your environment database and blob file storage have been fully removed. If either the database or the blob file storage were not deleted, you must find and troubleshoot the reason, and then do a [manual cleanup](/developerportal/deploy/private-cloud-deploy/#delete-storage) if necessary. Until the cleanup is done, you should not create a new environment that uses the same name as the environment that is still being deleted.
 
+#### S3 Bucket Region Might Need to Be Set Manually
+
+In Studio Pro version 11.6, the AWS S3 library was updated from version 1 to version 2. This new AWS library version can no longer automatically detect an S3 bucket's region from its endpoint address, and needs the bucket endpoint to be specified manually.
+
+The AWS S3 library is also updated in the latest LTS versions of Studio Pro:
+
+* 9.24.41 (or later)
+* 10.24.14 (or later).
+
+Mendix Operator 2.25 (or later versions) will automatically recognise an S3 bucket's region from its endpoint address:
+
+* If the bucket endpoint has a `<subdomains>.<region>.amazonaws.com` format (or `<subdomains>.<region>.amazonaws.com.<suffix>` format for AWS China regions),
+the Operator uses `<region>` as the S3 region name.
+* If the S3 bucket endpoint does not match this format, the Mendix Operator will use a default `us-east-1` region, as this works with most S3-compatible buckets like [Minio](#blob-minio) and [Google Cloud Storage](#blob-gcp-storage-bucket).
+
+In some scenarios (legacy or custom S3 endpoints), this autodetection might not work correctly. In this case, you can manually specify the S3 bucket region by setting the [com.mendix.storage.s3.Region](/refguide/custom-settings/#commendixstorages3Region) Custom Runtime Setting. A manually specified `com.mendix.storage.s3.Region` will override the autodetected bucket region.
+
+Mendix Operator versions 2.24.2 (and older) does not autodetect S3 bucket regions. To use Mendix versions with version 2 of the AWS S3 library, manually set the `com.mendix.storage.s3.Region` custom Runtime setting. You can also consider upgrading to Mendix Operator 2.25.0 or newer.
+
+This issue does not affect [Azure Blob Storage](#blob-azure) or [ephemeral](#blob-ephemeral) data storage plans.
+
 ## Database Plans {#database}
 
 Every Mendix app needs a database to store persistable and non-persistable entities. A database plan tells the Mendix Operator how to provide a database to a new Mendix app environment.
@@ -157,7 +178,7 @@ The database plan does not include any functionality for backing up or restoring
 
 To create a new database, do the following steps:
 
-1. Give your plan a **Name** and choose the **Database Type**. See the information below for more help in setting up plans for the different types of database which are supported by Mendix for Private Cloud.
+1. Give your plan a **Name** and choose the **Database Type**. See the information below for more help in setting up plans for the different types of database which are supported by Mendix on Kubernetes.
 2. Apply two validation checks by clicking the **Validate** and **Connection Validation** buttons:
     * **Validate** – Checks that you have provided all the required values and that they are in the correct format.
     * **Connection validation** – Checks whether the specified storage plan has been successfully created. This does not guarantee that the storage instance will be created successfully when the configuration is applied, so to fully test a database plan, you will need to test it by [creating a temporary test environment](#typical-workflow).
@@ -267,7 +288,7 @@ This section provides technical details on how IAM authentication works with Pos
 {{% /alert %}}
 
 {{% alert color="info" %}}
-When dealing with an Aurora PostgreSQL database, an additional procedural step is required. To employ IAM authentication in conjunction with PostgreSQL, establish a connection to the designated database instance by using either the master user or an alternative user with admin privileges. Once the connection is established, assign the `rds_iam` role to the user, as shown in the following example:
+To employ IAM authentication in conjunction with PostgreSQL, establish a connection to the designated database instance by using either the master user or an alternative user with admin privileges. Once the connection is established, assign the `rds_iam` role to the user, as shown in the following example:
 
 ```shell
 GRANT rds_iam TO db_userx;
@@ -390,6 +411,10 @@ The Postgres database is an automated, on-demand database. The Postgres plan off
 [Managed identity authentication](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-connect-with-managed-identity) removes static passwords and instead uses IAM roles for authentication.
 
 This section provides technical details on how managed identity authentication works with Postgres. If you just need instructions to get started, the [Azure Managed Identity-based storage walkthrough](#walkthrough-azure-azwi) provides a quick start guide to set the Mendix Operator to manage a Postgres database, SQL Server and Blob Storage account using managed identity authentication.
+
+{{% alert color="info" %}}
+Azure prioritizes managed identity authentication for PostgreSQL when both static authentication and Microsoft Entra authentication are selected in the Azure portal.
+{{% /alert %}}
 
 ##### Prerequisites
 
@@ -525,7 +550,7 @@ If the SQL Server instance is an Azure SQL database, you can use [managed identi
 
 SQL server databases are automated, on-demand databases. The **SQL Server** plan offers a good balance between automation, ease of use, and security when using Microsoft SQL Server or Azure SQL. If you would like to have more control over database configuration, consider using the [JDBC plan](#database-jdbc) instead.
 
-If your app is using Mendix 10.10 (or a later version) consider using the [Azure managed identity authentication](#database-sqlserver-azwi) instead, for additional security.
+If your app is using Mendix 10.10 (or above), consider using the [Azure managed identity authentication](#database-sqlserver-azwi) instead, for additional security.
 
 ##### Prerequisites
 
@@ -625,7 +650,7 @@ This section provides technical details on how managed identity authentication w
 
 ##### Limitations
 
-* To use this feature, your app needs to be upgraded to Mendix 10.10 (or later), and your namespace needs to use Mendix Operator version 2.17.0 (or later).
+* To use this feature, your app needs to be upgraded to Mendix 10.10 (or above), and your namespace needs to use Mendix Operator version 2.17.0 (or above).
 
 ##### Environment Isolation
 
@@ -773,7 +798,7 @@ When an existing environment is deleted, the Mendix Operator performs the follow
 In the Dedicated JDBC plan configuration, enter the following details:
 
 * **Database type** - The database type, one of the supported [DatabaseType](/refguide/custom-settings/#DatabaseType) values such as `PostgreSQL`.
-* **Host** - The database hostname, for example `postgres-shared-postgresql.privatecloud-storage.svc.cluster.local:5432` - specifies the value of [DatabaseHost](/refguide/custom-settings/#DatabaseType).
+* **Host** - The database hostname, for example `postgres-shared-postgresql.privatecloud-storage.svc.cluster.local` - specifies the value of [DatabaseHost](/refguide/custom-settings/#DatabaseType).
 * **Database name** - The name of the database or schema used by the Mendix app, for example `postgres` - specifies the value of [DatabaseName](/refguide/custom-settings/#DatabaseName).
 * **JDBC URL** - The JDBC URL used to connect to the database, for example `jdbc:postgresql://postgres-shared-postgresql.privatecloud-storage.svc.cluster.local:5432/myappdb?sslmode=prefer`.
 * **User** - Specifies the username to be used by the Mendix app environment to connect to the database.
@@ -898,7 +923,7 @@ When an existing environment is deleted, the Mendix Operator performs the follow
 
 ### Amazon S3 {#blob-s3}
 
-Mendix for Private Cloud provides a variety of options for storing files in Amazon S3. Each option uses its own approach to isolation between environments, and to attaching a bucket (and IAM user/policy) to a new environment.
+Mendix on Kubernetes provides a variety of options for storing files in Amazon S3. Each option uses its own approach to isolation between environments, and to attaching a bucket (and IAM user/policy) to a new environment.
 
 If you would like to have Mendix Operator with automation, and have full isolation between environments, use the [Create account with existing policy](#s3-create-account-existing-policy) option. This option works with the least possible AWS privileges.
 For apps using Mendix 9.22 (or a later version), the [IRSA Mode](#s3-irsa-mode) option provides the same features and additional security.
@@ -908,6 +933,18 @@ If you would like to simply share a bucket between environments, or to manually 
 {{% alert color="info" %}}
 Although we offer additional flexibility and provide other options, Mendix recommends using one of the options listed above.
 {{% /alert %}}
+
+{{% alert color="warning" %}}
+In Studio Pro version 11.6, the AWS S3 library was updated from version 1 to version 2. This new AWS library version can no longer automatically detect an S3 bucket's region from its endpoint address. You must specify the bucket endpoint manually.
+
+Mendix Operator 2.25 (or later versions) will automatically recognise an S3 bucket's region from its endpoint address:
+
+* If the bucket endpoint has a `<subdomains>.<region>.amazonaws.com` format (or `<subdomains>.<region>.amazonaws.com.<suffix>` format for AWS China regions),
+the Operator will use the `<region>` part.
+* If the S3 bucket endpoint does not match this format, the Mendix Operator will use a default `us-east-1` region, as this works with most S3-compatible buckets like [Minio](#blob-minio) and [Google Cloud Storage](#blob-gcp-storage-bucket).
+
+In some scenarios (legacy or custom S3 endpoints), this autodetection might not work correctly. In this case, you can manually specify the S3 bucket region by setting the [com.mendix.storage.s3.Region](/refguide/custom-settings/#commendixstorages3Region) Custom Runtime Setting. A manually specified `com.mendix.storage.s3.Region` will override the autodetected bucket region.
+{{% /alert %}}.
 
 #### Create Account with Existing Policy {#s3-create-account-existing-policy}
 
@@ -1278,7 +1315,7 @@ This basic, on-demand option allows you to attach an existing S3 bucket and IAM 
 * Access/Secret keys used by existing environments can only be rotated manually.
 * No isolation between environments using this blob storage plan (if the **Share bucket between environments** option is checked).
 * Configuration parameters will not be validated and will be provided to the Mendix app as-is. If the arguments are not valid or there is an issue with permissions, the Mendix Runtime will fail to start the and deployment will appear to be stuck with **Replicas running** and **Runtime** showing a spinner.
-* To configure the **Autogenerate Prefix** option you need Mendix Operator version 2.7.0 or above. See [Upgrading Private Cloud](/developerportal/deploy/private-cloud-upgrade-guide/) for instructions on upgrading the Mendix Operator.
+* To configure the **Autogenerate Prefix** option you need Mendix Operator version 2.7.0 or above. See [Upgrading Mendix on Kubernetes](/developerportal/deploy/private-cloud-upgrade-guide/) for instructions on upgrading the Mendix Operator.
 
 ##### Environment Isolation
 
@@ -1624,7 +1661,7 @@ In the Amazon S3 plan configuration, enter the following details:
 
 ### Azure Blob Storage {#blob-azure}
 
-If you would like to have Mendix Operator with automation, and have full isolation between environments, use the [Azure managed identity authentication](#blob-azure-azwi) option. This option works with apps using Mendix 10.10 (or a later version).
+If you would like to have Mendix Operator with automation, and have full isolation between environments, use the [Azure managed identity authentication](#blob-azure-azwi) option. This option works with apps using Mendix 10.10 (or above).
 
 If you would like to simply share a container between environments, or to manually create a container and account per environment, use the [static credentials](#blob-azure-static) option.
 
@@ -1647,7 +1684,7 @@ This section provides technical details on how managed identity authentication w
 
 ##### Limitations
 
-* To use this feature, your app needs to be upgraded to Mendix 10.10 (or later), and your namespace needs to use Mendix Operator version 2.17.0 (or later).
+* To use this feature, your app needs to be upgraded to Mendix 10.10 (or above), and your namespace needs to use Mendix Operator version 2.17.0 (or above).
 
 ##### Environment Isolation
 
@@ -1721,7 +1758,7 @@ Azure workload identities allow a Kubernetes Service Account to authenticate its
 
 This basic, on-demand option allows you to attach an existing Azure Blob Storage container and credentials (account name and secret key) to one or more environments. All apps (environments) will use the same Azure Blob Storage container and credentials.
 
-If your app is using Mendix 10.10 (or a later version) consider using the [Azure managed identity authentication](#blob-azure-azwi) instead, for additional security.
+If your app is using Mendix 10.10 (or above) consider using the [Azure managed identity authentication](#blob-azure-azwi) instead, for additional security.
 
 ##### Prerequisites
 
@@ -1860,7 +1897,7 @@ This guide explains how to set up and use a database and blob file storage plan 
 This feature requires an Mendix app based on Mendix 9.22 (or later) and Mendix Operator version 2.12 (or later).
 {{% /alert %}}
 
-Before you begin, you need to create an EKS cluster and install Mendix for Private Cloud in that cluster.
+Before you begin, you need to create an EKS cluster and install Mendix on Kubernetes in that cluster.
 
 Navigate to the EKS cluster details and write down the **OpenID Connect provider URL**:
 
@@ -1883,7 +1920,7 @@ To configure the required settings for an RDS database, do the following steps:
 2. Enable [IAM authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.DBAccounts.html#UsingWithRDS.IAMDBAuth.DBAccounts.PostgreSQL) and grant `rds_iam` role to `database-username` role by using the below `psql` commandline to run the following jump pod commands (replacing `<database-username>` with the username specified in `database-username` and `<database-host>` with the database host):
 
     ```sql
-    kubectl run postgrestools docker.io/bitnami/postgresql:14 -ti --restart=Never --rm=true -- /bin/sh
+    kubectl run postgrestools docker.io/library/postgresql:14 -ti --restart=Never --rm=true -- /bin/sh
     export PGDATABASE=postgres
     export PGUSER=<database-username>
     export PGHOST=<database-host>
@@ -1897,7 +1934,7 @@ To configure the required settings for an RDS database, do the following steps:
 
     {{% alert color="info" %}}The VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster. When creating the RDS instance, as a best practice, make sure that it uses the same VPC as the Kubernetes cluster. Alternatively, you can also use a publicly accessible cluster. After an RDS instance has been created, it is not possible to modify its VPC.{{% /alert %}}
 
-    {{% alert color="info" %}}In the case of Aurora DB, ensure that the `rds_iam` role is granted to the master database user{{% /alert %}}
+    {{% alert color="info" %}} Ensure that the `rds_iam` role is granted to the master database user{{% /alert %}}
 
 3. Navigate to the RDS instance details, and write down the following information:
 
@@ -2144,10 +2181,10 @@ Azure recommends using [managed identity authentication](https://learn.microsoft
 This guide explains how to set up and use a database and blob file storage plan using Azure best practices.
 
 {{% alert color="warning" %}}
-This feature requires an Mendix app based on Mendix 10.10 (or later) and Mendix Operator version 2.17 (or later).
+This feature requires an Mendix app based on Mendix 10.10 (or above) and Mendix Operator version 2.17 (or above).
 {{% /alert %}}
 
-Before you begin, you need to create an AKS cluster and install Mendix for Private Cloud in that cluster.
+Before you begin, you need to create an AKS cluster and install Mendix on Kubernetes in that cluster.
 
 {{% alert color="warning" %}}
 This walkthrough provides examples for two database types: Postgres and Azure SQL, and you only need to create one of them.

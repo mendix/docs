@@ -7,9 +7,15 @@ weight: 60
 
 ## Introduction
 
-A **date picker** is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](/refguide/data-types/) *Date and Time*. It uses the values set in the **Languages** tab of **App Settings** to display a correctly localized value to the end-user, using the **Language** object associated with the end-user.
+A **date picker** is used to display and, optionally, allow the end-user to edit the value of an attribute or a variable of [data type](/refguide/data-types/) *Date and Time*. It uses the values set in the **Languages** tab of **App Settings** to display a correctly localized value to the end-user, using the **Language** object associated with the end-user.
 
-A date picker must be placed in a [data container](/refguide/data-widgets/) and displays an attribute of the object (or objects) retrieved by that container. The name of the attribute to be displayed is shown inside the date picker, between square brackets, and colored blue.
+A date picker must be placed within a data context to display or edit the intended value:
+
+* A [data container](/refguide/data-widgets/) widget containing an object
+* A snippet containing one or more [parameters](/refguide/page-properties/#parameters)
+* A page or a snippet containing one or more [variables](/refguide/page-properties/#variables)
+
+The name of the configured value is shown inside the date picker widget, between square brackets, and colored blue.
 
 For example, the following date picker allows the end-user to see, and set, the **LastContacted** date of a customer.
 
@@ -42,7 +48,7 @@ Styling:
 
 #### Date Format
 
-The date format determines whether the date picker displays the attribute values as a date, time, date and time, or in a custom format.
+The date format determines whether the date picker displays the values as a date, time, date and time, or in a custom format.
 
 The format chosen here does not affect how data is stored; in all cases both a date and a time will be recorded. It merely affects how the data is displayed. The date and/or time formats also depend on the localization (language) of the end-user viewing the data.
 
@@ -55,7 +61,7 @@ The possible values for date format are shown below:
 
 #### Custom Date Format
 
-If you choose **Custom** as the date format (see above), this property determines how the attribute value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally.
+If you choose **Custom** as the date format (see above), this property determines how the value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally.
 
 {{% alert color="info" %}}
 When using `yyyy` custom format and typing `yy` in the date picker widget, the century guessing by proximity follows the rule of **50/50**. Specifically, it adjusts dates to be within 50 years before and 50 years after the time the date format instance is created:
@@ -72,7 +78,7 @@ Even though a date picker with a custom date format is editable, the calendar dr
 
 #### Placeholder Text
 
-The placeholder text is shown if the date attribute is empty. It can be used to give the end-user a hint as to the expected format.
+The placeholder text is shown if the date value is empty. It can be used to give the end-user a hint as to the expected format.
 
 {{% alert color="warning" %}}
 Placeholder text will not be displayed if a native date picker is available (that is, for iOS and Android versions 4.0 and above).
@@ -144,3 +150,4 @@ This differs from the [On change](#on-change) property in that the event will al
 
 * [Data View](/refguide/data-view/)
 * [Attributes](/refguide/attributes/)
+* [Variables](/refguide/page-properties/#variables)

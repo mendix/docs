@@ -97,7 +97,13 @@ The generator will ask you a few questions during setup. Answer the questions by
 * Unit tests: **No**
 * End-to-end tests: **No**
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/generatorblack-new.png" alt="mx generator" class="no-border" >}}
+{{% alert color="warning" %}}
+Currently, **Organization Name** cannot include a dash "-" character. Dashes in the organization name will result in an error when running your app, asking to check if the widgets "were  generated with the latest version of the pluggable-widgets-tools and are ES6 modules."
+
+To fix this in an existing widget, modify the `packagePath` property of its **package.json** file and rebuild the widget.
+{{% /alert %}}
+
+{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/generatorblack-new.png" alt="mx generator" class="no-border" >}}
 
 Note that whenever it is required to reinstall NPM package dependencies inside the scaffolded widget development project with an NPM version of 7 or higher, make sure to run the installation script with an extra flag: `npm install --legacy-peer-deps`.
 

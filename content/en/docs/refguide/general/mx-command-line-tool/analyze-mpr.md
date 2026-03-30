@@ -7,12 +7,7 @@ description: "Describes MPR analyze command, which shows the contents of the MPR
 
 ## Introduction
 
-The `mx analyze-mpr` command enables you to show information about the MPR file in the form of plaintext. 
-
-{{% alert color="info" %}}
-This command is available in `mx.exe` from Studio Pro 10.17.0 and above.
-However, it can also be used to analyze MPR files created in older versions starting from Studio Pro 9.24.
-{{% /alert %}}
+The `mx analyze-mpr` command enables you to show information about the MPR file in the form of plaintext.
 
 {{% alert color="warning" %}}
 We do not recommend building custom tooling on top of this outpur, as the output and the format may change over time.
@@ -36,6 +31,8 @@ The `OPTIONS` are described in the table below:
 
 To identify which types of documents (pages, microflows, etc.) have the largest contribution to the MPR file size, you can focus on the **Size by unit type** section, where the number of occurrences and file size contribution are displayed in percentage.
 
+You can use the MPR Tool to get more details. You can find it at *C:\Program Files\Mendix\<version>\modeler\MprTool.exe* (where <version> should be replaced with your installed Mendix version). After opening the *.mpr* file for your app, use **Search** > **Find unit by ID** to find the name and module for a particular unit.
+
 ### Examples
 
 Valid examples are given below:
@@ -44,7 +41,6 @@ Valid examples are given below:
 * `mx analyze-mpr temp.mpr > analysis.txt`, to output to a text file
 
 An example of the output is presented below:
-
 <details>
 
 <summary>Expand for code sample</summary>

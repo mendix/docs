@@ -1,6 +1,6 @@
 ---
-title: "Domain Model"
-linktitle: "Domain Model (Data)"
+title: "Data in the Domain Model"
+linktitle: "Data (Domain Model)"
 url: /refguide/domain-model/
 weight: 30
 description: "Introduces the domain model in Studio Pro."
@@ -13,11 +13,16 @@ The **domain model** describes the information (or data) used by your app in a v
 
 The domain model is central to the architecture of your application. Each [module](/refguide/modules/) has its own domain model which describes the data used in that module. All modules in an app can use data from all the domain models within the app.
 
-A domain model consists of [entities](/refguide/entities/) with their relationships to other entities represented by [associations](/refguide/associations/). Entities can be one of three types:
+A domain model consists of [entities](/refguide/entities/) with their relationships to other entities represented by [associations](/refguide/associations/). Entities can be one of four types:
 
 * Persistable (blue) – entities which hold app information which needs to be held permanently or shared with other end-users of the app (see [Implementation of Persistable Entities](#implementation), below, for information on how these are implemented)
 * Non-persistable (orange) – entities which hold app information which is needed while the end-user is using the app but can then be thrown away
 * External (purple) – entities, described in the [Mendix Catalog](/catalog/), which contain data which belongs to another app or service and is needed while the end-user is using the app but isn't stored in the database of the app
+* View (green) – entities which are the result of a stored OQL query on persistable entities or other view entities (this feature is in beta)
+
+{{% alert color="info" %}}
+[View entities](/refguide/view-entities/) is currently in beta. To enable this feature in your app, set the OQL version to version 2 by clicking **App** > **Settings** > **Runtime**.
+{{% /alert %}}
 
 You can also add [annotations](/refguide/annotations/) to your domain model to remind yourself, and other team members, how it is to be used.
 
@@ -32,10 +37,9 @@ Below is a domain model that describes customers and orders. The names of the en
 | Element | Displays |
 | --- | --- |
 | Annotation | A comment explaining an aspect of the domain model |
-| Entity Name | How the [entity](/refguide/entities/) will be referred to in the database |
 | Generalization | Indicates that this entity is based on another entity (see [generalization](/refguide/entities/#generalization) in *Entities*) and will include that entity's attributes and behavior |
-| Event Handler | An indication that one or more [event handlers](/refguide/event-handlers/) have been set up for this entity |
 | Image | An image which helps to identify the entity |
+| Event Handler | An indication that one or more [event handlers](/refguide/event-handlers/) have been set up for this entity |
 | Validation Rule | An indication that one or more [validation rules](/refguide/validation-rules/) have been set up for this attribute, the attribute *"FullName"* |
 | Calculated Value | An indication that the value of this attribute (*"NameLength"*) is calculated |
 | Persistable Entity | This is an entity stored permanently in a database |
@@ -43,9 +47,12 @@ Below is a domain model that describes customers and orders. The names of the en
 | Association Name | How the [association](/refguide/associations/) will be referred to in the database |
 | Many | Indicates that many of these entities relate to the quantity of the entity at the other end of the association |
 | Association Owner | An end of an association without an arrow indicates that this entity owns the association (it is also possible for both entities to own the association, see [ownership](/refguide/associations/#ownership) in *Associations* for more information) |
+| Entity Name | How the [entity](/refguide/entities/) will be referred to in the database, *Order* |
 | Attribute Name | How this [attribute](/refguide/attributes/) will be referred to in the database, *"Number"* |
 | Attribute Type | The [type](/refguide/attributes/#type) (*Autonumber*) of data stored in this attribute |
+| Service Name | The service which provides the data for this external entity |
 | Non-persistable Entity | This is an entity which is not stored in a database but only stored temporarily within the app |
+| View Entity | This is an entity which is the result set of a stored OQL query |
 | External Entity | This is an entity which represents a link to an external data source |
 
 ## Implementation of Persistable Entities {#implementation}
@@ -54,7 +61,7 @@ While data in non-persistable and external entities is maintained in the memory 
 
 In the database, every entity is stored in a separate table and has columns for the attributes defined in Studio Pro (except those which are calculated) and the system attributes. Each row of the table contains the data for an object of this particular entity type, and every entity table contains a column holding a unique identifier for the object. If an entity has specializations there is also a column indicating which specialization the object belongs to.
 
-Associations are stored in junction tables with columns holding the identifiers (ID) of both associated objects. This allows for more flexibility when creating your domain model.
+Associations are stored in association tables with columns holding the identifiers (ID) of both associated objects. This allows for more flexibility when creating your domain model. You can also choose to store direct associations for one-to-one and one-to-many associations. For more information, see [Association Storage Options](/refguide/association-storage/).
 
 {{% alert color="info" %}}
 Mendix apps cannot share data by sharing the same database. If you want two apps to share the same database, then you need to share the data from one app to the other using APIs. In Mendix, these are supported by external entities or the REST and OData services described in the [Integration](/refguide/integration/) section of the Studio Pro Guide. This is referred to as a microservices architecture.
@@ -70,19 +77,19 @@ Take a look at the following domain model.
 
 #### Customer Entity
 
-Objects of the entity `Customer` are stored in the table `module$customer` which is shown below. The `system$owner` and `system$changedby` columns are added to tables when indicated in the entity definition and contain the IDs of objects from the `System.User` entity (the `User` entity in the `System` module domain model). This indicates the end-user who owns, and the one which last changed, each object.
+Objects of the entity `Customer` are stored in the table `module$customer` which is shown below. The `system$owner` and `system$changedby` columns are added to tables when indicated in the entity definition and contain the IDs of objects from the `System.User` entity (the `User` entity in the `System` module domain model). This indicates the end-user who owns, and the one which last changed, each object. The `NameLength` attribute is calculated and is not stored in the table.
 
 | id | createddate | changeddate | system$owner | system$changedby | fullname |
-| --- | --- | --- | --- | --- | --- |
+| --: | --- | --- | --: | --: | --- |
 | 1 | 2006-10-24 08:10:45.053 | 2009-11-27 09:56:45.099 | 66 | 29 | Steve Jobs |
 | 3 | 2007-09-30 09:56:45.099 | 2008-04-01 08:10:45.053 | 66 | 34 | Bill Gates |
 
 #### Order_Customer Association
 
-The association `Order_Customer` is stored in the table `module$order_customer` which is shown below. Both columns contain IDs of the associated objects.
+The association `Order_Customer` is implemented through an association table and is stored in the table `module$order_customer` which is shown below. Both columns contain IDs of the associated objects.
 
 | module$orderid | module$customerid |
-| --- | --- |
+| --: | --: |
 | 8 | 1 |
 | 5 | 3 |
 
@@ -91,11 +98,26 @@ The association `Order_Customer` is stored in the table `module$order_customer` 
 The entity `Order` is stored in the table `module$order` which is shown below. It is similar to the table of the entity `Customer`. However no system attributes have been defined in the domain model and so they are not stored in the table.
 
 | id | number | date |
-| --- | --- | --- |
+| --: | --: | --- |
 | 5 | 5 | 2009-11-27 09:56:45.099 |
 | 8 | 8 | 2008-04-01 08:10:45.053 |
+
+#### OrderLine Entity
+
+{{% alert color="info" %}}
+The description of the `OrderLine` includes direct associations. See [Association Storage Options](/refguide/association-storage/) for more information.
+{{% /alert %}}
+
+The entity `OrderLine` is stored in the table `module$orderline` which is shown below. It is similar to the table of the entity `Order`. `Orderline` also has an association, `OrderLine_Order` associating each order line with the order it belongs to. This is implemented as a direct association, so the information is stored in the `module$orderline` table, as shown below.
+
+| id | module$orderline_order | productid | quantity |
+| --: | --: | --- | --: |
+| 22 | 5 | X23592 | 1 |
+| 23 | 5 | X23613 | 7 |
+| 55 | 8 | Z97D22 | 2 |
+| 57 | 8 | A49TS3 | 2 |
 
 ## Read More
 
 * [Configuring a Domain Model](/refguide/configuring-a-domain-model/)
-* [Maia Domain Model Generator](/refguide/domain-model-generator/)
+* [Maia for Domain Model](/refguide/maia-for-domain-model/)

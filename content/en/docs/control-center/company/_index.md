@@ -2,7 +2,7 @@
 title: "Company"
 url: /control-center/company/
 description: "Describes the Company category in the Mendix Control Center."
-weight: 40
+weight: 60
 no_list: false
 ---
 ## Introduction 

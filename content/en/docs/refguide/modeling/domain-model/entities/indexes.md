@@ -25,7 +25,7 @@ Indexes are ordered, which means that when you create an index on two or more at
 
 ### Indexes on System Members
 
-If you choose to store an entity's `owner` and `changedBy` system members, an index is created. This is not so for the `createdDate` and `changedDate` system members. In addition, an index is created for the automatically generated attribute `id`. See [Domain Model](/refguide/domain-model/) for more information about the implementation of these attributes.
+If you choose to store an entity's `owner` and `changedBy` system members, an index is created. This is not so for the `createdDate` and `changedDate` system members. In addition, an index is created for the automatically generated attribute `id`. See [Data in the Domain Model](/refguide/domain-model/) for more information about the implementation of these attributes.
 
 ### Indexes on Non-Persistable Entities
 

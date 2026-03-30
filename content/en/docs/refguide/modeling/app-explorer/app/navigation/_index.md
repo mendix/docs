@@ -76,7 +76,7 @@ It is also possible to force the client to use a specific profile by adding a `p
 
 A profile can be added with the **Add navigation profile** button. Only one profile per type is allowed. While adding the profile, it is possible to copy the settings from an existing profile.
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/add-navigation-profile.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/app/navigation/add-navigation-profile.png" class="no-border" width="600" >}}
 
 ### General
 
@@ -104,9 +104,13 @@ By using role-based home pages, you can show different home pages for different 
 
 For each role-based home page, you can specify the user role it applies to and the target (page or microflow) that will be opened.
 
+#### Fallback Page
+
+The fallback page is a page or microflow that can be used to customize the application's behavior when trying to access a [microflow](/refguide/microflow/#url) or [page](/refguide/page-properties/#url) URL that does not exist. For more information, see [Setting a Fallback Page](/refguide/setting-up-the-navigation-structure/#fallback) in *Setting Up Navigation*.
+
 ### Authentication {#authentication}
 
-If an [anonymous user](/refguide/anonymous-users/) tries to access a resource to which the user has no access, the configured [sign-in page](/refguide/authentication-widgets/) will be displayed, prompting the user to sign in.
+If a user, [anonymous](/refguide/anonymous-users/) or authenticated, tries to access a resource to which the user has no access, the configured [sign-in page](/refguide/authentication-widgets/) will be displayed, prompting the user to sign in.
 
 If the sign-in page is set to none, a built-in pop-up window will appear instead. The page title is translatable and may be overridden.
 

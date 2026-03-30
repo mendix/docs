@@ -11,5 +11,5 @@ These step-by-step guides teach you how to set up and use augmented reality (AR)
 
 The following guides are available here:
 
-* [Get Started with AR](/refguide/mobile/using-mobile-capabilities/augmented-reality/how-to-ar-simple-cube/)
+* [Get Started with WebXR](/refguide/mobile/using-mobile-capabilities/augmented-reality/get-started-with-web-xr/)
 * [Create an AR Business Card](/refguide/mobile/using-mobile-capabilities/augmented-reality/how-to-ar-business-card/)

@@ -10,7 +10,7 @@ aliases:
 
 ## Introduction
 
-This guide teaches you how to configure the runtime for using push notifications in native apps. 
+This guide teaches you how to configure the runtime for using push notifications in native apps and progressive web apps (PWAs). 
 
 ### Configuring Your Notifications
 

@@ -26,7 +26,7 @@ If you use SVN for version control you also need the following:
 
 * WebDAV (verbs within the HTTP protocol) needs to be enabled on any proxy server
 
-Mendix Studio Pro connects to `https://teamserver.sprintr.com/` and with the domains shown in the diagram below over HTTPS on port 443. These domains should be added to the firewall white list:
+Mendix Studio Pro connects to `https://teamserver.sprintr.com/` and with the domains shown in the diagram below over HTTPS on port 443. These domains should be added to the firewall safe list:
 
 {{< figure src="/attachments/refguide9/version-control/troubleshoot-version-control-issues/networkaccessmendixplatform.png" alt="Domains home.mendix.com, cloud.mendix.com, and git.api.mendix.com (or teamserver.sprintr.com in case of SVN) need to be accessible on port 443 from your network" class="no-border" >}}
 

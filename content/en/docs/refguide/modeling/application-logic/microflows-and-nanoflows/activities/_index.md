@@ -25,7 +25,7 @@ Most activities can be used in both microflows and nanoflows. However, some can 
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/commit-object.png" alt="commit object" link="/refguide/committing-objects/" max-width=80% class="no-border" >}} | [Commit object(s)](/refguide/committing-objects/) | Allows you to commit changes to one or more objects. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/create-object.png" alt="create object" link="/refguide/create-object/" max-width=80% class="no-border" >}} | [Create object](/refguide/create-object/) | Creates an object. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/delete-object.png" alt="delete object" link="/refguide/deleting-objects/" max-width=80% class="no-border" >}} | [Delete object(s)](/refguide/deleting-objects/) | Deletes an object. |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/retrieve.png" alt="retrieve" link="/refguide/retrieve/" max-width=80% class="no-border" >}} | [Retrieve](/refguide/retrieve/) | Gets one (or more) associated objects of another object. Furthermore, this activity can also get one or more objects directly from a database. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/retrieve.png" alt="retrieve" link="/refguide/retrieve-objects/" max-width=80% class="no-border" >}} | [Retrieve object(s)](/refguide/retrieve-objects/) | Gets one (or more) associated objects of another object. Furthermore, this activity can also get one or more objects directly from a database. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/rollback.png" alt="rollback object" link="/refguide/rollback-object/" max-width=80% class="no-border" >}} | [Rollback object](/refguide/rollback-object/) | Rolls uncommitted changes back that were made to an object in the part of the microflow preceding the activity. Furthermore, it deletes objects that have been created but have never been committed. |
 
 ## List Activities
@@ -39,15 +39,15 @@ Most activities can be used in both microflows and nanoflows. However, some can 
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/create-list.png" alt="create list" link="/refguide/create-list/" max-width=65% class="no-border" >}} | [Create list](/refguide/create-list/) | Creates a (empty) list variable. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-operation.png" alt="list operation" link="/refguide/list-operation/" max-width=65% class="no-border" >}} | [List operation](/refguide/list-operation/) | Combines or compares two lists with objects of the same entity. |
 
-## Action Call Activities
+## Call Activities
 
-[Action call activities](/refguide/action-call-activities/) can be used to call another microflow or to call a Java action.
+[Call activities](/refguide/call-activities/) can be used to call another microflow, or to call a Java or JavaScript action.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-java-action.png" alt="Java action call" link="/refguide/java-action-call/" max-width=65% class="no-border" >}} | [Call Java action](/refguide/java-action-call/) (microflows only) | Calls a Java action. Arguments can be passed to the action and the result can be stored in a variable. |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-javascript-action.png" alt="javascript action call" link="/refguide/javascript-action-call/" max-width=65% class="no-border" >}} | [Call JavaScript action](/refguide/javascript-action-call/) (nanoflows only) | Calls a JavaScript action. Arguments can be passed to the action and the result can be stored in a variable. |
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-microflow.png" alt="microflow call" link="/refguide/microflow-call/" max-width=65% class="no-border" >}} | [Microflow call](/refguide/microflow-call/) | Calls a microflow. Arguments can be passed to the microflow and the result can be stored in a variable. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-java-action.png" alt="Call Java action" link="/refguide/call-java-action/" max-width=65% class="no-border" >}} | [Call Java action](/refguide/call-java-action/) (microflows only) | Calls a Java action. Arguments can be passed to the action and the result can be stored in a variable. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-javascript-action.png" alt="call javascript action" link="/refguide/call-javascript-action/" max-width=65% class="no-border" >}} | [Call JavaScript action](/refguide/call-javascript-action/) (nanoflows only) | Calls a JavaScript action. Arguments can be passed to the action and the result can be stored in a variable. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-microflow.png" alt="call microflow" link="/refguide/microflow-call/" max-width=65% class="no-border" >}} | [Call microflow](/refguide/microflow-call/) | Calls a microflow. Arguments can be passed to the microflow and the result can be stored in a variable. |
 
 ## Variable Activities
 
@@ -90,7 +90,7 @@ These activities can only be used in microflows.
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/import-with-mapping.png" alt="import with mapping" link="/refguide/import-mapping-action/" max-width=100% class="no-border" >}} | [Import with mapping](/refguide/import-mapping-action/) | Can be used to parse the data in a string variable or data stored in a file document, and store them to entities defined in the [domain model](/refguide/domain-model/) of the database. An [import mapping](/refguide/import-mappings/) is used to map the incoming XML or JSON to entities. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/export-with-mapping.png" alt="export with mapping" link="/refguide/export-mapping-action/" max-width=100% class="no-border" >}} | [Export with mapping](/refguide/export-mapping-action/) | Can be used to export the data stored in [domain model](/refguide/domain-model/) entities into an XML or JSON string. It can also be stored in a file document. An [export mapping](/refguide/export-mappings/) is used to map domain model entities into XML or JSON. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/query-external-database.png" alt="query external database" link="/refguide/query-external-database/" max-width=100% class="no-border" >}} | [Query external database](/refguide/query-external-database/) | Can be used with the [External Database Connector](/appstore/modules/external-database-connector/) to use preconfigured database queries and display retrieved data in your app.|
-| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/send-rest-request.png" alt="send rest request" link="/refguide/send-rest-request/" max-width=100% class="no-border" >}} | [Send REST request (beta)](/refguide/send-rest-request/) | Can be used to send a REST request, which is configured in a [consumed REST service (beta)](/refguide/consumed-rest-services-beta/) document.|
+| {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/send-rest-request.png" alt="send rest request" link="/refguide/send-rest-request/" max-width=100% class="no-border" >}} | [Send REST request (beta)](/refguide/send-rest-request/) | Can be used to send a REST request, which is configured in a [consumed REST service](/refguide/consumed-rest-service/) document.|
 
 ## Logging Activities
 
@@ -98,7 +98,11 @@ These activities can only be used in microflows.
 | ---| --- | --- |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message.png" alt="log message" link="/refguide/log-message/" max-width=60% class="no-border" >}} | [Log message](/refguide/log-message/) | Allows you to create messages that appear in the log of your Mendix application. |
 
-## Document Generation Activities
+## Document Generation Activities (Deprecated)
+
+{{% alert color="warning" %}}
+Document generation using Document Templates was deprecated in 11.0.0. See [Document Templates](/refguide/document-templates/) for alternatives.
+{{% /alert %}}
 
 | Graphic | Name | Description |
 | --- | --- | --- |

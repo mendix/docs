@@ -9,7 +9,7 @@ aliases:
 
 ## Introduction
 
-In a [microflow](/refguide/microflows/), microflow elements ([activities](/refguide/activities/), [decisions](/refguide/decisions/), or [loops](/refguide/loop/)) can sometimes fail and produce an error. If you do nothing, Mendix will report the error with a system error message and roll back all the changes. However, you can also change this behavior and handle errors yourself.
+In a [microflow](/refguide/microflows/), microflow elements ([activities](/refguide/activities/), [decisions](/refguide/decisions/), or [loops](/refguide/loop/)) can sometimes fail and produce an error. If you do nothing, Mendix reports the error with a system error message and roll back all the changes. However, you can also change this behavior and handle errors yourself.
 
 This document introduces different error handling options in microflows and explains how they work using simple examples. An example of how combined custom error handling works is also given in [An Example of Combined Error Handling](#example).
 
@@ -36,7 +36,7 @@ It is important to know that when a microflow is started by an end-user (for exa
 
 In the following subsections, we introduce the functionality of each error handling option using simple examples.
 
-### Error Handling  - Default
+### Error Handling - Default
 
 In this example, the error handling in **Microflow 2** is the default: **Rollback**.
 
@@ -86,9 +86,9 @@ In this example, the error handling in **Microflow 2** is set to **Custom withou
 
 When **Microflow 1** starts with a button click, a savepoint is created at the very beginning of **Microflow 1**. Another savepoint is created right before **GenerateError** because the error handling is set to **Custom without rollback**. When an error occurs in **Microflow 2**, changes made in **Create Order** are kept because of the savepoint right before **GenerateError**. A custom error is logged using a **Log message** activity. **Microflow 1** does not receive the error and continues to its end. Changes made in **Create Customer** are kept.
 
-### Error Handling – Continue
+### Error Handling - Continue
 
-The **Continue** option can only be set on a microflow call or on a loop.
+The **Continue** option can only be set on a Call microflow activity or on a loop.
 
 In this example, the error handling in **Microflow 2** is set to **Continue**.
 
@@ -128,9 +128,17 @@ In a custom error handler that is executed after an error occurs, `$latestError`
 In microflows that apply entity access, you may not be able to inspect the attributes of error objects for security reasons. You can pass the error object to a sub-microflow that does not apply entity access and inspect the attributes there.
 {{% /alert %}}
 
+{{% alert color="warning" %}}
+The `$latestError` variable is a special variable that does not behave like normal variables. This variable should not be returned as the result of a microflow to a nanoflow, page, or widget that calls it. Doing so will result in unexpected behavior.
+{{% /alert %}}
+
 ### Inspecting REST Errors
 
 If the error is a REST fault (an error that occurs as a result of a REST call), the result of the call will be stored in the `$latestHttpResponse` variable which is an object of type `HttpResponse`.  This object is available in your custom error flows and you can use it to write more focused messages to the log or to make other decisions within the error flow. For more information, see the [Response Tab](/refguide/call-rest-action/#response) section in *Call REST Service*.
+
+{{% alert color="warning" %}}
+The `$latestHttpResponse` variable is a special variable that does not behave like normal variables. This variable should not be returned as the result of a microflow to a nanoflow, page, or widget that calls it. Doing so will result in unexpected behavior.
+{{% /alert %}}
 
 ### Inspecting SOAP Errors
 
@@ -151,6 +159,10 @@ The attributes of the **System.SoapFault** entity are shown below:
 | Detail | String | The detail element of the SOAP fault. |
 
 For more information, see [SOAP Fault](https://www.w3.org/TR/soap12-part1/#soapfault).
+
+{{% alert color="warning" %}}
+The `$latestSoapFault` variable is a special variable that does not behave like normal variables. This variable should not be returned as the result of a microflow to a nanoflow, page, or widget that calls it. Doing so will result in unexpected behavior.
+{{% /alert %}}
 
 ## Best Practices
 

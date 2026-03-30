@@ -28,7 +28,6 @@ The following custom settings can be configured:
 | Name | Description | Default value |
 | --- | --- | --- |
 | `SessionTimeout` | Defines after how much time the session becomes invalid (in milliseconds). After that timeout, a session becomes applicable for removal. The session won't be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 (10 minutes) |
-| `LongLivedSessionTimeout` | This setting is the same as `SessionTimeout`, but specific to offline-first progressive web apps. *This setting was removed for apps created in Mendix version 10.9.0 and above*. | 604800000 (7 days) |
 | `com.mendix.offline.DeleteAutoCommittedObjectsAfterSync` | Defines if auto-committed created during offline synchronization will be deleted from the database immediately. | true |
 | `ClusterManagerActionInterval` | The interval (in milliseconds) used for performing all cluster manager actions. These actions include unblocking users and removing invalid sessions. If nothing is specified, the interval is half the `SessionTimeout`. | 300000 (5 minutes) |
 | `SessionKeepAliveUpdatesInterval` | Defines after how much time expired sessions can be removed from the database. | one sixth of the value configured for the `SessionTimeout` setting; if the `SessionTimeout` is not set, this value defaults to 100000 (100 seconds) |
@@ -114,8 +113,6 @@ However, if all of the following are true, you should increase the `ConnectionPo
 In general, we see that increasing the `ConnectionPoolingMaxActive` value to a (much) higher number is very rarely the right action to take, even if it is unfortunately the action usually taken when you run into connection pooling issues.
 
 ### Validating Database Connections
-
-The settings mentioned below are supported in Mendix version 10.6 in patch versions 10.6.4 and above, and in Mendix version 10.8.0 and above.
 
 In some deployments, database connections can be closed by the network infrastructure, for example by a firewall when they have been inactive for a long time.
 This may cause the Mendix Runtime to raise an error when it attempts to use the database connection that has now been closed.

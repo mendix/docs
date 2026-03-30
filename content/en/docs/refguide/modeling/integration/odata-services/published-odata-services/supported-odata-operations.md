@@ -87,7 +87,7 @@ Mendix supports the following comparison operators:
 
 | Function               | Example                                         | Returns                                                               |
 | ---------------------- | ----------------------------------------------- | --------------------------------------------------------------------- |
-| `contains`<sup>1</sup> | `/Employees?$filter=contains(Name, 'f')`        | All employees with names that contain an `f`                          |
+| `contains`¹ | `/Employees?$filter=contains(Name, 'f')`        | All employees with names that contain an `f`                          |
 | `startswith`           | `/Employees?$filter=startswith(Name, 'f')`      | All employees with names that start with `f`                          |
 | `endswith`             | `/Employees?$filter=endswith(Name, 'f')`        | All employees with names that end with `f`                            |
 | `length`               | `/Employees?$filter=length(Name) eq 5`          | All employees with names that have a length of 5                      |
@@ -98,7 +98,7 @@ Mendix supports the following comparison operators:
 | `minute`               | `/Employees?$filter=minute(Registration) eq 55` | All employees registered on the 55th minute of any hour               |
 | `second`               | `/Employees?$filter=second(Registration) eq 55` | All employees registered on the 55th second of any minute of any hour |
 
-<small><sup>1</sup> In OData v3 (⚠ deprecated), the `contains` function is called `substringof`, and its arguments are reversed. Here is an example: `/Employees?$filter=substringof('f', Name)`.</small>
+<small>¹ In OData v3 (⚠ deprecated), the `contains` function is called `substringof`, and its arguments are reversed. Here is an example: `/Employees?$filter=substringof('f', Name)`.</small>
 
 ##### Combining Filters
 
@@ -121,6 +121,8 @@ You can filter on the attributes of an associated entity. The syntax depends on 
 | Filter on an associated list   | `City?$filter=BornIn/any(person:person/Year le 1919)` |
 
 Filtering on an associated object or list in this way is possible only when you [expose associations as a link](/refguide/odata-representation/#associations). It is not possible when you expose associations as an associated object ID.
+
+For many-to-many associations, some expressions that filter on an associated list are not supported. An example of such an unsupported filter is `City?$filter=HasLivedIn/any(person:person/Year le 1919 and person/Name eq Name)`, where the `HasLivedIn` association is many-to-many. For this request, the service will respond with `501 Not Implemented`. In general, an associated list filter on a many-to-many association that uses the variable (in this example, `person`) more than once and refers back over the association (in this example, to the `Name` of the person) will result in `501 Not Implemented`.
 
 ##### Arithmetic Operators
 
@@ -339,9 +341,3 @@ If the action returns a value, it will always be contained in a JSON object with
 If the return value is an entity or a list of entities, it is possible to retrieve objects that are associated to this return entity. To do so, pass the `$expand` query parameter when sending the request. Note that this can only be included in the URI, and not in the request body (as is the case for retrieving objects).
 
 For example, imagine your microflow **FindEmployee** returning an entity **Employee**, that has an association to **Address**. You could retrieve the associated Address object by passing `/odata/myservice/v1/FindEmployee?$expand=Address`.
-
-{{% alert type="info" %}}
-The functionality for [publishing microflows in your OData service](/refguide/published-odata-microflow/) was introduced in Studio Pro [10.2.0](/releasenotes/studio-pro/10.2/).
-Support for publishing entities without the **Readable** capability was introduced in Studio Pro [10.8.0](/releasenotes/studio-pro/10.8/).
-Retrieving associated objects using the `$expand` query parameter is supported in Studio Pro [10.12.0](/releasenotes/studio-pro/10.12/) and later.
-{{% /alert %}}

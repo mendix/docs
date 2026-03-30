@@ -7,9 +7,15 @@ weight: 20
 
 ## Introduction
 
-A **text area** is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](/refguide/data-types/) *String*. It differs from a [text box](/refguide/text-box/) In that the value can be displayed over several lines.
+A **text area** is used to display and, optionally, allow the end-user to edit the value of an attribute or variable of [data type](/refguide/data-types/) *String*. It differs from a [text box](/refguide/text-box/) In that the value can be displayed over several lines.
 
-A text area must be placed in a [data container](/refguide/data-widgets/) and displays an attribute of the object (or objects) retrieved by that container. The name of the attribute to be displayed is shown inside the text area, between square brackets, and colored blue.
+A text area must be placed within a data context to display or edit the intended value:
+
+* A [data container](/refguide/data-widgets/) widget containing an object
+* A snippet containing one or more [parameters](/refguide/page-properties/#parameters)
+* A page or a snippet containing one or more [variables](/refguide/page-properties/#variables)
+
+The name of the configured value is shown inside the text area widget, between square brackets, and colored blue.
 
 For example, the following text area allows the end-user to see, and set, the **Notes** about a contact.
 
@@ -78,15 +84,19 @@ This type of message can also occur when a loaded or stored value exceeds the ch
 
 This property specifies the maximum number of characters that can be typed in this text area.
 
-| Value | Description |
-| --- | --- |
-| Attribute length *(default)* | The maximum number of characters is the same as the maximum length of the connected attribute |
-| Unlimited | The maximum number of characters is unlimited |
-| Custom | The maximum number of characters is specified in the widget properties |
+| Value                                       | Description                                                                                   |
+|---------------------------------------------|-----------------------------------------------------------------------------------------------|
+| Attribute length *(default for attributes)* | The maximum number of characters is the same as the maximum length of the connected attribute |
+| Unlimited *(default for variables)*         | The maximum number of characters is unlimited                                                 |
+| Custom                                      | The maximum number of characters is specified in the widget properties                        |
+
+{{% alert color="info" %}}
+Attribute length option is not available when the widget is configured with a variable.
+{{% /alert %}}
 
 #### Placeholder Text
 
-The placeholder text is shown when no text has been entered yet, or when a displayed attribute is empty.
+The placeholder text is shown when no text has been entered yet, or when a displayed attribute or variable is empty.
 
 It can be used, for example, to give a hint to the end-user what kind of text should be entered.
 
@@ -195,3 +205,4 @@ With **While user is entering data**, users now can adjust one more property cal
 
 * [Data view](/refguide/data-view/)
 * [Attributes](/refguide/attributes/)
+* [Variables](/refguide/page-properties/#variables)

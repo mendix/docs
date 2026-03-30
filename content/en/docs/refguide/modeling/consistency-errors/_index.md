@@ -31,7 +31,7 @@ Errors need to be solved before your app can be deployed. A consistency error ca
 * [Navigation](/refguide/consistency-errors-navigation/) 
 * [Microflows](/refguide/microflows/)
 * [Workflows](/refguide/workflows/)
-* [Domain Model](/refguide/domain-model/)
+* [Data in the Domain Model](/refguide/domain-model/)
 * [Integration](/refguide/integration/)
 * [Security](/refguide/security/)
 

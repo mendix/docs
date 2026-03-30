@@ -27,10 +27,6 @@ Default: *Object*
 
 ### Argument {#argument}
 
-{{% alert color="info" %}}
-This feature was introduced in Studio Pro 10.17.0.
-{{% /alert %}}
-
 Determines whether the argument is optional or required. When the argument is set to be **Optional**, it can be omitted when calling the microflow/nanoflow. When the argument is set to be **Required**, an argument must be passed.
 
 #### Default Value

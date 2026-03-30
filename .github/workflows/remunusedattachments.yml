@@ -36,9 +36,10 @@ jobs:
             Pull Request to delete attachments that are no longer used.
             Check the htmltest output from the CI/CD pipeline to ensure that nothing has been removed accidentally.
           branch: rem-unused-attachments
-          committer: MarkvanMents <Mark.van.Ments@mendix.com>
-          assignees: MarkvanMents
-          reviewers: MarkvanMents
+          author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+          committer: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+          assignees: MarkvanMents,OlufunkeMoronfolu
+          reviewers: MarkvanMents,OlufunkeMoronfolu
           labels: Internal WIP
           add-paths: |
             static/attachments/**

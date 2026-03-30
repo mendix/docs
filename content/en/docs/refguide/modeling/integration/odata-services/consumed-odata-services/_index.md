@@ -43,10 +43,6 @@ You can create associations between local [persistable entities](/refguide/persi
 When a service defines an entity without an entity set, it means that this entity is not persistable. You can add it to the domain model as a non-persistable entity.
 The definition of this entity is read-only and is controlled in the service that publishes it. This means that you cannot add attributes or change them.
 
-{{% alert type="info" %}}
-Support for importing non-persistable entities from a consumed OData service was introduced in Studio Pro [10.8.0](/releasenotes/studio-pro/10.8/).
-{{% /alert %}}
-
 ### External Enumerations
 
 When you consume an external entity that has an attribute of an enumeration type, the corresponding enumeration will be added to your project if it did not previously exist. The enumeration is created according to the definition in the OData service contract, meaning that all allowed values will be automatically added to your enumeration.
@@ -63,7 +59,7 @@ There are some limitations on which actions can be consumed. These are described
 
 When an external entity is dragged into the domain model, or when an external action is used in a microflow, the  **Consumed OData service** document that is added to the model displays the values of the metadata contract from the service endpoint.
 
-In the [Integration pane](/refguide/integration-pane/), the service and the entity are shown as consumed both in the search results pane and also in the **Used in your App** section.
+In the [Integration pane](/refguide/integration-pane/), the service and the entity are shown as consumed both in the search results pane and also in the **Used in this app** section.
 
 If the metadata contract at the specified service endpoint is different to the contract in the current app model, this is indicated in the [Integration pane](/refguide/integration-pane/) search results and the **Properties** pane for the service with an **Update** icon (a blue arrow).
 

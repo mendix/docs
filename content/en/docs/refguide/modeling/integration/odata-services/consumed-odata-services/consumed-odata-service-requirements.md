@@ -88,6 +88,7 @@ The most commonly used attribute types can be used in your app. The types of the
 | Enumeration                    | Enumeration |
 | Int64                          | Long |
 | String, Guid                   | String |
+| Collection                     | List (see [Collection Properties](#collection-properties) below) |
 | (Other)                        | (Ignored) |
 
 ¹ In Studio Pro, Booleans cannot be null. If the service returns null, the app will use the value `false`.
@@ -95,10 +96,6 @@ The most commonly used attribute types can be used in your app. The types of the
 ² Decimal values outside of the range of a [Mendix Decimal](/refguide/attributes/#type) are currently not supported. If the service returns a value outside of the range, there will be an error.
 
 #### Attributes of Complex Types
-
-{{% alert color="info" %}}
-Support for consuming attributes of complex types was introduced in Mendix version 10.6.
-{{% /alert %}}
 
 Complex types are not supported by the domain model. However, Studio Pro allows you to read external entities that contain attributes of a complex type by importing the properties of the complex type as attributes of the containing entity.
 
@@ -126,6 +123,22 @@ The binary data format is supported in the form of *media entities*. When a medi
 
 Currently, the binary data can only be accessed by Java actions.
 
+### Collection Properties {#collection-properties}
+
+{{% alert color="info" %}}
+Collection properties were introduced in [Studio Pro 11.6.0](/releasenotes/studio-pro/11.6/).
+{{% /alert %}}
+
+Entity type properties that are a collection of a supported attribute type are supported through the use of an associated non-persistable entity. 
+
+Take, for example, a `Product` entity type has an attribute `Tags` with type `Collection(Edm.String)`. The resulting domain model looks as follows:
+
+{{< figure src="/attachments/refguide/modeling/integration/odata-services/consumed-odata-service/collection-of-primitives.png" alt="A product entity with an associated ProductTag entity. The ProductTag entity has a Tag attribute" width="531" class="no-border" >}}
+
+For entity sets, these properties are not supported. This means they can only be used in parameters and return values of external actions.
+
+Collection properties are not supported for services using OData v3.
+
 ### Associations
 
 An OData v3 association can only be used if it has two ends.
@@ -136,11 +149,7 @@ When you publish a self-referencing association, you can only publish one side o
 
 ### Enumerations
 
-In Studio Pro 10.11 and earlier, enumeration types that have one or more members with a name that is not a valid [enumeration value name](/refguide/enumerations/#name) are not supported.
-
-{{% alert color="info" %}}
-As of Mendix 10.12, the original enumeration member value is stored separately from the enumeration member name and caption in the app model. This enables Studio Pro to consume enumerations that have special characters or reserved keywords as enumeration values. By default, the caption will be equal to the remote value; the name will be equal to the remote value, with any unsupported characters replaced by underscores. 
-{{% /alert %}}
+The original enumeration member value is stored separately from the enumeration member name and caption in the app model. This enables Studio Pro to consume enumerations that have special characters or reserved keywords as enumeration values. By default, the caption will be equal to the remote value; the name will be equal to the remote value, with any unsupported characters replaced by underscores. 
 
 ## Requirements on Actions {#actions}
 

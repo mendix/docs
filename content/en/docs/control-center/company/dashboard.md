@@ -19,6 +19,7 @@ The Control Center dashboard gives you an overview of various activities for you
 
 These are some examples of what you can find on the dashboard:
 
+* <a id="contract-info"></a> **Company Information** – displays all contracts associated with the company, including the customer name, contract status, expiry date, and remaining time until expiry. For more details, refer to [Contract Management](/developerportal/deploy/contract-management/)
 * **Apps Created** – you can filter these [apps](/control-center/apps/) by date
 * **Mendix Versions** – describes which Studio Pro/Mendix versions your internal and external [members](/control-center/members/) are using for apps, which is especially important as the development of apps on outdated or [non-MTS/LTS versions](/releasenotes/studio-pro/lts-mts/) can lead to security issues
 * **Certification Level** – presents the number of members per [Mendix certification](https://academy.mendix.com/link/certification)

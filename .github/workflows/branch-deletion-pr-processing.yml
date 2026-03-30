@@ -1,0 +1,64 @@
+name: Branch Deletion Phase Two (PR Processing)
+on:
+  pull_request:
+    types: [closed]
+    branches: [development]
+    paths:
+      - 'branch-cleanup-timestamp.txt'
+
+permissions:
+  contents: write
+
+jobs:
+  process-approved-deletion:
+    if: |
+      github.event.pull_request.merged == true &&
+      startsWith(github.event.pull_request.title, '[Auto] Branch Deletion Candidates') &&
+      contains(github.event.pull_request.labels.*.name, 'Internal WIP')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
+
+      - name: Extract branches
+        id: extract-branches
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          BRANCHES=$(echo "$PR_BODY" | awk '
+            /### Branches for Deletion/ {flag=1; next}
+            /### Protected\/Recent Branches/ {flag=0}
+            flag && /^-/ {gsub(/^-[ \t]*/, ""); print}
+          ')
+          
+          CLEAN_BRANCHES=$(echo "$BRANCHES" | tr -d '\r' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+          echo "branches=$(jq -nc '$ARGS.positional' --args $CLEAN_BRANCHES)" >> $GITHUB_OUTPUT
+          echo "Extracted branches: $BRANCHES"
+
+      - name: Delete branches
+        env:
+          BRANCHES: ${{ steps.extract-branches.outputs.branches }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          echo "$BRANCHES" | jq -r '.[]' | while read -r branch; do
+            branch_lower=$(echo "$branch" | tr '[:upper:]' '[:lower:]')
+            
+            if [[ $branch_lower =~ ^(backup|development|main|master|production)(-[0-9]+)?$ ]]; then
+              echo "Skipping protected branch: $branch"
+              continue
+            fi
+
+            if git ls-remote --exit-code --heads origin "$branch" >/dev/null; then
+              echo "Deleting $branch"
+              git push origin --delete "$branch"
+              sleep 1
+            else
+              echo "Branch $branch does not exist"
+            fi
+          done

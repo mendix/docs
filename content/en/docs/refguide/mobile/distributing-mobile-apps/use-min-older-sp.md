@@ -30,10 +30,10 @@ Next, select the Mendix version you want to build your Make It Native App for:
 git checkout <BRANCH_NAME>>
 ```
 
-For example, if you want to build Make It Native for Mendix 10.0.0, do the following:
+For example, if you want to build Make It Native for Mendix 11.0.0, do the following:
 
 ```bash
-git checkout mx/10.0
+git checkout mx/11.0
 ```
 
 You can find a complete list of supported Mendix versions and their branch names in the [GitHub Repository](https://github.com/mendix/make-it-native/branches/active).
@@ -367,7 +367,7 @@ If using Native Builder UI (which also creates native apps to use for testing), 
 1. In Studio Pro, click **App** > **Build Native Mobile App**.
 1. Click **Configure app for local building**.
 1. (Build type) Select a disk location for the native app source code.
-1. (Build type) Disable GitHub and App Center cloud services.
+1. (Build type) Disable GitHub.
 1. (Splash screens / App icon / Custom fonts) Use the default splash screen and app icons and no custom fonts (because we need the JavaScript bundle and project assets, this step isn't important but required).
 1. (App details) Select **Portrait** and **Landscape** for app's **orientation selection**.
 1. (App details) Select **Phones** and **Tablets** for app's **Device targets selection**.

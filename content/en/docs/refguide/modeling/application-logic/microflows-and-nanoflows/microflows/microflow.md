@@ -17,12 +17,14 @@ Microflow properties consist of the following sections:
 * [Usage](#usage)
 * [Security](#security)
 * [Concurrent execution](#concurrent)
+* [Expose as microflow action](#expose-as-microflow-action)
+* [Expose as workflow action](#expose-as-workflow-action)
 
 ### General Section {#general}
 
-#### Return Type {#returntype}
+#### Return Type {#return-type}
 
-The return type defines what information the microflow returns. The caller of the microflow will get a result of this type. See [Data Types](/refguide/data-types/) for the possible return types.
+The return type defines what information the microflow returns. The caller of the microflow gets a result of this type. For information on possible return types, see [Data Types](/refguide/data-types/).
 
 {{% alert color="info" %}}
 To indicate whether or not an object should be committed, you can use Boolean as the return type of the microflow.
@@ -40,7 +42,7 @@ For example, in the URL `product/{Product/Name}`, the `Name` attribute of the pa
 
 You can also use `Id` as an attribute to include the entity's identifier in the URL. This would appear as `product/{Product/Id}` for example. 
 
-Alternatively, starting from Studio Pro 10.9.0, primitive parameters can be used as **Query string** parameters. Check the checkbox in the parameter's table to configure a microflow parameter to be used as a query string parameter. A query string parameter will be included in the query section of the URL, for example, `?MyParameter=MyValue&MyParameter_2=MySecondValue`. The ordering of query string parameters in the URL does not matter. If a query string parameter is missing in the URL, `empty` is passed to the microflow as the value for the parameter.
+Alternatively, primitive parameters can be used as **Query string** parameters. Check the checkbox in the parameter's table to configure a microflow parameter to be used as a query string parameter. A query string parameter will be included in the query section of the URL, for example, `?MyParameter=MyValue&MyParameter_2=MySecondValue`. The ordering of query string parameters in the URL does not matter. If a query string parameter is missing in the URL, `empty` is passed to the microflow as the value for the parameter.
 
 In the **Edit Microflow URL** dialog box, the configured URL is shown together with an example URL with example values filled in for the parameters. It also shows how the parameter will be retrieved:
 
@@ -54,14 +56,12 @@ URLs are not supported for microflows that have non-persistable entities or list
 
 #### Name
 
-**Name** is the internal name of the microflow. When referring to the microflow in the app you will use this name. It must be unique within the module, but you can have two microflows with the same name in different modules. When referring to the microflow, you will normally prepend the name of the module to ensure uniqueness and allow you to use microflows in other modules.
+**Name** is the internal name of the microflow. You use this name to refer to the microflow in the app. It must be unique within the module, but you can have two microflows with the same name in different modules. When referring to the microflow, you normally prepend the name of the module to ensure uniqueness and allow you to use microflows in other modules.
 
 #### Export Level 
 
 {{% alert color="info" %}}
-
 This property is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](/refguide/modules/#module-types) section in *Modules*. 
-
 {{% /alert %}}
 
 **Export level** allows you to define access level to this document on the consumer (customer) side when developing an add-on module or a solution. 
@@ -89,15 +89,15 @@ Default: *disabled*
 
 #### Apply Entity Access
 
-**Apply entity access** indicates whether entity access based on the current user is applied when performing operations on objects. Setting this to yes limits the objects that are retrieved by the [retrieve action](/refguide/retrieve/) to only those that the current user is allowed to see. Similarly, when reading and writing attributes and associations the entity access of the current user is applied. Conversely, if entity access is not applied, all operations are allowed and all objects are retrieved.
+**Apply entity access** indicates whether entity access based on the current user is applied when performing operations on objects. Enabling this setting limits the objects that are retrieved by the [retrieve object(s) activity](/refguide/retrieve-objects/) to only those that the current user is allowed to see. Similarly, when reading and writing attributes and associations, the entity access of the current user is applied. Conversely, if entity access is not applied, all operations are allowed and all objects are retrieved.
 
 | Option | Description |
 | --- | --- |
-| Yes | Entity access is applied to retrieving and manipulating objects. The rights of current user are taken into account. |
-| No  *(default)*  | Entity access is not applied. |
+| Disabled *(default)* | Entity access is not applied. |
+| Enabled | Entity access is applied to retrieving and manipulating objects. The rights of current user are taken into account. |
 
 {{% alert color="info" %}}
-By default entity access is not applied. Set **Apply entity access** to **Yes** if you want to perform some actions that respect the access rights of the current user.
+By default entity access is not applied. Enabling **Apply entity access** if you want to perform some actions that respect the access rights of the current user.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -124,8 +124,8 @@ Disallowing concurrent execution of a microflow can be useful if a microflow wou
 
 | Option | Description |
 | --- | --- |
-| No *(default)*  | It is possible to execute the microflow more than once concurrently. |
-| Yes | It is not possible to execute the microflow more than once concurrently; the user receives a message or another microflow is executed instead. |
+| Disabled *(default)*  | It is possible to execute the microflow more than once concurrently. |
+| Enabled | It is not possible to execute the microflow more than once concurrently; the user receives a message or another microflow is executed instead. |
 
 #### Error Message
 
@@ -135,7 +135,7 @@ Disallowing concurrent execution of a microflow can be useful if a microflow wou
 
 **Error microflow** defines another microflow to execute when concurrent execution is not allowed and the user tries to start the microflow while it is already being executed. When set, there will be no further message shown to the user.
 
-## Expose as Microflow Action {#expose-as-microflow}
+## Expose as Microflow Action {#expose-as-microflow-action}
 
 You can select this option by right-clicking in the microflow editor and selecting **Expose as action** > **Expose as microflow action**.
 
@@ -152,11 +152,9 @@ The required size for the icon is 64x64 pixels, and 256x192 pixels for the image
 A separate icon and image can be provided for the [dark mode](/refguide/preferences-dialog/#studio-pro-theme) of Studio Pro to fit its color scheme.
 
 {{% alert type="info" %}}
-
 When no icon and no image are selected, the default microflow call action icon and image are used.
 
-If only icon is specified, the icon image will be used for the toolbox tile view.
-
+If only icon is specified, the icon image is used for the toolbox tile view.
 {{% /alert %}}
 
 ## Expose as Workflow Action {#expose-as-workflow-action}
@@ -167,7 +165,7 @@ It is also accessible by right-clicking in the microflow editor and selecting **
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/workflow-expose.jpg" alt="Expose As Workflow Action" width="550" class="no-border" >}}
 
-By selecting the **Expose as workflow action** option, you can expose the microflow as a [workflow](/refguide/workflows/) action. Exposing the workflow will make it appear in the **Toolbox** of a [workflow editor](/refguide/workflows/) in the category of your choice. When this action is used in a workflow, it will show the provided caption and icon.
+By selecting the **Expose as workflow action** option, you can expose the microflow as a [workflow](/refguide/workflows/) action. Exposing the workflow makes it appear in the **Toolbox** of a [workflow editor](/refguide/workflows/) in the category of your choice. When this action is used in a workflow, it shows the provided caption and icon.
 
 The **Caption** and **Category** of the workflow action are required, but the **Icon** and **Image** are optional. The image in the **Icon** property is used for the list view of the **Toolbox**, and the image in the **Image** property – for the toolbox tile view. For more information, see the [Toolbox](/refguide/view-menu/#toolbox) section in the *View Menu*.
 
@@ -176,9 +174,7 @@ The required size for the icon is 64x64 pixels, and 256x192 pixels for the image
 A separate icon and image can be provided for the [dark mode](/refguide/preferences-dialog/#studio-pro-theme) of Studio Pro to fit its color scheme.
 
 {{% alert type="info" %}}
-
 When no icon and no image are selected, the default workflow call action icon and image are used.
 
-If only icon is specified, the icon image will be used for the toolbox tile view.
-
+If only icon is specified, the icon image is used for the toolbox tile view.
 {{% /alert %}}

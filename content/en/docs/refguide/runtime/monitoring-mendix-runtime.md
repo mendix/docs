@@ -12,7 +12,7 @@ For on-premises and local deployments of Mendix, the Mendix Runtime monitoring a
 {{% alert color="info" %}}
 This is only available for local and on-premises deployments of your app.
 
-For deployments to other platforms (for example, Mendix for Private Cloud), you do not have access to the m2ee admin handler to make these requests.
+For deployments to other platforms (for example, Mendix on Kubernetes), you do not have access to the m2ee admin handler to make these requests.
 
 For deployments to Mendix Cloud, you can get the same information from various pages in the Mendix Portal. For more information, see:
 
@@ -27,7 +27,9 @@ The request needs to be of the **POST** type with **No Authorization** and the f
 * Content-Type: **application/json**
 * X-M2EE-Authentication: **yourM2EEPassword_Base64Encoded**
 
-The M2EE password is NOT the super administrator password, but a separate password. If you have the application deployed *on premises*, you can set this password in the **settings.yaml** file, which is located in the **Apps/YourProject** folder. If you are *running the application from Studio Pro*, the M2EE password is set automatically by Mendix, and you can retrieve it from the environment variables of your application process.
+    The M2EE password is NOT the super administrator password, but a separate password. This can be retrieved from the `M2EE_ADMIN_PASS` environment variable in your `javaw.exe` or `java` process.
+
+    Remember to Base64 encode the password before passing it as the value for `X-M2EE-Authentication`
 
 The next sections explain which monitoring actions are supported.
 
@@ -551,7 +553,7 @@ For that you need to do three things:
 
  [//]: # (<!-- markdownlint-disable no-duplicate-heading -->)
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -577,7 +579,7 @@ If the `feedback` is not empty use the name of your current log subscriber in th
 {"action": "remove_log_subscriber", "params": {"name": "ConsoleLogSubscriber"}}
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -588,7 +590,7 @@ If the `feedback` is not empty use the name of your current log subscriber in th
 
 It is possible to have multiple log subscribers running simultaneously, if several log subscribers were created then each of them will be writing the same log lines. 
 
-### Request to Create New Log Subscriber in Json Format
+### Request to Create New Log Subscriber in JSON Format
 
 ```json
 {
@@ -605,7 +607,7 @@ It is possible to have multiple log subscribers running simultaneously, if sever
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -614,7 +616,7 @@ It is possible to have multiple log subscribers running simultaneously, if sever
 }
 ```
 
-This will write logs to standard output in Json format. If you need to add extra static fields to tag logs then you can add them into `tags`, in this example `ddtags` and `service` are added.
+This will write logs to standard output in JSON format. If you need to add extra static fields to tag logs then you can add them into `tags`, in this example `ddtags` and `service` are added.
 This configuration will produce logs similar to these:
 
 ```json
@@ -635,7 +637,7 @@ This configuration will produce logs similar to these:
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```json
 {
@@ -647,3 +649,27 @@ This configuration will produce logs similar to these:
 This will write logs to standard output in simple text format.
 
 [//]: # (<!-- markdownlint-enable no-duplicate-heading -->)
+
+### Request to Create New Log Subscriber in Open Telemetry Format {#new-log-sub-opentelemetry}
+
+```json
+{
+  "action": "create_log_subscriber",
+  "params": {
+    "type": "opentelemetry",
+    "name": "OpenTelemetrySubscriber",
+    "autosubscribe": "INFO"
+  }
+}
+```
+
+#### Example Response
+
+```json
+{
+  "feedback": {},
+  "result": 0
+}
+```
+
+This will send logs to the registered OpenTelemetry collector. See [Tracing](/refguide/tracing-in-runtime/) for a guide on how to enable OpenTelemetry.

@@ -27,7 +27,6 @@ Without a licensed node, you can still deploy your app and test it, but it will 
 This page explains how to link your app to a licensed node. It covers the following topics:
 
 * [Linking Your App to a Licensed Node](#licensed-node)
-* [Unlinking a Free App](#unlink-free) from its environment
 * [Exchanging Linked Apps Between Nodes](#exchange-apps)
 
 {{% alert color="warning" %}}
@@ -58,8 +57,6 @@ In a licensed node, you have everything you need to stage and deploy your app. Y
 
 To license an app, you must have a licensed cloud node available:
 
-If you want to license a single app for between five and one hundred users, you can order the Mendix Basic package online. For more information, see [Mendix Basic Package](/developerportal/deploy/basic-package/).
-
 If you have an existing contract that allows for more licensed nodes, use the [Request New App Node](https://newnode.mendix.com) app to request a new node from Mendix Support. For more information, see [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
 
 {{% alert color="info" %}}
@@ -79,9 +76,8 @@ You also need to have enabled two-factor authentication. For more information, s
 Consider the following case: You have deployed an app, either as a Free App or to a licensed node. You now want to link it to a licensed node (or move it from one licensed node to another licensed node). To link the app to the node, carry out the following steps:
 
 1. [Back up your data](#backing-up)
-2. [Unlink from the current environment](#unlink)
-3. [Connect your app to a licensed node](#connect-app)
-4. [Restore the backup of your data](#restoring)
+2. [Connect your app to a licensed node](#connect-app)
+3. [Restore the backup of your data](#restoring)
 
 {{% alert color="info" %}}
 For the specific case of swapping two apps between licensed nodes, see the guidance in the [Exchanging Linked Apps Between Nodes](#exchange-apps) section.
@@ -95,35 +91,9 @@ For more details on downloading a backup, see [Download a Backup](/developerport
 
 {{% alert color="warning" %}}When you unlink your Free App from its environment, the environment is permanently deleted. You will not be able to recover any data once the Free App is unlinked.<br><br>If you unlink an app from a licensed node, that does not delete the node. Data is retained in the node.{{% /alert %}}
 
-### Unlinking From Current Environment{#unlink}
+#### Unlinking From Current Environment{#unlink}
 
-Before you can link an app to a new environment, you need to unlink it from its current environment. By default, all apps are created as Free Apps the first time they are deployed. So, in most cases, you must unlink them.
-
-#### Unlinking a Free App{#unlink-free}
-
-To unlink a Free App, do the following:
-
-1. From [Apps](https://sprintr.home.mendix.com), go to the [Environments](/developerportal/deploy/environments/) page of the app you want to unlink.
-
-1. If the page shows the following message, then your app is not currently linked to a node. In that case, you can go straight to the [Connecting Your App to a Licensed Node](#connect-app) section.
-
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/licensing-apps/link-node.png" >}}
-   
-1. Click **Unlink your app**.
-
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/licensing-apps/unlink-free-app.png" >}}
-
-1. Click **Yes, delete all data and unlink this app** to confirm.
-
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/licensing-apps/confirm-unlink.png" max-width=70% class="no-border" >}}
-
-1. If prompted, authenticate yourself with [two-factor authentication](/developerportal/deploy/two-factor-authentication/).
-
-Your app has now been unlinked from the Free App environment.
-
-#### Unlinking a Licensed App{#unlink-licensed}
-
-It is not possible to unlink an app from a licensed node. The only way to do this is to connect another app to the licensed node; this automatically unlinks the existing app.
+It is not necessary to unlink an app from its current environment before linking it to a new node. Instead, you can [connect another app to the node](#connect-app); this automatically unlinks the existing app.
 
 The [Exchanging Linked Apps Between Nodes](#exchange-apps) section provides an example of how you can use this behavior.
 
@@ -147,19 +117,21 @@ To connect your app to a licensed node, do the following:
 
 1. From [Apps](https://sprintr.home.mendix.com), go to the [Environments](/developerportal/deploy/environments/) page of the app you want to unlink.
 
-1. Click **Select a node**.
+1. Click **Select Licensed Node**.
 
     {{< figure src="/attachments/deployment/mendix-cloud-deploy/licensing-apps/link-node.png" >}}
 
-1. Click **Use this Node**.
-
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/licensing-apps/choose-node.png" class="no-border" >}}
-
-1. If there is already an app linked to the node, you will be prompted to confirm that you want to replace it. Click **Continue** to confirm.
-
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/licensing-apps/confirm-replace.png" max-width=70% class="no-border" >}}
-
 1. If prompted, authenticate yourself with [two-factor authentication](/developerportal/deploy/two-factor-authentication/).
+
+1. In the list of your cloud nodes, click **Use this Node** by the node that you want to connect to your app.
+
+1. If there is already an app linked to the node, you will be prompted to confirm that you want to replace it. Click **Proceed** to confirm.
+
+{{% alert color="warning" %}}
+Unlinking a sandbox app cannot be undone. All data in the app is deleted. Before you proceed, make sure to download a backup of the app that you want to replace.
+
+Linking a new project to a node removes all existing team members and resets node permissions. The technical contact must re-add everyone to the project, and reconfigure any necessary settings.
+{{% /alert %}}
 
 Your app is now connected to this node.
 

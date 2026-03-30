@@ -96,7 +96,7 @@ To improve security of your app, it is recommended that you delete *AccessToken*
 
 #### DS_Account
 
-This microflow populates the *Name* attribute of the *Tenant* entity and the *Email* attribute of the *Account* entity from the Insights Hub account details of the user. These are extensions to the Mendix User Object which assist the creation of multi-tenant apps.
+This microflow populates the *Name* attribute of the *Tenant* entity and the *Email* attribute of the *Account* entity from the Insights Hub account details of the user. These are extensions to the Mendix User Object which assist the creation of multitenant apps.
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-module-details/image7.png" alt="Domain model showing Account, Tenant, and TenantObject." >}}
 
@@ -106,7 +106,7 @@ In addition, Insights Hub SSO will identify whether the current user is a subten
 If the same user logs in using a different tenant, Mendix will treat this as a different user and a User ID will be used within Mendix instead of a user name.
 {{% /alert %}}
 
-For advice on how to make your apps multi-tenant, see [Multi-Tenancy](/partners/siemens/mindsphere-development-considerations/#multitenancy) in *Insights Hub Development Considerations*.
+For advice on how to make your apps multitenant, see [Multi-Tenancy](/partners/siemens/mindsphere-development-considerations/#multitenancy) in *Insights Hub Development Considerations*.
 
 ### Roles and Scopes{#rolesscopes}
 

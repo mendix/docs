@@ -277,6 +277,10 @@ The user can use the optional attribute [`allowUpload`](#allow-upload) with defa
 
 #### XML Attributes
 
+{{% alert color="info" %}}
+The `allowUpload` attribute was introduced in Mendix [11.8](/releasenotes/studio-pro/11.8/).
+{{% /alert %}}
+
 | Attribute  	| Required | Attribute Type | Description                                                           |
 |---------------|----------|----------------|-----------------------------------------------------------------------|
 | `type`     	| Yes      | String         | Must be `image`                                                       |
@@ -717,6 +721,10 @@ The user can use the optional attribute [`allowUpload`](#allow-upload) with defa
 {{% alert color="info" %}} Editable types are not supported for Native as of now. {{% /alert %}}
 
 #### XML Attributes
+
+{{% alert color="info" %}}
+The `allowUpload` attribute was introduced in Mendix [11.8](/releasenotes/studio-pro/11.8/).
+{{% /alert %}}
 
 | Attribute     | Required | Attribute Type | Description                      |
 |---------------|----------|----------------|----------------------------------|

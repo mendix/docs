@@ -1,0 +1,44 @@
+name: Check Claude Settings
+
+on:
+  pull_request:
+    paths:
+      - '.claude/settings.json'
+
+jobs:
+  check-settings:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for settings.json changes
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const comment = `⚠️ **Claude Settings Warning**
+
+            You've modified \`.claude/settings.json\`. This file contains the shared configuration for all contributors.
+
+            **If you're changing AWS_PROFILE:**
+            The default profile name is \`my-sandbox\`. If your AWS profile has a different name, override it locally instead of changing the shared file.
+
+            Create or edit \`.claude/settings.local.json\` in the repo root:
+
+            \`\`\`json
+            {
+              "env": {
+                "AWS_PROFILE": "your-sandbox-name"
+              }
+            }
+            \`\`\`
+
+            This local file is gitignored and will override the repo default.
+
+            **Only modify \`.claude/settings.json\` if you're changing shared configurations that apply to everyone and have discussed this change with the TW team.**`;
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
+
+            core.setFailed('Settings.json was modified - see comment for guidance');

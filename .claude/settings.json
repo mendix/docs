@@ -3,7 +3,7 @@
     "CLAUDE_CODE_ENABLE_TELEMETRY": "0",
     "DISABLE_TELEMETRY": "1",
     "OTEL_METRICS_EXPORTER": "otlp",
-    "AWS_PROFILE": "my-sandbox",
+    "AWS_PROFILE": "my-sandbox-1",
     "AWS_REGION": "eu-central-1",
     "CLAUDE_CODE_USE_BEDROCK": "1",
     "ANTHROPIC_MODEL": "eu.anthropic.claude-sonnet-4-5-20250929-v1:0",

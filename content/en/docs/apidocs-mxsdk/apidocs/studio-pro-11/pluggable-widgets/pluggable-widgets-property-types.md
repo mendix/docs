@@ -480,10 +480,6 @@ Then the Studio Pro UI for the property appears like this:
 
 ### Action {#action}
 
-{{% alert color="info" %}}
-The `defaultType` and `defaultValue` attributes for Action were introduced in Mendix [10.15](/releasenotes/studio-pro/10.15/).
-{{% /alert %}}
-
 The action property type allows a user to configure an action which can do things like call nanoflows, save changes, and open pages.
 
 If a `dataSource` attribute is not specified, the client will receive an `ActionValue` representing the action or `undefined` if the **Do nothing** action was selected.
@@ -767,10 +763,6 @@ Only list datasources are supported, therefore specifying `isList="true"` is req
 
 ##### Data Source Defaults {#data-source-defaults}
 
-{{% alert color="info" %}}
-The `defaultType` and `defaultValue` attributes for datasources were introduced in Mendix [10.16](/releasenotes/studio-pro/10.16/).
-{{% /alert %}}
-
 You can use the `defaultType` and `defaultValue` attributes to configure default data sources for your widget. Unless overridden in Studio Pro, the widget will attempt to configure the data source according to its defaults. Both attributes need to be set for the defaults to be applied.
 
 The format of `defaultValue` depends on the chosen `defaultType`:
@@ -796,10 +788,6 @@ Then the Studio Pro UI for the property appears like this:
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/datasource.png" class="no-border" >}}
 
 ### Selection {#selection}
-
-{{% alert color="info" %}}
-The property type was introduced in Mendix [10.7](/releasenotes/studio-pro/10.7/).
-{{% /alert %}}
 
 The selection property allows a widget to read and set a selection that can be used in actions, expressions, or a `Listen to` data source of a data view.
 
@@ -866,10 +854,6 @@ Label property allows a pluggable widget to have labeling functionality similar 
 ```
 
 #### setLabel {#setLabel}
-
-{{% alert color="info" %}}
-The `setLabel` attribute was introduced in Mendix [10.5](/releasenotes/studio-pro/10.5/).
-{{% /alert %}}
 
 You can use `setLabel` to specify which properties can be used to set the `Label` property value. 
 

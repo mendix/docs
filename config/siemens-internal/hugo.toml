@@ -1,0 +1,10 @@
+# Merges with _default/config.toml if --environment internal
+# Configuration for internal Siemens documentation deployment
+# Need to set _merge = 'deep' to overwrite original value
+# =============================================================
+
+baseURL = "https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/public/"
+title = "Mendix Documentation (Internal)"
+
+# Disable robots.txt for internal deployment
+enableRobotsTXT = false

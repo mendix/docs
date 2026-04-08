@@ -1,8 +1,9 @@
 ---
 title: "Capital Connector"
-url: /appstore/modules/siemens-plm/capital-connector/
+url: /appstore/industry/capital-connector/
 description: "Describes the configuration and usage of the Siemens Capital connector. Capital is a Siemens software suite used for creating and designing E/E systems."
-
+aliases:
+    - /appstore/modules/siemens-plm/capital-connector/
 ---
 
 ## Introduction

@@ -1,9 +1,10 @@
 ---
 title: "Teamcenter Extension"
-url: /appstore/modules/siemens-plm/teamcenter-extension/
+url: /appstore/industry/teamcenter-extension/
 description: "Describes Teamcenter Extension from the Mendix Marketplace. Teamcenter Extension facilitates a low-code approach to integrating with Siemens Teamcenter."
 aliases:
     - /appstore/modules/teamcenter-extension/
+    - /appstore/modules/siemens-plm/teamcenter-extension/
 ---
 
 ## Introduction {#introduction}
@@ -56,7 +57,7 @@ Teamcenter Extension is not compatible with Studio Pro versions between 10.8 and
 {{% /alert %}}
 
 {{% alert color="info" %}}
-If you use Teamcenter Extension V 1.0.0 with Teamcenter Connector V 3.6.1 or below and want to upgrade to Teamcenter Extension V 3.0.0 and Teamcenter Connector V 2406.3.0, refer to the [Upgrading Teamcenter Extension V 1.0.0 to V 3.0.0](/appstore/modules/siemens-plm/teamcenter-extension/upgrading-teamcenter-extension/#upgrade) section in *Upgrading Teamcenter Extension*.
+If you use Teamcenter Extension V 1.0.0 with Teamcenter Connector V 3.6.1 or below and want to upgrade to Teamcenter Extension V 3.0.0 and Teamcenter Connector V 2406.3.0, refer to the [Upgrading Teamcenter Extension V 1.0.0 to V 3.0.0](/appstore/industry/teamcenter-extension/upgrading-teamcenter-extension/#upgrade) section in *Upgrading Teamcenter Extension*.
 {{% /alert %}}
 
 ### Demo App {#demo-app}

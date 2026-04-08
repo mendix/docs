@@ -1,8 +1,10 @@
 ---
 title: "Search Item Revisions"
-url: /appstore/modules/siemens-plm/teamcenter-extension/integrations/search-item-revisions/
+url: /appstore/industry/teamcenter-extension/integrations/search-item-revisions/
 description: "Provides step by step guide to use \"Search Item Revisions\" integration in Teamcenter Extension."
 weight: 1
+aliases:
+    - /appstore/modules/siemens-plm/teamcenter-extension/integrations/search-item-revisions/
 ---
 
 ## Introduction {#introduction}
@@ -15,7 +17,7 @@ This document takes you through a use case of retrieving Part Revisions from Tea
 
 Follow these steps to create the integration:
 
-1. Make sure you have set up your credentials on the **Settings** tab before following these instructions. For more instructions on how to configure your settings, follow the steps in the [Settings Tab](/appstore/modules/siemens-plm/teamcenter-extension/create-an-integration/#settings-tab) section of *Teamcenter Extension*.
+1. Make sure you have set up your credentials on the **Settings** tab before following these instructions. For more instructions on how to configure your settings, follow the steps in the [Settings Tab](/appstore/industry/teamcenter-extension/create-an-integration/#settings-tab) section of *Teamcenter Extension*.
 
 2. Click the **Search Item Revision** button on the home page to start configuring your integration.
 {{< figure src="/attachments/appstore/platform-supported-content/modules/siemens/teamcenter-extension/search-item-revisions/icon.png">}}

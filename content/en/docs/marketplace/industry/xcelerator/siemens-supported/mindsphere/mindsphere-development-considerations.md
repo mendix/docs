@@ -1,8 +1,10 @@
 ---
 title: "Insights Hub Development Considerations"
-url: /partners/siemens/mindsphere-development-considerations/
+url: /appstore/industry/mindsphere/mindsphere-development-considerations/
 weight: 10
 description: "A description of some extra considerations to be taken into account when developing for deployment to Insights Hub"
+aliases:
+    - /partners/siemens/mindsphere-development-considerations/
 ---
 
 ## Introduction
@@ -274,7 +276,7 @@ For an Insights Hub app to be multitenant, each user can only see the data from 
 
 ### Control Through Insights Hub APIs
 
-The Authorization HTTP Header (see DS_AccessToken in the [Microflows](/partners/siemens/mindsphere-module-details/#microflows) section of *Insights Hub Module Details*) which is passed for every Insights Hub API call ensures that the user can only obtain data which is authorized to them via their tenant.
+The Authorization HTTP Header (see DS_AccessToken in the [Microflows](/appstore/industry/mindsphere/mindsphere-module-details/#microflows) section of *Insights Hub Module Details*) which is passed for every Insights Hub API call ensures that the user can only obtain data which is authorized to them via their tenant.
 
 ### Control Within a Mendix App
 
@@ -373,7 +375,7 @@ Insights Hub supports up to five application roles. You should take this into ac
 
 To use these scopes, you must create identically-named scopes for each Insights Hub application role. These scopes will map to identically-name user roles in your Mendix app.
 
-There is a more detailed discussion of Insights Hub and Mendix roles and scopes in the [Roles and Scopes](/partners/siemens/mindsphere-module-details/) section of *Insights Hub Module Details*.
+There is a more detailed discussion of Insights Hub and Mendix roles and scopes in the [Roles and Scopes](/appstore/industry/mindsphere/mindsphere-module-details/) section of *Insights Hub Module Details*.
 
 ### Logout from Insights Hub
 
@@ -392,4 +394,4 @@ Mendix Studio Pro version 9 introduced support for developing [progressive web a
 ## Read More
 
 * [Siemens Insights Hub – deployment](/developerportal/deploy/deploying-to-mindsphere/)
-* [Insights Hub Module Details](/partners/siemens/mindsphere-module-details/)
+* [Insights Hub Module Details](/appstore/industry/mindsphere/mindsphere-module-details/)

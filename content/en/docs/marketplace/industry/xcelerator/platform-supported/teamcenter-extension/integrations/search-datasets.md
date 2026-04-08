@@ -1,8 +1,10 @@
 ---
 title: "Search Datasets"
-url: /appstore/modules/siemens-plm/teamcenter-extension/integrations/search-datasets/
+url: /appstore/industry/teamcenter-extension/integrations/search-datasets/
 description: "Provides step by step guide to use the \"Search Datasets\" integration in Teamcenter Extension."
 weight: 5
+aliases:
+    - /appstore/modules/siemens-plm/teamcenter-extension/integrations/search-datasets/
 ---
 
 ## Introduction {#introduction}
@@ -13,7 +15,7 @@ This document takes you through a use case of creating the logic to search datas
 
 ## Step-by-Step Guide {#step-by-step-guide}
 
-1. Make sure you have set up your credentials on the **Settings** tab before following these instructions. For more instructions on how to configure your settings, follow the steps in the [Settings Tab](/appstore/modules/siemens-plm/teamcenter-extension/create-an-integration/#settings-tab) section of *Teamcenter Extension*.
+1. Make sure you have set up your credentials on the **Settings** tab before following these instructions. For more instructions on how to configure your settings, follow the steps in the [Settings Tab](/appstore/industry/teamcenter-extension/create-an-integration/#settings-tab) section of *Teamcenter Extension*.
 
 2. Click the **Search Datasets** icon on the home page to start configuring your integration.
 {{< figure src="/attachments/appstore/platform-supported-content/modules/siemens/teamcenter-extension/search-datasets/icon.png">}}

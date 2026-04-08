@@ -1,8 +1,10 @@
 ---
 title: "Documentation References"
-url: /appstore/modules/siemens-plm/references/
+url: /appstore/industry/teamcenter-connector/references/
 weight: 9
 description: "Provides information on obtaining additional documentation."
+aliases:
+    - /appstore/modules/siemens-plm/references/
 ---
 
 ## Accessing the Teamcenter Connector Services JAVA Actions Documentation

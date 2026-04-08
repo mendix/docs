@@ -1,8 +1,10 @@
 ---
 title: "Search Workspace Objects"
-url: /appstore/modules/siemens-plm/teamcenter-extension/integrations/search-workspace-objects/
+url: /appstore/industry/teamcenter-extension/integrations/search-workspace-objects/
 description: "Provides step by step guide to use the \"Search Workspace Objects\" integration in Teamcenter Extension."
 weight: 8
+aliases:
+    - /appstore/modules/siemens-plm/teamcenter-extension/integrations/search-workspace-objects/
 ---
 
 ## Introduction {#introduction}
@@ -13,7 +15,7 @@ This document takes you through a use case of retrieving `FMEA (Failure Modes an
 
 ## Step-by-step Guide {#step-by-step-guide}
 
-1. Make sure you have set up your credentials on the **Settings** tab before following these instructions. For more instructions on how to configure your settings, follow the steps in the [Settings Tab](/appstore/modules/siemens-plm/teamcenter-extension/create-an-integration/#settings-tab) section of *Teamcenter Extension*.
+1. Make sure you have set up your credentials on the **Settings** tab before following these instructions. For more instructions on how to configure your settings, follow the steps in the [Settings Tab](/appstore/industry/teamcenter-extension/create-an-integration/#settings-tab) section of *Teamcenter Extension*.
 
 2. Click the **Search Workspace Objects** button on the home page to start configuring your integration.
 {{< figure src="/attachments/appstore/platform-supported-content/modules/siemens/teamcenter-extension/search-workspace-objects/icon.png">}}

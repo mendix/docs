@@ -1,8 +1,10 @@
 ---
 title: "Insights Hub Mobile Native"
-url: /partners/siemens/mindsphere-mobile-native/
+url: /appstore/industry/mindsphere/mindsphere-mobile-native/
 weight: 200
 description: "Explain how to create your own Native Mobile application for Insights Hub and what needs to be considered for development"
+aliases:
+    - /partners/siemens/mindsphere-mobile-native/
 ---
 
 ## Introduction
@@ -56,7 +58,7 @@ The **Siemens Insights Hub Mobile Starter Application** template provides the ab
 
 1. Click **Save** to save your new app.
 
-    You have to map Mendix user roles to Insights Hub user roles (see a more detailed discussion of Insights Hub and Mendix roles and scopes in the [Roles and Scopes](/partners/siemens/mindsphere-module-details/#rolesscopes) section of *Insights Hub Module Details*). The standard template will be delivered with the roles **Admin** and **User** therefore we will create the corresponding Insights Hub scopes. If this does not match the roles in your application, please adapt these instructions accordingly.
+    You have to map Mendix user roles to Insights Hub user roles (see a more detailed discussion of Insights Hub and Mendix roles and scopes in the [Roles and Scopes](/appstore/industry/mindsphere/mindsphere-module-details/#rolesscopes) section of *Insights Hub Module Details*). The standard template will be delivered with the roles **Admin** and **User** therefore we will create the corresponding Insights Hub scopes. If this does not match the roles in your application, please adapt these instructions accordingly.
 
     {{% alert color="info" %}}The standard template also includes the role **Anonymous** which will be used for the authentication process. You should not register this role in the Developer Cockpit.{{% /alert %}}
 
@@ -217,7 +219,7 @@ If you have already developed a Web application for Insights Hub, you will be aw
 
 The good news for native mobile is: this do not change. You can use the same microflows for Web apps and native apps to fetch Insights Hub APIs.
 
-If you are new to Insights Hub app development please check out [Insights Hub Development Considerations](/partners/siemens/mindsphere-development-considerations/) to learn more about this topic.
+If you are new to Insights Hub app development please check out [Insights Hub Development Considerations](/appstore/industry/mindsphere/mindsphere-development-considerations/) to learn more about this topic.
 
 To support mobile native applications, Insights Hub provides a special mobile token, which is called the **MindSphere Mobile Token**. As a Mendix developer you luckily don't have to do much with this token as this has been dealt with in the **Siemens MindSphere Mobile Starter Application**, but it is may be worthwhile to present some details to help you understand the impact on your application better.
 

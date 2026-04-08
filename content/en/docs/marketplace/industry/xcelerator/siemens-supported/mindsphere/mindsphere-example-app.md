@@ -1,8 +1,10 @@
 ---
-title: "Use the Siemens Insights Hub Monitor Example "
+title: "Using the Siemens Insights Hub Monitor Example "
 linktitle: "Insights Hub Monitor Example"
-url: /partners/siemens/mindsphere-example-app/
+url: /appstore/industry/mindsphere/mindsphere-example-app/
 weight: 110
+aliases:
+    - /partners/siemens/mindsphere-example-app/
 ---
 
 ## Introduction
@@ -150,9 +152,9 @@ For more information see the Insights Hub documentation [Roles and Scopes for Ap
 
 ## Run the app locally
 
-To run and test your app locally follow the steps described in [Local Testing](/partners/siemens/mindsphere-development-considerations/#localtesting).
+To run and test your app locally follow the steps described in [Local Testing](/appstore/industry/mindsphere/mindsphere-development-considerations/#localtesting).
 
 ## Read More
 
-* [Insights Hub Development Considerations](/partners/siemens/mindsphere-development-considerations/)
-* [Insights Hub Module Details](/partners/siemens/mindsphere-module-details/)
+* [Insights Hub Development Considerations](/appstore/industry/mindsphere/mindsphere-development-considerations/)
+* [Insights Hub Module Details](/appstore/industry/mindsphere/mindsphere-module-details/)

@@ -1,8 +1,10 @@
 ---
 title: "Teamcenter Connector Reference"
-url: /appstore/modules/siemens-plm/teamcenter-reference/
+url: /appstore/industry/teamcenter-connector/teamcenter-reference/
 weight: 10
 description: "Lists and describes the Teamcenter Connector reference parameters."
+aliases: 
+    - /appstore/modules/siemens-plm/teamcenter-reference/
 ---
 
 ## Domain model

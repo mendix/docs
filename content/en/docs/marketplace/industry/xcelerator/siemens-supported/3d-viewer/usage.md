@@ -1,8 +1,10 @@
 ---
 title: "3D Viewer Usage"
-url: /partners/siemens/3d-viewer/usage/
+url: /appstore/industry/3d-viewer/usage/
 weight: 2
 description: "Describes how to use the 3D Viewer app service."
+aliases:
+    - /partners/siemens/3d-viewer/usage/
 ---
 
 ## Introduction
@@ -13,11 +15,11 @@ When you start from a blank app template in Mendix Studio Pro, you can follow th
 
 ## Uploading and Viewing a 3D Model in Your Browser
 
-For the [Viewer](/partners/siemens/3d-viewer/installation-configuration/#viewer) widget to visualize a 3D model, two data source attributes should be set: **Model ID** and **Model source type**. To enable uploading 3D models and visualizing them directly on the page, a set of these attributes should be returned by the [Uploader](/partners/siemens/3d-viewer/installation-configuration/#uploader) widget and set to that of the Viewer widget.
+For the [Viewer](/appstore/industry/3d-viewer/installation-configuration/#viewer) widget to visualize a 3D model, two data source attributes should be set: **Model ID** and **Model source type**. To enable uploading 3D models and visualizing them directly on the page, a set of these attributes should be returned by the [Uploader](/appstore/industry/3d-viewer/installation-configuration/#uploader) widget and set to that of the Viewer widget.
 
 The procedure shows how to configure this visualization, using a JT file as an example:
 
-1. Place a [Container3D](/partners/siemens/3d-viewer/installation-configuration/#container3d) widget on the page.
+1. Place a [Container3D](/appstore/industry/3d-viewer/installation-configuration/#container3d) widget on the page.
 2. Put the Uploader and Viewer widgets into the Container3D widget and give them a layout.
 3. Set a fixed height of the Viewer widget (toggle to **Design mode** to see the preview).
 4. Create an entity and call it *UploadedModel* in your app module's domain model.
@@ -48,7 +50,7 @@ Follow these steps to display the model loading progress:
 
 1. Create an entity called *PageObject*, add a decimal attribute called *LoadingProgress* with a default value of `= 0` (as the [Progress Bar](/appstore/widgets/progress-bar/) widget expects a decimal value).
 2. Create a nanoflow called *createPageObject* that returns a **PageObject** object.  
-3. Wrap the [Container3D](/partners/siemens/3d-viewer/installation-configuration/#container3d) widget with a data view and set the **Data source** of the data view to the **createPageObject** nanoflow.
+3. Wrap the [Container3D](/appstore/industry/3d-viewer/installation-configuration/#container3d) widget with a data view and set the **Data source** of the data view to the **createPageObject** nanoflow.
 4. Set the value of the **LoadingProgress** attribute by setting the **Progress percentage** property:
 
     {{< figure src="/attachments/partners/siemens/3d-viewer/viewer-progresspercentage.jpg" alt="viewer-progresspercentage" class="no-border" >}}
@@ -90,7 +92,7 @@ The Mendix native [list view](/refguide/list-view/) can be used to display the m
 
 ### Opening a Model from the Model List
 
-Once you have the model list, you may want to click to select a model from the list and view the model. As the **Viewer** widget expects **ModelId** and **Model Source Type** to visualize a model, such information of the selected model needs to be passed to the [Viewer](/partners/siemens/3d-viewer/installation-configuration/#viewer) widget. Since each list item is a **ModelDocument** object and this object contains various pieces of information about the selected model (including ModelId and Model Source Type), you need to pass this object to the Viewer widget.
+Once you have the model list, you may want to click to select a model from the list and view the model. As the **Viewer** widget expects **ModelId** and **Model Source Type** to visualize a model, such information of the selected model needs to be passed to the [Viewer](/appstore/industry/3d-viewer/installation-configuration/#viewer) widget. Since each list item is a **ModelDocument** object and this object contains various pieces of information about the selected model (including ModelId and Model Source Type), you need to pass this object to the Viewer widget.
 
 Follow these steps for configuration:
 
@@ -129,7 +131,7 @@ Now you are able to get a list of models, select a list item to open a model, an
 
 ## Handling Viewer Events
 
-Multiple events can be picked up by the [Viewer](/partners/siemens/3d-viewer/installation-configuration/#viewer) widget and can be used to build your customized event handling logic.
+Multiple events can be picked up by the [Viewer](/appstore/industry/3d-viewer/installation-configuration/#viewer) widget and can be used to build your customized event handling logic.
 
 There are four main types of events that can be picked up on the Viewer widget, which are described in the sections below.
 
@@ -159,7 +161,7 @@ Like other Mendix events, you can select from a list of actions upon a Viewer er
 
 ### On Progress Change {#on-progress-change}
 
-By selecting one attribute for the **Progress status** value, you can get the current loading status and the loading percentage of the model, product structure tree, and [PMI tree](/partners/siemens/3d-viewer/installation-configuration/#pmi-tree).
+By selecting one attribute for the **Progress status** value, you can get the current loading status and the loading percentage of the model, product structure tree, and [PMI tree](/appstore/industry/3d-viewer/installation-configuration/#pmi-tree).
 
 **Progress status** takes a String attribute. You can define an attribute and bind that attribute to this property. In a running app, upon loading a model, product structure tree, PMI tree, and PMI shape, the load progress status information will be populated to this attribute. You can easily get this model loading status information (`Notloaded`, `Loading`, `Loaded`)and use it in the actions.
 
@@ -187,7 +189,7 @@ Like other Mendix events, you can select from a list of actions upon the product
 
 ## Creating a 3D Section {#create-3d-section}
 
-When a model is loaded in the viewer, the [Section View](/partners/siemens/3d-viewer/installation-configuration/#section-view) widget enables the following:
+When a model is loaded in the viewer, the [Section View](/appstore/industry/3d-viewer/installation-configuration/#section-view) widget enables the following:
 
 * Inspecting the interior structure of a model by adding standard section planes
 * Deleting a section plane
@@ -230,7 +232,7 @@ You can add multiple section planes to cut the model in different directions. Af
 
 ### SectionManipulator
 
-An advanced end-user can enable the SectionManipulator to move / rotate the section plane using [advanced configuration](/partners/siemens/3d-viewer/advanced-configuration/). There are two flavors as illustrated below:
+An advanced end-user can enable the SectionManipulator to move / rotate the section plane using [advanced configuration](/appstore/industry/3d-viewer/advanced-configuration/). There are two flavors as illustrated below:
 
 | enable SectionManipulator | enable SectionHandle |
 | ---  | --- |
@@ -238,7 +240,7 @@ An advanced end-user can enable the SectionManipulator to move / rotate the sect
 
 ## Performing 3D Measurements {#perform-measurements}
 
-When a model is loaded into the viewer, the [Measurement](/partners/siemens/3d-viewer/installation-configuration/#measurement) widget provides a set of tools to measure different geometrical entities:
+When a model is loaded into the viewer, the [Measurement](/appstore/industry/3d-viewer/installation-configuration/#measurement) widget provides a set of tools to measure different geometrical entities:
 
 {{< figure src="/attachments/partners/siemens/3d-viewer/measurement-panel.jpg" alt="measurement-panel" class="no-border" >}}
 
@@ -263,4 +265,4 @@ You can change the settings of the Preference widget to customize the behavior o
 
 {{< figure src="/attachments/partners/siemens/3d-viewer/preferences-general.png" alt="preferences-general" class="no-border" >}}
 
-Click **Preference** to display the dialog. You can set your filter as a preference in any combination you like, and when you click the **OK** button, the filter will take effect the next time you open a file; the **Reset** button clears all settings. This method can only set the preference when your application is running, but we also provide a more advanced method - before the application starts - to set your preference. For details, refer to [Advanced Configuration](/partners/siemens/3d-viewer/advanced-configuration/).
+Click **Preference** to display the dialog. You can set your filter as a preference in any combination you like, and when you click the **OK** button, the filter will take effect the next time you open a file; the **Reset** button clears all settings. This method can only set the preference when your application is running, but we also provide a more advanced method - before the application starts - to set your preference. For details, refer to [Advanced Configuration](/appstore/industry/3d-viewer/advanced-configuration/).

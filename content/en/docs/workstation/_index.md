@@ -45,6 +45,17 @@ You can use Mendix Workstation to create apps that handle use cases such as the 
 * Weighing materials with an industrial scale (for example, a Mettler Toledo SICS-compatible scale)
 * Connected smart tools (for example, screwdrivers with torque control)
 
+### Benefits
+
+Using Mendix Workstation offers the following benefits for your organization:
+
+* It improves operator user experience and efficiency by enabling Mendix applications to directly interact with devices on a local workstation.
+* It allows for the renovation of home-grown applications and gaining control over legacy systems by providing a modern platform for Mendix applications to connect directly to existing devices.
+* It helps keep core systems clean by allowing Mendix applications to communicate with devices without routing through any additional intermediate systems.
+* It enables the creation of apps adapted to the operator's job with the exact devices they use, instead of forcing the operator to adapt their job to generic software limitations.
+* It gives you the means to compose new forms of user experience tailored to manufacturing processes, equipment and environment, so that your applications can seamlessly integrate with new physical tools and processes on the shop floor.
+* It facilitates expansion to adjacent users and domains and helps cross boundaries between silos by enabling deployment across multiple environments and sites.
+
 ## Key Components
 
 Mendix Workstation consists of the following components:

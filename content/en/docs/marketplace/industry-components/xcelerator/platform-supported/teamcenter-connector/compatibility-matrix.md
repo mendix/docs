@@ -1,8 +1,10 @@
 ---
 title: "Compatibility Matrix"
-url: /appstore/modules/siemens-plm/compatibility-matrix/
+url: /appstore/industry/teamcenter-connector/compatibility-matrix/
 weight: 1
 description: "Provides an overview of Teamcenter Connector versions and their compatibility with various versions of Teamcenter, Teamcenter X, and Mendix."
+aliases:
+    - /appstore/modules/siemens-plm/compatibility-matrix/
 ---
 
 This table showcases the compatibility between the Teamcenter Connector and various versions of Teamcenter, Teamcenter X, and Mendix.

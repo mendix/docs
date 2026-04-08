@@ -1,6 +1,6 @@
 ---
 title: "Insights Hub Module Details"
-url: /partners/siemens/mindsphere-module-details/
+url: /appstore/industry/mindsphere/mindsphere-module-details/
 weight: 20
 description: "A detailed description of the modules which are required for deployment to Insights Hub"
 aliases:
@@ -8,6 +8,7 @@ aliases:
     - /refguide/siemens/mindsphere-module-details.html
     - /refguide/mindsphere/mindsphere-module-details
     - /refguide/siemens/mindsphere-module-details
+    - /partners/siemens/mindsphere-module-details/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchors #mssso, #msosbar and #msthemepack below are mapped from the Siemens Insights Hub documentation site, so they should not be removed or changed.
 ---
@@ -40,11 +41,11 @@ Please ensure that you also download the *latest version* of the Siemens Insight
 
 #### LocalDevelopment
 
-These constants are only needed for local development and testing. For details of what needs to be put into the constants in the *LocalDevelopment* folder, please see [Local Testing](/partners/siemens/mindsphere-development-considerations/#localtesting) in *Insights Hub Development Considerations*.
+These constants are only needed for local development and testing. For details of what needs to be put into the constants in the *LocalDevelopment* folder, please see [Local Testing](/appstore/industry/mindsphere/mindsphere-development-considerations/#localtesting) in *Insights Hub Development Considerations*.
 
 #### Native Mobile
 
-The constants in *Native Mobile* are only needed when developing native mobile apps with Mendix for Insights Hub, please see [Insights Hub Mobile Native](/partners/siemens/mindsphere-mobile-native/) for details.
+The constants in *Native Mobile* are only needed when developing native mobile apps with Mendix for Insights Hub, please see [Insights Hub Mobile Native](/appstore/industry/mindsphere/mindsphere-mobile-native/) for details.
 
 #### CockpitApplicationName
 
@@ -106,7 +107,7 @@ In addition, Insights Hub SSO will identify whether the current user is a subten
 If the same user logs in using a different tenant, Mendix will treat this as a different user and a User ID will be used within Mendix instead of a user name.
 {{% /alert %}}
 
-For advice on how to make your apps multitenant, see [Multi-Tenancy](/partners/siemens/mindsphere-development-considerations/#multitenancy) in *Insights Hub Development Considerations*.
+For advice on how to make your apps multitenant, see [Multi-Tenancy](/appstore/industry/mindsphere/mindsphere-development-considerations/#multitenancy) in *Insights Hub Development Considerations*.
 
 ### Roles and Scopes{#rolesscopes}
 
@@ -182,7 +183,7 @@ The **SiemensInsightsHubWebContent** module is an *Atlas UI Resource* based on t
 
 ### Insights Hub Icons
 
-See also the [Insights Hub Icons](/partners/siemens/mindsphere-development-considerations/#atlasui) section of *Insights Hub Development Considerations* for a discussion about adding icons from Siemens Insights Hub Web Content.
+See also the [Insights Hub Icons](/appstore/industry/mindsphere/mindsphere-development-considerations/#atlasui) section of *Insights Hub Development Considerations* for a discussion about adding icons from Siemens Insights Hub Web Content.
 
 ### index.html Changes{#indexhtmlchanges}
 
@@ -459,7 +460,7 @@ For the OS Bar to work correctly in your Mendix app, the following script has to
             var html =
                 '<osbar-root id="OSBarErrorText" class="mdsp_osbf_outer">' +
                 '<div class="mdsp_osbf_inner">Insights Hub OSBar could not be loaded. Please check your ' +
-                '<a title="Proxy Settings" class="mdsp_osbf_link" target="_blank" rel="noopener" href="https://docs.mendix.com/partners/siemens/mindsphere-development-considerations#localtesting"> proxy settings</a>' +
+                '<a title="Proxy Settings" class="mdsp_osbf_link" target="_blank" rel="noopener" href="https://docs.mendix.com/appstore/industry/mindsphere/mindsphere-development-considerations#localtesting"> proxy settings</a>' +
                 '<span> or the OSBarURL in the InsightsHubOSBarConnector</span>' +
                 '</div>' +
                 '</osbar-root>';
@@ -526,4 +527,4 @@ You will only have to create a `sso-login.html` file in the folder /theme/web/pu
 ## Read More
 
 * [Siemens Insights Hub – deploy](/developerportal/deploy/deploying-to-mindsphere/)
-* [Insights Hub Development Considerations](/partners/siemens/mindsphere-development-considerations/)
+* [Insights Hub Development Considerations](/appstore/industry/mindsphere/mindsphere-development-considerations/)

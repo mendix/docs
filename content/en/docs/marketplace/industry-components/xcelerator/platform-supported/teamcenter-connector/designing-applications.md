@@ -1,9 +1,11 @@
 ---
 title: "Designing Mendix Applications with Single or Multiple Active Teamcenter Configurations"
 linktitle: "Designing Mendix applications"
-url: /appstore/modules/siemens-plm/designing-applications/
+url: /appstore/industry/teamcenter-connector/designing-applications/
 weight: 5
 description: "Describes the process of designing Mendix application with single of multiple active Teamcenter configurations."
+aliases:
+    - /appstore/modules/siemens-plm/designing-applications/
 ---
 
 ## Introduction

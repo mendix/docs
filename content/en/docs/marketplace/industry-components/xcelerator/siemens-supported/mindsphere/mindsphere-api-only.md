@@ -1,8 +1,10 @@
 ---
 title: "Insights Hub API calls only"
-url: /partners/siemens/mindsphere-api-only/
+url: /appstore/industry/mindsphere/mindsphere-api-only/
 weight: 300
 description: "A description of some extra considerations to be taken into account when developing for deployment to Insights Hub"
+aliases:
+    - /partners/siemens/mindsphere-api-only/
 ---
 
 ## Introduction
@@ -14,12 +16,12 @@ This information is for standalone Mendix application which are not fully integr
 If you have your own user management or SSO solution, but want to gather insights via the Insights Hub APIs, this page explains how you can achieve it. It describes how you can authenticate Insights Hub API REST calls with the help of a **Technical User** and the **Siemens Insights Hub API Authenticator**.
 Please note that this way is not a full integration with Insights Hub and has the following limitations:
 
-* You cannot make your app multitenant – see [Multi-tenancy](/partners/siemens/mindsphere-development-considerations/#multitenancy) in *Insights Hub Development Considerations* for more information on multitenancy
+* You cannot make your app multitenant – see [Multi-tenancy](/appstore/industry/mindsphere/mindsphere-development-considerations/#multitenancy) in *Insights Hub Development Considerations* for more information on multitenancy
 * Your app cannot be deployed to the Insights Hub platform and cannot be added to the Insights Hub Developer Cockpit
 * End-users cannot use Insights Hub credentials to sign in to your app, so Insights Hub does not know anything about individual app end-users — you must design your app to handle any required security for each end-user
 * You cannot use the fine grain access control on asset level via SDS.
 
-If you prefer a full Insights Hub app, please see [Insights Hub Development Considerations](/partners/siemens/mindsphere-development-considerations/), [Insights Hub Module Details](/partners/siemens/mindsphere-module-details/) or follow the following learning paths:
+If you prefer a full Insights Hub app, please see [Insights Hub Development Considerations](/appstore/industry/mindsphere/mindsphere-development-considerations/), [Insights Hub Module Details](/appstore/industry/mindsphere/mindsphere-module-details/) or follow the following learning paths:
 
 * [Build an Insights Hub app with Mendix](https://academy.mendix.com/link/path/80/Build-a-MindSphere-app-with-Mendix) - this learning path will teach you how to develop an app for Insights Hub with Mendix
 * [Build an Insights Hub App - Continued](https://academy.mendix.com/link/path/93/Build-a-MindSphere-App---Continued) - this learning path is for everyone who wants to dive more deeply into how to build an Insights Hub App with the Mendix Platform

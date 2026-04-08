@@ -1,8 +1,10 @@
 ---
 title: "3D Viewer Installation and Configuration"
-url: /partners/siemens/3d-viewer/installation-configuration/
+url: /appstore/industry/3d-viewer/installation-configuration/
 weight: 1
 description: "Describes how to install and configure the 3D Viewer app service."
+aliases:
+    - /partners/siemens/3d-viewer/installation-configuration/
 ---
 
 ## Installation
@@ -157,7 +159,7 @@ For this widget to visualize a model correctly, set the following properties:
     * **Show navigation cube** – determines if a navigation cube will appear at the upper-right corner of the viewer
     * **Show tooltip** determines if a tooltip will appear when the end-user clicks a model part; this accepts a Boolean value
     * **Automatically load parts** – determines if the model part will be loaded into the Viewer automatically; if set to **Yes**, the model will be automatically loaded as long as the Viewer receives the **Model ID** and **Model source type** values; if set to **No**, the model will only be loaded into the Viewer when triggered from the PS Tree part toggling (for this use case, add the [PS Tree](#ps-tree) widget so you can trigger the part loading by clicking the PS Tree)
-    * **Advance configuration** – provides advanced configurations in JSON string format for Viewer. For details, refer to [Advanced Configuration](/partners/siemens/3d-viewer/advanced-configuration/).
+    * **Advance configuration** – provides advanced configurations in JSON string format for Viewer. For details, refer to [Advanced Configuration](/appstore/industry/3d-viewer/advanced-configuration/).
 * On the **Events** tab, there are some optional customization options for changing the widget's behavior:
     * **On selection change** – by binding a String attribute to the **Selection** property, you can use this attribute as an input parameter to add an action to trigger when the selection changes on the Viewer 
     * **On error** – by binding a String attribute to the **Error** property, you can obtain the error message raised by the Viewer and add custom actions to trigger when an error arises
@@ -208,7 +210,7 @@ The **Section View** widget enables creating a section cut on the model and prov
 
 Place this widget inside of a [Container3D](#container3d) widget. A [Viewer](#viewer) widget should be present in the same Container3D widget so that you can add a section plane on the model. 
 
-No specific configuration is needed. With this widget, you can add, delete, and clear section planes to the model on your desired direction axis and clipping mode. For details on how this widget behaves in an app, refer to the [Creating 3D Section](/partners/siemens/3d-viewer/usage/#create-3d-section) section in *3D Viewer Usage*.
+No specific configuration is needed. With this widget, you can add, delete, and clear section planes to the model on your desired direction axis and clipping mode. For details on how this widget behaves in an app, refer to the [Creating 3D Section](/appstore/industry/3d-viewer/usage/#create-3d-section) section in *3D Viewer Usage*.
 
 ##### Markup Builder {#markup-builder}
 
@@ -230,7 +232,7 @@ You can set the language of the measurement result in the **General** tab. The d
 
 {{< figure src="/attachments/partners/siemens/3d-viewer/measurement-language.jpg" alt="measurement language"  >}}
 
-No specific configuration is needed. With this widget, you can measure the distance, length, radius, area, and angle of a part or between parts. For details on how to perform measurements on a 3D model, refer to the [Performing 3D Measurements](/partners/siemens/3d-viewer/usage/#perform-measurements) section in *3D Viewer Usage*.
+No specific configuration is needed. With this widget, you can measure the distance, length, radius, area, and angle of a part or between parts. For details on how to perform measurements on a 3D model, refer to the [Performing 3D Measurements](/appstore/industry/3d-viewer/usage/#perform-measurements) section in *3D Viewer Usage*.
 
 ##### Preference {#preference}
 
@@ -248,7 +250,7 @@ With this widget, you can use the following filtering settings:
 
 * Show assembly level PMI
 
-For details on how this widget behaves in an application, refer to the [Setting Preferences](/partners/siemens/3d-viewer/usage/#set-preferences) section in *3D Viewer Usage*.
+For details on how this widget behaves in an application, refer to the [Setting Preferences](/appstore/industry/3d-viewer/usage/#set-preferences) section in *3D Viewer Usage*.
 
 #### Toolbar Widgets
 

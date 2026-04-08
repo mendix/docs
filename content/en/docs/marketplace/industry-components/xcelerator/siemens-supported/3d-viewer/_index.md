@@ -1,10 +1,11 @@
 ---
 title: "3D Viewer"
-url: /partners/siemens/3d-viewer/
+url: /appstore/industry/3d-viewer/
 weight: 20
 description: "Describes the configuration and usage of the 3D Viewer app service, which enables uploading, visualizing, and operating on 3D JT files in your web apps."
 aliases:
   - /appstore/app-services/3d-viewer/index.html
+  - /partners/siemens/3d-viewer/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
@@ -18,12 +19,12 @@ Here is an overview of what the 3DViewer contains:
 
 | Item | Name |
 | ---  | --- |
-| [Predefined entities](/partners/siemens/3d-viewer/installation-configuration/#predefined-entities) | ModelDocument, Pagination, Markup, MxChildDocument, MxModelDocument |
-| [Constants](/partners/siemens/3d-viewer/installation-configuration/#constants) | HTTPEndpoint / Endpoint, LicenseToken, ModelSourceType |
-| [Microflow](/partners/siemens/3d-viewer/installation-configuration/#microflow) | DeleteModelFromMendix, DownloadMarkup |
-| [Nanoflow](/partners/siemens/3d-viewer/installation-configuration/#nanoflow) | CreateModelDocumentFromFileDocument, GetMarkupsFromMendix, GetModelListFromMendix |
-| [Java action](/partners/siemens/3d-viewer/installation-configuration/#java-action) | VisServerAction |
-| [Widgets](/partners/siemens/3d-viewer/installation-configuration/#widgets) | Container3D, Markup builder, Measurement, PMI tree, PS tree, PS tree table, Section view, Toolbar item camera mode, Toolbar item camera orientation, Toolbar item explode slider, Toolbar item fit all, Toolbar item render mode, Toolbar item selection mode, Toolbar item snapshot, Uploader, Viewer, Preference |
+| [Predefined entities](/appstore/industry/3d-viewer/installation-configuration/#predefined-entities) | ModelDocument, Pagination, Markup, MxChildDocument, MxModelDocument |
+| [Constants](/appstore/industry/3d-viewer/installation-configuration/#constants) | HTTPEndpoint / Endpoint, LicenseToken, ModelSourceType |
+| [Microflow](/appstore/industry/3d-viewer/installation-configuration/#microflow) | DeleteModelFromMendix, DownloadMarkup |
+| [Nanoflow](/appstore/industry/3d-viewer/installation-configuration/#nanoflow) | CreateModelDocumentFromFileDocument, GetMarkupsFromMendix, GetModelListFromMendix |
+| [Java action](/appstore/industry/3d-viewer/installation-configuration/#java-action) | VisServerAction |
+| [Widgets](/appstore/industry/3d-viewer/installation-configuration/#widgets) | Container3D, Markup builder, Measurement, PMI tree, PS tree, PS tree table, Section view, Toolbar item camera mode, Toolbar item camera orientation, Toolbar item explode slider, Toolbar item fit all, Toolbar item render mode, Toolbar item selection mode, Toolbar item snapshot, Uploader, Viewer, Preference |
 
 In most cases, you will only need what is contained in the **Viewer3D/USE_ME** folder. The content in the **Internal** folder is for internal use only and you will not need it.
 

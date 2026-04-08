@@ -1,8 +1,10 @@
 ---
 title: "Creating an Integration"
-url: /appstore/modules/siemens-plm/teamcenter-extension/create-an-integration/
+url: /appstore/industry/teamcenter-extension/create-an-integration/
 description: "Describes Teamcenter Extension from the Mendix Marketplace. Teamcenter Extension facilitates a low-code approach to integrating with Siemens Teamcenter."
 weight: 1
+aliases:
+    - /appstore/modules/siemens-plm/teamcenter-extension/create-an-integration/
 ---
 
 ## Main Menu {#main-menu}
@@ -10,7 +12,7 @@ weight: 1
 To open Teamcenter Extension in Studio Pro, go to **Extensions** > **Teamcenter Extension** > **Teamcenter Extension**. If you use Studio Pro versions 10.7 or lower, Teamcenter Extension is available under **View** > **Teamcenter Extension**.
 
 {{% alert color="info" %}}
-For details on the version dependencies between Studio Pro and Teamcenter Extension, refer to the [Dependencies](/appstore/modules/siemens-plm/teamcenter-extension/#dependencies) section in *Teamcenter Extension*.
+For details on the version dependencies between Studio Pro and Teamcenter Extension, refer to the [Dependencies](/appstore/industry/teamcenter-extension/#dependencies) section in *Teamcenter Extension*.
 {{% /alert %}}
 
 The landing page has with three tabs: **Menu**, **History**, and **Settings**.

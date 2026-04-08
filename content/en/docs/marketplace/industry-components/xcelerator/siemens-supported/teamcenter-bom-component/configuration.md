@@ -1,8 +1,10 @@
 ---
 title: "Teamcenter BOM Widget Configuration"
-url: /partners/siemens/bom-widget-configuration/
+url: /appstore/industry/teamcenter-bom-widget/bom-widget-configuration/
 weight: 2
 description: "Configuration instructions and explanation for the usage of the Teamcenter BOM widget."
+aliases:
+    - /partners/siemens/bom-widget-configuration/
 ---
 
 ## After Startup

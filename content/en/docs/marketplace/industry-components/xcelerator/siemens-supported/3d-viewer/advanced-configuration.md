@@ -1,8 +1,10 @@
 ---
 title: "3D Viewer Advanced Configuration"
-url: /partners/siemens/3d-viewer/advanced-configuration/
+url: /appstore/industry/3d-viewer/advanced-configuration/
 weight: 4
 description: "Describes the advanced configuration of the 3D Viewer app service."
+aliases:
+    - /partners/siemens/3d-viewer/advanced-configuration/
 ---
 
 ## Introduction
@@ -43,14 +45,14 @@ This enables the edge / segment / vertex cache when loading JT files. When openi
 
 ### enableSectionManipulator
 
-If you set enableSectionManipulator to true for a [section view](/partners/siemens/3d-viewer/installation-configuration/#section-view), it will add a trihedron drag handle to the section plane.
+If you set enableSectionManipulator to true for a [section view](/appstore/industry/3d-viewer/installation-configuration/#section-view), it will add a trihedron drag handle to the section plane.
 
 * Type – Boolean
 * Default value – *false*
 
 ### enableSectionHandle
 
-If you set enableSectionHandle to true for a [section view](/partners/siemens/3d-viewer/installation-configuration/#section-view), it will add a drag handle to the section plane.
+If you set enableSectionHandle to true for a [section view](/appstore/industry/3d-viewer/installation-configuration/#section-view), it will add a drag handle to the section plane.
 
 * Type – Boolean
 * Default value – *false*

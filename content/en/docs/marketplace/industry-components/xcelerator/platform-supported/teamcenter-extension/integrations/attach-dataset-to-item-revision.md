@@ -1,8 +1,10 @@
 ---
 title: "Attach Dataset to Item Revision"
-url: /appstore/modules/siemens-plm/teamcenter-extension/integrations/attach-dataset-to-item-revision/
+url: /appstore/industry/teamcenter-extension/integrations/attach-dataset-to-item-revision/
 description: "Provides step by step guide to use the \"Attach Dataset to Item Revision\" integration in Teamcenter Extension."
 weight: 7
+aliases:
+    - /appstore/modules/siemens-plm/teamcenter-extension/integrations/attach-dataset-to-item-revision/
 ---
 
 ## Introduction {#introduction}
@@ -13,7 +15,7 @@ This document takes you through a use case of attaching a PDF document to an `It
 
 ## Step-by-step Guide {#step-by-step-guide}
 
-1. Make sure you have set up your credentials on the **Settings** tab before following these instructions. For more instructions on how to configure your settings, follow the steps in the [Settings Tab](/appstore/modules/siemens-plm/teamcenter-extension/create-an-integration/#settings-tab) section of *Teamcenter Extension*.
+1. Make sure you have set up your credentials on the **Settings** tab before following these instructions. For more instructions on how to configure your settings, follow the steps in the [Settings Tab](/appstore/industry/teamcenter-extension/create-an-integration/#settings-tab) section of *Teamcenter Extension*.
 
 2. Click the **Attach Dataset to Item Revision** button on the home page to start configuring your integration.
 {{< figure src="/attachments/appstore/platform-supported-content/modules/siemens/teamcenter-extension/attach-dataset-to-item-revision/icon.png">}}

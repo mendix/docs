@@ -1,8 +1,10 @@
 ---
 title: "Upgrading Teamcenter Connector 2506.0.0 to 2512.0.0"
-url: /appstore/modules/siemens-plm/upgrade-teamcenter-connector-2506-to-2512/
+url: /appstore/industry/teamcenter-connector/upgrade-teamcenter-connector-2506-to-2512/
 weight: 4
 description: "Describes the steps to upgrade Teamcenter Connector 2506.0.0 to 2512.0.0 and discusses how breaking changes can be resolved."
+aliases:
+    - /appstore/modules/siemens-plm/upgrade-teamcenter-connector-2506-to-2512/
 ---
 
 ## Introduction

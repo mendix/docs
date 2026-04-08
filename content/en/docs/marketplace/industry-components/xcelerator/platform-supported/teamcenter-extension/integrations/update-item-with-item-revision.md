@@ -1,8 +1,10 @@
 ---
 title: "Update Item with Item Revision"
-url: /appstore/modules/siemens-plm/teamcenter-extension/integrations/update-item-with-item-revision/
+url: /appstore/industry/teamcenter-extension/integrations/update-item-with-item-revision/
 description: "Provides step by step guide to use the \"Update Item with Item Revision\" integration in Teamcenter Extension."
 weight: 3
+aliases:
+    - /appstore/modules/siemens-plm/teamcenter-extension/integrations/update-item-with-item-revision/
 ---
 
 ## Introduction {#introduction}
@@ -13,7 +15,7 @@ This document takes you through a use case of updating the properties, such as `
 
 ## Step-by-Step Guide {#step-by-step-guide}
 
-1. Make sure you have set up your credentials on the **Settings** tab before following these instructions. For more instructions on how to configure your settings, follow the steps in the [Settings Tab](/appstore/modules/siemens-plm/teamcenter-extension/create-an-integration/#settings-tab) section of *Teamcenter Extension*.
+1. Make sure you have set up your credentials on the **Settings** tab before following these instructions. For more instructions on how to configure your settings, follow the steps in the [Settings Tab](/appstore/industry/teamcenter-extension/create-an-integration/#settings-tab) section of *Teamcenter Extension*.
 
 2. Click the **Update Item and Item Revision** button on the home page to start configuring your integration.
 {{< figure src="/attachments/appstore/platform-supported-content/modules/siemens/teamcenter-extension/update-item-with-item-revision/icon.png">}}

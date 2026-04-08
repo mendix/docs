@@ -1,8 +1,10 @@
 ---
 title: "Advanced Customization Options"
-url: /partners/siemens/bom-widget-customization/
+url: /appstore/industry/teamcenter-bom-widget/bom-widget-customization/
 weight: 3
 description: "Describes the customization capabilities that allow developers to add data from external systems, and how these can be combined into the Teamcenter BOM widget."
+aliases:
+    - /partners/siemens/bom-widget-customization/
 ---
 
 ## Augmenting with Mendix Data

@@ -1,8 +1,10 @@
 ---
 title: "Upgrading Teamcenter Extension"
-url: /appstore/modules/siemens-plm/teamcenter-extension/upgrading-teamcenter-extension/
+url: /appstore/industry/teamcenter-extension/upgrading-teamcenter-extension/
 description: "Describes Teamcenter Extension from the Mendix Marketplace. Teamcenter Extension facilitates a low-code approach to integrating with Siemens Teamcenter."
 weight: 3
+aliases:
+    - /appstore/modules/siemens-plm/teamcenter-extension/upgrading-teamcenter-extension/
 ---
 
 ## Upgrading Teamcenter Extension V 1.0.0 to V 3.0.0 {#upgrade}
@@ -11,7 +13,7 @@ weight: 3
 
 If you use Teamcenter Extension V 1.0.0 with Teamcenter Connector V 3.6.1 or below, and want to upgrade to Teamcenter Extension V 3.0.0 and Teamcenter Connector V 2406.3.0, perform the following procedure:
 
-1. Open your app in a Studio Pro version compatible with Teamcenter Extension V 3.0.0. For details, refer to the version matrix in the [Dependencies](/appstore/modules/siemens-plm/teamcenter-extension/#dependencies) section of *Teamcenter Extension*.
+1. Open your app in a Studio Pro version compatible with Teamcenter Extension V 3.0.0. For details, refer to the version matrix in the [Dependencies](/appstore/industry/teamcenter-extension/#dependencies) section of *Teamcenter Extension*.
 2. Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to download [Teamcenter Extension V 3.0.0](https://marketplace.mendix.com/link/component/225544) from the Marketplace and install it.
 3. When a warning dialog box opens, click **Trust module and enable extension**. Otherwise, Teamcenter Extension will not be installed.
 4. Follow the instructions in [How to Upgrade the Module to a Newer Version](/appstore/use-content/#update-module) to upgrade Teamcenter Connector to V 2406.0.0.

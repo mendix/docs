@@ -1,16 +1,18 @@
 ---
 title: "3D Viewer for Teamcenter"
-url: /partners/siemens/3d-viewer-for-teamcenter/
+url: /appstore/industry/3d-viewer/3d-viewer-for-teamcenter/
 description: "3D Viewer for Teamcenter is an add-on module for the 3D Viewer app service. It adds additional functionality to enable fetching a JT model from a Teamcenter instance and visualize it using existing 3D Viewer widgets."
+aliases:
+    - /partners/siemens/3d-viewer-for-teamcenter/
 ---
 
 ## Introduction
 
-The [3D Viewer for Teamcenter](https://marketplace.mendix.com/link/component/118608) module lets you connect, search, and fetch JT models from a Teamcenter instance with the help of the [Teamcenter Connector](https://marketplace.mendix.com/link/component/111627). This is an add-on module to the [3D Viewer](/partners/siemens/3d-viewer/) app service that provides easy-to-use nanoflows and microflows that help you work with 3D models.
+The [3D Viewer for Teamcenter](https://marketplace.mendix.com/link/component/118608) module lets you connect, search, and fetch JT models from a Teamcenter instance with the help of the [Teamcenter Connector](https://marketplace.mendix.com/link/component/111627). This is an add-on module to the [3D Viewer](/appstore/industry/3d-viewer/) app service that provides easy-to-use nanoflows and microflows that help you work with 3D models.
 
 ### Typical Use Cases
 
-You can use this module to search and fetch JT models that are stored in a Teamcenter instance and use [3D Viewer](/partners/siemens/3d-viewer/) widgets to visualize the fetched models. Once a model is fetched, you can perform some basic operations, such as navigating the model product structure tree and PMI tree, sectioning, and many more operations enabled by the 3D Viewer out-of-the-box tools. 
+You can use this module to search and fetch JT models that are stored in a Teamcenter instance and use [3D Viewer](/appstore/industry/3d-viewer/) widgets to visualize the fetched models. Once a model is fetched, you can perform some basic operations, such as navigating the model product structure tree and PMI tree, sectioning, and many more operations enabled by the 3D Viewer out-of-the-box tools. 
 
 {{% alert color="warning" %}}
 Using this module alone will not be enough to visualize a 3D model.
@@ -34,7 +36,7 @@ If you want to visualize models stored in a Teamcenter instance, you also need t
 
 ### Limitations
 
-To visualize a model from Teamcenter, the limitations are similar to those of 3D Viewer. For details, see the [Limitations](/partners/siemens/3d-viewer/#limitations) section of *3D Viewer*.
+To visualize a model from Teamcenter, the limitations are similar to those of 3D Viewer. For details, see the [Limitations](/appstore/industry/3d-viewer/#limitations) section of *3D Viewer*.
 
 ## Prerequisites
 

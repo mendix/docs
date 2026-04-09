@@ -159,6 +159,73 @@ To use the OpenTelemetry Collector with Datadog, follow these steps:
 2. Install the `otelcol_contrib` package instead of `otelcol` to include Datadog support. 
 3. Run the collector with the [appropriate configuration](https://docs.datadoghq.com/opentelemetry/setup/collector_exporter/install/#2---configure-the-datadog-exporter-and-connector) adapted for Datadog.
 
+## Sending Traces from Mendix on Kubernetes
+
+Mendix on Kubernetes can send OpenTelemetry traces to a standards-compliant OpenTelemetry Collector.
+
+Some cloud providers provide OpenTelemetry instrumentation Agents and will not work with the Mendix Runtime.
+For example:
+
+* [Azure Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/opentelemetry-enable) is incompatible with the standard OpenTelemetry instrumentation Agent bundled with the Mendix Runtime.
+
+### Installing Jaeger from a Helm chart
+
+To get an OpenTelemetry collector installed into a Kubernetes cluster, contact your cluster admin.
+
+For quick experiments or non-production use cases, Jaeger can be installed using the [official Helm chart](https://github.com/jaegertracing/helm-charts/tree/jaeger-4.7.0/charts/jaeger).
+
+{{% alert color="warning" %}}
+The default Jaeger configuration is not production-grade: it doesn't have any authentication and stores all traces in-memory.
+
+To get a production-grade OpenTelemetry collector installed into a Kubernetes cluster, contact your cluster admin.
+{{% /alert %}}
+
+To install Jaeger into a Kubernetes cluster (except OpenShift), run the following commands in a Bash prompt:
+
+```shell
+HELM_RELEASE=mx-jaeger
+helm repo add jaegertracing https://jaegertracing.github.io/helm-charts
+helm install $HELM_RELEASE jaegertracing/jaeger --version='~4.7' \
+  --set storage.type=memory
+```
+
+To install Jaeger into an OpenShift cluster, run the following commands in a Bash prompt:
+
+```shell
+HELM_RELEASE=mx-jaeger
+helm repo add jaegertracing https://jaegertracing.github.io/helm-charts
+helm install $HELM_RELEASE jaegertracing/jaeger --version='~4.7' \
+  --set storage.type=memory \
+  --set jaeger.podSecurityContext=null
+```
+
+To access the Jaeger web UI, run the following command in a Bash prompt:
+
+```shell
+HELM_RELEASE=mx-jaeger
+kubectl port-forward svc/${HELM_RELEASE} 16686:16686
+```
+
+To send traces to this OpenTelemetry Collector, use the following hostname format (where `${HELM_RELEASE}` is the value of `HELM_RELEASE` used during installation, and `${NAMESPACE}` is the namespace where the Jaeger Helm chart was installed):
+
+```
+${HELM_RELEASE}.${NAMESPACE}.svc.cluster.local
+```
+
+for example, `mx-jaeger.example-namespace.svc.cluster.local`.
+
+### OpenTelemetry Collector
+
+To send logs and traces from a Mendix on Kubernetes environment to an OpenTelemetry collector, set the _Custom JVM Options_ to :
+
+```
+-javaagent:/opt/mendix/runtime/agents/opentelemetry-javaagent.jar -Dotel.javaagent.extensions=/opt/mendix/runtime/agents/mendix-opentelemetry-agent-extension.jar -Dotel.service.name=${APP_NAME} -Dotel.exporter.otlp.traces.endpoint=http://${OTEL_HOSTPORT}:4318/v1/traces -Dotel.exporter.otlp.traces.protocol=http/protobuf
+```
+
+Replace `${APP_NAME}` with a meaninful identifier for your environment (service), and `${OTEL_HOST}` with the hostname of the OpenTelemetry Collector.
+
+Depending on how the OpenTelemetry Collector is configured, the values of `-Dotel.exporter.otlp.traces.endpoint` and `-Dotel.exporter.otlp.traces.protocol` might need to be modified.
+
 ## Include Metrics and Logs in OpenTelemetry
 
 You can also collect metrics data (CPU load, memory, etc.) and logs using OpenTelemetry.

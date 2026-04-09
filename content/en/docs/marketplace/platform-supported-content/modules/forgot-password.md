@@ -140,6 +140,12 @@ Consider a scenario, where your SMTP username is *user@example.com* and you have
 You may have to configure an email alias on your SMTP server if you are using a different **fromAddress** in your email template than the email address of your selected SMTP account. Some SMTP servers will not send emails if the **fromAddress** is not associated with the SMTP account.
 {{% /alert %}}
 
+### Disabling Anonymous Users
+
+Starting from version X.X.X of the module, you can disable anonymous users. Additionally, check whether `Anonymous` user role can be removed from the app. If your application does not require anonymous access, removing the role is recommended as a security best practice.
+
+To disable anonymous users, set the `EnableAnonymousUserRole` constant to *false* in the module. By default this value is set to *true*. Once the constant value is set to *false*, end users can be authenticated via the `https://<your-app-url>/forgotpassword/v1/login` URL. When accessing the URL, users are automatically redirected for authentication.
+
 ## Testing the Forgot Password Module
 
 1. Sign out of the app.

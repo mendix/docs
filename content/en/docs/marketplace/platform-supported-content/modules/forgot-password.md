@@ -144,7 +144,25 @@ You may have to configure an email alias on your SMTP server if you are using a 
 
 Starting from version X.X.X of the module, you can disable anonymous users. Additionally, check whether `Anonymous` user role can be removed from the app. If your application does not require anonymous access, removing the role is recommended as a security best practice.
 
-To disable anonymous users, set the `EnableAnonymousUserRole` constant to *false* in the module. By default this value is set to *true*. Once the constant value is set to *false*, end users can be authenticated via the `https://<your-app-url>/forgotpassword/v1/login` URL. When accessing the URL, users are automatically redirected for authentication.
+To disable anonymous users, set the `EnableAnonymousUserRole` constant to *false* in the module. By default this value is set to *true*. Once the constant value is set to *false*, end users can be authenticated via the `https://<your-app-url>/forgotpassword/v1/login` URL. When accessing the URL, users are automatically redirected to a single page where they can sign in, sign up, or reset their password.
+
+{{% alert color="info" %}}
+You can use either a Mendix page or an endpoint to access the login page, but not both at the same time.
+{{% /alert %}}
+
+#### Translating Non-Mendix Pages of the Module
+
+You can use the **Batch Translate** option if you want to translate the non-Mendix pages, (such as, Sign Up and Reset Password pages), including their labels, error messages, and other text elements. 
+
+Follow the steps below: 
+
+1. In Studio Pro, click **Language** > **Language Settings**, and add the required language.
+2. Click **Language** > **Batch Translate** and select **Source language** and **Destination language**. Click **OK**.
+3. Select the Forgot Password module for **Documents/modules** and click **Export to Excel**.
+4. Add translations in the exported Excel file manually and import the file back into the Studio Pro. Click **Translate**.
+5. Launch the app and visit `https://<your-app-url>/forgotpassword/v1/login` to view the translated login page.
+
+For more information, refer to [Batch Translate](/refguide/batch-translate/).
 
 ## Testing the Forgot Password Module
 

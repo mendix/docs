@@ -142,9 +142,9 @@ You may have to configure an email alias on your SMTP server if you are using a 
 
 ### Disabling Anonymous Users
 
-Starting from version X.X.X of the module, you can disable anonymous users. Additionally, check whether `Anonymous` user role can be removed from the app. If your application does not require anonymous access, removing the role is recommended as a security best practice.
+Starting from version 6.5.0 of the module, you can disable anonymous users. Additionally, check whether `Anonymous` user role can be removed from the app. If your application does not require anonymous access, removing the role is recommended as a security best practice.
 
-To disable anonymous users, set the `EnableAnonymousUserRole` constant to *false* in the module. By default this value is set to *true*. Once the constant value is set to *false*, end users can be authenticated via the `https://<your-app-url>/forgotpassword/v1/login` URL. When accessing the URL, users are automatically redirected to a single page where they can sign in, sign up, or reset their password.
+To disable anonymous users, set the `EnableAnonymousUserRole` constant to *False* in the module. By default this value is set to *True*. Once the constant value is set to *False*, end users can be authenticated via the `https://<your-app-url>/forgotpassword/v1/login` URL. When accessing the URL, users are automatically redirected to a login page where they can sign in, sign up, or reset their password.
 
 {{% alert color="info" %}}
 You can use either a Mendix page or an endpoint to access the login page, but not both at the same time.

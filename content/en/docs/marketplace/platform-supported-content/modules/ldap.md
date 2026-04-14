@@ -84,6 +84,10 @@ The following instructions assume that you want the Administrator role in your a
 1. Set the constant **EncryptionKey** in the **Encryption** module to a 32-character string. This key is used when encrypting and decrypting communication with the LDAP server.
 1. Your application is now ready to deploy. Follow the [configuration](#configuration) instructions, below, to configure LDAP further.
 
+{{% alert color="info" %}}
+Starting from version 2.2.0, the module uses `objectGUID` as the primary identifier for users and groups. When you upgrade from an earlier version, the module matches existing records by name and assigns them the `objectGUID`. If the module cannot find a matching record, it creates a new record. This may result in duplicate records if your legacy data contains inconsistencies. After `objectGUID` is assigned, the module synchronizes Active Directory changes (including name changes) without creating duplicates.
+{{% /alert %}}
+
 ## Configuration{#configuration}
 
 ### Regular Synchronization

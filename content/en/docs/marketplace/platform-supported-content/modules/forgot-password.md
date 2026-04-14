@@ -142,7 +142,9 @@ You may have to configure an email alias on your SMTP server if you are using a 
 
 ### Disabling Anonymous Users
 
-Starting from version 6.5.0 of the module, you can disable anonymous users. Additionally, check whether `Anonymous` user role can be removed from the app. If your application does not require anonymous access, removing the role is recommended as a security best practice.
+The module offers two options for password reset pages. The first option uses Mendix pages, which requires `Anonymous` user role. This reflects the behavior in older versions. The second option uses HTML pages, which does not require `Anonymous` user role and are now recommanded. These HTML pages are provided with the module and support translation. For more information, see the [Translating HTML Pages of the Module](#translation-html) section below.
+
+Starting from version 6.5.0 of the module, you do not need the `Anonymous` user role in your application to allow end users to reset their passwords. If you are migrating your app from a previous version of the module, it is recommanded to check whether `Anonymous` user role can be removed from the app. If your application does not require anonymous access, removing the role is recommended as a security best practice. Using an `Anonymous` user role can introduce security risk, as it may allow access to entities and microflows without the protections from the Mendix runtime security model.
 
 To disable anonymous users, set the `EnableAnonymousUserRole` constant to *False* in the module. By default this value is set to *True*. Once the constant value is set to *False*, end users can access the login flow via the `https://<your-app-url>/forgotpassword/v1/login` URL. When accessing the URL, users are automatically redirected to a login page where they can sign in, sign up, or reset their password.
 
@@ -150,9 +152,9 @@ To disable anonymous users, set the `EnableAnonymousUserRole` constant to *False
 You can use either a Mendix page or an endpoint to access the login page, but not both at the same time.
 {{% /alert %}}
 
-#### Translating Non-Mendix Pages of the Module
+#### Translating HTMML Pages of the Module{#translation-html}
 
-You can use the **Batch Translate** option if you want to translate the non-Mendix pages, (such as, Sign Up and Reset Password pages), including their labels, error messages, and other text elements. 
+You can use the **Batch Translate** option if you want to translate HTML pages, (such as, Sign Up and Reset Password pages which are not guarded by the Mendix runtime security model). It allows you to translate labels, error messages, and other text elements of HTML pages.
 
 Follow the steps below: 
 

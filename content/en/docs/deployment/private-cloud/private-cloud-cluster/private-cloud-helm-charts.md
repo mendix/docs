@@ -41,8 +41,12 @@ To install the solution, perform the following steps:
 
 1. [Create a Mendix on Kubernetes cluster.](/developerportal/deploy/private-cloud-cluster/)
 2. Create a namespace in your cluster.
-3. Download the Helm charts from the *privatecloud-ops-cli* Gitlab.
-4. Run the following command: `./mx-ops-cli web-ui`.
+3. Select the option to use Helm charts during the installation.
+4. Click **Download Executable**.
+
+    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard.png" >}}
+   
+5. Run the following command: `./mx-ops-cli web-ui`.
 
     The Web UI application opens locally in your browser. You can now select one of the following options:
 
@@ -50,20 +54,17 @@ To install the solution, perform the following steps:
     * **Import from File** - Allows you to import configurations from an existing yaml file.
     * **Download Helm Charts** - Downloads the latest Helm charts so you can open and view them. You can use this option to check the expected Helm chart format, so you can use them as a template for your own charts.
 
-5. For an initial configuration, select **Start from Scratch**. The configuration wizard opens.
-
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard.png" >}}
-
-6. In the **General Settings** tab, enter the cluster that you created in step 1.
-7. Follow the wizard to configure the other options according to your requirements.
+6. For an initial configuration, select **Start from Scratch**. The configuration wizard opens.
+7. In the **General Settings** tab, enter the cluster that you created in step 1.
+8. Follow the wizard to configure the other options according to your requirements.
 
     You must specify the database, [storage plan](/developerportal/deploy/private-cloud-storage-plans/), [ingress](/deploy/private-cloud-cluster/private-cloud-ingress-settings/), and [registry](/developerportal/deploy/private-cloud-registry/).
     
-8. Click **Generate & Download** to generate the yaml file with the configurations that you provided.
+9. Click **Generate & Download** to generate the yaml file with the configurations that you provided.
 
-9. Run the following command: `helm install -n <your namespace> -f <yaml file name> <your namespace> ./mx-privatecloud-operator-installer`.
+10. Run the following command: `helm install -n <your namespace> -f <yaml file name> <your namespace> ./mx-privatecloud-operator-installer`.
 
-10. Ensure that your cluster have access to the Mendix on Kubernetes Portal for adding the storage plans, and that the Private Cloud Portal is safelisted in the cluster.
+11. Ensure that your cluster have access to the Mendix on Kubernetes Portal for adding the storage plans, and that the Private Cloud Portal is safelisted in the cluster.
 
 The installer performs the basic installation and applies the configurations at the same time.
 

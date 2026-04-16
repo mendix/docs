@@ -71,3 +71,11 @@ The installer performs the basic installation and applies the configurations at 
 ## Applying the Configuration Changes with Helm Charts
 
 If you want to update your configuration (for example, change the database), recreate the yaml file by using the same wizard as above, and then run the following command: `helm update -n <your namespace> -f <yaml file name> <your namespace> ./mx-privatecloud-operator-installer`.
+
+## Uninstalling the Cluster
+
+To uninstall the cluster, perform the following steps:
+
+1. [Delete the environment](/developerportal/deploy/private-cloud-deploy/#delete-environment) in the Mendix on Kubernetes portal.
+2. [Ensure all Mendix apps are fully deleted](/developerportal/deploy/private-cloud-cluster/#delete-namespace), especially the Storage Instances.
+3. Use the `helm uninstall` command to complete the process. For more information, see [helm uninstall] (https://helm.sh/docs/helm/helm_uninstall) in the helm documentation.

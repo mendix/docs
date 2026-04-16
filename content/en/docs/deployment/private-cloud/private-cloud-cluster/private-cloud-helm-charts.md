@@ -64,7 +64,9 @@ To install the solution, perform the following steps:
 
 10. Run the following command: `helm install -n <your namespace> -f <yaml file name> <your namespace> ./mx-privatecloud-operator-installer`.
 
-11. Ensure that your cluster have access to the Mendix on Kubernetes Portal for adding the storage plans, and that the Private Cloud Portal is safelisted in the cluster.
+{{% alert color="info" %}}
+Ensure that your cluster have access to the Mendix on Kubernetes Portal for adding the storage plans, and that the Private Cloud Portal is safelisted in the cluster.
+{{% /alert %}}
 
 The installer performs the basic installation and applies the configurations at the same time.
 

@@ -250,3 +250,7 @@ If you encounter an error stating that an attribute or a reference is required a
 ### Conflicted Lib Error After Module Import
 
 If you encounter an error caused by conflicting Java libraries, such as `java.lang.NoSuchMethodError: 'com.fasterxml.jackson.annotation.OptBoolean com.fasterxml.jackson.annotation.JsonProperty.isRequired()'`, try synchronizing all dependencies (**App** > **Synchronize dependencies**) and then restart your application.
+
+
+### Oracle-specifc
+Depending on the database used, Mendix maps unlimited string values (e.g. User prompt and System prompt attributes) to data types which might not support string comparisons (e.g. in a rule). This can lead to errors. To fix them, you can edit the attribute types inside of the domain model and set a string length.

@@ -312,7 +312,7 @@ Prompt templates address this constraint by allowing you to include orchestratio
 
 For a deeper understanding of prompt templates and their implementation, refer to the [Amazon documentation on prompt templates](https://docs.aws.amazon.com/bedrock/latest/userguide/kb-test-config.html#kb-test-config-sysprompt), which provides comprehensive guidance on their usage and best practices.
 
-For more information about how to structure your prompts, see [Prompt engineering](https://docs.mendix.com/appstore/modules/genai/prompt-engineering/).
+For more information about how to structure your prompts, see [Prompt engineering](/appstore/modules/genai/prompt-engineering/).
 
 #### Chatting with History {#retrieve-and-generate-with-history}
 

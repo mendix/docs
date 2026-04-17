@@ -19,6 +19,19 @@ The available configuration options are as follows:
 * **Yes**: Use the React client (default). In this mode, you will get consistency errors for incompatible widgets.
 * **Migration mode**: Use the React client and ignore incompatible widgets. Placeholders are displayed in the case of incompatible widgets. Recommended when trying out the new client.
 
+### App bundler {#app-bundler}
+
+{{% alert type="info" %}}
+This setting was introduced in [Mendix 11.9.0](/releasenotes/studio-pro/11.9/). It is only available for applications using React client.
+{{% /alert %}} 
+
+The available options are listed below:
+
+* **Rspack (beta)**: Use Rspack to bundle the React client app as a faster, more memory-efficient bundler
+* **Rollup**: Use Rollup to bundle the React client app (default)
+
+For more information about Rspack, see the [official documentation](https://www.rspack.dev/).
+
 ### Use New String Behavior {#new-string-behavior}
 
 {{% alert type="info" %}}

@@ -96,8 +96,8 @@ From here, you can manage the default access settings:
 
 ## Mendix Event Broker Bridges {#manage-mx-broker-bridge}
 
-{{% alert color="warning" %}}
-This feature is currently in [Private Beta](/releasenotes/release-status/). Contact your Customer Success Manager or Account Manager for further assistance.
+{{% alert color="info" %}}
+Mendix Event Broker Bridges was released for GA in 11.4.0.
 {{% /alert %}}
 
 Mendix Event Broker Bridges facilitate integration between the Mendix Event Broker and external technologies, such as AWS SQS, HTTP, Azure Blob Storage, and AWS S3. These bridges enable the exchange of events between your Mendix Cloud environment and external systems, ensuring efficient communication across diverse technological landscapes.

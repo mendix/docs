@@ -6,10 +6,6 @@ weight: 20
 
 ## Introduction
 
-{{% alert color="info" %}}
-This feature was released in beta in Studio Pro 11.8.0. To enable this feature, navigate to Studio Pro **Preferences** > **New features** > the **Workflow** section and select the **Enable workflow event sub-processes (beta)** option.
-{{% /alert %}}
-
 An event sub-process is a separate execution flow that is not part of the normal sequence flow of a workflow. It resides inside the workflow and starts executing upon receiving a specific trigger. It is crucial to understand that an event sub-process is part of the same workflow instance. It is not a separate workflow but a single workflow instance that can contain multiple concurrent processes.
 
 Below is an example of an event sub-process, shown inside the dashed rectangle:

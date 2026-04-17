@@ -12,18 +12,20 @@ description: "Describes the features in Maia Explain."
 To use Maia Explain, an internet connection and signing in to Studio Pro are required.
 {{% /alert %}}
 
-## Using Maia Explain in Studio Pro 11.8 and Above
+## Using Maia Explain
+
+### In Studio Pro 11.8 and Above
 
 In Studio Pro 11.8 and above, Maia Explain is incorporated into the unified Maia Make capabilities, which are enabled by default. There is no dedicated interface only for Maia Explain. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
 
 There are two ways to use Maia Explain:
 
-* Use the chat interface directly to get explanations of your microflows or pages.
-* In the App Explorer, right-click a microflow or a page to open its context menu, and click **Maia Explain**.
+* Use the chat interface directly to get explanations of your document (for instance, a microflow or a page).
+* In the App Explorer, right-click a document to open its context menu, and click **Maia Explain**.
 
-Nanoflows are not supported by Maia Explain in Studio Pro 11.8.
+Nanoflows are currently not supported by Maia Make.
 
-## Using Maia Explain in Studio Pro 11.7 and Below
+### In Studio Pro 11.7 and Below
 
 In Studio Pro 11.7 and below, Maia Explain is enabled by default. If you want to disable this feature, go to **Edit** > **Preferences** > the **Maia** tab and clear the **Enable Maia Explain** checkbox.
 

@@ -10,7 +10,7 @@ Between date function calls calculate the differences between two dates.
 
 For a deep-dive look into working with DateTime functions, check out this video:
 
-{{< vidyard "Cjy2qSeKcGhcuKEmkKesp2" >}}
+{{< vidyard id="Cjy2qSeKcGhcuKEmkKesp2" >}}
 
 ## millisecondsBetween
 

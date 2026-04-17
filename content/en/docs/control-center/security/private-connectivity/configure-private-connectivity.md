@@ -346,6 +346,8 @@ Mendix Cloud Private Connectivity currently supports exposing physical [subnet r
 * Multiple IP ranges separated by a comma, such as `192.0.2.0/24,198.51.100.0/24`
 * A single IP address, such as `10.100.0.5/32`
 
+Do not expose broad IP ranges such as `0.0.0.0/0` and `::/0`. Mendix recommends only exposing the IP range of the target service or database.
+
 #### Exposing Subnet Routes on a Windows Server {#private-connectivity-resources-expose-routes-windows}
 
 To expose subnet routes for an agent that is already running, run the following script on the machine where the agent is installed.    
@@ -477,3 +479,10 @@ The Mendix internal systems operate on the following subnets:
 
 As such, when you expose a subnet or a single IP address, it must not conflict with our private IP ranges.     
 If you absolutely must use the subnets on which Mendix operates, please configure [Network address translation (NAT)](https://en.wikipedia.org/wiki/Network_address_translation) on your infrastructure.
+
+### Restricted IP Ranges
+
+To maintain robust security, network access to services and databases must be strictly controlled. As such, do not expose broad IP ranges such as:
+
+* `0.0.0.0/0` for IPv4
+* `::/0` for IPv6

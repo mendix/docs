@@ -321,6 +321,10 @@ This setting is enabled by default. The editor allows the user to write rich tex
 
 You can publish data as a GraphQL service. When you enable this feature, you can indicate that a published OData service [also supports GraphQL](/refguide/published-odata-services/#supports-graphql).
 
+### JavaScript Action Editor
+
+Select this option to use the modernized version of the JavaScript action Editor. You must close all open JavaScript actions to use this feature.
+
 ### Mapping Editor
 
 This setting allows you to set the beta version as the default editor.
@@ -333,7 +337,9 @@ If Translation Generator is also enabled, you can use it in this editor as well.
 
 ### Workflow
 
-Select this option to allow adding [event sub-processes](/refguide/workflow-event-sub-processes/) to your workflow in the workflow editor.
+In Studio Pro 11.8, select the **Enable workflow event sub-processes (beta)** option to allow adding [event sub-processes](/refguide/workflow-event-sub-processes/) to your workflow in the workflow editor.
+
+In Studio Pro 11.9 and above, this option is removed. Workflow event sub-processes are in general availability and are enabled by default.
 
 ## Read More
 

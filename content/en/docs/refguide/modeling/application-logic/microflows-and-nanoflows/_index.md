@@ -34,4 +34,3 @@ Below presents a list of main differences between microflows and nanoflows:
 * Because nanoflows use JavaScript libraries and microflows use Java libraries, there can sometimes be slight differences in the way [expressions](/refguide/expressions/) are executed.
 * When used in nanoflow activities, expressions do not support the following objects and variables: `$latestSoapFault`, `$latestHttpResponse`, `$currentSession`, `$currentUser`, `$currentDeviceType`.
 * Nanoflows are not run inside a transaction. So, if an error occurs in a nanoflow, it will not roll back any previous changes.
-* <a id="list-changes-in-sub-nanoflows"></a>Changes done to the lists in a sub-nanoflow are not reflected in the original nanoflow.

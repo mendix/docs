@@ -33,6 +33,7 @@ Studio Pro now supports the following boundary event:
 * [Multi-user task](/refguide/multi-user-task/)
 * [Call microflow](/refguide/call-microflow/)
 * [Call workflow](/refguide/call-workflow/)
+* [AI agent task](/refguide/ai-agent-task/) (in Studio Pro 11.9 and above)
 
 {{% alert color="info" %}}
 When a boundary event is added to an activity, this activity is also referred to as the parent activity of the boundary event.

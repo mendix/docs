@@ -8,6 +8,12 @@ numberless_headings: true
 
 These release notes cover changes to the [Extensibility API for Web Developers](/apidocs-mxsdk/apidocs/extensibility-api/).
 
+## Version 11.9.0
+
+* We introduced a new Runtime Configuration API under `studioPro.runtime.configuration`, which allows you to retrieve runtime constants from the active configuration. For more information, see [Access Runtime Constants Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/runtime-configuration-api/).
+* We introduced a new Runtime Controller API under `studioPro.runtime.controller`, which allows you to listen for runtime connection state changes to detect when your app starts or stops running. For more information, see [Listen for Connection Changes](/apidocs-mxsdk/apidocs/web-extensibility-api-11/runtime-controller-api/).
+* We introduced a permission system for web extensions. Extensions can now request access to sensitive APIs and users can grant or revoke permissions through the Extensions Overview pane. For more information, see [Extension Permissions](/apidocs-mxsdk/apidocs/web-extensibility-api-11/extension-permissions/).
+
 ## Version 11.8.0
 
 * We introduced a change in the [Progress Dialog API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/dialog-api/), so when the progress dialog only has one step, only the progress bar is shown.

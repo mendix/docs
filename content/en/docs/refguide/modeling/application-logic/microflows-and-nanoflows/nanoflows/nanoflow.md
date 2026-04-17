@@ -23,6 +23,17 @@ Nanoflow properties consist of the following sections:
 
 The return type defines what information the nanoflow returns. The caller of the nanoflow gets a result of this type. For information on possible return types, see [Data Types](/refguide/data-types/).
 
+#### List Parameters {#list-parameters}
+
+This property determines how list parameters are passed to the nanoflow.
+
+The following options are available:
+
+* **Shared** - adding or removing items in the called nanoflow is reflected in the caller. This aligns nanoflow behavior with that of microflows.
+* **Isolated (legacy)** - the called nanoflow works with a separate list. So adding or removing items is not reflected in the caller. This option is deprecated and will be removed in Mendix 12.
+
+Default: *Shared*
+
 ### Common Section {#common}
 
 #### Name

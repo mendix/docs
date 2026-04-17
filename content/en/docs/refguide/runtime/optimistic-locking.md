@@ -90,7 +90,7 @@ You can see an example implementation in the following image. The change action 
 
 {{< figure src="/attachments/refguide/runtime/optimistic-locking/retry-example.png" >}}
 
-Check the [documentation](https://docs.mendix.com/refguide/error-handling-in-microflows/) about error handling to find more information about differences between `Custom with Rollback` and `Custom without Rollback`.
+Check the [documentation](/refguide/error-handling-in-microflows/) about error handling to find more information about differences between `Custom with Rollback` and `Custom without Rollback`.
 
 ## Handling Optimistic Locking Errors in Java Actions
 

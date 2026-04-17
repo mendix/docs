@@ -10,7 +10,7 @@ aliases:
 
 ## Introduction
 
-{{< vidyard "AVffVf7KCVt7h1ioBvUQ1f" >}} 
+{{< vidyard id="AVffVf7KCVt7h1ioBvUQ1f" >}} 
 
 This section offers an overview of the Mendix platform, and outlines the 5 P’s of Digital Transformation and their importance to your Mendix success.  
 

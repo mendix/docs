@@ -8,6 +8,7 @@ hugo.exe
 /.hugo_build.lock
 /.claude/audit.log
 /.claude/settings.local.json
+/.mcp.json
 
 # For Mac users
 .DS_Store

@@ -18,9 +18,15 @@ Maia for Pages helps you generate a [page](/refguide/page/) by adding and config
 
 ## Using Maia for Pages
 
-{{% alert color="info" %}}
+### In Studio Pro 11.8 and Above
+
 In Studio Pro 11.8 and above, Maia for Pages is incorporated into the unified Maia Make capabilities, which are enabled by default. There is no dedicated interface only for Maia for Pages. For more information, see [Maia Make Capabilities](/refguide/maia-make/).
-{{% /alert %}}
+
+In Studio Pro 11.8, only overview pages can be generated.
+
+In Studio Pro 11.9 and above, custom pages can be generated from scratch and  modifying existing pages is also supported. Moreover, local variables, additional data sources, client actions, XPath constraints, and expressions are supported.
+
+### In Studio Pro 11.7 and Below
 
 In Studio Pro 11.7 and below, to enable Maia for Pages, go to **Edit** > **Preferences** > the **Maia** tab and select **Enable Maia for Pages**.
 
@@ -46,7 +52,7 @@ On pages that have already been created, either by Maia for Pages or manually, y
 In this dedicated chat, only requests related to Pages will be properly handled. If you have other questions, close this chat and go back to the general [Maia Chat](/refguide/maia-chat/) interface.
 {{% /alert %}}
 
-### Best Practices for Text Input
+#### Best Practices for Text Input
 
 To achieve optimal results, provide context about your page by describing its main use cases, customer needs, or other relevant details. The more Maia knows about your page, the more tailored and accurate the generated page will be.
 
@@ -68,13 +74,13 @@ Below are examples of prompts you can use to ask Maia to make further edits or r
 * How can I make this page more user-friendly or visually appealing?
 * Could you suggest ways to optimize the performance of this page?
 
-### Best Practices for Image Input
+#### Best Practices for Image Input
 
 The image size is limited to 512 KB. Make sure to select a clear image to help Maia better understand your request. For example, you can provide a screenshot, a photo, a design mock-up, or a close-up picture of a drawing. Avoid heavily compressed or low quality images, as these may result in the loss of important details.
 
 Keep in mind that Maia analyzes only the structure of the image. The theming of your app, such as the color scheme, will not be changed. This can cause some differences between the provided image and the generated page.
 
-## Limitation {#limitation}
+### Limitation {#limitation}
 
 Maia for Pages does not support all widgets. 
 

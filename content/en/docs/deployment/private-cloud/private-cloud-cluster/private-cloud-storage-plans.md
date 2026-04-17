@@ -156,9 +156,9 @@ The AWS S3 library is also updated in the latest LTS versions of Studio Pro:
 
 Mendix Operator 2.25 (or later versions) will automatically recognise an S3 bucket's region from its endpoint address:
 
-* If the bucket endpoint has a `<subdomains>.<region>.amazonaws.com` format (or `<subdomains>.<region>.amazonaws.com.<suffix>` format for AWS China regions),
-the Operator uses `<region>` as the S3 region name.
-* If the S3 bucket endpoint does not match this format, the Mendix Operator will use a default `us-east-1` region, as this works with most S3-compatible buckets like [Minio](#blob-minio) and [Google Cloud Storage](#blob-gcp-storage-bucket).
+* If the bucket endpoint has a `<subdomains>.<region>.amazonaws.com` format (or `<subdomains>.<region>.amazonaws.com.<suffix>` format for AWS China regions), the Operator uses `<region>` as the S3 region name.
+* For buckets that use the `<bucketname>.s3.amazonaws.com` [Legacy global endpoint](https://docs.aws.amazon.com/AmazonS3/latest/userguide/VirtualHosting.html#VirtualHostingBackwardsCompatibility) format, Mendix Operator 2.26.1 (or later versions) detects the bucket region with a [HeadBucket call](https://docs.aws.amazon.com/AmazonS3/latest/API/API_HeadBucket.html#API_HeadBucket_ResponseSyntax). If the call fails, the Mendix Operator uses the default `us-east-1` region instead.
+* If the S3 bucket endpoint does not match this format, the Mendix Operator uses a default `us-east-1` region, as this works with most S3-compatible buckets (for example, [Minio](#blob-minio) and [Google Cloud Storage](#blob-gcp-storage-bucket)).
 
 In some scenarios (legacy or custom S3 endpoints), this autodetection might not work correctly. In this case, you can manually specify the S3 bucket region by setting the [com.mendix.storage.s3.Region](/refguide/custom-settings/#commendixstorages3Region) Custom Runtime Setting. A manually specified `com.mendix.storage.s3.Region` will override the autodetected bucket region.
 

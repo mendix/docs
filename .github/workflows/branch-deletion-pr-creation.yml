@@ -38,10 +38,18 @@ jobs:
 
       - name: Process branches
         id: branch-data
+        env:
+          MIN_AGE_DAYS: ${{ github.event.inputs.min_age_days || '27' }}
         run: |
           set -e
           ALL_BRANCHES=$(git branch -r | grep -v "origin/HEAD" | sed 's/origin\///')
-          MIN_AGE_DAYS=${{ github.event.inputs.min_age_days || 27 }}
+          MIN_AGE_DAYS=${MIN_AGE_DAYS:-27}
+
+          echo "MIN_AGE_DAYS=${MIN_AGE_DAYS}"
+
+          PROTECTED_COUNT=0
+          MERGED_COUNT=0
+          UNMERGED_COUNT=0
 
           PROTECTED_BRANCHES=()
           MERGED_BRANCHES_TO_PROCESS=()
@@ -54,38 +62,56 @@ jobs:
 
           for BRANCH in $ALL_BRANCHES; do
             branch_lower=$(echo "$BRANCH" | tr '[:upper:]' '[:lower:]')
-            if [[ $branch_lower =~ (backup|development|main|master|production) ]]; then
-              PROTECTED_BRANCHES+=("$BRANCH (protected)")
+            if [[ $branch_lower == *backup* || $branch_lower =~ ^(development|main|master|production)(-[0-9]+)?$ ]]; then
+              PROTECTED_BRANCHES+=("$BRANCH")
+              PROTECTED_COUNT=$((PROTECTED_COUNT+1))
             elif git branch -r --merged origin/development | grep -q "origin/$BRANCH"; then
               MERGED_BRANCHES_TO_PROCESS+=("$BRANCH")
+              MERGED_COUNT=$((MERGED_COUNT+1))
             else
-              UNMERGED_BRANCHES+=("$BRANCH (not merged)")
+              UNMERGED_BRANCHES+=("$BRANCH")
+              UNMERGED_COUNT=$((UNMERGED_COUNT+1))
             fi
           done
+
+          echo "branch totals: protected=${PROTECTED_COUNT} merged=${MERGED_COUNT} unmerged=${UNMERGED_COUNT}"
 
           for BRANCH in "${MERGED_BRANCHES_TO_PROCESS[@]}"; do
             MERGE_HASH=$(git log --grep="Merge branch.*$BRANCH" origin/development -n 1 --pretty=format:"%H" || true)
-            [ -z "$MERGE_HASH" ] && MERGE_HASH=$(git log -n 1 origin/$BRANCH --pretty=format:"%H")
-            
-            MERGE_DATE=$(git show -s --format=%ct $MERGE_HASH)
-            DAYS_AGO=$(( ($(date +%s) - MERGE_DATE) / 86400 ))
-            
-            if [[ $DAYS_AGO -ge $MIN_AGE_DAYS ]]; then
-              BRANCHES_TO_DELETE+=("$BRANCH")
-            else
-              BRANCHES_TOO_RECENT+=("$BRANCH (too recent: ${DAYS_AGO}d)")
+            if [ -z "$MERGE_HASH" ]; then
+              MERGE_HASH=$(git log -n 1 origin/$BRANCH --pretty=format:"%H" || true)
             fi
-          done
 
-           ALL_NON_DELETED=(
-            "${PROTECTED_BRANCHES[@]}" 
-            "${BRANCHES_TOO_RECENT[@]}"
-            "${UNMERGED_BRANCHES[@]}"
-          )
+            if [ -z "$MERGE_HASH" ]; then
+              echo "WARN: no merge commit found for $BRANCH — skipping"
+              UNMERGED_BRANCHES+=("$BRANCH (no-merge-hash)")
+              UNMERGED_COUNT=$((UNMERGED_COUNT+1))
+              continue
+            fi
+
+            MERGE_DATE_EPOCH=$(git show -s --format=%ct $MERGE_HASH 2>/dev/null || true)
+            if [ -z "$MERGE_DATE_EPOCH" ]; then
+              echo "WARN: could not read commit date for $BRANCH (hash=$MERGE_HASH) — skipping"
+              UNMERGED_BRANCHES+=("$BRANCH (no-merge-date)")
+              UNMERGED_COUNT=$((UNMERGED_COUNT+1))
+              continue
+            fi
+
+            DAYS_AGO=$(( ($(date +%s) - MERGE_DATE_EPOCH) / 86400 ))
+
+            if [[ $DAYS_AGO -ge $MIN_AGE_DAYS ]]; then
+              BRANCHES_TO_DELETE+=("$BRANCH (${DAYS_AGO}d since merge)")
+            else
+              BRANCHES_TOO_RECENT+=("$BRANCH (${DAYS_AGO}d since merge)")
+            fi
+            echo "checked $BRANCH: hash=$MERGE_HASH date=$MERGE_DATE_EPOCH days=${DAYS_AGO}"
+          done
 
           echo "HAS_BRANCHES=$([ ${#BRANCHES_TO_DELETE[@]} -gt 0 ] && echo true || echo false)" >> $GITHUB_ENV
           echo "BRANCHES_TO_DELETE=$(printf -- '- %s\n' "${BRANCHES_TO_DELETE[@]}" | jq -Rs .)" >> $GITHUB_ENV
-          echo "ALL_NON_DELETED=$(printf -- '- %s\n' "${ALL_NON_DELETED[@]}" | jq -Rs .)" >> $GITHUB_ENV
+          echo "PROTECTED_BRANCHES=$(printf -- '- %s\n' "${PROTECTED_BRANCHES[@]}" | jq -Rs .)" >> $GITHUB_ENV
+          echo "BRANCHES_TOO_RECENT=$(printf -- '- %s\n' "${BRANCHES_TOO_RECENT[@]}" | jq -Rs .)" >> $GITHUB_ENV
+          echo "UNMERGED_BRANCHES=$(printf -- '- %s\n' "${UNMERGED_BRANCHES[@]}" | jq -Rs .)" >> $GITHUB_ENV
 
       - name: Create Deletion PR
         if: env.HAS_BRANCHES == 'true'
@@ -97,8 +123,14 @@ jobs:
             ### Branches for Deletion
             ${{ fromJSON(env.BRANCHES_TO_DELETE) }}
 
-            ### Protected/Recent Branches
-            ${{ fromJSON(env.ALL_NON_DELETED) }}
+            ### Protected Branches
+            ${{ fromJSON(env.PROTECTED_BRANCHES) }}
+
+            ### Recent Merges (too recent to delete)
+            ${{ fromJSON(env.BRANCHES_TOO_RECENT) }}
+
+            ### Unmerged Branches
+            ${{ fromJSON(env.UNMERGED_BRANCHES) }}
           base: development
           labels: Internal WIP
           assignees: MarkvanMents,OlufunkeMoronfolu

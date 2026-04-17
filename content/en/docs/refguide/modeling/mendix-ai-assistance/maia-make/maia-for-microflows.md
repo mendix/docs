@@ -28,9 +28,13 @@ To achieve the best results when using Maia to generate microflows, consider the
 
 ## Limitations
 
-### Destructive Operations Are Not Supported
+### Destructive Operations
 
-Maia for Microflows can create objects and flows and change simple ("primitive") settings, but it cannot delete objects or replace complex configuration settings. For example, for existing objects, Maia can change variable names, move objects, or reconnect flows, but it cannot delete objects or flows, or change the activity types.
+Maia for Microflows can create objects and flows and change simple ("primitive") settings, but it has limitations on deleting elements and replacing complex configuration settings.
+
+In Studio Pro 11.9 and above, Maia can delete flows and microflow objects. However, it cannot change activity types or replace complex configuration settings.
+
+In Studio Pro 11.8, Maia cannot delete objects or flows. For existing objects, Maia can change variable names, move objects, or reconnect flows, but it cannot delete objects or flows, or change the activity types.
 
 ### Variability in Results
 

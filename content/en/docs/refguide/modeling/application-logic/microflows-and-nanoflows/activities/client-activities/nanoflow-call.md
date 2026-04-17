@@ -52,6 +52,8 @@ The type of the parameter that is read-only. For more information on possible ty
 
 The **Edit parameter value** button allows you to edit the argument value. For each parameter of the nanoflow, you have to supply an argument of the same type. The values of the arguments are expressed using [expressions](/refguide/expressions/).
 
+If a [list parameter](/refguide/nanoflow/#list-parameters) in the called nanoflow uses **Shared**, adding or removing items is only reflected in the caller when the argument is passed as a direct list variable. If the argument is an expression, the expression is evaluated first and changes are not reflected in the caller.
+
 ### Return Type
 
 This read-only property indicates whether you will retrieve a variable, object or list. 

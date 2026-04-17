@@ -24,6 +24,12 @@ The skeletons of these *.js* files are generated automatically when you save an 
 
 To learn how to create, configure, and use a JavaScript action, see these [Build JavaScript Actions](/howto/extensibility/build-javascript-actions/) how-tos.
 
+{{% alert color="info" %}}
+
+In Studio Pro 11.9, a new modernized JavaScript action editor was released in beta. Enable it via **New Features** in the Studio Pro **Preferences**.
+
+{{% /alert %}}
+
 ## General Settings
 
 Double-click the JavaScript action in your **App Explorer** to open the action's settings: 

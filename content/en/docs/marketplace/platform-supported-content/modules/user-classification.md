@@ -6,7 +6,7 @@ description: "Describes the configuration and usage of the User Classification m
 
 ## Introduction
 
-The [User Classification](https://marketplace.mendix.com/link/component/245015) module allows your Mendix application to accurately classify end-users—an essential capability for ensuring compliance with the [Mendix Pricing Plan](/developerportal/deploy/mendix-cloud-deploy/#plans). The module provides logic to set the [user type](/developerportal/deploy/populate-user-type/) as external or internal based on the user roles in your app. If needed, you can implement custom logic instead. Keep in mind that Mendix’s user metering processes will count users as internal unless their user type is explicitly set to external, which may impact licensing calculations.
+The [User Classification](https://marketplace.mendix.com/link/component/245015) module allows your Mendix application to accurately classify end-users—an essential capability for ensuring compliance with the [Mendix Pricing Plan](/developerportal/deploy/mendix-cloud-deploy/#plans). The module provides logic to set the [user type](/developerportal/deploy/implementing-user-metering/#user-classification) as external or internal based on the user roles in your app. If needed, you can implement custom logic instead. Keep in mind that Mendix’s user metering processes will count users as internal unless their user type is explicitly set to external, which may impact licensing calculations.
 
 This document guides you in implementing the classification logic and configuring the required elements within your Mendix application. For details on the available classification logic options, see the [Configuring Classification Logic](#configure-classification-logic) section below. Using this module, organizations can ensure reliable user classification and maintain accurate metering within their Mendix environment. 
 
@@ -94,4 +94,4 @@ Based on your classification logic, use one of the above constants. If both cons
 
 ## Read More
 
-* [Populate User Types](/developerportal/deploy/populate-user-type/)
+* [Implementing User Metering](/developerportal/deploy/implementing-user-metering/)

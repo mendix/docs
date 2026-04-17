@@ -23,6 +23,6 @@ Even with the powerful navigation and search support in Mendix Studio Pro, adher
 
 For a deep-dive look into implementing such best practices, check out this video:
 
-{{< vidyard "exmmApZY4jMYxqidrzehEQ" >}}
+{{< vidyard id="exmmApZY4jMYxqidrzehEQ" >}}
 
 ## Documents in this Category

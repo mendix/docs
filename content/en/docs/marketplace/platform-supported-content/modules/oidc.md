@@ -128,9 +128,9 @@ The OIDC module requires your app to be using Mendix 9.0 or above.
 
 It requires the following Marketplace modules to be included in your app:
 
-* [Encryption](https://marketplace.mendix.com/link/component/1011) – see [Encryption](/appstore/modules/encryption/) documentation.
+* [Encryption](https://marketplace.mendix.com/link/component/1011) (for version 4.3.0 and below) – see [Encryption](/appstore/modules/encryption/) documentation.
 * [Community Commons](https://marketplace.mendix.com/link/component/170) – see [Community Commons](/appstore/modules/community-commons-function-library/) documentation.
-* [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515) – see [Nanoflow Commons](/appstore/modules/nanoflow-commons/) documentation.
+* [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515) (for version 4.3.0 and below) – see [Nanoflow Commons](/appstore/modules/nanoflow-commons/) documentation. 
 * [User Commons](https://marketplace.mendix.com/link/component/223053) (for version 3.0.0 and above)
 
     {{% alert color="warning" %}}
@@ -205,7 +205,8 @@ This section provides an overview of updates for the OIDC SSO module across diff
 
 | Mendix Version | OIDC SSO Module Version | Important Migration Changes | Additional Information |
 | --- | --- | --- | --- |
-| 10.24.0 and above | 4.3.0 | - | Supporting multi-domain and sub-path |
+| 10.24.0 and above | 4.4.0 | Move the `Encryption.Encryptionkey` value to the `OIDC.Encryptionkey` constant. | Dependencies on the Encryption and Nanoflow Commons modules have been removed. <br> **Issued Tokens** tab has been removed from the OIDC Client Configuration page. |
+| 10.24.0 and above | 4.3.0 | - | Supporting multi-domain and sub-path. |
 | 10.24.0 and above | 4.2.1 | In version 4.2.1, automatic migration of the UserCommons has been removed. | Since migration steps were removed in 4.2.1, you must upgrade to OIDC SSO version 4.2.0 first to prevent data loss. This applies to the UserCommons, if you are migrating from any version below 3.0.0, always upgrade to 4.2.0 first, then move to the latest v4.2.1. |
 | 10.21.01 and above | 4.2.0 | In version 4.2.0, the module no longer automatically executes the UserCommons migration in the startup microflow. The migration step has been moved to a dedicated microflow, which you can trigger via a widget. | The `ASU_STARTUP` microflow has been moved under the **USE_ME** folder. |
 | 10.12.10 and above | 4.0.0 | Set `OIDC.ASU_OIDC_Startup` microflow as part of the after-startup microflow | From UserCommons 2.0.0, new users without IdP-specified time zone or language will use default App settings; existing users retain their previously set values. |
@@ -259,9 +260,15 @@ In addition, administrators will need to have access to configure OIDC and also 
 If you are testing phone web and phone web offline locally, use the URLs `http://localhost:8080/?profile=Phone` and 
 `http://localhost:8080/?profile=PhoneOffline`, respectively. For more information, see the [Example of profile selection](/refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/#example-of-profile-selection) section of *Progressive Web App*.
 
+Admins can view their own token using a snippet in their custom page. They can find this snippet under **OIDC > USE_ME > Snippet_Token_View**. The snippet displays the admin's decrypted and decoded Access token and ID token.
+
 ### Setting Encryption Key
 
-Follow the instructions to [set an encryption key in the Encryption module](/appstore/modules/encryption/#configuration). The constant to set is called `Encryption.EncryptionKey` and should be a random value 32 characters long. This key will be used to encrypt and decrypt values.
+Follow the instructions to [set an encryption key in the Encryption module](/appstore/modules/encryption/#configuration). For OIDC SSO V4.3.0 and below, set a constant called `Encryption.EncryptionKey` and assign it a random value 32-character value. Starting from version 4.4.0, set the encryption key in the `OIDC.Encryptionkey` constant using a random 32-character value. This key will be used to encrypt and decrypt values.
+
+{{% alert color="info" %}}
+While upgrading from V4.3.0 to V4.4.0 or above, ensure that any value currently stored in the `Encryption.Encryptionkey` is moved to the `OIDC.Encryptionkey` constant, otherwise, existing IdP client authentication will fail.  
+{{% /alert %}}
 
 ## IdP Configuration {#idpconfiguration}
 
@@ -591,7 +598,7 @@ Fields below are available in the **UserProvisioning** tab for the User Provisio
 
 * Optionally, you can select the microflow in the **Custom UserProvisioning** field to use custom logic for user provisioning. For more information, see the [User Provisioning Using a Microflow at Runtime](#microflow-at-runtime) section below.
 
-* To facilitate upcoming enhancements to the platform, you need to perform some configuration so that Mendix can correctly identify end users. Correct identification is crucial for ensuring consistent and accurate end user metering and deduplication of end users across multiple applications in your landscape. For this reason, the UserCommons module features the **User Metering Named Identifier** entity in version 2.2.0 and above. If you have a multi-app internal user license or an external user license, you must persist the same value for the same end user across different apps, regardless of which modules you use. In most cases, the end user's email address is a good choice. Currently, Mendix uses the `system.user.name` to identify users, it will use the **User Metering Named Identifier** instead, unless it is not populated. For accurate user metering, you do not need to change what value is persisted in the `system.user.name`. You can continue to persist whatever value you are using there today. The `system.user.name` is often used for technical user identifiers, for example, the `oid` value when using the OIDC SSO module. For more information, see [Guidance on User Identifier](#guidance-user-identifier). Both `system.user.name` and `userCommons.NamedUserIdentifier.value` has a uniqueness constraint for the named user identifier. This means an app cannot have two users who share the same identifier value.
+* To facilitate upcoming enhancements to the platform, you need to perform some configuration so that Mendix can correctly identify end users. Correct identification is crucial for ensuring consistent and accurate end user metering and deduplication of end users across multiple applications in your landscape. For this reason, the UserCommons module features the **User Metering Named Identifier** entity in version 2.2.0 and above. If you have a multi-app internal user license or an external user license, you must persist the same value for the same end user across different apps, regardless of which modules you use. In most cases, the end user's email address is a good choice. Currently, Mendix uses the `system.user.name` to identify users, it will use the **User Metering Named Identifier** instead, unless it is not populated. For accurate user metering, you do not need to change what value is persisted in the `system.user.name`. You can continue to persist whatever value you are using there today. The `system.user.name` is often used for technical user identifiers, for example, the `oid` value when using the OIDC SSO module. For more information, see [Guidance on User Identifier](#guidance-user-identifier). Both `system.user.name` and `userCommons.NamedUserIdentifier.value` has a uniqueness constraint for the named user identifier. This means an app cannot have two users who share the same identifier value. Also, both fields are case sensitive. For more information on case sensitivity, refer to [Best Practices for Choosing and Implementing a Cross-App User Identifier](/developerportal/deploy/implementing-user-metering/#guidelines-for-unique-user-identification-deduplication).
 
     * If you want to use a user attribute other than email address for the **User Metering Named Identifier**, you can configure it on the **UserProvisioning** tab:
 
@@ -1132,6 +1139,8 @@ Content - {"error":"invalid_client","error_description":"client authentication f
 ```
 
 [Section 5.2 of RFC 6749](https://datatracker.ietf.org/doc/html/rfc6749#section-5.2) indicates and clarifies all the possible error codes that may be returned.
+
+If you want to review tokens during troubleshooting, you can include the `Snippet_Token_View` snippet in a custom admin page; this allows you to see the json content.
 
 ### Custom Microflow Implementation Should Be Required to Process Access_Token Roles
 

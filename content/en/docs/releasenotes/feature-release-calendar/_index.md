@@ -30,7 +30,8 @@ General Availability means that a feature is available for all users. This type 
 | Agent Observability | General Availability: Mx 11.5 + Mx 10.24 |
 | Model Agents as part of your Workflow | General Availability: Mx 11.9 |
 | Dynamic Case Management | Private Beta: Mx 11.3 <br/>Limited Availability: Mx 11.12 |
-| Global Inbox Workflow Tasks | Public Beta: Mx 11.9 <br/>General Availability: Mx 11.12 |
+| Global Inbox Workflow Tasks | General Availability: Mx 11.9 |
+| Global Inbox Other Tasks | General Availability: Mx 11.12 |
 | Workflow Non-interrupting Event Subprocesses (Message trigger) | Public Beta: Mx 11.8 <br/>General Availability: Mx 11.9 |
 | Workflow Interrupting Event Subprocesses (Message trigger) | General Availability: Mx 11.12 |
 | Workflow Interrupting Event Subprocesses (Timer trigger) | General Availability: Mx 11.12 |

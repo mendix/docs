@@ -77,16 +77,21 @@ By default, **Autofocus** is set to "Off" for any newly created pages. For backw
 
 A page's URL allows end users to directly navigate to the page (for example, from external links or bookmarks). It will be shown in the address bar of the browser when you visit the page. When navigating to a page without a URL configured, the last visited URL is shown. Note that the full URL of the page will be the base URL of your application followed by `/p/` and then by the configured URL of the page (for example, `http://example.mendixcloud.com/p/home_page`).
 
-Pages with parameters can also have URLs. For those pages, all page parameters must be present in the URL. To do this, define which attribute of each page parameter you want to be used in the URL. The syntax for this is the name of the page parameter, a `/`, and then the name of the attribute that should be used placed between curly brackets. 
+{{% alert color="info" %}}
+The `/p/` URL prefix can be configured in [runtime settings](/refguide/runtime-tab/#url-prefix).
+{{%/alert %}}
 
-For example, in the URL `product/{Product/Name}` the `Name` attribute of the page parameter `Product` will be used in the URL (in a browser, the URL appears as `http://example.mendixcloud.com/p/product/hammer`). Any attribute of type `Boolean`, `Decimal`, `Enumeration`, `Integer`, `Long`, or `String` can be used in the URL. 
+Pages with parameters can also have URLs. For those pages, all page parameters must be present in the URL. The URL syntax depends on the type of parameter:
 
-Next to this, you can use `Id` as an attribute to include the identifier of the entity in the URL. This would appear as `product/{Product/Id}` for example. In the page URL dialog box, the configured URL is shown together with an example URL (with example values filled in for the parameters), and also shows which XPath queries the runtime will use to retrieve the page parameters. See this example URL in a dialog box:
+* **Entity parameters** – Use the parameter name, a `/`, and then the attribute name enclosed in curly brackets: `{ParameterName/Attribute}`. Any attribute of type `Boolean`, `Decimal`, `Enumeration`, `Integer`, `Long`, or `String` can be used. For example, in the URL `product/{Product/Name}`, the `Name` attribute of the page parameter `Product` will be used (in a browser, the URL appears as `http://example.mendixcloud.com/p/product/hammer`).
+* **Primitive parameters** – Primitive parameters are page parameters of a simple type (such as `String` or `Integer`) rather than an entity type. Use the parameter name enclosed in curly brackets: `{ParameterName}`. For example, in the URL `product/{ProductName}`, the value of the primitive page parameter `ProductName` will be used.
+
+Additionally, you can use `Id` as an attribute to include the identifier of the entity in the URL. This would appear as `product/{Product/Id}`, for example. In the page URL dialog box, the configured URL is shown together with an example URL (with example values filled in for the parameters), and also shows which XPath queries the runtime will use to retrieve the page parameters. See this example URL in a dialog box:
 
 {{< figure src="/attachments/refguide/modeling/pages/page/page-url-dialog.png" alt="page url dialog" class="no-border" >}}
 
 {{% alert color="warning" %}}
-Page URLs are not supported for pages that have non-persistable entities as parameters
+Page URLs are not supported for pages that have non-persistable entities as parameters, or have optional parameters.
 {{%/alert %}}
 
 In simple e-commerce applications, the URLs can be configured as follows:

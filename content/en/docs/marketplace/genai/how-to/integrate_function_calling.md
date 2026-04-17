@@ -55,7 +55,7 @@ Selecting the infrastructure for integrating GenAI into your Mendix application 
 * Your Own Connector: Optionally, if you prefer a custom connector, you can integrate your chosen infrastructure. However, this document focuses on the Mendix Cloud GenAI, OpenAI, and Amazon Bedrock connectors, as they offer comprehensive support and ease of use to get started.
 
 {{% alert color="info" %}}
-Not all models support function calling. Ensure that your preferred GenAI provider is set up in your Mendix app and that a compatible model is available. Mendix provides an [overview of models and their capabilities](https://docs.mendix.com/appstore/modules/genai/#models).
+Not all models support function calling. Ensure that your preferred GenAI provider is set up in your Mendix app and that a compatible model is available. Mendix provides an [overview of models and their capabilities](/appstore/modules/genai/#models).
 {{% /alert %}}
 
 ### Customizing Microflows {#microflows}

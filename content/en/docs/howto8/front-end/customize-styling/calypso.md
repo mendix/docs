@@ -19,7 +19,7 @@ Calypso is the easiest styling solution for most users. However, if you already 
 
 For a deep-dive look into styling with Calypso, check out this video:
 
-{{< vidyard "M2NCccTnfnh7Yx2gjEyBpf" >}}
+{{< vidyard id="M2NCccTnfnh7Yx2gjEyBpf" >}}
 
 ## Prerequisites
 

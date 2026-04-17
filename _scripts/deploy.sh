@@ -23,6 +23,10 @@ fi
 
 echo "Deploying to AWS bucket $TARGETAWSBUCKET"
 
+# Sync HTML file timestamps with git modification dates
+# This allows AWS S3 sync to use timestamps to determine which files need updating
+python $TRAVIS_BUILD_DIR/_scripts/sync-html-timestamps.py
+
 cd $TRAVIS_BUILD_DIR/public
 pwd
 aws --version
@@ -33,16 +37,13 @@ aws --version
 # AWS_SECRET_ACCESS_KEY
 # AWS_DEFAULT_REGION
 #
-# HUGO creates new files with a newer timestamp except those in the /static folder 
-# so this will always push all the html, but only changed /static files.
-#
-# Need to use old method - or a new method to reduce number of docs transferred.
-# see https://stackoverflow.com/questions/1964470/whats-the-equivalent-of-subversions-use-commit-times-for-git/13284229#13284229 for a possiblity
+# File timestamps are now synced with git modification dates by sync-html-timestamps.py
+# This allows AWS S3 sync to use timestamps to determine which files actually changed
+# Both HTML files (from markdown) and static files now have accurate timestamps
 #
 start=$SECONDS
-echo "Starting sync to AWS"
-aws s3 sync . s3://$TARGETAWSBUCKET --delete --only-show-errors --exclude "*.png" # sync all files except png files
-aws s3 sync . s3://$TARGETAWSBUCKET --delete --only-show-errors --size-only --exclude "*" --include "*.png" # sync all png files
+echo "Starting sync to AWS (using timestamps to detect changes)"
+aws s3 sync . s3://$TARGETAWSBUCKET --delete --only-show-errors
 echo "Upload to AWS took $((SECONDS - start)) seconds"
 
 # Go back to the build directory so state is the same

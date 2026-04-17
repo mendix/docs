@@ -9,7 +9,7 @@ weight: 3
 
 You can use Maia Plan to plan and generate an app. This page describes how to provide project context, review and refine the generated project scope, and approve the solution proposal to initiate app development.
 
-<!-- {{< figure src="/attachments/developerportal/maia/maia-create-app.png" alt="Plan and build with Maia" max-width=50% >}} -->
+{{< figure src="/attachments/developerportal/maia/maia-create-app.png" alt="Plan and build with Maia entry point" max-width=50% >}}
 
 ## Creating an App with Maia Plan
 
@@ -91,7 +91,9 @@ Go through the steps in the following sections to have Maia Plan create an app f
 
 #### Recommended Marketplace Components {#recommender}
 
-{{% alert color="warning" %}} This feature is in Public Beta. For more information, refer to Release Status. {{% /alert %}}
+{{% alert color="warning" %}}
+This feature is in Public Beta. For more information, refer to [Release Status](/releasenotes/release-status/).
+{{% /alert %}}
 
 If Mendix identifies Marketplace components that can be used to implement a specific story, they are displayed in the following places:
 
@@ -111,7 +113,9 @@ If your company does not have company-approved components, Maia returns the foll
 
 After clicking **Start Building**, the **Start Development** window is displayed. This provides you with the following options:
 
-* **Prioritize in Planning Board** – Click this button to open the **Planning** window of the new app, which includes  all the project's stories.     
+* **Prioritize in Planning Board** – Click this button to open the **Planning** window of the new app, which includes all the project's stories.
+    
     Note that, if you click **Open in Planning** before Maia is done [finding recommendations](#recommender), recommended components are not displayed in the **Planning** window.
-* **Open in Studio Pro** - Click this button to open Studio Pro, where you can continue working on the new app. Note that, at the moment, Studio Pro does not take into account [recommended components](#recommender).         
+* **Open in Studio Pro** – Click this button to open Studio Pro, where you can continue working on the new app. Note that, at the moment, Studio Pro does not take into account [recommended components](#recommender).
+    
     For details, refer to [Maia Make](/refguide/maia-make/) in the Studio Pro documentation.    

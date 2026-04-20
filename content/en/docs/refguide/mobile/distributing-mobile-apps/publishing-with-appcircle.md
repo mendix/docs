@@ -23,10 +23,29 @@ Before starting this guide, make sure you have completed the following:
 
 ## Set Up Store Connections {#store-connections}
 
-Before creating a publish profile, set up your store credentials under **API Integrations** in the Appcircle settings:
+Before creating a publish profile, set up your store credentials under **API Integrations** in the Appcircle settings. To access this:
 
-* For iOS: add an App Store Connect API key.
-* For Android: add a Google Play service account key.
+1. Click on your profile picture in the top-right corner.
+1. Select **My Organization**.
+1. Go to the **Integrations** tab.
+1. Choose the appropriate integration:
+
+**For iOS (App Store Connect):**
+
+1. Click **Add** under **App Store Connect Integrations**.
+1. Provide a name for the integration (for example, `My App Store Connect`).
+1. Upload your App Store Connect API Key (*.p8* file) or paste the key content.
+1. Enter the **Issuer ID** and **Key ID** from your App Store Connect API key details.
+1. Save the integration.
+
+**For Android (Google Play Console):**
+
+1. Click **Add** under **Google Play Integrations**.
+1. Provide a name for the integration (for example, `My Google Play Account`).
+1. Upload your Google Play service account JSON key file.
+1. Save the integration.
+
+Once these integrations are configured, you can use them when creating publish profiles.
 
 ## Create a Publish Profile {#create-publish-profile}
 
@@ -34,8 +53,33 @@ To create a publish profile, do the following:
 
 1. Go to the **Publish** module from the left navigation menu.
 1. Click **Add New**.
-1. For iOS, enter a profile name and Bundle ID, or import directly from App Store Connect using your API key.
-1. For Android, enter a profile name and Package Name, or import from Google Play Console using your service account key.
+1. Choose your platform (**iOS** or **Android**).
+
+**For iOS:**
+
+* **Option 1 - Import from App Store Connect:**
+  1. Select **Import from App Store Connect**.
+  1. Choose the App Store Connect integration you configured in API Integrations.
+  1. Select the app from the list of apps in your App Store Connect account.
+  1. Appcircle automatically fills in the Bundle ID, app name, and other metadata.
+* **Option 2 - Manual Entry:**
+  1. Select **Manual Entry**.
+  1. Enter a **Profile Name** (for example, `My App - iOS`).
+  1. Enter the **Bundle ID** (must exactly match the Bundle ID in your Xcode project and provisioning profile).
+  1. Save the profile.
+
+**For Android:**
+
+* **Option 1 - Import from Google Play Console:**
+  1. Select **Import from Google Play Console**.
+  1. Choose the Google Play integration you configured in API Integrations.
+  1. Select the app from the list of apps in your Google Play Console account.
+  1. Appcircle automatically fills in the Package Name and other metadata.
+* **Option 2 - Manual Entry:**
+  1. Select **Manual Entry**.
+  1. Enter a **Profile Name** (for example, `My App - Android`).
+  1. Enter the **Package Name** (must exactly match the Package Name in your Android project).
+  1. Save the profile.
 
 {{% alert color="warning" %}}
 The Bundle ID (iOS) and Package Name (Android) cannot be changed after the profile is created. Make sure these are correct before saving.

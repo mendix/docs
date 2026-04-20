@@ -22,11 +22,10 @@ After building your app, you can distribute it to testers or publish it to the a
 Appcircle uses separate build profiles for iOS and Android. Create one profile per target platform by doing the following:
 
 1. Log in to Appcircle and go to the **Build** module.
-1. Click **Add New** and select the target operating system (**iOS** or **Android**) and **React Native** as the framework.
+1. Click **Add New** (top-right corner) and select the target operating system (**iOS** or **Android**) and **React Native** as the framework.
+1. Choose how to connect your repository. Appcircle supports GitHub, GitLab, Bitbucket, Azure DevOps, and direct SSH URL connections:
 
-    {{< figure src="/attachments/refguide/mobile/distributing-mobile-apps/building-native-apps/appcircle/add-build-profile.png" alt="Adding a new build profile in Appcircle" class="no-border" >}}
-
-1. Connect your repository. Appcircle supports GitHub, GitLab, Bitbucket, Azure DevOps, and direct SSH URL connections.
+    {{< figure src="/attachments/refguide/mobile/distributing-mobile-apps/building-native-apps/appcircle/add-build-profile.png" alt="Repository connection options in Appcircle" class="no-border" >}}
 1. Select the branch you want to build from. Appcircle automatically fetches the repository and fills in the build configuration.
 1. Review the auto-filled configuration, adjust if needed, and finish creating the profile.
 
@@ -61,10 +60,14 @@ To add a provisioning profile, do the following:
 
 ### Assign to the Build Profile
 
-In the Build module, open the iOS build profile and go to **Build Configuration**. Under the **Signing** section, choose:
+In the Build module, open the iOS build profile and go to **Build Configuration**. Under the **Signing** section, choose one of the following signing methods:
 
-* **Automatic Signing** — requires Xcode 13 or later, a Developer/Distribution certificate, and an App Store Connect API key.
-* **Manual Signing** — select your bundle identifier and the provisioning profile you added.
+* **Automatic Signing** — Appcircle automatically handles provisioning profile management during the build. This requires:
+  * Xcode 13 or later
+  * A Developer or Distribution certificate
+  * An App Store Connect API key (configured in the **API Integrations** settings)
+  * The bundle identifier must already be registered in your Apple Developer account
+* **Manual Signing** — you manually select the certificate and provisioning profile for each build configuration. This gives you full control over which profiles are used. Select your bundle identifier from the dropdown, then choose the provisioning profile you added in the **Signing Identities** module. The certificate will be automatically matched based on the profile.
 
 For more details, follow [Appcircle's iOS code signing guide](https://docs.appcircle.io/signing-identities/apple-certificates).
 
@@ -78,19 +81,90 @@ To generate a new keystore within Appcircle, do the following:
 
 1. Go to the **Signing Identities** module and select **Android Keystores**.
 1. Click **Add New** and select the generate option.
-1. Fill in the required details (keystore password, key alias, key password, and certificate information).
-1. Save the keystore.
+1. Fill in the required details:
+   * **Keystore Password** — password to protect the keystore file (minimum 6 characters)
+   * **Key Alias** — identifier for the signing key (for example, `my-app-key`)
+   * **Key Password** — password to protect the signing key (minimum 6 characters)
+   * Certificate information:
+     * **Common Name (CN)** — your name or organization name
+     * **Organizational Unit (OU)** — your department or division (optional)
+     * **Organization (O)** — your organization name (optional)
+     * **Locality (L)** — your city (optional)
+     * **State (ST)** — your state or province (optional)
+     * **Country Code (C)** — two-letter country code (for example, `US`)
+   * **Validity (years)** — how long the keystore remains valid (default is 25 years; Google requires at least 25 years for Play Store apps)
+1. Save the keystore. Appcircle generates the keystore file and stores it securely.
+
+{{% alert color="warning" %}}
+Store your keystore credentials securely. If you lose them, you cannot update your app on the Play Store and will need to publish a new app with a different package name.
+{{% /alert %}}
 
 To upload an existing keystore instead, do the following:
 
 1. Go to the **Signing Identities** module and select **Android Keystores**.
 1. Click **Add New** and select the upload option.
-1. Upload your *.keystore* file and fill in the **Keystore Password**, **Key Alias**, and **Key Password** fields.
+1. Upload your *.keystore* (or *.jks*) file and fill in the **Keystore Password**, **Key Alias**, and **Key Password** fields.
 1. Save the keystore.
 
 After generating or uploading the keystore, open the Android build profile's workflow editor and ensure the **Sign Application** step is enabled and configured to use the keystore from Signing Identities.
 
 For more details, follow [Appcircle's Android code signing guide](https://docs.appcircle.io/signing-identities/android-keystores).
+
+## Configure Environment Variables {#environment-variables}
+
+Environment variables let you configure build-time and runtime settings without hardcoding values in your app. You can use them to set different configurations for development, staging, and production builds.
+
+Appcircle provides two levels of environment variable configuration:
+
+* **Global environment variables** — shared across all build profiles in your organization
+* **Build profile environment variables** — specific to a single build profile
+
+### Common Use Cases
+
+For Mendix native apps, you might use environment variables for:
+
+* **Runtime URLs** — different backend endpoints for dev, test, and production environments
+* **App configuration** — feature flags, API keys, or service endpoints
+* **Build configuration** — version numbers, build identifiers, or platform-specific settings
+
+### Add Environment Variables to Your Build Profile
+
+To configure environment variables for a specific build profile, do the following:
+
+1. Open the build profile in the **Build** module.
+1. Click the **gear icon** to open **Build Configuration** settings.
+1. Go to the **Environment Variables** tab.
+1. Click **Add New Variable** and enter:
+   * **Key** — the variable name (for example, `RUNTIME_URL`)
+   * **Value** — the variable value (for example, `https://myapp-acceptance.mendixcloud.com`)
+   * **Toggles**:
+     * **Accessible during the build** — makes the variable available to build scripts and workflow steps
+     * **Masked in logs** — hides the value in build logs (use this for sensitive values)
+1. Save the configuration.
+
+{{% alert color="info" %}}
+For sensitive values like API keys or tokens, always enable **Masked in logs** to prevent them from appearing in build output. For highly sensitive credentials, consider using Appcircle's secret management features instead.
+{{% /alert %}}
+
+### Add Global Environment Variables
+
+To configure environment variables shared across all builds in your organization, do the following:
+
+1. Go to the **Build** module and select **Environment Variables** from the left navigation menu.
+1. Click **Add New Variable**.
+1. Enter the **Key** and **Value**, and configure the toggles as needed.
+1. Save the variable.
+
+Global variables can be overridden by build profile-specific variables with the same key.
+
+### Use Environment Variables in Your App
+
+Environment variables configured in Appcircle are available during the build process. How you access them depends on your app's configuration:
+
+* **React Native environment files** — if your app uses *.env* files or libraries like `react-native-config`, you can pass Appcircle environment variables to these configuration files using custom build scripts
+* **Build scripts** — environment variables are accessible in workflow steps and custom scripts using standard environment variable syntax (for example, `$RUNTIME_URL` in shell scripts)
+
+For more details on environment variable management and advanced configurations, see [Appcircle's environment variables documentation](https://docs.appcircle.io/environment-variables/).
 
 ## Build Your App {#build-your-app}
 
@@ -98,9 +172,9 @@ Builds can be started manually or automatically triggered by commits to the repo
 
 To start a build manually, open the build profile and click **Start Build**. Select the branch and the workflow, then confirm.
 
-While the build is running, you can follow the live build logs to monitor progress and diagnose any issues.
+{{< figure src="/attachments/refguide/mobile/distributing-mobile-apps/building-native-apps/appcircle/build-logs.png" alt="Build profile overview showing build history in Appcircle" class="no-border" >}}
 
-{{< figure src="/attachments/refguide/mobile/distributing-mobile-apps/building-native-apps/appcircle/build-logs.png" alt="Live build logs in Appcircle" class="no-border" >}}
+While the build is running, you can view the live build logs by clicking on the build's **Commit ID** or the actions menu. The logs show each workflow step in real time, helping you monitor progress and diagnose any issues.
 
 {{% alert color="info" %}}
 Older versions of Mendix might require a specific Node version. The Appcircle workflow already includes a [Node Install](https://docs.appcircle.io/workflows/react-native-specific-workflow-steps/node-install) step — simply update the version number there to match the version in the **.nvmrc** file of your app's generated native template.

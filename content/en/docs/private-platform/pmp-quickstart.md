@@ -520,7 +520,7 @@ Install the Private Mendix Platform by doing the following steps:
         * For AWS Secret Manager:
 
             * **Secret Provider** - Set to **AWS**.
-            * **AWS-Role-ARN** - An [AWS role ARN](https://docs.mendix.com/developerportal/deploy/secret-store-credentials/#aws-secrets-manager) which can access the specified Secret Manager.
+            * **AWS-Role-ARN** - An [AWS role ARN](/developerportal/deploy/secret-store-credentials/#aws-secrets-manager) which can access the specified Secret Manager.
             * **AWS SecretManager Name** - The AWS Secret Manager name where the sensitive data is stored.
 
         * For Azure Key Vault:

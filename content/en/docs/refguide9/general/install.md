@@ -18,7 +18,7 @@ If you use a Mac device, see [Configuring Parallels](/refguide9/using-mendix-stu
 
 For a deep-dive demonstration of how to install Studio Pro, follow along in this video:
 
-{{< vidyard "WUp2tLi68nXFQd7xhPbDtt" >}}
+{{< vidyard id="WUp2tLi68nXFQd7xhPbDtt" >}}
 
 ## Downloading Mendix Studio Pro
 

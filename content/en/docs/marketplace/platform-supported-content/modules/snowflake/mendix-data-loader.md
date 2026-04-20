@@ -28,6 +28,14 @@ The Mendix Data Loader is covered under the Mendix EULA. While the loader itself
 
 Depending on your use case, your deployment environment, and the type of app that you want to build, you may also need a license for your Mendix app. For more information, refer to [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
 
+### Mendix Data Loader Enterprise Edition
+
+For our enterprise customers who require advanced integration and administration capabilities, we offer the Mendix Data Loader Enterprise Edition. This specialized edition is designed for large-scale operations and focuses on synchronizing data from your Mendix applications. It features a headless API, implemented as Snowflake stored procedures, allowing for programmatic invocation. This enables bulk administration of Mendix applications for synchronization or seamless integration with self-service portals. Furthermore, the Enterprise Edition is ideal for customers who require complete control over Snowflake security objects, such as network rules, external access integration, and secrets, ensuring alignment with their stringent security policies.
+
+Because of its advanced nature and because it requires knowledge of Snowflake administration to set up and use its headless API, the Enterprise Edition is not publicly available on the Snowflake Marketplace. Instead, you can request it directly from Mendix. Upon request, we will engage with your team to understand your specific business case and validate if the Enterprise Edition aligns with your operational needs. If suitable, we will facilitate the deployment of the Enterprise Edition directly to your designated Snowflake accounts, and provide comprehensive additional documentation to support your implementation. This approach ensures that the Enterprise Edition is adopted by organizations that can fully benefit from its API-driven capabilities, while maintaining full control over their Snowflake environment.
+
+To request the Mendix Data Loader Enterprise Edition for Snowflake, contact us at [mendix-tech-alliance-dev-team.disw@siemens.com](mailto:mendix-tech-alliance-dev-team.disw@siemens.com).
+
 ## Installation
 
 Follow instructions in [Install an app from a listing](https://other-docs.snowflake.com/en/native-apps/consumer-installing) to add the component to your Snowflake environment.

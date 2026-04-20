@@ -47,7 +47,7 @@ The [Snowflake showcase app](https://marketplace.mendix.com/link/component/22584
 
     For more information, see [How to Use Marketplace Content](/appstore/use-content/).
 
-2. In Studio Pro, in the [App Explorer](https://docs.mendix.com/refguide/app-explorer/), go to **Showcase_AI_RESTSQLAPI** > **Pages**.
+2. In Studio Pro, in the [App Explorer](/refguide/app-explorer/), go to **Showcase_AI_RESTSQLAPI** > **Pages**.
 
     This section contains the following pages: 
 

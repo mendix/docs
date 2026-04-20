@@ -68,8 +68,8 @@ paths:
     post:
       tags:
       - pipelines
-      summary: Create a pipeline
-      description: Create a pipeline for build or deployment. This API is only available when Build Utility is "Kubernetes" and Deployment Method is "Private Cloud Standalone".
+      summary: Create and run a new pipeline for build or deploy
+      description: Create and run a new pipeline for build or deploy. This API is only available when Build Utility is "Kubernetes" and Deployment Method is "Private Cloud Standalone".
       operationId: CreatePipeline
       requestBody:
         content:
@@ -79,10 +79,10 @@ paths:
             examples:
               Request a pipeline for build:
                 value:
-                  pipelineType: Deploy
+                  pipelineType: Build
                   appId: ff4c5472-50bc-45ad-b1e1-817217111628
-                  packageName: sgp-v1069-c6d5bd3.mda
-                  envInternalName: sgpv1069
+                  branchName: main
+                  revisionId: "44728096"
               Request a pipeline for deploy:
                 value:
                   pipelineType: Deploy
@@ -104,11 +104,13 @@ paths:
       parameters:
       - name: pipelineId
         in: query
+        description: The pipeline id which is waiting for manual approval.
         required: false
         schema:
           type: string
       - name: approve
         in: query
+        description: Approve or reject pipeline in waiting state, true for approve, false for reject.
         required: false
         schema:
           type: boolean
@@ -118,62 +120,44 @@ paths:
           description: successful operation
         "401":
           $ref: "#/components/responses/UnauthorizedError"
-  /pipeline/manual_approve:
-    post:
-      tags:
-      - pipeline
-      summary: Approve or reject a manual step of pipeline
-      description: Approve or reject a manual step of a waiting pipeline.
-      operationId: ApprovePipelineStep2
-      parameters:
-      - name: pipelineId
-        in: query
-        required: false
-        schema:
-          type: string
-      - name: approve
-        in: query
-        required: false
-        schema:
-          type: boolean
-          default: false
-      responses:
-        "200":
-          description: successful operation
-        "401":
-          $ref: "#/components/responses/UnauthorizedError"
-      security:
-      - basicAuth: []
 components:
   schemas:
     pipeline_set_status_body:
       type: object
+      description: Request body for setting pipeline status
       properties:
         stepStatus:
           type: string
+          description: The pipeline step status to be set, Success or Failed
         callFrom:
           type: string
+          description: Who is calling this API to set the pipeline step status, e.g. R&D Team, QA Team, Dev Team, etc.
       x-examples:
         Example 1:
           stepStatus: Success
           callFrom: R&D Team
     pipeline_creation_request_body:
       type: object
+      description: Request body for creating and running a new pipeline
       properties:
         pipelineType:
           type: string
-        pipelineType_copy:
-          type: string
+          description: Type of the pipeline, Build or Deploy
         appId:
           type: string
+          description: Build or Deploy the package of the app with the specified appId
         branchName:
           type: string
+          description: The branch name of the app code to build, only required for Build pipeline
         revisionId:
           type: string
+          description: The revision ID of the app code to build, only required for Build pipeline
         packageName:
           type: string
+          description: The name of the app package to deploy, only required for Deploy pipeline
         envInternalName:
           type: string
+          description: The environment with specified internal name for deploy the app package, only required for Deploy pipeline
       x-examples:
         Example 1:
           pipelineType: Build
@@ -295,5 +279,5 @@ components:
       scheme: basic
     mxtoken:
       type: apiKey
-      name: apiKey
+      name: Authorization
       in: header

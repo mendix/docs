@@ -137,7 +137,7 @@ Mendix apps cannot use custom ports. They communicate on the standard HTTP and H
 
 ### Number of End-Users for Licensed Apps
 
-The number of end-users supported for your licensed app depends on your [pricing plan](#plans). End-users of your app are classified as either internal or external. You need to report this for licensing purposes, using either the [USAGE_METRICS_EMAIL_FIELDS custom variable](/developerportal/deploy/environments-details/#custom-environment-variables) (if you are using email domains to distinguish between end-users) or by [populating the user type](/developerportal/deploy/populate-user-type/) for each end-user of your app. Only end-users whose Mendix accounts are marked as **Active** are counted towards the number of end-users of the app.
+The number of end-users supported for your licensed app depends on your [pricing plan](#plans). End-users of your app are classified as either internal or external. You must report this classification for licensing purposes by [implementing User Metering](/developerportal/deploy/implementing-user-metering/) for each end user of your app. The [`USAGE_METRICS_EMAIL_FIELDS` custom variable](/developerportal/deploy/environments-details/#custom-environment-variables) is deprecated and should no longer be used for user classification.
 
 ### Supported Mendix Versions {#mendix-cloud-supported-versions}
 

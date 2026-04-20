@@ -62,7 +62,7 @@ Therefore, do not assume that an established WebSocket connection will remain op
 
 ## Move to Kubernetes
 
-* Only [supported Mendix versions](https://docs.mendix.com/releasenotes/studio-pro/lts-mts/) are able to move to Kubernetes.
+* Only [supported Mendix versions](/releasenotes/studio-pro/lts-mts/) are able to move to Kubernetes.
 * The platform configures `CF_INSTANCE_INDEX=0` for 1 of the instances to define a leader instance and to make [Community Commons](/appstore/modules/community-commons-function-library/) function `GetCFInstanceIndex` partially backwards compatible. The leader instance will return `0` while all follower instances will return `-1`. We advise stopping the use of the `GetCFInstanceIndex` function as it is specific to Cloud Foundry.
 * If your model is using the [SAML module](https://marketplace.mendix.com/link/component/1174), these versions are compatible with Kubernetes:
     * Mendix 9 – Version 3.6.19 and higher.

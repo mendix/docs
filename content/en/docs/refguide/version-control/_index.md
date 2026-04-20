@@ -16,6 +16,8 @@ Version Control allows you to manage your app development in two ways:
 * Firstly, it allows you to store ([commit](/refguide/version-control/glossary/#commit)) the current revision of your model and all its resources. You give it an identifier so that you can get that revision again and share it with other team members.
 * Secondly, it allows work to take place on multiple [development lines](/refguide/version-control/glossary/#development-line) so that several different features can be worked on at once. These development lines can then be [merged](/refguide/version-control/glossary/#merge) back together so that your [main line](/refguide/version-control/glossary/#main-line) contains all the completed features that have been worked on separately.
 
+For more information on what version control is and version control-related definitions, see [Version Control Glossary](/refguide/version-control/glossary/).
+
 Version control in Mendix is built on top [Git](https://git-scm.com). The concepts will be familiar to seasoned users of these version control systems (VCS). Mendix simplifies the VCS commands by building them into Studio Pro and the Mendix Portal.
 
 ## Mendix Team Server

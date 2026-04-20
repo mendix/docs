@@ -58,11 +58,17 @@ After a resource is provisioned, you can change its plan size, either upgrade or
 
 ### Team
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/GenAIResource_Team.png" >}}
+{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/genai-resource-team.png" >}}
 
-The **Team** page allows you to manage access to the Mendix Cloud GenAI resource. All users listed in this overview have access to the resource in the GenAI resource portal and can create new keys or invite new users. You can add new users via the **Add Member** button and remove them using the **Remove Member** button next to their name in the overview.
+The **Team** page allows you to manage access to the Mendix Cloud GenAI resource. By default, internal members listed in this **Overview** have access to the resource in the GenAI resource portal and can create new keys or invite new users. You can add new users via the **Add Member** button and remove them using the **Remove Member** button next to their name in the overview.
 
-{{% alert color="info" %}}Currently, you can only invite people within the same organization.{{% /alert %}} 
+#### Inviting External Members
+
+You can invite members from outside your organization to access your GenAI resources by entering their email address in **Add Member**. This option is available only if your company admin has enabled external user invitations. 
+
+You can track invitations in the **Pending Invites** tab. Invited users will receive an email with a link to accept or decline the invitation. If they do not yet have a Mendix account, the link redirects them to create one. Once the invitation is accepted, the resource will appear in their GenAI portal overview.
+
+Pending invitations can be withdrawn at any time and will automatically expire after two weeks. External members can create and delete keys, export consumption data, manage knowledge base content and collections, and change the model. However, they can not modify the display name or environment, or manage team membership.
 
 ### Keys
 

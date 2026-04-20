@@ -11,9 +11,9 @@ The [Native Mobile Resources](https://marketplace.mendix.com/link/component/1095
 
 For excellent deep-dive demonstrations of how to use these native mobile widgets, check out the videos below on the [Carousel](#carousel) and [Popup Menu](#popup-menu) widgets:
 
-{{< vidyard "2Mzw7r4zLuyrvDcP1bhz4j" >}}
+{{< vidyard id="2Mzw7r4zLuyrvDcP1bhz4j" >}}
 
-{{< vidyard "wBDgxvFKGwFYkyxKhpHVLT" >}}
+{{< vidyard id="wBDgxvFKGwFYkyxKhpHVLT" >}}
 
 {{% alert color="info" %}}
 Native Mobile Resources v3.1.4 and above will indicate their version inside *themesource/nativemobileresources/.version* located in the app directory. Versions v3.1.3 and below included a constant in the module indicating version.

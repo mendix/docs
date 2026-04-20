@@ -92,7 +92,8 @@ def get_recently_changed_files(since_days):
             elif current_date and line.endswith('.md'):
                 # This is a file path - store the most recent date
                 file_path = Path(line)
-                if file_path not in files:
+                # Only include files that still exist (filter out deleted files)
+                if file_path not in files and file_path.exists():
                     files[file_path] = current_date
 
         return files
@@ -182,14 +183,16 @@ def main():
     print(f"\nStep 3: Updating timestamps for recent files...")
 
     html_updated = 0
-    html_errors = 0
+    html_skipped = 0
+    skipped_files = []
 
     for md_file, git_date in recent_files.items():
         # Extract URL and aliases
         url, aliases = extract_urls_from_frontmatter(md_file)
 
         if not url:
-            html_errors += 1
+            html_skipped += 1
+            skipped_files.append(str(md_file))
             continue
 
         # Process main URL and all aliases
@@ -257,13 +260,16 @@ def main():
     print(f"Recent markdown files:  {len(recent_files)} (found via git)")
     print(f"HTML files updated:     {html_updated} (main pages + aliases)")
     print(f"Static files updated:   {static_updated}")
-    print(f"Errors:                 {html_errors}")
+    print(f"Files skipped:          {html_skipped} (no URL in front matter)")
+
+    if html_skipped > 0:
+        print(f"\nSkipped files (no url: field in front matter):")
+        for skipped_file in skipped_files:
+            print(f"  - {skipped_file}")
+
     print()
     print(f"Result: Only files changed in last {RECENT_DAYS} days have recent timestamps.")
     print(f"AWS S3 sync will efficiently detect and upload only changed files.")
-
-    if html_errors > 0:
-        sys.exit(1)
 
 
 if __name__ == "__main__":

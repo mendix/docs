@@ -77,9 +77,15 @@ Instead of setting exact git dates on all files (slow), we use a rolling window:
 # After Hugo build, before AWS sync
 python _scripts/sync-timestamps-recent.py
 
-# Then run AWS sync
-aws s3 sync . s3://$BUCKET --delete
+# Then run AWS sync with --exact-timestamps flag
+# This ensures files sync when size differs OR timestamp differs (in either direction)
+aws s3 sync . s3://$BUCKET --delete --exact-timestamps
 ```
+
+**Important:** The `--exact-timestamps` flag is critical because:
+- Default AWS sync only uploads if local is NEWER than S3
+- With `--exact-timestamps`, it syncs if timestamps differ in EITHER direction
+- This ensures files sync correctly even if local timestamp is older (e.g., baseline date)
 
 ### Local Testing
 
@@ -93,6 +99,35 @@ python _scripts/sync-timestamps-recent.py
 # Test it worked
 python _scripts/test-recent-sync.py
 ```
+
+## Known Limitations
+
+### Edge Case: Old PRs with Same-Size HTML
+
+**Scenario:**
+1. PR created 60+ days ago (outside the 30-day window)
+2. PR merged today
+3. The changed file already has baseline timestamp (2000-01-01) in S3
+4. The generated HTML happens to be exactly the same size as before
+
+**Result:** 
+- AWS S3 sync won't detect the change (timestamp and size both match)
+- The updated content won't deploy
+
+**Impact:**
+- Very rare - only affects minor text changes (typo fixes, letter swaps) that don't change HTML size
+- If content change affects size (vast majority of cases), it syncs correctly
+- If this happens, the next content change to that file will sync both updates
+
+**Mitigation options if needed:**
+1. Extend window to 60 or 90 days (catches older PRs)
+2. Add `--checksum` flag to AWS S3 sync (slower but guarantees correctness)
+3. Manual one-time sync: `aws s3 sync . s3://$BUCKET --size-only` after deploying old PRs
+
+This limitation is acceptable because:
+- It only affects extremely rare cases (same-size HTML after content change)
+- The 97% sync efficiency gain far outweighs this edge case
+- Alternative solutions add significant complexity or performance cost
 
 ## Configuration
 

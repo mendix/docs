@@ -86,6 +86,8 @@ The following instructions assume that you want the Administrator role in your a
 
 {{% alert color="info" %}}
 Starting from version 2.2.0, the module uses `objectGUID` as the primary identifier for users and groups. When you upgrade from an earlier version, the module matches existing records by name and assigns them the `objectGUID`. If the module cannot find a matching record, it creates a new record. This may result in duplicate records if your legacy data contains inconsistencies. After `objectGUID` is assigned, the module synchronizes Active Directory changes (including name changes) without creating duplicates.
+
+If an LDAP group is deleted or renamed, any existing role mappings based on the original group name become invalid, which may result in users temporarily losing their assigned roles. To restore role assignments, update the mappings in the **LDAP group mapping** configuration and perform a resynchronization to reapply the appropriate roles. For more information, see [Configuration](#configuration}) section below.
 {{% /alert %}}
 
 ## Configuration{#configuration}

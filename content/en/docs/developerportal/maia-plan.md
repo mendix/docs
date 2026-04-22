@@ -119,7 +119,8 @@ If your company does not have company-approved components, Maia returns the foll
 
 After you click **Start Building**, the **Start Development** window is displayed, showing the following options:
 
-* **Prioritize in Planning Board** – Click this button to open the **Planning** window of the new app, which includes the contents of the first active sprint. The stories included in the first active sprint are selected by Maia, and you can change them. These stories also make up the scope of the work when you open the project in Studio Pro.    
+* **Prioritize in Planning Board** – Click this button to open the **Planning** window of the new app, which includes all stories organized in sprints. You can reorganize the sprints as needed.     
+    Only the stories in the active sprint are taken into Studio Pro.    
     
    If you click **Prioritize in Planning Board** before Maia is done [finding recommendations](#recommender), recommended components are not displayed in the **Planning** window.
 * **Open in Studio Pro** – Click this button to open Studio Pro, where you can continue working on the new app. Studio Pro does not currently take into account [recommended components](#recommender).

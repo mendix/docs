@@ -14,7 +14,7 @@ To understand the different types of versions and releases, consider the example
 
 In the 11.6.1 example, the first number (**11**) indicates the major version.
 
-Mendix supports three major versions at a time. To clarify our current offering and in relation to our SLA, while the current major version is Mendix 11,  Mendix supports major versions 9, 10, and 11. 
+Mendix supports three major versions at a time. To clarify our current offering and in relation to our SLA, while the current major version is Mendix 11, Mendix supports major versions 9, 10, and 11. 
 
 As of Mendix 10, to make version support duration clearer for our users, Mendix has released a new major release in a two-year cadence. Every two years in June, Mendix releases a new major version. This helps you to prepare and plan to adopt new releases and upgrade older Mendix versions. Each major version release may start with public [beta releases](/releasenotes/release-status/) to obtain feedback from users.
 
@@ -32,7 +32,7 @@ A patch version is released on an as-needed basis. It includes security fixes an
 
 ## Types of Support
 
-There are three types of minor release which have different periods of support. These are long-term support versions (LTSs), medium-term support versions (MTSs) and other minor version.
+There are three types of minor release which have different periods of support. These are long-term support versions (LTSs), medium-term support versions (MTSs) and other minor versions.
 
 These three types of support are described below.
 
@@ -69,7 +69,7 @@ This diagram illustrates the LTS concept with version and [end of support](#end)
 
 #### Support with Patch Releases
 
-For the support duration, the LTS will receive [patch](#patch) releases only. 
+For the support duration, the LTS will receive [patch](#patch-version) releases only. 
 
 #### Upgrading Impact
 
@@ -91,7 +91,7 @@ Mendix recommends using the latest patch version of the MTS minor version as thi
 
 #### Support Duration
 
-Support for an MTS version ends three months after the next major version is released. 
+Support for an MTS version ends three months after the next major version is released. For example, support for 10.6, 10.12, and 10.18 MTS versions ended three months after Mendix version 11 was released.
 
 #### Support with Patch Releases
 
@@ -113,7 +113,7 @@ For example, if a bug is found in version 10.1.0 before version 10.2.0 is releas
 
 #### Release Cycle
 
-This is a monthly release that includes new features as well as bug fixes and security patches. Security patches and bug fixes are applied to existing MTS and LTS versions, while the new features are not.
+This is a monthly release that includes new features as well as bug fixes and security patches. Mendix applies security patches and bug fixes to existing MTS and LTS versions, but not new features.
 
 #### Support with Patch Releases
 

@@ -116,7 +116,7 @@ The installer performs the basic installation and applies the configurations at 
 
 If you want to update your configuration (for example, to change the database), perform the following steps:
 
-1. In the Web UI application, click the **Import from file**. 
+1. In the Web UI application, click **Import from file**. 
 2. Update the imported yaml file by following the same wizard as above.
 3. Update the configuration with the new yaml file by running the following command: `helm upgrade -n <your namespace> -f <yaml file name> <release name> mx-privatecloud-operator-installer`.
 

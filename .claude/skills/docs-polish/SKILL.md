@@ -12,7 +12,7 @@ Improve clarity and readability without changing meaning, structure, or paragrap
 **docs-polish should**:
 * Read Mendix style guides first (in parallel): `grammar-formatting.md`, `terminology.md`, and `product-naming-guide.md` from `/content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/`
 * Fix all spelling, grammar, and punctuation errors
-* Add missing alt text to images (use simple, factual descriptions)
+* Check all figure shortcodes for missing alt text. If the alt text parameter is missing, insert `alt=""` as a placeholder.
 * Ensure required front matter fields are present (title, url, description) and make descriptions concise and action-oriented
 * Fix broken Markdown syntax
 * Fix capitalization and terminology inconsistencies
@@ -24,10 +24,15 @@ Improve clarity and readability without changing meaning, structure, or paragrap
 * Apply Mendix style guide standards (overrides the Microsoft Writing Style Guide)
 * Apply Microsoft Writing Style Guide standards, unless they conflict with the Mendix style guide standards
 
+**After completing edits**:
+* Report what was changed in a concise summary
+* If any images were found with missing or empty alt text, state "I found [N] image(s) with missing alt text. Consider running `/docs-alt-text` to generate alt text."
+
 **docs-polish should NOT**:
 * Move paragraphs or restructure sections (that's `/docs-enhance`)
 * Change technical meaning or accuracy
 * Significantly increase document length
+* Generate alt text for images
 * Change command syntax, code identifiers, variable names, placeholders, or any other text that appears in code formatting (inline backticks or code blocks). Code-formatted text represents literal technical content that must remain unchanged. If you notice an issue with code-formatted text, flag it in the chat but don't edit it directly.
 
 Every edit should serve a clear purpose in making the text easier to read, scan, and understand.

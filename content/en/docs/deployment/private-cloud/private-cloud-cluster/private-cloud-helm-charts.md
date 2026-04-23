@@ -1,5 +1,5 @@
 ---
-title: "Installing Components through Helm Chart UI"
+title: "Installing Components through  UI"
 url: /developerportal/deploy/helm-charts/
 description: "Describes how to configure your installation with Helm charts in Mendix on Kubernetes."
 weight: 50
@@ -31,7 +31,7 @@ The solution currently has the following limitations compared to using the mxpc-
 
 * The Helm chart UI cannot be used to configure the Global Operator.
 * We do not have any UI-driven upgrade approach.
-* With the current release, namespaces initially created with mxpc-cli cannot be migrated and managed with Helm charts.
+* With the current release, namespaces initially created with mxpc-cli cannot be migrated and managed with Helm charts. The option to use Helm charts is only available for newly created namespaces.
 * The Helm chart does not cover [advanced operator configurations](/developerportal/deploy/private-cloud-cluster/#advanced-operator-configuration).
 * Currently, we do not provide a public repository to download the Helm chart. The Helm charts are currently only be downloaded through our in house mx-ops-cli web UI.
 
@@ -41,28 +41,49 @@ To install the solution, perform the following steps:
 
 1. [Create a Mendix on Kubernetes cluster.](/developerportal/deploy/private-cloud-cluster/)
 2. Create a namespace in your cluster.
-3. Select the option to use Helm charts during the installation.
-4. Click **Download Executable**.
+3. Toggle the option **Use new Helm chart installation** to **On**.
+4. Select your operating system, and then click **Download Executable**.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard.png" >}}
    
-5. Run the following command: `./mx-ops-cli web-ui`.
+5. Click the **Copy** icon in the **Run the command in your terminal section**, and then run it on the machine where you want to install Mendix on Kubernetes.
 
-    The Web UI application opens locally in your browser. You can now select one of the following options:
+    The Web UI application opens locally in your browser, using `localhost:3000` as the default address. You can now select one of the following options:
 
-    * **Start from Scratch** - Creates a new configuration file.
-    * **Import from File** - Allows you to import configurations from an existing yaml file.
-    * **Download Helm Charts** - Downloads the latest Helm charts so you can open and view them. You can use this option to check the expected Helm chart format, so you can use them as a template for your own charts.
+    * **Start from scratch** - Creates a new configuration file.
+    * **Import from file** - Allows you to import configurations from an existing yaml file.
+    * **Download artifacts** - Downloads the latest Helm charts or [Custom Resource Definitions](/developerportal/deploy/private-cloud-technical-appendix-01/#custom-resources), so you can open and view them. You can use this option to check the expected format, so you can use them as a template for your own charts.
 
 6. For an initial configuration, select **Start from Scratch**. The configuration wizard opens.
-7. In the **General Settings** tab, enter the cluster that you created in step 1.
-8. Follow the wizard to configure the other options according to your requirements.
 
-    You must specify the database, [storage plan](/developerportal/deploy/private-cloud-storage-plans/), [ingress](/deploy/private-cloud-cluster/private-cloud-ingress-settings/), and [registry](/developerportal/deploy/private-cloud-registry/).
-    
-9. Click **Generate & Download** to generate the yaml file with the configurations that you provided.
+    The configuration wizard offers light and dark modes for the UI. To switch between them, click the **Light Mode** or **Dark Mode** button in the top right corner.
 
-10. Run the following command: `helm install -n <your namespace> -f <yaml file name> <your namespace> ./mx-privatecloud-operator-installer`.
+7. In the **General Settings** tab, select the environment for the installation. The other settings are pre-populated for the namespace that you created.
+8. Optional: In the **Service Accounts** tab, specify a custom Kubernetes service account for the Mendix environment to use instead of the default account.
+9. In the **Database Plans** tab, select your desired database type, and then specify one or more database plans. For more information about the available options, see [Supported Database Types](/developerportal/deploy/private-cloud-storage-plans/#supported-database-types).
+
+    If you want to use a custom Kubernetes service account for any of your plans, select it in the **K8s Service Account** field.
+
+10. In the **Storage Plans** tab, select your desired database type, and then specify one or more blob storage plans. For more information about the available options, see [Blob File Storage Plans](/developerportal/deploy/private-cloud-storage-plans/#blob-storage).
+11. In the **Ingress** tab, specify your network ingress settings. For more information about the available options, see [Network Ingress Settings in Mendix on Kubernetes](/developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/).
+
+{{% alert color="info" %}}
+Keep in mind that changing the ingress type resets the value of all fields in this tab.
+{{% /alert %}}
+
+12. In the **Registry** tab, specify your network ingress settings. For more information about the available options, see [Registry Configuration](/developerportal/deploy/private-cloud-registry/).
+
+{{% alert color="info" %}}
+Keep in mind that changing the registry type resets the value of all fields in this tab.
+{{% /alert %}}
+
+13. Optional: In the **Proxy** tab, specify a proxy server.
+14. Optional: If your servers use a self-signed certificate, in the **Custom TLS** tab, configure custom TLS so that the self-signed certificate is accepted.
+15. Click **Generate & Download** to generate the yaml file with the configurations that you provided.
+16. Run the following commands:
+
+    1. Install the required [Custom Resource Definitions](/developerportal/deploy/private-cloud-technical-appendix-01/#custom-resources) by running `kubectl apply -f mx-privatecloud-operator-crd/crds/`.
+    2. Install Mendix on Kubernetes by running `helm install --createnamespace -n <your namespace> -f <yaml file name> <release name> mx-privatecloud-operator-installer`.
 
 {{% alert color="info" %}}
 Ensure that your cluster have access to the Mendix on Kubernetes Portal for adding the storage plans, and that the Private Cloud Portal is safelisted in the cluster.
@@ -70,9 +91,22 @@ Ensure that your cluster have access to the Mendix on Kubernetes Portal for addi
 
 The installer performs the basic installation and applies the configurations at the same time.
 
-## Applying the Configuration Changes with Helm Charts
+## Updating the Configuration
 
-If you want to update your configuration (for example, change the database), recreate the yaml file by using the same wizard as above, and then run the following command: `helm update -n <your namespace> -f <yaml file name> <your namespace> ./mx-privatecloud-operator-installer`.
+If you want to update your configuration (for example, to change the database), perform the following steps:
+
+1. In the Web UI application, click the **Import from file**. 
+2. Update the imported yaml file by following the same wizard as above.
+3. Update the configuration with the new yaml file by running the following command: `helm upgrade -n <your namespace> -f <yaml file name> <release name> mx-privatecloud-operator-installer`.
+
+## Upgrading to a New Version of the Mendix Operator
+
+When upgrading the Mendix Operator, perform the following steps:
+
+1. In the Web UI application, click **Download charts** to download the Helm charts for your current configuration.
+2. Extract the yaml file from the download.
+3. Update the [Custom Resource Definitions](/developerportal/deploy/private-cloud-technical-appendix-01/#custom-resources) by running `kubectl apply -f mx-privatecloud-operator-crd/crds/`.
+4. Update the configuration by running the following command: `helm upgrade -n <your namespace> -f <yaml file name> <release name> mx-privatecloud-operator-installer`.
 
 ## Uninstalling the Cluster
 
@@ -80,4 +114,4 @@ To uninstall the cluster, perform the following steps:
 
 1. [Delete the environment](/developerportal/deploy/private-cloud-deploy/#delete-environment) in the Mendix on Kubernetes portal.
 2. [Ensure all Mendix apps are fully deleted](/developerportal/deploy/private-cloud-cluster/#delete-namespace), especially the Storage Instances.
-3. Use the `helm uninstall` command to complete the process. For more information, see [helm uninstall] (https://helm.sh/docs/helm/helm_uninstall) in the helm documentation.
+3. Use the `helm uninstall` command to complete the process. For more information, see [helm uninstall] (https://helm.sh/docs/helm/helm_uninstall) in the Helm documentation.

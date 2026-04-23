@@ -1,11 +1,11 @@
 ---
 name: docs-polish
-description: Proofreads a single documentation page and improves clarity, readability, and word choice without changing meaning or reorganizing structure. Simplifies complex sentences, applies style guide standards, and converts passive voice to active voice. Use when the user wants to polish, improve language and clarity, make more readable, check style guide compliance, or clean up documentation while preserving its structure.
+description: Applies style guide standards to a documentation page without changing meaning or reorganizing structure. This includes fixing grammar, improving clarity and readability, simplifying complex sentences, using active voice, and standardizing terminology and formatting. Use when the user wants to polish, check style guide compliance, improve language, or clean up documentation while preserving its structure.
 user-invocable: true
 disable-model-invocation: false
 ---
 
-> **Skill progression:** This does everything `/docs-proofread` does plus clarity improvements and style guide enforcement. If only grammar and spelling fixes are needed, use `/docs-proofread`. For deeper reorganization, suggest `/docs-enhance`.
+> **Skill progression:** This does everything `/docs-proofread` does plus style guide enforcement including clarity improvements. If only grammar and spelling fixes are needed, use `/docs-proofread`. For deeper reorganization, suggest `/docs-enhance`. If missing alt text is found, suggest `/docs-alt-text`.
 
 Improve clarity and readability without changing meaning, structure, or paragraph order:
 

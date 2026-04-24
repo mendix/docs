@@ -1,26 +1,30 @@
 ---
 title: "Enrich Your Mendix App with GenAI Capabilities"
 url: /appstore/modules/genai/
-linktitle: "Agents Kit"
-description: "Describes the general properties and common concepts of generative AI in the context of developing Mendix applications and illustrates the preferred way of leveraging platform-supported connectors in applications following the GenAI Commons patterns."
+linktitle: "Agentic AI"
+description: "Describes how to use Mendix's generative AI capabilities to build agentic applications."
 weight: 16
 ---
 
 ## Introduction {#introduction}
 
-With the Mendix GenAI capabilities, you can create engaging, intelligent experiences with a variety of AI models and your own data.
+With Mendix generative AI (GenAI) capabilities, you can create engaging, intelligent experiences with a variety of AI models and your own data. Build AI-powered applications with Agents Kit, a set of components that support implementations ranging from simple text generation to complex multi-step agentic workflows.
+
+Agents Kit 2.0 is available for Studio Pro 11.12 and above. Agents Kit 1.0 is available for Studio Pro 10.24 and above. Older versions of some Marketplace modules and the GenAI Showcase App are available in Studio Pro 9.24.2.
+
+These pages document the modules, connectors, and apps for building agentic applications with models from Amazon Bedrock, OpenAI, Mistral, Google Gemini, and other platforms.
 
 {{% alert color="info" %}}
-These pages cover modules that integrate with generative AI tools. For running pre-trained Machine Learning (ML) models using the Mendix Runtime, please see the [Machine Learning Kit](/refguide/machine-learning-kit/).
+These pages focus on building agentic applications with Agents Kit. For AI assistance while building apps, see [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/). For pre-trained machine learning models, see [Mendix Runtime](/refguide/runtime/).
 {{% /alert %}}
 
 ### Typical Use Cases
 
 Mendix supports a variety of generative AI tasks by integrating with tools such as Amazon Bedrock or Microsoft Foundry. Typical use cases include the following:
 
-* Create conversational UIs for AI-powered chatbots and integrate those UIs into your Mendix applications.
-* Connect any model through our GenAI connectors, or by integrating your connector into our GenAI commons interface.
-* Connect your data to ground GenAI systems with data from inside your application and the rest of your IT landscape.
+* Create conversational UIs for AI-powered chatbots and integrate them into your Mendix applications.
+* Connect any model through GenAI connectors or by integrating your connector into the GenAI Commons interface.
+* Connect your data to ground GenAI systems with data from your application and the rest of your IT landscape.
 
 ### Getting Started
 
@@ -28,7 +32,7 @@ To familiarize yourself with the GenAI capabilities of Mendix, explore the secti
 
 #### Familiar with GenAI
 
-If you are already familiar with GenAI and want to start building, refer to [How to Build Smarter Apps Using GenAI](/appstore/modules/genai/how-to/) guide to start building your first GenAI-powered application and access further supportive resources.
+If you are already familiar with GenAI and want to start building, see the [How to Build Smarter Apps Using GenAI](/appstore/modules/genai/how-to/) guide to start building your first GenAI-powered application and access additional resources.
 
 #### New to GenAI
 
@@ -83,4 +87,4 @@ In addition to the models listed above, you can also connect to other models by 
 
 * To connect to other [foundation models](https://docs.aws.amazon.com/bedrock/latest/userguide/models-features.html) and implement them in your app, use the [Amazon Bedrock connector](/appstore/modules/aws/amazon-bedrock/).
 * To connect to [Snowflake Cortex LLM](https://docs.snowflake.com/en/sql-reference/functions/complete-snowflake-cortex) functions, [configure the Snowflake AI Data Connector for Snowflake Cortex Analyst](/appstore/connectors/snowflake/snowflake-ai-data-connector/#cortex-analyst).
-* To implement your connector compatible with the other components, use the [GenAI Commons](/appstore/modules/genai/commons/) interface and follow the how-to [Build Your Own GenAI Connector](/appstore/modules/genai/how-to/byo-connector/).
+* To implement your own connector that is compatible with other components, use the [GenAI Commons](/appstore/modules/genai/commons/) interface and follow the instructions in [Build Your Own GenAI Connector](/appstore/modules/genai/how-to/byo-connector/).

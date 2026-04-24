@@ -150,7 +150,7 @@ Step 2: Configure the Container (optional)
 The Portable App Distribution container can be configured to suit your deployment environment and requirements. This can be done at the configuration `etc` folder. (https://docs.mendix.com/developerportal/deploy/portable-apps-distribution/reference/#folder-structure ) 
 Configuration can also be applied either through **environment variables** or a **configuration file**, giving you flexibility depending on your setup and preferences. Both approaches support the same set of runtime settings, so you can choose whichever method best fits your workflow.
 
-For more information, see the Environment Variables and Configuration File sections below.
+For more information, see the [Environment Variables](#env-variables) and [Configuration File](#config-file) sections below.
 
 Step 3: Run the Container
 Run the container using the following command:
@@ -204,7 +204,7 @@ To use this Docker Compose configuration, perform the following steps:
 
 This example assumes that your configuration is named Default.
 
-## Environment Variables
+## Environment Variables {#env-variables}
 
 The Mendix Runtime can be configured using environment variables. A sample of the following environment variables are supported:
 
@@ -216,7 +216,7 @@ The Mendix Runtime can be configured using environment variables. A sample of th
 
 From more information for more information, see https://docs.mendix.com/refguide/custom-settings/#introduction 
 
-## Configuration File
+## Configuration File {#config-file}
 
 Alternatively, you can configure the Mendix Runtime using a configuration file. The configuration file is a JSON file that contains the same settings as the environment variables.
 

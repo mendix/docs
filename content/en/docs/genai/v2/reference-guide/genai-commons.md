@@ -12,7 +12,7 @@ aliases:
 
 ## Introduction {#introduction}
 
-The [GenAI Commons](https://marketplace.mendix.com/link/component/239448) module combines common generative AI patterns found across various models on the market. Platform-supported GenAI-connectors use the underlying data structures and their operations. This makes it easier to develop vendor-agnostic AI-enhanced apps with Mendix, for example by using one of the connectors or the [Conversational UI](/appstore/modules/genai/v2/conversational-ui/) module.
+The [GenAI Commons](https://marketplace.mendix.com/link/component/239448) module combines common generative AI patterns found across various models on the market. Platform-supported GenAI-connectors use the underlying data structures and their operations. This makes it easier to develop vendor-agnostic AI-enhanced apps with Mendix, for example by using one of the connectors or the [Conversational UI](/appstore/modules/genai/v2/genai-for-mx/conversational-ui/) module.
 
 If two different connectors both adhere to the GenAI Commons module, they can be easily swapped, which reduces dependency on the model providers. In addition, the initial implementation of AI capabilities using the connectors becomes a drag-and-drop experience, so that developers can quickly get started. The module exposes useful operations which developers can use to build a request to a large language model (LLM) and to handle the response.
 
@@ -36,7 +36,7 @@ If you start from a blank app, or have an existing project where you want to inc
 
 ## Implementation {#implementation}
 
-GenAI Commons is the foundation of large language model implementations within the [Mendix Cloud GenAI Connector](/appstore/modules/genai/v2/mx-cloud-genai/MxGenAI-connector/), [OpenAI connector](/appstore/modules/genai/v2/reference-guide/external-connectors/openai/), and the [Amazon Bedrock connector](/appstore/modules/genai/v2/bedrock/), but may also be used to build other GenAI service implementations on top of it by reusing the provided domain model and exposed actions.
+GenAI Commons is the foundation of large language model implementations within the [Mendix Cloud GenAI Connector](/appstore/modules/genai/v2/mx-cloud-genai/MxGenAI-connector/), [OpenAI connector](/appstore/modules/genai/v2/reference-guide/external-connectors/openai/), and the [Amazon Bedrock connector](/appstore/modules/genai/v2/reference-guide/external-connectors/bedrock/), but may also be used to build other GenAI service implementations on top of it by reusing the provided domain model and exposed actions.
 
 Although GenAI Commons technically defines additional capabilities typically found in chat completion APIs, such as image processing (vision) and tools (function calling), it depends on the connector module of choice for whether these are actually implemented and supported by the LLM. To learn which additional capabilities a connector supports and for which models these can be used, refer to the documentation of that connector.
 
@@ -46,7 +46,7 @@ GenAI Commons can help store usage data, allowing admins to understand token usa
 
 To clean up usage data in a deployed app, you can enable the daily scheduled event `ScE_Usage_Cleanup` in the Mendix Cloud Portal. Use the `Usage_CleanUpAfterDays` constant to control for how long token usage data should be persisted. 
 
-Lastly, the [Conversational UI module](/appstore/modules/genai/v2/conversational-ui/) provides pages, snippets, and logic to display and export token usage information. For this to work, the module roles `UsageMonitoring` from both Conversational UI as well as GenAI Commons need to be assigned to the applicable project roles.
+Lastly, the [Conversational UI module](/appstore/modules/genai/v2/genai-for-mx/conversational-ui/) provides pages, snippets, and logic to display and export token usage information. For this to work, the module roles `UsageMonitoring` from both Conversational UI as well as GenAI Commons need to be assigned to the applicable project roles.
 
 ### Traceability {#traceability}
 
@@ -624,7 +624,7 @@ To include files within a message, you must provide them in the form of a file c
 
 ##### Tools: Add Function to Request {#add-function-to-request}
 
-Adds a new Function to a [ToolCollection](#toolcollection) that is part of a Request. Use this action to expose microflows as tools to the LLM via [function calling](/appstore/modules/genai/v2/function-calling/). If supported by the LLM connector, the chat completion operation calls the right functions based on the LLM response and continues the process until the assistant's final response is returned.
+Adds a new Function to a [ToolCollection](#toolcollection) that is part of a Request. Use this action to expose microflows as tools to the LLM via [function calling](/appstore/modules/genai/function-calling/). If supported by the LLM connector, the chat completion operation calls the right functions based on the LLM response and continues the process until the assistant's final response is returned.
 
 ###### Input Parameters
 

@@ -29,9 +29,9 @@ Before integrating function calling into your app, make sure you meet the follow
 
 * Intermediate knowledge of the Mendix platform: Familiarity with Mendix Studio Pro, microflows, and modules.
 
-* Basic understanding of GenAI concepts: Review the [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/v1/) page for foundational knowledge and familiarize yourself with the [concepts](/appstore/modules/genai/v1/using-gen-ai/).
+* Basic understanding of GenAI concepts: Review the [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/v1/) page for foundational knowledge and familiarize yourself with the [concepts](/appstore/modules/genai/get-started/).
 
-* Understanding Function Calling and Prompt Engineering: Learn about [Function Calling](/appstore/modules/genai/v1/function-calling/) and [Prompt Engineering](/appstore/modules/genai/v1/get-started/#prompt-engineering) to use them within the Mendix ecosystem.
+* Understanding Function Calling and Prompt Engineering: Learn about [Function Calling](/appstore/modules/genai/function-calling/) and [Prompt Engineering](/appstore/modules/genai/get-started/#prompt-engineering) to use them within the Mendix ecosystem.
 
 ## Function Calling Use Case {#use-case}
 
@@ -48,14 +48,14 @@ Selecting the infrastructure for integrating GenAI into your Mendix application 
 
 * [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/v1/mx-cloud-genai/resource-packs/): The [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) allows you to utilize Mendix Cloud GenAI Resource Packs directly within your Mendix application.
 
-* [OpenAI](/appstore/modules/genai/v1/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) supports both OpenAI's platform and Microsoft Foundry.
+* [OpenAI](/appstore/modules/genai/v1/reference-guide/external-connectors/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) supports both OpenAI's platform and Microsoft Foundry.
 
-* [Amazon Bedrock](/appstore/modules/genai/v1/bedrock/): The [Amazon Bedrock Connector](https://marketplace.mendix.com/link/component/215042) allows you to leverage Amazon Bedrock’s fully managed service to integrate foundation models from Amazon and leading AI providers. 
+* [Amazon Bedrock](/appstore/modules/genai/v1/reference-guide/external-connectors/bedrock/): The [Amazon Bedrock Connector](https://marketplace.mendix.com/link/component/215042) allows you to leverage Amazon Bedrock’s fully managed service to integrate foundation models from Amazon and leading AI providers. 
 
 * Your Own Connector: Optionally, if you prefer a custom connector, you can integrate your chosen infrastructure. However, this document focuses on the Mendix Cloud GenAI, OpenAI, and Amazon Bedrock connectors, as they offer comprehensive support and ease of use to get started.
 
 {{% alert color="info" %}}
-Not all models support function calling. Ensure that your preferred GenAI provider is set up in your Mendix app and that a compatible model is available. Mendix provides an [overview of models and their capabilities](/appstore/modules/genai/v1/#models).
+Not all models support function calling. Ensure that your preferred GenAI provider is set up in your Mendix app and that a compatible model is available. Mendix provides an [overview of models and their capabilities](/appstore/modules/genai/#models).
 {{% /alert %}}
 
 ### Customizing Microflows {#microflows}

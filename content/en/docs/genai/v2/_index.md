@@ -45,8 +45,8 @@ The following Marketplace components are available in Agents Kit 2.0. All compon
 | [MCP Client](/appstore/modules/genai/v2/mcp-modules/mcp-client/) | Access tools and prompts available via MCP (Model Context Protocol) inside your Mendix app and add them to LLM requests. | TBD |
 | [Mendix Cloud GenAI Connector](/appstore/modules/genai/v2/mx-cloud-genai/MxGenAI-connector/) | Connect to Mendix Cloud and use Mendix Cloud GenAI resource packs directly within your Mendix application. | TBD |
 | [Mistral Connector](/appstore/modules/genai/v2/reference-guide/external-connectors/mistral/) | Connect to Mistral AI. | TBD |
-| [OpenAI Connector](/appstore/modules/genai/v2/openai/) | Connect to OpenAI and Microsoft Foundry. | TBD |
-| [PgVector Knowledge Base](/appstore/modules/genai/v2/pgvector/) | Manage and interact with a PostgreSQL *pgvector* Knowledge Base. | TBD |
+| [OpenAI Connector](/appstore/modules/genai/v2/reference-guide/external-connectors/openai/) | Connect to OpenAI and Microsoft Foundry. | TBD |
+| [PgVector Knowledge Base](/appstore/modules/genai/v2/reference-guide/external-connectors/pgvector/) | Manage and interact with a PostgreSQL *pgvector* Knowledge Base. | TBD |
 
 ### Other Modules
 
@@ -54,6 +54,6 @@ The following Marketplace components are available in Agents Kit 2.0. All compon
 | ----- | ----------- | ------------------- |
 | [Agent Commons](/appstore/modules/genai/v2/genai-for-mx/agent-commons/) | Build agentic functionality using common patterns in your application by defining, testing, and evaluating agents at runtime. | TBD |
 | [Agent Editor](/appstore/modules/genai/v2/genai-for-mx/agent-editor/) | Configure and test agents in Studio Pro using a visual editor interface. | TBD |
-| [Conversational UI](/appstore/modules/genai/v2/conversational-ui/) | Create a Conversational UI or monitor token consumption in your app. | TBD |
-| [GenAI Commons](/appstore/modules/genai/v2/commons/) | Provides common capabilities that allow all GenAI connectors to integrate with other modules. You can also implement your own connector based on this. | TBD |
+| [Conversational UI](/appstore/modules/genai/v2/genai-for-mx/conversational-ui/) | Create a Conversational UI or monitor token consumption in your app. | TBD |
+| [GenAI Commons](/appstore/modules/genai/v2/genai-for-mx/commons/) | Provides common capabilities that allow all GenAI connectors to integrate with other modules. You can also implement your own connector based on this. | TBD |
 | [MCP Server](/appstore/modules/genai/v2/mcp-modules/mcp-server/) | Makes your Mendix business logic available to any agent in your enterprise landscape. Expose reusable prompts, including the ability to use prompt parameters. List and run actions implemented in the application as a tool. | TBD |

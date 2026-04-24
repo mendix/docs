@@ -17,7 +17,7 @@ The [Mendix Cloud GenAI connector](https://marketplace.mendix.com/link/component
 
 In the current version, Mendix supports text generation (including function/tool calling, chat with images, and chat with documents), vector embedding generation, knowledge base storage, and retrieval of knowledge base chunks.
 
-Typical use cases for generative AI are described in more detail in the [Typical LLM Use Cases](/appstore/modules/genai/v2/get-started/#llm-use-cases) section of the *GenAI Concepts*.
+Typical use cases for generative AI are described in more detail in the [Typical LLM Use Cases](/appstore/modules/genai/get-started/#llm-use-cases) section of the *GenAI Concepts*.
 
 ### Prerequisites
 
@@ -119,7 +119,7 @@ Mendix also strongly advises that you build user confirmation logic into functio
 {{% /alert %}}
 
 You can use function calling in all chat completions operations by adding a `ToolCollection` with a `Function` via the [Tools: Add Function to Request](/appstore/modules/genai/v2/genai-for-mx/commons/#add-function-to-request) operation.
-For more information, see [Function Calling](/appstore/modules/genai/v2/function-calling/).
+For more information, see [Function Calling](/appstore/modules/genai/function-calling/).
 
 #### Vision{#vision}
 

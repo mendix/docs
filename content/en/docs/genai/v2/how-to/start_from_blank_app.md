@@ -21,9 +21,9 @@ Before starting this guide, make sure you have completed the following prerequis
 
 * Intermediate knowledge of the Mendix platform: Familiarity with Mendix Studio Pro, microflows, and modules is required.
 
-* Basic understanding of GenAI concepts: Review the [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/v2/) page to gain foundational knowledge and become familiar with the key [concepts](/appstore/modules/genai/v2/get-started/).
+* Basic understanding of GenAI concepts: Review the [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/v2/) page to gain foundational knowledge and become familiar with the key [concepts](/appstore/modules/genai/get-started/).
 
-* Understanding Large Language Models (LLMs) and Prompt Engineering: Learn about [LLMs](/appstore/modules/genai/v2/get-started/#llm) and [prompt engineering](/appstore/modules/genai/v2/get-started/#prompt-engineering) to effectively use these within the Mendix ecosystem.
+* Understanding Large Language Models (LLMs) and Prompt Engineering: Learn about [LLMs](/appstore/modules/genai/get-started/#llm) and [prompt engineering](/appstore/modules/genai/get-started/#prompt-engineering) to effectively use these within the Mendix ecosystem.
 
 ### Learning Goals
 
@@ -45,9 +45,9 @@ To start building your smart app with a blank GenAI App template, download the [
 
 The [Blank GenAI App Template](https://marketplace.mendix.com/link/component/227934) has the essential GenAI modules pre-installed, which is beneficial to familiarize yourself with the GenAI functionalities Mendix can offer, as it includes:
 
-* The [GenAI Commons](/appstore/modules/genai/v2/commons/) module: provides pre-built operations and data structures for seamless integration with platform-supported GenAI connectors, such as the Mendix Cloud GenAI, OpenAI, or Amazon Bedrock.
+* The [GenAI Commons](/appstore/modules/genai/v2/genai-for-mx/commons/) module: provides pre-built operations and data structures for seamless integration with platform-supported GenAI connectors, such as the Mendix Cloud GenAI, OpenAI, or Amazon Bedrock.
 
-* The [Conversational UI](/appstore/modules/genai/v2/conversational-ui/) module: offers UI elements for chat interfaces and usage data monitoring.
+* The [Conversational UI](/appstore/modules/genai/v2/genai-for-mx/conversational-ui/) module: offers UI elements for chat interfaces and usage data monitoring.
 
 * The [Mendix Cloud GenAI Resources Packs](/appstore/modules/genai/v2/mx-cloud-genai/resource-packs/) connector: supports the usage of LLMs in your applications.
 
@@ -56,9 +56,9 @@ The [Blank GenAI App Template](https://marketplace.mendix.com/link/component/227
 Selecting the infrastructure for integrating GenAI into your Mendix application is the first step. Depending on your use case and preferences, you can choose from the following options:
 
 * [Mendix Cloud GenAI Resources Packs](/appstore/modules/genai/v2/mx-cloud-genai/resource-packs/): The [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) integrates LLMs by dragging and dropping common operations from its toolbox in Studio Pro.
-* [OpenAI](/appstore/modules/genai/v2/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) supports both OpenAI's platform and Microsoft Foundry.
+* [OpenAI](/appstore/modules/genai/v2/reference-guide/external-connectors/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) supports both OpenAI's platform and Microsoft Foundry.
 
-* [Amazon Bedrock](/appstore/modules/genai/v2/bedrock/): The [Amazon Bedrock Connector](https://marketplace.mendix.com/link/component/215042) allows you to leverage Amazon Bedrock’s fully managed service to integrate foundation models from Amazon and leading AI providers. 
+* [Amazon Bedrock](/appstore/modules/genai/v2/reference-guide/external-connectors/bedrock/): The [Amazon Bedrock Connector](https://marketplace.mendix.com/link/component/215042) allows you to leverage Amazon Bedrock’s fully managed service to integrate foundation models from Amazon and leading AI providers. 
 
 * Your Own Connector: Optionally, if you prefer a custom connector, you can integrate your chosen infrastructure. However, this document focuses on the OpenAI and Bedrock connectors, as they offer comprehensive support and ease of use to get started.
 
@@ -79,7 +79,7 @@ Since the **ConversationalUI_FullScreenChat** page contains a **Data View** usin
 
 #### Customizing the System Prompt (Optional)
 
-To tailor your application's behavior, you can customize the [System Prompt](/appstore/modules/genai/v2/prompt-engineering/#system-prompt) to make it more specific to your use case:
+To tailor your application's behavior, you can customize the [System Prompt](/appstore/modules/genai/prompt-engineering/#system-prompt) to make it more specific to your use case:
 
 ##### Changing the System Prompt {#changing-system-prompt}
 

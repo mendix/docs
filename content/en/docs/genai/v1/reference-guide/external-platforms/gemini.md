@@ -13,7 +13,7 @@ The [Google Gemini Connector](https://marketplace.mendix.com/link/component/2547
 
 ### Features {#features}
 
-The Google Gemini Connector is commonly used for text generation based on the [Chat Completions API](https://ai.google.dev/gemini-api/docs/openai). Typical use cases for generative AI are described in the [Typical LLM Use Cases](/appstore/modules/genai/v1/get-started/#llm-use-cases).
+The Google Gemini Connector is commonly used for text generation based on the [Chat Completions API](https://ai.google.dev/gemini-api/docs/openai). Typical use cases for generative AI are described in the [Typical LLM Use Cases](/appstore/modules/genai/get-started/#llm-use-cases).
 
 For more information about the models, see [Gemini models](https://ai.google.dev/gemini-api/docs/models).
 
@@ -32,7 +32,7 @@ To use this connector, you need to sign up for a Google AI Studio account and cr
 ### Dependencies {#dependencies}
 
 * Mendix Studio Pro version 10.24.13 or above
-* [GenAI Commons module](/appstore/modules/genai/v1/commons/)
+* [GenAI Commons module](/appstore/modules/genai/v1/genai-for-mx/commons/)
 * [Encryption module](/appstore/modules/encryption/)
 * [Community Commons module](/appstore/modules/community-commons-function-library/)
 * [OpenAI connector](/appstore/modules/genai/v1/reference-guide/external-connectors/openai/)
@@ -111,7 +111,7 @@ Function calling is a very powerful capability and should be used with caution. 
 Mendix also strongly advises that you build user confirmation logic into function microflows that have a potential impact on the world on behalf of the end-user. Some examples of such microflows include sending an email, posting online, or making a purchase.
 {{% /alert %}}
 
-For more information, see [Function Calling](/appstore/modules/genai/v1/function-calling/).
+For more information, see [Function Calling](/appstore/modules/genai/function-calling/).
 
 #### Adding Knowledge Bases {#chatcompletions-add-knowledge-base}
 
@@ -189,7 +189,7 @@ This action is currently not used during the creation of usable models in the co
 For more inspiration or guidance on how to use those microflows in your logic, Mendix recommends downloading the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475), which demonstrates a variety of example use cases.
 
 {{% alert color="info" %}}
-Some examples demonstrate knowledge base interaction and require a connection to a vector database. For more information on these concepts, see [Retrieval Augmented Generation (RAG)](/appstore/modules/genai/v1/rag/)
+Some examples demonstrate knowledge base interaction and require a connection to a vector database. For more information on these concepts, see [Retrieval Augmented Generation (RAG)](/appstore/modules/genai/rag/)
 {{% /alert %}}
 
 ## Troubleshooting {#troubleshooting}

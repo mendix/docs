@@ -141,13 +141,13 @@ You can also check out template agents in the **USE_ME** folder of the **AgentEd
 Both **System prompt** and **User prompt** are currently mandatory, as the Agent Editor supports only task-based agents at this time. Support for chat-based agents will be introduced in a future release.
 {{% /alert %}}
 
-For more information about prompts and prompt engineering, see [Prompt Engineering](/appstore/modules/genai/v1/prompt-engineering/).
+For more information about prompts and prompt engineering, see [Prompt Engineering](/appstore/modules/genai/prompt-engineering/).
 
 Selecting a model is mandatory. You can save the document without it, but if the model configuration is incomplete, Studio Pro will show consistency errors. These errors block running the app locally, cloud deployment, and agent testing in later steps.
 
 ### Defining and Adding Tools and Knowledge Bases{#define-tools}
 
-To extend the capabilities of your agent, you can add tools directly in the Agent editor. In the Agent Editor, microflows and (external) MCP services can be added as tools to let the agent act dynamically and autonomously, or to access specific data based on input it determines. When the agent is invoked, it uses the function calling pattern to execute the required microflow by using the input specified in the model response. For more technical details about microflow tools and function calling behavior, see [Function Calling](/appstore/modules/genai/v1/function-calling/).
+To extend the capabilities of your agent, you can add tools directly in the Agent editor. In the Agent Editor, microflows and (external) MCP services can be added as tools to let the agent act dynamically and autonomously, or to access specific data based on input it determines. When the agent is invoked, it uses the function calling pattern to execute the required microflow by using the input specified in the model response. For more technical details about microflow tools and function calling behavior, see [Function Calling](/appstore/modules/genai/function-calling/).
 
 #### Configuring Consumed MCP Service {#define-mcp}
 

@@ -20,9 +20,9 @@ Building your own GenAI Commons connector offers several practical benefits that
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
-* Basic understanding of GenAI concepts: Review the [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/v2/) page to gain foundational knowledge and become familiar with the key [concepts](/appstore/modules/genai/v2/get-started/).
+* Basic understanding of GenAI concepts: Review the [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/v2/) page to gain foundational knowledge and become familiar with the key [concepts](/appstore/modules/genai/get-started/).
 
-* Understanding Large Language Models (LLMs) and Prompt Engineering: Learn about [LLMs](/appstore/modules/genai/v2/get-started/#llm) and [prompt engineering](/appstore/modules/genai/v2/get-started/#prompt-engineering) to effectively use these within the Mendix ecosystem.
+* Understanding Large Language Models (LLMs) and Prompt Engineering: Learn about [LLMs](/appstore/modules/genai/get-started/#llm) and [prompt engineering](/appstore/modules/genai/get-started/#prompt-engineering) to effectively use these within the Mendix ecosystem.
 
 ### GenAI for Mendix
 

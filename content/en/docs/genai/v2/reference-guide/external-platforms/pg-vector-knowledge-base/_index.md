@@ -38,7 +38,7 @@ With the current version, Mendix supports inserting data chunks with their vecto
 
 ### Prerequisites {#prerequisites}
 
-You should have access to your own (remote) PostgreSQL database server with the [pgvector](https://github.com/pgvector/pgvector) extension installed. For more information, see the [Setting up a Vector Database](/appstore/modules/genai/v2/pgvector-setup/) section.
+You should have access to your own (remote) PostgreSQL database server with the [pgvector](https://github.com/pgvector/pgvector) extension installed. For more information, see the [Setting up a Vector Database](/appstore/modules/genai/v2/reference-guide/external-connectors/pgvector-setup/) section.
 
 {{% alert color="info" %}}This module cannot be used with the Mendix Cloud app database. It only works if you are using your own database server or Amazon RDS.{{% /alert %}}
 
@@ -82,14 +82,14 @@ All operations that include knowledge base interaction need the connection detai
 
 ### (Re)populate Operations {#repopulate-operations-configuration}
 
-In order to add data to the knowledge base, you need to have discrete pieces of information and create knowledge base chunks for those. You can use the [operations for Chunks and KnowledgeBaseChunks in the GenAI Commons module](/appstore/modules/genai/v2/commons/). After you create the knowledge base chunks and [generate embedding vectors for them](/appstore/modules/genai/v2/commons/), the resulting `ChunkCollection` can be inserted into the knowledge base using an operation for insertion, for example the `(Re)populate Knowledge Base` operation. 
+In order to add data to the knowledge base, you need to have discrete pieces of information and create knowledge base chunks for those. You can use the [operations for Chunks and KnowledgeBaseChunks in the GenAI Commons module](/appstore/modules/genai/v2/genai-for-mx/commons/). After you create the knowledge base chunks and [generate embedding vectors for them](/appstore/modules/genai/v2/genai-for-mx/commons/), the resulting `ChunkCollection` can be inserted into the knowledge base using an operation for insertion, for example the `(Re)populate Knowledge Base` operation. 
 
 A typical pattern for populating a knowledge base is as follows:
 
-1. Create a new `ChunkCollection`. See the [Initialize ChunkCollection](/appstore/modules/genai/v2/commons/) section.
+1. Create a new `ChunkCollection`. See the [Initialize ChunkCollection](/appstore/modules/genai/v2/genai-for-mx/commons/) section.
 2. For each knowledge item that needs to be inserted, do the following:
-    * Use [Initialize MetadataCollection with Metadata](/appstore/modules/genai/v2/commons/) and [Add Metadata to MetadataCollection](/appstore/modules/genai/v2/commons/) to create a collection of the necessary metadata for the knowledge base item.
-    * With both collections as input parameters, use [Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/v2/commons/) for the knowledge item.
+    * Use [Initialize MetadataCollection with Metadata](/appstore/modules/genai/v2/genai-for-mx/commons/) and [Add Metadata to MetadataCollection](/appstore/modules/genai/v2/genai-for-mx/commons/) to create a collection of the necessary metadata for the knowledge base item.
+    * With both collections as input parameters, use [Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/v2/genai-for-mx/commons/) for the knowledge item.
 3. Call an embeddings endpoint with the `ChunkCollection` to generate an embedding vector for each `KnowledgeBaseChunk`
 4. With the `ChunkCollection`, use [(Re)populate Knowledge Base](#repopulate-knowledge-base) to store the chunks.
 
@@ -103,7 +103,7 @@ This operation handles the following:
 * Creating the empty knowledge base if it does not exist
 * Inserting all provided knowledge base chunks with their metadata into the knowledge base
 
-The population handles a whole collection of chunks at once, and this `ChunkCollection` should be created using the [Initialize ChunkCollection](/appstore/modules/genai/v2/commons/) and [Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/v2/commons/) operations. 
+The population handles a whole collection of chunks at once, and this `ChunkCollection` should be created using the [Initialize ChunkCollection](/appstore/modules/genai/v2/genai-for-mx/commons/) and [Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/v2/genai-for-mx/commons/) operations. 
 
 #### `Insert` {#insert}
 
@@ -119,16 +119,16 @@ Currently, four operations are available for on-demand retrieval of data chunks 
 
 A typical pattern for retrieval from a knowledge base uses GenAI Commons operations and can be illustrated as follows:
 
-1. Use [Initialize MetadataCollection with Metadata](/appstore/modules/genai/v2/commons/) to set up a `MetadataCollection` for filtering with its first key-value pair added immediately. 
-2. Use [Add Metadata to MetadataCollection](/appstore/modules/genai/v2/commons/) (iteratively) to create a collection of the necessary metadata.
+1. Use [Initialize MetadataCollection with Metadata](/appstore/modules/genai/v2/genai-for-mx/commons/) to set up a `MetadataCollection` for filtering with its first key-value pair added immediately. 
+2. Use [Add Metadata to MetadataCollection](/appstore/modules/genai/v2/genai-for-mx/commons/) (iteratively) to create a collection of the necessary metadata.
 3. Do the retrieval. For example, you could use [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors) to find chunks based on vector similarity.
 
 For scenarios in which the created chunks were based on Mendix objects at the time of population and these objects need to be used in logic after the retrieval step, two additional operations are available. The Java actions [Retrieve & Associate](#retrieve-associate) and [Retrieve Nearest Neighbors & Associate](#retrieve-nearest-neighbors-associate) take care of the chunk retrieval and set the association towards the original object, if applicable.
 
 A typical pattern for this retrieval is as follows:
 
-1. Use [Initialize MetadataCollection with Metadata](/appstore/modules/genai/v2/commons/) to set up a `MetadataCollection` for filtering with its first key-value pair added immediately. 
-2. Use [Add Metadata to MetadataCollection](/appstore/modules/genai/v2/commons/) (iteratively) to create a collection of the necessary metadata.
+1. Use [Initialize MetadataCollection with Metadata](/appstore/modules/genai/v2/genai-for-mx/commons/) to set up a `MetadataCollection` for filtering with its first key-value pair added immediately. 
+2. Use [Add Metadata to MetadataCollection](/appstore/modules/genai/v2/genai-for-mx/commons/) (iteratively) to create a collection of the necessary metadata.
 3. Do the retrieval. For example, you could use [Retrieve Nearest Neighbors & Associate](#retrieve-nearest-neighbors-associate) to find chunks based on vector similarity.
 4. For each retrieved chunk, retrieve the original Mendix object and do custom logic.
 
@@ -180,7 +180,7 @@ The **Documentation** pane displays the documentation for the currently selected
 For more inspiration and guidance on how to use these operations in your logic and how to combine it with use cases in the context of generative AI, Mendix highly recommends downloading the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) from the Marketplace. This application contains various examples in the context of generative AI, some of which use the PgVector Knowledge Base module for storing embedding vectors.
 
 {{% alert color="info" %}}
-For more information on how to set up a vector database for retrieval augmented generation (RAG), see the [Setting up a Vector Database](/appstore/modules/genai/v2/pgvector-setup/) section and the [RAG Example Implementation in the GenAI Showcase App](/appstore/modules/genai/v2/rag/) section.
+For more information on how to set up a vector database for retrieval augmented generation (RAG), see the [Setting up a Vector Database](/appstore/modules/genai/v2/reference-guide/external-connectors/pgvector-setup/) section and the [RAG Example Implementation in the GenAI Showcase App](/appstore/modules/genai/rag/) section.
 {{% /alert %}}
 
 ## Troubleshooting

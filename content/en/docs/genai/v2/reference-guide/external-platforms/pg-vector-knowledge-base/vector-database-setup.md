@@ -132,7 +132,7 @@ If no action is taken, resources on Azure will stay around indefinitely. Make su
 
 ## Configuring the Database Connection Details in Your Application {#configure-database-connection}
 
-1. Add the [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/225063) module and its dependencies to your Mendix app and set it up correctly, see [PgVector Knowledge Base](/appstore/modules/genai/v2/pgvector/).
+1. Add the [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/225063) module and its dependencies to your Mendix app and set it up correctly, see [PgVector Knowledge Base](/appstore/modules/genai/v2/reference-guide/external-connectors/pgvector/).
 
 2. Include the page **DatabaseConfiguration_Overview** in the navigation or use the snippet **Snippet_DatabaseConfigurations** on an existing page.
 

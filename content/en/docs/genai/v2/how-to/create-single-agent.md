@@ -10,7 +10,7 @@ aliases:
 
 ## Introduction
 
-This document explains how to create your agent in your Mendix app. The agent combines powerful GenAI capabilities of Mendix Agents Kit, such as [knowledge base retrieval (RAG)](/appstore/modules/genai/v2/rag/), [function calling](/appstore/modules/genai/v2/function-calling/), and [agent builder](/appstore/modules/genai/v2/genai-for-mx/agent-commons/), to facilitate an AI-enriched use case. To do this, you can use your existing app or follow the [Build a Smart App from a Blank GenAI App](/appstore/modules/genai/v2/how-to/blank-app/) guide to start from scratch.
+This document explains how to create your agent in your Mendix app. The agent combines powerful GenAI capabilities of Mendix Agents Kit, such as [knowledge base retrieval (RAG)](/appstore/modules/genai/rag/), [function calling](/appstore/modules/genai/function-calling/), and [agent builder](/appstore/modules/genai/v2/genai-for-mx/agent-commons/), to facilitate an AI-enriched use case. To do this, you can use your existing app or follow the [Build a Smart App from a Blank GenAI App](/appstore/modules/genai/v2/how-to/blank-app/) guide to start from scratch.
 
 Through this document, you will:
 
@@ -45,9 +45,9 @@ Before building an agent in your app, make sure your scenario meets the followin
 
 * If you are not yet familiar with the GenAI modules, it is highly recommended to first follow the other GenAI documents: [Grounding Your Large Language Model in Data](/appstore/modules/genai/v2/how-to/howto-groundllm/), [Prompt Engineering at Runtime](/appstore/modules/genai/v2/how-to/howto-prompt-engineering/), and [Integrate Function Calling into Your Mendix App](/appstore/modules/genai/v2/how-to/howto-functioncalling/).
 
-* Basic understanding of GenAI concepts: review the [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/v2/) page for foundational knowledge and familiarize yourself with the [concepts of GenAI](/appstore/modules/genai/v2/using-gen-ai/) and [agents](/appstore/modules/genai/v2/agents/).
+* Basic understanding of GenAI concepts: review the [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/v2/) page for foundational knowledge and familiarize yourself with the [concepts of GenAI](/appstore/modules/genai/get-started/) and [agents](/appstore/modules/genai/agents/).
 
-* Basic understanding of Function Calling and Prompt Engineering: learn about [Function Calling](/appstore/modules/genai/v2/function-calling/) and [Prompt Engineering](/appstore/modules/genai/v2/get-started/#prompt-engineering) to use them within the Mendix ecosystem.
+* Basic understanding of Function Calling and Prompt Engineering: learn about [Function Calling](/appstore/modules/genai/function-calling/) and [Prompt Engineering](/appstore/modules/genai/get-started/#prompt-engineering) to use them within the Mendix ecosystem.
 
 * Optional Prerequisites: Basic understanding of the [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) and the available Mendix modules—[MCP Server module](/appstore/modules/genai/v2/mcp-modules/mcp-server/) and [MCP Client module](/appstore/modules/genai/v2/mcp-modules/mcp-client/).
 
@@ -426,7 +426,7 @@ Create an agent that can be called to interact with the LLM. The [Agent Commons]
     If the retrieved results are not helpful to answer the request, inform the user in a user-friendly way.
     ```
     
-6. Add the `{{UserInput}}` expression to the [User Prompt](/appstore/modules/genai/v2/prompt-engineering/#user-prompt) field. The user prompt typically reflects what the end user writes, although it can be prefilled with your own instructions. In this example, the prompt consists only of a placeholder variable for the actual input the user will provide while interacting with the running app.
+6. Add the `{{UserInput}}` expression to the [User Prompt](/appstore/modules/genai/prompt-engineering/#user-prompt) field. The user prompt typically reflects what the end user writes, although it can be prefilled with your own instructions. In this example, the prompt consists only of a placeholder variable for the actual input the user will provide while interacting with the running app.
 
 7. In the **Model** field, select the text generation model. Note that the model needs to support function calling and system prompts in order to be selectable. For Mendix Cloud GenAI Resources, this is automatically the case. However, if you use another connector to an LLM provider, and your chosen model does not show up in the list, check the documentation of the respective connector for information about [the supported model functionalities](/appstore/modules/genai/v2/genai-for-mx/commons/#deployed-model).
 
@@ -582,7 +582,7 @@ Create an agent that can be sent to the LLM. The [Agent Commons](/appstore/modul
 
 4. Click **Save** to create the agent.
 
-5. On the agent's details page, in the [System Prompt](/appstore/modules/genai/v2/prompt-engineering/#system-prompt) field, add instructions on how the model can generate a response and what process to follow. This is an example of the prompt that can be used:
+5. On the agent's details page, in the [System Prompt](/appstore/modules/genai/prompt-engineering/#system-prompt) field, add instructions on how the model can generate a response and what process to follow. This is an example of the prompt that can be used:
 
     ```txt
     You are a helpful assistant supporting the IT department with employee requests, such as support tickets, license requests (for example, Miro) or hardware requests (for example, computers). Use the knowledge base and historical support tickets as a database to find a solution, without disclosing any sensitive details or data from previous tickets. Base your responses solely on the results of executed tools. Never generate information on your own. The user expects clear, concise, and direct answers from you.
@@ -600,7 +600,7 @@ Create an agent that can be sent to the LLM. The [Agent Commons](/appstore/modul
     If the retrieved results are not helpful to answer the request, inform the user in a user-friendly way.
     ```
     
-6. Add the `{{UserInput}}` prompt to the [User Prompt](/appstore/modules/genai/v2/prompt-engineering/#user-prompt) field. The user prompt typically reflects what the end user writes, although it can be prefilled with your own instructions. In this example, the prompt consists only of a placeholder variable for the actual input of the user.
+6. Add the `{{UserInput}}` prompt to the [User Prompt](/appstore/modules/genai/prompt-engineering/#user-prompt) field. The user prompt typically reflects what the end user writes, although it can be prefilled with your own instructions. In this example, the prompt consists only of a placeholder variable for the actual input of the user.
 
 7. Add a value in the **UserInput** variable field to test the current agent. For example, type `How can I implement an agent in my Mendix app?`. Ideally, the model will not attempt to answer requests that fall outside its scope, as it is restricted to handling IT-related issues and providing information about ticket data. However, if you ask a question that would require tools that are not yet implemented, the model might hallucinate and generate a response as if it had used those tools.
 
@@ -667,7 +667,7 @@ All components used in this document can be found in the **ExampleMicroflows** f
 
 #### Connecting Function: Get Number of Tickets by Status (Without MCP Server)
 
-The first function enables the user to ask questions about the ticket dataset, for example, how many tickets are in a specific status. Since this is private data specific to your application, an LLM cannot answer such questions on its own. Instead, the model acts as an agent by calling a designated microflow within your application to retrieve the information. For more information, see [Function Calling](/appstore/modules/genai/v2/function-calling/).
+The first function enables the user to ask questions about the ticket dataset, for example, how many tickets are in a specific status. Since this is private data specific to your application, an LLM cannot answer such questions on its own. Instead, the model acts as an agent by calling a designated microflow within your application to retrieve the information. For more information, see [Function Calling](/appstore/modules/genai/function-calling/).
 
 1. Add the `Tools: Add Function to Request` action  immediately after the **Request** creation microflow.
     * Request: `Request` (object created in previous action)

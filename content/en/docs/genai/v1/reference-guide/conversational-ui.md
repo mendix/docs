@@ -27,7 +27,7 @@ Typical use cases for Conversational UI include the following:
 * Create a chat interface for users to chat with Large Language Models (LLM). 
 * Allow users to switch between different implementations by switching providers. 
 * Include advanced capabilities to control the model's behavior, for example, by setting the temperature parameter.
-* Easily extend the chat interface with advanced concepts, such as RAG or the ReAct pattern. For more information, see [GenAI Concepts](/appstore/modules/genai/v1/get-started/).
+* Easily extend the chat interface with advanced concepts, such as RAG or the ReAct pattern. For more information, see [GenAI Concepts](/appstore/modules/genai/get-started/).
 
 ### Features {#features}
 
@@ -43,7 +43,7 @@ The Conversational UI module provides the following functionalities:
 
 * Operations to set up your context, interact with the model, and add the data to be displayed in the UI
 * Domain model to store the chat conversations and additional information  
-* Integration with any model that is compatible with [GenAI Commons](/appstore/modules/genai/v1/commons/)
+* Integration with any model that is compatible with [GenAI Commons](/appstore/modules/genai/v1/genai-for-mx/commons/)
 * Support for comprehensive traceability and monitoring of GenAI interactions
 
 ### Limitations {#limitations}
@@ -63,7 +63,7 @@ You must also ensure you have the other prerequisite modules that Conversational
 * [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
 * [Web Actions](https://marketplace.mendix.com/link/component/114337)
 
-Finally, you must also set up a connector that is compatible with [GenAI Commons](/appstore/modules/genai/v1/commons/). One option is to use the [Mendix Cloud GenAI connector](https://marketplace.mendix.com/link/component/239449). For more information on how to configure this connector, see the [Configuration](/appstore/modules/genai/v1/mx-cloud-genai/MxGenAI-connector/#configuration) section of *Mendix Cloud GenAI connector*. Additionally, Mendix offers platform-supported integration with [(Azure) OpenAI](/appstore/modules/genai/v1/openai/) and [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). If desired, you need to download these integrations manually from the Marketplace. Alternatively, you can integrate with custom models by creating your own connector and making its operations and object structure compatible with the [GenAI Commons](/appstore/modules/genai/v1/commons/) `Request` and `Response`.
+Finally, you must also set up a connector that is compatible with [GenAI Commons](/appstore/modules/genai/v1/genai-for-mx/commons/). One option is to use the [Mendix Cloud GenAI connector](https://marketplace.mendix.com/link/component/239449). For more information on how to configure this connector, see the [Configuration](/appstore/modules/genai/v1/mx-cloud-genai/MxGenAI-connector/#configuration) section of *Mendix Cloud GenAI connector*. Additionally, Mendix offers platform-supported integration with [(Azure) OpenAI](/appstore/modules/genai/v1/reference-guide/external-connectors/openai/) and [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). If desired, you need to download these integrations manually from the Marketplace. Alternatively, you can integrate with custom models by creating your own connector and making its operations and object structure compatible with the [GenAI Commons](/appstore/modules/genai/v1/genai-for-mx/commons/) `Request` and `Response`.
 
 ## Installation {#installation}
 
@@ -209,7 +209,7 @@ The following operations can be found in the toolbox for changing the [ChatConte
 
 The following operations are used in a (custom) action microflow:
 
-* `Create Request with Chat History` creates a [Request](/appstore/modules/genai/v1/commons/) object that is used as an input parameter in a [Chat Completions (with history)](/appstore/modules/genai/v1/genai-for-mx/commons/#chat-completions-with-history) operation as part of the [action microflow](#action-microflow).
+* `Create Request with Chat History` creates a [Request](/appstore/modules/genai/v1/genai-for-mx/commons/) object that is used as an input parameter in a [Chat Completions (with history)](/appstore/modules/genai/v1/genai-for-mx/commons/#chat-completions-with-history) operation as part of the [action microflow](#action-microflow).
 * `Get Current User Prompt` gets the current user prompt. It can be used in the [action microflow](#action-microflow) because the `CurrentUserPrompt` from the chat context is no longer available.
 * `Update Assistant Response` processes the response of the model and adds the new message and any sources to the UI. This is typically one of the last steps of the logic in an [action microflow](#action-microflow). It only needs to be included at the end of the happy flow of an action microflow. Make sure to pass the response object.
 
@@ -223,7 +223,7 @@ If no [user-visibility](/appstore/modules/genai/v1/genai-for-mx/commons/#enum-us
 
 ### Human in the loop {#human-in-the-loop}
 
-When using the [Function Calling](/appstore/modules/genai/v1/function-calling/) pattern by adding tools to the request, you can control when those tools get executed and if they are visible to the user by setting [user access approval](/appstore/modules/genai/v1/genai-for-mx/commons/#enum-useraccessapproval) per tool. Human in the loop describes a pattern where the AI can perform powerful tasks, but still requires humans to take certain decisions and oversee the agent's behavior. When using the ConversationalUI module, its basic action microflow pattern to execute requests with history and UI snippets to display the chat, human in the loop works out of the box. Note that action microflows are called until there is a final assistant's response as described in the [Using Tool or Knowledge Base Calling](#action-microflow-tool-calling) section above, even if all tools are executed without user interaction.
+When using the [Function Calling](/appstore/modules/genai/function-calling/) pattern by adding tools to the request, you can control when those tools get executed and if they are visible to the user by setting [user access approval](/appstore/modules/genai/v1/genai-for-mx/commons/#enum-useraccessapproval) per tool. Human in the loop describes a pattern where the AI can perform powerful tasks, but still requires humans to take certain decisions and oversee the agent's behavior. When using the ConversationalUI module, its basic action microflow pattern to execute requests with history and UI snippets to display the chat, human in the loop works out of the box. Note that action microflows are called until there is a final assistant's response as described in the [Using Tool or Knowledge Base Calling](#action-microflow-tool-calling) section above, even if all tools are executed without user interaction.
 
 If you are not using the ConversationalUI module for [chat with history executions](/appstore/modules/genai/v1/genai-for-mx/commons/#chat-completions-with-history) or your use case does not contain a chat history, but is [task-based (without history)](/appstore/modules/genai/v1/genai-for-mx/commons/#chat-completions-without-history), you need to implement the following actions:
 

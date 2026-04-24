@@ -24,8 +24,8 @@ Before integrating Agent Commons into your app, make sure you meet the following
 
 * An existing app: either an app that you have already built, or one that you can start from scratch using the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934).
 * Installation: if not done already, install the [AgentCommons](https://marketplace.mendix.com/link/component/240371) module from the Mendix Marketplace.
-* Access to an LLM of your choice: in this example, the [Mendix Cloud GenAI Resources Packs](/appstore/modules/genai/v1/MxGenAI/) are used, but you can use any provider with a connector that is compatible with [GenAICommons](/appstore/modules/genai/v1/genai-for-mx/commons/), such as [OpenAI](/appstore/modules/genai/v1/reference-guide/external-connectors/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). 
-* Basic understanding of GenAI concepts: review the [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/v1/) page for foundational knowledge, and to familiarize yourself with [GenAI Concepts](/appstore/modules/genai/v1/using-gen-ai/).
+* Access to an LLM of your choice: in this example, the [Mendix Cloud GenAI Resources Packs](/appstore/modules/genai/v1/mendix-cloud-genai/genai-connector/) are used, but you can use any provider with a connector that is compatible with [GenAICommons](/appstore/modules/genai/v1/genai-for-mx/commons/), such as [OpenAI](/appstore/modules/genai/v1/reference-guide/external-connectors/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). 
+* Basic understanding of GenAI concepts: review the [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/v1/) page for foundational knowledge, and to familiarize yourself with [GenAI Concepts](/appstore/modules/genai/get-started/).
 * Basic understanding of Mendix: knowledge of simple page building, microflow modeling, and domain model creation.
 
 ## Use Case
@@ -73,7 +73,7 @@ You can now create your first agent in the user interface. The final agent will 
 
 4. Select a **Usage type** to either create a `Single-Call` or `Conversational` agent. The main difference is that conversational prompts are designed for chat-based interactions, which include the full conversation history, and do not rely on predefined user prompts. `Single-Call` prompts, on the other hand, are used for one-time interactions between the user and the LLM. For this example, select the `Single-Call` type and click **Save** to create the agent.
 
-5. On the agent's details page, where you can perform prompt engineering at runtime, enter the following prompt in the [User Prompt](/appstore/modules/genai/v1/prompt-engineering/#user-prompt) field: `Generate a short product description for a chair`. The **User Prompt** typically represents what the end user would write, although it can be prefilled by our own instructions.
+5. On the agent's details page, where you can perform prompt engineering at runtime, enter the following prompt in the [User Prompt](/appstore/modules/genai/prompt-engineering/#user-prompt) field: `Generate a short product description for a chair`. The **User Prompt** typically represents what the end user would write, although it can be prefilled by our own instructions.
 
 6. Click **Run** in the top-right corner to view the model's response. However, since no model has been selected yet, you will be prompted to select one before running the test. If no models are available to select, you first need to configure one. For Mendix Cloud GenAI, you need to import a key on the configuration page you added in the previous section.
 
@@ -105,7 +105,7 @@ Enter `Chair 30 words` as the title for the test case.
 
 1. Save the agent's version one more time as described in the [Initial Agent](#initial-agent) section. Enter `Added user input` as the title. 
 
-2. For the final version, add the additional instructions in the [System Prompt](/appstore/modules/genai/v1/prompt-engineering/#system-prompt) field. Enter the following: `You are a sales assistant that can write engaging and inspiring product descriptions for our online marketplace. The user asks you to create a description for various products. You should always respond in {{Language}}.`, and notice that the **Language** variable is created.
+2. For the final version, add the additional instructions in the [System Prompt](/appstore/modules/genai/prompt-engineering/#system-prompt) field. Enter the following: `You are a sales assistant that can write engaging and inspiring product descriptions for our online marketplace. The user asks you to create a description for various products. You should always respond in {{Language}}.`, and notice that the **Language** variable is created.
 
 3. Add a new test case by clicking the `New Test Case` icon ({{% icon name="add"%}}) next to the test case dropdown. 
    

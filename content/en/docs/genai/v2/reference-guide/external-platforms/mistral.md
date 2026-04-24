@@ -15,7 +15,7 @@ The [Mistral Connector](https://marketplace.mendix.com/link/component/248276) al
 
 ### Features {#features}
 
-The Mistral Connector is commonly used for text generation based on the [Chat Completions API](https://docs.mistral.ai/api/endpoint/chat) and embeddings generation with the [Embeddings API](https://docs.mistral.ai/api/endpoint/embeddings). Typical use cases for generative AI are described in the [Typical LLM Use Cases](/appstore/modules/genai/v2/get-started/#llm-use-cases).
+The Mistral Connector is commonly used for text generation based on the [Chat Completions API](https://docs.mistral.ai/api/endpoint/chat) and embeddings generation with the [Embeddings API](https://docs.mistral.ai/api/endpoint/embeddings). Typical use cases for generative AI are described in the [Typical LLM Use Cases](/appstore/modules/genai/get-started/#llm-use-cases).
 
 For more information about the models, see [Mistral models](https://docs.mistral.ai/getting-started/models).
 
@@ -34,7 +34,7 @@ To use this connector, you need to sign up for a Mistral account and create an A
 ### Dependencies {#dependencies}
 
 * Mendix Studio Pro version 10.24.0 or above
-* [GenAI Commons module](/appstore/modules/genai/v2/commons/)
+* [GenAI Commons module](/appstore/modules/genai/v2/genai-for-mx/commons/)
 * [Encryption module](/appstore/modules/encryption/)
 * [Community Commons module](/appstore/modules/community-commons-function-library/)
 * [OpenAI connector](/appstore/modules/genai/v2/reference-guide/external-connectors/openai/)
@@ -121,7 +121,7 @@ Function calling is a very powerful capability and should be used with caution. 
 Mendix also strongly advises that you build user confirmation logic into function microflows that have a potential impact on the world on behalf of the end-user. Some examples of such microflows include sending an email, posting online, or making a purchase.
 {{% /alert %}}
 
-For more information, see [Function Calling](/appstore/modules/genai/v2/function-calling/).
+For more information, see [Function Calling](/appstore/modules/genai/function-calling/).
 
 #### Adding Knowledge Bases {#chatcompletions-add-knowledge-base}
 
@@ -173,7 +173,7 @@ The microflow action  `Generate Embeddings (String)` supports scenarios where th
 The microflow action `Generate Embeddings (Chunk Collection)` supports the more complex scenario where a collection of string inputs is vectorized in a single API call, such as when converting a collection of texts (chunks) into embeddings to be inserted into a knowledge base. Instead of calling the API for each string, executing a single call for a list of strings can significantly reduce HTTP overhead. Use the exposed microflows of GenAI Commons [Chunks: Initialize ChunkCollection](/appstore/modules/genai/v2/genai-for-mx/commons/#chunkcollection-create) to create the wrapper and [Chunks: Add Chunk to ChunkCollection](/appstore/modules/genai/v2/genai-for-mx/commons/#chunkcollection-add-chunk), or [Chunks: Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/v2/genai-for-mx/commons/#chunkcollection-add-knowledgebasechunk) to construct the input. The resulting embedding vectors returned after a successful API call will be stored in the `EmbeddingVector` attribute in the same `Chunk` object. \
 Purely to generate embeddings, it does not matter whether the ChunkCollection contains Chunks or its specialization KnowledgeBaseChunks. However, if the end goal is to store the generated embedding vectors in a knowledge base (e.g. using the [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/) module), then Mendix recommends adding `KnowledgeBaseChunks` to the `ChunkCollection` and using these as an input for the embeddings operations, so they can later be used directly to populate the knowledge base.
 
-Note that, currently, the knowledge base interaction (e.g. inserting or retrieving chunks) is not supported for OpenAI compatible APIs. For more information on possible ways to work with knowledge bases for embedding generation, see [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/) and [setting up a Vector Database](/appstore/modules/genai/v2/pgvector-setup/).
+Note that, currently, the knowledge base interaction (e.g. inserting or retrieving chunks) is not supported for OpenAI compatible APIs. For more information on possible ways to work with knowledge bases for embedding generation, see [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/) and [setting up a Vector Database](/appstore/modules/genai/v2/reference-guide/external-connectors/pgvector-setup/).
 
 ### Exposed Microflow Actions for OpenAI-compatible APIs {#exposed-microflows}
 
@@ -221,7 +221,7 @@ Mistral supports the following [tool choice types](/appstore/modules/genai/v2/ge
 For more inspiration or guidance on how to use those microflows in your logic, Mendix recommends downloading the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475), which demonstrates a variety of example use cases.
 
 {{% alert color="info" %}}
-Some examples demonstrate knowledge base interaction and require a connection to a vector database. For more information on these concepts, see [Retrieval Augmented Generation (RAG)](/appstore/modules/genai/v2/rag/)
+Some examples demonstrate knowledge base interaction and require a connection to a vector database. For more information on these concepts, see [Retrieval Augmented Generation (RAG)](/appstore/modules/genai/rag/)
 {{% /alert %}}
 
 ## Troubleshooting {#troubleshooting}

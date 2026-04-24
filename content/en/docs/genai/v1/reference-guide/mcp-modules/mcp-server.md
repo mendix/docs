@@ -10,12 +10,12 @@ aliases:
 
 ## Introduction
 
-The [MCP Server](https://marketplace.mendix.com/link/component/240380) module provides easy low-code capability to set up an MCP ([Model Context Protocol](/appstore/modules/genai/v1/mcp/)) server within a Mendix app. An MCP server can seamlessly expose resources (such as tools or prompts) to other external AI applications that support MCP. The Mendix MCP Server module builds a bridge between Mendix and MCP client applications, such as Claude Desktop, through the [MCP Java SDK](https://github.com/modelcontextprotocol/java-sdk). With the current implementation, it is possible to:
+The [MCP Server](https://marketplace.mendix.com/link/component/240380) module provides easy low-code capability to set up an MCP ([Model Context Protocol](/appstore/modules/genai/mcp/)) server within a Mendix app. An MCP server can seamlessly expose resources (such as tools or prompts) to other external AI applications that support MCP. The Mendix MCP Server module builds a bridge between Mendix and MCP client applications, such as Claude Desktop, through the [MCP Java SDK](https://github.com/modelcontextprotocol/java-sdk). With the current implementation, it is possible to:
 
 * Expose reusable prompts, including the ability to use prompt parameters
 * List and execute microflow implemented in the application as tools
 
-To use function calling within the same Mendix application and integrating to an LLM, consider [function calling](/appstore/modules/genai/v1/function-calling/).
+To use function calling within the same Mendix application and integrating to an LLM, consider [function calling](/appstore/modules/genai/function-calling/).
 
 ### Limitations {#limitations}
 
@@ -87,7 +87,7 @@ Mendix strongly recommends keeping the user in the loop (such as by using confir
 
 ### Add Prompts
 
-After the [Create MCP Server](#create-server) action, you can add one or multiple [Prompts](https://modelcontextprotocol.io/docs/concepts/prompts) to be exposed using the `Add Prompt` action. Prompts let servers define reusable prompt templates and workflows, and they are a powerful way to standardize and share common LLM interactions. For more information, see [Prompt Engineering](/appstore/modules/genai/v1/prompt-engineering/). Connecting MCP Clients can discover the prompts and make them selectable for users to start or continue a conversation. If your prompt (and microflow) requires any input parameters that the user should pass, you need to use the `Populate Prompt Argument List` action for each parameter to describe how the input is used.
+After the [Create MCP Server](#create-server) action, you can add one or multiple [Prompts](https://modelcontextprotocol.io/docs/concepts/prompts) to be exposed using the `Add Prompt` action. Prompts let servers define reusable prompt templates and workflows, and they are a powerful way to standardize and share common LLM interactions. For more information, see [Prompt Engineering](/appstore/modules/genai/prompt-engineering/). Connecting MCP Clients can discover the prompts and make them selectable for users to start or continue a conversation. If your prompt (and microflow) requires any input parameters that the user should pass, you need to use the `Populate Prompt Argument List` action for each parameter to describe how the input is used.
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/mcpserver/mcp_addprompt_example.png" >}}
 
@@ -128,7 +128,7 @@ If you encounter an error caused by conflicting Java libraries, such as `java.la
 
 ## Read More
 
-* Concept description of [Model Context Protocol (MCP)](/appstore/modules/genai/v1/mcp/)
+* Concept description of [Model Context Protocol (MCP)](/appstore/modules/genai/mcp/)
 * The [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) provides an example of how to expose microflows as tools via the MCP Server module. 
 * The official [MCP docs](https://modelcontextprotocol.io/introduction)
 * The [MCP Java SDK GitHub Repository](https://github.com/modelcontextprotocol/java-sdk)

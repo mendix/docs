@@ -134,7 +134,7 @@ To extend an agent's capabilities, you can provide an LLM with tools so that it 
 
 To allow your agent to act dynamically and autonomously or to access specific data based on input it determines, microflows can be added as tools. When the agent is invoked, it uses the function calling pattern to execute the required microflows, using the input specified in the model’s response.
 
-For more technical details, see the [Function Calling](/appstore/modules/genai/v2/function-calling/) documentation.
+For more technical details, see the [Function Calling](/appstore/modules/genai/function-calling/) documentation.
 
 ##### Adding tools from MCP servers
 

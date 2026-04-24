@@ -34,7 +34,7 @@ The **Settings** tab contains the details of a GenAI resource. It shows the foll
 
 #### Additional Details for Knowledge Base Resources
 
-For knowledge base resources, you can also see details of the associated embeddings resource and vice versa. To learn more about embeddings, see the [Embedding vector](/appstore/modules/genai/v1/rag/#embedding-vector) section of *RAG in a Mendix App*.
+For knowledge base resources, you can also see details of the associated embeddings resource and vice versa. To learn more about embeddings, see the [Embedding vector](/appstore/modules/genai/rag/#embedding-vector) section of *RAG in a Mendix App*.
 
 #### Upgrading the Text Model Version{#upgrade-model}
 

@@ -48,16 +48,16 @@ To deploy your app to Docker, you must create a Portable App Distribution Packag
 
 ### Creating a Portable App Distribution Package
 
-To create a Portable Package from your Mendix app, follow these steps:
+To create a Portable Package from your Mendix app, perform the following steps:
 
 1. Open your app in Studio Pro.
-2. Go to App > Create Deployment Package.
-3. In the Create Deployment Package dialog box, select Portable package.
-4. Click Ok.
-5. The Portable Package is saved to your-project-folder/releases/XYZ_portable_YYYYMMDD_hhmm.zip
+2. Go to **App** > **Create Deployment Package**.
+3. In the **Create Deployment Package** dialog, select **Portable package**.
+4. Click **OK**.
 
-For more information, see [Portable App Distribution](/developerportal/deploy/portable-app-distribution-deploy/).
-These files are the core of your Mendix application and are ready to be included in a Docker image.
+The Portable Package is saved to the following location: `<your-project-folder>/releases/<XYZ_portable_YYYYMMDD_hhmm>.zip`.
+
+For more information about Portable Packages, see [Portable App Distribution](/developerportal/deploy/portable-app-distribution-deploy/). Files included in the Portable Package are the core of your Mendix application and are ready to be included in a Docker image.
    
 ### Building a Docker Image
 

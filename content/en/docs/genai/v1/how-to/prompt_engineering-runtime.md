@@ -24,7 +24,7 @@ Before integrating Agent Commons into your app, make sure you meet the following
 
 * An existing app: either an app that you have already built, or one that you can start from scratch using the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934).
 * Installation: if not done already, install the [AgentCommons](https://marketplace.mendix.com/link/component/240371) module from the Mendix Marketplace.
-* Access to an LLM of your choice: in this example, the [Mendix Cloud GenAI Resources Packs](/appstore/modules/genai/v1/mendix-cloud-genai/genai-connector/) are used, but you can use any provider with a connector that is compatible with [GenAICommons](/appstore/modules/genai/v1/genai-for-mx/commons/), such as [OpenAI](/appstore/modules/genai/v1/reference-guide/external-connectors/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). 
+* Access to an LLM of your choice: in this example, the [Mendix Cloud GenAI Resources Packs](/appstore/modules/genai/v1/mx-cloud-genai/resource-packs/) are used, but you can use any provider with a connector that is compatible with [GenAICommons](/appstore/modules/genai/v1/genai-for-mx/commons/), such as [OpenAI](/appstore/modules/genai/v1/reference-guide/external-connectors/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). 
 * Basic understanding of GenAI concepts: review the [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/v1/) page for foundational knowledge, and to familiarize yourself with [GenAI Concepts](/appstore/modules/genai/get-started/).
 * Basic understanding of Mendix: knowledge of simple page building, microflow modeling, and domain model creation.
 

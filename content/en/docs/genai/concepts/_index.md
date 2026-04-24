@@ -142,6 +142,6 @@ This pattern is supported both by [OpenAI](https://platform.openai.com/docs/guid
 
 The agent concept combines prompts, RAG (Retrieval Augmented Generation), and ReAct patterns in a single call. These components of agent-based logic are all supported by our Agents Kit. Using LLMs, business logic can be enriched by enabling AI agents to reason and autonomously execute actions while being grounded in domain-specific knowledge. With Mendix's Agents Kit, agents become a seamless part of your application's logic.
 
-For an overview of the components that help you get started, refer to [the Agents Kit overview](/appstore/modules/genai/#architecture). 
+For an overview of the components that help you get started, refer to [the Agents Kit components](/appstore/modules/genai/v2/#components). 
 
 In addition, you can integrate agentic behavior in a Mendix app by leveraging external agents through cloud infrastructure providers. In this case, the Mendix app does not store the agent definition. Instead, it only calls the external agent. For example, [Agents for Amazon Bedrock](https://aws.amazon.com/bedrock/agents/) provides this functionality for Amazon Bedrock. You can find out how to use this in your Mendix application in [Invoking an Agent with the InvokeAgent Operation](/appstore/modules/aws/amazon-bedrock/#invokeagent) section of the *Amazon Bedrock* module documentation.

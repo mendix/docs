@@ -21,7 +21,7 @@ This section includes the following resources:
 
 ## Mendix Components
 
-The following Marketplace components are available in Agents Kit 1.0. All components are available from the [Mendix Marketplace](/marketplace/).
+The following Marketplace components are available in Agents Kit 1.0. All components are available from the [Mendix Marketplace](/appstore/).
 
 ### Starter Apps and Showcase Apps
 

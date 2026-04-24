@@ -59,13 +59,26 @@ To install the solution, perform the following steps:
     The configuration wizard offers light and dark modes for the UI. To switch between them, click the **Light Mode** or **Dark Mode** button in the top right corner.
 
 7. In the **General Settings** tab, select the environment for the installation. The other settings are pre-populated for the namespace that you created.
+
+    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard1.png" >}}
+
 8. Optional: In the **Service Accounts** tab, specify a custom Kubernetes service account for the Mendix environment to use instead of the default account.
+
+    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard2.png" >}}
+
 9. In the **Database Plans** tab, select your desired database type, and then specify one or more database plans. For more information about the available options, see [Supported Database Types](/developerportal/deploy/private-cloud-storage-plans/#supported-database-types).
 
     If you want to use a custom Kubernetes service account for any of your plans, select it in the **K8s Service Account** field.
 
+        {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard3.png" >}}
+
 10. In the **Storage Plans** tab, select your desired database type, and then specify one or more blob storage plans. For more information about the available options, see [Blob File Storage Plans](/developerportal/deploy/private-cloud-storage-plans/#blob-storage).
+
+    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard4.png" >}}
+
 11. In the **Ingress** tab, specify your network ingress settings. For more information about the available options, see [Network Ingress Settings in Mendix on Kubernetes](/developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/).
+
+    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard5.png" >}}
 
 {{% alert color="info" %}}
 Keep in mind that changing the ingress type resets the value of all fields in this tab.
@@ -73,12 +86,20 @@ Keep in mind that changing the ingress type resets the value of all fields in th
 
 12. In the **Registry** tab, specify your network ingress settings. For more information about the available options, see [Registry Configuration](/developerportal/deploy/private-cloud-registry/).
 
+    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard6.png" >}}
+
 {{% alert color="info" %}}
 Keep in mind that changing the registry type resets the value of all fields in this tab.
 {{% /alert %}}
 
 13. Optional: In the **Proxy** tab, specify a proxy server.
+
+    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard7.png" >}}
+
 14. Optional: If your servers use a self-signed certificate, in the **Custom TLS** tab, configure custom TLS so that the self-signed certificate is accepted.
+
+    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard8.png" >}}
+
 15. Click **Generate & Download** to generate the yaml file with the configurations that you provided.
 16. Run the following commands:
 

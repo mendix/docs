@@ -21,13 +21,11 @@ Portable App Distribution revolutionizes the way in which Mendix applications ar
 
 The ability to generate a Portable App Distribution with a single build command means that creating a Docker-ready artifact becomes a streamlined process, making the overall integration into existing Docker-based CI/CD pipelines more efficient and less prone to errors.
 
-The Portable App Distribution feature allows you to package and deploy Mendix apps without relying on the Mendix Cloud or a Mendix Operator. This is particularly useful for:
+The Portable App Distribution feature allows you to package and deploy Mendix apps without relying on the Mendix Cloud or a Mendix Operator. This is particularly useful for the following use cases:
 
-* Air-gapped environments — where internet access is restricted or unavailable
-
-* Private cloud deployments — where you manage your own infrastructure
-
-* Full control scenarios — where you need complete ownership of the deployment pipeline
+* Air-gapped environments where internet access is restricted or unavailable
+* Private cloud deployments where you manage your own infrastructure
+* Full control scenarios where you need complete ownership of the deployment pipeline
 
 Docker provides a consistent and reproducible environment for running Mendix apps, making it ideal for cloud-native and containerized deployments.
 
@@ -38,11 +36,8 @@ Portable App Distribution offers a more agile, user-centric, and efficient deplo
 Before you begin, ensure you have the following:
 
 * Mendix Studio Pro version 11.19, 11.6.5, or above
-
 * A Mendix app that you want to deploy
-
 * Docker installed on your system (for building and running Docker images)
-
 * Access to a container registry (for pushing and pulling Docker images)
 
 ## Deploying an App with Portable App Distribution

@@ -11,7 +11,7 @@ aliases:
 
 ## Introduction
 
-This document explains how to use function calling in your smart app. To do this, you can use your existing app or follow the [Build a Smart App from a Blank GenAI App](/appstore/modules/genai/how-to/blank-app/) guide to start from scratch, as demonstrated in the sections below.
+This document explains how to use function calling in your smart app. To do this, you can use your existing app or follow the [Build a Smart App from a Blank GenAI App](/appstore/modules/genai/v2/how-to/blank-app/) guide to start from scratch, as demonstrated in the sections below.
 
 Through this document, you will:
 
@@ -22,7 +22,7 @@ Through this document, you will:
 
 Before integrating function calling into your app, make sure you meet the following requirements:
 
-* An existing app: To simplify your first use case, start building from a preconfigured set up [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934). For more information, see [Build a Chatbot from Scratch Using the Blank GenAI App](/appstore/modules/genai/how-to/blank-app/). 
+* An existing app: To simplify your first use case, start building from a preconfigured set up [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934). For more information, see [Build a Chatbot from Scratch Using the Blank GenAI App](/appstore/modules/genai/v2/how-to/blank-app/). 
 
 * Be on Mendix Studio Pro 10.12.4 or higher.
 
@@ -30,9 +30,9 @@ Before integrating function calling into your app, make sure you meet the follow
 
 * Intermediate knowledge of the Mendix platform: Familiarity with Mendix Studio Pro, microflows, and modules.
 
-* Basic understanding of GenAI concepts: Review the [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/) page for foundational knowledge and familiarize yourself with the [concepts](/appstore/modules/genai/using-gen-ai/).
+* Basic understanding of GenAI concepts: Review the [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/v2/) page for foundational knowledge and familiarize yourself with the [concepts](/appstore/modules/genai/v2/using-gen-ai/).
 
-* Understanding Function Calling and Prompt Engineering: Learn about [Function Calling](/appstore/modules/genai/function-calling/) and [Prompt Engineering](/appstore/modules/genai/get-started/#prompt-engineering) to use them within the Mendix ecosystem.
+* Understanding Function Calling and Prompt Engineering: Learn about [Function Calling](/appstore/modules/genai/v2/function-calling/) and [Prompt Engineering](/appstore/modules/genai/v2/get-started/#prompt-engineering) to use them within the Mendix ecosystem.
 
 ## Function Calling Use Case {#use-case}
 
@@ -47,16 +47,16 @@ In this example, two functions will be implemented with the following purposes:
 
 Selecting the infrastructure for integrating GenAI into your Mendix application is the first step. Depending on your use case and preferences, you can choose from the following options:
 
-* [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/): The [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) allows you to utilize Mendix Cloud GenAI Resource Packs directly within your Mendix application.
+* [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/v2/mx-cloud-genai/resource-packs/): The [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) allows you to utilize Mendix Cloud GenAI Resource Packs directly within your Mendix application.
 
-* [OpenAI](/appstore/modules/genai/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) supports both OpenAI's platform and Microsoft Foundry.
+* [OpenAI](/appstore/modules/genai/v2/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) supports both OpenAI's platform and Microsoft Foundry.
 
-* [Amazon Bedrock](/appstore/modules/genai/bedrock/): The [Amazon Bedrock Connector](https://marketplace.mendix.com/link/component/215042) allows you to leverage Amazon Bedrock’s fully managed service to integrate foundation models from Amazon and leading AI providers. 
+* [Amazon Bedrock](/appstore/modules/genai/v2/bedrock/): The [Amazon Bedrock Connector](https://marketplace.mendix.com/link/component/215042) allows you to leverage Amazon Bedrock’s fully managed service to integrate foundation models from Amazon and leading AI providers. 
 
 * Your Own Connector: Optionally, if you prefer a custom connector, you can integrate your chosen infrastructure. However, this document focuses on the Mendix Cloud GenAI, OpenAI, and Amazon Bedrock connectors, as they offer comprehensive support and ease of use to get started.
 
 {{% alert color="info" %}}
-Not all models support function calling. Ensure that your preferred GenAI provider is set up in your Mendix app and that a compatible model is available. Mendix provides an [overview of models and their capabilities](/appstore/modules/genai/#models).
+Not all models support function calling. Ensure that your preferred GenAI provider is set up in your Mendix app and that a compatible model is available. Mendix provides an [overview of models and their capabilities](/appstore/modules/genai/v2/#models).
 {{% /alert %}}
 
 ### Customizing Microflows {#microflows}
@@ -146,7 +146,7 @@ As shown in the image, two key steps must be completed to enable the execution o
 
 ### Optional: Changing the System Prompt {#edit-systemprompt}
 
-Optionally, you can change the system prompt to provide the model additional instructions, for example, the tone of voice. Therefore, follow a similar approach described in the [Build a Chatbot from Scratch Using the Blank GenAI App](/appstore/modules/genai/how-to/blank-app/#changing-system-prompt).
+Optionally, you can change the system prompt to provide the model additional instructions, for example, the tone of voice. Therefore, follow a similar approach described in the [Build a Chatbot from Scratch Using the Blank GenAI App](/appstore/modules/genai/v2/how-to/blank-app/#changing-system-prompt).
 
 1. Open the copied `ACT_FullScreenChat_Open` microflow from your `MyFirstBot` module.
 2. Locate the **New Chat** action.
@@ -156,11 +156,11 @@ Optionally, you can change the system prompt to provide the model additional ins
 
 ### Optional: Setting User Access and Approval
 
-When adding tools to a request, you can optionally set a [User Access Approval](/appstore/modules/genai/genai-for-mx/commons/#enum-useraccessapproval) value to control if the user first needs to confirm the tool before execution or if the tool is even visible to the user. To show different title and description for the tool, you may modify the `DiplayTitle` and `DisplayDescription` which are only used for display and can thus be less technical or detailed than the `Name` and `Description` of the tool.
+When adding tools to a request, you can optionally set a [User Access Approval](/appstore/modules/genai/v2/genai-for-mx/commons/#enum-useraccessapproval) value to control if the user first needs to confirm the tool before execution or if the tool is even visible to the user. To show different title and description for the tool, you may modify the `DiplayTitle` and `DisplayDescription` which are only used for display and can thus be less technical or detailed than the `Name` and `Description` of the tool.
 
 ## Testing and Troubleshooting {#testing-troubleshooting}
 
-Before testing, ensure that you have completed the Mendix Cloud GenAI, OpenAI, or Bedrock configuration as described in the [Build a Chatbot from Scratch Using the Blank GenAI App](/appstore/modules/genai/how-to/blank-app/), particularly the [Infrastructure Configuration](/appstore/modules/genai/how-to/blank-app/#config) section. 
+Before testing, ensure that you have completed the Mendix Cloud GenAI, OpenAI, or Bedrock configuration as described in the [Build a Chatbot from Scratch Using the Blank GenAI App](/appstore/modules/genai/v2/how-to/blank-app/), particularly the [Infrastructure Configuration](/appstore/modules/genai/v2/how-to/blank-app/#config) section. 
 
 To test the Chatbot, go to the **Home** icon to open the chatbot interface. Start interacting with your chatbot by typing in the chat box.
 For example, type—`Write a message to my colleague Max asking about a meeting to discuss the content for our next GenAI how-to.` or `How many bank holidays do I have in December?`

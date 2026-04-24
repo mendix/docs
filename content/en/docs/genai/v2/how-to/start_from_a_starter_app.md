@@ -11,7 +11,7 @@ aliases:
 
 ## Introduction
 
-This document guides on building a smart app using a starter template. Alternatively, you can create your smart app from scratch using a blank GenAI app template. For more details, see [Build a Smart App from a Blank GenAI App](/appstore/modules/genai/how-to/blank-app/).
+This document guides on building a smart app using a starter template. Alternatively, you can create your smart app from scratch using a blank GenAI app template. For more details, see [Build a Smart App from a Blank GenAI App](/appstore/modules/genai/v2/how-to/blank-app/).
 
 ### Prerequisites
 
@@ -21,9 +21,9 @@ Before starting this guide, make sure you have completed the following prerequis
 
 * Intermediate knowledge of the Mendix platform: Familiarity with Mendix Studio Pro, microflows, and modules is required.
 
-* Basic understanding of GenAI concepts: Review the [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/) page to gain foundational knowledge and become familiar with the key [concepts](/appstore/modules/genai/get-started/).
+* Basic understanding of GenAI concepts: Review the [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/v2/) page to gain foundational knowledge and become familiar with the key [concepts](/appstore/modules/genai/v2/get-started/).
 
-* Understanding Large Language Models (LLMs) and Prompt Engineering: Learn about [LLMs](/appstore/modules/genai/get-started/#llm) and [prompt engineering](/appstore/modules/genai/get-started/#prompt-engineering) to effectively use these within the Mendix ecosystem.
+* Understanding Large Language Models (LLMs) and Prompt Engineering: Learn about [LLMs](/appstore/modules/genai/v2/get-started/#llm) and [prompt engineering](/appstore/modules/genai/v2/get-started/#prompt-engineering) to effectively use these within the Mendix ecosystem.
 
 ### Learning Goals
 
@@ -45,11 +45,11 @@ To simplify your first use case, start building a chatbot using the [AI Bot Star
 
 Selecting the infrastructure for integrating GenAI into your Mendix application is the first step. Depending on your use case and preferences, you can choose from the following options:
 
-* [Mendix Cloud GenAI Resources Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/): The [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) integrates LLMs by dragging and dropping common operations from its toolbox in Studio Pro.
+* [Mendix Cloud GenAI Resources Packs](/appstore/modules/genai/v2/mx-cloud-genai/resource-packs/): The [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) integrates LLMs by dragging and dropping common operations from its toolbox in Studio Pro.
 
-* [OpenAI](/appstore/modules/genai/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) supports OpenAI's platform and Microsoft Foundry.
+* [OpenAI](/appstore/modules/genai/v2/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) supports OpenAI's platform and Microsoft Foundry.
 
-* [Amazon Bedrock](/appstore/modules/genai/bedrock/): The [Amazon Bedrock Connector](https://marketplace.mendix.com/link/component/215042) allows you to leverage Amazon Bedrock’s fully managed service to integrate foundation models from Amazon and leading AI providers. 
+* [Amazon Bedrock](/appstore/modules/genai/v2/bedrock/): The [Amazon Bedrock Connector](https://marketplace.mendix.com/link/component/215042) allows you to leverage Amazon Bedrock’s fully managed service to integrate foundation models from Amazon and leading AI providers. 
 
 * Your Own Connector: Optionally, if you prefer a custom connector, you can integrate your chosen infrastructure. However, this document focuses on the platform-supported connectors, as they offer comprehensive support and ease of use to get started.
 
@@ -65,7 +65,7 @@ Next, follow the steps below based on the infrastructure you chose.
 
 #### Mendix Cloud GenAI Configuration
 
-Follow these steps to configure the Mendix Cloud GenAI Resources Packs for your application and for more background information, look at the [Mendix Cloud GenAI Configuration](/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/#configuration) documentation:
+Follow these steps to configure the Mendix Cloud GenAI Resources Packs for your application and for more background information, look at the [Mendix Cloud GenAI Configuration](/appstore/modules/genai/v2/mx-cloud-genai/MxGenAI-connector/#configuration) documentation:
 
 1. Run the application locally.
 
@@ -79,7 +79,7 @@ Follow these steps to configure the Mendix Cloud GenAI Resources Packs for your 
 
 #### OpenAI Configuration
 
-Follow the steps below to configure OpenAI for your application. For more information, see the [Configuration](/appstore/modules/genai/reference-guide/external-connectors/openai/#configuration) section of the *OpenAI*.
+Follow the steps below to configure OpenAI for your application. For more information, see the [Configuration](/appstore/modules/genai/v2/reference-guide/external-connectors/openai/#configuration) section of the *OpenAI*.
 
 1. Run the application locally.
 

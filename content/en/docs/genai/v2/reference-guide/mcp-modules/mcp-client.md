@@ -10,13 +10,13 @@ aliases:
 
 ## Introduction
 
-The [MCP Client](https://marketplace.mendix.com/link/component/244893) module provides easy low-code capability to set up an MCP ([Model Context Protocol](/appstore/modules/genai/mcp/)) client connection within a Mendix app. An MCP client can consume resources (such as tools or prompts) from other external AI applications that support MCP. The Mendix MCP Client module builds a bridge between Mendix and MCP server applications such as other Mendix apps, through the [MCP Java SDK](https://github.com/modelcontextprotocol/java-sdk). With the current implementation, it is possible to:
+The [MCP Client](https://marketplace.mendix.com/link/component/244893) module provides easy low-code capability to set up an MCP ([Model Context Protocol](/appstore/modules/genai/v2/mcp/)) client connection within a Mendix app. An MCP client can consume resources (such as tools or prompts) from other external AI applications that support MCP. The Mendix MCP Client module builds a bridge between Mendix and MCP server applications such as other Mendix apps, through the [MCP Java SDK](https://github.com/modelcontextprotocol/java-sdk). With the current implementation, it is possible to:
 
 * Discover prompts and tools from servers.
 * Consume reusable prompts, including the ability to use prompt arguments
 * Call external tools as part of an LLM interaction
 
-If the tool resides within the same Mendix application, you can integrate it with an LLM using standard [function calling](/appstore/modules/genai/function-calling/) instead of the MCP Client.
+If the tool resides within the same Mendix application, you can integrate it with an LLM using standard [function calling](/appstore/modules/genai/v2/function-calling/) instead of the MCP Client.
 
 ### Limitations {#limitations}
 
@@ -35,7 +35,7 @@ If you start from a standard Mendix blank app or have an existing project, you m
 ## Dependencies {#dependencies}
 
 * Mendix Studio Pro version 10.24.0 or above
-* [GenAI Commons module](/appstore/modules/genai/commons/)
+* [GenAI Commons module](/appstore/modules/genai/v2/commons/)
 
 ## Configuration
 
@@ -69,7 +69,7 @@ For both actions, you can pass an `ArgumentCollection` if the prompt or tool req
 
 To add all tools from an MCP server to a `GenAICommons.Request`, you can use the `Request: Add all tools from MCP server` toolbox action. This action will first list all tools from the provided MCP server configuration, iterate over them, and adding them one by one to the tool collection. The request can then be passed to a Chat Completions operation. 
 
-You can also find an example [action microflow](/appstore/modules/genai/genai-for-mx/conversational-ui/#action-microflow) `ChatCompletions_MCPClient_ActionMicroflow` in the **Example Implementations** folder of the module. This microflow demonstrates how a Conversational UI chat action including MCP tools can be facilitated. Duplicate and include this microflow into your custom module and modify it according to your requirements.
+You can also find an example [action microflow](/appstore/modules/genai/v2/genai-for-mx/conversational-ui/#action-microflow) `ChatCompletions_MCPClient_ActionMicroflow` in the **Example Implementations** folder of the module. This microflow demonstrates how a Conversational UI chat action including MCP tools can be facilitated. Duplicate and include this microflow into your custom module and modify it according to your requirements.
 
 Currently, there is no out of the box solution available for using prompts from MCP. You can get inspired by the MCP Client example in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475), where the prompts are displayed to the user to start a conversation in a chat interface.
 
@@ -92,7 +92,7 @@ There are several possible reasons why the client cannot connect to your server.
    
 ## Read More
 
-* Concept description of [Model Context Protocol (MCP)](/appstore/modules/genai/mcp/)
+* Concept description of [Model Context Protocol (MCP)](/appstore/modules/genai/v2/mcp/)
 * The [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) provides an example on how to expose microflows as tools via the MCP Server module. 
 * The official [MCP docs](https://modelcontextprotocol.io/introduction)
 * The [MCP Java SDK GitHub Repository](https://github.com/modelcontextprotocol/java-sdk)

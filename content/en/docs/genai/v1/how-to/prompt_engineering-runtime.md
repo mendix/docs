@@ -10,7 +10,7 @@ aliases:
 
 ## Introduction
 
-This document explains how to integrate the prompt engineering capabilities of the [Agent Commons](/appstore/modules/genai/genai-for-mx/agent-commons/) module into your smart app. It guides you through rebuilding a simplified version of an example that is implemented in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475). To follow along, you can use your existing app or start from scratch as described in the [Build a Smart App from a Blank GenAI App](/appstore/modules/genai/how-to/blank-app/) document.
+This document explains how to integrate the prompt engineering capabilities of the [Agent Commons](/appstore/modules/genai/v1/genai-for-mx/agent-commons/) module into your smart app. It guides you through rebuilding a simplified version of an example that is implemented in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475). To follow along, you can use your existing app or start from scratch as described in the [Build a Smart App from a Blank GenAI App](/appstore/modules/genai/v1/how-to/blank-app/) document.
 
 This document will help you with the following:
 
@@ -24,8 +24,8 @@ Before integrating Agent Commons into your app, make sure you meet the following
 
 * An existing app: either an app that you have already built, or one that you can start from scratch using the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934).
 * Installation: if not done already, install the [AgentCommons](https://marketplace.mendix.com/link/component/240371) module from the Mendix Marketplace.
-* Access to an LLM of your choice: in this example, the [Mendix Cloud GenAI Resources Packs](/appstore/modules/genai/MxGenAI/) are used, but you can use any provider with a connector that is compatible with [GenAICommons](/appstore/modules/genai/genai-for-mx/commons/), such as [OpenAI](/appstore/modules/genai/reference-guide/external-connectors/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). 
-* Basic understanding of GenAI concepts: review the [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/) page for foundational knowledge, and to familiarize yourself with [GenAI Concepts](/appstore/modules/genai/using-gen-ai/).
+* Access to an LLM of your choice: in this example, the [Mendix Cloud GenAI Resources Packs](/appstore/modules/genai/v1/MxGenAI/) are used, but you can use any provider with a connector that is compatible with [GenAICommons](/appstore/modules/genai/v1/genai-for-mx/commons/), such as [OpenAI](/appstore/modules/genai/v1/reference-guide/external-connectors/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). 
+* Basic understanding of GenAI concepts: review the [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/v1/) page for foundational knowledge, and to familiarize yourself with [GenAI Concepts](/appstore/modules/genai/v1/using-gen-ai/).
 * Basic understanding of Mendix: knowledge of simple page building, microflow modeling, and domain model creation.
 
 ## Use Case
@@ -51,9 +51,9 @@ Agent Commons enables users to create powerful agents at runtime, enriching requ
    2. Set the `On Click` action to `Show Page`. 
    3. Search and select the `Agent_Overview` page, located under **AgentCommons** > **USE_ME** > **Agent Builder** folder. Alternatively, you can add a button to a page and connect to the same page.
 
-3. If you have not started from a GenAI Starter App, you also need to add a navigation item that opens the `Configuration_Overview` page of the **MxGenAIConnector**. For more details, see [Configuration](/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/#configuration).
+3. If you have not started from a GenAI Starter App, you also need to add a navigation item that opens the `Configuration_Overview` page of the **MxGenAIConnector**. For more details, see [Configuration](/appstore/modules/genai/v1/mx-cloud-genai/MxGenAI-connector/#configuration).
 
-You can now run the app, login as administrator, and verify that you can navigate to the **Agent_Overview** and **MxGenAIConnector's Configuration** pages. If you already have a key for a **Text Generation** resource, you can import it at this stage. For more details, see [Mendix Cloud GenAI](/appstore/modules/genai/mx-cloud-genai/Navigate-MxGenAI/).
+You can now run the app, login as administrator, and verify that you can navigate to the **Agent_Overview** and **MxGenAIConnector's Configuration** pages. If you already have a key for a **Text Generation** resource, you can import it at this stage. For more details, see [Mendix Cloud GenAI](/appstore/modules/genai/v1/mx-cloud-genai/Navigate-MxGenAI/).
 
 ## Create Your First Agent {#create-agent}
 
@@ -73,7 +73,7 @@ You can now create your first agent in the user interface. The final agent will 
 
 4. Select a **Usage type** to either create a `Single-Call` or `Conversational` agent. The main difference is that conversational prompts are designed for chat-based interactions, which include the full conversation history, and do not rely on predefined user prompts. `Single-Call` prompts, on the other hand, are used for one-time interactions between the user and the LLM. For this example, select the `Single-Call` type and click **Save** to create the agent.
 
-5. On the agent's details page, where you can perform prompt engineering at runtime, enter the following prompt in the [User Prompt](/appstore/modules/genai/prompt-engineering/#user-prompt) field: `Generate a short product description for a chair`. The **User Prompt** typically represents what the end user would write, although it can be prefilled by our own instructions.
+5. On the agent's details page, where you can perform prompt engineering at runtime, enter the following prompt in the [User Prompt](/appstore/modules/genai/v1/prompt-engineering/#user-prompt) field: `Generate a short product description for a chair`. The **User Prompt** typically represents what the end user would write, although it can be prefilled by our own instructions.
 
 6. Click **Run** in the top-right corner to view the model's response. However, since no model has been selected yet, you will be prompted to select one before running the test. If no models are available to select, you first need to configure one. For Mendix Cloud GenAI, you need to import a key on the configuration page you added in the previous section.
 
@@ -105,7 +105,7 @@ Enter `Chair 30 words` as the title for the test case.
 
 1. Save the agent's version one more time as described in the [Initial Agent](#initial-agent) section. Enter `Added user input` as the title. 
 
-2. For the final version, add the additional instructions in the [System Prompt](/appstore/modules/genai/prompt-engineering/#system-prompt) field. Enter the following: `You are a sales assistant that can write engaging and inspiring product descriptions for our online marketplace. The user asks you to create a description for various products. You should always respond in {{Language}}.`, and notice that the **Language** variable is created.
+2. For the final version, add the additional instructions in the [System Prompt](/appstore/modules/genai/v1/prompt-engineering/#system-prompt) field. Enter the following: `You are a sales assistant that can write engaging and inspiring product descriptions for our online marketplace. The user asks you to create a description for various products. You should always respond in {{Language}}.`, and notice that the **Language** variable is created.
 
 3. Add a new test case by clicking the `New Test Case` icon ({{% icon name="add"%}}) next to the test case dropdown. 
    
@@ -234,7 +234,7 @@ You have now successfully implemented Agent Commons and connected it to a sample
 ## Troubleshooting {#troubleshooting}
 
 {{% alert color="info" %}}
-For more technical details, refer to [Agent Commons](/appstore/modules/genai/genai-for-mx/agent-commons/). For an example of advanced prompt engineering with Agent Commons, refer to the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) called *Generate Product Description (Agents)*.
+For more technical details, refer to [Agent Commons](/appstore/modules/genai/v1/genai-for-mx/agent-commons/). For an example of advanced prompt engineering with Agent Commons, refer to the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) called *Generate Product Description (Agents)*.
 {{% /alert %}}
 
 ### Model Selection Is Empty {#empty-model-selection}

@@ -37,7 +37,7 @@ With the current version, Mendix supports inserting data chunks with their vecto
 
 ### Prerequisites {#prerequisites}
 
-You should have access to your own (remote) PostgreSQL database server with the [pgvector](https://github.com/pgvector/pgvector) extension installed. For more information, see the [Setting up a Vector Database](/appstore/modules/genai/pgvector-setup/) section.
+You should have access to your own (remote) PostgreSQL database server with the [pgvector](https://github.com/pgvector/pgvector) extension installed. For more information, see the [Setting up a Vector Database](/appstore/modules/genai/v1/pgvector-setup/) section.
 
 {{% alert color="info" %}}This module cannot be used with the Mendix Cloud app database. It only works if you are using your own database server or Amazon RDS.{{% /alert %}}
 
@@ -63,7 +63,7 @@ You must perform the following steps to integrate a Mendix app integrate a PgVec
 
 1. Add the module role **PgVectorKnowledgeBase.Administrator** to your Administrator user role in the security settings of your app. Optionally, map **GenAICommons.User** to any user roles that need read access directly on retrieved entities.
 2. Add the **DatabaseConfiguration_Overview** page (**USE_ME > Configuration**) to your navigation, or add the **Snippet_DatabaseConfigurations** to a page that is already part of your navigation. 
-3. Set up your database configurations at runtime. For more information, see the [Configuring the Database Connection Details](/appstore/modules/genai/reference-guide/external-connectors/pgvector-setup/#configure-database-connection) section in *Setting up a Vector Database*. Selecting an embeddings model is optional and only required if you plan to use PgVector for the [Tools: Add Knowledge Base](/appstore/modules/genai/genai-for-mx/commons/#add-knowledge-base-to-request) action.
+3. Set up your database configurations at runtime. For more information, see the [Configuring the Database Connection Details](/appstore/modules/genai/v1/reference-guide/external-connectors/pgvector-setup/#configure-database-connection) section in *Setting up a Vector Database*. Selecting an embeddings model is optional and only required if you plan to use PgVector for the [Tools: Add Knowledge Base](/appstore/modules/genai/v1/genai-for-mx/commons/#add-knowledge-base-to-request) action.
 
 {{% alert color="info" %}}
 It is possible to have multiple knowledge bases in the same database in parallel by providing different knowledge base names in combination with the same `DatabaseConfiguration`.
@@ -71,24 +71,24 @@ It is possible to have multiple knowledge bases in the same database in parallel
 
 ### General Operations {#general-operations-configuration} 
 
-After following the general setup above, you are all set to use the microflows and Java actions in the **USE_ME > Operations** folder in your logic. Currently, eleven operations (microflows and Java actions) are exposed as microflow actions under the **PgVector Knowledge Base** category in the **Toolbox** in Mendix Studio Pro. These can be split into three categories, corresponding to the main functionalities: managing data chunks in the knowledge base (for example, [(Re)populate](#repopulate-knowledge-base)), finding relevant data chunks in an existing knowledge base (for example, [Retrieve](#retrieve)), and deleting chunk data or a whole knowledge base (for exapmle, [Delete Knowledge Base](#delete-knowledge-base)). In many occasions, metadata in a [MetadataCollection](/appstore/modules/genai/genai-for-mx/commons/#metadatacollection-entity) can be provided to enable additional filtering.
+After following the general setup above, you are all set to use the microflows and Java actions in the **USE_ME > Operations** folder in your logic. Currently, eleven operations (microflows and Java actions) are exposed as microflow actions under the **PgVector Knowledge Base** category in the **Toolbox** in Mendix Studio Pro. These can be split into three categories, corresponding to the main functionalities: managing data chunks in the knowledge base (for example, [(Re)populate](#repopulate-knowledge-base)), finding relevant data chunks in an existing knowledge base (for example, [Retrieve](#retrieve)), and deleting chunk data or a whole knowledge base (for exapmle, [Delete Knowledge Base](#delete-knowledge-base)). In many occasions, metadata in a [MetadataCollection](/appstore/modules/genai/v1/genai-for-mx/commons/#metadatacollection-entity) can be provided to enable additional filtering.
 
 Additionally, there is one activity to prepare the connection input, which is a required input parameter for all operations and exposed separately in the **Toolbox** in Studio Pro. The following section describes this operation:
 
 #### `DeployedKnowledgeBase: Create` {#create-pgvectordeployedknowledgebase}
 
-All operations that include knowledge base interaction need the connection details to the knowledge base. Adhering to the GenAI Commons standard, this information is conveyed in a specialization of the GenAI Commons [DeployedKnowledgeBase](/appstore/modules/genai/genai-for-mx/commons/#deployed-knowledge-base) entity and the [ConsumedKnowledgeBase](/appstore/modules/genai/genai-for-mx/commons/#consumed-knowledge-base) (see the [Technical Reference](#technical-reference) section). After instantiating the `PgVectorKnowledgeBase` based on custom logic and/or front-end logic, this object can be used for the actual knowledge base operations. For operations where collection identifiers are needed in combination with a `ConsumedKnowledgeBase` object, the `Name` of the KnowledgeBase (see the `PgVectorKnowledgeBase` entity) needs to be passed as string.
+All operations that include knowledge base interaction need the connection details to the knowledge base. Adhering to the GenAI Commons standard, this information is conveyed in a specialization of the GenAI Commons [DeployedKnowledgeBase](/appstore/modules/genai/v1/genai-for-mx/commons/#deployed-knowledge-base) entity and the [ConsumedKnowledgeBase](/appstore/modules/genai/v1/genai-for-mx/commons/#consumed-knowledge-base) (see the [Technical Reference](#technical-reference) section). After instantiating the `PgVectorKnowledgeBase` based on custom logic and/or front-end logic, this object can be used for the actual knowledge base operations. For operations where collection identifiers are needed in combination with a `ConsumedKnowledgeBase` object, the `Name` of the KnowledgeBase (see the `PgVectorKnowledgeBase` entity) needs to be passed as string.
 
 ### (Re)populate Operations {#repopulate-operations-configuration}
 
-In order to add data to the knowledge base, you need to have discrete pieces of information and create knowledge base chunks for those. You can use the [operations for Chunks and KnowledgeBaseChunks in the GenAI Commons module](/appstore/modules/genai/commons/). After you create the knowledge base chunks and [generate embedding vectors for them](/appstore/modules/genai/commons/), the resulting `ChunkCollection` can be inserted into the knowledge base using an operation for insertion, for example the `(Re)populate Knowledge Base` operation. 
+In order to add data to the knowledge base, you need to have discrete pieces of information and create knowledge base chunks for those. You can use the [operations for Chunks and KnowledgeBaseChunks in the GenAI Commons module](/appstore/modules/genai/v1/commons/). After you create the knowledge base chunks and [generate embedding vectors for them](/appstore/modules/genai/v1/commons/), the resulting `ChunkCollection` can be inserted into the knowledge base using an operation for insertion, for example the `(Re)populate Knowledge Base` operation. 
 
 A typical pattern for populating a knowledge base is as follows:
 
-1. Create a new `ChunkCollection`. See the [Initialize ChunkCollection](/appstore/modules/genai/commons/) section.
+1. Create a new `ChunkCollection`. See the [Initialize ChunkCollection](/appstore/modules/genai/v1/commons/) section.
 2. For each knowledge item that needs to be inserted, do the following:
-    * Use [Initialize MetadataCollection with Metadata](/appstore/modules/genai/commons/) and [Add Metadata to MetadataCollection](/appstore/modules/genai/commons/) to create a collection of the necessary metadata for the knowledge base item.
-    * With both collections as input parameters, use [Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/commons/) for the knowledge item.
+    * Use [Initialize MetadataCollection with Metadata](/appstore/modules/genai/v1/commons/) and [Add Metadata to MetadataCollection](/appstore/modules/genai/v1/commons/) to create a collection of the necessary metadata for the knowledge base item.
+    * With both collections as input parameters, use [Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/v1/commons/) for the knowledge item.
 3. Call an embeddings endpoint with the `ChunkCollection` to generate an embedding vector for each `KnowledgeBaseChunk`
 4. With the `ChunkCollection`, use [(Re)populate Knowledge Base](#repopulate-knowledge-base) to store the chunks.
 
@@ -102,7 +102,7 @@ This operation handles the following:
 * Creating the empty knowledge base if it does not exist
 * Inserting all provided knowledge base chunks with their metadata into the knowledge base
 
-The population handles a whole collection of chunks at once, and this `ChunkCollection` should be created using the [Initialize ChunkCollection](/appstore/modules/genai/commons/) and [Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/commons/) operations. 
+The population handles a whole collection of chunks at once, and this `ChunkCollection` should be created using the [Initialize ChunkCollection](/appstore/modules/genai/v1/commons/) and [Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/v1/commons/) operations. 
 
 #### `Insert` {#insert}
 
@@ -118,16 +118,16 @@ Currently, four operations are available for on-demand retrieval of data chunks 
 
 A typical pattern for retrieval from a knowledge base uses GenAI Commons operations and can be illustrated as follows:
 
-1. Use [Initialize MetadataCollection with Metadata](/appstore/modules/genai/commons/) to set up a `MetadataCollection` for filtering with its first key-value pair added immediately. 
-2. Use [Add Metadata to MetadataCollection](/appstore/modules/genai/commons/) (iteratively) to create a collection of the necessary metadata.
+1. Use [Initialize MetadataCollection with Metadata](/appstore/modules/genai/v1/commons/) to set up a `MetadataCollection` for filtering with its first key-value pair added immediately. 
+2. Use [Add Metadata to MetadataCollection](/appstore/modules/genai/v1/commons/) (iteratively) to create a collection of the necessary metadata.
 3. Do the retrieval. For example, you could use [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors) to find chunks based on vector similarity.
 
 For scenarios in which the created chunks were based on Mendix objects at the time of population and these objects need to be used in logic after the retrieval step, two additional operations are available. The Java actions [Retrieve & Associate](#retrieve-associate) and [Retrieve Nearest Neighbors & Associate](#retrieve-nearest-neighbors-associate) take care of the chunk retrieval and set the association towards the original object, if applicable.
 
 A typical pattern for this retrieval is as follows:
 
-1. Use [Initialize MetadataCollection with Metadata](/appstore/modules/genai/commons/) to set up a `MetadataCollection` for filtering with its first key-value pair added immediately. 
-2. Use [Add Metadata to MetadataCollection](/appstore/modules/genai/commons/) (iteratively) to create a collection of the necessary metadata.
+1. Use [Initialize MetadataCollection with Metadata](/appstore/modules/genai/v1/commons/) to set up a `MetadataCollection` for filtering with its first key-value pair added immediately. 
+2. Use [Add Metadata to MetadataCollection](/appstore/modules/genai/v1/commons/) (iteratively) to create a collection of the necessary metadata.
 3. Do the retrieval. For example, you could use [Retrieve Nearest Neighbors & Associate](#retrieve-nearest-neighbors-associate) to find chunks based on vector similarity.
 4. For each retrieved chunk, retrieve the original Mendix object and do custom logic.
 
@@ -179,7 +179,7 @@ The **Documentation** pane displays the documentation for the currently selected
 For more inspiration and guidance on how to use these operations in your logic and how to combine it with use cases in the context of generative AI, Mendix highly recommends downloading the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) from the Marketplace. This application contains various examples in the context of generative AI, some of which use the PgVector Knowledge Base module for storing embedding vectors.
 
 {{% alert color="info" %}}
-For more information on how to set up a vector database for retrieval augmented generation (RAG), see the [Setting up a Vector Database](/appstore/modules/genai/pgvector-setup/) section and the [RAG Example Implementation in the GenAI Showcase App](/appstore/modules/genai/rag/) section.
+For more information on how to set up a vector database for retrieval augmented generation (RAG), see the [Setting up a Vector Database](/appstore/modules/genai/v1/pgvector-setup/) section and the [RAG Example Implementation in the GenAI Showcase App](/appstore/modules/genai/v1/rag/) section.
 {{% /alert %}}
 
 ## Troubleshooting

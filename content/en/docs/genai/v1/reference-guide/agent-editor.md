@@ -102,7 +102,7 @@ To use the Agent Editor functionalities in your app, you must perform the follow
 6. Deploy the agent to cloud environments.
 7. Improve the agent in the next iterations.
 
-For a step by step tutorial, check out the [create your first agent](/appstore/modules/genai/how-to/howto-single-agent/#define-agent-editor) documentation.
+For a step by step tutorial, check out the [create your first agent](/appstore/modules/genai/v1/how-to/howto-single-agent/#define-agent-editor) documentation.
 
 ### Defining the Model {#define-model}
 
@@ -141,13 +141,13 @@ You can also check out template agents in the **USE_ME** folder of the **AgentEd
 Both **System prompt** and **User prompt** are currently mandatory, as the Agent Editor supports only task-based agents at this time. Support for chat-based agents will be introduced in a future release.
 {{% /alert %}}
 
-For more information about prompts and prompt engineering, see [Prompt Engineering](/appstore/modules/genai/prompt-engineering/).
+For more information about prompts and prompt engineering, see [Prompt Engineering](/appstore/modules/genai/v1/prompt-engineering/).
 
 Selecting a model is mandatory. You can save the document without it, but if the model configuration is incomplete, Studio Pro will show consistency errors. These errors block running the app locally, cloud deployment, and agent testing in later steps.
 
 ### Defining and Adding Tools and Knowledge Bases{#define-tools}
 
-To extend the capabilities of your agent, you can add tools directly in the Agent editor. In the Agent Editor, microflows and (external) MCP services can be added as tools to let the agent act dynamically and autonomously, or to access specific data based on input it determines. When the agent is invoked, it uses the function calling pattern to execute the required microflow by using the input specified in the model response. For more technical details about microflow tools and function calling behavior, see [Function Calling](/appstore/modules/genai/function-calling/).
+To extend the capabilities of your agent, you can add tools directly in the Agent editor. In the Agent Editor, microflows and (external) MCP services can be added as tools to let the agent act dynamically and autonomously, or to access specific data based on input it determines. When the agent is invoked, it uses the function calling pattern to execute the required microflow by using the input specified in the model response. For more technical details about microflow tools and function calling behavior, see [Function Calling](/appstore/modules/genai/v1/function-calling/).
 
 #### Configuring Consumed MCP Service {#define-mcp}
 
@@ -174,7 +174,7 @@ You can choose from the following tool types:
 
 In the Agent editor, tools can be temporarily disabled and re-enabled by using the **Active** checkbox. This is useful while iterating and testing the agent behavior with different tool combinations or descriptions. Only enabled tools will be usable by the agent at runtime when called in the app.
 
-Configure [tool choice](/appstore/modules/genai/genai-for-mx/commons/#enum-toolchoice) to control how the agent behaves with regard to tool calling.
+Configure [tool choice](/appstore/modules/genai/v1/genai-for-mx/commons/#enum-toolchoice) to control how the agent behaves with regard to tool calling.
 
 #### Configuring Knowledge Base Document {#define-knowledgebase}
 
@@ -234,7 +234,7 @@ When configuring the action, select the Agent document so that the right agent i
 
 Optionally, you can pass a `Request` object to set request-level values, and a `FileCollection` object with files to send along with the user message to make use of vision or document chat capabilities. Support for files and images depends on the underlying large language model. Refer to the documentation of the specific connector.
 
-The output is a `GenAICommons.Response` object, aligned with the GenAI Commons and Agent Commons domain models and actions, which can be used for further logic. Additionally, all agents created via the Agent Editor extension are seamlessly integrated with other Mendix offerings, such as the [Token consumption monitor](/appstore/modules/genai/genai-for-mx/conversational-ui/#snippet-token-monitor) or the [Traceability](/appstore/modules/genai/genai-for-mx/conversational-ui/#traceability) feature from [ConversationalUI](/appstore/modules/genai/genai-for-mx/conversational-ui/).
+The output is a `GenAICommons.Response` object, aligned with the GenAI Commons and Agent Commons domain models and actions, which can be used for further logic. Additionally, all agents created via the Agent Editor extension are seamlessly integrated with other Mendix offerings, such as the [Token consumption monitor](/appstore/modules/genai/v1/genai-for-mx/conversational-ui/#snippet-token-monitor) or the [Traceability](/appstore/modules/genai/v1/genai-for-mx/conversational-ui/#traceability) feature from [ConversationalUI](/appstore/modules/genai/v1/genai-for-mx/conversational-ui/).
 
 ### Deploying the Agent to Cloud Environments {#deploy-agent}
 
@@ -284,7 +284,7 @@ Agent documents created in Studio Pro are imported through after-startup logic. 
 
 If the **List tools** fail, verify the consumed MCP service configuration: endpoint constant value, protocol version, and credentials microflow (when authentication is required). For technical details, the log files in the `/agent-editor` folder of the app directory can be inspected.
 
-If possible, also confirm that the target endpoint is reachable from the running app runtime: this can be done for example, by temporarily configuring it manually in the [MCP Client module](/appstore/modules/genai/mcp-modules/mcp-client/) and checking the **Console** pane in Studio Pro for logs.
+If possible, also confirm that the target endpoint is reachable from the running app runtime: this can be done for example, by temporarily configuring it manually in the [MCP Client module](/appstore/modules/genai/v1/mcp-modules/mcp-client/) and checking the **Console** pane in Studio Pro for logs.
 
 If calling the tools fails at runtime while testing the agent, check the **Console** pane in Studio Pro for error logs.
 

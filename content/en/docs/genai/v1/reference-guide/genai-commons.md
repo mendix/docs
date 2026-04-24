@@ -11,7 +11,7 @@ aliases:
 
 ## Introduction {#introduction}
 
-The [GenAI Commons](https://marketplace.mendix.com/link/component/239448) module combines common generative AI patterns found across various models on the market. Platform-supported GenAI-connectors use the underlying data structures and their operations. This makes it easier to develop vendor-agnostic AI-enhanced apps with Mendix, for example by using one of the connectors or the [Conversational UI](/appstore/modules/genai/conversational-ui/) module.
+The [GenAI Commons](https://marketplace.mendix.com/link/component/239448) module combines common generative AI patterns found across various models on the market. Platform-supported GenAI-connectors use the underlying data structures and their operations. This makes it easier to develop vendor-agnostic AI-enhanced apps with Mendix, for example by using one of the connectors or the [Conversational UI](/appstore/modules/genai/v1/conversational-ui/) module.
 
 If two different connectors both adhere to the GenAI Commons module, they can be easily swapped, which reduces dependency on the model providers. In addition, the initial implementation of AI capabilities using the connectors becomes a drag-and-drop experience, so that developers can quickly get started. The module exposes useful operations which developers can use to build a request to a large language model (LLM) and to handle the response.
 
@@ -35,7 +35,7 @@ If you start from a blank app, or have an existing project where you want to inc
 
 ## Implementation {#implementation}
 
-GenAI Commons is the foundation of large language model implementations within the [Mendix Cloud GenAI Connector](/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/), [OpenAI connector](/appstore/modules/genai/reference-guide/external-connectors/openai/), and the [Amazon Bedrock connector](/appstore/modules/genai/bedrock/), but may also be used to build other GenAI service implementations on top of it by reusing the provided domain model and exposed actions.
+GenAI Commons is the foundation of large language model implementations within the [Mendix Cloud GenAI Connector](/appstore/modules/genai/v1/mx-cloud-genai/MxGenAI-connector/), [OpenAI connector](/appstore/modules/genai/v1/reference-guide/external-connectors/openai/), and the [Amazon Bedrock connector](/appstore/modules/genai/v1/bedrock/), but may also be used to build other GenAI service implementations on top of it by reusing the provided domain model and exposed actions.
 
 Although GenAI Commons technically defines additional capabilities typically found in chat completion APIs, such as image processing (vision) and tools (function calling), it depends on the connector module of choice for whether these are actually implemented and supported by the LLM. To learn which additional capabilities a connector supports and for which models these can be used, refer to the documentation of that connector.
 
@@ -45,7 +45,7 @@ GenAI Commons can help store usage data, allowing admins to understand token usa
 
 To clean up usage data in a deployed app, you can enable the daily scheduled event `ScE_Usage_Cleanup` in the Mendix Cloud Portal. Use the `Usage_CleanUpAfterDays` constant to control for how long token usage data should be persisted. 
 
-Lastly, the [Conversational UI module](/appstore/modules/genai/conversational-ui/) provides pages, snippets, and logic to display and export token usage information. For this to work, the module roles `UsageMonitoring` from both Conversational UI as well as GenAI Commons need to be assigned to the applicable project roles.
+Lastly, the [Conversational UI module](/appstore/modules/genai/v1/conversational-ui/) provides pages, snippets, and logic to display and export token usage information. For this to work, the module roles `UsageMonitoring` from both Conversational UI as well as GenAI Commons need to be assigned to the applicable project roles.
 
 ### Traceability {#traceability}
 
@@ -93,7 +93,7 @@ Furthermore, it contains the name of the microflow to be executed to do a retrie
 
 As these objects are created as a specialization by the logic in connectors themselves (specializations), such a specialization typically contains more specific data required for the connection to the resource according to the provider infrastructure details, such as endpoints and credentials. Admins need to configure this at runtime.
 
-`ConsumedKnowledgeBase` entity is introduced in module version 6.0.0. To migrate data from erlier versions, refer to the [GenAI migration guide](/appstore/modules/genai/genai-for-mx/migration-guide/#march-2026).
+`ConsumedKnowledgeBase` entity is introduced in module version 6.0.0. To migrate data from erlier versions, refer to the [GenAI migration guide](/appstore/modules/genai/v1/genai-for-mx/migration-guide/#march-2026).
 
 | Attribute | Description |
 | --- | --- |
@@ -223,7 +223,7 @@ A knowledge base span is created for each knowledge base retrieval tool call req
 
 #### `MCPSpan` {#mcp-span}
 
-An MCP span is created for each tool invocation over the Model Context Protocol via the [MCP Client module](/appstore/modules/genai/mcp-modules/mcp-client/). The tool call is processed on the MCP server, usually outside of this application, and the result is sent back to the model. In addition to the [ToolSpan's](#tool-span) attributes, it also contains the following:
+An MCP span is created for each tool invocation over the Model Context Protocol via the [MCP Client module](/appstore/modules/genai/v1/mcp-modules/mcp-client/). The tool call is processed on the MCP server, usually outside of this application, and the result is sent back to the model. In addition to the [ToolSpan's](#tool-span) attributes, it also contains the following:
 
 | Attribute | Description |
 | --- | --- |
@@ -454,7 +454,7 @@ It is recommended that you adapt to the same interface when developing custom ch
 
 ##### Chat Completions (with history) {#chat-completions-with-history}
 
-The `Chat Completions (with history)` operation supports more complex use cases where a list of (historical) messages (for example, comprising the conversation or context so far) is sent as part of the request to the LLM. Note that the response might not be complete if tools with [UserAccessApproval](#enum-useraccessapproval) other than `HiddenForUser` are added or the request specifies that the tool messages should be stored ([SaveToolCallHistory](#request)). In such cases, implement the logic to call the action again, with [toolcalls](#toolcall) appended to the assistant's message as well as messages of role tool to the request. If you are using the [ConversationalUI](/appstore/modules/genai/genai-for-mx/conversational-ui/#human-in-the-loop) module, this is automatically handled.
+The `Chat Completions (with history)` operation supports more complex use cases where a list of (historical) messages (for example, comprising the conversation or context so far) is sent as part of the request to the LLM. Note that the response might not be complete if tools with [UserAccessApproval](#enum-useraccessapproval) other than `HiddenForUser` are added or the request specifies that the tool messages should be stored ([SaveToolCallHistory](#request)). In such cases, implement the logic to call the action again, with [toolcalls](#toolcall) appended to the assistant's message as well as messages of role tool to the request. If you are using the [ConversationalUI](/appstore/modules/genai/v1/genai-for-mx/conversational-ui/#human-in-the-loop) module, this is automatically handled.
 
 ###### Input Parameters
 
@@ -471,7 +471,7 @@ The `Chat Completions (with history)` operation supports more complex use cases 
 
 ##### Chat Completions (without history) {#chat-completions-without-history}
 
-The `Chat Completions (without history)` operation supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. Note that the response might not be complete if tools with [UserAccessApproval](#enum-useraccessapproval) other than `HiddenForUser` are added or the request specifies that the tool messages should be stored ([SaveToolCallHistory](#request)). In such cases, implement a logic to call the action again, with [toolcalls](#toolcall) appended to the assistant's message as well as messages of role tool to the request. For more information, refer to [Human in the loop](/appstore/modules/genai/genai-for-mx/conversational-ui/#human-in-the-loop).
+The `Chat Completions (without history)` operation supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. Note that the response might not be complete if tools with [UserAccessApproval](#enum-useraccessapproval) other than `HiddenForUser` are added or the request specifies that the tool messages should be stored ([SaveToolCallHistory](#request)). In such cases, implement a logic to call the action again, with [toolcalls](#toolcall) appended to the assistant's message as well as messages of role tool to the request. For more information, refer to [Human in the loop](/appstore/modules/genai/v1/genai-for-mx/conversational-ui/#human-in-the-loop).
 
 ###### Input Parameters
 
@@ -623,7 +623,7 @@ To include files within a message, you must provide them in the form of a file c
 
 ##### Tools: Add Function to Request {#add-function-to-request}
 
-Adds a new Function to a [ToolCollection](#toolcollection) that is part of a Request. Use this action to expose microflows as tools to the LLM via [function calling](/appstore/modules/genai/function-calling/). If supported by the LLM connector, the chat completion operation calls the right functions based on the LLM response and continues the process until the assistant's final response is returned.
+Adds a new Function to a [ToolCollection](#toolcollection) that is part of a Request. Use this action to expose microflows as tools to the LLM via [function calling](/appstore/modules/genai/v1/function-calling/). If supported by the LLM connector, the chat completion operation calls the right functions based on the LLM response and continues the process until the assistant's final response is returned.
 
 ###### Input Parameters
 

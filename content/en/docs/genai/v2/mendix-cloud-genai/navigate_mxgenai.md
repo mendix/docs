@@ -10,7 +10,7 @@ aliases:
 
 ## Introduction
 
-The [Mendix Cloud GenAI portal](https://genai.home.mendix.com/) is the part of the Mendix portal that provides access to [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/). After logging in, you can navigate to the overview of all resources. You can see all resources, that you are a team member of and access their details.
+The [Mendix Cloud GenAI portal](https://genai.home.mendix.com/) is the part of the Mendix portal that provides access to [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/v2/mx-cloud-genai/resource-packs/). After logging in, you can navigate to the overview of all resources. You can see all resources, that you are a team member of and access their details.
 
 ## Resource Details 
 
@@ -36,7 +36,7 @@ The **Settings** tab contains the details of a GenAI resource. It shows the foll
 
 #### Additional Details for Knowledge Base Resources
 
-For knowledge base resources, you can also see details of the associated embeddings resource and vice versa. To learn more about embeddings, see the [Embedding vector](/appstore/modules/genai/rag/#embedding-vector) section of *RAG in a Mendix App*.
+For knowledge base resources, you can also see details of the associated embeddings resource and vice versa. To learn more about embeddings, see the [Embedding vector](/appstore/modules/genai/v2/rag/#embedding-vector) section of *RAG in a Mendix App*.
 
 #### Upgrading the Text Model Version{#upgrade-model}
 
@@ -143,7 +143,7 @@ Instead of relying solely on similarity-based searches of ticket descriptions, u
 
 #### Add Data from a Mendix Application
 
-You can upload data directly from Mendix to the Knowledge Base. To do so, several operations of the Mendix Cloud GenAI Connector are required. For a detailed guide on this process, see the [Add Data Chunks to Your Knowledge Base](/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/#add-data-chunks-to-your-knowledge-base) section of **Mendix Cloud GenAI Connector**.
+You can upload data directly from Mendix to the Knowledge Base. To do so, several operations of the Mendix Cloud GenAI Connector are required. For a detailed guide on this process, see the [Add Data Chunks to Your Knowledge Base](/appstore/modules/genai/v2/mx-cloud-genai/MxGenAI-connector/#add-data-chunks-to-your-knowledge-base) section of **Mendix Cloud GenAI Connector**.
 
 ### Consumption (Only for Text and Embeddings Generation Resources)
 

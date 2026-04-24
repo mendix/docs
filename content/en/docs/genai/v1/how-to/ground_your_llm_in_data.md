@@ -8,28 +8,28 @@ description: "This document guides you on grounding your large language model in
 
 ## Introduction
 
-This document explains how to add data to your smart app to integrate with a Large Language Model (LLM). To do this, you can use your existing app or follow the [Build a Smart App from a Blank GenAI App](/appstore/modules/genai/how-to/blank-app/) guide to start from scratch.
+This document explains how to add data to your smart app to integrate with a Large Language Model (LLM). To do this, you can use your existing app or follow the [Build a Smart App from a Blank GenAI App](/appstore/modules/genai/v1/how-to/blank-app/) guide to start from scratch.
 
 In this document, you will:
 
-* Learn how to ground your LLM in data within your Mendix application using the [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/).
+* Learn how to ground your LLM in data within your Mendix application using the [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/v1/mx-cloud-genai/resource-packs/).
 * Discover how to integrate GenAI capabilities with a knowledge base to effectively address specific business requirements.
 
 ### Prerequisites
 
 Before implementing this capability into your app, make sure you meet the following requirements:
 
-* Start from scratch: to simplify your first use case, start building from a preconfigured setup [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934). For more information, see [Build a Chatbot from Scratch Using the Blank GenAI App](/appstore/modules/genai/how-to/blank-app/). 
+* Start from scratch: to simplify your first use case, start building from a preconfigured setup [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934). For more information, see [Build a Chatbot from Scratch Using the Blank GenAI App](/appstore/modules/genai/v1/how-to/blank-app/). 
 
 * Install the [Mendix GenAI Connector](https://marketplace.mendix.com/link/component/239449) and [GenAICommons](https://marketplace.mendix.com/link/component/239448) modules (version 2.2.0 and above) from the Mendix Marketplace. If you start with the Blank GenAI App, you can skip this installation.
 
-* Set up a Knowledge Base resource within the [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/). 
+* Set up a Knowledge Base resource within the [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/v1/mx-cloud-genai/resource-packs/). 
 
 * Set up data to add to your LLM. In this example, a modified and streamlined version of the demo data is used. This data is available in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) and located in the **ExampleMicroflows** module > **Ground in data - Mendix Cloud** > **Example data set**. If you need to create the demo data yourself, a basic understanding of import mappings and JSON structures is required.
 
-* Intermediate understanding of GenAI concepts: See the [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/) page for foundational knowledge and familiarize yourself with the [concepts](/appstore/modules/genai/using-gen-ai/).
+* Intermediate understanding of GenAI concepts: See the [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/v1/) page for foundational knowledge and familiarize yourself with the [concepts](/appstore/modules/genai/v1/using-gen-ai/).
 
-* Basic understanding of [Prompt Engineering](/appstore/modules/genai/get-started/#prompt-engineering).
+* Basic understanding of [Prompt Engineering](/appstore/modules/genai/v1/get-started/#prompt-engineering).
 
 ## Grounding Your LLM in a Data Use Case
 
@@ -37,15 +37,15 @@ Before implementing this capability into your app, make sure you meet the follow
 
 ### Choosing the Infrastructure
 
-Since this document focuses on the [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/), ensure that you have the [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) installed.
+Since this document focuses on the [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/v1/mx-cloud-genai/resource-packs/), ensure that you have the [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) installed.
 
-Follow the instructions in the [Navigate through the Mendix Cloud GenAI Portal](/appstore/modules/genai/mx-cloud-genai/Navigate-MxGenAI/) guide to collect the resources keys and configure the connector within your application. The keys bridge the gap between your app and the resources, enabling you to access models and add to or retrieve data from a Mendix Cloud GenAI knowledge base.
+Follow the instructions in the [Navigate through the Mendix Cloud GenAI Portal](/appstore/modules/genai/v1/mx-cloud-genai/Navigate-MxGenAI/) guide to collect the resources keys and configure the connector within your application. The keys bridge the gap between your app and the resources, enabling you to access models and add to or retrieve data from a Mendix Cloud GenAI knowledge base.
 
  While this documentation focuses on adding data to your knowledge base from a Mendix application, you can also fill the knowledge base directly within the portal, for example, by uploading files.
 
 ### Creating Domain Model Entity {#domainmodel}
 
-Since your application needs to store information, you must create attributes for the knowledge you want to save. In this example, based on the [demo data](/appstore/modules/genai/how-to/howto-groundllm/#demodata) mentioned below, a `Description` attribute of type `String` is created.
+Since your application needs to store information, you must create attributes for the knowledge you want to save. In this example, based on the [demo data](/appstore/modules/genai/v1/how-to/howto-groundllm/#demodata) mentioned below, a `Description` attribute of type `String` is created.
 
 ### Demo Data {#demodata}
 
@@ -132,7 +132,7 @@ This microflow first checks whether a list of tickets already exists in the data
 5. Next, add the `Import With Mapping` action with the following configurations:
 
     * **Variable****: `TicketJSON` created in the previous step
-    * **Mapping**: Use the mapping mentioned in the [demo data section](/appstore/modules/genai/how-to/howto-groundllm/#demodata)
+    * **Mapping**: Use the mapping mentioned in the [demo data section](/appstore/modules/genai/v1/how-to/howto-groundllm/#demodata)
     * **Range**: `All`
     * **Commit**: `Yes without events`
     * **Store in variable**: `No` (optional, not needed here)
@@ -201,7 +201,7 @@ For the application to function as expected, ensure that the following microflow
 
 ## Testing and Troubleshooting
 
-Before testing, ensure that you have completed the Mendix Cloud GenAI configuration as described in the [Build a Chatbot from Scratch Using the Blank GenAI App](/appstore/modules/genai/how-to/blank-app/), particularly the [Mendix Cloud GenAI Configuration](/appstore/modules/genai/how-to/blank-app/#mendix-cloud-genai-configuration) section. 
+Before testing, ensure that you have completed the Mendix Cloud GenAI configuration as described in the [Build a Chatbot from Scratch Using the Blank GenAI App](/appstore/modules/genai/v1/how-to/blank-app/), particularly the [Mendix Cloud GenAI Configuration](/appstore/modules/genai/v1/how-to/blank-app/#mendix-cloud-genai-configuration) section. 
 
 To test the Chatbot, click on the **Create Demo Data and Populate KB** option to populate the knowledge base and go to the **Chatbot** icon to open the chatbot interface. Start interacting with your chatbot by typing in the chat box something related to your knowledge base.
 For example, *My computer crashes every time, what can I do?*

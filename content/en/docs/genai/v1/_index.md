@@ -27,20 +27,20 @@ Build AI-powered applications with Mendix Agents Kit, a set of components for in
 | Asset | Description | Release Version |
 | ----- | ----------- | ------------------- |
 | [Amazon Bedrock Connector](/appstore/modules/aws/amazon-bedrock/) | Connect to Amazon Bedrock. Use Retrieve and Generate or Bedrock agents. | TBD |
-| [Google Gemini Connector](/appstore/modules/genai/reference-guide/external-connectors/gemini/) | Connect to Google Gemini. | TBD |
-| [MCP Client](/appstore/modules/genai/mcp-modules/mcp-client/) | Access tools and prompts available via MCP (Model Context Protocol) inside of your Mendix app and add them to LLM requests. | TBD |
-| [Mendix Cloud GenAI Connector](/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/) | Connect to Mendix Cloud and use Mendix Cloud GenAI resource packs directly within your Mendix application. | TBD |
-| [Mistral Connector](/appstore/modules/genai/reference-guide/external-connectors/mistral/) | Connect to Mistral AI. | TBD |
-| [OpenAI Connector](/appstore/modules/genai/openai/) | Connect to OpenAI and Microsoft Foundry. | TBD |
-| [PgVector Knowledge Base](/appstore/modules/genai/pgvector/) | Manage and interact with a PostgreSQL *pgvector* Knowledge Base. | TBD |
+| [Google Gemini Connector](/appstore/modules/genai/v1/reference-guide/external-connectors/gemini/) | Connect to Google Gemini. | TBD |
+| [MCP Client](/appstore/modules/genai/v1/mcp-modules/mcp-client/) | Access tools and prompts available via MCP (Model Context Protocol) inside of your Mendix app and add them to LLM requests. | TBD |
+| [Mendix Cloud GenAI Connector](/appstore/modules/genai/v1/mx-cloud-genai/MxGenAI-connector/) | Connect to Mendix Cloud and use Mendix Cloud GenAI resource packs directly within your Mendix application. | TBD |
+| [Mistral Connector](/appstore/modules/genai/v1/reference-guide/external-connectors/mistral/) | Connect to Mistral AI. | TBD |
+| [OpenAI Connector](/appstore/modules/genai/v1/openai/) | Connect to OpenAI and Microsoft Foundry. | TBD |
+| [PgVector Knowledge Base](/appstore/modules/genai/v1/pgvector/) | Manage and interact with a PostgreSQL *pgvector* Knowledge Base. | TBD |
 
 #### Other Modules
 
 | Asset | Description | Release Version |
 | ----- | ----------- | ------------------- |
-| [Agent Commons](/appstore/modules/genai/genai-for-mx/agent-commons/) | Build agentic functionality using common patterns in your application by defining, testing, and evaluating agents at runtime. | TBD |
-| [Conversational UI](/appstore/modules/genai/conversational-ui/) | Create a Conversational UI or monitor token consumption in your app. | TBD |
-| [GenAI Commons](/appstore/modules/genai/commons/) | Common capabilities that allow all GenAI connectors to be integrated with the other modules. You can also implement your own connector based on this. | TBD |
-| [MCP Server](/appstore/modules/genai/mcp-modules/mcp-server/) | Make your Mendix business logic available to any agent in your enterprise landscape with the Mendix MCP Server module. Expose reusable prompts, including the ability to use prompt parameters. List and run actions implemented in the application as a tool. | TBD |
+| [Agent Commons](/appstore/modules/genai/v1/genai-for-mx/agent-commons/) | Build agentic functionality using common patterns in your application by defining, testing, and evaluating agents at runtime. | TBD |
+| [Conversational UI](/appstore/modules/genai/v1/conversational-ui/) | Create a Conversational UI or monitor token consumption in your app. | TBD |
+| [GenAI Commons](/appstore/modules/genai/v1/commons/) | Common capabilities that allow all GenAI connectors to be integrated with the other modules. You can also implement your own connector based on this. | TBD |
+| [MCP Server](/appstore/modules/genai/v1/mcp-modules/mcp-server/) | Make your Mendix business logic available to any agent in your enterprise landscape with the Mendix MCP Server module. Expose reusable prompts, including the ability to use prompt parameters. List and run actions implemented in the application as a tool. | TBD |
 
 Older versions of most Marketplace modules and the GenAI Showcase App are available in Studio Pro 9.24.2.

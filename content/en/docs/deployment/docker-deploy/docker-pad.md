@@ -44,9 +44,9 @@ Before you begin, ensure you have the following:
 
 The Portable App Distribution feature in Mendix Studio Pro provides you with the necessary application files to build a Docker image. It packages your Mendix application as a self-contained distribution, ready for integration into your Docker environment.
 
-To deploy your app to Docker, perform the following steps:
+To deploy your app to Docker, you must create a Portable App Distribution Package, build a Docker image, and then deploy the Docker image (including optionally pushing it to a container registry. For more information, refer to the sections below.
 
-### Create a Portable App Distribution Package
+### Creating a Portable App Distribution Package
 
 To create a Portable Package from your Mendix app, follow these steps:
 
@@ -59,7 +59,7 @@ To create a Portable Package from your Mendix app, follow these steps:
 For more information, see [Portable App Distribution](/developerportal/deploy/portable-app-distribution-deploy/).
 These files are the core of your Mendix application and are ready to be included in a Docker image.
    
-### Build a Docker Image
+### Building a Docker Image
 
 To build a Docker image from the Portable Package, follow these steps:
 1. Extract the Portable Package to a directory of your choice.
@@ -115,7 +115,7 @@ CMD ["./bin/start", "etc/Default"] – Sets the start script to the Mendix Runti
 * Replace `<your-image-name>` and `<tag>` with your desired image name and version tag (for example, my-mendix-app:1.0.0).
 * `-f build/docker/Dockerfile` - Specifies the path to your Dockerfile.
 
-### Push the Docker Image (Optional)
+### Optional: Pushing the Docker Image
 
 To push the Docker image to a container registry, follow these steps:
 
@@ -131,7 +131,7 @@ Push the Docker image to the registry:
 
 `docker push <your-registry>/<your-image-name>:<tag>`
 
-### Deploy the Docker Image
+### Deploying the Docker Image
 
 Once the Docker image is available in your container registry, you can deploy it to your target environment using the steps below.
 

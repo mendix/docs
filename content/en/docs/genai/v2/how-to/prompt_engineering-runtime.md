@@ -25,7 +25,7 @@ Before integrating Agent Commons into your app, make sure you meet the following
 
 * An existing app: either an app that you have already built, or one that you can start from scratch using the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934).
 * Installation: if not done already, install the [AgentCommons](https://marketplace.mendix.com/link/component/240371) module from the Mendix Marketplace.
-* Access to an LLM of your choice: in this example, the [Mendix Cloud GenAI Resources Packs](/appstore/modules/genai/v2/mx-cloud-genai/resource-packs/) are used, but you can use any provider with a connector that is compatible with [GenAICommons](/appstore/modules/genai/v2/genai-for-mx/commons/), such as [OpenAI](/appstore/modules/genai/v2/reference-guide/external-connectors/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). 
+* Access to an LLM of your choice: in this example, the [Mendix Cloud GenAI Resources Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/) are used, but you can use any provider with a connector that is compatible with [GenAICommons](/appstore/modules/genai/v2/genai-for-mx/commons/), such as [OpenAI](/appstore/modules/genai/v2/reference-guide/external-connectors/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). 
 * Basic understanding of GenAI concepts: review the [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/v2/) page for foundational knowledge, and to familiarize yourself with [GenAI Concepts](/appstore/modules/genai/get-started/).
 * Basic understanding of Mendix: knowledge of simple page building, microflow modeling, and domain model creation.
 
@@ -54,7 +54,7 @@ Agent Commons enables users to create powerful agents at runtime, enriching requ
 
 3. If you have not started from a GenAI Starter App, you also need to add a navigation item that opens the `Configuration_Overview` page of the **MxGenAIConnector**. For more details, see [Configuration](/appstore/modules/genai/v2/mx-cloud-genai/MxGenAI-connector/#configuration).
 
-You can now run the app, login as administrator, and verify that you can navigate to the **Agent_Overview** and **MxGenAIConnector's Configuration** pages. If you already have a key for a **Text Generation** resource, you can import it at this stage. For more details, see [Mendix Cloud GenAI](/appstore/modules/genai/v2/mx-cloud-genai/Navigate-MxGenAI/).
+You can now run the app, login as administrator, and verify that you can navigate to the **Agent_Overview** and **MxGenAIConnector's Configuration** pages. If you already have a key for a **Text Generation** resource, you can import it at this stage. For more details, see [Mendix Cloud GenAI](/appstore/modules/genai/mx-cloud-genai/navigate-mxgenai/).
 
 ## Create Your First Agent {#create-agent}
 

@@ -47,7 +47,7 @@ In this example, two functions will be implemented with the following purposes:
 
 Selecting the infrastructure for integrating GenAI into your Mendix application is the first step. Depending on your use case and preferences, you can choose from the following options:
 
-* [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/v2/mx-cloud-genai/resource-packs/): The [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) allows you to utilize Mendix Cloud GenAI Resource Packs directly within your Mendix application.
+* [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/): The [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) allows you to utilize Mendix Cloud GenAI Resource Packs directly within your Mendix application.
 
 * [OpenAI](/appstore/modules/genai/v2/reference-guide/external-connectors/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) supports both OpenAI's platform and Microsoft Foundry.
 

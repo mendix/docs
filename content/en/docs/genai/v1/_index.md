@@ -17,7 +17,7 @@ This section includes the following resources:
 
 * [How to Build Smarter Apps Using GenAI](/appstore/modules/genai/v1/how-to/) – Step-by-step guides for building GenAI-powered applications
 * [Reference Guide](/appstore/modules/genai/v1/reference-guide/) – Technical reference documentation for the Mendix components in the Agents Kit
-* [Mendix Cloud GenAI](/appstore/modules/genai/v1/mx-cloud-genai/) – Documentation for Mendix Cloud GenAI resources
+* [Mendix Cloud GenAI](/appstore/modules/genai/mx-cloud-genai/) – Documentation for Mendix Cloud GenAI resources
 
 ## Mendix Components
 

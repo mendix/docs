@@ -223,7 +223,7 @@ The primary approach to creating and managing agents utilizes the [Agent Editor]
 
 To use this approach, install the Agent Editor in your project as a prerequisite. Make sure to use the [required Studio Pro version](/appstore/modules/genai/v2/genai-for-mx/agent-editor/#dependencies) and follow the steps in the [Installation](/appstore/modules/genai/v2/genai-for-mx/agent-editor/#installation) section of the *Agent Editor* documentation.
 
-At the time of initial release, Agent Editor supports only [Mendix Cloud GenAI](/appstore/modules/genai/v2/mx-cloud-genai/) as a provider for models and knowledge bases. The steps below therefore use the Mendix Cloud GenAI provider type, text generation resource keys, and knowledge base resource keys from the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com/).
+At the time of initial release, Agent Editor supports only [Mendix Cloud GenAI](/appstore/modules/genai/mx-cloud-genai/) as a provider for models and knowledge bases. The steps below therefore use the Mendix Cloud GenAI provider type, text generation resource keys, and knowledge base resource keys from the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com/).
 
 ### Setting up the Agent with a Prompt
 
@@ -701,7 +701,7 @@ For both approaches, you need an `MCPClient.MCPServerConfiguration` object conta
 
 #### Including Knowledge Base Retrieval: Similar Tickets
 
-Finally, you can add a tool for knowledge base retrieval. This allows the agent to query the knowledge base for similar tickets and thus tailor a response to the user based on private knowledge. Note that the knowledge base retrieval is only supported for [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/v2/mx-cloud-genai/resource-packs/).
+Finally, you can add a tool for knowledge base retrieval. This allows the agent to query the knowledge base for similar tickets and thus tailor a response to the user based on private knowledge. Note that the knowledge base retrieval is only supported for [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/).
 
 1. To retrieve a **Consumed Knowledge Base** object, add a `Retrieve` action in the `_ACT_TicketHelper_Agent_GenAICommons` microflow before the request is created. 
 

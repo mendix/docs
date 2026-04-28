@@ -14,7 +14,7 @@ This document explains how to add data to your smart app to integrate with a Lar
 
 In this document, you will:
 
-* Learn how to ground your LLM in data within your Mendix application using the [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/v2/mx-cloud-genai/resource-packs/).
+* Learn how to ground your LLM in data within your Mendix application using the [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/).
 * Discover how to integrate GenAI capabilities with a knowledge base to effectively address specific business requirements.
 
 ### Prerequisites
@@ -25,7 +25,7 @@ Before implementing this capability into your app, make sure you meet the follow
 
 * Install the [Mendix GenAI Connector](https://marketplace.mendix.com/link/component/239449) and [GenAICommons](https://marketplace.mendix.com/link/component/239448) modules (version 2.2.0 and above) from the Mendix Marketplace. If you start with the Blank GenAI App, you can skip this installation.
 
-* Set up a Knowledge Base resource within the [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/v2/mx-cloud-genai/resource-packs/). 
+* Set up a Knowledge Base resource within the [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/). 
 
 * Set up data to add to your LLM. In this example, a modified and streamlined version of the demo data is used. This data is available in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) and located in the **ExampleMicroflows** module > **Ground in data - Mendix Cloud** > **Example data set**. If you need to create the demo data yourself, a basic understanding of import mappings and JSON structures is required.
 
@@ -39,9 +39,9 @@ Before implementing this capability into your app, make sure you meet the follow
 
 ### Choosing the Infrastructure
 
-Since this document focuses on the [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/v2/mx-cloud-genai/resource-packs/), ensure that you have the [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) installed.
+Since this document focuses on the [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/), ensure that you have the [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) installed.
 
-Follow the instructions in the [Navigate through the Mendix Cloud GenAI Portal](/appstore/modules/genai/v2/mx-cloud-genai/Navigate-MxGenAI/) guide to collect the resources keys and configure the connector within your application. The keys bridge the gap between your app and the resources, enabling you to access models and add to or retrieve data from a Mendix Cloud GenAI knowledge base.
+Follow the instructions in the [Navigate through the Mendix Cloud GenAI Portal](/appstore/modules/genai/mx-cloud-genai/navigate-mxgenai/) guide to collect the resources keys and configure the connector within your application. The keys bridge the gap between your app and the resources, enabling you to access models and add to or retrieve data from a Mendix Cloud GenAI knowledge base.
 
  While this documentation focuses on adding data to your knowledge base from a Mendix application, you can also fill the knowledge base directly within the portal, for example, by uploading files.
 

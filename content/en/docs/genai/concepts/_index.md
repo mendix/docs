@@ -2,7 +2,7 @@
 title: "GenAI Concepts"
 url: /appstore/modules/genai/get-started/
 linktitle: "GenAI Concepts"
-weight: 10
+weight: 2
 description: "Describes the concepts behind generative AI and what you might implement with it."
 aliases:
     - /appstore/modules/genai/using-gen-ai/ 

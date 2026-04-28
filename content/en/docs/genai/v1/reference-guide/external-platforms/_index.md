@@ -1,7 +1,6 @@
 ---
-title: "Connectors to External Platforms"
+title: "Connector Modules"
 url: /appstore/modules/genai/v1/reference-guide/external-connectors/
-linktitle: "Connectors to External Platforms"
 weight: 30
 description: "Provides information on connectors that enable seamless integration between Mendix applications and external platforms."
 no_list: false

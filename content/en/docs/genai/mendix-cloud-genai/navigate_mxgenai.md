@@ -1,16 +1,14 @@
 ---
 title: "Navigate through the Mendix Cloud GenAI Portal"
-url: /appstore/modules/genai/v2/mx-cloud-genai/Navigate-MxGenAI/
+url: /appstore/modules/genai/mx-cloud-genai/navigate-mxgenai/
 linktitle: "Mendix Cloud GenAI Portal"
 description: "Describes how to navigate through the Mendix Cloud GenAI Portal."
 weight: 30
-aliases:
-    - /appstore/modules/genai/mx-cloud-genai/Navigate-MxGenAI/
 ---
 
 ## Introduction
 
-The [Mendix Cloud GenAI portal](https://genai.home.mendix.com/) is the part of the Mendix portal that provides access to [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/v2/mx-cloud-genai/resource-packs/). After logging in, you can navigate to the overview of all resources. You can see all resources, that you are a team member of and access their details.
+The [Mendix Cloud GenAI portal](https://genai.home.mendix.com/) is the part of the Mendix portal that provides access to [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/). After logging in, you can navigate to the overview of all resources. You can see all resources, that you are a team member of and access their details.
 
 ## Resource Details 
 
@@ -143,7 +141,7 @@ Instead of relying solely on similarity-based searches of ticket descriptions, u
 
 #### Add Data from a Mendix Application
 
-You can upload data directly from Mendix to the Knowledge Base. To do so, several operations of the Mendix Cloud GenAI Connector are required. For a detailed guide on this process, see the [Add Data Chunks to Your Knowledge Base](/appstore/modules/genai/v2/mx-cloud-genai/MxGenAI-connector/#add-data-chunks-to-your-knowledge-base) section of **Mendix Cloud GenAI Connector**.
+You can upload data directly from Mendix to the Knowledge Base. To do so, several operations of the Mendix Cloud GenAI Connector are required. For a detailed guide on this process, see the [Add Data Chunks to Your Knowledge Base](/appstore/modules/genai/v2/mx-cloud-genai/mxgenai-connector/#add-data-chunks-to-your-knowledge-base) section of **Mendix Cloud GenAI Connector**.
 
 ### Consumption (Only for Text and Embeddings Generation Resources)
 

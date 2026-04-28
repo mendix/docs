@@ -10,7 +10,7 @@ aliases:
 
 ## Introduction
 
-The [Mendix Cloud GenAI connector](https://marketplace.mendix.com/link/component/239449) lets you utilize [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/v1/mx-cloud-genai/resource-packs/) directly within your Mendix application. It allows you to integrate generative AI by dragging and dropping common operations from its toolbox. 
+The [Mendix Cloud GenAI connector](https://marketplace.mendix.com/link/component/239449) lets you utilize [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/) directly within your Mendix application. It allows you to integrate generative AI by dragging and dropping common operations from its toolbox. 
 
 ### Features
 
@@ -182,7 +182,7 @@ Instead of relying solely on similarity-based searches of ticket descriptions, u
 
 #### How to get data into a knowledge base 
 
-If you are looking for a step-by-step guide on how to get your application data into a collection inside of a Mendix Cloud Knowledge Base Resource, refer to [Grounding Your Large Language Model in Data – Mendix Cloud GenAI](/appstore/modules/genai/v1/how-to/howto-groundllm/). Note that the Mendix Portal also provides options for importing data into your knowledge base, such as file uploads. For more information, see [Navigate through the Mendix Cloud GenAI Portal](/appstore/modules/genai/v1/mx-cloud-genai/Navigate-MxGenAI/). This documentation focuses solely on adding data from inside a Mendix application and using the connector. 
+If you are looking for a step-by-step guide on how to get your application data into a collection inside of a Mendix Cloud Knowledge Base Resource, refer to [Grounding Your Large Language Model in Data – Mendix Cloud GenAI](/appstore/modules/genai/v1/how-to/howto-groundllm/). Note that the Mendix Portal also provides options for importing data into your knowledge base, such as file uploads. For more information, see [Navigate through the Mendix Cloud GenAI Portal](/appstore/modules/genai/mx-cloud-genai/navigate-mxgenai/). This documentation focuses solely on adding data from inside a Mendix application and using the connector. 
 
 ### Knowledge Base Operations
 

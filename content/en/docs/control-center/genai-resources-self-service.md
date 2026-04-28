@@ -7,7 +7,7 @@ weight: 20
 
 ## Introduction
 
-The **GenAI Resources** section provides a detailed overview of all Mendix GenAI resources available within your company, allowing Mendix Admins to seamlessly provision and deprovision GenAI resources as needed. With this feature, Mendix Admins can efficiently manage all GenAI resources directly within the [Control Center](https://controlcenter.mendix.com/index.html) through a self-service capability, ensuring streamlined operations and improved governance. For more information, refer to [Accessing GenAI Resources](/appstore/modules/genai/v2/mx-cloud-genai/resource-packs/#accessing-genai-resources).
+The **GenAI Resources** section provides a detailed overview of all Mendix GenAI resources available within your company, allowing Mendix Admins to seamlessly provision and deprovision GenAI resources as needed. With this feature, Mendix Admins can efficiently manage all GenAI resources directly within the [Control Center](https://controlcenter.mendix.com/index.html) through a self-service capability, ensuring streamlined operations and improved governance. For more information, refer to [Accessing GenAI Resources](/appstore/modules/genai/mx-cloud-genai/resource-packs/#accessing-genai-resources).
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ When provisioning a new resource, enter the following information:
 * **Display Name** – The name of the resource.
 * **Environment** – The environment for which the resource is created, such as Test, Acceptance, or Production.
 * **Mendix Cloud Region** – The cloud region where the resource will be hosted.
-* **Cross-region inference** – Specifies whether the selected model supports cross-region inference. For more information, refer to the [Settings](/appstore/modules/genai/v2/mx-cloud-genai/Navigate-MxGenAI/#settings) section of *Navigate through the Mendix Cloud GenAI Portal*.
+* **Cross-region inference** – Specifies whether the selected model supports cross-region inference. For more information, refer to the [Settings](/appstore/modules/genai/mx-cloud-genai/Navigate-MxGenAI/#settings) section of *Navigate through the Mendix Cloud GenAI Portal*.
 * **Available Text Generation Models** – A list of the supported models you can choose from, for example, Anthropic Claude Sonnet V4.
 * **Size** – The subscription plan with the tokens used for resources. 
 * **User** – The name of the user for whom the provisioning was initially created.

@@ -2,7 +2,7 @@
 title: "Mendix Workstation"
 url: /mendix-workstation/
 description: "Presents documentation on configuring and using Mendix Workstation."
-weight: 2
+weight: 42
 no_list: false 
 description_list: true 
 cascade:

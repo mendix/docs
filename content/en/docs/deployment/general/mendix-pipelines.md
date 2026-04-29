@@ -206,7 +206,7 @@ Since a remote API password is required to trigger Unit Tests and it is not advi
 
 Using **Timeout (in seconds)** field, users can restrict the execution time of unit tests. If the tests exceed the predefined duration or timeout, the test step fails. It helps to avoid unnecessary waiting if tests are stuck in a loop. 
 
-The **App Readiness Timeout (seconds)** field specifies the maximum time the system will wait while the application is still processing. This field is only available when using Mendix on Kubernetes.
+The **App Readiness Timeout (seconds)** field specifies the maximum time the system will wait while the application is still processing. This field is only available when using [Mendix on Kubernetes](/developerportal/deploy/private-cloud/).
 
 ##### Deploy
 

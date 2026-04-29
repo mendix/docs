@@ -7,7 +7,7 @@ description: "Describes the purpose, features, and configuration of the Markdown
 
 ## Introduction
 
-The [Markdown Viewer](https://marketplace.mendix.com/link/component/230248/) widget renders markdown content from a string attribute as formatted HTML.
+The [Markdown Viewer](https://marketplace.mendix.com/link/component/230248/) widget renders markdown content from a string attribute as formatted HTML. 
 
 The widget does the following:
 
@@ -18,11 +18,15 @@ The widget does the following:
 
 ### Typical Use Cases
 
+This widget is often used in use cases like:
+
 - Displaying user-authored markdown content such as knowledge base articles or notes
 - Rendering formatted text stored in a database attribute
-- Showing README-style documentation within a Mendix application
+- Showing `README.md`-style documentation within a Mendix application
 
 ### Features
+
+This widget leverages the following features:
 
 - Standard markdown syntax rendering, including headings, emphasis, lists, links, images, tables, code blocks, blockquotes, and horizontal rules
 - Typographic replacements (smart quotes, em dashes, en dashes, ellipses)
@@ -32,15 +36,17 @@ The widget does the following:
 
 ### Limitations
 
-- The widget is read-only and does not provide editing or input capabilities
+This widget has the following limitations:
+
+- The widget is read-only, and does not provide editing or input capabilities
 - Code blocks render as plain monospace text without syntax highlighting
 - Custom HTML tags within markdown content are not supported
 
 ## Configuration
 
-To configure the Markdown Viewer widget, do the following:
+To configure the markdown viewer widget, do the following:
 
-1. Place the widget in a data container such as a Data view, List view, or Template grid widget.
+1. Place the widget in a data container such as a data view, list view, or template grid widget.
 1. Navigate to the **General** tab and select the **Value attribute** to use as the content source. This attribute contains the markdown-formatted text to render.
 
 {{% alert color="info" %}}
@@ -56,12 +62,12 @@ Optionally, you can configure the widget further:
 
 The widget renders its content inside a container with the `widget-markdown` CSS class. The following default styles are applied:
 
-- **Tables** are rendered with borders, padding, and left-aligned text. Header cells have a light gray background.
-- **Images** render at a maximum of 35% of the container width by default.
-- **Horizontal rules** span the full width of the container.
+- **Tables** — rendered with borders, padding, and left-aligned text. Header cells have a light gray background
+- **Images** — render at a maximum of 35% of the container width by default
+- **Horizontal rules** — span the full width of the container
 
 You can override these styles by targeting the `.widget-markdown` class in your custom SCSS or theme.
 
 ## Read More
 
-- [markdown-it](https://github.com/markdown-it/markdown-it) — the markdown parsing library used by this widget
+- [markdown-it](https://github.com/markdown-it/markdown-it): the markdown parsing library used by this widget

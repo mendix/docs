@@ -175,17 +175,6 @@ Evaluate the results of the [Maia Best Practice Recommender](/refguide/best-prac
 The following Mendix Pipeline steps are exclusively for the Mendix Public Cloud environment.
 {{% /alert %}}
 
-##### Unit Test {#unit-testing}
-
-The [Unit Testing](/appstore/modules/unit-testing/) module can perform regression testing on an environment in which a new deployment package has been deployed. This step executes the Unit Testing module in a running environment. If any unit test fails, the Mendix Pipeline will be marked as failed, with the run details and output parameters showing the failure count and relevant information. Ensure to add the prerequisites below before you add the Unit Testing Mendix Pipeline step:
-
-* Import the [Unit Testing](https://marketplace.mendix.com/link/component/390) module into your Mendix application from the Marketplace.
-* The environment in which Unit Testing needs to happen should be in a running state.
-
-Since a remote API password is required to trigger Unit Tests and it is not advisable to have sensitive credential information in the Mendix Pipeline definition, use variables within Mendix Pipeline. These variables can then be easily referenced in the Mendix Pipeline design. For more information, see the [Running Unit Tests Through the Remote API](/appstore/modules/unit-testing/#using-the-remote-api) section of *Unit Testing*.
-
-Using **Timeout (in seconds)** field, users can restrict the execution time of unit tests. If the tests exceed the predefined duration or timeout, the test step fails. It helps to avoid unnecessary waiting if tests are stuck in a loop.
-
 ##### Create Backup 
 
 Create and store a backup of an existing environment before deploying a new deployment package. This step is available only for Mendix Cloud.
@@ -205,6 +194,19 @@ Start a selected environment that is running on Mendix Cloud or Mendix on Kubern
 ##### Stop Environment
 
 Stop a selected environment that is running on Mendix Cloud or Mendix on Kubernetes/Azure.
+
+##### Unit Test {#unit-testing}
+
+The [Unit Testing](/appstore/modules/unit-testing/) module can perform regression testing on an environment in which a new deployment package has been deployed. This step executes the Unit Testing module in a running environment. If any unit test fails, the Mendix Pipeline will be marked as failed, with the run details and output parameters showing the failure count and relevant information. Ensure to add the prerequisites below before you add the Unit Testing Mendix Pipeline step:
+
+* Import the [Unit Testing](https://marketplace.mendix.com/link/component/390) module into your Mendix application from the Marketplace.
+* The environment in which Unit Testing needs to happen should be in a running state.
+
+Since a remote API password is required to trigger Unit Tests and it is not advisable to have sensitive credential information in the Mendix Pipeline definition, use variables within Mendix Pipeline. These variables can then be easily referenced in the Mendix Pipeline design. For more information, see the [Running Unit Tests Through the Remote API](/appstore/modules/unit-testing/#using-the-remote-api) section of *Unit Testing*.
+
+Using **Timeout (in seconds)** field, users can restrict the execution time of unit tests. If the tests exceed the predefined duration or timeout, the test step fails. It helps to avoid unnecessary waiting if tests are stuck in a loop. 
+
+The **App Readiness Timeout (seconds)** field specifies the maximum time the system will wait while the application is still processing. This field is only available when using Mendix on Kubernetes.
 
 ##### Deploy
 

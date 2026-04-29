@@ -12,6 +12,12 @@ To see the current status of the Mendix Pipelines, see [Mendix Status](https://s
 
 ## 2026
 
+### April 30, 2026
+
+#### New Features
+
+* We have added the [Unit Testing](/developerportal/deploy/mendix-pipelines/#unit-testing) pipeline step for Mendix on Kubernetes, including support for the **App Readiness Timeout (seconds)** parameter.
+
 ### February 26, 2026
 
 #### New Features

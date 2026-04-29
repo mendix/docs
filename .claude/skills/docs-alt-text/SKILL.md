@@ -9,7 +9,7 @@ disable-model-invocation: false
 
 ## Workflow
 
-**CRITICAL: Follow this order for each image:**
+Follow this order for each image:
 
 1. **STEP 1 - View the image file** (REQUIRED)
    - Extract image src path from figure shortcode
@@ -22,41 +22,30 @@ disable-model-invocation: false
    - Understand the image's purpose within the documentation
    - Consider if context + image together make the image informative or decorative
 
-3. **STEP 3 - Apply W3C decision tree**
+3. **STEP 3 - Determine if informative or decorative**
    - **Technical docs assumption:** Images are informative unless obviously decorative
-   - Categorize as: UI screenshot, procedural step, diagram, code example, graph, or configuration screen
-   - Only use `alt=""` if certain the image is pure decoration (borders, spacers, decorative backgrounds)
+   - **Informative:** Images that convey information → write descriptive alt text
+   - **Decorative:** Images where the information is already given in adjacent text, or pure visual styling with no informational value → use `alt=""`
 
 4. **STEP 4 - Generate alt text**
-   - Maximum 30 words
-   - Convey meaning, not literal description
-   - Don't include "screenshot of", "image of", or "picture of"
-   - Use Mendix terminology
-   - Avoid redundancy with nearby text
-   - For UI screenshots: describe the UI element (e.g., "Create Workspace dialog")
-   - For diagrams: describe what it shows (e.g., "Client-server connection flow")
-   - For procedural steps: describe what user sees (e.g., "Download button in Registration dialog")
+   - **If decorative, use `alt=""`.** Never omit the alt attribute entirely.
+   - **If informative, generate descriptive alt text:**
+      - Focus on the information the image communicates, not what it looks like
+      - Give the most concise description possible
+      - Maximum 30 words (flag complex images needing longer descriptions for body text)
+      - Don't include "screenshot of", "image of", or "picture of" (screen readers already announce it's an image)
+      - Use Mendix terminology
+      - Avoid redundancy with nearby text
+      - **Based on surrounding context:**
+         - In a procedure: emphasize the action/element relevant to the step (e.g., "Download button in Registration dialog")
+         - Showing UI elements: name the relevant elements (e.g., "Properties pane")
+         - Showing structure or relationships: describe what entities/components are connected (e.g., "Domain model with Customer and Order entities connected by one-to-many association")
+         - Showing logic or process flow: describe what the flow accomplishes (e.g., "Microflow that retrieves FileDocument list and updates encryption keys")
 
 5. **STEP 5 - Edit the figure shortcode**
    - Use Edit tool to add/update only the `alt` attribute
    - Preserve all other attributes: `class`, `width`, `max-width`, `link`
    - Maintain exact indentation and spacing
-
-## W3C Guidelines Summary
-
-**Informative images:**
-- Convey meaning or information → provide descriptive alt text
-- Be "the most concise description possible"
-- Focus on what information it communicates, not what it looks like
-
-**Decorative images (rare in technical docs):**
-- Pure visual styling with no informational value → use `alt=""`
-- When in doubt: describe it—better than incorrectly marking decorative
-
-**Never:**
-- Omit the alt attribute entirely
-- Say "image of" or "screenshot of" (screen readers already announce it's an image)
-- Create alt text longer than 30 words (flag as complex image needing body text description)
 
 ## Special Cases
 

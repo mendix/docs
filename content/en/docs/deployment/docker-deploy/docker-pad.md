@@ -171,19 +171,19 @@ This example assumes that your configuration is named Default.
 
 ## Environment Variables {#env-variables}
 
-The Mendix Runtime can be configured using environment variables. A sample of the following environment variables are supported:
+You can configure the Mendix Runtime by using environment variables. For example, the following environment variables are supported:
 
 | Environment Variable | Description |
-|----------------------|-------------|
-|`DATABASE_TYPE`|The type of the database (e.g., PostgreSQL, MySQL)|
-|`DATABASE_HOST`|The hostname of the database server and the port of the database server|
-|`DATABASE_NAME`|The name of the database|
+| --- | --- |
+| `DATABASE_TYPE` | The type of the database (for example, PostgreSQL, MySQL)|
+| `DATABASE_HOST` | The host name and port of the database server |
+| `DATABASE_NAME` |The name of the database |
 
-From more information for more information, see https://docs.mendix.com/refguide/custom-settings/#introduction 
+For more information, see [Runtime Customization](/refguide/custom-settings/#introduction).
 
 ## Configuration File {#config-file}
 
-Alternatively, you can configure the Mendix Runtime using a configuration file. The configuration file is a JSON file that contains the same settings as the environment variables.
+Alternatively, you can configure the Mendix Runtime by using a configuration file. The configuration file is a JSON file that contains the same settings as the environment variables.
 
 ### Example Configuration File
 
@@ -202,37 +202,35 @@ Alternatively, you can configure the Mendix Runtime using a configuration file. 
 
 ### Using the Configuration File
 
-To use the configuration file, you can upload the configuration file to the path of the configuration path:
+To use the configuration file, you can upload the configuration file to the configuration path:
 
-`docker run --rm -it -p 8080:8080 -e M2EE_ADMIN_PASS=<your password> <your-registry>/<your-image-name>:<tag> \
- -v host_path/config.conf:container_path/config.conf`
+`docker run --rm -it -p 8080:8080 -e M2EE_ADMIN_PASS=<your password> <your-registry>/<your-image-name>:<tag> \ -v host_path/config.conf:container_path/config.conf`
  
-You need to mount the volume so that Docker can find it.
+You must also mount the volume so that Docker can find it.
 
 ## Logging
 
-The Mendix Runtime logs to standard output by default. You can configure the log level using the MX_LOG_LEVEL environment variable.
+The Mendix Runtime logs to a standard output by default. You can configure the log level using the `MX_LOG_LEVEL` environment variable.
 
 The following log levels are supported (in order of verbosity):
 
-|Log Level|Description|
-|---------|-----------|
-|`TRACE`|Most verbose — logs all internal operations|
-|`DEBUG`|Detailed diagnostic information|
-|`INFO`|General operational messages (default)|
-|`WARNING`|Potentially harmful situations|
-|`ERROR`|Error events that may still allow the app to continue|
-|`CRITICAL`|Severe errors that may cause the app to stop|
-
+| Log Level | Description |
+| --------- | ----------- |
+| `TRACE` | Most verbose — logs all internal operations |
+| `DEBUG` | Detailed diagnostic information |
+| `INFO` | General operational messages (default) |
+| `WARNING` | Potentially harmful situations |
+| `ERROR` | Error events that may still allow the app to continue |
+| `CRITICAL` | Severe errors that may cause the app to stop |
 
 ## Health Checks
 
 The Mendix Runtime exposes health check endpoints that can be used to monitor the status of your app:
 
-|EndPoint|Description|
-|--------|-----------|
-|`/health`|Returns the overall health status of the app|
-|`/health/live`|Returns the liveness status — indicates if the app is running|
-|`/health/ready`|Returns the readiness status — indicates if the app is ready to serve traffic|
+| EndPoint | Description |
+| -------- | ----------- |
+| `/health` | Returns the overall health status of the app |
+| `/health/live` | Returns the liveness status — indicates if the app is running |
+| `/health/ready` | Returns the readiness status — indicates if the app is ready to serve traffic |
 
 These endpoints are especially useful when integrating with orchestration platforms such as Kubernetes, which rely on liveness and readiness probes to manage container lifecycle.

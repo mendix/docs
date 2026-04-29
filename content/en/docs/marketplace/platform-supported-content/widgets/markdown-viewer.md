@@ -34,14 +34,6 @@ This widget leverages the following features:
 - Offline capable
 - Conditional visibility support
 
-### Limitations
-
-This widget has the following limitations:
-
-- The widget is read-only, and does not provide editing or input capabilities
-- Code blocks render as plain monospace text without syntax highlighting
-- Custom HTML tags within markdown content are not supported
-
 ## Configuration
 
 To configure the markdown viewer widget, do the following:
@@ -67,6 +59,14 @@ The widget renders its content inside a container with the `widget-markdown` CSS
 - **Horizontal rules** — span the full width of the container
 
 You can override these styles by targeting the `.widget-markdown` class in your custom SCSS or theme.
+
+## Limitations
+
+This widget has the following limitations:
+
+- The widget is read-only, and does not provide editing or input capabilities
+- Code blocks render as plain monospace text without syntax highlighting
+- Custom HTML tags within markdown content are not supported
 
 ## Read More
 

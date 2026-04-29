@@ -44,4 +44,3 @@ Refer to the following pages for details on Mendix Academy exams:
 * [Purchasing Mendix Exam Seats](/academy/purchasing-exams/)
 * [Managing Exam Seats](/academy/purchasing-exams/manage-exam-seats/)
 * [Managing Exam Admins](/academy/purchasing-exams/manage-exam-admins/)
-

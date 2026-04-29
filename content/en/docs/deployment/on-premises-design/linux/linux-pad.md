@@ -52,7 +52,7 @@ To deploy your app to Linux, perform the following steps:
     * For Debian/Ubuntu-based systems: `sudo apt install temurin-21-jdk -y`
     * For RHEL/CentOS-based systems: `sudo yum install temurin-21-jdk -y` or `sudo dnf install temurin-21-jdk -y`
 
-If your application requires it, you can change the Java version on vendor as needed, for example, `openjdk-21-jdk` or `java-17-amazon-corretto`.
+If your application requires it, you can change the Java version on vendor as needed, for example, `openjdk-21-jdk` or `java-21-amazon-corretto`.
 
 {{% alert color="info" %}}
 Your Portable App Distribution only requires a Java Runtime Environment (JRE) to run, but it is often recommended to install a full JDK as it includes the JRE and development tools.

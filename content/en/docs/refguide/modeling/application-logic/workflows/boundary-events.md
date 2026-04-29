@@ -65,7 +65,7 @@ To configure the properties of a boundary event, double-click the event to open 
 
 When a boundary event is added to an ongoing activity, any workflow instances currently executing that activity will schedule the new boundary event accordingly. The only exception occurs when an ongoing boundary event is removed from the ongoing activity, the workflow is redeployed, and then the removal is reverted. In this case, the re-added boundary event will not be scheduled.
 
-#### Implications of Changing the Boundary Event Type
+#### Implications of Changing the Boundary Event Type {#event-type-change}
 
 For an existing boundary event, when you change its type from non-interrupting to interrupting or vice versa, you will be presented with a warning dialog. For example, when you change a boundary event from non-interrupting to interrupting, you will see the following warning dialog:
 
@@ -78,7 +78,7 @@ After you confirm the change:
     * If the changed boundary event was non-interrupting, you will get the [Non-interrupting Boundary Event Path Removed](/refguide/workflow-versioning/#non-interrupting-boundary-event-path-removed) conflict.
     * If the changed boundary event was interrupting, you will get the [Current Activity Removed](/refguide/workflow-versioning/#current-activity-removed) conflict.
 
-Boundary events are re-created upon type switch due to the execution limitations that exist for ongoing boundary events. For example, the parent activity will not be aborted when a non-interrupting boundary event starts. Once the boundary event type is changed to interrupting, the parent activity will stay in progress. That would allow the parent activity to have more than one ongoing interrupting boundary event. Vice versa, when an ongoing interrupting boundary event is changed to be non-interrupting, the parent activity is already aborted. Since a non-interrupting boundary event cannot end a workflow, it may remain active indefinitely unless explicitly aborted.
+Boundary events are re-created upon type switch because in-place conversion can result in states that contradict BPMN 2.0 concepts. According to BPMN, an interrupting boundary event must abort its parent activity when triggered, meaning an activity cannot have more than one active interrupting boundary event. Converting an already-triggered non-interrupting boundary event to interrupting in place violates this rule: the parent activity remains in progress, resulting in an interrupting boundary event whose parent is never aborted. Conversely, converting an already-triggered interrupting boundary event to non-interrupting in place leaves it active on an already-aborted parent activity, contradicting the BPMN rule that a non-interrupting boundary event must not abort its parent.
 
 ### Rearranging Boundary Events
 

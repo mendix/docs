@@ -33,6 +33,7 @@ See below a list of Maia Chat's data sources:
 * [Mendix Blog](https://www.mendix.com/blog/)
 * [Mendix Medium](https://medium.com/mendix)
 * [Mendix Evaluation Guide](https://www.mendix.com/evaluation-guide/)
+* [Mendix Support Knowledge Base](https://support.mendix.com/hc/en-us/p/knowledge-base) (in Studio Pro 11.10 and above)
 
 ## Using Maia Chat
 

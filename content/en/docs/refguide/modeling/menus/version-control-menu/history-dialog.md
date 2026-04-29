@@ -2,22 +2,23 @@
 title: "History"
 url: /refguide/history-dialog/
 weight: 50
+description: "Describes the History pane in Studio Pro, which shows committed changes to an app's development line."
 ---
 ## Introduction
 
-Use the **History** pane to see the changes that have been committed to a development line of an app. You can open this pane from the **Version Control** > **History…** menu item. The **History** pane displays all revisions at once in a searchable grid, making it easy to view the detailed project history.
+Use the **History** pane to see the changes that have been committed to a development line of an app. You can open this pane by selecting **Version Control** > **History** from the menu. The **History** pane displays all revisions at once in a searchable grid, making it easy to view the detailed project history.
 
 {{% alert color="info" %}}
-In Studio Pro 11.6, a new default view for History was introduced. Partially-cloned apps automatically get the older blocking dialog and through the [Version Control Preferences](/refguide/preferences-dialog/#history-pane), you can choose to keep using the blocking dialog for all apps.
+Studio Pro 11.6 introduced a new default view for History. Partially cloned apps automatically use the older blocking dialog. You can also choose to keep using the blocking dialog for all apps through the [Version Control Preferences](/refguide/preferences-dialog/#history-pane).
 
-When using the Revision Selector to select a revision to revert, to merge from, create a branch line off, or to create a deployment archive from, the blocking dialog is still used.
+The Revision Selector still uses the blocking dialog when you select a revision to revert, merge from, create a branch line from, or create a deployment archive from.
 
-For more information on the blocking dialog, refer to the [Mendix 10 documentation](/refguide10/history-dialog/).
+For more information on the blocking dialog, see the [Mendix 10 documentation](/refguide10/history-dialog/).
 {{% /alert %}}
 
 ## Revisions
 
-{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/history-dialog/revisions.png" alt="Revisions Image" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/history-dialog/revisions.png" alt="History pane showing a grid of revisions" class="no-border" >}}
 
 Each line in the grid represents a revision in the repository. 
 
@@ -40,6 +41,14 @@ For each revision the following information is shown, more information about eac
 * [Message](#message)
 
 By selecting a revision in this grid, the tabs below the grid will be filled with information about this revision.
+
+### Comparing Revisions
+
+To compare any revision to your current working state, right-click a revision and select **Compare to current state**. This opens the [Comparison pane](/refguide/comparison-pane/), which shows all differences between the selected revision and your current state, including uncommitted changes.
+
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/comparison-pane/history-right-click-menu.png" alt="Right-click menu showing Compare to current state option" class="no-border" >}}
+
+For more information, see [Comparing Revisions](/refguide/comparing-revisions/).
 
 #### Revision{#revision}
 
@@ -96,3 +105,5 @@ This tab shows a list of stories that are related to the changes.
 * [Version Control](/refguide/version-control/)
 * [Stories Pane](/refguide/stories-pane/)
 * [Using Version Control History](/refguide/version-control-using-history/)
+* [Comparison Pane](/refguide/comparison-pane/)
+* [Comparing Revisions](/refguide/comparing-revisions/)

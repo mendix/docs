@@ -549,7 +549,7 @@ Starting from Mendix Operator 2.23.0, environments running in `leaderless` mode 
 When another **runtimeLeaderSelection** mode is used (default, unspecified `assigned` mode, or `none`), the healthcheck microflow is used, as described above.
 {{% /alert %}}
 
-#### Customize Liveness Probe to Resolve Crash Loopback Scenarios
+#### Customize Liveness Probe to Resolve Crash Loopback Scenarios{#customize-liveness}
 
 The `liveness probe` informs the cluster whether the pod is dead or alive. If the pod fails to respond to the liveness probe, the pod will be restarted (this is called a `crash loopback`).
 

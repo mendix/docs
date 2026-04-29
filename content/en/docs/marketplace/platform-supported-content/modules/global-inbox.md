@@ -63,13 +63,13 @@ The **Global Inbox** consists of the following components:
 
 The Global Inbox operates with the following event flow:
 
-1. Publisher App registration: Each publisher application registers with the Global Inbox by publishing a **PublisherAppRegisteredEvent**. This ensures the Global Inbox knows which apps are available to send task events. As part of this registration, the application's workflow groups are synchronized with the Global Inbox.
+1. Publisher App registration: Each publisher application registers with the Global Inbox by publishing a **PublisherAppRegistered**. This ensures the Global Inbox knows which apps are available to send task events. As part of this registration, the application's workflow groups are synchronized with the Global Inbox.
 2. Task update and event publication: When a workflow or task is created, updated, or completed in a publisher application that includes the Global Inbox Connector, the connector publishes the following events:
-    * **WorkflowUpdatedEvent** – triggered when the workflow is updated.
-    * **UserTaskUpdatedEvent** – triggered when a user task is updated.
-    * **UserTaskEndedEvent** – triggered when a user task is completed or aborted.
-    * **UserTaskOutcomeSelectedEvent** – triggered when a user completes a task by selecting an outcome.
-    * **WorkflowGroupUpdatedEvent** – triggered when a workflow group is updated.
+    * **WorkflowUpdated** – triggered when the workflow is updated.
+    * **UserTaskUpdated** – triggered when a user task is updated.
+    * **UserTaskEnded** – triggered when a user task is completed or aborted.
+    * **UserTaskOutcomeSelected** – triggered when a user completes a task by selecting an outcome.
+    * **WorkflowGroupUpdated** – triggered when a workflow group is updated.
 3. Event consumption: The Global Inbox consumes these events and updates or creates the corresponding task entries in the central task list.
 4. Task visibility and navigation: Tasks become visible in the Global Inbox. Users can click a button to navigate directly to the corresponding task page in the Publisher Application to take action.
 
@@ -84,7 +84,7 @@ The Global Inbox operates with the following event flow:
 
 3. Add the User module roles to the required App roles.
 4. Deploy and configure constants:
-    * The **CleanupEventsAfterDays** constant can be configured at: **UseMe** > **Configuration** > **CleanupEventsAfterDays**. All business events use their own entities to store data for consumption. For example, **CBE_UserTaskUpdatedEvent** stores data for the User Task Updated event. The **CleanupEventsAfterDays** setting is configurable and determines how long event data is retained. Data older than the specified number of days is automatically cleaned up. The default value is set to 30 days.
+    * The **CleanupEventsAfterDays** constant can be configured at: **UseMe** > **Configuration** > **CleanupEventsAfterDays**. All business events use their own entities to store data for consumption. For example, **CBE_UserTaskUpdated** stores data for the User Task Updated event. The **CleanupEventsAfterDays** setting is configurable and determines how long event data is retained. Data older than the specified number of days is automatically cleaned up. The default value is set to 30 days.
     * The **DueDateExpirationInDays** constant defines the period in days for which the user tasks are to be considered almost due with visual indicators in the **Global Task Inbox** page. The default value is set to 2 days. You should set the value based on your business needs.
 
 {{% alert color="info" %}}
@@ -94,10 +94,9 @@ Make sure the Global Inbox app is deployed and running before deploying the Publ
 ### Setting up Global Inbox Connector
 
 1. Import the [Global Inbox Connector](https://marketplace.mendix.com/link/component/259155) module. This module is responsible for publishing workflow task events to the Global Inbox, enabling the central application to stay synchronized with task creation, updates, and completion occurring in the source applications.
-2. In the runtime settings of your app, configure the **ASU_GlobalInboxConnector_Startup** microflow for the [after startup property](/refguide/runtime-tab/#after-startup). If there is already an after startup microflow set, add the **ASU_GlobalInboxConnector_Startup** microflow as an microflow call activity in the existing microflow.
+2. In the runtime settings of your app, configure the **ASU_GlobalInboxConnector_Startup** microflow for the [after startup property](/refguide/runtime-tab/#after-startup). If there is already an after startup microflow set, add the **ASU_GlobalInboxConnector_Startup** microflow as an microflow call activity in the existing microflow. This microflow also contains logic to migrate existing **WorkflowUserTask** objects to the Global Inbox. Only tasks that are in progress are included in the migration, and it runs only once. The migration is executed synchronously, as user tasks might otherwise be updated during the migration process. Because the task queue is not used, deployment of the application may take some time. If you do not want to perform this migration, or if it does not align with your business needs, you can remove it from the startup flow.
 3. Add the User module roles to the required App roles.
 4. Deploy and configure constants:
-    * **AppId**: Must be a unique identifier for each publisher app. Do not change this identifier once configured.
     * **AppName**: This value will be displayed in your Global Inbox as the publisher app name.
     * **AppBaseUrl**: Must include the protocol (http:// or https://) and must not end with a trailing slash. It is used as the base URL when redirecting users to the publisher apps.
 5. When a user opens a task from the **Global Inbox**, they are redirected to the corresponding task page in the Publisher Application through a deeplink. Because the user entered the application through the Global Inbox instead of the normal navigation flow, developers must decide how the application should behave when the user completes the user task and/or closes the page. Developers can either change show page action in the deeplink microflow **DL_WorkflowUserTask_ShowUserTaskPage** to redirect to another page or adjust the default deeplink landing page in **UseMe** > **Deeplink** > **Deeplink Landing Page** to meet their business needs. If further customization is required, it is possible to adjust the logic for the outcome buttons in each of the task pages.

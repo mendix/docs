@@ -53,16 +53,25 @@ Event sub-processes are triggered by a [Notify workflow](/refguide/notify-workfl
 
 Event sub-processes can be configured as either interrupting or non-interrupting, depending on how they interact with the main process flow.
 
-* **Interrupting (solid line)** – Immediately cancels the main process flow.
+* **Interrupting (solid line)** – Immediately cancels the main process flow and all ongoing sub-processes within the workflow instance.
 * **Non-Interrupting (dashed line)** – Runs in parallel with the main flow.
 
-{{% alert color="info" %}}
-Currently, Mendix only supports the non-interrupting variant of event sub-processes. Support for interrupting event sub-processes is planned for a future release.
-{{% /alert %}}
+##### Implications of Changing the Sub-Process Start Event Type {#event-type-change}
+
+For an existing event sub-process, when you change the type of its start event from non-interrupting to interrupting or vice versa, you will be presented with a warning dialog. For example, when you change a notification start event from non-interrupting to interrupting, you will see the following warning dialog:
+
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/event-sub-processes/security-dialog.png" alt="Security Dialog when changing type" width="450">}}
+
+After you confirm the change:
+
+* The sub-process is re-created with a start event of the specified type, along with all the event sub-process activities. The new start event can be triggered after the workflow is redeployed and is in progress.
+* The workflow becomes incompatible if the changed event sub-process is already being executed in one of the ongoing workflow instances.
+
+The event sub-process is re-created upon type switch because in-place conversion can result in states that contradict BPMN 2.0 concepts. According to BPMN, an interrupting event sub-process cancels the parent process scope and all other active sub-processes when triggered, while a non-interrupting one runs in parallel without affecting them. These are mutually exclusive execution models: an event sub-process instance belongs to exactly one of them from the moment it starts. Changing the type in place for an already-active instance would leave it in a state that is neither valid interrupting nor valid non-interrupting behavior, violating the fundamental BPMN distinction between the two.
 
 #### Concurrency Limitation
 
-Mendix workflows currently support a **single concurrent instance** per defined event sub-process. If a non-interrupting event sub-process is already active, subsequent attempts to trigger that same sub-process via the **Notify workflow** activity will return `false`. No new instances will be created for that specific sub-process while one is **In Progress**. A new instance can only be initiated once the active sub-process has completed its execution path.
+Mendix workflows currently support a **single concurrent instance** per defined event sub-process. If an event sub-process is already active, subsequent attempts to trigger that same sub-process via the **Notify workflow** activity will return `false`. No new instances will be created for that specific sub-process while one is **In Progress**. A new instance can only be initiated once the active sub-process has completed its execution path.
 
 If your workflow has multiple, distinct event sub-processes defined (for example, one for "Address Change" and one for "Document Upload"), each one can have its own active instance simultaneously. One being active does not prevent a different one from being triggered.
 

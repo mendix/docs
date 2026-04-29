@@ -21,11 +21,14 @@ For information on the current limitations, see the [Limitations](#limitations) 
 
 ## Using MCP Client {#using-mcp-client}
 
-To open the MCP Client panel, click the **Configure MCP Connections** ({{% icon name="plug" %}}) icon under the **Maia Chat** tab.
+There are two ways to open the MCP Client panel:
+
+* Click the **Configure MCP Connections** ({{% icon name="plug" %}}) icon under the **Maia Chat** tab.
+* Go to the **View** menu and click **MCP Settings**.
 
 ### Adding an MCP Server {#adding-server}
 
-To add a server, fill in the following fields and click **Add**:
+To add a server, click **+ Add MCP Server**, fill in the following fields, and click **OK**:
 
 * **Server Name** — A display name. Must be unique among your configured servers.
 * **URL** — The server endpoint. Must use `https://` or `http://`.
@@ -38,7 +41,6 @@ Choose how Studio Pro authenticates with the MCP server:
 
 * **No Auth** — select this for servers that do not require credentials.
 * **Bearer Token** — paste an API token or personal access token. The token is stored securely and is not exposed after entry.
-    {{% alert color="warning" %}}Currently, when using Bearer Token based authentication for the [MCP client](/refguide/maia-mcp/#authentication), the token information is not being sent, leading to failed authentication.{{% /alert %}}
 * **OAuth 2.1** — a browser window opens so you can authorize Studio Pro with the server's provider. Two optional fields appear:
     * **Client ID** — required if the server does not support automatic client registration.
     * **Client Secret** — required by some providers (for example, GitHub).

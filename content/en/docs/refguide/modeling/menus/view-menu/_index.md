@@ -68,6 +68,10 @@ This pane has two levels, so when you zoom into a changed document, you can revi
 
 <video width="640" height="360" controls src="/attachments/refguide/view-menu/changes.mp4">VIDEO</video>
 
+### Comparison
+
+The [Comparison pane](/refguide/comparison-pane/) shows the differences between a selected historical revision and your current working state, which allows you to see what documents, elements, and properties changed.
+
 ### History {#history-pane}
 
 The non-blocking History pane shows commits in your repository and allows you to search and navigate to modified documents without closing the history view.

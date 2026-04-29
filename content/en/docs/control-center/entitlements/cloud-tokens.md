@@ -46,10 +46,10 @@ These tables show how many Mendix Cloud Tokens each CRP requires:
 | M21 | 40 |
 | L21 | 80 |
 | XL21 | 160 |
-| 2XL21 | 320 |
-| 3XL21 | 640 |
-| 4XL21 | 1280 |
-| 4XL-5XLDB | 2240 |
+| XXL21 | 320 |
+| XXXL21 | 640 |
+| XXXXL21 | 1280 |
+| XXXXL-5XLDB | 2240 |
 
 |Premium Resource Packs | Mendix Cloud Tokens |
 | --- | --- |
@@ -57,18 +57,18 @@ These tables show how many Mendix Cloud Tokens each CRP requires:
 | M21 | 60 |
 | L21 | 120 |
 | XL21 | 240 |
-| 2XL21 | 480 |
-| 3XL21 | 960 |
-| 4XL21 | 1920 |
-| 4XL-5XLDB | 3360 |
+| XXL21 | 480 |
+| XXXL21 | 960 |
+| XXXXL21 | 1920 |
+| XXXXL-5XLDB | 3360 |
 
 |Premium Plus Resource Packs | Mendix Cloud Tokens |
 | --- | --: |
 | XL21 | 400 |
-| 2XL21 | 800 |
-| 3XL21 | 1600 |
-| 4XL21 | 3200 |
-| 4XL-5XLDB | 5600 |
+| XXL21 | 800 |
+| XXXL21 | 1600 |
+| XXXXL21 | 3200 |
+| XXXXL-5XLDB | 5600 |
 
 | Legacy Resource Packs | Mendix Cloud Tokens |
 | --- | --: |
@@ -77,7 +77,7 @@ These tables show how many Mendix Cloud Tokens each CRP requires:
 | M20 | 40 |
 | L20 | 80 |
 | XL20 | 160 |
-| 2XL20 | 320 |
+| XXL20 | 320 |
 | Strato | 12 |
 | Meso | 47 |
 | Iono | 67 |
@@ -86,8 +86,8 @@ These tables show how many Mendix Cloud Tokens each CRP requires:
 | M | 16 |
 | L | 37 |
 | XL | 73 |
-| 2XL | 167 |
-| 3XL | 640 |
+| XXL | 167 |
+| XXXL | 640 |
 
 {{% alert color="info" %}} 
 

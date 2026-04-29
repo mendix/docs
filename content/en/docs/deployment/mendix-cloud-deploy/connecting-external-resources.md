@@ -3,12 +3,13 @@ title: "Connecting to External Resources"
 url: /developerportal/deploy/connecting-to-external-resource/
 weight: 80
 description: "How to connect to external resource using private connectivity"
+beta: true
 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 {{% alert color="warning" %}}
-Private Connectivity will be out of Public Beta on May 31, 2026. After that date, the service will no longer be available, and Mendix will start preparing it for General Availability (GA). Check the [Feature Release Calendar](/releasenotes/feature-release-calendar/) for details on the GA release date.
+Private Connectivity is currently in Public Beta, and will be out of Public Beta on May 31, 2026. After that date, the service will no longer be available, and Mendix will start preparing it for General Availability (GA). Check the [Feature Release Calendar](/releasenotes/feature-release-calendar/) for details on the GA release date.
 {{% /alert %}}
 
 ## Introduction

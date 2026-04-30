@@ -5,6 +5,32 @@ weight: 8
 description: "Native Template 17"
 ---
 
+## 17.2.0
+
+**Release date: April 29, 2026**
+
+### Fixes
+
+* We updated `@mendix/native` to v9.3.1, strengthening Android cookie encryption by migrating from `AES/CBC/PKCS7Padding` to `AES/GCM/NoPadding`.
+* We fixed the iOS builds crashing when building with Xcode 26.
+* We resolved an issue that version logs events are not getting recorded in firebase for Android.
+
+## 17.0.4
+
+**Release date: January 22, 2026**
+
+### Improvements
+
+* We added the LocationWhenInUse permission to the iOS configuration to support react-native-permissions.
+
+## 17.0.3
+
+**Release date: January 15, 2026**
+
+### Improvements
+
+* We removed leftover Detox references from the Android build files. This fixes an issue where generating Android APKs would fail due to Detox dependencies not being found.
+
 ## 17.0.2 {#1702}
 
 **Release date: January 12, 2026**

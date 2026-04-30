@@ -5,6 +5,16 @@ weight: 6
 description: "Native Template 14"
 ---
 
+## 14.1.16
+
+**Release date: Apr 29, 2026**
+
+### Fixes
+
+- We updated `@mendix/native` to v9.3.1, strengthening Android cookie encryption by migrating from `AES/CBC/PKCS7Padding` to `AES/GCM/NoPadding`.
+- We resolved an issue that version logs events are not getting recorded in firebase for Android.
+- We Fixed the iOS builds crashing when building with Xcode 26.
+
 ## 14.1.15 {#1425}
 
 **Release date: Apr 22, 2026**

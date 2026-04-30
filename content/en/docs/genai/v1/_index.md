@@ -1,16 +1,16 @@
 ---
-title: "Agents Kit 1.0"
+title: "Agents Kit 1"
 url: /appstore/modules/genai/v1
 weight: 10
-description: "Describes the Agents Kit 1.0 components for building generative AI applications in Studio Pro 10.24 and above"
+description: "Describes the Agents Kit 1 components for building generative AI applications in Studio Pro 10.24 and above"
 ---
 
 ## Introduction
 
-Agents Kit 1.0 provides a comprehensive set of Mendix components for building generative AI applications. This version includes starter apps and showcase apps to help you get started quickly. It also includes connector modules to integrate with Mendix Cloud GenAI resources and external providers like Amazon Bedrock, OpenAI, Google Gemini, and Mistral. Core modules like Agent Commons and GenAI Commons provide reusable patterns and capabilities for building agentic functionality.
+Agents Kit 1 provides a comprehensive set of Mendix components for building generative AI applications. This version includes starter apps and showcase apps to help you get started quickly. It also includes connector modules to integrate with Mendix Cloud GenAI resources and external providers like Amazon Bedrock, OpenAI, Google Gemini, and Mistral. Core modules like Agent Commons and GenAI Commons provide reusable patterns and capabilities for building agentic functionality.
 
 {{% alert color="info" %}}
-Agents Kit 1.0 is available for Studio Pro 10.24 and above. For the newest agentic features and improvements, upgrade to Studio Pro 11.12 or above and use [Agents Kit 2.0](/appstore/modules/genai/v2/).
+Agents Kit 1 is available for Studio Pro 10.24 and above. For the newest agentic features and improvements, upgrade to Studio Pro 11.12 or above and use [Agents Kit 2](/appstore/modules/genai/v2/).
 {{% /alert %}}
 
 This section includes the following resources:
@@ -21,7 +21,7 @@ This section includes the following resources:
 
 ## Mendix Components
 
-The following Marketplace components are available in Agents Kit 1.0. All components are available from the [Mendix Marketplace](/appstore/).
+The following Marketplace components are available in Agents Kit 1. All components are available from the [Mendix Marketplace](/appstore/).
 
 ### Starter Apps and Showcase Apps
 

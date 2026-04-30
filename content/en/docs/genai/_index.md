@@ -10,7 +10,7 @@ weight: 16
 
 With Mendix generative AI (GenAI) capabilities, you can create engaging, intelligent experiences with a variety of AI models and your own data. Build AI-powered applications with Agents Kit, a set of components that support implementations ranging from simple text generation to complex multi-step agentic workflows.
 
-Agents Kit 2.0 is available for Studio Pro 11.12 and above. Agents Kit 1.0 is available for Studio Pro 10.24 and above. Older versions of some Marketplace modules and the GenAI Showcase App are available in Studio Pro 9.24.2.
+Agents Kit 2 is available for Studio Pro 11.12 and above. Agents Kit 1 is available for Studio Pro 10.24 and above. Older versions of some Marketplace modules and the GenAI Showcase App are available in Studio Pro 9.24.2.
 
 These pages document the modules, connectors, and apps for building agentic applications with models from Amazon Bedrock, OpenAI, Mistral, Google Gemini, and other platforms.
 

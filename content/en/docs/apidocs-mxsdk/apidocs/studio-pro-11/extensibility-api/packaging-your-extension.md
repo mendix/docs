@@ -2,24 +2,24 @@
 title: "Packaging Your Extension"
 url: /apidocs-mxsdk/apidocs/extensibility-api-11/packaging-your-extension/
 weight: 30
-description: "Describes how to package extensions into add-on modules and publish them to the Mendix Marketplace for use in Studio Pro apps."
+description: "Explains how to package extensions into add-on modules and publish them to the Mendix Marketplace."
 ---
 
 # Packaging Your Extension
 
-After you complete development on your extension, you can package it into an add-on module so others can use it. After you package the module, you can publish it to the Mendix Marketplace so other users can download it into their Studio Pro apps.
+After you complete development on your extension, you can package it into an add-on module so others can use it. You can then publish the module to the Mendix Marketplace so other users can download it into their apps.
 
 To package your extension, follow these steps:
 
-1. Verify that you have enabled the [Extension Development](/refguide/preferences-dialog/#extension-development) setting in your app's **Preferences**. Alternatively, you can start Studio Pro with the `--enable-extension-development` command-line option.
-2. In your Studio Pro app, create a new module and include your development extension.
-3. Give the module a name.
+1. Verify that you have enabled the [Extension Development](/refguide/preferences-dialog/#extension-development) setting in your app's **Preferences**. Alternatively, start Studio Pro with the `--enable-extension-development` command-line option.
+2. In your app, create a new module and include your development extension.
+3. Name the module.
 4. Open the module's settings and on the **Export** tab, select **Add-on module**.
 5. In the **Extension name** list, select the extension you want to package.
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensionAddOnModule.png" alt="Extension settings showing Add-on module selected with Extension name dropdown" >}}
 
-After you create your add-on module with its extension, you can export it by right-clicking the module in the **App Explorer** and selecting **Export add-on module package**.
+After you create your add-on module with its extension, export it by right-clicking the module in the **App Explorer** and selecting **Export add-on module package**.
 
 ![Export Module](/attachments/apidocs-mxsdk/apidocs/extensibility-api/exportAddOnModule.png)
 

@@ -51,11 +51,12 @@ Do not modify `.claude/settings.json` or other files in the `.claude/` directory
 This repository includes custom Claude Code skills optimized for documentation work:
 
 * `/docs-proofread` - Checks spelling, grammar, punctuation, and basic Markdown formatting
-* `/docs-polish` - Improves clarity, readability, and word choice without changing meaning
+* `/docs-polish` - Applies the Mendix style guide and improves clarity, readability, and word choice without changing meaning
 * `/docs-enhance` - Performs comprehensive editing including reorganization, restructuring, and stronger phrasing
-* `/docs-review` - Analyzes documentation and generates suggestions for improvements
 * `/docs-add` - Adds new content to an existing page while preserving original structure
-* `/docs-pr-review` - Reviews all changes in the PR rather than just a single document
+* `/docs-review` - Analyzes a page and generates suggestions for improvements without making any edits
+* `/docs-pr-review` - Reviews all changes in a PR rather than just a single document
+* `/docs-alt-text` - Suggests W3C-compliant alt text for images on a page
 
 These skills are available to all contributors using Claude Code with this repository.
 

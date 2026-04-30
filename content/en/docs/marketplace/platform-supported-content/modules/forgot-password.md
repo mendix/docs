@@ -152,7 +152,7 @@ To disable anonymous users, set the `EnableAnonymousUserRole` constant to *False
 You can use either a Mendix page or an endpoint to access the login page, but not both at the same time.
 {{% /alert %}}
 
-#### Translating HTMML Pages of the Module{#translation-html}
+#### Translating HTML Pages of the Module{#translation-html}
 
 You can use the **Batch Translate** option if you want to translate HTML pages, (such as, Sign Up and Reset Password pages which are not guarded by the Mendix runtime security model). It allows you to translate labels, error messages, and other text elements of HTML pages.
 

@@ -686,6 +686,7 @@ This action allows you to programmatically set log levels for specific log nodes
 {
   "action": "set_log_level",
   "params": {
+    "subscriber": "*",
     "nodes": [
       {
         "name": "<LogNode>",
@@ -704,13 +705,6 @@ This action allows you to programmatically set log levels for specific log nodes
 The `force` parameter allows you to set log levels for log nodes that do not yet exist in the runtime.
 {{% /alert %}}
 
-### Example Response
+### Response
 
-{{% todo %}}What is the response?{{% /todo %}}
-
-```json
-{
-}
-```
-
-### Return Values
+The request will always return an empty JSON object (`{}`) with status code 200, if successful.

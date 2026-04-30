@@ -69,6 +69,8 @@ In this section you will learn how to specify which log messages are generated, 
 
 Log levels can be configured through the runtime admin port before the actual log levels exist. You can therefore create a script that sets all the required log levels at once.
 
+The request is documented in the [Set Log Levels](/refguide/monitoring-mendix-runtime/#log-levels) section of *Monitoring Mendix Runtime*. When making requests to the Mendix runtime, you will need to authenticate by including the authorization headers as described in [Monitoring Mendix Runtime](/refguide/monitoring-mendix-runtime/#auth-headers).
+
 This is a Python script that sets `ConnectionBus` and `ActionManager` to the Trace and Debug levels, respectively:
 
 ```py

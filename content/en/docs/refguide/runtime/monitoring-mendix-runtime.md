@@ -22,7 +22,11 @@ For deployments to Mendix Cloud, you can get the same information from various p
 
 You can change the admin port from Studio Pro by navigating to **App** > **Settings** > **Configurations** > *your configuration* > **Server** > **Admin port**.
 
-The request needs to be of the **POST** type with **No Authorization** and the following headers:
+The following sections explain which monitoring actions are supported.
+
+### Authorization Headers{#auth-headers}
+
+Requests need to be of the **POST** type with **No Authorization** and the following headers:
 
 * Content-Type: **application/json**
 * X-M2EE-Authentication: **yourM2EEPassword_Base64Encoded**
@@ -30,8 +34,6 @@ The request needs to be of the **POST** type with **No Authorization** and the f
     The M2EE password is NOT the super administrator password, but a separate password. This can be retrieved from the `M2EE_ADMIN_PASS` environment variable in your `javaw.exe` or `java` process.
 
     Remember to Base64 encode the password before passing it as the value for `X-M2EE-Authentication`
-
-The next sections explain which monitoring actions are supported.
 
 ## Current Executions
 
@@ -673,3 +675,43 @@ This will write logs to standard output in simple text format.
 ```
 
 This will send logs to the registered OpenTelemetry collector. See [Tracing](/refguide/tracing-in-runtime/) for a guide on how to enable OpenTelemetry.
+
+## Set Log Levels{#log-levels}
+
+This action allows you to programmatically set log levels for specific log nodes without restarting the runtime.
+
+### Request
+
+```json
+{
+  "action": "set_log_level",
+  "params": {
+    "nodes": [
+      {
+        "name": "<LogNode>",
+        "level": "<LogLevel>"
+      },
+      …
+    ],
+    "force": true
+  }
+}
+```
+
+{{% alert color="info" %}}
+`LogLevel` can be one of: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, or `CRITICAL`.
+
+The `force` parameter allows you to set log levels for log nodes that do not yet exist in the runtime.
+{{% /alert %}}
+
+### Example Response
+
+{{% todo %}}What is the response?{{% /todo %}}
+
+```json
+{
+}
+```
+
+### Return Values
+

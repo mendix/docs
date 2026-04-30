@@ -714,4 +714,3 @@ The `force` parameter allows you to set log levels for log nodes that do not yet
 ```
 
 ### Return Values
-

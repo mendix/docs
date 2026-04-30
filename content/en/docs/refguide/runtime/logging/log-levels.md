@@ -56,7 +56,7 @@ These are the log levels used by Mendix:
 | --- | --- | --- | --- |
 | Trace | | | More detailed information. These are only written to logs. |
 | Debug | | | Detailed information, typically of interest only when diagnosing problems. |
-| Info  | | | Confirmation that things are working as expected. |
+| Info | | | Confirmation that things are working as expected. |
 | Warning | {{< figure src="/attachments/refguide/runtime/log-levels/warning.png" class="no-border" >}} | Orange | Indicates that something unexpected happened or that there is some problem in the near future (for example, "disk space low"). The application is still working as expected. |
 | Error | {{< figure src="/attachments/refguide/runtime/log-levels/error.png" class="no-border" >}} | Red | Due to a more serious problem, the application has not been able to perform some function. |
 | Critical | {{< figure src="/attachments/refguide/runtime/log-levels/critical.png" class="no-border" >}} | White (text), red (background) | A serious error has occurred, indicating that the application itself may be unable to continue running. |

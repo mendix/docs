@@ -17,11 +17,11 @@ To package your extension, follow these steps:
 4. Open the module's settings and on the **Export** tab, select **Add-on module**.
 5. In the **Extension name** list, select the extension you want to package.
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensionAddOnModule.png" alt="Extension settings showing Add-on module selected with Extension name dropdown" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensionAddOnModule.png" alt="Extension settings showing Add-on module selected with Extension name dropdown" width="400" >}}
 
 After you create your add-on module with its extension, export it by right-clicking the module in the **App Explorer** and selecting **Export add-on module package**.
 
-![Export Module](/attachments/apidocs-mxsdk/apidocs/extensibility-api/exportAddOnModule.png)
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/exportAddOnModule.png" width="400" >}}
 
 You can now save the add-on module to a location of your choice.
 
@@ -29,8 +29,8 @@ You can now save the add-on module to a location of your choice.
 
 When the add-on module is available to a Studio Pro user, they can add to their app. This is done by right-clicking the app in the **App Explorer** and selecting **Import module package**.
 
-![Import Module](/attachments/apidocs-mxsdk/apidocs/extensibility-api/importAddOnModule.png)
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/importAddOnModule.png" width="400" >}}
 
 When an add-on module containing an extension is imported in the app, Studio Pro displays a warning to the user, asking to trust the extension contained in it. If the user does not choose to trust the extension, the module is still imported but the extension inside it will not be loaded.
 
-![Trust Extension](/attachments/apidocs-mxsdk/apidocs/extensibility-api/trustExtension.png)
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/trustExtension.png" width="400" >}}

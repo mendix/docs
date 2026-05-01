@@ -54,7 +54,7 @@ Create and configure the required model and agent documents in Studio Pro, inclu
 
 8. In the **User prompt** field, enter `{{UserInput}}`. This creates a placeholder where the user input at runtime should be injected.
 
-9. For the **Context entity**, select the `TicketHelper` entity created in the previous section. This entity contains an attribute `UserInput` that matches the variable placeholder.
+9. For the **Context entity**, select the `TicketHelper` entity created in [Creating Your First Agent](/appstore/modules/genai/how-to/creating-agents/#domain-model-setup). This entity contains an attribute `UserInput` that matches the variable placeholder.
 
 10. Save the Agent document (for example, on Windows by pressing <kbd>Ctrl</kbd>+<kbd>S</kbd>).
 
@@ -62,7 +62,7 @@ Create and configure the required model and agent documents in Studio Pro, inclu
 
 In this section, you connect the agent to two function microflows and one knowledge base so it can answer ticket-related questions with app data and historical context.
 
-Use the function microflows created earlier in this document. To use function calling, add those microflows as tools in the Agent document so the model can decide when to execute them.
+Use the function microflows created in [Creating Your First Agent](/appstore/modules/genai/how-to/creating-agents/#domain-model-setup). To use function calling, add those microflows as tools in the Agent document so the model can decide when to execute them.
 
 ### Connecting Function: Get Number of Tickets by Status (Without MCP Server)
 

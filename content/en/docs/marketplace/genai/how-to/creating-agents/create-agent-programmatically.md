@@ -47,7 +47,7 @@ Create an agent that can be sent to the LLM. The [Agent Commons](/appstore/modul
 
 7. Add a value in the **UserInput** variable field to test the current agent. For example, type `How can I implement an agent in my Mendix app?`. Ideally, the model will not attempt to answer requests that fall outside its scope, as it is restricted to handling IT-related issues and providing information about ticket data. However, if you ask a question that would require tools that are not yet implemented, the model might hallucinate and generate a response as if it had used those tools.
 
-8. Make sure the app is running with the latest domain model changes from the setup section. In the Agent Commons UI, you will see a field for the [Context Entity](/appstore/modules/genai/genai-for-mx/agent-commons/#define-context-entity). Search for **TicketHelper** and select the entity that was created in one of the previous steps. When starting from the Blank GenAI App, this should be **MyFirstModule.TicketHelper**.
+8. Make sure the app is running with the latest domain model changes from [Creating Your First Agent](/appstore/modules/genai/how-to/creating-agents/#domain-model-setup). In the Agent Commons UI, you will see a field for the [Context Entity](/appstore/modules/genai/genai-for-mx/agent-commons/#define-context-entity). Search for **TicketHelper** and select the entity created in that setup step. When starting from the Blank GenAI App, this should be **MyFirstModule.TicketHelper**.
 
 9. Save the agent version using the **Save As** button and enter *Initial agent* as the title.
 

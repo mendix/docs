@@ -12,11 +12,24 @@ aliases:
 
 This document explains how to create an agent in your Mendix app. The agent combines powerful GenAI capabilities of Mendix Agents Kit, such as [knowledge base retrieval (RAG)](/appstore/modules/genai/rag/), [function calling](/appstore/modules/genai/function-calling/), and [agent builder](/appstore/modules/genai/genai-for-mx/agent-commons/), to facilitate an AI-enriched use case. You can use an existing app or follow [Build a Smart App from a Blank GenAI App](/appstore/modules/genai/how-to/blank-app/) to start from scratch.
 
-Through this document, you will:
+Through this process, you will:
 
 * Learn how to integrate runtime prompt management from Agent Commons into your Mendix application.
 * Understand how to enrich your use case with function calling.
 * Ingest your Mendix data into a knowledge base and enable the model of your choice to use it.
+
+This document guides you through the setup steps:
+
+* Set up your application with the required modules and configuration
+* Create the domain model and user interface for agent interaction
+* Build function microflows that the agent can call to retrieve data
+* Ingest your Mendix data into a knowledge base
+
+Then, you choose an implementation approach. You can define an agent for your Mendix app using any of the following approaches, all of which leverage Agents Kit:
+
+* Use the [Agent Editor in Studio Pro](/appstore/modules/genai/how-to/create-agent-with-agent-editor/) for creating and iterating on agent definitions as part of the app model. It leverages existing development capabilities of the platform to define, manage, and deploy agents as part of a Mendix app.
+* Use the [Agent Builder UI to define agents](/appstore/modules/genai/how-to/create-agent-with-agent-commons/) at runtime based on the principles of Agent Commons. It enables versioning, development iteration, and refinement at runtime, separate from the traditional app logic development cycle. 
+* Use the building blocks of GenAI Commons to [define the agent programmatically](/appstore/modules/genai/how-to/create-agent-programmatically/). This is more useful for very specific use cases, especially when the agent needs to be part of the code repository of the app.
 
 The type of agent you can build is a single-turn agent, which means that:
 
@@ -24,12 +37,6 @@ The type of agent you can build is a single-turn agent, which means that:
 * No conversation or memory is applicable.
 * It focuses on specific task completion. 
 * It uses a knowledge base and function calling to retrieve data or perform actions.
-
-This document covers three approaches to defining an agent for your Mendix app. All three approaches leverage the capabilities of Mendix Agents Kit:
-
-* Use the [Agent Editor in Studio Pro](/appstore/modules/genai/how-to/create-agent-with-agent-editor/) for creating and iterating on agent definitions as part of the app model. It leverages existing development capabilities of the platform to define, manage, and deploy agents as part of a Mendix app.
-* Use the [Agent Builder UI to define agents](/appstore/modules/genai/how-to/create-agent-with-agent-commons/) at runtime based on the principles of Agent Commons. It enables versioning, development iteration, and refinement at runtime, separate from the traditional app logic development cycle. 
-* Use the building blocks of GenAI Commons to [define the agent programmatically](/appstore/modules/genai/how-to/create-agent-programmatically/). This is more useful for very specific use cases, especially when the agent needs to be part of the code repository of the app.
 
 ## Agent Use Case
 
@@ -142,7 +149,7 @@ First, create a user interface to test and use the agent properly.
 
 8. Add a button to your navigation or homepage with the caption *Show agent*. For the **On click** event, select `Create object`, select the `TicketHelper` entity, and the newly created page **TicketHelper_Agent**.
 
-You have now successfully added a page that allows users to ask questions to an agent. You can verify this in the running app by opening the page and entering text into the **User input** field. However, the button does not do anything yet. You will add logic to the microflow behind the button in the implementation approach you choose below.
+You have now successfully added a page that allows users to ask questions to an agent. You can verify this in the running app by opening the page and entering text into the **User input** field. However, the button does not do anything yet. You will add logic to the microflow behind the button in the [implementation approach](#implementation-approach) you choose.
 
 ### Creating the Function Microflows
 
@@ -180,7 +187,7 @@ The final result for the function microflows used in this document can be found 
 
 7. Lastly, in the **End event**, return `toString($Count)` as *String*
 
-You have now successfully created your first function microflow that you will link to the agent logic later. If users ask how many tickets are in the *Open* status, the model can call the exposed function microflow and base the final answer on your Mendix database. 
+You have now successfully created your first function microflow that you will link to the agent in the [implementation approach](#implementation-approach) you choose. If users ask how many tickets are in the *Open* status, the model can call the exposed function microflow and base the final answer on your Mendix database. 
 
 #### Function Microflow: Get Ticket by Identifier
 

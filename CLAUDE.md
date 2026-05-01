@@ -81,7 +81,7 @@ Before creating a new file, use Glob to explore the directory structure and unde
 * **Headings** – H1 is generated from the front‑matter title. Subsequent headings increment by one level at a time. Don't use bold or italics as a replacement for headings. Use title case. Never start headings with numerals.
 * **Lists and tables** – Bullet lists use asterisks; ordered lists use numbers followed by a period. If there are more than three data points per item, use a table instead. Use the same syntax and structure for all list items in a given list. Use complete sentences to introduce lists and tables, not partial sentences completed with the list items.
 * **Indentation** – Four spaces for sub-lists and nested content. Alerts in lists are an exception:  don't indent alert lines but do omit preceding blank line.
-* **Links** – Use absolute paths starting with a leading slash (`/deployment/`). Use descriptive link text such as the page title, not "click here". To link to a heading, add an anchor ID (`{#anchor-id}`) next to the heading and use that ID in the URL (for example, `[Section title](/path/to/page#anchor-id)` to link to a heading in another page or `[Section title](#anchor-id)` to link to a heading in the same page).
+* **Links** – Link using the target page's `url` front matter field, not its file system path (e.g., `/deployment/` from front matter, not `content/en/docs/deployment/_index.md`). Use descriptive link text such as the page title, not "click here". To link to a heading, add an anchor ID (`{#anchor-id}`) next to the heading and use that ID in the URL (for example, `[Prerequisites](/deployment/mendix-cloud/#prerequisites)` to link to a heading in another page or `[Prerequisites](#prerequisites)` to link to a heading in the same page).
 * **Images** – Always include `alt` text (or `alt=""` if decorative). Use W3C guidelines. Reference images with the `figure` shortcode.
 * **Code** – Use fenced code blocks with language specifier. Do not modify text that appears in code formatting (inline backticks or code blocks), even to fix apparent inconsistencies or apply naming conventions. 
 
@@ -105,18 +105,18 @@ Call tools in parallel for independent operations (reading multiple files, multi
 
 ### Tool Selection
 
+* **Helper Scripts**
+    * For URL resolution, use `bash .claude/scripts/resolve-doc-url.sh` instead of spawning agents. This resolves documentation URLs (e.g., `/community-tools/contribute-to-mendix-docs/`) to their source Markdown files and ensures Grep uses efficient flags consistently.
 * **Read** – Use to view specific files you know the path to
 * **Edit** – Use to modify existing files with targeted changes
 * **Glob** – Use to find files by pattern (e.g., `*.md`, `**/*config*`)
 * **Grep** – Use to search file contents for specific text or patterns
 * **Write** – Use only for creating new files (prefer Edit for existing files)
-* **Helper Scripts** – Use `.claude/scripts/resolve-doc-url.sh` to resolve documentation URLs (e.g., `/path/to/page/`) to their source markdown files. This is faster and more token-efficient than using Grep to search front matter.
 
 ### Cross-Reference Verification
 
 When following or verifying documentation links:
-* Use `.claude/scripts/resolve-doc-url.sh "/path/to/page/"` to quickly find the source file for a URL
-* This is more efficient than Grep for URL-to-file lookups
+* Use `bash .claude/scripts/resolve-doc-url.sh "/url/path/"` to quickly find the source file for a URL
 
 When modifying URLs or anchor IDs:
 1. Use Grep to search for the old URL/anchor across all documentation files

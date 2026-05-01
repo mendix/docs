@@ -18,7 +18,7 @@ The Capital connector is licensed under the [Apache V2.0 License](https://www.ap
 
 ### Prerequisites
  
-* Studio Pro version 10.24.3 or above
+* Studio Pro version 10.24.8 or above
 * A Capital instance, with licensed Capital Integration Server (CIS) enabled and running
 
 ### Dependencies {#dependencies}
@@ -71,6 +71,10 @@ For details on defining a filter, refer to the REST API documentation of your Ca
 ### Capital object IDs
 
 Some operations take an object ID as parameter. Many Capital objects have a `BaseID` attribute. For those that do not have this attribute, please use the ID getter microflow available in the toolbox. This takes the link attribute available on the associated metadata object, and returns the ID of the parent object.
+
+### Capital project IDs
+
+Sometimes you need the project ID as input for a REST operation. In case you don't have the project ID to your disposition, but you do have a metadata link attribute from a Capital object, you can use the exposed `Get project id for Capital object` microflow.
 
 ## Resources
 

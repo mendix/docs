@@ -1,5 +1,5 @@
 ---
-title: "Installing Components through  UI"
+title: "Installing Components through the Helm Chart UI"
 url: /developerportal/deploy/helm-charts/
 description: "Describes how to configure your installation with Helm charts in Mendix on Kubernetes."
 weight: 50

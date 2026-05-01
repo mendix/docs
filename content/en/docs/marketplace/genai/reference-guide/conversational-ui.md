@@ -232,7 +232,7 @@ If you are not using the ConversationalUI module for [chat with history executio
 3. Add the content of the tool messages to the request. [Add a message](/appstore/modules/genai/genai-for-mx/commons/#chat-add-message-to-request) with role `assistant` that contains the tool call information and messages with role `tool` for the tool results. You can use the `Request_AddMessage_ToolMessages` microflow to pass the same message from the first step.
 4. Recall the chat completions action. Be aware that the response might contain new tool calls and not the final message yet, so you need to follow the above steps again. A recursive loop might be helpful, for example, as shown in the `Request_CallWithoutHistory_ToolUserConfirmation_Example` microflow.
 
-For a task-based (without history) use case, you can review the [GenAI Showcase App's](https://marketplace.mendix.com/link/component/220475) function calling example, especially the microflows `Task_ProcessWithFunctionCalling` and `Task_CallWithoutHistory`. Alternatively, refer to the [How to create your first agent](/appstore/modules/genai/how-to/howto-single-agent/) documentation for a similar example and a step by step guide.
+For a task-based (without history) use case, you can review the [GenAI Showcase App's](https://marketplace.mendix.com/link/component/220475) function calling example, especially the microflows `Task_ProcessWithFunctionCalling` and `Task_CallWithoutHistory`. Alternatively, refer to the [Creating Your First Agent](/appstore/modules/genai/how-to/creating-agents/) documentation for a similar example and a step by step guide.
 
 ### Customizing Styling {#customize-styling}
 

@@ -102,7 +102,7 @@ To use the Agent Editor functionalities in your app, you must perform the follow
 6. Deploy the agent to cloud environments.
 7. Improve the agent in the next iterations.
 
-For a step by step tutorial, check out the [create your first agent](/appstore/modules/genai/how-to/howto-single-agent/#define-agent-editor) documentation.
+For a step by step tutorial, check out the [create an agent with Agent Editor](/appstore/modules/genai/how-to/create-agent-with-agent-editor/) documentation.
 
 ### Defining the Model {#define-model}
 

@@ -1,7 +1,7 @@
 ---
 title: "Create an Agent with Agent Commons"
 url: /appstore/modules/genai/how-to/create-agent-with-agent-commons/
-weight: 62
+weight: 80
 description: "Learn how to create and manage agents using the Agent Commons UI for runtime configuration, versioning, and rapid experimentation without redeployment."
 ---
 
@@ -10,7 +10,7 @@ description: "Learn how to create and manage agents using the Agent Commons UI f
 An alternative approach to set up the agent and build logic to generate responses is based on the logic part of the Agent Commons module. Start by defining an agent with a prompt at runtime, then, through the same UI, add tools (microflows as functions) and knowledge bases to the agent version.
 
 {{% alert color="info" %}}
-This guide assumes you have completed the shared setup steps in [Creating Your First Agent](/appstore/modules/genai/how-to/creating-agents/). If you have not done so, complete those steps first to set up your application, knowledge base, domain model, UI, and function microflows.
+This guide assumes you have completed the shared setup steps in [Shared Setup for Creating an Agent](/appstore/modules/genai/how-to/creating-agents/shared-setup/). If you have not done so, complete those steps first to set up your application, knowledge base, domain model, UI, and function microflows.
 {{% /alert %}}
 
 ## Setting Up the Agent with a Prompt
@@ -50,7 +50,7 @@ Create an agent that can be called to interact with the LLM. The [Agent Commons]
 
 8. Add a value in the **UserInput** variable field on the right of the page, under **Test Case**. This way, you can test the current prompt behavior by calling the agent. For example, type `How can I implement an agent in my Mendix app?` and click **Run**. You may need to scroll down to see the **Output** on the page after a few seconds. Ideally, the model does not attempt to answer requests that fall outside its scope, as it is restricted to handling IT-related issues and providing information about ticket data. However, if you ask a question that would require tools that are not yet implemented, the model might hallucinate and generate a response as if it had used those tools.
 
-9. Make sure the app is running with the latest domain model changes from [Creating Your First Agent](/appstore/modules/genai/how-to/creating-agents/#domain-model-setup). In the Agent Commons UI, you will see a field for the [Context Entity](/appstore/modules/genai/genai-for-mx/agent-commons/#define-context-entity). Search for **TicketHelper** and select the entity created in that setup step. When starting from the Blank GenAI App, this should be **MyFirstModule.TicketHelper**. 
+9. Make sure the app is running with the latest domain model changes from [Shared Setup for Creating an Agent](/appstore/modules/genai/how-to/creating-agents/shared-setup/#domain-model-setup). In the Agent Commons UI, you will see a field for the [Context Entity](/appstore/modules/genai/genai-for-mx/agent-commons/#define-context-entity). Search for **TicketHelper** and select the entity created in that setup step. When starting from the Blank GenAI App, this should be **MyFirstModule.TicketHelper**. 
 
 10. Save the agent version using the **Save As** button, and enter *Initial agent with prompt* as the title. 
 
@@ -68,7 +68,7 @@ Create an agent that can be called to interact with the LLM. The [Agent Commons]
 
 To let the agent generate responses based on specific data and information, connect it to two function microflows and a knowledge base. Even though the implementation is not complex—you only need to link it in the front end—Mendix recommends being familiar with [Integrate Function Calling into Your Mendix App](/appstore/modules/genai/how-to/howto-functioncalling/) and [Grounding Your Large Language Model in Data](/appstore/modules/genai/how-to/howto-groundllm/#chatsetup). These guides cover the foundational concepts for function calling and knowledge base retrieval. 
 
-Use the function microflows created in [Creating Your First Agent](/appstore/modules/genai/how-to/creating-agents/#domain-model-setup). To use the function calling pattern, link them to the agent as *Tools* so the agent can autonomously decide how and when to use the function microflows. You can find the final result in the **ExampleMicroflows** folder of the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) for reference. Note that tools can also be added when published from an MCP server. However, this scenario is not covered in this document.
+Use the function microflows created in [Shared Setup for Creating an Agent](/appstore/modules/genai/how-to/creating-agents/shared-setup/#domain-model-setup). To use the function calling pattern, link them to the agent as *Tools* so the agent can autonomously decide how and when to use the function microflows. You can find the final result in the **ExampleMicroflows** folder of the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) for reference. Note that tools can also be added when published from an MCP server. However, this scenario is not covered in this document.
 
 ### Connecting Function: Get Number of Tickets by Status (Without MCP Server)
 
@@ -115,7 +115,7 @@ Connect the agent to the knowledge base so it can use historical ticket data, su
 
 1. From the agent view page for the `IT-Ticket Helper` agent, under **Knowledge bases**, add a new knowledge base:
 
-    * **Consumed Knowledge base**: Select the knowledge base resource created in [Creating Your First Agent](/appstore/modules/genai/how-to/creating-agents/#ingest-knowledge-base). Next, look for the collection `HistoricalTickets`. If nothing appears in the list, refer to the documentation of the connector on how to set it up correctly
+    * **Consumed Knowledge base**: Select the knowledge base resource created in [Shared Setup for Creating an Agent](/appstore/modules/genai/how-to/creating-agents/shared-setup/#ingest-knowledge-base). Next, look for the collection `HistoricalTickets`. If nothing appears in the list, refer to the documentation of the connector on how to set it up correctly
     * Name: `RetrieveSimilarTickets` (expression)
     * Description: `Similar tickets from the database` (expression)
     * MaxNumberOfResults: empty (expression; optional)

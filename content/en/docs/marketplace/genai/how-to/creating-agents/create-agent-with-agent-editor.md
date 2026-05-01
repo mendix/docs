@@ -1,7 +1,7 @@
 ---
 title: "Create an Agent with Agent Editor"
 url: /appstore/modules/genai/how-to/create-agent-with-agent-editor/
-weight: 61
+weight: 70
 description: "Learn how to create and manage agents using the Agent Editor in Studio Pro, defining agents as part of your app model with integrated testing and version control."
 ---
 
@@ -14,7 +14,7 @@ To use this approach, install the Agent Editor in your project. Make sure to use
 At the time of initial release, Agent Editor supports only [Mendix Cloud GenAI](/appstore/modules/genai/mx-cloud-genai/) as a provider for models and knowledge bases. The steps below use the Mendix Cloud GenAI provider type, text generation resource keys, and knowledge base resource keys from the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com/).
 
 {{% alert color="info" %}}
-This guide assumes you have completed the shared setup steps in [Creating Your First Agent](/appstore/modules/genai/how-to/creating-agents/). If you have not done so, complete those steps first to set up your application, knowledge base, domain model, UI, and function microflows.
+This guide assumes you have completed the shared setup steps in [Shared Setup for Creating an Agent](/appstore/modules/genai/how-to/creating-agents/shared-setup/). If you have not done so, complete those steps first to set up your application, knowledge base, domain model, UI, and function microflows.
 {{% /alert %}}
 
 ## Setting Up the Agent with a Prompt
@@ -54,7 +54,7 @@ Create and configure the required model and agent documents in Studio Pro, inclu
 
 8. In the **User prompt** field, enter `{{UserInput}}`. This creates a placeholder where the user input at runtime should be injected.
 
-9. For the **Context entity**, select the `TicketHelper` entity created in [Creating Your First Agent](/appstore/modules/genai/how-to/creating-agents/#domain-model-setup). This entity contains an attribute `UserInput` that matches the variable placeholder.
+9. For the **Context entity**, select the `TicketHelper` entity created in [Shared Setup for Creating an Agent](/appstore/modules/genai/how-to/creating-agents/shared-setup/#domain-model-setup). This entity contains an attribute `UserInput` that matches the variable placeholder.
 
 10. Save the Agent document (for example, on Windows by pressing <kbd>Ctrl</kbd>+<kbd>S</kbd>).
 
@@ -62,7 +62,7 @@ Create and configure the required model and agent documents in Studio Pro, inclu
 
 In this section, you connect the agent to two function microflows and one knowledge base so it can answer ticket-related questions with app data and historical context.
 
-Use the function microflows created in [Creating Your First Agent](/appstore/modules/genai/how-to/creating-agents/#domain-model-setup). To use function calling, add those microflows as tools in the Agent document so the model can decide when to execute them.
+Use the function microflows created in [Shared Setup for Creating an Agent](/appstore/modules/genai/how-to/creating-agents/shared-setup/#domain-model-setup). To use function calling, add those microflows as tools in the Agent document so the model can decide when to execute them.
 
 ### Connecting Function: Get Number of Tickets by Status (Without MCP Server)
 

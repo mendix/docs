@@ -47,5 +47,5 @@ applications:
   env:
 ```
 
-5. Run the `cf push` command.
-6. Verify that the Mendix app has started successfully.
+1. Run the `cf push` command.
+2. Verify that the Mendix app has started successfully.

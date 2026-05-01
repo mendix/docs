@@ -11,7 +11,7 @@ description: "Native Template 19"
 
 ### Improvements
 
-- We updated `mendix-native` to v0.4.1, strengthening Android cookie encryption by migrating from `AES/CBC/PKCS7Padding` to `AES/GCM/NoPadding`.
+* We updated `mendix-native` to v0.4.1, strengthening Android cookie encryption by migrating from `AES/CBC/PKCS7Padding` to `AES/GCM/NoPadding`.
 
 ## 19.0.1 {#1901}
 
@@ -19,7 +19,7 @@ description: "Native Template 19"
 
 ### Fixes
 
-- We fixed an iOS build issue introduced by the React Native `0.83.4` upgrade by removing the incorrect `override` keyword from AppDelegate application lifecycle methods.
+* We fixed an iOS build issue introduced by the React Native `0.83.4` upgrade by removing the incorrect `override` keyword from AppDelegate application lifecycle methods.
 
 ## 19.0.0 {#1900}
 

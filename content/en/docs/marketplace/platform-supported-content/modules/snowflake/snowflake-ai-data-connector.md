@@ -312,8 +312,8 @@ Snowflake Cortex Analyst is now generally available. For more information, refer
 
 * Make sure that you have access to Cortex Analyst. For more information, refer to the [Snowflake Cortex Analyst documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst).
 * Create a semantic model, semantic model view, or inline semantic model for Cortex Analyst. For more information, refer to:
-  * [Creating Semantic Models for Snowflake Cortex Analyst](https://developers.snowflake.com/solution/creating-semantic-models-for-snowflakes-cortex-analyst/)
-  * [Using Semantic Model Views](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst#understanding-semantic-views)
+    * [Creating Semantic Models for Snowflake Cortex Analyst](https://developers.snowflake.com/solution/creating-semantic-models-for-snowflakes-cortex-analyst/)
+    * [Using Semantic Model Views](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst#understanding-semantic-views)
 * Set up one of the following supported authentication methods for Cortex Analyst:
     * OAUTH
     * KEYPAIR_JWT

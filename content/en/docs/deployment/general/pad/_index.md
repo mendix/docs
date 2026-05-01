@@ -59,7 +59,7 @@ To run your app locally, perform the following steps:
 The Mendix admin port can be used to fetch metrics and other runtime data from an app. It requires a password for security reasons.
 {{% /alert %}}
 
-3. Run the app by using one of the following commands:
+1. Run the app by using one of the following commands:
 
     * For Windows, run the command `<your folder location>\bin\start.bat`
     * For Windows Powershell, run the command `<your folder location>\bin\start.ps1`
@@ -68,7 +68,6 @@ The Mendix admin port can be used to fetch metrics and other runtime data from a
 {{% alert color="info" %}}
 On Linux, if the ZIP was extracted on Windows, the +x flag is not preserved. Windows does not have the executability bit. You need to run the command `chmod +x ./bin/start` first.
 {{% /alert %}}
-
 
 ### Deploying to a Self-Hosted Environment
 

@@ -131,15 +131,11 @@ Defining an agent is also document-based and can be configured using the Agent e
 
 * Add an Agent document from the **App Explorer** at the module level. Right-click on the module or folder where you want to create your Model document, select **Add other** and find Agent in the bottom section.
 * Select a Module document for an agent to call a text generation resource.
-* Configure the **System prompt** and **User prompt** for task-style execution. In these prompts, define placeholders with double braces (for example, `{{variable}}`).
+* Configure the **System prompt** and, additionally for task-style execution, the **User prompt**. In these prompts, define placeholders with double braces (for example, `{{variable}}`).
 * When placeholders are used, select a **Context entity** to resolve values at runtime. The placeholders used within the prompts need to match with the attribute names of the entity selected, so that attribute values can be inserted instead of the placeholders at runtime.
 * Optionally, adjust the **Model settings** as needed (maximum tokens, temperature, and TopP), based on the supported ranges of the model provider.
 
 You can also check out template agents in the **USE_ME** folder of the **AgentEditorCommons** module.
-
-{{% alert color="info" %}}
-Both **System prompt** and **User prompt** are currently mandatory, as the Agent Editor supports only task-based agents at this time. Support for chat-based agents will be introduced in a future release.
-{{% /alert %}}
 
 For more information about prompts and prompt engineering, see [Prompt Engineering](/appstore/modules/genai/prompt-engineering/).
 
@@ -228,13 +224,17 @@ If a call fails during testing, a generic error message is shown in the Agent ed
 
 ### Including the Agent in the App Logic {#call-agent}
 
-You can include an agent in the app logic by calling it from a microflow. To do so, the Agent Editor provides the **Call Agent** toolbox action in the **Agent Editor** category. This action is currently focused on single-call, task-style execution.
+You can include an agent in the app logic by calling it from a microflow. To do so, the Agent Editor provides the **Call Agent** toolbox actions in the **Agent Editor** category. The **Call Agent without History** action is currently focused on single-call, task-style execution, where **Call Agent with History** supports conversational scenarios with multiple messages.
 
 When configuring the action, select the Agent document so that the right agent is called. If your prompts use variable placeholders, pass a context object to the action. This object must be of the selected context entity type so that placeholders can be resolved at runtime.
 
-Optionally, you can pass a `Request` object to set request-level values, and a `FileCollection` object with files to send along with the user message to make use of vision or document chat capabilities. Support for files and images depends on the underlying large language model. Refer to the documentation of the specific connector.
+For **Call Agent without History**, you can optionally pass a `Request` object to set request-level values, and a `FileCollection` object with files to send along with the user message to make use of vision or document chat capabilities. For **Call Agent with History** the `Request` object is mandatory, as it contains any previous messages from the conversation. Support for files and images depends on the underlying large language model. Refer to the documentation of the specific connector.
 
 The output is a `GenAICommons.Response` object, aligned with the GenAI Commons and Agent Commons domain models and actions, which can be used for further logic. Additionally, all agents created via the Agent Editor extension are seamlessly integrated with other Mendix offerings, such as the [Token consumption monitor](/appstore/modules/genai/genai-for-mx/conversational-ui/#snippet-token-monitor) or the [Traceability](/appstore/modules/genai/genai-for-mx/conversational-ui/#traceability) feature from [ConversationalUI](/appstore/modules/genai/genai-for-mx/conversational-ui/).
+
+### Including the Agent in a Conversational User Interface (#conversational-ui)
+
+Pages and Snippets as building blocks for chat-type UI patterns exist in the [ConversationalUI module](/appstore/modules/genai/genai-for-mx/conversational-ui/). The central entity here is the `ChatContext` which represents a user-agent chat session. When using the Agent Editor, in order to instantiate a new `ChatContext`, you can use the **New Chat for Agent** action in the microflow that opens your chat page and pass the Agent document. Read more about the conversational UI patterns in the [documentation](/appstore/modules/genai/genai-for-mx/conversational-ui/#chat-context-operations).
 
 ### Deploying the Agent to Cloud Environments {#deploy-agent}
 
@@ -253,7 +253,7 @@ To return to historical agent versions, use version control to inspect previousl
 ## Known Limitations {#limitations}
 
 * Currently, the Agent Editor supports only Mendix Cloud GenAI as a provider for text generation models and knowledge bases. Support for other providers, such as (Azure) OpenAI and Amazon Bedrock, is planned for a future release.
-* Agent Editor currently supports task-based agents only, which require both **System prompt** and **User prompt** to be configured. Chat-based agents will be supported in a future release.
+* Support for Mac users is limited: some functionalities might not work, such as doing a test call for Model documents. Mendix recommends using Studio Pro on Windows to use all features of the Agent Editor smoothly.
 * MCP tool support is limited to whole-server integration. Selecting individual tools from a consumed MCP service to be added to an agent is not yet supported. That also means that the tool choice option `Tool` can only refer to a microflow tool currently.
 * If a document that is referenced by an Agent document is excluded, Studio Pro shows a consistency error accordingly. In the current version, these consistency errors may not be resolved automatically when the excluded document is included again. You can resolve it by synchronizing the project directory (<kbd>F4</kbd>) or by making a small change in any agent-related document (for example, add a character to a system prompt and remove it again).
 * The extension creates a `/agenteditor` log folder in the app directory. This is not excluded from version control automatically upon including the module from the Marketplace. This folder should be added to `.gitignore` manually as described in the [First-time setup](#setup) section.
@@ -262,7 +262,7 @@ To return to historical agent versions, use version control to inspect previousl
 
 ### Testing the Agent From Studio Pro Results in an Error
 
-This error is typically due to incorrect model configuration or an exception originating from the API call of the large language model. Check the **Console** pane in Studio Pro for detailed logs. Additionally, verify that the `ASU_AgentEditor` microflow was added to your after-startup logic as described in the [First-time setup](#setup) section.
+This error is typically due to incorrect model configuration or an exception originating from the API call of the large language model. Check the **Console** pane in Studio Pro for detailed logs. Additionally, verify that the `ASU_AgentEditor` microflow was added to your after-startup logic as described in the [First-time setup](#setup) section, and that the app startup has completed fully.
 
 ### Testing the Agent From Studio Pro Is Disabled
 

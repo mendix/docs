@@ -7,21 +7,21 @@ description: "Learn how to create and manage agents using the Agent Editor in St
 
 ## Introduction
 
-The primary approach to creating and managing agents utilizes the [Agent Editor](https://marketplace.mendix.com/link/component/257918) in the Studio Pro. This extension allows you to manage the lifecycle of your agents as part of the app model. You can define Agents as documents of type "Agent" in your app while working in Studio Pro, alongside related documents such as Models for text generation, Knowledge bases for data retrieval, and Consumed MCP services for remote tools.
+The primary approach to creating and managing agents uses the [Agent Editor](https://marketplace.mendix.com/link/component/257918) in Studio Pro. This extension allows you to manage the lifecycle of your agents as part of the app model. You can define agents as documents of type "Agent" in your app while working in Studio Pro, alongside related documents such as models for text generation, knowledge bases for data retrieval, and consumed MCP services for remote tools.
 
-To use this approach, install the Agent Editor in your project as a prerequisite. Make sure to use the [required Studio Pro version](/appstore/modules/genai/genai-for-mx/agent-editor/#dependencies) and follow the steps in the [Installation](/appstore/modules/genai/genai-for-mx/agent-editor/#installation) section of the *Agent Editor* documentation.
+To use this approach, install the Agent Editor in your project. Make sure to use the [required Studio Pro version](/appstore/modules/genai/genai-for-mx/agent-editor/#dependencies) and follow the steps in the [Installation](/appstore/modules/genai/genai-for-mx/agent-editor/#installation) section of the *Agent Editor* documentation.
 
-At the time of initial release, Agent Editor supports only [Mendix Cloud GenAI](/appstore/modules/genai/mx-cloud-genai/) as a provider for models and knowledge bases. The steps below therefore use the Mendix Cloud GenAI provider type, text generation resource keys, and knowledge base resource keys from the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com/).
+At the time of initial release, Agent Editor supports only [Mendix Cloud GenAI](/appstore/modules/genai/mx-cloud-genai/) as a provider for models and knowledge bases. The steps below use the Mendix Cloud GenAI provider type, text generation resource keys, and knowledge base resource keys from the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com/).
 
 {{% alert color="info" %}}
-This guide assumes you have completed the shared setup steps in [Creating Your First Agent](/appstore/modules/genai/how-to/creating-agents/). If you haven't done so, complete those steps first to set up your application, knowledge base, domain model, UI, and function microflows.
+This guide assumes you have completed the shared setup steps in [Creating Your First Agent](/appstore/modules/genai/how-to/creating-agents/). If you have not done so, complete those steps first to set up your application, knowledge base, domain model, UI, and function microflows.
 {{% /alert %}}
 
 ## Setting Up the Agent with a Prompt
 
-Create and configure the required model and agent documents in the Studio Pro, including prompts and a context entity.
+Create and configure the required model and agent documents in Studio Pro, including prompts and a context entity.
 
-1. In the **App Explorer**, right-click your module and select **Add other** > **Model**. Set a name, for example, `MyModel`.
+1. In the **App Explorer**, right-click your module and select **Add other** > **Model**. Set a name (for example, `MyModel`).
 
 2. In the new model document, set the provider type to Mendix Cloud GenAI.
 
@@ -62,7 +62,7 @@ Create and configure the required model and agent documents in the Studio Pro, i
 
 In this section, you connect the agent to two function microflows and one knowledge base so it can answer ticket-related questions with app data and historical context.
 
-You need to use the function microflows created earlier in this document. To make use of function calling, add those microflows as tools in the Agent document so the model can decide when to execute them.
+Use the function microflows created earlier in this document. To use function calling, add those microflows as tools in the Agent document so the model can decide when to execute them.
 
 ### Connecting Function: Get Number of Tickets by Status (Without MCP Server)
 
@@ -100,11 +100,11 @@ Connect an MCP server as a tool source through a consumed MCP service document a
 
 1. In **App Explorer**, right-click your module and select **Add other** > **Consumed MCP service**.
 
-2. Give it a name, for example, `MyMCP`, and configure:
+2. Give it a name (for example, `MyMCP`) and configure the following:
 
-    * **Endpoint**: create and select a string constant that contains your MCP server URL
-    * **Credentials microflow** (optional): set this when authentication is required.
-    * **Protocol version**: select the protocol that matches your MCP server
+    * **Endpoint**: Create and select a string constant that contains your MCP server URL
+    * **Credentials microflow** (optional): Set this when authentication is required
+    * **Protocol version**: Select the protocol that matches your MCP server
 
     For more details regarding protocol version and authentication, refer to the [technical documentation](/appstore/modules/genai/genai-for-mx/agent-editor/#define-mcp).
 
@@ -122,7 +122,7 @@ Link a knowledge base collection to the agent so it can retrieve relevant histor
 
 1. In **App Explorer**, right-click your module and select **Add other** > **Knowledge base**.
 
-2. Set a name, for example, `MyKnowledgebase`, and configure the **Knowledge base key** by creating and selecting a String constant that contains your knowledge base resource key from the Mendix Cloud GenAI Portal.
+2. Set a name (for example, `MyKnowledgebase`) and configure the **Knowledge base key** by creating and selecting a string constant that contains your knowledge base resource key from the Mendix Cloud GenAI Portal.
 
 3. Click **List collections** to validate the connection and load available collections.
 
@@ -130,12 +130,12 @@ Link a knowledge base collection to the agent so it can retrieve relevant histor
 
 5. Configure the knowledge base retrieval:
 
-    * **Knowledge base**: select the configured Knowledge base document
+    * **Knowledge base**: Select the configured knowledge base document
     * **Collection**: `HistoricalTickets` 
     * **Name**: `RetrieveSimilarTickets`
     * **Description**: `Similar tickets from the database`
-    * **Max results**: leave empty (optional)
-    * **Min similarity**: leave empty (optional)
+    * **Max results**: Leave empty (optional)
+    * **Min similarity**: Leave empty (optional)
 
 6. Save the knowledge base tool and the Agent document.
 
@@ -147,17 +147,17 @@ Before testing, make sure the app model has no consistency errors.
 
 2. With the `IT_Ticket_Helper` Agent document open, go to the Playground section of the editor.
 
-3. Provide a value for the `UserInput` variable, for example: `How can I implement an agent in my Mendix app?`
+3. Provide a value for the `UserInput` variable (for example, `How can I implement an agent in my Mendix app?`)
 
-4. Click **Test** to execute the agent by using your local runtime.
+4. Click **Test** to run the agent using your local runtime.
 
-5. Observe the result in the test output area of the Agent document. In this case, since the input is not about IT-related issues, the response text of the gent is likely to contain a phrase saying that it is not allowed to or able to answer. This is the intentional behavior.
+5. Review the result in the test output area of the Agent document. In this case, since the input is not about IT-related issues, the agent response text likely indicates that it cannot answer. This is the intentional behavior.
 
-If you make changes to the agent definition afterwards, restart or redeploy the local runtime when needed before testing again. If a test call fails, check the **Console** pane in the Studio Pro for detailed error information.
+If you make changes to the agent definition afterwards, restart or redeploy the local runtime when needed before testing again. If a test call fails, check the **Console** pane in Studio Pro for detailed error information.
 
 ## Calling the Agent
 
-Configure the **Ask the agent** button to a microflow that invokes the Agent Editor agent and stores the response in the UI helper object.
+Configure the **Ask the agent** button to call a microflow that invokes the Agent Editor agent and stores the response in the UI helper object.
 
 1. On the **TicketHelper_Agent** page, edit the **On click** event of the button to call a microflow. Click **New** to create a microflow named `ACT_TicketHelper_CallAgent_Editor`.
 
@@ -167,10 +167,10 @@ Configure the **Ask the agent** button to a microflow that invokes the Agent Edi
 
 4. Configure the action:
 
-    * **Agent**: select the `IT_Ticket_Helper` Agent document
+    * **Agent**: Select the `IT_Ticket_Helper` Agent document
     * **Context object**: `$TicketHelper` (input parameter)
-    * **Request**: empty
-    * **FileCollection**: empty
+    * **Request**: Leave empty
+    * **FileCollection**: Leave empty
     * **Output: Object name**: `Response`
 
 5. Add a `Change object` action after the **Call Agent** action to update the `ModelResponse` attribute:
@@ -181,7 +181,7 @@ Configure the **Ask the agent** button to a microflow that invokes the Agent Edi
 
 6. Save the microflow and run the app.
 
-View the app in the browser, open the **TicketHelper_Agent** page, and click **Ask the agent** to execute the agent from your app logic. When the model determines that a tool or knowledge base is needed, it will use the configuration that you added in the Agent document.
+View the app in the browser, open the **TicketHelper_Agent** page, and click **Ask the agent** to run the agent from your app logic. When the model determines that a tool or knowledge base is needed, it uses the configuration you added in the Agent document.
 
 ## Testing and Troubleshooting
 
@@ -189,7 +189,7 @@ View the app in the browser, open the **TicketHelper_Agent** page, and click **A
 If you are looking for more technical details and an example implementation, check out the [Agent Builder Starter App](https://marketplace.mendix.com/link/component/240369), which demonstrates additional built-in features. Additionally, the **ExampleMicroflows** folder in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) contains all components used in this how-to, including the final use case. You may also find it helpful to explore other examples.
 {{% /alert %}}
 
-Before testing, ensure that you have completed the Mendix Cloud GenAI configuration as described in the [Build a Chatbot from Scratch Using the Blank GenAI App](/appstore/modules/genai/how-to/blank-app/), particularly the [Infrastructure Configuration](/appstore/modules/genai/how-to/blank-app/#config) section. 
+Before testing, ensure that you have completed the Mendix Cloud GenAI configuration as described in [Build a Chatbot from Scratch Using the Blank GenAI App](/appstore/modules/genai/how-to/blank-app/), particularly the [Infrastructure Configuration](/appstore/modules/genai/how-to/blank-app/#config) section. 
 
 Congratulations! Your agent is now ready to use and enriched by powerful capabilities such as agent builder, function calling, and knowledge base retrieval.
 

@@ -7,15 +7,15 @@ description: "Learn how to create agents programmatically using microflows and G
 
 ## Introduction
 
-This is an additional approach as alternative to the steps described in previous sections. Find out how to set up the agent and build logic to generate responses, using microflows for empowering the agent. You start with a prompt at runtime, and add functions and knowledge bases to the microflow at design time.
+This is an additional approach as an alternative to the steps described in previous sections. This approach shows how to set up the agent and build logic to generate responses using microflows to empower the agent. You start with a prompt at runtime and add functions and knowledge bases to the microflow at design time.
 
 {{% alert color="info" %}}
-This guide assumes you have completed the shared setup steps in [Creating Your First Agent](/appstore/modules/genai/how-to/creating-agents/). If you haven't done so, complete those steps first to set up your application, knowledge base, domain model, UI, and function microflows.
+This guide assumes you have completed the shared setup steps in [Creating Your First Agent](/appstore/modules/genai/how-to/creating-agents/). If you have not done so, complete those steps first to set up your application, knowledge base, domain model, UI, and function microflows.
 {{% /alert %}}
 
 ## Creating Your Agent
 
-Create an agent that can be sent to the LLM. The [Agent Commons](/appstore/modules/genai/genai-for-mx/agent-commons/) module allows agentic AI engineers to define agents and perform prompt engineering at runtime. If you are not familiar with Agent Commons or if anything is unclear, it is recommended to follow the [How-to Prompt Engineering at Runtime](/appstore/modules/genai/how-to/howto-prompt-engineering/) before continuing.
+Create an agent that can be sent to the LLM. The [Agent Commons](/appstore/modules/genai/genai-for-mx/agent-commons/) module allows agentic AI engineers to define agents and perform prompt engineering at runtime. If you are not familiar with Agent Commons or if anything is unclear, Mendix recommends following [Prompt Engineering at Runtime](/appstore/modules/genai/how-to/howto-prompt-engineering/) before continuing.
 
 1. Run the app.
 
@@ -53,7 +53,7 @@ Create an agent that can be sent to the LLM. The [Agent Commons](/appstore/modul
 
 10. Go back to the **Agent Overview** page. 
 
-11. Hover over the ellipsis ({{% icon name="three-dots-menu-horizontal-small" %}}) icon corresponding to your agent, and click **Select Version in Use** button. On this page, choose the version you want to set as `In Use`, which means it is selected for production and makes is selectable in your microflow logic. Select the *Initial agent* version and click **Select**.
+11. Hover over the ellipsis ({{% icon name="three-dots-menu-horizontal-small" %}}) icon corresponding to your agent, and click **Select Version in Use** button. On this page, choose the version you want to set as `In Use`, which means it is selected for production and makes it selectable in your microflow logic. Select the *Initial agent* version and click **Select**.
 
 Your agent is now almost ready to be used in your application. You can iterate on it until you are satisfied with the results.
 
@@ -67,45 +67,45 @@ The button currently does not perform any actions, so you need to create a micro
 
 3. Add a `Retrieve` action to the microflow to retrieve the prompt that you created in the UI:
 
-    * Source: `From database`
-    * Entity: `AgentCommons.Agent` (search for *Agent*)
-    * XPath constraint: `[Title = 'IT-Ticket Helper']`
-    * Range: `First`
-    * Object name: `Agent` (default)
+    * **Source**: `From database`
+    * **Entity**: `AgentCommons.Agent` (search for *Agent*)
+    * **XPath constraint**: `[Title = 'IT-Ticket Helper']`
+    * **Range**: `First`
+    * **Object name**: `Agent` (default)
 
 4. Add a Java-Call action and search for `PromptToUse_GetAndReplace` to get the `PromptToUse` object that contains the variable replaced by the user input:
 
-    * Agent: `Agent` (the object that was previously retrieved)
-    * Context object: `TicketHelper` (input parameter)
-    * Object name: `PromptToUse` (default)
+    * **Agent**: `Agent` (the object that was previously retrieved)
+    * **Context object**: `TicketHelper` (input parameter)
+    * **Object name**: `PromptToUse` (default)
 
 5. Add the `Create Request` action to set the system prompt:
 
-    * System Prompt: `$PromptToUse/SystemPrompt` (expression)
-    * Temperature: empty (expression; optional)
-    * MaxTokens: empty (expression; optional)
-    * TopP: empty (expression; optional)
-    * Object name: `Request` (default)
+    * **System Prompt**: `$PromptToUse/SystemPrompt` (expression)
+    * **Temperature**: Leave empty (expression; optional)
+    * **MaxTokens**: Leave empty (expression; optional)
+    * **TopP**: Leave empty (expression; optional)
+    * **Object name**: `Request` (default)
 
 6. Add the `Chat Completions (without history)` action to call the model:
 
-    * DeployedModel: `$Agent/AgentCommons.Agent_Version_InUse/AgentCommons.Version/AgentCommons.Version_DeployedModel/GenAICommons.DeployedModel` (expression)
-    * UserPrompt: `$PromptToUse/UserPrompt` (expression)
-    * OptionalFileCollection: empty (expression)
-    * OptionalRequest: `Request` (the object that was previously created in step 6)
-    * Object name: `Response` (default)
+    * **DeployedModel**: `$Agent/AgentCommons.Agent_Version_InUse/AgentCommons.Version/AgentCommons.Version_DeployedModel/GenAICommons.DeployedModel` (expression)
+    * **UserPrompt**: `$PromptToUse/UserPrompt` (expression)
+    * **OptionalFileCollection**: Leave empty (expression)
+    * **OptionalRequest**: `Request` (the object that was previously created in step 5)
+    * **Object name**: `Response` (default)
 
-7. Lastly, add a `Change object` action to change the **ModelResponse** attribute:
+7. Add a `Change object` action to change the **ModelResponse** attribute:
 
-    * Object: `TicketHelper` (input parameter)
-    * Member: `ModelResponse`
-    * Value: `$Response/ResponseText` (expression)
+    * **Object**: `TicketHelper` (input parameter)
+    * **Member**: `ModelResponse`
+    * **Value**: `$Response/ResponseText` (expression)
 
 Now, the user can ask the model questions and receive responses. However, this interaction is still quite basic and does not yet qualify as a true 'agent,' since no complex tools have been integrated.
 
 ## Empowering the Agent
 
-In this section, you will enable the agent to call two microflows as functions, along with a tool for knowledge base retrieval. It is highly recommended to first follow the [Integrate Function Calling into Your Mendix App](/appstore/modules/genai/how-to/howto-functioncalling/) and [Grounding Your Large Language Model in Data – Mendix Cloud GenAI](/appstore/modules/genai/how-to/howto-groundllm/#chatsetup) documents. These guides cover the foundational concepts for this section, especially if you are not yet familiar with function calling or Mendix Cloud GenAI knowledge base retrieval.
+In this section, enable the agent to call two microflows as functions, along with a tool for knowledge base retrieval. Mendix recommends first following [Integrate Function Calling into Your Mendix App](/appstore/modules/genai/how-to/howto-functioncalling/) and [Grounding Your Large Language Model in Data](/appstore/modules/genai/how-to/howto-groundllm/#chatsetup). These guides cover the foundational concepts for this section, especially if you are not yet familiar with function calling or Mendix Cloud GenAI knowledge base retrieval.
 
 All components used in this document can be found in the **ExampleMicroflows** folder of the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) for reference. This example focuses only on retrieval functions, but you can also expose functions that perform actions on behalf of the user. An example of this is creating a new ticket, as demonstrated in the [Agent Builder Starter App](https://marketplace.mendix.com/link/component/240369).
 
@@ -113,13 +113,13 @@ All components used in this document can be found in the **ExampleMicroflows** f
 
 The first function enables the user to ask questions about the ticket dataset, for example, how many tickets are in a specific status. Since this is private data specific to your application, an LLM cannot answer such questions on its own. Instead, the model acts as an agent by calling a designated microflow within your application to retrieve the information. For more information, see [Function Calling](/appstore/modules/genai/function-calling/).
 
-1. Add the `Tools: Add Function to Request` action  immediately after the **Request** creation microflow.
+1. Add the `Tools: Add Function to Request` action immediately after the **Request** creation microflow:
 
-    * Request: `Request` (object created in previous action)
-    * Tool name: `RetrieveNumberOfTicketsInStatus` (expression)
-    * Tool description: `Get number of tickets in a certain status. Only the following values for status are available: [''Open'', ''In Progress'', ''Closed'']` (expression)
-    * Function microflow: select the microflow called `Ticket_GetNumberOfTicketsInStatus`
-    * Use return value: `no`
+    * **Request**: `Request` (object created in previous action)
+    * **Tool name**: `RetrieveNumberOfTicketsInStatus` (expression)
+    * **Tool description**: `Get number of tickets in a certain status. Only the following values for status are available: [''Open'', ''In Progress'', ''Closed'']` (expression)
+    * **Function microflow**: Select the microflow called `Ticket_GetNumberOfTicketsInStatus`
+    * **Use return value**: `no`
 
 When you restart the app and ask the agent "How many tickets are open?", a log should appear in your Studio Pro console indicating that your microflow was executed.
 
@@ -129,11 +129,11 @@ As a second function, the model can pass an identifier if the user asked for det
 
 1. In the microflow `ACT_TicketHelper_CallAgent`, add the `Tools: Add Function to Request` action immediately after the **Request** creation microflow:
 
-    * Request: `Request` (object created in previous action)
-    * Tool name: `RetrieveTicketByIdentifier` (expression)
-    * Tool description: `Get ticket details based on a unique ticket identifier (passed as a string). If there is no information for this identifier, inform the user about it.` (expression)
-    * Function microflow: select the microflow called `Ticket_GetTicketByID`
-    * Use return value: `no`
+    * **Request**: `Request` (object created in previous action)
+    * **Tool name**: `RetrieveTicketByIdentifier` (expression)
+    * **Tool description**: `Get ticket details based on a unique ticket identifier (passed as a string). If there is no information for this identifier, inform the user about it.` (expression)
+    * **Function microflow**: Select the microflow called `Ticket_GetTicketByID`
+    * **Use return value**: `no`
   
 ### Connecting Functions via MCP 
 
@@ -148,26 +148,26 @@ For both approaches, you need an `MCPClient.MCPServerConfiguration` object conta
 
 Finally, you can add a tool for knowledge base retrieval. This allows the agent to query the knowledge base for similar tickets and thus tailor a response to the user based on private knowledge. Note that the knowledge base retrieval is only supported for [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/).
 
-1. To retrieve a **Consumed Knowledge Base** object, add a `Retrieve` action in the `_ACT_TicketHelper_Agent_GenAICommons` microflow before the request is created. 
+1. To retrieve a **Consumed Knowledge Base** object, add a `Retrieve` action in the `_ACT_TicketHelper_Agent_GenAICommons` microflow before the request is created:
 
-    * Source: `From database`
-    * Entity: `GenAICommons.ConsumedKnowledgeBase` (search for `ConsumedKnowledgeBase`)
-    * Range: `First`
-    * Object name: `ConsumedKnowledgeBase` (default)
+    * **Source**: `From database`
+    * **Entity**: `GenAICommons.ConsumedKnowledgeBase` (search for `ConsumedKnowledgeBase`)
+    * **Range**: `First`
+    * **Object name**: `ConsumedKnowledgeBase` (default)
 
 2. Add the `Tools: Add Knowledge Base` action after the **Request** creation microflow:
 
-    * Request: `Request` (object created in previous action)
-    * MaxNumberOfResults: empty (expression; optional)
-    * MinimumSimilarity: empty (expression; optional)
-    * MetadataCollection: empty (expression; optional)
-    * Name: `RetrieveSimilarTickets` (expression)
-    * Description: `Similar tickets from the database` (expression)
-    * ConsumedKnowledgeBase: `ConsumedKnowledgeBase` (as retrieved in step above)
-    * CollectionIdentifier: `'HistoricalTickets'` (name that was used in the setup)
-    * Use return value: `no`
+    * **Request**: `Request` (object created in previous action)
+    * **MaxNumberOfResults**: Leave empty (expression; optional)
+    * **MinimumSimilarity**: Leave empty (expression; optional)
+    * **MetadataCollection**: Leave empty (expression; optional)
+    * **Name**: `RetrieveSimilarTickets` (expression)
+    * **Description**: `Similar tickets from the database` (expression)
+    * **ConsumedKnowledgeBase**: `ConsumedKnowledgeBase` (as retrieved in step above)
+    * **CollectionIdentifier**: `'HistoricalTickets'` (name that was used in the setup)
+    * **Use return value**: `no`
 
-You have successfully integrated a knowledge base into your agent interaction. Run the app to see the agent integrated in the use case. Using the **TicketHelper_Agent** page, the user can ask the model questions and receive responses. When it deems it relevant, it will use the functions or the knowledge base. If you ask the agent "How many tickets are open?", a log should appear in your Studio Pro console indicating that the function microflow was executed. Now, when a user submits a request like "My VPN crashes all the time and I need it to work on important documents", the agent will search the knowledge base for similar tickets and provide a relevant solution. 
+You have successfully integrated a knowledge base into your agent interaction. Run the app to see the agent integrated in the use case. Using the **TicketHelper_Agent** page, the user can ask the model questions and receive responses. When it deems it relevant, it uses the functions or the knowledge base. If you ask the agent "How many tickets are open?", a log should appear in your Studio Pro console indicating that the function microflow was executed. When a user submits a request like "My VPN crashes all the time and I need it to work on important documents", the agent searches the knowledge base for similar tickets and provides a relevant solution. 
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-singleagent/Microflow_GenAICommons.png" alt="Microflow showing GenAI Commons implementation" >}}
 
@@ -179,7 +179,7 @@ If you would like to learn how to enable user confirmation for tools similar as 
 If you are looking for more technical details and an example implementation, check out the [Agent Builder Starter App](https://marketplace.mendix.com/link/component/240369), which demonstrates additional built-in features. Additionally, the **ExampleMicroflows** folder in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) contains all components used in this how-to, including the final use case. You may also find it helpful to explore other examples.
 {{% /alert %}}
 
-Before testing, ensure that you have completed the Mendix Cloud GenAI configuration as described in the [Build a Chatbot from Scratch Using the Blank GenAI App](/appstore/modules/genai/how-to/blank-app/), particularly the [Infrastructure Configuration](/appstore/modules/genai/how-to/blank-app/#config) section. 
+Before testing, ensure that you have completed the Mendix Cloud GenAI configuration as described in [Build a Chatbot from Scratch Using the Blank GenAI App](/appstore/modules/genai/how-to/blank-app/), particularly the [Infrastructure Configuration](/appstore/modules/genai/how-to/blank-app/#config) section. 
 
 Congratulations! Your agent is now ready to use and enriched by powerful capabilities such as agent builder, function calling, and knowledge base retrieval.
 

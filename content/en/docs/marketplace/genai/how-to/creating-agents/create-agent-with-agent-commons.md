@@ -7,10 +7,10 @@ description: "Learn how to create and manage agents using the Agent Commons UI f
 
 ## Introduction
 
-An alternative approach to set up the agent and build logic to generate responses is based on the logic part of the Agent Commons module. Start by defining an agent with a prompt at runtime, then, through the same UI, add tools, (microflows as functions) and knowledge bases to the agent version.
+An alternative approach to set up the agent and build logic to generate responses is based on the logic part of the Agent Commons module. Start by defining an agent with a prompt at runtime, then, through the same UI, add tools (microflows as functions) and knowledge bases to the agent version.
 
 {{% alert color="info" %}}
-This guide assumes you have completed the shared setup steps in [Creating Your First Agent](/appstore/modules/genai/how-to/creating-agents/). If you haven't done so, complete those steps first to set up your application, knowledge base, domain model, UI, and function microflows.
+This guide assumes you have completed the shared setup steps in [Creating Your First Agent](/appstore/modules/genai/how-to/creating-agents/). If you have not done so, complete those steps first to set up your application, knowledge base, domain model, UI, and function microflows.
 {{% /alert %}}
 
 ## Setting Up the Agent with a Prompt
@@ -48,7 +48,7 @@ Create an agent that can be called to interact with the LLM. The [Agent Commons]
 
 7. In the **Model** field, select the text generation model. Note that the model needs to support function calling and system prompts in order to be selectable. For Mendix Cloud GenAI Resources, this is automatically the case. However, if you use another connector to an LLM provider, and your chosen model does not show up in the list, check the documentation of the respective connector for information about [the supported model functionalities](/appstore/modules/genai/genai-for-mx/commons/#deployed-model).
 
-8. Add a value in the **UserInput** variable field on the right of the page, under **Test Case**. That way, you can test the current prompt behavior by calling the agent. For example, type `How can I implement an agent in my Mendix app?` and click **Run**. You may need to scroll down to see the **Output** on the page after a few seconds. Ideally, the model does not attempt to answer requests that fall outside its scope, as it is restricted to handling IT-related issues and providing information about ticket data. However, if you ask a question that would require tools that are not yet implemented, the model might hallucinate and generate a response as if it had used those tools.
+8. Add a value in the **UserInput** variable field on the right of the page, under **Test Case**. This way, you can test the current prompt behavior by calling the agent. For example, type `How can I implement an agent in my Mendix app?` and click **Run**. You may need to scroll down to see the **Output** on the page after a few seconds. Ideally, the model does not attempt to answer requests that fall outside its scope, as it is restricted to handling IT-related issues and providing information about ticket data. However, if you ask a question that would require tools that are not yet implemented, the model might hallucinate and generate a response as if it had used those tools.
 
 9. Make sure the app is running with the latest domain model changes from the setup section. In the Agent Commons UI, you will see a field for the [Context Entity](/appstore/modules/genai/genai-for-mx/agent-commons/#define-context-entity). Search for **TicketHelper**, and select the entity that was created in one of the previous steps. When starting from the Blank GenAI App, this should be **MyFirstModule.TicketHelper**. 
 
@@ -66,9 +66,9 @@ Create an agent that can be called to interact with the LLM. The [Agent Commons]
 
 ## Empowering the Agent {#empower-agent}
 
-In order to let the agent generate responses based on specific data and information, you will connect it to two function microflows and a knowledge base. Even though the implementation is not complex—you only need to link it in the front end—it is highly recommended to be familiar with the [Integrate Function Calling into Your Mendix App](/appstore/modules/genai/how-to/howto-functioncalling/) and [Grounding Your Large Language Model in Data – Mendix Cloud GenAI](/appstore/modules/genai/how-to/howto-groundllm/#chatsetup) documents. These guides cover the foundational concepts for function calling and knowledge base retrieval. 
+To let the agent generate responses based on specific data and information, connect it to two function microflows and a knowledge base. Even though the implementation is not complex—you only need to link it in the front end—Mendix recommends being familiar with [Integrate Function Calling into Your Mendix App](/appstore/modules/genai/how-to/howto-functioncalling/) and [Grounding Your Large Language Model in Data](/appstore/modules/genai/how-to/howto-groundllm/#chatsetup). These guides cover the foundational concepts for function calling and knowledge base retrieval. 
 
-You will now use the function microflows that were created in earlier steps. To make use of the function calling pattern, you just need to link them to the agent as *Tools*, so that the agent can autonomously decide how and when to use the function microflows. As mentioned, you can find the final result in the **ExampleMicroflows** folder of the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) for reference. Note that tools can also be added when published from an MCP server. However, this scenario is not covered in this document.
+Use the function microflows created in earlier steps. To use the function calling pattern, link them to the agent as *Tools* so the agent can autonomously decide how and when to use the function microflows. You can find the final result in the **ExampleMicroflows** folder of the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) for reference. Note that tools can also be added when published from an MCP server. However, this scenario is not covered in this document.
 
 ### Connecting Function: Get Number of Tickets by Status (Without MCP Server)
 
@@ -102,16 +102,16 @@ Before adding tools via MCP, ensure you have at least one `MCPClient.MCPServerCo
 
 2. Select the appropriate MCP server configuration from the available options.
 
-3. Choose **Tool selection** option:
+3. Choose a **Tool selection** option:
 
-    * **Use all available tools**: imports the entire server, including all tools it provides. This also means that less control over individual tools and if tools are added in the future, they get added automatically on agent execution.
-    * **Select tools**: allows you to import specific tools from the server and changing specific fields for individual tools.
+    * **Use all available tools**: Imports the entire server, including all tools it provides. This also means less control over individual tools and if tools are added in the future, they get added automatically on agent execution
+    * **Select tools**: Allows you to import specific tools from the server and change specific fields for individual tools
 
 4. Click **Save**. The connected server or your selected tools will now appear in the agent's tool section.
 
 ### Including Knowledge Base Retrieval: Similar Tickets
 
-You will also connect the agent to our knowledge base, so that it can use historical ticket data, such as problem descriptions, reproduction steps and solutions, to generate answers. The agent will execute one or more retrievals when it deems it necessary based on the user input.
+Connect the agent to the knowledge base so it can use historical ticket data, such as problem descriptions, reproduction steps, and solutions, to generate answers. The agent executes one or more retrievals when it deems it necessary based on the user input.
 
 1. From the agent view page for the `IT-Ticket Helper` agent, under **Knowledge bases**, add a new knowledge base:
 
@@ -123,7 +123,7 @@ You will also connect the agent to our knowledge base, so that it can use histor
 
 2. Click **Save**.
 
-Note that, if the knowledge base of choice is not compatible with Agent Commons, or if the retrieval that should happen is more complex than the one shown above, Mendix recommends wrapping the logic for the retrieval in a microflow first. Then, let the microflow return a string representation of the retrieved data, and add the microflow as a tool in the agent. That way, the knowledge base retrieval can still be linked to the agent. You can check out an example of this pattern in the [Agent Builder Starter app](https://marketplace.mendix.com/link/component/240369), by looking for the `Ticket_SimilaritySearch_Function` microflow.
+If the knowledge base of choice is not compatible with Agent Commons, or if the retrieval that should happen is more complex than the one shown above, Mendix recommends wrapping the logic for the retrieval in a microflow first. Then, let the microflow return a string representation of the retrieved data, and add the microflow as a tool in the agent. This way, the knowledge base retrieval can still be linked to the agent. You can check out an example of this pattern in the [Agent Builder Starter App](https://marketplace.mendix.com/link/component/240369), by looking for the `Ticket_SimilaritySearch_Function` microflow.
 
 ### Saving as New Version
 
@@ -139,27 +139,27 @@ The button does not perform any actions yet, so you need to create a microflow t
 
 2. Grant your module the required roles in the microflow properties, under **Security** and **Allowed roles**.
 
-3. Add a `Retrieve` action to the microflow to retrieve the prompt that you created in the UI:
+3. Add a `Retrieve` action to the microflow to retrieve the agent you created in the UI:
 
-    * Source: `From database`
-    * Entity: `AgentCommons.Agent` (search for *Prompt*)
-    * XPath constraint: `[Title = 'IT-Ticket Helper']`
-    * Range: `First`
-    * Object name: `Agent` (default)
+    * **Source**: `From database`
+    * **Entity**: `AgentCommons.Agent` (search for *Agent*)
+    * **XPath constraint**: `[Title = 'IT-Ticket Helper']`
+    * **Range**: `First`
+    * **Object name**: `Agent` (default)
 
 4. Add the `Call Agent Without History` action from the toolbox to invoke the agent with the `TicketHelper` object containing the user input:
 
-    * Agent: `Agent` (the object that was previously retrieved)
-    * Optional context object: `TicketHelper` (input parameter)
-    * Optional request: empty
-    * Optional file collection: empty
-    * Object name: `Response` (default)
+    * **Agent**: `Agent` (the object that was previously retrieved)
+    * **Optional context object**: `TicketHelper` (input parameter)
+    * **Optional request**: Leave empty
+    * **Optional file collection**: Leave empty
+    * **Object name**: `Response` (default)
 
 5. Add a `Change object` action to change the `ModelResponse` attribute:
 
-    * Object: `TicketHelper` (input parameter)
-    * Member: `ModelResponse`
-    * Value: `$Response/ResponseText` (expression)
+    * **Object**: `TicketHelper` (input parameter)
+    * **Member**: `ModelResponse`
+    * **Value**: `$Response/ResponseText` (expression)
 
 6. Save the microflow and run the project.
 
@@ -199,7 +199,7 @@ You can find examples for both Agent Commons and GenAI Commons in the `ExampleMi
 If you are looking for more technical details and an example implementation, check out the [Agent Builder Starter App](https://marketplace.mendix.com/link/component/240369), which demonstrates additional built-in features. Additionally, the **ExampleMicroflows** folder in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) contains all components used in this how-to, including the final use case. You may also find it helpful to explore other examples.
 {{% /alert %}}
 
-Before testing, ensure that you have completed the Mendix Cloud GenAI configuration as described in the [Build a Chatbot from Scratch Using the Blank GenAI App](/appstore/modules/genai/how-to/blank-app/), particularly the [Infrastructure Configuration](/appstore/modules/genai/how-to/blank-app/#config) section. 
+Before testing, ensure that you have completed the Mendix Cloud GenAI configuration as described in [Build a Chatbot from Scratch Using the Blank GenAI App](/appstore/modules/genai/how-to/blank-app/), particularly the [Infrastructure Configuration](/appstore/modules/genai/how-to/blank-app/#config) section. 
 
 Congratulations! Your agent is now ready to use and enriched by powerful capabilities such as agent builder, function calling, and knowledge base retrieval.
 

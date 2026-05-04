@@ -6,7 +6,7 @@ url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/runtime-controller-api/
 
 ## Introduction
 
-This how-to describes how to create a simple menu that displays when the connection changed in a message box.
+This how-to describes how to create a simple menu that displays a message box when the connection changes.
 
 {{% alert color="info" %}}
 Listening for connection changes was introduced in version 11.9.0.
@@ -17,7 +17,7 @@ Listening for connection changes was introduced in version 11.9.0.
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * This how-to uses the results of [Get Started with the Web Extensibility API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/getting-started/). Complete that how-to before starting this one.
-* Make sure you are familiar with creating menus as described in [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/) and message boxes as described in [Show a Message Box Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/messagebox-api/).
+* Familiarize yourself with creating menus as described in [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/) and message boxes as described in [Show a Message Box Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/messagebox-api/).
 * Your app must be running locally in Studio Pro to use the Runtime Controller API.
 
 ## Listening for Connection Changes
@@ -47,11 +47,11 @@ export const component: IComponent = {
 };
 ```
 
-The code uses the:
+The code uses:
 
-* `menuApi` from `studioPro.ui.extensionsMenu` to allow you to use the menu API
+* `menuApi` from `studioPro.ui.extensionsMenu` to use the menu API
 * `messageBoxApi` from `studioPro.ui.messageBoxes` to show a dialog
-* `runtimeControllerApi` from `studioPro.runtime.controller` to check if the connection changed.
+* `runtimeControllerApi` from `studioPro.runtime.controller` to check if the connection changed
 
 {{% alert color="info" %}} The function is `async` in order for you to use `await` when executing the preview action.
 {{% /alert %}}

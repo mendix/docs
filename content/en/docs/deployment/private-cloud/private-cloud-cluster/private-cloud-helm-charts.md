@@ -103,8 +103,17 @@ Keep in mind that changing the registry type resets the value of all fields in t
 15. Click **Generate & Download** to generate the yaml file with the configurations that you provided.
 16. Run the following commands:
 
-    1. Install the required [Custom Resource Definitions](/developerportal/deploy/private-cloud-technical-appendix-01/#custom-resources) by running `kubectl apply -f mx-privatecloud-operator-crd/crds/`.
-    2. Install Mendix on Kubernetes by running `helm install --createnamespace -n <your namespace> -f <yaml file name> <release name> mx-privatecloud-operator-installer`.
+    1. To install the required [Custom Resource Definitions](/developerportal/deploy/private-cloud-technical-appendix-01/#custom-resources)
+    
+    ```text
+    kubectl apply -f mx-privatecloud-operator-crd/crds/
+    ```
+
+    2. To install Mendix on Kubernetes:
+
+    ```text
+    helm install --createnamespace -n <your namespace> -f <yaml file name> <release name> mx-privatecloud-operator-installer
+    ```
 
 {{% alert color="info" %}}
 Ensure that your cluster have access to the Mendix on Kubernetes Portal for adding the storage plans, and that the Private Cloud Portal is safelisted in the cluster.

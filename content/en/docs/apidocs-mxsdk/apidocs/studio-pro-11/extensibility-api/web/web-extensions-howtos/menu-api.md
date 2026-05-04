@@ -6,10 +6,10 @@ url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/
 
 ## Introduction
 
-This how-to describes how to create menus using the web extensibility API. In this example, you will:
+This how-to describes how to create menus using the Web Extensibility API. In this example, you will do the following:
 
 * Create a simple menu item
-* Add menu items with sub-menus
+* Add menu items with submenus
 * Update a menu
 
 ## Prerequisites
@@ -23,14 +23,14 @@ If you are using Studio Pro 11.0–11.5 and your extension includes menus, your 
 
 ## Creating a Simple Menu
 
-The code below adds a simple menu to your extension. The code will:
+The code below adds a simple menu to your extension. The code does the following:
 
-* Create a menu item with the caption *My First Menu*
-* Show a dialog when the menu is clicked
-* Import `menuApi` from `studioPro.ui.extensionsMenu` to allow you to use the menu API
-* Import `messageBoxApi` from `studioPro.ui.messageBoxes` to show a dialog
+* Creates a menu item with the caption **My First Menu**
+* Shows a dialog when you click the menu
+* Imports `menuApi` from `studioPro.ui.extensionsMenu` to allow you to use the menu API
+* Imports `messageBoxApi` from `studioPro.ui.messageBoxes` to show a dialog
 
-Replace your `src/main/index.ts` file with the following:
+Replace your `src/main/index.ts` file with the following code:
 
 ```typescript
 import { IComponent, Menu, getStudioProApi } from "@mendix/extensions-api";
@@ -72,21 +72,21 @@ When this code is added, it does the following:
 3. The listener checks if the clicked `menuId` matches your defined ID. If it does, it calls `messageBoxApi.show()`.
 4. Studio Pro displays an information dialog with the message you provided.
 
-Your extensions should now appear like this:
+Your extension should now appear like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/web/menus/my_first_menu.png" width="200" >}}
 
 ## Creating a Menu with Submenus
 
-You can also include multiple sub-menus to expand your menu structure.
+You can include multiple submenus to expand your menu structure.
 
-To do this, add additional menu items to your code and add them to the `subMenus` array for the relevant menu item. These child menus can have their own sub-menus, and so on. Only parent menus (menus that are not sub-menus to any others) should be added through the `await menuApi.add()` call, as shown in the code sample below.
+To do this, add additional menu items to your code and add them to the `subMenus` array for the relevant menu item. These child menus can have their own submenus, and so on. Only parent menus (menus that are not submenus to any others) should be added through the `await menuApi.add()` call, as shown in the code sample below.
 
 {{% alert color="info" %}}
-Parent menus (with `subMenus`) do not create `menuItemActivated` events. These are only sent when a leaf menu (a menu that does not have any sub-menus) is clicked.
+Parent menus (with `subMenus`) do not create `menuItemActivated` events. These are only sent when you click a leaf menu (a menu that does not have any submenus).
 {{% /alert %}}
 
-The following `src/main/index.ts` generates one menu item with sub-menus, and one menu item without sub-menus.
+The following `src/main/index.ts` generates one menu item with submenus and one menu item without submenus.
 
 ```typescript
 import { IComponent, Menu, getStudioProApi } from "@mendix/extensions-api";
@@ -138,7 +138,7 @@ export const component: IComponent = {
 
 The menu hierarchy will be displayed like this:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/web/menus/child_menus.png" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/web/menus/child_menus.png" alt="Menu hierarchy showing parent menus with child and grandchild menus" >}}
 
 ## Updating a Menu
 
@@ -150,7 +150,7 @@ An example is shown in the code below. If you click the menu item, it will be di
 Only `caption` and `enabled` can be updated.
 {{% /alert %}}
 
-You can test it by the following code as the contents of  `src/main/index.ts`.
+You can test this by using the following code as the contents of `src/main/index.ts`.
 
 ```typescript
 import { IComponent, Menu, getStudioProApi } from "@mendix/extensions-api";
@@ -187,7 +187,7 @@ export const component: IComponent = {
 
 The disabled state is shown in the image below:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/web/menus/disabled_menu.png" width="300" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/web/menus/disabled_menu.png" alt="Menu item in disabled state with updated caption" width="300" >}}
 
 ## Setting the Action Property on the Menu
 

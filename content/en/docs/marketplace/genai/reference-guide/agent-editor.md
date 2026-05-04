@@ -131,7 +131,7 @@ Defining an agent is also document-based and can be configured using the Agent e
 
 * Add an Agent document from the **App Explorer** at the module level. Right-click on the module or folder where you want to create your Model document, select **Add other** and find Agent in the bottom section.
 * Select a Module document for an agent to call a text generation resource.
-* Configure the **System prompt**, and additionally define a **User prompt** for task-style execution. In both prompts include placeholders with double braces, for example, `{{variable}}`.
+* Configure the **System prompt**, and additionally define a **User prompt** for task-style execution. In both prompts, include placeholders with double braces, for example, `{{variable}}`.
 * When placeholders are used, select a **Context entity** to resolve values at runtime. The placeholders used within the prompts need to match with the attribute names of the entity selected, so that attribute values can be inserted instead of the placeholders at runtime.
 * Optionally, adjust the **Model settings** as needed (maximum tokens, temperature, and TopP), based on the supported ranges of the model provider.
 
@@ -224,17 +224,17 @@ If a call fails during testing, a generic error message is shown in the Agent ed
 
 ### Including the Agent in the App Logic {#call-agent}
 
-You can include an agent in the app logic by calling it from a microflow. To do so, the Agent Editor provides the **Call Agent** toolbox actions in the **Agent Editor** category. The **Call Agent without History** action is currently focused on single-call, task-style execution, where **Call Agent with History** supports conversational scenarios with multiple messages.
+You can include an agent in the app logic by calling it from a microflow. To do so, the Agent Editor provides the **Call Agent** toolbox actions in the **Agent Editor** category. The **Call Agent without History** action is currently focused on single-call, task-style execution, where the **Call Agent with History** supports conversational scenarios with multiple messages.
 
 When configuring the action, select the Agent document so that the right agent is called. If your prompts use variable placeholders, pass a context object to the action. This object must be of the selected context entity type so that placeholders can be resolved at runtime.
 
-For **Call Agent without History**, you can optionally pass a `Request` object to set request-level values, and a `FileCollection` object with files to send along with the user message to make use of vision or document chat capabilities. For **Call Agent with History** the `Request` object is mandatory, as it contains the previous messages from the conversation. Support for files and images depends on the underlying large language model. Refer to the documentation of the specific connector.
+For **Call Agent without History**, you can optionally pass a `Request` object to set request-level values, and a `FileCollection` object with files to send along with the user message to utilize vision or document chat capabilities. For the **Call Agent with History** the `Request` object is mandatory, as it contains the previous messages from the conversation. Support for files and images depends on the underlying large language model. Refer to the documentation of the specific connector.
 
 The output is a `GenAICommons.Response` object, aligned with the GenAI Commons and Agent Commons domain models and actions, which can be used for further logic. Additionally, all agents created via the Agent Editor extension are seamlessly integrated with other Mendix offerings, such as the [Token consumption monitor](/appstore/modules/genai/genai-for-mx/conversational-ui/#snippet-token-monitor) or the [Traceability](/appstore/modules/genai/genai-for-mx/conversational-ui/#traceability) feature from [ConversationalUI](/appstore/modules/genai/genai-for-mx/conversational-ui/).
 
 ### Including the Agent in a Conversational User Interface (#conversational-ui)
 
-Pages and Snippets are building blocks for chat-type UI patterns exist in the [ConversationalUI module](/appstore/modules/genai/genai-for-mx/conversational-ui/). The central entity here is the `ChatContext` which represents a user-agent chat session. When using the Agent Editor, in order to instantiate a new `ChatContext`, use the **New Chat for Agent** action in the microflow that opens your chat page and passes the Agent document. For more details, refer to the [Conversational UI patterns](/appstore/modules/genai/genai-for-mx/conversational-ui/#chat-context-operations).
+Pages and Snippets are building blocks for chat-type UI patterns that exist in the [ConversationalUI module](/appstore/modules/genai/genai-for-mx/conversational-ui/). The central entity here is the `ChatContext`, which represents a user-agent chat session. When using the Agent Editor, in order to instantiate a new `ChatContext`, use the **New Chat for Agent** action in the microflow that opens your chat page and passes the Agent document. For more details, refer to the [Conversational UI patterns](/appstore/modules/genai/genai-for-mx/conversational-ui/#chat-context-operations).
 
 ### Deploying the Agent to Cloud Environments {#deploy-agent}
 
@@ -262,7 +262,7 @@ To return to historical agent versions, use version control to inspect previousl
 
 ### Testing the Agent From Studio Pro Results in an Error
 
-This error is typically due to incorrect model configuration or an exception originating from the API call of the large language model. Check the **Console** pane in Studio Pro for detailed logs. Additionally, verify that the `ASU_AgentEditor` microflow was added to your after-startup logic as described in the [First-time setup](#setup) section, and that the app startup has completed fully.
+This error is typically due to incorrect model configuration or an exception originating from the API call of the large language model. Check the **Console** pane in Studio Pro for detailed logs. Additionally, verify that the `ASU_AgentEditor` microflow is added to your after-startup logic as described in the [First-time setup](#setup) section, and that the app startup has completed fully.
 
 ### Testing the Agent From Studio Pro Is Disabled
 

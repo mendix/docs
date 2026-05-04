@@ -252,7 +252,8 @@ The new data grid can trigger some events while iterating with it.
 Triggers an action (such as a nanoflow, microflow, or Show page action) when the end-user clicks in one of the rows. It also adds a pointer cursor to signal that it is clickable. This function also complies with accessibility features and can be reached using only the keyboard.
 
 ### On Selection Change Action
-Triggers an action (such as a nanoflow, microflow, or client action) when the end-user changes the selection in the data grid. This includes selecting or deselecting individual rows, using the select all toggle, or clearing the selection. The action provides a way to respond to selection state changes and implement custom logic based on the current selection.
+
+Triggers an action (such as a nanoflow, microflow, or client action) when the end-user changes selection in the data grid. This includes selecting or deselecting individual rows, using the **Select all** toggle, or clearing the selection. The action provides a way to respond to selection state changes and implement custom logic based on the current selection.
 
 ## Filters {#filters}
 
@@ -604,7 +605,8 @@ To achieve this behavior, set the **On click trigger** to **Double click**. When
 
 When the button is placed in a grid header, the assigned action can receive the currently selected rows as a parameter.
 
-#### How Selection is passed to Actions
+#### How Selection is Passed to Actions
+
 When a button placed in header triggers a **microflow** or **nanoflow**, the selected rows are passed as input:
 
 - If **Single Selection** is enabled:
@@ -612,18 +614,22 @@ When a button placed in header triggers a **microflow** or **nanoflow**, the sel
 - If **Multiple Selection** is enabled:
   - The action receives a **list of objects**.
 
-This allows developers to build logic that operates on one or many items.
+This allows developers to build logic that operates on one or several items.
 
-#### Example use cases
+#### Example Use Cases
+
 - **Mark as Done**: A button triggers a microflow that updates the status of selected tasks.
 - **Delete Selected**: A button deletes all selected records.
 - **Export Selected**: A button triggers a microflow or nanoflow that exports the selected list to a file.
 
 #### Configuration
-1. Enable selection in the Data Grid 2 widget.
-2. Insert an Action Button into the Header.
-3. Configure the button to trigger a microflow or nanoflow.
-4. Set the input parameter of the flow to match the selection type (single object or list).
+
+To configure selection, do the following:
+
+1. Enable **Selection** in the data grid 2 widget.
+1. Insert an **Action Button** into the **Header**.
+1. Configure the button to trigger a microflow or nanoflow.
+1. Set the input parameter of the flow to match the selection type (single object or list).
 
 ## Keyboard Support {#keyboard-support}
 

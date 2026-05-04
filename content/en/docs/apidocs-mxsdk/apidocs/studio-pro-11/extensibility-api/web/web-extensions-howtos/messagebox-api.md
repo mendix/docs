@@ -2,11 +2,12 @@
 title: "Show a Message Box Using Web API"
 linktitle: "Message Box"
 url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/messagebox-api/
+description: "Describes how to show a message box to a user by creating menu items that display a dialog with text."
 ---
 
 ## Introduction
 
-This how-to describes how to show a message box to a user. In this example, you will create three menu items that will display a dialog with text.
+This how-to describes how to show a message box to a user. In this example, you create three menu items that display a dialog with text.
 
 ## Prerequisites
 
@@ -25,9 +26,9 @@ Create menus that will display a dialog with text (one for each type). This is d
 
 The message has the format `messageBoxApi.show(<message-type>, <message>, <message-details>)`, where:
 
-* `<message-type>` is the type of message, indicated in the pane title and indicated by an icon. Values are "information" {{% icon name="info-circle" color="blue" %}}, "warning" {{% icon name="alert-triangle" color="yellow" %}}, and "error" {{% icon name="remove-circle" color="red" %}}.
+* `<message-type>` is the type of message, indicated in the pane title and by an icon. Values are "information" {{% icon name="info-circle" color="blue" %}}, "warning" {{% icon name="alert-triangle" color="yellow" %}}, and "error" {{% icon name="remove-circle" color="red" %}}.
 * `<message>` is the message to display.
-* `<message-details>` is an optional extended message which is displayed in an expandable area that is initially collapsed.  
+* `<message-details>` is an optional extended message that is displayed in an expandable area that is initially collapsed.  
 
 The full TypeScript file (`src/main/index.ts`) to implement these three menu items and message boxes is as follows:
 
@@ -68,7 +69,7 @@ export const component: IComponent = {
 
 For example, the **Show Info** menu item displays the following message box.
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/web/messageBoxes/info.png" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/web/messageBoxes/info.png" alt="" >}}
 
 ## Extensibility Feedback
 

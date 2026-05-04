@@ -2,18 +2,18 @@
 title: "Using the App Explorer API"
 linktitle: "App Explorer API"
 url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/app-explorer-api/
-description: "Describes how to interact with the App Explorer in Studio Pro by creating a context menu for microflows."
+description: "Describes how to use the App Explorer API in Studio Pro to create a context menu for microflows."
 ---
 
 ## Introduction
 
-This how-to describes how to interact with the App Explorer in Studio Pro. In this example, you create a menu that displays for each microflow in the App Explorer.
+This how-to describes how to interact with the App Explorer in Studio Pro. In this example, you create a context menu that displays for each microflow in the App Explorer.
 
 ## Prerequisites
 
-{{% alert="info" %}}
+{{% alert color="info" %}}
 If you are using Studio Pro 11.0–11.5 and your extension includes menus, your existing menu code will not work when you upgrade to Studio Pro 11.6. To restore full functionality and support, upgrade to Extensibility API 11.6 and follow the steps in the [Migration Guide](/apidocs-mxsdk/apidocs/web-extensibility-api-11/migration-guide/).
-{{% /alert%}}
+{{% /alert %}}
 
 Before starting this how-to, complete the following prerequisites:
 
@@ -26,7 +26,7 @@ Before starting this how-to, complete the following prerequisites:
 Use the full name of the document type to specify which type of document a menu should belong to (for example, `Microflows$Microflow` for microflows or `Pages$Page` for pages). For more information about these document type names, see [Access a Mendix Model Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/model-api/).
 {{% /alert %}}
 
-The code below uses the `appExplorer` API `addContextMenu` method to add the menu to all `Microflow` document nodes. When you click this menu, the document ID is sent as an argument through the `DocumentContext` argument parameter of the menu.
+The code below uses the `appExplorer` API `addContextMenu` method to add the context menu to all `Microflow` document nodes. When you click this menu, the document ID is sent as an argument through the `DocumentContext` argument parameter.
 
 ```typescript
 import { ComponentContext, DocumentContext, IComponent, Menu, getStudioProApi } from "@mendix/extensions-api";
@@ -54,9 +54,9 @@ export const component: IComponent = {
 };
 ```
 
-The `DocumentContext` payload for the menu action is an object containing a document ID (`{ documentId: string }`). When you create a menu for the `appExplorer` `addContextMenu` method, use the `DocumentContext` as the context of your menu. The `documentId` is the ID of the document the menu is attached to (in this example, the exact `Microflow` node in the App Explorer).
+The `DocumentContext` payload for the menu action is an object containing a document ID (`{ documentId: string }`). When you create a menu for the `appExplorer` `addContextMenu` method, use `DocumentContext` as the context of your menu. The `documentId` is the ID of the document the menu is attached to (in this example, the specific `Microflow` node in the App Explorer).
 
-As explained in the [menu documentation](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu/), the `DocumentContext` is not necessary to add your menu to Studio Pro. However, if you do not use it, the menu will not receive the clicked document ID.
+As explained in the [menu documentation](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu/), `DocumentContext` is not required to add your menu to Studio Pro. However, if you do not use it, the menu will not receive the clicked document ID.
 
 ## Extensibility Feedback
 

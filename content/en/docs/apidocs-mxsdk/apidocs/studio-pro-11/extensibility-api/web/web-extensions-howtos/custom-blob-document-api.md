@@ -7,13 +7,13 @@ description: "Describes how to introduce a new document type and set up a custom
 
 ## Introduction
 
-This how-to describes how to introduce a new document type and set up a custom editor for users to edit documents of that type.
+This how-to describes how to introduce a new document type and set up a custom editor that allows users to edit documents of that type.
 
 ## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* [Get Started with the Web Extensibility API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/getting-started/).
+* [Get Started with the Web Extensibility API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/getting-started/)
 
 ## Custom Document Model
 
@@ -21,7 +21,7 @@ Studio Pro allows you to extend its metamodel by adding custom document types. T
 
 ## Registering a New Document Type
 
-To register a new document type, follow these steps:
+To register a new document type, do the following:
 
 1. Generate a new extension named `myextension` as described in [Get Started with the Web Extensibility API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/getting-started/).
 2. Replace the contents of `src/main/index.ts` with the code below:
@@ -64,7 +64,7 @@ To register a new document type, follow these steps:
     export const personDarkThemeIcon = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAWdJREFUSIm1ljFuwkAQRd/giFTkABS5gMsolBRcIFBwCOTGNUfgDtDRJ9yDioaCKlJ8B0dYmyLjZGLtrh0Jj7SyNPP3f894dtbinHP0aIM+yQHuYkERuQdegDnwBIw1VABH4BV4c86VQRIXMGABXADXsi7AIsjjIR4AG0NwAnIgBUa6UvWdDG4DDLoI1OQlkAFJJMtEMWUtEhXQstTksxCxR2hmRP6UCwMamppnXcnN/sx8k6FPYGlqHixLRCAx32RZ++05mOtz65y7Btsu3I1XYNvgwmZwJty1XbNINYOzL4MxgIg8/Pftjb1bLmgZFSJSiAgiMvHEJhorYhxWoAY+Gt9RnyvP3lUDY/f+ipr67fmuX258U6ACPoEd8Kxrp74KmBp8rhz7H58JetsUWCtRcwZVwLqtTTsdNM3kAHzoOtg3V0z8oCmov1FhwP0NO93U77g2Qje5cETJvHaLKzMqcAvr/a/iC+JcVEP5CMhEAAAAAElFTkSuQmCC';
     ```
 
-4. Add another file `src/model/PersonInfo.ts` in the same directory: 
+4. Add another file, `src/model/PersonInfo.ts`, in the same directory: 
 
     ```typescript
     export type PersonInfo = {
@@ -245,13 +245,13 @@ To register a new document type, follow these steps:
 
 ### Register the Document Type
 
-In `src/main/index.ts`, you register a new document type. After you register the document type, you can perform all CRUD operations on it. However, the document type does not appear in the UI until you also register an editor. 
+In `src/main/index.ts`, you register a new document type. After you register the document type, you can perform all create, read, update, and delete (CRUD) operations on it. However, the document type does not appear in the UI until you also register an editor. 
 
 Optionally, you can provide a `readableTypeName` to display a user-friendly name in logs and the Studio Pro UI instead of the full type name. You can also customize how the document contents serialize to a string. By default, the API uses `JSON.stringify` for serialization and `JSON.parse` for deserialization.
 
 ### Register the Editor
 
-The next call to the Studio Pro API in `src/main/index.ts` registers an editor for the document type. This call does the following:
+The next call to the Studio Pro API in `src/main/index.ts` registers an editor for the document type. This does the following:
 
 * Registers the `editor` entry point of the extension to the document type, so the editor appears when users interact with the document in Studio Pro (for example, through the **App Explorer** or **Find Results**)
 * Displays the editor as a tab, though you can also configure it to display as a modal dialog

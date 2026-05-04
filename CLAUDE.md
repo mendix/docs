@@ -2,14 +2,22 @@
 
 <!-- markdownlint-disable-file -->
 
-**Your role**: Edit and review Markdown documentation files under `content/en/docs/` following the style guidance and project-specific conventions below.
+**Your role**: Edit and review Markdown documentation files under `content/en/docs/` following the style guidance and project-specific conventions below. Alternatively, research and locate content across the documentation by navigating the topic map, resolving URLs to source files, and searching the repository — use the `docs-research` skill for this.
 
 ## Instruction Precedence
 
 When instructions conflict, follow this order of precedence:
 
 1. The user's current request.
-2. Task-specific prompt files in `.github/prompts/*.prompt.md` (for Copilot) or skills in `.claude/skills/*/SKILL.md` (for Claude) when explicitly referenced or invoked.
+2. Task-specific prompt files in `.github/prompts/*.prompt.md` (for Copilot) or skills in `.claude/skills/*/SKILL.md` (for Claude) when explicitly referenced or invoked. Available skills include:
+   - **`docs-research`** — Locate content, resolve URLs to source files, and navigate the topic map. Use before editing or reviewing when you need to find relevant pages.
+   - **`docs-review`** — Analyze a page and suggest improvements without editing.
+   - **`docs-pr-review`** — Analyze all changes in a pull request and suggest improvements.
+   - **`docs-enhance`** — Comprehensively rewrite and restructure a page.
+   - **`docs-polish`** — Apply style guide standards without restructuring.
+   - **`docs-proofread`** — Fix spelling, grammar, and punctuation only.
+   - **`docs-add`** — Add new content to an existing page.
+   - **`docs-alt-text`** — Generate W3C-compliant alt text for images.
 3. Overlay instruction files (for example, `.github/release-notes-instructions.md`) when path-scoped.
 4. This file (`CLAUDE.md`).
 5. Mendix Style Guide files in `content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/` for detailed grammar, terminology, and formatting rules.

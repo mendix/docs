@@ -306,6 +306,6 @@ This setup ensures that both the tab and the pane are registered in `src/main/in
 
 ## Extensibility Feedback
 
-If you would like to provide additional feedback, you can complete a small [survey](https://survey.alchemer.eu/s3/90801191/Extensibility-Feedback).
+If you would like to provide additional feedback, you can complete a short [survey](https://survey.alchemer.eu/s3/90801191/Extensibility-Feedback).
 
 Any feedback is appreciated.

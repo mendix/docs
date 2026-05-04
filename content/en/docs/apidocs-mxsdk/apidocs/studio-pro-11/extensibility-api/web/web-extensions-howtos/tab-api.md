@@ -6,33 +6,33 @@ url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/tab-api/
 
 ## Introduction
 
-This how-to describes how to open a tab in Studio Pro from an extension. This tab will contain your web content.
+This document describes how to open a tab in Studio Pro from an extension that contains your web content.
 
 ## Prerequisites
 
-{{% alert="info" %}}
-If you are using Studio Pro 11.0–11.5 and your extension includes menus, your existing menu code will not work when you upgrade to Studio Pro 11.6. To restore full functionality and support, upgrade to the Extensibility API 11.6 and follow the steps in the [Migration Guide](/apidocs-mxsdk/apidocs/web-extensibility-api-11/migration-guide/).
-{{% /alert%}}
+{{% alert color="info" %}}
+If you are using Studio Pro 11.0–11.5 and your extension includes menus, your existing menu code will not work when you upgrade to Studio Pro 11.6. To restore full functionality, upgrade to the Extensibility API 11.6 and follow the steps in the [Migration Guide](/apidocs-mxsdk/apidocs/web-extensibility-api-11/migration-guide/).
+{{% /alert %}}
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* This how-to uses the results of [Get Started with the Web Extensibility API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/getting-started/). Complete that how-to before starting this one. 
-* Make sure you are familiar with creating menus as described in [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/).
+* This document uses the results of [Get Started with the Web Extensibility API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/getting-started/). Complete that document before starting this one. 
+* Familiarize yourself with creating menus as described in [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/).
 
 ## Opening a Tab
 
-Create a menu item to open the tab. This is done inside the `loaded` method in `Main` class, as described below. For more information, see [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/).
+Create a menu item to open the tab inside the `loaded` method in the `Main` class, as described below. For more information, see [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/).
 
-In a listener event called `menuItemActivated` the `studioPro.ui.tabs.open(<tabinfo>, <uispec>)` call opens a new tab where:
+In a listener event called `menuItemActivated`, the `studioPro.ui.tabs.open(<tabinfo>, <uispec>)` call opens a new tab where:
 
-* `<TabInfo>` is an object containing the `title` of the tab, which will be shown in the title bar of your tab in Studio Pro.
+* `<TabInfo>` is an object containing the `title` of the tab, which appears in the title bar of your tab in Studio Pro
 * `<uispec>` is an object containing two required properties:
 
-    * `componentName` – the name of the extension prefixed with "extension/"; for example, "extension/myextension" in the following example
+    * `componentName` – the name of the extension prefixed with "extension/" (for example, "extension/myextension")
     * `uiEntryPoint` – the name mapped from the `manifest.json` file
 
 {{% alert color="info" %}}
-Whenever the tabs API `open` method is called, the `TabHandle` returned must be tracked by the extension so that it can be closed later by calling the `close` method.
+Track the `TabHandle` returned when you call the tabs API `open` method so you can close it later by calling the `close` method.
 {{% /alert %}}
 
 To open a tab called **My Extension Tab**, add the following code to the main entry point (`src/main/index.ts`):
@@ -91,7 +91,7 @@ In this example, there is a dictionary that uses the parent menu id as the key t
 
 In the previous example, the `uiEntryPoint` property of the `<uispec>` object had the value `tab`. This value must match the one from the manifest.
 
-If you want multiple tabs in your extension, you need to structure the folders and set up the manifest file correctly. To do this, follow these steps:
+To add multiple tabs in your extension, structure the folders and set up the manifest file correctly. Follow these steps:
 
 1. Add a new method `createTabSpec` in your `Main` class.
 
@@ -107,7 +107,7 @@ If you want multiple tabs in your extension, you need to structure the folders a
         }
     ```
 
-2. Add three folders inside the `ui` folder, one for each tab you want to display contents for.
+2. Add three folders inside the `ui` folder, one for each tab you want to display content for.
 3. Create an `index.tsx` file in each folder.
 4. Put the following code in each `index.tsx` file (this example is for **tab3**):
 
@@ -129,7 +129,7 @@ If you want multiple tabs in your extension, you need to structure the folders a
 
     In this example, you will add three tabs: **tab1**, **tab2**, and **tab3**.
 
-    {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/web/tabs/ui_folder_structure.png" width="200" >}}
+    {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/web/tabs/ui_folder_structure.png" alt="" width="200" >}}
 
 5. Create listener events in the `Main` class to open each of the three tabs. The `Main` class will then look like this:
 
@@ -204,7 +204,7 @@ If you want multiple tabs in your extension, you need to structure the folders a
     }
     ```
 
-7. Update `build-extension.mjs` to match the manifest with an entry for each tab. Add entry points for each tab to the `entryPoints` array and make sure the variable `appDir` stays unaltered, as follows:
+7. Update `build-extension.mjs` to match the manifest with an entry for each tab. Add entry points for each tab to the `entryPoints` array and ensure the `appDir` variable stays unaltered, as follows:
 
     ```javascript{hl_lines=["16-20"]}
       import * as esbuild from 'esbuild'

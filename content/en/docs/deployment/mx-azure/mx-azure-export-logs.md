@@ -3,20 +3,21 @@ title: "Export Logs to External Systems"
 url: /developerportal/deploy/mendix-on-azure/export-logs/
 description: "Configure Data Export Rules to send logs from Mendix on Azure to third-party observability tools"
 weight: 15
-tags: ["mendix on azure", "logs", "monitoring", "data export", "observability"]
 ---
 
 ## Introduction
 
-Mendix on Azure provides integrated monitoring through Azure Managed Grafana, which is the primary and recommended way to monitor your applications. However, some organizations need to send platform logs to external systems for integration with existing SIEM, compliance tools, or centralized observability platforms.
+Mendix on Azure provides integrated monitoring through Azure-Managed Grafana, which is the recommended way to monitor your applications. However, some organizations must send Platform logs to external systems for integration with existing SIEM, compliance tools, or centralized observability platforms.
 
-This document explains how to configure **Azure Log Analytics Data Export Rules** to send logs from your Mendix on Azure environment to:
-- Azure Event Hubs (for real-time streaming to third-party tools)
-- Azure Storage Accounts (for long-term archival or batch processing)
+This document explains how to configure data export rules for Azure Log Analytics to send logs from your Mendix on Azure environment to the following destinations:
 
-### When to Use This Capability
+* Azure Event Hubs - For real-time streaming to third-party tools
+* Azure Storage Accounts - For long-term archival or batch processing
+
+### Use Cases
 
 Consider using Data Export Rules when you:
+
 - Need to integrate Mendix logs with your organization's SIEM (e.g., Splunk, DataDog, Sentinel)
 - Have compliance requirements for long-term log retention outside Log Analytics
 - Want to centralize logs from multiple systems in a single observability platform

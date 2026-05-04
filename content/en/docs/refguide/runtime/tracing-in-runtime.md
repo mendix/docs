@@ -161,12 +161,9 @@ To use the OpenTelemetry Collector with Datadog, follow these steps:
 
 ## Sending Traces from Mendix on Kubernetes
 
-Mendix on Kubernetes can send OpenTelemetry traces to a standards-compliant OpenTelemetry Collector.
+Mendix on Kubernetes can send OpenTelemetry traces to a standards-compliant OpenTelemetry collector.
 
-Some cloud providers provide OpenTelemetry instrumentation Agents and will not work with the Mendix Runtime.
-For example:
-
-* [Azure Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/opentelemetry-enable) is incompatible with the standard OpenTelemetry instrumentation Agent bundled with the Mendix Runtime.
+Some cloud providers provide OpenTelemetry instrumentation agents and will not work with the Mendix Runtime. For example, [Azure Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/opentelemetry-enable) is incompatible with the standard OpenTelemetry instrumentation agent bundled with the Mendix Runtime.
 
 ### Installing Jaeger from a Helm chart
 
@@ -175,10 +172,10 @@ To get an OpenTelemetry collector installed into a Kubernetes cluster, contact y
 For quick experiments or non-production use cases, Jaeger can be installed using the [official Helm chart](https://github.com/jaegertracing/helm-charts/tree/jaeger-4.7.0/charts/jaeger).
 
 {{% alert color="warning" %}}
-The default Jaeger configuration is not production-grade: it doesn't have any authentication and stores all traces in-memory.
-
-To get a production-grade OpenTelemetry collector installed into a Kubernetes cluster, contact your cluster admin.
+The default Jaeger configuration is not production-grade, because it does not have any authentication and stores all traces in memory. To get a production-grade OpenTelemetry collector installed into a Kubernetes cluster, contact your cluster admin.
 {{% /alert %}}
+
+#### Kubernetes Cluster
 
 To install Jaeger into a Kubernetes cluster (except OpenShift), run the following commands in a Bash prompt:
 
@@ -188,6 +185,8 @@ helm repo add jaegertracing https://jaegertracing.github.io/helm-charts
 helm install $HELM_RELEASE jaegertracing/jaeger --version='~4.7' \
   --set storage.type=memory
 ```
+
+#### OpenShift Cluster
 
 To install Jaeger into an OpenShift cluster, run the following commands in a Bash prompt:
 
@@ -199,6 +198,8 @@ helm install $HELM_RELEASE jaegertracing/jaeger --version='~4.7' \
   --set jaeger.podSecurityContext=null
 ```
 
+#### Accessing the Jaeger Web UI
+
 To access the Jaeger web UI, run the following command in a Bash prompt:
 
 ```shell
@@ -206,17 +207,19 @@ HELM_RELEASE=mx-jaeger
 kubectl port-forward svc/${HELM_RELEASE} 16686:16686
 ```
 
+#### Sending Traces
+
 To send traces to this OpenTelemetry Collector, use the following hostname format (where `${HELM_RELEASE}` is the value of `HELM_RELEASE` used during installation, and `${NAMESPACE}` is the namespace where the Jaeger Helm chart was installed):
 
 ```
 ${HELM_RELEASE}.${NAMESPACE}.svc.cluster.local
 ```
 
-for example, `mx-jaeger.example-namespace.svc.cluster.local`.
+For example, `mx-jaeger.example-namespace.svc.cluster.local`.
 
 ### OpenTelemetry Collector
 
-To send logs and traces from a Mendix on Kubernetes environment to an OpenTelemetry collector, set the _Custom JVM Options_ to :
+To send logs and traces from a Mendix on Kubernetes environment to an OpenTelemetry collector, set the _Custom JVM Options_ to the following:
 
 ```
 -javaagent:/opt/mendix/runtime/agents/opentelemetry-javaagent.jar -Dotel.javaagent.extensions=/opt/mendix/runtime/agents/mendix-opentelemetry-agent-extension.jar -Dotel.service.name=${APP_NAME} -Dotel.exporter.otlp.traces.endpoint=http://${OTEL_HOST}:4318/v1/traces -Dotel.exporter.otlp.traces.protocol=http/protobuf
@@ -228,10 +231,7 @@ Depending on how the OpenTelemetry Collector is configured, the values of `-Dote
 
 ## Include Metrics and Logs in OpenTelemetry
 
-You can also collect metrics data (CPU load, memory, etc.) and logs using OpenTelemetry.
-
-* See the [OpenTelemetry](/refguide/metrics/#opentelemetry) section of *Metrics* for a guide on how to setup metrics with OpenTelemetry.
-* See [Request to Create New Log Subscriber in Open Telemetry Format](/refguide/monitoring-mendix-runtime/#new-log-sub-opentelemetry) in *Monitoring Mendix Runtime* for a guide on how to setup logs with OpenTelemetry.
+You can also use OpenTelemetry to collect logs and metrics data (CPU load, memory, and others). For more information about setting up metrics with OpenTelemetry, see the [OpenTelemetry](/refguide/metrics/#opentelemetry) section of *Metrics*. For a guide on how to set up logs with OpenTelemetry, see [Request to Create New Log Subscriber in Open Telemetry Format](/refguide/monitoring-mendix-runtime/#new-log-sub-opentelemetry) in *Monitoring Mendix Runtime*.
 
 ## Custom Spans in Java Actions
 

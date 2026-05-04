@@ -2,19 +2,20 @@
 title: "Show a Pop-up Notification Using Web API"
 linktitle: "Show Notification"
 url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/notification-api/
+description: "Describes how to display a simple pop-up notification in Studio Pro using the Web Extensibility API."
 ---
 
 ## Introduction
 
-This how-to describes how to show a simple pop-up notification in Studio Pro.
+This document describes how to display a simple pop-up notification in Studio Pro.
 
 ## Prerequisites
 
-This how-to uses the results of [Get Started with the Web Extensibility API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/getting-started/). Make sure to complete that how-to before starting this one.
+This how-to uses the results of [Get Started with the Web Extensibility API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/getting-started/). Complete that how-to before starting this one.
 
 ## Showing a Notification
 
-With the notifications API, you can show a pop-up notification when your extension loads. The notification will disappear after five seconds. To do this, follow the steps below:
+With the notifications API, you can show a pop-up notification when your extension loads. The notification disappears after five seconds. To do this, follow these steps:
 
 1. Create an `assets` folder under your `src` folder.
 2. Find an icon you want to use in your notification and copy it into the `assets` folder. This example uses the file `check.png`.
@@ -32,7 +33,7 @@ With the notifications API, you can show a pop-up notification when your extensi
     ```
 
 5. Create an `images.d.ts` file inside the `assets` folder. This is a `declaration` file, as indicated by the `d` file extension.
-6. Add the line `declare module "*.png";` to the `images.d.ts` file. This tells TypeScript that any import ending in *.png* should be treated as a module. This enables TypeScript to handle *.png* files correctly when you import them in your code and allows you to use images in your extensions.
+6. Add the line `declare module "*.png";` to the `images.d.ts` file. This tells TypeScript that any import ending in *.png* should be treated as a module. This allows TypeScript to handle *.png* files correctly when you import them in your code and use images in your extensions.
 7. Replace your `src/main/index.ts` file with the following, using the appropriate icon name in place of `Check`:
 
     ```typescript
@@ -58,21 +59,21 @@ With the notifications API, you can show a pop-up notification when your extensi
 
     This code does the following:
     
-    * It uses the `notificationsApi` from `studioPro.ui.notifications` to allow you to use the notifications API.
-    * It implements a `loaded` method, which calls the `show` method to show a pop-up notification for five seconds with the title `Extension Loaded`, a message, and the `check.png` icon you set up earlier. For more information, see the [Full Reference for Show Method](#reference) section below.
+    * It uses the `notificationsApi` from `studioPro.ui.notifications` to access the notifications API.
+    * It implements a `loaded` method, which calls the `show` method to display a pop-up notification for five seconds with the title `Extension Loaded`, a message, and the `check.png` icon you set up earlier. For more information, see the [Full Reference for Show Method](#reference) section.
 
-Now, when the extension loads, your notification will show in the top-right corner of Studio Pro:
+Now, when the extension loads, your notification shows in the upper-right corner of Studio Pro:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/web/notifications/notification.png" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/web/notifications/notification.png" alt="" >}}
 
 ## Full Reference for Show Method {#reference}
 
 The show method has the following parameters:
 
-* `title` – the title of the notification
-* `message` – the text content of the notification
-* `displayDurationInSeconds` – an optional duration (in seconds) for the notification to remain visible; if no duration is provided, the pop-up will remain indefinitely until the user removes it themselves
-* `icon` – an optional icon that is displayed inside the notification
+* `title` – The title of the notification.
+* `message` – The text content of the notification.
+* `displayDurationInSeconds` – An optional duration (in seconds) for the notification to remain visible; if no duration is provided, the pop-up remains indefinitely until the user removes it.
+* `icon` – An optional icon that displays inside the notification.
 
 ## Extensibility Feedback
 

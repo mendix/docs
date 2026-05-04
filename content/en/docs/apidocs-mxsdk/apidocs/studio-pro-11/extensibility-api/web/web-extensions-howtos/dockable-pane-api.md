@@ -6,10 +6,10 @@ url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/dockable-pane-api/
 
 ## Introduction
 
-This how-to describes how to create and manage a dockable pane using the web extensions API. A dockable pane allows you to create a web view that can be docked and moved within the Studio Pro user interface. Examples of dockable panes in Studio Pro are:
+This how-to describes creating and managing a dockable pane using the web extensions API. A dockable pane is a web view that can be docked and moved within the Studio Pro user interface. Examples of dockable panes in Studio Pro include the following:
 
 * Marketplace
-* Errors 
+* Errors
 * Stories
 * Toolbox
 
@@ -19,14 +19,14 @@ This how-to describes how to create and manage a dockable pane using the web ext
 If you are using Studio Pro 11.0–11.5 and your extension includes menus, your existing menu code will not work when you upgrade to Studio Pro 11.6. To restore full functionality and support, upgrade to the Extensibility API 11.6 and follow the steps in the [Migration Guide](/apidocs-mxsdk/apidocs/web-extensibility-api-11/migration-guide/).
 {{% /alert%}}
 
-* This how-to uses the app created in [Get Started with the Web Extensibility API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/getting-started/). Make sure to complete that how-to before starting this one.
-* Make sure you are familiar with creating menus as described in [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/).
+* This how-to uses the app created in [Get Started with the Web Extensibility API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/getting-started/). Complete that how-to before starting this one.
+* Be familiar with creating menus as described in [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/).
 
 ## Creating a Dockable Pane
 
 ### Register the Dockable Pane
 
-To open a dockable pane, you must first register the dockable pane handle with the API. To do this, add a call to register the pane to the extension loaded method in the `src/main/index.ts`. Use the 'paneHandle' to interact with the pane.
+To open a dockable pane, first register the dockable pane handle with the API. To do this, add a call to register the pane to the extension loaded method in `src/main/index.ts`. Use `paneHandle` to interact with the pane.
 
 ```typescript
         const paneHandle = await studioPro.ui.panes.register(
@@ -40,7 +40,7 @@ To open a dockable pane, you must first register the dockable pane handle with t
             });
 ```
 
-You can then create two menus that will open and close the pane by calling the `panes` API:
+Create two menus that open and close the pane by calling the `panes` API:
 
 ```typescript
 import { IComponent, getStudioProApi } from "@mendix/extensions-api";
@@ -91,12 +91,12 @@ export const component: IComponent = {
 
 ### Adding New Endpoint Handlers
 
-Create a new web view endpoint where you define the user interface that will be rendered within the pane. You can use and rename the existing endpoint. Follow the steps below:
+Create a new web view endpoint where you define the user interface that is rendered within the pane. You can use and rename the existing endpoint. Follow these steps:
 
 1. Rename `ui/index.tsx` to `ui/tab.tsx`.
 1. Add the new endpoint file, `ui/dockablepane.tsx`, by copying `ui/tab.tsx`.
 
-You must also alter the `build-extension.mjs` and `manifest.json` files to bind to the correct endpoint, as described in the following sections.
+Alter the `build-extension.mjs` and `manifest.json` files to bind to the correct endpoint, as described in the following sections.
 
 ### Altering `build-extension.mjs`
 
@@ -157,16 +157,16 @@ else {
 }
 ```
 
-This ensures esbuild will consider these two `.tsx` files as entrypoints and produce JavaScript modules in the `dist` folder, corresponding to the name in `out`.
+This ensures esbuild considers these two `.tsx` files as entrypoints and produces JavaScript modules in the `dist` folder corresponding to the name in `out`.
 
 ### Altering `src/manifest.json`
 
-You also must instruct Studio Pro to load the endpoint that you just created. To do this, modify the manifest file `src/manifest.json`.
+Instruct Studio Pro to load the endpoint that you created. To do this, modify the manifest file `src/manifest.json`.
 
-Alter the "ui" section by:
+Alter the "ui" section by doing the following:
 
-* Changing the `tab` endpoint 
-* Adding the `dockablepane` endpoint
+* Change the `tab` endpoint
+* Add the `dockablepane` endpoint
 
 ```typescript
       "ui": {
@@ -193,9 +193,9 @@ The `manifest.json` file should now look like this:
 
 ## Closing the Dockable Pane
 
-Now that you have registered a pane and created a way to open it, it is important to provide a way to close it, too.
+Now that you have registered a pane and created a way to open it, provide a way to close it.
 
-You will close your pane using a new menu item. Follow the steps below:
+Close your pane using a new menu item. Follow these steps:
 
 1. Add a new sub-menu item to the menu on line 13.
 

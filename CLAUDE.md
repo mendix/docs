@@ -18,6 +18,7 @@ When instructions conflict, follow this order of precedence:
    - **`docs-proofread`** — Fix spelling, grammar, and punctuation only.
    - **`docs-add`** — Add new content to an existing page.
    - **`docs-alt-text`** — Generate W3C-compliant alt text for images.
+   - **`evalguide-research`** — Query the Mendix Evaluation Guide to find information about platform capabilities, architecture, security, deployment, and governance.
 3. Overlay instruction files (for example, `.github/release-notes-instructions.md`) when path-scoped.
 4. This file (`CLAUDE.md`).
 5. Mendix Style Guide files in `content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/` for detailed grammar, terminology, and formatting rules.

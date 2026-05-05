@@ -15,6 +15,7 @@ Fetch and summarize content from the Mendix Evaluation Guide at `https://www.men
 2. Use WebFetch to fetch the full page(s). When a question spans multiple topics, fetch pages in parallel.
 3. Read the entire fetched content to find passages relevant to the user's question.
 4. Respond using the output format below.
+5. Cite sources — End your response with a **Citations** section listing every source you consulted. This step is mandatory — never omit it.
 
 If the topic map does not cover the user's question, report that no relevant content was found in the Evaluation Guide.
 
@@ -22,7 +23,7 @@ If the topic map does not cover the user's question, report that no relevant con
 
 1. **Direct answer** — Begin with a concise answer to the user's question.
 2. **Supporting details** — Provide relevant details, quoting key passages where helpful.
-3. **Citations** — End with a list of source links.
+3. **Citations** (required) — You MUST end your response with a list of source links. Never omit this section.
 
 If no relevant content is found, state that clearly and do not speculate.
 

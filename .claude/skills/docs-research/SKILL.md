@@ -13,6 +13,7 @@ Locate, read, and summarize content across 4,500+ Markdown files in the Mendix d
 2. Locate source files using the methods in Finding Content. When a question spans multiple topics, read files in parallel.
 3. Read the file(s) and extract passages relevant to the user's question.
 4. Respond using the output format below.
+5. Cite sources — End your response with a **Citations** section listing every source you consulted. This step is mandatory — never omit it.
 
 ## Finding Content
 
@@ -28,7 +29,7 @@ Locate, read, and summarize content across 4,500+ Markdown files in the Mendix d
 
 1. **Direct answer** — Begin with a concise answer to the user's question.
 2. **Supporting details** — Provide relevant details, quoting key passages where helpful.
-3. **Citations** — End with a list of source links.
+3. **Citations** (required) — You MUST end your response with a list of source links. Never omit this section.
 
 If no relevant content is found, state that clearly and do not speculate.
 

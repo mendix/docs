@@ -27,27 +27,32 @@ After completing these steps, continue to one of the implementation approach gui
 
 Before building an agent in your app, make sure your scenario meets the following requirements:
 
-* An existing app: Start either from your existing app or by building from a pre-configured setup [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934) where the Marketplace modules are already installed
-
-* Mendix recommends starting in Studio Pro 10.24.0 and above to use the latest versions of the GenAI modules
-
-* Installation: Install the [GenAI Commons](https://marketplace.mendix.com/link/component/239448), [Agent Commons](https://marketplace.mendix.com/link/component/240371), [MxGenAI Connector](https://marketplace.mendix.com/link/component/239449), and [ConversationalUI](https://marketplace.mendix.com/link/component/239450) modules from the Marketplace. If you want to empower your agent with tools available through the Model Context Protocol (MCP), also download the [MCP Client](https://marketplace.mendix.com/link/component/244893) module. If you start with a Blank GenAI App, you can skip installing the specified modules
-
-* Intermediate understanding of Mendix: Knowledge of simple page building, microflow modeling, domain model creation, and import/export mappings
-
-* If you are not yet familiar with the GenAI modules, Mendix recommends first following these GenAI documents: [Grounding Your LLM in Data](/appstore/modules/genai/how-to/howto-groundllm/), [Prompt Engineering at Runtime](/appstore/modules/genai/how-to/howto-prompt-engineering/), and [Integrate Function Calling into Your Mendix App](/appstore/modules/genai/how-to/howto-functioncalling/)
-
-* Basic understanding of GenAI concepts: Review [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/) for foundational knowledge and familiarize yourself with the [concepts of GenAI](/appstore/modules/genai/using-gen-ai/) and [agents](/appstore/modules/genai/agents/)
-
-* Basic understanding of function calling and prompt engineering: Learn about [Function Calling](/appstore/modules/genai/function-calling/) and [Prompt Engineering](/appstore/modules/genai/get-started/#prompt-engineering) to use them within the Mendix ecosystem
-
-* Optional prerequisites: Basic understanding of the [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) and the available Mendix modules: [MCP Server module](/appstore/modules/genai/mcp-modules/mcp-server/) and [MCP Client module](/appstore/modules/genai/mcp-modules/mcp-client/)
+* An existing app: use a GenAI starter app such as the [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934), or add to an app that you have already built
+* Studio Pro 10.24 or above (or Studio Pro 11.9 or above if you plan to use [Agent Editor](/appstore/modules/genai/how-to/create-agent-with-agent-editor/))
+* Intermediate understanding of Mendix: knowledge of simple page building, microflow modeling, domain model creation, and import/export mappings
+* Basic understanding of GenAI concepts: review [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/) for foundational knowledge and familiarize yourself with the [concepts of GenAI](/appstore/modules/genai/using-gen-ai/) and [agents](/appstore/modules/genai/agents/)
+* Basic understanding of function calling and prompt engineering: learn about [Function Calling](/appstore/modules/genai/function-calling/) and [Prompt Engineering](/appstore/modules/genai/get-started/#prompt-engineering) to use them within the Mendix ecosystem
+* Optional: If you are not yet familiar with the GenAI modules, follow these GenAI documents: [Grounding Your LLM in Data](/appstore/modules/genai/how-to/howto-groundllm/), [Prompt Engineering at Runtime](/appstore/modules/genai/how-to/howto-prompt-engineering/), and [Integrate Function Calling into Your Mendix App](/appstore/modules/genai/how-to/howto-functioncalling/)
+* Optional: Basic understanding of the [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) and the available Mendix modules: [MCP Server module](/appstore/modules/genai/mcp-modules/mcp-server/) and [MCP Client module](/appstore/modules/genai/mcp-modules/mcp-client/)
 
 ## Setting Up Your Application
 
-Before you can start creating your first agent, you need to set up your application. If you have not started from the Blank GenAI App, install the modules listed in the [Prerequisites](#prerequisites), connect the module roles with your user roles and add the configuration pages to your navigation. Furthermore, add the **Agent_Overview** page to your navigation, which is located in **AgentCommons** > **USE_ME** > **Agent Builder**. Also make sure to add the `AgentAdmin` module role to your admin role. After starting the app, the admin user should be able to configure Mendix GenAI resources and navigate to the **Agent Overview** page.
+If you are using a GenAI starter app such as the Blank GenAI Starter App, you can skip ahead to [the next section](#creating-functional-prerequisites) because the following setup steps are already completed. Otherwise, follow these steps to add the required modules and configuration to your app:
 
-## Creating the Agent's Functional Prerequisites
+1. Install the [GenAI Commons](https://marketplace.mendix.com/link/component/239448), [Agent Commons](https://marketplace.mendix.com/link/component/240371), [MxGenAI Connector](https://marketplace.mendix.com/link/component/239449), and [ConversationalUI](https://marketplace.mendix.com/link/component/239450) modules from the Marketplace. If you want to empower your agent with tools available through the Model Context Protocol (MCP), also download the [MCP Client](https://marketplace.mendix.com/link/component/244893) module.
+2. Open your app's [Security](/refguide/security/#user-role) settings and edit the user roles that need to create and use agents. Follow these steps:
+    1. For the Agent Commons module, assign the **AgentAdmin** module role to your Administrator role.
+    2. For the Conversational UI module, assign the **User** module role to the appropriate user roles.
+    3. Save the security settings.
+3. Add the configuration pages to your navigation.
+4. Go to your app's **Navigation**, and add a new **Agents** item.
+    1. Select an icon, such as `notes-paper-text`, from the Atlas icon set.
+    2. Set the **On click** action to **Show page**.
+    3. Search for and select the **Agent_Overview** page, located under **AgentCommons** > **USE_ME** > **Agent Builder**.
+
+After starting the app, the admin user should be able to configure Mendix GenAI resources and navigate to the **Agent Overview** page.
+
+## Creating the Agent's Functional Prerequisites {#creating-functional-prerequisites}
 
 Now that the basics of the app are set up, you can start implementing the agent. The agent interacts with data from both a knowledge base and the Mendix app. To make this work from a user interface, set up the following functional prerequisites:
 

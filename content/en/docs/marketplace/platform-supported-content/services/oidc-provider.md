@@ -444,7 +444,7 @@ However, if you want the Provider app to act as an IAM broker, you need to redir
 
 | Setting type | Current value | New value |
 | --- | --- | --- |
-| com.mendix.core.SamSiteCookies | LAX | LAX |
+| com.mendix.core.SameSiteCookies | LAX | LAX |
 
 ## Configuring an OIDC Client
 
@@ -568,10 +568,18 @@ In versions of the OIDC Provider above 2.0.0, the sub value was changed from an 
 
 ## Troubleshooting
 
-### Infinite Loop of Redirects
+### Infinite Loop of Redirects When Provider App Acting as an IdP
 
 The OIDC Provider service sets a cookie as a means to persist the session in the user’s browser. If the cookie is not properly set, this may lead to problems. For example, when the OIDC Provider service is used to build an IAM Broker, no session is established and the broker may initiate a new session at the upstream IdP, which results in an ‘infinite loop’ of redirects via the user's browser.
-To ensure the cookie is properly set, the runtime setting com.mendix.core.SameSiteCookies must have value None. See [Environment Details](/developerportal/deploy/environments-details/#samesite) for more information how to set the correct value for SameSite runtime setting. Note that the default value for this setting changed in [Mendix 8.11](/releasenotes/studio-pro/8.11/).
+To ensure the cookie is properly set, the runtime setting `com.mendix.core.SameSiteCookies` must have value *None*. See [Environment Details](/developerportal/deploy/environments-details/#samesite) for more information on how to set the correct value for SameSite runtime setting. Note that the default value for this setting is changed in [Mendix 8.11](/releasenotes/studio-pro/8.11/).
+
+### Infinite Loop of Redirects When Provider App Acting as an IAM Broker
+
+When you deployed your application on Mendix Cloud and linked to a licensed node, set the below values in the **Custom Runtime Settings**.
+
+| Setting type | Current value | New value |
+| --- | --- | --- |
+| com.mendix.core.SameSiteCookies | LAX | LAX |
 
 ### On-premise Deployment and IIS
 

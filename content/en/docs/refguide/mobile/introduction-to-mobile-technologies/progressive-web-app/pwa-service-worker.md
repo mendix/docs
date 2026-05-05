@@ -23,8 +23,8 @@ To understand how updates to your Mendix PWA are handled, you need to understand
 1. **Registration** — In this step the browser downloads the service worker file. If the code contains syntax errors, registration fails and the service worker is discarded.
 2. **Installation** — During this phase, the service worker typically caches static assets your PWA needs to function offline. If all assets are successfully pre-cached, the installation succeeds. If installation fails, the service worker is discarded.
     * Once installed:
-        - It becomes activated immediately if no other service worker is currently controlling the page.
-        - If there is already an active service worker, the new one will be installed but enters a **Waiting** state. The **Waiting** state, ensures that updates to your application are delivered smoothly and without interrupting your users' current interactions.
+        * It becomes activated immediately if no other service worker is currently controlling the page.
+        * If there is already an active service worker, the new one will be installed but enters a **Waiting** state. The **Waiting** state, ensures that updates to your application are delivered smoothly and without interrupting your users' current interactions.
 3. **Activation** — Once installed, the service worker enters the **Activating** state, and then becomes **Activated**. An **Activated** service worker takes control of pages within its scope (meaning it is ready to intercept requests).
 4. **Redundant** — A service worker can become redundant if a new version replaces it, or if it fails to install.
 
@@ -112,7 +112,7 @@ export async function JS_ListenForPWAUpdates() {
 }
 ```
 
-2. **Create a JavaScript Action to activate the new service worker** — When the user confirms the update, use the Client API `skipWaiting()` to activate the new service worker:
+1. **Create a JavaScript Action to activate the new service worker** — When the user confirms the update, use the Client API `skipWaiting()` to activate the new service worker:
 
 ```javascript
 import { skipWaiting } from "mx-api/pwa";
@@ -134,5 +134,5 @@ export async function JS_ActivatePWAUpdate() {
 }
 ```
 
-3. **Notifying users** — To not interrupt users during critical operations, Mendix recommends notifying them when an update becomes available. For example, you can implement a nanoflow that prompts users to confirm the update when a new version is detected. If the user confirms, the nanoflow can call `JS_ActivatePWAUpdate` to update. This nanoflow can be passed as a parameter to `JS_ListenForPWAUpdates`, which will invoke it when an update is detected.
-4. **Reload the Application** — Trigger a reload, or ask users to reload all open tabs or windows to ensure the application loads with the newly activated service worker.
+1. **Notifying users** — To not interrupt users during critical operations, Mendix recommends notifying them when an update becomes available. For example, you can implement a nanoflow that prompts users to confirm the update when a new version is detected. If the user confirms, the nanoflow can call `JS_ActivatePWAUpdate` to update. This nanoflow can be passed as a parameter to `JS_ListenForPWAUpdates`, which will invoke it when an update is detected.
+2. **Reload the Application** — Trigger a reload, or ask users to reload all open tabs or windows to ensure the application loads with the newly activated service worker.

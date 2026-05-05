@@ -219,7 +219,7 @@ For example, `mx-jaeger.example-namespace.svc.cluster.local`.
 
 ### OpenTelemetry Collector
 
-To send logs and traces from a Mendix on Kubernetes environment to an OpenTelemetry collector, set the _Custom JVM Options_ to the following:
+To send logs and traces from a Mendix on Kubernetes environment to an OpenTelemetry collector, set the *Custom JVM Options* to the following:
 
 ```
 -javaagent:/opt/mendix/runtime/agents/opentelemetry-javaagent.jar -Dotel.javaagent.extensions=/opt/mendix/runtime/agents/mendix-opentelemetry-agent-extension.jar -Dotel.service.name=${APP_NAME} -Dotel.exporter.otlp.traces.endpoint=http://${OTEL_HOST}:4318/v1/traces -Dotel.exporter.otlp.traces.protocol=http/protobuf

@@ -609,18 +609,18 @@ When the button is placed in a grid header, the assigned action can receive the 
 
 When a button placed in header triggers a **microflow** or **nanoflow**, the selected rows are passed as input:
 
-- If **Single Selection** is enabled:
-  - The action receives a **single object**.
-- If **Multiple Selection** is enabled:
-  - The action receives a **list of objects**.
+* If **Single Selection** is enabled:
+    * The action receives a **single object**.
+* If **Multiple Selection** is enabled:
+    * The action receives a **list of objects**.
 
 This allows developers to build logic that operates on one or several items.
 
 #### Example Use Cases
 
-- **Mark as Done**: A button triggers a microflow that updates the status of selected tasks.
-- **Delete Selected**: A button deletes all selected records.
-- **Export Selected**: A button triggers a microflow or nanoflow that exports the selected list to a file.
+* **Mark as Done**: A button triggers a microflow that updates the status of selected tasks.
+* **Delete Selected**: A button deletes all selected records.
+* **Export Selected**: A button triggers a microflow or nanoflow that exports the selected list to a file.
 
 #### Configuration
 

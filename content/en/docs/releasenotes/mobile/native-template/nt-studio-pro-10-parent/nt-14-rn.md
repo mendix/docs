@@ -20,7 +20,7 @@ description: "Native Template 14"
 
 ### Improvements
 
-- We updated `@mendix/native` to v9.3.1, strengthening Android cookie encryption by migrating from `AES/CBC/PKCS7Padding` to `AES/GCM/NoPadding`.
+* We updated `@mendix/native` to v9.3.1, strengthening Android cookie encryption by migrating from `AES/CBC/PKCS7Padding` to `AES/GCM/NoPadding`.
 
 ## 14.1.14 {#1424}
 

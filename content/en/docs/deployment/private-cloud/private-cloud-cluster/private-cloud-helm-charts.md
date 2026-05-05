@@ -84,7 +84,7 @@ To install the solution, perform the following steps:
 Keep in mind that changing the ingress type resets the value of all fields in this tab.
 {{% /alert %}}
 
-12. In the **Registry** tab, specify your network ingress settings. For more information about the available options, see [Registry Configuration](/developerportal/deploy/private-cloud-registry/).
+1. In the **Registry** tab, specify your network ingress settings. For more information about the available options, see [Registry Configuration](/developerportal/deploy/private-cloud-registry/).
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard6.png" >}}
 
@@ -92,16 +92,16 @@ Keep in mind that changing the ingress type resets the value of all fields in th
 Keep in mind that changing the registry type resets the value of all fields in this tab.
 {{% /alert %}}
 
-13. Optional: In the **Proxy** tab, specify a proxy server.
+1. Optional: In the **Proxy** tab, specify a proxy server.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard7.png" >}}
 
-14. Optional: If your servers use a self-signed certificate, in the **Custom TLS** tab, configure custom TLS so that the self-signed certificate is accepted.
+2. Optional: If your servers use a self-signed certificate, in the **Custom TLS** tab, configure custom TLS so that the self-signed certificate is accepted.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard8.png" >}}
 
-15. Click **Generate & Download** to generate the yaml file with the configurations that you provided.
-16. Run the following commands:
+3. Click **Generate & Download** to generate the yaml file with the configurations that you provided.
+4. Run the following commands:
 
     1. To install the required [Custom Resource Definitions](/developerportal/deploy/private-cloud-technical-appendix-01/#custom-resources)
     
@@ -109,7 +109,7 @@ Keep in mind that changing the registry type resets the value of all fields in t
     kubectl apply -f mx-privatecloud-operator-crd/crds/
     ```
 
-    2. To install Mendix on Kubernetes:
+    1. To install Mendix on Kubernetes:
 
     ```text
     helm install --createnamespace -n <your namespace> -f <yaml file name> <release name> mx-privatecloud-operator-installer

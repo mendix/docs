@@ -14,11 +14,11 @@ For information on the current status of Mendix deployment, see [Mendix Status](
 
 * We have fixed an issue where an unavailable VM could be selected.
 * We have added a cost calculator link to the Cluster Deployment and Edit flows.
-* Now we do not allow scaling of PostgreSQL replicas when read replica is enabled.
-* We have extended the quota check to warn when less than 8 quota is available for the selected VM type, including family and regional quota.
-* Initialized clusters are now visible to Cluster Members regardless of Azure RBAC.
-* Only Cluster Managers with Azure Owner or Contributor roles can now edit cluster settings.
-* We have added a warning to inform customers about the implications of enabling network isolated cluster and internal load balancer.
+* PostgreSQL replicas can no longer be scaled when Read Replica is enabled.
+* We have extended the quota check to warn users when the available quota for the selected VM type, including family and regional, is less than 8.
+* Initialized clusters are now visible to cluster members regardless of Azure RBAC.
+* Only Cluster Managers with the Azure Owner or Contributor roles can now edit cluster settings.
+* We have added a warning to inform users about the implications of enabling network-isolated cluster and internal load balancers.
 
 ## Release date: February 26, 2026
 

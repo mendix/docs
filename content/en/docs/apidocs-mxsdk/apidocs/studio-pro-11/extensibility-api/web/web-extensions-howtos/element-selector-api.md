@@ -7,7 +7,7 @@ description: "Describes how to use the Element Selector API to select documents 
 
 ## Introduction
 
-This how-to describes how to use the Element Selector API to select documents or entities from your application. The extension displays selection dialogs that filter results based on query parameters such as module name, document name, and SDK name.
+This how-to describes how to use the Element Selector API to allow users to select documents or entities from their application. The extension displays selection dialogs that filter results based on query parameters such as module name, document name, and SDK name.
 
 ## Prerequisites
 

@@ -2,16 +2,14 @@
 title: "Create an Agent with Agent Editor"
 url: /appstore/modules/genai/how-to/create-agent-with-agent-editor/
 weight: 70
-description: "Learn how to create and manage agents using the Agent Editor in Studio Pro, defining agents as part of your app model with integrated testing and version control."
+description: "Learn how to create and manage agents using Agent Editor in Studio Pro, defining agents as part of your app model."
 ---
 
 ## Introduction
 
-The primary approach to creating and managing agents uses the [Agent Editor](https://marketplace.mendix.com/link/component/257918) in Studio Pro. This extension allows you to manage the lifecycle of your agents as part of the app model. You can define agents as documents of type "Agent" in your app while working in Studio Pro, alongside related documents such as models for text generation, knowledge bases for data retrieval, and consumed MCP services for remote tools.
+This approach uses [Agent Editor](https://marketplace.mendix.com/link/component/257918) in Studio Pro to create and manage agents as part of your app model. You define agents as documents in your app, alongside related resources such as models, knowledge bases, and consumed MCP services. This is the recommended approach for most use cases because it leverages existing platform capabilities.
 
-To use this approach, install the Agent Editor in your project. Make sure to use the [required Studio Pro version](/appstore/modules/genai/genai-for-mx/agent-editor/#dependencies) and follow the steps in the [Installation](/appstore/modules/genai/genai-for-mx/agent-editor/#installation) section of the *Agent Editor* documentation.
-
-At the time of initial release, Agent Editor supports only [Mendix Cloud GenAI](/appstore/modules/genai/mx-cloud-genai/) as a provider for models and knowledge bases. The steps below use the Mendix Cloud GenAI provider type, text generation resource keys, and knowledge base resource keys from the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com/).
+Currently, Agent Editor supports only [Mendix Cloud GenAI](/appstore/modules/genai/mx-cloud-genai/) as a provider for models and knowledge bases. The steps below use the Mendix Cloud GenAI provider type, text generation resource keys, and knowledge base resource keys from the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com/). Make sure to use the [required Studio Pro version](/appstore/modules/genai/genai-for-mx/agent-editor/#dependencies) and follow the steps in the [Installation](/appstore/modules/genai/genai-for-mx/agent-editor/#installation) section of the *Agent Editor* documentation.
 
 {{% alert color="info" %}}
 This guide assumes you have completed the shared setup steps in [Shared Setup for Creating an Agent](/appstore/modules/genai/how-to/creating-agents/shared-setup/). If you have not done so, complete those steps first to set up your application, knowledge base, domain model, UI, and function microflows.
@@ -157,7 +155,7 @@ If you make changes to the agent definition afterwards, restart or redeploy the 
 
 ## Calling the Agent
 
-Configure the **Ask the agent** button to call a microflow that invokes the Agent Editor agent and stores the response in the UI helper object.
+Configure the **Ask the agent** button to call a microflow that invokes Agent Editor agent and stores the response in the UI helper object.
 
 1. On the **TicketHelper_Agent** page, edit the **On click** event of the button to call a microflow. Click **New** to create a microflow named `ACT_TicketHelper_CallAgent_Editor`.
 

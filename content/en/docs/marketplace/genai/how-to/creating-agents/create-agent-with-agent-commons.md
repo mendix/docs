@@ -7,7 +7,7 @@ description: "Learn how to create and manage agents using the Agent Commons UI f
 
 ## Introduction
 
-An alternative approach to set up the agent and build logic to generate responses is based on the logic part of the Agent Commons module. Start by defining an agent with a prompt at runtime, then, through the same UI, add tools (microflows as functions) and knowledge bases to the agent version.
+This approach uses the Agent Commons UI to define and manage agents at runtime. You create agents, configure prompts, and connect tools and knowledge bases through the web interface, enabling versioning and rapid experimentation without redeployment. This approach is useful when you need to iterate on agent definitions independently from the app development cycle.
 
 {{% alert color="info" %}}
 This guide assumes you have completed the shared setup steps in [Shared Setup for Creating an Agent](/appstore/modules/genai/how-to/creating-agents/shared-setup/). If you have not done so, complete those steps first to set up your application, knowledge base, domain model, UI, and function microflows.

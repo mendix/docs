@@ -7,7 +7,7 @@ description: "Learn how to create agents programmatically using microflows and G
 
 ## Introduction
 
-This is an additional approach as an alternative to the steps described in previous sections. This approach shows how to set up the agent and build logic to generate responses using microflows to empower the agent. You start with a prompt at runtime and add functions and knowledge bases to the microflow at design time.
+This approach uses microflows and GenAI Commons building blocks to define agents programmatically. You start with a prompt at runtime but configure tools and knowledge base retrieval directly in microflow logic at design time. This approach provides maximum control and debugging capabilities, making it useful for specific use cases or when the agent logic needs to be part of the code repository.
 
 {{% alert color="info" %}}
 This guide assumes you have completed the shared setup steps in [Shared Setup for Creating an Agent](/appstore/modules/genai/how-to/creating-agents/shared-setup/). If you have not done so, complete those steps first to set up your application, knowledge base, domain model, UI, and function microflows.

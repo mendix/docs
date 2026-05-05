@@ -3,7 +3,7 @@ title: "Creating Your First Agent"
 url: /appstore/modules/genai/how-to/creating-agents/
 linktitle: "Creating Your First Agent"
 weight: 60
-description: "Learn how to create an agent in your Mendix app and integrate knowledge bases, function calling, and prompt management.
+description: "Learn how to create an agent in your Mendix app and integrate knowledge bases, function calling, and prompt management."
 aliases:
     - /appstore/modules/genai/how-to/howto-single-agent/
 ---
@@ -30,7 +30,7 @@ The type of agent you can build is a single-turn agent, which means that:
 
 You can define an agent for your Mendix app using any of the following approaches, all of which leverage Agents Kit:
 
-* Use the [Agent Editor in Studio Pro](/appstore/modules/genai/how-to/create-agent-with-agent-editor/) for creating and iterating on agent definitions as part of the app model. It leverages existing development capabilities of the platform to define, manage, and deploy agents as part of a Mendix app.
+* Use [Agent Editor in Studio Pro](/appstore/modules/genai/how-to/create-agent-with-agent-editor/) for creating and iterating on agent definitions as part of the app model. It leverages existing development capabilities of the platform to define, manage, and deploy agents as part of a Mendix app.
 * Use the [Agent Builder UI to define agents](/appstore/modules/genai/how-to/create-agent-with-agent-commons/) at runtime based on the principles of Agent Commons. It enables versioning, development iteration, and refinement at runtime, separate from the traditional app logic development cycle. 
 * Use the building blocks of GenAI Commons to [define the agent programmatically](/appstore/modules/genai/how-to/create-agent-programmatically/). This is more useful for very specific use cases, especially when the agent needs to be part of the code repository of the app.
 

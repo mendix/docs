@@ -12,7 +12,7 @@ For information on the current status of Mendix deployment, see [Mendix Status](
 
 ## Release date: May 7, 2026
 
-* We have fixed an issue with unavailable VM being selected.
+* We have fixed an issue where an unavailable VM could be selected.
 * We have added a cost calculator link to cluster deployment and edit flows.
 * Now we do not allow scaling of PostgreSQL replicas when read replica is enabled.
 * We have extended the quota check to warn when less than 8 quota is available for the selected VM type, including family and regional quota.

@@ -16,22 +16,26 @@ This document explains how to configure data export rules for Azure Log Analytic
 
 ### Use Cases
 
-Consider using Data Export Rules when you:
+Consider using Data Export Rules to address the following requirements:
 
-- Need to integrate Mendix logs with your organization's SIEM (e.g., Splunk, DataDog, Sentinel)
-- Have compliance requirements for long-term log retention outside Log Analytics
-- Want to centralize logs from multiple systems in a single observability platform
-- Need to process logs with custom pipelines or analytics tools
+* Integrate Mendix logs with your organization's Security Information and Event Management (for example, Splunk, DataDog, Sentinel).
+* Fulfill compliance requirements for long-term log retention outside Log Analytics.
+* Centralize logs from multiple systems in a single observability platform.
+* Process logs with custom pipelines or analytics tools.
 
-**Note:** Grafana remains the primary supported monitoring solution for Mendix on Azure. Use Data Export Rules only when you have specific integration requirements that Grafana cannot fulfill.
+{{% alert color="info" %}}
+Grafana remains the primary supported monitoring solution for Mendix on Azure. Use Data Export Rules only when you have specific integration requirements that Grafana cannot fulfill.
+{{% /alert %}}
 
-## Responsibility Boundary
+## Responsibility
 
 **It is critical to understand where Mendix's responsibility ends and yours begins.**
 
 {{< figure src="/attachments/mx-azure-export-logs/responsibility-flow-diagram.png" alt="Responsibility boundary diagram showing Mendix manages workspace and permissions, customer manages export rules and downstream systems" >}}
 
-### What Mendix Provides
+### Mendix Responsibility
+
+Mendix is responsible for the following:
 
 ✓ Managed Log Analytics Workspace with platform logs  
 ✓ Permissions to configure Data Export Rules  

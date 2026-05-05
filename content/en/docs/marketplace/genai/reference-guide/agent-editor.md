@@ -234,7 +234,7 @@ The output is a `GenAICommons.Response` object, aligned with the GenAI Commons a
 
 ### Including the Agent in a Conversational User Interface (#conversational-ui)
 
-Pages and Snippets are building blocks for chat-type UI patterns that exist in the [ConversationalUI module](/appstore/modules/genai/genai-for-mx/conversational-ui/). The central entity here is the `ChatContext`, which represents a user-agent chat session. When using the Agent Editor, in order to instantiate a new `ChatContext`, use the **New Chat for Agent** action in the microflow that opens your chat page and passes the Agent document. For more details, refer to the [Conversational UI patterns](/appstore/modules/genai/genai-for-mx/conversational-ui/#chat-context-operations).
+Pages and Snippets are building blocks for chat-type UI patterns that exist in the [ConversationalUI module](/appstore/modules/genai/genai-for-mx/conversational-ui/). The central entity here is the `ChatContext`, which represents a user-agent chat session. When using the Agent Editor, in order to instantiate a new `ChatContext`, use the **New Chat for Agent** action in the microflow to open the chat page and pass the Agent document. Configure the Agent document as the input parameter for this action. For more details, refer to [Conversational UI patterns](/appstore/modules/genai/genai-for-mx/conversational-ui/#chat-context-operations).
 
 ### Deploying the Agent to Cloud Environments {#deploy-agent}
 

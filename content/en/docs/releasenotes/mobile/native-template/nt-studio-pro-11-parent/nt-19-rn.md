@@ -5,13 +5,20 @@ weight: 6
 description: "Native Template 19"
 ---
 
+## 19.0.4
+
+**Release date: May 4, 2026**
+
+### Improvements
+
+- We updated vulnerable `okhttp`, `jackson`, and `security-crypto` dependencies.
+
 ## 19.0.3
 
 **Release date: April 29, 2026**
 
 ### Fixes
 
-- We updated `@mendix/native` to v9.3.1, strengthening Android cookie encryption by migrating from `AES/CBC/PKCS7Padding` to `AES/GCM/NoPadding`.
 - We fixed the iOS builds crashing when building with Xcode 26.
 - We resolved an issue that version logs events are not getting recorded in firebase for Android.
 

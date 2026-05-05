@@ -2,7 +2,7 @@
 title: "OpenAI"
 url: /appstore/modules/genai/v2/reference-guide/external-connectors/openai/
 linktitle: "OpenAI"
-description: "Describes the configuration and usage of the OpenAI Connector, which allows you to integrate generative AI into your Mendix app."
+description: "Agents Kit 2: Describes the configuration and usage of the OpenAI Connector, which allows you to integrate generative AI into your Mendix app."
 weight: 20
 aliases:
     - /appstore/connectors/openai-connector/

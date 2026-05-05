@@ -3,7 +3,7 @@ title: "Creating Your First Agent"
 url: /appstore/modules/genai/v2/how-to/howto-single-agent/
 linktitle: "Creating Your First Agent"
 weight: 60
-description: "This document guides you through creating your first agent using one of the two approaches provided by integrating knowledge bases, function calling, and prompt management in your Mendix application to build powerful GenAI use cases. Both approaches leverage the capabilities of Mendix Agents kit. One approach uses the Agent builder UI to define agents at runtime by the principles of Agent Commons. The second approach defines the agent programmatically using the building blocks of GenAI Commons."
+description: "Agents Kit 2: This document guides you through creating your first agent using one of the two approaches provided by integrating knowledge bases, function calling, and prompt management in your Mendix application to build powerful GenAI use cases. Both approaches leverage the capabilities of Mendix Agents kit. One approach uses the Agent builder UI to define agents at runtime by the principles of Agent Commons. The second approach defines the agent programmatically using the building blocks of GenAI Commons."
 aliases:
     - /appstore/modules/genai/how-to/howto-single-agent/
 ---

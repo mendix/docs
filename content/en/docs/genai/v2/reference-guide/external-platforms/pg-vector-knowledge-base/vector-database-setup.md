@@ -3,7 +3,7 @@ title: "Setting up a Vector Database"
 url: /appstore/modules/genai/v2/reference-guide/external-connectors/pgvector-setup/
 linktitle: "Vector Database Setup"
 weight: 5
-description: "Describes how to set up a vector database to store and manage vector embeddings for a knowledge base"
+description: "Agents Kit 2: Describes how to set up a vector database to store and manage vector embeddings for a knowledge base"
 aliases:
    - /appstore/modules/genai/pgvector-setup/
    - /appstore/modules/genai/reference-guide/external-connectors/pgvector-setup/

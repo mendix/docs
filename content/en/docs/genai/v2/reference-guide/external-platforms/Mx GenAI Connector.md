@@ -2,7 +2,7 @@
 title: "Mendix Cloud GenAI Connector"
 url: /appstore/modules/genai/v2/mx-cloud-genai/MxGenAI-connector/
 linktitle: "Mendix Cloud GenAI Connector"
-description: "Describes the configuration and usage of the Mendix Cloud GenAI Connector, enabling you to integrate Mendix Cloud GenAI Resource Packs directly into your Mendix application."
+description: "Agents Kit 2: Describes the configuration and usage of the Mendix Cloud GenAI Connector, enabling you to integrate Mendix Cloud GenAI Resource Packs directly into your Mendix application."
 weight: 20
 aliases: 
     - /appstore/modules/genai/MxGenAI/

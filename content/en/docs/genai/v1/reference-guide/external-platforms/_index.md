@@ -2,7 +2,7 @@
 title: "Connector Modules"
 url: /appstore/modules/genai/v1/reference-guide/external-connectors/
 weight: 30
-description: "Provides information on connectors that enable seamless integration between Mendix applications and external platforms."
+description: "Agents Kit 1: Provides information on connectors that enable seamless integration between Mendix applications and external platforms."
 no_list: false
 ---
 

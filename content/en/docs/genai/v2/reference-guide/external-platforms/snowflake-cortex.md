@@ -2,7 +2,7 @@
 title: "Snowflake Cortex"
 url: /appstore/modules/genai/v2/snowflake-cortex/
 weight: 50
-description: "Describes the Snowflake Cortex service."
+description: "Agents Kit 2: Describes the Snowflake Cortex service."
 aliases:
     - /appstore/modules/genai/snowflake-cortex/
 

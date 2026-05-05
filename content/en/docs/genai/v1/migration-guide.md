@@ -2,7 +2,7 @@
 title: "Release and Migration Guide for GenAI Modules"
 url: /appstore/modules/genai/v1/genai-for-mx/migration-guide/
 linktitle: "Release and Migration Guide"
-description: "Describes the combined releases of various GenAI-related modules and their inter-module dependencies. It also includes migration steps and notices about deprecations and removals."
+description: "Agents Kit 1: Describes the combined releases of various GenAI-related modules and their inter-module dependencies. It also includes migration steps and notices about deprecations and removals."
 weight: 100
 ---
 ## Introduction

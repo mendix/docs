@@ -2,7 +2,7 @@
 title: "MCP Server"
 url: /appstore/modules/genai/v1/mcp-modules/mcp-server/
 linktitle: "MCP Server"
-description: "This document describes the purpose, configuration, and usage of the MCP Server module from the Mendix Marketplace that allows developers to expose Mendix logic to external MCP clients and AI systems."
+description: "Agents Kit 1: This document describes the purpose, configuration, and usage of the MCP Server module from the Mendix Marketplace that allows developers to expose Mendix logic to external MCP clients and AI systems."
 weight: 20,
 aliases:
     - /appstore/modules/genai/genai-for-mx/mcp-server/

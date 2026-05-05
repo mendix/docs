@@ -35,18 +35,20 @@ Grafana remains the primary supported monitoring solution for Mendix on Azure. U
 
 ### Mendix Responsibility
 
-Mendix is responsible for the following:
+Mendix is responsible for the following tasks:
 
-✓ Managed Log Analytics Workspace with platform logs  
-✓ Permissions to configure Data Export Rules  
-✓ Documentation on how to enable this capability  
+* Managed Log Analytics Workspace with platform logs  
+* Permissions to configure Data Export Rules  
+* Documentation on how to enable this capability
 
-### What You Configure and Manage
+### Customer Responsibility
 
-✓ Data Export Rule configuration in Azure Portal  
-✓ Destination resources (Event Hub or Storage Account)  
-✓ All downstream integration (DataDog forwarder, SIEM connectors, etc.)  
-✓ Troubleshooting destination-side ingestion issues  
+You are responsible for the following tasks:
+
+* Data Export Rule configuration in Azure Portal  
+* Destination resources (Event Hub or Storage Account)  
+* All downstream integration (DataDog forwarder, SIEM connectors, etc.)  
+* Troubleshooting destination-side ingestion issues  
 
 ### What Mendix Does NOT Support
 

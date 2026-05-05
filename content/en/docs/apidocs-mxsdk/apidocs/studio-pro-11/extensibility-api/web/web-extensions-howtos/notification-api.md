@@ -70,10 +70,10 @@ Now, when the extension loads, your notification shows in the upper-right corner
 
 The show method has the following parameters:
 
-* `title` – The title of the notification.
-* `message` – The text content of the notification.
-* `displayDurationInSeconds` – An optional duration (in seconds) for the notification to remain visible; if no duration is provided, the pop-up remains indefinitely until the user removes it.
-* `icon` – An optional icon that displays inside the notification.
+* `title` – the title of the notification
+* `message` – the text content of the notification
+* `displayDurationInSeconds` – an optional duration (in seconds) for the notification to remain visible; if no duration is provided, the pop-up remains indefinitely until the user removes it
+* `icon` – an optional icon that displays inside the notification
 
 ## Extensibility Feedback
 

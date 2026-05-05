@@ -1,14 +1,14 @@
 ---
-title: "Install Private Mendix Platform in Interactive Mode"
-linktitle: "Interactive Installation"
-url: /private-mendix-platform/interactive-installation/
-description: "Documents the installation process for Private Mendix Platform in interactive (manual) mode."
-weight: 20
+title: "Install Private Mendix Platform in Non-Interactive Mode"
+linktitle: "Non-Interactive Installation"
+url: /private-mendix-platform/noninteractive-installation/
+description: "Documents the installation process for Private Mendix Platform in non-interactive (automatic) mode."
+weight: 30
 ---
 
 ## Introduction
 
-In interactive mode, you manually install Private Mendix Platform components. If you would like to perform an automatic installation instead, see [Install Private Mendix Platform in Interactive Mode](/private-mendix-platform/noninteractive-installation/).
+In non-interactive mode, you use commands to automatically install Private Mendix Platform components. If you would like to perform a manual installation instead, see [Install Private Mendix Platform in Interactive Mode](/private-mendix-platform/interactive-installation/).
 
 ##  Installing the Mendix Operator {#install-operator}
 

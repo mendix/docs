@@ -10,6 +10,16 @@ These release notes cover changes to deployment to [Mendix on Azure](/developerp
 
 For information on the current status of Mendix deployment, see [Mendix Status](https://status.mendix.com/).
 
+## Release date: May 7, 2026
+
+* We have fixed an issue with unavailable VM being selected.
+* We have added a cost calculator link to cluster deployment and edit flows.
+* Now we do not allow scaling of PostgreSQL replicas when read replica is enabled.
+* We have extended the quota check to warn when less than 8 quota is available for the selected VM type, including family and regional quota.
+* Initialized clusters are now visible to Cluster Members regardless of Azure RBAC.
+* Only Cluster Managers with Azure Owner or Contributor roles can now edit cluster settings.
+* We have added a warning to inform customers about the implications of enabling network isolated cluster and internal load balancer.
+
 ## Release date: February 26, 2026
 
 * We have improved the handling of PostgreSQL HA unavailability issues in certain Azure regions to prevent failed Spacelift Stack runs when infrastructure redundancy is enabled.

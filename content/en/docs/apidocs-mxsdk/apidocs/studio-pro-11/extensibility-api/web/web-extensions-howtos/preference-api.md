@@ -69,8 +69,8 @@ The function is `async` so you can use `await` when fetching the preferences.
 
 The `getPreferences()` function returns an object with two properties:
 
-* **Theme** – Either **Light** or **Dark**, representing the current theme setting in Studio Pro
-* **Language** – A string representing the current language setting, such as `en_US` for English (United States)
+* Theme – either **Light** or **Dark**, representing the current theme setting in Studio Pro
+* Language – a string representing the current language setting, such as `en_US` for English (United States)
 
 ## Extensibility Feedback
 

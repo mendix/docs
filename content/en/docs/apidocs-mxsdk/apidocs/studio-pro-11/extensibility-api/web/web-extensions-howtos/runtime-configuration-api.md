@@ -86,9 +86,9 @@ The function is `async` so you can use `await` when executing the preview action
 
 The `getConstants()` function returns an array of constant objects, each with the following properties:
 
-* `isPrivate` – A Boolean indicating whether the constant value is hidden (true) or accessible (false)
-* `constantName` – The fully qualified name of the constant (for example, `MyModule.MyConstant`)
-* `value` – The constant value as a string (only present when `isPrivate` is false)
+* `isPrivate` – a Boolean indicating whether the constant value is hidden (true) or accessible (false)
+* `constantName` – the fully qualified name of the constant (for example, `MyModule.MyConstant`)
+* `value` – the constant value as a string (only present when `isPrivate` is false)
 
 ## Accessing Private Constants
 

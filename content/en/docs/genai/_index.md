@@ -1,7 +1,7 @@
 ---
 title: "Enrich Your Mendix App with GenAI Capabilities"
 url: /appstore/modules/genai/
-linktitle: "Agentic AI"
+linktitle: "GenAI Capabilities"
 description: "Describes how to use Mendix's generative AI capabilities to build agentic applications."
 weight: 16
 ---

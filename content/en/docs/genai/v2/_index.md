@@ -5,6 +5,7 @@ weight: 5
 description: "Describes the Agents Kit 2 components for building generative AI applications in Studio Pro 11.12 and above"
 aliases:
     - /appstore/modules/genai/
+11-12: true
 ---
 
 ## Introduction

@@ -57,7 +57,7 @@ Although it continues to be supported, once a minor version becomes an LTS, it w
 Release notes for the current LTS versions are marked with an LTS badge (<text class="badge badge-pill badge-lts" style="margin-left:0px">LTS</text>) in the left sidebar. The Marketplace also indicates LTS versions in the same way.
 
 {{% alert color="info" %}}
-Mendix recommends using the latest patch version of an LTS minor version as this will contain the latest fixes.
+Mendix recommends using the latest LTS version. To ensure maximum stability and security, you should always deploy the latest patch of that LTS version, as it contains the most recent bug fixes and security updates.
 {{% /alert %}}
 
 #### Support Duration
@@ -93,12 +93,12 @@ Release notes for any current MTS versions are marked with an MTS badge (<text c
 Mendix MTS versions offer a balance between getting the latest and greatest Mendix has to offer every month, and security and stability.
 
 {{% alert color="info" %}}
-Mendix recommends using the latest patch version of an MTS minor version as this will contain the latest fixes.
+Mendix recommends using the latest patch version of an MTS version as this will contain the latest fixes and security updates.
 {{% /alert %}}
 
 #### Support Duration
 
-Support for an MTS version ends three months after the next major version is released. For example, support for 10.6, 10.12, and 10.18 MTS versions ended three months after Mendix version 11.0 was released.
+In contrast to an LTS version, support for an MTS version ends three months after the next major version is released. For example, support for 10.6, 10.12, and 10.18 MTS versions ended three months after Mendix version 11.0 was released.
 
 #### Support with Patch Releases
 

@@ -5,13 +5,13 @@ weight: 10
 description: "Agents Kit 1: Describes the Agents Kit 1 components for building generative AI applications in Studio Pro 10.24 and above"
 v10_24: true
 cascade:
-    - banner: "For access to Mendix's newest GenAI features, upgrade to Studio Pro 11.12 or above, and use <a href=\"/appstore/modules/genai/v2/\">Agents Kit 2</a>. Agents Kit 2 has updated versions of the GenAI modules and apps."
+    - banner: "For access to Mendix's newest agentic features, use <a href=\"/appstore/modules/genai/v2/\">Agents Kit 2</a> on Studio Pro 11.12 or above. Agents Kit 2 has updated versions of the GenAI modules and apps."
     - old_content: true
 ---
 
 ## Introduction
 
-Agents Kit 1 provides a comprehensive set of Mendix components for building generative AI applications. This version includes starter apps and showcase apps to help you get started quickly. It also includes connector modules to integrate with Mendix Cloud GenAI resources and external providers like Amazon Bedrock, OpenAI, Google Gemini, and Mistral. Core modules like Agent Commons and GenAI Commons provide reusable patterns and capabilities for building agentic functionality.
+Agents Kit 1 provides a comprehensive set of Mendix components for building generative AI applications. It includes starter apps and showcase apps to help you get started quickly. It also includes connector modules to integrate with Mendix Cloud GenAI resources and external providers like Amazon Bedrock, OpenAI, Google Gemini, and Mistral. Core modules like Agent Commons and GenAI Commons provide reusable patterns and capabilities for building agentic functionality.
 
 {{% alert color="info" %}}
 Agents Kit 1 is available for Studio Pro 10.24 and above. For the newest agentic features and improvements, upgrade to Studio Pro 11.12 or above and use [Agents Kit 2](/appstore/modules/genai/v2/).
@@ -55,6 +55,7 @@ The following Marketplace components are available in Agents Kit 1. All componen
 | Asset | Description | Release Version |
 | ----- | ----------- | ------------------- |
 | [Agent Commons](/appstore/modules/genai/v1/genai-for-mx/agent-commons/) | Build agentic functionality using common patterns in your application by defining, testing, and evaluating agents at runtime. | TBD |
+| [Agent Editor](/appstore/modules/genai/v2/genai-for-mx/agent-editor/) | Available for Studio Pro 11.9 and above. Configure and test agents in Studio Pro using a visual editor interface. | TBD |
 | [Conversational UI](/appstore/modules/genai/v1/genai-for-mx/conversational-ui/) | Create a Conversational UI or monitor token consumption in your app. | TBD |
 | [GenAI Commons](/appstore/modules/genai/v1/genai-for-mx/commons/) | Provides common capabilities that allow all GenAI connectors to integrate with other modules. You can also implement your own connector based on this. | TBD |
 | [MCP Server](/appstore/modules/genai/v1/mcp-modules/mcp-server/) | Makes your Mendix business logic available to any agent in your enterprise landscape. Expose reusable prompts, including the ability to use prompt parameters. List and run actions implemented in the application as a tool. | TBD |

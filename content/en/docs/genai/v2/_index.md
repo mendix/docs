@@ -10,7 +10,7 @@ v11_12: true
 
 ## Introduction
 
-Agents Kit 2 provides a comprehensive set of Mendix components for building generative AI applications. This version includes starter apps and showcase apps to help you get started quickly. It also includes connector modules to integrate with Mendix Cloud GenAI resources and external providers like Amazon Bedrock, OpenAI, Google Gemini, and Mistral. Core modules like Agent Commons and Agent Editor provide reusable patterns and capabilities for building agentic functionality.
+Agents Kit 2 provides a comprehensive set of Mendix components for building generative AI applications. It includes starter apps and showcase apps to help you get started quickly. It also includes connector modules to integrate with Mendix Cloud GenAI resources and external providers like Amazon Bedrock, OpenAI, Google Gemini, and Mistral. Core modules like Agent Commons and Agent Editor provide reusable patterns and capabilities for building agentic functionality.
 
 {{% alert color="info" %}}
 Agents Kit 2 is available for Studio Pro 11.12 and above. For the newest agentic features and improvements, upgrade to Studio Pro 11.12 or above. If you are using Studio Pro 10.24 through 11.11, use [Agents Kit 1](/appstore/modules/genai/v1/).

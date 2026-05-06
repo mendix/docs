@@ -29,9 +29,9 @@ Grafana remains the primary supported monitoring solution for Mendix on Azure. U
 
 ## Responsibility
 
-**It is critical to understand where Mendix's responsibility ends and yours begins.**
+Review the following considerations to familiarize yourself with the division of responsibilities between Mendix and your own organization.
 
-{{< figure src="/attachments/mx-azure-export-logs/responsibility-flow-diagram.png" alt="Responsibility boundary diagram showing Mendix manages workspace and permissions, customer manages export rules and downstream systems" >}}
+{{< figure src="/attachments/mx-azure-export-logs/responsibility-flow-diagram.png" alt="The diagram shows how Mendix manages workspace and permissions, while the customer manages export rules and downstream systems" >}}
 
 ### Mendix Responsibility
 
@@ -41,119 +41,137 @@ Mendix is responsible for the following tasks:
 * Permissions to configure Data Export Rules  
 * Documentation on how to enable this capability
 
+#### Out of Scope for Mendix
+
+Mendix is not responsible for the following tasks:
+
+* Configuring or troubleshooting Data Export Rules  
+* Providing or managing destination Event Hubs or Storage Accounts  
+* Configuring any integrations downstream from Log Analytics (DataDog, Splunk, Sentinel, and so on)  
+* Issues with third-party forwarders, connectors, or agents  
+
+If you encounter issues with destination systems or third-party tools, contact those vendors directly for support.
+
 ### Customer Responsibility
 
-You are responsible for the following tasks:
+The customer is responsible for the following tasks:
 
 * Data Export Rule configuration in Azure Portal  
 * Destination resources (Event Hub or Storage Account)  
 * All downstream integration (DataDog forwarder, SIEM connectors, etc.)  
 * Troubleshooting destination-side ingestion issues  
 
-### What Mendix Does NOT Support
-
-✗ Configuring or troubleshooting Data Export Rules  
-✗ Providing or managing destination Event Hubs or Storage Accounts  
-✗ Any integrations downstream from Log Analytics (DataDog, Splunk, Sentinel, etc.)  
-✗ Issues with third-party forwarders, connectors, or agents  
-
-**If you encounter issues with destination systems or third-party tools, contact those vendors directly for support.**
-
 ### Data Sensitivity Warning
 
-⚠️ **IMPORTANT:** The logs you export may contain sensitive data including personally identifiable information (PII), application data, and system metadata. You are fully responsible for:
+{{% alert color="info" %}}
+The logs you export may contain sensitive data including personally identifiable information (PII), application data, and system metadata. You are fully responsible for the following:
+
 - Ensuring compliance with data protection regulations (GDPR, CCPA, etc.)
 - Implementing appropriate security controls for exported logs
 - Managing access control to destination systems
 - Data retention and deletion policies for exported logs
 
 Mendix does not control or monitor where you send exported logs. Handle them according to your organization's data governance policies.
+{{% /alert %}}
 
 ## Prerequisites
 
-Before configuring Data Export Rules, ensure you have:
+Before configuring Data Export Rules, ensure you have the following prerequisites:
 
-1. **Azure Subscription Permissions**
-   - `Reader` role at the subscription level (to query Log Analytics Workspace and view available tables)
-   - Owner or Contributor role on the resource group where you'll create destination resources
+* Azure subscription permissions:
 
-2. **Destination Resource**
-   - An **Azure Event Hub** (in the same region as your Mendix on Azure environment), OR
-   - An **Azure Storage Account** (StorageV1 or StorageV2, not Premium tier, same region)
-   - The destination resource must be in your own resource group (not the managed Mendix resource group)
+    * `Reader` role at the subscription level, to query Log Analytics Workspace and view available tables
+    * Owner or Contributor role on the resource group where you will create destination resources
 
-3. **Same Region Requirement**
-   - Your destination Event Hub or Storage Account **must be in the same Azure region** as your Mendix on Azure Log Analytics Workspace
-   - Cross-region export is not supported
+* One of the following destination resources:
+   
+    * An Azure Event Hub in the same region as your Mendix on Azure environment
+    * Alternatively, an Azure Storage Account (StorageV1 or StorageV2, not Premium tier, same region)
+  
+    The destination resource must be in your own resource group, not the managed Mendix resource group. It must also be in the same Azure region  as your Mendix on Azure Log Analytics Workspace. Cross-region export is not supported.
 
-## Step-by-Step: Export to Azure Storage Account
+## Exporting to an Azure Storage Account
 
-Follow these steps to configure log export to an Azure Storage Account for long-term archival or batch processing.
+To configure log export to an Azure Storage Account for long-term archival or batch processing, you must create a storage account, configure the firewall, locate the workspace, and create a Data Export Rule. For more information, refer to the following sections.
 
-### Step 1: Create a Storage Account
+### Creating a Storage Account
 
-1. In the Azure Portal, navigate to **Storage Accounts**
-2. Click **+ Create**
-3. Configure:
-   - **Resource Group:** Choose a resource group you own (not the Mendix-managed resource group)
-   - **Storage Account Name:** Choose a globally unique name
-   - **Region:** **Must match** your Mendix on Azure environment region
-   - **Performance:** Standard
-   - **Redundancy:** LRS, ZRS, GRS, or RA-GRS (based on your retention requirements)
-4. Under **Advanced** tab:
-   - **Storage Account Kind:** StorageV2 (general purpose v2) or StorageV1
-   - **Do NOT select** Premium or BlockBlobStorage
-5. Click **Review + Create**, then **Create**
+To create a storage account, perform the following steps:
 
-### Step 2: Configure Storage Account Firewall
+1. In the Azure Portal, go to **Storage Accounts**.
+2. Click **Create**.
+3. Configure the following properties:
+   
+    * **Resource Group** - Choose a resource group you own (not a Mendix-managed resource group).
+    * **Storage Account Name** - Choose a globally unique name.
+    * **Region** - Must match your Mendix on Azure environment region.
+    * **Performance** - Select **Standard**.
+    * **Redundancy** - Select **LRS**, **ZRS**, **GRS**, or **RA-GRS** (based on your retention requirements).
+
+4. In the **Advanced** tab, configure the following properties:
+   
+    * **Storage Account Kind:** Select **StorageV2** (general purpose v2) or **StorageV1**
+
+    {{% alert color="warning" %}}
+    Do not select Premium or BlockBlobStorage.
+    {{% /alert %}}
+
+5. Click **Review + Create**, and then click **Create**.
+
+### Configuring the Storage Account Firewall
+
+To configure the firewall, perform the following steps.
 
 {{% alert color="info" %}}
 If your Storage Account has firewall rules enabled, you must allow Azure Monitor to write logs.
 {{% /alert %}}
 
-1. Navigate to your Storage Account
-2. Go to **Networking** → **Firewalls and virtual networks**
-3. Ensure **"Allow trusted Microsoft services to access this storage account"** is checked
-4. Save changes
+1. Navigate to your Storage Account.
+2. Go to **Networking** > **Firewalls and virtual networks**.
+3. Ensure that **Allow trusted Microsoft services to access this storage account** is selected.
+4. Save your changes.
 
-### Step 3: Locate Your Log Analytics Workspace
+### Locating Your Log Analytics Workspace
 
-1. In the Azure Portal, navigate to **Resource Groups**
-2. Find the managed resource group for your Mendix on Azure environment (format: `mrg-<app-name>-*`)
-3. Locate the **Log Analytics Workspace** (name format: `<prefix>-<env-id>-alog`)
-4. Click on the workspace to open it
+To locate the workspace, perform the following steps:
+
+1. In the Azure Portal, navigate to **Resource Groups**.
+2. Find the managed resource group for your Mendix on Azure environment. The name has the following format: `mrg-<app-name>-*`.
+3. Locate the **Log Analytics Workspace**. The name has the following format: `<prefix>-<env-id>-alog`.
+4. Click on the workspace to open it.
 
 {{% alert color="info" %}}
-The workspace is in the managed resource group, but Mendix has granted you permission to configure Data Export Rules on it.
+The workspace is in the managed resource group, but Mendix has granted you permissions to configure Data Export Rules on it.
 {{% /alert %}}
 
-### Step 4: Create a Data Export Rule
+### Creating a Data Export Rule
 
-1. In your Log Analytics Workspace, navigate to **Settings** → **Data Export**
-2. Click **+ New export rule**
+To create a Data Export Rule, perform the following steps:
+
+1. In your Log Analytics Workspace, go to **Settings** > **Data Export**.
+2. Click **New export rule**.
 3. Configure the export rule:
-   - **Export rule name:** Choose a descriptive name (e.g., `export-containerlogs-to-storage`)
-   - **Source table:** Select **ContainerLogV2** (this contains your application logs)
-   - **Destination:** Select **Storage Account**
-   - **Subscription:** Select the subscription containing your Storage Account
-   - **Storage Account:** Select the Storage Account you created in Step 1
-4. Click **Create**
 
-{{% alert color="warning" %}}
-**Important:** Data Export Rules have a provisioning delay of approximately **30 minutes** before logs begin flowing to the destination.
-{{% /alert %}}
+    * **Export rule name** - Choose a descriptive name (for example, `export-containerlogs-to-storage`).
+    * **Source table** - Select **ContainerLogV2**; this contains your application logs.
+    * **Destination** - Select **Storage Account**.
+    * **Subscription** - Select the subscription containing your Storage Account.
+    * **Storage Account** - Select the Storage Account you created in step 1.
 
-### Step 5: Verify Export is Working
+4. Click **Create**.
 
-After waiting 30 minutes:
+### Verifying that Export is Working
 
-1. Navigate to your Storage Account
-2. Go to **Storage Browser** → **Blob containers**
-3. Look for a container named `am-` followed by the workspace resource ID
-4. Navigate into the container to see exported log files (JSON format, organized by date/time)
+Data Export Rules have a provisioning delay of approximately 30 minutes before logs begin flowing to the destination. After waiting 30 minutes, verify the export by performing the following steps:
 
-The log files are in JSON Lines format (one JSON object per line) and organized in a folder structure:
-```
+1. Navigate to your Storage Account.
+2. Go to **Storage Browser** > **Blob containers**.
+3. Look for a container named `am-<workspace resouce ID>`.
+4. Navigate to the container to see the exported log files.
+
+The log files are in JSON Lines format (one JSON object per line) and organized by date and time in the following folder structure:
+
+```text
 am-<workspace-id>/
 └── ContainerLogV2/
     └── <year>/
@@ -164,23 +182,29 @@ am-<workspace-id>/
                         └── PT05M.json
 ```
 
-## Step-by-Step: Export to Azure Event Hubs
+## Exporting to Azure Event Hubs
 
-Follow these steps to configure log export to Azure Event Hubs for real-time streaming to third-party observability tools.
+To configure log export to Azure Event Hubs for real-time streaming to third-party observability tools, you must create a namespace, an Event Hub, and a Data Export Rule.
 
-### Step 1: Create an Event Hub Namespace
+### Creating an Event Hub Namespace
 
-1. In the Azure Portal, navigate to **Event Hubs**
-2. Click **+ Create**
-3. Configure:
-   - **Resource Group:** Choose a resource group you own
-   - **Namespace Name:** Choose a globally unique name
-   - **Location:** **Must match** your Mendix on Azure environment region
-   - **Pricing Tier:** Standard or Premium (Basic tier with log compaction is not supported)
-   - **Throughput Units:** Start with 1-2, scale as needed
-4. Click **Review + Create**, then **Create**
+To create an Event Hub Namespace, perform the following steps:
 
-### Step 2: Create an Event Hub
+1. In the Azure Portal, navigate to **Event Hubs**.
+2. Click **Create**.
+3. Configure the following properties:
+
+    * **Resource Group** - Choose a resource group you own.
+    * **Namespace Name** - Choose a globally unique name.
+    * **Location** - Must match your Mendix on Azure environment region.
+    * **Pricing Tier** - Standard or Premium (the Basic tier with log compaction is not supported).
+    * **Throughput Units** - Start with 1-2, scale as needed.
+
+4. Click **Review + Create**, and then click **Create**.
+
+### Creating an Event Hub
+
+To create an Event Hub, perform the following steps:
 
 1. Navigate to your Event Hub Namespace
 2. Go to **Entities** → **Event Hubs**
@@ -196,8 +220,8 @@ Follow these steps to configure log export to Azure Event Hubs for real-time str
 1. Navigate to your Mendix on Azure Log Analytics Workspace (see Step 3 in Storage Account section above)
 2. Go to **Settings** → **Data Export**
 3. Click **+ New export rule**
-4. Configure:
-   - **Export rule name:** `export-containerlogs-to-eventhub`
+4. Configure the following properties:
+   - **Export rule name** - Enter `export-containerlogs-to-eventhub`
    - **Source table:** **ContainerLogV2**
    - **Destination:** **Event Hubs**
    - **Subscription:** Select the subscription containing your Event Hub

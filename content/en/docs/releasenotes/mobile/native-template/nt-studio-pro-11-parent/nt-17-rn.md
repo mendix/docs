@@ -11,8 +11,8 @@ description: "Native Template 17"
 
 ### Fixes
 
-* We fix an issue occurring when building apps in Xcode 26.4 or newer.
-* We resolved an issue that version logs events are not getting recorded in firebase for Android.
+- We fixed an issue where version logs events were not recorded in Firebase for Android.
+- We fixed an issue which occurred when building apps in Xcode 26.4 and above.
 
 ## 17.1.0
 
@@ -20,9 +20,8 @@ description: "Native Template 17"
 
 ### Fixes
 
-* We added a new dependency for @shopify/flash-list to support the migration from FlatList to FlashList.
-* Fix the iOS builds crashing when building with Xcode 26 due to folly.
-
+* We added a new dependency for `@shopify/flash-list` to support the migration from FlatList to FlashList.
+* We fixed iOS builds crashing when building with Xcode 26 due to Folly.
 
 ## 17.0.4
 
@@ -30,7 +29,7 @@ description: "Native Template 17"
 
 ### Improvements
 
-* We added the LocationWhenInUse permission to the iOS configuration to support react-native-permissions.
+* We added the `LocationWhenInUse` permission to the iOS configuration to support `react-native-permissions`.
 
 ## 17.0.3
 

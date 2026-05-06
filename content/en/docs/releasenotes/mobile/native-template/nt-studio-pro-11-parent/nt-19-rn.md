@@ -19,7 +19,7 @@ description: "Native Template 19"
 
 ### Fixes
 
-- We fixed the iOS builds crashing when building with Xcode 26.
+- We fix an issue occurring when building apps in Xcode 26.4 or newer.
 - We resolved an issue that version logs events are not getting recorded in firebase for Android.
 
 ## 19.0.2 {#1902}

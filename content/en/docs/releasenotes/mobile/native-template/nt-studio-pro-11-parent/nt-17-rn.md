@@ -11,9 +11,18 @@ description: "Native Template 17"
 
 ### Fixes
 
-* We updated `@mendix/native` to v9.3.1, strengthening Android cookie encryption by migrating from `AES/CBC/PKCS7Padding` to `AES/GCM/NoPadding`.
-* We fixed the iOS builds crashing when building with Xcode 26.
+* We fix an issue occurring when building apps in Xcode 26.4 or newer.
 * We resolved an issue that version logs events are not getting recorded in firebase for Android.
+
+## 17.1.0
+
+**Release date: April 8, 2026**
+
+### Fixes
+
+* We added a new dependency for @shopify/flash-list to support the migration from FlatList to FlashList.
+* Fix the iOS builds crashing when building with Xcode 26 due to folly.
+
 
 ## 17.0.4
 

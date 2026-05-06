@@ -11,9 +11,8 @@ description: "Native Template 14"
 
 ### Fixes
 
-- We updated `@mendix/native` to v9.3.1, strengthening Android cookie encryption by migrating from `AES/CBC/PKCS7Padding` to `AES/GCM/NoPadding`.
 - We resolved an issue that version logs events are not getting recorded in firebase for Android.
-- We Fixed the iOS builds crashing when building with Xcode 26.
+- We fix an issue occurring when building apps in Xcode 26.4 or newer.
 
 ## 14.1.15 {#1425}
 

@@ -7,6 +7,11 @@ weight: 100
 aliases:
     - /appstore/modules/genai/genai-for-mx/migration-guide/
 ---
+
+{{% alert color="info" %}}
+This page will be updated before release to reflect the changes in Agents Kit 2.
+{{% /alert %}}
+
 ## Introduction
 
 During most regular release cycles, upgrading GenAI modules is seamless and requires no manual intervention. However, in some cases, breaking changes to the database or code are unavoidable in order to enable future improvements. 

@@ -9,6 +9,10 @@ aliases:
     - /appstore/modules/genai/how-to/blank-app
 ---
 
+{{% alert color="info" %}}
+This page will be updated before release to reflect the changes in Agents Kit 2.
+{{% /alert %}}
+
 ## Introduction
 
 This document guides you on building a smart app from scratch using a blank GenAI app template. Alternatively, you can use a starter app template to begin your build. For more details, see [Build a Smart App Using a Starter Template](/appstore/modules/genai/v2/how-to/starter-template/).

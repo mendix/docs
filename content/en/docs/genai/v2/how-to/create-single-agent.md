@@ -8,6 +8,10 @@ aliases:
     - /appstore/modules/genai/how-to/howto-single-agent/
 ---
 
+{{% alert color="info" %}}
+This page will be updated before release to reflect the changes in Agents Kit 2.
+{{% /alert %}}
+
 ## Introduction
 
 This document explains how to create your agent in your Mendix app. The agent combines powerful GenAI capabilities of Mendix Agents Kit, such as [knowledge base retrieval (RAG)](/appstore/modules/genai/rag/), [function calling](/appstore/modules/genai/function-calling/), and [agent builder](/appstore/modules/genai/v2/genai-for-mx/agent-commons/), to facilitate an AI-enriched use case. To do this, you can use your existing app or follow the [Build a Smart App from a Blank GenAI App](/appstore/modules/genai/v2/how-to/blank-app/) guide to start from scratch.

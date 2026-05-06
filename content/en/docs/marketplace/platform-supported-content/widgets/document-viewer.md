@@ -26,7 +26,7 @@ Supported file types:
 
 To configure this widget, follow these steps:
 
-1. Place the document viewer in a data view, list view, or a template grid with a data source that has a **System.File** attribute that stores the supported files.
+1. Place the document viewer in a data view, list view, or a template grid with a data source that has a **System.File** attribute that stores the supported files. Make sure the attribute **DeleteAfterDownload** is set to false!
 1. Double-click the document viewer widget to open the **Edit Document Viewer** dialog box.
 1. Configure the widget using the properties described in the sections below.
 

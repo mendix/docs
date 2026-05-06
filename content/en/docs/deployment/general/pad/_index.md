@@ -55,11 +55,10 @@ To run your app locally, perform the following steps:
     * For Windows, run the command `set M2EE_ADMIN_PASS=<your password>`
     * For Linux, run the command `export M2EE_ADMIN_PASS=<your password>`
 
-{{% alert color="info" %}}
-The Mendix admin port can be used to fetch metrics and other runtime data from an app. It requires a password for security reasons.
-{{% /alert %}}
+    {{% alert color="info" %}}The Mendix admin port can be used to fetch metrics and other runtime data from an app. It requires a password for security reasons.
+    {{% /alert %}}
 
-1. Run the app by using one of the following commands:
+3. Run the app by using one of the following commands:
 
     * For Windows, run the command `<your folder location>\bin\start.bat`
     * For Windows Powershell, run the command `<your folder location>\bin\start.ps1`

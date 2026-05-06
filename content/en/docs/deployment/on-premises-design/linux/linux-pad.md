@@ -52,14 +52,12 @@ To deploy your app to Linux, perform the following steps:
     * For Debian/Ubuntu-based systems: `sudo apt install temurin-21-jdk -y`
     * For RHEL/CentOS-based systems: `sudo yum install temurin-21-jdk -y` or `sudo dnf install temurin-21-jdk -y`
 
-If your application requires it, you can change the Java version on vendor as needed, for example, `openjdk-21-jdk` or `java-21-amazon-corretto`.
+    If your application requires it, you can change the Java version on vendor as needed, for example, `openjdk-21-jdk` or `java-21-amazon-corretto`.
 
-{{% alert color="info" %}}
-Your Portable App Distribution only requires a Java Runtime Environment (JRE) to run, but it is often recommended to install a full JDK as it includes the JRE and development tools.
-{{% /alert %}}
+    {{% alert color="info" %}} Your Portable App Distribution only requires a Java Runtime Environment (JRE) to run, but it is often recommended to install a full JDK as it includes the JRE and development tools. {{% /alert %}}
 
-1. Verify that Java is correctly installed by running the following command: `java -version`.
-2. Upload the Portable App Distribution .zip file to a location where your Linux server can access it by using one of the following options, depending on the location and configuration of your Linux machine.
+4. Verify that Java is correctly installed by running the following command: `java -version`.
+5. Upload the Portable App Distribution .zip file to a location where your Linux server can access it by using one of the following options, depending on the location and configuration of your Linux machine.
 
     * For Azure Blob Storage (often done as part of a CI/CD pipeline): `az storage blob upload --account-name <your storage account name> --container-name <your container name> --name <your app>.zip --file <your project folder>/build/distributions/your-app.zip --auth-mode login`
     
@@ -77,7 +75,7 @@ Your Portable App Distribution only requires a Java Runtime Environment (JRE) to
 
     * From a public URL using `wget`: `wget https://<path to your file>.zip`
 
-3. Download the .zip file onto your Linux server by using one of the following options, depending on the location and configuration of your Linux machine.
+6. Download the .zip file onto your Linux server by using one of the following options, depending on the location and configuration of your Linux machine.
 
     * For Azure Blob Storage: `az storage blob download --account-name <your storage account name> --container-name <your container name> --name <your app>.zip --file /home/<your user name>/<your app>.zip --auth-mode login`
     
@@ -95,8 +93,8 @@ Your Portable App Distribution only requires a Java Runtime Environment (JRE) to
 
         You can also retrieve the files using `wget`.
 
-4. Extract the .zip file by running the following command: `unzip <your app>.zip -d <your desired directory>`.
-5. Navigate into the extracted directory and execute the start script by running the following command:
+7. Extract the .zip file by running the following command: `unzip <your app>.zip -d <your desired directory>`.
+8. Navigate into the extracted directory and execute the start script by running the following command:
 
     ```text
     cd your-desired-directory
@@ -105,7 +103,7 @@ Your Portable App Distribution only requires a Java Runtime Environment (JRE) to
 
     The `bin/start` script is a common convention for Portable App Distributions using the Default configuration. If your application uses a different configuration, start script, or command, adjust accordingly.
 
-6. Verify that the application is running by opening the following URL in your browser: `http://<public IP of your Linux instance>:8080`.
+9. Verify that the application is running by opening the following URL in your browser: `http://<public IP of your Linux instance>:8080`.
 
     `8080` is the default port. If your application is configured to run on a different port, adjust accordingly.
 

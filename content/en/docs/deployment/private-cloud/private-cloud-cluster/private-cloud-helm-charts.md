@@ -80,40 +80,36 @@ To install the solution, perform the following steps:
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard5.png" >}}
 
-{{% alert color="info" %}}
-Keep in mind that changing the ingress type resets the value of all fields in this tab.
-{{% /alert %}}
+    {{% alert color="info" %}}Keep in mind that changing the ingress type resets the value of all fields in this tab.{{% /alert %}}
 
-1. In the **Registry** tab, specify your network ingress settings. For more information about the available options, see [Registry Configuration](/developerportal/deploy/private-cloud-registry/).
+12. In the **Registry** tab, specify your network ingress settings. For more information about the available options, see [Registry Configuration](/developerportal/deploy/private-cloud-registry/).
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard6.png" >}}
 
-{{% alert color="info" %}}
-Keep in mind that changing the registry type resets the value of all fields in this tab.
-{{% /alert %}}
+    {{% alert color="info" %}}Keep in mind that changing the registry type resets the value of all fields in this tab.{{% /alert %}}
 
-1. Optional: In the **Proxy** tab, specify a proxy server.
+13. Optional: In the **Proxy** tab, specify a proxy server.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard7.png" >}}
 
-2. Optional: If your servers use a self-signed certificate, in the **Custom TLS** tab, configure custom TLS so that the self-signed certificate is accepted.
+14. Optional: If your servers use a self-signed certificate, in the **Custom TLS** tab, configure custom TLS so that the self-signed certificate is accepted.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard8.png" >}}
 
-3. Click **Generate & Download** to generate the yaml file with the configurations that you provided.
-4. Run the following commands:
+15. Click **Generate & Download** to generate the yaml file with the configurations that you provided.
+16. Run the following commands:
 
     1. To install the required [Custom Resource Definitions](/developerportal/deploy/private-cloud-technical-appendix-01/#custom-resources)
     
-    ```text
-    kubectl apply -f mx-privatecloud-operator-crd/crds/
-    ```
+        ```text
+        kubectl apply -f mx-privatecloud-operator-crd/crds/
+        ```
 
-    1. To install Mendix on Kubernetes:
+    2. To install Mendix on Kubernetes:
 
-    ```text
-    helm install --createnamespace -n <your namespace> -f <yaml file name> <release name> mx-privatecloud-operator-installer
-    ```
+        ```text
+        helm install --createnamespace -n <your namespace> -f <yaml file name> <release name> mx-privatecloud-operator-installer
+        ```
 
 {{% alert color="info" %}}
 Ensure that your cluster have access to the Mendix on Kubernetes Portal for adding the storage plans, and that the Private Cloud Portal is safelisted in the cluster.

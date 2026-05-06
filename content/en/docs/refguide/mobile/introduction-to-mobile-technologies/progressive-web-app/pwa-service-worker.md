@@ -20,13 +20,13 @@ Scope limits which pages are controlled by a service worker, not which requests 
 
 To understand how updates to your Mendix PWA are handled, you need to understand the service worker lifecycle. A service worker goes through several distinct phases:
 
-1. **Registration** — In this step the browser downloads the service worker file. If the code contains syntax errors, registration fails and the service worker is discarded.
-2. **Installation** — During this phase, the service worker typically caches static assets your PWA needs to function offline. If all assets are successfully pre-cached, the installation succeeds. If installation fails, the service worker is discarded.
+1. **Registration** – In this step the browser downloads the service worker file. If the code contains syntax errors, registration fails and the service worker is discarded.
+2. **Installation** – During this phase, the service worker typically caches static assets your PWA needs to function offline. If all assets are successfully pre-cached, the installation succeeds. If installation fails, the service worker is discarded.
     * Once installed:
         * It becomes activated immediately if no other service worker is currently controlling the page.
         * If there is already an active service worker, the new one will be installed but enters a **Waiting** state. The **Waiting** state, ensures that updates to your application are delivered smoothly and without interrupting your users' current interactions.
-3. **Activation** — Once installed, the service worker enters the **Activating** state, and then becomes **Activated**. An **Activated** service worker takes control of pages within its scope (meaning it is ready to intercept requests).
-4. **Redundant** — A service worker can become redundant if a new version replaces it, or if it fails to install.
+3. **Activation** – Once installed, the service worker enters the **Activating** state, and then becomes **Activated**. An **Activated** service worker takes control of pages within its scope (meaning it is ready to intercept requests).
+4. **Redundant** – A service worker can become redundant if a new version replaces it, or if it fails to install.
 
 ## Waiting for Service Worker Readiness
 
@@ -63,76 +63,76 @@ The [ServiceWorkerRegistration](https://developer.mozilla.org/en-US/docs/Web/API
 
 You can implement a custom update mechanism to provide a clear notification and an option to update to the latest version of your app in that same notification. This allows them to update the application without closing all tabs or windows:
 
-1. **Listen for service worker updates** — Create a JavaScript Action to listen for service worker updates. This action should run when your application starts up, for example, calling the JavaScript action via nanoflow that triggers by [Events](/appstore/widgets/events/) widget:
+1. **Listen for service worker updates** – Create a JavaScript Action to listen for service worker updates. This action should run when your application starts up, for example, calling the JavaScript action via nanoflow that triggers by [Events](/appstore/widgets/events/) widget:
 
-```javascript
-export async function JS_ListenForPWAUpdates() {
-    if (!('serviceWorker' in navigator)) {
-        console.warn('service workers are not supported in this browser.');
-        return;
-    }
-
-    try {
-        const registration = await navigator.serviceWorker.getRegistration();
-
-        if (registration) {
-            // Detect when a new service worker update is found
-            registration.addEventListener('updatefound', () => {
-                const newWorker = registration.installing;
-
-                if (newWorker) {
-                    // Listen for state changes in the new service worker
-                    newWorker.addEventListener('statechange', () => {
-                        // New service worker is installed and ready.
-                        if (newWorker.state === 'installed'){
-                            //  The new service worker is waiting because an existing service worker is active
-                            if(navigator.serviceWorker.controller) {
-                                console.log('A new update is available. Notify the user.');
-                                // Show a confirmation dialog or implement your custom update UI 
-                                // to notify the user that an update is available                        
-                            } else {
-                                console.log("Service Worker installed and ready.");
-                                // This is the first time a service worker is installed and activated for this page.
-                                // A page reload is necessary to ensure all assets are served by the new service worker and the app is fully offline ready
-                            }
-                        }
-                    });
-                }
-            });
-
-            if (registration.waiting) {
-                console.log('An update is already available and waiting. Notify the user.');
-                // Show a confirmation dialog or call your custom update flow
-                // to notify the user that an update is available
-            }
+    ```javascript
+    export async function JS_ListenForPWAUpdates() {
+        if (!('serviceWorker' in navigator)) {
+            console.warn('service workers are not supported in this browser.');
+            return;
         }
-    } catch (error) {
-        console.error('Error setting up service worker update listener:', error);
+
+        try {
+            const registration = await navigator.serviceWorker.getRegistration();
+
+            if (registration) {
+                // Detect when a new service worker update is found
+                registration.addEventListener('updatefound', () => {
+                    const newWorker = registration.installing;
+
+                    if (newWorker) {
+                        // Listen for state changes in the new service worker
+                        newWorker.addEventListener('statechange', () => {
+                            // New service worker is installed and ready.
+                            if (newWorker.state === 'installed'){
+                                //  The new service worker is waiting because an existing service worker is active
+                                if(navigator.serviceWorker.controller) {
+                                    console.log('A new update is available. Notify the user.');
+                                    // Show a confirmation dialog or implement your custom update UI 
+                                    // to notify the user that an update is available                        
+                                } else {
+                                    console.log("Service Worker installed and ready.");
+                                    // This is the first time a service worker is installed and activated for this page.
+                                    // A page reload is necessary to ensure all assets are served by the new service worker and the app is fully offline ready
+                                }
+                            }
+                        });
+                    }
+                });
+
+                if (registration.waiting) {
+                    console.log('An update is already available and waiting. Notify the user.');
+                    // Show a confirmation dialog or call your custom update flow
+                    // to notify the user that an update is available
+                }
+            }
+        } catch (error) {
+            console.error('Error setting up service worker update listener:', error);
+        }
     }
-}
-```
+    ```
 
-1. **Create a JavaScript Action to activate the new service worker** — When the user confirms the update, use the Client API `skipWaiting()` to activate the new service worker:
+2. **Create a JavaScript Action to activate the new service worker** – When the user confirms the update, use the Client API `skipWaiting()` to activate the new service worker:
 
-```javascript
-import { skipWaiting } from "mx-api/pwa";
+    ```javascript
+    import { skipWaiting } from "mx-api/pwa";
 
-/**
- * @returns {Promise<boolean>} A promise that resolves to true if the update was successfully activated and page reloaded, false otherwise.
- */
-export async function JS_ActivatePWAUpdate() {
-    const activated = await skipWaiting();
+    /**
+    * @returns {Promise<boolean>} A promise that resolves to true if the update was successfully activated and page reloaded, false otherwise.
+    */
+    export async function JS_ActivatePWAUpdate() {
+        const activated = await skipWaiting();
 
-    if (activated) {
-        console.log("New service worker activated and controlling the page.");
-                
-        return true;
-    } else {
-        console.warn("No waiting service worker found or activation failed via Mendix API.");
-        return false;
+        if (activated) {
+            console.log("New service worker activated and controlling the page.");
+                    
+            return true;
+        } else {
+            console.warn("No waiting service worker found or activation failed via Mendix API.");
+            return false;
+        }
     }
-}
-```
+    ```
 
-1. **Notifying users** — To not interrupt users during critical operations, Mendix recommends notifying them when an update becomes available. For example, you can implement a nanoflow that prompts users to confirm the update when a new version is detected. If the user confirms, the nanoflow can call `JS_ActivatePWAUpdate` to update. This nanoflow can be passed as a parameter to `JS_ListenForPWAUpdates`, which will invoke it when an update is detected.
-2. **Reload the Application** — Trigger a reload, or ask users to reload all open tabs or windows to ensure the application loads with the newly activated service worker.
+3. **Notifying users** – To not interrupt users during critical operations, Mendix recommends notifying them when an update becomes available. For example, you can implement a nanoflow that prompts users to confirm the update when a new version is detected. If the user confirms, the nanoflow can call `JS_ActivatePWAUpdate` to update. This nanoflow can be passed as a parameter to `JS_ListenForPWAUpdates`, which will invoke it when an update is detected.
+4. **Reload the Application** – Trigger a reload, or ask users to reload all open tabs or windows to ensure the application loads with the newly activated service worker.

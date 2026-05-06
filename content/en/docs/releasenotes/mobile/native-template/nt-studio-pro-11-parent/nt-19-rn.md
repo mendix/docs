@@ -19,8 +19,8 @@ description: "Native Template 19"
 
 ### Fixes
 
-- We fix an issue occurring when building apps in Xcode 26.4 or newer.
-- We resolved an issue that version logs events are not getting recorded in firebase for Android.
+- We fixed an issue where version logs events were not recorded in Firebase for Android.
+- We fixed an issue which occurred when building apps in Xcode 26.4 and above.
 
 ## 19.0.2 {#1902}
 

@@ -3,8 +3,6 @@ title: "Agents Kit 2"
 url: /appstore/modules/genai/v2
 weight: 5
 description: "Agents Kit 2: Describes the Agents Kit 2 components for building generative AI applications in Studio Pro 11.12 and above"
-aliases:
-    - /appstore/modules/genai/
 v11_12: true
 ---
 

@@ -12,6 +12,12 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 ## 2026
 
+### May 7, 2026
+
+#### Portal Improvements
+
+* We have fixed an issue where an error pop-up appears when opening Grafana for Logs and Metrics. (Ticket 277132)
+
 ### May 1, 2026
 
 #### Mendix Ops CLI

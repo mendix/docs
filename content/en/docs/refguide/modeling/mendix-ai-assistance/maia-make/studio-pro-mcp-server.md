@@ -22,6 +22,10 @@ It has the following key highlights:
 * Full Maia feature parity — The MCP Server exposes the same capabilities that Maia offers within Studio Pro.
 * Live updates — Any changes made through Maia via the MCP Server are reflected in real time within Studio Pro.
 
+{{% alert color="warning" %}}
+When you connect external agents or AI tools to Studio Pro's MCP Server, those tools consume tokens from your own LLM provider account each time they interact with Maia. Depending on your usage patterns, this may result in significant charges on your monthly bill from your LLM provider.
+{{% /alert %}}
+
 ## Enabling the MCP Server
 
 To enable the MCP Server, navigate to **Preferences** > **Maia** > **MCP Server**, and check **Enable MCP Server**. You can also configure the port in this menu.

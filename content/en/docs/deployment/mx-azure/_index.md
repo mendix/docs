@@ -32,3 +32,5 @@ Mendix on Azure aims to bring the best of both worlds, by offering users a preco
 This managed approach helps ensure reliable operations and secure best practices, while empowering citizen developers and IT professionals alike to harness the full potential of Mendix with minimal friction.
 
 ## Read More
+
+The pages below use the `description` metadata in their front matter as the short description.

@@ -66,12 +66,12 @@ The customer is responsible for the following tasks:
 {{% alert color="info" %}}
 The logs you export may contain sensitive data including personally identifiable information (PII), application data, and system metadata. You are fully responsible for the following:
 
-- Ensuring compliance with data protection regulations (GDPR, CCPA, etc.)
-- Implementing appropriate security controls for exported logs
-- Managing access control to destination systems
-- Data retention and deletion policies for exported logs
+* Ensuring compliance with data protection regulations (GDPR, CCPA, and others)
+* Implementing appropriate security controls for exported logs
+* Managing access control to destination systems
+* Data retention and deletion policies for exported logs
 
-Mendix does not control or monitor where you send exported logs. Handle them according to your organization's data governance policies.
+Mendix does not control or monitor where you send exported logs. You must handle them according to your organization's data governance policies.
 {{% /alert %}}
 
 ## Prerequisites
@@ -206,56 +206,66 @@ To create an Event Hub Namespace, perform the following steps:
 
 To create an Event Hub, perform the following steps:
 
-1. Navigate to your Event Hub Namespace
-2. Go to **Entities** → **Event Hubs**
-3. Click **+ Event Hub**
-4. Configure:
-   - **Name:** Choose a name (e.g., `mendix-logs`)
-   - **Partition Count:** 2-4 (for parallel processing)
-   - **Message Retention:** 1-7 days (based on your downstream processing latency)
-5. Click **Create**
-
-### Step 3: Create a Data Export Rule
-
-1. Navigate to your Mendix on Azure Log Analytics Workspace (see Step 3 in Storage Account section above)
-2. Go to **Settings** → **Data Export**
-3. Click **+ New export rule**
+1. Navigate to your Event Hub Namespace.
+2. Go to **Entities** > **Event Hubs**.
+3. Click **Event Hub**.
 4. Configure the following properties:
-   - **Export rule name** - Enter `export-containerlogs-to-eventhub`
-   - **Source table:** **ContainerLogV2**
-   - **Destination:** **Event Hubs**
-   - **Subscription:** Select the subscription containing your Event Hub
-   - **Event Hub Namespace:** Select your namespace
-   - **Event Hub Name:** Select the Event Hub you created (or leave blank to use default)
-5. Click **Create**
 
-{{% alert color="warning" %}}
-Provisioning delay: Approximately **30 minutes** before logs begin flowing.
-{{% /alert %}}
+    * **Name** - Enter a name (for example, `mendix-logs`).
+    * **Partition Count** - Set to 2-4 (for parallel processing).
+    * **Message Retention** - Set to 1-7 days (based on your downstream processing latency).
 
-### Step 4: Verify Export is Working
+5. Click **Create**.
 
-After waiting 30 minutes:
+### Creating a Data Export Rule
 
-1. Navigate to your Event Hub Namespace
-2. Go to **Monitoring** → **Metrics**
-3. Select metric: **Incoming Messages**
-4. You should see messages arriving (one message per log batch)
+To create a Data Export Rule, perform the following steps:
 
-Alternatively, use the Event Hubs Data Explorer:
-1. Navigate to your Event Hub
-2. Go to **Features** → **Process data** → **Explore**
-3. View incoming log messages in real-time
+1. Locate your Mendix on Azure Log Analytics Workspace by performing the following steps:
+
+    1. In the Azure Portal, navigate to **Resource Groups**.
+    2. Find the managed resource group for your Mendix on Azure environment. The name has the following format: `mrg-<app-name>-*`.
+    3. Locate the **Log Analytics Workspace**. The name has the following format: `<prefix>-<env-id>-alog`.
+    4. Click on the workspace to open it.
+
+2. Go to **Settings** > **Data Export**.
+3. Click **New export rule**.
+4. Configure the following properties:
+
+    * **Export rule name** - Enter `export-containerlogs-to-eventhub`.
+    * **Source table** - Select **ContainerLogV2**.
+    * **Destination** - Select **Event Hubs**.
+    * **Subscription** - Select the subscription containing your Event Hub.
+    * **Event Hub Namespace** - Select your namespace.
+    * **Event Hub Name** - Select the Event Hub that you created (or leave blank to use default).
+
+5. Click **Create**.
+
+### Verifying that Export is Working
+
+Data Export Rules have a provisioning delay of approximately 30 minutes before logs begin flowing to the destination. After waiting 30 minutes, verify the export by performing the following steps:
+
+1. Go to your Event Hub Namespace.
+2. Go to **Monitoring** > **Metrics**.
+3. Select the **Incoming Messages** metric.
+
+You should now see the messages arrive, with one message per log batch.
+
+Alternatively, you can use the Event Hubs Data Explorer:
+
+1. Go to your Event Hub.
+2. Go to **Features** > **Process data** > **Explore**.
+3. View the incoming log messages in real-time.
 
 ## Example Integration Pipelines
 
-{{% alert color="danger" %}}
-**The following examples are OUTSIDE Mendix's supported product scope.**
+{{% alert color="info" %}}
+The following pipelines are provide only as examples, and are outside Mendix's supported product scope.
 
 Mendix does not provide support for configuring, operating, or troubleshooting these downstream integrations. You are fully responsible for implementing and maintaining your own integration pipelines. Contact the respective vendors for support with their tools.
 {{% /alert %}}
 
-### Event Hub → DataDog (Customer Responsibility - Not Supported by Mendix)
+### Event Hub > DataDog (Customer Responsibility - Not Supported by Mendix)
 
 DataDog provides an Azure integration that can consume logs from Event Hubs:
 
@@ -352,7 +362,7 @@ Be aware of these Azure platform limits when configuring Data Export Rules:
    - Contact the appropriate vendor for their tooling
 3. Review the vendor's documentation for Azure integration troubleshooting
 
-## Related Content
+## Read More
 
 - [Monitoring Mendix on Azure with Grafana](/developerportal/deploy/mendix-on-azure/monitor/) - The primary supported monitoring solution
 - [Support for Mendix on Azure](/developerportal/deploy/mendix-on-azure/support/) - Understanding support boundaries

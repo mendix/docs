@@ -14,9 +14,9 @@ To understand the different types of versions and releases, consider the example
 
 In the 11.6.1 example, the first number (**11**) indicates the major version.
 
-Mendix supports three major versions at a time. To clarify our current offering and in relation to our SLA, while the current major version is Mendix 11, Mendix supports major versions 9, 10, and 11. 
+Mendix supports three major versions at a time. As defined in our SLA, while the current major version is Mendix 11, Mendix supports major versions 9, 10, and 11. 
 
-As of Mendix 10, to make version support duration clearer for our users, Mendix has released a new major release in a two-year cadence. Every two years in June, Mendix releases a new major version. This helps you to prepare and plan to adopt new releases and upgrade older Mendix versions. Each major version release may start with public [beta releases](/releasenotes/release-status/) to obtain feedback from users.
+To make version support duration clearer for our users, Mendix plans a new major release in a regular cadence. Mendix announce each new major version at least a year in advance. This helps you to prepare and plan to adopt new releases and upgrade from older Mendix versions. Each major version release may start with public [beta releases](/releasenotes/release-status/) to obtain feedback from users.
 
 ### Minor Version
 
@@ -34,6 +34,18 @@ A patch version is released on an as-needed basis. It includes security fixes an
 
 There are three types of minor release which have different periods of support. These are long-term support versions (LTSs), medium-term support versions (MTSs) and other minor versions.
 
+The current and planned LTS, MTS, and major versions are shown in the table below.
+
+| Release | Date |
+| --- | --- |
+| 9.24 LTS | March 2023 |
+| 10.24 LTS | June 2025 |
+| 11.6 MTS | December 2025 |
+| 11.12 LTS | June 2026 |
+| 11.18 LTS | December 2026 |
+| 11.24 LTS | June 2027 |
+| 12.0 *New major version, not MTS or LTS* | June 2027 |
+
 These three types of support are described below.
 
 ### Long-Term Support Version (LTS) {#lts}
@@ -44,18 +56,13 @@ Although it continues to be supported, once a minor version becomes an LTS, it w
 
 Release notes for the current LTS versions are marked with an LTS badge (<text class="badge badge-pill badge-lts" style="margin-left:0px">LTS</text>) in the left sidebar. The Marketplace also indicates LTS versions in the same way.
 
-These are the current LTS versions of Studio Pro:
-
-* [9.24](/releasenotes/studio-pro/9.24/) (started in March, 2023)
-* [10.24](/releasenotes/studio-pro/10.24/) (started in June, 2025)
-
 {{% alert color="info" %}}
-Mendix recommends using the latest patch version of the LTS minor version as this will contain the latest fixes.
+Mendix recommends using the latest patch version of an LTS minor version as this will contain the latest fixes.
 {{% /alert %}}
 
 #### Support Duration
 
-Support for an LTS version ends when a third consecutive major version is released for general availability (for example, support for Mendix version 8 ended with the GA release of Mendix version 11).
+Support for an LTS version ends when a third consecutive major version is released for general availability (for example, support for Mendix version 8 LTS ended with the GA release of Mendix version 11).
 
 This diagram illustrates the LTS concept with version and [end of support](#end) examples:
 
@@ -69,11 +76,11 @@ This diagram illustrates the LTS concept with version and [end of support](#end)
 
 #### Support with Patch Releases
 
-For the support duration, the LTS will receive [patch](#patch-version) releases only. 
+For the support duration, an LTS will receive [patch](#patch-version) releases for bug and security fixes but will not have new features. 
 
 #### Upgrading Impact
 
-Upgrading from an LTS to an LTS often has a lower impact than other upgrade options. That is because an LTS has the longest support duration and only gets critical fixes, which results in high stability over time. In addition, moving from one LTS to another happens less often as there are fewer LTS versions compared to [MTS](#mts) versions or monthly release versions.
+Upgrading from an LTS to another LTS often has a lower impact than other upgrade options. That is because an LTS has the longest support duration and only gets critical fixes, which results in high stability over time. In addition, moving from one LTS to another happens less often as there are fewer LTS versions compared to [MTS](#mts) versions or monthly release versions.
 
 ### Medium-Term Support Version (MTS) {#mts}
 
@@ -86,16 +93,16 @@ Release notes for any current MTS versions are marked with an MTS badge (<text c
 Mendix MTS versions offer a balance between getting the latest and greatest Mendix has to offer every month, and security and stability.
 
 {{% alert color="info" %}}
-Mendix recommends using the latest patch version of the MTS minor version as this will contain the latest fixes.
+Mendix recommends using the latest patch version of an MTS minor version as this will contain the latest fixes.
 {{% /alert %}}
 
 #### Support Duration
 
-Support for an MTS version ends three months after the next major version is released. For example, support for 10.6, 10.12, and 10.18 MTS versions ended three months after Mendix version 11 was released.
+Support for an MTS version ends three months after the next major version is released. For example, support for 10.6, 10.12, and 10.18 MTS versions ended three months after Mendix version 11.0 was released.
 
 #### Support with Patch Releases
 
-For the support duration, the MTS will receive patch releases only.
+For the support duration, the MTS will receive patch releases for bug and security fixes but will not have new features.
 
 #### Upgrading Impact
 
@@ -113,7 +120,7 @@ For example, if a bug is found in version 10.1.0 before version 10.2.0 is releas
 
 #### Release Cycle
 
-This is a monthly release that includes new features as well as bug fixes and security patches. Mendix applies security patches and bug fixes to existing MTS and LTS versions, but not new features.
+This is a monthly release that includes new features as well as bug fixes and security patches. Mendix also applies security patches and bug fixes to existing MTS and LTS versions, but not new features.
 
 #### Support with Patch Releases
 
@@ -137,4 +144,4 @@ If a new major version is nearing release, that means an older major version is 
 
 Furthermore, you should uninstall old versions for which support has ended. If you continue to use versions for which support has ended, you do so at your own risk for your applications, data, and security. Mendix does not recommend using versions for which support has ended unless you have purchased the [Extended Support](/support/#extended-support) product.
 
-If you have purchased the Extended Support package, you can request the Studio Pro installation files from Mendix Support that are covered under the Extended Support product.
+If you have purchased the Extended Support package, you can ask Mendix Support to supply the Studio Pro installation files for versions which are covered under the Extended Support product.

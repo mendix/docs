@@ -265,106 +265,127 @@ The following pipelines are provide only as examples, and are outside Mendix's s
 Mendix does not provide support for configuring, operating, or troubleshooting these downstream integrations. You are fully responsible for implementing and maintaining your own integration pipelines. Contact the respective vendors for support with their tools.
 {{% /alert %}}
 
-### Event Hub > DataDog (Customer Responsibility - Not Supported by Mendix)
+### Event Hub > DataDog
 
-DataDog provides an Azure integration that can consume logs from Event Hubs:
+{{% alert color="info" %}}
+The following configurations are the responsibility of the customer. They are not supported by Mendix.
+{{% /alert %}}
 
-1. **Setup:** Follow [DataDog's Azure Automated Log Forwarding guide](https://docs.datadoghq.com/logs/guide/azure-automated-log-forwarding/)
-2. **Components:** Azure Function with DataDog forwarder, triggered by Event Hub
-3. **Configuration:** You manage the Function App, DataDog API keys, and log parsing rules
-4. **Support:** Contact DataDog support for issues with their forwarder or ingestion
+DataDog provides an Azure integration that can consume logs from Event Hubs. To set it up, follow [DataDog's Azure Automated Log Forwarding guide](https://docs.datadoghq.com/logs/guide/azure-automated-log-forwarding/).
 
-### Storage Account → Azure Sentinel (Customer Responsibility - Not Supported by Mendix)
+The integration consists of Azure Function with DataDog forwarder, triggered by Event Hub. You manage the Function App, DataDog API keys, and log parsing rules.
 
-Azure Sentinel can ingest logs from Storage Accounts:
+Contact DataDog support for issues with their forwarder or ingestion.
 
-1. **Setup:** Configure a Sentinel Data Connector for Log Analytics
-2. **Alternative:** Use Logic Apps to process JSON files from storage and send to Sentinel
-3. **Configuration:** You manage the connector, parsing rules, and Sentinel workspace
-4. **Support:** Contact Microsoft support for Sentinel-specific issues
+### Storage Account > Azure Sentinel
 
-### Storage Account → Long-Term Archive (Customer Responsibility - Not Supported by Mendix)
+{{% alert color="info" %}}
+The following configurations are the responsibility of the customer. They are not supported by Mendix.
+{{% /alert %}}
 
-For compliance or audit requirements:
+Azure Sentinel can ingest logs from Storage Accounts. To set it up, configure a Sentinel Data Connector for Log Analytics. Alternatively, use Logic Apps to process JSON files from storage and send to Sentinel.
 
-1. **Lifecycle Policies:** Configure Azure Storage lifecycle management to move logs to Cool or Archive tier
-2. **Retention:** Set retention policies according to your compliance requirements
-3. **Access:** Implement access controls and audit logging on the Storage Account
+You manage the connector, parsing rules, and Sentinel workspace.
+
+Contact Microsoft support for Sentinel-specific issues.
+
+### Storage Account > Long-Term Archive
+
+{{% alert color="info" %}}
+The following configurations are the responsibility of the customer. They are not supported by Mendix.
+{{% /alert %}}
+
+For compliance or audit requirements, you can configure the following:
+
+* Lifecycle Policies - Configure Azure Storage lifecycle management to move logs to Cool or Archive tier.
+* Retention - Set retention policies according to your compliance requirements.
+* Access - Implement access controls and audit logging on the Storage Account.
 
 ## Limits and Constraints
 
-Be aware of these Azure platform limits when configuring Data Export Rules:
+Be aware of the following Azure platform limits when configuring Data Export Rules.
 
 | Limit | Value | Description |
-|-------|-------|-------------|
+| --- | --- | --- |
 | Maximum rules per workspace | 10 | You can create up to 10 active Data Export Rules on a single Log Analytics Workspace |
 | Storage Account restrictions | No Premium | Premium Storage Accounts and BlockBlobStorage are not supported |
 | Event Hub tier restrictions | No Basic with compaction | Event Hub Basic tier with log compaction is not supported |
 | Region requirement | Same region | Destination must be in the same Azure region as the Log Analytics Workspace |
-| Provisioning delay | ~30 minutes | Allow approximately 30 minutes after creating a rule before logs begin flowing |
+| Provisioning delay | approx. 30 minutes | Allow approximately 30 minutes after creating a rule before logs begin flowing |
 | Export scope | Full table | Data Export Rules export the entire table (no filtering). Use Azure Monitor query-time filtering if needed |
 | Cross-tenant support | Not supported (v1) | Exporting to Event Hubs in a different Azure tenant is not supported in this version |
 
 ## Troubleshooting
 
-### I can't see the Log Analytics Workspace tables
+### Cannot See the Log Analytics Workspace Tables
 
-**Cause:** You need `Reader` role at the subscription level to query the workspace.
+If you cannot see the Log Analytics Workspace tables, you may be missing the `Reader` role at the subscription level to query the workspace.
 
-**Solution:**
-1. Ask your Azure subscription administrator to grant you `Reader` role
-2. The role should be assigned at the subscription level (not just resource group)
-3. Wait a few minutes for permissions to propagate
+#### Solution
 
-### Permission denied when creating Data Export Rule
+To solve this issue, ask your Azure subscription administrator to grant you the `Reader` role. The role should be assigned at the subscription level (not just resource group). After the role is assigned, wait a few minutes for permissions to propagate.
 
-**Cause:** The Mendix platform may not have updated your environment with the Data Export permission yet.
+### Permission Denied When Creating Data Export Rule
 
-**Solution:**
-1. Contact Mendix Support to verify the permission has been applied to your environment
-2. Allow up to 4 hours for permission changes to propagate after Mendix applies them
+This issue may occur if the Mendix platform has not updated your environment with the Data Export permission yet.
 
-### No logs flowing after 30 minutes
+#### Solution
 
-**Possible causes:**
-- Destination resource firewall blocks Log Analytics
-- Storage Account is Premium tier (not supported)
-- Event Hub is Basic tier with compaction (not supported)
-- Destination is in a different region than the workspace
+Contact Mendix Support to verify that the permission has been applied to your environment.
 
-**Solution:**
-1. Verify destination resource is in the **same region** as Log Analytics Workspace
-2. Check Storage Account firewall allows **trusted Microsoft services**
-3. Verify Storage Account is StorageV1 or StorageV2 (not Premium)
-4. Check Event Hub tier is Standard or Premium (not Basic)
-5. Review Azure Activity Log for any errors related to the export rule
+Allow up to 4 hours for permission changes to propagate after Mendix applies them.
 
-### My Data Export Rule disappeared
+### No Logs Flowing After 30 Minutes
 
-**Cause:** This is very unlikely. Data Export Rules you create are persistent and not modified by Mendix updates.
+This can occur if:
 
-**Solution:**
-1. Verify you're looking at the correct Log Analytics Workspace
-2. Check Azure Activity Log to see if someone deleted the rule
-3. Contact Mendix Support if you believe the rule was inadvertently removed (rare)
+* Destination resource firewall blocks Log Analytics.
+* Storage Account is Premium tier (not supported).
+* Event Hub is Basic tier with compaction (not supported).
+* Destination is in a different region than the workspace.
 
-### Issues with DataDog / Splunk / other third-party tools
+#### Solution
 
-{{% alert color="warning" %}}
-**Out of scope:** Mendix does not support troubleshooting third-party integrations.
+To solve this issue, perform the following steps:
+
+1. Verify that the destination resource is in the same region as the Log Analytics Workspace.
+2. Check that the Storage Account firewall allows **trusted Microsoft services**.
+3. Verify that the Storage Account is **StorageV1** or **StorageV2** (not Premium).
+4. Check that the Event Hub tier is **Standard** or **Premium** (not Basic).
+5. Review the Azure Activity Log for any errors related to the export rule.
+
+### My Data Export Rule Disappeared
+
+Data Export Rules that you create are very unlikely to disappear. They are persistent and not modified by Mendix updates.
+
+#### Solution
+
+To solve this issue, perform the following steps:
+
+1. Verify that you are looking at the correct Log Analytics Workspace.
+2. Check the Azure Activity Log to see if someone deleted the rule.
+3. Contact Mendix Support if you believe the rule was inadvertently removed.
+
+### Issues with DataDog, Splunk, or Other Third-party Tools
+
+{{% alert color="info" %}}
+Issues with third-party tools are out of scope for Mendix. Mendix does not support troubleshooting third-party integrations.
 {{% /alert %}}
 
-**Solution:**
-1. Verify logs are successfully reaching your Event Hub or Storage Account (see "Verify Export is Working" sections above)
-2. If logs are reaching the destination, the issue is downstream:
-   - Contact DataDog support for DataDog forwarder issues
-   - Contact Splunk support for Splunk connector issues
-   - Contact the appropriate vendor for their tooling
-3. Review the vendor's documentation for Azure integration troubleshooting
+#### Solution
+
+1. Verify that the logs are successfully reaching your Event Hub or Storage Account. See the *Verify Export is Working* sections above.
+2. If logs are reaching the destination, the issue is downstream.
+
+    * Contact DataDog support for DataDog forwarder issues.
+    * Contact Splunk support for Splunk connector issues.
+    * Contact the appropriate vendor for their tooling.
+
+3. Review the vendor's documentation for Azure integration troubleshooting.
 
 ## Read More
 
-- [Monitoring Mendix on Azure with Grafana](/developerportal/deploy/mendix-on-azure/monitor/) - The primary supported monitoring solution
-- [Support for Mendix on Azure](/developerportal/deploy/mendix-on-azure/support/) - Understanding support boundaries
-- [Azure Monitor Logs Overview](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/data-platform-logs) - Microsoft's documentation on Log Analytics
-- [Azure Data Export Rules Documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/logs-data-export) - Detailed Azure documentation
+* [Monitoring Mendix on Azure with Grafana](/developerportal/deploy/mendix-on-azure/monitor/) - The primary supported monitoring solution
+* [Support for Mendix on Azure](/developerportal/deploy/mendix-on-azure/support/) - Understanding support boundaries
+* [Azure Monitor Logs Overview](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/data-platform-logs) - Microsoft's documentation on Log Analytics
+* [Azure Data Export Rules Documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/logs-data-export) - Detailed Azure documentation

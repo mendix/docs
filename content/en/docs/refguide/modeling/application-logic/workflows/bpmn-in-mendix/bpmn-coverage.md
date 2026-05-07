@@ -12,7 +12,7 @@ Mendix supports a broad range of BPMN constructs, either directly on the Workflo
 Each BPMN element is marked with a support level indicator:
 
 * ✅ Workflow Native – Available as a dedicated construct in the workflow editor
-* 🟩 Platform Native – Available by combining workflow editor construct with other platform editor constructs (logic, data, pages)
+* 🟩 Platform Native – Available by combining workflow editor constructs with other platform editor constructs, such as logic, data, and pages.
 * 🟦 Planned – Support is planned for an upcoming release
 * ❌ Not Supported – Not currently supported in Mendix
 

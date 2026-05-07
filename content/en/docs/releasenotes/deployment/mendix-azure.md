@@ -19,7 +19,7 @@ For information on the current status of Mendix deployment, see [Mendix Status](
 * Initialized clusters are now visible to cluster members regardless of Azure RBAC.
 * Only Cluster Managers with the Azure Owner or Contributor roles can now edit cluster settings.
 * We have added a warning to inform users about the implications of enabling network-isolated cluster and internal load balancers.
-* We added Grafana dashboards for PostgreSQL to monitor key metrics and view database logs.
+* We have added Grafana dashboards for PostgreSQL to monitor key metrics and view database logs.
 
 ## Release date: February 26, 2026
 

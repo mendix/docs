@@ -7,13 +7,7 @@ description: "Usage guidelines for general terminology in Mendix documentation, 
 
 ## How to Use This Section
 
-This section contains decisions and usage guidelines for general (non-Mendix specific) terminology, including inclusive language guidelines. For guidelines on Mendix-specific terminology, see the Mendix Product Naming Guide.
-
-Under each term are the following:
-
-Guidelines.
-
-> Example
+This section contains decisions and usage guidelines for general (non-Mendix specific) terminology, including inclusive language guidelines. For guidelines on Mendix-specific terminology, see the [Mendix Product Naming Guide](/community-tools/contribute-to-mendix-docs/style-guide/product-naming-guide/).
 
 ## 1-1 & one-to-one
 

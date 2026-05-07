@@ -100,7 +100,7 @@ The Mendix Portal includes Apps (which replaces "Developer Portal"), Control Cen
 
 ### Mendix Studio Pro
 
-"Studio Pro" can be used where regular repetition is necessary in a doc. However, where possible, "Mendix" should be added to the product name.
+Use "Mendix Studio Pro" the first time it's mentioned in a doc. For any subsequent mentions, omit "Mendix" and just use "Studio Pro".
 
 Capitalize in all instances.
 
@@ -150,12 +150,6 @@ Does not need to be capitalized, and "team" should be used without the qualifier
 This is the term to use to reflect the create-new-app flow UI in the Developer Portal.
 
 Do not use "starter app."
-
-### App User
-
-For a definition of this term, see [Access Management](/developerportal/portfolio-management/access-management/).
-
-Capitalize in all instances.
 
 ### Atlas UI
 

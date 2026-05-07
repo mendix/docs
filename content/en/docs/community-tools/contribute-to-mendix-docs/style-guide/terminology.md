@@ -59,7 +59,7 @@ In the context of development and project management, sometimes using "project" 
 
 ## app owner
 
-This is not a formalized/Mendix term (in comparison to [App Contact](/developerportal/general/app-roles/)), so we cannot assume the user knows what this is. This should be defined in general terms and made clearer via context (for example, via the "Copyright" example in the [Insights Hub module documentation](/partners/siemens/mindsphere-module-details/#configuring-the-os-bar)) that it is the user's responsibility to define/interpret what an app owner is for their app.
+This is not a formalized/Mendix term, so we cannot assume the user knows what this is. This should be defined in general terms and made clearer via context (for example, via the "Copyright" example in the [Insights Hub module documentation](/partners/siemens/mindsphere-module-details/#configuring-the-os-bar)) that it is the user's responsibility to define and interpret what an app owner is for their app.
 
 ## article, document, page
 

@@ -12,7 +12,7 @@ These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs
 
 ## 2026
 
-### April 30, 2026
+### May 7, 2026
 
 #### Fixes
 

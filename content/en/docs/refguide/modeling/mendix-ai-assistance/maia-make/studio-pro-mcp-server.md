@@ -40,10 +40,10 @@ Replace `<name>` with your preferred server name and `<port>` with the port conf
 
 ## Limitations
 
-The following limitations apply specifically to Studio Pro 11.10:
+The following limitations apply only to Studio Pro 11.10:
 
-* **Page generation is not supported** — The MCP Server cannot generate pages in this version.
-* **Web fetch is blocking** — When a web fetch tool call is performed by the MCP Client, the operation awaits user approval in Studio Pro. For more information, see [Maia Web Fetch](/refguide/maia-web-fetch/).
+* The MCP Server cannot generate pages.
+* Web fetch is blocking — When a web fetch tool call is performed by the MCP Client, the operation awaits user approval in Studio Pro. For more information, see [Maia Web Fetch](/refguide/maia-web-fetch/).
 
 ## Read More
 

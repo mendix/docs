@@ -3,6 +3,8 @@ title: "Private Mendix Platform Quick Start Guide"
 url: /private-mendix-platform/quickstart/
 description: "Documents the installation and upgrade process for the Private Mendix Platform."
 weight: 20
+no_list: false 
+description_list: true 
 aliases:
     - /private-mendix-platform-quickstart/
 ---
@@ -20,6 +22,10 @@ Using a secret storage incorrectly may reduce the security of your app. Consult 
 ### Overview
 
 Before you start the installation process, review the following considerations:
+
+#### Installation Mode
+
+You can perform the installation in interactive or non-interactive mode. In [interactive mode](/private-mendix-platform/interactive-installation/), you manually install Private Mendix Platform components. In [non-interactive](/private-mendix-platform/noninteractive-installation/) mode, you use commands to automatically install Private Mendix Platform components.
 
 #### Installation Order
 

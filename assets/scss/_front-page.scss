@@ -2,31 +2,55 @@
 
 .td-main main.lp {
     padding: 2rem 2.5rem;
-    padding-top:5.25rem !important;
+    padding-top: 0 !important; // top clearance handled by lp-mobile-bar (mobile) and lp-hero (desktop)
+
+    @include media-breakpoint-up(md) {
+        padding-top: 0 !important;
+    }
 }
 
 div.lp-container {
     padding: 0;
     margin: 0;
+    max-width: none;
 }
 
 .lp-row{
     margin-bottom: 2rem !important;
 }
 
+.lp-hero {
+    background-color: #0A1324;
+    min-height: 400px;
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding: 2rem 2.5rem;
+
+    @media (max-width: 767px) {
+        min-height: unset;
+    }
+}
+
+.hero-text  {
+    flex: 0 0 60%;
+}
 h1.page-title {
     font-weight: $font-weight-normal;
     font-size: 2rem;
     margin-bottom: 0.75rem;
 }
 
-h5.lp-description {
+.lp-description {
     font-size: 1rem;
     font-weight: 400;
 }
 
 .lp-container img {
     border-style: none;
+    max-width: 100%;
+    height: auto;
 }
 
 img.card-icon {
@@ -93,9 +117,18 @@ li.lp-panel-list {
 
 }
 
-p.rn-date {
-    color: #FFFFFFD4;
-    font-size: 0.75rem;
-    font-weight: 400;
-    margin-bottom: 0rem;
+// Mobile hamburger bar on landing page — matches hero background
+.lp-mobile-bar {
+    background-color: #0A1324;
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
+    padding: 4rem 2.5rem 0.75rem;
+    color: white;
+
+    .btn {
+        color: white;
+        font-size: 0.75rem;
+        font-weight: 400;
+        margin-bottom: 0rem;
+    }
 }

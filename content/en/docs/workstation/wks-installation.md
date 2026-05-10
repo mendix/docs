@@ -178,6 +178,8 @@ Configure the log level of the logs stored by the Workstation Client(s).
 * Error - Warning logs and visible problem, something is not working as expected. For example, if a port to connect to a device is already in use.
 * Debug - Error logs and detailed internal state for developer diagnostics. For example, requests to the Workstation Management, communication with devices.
 
+By default, the unregistered Workstation Client is set to the Debug log level. After the client is registered, the log level as configured in the Workspace settings is applied.
+
 #### Retention Policy
 
 Verbosity and thus log file size increases with each log level. To constrain this, the logs are limited to 10 MB in size and stored for 7 days by default. 

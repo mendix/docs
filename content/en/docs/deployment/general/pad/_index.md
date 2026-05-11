@@ -33,7 +33,7 @@ To license a Mendix app on the Portable App Distribution, add it to your configu
 
 ## Prerequisites
 
-The Portable App Distribution functionality is available for Mendix Studio Pro version 11.9, 11.6.5 MTS, or above. The functionality will be enabled for more Studio Pro versions in future releases.
+The Portable App Distribution functionality is available in Mendix Studio Pro versions 10.24.19 LTS, 11.9, 11.6.5 MTS, and above. The functionality will be enabled for more Studio Pro versions in future releases.
 
 You must also ensure that you have the supported version of [Java Runtime Environment](/refguide/system-requirements/#java).
 

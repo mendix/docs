@@ -35,7 +35,7 @@ Portable App Distribution offers a more agile, user-centric, and efficient deplo
 
 Before you begin, ensure you have the following:
 
-* Mendix Studio Pro version 11.19, 11.6.5, or above
+* Mendix Studio Pro version 10.24.19, 11.19, 11.6.5, or above
 * A Mendix app that you want to deploy
 * Docker installed on your system (for building and running Docker images)
 * Access to a container registry (for pushing and pulling Docker images)

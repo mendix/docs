@@ -371,12 +371,6 @@ The following configuration options are available in OpenShift:
 * Provide the name of an existing TLS certificate secret to use instead of the default router certificate
 * Provide a custom domain name (for example, mendix.example.com) to use instead of the default OpenShift route domain
 
-It is also possible to provide a custom TLS configuration for individual environments, overriding the default configuration (only available in **Standalone** Mendix Operator installations):
-
-* Turn TLS on and off
-* Specify the name of an existing TLS certificate secret to use
-* Provide the TLS Certificate and Private Key values directly in the environment specification
-
 ### Ingress
 
 Mendix on Kubernetes is compatible with the following ingress controllers:
@@ -403,12 +397,6 @@ For each environment, the URL will be automatically generated based on the domai
 For example, if the domain name is set to mendix.example.com, then apps will have URLs such as myapp1-dev.mendix.example.com, myapp1-prod.mendix.example.com and so on.
 
 The DNS server should be configured to route all subdomains (the `*` subdomain, for example, `*.mendix.example.com`) to the ingress/load balancer.
-
-It is also possible to provide a custom TLS configuration for individual environments, overriding the default configuration (only available in **Standalone** Mendix Operator installations):
-
-* Turn TLS on and off
-* Specify the name of an existing TLS certificate secret to use
-* Provide the TLS Certificate and Private Key values directly in the environment specification
 
 There are multiple ways of managing TLS certificates:
 

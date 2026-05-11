@@ -37,6 +37,7 @@ Before sending messages to the File Device, review the following points:
 * Delimiter - The `#` character is used as a delimiter within messages. Paths and data may not contain the `#` character. 
 * Case sensitivity - File and directory paths may be case-sensitive depending on the underlying operating system. For example, Linux paths are typically case-sensitive, while Windows paths are not.
  
+
 ### Message
 
 * `0#Path` - Initiate watching for changes in the specified `Path`. If `Path` is a directory, the device will watch for changes within that directory (creation, deletion, renaming, or modification of files/subdirectories). If `Path` is a file, the device will watch for changes to that specific file (modification, deletion, or renaming).

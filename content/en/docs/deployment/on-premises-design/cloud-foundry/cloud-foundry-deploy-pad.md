@@ -37,15 +37,15 @@ To deploy your app to Cloud Foundry, perform the following steps:
 
 4. Add the following content to the file:
 
-```yaml
-applications:
-- name: <the name of your app>
-  path: <the path where you saved your .zip file>
-  memory: 
-  buildpacks:
-  services:
-  env:
-```
-
+    ```yaml
+    applications:
+    - name: <the name of your app>
+      path: <the path where you saved your .zip file>
+      memory: 
+      buildpacks:
+      services:
+      env:
+    ```
+  
 5. Run the `cf push` command.
 6. Verify that the Mendix app has started successfully.

@@ -4,12 +4,7 @@ url: /control-center/approval-requests/
 description: "Describes the Approval Requests page in the Mendix Control Center."
 weight: 30
 no_list: false 
-beta: true
 ---
-
-{{% alert color="warning" %}}
-This feature is in Public Beta. For more information, refer to [Release Status](/releasenotes/release-status/).
-{{% /alert %}}
 
 ## Introduction
 

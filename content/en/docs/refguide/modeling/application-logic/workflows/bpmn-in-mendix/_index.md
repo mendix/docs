@@ -70,50 +70,49 @@ The following sections provide a brief overview of supported and unsupported BPM
 
 Each BPMN element is marked with a support level indicator:
 
-* 🟢 Supported – Directly supported in the workflow editor or composable by combining workflow editor constructs and/or platform features
-* 🔵 Planned – Support is planned for an upcoming release
-* 🔴 Not Supported – Not currently supported in Mendix
-* N/A – Concept does not exist in the BPMN 2.0 specification. It is not a Mendix limitation.
+* 🟩 Supported – Directly supported in the workflow editor or composable by combining workflow editor constructs and/or platform features
+* 🟦 Planned – Support is planned for an upcoming release
+* ❌ Not Supported – Not currently supported in Mendix
 
 ### Gateways
 
-* Exclusive Gateway (XOR) – [🟢 Supported](/refguide/bpmn-coverage/#gateways)
-* Parallel Gateway (AND) – [🟢 Supported](/refguide/bpmn-coverage/#gateways)
-* Inclusive Gateway (OR) – [🟢 Supported](/refguide/bpmn-coverage/#gateways)
-* Event-Based Gateway – 🔴 Not Supported
-* Complex Gateway – 🔴 Not Supported
+* Exclusive Gateway (XOR) – [🟩 Supported](/refguide/bpmn-coverage/#gateways)
+* Parallel Gateway (AND) – [🟩 Supported](/refguide/bpmn-coverage/#gateways)
+* Inclusive Gateway (OR) – [🟩 Supported](/refguide/bpmn-coverage/#gateways)
+* Event-Based Gateway – ❌ Not Supported
+* Complex Gateway – ❌ Not Supported
 
 ### Tasks
 
-* User Task – [🟢 Supported](/refguide/bpmn-coverage/#tasks)
-* Service Task – [🟢 Supported](/refguide/bpmn-coverage/#tasks)
-* Script Task – [🟢 Supported](/refguide/bpmn-coverage/#tasks)
-* Business Rule Task – [🟢 Supported](/refguide/bpmn-coverage/#tasks)
-* Send Task – [🟢 Supported](/refguide/bpmn-coverage/#tasks)
-* Receive Task – [🟢 Supported](/refguide/bpmn-coverage/#tasks)
-* Manual Task – [🟢 Supported](/refguide/bpmn-coverage/#tasks)
+* User Task – [🟩 Supported](/refguide/bpmn-coverage/#tasks)
+* Service Task – [🟩 Supported](/refguide/bpmn-coverage/#tasks)
+* Script Task – [🟩 Supported](/refguide/bpmn-coverage/#tasks)
+* Business Rule Task – [🟩 Supported](/refguide/bpmn-coverage/#tasks)
+* Send Task – [🟩 Supported](/refguide/bpmn-coverage/#tasks)
+* Receive Task – [🟩 Supported](/refguide/bpmn-coverage/#tasks)
+* Manual Task – [🟩 Supported](/refguide/bpmn-coverage/#tasks)
 
 ### Subprocesses
 
-* Embedded Subprocess – 🔴 Not Supported
-* Call Activity – Reusable Subprocess – [🟢 Supported](/refguide/bpmn-coverage/#subprocesses)
-* Event Subprocess – [🟢 Supported](/refguide/bpmn-coverage/#subprocesses)
-* Transaction Subprocess – 🔴 Not Supported
-* Ad-hoc Subprocess – 🔴 Not Supported
+* Embedded Subprocess – ❌ Not Supported
+* Call Activity – Reusable Subprocess – [🟩 Supported](/refguide/bpmn-coverage/#subprocesses)
+* Event Subprocess – [🟩 Supported](/refguide/bpmn-coverage/#subprocesses)
+* Transaction Subprocess – ❌ Not Supported
+* Ad-hoc Subprocess – ❌ Not Supported
 
 ### Swimlanes
 
-* Pool – [🟢 Supported](/refguide/bpmn-coverage/#swimlanes)
-* Lane – [🟢 Supported](/refguide/bpmn-coverage/#swimlanes)
+* Pool – [🟩 Supported](/refguide/bpmn-coverage/#swimlanes)
+* Lane – [🟩 Supported](/refguide/bpmn-coverage/#swimlanes)
 
 ### Data
 
-* Data Objects / Data Store – [🟢 Supported](/refguide/bpmn-coverage/#data)
+* Data Objects / Data Store – [🟩 Supported](/refguide/bpmn-coverage/#data)
 
 ### Artifacts
 
-* Text Annotation – [🟢 Supported](/refguide/bpmn-coverage/#artifacts)
-* Group – 🔴 Not Supported
+* Text Annotation – [🟩 Supported](/refguide/bpmn-coverage/#artifacts)
+* Group – ❌ Not Supported
 
 ### Events
 
@@ -143,158 +142,158 @@ Each BPMN element is marked with a support level indicator:
     <!-- NONE -->
     <tr>
       <td style="background-color:#f2f2f2;"><strong>None</strong></td>
-      <td><a href="/refguide/bpmn-coverage/#none-events">🟢 Supported</a></td>
-      <td>N/A</td>
-      <td>N/A</td>
-      <td>N/A</td>
-      <td>N/A</td>
-      <td>N/A</td>
-      <td>N/A</td>
-      <td><a href="/refguide/bpmn-coverage/#none-events">🟢 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#none-events">🟩 Supported</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>❌ Not Supported</td>
+      <td><a href="/refguide/bpmn-coverage/#none-events">🟩 Supported</a></td>
     </tr>
     <!-- MESSAGE -->
     <tr>
       <td style="background-color:#f2f2f2;"><strong>Message</strong></td>
-      <td><a href="/refguide/bpmn-coverage/#message-events">🟢 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#message-events">🟢 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#message-events">🟢 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#message-events">🔵 Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#message-events">🔵 Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#message-events">🔵 Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#message-events">🟢 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#message-events">🟢 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#message-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#message-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#message-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#message-events">🟦 Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#message-events">🟦 Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#message-events">🟦 Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#message-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#message-events">🟩 Supported</a></td>
     </tr>
     <!-- TIMER -->
     <tr>
       <td style="background-color:#f2f2f2;"><strong>Timer</strong></td>
-      <td><a href="/refguide/bpmn-coverage/#timer-events">🟢 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#timer-events">🔵 Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#timer-events">🔵 Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#timer-events">🟢 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#timer-events">🟢 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#timer-events">🟢 Supported</a></td>
-      <td>N/A</td>
-      <td>N/A</td>
+      <td><a href="/refguide/bpmn-coverage/#timer-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#timer-events">🟦 Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#timer-events">🟦 Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#timer-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#timer-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#timer-events">🟩 Supported</a></td>
+      <td></td>
+      <td></td>
     </tr>
     <!-- ERROR -->
     <tr>
       <td style="background-color:#f2f2f2;"><strong>Error</strong></td>
-      <td>N/A</td>
-      <td><a href="/refguide/bpmn-coverage/#error-events">🟢 Supported</a></td>
-      <td>N/A</td>
-      <td>N/A</td>
-      <td><a href="/refguide/bpmn-coverage/#error-events">🔵 Planned</a></td>
-      <td>N/A</td>
-      <td>N/A</td>
-      <td><a href="/refguide/bpmn-coverage/#error-events">🟢 Supported</a></td>
+      <td></td>
+      <td><a href="/refguide/bpmn-coverage/#error-events">🟩 Supported</a></td>
+      <td></td>
+      <td></td>
+      <td><a href="/refguide/bpmn-coverage/#error-events">🟦 Planned</a></td>
+      <td></td>
+      <td></td>
+      <td><a href="/refguide/bpmn-coverage/#error-events">🟩 Supported</a></td>
     </tr>
     <!-- SIGNAL -->
     <tr>
       <td style="background-color:#f2f2f2;"><strong>Signal</strong></td>
-      <td><a href="/refguide/bpmn-coverage/#signal-events">🟢 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#signal-events">🟢 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#signal-events">🟢 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#signal-events">🟢 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#signal-events">🔵 Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#signal-events">🔵 Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#signal-events">🟢 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#signal-events">🟢 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#signal-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#signal-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#signal-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#signal-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#signal-events">🟦 Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#signal-events">🟦 Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#signal-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#signal-events">🟩 Supported</a></td>
     </tr>
     <!-- CONDITIONAL -->
     <tr>
       <td style="background-color:#f2f2f2;"><strong>Conditional</strong></td>
-      <td><a href="/refguide/bpmn-coverage/#conditional-events">🟢 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#conditional-events">🟢 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#conditional-events">🟢 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#conditional-events">🟢 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#conditional-events">🔵 Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#conditional-events">🔵 Planned</a></td>
-      <td>N/A</td>
-      <td>N/A</td>
+      <td><a href="/refguide/bpmn-coverage/#conditional-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#conditional-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#conditional-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#conditional-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#conditional-events">🟦 Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#conditional-events">🟦 Planned</a></td>
+      <td></td>
+      <td></td>
     </tr>
     <!-- ESCALATION -->
     <tr>
       <td style="background-color:#f2f2f2;"><strong>Escalation</strong></td>
-      <td>N/A</td>
-      <td><a href="/refguide/bpmn-coverage/#escalation-events">🟢 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#escalation-events">🟢 Supported</a></td>
-      <td>N/A</td>
-      <td><a href="/refguide/bpmn-coverage/#escalation-events">🔵 Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#escalation-events">🔵 Planned</a></td>
-      <td><a href="/refguide/bpmn-coverage/#escalation-events">🟢 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#escalation-events">🟢 Supported</a></td>
+      <td></td>
+      <td><a href="/refguide/bpmn-coverage/#escalation-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#escalation-events">🟩 Supported</a></td>
+      <td></td>
+      <td><a href="/refguide/bpmn-coverage/#escalation-events">🟦 Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#escalation-events">🟦 Planned</a></td>
+      <td><a href="/refguide/bpmn-coverage/#escalation-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#escalation-events">🟩 Supported</a></td>
     </tr>
     <!-- COMPENSATION -->
     <tr>
       <td style="background-color:#f2f2f2;"><strong>Compensation</strong></td>
-      <td>N/A</td>
-      <td><a href="/refguide/bpmn-coverage/#compensation-events">🟢 Supported</a></td>
-      <td>N/A</td>
-      <td>N/A</td>
-      <td><a href="/refguide/bpmn-coverage/#compensation-events">🔵 Planned</a></td>
-      <td>N/A</td>
-      <td><a href="/refguide/bpmn-coverage/#compensation-events">🟢 Supported</a></td>
-      <td><a href="/refguide/bpmn-coverage/#compensation-events">🟢 Supported</a></td>
+      <td></td>
+      <td><a href="/refguide/bpmn-coverage/#compensation-events">🟩 Supported</a></td>
+      <td></td>
+      <td></td>
+      <td><a href="/refguide/bpmn-coverage/#compensation-events">🟦 Planned</a></td>
+      <td></td>
+      <td><a href="/refguide/bpmn-coverage/#compensation-events">🟩 Supported</a></td>
+      <td><a href="/refguide/bpmn-coverage/#compensation-events">🟩 Supported</a></td>
     </tr>
     <!-- CANCEL -->
     <tr>
       <td style="background-color:#f2f2f2;"><strong>Cancel</strong></td>
-      <td>N/A</td>
-      <td>N/A</td>
-      <td>N/A</td>
-      <td>N/A</td>
-      <td><a href="/refguide/bpmn-coverage/#cancel-events">🔵 Planned</a></td>
-      <td>N/A</td>
-      <td>N/A</td>
-      <td><a href="/refguide/bpmn-coverage/#cancel-events">🟢 Supported</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><a href="/refguide/bpmn-coverage/#cancel-events">🟦 Planned</a></td>
+      <td></td>
+      <td></td>
+      <td><a href="/refguide/bpmn-coverage/#cancel-events">🟩 Supported</a></td>
     </tr>
     <!-- TERMINATE -->
     <tr>
       <td style="background-color:#f2f2f2;"><strong>Terminate</strong></td>
-      <td>N/A</td>
-      <td>N/A</td>
-      <td>N/A</td>
-      <td>N/A</td>
-      <td>N/A</td>
-      <td>N/A</td>
-      <td>N/A</td>
-      <td><a href="/refguide/bpmn-coverage/#terminate-events">🔴 Not Supported</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><a href="/refguide/bpmn-coverage/#terminate-events">❌ Not Supported</a></td>
     </tr>
     <!-- LINK -->
     <tr>
       <td style="background-color:#f2f2f2;"><strong>Link</strong></td>
-      <td>N/A</td>
-      <td>N/A</td>
-      <td>N/A</td>
-      <td><a href="/refguide/bpmn-coverage/#link-events">🟢 Supported</a></td>
-      <td>N/A</td>
-      <td>N/A</td>
-      <td><a href="/refguide/bpmn-coverage/#link-events">🟢 Supported</a></td>
-      <td>N/A</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><a href="/refguide/bpmn-coverage/#link-events">🟩 Supported</a></td>
+      <td></td>
+      <td></td>
+      <td><a href="/refguide/bpmn-coverage/#link-events">🟩 Supported</a></td>
+      <td></td>
     </tr>
     <!-- MULTIPLE -->
     <tr>
       <td style="background-color:#f2f2f2;"><strong>Multiple</strong></td>
-      <td>🔴 Not Supported</td>
-      <td>🔴 Not Supported</td>
-      <td>🔴 Not Supported</td>
-      <td>🔴 Not Supported</td>
-      <td>🔴 Not Supported</td>
-      <td>🔴 Not Supported</td>
-      <td>🔴 Not Supported</td>
-      <td>🔴 Not Supported</td>
+      <td>❌ Not Supported</td>
+      <td>❌ Not Supported</td>
+      <td>❌ Not Supported</td>
+      <td>❌ Not Supported</td>
+      <td>❌ Not Supported</td>
+      <td>❌ Not Supported</td>
+      <td>❌ Not Supported</td>
+      <td>❌ Not Supported</td>
     </tr>
     <!-- MULTIPLE PARALLEL -->
     <tr>
       <td style="background-color:#f2f2f2;"><strong>Multiple Parallel</strong></td>
-      <td>🔴 Not Supported</td>
-      <td>🔴 Not Supported</td>
-      <td>🔴 Not Supported</td>
-      <td>🔴 Not Supported</td>
-      <td>🔴 Not Supported</td>
-      <td>🔴 Not Supported</td>
-      <td>N/A</td>
-      <td>N/A</td>
+      <td>❌ Not Supported</td>
+      <td>❌ Not Supported</td>
+      <td>❌ Not Supported</td>
+      <td>❌ Not Supported</td>
+      <td>❌ Not Supported</td>
+      <td>❌ Not Supported</td>
+      <td></td>
+      <td></td>
     </tr>
   </tbody>
 </table>

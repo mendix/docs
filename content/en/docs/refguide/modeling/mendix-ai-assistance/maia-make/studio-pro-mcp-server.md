@@ -22,6 +22,10 @@ It has the following key highlights:
 * Full Maia feature parity — The MCP Server exposes the same capabilities that Maia offers within Studio Pro.
 * Live updates — Any changes made through Maia via the MCP Server are reflected in real time within Studio Pro.
 
+{{% alert color="info" %}}
+When you connect external agents or AI tools to Studio Pro's MCP Server, those tools consume tokens from your own LLM provider account each time they interact with Maia. Because these requests occur outside of the Mendix environment, usage and billing details are managed through your LLM provider's dashboard rather than within Mendix.
+{{% /alert %}}
+
 ## Enabling the MCP Server
 
 To enable the MCP Server, navigate to **Preferences** > **Maia** > **MCP Server**, and check **Enable MCP Server**. You can also configure the port in this menu.
@@ -33,6 +37,13 @@ Once enabled, you can connect external clients to the MCP Server. For example, t
 `claude mcp add <name> --transport http http://localhost:<port>/mcp`
 
 Replace `<name>` with your preferred server name and `<port>` with the port configured in **Preferences**.
+
+## Limitations
+
+The following limitations apply only to Studio Pro 11.10:
+
+* The MCP Server cannot generate pages.
+* Web fetch is blocking — When a web fetch tool call is performed by the MCP Client, the operation awaits user approval in Studio Pro. For more information, see [Maia Web Fetch](/refguide/maia-web-fetch/).
 
 ## Read More
 

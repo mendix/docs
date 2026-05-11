@@ -57,7 +57,7 @@ If more than one station is found for a given computer name during bulk registra
 
 * We have added a number of other new nanoflows, JavaScript actions, and widgets to simplify the creation of custom, reusable peripheral modules for your organization: 
 
-    *  Manage peripheral object creation and initialize peripheral objects using the new `GetCreateDevice` action. You can configure callbacks on connection, on message, and on disconnection.
+    * Manage peripheral object creation and initialize peripheral objects using the new `GetCreateDevice` action. You can configure callbacks on connection, on message, and on disconnection.
     * Trigger application level logic on device events with new widgets. Handling peripheral events no longer requires changing peripheral modules.
     * Manage events in a nanoflow with the new `SubscribeToObjectChanges` and `WaitForObjectChanges` nanoflow actions.
     * Benefit from easier configuration of common use cases with the new `ConnectDevice`, `SendDeviceMessage` and `WaitForDeviceMessage` nanoflow actions.

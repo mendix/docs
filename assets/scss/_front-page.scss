@@ -39,12 +39,13 @@ div.lp-container {
 h1.page-title {
     font-weight: $font-weight-normal;
     font-size: 2rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
 }
 
-.lp-description {
+h5.lp-description {
     font-size: 1rem;
     font-weight: 400;
+    line-height: 1.5;
 }
 
 .lp-container img {
@@ -115,6 +116,13 @@ li.lp-panel-list {
         }
     }
 
+}
+
+p.rn-date {
+    color: #FFFFFFD4;
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin-bottom: 0rem;
 }
 
 // Mobile hamburger bar on landing page — matches hero background

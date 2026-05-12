@@ -33,17 +33,18 @@ To install and configure Private Mendix Platform and its components, perform the
     
     {{< figure src="/attachments/private-platform/pmp-binary.png" class="no-border" >}}
 
-3. Initiate the creation of configuration files for non-interactive installation by running the following commands, where `-n` indicates the namespace:
+3. Upload the images to your private repository in an air-gapped environment by running the following command `./installer init migrate`.
+4. Initiate the creation of configuration files for non-interactive installation by running the following commands, where `-n` indicates the namespace:
 
     * `./installer operator configure -n=<Private Mendix Platform namespace>` - To generate a configuration file for the Operator
     * `./installer component -n=<Private Mendix Platform namespace>` - To generate configuration files for the components; you can select the component in the configuration tool
     * `./installer platform  -n=<Private Mendix Platform namespace>` - To generate a configuration file for the Private Mendix Platform
 
-4. Fill out the required configuration parameters, and then click **Write Configuration** to generate the file.
+5. Fill out the required configuration parameters, and then click **Write Configuration** to generate the file.
 
     {{< figure src="/attachments/private-platform/pmp-install-ni1.png" class="no-border" >}}
 
-5. Apply the configuration by running the following command: `./installer apply-config -f <config-file path>`.
+6. Apply the configuration by running the following command: `./installer apply-config -f <config-file path>`.
 
 ## Configuration File Structure
 

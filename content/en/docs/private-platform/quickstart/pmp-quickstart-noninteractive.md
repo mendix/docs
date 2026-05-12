@@ -13,12 +13,12 @@ To support automated namespace installation and configuration, we have provided 
 Non-interactive mode supports the following tasks:
 
 * Automated namespace installation, upgrade, and Operator configuration 
-* Installation and upgrade of (Svix, PCLM, Private Cloud related)
+* Installation and upgrade of components such as Svix, PCLM, and others
 * Installation and upgrade of Private Mendix Platform  
 
 ##  Performing the Installation
 
-To install and configure the Mendix Operator, perform the following steps:
+To install and configure Private Mendix Platform and its components, perform the following steps:
 
 1. Download the release binary from your [Private Mendix Platform download portal](https://privateplatform.mendix.com/). If you do not have access to the download portal, contact your Mendix partner for information.
 

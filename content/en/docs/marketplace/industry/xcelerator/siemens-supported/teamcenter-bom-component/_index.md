@@ -1,8 +1,10 @@
 ---
 title: "Teamcenter BOM Component"
-url: /partners/siemens/teamcenter-bom-widget/
+url: /appstore/industry/teamcenter-bom-widget/
 weight: 20
 description: "Describes the Teamcenter BOM component, which enables out-of-the-box visualization of large Bill Of Material (BOM) data sets similar to what is available in Teamcenter's Active Workspace."
+aliases:
+    - /partners/siemens/teamcenter-bom-widget/
 ---
 
 ## Introduction

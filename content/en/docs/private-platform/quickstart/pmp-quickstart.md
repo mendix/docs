@@ -10,9 +10,9 @@ weight: 20
 
 In interactive mode, you manually install Private Mendix Platform components. If you would like to perform an automatic installation instead, see [Install Private Mendix Platform in Interactive Mode](/private-mendix-platform/noninteractive-installation/).
 
-##  Installing the Mendix Operator {#install-operator}
+## Preparing the Installation Files
 
-To install and configure the Mendix Operator, perform the following steps:
+Before you start the installation, download the required files by performing the following steps:
 
 1. Download the release binary from your [Private Mendix Platform download portal](https://privateplatform.mendix.com/). If you do not have access to the download portal, contact your Mendix partner for information.
 
@@ -27,87 +27,93 @@ To install and configure the Mendix Operator, perform the following steps:
     
     {{< figure src="/attachments/private-platform/pmp-binary.png" class="no-border" >}}
 
-3. Optional: If your clusters can connect to a public registry with a passable network, skip to step 4 below, otherwise initialize the installation by performing the following steps:
+## Optional: Initializing the Installation for Air-Gapped Environments
 
-    1. Upload the images to your private repository in an air-gapped environment.
+If your clusters can connect to a public registry with a passable network, skip to the next section, otherwise initialize the installation by performing the following steps:
 
-        ```text
-        ~/mpp-binary-linux$ ./installer init  migrate --help
-        Migrate Mendix Private Platform related image to your own registry
+1. Upload the images to your private repository in an air-gapped environment.
 
-        Usage:
-        installer init migrate [flags]
-        Flags:
-            -h, --help                 help for migrate
-            -r, --registryurl string   registry url (required)
-            -e, --repo string          Repository name
-            -u, --username string      Username (required) for your private registry
-        ```
+    ```text
+    ~/mpp-binary-linux$ ./installer init  migrate --help
+    Migrate Mendix Private Platform related image to your own registry
 
-        The destination image is named `${registryurl }/${repo}/mendix-private-platform: ${tag}`.
+    Usage:
+    installer init migrate [flags]
+    Flags:
+        -h, --help                 help for migrate
+        -r, --registryurl string   registry url (required)
+        -e, --repo string          Repository name
+        -u, --username string      Username (required) for your private registry
+    ```
+
+    The destination image is named `${registryurl }/${repo}/mendix-private-platform: ${tag}`.
     
-    2. The `registryurl` and `repo` are read from the input parameters. The `tag` is automatically read by the installer. If the repository does not exist, you must create it before running the `init migrate` command.
+2. The `registryurl` and `repo` are read from the input parameters. The `tag` is automatically read by the installer. If the repository does not exist, you must create it before running the `init migrate` command.
 
-        ```text
-        ~/mpp-binary-linux$ ./installer init migrate   -r [registry] -u  user -e [repositoryName]
-        Please enter user password: ******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+    ```text
+    ~/mpp-binary-linux$ ./installer init migrate   -r [registry] -u  user -e [repositoryName]
+    Please enter user password: ***
 
-        Confirm password: ******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
-        the config checksum is empty
-        The image destination[REDACTED] svix-server:v0.75.0
-        The image destiation [REDACTED] mendix-private-platform:1.4.0.80d447b1
-        the config checksum is empty
-        The image destiation [REDACTED] mxpc-test:1.0
-        the config checksum is empty
-        The image destiation [REDACTED] privatecloud-license-manager:0.3.0
-        svix-server_v0.75.0 => [REDACTED] svix-server:v0.75.0 - ok
-        mendix-private-platform_1.4.0.80d447b1 => [REDACTED] mendix-private-platform:1.4.0.80d447b1 - ok
-        mxpc-test_1.0 => [REDACTED] mxpc-test:1.0 - ok
-        privatecloud-license-manager_0.3.0 => [REDACTED] privatecloud-license-manager:0.3.0 - ok
-        ```
+    Confirm password: ***
+    the config checksum is empty
+    The image destination[REDACTED] svix-server:v0.75.0
+    The image destiation [REDACTED] mendix-private-platform:1.4.0.80d447b1
+    the config checksum is empty
+    The image destiation [REDACTED] mxpc-test:1.0
+    the config checksum is empty
+    The image destiation [REDACTED] privatecloud-license-manager:0.3.0
+    svix-server_v0.75.0 => [REDACTED] svix-server:v0.75.0 - ok
+    mendix-private-platform_1.4.0.80d447b1 => [REDACTED] mendix-private-platform:1.4.0.80d447b1 - ok
+    mxpc-test_1.0 => [REDACTED] mxpc-test:1.0 - ok
+    privatecloud-license-manager_0.3.0 => [REDACTED] privatecloud-license-manager:0.3.0 - ok
+    ```
 
-    3. By default, mxpc-cli tools install the latest version of Mendix Operator. You can specify a different Mendix Operator version by using the following command: `./installer operator init -v="version number"`
+3. By default, mxpc-cli tools install the latest version of Mendix Operator. You can specify a different Mendix Operator version by using the following command: `./installer operator init -v="version number"`
 
-4. Perform the base installation by doing the following steps:
+##  Installing the Mendix Operator {#install-operator}
 
-    1. Run one of the following commands, where `-n` indicates the namespace: 
+Install the Mendix Operator by doing the following steps:
+
+1. Run one of the following commands, where `-n` indicates the namespace: 
     
-        * `./mxpc-cli installer -n=<namespace name>` - To install the Operator in [Standard](/developerportal/deploy/standard-operator/) mode
-        * `./mxpc-cli installer --global -n=<namespace name>` - To install the Operator in [Global](/developerportal/deploy/global-operator/) mode; you must use a Global namespace for this installation type.
+    * `./mxpc-cli installer -n=<namespace name>` - To install the Operator in [Standard](/developerportal/deploy/standard-operator/) mode
+    * `./mxpc-cli installer --global -n=<namespace name>` - To install the Operator in [Global](/developerportal/deploy/global-operator/) mode; you must use a Global namespace for this installation type.
 
-            In order to install and configure a cluster with a Global installation of the Operator and the Agent, you must use Operator version 2.21.2 or above. 
+    In order to install and configure a cluster with a Global installation of the Operator and the Agent, you must use Operator version 2.21.2 or above. 
     
-    2. Click **Base Installation**, and then select the cluster type.
+2. Click **Base Installation**, and then select the cluster type.
 
-        {{< figure src="/attachments/private-platform/pmp-install1.png" class="no-border" >}}
+    {{< figure src="/attachments/private-platform/pmp-install1.png" class="no-border" >}}
 
-    3. Click **Run Installer** to install the Mendix Operator in your cluster.
+3. Click **Run Installer** to install the Mendix Operator in your cluster.
 
-5. Configure the namespace by doing the following steps:
+## Configuring the Namespace
 
-    1. Click **Configure Namespace**.
-    2. Optional: If you want to run the Operator in Global mode, click **Global Operator**.
+Configure the namespace by doing the following steps:
 
-        You must use a different namespace here than the Global namespace that you selected in step 4 above. Ensure that you do not use a namespace that is intended to be a managed namespace, that is, a namespace where you plan to deploy a Mendix app. The Global Operator namespace must be separate from managed namespaces, otherwise you may encounter unexpected results.
+1. Click **Configure Namespace**.
+2. Optional: If you want to run the Operator in Global mode, click **Global Operator**.
 
-    3. Optional: If you are not using the AWS Secret Manager, click **Database Plan** and fill out the required information.
+You must use a different namespace here than the Global namespace that you selected in step 4 above. Ensure that you do not use a namespace that is intended to be a managed namespace, that is, a namespace where you plan to deploy a Mendix app. The Global Operator namespace must be separate from managed namespaces, otherwise you may encounter unexpected results.
+
+3. Optional: If you are not using the AWS Secret Manager, click **Database Plan** and fill out the required information.
         
-        {{< figure src="/attachments/private-platform/pmp-install2.png" class="no-border" >}}
+    {{< figure src="/attachments/private-platform/pmp-install2.png" class="no-border" >}}
 
-    4. Optional: If you are not using the AWS Secret Manager, click **Storage Plan** and fill out the required information.
-    5. Click **Ingress** and fill out the required information.
+4. Optional: If you are not using the AWS Secret Manager, click **Storage Plan** and fill out the required information.
+5. Click **Ingress** and fill out the required information.
         
-        {{< figure src="/attachments/private-platform/pmp-install3.png" class="no-border" >}}
+    {{< figure src="/attachments/private-platform/pmp-install3.png" class="no-border" >}}
     
-    6. Click **Registry** and fill out the required information.
-    7. Click **Review and Apply** > **Evaluate Configuration**.
-    8. Make any required changes or click **Apply Configuration**.
+6. Click **Registry** and fill out the required information.
+7. Click **Review and Apply** > **Evaluate Configuration**.
+8. Make any required changes or click **Apply Configuration**.
         
-        {{< figure src="/attachments/private-platform/pmp-install4.png" class="no-border" >}}
+    {{< figure src="/attachments/private-platform/pmp-install4.png" class="no-border" >}}
     
-    9. Click **Exit Installer** > **OK**.
+9. Click **Exit Installer** > **OK**.
     
-        {{< figure src="/attachments/private-platform/pmp-install5.png" class="no-border" >}}
+    {{< figure src="/attachments/private-platform/pmp-install5.png" class="no-border" >}}
 
 ## Optional: Configuring the AWS Secret Manager
 

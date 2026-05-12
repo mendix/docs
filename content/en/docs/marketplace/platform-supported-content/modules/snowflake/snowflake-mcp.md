@@ -308,14 +308,14 @@ To configure a Snowflake-managed MCP server, follow these steps:
 
 4. Create the authentication and access configuration, so it can invoked by the Mendix application with the MCP Client module.
 
-    1. Retrieve the IP addresses from where the MCP Server is connector. 
-       You can retrieve your own IP address from [whatismyipaddress.com](https://whatismyipaddress.com/) when your applicatons runs locally in Studio Pro.
-       When it runs on Mendix public cloud, you can retrieve the IP addresses [here](https://docs.mendix.com/developerportal/deploy/mendix-ip-addresses/#mendix-cloud).
+    * Retrieve the IP addresses from where the MCP Server is connector. 
+      You can retrieve your own IP address from [whatismyipaddress.com](https://whatismyipaddress.com/) when your applicatons runs locally in Studio Pro.
+      When it runs on Mendix public cloud, you can retrieve the IP addresses [here](https://docs.mendix.com/developerportal/deploy/mendix-ip-addresses/#mendix-cloud).
        
-    2. Create a `NETWORK RULE` using the IP addresses that you retrieved.
+    * Create a `NETWORK RULE` using the IP addresses that you retrieved.
       <details>
          <summary>Expand for example code</summary>
-         
+                     
          ```sql
          --Run under accountadmin rol or securityadmin role 
          CREATE OR REPLACE NETWORK RULE SNOWFLAKE_MCP_DEMO.MCPSERVERS.MCP_DEMO_ALLOWED_IPS
@@ -325,7 +325,7 @@ To configure a Snowflake-managed MCP server, follow these steps:
          ```
       </details>
       
-    3. Create a Snowflake user, to be used for the Mendix Agent.
+    * Create a Snowflake user, to be used for the Mendix Agent.
        As this user is used by a system, a 'service' type user is created.
       <details>
          <summary>Expand for example code</summary>
@@ -339,7 +339,7 @@ To configure a Snowflake-managed MCP server, follow these steps:
          ```
       </details>
        
-    4. Create a `NETWORK POLICY` for this user.
+    * Create a `NETWORK POLICY` for this user.
       <details>
          <summary>Expand for example code</summary>
          
@@ -350,7 +350,7 @@ To configure a Snowflake-managed MCP server, follow these steps:
          ```
       </details>
        
-    5. Set the user to use this policy.
+    * Set the user to use this policy.
       <details>
          <summary>Expand for example code</summary>
          
@@ -360,7 +360,7 @@ To configure a Snowflake-managed MCP server, follow these steps:
          ```
       </details>
       
-    6. Create a Personal Access Token (PAT) for the user.
+    * Create a Personal Access Token (PAT) for the user.
        Be aware the for a Service type user, a role has to be granted. 
       <details>
          <summary>Expand for example code</summary>
@@ -378,18 +378,73 @@ To configure a Snowflake-managed MCP server, follow these steps:
 
 ## Connecting a Mendix Agent to the MCP Server
 
-After preparing the MCP server, you can now create a Mendix AI agent and connect it to the server by performing the following steps:
+After setting up the MCP server, you can now create a Mendix AI agent and connect it to the MCP server by performing the following steps:
 
-1. In Studio Pro, create a new app using the [Agent Builder Starter App](https://marketplace.mendix.com/link/component/240369).
-2. In the [MCP Client](/appstore/modules/genai/mcp-modules/mcp-client/), add the credentials for your Large Language Model and retrieve list of available models.
-3. Create a microflow that adds the Snowflake user PAT, that you created in the previous section, as Bearer token in the HTTP header.
-4. Configure the Snowflake MCP server in the MCP Connections page
-5. Create an AI agent and configure the following properties:
+1. In Studio Pro, create a new app using the [Agent Builder Starter App](https://marketplace.mendix.com/link/component/240369) and when neeeded update module [MCP Client](/appstore/modules/genai/mcp-modules/mcp-client/) to version 3.1.0 or higher.
+2. Create a constant for the Snowflake user PAT that you created in the previous section, and in the runtime configuration set its value.
+3. Copy microflow `App/Marketplace Modules/MCPClient/Example Implementations/MCP Client/GetCredentials_EXAMPLE` to your own app module and give it a decent name to reflect getting Snowflake PAT authentication, e.g. `GetCredentials_SF_PAT`
+4. Change this microflow so it only adds the PAT as Bearer token to the header.
+   To do this you can remove the first 'Config: Create Http Header And Add to List' activity and change the Value attribute of the second one to `'Bearer ' + @General.SnowflakePAT`.
+5. After starting the app and login, the "Administrator functionalities" page is shown. 
+   Use the LLM connections section to configure your Large Language Model subscription and retrieve the list of available LLM models.
+6. Press menu item "MCP Client" and configure our Snowflake MCP server in the Consumed MCP Services page by providing
+    * name of your lining
+    * MCP endpoint of format `https://<snoflake-account-id>.snowflakecomputing.com/api/v2/databases/<database name>/schemas/<schema name>/mcp-servers/<mcpserver name> `
+      Important! Wheh your snowflake account id containt underscores '_', replace them with '-' in the endpoint (only for account id, not for database name, schema name and mcp server name).
+    * Select for protocol value 'v2025_03_26'
+    * Enter a version nr of your liking
+    * Set connections time out, eg. 60 seconds
+    * Configure for the 'Get credentials microflow' the microflow you've created in step 3 and 4 (`GetCredentials_SF_PAT`).
+    * After saving, it should connect and set Server status to ok with green checkmark
+    * You can inpsect the MCP server, by pressing the 'View MCP tools and prompts' button
+7. Create an AI agent and configure the following properties:
     * LLM model
-    * Prompt
-    * Snowflake-managed MCP server
+    * Set a good System prompt (important!) where you specify the schema and table name to use and instruct also how to use the tools of the MCP server
+      <details>
+         <summary>Expand for example code</summary>
+         
+         ```
+         You are a support ticket management assistant connected to a Snowflake database via MCP tools.
+         You help users create, retrieve, and inspect support tickets stored in the SNOWFLAKE_MCP_DEMO.TESTDATA schema.
+         
+         ## Available Tools
+         
+         You have access to the following MCP tools:
+         
+         1. **get_schema_metadata** - Retrieves table and column metadata for a database schema.
+         - Use this FIRST when you need to understand the data structure before performing other operations.
+         - Parameters: db_name (e.g. "SNOWFLAKE_MCP_DEMO"), schema_name (e.g. "TESTDATA")
+         
+         2. **insert_record** - Inserts a single record into a table.
+         - Parameters: fully_qualified_table (e.g. "SNOWFLAKE_MCP_DEMO.TESTDATA.TICKETS"), column_values (JSON string)
+         - The value for the TICKETID column is automatically generated in the database, so omit this column when inserting.
+         - Always provide both PRIORITY and TEXT columns.
+         - PRIORITY must be one of: "High", "Medium", "Low"
+         
+         3. **retrieve_records** - Retrieves records from a table with optional filtering.
+         - Parameters: fully_qualified_table, filter_column (optional), filter_value (optional)
+         - Pass empty strings for filter_column and filter_value to retrieve all records.
+         
+         ## Data Model
+         
+         The primary table is SNOWFLAKE_MCP_DEMO.TESTDATA.TICKETS:
+         - TICKETID (NUMBER, auto-increment) - Unique ticket identifier
+         - PRIORITY (VARCHAR) - Ticket priority: High, Medium, or Low
+         - TEXT (VARCHAR) - Description of the ticket/issue
+         
+         ## Guidelines
+         
+         - When a user asks to create a ticket, extract the priority and description from their request. If priority is not specified, ask for it.
+         - When a user asks to view or search tickets, use retrieve_records. Use the filter parameters when they want to filter by a specific column.
+         - If a user asks about the data structure or available tables, use get_schema_metadata.
+         - Always confirm successful operations by showing the user what was created or retrieved.
+         - Use fully qualified table names (DATABASE.SCHEMA.TABLE) in all tool calls.
+         - If a tool call returns an error, explain the issue clearly and suggest a correction.
+         ```
+      </details>
+    * In Tools, select our just configured Snowflake-managed MCP server.
 
-6. Test your agent and verify that it can connect to the Snowflake-managed MCP server.
+8. Test your agent by asking questions related to the excposed tools of the Snowflake MCP server, e.g. "Which tickets have priority High?".
 
 ## Example
 

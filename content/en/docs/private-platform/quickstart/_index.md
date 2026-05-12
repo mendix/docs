@@ -29,7 +29,7 @@ You can perform the installation in interactive or non-interactive mode. In [int
 
 #### Installation Order
 
-Start the process by installing the Mendix Operator before you install the components. Some components are dependent on the Operator. Because of that, if you try to install a component without installing the Operator, the installation process fails and displays an error message.
+Start the process by installing the Mendix Operator before you install the components. Components are dependent on the Operator. Because of that, if you try to install a component without installing the Operator, the installation process fails and displays an error message.
 
 #### Installing Components
 
@@ -53,14 +53,14 @@ Private Mendix Platform depends on Mendix on Kubernetes for the installation and
 Before starting the installation process, make sure that you have all the necessary prerequisites:
 
 * A Kubernetes instance where the target namespace has already been created. For more information, see [Supported Providers: Supported Versions](/developerportal/deploy/private-cloud-supported-environments/#supported-versions).
-* A PostgreSQL 12 database.
+* A database.  For more information, see [Supported Providers: Databases](https://docs.mendix.com/developerportal/deploy/private-cloud-supported-environments/#databases).
 * File storage. For more information, see [Supported Providers: File Storage](/developerportal/deploy/private-cloud-supported-environments/#file-storage).
 * A registry. For more information, see [Supported Providers: Container Registries](/developerportal/deploy/private-cloud-supported-environments/#container-registries).
 * A domain.
 * For the PCLM component:
 
     * Mendix Operator in version 2.21.0 or above
-    * A dedicated Postgres or SQLServer database server with public accessibility set to **Yes**.
+    * A dedicated Postgres or SQLServer database server.
 
 * Optionally, if your Private Mendix Platform app requires its own certificate: a TLS certificate with HTTPS support.
 * An environment to run installer tools with the following requirements:

@@ -80,17 +80,13 @@ To install the solution, perform the following steps:
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard5.png" >}}
 
-{{% alert color="info" %}}
-Keep in mind that changing the ingress type resets the value of all fields in this tab.
-{{% /alert %}}
+    {{% alert color="info" %}}Keep in mind that changing the ingress type resets the value of all fields in this tab.{{% /alert %}}
 
 12. In the **Registry** tab, specify your network ingress settings. For more information about the available options, see [Registry Configuration](/developerportal/deploy/private-cloud-registry/).
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard6.png" >}}
 
-{{% alert color="info" %}}
-Keep in mind that changing the registry type resets the value of all fields in this tab.
-{{% /alert %}}
+    {{% alert color="info" %}}Keep in mind that changing the registry type resets the value of all fields in this tab.{{% /alert %}}
 
 13. Optional: In the **Proxy** tab, specify a proxy server.
 
@@ -103,8 +99,17 @@ Keep in mind that changing the registry type resets the value of all fields in t
 15. Click **Generate & Download** to generate the yaml file with the configurations that you provided.
 16. Run the following commands:
 
-    1. Install the required [Custom Resource Definitions](/developerportal/deploy/private-cloud-technical-appendix-01/#custom-resources) by running `kubectl apply -f mx-privatecloud-operator-crd/crds/`.
-    2. Install Mendix on Kubernetes by running `helm install --createnamespace -n <your namespace> -f <yaml file name> <release name> mx-privatecloud-operator-installer`.
+    1. To install the required [Custom Resource Definitions](/developerportal/deploy/private-cloud-technical-appendix-01/#custom-resources)
+    
+        ```text
+        kubectl apply -f mx-privatecloud-operator-crd/crds/
+        ```
+
+    2. To install Mendix on Kubernetes:
+
+        ```text
+        helm install --createnamespace -n <your namespace> -f <yaml file name> <release name> mx-privatecloud-operator-installer
+        ```
 
 {{% alert color="info" %}}
 Ensure that your cluster have access to the Mendix on Kubernetes Portal for adding the storage plans, and that the Private Cloud Portal is safelisted in the cluster.
@@ -118,7 +123,11 @@ If you want to update your configuration (for example, to change the database), 
 
 1. In the Web UI application, click **Import from file**. 
 2. Update the imported yaml file by following the same wizard as above.
-3. Update the configuration with the new yaml file by running the following command: `helm upgrade -n <your namespace> -f <yaml file name> <release name> mx-privatecloud-operator-installer`.
+3. Update the configuration with the new yaml file by running the following command: 
+
+    ```text
+    helm upgrade -n <your namespace> -f <yaml file name> <release name> mx-privatecloud-operator-installer
+    ```
 
 ## Upgrading to a New Version of the Mendix Operator
 
@@ -126,8 +135,17 @@ When upgrading the Mendix Operator, perform the following steps:
 
 1. In the Web UI application, click **Download charts** to download the Helm charts for your current configuration.
 2. Extract the yaml file from the download.
-3. Update the [Custom Resource Definitions](/developerportal/deploy/private-cloud-technical-appendix-01/#custom-resources) by running `kubectl apply -f mx-privatecloud-operator-crd/crds/`.
-4. Update the configuration by running the following command: `helm upgrade -n <your namespace> -f <yaml file name> <release name> mx-privatecloud-operator-installer`.
+3. Update the [Custom Resource Definitions](/developerportal/deploy/private-cloud-technical-appendix-01/#custom-resources) by running the following command:
+
+    ```text
+    kubectl apply -f mx-privatecloud-operator-crd/crds/
+    ```
+
+4. Update the configuration by running the following command: 
+
+    ```text
+    helm upgrade -n <your namespace> -f <yaml file name> <release name> mx-privatecloud-operator-installer
+    ```
 
 ## Uninstalling the Cluster
 

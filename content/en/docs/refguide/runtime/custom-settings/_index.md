@@ -179,7 +179,7 @@ Before the data copying process starts, the main database structure will be gene
 | --- | --- | --- |
 | <a id="SourceBuiltInDatabasePath" href="#SourceBuiltInDatabasePath">SourceBuiltInDatabasePath</a> | Defines the file location of the built-in source database. This setting is only necessary if a non-default location of the built-in database has to be used to copy the data from. | [deployment folder]/data/database |
 | <a id="SourceDatabaseHost" href="#SourceDatabaseHost">SourceDatabaseHost</a> | The host name and optionally the TCP port number of the source database. Use a colon as separator between host name and port number. Possible values are: `db.url.org`, `db.url.org:1521`, `10.0.0.5`, or `10.0.0.5:1433`. It's possible to use a plain IPv6 address by enclosing it in brackets (for example, `[::1]:5432`). | |
-| <a id="SourceDatabaseJdbcUrl" href="#SourceDatabaseJdbcUrl">SourceDatabaseJdbcUrl</a> | Defines the JDBC URL to use for the source database connection (which overrides the other source database connection settings). This feature is not supported for PostgreSQL databases. | |
+| <a id="SourceDatabaseJdbcUrl" href="#SourceDatabaseJdbcUrl">SourceDatabaseJdbcUrl</a> | Defines the JDBC URL to use for the source database connection (which overrides the other source database connection settings). | |
 | <a id="SourceDatabaseName" href="#SourceDatabaseName">SourceDatabaseName</a> | The name of the source database. | |
 | <a id="SourceDatabasePassword" href="#SourceDatabasePassword">SourceDatabasePassword</a> | The password for the connection to the source database. | |
 | <a id="SourceDatabaseType" href="#SourceDatabaseType">SourceDatabaseType</a> | The type of the source database. Possible values: `HSQLDB`, `MYSQL`, `ORACLE`, `POSTGRESQL`, `SAPHANA`, or `SQLSERVER`. | |
@@ -296,7 +296,7 @@ The settings below influence the behavior of the Mendix web client.
 
 ## Metrics Settings{#metrics-settings}
 
-The settings below configure metrics through [micrometer](https://micrometer.io/docs). See [Metrics](/refguide/metrics/) for more information and the specification of the settings format. 
+The settings below configure metrics through [micrometer](https://micrometer.io/docs). See [Metrics](/refguide/metrics/) for more information and the specification of the settings format.
 
 | Name | Description | Default Value |
 | --- | --- | --- |
@@ -321,9 +321,9 @@ These settings can be set either as JVM properties or as custom Runtime settings
 | --- | --- | --- |
 | <a id="httpproxyHost" href="#httpproxyHost">http.proxyHost</a> | Defines the hostname of the HTTP proxy server. | |
 | <a id="httpproxyPort" href="#httpproxyPort">http.proxyPort</a> | Defines the port number of the HTTP proxy server. | |
-| <a id="httpproxyUser" href="#httpproxyUser">http.proxyUser</a> | Defines the user of the HTTP proxy server. | | 
-| <a id="httpproxyPassword" href="#httpproxyPassword">http.proxyPassword</a> | Defines the password of the HTTP proxy server. | | 
-| <a id="httpnonProxyHosts" href="#httpnonProxyHosts">http.nonProxyHosts</a> | <a href="#httpnonProxyHosts">See below</a> | | 
+| <a id="httpproxyUser" href="#httpproxyUser">http.proxyUser</a> | Defines the user of the HTTP proxy server. | |
+| <a id="httpproxyPassword" href="#httpproxyPassword">http.proxyPassword</a> | Defines the password of the HTTP proxy server. | |
+| <a id="httpnonProxyHosts" href="#httpnonProxyHosts">http.nonProxyHosts</a> | <a href="#httpnonProxyHosts">See below</a> | |
 
 {{% alert color="info" %}}
 The `http.` part of the names of these settings does not imply anything about whether the `HTTP` or `HTTPS` protocol is used - it is just the name of the setting.
@@ -341,9 +341,9 @@ These settings have to be set as JVM properties, not as custom runtime settings.
 | --- | --- | --- |
 | <a id="httpsproxyHost" href="#httpsproxyHost">https.proxyHost</a> | Defines the hostname of the HTTPS proxy server. | |
 | <a id="httpsproxyPort" href="#httpsproxyPort">https.proxyPort</a> | Defines the port number of the HTTPS proxy server. | |
-| <a id="httpsproxyUser" href="#httpsproxyUser">https.proxyUser</a> | Defines the user of the HTTPS proxy server. | | 
-| <a id="httpsproxyPassword" href="#httpsproxyPassword">https.proxyPassword</a> | Defines the password of the HTTPS proxy server. | | 
-| <a id="httpnonProxyHosts" href="#httpnonProxyHosts">http.nonProxyHosts</a> | <a href="#httpnonProxyHosts">See below</a> | | 
+| <a id="httpsproxyUser" href="#httpsproxyUser">https.proxyUser</a> | Defines the user of the HTTPS proxy server. | |
+| <a id="httpsproxyPassword" href="#httpsproxyPassword">https.proxyPassword</a> | Defines the password of the HTTPS proxy server. | |
+| <a id="httpnonProxyHosts" href="#httpnonProxyHosts">http.nonProxyHosts</a> | <a href="#httpnonProxyHosts">See below</a> | |
 
 {{% alert color="info" %}}
 The `https.` part of the names of these settings does not imply anything about whether the `HTTP` or `HTTPS` protocol is used - it is just the name of the setting.
@@ -361,4 +361,3 @@ This setting applies to both http(s) connections and the license server:
 
 * Http(s) connections – the patterns may start or end with a '*' for wildcards
 * License server – the runtime ignores wildcards
-

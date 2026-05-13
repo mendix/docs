@@ -25,6 +25,10 @@ For information on what third-party services Maia uses and what data are sent to
 
 For more information on how to ensure optimal performance of Maia, see the [Best Practice for Maia Performance](#maia-performance-best-practice) section below.
 
+## Fair Use Policy {#fair-use}
+
+Mendix applies fair use limits to maintain a reliable experience for all users. If usage exceeds these limits, your Maia access may be paused for one week.
+
 ## Network Configuration Requirements {#maia-network-requirement}
 
 To ensure the smooth operation of Mendix AI Assistance (Maia), the following network requirements must be met:

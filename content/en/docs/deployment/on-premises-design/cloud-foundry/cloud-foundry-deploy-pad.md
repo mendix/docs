@@ -37,15 +37,37 @@ To deploy your app to Cloud Foundry, perform the following steps:
 
 4. Add the following content to the file:
 
-```yaml
-applications:
-- name: <the name of your app>
-  path: <the path where you saved your .zip file>
-  memory: 
-  buildpacks:
-  services:
-  env:
-```
+    ```yaml
+    applications:
+    - name: <the name of your app>
+      path: <the path where you saved your .zip file>
+      memory: 
+      buildpacks:
+      services:
+      env:
+    ```
+
+    An example manifest file can look like the following:
+
+    ``` yaml
+    applications:
+    - name: mx-java-app
+      path: <path-to-zip>
+        memory: 1G
+        buildpacks:
+        - java_buildpack
+        services:
+        - <service instance_id to be bind>
+        - <service instance_id to be bind>
+        env:
+          JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 21.+}}'
+          JBP_LOG_LEVEL: INFO 
+          JAVA_OPTS: >
+            -Xmx512m
+            -Xms512m
+            -XX:MaxDirectMemorySize=20M
+            -XX:MaxMetaspaceSize=128M
+       ``` 
 
 5. Run the `cf push` command.
 6. Verify that the Mendix app has started successfully.

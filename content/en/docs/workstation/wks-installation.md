@@ -17,7 +17,7 @@ This guide helps you configure and test a minimum working version of Mendix Work
 
 ### Creating a Workspace and Station
 
-A *station* represents a workstation on the shop floor. It can connect to one or more apps or devices. A *workspace* is a grouping of one or more stations. For example, a workspace may group together all the stations which belong to the same factory or factory line.
+To create a workspace and a station, perform the following steps:
 
 1. Go to [Mendix Workstation Management](https://workstation.home.mendix.com/) and sign in with your Mendix account.
 2. In **Workspace Overview**, click **Create Workspace**.

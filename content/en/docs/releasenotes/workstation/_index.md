@@ -42,7 +42,7 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 
 #### New Features
 
-* Enhanced bulk registration process - We have improved the bulk registration experience to make managing multiple workstations even more efficient and intuitive.
+* Enhanced bulk registration process - We have improved the bulk registration experience to make managing multiple stations even more efficient and intuitive.
 
     * New unassigned stations list - If a newly registered station cannot be automatically matched with a preconfigured station, it now appears in the new **Unassigned Stations** list. Before you can edit these unassigned stations, you must first either accept or manually assign them, giving you better control over station assignments.
     * Code snippet copier - To simplify the registration process from the terminal, we have added a convenient code snippet copier, making the process quicker and less prone to errors.
@@ -88,7 +88,7 @@ These release notes cover changes made to the [Mendix Workstation](/mendix-works
 
 #### New Features
 
-* Automatic suffixing for duplicate workstations - To make managing your workstations even smoother, we have implemented automatic suffixing for imported workstations that have duplicate names. This helps prevent naming conflicts and keeps your environment tidy.
+* Automatic suffixing for duplicate stations - To make managing your stations even smoother, we have implemented automatic suffixing for imported stations that have duplicate names. This helps prevent naming conflicts and keeps your environment tidy.
 * Feedback module replaced by the new Forum Space - We have removed the Feedback function in the Workstation Management. Don't worry, your voice is still incredibly important to us! Please share your questions, ideas, and feedback in the new dedicated [Mendix Forum Space for Mendix Workstation](https://community.mendix.com/link/spaces/mendix-workstation-client). This change will help us centralize discussions and provide better support.
 * Special characters in Workspace names - You can now use special characters in your Workspace names, giving you more flexibility and personalization.
 * Unique auto-accepted computer names - We have added a uniqueness validation to the **Auto-Accepted Computer Name** field used for bulk registration. This ensures that each computer name is distinct, preventing potential conflicts during the registration process.

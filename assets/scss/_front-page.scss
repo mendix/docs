@@ -24,18 +24,21 @@ div.lp-container {
     min-height: 400px;
     margin-left: -2.5rem;
     margin-right: -2.5rem;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
     padding: 2rem 2.5rem;
 
-    @media (max-width: 767px) {
+    @include media-breakpoint-down(md) {
         min-height: unset;
     }
 }
 
 .hero-text  {
-    flex: 0 0 60%;
+    flex: 0 0 100%;
+    // Stretch out text once image disappears (smaller viewports)
+    @include media-breakpoint-up(lg) {
+        flex: 0 0 60%;
+    }
 }
+
 h1.page-title {
     font-weight: $font-weight-normal;
     font-size: 2rem;

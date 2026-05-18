@@ -9,9 +9,12 @@ description: "Learn how to create agents programmatically using microflows and G
 
 This approach uses microflows and GenAI Commons building blocks to define agents programmatically. You start with a prompt at runtime but configure tools and knowledge base retrieval directly in microflow logic at design time. This approach provides maximum control and debugging capabilities, making it useful for specific use cases or when the agent logic needs to be part of the code repository.
 
-{{% alert color="info" %}}
-This guide assumes you have completed the shared setup steps in [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/). If you have not done so, complete those steps first to set up your application, knowledge base, domain model, UI, and function microflows.
-{{% /alert %}}
+## Prerequisites
+
+Before you begin, ensure that you have met the following prerequisites:
+
+* Complete [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/) to configure your application, knowledge base, domain model, UI, and function microflows
+* Have access to text generation and knowledge base resources, and generate a key for both resource types
 
 ## Creating Your Agent
 
@@ -53,7 +56,7 @@ Create an agent that can be sent to the LLM. The [Agent Commons](/appstore/modul
 
 10. Go back to the **Agent Overview** page. 
 
-11. Hover over the ellipsis ({{% icon name="three-dots-menu-horizontal-small" %}}) icon corresponding to your agent, and click **Select Version in Use** button. On this page, choose the version you want to set as `In Use`, which means it is selected for production and makes it selectable in your microflow logic. Select the *Initial agent* version and click **Select**.
+11. Hover over the ellipsis ({{% icon name="three-dots-menu-horizontal-small" %}}) icon corresponding to your agent, and click the **Select Version in Use** button. On this page, choose the version you want to set as **In Use**, which means it is selected for production and makes it selectable in your microflow logic. Select the *Initial agent* version and click **Select**.
 
 Your agent is now almost ready to be used in your application. You can iterate on it until you are satisfied with the results.
 
@@ -63,7 +66,7 @@ The button currently does not perform any actions, so you need to create a micro
 
 1. On the page **TicketHelper_Agent**, edit the button's **On click** event to call a microflow. Click **New** to create a microflow named `ACT_TicketHelper_CallAgent`.
 
-2. Grant your module roles access in the microflow properties under **Security** and `Allowed roles`.
+2. Grant your module roles access in the microflow properties under **Security** and **Allowed roles**.
 
 3. Add a `Retrieve` action to the microflow to retrieve the prompt that you created in the UI:
 
@@ -109,7 +112,7 @@ In this section, enable the agent to call two microflows as functions, along wit
 
 All components used in this document can be found in the **ExampleMicroflows** folder of the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) for reference. This example focuses only on retrieval functions, but you can also expose functions that perform actions on behalf of the user. An example of this is creating a new ticket, as demonstrated in the [Agent Builder Starter App](https://marketplace.mendix.com/link/component/240369).
 
-### Connecting Function: Get Number of Tickets by Status (Without MCP Server)
+### Connecting Function: Get Number of Tickets by Status (without MCP Server)
 
 The first function enables the user to ask questions about the ticket dataset, for example, how many tickets are in a specific status. Since this is private data specific to your application, an LLM cannot answer such questions on its own. Instead, the model acts as an agent by calling a designated microflow within your application to retrieve the information. For more information, see [Function Calling](/appstore/modules/genai/function-calling/).
 
@@ -123,7 +126,7 @@ The first function enables the user to ask questions about the ticket dataset, f
 
 When you restart the app and ask the agent "How many tickets are open?", a log should appear in your Studio Pro console indicating that your microflow was executed.
 
-### Connecting Function: Get Ticket by Identifier (Without MCP Server)
+### Connecting Function: Get Ticket by Identifier (without MCP Server)
 
 As a second function, the model can pass an identifier if the user asked for details of a specific ticket and the function returns the whole object as JSON to the model.
 
@@ -171,7 +174,7 @@ You have successfully integrated a knowledge base into your agent interaction. R
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-singleagent/Microflow_GenAICommons.png" alt="Microflow showing GenAI Commons implementation" >}}
 
-If you would like to learn how to enable user confirmation for tools similar as described for the Agent Commons approach, you can find examples in the `ExampleMicroflows` module of the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475).
+If you would like to learn how to enable user confirmation for tools, similar to what is described for the [Agent Commons approach](/appstore/modules/genai/how-to/create-agent-with-agent-commons/), you can find examples in the `ExampleMicroflows` module of the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475).
 
 ## Testing and Troubleshooting
 

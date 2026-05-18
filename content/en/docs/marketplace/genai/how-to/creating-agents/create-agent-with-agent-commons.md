@@ -9,9 +9,12 @@ description: "Learn how to create and manage agents using the Agent Commons UI f
 
 This approach uses the Agent Commons UI to define and manage agents at runtime. You create agents, configure prompts, and connect tools and knowledge bases through the web interface, enabling versioning and rapid experimentation without redeployment. This approach is useful when you need to iterate on agent definitions independently from the app development cycle.
 
-{{% alert color="info" %}}
-This guide assumes you have completed the shared setup steps in [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/). If you have not done so, complete those steps first to set up your application, knowledge base, domain model, UI, and function microflows.
-{{% /alert %}}
+## Prerequisites
+
+Before you begin, ensure that you have met the following prerequisites:
+
+* Complete [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/) to configure your application, knowledge base, domain model, UI, and function microflows
+* Have access to text generation and knowledge base resources, and generate a key for both resource types
 
 ## Setting Up the Agent with a Prompt
 
@@ -21,7 +24,7 @@ Create an agent that can be called to interact with the LLM. The [Agent Commons]
 
 2. Navigate to the **Agent_Overview** page.
 
-3. Create a new agent named `IT-Ticket Helper`, with the type set to **Single-Call**. This means the agent is meant to be invoked for a single UI turn—one user input yields one agent output, without conversation or history. You can leave the **Description** field empty. 
+3. Create a new agent named `IT-Ticket Helper`, with the **Usage type** set to **Task**. This means the agent is meant to be invoked for a single UI turn—one user input yields one agent output, without conversation or history. You can leave the **Description** field empty. 
 
 4. Click **Save** to create the agent.
 
@@ -54,23 +57,23 @@ Create an agent that can be called to interact with the LLM. The [Agent Commons]
 
 10. Save the agent version using the **Save As** button, and enter *Initial agent with prompt* as the title. 
 
-11. In the same window, set the new version as `In Use`, which means it is selected for production and is selectable in your microflow logic.
+11. In the same window, set the new version as **In Use**. This means it is selected for production and is selectable in your microflow logic.
 
-12. If you use older versions of this module, or forget to set the `In Use` version in the previous step, this can be done via the **Overview** page:    
+12. If you use older versions of this module or forget to set the **In Use** version in the previous step, you can adjust this via the **Overview** page:    
 
     1. Go to the **Agent Overview** page. 
     2. Hover over the ellipsis ({{% icon name="three-dots-menu-horizontal-small" %}}) icon corresponding to your prompt.
     3. Click **Select Version in use** button. 
-    4. Choose the version you want to set as `In Use`. 
+    4. Choose the version you want to set as **In Use**. 
     5. Select the *Initial agent with prompt* version and click **Select**. 
 
 ## Empowering the Agent {#empower-agent}
 
-To let the agent generate responses based on specific data and information, connect it to two function microflows and a knowledge base. Even though the implementation is not complex—you only need to link it in the front end—Mendix recommends being familiar with [Integrate Function Calling into Your Mendix App](/appstore/modules/genai/how-to/howto-functioncalling/) and [Grounding Your Large Language Model in Data](/appstore/modules/genai/how-to/howto-groundllm/#chatsetup). These guides cover the foundational concepts for function calling and knowledge base retrieval. 
+To let the agent generate responses based on specific data and information, connect it to two function microflows and a knowledge base. Even though the implementation is not complex—you still need to link it in the front end—Mendix recommends being familiar with [Integrate Function Calling into Your Mendix App](/appstore/modules/genai/how-to/howto-functioncalling/) and [Grounding Your Large Language Model in Data](/appstore/modules/genai/how-to/howto-groundllm/#chatsetup). These guides cover the foundational concepts for function calling and knowledge base retrieval. 
 
 Use the function microflows created in [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/#domain-model-setup). To use the function calling pattern, link them to the agent as *Tools* so the agent can autonomously decide how and when to use the function microflows. You can find the final result in the **ExampleMicroflows** folder of the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) for reference. Note that tools can also be added when published from an MCP server. However, this scenario is not covered in this document.
 
-### Connecting Function: Get Number of Tickets by Status (Without MCP Server)
+### Connecting Function: Get Number of Tickets by Status (without MCP Server)
 
 1. From the **Agent Overview**, click the `IT-Ticket Helper` agent to view it. If it does not show the draft version, click the button next to the version dropdown to create it. 
 
@@ -83,7 +86,7 @@ Use the function microflows created in [Set Up Your App for Agent Creation](/app
 
 3. Click **Save**.
 
-### Connecting Function: Get Ticket by Identifier (Without MCP Server)
+### Connecting Function: Get Ticket by Identifier (without MCP Server)
 
 1. From the agent view page for the `IT-Ticket Helper` agent, under **Tools**, add another tool of type `Microflow tool`:
 
@@ -104,7 +107,7 @@ Before adding tools via MCP, ensure you have at least one `MCPClient.MCPServerCo
 
 3. Choose a **Tool selection** option:
 
-    * **Use all available tools**: Imports the entire server, including all tools it provides. This also means less control over individual tools and if tools are added in the future, they get added automatically on agent execution
+    * **Use all available tools**: Imports the entire server, including all tools it provides. This also means less control over individual tools, and if tools are added in the future, they get added automatically on agent execution
     * **Select tools**: Allows you to import specific tools from the server and change specific fields for individual tools
 
 4. Click **Save**. The connected server or your selected tools will now appear in the agent's tool section.
@@ -123,11 +126,11 @@ Connect the agent to the knowledge base so it can use historical ticket data, su
 
 2. Click **Save**.
 
-If the knowledge base of choice is not compatible with Agent Commons, or if the retrieval that should happen is more complex than the one shown above, Mendix recommends wrapping the logic for the retrieval in a microflow first. Then, let the microflow return a string representation of the retrieved data, and add the microflow as a tool in the agent. This way, the knowledge base retrieval can still be linked to the agent. You can check out an example of this pattern in the [Agent Builder Starter App](https://marketplace.mendix.com/link/component/240369), by looking for the `Ticket_SimilaritySearch_Function` microflow.
+If your knowledge base of choice is not compatible with Agent Commons, or if the retrieval that should happen is more complex than the one shown above, Mendix recommends wrapping the logic for the retrieval in a microflow first. Then, let the microflow return a string representation of the retrieved data, and add the microflow as a tool in the agent. This way, you can still link the knowledge base retrieval to the agent. You can check out an example of this pattern in the [Agent Builder Starter App](https://marketplace.mendix.com/link/component/240369), by looking for the `Ticket_SimilaritySearch_Function` microflow.
 
 ### Saving as New Version
 
-1. Save the agent as a new version using the **Save As** button, and enter *add functions and knowledge base* as the title. In the same window, set the new version as **In Use**, which means it is selected for production and is selectable in your microflow logic.
+1. Save the agent as a new version using the **Save As** button, and enter *Add functions and knowledge base* as the title. In the same window, set the new version as **In Use**, which means it is selected for production and is selectable in your microflow logic.
 
 2. Click **Save**.
 
@@ -185,7 +188,7 @@ Follow the steps below:
 
     * Add your context object `TicketHelper` as an input parameter and pass it in the first `Call Agent Without History` action.
     * Change the message retrieval to retrieve a `Message` from your `TicketHelper` via association.
-    * After calling the microflow `Response_CreateOrUpdateMessage`, add a `Change object` action to set the association `TicketHelper_Message` to the `Message_ConversationalUI` object. Additionally set the `RequestId` derived from the `ResponseId`.
+    * After calling the microflow `Response_CreateOrUpdateMessage`, add a `Change object` action to set the association `TicketHelper_Message` to the `Message_ConversationalUI` object. Additionally, set the `RequestId` derived from the `ResponseId`.
     * After the decision, add an action to call the `ACT_TicketHelper_CallAgent_Commons` again to ensure that updated tool messages are sent back to the LLM.
     * Inside the loop in the `false` path, you can open a page for the user to decide if the tool should be executed or not. For this, you may want to add the `ToolMessage_UserConfirmation_Example` page to your module.
 

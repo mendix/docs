@@ -2,21 +2,21 @@
 title: "Set Up Your App for Agent Creation"
 url: /appstore/modules/genai/how-to/creating-agents/shared-setup/
 weight: 60
-description: "Complete the foundational setup steps required for all agent implementation approaches, including application configuration, knowledge base ingestion, domain model creation, and function microflows."
+description: "Describes how to set up your app with the required modules, data, domain model, and function microflows for the example IT helpdesk agent."
 ---
 
 ## Introduction
 
-Before you can create an agent using any of the implementation approaches, you need to complete the shared setup steps described in this document. These steps are the same regardless of which approach you choose.
+This guide describes the shared setup steps for the example IT helpdesk agent. Complete these steps before choosing one of three implementation approaches. For more information about the agent use case and implementation options, see [Creating Your First Agent](/appstore/modules/genai/how-to/creating-agents/).
 
-This document guides you through the following actions:
+This guide walks you through the following:
 
-* Set up your application with the required modules and configuration
-* Generate ticket data and ingest historical information into a knowledge base
-* Create the domain model and user interface for agent interaction
-* Build function microflows that the agent can call to retrieve data
+* Setting up your application with the required modules and configuration to use Mendix Agents Kit
+* Generating ticket data and ingesting historical information into a knowledge base
+* Creating a domain model and user interface for agent interaction
+* Building function microflows that the agent can call to retrieve data
 
-After completing these steps, continue to one of the implementation approach guides:
+After you complete these steps, continue to one of the implementation approach guides:
 
 * [Create an Agent with Agent Editor](/appstore/modules/genai/how-to/create-agent-with-agent-editor/)
 * [Create an Agent with Agent Commons](/appstore/modules/genai/how-to/create-agent-with-agent-commons/)
@@ -24,22 +24,22 @@ After completing these steps, continue to one of the implementation approach gui
 
 ## Prerequisites {#prerequisites}
 
-Before building an agent in your app, make sure your scenario meets the following requirements:
+Before you build an agent in your app, make sure your scenario meets the following requirements:
 
-* An existing app: use a GenAI starter app such as the [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934), or add to an app that you have already built
+* An existing app – Use a GenAI starter app such as the [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934), or add to an app that you have already built
 * Studio Pro 10.24 or above (or Studio Pro 11.9.1 or above if you plan to use [Agent Editor](/appstore/modules/genai/how-to/create-agent-with-agent-editor/))
-* Intermediate understanding of Mendix: knowledge of simple page building, microflow modeling, domain model creation, and import/export mappings
-* Basic understanding of GenAI concepts: Review [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/) for foundational knowledge and familiarize yourself with the [concepts of GenAI](/appstore/modules/genai/using-gen-ai/) and [agents](/appstore/modules/genai/agents/)
-* Basic understanding of function calling and prompt engineering: Learn about [Function Calling](/appstore/modules/genai/function-calling/) and [Prompt Engineering](/appstore/modules/genai/get-started/#prompt-engineering) to use them within the Mendix ecosystem
-* Optional: If you are not yet familiar with the GenAI modules, follow these GenAI documents: [Grounding Your LLM in Data](/appstore/modules/genai/how-to/howto-groundllm/), [Prompt Engineering at Runtime](/appstore/modules/genai/how-to/howto-prompt-engineering/), and [Integrate Function Calling into Your Mendix App](/appstore/modules/genai/how-to/howto-functioncalling/)
-* Optional: Basic understanding of the [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) and the related Mendix modules: [MCP Server module](/appstore/modules/genai/mcp-modules/mcp-server/) and [MCP Client module](/appstore/modules/genai/mcp-modules/mcp-client/)
+* Intermediate understanding of Mendix – Knowledge of simple page building, microflow modeling, domain model creation, and import/export mappings
+* Basic understanding of GenAI concepts – Review [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/) for foundational knowledge and familiarize yourself with the [concepts of GenAI](/appstore/modules/genai/using-gen-ai/) and [agents](/appstore/modules/genai/agents/)
+* Basic understanding of function calling and prompt engineering – Learn about [Function Calling](/appstore/modules/genai/function-calling/) and [Prompt Engineering](/appstore/modules/genai/get-started/#prompt-engineering) to use them within the Mendix ecosystem
+* Optional – If you are not yet familiar with the GenAI modules, follow these GenAI documents: [Grounding Your LLM in Data](/appstore/modules/genai/how-to/howto-groundllm/), [Prompt Engineering at Runtime](/appstore/modules/genai/how-to/howto-prompt-engineering/), and [Integrate Function Calling into Your Mendix App](/appstore/modules/genai/how-to/howto-functioncalling/)
+* Optional – Basic understanding of the [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) and the related Mendix modules: [MCP Server module](/appstore/modules/genai/mcp-modules/mcp-server/) and [MCP Client module](/appstore/modules/genai/mcp-modules/mcp-client/)
 
 ## Setting Up Your Application
 
-If you are using a GenAI starter app such as the Blank GenAI Starter App, you can skip ahead to [the next section](#creating-functional-prerequisites) because the following setup steps are already completed. Otherwise, follow these steps to add the required modules and configuration to your app:
+If you are using a GenAI starter app such as the Blank GenAI Starter App, you can skip ahead to [Creating the Agent's Functional Prerequisites](#creating-functional-prerequisites) because the following setup steps are completed by default. Otherwise, follow these steps to add the required modules and configuration to your app:
 
 1. Install the [GenAI Commons](https://marketplace.mendix.com/link/component/239448), [Agent Commons](https://marketplace.mendix.com/link/component/240371), [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449), and [ConversationalUI](https://marketplace.mendix.com/link/component/239450) modules from Marketplace. You also need to install their dependencies, including [MCP Client](https://marketplace.mendix.com/link/component/244893), [Community Commons](https://marketplace.mendix.com/link/component/170), and [Encryption](https://marketplace.mendix.com/link/component/1011).
-2. Open your app's [Security](/refguide/security/#user-role) settings and edit the user role that you want to be able to create and use agents. This is typically the Administrator role, but this may vary depending on your use case. Follow these steps:
+2. Open your app's [Security](/refguide/security/#user-role) settings and edit the user role that you want to create and use agents. This is typically the Administrator role, but this may vary depending on your use case. Follow these steps:
 
     1. For the Agent Commons module, assign the **AgentAdmin** module role.
     2. For the Conversational UI module, assign the **User** module role.
@@ -62,10 +62,9 @@ The agent interacts with data from a knowledge base and the Mendix app. To make 
 Each of these steps is described in the following sections.
 
 To define the agent and generate responses, the steps differ based on your chosen approach and are covered in separate documents.
-
 ### Ingesting Data Into Knowledge Base {#ingest-knowledge-base}
 
-Ingest Mendix ticket data into the knowledge base. For a detailed guide, see [Grounding Your LLM in Data](/appstore/modules/genai/how-to/howto-groundllm/#demodata). The following steps explain the process at a higher level by modifying logic imported from the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475). You can find the sample data used in this document in the GenAI Showcase App, or use your own data.
+Ingest Mendix ticket data into the knowledge base. For a detailed guide, see [Grounding Your LLM in Data](/appstore/modules/genai/how-to/howto-groundllm/#demodata). The following steps explain the process at a higher level by modifying logic imported from the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475). You can find the sample data used in this document in the GenAI Showcase App or use your own data.
 
 1. In your domain model, create a `Ticket` entity with the following attributes:
 
@@ -84,7 +83,7 @@ Ingest Mendix ticket data into the knowledge base. For a detailed guide, see [Gr
     * `EM_Ticket`
     * `JSON_Ticket`
 
-3. Open **IM_Ticket**, click **Select elements**, and search for **JSON_Ticket** in the JSON structure schema source. Select **Object** and all fields for which you created attributes in the `Ticket` entity. Clear the **Array** checkbox and click **OK**. Open **JsonObject** to select your `Ticket` entity and select **Map attributes by name** to map all fields to your attributes. The completed import mapping looks like this:
+3. Open **IM_Ticket**, click **Select elements**, and search for **JSON_Ticket** in the JSON structure schema source. Select **Object** and all fields for which you created attributes in the `Ticket` entity. Clear the **Array** checkbox and click **OK**. Open **JsonObject**, select your `Ticket` entity, and then select **Map attributes by name** to map all fields to your attributes. The completed import mapping looks like this:
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-singleagent/IM_ticket_mapped.png" alt="">}}
 
@@ -214,11 +213,11 @@ Your completed microflow looks like this:
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-singleagent/GetTicketByID.png" alt="">}}
 
-As a result of this function, users will be able to ask for information for a specific ticket by providing a ticket identifier, for example, by asking `What is ticket 42 about?`.
+As a result of this function, users can ask for information for a specific ticket by providing a ticket identifier. For example, they can ask `What is ticket 42 about?`.
 
 #### Accessing Function Microflows via MCP (Optional)
 
-Instead of (or alongside) configuring functions directly within your application, you can access them via the Model Context Protocol (MCP). This approach requires an MCP server to be running and exposing the desired functions.
+Instead of configuring functions directly within your application, you can access them via Model Context Protocol (MCP). You can also use both approaches together. This approach requires an MCP server to be running and exposing the desired functions.
 
 To get started:
 
@@ -229,10 +228,10 @@ This method provides greater flexibility in managing and sharing functions acros
 
 ## Choose an Implementation Approach {#implementation-approach}
 
-You have completed the foundational setup for your agent. Now choose your implementation approach based on your workflow and requirements:
+You have completed the foundational setup. Continue with your chosen implementation approach:
 
-* [Create an Agent with Agent Editor](/appstore/modules/genai/how-to/create-agent-with-agent-editor/) (available for Studio Pro 11.9 and above): Define and iterate on your agent directly within the app model in Studio Pro
-* [Create an Agent with Agent Commons](/appstore/modules/genai/how-to/create-agent-with-agent-commons/): Define and iterate on your agent at runtime using the Agent Builder UI
-* [Create an Agent Programmatically](/appstore/modules/genai/how-to/create-agent-programmatically/): Define your agent using microflows
+* [Create an Agent with Agent Editor](/appstore/modules/genai/how-to/create-agent-with-agent-editor/)
+* [Create an Agent with Agent Commons](/appstore/modules/genai/how-to/create-agent-with-agent-commons/)
+* [Create an Agent Programmatically](/appstore/modules/genai/how-to/create-agent-programmatically/)
 
-Each approach guide walks you through defining your agent, connecting tools and knowledge bases, and testing the complete implementation.
+For help choosing an approach, see [Creating Your First Agent](/appstore/modules/genai/how-to/creating-agents/#implementation-approach).

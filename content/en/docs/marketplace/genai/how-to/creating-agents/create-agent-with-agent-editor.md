@@ -13,13 +13,12 @@ Currently, Agent Editor supports only [Mendix Cloud GenAI](/appstore/modules/gen
 
 ## Prerequisites
 
-* Studio Pro 11.9.1 or above
-* [Agent Editor](appstore/modules/genai/genai-for-mx/agent-editor/) installed, including the [first-time setup](/appstore/modules/genai/genai-for-mx/agent-editor/#setup) steps
-* Access to Mendix Cloud GenAI text generation and knowledge base resources, and a generated key for both resource types from the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com/)
+Before you begin, complete the following prerequisites:
 
-{{% alert color="info" %}}
-This guide assumes you have completed the shared setup steps in [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/). If you have not done so, complete those steps first to set up your application, knowledge base, domain model, UI, and function microflows.
-{{% /alert %}}
+* Use an app running on Studio Pro 11.9.1 or above
+* Complete [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/) to configure your application, knowledge base, domain model, UI, and function microflows
+* Install [Agent Editor](appstore/modules/genai/genai-for-mx/agent-editor/), including the [first-time setup](/appstore/modules/genai/genai-for-mx/agent-editor/#setup) steps
+* Have access to Mendix Cloud GenAI text generation and knowledge base resources, and generate a key for both of these resource types from the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com/)
 
 ## Setting Up the Agent with a Prompt
 
@@ -159,7 +158,7 @@ If you make changes to the agent definition afterwards, restart or redeploy the 
 
 ## Calling the Agent
 
-Configure the **Ask the agent** button to call a microflow that invokes the Agent Editor agent and stores the response in the UI helper object. Your completed microflow will look like this:
+Configure the **Ask the agent** button created in [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/#domain-model-setup) to call a microflow that invokes the Agent Editor agent and stores the response in the UI helper object. Your completed microflow will look like this:
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-singleagent/ACT_TicketHelper_CallAgent_Editor.png" alt="">}}
 
@@ -187,11 +186,9 @@ View the app in the browser, open the **TicketHelper_Agent** page, and click **A
 ## Testing and Troubleshooting
 
 {{% alert color="info" %}}
-If you are looking for more technical details and an example implementation, check out the [Agent Builder Starter App](https://marketplace.mendix.com/link/component/240369), which demonstrates additional built-in features. Additionally, the **ExampleMicroflows** folder in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) contains all components used in this how-to, including the final use case. You may also find it helpful to explore other examples.
+The **ExampleMicroflows** folder in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) contains all components used in this how-to, including the final use case. You may also find it helpful to explore other examples.
 {{% /alert %}}
 
-Before testing, ensure that you have completed the Mendix Cloud GenAI configuration as described in [Build a Chatbot from Scratch Using the Blank GenAI App](/appstore/modules/genai/how-to/blank-app/), particularly the [Infrastructure Configuration](/appstore/modules/genai/how-to/blank-app/#config) section. 
-
-Congratulations! Your agent is now ready to use and enriched by powerful capabilities such as agent builder, function calling, and knowledge base retrieval.
+Congratulations! Your agent is now ready to use and enriched by powerful capabilities such as function calling and knowledge base retrieval.
 
 If an error occurs, check the **Console** in Studio Pro for detailed error information to assist in resolving the issue.

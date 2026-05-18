@@ -18,7 +18,7 @@ Currently, Agent Editor supports only [Mendix Cloud GenAI](/appstore/modules/gen
 * Access to Mendix Cloud GenAI text generation and knowledge base resources, and a generated key for both resource types from the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com/)
 
 {{% alert color="info" %}}
-This guide assumes you have completed the shared setup steps in [Shared Setup for Creating an Agent](/appstore/modules/genai/how-to/creating-agents/shared-setup/). If you have not done so, complete those steps first to set up your application, knowledge base, domain model, UI, and function microflows.
+This guide assumes you have completed the shared setup steps in [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/). If you have not done so, complete those steps first to set up your application, knowledge base, domain model, UI, and function microflows.
 {{% /alert %}}
 
 ## Setting Up the Agent with a Prompt
@@ -37,7 +37,7 @@ Create and configure the required Model and Agent documents in Studio Pro, inclu
 
 6. In the **Model** field, select the Model document you created in the previous steps.
 
-7. For the **Context entity**, select the `TicketHelper` entity created in [Shared Setup for Creating an Agent](/appstore/modules/genai/how-to/creating-agents/shared-setup/#domain-model-setup). This entity contains an attribute `UserInput` that matches the variable placeholder.
+7. For the **Context entity**, select the `TicketHelper` entity created in [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/#domain-model-setup). This entity contains an attribute `UserInput` that matches the variable placeholder.
 
 8. In the **System prompt** field, add instructions that define how the model should handle IT-ticket requests. You can use the following prompt:
 
@@ -66,7 +66,7 @@ Create and configure the required Model and Agent documents in Studio Pro, inclu
 
 In this section, you connect the agent to two function microflows and one knowledge base so it can answer ticket-related questions with app data and historical context.
 
-Use the function microflows created in [Shared Setup for Creating an Agent](/appstore/modules/genai/how-to/creating-agents/shared-setup/#function-microflows). To use function calling, add those microflows as tools in the Agent document so the model can decide when to execute them.
+Use the function microflows created in [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/#function-microflows). To use function calling, add those microflows as tools in the Agent document so the model can decide when to execute them.
 
 ### Connecting Function: Get Number of Tickets by Status (Without MCP Server)
 

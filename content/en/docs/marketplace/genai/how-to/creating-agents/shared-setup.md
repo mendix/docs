@@ -1,7 +1,6 @@
 ---
-title: "Shared Setup for Creating an Agent"
+title: "Set Up Your App for Agent Creation"
 url: /appstore/modules/genai/how-to/creating-agents/shared-setup/
-linktitle: "Shared Setup"
 weight: 60
 description: "Complete the foundational setup steps required for all agent implementation approaches, including application configuration, knowledge base ingestion, domain model creation, and function microflows."
 ---

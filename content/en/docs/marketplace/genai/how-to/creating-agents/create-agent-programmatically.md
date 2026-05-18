@@ -10,7 +10,7 @@ description: "Learn how to create agents programmatically using microflows and G
 This approach uses microflows and GenAI Commons building blocks to define agents programmatically. You start with a prompt at runtime but configure tools and knowledge base retrieval directly in microflow logic at design time. This approach provides maximum control and debugging capabilities, making it useful for specific use cases or when the agent logic needs to be part of the code repository.
 
 {{% alert color="info" %}}
-This guide assumes you have completed the shared setup steps in [Shared Setup for Creating an Agent](/appstore/modules/genai/how-to/creating-agents/shared-setup/). If you have not done so, complete those steps first to set up your application, knowledge base, domain model, UI, and function microflows.
+This guide assumes you have completed the shared setup steps in [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/). If you have not done so, complete those steps first to set up your application, knowledge base, domain model, UI, and function microflows.
 {{% /alert %}}
 
 ## Creating Your Agent
@@ -47,7 +47,7 @@ Create an agent that can be sent to the LLM. The [Agent Commons](/appstore/modul
 
 7. Add a value in the **UserInput** variable field to test the current agent. For example, type `How can I implement an agent in my Mendix app?`. Ideally, the model will not attempt to answer requests that fall outside its scope, as it is restricted to handling IT-related issues and providing information about ticket data. However, if you ask a question that would require tools that are not yet implemented, the model might hallucinate and generate a response as if it had used those tools.
 
-8. Make sure the app is running with the latest domain model changes from [Shared Setup for Creating an Agent](/appstore/modules/genai/how-to/creating-agents/shared-setup/#domain-model-setup). In the Agent Commons UI, you will see a field for the [Context Entity](/appstore/modules/genai/genai-for-mx/agent-commons/#define-context-entity). Search for **TicketHelper** and select the entity created in that setup step. When starting from the Blank GenAI App, this should be **MyFirstModule.TicketHelper**.
+8. Make sure the app is running with the latest domain model changes from [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/#domain-model-setup). In the Agent Commons UI, you will see a field for the [Context Entity](/appstore/modules/genai/genai-for-mx/agent-commons/#define-context-entity). Search for **TicketHelper** and select the entity created in that setup step. When starting from the Blank GenAI App, this should be **MyFirstModule.TicketHelper**.
 
 9. Save the agent version using the **Save As** button and enter *Initial agent* as the title.
 

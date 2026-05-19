@@ -19,7 +19,7 @@ Maia can fetch and read content from public websites and APIs. It can retrieve d
 
 When Maia wants to fetch content from the web, it asks for your permission first. You can approve or deny each request. The permission dialog looks like this:
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-make/maia-web-fetch/maia-web-fetch-permission-dialog.png" alt="Maia Web Fetch permission dialog" max-width=80% >}}
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-web-fetch/maia-web-fetch-permission-dialog.png" alt="Maia Web Fetch permission dialog" max-width=80% >}}
 
 ## What Maia Can Fetch
 

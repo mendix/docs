@@ -20,12 +20,12 @@ To create an app using **Start with Maia**, do the following:
 1. Open Studio Pro and choose **Create New App**.
 1. Choose the **Start with Maia** starting point.
 
-    {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/start-with-maia/start-with-maia-starting-point.png" >}}
+    {{< figure src="/attachments/refguide/mendix-ai-assistance/start-with-maia/start-with-maia-starting-point.png" >}}
 
 1. In the **App Settings** dialog box, click **Create app**.
 1. A blank app is created and the **Start with Maia** dialog box appears:
 
-    {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/start-with-maia/start-with-maia-dialog-box.png" max-width=80% >}}
+    {{< figure src="/attachments/refguide/mendix-ai-assistance/start-with-maia/start-with-maia-dialog-box.png" max-width=80% >}}
 
 1. In the **Start with Maia** dialog box, enter a description of the app you want to build. You may optionally attach either an image or a PDF to help Maia better understand your request (only one attachment is allowed. For more information. see the [Attachment Requirements](#attachment-requirements) section below).
 1. Click **Start** and Maia will start generating the following for your app:

@@ -44,7 +44,7 @@ Maia Make capabilities are enabled by default. You can disable them in Studio Pr
 
 To access the conversational interface and Maia Make capabilities, in the upper-right corner of Studio Pro, click the **Maia** pane. It appears under the **Chat** tab:
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-make/maia-make-interface.png" max-width=40% alt="Maia Make interface" >}}
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-make-interface.png" max-width=40% alt="Maia Make interface" >}}
 
 Alternatively, you can also click **View** at the Studio Pro top bar and select **Maia** to open the interface.
 

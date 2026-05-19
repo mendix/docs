@@ -5,6 +5,12 @@ weight: 8
 description: "Native Template 17"
 ---
 
+## 17.2.1
+
+**Release date: May 12, 2026**
+
+- We fixed the CocoaPods installation issue that was caused by `xcodeproj object version` 70.
+
 ## 17.2.0
 
 **Release date: April 29, 2026**

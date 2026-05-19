@@ -25,11 +25,11 @@ In Studio Pro 11.8 and below, to enable Maia for OQL, navigate to **Edit** > **P
 
 Once enabled, you can access it from the toolbar in the **OQL Editor**:
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-make/maia-oql-generator/maia-for-oql-button.png" max-width=80% >}}
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-oql-generator/maia-for-oql-button.png" max-width=80% >}}
 
 Clicking **Maia for OQL** opens a dedicated chat interface on the right side of Studio Pro, under the **Maia** tab:
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-make/maia-oql-generator/maia-pane-for-oql-generator.png" max-width=42% >}}
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-oql-generator/maia-pane-for-oql-generator.png" max-width=42% >}}
 
 To use Maia for OQL, simply describe the data you need. For example, if you type *Show all active orders with customer names*, Maia will generate the most relevant OQL query based on the data available in the same module.
 

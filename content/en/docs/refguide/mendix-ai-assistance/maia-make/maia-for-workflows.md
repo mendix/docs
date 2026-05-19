@@ -32,11 +32,11 @@ Maia for Workflows is not available.
 
 To enable Maia for Workflows, go to **Edit** > **Preferences** > the **Maia** tab and select **Enable Maia for Workflows**. Once enabled, you can find it in the toolbar of a workflow:
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-make/maia-for-workflows/maia-for-workflows.png" max-width=80% >}}
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-for-workflows/maia-for-workflows.png" max-width=80% >}}
 
 After clicking **Maia for Workflow**, a chat interface appears at the right side of Studio Pro under the **Maia** tab:
 
-{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-make/maia-for-workflows/chat-interface.png" max-width=42% >}}
+{{< figure src="/attachments/refguide/mendix-ai-assistance/maia-make/maia-for-workflows/chat-interface.png" max-width=42% >}}
 
 ### Best Practices for Text Input {#text-input-best-practice}
 

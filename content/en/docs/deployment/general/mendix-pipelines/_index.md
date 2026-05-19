@@ -1,7 +1,7 @@
 ---
 title: "Mendix Pipelines"
 url: /developerportal/deploy/mendix-pipelines/
-weight: 80
+weight: 20
 description: "Describes how to design, implement, and review pipelines using the Pipelines feature in the Mendix Portal"
 aliases:
     - /developerportal/deploy/pipelines/
@@ -166,6 +166,14 @@ Check out a branch. To configure this step, use the drop-down menu to select the
 ##### Build
 
 Build a deployment package based on the latest major, minor, or patch version of the branch you checked out. The highest version is incremented based on the increment settings specified in this step.
+
+##### GET Request
+
+Use the **GET request** step to retrieve data from an external API and use the response to inform or control the next steps in the pipeline. For configuration details, refer to [Configuring POST and GET Request Steps](/developerportal/deploy/configuring-post-get-request-steps/).
+
+##### POST Request
+
+Use the **POST request** step to send structured data to an external API to trigger an action or update a system. For configuration details, refer to [Configuring POST and GET Request Steps](/developerportal/deploy/configuring-post-get-request-steps/).
 
 ##### Maia Best Practice Recommender{##recommender}
 

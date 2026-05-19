@@ -1,7 +1,7 @@
 ---
 title: "Mendix AI Assistance (Maia)"
 url: /refguide/mendix-ai-assistance/
-weight: 45
+weight: 17
 description: "Describes Mendix AI Assistance (Maia) in Studio Pro."
 aliases:
     - /refguide/mx-assist-studio-pro/
@@ -27,7 +27,7 @@ For more information on how to ensure optimal performance of Maia, see the [Best
 
 ## Fair Use Policy {#fair-use}
 
-Mendix applies fair use limits to maintain a reliable experience for all users. If usage exceeds these limits, your Maia access may be paused for one week.
+Mendix applies fair use limits to maintain a reliable experience for all users. If usage exceeds these limits, your Maia access may be temporarily paused. Account access is reviewed on a weekly schedule. Your account will be automatically reactivated within seven days once the review period concludes.
 
 ## Network Configuration Requirements {#maia-network-requirement}
 

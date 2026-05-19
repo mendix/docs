@@ -38,13 +38,14 @@ Before you build an agent in your app, make sure your scenario meets the followi
 
 If you are using a GenAI starter app such as the Blank GenAI Starter App, you can skip ahead to [Creating the Agent's Functional Prerequisites](#creating-functional-prerequisites) because the following setup steps are completed by default. Otherwise, follow these steps to add the required modules and configuration to your app:
 
-1. Install the [GenAI Commons](https://marketplace.mendix.com/link/component/239448), [Agent Commons](https://marketplace.mendix.com/link/component/240371), [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449), and [ConversationalUI](https://marketplace.mendix.com/link/component/239450) modules from Marketplace. You also need to install their dependencies, including [MCP Client](https://marketplace.mendix.com/link/component/244893), [Community Commons](https://marketplace.mendix.com/link/component/170), and [Encryption](https://marketplace.mendix.com/link/component/1011).
-2. Open your app's [Security](/refguide/security/#user-role) settings and edit the user role that you want to create and use agents. This is typically the Administrator role, but this may vary depending on your use case. Follow these steps:
+1. Set your app's [security level](/refguide/app-security/) to **Production**.
+2. Install the [GenAI Commons](https://marketplace.mendix.com/link/component/239448), [Agent Commons](https://marketplace.mendix.com/link/component/240371), [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449), and [ConversationalUI](https://marketplace.mendix.com/link/component/239450) modules from Marketplace. You also need to install their dependencies, including [MCP Client](https://marketplace.mendix.com/link/component/244893), [Community Commons](https://marketplace.mendix.com/link/component/170), and [Encryption](https://marketplace.mendix.com/link/component/1011).
+3. Open your app's [Security](/refguide/security/#user-role) settings and edit the user role that you want to create and use agents. This is typically the Administrator role, but this may vary depending on your use case. Follow these steps:
 
     1. For the Agent Commons module, assign the **AgentAdmin** module role.
     2. For the Conversational UI module, assign the **User** module role.
     3. Save the security settings.
-3. Go to your app's **Navigation** and add a new **Agents** item.
+4. Go to your app's **Navigation** and add a new **Agents** item.
     1. Select an icon, such as `notes-paper-text`, from the Atlas icon set.
     2. Set the **On click** action to **Show a page**.
     3. Search for and select the **Agent_Overview** page, located under **AgentCommons** > **USE_ME** > **Agent Builder**.
@@ -120,7 +121,7 @@ Create a user interface to test and use the agent. It will look like this:
     * `UserInput` as *String*, length unlimited
     * `ModelResponse` as *String*, length unlimited
 
-2. Grant your module role:
+2. Grant your module role the following [entity access](/refguide/module-security/#entity-access):
 
     * **Read** access for both attributes
     * **Write** access for the *UserInput* attribute 

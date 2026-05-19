@@ -14,7 +14,7 @@ This approach uses microflows and GenAI Commons building blocks to define agents
 Before you begin, ensure that you have met the following prerequisites:
 
 * Complete [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/) to configure your application, knowledge base, domain model, UI, and function microflows
-* Have access to text generation and knowledge base resources, and generate a key for both resource types
+* Configure text generation and knowledge base keys (for details, see [Configuration](/appstore/modules/genai/genai-for-mx/agent-commons/#configuration) in the *Agent Commons* documentation).
 
 ## Creating Your Agent
 
@@ -24,7 +24,7 @@ Create an agent that can be sent to the LLM. The [Agent Commons](/appstore/modul
 
 2. Navigate to the **Agent_Overview** page.
 
-3. Create a new agent named `IT-Ticket Helper` with the type set to **Single-Call**. You can leave the **Description** field empty. 
+3. Create a new agent named `IT-Ticket Helper` with the **Usage type** set to **Task**. You can leave the **Description** field empty. 
 
 4. Click **Save** to create the agent.
 

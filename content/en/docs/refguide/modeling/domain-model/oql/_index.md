@@ -28,6 +28,40 @@ OQL queries do not take security into account out-of-the-box. This means that yo
 You can try your OQL example online in the [OQL Playground](https://service.mendixcloud.com/p/OQL) demo app.
 {{% /alert %}} 
 
+## Version Reference
+
+OQL is under constant development so some expressions and features are not available in all versions. The tables below list features which were not available in Mendix 11.0.0, and note which version introduced them.
+
+### General Features
+
+| Feature | Mendix Version |
+| --- | --- |
+| Comments | 11.7.0 |
+
+### [OQL Expressions](/refguide/oql-expression-syntax/)
+
+| Feature | Mendix Version |
+| --- | --- |
+| DATEADD | 11.9.0 |
+| DATEPARSE | 11.10.0 |
+| DATETRUNC | 11.9.0 |
+| LOCATE | 11.9.0 |
+| STRING_AGG in View Entities and Datasets | 11.2.0 |
+| SUBSTRING | 11.9.0 |
+
+### [OQL Statements](/refguide/oql-statements/){#statement-versions}
+
+The following are bulk update features.
+
+| Feature | Mendix Version |
+| --- | --- |
+| OQL `DELETE` *beta* | 11.1.0 |
+| OQL `UPDATE` attributes *beta* | 11.3.0 |
+| OQL `UPDATE` associations *beta* | 11.4.0 |
+| OQL `INSERT` attributes *beta* | 11.6.0 |
+| OQL `INSERT` associations *beta* | 11.7.0 |
+| OQL bulk update *GA* | 11.8.0 |
+
 ## Syntax basics
 
 An OQL statement consists of [keywords](#reserved-oql-words), identifiers, [value literals](/refguide/oql-expression-syntax/#oql-literals) and [operators](/refguide/oql-expression-syntax/#oql-operators).

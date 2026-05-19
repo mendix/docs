@@ -153,11 +153,11 @@ The component list contains the following information:
 * **Support type** — The support type of the Marketplace component. This can be **Mendix**, **Partner**, or **Community**.    
   For more information, refer to [Content Support Categories](/appstore/marketplace-content-support/#category).
 * **Version** — The version of the component that is being used.
-* **Findings** — This shows the number of findings of each type, color-coded according to severity level.
+* **Findings** — The number of findings of each type, color-coded according to severity level.
 * **License** — For components derived from the Mendix Marketplace, this is the end-user license for the component.
 * **Marketplace** – Whether the component is **Public** or **Private**. A public component is available to the whole Mendix community in the Marketplace, while a private component is available only via your [Company Content](/appstore/home-page/#company-content) page.
-* **Latest version** — The latest version of the component.
-* **Publisher** — The name of the organization that published the component.
+* **Latest version** — For components derived from the Mendix Marketplace, this is the latest version of the component.
+* **Publisher** — For components derived from the Mendix Marketplace, this is the name of the organization that published the component.
 * **View details** — Clicking this opens the [Component App Details](#component-usage) page.
 * Column customization ({{% icon name="view" %}}) – You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
 

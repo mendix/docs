@@ -48,6 +48,10 @@ The **Personal** category contains the items described in the following sections
 
 Clicking **Drafts** opens the **My Drafts** page, where you can see and manage the drafts for all the Marketplace content you have started.
 
+{{% alert color="info" %}}
+Only drafts that have been active over the last 30 days are displayed. Drafts are automatically removed if they have been inactive for more than 30 days.
+{{% /alert %}}
+
 You can also find details on how many total drafts you have, which drafts are ready to publish or are awaiting approval, and which drafts have been declined.
 
 These are the possible **Status** entries for each item:

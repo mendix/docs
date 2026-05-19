@@ -61,7 +61,7 @@ Selecting the infrastructure for integrating GenAI into your Mendix application 
 
 * Your Own Connector: Optionally, if you prefer a custom connector, you can integrate your chosen infrastructure. However, this document focuses on the OpenAI and Bedrock connectors, as they offer comprehensive support and ease of use to get started.
 
-### Creating a Conversational UI interface
+### Creating a Conversational UI Interface
 
 In this section, you can set up a conversational interface for your application using the **Conversational UI** module. The process involves creating a page, configuring microflows, and preparing the chat context.
 
@@ -73,8 +73,8 @@ Copy the `ConversationalUI_FullScreenChat` page from the **ConversationalUI > US
 
 Since the **ConversationalUI_FullScreenChat** page contains a **Data View** using a `ChatContext` object as a parameter, it cannot be added directly to the navigation. Therefore, a template microflow can be used.
 
-1. Locate the pre-built microflow `ACT_FullScreenChat_Open` in **ConversationalUI > USE_ME > Pages**. Right-click on the microflow and select **Include in project** to copy it into your `MyFirstBot` module.
-2. Locate the show Page action for `ConversationalUI_FullScreenChat`. Inside this action, change the page to `ConversationalUI_FullScreenChat` from your `MyFirstBot` module or the `ConversationalUI` module.
+1. Locate the pre-built microflow `ACT_FullScreenChat_Open` in **ConversationalUI > USE_ME > Conversational UI > Pages**. Right-click the microflow and select **Include in project**. Then copy it into your `MyFirstBot` module.
+2. In the microflow's **Show page** activity, set the page to `ConversationalUI_FullScreenChat` from your `MyFirstBot` module or the `ConversationalUI` module.
 
 #### Customizing the System Prompt (Optional)
 
@@ -84,24 +84,24 @@ To tailor your application's behavior, you can customize the [System Prompt](/ap
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-blankapp/blank_genai_systemprompt.png" >}}
 
-1. Open the copied `ACT_FullScreenChat_Open` microflow from your `MyFirstBot` module.
+1. In your `MyFirstBot` module, open the `ACT_FullScreenChat_Open` microflow.
 2. Locate the **ChatContext** action.
-3. Inside this action, find the `System prompt` parameter, which has default an empty value.
+3. Inside this action, find the `System prompt` parameter, which has an empty value by default.
 4. Update the `System prompt` value to reflect your desired behavior. For example:
    * For a customer service chatbot: *'You are a helpful customer service assistant providing answers to common product questions.'*
    * For a travel advisor assistant: *'You are a travel advisor assistant providing travel tips and destination information.'*
    * Or keep it simple with *'You are an assistant.'*
 5. Save the changes.
 
-#### Navigation Configuration
+#### Configuring Navigation
 
-Click **Home** and select the `ACT_FullScreenChat_Open` microflow from your `MyFirstBot` module to configure the **Navigation**.
+In the app's **Navigation**, configure **Home** to call the `ACT_FullScreenChat_Open` microflow from your `MyFirstBot` module when clicked.
 
 {{% alert color="warning" %}}
-You may encounter an error about allowed roles. To resolve this, go to the page **Properties** and update the **Navigation > Visible for** setting to include the appropriate user roles.
+You may encounter an error about allowed roles. To resolve this, go to the **Properties** pane and update the **Navigation > Visible for** setting to include the appropriate user roles.
 {{% /alert %}}
 
-### Infrastructure Configuration {#config}
+### Configuring Infrastructure {#config}
 
 #### Mendix Cloud GenAI Configuration
 
@@ -181,7 +181,7 @@ If you encounter any issues while using the Amazon Bedrock connector, see the [T
 
 ## Testing and Troubleshooting
 
-Before testing your app, complete the Mendix Cloud GenAI, OpenAI or Bedrock configuration.
+Before testing your app, complete the Mendix Cloud GenAI, OpenAI, or Bedrock configuration.
 
 To test the Chatbot, navigate to the **Home** icon to open the chatbot interface. Start interacting with your chatbot by typing in the chat box.
 

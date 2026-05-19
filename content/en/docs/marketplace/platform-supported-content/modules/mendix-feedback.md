@@ -109,7 +109,7 @@ To edit the styling of the feedback page, you can add the necessary styling to t
 
 You can connect the Feedback module to another service.
 
-To do this, you set your own API call inside the microflow `SUB_Feedback_SendToServer`. Depending on the service, you may need to modify the payload. If you want to use your own server, you can find information on the payload we send in our [API documentation](https://docs.mendix.com/apidocs-mxsdk/apidocs/feedback-api-v2/).
+To do this, you set your own API call inside the microflow `SUB_Feedback_SendToServer`. Depending on the service, you may need to modify the payload. If you want to use your own server, you can find information on the payload we send in our [API documentation](/apidocs-mxsdk/apidocs/feedback-api-v2/).
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/mendix-feedback/Feedback_SendToServer.png" width="500px" class="no-border" >}} 
 

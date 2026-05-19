@@ -520,7 +520,7 @@ Install the Private Mendix Platform by doing the following steps:
         * For AWS Secret Manager:
 
             * **Secret Provider** - Set to **AWS**.
-            * **AWS-Role-ARN** - An [AWS role ARN](https://docs.mendix.com/developerportal/deploy/secret-store-credentials/#aws-secrets-manager) which can access the specified Secret Manager.
+            * **AWS-Role-ARN** - An [AWS role ARN](/developerportal/deploy/secret-store-credentials/#aws-secrets-manager) which can access the specified Secret Manager.
             * **AWS SecretManager Name** - The AWS Secret Manager name where the sensitive data is stored.
 
         * For Azure Key Vault:
@@ -621,13 +621,14 @@ Re-running the installation command ensures that the installer fetches the relev
 
 If you have installed Private Mendix Platform before, you can upgrade it by doing the following steps:
 
-1. Ensure that your Mendix Operator version is 2.12 or newer.
-2. Run the command `./installer platform -n=<namespace name>`, where `-n` indicates the namespace where your Private Mendix Platform is installed.
-3. Click **Upgrade Namespace**.
+1. Ensure that your Mendix Operator version is 2.12 or above.
+2. Ensure that the number of replicas is no higher than 1. If you have manually changed the default value, make sure you revert it to 1 before attempting the upgrade.
+3. Run the command `./installer platform -n=<namespace name>`, where `-n` indicates the namespace where your Private Mendix Platform is installed.
+4. Click **Upgrade Namespace**.
 
     {{< figure src="/attachments/private-platform/pmp-upgrade1.png" class="no-border" >}}
 
-4. Verify the following settings:
+5. Verify the following settings:
     
     * **Persist Config** - When enabled, this setting locks the Private Mendix Platform configuration, so that it can no longer be modified from the user interface.
     * **Project Management** - Recommended. Enables you to create and manage your app projects. Enables app projects and related settings across the portal. Must be enabled for CI/CD capabilities.
@@ -637,7 +638,7 @@ If you have installed Private Mendix Platform before, you can upgrade it by doin
     * **IDP** - Optional. Enable users to login using SSO by configuring your IdP integration.
     * **Webhook** - Optional. Webhooks allow to send information between platform and external systems, and can be triggered by events around Apps, Users, Groups, Marketplace and CI/CD.
 
-5. Click **Run Upgrade**.
+6. Click **Run Upgrade**.
 
     {{< figure src="/attachments/private-platform/pmp-upgrade2.png" class="no-border" >}}
 

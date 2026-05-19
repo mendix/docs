@@ -59,10 +59,11 @@ Apps running in Mendix Cloud are subject to certain limitations. These behaviors
 Therefore, do not assume that an established WebSocket connection will remain open indefinitely. To ensure connection stability and prevent unexpected disconnections:
     * Enable periodic keepalive checks (for example, every 25–30 seconds). This ensures the connection remains active and prevents Network Address Translators (NATs) and firewalls from dropping long-idle tunnels.
     * Implement robust reconnection logic to gracefully handle connectivity loss and automatically reestablish dropped connections.
+* For WebSocket connections, a specific client always communicates with the same application instance. However, different connections, such as those from multiple browsers or after a page refresh, may be routed to different application instances.
 
 ## Move to Kubernetes
 
-* Only [supported Mendix versions](https://docs.mendix.com/releasenotes/studio-pro/lts-mts/) are able to move to Kubernetes.
+* Only [supported Mendix versions](/releasenotes/studio-pro/lts-mts/) are able to move to Kubernetes.
 * The platform configures `CF_INSTANCE_INDEX=0` for 1 of the instances to define a leader instance and to make [Community Commons](/appstore/modules/community-commons-function-library/) function `GetCFInstanceIndex` partially backwards compatible. The leader instance will return `0` while all follower instances will return `-1`. We advise stopping the use of the `GetCFInstanceIndex` function as it is specific to Cloud Foundry.
 * If your model is using the [SAML module](https://marketplace.mendix.com/link/component/1174), these versions are compatible with Kubernetes:
     * Mendix 9 – Version 3.6.19 and higher.

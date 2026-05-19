@@ -1,0 +1,44 @@
+name: Check Claude Configuration
+
+on:
+  pull_request:
+    paths:
+      - '.claude/**'
+      - 'CLAUDE.md'
+
+jobs:
+  check-claude-config:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for Claude configuration changes
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const comment = `⚠️ **Claude Configuration Warning**
+
+            You've modified Claude Code configuration files. These files contain the shared configuration for all contributors. Please revert this change if unintended. **ONLY modify these files if you need to change shared configurations that apply to everyone and have discussed this change with the TW team.**
+
+            To override the Claude settings locally, use \`.claude/settings.local.json\` instead. This local file is gitignored and overrides the repo default.
+
+            **For example, if you're changing AWS_PROFILE:**
+            The default profile name is \`my-sandbox\`. If your AWS profile has a different name, override it locally instead of changing the shared file.
+
+            Create or edit \`.claude/settings.local.json\` in the repo root and include the following lines:
+
+            \`\`\`json
+            {
+              "env": {
+                "AWS_PROFILE": "your-sandbox-name"
+              }
+            }
+            \`\`\`
+            `;
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
+
+            core.setFailed('Claude configuration was modified - see comment for guidance');

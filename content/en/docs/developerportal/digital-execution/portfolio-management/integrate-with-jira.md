@@ -3,12 +3,7 @@ title: "Integrate with Jira"
 url: /developerportal/portfolio-management/integrate-with-jira/
 weight: 40
 description: "Describes how to integrate the Portfolio Management Tool with Jira."
-beta: true
 ---
-
-{{% alert color="warning" %}}
-This feature is in beta. For more information, see [Release Status](/releasenotes/release-status/).
-{{% /alert %}}
 
 ## Introduction
 

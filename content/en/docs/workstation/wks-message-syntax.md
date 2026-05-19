@@ -65,7 +65,7 @@ The section below shows a sample test that you can run to verify the configurati
     * **Allow writing files** - **Yes**
     * Use the default values for everything else 
 4. Register the Station to your computer (assuming the Workstation Client is installed there).
-5. In your Workspace, navigate to **Test Your Station** and click on the configured file device.
+5. In your Workspace, navigate to **Test Your Station** and click **Test** by the configured file device.
 6. Enter `3#test.txt#Hello from Mendix` in the **Send Message** field, and then press **Send Message**.
 
     The test should show a response like `S#3#C:\MyTestFolder\test.txt` to indicate that the text file *test.txt* was successfully written to *MyTestFolder*. 

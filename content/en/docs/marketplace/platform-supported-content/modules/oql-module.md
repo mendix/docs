@@ -6,7 +6,7 @@ description: "Describes the configuration and usage of the OQL module, which is 
 
 ## Introduction
 
-The [OQL Module](https://marketplace.mendix.com/link/component/66876) adds microflow actions which execute [OQL](https://docs.mendix.com/refguide/oql/) queries and return the results as a list of Mendix objects, a count of results in the database, or a CSV file. This means that you do not need to write your own Java actions to execute OQL queries.
+The [OQL Module](https://marketplace.mendix.com/link/component/66876) adds microflow actions which execute [OQL](/refguide/oql/) queries and return the results as a list of Mendix objects, a count of results in the database, or a CSV file. This means that you do not need to write your own Java actions to execute OQL queries.
 
 ### Typical Use Cases
 
@@ -26,8 +26,9 @@ Care should be taken to guarantee that the query is valid and does not expose ap
 The OQL module has the following features:
 
 * Executes an OQL query directly or loads a query from a dataset
+* Executes an OQL statement
 * Supports running queries with limit and offset
-* Supports OQL named query parameters
+* Supports queries and statements with OQL named query parameters
 * Returns data directly or generates a CSV file
 * If you opt to generate a CSV file, this can be created with the following characteristics:
     * Compressed in a Zip file
@@ -82,6 +83,16 @@ It returns the following:
 
 * The number of results of executing `statement`
 
+### ExecuteDMLStatement {#executedmlstatement}
+
+{{% alert color="info" %}}
+The `ExecuteDMLStatement` action is only available in the OQL Module version 5.0.0 and above.
+{{% /alert %}}
+
+This action executes an [OQL Statement](/refguide/oql-statements/) and returns the number of affected rows.
+
+Named parameters are also supported when running OQL statements.
+
 ### ExportOQLToCSV {#exportoqltocsv}
 
 This action executes an OQL query and saves the result in a CSV file.
@@ -116,4 +127,8 @@ If you wish to use named parameters inside an OQL query, you must call the follo
 
 {{% alert color="info" %}}
 If you wish to keep the same parameters across multiple calls to the [ExecuteOQLStatement](#executeoqlstatement) action, you must set `preserveParameters` to `true`. All other OQL actions above will clear all defined parameters after every call.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+The `AddDateTimeParameter` action cannot be used in conjunction with the [ExecuteDMLStatement](#executedmlstatement) action.
 {{% /alert %}}

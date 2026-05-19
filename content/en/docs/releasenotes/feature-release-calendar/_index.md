@@ -2,13 +2,15 @@
 title: "Mendix 11 Feature Release Calendar"
 linktitle: "Mx11 Feature Release Calendar"
 url: /releasenotes/feature-release-calendar/
+description: "Describes the calendar of expected release dates for new features in Mendix 11."
 weight: 45
 ##layout: wide
 ---
 
 ## Introduction
 
-With the release of Mendix 11, you can look forward to more new and exciting features in upcoming versions of Mendix 11. This document contains the calendar of expected release dates for these features. 
+With the release of Mendix 11, you can look forward to more new and exciting features in upcoming versions of Mendix 11. This document contains the calendar of expected release dates for these features.
+
 The new features were divided into major themes, which are described in the sections below.
 
 This document is for informational purposes only, and may not be incorporated into a contract. Future developments, products, platforms, directions, and functionality may be changed by Mendix at any time and for any reason, without notice.
@@ -21,17 +23,25 @@ General Availability means that a feature is available for all users. This type 
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Mendix Agents Kit | General Availability: Mx 11.0 + Mx 10.24 |
+| Mendix Agents Kit 1 | General Availability: Mx 11.0 + Mx 10.24 |
+| Mendix Agents Kit 2 | General Availability: Mx 11.12 |
 | MCP Server | General Availability: Mx 11.0 + Mx 10.24 |
 | MCP Client | General Availability: Mx 11.2 + Mx 10.24 |
 | Mendix Cloud GenAI Resource Packs | General Availability: Mx 11.2 + Mx 10.24 |
 | Mendix Cloud GenAI Resource Packs Guardrails | Private Beta: Mx 11.15 |
 | Agent Editor in Studio Pro<sup>1</sup> | General Availability: Mx 11.9 |
 | Agent Observability | General Availability: Mx 11.5 + Mx 10.24 |
-| Model Mendix Agents as part of your Workflow | General Availability: Mx 11.9 |
+| Model Agents as part of your Workflow | General Availability: Mx 11.9 |
+| Dynamic Case Management | Private Beta: Mx 11.3 <br/>Limited Availability: Mx 11.12 |
+| Global Inbox Workflow Tasks | General Availability: Mx 11.9 |
+| Global Inbox Other Tasks | General Availability: Mx 11.12 |
+| Workflow Non-interrupting Event Subprocesses (Message trigger) | Public Beta: Mx 11.8 <br/>General Availability: Mx 11.9 |
+| Workflow Interrupting Event Subprocesses (Message trigger) | General Availability: Mx 11.12 |
+| Workflow Interrupting Event Subprocesses (Timer trigger) | General Availability: Mx 11.12 |
+| Workflow Message Events | General Availability: Mx 11.12 |
 
 {{% alert color="info" %}}
- ¹Limitations: Initially only Mendix Cloud GenAI Resources as provider, and only design-time modification of prompts & other agent settings. Incrementally, we will remove these limitations.
+¹Limitations: Initially only Mendix Cloud GenAI Resources as provider, and only design-time modification of prompts and other agent settings. Incrementally, we will remove these limitations.
 {{% /alert %}}
 
 ## Agentic Development 
@@ -62,7 +72,7 @@ General Availability means that a feature is available for all users. This type 
 | Maia Make: Workflows | General Availability: Mx 11.9 |
 | Maia Make: MCP Client | General Availability: Mx 11.8 |
 | Maia Make: MCP Server | General Availability: Mx 11.12 |
-| Maia Make: Modules | General Availability: Mx 11.12 |
+| Maia Make: Modules | General Availability: Mx 11.9 |
 | Maia Make: editing/work with existing Microflows and Workflows | General Availability: Mx 11.9 |
 | Maia Make: Integrations | General Availability: Mx 11.24 |
 
@@ -77,7 +87,7 @@ General Availability means that a feature is available for all users. This type 
 | Multilingual Studio Pro and Platform: Portuguese | Public Beta: Mx 11.0 |
 | Module updates while retaining customizations | Public Beta: Mx 11.21 |
 | Easy comparison of revisions (textual diffing) | General Availability: Mx 11.9 |
-| Easy comparison of revisions (visual diffing) | Public Beta: Mx 11.18 |
+| Easy comparison of revisions (visual diffing) | Public Beta: Mx 11.12 |
 | Searchable commit history | Public Beta: Mx 11.4 <br/>General Availability: Mx 11.6 |
 | Merge Requests (aka Pull requests) | Public Beta: Mx 12.x |
 | OpenTelemetry Tracing | General Availability: Mx 11.12 |
@@ -99,17 +109,6 @@ General Availability means that a feature is available for all users. This type 
 | Marketplace Component management:<ul><li>Uploading via API</li><li>Content API extended</li></ul> | General Availability: Mx 11.12 |
 | Improved Marketplace notifications | General Availability: Mx 11.15 |
 | Primitive parameters | General Availability: Mx 11.6 (Pages) & <br/>Mx 11.9 (Snippets) |
-
-### Process Orchestration
-
-| Capability or Feature | Expected Release |
-| --- | --- |
-| Dynamic Case Management | Private Beta: Mx 11.3 <br/>Limited Availability: Mx 11.12 |
-| Global Inbox Workflow Tasks | Public Beta: Mx 11.10 <br/>General Availability: Mx 11.12 |
-| Workflow non-interrupting Event Subprocesses (Message trigger) | Public Beta: Mx 11.8 <br/>General Availability: Mx 11.9 |
-| Workflow Interrupting Event Subprocesses (Message trigger) | General Availability: Mx 11.12 |
-| Workflow Interrupting Event Subprocesses (Timer trigger) | General Availability: Mx 11.12 |
-| Workflow Message Events | General Availability: Mx 11.12 |
 
 ### Governance
 
@@ -135,7 +134,7 @@ General Availability means that a feature is available for all users. This type 
 
 | Capability or Feature | Expected Release |
 | --- | --- |
-| Private Connectivity for Mendix Cloud | Public Beta: Mx 11.6 |
+| Private Connectivity for Mendix Cloud | Public Beta: Mx 11.6<br/>General Availability: Mx 11.15 |
 | Operations Home | General Availability: Mx 11.12 |
 | Mendix on Azure | General Availability: Mx 11.4 |
 | Workstation Client | General Availability: Mx 11.3 + Mx 10.24 |

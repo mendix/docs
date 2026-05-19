@@ -277,11 +277,11 @@ The user can use the optional attribute [`allowUpload`](#allow-upload) with defa
 
 #### XML Attributes
 
-| Attribute  	| Required | Attribute Type | Description                                                           |
+| Attribute      | Required | Attribute Type | Description                                                           |
 |---------------|----------|----------------|-----------------------------------------------------------------------|
-| `type`     	| Yes      | String         | Must be `image`                                                       |
-| `key`      	| Yes      | String         | See [key](#key)                                                       |
-| `required` 	| No       | Boolean        | Whether the property must be specified by the user, `true` by default |
+| `type`         | Yes      | String         | Must be `image`                                                       |
+| `key`          | Yes      | String         | See [key](#key)                                                       |
+| `required`     | No       | Boolean        | Whether the property must be specified by the user, `true` by default |
 | `allowUpload` | No       | Boolean        | See [allowUpload](#allow-upload)                                      |
 
 #### Studio Pro UI

@@ -17,7 +17,7 @@ Testing is a vital component when creating a Mendix application. Finding and fix
 
 The testing pyramid is a convenient way to categorize tests according to their type, cost, speed, and scope.
 
-{{< figure src="/attachments/howto/testing/testing-pyramid.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/testing/testing-pyramid.png" class="no-border" >}}
 
 Tests at the bottom of the pyramid are generally cheaper and faster to run, giving you quicker feedback. As you move up, the scope of the tests increases, but so does their complexity and execution time.
 

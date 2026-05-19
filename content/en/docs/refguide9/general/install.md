@@ -18,7 +18,7 @@ If you use a Mac device, see [Configuring Parallels](/refguide9/using-mendix-stu
 
 For a deep-dive demonstration of how to install Studio Pro, follow along in this video:
 
-{{< vidyard "WUp2tLi68nXFQd7xhPbDtt" >}}
+{{< vidyard id="WUp2tLi68nXFQd7xhPbDtt" >}}
 
 ## Downloading Mendix Studio Pro
 
@@ -62,6 +62,7 @@ Sometimes you can run into problems when installing Studio Pro. One work-around 
 The prerequisites are the following:
 
 * Microsoft .NET Desktop Runtime
+
     | Studio Pro 9.0.0 - 9.24.33 | Studio Pro 9.24.34 - 9.24.41 | Studio Pro 9.24.42 and above |
     | --- | --- | --- |
     |  [Microsoft .NET Desktop Runtime 6.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) – Mendix recommends using version 6.0.6 or above | [Microsoft .NET Desktop Runtime 8.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) – Mendix recommends using version 8.0.14 or above | [.NET Desktop Runtime 10.0.x (x64 or ARM64)](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) <br/> Mendix recommends using version 10.0.3 or above |

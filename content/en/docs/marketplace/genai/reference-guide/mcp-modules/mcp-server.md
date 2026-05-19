@@ -47,6 +47,8 @@ For example, see the `Example Implementations` folder inside the module, which c
 
 #### Enable Authentication
 
+The MCP Server can be publicly accessed unless you specify [path-based restrictions](/developerportal/deploy/environments-details/#path-based-restrictions) on the endpoint when running on Mendix Cloud or on your own infrastructure.
+
 If no authentication is enabled for the MCP Server, it can be accessed by any service without being authorized specifically. Be aware that this is not recommended for applications running on the public cloud. Currently, selecting a microflow is required. For test purposes, however, you can just delete the content of the attribute after setting up the MCP Server if you do not want to enable authentication. There is a corresponding example in the [GenAI Showcase app](https://marketplace.mendix.com/link/component/220475), where the `ACT_MCPServerConfiguration_InitializeMCPServer` microflow shows how this can be done. 
 
 For most cases, you want to ensure that MCP clients must be authorized before using any resources from the MCP Server or even discover what resources are available. To enable authentication, you can specify a microflow in the `Create MCP Server` action. The microflow is executed each time a request is processed by the MCP Server.

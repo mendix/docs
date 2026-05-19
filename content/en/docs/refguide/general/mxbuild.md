@@ -68,7 +68,7 @@ Command-line options are described in the table below:
 | `-h`, `--help` | Prints a short description of the MxBuild and a list of all available options. |
 | `--java-home=DIRECTORY` | (Required). The directory in which the JDK is installed.<br/>For example, `--java-home=/usr/lib/jvm/java-8-oracle`.<br/>For Windows, *DIRECTORY* should be enclosed in double-quotes `"`. |
 | `--java-exe-path=FILENAME` | (Required). The full path to the Java executable.<br/>For example, `--java-exe-path=/usr/lib/jvm/java-8-oracle/bin/java`.<br/>For Windows, *DIRECTORY* should be enclosed in double-quotes `"` and must contain the complete file name `...\java.exe`. |
-| <code>––target=[package&#124;deploy]</code> | `package`: default if option is omitted; creates a deployment package (*.mda file*).<br/>`deploy`: deploys the app without making a deployment package.<br/>`sbom`: generates a [Software Bill of Materials](/refguide/sbom-generation/) (SBOM) in the CycloneDX format for the app. |
+| <code>--target=[package&#124;deploy&#124;sbom&#124;portable-app-package]</code> | `package`: default if option is omitted; creates a deployment package (*.mda file*).<br/>`deploy`: deploys the app without making a deployment package.<br/>`sbom`: generates a [Software Bill of Materials](/refguide/sbom-generation/) (SBOM) in the CycloneDX format for the app. <br/> `portable-app-package`: generates a portable app deployment zip file with components and configurations required to run the application.|
 | `--loose-version-check` | Creates a deployment package from an app which was created with a lower Mendix version.<br/>The app will be upgraded to the MxBuild version before the deployment package is created.<br /> Any changes included as a result of this upgrade will not be stored in your app. |
 | `--write-errors=FILENAME` | Writes all errors, warnings, and deprecations encountered during deployment of the app to the specified file in JSON format.<br />This file is only written when the app contains errors.<br />If the file already exists, it will be overwritten without a warning.<br />For a description of the format of this file, see the [App Errors](#app-errors) section below. |
 | `--generate-sbom` | Generates a Software Bill of Materials (SBOM) file as a part of the `package` and `deployment` targets. The SBOM will be included in the deployment package if this option is used and is saved under its default location: `deployment\sbom.json` |
@@ -79,7 +79,7 @@ Command-line options are described in the table below:
 ### Options When Creating a Package
 
 {{% alert color="info" %}}
-The following options are only applicable with the `--target=package` option.
+The following options are only applicable with the `--target=package` or `--target=portable-app-package` options.
 {{% /alert %}}
 
 Options when creating a package are described in the table below:
@@ -113,6 +113,23 @@ For example, to create a SBOM in the deployment directory of the App with the na
 
 ```bat
 mxbuild --target=sbom --java-home="C:\Program Files\Java\jdk1.8.0_144" --java-exe-path="C:\Program Files\Java\jdk1.8.0_144\bin\java.exe" "C:\Users\username\Documents\Mendix\MyApp\MyApp.mpr"
+```
+
+### Options When Creating a Portable App Package
+
+{{% alert color="info" %}}
+The following options are only applicable to the `--target=portable-app-package` option, which is available for Studio Pro 11.9 and above.
+{{% /alert %}}
+
+| Option | Description |
+| --- | --- |
+| `--export-secrets` | Emits passwords and private constants to the configuration files. |
+| `-o FILENAME` or<br/>`--output=FILENAME` | The name (with optional relative or absolute path) of the portable app deployment zip file. The extension of the file must be `.zip`. This option is mandatory.|
+
+For example, to create a portable app deployment zip file in the target directory of the app with the name `MyApp_PAD.zip` for the application `MyApp` using the Windows version of MxBuild, you can use the following command:
+
+```bat
+mxbuild --target=portable-app-package --java-home="C:\Program Files\Java\jdk1.8.0_144" --java-exe-path="C:\Program Files\Java\jdk1.8.0_144\bin\java.exe" -o "C:\Users\username\Documents\Mendix\MyApp\MyApp_PAD.zip"  "C:\Users\username\Documents\Mendix\MyApp\MyApp.mpr"
 ```
 
 ## Return Code
@@ -173,3 +190,7 @@ The location (or locations) associated with the problem have the following prope
 | `element` | A description of the model element in which the problem occurs. |
 | `document` | A description of the document in which the problem occurs. |
 | `module` | A description of the module in which the problem occurs. |
+
+## Troubleshooting {#troubleshooting}
+
+For Studio Pro 11.9.0 and above, MxBuild will load and run web extensions. Web extensions can now fail the build if they raise consistency errors for your app. For security purposes, MxBuild uses Deno to host the web extensions during build time. In some containerized environments, you may run into an `error 13 access denied` when Deno attemps to create its local cache structure. To work around this, you can set the `DENO_DIR` environment variable to a location where MxBuild has write access.

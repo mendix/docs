@@ -137,6 +137,7 @@ Attachments are uploaded via SendSafely, a secure file transfer service. SendSaf
 To resolve that error, please make sure that the following URLs are allowlisted in your network's security settings:
 
 * `https://mendix.sendsafely.eu`
+* `https://mendix.sendsafely.com`
 * `https://static-mendix.sendsafely.eu`
 * `https://sendsafely-dual-region-eu.s3-accelerate.amazonaws.com`
 

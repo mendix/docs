@@ -12,6 +12,41 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 ## 2026
 
+### May 7, 2026
+
+#### Portal Improvements
+
+* We have fixed an issue where an error pop-up would appear when opening Grafana for Logs and Metrics. (Ticket 277132)
+
+### May 1, 2026
+
+#### Mendix Ops CLI
+
+* We have released a new mx-ops-cli tool for configuring namespaces and performing base installations by using Helm charts. For more information, see [Installing Components through the Helm Chart UI](/developerportal/deploy/helm-charts/).
+
+### April 9, 2026
+
+#### Mendix Operator v2.26.1 {#2.26.1}
+
+* We have improved the AWS S3 region detection for bucket endpoints using the [Legacy global endpoint](https://docs.aws.amazon.com/AmazonS3/latest/userguide/VirtualHosting.html#VirtualHostingBackwardsCompatibility) format.
+* We have updated components to use the latest dependency versions in order to improve security score ratings for container images.
+* We have updated the list of supported platforms to include Kubernetes 1.35 and OpenShift 4.21.
+
+#### License Manager CLI v0.10.9 {#0.10.9}
+
+* We have updated components to use the latest dependency versions in order to improve security score ratings for container images.
+
+### April 2, 2026
+
+#### Portal Improvements
+
+* We have introduced configurable heap memory to align with Public Cloud optimization logic as a default for Operator 2.26.0 and newer.
+* We have aligned resource plans with Public Cloud standards and continue to support legacy plans.
+* Added a warning clarifying that cross-cluster restores are not supported (this limitation already existed) and environments are only visible within the same cluster.
+* We have fixed an issue where replicas with unknown status showed as licensed.
+* We have fixed an issue where scheduled events were missing after pipeline deployment and API updates. (Ticket 270822)
+* We enhanced namespace and cluster invite emails to clearly identify the Mendix on Kubernetes portal as the sender, and updated the email notification messages accordingly.
+
 ### February 25, 2026
 
 #### Mendix Operator v2.26.0 {#2.26.0}
@@ -337,7 +372,7 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 #### Documentation Improvements
 
-* We have published detailed documentation about network ingress settings. For more information, see [Network Ingress Settings in Mendix on Kubernetes](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/).
+* We have published detailed documentation about network ingress settings. For more information, see [Network Ingress Settings in Mendix on Kubernetes](/developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/).
 
 ### April 03, 2025
 

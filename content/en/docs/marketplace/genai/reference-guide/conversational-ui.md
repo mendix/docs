@@ -56,7 +56,7 @@ To use the Conversational UI module, your Mendix Studio Pro version must be 10.2
 
 You must also ensure you have the other prerequisite modules that Conversational UI requires. These modules are included by default in the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934), the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926), the [Support Assistant Starter App](https://marketplace.mendix.com/link/component/231035), and the [RFP Assistant Starter App](https://marketplace.mendix.com/link/component/235917). If not, you need to install them manually.
 
-* [GenAI Commons](https://marketplace.mendix.com/link/239448)
+* [GenAI Commons](https://marketplace.mendix.com/link/component/239448)
 * [Agent Commons](https://marketplace.mendix.com/link/component/240371)
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187)
 * [Data Widgets](https://marketplace.mendix.com/link/component/116540) 
@@ -288,6 +288,12 @@ You may need to use the following classes when building a more complex custom pa
 | `chat-dataview--display-contents` | To be added to any data view around chat components and its direct child `div` containers to prevent them from breaking the flex-flow on the page | 
 | `chat-page--fullheight` | To be added to the container of a full-screen chat to ensure it fills available space and maintains proper flex layout with wrapping and padding | 
 | `chat-page--fullheight-centered` | To be added to a full-screen chat container to center it on the page with a maximum width, while preserving the full-height flex layout and wrapping | 
+
+#### Markdown Rendering
+
+Many modern LLMs generate their responses in Markdown format to make it more appealing to users. By default, the text in the chat interface is rendered using the [MarkdownViewer](https://marketplace.mendix.com/link/component/230248) widget. You can disable it by setting the constant `EnableMarkdownViewer` to *False*, which will show the response in plain text.
+
+Sometimes it is helpful to manipulate the Markdown styling. For example, if the available space is limited, you can adjust certain settings using the `widget-markdown` class and apply your custom styling, for example, removing space from headers or lists.
 
 #### Using a Custom Layout
 

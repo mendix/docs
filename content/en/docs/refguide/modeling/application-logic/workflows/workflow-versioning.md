@@ -157,6 +157,8 @@ If a currently running workflow instance is executing an activity that is moved 
 
 Conversely, moving an activity from a parent path into a nested scope, such as a boundary event path or a sub-process, can also prevent the workflow from progressing. In these scenarios, the Workflow Engine cannot guarantee the integrity of the execution flow. This can result in the workflow instance remaining stuck in the **In Progress** state indefinitely, preventing it from ever reaching a completed state.
 
+This conflict can also occur when the type of an ongoing non-interrupting boundary event is changed. For more information, see [Changing Boundary Event Type](/refguide/workflow-boundary-events/#changing-boundary-event-type).
+
 You can do one of the following:
 
 * The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
@@ -210,6 +212,8 @@ You can do one of the following:
 
 When an app developer adds one or more activities in a workflow (or moves one or more activities to an earlier position in the flow), workflow instances that have already passed that point in the flow will not execute these activities. This may not necessarily be a problem, but it is possible that activities that have not been executed yet depend on new activities.
 
+This conflict can also occur when the type of an ongoing boundary event is changed. For more information, see [Changing Boundary Event Type](/refguide/workflow-boundary-events/#changing-boundary-event-type).
+
 You can do one of the following:
 
 * The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
@@ -260,3 +264,7 @@ You can do one of the following:
 * The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
 * The Administrator can use **Mark-as-Resolved** to fix this issue (the currently running activity within the removed sub-process will be aborted).
 * The app developer can revert the change (which adds the event sub-process back) and deploy it.
+
+### Workaround for Non-resolvable and Partially Resolvable Conflicts
+
+If the goal is to update an existing workflow document so that running workflow instances are unaffected while new workflow instances execute the new workflow document version, the best workaround is to duplicate the workflow document. To do so, right-click the workflow document and select **Duplicate**. Then make the desired edits in the duplicate. Finally, point the **Call workflow** activity to the new (duplicated) workflow document so that new instances use the updated version.

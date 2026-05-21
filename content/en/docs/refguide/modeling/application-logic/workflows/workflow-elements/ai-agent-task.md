@@ -41,6 +41,11 @@ The **Caption** describes what happens in this element. It is displayed under th
 
 The microflow that handles the AI agent execution for the AI agent task. Use it to prepare and pass the right information to the agent, call the agent, and define what happens next.
 
+The microflow supports the **Call Agent** activity (from the Agent Editor category). For a detailed example of how to use this activity, see [Creating Your First Agent](/appstore/modules/genai/how-to/howto-single-agent/).
+
+When you create a new microflow from the **Edit AI Agent Task** dialog, a **Call Agent** activity is automatically added to the microflow, provided that all required modules (such as the Agent Editor extension) are installed.
+
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/ai-agent-task/ai-agent-task-example.png" alt="Example microflow with a Call Agent activity automatically added when creating a new microflow from the Edit AI Agent Task dialog" >}}
 ### Parameters {#parameters}
 
 Parameters of the selected microflow. Depending on the selected microflow, you will see a list of its parameters. Parameters pass data to the element. To view the **Parameters**, click the ellipsis icon next to the property name.

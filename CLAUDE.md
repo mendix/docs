@@ -1,5 +1,6 @@
 # Mendix Documentation Repository
 
+<!-- vale off -->
 <!-- markdownlint-disable-file -->
 
 **Your role**: Edit and review Markdown documentation files under `content/en/docs/` following the style guidance and project-specific conventions below.

@@ -4,6 +4,7 @@ url: /community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting/
 weight: 20
 description: "Guidelines on grammar, formatting, capitalization, punctuation, lists, headings, and other writing conventions for Mendix documentation."
 ---
+<!-- vale off -->
 
 ## Acronyms and Initialisms
 

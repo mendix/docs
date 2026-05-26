@@ -4,6 +4,7 @@ url: /community-tools/contribute-to-mendix-docs/style-guide/terminology/
 weight: 30
 description: "Usage guidelines for general terminology in Mendix documentation, covering technical terms, formatting conventions, word choice, and inclusive language."
 ---
+<!-- vale off -->
 
 ## How to Use This Section
 

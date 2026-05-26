@@ -4,6 +4,7 @@ url: /community-tools/contribute-to-mendix-docs/style-guide/product-naming-guide
 weight: 100
 description: "Guidelines on usage, capitalization, and spelling for Mendix product names and terms, including main products and other Mendix-specific terminology."
 ---
+<!-- vale off -->
 
 ## Purpose of This Guide
 

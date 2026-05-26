@@ -31,7 +31,7 @@ The Agent Commons module offers the following features:
 
 * Agent Builder UI components and data model for managing, storing, and rapidly iterating on agent versions at runtime. No app deployment is required to update an agent.
 
-* Drag and drop operations for calling both single-call and conversational agents from microflows and workflows.
+* Drag and drop operations for calling both task and chat agents from microflows and workflows.
 
 * Adding tools and knowledge bases to enhance the agent's capabilities
 
@@ -104,9 +104,9 @@ When the app is running, a user with the `AgentAdmin` role can set up agents, wr
 
 Users can create two types of agents:
 
-* **Conversational Agent**: Intended for scenarios where the end user interacts through a chat interface, or where the agent is called conversationally  by another agent.
+* **Chat Agent**: Intended for scenarios where the end user interacts through a chat interface, or where the agent is called conversationally by another agent.
 
-* **Single-Call Agent**: Designed for isolated agentic patterns such as background processes, subagents in an Agent-as-Tool setup, or any use case that doesn't require a conversational interface with historical context.
+* **Task Agent**: Designed for isolated agentic patterns such as background processes, subagents in an Agent-as-Tool setup, or any use case that doesn't require a conversational interface with historical context.
 
  {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/agentcommons/agentbuilderUI.png" >}}
 
@@ -156,7 +156,7 @@ Note that [user access approval](/appstore/modules/genai/genai-for-mx/commons/#e
 
 #### Testing and Refining the Agent
 
-While writing the system prompt (for both conversational and single-call types) or the user prompt (only for the single-call type), the prompt engineer can include variables by enclosing them in double braces, for example, `{{variable}}`. The actual values of these placeholders are typically known at runtime based on the user's page context. 
+While writing the system prompt (for both chat and task types) or the user prompt (only for the task type), the prompt engineer can include variables by enclosing them in double braces, for example, `{{variable}}`. The actual values of these placeholders are typically known at runtime based on the user's page context. 
 To test the behavior of the prompts, a test can be executed. The prompt engineer must provide test values for all variables defined in the prompts. Additionally, multiple sets of test values for the variables can be defined and run in bulk. Based on the test results, the prompt engineer can add, remove, or rephrase certain parts of the prompt.
 
 ### Using the Agent in the App Logic {#app-logic}
@@ -173,8 +173,8 @@ For most use cases, a `Call Agent` microflow activity can be used. You can find 
 
 | Toolbox action name | Supported agent types | Description |
 |---|---|---|
-| [Call Agent with History](#call-agent-with-history) | Single-Call, Conversational | This action returns the assistant response for a single user message or based on a conversation history. The user message or an alternating chat history of the user and assistant message needs to be added to the request before calling this action. See [Add Message to Request](/appstore/modules/genai/genai-for-mx/commons/#chat-add-message-to-request) <br> This operation is designed for conversational agents, but will work for single-call agents as well; note that in that case, the user prompt defined on the agent version is ignored. |
-| [Call Agent without History](#call-agent-without-history) | Single-Call | This action returns the assistant response for a single user message. For Single-Call agents, the user message is already part of the agent version and thus does not need to be passed explicitly or added to the optional request. |
+| [Call Agent with History](#call-agent-with-history) | Task, Chat | This action returns the assistant response for a single user message or based on a conversation history. The user message or an alternating chat history of the user and assistant message needs to be added to the request before calling this action. See [Add Message to Request](/appstore/modules/genai/genai-for-mx/commons/#chat-add-message-to-request) <br> This operation is designed for chat agents, but will work for task agents as well; note that in that case, the user prompt defined on the agent version is ignored. |
+| [Call Agent without History](#call-agent-without-history) | Task | This action returns the assistant response for a single user message. For Task agents, the user message is already part of the agent version and thus does not need to be passed explicitly or added to the optional request. |
 
 ##### Call Agent with History {#call-agent-with-history}
 
@@ -188,7 +188,7 @@ To use it:
 4. Optional: For more specific use cases, a context object can be passed for variable replacement. This object needs to be of the entity that was selected while [defining the agent](#define-context-entity).
 5. Pass both the `Request`, Agent, and optionally the context object to the `Call Agent with History` activity.
 
-For a conversational agent, the chat context can be created based on the agent in one convenient operation. Use the `New Chat for Agent` operation from the **Toolbox** under the **Agents Kit** category. Retrieve the agent (for example, by name) and pass it with your custom context object to the operation. Note that this sets the system prompt for the chat context, making it applicable to the entire (future) conversation. Similar to other chat context operations, an action microflow needs to be selected for this microflow action. For more information, see the [Creating a Custom Action Microflow](/appstore/modules/genai/genai-for-mx/conversational-ui/#action-microflow) section of Conversational UI.
+For a chat agent, the chat context can be created based on the agent in one convenient operation. Use the `New Chat for Agent` operation from the **Toolbox** under the **Agents Kit** category. Retrieve the agent (for example, by name) and pass it with your custom context object to the operation. Note that this sets the system prompt for the chat context, making it applicable to the entire (future) conversation. Similar to other chat context operations, an action microflow needs to be selected for this microflow action. For more information, see the [Creating a Custom Action Microflow](/appstore/modules/genai/genai-for-mx/conversational-ui/#action-microflow) section of Conversational UI.
 
 {{% alert color="info" %}}
 Download the [Agent Builder Starter App](https://marketplace.mendix.com/link/component/240369) from the Marketplace for a detailed example of how to use the **Call Agent** activity in an action microflow of a chat interface.
@@ -196,7 +196,7 @@ Download the [Agent Builder Starter App](https://marketplace.mendix.com/link/com
 
 ##### Call Agent without History {#call-agent-without-history}
 
-This action is only supported by Single-call agents which have a user prompt defined as part of the agent version. It uses all defined settings, including the selected model, system prompt, user prompt, tools, knowledge base, and model parameters to call the agent by executing a `Chat Completions` operation. If any of the parameters (system prompt, temperature, top P, or max tokens) should be overwritten or you want to pass an additional knowledge base or tool that is not already defined with the agent. You can do this by creating a request and adding these properties before passing it as `OptionalRequest` to the operation. If a context entity was configured, the corresponding context object must be passed so that variables in the system prompt can be replaced. The operation returns a `Response` object containing the assistant’s final message, similar to the chat completions operations from GenAI Commons. If there are tool calls requested by the model and set for visibility to the user, the response will contain those instead, see [Human in the loop](/appstore/modules/genai/genai-for-mx/conversational-ui/#human-in-the-loop), for more information.
+This action is only supported by Task agents which have a user prompt defined as part of the agent version. It uses all defined settings, including the selected model, system prompt, user prompt, tools, knowledge base, and model parameters to call the agent by executing a `Chat Completions` operation. If any of the parameters (system prompt, temperature, top P, or max tokens) should be overwritten or you want to pass an additional knowledge base or tool that is not already defined with the agent. You can do this by creating a request and adding these properties before passing it as `OptionalRequest` to the operation. If a context entity was configured, the corresponding context object must be passed so that variables in the system prompt can be replaced. The operation returns a `Response` object containing the assistant’s final message, similar to the chat completions operations from GenAI Commons. If there are tool calls requested by the model and set for visibility to the user, the response will contain those instead, see [Human in the loop](/appstore/modules/genai/genai-for-mx/conversational-ui/#human-in-the-loop), for more information.
 
 To use it:
 

@@ -56,7 +56,7 @@ To use the Conversational UI module, your Mendix Studio Pro version must be 10.2
 
 You must also ensure you have the other prerequisite modules that Conversational UI requires. These modules are included by default in the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934), the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926), the [Support Assistant Starter App](https://marketplace.mendix.com/link/component/231035), and the [RFP Assistant Starter App](https://marketplace.mendix.com/link/component/235917). If not, you need to install them manually.
 
-* [GenAI Commons](https://marketplace.mendix.com/link/239448)
+* [GenAI Commons](https://marketplace.mendix.com/link/component/239448)
 * [Agent Commons](https://marketplace.mendix.com/link/component/240371)
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187)
 * [Data Widgets](https://marketplace.mendix.com/link/component/116540) 

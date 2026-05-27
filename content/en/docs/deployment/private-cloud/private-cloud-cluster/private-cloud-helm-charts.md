@@ -123,7 +123,11 @@ If you want to update your configuration (for example, to change the database), 
 
 1. In the Web UI application, click **Import from file**. 
 2. Update the imported yaml file by following the same wizard as above.
-3. Update the configuration with the new yaml file by running the following command: `helm upgrade -n <your namespace> -f <yaml file name> <release name> mx-privatecloud-operator-installer`.
+3. Update the configuration with the new yaml file by running the following command: 
+
+    ```text
+    helm upgrade -n <your namespace> -f <yaml file name> <release name> mx-privatecloud-operator-installer
+    ```
 
 ## Upgrading to a New Version of the Mendix Operator
 
@@ -131,8 +135,17 @@ When upgrading the Mendix Operator, perform the following steps:
 
 1. In the Web UI application, click **Download charts** to download the Helm charts for your current configuration.
 2. Extract the yaml file from the download.
-3. Update the [Custom Resource Definitions](/developerportal/deploy/private-cloud-technical-appendix-01/#custom-resources) by running `kubectl apply -f mx-privatecloud-operator-crd/crds/`.
-4. Update the configuration by running the following command: `helm upgrade -n <your namespace> -f <yaml file name> <release name> mx-privatecloud-operator-installer`.
+3. Update the [Custom Resource Definitions](/developerportal/deploy/private-cloud-technical-appendix-01/#custom-resources) by running the following command:
+
+    ```text
+    kubectl apply -f mx-privatecloud-operator-crd/crds/
+    ```
+
+4. Update the configuration by running the following command: 
+
+    ```text
+    helm upgrade -n <your namespace> -f <yaml file name> <release name> mx-privatecloud-operator-installer
+    ```
 
 ## Uninstalling the Cluster
 

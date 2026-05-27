@@ -7,13 +7,7 @@ description: "Usage guidelines for general terminology in Mendix documentation, 
 
 ## How to Use This Section
 
-This section contains decisions and usage guidelines for general (non-Mendix specific) terminology, including inclusive language guidelines. For guidelines on Mendix-specific terminology, see the Mendix Product Naming Guide.
-
-Under each term are the following:
-
-Guidelines.
-
-> Example
+This section contains decisions and usage guidelines for general (non-Mendix specific) terminology, including inclusive language guidelines. For guidelines on Mendix-specific terminology, see the [Mendix Product Naming Guide](/community-tools/contribute-to-mendix-docs/style-guide/product-naming-guide/).
 
 ## 1-1 & one-to-one
 
@@ -59,7 +53,7 @@ In the context of development and project management, sometimes using "project" 
 
 ## app owner
 
-This is not a formalized/Mendix term (in comparison to [App Contact](/developerportal/general/app-roles/)), so we cannot assume the user knows what this is. This should be defined in general terms and made clearer via context (for example, via the "Copyright" example in the [Insights Hub module documentation](/partners/siemens/mindsphere-module-details/#configuring-the-os-bar)) that it is the user's responsibility to define/interpret what an app owner is for their app.
+This is not a formalized/Mendix term, so we cannot assume the user knows what this is. This should be defined in general terms and made clearer via context (for example, via the "Copyright" example in the [Insights Hub module documentation](/partners/siemens/mindsphere-module-details/#configuring-the-os-bar)) that it is the user's responsibility to define and interpret what an app owner is for their app.
 
 ## article, document, page
 

@@ -1,0 +1,15 @@
+# Override Microsoft.Foreign for better i.e./e.g. replacements
+# The Microsoft rule removes spacing incorrectly when applying quick fixes
+extends: substitution
+message: "Use '%s' instead of '%s'."
+level: error
+ignorecase: false
+swap:
+  'i\.e\., ': 'that is, '
+  'i\.e\. ': 'that is, '
+  'e\.g\., ': 'for example, '
+  'e\.g\. ': 'for example, '
+  '\(i\.e\., ': '(that is, '
+  '\(i\.e\. ': '(that is, '
+  '\(e\.g\., ': '(for example, '
+  '\(e\.g\. ': '(for example, '

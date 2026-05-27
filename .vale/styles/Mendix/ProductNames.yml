@@ -4,6 +4,14 @@ extends: substitution
 message: "Use '%s' instead of '%s'"
 level: error
 ignorecase: false
+scope:
+  - paragraph
+  - heading
+  - list
+  - table
+  - blockquote
+action:
+  name: replace
 swap:
   # Main product deprecated names
   'Mendix for Private Cloud': 'Mendix on Kubernetes'

@@ -3,7 +3,12 @@ message: "Define '%s' on first use."
 link: https://docs.microsoft.com/en-us/style-guide/acronyms
 level: suggestion
 ignorecase: false
-scope: '!raw'
+scope:
+  - paragraph
+  - heading
+  - list
+  - table
+  - blockquote
 # Ensures that the existence of 'first' implies the existence of 'second'.
 # Modified from Microsoft.Acronyms to accept sentence-case definitions
 # e.g., "personal access token (PAT)" not just "Personal Access Token (PAT)"

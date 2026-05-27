@@ -4,6 +4,14 @@ extends: substitution
 message: "Use '%s' instead of '%s'"
 level: error
 ignorecase: true
+scope:
+  - paragraph
+  - heading
+  - list
+  - table
+  - blockquote
+action:
+  name: replace
 swap:
   'top left': 'upper left'
   'top-left': 'upper-left'

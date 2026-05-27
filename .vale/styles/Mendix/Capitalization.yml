@@ -5,7 +5,14 @@ extends: substitution
 message: "Use '%s' (capitalized)"
 level: error
 ignorecase: true
-scope: '!raw'
+scope:
+  - paragraph
+  - heading
+  - list
+  - table
+  - blockquote
+action:
+  name: replace
 swap:
   agents kit: Agents Kit
   boolean: Boolean
@@ -17,7 +24,6 @@ swap:
   postgres: Postgres
   postgresql: PostgreSQL
   scrum: Scrum
-  sprint: Sprint
   sql: SQL
   'atlas ui': 'Atlas UI'
   'build server': 'Build Server'

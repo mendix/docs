@@ -4,6 +4,14 @@ extends: substitution
 message: "Use '%s' instead of '%s' (unless referring to UI button text)"
 level: warning
 ignorecase: true
+scope:
+  - paragraph
+  - heading
+  - list
+  - table
+  - blockquote
+action:
+  name: replace
 swap:
   'log in': 'sign in'
   'log out': 'sign out'

@@ -5,6 +5,14 @@ extends: substitution
 message: "Use '%s' instead of '%s'"
 level: error
 ignorecase: true
+scope:
+  - paragraph
+  - heading
+  - list
+  - table
+  - blockquote
+action:
+  name: replace
 swap:
   'data-set': 'dataset'
   'data set': 'dataset'

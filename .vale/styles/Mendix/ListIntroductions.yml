@@ -5,6 +5,8 @@ ignorecase: false
 nonword: true
 level: error
 scope: list
+action:
+  name: replace
 swap:
   # Match up to 40 chars + word/slash/digit + space + em dash + space
   '^.{0,40}([a-zA-Z0-9/]) — ': '$1 – '

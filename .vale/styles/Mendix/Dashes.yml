@@ -5,6 +5,14 @@ link: https://docs.microsoft.com/en-us/style-guide/punctuation/dashes-hyphens/em
 ignorecase: false
 nonword: true
 level: error
+scope:
+  - paragraph
+  - heading
+  - list
+  - table
+  - blockquote
+action:
+  name: replace
 swap:
   # Em dashes (—) should not have spaces
   ' — ': '—'

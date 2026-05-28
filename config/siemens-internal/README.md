@@ -9,13 +9,19 @@ The site is deployed at:
 https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/public/
 ```
 
-## The Problem
+## The Problems
+
+### 1. Deep URL Path
 
 When deploying a Hugo site to a deep URL path (not at the domain root), CSS, JavaScript, and image references need to include the full path. Hugo generates URLs based on the `baseURL` setting, but with deep paths, the `canonifyURLs` feature can cause some assets (specifically CSS and JS) to have doubled paths.
 
 For example:
 - Expected: `https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/public/scss/main.css`
 - Generated: `https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/public/documentation/internal/PL20260323299104942/en-US/public/scss/main.css`
+
+### 2. Pretty URLs Not Supported
+
+The Siemens internal server does not properly serve Hugo's default "pretty URLs" (e.g., `/page/` resolving to `/page/index.html`). To work around this, we use `uglyURLs = true` which ensures Hugo generates the traditional directory structure with explicit `index.html` files.
 
 ## The Solution
 
@@ -47,7 +53,11 @@ The built site will be in the `public/` directory, ready for deployment to the S
 ## Configuration Files
 
 ### hugo.toml
-Sets the baseURL and enables `canonifyURLs` to handle the deep deployment path.
+
+Sets the baseURL and enables:
+
+- `canonifyURLs = true` to handle the deep deployment path
+- `uglyURLs = true` to ensure proper URL resolution on the Siemens server
 
 ### scripts/fix-siemens-paths.sh
 Post-processing script that copies:

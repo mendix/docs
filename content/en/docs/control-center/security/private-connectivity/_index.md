@@ -3,7 +3,7 @@ title: "Private Connectivity"
 linktitle: "Private Connectivity"
 url: /control-center/private-connectivity/
 description: "Describes the Private Connectivity section in the Mendix Control Center."
-weight: 30
+weight: 40
 beta: true
 ---
 

@@ -46,11 +46,19 @@ Always use with "Mendix," so always use "Mendix on Kubernetes."
 
 This term replaces "Mendix for Private Cloud", which is not to be used in the product UI or documentation.
 
+### Mendix Agents Kit
+
+Use "Mendix Agents Kit" the first time it's mentioned in a doc. For any subsequent mentions, omit "Mendix" and just use "Agents Kit".
+
+Capitalize in all instances.
+
+Do not use "the Mendix Agents Kit" or "the Agents Kit".
+
 ### Mendix Cloud
 
 Capitalize in all instances.
 
-Always use with "Mendix," so always use "Mendix Cloud."
+Always use with "Mendix," so always use "Mendix Cloud".
 
 Do not use "the Mendix Cloud", and do not mention a version number when referring to Mendix Cloud.
 

@@ -8,11 +8,8 @@ scope: list
 action:
   name: replace
 swap:
-  # Match up to 40 chars + word/slash/digit + space + em dash + space
-  '^.{0,40}([a-zA-Z0-9/]) — ': '$1 – '
-  # Match up to 40 chars + word/slash/digit + space + em dash no trailing space
-  '^.{0,40}([a-zA-Z0-9/]) —': '$1 – '
-  # Match up to 40 chars + word/slash/digit + em dash + space no leading space
-  '^.{0,40}([a-zA-Z0-9/])— ': '$1 – '
-  # Match up to 40 chars + word/slash/digit + em dash no spaces
-  '^.{0,40}([a-zA-Z0-9/])—': '$1 – '
+  # Match up to 40 chars (excluding em dashes) from start of line, then replace first em dash with en dash
+  # Limit to first ~40 chars to avoid matching em dashes in the middle of list text
+  '^([^—]{0,40}) — ': '$1 – '  # em dash with spaces on both sides
+  '^([^—]{0,40}) —': '$1 – '   # em dash with space before, no space after
+  '^([^—]{0,40})— ': '$1 – '   # em dash with no space before, space after

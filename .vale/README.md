@@ -5,9 +5,9 @@
 It applies in the following contexts:
 
 * **GitHub PRs**: Runs automatically on PRs marked "Ready for review" and posts inline comments on changed lines. Only shows errors (warnings and suggestions are hidden).
-* **Local**: Install Vale for immediate feedback in VS Code while editing. Shows all levels: suggestions, warnings, and errors. Many Vale rules support automatic fixes—click the lightbulb icon next to flagged text in the Problems tab or hover over an underlined issue and click **Quick Fix**.
+* **Local**: Install Vale for immediate feedback in VS Code while editing. Shows all levels: suggestions, warnings, and errors.
 
-Need to install Vale? See [SETUP.md](./SETUP.md) for installation and verification steps.
+Need to install Vale? See [SETUP.md](./SETUP.md) for installation steps.
 
 ## File Structure
 

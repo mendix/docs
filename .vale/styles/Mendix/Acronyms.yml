@@ -51,6 +51,7 @@ exceptions:
   - POST
   - RAM
   - REPL
+  - REST
   - RSA
   - SCM
   - SCSS

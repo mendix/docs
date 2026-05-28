@@ -35,7 +35,8 @@ div.lp-container {
     flex: 0 0 100%;
     // Stretch out text once image disappears (smaller viewports)
     @include media-breakpoint-up(lg) {
-        flex: 0 0 60%;
+        flex: 0 0 auto;
+        max-width: 60%;
     }
 }
 
@@ -53,8 +54,16 @@ h5.lp-description {
 
 .lp-container img {
     border-style: none;
-    max-width: 75%;
+    max-width: 100%;
     height: auto;
+}
+
+.lp-container .hero-image img {
+    height: 220px;
+    width: auto;
+    max-width: unset;
+    flex-shrink: 0;
+
 }
 
 img.card-icon {

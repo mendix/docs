@@ -20,8 +20,8 @@ div.lp-container {
 }
 
 .lp-hero {
-    background-color: #0A1324;
-    min-height: 400px;
+    background-color: $dark;
+    min-height: 350px;
     margin-left: -2.5rem;
     margin-right: -2.5rem;
     padding: 2rem 2.5rem;
@@ -53,7 +53,7 @@ h5.lp-description {
 
 .lp-container img {
     border-style: none;
-    max-width: 100%;
+    max-width: 75%;
     height: auto;
 }
 
@@ -130,7 +130,7 @@ p.rn-date {
 
 // Mobile hamburger bar on landing page — matches hero background
 .lp-mobile-bar {
-    background-color: #0A1324;
+    background-color: $dark;
     margin-left: -2.5rem;
     margin-right: -2.5rem;
     padding: 4rem 2.5rem 0.75rem;

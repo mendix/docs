@@ -12,3 +12,6 @@ canonifyURLs = true
 
 # Disable robots.txt for internal deployment
 enableRobotsTXT = false
+
+# Enable ugly URLs to help links work on the Siemens site 
+uglyURLs = true

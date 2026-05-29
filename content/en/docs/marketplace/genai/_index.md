@@ -60,7 +60,7 @@ Integrate AI capabilities into your applications with Agents Kit, a collection o
 | [Agent Commons](/appstore/modules/genai/genai-for-mx/agent-commons/) | Build agentic functionality by defining, testing, and evaluating agents at runtime. Iterate on prompts and agent configurations without app redeployment through the integrated Agent Builder UI. | 10.24 |
 | [Agent Editor](/appstore/modules/genai/genai-for-mx/agent-editor/) | Define agents as version-controlled documents in Studio Pro at design time. Author prompts, configure tools and knowledge bases, test locally, and deploy agents as part of your app model. | 11.9 |
 | [Conversational UI](/appstore/modules/genai/conversational-ui/) | Create chat interfaces for full-screen, sidebar, or modal GenAI conversations. Monitor token consumption and trace interactions with UI features built on GenAI Commons. | 10.24 |
-| [GenAI Commons](/appstore/modules/genai/commons/) | Use common capabilities that allow all GenAI connectors to be integrated with the other modules. You can also implement your own connector based on this module. | 10.24 |
+| [GenAI Commons](/appstore/modules/genai/commons/) | Base module with common capabilities that allow all GenAI connectors to be integrated with the other modules. Required dependency for both core and connector modules. You can also implement your own connector based on this module. | 10.24 |
 
 #### Connector Modules {#connectors}
 

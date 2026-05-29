@@ -3,6 +3,7 @@
 # Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/product-naming-guide.md
 extends: substitution
 message: "Use '%s' (capitalized)"
+link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/product-naming-guide/
 level: error
 ignorecase: true
 scope:

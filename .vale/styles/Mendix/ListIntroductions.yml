@@ -2,6 +2,7 @@
 # Known issue: Only matches plaintext list intros
 extends: substitution
 message: "Set off list item introductions with an en dash (–), not an em dash (—)."
+link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting/#en-dash
 ignorecase: false
 nonword: true
 level: error

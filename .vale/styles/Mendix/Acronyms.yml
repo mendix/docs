@@ -1,6 +1,6 @@
 extends: conditional
 message: "Define '%s' on first use."
-link: https://docs.microsoft.com/en-us/style-guide/acronyms
+link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting/#acronyms-and-initialisms
 level: suggestion
 ignorecase: false
 scope:

@@ -2,6 +2,7 @@
 # Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/terminology.md (click)
 extends: substitution
 message: "Use '%s' instead of '%s'"
+link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/terminology/#click
 level: error
 ignorecase: true
 scope:

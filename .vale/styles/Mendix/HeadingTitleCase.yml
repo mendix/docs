@@ -1,6 +1,7 @@
 # Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting.md (Headings and Titles)
 extends: capitalization
 message: "Use title case capitalization for '%s'."
+link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting/#capitalization
 level: warning
 scope: heading
 match: $title

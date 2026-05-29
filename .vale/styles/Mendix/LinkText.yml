@@ -3,7 +3,7 @@
 # Reference: CLAUDE.md (Line 85: "Use descriptive link text such as the page title, not 'click here'")
 extends: existence
 message: "Use descriptive link text instead of '%s'."
-link: https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html
+link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting/#hyperlinks
 level: error
 ignorecase: true
 scope: raw

@@ -1,7 +1,7 @@
 # Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting.md (Dashes)
 extends: substitution
 message: "Remove spaces around em dashes (—)."
-link: https://docs.microsoft.com/en-us/style-guide/punctuation/dashes-hyphens/emes
+link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting/#em-dash
 ignorecase: false
 nonword: true
 level: error

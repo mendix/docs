@@ -125,7 +125,7 @@ Use the verbs "select" and "clear."
 
 Write as two words (following the *Microsoft Style Guide*).
 
-## click
+## click {#click}
 
 Use "click" and not "click on."
 
@@ -455,7 +455,7 @@ Write as one word, not with a hyphen.
 
 Capitalize in all instances. We also capitalize "Agile" and "Sprint."
 
-## sign in/sign out
+## sign in/sign out {#sign-insign-out}
 
 When referring to an action which is taking place, use "sign in" and "sign out" instead of "log in," "login," "log out," "log off," etc.
 
@@ -503,7 +503,7 @@ Can use as a verb.
 
 > Click this to toggle the protection level for the content.
 
-## upper left/upper right
+## upper left/upper right {#upperlowercase}
 
 When used as an adjective, include a hyphen between the words.
 

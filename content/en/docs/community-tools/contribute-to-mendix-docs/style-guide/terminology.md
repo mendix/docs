@@ -148,7 +148,7 @@ Write as one word.
 
 ## deploy
 
-The act of putting a Mendix app into an environment where it has access to all the resources it needs to run. This is triggered in the Developer Portal, or in the modeler by clicking **Run** or **Run Locally**.
+The act of putting a Mendix app into an environment where it has access to all the resources it needs to run. This is triggered in Apps, or in Studio Pro by clicking **Run** or **Run Locally**.
 
 Use *deploy to* when referring to a cloud environment.
 
@@ -324,11 +324,11 @@ Use lower-case unless it is part of a term like "Mendix Native Mobile Builder".
 
 ## navigation pane
 
-Use to refer to the navigation interface on the left side of the screen in the Developer Portal.
+Use to refer to the navigation interface on the left side of the screen in Apps.
 
 Do not capitalize.
 
-> Select your app in the Developer Portal, then click **Backups** in the navigation pane.
+> Select your app in Apps, then click **Backups** in the navigation pane.
 
 ## no-code, no code
 
@@ -460,7 +460,7 @@ When referring to an action which is taking place, use "sign in" and "sign out" 
 
 When referring to a button or other element of the UI, refer to the UI text.
 
-> Sign out of the Developer Portal by clicking **Log out** in the menu under your avatar.
+> Sign out of Apps by clicking **Log out** in the menu under your avatar.
 
 ## single sign-on
 
@@ -512,7 +512,7 @@ Do not use "top left" and "top right".
 
 ## user vs. end-user
 
-A "user" is a user of the Mendix Platform (apps in development, app projects, project management, Developer Portal, etc.).
+A "user" is a user of the Mendix Platform (apps in development, app projects, project management, etc.).
 
 An "end-user" is a user of a Mendix app built on the platform. This term will be used less in the documentation, as we document for Mendix Platform users and not general Mendix app users in most cases.
 

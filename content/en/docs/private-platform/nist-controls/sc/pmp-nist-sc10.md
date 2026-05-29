@@ -1,5 +1,6 @@
 ---
 title: "SC-10 System and Communications Protection - Network Disconnect"
+linktitle: "SC-10"
 url: /private-mendix-platform/nist-controls/sc-10/
 description: "Documents the Private Mendix Platform's compliance with the SC-10 control of the NIST 800-53 framework."
 weight: 20

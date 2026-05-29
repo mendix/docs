@@ -14,7 +14,7 @@ This document is about [Private Mendix Platform](/private-mendix-platform/) API.
 
 ## Introduction
 
-The Private Mendix Platform Group API allows you to manage user groups in Private Mendix Platform. You can use the API to do the following:
+The Private Mendix Platform Group API allows you to manage environments in Private Mendix Platform. You can use the API to do the following:
 
 * Create a new environment for the application
 * Retrieve all environments for the application

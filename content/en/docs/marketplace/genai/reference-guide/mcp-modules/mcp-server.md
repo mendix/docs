@@ -57,7 +57,7 @@ The selected microflow must adhere to the following principles:
 * The Input type should be `MCPServer` and/or `System.HttpRequest`, to extract required values, such as HttpHeaders, from the request.
 * The return value needs to be a `System.User` object which represents the user who sent the request.
 
-Within your microflow, you can implement your custom logic to authenticate the user. For example, you can use username and password (basic auth), Mendix SSO, or external identity providers (IdP) as long as a `User` is returned. Note that the example authentication microflow within the module only implements basic authentication.
+Within your microflow, you can implement your custom logic to authenticate the user. For example, you can use username and password (basic auth) or external identity providers (IdP) as long as a `User` is returned. Note that the example authentication microflow within the module only implements basic authentication.
 
 The `User` returned in the microflow is used for all subsequent prompt and tool microflows within the same session. This makes the `currentUser` and `currentSession` variables available, allowing you to apply entity access for user-based access control based on the default Mendix entity access settings.
 

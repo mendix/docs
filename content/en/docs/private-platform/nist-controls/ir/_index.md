@@ -5,7 +5,7 @@ url: /private-mendix-platform/nist-controls-ir/
 description: "Documents the Private Mendix Platform's compliance with the Incident Response (IR) category of the NIST 800-53 security framework."
 weight: 10
 no_list: false 
-description_list: false
+simple_list: true
 ---
 
 ## Introduction

@@ -1,5 +1,6 @@
 ---
 title: "SC-18 System and Communications Protection - Mobile Code"
+linktitle: "SC-18"
 url: /private-mendix-platform/nist-controls/sc-18/
 description: "Documents the Private Mendix Platform's compliance with the SC-18 control of the NIST 800-53 framework."
 weight: 20

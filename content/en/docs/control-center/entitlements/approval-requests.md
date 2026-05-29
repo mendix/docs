@@ -2,7 +2,7 @@
 title: "Approval Requests"
 url: /control-center/approval-requests/
 description: "Describes the Approval Requests page in the Mendix Control Center."
-weight: 30
+weight: 40
 no_list: false 
 ---
 

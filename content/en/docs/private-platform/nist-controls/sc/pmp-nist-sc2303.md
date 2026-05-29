@@ -1,5 +1,6 @@
 ---
 title: "SC-23 (03) System and Communications Protection - Session Authenticity - Unique Session Identifiers with Randomness"
+linktitle: "SC-23 (03)"
 url: /private-mendix-platform/nist-controls/sc-2303/
 description: "Documents the Private Mendix Platform's compliance with the SC-23 (03) control of the NIST 800-53 framework."
 weight: 20

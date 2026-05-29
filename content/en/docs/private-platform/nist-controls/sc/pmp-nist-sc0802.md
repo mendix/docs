@@ -1,5 +1,6 @@
 ---
 title: "SC-08 (02) System and Communications Protection - Transmission Confidentiality and Integrity- Pre/Post Transmission Handling"
+linktitle: "SC-08 (02)"
 url: /private-mendix-platform/nist-controls/sc-0802/
 description: "Documents the Private Mendix Platform's compliance with the SC-08 (02) control of the NIST 800-53 framework."
 weight: 20

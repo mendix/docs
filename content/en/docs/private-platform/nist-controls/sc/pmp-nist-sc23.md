@@ -1,5 +1,6 @@
 ---
 title: "SC-23 System and Communications Protection - Session Authenticity"
+linktitle: "SC-23"
 url: /private-mendix-platform/nist-controls/sc-23/
 description: "Documents the Private Mendix Platform's compliance with the SC-23 control of the NIST 800-53 framework."
 weight: 20

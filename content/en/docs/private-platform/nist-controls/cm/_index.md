@@ -5,7 +5,7 @@ url: /private-mendix-platform/nist-controls-cm/
 description: "Documents the Private Mendix Platform's compliance with the Configuration Management (CM) category of the NIST 800-53 security framework."
 weight: 10
 no_list: false 
-description_list: false
+simple_list: true
 ---
 
 ## Introduction

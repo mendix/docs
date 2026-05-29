@@ -1,5 +1,6 @@
 ---
 title: "SC-12 System and Communications Protection - Cryptographic Key Establishment and Management"
+linktitle: "SC-12"
 url: /private-mendix-platform/nist-controls/sc-12/
 description: "Documents the Private Mendix Platform's compliance with the SC-12 control of the NIST 800-53 framework."
 weight: 20

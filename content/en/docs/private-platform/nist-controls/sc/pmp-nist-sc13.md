@@ -1,5 +1,6 @@
 ---
 title: "SC-13 System and Communications Protection - Cryptographic Protection"
+linktitle: "SC-13"
 url: /private-mendix-platform/nist-controls/sc-13/
 description: "Documents the Private Mendix Platform's compliance with the SC-13 control of the NIST 800-53 framework."
 weight: 20

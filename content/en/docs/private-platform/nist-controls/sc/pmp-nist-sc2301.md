@@ -1,5 +1,6 @@
 ---
 title: "SC-23 (01) System and Communications Protection - Session Authenticity - Invalidate Session Identifiers at Logout"
+linktitle: "SC-23 (01)"
 url: /private-mendix-platform/nist-controls/sc-2301/
 description: "Documents the Private Mendix Platform's compliance with the SC-23 (01) control of the NIST 800-53 framework."
 weight: 20

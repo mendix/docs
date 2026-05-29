@@ -1,5 +1,6 @@
 ---
 title: "SC-07 (14) System and Communications Protection - Boundary Protection - Protects Against Unauthorized Physical Connections"
+linktitle: "SC-07 (14)"
 url: /private-mendix-platform/nist-controls/sc-0714/
 description: "Documents the Private Mendix Platform's compliance with the SC-07 (14) control of the NIST 800-53 framework."
 weight: 20

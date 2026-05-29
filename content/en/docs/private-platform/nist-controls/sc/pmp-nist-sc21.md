@@ -1,5 +1,6 @@
 ---
 title: "SC-21 System and Communications Protection - Secure Name and Address Resolution Service (Recursive or Caching Resolver)"
+linktitle: "SC-21"
 url: /private-mendix-platform/nist-controls/sc-21/
 description: "Documents the Private Mendix Platform's compliance with the SC-21 control of the NIST 800-53 framework."
 weight: 20

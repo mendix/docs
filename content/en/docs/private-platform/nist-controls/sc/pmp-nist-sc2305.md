@@ -1,5 +1,6 @@
 ---
 title: "SC-23 (05) System and Communications Protection - Session Authenticity - Allowed Certificate Authorities"
+linktitle: "SC-23 (05)"
 url: /private-mendix-platform/nist-controls/sc-2305/
 description: "Documents the Private Mendix Platform's compliance with the SC-23 (05) control of the NIST 800-53 framework."
 weight: 20

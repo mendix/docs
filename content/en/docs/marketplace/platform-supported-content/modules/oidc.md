@@ -30,10 +30,9 @@ The module version 4.1.1 is a special release intended only for Mendix version 1
 The OIDC SSO module works with both web/responsive applications and progressive web apps (PWA).
 {{% /alert %}}
 
-Alternatives to using OIDC SSO for managing single sign-on are:
+Alternatives you can use [SAML](https://marketplace.mendix.com/link/component/1174) for managing single sign-on if your IdP supports the SAML protocol but not the OIDC protocol.
 
-* [SAML](https://marketplace.mendix.com/link/component/1174) – if your IdP supports the SAML protocol but not the OIDC protocol
-* [Mendix SSO](https://marketplace.mendix.com/link/component/111349) – if your app is targeted at end-users that have signed up to the Mendix platform
+You can also use the [Mendix SSO](https://marketplace.mendix.com/link/component/111349) if your app is targeted at end-users that have signed up to the Mendix platform. However, this module is deprecated as of May 1, 2026. You may alternatively use [SAML](/appstore/modules/saml/), or [LDAP](/appstore/modules/ldap/).
 
 ### Typical Usage Scenarios
 

@@ -60,3 +60,4 @@ Furthermore, an MCP Client example teaches you how to establish a connection to 
 * The official [MCP docs](https://modelcontextprotocol.io/introduction)
 * The [MCP Java SDK GitHub Repository](https://github.com/modelcontextprotocol/java-sdk)
 * A blog post on [How to use MCP to bring Mendix Business Logic into Claude for Desktop](https://www.mendix.com/blog/how-to-use-mcp-to-bring-mendix-business-logic-into-claude-for-desktop/)
+* [Connect a Mendix AI Agent to a Snowflake-Managed MCP Server](/appstore/modules/snowflake/connect-ai-agent-to-snowflake-mcp/)

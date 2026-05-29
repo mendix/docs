@@ -1,5 +1,6 @@
 ---
 title: "SC-20 System and Communications Protection - Secure Name and Address Resolution Service (Authoritative Source)"
+linktitle: "SC-20"
 url: /private-mendix-platform/nist-controls/sc-20/
 description: "Documents the Private Mendix Platform's compliance with the SC-20 control of the NIST 800-53 framework."
 weight: 20

@@ -1,5 +1,6 @@
 ---
 title: "SC-17 System and Communications Protection - Public Key Infrastructure Certificates"
+linktitle: "SC-17"
 url: /private-mendix-platform/nist-controls/sc-17/
 description: "Documents the Private Mendix Platform's compliance with the SC-17 control of the NIST 800-53 framework."
 weight: 20

@@ -101,8 +101,8 @@ Mendix [connectors](#connectors) offer direct support for the following models.
 
 | Models | Category | Input | Output | Additional Capabilities |
 | --- | --- | --- | --- | --- |
-| gpt-4, gpt-4-turbo, gpt-4o, gpt-4o mini, gpt-4.1, gpt-4.1-mini, gpt-4.1-nano, gpt-5.0, gpt-5.0-mini, gpt-5.0-nano, gpt-5.1, gpt-5.2, o1, o1-mini, o3, o3-mini, o4-mini | Chat completions | text, image, document (OpenAI only) | text | Function calling |
-| DALL·E 2, DALL·E 3, gpt-image-1 | Image generation | text | image | |
+| gpt and o family, e.g. gpt-5.5 and o4 | Chat completions | text, image, document (OpenAI only) | text | Function calling |
+| pt-image-1, gpt-image-1.5, gpt-image-2 | Image generation | text | image | |
 | text-embedding-ada-002, text-embedding-3-small, text-embedding-3-large | Embeddings | text | embeddings | |
 
 #### Mistral

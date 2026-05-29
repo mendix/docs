@@ -31,5 +31,5 @@ jobs:
           version: 3.14.2
           fail_on_error: false
           reporter: github-pr-review
-          level: error  # Only flag errors, not warnings or suggestions
+          vale_flags: '--minAlertLevel=error'  # Only flag errors, not warnings or suggestions
           filter_mode: diff_context  # Only check around changed lines, not entire files

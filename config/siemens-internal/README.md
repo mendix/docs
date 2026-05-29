@@ -21,7 +21,12 @@ For example:
 
 ### 2. Pretty URLs Not Supported
 
-The Siemens internal server does not properly serve Hugo's default "pretty URLs" (e.g., `/page/` resolving to `/page/index.html`). To work around this, we use `uglyURLs = true` which ensures Hugo generates the traditional directory structure with explicit `index.html` files.
+The Siemens internal server does not properly serve Hugo's default "pretty URLs" (e.g., `/page/` resolving to `/page/index.html`). To work around this, we use `uglyURLs = true` which changes how Hugo generates URLs in the HTML:
+
+* **Without uglyURLs**: Links like `<a href="/refguide/">` rely on the server resolving the directory to `index.html`
+* **With uglyURLs**: Links explicitly include `/index.html` where needed, ensuring compatibility with servers that don't automatically serve directory indexes
+
+Note: The file structure remains the same (directories with `index.html` files inside). The setting only affects how URLs are written in the generated HTML.
 
 ## The Solution
 

@@ -124,7 +124,7 @@ Mendix [connectors](#connectors) offer direct support for the following models.
 
 | Models | Category | Input | Output | Additional Capabilities |
 | --- | --- | --- | --- | --- |
-| Find all models supporting the Converse API [here](https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html). Some examples of supported providers are Anthropic Claude, DeepSeek, Meta, OpenAI (OSS models)  | Chat completions | text, document, image  | text | |
+| Find all models supporting the Converse API [here](https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html). Some examples of supported providers are Anthropic Claude, DeepSeek, Meta, OpenAI (OSS models)  | Chat completions | text, document, image  | text | Function calling |
 | Find all models supporting the InvokeModel API [here](https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html). Examples of supported providers are Cohere and TwelveLabs| Embeddings  | text | embeddings | |
 | TO DO | Image generation  | text, document, image  | text | |
 

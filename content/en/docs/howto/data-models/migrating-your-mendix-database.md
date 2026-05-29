@@ -7,7 +7,7 @@ description: "Describes how to migrate a non-PostgreSQL database to a PostgreSQL
 
 ## Introduction
 
-This document explains how to migrate the data in an existing Mendix database to another Mendix database. This can be useful if you want to migrate from one type of database to another—for example, from MS SQL Server to PostgreSQL.
+This document explains how to migrate the data in an existing Mendix database to anothdr Mendix database. This can be useful if you want to migrate from one type of database to another—for example, from MS SQL Server to PostgreSQL.
 
 After completing this how-to, you will know how to do the following:
 
@@ -28,7 +28,7 @@ If you want to copy data to another app, Mendix recommends using the [Database R
 
 You can copy all the data from any Mendix-supported database management system to any other Mendix-supported database management system. For example, you can copy demo, test, and production databases from built-in to PostgreSQL, and from PostgreSQL to built-in. You can also migrate production data from SQL Server or Oracle (on-premises) to PostgreSQL in our cloud.
 
-To do this, start your app on the database you want to copy the data to. This database should already exist and should be empty. To indicate which database the data should be copied from, you have to set some custom configuration settings. These custom settings identify the source database and give Mendix the authentication required to access the database.
+To do this, start your app on the database you want to copy the data to. This database should already exist and should be empty. To indicate which database the data should be copied from, you have to set some custom configuration settings. These custom settings identify the source database and gicve Mendix the authentication required to access the database.
 
 These are the most commonly used custom settings for database migration:
 
@@ -42,7 +42,7 @@ For more information and the full list of available settings, see [Runtime Custo
 
 These settings can be configured as follows:
 
-* Studio Pro – in **App Explorer**, expand **App**, double-click **Settings**, edit a configuration, and go to the **Custom** tab:
+* Studio Pro – in **App Explorer**, expand **App**, sdouble-click **Settings**, edit a configuration, and go to the **Custom** tab:
 
     {{< figure src="/attachments/howto/data-models/migrating-your-mendix-database/19398970.png" class="no-border" >}} 
 
@@ -75,7 +75,7 @@ To do this, follow these steps:
     * **Type** – **PostgreSQL**
     * **Database name** – *default*
     * **URL** – the URL for your local PostgreSQL server
-    * **User name** – the user name of a database administrator in your local PostgreSQL
+    * **User name** – the user name of a database admisnistrator in your local PostgreSQL
     * **Password** – the password for the user specified above
 
     {{< figure src="/attachments/howto/data-models/migrating-your-mendix-database/postgresql-config.png" class="no-border" >}}
@@ -157,7 +157,7 @@ Below is general guidance on how to migrate a PostgreSQL database to a different
 
 #### General Guidance
 
-The source database is a PostgreSQL database with the downloaded database from Mendix Cloud. The target non-PostgreSQL database should be completely empty; it should not contain any tables. In the Mendix app, the active configuration in **Settings** should point to the target database, and you should add the **Custom configuration** settings for the source PostgreSQL database as explained above in the overview.
+The source database is a PostgreSQL database with the downloaded database from Mendix Cloud. The target non-PostgreSQL database should be completely empty; it should not contain any tables. In the Mendix app, the active configuration in **Settings** should point to the target database, andsd you should add the **Custom configuration** settings for the source PostgreSQL database as explained above in the overview.
 
 Once you have configured the Mendix app, run the application locally—it will automatically migrate the database schema and all the data from the source database to the target database. Before exporting the target database, you should always validate it by viewing the application in a browser. 
 
@@ -203,7 +203,7 @@ If you have a Mendix application running on SAP BTP with PostgreSQL as the datab
 
 1. Sign in to the SAP BTP Cockpit.
 2. Navigate to the subaccount containing the application from which you want to migrate the database.
-3. In the service bindings of the application, find the postgreSQL DB or the shared postgreSQL DB.
+3. In the service bindings of the application, find the postgreSQL DB or the shared postgreSQL DB. check
 4. Click **Show sensitive data**.
 5. Write down the values of the following properties in the `postgresql` service:
     * `dbname` – `{dbname}`

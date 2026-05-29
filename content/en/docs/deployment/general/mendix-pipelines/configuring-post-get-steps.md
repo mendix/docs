@@ -44,6 +44,22 @@ The following table summarizes the available configuration fields.
 | **Polling interval** | Yes (GET only) | Time in seconds between GET retries. Range: 5–300. | `10` |
 | **Polling duration** | Yes (GET only) | Maximum time in seconds to poll before timing out and failing. Range: 0–10800. | `600` |
 
+## Configuring Variables
+
+### Variable Selector
+
+To simplify inserting variables, Mendix Pipelines provides a **Variable Selector**.
+Typing `$` in a supported input field opens a dropdown list with available variables. The list is dynamically populated with all step outputs from previous steps and also includes the user-defined variables.
+Selecting a variable inserts it into the field.
+
+
+### Benefits
+
+- Reduces errors caused by manual typing  
+- Helps discover available variables  
+- Speeds up configuration  
+
+
 ## API Endpoint
 
 Both POST and GET request steps require an endpoint defined as a URL. Mendix Pipelines builds the endpoint as `Base URL Path + Additional URL Path`. The endpoint can be:
@@ -57,16 +73,15 @@ When you use a variable in the URL, the following rules apply:
 * The variable must be the last part of the URL.
 * You cannot append additional text after the variable  (no concatenation).
 
-## HTTP Headers
+## HTTP Request Headers
 
 HTTP headers can be added along with the API calls to provide metadata for the request, such as content type, authentication credentials, or other API-specific values. Mendix recommends storing secrets such as API keys or tokens as [pipeline variables](/developerportal/deploy/mendix-pipelines/#variable-tab). 
 
 POST and GET request steps support the following header rules:
 
 * You can define up to five headers as key-value pairs.
-* Header names must be static strings.
-* Header values can be static strings or predefined pipeline variables.
-* Header values do not support string concatenation.
+* Header keys and values can be a static string or a pipeline variable.
+* Header keys and values do not support string concatenation.
 * Header values are resolved when the step starts.
 * For GET request steps, header values are fixed and are not re-evaluated during polling.
 

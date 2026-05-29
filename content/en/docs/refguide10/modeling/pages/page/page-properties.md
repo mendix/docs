@@ -87,6 +87,22 @@ In simple e-commerce applications, the URLs can be configured as follows:
 Mendix does not recommend configuring page URLs for pages that are displayed as a pop-up. Navigating to such a URL will result in layout issues.
 {{%/alert %}}
 
+#### URL Uniqueness Requirement {#url-uniqueness}
+
+Each page URL pattern must be unique across your application. Studio Pro compares URL patterns structurally — the parameter names themselves do not matter. Two pages with URLs like `documents/{ParamA}` and `documents/{ParamB}` are considered identical patterns and will produce a consistency error, even if the parameters refer to different entity types or have different names.
+
+All page parameters must appear in the URL. This means a page with a parameter cannot have a static URL such as `documents/orders` — the parameter must be part of the URL pattern.
+
+{{% alert color="info" %}}
+This constraint exists because the runtime must determine which page to open based solely on the incoming URL — before loading any data. When a user navigates directly to a URL (for example, from a bookmark or external link), the runtime has no session context available. If two pages shared the same URL pattern, the router would have no way to resolve which page to open without first querying the database. Performing database queries during routing is not practical: it would significantly increase page load latency and produce unreliable results. Standard web routing frameworks apply the same principle — ambiguous route patterns cause a routing conflict. Mendix enforces this at compile time rather than allowing it to fail at runtime.
+{{% /alert %}}
+
+If you need incoming links to work across multiple pages that would otherwise share a URL pattern, the following approaches are available:
+
+* **Use distinct static URL segments** — Give each page a unique static prefix so each pattern is unambiguous. For example, use `orders/{Order/Id}` and `invoices/{Invoice/Id}` instead of a shared base pattern such as `documents/{Document/Id}`.
+
+* **Use a microflow URL as a router** — Assign the shared URL pattern to a microflow instead of a page. The microflow receives the parameter, determines which page to open (for example, based on an enumeration or string value), and uses **Show Page** to navigate. For example, a microflow handling `report/{ReportType}` can read the `ReportType` string parameter and open the corresponding page, such as a sales report or an inventory report page. Note that nanoflows are not supported for URL handling.
+
 ### Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide10/common-section-link.md" %}}

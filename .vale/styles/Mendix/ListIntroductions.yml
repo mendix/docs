@@ -1,4 +1,5 @@
 # Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting.md (Lists)
+# Known issue: Only matches plaintext list intros
 extends: substitution
 message: "Set off list item introductions with an en dash (–), not an em dash (—)."
 ignorecase: false

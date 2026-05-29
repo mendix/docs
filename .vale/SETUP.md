@@ -4,9 +4,9 @@ Vale is configured but not yet installed. This guide walks you through setup.
 
 ## Why Install Locally?
 
-- **Immediate feedback** - See violations as you write, not after pushing
-- **Faster iteration** - Fix issues before creating a PR
-- **More feedback** - See suggestions and warnings locally; the GitHub Action is configured to only show errors
+* **Immediate feedback** - See violations as you write, not after pushing
+* **Faster iteration** - Fix issues before creating a PR
+* **More feedback** - See suggestions and warnings locally; the GitHub Action is configured to only show errors
 
 **Note:** Even without local installation, your PRs will be checked automatically by a GitHub Action: [.github/workflows/vale.yml](../.github/workflows/vale.yml).
 
@@ -14,11 +14,12 @@ Vale is configured but not yet installed. This guide walks you through setup.
 
 ### For macOS
 
-First, download Homebrew if you don't already have it: https://brew.sh/
-
-```bash
-brew install vale
-```
+1. Download [Homebrew](https://brew.sh/) if you don't already have it.
+2. In your terminal, run the following command:
+   
+   ```bash
+   brew install vale
+   ```
 
 ### For Windows
 
@@ -57,6 +58,8 @@ After installing Vale:
    ```
 
    This downloads Microsoft's style pack to `.vale/styles/Microsoft/`.
+
+   If you get a `Runtime error: No sources provided` error, verify that there is a `.vale.ini` file in the root of the docs repository (and that you are also in the root of the docs repository).
 
 3. **Install VS Code extension:**
    - Install the [Vale VS Code extension](https://marketplace.visualstudio.com/items?itemName=ChrisChinchilla.vale-vscode).

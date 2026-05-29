@@ -132,6 +132,11 @@ The default option is **Single click**, which triggers the action on a single cl
 
 This property sets the action to be performed when the row is clicked.
 
+{{% alert color="info" %}}
+The setting for actions and action triggers is related to the selection method and can sometimes be ambiguous. 
+
+See [this table](/appstore/modules/data-grid-2/#selection-and-row-click-action) to see which combinations of selection method and action triggers are supported.{{% /alert %}}
+
 #### On Selection Change
 
 This property sets the action to be performed when the row is selected or unselected.

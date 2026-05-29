@@ -21,6 +21,10 @@ Using a secret storage incorrectly may reduce the security of your app. Consult 
 
 Before you start the installation process, review the following considerations:
 
+#### FIPS Compliance
+
+Private Mendix Platform can run with FIPS-compliant encryption across the entire Platform, including Mendix Runtime, Private Mendix Platofrm itself, Mendix Operator, and Studio Pro.
+
 #### Installation Order
 
 Start the process by installing the Mendix Operator before you install the components. Some components are dependent on the Operator. Because of that, if you try to install a component without installing the Operator, the installation process fails and displays an error message.
@@ -520,7 +524,7 @@ Install the Private Mendix Platform by doing the following steps:
         * For AWS Secret Manager:
 
             * **Secret Provider** - Set to **AWS**.
-            * **AWS-Role-ARN** - An [AWS role ARN](https://docs.mendix.com/developerportal/deploy/secret-store-credentials/#aws-secrets-manager) which can access the specified Secret Manager.
+            * **AWS-Role-ARN** - An [AWS role ARN](/developerportal/deploy/secret-store-credentials/#aws-secrets-manager) which can access the specified Secret Manager.
             * **AWS SecretManager Name** - The AWS Secret Manager name where the sensitive data is stored.
 
         * For Azure Key Vault:

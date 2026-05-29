@@ -21,10 +21,6 @@ With **AI agent task**, you can select a [microflow](#microflow) that calls any 
 
 If you do not yet have any agents configured, you can get started by following the guide on [creating your first agent](/appstore/modules/genai/how-to/howto-single-agent/).
 
-{{% alert color="info" %}}
-Support for configuring AI agents using an Agent Editor in Studio Pro is coming soon.
-{{% /alert %}}
-
 ## Properties
 
 AI agent task properties consist of the following sections:

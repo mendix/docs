@@ -692,10 +692,13 @@ These are the currently supported functions:
 * LENGTH
 * LOCATE
 * LOWER
+* LTRIM
 * RANGEBEGIN
 * RANGEEND
 * REPLACE
 * ROUND
+* RTRIM
+* TRIM
 * UPPER
 
 ### CAST{#cast}
@@ -1022,6 +1025,54 @@ SELECT Revenue : DATEDIFF(MONTH, End, Start ) as avg_revenue FROM Sales.Period
 The way the difference is calculated depends on the database. The `YEAR` difference between "2002-01-01" and "2001-12-31" will be `1` with some databases and `0` with others.
 {{% /alert %}}
 
+### DATEPARSE {#dateparse-function}
+
+The `DATEPARSE` function parses string values to Date and time using a specified pattern.
+
+This function was introduced in Mendix version 11.10.0. It is currently supported only in Java actions.
+
+#### Syntax
+
+The syntax is as follows:
+
+```sql
+DATEPARSE ( expression , pattern )
+```
+
+`expression` is a value of type String.
+
+`pattern` is a pattern used to convert `expression` to a Date and time value. Only string literals are allowed.
+
+#### Pattern Syntax
+
+The `DATEPARSE` OQL function uses the same pattern syntax as date parsing functions in Studio Pro, see [Parse and Format Date Function Calls](/refguide/parse-and-format-date-function-calls/).
+
+#### Limitations and Database-Specific Differences
+
+When an OQL query is executed, `DATEPARSE` is converted to the corresponding database function. Due to implementation specifics of database engines, different limitations apply:
+
+1. Format letters `u`, `F`, `G`, `k`, `K` are not supported.
+2. MySQL and MariaDB do not support format letters `S` and `W`.
+3. For SQL Server, `DATEPARSE` accepts only patterns that match SQL Server styles 0 to 7, 9 to 13, 100 to 107, 109 to 113, 120 and 121. See [SQL Server documentation](https://learn.microsoft.com/en-us/sql/t-sql/functions/cast-and-convert-transact-sql?view=sql-server-ver17#date-and-time-styles) for the list of supported styles.
+4. Format letter `h` accepts different ranges of values per database:
+
+    1. HSQLDB uses zero-based indexing and accepts values `0` to `11`
+    2. Other databases use one-based indexing and accept values `1` to `12`
+    
+5. In addition to listed limitations, there are other implementation differences between database engines.
+
+{{% alert color="warning" %}}
+Always test usages of `DATEPARSE` with the database engine on which your app runs. OQL queries with `DATEPARSE` may return different results in HSQLDB and in the production database.
+{{% /alert %}}
+
+#### Examples{#oql-dateparse-example}
+
+| Function call                                 | Result | Notes |
+|--------------|------|-----|
+| `DATEPARSE('20 Mar 2026', 'dd MMM yyyy')`       | 2026-03-20 00:00:00.000 | This format works for all databases. It matches SQL Server style 102. |
+| `DATEPARSE('2026-03-20 14:30:45', 'yyyy-MM-dd HH:mm:ss')`       | 2026-03-20 14:30:45.000 | This format works for all databases. It matches SQL Server style 120. |
+| `DATEPARSE('20/03/2026 14:30:45.123', 'dd/MM/yyyy HH:mm:ss.SSS')`       | 2026-03-20 14:30:45.123 | This format does not work in MySQL and MariaDB due to unsupported letter `S`. It does not work in SQL Server because there is no matching datetime style. |
+
 ### DATEPART {#datepart-function}
 
 The `DATEPART` function retrieves a specified element from `DATETIME` values. The return type is `INTEGER`.
@@ -1281,6 +1332,47 @@ SELECT * FROM Sales.Customer WHERE LOWER(LastName) = 'doe'
 This query can no longer take advantage of an index for `LastName` for comparison, resulting in a performance decrease.
 {{% /alert %}}
 
+### LTRIM{#ltrim}
+
+Removes one or more leading characters from a `string`. If no character is specified for trimming, space is used.
+
+{{% alert color="info" %}}
+This function was introduced in Mendix version 11.11.0.
+{{% /alert %}}
+
+#### Syntax
+
+The syntax is as follows:
+
+```sql
+LTRIM ( expression [, character ] )
+```
+
+##### expression
+
+`expression` is any string expression to be trimmed. If `expression` is `NULL`, the function will return `NULL`.
+
+##### character
+
+`character` is an optional single character string expression containing the character to remove from the start of the string. If omitted, the space character is used instead.
+
+{{% alert color="info" %}}
+Only a single character is supported. `character` parameters with more than one character may not work in all supported databases.
+{{% /alert %}}
+
+If the expression string consists entirely of `character`, everything will be trimmed and the function will return a zero-length string.
+
+#### Examples
+
+```sql
+SELECT LTRIM(LastName, 'D') FROM Sales.Order WHERE Price = 1.50000001
+```
+
+| LastName |
+|:---------|
+| oe       |
+| Moose    |
+
 ### Ranges in Datasets
 
 {{% alert color="info" %}}
@@ -1459,6 +1551,47 @@ SELECT ROUND((Price : 7), 2) as RoundedPrice, Price : 7 FROM Sales.Order
 | 0.33         | 3.33333333 |
 | 1.17         | 1.17142857 |
 
+### RTRIM{#rtrim}
+
+Removes one or more trailing characters from a `string`. If no `character` is specified for trimming, space is used.
+
+{{% alert color="info" %}}
+This function was introduced in Mendix version 11.11.0.
+{{% /alert %}}
+
+#### Syntax
+
+The syntax is as follows:
+
+```sql
+RTRIM ( expression [, character ] )
+```
+
+##### expression
+
+`expression` is any string expression to be trimmed. If `expression` is `NULL`, the function will return `NULL`.
+
+##### character
+
+`character` is an optional single character string expression containing the character to remove from the end of the string. If omitted, the space character is used instead.
+
+{{% alert color="info" %}}
+Only a single character is supported. `character` parameters with more than one character may not work in all supported databases.
+{{% /alert %}}
+
+If the expression string consists entirely of `character`, everything will be trimmed and the function will return a zero-length string.
+
+#### Examples
+
+```sql
+SELECT RTRIM(LastName, 'e') FROM Sales.Order WHERE Price = 1.50000001
+```
+
+| LastName |
+|:---------|
+| Do       |
+| Moos     |
+
 ### SUBSTRING{#substring-function}
 
 #### Description
@@ -1510,6 +1643,47 @@ ORDER BY LastName LIMIT 1
 | Substring_13 | Substring_13_5 | Substring_13_10 | Substring_20     |
 |:-------------|:---------------|:----------------|:-----------------|
 | logical      | logic          | logical         | *(empty string)* |
+
+### TRIM{#trim}
+
+Removes one or more leading and trailing characters from a `string`. If no `character` is specified for trimming, space is used.
+
+{{% alert color="info" %}}
+This function was introduced in Mendix version 11.11.0.
+{{% /alert %}}
+
+#### Syntax
+
+The syntax is as follows:
+
+```sql
+TRIM ( expression [, character ] )
+```
+
+##### expression
+
+`expression` is any string expression to be trimmed. If `expression` is `NULL`, the function will return `NULL`.
+
+##### character
+
+`character` is an optional single character string expression containing the character which will be removed from the beginning and end of the string. If omitted, the space character is used.
+
+{{% alert color="info" %}}
+Only a single character is supported. `character` parameters with more than one character may not work in all supported databases.
+{{% /alert %}}
+
+If the expression string consists entirely of `character`, everything will be trimmed and the function will return a zero-length string.
+
+#### Examples
+
+```sql
+SELECT TRIM(TRIM(LastName, 'e'), 'D') FROM Sales.Order WHERE Price = 1.50000001
+```
+
+| LastName |
+|:---------|
+| o        |
+| Moos     |
 
 ### UPPER
 

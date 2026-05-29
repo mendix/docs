@@ -75,7 +75,7 @@ For more information, see [Security Best Practices for Mendix Workstation](/mend
 
 * Ensure workstations meet the recommended hardware specifications.
 * Minimize background processes to improve performance.
-* When building app logic reusing the Connectors nanoflows, minimize the amount of microflow calls and [other actions](https://docs.mendix.com/refguide/nanoflows/#logic-where-no-connection-is-needed) that require a server connection. One key benefit of Mendix Workstation is client-sided data processing. Every call to the Mendix runtime adds an performance overhead.  
+* When building app logic reusing the Connectors nanoflows, minimize the amount of microflow calls and [other actions](/refguide/nanoflows/#logic-where-no-connection-is-needed) that require a server connection. One key benefit of Mendix Workstation is client-sided data processing. Every call to the Mendix runtime adds an performance overhead.  
 
 ### Maintenance Guidelines
 

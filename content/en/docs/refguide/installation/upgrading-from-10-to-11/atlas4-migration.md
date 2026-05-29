@@ -43,7 +43,7 @@ Before starting this guide, make sure you have completed the following prerequis
 
 * Have Mendix Studio Pro 11 or higher installed
 * Have a backup of your current Mendix project
-* Update your [Atlas UI module]() to version 4.x or higher 
+* Update your [Atlas Core module](https://marketplace.mendix.com/link/component/117187) to version 4.x or higher 
 * Have basic knowledge of SASS/SCSS and CSS
 * Have user access to your project's theme files in `theme/web/` and any custom modules in `themesource/`
 

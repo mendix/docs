@@ -7,7 +7,7 @@ aliases:
     - /developerportal/deploy/unix-like/
 ---
 
-{{% alert color="warning" %}} Linux deployment is only supported on Debian 10 (buster) for the [Mendix Runtime version 9, 10, and 11](https://docs.mendix.com/releasenotes/studio-pro/lts-mts/).  We will not add support for any other versions of the Mendix Runtime. Consider using the [Portable App Distribution for Linux](/developerportal/deploy/linux-pad/) option instead. {{% /alert %}}
+{{% alert color="warning" %}} Linux deployment is only supported on Debian 10 (buster) for the [Mendix Runtime version 9, 10, and 11](/releasenotes/studio-pro/lts-mts/).  We will not add support for any other versions of the Mendix Runtime. Consider using the [Portable App Distribution for Linux](/developerportal/deploy/linux-pad/) option instead. {{% /alert %}}
 
 ## Introduction
 

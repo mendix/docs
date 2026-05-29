@@ -5,11 +5,28 @@ weight: 6
 description: "Native Template 14"
 ---
 
+## 14.1.16
+
+**Release date: Apr 29, 2026**
+
+### Fixes
+
+- We fixed an issue where version logs events were not recorded in Firebase for Android.
+- We fixed an issue which occurred when building apps in Xcode 26.4 and above.
+
+## 14.1.15 {#1425}
+
+**Release date: Apr 22, 2026**
+
+### Improvements
+
+* We updated `@mendix/native` to v9.3.1, strengthening Android cookie encryption by migrating from `AES/CBC/PKCS7Padding` to `AES/GCM/NoPadding`.
+
 ## 14.1.14 {#1424}
 
 **Release date: Feb 25, 2026**
 
-- We updated `.gitignore` to more precisely exclude `node_modules` directories in specific locations.
+* We updated `.gitignore` to more precisely exclude `node_modules` directories in specific locations.
 
 ## 14.1.13 {#1423}
 

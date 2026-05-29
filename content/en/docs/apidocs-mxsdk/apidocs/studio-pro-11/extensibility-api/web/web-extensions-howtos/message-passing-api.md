@@ -6,7 +6,7 @@ url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/message-passing-api/
 
 ## Introduction
 
-This how-to describes how to pass information between different active views (such as tabs, dialogs, and panes) within the same extension.
+This document describes how to pass information between different active views (such as tabs, dialogs, and panes) within the same extension.
 
 ## Prerequisites
 
@@ -14,10 +14,10 @@ This how-to describes how to pass information between different active views (su
 If you are using Studio Pro 11.0–11.5 and your extension includes menus, your existing menu code will not work when you upgrade to Studio Pro 11.6. To restore full functionality and support, upgrade to the Extensibility API 11.6 and follow the steps in the [Migration Guide](/apidocs-mxsdk/apidocs/web-extensibility-api-11/migration-guide/).
 {{% /alert%}}
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before starting this how-to, complete the following prerequisites:
 
 * This how-to uses the results of [Get Started with the Web Extensibility API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/getting-started/). Complete that how-to before starting this one. 
-* Make sure you are familiar with:
+* Familiarize yourself with:
     * Creating [menus](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/)
     * Creating different kinds of views, such as [tabs](/apidocs-mxsdk/apidocs/web-extensibility-api-11/tab-api/) and [panes](/apidocs-mxsdk/apidocs/web-extensibility-api-11/dockable-pane-api/)
     * Creating menus as described in [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/)
@@ -127,13 +127,11 @@ In this example, the extension increases the `counter` value in the main context
 
 The highlighted lines demonstrate how to respond to a message. In the main context (`src/main/index.ts`), a listener is registered, which handles incoming messages from other contexts. Each message has an ID, which can be used to identify and respond to that specific message.
 
-When the main context sends a response, it is received by the `onResponse` callback registered in 
-the highlighted lines of `src/ui/index.tsx`. Note that this callback will be invoked only once,
-as each message can have a single response.
+When the main context sends a response, it is received by the `onResponse` callback registered in the highlighted lines of `src/ui/index.tsx`. Note that this callback is invoked only once, as each message can have a single response.
 
 ### Broadcast
 
-In the broadcast pattern, one context sends a messages to all other contexts that are listening for it. To implement this pattern, do the following:
+In the broadcast pattern, one context sends a message to all other contexts that are listening for it. To implement this pattern, complete the following steps:
 
 1. Copy the following code into `src/main/index.ts`:
 
@@ -304,12 +302,10 @@ In the broadcast pattern, one context sends a messages to all other contexts tha
     }
     ```
 
-This setup ensures that both the tab and the pane are registered in `src/main/index.ts`.
-The tab sends a message whenever the `name` value is updated. The pane listens for these messages emitted from the tab, and updates its
-view accordingly each time a new message is received.
+This setup ensures that both the tab and the pane are registered in `src/main/index.ts`. The tab sends a message whenever the `name` value is updated. The pane listens for these messages emitted from the tab and updates its view accordingly each time a new message is received.
 
 ## Extensibility Feedback
 
-If you would like to provide additional feedback, you can complete a small [survey](https://survey.alchemer.eu/s3/90801191/Extensibility-Feedback).
+If you would like to provide additional feedback, you can complete a short [survey](https://survey.alchemer.eu/s3/90801191/Extensibility-Feedback).
 
 Any feedback is appreciated.

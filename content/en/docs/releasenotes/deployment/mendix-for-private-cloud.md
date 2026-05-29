@@ -12,6 +12,24 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 ## 2026
 
+### May 21, 2026
+
+#### License Manager CLI v0.10.10 {#0.10.10}
+
+* We have updated components to use the latest dependency versions in order to improve security score ratings for container images.
+
+### May 7, 2026
+
+#### Portal Improvements
+
+* We have fixed an issue where an error pop-up would appear when opening Grafana for Logs and Metrics. (Ticket 277132)
+
+### May 1, 2026
+
+#### Mendix Ops CLI
+
+* We have released a new mx-ops-cli tool for configuring namespaces and performing base installations by using Helm charts. For more information, see [Installing Components through the Helm Chart UI](/developerportal/deploy/helm-charts/).
+
 ### April 9, 2026
 
 #### Mendix Operator v2.26.1 {#2.26.1}
@@ -360,7 +378,7 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 #### Documentation Improvements
 
-* We have published detailed documentation about network ingress settings. For more information, see [Network Ingress Settings in Mendix on Kubernetes](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/).
+* We have published detailed documentation about network ingress settings. For more information, see [Network Ingress Settings in Mendix on Kubernetes](/developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/).
 
 ### April 03, 2025
 

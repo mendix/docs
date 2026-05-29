@@ -86,9 +86,9 @@ It is fine to use "Control Center."
 
 ### Mendix Marketplace
 
-Capitalize in all instances, even when just writing "Marketplace."
+Capitalize in all instances, even when just writing "Marketplace." Use "Mendix Marketplace" on first mention in a document, then "Marketplace" for subsequent mentions. When there's risk of confusion with another marketplace (such as Siemens Marketplace), use "Mendix Marketplace" throughout.
 
-It is fine to use "the Mendix Marketplace" or "the Marketplace."
+This is a product name, so don't add a definite article.
 
 ### Mendix Platform
 

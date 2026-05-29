@@ -43,17 +43,15 @@ Use "AM" and "PM" for times, via the MSG.
 
 Use to refer to "< >".
 
-## app/application
+## app
 
-Use "app" or "application" when referring to apps in general. Do not capitalize (meaning, do not write "Mendix App").
+Use "app" instead of "application" in most cases, as [recommended by Microsoft](https://learn.microsoft.com/en-us/style-guide/a-z-word-list-term-collections/a/app-application). Do not capitalize (meaning, do not write "Mendix App").
 
-The full word "application" has a more well-rounded meaning to it (i.e., web and mobile apps), whereas "app" may connote just mobile app to the reader. Accordingly, it can be better to use "application" at the beginning of documents and then switch to "app" later on. We want to make it clear that Mendix is not just for building mobile apps, but all kinds of applications.
-
-In the context of development and project management, sometimes using "project" can significantly enhance the clarity of the concept, as demonstrated in [Centralized Project Roles](/control-center/roles-and-permissions/#centralized-project-roles). In such cases, we can use "project" instead of "app" or "application". Note that such usage of "project" should be agreed upon between the Project Manager and the Technical Writer. For further guidelines, see [project](#project).
+In development and project management contexts, use "project" instead of "app" when it makes the concept clearer, such as in [Centralized Project Roles](/control-center/roles-and-permissions/#centralized-project-roles). For more guidance, see [project](#project).
 
 ## app owner
 
-This is not a formalized/Mendix term, so we cannot assume the user knows what this is. This should be defined in general terms and made clearer via context (for example, via the "Copyright" example in the [Insights Hub module documentation](/partners/siemens/mindsphere-module-details/#configuring-the-os-bar)) that it is the user's responsibility to define and interpret what an app owner is for their app.
+This is not a formal Mendix term, so do not assume users know what it means. Define it in general terms and make clear through context that each team must define and interpret "app owner" for their own app. For an example, see the *Copyright* section in the [Insights Hub module documentation](/partners/siemens/mindsphere-module-details/#configuring-the-os-bar).
 
 ## article, document, page
 

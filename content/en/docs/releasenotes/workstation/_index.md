@@ -10,6 +10,37 @@ cascade:
 
 These release notes cover changes made to the [Mendix Workstation](/mendix-workstation/).
 
+## 3.7.0
+
+### Release date: May 21, 2026
+
+### Workstation Management
+
+#### New features
+
+* Smart configuration updates (auto-refresh) - You can now choose if your workstation configurations should automatically update when changes are made, or if you prefer to trigger updates manually. This gives you more control and ensures your workstations always have the correct settings with less effort.
+* Real-time workstation status - The Workstation Management UI now shows the live configuration status of each Workstation Client, letting you quickly see if a workstation is **Up to Date** or **Outdated**. This provides immediate insight into your deployment's health.
+* Enhanced Serial Device detection settings - You can now configure Workstation Management to identify your serial devices using more reliable information like their Friendly Name, Serial Number, or Manufacturer. This helps your Workstation Clients reliably find and connect to the correct serial device, even if its port number changes.
+
+#### Improvements
+
+* Configurable auto-refresh behavior - We have provided options for how auto-refresh works, including default settings for workspaces and how clients respond in both automatic and manual modes. This allows for flexible management of your workstation configurations.
+
+#### Bug Fixes
+
+* UI inconsistencies - We have fixed several visual inconsistencies in the Management UI, particularly improving the display and user experience when using dark mode. This makes the interface cleaner and more consistent for everyone.
+
+### Workstation Client
+
+#### New Features
+
+* Automatic Client startup - The Workstation Client application now automatically launches silently in the background when your system starts up. This ensures your workstations are always ready to go without needing manual intervention after a reboot.
+* Smart Serial Device finder - The client can now use the Friendly Name, Serial Number, or Manufacturer to find and connect to serial devices. This means your client can reliably connect to the right device even if its assigned port changes.
+
+#### Improvements
+
+* Granular configuration change response - The client now handles configuration changes more smoothly and with less downtime. This means your stations will experience fewer interruptions and apply new settings more efficiently.
+
 ## 3.6.1
 
 ### Release date: April 28, 2026
@@ -64,7 +95,7 @@ If more than one station is found for a given computer name during bulk registra
 
 For more information, see [Nanoflows](/mendix-workstation/build-app/#javascript-actions) and [Widgets](/mendix-workstation/build-app/#widgets).
 
-#### Improvement
+#### Improvements
 
 * The **Model Peripheral** entity is now a specialization of the **Device** entity and no longer requires association.
 * Calling `GetStation` is no longer required to initiate the Workstation Connector. It is only required to read the station configuration.

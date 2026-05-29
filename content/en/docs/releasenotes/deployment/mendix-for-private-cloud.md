@@ -12,6 +12,12 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 ## 2026
 
+### May 21, 2026
+
+#### License Manager CLI v0.10.10 {#0.10.10}
+
+* We have updated components to use the latest dependency versions in order to improve security score ratings for container images.
+
 ### May 7, 2026
 
 #### Portal Improvements

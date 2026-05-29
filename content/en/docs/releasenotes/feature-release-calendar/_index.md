@@ -36,9 +36,9 @@ General Availability means that a feature is available for all users. This type 
 | Global Inbox Workflow Tasks | General Availability: Mx 11.9 |
 | Global Inbox Other Tasks | General Availability: Mx 11.12 |
 | Workflow Non-interrupting Event Subprocesses (Message trigger) | Public Beta: Mx 11.8 <br/>General Availability: Mx 11.9 |
-| Workflow Interrupting Event Subprocesses (Message trigger) | General Availability: Mx 11.12 |
-| Workflow Interrupting Event Subprocesses (Timer trigger) | General Availability: Mx 11.12 |
-| Workflow Message Events | General Availability: Mx 11.12 |
+| Workflow Interrupting Event Subprocesses (Message trigger) | General Availability: Mx 11.10 |
+| Workflow Interrupting Event Subprocesses (Timer trigger) | General Availability: Mx 11.14 |
+| Workflow Message Events | General Availability: Mx 11.11 |
 
 {{% alert color="info" %}}
 ¹Limitations: Initially only Mendix Cloud GenAI Resources as provider, and only design-time modification of prompts and other agent settings. Incrementally, we will remove these limitations.

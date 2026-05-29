@@ -55,7 +55,19 @@ On the template details page, you can define the template with the following ite
 * **Upload existing excel file**: uploads an Excel file which is used as a template
 
     {{% alert color="info" %}}If you use an uploaded Excel file as a template, the names of the sheets and columns in your template will be used. However, the background color in your template will be overruled by the **Background color** (including **none**) specified in the applicable style. {{% /alert %}}
-   
+
+* **Sanitize formulas to text**: When enabled, the module automatically sanitizes any string values that begin with potentially dangerous characters:
+  - `=` (equals)
+  - `+` (plus)
+  - `-` (minus/hyphen)
+  - `@` (at)
+ 
+    {{% alert color="info" %}} When sanitization is enabled, the exporter prepends a apostrophe (`'`) to any string value starting with these
+  characters. This forces Excel and CSV applications to treat the value as literal text rather than a formula.
+    Formula sanitization is **disabled by default**.
+    Enable this feature if your exported data may contain user-generated content.
+    This setting applies to both Excel (*.xlsx*, *.xls*, *.xlsm*) and CSV exports. {{% /alert %}}
+    
 * **Worksheets**: contains the following items that you can use to define sheets in an exported document:
     * **New**: opens a new [sheet details page](#sheet-details) to create a sheet
     * **Edit**: opens the sheet details page for the selected sheet where you can make changes

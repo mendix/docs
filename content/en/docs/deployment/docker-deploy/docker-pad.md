@@ -235,3 +235,177 @@ The Mendix Runtime exposes health check endpoints that can be used to monitor th
 | `/health/ready` | Returns the readiness status — indicates if the app is ready to serve traffic |
 
 These endpoints are especially useful when integrating with orchestration platforms such as Kubernetes, which rely on liveness and readiness probes to manage container lifecycle.
+
+## Reverse Proxy
+
+This section serves as a reference guide and starting point for configuring a reverse proxy on Docker. The configurations provided are intended for illustrative purposes only, as the required settings vary depending on your specific network environment and infrastructure setup.
+
+{{% alert color="info" %}}
+This example implementation is provided as-is, and is not covered under official support. Support requests related to this specific configuration cannot be addressed.
+{{% /alert %}}
+
+### Configuring Nginx
+
+To configure Nginx, perform the following steps:
+
+1. Define services for the app and Nginx reverse proxy:
+
+    ```text
+    services:
+      app:
+        build: .
+        ports:
+          - "127.0.0.1:8080:8080"  # Bind only localhost
+        environment:
+          - SPRING_PROFILES_ACTIVE=docker
+      nginx:
+        image: nginx:alpine
+        ports:
+          - "80:80"
+        volumes:
+          - ./nginx.conf:/etc/nginx/nginx.conf:ro
+        depends_on:
+          - app
+    ```
+
+2. Run the following command: `docker-compose up --build`.​
+3. Create the following `nginx.conf` file to proxy requests to the app:
+
+    ```text
+    events {}
+    http {
+      server {
+        listen 80;
+        location / {
+          proxy_pass http://app:8080;
+          proxy_set_header Host $host;
+          proxy_set_header X-Real-IP $remote_addr;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_set_header X-Forwarded-Proto $scheme;
+        }
+      }
+    }
+    ```
+
+This configuration exposes only port 80 publicly while acting as a proxy to your app on the internal port 8080.
+
+### Configuring Traefik
+
+To simplify setting up Traefik as a reverse proxy for your app running in a Docker container, use Docker Compose. This configuration exposes Traefik on ports `80/8080`, automatically discovers your app container through labels, and routes traffic to it.
+
+Traefik uses two networks: *frontend* (public) and *backend* (internal). 
+
+1. Add Traefik labels to the app service:
+
+    ```text
+    services:
+      traefik:
+        image: traefik:v3.0
+        ports:
+          - "80:80"
+          - "8080:8080"  # Traefik dashboard
+        volumes:
+          - /var/run/docker.sock:/var/run/docker.sock:ro
+        command:
+          - --api.dashboard=true
+          - --providers.docker=true
+          - --providers.docker.exposedbydefault=false
+          - --entrypoints.web.address=:80
+        networks:
+          - frontend
+          - backend
+        restart: unless-stopped
+      app:
+        build: .
+        networks:
+          - backend
+        labels:
+          - traefik.enable=true
+          - traefik.docker.network=backend
+          - traefik.http.routers.app.rule=Host(`localhost`) || PathPrefix(`/api`)
+          - traefik.http.routers.app.entrypoints=web
+          - traefik.http.services.app.loadbalancer.server.port=8080
+        restart: unless-stopped
+    networks:
+      frontend:
+        external: false
+      backend:
+        external: false
+    ```
+
+2. Run the following command:  `docker compose up -d --build`. 
+
+You can now access your app at `http://localhost`. Traefik proxies to `app:8080` internally.
+
+#### Key Traefik Labels Explained
+
+This section explains the main labels used by Traefik.
+
+* `traefik.enable=true` - Enables Traefik for this container.
+* `traefik.http.routers.java-app.rule=Host(yourapp.example.com)` - Routes requests matching the host to this service.
+* `traefik.http.services.java-app.loadbalancer.server.port=8080` - Forwards to your app's internal port.
+
+Traefik automatically detects changes through a Docker socket. You do not need to restart it to update the labels.
+
+#### Main Differences between Traefik and Nginx
+
+This section explains how Traefik proxies differ from Nginx.
+
+* Traefik does not use static config files. Instead, the configuration is automatic through the use of labels.
+* A dashboard available at `http://localhost:8080` shows the routes.
+* You can easily scale by duplicating the `app service` with unique router rules (for example, `Host(app2.local)`).​
+
+## Example High Availability Implementation
+
+High availability (HA) requires redundancy, health checks, and restarts to handle failures. Scale for HA with Docker Compose (for local or development environments) or Kubernetes.
+
+This section serves as a reference guide and starting point for configuring high availability on Docker. The configurations provided are intended for illustrative purposes only, as the settings will vary depending on your specific network environment and infrastructure setup.
+
+{{% alert color="info" %}}
+This example implementation is provided as-is, and is not covered under official support. Support requests related to this specific configuration cannot be addressed.
+{{% /alert %}}
+
+1. Configure the *docker-compose.yml* as in the following example:
+
+    ```text
+    services:
+      myapp:
+        image: myapp
+        ports:
+          - "8080:8080"
+        deploy:
+          replicas: 3  # Run 3 instances
+        healthcheck:
+          test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/actuator/health"]
+          interval: 30s
+          timeout: 10s
+          retries: 3
+    ```
+
+2. Start the process by running the following command: `docker-compose up --scale myapp=3`. 
+3. Add a load balancer like Traefik or an NGINX reverse proxy in the front:
+
+    ``` text
+    services:
+      traefik:
+        image: traefik:v3.0
+        command: --providers.docker --entrypoints.web.address=:80
+        ports: ["80:80"]
+      myapp:
+        # No ports exposed; Traefik load balances
+    ```
+
+    This creates a redundancy—kill container, and traffic shifts automatically.
+
+4. Build and run manually by running the following script:
+
+    ``` text
+    # Build image 
+    docker build -t myapp:latest .
+    # Test single instance
+    docker run -p 8080:8080 myapp:latest
+    # For HA: Run 3 replicas (use docker-compose.yml for production)
+    docker run -d -p 8081:8080 --name app1 myapp:latest
+    docker run -d -p 8082:8080 --name app2 myapp:latest  
+    docker run -d -p 8083:8080 --name app3 myapp:latest
+    ``` 

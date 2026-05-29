@@ -1,0 +1,15 @@
+# Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting.md (Lists)
+extends: substitution
+message: "Set off list item introductions with an en dash (–), not an em dash (—)."
+ignorecase: false
+nonword: true
+level: error
+scope: list
+action:
+  name: replace
+swap:
+  # Match up to 40 chars (excluding em dashes) from start of line, then replace first em dash with en dash
+  # Limit to first ~40 chars to avoid matching em dashes in the middle of list text
+  '^([^—]{0,40}) — ': '$1 – '  # em dash with spaces on both sides
+  '^([^—]{0,40}) —': '$1 – '   # em dash with space before, no space after
+  '^([^—]{0,40})— ': '$1 – '   # em dash with no space before, space after

@@ -124,24 +124,10 @@ Mendix [connectors](#connectors) offer direct support for the following models.
 
 | Models | Category | Input | Output | Additional Capabilities |
 | --- | --- | --- | --- | --- |
-| Amazon Titan Text G1 - Express, Amazon Titan Text G1 - Lite, Amazon Titan Text G1 - Premier | Chat completions | text, document (except Titan Premier) | text | |
-| AI21 Jamba-Instruct | Chat completions | text | text | |
-| AI21 Labs Jurassic-2 (Text) | Chat completions | text | text | |
-| Amazon Nova Pro, Amazon Nova Lite | Chat completions | text, image, document | text | Function calling |
-| Amazon Titan Image Generator G1 | Image generation | text | image | |
-| Amazon Titan Embeddings Text v2 | Embeddings | text | embeddings | |
-| Anthropic Claude 3 Sonnet, Anthropic Claude 3.5 Sonnet, Anthropic Claude 3.5 Sonnet v2, Anthropic Claude 3 Haiku, Anthropic Claude 3 Opus, Anthropic Claude 3.5 Haiku, Anthropic Claude 3.7 Sonnet, Anthropic Claude 4.5 Sonnet, Anthropic Claude 4.5 Haiku, Anthropic Claude 4.5 Opus | Chat completions | text, image, document | text | Function calling |
-| Cohere Command | Chat completions | text, document | text | |
-| Cohere Command Light | Chat completions | text | text | |
-| Cohere Command R, Cohere Command R+ | Chat completions | text, document | text | Function calling |
-| Cohere Embed English, Cohere Embed Multilingual | Embeddings | text | embeddings | |
-| DeepSeek, DeepSeek-R1 | Text | text | document | |
-| Meta Llama 2, MetaLlama 3 | Chat completions | text, document | text | |
-| Meta Llama 3.1 | Chat completions | text, document | text | Function calling |
-| Mistral AI Instruct | Chat completions | text, document | text | |
-| Mistral Large, Mistral Large 2 | Chat completions | text, document | text | Function calling |
-| Mistral Small | Chat completions | text | text | Function calling |
-| OpenAI gpt-oss-20B, gpt-oss-120b | Chat completions | text | text | |
+| Find all models supporting the Converse API [here](https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html). Some examples of supported providers are Anthropic Claude, DeepSeek, Meta, OpenAI (OSS models)  | Chat completions | text, document, image  | text | |
+| Find all models supporting the InvokeModel API [here](https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html). Examples of supported providers are Cohere and TwelveLabs| Embeddings  | text | embeddings | |
+| TO DO | Image generation  | text, document, image  | text | |
+
 
 For more details on limitations and supported model capabilities for the Bedrock Converse API used in the ChatCompletions operations, see [Supported models and model features](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference-supported-models-features.html) in the AWS documentation.
 

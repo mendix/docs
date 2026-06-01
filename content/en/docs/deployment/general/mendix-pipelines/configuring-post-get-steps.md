@@ -44,21 +44,13 @@ The following table summarizes the available configuration fields.
 | **Polling interval** | Yes (GET only) | Time in seconds between GET retries. Range: 5–300. | `10` |
 | **Polling duration** | Yes (GET only) | Maximum time in seconds to poll before timing out and failing. Range: 0–10800. | `600` |
 
-## Configuring Variables
-
 ### Variable Selector
 
-To simplify inserting variables, Mendix Pipelines provides a **Variable Selector**.
-Typing `$` in a supported input field opens a dropdown list with available variables. The list is dynamically populated with all step outputs from previous steps and also includes the user-defined variables.
+To reduce errors caused by manual typing and speed up configuration, Mendix Pipelines provides a **Variable Selector** for supported configuration fields.
+
+Typing `$` in a supported field opens the **Variable Selector**, which displays available variables. The list is dynamically populated with user-defined variables and outputs from previous pipeline steps.
+
 Selecting a variable inserts it into the field.
-
-
-### Benefits
-
-- Reduces errors caused by manual typing  
-- Helps discover available variables  
-- Speeds up configuration  
-
 
 ## API Endpoint
 

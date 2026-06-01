@@ -16,7 +16,7 @@ To see the current status of the Mendix Pipelines, see [Mendix Status](https://s
 
 #### New Features
 
-* We have added a Variable Selector widget to the Post and Get request steps, which makes configuring variables a lot easier. For information about how to use the widget in these steps, refer to [Configuring Variables](/developerportal/deploy/configuring-post-get-request-steps/#configuring-variables).
+* We have added a **Variable Selector** to the POST and GET request steps, allowing you to discover and insert available variables while configuring request steps. For more information, refer to the [Variable Selector](/developerportal/deploy/configuring-post-get-request-steps/#variable-selector)  section of *Configuring POST and GET Request Steps*.
 
 ### May 14, 2026
 

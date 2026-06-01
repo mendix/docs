@@ -74,7 +74,7 @@ Before proceeding, ensure your project includes the latest versions of the requi
 
 After installation, two modules are added to your app:
 
-* **Agent Editor** under **Add On modules** in the **App Explorer**. This module contains the Studio Pro extension that adds the new document types and editors.
+* **Agent Editor** under **Add-ons** in the **App Explorer**. This module contains the Studio Pro extension that adds the new document types and editors.
 * **Agent Editor Commons** under **Marketplace modules** in the **App Explorer**. This module contains the logic to call agents from microflows.
 
 The detailed functionality of these modules is explained in the following sections of this page.
@@ -129,8 +129,8 @@ After defining the model, define the Agent document and configure the prompts an
 
 Defining an agent is also document-based and can be configured using the Agent editor:
 
-* Add an Agent document from the **App Explorer** at the module level. Right-click on the module or folder where you want to create your Model document, select **Add other** and find Agent in the bottom section.
-* Select a Module document for an agent to call a text generation resource.
+* Add an Agent document from the **App Explorer** at the module level. Right-click on the module or folder where you want to create your Agent document, select **Add other** and find Agent in the bottom section.
+* Select a Model document for an agent to call a text generation resource.
 * Configure the **System prompt**, and additionally define a **User prompt** for task-style execution. In both prompts, include placeholders with double braces, for example, `{{variable}}`.
 * When placeholders are used, select a **Context entity** to resolve values at runtime. The placeholders used within the prompts need to match with the attribute names of the entity selected, so that attribute values can be inserted instead of the placeholders at runtime.
 * Optionally, adjust the **Model settings** as needed (maximum tokens, temperature, and TopP), based on the supported ranges of the model provider.

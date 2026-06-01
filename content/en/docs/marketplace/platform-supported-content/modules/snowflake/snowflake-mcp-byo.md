@@ -42,7 +42,7 @@ Because Snowflake conforms to the API specification of OpenAI, you can use the O
     
     For example, the URL may look like the following: `https:/<snowflake_accountname>.snowflakecomputing.com/api/v2/cortex/v1/`.
 
-    5. Save your changes.
+    1. Save your changes.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-byok/save-changes.png" >}}
  
@@ -52,7 +52,7 @@ Because Snowflake conforms to the API specification of OpenAI, you can use the O
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-byok/manage-deployed-models.png" >}}
 
-    2. Click **Add new model** to add an LLM from the [list of available LLMs](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-rest-api#model-availability) in your Snowflake account.
+    1. Click **Add new model** to add an LLM from the [list of available LLMs](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-rest-api#model-availability) in your Snowflake account.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-byok/new-deployed-model.png" >}}
 
@@ -60,8 +60,8 @@ Because Snowflake conforms to the API specification of OpenAI, you can use the O
     
     The **Model name** field in the Deployed Model configuration in Mendix must match exactly with the model name in Snowflake.
 
-    3. Complete the configuration for your model.
-    4. Save your changes.
+    1. Complete the configuration for your model.
+    2. Save your changes.
  
 3. Test the configuration by performing the following steps:
 
@@ -69,7 +69,7 @@ Because Snowflake conforms to the API specification of OpenAI, you can use the O
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-byok/test-option.png" >}}
 
-    2. Select your deployed model from the drop-down list.
-    3. Click **Test**.
+    1. Select your deployed model from the drop-down list.
+    2. Click **Test**.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-byok/test.png" >}}

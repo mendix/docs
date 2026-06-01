@@ -15,4 +15,3 @@ Documents in this section provide more information about Private Mendix Platform
 In general, Mendix is responsible for the Private Mendix Platform, Mendix Operator, Mendix Studio Pro, Mendix Runtime, and so on. Customer responsibilities are related to infra and organization processes. For more information, refer to detailed documentation below.
 
 ## Control Categories
-

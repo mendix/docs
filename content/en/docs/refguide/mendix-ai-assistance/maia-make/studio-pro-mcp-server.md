@@ -10,7 +10,7 @@ description: "Describes the features in Studio Pro MCP Server."
 ## Introduction
 
 {{% alert color="info" %}}
-This feature is available in Studio Pro 11.10 and above. 
+This feature was released in Studio Pro 11.10. 
 
 To use Studio Pro MCP Server, an internet connection and signing in to Studio Pro are required.
 {{% /alert %}}

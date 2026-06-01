@@ -692,10 +692,13 @@ These are the currently supported functions:
 * LENGTH
 * LOCATE
 * LOWER
+* LTRIM
 * RANGEBEGIN
 * RANGEEND
 * REPLACE
 * ROUND
+* RTRIM
+* TRIM
 * UPPER
 
 ### CAST{#cast}
@@ -1329,6 +1332,47 @@ SELECT * FROM Sales.Customer WHERE LOWER(LastName) = 'doe'
 This query can no longer take advantage of an index for `LastName` for comparison, resulting in a performance decrease.
 {{% /alert %}}
 
+### LTRIM{#ltrim}
+
+Removes one or more leading characters from a `string`. If no character is specified for trimming, space is used.
+
+{{% alert color="info" %}}
+This function was introduced in Mendix version 11.11.0.
+{{% /alert %}}
+
+#### Syntax
+
+The syntax is as follows:
+
+```sql
+LTRIM ( expression [, character ] )
+```
+
+##### expression
+
+`expression` is any string expression to be trimmed. If `expression` is `NULL`, the function will return `NULL`.
+
+##### character
+
+`character` is an optional single character string expression containing the character to remove from the start of the string. If omitted, the space character is used instead.
+
+{{% alert color="info" %}}
+Only a single character is supported. `character` parameters with more than one character may not work in all supported databases.
+{{% /alert %}}
+
+If the expression string consists entirely of `character`, everything will be trimmed and the function will return a zero-length string.
+
+#### Examples
+
+```sql
+SELECT LTRIM(LastName, 'D') FROM Sales.Order WHERE Price = 1.50000001
+```
+
+| LastName |
+|:---------|
+| oe       |
+| Moose    |
+
 ### Ranges in Datasets
 
 {{% alert color="info" %}}
@@ -1507,6 +1551,47 @@ SELECT ROUND((Price : 7), 2) as RoundedPrice, Price : 7 FROM Sales.Order
 | 0.33         | 3.33333333 |
 | 1.17         | 1.17142857 |
 
+### RTRIM{#rtrim}
+
+Removes one or more trailing characters from a `string`. If no `character` is specified for trimming, space is used.
+
+{{% alert color="info" %}}
+This function was introduced in Mendix version 11.11.0.
+{{% /alert %}}
+
+#### Syntax
+
+The syntax is as follows:
+
+```sql
+RTRIM ( expression [, character ] )
+```
+
+##### expression
+
+`expression` is any string expression to be trimmed. If `expression` is `NULL`, the function will return `NULL`.
+
+##### character
+
+`character` is an optional single character string expression containing the character to remove from the end of the string. If omitted, the space character is used instead.
+
+{{% alert color="info" %}}
+Only a single character is supported. `character` parameters with more than one character may not work in all supported databases.
+{{% /alert %}}
+
+If the expression string consists entirely of `character`, everything will be trimmed and the function will return a zero-length string.
+
+#### Examples
+
+```sql
+SELECT RTRIM(LastName, 'e') FROM Sales.Order WHERE Price = 1.50000001
+```
+
+| LastName |
+|:---------|
+| Do       |
+| Moos     |
+
 ### SUBSTRING{#substring-function}
 
 #### Description
@@ -1558,6 +1643,47 @@ ORDER BY LastName LIMIT 1
 | Substring_13 | Substring_13_5 | Substring_13_10 | Substring_20     |
 |:-------------|:---------------|:----------------|:-----------------|
 | logical      | logic          | logical         | *(empty string)* |
+
+### TRIM{#trim}
+
+Removes one or more leading and trailing characters from a `string`. If no `character` is specified for trimming, space is used.
+
+{{% alert color="info" %}}
+This function was introduced in Mendix version 11.11.0.
+{{% /alert %}}
+
+#### Syntax
+
+The syntax is as follows:
+
+```sql
+TRIM ( expression [, character ] )
+```
+
+##### expression
+
+`expression` is any string expression to be trimmed. If `expression` is `NULL`, the function will return `NULL`.
+
+##### character
+
+`character` is an optional single character string expression containing the character which will be removed from the beginning and end of the string. If omitted, the space character is used.
+
+{{% alert color="info" %}}
+Only a single character is supported. `character` parameters with more than one character may not work in all supported databases.
+{{% /alert %}}
+
+If the expression string consists entirely of `character`, everything will be trimmed and the function will return a zero-length string.
+
+#### Examples
+
+```sql
+SELECT TRIM(TRIM(LastName, 'e'), 'D') FROM Sales.Order WHERE Price = 1.50000001
+```
+
+| LastName |
+|:---------|
+| o        |
+| Moos     |
 
 ### UPPER
 

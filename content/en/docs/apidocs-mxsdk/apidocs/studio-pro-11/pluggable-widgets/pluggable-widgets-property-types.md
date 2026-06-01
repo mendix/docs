@@ -59,6 +59,8 @@ This defines a property's type. A `type` must be one of the following:
     * [object](#object)
     * [file](#file)
     * [datasource](#datasource)
+        * [List data source](#list-datasource)
+        * [Object data source](#object-datasource)
     * [selection](#selection)
 
 ### XML Elements
@@ -480,9 +482,6 @@ Then the Studio Pro UI for the property appears like this:
 
 ### Action {#action}
 
-{{% alert color="info" %}}
-The `defaultType` and `defaultValue` attributes for Action were introduced in Mendix [10.15](/releasenotes/studio-pro/10.15/).
-{{% /alert %}}
 
 The action property type allows a user to configure an action which can do things like call nanoflows, save changes, and open pages.
 
@@ -746,13 +745,9 @@ Then the Studio Pro UI for the property appears like this:
 
 ### Datasource {#datasource}
 
-The datasource property allows widgets to work with object lists. The client component will receive value prop of type [`ListValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listvalue) and may be used with [`action`](#action), [`attribute`](#attribute), [`association`](#association), [`expression`](#expression), [`text template`](#texttemplate), and [`widgets`](#widgets) properties. See [Data Sources](/refguide/data-sources/#list-widgets) for available data source types.
+The datasource property allows widgets to work with data from the Mendix Platform. It comes in two variants controlled by the `isList` attribute: a **list data source** (`isList="true"`) for working with collections of objects, and an **object data source** (`isList="false"`) for working with a single object.
 
 If no data source has been configured by the user, any properties that are linked to the datasource property are automatically omitted from the props passed to the client component (even if they are marked as required).
-
-{{% alert color="warning" %}}
-Only list datasources are supported, therefore specifying `isList="true"` is required.
-{{% /alert %}}
 
 #### XML Attributes
 
@@ -760,27 +755,27 @@ Only list datasources are supported, therefore specifying `isList="true"` is req
 |----------------|----------|----------------|------------------------------------------------------------------------------------------------------------|
 | `type`         | Yes      | String         | Must be `datasource`                                                                                       |
 | `key`          | Yes      | String         | See [key](#key)                                                                                            |
-| `isList`       | Yes      | Boolean        | Must be `true`                                                                                             |
+| `isList`       | Yes      | Boolean        | `true` for a list data source, `false` for an object data source                                           |
 | `required`     | No       | Boolean        | This decides if the user is required to specify a datasource, `true` by default                            |
-| `defaultType`  | No       | String         | Default type for the property, supported values are `Database`, `Microflow`, `Nanoflow`, and `Association` |
+| `defaultType`  | No       | String         | Default type for the property, see [Default Data Sources](#data-source-defaults)                           |
 | `defaultValue` | No       | String         | Default value for the property, see [Default Data Sources](#data-source-defaults)                          |
 
 ##### Data Source Defaults {#data-source-defaults}
-
-{{% alert color="info" %}}
-The `defaultType` and `defaultValue` attributes for datasources were introduced in Mendix [10.16](/releasenotes/studio-pro/10.16/).
-{{% /alert %}}
 
 You can use the `defaultType` and `defaultValue` attributes to configure default data sources for your widget. Unless overridden in Studio Pro, the widget will attempt to configure the data source according to its defaults. Both attributes need to be set for the defaults to be applied.
 
 The format of `defaultValue` depends on the chosen `defaultType`:
 
-| Data source type         | Format      | Example                                                               |
-|--------------------------|-------------|-----------------------------------------------------------------------|
-| `Database` `Association` | Entity Path | `ModuleName.EntityName` or `ModuleName.A/ModuleName.A_B/ModuleName.B` |
-| `Microflow` `Nanoflow`   | Document ID | `ModuleName.DocumentName`                                             |
+| Data source type         | Format      | Example                                                               | Supported For                      |
+|--------------------------|-------------|-----------------------------------------------------------------------|------------------------------------|
+| `Database` `Association` | Entity Path | `ModuleName.EntityName` or `ModuleName.A/ModuleName.A_B/ModuleName.B` | List data source                   |
+| `Microflow` `Nanoflow`   | Document ID | `ModuleName.DocumentName`                                             | List and object data source |
 
-#### Studio Pro UI
+#### List Data Source {#list-datasource}
+
+A list data source (`isList="true"`) allows a widget to work with a collection of objects. The client component receives a prop of type [`ListValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listvalue). For more information on available data source type, see [Data Sources](/refguide/data-sources/#list-widgets).
+
+##### Studio Pro UI
 
 When the property is defined as follows:
 
@@ -793,13 +788,56 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/datasource.png" class="no-border" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/datasource-list.png" class="no-border" >}}
+
+#### Object Data Source {#object-datasource}
+
+{{% alert color="info" %}}
+The object data source was introduced in Mendix [11.11](/releasenotes/studio-pro/11.11/).
+{{% /alert %}}
+
+An object data source (`isList="false"`) allows a widget to work with a single object. The client component receives a prop of type [`DynamicValue<ObjectItem>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#dynamic-value).
+
+A widget may have, at maximum, **one** object data source property.
+
+The available source types differ from list data sources:
+
+| Platform | Available Source Types                                    |
+|----------|-----------------------------------------------------------|
+| Web      | Context, Microflow, Nanoflow, Listen to widget            |
+| Native   | Context, Microflow, Nanoflow                              |
+
+##### Studio Pro UI
+
+When the property is defined as follows:
+
+```xml
+<property key="data" type="datasource" isList="false" required="false">
+	<caption>Data source</caption>
+	<description />
+</property>
+```
+
+Then the Studio Pro UI for the property appears like this:
+
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/datasource-single-object.png" class="no-border" >}}
+
+#### Linking Properties to Data Sources {#datasource-linking}
+
+The [`action`](#action), [`attribute`](#attribute), [`association`](#association), [`expression`](#expression), [`text template`](#texttemplate), [`widgets`](#widgets), and [`selection`](#selection) properties can be linked to a data source using the `dataSource` attribute on those properties. The client type received by the component depends on the data source type:
+
+| Property type  | List data source client type | Object data source client type |
+|:---------------|:-----------------------------|:--------------------------------------|
+| `action`       | [`ListActionValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listactionvalue) | [`ActionValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#actionvalue) |
+| `attribute`    | [`ListAttributeValue<T>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listattributevalue) | [`EditableValue<T>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#editable-value) |
+| `association`  | [`ListReferenceValue` or `ListReferenceSetValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listassociationvalue) | `ReferenceValue` or `ReferenceSetValue` |
+| `expression`   | [`ListExpressionValue<T>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listexpressionvalue) | [`DynamicValue<T>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#dynamic-value) |
+| `textTemplate` | [`ListExpressionValue<string>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listexpressionvalue) | [`DynamicValue<string>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#dynamic-value) |
+| `widgets`      | [`ListWidgetValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listwidgetvalue) | `ReactNode` |
+| `selection`    | `SelectionSingleValue` or `SelectionMultiValue` | *Not supported* |
 
 ### Selection {#selection}
 
-{{% alert color="info" %}}
-The property type was introduced in Mendix [10.7](/releasenotes/studio-pro/10.7/).
-{{% /alert %}}
 
 The selection property allows a widget to read and set a selection that can be used in actions, expressions, or a `Listen to` data source of a data view.
 
@@ -812,6 +850,10 @@ The selection property allows a widget to read and set a selection that can be u
 | `dataSource`   | Yes      | Property Path       | Specifies the path to a [`datasource`](#datasource) property linked to this selection property                                  |
 | `defaultValue` | No       | String (Expression) | Default value for the property                                                                                                  |
 | `onChange`     | No       | Property Path       | The path to an [`action`](#action) property that will be run by the Mendix Platform when the selection is changed by the widget |
+
+{{% alert color="warning" %}}
+The `dataSource` attribute must refer to a [list data source](#list-datasource). Linking a selection property to an object data source is not supported.
+{{% /alert %}}
 
 #### XML Elements
 
@@ -867,9 +909,6 @@ Label property allows a pluggable widget to have labeling functionality similar 
 
 #### setLabel {#setLabel}
 
-{{% alert color="info" %}}
-The `setLabel` attribute was introduced in Mendix [10.5](/releasenotes/studio-pro/10.5/).
-{{% /alert %}}
 
 You can use `setLabel` to specify which properties can be used to set the `Label` property value. 
 

@@ -2,7 +2,7 @@
 extends: capitalization
 message: "Use title case capitalization for '%s'."
 link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting/#capitalization
-level: warning
+level: error
 scope: heading
 match: $title
 style: Chicago

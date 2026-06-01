@@ -92,7 +92,7 @@ The search bar within the tab can be used to filter the list of documents.
 
 ### Disk Changes
 
-This tab shows a list of the files that were changed on disk. You can see whether files were added, deleted or modified.
+This tab shows a list of the files that were changed on disk. You can see whether files were added, deleted or modified. To compare a modified file with its committed version, use **Compare with original** in the [Changes pane](/refguide/changes-pane/), which opens the [File Differences Viewer](/refguide/file-diff-viewer/).
 
 The search bar within the tab can be used to filter the list of files.
 

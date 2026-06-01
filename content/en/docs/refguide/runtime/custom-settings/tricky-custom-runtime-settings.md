@@ -28,23 +28,44 @@ The following custom settings can be configured:
 | Name | Description | Default value |
 | --- | --- | --- |
 | `SessionTimeout` | Defines after how much time the session becomes invalid (in milliseconds). After that timeout, a session becomes applicable for removal. The session won't be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 (10 minutes) |
-| `ClusterManagerActionInterval` | The interval (in milliseconds) used for performing all cluster manager actions. These actions include unblocking users and removing invalid sessions. If nothing is specified, the interval is half the `SessionTimeout`. | 300000 (5 minutes) |
-| `SessionKeepAliveUpdatesInterval` | Defines after how much time expired sessions can be removed from the database. | one sixth of the value configured for the `SessionTimeout` setting; if the `SessionTimeout` is not set, this value defaults to 100000 (100 seconds) |
+| `ClusterManagerActionInterval` | The interval (in milliseconds) used for performing all cluster manager actions. These actions include unblocking users and removing invalid sessions. See the constraints section below for default value details. | |
+| `SessionKeepAliveUpdatesInterval` | Defines how often a runtime writes session LastActive dates in its memory back to the database. See the constraints section below for default value details. | |
 
-Increasing the session timeout can improve the user experience, especially on mobile devices. It is important to keep in mind that entities used to present data to the user or entities that are created or retrieved when a user executes a microflow are tied to that user's session, and those entities can remain in memory for long periods of time. When a user signs out, these entities will be removed from memory, but if the user idles but does not sign out (for example, if they leave the browser tab open while executing other tasks or simply close the browser without signing out), the session timeout can act as a safeguard that prevents memory usage from being tied up by idle sessions. The first case can also be mitigated by setting the `EnableKeepAlive` custom setting to false. On most browsers, this setting will ensure that any idle browser tab will be affected by the session timeout as well.
+Changing these settings can have a significant impact on your app, particularly regarding memory usage, security, and user experience. Consider the following points carefully before altering any of these values.
 
-Since the frequency of the session timeout checks and other important events is tied to the `ClusterManagerActionInterval`, it makes sense to not use the default of half the session timeout when the value is increased by a lot (for example, 24 hours or more). It might make sense to put a maximum value on `ClusterManagerActionInterval`, regardless of how high the value of `SessionTimeout` is set. An approximate figure is 15 minutes, but ultimately this will depend on the functional requirements of the application.
+Increasing the session timeout can improve the user experience, especially on mobile devices.
 
-Another consideration is that configuring `ClusterManagerActionInterval` to be much longer than the `SessionTimeout` will lead to expired sessions remaining in the database longer.
-Configuring `SessionKeepAliveUpdatesInterval` to be longer than the `ClusterManagerActionInterval` or configuring `SessionKeepAliveUpdatesInterval` to be longer than the `SessionTimeout` will cause active sessions to be cleaned up. The Runtime will fail to start if these three settings are not configured correctly.
+When increasing the session timeout, be aware of the user restrictions imposed by your Mendix license. If the end-user idles but does not sign out (for example, if they leave the browser tab open while executing other tasks or simply close the browser without signing out), the session timeout can act as a safeguard that prevents sessions continuing for idle sessions. Longer sessions might mean more concurrent users at any given time. This is something to keep in mind when deciding on the specifics of the license you will need to run your application. If the browser tab remains open, setting the `EnableKeepAlive` custom setting to false will ensure, in most browsers, that the session timeout will apply to any idle browser tab.
 
-With stateless runtime, the potential of memory usage leading to problems has been reduced for two reasons. The first reason is the ability to run in a horizontally scaled environment. Multiple runtimes will mean unintended memory usage is also divided over those runtimes, reducing the impact of any one idle user session. But the main (and second) reason is that most of the memory usage has been moved to the client. So instead of all entities in the memory ending up on the application node, a large share of them will end up in the browser of the client. This should significantly reduce the potential strain on the application node that can be caused by increasing the `SessionTimeout` default value to a much higher value.
+Increasing the session timeout could also have an impact on the security of your app. An idle session means that there is a potential for a session to be hijacked in case the user does not follow standard security procedures. If they leave their computer unlocked at any given time and do not remain present at their computer afterwards, any person with physical access to that user’s computer could steal or use it and would be able to make use of the session for their own gain. With the default session timeout value this risk is reduced, as the window in which physical access is possible is much more limited (meaning, a session timeout of 24 hours is riskier than a session timeout of 10 minutes). How much of a concern this is will depend on the application’s core business goal and the type of people working with the app. For example, IT professionals are more likely to follow standard security procedures than most other user groups.
 
-Another important matter that can be affected by increasing the session timeout is the user restrictions imposed by your Mendix license. Longer sessions might mean more concurrent users at any given time. This is something to keep in mind when deciding on the specifics of the license you will need to run your application.
+Since the frequency of session timeout checks and other important events is tied to `ClusterManagerActionInterval`, using the default value (half the session timeout) does not make sense when `SessionTimeout` is increased significantly (for example, to 24 hours or more). In this case Mendix recommends that you set a lower value for `ClusterManagerActionInterval`, regardless of how high the value of `SessionTimeout` is set. Mendix suggests a value of around 15 minutes, but ultimately this will depend on the functional requirements of the application.
 
-Finally, there is a security consideration to be made. An idle session means that there is a potential for a session to be hijacked in case the user does not follow standard security procedures. If they leave their computer unlocked at any given time and do not remain present at the their computer afterwards, any person with physical access to that user’s computer could steal or use it and would be able to make use of the session for their own gain. With the default session timeout value this risk is reduced, as the window in which physical access is possible is much more limited (meaning, a session timeout of 24 hours is riskier than a session timeout of 10 minutes). How much of a concern this is will depend on the application’s core business goal and the type of people working with the app. For example, IT professionals should be more likely to follow standard security procedures than most other user groups.
+If you set `ClusterManagerActionInterval` to be much longer than `SessionTimeout`, this will lead to expired sessions remaining in the database longer. On the other hand, if you set `SessionKeepAliveUpdatesInterval` to be longer than `ClusterManagerActionInterval` or set `SessionKeepAliveUpdatesInterval` to be longer than `SessionTimeout`, active sessions will be cleaned up.
 
-So, make sure to keep in mind all of the above when changing these values. Also, make sure your decision to alter any of these values is made with the right considerations.
+{{% alert color="warning" %}}
+The Runtime will fail to start if `ClusterManagerActionInterval`, `SessionKeepAliveUpdatesInterval`, and `SessionTimeout` are not configured correctly. The valid relationships between the three settings are described below.
+{{% /alert %}}
+
+### Session Timing Constraints and Defaults {#session-timing}
+
+The following constraints apply to `ClusterManagerActionInterval` and `SessionKeepAliveUpdatesInterval`:
+
+**ClusterManagerActionInterval:**
+
+* Must not exceed twice `SessionTimeout`, or expired sessions may remain in the database too long
+* If explicitly set to a value exceeding twice the `SessionTimeout`, startup fails with an error
+* Default value:
+    * Below Mendix 11.11.0: 300000 (5 minutes), or half the `SessionTimeout` if not explicitly specified
+    * In Mendix 11.11.0 and above: 300000 (5 minutes), unless `SessionTimeout` ≤ 10 minutes and the default (5 minutes) would exceed twice the `SessionTimeout`, in which case it is automatically set to `SessionTimeout` / 2 (and a warning is logged)
+
+**SessionKeepAliveUpdatesInterval:**
+
+* Must not be greater than half the `ClusterManagerActionInterval`, or else active sessions may be cleaned up
+* Must not be greater than the `SessionTimeout`, or else active sessions may be cleaned up
+* Default value:
+    * Before Mendix 11.11.0: one sixth of the `SessionTimeout`, or 100000 (100 seconds) if `SessionTimeout` is not set
+    * In Mendix 11.11.0 and above: 100000 (100 seconds), unless `SessionTimeout` or half the `ClusterManagerActionInterval` is ≤ 100 seconds, in which case `ClusterManagerActionInterval` / 3 is used (and a warning is logged)
 
 ## Query Logging
 

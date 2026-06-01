@@ -138,9 +138,7 @@ Property paths are consolidated into a tree view. Grey rows represent intermedia
 
 When you click **Go to** or double-click a document entry in Level 1, the document opens as it currently exists in your app. If the document no longer exists in your current state, Level 2 and 3 is shown but nothing opens in the editor.
 
-{{% alert color="info" %}}
-In future releases, both versions of the document will be opened side by side for visual comparison. For now, only the current version opens.
-{{% /alert %}}
+For text-based properties, you can double-click a property row or use the context menu to open a detailed side-by-side comparison in the [File Differences Viewer](/refguide/file-diff-viewer/). For file-type documents in Level 1, double-click or click **Go to** to open the File Differences Viewer instead of a document editor.
 
 ## Refresh Behavior
 
@@ -154,6 +152,7 @@ In the blank state, the **Comparison** pane displays a message with a link to st
 
 ## Read More
 
+* [File Differences Viewer](/refguide/file-diff-viewer/)
 * [History](/refguide/history-dialog/)
 * [Changes Pane](/refguide/changes-pane/)
 * [Comparing Revisions](/refguide/comparing-revisions/)

@@ -107,6 +107,7 @@ You can specify which repositories to use for Gradle. The content of this field 
 ### Generative AI
 
 * **Enable Maia** - When enabled, you can access all Maia capabilities in Studio Pro. It is enabled by default.
+* **Enable web tools** (in Studio Pro 11.11 and above) - When enabled, you can use the [Maia Web Fetch](/refguide/maia-web-fetch/) feature to fetch and read content from public websites and APIs. It is enabled by default. Restart Studio Pro for the change to take effect.
 
 In Studio Pro 11.7 and below, the **Generative AI** section contains the following settings:
 
@@ -151,23 +152,6 @@ This setting defines the default response to the question whether to automatical
 ## Version Control Tab {#version-control}
 
 ### General
-
-#### Executable
-
-This is the path and name of the program that is used to view the details of file changes in the [commit dialog box](/refguide/commit-dialog/).
-
-For example, this is how to set up file comparison for Visual Studio Code: 
-
-```text
-{path to VS Code}/Code.exe --wait --diff "{0}" "{1}"
-```
-
-#### Argument Pattern
-
-This is the pattern from which the arguments are derived that are passed to the file comparison program. The following two placeholders can be used in this pattern:
-
-* `{0}` – this is replaced with the name of the original file before the arguments are passed to the file comparison program
-* `{1}` – this is replaced with the name of the changed file before the arguments are passed to the file comparison program
 
 #### History {#history-pane}
 

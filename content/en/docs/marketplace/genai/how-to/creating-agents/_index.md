@@ -16,11 +16,11 @@ This guide explains how to create an agent in your Mendix app that combines [kno
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-singleagent/structure_singleagent.svg" alt="Agent use case structure showing integration of LLM, knowledge base, and function calling" >}}
 
-For this agent, you will set up logic that uses LLM calls to dynamically determine which in-app and external information is needed based on user input. The system retrieves the necessary information, uses it to reason about the actions to perform, and handles execution while keeping you informed and involved where needed.
+For this agent, you will set up logic that calls LLMs available via Mendix Cloud GenAI calls to dynamically determine which in-app and external information is needed based on user input. The system retrieves the necessary information, uses it to reason about the actions to perform, and handles execution while keeping you informed and involved where needed.
 
 The end result is an example agent in a Mendix app. In this use case, you can ask IT-related questions to the model, which assists in solving problems. The model has access to a knowledge base containing historical, resolved tickets that can help identify suitable solutions. Additionally, function microflows are available to enrich the context with relevant ticket information, such as the number of currently open tickets or the status of a specific ticket.
 
-This agent is a single-turn agent, which means that:
+This agent is a task agent, which means that:
 
 * It is a single-turn interaction (one request-response pair for the UI).
 * No conversation or memory is applicable.

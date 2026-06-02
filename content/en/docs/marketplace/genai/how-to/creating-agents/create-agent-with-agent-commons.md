@@ -71,7 +71,7 @@ Create an agent that can be called to interact with the LLM. The [Agent Commons]
 
 ## Empowering the Agent {#empower-agent}
 
-To let the agent generate responses based on specific data and information, connect it to two function microflows and a knowledge base. Even though the implementation is not complex—you still need to link it in the front end—Mendix recommends familiarity with [Integrate Function Calling into Your Mendix App](/appstore/modules/genai/how-to/howto-functioncalling/) and [Grounding Your Large Language Model in Data](/appstore/modules/genai/how-to/howto-groundllm/#chatsetup). These guides cover the foundational concepts for function calling and knowledge base retrieval. 
+To let the agent generate responses based on specific data and information, you will connect it to two function microflows and a knowledge base. Even though the implementation is not complex because you can select the tools from the frontend, Mendix recommends familiarity with [Integrate Function Calling into Your Mendix App](/appstore/modules/genai/how-to/howto-functioncalling/) and [Grounding Your Large Language Model in Data](/appstore/modules/genai/how-to/howto-groundllm/#chatsetup). These guides cover the foundational concepts for function calling and knowledge base retrieval. 
 
 Use the function microflows created in [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/#domain-model-setup). To use the function calling pattern, link them to the agent as *Tools* so the agent can autonomously decide how and when to use the function microflows. Find the final result in the **ExampleMicroflows** folder of the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) for reference. Tools can also be added when published from an MCP server, as described in [Connecting Functions via MCP](#mcp).
 
@@ -97,8 +97,8 @@ Use the function microflows created in [Set Up Your App for Agent Creation](/app
 
     * Tool action module: Select the module that contains the function microflows you created earlier (**MyFirstModule** if you started from the Blank GenAI App)
     * Microflow: Select `Ticket_GetTicketByID`
-    * Name: `RetrieveTicketByIdentifier` (expression)
-    * Description: `Get ticket details based on a unique ticket identifier (passed as a string). If there is no information for this identifier, inform the user about it.` (expression)
+    * Name: `RetrieveTicketByIdentifier`
+    * Description: `Get ticket details based on a unique ticket identifier (passed as a string). If there is no information for this identifier, inform the user about it.`
     * Enabled: *yes* (default)
 
 2. Click **Save**.
@@ -126,10 +126,10 @@ Connect the agent to the knowledge base so it can use historical ticket data, su
 
     * **Knowledge base resource**: Select the knowledge base resource created in [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/#ingest-knowledge-base)
     * **Collection**: Select `HistoricalTickets`. If nothing appears in the list, refer to the documentation of the connector on how to set it up correctly
-    * Name: `RetrieveSimilarTickets` (expression)
-    * Description: `Similar tickets from the database` (expression)
-    * MaxNumberOfResults: empty (expression; optional)
-    * MinimumSimilarity: empty (expression; optional)
+    * Name: `RetrieveSimilarTickets`
+    * Description: `Similar tickets from the database`
+    * MaxNumberOfResults: empty (optional)
+    * MinimumSimilarity: empty (optional)
 
 2. Click **Save**.
 
@@ -179,7 +179,7 @@ Run the app to see the agent integrated in the use case. From the **TicketHelper
 
 ## Enabling User Confirmation for Tools (Optional) {#user-confirmation}
 
-This optional step uses the human-in-the-loop pattern to give users control over tool executions. When [adding tools to the agent](#empower-agent), you can configure a **User Access and Approval** setting to either make the tools visible to the user or require the user to confirm or reject a tool call. This way, the user controls actions that the LLM requests to perform.
+This optional step uses the human-in-the-loop pattern to give users control over tool executions. When [adding tools to the agent](#empower-agent), you can configure a **User Access and Approval** setting to either make the tools visible to the user or require the user to confirm or reject a tool call. This way, the user can control LLM actions.
 
 For more information, see [Human in the loop](/appstore/modules/genai/genai-for-mx/conversational-ui/#human-in-the-loop).
 

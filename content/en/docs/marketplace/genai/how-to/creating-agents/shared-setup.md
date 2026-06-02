@@ -31,7 +31,7 @@ Before you build an agent in your app, make sure your scenario meets the followi
 * Intermediate understanding of Mendix – Knowledge of simple page building, microflow modeling, domain model creation, and import/export mappings
 * Basic understanding of GenAI concepts – Review [Enrich Your Mendix App with GenAI Capabilities](/appstore/modules/genai/) for foundational knowledge and familiarize yourself with the [concepts of GenAI](/appstore/modules/genai/using-gen-ai/) and [agents](/appstore/modules/genai/agents/)
 * Basic understanding of function calling and prompt engineering – Learn about [Function Calling](/appstore/modules/genai/function-calling/) and [Prompt Engineering](/appstore/modules/genai/get-started/#prompt-engineering) to use them within the Mendix ecosystem
-* Optional – If you are not yet familiar with the GenAI modules, follow these GenAI documents: [Grounding Your LLM in Data](/appstore/modules/genai/how-to/howto-groundllm/), [Prompt Engineering at Runtime](/appstore/modules/genai/how-to/howto-prompt-engineering/), and [Integrate Function Calling into Your Mendix App](/appstore/modules/genai/how-to/howto-functioncalling/)
+* Optional – If you are not yet familiar with implementing specific GenAI concepts with Agents Kit, follow these GenAI documents: [Grounding Your LLM in Data](/appstore/modules/genai/how-to/howto-groundllm/), [Prompt Engineering at Runtime](/appstore/modules/genai/how-to/howto-prompt-engineering/), and [Integrate Function Calling into Your Mendix App](/appstore/modules/genai/how-to/howto-functioncalling/)
 * Optional – Basic understanding of the [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) and the related Mendix modules: [MCP Server module](/appstore/modules/genai/mcp-modules/mcp-server/) and [MCP Client module](/appstore/modules/genai/mcp-modules/mcp-client/)
 
 ## Setting Up Your Application
@@ -54,7 +54,7 @@ After starting the app, the admin user can configure Mendix GenAI resources and 
 
 ## Creating the Agent's Functional Prerequisites {#creating-functional-prerequisites}
 
-The agent interacts with data from a knowledge base and the Mendix app. To make this work from a user interface, set up the following functional prerequisites:
+The agent interacts with data from a knowledge base and the Mendix app. To make this work from a user interface, complete the following functional prerequisites:
 
 * Populate a knowledge base
 * Create a simple user interface that allows the user to trigger the agent from a button
@@ -76,7 +76,7 @@ Ingest Mendix ticket data into the knowledge base. For a detailed guide, see [Gr
     * `Solution` as *String*, length 2000
     * `Status` as *Enumeration*; create a new Enumeration `ENUM_Ticket_Status` with *Open*, *In Progress*, and *Closed* as values
 
-2. From the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475), extract the following components from the `ExampleMicroflows` module and import them into your app:
+2. From the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475), copy and paste the following components from the `ExampleMicroflows` module and import them into your app:
 
     * `ACT_TicketList_LoadAllIntoKnowledgeBase`
     * `Tickets_CreateDataset`
@@ -116,7 +116,7 @@ Create a user interface to test and use the agent. It will look like this:
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-singleagent/TicketHelper_Agent.png" alt="">}}
 
-1. In your domain model, add a new entity `TicketHelper` and set it to not persistable. Add the following attributes:
+1. In your domain model, add a new entity `TicketHelper` and toggle **Persistable** to off. Add the following attributes:
 
     * `UserInput` as *String*, length unlimited
     * `ModelResponse` as *String*, length unlimited

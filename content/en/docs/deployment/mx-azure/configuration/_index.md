@@ -98,10 +98,6 @@ When configuring maintenance windows, consider the following best practices:
 
 For detailed configuration instructions and schedule syntax, see Microsoft's documentation on [Planned Maintenance in AKS](https://learn.microsoft.com/en-us/azure/aks/planned-maintenance).
 
-#### Permission Requirements
-
-To configure AKS maintenance windows, you must have either the Owner or Contributor role on the Azure Managed Application hosting your Mendix on Azure cluster. Additionally, you must be a Cluster Manager in the Mendix on Kubernetes portal. For more information, see [Cluster Visibility and Permissions](/developerportal/deploy/mendix-on-azure/cluster-visibility/).
-
 ### The Mendix on Azure Managed Resource Group {#mrg}
 
 Many Azure Portal configurations require modifying Azure resources located within the Managed Resource Group (MRG) of your Mendix on Azure environment. This resource group can be found through the Mendix on Azure Managed Application:

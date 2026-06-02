@@ -33,8 +33,6 @@ The Mendix Cloud GenAI Resource Packs provide access to the following models:
 | ----- | ---------- | --------- | ----------------------------------------------- | --------------------------- |
 | Anthropic Claude 4.6 Sonnet | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
 | Anthropic Claude 4.5 Sonnet | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
-| Anthropic Claude 4 Sonnet | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Frankfurt),<br> eu-north-1,<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Paris) |
-| Anthropic Claude 3.7 Sonnet | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Frankfurt),<br> eu-north-1,<br> Europe (Ireland),<br> Europe (Paris) |
 | Anthropic Claude 3 Sonnet | Text | Mendix Cloud Canada (Montreal) | NO | ca-central-1 |
 | Cohere Embed v4 | Embeddings | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
 | Cohere Embed v3 <br> English and multilingual | Embeddings | Mendix Cloud EU (Frankfurt, Germany) <br> Mendix Cloud Canada (Montreal) | NO | Europe (Frankfurt),<br> ca-central-1 |

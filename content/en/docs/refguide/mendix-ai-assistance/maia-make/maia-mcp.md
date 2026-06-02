@@ -10,7 +10,7 @@ description: "Describes the features in Maia MCP Client."
 ## Introduction
 
 {{% alert color="info" %}}
-This feature is released as part of [Maia Make](/refguide/maia-make/) capabilities in Studio Pro 11.8. 
+This feature was released as part of [Maia Make](/refguide/maia-make/) capabilities in Studio Pro 11.8. 
 
 To use Maia MCP Client, an internet connection and signing in to Studio Pro are required.
 {{% /alert %}}

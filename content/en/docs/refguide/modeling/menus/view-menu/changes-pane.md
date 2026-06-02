@@ -83,6 +83,9 @@ The toolbar at this level contains the following buttons:
 * **Go to** – takes you directly to the changed element 
 * **Show purely visual changes** – shows visual changes, such as dragging an entity to a new location in the domain model
 
+For text-based properties, you can double-click a property row to open the [File Differences Viewer](/refguide/file-diff-viewer/), which shows a detailed side-by-side comparison of the old and new values. To compare file-level changes at the top level, double-click a file row or right-click and select **Compare with original**.
+
+
 The left side of the grid contains the following columns:
 
 * **Element** – the name of the modified element
@@ -146,5 +149,6 @@ The left and right panes will contain the same information as in [Zoomed-In Leve
 
 * [Studio Pro Overview](/refguide/studio-pro-overview/)
 * [Version Control](/refguide/version-control/)
+* [File Differences Viewer](/refguide/file-diff-viewer/)
 * [Comparison Pane](/refguide/comparison-pane/)
 * [Comparing Revisions](/refguide/comparing-revisions/) 

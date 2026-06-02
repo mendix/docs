@@ -8,7 +8,7 @@ description: "Describes the features in Maia for OQL Generation."
 ## Introduction
 
 {{% alert color="info" %}}
-An internet connection and signing in to Studio Pro are required to use Maia for OQL.
+To use Maia for OQL, an internet connection and signing in to Studio Pro are required.
 {{% /alert %}}
 
 Maia for OQL is a powerful feature that enables you to generate and manage OQL (Object Query Language) queries through an intuitive interface. It is designed to simplify query creation and reduce manual effort. Currently it has some limitations. For more details, see the [Limitations](#limitations) section below.

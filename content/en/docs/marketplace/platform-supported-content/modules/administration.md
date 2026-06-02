@@ -23,7 +23,8 @@ The [Administration](https://marketplace.mendix.com/link/component/23513) module
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187): required for the Administration module versions 4.0.0 and above
 * [Combo Box](https://marketplace.mendix.com/link/component/219304): required for the Administration module versions 4.0.0 and above
 * [Atlas UI Resources](https://marketplace.mendix.com/link/component/104730): required for the Administration module versions 3.0.0 and below
-* [Mendix SSO](https://marketplace.mendix.com/link/component/111349): required for the Administration module versions 1.3.X (for example 1.3.2) and 2.1.X (for example 2.1.2)
+
+You also need the [Mendix SSO](https://marketplace.mendix.com/link/component/111349) module for the Administration module versions 1.3.X (for example 1.3.2) and 2.1.X (for example 2.1.2). However, this module is deprecated as of May 1, 2026. You may alternatively use [OIDC SSO](/appstore/modules/oidc/), [SAML](/appstore/modules/saml/), or [LDAP](/appstore/modules/ldap/).
 
 ## Installation
 
@@ -146,6 +147,10 @@ If you run the app and log in as a user with the Administrator role, you can see
 7. Click **Save**.
 
 ## Using Supporting Microflows with Mendix SSO {#use-with-mendix-sso}
+
+{{% alert color="warning" %}}
+The Mendix SSO module is deprecated as of May 1, 2026. You may alternatively use [OIDC SSO](/appstore/modules/oidc/), [SAML](/appstore/modules/saml/), or [LDAP](/appstore/modules/ldap/).
+{{% /alert %}}
 
 The [Administration](https://marketplace.mendix.com/link/component/23513) module versions 1.3.X (for example, 1.3.2) and 2.1.X (for example, 2.1.2) contain a set of microflows to configure Mendix SSO to use **Administration.Account** as the user entity. To use the supporting microflows with Mendix SSO, follow these steps:
 

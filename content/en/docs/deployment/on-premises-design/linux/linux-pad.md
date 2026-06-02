@@ -1,5 +1,5 @@
 ---
-title: "Portable App Distribution for Linux"
+title: "Portable App Distribution on Linux"
 url: /developerportal/deploy/linux-pad/
 description: "How to install and configure Mendix on a Linux system using Portable App Distribution."
 weight: 20
@@ -12,12 +12,13 @@ Portable App Distribution refers to packaging applications in a self-contained f
 This documentation provides guidance for deploying Portable App Distribution in a Linux environment and serves as a helpful reference rather than official implementation support.
 
 {{% alert color="info" %}}
+Unlike the M2EE-based deployment, where Mendix provides full end-to-end tooling support, the Portable App Distribution approach only requires Java to run, with Mendix's support strictly limited to the Portable App Distribution package itself. All implementation, configuration, and deployment activities, including Linux deployment, remain the customer's sole responsibility.
 For information about the scope of support, see [Support for Different Deployment Strategies](/support/deployment-strategy-support/).
 {{% /alert %}}
 
 ## Prerequisites
 
-To deploy your app to an on-premises Cloud Foundry configuration using [Portable App Distribution](/developerportal/deploy/portable-app-distribution-deploy/), ensure that you fulfill the following prerequisites:
+To deploy your app to an on-premises Linux configuration using [Portable App Distribution](/developerportal/deploy/portable-app-distribution-deploy/), ensure that you fulfill the following prerequisites:
 
 * A Linux environment. This can be a virtual machine, a physical server, or a cloud instance (for example, AWS EC2, Azure VM, Google Cloud VM). You will need `sudo` or `root` privileges for some commands.
 * Java Development Kit (JDK). Your application requires a compatible Java runtime. For installation instructions, refer to the following sections. 

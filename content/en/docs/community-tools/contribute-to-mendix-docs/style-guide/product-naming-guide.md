@@ -86,9 +86,9 @@ It is fine to use "Control Center."
 
 ### Mendix Marketplace
 
-Capitalize in all instances, even when just writing "Marketplace."
+Capitalize in all instances, even when just writing "Marketplace." Use "Mendix Marketplace" on first mention in a document, then "Marketplace" for subsequent mentions. When there's risk of confusion with another marketplace (such as Siemens Marketplace), use "Mendix Marketplace" throughout.
 
-It is fine to use "the Mendix Marketplace" or "the Marketplace."
+This is a product name, so don't add a definite article.
 
 ### Mendix Platform
 
@@ -155,7 +155,7 @@ Does not need to be capitalized, and "team" should be used without the qualifier
 
 ### app template
 
-This is the term to use to reflect the create-new-app flow UI in the Developer Portal.
+This is the term to use to reflect the create-new-app flow UI in Apps.
 
 Do not use "starter app."
 
@@ -462,12 +462,6 @@ Do not use SBoM.
 ### Sprint
 
 Capitalize in all instances.
-
-### Studio Pro landing page
-
-The Studio Pro landing page refers to the page that contains **My Apps**, **Marketplace**, and **Developer Portal** tabs.
-
-Capitalize "Studio Pro".
 
 ### sub-microflow
 

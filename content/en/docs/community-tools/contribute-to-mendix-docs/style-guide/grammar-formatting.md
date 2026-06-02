@@ -193,7 +193,7 @@ To insert an em dash, use the keyboard shortcut <kbd>Alt</kbd> + <kbd>0151</kbd>
 
 Write dates in the format **month day, year**, where:
 
-* Month is the full month or a three-letter abbreviation
+* Month is the full month name
 * [Day is the cardinal number](#numbers) (16), not the ordinal number (16th)
 * Year is four digits
 
@@ -461,11 +461,21 @@ Do not use ordinal numbers for dates (see [Dates](#dates)).
 
 ## Person
 
-Address the reader of your documents using the second person instead of the first person: use "you" or "your" instead of "we", "our", or "us".
+Use imperative mood for instructions and second person (you, your) to address the reader. Use "you" instead of "user", or use "end-user" when referring to the user of a Mendix app built on the Mendix Platform.
 
-Assume your reader is the person doing the tasks that you are documenting. Use "you" instead of "user", or use "end-user" when referring to the user of a Mendix app built on the Mendix Platform.
+Avoid first-person plural (we, us, our, let's) in all documentation except release notes.
 
-Always use "Mendix" instead of "we" in the regular documentation. Use "we" only in the Studio Pro release notes, which are written from the perspective of PMs or developers.
+> Create a microflow. (Instead of "Let's create a microflow.")
+>
+> Add validation rules. (Instead of "We can add validation rules.")
+
+When you need to emphasize that Mendix is the speaker, use phrasing like "Mendix recommends".
+
+> Mendix recommends using the latest LTS version for production environments.
+
+Release notes are an exception: they are written from Mendix's perspective and use "we" consistently.
+
+> We fixed a bug where the debugger would crash when inspecting large objects.
 
 ## Procedures and Examples
 

@@ -45,13 +45,14 @@ Starting point for app creation:
 * **Start with Maia** - a starting point in Studio Pro that helps you to start the app development process. Based on a required text description and an optional image or PDF, it generates an app that includes a domain model, data management overview pages, test data, and a tailored homepage. For more information, see [Start with Maia](/refguide/start-with-maia/).
 * **Maia Make** - a unified conversational interface in Studio Pro that groups all AI-assisted development capabilities into a single chat experience. With this interface, everything happens in one place. Start a conversation, describe what you need, and Maia generates the necessary app artifacts, such as a new domain model, pages, and microflows. You can also ask it to explain documents for you, including your app logic and pages. 
 
-    This unified conversational interface is released in Studio Pro 11.8. For more information, see [Maia Make](/refguide/maia-make/).
+    This unified conversational interface was released in Studio Pro 11.8. For more information, see [Maia Make](/refguide/maia-make/).
 
 Guidance:
 
 * **Maia Chat** – a built-in chat interface powered by Generative AI in Studio Pro. It answers questions about app development in Mendix, including how to apply concepts, best practices, and development patterns. For more information, see [Maia Chat](/refguide/maia-chat/). 
 * **Maia Learn** – helps you to quickly learn Mendix core concepts and get started with Studio Pro. For more information, see [Maia Learn](/refguide/maia-learn/).
 * **Maia Explain** – helps you easily understand a microflow or a nanoflow. It explains the general purpose of the logic and highlights specific technical details to help you understand the logic further. For more information, see [Maia Explain](/refguide/maia-explain/).
+* **Maia Agent Skills** – lets you define modular, reusable instructions that extend Maia with domain-specific knowledge. Maia applies them automatically whenever relevant, eliminating the need to repeat the same context across conversations. For more information, see [Maia Agent Skills](/refguide/maia-agent-skills/).
 
 Recommenders:
 

@@ -1,5 +1,5 @@
 ---
-title: "Portable App Distribution for Cloud Foundry"
+title: "Portable App Distribution on Cloud Foundry"
 url: /developerportal/deploy/cloud-foundry-pad/
 weight: 20
 description: "Describes how to deploy to a Cloud Foundry environment by using Portable App Distribution."
@@ -12,6 +12,7 @@ Cloud Foundry is a platform-as-a-service (PaaS) that automates the deployment, s
 This documentation provides guidance on understanding Cloud Foundry on-premise deployments and serves as a helpful reference rather than official implementation support.
 
 {{% alert color="info" %}}
+Unlike the Cloud Foundry Buildpack deployment where Mendix provides full end-to-end tooling support, the Portable App Distribution approach only requires Java to run, with Mendix's support strictly limited to the Portable App Distribution package itself. All implementation, configuration, and deployment activities, including Cloud Foundry deployment, remain the sole responsibility of the customer.
 For information about the scope of support, see [Support for Different Deployment Strategies](/support/deployment-strategy-support/).
 {{% /alert %}}
 

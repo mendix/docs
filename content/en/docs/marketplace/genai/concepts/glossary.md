@@ -12,7 +12,9 @@ This glossary provides brief definitions of key agentic and generative AI terms 
 
 ## Agent {#agent}
 
-An AI system that combines an LLM with a reasoning loop and can be extended with memory, tools, skills, and the ability to call and execute functions. It can plan, evaluate results, and iterate toward a goal. For more information, see [GenAI Agents](/appstore/modules/genai/agents/).
+An AI system that combines an LLM with a reasoning loop and can be extended with memory, tools, skills, and the ability to call and execute functions. It can plan, evaluate results, and iterate toward a goal.
+
+In Mendix, you can build agents using Agents Kit, a collection of starter apps, connectors, and modules that support implementations from simple text generation to complex multi-step agentic workflows. For more information, see [GenAI Agents](/appstore/modules/genai/agents/).
 
 ## Agent Orchestration {#agent-orchestration}
 
@@ -36,23 +38,31 @@ A category of artificial intelligence technology that can generate new content s
 
 ## Hallucination {#hallucination}
 
-When an LLM generates incorrect, nonsensical, or fabricated information that is not grounded in its training data or the provided context. Hallucinations occur when models fill gaps in knowledge with plausible-sounding but inaccurate content. For example, an LLM might confidently state that a fictional person won an award that never existed, or cite nonexistent research papers.
+When an LLM generates incorrect, nonsensical, or fabricated information that is not grounded in its training data or the provided context. Hallucinations occur when models fill gaps in knowledge with plausible-sounding but inaccurate content. For example, an LLM might confidently state that a fictional person won an award that never existed, or cite nonexistent research papers. To reduce hallucinations, techniques like [RAG](#retrieval-augmented-generation) ground responses in verified data, and patterns like [human in the loop](#human-in-the-loop) add validation steps for critical decisions.
 
 ## Human in the Loop {#human-in-the-loop}
 
 A design pattern where an agent pauses at defined points to request human input—such as approval, correction, or a decision—before continuing. The human is an active part of the agent’s execution, not just a monitor of it.
 
+In Mendix, this is implemented through user access approval settings on [tools](#tool-calling), which control when tools get executed and whether they are visible to the user. For example, a tool that deletes records might require explicit user confirmation before execution. The ConversationalUI module supports human-in-the-loop interactions out of the box. For implementation details, see [Human in the Loop](/appstore/modules/genai/conversational-ui/#human-in-the-loop).
+
 ## Knowledge Base {#knowledge-base}
 
-A storage system for discrete pieces of information that can be retrieved and used to augment prompts. Combining a knowledge base with [embeddings](#embeddings) (vector representations of the data) creates a [vector database](#vector-database) that supports semantic similarity searches. Knowledge bases are essential for [RAG](#retrieval-augmented-generation) patterns. In Mendix, the [PgVector Knowledge Base](/appstore/modules/genai/pgvector/) module provides this functionality.
+A storage system for discrete pieces of information that can be retrieved and used to augment prompts. Combining a knowledge base with [embeddings](#embeddings) (vector representations of the data) creates a [vector database](#vector-database) that supports semantic similarity searches. Knowledge bases are essential for [RAG](#retrieval-augmented-generation) patterns.
+
+In Mendix, the [PgVector Knowledge Base](/appstore/modules/genai/pgvector/) module provides this functionality.
 
 ## Large Language Model (LLM) {#large-language-model}
 
-An advanced neural network trained on large amounts of text that can understand input and generate responses. LLMs can perform tasks such as text generation, answering questions, summarization, and translation. Mendix connectors support LLMs from providers including OpenAI, Amazon Bedrock, and Mendix Cloud GenAI. For details on supported models, see [Available Models](/appstore/modules/genai#models).
+An advanced neural network trained on large amounts of text that can understand input and generate responses. LLMs can perform tasks such as text generation, answering questions, summarization, and translation.
+
+Mendix connectors support LLMs from providers including OpenAI, Amazon Bedrock, and Mendix Cloud GenAI. For details on supported models, see [Available Models](/appstore/modules/genai#models).
 
 ## Model Context Protocol (MCP) {#model-context-protocol}
 
-An open protocol that standardizes how large language models can autonomously connect to applications. MCP enables apps to expose tools and prompts to external clients, and consume tools and prompts from external servers. Mendix provides an MCP Server module to build an MCP server from a Mendix app, enabling developers to expose tools and prompts to external MCP clients, as well as an MCP Client module that enables your app to connect to MCP servers, allowing it to discover and use tools and prompts. For more information, see [Model Context Protocol](/appstore/modules/genai/mcp/).
+An open protocol that standardizes how large language models can autonomously connect to applications. MCP enables apps to expose tools and prompts to external clients, and consume tools and prompts from external servers.
+
+Mendix provides an MCP Server module to build an MCP server from a Mendix app, enabling developers to expose tools and prompts to external MCP clients, as well as an MCP Client module that enables your app to connect to MCP servers, allowing it to discover and use tools and prompts. For more information, see [Model Context Protocol](/appstore/modules/genai/mcp/).
 
 ## Prompt Engineering {#prompt-engineering}
 
@@ -84,4 +94,6 @@ The input text provided by an end user or app to an LLM. User prompts contain th
 
 ## Vector Database {#vector-database}
 
-A specialized database designed to store and query [embeddings](#embeddings) vectors. Vector databases support similarity searches using mathematical techniques (such as measuring vector similarity) to find the most semantically similar items to a query. This capability is essential for [RAG](#retrieval-augmented-generation) patterns. In Mendix, PostgreSQL with the pgvector extension serves as a vector database. For more information, see [PgVector Knowledge Base](/appstore/modules/genai/pgvector/).
+A specialized database designed to store and query [embeddings](#embeddings) vectors. Vector databases support similarity searches using mathematical techniques (such as measuring vector similarity) to find the most semantically similar items to a query. This capability is essential for [RAG](#retrieval-augmented-generation) patterns.
+
+In Mendix, PostgreSQL with the pgvector extension serves as a vector database. For more information, see [PgVector Knowledge Base](/appstore/modules/genai/pgvector/).

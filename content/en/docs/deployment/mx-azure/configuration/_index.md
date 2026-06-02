@@ -61,10 +61,46 @@ The following configurations can be modified directly through the [Microsoft Azu
 
 | Configuration Option | Description |
 | --- | --- |
+| AKS Planned Maintenance Windows | Schedule weekly maintenance windows for node OS upgrades and cluster version upgrades to avoid pod restarts during business hours. For more information, see [Configuring AKS Planned Maintenance Windows](#aks-maintenance-windows). |
 | Configure virtual network peering on the vNet hosting Mendix on Azure | For more information, see [Implementing private connectivity using Azure Virtual Network Peering](/developerportal/deploy/mendix-on-azure/configuration/interconnecting-networks/#network-peering). |
 | Deploy Private Link Service to expose Mendix apps in other Azure virtual networks | For more information, see [Using Private Link Service to expose Mendix apps in other Azure virtual networks](/developerportal/deploy/mendix-on-azure/configuration/interconnecting-networks/#pls). |
 | Deploy Private Endpoints to establish connectivity between Mendix apps and other services | For more information, see [Accessing private services via Private Endpoints](/developerportal/deploy/mendix-on-azure/configuration/interconnecting-networks/#pe-internal). |
 | Override DNS configuration on the vNet hosting Mendix on Azure | For more information, see [DNS name resolution towards resources in other networks](/developerportal/deploy/mendix-on-azure/configuration/interconnecting-networks/#name-resolution-dns-override). |
+
+### Configuring AKS Planned Maintenance Windows {#aks-maintenance-windows}
+
+Azure Kubernetes Service (AKS) automatically applies cluster upgrades and node OS security patches to keep your infrastructure secure and up-to-date. By default, these upgrades can occur at any time, potentially causing brief application pod restarts during business hours.
+
+To minimize disruption, you can configure planned maintenance windows to schedule these upgrades during off-peak hours. This ensures that node OS patches and cluster version upgrades occur only during designated time windows.
+
+#### Recommendations
+
+When configuring maintenance windows, consider the following best practices:
+
+* **Minimum window duration**: 4 hours (required by AKS when using automatic upgrade channels)
+* **Recommended frequency**: Weekly
+* **Timing**: Schedule during off-peak hours, avoiding business-critical periods and peak traffic times
+* **Timezone**: Maintenance windows are configured in UTC. Calculate the appropriate offset for your region
+* **Maximum interval**: 2 weeks between maintenance windows to avoid delayed security patches
+
+#### Configuration Steps
+
+1. Sign in to the [Microsoft Azure portal](https://portal.azure.com)
+2. Navigate to your Mendix on Azure Managed Application
+3. Open the **Managed Resource Group** (see [The Mendix on Azure Managed Resource Group](#mrg))
+4. Locate and open the AKS cluster resource (typically named `<prefix>-<environment-id>-k8s`)
+5. In the left menu, select **Settings** > **Cluster configuration**
+6. Scroll to the **Planned maintenance** section
+7. Configure your maintenance windows:
+   * **Default maintenance window**: General maintenance operations
+   * **Auto-upgrade maintenance window**: For automatic cluster version upgrades
+   * **Node OS upgrade maintenance window**: For node operating system security patches
+
+For detailed configuration instructions and schedule syntax, see Microsoft's documentation on [Planned Maintenance in AKS](https://learn.microsoft.com/en-us/azure/aks/planned-maintenance).
+
+#### Permission Requirements
+
+To configure AKS maintenance windows, you must have either the Owner or Contributor role on the Azure Managed Application hosting your Mendix on Azure cluster. Additionally, you must be a Cluster Manager in the Mendix on Kubernetes portal. For more information, see [Cluster Visibility and Permissions](/developerportal/deploy/mendix-on-azure/cluster-visibility/).
 
 ### The Mendix on Azure Managed Resource Group {#mrg}
 
@@ -94,7 +130,7 @@ Certain configuration changes require Mendix intervention and can only be perfor
 
 | Configuration Change | Description |
 | --- | --- |
-| PostgreSQL Maintenance Window | Configure a dedicated maintenance window for the PostgreSQL database hosting your Mendix app databases. Since maintenance might cause temporary app downtime, you can request a custom schedule instead of the default system-managed one. For more information, see the [Microsoft documentation on PostgreSQL maintenance windows](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/concepts-maintenance). |
+| PostgreSQL Maintenance Window | Configure a dedicated maintenance window for the PostgreSQL database hosting your Mendix app databases. Since maintenance might cause temporary app downtime, you can request a custom schedule instead of the default system-managed one. For more information, see the [Microsoft documentation on PostgreSQL maintenance windows](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/concepts-maintenance). **Note**: This is separate from AKS maintenance windows, which you can configure directly (see [Configuring AKS Planned Maintenance Windows](#aks-maintenance-windows)). |
 
 {{% alert color="info" %}} 
 Please submit Mendix on Azure support tickets exclusively through the Mendix on Azure portal. Tickets created here automatically capture vital context such as cluster identifiers and logs, enabling faster, more accurate support.

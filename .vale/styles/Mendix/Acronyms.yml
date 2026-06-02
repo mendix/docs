@@ -41,6 +41,8 @@ exceptions:
   - JSX
   - LESS
   - LLDB
+  - MDA
+  - MPR
   - NET
   - NOTE
   - NVDA

@@ -8,7 +8,7 @@ description: "Quick reference for key agentic and generative AI terms used in Me
 
 ## Introduction
 
-This glossary provides brief definitions of key agentic and generative AI terms used in the Mendix documentation.
+This glossary provides brief definitions of key agentic and generative AI terms used in the Mendix documentation. To explore working implementations of these concepts, see the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475), which demonstrates multi-agent patterns, RAG, tool calling, MCP integration, and more.
 
 ## Agent {#agent}
 

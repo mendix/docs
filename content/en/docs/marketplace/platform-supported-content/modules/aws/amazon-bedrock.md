@@ -882,3 +882,15 @@ If you encounter an error stating that an attribute or a reference is required a
 ### Conflicted Lib Error After Module Import
 
 If you encounter an error caused by conflicting Java libraries, such as `java.lang.NoSuchMethodError: 'com.fasterxml.jackson.annotation.OptBoolean com.fasterxml.jackson.annotation.JsonProperty.isRequired()'`, try synchronizing all dependencies (**App** > **Synchronize dependencies**) and then restart your application.
+
+
+### Missing Jackson Core Dependency
+
+This applies to cases where your app fails to compile with the following error: 
+
+`Missing dependencies: com.fasterxml.jackson.core:jackson-core:2.22.0` 
+
+The cause is that this dependency is advertised in Maven repositories but doesn't actually exist. When you build your app, the automated dependency management attempts to download it, which fails because the version is unavailable.
+
+To resolve this issue, download and install [GenAI Commons 6.2.2](https://marketplace.mendix.com/link/component/239448) from the Mendix Marketplace. This module includes a fixed Jackson Core dependency configuration and will allow your app to compile successfully. Once the issue is resolved on Maven side, a dependency range is planned to be used again in order for the advantages of automated dependency management (such as automatic vulnerability fixes) to be leveraged again.
+

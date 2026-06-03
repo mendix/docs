@@ -12,7 +12,7 @@ GenAI agents are autonomous computational systems that perform actions in respon
 
 If you are interested in creating your own agent, explore the guide on [Creating Your First Agent](/appstore/modules/genai/how-to/creating-agents/). It walks you through how to combine prompt engineering, function calling, and knowledge base integration—all within a Mendix app.
 
-## Multi-Agent systems
+## Multi-Agent Systems
 
 Sometimes, a single agent is not enough for more complex use cases. In such cases, a multi-agent solution is needed. Multi-agent architectures go beyond single-agent implementations when tasks become too complex for one agent to handle alone. While single agents work well for simple, well-defined tasks, more complex or uncertain scenarios require multiple agents to collaborate. Multi-agent systems enable the coordination of business processes, specialized task allocation, and protocol execution by invoking dedicated sub-agents, often dynamically. This approach leads to better performance and more efficient operations compared to relying on a single agent to handle everything.
 

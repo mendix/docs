@@ -46,7 +46,7 @@ Create an agent that can be sent to the LLM. The [Agent Commons](/appstore/modul
     If the retrieved results are not helpful to answer the request, inform the user in a user-friendly way.
     ```
     
-6. Add the `{{UserInput}}` prompt to the [User Prompt](/appstore/modules/genai/prompt-engineering/#user-prompt) field. The user prompt typically reflects what the end user writes, although it can be prefilled with your own instructions. In this example, the prompt consists only of a placeholder variable for the actual input of the user.
+6. Add the `{{UserInput}}` prompt to the [User Prompt](/appstore/modules/genai/prompt-engineering/#user-prompt) field. The user prompt typically reflects what the end-user writes, although it can be prefilled with your own instructions. In this example, the prompt consists only of a placeholder variable for the actual input of the user.
 
 7. Add a value in the **UserInput** variable field to test the current agent. For example, type `How can I implement an agent in my Mendix app?`. Ideally, the model will not attempt to answer requests that fall outside its scope, as it is restricted to handling IT-related issues and providing information about ticket data. However, if you ask a question that would require tools that are not yet implemented, the model might hallucinate and generate a response as if it had used those tools.
 

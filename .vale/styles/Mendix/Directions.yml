@@ -3,7 +3,7 @@
 extends: substitution
 message: "Use '%s' instead of '%s'"
 link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/terminology/#upperlowercase
-level: error
+level: warning
 ignorecase: true
 scope:
   - paragraph

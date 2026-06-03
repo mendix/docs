@@ -40,10 +40,10 @@ If you are using a GenAI starter app such as the Blank GenAI Starter App, you ca
 
 1. Set your app's [security level](/refguide/app-security/) to **Production**.
 2. Install the [GenAI Commons](https://marketplace.mendix.com/link/component/239448), [Agent Commons](https://marketplace.mendix.com/link/component/240371), [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449), and [ConversationalUI](https://marketplace.mendix.com/link/component/239450) modules from Marketplace. You also need to install their dependencies, including [MCP Client](https://marketplace.mendix.com/link/component/244893), [Community Commons](https://marketplace.mendix.com/link/component/170), and [Encryption](https://marketplace.mendix.com/link/component/1011).
-3. Open your app's [Security](/refguide/security/#user-role) settings and edit the user role that you want to create and use agents. This is typically the Administrator role, but this may vary depending on your use case. Follow these steps:
+3. Open your app's [Security](/refguide/security/#user-role) settings and configure the appropriate user roles:
 
-    1. For the Agent Commons module, assign the **AgentAdmin** module role.
-    2. For the Conversational UI module, assign the **User** module role.
+    1. For the user role responsible for defining agents (typically the Administrator role), assign the **AgentAdmin** module role from the Agent Commons module.
+    2. For user roles that chat with the agent, assign the **User** module role from the Conversational UI module.
     3. Save the security settings.
 4. Go to your app's **Navigation** and add a new **Agents** item.
     1. Select an icon, such as `notes-paper-text`, from the Atlas icon set.
@@ -102,7 +102,7 @@ Ingest Mendix ticket data into the knowledge base. For a detailed guide, see [Gr
 
 7. Create a microflow `ACT_CreateDemoData_IngestIntoKnowledgeBase`. Add two actions to the new microflow: call the `Tickets_CreateDataset` microflow, then call the `ACT_TicketList_LoadAllIntoKnowledgeBase` microflow.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-singleagent/Microflow_IngestIntoKnowledgeBase.png" alt="">}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-goundllm/loaddataintokb-example-combine.png" >}}
  
 8. Add the admin role under **Allowed Roles** in the `ACT_CreateDemoData_LoadAllIntoKnowledgeBase` microflow properties.
 

@@ -24,21 +24,23 @@ Before you begin, complete the following prerequisites:
 
 Create and configure the required Model and Agent documents in Studio Pro, including prompts and a context entity:
 
-1. In the **App Explorer**, right-click your module and select **Add other** > **Constant**. Set the **Type** to `string` and the **Default value** to your text generation [resource key](/appstore/modules/genai/mx-cloud-genai/Navigate-MxGenAI/#keys) from the Mendix Cloud GenAI Portal.
+1. In the **App Explorer**, right-click your module and select **Add other** > **Constant**. Set the **Type** to `string`.
 
 2. In the **App Explorer**, right-click your module and select **Add other** > **Model**.
 
-3. In the new Model document, set the **Provider** to Mendix Cloud GenAI. For the **Model key**, select the constant that you created.
+3. In the new Model document, set the **Provider** to Mendix Cloud GenAI. For the **Model key**, select the constant you created in step 1.
 
-4. In the **Connection** section, click **Test** to verify that the model can be reached.
+4. In the **Configurations** tab of **App Settings**, add a new configuration that sets the constant's value to your text generation [resource key](/appstore/modules/genai/mx-cloud-genai/Navigate-MxGenAI/#keys) from the Mendix Cloud GenAI Portal.
 
-5. In the **App Explorer**, right-click your module and select **Add other** > **Agent**. Set a clear name, for example, `IT_Ticket_Helper`.
+5. In the **Connection** section, click **Test** to verify that the model can be reached.
 
-6. In the **Model** field, select the Model document you created in the previous steps.
+6. In the **App Explorer**, right-click your module and select **Add other** > **Agent**. Set a clear name, for example, `IT_Ticket_Helper`.
 
-7. For the **Context entity**, select the `TicketHelper` entity created in [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/#domain-model-setup). This entity contains an attribute `UserInput` that matches the variable placeholder.
+7. In the **Model** field, select the Model document you created in the previous steps.
 
-8. In the **System prompt** field, add instructions that define how the model should handle IT-ticket requests. You can use the following prompt:
+8. For the **Context entity**, select the `TicketHelper` entity created in [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/#domain-model-setup). This entity contains an attribute `UserInput` that matches the variable placeholder.
+
+9. In the **System prompt** field, add instructions that define how the model should handle IT-ticket requests. You can use the following prompt:
 
     ```txt
     You are a helpful assistant supporting the IT department with employee requests, such as support tickets, license requests (for example, Miro), or hardware requests (for example, computers). Use the knowledge base and historical support tickets as a database to find a solution, without disclosing any sensitive details or data from previous tickets. Base your responses solely on the results of executed tools. Never generate information on your own. The user expects clear, concise, and direct answers from you.
@@ -57,9 +59,9 @@ Create and configure the required Model and Agent documents in Studio Pro, inclu
     If the retrieved results are not helpful to answer the request, inform the user in a user-friendly way.
     ```
 
-9. In the **User prompt** field, enter `{{UserInput}}`. This creates a placeholder to inject the user input at runtime.
+10. In the **User prompt** field, enter `{{UserInput}}`. This creates a placeholder to inject the user input at runtime.
 
-10. Save the Agent document.
+11. Save the Agent document.
 
 ## Empowering the Agent
 
@@ -125,7 +127,7 @@ Link a knowledge base collection to the agent so it can retrieve relevant histor
 
 1. In **App Explorer**, right-click your module and select **Add other** > **Knowledge base**.
 
-2. Set a name (for example, `MyKnowledgeBase`) and configure the **Knowledge base key** by creating and selecting a string constant that contains your knowledge base [resource key](/appstore/modules/genai/mx-cloud-genai/Navigate-MxGenAI/#keys) from the Mendix Cloud GenAI Portal.
+2. Set a name (for example, `MyKnowledgeBase`) and configure the **Knowledge base key** by first creating and selecting a string type constant inside of the module and then, in the **Configurations** tab of **App Settings**, setting its value to your knowledge base [resource key](/appstore/modules/genai/mx-cloud-genai/Navigate-MxGenAI/#keys) from the Mendix Cloud GenAI Portal.
 
 3. Click **List collections** to validate the connection and load available collections.
 
@@ -154,7 +156,7 @@ Before testing, make sure the app model has no consistency errors. Then follow t
 
 5. Review the result in the **Output** area of the Agent document. In this case, because the input is not about IT-related issues, the agent response text likely indicates that it cannot answer. This is the intended behavior.
 
-If you make changes to the agent definition afterwards, restart or redeploy the local runtime when needed before testing again. If a test call fails, check the **Console** pane in Studio Pro for detailed error information.
+If you make changes to the agent definition afterward, restart or redeploy the local runtime when needed before testing again. If a test call fails, check the **Console** pane in Studio Pro for detailed error information.
 
 ## Calling the Agent
 

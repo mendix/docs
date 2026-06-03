@@ -52,7 +52,7 @@ Create an agent that can be called to interact with the LLM. The [Agent Commons]
     If the retrieved results are not helpful to answer the request, inform the user in a user-friendly way.
     ```
     
-7. Add the `{{UserInput}}` expression to the [User Prompt](/appstore/modules/genai/prompt-engineering/#user-prompt) field. The user prompt typically represents the end user's input. You can also prefill it with predefined instructions. In this example, the prompt consists only of a placeholder variable for the actual input the user provides while interacting with the running app.
+7. Add the `{{UserInput}}` expression to the [User Prompt](/appstore/modules/genai/prompt-engineering/#user-prompt) field. The user prompt typically represents the end-user's input. You can also prefill it with predefined instructions. In this example, the prompt consists only of a placeholder variable for the actual input the user provides while interacting with the running app.
 
 8. Add a value in the **UserInput** variable field in the **Test Case** section. This lets you test the current prompt behavior by calling the agent. For example, type `How can I implement an agent in my Mendix app?` and click **Test**. You may need to scroll down to see the **Output** on the page after a few seconds. Ideally, the model does not attempt to answer requests that fall outside its scope, as it is restricted to handling IT-related issues and providing information about ticket data. If you ask a question that requires tools that are not yet implemented, the model might hallucinate and generate a response as if it had used those tools.
 
@@ -81,7 +81,7 @@ Use the function microflows created in [Set Up Your App for Agent Creation](/app
 
 2. Scroll to the bottom of the page. In the **Tools** section, add a new tool of type `Microflow tool`:
 
-    * Tool action module: Select the module that contains the function microflows you created earlier (for example, **MyFirstModule** if you started from the Blank GenAI App)
+    * Tool action module: Select the module that contains the function microflows you created earlier (for example, select **MyFirstModule** if you started from the Blank GenAI App)
     * Microflow: Select `Ticket_GetNumberOfTicketsInStatus`
     * Name: `RetrieveNumberOfTicketsInStatus`
     * Description: `Get number of tickets in a certain status. Only the following values for status are available: ['Open', 'In Progress', 'Closed']`
@@ -95,7 +95,7 @@ Use the function microflows created in [Set Up Your App for Agent Creation](/app
 
 1. From the agent view page for the `IT-Ticket Helper` agent, under **Tools**, add another tool of type `Microflow tool`:
 
-    * Tool action module: Select the module that contains the function microflows you created earlier (for example, **MyFirstModule** if you started from the Blank GenAI App)
+    * Tool action module: Select the module that contains the function microflows you created earlier (for example, select **MyFirstModule** if you started from the Blank GenAI App)
     * Microflow: Select `Ticket_GetTicketByID`
     * Name: `RetrieveTicketByIdentifier`
     * Description: `Get ticket details based on a unique ticket identifier (passed as a string). If there is no information for this identifier, inform the user about it.`
@@ -193,11 +193,11 @@ Follow these steps:
 
 4. Duplicate the `Request_CallAgent_ToolUserConfirmation_Example` microflow from ConversationalUI in your own module and include it in the project. Call this microflow instead of the `Call Agent Without History` action. Make the following modifications (the annotations show the position):
 
-    * Add your context object `TicketHelper` as an input parameter and pass it in the first `Call Agent Without History` action
-    * Change the message retrieval to retrieve a `Message` from your `TicketHelper` via association
-    * After calling the microflow `Response_CreateOrUpdateMessage`, add a `Change object` action to set the association `TicketHelper_Message` to the `Message_ConversationalUI` object. Additionally, set the `RequestId` derived from the `ResponseId`
-    * After the decision, add an action to call `ACT_TicketHelper_CallAgent_Commons` again to ensure updated tool messages are sent back to the LLM
-    * Inside the loop in the `false` path, open a page for the user to decide if the tool should be executed. For this, add the `ToolMessage_UserConfirmation_Example` page to your module
+    * Add your context object `TicketHelper` as an input parameter and pass it in the first `Call Agent Without History` action.
+    * Change the message retrieval to retrieve a `Message` from your `TicketHelper` via association.
+    * After calling the microflow `Response_CreateOrUpdateMessage`, add a `Change object` action to set the association `TicketHelper_Message` to the `Message_ConversationalUI` object. Additionally, set the `RequestId` derived from the `ResponseId`.
+    * After the decision, add an action to call `ACT_TicketHelper_CallAgent_Commons` again to ensure updated tool messages are sent back to the LLM.
+    * Inside the loop in the `false` path, open a page for the user to decide whether to run the tool. For this, add the `ToolMessage_UserConfirmation_Example` page to your module.
 
 5. Create microflows for the **Confirm** and **Reject** buttons that update the status of the tool message, for example, by calling the `ToolMessage_UpdateStatus` microflow. If no more pending tool messages are available, call **ACT_TicketHelper_Agent_UserConfirmation_AgentCommons** again. Always close the pop-up page on decisions.
 

@@ -100,9 +100,9 @@ To start, create a microflow that allows you to upload data into your knowledge 
     * **ChunkCollection**: `ChunkCollection` (as created earlier)
     * **DeployedKnowledgeBase**: `DeployedKnowledgeBase`
 
-You have successfully implemented the knowledge base insertion microflow! If you do not have any data available in your app yet, you need to create a microflow to generate the dataset, as described in the [Data Set Microflow](#dataset) section below.
+You have successfully implemented the knowledge base insertion microflow! If you do not have any data available in your app yet, you need to create a microflow to generate the dataset, as described in the [Dataset Microflow](#dataset) section below.
 
-#### Data Set Microflow {#dataset}
+#### Dataset Microflow {#dataset}
 
 This microflow first checks whether a list of tickets already exists in the database. If not, it imports a `JSON` string as described in the [demo data](#demodata) section above.
 
@@ -131,7 +131,7 @@ This microflow first checks whether a list of tickets already exists in the data
 
 5. Next, add the `Import With Mapping` action with the following configurations:
 
-    * **Variable****: `TicketJSON` created in the previous step
+    * **Variable**: `TicketJSON` created in the previous step
     * **Mapping**: Use the mapping mentioned in the [demo data section](/appstore/modules/genai/how-to/howto-groundllm/#demodata)
     * **Range**: `All`
     * **Commit**: `Yes without events`
@@ -142,7 +142,7 @@ With both microflows created, they must be combined and added to the homepage to
 
 #### Joining the Microflows {#joining-microflows}
 
-1. Create a new microflow `ACT_TicketList_CreateData_InsertIntoKnowledgeBase`.
+1. Create a new microflow `ACT_CreateDemoData_LoadAllIntoKnowledgeBase`.
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-goundllm/loaddataintokb-example-combine.png" >}}
 
@@ -158,7 +158,7 @@ To use the knowledge in a chat interface, create and adjust certain microflows a
 
 1. Search for the pre-built microflow `ChatContext_ChatWithHistory_ActionMicroflow` in the **ConversationalUI** > **USE_ME** > **Conversational UI** > **Action microflow examples** folder and copy it into your **MyFirstBot** module.
 
-2. Search for the pre-built microflow `ACT_FullScreenChat_Open` in the **ConversationalUI > USE_ME > ConversationalUI > Pages** folder. Copy the microflow into your **MyFirstBot** module.  Right-click on the copied microflow and select **Include in project**.
+2. Search for the pre-built microflow `ACT_FullScreenChat_Open` in the **ConversationalUI > USE_ME > ConversationalUI > Pages** folder. Copy the microflow into your **MyFirstBot** module.  Right-click the copied microflow and select **Include in project**.
 
 3. In the `ACT_FullScreenChat_Open` microflow, change the parameters of the `New Chat` action:
 
@@ -193,7 +193,7 @@ For the application to function as expected, ensure that the following microflow
 
 * Chatbot: Add the `MyFirstModule.ACT_FullScreenChat_Open` microflow which was created in the [Chat Setup](#chatsetup) section.
 
-* Create Demo Data and Populate KB: Add the `MyFirstModule.ACT_TicketList_CreateData_InsertIntoKnowledgeBase` which was created in the [Joining the Microflows section](#joining-microflows).
+* Create Demo Data and Populate KB: Add the `MyFirstModule.ACT_CreateDemoData_LoadAllIntoKnowledgeBase` which was created in the [Joining the Microflows section](#joining-microflows).
 
 * Mendix Cloud Configuration: If you started from a Blank GenAI App, the configuration page should already be included. In case you started from your application, add the `Configuration_Overview` page.
 

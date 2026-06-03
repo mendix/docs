@@ -36,6 +36,10 @@ Before you build an agent in your app, make sure your scenario meets the followi
 
 ## Setting Up Your Application
 
+{{% alert color="info" %}}
+This guide uses the Mendix Cloud GenAI Connector for text generation. You can also use alternative [supported connectors](/appstore/modules/genai/#connectors), such as [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/) or [OpenAI](/appstore/modules/genai/reference-guide/external-connectors/openai/). For knowledge base operations, this guide uses the Mendix Cloud Knowledge Base, but the [pgVector Knowledge Base](/appstore/modules/genai/reference-guide/external-connectors/pgvector/) is also supported. As long as you configure access to a provider and knowledge base according to the connector documentation, and the knowledge base supports inserting chunks from a microflow, the remaining steps in this guide apply.
+{{% /alert %}}
+
 If you are using a GenAI starter app such as the Blank GenAI Starter App, you can skip ahead to [Creating the Agent's Functional Prerequisites](#creating-functional-prerequisites) because the following setup steps are completed by default. Otherwise, follow these steps to add the required modules and configuration to your app:
 
 1. Set your app's [security level](/refguide/app-security/) to **Production**.

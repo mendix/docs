@@ -67,7 +67,7 @@ To define the agent and generate responses, the steps differ based on your chose
 
 Ingest Mendix ticket data into the knowledge base. For a detailed guide, see [Grounding Your LLM in Data](/appstore/modules/genai/how-to/howto-groundllm/#demodata). The following steps explain the process at a higher level by modifying logic imported from the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475). You can find the sample data used in this document in the GenAI Showcase App or use your own data.
 
-1. In your domain model, create a `Ticket` entity with the following attributes:
+1. Go to the domain model of the module where you want to implement this example. (The following instructions use `MyFirstModule` as the module name in examples—replace this with your actual module name.) In your domain model, create a `Ticket` entity with the following attributes:
 
     * `Identifier` as *String*
     * `Subject` as *String*
@@ -76,7 +76,7 @@ Ingest Mendix ticket data into the knowledge base. For a detailed guide, see [Gr
     * `Solution` as *String*, length 2000
     * `Status` as *Enumeration*; create a new Enumeration `ENUM_Ticket_Status` with *Open*, *In Progress*, and *Closed* as values
 
-2. From the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475), copy and paste the following components from the `ExampleMicroflows` module and import them into your app:
+2. From the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475), copy the following components from the `ExampleMicroflows` module. Then paste them into your app.
 
     * `ACT_TicketList_LoadAllIntoKnowledgeBase`
     * `Tickets_CreateDataset`
@@ -192,9 +192,10 @@ You have now successfully created your first function microflow to link to the a
 
 #### Get Ticket by Identifier
 
-1. Open the newly created `Ticket_GetTicketByID` microflow. Add a *String* input parameter called `Identifier`.
+1. Create a new microflow named `Ticket_GetTicketByID`.
+2. In the new microflow, Add a *String* input parameter called `Identifier`.
 
-2. Add a `Retrieve` action to retrieve the ticket of the given identifier:
+3. Add a `Retrieve` action to retrieve the ticket of the given identifier:
 
     * **Source**: `From database`
     * **Entity**: `MyFirstModule.Ticket` (search for *Ticket*)
@@ -202,13 +203,13 @@ You have now successfully created your first function microflow to link to the a
     * **Range**: `All`
     * **Object name**: `TicketList` (default)
 
-3. Add an `Export with mapping` action:
+4. Add an `Export with mapping` action:
 
     * **Mapping**: `EM_Ticket`
     * **Parameter**: `TicketList` (retrieved in previous action)
     * **Store in**: `String Variable` called `JSON_Ticket`
 
-4. Right-click the action and click `Set $JSON_Ticket as return value`.
+5. Right-click the action and click `Set $JSON_Ticket as return value`.
 
 Your completed microflow looks like this:
 

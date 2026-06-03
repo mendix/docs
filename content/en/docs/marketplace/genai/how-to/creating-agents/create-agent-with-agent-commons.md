@@ -81,7 +81,7 @@ Use the function microflows created in [Set Up Your App for Agent Creation](/app
 
 2. Scroll to the bottom of the page. In the **Tools** section, add a new tool of type `Microflow tool`:
 
-    * Tool action module: Select the module that contains the function microflows you created earlier (**MyFirstModule** if you started from the Blank GenAI App)
+    * Tool action module: Select the module that contains the function microflows you created earlier (for example, **MyFirstModule** if you started from the Blank GenAI App)
     * Microflow: Select `Ticket_GetNumberOfTicketsInStatus`
     * Name: `RetrieveNumberOfTicketsInStatus`
     * Description: `Get number of tickets in a certain status. Only the following values for status are available: ['Open', 'In Progress', 'Closed']`
@@ -95,7 +95,7 @@ Use the function microflows created in [Set Up Your App for Agent Creation](/app
 
 1. From the agent view page for the `IT-Ticket Helper` agent, under **Tools**, add another tool of type `Microflow tool`:
 
-    * Tool action module: Select the module that contains the function microflows you created earlier (**MyFirstModule** if you started from the Blank GenAI App)
+    * Tool action module: Select the module that contains the function microflows you created earlier (for example, **MyFirstModule** if you started from the Blank GenAI App)
     * Microflow: Select `Ticket_GetTicketByID`
     * Name: `RetrieveTicketByIdentifier`
     * Description: `Get ticket details based on a unique ticket identifier (passed as a string). If there is no information for this identifier, inform the user about it.`
@@ -143,7 +143,7 @@ If your knowledge base is not compatible with Agent Commons, or if the retrieval
 
 ## Calling the Agent
 
-The button does not perform any actions yet, so you need to create a microflow to call the agent. Your completed microflow will look like this:
+Configure the **Ask the agent** button created in [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/#domain-model-setup) to call a microflow to invoke the agent. Your completed microflow will look like this:
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-singleagent/Microflow_AgentCommons.png" alt="Microflow with three activities: Retrieve Agent from database, Call Agent Without History, and Change TicketHelper ModelResponse attribute" >}}
 

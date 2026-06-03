@@ -339,7 +339,7 @@ img {
         // Hugo's ToC is a mouthful, this can be used to style the top level h2 entries.
         > ul > li > ul > li > a {}
 
-        // Override Docsy 0.15+ which makes top-level (h2) items bold by default
+        // Override Docsy 0.15+ which makes ToC bold by default
         > ul > li > :not(ul) {
             font-weight: $font-weight-normal;
         }

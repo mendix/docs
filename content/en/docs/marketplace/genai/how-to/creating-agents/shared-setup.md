@@ -76,7 +76,7 @@ Ingest Mendix ticket data into the knowledge base. For a detailed guide, see [Gr
     * `Solution` as *String*, length 2000
     * `Status` as *Enumeration*; create a new Enumeration `ENUM_Ticket_Status` with *Open*, *In Progress*, and *Closed* as values
 
-2. From the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475), copy the following components from the `ExampleMicroflows` module. Then paste them into your app.
+2. From the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475), copy the following components from the `ExampleMicroflows` module. Then, in your app, paste them into the module you are using.
 
     * `ACT_TicketList_LoadAllIntoKnowledgeBase`
     * `Tickets_CreateDataset`
@@ -84,15 +84,17 @@ Ingest Mendix ticket data into the knowledge base. For a detailed guide, see [Gr
     * `EM_Ticket`
     * `JSON_Ticket`
 
-3. Open **IM_Ticket**, click **Select elements**, and search for **JSON_Ticket** in the JSON structure schema source. Select **Object** and all fields for which you created attributes in the `Ticket` entity. Clear the **Array** checkbox and click **OK**. Open **JsonObject**, select your `Ticket` entity, and then select **Map attributes by name** to map all fields to your attributes. The completed import mapping looks like this:
+3. Open **IM_Ticket**, click **Select elements**, and search for **JSON_Ticket** in the JSON structure schema source. Select **Object** and all fields for which you created attributes in the `Ticket` entity (do not select **Category**, because it does not have a corresponding attribute in `Ticket`). Clear the **Array** checkbox and click **OK**.
+
+4. Open **JsonObject**, select your `Ticket` entity, and then select **Map attributes by name** to map all fields to your attributes. The completed import mapping looks like this:
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-singleagent/IM_ticket_mapped.png" alt="">}}
 
-4. Open **EM_Ticket**, click **Select elements**, and search for the **JSON_Ticket** in the JSON structure schema source. Select all fields for which you created attributes in the `Ticket` entity. Click **OK**. Open the **JsonObject** to select your `Ticket` entity and map all fields to your attributes.
+5. Open **EM_Ticket**, click **Select elements**, and search for the **JSON_Ticket** in the JSON structure schema source. Select all fields for which you created attributes in the `Ticket` entity. Click **OK**. Open the **JsonObject** to select your `Ticket` entity and map all fields to your attributes.
 
-5. In `Tickets_CreateDataset`, open the `Retrieve Ticket from database` action and set the entity to your module's `Ticket` entity. Open the `Import from JSON` action and select **IM_Ticket**.
+6. In `Tickets_CreateDataset`, open the `Retrieve Ticket from database` action and set the entity to your module's `Ticket` entity. Open the `Import from JSON` action and select **IM_Ticket**.
 
-6. In `ACT_TicketList_LoadAllIntoKnowledgeBase`:
+7. In `ACT_TicketList_LoadAllIntoKnowledgeBase`:
 
     * Edit the first **Retrieve object(s)** activity to retrieve objects from your module's `Ticket` entity.
     * In the loop, delete the second action, which adds metadata to the `MetadataCollection`.
@@ -100,13 +102,13 @@ Ingest Mendix ticket data into the knowledge base. For a detailed guide, see [Gr
 
     {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-singleagent/ACT_TicketList.png" alt="">}}
 
-7. Create a microflow `ACT_CreateDemoData_IngestIntoKnowledgeBase`. Add two actions to the new microflow: call the `Tickets_CreateDataset` microflow, then call the `ACT_TicketList_LoadAllIntoKnowledgeBase` microflow.
+8. Create a microflow `ACT_CreateDemoData_IngestIntoKnowledgeBase`. Add two actions to the new microflow: call the `Tickets_CreateDataset` microflow, then call the `ACT_TicketList_LoadAllIntoKnowledgeBase` microflow.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-goundllm/loaddataintokb-example-combine.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-goundllm/loaddataintokb-example-combine.png" alt="" >}}
  
-8. Add the admin role under **Allowed Roles** in the `ACT_CreateDemoData_LoadAllIntoKnowledgeBase` microflow properties.
+9. Add the admin role under **Allowed Roles** in the `ACT_CreateDemoData_LoadAllIntoKnowledgeBase` microflow properties.
 
-9. Add the new microflow to your navigation or homepage.
+10. Add the new microflow to your navigation or homepage.
 
 When the microflow is called, the demo data is created and ingested into the knowledge base for later use. This needs to be called only once at the beginning. Make sure to first add a knowledge base resource. For more details, see [Configuration](/appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/#configuration).
 

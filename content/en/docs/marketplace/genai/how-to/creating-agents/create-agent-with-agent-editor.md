@@ -17,7 +17,7 @@ Before you begin, complete the following prerequisites:
 
 * Use an app running on Studio Pro 11.9.1 or above
 * Complete [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/) to configure your application, knowledge base, domain model, UI, and function microflows
-* Install [Agent Editor](appstore/modules/genai/genai-for-mx/agent-editor/), including the [first-time setup](/appstore/modules/genai/genai-for-mx/agent-editor/#setup) steps
+* Install [Agent Editor](/appstore/modules/genai/genai-for-mx/agent-editor/), including the [first-time setup](/appstore/modules/genai/genai-for-mx/agent-editor/#setup) steps
 * Have access to Mendix Cloud GenAI text generation and knowledge base resources, and generate a key for both of these resource types from the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com/)
 
 ## Setting Up the Agent with a Prompt

@@ -31,7 +31,7 @@ Create an agent that can be called to interact with the LLM. The [Agent Commons]
 4. Click **Save** to create the agent.
 
 5. On the agent's details page, in the **Model** field, select the **Text Generation** model.
-{{% alert="info" %}}The model must support function calling and system prompts to be selectable. For Mendix Cloud GenAI Resources, this is automatic. If you use another connector to an LLM provider and your chosen model does not appear in the list, check the connector's documentation for information about [the supported model functionalities](/appstore/modules/genai/genai-for-mx/commons/#deployed-model).{{% /alert %}}
+{{% alert color="info" %}}The model must support function calling and system prompts to be selectable. For Mendix Cloud GenAI Resources, this is automatic. If you use another connector to an LLM provider and your chosen model does not appear in the list, check the connector's documentation for information about [the supported model functionalities](/appstore/modules/genai/genai-for-mx/commons/#deployed-model).{{% /alert %}}
 
 6. In the **System Prompt** field, add instructions for how the model generates a response and what process to follow. You can use this example prompt:
 

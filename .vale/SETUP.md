@@ -65,8 +65,9 @@ After installing Vale:
    - Install the [Vale VS Code extension](https://marketplace.visualstudio.com/items?itemName=ChrisChinchilla.vale-vscode).
    - Restart VS Code.
    - Open any `.md` file in `content/en/docs/`.
-   - Violations show as squiggly underlines in the file and appear in the **Problems** tab in the bottom pane.
-   - Many Vale rules support automatic fixes—hover over an underlined issue and click **Quick Fix** or click the lightbulb icon next to flagged text in the **Problems** tab.
-   - Save changes to rerun the linter.
+      - Violations show as squiggly underlines in the file and appear in the **Problems** tab in the bottom pane.
+      - Many Vale rules support automatic fixes—hover over an underlined issue and click **Quick Fix** or click the lightbulb icon next to flagged text in the **Problems** tab.
+      - Save changes to rerun the linter.
+   - If desired, you can adjust the extension's settings in VS Code to show a different minimum alert level. For example, if you set `minAlertLevel` to `warning`, it will only report warnings and errors, not suggestions.
 
 4. **If you have open PRs:** Merge `development` into your branch to get the Vale configuration files.

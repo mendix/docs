@@ -136,7 +136,7 @@ Create a user interface to test and use the agent. It will look like this:
 
 5. Remove the **Save** and **Cancel** buttons. Add a new button with the caption *Ask the agent* below the **User input** text field.
 
-6. Open the **Model response** input field and set the **Grow automatically** option to `Yes`.
+6. Convert the **Model response** input field to a **Text Area**. Then set its **Grow automatically** option to `Yes`.
 
 7. In the page properties, add your user and admin role to the **Visible for** selection.
 

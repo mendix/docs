@@ -307,6 +307,19 @@ To check your JDK version and update it if necessary, follow these steps:
     2. You may also need to update Gradle. To do this, go to **Edit** > **Preferences** > **Deployment** > **Gradle directory**. Click **Browse** and select the appropriate Gradle version from the Mendix folder. For Mendix 10.10 and above, use Gradle 8.5. For Mendix 10 versions below 10.10, use Gradle 7.6.3. Then save your settings by clicking **OK**.
     3. Rerun the project.
 
+
+### Missing Jackson Core Dependency
+
+This applies to cases where your app fails to compile with the following error: 
+
+`Missing dependencies: com.fasterxml.jackson.core:jackson-core:2.22.0` 
+
+The cause is that this dependency is advertised in Maven repositories but doesn't actually exist. When you build your app, the automated dependency management attempts to download it, which fails because the version is unavailable.
+
+To resolve this issue, download and install [GenAI Commons 6.2.2](https://marketplace.mendix.com/link/component/239448) from the Mendix Marketplace. This module includes a fixed Jackson Core dependency configuration and will allow your app to compile successfully. Once the issue is resolved on Maven side, a dependency range is planned to be used again in order for the advantages of automated dependency management (such as automatic vulnerability fixes) to be leveraged again.
+
+
+
 ### Migrating From Add-on Module to App Module
 
 Since the module has been changed with version 3.0.0 from an add-on to an app module, updating it via the marketplace will require a migration to ensure it works properly with your application.

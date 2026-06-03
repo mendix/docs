@@ -252,6 +252,6 @@ If you encounter an error stating that an attribute or a reference is required a
 
 If you encounter an error caused by conflicting Java libraries, such as `java.lang.NoSuchMethodError: 'com.fasterxml.jackson.annotation.OptBoolean com.fasterxml.jackson.annotation.JsonProperty.isRequired()'`, try synchronizing all dependencies (**App** > **Synchronize dependencies**) and then restart your application.
 
+### String Comparison Errors with Oracle Database
 
-### Oracle-specifc
-Depending on the database used, Mendix maps unlimited string values (e.g. User prompt and System prompt attributes) to data types which might not support string comparisons (e.g. in a rule). This can lead to errors. To fix them, you can edit the attribute types inside of the domain model and set a string length.
+When using Oracle Database, Mendix maps unlimited string values (such as user prompt and system prompt attributes) to data types that may not support string comparisons (for example, in a rule). This can lead to errors. To fix the errors, edit the attribute types in the domain model and specify a string length.

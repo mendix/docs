@@ -886,11 +886,8 @@ If you encounter an error caused by conflicting Java libraries, such as `java.la
 
 ### Missing Jackson Core Dependency
 
-This applies to cases where your app fails to compile with the following error: 
+This applies to cases where your app fails to compile and throws the following error: `Missing dependencies: com.fasterxml.jackson.core:jackson-core:2.22.0`.
 
-`Missing dependencies: com.fasterxml.jackson.core:jackson-core:2.22.0` 
+This dependency is advertised in Maven repositories but does not actually exist. When you build your app, the automated dependency management attempts to download it and fails because the version is unavailable.
 
-The cause is that this dependency is advertised in Maven repositories but doesn't actually exist. When you build your app, the automated dependency management attempts to download it, which fails because the version is unavailable.
-
-To resolve this issue, download and install [GenAI Commons 6.2.2](https://marketplace.mendix.com/link/component/239448) from the Mendix Marketplace. This module includes a fixed Jackson Core dependency configuration and will allow your app to compile successfully. Once the issue is resolved on Maven side, a dependency range is planned to be used again in order for the advantages of automated dependency management (such as automatic vulnerability fixes) to be leveraged again.
-
+To resolve this issue, download and install [GenAI Commons 6.2.2](https://marketplace.mendix.com/link/component/239448) from Mendix Marketplace. This module includes a fixed Jackson Core dependency configuration and will allow your app to compile successfully. Once Maven resolves the issue, dependency ranges will be used again to re-enable automated dependency management, including automatic vulnerability fixes.

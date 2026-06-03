@@ -225,6 +225,7 @@ If a call fails during testing, a generic error message is shown in the Agent Ed
 ### Including the Agent in the App Logic {#call-agent}
 
 Include an agent in the app logic by calling it from a microflow. Agent Editor provides **Call Agent** toolbox actions in the **Agent Editor** category:
+
 * **Call Agent without History** focuses on single-call, task-style execution
 * **Call Agent with History** supports conversational scenarios with multiple messages
 

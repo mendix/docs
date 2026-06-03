@@ -9,7 +9,7 @@ weight: 50
 
 By default, Mendix on Kubernetes uses the mxpc-cli tool for configuring namespaces and performing base installations. However, you can also integrate Helm charts into your pipelines in order to directly install components and run the configurations through the Helm chart UI.
 
-The solution consists of two main components: the Helm charts themselves, and a tool called *mx-ops-cli*. The mx-ops-cli acts as a user interface, allowing you to input configurations and then generate Helm charts values from the helm charts.
+The solution consists of two main components: the Helm charts themselves, and a tool called *mx-ops-cli*. This Helm Chart UI acts as a user interface, allowing you to input configurations and then generate Helm charts values from the helm charts.
 
 {{% alert color="info" %}}
 Before using Helm charts, make sure to review the official Helm documentation.
@@ -77,6 +77,8 @@ To install the solution, perform the following steps:
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard4.png" >}}
 
 11. In the **Ingress** tab, specify your network ingress settings. For more information about the available options, see [Network Ingress Settings in Mendix on Kubernetes](/developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/).
+
+    With the new release of mx-ops-cli (2.27.0), it is now possible to add Ingress Annotation in the Helm Chart UI.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/helm-chart-wizard5.png" >}}
 

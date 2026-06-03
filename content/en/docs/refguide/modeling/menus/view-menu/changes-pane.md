@@ -85,7 +85,6 @@ The toolbar at this level contains the following buttons:
 
 For text-based properties, you can double-click a property row to open the [File Differences Viewer](/refguide/file-diff-viewer/), which shows a detailed side-by-side comparison of the old and new values. To compare file-level changes at the top level, double-click a file row or right-click and select **Compare with original**.
 
-
 The left side of the grid contains the following columns:
 
 * **Element** – the name of the modified element

@@ -43,7 +43,7 @@ The customer is responsible for implementing this control in an appropriate mann
 
 Defines the categorizations, groups, or tags used to classify individuals, and applies the corresponding metadata in accordance with organizational and security requirements.
 
-####  Infra Implementer
+#### Infra Implementer
 
 Ensures the customer's identity provider (IdP) supports the required categorizations, groups, or tags, and establishes secure, compliant integration between the infrastructure and the customer's IdP.
 

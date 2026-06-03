@@ -154,5 +154,5 @@ Data sent to the Knowledge Base (vectors, chunks) is stored in a logically isola
 
 * [Enrich your Mendix app with GenAI capabilities](/appstore/modules/genai/)
 * [Build a Chatbot Using the AI Bot Starter App](/appstore/modules/genai/how-to/starter-template/)
-* [Create Your First Agent](/appstore/modules/genai/how-to/howto-single-agent/)
+* [Creating Your First Agent](/appstore/modules/genai/how-to/creating-agents/)
 * [Grounding Your Large Language Model in Data – Mendix Cloud GenAI](/appstore/modules/genai/how-to/howto-groundllm/)

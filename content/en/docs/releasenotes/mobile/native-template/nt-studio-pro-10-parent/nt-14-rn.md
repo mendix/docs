@@ -11,8 +11,8 @@ description: "Native Template 14"
 
 ### Fixes
 
-- We fixed an issue where version logs events were not recorded in Firebase for Android.
-- We fixed an issue which occurred when building apps in Xcode 26.4 and above.
+* We fixed an issue where version logs events were not recorded in Firebase for Android.
+* We fixed an issue which occurred when building apps in Xcode 26.4 and above.
 
 ## 14.1.15 {#1425}
 

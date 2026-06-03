@@ -5,11 +5,18 @@ weight: 8
 description: "Native Template 17"
 ---
 
+## 17.3.0
+
+**Release date: June 3, 2026**
+
+* We fixed an issue that caused apps to restart repeatedly after an OTA update.
+
+
 ## 17.2.1
 
 **Release date: May 12, 2026**
 
-- We fixed the CocoaPods installation issue that was caused by `xcodeproj object version` 70.
+* We fixed the CocoaPods installation issue that was caused by `xcodeproj object version` 70.
 
 ## 17.2.0
 
@@ -17,8 +24,8 @@ description: "Native Template 17"
 
 ### Fixes
 
-- We fixed an issue where version logs events were not recorded in Firebase for Android.
-- We fixed an issue which occurred when building apps in Xcode 26.4 and above.
+* We fixed an issue where version logs events were not recorded in Firebase for Android.
+* We fixed an issue which occurred when building apps in Xcode 26.4 and above.
 
 ## 17.1.0
 

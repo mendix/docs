@@ -6,6 +6,7 @@ description: "Demo file for SVG icon shortcodes."
 draft: true
 ---
 <!-- markdownlint-disable-file -->
+<!-- vale off -->
 
 ## Introduction
 

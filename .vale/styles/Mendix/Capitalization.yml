@@ -1,0 +1,44 @@
+# Mendix custom rule: Capitalization errors
+# Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting.md (Capitalization of Mendix Terminology)
+# Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/product-naming-guide.md
+extends: substitution
+message: "Use '%s' (capitalized)"
+link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/product-naming-guide/
+level: error
+ignorecase: true
+scope:
+  - paragraph
+  - heading
+  - list
+  - table
+  - blockquote
+action:
+  name: replace
+swap:
+  agents kit: Agents Kit
+  boolean: Boolean
+  git: Git
+  idp: IdP
+  ios: iOS
+  java: Java
+  macos: macOS
+  markdown: Markdown
+  marketplace: Marketplace
+  mendix: Mendix
+  'n/a': 'N/A'
+  postgres: Postgres
+  postgresql: PostgreSQL
+  scrum: Scrum
+  sql: SQL
+  'agile scrum': 'Agile Scrum'
+  'atlas ui': 'Atlas UI'
+  'build server': 'Build Server'
+  'business engineer': 'Business Engineer'
+  'control center': 'Control Center'
+  'model server': 'Model Server'
+  'product owner': 'Product Owner'
+  'scrum master': 'Scrum Master'
+  'studio pro': 'Studio Pro'
+  'team server': 'Team Server'
+  'technical contact': 'Technical Contact'
+  'workflow engine': 'Workflow Engine'

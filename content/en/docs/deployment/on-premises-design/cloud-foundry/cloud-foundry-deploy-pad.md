@@ -71,4 +71,5 @@ To deploy your app to Cloud Foundry, perform the following steps:
        ``` 
 
 5. Run the `cf push` command.
+
 6. Verify that the Mendix app has started successfully.

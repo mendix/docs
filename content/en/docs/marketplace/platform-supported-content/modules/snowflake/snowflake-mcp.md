@@ -410,10 +410,9 @@ After setting up the MCP server, you can now create a Mendix AI agent and connec
 8. On the **Consumed MCP Services** page, click **MCP Client** and configure the following properties of your Snowflake MCP server:
     
     1. Enter a name.
-    2. Specify the MCP endpoint in the following format: `https://<snoflake-account-id>.snowflakecomputing.com/api/v2/databases/<database name>/schemas/<schema name>/mcp-servers/<mcpserver name> `
+    2. Specify the MCP endpoint in the following format: `https://<snoflake-account-id>.snowflakecomputing.com/api/v2/databases/<database name>/schemas/<schema name>/mcp-servers/<mcpserver name>`.
         
-        {{% alert color="info" %}}
-        If your Snowflake account ID contains underscores (`_`), replace them with `-` in the endpoint. This is only required for the account ID, not for the database name, schema name, or MCP server name.
+        {{% alert color="info" %}} If your Snowflake account ID contains underscores (`_`), replace them with `-` in the endpoint. This is only required for the account ID, not for the database name, schema name, or MCP server name.
         {{% /alert %}}
         
     3. For the protocol value, enter *v2025_03_26*.

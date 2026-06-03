@@ -9,6 +9,7 @@ hugo.exe
 /.claude/audit.log
 /.claude/settings.local.json
 /.mcp.json
+/.vale/styles/Microsoft/
 
 # For Mac users
 .DS_Store

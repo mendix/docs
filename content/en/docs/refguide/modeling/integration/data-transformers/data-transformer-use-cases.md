@@ -123,7 +123,6 @@ The transformation is straightforward. Each field in the output is explicitly ma
 
 For more information about dot accessors, see this [GitHub resource](https://github.com/schibsted/jslt/blob/master/tutorial.md#dot-accessors).
 
-
 ## Normalizing Objects to Arrays {#normalizing-objects-to-arrays}
 
 Some APIs return collections of records as a keyed object, where each key acts as a unique identifier for that record (also known as dynamic keys). Mendix works more naturally with lists of objects, so this transformation converts that keyed structure into a flat, normalized array that can be directly mapped to a Mendix entity list.
@@ -512,4 +511,3 @@ let vars = .head.vars
 The variable names are captured into `vars` at the root level before any looping begins. The transformation then iterates over each binding in the results. Because `.` is rebound inside the inner loop, the current binding is saved into `binding` immediately. The inner for loop iterates over the variable names, using each variable name as both the key and the lookup argument. `get-key($binding, .)` retrieves the typed value wrapper for that variable from the saved binding, and `.value` extracts the plain value from it. `fallback` ensures that if a variable is missing from a binding, an empty string is used instead of null. The result is a clean, flat list of objects with no type wrappers that you can easily use as a source for import mapping.
 
 For more information about `get-key`, `fallback`, and other functions, see this [GitHub resource](https://github.com/schibsted/jslt/blob/master/functions.md#get-keyobject-key-fallback---value).
-

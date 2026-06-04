@@ -26,7 +26,7 @@ This approach uses a linear chain of multiple LLM calls, where the output of one
 
 The system takes a user prompt as input, either typed directly or generated using prompt engineering techniques. Its output is typically the plain response from the final LLM call in the chain.
 
- {{< figure src="/attachments/genai/agents/Linear-Chaining.svg" >}}
+ {{< figure src="/attachments/genai/agents/Linear-Chaining.svg" alt="" >}}
 
 ### Prompt Chaining with Gatekeeper
 
@@ -34,7 +34,7 @@ This is an extension of the linear chain of multiple LLM calls. Now, the gatekee
 
 As with the previous pattern, the system takes a user prompt as input, either entered directly or generated through prompt engineering techniques. The output is typically the plain result of the final LLM call in the happy flow. In an unhappy scenario, developers can choose to return either the gatekeeper agent’s response or a predefined static message.
 
- {{< figure src="/attachments/genai/agents/Linear-Chaining-Gatekeeper.svg" >}}
+ {{< figure src="/attachments/genai/agents/Linear-Chaining-Gatekeeper.svg" alt="" >}}
 
 ### Evaluator-Optimizer
 
@@ -47,7 +47,7 @@ Alternative names for this pattern are:
 
 The input of this system is a user prompt, either typed directly by the user or constructed using prompt engineering techniques. The output of the system is the plain output of the last iteration of the Generator Agent LLM call, as approved by the Evaluator Agent.
 
- {{< figure src="/attachments/genai/agents/Evaluator-optimizer.svg" >}}
+ {{< figure src="/attachments/genai/agents/Evaluator-optimizer.svg" alt="" >}}
 
 ### Routing
 
@@ -55,7 +55,7 @@ This pattern is especially effective when the system needs to handle a variety o
 
 The system takes a user prompt as input, either entered directly or crafted using prompt engineering techniques. The output is typically the plain response from the agent chosen by the Router Agent. In some variations, the Router Agent may choose not to hand off the input if it determines that the request falls outside the system's supported scope. In such cases, the system returns either the Router Agent's own response or a static message explaining why the request could not be processed.
 
- {{< figure src="/attachments/genai/agents/Routing.svg" >}}
+ {{< figure src="/attachments/genai/agents/Routing.svg" alt="" >}}
 
 ## Learn More
 

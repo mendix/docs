@@ -109,7 +109,7 @@ Users can create two types of agents:
 
 * **Task Agent**: Designed for isolated agentic patterns such as background processes, subagents in an Agent-as-Tool setup, or any use case that doesn't require a conversational interface with historical context.
 
- {{< figure src="/attachments/genai/agentcommons/agentbuilderUI.png" >}}
+ {{< figure src="/attachments/genai/agentcommons/agentbuilderUI.png" alt="" >}}
 
 #### Defining Context Entity {#define-context-entity}
 
@@ -229,7 +229,7 @@ Each time a new version of the agent is created, a decision must be made regardi
 
 When importing new agents into other environments, selecting the in-use version is always a manual step, requiring a conscious decision. The user will be prompted to choose the version to be used as part of the import user flow. Later, you can manage the active version directly from the Agent Overview.
 
- {{< figure src="/attachments/genai/agentcommons/Select_in_use.png" >}}
+ {{< figure src="/attachments/genai/agentcommons/Select_in_use.png" alt="" >}}
 
 ## Technical Reference
 
@@ -240,7 +240,7 @@ The **Documentation** pane displays the documentation for the currently selected
 1. In the [View menu](/refguide/view-menu/) of Studio Pro, select **Documentation**.
 2. Click the element for which you want to view the documentation.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/technical-reference/doc-pane.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/technical-reference/doc-pane.png" alt="" >}}
 
 ## Troubleshooting
 

@@ -35,7 +35,7 @@ Before integrating function calling into your app, make sure you meet the follow
 
 ## Function Calling Use Case {#use-case}
 
-{{< figure src="/attachments/genai/genai-howto-functioncalling/structure_functioncalling.png" >}}
+{{< figure src="/attachments/genai/genai-howto-functioncalling/structure_functioncalling.png" alt="" >}}
 
 In this example, two functions will be implemented with the following purposes:
 

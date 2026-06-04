@@ -83,7 +83,7 @@ To use Conversational UI in your app, you must perform the following tasks in St
 
 The main entities are shown for reference in the diagram below. For technical documentation, follow the steps in the [Technical Reference](#technical-reference) section.
 
-{{< figure src="/attachments/genai/conversational-ui/domain-model.png" >}}
+{{< figure src="/attachments/genai/conversational-ui/domain-model.png" alt="" >}}
 
 ### Configuring the Roles {#module-roles}
 
@@ -357,7 +357,7 @@ The **Documentation** pane displays the documentation for the currently selected
 1. In the [View menu](/refguide/view-menu/) of Studio Pro, select **Documentation**.
 2. Click the element for which you want to view the documentation.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/technical-reference/doc-pane.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/technical-reference/doc-pane.png" alt="" >}}
 
 ## Troubleshooting
 

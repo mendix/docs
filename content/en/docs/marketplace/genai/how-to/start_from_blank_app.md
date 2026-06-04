@@ -82,7 +82,7 @@ To tailor your application's behavior, you can customize the [System Prompt](/ap
 
 ##### Changing the System Prompt {#changing-system-prompt}
 
-{{< figure src="/attachments/genai/genai-howto-blankapp/blank_genai_systemprompt.png" >}}
+{{< figure src="/attachments/genai/genai-howto-blankapp/blank_genai_systemprompt.png" alt="" >}}
 
 1. In your `MyFirstBot` module, open the `ACT_FullScreenChat_Open` microflow.
 2. Locate the **ChatContext** action.

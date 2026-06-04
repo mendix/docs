@@ -172,7 +172,7 @@ Finally, you can add a tool for knowledge base retrieval. This allows the agent 
 
 You have successfully integrated a knowledge base into your agent interaction. Run the app to see the agent integrated in the use case. Using the **TicketHelper_Agent** page, the user can ask the model questions and receive responses. When it deems it relevant, it uses the functions or the knowledge base. If you ask the agent "How many tickets are open?", a log should appear in your Studio Pro console indicating that the function microflow was executed. When a user submits a request like "My VPN crashes all the time and I need it to work on important documents", the agent searches the knowledge base for similar tickets and provides a relevant solution. 
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-singleagent/Microflow_GenAICommons.png" alt="Microflow showing GenAI Commons implementation" >}}
+{{< figure src="/attachments/genai/genai-howto-singleagent/Microflow_GenAICommons.png" alt="Microflow showing GenAI Commons implementation" >}}
 
 If you would like to learn how to enable user confirmation for tools, similar to what is described for the [Agent Commons approach](/appstore/modules/genai/how-to/create-agent-with-agent-commons/), you can find examples in the `ExampleMicroflows` module of the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475).
 

@@ -55,7 +55,7 @@ When using an Embeddings Model Resource together with a Knowledge Base Resource,
 
 ## Operations
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/mxgenAI-connector/mxgenaiconnector-configuration.png" >}}
+{{< figure src="/attachments/genai/mxgenAI-connector/mxgenaiconnector-configuration.png" >}}
 
 Configuration keys are stored persistently after they are imported (either via the UI or the exposed microflow). There are three different types of configurations that reflect the use cases this service supports. The specific operations are described below.
 
@@ -93,7 +93,7 @@ The microflow activity [Chat completions (with history)](/appstore/modules/genai
 
 To use retrieval and generation in a single operation, an internally predefined tool can be added to the [Request](/appstore/modules/genai/genai-for-mx/commons/#request) via the `Tools: Add Knowledge Base` action. The model can then decide whether to use the [knowledge base retrieval](/appstore/modules/genai/genai-for-mx/commons/#knowledge-base-retrieval) tool when handling the request. This functionality is supported in both with-history and without-history operations. The (optional) `Description` helps the model to understand the knowledge base content and decide whether it should be called in the current chat context. Additionally, you may apply optional filters, such as `MaxNumberOfResults` or `MinimumSimilarity`, or pass a [MetadataCollection](/appstore/modules/genai/genai-for-mx/commons/#metadatacollection-entity). 
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/mxgenAI-connector/mxgenaiconnector-rag.png" >}}
+{{< figure src="/attachments/genai/mxgenAI-connector/mxgenaiconnector-rag.png" >}}
 
 The returned `Response` includes [References](/appstore/modules/genai/genai-for-mx/commons/#reference) for each retrieved chunk from the knowledge base. 
 
@@ -152,7 +152,7 @@ A Knowledge Base resource can comprise several collections. Each collection is s
 
 Below is a diagram showing how resources are organized into separate collections. This approach allows multiple use cases to share a common resource while the option to only add the required collections to the conversation context is preserved. For example, both employee onboarding and IT ticket support require information about IT setup and equipment. However, only onboarding needs knowledge about the company culture and values, while only IT support requires access to historical support ticket data.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/GenAIKnowledgeBaseResource.png" >}}
+{{< figure src="/attachments/genai/navigate_mxgenai/GenAIKnowledgeBaseResource.png" >}}
 
 While collections provide a mechanism for data separation, it is not best practice to create a large number of collections within a single Knowledge Base resource. A more performant and practical approach for achieving fine-grained data separation is through the strategic use of metadata. 
 
@@ -170,7 +170,7 @@ key: `Category`, value: `Ticket`
 
 The model then generates its response using the specified metadata instead of solely the input text. 
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/GenAIKBMetadataSeparation.png" >}}
+{{< figure src="/attachments/genai/navigate_mxgenai/GenAIKBMetadataSeparation.png" >}}
 
 Using metadata, even more fine-grained filtering becomes feasible. Each ticket may have associated metadata, such as
 

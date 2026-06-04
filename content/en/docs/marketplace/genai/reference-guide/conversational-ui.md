@@ -83,7 +83,7 @@ To use Conversational UI in your app, you must perform the following tasks in St
 
 The main entities are shown for reference in the diagram below. For technical documentation, follow the steps in the [Technical Reference](#technical-reference) section.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/conversational-ui/domain-model.png" >}}
+{{< figure src="/attachments/genai/conversational-ui/domain-model.png" >}}
 
 ### Configuring the Roles {#module-roles}
 

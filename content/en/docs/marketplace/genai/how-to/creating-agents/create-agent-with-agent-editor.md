@@ -138,7 +138,7 @@ Link a knowledge base collection to the agent so it can retrieve relevant histor
    * **Collection**: `HistoricalTickets`
    * **Name**: `RetrieveSimilarTickets`
    * **Description**: `Similar tickets from the database`
-   {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-singleagent/configure-knowledge-base.gif" alt="">}}
+   {{< figure src="/attachments/genai/genai-howto-singleagent/configure-knowledge-base.gif" alt="">}}
 
 6. Click **OK** to close the dialog box. Save the Agent document.
 
@@ -162,7 +162,7 @@ If you make changes to the agent definition afterward, restart or redeploy the l
 
 Configure the **Ask the agent** button created in [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/#domain-model-setup) to call a microflow that invokes the Agent Editor agent and stores the response in the UI helper object. Your completed microflow will look like this:
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-singleagent/ACT_TicketHelper_CallAgent_Editor.png" alt="">}}
+{{< figure src="/attachments/genai/genai-howto-singleagent/ACT_TicketHelper_CallAgent_Editor.png" alt="">}}
 
 1. On the **TicketHelper_Agent** page, edit the **On click** event of the button to call a microflow. Click **New** to create a microflow named `ACT_TicketHelper_CallAgent_Editor`.
 

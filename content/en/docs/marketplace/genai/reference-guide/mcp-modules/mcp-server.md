@@ -90,7 +90,7 @@ Mendix strongly recommends keeping the user in the loop (such as by using confir
 
 After the [Create MCP Server](#create-server) action, you can add one or multiple [Prompts](https://modelcontextprotocol.io/docs/concepts/prompts) to be exposed using the `Add Prompt` action. Prompts let servers define reusable prompt templates and workflows, and they are a powerful way to standardize and share common LLM interactions. For more information, see [Prompt Engineering](/appstore/modules/genai/prompt-engineering/). Connecting MCP Clients can discover the prompts and make them selectable for users to start or continue a conversation. If your prompt (and microflow) requires any input parameters that the user should pass, you need to use the `Populate Prompt Argument List` action for each parameter to describe how the input is used.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/mcpserver/mcp_addprompt_example.png" >}}
+{{< figure src="/attachments/genai/mcpserver/mcp_addprompt_example.png" >}}
 
 The selected microflow needs to apply to the following principles:
 

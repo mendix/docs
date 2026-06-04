@@ -20,7 +20,7 @@ Before you begin, complete the following:
 
 Create an agent that can be called to interact with the LLM. The [Agent Commons](/appstore/modules/genai/genai-for-mx/agent-commons/) module allows agentic AI engineers to define agents and perform prompt engineering at runtime. After you complete these steps, your agent configuration will look like this:
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-singleagent/agent-runtime.png" alt="Agent Commons UI showing IT-Ticket Helper configuration">}}
+{{< figure src="/attachments/genai/genai-howto-singleagent/agent-runtime.png" alt="Agent Commons UI showing IT-Ticket Helper configuration">}}
 
 1. Run the app.
 
@@ -87,7 +87,7 @@ Use the function microflows created in [Set Up Your App for Agent Creation](/app
     * Description: `Get number of tickets in a certain status. Only the following values for status are available: ['Open', 'In Progress', 'Closed']`
     * Enabled: *yes* (default)
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-singleagent/runtime-RetrieveNumberOfTicketsInStatus.png" alt="Add tool dialog box with RetrieveNumberOfTicketsInStatus configuration" max-width=60% >}}
+    {{< figure src="/attachments/genai/genai-howto-singleagent/runtime-RetrieveNumberOfTicketsInStatus.png" alt="Add tool dialog box with RetrieveNumberOfTicketsInStatus configuration" max-width=60% >}}
 
 3. Click **Save**.
 
@@ -145,7 +145,7 @@ If your knowledge base is not compatible with Agent Commons, or if the retrieval
 
 Configure the **Ask the agent** button created in [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/#domain-model-setup) to call a microflow to invoke the agent. Your completed microflow will look like this:
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-singleagent/Microflow_AgentCommons.png" alt="Microflow with three activities: Retrieve Agent from database, Call Agent Without History, and Change TicketHelper ModelResponse attribute" >}}
+{{< figure src="/attachments/genai/genai-howto-singleagent/Microflow_AgentCommons.png" alt="Microflow with three activities: Retrieve Agent from database, Call Agent Without History, and Change TicketHelper ModelResponse attribute" >}}
 
 1. On the **TicketHelper_Agent** page, edit the button's **On click** event to call a microflow. Click **New** to create a microflow named `ACT_TicketHelper_CallAgent_Commons`.
 

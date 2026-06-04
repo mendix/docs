@@ -1,6 +1,6 @@
 ---
 title: "Glossary"
-url: /appstore/modules/genai/glossary/
+url: /agents/glossary/
 linktitle: "Glossary"
 weight: 5
 description: "Quick reference for key agentic and generative AI terms used in Mendix documentation."
@@ -14,7 +14,7 @@ This glossary provides brief definitions of key agentic and generative AI terms 
 
 An AI system that combines an LLM with a reasoning loop and can be extended with memory, tools, skills, and the ability to call and execute functions. It can plan, evaluate results, and iterate toward a goal.
 
-In Mendix, you can build agents using Agents Kit, a collection of starter apps, connectors, and modules that support implementations from simple text generation to complex multi-step agentic workflows. For more information, see [GenAI Agents](/appstore/modules/genai/agents/).
+In Mendix, you can build agents using Agents Kit, a collection of starter apps, connectors, and modules that support implementations from simple text generation to complex multi-step agentic workflows. For more information, see [GenAI Agents](/agents/agents/).
 
 ## Agent Orchestration {#agent-orchestration}
 
@@ -44,29 +44,29 @@ When an LLM generates incorrect, nonsensical, or fabricated information that is 
 
 A design pattern where an agent pauses at defined points to request human input—such as approval, correction, or a decision—before continuing. The human actively participates in the agent’s execution rather than passively observing.
 
-In Mendix, this is implemented through user access approval settings on [tools](#tool-calling), which control when tools get executed and whether they are visible to the user. For example, a tool that deletes records might require explicit user confirmation before execution. The ConversationalUI module supports human-in-the-loop interactions out of the box. For implementation details, see [Human in the Loop](/appstore/modules/genai/conversational-ui/#human-in-the-loop).
+In Mendix, this is implemented through user access approval settings on [tools](#tool-calling), which control when tools get executed and whether they are visible to the user. For example, a tool that deletes records might require explicit user confirmation before execution. The ConversationalUI module supports human-in-the-loop interactions out of the box. For implementation details, see [Human in the Loop](/agents/genai-for-mx/conversational-ui/#human-in-the-loop).
 
 ## Knowledge Base {#knowledge-base}
 
 A storage system for discrete pieces of information that can be retrieved and used to augment prompts. Combining a knowledge base with [embeddings](#embeddings) (vector representations of the data) creates a [vector database](#vector-database) that supports semantic similarity searches. Knowledge bases are essential for [RAG](#retrieval-augmented-generation) patterns and semantic search.
 
-Mendix supports managed cloud knowledge base services such as [Mendix Cloud GenAI Knowledge Base Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/) and self-managed implementations using the [PgVector Knowledge Base module](/appstore/modules/genai/pgvector/).
+Mendix supports managed cloud knowledge base services such as [Mendix Cloud GenAI Knowledge Base Resource Packs](/agents/mx-cloud-genai/resource-packs/) and self-managed implementations using the [PgVector Knowledge Base module](/agents/reference-guide/external-connectors/pgvector/).
 
 ## Large Language Model (LLM) {#large-language-model}
 
 A neural network trained on large amounts of text that can understand input and generate responses. LLMs can perform tasks such as text generation, answering questions, summarization, and translation.
 
-Mendix connectors support LLMs from providers including OpenAI, Amazon Bedrock, and Mendix Cloud GenAI. For details on supported models, see [Available Models](/appstore/modules/genai#models).
+Mendix connectors support LLMs from providers including OpenAI, Amazon Bedrock, and Mendix Cloud GenAI. For details on supported models, see [Available Models](/agents/#models).
 
 ## Model Context Protocol (MCP) {#model-context-protocol}
 
 An open protocol that standardizes how large language models can connect to applications. MCP enables apps to expose tools and prompts to external clients, and consume tools and prompts from external servers.
 
-Mendix provides an MCP Server module to build an MCP server from a Mendix app, enabling developers to expose tools and prompts to external MCP clients. Mendix also provides an MCP Client module that enables your app to connect to MCP servers and discover and use their tools and prompts. For more information, see [Model Context Protocol](/appstore/modules/genai/mcp/).
+Mendix provides an MCP Server module to build an MCP server from a Mendix app, enabling developers to expose tools and prompts to external MCP clients. Mendix also provides an MCP Client module that enables your app to connect to MCP servers and discover and use their tools and prompts. For more information, see [Model Context Protocol](/agents/mcp/).
 
 ## Prompt Engineering {#prompt-engineering}
 
-The practice of structuring instructions to guide generative AI models to produce desired outcomes. Prompt engineering involves designing the input text sent to the LLM, typically through [system prompts](#system-prompt) and [user prompts](#user-prompt). This includes crafting instructions on what the model should do, providing context and information needed to follow those instructions, structuring input data, and specifying the requested output format. The quality of prompts directly influences the quality of AI responses. For more information, see [Prompt Engineering](/appstore/modules/genai/prompt-engineering/).
+The practice of structuring instructions to guide generative AI models to produce desired outcomes. Prompt engineering involves designing the input text sent to the LLM, typically through [system prompts](#system-prompt) and [user prompts](#user-prompt). This includes crafting instructions on what the model should do, providing context and information needed to follow those instructions, structuring input data, and specifying the requested output format. The quality of prompts directly influences the quality of AI responses. For more information, see [Prompt Engineering](/agents/prompt-engineering/).
 
 ## Retrieval Augmented Generation (RAG) {#retrieval-augmented-generation}
 
@@ -82,13 +82,13 @@ The basic unit of text that LLMs process. Models break down text into tokens, wh
 
 ## Tool Calling {#tool-calling}
 
-Also known as tool use or function calling, a capability that allows LLMs to call specific functions or tools to gather additional information or perform actions. The model returns a structured request indicating which function to call and with what parameters, which the app then executes and returns results to the model. Tool calling enables agent patterns like ReAct (Reasoning + Acting), where agents iteratively reason about what to do and then call tools to take action. For more information, see [Tool Calling](/appstore/modules/genai/function-calling/).
+Also known as tool use or function calling, a capability that allows LLMs to call specific functions or tools to gather additional information or perform actions. The model returns a structured request indicating which function to call and with what parameters, which the app then executes and returns results to the model. Tool calling enables agent patterns like ReAct (Reasoning + Acting), where agents iteratively reason about what to do and then call tools to take action. For more information, see [Tool Calling](/agents/function-calling/).
 
 ## Trace {#trace}
 
 A trace is a structured record of execution across a system or workflow. In the context of an agent, it captures the sequence of inputs, reasoning steps, tool calls, intermediate actions, and outputs that led to a result.
 
-In Mendix, tracing is supported by the [GenAI Commons](/appstore/modules/genai/genai-for-mx/commons/#traceability) module to help debug and monitor agent behavior.
+In Mendix, tracing is supported by the [GenAI Commons](/agents/genai-for-mx/commons/#traceability) module to help debug and monitor agent behavior.
 
 ## User Prompt {#user-prompt}
 
@@ -98,4 +98,4 @@ The input text provided by an end user or app to an LLM. User prompts contain th
 
 A specialized database designed to store and query [embeddings](#embeddings). Vector databases support similarity searches using mathematical techniques to find the most semantically similar items to a query. This capability is essential for [RAG](#retrieval-augmented-generation) patterns.
 
-In Mendix, PostgreSQL with the pgvector extension serves as a vector database. For more information, see [PgVector Knowledge Base](/appstore/modules/genai/pgvector/).
+In Mendix, PostgreSQL with the pgvector extension serves as a vector database. For more information, see [PgVector Knowledge Base](/agents/reference-guide/external-connectors/pgvector/).

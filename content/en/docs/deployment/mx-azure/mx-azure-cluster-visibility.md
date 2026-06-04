@@ -16,8 +16,8 @@ Below is a short summary of the key aspects of cluster visibility. For more info
 * Visibility - All cluster namespace members can view initialized clusters to facilitate support and monitoring.
 * Security - Only Cluster Managers with appropriate Azure RBAC roles (Owner or Contributor) can modify cluster settings.
 * Separation of Concerns: 
-  * Initialized clusters are visible to all namespace members regardless of Azure RBAC.
-  * Editing capabilities require both Cluster Manager role or Azure Owner or Contributor permissions.
+    * Initialized clusters are visible to all namespace members regardless of Azure RBAC.
+    * Editing capabilities require both Cluster Manager role or Azure Owner or Contributor permissions.
 
 ## Cluster Visibility
 

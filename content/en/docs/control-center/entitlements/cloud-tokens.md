@@ -98,7 +98,7 @@ These tables show how many Mendix Cloud Tokens each CRP requires:
 
 ## GenAI Resource Packs {#grps}
 
-GenAI Resource Packs provide turn-key access to Generative AI technology, delivered through Mendix Cloud. For the technical details of each GenAI Resource Pack (GRP), refer to [GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/).
+GenAI Resource Packs provide turn-key access to Generative AI technology, delivered through Mendix Cloud. For the technical details of each GenAI Resource Pack (GRP), refer to [GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/).
 
 | GenAI Model Resource Pack – Anthropic Claude Sonnet | Mendix Cloud Tokens |
 | --- | --: |

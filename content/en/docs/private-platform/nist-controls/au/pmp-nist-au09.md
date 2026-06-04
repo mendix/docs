@@ -26,6 +26,7 @@ The information system protects audit information and audit tools from unauthori
 The audit information includes all information needed to successfully audit information system activity (for example, audit records, audit settings, and audit reports). This control focuses on technical protection of audit information. Physical protection of audit information is addressed by media protection controls and physical and environmental protection controls. 
 
 The following controls are related to this control:
+
 * AC-3
 * AC-6
 * MP-2

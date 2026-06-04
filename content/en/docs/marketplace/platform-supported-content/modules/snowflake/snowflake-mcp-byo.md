@@ -27,7 +27,7 @@ Using a Snowflake BYOK has the following advantages:
 
     For applications running locally in Studio Pro, you can retrieve your own IP address from [whatismyipaddress.com](https://whatismyipaddress.com/). For applications running in Mendix Cloud, see [Mendix IP Addresses: Mendix Cloud](/developerportal/deploy/mendix-ip-addresses/#mendix-cloud).
 
-* [OpenAI Connector](/appstore/modules/genai/reference-guide/external-connectors/openai/) in your Mendix application
+* [OpenAI Connector](/agents/reference-guide/external-connectors/openai/) in your Mendix application
 
 ## Configuring the Snowflake LLM in the OpenAI Connector
 
@@ -38,27 +38,25 @@ Because Snowflake conforms to the API specification of OpenAI, you can use the O
     1. Click **New**.
     2. Enter an identifying name.
     3. For API type, select **OpenAI**.
-    4. For **Endpoint**, enter your Snowflake account URL with the `/api/v2/cortex/v1/` suffix. 
-    
-    For example, the URL may look like the following: `https:/<snowflake_accountname>.snowflakecomputing.com/api/v2/cortex/v1/`.
+    4. For **Endpoint**, enter your Snowflake account URL with the `/api/v2/cortex/v1/` suffix. For example, the URL may look like the following: `https:/<snowflake_accountname>.snowflakecomputing.com/api/v2/cortex/v1/`.
 
     5. Save your changes.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-byok/save-changes.png" >}}
+        {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-byok/save-changes.png" >}}
  
 2. Add a Large Language Model by performing the following steps:
 
     1. Hover over the **three dots** icon and select **Manage deployed models** from the pop-up menu.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-byok/manage-deployed-models.png" >}}
+        {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-byok/manage-deployed-models.png" >}}
 
     2. Click **Add new model** to add an LLM from the [list of available LLMs](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-rest-api#model-availability) in your Snowflake account.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-byok/new-deployed-model.png" >}}
+        {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-byok/new-deployed-model.png" >}}
 
-    Alternatively, you can log into your Snowflake account with Snowsight and select **AI & ML > AI Studio > Cortex Playground**. The list in the top middle of the screen lists all available models.
-    
-    The **Model name** field in the Deployed Model configuration in Mendix must match exactly with the model name in Snowflake.
+        Alternatively, you can log into your Snowflake account with Snowsight and select **AI & ML > AI Studio > Cortex Playground**. The list in the top middle of the screen lists all available models.
+        
+        The **Model name** field in the Deployed Model configuration in Mendix must match exactly with the model name in Snowflake.
 
     3. Complete the configuration for your model.
     4. Save your changes.
@@ -67,9 +65,9 @@ Because Snowflake conforms to the API specification of OpenAI, you can use the O
 
     1. Hover over the **three dots** icon and select **Test** from the pop-up menu.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-byok/test-option.png" >}}
+        {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-byok/test-option.png" >}}
 
     2. Select your deployed model from the drop-down list.
     3. Click **Test**.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-byok/test.png" >}}
+        {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-byok/test.png" >}}

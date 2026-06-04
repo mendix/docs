@@ -8,7 +8,7 @@ numberless_headings: true
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/).
+These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/).
 
 ## 2026
 
@@ -96,7 +96,7 @@ These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs
 
 #### New Features
 
-* [Mendix GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/) are now generally available. They enable seamless integration of GenAI into your Mendix ecosystem by leveraging GenAI Models and Knowledge Bases. With these packs, you can accelerate advanced use cases such as Retrieval-Augmented Generation (RAG) and Agentic AI.
+* [Mendix GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/) are now generally available. They enable seamless integration of GenAI into your Mendix ecosystem by leveraging GenAI Models and Knowledge Bases. With these packs, you can accelerate advanced use cases such as Retrieval-Augmented Generation (RAG) and Agentic AI.
 You can access them through the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com/).
 
 #### Improvements

@@ -42,19 +42,19 @@ The organization:
 * Reviews accounts for compliance with account management requirements at an organization-defined frequency.
 * Establishes a process for reissuing shared and group account credentials (if deployed) when individuals are removed from the group.
 
- ### Supplemental Guidance
+### Supplemental Guidance
 
  Information system account types include the following:
  
- * Individual
- * Shared
- * Group
- * System
- * Guest or anonymous
- * Emergency
- * Developer, manufacturer, or vendor
- * Temporary
- * Service. 
+* Individual
+* Shared
+* Group
+* System
+* Guest or anonymous
+* Emergency
+* Developer, manufacturer, or vendor
+* Temporary
+* Service. 
  
  Some of the account management requirements listed above can be implemented by organizational information systems. The identification of authorized users of the information system and the specification of access privileges reflects the requirements in other security controls in the security plan. 
  
@@ -66,8 +66,8 @@ The organization:
  
  Conditions for disabling or deactivating accounts include, for example: 
  
- * When shared, group, emergency, or temporary accounts are no longer required
- * When individuals are transferred or terminated. 
+* When shared, group, emergency, or temporary accounts are no longer required
+* When individuals are transferred or terminated. 
  
  Some types of information system accounts may require specialized training. 
  

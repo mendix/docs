@@ -12,6 +12,28 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 ## 2026
 
+### June 4, 2026
+
+#### Portal Improvements
+
+* We have added a check to prevent enabling **Compatibility Metrics Mode** in **Runtime Metrics Configuration** for Operator version 2.27.0 and above.
+
+### June 2, 2026
+
+#### Mendix Operator v2.27.0 {#2.27.0}
+
+* We have added support for the Kubernetes Gateway API.
+* We have added an option to load client certificates from Kubernetes secrets created on the cluster side.
+* We have added an option to specify default `nodeSelectors` for pods created and managed by the Operator.
+* We have added an option to specify default labels for pods created and managed by the Operator.
+* We have addressed an issue where enabling OpenTelemetry auto-instrumentation would show a **processing** spinner on the Runtime status.
+* We have updated the components to use the latest dependency versions in order to improve security score ratings for container images.
+* We have updated the list of supported platforms to include Kubernetes 1.36.
+
+#### Deprecations
+
+* We have removed support for the **compatibility** Prometheus metrics mode. Any environments still using **compatibility** metrics should be switched into **native** metrics mode.
+
 ### May 21, 2026
 
 #### License Manager CLI v0.10.10 {#0.10.10}
@@ -26,7 +48,7 @@ For information on the current status of deployment to Mendix on Kubernetes and 
 
 ### May 1, 2026
 
-#### Mendix Ops CLI
+#### Helm Chart UI
 
 * We have released a new mx-ops-cli tool for configuring namespaces and performing base installations by using Helm charts. For more information, see [Installing Components through the Helm Chart UI](/developerportal/deploy/helm-charts/).
 

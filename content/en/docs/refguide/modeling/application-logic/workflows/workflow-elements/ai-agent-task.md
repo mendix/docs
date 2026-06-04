@@ -13,6 +13,11 @@ When the workflow reaches the AI agent task, a microflow is called to handle the
 
 **AI agent task** can be used across a wide range of use cases. Some examples include assessing requests, classifying data, extracting information from unstructured text, summarizing content, and drafting outputs such as notifications or reports.
 
+{{% alert color="info" %}} In Studio Pro 11.11 and below, you might encounter consistency error **CE1589: Missing activity "Call Agent" in microflow**. This issue is fixed in Studio Pro 11.12.
+
+If you are not upgrading to Studio Pro 11.12, rename the agent activity caption in the microflow to **Call Agent** to resolve the error.
+{{% /alert %}}
+
 ## AI Agents {#ai-agents}
 
 An AI agent is an autonomous software system powered by large language models (LLMs). It perceives its environment, reasons through a goal, and takes actions to achieve the goal, replacing repetitive manual steps. For critical tasks, you can still add a user task to keep a human in the loop.

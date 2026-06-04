@@ -3,6 +3,8 @@ title: "Implementing User Metering"
 url: /developerportal/deploy/implementing-user-metering/
 weight: 30
 description: "This document describes how to implement user metering."
+aliases:
+    - /developerportal/deploy/populate-user-type/
 ---
 
 ## Introduction

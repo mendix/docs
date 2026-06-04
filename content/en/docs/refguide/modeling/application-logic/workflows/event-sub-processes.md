@@ -53,16 +53,25 @@ Event sub-processes are triggered by a [Notify workflow](/refguide/notify-workfl
 
 Event sub-processes can be configured as either interrupting or non-interrupting, depending on how they interact with the main process flow.
 
-* **Interrupting (solid line)** – Immediately cancels the main process flow.
+* **Interrupting (solid line)** – Immediately cancels the main process flow and all ongoing sub-processes within the workflow instance.
 * **Non-Interrupting (dashed line)** – Runs in parallel with the main flow.
 
-{{% alert color="info" %}}
-Currently, Mendix only supports the non-interrupting variant of event sub-processes. Support for interrupting event sub-processes is planned for a future release.
-{{% /alert %}}
+##### Implications of Changing the Sub-Process Start Event Type {#event-type-change}
+
+For an existing event sub-process, when you change the type of its start event from non-interrupting to interrupting or vice versa, you will be presented with a warning dialog. For example, when you change a notification start event from non-interrupting to interrupting, you will see the following warning dialog:
+
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/event-sub-processes/security-dialog.png" alt="Security Dialog when changing type" width="450">}}
+
+After you confirm the change:
+
+* The sub-process is re-created with a start event of the specified type, along with all the event sub-process activities. The new start event can be triggered after the workflow is redeployed and is in progress.
+* The workflow becomes incompatible if the changed event sub-process is already being executed in one of the ongoing workflow instances.
+
+The event sub-process is re-created upon type switch because in-place conversion can result in invalid states. An interrupting event sub-process cancels the parent process scope and all other active sub-processes when triggered, while a non-interrupting one runs in parallel without affecting them. These are mutually exclusive execution models: an event sub-process instance belongs to exactly one of them from the moment it starts. Changing the type in place for an already-active instance would leave it in a state that is neither valid interrupting nor valid non-interrupting behavior.
 
 #### Concurrency Limitation
 
-Mendix workflows currently support a **single concurrent instance** per defined event sub-process. If a non-interrupting event sub-process is already active, subsequent attempts to trigger that same sub-process via the **Notify workflow** activity will return `false`. No new instances will be created for that specific sub-process while one is **In Progress**. A new instance can only be initiated once the active sub-process has completed its execution path.
+Mendix workflows currently support a **single concurrent instance** per defined event sub-process. If an event sub-process is already active, subsequent attempts to trigger that same sub-process via the **Notify workflow** activity will return `false`. No new instances will be created for that specific sub-process while one is **In Progress**. A new instance can only be initiated once the active sub-process has completed its execution path.
 
 If your workflow has multiple, distinct event sub-processes defined (for example, one for "Address Change" and one for "Document Upload"), each one can have its own active instance simultaneously. One being active does not prevent a different one from being triggered.
 
@@ -81,11 +90,21 @@ To add an **Event sub-process** to a workflow, follow these steps:
 * The flow can contain the same types of activities as the main process flow (for example, **User Task**, **Call Microflow**, **Decision**).
 * It must start with a **Start** event (triggered by a notification) and end with at least one **End** event.
 
+### Rearranging Event Sub-Processes
+
+In Studio Pro 11.11 and above, you can rearrange event sub-processes by right-clicking an event sub-process to open its context menu and clicking **Move event sub-process left** or **Move event sub-process right**, or you can use the <kbd>Ctrl</kbd>/<kbd>Command</kbd> + Left arrow or <kbd>Ctrl</kbd>/<kbd>Command</kbd> + Right arrow shortcut keys.
+
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/event-sub-processes/arrange-in-editor.png" max-width=90% alt="Event sub-process arrange in editor" >}}
+
+{{% alert color="info" %}}
+This does not change the order of execution of the sub-processes, as this is dependent on when the sub-process is triggered.
+{{% /alert %}}
+
 ## Execution
 
 To start an event sub-process, create a **Notify workflow** microflow activity and point it to the event sub-process start event.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/event-sub-processes/notify-workflow.png" alt="Notify workflow example" width="400" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/event-sub-processes/notify-workflow.png" alt="Notify workflow example" max-width=90% >}}
 
 ### Operational Lifecycle Management
 
@@ -108,8 +127,8 @@ Event sub-processes have specific restrictions regarding [Jump activity](/refgui
 
 * Between processes: It is not possible to jump into a sub-process from the main process (or vice versa), nor between different sub-processes.
 * Within a sub-process: Jumps within the same sub-process are permitted.
-    * **Jump to Start Event**: Aborts the current sub-process instance and returns it to a waiting state.
-    * **Jump to End Event**: Completes the sub-process instance immediately.
+    * **Jump to Start Event**: Aborts the current sub-process instance and returns it to a waiting state. If no other activities are in progress in the workflow instance after the jump, the workflow is aborted.
+    * **Jump to End Event**: Completes the sub-process instance immediately. If no other activities are in progress in the workflow instance after the jump to the sub-process end event, the workflow is completed.
 
 ## Domain Model Structure
 

@@ -4,16 +4,11 @@ url: /community-tools/contribute-to-mendix-docs/style-guide/terminology/
 weight: 30
 description: "Usage guidelines for general terminology in Mendix documentation, covering technical terms, formatting conventions, word choice, and inclusive language."
 ---
+<!-- vale off -->
 
 ## How to Use This Section
 
-This section contains decisions and usage guidelines for general (non-Mendix specific) terminology, including inclusive language guidelines. For guidelines on Mendix-specific terminology, see the Mendix Product Naming Guide.
-
-Under each term are the following:
-
-Guidelines.
-
-> Example
+This section contains decisions and usage guidelines for general (non-Mendix specific) terminology, including inclusive language guidelines. For guidelines on Mendix-specific terminology, see the [Mendix Product Naming Guide](/community-tools/contribute-to-mendix-docs/style-guide/product-naming-guide/).
 
 ## 1-1 & one-to-one
 
@@ -49,17 +44,15 @@ Use "AM" and "PM" for times, via the MSG.
 
 Use to refer to "< >".
 
-## app/application
+## app
 
-Use "app" or "application" when referring to apps in general. Do not capitalize (meaning, do not write "Mendix App").
+Use "app" instead of "application" in most cases, as [recommended by Microsoft](https://learn.microsoft.com/en-us/style-guide/a-z-word-list-term-collections/a/app-application). Do not capitalize (meaning, do not write "Mendix App").
 
-The full word "application" has a more well-rounded meaning to it (i.e., web and mobile apps), whereas "app" may connote just mobile app to the reader. Accordingly, it can be better to use "application" at the beginning of documents and then switch to "app" later on. We want to make it clear that Mendix is not just for building mobile apps, but all kinds of applications.
-
-In the context of development and project management, sometimes using "project" can significantly enhance the clarity of the concept, as demonstrated in [Centralized Project Roles](/control-center/roles-and-permissions/#centralized-project-roles). In such cases, we can use "project" instead of "app" or "application". Note that such usage of "project" should be agreed upon between the Project Manager and the Technical Writer. For further guidelines, see [project](#project).
+In development and project management contexts, use "project" instead of "app" when it makes the concept clearer, such as in [Centralized Project Roles](/control-center/roles-and-permissions/#centralized-project-roles). For more guidance, see [project](#project).
 
 ## app owner
 
-This is not a formalized/Mendix term (in comparison to [App Contact](/developerportal/general/app-roles/)), so we cannot assume the user knows what this is. This should be defined in general terms and made clearer via context (for example, via the "Copyright" example in the [Insights Hub module documentation](/partners/siemens/mindsphere-module-details/#configuring-the-os-bar)) that it is the user's responsibility to define/interpret what an app owner is for their app.
+This is not a formal Mendix term, so do not assume users know what it means. Define it in general terms and make clear through context that each team must define and interpret "app owner" for their own app. For an example, see the *Copyright* section in the [Insights Hub module documentation](/partners/siemens/mindsphere-module-details/#configuring-the-os-bar).
 
 ## article, document, page
 
@@ -132,7 +125,7 @@ Use the verbs "select" and "clear."
 
 Write as two words (following the *Microsoft Style Guide*).
 
-## click
+## click {#click}
 
 Use "click" and not "click on."
 
@@ -156,7 +149,7 @@ Write as one word.
 
 ## deploy
 
-The act of putting a Mendix app into an environment where it has access to all the resources it needs to run. This is triggered in the Developer Portal, or in the modeler by clicking **Run** or **Run Locally**.
+The act of putting a Mendix app into an environment where it has access to all the resources it needs to run. This is triggered in Apps, or in Studio Pro by clicking **Run** or **Run Locally**.
 
 Use *deploy to* when referring to a cloud environment.
 
@@ -332,11 +325,11 @@ Use lower-case unless it is part of a term like "Mendix Native Mobile Builder".
 
 ## navigation pane
 
-Use to refer to the navigation interface on the left side of the screen in the Developer Portal.
+Use to refer to the navigation interface on the left side of the screen in Apps.
 
 Do not capitalize.
 
-> Select your app in the Developer Portal, then click **Backups** in the navigation pane.
+> Select your app in Apps, then click **Backups** in the navigation pane.
 
 ## no-code, no code
 
@@ -462,13 +455,13 @@ Write as one word, not with a hyphen.
 
 Capitalize in all instances. We also capitalize "Agile" and "Sprint."
 
-## sign in/sign out
+## sign in/sign out {#sign-insign-out}
 
 When referring to an action which is taking place, use "sign in" and "sign out" instead of "log in," "login," "log out," "log off," etc.
 
 When referring to a button or other element of the UI, refer to the UI text.
 
-> Sign out of the Developer Portal by clicking **Log out** in the menu under your avatar.
+> Sign out of Apps by clicking **Log out** in the menu under your avatar.
 
 ## single sign-on
 
@@ -510,7 +503,7 @@ Can use as a verb.
 
 > Click this to toggle the protection level for the content.
 
-## upper left/upper right
+## upper left/upper right {#upperlowercase}
 
 When used as an adjective, include a hyphen between the words.
 
@@ -520,7 +513,7 @@ Do not use "top left" and "top right".
 
 ## user vs. end-user
 
-A "user" is a user of the Mendix Platform (apps in development, app projects, project management, Developer Portal, etc.).
+A "user" is a user of the Mendix Platform (apps in development, app projects, project management, etc.).
 
 An "end-user" is a user of a Mendix app built on the platform. This term will be used less in the documentation, as we document for Mendix Platform users and not general Mendix app users in most cases.
 

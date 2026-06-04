@@ -1,5 +1,5 @@
 ---
-title: "Portable App Distribution for Linux"
+title: "Portable App Distribution on Linux"
 url: /developerportal/deploy/linux-pad/
 description: "How to install and configure Mendix on a Linux system using Portable App Distribution."
 weight: 20
@@ -12,12 +12,13 @@ Portable App Distribution refers to packaging applications in a self-contained f
 This documentation provides guidance for deploying Portable App Distribution in a Linux environment and serves as a helpful reference rather than official implementation support.
 
 {{% alert color="info" %}}
+Unlike the M2EE-based deployment, where Mendix provides full end-to-end tooling support, the Portable App Distribution approach only requires Java to run, with Mendix's support strictly limited to the Portable App Distribution package itself. All implementation, configuration, and deployment activities, including Linux deployment, remain the customer's sole responsibility.
 For information about the scope of support, see [Support for Different Deployment Strategies](/support/deployment-strategy-support/).
 {{% /alert %}}
 
 ## Prerequisites
 
-To deploy your app to an on-premises Cloud Foundry configuration using [Portable App Distribution](/developerportal/deploy/portable-app-distribution-deploy/), ensure that you fulfill the following prerequisites:
+To deploy your app to an on-premises Linux configuration using [Portable App Distribution](/developerportal/deploy/portable-app-distribution-deploy/), ensure that you fulfill the following prerequisites:
 
 * A Linux environment. This can be a virtual machine, a physical server, or a cloud instance (for example, AWS EC2, Azure VM, Google Cloud VM). You will need `sudo` or `root` privileges for some commands.
 * Java Development Kit (JDK). Your application requires a compatible Java runtime. For installation instructions, refer to the following sections. 
@@ -52,11 +53,9 @@ To deploy your app to Linux, perform the following steps:
     * For Debian/Ubuntu-based systems: `sudo apt install temurin-21-jdk -y`
     * For RHEL/CentOS-based systems: `sudo yum install temurin-21-jdk -y` or `sudo dnf install temurin-21-jdk -y`
 
-If your application requires it, you can change the Java version on vendor as needed, for example, `openjdk-21-jdk` or `java-17-amazon-corretto`.
+    If your application requires it, you can change the Java version on vendor as needed, for example, `openjdk-21-jdk` or `java-21-amazon-corretto`.
 
-{{% alert color="info" %}}
-Your Portable App Distribution only requires a Java Runtime Environment (JRE) to run, but it is often recommended to install a full JDK as it includes the JRE and development tools.
-{{% /alert %}}
+    {{% alert color="info" %}} Your Portable App Distribution only requires a Java Runtime Environment (JRE) to run, but it is often recommended to install a full JDK as it includes the JRE and development tools. {{% /alert %}}
 
 4. Verify that Java is correctly installed by running the following command: `java -version`.
 5. Upload the Portable App Distribution .zip file to a location where your Linux server can access it by using one of the following options, depending on the location and configuration of your Linux machine.

@@ -1,6 +1,6 @@
 #!/bin/bash
 # Resolve a documentation URL to its source markdown file
-# Usage: resolve-doc-url.sh "/path/to/page/"
+# Usage: resolve-doc-url.sh "/url/path/"
 
 if [ -z "$1" ]; then
     echo "Usage: resolve-doc-url.sh <url>"

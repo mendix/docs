@@ -37,7 +37,6 @@ Before sending messages to the File Device, review the following points:
 * Delimiter - The `#` character is used as a delimiter within messages. Paths and data may not contain the `#` character. 
 * Case sensitivity - File and directory paths may be case-sensitive depending on the underlying operating system. For example, Linux paths are typically case-sensitive, while Windows paths are not.
  
-
 ### Message
 
 * `0#Path` - Initiate watching for changes in the specified `Path`. If `Path` is a directory, the device will watch for changes within that directory (creation, deletion, renaming, or modification of files/subdirectories). If `Path` is a file, the device will watch for changes to that specific file (modification, deletion, or renaming).
@@ -65,7 +64,7 @@ The section below shows a sample test that you can run to verify the configurati
     * **Allow writing files** - **Yes**
     * Use the default values for everything else 
 4. Register the Station to your computer (assuming the Workstation Client is installed there).
-5. In your Workspace, navigate to **Test Your Station** and click on the configured file device.
+5. In your Workspace, navigate to **Test Your Station** and click **Test** by the configured file device.
 6. Enter `3#test.txt#Hello from Mendix` in the **Send Message** field, and then press **Send Message**.
 
     The test should show a response like `S#3#C:\MyTestFolder\test.txt` to indicate that the text file *test.txt* was successfully written to *MyTestFolder*. 

@@ -35,7 +35,7 @@ Before integrating function calling into your app, make sure you meet the follow
 
 ## Function Calling Use Case {#use-case}
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-functioncalling/structure_functioncalling.png" >}}
+{{< figure src="/attachments/genai/howto-functioncalling/structure_functioncalling.png" alt="" >}}
 
 In this example, two functions will be implemented with the following purposes:
 
@@ -72,7 +72,7 @@ To call a function, create a microflow per function to extract the necessary inf
 
 #### Function: Extracting the User Name {#function-username}
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-functioncalling/GetCurrentUserName_Function.jpg" >}}
+{{< figure src="/attachments/genai/howto-functioncalling/GetCurrentUserName_Function.jpg" >}}
 
 Create a new microflow with the name `GetCurrentUserName_Function`. 
 
@@ -95,7 +95,7 @@ Create a new microflow with the name `GetCurrentUserName_Function`.
     
 #### Function: Getting Bank Holidays in the Netherlands 2025 {#function-bankholidays}
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-functioncalling/GetBankHolidays_Function.jpg" >}}
+{{< figure src="/attachments/genai/howto-functioncalling/GetBankHolidays_Function.jpg" >}}
 
  For this example, call the new microflow `GetBankHolidays_Function`. 
 
@@ -121,7 +121,7 @@ Create a new microflow with the name `GetCurrentUserName_Function`.
 
 Now, the following steps will focus exclusively on the `ChatContext_ChatWithHistory_ActionMicroflow` from your `MyFirstBot` module.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-functioncalling/CallingFunctions_Microflow.jpg" >}}
+{{< figure src="/attachments/genai/howto-functioncalling/CallingFunctions_Microflow.jpg" >}}
 
 As shown in the image, two key steps must be completed to enable the execution of both functions.
 

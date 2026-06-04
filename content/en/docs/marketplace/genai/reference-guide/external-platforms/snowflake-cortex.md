@@ -58,12 +58,12 @@ The [Snowflake showcase app](https://marketplace.mendix.com/link/component/22584
    
 3. To see how a Snowflake Cortex Analyst action is called, use the **Explorer** search box to find and open the *EXAMPLE_CortexAnalyst_GenerateResponseMessage** microflow.
 
-   {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-ai-data-connector/CortexAnalystRequestExample.png" >}}
+   {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-ai-data-connector/CortexAnalystRequestExample.png" alt="" >}}
 
     This microflow calls the Snowflake Cortex Analyst function.
 
 4. To see how you can modify the statement, refer to the *DS_Statement_ML_CreateView_Analyze* example microflow and check how the parameters are set at the **Statement_SetUp** step.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/genai/snowflake/StatementSetup.png" alt="" >}}
+    {{< figure src="/attachments/genai/snowflake/StatementSetup.png" alt="" >}}
 
     For information about the parameters required by each functionality, refer to Snowflake documentation.   

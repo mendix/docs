@@ -1,6 +1,6 @@
 ---
 title: "Module Commands"
-url: /refguide/mx-command-line-tool/module
+url: /refguide/mx-command-line-tool/module/
 weight: 30
 description: "Describes the module-related commands for the mx command-line tool."
 ---
@@ -17,7 +17,7 @@ To see the command parameters for each command, use the `--help` parameter. For 
 
 ## mx show-module-version Command {#show-module-version}
 
-The `mx show-module-verion` command outputs the version of a module.
+The `mx show-module-version` command outputs the version of a module.
 
 ### Usage
 
@@ -48,7 +48,7 @@ The command will output the version of the module to the command line output.
 
 ## mx set-module-version Command {#set-module-version}
 
-The `mx set-module-version` changes the version of an add-on module.
+The `mx set-module-version` command changes the version of an add-on module.
 
 ### Usage
 
@@ -115,7 +115,7 @@ In case of errors, the exit code consists of three digits `XYZ`:
 
     * 1 – Module you are trying to import is protected and cannot be imported.
     * 2 – Module you are trying to import is a Theme module and cannot be imported.
-    * 3 – Project already contains a module with the name as the module you are importing. Thus the module can't be imported.
+    * 3 – Project already contains a module with the same name as the module you are importing. Thus the module cannot be imported.
     * 4 – No module is found in the MPK package.
     * 5 – Project Version is not supported by the current version of mx.exe
     * 6 – Project can't be loaded

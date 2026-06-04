@@ -1,7 +1,7 @@
 ---
 title: "Consumed REST Service"
 url: /refguide/consumed-rest-service/
-description: "Describes the configuration and usage of the new Consumed REST service document."
+description: "Describes how to configure and use the Consumed REST Service document."
 weight: 5
 aliases:
     - /refguide/consumed-rest-services-beta/
@@ -10,7 +10,7 @@ aliases:
 
 ## Introduction
 
-Use the Consumed REST Service document to send REST requests from Mendix Studio Pro. With this feature, you can build, test, and create data structures to store your requests. 
+Use the Consumed REST Service document to send REST requests from Studio Pro. With this feature, you can build, test, and create data structures to store your requests. 
 
 {{% alert color="info" %}}
 The Consumed REST Service document is released for general availability (GA) for Windows only. This feature is still in beta for macOS and will be released for GA at a later date.
@@ -18,9 +18,9 @@ The Consumed REST Service document is released for general availability (GA) for
 
 ### Use Cases
 
-Use the Consumed REST Service document to do the following:
+You can use the Consumed REST Service document to do the following:
 
-* Consume a REST Service manually or from an OpenAPI/Swagger contract
+* Consume a REST service manually or from an OpenAPI/Swagger contract
 * Configure `GET`, `POST`, `PUT`, `PATCH`, and `DELETE` requests
 * Create entities directly in the domain model
 * Send REST requests through a microflow
@@ -31,10 +31,10 @@ The ability to import an OpenAPI/Swagger contract is currently in beta.
 
 ### Limitations
 
-* To use the request response to create a data structure automatically in your domain model, the response data should be in JSON format. It is possible to process other formats, such as XML or raw text, but you will need to extract the data you are looking for in a microflow.
-* It is currently not possible to configure parameters in the Query Parameters tab.
-* Streaming responses from APIs are currently not supported.
-* A response can be mapped in a microflow only for responses with status code `200`. If a Send REST request action is executed in a microflow and the status code is in 2xx range, but different than `200`, use the latestHttpResponse to get the status code and response content.
+* To use the request response to create a data structure automatically in your domain model, the response data must be in JSON format. You can process other formats, such as XML or raw text, but you need to extract the data in a microflow.
+* You cannot configure parameters in the Query Parameters tab.
+* Streaming responses from APIs are not supported.
+* A response can be mapped in a microflow only for responses with status code `200`. If a Send REST request action is executed in a microflow and the status code is in the 2xx range but different than `200`, use the latestHttpResponse to get the status code and response content.
 
 ### Prerequisites 
 
@@ -42,7 +42,7 @@ The ability to import an OpenAPI/Swagger contract is currently in beta.
 
 ## Add the Consumed REST Service Document {#installation}
 
-Download [Studio Pro](https://marketplace.mendix.com/link/studiopro/) and add the Consumed REST Service document to your app. To do this, follow these steps:  
+Download [Studio Pro](https://marketplace.mendix.com/link/studiopro/) and add the Consumed REST Service document to your app by doing the following:  
 
 1. Right-click the module you want to add the Consumed REST Service document to.
 2. Select **Add other** > **Consumed REST service**. 
@@ -63,9 +63,9 @@ For more information about importing from an OpenAPI/Swagger contract, see the [
 
 ## Configuration {#configuration}
 
-Use the Consumed REST Service to configure a `GET`, `POST`, `PUT`, `PATCH`, or `DELETE` request for your app. A request can be configured manually or by uploading an OpenAPI or Swagger contract.
+Use the Consumed REST Service to configure a `GET`, `POST`, `PUT`, `PATCH`, or `DELETE` request for your app. You can configure a request manually or by uploading an OpenAPI or Swagger contract.
 
-If you upload an OpenAPI URL or Swagger contract, the content of the URL or file will be automatically added to your consumed REST service document. You can still manually configure the request after upload, such as add new [parameters](#add-parameters), [headers](#add-headers), or create entities from the request/response.
+If you upload an OpenAPI URL or Swagger contract, the content of the URL or file is automatically added to your consumed REST service document. You can still manually configure the request after upload, such as adding new [parameters](#add-parameters), [headers](#add-headers), or creating entities from the request/response.
 
 ### Basic Configuration {#configure-a-request}
 
@@ -84,13 +84,13 @@ Create a `GET`, `POST`, `PUT`, `PATCH`, or `DELETE` request to send data to your
    To make the base URL dynamic, see the [Dynamic Base URL](#dynamic-base-url) section below.
 
 5. Click **Authentication**.
-6. Select an authentication method, then click **OK**. For more information, see [Authentication methods](#authentication).
+6. Select an authentication method, then click **OK**. For more information, see [Authentication Methods](#authentication).
 
     {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-service/configuration-screen.png" width="500" >}}
 
 7. Click **Send**. 
 
-You can visualize your request in the **Response** tab, then use the response to [create an entity in the domain model](#create-entity). 
+You can visualize your request in the **Response** tab and use the response to [create an entity in the domain model](#create-entity). 
 
 ### Import from OpenAPI/Swagger Contract {#open-api-import}
 
@@ -128,9 +128,9 @@ Parameters are not supported in the Authentication section.
 
 {{% /alert %}}
 
-Parameters are fully supported in the path and query part of the URL, in the header value, and in the body. They are defined within curly brackets. For example, in the URL, defining `number` as parameter would be `http://numbersapi.com/{number}`. The parameters that are configured for the URL, headers, or body within curly brackets are automatically added to the parameters grid.
+Parameters are fully supported in the path and query part of the URL, in the header value, and in the body. They are defined within curly brackets. For example, in the URL, defining `number` as a parameter would be `http://numbersapi.com/{number}`. The parameters that are configured for the URL, headers, or body within curly brackets are automatically added to the parameters grid.
 
-You can manually add new parameters to the parameters grid directly. To do so, follow these steps:
+You can manually add new parameters to the parameters grid. To do so, follow these steps:
 
 1. Open the **Parameters** tab and click **Add parameter**.
 2. Name your parameter and add a test value.
@@ -144,12 +144,12 @@ You can manually add new parameters to the parameters grid directly. To do so, f
 You can add a Base URL as a parameter. To do this, follow these steps:
 
 1. Click **Base URL**.
-2. In the Dynamic field, select **Yes**.
-3. Click **OK**
+2. In the **Dynamic** field, select **Yes**.
+3. Click **OK**.
 
 {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-service/dynamic-base-url.png" class="no-border" width="600" >}}
 
-Your base URL is now considered as a parameter. You can change its value in the [Send REST Request](/refguide/send-rest-request/) microflow activity. 
+Your base URL is now a parameter. You can change its value in the [Send REST Request](/refguide/send-rest-request/) microflow activity. 
 
 #### Adding Query Parameters
 
@@ -165,7 +165,7 @@ Parameters are not supported in the Query Parameters table.
 
 {{% /alert %}}
 
-Query parameters can be configured in the **Parameters** tab in the **Query Parameters** table. You can define them directly in the URL or add them manually in the Query parameters field.
+Query parameters can be configured in the **Parameters** tab in the **Query Parameters** table. You can define them directly in the URL or add them manually in the **Query parameters** field.
 
 ##### Adding Query Parameter to URL
 
@@ -177,17 +177,17 @@ To add multiple parameters, add an ampersand (&) between each parameter, joining
 
 ##### Manually Add Query Parameters
 
-You can manually add new query parameters directly to the Query parameters grid. To do this, follow the steps below:
+You can manually add new query parameters directly to the **Query parameters** grid by doing the following:
 
 1. Open the **Parameters** tab.
 2. Click **Add query parameter**.
 3. Name your query parameter and add a test value.
 
-In this case, the newly configured query parameter will be automatically added to the URL.
+The newly configured query parameter is automatically added to the URL.
 
-By default, when a new query parameter is added to the grid, it is configured as a **Required** query parameter. You can change this setting to **Not required** by clicking the drop-down and changing the value of the required property to **No**.
+By default, when you add a new query parameter to the grid, it is configured as **Required**. You can change this setting to **Not required** by clicking the drop-down and changing the value of the required property to **No**.
 
-To include or exclude a query parameter from the URL, check or uncheck the checkbox of the specific query parameter.  
+To include or exclude a query parameter from the URL, select or clear the checkbox for that query parameter.  
 
 ### Adding Headers {#add-headers}
 
@@ -205,9 +205,9 @@ You can also add a parameter as the test value of a header, as seen below. For e
 
 {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-service/parameters-for-header.png" class="no-border" width="300" >}}
 
-### Adding a Request Body (for POST, PUT, and PATCH requests only) {#add-a-request-body}
+### Adding a Request Body (for POST, PUT, and PATCH Requests Only) {#add-a-request-body}
 
-`POST`, `PUT`, and `PATCH` requests support sending text as as a request body. Multiple formats are supported. 
+`POST`, `PUT`, and `PATCH` requests support sending text as a request body. Multiple formats are supported. 
 
 #### Request Body That Sends Static Text
 
@@ -217,17 +217,17 @@ If the request body content is static, paste the text into the **Body** tab. Thi
 
 #### Adding a Request Body Using Parameters
 
-When the text in the Body tab contains a parameter name surrounded by curly braces, it is interpreted as a parameter. These parameters can be used to change the body content dynamically. 
+When the text in the **Body** tab contains a parameter name surrounded by curly braces, it is interpreted as a parameter. You can use these parameters to change the body content dynamically. 
 
 {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-service/body-structure-example.png" class="no-border"  width="500" >}}
 
 For example, if your body content is `product_curr={currency}&product_price={price}`, the parameters `currency` and `price` can be used to change the body content.
 
-#### Request Body Where Content Comes From Multiple Entities
+#### Request Body Where Content Comes from Multiple Entities
 
-When you have a body in JSON format, you can create entities in the domain model that will provide the body content. This allows you to easily send a body with dynamic data.
+When you have a body in JSON format, you can create entities in the domain model that provide the body content. This allows you to send a body with dynamic data.
 
-Create body entities from a JSON snippet to your request by doing the following:
+To create body entities from a JSON snippet for your request, do the following:
 
 1. Click the **Body** tab and add your JSON string.
 
@@ -249,7 +249,7 @@ You can check the response of your request in the **Response data** tab.
 
 #### Response is in JSON Format {#create-entity}
 
-If the response is in JSON format and you want to use the response to create an entity, open the **Response structure** tab, which displays a preview of the response data:
+If the response is in JSON format and you want to use it to create an entity, open the **Response structure** tab, which displays a preview of the response data:
 
 {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-service/response-structure-tab.png" class="no-border"  width="500" >}}
 
@@ -260,29 +260,29 @@ The entity name is prefilled, but you can change it to a custom name. To create 
 
 You can also add a parameter in the request body by generating a data structure (entities) as input. If only a small part of the request is dynamic, you can use parameters directly in the JSON snippet.
 
-You can choose to flatten and simplify the structure of your response. Enable this feature by selecting **Flatten and simplify structure**. For more information, see the [Simplifying and Flattening Response Data](#simplify-and-flatten) section below.
+You can flatten and simplify the structure of your response by selecting **Flatten and simplify structure**. For more information, see [Simplifying and Flattening Response Data](#simplify-and-flatten).
 
 #### Response is Not in JSON Format {#processing-non-json}
 
 When the response is not in JSON format, it cannot be converted automatically into entities. Instead, you can extract the data in a microflow.
 
-When the [Send REST request](/refguide/send-rest-request/) action is executed in a microflow, it places the result into the variable `latestHttpResponse`. In `latestHttpResponse`, you can find the `StatusCode` and `Content` of the request that was made. From here, you can use microflow logic to extract the information. For example, if the response has XML formatting, you can use [Import Mapping](/refguide/import-mappings/) to read the data.
+When the [Send REST request](/refguide/send-rest-request/) action is executed in a microflow, it places the result in the variable `latestHttpResponse`. In `latestHttpResponse`, you can find the `StatusCode` and `Content` of the request. You can then use microflow logic to extract the information. For example, if the response has XML formatting, you can use [Import Mapping](/refguide/import-mappings/) to read the data.
 
 ### Simplifying and Flattening Response Data {#simplify-and-flatten}
 
-When you receive JSON data, the structure of the response is simplified and flattened where possible. This can be seen in the **Response structure** tab.   
+When you receive JSON data, the structure of the response is simplified and flattened where possible. You can see this in the **Response structure** tab.   
 
-For example, the URL `https://vpic.nhtsa.dot.gov/api/vehicles/getallmakes?format=json` returns vehicle information. It returns a JSON object that contains the property `Results` with a list of objects. Without simplification, when you click **Create entity**, you will get 3 entities. With simplification, only 2 entities are created that still contain all vehicle information.
+For example, the URL `https://vpic.nhtsa.dot.gov/api/vehicles/getallmakes?format=json` returns vehicle information. It returns a JSON object that contains the property `Results` with a list of objects. Without simplification, when you click **Create entity**, you get three entities. With simplification, only two entities are created that still contain all vehicle information.
 
-By default, simplification and flattening is enabled. To change this, uncheck the box **Flatten and simplify structure** on the **Response structure** tab before clicking the **Create entity** button.
+By default, simplification and flattening is enabled. To change this, clear **Flatten and simplify structure** on the **Response structure** tab before clicking **Create entity**.
 
 ### Using a REST Request in a Microflow {#add-entity-to-microflow}
 
-To select a request in the microflow, complete the following steps:
+To select a request in a microflow, do the following:
 
 1. Create a new microflow and drag the [Send REST request](/refguide/send-rest-request/) activity into it.
 2. Double-click the activity and click **Select** to choose the request you want to add, then click **Select** > **OK**.
 
     {{< figure src="/attachments/refguide/modeling/integration/rest-services/consumed-rest-service/send-request-activity.png" class="no-border" width="500" >}}
 
-If you have defined parameters in the request, they will be added to the activity. Click **Edit** to change the parameter in the microflow. The parameter values in this activity are used by the runtime instead of the test value defined in the request.
+If you have defined parameters in the request, they are added to the activity. Click **Edit** to change the parameter in the microflow. The parameter values in this activity are used by the runtime instead of the test value defined in the request.

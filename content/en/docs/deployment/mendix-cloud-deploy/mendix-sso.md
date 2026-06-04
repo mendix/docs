@@ -14,6 +14,10 @@ description: "Use the Mendix SSO module to add Single Sign-on to your app using 
 The [Mendix SSO](/appstore/modules/mendix-sso/) module enables your app end-users to sign in with their Mendix account when your app is deployed to Mendix Cloud.
 
 {{% alert color="warning" %}}
+This module is deprecated as of May 1, 2026. You may alternatively use [OIDC SSO](/appstore/modules/oidc/), [SAML](/appstore/modules/saml/), or [LDAP](/appstore/modules/ldap/).
+{{% /alert %}}
+
+{{% alert color="warning" %}}
 Because your app end-users are signing in with a Mendix account, they will all need to [sign up for a Mendix account](https://signup.mendix.com/) before they can sign in to your app.
 
 Mendix Single Sign-On (SSO) is only activated when your app is deployed to Mendix Cloud. When you run your app locally or on another cloud, you need to use local credentials.

@@ -150,6 +150,7 @@ spec:
         pinTo: # Optional, list of web services or domain names where this certificate should be used
         - "www.example.com"
         - "service.www.example.com"
+      - certificateSecret: "example-api-secret" # use the example-api-secret Kubernetes secret as a client certificate for TLS authenticaiton
     # All custom Mendix Runtime parameters go here, in JSON format; validated and applied by the mx-m2ee-sidecar container
     customConfiguration: |-
       {
@@ -170,6 +171,9 @@ spec:
   customPodLabels: # Optional: custom pod labels
     general: # Optional: general pod labels (applied to all app-related pods)
       azure.workload.identity/use: "true" # Example: enable Azure Workload Identity
+  customPodNodeSelector: # Optional: custom pod nodeSelector
+    general: # Optional: general pod nodeSelector (applied to all app-related pods)
+      eks.amazonaws.com/compute-type: auto # Example: use Amazon EKS Auto Mode
   runtimeLicenseProduct: # Optional: Specify the type of product required for the Runtime License. This is applicable when PCLM is used for licensing. By default, the value is set to Standard, if left empty
   deploymentStrategy: # Optional: Specify a deployment strategy to reduce app downtime
     switchoverThreshold: 50%
@@ -235,6 +239,10 @@ You must make the following changes:
 * **jettyOptions** and **customConfiguration** - If you have any custom Mendix Runtime parameters, you must add them to this section. Otions for the Mendix runtime must be provided in JSON format. See the examples in the CR for the correct format and the information below for more information on [setting app constants](#set-app-constants) and [configuring scheduled events](#configure-scheduled-events).
 * **environmentVariables** - Set the environment variables for the Mendix app container, and JVM arguments through the `JAVA_TOOL_OPTIONS` environment variable.
 * **clientCertificates** - Specify client certificates to be used for TLS calls to Web Services and REST services.
+   
+   * When **key** and **password** are specified, will use the client TLS certificate specified directly in the **MendixApp** CR.
+   * When **certificateSecret** is specified without a **key** and **password**, will load a client TLS certificate from the specified Kubernetes Secret. This feature requires Mendix Operator 2.27 or newer.
+
 * **runtimeMetricsConfiguration** - Specify how metrics should be collected. Any non-empty values override the [default values](/developerportal/deploy/private-cloud-cluster/#customize-runtime-metrics) from `OperatorConfiguration`. Refer to [Monitoring Environments in Mendix on Kubernetes](/developerportal/deploy/private-cloud-monitor/) for details on how to monitor your environment.
 * **runtimeLeaderSelection** - Specify how the leader replica should be selected. The following options are available:
     * `assigned` (default mode) - The `master` deployment runs one leader replica, while the `worker` deployment runs all additional replicas.
@@ -242,6 +250,8 @@ You must make the following changes:
     * `leaderless` - A mode where the nodes dynamically choose a leader. This feature is in preview mode. It requires Mendix Runtime 10.24 or newer, and Mendix Operator 2.23 or newer.
 * **customPodLabels** - Specify additional pod labels. Avoid using labels that start with the `privatecloud.mendix.com/` prefix.
     * **general** - Specify additional labels for all pods of the app.
+* **customPodNodeSelector** - Specify the pod `nodeSelector` configuration.
+    * **general** - Specify `nodeSelector` configuration for all pods of the app.
 * **deploymentStrategy** - Specify parameters for the deployment strategy. For more information, see the [reduced downtime deployment](/developerportal/deploy/private-cloud-reduced-downtime/#deployment-strategy-in-standalone) documentation.
 * **podDisruptionBudget** - Specify parameters for the pod disruption budget. For more information, see the [reduced downtime deployment](/developerportal/deploy/private-cloud-reduced-downtime/#pod-disruption-budget-in-standalone) documentation.
 * **runtimeReadOnlyRootFilesystem** - Specify if the Runtime container should mount the root filesystem in [read-only mode](/developerportal/deploy/private-cloud-cluster/#readonlyrootfs).
@@ -295,6 +305,55 @@ spec:
     myScheduledEvents:
       - MyFirstModule.EventOne
       - MySecondModule.EventTwo
+```
+
+The **MyScheduledEvents** value should be removed from **customConfiguration** if **ScheduledEventExecution** is set to `ALL` or `NONE`.
+
+#### Loading Client Certificates from a Kubernetes Secret {#client-cert-from-k8s-secret}
+
+Instead of providing a client certificate directly in the MendixApp CR, Mendix Operator 2.27.0 (and newer versions) can load the client certificate from an existing Kubernetes secret.
+
+1. Create a Kubernetes secret with the following contents:
+
+    ```yaml
+    kind: Secret
+    apiVersion: v1
+    metadata:
+      # Specify the secret name
+      name: example-api-secret
+      annotations:
+        # Specify that this secret is safe to use as a Mendix app environment client cert
+        privatecloud.mendix.com/environment-client-cert: 'true'
+    stringData:
+      # base64-encoded PKCS12 certificate
+      key: Q0VSVElGSUNBVEU=
+      # base64-encoded password for the certificate, cannot be empty
+      password: Q2hhbmdlLW1lNDI=
+      # Optional, list of web services or domain names where this certificate should be used
+      pinTo: "www.example.com,service.www.example.com"
+    ```
+
+2. To allow an application to use the secret, ensure that it has the `privatecloud.mendix.com/environment-client-cert: true` annotation. For security reasons, any secret referenced by a MendixApp CR but without this annotation cannot be attached to environments.
+
+{{% alert color="info" %}}
+This example provides contents of a Kubernetes secret as a `stringData`, and Kubernetes will base64-encode the contents again when viewing the secret contents.
+
+If you read the secret and see `data` instead of `stringData`, the values of the `key` and `password` fields will be base64-encoded twice.
+
+This ensures that a binary PKCS12 file can be safely stored and edited as a plaintext string.
+{{% /alert %}}
+
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: MendixApp
+metadata:
+  name: example-mendixapp
+spec:
+  runtime:
+    clientCertificates:
+      # Specify the name of the secret created above
+      - certificateSecret: "example-api-secret"
 ```
 
 The **MyScheduledEvents** value should be removed from **customConfiguration** if **ScheduledEventExecution** is set to `ALL` or `NONE`.

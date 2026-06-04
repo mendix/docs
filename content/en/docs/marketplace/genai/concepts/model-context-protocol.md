@@ -10,7 +10,7 @@ description: "This document describes the Model Context Protocol (MCP) and how i
 
 The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) is an open protocol that standardizes how Large Language Models (LLMs) can autonomously connect to apps. Many AI platforms and third-party systems have already adopted MCP for easier integration and empowerment of LLMs. Mendix provides an [MCP Server](/appstore/modules/genai/genai-for-mx/mcp-server/) module to facilitate an MCP server from a Mendix app, enabling developers to expose tools and prompts to external MCP clients as well as an [MCP Client](https://marketplace.mendix.com/link/component/244893) module. The MCP Client module enables your app to connect to MCP servers, allowing it to discover and use tools and prompts.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/mcp/mcp-client-server-architecture-mendix.png" >}}
+{{< figure src="/attachments/genai/mcp/mcp-client-server-architecture-mendix.png" alt="" >}}
 
 As described in the diagram above, a user can chat with a model in the MCP Host application (for example, in Mendix, using Conversational UI), which connects to the MCP Server (a Mendix app or an external server) via MCP to discover available tools and prompts. If the user's request can be solved with any available tool, the LLM can call a tool which is executed in the server environment and returns the result. This approach allows developers to integrate their Mendix app with existing external AI systems.
 
@@ -60,3 +60,4 @@ Furthermore, an MCP Client example teaches you how to establish a connection to 
 * The official [MCP docs](https://modelcontextprotocol.io/introduction)
 * The [MCP Java SDK GitHub Repository](https://github.com/modelcontextprotocol/java-sdk)
 * A blog post on [How to use MCP to bring Mendix Business Logic into Claude for Desktop](https://www.mendix.com/blog/how-to-use-mcp-to-bring-mendix-business-logic-into-claude-for-desktop/)
+* [Connect a Mendix AI Agent to a Snowflake-Managed MCP Server](/appstore/modules/snowflake/connect-ai-agent-to-snowflake-mcp/)

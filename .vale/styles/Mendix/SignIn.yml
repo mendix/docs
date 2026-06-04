@@ -1,0 +1,20 @@
+# Mendix custom rule: Use 'sign in' not 'log in'
+# Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/terminology.md (sign in/sign out)
+extends: substitution
+message: "Use '%s' instead of '%s' (unless referring to UI button text)"
+link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/terminology/#sign-insign-out
+level: warning
+ignorecase: true
+scope:
+  - paragraph
+  - heading
+  - list
+  - table
+  - blockquote
+action:
+  name: replace
+swap:
+  'log in': 'sign in'
+  'log out': 'sign out'
+  'login to': 'sign in to'
+  'logout': 'sign out'

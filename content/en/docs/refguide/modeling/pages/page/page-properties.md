@@ -106,6 +106,10 @@ In simple e-commerce applications, the URLs can be configured as follows:
 Mendix does not recommend configuring page URLs for pages that are displayed as a pop-up. Navigating to such a URL will result in layout issues.
 {{%/alert %}}
 
+{{% alert color="info" %}}
+Page and microflow URL patterns must be unambiguous. If two patterns match the same URL, the Mendix Runtime cannot determine which page or microflow to open. For best practices on structuring URLs and resolving conflicts, see the [Page and Microflow URLs](/refguide/general-best-practices/#page-and-microflow-urls) section in *General Development Best Practices*.
+{{% /alert %}}
+
 ### Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}

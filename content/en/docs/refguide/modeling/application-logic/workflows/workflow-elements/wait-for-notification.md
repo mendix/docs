@@ -37,6 +37,11 @@ Boundary events can be attached to this element and are triggered by certain eve
 
 **Name** is the internal name of the wait for notification activity. When referring to the wait for notification in the app, you will use this name. It must be unique within the workflow, but you can have two wait for notification activities with the same name in different workflows.
 
+## Sending Notification
+
+To trigger the **Wait for notification** activity and resume the workflow path, use the [Notify Workflow](/refguide/notify-workflow/) microflow activity.
+
 ## Read More
 
 * [Workflows](/refguide/workflows/)
+* [Notify Workflow](/refguide/notify-workflow/)

@@ -22,12 +22,14 @@ The available configuration options are as follows:
 ### App bundler {#app-bundler}
 
 {{% alert type="info" %}}
-This setting was introduced in [Mendix 11.9.0](/releasenotes/studio-pro/11.9/). It is only available for applications using React client.
+This setting is only for applications using [Mendix React Client](/refguide/mendix-client/react/).
+
+This setting was introduced in [Mendix 11.9.0](/releasenotes/studio-pro/11.9/). It is also available in Mendix 11.6 MTS, patch release 11.6.7 and above.
 {{% /alert %}} 
 
 The available options are listed below:
 
-* **Rspack (beta)**: Use Rspack to bundle the React client app as a faster, more memory-efficient bundler
+* **Rspack**: Use Rspack to bundle the React client app as a faster, more memory-efficient bundler
 * **Rollup**: Use Rollup to bundle the React client app (default)
 
 For more information about Rspack, see the [official documentation](https://www.rspack.dev/).
@@ -40,7 +42,7 @@ This setting was introduced in Mendix 11.6.3.
 
 If this option is enabled, Web (both React and Dojo) and Native Mobile clients will be able to handle both `empty` and empty string `''` values for `String` attributes. <br>
 
-If this options is disabled, `String` attribute values on the client-side will always contain only the `''` value to represent empty state. `empty` values will be automatically converted to `''` when transfered to the client-side. 
+If this options is disabled, `String` attribute values on the client-side will always contain only the `''` value to represent empty state. `empty` values will be automatically converted to `''` when transferred to the client-side. 
 
 For a detailed explanation, see the *Empty Strings Handling* section of [Upgrading from Mendix Studio Pro 10 to 11](/refguide/upgrading-from-10-to-11/#empty-strings-handling).
 
@@ -89,9 +91,20 @@ Applications deployed to the cloud will use this setting to select which Java ve
 You can select a microflow that is automatically run immediately after the application has been started up.
 
 {{% alert color="warning" %}}
-There is a timeout of 11 minutes on the after startup microflow. If your after startup microflow takes longer than 11 minutes, your whole app will fail to start.
-
 After startup is designed to initialize the app and therefore runs before the app is able to respond to incoming service requests (for example, published REST services).
+
+There is a timeout set on the after startup microflow. If your after startup microflow exceeds this, your whole app will fail to start. This applies to all instances of a multi-instance app—if one instance times out then the whole app will not start.
+
+The duration of the timeout will depend on the environment you are deploying to. The table below lists the timeouts for common deployment options.
+
+| Deployment Target | Timeout | Comment |
+| --- | ---: | --- |
+| Mendix Cloud | 15 minutes | This can be changed¹—discuss with [support](https://support.mendix.com/) |
+| Cloud Foundry | 11 minutes | Also for older Mendix versions running on Mendix Cloud |
+| Mendix on Kubernetes | Configurable | See [Customize Liveness Probe](/developerportal/deploy/private-cloud-cluster/#customize-liveness) for more information
+| SAP BTP | 60 seconds | This is [configurable](/developerportal/deploy/sap-cloud-platform/#DeployPackage) |
+
+¹ If your after startup microflow is timing out, reassess what it is doing. Extending the timeout is not usually the best solution.
 {{% /alert %}}
 
 ### Before Shutdown

@@ -1,0 +1,22 @@
+# Mendix custom rule: Compound word formatting
+# Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/terminology.md
+# See specific terms: checkbox, dataset, endpoint, home page
+extends: substitution
+message: "Use '%s' instead of '%s'"
+level: error
+ignorecase: true
+scope:
+  - paragraph
+  - heading
+  - list
+  - table
+  - blockquote
+action:
+  name: replace
+swap:
+  'data-set': 'dataset'
+  'data set': 'dataset'
+  'end point': 'endpoint'
+  'check box': 'checkbox'
+  'home-page': 'home page'
+  'end user': 'end-user'

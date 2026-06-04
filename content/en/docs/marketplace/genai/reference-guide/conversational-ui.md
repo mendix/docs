@@ -56,7 +56,7 @@ To use the Conversational UI module, your Mendix Studio Pro version must be 10.2
 
 You must also ensure you have the other prerequisite modules that Conversational UI requires. These modules are included by default in the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934), the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926), the [Support Assistant Starter App](https://marketplace.mendix.com/link/component/231035), and the [RFP Assistant Starter App](https://marketplace.mendix.com/link/component/235917). If not, you need to install them manually.
 
-* [GenAI Commons](https://marketplace.mendix.com/link/239448)
+* [GenAI Commons](https://marketplace.mendix.com/link/component/239448)
 * [Agent Commons](https://marketplace.mendix.com/link/component/240371)
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187)
 * [Data Widgets](https://marketplace.mendix.com/link/component/116540) 
@@ -83,7 +83,7 @@ To use Conversational UI in your app, you must perform the following tasks in St
 
 The main entities are shown for reference in the diagram below. For technical documentation, follow the steps in the [Technical Reference](#technical-reference) section.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/conversational-ui/domain-model.png" >}}
+{{< figure src="/attachments/genai/conversational-ui/domain-model.png" alt="" >}}
 
 ### Configuring the Roles {#module-roles}
 
@@ -232,7 +232,7 @@ If you are not using the ConversationalUI module for [chat with history executio
 3. Add the content of the tool messages to the request. [Add a message](/appstore/modules/genai/genai-for-mx/commons/#chat-add-message-to-request) with role `assistant` that contains the tool call information and messages with role `tool` for the tool results. You can use the `Request_AddMessage_ToolMessages` microflow to pass the same message from the first step.
 4. Recall the chat completions action. Be aware that the response might contain new tool calls and not the final message yet, so you need to follow the above steps again. A recursive loop might be helpful, for example, as shown in the `Request_CallWithoutHistory_ToolUserConfirmation_Example` microflow.
 
-For a task-based (without history) use case, you can review the [GenAI Showcase App's](https://marketplace.mendix.com/link/component/220475) function calling example, especially the microflows `Task_ProcessWithFunctionCalling` and `Task_CallWithoutHistory`. Alternatively, refer to the [How to create your first agent](/appstore/modules/genai/how-to/howto-single-agent/) documentation for a similar example and a step by step guide.
+For a task-based (without history) use case, you can review the [GenAI Showcase App's](https://marketplace.mendix.com/link/component/220475) function calling example, especially the microflows `Task_ProcessWithFunctionCalling` and `Task_CallWithoutHistory`. Alternatively, refer to the [Creating Your First Agent](/appstore/modules/genai/how-to/creating-agents/) documentation for a similar example and a step by step guide.
 
 ### Customizing Styling {#customize-styling}
 
@@ -288,6 +288,12 @@ You may need to use the following classes when building a more complex custom pa
 | `chat-dataview--display-contents` | To be added to any data view around chat components and its direct child `div` containers to prevent them from breaking the flex-flow on the page | 
 | `chat-page--fullheight` | To be added to the container of a full-screen chat to ensure it fills available space and maintains proper flex layout with wrapping and padding | 
 | `chat-page--fullheight-centered` | To be added to a full-screen chat container to center it on the page with a maximum width, while preserving the full-height flex layout and wrapping | 
+
+#### Markdown Rendering
+
+Many modern LLMs generate their responses in Markdown format to make it more appealing to users. By default, the text in the chat interface is rendered using the [MarkdownViewer](https://marketplace.mendix.com/link/component/230248) widget. You can disable it by setting the constant `EnableMarkdownViewer` to *False*, which will show the response in plain text.
+
+Sometimes it is helpful to manipulate the Markdown styling. For example, if the available space is limited, you can adjust certain settings using the `widget-markdown` class and apply your custom styling, for example, removing space from headers or lists.
 
 #### Using a Custom Layout
 
@@ -351,7 +357,7 @@ The **Documentation** pane displays the documentation for the currently selected
 1. In the [View menu](/refguide/view-menu/) of Studio Pro, select **Documentation**.
 2. Click the element for which you want to view the documentation.
 
-    {{< figure src="/attachments/appstore/platform-supported-content/modules/technical-reference/doc-pane.png" >}}
+    {{< figure src="/attachments/appstore/platform-supported-content/modules/technical-reference/doc-pane.png" alt="" >}}
 
 ## Troubleshooting
 

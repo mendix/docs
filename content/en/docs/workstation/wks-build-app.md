@@ -65,67 +65,114 @@ To change a user's role or remove them from the workspace, click the three-dot i
 
 ## Getting Started with Custom Logic for Device Interaction
 
-Now that you are ready to start using Mendix Workstation, you can implement your own custom logic for interacting with devices. The following nanoflows and Java actions are essential for establishing connections, sending or receiving messages, and managing device interactions:
-
-* **GetStation** - Retrieves the computer information connected to the Client.
-* **SendMessage** - Sends data or commands to the connected device. For more information about the supported message syntax, see [Message Syntax for File, Smart Card, and Bluetooth Devices](/mendix-workstation/device-syntax/).
-* **SubscribeToMessages** - Subscribes to device messages and triggers a nanoflow when messages are received.
-* **SubscribeToErrors** - Subscribes to device connection errors and triggers a nanoflow when errors occur.
-* **Unsubscribe** - End the subscription to device messages or errors.
-* **UnsubscribeByContext** - End all subscriptions related to a context object.
-* **UnsubscribeByDevice** - End all subscriptions related to a specific device.
-* **DisconnectDevice** - Unsubscribe and completely disconnect from a specific device.
-
-These nanoflows and actions serve as the core building blocks for integrating devices into your Mendix applications and tailoring the functionality to your specific requirements.
+Now that you are ready to start using Mendix Workstation, you can implement your own custom logic for interacting with devices. The following nanoflows and actions serve as the core building blocks for integrating devices into your Mendix applications and tailoring the functionality to your specific requirements.
 
 ### Understanding the Domain Model
 
 The domain model contains the following entities:
 
-* **Station** - Includes the station name, computer name, the workspace name and the client version (non-persistent entities).
-* **Device** - A list of devices associated with the station; includes device names and properties required to achieve a connection (non-persistent entities).
+* **Station** - A non-persistent entity representing the Workstation Client configuration.
+* **Device** - A non-persistent entity representing a connectable peripheral device. Includes the name, class and state (Available, Connected, or Error). Specialize this to maintain your device specific state.
 * **AppKeyPair** - A persistent entity to store the app's key pair. The public key needs to be entered in the corresponding app in the Workstation Management. 
 
-### Using the Nanoflows and Actions
+### Using the Nanoflows and Actions {#javascript-actions}
 
 The following section provides more information about using the nanoflows and Java actions in your Mendix application.
 
+#### SendDeviceMessage
+
+Call `SendDeviceMessage` to send a message to a device. For more information about the supported message syntax, see [Message Syntax for File, Smart Card, and Bluetooth Devices](/mendix-workstation/device-syntax/). This action has the following parameters:
+
+* `device` 
+* `message`
+
+#### WaitForDeviceMessage 
+
+Call `WaitForDeviceMessage` to wait for a message from the connected device for the duration of the specified timeout period. This action has the following parameters:
+
+* `device` 
+* `timeout`
+
+#### WaitForObjectChange
+
+Call `WaitForObjectChange` to wait for changes in the attributes of the specified object for the duration of the specified timeout period. This action has the following parameters:
+
+* `objectToObserve`
+* `attributes`
+* `timeout`
+
+#### GetCreateDevice
+
+Call this nanoflow to create and configure a device, and define the actions that should happen on connection, disconnection, or messages from the device. This action has the following parameters:
+
+* `name`
+* `class` 
+* `initialize`
+* `createDevice` 
+* `entity`
+* `onConnect`
+* `onMessage` 
+* `onDisconnect`
+
+#### ConnectDevice
+
+Call this action to connect to a specific device.
+
+#### DisconnectDevice
+
+Call this action to disconnect from a specific device.
+
+#### Initialize
+
+This action sets up communication with the Workstation Client. It should be automatically called through the `initialize` parameter of `GetStation` or `GetCreateDevice`.
+
 #### GetStation
 
-Call `GetStation` to retrieve configuration of the current Client computer by using the Workstation Client. `GetStation` can be used multiple times, but it queries the Workstation Client only the first time. The following calls return the current object loaded in the session. If connection with Workstation Client does not work, `GetStation` returns an empty object.
+Call `GetStation` to retrieve the current Workstation Client configuration and devices. This action creates and returns a station object with a linked device object per peripheral.
 
-#### SendMessage
+To interact with a specific device, it is better to use `GetCreateDevice` instead. `GetCreateDevice` has a more convenient API, allows specialization, and does not create station and device objects which may not be needed.
 
-Call `SendMessage` to send a message to a device. `SendMessage` includes the option to wait for the response of the device in the current nanoflow.
+#### SubscribeToObjectChanges
 
-#### SubscribeToMessages
+Call `SubscribeToObjectChanges` to trigger a nanoflow when the specified object changes.  This action has the following parameters:
 
-Call `SubscribeToMessages` to trigger a nanoflow when a message is received from a device. `SubscribeToMessages` provides an option to specify a context object that will be passed to the callback nanoflow whenever a message is received.
+* `objectToObserve`
+* `attributes`
+* `callback`
+* `applicationContext`
 
-The callback nanoflow must have the following parameters: 
+#### SubscribeToDeviceMessages
 
-* `Device` (object) 
-* `Message` (String)
-* `Context object` (same as the name used when subscribing)
+Call `SubscribeToDeviceMessages` to trigger a nanoflow when a message is received from a device. This action has the following parameters: 
 
-#### SubscribeToErrors
+* `device`
+* `callback`
+* `applicationContext`
 
-Call `SubscribeToErrors` to trigger a nanoflow on device connection error.
+#### SubscribeToDeviceErrors
 
-The callback nanoflow must have the following parameters: 
+Call `SubscribeToDeviceErrors` to trigger a nanoflow on device connection error. This action has the following parameters: 
 
-* `Device` (object) 
-* `ErrorMessage` (String)
-* `ErrorCode` (Integer)
-* `Context object` (same as the name used when subscribing)
+* `device`
+* `callback`
+* `applicationContext`
 
 #### Unsubscribe
 
 Call `Unsubscribe` to end a subscription.
 
-#### UnsubscribeByContext
+#### Private Nanoflows
 
-Call `UnsubscribeByContext` to end all subscriptions related to a context object.
+`CreateStation`, `CommitStation`, `CreateDevice`, and `CommitDevice` are private nanoflows, required be compatible with [strict mode](/refguide/strict-mode/).
+
+### Widgets {#widgets}
+
+The following widgets allow you to specify when to execute an action:
+
+* **On Load/Unload** - Execute the action when the widget is first rendered, or when it is removed (unloaded).
+* **On Change** - Execute the action when the specified attribute changes.
+* **On Equal** - Execute the action when an attribute is equal to the specified expression.
+* **On True** - Execute the action when the specified expression is true.
 
 ## Error Logs
 

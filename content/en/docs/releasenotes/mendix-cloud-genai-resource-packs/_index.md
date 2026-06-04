@@ -12,6 +12,13 @@ These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs
 
 ## 2026
 
+### May 7, 2026
+
+#### Fixes
+
+* We fixed an issue where the Company Admin was not always able to view the external members added to a resource.
+* We fixed a styling issue where the resource card content was not fully visible.
+
 ### April 9, 2026
 
 #### New Features

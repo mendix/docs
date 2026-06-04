@@ -3,12 +3,13 @@ title: "Private Connectivity"
 linktitle: "Private Connectivity"
 url: /control-center/private-connectivity/
 description: "Describes the Private Connectivity section in the Mendix Control Center."
-weight: 30
+weight: 40
 beta: true
 ---
 
 {{% alert color="warning" %}}
-This feature is in Public Beta. For more information, refer to [Release Status](/releasenotes/release-status/).
+Private Connectivity is out of Public Beta, and being prepared for General Availability (GA). The feature cannot be used until it is released as GA.     
+Check the [Feature Release Calendar](/releasenotes/feature-release-calendar/) for details on the GA release date.
 {{% /alert %}}
 
 ## Introduction

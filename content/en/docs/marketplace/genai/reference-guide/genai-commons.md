@@ -65,7 +65,7 @@ The technical purpose of the GenAI Commons module is to define a common domain m
 
 The domain model in Mendix is a data model that describes the information in your application domain in an abstract way. For more general information, see the [Data in the Domain Model](/refguide/domain-model/) documentation. To learn about where the entities from the domain model are used and relevant during implementation, see the [Microflows](#microflows) section below.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genaicommons/GenAICommons_domain_model.png" >}}
+{{< figure src="/attachments/genai/genaicommons/GenAICommons_domain_model.png" alt="" >}}
 
 #### `DeployedModel` {#deployed-model}
 
@@ -372,7 +372,7 @@ An optional citation. This entity can visualize the link between a part of the g
 
 #### `ChunkCollection` {#chunkcollection}
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genaicommons/genai-commons-domain-model-embeddings.png" alt="">}}
+{{< figure src="/attachments/genai/genaicommons/genai-commons-domain-model-embeddings.png" alt="">}}
 
 This entity represents a collection of chunks. It is a wrapper entity for [Chunk](#chunk-entity) objects or specialization(s) to pass it to operations that execute embedding calculations or knowledge base interaction. 
 
@@ -1019,6 +1019,14 @@ This microflow creates a new [MetadataCollection](#metadatacollection-entity) an
 ## Troubleshooting
 
 This section lists possible solutions to known issues.
+
+### Missing Jackson Core Dependency
+
+This applies to cases where your app fails to compile and throws the following error: `Missing dependencies: com.fasterxml.jackson.core:jackson-core:2.22.0`.
+
+This dependency is advertised in Maven repositories but does not actually exist. When you build your app, the automated dependency management attempts to download it and fails because the version is unavailable.
+
+To resolve this issue, download and install [GenAI Commons 6.2.2](https://marketplace.mendix.com/link/component/239448) from Mendix Marketplace. This module includes a fixed Jackson Core dependency configuration and will allow your app to compile successfully. Once Maven resolves the issue, dependency ranges will be used again to re-enable automated dependency management, including automatic vulnerability fixes.
 
 ### Outdated JDK Version Causing Errors while Calling a REST API {#outdated-jdk-version}
 

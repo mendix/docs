@@ -6,6 +6,7 @@ description: "Various test cases and examples for Markdown and shortcodes. Use t
 linktitle: "Shortcodes, Markdown, and HTML"
 ---
 <!-- markdownlint-disable-file -->
+<!-- vale off -->
 
 ## Introduction
 

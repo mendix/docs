@@ -21,6 +21,10 @@ Using a secret storage incorrectly may reduce the security of your app. Consult 
 
 Before you start the installation process, review the following considerations:
 
+#### FIPS Compliance
+
+Private Mendix Platform can run with FIPS-compliant encryption across the entire Platform, including Mendix Runtime, Private Mendix Platofrm itself, Mendix Operator, and Studio Pro.
+
 #### Installation Order
 
 Start the process by installing the Mendix Operator before you install the components. Some components are dependent on the Operator. Because of that, if you try to install a component without installing the Operator, the installation process fails and displays an error message.

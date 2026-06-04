@@ -13,6 +13,7 @@ A workflow is composed of elements that you can drag on a path from the **Toolbo
 * [User tasks](#user-tasks)
 * [Events](#events)
 * [System actions](#system)
+* [Sub-processes](#sub-processes)
 
 ## Workflow Parameters {#parameters}
 
@@ -55,9 +56,10 @@ The elements of this category are described in the table below:
 
 The elements of this category are described in the table below:
 
-| Graphic                                                     | Element                           | Description                                                  |
-| ----------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------ |
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/timer.png" width="50px" alt="timer activity" class="no-border" >}} | [Timer](/refguide/timer/)             | Allows you to configure a certain duration or a specific date and time in a workflow. It can be used as a standalone activity on a workflow path or as a [Boundary Event](/refguide/workflow-boundary-events/) attached to another workflow activity.|
+| Graphic                                                     | Element                           | Description                                                                                                                                                                                                                                        |
+| ----------------------------------------------------------- | --------------------------------- |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/timer.png" width="50px" alt="timer activity" class="no-border" >}} | [Timer](/refguide/timer/)             | Allows you to configure a certain duration or a specific date and time in a workflow. It can be used as a standalone event on a workflow path or as a [Boundary Event](/refguide/workflow-boundary-events/) attached to another workflow activity. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/notification.png" width="50px" alt="notification event" class="no-border" >}} | [Notification](/refguide/notification/)             | Allows you to suspend a workflow path until the workflow is notified. It can be used as a standalone event on a workflow path or as a [Boundary Event](/refguide/workflow-boundary-events/) attached to another workflow activity.                 |
 
 ## System Actions {#system}
 
@@ -69,3 +71,11 @@ The elements of this category are described in the table below:
 | ----------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------ |
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/call-microflow.png" alt="Call Microflow" class="no-border" >}} | [Call microflow](/refguide/call-microflow/) | Calls a selected microflow. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/call-workflow.png" alt="Call Workflow" class="no-border" >}} | [Call workflow](/refguide/call-workflow/) | Calls a selected workflow. |
+
+## Sub-processes {#sub-processes}
+
+The elements of this category are described in the table below:
+
+| Graphic                                                                                                                                                           | Element                                       | Description                                                 |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------| ----------------------------------------------------------- |
+| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/event-sub-process.png" alt="Event Sub-process" class="no-border" >}} | [Event sub-process](/refguide/workflow-event-sub-processes/) | Allows you to define a separate execution flow inside a workflow that is triggered by a specific event and can run independently from the main process flow. |

@@ -98,10 +98,11 @@ The Catalog supports the following methods:
 
 * **Basic authentication** – Authenticate from a username and password
 * **Active session** – For Mendix services, authenticate from the open and active browser session
-* **Mendix SSO** – For Mendix services, authenticate from single sign-on using the [Mendix SSO](/appstore/modules/mendix-sso/) module
 * **OAuth** – Authenticate with [OAuth](https://oauth.net/)
 * **OpenID Connect** – Authenticate with [OpenID Connect](https://openid.net/connect/), built on top of [OAuth 2.0](https://oauth.net/2/) and used with the [OIDC SSO](/appstore/modules/oidc/) module
 * **Other** – Specify other ways to authenticate, including custom modules
+
+You can also use **Mendix SSO** for Mendix services, but be aware that this module is deprecated as of May 1, 2026.
 
 Fill in as many details as you can to ensure that consuming developers can easily authenticate themselves to consume your service. 
 

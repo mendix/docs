@@ -116,6 +116,8 @@ Additional cluster managers have the same configuration privileges as the origin
 Before adding a cluster manager, ensure the invited user signs in to the Mendix on Azure portal prior to accepting the invitation. Otherwise, the invitation might show as accepted, but the user will not have access to any Mendix on Azure resources. 
 {{% /alert %}}
 
+For detailed information about cluster visibility and permission requirements for viewing and editing clusters, see [Cluster Visibility and Permissions](/developerportal/deploy/mendix-on-azure/cluster-visibility/).
+
 ## Configuration Assistance Available by Submitting a Support Ticket through the Mendix on Azure Portal
 
 Certain configuration changes require Mendix intervention and can only be performed by submitting a support ticket through the Mendix on Azure portal:

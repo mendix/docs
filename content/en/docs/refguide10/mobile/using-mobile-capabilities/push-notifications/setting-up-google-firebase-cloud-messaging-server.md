@@ -8,6 +8,12 @@ aliases:
     - /howto10/mobile/setting-up-google-firebase-cloud-messaging-server/
 ---
 
+{{% alert color="info" %}}
+Google will stop publishing new Firebase versions to CocoaPods in October 2026. Existing published versions will remain available indefinitely — they will not be removed. This means apps using Firebase through Mendix native today will continue to build and run without interruption. 
+
+Mendix will update the Native Template to use Swift Package Manager once React Native ships official support, which we expect around September 2026. No action is required now.
+{{% /alert %}}
+
 ## Introduction
 
 You can use Google's Firebase Cloud Messaging (FCM) service to send push notifications to both Android and iOS devices. To send push notifications using FCM from the Push Notifications Connector module, you must set up a Firebase account with FCM enabled. This section teaches you how to register for FCM and configure the service in your app.

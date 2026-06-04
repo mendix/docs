@@ -33,8 +33,6 @@ The Mendix Cloud GenAI Resource Packs provide access to the following models:
 | ----- | ---------- | --------- | ----------------------------------------------- | --------------------------- |
 | Anthropic Claude 4.6 Sonnet | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
 | Anthropic Claude 4.5 Sonnet | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
-| Anthropic Claude 4 Sonnet | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Frankfurt),<br> eu-north-1,<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Paris) |
-| Anthropic Claude 3.7 Sonnet | Text | Mendix Cloud EU (Frankfurt, Germany) | YES | Europe (Frankfurt),<br> eu-north-1,<br> Europe (Ireland),<br> Europe (Paris) |
 | Anthropic Claude 3 Sonnet | Text | Mendix Cloud Canada (Montreal) | NO | ca-central-1 |
 | Cohere Embed v4 | Embeddings | Mendix Cloud EU (Frankfurt, Germany) | YES | eu-north-1,<br> Europe (Paris),<br> eu-south-1,<br> eu-south-2,<br> Europe (Ireland),<br> Europe (Frankfurt) |
 | Cohere Embed v3 <br> English and multilingual | Embeddings | Mendix Cloud EU (Frankfurt, Germany) <br> Mendix Cloud Canada (Montreal) | NO | Europe (Frankfurt),<br> ca-central-1 |
@@ -156,5 +154,5 @@ Data sent to the Knowledge Base (vectors, chunks) is stored in a logically isola
 
 * [Enrich your Mendix app with GenAI capabilities](/appstore/modules/genai/)
 * [Build a Chatbot Using the AI Bot Starter App](/appstore/modules/genai/how-to/starter-template/)
-* [Create Your First Agent](/appstore/modules/genai/how-to/howto-single-agent/)
+* [Creating Your First Agent](/appstore/modules/genai/how-to/creating-agents/)
 * [Grounding Your Large Language Model in Data – Mendix Cloud GenAI](/appstore/modules/genai/how-to/howto-groundllm/)

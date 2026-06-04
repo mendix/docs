@@ -32,12 +32,7 @@ You would like to build an employee onboarding process. At first, an HR speciali
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Your app includes the [Workflow Commons](https://marketplace.mendix.com/link/component/117066) module. For more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Using Workflow Commons](/refguide/workflow-setting-up-app/). 
-
-* Dashboards and metrics in Workflow Commons v2.1.0 and above depend on state change microflows. Make sure to do the following:
-
-    * In the **App Settings** > **Workflows** tab, set **Workflow state change** to *OCh_Workflow_State*.
-    * In the **App Settings** > **Workflows** tab, set **User task state change** to *OCh_WorkflowUserTask_State*.
+* Your app includes the [Workflow Commons](https://marketplace.mendix.com/link/component/117066) module. For more information on how to set up Workflow Commons in an existing app, see [Adding a Workflow to an Existing App: Using Workflow Commons](/refguide/workflow-setting-up-app/).
 
 * Make sure your app has Atlas 3. As a result of installing Atlas 3, your app should contain the following modules that Workflow Commons depends on: Atlas_Core, Atlas_Web_Content, and DataWidgets.
 

@@ -7,7 +7,7 @@ description: "This document describes how user metering works."
 
 ## Introduction
 
-Mendix uses end-user metering to determine the number and type of users accessing applications in accordance with subscription agreements. Proper user classification ensures accurate reporting and optimal licensing costs for customers. <!-- *Proper user classification ensures accurate reporting, optimal licensing costs and transparency for both customers and Mendix. Customers can access Usage Report through the Control Center application on the Mendix Platform*. Link Usage Report from the Control Center doc -->
+Mendix uses end-user metering to determine the number and type of users accessing applications in accordance with subscription agreements. Proper user classification ensures accurate reporting, optimal licensing costs and transparency for both customers and Mendix. Customers can access the **Usage Report** through the [End-Users](/control-center/end-users/) page in Control Center. 
 
 {{% alert color="info" %}}
 End-user metering is currently applied to applications deployed to Mendix Cloud and Mendix Cloud Dedicated environments.
@@ -24,7 +24,8 @@ For more information, refer to the [User Types and Definitions](/developerportal
 ### Key Features
 
 * Automatic tracking – User logins are automatically tracked from the moment your application is deployed to production and becomes functional.
-* Data processing – Usage data is collected, processed, and deduplicated regularly. <!-- Monthly reporting – Usage data is collected regularly, processed monthly, and is available in the Control Center. -->
+* Data processing – Usage data is collected, processed, and deduplicated regularly. 
+* Monthly reporting – Usage data is collected regularly, processed monthly, and is available in the Control Center [End-Users](/control-center/end-users/) page.
 * User subscription classification – Users are classified by user subscription type as External users, Multi-App Internal users, or Single-App Internal users. This classification yields accurate subscription tracking and helps optimize subscription costs. 
 
 ## How User Metering Works
@@ -51,7 +52,7 @@ Users are thereafter automatically classified in the following user buckets base
 2. Single-App Internal Users
 3. Multi-App Internal Users (default)
 
-<!-- End-of-month usage reports are generated at the beginning of each month and are made available via the Control Center dashboard. The reports are generally available on the 1st of each month and reflect the previous month's usage. -->
+End-of-month usage reports are generated at the beginning of each month and are made available via the Control Center [Usage Report](/control-center/end-users/#usage-report-tab) dashboard. The reports are generally available on the 1st of each month and reflect the previous month's usage.
 
 ## How User Classification and Deduplication Work {#classification-deduplication}
 
@@ -82,8 +83,8 @@ A multi-app user who is marked as `Internal` in one application and `External` i
 
 After `External` users are classified, the classification process further classifies the single-app internal users.
 
-If the application is associated with a Single-App Internal User Subscription, the user of the application is classified as a single-app internal user. This user is then counted against the Single-App Internal User Pack for that application.
-<!-- *For more details on how to assign Single-App Internal User Pack to your apps, refer to the Assigning Single-App Internal User Packs section of the Control Center.* Link from the Control Center doc -->
+If the application is associated with a Single-App Internal User Subscription, the user of the application is classified as a single-app internal user. This user is then counted against the Single-App Internal User Pack for that application.    
+For more details on how to assign a Single-App Internal User Subscription to your apps, refer to the [Assigning Single-App Internal User Subscriptions](/control-center/end-users/#assign-subscriptions) section of the *End-Users* page.
 
 {{% alert color="info" %}}
 An internal user accessing multiple applications, one of which is covered under a Single-App Internal User Subscription, is counted as a single-app internal user for that application and is also counted separately for any other applications they use. 

@@ -164,7 +164,6 @@ To apply the manifest to configure the ingress in the Kubernetes namespace, use 
 You can confirm that you can connect to the PCLM server using the following URLs:
 
 * `http<s>://pclm.<domain>/health` should return `HTTP 200 OK`
-* `https<s>://pclm.<domain>/metrics` should return `HTTP 200 OK` together with the collected server metrics
 
 ### Using the Kubernetes Service
 

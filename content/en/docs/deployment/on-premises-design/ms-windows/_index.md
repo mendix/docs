@@ -13,7 +13,7 @@ aliases:
 
 This document describes the installation and configuration of Mendix software on a system running Microsoft (MS) Windows. It covers:
 
-* Installing the Mendix Service Console
+* Installing and upgrading the Mendix Service Console
 
 * Deploying a Mendix app
 
@@ -75,6 +75,16 @@ To download and install the Mendix Service Console, follow these steps:
     * Service – contains files for configuring the Windows Services
 
     In addition, there will be a file called `Settings.yaml` that contains your application configuration.
+
+## Upgrading the Mendix Service Console {#service-console-upgrade}
+
+To upgrade the Mendix Service Console to a new version, follow these steps:
+
+1. Download the latest version of the [Mendix Service Console](https://marketplace.mendix.com/link/component/223425) module from the Marketplace.
+2. Stop the Mendix application in the Mendix Service Console.
+3. Exit the Mendix Service Console without uninstalling it.
+4. Run the downloaded Mendix Service Console installer and perform an overwrite installation.
+5. After the installation completes, start the Mendix Service Console.
 
 ## Deploying a Mendix App
 

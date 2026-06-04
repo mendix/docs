@@ -15,33 +15,34 @@ This document answers common questions about user metering, outlining user class
 ### Is User Metering Automatically Enabled?
 
 User metering is automatically enabled for all Mendix Cloud and Mendix Cloud Dedicated applications without requiring any configuration or setup for usage data collection. All running application environments transmit usage data to the Mendix Platform at regular intervals. Data collection begins as soon as your application is deployed to a production environment. 
-<!-- ### Where Can I View My User Consumption Data?
+
+### Where Can I View My User Consumption Data?
 
 Navigate to the **Control Center** > **Entitlements** > **End-Users** > **Usage Report**.
-For more information, refer to the Usage Report Tab section of *End-Users*.  
+For more information, refer to the [Usage Report Tab](/control-center/end-users/#usage-report-tab) section of *End-Users*.  
 
 ### When Can I See My Monthly Usage Data?
 
-User subscription utilization is extracted regularly from the apps and available as a daily snapshot on the Control Center. 
-The daily snapshots are processed and deduplicated across all your apps at the end of each month and become available on the 1st of the following month as monthly usage data. Monthly reports show aggregated subscription usage over the month.
-Link from the Control Center doc -->
+User subscription utilization is extracted regularly from the apps and available as a daily snapshot in Control Center. 
+The daily snapshots are processed and deduplicated across all your apps at the end of each month and become available on the 1st of the following month as monthly usage data. Monthly reports show aggregated subscription usage over the month.    
+For details, refer to the [Usage Report Tab](/control-center/end-users/#usage-report-tab) section of *End-Users*.
 
 ### What Happens if I Exceed My Entitlement?
 
 If you exceed your subscription entitlements:
 
-* No immediate service disruption: Your applications continue to run normally.
-    <!--* Alert displayed: A warning icon appears in the end-of-month Usage Report on the Control Center. -->
+* No immediate service disruption: Your applications continue to run normally.    
+    Alert displayed: A warning icon appears in the end-of-month Usage Report in Control Center.
 * Compliance discussion: Your Customer Success Manager (CSM) will contact you to discuss:
 
     * Purchasing additional user subscriptions
     * Assessing user classification
 
-<!--Mendix recommends that you monitor your usage regularly and purchase additional capacity before reaching your limit.
+Mendix recommends that you monitor your usage regularly and purchase additional capacity before reaching your limit.
 
 ### Can I View Usage Data From Previous Months?
 
-Apps across Mendix Cloud began collecting user metering data starting in November 2025. Based on when your application was onboarded on user metering, you may have access to historical usage data. Navigate to the **Usage Report** and select the desired month to see the usage data.-->
+Apps across Mendix Cloud began collecting user metering data starting in November 2025. Based on when your application was onboarded on user metering, you may have access to historical usage data. Navigate to the **Usage Report** and select the desired month to see the usage data.
 
 ## Questions on User Classification
 
@@ -55,9 +56,10 @@ This means all users in your applications are aggregated together and classified
 Explicitly mark users as `External` in your application to ensure they are counted correctly under your External User Subscription. If you do not have an External User Subscription, these users will be classified as `Internal`, even if they are marked as `External` users. Also, a multi-app user who is marked as `Internal` in one app, but as `External` in another app, will be counted as an Internal Multi-App User.
 
 For more information, refer to [User Classification](/developerportal/deploy/implementing-user-metering/#user-classification).
-<!--### I Purchased a Single-App User Subscription for My Application. How Do I Set It Up?
 
-Assign the Single-App User Subscription to your application in the Control Center. For more information, refer to Assigning Single-App Internal User Subscription. Link from the Control Center doc -->
+### I Purchased a Single-App User Subscription for My Application. How Do I Set It Up?
+
+Assign the Single-App User Subscription to your application in Control Center. For more information, refer to the [Assigning Single-App Internal User Subscriptions](/control-center/end-users/#assign-subscriptions) section of the *End-Users* page. 
 
 ### How Do I Assign a Single-App User Subscription to Multiple Applications With Unique User Bases?
 

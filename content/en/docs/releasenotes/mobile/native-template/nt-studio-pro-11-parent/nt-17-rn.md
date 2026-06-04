@@ -5,6 +5,53 @@ weight: 8
 description: "Native Template 17"
 ---
 
+## 17.3.0
+
+**Release date: June 3, 2026**
+
+* We fixed an issue that caused apps to restart repeatedly after an OTA update.
+
+
+## 17.2.1
+
+**Release date: May 12, 2026**
+
+* We fixed the CocoaPods installation issue that was caused by `xcodeproj object version` 70.
+
+## 17.2.0
+
+**Release date: April 29, 2026**
+
+### Fixes
+
+* We fixed an issue where version logs events were not recorded in Firebase for Android.
+* We fixed an issue which occurred when building apps in Xcode 26.4 and above.
+
+## 17.1.0
+
+**Release date: April 8, 2026**
+
+### Fixes
+
+* We added a new dependency for `@shopify/flash-list` to support the migration from FlatList to FlashList.
+* We fixed iOS builds crashing when building with Xcode 26 due to Folly.
+
+## 17.0.4
+
+**Release date: January 22, 2026**
+
+### Improvements
+
+* We added the `LocationWhenInUse` permission to the iOS configuration to support `react-native-permissions`.
+
+## 17.0.3
+
+**Release date: January 15, 2026**
+
+### Improvements
+
+* We removed leftover Detox references from the Android build files. This fixes an issue where generating Android APKs would fail due to Detox dependencies not being found.
+
 ## 17.0.2 {#1702}
 
 **Release date: January 12, 2026**

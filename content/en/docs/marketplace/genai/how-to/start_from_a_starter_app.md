@@ -38,7 +38,7 @@ By the end of this document, you will:
 
 To simplify your first use case, start building a chatbot using the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926). This pre-built template streamlines the process, allowing you to quickly integrate AI capabilities into your application. You can see the result in the image below.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-starterapp/starter_genai_interface.jpg" >}}
+{{< figure src="/attachments/genai/howto-starterapp/starter_genai_interface.jpg" >}}
 
 ### Choosing the Infrastructure
 

@@ -38,7 +38,7 @@ By the end of this document, you will:
 
 To start building your smart app with a blank GenAI App template, download the [Blank GenAI App Template](https://marketplace.mendix.com/link/component/227934) from the Mendix Marketplace. This template provides a clean slate, enabling you to build your GenAI-powered application step by step. Using this document, you can build a chatbot. The image below shows the final result.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-blankapp/blank_genai_interface.jpg" >}}
+{{< figure src="/attachments/genai/howto-blankapp/blank_genai_interface.jpg" >}}
 
 ### Important Modules
 
@@ -82,7 +82,7 @@ To tailor your application's behavior, you can customize the [System Prompt](/ap
 
 ##### Changing the System Prompt {#changing-system-prompt}
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/genai-howto-blankapp/blank_genai_systemprompt.png" >}}
+{{< figure src="/attachments/genai/howto-blankapp/blank_genai_systemprompt.png" alt="" >}}
 
 1. In your `MyFirstBot` module, open the `ACT_FullScreenChat_Open` microflow.
 2. Locate the **ChatContext** action.

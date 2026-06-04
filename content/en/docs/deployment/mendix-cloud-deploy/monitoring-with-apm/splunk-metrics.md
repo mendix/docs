@@ -47,17 +47,11 @@ To send your runtime information to Splunk Cloud Platform, you need to set it up
     | `SPLUNK_ENABLE_METRICS`        | Sends application metrics to Splunk when it's set to `true`. Disabled by default. A metrics index is also required, refer to the [metrics index information](#splunk-metrics-info) below.                                                                                                                                                               | `false` |
     | `APM_ENABLE_ACCESS_LOGS`       | Sends access logs to Splunk when it's set to `true`. Disabled by default.                                                                                                                                                                                                                                                              | `false` |
 
-<div id="splunk-metrics-info">
-    {{% alert color="info" %}}
-**Splunk supports two types of indexes:**
-
-* **Event indexes**: These are the default index type and impose minimal structure, allowing them to store any kind of data, including metrics. To ingest logs, you must configure an event index as the default index in your HEC token.
-
-* **Metrics indexes**: These use a highly structured format designed for high-volume, low-latency metrics data. To ingest metrics, create an index named `mxmetrics` and add it to the list of allowed indexes in your HEC token. For more information, refer to the [Splunk documentation](https://help.splunk.com/en/splunk-cloud-platform/get-data-in/metrics/9.2.2406/introduction-to-metrics/overview-of-metrics).
-
-{{% /alert %}}
-</div>
-
+    <div id="splunk-metrics-info">
+    {{% alert color="info" %}}**Splunk supports two types of indexes:** <br/>
+    **Event indexes**: These are the default index type and impose minimal structure, allowing them to store any kind of data, including metrics. To ingest logs, you must configure an event index as the default index in your HEC token. <br/>
+    **Metrics indexes**: These use a highly structured format designed for high-volume, low-latency metrics data. To ingest metrics, create an index named `mxmetrics` and add it to the list of allowed indexes in your HEC token. For more information, refer to the [Splunk documentation](https://help.splunk.com/en/splunk-cloud-platform/get-data-in/metrics/9.2.2406/introduction-to-metrics/overview-of-metrics).{{% /alert %}}
+    </div>
 
 5. Return to the **Environments** page for your app and **Deploy** or **Transport** your app into the selected environment.
 

@@ -14,7 +14,7 @@ The [Mendix Cloud GenAI portal](https://genai.home.mendix.com/) is the part of t
 
 After clicking on a specific resource, you land on its details page, offering shortcut to consumption insights, key generation, team management, and helpful documentation. 
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/GenAIResource_Details.png" >}}
+{{< figure src="/attachments/genai/navigate_mxgenai/GenAIResource_Details.png" alt="" >}}
 
 ### Settings
 
@@ -58,7 +58,7 @@ After a resource is provisioned, you can change its plan size, either upgrade or
 
 ### Team
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/genai-resource-team.png" >}}
+{{< figure src="/attachments/genai/navigate_mxgenai/genai-resource-team.png" alt="" >}}
 
 The **Team** page allows you to manage access to the Mendix Cloud GenAI resource. By default, internal members listed in this **Overview** have access to the resource in the GenAI resource portal and can create new keys or invite new users. You can add new users via the **Add Member** button and remove them using the **Remove Member** button next to their name in the overview.
 
@@ -72,7 +72,7 @@ Pending invitations can be withdrawn at any time and will automatically expire a
 
 ### Keys
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/GenAIResource_Keys.png" >}}
+{{< figure src="/attachments/genai/navigate_mxgenai/GenAIResource_Keys.png" alt="" >}}
 
 The **Keys** tab allows you to manage configuration keys for the resources. These keys provide programmatic access to the GenAI resources. From the **Keys** tab, you can create new keys and revoke existing ones.  
 
@@ -82,7 +82,7 @@ To create a new key, click **Create Key**, add a description, and save the chang
 Make sure to store it securely, as it will only be shown once.
 {{% /alert %}}
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/GenAIResource_KeyGeneration.png" >}}
+{{< figure src="/attachments/genai/navigate_mxgenai/GenAIResource_KeyGeneration.png" alt="" >}}
 
 Once created, the key can be used in the Mendix application via the Mendix Cloud GenAI Connector. 
 
@@ -92,7 +92,7 @@ When you create a key for a knowledge base, an embeddings resource key is automa
 
 ### Content (Only for Knowledge Bases)
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/GenAIResource_Content.png" >}}
+{{< figure src="/attachments/genai/navigate_mxgenai/GenAIResource_Content.png" alt="" >}}
 
 {{% alert color="info" %}} The **Content** tab is available only for Knowledge Bases.{{% /alert %}} 
 
@@ -111,7 +111,7 @@ When you select the **Add Files Like .TXT or .PDF** option, you can upload docum
 
 Before uploading, you can choose to upload the data to a new collection, the default collection, or another existing collection within the resource. A Knowledge Base resource can comprise several collections. Each collection is specifically designed to hold numerous documents, serving as a logical grouping for related information based on its shared domain, purpose, or thematic focus. Below is a diagram showing how resources are organized into separate collections. This approach allows multiple use cases to share a common resource while the option to only add the required collections to the conversation context is preserved.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/GenAIKnowledgeBaseResource.png" >}}
+{{< figure src="/attachments/genai/navigate_mxgenai/GenAIKnowledgeBaseResource.png" alt="" >}}
 
 {{% alert color="info" %}} While collections provide a mechanism for data separation, it is not best practice to create a large number of collections within a single Knowledge Base resource. A more performant and practical approach for achieving fine-grained data separation is through the strategic use of [Metadata](#metadata). {{% /alert %}} 
 
@@ -129,7 +129,7 @@ key: `Category`, value: `Ticket`
 
 The model then generates its response using the specified metadata instead of solely the input text. 
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/GenAIKBMetadataSeparation.png" >}}
+{{< figure src="/attachments/genai/navigate_mxgenai/GenAIKBMetadataSeparation.png" alt="" >}}
 
 Using metadata, even more fine-grained filtering becomes feasible. Each ticket may have associated metadata, such as
 
@@ -149,7 +149,7 @@ You can upload data directly from Mendix to the Knowledge Base. To do so, severa
 
 The **Consumption** section provides outcomes of token consumption monitoring for each GenAI resource in a graphical way. Use this overview to see the current usage, insights on the usage per day, and to compare the current month with previous months. Note that months represent bundle months here, which is the period during which token consumption is tracked, beginning on the date of your last GenAI Resource plan entitlement reset and ending on the next reset date. This creates a recurring monthly cycle based on your plan activation date, not the calendar month.
 
-{{< figure src="/attachments/appstore/platform-supported-content/modules/genai/navigate_mxgenai/GenAIResource_TokenConsumptionMonitor.png" >}}
+{{< figure src="/attachments/genai/navigate_mxgenai/GenAIResource_TokenConsumptionMonitor.png" alt="" >}}
 
 #### What Are Tokens?
 

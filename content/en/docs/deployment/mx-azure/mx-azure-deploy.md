@@ -79,6 +79,10 @@ To deploy the solution, perform the following steps:
 
 7. Identify the entry belonging to the Managed Application you deployed in previous steps. In the **Actions** column, click the dropdown menu icon, and then select **Initialize**. 
 
+    {{% alert color="info" %}}
+    For information about how cluster visibility and editing permissions work based on user roles and Azure RBAC, see [Cluster Visibility and Permissions](/developerportal/deploy/mendix-on-azure/cluster-visibility/).
+    {{% /alert %}}
+
     The preflight check launches to verify the conditions are in place to successfully initialize a Mendix on Azure cluster. 
 
     {{< figure src="/attachments/deployment/mx-azure/preflight-check.png" class="no-border" >}}

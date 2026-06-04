@@ -8,7 +8,7 @@ weight: 10
 
 ## Introduction
 
-Based on your organization's networking and security needs, you must configure the available networking components of your Mendix web applications to be accessible to end users, either over a private network or the Internet. This article describes three possible network configurations: Kubernetes Ingress, OpenShift Routes, and Service-Only. Each configuration is tailored to meet specific use cases.
+Based on your organization's networking and security needs, you must configure the available networking components of your Mendix web applications to be accessible to end users, either over a private network or the Internet. This article describes three possible network configurations: Kubernetes Ingress, Gateway Routes, OpenShift Routes, and Service-Only. Each configuration is tailored to meet specific use cases.
 
 ## Prerequisites
 
@@ -21,6 +21,8 @@ Mendix on Kubernetes supports the following Ingress configurations:
 * [Kubernetes Ingress](/developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/controllers/) - The standard Kubernetes way of managing external traffic seamlessly integrates with a cloud provider's load balancer, offering a rich feature set to route and secure application traffic effectively.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/private-cloud-networking/k8s-ingress.png" class="no-border" >}}
+
+* [Gateway Routes](/developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/gateway-route/) - A next generation Kubernetes standard for Ingresses and load balancing. Supported by Mendix Operator v2.27.0 or later versions.
 
 * [OpenShift Routes](/developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/openshift/) - The OpenShift-native method for exposing services externally provides a more streamlined setup, though it offers less flexibility compared to Kubernetes Ingress.
 
@@ -42,17 +44,17 @@ The following table compares the functionality of the three supported options, i
 When switching between Ingress, OpenShift Routes, and Service Only, you must restart the Mendix Operator for the changes to be fully applied.
 {{% /alert %}}
 
-| Feature | Kubernetes Ingress | Openshift Routes | Service Only |
-| --- | --- | --- | --- |
-| Ease of use | Requires setup, but offers more flexibility. | Simplest option for OpenShift users, built-in. | Fine-grained control over networking and security offers maximum flexibility, but requires significant effort and expertise to configure and maintain. Note that the networking setup beyond the Mendix Operator's scope, up to the service object, is not supported by Mendix. |
-| Native cloud integration | Can integrate with cloud-native services like AWS Application Load Balancer. | No direct integration with cloud providers. | Full control over networking setup. |
-| Performance and scalability | Scales with cloud load balancers, better supports horizontal scaling. | Limited to OpenShift Router performance. | Full flexibility - scales according to your load balancer and proxy setup. |
-| Supported providers | [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/); [Traefik](https://traefik.io/traefik/); [AWS Application Load Balancer](https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html); [Ingress for External Application Load Balancer](https://cloud.google.com/kubernetes-engine/docs/concepts/ingress-xlb); [Azure Application Gateway Ingress Controller](https://learn.microsoft.com/en-us/azure/application-gateway/ingress-controller-overview) | [OpenShift Router (HAProxy-based Ingress Controller)](https://docs.openshift.com/container-platform/4.17/networking/networking_operators/ingress-operator.html) | None |
-| TLS/SSL termination | Can leverage cloud provider-managed TLS; supports Cert-Manager. | Supported with OpenShift's HAProxy router. | Fully flexible but requires manual setup; TLS can terminate at application load balancer, network load balancer, or app level |
-| Security (WAF, ACLs, Auth) | More advanced security integrations (for example AWS Web Application Firewall, authentication). | Basic access control via OpenShift OAuth. | Full control - can integrate with AWS Web Application Firewall, API Gateway, authentication proxies with manual configuration. |
-| Traffic splitting | Fully supported through ingress rules. | Supported through HAProxy-based Route annotations. | Depends on external networking setup. |
-| External DNS support | Some ingress controllers (for example, application load balancers) support native DNS updates. | Requires ExternalDNS integration. | Fully configurable - can use ExternalDNS, Amazon Route 53, or others. |
-| Custom annotations | Supports Kubernetes Ingress annotations, provider-specific features.| Supports OpenShift-specific annotations. | No restrictions - fully customizable in external networking. |
+| Feature | Kubernetes Ingress | Gateway Routes | Openshift Routes | Service Only |
+| --- | --- | --- | --- | --- |
+| Ease of use | Requires setup, but offers more flexibility. | Requires setup, offers flexibility with separation of scope by [roles and personas](https://gateway-api.sigs.k8s.io/docs/concepts/roles-and-personas/) | Simplest option for OpenShift users, built-in. | Fine-grained control over networking and security offers maximum flexibility, but requires significant effort and expertise to configure and maintain. Note that the networking setup beyond the Mendix Operator's scope, up to the service object, is not supported by Mendix. |
+| Native cloud integration | Can integrate with cloud-native services like AWS Application Load Balancer. | Can integrate with cloud-native services like AWS Application Load Balancer. | No direct integration with cloud providers. | Full control over networking setup. |
+| Performance and scalability | Scales with cloud load balancers, better supports horizontal scaling. | Scales with cloud load balancers, better supports horizontal scaling. | Limited to OpenShift Router performance. | Full flexibility - scales according to your load balancer and proxy setup. |
+| Supported providers | [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/); [Traefik](https://traefik.io/traefik/); [AWS Application Load Balancer](https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html); [Ingress for External Application Load Balancer](https://cloud.google.com/kubernetes-engine/docs/concepts/ingress-xlb); [Azure Application Gateway Ingress Controller](https://learn.microsoft.com/en-us/azure/application-gateway/ingress-controller-overview) | [Gateway API v1.4 compliant implementations](https://gateway-api.sigs.k8s.io/docs/implementations/versions/v1.4/) | [OpenShift Router (HAProxy-based Ingress Controller)](https://docs.openshift.com/container-platform/4.17/networking/networking_operators/ingress-operator.html) | None |
+| TLS/SSL termination | Can leverage cloud provider-managed TLS; supports Cert-Manager. | Configured in the Gateway [listener](https://gateway-api.sigs.k8s.io/guides/user-guides/tls/#listeners-and-tls) by the cluster operator | Supported with OpenShift's HAProxy router. | Fully flexible but requires manual setup; TLS can terminate at application load balancer, network load balancer, or app level |
+| Security (WAF, ACLs, Auth) | More advanced security integrations (for example AWS Web Application Firewall, authentication). | Provided by the Gateway implementation | Basic access control via OpenShift OAuth. | Full control - can integrate with AWS Web Application Firewall, API Gateway, authentication proxies with manual configuration. |
+| Traffic splitting | Fully supported through ingress rules. | Fully supported. | Supported through HAProxy-based Route annotations. | Depends on external networking setup. |
+| External DNS support | Some ingress controllers (for example, application load balancers) support native DNS updates. | Fully configurable - can use ExternalDNS, Amazon Route 53, or others. | Requires ExternalDNS integration. | Fully configurable - can use ExternalDNS, Amazon Route 53, or others. |
+| Custom annotations | Supports Kubernetes Ingress annotations, provider-specific features. | Gateway implementations typically use vendor-specific CRDs, annotations are supported as well. | Supports OpenShift-specific annotations. | No restrictions - fully customizable in external networking. |
 
 ## Recommended Configuration
 
@@ -75,6 +77,9 @@ While OpenShift Routes are a viable option, we recommend NGINX Ingress Controlle
 OpenShift Routes remain a suitable choice if meet your current needs and you do not require advanced features.
 {{% /alert %}}
 
+If your cluster has a configured and working Gateway API implementation, using it might be a preferrable option.
+The Gateway API standardized typical use cases, and the Mendix Operator only uses HTTPRoute features defined in the [v1.4 standard](https://gateway-api.sigs.k8s.io/reference/api-spec/1.4/spec/), without relying on any vendor-specific feature.
+
 ## Known Issues
 
 * AWS Application Load Balancers do not work correctly with HTTP2 WebSockets.
@@ -83,3 +88,4 @@ OpenShift Routes remain a suitable choice if meet your current needs and you do 
 
 * Some application load balancer firewall rules can block file uploads or other Mendix app features.
 * Linkerd does not work correctly with AWS Application Load Balancer and Azure Gateway Ingress Controller.
+* Some Gateway API implementations do not fully implement the base v1.4 spec, or are experimental (unsupported).

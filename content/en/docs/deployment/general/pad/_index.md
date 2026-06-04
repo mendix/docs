@@ -33,7 +33,7 @@ To license a Mendix app on the Portable App Distribution, add it to your configu
 
 ## Prerequisites
 
-The Portable App Distribution functionality is available for Mendix Studio Pro version 11.9, 11.6.5 MTS, or above. The functionality will be enabled for more Studio Pro versions in future releases.
+The Portable App Distribution functionality is available in Mendix Studio Pro versions 10.24.19 LTS, 11.9, 11.6.5 MTS, and above. The functionality will be enabled for more Studio Pro versions in future releases.
 
 You must also ensure that you have the supported version of [Java Runtime Environment](/refguide/system-requirements/#java).
 
@@ -55,9 +55,8 @@ To run your app locally, perform the following steps:
     * For Windows, run the command `set M2EE_ADMIN_PASS=<your password>`
     * For Linux, run the command `export M2EE_ADMIN_PASS=<your password>`
 
-{{% alert color="info" %}}
-The Mendix admin port can be used to fetch metrics and other runtime data from an app. It requires a password for security reasons.
-{{% /alert %}}
+    {{% alert color="info" %}}The Mendix admin port can be used to fetch metrics and other runtime data from an app. It requires a password for security reasons.
+    {{% /alert %}}
 
 3. Run the app by using one of the following commands:
 
@@ -68,7 +67,6 @@ The Mendix admin port can be used to fetch metrics and other runtime data from a
 {{% alert color="info" %}}
 On Linux, if the ZIP was extracted on Windows, the +x flag is not preserved. Windows does not have the executability bit. You need to run the command `chmod +x ./bin/start` first.
 {{% /alert %}}
-
 
 ### Deploying to a Self-Hosted Environment
 

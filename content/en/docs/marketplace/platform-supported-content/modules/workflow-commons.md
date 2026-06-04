@@ -33,6 +33,7 @@ This module allows Mendix developers with little or no experience in building wo
 
 ### Dependencies
 
+* [Administration](https://marketplace.mendix.com/link/component/23513)
 * [Data Widgets](https://marketplace.mendix.com/link/component/116540)
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187)
 * [Atlas Web Content](https://marketplace.mendix.com/link/component/117183)
@@ -127,6 +128,8 @@ You can find the following microflows in Workflow Commons:
         2. Views personal performance in the **Task Dashboard**.
         3. Views workflow progress in the **My Initiated Workflows** overview.
 3. Make sure the correct user entity is set in the **App Settings**: open Studio Pro **App Settings** > **Workflows** tab and set **User entity** to *Administration.Account*. When using demo users, you should ensure that the entity of demo users is also set correctly: open **App Security** > **Demo users** tab and set the **Entity** to *Administration.Account* for each of the relevant users.
+4. In order to show the assigned users for user tasks, users need read access to the full name of other users. Ensure that either the **Administration.User** or **Administration.ReadOthersFullName** module roles are assigned to all relevant app roles. Otherwise, users may experience incomplete functionality.
+5. For Workflow Commons version 3.10.0 and above, we introduced the `DueDateExpirationInDays` constant to configure the period in days for which the workflows or user tasks are to be considered almost due. This option has visual indicators on the **Task Inbox**, **Task Dashboard**, **Default Workflow Admin** and **Workflow Definition View** pages. The default value is set to 2 days. You should set the value based on your business needs.
 
    {{% alert color="info" %}}
    For Workflow Commons versions from 2.1.0 to 3.12.1, you also need to configure the state change microflows in the **App Settings**:
@@ -136,7 +139,6 @@ You can find the following microflows in Workflow Commons:
 
   For Workflow Commons version 4.0.0 and above, you no longer need to configure the state change microflows.
    {{% /alert %}}
-4. For Workflow Commons version 3.10.0 and above, we introduced the `DueDateExpirationInDays` constant to configure the period in days for which the workflows or user tasks are to be considered almost due with visual indicators in pages **Task Inbox**, **Task Dashboard**, **Default Workflow Admin** and **Workflow Definition View**. The default value is set to 2 days. You should set the value based on your business needs.
 
 ### Upgrading from Mendix 10 to Mendix 11 {#upgrade-from-10-to-11}
 

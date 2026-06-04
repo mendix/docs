@@ -12,6 +12,24 @@ To see the current status of the Mendix Pipelines, see [Mendix Status](https://s
 
 ## 2026
 
+### May 28, 2026
+
+#### New Features
+
+* We have added a **Variable Selector** to the POST and GET request steps, allowing you to discover and insert available variables while configuring request steps. For more information, refer to the [Variable Selector](/developerportal/deploy/configuring-post-get-request-steps/#variable-selector)  section of *Configuring POST and GET Request Steps*.
+
+### May 14, 2026
+
+#### New Features
+
+* We have added [GET](/developerportal/deploy/mendix-pipelines/#get-request) and [POST](/developerportal/deploy/mendix-pipelines/#post-request) request steps to Mendix Pipelines. These new steps allow Mendix Pipelines to retrieve and send structured data to external APIs. For information about how to configure these steps, refer to [Configuring POST and GET Request Steps](/developerportal/deploy/configuring-post-get-request-steps/).
+
+### April 30, 2026
+
+#### New Features
+
+* We have added the [Unit Testing](/developerportal/deploy/mendix-pipelines/#unit-testing) pipeline step for [Mendix on Kubernetes](/developerportal/deploy/private-cloud/), including support for the **App Readiness Timeout (seconds)** parameter.
+
 ### February 26, 2026
 
 #### New Features

@@ -126,18 +126,6 @@ For more information on ports and modifying Studio Pro's default ports, see [Con
 
 For information on how to ensure the smooth operation of Mendix AI Assistance (Maia), see the [Network Configuration Requirements](/refguide/mendix-ai-assistance/#maia-network-requirement) section in *Mendix AI Assistance (Maia)*.
 
-### File Comparison
-
-{{% alert color="info" %}}
-Comparing files on disk with the original is currently not supported on macOS.
-{{% /alert %}}
-
-By default, Studio Pro points to an executable shipped with TortoiseGit for file comparison. To customize this, navigate to **Preferences** > **Version control** > **General** > **File comparison** > **Executable** and choose your preferred tool. 
-
-The default path for the binary when installing Studio Pro on a new device is `C:\Program Files\TortoiseGit\bin\TortoiseGitMerge.exe`.
-
-You can download the latest version of TortoiseGitMerge from the [TortoiseGit](https://tortoisegit.org/download/) website. 
-
 ### File Locations
 
 For active development and running your application locally, your app folder should be on a local drive (such as C:) or a network folder that has been mapped to a [Windows drive letter](https://support.microsoft.com/en-us/windows/map-a-network-drive-in-windows-10-29ce55d1-34e3-a7e2-4801-131475f9557d).
@@ -254,7 +242,7 @@ Current support:
 
 * [MariaDB](/refguide/mysql/): 10.6, 10.11, 11.4, 11.8
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2022, 2025
-* [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
+* [Azure SQL](https://learn.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-ver17): v12 compatibility mode 160 or higher
 * [MySQL](/refguide/mysql/): 8.4
 * [Oracle Database](/refguide/oracle/): 19, 21c, 23ai (including 26ai)
 * PostgreSQL: 13, 14, 15, 16, 17, 18

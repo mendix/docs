@@ -22,6 +22,7 @@ Do NOT:
 * Change passive voice to active voice
 * Simplify complex sentences
 * Reorganize content
+* Remove Markdown comments
 
 Priority order for determining scope:
 1. If the user has selected text in a file (check for `ide_selection` tags), only proofread the selected text in that file. Don't proofread the entire document.

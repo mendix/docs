@@ -85,6 +85,27 @@ The cleanup tool will reduce the size of the repository to a minimum, by only re
 Uncommitted work, or work committed to branches that have not been merged to the main branch, will be permanently removed from the repository.
 {{% /alert %}}
 
+#### Workaround to Retain Branch Contents
+
+During a cleanup, all branches apart from the main branch are removed. As it is not always possible to converge all branches by merging them into the main branch, you can manually back up branch contents and recreate them after the cleanup.
+
+{{% alert color="info" %}}
+Mendix recommends that you first test the steps described below on a dummy project to familiarize yourself with the process.
+{{% /alert %}}
+
+Follow the steps below:
+
+1. For each branch you would like to retain, do the following:
+    1. Check out the branch locally through Studio Pro.
+    2. Merge the latest state of the main branch into the branch you want to retain. This ensures there is a common base, so you can resolve any conflicts on this branch after the cleanup.
+    3. Commit and push your changes.
+    4. Create a compressed *.zip* version of the entire project folder, except for the *.git* folder. Clearly name the *.zip* folder, so you recognize which branch it represents.
+2. Execute the cleanup and push the results to the server.
+3. Recreate the branches you wanted to retain. Do the following for each branch before upgrading the main branch to a different Mendix version:
+    1. Create a new branch from the main branch in Studio Pro and clone it locally.
+    2. Overwrite the contents of the project folder, except for the *.git* folder, with the contents of the *.zip*.
+    3. From Studio Pro, commit your changes with a *Branch recreated* message and push to the server.
+
 #### Deciding on the Cleanup
 
 The cleanup is intended to shrink your repository size to mitigate performance issues. We advise to first check whether you and your team are affected by performance issues, as that largely depends on your situation.

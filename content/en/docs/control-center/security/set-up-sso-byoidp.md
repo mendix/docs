@@ -1,7 +1,7 @@
 ---
 title: "Setting Up an SSO (BYOIDP)"
 url: /control-center/security/set-up-sso-byoidp/
-weight: 40
+weight: 50
 description: "Describes how you can use your company IdP to authenticate to Mendix."
 aliases:
     - /developerportal/control-center/set-up-sso-byoidp/
@@ -45,7 +45,8 @@ BYOIDP SSO has the following features:
 * When you add a domain to your company account, it is automatically added to the active IdP configuration. 
 * External users (with domains that are not part of your company) are unaffected. They still have access based on the way they normally sign in to Mendix.
 * When BYOIDP is used, a session at Mendix is valid for one hour. After the session has expired, Mendix will request a new `ID_token` from your IdP. If the user still has a session at your IdP, the token will be issued without any user input and the platform user continues to have access to the Mendix Platform. The effect of this mechanism is that users have access to the Mendix Platform as long as the session at your IdP is valid.
-* You can also use the [Mendix SSO](/appstore/modules/mendix-sso/) module in your non-production apps to provide an SSO experience. With BYOIDP, authentication of end-users of these apps will also be delegated by BYOIDP SSO. The end-users of these apps need to [sign up for a Mendix account](https://signup.mendix.com/) before they can sign in to your app.
+
+You can also use the [Mendix SSO](/appstore/modules/mendix-sso/) module in your non-production apps to provide an SSO experience. With BYOIDP, authentication of end-users of these apps will also be delegated by BYOIDP SSO. The end-users of these apps need to [sign up for a Mendix account](https://signup.mendix.com/) before they can sign in to your app. However, this module is deprecated as of May 1, 2026. You may alternatively use [OIDC SSO](/appstore/modules/oidc/), [SAML](/appstore/modules/saml/), or [LDAP](/appstore/modules/ldap/) to delegate login to your IdP directly rather than via the platform services.
 
 #### Technical Integration
 

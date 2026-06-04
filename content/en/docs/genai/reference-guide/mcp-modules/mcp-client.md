@@ -35,7 +35,7 @@ If you start from a standard Mendix blank app or have an existing project, you m
 ## Dependencies {#dependencies}
 
 * Mendix Studio Pro version 10.24.0 or above
-* [GenAI Commons module](/agents/commons/)
+* [GenAI Commons module](/agents/genai-for-mx/commons/)
 
 ## Configuration
 

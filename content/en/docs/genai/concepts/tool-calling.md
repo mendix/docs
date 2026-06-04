@@ -37,13 +37,13 @@ Sometimes, tool calls should not be executed immediately, and should first requi
 
 ## Tool Calling with the GenAI Commons Module and the LLM Connectors {#llm-connector}
 
-All platform-supported connectors ([Mendix Cloud GenAI](/agents/mx-cloud-genai/MxGenAI-connector/), [OpenAI](/agents/openai/), and [Amazon Bedrock Connector](/appstore/modules/aws/amazon-bedrock/)) support tool calling by leveraging the [GenAI Commons module](/agents/commons/). Tool calling is supported for all chat completions operations. All entity, attribute, and activity names in this section refer to the GenAI Commons module. 
+All platform-supported connectors ([Mendix Cloud GenAI](/agents/mx-cloud-genai/MxGenAI-connector/), [OpenAI](/agents/reference-guide/external-connectors/openai/), and [Amazon Bedrock Connector](/appstore/modules/aws/amazon-bedrock/)) support tool calling by leveraging the [GenAI Commons module](/agents/genai-for-mx/commons/). Tool calling is supported for all chat completions operations. All entity, attribute, and activity names in this section refer to the GenAI Commons module. 
 
 Functions in Mendix are essentially microflows that can be registered within the request to the LLM​. The LLM connector takes care of handling the tool call response as well as executing the function microflows until the LLM returns the final assistant's response. Function microflows can have none, a single, or multiple primitive input parameters such as Boolean, Datetime, Decimal, Enumeration, Integer or String. Additionally, they may accept the [Request](/agents/genai-for-mx/commons/#request) or [Tool](/agents/genai-for-mx/commons/#tool) objects as inputs. The microflow can only return a String value.
 
 To enable tool calling, a `ToolCollection` object must be added to the request, which is associated to one or many `Function` objects. 
 
-A helper operation is available in [GenAI Commons](/agents/commons/) to construct the `ToolCollection` with a list of `Functions`:
+A helper operation is available in [GenAI Commons](/agents/genai-for-mx/commons/) to construct the `ToolCollection` with a list of `Functions`:
 
 * `Tools: Add Function to Request` can be used to initialize a new `ToolCollection` and add a new `Function` to it in order to enable tool calling.
 

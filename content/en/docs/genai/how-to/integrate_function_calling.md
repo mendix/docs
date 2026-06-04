@@ -49,9 +49,9 @@ Selecting the infrastructure for integrating GenAI into your Mendix application 
 
 * [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/): The [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) allows you to utilize Mendix Cloud GenAI Resource Packs directly within your Mendix application.
 
-* [OpenAI](/agents/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) supports both OpenAI's platform and Microsoft Foundry.
+* [OpenAI](/agents/reference-guide/external-connectors/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) supports both OpenAI's platform and Microsoft Foundry.
 
-* [Amazon Bedrock](/agents/bedrock/): The [Amazon Bedrock Connector](https://marketplace.mendix.com/link/component/215042) allows you to leverage Amazon Bedrock’s fully managed service to integrate foundation models from Amazon and leading AI providers. 
+* [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/): The [Amazon Bedrock Connector](https://marketplace.mendix.com/link/component/215042) allows you to leverage Amazon Bedrock’s fully managed service to integrate foundation models from Amazon and leading AI providers. 
 
 * Your Own Connector: Optionally, if you prefer a custom connector, you can integrate your chosen infrastructure. However, this document focuses on the Mendix Cloud GenAI, OpenAI, and Amazon Bedrock connectors, as they offer comprehensive support and ease of use to get started.
 

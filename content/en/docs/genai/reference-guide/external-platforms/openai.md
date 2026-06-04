@@ -39,7 +39,7 @@ To use this connector, you need to either sign up for an [OpenAI account](https:
 ### Dependencies {#dependencies}
 
 * Mendix Studio Pro version 10.24.0 or above
-* [GenAI Commons module](/agents/commons/)
+* [GenAI Commons module](/agents/genai-for-mx/commons/)
 * [Encryption module](/appstore/modules/encryption/)
 * [Community Commons module](/appstore/modules/community-commons-function-library/)
 
@@ -242,7 +242,7 @@ The microflow action  `Generate Embeddings (String)` supports scenarios where th
 The microflow action `Generate Embeddings (Chunk Collection)` supports the more complex scenario where a collection of string inputs is vectorized in a single API call, such as when converting a collection of texts (chunks) into embeddings to be inserted into a knowledge base. Instead of calling the API for each string, executing a single call for a list of strings can significantly reduce HTTP overhead. Use the exposed microflows of GenAI Commons [Chunks: Initialize ChunkCollection](/agents/genai-for-mx/commons/#chunkcollection-create) to create the wrapper and [Chunks: Add Chunk to ChunkCollection](/agents/genai-for-mx/commons/#chunkcollection-add-chunk), or [Chunks: Add KnowledgeBaseChunk to ChunkCollection](/agents/genai-for-mx/commons/#chunkcollection-add-knowledgebasechunk) to construct the input. The resulting embedding vectors returned after a successful API call will be stored in the `EmbeddingVector` attribute in the same `Chunk` object. \
 Purely to generate embeddings, it does not matter whether the ChunkCollection contains Chunks or its specialization KnowledgeBaseChunks. However, if the end goal is to store the generated embedding vectors in a knowledge base (e.g. using the [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/) module), then Mendix recommends adding `KnowledgeBaseChunks` to the `ChunkCollection` and using these as an input for the embeddings operations, so they can afterward directly be used to populate the knowledge base with.
 
-Note that currently, the OpenAI connector does not support knowledge base interaction (e.g. inserting or retrieving chunks). For more information on possible ways to work with knowledge bases when using the OpenAI Connector for embedding generation, read more about [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/) and [setting up a Vector Database](/agents/pgvector-setup/).
+Note that currently, the OpenAI connector does not support knowledge base interaction (e.g. inserting or retrieving chunks). For more information on possible ways to work with knowledge bases when using the OpenAI Connector for embedding generation, read more about [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/) and [setting up a Vector Database](/agents/reference-guide/external-connectors/pgvector-setup/).
 
 ### Exposed Microflow Actions for (Azure) OpenAI {#exposed-microflows}
 

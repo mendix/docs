@@ -42,7 +42,7 @@ For example, you can use an LLM to do:
     * Translate languages
     * Simulate characters for games
  
-Some LLMs, such as [Anthropic Claude](/appstore/modules/aws/amazon-bedrock/) and [GPT-4o](/agents/openai/), can also use one or more images as input, allowing you to ask questions about images for use cases such as object recognition, image to text (OCR), and validating whether an image is as intended.
+Some LLMs, such as [Anthropic Claude](/appstore/modules/aws/amazon-bedrock/) and [GPT-4o](/agents/reference-guide/external-connectors/openai/), can also use one or more images as input, allowing you to ask questions about images for use cases such as object recognition, image to text (OCR), and validating whether an image is as intended.
  
 #### Embeddings Generation
 
@@ -125,7 +125,7 @@ For example, Amazon Bedrock has the concept of [knowledge bases for Amazon Bedro
 
 If your chosen architecture does not have fully-integrated RAG capabilities, or if you want tighter control of the RAG process, you can create and use your own knowledge base.
 
-In this case you will have to index and store your knowledge yourself, and index your input data in order to retrieve the information with which you want to augment your prompt. For this you can use the [PgVector Knowledge Base module](/agents/pgvector/) in combination with an embeddings model, to maintain and use your knowledge base. 
+In this case you will have to index and store your knowledge yourself, and index your input data in order to retrieve the information with which you want to augment your prompt. For this you can use the [PgVector Knowledge Base module](/agents/reference-guide/external-connectors/pgvector/) in combination with an embeddings model, to maintain and use your knowledge base. 
 
 An example of how this can be done with OpenAI is described in [RAG Example Implementation in the GenAI Showcase App](/agents/rag/).
 

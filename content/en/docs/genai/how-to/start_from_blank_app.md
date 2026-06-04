@@ -45,9 +45,9 @@ To start building your smart app with a blank GenAI App template, download the [
 
 The [Blank GenAI App Template](https://marketplace.mendix.com/link/component/227934) has the essential GenAI modules pre-installed, which is beneficial to familiarize yourself with the GenAI functionalities Mendix can offer, as it includes:
 
-* The [GenAI Commons](/agents/commons/) module: provides pre-built operations and data structures for seamless integration with platform-supported GenAI connectors, such as the Mendix Cloud GenAI, OpenAI, or Amazon Bedrock.
+* The [GenAI Commons](/agents/genai-for-mx/commons/) module: provides pre-built operations and data structures for seamless integration with platform-supported GenAI connectors, such as the Mendix Cloud GenAI, OpenAI, or Amazon Bedrock.
 
-* The [Conversational UI](/agents/conversational-ui/) module: offers UI elements for chat interfaces and usage data monitoring.
+* The [Conversational UI](/agents/genai-for-mx/conversational-ui/) module: offers UI elements for chat interfaces and usage data monitoring.
 
 * The [Mendix Cloud GenAI Resources Packs](/agents/mx-cloud-genai/resource-packs/) connector: supports the usage of LLMs in your applications.
 
@@ -56,9 +56,9 @@ The [Blank GenAI App Template](https://marketplace.mendix.com/link/component/227
 Selecting the infrastructure for integrating GenAI into your Mendix application is the first step. Depending on your use case and preferences, you can choose from the following options:
 
 * [Mendix Cloud GenAI Resources Packs](/agents/mx-cloud-genai/resource-packs/): The [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) integrates LLMs by dragging and dropping common operations from its toolbox in Studio Pro.
-* [OpenAI](/agents/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) supports both OpenAI's platform and Microsoft Foundry.
+* [OpenAI](/agents/reference-guide/external-connectors/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) supports both OpenAI's platform and Microsoft Foundry.
 
-* [Amazon Bedrock](/agents/bedrock/): The [Amazon Bedrock Connector](https://marketplace.mendix.com/link/component/215042) allows you to leverage Amazon Bedrock’s fully managed service to integrate foundation models from Amazon and leading AI providers. 
+* [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/): The [Amazon Bedrock Connector](https://marketplace.mendix.com/link/component/215042) allows you to leverage Amazon Bedrock’s fully managed service to integrate foundation models from Amazon and leading AI providers. 
 
 * Your Own Connector: Optionally, if you prefer a custom connector, you can integrate your chosen infrastructure. However, this document focuses on the OpenAI and Bedrock connectors, as they offer comprehensive support and ease of use to get started.
 

@@ -33,7 +33,7 @@ To use this connector, you need to sign up for a Google AI Studio account and cr
 ### Dependencies {#dependencies}
 
 * Mendix Studio Pro version 10.24.13 or above
-* [GenAI Commons module](/agents/commons/)
+* [GenAI Commons module](/agents/genai-for-mx/commons/)
 * [Encryption module](/appstore/modules/encryption/)
 * [Community Commons module](/appstore/modules/community-commons-function-library/)
 * [OpenAI connector](/agents/reference-guide/external-connectors/openai/)

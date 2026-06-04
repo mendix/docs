@@ -17,7 +17,7 @@ Retrieval augmented generation (RAG) is a framework for an AI-based search using
 
 ### Terminology
 
-To understand the basics of the RAG pattern, it is important to know the common terminology. As the [showcase example](https://marketplace.mendix.com/link/component/220475) and the relevant platform-supported modules depend on [GenAI Commons](/agents/commons/), relevant entities will be linked for reference.
+To understand the basics of the RAG pattern, it is important to know the common terminology. As the [showcase example](https://marketplace.mendix.com/link/component/220475) and the relevant platform-supported modules depend on [GenAI Commons](/agents/genai-for-mx/commons/), relevant entities will be linked for reference.
 
 #### Embedding vector
 
@@ -69,7 +69,7 @@ In summary, in the first step, you need to provide the private knowledge base, s
 
 ### Prerequisites {#prerequisites}
 
-Before you start experimenting with the end-to-end process, make sure that you have access to a (remote) PostgreSQL database with the [pgvector](https://github.com/pgvector/pgvector) extension available. If you do not have one yet, [learn more](/agents/pgvector-setup/) about how a PostgreSQL vector database can be set up to explore use cases with knowledge bases.
+Before you start experimenting with the end-to-end process, make sure that you have access to a (remote) PostgreSQL database with the [pgvector](https://github.com/pgvector/pgvector) extension available. If you do not have one yet, [learn more](/agents/reference-guide/external-connectors/pgvector-setup/) about how a PostgreSQL vector database can be set up to explore use cases with knowledge bases.
 
 {{% alert color="info" %}}If you have access to an Amazon Web Services (AWS) account or Microsoft Azure account, Mendix recommends you use a setup described in the [Creating a PostgreSQL Database with Amazon RDS](/agents/reference-guide/external-connectors/pgvector-setup/#aws-database-create) or [Managing a PostgreSQL Database with Microsoft Azure](/agents/reference-guide/external-connectors/pgvector-setup/#azure-database-create) section. This is convenient, since these PostgreSQL databases in the cloud have the required pgvector extension available by default.{{% /alert %}}
 
@@ -79,7 +79,7 @@ Before you start experimenting with the end-to-end process, make sure that you h
 
 2. Go to the **Retrieval Augmented Generation** example and read **Step 1: Introduction**.
 
-3. [Set Up a PostgreSQL vector database](/agents/pgvector-setup/) and configure the connection in **Step 2: Vector Database Configuration**.
+3. [Set Up a PostgreSQL vector database](/agents/reference-guide/external-connectors/pgvector-setup/) and configure the connection in **Step 2: Vector Database Configuration**.
 
 4. Go to **Step 3: Knowledge Base** and create embeddings from a text and store. You can use our default text about ornamental flowering plants, or paste your own content.
 
@@ -92,11 +92,11 @@ Before you start experimenting with the end-to-end process, make sure that you h
 
 {{% alert color="info" %}}
 
-The GenAI Showcase App uses the Mendix [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/225063) module from the Marketplace to run queries and statements on your remote database. If you want to know more about this or if you are looking for certain technical details, see [PgVector Knowledge Base](/agents/pgvector/).
+The GenAI Showcase App uses the Mendix [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/225063) module from the Marketplace to run queries and statements on your remote database. If you want to know more about this or if you are looking for certain technical details, see [PgVector Knowledge Base](/agents/reference-guide/external-connectors/pgvector/).
 
 The GenAI Showcase App uses this module to take care of creating the required tables in the remote vector database, including the open-source extension called pgvector. If you want to know more about the extension and how the tables look like in combination with this extension, see the [pgvector source code and documentation on GitHub](https://github.com/pgvector/pgvector).
 
-If you want to know more about RAG, embeddings, or [vector databases](/agents/pgvector-setup/), make sure to review the links on the **Resources** page of the GenAI Showcase App or in the [Read More](#read-more) section.
+If you want to know more about RAG, embeddings, or [vector databases](/agents/reference-guide/external-connectors/pgvector-setup/), make sure to review the links on the **Resources** page of the GenAI Showcase App or in the [Read More](#read-more) section.
 
 {{% /alert %}}
 
@@ -106,9 +106,9 @@ This section lists some general key points that apply regardless of which archit
 
 If you would like to build your own RAG setup, feel free to learn from the GenAI Showcase App and start building your own app. Below you can find the key takeaways from the GenAI Showcase App:
 
-* For RAG, you need a storage space for high-dimensional embedding vectors outside of your normal Mendix app database. Typically, this is a remote vector database. In order to connect to it, the GenAI Showcase App uses the Mendix database connector. See [Vector Database Setup](/agents/pgvector-setup/) for more details.
+* For RAG, you need a storage space for high-dimensional embedding vectors outside of your normal Mendix app database. Typically, this is a remote vector database. In order to connect to it, the GenAI Showcase App uses the Mendix database connector. See [Vector Database Setup](/agents/reference-guide/external-connectors/pgvector-setup/) for more details.
 
-* The GenAI Showcase App relies on a PostgreSQL database with the pgvector extension included. In such a setup you can similarly rely on the [PgVector Knowledge Base module](/agents/pgvector/) to take care of creating and executing the right queries. If you choose to use a different type of vector database, the database queries and statements, which you will have to perform, should cover at least the following:
+* The GenAI Showcase App relies on a PostgreSQL database with the pgvector extension included. In such a setup you can similarly rely on the [PgVector Knowledge Base module](/agents/reference-guide/external-connectors/pgvector/) to take care of creating and executing the right queries. If you choose to use a different type of vector database, the database queries and statements, which you will have to perform, should cover at least the following:
     * Include the vector extension if applicable for the chosen database type (create extension).
     
     * Create tables to store the embedding vectors (create table).
@@ -123,7 +123,7 @@ If you would like to build your own RAG setup, feel free to learn from the GenAI
 
 * How you construct the input string affects similarity search results. In the similarity search example for **tickets** in the showcase application, the input string at the time of insertion is a concatenation of multiple attributes of each ticket record in the Mendix database. However, in the search step, the user's input—possibly just a brief description—is used to find similar tickets. While this discrepancy may lower overall similarity, the most relevant records will still appear at the top.
 
-{{% alert color="info" %}}Reusable queries in the form of SQL statements are available in the source code of the [PgVector Knowledge Base module](/agents/pgvector/) which comes automatically with GenAI Showcase App.{{% /alert %}}
+{{% alert color="info" %}}Reusable queries in the form of SQL statements are available in the source code of the [PgVector Knowledge Base module](/agents/reference-guide/external-connectors/pgvector/) which comes automatically with GenAI Showcase App.{{% /alert %}}
 
 ## Read More {#read-more}
 

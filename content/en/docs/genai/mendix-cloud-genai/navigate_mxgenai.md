@@ -1,8 +1,8 @@
 ---
-title: "Navigate through the Mendix Cloud GenAI Portal"
+title: "Navigate Through the Mendix Cloud GenAI Portal"
 url: /agents/mx-cloud-genai/Navigate-MxGenAI/
 linktitle: "Mendix Cloud GenAI Portal"
-description: "Describes how to navigate through the Mendix Cloud GenAI Portal."
+description: "Describes how to navigate through the Mendix Cloud GenAI portal."
 weight: 30
 aliases:
     - /appstore/modules/genai/mx-cloud-genai/Navigate-MxGenAI/
@@ -10,11 +10,11 @@ aliases:
 
 ## Introduction
 
-The [Mendix Cloud GenAI portal](https://genai.home.mendix.com/) is the part of the Mendix portal that provides access to [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/). After logging in, you can navigate to the overview of all resources. You can see all resources, that you are a team member of and access their details.
+The [Mendix Cloud GenAI portal](https://genai.home.mendix.com/) is the part of the Mendix portal that provides access to [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/). After logging in, you can navigate to the overview of all resources. You can see all resources that you are a team member of and access their details.
 
 ## Resource Details 
 
-After clicking on a specific resource, you land on its details page, offering shortcut to consumption insights, key generation, team management, and helpful documentation. 
+After clicking a specific resource, you land on its details page, offering a shortcut to consumption insights, key generation, team management, and helpful documentation. 
 
 {{< figure src="/attachments/genai/navigate_mxgenai/GenAIResource_Details.png" alt="" >}}
 
@@ -32,7 +32,7 @@ The **Settings** tab contains the details of a GenAI resource. It shows the foll
 * **Plan**: indicates the subscription plan used for compute resources (for example, embedding or text generation resources).
 * **Environment**: shows which environment is used, for example, test, acceptance, or production.
 
-¹ Cross-region inference (CRI) allows a model to redirect requests to another region, helping to distribute the load across multiple regions within the same area. So, EU requests always stay within EU regions. Connecting to a cross-region inference profile does not change how the request is sent; the redirection happens on the server side, determining the region to handle the request to get the fastest response. For more information, see [Increase throughput with cross-Region inference](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html). If applicable, CRI profiles are selected during provisioning of a model resource. New models are available under the CRI inferencing type by default. 
+¹ Cross-region inference (CRI) allows a model to redirect requests to another region, helping to distribute the load across multiple regions within the same area. EU requests always stay within EU regions. Connecting to a cross-region inference profile does not change how the request is sent; the redirection happens on the server side, determining the region to handle the request to get the fastest response. For more information, see [Increase throughput with cross-region inference](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html). If applicable, CRI profiles are selected during provisioning of a model resource. New models are available under the CRI inferencing type by default. 
 
 #### Additional Details for Knowledge Base Resources
 
@@ -70,7 +70,7 @@ You can invite members from outside your organization to access your GenAI resou
 
 You can track invitations in the **Pending Invites** tab. Invited users will receive an email with a link to accept or decline the invitation. If they do not yet have a Mendix account, the link redirects them to create one. Once the invitation is accepted, the resource will appear in their GenAI portal overview.
 
-Pending invitations can be withdrawn at any time and will automatically expire after two weeks. External members can create and delete keys, export consumption data, manage knowledge base content and collections, and change the model. However, they can not modify the display name or environment, or manage team membership.
+Pending invitations can be withdrawn at any time and will automatically expire after two weeks. External members can create and delete keys, export consumption data, manage knowledge base content and collections, and change the model. However, they cannot modify the display name or environment, or manage team membership.
 
 ### Keys
 
@@ -86,7 +86,7 @@ Make sure to store it securely, as it will only be shown once.
 
 {{< figure src="/attachments/genai/navigate_mxgenai/GenAIResource_KeyGeneration.png" alt="" >}}
 
-Once created, the key can be used in the Mendix application via the Mendix Cloud GenAI Connector. 
+Once created, the key can be used in the Mendix application via the Mendix Cloud GenAI connector. 
 
 #### Additional Information for Knowledge Base Resource Keys
 
@@ -143,7 +143,7 @@ Instead of relying solely on similarity-based searches of ticket descriptions, u
 
 #### Add Data from a Mendix Application
 
-You can upload data directly from Mendix to the Knowledge Base. To do so, several operations of the Mendix Cloud GenAI Connector are required. For a detailed guide on this process, see the [Add Data Chunks to Your Knowledge Base](/agents/mx-cloud-genai/mxgenai-connector/#add-data-chunks-to-your-knowledge-base) section of **Mendix Cloud GenAI Connector**.
+You can upload data directly from Mendix to the Knowledge Base. To do so, several operations of the Mendix Cloud GenAI connector are required. For a detailed guide on this process, see the [Add Data Chunks to Your Knowledge Base](/agents/mx-cloud-genai/mxgenai-connector/#add-data-chunks-to-your-knowledge-base) section of *Mendix Cloud GenAI Connector*.
 
 ### Consumption (Only for Text and Embeddings Generation Resources)
 

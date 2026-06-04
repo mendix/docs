@@ -21,7 +21,7 @@ Before starting this guide, make sure you have completed the following prerequis
 
 * Intermediate knowledge of the Mendix platform: Familiarity with Mendix Studio Pro, microflows, and modules is required.
 
-* Basic understanding of GenAI concepts: Review the [Enrich Your Mendix App with GenAI Capabilities](/agents/) page to gain foundational knowledge and become familiar with the key [concepts](/agents/get-started/).
+* Basic understanding of GenAI concepts: Review the [Enrich Your Mendix App with Agentic Capabilities](/agents/) page to gain foundational knowledge and become familiar with the key [concepts](/agents/get-started/).
 
 * Understanding Large Language Models (LLMs) and Prompt Engineering: Learn about [LLMs](/agents/get-started/#llm) and [prompt engineering](/agents/get-started/#prompt-engineering) to effectively use these within the Mendix ecosystem.
 

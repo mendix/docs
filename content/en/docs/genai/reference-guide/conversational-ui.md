@@ -68,7 +68,7 @@ Finally, you must also set up a connector that is compatible with [GenAI Commons
 
 ## Installation {#installation}
 
-Follow the instructions in [How to Use Marketplace Content](/appstore/use-content/) to import the Conversational UI module into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the Conversational UI module into your app.
 
 ## Configuration {#configuration}
 

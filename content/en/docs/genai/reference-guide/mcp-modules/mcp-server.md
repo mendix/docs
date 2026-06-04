@@ -33,7 +33,7 @@ Note that the MCP Server module is still in its early version, and the latest ve
 
 If you are starting from the [Blank GenAI app](https://marketplace.mendix.com/link/component/227934) template, the MCP Server module is already included and does not need to be downloaded manually.
 
-If you start from a standard Mendix blank app, or have an existing project, you must install the MCP Server module manually. Follow the instructions in [How to Use Marketplace Content](/appstore/use-content/) to install the [MCP Server](https://marketplace.mendix.com/link/component/240380) module from the Marketplace.
+If you start from a standard Mendix blank app, or have an existing project, you must install the MCP Server module manually. Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to install the [MCP Server](https://marketplace.mendix.com/link/component/240380) module from the Marketplace.
 
 ## Configuration
 

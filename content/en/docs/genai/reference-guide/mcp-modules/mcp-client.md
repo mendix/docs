@@ -30,7 +30,7 @@ Note that the MCP Client module is still in its early version, and newer version
 
 If you are starting from the [Blank GenAI app](https://marketplace.mendix.com/link/component/227934) template, the MCP Client module is already included and does not need to be downloaded manually.
 
-If you start from a standard Mendix blank app or have an existing project, you must install the MCP Client module manually. Follow the instructions in [How to Use Marketplace Content](/appstore/use-content/) to install the [MCP Client](https://marketplace.mendix.com/link/component/244893) module from the Marketplace.
+If you start from a standard Mendix blank app or have an existing project, you must install the MCP Client module manually. Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to install the [MCP Client](https://marketplace.mendix.com/link/component/244893) module from the Marketplace.
 
 ## Dependencies {#dependencies}
 

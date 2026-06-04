@@ -62,7 +62,7 @@ In addition, install the following modules:
 ## Installation
 
 If you are starting from a blank app or adding agent-building functionality to an existing project, you need to manually install the [Agent Commons](https://marketplace.mendix.com/link/component/240371) module from the Mendix Marketplace. 
-Before proceeding, ensure your project includes the latest versions of the required [dependencies](#dependencies). Follow the instructions in [How to Use Marketplace Content](/appstore/use-content/) to install the Agent Commons module.
+Before proceeding, ensure your project includes the latest versions of the required [dependencies](#dependencies). Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to install the Agent Commons module.
 
 ## Configuration {#configuration}
 
@@ -139,7 +139,7 @@ For more technical details, see the [Function Calling](/agents/function-calling/
 
 ##### Adding Tools from MCP Servers
 
-Besides microflow tools, tools exposed by MCP servers are also supported. To add MCP tools to an agent version, select an MCP server configuration from the [MCP client module](/agents/mcp-modules/mcp-client/). You can then choose one of two ways to add MCP tools: 
+Besides microflow tools, tools exposed by MCP servers are also supported. To add MCP tools to an agent version, select an MCP server configuration from the [MCP Client module](/agents/mcp-modules/mcp-client/). You can then choose one of two ways to add MCP tools: 
 
 * **Use all available tools**: Imports the entire server, including all tools it provides. This also means less control over individual tools, and if tools are added in the future, they get added automatically on agent execution.
 * **Select Tools**: Lets you import specific tools from the server and change specific fields for individual tools.

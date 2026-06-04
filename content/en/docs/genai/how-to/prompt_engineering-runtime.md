@@ -25,7 +25,7 @@ Before integrating Agent Commons into your app, make sure you meet the following
 
 * An existing app: use a GenAI starter app such as the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934), or add to an app that you have already built
 * Access to an LLM of your choice, using Mendix Cloud GenAI or another compatible connector
-* Basic understanding of GenAI concepts: review the [Enrich Your Mendix App with GenAI Capabilities](/agents/) page for foundational knowledge and to familiarize yourself with [GenAI Concepts](/agents/using-gen-ai/)
+* Basic understanding of GenAI concepts: review the [Enrich Your Mendix App with Agentic Capabilities](/agents/) page for foundational knowledge and to familiarize yourself with [GenAI Concepts](/agents/using-gen-ai/)
 * Basic understanding of Mendix: knowledge of simple page building, microflow modeling, and domain model creation
 
 ## Use Case

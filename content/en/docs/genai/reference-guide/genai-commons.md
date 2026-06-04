@@ -32,7 +32,7 @@ You must also download the [Community Commons](/appstore/modules/community-commo
 
 If you are starting from the [Blank GenAI app](https://marketplace.mendix.com/link/component/227934), or the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926), the GenAI Commons module is already included and does not need to be downloaded manually.
 
-If you start from a blank app, or have an existing project where you want to include a connector for which the GenAI Commons module is required, you must install GenAI Commons manually. First, install the [Community Commons](/appstore/modules/community-commons-function-library/) module, and then follow the instructions in [How to Use Marketplace Content](/appstore/use-content/) to install the [GenAI Commons](https://marketplace.mendix.com/link/component/239448) module.
+If you start from a blank app, or have an existing project where you want to include a connector for which the GenAI Commons module is required, you must install GenAI Commons manually. First, install the [Community Commons](/appstore/modules/community-commons-function-library/) module, and then follow the instructions in [Using Marketplace Content](/appstore/use-content/) to install the [GenAI Commons](https://marketplace.mendix.com/link/component/239448) module.
 
 ## Implementation {#implementation}
 

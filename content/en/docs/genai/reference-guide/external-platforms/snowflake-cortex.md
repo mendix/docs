@@ -46,7 +46,7 @@ The [Snowflake showcase app](https://marketplace.mendix.com/link/component/22584
 
 1. Import the sample app into your Mendix Studio Pro.
 
-    For more information, see [How to Use Marketplace Content](/appstore/use-content/).
+    For more information, see [Using Marketplace Content](/appstore/use-content/).
 
 2. In Studio Pro, in the [App Explorer](/refguide/app-explorer/), go to **Showcase_AI_RESTSQLAPI** > **Pages**.
 

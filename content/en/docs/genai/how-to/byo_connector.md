@@ -1,11 +1,11 @@
 ---
 title: "Build Your Own GenAI Connector"
-url: /agents/how-to/byo-connector
+url: /agents/how-to/byo-connector/
 linktitle: "Build Your Own GenAI connector"
 weight: 70
 description: "A tutorial that describes how to build your own GenAI connector"
 aliases:
-    - /appstore/modules/genai/how-to/byo-connector
+    - /appstore/modules/genai/how-to/byo-connector/
 ---
 
 ## Introduction
@@ -20,7 +20,7 @@ Building your own GenAI Commons connector offers several practical benefits that
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
-* Basic understanding of GenAI concepts: Review the [Enrich Your Mendix App with GenAI Capabilities](/agents/) page to gain foundational knowledge and become familiar with the key [concepts](/agents/get-started/).
+* Basic understanding of GenAI concepts: Review the [Enrich Your Mendix App with Agentic Capabilities](/agents/) page to gain foundational knowledge and become familiar with the key [concepts](/agents/get-started/).
 
 * Understanding Large Language Models (LLMs) and Prompt Engineering: Learn about [LLMs](/agents/get-started/#llm) and [prompt engineering](/agents/get-started/#prompt-engineering) to effectively use these within the Mendix ecosystem.
 

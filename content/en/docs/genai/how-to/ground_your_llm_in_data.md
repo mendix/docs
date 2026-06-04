@@ -29,7 +29,7 @@ Before implementing this capability into your app, make sure you meet the follow
 
 * Set up data to add to your LLM. In this example, a modified and streamlined version of the demo data is used. This data is available in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) and located in the **ExampleMicroflows** module > **Ground in data - Mendix Cloud** > **Example data set**. If you need to create the demo data yourself, a basic understanding of import mappings and JSON structures is required.
 
-* Intermediate understanding of GenAI concepts: See the [Enrich Your Mendix App with GenAI Capabilities](/agents/) page for foundational knowledge and familiarize yourself with the [concepts](/agents/using-gen-ai/).
+* Intermediate understanding of GenAI concepts: See the [Enrich Your Mendix App with Agentic Capabilities](/agents/) page for foundational knowledge and familiarize yourself with the [concepts](/agents/using-gen-ai/).
 
 * Basic understanding of [Prompt Engineering](/agents/get-started/#prompt-engineering).
 

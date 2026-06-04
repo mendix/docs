@@ -1,11 +1,12 @@
 ---
 title: "Setting up a Vector Database"
-url: /appstore/modules/genai/reference-guide/external-connectors/pgvector-setup/
+url: /agents/reference-guide/external-connectors/pgvector-setup/
 linktitle: "Vector Database Setup"
 weight: 5
 description: "Describes how to set up a vector database to store and manage vector embeddings for a knowledge base"
 aliases:
-   - /appstore/modules/genai/pgvector-setup/
+    - /appstore/modules/genai/pgvector-setup/
+    - /appstore/modules/genai/reference-guide/external-connectors/pgvector-setup/
 ---
 
 ## Introduction
@@ -136,7 +137,7 @@ Complete the following steps:
 
 ## Configuring the Database Connection Details in Your Application {#configure-database-connection}
 
-1. Add the PgVector Knowledge Base module and its dependencies to your Mendix app and set it up. For detailed instructions, see [PgVector Knowledge Base](/appstore/modules/genai/pgvector/).
+1. Add the PgVector Knowledge Base module and its dependencies to your Mendix app and set it up. For detailed instructions, see [PgVector Knowledge Base](/agents/pgvector/).
 
 2. Include the page **DatabaseConfiguration_Overview** in the navigation or use the snippet **Snippet_DatabaseConfigurations** on an existing page.
 

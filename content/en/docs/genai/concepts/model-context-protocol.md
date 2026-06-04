@@ -1,14 +1,16 @@
 ---
 title: "Model Context Protocol (MCP)"
-url: /appstore/modules/genai/mcp/
+url: /agents/mcp/
 linktitle: "Model Context Protocol (MCP)"
 weight: 50
 description: "This document describes the Model Context Protocol (MCP) and how it is used in Mendix."
+aliases:
+    - /appstore/modules/genai/mcp/
 ---
 
 ## Introduction
 
-The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) is an open protocol that standardizes how Large Language Models (LLMs) can autonomously connect to apps. Many AI platforms and third-party systems have already adopted MCP for easier integration and empowerment of LLMs. Mendix provides an [MCP Server](/appstore/modules/genai/genai-for-mx/mcp-server/) module to facilitate an MCP server from a Mendix app, enabling developers to expose tools and prompts to external MCP clients as well as an [MCP Client](https://marketplace.mendix.com/link/component/244893) module. The MCP Client module enables your app to connect to MCP servers, allowing it to discover and use tools and prompts.
+The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) is an open protocol that standardizes how Large Language Models (LLMs) can autonomously connect to apps. Many AI platforms and third-party systems have already adopted MCP for easier integration and empowerment of LLMs. Mendix provides an [MCP Server](/agents/genai-for-mx/mcp-server/) module to facilitate an MCP server from a Mendix app, enabling developers to expose tools and prompts to external MCP clients as well as an [MCP Client](https://marketplace.mendix.com/link/component/244893) module. The MCP Client module enables your app to connect to MCP servers, allowing it to discover and use tools and prompts.
 
 {{< figure src="/attachments/genai/mcp/mcp-client-server-architecture-mendix.png" alt="" >}}
 
@@ -22,7 +24,7 @@ To understand the basics of MCP, it is important to know the common terminology.
 
 ### MCP Host
 
-The MCP host is typically the application that facilitates interaction with LLMs. While a chat interface is the most common use case, the host can support a variety of interaction use cases. The host takes care of the communication between users and models, while enabling users to manage their AI use, for example, managing credentials or historical chat conversations. A host can be a Mendix application that uses [GenAI Commons](/appstore/modules/genai/genai-for-mx/commons/) and a compatible connector to interact with LLMs, for example, a chat interface built with [Conversational UI](/appstore/modules/genai/genai-for-mx/conversational-ui/).
+The MCP host is typically the application that facilitates interaction with LLMs. While a chat interface is the most common use case, the host can support a variety of interaction use cases. The host takes care of the communication between users and models, while enabling users to manage their AI use, for example, managing credentials or historical chat conversations. A host can be a Mendix application that uses [GenAI Commons](/agents/genai-for-mx/commons/) and a compatible connector to interact with LLMs, for example, a chat interface built with [Conversational UI](/agents/genai-for-mx/conversational-ui/).
 
 ### MCP Client
 
@@ -54,8 +56,8 @@ Furthermore, an MCP Client example teaches you how to establish a connection to 
 
 ## Read More
 
-* The [MCP Server module](/appstore/modules/genai/mcp-modules/mcp-server/)
-* The [MCP Client module](/appstore/modules/genai/mcp-modules/mcp-client/)
+* The [MCP Server module](/agents/mcp-modules/mcp-server/)
+* The [MCP Client module](/agents/mcp-modules/mcp-client/)
 * The [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) provides an example on how to expose microflows as tools via the MCP Server module. 
 * The official [MCP docs](https://modelcontextprotocol.io/introduction)
 * The [MCP Java SDK GitHub Repository](https://github.com/modelcontextprotocol/java-sdk)

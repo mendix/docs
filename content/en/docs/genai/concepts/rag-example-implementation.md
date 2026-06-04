@@ -1,21 +1,23 @@
 ---
 title: "RAG in a Mendix App"
-url: /appstore/modules/genai/rag/
+url: /agents/rag/
 
 linktitle: "Retrieval Augmented Generation (RAG)"
 weight: 30
 description: "Describes the retrieval augmented generation (RAG) pattern and the example implementation in the GenAI Showcase App"
+aliases:
+    - /appstore/modules/genai/rag/
 ---
 
 ## Introduction {#introduction}
 
 Retrieval augmented generation (RAG) is a framework for an AI-based search using a private or external knowledge base that combines embeddings-based knowledge retrieval with a text generation model. The starting point is a collection of data to be considered as the private knowledge base. The final goal is that an end user of the app can ask questions about the data and the assistant's responses are only be based on this knowledge base. 
 
-{{% alert color="info" %}}This document describes how to set up RAG with PgVector. If you want to use the Bedrock Retrieval Augmented Generation capabilities, see [Bedrock Retrieval Augmented Generation](/appstore/modules/genai/get-started/#rag).{{% /alert %}}
+{{% alert color="info" %}}This document describes how to set up RAG with PgVector. If you want to use the Bedrock Retrieval Augmented Generation capabilities, see [Bedrock Retrieval Augmented Generation](/agents/get-started/#rag).{{% /alert %}}
 
 ### Terminology
 
-To understand the basics of the RAG pattern, it is important to know the common terminology. As the [showcase example](https://marketplace.mendix.com/link/component/220475) and the relevant platform-supported modules depend on [GenAI Commons](/appstore/modules/genai/commons/), relevant entities will be linked for reference.
+To understand the basics of the RAG pattern, it is important to know the common terminology. As the [showcase example](https://marketplace.mendix.com/link/component/220475) and the relevant platform-supported modules depend on [GenAI Commons](/agents/commons/), relevant entities will be linked for reference.
 
 #### Embedding vector
 
@@ -25,7 +27,7 @@ Every LLM will have its algorithm for generating vectors, but the convention is 
 
 #### Chunk
 
-In the context of GenAI Commons in a Mendix app, embedding vectors are generated using a [Chunk](/appstore/modules/genai/genai-for-mx/commons/#chunk-entity). Each object represents a discrete piece of information and contains its original string representation, as well as (after the embedding operation) the vector representation of that string according to the LLM of choice.
+In the context of GenAI Commons in a Mendix app, embedding vectors are generated using a [Chunk](/agents/genai-for-mx/commons/#chunk-entity). Each object represents a discrete piece of information and contains its original string representation, as well as (after the embedding operation) the vector representation of that string according to the LLM of choice.
 
 #### Knowledge base 
 
@@ -35,11 +37,11 @@ In the context of GenAI Commons in a Mendix app, we use the [PgVector Knowledge 
 
 #### Knowledge base chunk
 
-In most use cases, more information needs to be stored than just the original input string and its vector representation. A [KnowledgeBaseChunk](/appstore/modules/genai/genai-for-mx/commons/#knowledgebasechunk-entity) is an extension of [Chunk](/appstore/modules/genai/genai-for-mx/commons/#chunk-entity) that can hold additional information that is typically required for useful insertion and retrieval from a Mendix application.
+In most use cases, more information needs to be stored than just the original input string and its vector representation. A [KnowledgeBaseChunk](/agents/genai-for-mx/commons/#knowledgebasechunk-entity) is an extension of [Chunk](/agents/genai-for-mx/commons/#chunk-entity) that can hold additional information that is typically required for useful insertion and retrieval from a Mendix application.
 
 #### Metadata
 
-If additional conventional filtering is needed during similarity searches, such additional data can be stored in the knowledge base as well. [Metadata](/appstore/modules/genai/genai-for-mx/commons/#metadata-entity) objects are key-value pairs that are inserted along with the chunks and contain this additional information. The filtering is applied on an exact string-match basis for the key-value pair. Records are only retrieved if they match all records of the metadata in the collection provided as part of the search step.
+If additional conventional filtering is needed during similarity searches, such additional data can be stored in the knowledge base as well. [Metadata](/agents/genai-for-mx/commons/#metadata-entity) objects are key-value pairs that are inserted along with the chunks and contain this additional information. The filtering is applied on an exact string-match basis for the key-value pair. Records are only retrieved if they match all records of the metadata in the collection provided as part of the search step.
 
 {{% alert color="info" %}}The example described in the remainder of this document does not include the more advanced use case of metadata filtering nor does it cover the construction of complex input strings. If you want to see how this can work in practice, take a look at the *RAG with Semantic Search on Historical Data* example in the [GenAI Showcase app](https://marketplace.mendix.com/link/component/220475). {{% /alert %}}
 
@@ -67,9 +69,9 @@ In summary, in the first step, you need to provide the private knowledge base, s
 
 ### Prerequisites {#prerequisites}
 
-Before you start experimenting with the end-to-end process, make sure that you have access to a (remote) PostgreSQL database with the [pgvector](https://github.com/pgvector/pgvector) extension available. If you do not have one yet, [learn more](/appstore/modules/genai/pgvector-setup/) about how a PostgreSQL vector database can be set up to explore use cases with knowledge bases.
+Before you start experimenting with the end-to-end process, make sure that you have access to a (remote) PostgreSQL database with the [pgvector](https://github.com/pgvector/pgvector) extension available. If you do not have one yet, [learn more](/agents/pgvector-setup/) about how a PostgreSQL vector database can be set up to explore use cases with knowledge bases.
 
-{{% alert color="info" %}}If you have access to an Amazon Web Services (AWS) account or Microsoft Azure account, Mendix recommends you use a setup described in the [Creating a PostgreSQL Database with Amazon RDS](/appstore/modules/genai/reference-guide/external-connectors/pgvector-setup/#aws-database-create) or [Managing a PostgreSQL Database with Microsoft Azure](/appstore/modules/genai/reference-guide/external-connectors/pgvector-setup/#azure-database-create) section. This is convenient, since these PostgreSQL databases in the cloud have the required pgvector extension available by default.{{% /alert %}}
+{{% alert color="info" %}}If you have access to an Amazon Web Services (AWS) account or Microsoft Azure account, Mendix recommends you use a setup described in the [Creating a PostgreSQL Database with Amazon RDS](/agents/reference-guide/external-connectors/pgvector-setup/#aws-database-create) or [Managing a PostgreSQL Database with Microsoft Azure](/agents/reference-guide/external-connectors/pgvector-setup/#azure-database-create) section. This is convenient, since these PostgreSQL databases in the cloud have the required pgvector extension available by default.{{% /alert %}}
 
 ### Steps {#steps}
 
@@ -77,7 +79,7 @@ Before you start experimenting with the end-to-end process, make sure that you h
 
 2. Go to the **Retrieval Augmented Generation** example and read **Step 1: Introduction**.
 
-3. [Set Up a PostgreSQL vector database](/appstore/modules/genai/pgvector-setup/) and configure the connection in **Step 2: Vector Database Configuration**.
+3. [Set Up a PostgreSQL vector database](/agents/pgvector-setup/) and configure the connection in **Step 2: Vector Database Configuration**.
 
 4. Go to **Step 3: Knowledge Base** and create embeddings from a text and store. You can use our default text about ornamental flowering plants, or paste your own content.
 
@@ -90,11 +92,11 @@ Before you start experimenting with the end-to-end process, make sure that you h
 
 {{% alert color="info" %}}
 
-The GenAI Showcase App uses the Mendix [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/225063) module from the Marketplace to run queries and statements on your remote database. If you want to know more about this or if you are looking for certain technical details, see [PgVector Knowledge Base](/appstore/modules/genai/pgvector/).
+The GenAI Showcase App uses the Mendix [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/225063) module from the Marketplace to run queries and statements on your remote database. If you want to know more about this or if you are looking for certain technical details, see [PgVector Knowledge Base](/agents/pgvector/).
 
 The GenAI Showcase App uses this module to take care of creating the required tables in the remote vector database, including the open-source extension called pgvector. If you want to know more about the extension and how the tables look like in combination with this extension, see the [pgvector source code and documentation on GitHub](https://github.com/pgvector/pgvector).
 
-If you want to know more about RAG, embeddings, or [vector databases](/appstore/modules/genai/pgvector-setup/), make sure to review the links on the **Resources** page of the GenAI Showcase App or in the [Read More](#read-more) section.
+If you want to know more about RAG, embeddings, or [vector databases](/agents/pgvector-setup/), make sure to review the links on the **Resources** page of the GenAI Showcase App or in the [Read More](#read-more) section.
 
 {{% /alert %}}
 
@@ -104,9 +106,9 @@ This section lists some general key points that apply regardless of which archit
 
 If you would like to build your own RAG setup, feel free to learn from the GenAI Showcase App and start building your own app. Below you can find the key takeaways from the GenAI Showcase App:
 
-* For RAG, you need a storage space for high-dimensional embedding vectors outside of your normal Mendix app database. Typically, this is a remote vector database. In order to connect to it, the GenAI Showcase App uses the Mendix database connector. See [Vector Database Setup](/appstore/modules/genai/pgvector-setup/) for more details.
+* For RAG, you need a storage space for high-dimensional embedding vectors outside of your normal Mendix app database. Typically, this is a remote vector database. In order to connect to it, the GenAI Showcase App uses the Mendix database connector. See [Vector Database Setup](/agents/pgvector-setup/) for more details.
 
-* The GenAI Showcase App relies on a PostgreSQL database with the pgvector extension included. In such a setup you can similarly rely on the [PgVector Knowledge Base module](/appstore/modules/genai/pgvector/) to take care of creating and executing the right queries. If you choose to use a different type of vector database, the database queries and statements, which you will have to perform, should cover at least the following:
+* The GenAI Showcase App relies on a PostgreSQL database with the pgvector extension included. In such a setup you can similarly rely on the [PgVector Knowledge Base module](/agents/pgvector/) to take care of creating and executing the right queries. If you choose to use a different type of vector database, the database queries and statements, which you will have to perform, should cover at least the following:
     * Include the vector extension if applicable for the chosen database type (create extension).
     
     * Create tables to store the embedding vectors (create table).
@@ -121,7 +123,7 @@ If you would like to build your own RAG setup, feel free to learn from the GenAI
 
 * How you construct the input string affects similarity search results. In the similarity search example for **tickets** in the showcase application, the input string at the time of insertion is a concatenation of multiple attributes of each ticket record in the Mendix database. However, in the search step, the user's input—possibly just a brief description—is used to find similar tickets. While this discrepancy may lower overall similarity, the most relevant records will still appear at the top.
 
-{{% alert color="info" %}}Reusable queries in the form of SQL statements are available in the source code of the [PgVector Knowledge Base module](/appstore/modules/genai/pgvector/) which comes automatically with GenAI Showcase App.{{% /alert %}}
+{{% alert color="info" %}}Reusable queries in the form of SQL statements are available in the source code of the [PgVector Knowledge Base module](/agents/pgvector/) which comes automatically with GenAI Showcase App.{{% /alert %}}
 
 ## Read More {#read-more}
 

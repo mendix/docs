@@ -1,11 +1,12 @@
 ---
 title: "GenAI Concepts"
-url: /appstore/modules/genai/get-started/
+url: /agents/get-started/
 linktitle: "GenAI Concepts"
 weight: 10
 description: "Describes the concepts behind generative AI and what you might implement with it."
 aliases:
     - /appstore/modules/genai/using-gen-ai/ 
+    - /appstore/modules/genai/get-started/
 ---
 
 ## Introduction
@@ -41,7 +42,7 @@ For example, you can use an LLM to do:
     * Translate languages
     * Simulate characters for games
  
-Some LLMs, such as [Anthropic Claude](/appstore/modules/aws/amazon-bedrock/) and [GPT-4o](/appstore/modules/genai/openai/), can also use one or more images as input, allowing you to ask questions about images for use cases such as object recognition, image to text (OCR), and validating whether an image is as intended.
+Some LLMs, such as [Anthropic Claude](/appstore/modules/aws/amazon-bedrock/) and [GPT-4o](/agents/openai/), can also use one or more images as input, allowing you to ask questions about images for use cases such as object recognition, image to text (OCR), and validating whether an image is as intended.
  
 #### Embeddings Generation
 
@@ -64,7 +65,7 @@ Adding knowledge bases helps to tailor response generation to specific contexts 
 
 Knowledge bases are often used for:
 
-1. [Retrieval Augmented Generation (RAG)](/appstore/modules/genai/rag/) retrieves relevant knowledge from the knowledge base, incorporates it into a prompt, and sends it to the model to generate a response.
+1. [Retrieval Augmented Generation (RAG)](/agents/rag/) retrieves relevant knowledge from the knowledge base, incorporates it into a prompt, and sends it to the model to generate a response.
 2. Semantic search enables advanced search capabilities by considering the semantic meaning of the text, going beyond exact and approximate matching. It allows the knowledge base to be searched for similar chunks effectively.
 
 ### What is an LLM Not?
@@ -95,7 +96,7 @@ Prompt engineering is the activity of designing the input text that will be sent
 * the relevant input data (from the end-user or passed from a microflow)
 * the requested output structure (for example, tone of voice or a JSON format)
 
-With prompt engineering you can guide the model to generate accurate, applicable, and coherent responses. The quality of your prompts directly influences the quality of the response. See [Prompt Engineering](/appstore/modules/genai/prompt-engineering/) to learn more about prompt engineering.
+With prompt engineering you can guide the model to generate accurate, applicable, and coherent responses. The quality of your prompts directly influences the quality of the response. See [Prompt Engineering](/agents/prompt-engineering/) to learn more about prompt engineering.
 
 ## Retrieval Augmented Generation (RAG) {#rag}
 
@@ -124,9 +125,9 @@ For example, Amazon Bedrock has the concept of [knowledge bases for Amazon Bedro
 
 If your chosen architecture does not have fully-integrated RAG capabilities, or if you want tighter control of the RAG process, you can create and use your own knowledge base.
 
-In this case you will have to index and store your knowledge yourself, and index your input data in order to retrieve the information with which you want to augment your prompt. For this you can use the [PgVector Knowledge Base module](/appstore/modules/genai/pgvector/) in combination with an embeddings model, to maintain and use your knowledge base. 
+In this case you will have to index and store your knowledge yourself, and index your input data in order to retrieve the information with which you want to augment your prompt. For this you can use the [PgVector Knowledge Base module](/agents/pgvector/) in combination with an embeddings model, to maintain and use your knowledge base. 
 
-An example of how this can be done with OpenAI is described in [RAG Example Implementation in the GenAI Showcase App](/appstore/modules/genai/rag/).
+An example of how this can be done with OpenAI is described in [RAG Example Implementation in the GenAI Showcase App](/agents/rag/).
 
 ### The ReAct Pattern (Function Calling) {#react}
 
@@ -134,7 +135,7 @@ Another way to provide the LLM with additional information and capabilities is t
 
 This microflow runs in the context of the user, allowing you to make sure that it only shows data that is relevant for the current user. You can also use it to execute actions on behalf of the user, or interact with page that the user is looking at.
 
-See [Function Calling](/appstore/modules/genai/function-calling/) for more information on ReAct. You can see ReAct implemented in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) where the `GetInformationForTicketID` microflow allows an LLM to answer a question like "What is the status of ticket 42?".
+See [Function Calling](/agents/function-calling/) for more information on ReAct. You can see ReAct implemented in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) where the `GetInformationForTicketID` microflow allows an LLM to answer a question like "What is the status of ticket 42?".
 
 This pattern is supported both by [OpenAI](https://platform.openai.com/docs/guides/function-calling) and [various models available on Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features).
 
@@ -142,6 +143,6 @@ This pattern is supported both by [OpenAI](https://platform.openai.com/docs/guid
 
 The agent concept combines prompts, RAG (Retrieval Augmented Generation), and ReAct patterns in a single call. These components of agent-based logic are all supported by our Agents Kit. Using LLMs, business logic can be enriched by enabling AI agents to reason and autonomously execute actions while being grounded in domain-specific knowledge. With Mendix's Agents Kit, agents become a seamless part of your application's logic.
 
-For an overview of the components that help you get started, refer to [the Agents Kit overview](/appstore/modules/genai/#architecture). 
+For an overview of the components that help you get started, refer to [the Agents Kit overview](/agents/#architecture). 
 
 In addition, you can integrate agentic behavior in a Mendix app by leveraging external agents through cloud infrastructure providers. In this case, the Mendix app does not store the agent definition. Instead, it only calls the external agent. For example, [Agents for Amazon Bedrock](https://aws.amazon.com/bedrock/agents/) provides this functionality for Amazon Bedrock. You can find out how to use this in your Mendix application in [Invoking an Agent with the InvokeAgent Operation](/appstore/modules/aws/amazon-bedrock/#invokeagent) section of the *Amazon Bedrock* module documentation.

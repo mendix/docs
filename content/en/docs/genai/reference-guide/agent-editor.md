@@ -1,9 +1,11 @@
 ---
 title: "Agent Editor"
-url: /appstore/modules/genai/genai-for-mx/agent-editor/
+url: /agents/genai-for-mx/agent-editor/
 linktitle: "Agent Editor"
 description: "Describes the purpose, configuration, and usage of the Agent Editor and Agent Editor Commons modules from the Mendix Marketplace that allow developers to build, define, and refine agents, and integrate GenAI principles and agentic patterns into their Mendix app."
 weight: 20
+aliases:
+    - /appstore/modules/genai/genai-for-mx/agent-editor/
 ---
 
 ## Introduction
@@ -104,7 +106,7 @@ To use Agent Editor functionalities in your app, you must perform the following 
 6. Deploy the agent to cloud environments.
 7. Improve the agent in the next iterations.
 
-For a step-by-step tutorial, see [Create an Agent with Agent Editor](/appstore/modules/genai/how-to/create-agent-with-agent-editor/).
+For a step-by-step tutorial, see [Create an Agent with Agent Editor](/agents/how-to/create-agent-with-agent-editor/).
 
 ### Defining the Model {#define-model}
 
@@ -137,13 +139,13 @@ Defining an agent is also document-based and can be configured using Agent Edito
 
 You can also check out template agents in the **USE_ME** folder of the **AgentEditorCommons** module.
 
-For more information about prompts and prompt engineering, see [Prompt Engineering](/appstore/modules/genai/prompt-engineering/).
+For more information about prompts and prompt engineering, see [Prompt Engineering](/agents/prompt-engineering/).
 
 Selecting a model is mandatory. You can save the document without it, but if the model configuration is incomplete, Studio Pro shows consistency errors. These errors block running the app locally, cloud deployment, and agent testing in later steps.
 
 ### Defining and Adding Tools and Knowledge Bases {#define-tools}
 
-To extend the capabilities of your agent, you can add tools directly in Agent Editor. In Agent Editor, microflows and (external) MCP services can be added as tools to let the agent act dynamically and autonomously, or to access specific data based on input it determines. When the agent is invoked, it uses the function calling pattern to execute the required microflow by using the input specified in the model response. For more technical details about microflow tools and function calling behavior, see [Function Calling](/appstore/modules/genai/function-calling/).
+To extend the capabilities of your agent, you can add tools directly in Agent Editor. In Agent Editor, microflows and (external) MCP services can be added as tools to let the agent act dynamically and autonomously, or to access specific data based on input it determines. When the agent is invoked, it uses the function calling pattern to execute the required microflow by using the input specified in the model response. For more technical details about microflow tools and function calling behavior, see [Function Calling](/agents/function-calling/).
 
 #### Configuring Consumed MCP Service {#define-mcp}
 
@@ -170,7 +172,7 @@ You can choose from the following tool types:
 
 In Agent Editor, you can temporarily disable and re-enable tools using the **Active** checkbox. This is useful while iterating and testing the agent behavior with different tool combinations or descriptions. Only enabled tools are usable by the agent at runtime when called in the app.
 
-Configure [tool choice](/appstore/modules/genai/genai-for-mx/commons/#enum-toolchoice) to control how the agent behaves with regard to tool calling.
+Configure [tool choice](/agents/genai-for-mx/commons/#enum-toolchoice) to control how the agent behaves with regard to tool calling.
 
 #### Configuring Knowledge Base Document {#define-knowledgebase}
 
@@ -233,7 +235,7 @@ When configuring the action, select the Agent document so that the right agent i
 
 For **Call Agent without History**, you can optionally pass a `Request` object to set request-level values and a `FileCollection` object with files to send along with the user message to use vision or document chat capabilities. For **Call Agent with History**, the `Request` object is mandatory because it contains the previous messages from the conversation. Support for files and images depends on the underlying large language model. Refer to the documentation of the specific connector.
 
-The output is a `GenAICommons.Response` object, aligned with the GenAI Commons and Agent Commons domain models and actions. You can use this object for further logic. Additionally, all agents created via the Agent Editor extension are integrated with other Mendix offerings, such as the [Token consumption monitor](/appstore/modules/genai/genai-for-mx/conversational-ui/#snippet-token-monitor) or the [Traceability](/appstore/modules/genai/genai-for-mx/conversational-ui/#traceability) feature from [ConversationalUI](/appstore/modules/genai/genai-for-mx/conversational-ui/).
+The output is a `GenAICommons.Response` object, aligned with the GenAI Commons and Agent Commons domain models and actions. You can use this object for further logic. Additionally, all agents created via the Agent Editor extension are integrated with other Mendix offerings, such as the [Token consumption monitor](/agents/genai-for-mx/conversational-ui/#snippet-token-monitor) or the [Traceability](/agents/genai-for-mx/conversational-ui/#traceability) feature from [ConversationalUI](/agents/genai-for-mx/conversational-ui/).
 
 ### Including the Agent in Workflows
 
@@ -241,7 +243,7 @@ Agents can also be invoked from workflows using the [AI Agent Task](/refguide/ai
 
 ### Including the Agent in a Conversational User Interface {#conversational-ui}
 
-Pages and Snippets are building blocks for chat-type UI patterns that exist in the [ConversationalUI module](/appstore/modules/genai/genai-for-mx/conversational-ui/). The central entity is the `ChatContext`, which represents a user-agent chat session. When using Agent Editor, to instantiate a new `ChatContext`, use the **New Chat for Agent** action in the microflow to open the chat page and pass the Agent document. Configure the Agent document as the input parameter for this action. For more information, see [Conversational UI patterns](/appstore/modules/genai/genai-for-mx/conversational-ui/#chat-context-operations).
+Pages and Snippets are building blocks for chat-type UI patterns that exist in the [ConversationalUI module](/agents/genai-for-mx/conversational-ui/). The central entity is the `ChatContext`, which represents a user-agent chat session. When using Agent Editor, to instantiate a new `ChatContext`, use the **New Chat for Agent** action in the microflow to open the chat page and pass the Agent document. Configure the Agent document as the input parameter for this action. For more information, see [Conversational UI patterns](/agents/genai-for-mx/conversational-ui/#chat-context-operations).
 
 ### Deploying the Agent to Cloud Environments {#deploy-agent}
 
@@ -291,7 +293,7 @@ Agent documents created in Studio Pro are imported through after-startup logic. 
 
 If **List tools** fails, verify the consumed MCP service configuration: endpoint constant value, protocol version, and credentials microflow (when authentication is required). For technical details, the log files in the `/agent-editor` folder of the app directory can be inspected.
 
-If possible, confirm that the target endpoint is reachable from the running app runtime. You can do this, for example, by temporarily configuring it manually in the [MCP Client module](/appstore/modules/genai/mcp-modules/mcp-client/) and checking the **Console** pane in Studio Pro for logs.
+If possible, confirm that the target endpoint is reachable from the running app runtime. You can do this, for example, by temporarily configuring it manually in the [MCP Client module](/agents/mcp-modules/mcp-client/) and checking the **Console** pane in Studio Pro for logs.
 
 If calling the tools fails at runtime while testing the agent, check the **Console** pane in Studio Pro for error logs.
 

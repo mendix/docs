@@ -1,8 +1,10 @@
 ---
 title: "Create an Agent with Agent Commons"
-url: /appstore/modules/genai/how-to/create-agent-with-agent-commons/
+url: /agents/how-to/create-agent-with-agent-commons/
 weight: 80
 description: "Learn how to create and manage agents using the Agent Commons UI for runtime configuration, versioning, and rapid experimentation without redeployment."
+aliases:
+    - /appstore/modules/genai/how-to/create-agent-with-agent-commons/
 ---
 
 ## Introduction
@@ -13,12 +15,12 @@ This approach uses the Agent Commons UI to define and manage agents at runtime. 
 
 Before you begin, complete the following:
 
-* [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/) to configure your application, knowledge base, domain model, UI, and function microflows
-* Configure text generation and knowledge base keys (for details, see [Configuration](/appstore/modules/genai/genai-for-mx/agent-commons/#configuration) in *Agent Commons*)
+* [Set Up Your App for Agent Creation](/agents/how-to/creating-agents/shared-setup/) to configure your application, knowledge base, domain model, UI, and function microflows
+* Configure text generation and knowledge base keys (for details, see [Configuration](/agents/genai-for-mx/agent-commons/#configuration) in *Agent Commons*)
 
 ## Setting Up the Agent with a Prompt
 
-Create an agent that can be called to interact with the LLM. The [Agent Commons](/appstore/modules/genai/genai-for-mx/agent-commons/) module allows agentic AI engineers to define agents and perform prompt engineering at runtime. After you complete these steps, your agent configuration will look like this:
+Create an agent that can be called to interact with the LLM. The [Agent Commons](/agents/genai-for-mx/agent-commons/) module allows agentic AI engineers to define agents and perform prompt engineering at runtime. After you complete these steps, your agent configuration will look like this:
 
 {{< figure src="/attachments/genai/howto-singleagent/agent-runtime.png" alt="Agent Commons UI showing IT-Ticket Helper configuration">}}
 
@@ -31,7 +33,7 @@ Create an agent that can be called to interact with the LLM. The [Agent Commons]
 4. Click **Save** to create the agent.
 
 5. On the agent's details page, in the **Model** field, select the **Text Generation** model.
-{{% alert color="info" %}}The model must support function calling and system prompts to be selectable. For Mendix Cloud GenAI Resources, this is automatic. If you use another connector to an LLM provider and your chosen model does not appear in the list, check the connector's documentation for information about [the supported model functionalities](/appstore/modules/genai/genai-for-mx/commons/#deployed-model).{{% /alert %}}
+{{% alert color="info" %}}The model must support function calling and system prompts to be selectable. For Mendix Cloud GenAI Resources, this is automatic. If you use another connector to an LLM provider and your chosen model does not appear in the list, check the connector's documentation for information about [the supported model functionalities](/agents/genai-for-mx/commons/#deployed-model).{{% /alert %}}
 
 6. In the **System Prompt** field, add instructions for how the model generates a response and what process to follow. You can use this example prompt:
 
@@ -52,11 +54,11 @@ Create an agent that can be called to interact with the LLM. The [Agent Commons]
     If the retrieved results are not helpful to answer the request, inform the user in a user-friendly way.
     ```
     
-7. Add the `{{UserInput}}` expression to the [User Prompt](/appstore/modules/genai/prompt-engineering/#user-prompt) field. The user prompt typically represents the end-user's input. You can also prefill it with predefined instructions. In this example, the prompt consists only of a placeholder variable for the actual input the user provides while interacting with the running app.
+7. Add the `{{UserInput}}` expression to the [User Prompt](/agents/prompt-engineering/#user-prompt) field. The user prompt typically represents the end-user's input. You can also prefill it with predefined instructions. In this example, the prompt consists only of a placeholder variable for the actual input the user provides while interacting with the running app.
 
 8. Add a value in the **UserInput** variable field in the **Test Case** section. This lets you test the current prompt behavior by calling the agent. For example, type `How can I implement an agent in my Mendix app?` and click **Test**. You may need to scroll down to see the **Output** on the page after a few seconds. Ideally, the model does not attempt to answer requests that fall outside its scope, as it is restricted to handling IT-related issues and providing information about ticket data. If you ask a question that requires tools that are not yet implemented, the model might hallucinate and generate a response as if it had used those tools.
 
-9. Make sure the app is running with the latest domain model changes from [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/#domain-model-setup). In the Agent Commons UI, find the [Context Entity](/appstore/modules/genai/genai-for-mx/agent-commons/#define-context-entity) field. Search for **TicketHelper** and select the entity created in that setup step.
+9. Make sure the app is running with the latest domain model changes from [Set Up Your App for Agent Creation](/agents/how-to/creating-agents/shared-setup/#domain-model-setup). In the Agent Commons UI, find the [Context Entity](/agents/genai-for-mx/agent-commons/#define-context-entity) field. Search for **TicketHelper** and select the entity created in that setup step.
 
 10. Click **Save as new version** ({{% icon name="floppy-disk" %}}) next to the **Agent version** field to save this version of the agent. Enter *Initial agent with prompt* as the title. 
 
@@ -71,9 +73,9 @@ Create an agent that can be called to interact with the LLM. The [Agent Commons]
 
 ## Empowering the Agent {#empower-agent}
 
-To let the agent generate responses based on specific data and information, you will connect it to two function microflows and a knowledge base. Even though the implementation is not complex because you can select the tools from the frontend, Mendix recommends familiarity with [Integrate Function Calling into Your Mendix App](/appstore/modules/genai/how-to/howto-functioncalling/) and [Grounding Your Large Language Model in Data](/appstore/modules/genai/how-to/howto-groundllm/#chatsetup). These guides cover the foundational concepts for function calling and knowledge base retrieval. 
+To let the agent generate responses based on specific data and information, you will connect it to two function microflows and a knowledge base. Even though the implementation is not complex because you can select the tools from the frontend, Mendix recommends familiarity with [Integrate Function Calling into Your Mendix App](/agents/how-to/howto-functioncalling/) and [Grounding Your Large Language Model in Data](/agents/how-to/howto-groundllm/#chatsetup). These guides cover the foundational concepts for function calling and knowledge base retrieval. 
 
-Use the function microflows created in [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/#domain-model-setup). To use the function calling pattern, link them to the agent as *Tools* so the agent can autonomously decide how and when to use the function microflows. Find the final result in the **ExampleMicroflows** folder of the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) for reference. Tools can also be added when published from an MCP server, as described in [Connecting Functions via MCP](#mcp).
+Use the function microflows created in [Set Up Your App for Agent Creation](/agents/how-to/creating-agents/shared-setup/#domain-model-setup). To use the function calling pattern, link them to the agent as *Tools* so the agent can autonomously decide how and when to use the function microflows. Find the final result in the **ExampleMicroflows** folder of the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) for reference. Tools can also be added when published from an MCP server, as described in [Connecting Functions via MCP](#mcp).
 
 ### Connecting Function: Get Number of Tickets by Status (without MCP Server)
 
@@ -124,7 +126,7 @@ Connect the agent to the knowledge base so it can use historical ticket data, su
 
 1. From the agent view page for the `IT-Ticket Helper` agent, under **Knowledge bases**, add a new knowledge base:
 
-    * **Knowledge base resource**: Select the knowledge base resource created in [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/#ingest-knowledge-base)
+    * **Knowledge base resource**: Select the knowledge base resource created in [Set Up Your App for Agent Creation](/agents/how-to/creating-agents/shared-setup/#ingest-knowledge-base)
     * **Collection**: Select `HistoricalTickets`. If nothing appears in the list, refer to the documentation of the connector on how to set it up correctly
     * Name: `RetrieveSimilarTickets`
     * Description: `Similar tickets from the database`
@@ -143,7 +145,7 @@ If your knowledge base is not compatible with Agent Commons, or if the retrieval
 
 ## Calling the Agent
 
-Configure the **Ask the agent** button created in [Set Up Your App for Agent Creation](/appstore/modules/genai/how-to/creating-agents/shared-setup/#domain-model-setup) to call a microflow to invoke the agent. Your completed microflow will look like this:
+Configure the **Ask the agent** button created in [Set Up Your App for Agent Creation](/agents/how-to/creating-agents/shared-setup/#domain-model-setup) to call a microflow to invoke the agent. Your completed microflow will look like this:
 
 {{< figure src="/attachments/genai/howto-singleagent/Microflow_AgentCommons.png" alt="Microflow with three activities: Retrieve Agent from database, Call Agent Without History, and Change TicketHelper ModelResponse attribute" >}}
 
@@ -181,7 +183,7 @@ Run the app to see the agent integrated in the use case. From the **TicketHelper
 
 This optional step uses the human-in-the-loop pattern to give users control over tool executions. When [adding tools to the agent](#empower-agent), you can configure a **User Access and Approval** setting to either make the tools visible to the user or require the user to confirm or reject a tool call. This way, the user can control LLM actions.
 
-For more information, see [Human in the loop](/appstore/modules/genai/genai-for-mx/conversational-ui/#human-in-the-loop).
+For more information, see [Human in the loop](/agents/genai-for-mx/conversational-ui/#human-in-the-loop).
 
 Follow these steps:
 
@@ -209,7 +211,7 @@ You can find examples for both Agent Commons and GenAI Commons in the `ExampleMi
 For more technical details and an example implementation, see the [Agent Builder Starter App](https://marketplace.mendix.com/link/component/240369), which demonstrates additional built-in features. The **ExampleMicroflows** folder in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) contains all components used in this how-to, including the final use case.
 {{% /alert %}}
 
-Before testing, ensure that you have completed the Mendix Cloud GenAI configuration as described in [Build a Chatbot from Scratch Using the Blank GenAI App](/appstore/modules/genai/how-to/blank-app/), particularly the [Infrastructure Configuration](/appstore/modules/genai/how-to/blank-app/#config) section. 
+Before testing, ensure that you have completed the Mendix Cloud GenAI configuration as described in [Build a Chatbot from Scratch Using the Blank GenAI App](/agents/how-to/blank-app/), particularly the [Infrastructure Configuration](/agents/how-to/blank-app/#config) section. 
 
 Congratulations! Your agent is now ready to use and enriched by powerful capabilities such as agent builder, function calling, and knowledge base retrieval.
 

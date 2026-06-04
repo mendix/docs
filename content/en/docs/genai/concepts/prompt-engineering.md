@@ -1,9 +1,11 @@
 ---
 title: "Prompt Engineering"
-url: /appstore/modules/genai/prompt-engineering/
+url: /agents/prompt-engineering/
 linktitle: "Prompt Engineering"
 weight: 10
 description: "Describes Prompt Engineering as used with generative AI in Mendix"
+aliases:
+    - /appstore/modules/genai/prompt-engineering/
 ---
 
 ## Introduction
@@ -37,9 +39,9 @@ A user prompt is another fundamental type. It is the user’s input, question, o
 
 ### Context Prompt
 
-Depending on the project or use case, adding contextual information to the model may be necessary. Normally, this information, called context prompt or conversation history, is sent in the same interaction as the system and user prompt. It captures the historical information of the conversation to maintain coherence with the end user and be context aware.  In the Mendix app chatbot setup, developers configure this within their application, and it is included in the request sent to the LLM using the [Chat Completions (with history)](/appstore/modules/genai/genai-for-mx/commons/#chat-completions-with-history) operation.
+Depending on the project or use case, adding contextual information to the model may be necessary. Normally, this information, called context prompt or conversation history, is sent in the same interaction as the system and user prompt. It captures the historical information of the conversation to maintain coherence with the end user and be context aware.  In the Mendix app chatbot setup, developers configure this within their application, and it is included in the request sent to the LLM using the [Chat Completions (with history)](/agents/genai-for-mx/commons/#chat-completions-with-history) operation.
 
-To understand this concept, imagine a user interacting with a chatbot while asking, *How should I start?*. If in previous interactions, the user asked about Mendix, the LLM will understand that the question refers to the Mendix apps. In cases where the context is not needed, such as in command-based interactions where the inquiry could be: *Turn on the lights* and the LLM does not need any historical conversation, developers can use operations like [Chat Completions (without history)](/appstore/modules/genai/genai-for-mx/commons/#chat-completions-without-history).
+To understand this concept, imagine a user interacting with a chatbot while asking, *How should I start?*. If in previous interactions, the user asked about Mendix, the LLM will understand that the question refers to the Mendix apps. In cases where the context is not needed, such as in command-based interactions where the inquiry could be: *Turn on the lights* and the LLM does not need any historical conversation, developers can use operations like [Chat Completions (without history)](/agents/genai-for-mx/commons/#chat-completions-without-history).
 
 ## Typical Components of a Prompt
 
@@ -73,7 +75,7 @@ After telling the model what to do, you can include additional context. This can
 
 * information about the end-user of your application – for example their language, role, department, specific database records
 * context information – for example, all data related to an object the end-user is looking at
-* knowledge coming from [Retrieval Augmented Generation (RAG)](/appstore/modules/genai/get-started/#rag)
+* knowledge coming from [Retrieval Augmented Generation (RAG)](/agents/get-started/#rag)
 
 Tip: you can provide information in a JSON or XML structure to ensure the information is presented in a consistent way. From Mendix apps, you can use [Export Mappings](/refguide/export-mappings/) to create JSON structures and [Export XML Documents](/howto/integration/export-xml-documents/) to create XML structures.
 
@@ -200,7 +202,7 @@ You are a writer who specializes in marketing content.
 
 ### Tell the Model How to Use Provided Tools
 
-When using features like [function calling](/appstore/modules/genai/function-calling/), give the functions a descriptive name. Also, instruct the model on what functions can do and how they should be used. This will guide the LLM to call the functions at the right moment and use the response correctly.
+When using features like [function calling](/agents/function-calling/), give the functions a descriptive name. Also, instruct the model on what functions can do and how they should be used. This will guide the LLM to call the functions at the right moment and use the response correctly.
 
 For example, say you have a tool called `GetTicketInformationForIdentifier` which retrieves information from a specific support ticket in a database; you could add the following to the prompt:
 

@@ -10,7 +10,7 @@ aliases:
 
 ## Introduction
 
-The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) is an open protocol that standardizes how Large Language Models (LLMs) can autonomously connect to apps. Many AI platforms and third-party systems have already adopted MCP for easier integration and empowerment of LLMs. Mendix provides an [MCP Server](/agents/genai-for-mx/mcp-server/) module to facilitate an MCP server from a Mendix app, enabling developers to expose tools and prompts to external MCP clients as well as an [MCP Client](https://marketplace.mendix.com/link/component/244893) module. The MCP Client module enables your app to connect to MCP servers, allowing it to discover and use tools and prompts.
+The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) is an open protocol that standardizes how Large Language Models (LLMs) can autonomously connect to apps. Many AI platforms and third-party systems have already adopted MCP for easier integration and empowerment of LLMs. Mendix provides an [MCP Server](/agents/mcp-modules/mcp-server/) module to facilitate an MCP server from a Mendix app, enabling developers to expose tools and prompts to external MCP clients as well as an [MCP Client](https://marketplace.mendix.com/link/component/244893) module. The MCP Client module enables your app to connect to MCP servers, allowing it to discover and use tools and prompts.
 
 {{< figure src="/attachments/genai/mcp/mcp-client-server-architecture-mendix.png" alt="" >}}
 

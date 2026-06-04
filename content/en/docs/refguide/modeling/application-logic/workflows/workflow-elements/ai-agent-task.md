@@ -24,7 +24,7 @@ An AI agent is an autonomous software system powered by large language models (L
 
 With **AI agent task**, you can select a [microflow](#microflow) that calls any agent that has been configured in your application. You are not limited to one approach. Agents can be created and configured in different ways, as long as they can be called via a microflow. 
 
-If you do not yet have any agents configured, you can get started by following the guide on [creating your first agent](/agents/how-to/howto-single-agent/).
+If you do not yet have any agents configured, you can get started by following the guide on [creating your first agent](/agents/how-to/creating-agents/).
 
 ## Properties
 
@@ -70,4 +70,4 @@ Boundary events can be attached to this element and are triggered by certain eve
 
 * [Workflow Properties](/refguide/workflow-properties/)
 * [GenAI Capabilities in Mendix](/agents/)
-* [Create Your First Agent](/agents/how-to/howto-single-agent/)
+* [Create Your First Agent](/agents/how-to/creating-agents/)

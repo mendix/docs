@@ -210,7 +210,7 @@ The following operations can be found in the toolbox for changing the [ChatConte
 
 The following operations are used in a (custom) action microflow:
 
-* `Create Request with Chat History` creates a [Request](/agents/commons/) object that is used as an input parameter in a [Chat Completions (with history)](/agents/genai-for-mx/commons/#chat-completions-with-history) operation as part of the [action microflow](#action-microflow).
+* `Create Request with Chat History` creates a [Request](/agents/genai-for-mx/commons/#request) object that is used as an input parameter in a [Chat Completions (with history)](/agents/genai-for-mx/commons/#chat-completions-with-history) operation as part of the [action microflow](#action-microflow).
 * `Get Current User Prompt` gets the current user prompt. It can be used in the [action microflow](#action-microflow) because the `CurrentUserPrompt` from the chat context is no longer available.
 * `Update Assistant Response` processes the response of the model and adds the new message and any sources to the UI. This is typically one of the last steps of the logic in an [action microflow](#action-microflow). It only needs to be included at the end of the happy flow of an action microflow. Make sure to pass the response object.
 

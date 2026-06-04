@@ -14,7 +14,7 @@ This guide explains how to create an agent in your Mendix app that combines [kno
 
 ## Agent Use Case
 
-{{< figure src="/attachments/genai/genai-howto-singleagent/structure_singleagent.svg" alt="Agent use case structure showing integration of LLM, knowledge base, and function calling" >}}
+{{< figure src="/attachments/genai/howto-singleagent/structure_singleagent.svg" alt="Agent use case structure showing integration of LLM, knowledge base, and function calling" >}}
 
 For this agent, you will set up logic that calls LLMs available via Mendix Cloud GenAI calls to dynamically determine which in-app and external information is needed based on user input. The system retrieves the necessary information, uses it to reason about the actions to perform, and handles execution while keeping you informed and involved where needed.
 

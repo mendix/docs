@@ -92,7 +92,7 @@ Ingest Mendix ticket data into the knowledge base. For a detailed guide, see [Gr
 
 4. Open **JsonObject**, select your `Ticket` entity, and then select **Map attributes by name** to map all fields to your attributes. The completed import mapping looks like this:
 
-    {{< figure src="/attachments/genai/genai-howto-singleagent/IM_ticket_mapped.png" alt="">}}
+    {{< figure src="/attachments/genai/howto-singleagent/IM_ticket_mapped.png" alt="">}}
 
 5. Open **EM_Ticket**, click **Select elements**, and search for the **JSON_Ticket** in the JSON structure schema source. Select all fields for which you created attributes in the `Ticket` entity. Click **OK**. Open the **JsonObject** to select your `Ticket` entity and map all fields to your attributes.
 
@@ -104,11 +104,11 @@ Ingest Mendix ticket data into the knowledge base. For a detailed guide, see [Gr
     * In the loop, delete the second action, which adds metadata to the `MetadataCollection`.
     * In the last action of the loop, `ChunkCollection_Add KnowledgeBaseChunk`, set the **Human readable ID** field to `empty`.
 
-    {{< figure src="/attachments/genai/genai-howto-singleagent/ACT_TicketList.png" alt="">}}
+    {{< figure src="/attachments/genai/howto-singleagent/ACT_TicketList.png" alt="">}}
 
 8. Create a microflow `ACT_CreateDemoData_IngestIntoKnowledgeBase`. Add two actions to the new microflow: call the `Tickets_CreateDataset` microflow, then call the `ACT_TicketList_LoadAllIntoKnowledgeBase` microflow.
 
-    {{< figure src="/attachments/genai/genai-howto-goundllm/loaddataintokb-example-combine.png" alt="" >}}
+    {{< figure src="/attachments/genai/howto-ground-llm/loaddataintokb-example-combine.png" alt="" >}}
  
 9. Add the admin role under **Allowed Roles** in the `ACT_CreateDemoData_LoadAllIntoKnowledgeBase` microflow properties.
 
@@ -120,7 +120,7 @@ When the microflow is called, the demo data is created and ingested into the kno
 
 Create a user interface to test and use the agent. It will look like this:
 
-{{< figure src="/attachments/genai/genai-howto-singleagent/TicketHelper_Agent.png" alt="">}}
+{{< figure src="/attachments/genai/howto-singleagent/TicketHelper_Agent.png" alt="">}}
 
 1. In your domain model, add a new entity `TicketHelper` and toggle **Persistable** to off. Add the following attributes:
 
@@ -192,7 +192,7 @@ This example focuses only on retrieval functions, but you can also expose functi
 
 Your completed microflow looks like this:
 
-{{< figure src="/attachments/genai/genai-howto-singleagent/GetNumberOfTicketsInStatus.png" alt="">}}
+{{< figure src="/attachments/genai/howto-singleagent/GetNumberOfTicketsInStatus.png" alt="">}}
 
 You have now successfully created your first function microflow to link to the agent in your chosen implementation approach. If users ask how many tickets are in the *Open* status, the model can call the exposed function microflow and base the final answer on your Mendix database.
 
@@ -219,7 +219,7 @@ You have now successfully created your first function microflow to link to the a
 
 Your completed microflow looks like this:
 
-{{< figure src="/attachments/genai/genai-howto-singleagent/GetTicketByID.png" alt="">}}
+{{< figure src="/attachments/genai/howto-singleagent/GetTicketByID.png" alt="">}}
 
 As a result of this function, users can ask for information for a specific ticket by providing a ticket identifier. For example, they can ask `What is ticket 42 about?`.
 

@@ -71,7 +71,7 @@ Run the app, log in as administrator, and verify that you can navigate to the **
 
 You can now create your first agent in the user interface. The final agent will look like this:
 
-{{< figure src="/attachments/genai/genai-howto-prompt-engineering/prompt_engineering_details.png" alt="Product Description Generator agent configuration page showing version, model, test case variables, system and user prompts, and context entity settings" >}}
+{{< figure src="/attachments/genai/howto-prompt-engineering/prompt_engineering_details.png" alt="Product Description Generator agent configuration page showing version, model, test case variables, system and user prompts, and context entity settings" >}}
 
 ### Creating the Initial Agent {#initial-agent}
 
@@ -137,7 +137,7 @@ To connect an agent with the rest of your application, it is helpful to create a
 
 In this section, you will create both the entity and the user interface. The final page will look like this:
 
-{{< figure src="/attachments/genai/genai-howto-prompt-engineering/prompt_engineering_user_interface.png" alt="Product creation form with fields for product name, number of words, generate button, and AI-generated product description" >}}
+{{< figure src="/attachments/genai/howto-prompt-engineering/prompt_engineering_user_interface.png" alt="Product creation form with fields for product name, number of words, generate button, and AI-generated product description" >}}
 
 1. In Studio Pro, go to your module's domain model. For new apps, this is **MyFirstModule**. 
 
@@ -200,7 +200,7 @@ You need to configure some additional settings for the agent before it can be us
 
 Create the microflow that is called when a user clicks the button. This microflow will execute a call to the LLM and set the `ProductDescription` attribute value to the model's response. The microflow, which can also be found in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) in **ExampleMicroflows** > **Prompt Engineering** > **ACT_Product_GenerateProductDescription**, will look like this:
 
-{{< figure src="/attachments/genai/genai-howto-prompt-engineering/prompt-engineering-microflow.png" alt="Microflow with four sequential steps: change Product Language, retrieve Agent from database, call Agent Without History, and update ProductDescription with response" >}}
+{{< figure src="/attachments/genai/howto-prompt-engineering/prompt-engineering-microflow.png" alt="Microflow with four sequential steps: change Product Language, retrieve Agent from database, call Agent Without History, and update ProductDescription with response" >}}
 
 1. In Studio Pro, go to the `Product_NewEdit` page.
 

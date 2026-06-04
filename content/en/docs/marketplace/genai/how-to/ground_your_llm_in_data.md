@@ -33,7 +33,7 @@ Before implementing this capability into your app, make sure you meet the follow
 
 ## Grounding Your LLM in a Data Use Case
 
-{{< figure src="/attachments/genai/genai-howto-goundllm/diagram.png" alt="" >}}
+{{< figure src="/attachments/genai/howto-ground-llm/diagram.png" alt="" >}}
 
 ### Choosing the Infrastructure
 
@@ -62,7 +62,7 @@ To start, create a microflow that allows you to upload data into your knowledge 
 
 1. Create a new microflow, for example, `ACT_TicketList_LoadAllIntoKnowledgeBase`.
 
-    {{< figure src="/attachments/genai/genai-howto-goundllm/loaddataintokb-example-replace.png" alt="" >}}
+    {{< figure src="/attachments/genai/howto-ground-llm/loaddataintokb-example-replace.png" alt="" >}}
 
 2. Add the `Retrieve Objects` action. You can configure it as follows:
     
@@ -108,7 +108,7 @@ This microflow first checks whether a list of tickets already exists in the data
 
 1. Create a new microflow, for example, `Tickets_CreateDataset`.
 
-    {{< figure src="/attachments/genai/genai-howto-goundllm/loaddataintokb-example-demodata.png" alt="" >}}
+    {{< figure src="/attachments/genai/howto-ground-llm/loaddataintokb-example-demodata.png" alt="" >}}
 
 2. Add a `Retrieve` action:
     
@@ -144,7 +144,7 @@ With both microflows created, they must be combined and added to the homepage to
 
 1. Create a new microflow `ACT_CreateDemoData_LoadAllIntoKnowledgeBase`.
 
-    {{< figure src="/attachments/genai/genai-howto-goundllm/loaddataintokb-example-combine.png" alt="" >}}
+    {{< figure src="/attachments/genai/howto-ground-llm/loaddataintokb-example-combine.png" alt="" >}}
 
 2. Add a `Call Microflow` action where you call the `MyFirstModule.Tickets_CreateDataset` microflow created above. 
 
@@ -170,7 +170,7 @@ To use the knowledge in a chat interface, create and adjust certain microflows a
 
     With the `MyFirstBot.ACT_FullScreenChat_Open microflow` configured, the `MyFirstBot.ChatContext_ChatWithHistory_ActionMicroflow` can now be adjusted to handle user-submitted messages in the chat interface.
 
-    {{< figure src="/attachments/genai/genai-howto-goundllm/chatcontext-microflow-example.png" alt="" >}}
+    {{< figure src="/attachments/genai/howto-ground-llm/chatcontext-microflow-example.png" alt="" >}}
 
 4. Open your `MyFirstBot.ChatContext_ChatWithHistory_ActionMicroflow` microflow in your **MyFirstBot** module.
 
@@ -183,7 +183,7 @@ To use the knowledge in a chat interface, create and adjust certain microflows a
 
 6. Add the `Tools: Add Knowledge Base` action with the settings shown in the image below:
 
-    {{< figure src="/attachments/genai/genai-howto-goundllm/tool-addknowledgebase-example.png" alt="" >}}
+    {{< figure src="/attachments/genai/howto-ground-llm/tool-addknowledgebase-example.png" alt="" >}}
 
 The rest of the actions can remain as they are currently set. Now that everything is implemented, you can test the chat with enriched knowledge.
 

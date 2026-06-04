@@ -72,7 +72,7 @@ All connectors depend on GenAI Commons and can be used with the other [core modu
 | --- | --- | --- |
 | [Amazon Bedrock Connector](/appstore/modules/aws/amazon-bedrock/) | Connect to Amazon Bedrock. | 10.24 |
 | [Google Gemini Connector](/agents/reference-guide/external-connectors/gemini/) | Connect to Google Gemini. | 10.24 |
-| [Mendix Cloud GenAI Connector](/agents/mx-cloud-genai/MxGenAI-connector/) | Connect to Mendix Cloud and use Mendix Cloud GenAI resource packs directly within your Mendix application. | 10.24 |
+| [Mendix Cloud GenAI Connector](/agents/mx-cloud-genai/mxgenai-connector/) | Connect to Mendix Cloud and use Mendix Cloud GenAI resource packs directly within your Mendix application. | 10.24 |
 | [Mistral Connector](/agents/reference-guide/external-connectors/mistral/) | Connect to Mistral AI. | 10.24 |
 | [OpenAI Connector](/agents/reference-guide/external-connectors/openai/) | Connect to OpenAI and Microsoft Foundry. | 10.24 |
 | [PgVector Knowledge Base](/agents/reference-guide/external-connectors/pgvector/) | Manage and interact with a PostgreSQL PgVector knowledge base. | 10.24 |

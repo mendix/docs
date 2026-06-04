@@ -1,6 +1,6 @@
 ---
 title: "Mendix Cloud GenAI Connector"
-url: /agents/mx-cloud-genai/MxGenAI-connector/
+url: /agents/mx-cloud-genai/mxgenai-connector/
 linktitle: "Mendix Cloud GenAI Connector"
 description: "Describes the configuration and usage of the Mendix Cloud GenAI Connector, enabling you to integrate Mendix Cloud GenAI Resource Packs directly into your Mendix application."
 weight: 20

@@ -116,7 +116,7 @@ Ingest Mendix ticket data into the knowledge base. For a detailed guide, see [Gr
 
 10. Add the new microflow to your navigation or homepage.
 
-When the microflow is called, the demo data is created and ingested into the knowledge base for later use. This needs to be called only once at the beginning. Make sure to first add a knowledge base resource. For more details, see [Configuration](/agents/mx-cloud-genai/MxGenAI-connector/#configuration).
+When the microflow is called, the demo data is created and ingested into the knowledge base for later use. This needs to be called only once at the beginning. Make sure to first add a knowledge base resource. For more details, see [Configuration](/agents/mx-cloud-genai/mxgenai-connector/#configuration).
 
 ### Setting Up the Domain Model and Creating a User Interface {#domain-model-setup}
 

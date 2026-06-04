@@ -25,7 +25,7 @@ Before integrating Agent Commons into your app, make sure you meet the following
 
 * An existing app: use a GenAI starter app such as the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934), or add to an app that you have already built
 * Access to an LLM of your choice, using Mendix Cloud GenAI or another compatible connector
-* Basic understanding of GenAI concepts: review the [Enrich Your Mendix App with Agentic Capabilities](/agents/) page for foundational knowledge and to familiarize yourself with [GenAI Concepts](/agents/using-gen-ai/)
+* Basic understanding of GenAI concepts: review the [Enrich Your Mendix App with Agentic Capabilities](/agents/) page for foundational knowledge and to familiarize yourself with [GenAI Concepts](/agents/get-started/)
 * Basic understanding of Mendix: knowledge of simple page building, microflow modeling, and domain model creation
 
 ## Use Case
@@ -61,7 +61,7 @@ If you are using a GenAI starter app such as the Blank GenAI app, you can skip a
 To enable generative AI capabilities, install and configure the [Mendix Cloud GenAI Connector](/agents/mx-cloud-genai/mxgenai-connector/) and its dependencies from the Mendix Marketplace. If you are using a GenAI starter app such as the Blank GenAI app, you can skip the installation and just follow the [configuration instructions](/agents/mx-cloud-genai/mxgenai-connector/#configuration).
 
 {{% alert color="info" %}}
-This example uses the Mendix Cloud GenAI Connector. Alternatively, you can install and configure an [external connector](/agents/reference-guide/external-connectors/) for any provider with a connector that is compatible with [GenAICommons](/agents/genai-for-mx/commons/). This includes [OpenAI](/agents/reference-guide/external-connectors/openai/) and [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). 
+This example uses the Mendix Cloud GenAI Connector. Alternatively, you can install and configure an [external connector](/agents/reference-guide/connectors/) for any provider with a connector that is compatible with [GenAICommons](/agents/genai-for-mx/commons/). This includes [OpenAI](/agents/reference-guide/external-connectors/openai/) and [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). 
 {{% /alert %}}
 
 ## Verifying Setup {#verification}

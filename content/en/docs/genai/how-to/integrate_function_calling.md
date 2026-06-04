@@ -30,7 +30,7 @@ Before integrating function calling into your app, make sure you meet the follow
 
 * Intermediate knowledge of the Mendix platform: Familiarity with Mendix Studio Pro, microflows, and modules.
 
-* Basic understanding of GenAI concepts: Review the [Enrich Your Mendix App with Agentic Capabilities](/agents/) page for foundational knowledge and familiarize yourself with the [concepts](/agents/using-gen-ai/).
+* Basic understanding of GenAI concepts: Review the [Enrich Your Mendix App with Agentic Capabilities](/agents/) page for foundational knowledge and familiarize yourself with the [concepts](/agents/get-started/).
 
 * Understanding Function Calling and Prompt Engineering: Learn about [Function Calling](/agents/function-calling/) and [Prompt Engineering](/agents/get-started/#prompt-engineering) to use them within the Mendix ecosystem.
 

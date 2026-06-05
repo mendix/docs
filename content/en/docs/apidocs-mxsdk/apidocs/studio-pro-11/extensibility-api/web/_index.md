@@ -35,7 +35,7 @@ For detailed information on how to get started with extensions, see [Get Started
 
 ## How-tos
 
-Below is a list of how-tos for you to begin with:
+The following how-tos help you get started:
 
 * [How Menus Work](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu/)
 * [How to Create a Dockable Pane](/apidocs-mxsdk/apidocs/web-extensibility-api-11/dockable-pane-api/)
@@ -51,3 +51,6 @@ Below is a list of how-tos for you to begin with:
 * [How to Exchange Information Between Active Views](/apidocs-mxsdk/apidocs/web-extensibility-api-11/message-passing-api/)
 * [How to Show Version Control Information](/apidocs-mxsdk/apidocs/web-extensibility-api-11/version-control-api/)
 * [How to Introduce a New Document Type](/apidocs-mxsdk/apidocs/web-extensibility-api-11/custom-blob-document-api/)
+* [How to Listen for Connection Changes](/apidocs-mxsdk/apidocs/web-extensibility-api-11/runtime-controller-api/)
+* [How to Access Runtime Constants](/apidocs-mxsdk/apidocs/web-extensibility-api-11/runtime-configuration-api/)
+* [How to Use Extension Permissions in Overview Pane](/apidocs-mxsdk/apidocs/web-extensibility-api-11/extension-permissions/)

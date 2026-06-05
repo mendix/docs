@@ -206,6 +206,7 @@ For deployments to Mendix Cloud, SAP BTP, and Mendix on Kubernetes, these settin
 | <a id="commendixstorages3SocketTimeout" href="#commendixstorages3SocketTimeout">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>SocketTimeout</a> | Sets the amount of time to wait (in milliseconds) for data to be transferred over an established, open connection before the connection times out and is closed.  A value of `0` means infinity and is not recommended. For more information, see the [AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setSocketTimeout-int-). | 50.000 (50 seconds) |
 | <a id="commendixstorages3RequestTimeout" href="#commendixstorages3RequestTimeout">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>RequestTimeout</a> | Sets the amount of time to wait (in milliseconds) for the request to complete before giving up and timing out. A value of `0` means no timeout. For more information, see [the AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setRequestTimeout-int-). | 0 (no timeout) |
 | <a id="commendixstorages3UseCACertificates" href="#commendixstorages3UseCACertificates">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>UseCACertificates</a> | Set this value to `true` to use the configured [CACertificates](#CACertificates) for the connection to the S3 service. | false |
+| <a id="FileStorageS3DisableChunkedEncoding" href="#FileStorageS3DisableChunkedEncoding">FileStorage.<wbr>S3.<wbr>DisableChunkedEncoding</a> | Set this value to `true` to disable chunked transfer encoding when uploading files to S3 storage. This setting can be useful when working with S3-compatible storage services that do not fully support chunked encoding.`<br />*This setting was introduced in Mendix version 10.24.17* | false |
 
 ## Microsoft Azure SQL {#azure-sql}
 
@@ -273,6 +274,7 @@ Azure blob storage's default connection protocol is HTTPS in order to encourage 
 
 The settings below influence the behavior of the Mendix web client.
 
+<!-- markdownlint-disable -->
 | Name | Description | Default Value |
 | --- | --- | --- |
 | <a id="EnableKeepAlive" href="#EnableKeepAlive">EnableKeepAlive</a> | Defines whether the web client sends a keep alive request every SessionTimeout/2 milliseconds, to prevent a session timeout. Each interaction of the client with the runtime also acts as KeepAlive. Disabling this property will result in a user being logged out automatically after 10 minutes of inactivity, even if the browser remains open. | true |
@@ -282,11 +284,12 @@ The settings below influence the behavior of the Mendix web client.
 | <a id="commendixwebuiFeedbackSizeWarningThreshold" href="#commendixwebuiFeedbackSizeWarningThreshold">com.<wbr>mendix.<wbr>webui.<wbr>FeedbackSizeWarningThreshold</a> | A warning is logged when the feedback size exceeds the threshold. Feedback is sent from server to client to instruct (for example, to refresh objects or to open a page). They are serialized as "instructions" in the server response. If there are too many instructions, this can have performance implications, as they all have to be serialized to the client. For this reason, a warning is logged when the threshold is exceeded. | 5000 |
 | <a id="commendixwebuiStateSizeWarningThreshold" href="#commendixwebuiStateSizeWarningThreshold">com.<wbr>mendix.<wbr>webui.<wbr>StateSizeWarningThreshold</a> | A warning is logged when the state size exceeds the threshold. The state consists of changes in objects and of objects not committed to the database (yet). If there is too much state, this will have performance implications, as the whole state has to be serialized to the client. For this reason, a warning is logged when the threshold is exceeded. | 100 |
 | <a id="commendixwebuiCommittedObjectsThreshold" href="#commendixwebuiCommittedObjectsThreshold">com.<wbr>mendix.<wbr>webui.<wbr>CommittedObjectsThreshold</a> | The threshold controls how much data is sent back to the client after executing a microflow. By default, we send back full objects when they are changed or committed. When this threshold is reached, only object GUIDs are sent back instead so that the client knows about the changes while the amount of data sent over the network is reduced. The client will then retrieve the objects later on, if needed. | 100 |
-| <a id="MaxRetrieveAmount" href="#MaxRetrieveAmount">MaxRetrieveAmount</a> | The maximum number of objects the client is allowed to retrieve by list widgets using database datasource runtime operation.<br/>When requesting more objects than allowed, the runtime will enforce the `MaxRetrieveAmount` by setting a limit on the query and will log the following warning: `A retrieve action requested more objects than allowed by the `MaxRetrieveAmount` runtime setting. Amount requested: (...), MaxRetrieveAmount: (...).`<br />*This setting was introduced in Mendix version 10.24.16* |  |
+| <a id="MaxRetrieveAmount" href="#MaxRetrieveAmount">MaxRetrieveAmount</a> | The maximum number of objects the client is allowed to retrieve by list widgets using database datasource runtime operation.<br/>When requesting more objects than allowed, the runtime will enforce the `MaxRetrieveAmount` by setting a limit on the query and will log the following warning: `A retrieve action requested more objects than allowed by the `MaxRetrieveAmount` runtime setting. Amount requested: (...), MaxRetrieveAmount: (...)`.<br />*This setting was introduced in Mendix version 10.24.16* |  |
+<!-- markdownlint-enable -->
 
 ## Metrics Settings{#metrics-settings}
 
-The settings below configure metrics through [micrometer](https://micrometer.io/docs). See [Metrics](/refguide10/metrics/) for more information and the specification of the settings format. 
+The settings below configure metrics through [micrometer](https://micrometer.io/docs). See [Metrics](/refguide10/metrics/) for more information and the specification of the settings format.
 
 | Name | Description | Default Value |
 | --- | --- | --- |
@@ -311,8 +314,8 @@ These settings can be set either as JVM properties or as custom Runtime settings
 | --- | --- | --- |
 | <a id="httpproxyHost" href="#httpproxyHost">http.proxyHost</a> | Defines the hostname of the HTTP proxy server. | |
 | <a id="httpproxyPort" href="#httpproxyPort">http.proxyPort</a> | Defines the port number of the HTTP proxy server. | |
-| <a id="httpproxyUser" href="#httpproxyUser">http.proxyUser</a> | Defines the user of the HTTP proxy server. | | 
-| <a id="httpproxyPassword" href="#httpproxyPassword">http.proxyPassword</a> | Defines the password of the HTTP proxy server. | | 
+| <a id="httpproxyUser" href="#httpproxyUser">http.proxyUser</a> | Defines the user of the HTTP proxy server. | |
+| <a id="httpproxyPassword" href="#httpproxyPassword">http.proxyPassword</a> | Defines the password of the HTTP proxy server. | |
 
 {{% alert color="info" %}}
 The `http.` part of the names of these settings does not imply anything about whether the `HTTP` or `HTTPS` protocol is used - it is just the name of the setting.
@@ -330,9 +333,9 @@ These settings have to be set as JVM properties, not as custom runtime settings.
 | --- | --- | --- |
 | <a id="httpsproxyHost" href="#httpsproxyHost">https.proxyHost</a> | Defines the hostname of the HTTPS proxy server. | |
 | <a id="httpsproxyPort" href="#httpsproxyPort">https.proxyPort</a> | Defines the port number of the HTTPS proxy server. | |
-| <a id="httpsproxyUser" href="#httpsproxyUser">https.proxyUser</a> | Defines the user of the HTTPS proxy server. | | 
-| <a id="httpsproxyPassword" href="#httpsproxyPassword">https.proxyPassword</a> | Defines the password of the HTTPS proxy server. | | 
-| <a id="httpsnonProxyHosts" href="#httpsnonProxyHosts">https.nonProxyHosts</a> | Defines a list of hosts that should be reached directly, bypassing the proxy. This is a list of patterns separated by '&#x007C;'. The patterns may start or end with a '*' for wildcards. | | 
+| <a id="httpsproxyUser" href="#httpsproxyUser">https.proxyUser</a> | Defines the user of the HTTPS proxy server. | |
+| <a id="httpsproxyPassword" href="#httpsproxyPassword">https.proxyPassword</a> | Defines the password of the HTTPS proxy server. | |
+| <a id="httpnonProxyHosts" href="#httpnonProxyHosts">http.nonProxyHosts</a> | Defines a list of hosts that should be reached directly, bypassing the proxy. This is a list of host names separated by '&#x007C;'. | |
 
 {{% alert color="info" %}}
 The `https.` part of the names of these settings does not imply anything about whether the `HTTP` or `HTTPS` protocol is used - it is just the name of the setting.

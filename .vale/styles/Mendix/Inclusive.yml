@@ -1,0 +1,22 @@
+# Mendix custom rule: Inclusive language
+# Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/terminology.md
+extends: substitution
+message: "Use '%s' instead of '%s'"
+level: error
+ignorecase: true
+scope:
+  - paragraph
+  - heading
+  - list
+  - table
+  - blockquote
+action:
+  name: replace
+swap:
+  blacklist: blocklist
+  whitelist: allowlist
+  slave: follower
+  'he/she': they
+  'his/her': their
+  'his or her': their
+  'he or she': they

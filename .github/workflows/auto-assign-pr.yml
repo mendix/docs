@@ -1,0 +1,55 @@
+name: Auto-assign PR to Technical Writers
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  auto-assign:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+
+    steps:
+      - name: Assign PR to creator if on Technical Writers team
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const creator = context.payload.pull_request.user.login;
+            const prNumber = context.payload.pull_request.number;
+            const assignees = context.payload.pull_request.assignees;
+
+            // Technical Writers team members
+            const techWriters = [
+              'ConnorLand',
+              'Karuna-Mendix',
+              'MariaShaposhnikova',
+              'MarkvanMents',
+              'NicoletaComan',
+              'OlufunkeMoronfolu',
+              'Yiyun333',
+              'dbreseman',
+              'katarzyna-koltun-mx',
+              'quinntracy'
+            ];
+
+            console.log(`Processing PR #${prNumber} by ${creator}`);
+            console.log(`Current assignees: ${assignees.length > 0 ? assignees.map(a => a.login).join(', ') : 'none'}`);
+
+            if (assignees.length > 0) {
+              console.log('PR already has assignees, skipping auto-assignment');
+              return;
+            }
+
+            if (techWriters.includes(creator)) {
+              console.log(`${creator} is on technical writers team, assigning PR...`);
+              await github.rest.issues.addAssignees({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                assignees: [creator]
+              });
+              console.log(`Successfully assigned PR #${prNumber} to ${creator}`);
+            } else {
+              console.log(`${creator} is not on technical writers team, skipping assignment`);
+            }

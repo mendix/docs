@@ -200,7 +200,7 @@ In addition to adding new parameters, you can perform the following actions on p
 
 ### Boundary Events Section {#boundary-events}
 
-For more information, see [Boundary Events](/refguide/workflow-boundary-events/).
+Boundary events can be attached to this element and are triggered by certain events to handle exceptional situations during its execution. For more information, see [Boundary Events](/refguide/workflow-boundary-events/).
 
 ### Common Section {#common}
 

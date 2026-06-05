@@ -174,3 +174,5 @@ Rule | Name | Pattern | Rewrite URL
 2 | docgen | `^(docgen/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 
 {{% alert color="info" %}}Rule 1 is based on the default URL prefix (`p`) for page/microflow URLs. If you configured a different prefix in the runtime settings of your app, adjust the rule accordingly.{{% /alert %}}
+
+{{% alert color="info" %}}If you use IIS as your reverse proxy, make sure that the [default document](https://learn.microsoft.com/en-us/iis/configuration/system.webserver/defaultdocument/) is configured to serve `index.html`. Without this setting, the base URL does not resolve correctly, and document generation fails.{{% /alert %}}

@@ -1,12 +1,21 @@
 ---
 title: "Mendix SSO"
 url: /appstore/modules/mendix-sso/
+deprecated: true
 description: "Describes the configuration and usage of the Mendix SSO module, which is available in the Mendix Marketplace."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #Please do not rename the anchor #supplements in this document as it is used in links from the module release notes.
 ---
 
 ## Introduction
+
+{{% alert color="warning" %}}
+This module is deprecated as of May 1, 2026, and will be removed from the public Marketplace on November 1, 2026.  
+
+To ensure uninterrupted single sign-on functionality for end users, Mendix recommends migrating to the [OIDC SSO](/appstore/modules/oidc/) module, which requires configuring an identity provider (IdP). 
+
+If an external IdP is not available, you may alternatively use local in-app credentials or implement a custom SSO solution using the [OIDC Provider](/appstore/services/oidc-provider/) module.
+{{% /alert %}}
 
 With the [Mendix SSO](https://marketplace.mendix.com/link/component/111349/) module, you can utilize single sign-on functionality by directly integrating with the Mendix identity provider and leveraging the [OpenID Connect](https://openid.net/connect/) framework.
 

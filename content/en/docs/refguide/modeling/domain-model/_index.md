@@ -20,10 +20,6 @@ A domain model consists of [entities](/refguide/entities/) with their relationsh
 * External (purple) – entities, described in the [Mendix Catalog](/catalog/), which contain data which belongs to another app or service and is needed while the end-user is using the app but isn't stored in the database of the app
 * View (green) – entities which are the result of a stored OQL query on persistable entities or other view entities (this feature is in beta)
 
-{{% alert color="info" %}}
-[View entities](/refguide/view-entities/) is currently in beta. To enable this feature in your app, set the OQL version to version 2 by clicking **App** > **Settings** > **Runtime**.
-{{% /alert %}}
-
 You can also add [annotations](/refguide/annotations/) to your domain model to remind yourself, and other team members, how it is to be used.
 
 See [Configuring a Domain Model](/refguide/configuring-a-domain-model/) for information on how to create persistable and non-persistable entities in the domain model of your app modules. See [External Entities](/refguide/external-entities/) for how to add an external entity to your app.

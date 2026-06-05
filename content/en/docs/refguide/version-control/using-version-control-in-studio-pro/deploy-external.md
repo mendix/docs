@@ -76,5 +76,3 @@ git fetch --depth 1 origin <sha1-of-commit-of-interest>
 # reset this repository's master branch to the commit of interest
 git reset --hard FETCH_HEAD
 ```
-
-

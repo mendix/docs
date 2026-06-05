@@ -94,9 +94,9 @@ The navigation pane is divided into these main categories:
 * [General](/developerportal/general/)
 * [Project Management](/developerportal/project-management/)
 * [App Insights](/developerportal/app-insights/)
-* [Repository]()
+* [Repository](/developerportal/repository/)
 * [Deployment](/developerportal/deploy/general/)
-* [Monitoring]()
+* [Monitoring](/developerportal/monitoring/)
 
 {{% alert color="info" %}}
 The features in the navigation pane can also be accessed via APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).

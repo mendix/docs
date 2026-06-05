@@ -8,6 +8,12 @@ aliases:
     - /howto/mobile/setting-up-google-firebase-cloud-messaging-server/
 ---
 
+{{% alert color="info" %}}
+Google will stop publishing new Firebase versions to CocoaPods in October 2026. Existing published versions will remain available indefinitely — they will not be removed. This means apps using Firebase through Mendix native today will continue to build and run without interruption. 
+
+Mendix will update the Native Template to use Swift Package Manager once React Native ships official support, which we expect around September 2026. No action is required now.
+{{% /alert %}}
+
 ## Introduction
 
 This guide teaches you how to register native or progressive web apps (PWAs) for FCM and configure the service in your app.

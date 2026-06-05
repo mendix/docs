@@ -16,13 +16,15 @@ jobs:
     # Only run on Mendix repo, not forks, and not on draft PRs
     if: github.repository_owner == 'mendix' && github.event.pull_request.draft == false
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     # Cancel old runs when new commits are pushed
     concurrency:
       group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
       cancel-in-progress: true
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Get changed files
         id: changed-files

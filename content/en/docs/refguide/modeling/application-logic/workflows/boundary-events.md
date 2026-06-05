@@ -77,7 +77,7 @@ When a boundary event is added to an ongoing activity, any workflow instances cu
 
 ### Changing Boundary Event Type
 
-You can change the type of an existing boundary event via the context menu. To do so:
+You can change the type of existing boundary event via the context menu, without having to delete and re-add it. To do so:
 
 1. Right-click the boundary event to open its context menu.
 2. Click **Change event**.

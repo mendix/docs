@@ -1,6 +1,6 @@
 #!/bin/bash
 # Post-processing script to fix doubled paths in Siemens internal deployment
-# This script copies CSS and JS files to the location where Hugo's canonifyURLs generates doubled paths
+# This script copies CSS, JS, and font files to the location where Hugo's canonifyURLs generates doubled paths
 
 set -e
 
@@ -12,6 +12,8 @@ echo "Fixing doubled paths for Siemens internal deployment..."
 # Create the doubled path directory structure
 mkdir -p "${PUBLIC_DIR}/${DEEP_PATH}/scss"
 mkdir -p "${PUBLIC_DIR}/${DEEP_PATH}/js"
+mkdir -p "${PUBLIC_DIR}/${DEEP_PATH}/webfonts"
+mkdir -p "${PUBLIC_DIR}/${DEEP_PATH}/fonts"
 
 # Copy CSS files
 echo "Copying CSS files..."
@@ -22,5 +24,10 @@ cp "${PUBLIC_DIR}/scss/main.css.map" "${PUBLIC_DIR}/${DEEP_PATH}/scss/main.css.m
 echo "Copying JS files..."
 cp "${PUBLIC_DIR}/js/main.js" "${PUBLIC_DIR}/${DEEP_PATH}/js/main.js"
 cp "${PUBLIC_DIR}/js/click-to-copy.js" "${PUBLIC_DIR}/${DEEP_PATH}/js/click-to-copy.js"
+
+# Copy font files (needed because CSS references ../webfonts/ and /fonts/)
+echo "Copying font files..."
+cp -r "${PUBLIC_DIR}/webfonts/"* "${PUBLIC_DIR}/${DEEP_PATH}/webfonts/"
+cp -r "${PUBLIC_DIR}/fonts/"* "${PUBLIC_DIR}/${DEEP_PATH}/fonts/"
 
 echo "Done! Files copied to handle doubled paths."

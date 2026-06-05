@@ -37,7 +37,7 @@ We use a two-step approach:
 
 This approach:
 - ✅ Requires no changes to templates or Markdown content
-- ✅ Only duplicates 3 small files (~740KB total)
+- ✅ Only duplicates necessary assets (~3.4MB total: CSS, JS, and fonts)
 - ✅ Works for all images and page links automatically
 - ✅ Simple to maintain
 
@@ -65,12 +65,16 @@ Sets the baseURL and enables:
 - `uglyURLs = true` to ensure proper URL resolution on the Siemens server
 
 ### scripts/fix-siemens-paths.sh
-Post-processing script that copies:
-- `scss/main.css` and `scss/main.css.map`
-- `js/main.js`
-- `js/click-to-copy.js`
 
-to the doubled-path location: `public/documentation/internal/PL20260323299104942/en-US/public/{scss,js}/`
+Post-processing script that copies assets to the doubled-path location where Hugo's `canonifyURLs` generates references:
+
+* `scss/main.css` and `scss/main.css.map`
+* `js/main.js`
+* `js/click-to-copy.js`
+* `webfonts/*` (Font Awesome fonts - referenced via relative paths in CSS)
+* `fonts/*` (Noto Sans and Patron fonts - referenced via root-relative paths in CSS)
+
+All files are copied to: `public/documentation/internal/PL20260323299104942/en-US/public/{scss,js,webfonts,fonts}/`
 
 ## Technical Details
 

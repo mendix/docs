@@ -8,9 +8,9 @@ weight: 80
 
 ## Introduction
 
-The Model Context Protocol (MCP) is an open protocol that standardizes how Large Language Models (LLMs) can autonomously connect to apps. Many AI platforms and third-party systems have already adopted MCP for easier integration and empowerment of LLMs. Mendix provides an MCP Server module to facilitate an MCP server from a Mendix app, as well as an MCP Client module. For more information, see [Model Context Protocol (MCP)](/appstore/modules/genai/mcp/).
+The Model Context Protocol (MCP) is an open protocol that standardizes how Large Language Models (LLMs) can autonomously connect to apps. Many AI platforms and third-party systems have already adopted MCP for easier integration and empowerment of LLMs. Mendix provides an MCP Server module to facilitate an MCP server from a Mendix app, as well as an MCP Client module. For more information, see [Model Context Protocol (MCP)](/agents/mcp/).
 
-[Snowflake-managed MCP servers](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp) enable AI agents to securely integrate with Snowflake accounts without needing to deploy separate infrastructure. This includes performing CRUD (Create, Read, Update, and Delete) operations on data, as well as leveraging functionalities such as stored procedures and Cortex. Mendix users can configure the [MCP Client Module](/appstore/modules/genai/mcp-modules/mcp-client/) to enable the connection from a Mendix AI agent to a Snowflake MCP server.
+[Snowflake-managed MCP servers](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp) enable AI agents to securely integrate with Snowflake accounts without needing to deploy separate infrastructure. This includes performing CRUD (Create, Read, Update, and Delete) operations on data, as well as leveraging functionalities such as stored procedures and Cortex. Mendix users can configure the [MCP Client Module](/agents/mcp-modules/mcp-client/) to enable the connection from a Mendix AI agent to a Snowflake MCP server.
 
 ### Typical Use Cases
 
@@ -390,7 +390,7 @@ CREATE OR REPLACE MCP SERVER SNOWFLAKE_MCP_DEMO.MCPSERVERS.DEMO_MCP_SERVER
 
 After setting up the MCP server, you can now create a Mendix AI agent and connect it to the MCP server by performing the following steps:
 
-1. Optional: If your [MCP Client](/appstore/modules/genai/mcp-modules/mcp-client/) version is older than 3.1.0, update it to version 3.1.0 or newer.
+1. Optional: If your [MCP Client](/agents/mcp-modules/mcp-client/) version is older than 3.1.0, update it to version 3.1.0 or newer.
 2. In Studio Pro, create a new app using the [Agent Builder Starter App](https://marketplace.mendix.com/link/component/240369).
 3. Create a constant for the Snowflake user PAT that you created in the previous section, and set its value in the Runtime configuration.
 4. Go to **App/Marketplace Modules/MCPClient/Example Implementations/MCP Client/** and copy the **GetCredentials_EXAMPLE** microflow to your own app module. 

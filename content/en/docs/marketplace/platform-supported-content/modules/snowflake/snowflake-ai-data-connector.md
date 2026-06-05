@@ -302,7 +302,7 @@ This statement returns data from a Snowflake table with the columns named as spe
 
 ## Configuring Snowflake Cortex Analyst {#cortex-analyst}
 
-[Snowflake Cortex Analyst](/appstore/modules/genai/snowflake-cortex/) is a fully-managed, LLM-powered Snowflake Cortex feature that helps you create applications capable of reliably answering business questions based on your structured data in Snowflake.
+[Snowflake Cortex Analyst](/agents/snowflake-cortex/) is a fully-managed, LLM-powered Snowflake Cortex feature that helps you create applications capable of reliably answering business questions based on your structured data in Snowflake.
 
 {{% alert color="info" %}}
 Snowflake Cortex Analyst is now generally available. For more information, refer to the [Snowflake Cortex Analyst documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst).
@@ -379,4 +379,4 @@ To configure your Mendix app for Snowflake Cortex Search, perform the following 
 
 ### Example Implementation
 
- The [Snowflake showcase app](https://marketplace.mendix.com/link/component/225845) contains example implementations of the Analyst, ANOMALY DETECTION, COMPLETE and TRANSLATE functionalities. For more information, see [Snowflake Cortex Analyst](/appstore/modules/genai/snowflake-cortex/#functionalities).
+ The [Snowflake showcase app](https://marketplace.mendix.com/link/component/225845) contains example implementations of the Analyst, ANOMALY DETECTION, COMPLETE and TRANSLATE functionalities. For more information, see [Snowflake Cortex Analyst](/agents/snowflake-cortex/#functionalities).

@@ -3,7 +3,6 @@ title: "Use Call REST Service Action in a Microflow"
 url: /refguide/integration/use-call-rest-action-in-microflow/
 weight: 15
 description: "Describes how to integrate an existing system or a legacy system into a Mendix app by calling a REST service in a microflow."
-description: "Describes how to get information from a REST service."
 aliases:
     - /howto/integration/consume-a-rest-service/
 ---

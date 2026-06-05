@@ -45,7 +45,7 @@
     <button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
     <button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
     <p class="feedback--response feedback--response-yes">
-      {{ .yes | safeHTML }}
+      {{ .Site.Params.ui.feedback.yes | safeHTML }}
     </p>
     <p class="feedback--response feedback--response-no">
       Sorry to hear that. Please <a class="feedback--link" target="_blank" href="">tell us how we can improve</a>.

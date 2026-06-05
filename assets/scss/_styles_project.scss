@@ -88,7 +88,7 @@
     max-width: 90%;  // NK - fixed width of all content to 90%
 
     p, li, td {
-        font-weight: $font-weight-body-text;
+        font-weight: $td-font-weight-body-text;
     }
 
     // NK - custom additions for margin styling in lists
@@ -339,6 +339,11 @@ img {
         // Hugo's ToC is a mouthful, this can be used to style the top level h2 entries.
         > ul > li > ul > li > a {}
 
+        // Override Docsy 0.15+ which makes ToC bold by default
+        > ul > li > :not(ul) {
+            font-weight: $font-weight-normal;
+        }
+
         a {
             // NK - styling for ToC
             color: $gray-800;
@@ -346,9 +351,11 @@ img {
             padding-bottom: .25rem;
             padding-top: .25rem;
 
-            &:hover {
+            &:hover,
+            &:focus {
                 color: $link-hover-color;
                 text-decoration: underline;
+                background-color: transparent; // Override Docsy 0.15+ hover background
             }
         }
 
@@ -409,6 +416,7 @@ img {
 
 .td-sidebar {
     @include media-breakpoint-up(md) {
+        margin-top: 0; // Olu - removed docsy margin to align sidebar to top of page
         padding-top: 5.25rem; // DB – aligns with .td-main main padding-top
         background-color: $td-sidebar-bg-color;
         padding-right: 1rem;

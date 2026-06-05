@@ -1,5 +1,7 @@
 # Vale Configuration for Mendix Documentation
 
+<!-- vale off -->
+
 [Vale](https://vale.sh/docs/) lints the documentation with both Microsoft Writing Style Guide rules and custom Mendix rules to catch style violations, grammar issues, and terminology inconsistencies. It matches text against patterns and rules defined in the .vale/styles YAML files, providing deterministic feedback based on these configurable rules.
 
 It applies in the following contexts:

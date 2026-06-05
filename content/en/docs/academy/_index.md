@@ -2,7 +2,7 @@
 title: "Mendix Academy"
 url: /academy/
 description: "Provides information about the Mendix Academy."
-weight: 39
+weight: 38
 ---
 
 ## Introduction

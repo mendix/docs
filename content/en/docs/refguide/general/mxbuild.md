@@ -73,8 +73,8 @@ Command-line options are described in the table below:
 | `--write-errors=FILENAME` | Writes all errors, warnings, and deprecations encountered during deployment of the app to the specified file in JSON format.<br />This file is only written when the app contains errors.<br />If the file already exists, it will be overwritten without a warning.<br />For a description of the format of this file, see the [App Errors](#app-errors) section below. |
 | `--generate-sbom` | Generates a Software Bill of Materials (SBOM) file as a part of the `package` and `deployment` targets. The SBOM will be included in the deployment package if this option is used and is saved under its default location: `deployment\sbom.json` |
 | `--sbom-output-path=VALUE` | The file path to generate a bill of material file for the `package` and `deployment` targets. Use `--output` for the `sbom` target (Default value: `deployment\sbom.json`). <br>This parameter is deprecated and will be removed in Mendix 11 and replaced with the `sbom` target.</br> |
-| `--gradle-home` | Sets the Gradle home directory. This can be used when auto-detection of the Gradle installation fails. |
-| `--extra-gradle-arguments` | Adds extra arguments to the Gradle process. |
+| `--gradle-home=DIRECTORY` | Sets the Gradle home directory. This can be used when auto-detection of the Gradle installation fails. |
+| `--extra-gradle-arguments=EXTRA_ARGUMENTS` | Adds extra arguments to the Gradle process. |
 
 ### Options When Creating a Package
 

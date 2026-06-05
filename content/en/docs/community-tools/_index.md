@@ -2,7 +2,7 @@
 title: "Community"
 url: /community-tools/
 description: "Describes the main tools that Mendix maintains to support the awesome Mendix community."
-weight: 38
+weight: 36
 no_list: false 
 description_list: true
 cascade:

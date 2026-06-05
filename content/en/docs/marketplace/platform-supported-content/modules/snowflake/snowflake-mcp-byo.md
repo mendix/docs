@@ -27,7 +27,7 @@ Using a Snowflake BYOK has the following advantages:
 
     For applications running locally in Studio Pro, you can retrieve your own IP address from [whatismyipaddress.com](https://whatismyipaddress.com/). For applications running in Mendix Cloud, see [Mendix IP Addresses: Mendix Cloud](/developerportal/deploy/mendix-ip-addresses/#mendix-cloud).
 
-* [OpenAI Connector](/appstore/modules/genai/reference-guide/external-connectors/openai/) in your Mendix application
+* [OpenAI Connector](/agents/reference-guide/external-connectors/openai/) in your Mendix application
 
 ## Configuring the Snowflake LLM in the OpenAI Connector
 

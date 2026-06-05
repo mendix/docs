@@ -2,7 +2,7 @@
 title: "Mendix Support"
 url: /support/
 description: "Provides information on how to obtain support for your Mendix apps."
-weight: 47
+weight: 54
 no_list: false 
 description_list: true
 cascade:

@@ -2,7 +2,7 @@
 title: "Private Mendix Platform"
 url: /private-mendix-platform/
 description: "Presents documentation on configuring and using the Private Mendix Platform."
-weight: 42
+weight: 50
 no_list: false 
 description_list: true 
 cascade:

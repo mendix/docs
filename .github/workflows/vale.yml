@@ -23,6 +23,12 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            .vale.ini
+            .vale
+            content/en/docs
+          sparse-checkout-cone-mode: false
 
       - name: Get changed files
         id: changed-files

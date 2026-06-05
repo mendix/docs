@@ -150,7 +150,7 @@ For Mendix Cloud GenAI Model Resources using Anthropic’s Claude and Cohere’s
 
 Data stored in GenAI Knowledge Base Resources resides in a logically isolated database, accessible only to you—the customer—via keys you can generate in the Portal.
 
-### How Does Mendix Cloud GenAI Service Store and Use Data Sent to It?
+### How Does the Mendix Cloud GenAI Service Store and Use Data Sent to It?
 
 Requests (prompts) sent to and responses (answers, embeddings) received from the models are not stored and not used for training. Only metadata—such as token input/output counts—is collected for logging, monitoring, metering, billing, product improvement, and maintenance purposes.
 

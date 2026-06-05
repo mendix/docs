@@ -16,7 +16,7 @@ The [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/2250
 
 ### Typical Use Cases {#use-cases}
 
-This module is particularly powerful for Mendix apps that use large language models in generative AI contexts. The PgVector Knowledge Base module allows these apps to securely use private company data in the app logic. For example, this is essential when constructing prompts.
+This module is particularly powerful for Mendix apps that use large language models in generative AI contexts. The PgVector Knowledge Base module allows these apps to securely use private company data in the app logic. For example, this might be essential when constructing prompts.
 
 When you need a separate private knowledge base outside of the LLM infrastructure, this module provides a low-code way to store discrete pieces of data (commonly referred to as chunks) in the private knowledge base and retrieve relevant information for end-user actions or app processes.
 

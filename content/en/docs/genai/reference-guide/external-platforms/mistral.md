@@ -108,7 +108,7 @@ JSON mode instructs the model to return valid JSON. To use JSON mode with the Mi
 
 Function calling enables LLMs to connect with external tools to gather information, run actions, convert natural language into structured data, and more. Function calling enables the model to intelligently decide when to let the Mendix app call one or more predefined function microflows to gather additional information for the assistant's response.
 
-Mistral does not call the function. The model returns a tool called JSON structure that builds the input of the function (or functions) so they can run as part of the chat completions operation. Functions in Mendix are essentially microflows that can be registered within the request to the LLM. The OpenAI connector handles the tool call response and runs the function microflows until the API returns the assistant's final response for Mistral. 
+Mistral does not call the function. The model returns a tool called JSON structure that is used to build  the input of the function (or functions) so they can run as part of the chat completions operation. Functions in Mendix are essentially microflows that can be registered within the request to the LLM. The OpenAI connector handles the tool call response and runs the function microflows until the API returns the assistant's final response for Mistral. 
 
 The GenAI Commons chat completions operations mentioned earlier run this implementation. As a developer, you must make the system aware of your functions and their purposes by registering the functions to the request. To do so, use the GenAI Commons operation [Tools: Add Function to Request](/agents/genai-for-mx/commons/#add-function-to-request) once per function before passing the request to the chat completions operation.
 

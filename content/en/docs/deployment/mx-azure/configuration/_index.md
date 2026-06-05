@@ -126,7 +126,7 @@ Certain configuration changes require Mendix intervention and can only be perfor
 
 | Configuration Change | Description |
 | --- | --- |
-| PostgreSQL Maintenance Window | Configure a dedicated maintenance window for the PostgreSQL database hosting your Mendix app databases. Since maintenance might cause temporary app downtime, you can request a custom schedule instead of the default system-managed one. For more information, see the [Microsoft documentation on PostgreSQL maintenance windows](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/concepts-maintenance). **Note**: This is separate from AKS maintenance windows, which you can configure directly (see [Configuring AKS Planned Maintenance Windows](#aks-maintenance-windows)). |
+| PostgreSQL Maintenance Window | Configure a dedicated maintenance window for the PostgreSQL database hosting your Mendix app databases. Since maintenance might cause temporary app downtime, you can request a custom schedule instead of the default system-managed one. For more information, see the [Microsoft documentation on PostgreSQL maintenance windows](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/concepts-maintenance). This is separate from AKS maintenance windows, which you can configure directly (see [Configuring AKS Planned Maintenance Windows](#aks-maintenance-windows)). |
 
 {{% alert color="info" %}} 
 Please submit Mendix on Azure support tickets exclusively through the Mendix on Azure portal. Tickets created here automatically capture vital context such as cluster identifiers and logs, enabling faster, more accurate support.

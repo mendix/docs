@@ -5,23 +5,27 @@ This directory contains the Hugo environment configuration for deploying the Men
 ## Deployment URL
 
 The site is deployed at:
+
 ```
 https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/public/
 ```
 
 ## The Problems
 
-### 1. Deep URL Path
+### 1. Deep URL Path (Fixed in Hugo v0.156.0+)
 
-When deploying a Hugo site to a deep URL path (not at the domain root), CSS, JavaScript, and image references need to include the full path. Hugo generates URLs based on the `baseURL` setting, but with deep paths, the `canonifyURLs` feature can cause some assets (specifically CSS and JS) to have doubled paths.
+**Historical Issue**: Earlier versions of Hugo had a bug where `canonifyURLs` generated doubled paths for CSS and JS assets when deploying to a deep URL path (not at the domain root).
 
-For example:
-- Expected: `https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/public/scss/main.css`
-- Generated: `https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/public/documentation/internal/PL20260323299104942/en-US/public/scss/main.css`
+Example of the old bug:
+
+* Expected: `https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/public/scss/main.css`
+* Generated: `https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/public/documentation/internal/PL20260323299104942/en-US/public/scss/main.css`
+
+**Status**: ✅ This issue was fixed in Hugo v0.156.0. The `canonifyURLs` setting now correctly handles deep baseURL paths without generating doubled paths.
 
 ### 2. Pretty URLs Not Supported
 
-The Siemens internal server does not properly serve Hugo's default "pretty URLs" (e.g., `/page/` resolving to `/page/index.html`). To work around this, we use `uglyURLs = true` which changes how Hugo generates URLs in the HTML:
+The Siemens internal server does not serve Hugo's default "pretty URLs" (like `/page/` resolving to `/page/index.html`). To work around this, use `uglyURLs = true`, which changes how Hugo generates URLs in the HTML:
 
 * **Without uglyURLs**: Links like `<a href="/refguide/">` rely on the server resolving the directory to `index.html`
 * **With uglyURLs**: Links explicitly include `/index.html` where needed, ensuring compatibility with servers that don't automatically serve directory indexes
@@ -30,82 +34,80 @@ Note: The file structure remains the same (directories with `index.html` files i
 
 ## The Solution
 
-We use a two-step approach:
+Configure Hugo with the appropriate settings for deep URL deployment:
 
-1. **Configure Hugo** with `canonifyURLs = true` and the full baseURL to ensure all images and internal links work correctly
-2. **Post-process** by copying the affected CSS and JS files to the doubled-path location where Hugo generates references to them
+1. **Set the full baseURL** including the deep path
+2. **Enable `canonifyURLs = true`** to convert all root-relative URLs to use the baseURL
+3. **Enable `uglyURLs = true`** to ensure proper URL resolution on servers without automatic directory index serving
+4. **Use relative font paths** in CSS (`../fonts/` instead of `/fonts/`) to work across all environments
 
 This approach:
-- ✅ Requires no changes to templates or Markdown content
-- ✅ Only duplicates CSS and JS files (~2.2MB total)
-- ✅ Works for all images, fonts, and page links automatically
-- ✅ Simple to maintain
+
+* ✅ Requires no changes to templates or Markdown content
+* ✅ No post-processing or file duplication needed (as of Hugo v0.156.0+)
+* ✅ Works for all images, fonts, and page links automatically
+* ✅ Simple to maintain
 
 ## How to Build
 
-Run these two commands from the repository root:
+Run this command from the repository root:
 
 ```bash
 # Build the site with the siemens-internal environment
 hugo --environment siemens-internal --cleanDestinationDir
-
-# Copy CSS and JS files to the doubled-path location
-bash scripts/fix-siemens-paths.sh
 ```
 
 The built site will be in the `public/` directory, ready for deployment to the Siemens internal portal.
 
+**Note**: The `scripts/fix-siemens-paths.sh` script is kept for backward compatibility but is no longer needed with Hugo v0.156.0+.
+
 ## Configuration Files
 
-### hugo.toml
+### Hugo.toml
 
 Sets the baseURL and enables:
 
-- `canonifyURLs = true` to handle the deep deployment path
-- `uglyURLs = true` to ensure proper URL resolution on the Siemens server
+* `canonifyURLs = true` to handle the deep deployment path
+* `uglyURLs = true` to ensure proper URL resolution on the Siemens server
 
-### scripts/fix-siemens-paths.sh
+### Scripts/fix-siemens-paths.sh
 
-Post-processing script that copies CSS and JS files to the doubled-path location where Hugo's `canonifyURLs` generates references:
+**Legacy script** - kept for backward compatibility but no longer needed with Hugo v0.156.0+.
 
-* `scss/main.css` and `scss/main.css.map`
-* `js/main.js`
-* `js/click-to-copy.js`
-
-All files are copied to: `public/documentation/internal/PL20260323299104942/en-US/public/{scss,js}/`
-
-**Note**: Font files (`webfonts/` and `fonts/`) are referenced using relative paths in the CSS (`../fonts/`, `../webfonts/`) and don't need to be copied. This works for all deployment environments.
+This script was previously used to work around a Hugo bug where `canonifyURLs` generated doubled paths for CSS and JS files. The bug has been fixed, and the script now simply confirms that no post-processing is needed.
 
 ## Technical Details
 
-### Why canonifyURLs?
+### Why CanonifyURLs?
+
 The `canonifyURLs = true` setting converts all root-relative URLs (like `/images/foo.svg`) to absolute URLs using the baseURL. This is necessary because:
-- Images in templates use hardcoded paths like `/images/...` and `/icons/...`
-- Internal page links need the full path
-- Without it, all these references would be broken
 
-### Why the doubled paths?
-Hugo's CSS and JS pipeline generates URLs that already include the baseURL path in some cases, and then `canonifyURLs` prepends the baseURL again, causing the path to appear twice. This is a known Hugo issue with deep basePaths.
+* Images in templates use hardcoded paths like `/images/...` and `/icons/...`
+* Internal page links need the full path
+* Without it, all these references would be broken
 
-### Why not fix the templates?
-Modifying templates to use `absURL` for all images would:
-- Require changes to shared Docsy theme files
-- Need maintenance across Hugo upgrades
-- Affect multiple deployment targets (production, development)
+### Why Relative Font Paths?
 
-The post-processing approach isolates the Siemens-specific fix.
+Font files are referenced in CSS using relative paths (`../fonts/`, `../webfonts/`) rather than root-relative paths (`/fonts/`). This approach:
+
+* Works consistently across all deployment environments (production, development, siemens-internal)
+* Does not require environment-specific processing
+* Avoids issues with deep URL paths
+
+### Hugo Version Requirements
+
+* **Hugo v0.156.0 or later** is required for correct handling of deep baseURL paths with `canonifyURLs`
+* Earlier versions had a bug where `canonifyURLs` would generate doubled paths for CSS and JS assets
 
 ## Updating the Deployment Path
 
-If the Siemens deployment URL changes, update:
-1. `baseURL` in `config/siemens-internal/hugo.toml`
-2. `DEEP_PATH` variable in `scripts/fix-siemens-paths.sh`
+If the Siemens deployment URL changes, update the `baseURL` in `config/siemens-internal/hugo.toml`.
 
 ## Alternative Approaches Considered
 
-1. **Using relativeURLs**: Would break the landing page images and require template changes
-2. **Path-only baseURL**: Would require web server configuration and wouldn't work with direct file access
-3. **Template modifications**: Would require maintaining custom versions of Docsy theme files
-4. **HTML post-processing**: Would need to parse and modify thousands of HTML files (slower and more complex)
+1. **Using relativeURLs**: Breaks the landing page images and requires template changes
+2. **Path-only baseURL**: Requires web server configuration and does not work with direct file access
+3. **Template modifications**: Requires maintaining custom versions of Docsy theme files
+4. **HTML post-processing**: Requires parsing and modifying thousands of HTML files (slower and more complex)
 
 The current solution is the simplest and most maintainable approach.

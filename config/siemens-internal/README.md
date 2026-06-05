@@ -37,8 +37,8 @@ We use a two-step approach:
 
 This approach:
 - ✅ Requires no changes to templates or Markdown content
-- ✅ Only duplicates necessary assets (~3.4MB total: CSS, JS, and fonts)
-- ✅ Works for all images and page links automatically
+- ✅ Only duplicates CSS and JS files (~2.2MB total)
+- ✅ Works for all images, fonts, and page links automatically
 - ✅ Simple to maintain
 
 ## How to Build
@@ -66,15 +66,15 @@ Sets the baseURL and enables:
 
 ### scripts/fix-siemens-paths.sh
 
-Post-processing script that copies assets to the doubled-path location where Hugo's `canonifyURLs` generates references:
+Post-processing script that copies CSS and JS files to the doubled-path location where Hugo's `canonifyURLs` generates references:
 
 * `scss/main.css` and `scss/main.css.map`
 * `js/main.js`
 * `js/click-to-copy.js`
-* `webfonts/*` (Font Awesome fonts - referenced via relative paths in CSS)
-* `fonts/*` (Noto Sans and Patron fonts - referenced via root-relative paths in CSS)
 
-All files are copied to: `public/documentation/internal/PL20260323299104942/en-US/public/{scss,js,webfonts,fonts}/`
+All files are copied to: `public/documentation/internal/PL20260323299104942/en-US/public/{scss,js}/`
+
+**Note**: Font files (`webfonts/` and `fonts/`) are referenced using relative paths in the CSS (`../fonts/`, `../webfonts/`) and don't need to be copied. This works for all deployment environments.
 
 ## Technical Details
 

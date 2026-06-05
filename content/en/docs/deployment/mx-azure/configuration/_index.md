@@ -65,7 +65,7 @@ The following configurations can be modified directly through the [Microsoft Azu
 | Configure virtual network peering on the vNet hosting Mendix on Azure | For more information, see [Implementing private connectivity using Azure Virtual Network Peering](/developerportal/deploy/mendix-on-azure/configuration/interconnecting-networks/#network-peering). |
 | Deploy Private Link Service to expose Mendix apps in other Azure virtual networks | For more information, see [Using Private Link Service to expose Mendix apps in other Azure virtual networks](/developerportal/deploy/mendix-on-azure/configuration/interconnecting-networks/#pls). |
 | Deploy Private Endpoints to establish connectivity between Mendix apps and other services | For more information, see [Accessing private services via Private Endpoints](/developerportal/deploy/mendix-on-azure/configuration/interconnecting-networks/#pe-internal). |
-| Override DNS configuration on the vNet hosting Mendix on Azure | For more information, see [DNS name resolution towards resources in other networks](/developerportal/deploy/mendix-on-azure/configuration/interconnecting-networks/#name-resolution-dns-override). |
+| Override DNS configuration on the vNet hosting Mendix on Azure | For more information, see [DNS name resolution toward resources in other networks](/developerportal/deploy/mendix-on-azure/configuration/interconnecting-networks/#name-resolution-dns-override). |
 
 ### Configuring AKS Planned Maintenance Windows {#aks-maintenance-windows}
 

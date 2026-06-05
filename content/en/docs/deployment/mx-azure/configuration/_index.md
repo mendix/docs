@@ -77,26 +77,26 @@ To minimize disruption, you can configure planned maintenance windows to schedul
 
 When configuring maintenance windows, consider the following best practices:
 
-* **Minimum window duration**: 4 hours (required by AKS when using automatic upgrade channels)
-* **Recommended frequency**: Weekly
-* **Timing**: Schedule during off-peak hours, avoiding business-critical periods and peak traffic times
-* **Timezone**: Maintenance windows are configured in UTC. Calculate the appropriate offset for your region
-* **Maximum interval**: 2 weeks between maintenance windows to avoid delayed security patches
+* Minimum window duration - 4 hours (required by AKS when using automatic upgrade channels)
+* Recommended frequency - Weekly
+* Timing - Schedule during off-peak hours, avoiding business-critical periods and peak traffic times
+* Timezone - Maintenance windows are configured in UTC. Calculate the appropriate offset for your region
+* Maximum interval - 2 weeks between maintenance windows to avoid delayed security patches
 
 #### Configuration Steps
 
-1. Sign in to the [Microsoft Azure portal](https://portal.azure.com)
-2. Navigate to your Mendix on Azure Managed Application
-3. Open the **Managed Resource Group** (see [The Mendix on Azure Managed Resource Group](#mrg))
-4. Locate and open the AKS cluster resource (typically named `<prefix>-<environment-id>-k8s`)
-5. In the left menu, select **Settings** > **Cluster configuration**
-6. Scroll to the **Planned maintenance** section
+1. Sign in to the [Microsoft Azure portal](https://portal.azure.com).
+2. Navigate to your Mendix on Azure Managed Application.
+3. Open the [Managed Resource Group](#mrg).
+4. Locate and open the AKS cluster resource (usually named `<prefix>-<environment-id>-k8s`).
+5. In the left menu, select **Settings** > **Cluster configuration**.
+6. Scroll to the **Planned maintenance** section.
 7. Configure your maintenance windows:
-   * **Default maintenance window**: General maintenance operations
-   * **Auto-upgrade maintenance window**: For automatic cluster version upgrades
-   * **Node OS upgrade maintenance window**: For node operating system security patches
+   * **Default maintenance window** - General maintenance operations
+   * **Auto-upgrade maintenance window** - For automatic cluster version upgrades
+   * **Node OS upgrade maintenance window** - For node operating system security patches
 
-For detailed configuration instructions and schedule syntax, see Microsoft's documentation on [Planned Maintenance in AKS](https://learn.microsoft.com/en-us/azure/aks/planned-maintenance).
+For detailed configuration instructions and schedule syntax, see [Planned Maintenance in AKS](https://learn.microsoft.com/en-us/azure/aks/planned-maintenance) in Microsoft documentation.
 
 ### The Mendix on Azure Managed Resource Group {#mrg}
 

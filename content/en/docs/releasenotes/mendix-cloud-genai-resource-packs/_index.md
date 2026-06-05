@@ -8,9 +8,22 @@ numberless_headings: true
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/).
+These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/).
 
 ## 2026
+
+### May 7, 2026
+
+#### Fixes
+
+* We fixed an issue where the Company Admin was not always able to view the external members added to a resource.
+* We fixed a styling issue where the resource card content was not fully visible.
+
+### April 9, 2026
+
+#### New Features
+
+* It is now possible to add external users to your resources, making collaboration across organizations easier.
 
 ### March 5, 2026
 
@@ -83,7 +96,7 @@ These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs
 
 #### New Features
 
-* [Mendix GenAI Resource Packs](/appstore/modules/genai/mx-cloud-genai/resource-packs/) are now generally available. They enable seamless integration of GenAI into your Mendix ecosystem by leveraging GenAI Models and Knowledge Bases. With these packs, you can accelerate advanced use cases such as Retrieval-Augmented Generation (RAG) and Agentic AI.
+* [Mendix GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/) are now generally available. They enable seamless integration of GenAI into your Mendix ecosystem by leveraging GenAI Models and Knowledge Bases. With these packs, you can accelerate advanced use cases such as Retrieval-Augmented Generation (RAG) and Agentic AI.
 You can access them through the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com/).
 
 #### Improvements

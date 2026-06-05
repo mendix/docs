@@ -28,7 +28,7 @@ These are the available [app commands](/refguide/mx-command-line-tool/app/):
 | [check](/refguide/mx-command-line-tool/app/#check) | Checks the app for issues. |
 | [convert](/refguide/mx-command-line-tool/app/#convert) | Converts the Mendix app. |
 | [create-project](/refguide/mx-command-line-tool/app/#create-project) | Creates a new Mendix app. |
-| [show-version](/refguide/mx-command-line-tool/app/#show-version) | Shows the Studio Pro version that was last used to edit the app. |
+| [show-version](/refguide/mx-command-line-tool/app/#show-version) | Shows the Studio Pro version used to last edit the app. |
 | [show-java-version](/refguide/mx-command-line-tool/app/#show-java-version) | Shows the configured Java version of the app. |
 | [sync-java-dependencies](/refguide/mx-command-line-tool/app/#java-dependencies) | Synchronizes the managed Java dependencies that are configured in the modules of the app. |
 | [translate](/refguide/mx-command-line-tool/app/#translate) | Exports and imports all translatable texts included in your application. |
@@ -51,7 +51,7 @@ These are the available [module commands](/refguide/mx-command-line-tool/module/
 |---|---|
 | [show-module-version](/refguide/mx-command-line-tool/module/#show-module-version) | Shows the version of a module. |
 | [set-module-version](/refguide/mx-command-line-tool/module/#set-module-version) | Sets the version of a module. |
-| [module-import](/refguide/mx-command-line-tool/module/#module-import) | Import a module from an mpk package into an app. |
+| [module-import](/refguide/mx-command-line-tool/module/#module-import) | Imports a module from an mpk package into an app. |
 
 ### Export Package Commands
 
@@ -71,7 +71,7 @@ These are the available [merging and diffing commands](/refguide/mx-command-line
 | --- | --- |
 | [merge](/refguide/mx-command-line-tool/merge/#merge) | Merges the *.mpr* files. |
 | [diff](/refguide/mx-command-line-tool/merge/#diff) | Shows the diff of the *.mpr* files. |
-| [dump-mpr](/refguide/mx-command-line-tool/dump-mpr/) | Create a JSON description of the model of a Mendix app. |
+| [dump-mpr](/refguide/mx-command-line-tool/dump-mpr/) | Creates a JSON description of the model of a Mendix app. |
 
 ### Private Values Commands
 
@@ -84,7 +84,7 @@ These are the available [private values commands](/refguide/mx-command-line-tool
 
 ### Security Overview Command
 
-The available `export-security-overview` exports the [Security Overview](/refguide/security-overview/). For more information, see [Security Overview Command](/refguide/mx-command-line-tool/security/#export-security-overview).
+The `export-security-overview` command exports the [Security Overview](/refguide/security-overview/). For more information, see [Security Overview Command](/refguide/mx-command-line-tool/security/#export-security-overview).
 
 ## Undocumented Options
 

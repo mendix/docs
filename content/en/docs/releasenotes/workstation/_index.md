@@ -10,6 +10,112 @@ cascade:
 
 These release notes cover changes made to the [Mendix Workstation](/mendix-workstation/).
 
+## 3.7.0
+
+### Release date: May 21, 2026
+
+### Workstation Management
+
+#### New features
+
+* Smart configuration updates (auto-refresh) - You can now choose if your workstation configurations should automatically update when changes are made, or if you prefer to trigger updates manually. This gives you more control and ensures your workstations always have the correct settings with less effort.
+* Real-time workstation status - The Workstation Management UI now shows the live configuration status of each Workstation Client, letting you quickly see if a workstation is **Up to Date** or **Outdated**. This provides immediate insight into your deployment's health.
+* Enhanced Serial Device detection settings - You can now configure Workstation Management to identify your serial devices using more reliable information like their Friendly Name, Serial Number, or Manufacturer. This helps your Workstation Clients reliably find and connect to the correct serial device, even if its port number changes.
+
+#### Improvements
+
+* Configurable auto-refresh behavior - We have provided options for how auto-refresh works, including default settings for workspaces and how clients respond in both automatic and manual modes. This allows for flexible management of your workstation configurations.
+
+#### Bug Fixes
+
+* UI inconsistencies - We have fixed several visual inconsistencies in the Management UI, particularly improving the display and user experience when using dark mode. This makes the interface cleaner and more consistent for everyone.
+
+### Workstation Client
+
+#### New Features
+
+* Automatic Client startup - The Workstation Client application now automatically launches silently in the background when your system starts up. This ensures your workstations are always ready to go without needing manual intervention after a reboot.
+* Smart Serial Device finder - The client can now use the Friendly Name, Serial Number, or Manufacturer to find and connect to serial devices. This means your client can reliably connect to the right device even if its assigned port changes.
+
+#### Improvements
+
+* Granular configuration change response - The client now handles configuration changes more smoothly and with less downtime. This means your stations will experience fewer interruptions and apply new settings more efficiently.
+
+## 3.6.1
+
+### Release date: April 28, 2026
+
+### Workstation Management
+
+#### Fixes
+
+* We have fixed an issue where, due to security hardening, it was not possible to refresh the configuration of a Workstation Client which was originally registered with an earlier version of Workstation Management.
+
+## 3.6.0
+
+### Release date: April 23, 2026
+
+### Workstation Management
+
+#### New Features
+
+* We have enhanced the **Test Your Station** page with more granular functions to test, validate and troubleshoot communication with devices. This includes more connection states, a **Connect** and **Disconnect** button, and communication logs. You can also switch between devices to test multiple devices.
+* Single computer registration keys are now valid for one hour. The keys are displayed and visible to all authorized users.
+* The maximum time window for bulk registration keys is limited to three months.
+* We have improved the **Station management** user interface for a more intuitive use experience.
+
+#### Fixes
+
+* To support advanced use cases when preparing station configurations on multiple computers, we have fixed an issue which prevented stations from being edited when multiple stations shared the same computer name. Computer names for stations within the same workspace are no longer required to be unique.
+
+{{% alert color="info" %}}
+If more than one station is found for a given computer name during bulk registration, the system now automatically creates an *Unassigned computer* instead of attempting an automatic assignment. This ensures that you can manually select the correct station configuration, preventing unintended assignments.
+{{% /alert %}}
+
+* We have fixed an issue where the login dialogue was opened after a session time-out.
+
+### Workstation Client
+
+#### Fixes
+
+* We have addressed some minor issues within the Bluetooth functionality, including improved handling of Bluetooth protocol errors to prevent unexpected behavior.
+* We have fixed a crash that could occur during window movement if the client configuration was not writable, improving the application stability.
+* We have updated the underlying dependencies for the Smart Card reader functionality, enhancing stability and compatibility.
+
+### Workstation Connector
+
+#### New Features
+
+* We have added a number of other new nanoflows, JavaScript actions, and widgets to simplify the creation of custom, reusable peripheral modules for your organization: 
+
+    * Manage peripheral object creation and initialize peripheral objects using the new `GetCreateDevice` action. You can configure callbacks on connection, on message, and on disconnection.
+    * Trigger application level logic on device events with new widgets. Handling peripheral events no longer requires changing peripheral modules.
+    * Manage events in a nanoflow with the new `SubscribeToObjectChanges` and `WaitForObjectChanges` nanoflow actions.
+    * Benefit from easier configuration of common use cases with the new `ConnectDevice`, `SendDeviceMessage` and `WaitForDeviceMessage` nanoflow actions.
+
+For more information, see [Nanoflows](/mendix-workstation/build-app/#javascript-actions) and [Widgets](/mendix-workstation/build-app/#widgets).
+
+#### Improvements
+
+* The **Model Peripheral** entity is now a specialization of the **Device** entity and no longer requires association.
+* Calling `GetStation` is no longer required to initiate the Workstation Connector. It is only required to read the station configuration.
+
+#### Fixes
+
+* We have removed the `Station_User` association. Object garbage collection is now handled internally, leading to more robust object management.
+* We have fixed an issue related to the timing of initial connections.
+* We have fixed an issue where devices were sometimes discovered with a delay.
+
+#### Deprecations
+
+* We have deprecated the following actions:
+
+    * `SendMessage` - Deprecated in favor of `SendDeviceMessage` and `WaitForDeviceMessage`
+    * `SubscribeToMessages` - Deprecated in favor of `GetCreateDevice`
+    * `SubscribeToErrors` - Deprecated in favor of `GetCreateDevice`
+
+    The deprecated actions are longer exposed as nanoflows and have been moved to the `_USE_ME/Deprecated` folder.
+
 ## 3.5.0
 
 ### Release date: March 12, 2026
@@ -209,7 +315,7 @@ This is a Limited Availability release of Mendix Workstation.
 
 Mendix Workstation is available for all Mendix users for development use. 
 
-Mendix Workstation is [Limited Availability](https://docs.mendix.com/releasenotes/release-status/#limited-availability) for production use. Support is provided according to your Mendix SLA if you purchased a Workstation license. If you want to take Mendix Workstation into production, contact your CSM to see what arrangements are possible. Without a license you can use the Mendix Workstation for development, but workspaces are individual and cannot be shared.
+Mendix Workstation is [Limited Availability](/releasenotes/release-status/#limited-availability) for production use. Support is provided according to your Mendix SLA if you purchased a Workstation license. If you want to take Mendix Workstation into production, contact your CSM to see what arrangements are possible. Without a license you can use the Mendix Workstation for development, but workspaces are individual and cannot be shared.
 {{% /alert %}}
 
 ### Improvements

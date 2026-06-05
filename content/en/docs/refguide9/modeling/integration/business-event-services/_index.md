@@ -7,7 +7,7 @@ description: "Overview of business event services in Studio Pro"
 
 ## Introduction
 
-Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above integrates with Mendix Business Events module functionality. With the [Mendix Business Events](/appstore/services/business-events/) module, applications can signal when something important happens, and can subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps.
+Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above integrates with the Mendix Business Events module functionality, which supports multiple deployment options including the Mendix Business Events module and alternatives such as Bring Your Own Kafka ([BYOK](/appstore/services/business-events-deployment/#byok)). With the [Mendix Business Events](/appstore/services/business-events/) module, applications can signal when something important happens, and can subscribe to these events if they want to be informed. Business events are like a mailing list to share event notifications between apps.
 
 This page references the **Business Event Service** documents in Studio Pro. See [Mendix Business Events](/appstore/services/business-events/) for the complete documentation. 
 

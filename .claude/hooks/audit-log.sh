@@ -13,9 +13,9 @@ set -uo pipefail
 # ---------------------------------------------------------------------------
 INPUT="$(cat)"
 
-TOOL_NAME="$(printf '%s' "$INPUT" | python3 -c "import sys,json; print(json.load(sys.stdin).get('tool_name','unknown'))" 2>/dev/null || echo "unknown")"
+TOOL_NAME="$(printf '%s' "$INPUT" | jq -r '.tool_name // "unknown"' 2>/dev/null || echo "unknown")"
 
-COMMAND="$(printf '%s' "$INPUT" | python3 -c "import sys,json; print(json.load(sys.stdin).get('tool_input',{}).get('command',''))" 2>/dev/null || echo "")"
+COMMAND="$(printf '%s' "$INPUT" | jq -r '.tool_input.command // ""' 2>/dev/null || echo "")"
 
 # ---------------------------------------------------------------------------
 # 2. Determine log file path (relative to project root)

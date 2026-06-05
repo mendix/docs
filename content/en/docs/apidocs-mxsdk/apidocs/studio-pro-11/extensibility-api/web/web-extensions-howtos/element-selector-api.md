@@ -2,11 +2,12 @@
 title: "Using the Element Selector API"
 linktitle: "Element Selector API"
 url: /apidocs-mxsdk/apidocs/web-extensibility-api-11/element-selector-api/
+description: "Describes how to use the Element Selector API to select documents or entities from your application with filtering options based on module name, document name, and SDK name."
 ---
 
 ## Introduction
 
-This how-to describes how to use the Element Selector API to allow users to select documents or entities from their Mendix application. The extension displays selection dialogs that filter results based on query parameters such as module name, document name, and SDK name.
+This how-to describes how to use the Element Selector API to allow users to select documents or entities from their application. The extension displays selection dialogs that filter results based on query parameters such as module name, document name, and SDK name.
 
 ## Prerequisites
 
@@ -14,10 +15,10 @@ This how-to describes how to use the Element Selector API to allow users to sele
 If you are using Studio Pro 11.0–11.5 and your extension includes menus, your existing menu code will not work when you upgrade to Studio Pro 11.6. To restore full functionality and support, upgrade to the Extensibility API 11.6 and follow the steps in the [Migration Guide](/apidocs-mxsdk/apidocs/web-extensibility-api-11/migration-guide/).
 {{% /alert%}}
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before starting this how-to, complete the following prerequisites:
 
 * This how-to uses the results of [Get Started with the Web Extensibility API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/getting-started/). Complete that how-to before starting this one. 
-* Make sure you are familiar with creating menus as described in [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/).
+* Familiarize yourself with creating menus as described in [Create a Menu Using Web API](/apidocs-mxsdk/apidocs/web-extensibility-api-11/menu-api/).
 
 ## Overview
 
@@ -48,13 +49,13 @@ export const component: IComponent = {
 }
 ```
 
-The `allowNone` option permits users to close the dialog without selecting a document, returning a status of `none`.
+The `allowNone` option allows users to close the dialog without selecting a document, returning a status of `none`.
 
 ### Filtering Documents
 
 You can filter documents by their SDK name, their exact name, or restrict the selection within a module.
 
-For example, to filter documents by their SDK name, to restrict selection to a specific document type (for example, `Pages$Page` for pages), use the code sample below:
+To filter documents by SDK name and restrict selection to a specific document type (for example, `Pages$Page` for pages), use the code sample below:
 
 ```typescript
 const selector = await elementSelector.selectDocument({
@@ -66,7 +67,7 @@ if (selector.status === "ok") {
 }
 ```
 
-You can replace your `main index.ts` with the following code to see most of the available filtering for document selector:
+To see most available filtering options for the document selector, replace your `main index.ts` with the following code:
 
 ```typescript
 import { IComponent, Menu, getStudioProApi } from "@mendix/extensions-api";
@@ -184,9 +185,9 @@ export const component: IComponent = {
 
 ### Filtering Entities
 
-You can filter entities by their their exact name or restrict the selection within a module.
+You can filter entities by their exact name or restrict the selection within a module.
 
-For example, you can replace your `main/index.ts` with the following code to see some filters for the entity selector:
+To see some filter options for the entity selector, replace your `main/index.ts` with the following code:
 
 ```typescript
 import { IComponent, Menu, getStudioProApi } from "@mendix/extensions-api";
@@ -277,7 +278,7 @@ The optional query parameter allows you to filter selector results:
 | Parameter | Type | Description | Applies To |
 | --- | --- | --- | --- |
 | `module` | `string` | Filter by module name | Documents, Entities |
-| `name` | `string` | Filter by their name | Documents, Entities |
+| `name` | `string` | Filter by name | Documents, Entities |
 | `sdkName` | `string` | Filter by SDK name (for example, `Pages$Page`) | Documents only |
 
 ## Extensibility Feedback

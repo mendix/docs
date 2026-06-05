@@ -111,6 +111,18 @@ If you have custom widgets or JavaScript actions which use an entity that cannot
 
 For each entity the **Synchronization mode** is shown. A default is automatically determined by analyzing the model, but can be overridden by the developer in which case the setting will appear in boldface. 
 
+When an entity is configured with one of the **Online**, **Nothing (clear data)**, **Nothing (preserve data)**, or **Never** synchronization modes, the Mendix Runtime will reject any synchronization request from a client that attempts to upload changes for that entity. This prevents unintended data modifications on the server and makes your application more secure.                                                                                                                                         
+If a client attempts to synchronize changes for a restricted entity, those changes are blocked and a synchronization error is recorded on the server. You can inspect these errors via the `System.SynchronizationError` entity.                                                                                                                                                                                                                        
+**Compatibility Mode** — When you migrate an entity from All Objects or By XPath to **Online**, **Nothing**, or **Never**, older versions of your offline app may still attempt to synchronize changes for that entity. To prevent those clients from receiving synchronization errors during the migration period, you can enable **Compatibility Mode** for the entity by selecting the checkbox in the synchronization configuration.                                                                                                  
+
+When **Compatibility Mode** is enabled for an entity:
+
+* The runtime accepts synchronization requests from clients for that entity, regardless of the configured synchronization mode.
+* The entity behaves as if it were still set to **All Objects**.
+                                                                                                                     
+When you are confident that all old clients have updated to the latest version, you should disable Compatibility Mode by deselecting the checkbox.                                                                                                                                                                                                     
+When you change an entity's synchronization mode to **Online**, **Nothing**, or **Never** in Studio Pro, **Compatibility Mode** is automatically enabled to avoid breaking existing clients.
+
 ### Limitations
 
 Please be aware of the following limitation affecting synchronization: 

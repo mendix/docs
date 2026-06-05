@@ -133,10 +133,10 @@ The component usage list contains the following information:
 * **Support type** – The support type of the Marketplace component. This can be **Mendix**, **Partner**, or **Community**.    
   For more information, refer to [Content Support Categories](/appstore/marketplace-content-support/#category).
 * **License** – For components derived from the Mendix Marketplace, this is the end-user license for the component.
-* **Latest version** – The latest version of the component.
+* **Latest version** – For components derived from the Mendix Marketplace, this is the latest version of the component.
 * **Marketplace** – Whether the component is **Public** or **Private**. A public component is available to the whole Mendix community in the Marketplace, while a private component is available only via your [Company Content](/appstore/home-page/#company-content) page.
 * **Latest Runtime Compatible Version** — The most recent runtime version to which the component is compatible.
-* **Publisher** – The name of the organization that published the component.
+* **Publisher** – For components derived from the Mendix Marketplace, this is the name of the organization that published the component.
 * Column customization ({{% icon name="view" %}}) – You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
 
 To export the information corresponding to selected items in the list to an Excel file, select the checkboxes of the items in the list, then click **Selection Export** that appears at the bottom of the page.

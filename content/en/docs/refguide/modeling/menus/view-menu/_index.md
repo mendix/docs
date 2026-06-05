@@ -7,23 +7,23 @@ weight: 20
 
 ## Introduction
 
-Studio Pro supports a number of dockable window panes, such as the **Changes** and **Errors** panes. You can close some panes to just show the ones you need at the moment, but you can always reopen them via the **View** menu. 
+Studio Pro supports a number of dockable window panes, such as the **Changes** and **Errors** panes. You can close some panes to show only the ones you need, but you can always reopen them from the **View** menu. 
 
-Via this menu you can also enable or disable the [full screen mode](#full-screen) or [reset the layout](#restore-default-layout) of your app to the default.  
+From this menu you can also enable or disable the [full screen mode](#full-screen) or [reset the layout](#restore-default-layout) of your app to the default.  
 
 {{< figure src="/attachments/refguide/modeling/menus/view-menu/view-menu.png" alt="View Menu" width="300" >}}
 
 ## Layout of Panes {#layout-of-panes}
 
-You can change the default layout of panes and arrange them in the layout you like.
+You can change the default layout of panes and arrange them in your preferred layout.
 
 {{% alert color="info" %}}
-Note that this section describes the behavior of panes, not the behavior of documents in the working area. For more information on the behavior of documents open in the working area, see the [Document Tabs](/refguide/studio-pro-overview/#documents) section in *Studio Pro Overview*.
+This section describes the behavior of panes, not the behavior of documents in the working area. For more information on the behavior of documents open in the working area, see the [Document Tabs](/refguide/studio-pro-overview/#documents) section in *Studio Pro Overview*.
 {{% /alert %}}
 
-When you drag a pane, you can see arrows that indicate where you can position this pane. You can position the pane either inside the current pane (arrows grouped together) or make it full-window height or width (individual arrows on the borders). Each position is labelled and explained below:
+When you drag a pane, you can see arrows that indicate where you can position the pane. You can position the pane inside the current pane (arrows grouped together) or make it full-window height or width (individual arrows on the borders). Each position is labeled and explained below:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/interaction-with-panes.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/interaction-with-panes.png" alt="" class="no-border" >}}
 
 1. Within the current *pane* you can position a pane in one of the following ways:
 
@@ -32,8 +32,7 @@ When you drag a pane, you can see arrows that indicate where you can position th
     3. Pane-height – top
     4. Pane-height – bottom
     5. New pane as a new tab
-
-        {{% alert color="info" %}}If you try to position the pane as a new pane inside the working area, it will be opened as a dialog box.{{% /alert %}}
+    {{% alert color="info" %}}If you try to position the pane as a new pane inside the working area, it opens as a dialog box.{{% /alert %}}
 
 2. Within the current *window* you can position a pane in one of the following ways:
 
@@ -46,7 +45,7 @@ If you have several panes grouped together in tabs, you can change the position 
 
 ## Menu Items
 
-Menu items of the **View** menu are described in sections below.
+Menu items of the **View** menu are described in the sections below.
 
 ### App Explorer
 
@@ -58,15 +57,19 @@ For details on this virtual AI assistant, see [Best Practice Recommender](/refgu
 
 ### Call Hierarchy
 
-The **Call Hierarchy** pane displays the call hierarchy of a document (for example, a page, a microflow, a nanoflow, and more). This pane helps you understand the application connections, allowing you to visualize both incoming and outgoing calls. For more information on the **Call Hierarchy** pane and how to interact with it, see [Call Hierarchy Pane](/refguide/call-hierarchy-pane/). 
+The **Call Hierarchy** pane displays the call hierarchy of a document (for example, a page, a microflow, or a nanoflow). This pane helps you understand the application connections and visualize both incoming and outgoing calls. For more information, see [Call Hierarchy Pane](/refguide/call-hierarchy-pane/). 
 
 ### Changes
 
-For version control-enabled apps (meaning, those with [Team Server](/developerportal/repository/team-server/) or other Git servers), the [Changes pane](/refguide/changes-pane/) shows the local changes to the app since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
+For version control-enabled apps (those with [Team Server](/developerportal/repository/team-server/) or other Git servers), the [Changes pane](/refguide/changes-pane/) shows the local changes to the app since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
 
 This pane has two levels, so when you zoom into a changed document, you can review all the changes within that document without going back and forth between levels. The zoomed-in level of the pane is split into two grids, with elements on the left and properties on the right. Selecting an element on the left presents the changed properties on the right:
 
 <video width="640" height="360" controls src="/attachments/refguide/view-menu/changes.mp4">VIDEO</video>
+
+### Comparison
+
+The [Comparison pane](/refguide/comparison-pane/) shows the differences between a selected historical revision and your current working state, which allows you to see what documents, elements, and properties changed.
 
 ### History {#history-pane}
 
@@ -74,7 +77,7 @@ The non-blocking History pane shows commits in your repository and allows you to
 
 ### Connector {#connector}
 
-The **Connector** pane displays elements that can be connected to the currently selected element. For example, when a button is selected, the **Connector** shows microflows that you can drag onto the button to connect them.
+The **Connector** pane displays elements that can be connected to the currently selected element. For example, when you select a button, the **Connector** shows microflows that you can drag onto the button to connect them.
 
 ### Console {#console}
 
@@ -120,17 +123,17 @@ The **Properties** pane displays the properties of the currently selected elemen
 
 ### Stories
 
-For [Team Server](/developerportal/repository/team-server/) app, the **Stories** pane shows the [stories](/developerportal/project-management/epics/planning/) of the current [Sprint](/developerportal/project-management/epics/planning/). For more information on the **Stories** pane and how to interact with it, see [Stories Pane](/refguide/stories-pane/). 
+For [Team Server](/developerportal/repository/team-server/) apps, the **Stories** pane shows the [stories](/developerportal/project-management/epics/planning/) of the current [Sprint](/developerportal/project-management/epics/planning/). For more information, see [Stories Pane](/refguide/stories-pane/). 
 
 ### Toolbox {#toolbox}
 
 The **Toolbox** pane displays the tools that can be used in the current editor. For example, in a page you can insert all kinds of widgets (for example, [data containers](/refguide/data-widgets/)) by dragging them from the **Toolbox** onto your page.
 
-The **Toolbox** has a tile view showing larger icons and a list view showing a list of elements. You can switch between the tile and list view modes at the lower-right corner of the **Toolbox**. 
+The **Toolbox** has a tile view showing larger icons and a list view showing a list of elements. You can switch between the tile and list view modes in the lower-right corner of the **Toolbox**. 
 
 ### Widget Developer Console
 
-This console helps you debug the configuration code of your widget that is responsible for conditionally visible properties, custom consistency checks, and **Structure mode** preview. This console shows logs from the `getProperties`, `getPreview`, `check`, and `getCustomCaption` functions, which can be defined inside the new configuration module (for more information, see the [Widget Developer Console](/apidocs-mxsdk/apidocs/pluggable-widgets-config-api/#widget-dev-console) section of *Configuration Module API for Pluggable Widgets*). 
+This console helps you debug the configuration code of your widget that is responsible for conditionally visible properties, custom consistency checks, and **Structure mode** preview. This console shows logs from the `getProperties`, `getPreview`, `check`, and `getCustomCaption` functions, which can be defined inside the configuration module. For more information, see the [Widget Developer Console](/apidocs-mxsdk/apidocs/pluggable-widgets-config-api/#widget-dev-console) section of *Configuration Module API for Pluggable Widgets*. 
 
 ### Debug Windows
 

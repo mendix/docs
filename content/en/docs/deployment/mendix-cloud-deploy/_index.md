@@ -137,7 +137,7 @@ Mendix apps cannot use custom ports. They communicate on the standard HTTP and H
 
 ### Number of End-Users for Licensed Apps
 
-The number of end-users supported for your licensed app depends on your [pricing plan](#plans). End-users of your app are classified as either internal or external. You must report this classification for licensing purposes by [implementing User Metering](/developerportal/deploy/implementing-user-metering/) for each end user of your app. The [`USAGE_METRICS_EMAIL_FIELDS` custom variable](/developerportal/deploy/environments-details/#custom-environment-variables) is deprecated and should no longer be used for user classification.
+The number of end-users supported for your licensed app depends on your [pricing plan](#plans). End-users of your app are classified as either internal or external. You must report this classification for licensing purposes by [implementing User Metering](/developerportal/deploy/implementing-user-metering/) for each end-user of your app. The [`USAGE_METRICS_EMAIL_FIELDS` custom variable](/developerportal/deploy/environments-details/#custom-environment-variables) is deprecated and should no longer be used for user classification.
 
 ### Supported Mendix Versions {#mendix-cloud-supported-versions}
 
@@ -231,9 +231,9 @@ With a premium plan, you can replicate application data in Mendix Cloud to anoth
 
 You can also purchase a Premium Plus plan, which provides all the features of the Premium plan, with the addition of Regional Fallback.
 
-With Regional Fallback, a copy of your database and FileDocuments is maintained in a completely separate region. For example, if your app normally runs in us-east-1, a copy of your data is made in us-west-2. If all the AZs in the primary region become unavailable, you can choose to run your app temporarily in the secondary region with the data that has been copied to that region. Once the primary region is back online, you can revert your app to run in the primary region.
+With Regional Fallback, a copy of your database and FileDocuments is maintained in a separate region. For example, if your app normally runs in `us-east-1`, a copy of your data is made in `us-west-2`. If all the AZs in the primary region become unavailable, you can choose to run your app temporarily in the secondary region with the data that has been copied to that region. Once the primary region is back online, you can revert your app to run in the primary region.
 
-Because this is designed for a catastrophic regional failure, there are some limitations to your normal operations. For example, you cannot deploy a new version of the app while it is running in the secondary region. The decision to switch to the secondary region is completely under your control.
+Regional Fallback is designed for catastrophic regional failures and imposes some operational limitations. For example, you cannot deploy a new app version while running in the secondary region. You control when to switch to the secondary region.
 
 #### On-Premises and Mendix on Kubernetes
 

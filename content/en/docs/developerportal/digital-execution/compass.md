@@ -10,7 +10,7 @@ description: "Describes the Compass tool."
 
 ## Introduction
 
-The [Compass](https://compass.home.mendix.com/) tool is available to teams who want to plan and streamline the implementation of their first Mendix app. It is part of an initiative to bring [Mendix Digital Execution Practice](https://www.mendix.com/evaluation-guide/digital-execution-practice/#what-is-the-mendix-digital-execution-practice) to the Platform, and enables non-developer team members to help plan the milestones and goals of their Mendix implementation process. Program Owners (that is, the team members leading the implementation) can then monitor the progress through an intuitive visual interface, with the goal of successfully launching their first Mendix application.
+The [Compass](https://compass.home.mendix.com/) tool brings [Mendix Digital Execution Practice](https://www.mendix.com/evaluation-guide/digital-execution-practice/#what-is-the-mendix-digital-execution-practice) to the Platform, and enables non-developer team members to help plan the milestones and goals of their Mendix implementation process. Program Owners (that is, the team members leading the implementation) can then monitor the progress through an intuitive visual interface. For organizations that are beginning their Mendix journey, Compass serves as a tool to help them adopt low-code. 
 
 {{< figure src="/attachments/developerportal/compass/compass-home.png" alt="The home page of the Compass tool" >}}
 

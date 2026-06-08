@@ -9,7 +9,7 @@ aliases:
 
 ## Introduction
 
-This approach uses microflows and GenAI Commons building blocks to define agents programmatically. You start with a prompt at runtime but configure tools and knowledge base retrieval directly in microflow logic at design time. This approach provides maximum control and debugging capabilities, making it useful for specific use cases or when the agent logic needs to be part of the code repository.
+This approach uses microflows and GenAI Commons building blocks to define agents programmatically. You start with a prompt at runtime but configure tools and knowledge base retrieval directly in microflow logic at design time. This approach provides maximum control and debugging capabilities, making it useful for specific use cases or when the agent logic needs to be part of the code repository. 
 
 ## Prerequisites
 

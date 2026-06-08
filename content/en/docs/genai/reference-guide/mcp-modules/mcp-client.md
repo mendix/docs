@@ -97,11 +97,3 @@ There are several possible reasons why the client cannot connect to your server.
 * The official [MCP docs](https://modelcontextprotocol.io/introduction)
 * The [MCP Java SDK GitHub Repository](https://github.com/modelcontextprotocol/java-sdk)
 
-
-### Missing Jackson Core Dependency
-
-This applies to cases where your app fails to compile and throws the following error: `Missing dependencies: com.fasterxml.jackson.core:jackson-core:2.22.0`.
-
-This dependency is advertised in Maven repositories but does not actually exist. When you build your app, the automated dependency management attempts to download it and fails because the version is unavailable.
-
-To resolve this issue, download and install [GenAI Commons 6.2.2](https://marketplace.mendix.com/link/component/239448) from Mendix Marketplace. This module includes a fixed Jackson Core dependency configuration and will allow your app to compile successfully. Once Maven resolves the issue, dependency ranges will be used again to re-enable automated dependency management, including automatic vulnerability fixes.

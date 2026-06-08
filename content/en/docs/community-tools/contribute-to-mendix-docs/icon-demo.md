@@ -42,6 +42,7 @@ Here are some icons that might be particularly useful for the docs. In the list 
 * checkmark-circle: **Save** ({{% icon name="checkmark-circle" %}})
 * checkmark-circle-filled: **Success** ({{% icon name="checkmark-circle-filled" color="green" %}})
 * chevron-down: **Move Down** ({{% icon name="chevron-down" %}})
+* copy: **Copy** ({{% icon name="copy" %}})
 * chevron-left: **Move Left** ({{% icon name="chevron-left" %}})
 * chevron-right: **Move Right** ({{% icon name="chevron-right" %}})
 * chevron-up: **Move Up** ({{% icon name="chevron-up" %}})

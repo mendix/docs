@@ -9,7 +9,7 @@ aliases:
 
 ## Introduction
 
-[Snowflake Cortex AI](https://docs.snowflake.com/en/guides-overview-ai-features) allows users to quickly analyze data and build generative AI applications using fully managed LLMs, vector search and fully managed text-to-SQL services. It also enables multiple users to use AI models with no-code, SQL and Python interfaces.
+[Snowflake Cortex AI](https://docs.snowflake.com/en/guides-overview-ai-features) allows users to quickly analyze data and build generative AI applications using fully managed LLMs, vector search, and fully managed text-to-SQL services. It also enables multiple users to use AI models with no-code, SQL, and Python interfaces.
 
 ## Integrating Your Mendix App with Snowflake Cortex
 
@@ -29,12 +29,12 @@ In addition to the above, the integration also supports the [ANOMALY DETECTION](
 
 The showcase app has the following pages:
 
-* **Introduction** - Information about Snowflake AI and the necessary prerequisites to use it.
-* **Machine Learning** - Sample implementation of the ANOMALY DETECTION machine learning functionality.
-* **Large Language Models** - Information about the available LLM functions, as well as a sample implementation of COMPLETE and TRANSLATE.
-* **Cortex Analyst** - Sample implementation of Snowflake Cortex Analyst, including a chat feature that can take the SQL answer returned by Cortex Analyst, and convert it to natural language.
+* **Introduction** – Information about Snowflake AI and the necessary prerequisites to use it.
+* **Machine Learning** – Sample implementation of the ANOMALY DETECTION machine learning functionality.
+* **Large Language Models** – Information about the available LLM functions, as well as a sample implementation of COMPLETE and TRANSLATE.
+* **Cortex Analyst** – Sample implementation of Snowflake Cortex Analyst, including a chat feature that can take the SQL answer returned by Cortex Analyst and convert it to natural language.
 
-Under the hood, the functionalities are implemented by calling them from microflows which you can use as examples to implement the functions in your own app. For more information, refer to the following sections.
+The functionalities are implemented by calling them from microflows, which you can use as examples to implement the functions in your own app. For more information, see the following sections.
 
 ### Implementing the Analyst Functionality
 
@@ -42,29 +42,27 @@ For more information about configuring the integration between Mendix and Snowfl
 
 ### Implementing Other Functionalities {#functionalities}
 
-The [Snowflake showcase app](https://marketplace.mendix.com/link/component/225845) contains example implementations of the Analyst, ANOMALY DETECTION, COMPLETE and TRANSLATE functionalities. To examine these examples, perform the following steps:
+The [Snowflake showcase app](https://marketplace.mendix.com/link/component/225845) contains example implementations of the Analyst, ANOMALY DETECTION, COMPLETE, and TRANSLATE functionalities. To examine these examples, perform the following steps:
 
 1. Import the sample app into your Mendix Studio Pro.
 
     For more information, see [Using Marketplace Content](/appstore/use-content/).
 
-2. In Studio Pro, in the [App Explorer](/refguide/app-explorer/), go to **Showcase_AI_RESTSQLAPI** > **Pages**.
-
-    This section contains the following pages: 
+2. In Studio Pro, in the [App Explorer](/refguide/app-explorer/), go to **Showcase_AI_RESTSQLAPI** > **Pages**. This section contains the following pages: 
 
     1. Introduction
     2. ML functions
     3. Cortex LLM Functions
     4. Cortex Analyst
    
-3. To see how a Snowflake Cortex Analyst action is called, use the **Explorer** search box to find and open the *EXAMPLE_CortexAnalyst_GenerateResponseMessage** microflow.
+3. To see how a Snowflake Cortex Analyst action is called, use the **Explorer** search box to find and open the **EXAMPLE_CortexAnalyst_GenerateResponseMessage** microflow:
 
    {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-ai-data-connector/CortexAnalystRequestExample.png" alt="" >}}
 
     This microflow calls the Snowflake Cortex Analyst function.
 
-4. To see how you can modify the statement, refer to the *DS_Statement_ML_CreateView_Analyze* example microflow and check how the parameters are set at the **Statement_SetUp** step.
+4. To see how to modify the statement, refer to the *DS_Statement_ML_CreateView_Analyze* example microflow and check how the parameters are set at the **Statement_SetUp** step:
 
     {{< figure src="/attachments/genai/snowflake/StatementSetup.png" alt="" >}}
 
-    For information about the parameters required by each functionality, refer to Snowflake documentation.   
+    For information about the parameters required by each functionality, see the Snowflake documentation.   

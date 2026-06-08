@@ -2,7 +2,7 @@
 title: "PgVector Knowledge Base"
 url: /agents/reference-guide/external-connectors/pgvector/
 linktitle: "PgVector Knowledge Base"
-description: "Describes the configuration and usage of the PgVector Knowledge Base module from the Mendix Marketplace. This module allows developers to integrate PostgreSQL databases with pgvector installed as knowledge bases into their Mendix app."
+description: "Describes how to configure and use the PgVector Knowledge Base module to integrate PostgreSQL databases with pgvector installed as knowledge bases."
 weight: 70
 aliases:
     - /appstore/modules/pgvector-knowledge-base/
@@ -12,13 +12,13 @@ aliases:
 
 ## Introduction {#introduction}
 
-The [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/225063) module contains operations to interact with a PostgreSQL database that has the [pgvector](https://github.com/pgvector/pgvector?tab=readme-ov-file#pgvector) extension installed. It lets you easily store vectors and perform cosine similarity calculations from your Mendix app. This way, you can leverage knowledge bases to enhance your app functionality by performing operations based on (embedding) vectors and vector similarity. In the context of generative AI, large language models (LLMs), and embeddings, this is a key component in natural language processing (NLP) patterns such as retrieval augmented generation (RAG), recommendation algorithms, and similarity search operations.
+The [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/225063) module contains operations to interact with a PostgreSQL database that has the [pgvector](https://github.com/pgvector/pgvector?tab=readme-ov-file#pgvector) extension installed. It lets you easily store vectors and perform cosine similarity calculations from your Mendix app. You can use knowledge bases to enhance your app functionality by performing operations based on (embedding) vectors and vector similarity. In the context of generative AI, large language models (LLMs), and embeddings, this is a key component in natural language processing (NLP) patterns such as retrieval augmented generation (RAG), recommendation algorithms, and similarity search operations.
 
 ### Typical Use Cases {#use-cases}
 
 This module is particularly powerful for Mendix apps that use large language models in generative AI contexts. The PgVector Knowledge Base module allows these apps to securely use private company data in the app logic. For example, this might be essential when constructing prompts.
 
-When there is a need for a separate private knowledge base outside of the LLM infrastructure, this module provides a low-code way to store discrete pieces of data (commonly refered to as **chunks**) in the private knowledge base and retrieve relevant information for end-user actions or app processes.
+When you need a separate private knowledge base outside of the LLM infrastructure, this module provides a low-code way to store discrete pieces of data (commonly referred to as chunks) in the private knowledge base and retrieve relevant information for end-user actions or app processes.
 
 {{% alert color="info" %}}
 Check out the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) to see example implementations, including retrieval augmented generation and semantic search with knowledge bases.
@@ -26,19 +26,19 @@ Check out the [GenAI Showcase App](https://marketplace.mendix.com/link/component
 
 #### Retrieval Augmented Generation {#use-cases-rag}
 
-A common NLP pattern is retrieval augmented generation (RAG), where the goal is to have LLMs construct answers to questions or provide on-demand information about private knowledge base data. In order to make this work, discrete pieces of information from the knowledge base are sent along with user questions to the LLM. The retrieval operations from this module are designed for this step in such use cases.
+A common NLP pattern is retrieval augmented generation (RAG), where the goal is to have LLMs construct answers to questions or provide on-demand information about private knowledge base data. To make this work, discrete pieces of information from the knowledge base are sent along with user questions to the LLM. The retrieval operations from this module are designed for this step in such use cases.
 
 #### Semantic Search {#use-cases-semantic-search}
 
-Also without invoking LLMs directly with the retrieved information, the similarity search logic from the retrieval operation can be leveraged in combination with embedding models to create a semantic search in a Mendix app. This can be used for fuzzy search capabilities, suggestions, or simple recommendation systems.
+Even without invoking LLMs directly with the retrieved information, the similarity search logic from the retrieval operation can be used in combination with embedding models to create a semantic search in a Mendix app. This can be used for fuzzy search capabilities, suggestions, or simple recommendation systems.
 
 ### Features {#features}
 
-With the current version, Mendix supports inserting data chunks with their vectors into a knowledge base (population) and selecting those records from that moment onwards (retrieval). Apart from cosine similarity search, which is executed based on the vector only, custom filtering is possible using key-value labeling (metadata) to support an additional traditional search component.
+The current version supports inserting data chunks with their vectors into a knowledge base (population) and selecting those records from that moment onwards (retrieval). In addition to cosine similarity search, which is executed based on the vector only, custom filtering is possible using key-value labeling (metadata) to support an additional traditional search component.
 
 ### Prerequisites {#prerequisites}
 
-You should have access to your own (remote) PostgreSQL database server with the [pgvector](https://github.com/pgvector/pgvector) extension installed. For more information, see the [Setting up a Vector Database](/agents/reference-guide/external-connectors/pgvector-setup/) section.
+You must have access to your own (remote) PostgreSQL database server with the [pgvector](https://github.com/pgvector/pgvector) extension installed. For more information, see [Setting up a Vector Database](/agents/reference-guide/external-connectors/pgvector-setup/).
 
 {{% alert color="info" %}}This module cannot be used with the Mendix Cloud app database. It only works if you are using your own database server or Amazon RDS.{{% /alert %}}
 
@@ -60,7 +60,7 @@ After you install the PgVector Knowledge Base module, you can find it in the **A
 
 ### General Configuration {#general-configuration}
 
-You must perform the following steps to integrate a Mendix app integrate a PgVector knowledge base:
+To integrate a PgVector knowledge base into a Mendix app, perform the following steps:
 
 1. Add the module role **PgVectorKnowledgeBase.Administrator** to your Administrator user role in the security settings of your app. Optionally, map **GenAICommons.User** to any user roles that need read access directly on retrieved entities.
 2. Add the **DatabaseConfiguration_Overview** page (**USE_ME > Configuration**) to your navigation, or add the **Snippet_DatabaseConfigurations** to a page that is already part of your navigation. 
@@ -72,17 +72,17 @@ It is possible to have multiple knowledge bases in the same database in parallel
 
 ### General Operations {#general-operations-configuration} 
 
-After following the general setup above, you are all set to use the microflows and Java actions in the **USE_ME > Operations** folder in your logic. Currently, eleven operations (microflows and Java actions) are exposed as microflow actions under the **PgVector Knowledge Base** category in the **Toolbox** in Mendix Studio Pro. These can be split into three categories, corresponding to the main functionalities: managing data chunks in the knowledge base (for example, [(Re)populate](#repopulate-knowledge-base)), finding relevant data chunks in an existing knowledge base (for example, [Retrieve](#retrieve)), and deleting chunk data or a whole knowledge base (for exapmle, [Delete Knowledge Base](#delete-knowledge-base)). In many occasions, metadata in a [MetadataCollection](/agents/genai-for-mx/commons/#metadatacollection-entity) can be provided to enable additional filtering.
+After completing the general setup above, you can use the microflows and Java actions in the **USE_ME > Operations** folder in your logic. Currently, 11 operations (microflows and Java actions) are exposed as microflow actions under the **PgVector Knowledge Base** category in the **Toolbox** in Studio Pro. These can be split into three categories corresponding to the main functionalities: managing data chunks in the knowledge base (for example, [(Re)populate](#repopulate-knowledge-base)), finding relevant data chunks in an existing knowledge base (for example, [Retrieve](#retrieve)), and deleting chunk data or a whole knowledge base (for example, [Delete Knowledge Base](#delete-knowledge-base)). In many occasions, metadata in a [MetadataCollection](/agents/genai-for-mx/commons/#metadatacollection-entity) can be provided to enable additional filtering.
 
 Additionally, there is one activity to prepare the connection input, which is a required input parameter for all operations and exposed separately in the **Toolbox** in Studio Pro. The following section describes this operation:
 
 #### `DeployedKnowledgeBase: Create` {#create-pgvectordeployedknowledgebase}
 
-All operations that include knowledge base interaction need the connection details to the knowledge base. Adhering to the GenAI Commons standard, this information is conveyed in a specialization of the GenAI Commons [DeployedKnowledgeBase](/agents/genai-for-mx/commons/#deployed-knowledge-base) entity and the [ConsumedKnowledgeBase](/agents/genai-for-mx/commons/#consumed-knowledge-base) (see the [Technical Reference](#technical-reference) section). After instantiating the `PgVectorKnowledgeBase` based on custom logic and/or front-end logic, this object can be used for the actual knowledge base operations. For operations where collection identifiers are needed in combination with a `ConsumedKnowledgeBase` object, the `Name` of the KnowledgeBase (see the `PgVectorKnowledgeBase` entity) needs to be passed as string.
+All operations that include knowledge base interaction need the connection details to the knowledge base. This information is conveyed in a specialization of the GenAI Commons [DeployedKnowledgeBase](/agents/genai-for-mx/commons/#deployed-knowledge-base) entity and the [ConsumedKnowledgeBase](/agents/genai-for-mx/commons/#consumed-knowledge-base) (see the [Technical Reference](#technical-reference) section). After instantiating the `PgVectorKnowledgeBase` based on custom logic or front-end logic, you can use this object for the actual knowledge base operations. For operations where collection identifiers are needed in combination with a `ConsumedKnowledgeBase` object, the `Name` of the KnowledgeBase (see the `PgVectorKnowledgeBase` entity) must be passed as string.
 
 ### (Re)populate Operations {#repopulate-operations-configuration}
 
-In order to add data to the knowledge base, you need to have discrete pieces of information and create knowledge base chunks for those. You can use the [operations for Chunks and KnowledgeBaseChunks in the GenAI Commons module](/agents/genai-for-mx/commons/#genai-knowledgebase-content). After you create the knowledge base chunks and [generate embedding vectors for them](/agents/genai-for-mx/commons/#add-knowledge-base-to-request), the resulting `ChunkCollection` can be inserted into the knowledge base using an operation for insertion, for example the `(Re)populate Knowledge Base` operation. 
+To add data to the knowledge base, you need to have discrete pieces of information and create knowledge base chunks for those. You can use the [operations for Chunks and KnowledgeBaseChunks in the GenAI Commons module](/agents/genai-for-mx/commons/#genai-knowledgebase-content). After you create the knowledge base chunks and [generate embedding vectors for them](/agents/genai-for-mx/commons/#add-knowledge-base-to-request), the resulting `ChunkCollection` can be inserted into the knowledge base using an operation for insertion, for example, the `(Re)populate Knowledge Base` operation. 
 
 A typical pattern for populating a knowledge base is as follows:
 
@@ -107,15 +107,15 @@ The population handles a whole collection of chunks at once, and this `ChunkColl
 
 #### `Insert` {#insert}
 
-In cases where additional records need to be added to an existing knowledge base, the `Insert` operation can be used. This operation handles a collection of chunks that need to be inserted into the knowledge base. It behaves similarly to the [(Re)populate](#repopulate-knowledge-base) operation, except that it does not delete any data. 
+When additional records need to be added to an existing knowledge base, you can use the `Insert` operation. This operation handles a collection of chunks that need to be inserted into the knowledge base. It behaves similarly to the [(Re)populate](#repopulate-knowledge-base) operation, except that it does not delete any data. 
 
 #### `Replace` {#replace}
 
-The `Replace` operation is intended to be used in scenarios in which the chunks in the knowledge base are related to Mendix objects (in other words, data in the Mendix database). It can be used to keep the knowledge base in sync when data in your Mendix app database changes, which needs to be reflected in the knowledge base. The operation handles a collection of chunks: it will remove the knowledge base data for the Mendix objects the chunks refer to, after which the new data is inserted. For example, this operation can be used before a Mendix object gets committed to keep the knowledgebase in sync with the change.
+The `Replace` operation is intended to be used in scenarios where the chunks in the knowledge base are related to Mendix objects (that is, data in the Mendix database). It can be used to keep the knowledge base in sync when data in your Mendix app database changes, which needs to be reflected in the knowledge base. The operation handles a collection of chunks: it removes the knowledge base data for the Mendix objects the chunks refer to, after which the new data is inserted. For example, you can use this operation before a Mendix object gets committed to keep the knowledge base in sync with the change.
 
 ### Retrieve Operations {#retrieve-operations}
 
-Currently, four operations are available for on-demand retrieval of data chunks from a knowledge base. All operations work on a single knowledge base (specified by the knowledge base name) on a single database server (specified by the `DatabaseConfiguration`). The details for this are captured in the `PgVectorKnowledgeBase`. Apart from a regular [Retrieve](#retrieve), an additional operation was exposed to [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors), where the cosine similarity between the input vector and the vectors of the records in the knowledge base is calculated. In both cases it is possible to filter on metadata. 
+Currently, four operations are available for on-demand retrieval of data chunks from a knowledge base. All operations work on a single knowledge base (specified by the knowledge base name) on a single database server (specified by the `DatabaseConfiguration`). The details for this are captured in the `PgVectorKnowledgeBase`. Apart from a regular [Retrieve](#retrieve), an additional operation was exposed to [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors), where the cosine similarity between the input vector and the vectors of the records in the knowledge base is calculated. In both cases, it is possible to filter on metadata. 
 
 A typical pattern for retrieval from a knowledge base uses GenAI Commons operations and can be illustrated as follows:
 
@@ -123,7 +123,7 @@ A typical pattern for retrieval from a knowledge base uses GenAI Commons operati
 2. Use [Add Metadata to MetadataCollection](/agents/genai-for-mx/commons/) (iteratively) to create a collection of the necessary metadata.
 3. Do the retrieval. For example, you could use [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors) to find chunks based on vector similarity.
 
-For scenarios in which the created chunks were based on Mendix objects at the time of population and these objects need to be used in logic after the retrieval step, two additional operations are available. The Java actions [Retrieve & Associate](#retrieve-associate) and [Retrieve Nearest Neighbors & Associate](#retrieve-nearest-neighbors-associate) take care of the chunk retrieval and set the association towards the original object, if applicable.
+For scenarios where the created chunks were based on Mendix objects at the time of population and these objects need to be used in logic after the retrieval step, two additional operations are available. The Java actions [Retrieve & Associate](#retrieve-associate) and [Retrieve Nearest Neighbors & Associate](#retrieve-nearest-neighbors-associate) take care of the chunk retrieval and set the association toward the original object, if applicable.
 
 A typical pattern for this retrieval is as follows:
 
@@ -134,23 +134,23 @@ A typical pattern for this retrieval is as follows:
 
 #### `Retrieve` {#retrieve}
 
-Use this operation to retrieve knowledge base chunks from the knowledge base. Additional selection and filtering can be done by specifying the optional input parameters for offset and a maximum number of results, as well as a collection of metadata or a Mendix object. If a metadata collection is provided, this operation only returns chunks that conform with all of the metadata in the collection. If a Mendix object is passed, only knowledge base chunks that were related to this Mendix object during insertion will be retrieved.
+Use this operation to retrieve knowledge base chunks from the knowledge base. You can do additional selection and filtering by specifying the optional input parameters for offset and a maximum number of results, as well as a collection of metadata or a Mendix object. If a metadata collection is provided, this operation only returns chunks that conform with all the metadata in the collection. If a Mendix object is passed, only knowledge base chunks that were related to this Mendix object during insertion are retrieved.
 
 #### `Retrieve & Associate` {#retrieve-associate}
 
-Use this operation to retrieve knowledge base chunks from the knowledge base and set associations to the related Mendix objects (if applicable). Additional selection and filtering can be done by specifying the optional input parameters for offset and a maximum number of results, as well as a collection of metadata. If a metadata collection is provided, this operation only returns knowledge base chunks that are conform with all the metadata in the collection.
+Use this operation to retrieve knowledge base chunks from the knowledge base and set associations to the related Mendix objects (if applicable). You can do additional selection and filtering by specifying the optional input parameters for offset and a maximum number of results, as well as a collection of metadata. If a metadata collection is provided, this operation only returns knowledge base chunks that conform with all the metadata in the collection.
 
 #### `Retrieve Nearest Neighbors` {#retrieve-nearest-neighbors}
 
-Use this operation to retrieve knowledge base chunks from the knowledge base where the retrieval and sorting are based on vector similarity with regard to a given input vector. Additional selection and filtering can be done by specifying the optional input parameters: minimum (cosine) similarity (0–1.0), maximum number of results, and a collection of metadata. If a metadata collection is provided, this operation only returns chunks that conform with all of the metadata in the collection.
+Use this operation to retrieve knowledge base chunks from the knowledge base where the retrieval and sorting are based on vector similarity with regard to a given input vector. You can do additional selection and filtering by specifying the optional input parameters: minimum (cosine) similarity (0–1.0), maximum number of results, and a collection of metadata. If a metadata collection is provided, this operation only returns chunks that conform with all the metadata in the collection.
 
 #### `Retrieve Nearest Neighbors & Associate` {#retrieve-nearest-neighbors-associate}
 
-Use this operation to retrieve knowledge base chunks from the knowledge base and set associations to the related Mendix objects (if applicable). In this operation the retrieval and sorting are based on vector similarity with regard to a given input vector. Additional selection and filtering can be done by specifying the optional input parameters: minimum (cosine) similarity (0–1.0), maximum number of results, as well as a collection of metadata. If a metadata collection is provided, this operation only returns knowledge base chunks that are conform with all of the metadata in the collection.
+Use this operation to retrieve knowledge base chunks from the knowledge base and set associations to the related Mendix objects (if applicable). In this operation, the retrieval and sorting are based on vector similarity with regard to a given input vector. You can do additional selection and filtering by specifying the optional input parameters: minimum (cosine) similarity (0–1.0), maximum number of results, and a collection of metadata. If a metadata collection is provided, this operation only returns knowledge base chunks that conform with all the metadata in the collection.
 
 ### Delete Operations {#delete-operations-configuration}
 
-When a whole knowledge base, or part of its data, is no longer needed, this can be handled by using a delete operation. If, however, the knowledge base is still needed, but the data needs to be replaced, see [(Re)populate Operations](#repopulate-operations-configuration) or [Replace](#replace) operations instead. For cases where the chunks in the knowledge base were based on Mendix objects during insertion, chunks can be deleted using the original Mendix object as a starting point in two additional `Delete for List` operations.
+When a whole knowledge base, or part of its data, is no longer needed, you can use a delete operation. However, if the knowledge base is still needed but the data needs to be replaced, see [(Re)populate Operations](#repopulate-operations-configuration) or [Replace](#replace) operations instead. For cases where the chunks in the knowledge base were based on Mendix objects during insertion, chunks can be deleted using the original Mendix object as a starting point in two additional `Delete for List` operations.
 
 #### `Delete Knowledge Base` {#delete-knowledge-base}
 
@@ -158,11 +158,11 @@ Use this operation to delete a complete knowledge base at once. After execution,
 
 #### `Delete for Object` {#delete}
 
-In scenarios where the chunks in the knowledge base are related to Mendix objects (in other words, data in the Mendix database), deletion of Mendix data typically needs to result in the removal of its related knowledge base chunks from the knowledge base. For this, the `Delete for Object` operation can be used. The `Delete for Object` operation accepts any kind of Mendix object, and it removes all the knowledge base chunks related to the provided Mendix object at the time of insertion.
+In scenarios where the chunks in the knowledge base are related to Mendix objects (that is, data in the Mendix database), deletion of Mendix data typically needs to result in the removal of its related knowledge base chunks from the knowledge base. For this, you can use the `Delete for Object` operation. The `Delete for Object` operation accepts any kind of Mendix object, and it removes all the knowledge base chunks related to the provided Mendix object at the time of insertion.
 
 #### `Delete for List` {#delete-list}
 
-This operation is meant to be used in a similar scenario to the one described for the [Delete for Object](#delete) operation, but handles a list of Mendix objects in a single operation. Executing this operation removes all the knowledge base chunks related to the provided Mendix objects at the time of insertion.
+This operation is meant to be used in a similar scenario to the one described for the [Delete for Object](#delete) operation, but it handles a list of Mendix objects in a single operation. Executing this operation removes all the knowledge base chunks related to the provided Mendix objects at the time of insertion.
 
 ## Technical Reference {#technical-reference}
 
@@ -177,10 +177,10 @@ The **Documentation** pane displays the documentation for the currently selected
 
 ## Showcase Application {#showcase-application}
 
-For more inspiration and guidance on how to use these operations in your logic and how to combine it with use cases in the context of generative AI, Mendix highly recommends downloading the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) from the Marketplace. This application contains various examples in the context of generative AI, some of which use the PgVector Knowledge Base module for storing embedding vectors.
+For more inspiration and guidance on how to use these operations in your logic and how to combine them with use cases in the context of generative AI, Mendix recommends downloading the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) from Marketplace. This application contains various examples in the context of generative AI, some of which use the PgVector Knowledge Base module for storing embedding vectors.
 
 {{% alert color="info" %}}
-For more information on how to set up a vector database for retrieval augmented generation (RAG), see the [Setting up a Vector Database](/agents/reference-guide/external-connectors/pgvector-setup/) section and the [RAG Example Implementation in the GenAI Showcase App](/agents/rag/) section.
+For more information on how to set up a vector database for retrieval augmented generation (RAG), see [Setting up a Vector Database](/agents/reference-guide/external-connectors/pgvector-setup/) and [RAG Example Implementation in the GenAI Showcase App](/agents/rag/).
 {{% /alert %}}
 
 ## Troubleshooting

@@ -16,18 +16,36 @@ jobs:
     # Only run on Mendix repo, not forks, and not on draft PRs
     if: github.repository_owner == 'mendix' && github.event.pull_request.draft == false
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     # Cancel old runs when new commits are pushed
     concurrency:
       group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
       cancel-in-progress: true
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
+        with:
+          sparse-checkout: |
+            .vale.ini
+            .vale
+            content/en/docs
+          sparse-checkout-cone-mode: false
+
+      - name: Get changed files
+        id: changed-files
+        run: |
+          FILES=$(gh pr view ${{ github.event.pull_request.number }} --json files --jq '.files[].path' | grep '^content/en/docs/.*\.md$' | paste -sd, -)
+          echo "files=$FILES" >> $GITHUB_OUTPUT
+        env:
+          GH_TOKEN: ${{ github.token }}
 
       - name: Run Vale
+        if: steps.changed-files.outputs.files != ''
         uses: vale-cli/vale-action@v2
         with:
-          files: '.'  # Check all changed files in the PR
+          files: ${{ steps.changed-files.outputs.files }}
+          separator: ','
           version: 3.14.2
           fail_on_error: false
           reporter: github-pr-review

@@ -3,7 +3,7 @@ title: "Enrich Your Mendix App with Agentic Capabilities"
 url: /agents/
 linktitle: "Agents"
 description: "Describes how to integrate agentic and generative AI into Mendix applications using Agents Kit components. Provides a catalog of available starter apps, showcase apps, connectors, modules, and models."
-weight: 7
+weight: 40
 aliases:
     - /appstore/modules/genai/
 ---

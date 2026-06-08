@@ -14,7 +14,7 @@ The [Agent Editor](https://marketplace.mendix.com/link/component/257918) module 
 
 With the Agent Editor module, you can define agents at design time in Studio Pro (11.9.0 and above) and manage their lifecycle as part of your app by leveraging existing platform capabilities such as Model documents, version control, and deployment capabilities. Define and develop agents locally, then deploy them directly to cloud environments using the app model.
 
-Agent Editor is compatible with the Agent Commons module. Using this module, you can define and manage prompts, microflows (as tools), external MCP servers, knowledge bases, and large language models to build agentic patterns that support your business logic. Additionally, you can define variables that act as placeholders for data from the app session context. These placeholders are replaced with actual values when the end-user interacts with the app.
+Agent Editor is compatible with the Agent Commons module. Using this module, you can define and manage prompts, microflows (as tools), external Model Context Protocol (MCP) servers, knowledge bases, and large language models to build agentic patterns that support your business logic. Additionally, you can define variables that act as placeholders for data from the app session context. These placeholders are replaced with actual values when the end-user interacts with the app.
 
 The Agent Editor module includes a Studio Pro extension that you can use to define GenAI agents as documents in the app model. The Agent Editor Commons module, which is installed as part of the same package, includes logic and activities to call these agents from microflows in a running app.
 
@@ -50,7 +50,7 @@ Agent Editor provides the following features:
 
 The Agent Editor module requires Mendix Studio Pro version 11.9.0 or above.
 
-The following module are required dependencies for the supported capabilities of Agent Editor and need to be installed:
+The following modules are required dependencies for the supported capabilities of Agent Editor and need to be installed:
 
 * [Administration](https://marketplace.mendix.com/link/component/23513)
 * [Agent Commons](https://marketplace.mendix.com/link/component/240371)
@@ -196,7 +196,7 @@ In the knowledge base entry:
 
 * Select the configured knowledge base document in the **Knowledge base**.
 * In **Collection**, select one of the available collections from the dropdown. Alternatively, type or paste a collection name to reference a collection that does not exist yet.
-* Provide **Name** and **Description** so the LLM can determine when this knowledge base should be used. This serves the same purpose as naming tools.
+* Provide **Name** and **Description** so the LLM can determine when to use this knowledge base. This serves the same purpose as naming tools.
 * Optionally configure retrieval settings:
     * **Max results** controls the maximum number of chunks returned in a single retrieval.
     * **Min similarity** sets the cosine-similarity threshold between 0 and 1. Higher values (for example, 0.8) are stricter than lower values (for example, 0.2).
@@ -237,9 +237,7 @@ For **Call Agent without History**, you can optionally pass a `Request` object t
 
 The output is a `GenAICommons.Response` object, aligned with the GenAI Commons and Agent Commons domain models and actions. You can use this object for further logic. Additionally, all agents created via the Agent Editor extension are integrated with other Mendix offerings, such as the [Token consumption monitor](/agents/genai-for-mx/conversational-ui/#snippet-token-monitor) or the [Traceability](/agents/genai-for-mx/conversational-ui/#traceability) feature from [ConversationalUI](/agents/genai-for-mx/conversational-ui/).
 
-### Including the Agent in Workflows
-
-Agents can also be invoked from workflows using the [AI Agent Task](/refguide/ai-agent-task/) element. The AI Agent Task calls a microflow that you configure. Inside that microflow, use one of the **Call Agent** toolbox actions described above to execute the agent and return the result to the workflow.
+You can also invoke agents from workflows using the [AI Agent Task](/refguide/ai-agent-task/) element. The AI Agent Task calls a microflow that you configure. Inside that microflow, use one of the **Call Agent** toolbox actions described above to call the agent and return the result to the workflow.
 
 ### Including the Agent in a Conversational User Interface {#conversational-ui}
 
@@ -262,7 +260,7 @@ Use version control to view and restore previous agent versions. This lets you i
 ## Known Limitations {#limitations}
 
 * Currently, Agent Editor supports only Mendix Cloud GenAI as a provider for text generation models and knowledge bases. Support for other providers, such as (Azure) OpenAI and Amazon Bedrock, is planned for a future release.
-* Support for Mac users is limited. Some functionalities might not work, such as doing a test call for Model documents. Mendix recommends using Studio Pro on Windows to use all features of Agent Editor smoothly.
+* Support for Mac users is limited. Some functionalities might not work, such as doing a test call for Model documents. Mendix recommends using Studio Pro on Windows to use all features of Agent Editor.
 * MCP tool support is limited to whole-server integration. Selecting individual tools from a consumed MCP service to be added to an agent is not yet supported. That also means that the tool choice option `Tool` can only refer to a microflow tool currently.
 * If a document referenced by an Agent document is excluded, Studio Pro shows a consistency error. These consistency errors may not be resolved automatically when you include the excluded document again. Resolve this by synchronizing the app directory (<kbd>F4</kbd>) or by making a small change in any agent-related document (for example, add a character to a system prompt and remove it again).
 * The extension creates a `/agenteditor` log folder in the app directory. This folder is not excluded from version control automatically when you include the module from Marketplace. Add this folder to `.gitignore` manually, as described in the [First-time setup](#setup) section.
@@ -283,7 +281,7 @@ This is often caused by validations executed in the after-startup logic. Ensure 
 
 ### Errors Pane Shows “Extension Agent-Editor Failed To Complete Its Consistency Checks”
 
-This is a known issue caused by internal timeouts. It is more likely to occur if there are many Agent documents as part of the project. Resolve this by synchronizing the project directory (<kbd>F4</kbd>), running the project locally, or by making a small change in any agent-related document (for example, add a character to a system prompt and remove it again). If it happens very frequently, contact Mendix Support.
+This is a known issue caused by internal timeouts. It is more likely to occur if there are many Agent documents as part of the project. Resolve this by synchronizing the project directory (<kbd>F4</kbd>), running the project locally, or by making a small change in any agent-related document (for example, add a character to a system prompt and remove it again). If it happens frequently, contact Mendix Support.
 
 ### Agent Documents Are Not Visible in Agent Commons UI
 

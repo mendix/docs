@@ -8,4 +8,4 @@ level: error
 ignorecase: true
 scope: raw
 raw:
-  - '\[(?:click here|here|this link|this page|link|read more)\]\('
+  - '\[(?:click here|here|this|this link|this page|link)\]\('

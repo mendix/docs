@@ -105,19 +105,23 @@ Mendix [connectors](#connectors) offer direct support for the following models.
 | pt-image-1, gpt-image-1.5, gpt-image-2 | Image generation | text | image | |
 | text-embedding-ada-002, text-embedding-3-small, text-embedding-3-large | Embeddings | text | embeddings | |
 
+You can find a list of all OpenAI models [here](https://developers.openai.com/api/docs/models).
+
 #### Mistral
 
 | Models | Category | Input | Output | Additional Capabilities |
 | --- | --- | --- | --- | --- |
-| Mistral Large 3, Mistral Medium 3.1, Mistral Small 3.2, Ministral 3 (3B, 8B, 14B), Magistral (Small, Medium) | Chat completions | text, image | text | Function calling |
+| Mistral Large 3, Mistral Medium 3.5, Mistral Small 4, Ministral 3 (3B, 8B, 14B), Magistral (Small, Medium) and more | Chat completions | text, image | text | Function calling |
 | Codestral, Devstral (Small, Medium), Open Mistral 7B, Mistral Nemo 12B | Chat completions | text | text | Function calling |
 | Mistral Embed, Codestral Embed | Embeddings | text | embeddings | |
+
+You can find a list of all Mistral models [here](https://docs.mistral.ai/models/overview).
 
 #### Google Gemini
 
 | Models | Category | Input | Output | Additional Capabilities |
 | --- | --- | --- | --- | --- |
-| Gemini 2.5 Flash (+ Preview Sep 2025), Gemini 2.5 Flash-Lite (+ Preview Sep 2025), Gemini 2.5 Pro, Gemini Flash Latest, Gemini Flash-Lite Latest, Gemini Pro Latest | Chat completions | text, image | text | Function calling |
+| Gemini 2.5 Flash, Gemini 2.5 Flash-Lite, Gemini 2.5 Pro, Gemini Flash Latest, Gemini Flash-Lite Latest, Gemini Pro Latest | Chat completions | text, image | text | Function calling |
 | Gemini 3 Flash Preview, Gemini 3 Pro Preview | Chat completions | text, image | text | |
 
 #### Amazon Bedrock

@@ -2,7 +2,7 @@
 title: "Create an Agent with Agent Commons"
 url: /agents/how-to/create-agent-with-agent-commons/
 weight: 80
-description: "Learn how to create and manage agents using the Agent Commons UI for runtime configuration, versioning, and rapid experimentation without redeployment."
+description: "Agents Kit 1: Learn how to create and manage agents using the Agent Commons UI for runtime configuration, versioning, and rapid experimentation without redeployment."
 aliases:
     - /appstore/modules/genai/how-to/create-agent-with-agent-commons/
 ---

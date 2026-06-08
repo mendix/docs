@@ -3,7 +3,7 @@ title: "Reference Guide"
 url: /agents/reference-guide/
 linktitle: "Reference Guide"
 weight: 20
-description: "Provides references of Mendix's GenAI Modules and Tools."
+description: "Agents Kit 1: Provides references of Mendix's GenAI Modules and Tools."
 no_list: false
 aliases:
     - /appstore/modules/genai/genai-for-mx/

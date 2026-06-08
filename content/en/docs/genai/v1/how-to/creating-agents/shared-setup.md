@@ -2,7 +2,7 @@
 title: "Set Up Your App for Agent Creation"
 url: /agents/how-to/creating-agents/shared-setup/
 weight: 60
-description: "Describes how to set up your app with the required modules, data, domain model, and function microflows for the example IT helpdesk agent."
+description: "Agents Kit 1: Describes how to set up your app with the required modules, data, domain model, and function microflows for the example IT helpdesk agent."
 aliases:
     - /appstore/modules/genai/how-to/creating-agents/shared-setup/
 ---

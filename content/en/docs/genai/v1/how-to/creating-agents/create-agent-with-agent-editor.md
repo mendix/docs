@@ -2,7 +2,7 @@
 title: "Create an Agent with Agent Editor"
 url: /agents/how-to/create-agent-with-agent-editor/
 weight: 70
-description: "Learn how to create and manage agents using Agent Editor in Studio Pro, defining agents as part of your app model."
+description: "Agents Kit 1: Learn how to create and manage agents using Agent Editor in Studio Pro, defining agents as part of your app model."
 aliases:
     - /appstore/modules/genai/how-to/create-agent-with-agent-editor/
 ---

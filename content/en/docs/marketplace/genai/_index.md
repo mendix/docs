@@ -125,8 +125,8 @@ Mendix [connectors](#connectors) offer direct support for the following models.
 | Models | Category | Input | Output | Additional Capabilities |
 | --- | --- | --- | --- | --- |
 | Find all models supporting the Converse API [here](https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html). Some examples of supported providers are Anthropic Claude, DeepSeek, Meta, OpenAI (OSS models)  | Chat completions | text, document, image  | text | Function calling |
-| Find all models supporting the InvokeModel API [here](https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html). Currenty only models by Cohere are supported| Embeddings  | text | embeddings | |
-| TO DO | Image generation  | text | image | |
+| Find all models supporting the InvokeModel API [here](https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html). Currently only models by Cohere are supported natively.| Embeddings  | text | embeddings | |
+| Find all models supporting the InvokeModel API [here](https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html). Currently only Titan Image Generator G1 v2 is supported natively (check availability for your region first). | Image generation  | text | image | |
 
 
 For more details on limitations and supported model capabilities for the Bedrock Converse API used in the ChatCompletions operations, see [Supported models and model features](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference-supported-models-features.html) in the AWS documentation.

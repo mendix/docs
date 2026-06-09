@@ -8,7 +8,7 @@ description: "Quick reference for key agentic and generative AI terms used in Me
 
 ## Introduction
 
-This glossary provides brief definitions of key agentic and generative AI terms used in the Mendix documentation. To explore working implementations of these concepts, see the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475), which demonstrates RAG, tool calling, MCP integration, and more.
+This glossary provides brief definitions of key agentic and generative AI terms used in the Mendix documentation. To explore working implementations of these concepts, see the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475), which demonstrates [RAG](#retrieval-augmented-generation), [tool calling](#tool-calling), [MCP](#model-context-protocol) integration, and more.
 
 ## Agent {#agent}
 
@@ -34,7 +34,7 @@ Mathematical representations of text as numeric vectors, where conceptually simi
 
 ## Generative AI (GenAI) {#generative-ai}
 
-A category of artificial intelligence technology that can generate new content such as text, images, code, or other outputs based on learned patterns from training data. Generative AI can be used to accelerate business processes, provide user-friendly interactions, and enhance apps with features such as chatbots, content generation, text analysis, and language translation.
+A category of artificial intelligence technology that can generate new content such as text, images, code, or other outputs based on learned patterns from training data. Generative AI can be used to accelerate business processes, provide user-friendly interactions, and enhance apps with features such as chatbots, content generation, text analysis, image analysis, and language translation.
 
 ## Hallucination {#hallucination}
 
@@ -48,7 +48,7 @@ In Mendix, this is implemented through user access approval settings on [tools](
 
 ## Knowledge Base {#knowledge-base}
 
-A storage system for discrete pieces of information that can be retrieved and used to augment prompts. Combining a knowledge base with [embeddings](#embeddings) (vector representations of the data) creates a [vector database](#vector-database) that supports semantic similarity searches. Knowledge bases are essential for [RAG](#retrieval-augmented-generation) patterns and semantic search.
+A storage system for discrete pieces of information that can be retrieved and used to augment prompts. Knowledge bases are essential for [RAG](#retrieval-augmented-generation) patterns. When knowledge is stored as [embeddings](#embeddings) in a [vector database](#vector-database), semantic similarity searches are possible.
 
 Mendix supports managed cloud knowledge base services such as [Mendix Cloud GenAI Knowledge Base Resource Packs](/agents/mx-cloud-genai/resource-packs/) and self-managed implementations using the [PgVector Knowledge Base module](/agents/reference-guide/external-connectors/pgvector/).
 
@@ -70,7 +70,7 @@ The practice of structuring instructions to guide generative AI models to produc
 
 ## Retrieval Augmented Generation (RAG) {#retrieval-augmented-generation}
 
-A pattern that combines [embeddings](#embeddings)-based knowledge retrieval with text generation. RAG retrieves relevant information from a [knowledge base](#knowledge-base), augments the prompt with that information, and generates a response grounded in the retrieved data. This allows models to answer questions about private or domain-specific data. For example, when a user asks "What is our refund policy?", RAG retrieves relevant policy documents from the knowledge base, adds them to the prompt, and generates an accurate answer based on the actual policies.
+A pattern that combines knowledge retrieval with text generation. RAG retrieves relevant information from a [knowledge base](#knowledge-base), augments the prompt with that information, and generates a response grounded in the retrieved data. This allows models to answer questions about private or domain-specific data. For example, when a user asks "What is our refund policy?", RAG retrieves relevant policy documents from the knowledge base, adds them to the prompt, and generates an accurate answer based on the actual policies.
 
 ## System Prompt {#system-prompt}
 
@@ -78,7 +78,7 @@ Instructions that define the model's behavior, role, and constraints. System pro
 
 ## Token {#token}
 
-The basic unit of text that LLMs process. Models break down text into tokens, which can be words, parts of words, or individual characters depending on the model's tokenization method. For example, "agentic workflow" might be broken into tokens like `["agent", "ic", " work", "flow"]`.
+The basic unit of data that LLMs process. For text input, models break down text into tokens, which can be words, parts of words, or individual characters depending on the model's tokenization method. For example, "agentic workflow" might be broken into tokens like `["agent", "ic", " work", "flow"]`.
 
 ## Tool Calling {#tool-calling}
 
@@ -86,13 +86,13 @@ Also known as tool use or function calling, a capability that allows LLMs to cal
 
 ## Trace {#trace}
 
-A trace is a structured record of execution across a system or workflow. In the context of an agent, it captures the sequence of inputs, reasoning steps, tool calls, intermediate actions, and outputs that led to a result.
+A structured record of execution across a system or workflow. In the context of an agent, a trace captures the sequence of inputs, reasoning steps, tool calls, intermediate actions, and outputs that led to a result. It also records token consumption, the duration of each step, and whether the execution was successful.
 
 In Mendix, tracing is supported by the [GenAI Commons](/agents/genai-for-mx/commons/#traceability) module to help debug and monitor agent behavior.
 
 ## User Prompt {#user-prompt}
 
-The input text provided by an end user or app to an LLM. User prompts contain the specific question, request, or data that the model should process. These vary with each interaction based on what the user needs. For example, "What is your refund policy?" or "Summarize this customer feedback." User prompts work in combination with [system prompts](#system-prompt) to produce responses.
+The input text provided by an end-user or app to an LLM. User prompts contain the specific question, request, or data that the model should process. These vary with each interaction based on what the user needs. For example, "What is your refund policy?" or "Summarize this customer feedback." User prompts work in combination with [system prompts](#system-prompt) to produce responses.
 
 ## Vector Database {#vector-database}
 

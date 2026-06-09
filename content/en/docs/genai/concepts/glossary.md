@@ -42,7 +42,7 @@ When an LLM generates incorrect, nonsensical, or fabricated information that is 
 
 ## Human in the Loop {#human-in-the-loop}
 
-A design pattern where an agent pauses at defined points to request human input—such as approval, correction, or a decision—before continuing. The human actively participates in the agent’s execution rather than passively observing.
+A design pattern where an agent pauses at defined points to request human input such as approval, correction, or a decision. The human actively participates in the agent’s execution rather than passively observing.
 
 In Mendix, this is implemented through user access approval settings on [tools](#tool-calling), which control when tools get executed and whether they are visible to the user. For example, a tool that deletes records might require explicit user confirmation before execution. The ConversationalUI module supports human-in-the-loop interactions out of the box. For implementation details, see [Human in the Loop](/agents/genai-for-mx/conversational-ui/#human-in-the-loop).
 
@@ -82,7 +82,7 @@ The basic unit of data that LLMs process. For text input, models break down text
 
 ## Tool Calling {#tool-calling}
 
-Also known as tool use or function calling, a capability that allows LLMs to call specific functions or tools to gather additional information or perform actions. The model returns a structured request indicating which function to call and with what parameters, which the app then executes and returns results to the model. Tool calling enables agent patterns like ReAct (Reasoning + Acting), where agents iteratively reason about what to do and then call tools to take action. For more information, see [Tool Calling](/agents/function-calling/).
+Also known as tool use or function calling, a capability that allows LLMs to call specific tools to gather additional information or perform actions. The model returns a structured request indicating which tool to call and with what parameters, which the app then executes and returns results to the model. Tool calling enables agent patterns like ReAct (Reasoning + Acting), where agents iteratively reason about what to do and then call tools to take action. For more information, see [Tool Calling](/agents/function-calling/).
 
 ## Trace {#trace}
 

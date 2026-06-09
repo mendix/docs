@@ -28,6 +28,10 @@ This defines the prop `key` in the client component props which are supplied to 
 
 #### AllowUpload (Optional) {#allow-upload}
 
+{{% alert color="info" %}}
+Introduced in Mendix 11.8. Support for native widgets was introduced in Mendix 11.11.
+{{% /alert %}}
+
 This optional attribute applies only to [file](#file) and [image](#image) properties and determines whether users can upload and edit files. When set to the default value of `false`, properties use read-only behavior. Setting it to `true` unlocks upload and edit capabilities by passing `EditableFileValue<FileValue>` and `EditableImageValue<ImageValue>` types, as props to a client component.
 
 Be aware of behavioral differences between the read-only mode (`false`) and the editable mode (`true`).

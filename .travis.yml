@@ -39,11 +39,10 @@ branches:
 
 cache:
 # Cache node_modules to avoid re-downloading on every build
-# Cache Hugo module downloads (theme)
 # See https://docs.travis-ci.com/user/caching/
   directories:
     - node_modules
-    - $HOME/.cache/hugo_cache
+#    - $HOME/.cache/hugo_cache
 
 before_install:
 ###############

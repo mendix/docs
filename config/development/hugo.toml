@@ -9,3 +9,6 @@ title = "Mendix DEVELOPMENT Documentation"
 buildDrafts=true
 buildExpired=true
 buildFuture=true
+
+# Speed up development builds by disabling Git info lookup (which means last modified date won't show)
+enableGitInfo = false

@@ -22,7 +22,6 @@ The information system provides the capability to process audit records for even
 
 ### Supplemental Guidance
 
-
 Events of interest can be identified by the content of specific audit record fields including, for example, identities of individuals, event types, event locations, event times, event dates, system resources involved, IP addresses involved, or information objects accessed. Organizations may define audit event criteria to any degree of granularity required, for example, locations selectable by general networking location (for example, by network or subnetwork) or selectable by specific information system component.
 
 The following controls are related to this control:

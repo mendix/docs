@@ -3,7 +3,7 @@ title: "Advanced Ingress Settings in Mendix on Kubernetes"
 linktitle: "Advanced Settings"
 url: /developerportal/deploy/private-cloud-cluster/private-cloud-ingress-settings/advanced/
 description: "Describes how to configure advanced Ingress settings."
-weight: 40
+weight: 50
 ---
 
 ## Introduction

@@ -4,6 +4,7 @@ url: /community-tools/contribute-to-mendix-docs/style-guide/product-naming-guide
 weight: 100
 description: "Guidelines on usage, capitalization, and spelling for Mendix product names and terms, including main products and other Mendix-specific terminology."
 ---
+<!-- vale off -->
 
 ## Purpose of This Guide
 
@@ -155,7 +156,7 @@ Does not need to be capitalized, and "team" should be used without the qualifier
 
 ### app template
 
-This is the term to use to reflect the create-new-app flow UI in the Developer Portal.
+This is the term to use to reflect the create-new-app flow UI in Apps.
 
 Do not use "starter app."
 
@@ -462,12 +463,6 @@ Do not use SBoM.
 ### Sprint
 
 Capitalize in all instances.
-
-### Studio Pro landing page
-
-The Studio Pro landing page refers to the page that contains **My Apps**, **Marketplace**, and **Developer Portal** tabs.
-
-Capitalize "Studio Pro".
 
 ### sub-microflow
 

@@ -2,13 +2,13 @@
 title: "Optimistic Locking"
 url: /refguide/optimistic-locking/
 description: "Describes optimistic locking support."
-beta: true
 ---
 
 ## Introduction
 
 {{% alert color="info" %}}
-This feature is available in Beta starting with Mendix version 11.5.0.
+This feature is Generally Available in Mendix version 11.11.0 and above.
+This feature was available as Beta since Mendix version 11.5.0.
 {{% /alert %}}
 
 Optimistic locking is a strategy used in concurrent systems to prevent lost updates when multiple users or processes try to modify the same piece of data at the same time. Instead of locking the data immediately, and preventing other users from accessing it, optimistic locking allows multiple users to read, and potentially modify, the same data concurrently. In optimistic locking, the assumption is that conflicts are rare, so it checks for conflicts only at the very last moment, when an update is attempted.

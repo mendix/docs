@@ -11,4 +11,4 @@ buildExpired=true
 buildFuture=true
 
 # Speed up development builds by disabling Git info lookup (which means last modified date won't show)
-enableGitInfo = false
+# enableGitInfo = false

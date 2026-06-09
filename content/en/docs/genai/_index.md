@@ -10,7 +10,7 @@ aliases:
 
 ## Introduction
 
-With Mendix's agentic capabilities, you can build AI-powered features into your applications using leading AI models and your own data. 
+With Mendix's agentic capabilities, you can build AI-powered features into your applications using leading AI models and your own data!
 
 Mendix supports a variety of agentic and generative AI capabilities that you can integrate into your applications. Some typical use cases include the following:
 

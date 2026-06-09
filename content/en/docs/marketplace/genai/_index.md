@@ -122,7 +122,7 @@ You can find a list of all Mistral models [here](https://docs.mistral.ai/models/
 | Models | Category | Input | Output | Additional Capabilities |
 | --- | --- | --- | --- | --- |
 | Gemini 2.5 Flash, Gemini 2.5 Flash-Lite, Gemini 2.5 Pro, Gemini Flash Latest, Gemini Flash-Lite Latest, Gemini Pro Latest | Chat completions | text, image | text | Function calling |
-| Gemini 3 Flash Preview, Gemini 3 Pro Preview | Chat completions | text, image | text | |
+| Gemini 3 Flash Preview, Gemini 3.1 Flash-Lite, Gemini 3.1 Pro Preview, Gemini 3.5 Flash | Chat completions | text, image | text | |
 
 #### Amazon Bedrock
 

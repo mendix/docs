@@ -111,7 +111,7 @@ You can find a list of all OpenAI models [here](https://developers.openai.com/ap
 
 | Models | Category | Input | Output | Additional Capabilities |
 | --- | --- | --- | --- | --- |
-| Mistral Large 3, Mistral Medium 3.5, Mistral Small 4, Ministral 3 (3B, 8B, 14B), Magistral (Small, Medium) and more | Chat completions | text, image | text | Function calling |
+| Mistral Small 4, Mistral Medium 3.5, Mistral Large 3, Ministral 3 (3B, 8B, 14B), Magistral (Small, Medium) and more | Chat completions | text, image | text | Function calling |
 | Codestral, Devstral (Small, Medium), Open Mistral 7B, Mistral Nemo 12B | Chat completions | text | text | Function calling |
 | Mistral Embed, Codestral Embed | Embeddings | text | embeddings | |
 

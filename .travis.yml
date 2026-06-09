@@ -42,6 +42,7 @@ cache:
 # See https://docs.travis-ci.com/user/caching/
   directories:
     - node_modules
+    - resources/_gen
 
 before_install:
 ###############

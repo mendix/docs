@@ -12,7 +12,7 @@ themesDir = "node_modules"
 refLinksErrorLevel = "WARNING"
 
 # Will give values to .Lastmod etc.
-enableGitInfo = true
+enableGitInfo = false
 
 # Language settings
 contentDir = "content/en"

@@ -1,8 +1,7 @@
 language: node_js
 node_js:
   - 22              # latest LTS version ('node' will give latest version, 'lts/*' will give LTS version )
-arch: amd64           # optional, this is default, routes to a full VM
-# arch: arm64         # this is the recommended LXD container - faster spin up but some limitations Not used as it seems very unstable.
+arch: arm64
 os: linux             # optional, this is default
 dist: jammy          # or bionic | xenial | trusty | precise with xenial as default - Recommended here: https://docs.travis-ci.com/user/reference/overview/#deprecated-virtualization-environments
 
@@ -131,8 +130,8 @@ script:
 
 before_deploy:
 ##############
-#  - curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip" # arm version
-  - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" # amd version
+  - curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip" # arm64 version (for arch: arm64)
+#  - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" # x86_64 version (for arch: amd64)
   - unzip -q awscliv2.zip
   - sudo ./aws/install # install AWS command line
   - aws --version

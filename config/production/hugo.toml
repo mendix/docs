@@ -18,8 +18,3 @@ title = "Mendix Documentation"
 		isPlainText = true # specifies GoLang’s plain text parser for the layout, preventing automatic HTML formatting in JSON
 		mediaType = "application/json" # file output type
 		notAlternative = true # excludes from looping over .AlternativeOutputFormats page variable
-
-[build]
-  _merge = "shallow"
-  buildDrafts = false
-  buildFuture = false

@@ -12,7 +12,7 @@ themesDir = "node_modules"
 refLinksErrorLevel = "WARNING"
 
 # Will give values to .Lastmod etc.
-enableGitInfo = false
+enableGitInfo = true
 
 # Language settings
 contentDir = "content/en"
@@ -46,8 +46,6 @@ disableKinds = ["taxonomy", "term"]
             # Disable typographic replacements, such as smart quotes. MvM - Changed to disable=true to avoid issues with quotes being mismatched.
             # See https://gohugo.io/configuration/markup/
             disable = true
-        [markup.goldmark.parser]
-            autoHeadingIDType = "blackfriday"
     [markup.highlight]
         # See a complete list of available styles at https://xyproto.github.io/splash/docs/all.html
         # See config options at https://gohugo.io/getting-started/configuration-markup/#highlight
@@ -62,15 +60,6 @@ disableKinds = ["taxonomy", "term"]
 
 [module]
 replacements = "github.com/FortAwesome/Font-Awesome -> @fortawesome/fontawesome-free, github.com/twbs/bootstrap -> bootstrap"
-
-[build]
-  noJSConfigInAssets = true
-  useResourceCacheWhen = "always"  # Critical for cache reuse
-
-[caches]
-  [caches.assets]
-    dir = "/tmp/hugo_cache"  # Must match Travis' HUGO_RESOURCE_DIR
-    maxAge = "8760h"  
 
 # Comment out if you don't want the "print entire section" link enabled.
 [outputs]

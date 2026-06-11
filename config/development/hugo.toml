@@ -9,17 +9,3 @@ title = "Mendix DEVELOPMENT Documentation"
 buildDrafts=true
 buildExpired=true
 buildFuture=true
-
-# Disable print output format in development. Production still generates print versions
-[outputs]
-  _merge = 'deep'
-  section = ["HTML"]
-  page = ["HTML"]
-
-[build]
-  _merge = "shallow"  # Force override production settings
-  buildDrafts = true
-  buildFuture = true
-
-[caches.assets]
-  maxAge = "1h"  # Shorter cache for active development

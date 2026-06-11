@@ -14,6 +14,6 @@ buildFuture=true
 # enableGitInfo = false
 
 # Disable print during development
-[outputs]
-    section = ["HTML"]
-    page = ["HTML"]
+# [outputs]
+#    section = ["HTML"]
+#    page = ["HTML"]

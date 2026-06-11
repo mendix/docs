@@ -98,19 +98,7 @@ These tables show how many Mendix Cloud Tokens each CRP requires:
 
 ## GenAI Resource Packs {#grps}
 
-GenAI Resource Packs provide turn-key access to Generative AI technology, delivered through Mendix Cloud. For the technical details of each GenAI Resource Pack (GRP), refer to [GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/).
-
-| GenAI Model Resource Pack – Anthropic Claude Sonnet | Mendix Cloud Tokens |
-| --- | --: |
-| S | 30 |
-| M | 60 |
-| L | 120 |
-
-| GenAI Model Resource Pack – Cohere Embed | Mendix Cloud Tokens |
-| --- | --: |
-| S | 6 |
-| M | 12 |
-| L | 24 |
+GenAI Resource Packs provide turn-key access to Generative AI technology, delivered through Mendix Cloud. For text generation and embeddings resources, 1 Mendix Cloud Token equals 100 GenAI Units. You choose any Cloud Token amount when provisioning a resource. There are no fixed plan sizes. For technical details, GenAI Unit exchange rates, and model pricing, see [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/).
 
 | GenAI Knowledge Base Resource Packs | Mendix Cloud Tokens |
 | --- | --: |

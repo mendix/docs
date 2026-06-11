@@ -14,7 +14,7 @@ The [Mendix Cloud GenAI portal](https://genai.home.mendix.com/) is the part of t
 
 ## Resource Details 
 
-After clicking a specific resource, you land on its details page, offering a shortcut to consumption insights, key generation, team management, and helpful documentation. 
+After clicking a specific resource, you land on its details page, which provides shortcuts to consumption insights, key generation, team management, and helpful documentation.
 
 {{< figure src="/attachments/genai/navigate_mxgenai/GenAIResource_Details.png" alt="" >}}
 
@@ -22,41 +22,26 @@ After clicking a specific resource, you land on its details page, offering a sho
 
 The **Settings** tab contains the details of a GenAI resource. It shows the following:
 
-* **Display Name**: indicates the name of the resource.
-* **ID**: indicates the resource ID.
-* **Region(s)**: the region where the resource is hosted.
-* **Cross Region Inference (CRI)**: shows if the model supports cross-region inference ¹.
-* **Cloud Provider**: indicates the cloud provider, for example, AWS.
-* **Type**: this is the type of resource, for example, Text Generation, Embedding, Knowledge Base, etc.
-* **Model**: indicates which model is used, for example, Anthropic Claude Sonnet 3.5. For more information, see the [Upgrading the Text Model Version](#upgrade-model) section below.
-* **Plan**: indicates the subscription plan used for compute resources (for example, embedding or text generation resources).
-* **Environment**: shows which environment is used, for example, test, acceptance, or production.
+* **Display Name** – The name of the resource.
+* **ID** – The resource ID.
+* **Region(s)** – The region where the resource is hosted.
+* **Cross Region Inference (CRI)** – Indicates whether cross region inference is enabled for this resource ¹.
+* **Cloud Provider** – The cloud provider, for example, AWS.
+* **Type** – The type of resource, for example, Text Generation Model, Embeddings Generation, or Knowledge Base.
+* **Available models** – The model versions enabled on the resource. For text generation resources, this lists all Claude model versions available for use (for example, Anthropic Claude Haiku 4.5, Anthropic Claude Sonnet 4.5, Anthropic Claude Sonnet 4.6). For embeddings resources, this lists all available Cohere Embed model versions (for example, Cohere Embed English v3, Cohere Embed multilingual v3, Cohere Embed v4).
+* **Default model** – The model version used as a fallback when no model is explicitly specified in an API call. This field only applies to text generation resources and is present for backward compatibility with apps using connector versions below V3.0.0.
+* **Tokens** – The monthly GenAI Unit allocation for the resource, for example, 1,000 GenAI Units.
+* **Environment** – The environment, for example, Test, Acceptance, or Production.
 
-¹ Cross-region inference (CRI) allows a model to redirect requests to another region, helping to distribute the load across multiple regions within the same area. EU requests always stay within EU regions. Connecting to a cross-region inference profile does not change how the request is sent; the redirection happens on the server side, determining the region to handle the request to get the fastest response. For more information, see [Increase throughput with cross-region inference](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html). If applicable, CRI profiles are selected during provisioning of a model resource. New models are available under the CRI inferencing type by default. 
+¹ Cross Region Inference (CRI) allows a model to redirect requests to another region, helping to distribute the load across multiple regions within the same area. EU requests always stay within EU regions. Connecting to a cross region inference profile does not change how the request is sent; the redirection happens on the server side, determining the region to handle the request to get the fastest response. For more information, see [Increase throughput with cross-region inference](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html). If applicable, CRI profiles are selected during provisioning of a model resource. New models are available under the CRI inferencing type by default.
 
 #### Additional Details for Knowledge Base Resources
 
 For knowledge base resources, you can also see details of the associated embeddings resource and vice versa. To learn more about embeddings, see the [Embedding vector](/agents/rag/#embedding-vector) section of *RAG in a Mendix App*.
 
-#### Upgrading the Text Model Version{#upgrade-model}
+#### Adjusting the GenAI Unit Capacity of a Resource
 
-Model version upgrades let you migrate your Text Generation Resources to a newer, non-deprecated model within the same model family. For example, GenAI Resources offer the Claude Sonnet family, ranging from Claude Sonnet 3.7 to Claude Sonnet 4.5. Upgrading ensures you gain the latest performance improvements and AI capabilities. In the **Settings** tab of your Text Generation Resource, click **Change Model** to view and select the available model version.
-
-{{% alert color="warning" %}}
-While changing the model version, note the following:
-
-* Changing a model version in production requires careful evaluation. Even within the same model family, newer versions can behave differently, and may affect how your LLM-driven applications, such as agents, perform.
-
-* Always validate a new model version in a test environment before using it for your use case, and downgrade to the previous version if required.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-Ensure you are using Mendix Cloud GenAI Connector version 5.3.0 and above to support the latest Cohere Embed v4 model. To see the upgraded model version reflected in your GenAI Connector after upgrading, make sure you are using Mendix Cloud GenAI Connector version 5.4.0 and above.
-{{% /alert %}}
-
-#### Adjusting the Plan Size of GenAI Resources (Text and Embedding Models) 
-
-After a resource is provisioned, you can change its plan size, either upgrade or downgrade it to match your actual production token usage. Company admins can change the plan through the GenAI Resources self-service in the Control Center. For more information, see the [Adjusting GenAI Resource Plan Size](/control-center/genai-resources-self-service/#adjusting-genai-resource-plan-size) section of *GenAI Resources*.
+After a resource is provisioned, you can change its GenAI Unit capacity to match your actual usage. Company Admins can adjust the capacity through the GenAI Resources self-service in the Control Center. For more information, see the [Adjusting Resource GenAI Unit Capacity](/control-center/genai-resources-self-service/#adjusting-resource-genai-unit-capacity) section of *GenAI Resources*.
 
 ### Team
 
@@ -68,9 +53,9 @@ The **Team** page allows you to manage access to the Mendix Cloud GenAI resource
 
 You can invite members from outside your organization to access your GenAI resources by entering their email address in **Add Member**. This option is available only if your company admin has enabled external user invitations. 
 
-You can track invitations in the **Pending Invites** tab. Invited users will receive an email with a link to accept or decline the invitation. If they do not yet have a Mendix account, the link redirects them to create one. Once the invitation is accepted, the resource will appear in their GenAI portal overview.
+You can track invitations in the **Pending Invites** tab. Invited users receive an email with a link to accept or decline the invitation. If they do not yet have a Mendix account, the link redirects them to create one. Once the invitation is accepted, the resource appears in their GenAI portal overview.
 
-Pending invitations can be withdrawn at any time and will automatically expire after two weeks. External members can create and delete keys, export consumption data, manage knowledge base content and collections, and change the model. However, they cannot modify the display name or environment, or manage team membership.
+You can withdraw pending invitations at any time. Invitations automatically expire after two weeks. External members can create and delete keys, export consumption data, manage knowledge base content and collections, and change the model. However, they cannot modify the display name or environment, or manage team membership.
 
 ### Keys
 
@@ -78,15 +63,15 @@ Pending invitations can be withdrawn at any time and will automatically expire a
 
 The **Keys** tab allows you to manage configuration keys for the resources. These keys provide programmatic access to the GenAI resources. From the **Keys** tab, you can create new keys and revoke existing ones.  
 
-To create a new key, click **Create Key**, add a description, and save the changes. A pop-up message will display the key.
+To create a new key, click **Create Key**, add a description, and save the changes. A dialog box displays the key.
 
 {{% alert color="info" %}}
-Make sure to store it securely, as it will only be shown once.
+Store it securely. The key is shown only once.
 {{% /alert %}}
 
 {{< figure src="/attachments/genai/navigate_mxgenai/GenAIResource_KeyGeneration.png" alt="" >}}
 
-Once created, the key can be used in the Mendix application via the Mendix Cloud GenAI connector. 
+Once created, the key can be used in the Mendix application via the Mendix Cloud GenAI connector. A single key exposes all model versions currently enabled on the resource. When you import the key into your application, all available models are accessible. No key rotation is required when new model versions are added to the resource.
 
 #### Additional Information for Knowledge Base Resource Keys
 
@@ -149,24 +134,32 @@ You can upload data directly from Mendix to the Knowledge Base. To do so, severa
 
 {{% alert color="info" %}} The **Consumption** tab is available for Model resources only.{{% /alert %}} 
 
-The **Consumption** section provides outcomes of token consumption monitoring for each GenAI resource in a graphical way. Use this overview to see the current usage, insights on the usage per day, and to compare the current month with previous months. Note that months represent bundle months here, which is the period during which token consumption is tracked, beginning on the date of your last GenAI Resource plan entitlement reset and ending on the next reset date. This creates a recurring monthly cycle based on your plan activation date, not the calendar month.
+The **Consumption** tab provides an overview of GenAI Unit and token consumption for the resource. Use this overview to see current usage, view daily consumption insights, and compare the current period with previous periods. Note that periods represent bundle months. A bundle month is the period during which consumption is tracked, beginning on the date of your last GenAI Resource entitlement reset and ending on the next reset date. This creates a recurring monthly cycle based on your resource activation date, not the calendar month.
 
 {{< figure src="/attachments/genai/navigate_mxgenai/GenAIResource_TokenConsumptionMonitor.png" alt="" >}}
 
-#### What Are Tokens?
+The **Current Consumption** panel shows the total GenAI Units consumed against your monthly allocation, displayed as a percentage and a number (for example, 1,521 / 1.6k). The **Plan** panel shows the model family in use and the total GenAI Unit allocation for the bundle month. The bundle refill date is shown at the top of the page.
 
-Tokens are what you pay for when consuming large language model services.
+Below the summary, the page shows consumption over a selected time range. You can switch between weekly (**W**), bundle month (**BM**), month to date (**MTD**), and six months (**6M**) views. The charts show:
 
-In order for a large language model to understand text input, the text is first ‘tokenized’: broken down into smaller pieces where each piece represents a token with its unique ID. A good rule of thumb is that 100 tokens are around 75 English words, however there are always differences depending on the model or the language used. After tokenization, each token will be assigned an embeddings vector. The tokens required to feed the input prompt to the model are called ‘input tokens’. The tokens required to transform the model output vectors into, for example, text or images are called ‘output tokens’.
+* **Monthly GenAI Units Consumption** – GenAI Units consumed per day, with a dashed line indicating the monthly allocation limit.
+* **Monthly Input Consumption** – Raw input tokens consumed per day.
+* **Monthly Output Consumption** – Raw output tokens consumed per day.
 
-#### When Are Tokens Consumed?
+#### What Are Tokens and GenAI Units?
 
-Text generation resources consume both input and output tokens (text sent to the model and generated by the model).
+Tokens are what you pay for when consuming large language model services. Text input is first "tokenized," meaning it is broken down into smaller pieces where each piece represents a token. A good rule of thumb is that 100 tokens are around 75 English words, though this varies by model and language. Tokens sent to the model are called input tokens; tokens generated by the model are called output tokens.
+
+GenAI Units are the unit of measure for consumption across all models on a resource. Each model family has a different exchange rate. The exchange rate is the number of GenAI Units consumed per 1 million input or output tokens. A more capable model costs more GenAI Units per token than a less capable model.
+
+#### When Are Tokens and GenAI Units Consumed?
+
+Text generation resources consume both input and output tokens, which are converted to GenAI Units using the model-specific exchange rate.
 
 Embeddings resources only consume input tokens. This is because only the generated embedding vectors are returned and the generated output is not tokenized.
 
-Knowledge base resources do not consume tokens as they only store embedding vectors. Uploading a document to a knowledge base connected to an Embeddings resource will consume tokens in the embeddings resource.
+Knowledge base resources do not consume tokens directly. Uploading a document to a knowledge base connected to an embeddings resource consumes tokens in that embeddings resource.
 
-#### Exporting Token Consumption Data 
+#### Exporting Consumption Data
 
-Click **Export** to export consumption data in CSV format. The export contains basic information about input tokens, output tokens, and dates. Days with no consumption are not exported. 
+Click **Export** to export consumption data in CSV format. The export contains information about input tokens, output tokens, and dates. Days with no consumption are not exported.

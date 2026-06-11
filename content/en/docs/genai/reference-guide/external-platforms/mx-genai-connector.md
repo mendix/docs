@@ -21,7 +21,11 @@ Typical use cases for generative AI are described in more detail in the [Typical
 
 ### Prerequisites
 
-To use this connector, you need configuration keys to authenticate to the Mendix Cloud GenAI services. You can generate keys in the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com). Alternatively, ask someone with access to generate keys for you or add you to their team so you can generate keys yourself. 
+To use this connector, you need configuration keys to authenticate to the Mendix Cloud GenAI services. You can generate keys in the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com). Alternatively, ask someone with access to generate keys for you or add you to their team so you can generate keys yourself.
+
+{{% alert color="info" %}}
+The Mendix Cloud GenAI Connector requires at least version 3.0.0. To use multiple models from a single resource, upgrade to version V3.2.1 or later.
+{{% /alert %}}
 
 {{% alert color="info" %}}
 The Mendix Cloud GenAI Connector module generates embeddings internally when interacting with a knowledge base. You do not need to create embedding keys yourself when interacting with a Mendix Cloud knowledge base. Direct embedding operations are only required if additional processes are needed, such as using the generated vectors instead of text. For example, a similar search algorithm could use vector distances to calculate relatedness.
@@ -48,8 +52,14 @@ To get started, follow these steps:
 * Add the `Configuration_Overview` page (**USE_ME** > **Configuration**) to your navigation, or add the `Snippet_Configuration` to a page that is already part of your navigation. Alternatively, register your key by using the `Configuration_RegisterByString` microflow.
 * Complete the runtime setup of the Mendix Cloud GenAI configuration by navigating to the page mentioned above. Import a key generated in the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com) or provided to you and click **Test Key** to validate its functionality. This key establishes a connection between the Mendix Cloud resources and your application and contains all the information required to set up the connection.
 
+A single key exposes all model versions currently enabled on the resource. When you import the key, all available models are accessible. No key rotation is required when new model versions are added to the resource by a Company Admin.
+
 {{% alert color="info" %}}
 When using an Embeddings Model Resource together with a Knowledge Base Resource, you do not need to import both keys. Importing the Knowledge Base Resource key automatically generates the connection details for the embeddings generation model.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+If you are using connector version V3.2.1 or later, you can select which model to use per agent or microflow from all available models on the resource. If you are using an older version, the connector automatically uses the default model configured on the resource. You do not need to update your app unless you want to use a different model explicitly.
 {{% /alert %}}
 
 ## Operations
@@ -241,7 +251,7 @@ Use the following toolbox actions to retrieve knowledge data from a collection a
 
 ### Embedding Operations
 
-If you are working directly with embedding vectors for specific use cases that do not include knowledge base interaction, such as clustering or classification, the operations below are relevant. For practical examples and guidance, refer to the [GenAI Showcase Application](https://marketplace.mendix.com/link/component/220475) to see how these embedding-only operations can be used.
+If you are working directly with embedding vectors for specific use cases that do not include knowledge base interaction, such as clustering or classification, the operations below are relevant. For practical examples and guidance, see the [GenAI Showcase Application](https://marketplace.mendix.com/link/component/220475) to see how these embedding-only operations can be used.
 
 To implement embeddings into your Mendix application, use the microflows in the **Knowledge Bases & Embeddings** folder in the GenAICommons module. Both microflows for embeddings are exposed as microflow actions under the **GenAI (Generate)** category in the **Toolbox** in Studio Pro.
 
@@ -329,7 +339,7 @@ To fix this error, try synchronizing all dependencies (**App** > **Synchronize d
   
 ## Read More {#readmore}
 
-For Anthropic Claude-specific documentation, refer to:
+For Anthropic Claude-specific documentation, see:
 
 * [Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
 * [Tool Use / Function Calling](https://docs.anthropic.com/en/docs/build-with-claude/tool-use)

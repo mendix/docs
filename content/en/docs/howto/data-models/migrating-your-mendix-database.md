@@ -110,7 +110,7 @@ If you are using [pg_dump](https://www.postgresql.org/docs/current/app-pgdump.ht
 For more information about pg_dump methods, see [SQL Dump](https://www.postgresql.org/docs/current/backup-dump.html).
 
 {{% alert color="warning" %}}
-As described in [Restoring a Backup](/developerportal/operate/restore-backup/#db-folder), the backup must be created using pg_dump version 1.14 or below, which is currently bundled with PostgreSQL 12, 13, 14, and 15. If it is created with a later version, then it will not be possible to upload the file to Mendix Cloud.
+As described in [Restoring a Backup](/developerportal/operate/restore-backup/#db-folder), the backup must be created using pg_dump version 1.16 or below, which is currently bundled with PostgreSQL 17 and below. If it is created with a version above 1.16, it will not be possible to upload the file to Mendix Cloud.
 {{% /alert %}}
 
 #### Using pgAdmin

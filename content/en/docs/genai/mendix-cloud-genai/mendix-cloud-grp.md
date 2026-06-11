@@ -20,7 +20,7 @@ Developers can use the Mendix Portal to manage their Mendix Cloud GenAI resource
 
 ### General Availability
 
-Mendix Cloud GenAI Resource Packs is a premium Mendix product that requires an additional purchase. To start using GenAI Resource Packs or inquire about pricing, contact your Customer Success Manager (CSM). For more information, you can also reach out to [genai-resource-packs@mendix.com](mailto:genai-resource-packs@mendix.com).
+Mendix Cloud GenAI Resource Packs is a premium Mendix product that requires an additional purchase. To start using GenAI Resource Packs or inquire about pricing, contact your Customer Success Manager (CSM). For more information, you can also contact [genai-resource-packs@mendix.com](mailto:genai-resource-packs@mendix.com).
 
 GenAI Resource Packs can be purchased using Mendix Cloud Tokens. For details around costs, refer to [Cloud Tokens](/control-center/cloud-tokens/).
 

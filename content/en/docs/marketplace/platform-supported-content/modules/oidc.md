@@ -56,7 +56,7 @@ The OIDC SSO module supports the following features:
     * Supports SSO and API-security.
     * Can be used with OIDC/OAuth-compatible IdPs, such as AWS Cognito, Google, Salesforce, Apple, Okta, Ping, Microsoft's Entra ID (formerly known as Azure AD), and SAP Cloud Identity Services. Moreover, the module also works with the [OIDC Provider](https://marketplace.mendix.com/link/component/244687) module.
     * Comes with helper microflows (DELETE, GET, PATCH, POST, and PUT) which call an API with a valid token (and automate the token refresh process).
-    * Easy configuration, by leveraging the so-called well-known discovery endpoint at your IdP. PKCE will be used automatically if the IdP supports it.
+    * PKCE is enabled by default for all the IdPs. You can disable it if required. 
     * Configuration can be controlled through constants set during your deployment (version 2.3.0 and above).
     * Supports multiple OIDC IdPs by allowing configuration of user provisioning and access token parsing microflows per IdP.
     * Supports Authentication Context Class Reference (ACR) to allow your app to suggest the desired method or level of authentication for user login to the Identity Provider (IdP) (version 2.3.0 and above).
@@ -70,7 +70,6 @@ The OIDC SSO module supports the following features:
 2. Configuration Experience Features:
 
     * Easy configuration, by leveraging the so-called well-known discovery endpoint at your IdP. The IdP's well-known endpoint also indicates which user claims the IdP may provide during single sign-on. The module reads this information, so the developer does not need to configure it. The available claims can be used in custom provisioning microflow, as described in the section [Custom User Provisioning Using a Microflow.](#custom-provisioning-mf)
-        * For example, PKCE will be used automatically if it is detected.
     * Configuration can be controlled through constants set during your deployment (version 2.3.0 and above).
     * Comes with default user provisioning microflow that works with Entra ID; there you may need to build a custom user provisioning flow.
     * User provisioning microflows can be used from any other modules in your app. They do not need to be exclusively a part of the OIDC module.
@@ -86,7 +85,7 @@ For readers with more knowledge of the OAuth and OIDC protocol:
 * Helps you build an OAuth client that initiates the Authorization Code grant flow to sign the end-user in via the browser.
 * Uses the `nonce` parameter to defend against replay attacks.
 * Validates ID-token signatures.
-* Uses the Proof Key for Code Exchange (PKCE – pronounced “pixie") security enhancement as per RFC 7636. If your IdP’s well-known endpoint indicates *S256* as value for `code_challenge_methods_supported`, the OIDC Module will automatically apply the PKCE feature. PKCE can be seen as a security add-on to the original OAuth protocol. It is generally recommended to use this feature to be better protected against hackers who try to get access to your app. Customers using EntraID may need to update their well-known endpoint, as EntraID does not automatically publish the `code_challenge_methods_supported` parameter. As a result, PKCE will not be enabled automatically.
+* Uses the Proof Key for Code Exchange (PKCE – pronounced “pixie") security enhancement as per RFC 7636. PKCE can be seen as a security add-on to the original OAuth protocol. It is generally recommended to use this feature for better protection against hackers who try to get access to your app. PKCE is enabled by default.
 * When authenticating APIs, it validates access tokens in one of two ways:
 
     * If the IdP supports token introspection, exposing the `/introspect` endpoint of the IdP, the OIDC module will introspect the access token to see if it is valid.
@@ -119,7 +118,6 @@ The OIDC SSO module also has the following limitations:
 * If you use both the [SAML](/appstore/modules/saml/) module and the OIDC SSO module in the same app, each end-user can only authenticate using one IdP.
 * If OIDC SSO is used for API security, it does not validate the value of the `aud` claim, as suggested by [RFC 9068](https://datatracker.ietf.org/doc/html/rfc9068#section-4). Customers should prevent cross-JWT confusion by using unique scope values.
 * The Admin screens have separate tabs for configuring clients that use the Client Credential grant for API security and for situations where your app is used for both SSO and API security. If the first version of your app uses only OIDC SSO for API security and you want to introduce SSO in a later version, the IdP configuration needs to be re-entered on the other tab.
-* Customers using EntraID may need to update their well-known endpoint, as EntraID does not automatically publish the `code_challenge_methods_supported` parameter. As a result, PKCE will not be enabled automatically.
 
 ## Dependencies
 
@@ -204,6 +202,8 @@ This section provides an overview of updates for the OIDC SSO module across diff
 
 | Mendix Version | OIDC SSO Module Version | Important Migration Changes | Additional Information |
 | --- | --- | --- | --- |
+| 10.24.0 and above | 4.5.0 | - | `Anonymous` module role has beed removed. |
+| | | | Supporting multi-domain using constant. See [Configuring Multi-Domain](#multi-domain) for more information. |
 | 10.24.0 and above | 4.4.0 | Move the `Encryption.Encryptionkey` value to the `OIDC.Encryptionkey` constant. | Dependencies on the Encryption and Nanoflow Commons modules have been removed. <br> **Issued Tokens** tab has been removed from the OIDC Client Configuration page. |
 | 10.24.0 and above | 4.3.0 | - | Supporting multi-domain and sub-path. |
 | 10.24.0 and above | 4.2.1 | In version 4.2.1, automatic migration of the UserCommons has been removed. | Since migration steps were removed in 4.2.1, you must upgrade to OIDC SSO version 4.2.0 first to prevent data loss. This applies to the UserCommons, if you are migrating from any version below 3.0.0, always upgrade to 4.2.0 first, then move to the latest v4.2.1. |
@@ -247,7 +247,7 @@ If multiple IdPs are configured in the OIDC module, the following two mechanisms
 2. In this mechanism, your end users make the selection. Your app logic can use the same URL (`<your-app-url>/oauth/v2/login`) to initiate authentication. End users will first be redirected to an IdP selection page, where they can choose the IdP they want to use for authentication.
 
 {{% alert color="info" %}}
-In OIDC SSO version 4.1.0 and above, you do not have to enable anonymous users for multiple IdPs. Additionally, check whether `Anonymous` user role can be removed from the app. If your application does not require anonymous access, removing the role is recommended as a security best practice.
+From version 4.5.0, the `Anonymous` module role has been removed from the module and is no longer available.
 {{% /alert %}}
 
 ### Configuring Navigation{#configure-nav}
@@ -323,7 +323,9 @@ In this case, the OIDC client is the app you are making.
 
    **Client assertion** is automatically set to *Client ID and Secret*.
 
-4. Choose the **Client authentication method** — make sure that you select a method that is supported by your IdP. You can normally check this via the `token_endpoint_auth_methods_supported` setting on the IdP’s well-known endpoint. Also, ensure that the correct client authentication method is configured at the IdP when you register the client.
+4. PKCE is enabled by default. To disable it, select **No**.
+
+5. Choose the **Client authentication method** — make sure that you select a method that is supported by your IdP. You can normally check this via the `token_endpoint_auth_methods_supported` setting on the IdP’s well-known endpoint. Also, ensure that the correct client authentication method is configured at the IdP when you register the client.
 
     The options are:
     * `client_secret_basic`: Your app will use the HTTP Basic Authentication scheme to authenticate itself at your IdP. This is the default. The `client_secret_basic` makes use of the `client-id` and `client-secret`.
@@ -343,21 +345,21 @@ In this case, the OIDC client is the app you are making.
 
     {{% alert color="info" %}}After a key renewal, some SSO requests may fail if your IdP does not immediately refresh its key cache. {{% /alert %}}
 
-5. Add the **Client Secret** if you choose `client_secret_basic` or `client_secret_post` as client authentication method.
-6. If you have the **Automatic Configuration URL** (also known as the *well-known endpoint*), enter it and click **Import Configuration** to automatically fill the other endpoints.
+6. Add the **Client Secret** if you choose `client_secret_basic` or `client_secret_post` as client authentication method.
+7. If you have the **Automatic Configuration URL** (also known as the *well-known endpoint*), enter it and click **Import Configuration** to automatically fill the other endpoints.
 
     {{% alert color="info" %}} If the endpoint URL does not already end with `/.well-known/openid-configuration`, include it at the end. According to the specifications, the URL you need to enter typically ends with `/.well-known/openid-configuration`. {{% /alert %}}
 
     * If you do not have an automatic configuration URL, you can fill in the other endpoints manually.
-7. Click **Save**
+8. Click **Save**
 
     {{% alert color="info" %}} Your client configuration is not yet complete, but you have to save at this point to allow you to set up the rest of the information. {{% /alert %}}
 
-8. Select your client configuration and click **Edit**.
-9. Select the scopes expected by your OIDC IdP. The standard scopes are `openid`, `profile`, and `email`, but some IdPs may use different ones.
+9. Select your client configuration and click **Edit**.
+10. Select the scopes expected by your OIDC IdP. The standard scopes are `openid`, `profile`, and `email`, but some IdPs may use different ones.
     * If you need refresh tokens for your end-users, you also need the `offline_access` scope.
     * Add other scopes as needed.
-10. Select your user parsing. By default, this module will use standard OpenID claims to provision end-users in your app. Also included is a flow that uses the standard UserInfo endpoint in OIDC, which is useful in the case that your IdP uses thin tokens. You can set up user provisioning by setting the following standard flows:
+11. Select your user parsing. By default, this module will use standard OpenID claims to provision end-users in your app. Also included is a flow that uses the standard UserInfo endpoint in OIDC, which is useful in the case that your IdP uses thin tokens. You can set up user provisioning by setting the following standard flows:
 
     | Default Microflow | Use |
     | --- | --- |
@@ -371,7 +373,7 @@ In this case, the OIDC client is the app you are making.
 
     {{% alert color="info" %}}Starting from UserCommons version 2.0.0, If the IdP does not specify the timezone and language for newly created users, these settings will be set according to default **App Settings** of your app. If no default is available, they remain unset. Existing users retain their previously set values.{{% /alert %}}
 
-11. Optionally, you can select the `CustomAccessTokenParsing` microflow if you want to use additional information from the OIDC IdP. This can be used, for example, to assign end-user roles based on information from the IdP – see [Dynamic Assignment of Userroles (Access Token Parsing)](#access-token-parsing) for more information.
+12. Optionally, you can select the `CustomAccessTokenParsing` microflow if you want to use additional information from the OIDC IdP. This can be used, for example, to assign end-user roles based on information from the IdP – see [Dynamic Assignment of Userroles (Access Token Parsing)](#access-token-parsing) for more information.
 
     {{% alert color="info" %}}Starting from version 4.0.0 of the OIDC SSO, the default user roles in the UserProvisioning will be assigned alongside the roles parsed from the access token.{{% /alert %}}
 
@@ -502,6 +504,8 @@ when you set **ClientAuthenticationMethod** as `private_key_jwt`, you do not nee
 
     Example: `acr1 acr2`
 
+* **EnablePKCE** (*default: True*) – enables Proof Key for Code Exchange (PKCE)
+
 ##### Deploy-time IdPs for API Security Only Configuration
 
 {{% alert color="info" %}}
@@ -519,6 +523,20 @@ Example: `OIDC.Default_SAM_TokenProcessing_CustomATP`
 {{% alert color="warning" %}}
 When the `IsClientGrantOnly` constant is set to *true*, the OIDC SSO module considers the configuration as Client Credential grant configuration.
 {{% /alert %}}
+
+## Configuring Multi-Domain {#multi-domain}
+
+The OIDC SSO module supports multi-domain, enabling flexible deployment in multi-app or shared domain environments. When you enable multi-domain support, the module resolves the application URL from request headers rather than relying solely on the ApplicationRootUrl, allowing users to access the application through their custom domains.
+
+To enable multi-domain support, set the `EnableMultiDomainSupport` constant to *True* in the [Acceptance Environment Details](/developerportal/deploy/environments-details/#constants) for Mendix Cloud. By default, this constant is set to *False*.
+
+After enabling multi-domain support, configure the `AllowedHosts` constant to specify which custom domains are permitted. If you enable multi-domain support but leave `AllowedHosts` empty, the module redirects all users to the ApplicationRootUrl.
+
+The `AllowedHosts` constant accepts a comma-separated or space-separated list of hostnames in the following formats:
+
+* Exact match – `example.com` allows only that specific domain
+* Subdomain wildcard – `.example.com` allows any subdomain of `example.com`
+* Full wildcard – `*` allows any domain
 
 ## User Provisioning (End-User Onboarding)
 
@@ -975,9 +993,7 @@ For more information, see the [URL](/refguide/microflow/#url) section of the *Mi
 
 ##### Steps for OIDC SSO Version v4.1.0 and above
 
-In OIDC SSO version 4.1.0 and above, you do not have to enable anonymous users.
-
-You can disable this setting by navigating to **Security > Anonymous users** and setting **Allow anonymous users** to **No**.
+In OIDC SSO version 4.1.0 and above, you do not have to enable anonymous users. You can disable this setting by navigating to **Security > Anonymous users** and setting **Allow anonymous users** to **No**. However, from version 4.5.0 of the module, this role has been removed from the module. 
 
 1. To use the Page URL functionality, replace the content of `login.html` with the content of `login-with-mendixsso-automatically.html` (located in the `resources\mendixsso\templates` folder) and save it as `login.html`.
 

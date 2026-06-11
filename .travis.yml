@@ -37,21 +37,16 @@ branches:
 #     - name: hugo
 #       channel: extended/stable # needs extended to compile SCSS etc. Issue if snap is not updated correctly
 
-# cache:
-######## Skipped
-#
-# Is there anything worth cacheing that isn't currently cached?
-# see https://docs.travis-ci.com/user/caching/#how-does-caching-work
-# Probably NOT /static
-# Docsy theme?
-# Custom layouts?
-# SASS/CSS
-#
+cache:
+# Cache node_modules to avoid re-downloading on every build
+# See https://docs.travis-ci.com/user/caching/
+  directories:
+    - node_modules
 
 before_install:
 ###############
   # Hugo, Docsy and dependencies are installed via npm
-  - npm install # use npm rather than yarn - HUGO doesn't have that many dependencies
+  - travis_retry npm install # use npm rather than yarn - HUGO doesn't have that many dependencies
   #
   # Currently will use custom version of htmltest stored in /htmltest/htmltest
   # This version makes the html.Parse much smaller

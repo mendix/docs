@@ -108,6 +108,7 @@ Amazon Bedrock models have a lifecycle that consists of the Active, Legacy, and 
 ### Configuring a Microflow for an AWS Service
 
 After you configure the authentication profile for Amazon Bedrock, you can implement the functions of the connector by using the provided activities in microflows. The most important actions are available in the toolbox or in the [GenAI Commons](/agents/genai-for-mx/commons/#microflows) module.
+
 The **USE_ME** folder contains several subfolders containing operations. The following example microflows have been created for each of these inside the **ExampleImplementations** folder:
 
 * EXAMPLE_ChatCompletions_FunctionCalling
@@ -192,7 +193,7 @@ To invoke a specific model that is not covered by the ChatCompletions operation,
     The export mapping creates a JSON from the request-related objects (specific to the model that you want to invoke). The JSON must be added as the request body of the `InvokeModelRequest` object provided as input parameter to the **Invoke Model** operation. The import mapping maps the response returned by the **Invoke Model** operation to your model-specific response objects. To create import or export mappings, perform the following steps:
     1. Right-click the target folder.
     2. Click **Add other** > **Import/Export mapping**.
-    3. In the dialogue window, select the **Schema source**.
+    3. In the dialog box, select the **Schema source**.
     4. Click **JSON structure** and select the appropriate request/response JSON structure.
     5. Select the relevant schema elements.
     6. Click **OK**.
@@ -712,7 +713,7 @@ The input and output for this service are shown in the table below:
 
 The Amazon Bedrock Connector offers a range of operations to retrieve and store metadata information in the Mendix app's database.
 
-This can be useful to e.g. associate a chatbot configuration to an available model by selecting the model via dropdown in runtime. The persistent domain model allows for simple and efficient filtering capabilities on the available metadata. Further, the *SNIP_Settings_Admin_BedrockConfig* Snippet can be used to manage and view the synced data from an administrator perspective.
+This can be useful to, for example, associate a chatbot configuration to an available model by selecting the model via dropdown in runtime. The persistent domain model allows for simple and efficient filtering capabilities on the available metadata. Further, the *SNIP_Settings_Admin_BedrockConfig* Snippet can be used to manage and view the synced data from an administrator perspective.
 
 The syncing process works the same for all of these operations:
 
@@ -724,7 +725,7 @@ The available operations are described in the following sections.
 
 #### Sync Models {#sync-models}
 
-The `Sync Models` activity allows you to retrieve and store metadata about available models on Amazon Bedrock in your app's database. The model information is persistent in the `BedrockDeployedModel` entity which is mandatory for chat completions or embeddings operations from GenAI Commons.
+The `Sync Models` activity lets you retrieve and store metadata about available models on Amazon Bedrock in your app's database. The model information is persistent in the `BedrockDeployedModel` entity which is mandatory for chat completions or embeddings operations from GenAI Commons.
 
 Information about the model's input modalities are stored as associations to the `InputModality` entity and its output modality is stored to the `OutputModality` attribute. The input modality describes which form of data can be sent to the model. The output modality describes which form of data the model will return. 
 
@@ -843,7 +844,7 @@ To solve this issue, follow these steps:
 
 After the status of the models changes to **Access Granted**, you can use it with the Amazon Bedrock connector.
 
-### Error code 403 - AccessDeniedException
+### Error Code 403 - AccessDeniedException
 
 When invoking a model, the error code *403 - Access denied* indicates that you do not have access to the targeted resource.
 
@@ -857,7 +858,7 @@ Possible root causes for this error include the following:
 
 To solve this issue, ensure that you have selected an AWS Region where you have model access. You can see an overview of the models accessible to you in the AWS Management Console, in the [Model Access](https://us-west-2.console.aws.amazon.com/bedrock/home?#/modelaccess) section of your Amazon Bedrock environment.
 
-### Error code 404 - ResourceNotFoundException
+### Error Code 404 - ResourceNotFoundException
 
 When invoking a model, the error code *404 - Resource not found* indicates that the targeted resource was not found.
 
@@ -882,12 +883,3 @@ If you encounter an error stating that an attribute or a reference is required a
 ### Conflicted Lib Error After Module Import
 
 If you encounter an error caused by conflicting Java libraries, such as `java.lang.NoSuchMethodError: 'com.fasterxml.jackson.annotation.OptBoolean com.fasterxml.jackson.annotation.JsonProperty.isRequired()'`, try synchronizing all dependencies (**App** > **Synchronize dependencies**) and then restart your application.
-
-
-### Missing Jackson Core Dependency
-
-This applies to cases where your app fails to compile and throws the following error: `Missing dependencies: com.fasterxml.jackson.core:jackson-core:2.22.0`.
-
-This dependency is advertised in Maven repositories but does not actually exist. When you build your app, the automated dependency management attempts to download it and fails because the version is unavailable.
-
-To resolve this issue, download and install [GenAI Commons 6.2.2](https://marketplace.mendix.com/link/component/239448) from Mendix Marketplace. This module includes a fixed Jackson Core dependency configuration and will allow your app to compile successfully. Once Maven resolves the issue, dependency ranges will be used again to re-enable automated dependency management, including automatic vulnerability fixes.

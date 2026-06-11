@@ -6,7 +6,7 @@ description: "These release notes showcase each release of the iOS and Android M
 #ki: "Augmented Reality (AR) Feature" - MOO-1312
 ---
 
-Depending on the Mendix version your app is developed in and the device you want to run on, you need a different Make It Native app. For more information on how to download the correct version, see the [Getting the Make It Native App](/refguide/mobile/getting-started-with-mobile/prerequisites/#get-min-app) section in *Native App Prerequisites and Troubleshooting*.
+Depending on the Mendix version your app is developed in and the device you want to run on, you need a different Make It Native app. For more information on how to get the correct version, see the [Getting the Make It Native App](/refguide/mobile/getting-started-with-mobile/prerequisites/#get-min-app) section in *Native App Prerequisites and Troubleshooting*.
 
 ## Android 11.11.0 / iOS 11.11.0
 

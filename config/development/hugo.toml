@@ -15,3 +15,11 @@ buildFuture=true
   _merge = 'deep'
   section = ["HTML"]
   page = ["HTML"]
+
+[build]
+  _merge = "shallow"  # Force override production settings
+  buildDrafts = true
+  buildFuture = true
+
+[caches.assets]
+  maxAge = "1h"  # Shorter cache for active development

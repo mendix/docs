@@ -19,3 +19,7 @@ title = "Mendix Documentation"
 		mediaType = "application/json" # file output type
 		notAlternative = true # excludes from looping over .AlternativeOutputFormats page variable
 
+[build]
+  _merge = "shallow"
+  buildDrafts = false
+  buildFuture = false

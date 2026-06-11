@@ -26,9 +26,9 @@ To learn how to create, configure, and use a JavaScript action, see these [Build
 
 {{% alert color="info" %}}
 
-In Studio Pro 11.12, a new modernized JavaScript action editor was released in beta. To use the old legacy JavaScript Action Editor, go to `Preferences` > `New Features` > `Use the legacy JavaScript Action editor`.
+In Studio Pro 11.12, the new modernized JavaScript action editor was released in GA. To use the old legacy JavaScript Action Editor, go to `Preferences` > `New Features` > `Use the legacy JavaScript Action editor`.
 
-In Studio Pro 11.9, a new modernized JavaScript action editor was released in beta. Enable it via **New Features** in the Studio Pro **Preferences**.
+In Studio Pro 11.9, the new modernized JavaScript action editor was released in beta. Enable it via **New Features** in the Studio Pro **Preferences**.
 
 {{% /alert %}}
 

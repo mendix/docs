@@ -1,9 +1,11 @@
 language: node_js
 node_js:
   - 22              # latest LTS version ('node' will give latest version, 'lts/*' will give LTS version )
-arch: arm64
-os: linux             # optional, this is default
-dist: jammy          # or bionic | xenial | trusty | precise with xenial as default - Recommended here: https://docs.travis-ci.com/user/reference/overview/#deprecated-virtualization-environments
+arch: arm64-graviton2 # https://docs.travis-ci.com/user/reference/overview/#arm64-builds
+virt: lxd             # https://docs.travis-ci.com/user/reference/overview/
+os: linux             # 
+dist: focal           # 
+group: edge           # 
 
 git:
   depth: 20000 # We're cloning this many commits as it is roughly covering the last 4 years of commits, thus letting us show the last changed date on the documentation pages.

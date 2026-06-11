@@ -50,10 +50,9 @@ before_install:
   # Hugo, Docsy and dependencies are installed via npm
   - travis_retry npm install # use npm rather than yarn - HUGO doesn't have that many dependencies
   #
-  # Currently will use custom version of htmltest stored in /htmltest/htmltest
-  # This version makes the html.Parse much smaller
-  # For htmltest installation instructions, see https://github.com/wjdp/htmltest/blob/master/README.md
-  # - travis_retry curl https://htmltest.wjdp.uk | bash # install htmltest into $TRAVIS_BUILD_DIR/bin/htmltest
+  # htmltest v0.17.0 for arm64 stored in /htmltest/htmltest
+  # Behavior configured via .htmltest.yml
+  # For htmltest documentation, see https://github.com/wjdp/htmltest/blob/master/README.md
 
 install:
 ########
@@ -73,7 +72,7 @@ install:
 
   -  ./node_modules/.bin/hugo --environment $TRAVIS_BRANCH 2>&1 | tee -a $TRAVIS_BUILD_DIR/hugo.log
 
-  # normal htmltest takes too much memory - using a modified version which strips <aside> tag content
+  # Run htmltest to validate HTML output
   # NB - Set pipefail so that Travis CI sees the return code from `tee` and not from `htmltest` so it will always build.
   - set +o pipefail
   # Additional info  in bold white on green
@@ -87,9 +86,8 @@ install:
 
 before_script:
 ##############
-  - pyenv versions # list python versions supported by pyenv in case version in next command is removed
-  - pyenv global 3.8 # this version needs to be already installed in the travis build
-  - python -V
+  # pyenv is not available on arm64-graviton2 images, use system Python
+  - python3 -V
 
 script:
 #######
@@ -138,8 +136,8 @@ before_deploy:
   - sudo ./aws/install # install AWS command line
   - aws --version
   - chmod +x $TRAVIS_BUILD_DIR/_scripts/deploy.sh
-  - python --version
-  - pip install --upgrade 'algoliasearch>=2.0,<3.0' # install Algolia Python API Client version 2
+  - python3 --version
+  - pip3 install --upgrade 'algoliasearch>=2.0,<3.0' # install Algolia Python API Client version 2
 
 deploy:
 #######

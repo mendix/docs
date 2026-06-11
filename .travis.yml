@@ -1,10 +1,10 @@
 language: node_js
 node_js:
   - 24.15           # latest LTS version ('node' will give latest version, 'lts/*' will give LTS version )
-arch: arm64-graviton2 # https://docs.travis-ci.com/user/reference/overview/#arm64-builds
+arch: arm64           # https://docs.travis-ci.com/user/reference/overview/#arm64-builds
 virt: lxd             # https://docs.travis-ci.com/user/reference/overview/
-os: linux             # 
-dist: focal           # 
+os: linux             #
+dist: jammy           # https://docs.travis-ci.com/user/reference/overview/
 group: edge           # 
 
 git:

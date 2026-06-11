@@ -66,7 +66,7 @@ Support for an LTS version ends when a third consecutive major version is releas
 
 This diagram illustrates the LTS concept with version and [end of support](#end) examples:
 
-[//]: # (Original image in PowerPoint /static/originals/refguide/lts-support.pptx)
+[//]: # (Original image in PowerPoint /source_files/refguide/lts-support.pptx)
 
 {{< figure src="/attachments/releasenotes/studio-pro/lts-mts/lts.png" class="no-border" >}}
 

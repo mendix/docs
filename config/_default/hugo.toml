@@ -20,7 +20,7 @@ defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
-languageCode = "en-us"
+locale = "en-us"
 
 disableKinds = ["taxonomy", "term"]
 
@@ -34,7 +34,7 @@ disableKinds = ["taxonomy", "term"]
 
 [languages]
     [languages.en]
-        languageName ="English"
+        label = "English"
         # Weight used for sorting.
         weight = 1
 

@@ -1,11 +1,11 @@
 ---
 title: "Mendix Cloud GenAI Resource Packs"
-url: /agents/mx-cloud-genai/resource-packs
+url: /agents/mx-cloud-genai/resource-packs/
 linktitle: "Mendix Cloud GenAI Resource Packs"
 description: "Provides an overview of Mendix Cloud GenAI Resource Packs, including their capabilities, limitations, and frequently asked questions."
 weight: 10
 aliases:
-    - /appstore/modules/genai/mx-cloud-genai/resource-packs
+    - /appstore/modules/genai/mx-cloud-genai/resource-packs/
 ---
 
 ## Introduction

@@ -88,6 +88,10 @@ replacements = "github.com/FortAwesome/Font-Awesome -> @fortawesome/fontawesome-
 
 # Disable HTTP cache feature introduced in Hugo v0.127.0
 [httpCache]
+  [httpCache.cache]
+    [httpCache.cache.for]
+      excludes = ["**"]
+      includes = []
   [[httpCache.polls]]
     disable = true
 

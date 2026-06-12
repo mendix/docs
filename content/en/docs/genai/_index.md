@@ -113,7 +113,7 @@ For a list of all OpenAI models, see [Models](https://developers.openai.com/api/
 
 | Models | Category | Input | Output | Additional Capabilities |
 | --- | --- | --- | --- | --- |
-| Mistral Small 4, Mistral Medium 3.5, Mistral Large 3, Ministral 3 (3B, 8B, 14B), and more | Chat completions | text, image | text | Function calling |
+| Mistral's generalist models such as Mistral Small 4, Mistral Medium 3.5, Mistral Large 3, and Ministral 3 (3B, 8B, 14B) | Chat completions | text, image | text | Function calling |
 | Codestral, Devstral | Chat completions | text | text | Function calling |
 | (Open) Mistral Nemo 12B | Chat completions | text | text |  |
 | Mistral Embed, Codestral Embed | Embeddings | text | embeddings | |
@@ -131,11 +131,15 @@ For a list of all Mistral models, see [Models Overview](https://docs.mistral.ai/
 
 | Models | Category | Input | Output | Additional Capabilities |
 | --- | --- | --- | --- | --- |
-| Support for providers including Anthropic Claude, DeepSeek, Meta, and OpenAI (OSS models). For all models supporting the Converse API, see [Models at a glance](https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html) from Amazon Web Services (AWS).   | Chat completions | text, document, image  | text | Function calling |
-| Native support for models by Cohere. For all models supporting the InvokeModel API, see [Models at a glance](https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html) from AWS.| Embeddings  | text | embeddings | |
-| Native support for Titan Image Generator G1 v2 (check availability for your region). For all models supporting the InvokeModel API, see [Models at a glance](https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html) from AWS. | Image generation  | text | image | |
+| Native support for models that support the Converse API, with providers including Anthropic Claude, DeepSeek, Meta, and OpenAI (OSS models). | Chat completions | text, document, image  | text | Function calling |
+| Native support for [models by Cohere](https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards-cohere.html), and configurable support for all other models that support the Invoke API. | Embeddings  | text | embeddings | |
+| Native support for Titan Image Generator G1 v2 (availability varies by region), and configurable support for all other models that support the Invoke API. | Image generation  | text | image | |
 
-For details on limitations and supported model capabilities for the Bedrock Converse API used in the ChatCompletions operations, see [Supported models and model features](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference-supported-models-features.html) in the AWS documentation.
+{{% alert color="info" %}}
+For embeddings and image generation, models that support the Invoke API but lack native support can be supported after minor configuration changes.
+{{% /alert %}}
+
+For a list of all Bedrock Models, see [Models at a glance](https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html). To determine if a model supports the Converse or Invoke APIs, see the model details after selecting a model from the list.
 
 #### Connecting to Other Models
 

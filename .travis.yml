@@ -4,8 +4,7 @@ node_js:
 arch: arm64           # https://docs.travis-ci.com/user/reference/overview
 virt: lxd             # 
 os: linux             #
-dist: jammy           # 
-group: edge           # 
+dist: noble           # 
 
 git:
   depth: 20000 # We're cloning this many commits as it is roughly covering the last 4 years of commits, thus letting us show the last changed date on the documentation pages.

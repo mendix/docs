@@ -12,7 +12,7 @@ This glossary provides brief definitions of key agentic and generative AI terms 
 
 ## Agent {#agent}
 
-An AI system that combines an LLM with a reasoning loop and can be extended with memory, tools, skills, and the ability to call and execute functions. It can plan, evaluate results, and iterate toward a goal.
+An AI system that combines an LLM with a reasoning loop and can be extended with tools. It can plan, evaluate results, and iterate toward a goal.
 
 In Mendix, you can build agents using Agents Kit, a collection of starter apps, connectors, and modules that support implementations from simple text generation to complex multi-step agentic workflows. For more information, see [GenAI Agents](/agents/agents/).
 

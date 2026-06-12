@@ -1,10 +1,10 @@
 language: node_js
 node_js:
   - 24.15           # latest LTS version ('node' will give latest version, 'lts/*' will give LTS version )
-arch: arm64           # https://docs.travis-ci.com/user/reference/overview/#arm64-builds
-virt: lxd             # https://docs.travis-ci.com/user/reference/overview/
+arch: arm64           # https://docs.travis-ci.com/user/reference/overview
+virt: lxd             # 
 os: linux             #
-dist: jammy           # https://docs.travis-ci.com/user/reference/overview/
+dist: jammy           # 
 group: edge           # 
 
 git:
@@ -47,8 +47,16 @@ cache:
 
 before_install:
 ###############
+  # Check initial disk space
+  - echo "=== Initial disk space ==="
+  - df -h
+  - echo "=== Disk usage by directory ==="
+  - du -sh /home/travis/build/mendix/docs 2>/dev/null || echo "Build dir not yet created"
   # Hugo, Docsy and dependencies are installed via npm
   - travis_retry npm install # use npm rather than yarn - HUGO doesn't have that many dependencies
+  - echo "=== After npm install ==="
+  - df -h
+  - du -sh /home/travis/build/mendix/docs/node_modules
   #
   # htmltest v0.17.0 for arm64 stored in /htmltest/htmltest
   # Behavior configured via .htmltest.yml
@@ -59,6 +67,9 @@ install:
   # ------------------------
   - mkdir public  # This because <Maybe> the process of syncing to public is probably deadlocked behind waiting for the public folder to be made, and is never signalled that the folder is created, which ends up stalling the build on Travis CI.
   # ------------------------
+  - echo "=== Before Hugo build ==="
+  - df -h
+  - du -sh /home/travis/.cache/hugo_cache 2>/dev/null || echo "Hugo cache does not exist yet"
   -  ./node_modules/.bin/hugo config --environment $TRAVIS_BRANCH # report the config we are using
   # Output header in bold white on green
   - printf '\033[37;42;1m' > $TRAVIS_BUILD_DIR/hugo.log
@@ -71,6 +82,10 @@ install:
   # (see https://stackoverflow.com/questions/418896/how-to-redirect-output-to-a-file-and-stdout)
 
   -  ./node_modules/.bin/hugo --environment $TRAVIS_BRANCH 2>&1 | tee -a $TRAVIS_BUILD_DIR/hugo.log
+  - echo "=== After Hugo build ==="
+  - df -h
+  - du -sh public
+  - du -sh /home/travis/.cache/hugo_cache 2>/dev/null || echo "Hugo cache does not exist"
 
   # Run htmltest to validate HTML output
   # NB - Set pipefail so that Travis CI sees the return code from `tee` and not from `htmltest` so it will always build.
@@ -83,6 +98,8 @@ install:
   # Run htmltest - convert red (91) and green (92) aixterm colors with 8-bit versions (31 and 32).
 
   - ./htmltest/htmltest 2>&1 | sed "s/\o033\[91/\o033\[31/g; s/\o033\[92/\o033\[32/g" |tee -a $TRAVIS_BUILD_DIR/hugo.log
+  - echo "=== After htmltest ==="
+  - df -h
 
 before_script:
 ##############

@@ -9,3 +9,9 @@ title = "Mendix DEVELOPMENT Documentation"
 buildDrafts=true
 buildExpired=true
 buildFuture=true
+
+# Disable print output in CI to reduce rendering time
+[outputs]
+  _merge = "none"
+  page = ["HTML"]
+  section = ["HTML"]

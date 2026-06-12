@@ -1,10 +1,10 @@
 language: node_js
 node_js:
   - 24.15           # latest LTS version ('node' will give latest version, 'lts/*' will give LTS version )
-arch: arm64           # https://docs.travis-ci.com/user/reference/overview
-virt: lxd             # 
-os: linux             #
-dist: noble           # 
+arch: amd64           # optional, this is default, routes to a full VM
+# arch: arm64         # this is the recommended LXD container - faster spin up but some limitations Not used as it seems very unstable.
+os: linux             # optional, this is default
+dist: jammy          # or bionic | xenial | trusty | precise with xenial as default - Recommended here: https://docs.travis-ci.com/user/reference/overview/#deprecated-virtualization-environments
 
 git:
   depth: 20000 # We're cloning this many commits as it is roughly covering the last 4 years of commits, thus letting us show the last changed date on the documentation pages.
@@ -42,33 +42,22 @@ cache:
 # See https://docs.travis-ci.com/user/caching/
   directories:
     - node_modules
-#    - $HOME/.cache/hugo_cache
 
 before_install:
 ###############
-  # Check initial disk space
-  - echo "=== Initial disk space ==="
-  - df -h
-  - echo "=== Disk usage by directory ==="
-  - du -sh /home/travis/build/mendix/docs 2>/dev/null || echo "Build dir not yet created"
   # Hugo, Docsy and dependencies are installed via npm
   - travis_retry npm install # use npm rather than yarn - HUGO doesn't have that many dependencies
-  - echo "=== After npm install ==="
-  - df -h
-  - du -sh /home/travis/build/mendix/docs/node_modules
   #
-  # htmltest v0.17.0 for arm64 stored in /htmltest/htmltest
-  # Behavior configured via .htmltest.yml
-  # For htmltest documentation, see https://github.com/wjdp/htmltest/blob/master/README.md
+  # Currently will use custom version of htmltest stored in /htmltest/htmltest
+  # This version makes the html.Parse much smaller
+  # For htmltest installation instructions, see https://github.com/wjdp/htmltest/blob/master/README.md
+  # - travis_retry curl https://htmltest.wjdp.uk | bash # install htmltest into $TRAVIS_BUILD_DIR/bin/htmltest
 
 install:
 ########
   # ------------------------
   - mkdir public  # This because <Maybe> the process of syncing to public is probably deadlocked behind waiting for the public folder to be made, and is never signalled that the folder is created, which ends up stalling the build on Travis CI.
   # ------------------------
-  - echo "=== Before Hugo build ==="
-  - df -h
-  - du -sh /home/travis/.cache/hugo_cache 2>/dev/null || echo "Hugo cache does not exist yet"
   -  ./node_modules/.bin/hugo config --environment $TRAVIS_BRANCH # report the config we are using
   # Output header in bold white on green
   - printf '\033[37;42;1m' > $TRAVIS_BUILD_DIR/hugo.log
@@ -81,12 +70,8 @@ install:
   # (see https://stackoverflow.com/questions/418896/how-to-redirect-output-to-a-file-and-stdout)
 
   -  ./node_modules/.bin/hugo --environment $TRAVIS_BRANCH 2>&1 | tee -a $TRAVIS_BUILD_DIR/hugo.log
-  - echo "=== After Hugo build ==="
-  - df -h
-  - du -sh public
-  - du -sh /home/travis/.cache/hugo_cache 2>/dev/null || echo "Hugo cache does not exist"
 
-  # Run htmltest to validate HTML output
+  # normal htmltest takes too much memory - using a modified version which strips <aside> tag content
   # NB - Set pipefail so that Travis CI sees the return code from `tee` and not from `htmltest` so it will always build.
   - set +o pipefail
   # Additional info  in bold white on green
@@ -97,13 +82,12 @@ install:
   # Run htmltest - convert red (91) and green (92) aixterm colors with 8-bit versions (31 and 32).
 
   - ./htmltest/htmltest 2>&1 | sed "s/\o033\[91/\o033\[31/g; s/\o033\[92/\o033\[32/g" |tee -a $TRAVIS_BUILD_DIR/hugo.log
-  - echo "=== After htmltest ==="
-  - df -h
 
 before_script:
 ##############
-  # pyenv is not available on arm64-graviton2 images, use system Python
-  - python3 -V
+  - pyenv versions # list python versions supported by pyenv in case version in next command is removed
+  - pyenv global 3.8 # this version needs to be already installed in the travis build
+  - python -V
 
 script:
 #######
@@ -146,14 +130,14 @@ script:
 
 before_deploy:
 ##############
-  - curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip" # arm64 version (for arch: arm64)
-#  - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" # x86_64 version (for arch: amd64)
+#  - curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip" # arm version
+  - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" # amd version
   - unzip -q awscliv2.zip
   - sudo ./aws/install # install AWS command line
   - aws --version
   - chmod +x $TRAVIS_BUILD_DIR/_scripts/deploy.sh
-  - python3 --version
-  - pip3 install --upgrade 'algoliasearch>=2.0,<3.0' # install Algolia Python API Client version 2
+  - python --version
+  - pip install --upgrade 'algoliasearch>=2.0,<3.0' # install Algolia Python API Client version 2
 
 deploy:
 #######

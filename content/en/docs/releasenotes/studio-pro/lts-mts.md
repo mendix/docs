@@ -16,7 +16,7 @@ In the 11.6.1 example, the first number (**11**) indicates the major version.
 
 Mendix supports three major versions at a time. As defined in our SLA, while the current major version is Mendix 11, Mendix supports major versions 9, 10, and 11. 
 
-To make version support duration clearer for our users, Mendix plans a new major release in a regular cadence. Mendix announce each new major version at least a year in advance. This helps you to prepare and plan to adopt new releases and upgrade from older Mendix versions. Each major version release may start with public [beta releases](/releasenotes/release-status/) to obtain feedback from users.
+To make version support duration clearer for our users, Mendix plans a new major release in a regular cadence. Mendix announce each new major version at least a year in advance. This helps you to prepare and plan to adopt new releases and upgrade from older Mendix versions. Each major version release may start with public beta releases to obtain feedback from users.
 
 ### Minor Version
 

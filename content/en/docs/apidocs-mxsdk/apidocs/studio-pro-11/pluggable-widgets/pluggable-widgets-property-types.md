@@ -34,8 +34,6 @@ This optional attribute applies only to [file](#file) and [image](#image) proper
 
 Be aware of behavioral differences between the legacy read-only mode (`false`) and the new editable mode (`true`).
 
-{{% alert color="info" %}} Editable types are not supported for Native as of now. {{% /alert %}}
-
 #### Type (Required)
 
 This defines a property's type. A `type` must be one of the following: 
@@ -274,8 +272,6 @@ Image allows a user to configure an image from an object that is a specializatio
 The user can use the optional attribute [`allowUpload`](#allow-upload) with default value `false` to use the legacy [`Dynamic<FileValue>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#filevalue) prop. Beware of behavioral differences based on the `allowUpload` attribute.
 
 {{% alert color="warning" %}} Legacy DynamicValue types for file and image properties are deprecated and will be removed at Mendix 12. Use allowUpload="true" to migrate to the new editable types before Mendix 12. {{% /alert %}}
-
-{{% alert color="info" %}} Editable types are not supported for Native as of now. {{% /alert %}}
 
 #### XML Attributes
 
@@ -715,8 +711,6 @@ The file property type allows a user to configure and edit a file from and to an
 The user can use the optional attribute [`allowUpload`](#allow-upload) with default value `false` to use the legacy [`Dynamic<FileValue>`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#filevalue) prop. Beware of behavioral differences based on the `allowUpload` attribute.
 
 {{% alert color="warning" %}} Legacy DynamicValue types for file and image properties are deprecated and will be removed at Mendix 12. Use allowUpload="true" to migrate to the new editable types before Mendix 12. {{% /alert %}}
-
-{{% alert color="info" %}} Editable types are not supported for Native as of now. {{% /alert %}}
 
 #### XML Attributes
 

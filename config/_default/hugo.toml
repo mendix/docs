@@ -86,6 +86,11 @@ replacements = "github.com/FortAwesome/Font-Awesome -> ., github.com/twbs/bootst
 [minify]
     minifyOutput = false
 
+# Disable HTTP cache feature introduced in Hugo v0.127.0
+[httpCache]
+  [[httpCache.polls]]
+    disable = true
+
 # Everything below this are Site Params
 # ======================================
 # These are mainly (all?) Docsy settings

@@ -44,7 +44,7 @@ Before you begin, ensure you have the following:
 
 The Portable App Distribution feature in Mendix Studio Pro provides you with the necessary application files to build a Docker image. It packages your Mendix application as a self-contained distribution, ready for integration into your Docker environment.
 
-To deploy your app to Docker, you must create a Portable App Distribution Package, build a Docker image, and then deploy the Docker image (including optionally pushing it to a container registry. For more information, refer to the sections below.
+To deploy your app to Docker, you must create a Portable App Distribution Package, build a Docker image, and then deploy the Docker image (including optionally pushing it to a container registry). For more information, refer to the sections below.
 
 ### Creating a Portable App Distribution Package
 
@@ -98,7 +98,7 @@ To build a Docker image from the Portable Package, perform the following steps:
 
 3. Build the Docker image by using the following command: `docker build -t <your-image-name>:<tag> -f build/docker/Dockerfile`, where:
 
-   * `<your-image-name>` and `<tag>` - Indicate your required image name and version tag (for example, my-mendix-app:1.0.0).
+   * `<your-image-name>` and `<tag>` - Indicate your required image name and version tag (for example, `my-mendix-app:1.0.0`).
    * `-f build/docker/Dockerfile` - Specifies the path to your Dockerfile.
 
 ### Optional: Pushing the Docker Image
@@ -109,7 +109,7 @@ To push the Docker image to a container registry, perform the following steps:
 2. Tag the Docker image with the registry URL by running the following command: `docker tag <your-image-name>:<tag> <your-registry>/<your-image-name>:<tag>`.
 3. Push the Docker image to the registry by running the following command: `docker push <your-registry>/<your-image-name>:<tag>`.
 
-### Deploying the Docker Image
+### Deploying the Docker Image {#deploy}
 
 Once the Docker image is available in your container registry, you can deploy it to your target environment by performing the following steps:
 
@@ -199,7 +199,7 @@ Alternatively, you can configure the Mendix Runtime by using a configuration fil
   "RuntimePort": 8080,
   "RuntimeAdminPort": 8090
 }
-````
+```
 
 ### Using the Configuration File
 

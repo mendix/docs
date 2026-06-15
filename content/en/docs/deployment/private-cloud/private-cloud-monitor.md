@@ -522,12 +522,25 @@ Installing or upgrading to Operator v2.27.0 or a later version will switch the d
 
 ### Compatibility Metrics Mode (deprecated)
 
-To enable `compatibility` metrics mode, set the `mode` attribute to `compatibility`.
-In this mode, all other `runtimeMetricsConfiguration` attributes are ignored.
+To enable `compatibility` metrics mode, set the `mode` attribute to `compatibility`. In this mode, all other `runtimeMetricsConfiguration` attributes are ignored.
+
+{{% alert color="info" %}}
+For Operator versions older than 2.27.0 that were upgraded from older versions, the metrics mode in `OperatorConfiguration` is set to `compatibility` to maintain backward compatibility. For new installations with Operator 2.27.0 and later, the metrics mode in `OperatorConfiguration` is set to `native` by default, and the `m2ee-metrics` sidecar is disabled.
+
+When you manually select compatibility mode for a specific environment (overriding the default mode from `OperatorConfiguration`), it becomes your responsibility to manually switch the environment back to native or default mode when needed. This is particularly important when upgrading to Operator version 2.27.0 or newer, as compatibility mode is no longer supported.
+{{% /alert %}}
 
 Compatibility mode is removed in Mendix Operator v2.27.0.
 
 #### Enable Compatibility Metrics in Connected Mode
+
+{{% alert color="info" %}}
+Compatibility mode is only available for Operator versions older than 2.27.0. If you attempt to set compatibility mode for Operator version 2.27.0 or newer, an error message will be displayed:
+
+{{< figure src="/attachments/deployment/private-cloud/compatibility_mode_warning.png" alt="Error message when attempting to set compatibility mode for Operator 2.27.0 and above" >}}
+
+In this case, you must use native mode instead. See [Enable Native Metrics in Connected Mode](#enable-native-metrics-connected-mode) for instructions.
+{{% /alert %}}
 
 1. Open your app in [Apps](https://sprintr.home.mendix.com/).
 2. Go to the **Environments** page.

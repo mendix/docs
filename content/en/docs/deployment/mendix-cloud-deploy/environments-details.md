@@ -255,7 +255,7 @@ Mendix Cloud supports the following HTTP headers in the Mendix Portal:
 | `X-Content-Type-Options`      | Indicates that the MIME types advertised in the Content-Type headers should not be changed and be followed. |
 | `X-Frame-Options`             | Indicates whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>`, `<embed>`, or `<object>`. The default is not to allow apps to be rendered inside frames. This was the value set previously to prevent embedding in an iframe.<br/>For details on running your app inside an iframe, see [Running Your App in an Iframe](#iframe), below. |
 | `X-Permitted-Cross-Domain-Policies` | Specifies whether the page can load resources from a different domain. |
-| `X-XSS-Protection`            | Stops pages from loading when they detect reflected cross-site scripting (XSS) attacks. |
+| `X-XSS-Protection`            | Stops pages from loading when they detect reflected cross-site scripting (XSS) attacks.<br/>{{% alert color="warning" %}}This header is [deprecated](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection) and not recommended for new implementations.{{% /alert %}} |
 
 There are three types of values for these headers:
 

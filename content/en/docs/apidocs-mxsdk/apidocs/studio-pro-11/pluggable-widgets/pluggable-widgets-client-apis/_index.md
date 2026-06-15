@@ -345,10 +345,6 @@ export interface EditableImageValue<T extends ImageValue> extends EditableFileVa
 
 `EditableImageValue` provides upload capabilities to [`ImageValue`](#imagevalue), similarly to how [`EditableFileValue`](#editable-file-value) for [`FileValue`](#filevalue). Also it adds `setThumbnailSize`  method which enables a component to request the Mendix Platform to return an image with specific dimensions. The Mendix Platform will take care of resizing the image while keeping the aspect ratio intact. When a thumbnail size is set, the `value` field of `EditableImageValue` will contain a resized image. When a thumbnail size is not set, the `value` field will contain an original image.
 
-{{% alert color="warning" %}}
-`EditableImageValue` does not support `NativeImage`.
-{{% /alert %}}
-
 ### ModifiableValue {#modifiable-value}
 
 `ModifiableValue` is used to represent values that can be changed by a pluggable widget client component. It is passed only to [association properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#association), and is defined as follows:

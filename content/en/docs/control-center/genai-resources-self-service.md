@@ -24,7 +24,7 @@ The overview page provides a centralized view of all deployed GenAI resources, i
 
 * **Status** – The current status of the resource.
 * **Name** – The name of the resource.
-* **Available Models** – The model versions available on the resource, grouped by family, for example, Claude Sonnet 4.5, 4.6.
+* **Available Models** – The model versions available on the resource, grouped by family, for example, Claude Haiku, Sonnet, or Opus. For a full list of available models, see [Supported Models](/agents/mx-cloud-genai/resource-packs/#supported-models).
 * **GenAI Units** – The monthly GenAI Unit allocation for the resource.
 * **Created For** – For whom it is created.
 
@@ -44,13 +44,13 @@ When provisioning a new resource, enter the following information:
 * **Environment** – The environment for which the resource is created, such as Test, Acceptance, or Production.
 * **Mendix Cloud Region** – The cloud region where the resource is hosted.
 * **Cross Region Inference** – Select whether to enable cross region inference for this resource. Without cross region inference, the latest model versions may not be available. For more information, see the [Settings](/agents/mx-cloud-genai/Navigate-MxGenAI/#settings) section of *Navigate through the Mendix Cloud GenAI Portal*.
-* **Available Models** – The model versions to enable on the resource. For text generation resources, select one or more versions from the available Claude model families (for example, Claude Haiku 4.5, Claude Sonnet 4.5, Claude Sonnet 4.6, Claude Opus 4.6, Claude Opus 4.7, Claude Opus 4.8). For embeddings resources, select a single model from the available options.
+* **Available Models** – The model versions to enable on the resource. For text generation resources, select one or more versions from the available Claude model families (Haiku, Sonnet, or Opus). For embeddings resources, select a single model from the available options. For a full list of available models, see [Supported Models](/agents/mx-cloud-genai/resource-packs/#supported-models).
 * **Default Model** – The model version used when no model is explicitly specified in an API call. Select one of the model versions chosen in **Available Models**. This ensures backward compatibility with existing apps that use older connector versions.
-* **Cloud Tokens** – The number of Mendix Cloud Tokens to allocate per month (minimum 1). Each Cloud Token provides 100 GenAI Units. The **Resource Specification** panel shows the resulting monthly GenAI Unit allocation.
+* **Cloud Tokens** – The number of Mendix Cloud Tokens to allocate per month (minimum 1). Each Cloud Token provides 100 [GenAI Units](/agents/mx-cloud-genai/Navigate-MxGenAI/#what-are-tokens-and-genai-units). The **Resource Specification** panel shows the resulting monthly GenAI Unit allocation.
 * **User** – The name of the user for whom the provisioning was initially created.
 * **Email** – The user's email address.
 
-After filling in the required fields, review all the entered details in the **Resource Specification** panel. If the Cloud Token amount entered exceeds your available balance, the **Cloud Tokens Consumption** widget turns red and the **Provision Resource** button is disabled. To learn more about GenAI Unit allocation, see [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/).
+After filling in the required fields, review all the entered details in the **Resource Specification** panel. If the Cloud Token amount entered exceeds your available balance, the **Cloud Tokens Consumption** widget turns red and the **Provision Resource** button is disabled. To learn more about GenAI Unit allocation, see [GenAI Units and Model Pricing](/agents/mx-cloud-genai/resource-packs/#genai-units-and-model-pricing).
 
 Click **Provision Resource** to proceed. Before provisioning is finalized, a **Resource Summary** confirmation dialog shows a read-only overview of all entered details. Review the summary and click **Confirm** to complete provisioning. You are taken back to the **GenAI Resources** page, where the newly created resource is displayed in the list. Selecting the newly provisioned resource opens its details directly in the Mendix Cloud GenAI Portal in a new tab.
 

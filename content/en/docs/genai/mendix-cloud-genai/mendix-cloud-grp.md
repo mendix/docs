@@ -12,7 +12,7 @@ aliases:
 
 Mendix Cloud GenAI Resource Packs provide turn-key access to Generative AI technology, delivered through Mendix Cloud.
 
-* Model Resource Packs offer access to large language model capacity. You choose a monthly Cloud Token amount, which is converted to GenAI Units at a rate of 100 GenAI Units per Cloud Token. GenAI Units are consumed against a model-specific exchange rate, so you can use any supported Anthropic Claude model — Haiku, Sonnet, or Opus — from a single resource. New model versions are automatically available on your existing resource as Mendix adds them — no resource changes or key updates are required.
+* Model Resource Packs offer access to large language model capacity. You choose a monthly Cloud Token amount, which is converted to [GenAI Units](/agents/mx-cloud-genai/Navigate-MxGenAI/#what-are-tokens-and-genai-units) at a rate of 100 GenAI Units per Cloud Token. GenAI Units are consumed against a model-specific exchange rate, so you can use any supported Anthropic Claude model — Haiku, Sonnet, or Opus — from a single resource. Embeddings Resource Packs provide access to Cohere Embed models for generating embedding vectors. New model versions are automatically available on your existing resource as Mendix adds them — no resource changes or key updates are required. For a full list of available models, see [Supported Models](#supported-models).
 
 * Knowledge Base Resource Packs provide an OpenSearch-based vector database to support Retrieval-Augmented Generation (RAG), Semantic Search, and other Generative AI use cases.
 
@@ -26,7 +26,7 @@ GenAI Resource Packs can be purchased using Mendix Cloud Tokens. For details aro
 
 ## Models
 
-Mendix Cloud GenAI Resource Packs give you access to Anthropic's Claude model families and Cohere's Embed models. A single text generation resource supports multiple Claude model families — Haiku, Sonnet, and Opus — so you can use the most appropriate model for each use case without managing separate resources.
+Mendix Cloud GenAI Resource Packs give you access to Anthropic's Claude model families and Cohere's Embed models. A single text generation resource supports multiple Claude model families — Haiku, Sonnet, and Opus — so you can use the most appropriate model for each use case without managing separate resources. Embeddings resources support Cohere Embed models for generating embedding vectors.
 
 ### Supported Models
 
@@ -54,7 +54,7 @@ Additional regions will be available in the future. If you have questions about 
 
 ### GenAI Units and Model Pricing
 
-Text generation and embeddings resources use a flexible consumption model based on GenAI Units. When you provision a resource, you choose a monthly GenAI Unit capacity in Mendix Cloud Tokens. The system converts your selection to GenAI Units at a fixed rate of 100 GenAI Units per Cloud Token. All consumption is then deducted from this GenAI Units balance at a model-specific exchange rate.
+Text generation and embeddings resources use a flexible consumption model based on [GenAI Units](/agents/mx-cloud-genai/Navigate-MxGenAI/#what-are-tokens-and-genai-units). When you provision a resource, you choose a monthly GenAI Unit capacity in Mendix Cloud Tokens. The system converts your selection to GenAI Units at a fixed rate of 100 GenAI Units per Cloud Token. All consumption is then deducted from this GenAI Units balance at a model-specific exchange rate.
 
 For example, if you allocate 50 Cloud Tokens per month, your resource receives 5,000 GenAI Units per month. You can use any combination of available models against this balance. The exchange rates are as follows:
 

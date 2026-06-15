@@ -52,7 +52,7 @@ To get started, follow these steps:
 * Add the `Configuration_Overview` page (**USE_ME** > **Configuration**) to your navigation, or add the `Snippet_Configuration` to a page that is already part of your navigation. Alternatively, register your key by using the `Configuration_RegisterByString` microflow.
 * Complete the runtime setup of the Mendix Cloud GenAI configuration by navigating to the page mentioned above. Import a key generated in the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com) or provided to you and click **Test Key** to validate its functionality. This key establishes a connection between the Mendix Cloud resources and your application and contains all the information required to set up the connection.
 
-A single key exposes all model versions currently enabled on the resource. When you import the key, all available models are accessible. No key rotation is required when new model versions are added to the resource by a Company Admin.
+A single key exposes all model versions currently enabled on the resource. When you import the key, all [available models](/agents/mx-cloud-genai/resource-packs/#supported-models) are accessible. No key rotation is required when new model versions are added to the resource by a Company Admin.
 
 {{% alert color="info" %}}
 When using an Embeddings Model Resource together with a Knowledge Base Resource, you do not need to import both keys. Importing the Knowledge Base Resource key automatically generates the connection details for the embeddings generation model.

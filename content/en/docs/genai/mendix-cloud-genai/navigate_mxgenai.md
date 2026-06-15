@@ -28,9 +28,9 @@ The **Settings** tab contains the details of a GenAI resource. It shows the foll
 * **Cross Region Inference (CRI)** – Indicates whether cross region inference is enabled for this resource ¹.
 * **Cloud Provider** – The cloud provider, for example, AWS.
 * **Type** – The type of resource, for example, Text Generation Model, Embeddings Generation, or Knowledge Base.
-* **Available models** – The model versions enabled on the resource. For text generation resources, this lists all Claude model versions available for use (for example, Anthropic Claude Haiku 4.5, Anthropic Claude Sonnet 4.5, Anthropic Claude Sonnet 4.6). For embeddings resources, this lists all available Cohere Embed model versions (for example, Cohere Embed English v3, Cohere Embed multilingual v3, Cohere Embed v4).
+* **Available models** – The model versions enabled on the resource. For text generation resources, this lists all Claude model versions available for use. For embeddings resources, this lists all available Cohere Embed model versions. For a full list of supported models, see [Supported Models](/agents/mx-cloud-genai/resource-packs/#supported-models).
 * **Default model** – The model version used as a fallback when no model is explicitly specified in an API call. This field only applies to text generation resources and is present for backward compatibility with apps using connector versions below V3.0.0.
-* **Tokens** – The monthly GenAI Unit allocation for the resource, for example, 1,000 GenAI Units.
+* **Tokens** – The monthly [GenAI Unit](/agents/mx-cloud-genai/Navigate-MxGenAI/#what-are-tokens-and-genai-units) allocation for the resource, for example, 1,000 GenAI Units.
 * **Environment** – The environment, for example, Test, Acceptance, or Production.
 
 ¹ Cross Region Inference (CRI) allows a model to redirect requests to another region, helping to distribute the load across multiple regions within the same area. EU requests always stay within EU regions. Connecting to a cross region inference profile does not change how the request is sent; the redirection happens on the server side, determining the region to handle the request to get the fastest response. For more information, see [Increase throughput with cross-region inference](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html). If applicable, CRI profiles are selected during provisioning of a model resource. New models are available under the CRI inferencing type by default.
@@ -134,27 +134,27 @@ You can upload data directly from Mendix to the Knowledge Base. To do so, severa
 
 {{% alert color="info" %}} The **Consumption** tab is available for Model resources only.{{% /alert %}} 
 
-The **Consumption** tab provides an overview of GenAI Unit and token consumption for the resource. Use this overview to see current usage, view daily consumption insights, and compare the current period with previous periods. Note that periods represent bundle months. A bundle month is the period during which consumption is tracked, beginning on the date of your last GenAI Resource entitlement reset and ending on the next reset date. This creates a recurring monthly cycle based on your resource activation date, not the calendar month.
+The **Consumption** tab provides an overview of GenAI Unit and Large Language Model (LLM) token consumption for the resource. Use this overview to see current usage, view daily consumption insights, and compare the current period with previous periods. Note that periods represent bundle months. A bundle month is the period during which consumption is tracked, beginning on the date of your last GenAI Resource entitlement reset and ending on the next reset date. This creates a recurring monthly cycle based on your resource activation date, not the calendar month.
 
 {{< figure src="/attachments/genai/navigate_mxgenai/GenAIResource_TokenConsumptionMonitor.png" alt="" >}}
 
-The **Current Consumption** panel shows the total GenAI Units consumed against your monthly allocation, displayed as a percentage and a number (for example, 1,521 / 1.6k). The **Plan** panel shows the model family in use and the total GenAI Unit allocation for the bundle month. The bundle refill date is shown at the top of the page.
+The **Current Consumption** panel shows the total GenAI Units consumed against your monthly allocation, displayed as a percentage and a number (for example, 1,521 / 1.6k). The **Plan** panel shows the resource pack model type (for example, Anthropic Claude Opus) and the total GenAI Unit allocation for the bundle month. The bundle refill date is shown at the top of the page.
 
 Below the summary, the page shows consumption over a selected time range. You can switch between weekly (**W**), bundle month (**BM**), month to date (**MTD**), and six months (**6M**) views. The charts show:
 
 * **Monthly GenAI Units Consumption** – GenAI Units consumed per day, with a dashed line indicating the monthly allocation limit.
-* **Monthly Input Consumption** – Raw input tokens consumed per day.
-* **Monthly Output Consumption** – Raw output tokens consumed per day.
+* **Monthly Input Consumption** – Raw LLM input tokens consumed per day.
+* **Monthly Output Consumption** – Raw LLM output tokens consumed per day.
 
 #### What Are Tokens and GenAI Units?
 
-Tokens are what you pay for when consuming large language model services. Text input is first "tokenized," meaning it is broken down into smaller pieces where each piece represents a token. A good rule of thumb is that 100 tokens are around 75 English words, though this varies by model and language. Tokens sent to the model are called input tokens; tokens generated by the model are called output tokens.
+LLM tokens (not to be confused with Mendix Cloud Tokens) are what you pay for when consuming large language model services. Text input is first "tokenized," meaning it is broken down into smaller pieces where each piece represents a token. A good rule of thumb is that 100 tokens are around 75 English words, though this varies by model and language. Tokens sent to the model are called input tokens; tokens generated by the model are called output tokens.
 
 GenAI Units are the unit of measure for consumption across all models on a resource. Each model family has a different exchange rate. The exchange rate is the number of GenAI Units consumed per 1 million input or output tokens. A more capable model costs more GenAI Units per token than a less capable model.
 
 #### When Are Tokens and GenAI Units Consumed?
 
-Text generation resources consume both input and output tokens, which are converted to GenAI Units using the model-specific exchange rate.
+Text generation resources consume both LLM input and output tokens, which are converted to GenAI Units using the model-specific exchange rate.
 
 Embeddings resources only consume input tokens. This is because only the generated embedding vectors are returned and the generated output is not tokenized.
 

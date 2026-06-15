@@ -12,6 +12,7 @@ Workflows are processes that can potentially run for a long time. While a workfl
 
 Workflow instances have functional value for the business. Therefore, when a new workflow version is deployed, the system should decide how to handle running instances. 
 Some Workflow Engines decide to keep the workflow instance running in the version in which it has been initiated. However, such approach can cause problems, for example, it is then impossible to fix issues in the workflow for existing instances. 
+
 The Mendix Workflow Engine uses a different approach. Mendix Studio Pro validates the app when it is being deployed using the model in that particular moment. Older versions of a workflow may refer to artifacts that are no longer available, such as roles, pages, workflows, or microflows that were deleted in the latest version (or require a different input or have a different output). As such, the model of the latest app version may no longer be compatible with older workflow versions. Mendix Studio Pro validates whether a workflow instance is compatible with the latest workflow version. 
 
 ## Workflow Versioning Conflict Detection
@@ -265,6 +266,6 @@ You can do one of the following:
 * The Administrator can use **Mark-as-Resolved** to fix this issue (the currently running activity within the removed sub-process will be aborted).
 * The app developer can revert the change (which adds the event sub-process back) and deploy it.
 
-### Workaround for Non-resolvable and Partially Resolvable Conflicts
+### Workaround for Non-resolvable and Partially Resolvable Conflicts {#workaround-for-non-resolvable-and-partially-resolvable-conflicts}
 
-If the goal is to update an existing workflow document so that running workflow instances are unaffected while new workflow instances execute the new workflow document version, the best workaround is to duplicate the workflow document. To do so, right-click the workflow document and select **Duplicate**. Then make the desired edits in the duplicate. Finally, point the **Call workflow** activity to the new (duplicated) workflow document so that new instances use the updated version.
+If the goal is to update an existing workflow document so that running workflow instances are unaffected while new workflow instances execute the new workflow document version, the best workaround is to duplicate the workflow document. To do this, right-click the workflow document and select **Duplicate**. Then make the desired edits in the duplicate. Finally, point the **Call workflow** activity to the new (duplicated) workflow document so that new instances use the updated version.

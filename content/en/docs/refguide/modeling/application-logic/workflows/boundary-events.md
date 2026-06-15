@@ -75,9 +75,9 @@ To configure the properties of a boundary event, double-click the event to open 
 
 When a boundary event is added to an ongoing activity, any workflow instances currently executing that activity will schedule the new boundary event accordingly. The only exception occurs when an ongoing boundary event is removed from the ongoing activity, the workflow is redeployed, and then the removal is reverted. In this case, the re-added boundary event will not be scheduled.
 
-### Changing Boundary Event Type
+### Changing Boundary Event Type {#changing-boundary-event-type}
 
-You can change the type of existing boundary event via the context menu, without having to delete and re-add it. To do so:
+You can change the type of an existing boundary event using the context menu, without having to delete and re-add it. To do this:
 
 1. Right-click the boundary event to open its context menu.
 2. Click **Change event**.
@@ -164,7 +164,7 @@ The list of variables is described below:
 * `$ParentTask` – the parent user task of the attached boundary event
 * `$CalledWorkflowInstance` – the parent Call workflow activity of the attached boundary event
 
-## Read more
+## Read More
 
 * [Workflows](/refguide/workflows/)
 * [Timer](/refguide/timer/)

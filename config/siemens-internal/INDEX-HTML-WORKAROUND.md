@@ -2,7 +2,7 @@
 
 ## The Problem
 
-The Siemens internal web server does not automatically serve `index.html` when a directory URL is requested. When a user or browser requests `https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/public/refguide/`, the server does not automatically serve the `refguide/index.html` file.
+The Siemens internal web server does not automatically serve `index.html` when a directory URL is requested. When a user or browser requests `https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/Mendix-Docs/public/refguide/`, the server does not automatically serve the `refguide/index.html` file.
 
 Hugo's `uglyURLs = true` setting helps by making URLs explicit where possible, but Hugo still generates many directory-style links (ending with `/`) throughout the site, particularly in:
 
@@ -31,10 +31,10 @@ The cleanest approach is to post-process the HTML files after Hugo builds them, 
 **Navigation links:**
 ```html
 <!-- Before -->
-<a href="https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/public/refguide/">
+<a href="https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/Mendix-Docs/public/refguide/">
 
 <!-- After -->
-<a href="https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/public/refguide/index.html">
+<a href="https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/Mendix-Docs/public/refguide/index.html">
 ```
 
 **Breadcrumb links:**

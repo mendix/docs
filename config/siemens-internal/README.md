@@ -7,7 +7,7 @@ This directory contains the Hugo environment configuration for deploying the Men
 The site is deployed at:
 
 ```
-https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/public/
+https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/Mendix-Docs/public/
 ```
 
 ## The Problems
@@ -18,8 +18,8 @@ https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/
 
 Example of the old bug:
 
-* Expected: `https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/public/scss/main.css`
-* Generated: `https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/public/documentation/internal/PL20260323299104942/en-US/public/scss/main.css`
+* Expected: `https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/Mendix-Docs/public/scss/main.css`
+* Generated: `https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/Mendix-Docs/public/documentation/internal/PL20260323299104942/en-US/public/scss/main.css`
 
 **Status**: ✅ This issue was fixed in Hugo v0.156.0. The `canonifyURLs` setting now correctly handles deep baseURL paths without generating doubled paths.
 

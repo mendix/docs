@@ -3,7 +3,7 @@
 # Need to set _merge = 'deep' to overwrite original value
 # =============================================================
 
-baseURL = "https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/public/"
+baseURL = "https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/Mendix-Docs/public/"
 title = "Mendix Documentation (Internal)"
 
 # Convert all absolute paths (starting with /) to use the full baseURL

@@ -109,9 +109,9 @@ Boundary events are re-created upon interrupting behavior change because in-plac
 
 #### Implications of Changing the Boundary Event Type
 
-When the type of an ongoing **non-interrupting** boundary event is changed (for example, from Timer to Notification), this causes a partially resolvable [Current Activity Moved out of Path](/refguide/workflow-versioning/#current-activity-moved-out-of-path) conflict. This only applies to non-interrupting boundary events and is an exception due to technical limitations.
+When the type of an ongoing **non-interrupting** boundary event is changed (for example, from Timer to Notification), this causes a partially resolvable [Current Activity Moved out of Path](/refguide/workflow-versioning/#current-activity-moved-out-of-path) conflict. Affected workflow instances cannot be continued. This does not apply to interrupting boundary events.
 
-For more information on how to deal with such conflicts, see [Workaround for Non-resolvable and Partially Resolvable Conflicts](/refguide/workflow-versioning/#workaround-for-non-resolvable-and-partially-resolvable-conflicts).
+For more information on how to handle such conflicts, see [Workaround for Non-resolvable and Partially Resolvable Conflicts](/refguide/workflow-versioning/#workaround-for-non-resolvable-and-partially-resolvable-conflicts).
 
 ### Rearranging Boundary Events
 

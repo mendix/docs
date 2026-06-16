@@ -281,7 +281,7 @@ All [tool choice types](/agents/agents-kit-1/genai-for-mx/commons/#enum-toolchoi
 
 ## Implementing GenAI with the Showcase App
 
-For more guidance on how to use microflows in your logic, Mendix recommends downloading the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475), which demonstrates a variety of example use cases and applies almost all of the Mendix Cloud GenAI operations. The [starter apps](/agents/#starter-apps) can also be used as inspiration or simply adapted for a specific use case.
+For more guidance on how to use microflows in your logic, Mendix recommends downloading the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475), which demonstrates a variety of example use cases and applies almost all of the Mendix Cloud GenAI operations. The [starter apps](/agents/agents-kit-1/#starter-apps) can also be used as inspiration or simply adapted for a specific use case.
 
 ## Troubleshooting {#troubleshooting}
 

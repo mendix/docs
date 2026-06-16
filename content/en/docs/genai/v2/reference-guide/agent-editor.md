@@ -172,7 +172,7 @@ You can choose from the following tool types:
 
 In Agent Editor, you can temporarily disable and re-enable tools using the **Active** checkbox. This is useful while iterating and testing the agent behavior with different tool combinations or descriptions. Only enabled tools are usable by the agent at runtime when called in the app.
 
-Configure [tool choice](/agents/genai-for-mx/commons/#enum-toolchoice) to control how the agent behaves with regard to tool calling.
+Configure [tool choice](/agents/agents-kit-2/genai-for-mx/commons/#enum-toolchoice) to control how the agent behaves with regard to tool calling.
 
 #### Configuring Knowledge Base Document {#define-knowledgebase}
 
@@ -235,13 +235,13 @@ When configuring the action, select the Agent document so that the right agent i
 
 For **Call Agent without History**, you can optionally pass a `Request` object to set request-level values and a `FileCollection` object with files to send along with the user message to use vision or document chat capabilities. For **Call Agent with History**, the `Request` object is mandatory because it contains the previous messages from the conversation. Support for files and images depends on the underlying large language model. Refer to the documentation of the specific connector.
 
-The output is a `GenAICommons.Response` object, aligned with the GenAI Commons and Agent Commons domain models and actions. You can use this object for further logic. Additionally, all agents created via the Agent Editor extension are integrated with other Mendix offerings, such as the [Token consumption monitor](/agents/genai-for-mx/conversational-ui/#snippet-token-monitor) or the [Traceability](/agents/genai-for-mx/conversational-ui/#traceability) feature from [ConversationalUI](/agents/genai-for-mx/conversational-ui/).
+The output is a `GenAICommons.Response` object, aligned with the GenAI Commons and Agent Commons domain models and actions. You can use this object for further logic. Additionally, all agents created via the Agent Editor extension are integrated with other Mendix offerings, such as the [Token consumption monitor](/agents/agents-kit-2/genai-for-mx/conversational-ui/#snippet-token-monitor) or the [Traceability](/agents/agents-kit-2/genai-for-mx/conversational-ui/#traceability) feature from [ConversationalUI](/agents/agents-kit-2/genai-for-mx/conversational-ui/).
 
 You can also invoke agents from workflows using the [AI Agent Task](/refguide/ai-agent-task/) element. The AI Agent Task calls a microflow that you configure. Inside that microflow, use one of the **Call Agent** toolbox actions described above to call the agent and return the result to the workflow.
 
 ### Including the Agent in a Conversational User Interface {#conversational-ui}
 
-Pages and Snippets are building blocks for chat-type UI patterns that exist in the [ConversationalUI module](/agents/genai-for-mx/conversational-ui/). The central entity is the `ChatContext`, which represents a user-agent chat session. When using Agent Editor, to instantiate a new `ChatContext`, use the **New Chat for Agent** action in the microflow to open the chat page and pass the Agent document. Configure the Agent document as the input parameter for this action. For more information, see [Conversational UI patterns](/agents/genai-for-mx/conversational-ui/#chat-context-operations).
+Pages and Snippets are building blocks for chat-type UI patterns that exist in the [ConversationalUI module](/agents/agents-kit-2/genai-for-mx/conversational-ui/). The central entity is the `ChatContext`, which represents a user-agent chat session. When using Agent Editor, to instantiate a new `ChatContext`, use the **New Chat for Agent** action in the microflow to open the chat page and pass the Agent document. Configure the Agent document as the input parameter for this action. For more information, see [Conversational UI patterns](/agents/agents-kit-2/genai-for-mx/conversational-ui/#chat-context-operations).
 
 ### Deploying the Agent to Cloud Environments {#deploy-agent}
 

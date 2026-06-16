@@ -65,7 +65,7 @@ The system takes a user prompt as input, either entered directly or crafted usin
 
 Start from the [Agent Builder Starter App](https://marketplace.mendix.com/link/component/240369) from the Marketplace or add the [Agent Commons module](https://marketplace.mendix.com/link/component/240371) to your existing app and get started with agents and agentic patterns in Mendix.
 
-Read more about [Agent Commons](/agents/genai-for-mx/agent-commons/) in the GenAI reference guide.
+Read more about [Agent Commons](/agents/agents-kit-2/genai-for-mx/agent-commons/) in the GenAI reference guide.
 
 ### GenAI Showcase App
 

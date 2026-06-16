@@ -36,8 +36,8 @@ Generative Artificial Intelligence (GenAI) transforms business applications, emp
 ### Additional Resources
 
 * Basic documentation on [GenAI Concepts](/agents/get-started/) is an essential resource for anyone beginning their GenAI journey.
-* The [GenAICommons](/agents/genai-for-mx/commons/) module as a prerequisite for all GenAI components.
-* The [ConversationalUI](/agents/genai-for-mx/conversational-ui/) module that offers UI snippets for chat, token consumption monitoring and prompt management.
+* The [GenAICommons](/agents/agents-kit-1/genai-for-mx/commons/) module as a prerequisite for all GenAI components.
+* The [ConversationalUI](/agents/agents-kit-1/genai-for-mx/conversational-ui/) module that offers UI snippets for chat, token consumption monitoring and prompt management.
 * The [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/) to learn how to quickly access GenAI capabilities from a Mendix app.
 * The [OpenAI](/agents/agents-kit-1/reference-guide/external-connectors/openai/) provides essential information about the OpenAI connector.
 * The [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/) provides key information about the AWS Bedrock connector.

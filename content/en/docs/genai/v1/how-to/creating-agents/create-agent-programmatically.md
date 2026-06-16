@@ -16,11 +16,11 @@ This approach uses microflows and GenAI Commons building blocks to define agents
 Before you begin, ensure that you have met the following prerequisites:
 
 * Complete [Set Up Your App for Agent Creation](/agents/agents-kit-1/how-to/creating-agents/shared-setup/) to configure your application, knowledge base, domain model, UI, and function microflows
-* Configure text generation and knowledge base keys (for details, see [Configuration](/agents/genai-for-mx/agent-commons/#configuration) in the *Agent Commons* documentation).
+* Configure text generation and knowledge base keys (for details, see [Configuration](/agents/agents-kit-1/genai-for-mx/agent-commons/#configuration) in the *Agent Commons* documentation).
 
 ## Creating Your Agent
 
-Create an agent that can be sent to the LLM. The [Agent Commons](/agents/genai-for-mx/agent-commons/) module allows agentic AI engineers to define agents and perform prompt engineering at runtime. If you are not familiar with Agent Commons or if anything is unclear, Mendix recommends following [Prompt Engineering at Runtime](/agents/agents-kit-1/how-to/howto-prompt-engineering/) before continuing.
+Create an agent that can be sent to the LLM. The [Agent Commons](/agents/agents-kit-1/genai-for-mx/agent-commons/) module allows agentic AI engineers to define agents and perform prompt engineering at runtime. If you are not familiar with Agent Commons or if anything is unclear, Mendix recommends following [Prompt Engineering at Runtime](/agents/agents-kit-1/how-to/howto-prompt-engineering/) before continuing.
 
 1. Run the app.
 
@@ -52,7 +52,7 @@ Create an agent that can be sent to the LLM. The [Agent Commons](/agents/genai-f
 
 7. Add a value in the **UserInput** variable field to test the current agent. For example, type `How can I implement an agent in my Mendix app?`. Ideally, the model will not attempt to answer requests that fall outside its scope, as it is restricted to handling IT-related issues and providing information about ticket data. However, if you ask a question that would require tools that are not yet implemented, the model might hallucinate and generate a response as if it had used those tools.
 
-8. Make sure the app is running with the latest domain model changes from [Set Up Your App for Agent Creation](/agents/agents-kit-1/how-to/creating-agents/shared-setup/#domain-model-setup). In the Agent Commons UI, you will see a field for the [Context Entity](/agents/genai-for-mx/agent-commons/#define-context-entity). Search for **TicketHelper** and select the entity created in that setup step. When starting from the Blank GenAI App, this should be **MyFirstModule.TicketHelper**.
+8. Make sure the app is running with the latest domain model changes from [Set Up Your App for Agent Creation](/agents/agents-kit-1/how-to/creating-agents/shared-setup/#domain-model-setup). In the Agent Commons UI, you will see a field for the [Context Entity](/agents/agents-kit-1/genai-for-mx/agent-commons/#define-context-entity). Search for **TicketHelper** and select the entity created in that setup step. When starting from the Blank GenAI App, this should be **MyFirstModule.TicketHelper**.
 
 9. Save the agent version using the **Save As** button and enter *Initial agent* as the title.
 

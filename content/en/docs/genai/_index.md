@@ -59,10 +59,10 @@ Integrate AI capabilities into your applications with Agents Kit, a collection o
 
 | Asset | Description | Studio Pro Version |
 | --- | --- | --- |
-| [Agent Commons](/agents/genai-for-mx/agent-commons/) | Build agentic functionality by defining, testing, and evaluating agents at runtime. Iterate on prompts and agent configurations without app redeployment through the integrated Agent Builder UI. | 10.24 |
-| [Agent Editor](/agents/genai-for-mx/agent-editor/) | Define agents as version-controlled documents in Studio Pro at design time. Author prompts, configure tools and knowledge bases, test locally, and deploy agents as part of your app model. | 11.9 |
-| [Conversational UI](/agents/genai-for-mx/conversational-ui/) | Create chat interfaces for full-screen, sidebar, or modal GenAI conversations. Monitor token consumption and trace interactions with UI features built on GenAI Commons. | 10.24 |
-| [GenAI Commons](/agents/genai-for-mx/commons/) | Integrate GenAI connectors with other modules using common capabilities provided by this base module. Required dependency for both core and connector modules. You can also implement your own connector based on this module. | 10.24 |
+| [Agent Commons](/agents/agents-kit-2/genai-for-mx/agent-commons/) | Build agentic functionality by defining, testing, and evaluating agents at runtime. Iterate on prompts and agent configurations without app redeployment through the integrated Agent Builder UI. | 10.24 |
+| [Agent Editor](/agents/agents-kit-2/genai-for-mx/agent-editor/) | Define agents as version-controlled documents in Studio Pro at design time. Author prompts, configure tools and knowledge bases, test locally, and deploy agents as part of your app model. | 11.9 |
+| [Conversational UI](/agents/agents-kit-2/genai-for-mx/conversational-ui/) | Create chat interfaces for full-screen, sidebar, or modal GenAI conversations. Monitor token consumption and trace interactions with UI features built on GenAI Commons. | 10.24 |
+| [GenAI Commons](/agents/agents-kit-2/genai-for-mx/commons/) | Integrate GenAI connectors with other modules using common capabilities provided by this base module. Required dependency for both core and connector modules. You can also implement your own connector based on this module. | 10.24 |
 
 #### Connector Modules {#connectors}
 
@@ -147,4 +147,4 @@ In addition to the models listed above, you can also connect to other models by 
 
 * To connect to other [foundation models](https://docs.aws.amazon.com/bedrock/latest/userguide/models-features.html) and implement them in your app, use the [Amazon Bedrock connector](/appstore/modules/aws/amazon-bedrock/).
 * To connect to [Snowflake Cortex LLM](https://docs.snowflake.com/en/sql-reference/functions/complete-snowflake-cortex) functions, [configure the Snowflake AI Data Connector for Snowflake Cortex Analyst](/appstore/connectors/snowflake/snowflake-ai-data-connector/#cortex-analyst).
-* To implement your own connector that is compatible with the other components, use the [GenAI Commons](/agents/genai-for-mx/commons/) interface and see [How to Build Your Own GenAI Connector](/agents/agents-kit-2/how-to/byo-connector/).
+* To implement your own connector that is compatible with the other components, use the [GenAI Commons](/agents/agents-kit-2/genai-for-mx/commons/) interface and see [How to Build Your Own GenAI Connector](/agents/agents-kit-2/how-to/byo-connector/).

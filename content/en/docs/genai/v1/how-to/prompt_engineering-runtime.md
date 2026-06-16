@@ -11,7 +11,7 @@ aliases:
 
 ## Introduction
 
-This document explains how to integrate the prompt engineering capabilities of the [Agent Commons](/agents/genai-for-mx/agent-commons/) module into your app.
+This document explains how to integrate the prompt engineering capabilities of the [Agent Commons](/agents/agents-kit-1/genai-for-mx/agent-commons/) module into your app.
 
 This document will help you with the following:
 
@@ -42,7 +42,7 @@ Agent Commons enables users to create powerful agents at runtime, enriching requ
 
 If you are using a GenAI starter app such as the Blank GenAI app, you can skip ahead to [the next section](#configuration) because the following steps are already completed. Otherwise, follow these setup steps to add Agent Commons capabilities to your app and navigation:
 
-1. Install the [Agent Commons module](/agents/genai-for-mx/agent-commons/) module and its dependencies from the Mendix Marketplace.
+1. Install the [Agent Commons module](/agents/agents-kit-1/genai-for-mx/agent-commons/) module and its dependencies from the Mendix Marketplace.
 2. Open your app's [Security](/refguide/security/#user-role) settings and edit the user role that you want to be able to create agents at runtime. This is typically the Administrator role, but this may vary depending on your use case. Follow these steps:
 
     1. For the Agent Commons module, assign the **AgentAdmin** module role.
@@ -61,7 +61,7 @@ If you are using a GenAI starter app such as the Blank GenAI app, you can skip a
 To enable generative AI capabilities, install and configure the [Mendix Cloud GenAI Connector](/agents/agents-kit-1/mx-cloud-genai/mxgenai-connector/) and its dependencies from the Mendix Marketplace. If you are using a GenAI starter app such as the Blank GenAI app, you can skip the installation and just follow the [configuration instructions](/agents/agents-kit-1/mx-cloud-genai/mxgenai-connector/#configuration).
 
 {{% alert color="info" %}}
-This example uses the Mendix Cloud GenAI Connector. Alternatively, you can install and configure an [external connector](/agents/agents-kit-1/reference-guide/connectors/) for any provider with a connector that is compatible with [GenAICommons](/agents/genai-for-mx/commons/). This includes [OpenAI](/agents/agents-kit-1/reference-guide/external-connectors/openai/) and [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). 
+This example uses the Mendix Cloud GenAI Connector. Alternatively, you can install and configure an [external connector](/agents/agents-kit-1/reference-guide/connectors/) for any provider with a connector that is compatible with [GenAICommons](/agents/agents-kit-1/genai-for-mx/commons/). This includes [OpenAI](/agents/agents-kit-1/reference-guide/external-connectors/openai/) and [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). 
 {{% /alert %}}
 
 ## Verifying Setup {#verification}
@@ -245,7 +245,7 @@ You have now successfully implemented Agent Commons and connected it to a sample
 
 ## Troubleshooting {#troubleshooting}
 
-For more technical details, refer to [Agent Commons](/agents/genai-for-mx/agent-commons/).
+For more technical details, refer to [Agent Commons](/agents/agents-kit-1/genai-for-mx/agent-commons/).
 
 For an example of advanced prompt engineering with Agent Commons, refer to the *Generate Product Description* section in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475).
 

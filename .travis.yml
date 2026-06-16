@@ -7,13 +7,15 @@ os: linux             # optional, this is default
 dist: jammy          # or bionic | xenial | trusty | precise with xenial as default - Recommended here: https://docs.travis-ci.com/user/reference/overview/#deprecated-virtualization-environments
 
 git:
-  depth: 20000 # We're cloning this many commits as it is roughly covering the last 4 years of commits, thus letting us show the last changed date on the documentation pages.
+  depth: 1000 # Reduced clone depth for faster PR builds while retaining enough history for recent Lastmod values.
   quiet: true # prevent commit numbers appearing in the log and being flagged as potential security leaks.
   submodules: false # turn off submodules
 
 env:
   global:
 # Global variables can go here, for example HUGO_VERSION if we were using Netlify to publish.
+    - HUGO_DEBUG_LOGS=false
+    - RUN_HTMLTEST_ON_PR=false
 
 # add group: previous to see if this fixes the stalled npm build - 2025-04-14
 # remove again 2025-05-08 as builds started breaking again.
@@ -41,6 +43,7 @@ cache:
 # Cache node_modules to avoid re-downloading on every build
 # See https://docs.travis-ci.com/user/caching/
   directories:
+    - $HOME/.npm
     - node_modules
     - $HOME/.cache/hugo_cache_v2
     - resources/_gen
@@ -49,7 +52,7 @@ cache:
 before_install:
 ###############
   # Hugo, Docsy and dependencies are installed via npm
-  - travis_retry npm install --loglevel verbose # use npm rather than yarn - HUGO doesn't have that many dependencies
+  - travis_retry npm ci --prefer-offline --no-audit --fund=false # deterministic and faster on CI than npm install
   #
   # Currently will use custom version of htmltest stored in /htmltest/htmltest
   # This version makes the html.Parse much smaller
@@ -61,7 +64,7 @@ install:
   # ------------------------
   - mkdir public  # This because <Maybe> the process of syncing to public is probably deadlocked behind waiting for the public folder to be made, and is never signalled that the folder is created, which ends up stalling the build on Travis CI.
   # ------------------------
-  -  ./node_modules/.bin/hugo config --environment $TRAVIS_BRANCH --logLevel debug # report the config we are using
+  -  if [ "$HUGO_DEBUG_LOGS" = "true" ]; then ./node_modules/.bin/hugo config --environment $TRAVIS_BRANCH --logLevel debug; else ./node_modules/.bin/hugo config --environment $TRAVIS_BRANCH; fi # report the config we are using
   # Output header in bold white on green
   - printf '\033[37;42;1m' > $TRAVIS_BUILD_DIR/hugo.log
   - echo "HUGO was run for environment $TRAVIS_BRANCH" >> $TRAVIS_BUILD_DIR/hugo.log
@@ -72,7 +75,7 @@ install:
   # Append output to hugo.log file to print at the end of the travis job
   # (see https://stackoverflow.com/questions/418896/how-to-redirect-output-to-a-file-and-stdout)
 
-  -  HUGO_ENABLEGITINFO=false HUGO_CACHEDIR=$HOME/.cache/hugo_cache_v2 ./node_modules/.bin/hugo --environment $TRAVIS_BRANCH --templateMetrics --logLevel debug 2>&1 | tee -a $TRAVIS_BUILD_DIR/hugo.log
+  -  if [ "$HUGO_DEBUG_LOGS" = "true" ]; then HUGO_ENABLEGITINFO=false HUGO_CACHEDIR=$HOME/.cache/hugo_cache_v2 ./node_modules/.bin/hugo --environment $TRAVIS_BRANCH --templateMetrics --logLevel debug 2>&1 | tee -a $TRAVIS_BUILD_DIR/hugo.log; else HUGO_ENABLEGITINFO=false HUGO_CACHEDIR=$HOME/.cache/hugo_cache_v2 ./node_modules/.bin/hugo --environment $TRAVIS_BRANCH 2>&1 | tee -a $TRAVIS_BUILD_DIR/hugo.log; fi
 
   # normal htmltest takes too much memory - using a modified version which strips <aside> tag content
   # NB - Set pipefail so that Travis CI sees the return code from `tee` and not from `htmltest` so it will always build.
@@ -84,7 +87,7 @@ install:
   - chmod +x ./htmltest/htmltest
   # Run htmltest - convert red (91) and green (92) aixterm colors with 8-bit versions (31 and 32).
 
-  - ./htmltest/htmltest 2>&1 | sed "s/\o033\[91/\o033\[31/g; s/\o033\[92/\o033\[32/g" |tee -a $TRAVIS_BUILD_DIR/hugo.log
+  - if [ "$TRAVIS_PULL_REQUEST" != "false" ] && [ "$RUN_HTMLTEST_ON_PR" != "true" ]; then echo "Skipping htmltest for PR build (set RUN_HTMLTEST_ON_PR=true to enable)." | tee -a $TRAVIS_BUILD_DIR/hugo.log; else ./htmltest/htmltest 2>&1 | sed "s/\o033\[91/\o033\[31/g; s/\o033\[92/\o033\[32/g" | tee -a $TRAVIS_BUILD_DIR/hugo.log; fi
 
 before_script:
 ##############

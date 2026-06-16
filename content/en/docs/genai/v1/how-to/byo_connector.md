@@ -12,7 +12,7 @@ aliases:
 
 If you want to create your own connection to the LLM model of your choice while leveraging the chat UI capabilities of the [ConversationalUI](/agents/genai-for-mx/conversational-ui/) module, which is built using entities from [GenAICommons](/agents/genai-for-mx/commons/), then this document will guide you on how to get started with building your own GenAI Commons connector.
 
-Building your own GenAI Commons connector offers several practical benefits that streamline development and enhance flexibility. You can reuse [ConversationalUI](/agents/genai-for-mx/conversational-ui/) components, quickly set up with [starter apps](/agents/how-to/starter-template/), and switch providers effortlessly. This guide will help you integrate your preferred LLM while maintaining a seamless and user-friendly chat experience.
+Building your own GenAI Commons connector offers several practical benefits that streamline development and enhance flexibility. You can reuse [ConversationalUI](/agents/genai-for-mx/conversational-ui/) components, quickly set up with [starter apps](/agents/agents-kit-1/how-to/starter-template/), and switch providers effortlessly. This guide will help you integrate your preferred LLM while maintaining a seamless and user-friendly chat experience.
 
 {{< figure src="/attachments/genai/howto-byo/connectors_diagram.png" alt="" >}}
 

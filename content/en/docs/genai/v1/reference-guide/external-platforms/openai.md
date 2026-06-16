@@ -241,7 +241,7 @@ The microflow action `Generate Embeddings (Chunk Collection)` supports the more 
 
 To generate embeddings, it does not matter whether the ChunkCollection contains Chunks or its specialization KnowledgeBaseChunks. However, if the goal is to store the generated embedding vectors in a knowledge base (for example, using the [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/) module), Mendix recommends adding `KnowledgeBaseChunks` to the `ChunkCollection` and using these as an input for the embeddings operations, so they can afterward be used directly to populate the knowledge base.
 
-Currently, the OpenAI connector does not support knowledge base interaction (for example, inserting or retrieving chunks). For more information on possible ways to work with knowledge bases when using the OpenAI Connector for embedding generation, see [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/) and [Setting Up a Vector Database](/agents/reference-guide/external-connectors/pgvector-setup/).
+Currently, the OpenAI connector does not support knowledge base interaction (for example, inserting or retrieving chunks). For more information on possible ways to work with knowledge bases when using the OpenAI Connector for embedding generation, see [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/) and [Setting Up a Vector Database](/agents/agents-kit-1/reference-guide/external-connectors/pgvector-setup/).
 
 ### Exposed Microflow Actions for OpenAI {#exposed-microflows}
 

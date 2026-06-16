@@ -11,7 +11,7 @@ aliases:
 
 ## Introduction
 
-This document guides on building a smart app using a starter template. Alternatively, you can create your smart app from scratch using a blank GenAI app template. For more details, see [Build a Smart App from a Blank GenAI App](/agents/how-to/blank-app/).
+This document guides on building a smart app using a starter template. Alternatively, you can create your smart app from scratch using a blank GenAI app template. For more details, see [Build a Smart App from a Blank GenAI App](/agents/agents-kit-2/how-to/blank-app/).
 
 ### Prerequisites
 
@@ -47,7 +47,7 @@ Selecting the infrastructure for integrating GenAI into your Mendix application 
 
 * [Mendix Cloud GenAI Resources Packs](/agents/mx-cloud-genai/resource-packs/): The [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) integrates LLMs by dragging and dropping common operations from its toolbox in Studio Pro.
 
-* [OpenAI](/agents/reference-guide/external-connectors/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) supports OpenAI's platform and Microsoft Foundry.
+* [OpenAI](/agents/agents-kit-2/reference-guide/external-connectors/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) supports OpenAI's platform and Microsoft Foundry.
 
 * [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/): The [Amazon Bedrock Connector](https://marketplace.mendix.com/link/component/215042) allows you to leverage Amazon Bedrock’s fully managed service to integrate foundation models from Amazon and leading AI providers. 
 
@@ -79,7 +79,7 @@ Follow these steps to configure the Mendix Cloud GenAI Resources Packs for your 
 
 #### OpenAI Configuration
 
-Follow the steps below to configure OpenAI for your application. For more information, see the [Configuration](/agents/reference-guide/external-connectors/openai/#configuration) section of the *OpenAI*.
+Follow the steps below to configure OpenAI for your application. For more information, see the [Configuration](/agents/agents-kit-2/reference-guide/external-connectors/openai/#configuration) section of the *OpenAI*.
 
 1. Run the application locally.
 

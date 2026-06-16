@@ -99,7 +99,7 @@ To interact with LLMs using Agent Commons, you need at least one GenAI connector
 
 * For [Mendix Cloud GenAI](https://marketplace.mendix.com/link/component/239449), importing the **Key** from the Mendix portal automatically creates a MxCloud Deployed Model. This is part of the [configuration](/agents/mx-cloud-genai/mxgenai-connector/#configuration).
 * For [Amazon Bedrock](https://marketplace.mendix.com/link/component/215042), the creation of Bedrock Deployed Models is part of the [model synchronization mechanism](/appstore/modules/aws/amazon-bedrock/#sync-models).
-* For [OpenAI](https://marketplace.mendix.com/link/component/220472), the configuration of OpenAI Deployed Models is part of the [configuration](/agents/reference-guide/external-connectors/openai/#general-configuration).
+* For [OpenAI](https://marketplace.mendix.com/link/component/220472), the configuration of OpenAI Deployed Models is part of the [configuration](/agents/agents-kit-1/reference-guide/external-connectors/openai/#general-configuration).
 
 ### Defining the Agent {#define-agent}
 
@@ -150,8 +150,8 @@ For supported knowledge bases registered in your app, you can connect them to ag
 
 * [Mendix Cloud GenAI Connector](/agents/mx-cloud-genai/mxgenai-connector/#configuration)
 * [Amazon Bedrock Connector](/appstore/modules/aws/amazon-bedrock/#sync-models)
-* [OpenAI Connector](/agents/reference-guide/external-connectors/openai/#azure-ai-search)
-* [PgVector Knowledge Base](/agents/reference-guide/external-connectors/pgvector/#general-configuration)
+* [OpenAI Connector](/agents/agents-kit-1/reference-guide/external-connectors/openai/#azure-ai-search)
+* [PgVector Knowledge Base](/agents/agents-kit-1/reference-guide/external-connectors/pgvector/#general-configuration)
 
 To allow an agent to perform semantic searches, add the knowledge base to the agent definition and configure the retrieval parameters, such as the number of chunks to retrieve, and the threshold similarity. Multiple knowledge bases can be added to the agent to pick from. Give each knowledge base a name and description (in human language) so that the model can decide which retrievals are necessary based on the input it gets.
 

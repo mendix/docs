@@ -36,7 +36,7 @@ To use this connector, you need to sign up for a Google AI Studio account and cr
 * [GenAI Commons module](/agents/genai-for-mx/commons/)
 * [Encryption module](/appstore/modules/encryption/)
 * [Community Commons module](/appstore/modules/community-commons-function-library/)
-* [OpenAI connector](/agents/reference-guide/external-connectors/openai/)
+* [OpenAI connector](/agents/agents-kit-1/reference-guide/external-connectors/openai/)
 
 ## Installation
 

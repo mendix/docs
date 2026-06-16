@@ -180,7 +180,7 @@ Instead of relying solely on similarity-based searches of ticket descriptions, u
 
 #### How to Get Data Into a Knowledge Base 
 
-For a step-by-step guide on how to get your application data into a collection inside a Mendix Cloud knowledge base resource, see [Grounding Your Large Language Model in Data – Mendix Cloud GenAI](/agents/how-to/howto-groundllm/). The Mendix Portal also provides options for importing data into your knowledge base, such as file uploads. For more information, see [Navigate through the Mendix Cloud GenAI Portal](/agents/mx-cloud-genai/Navigate-MxGenAI/). This documentation focuses solely on adding data from inside a Mendix application and using the connector. 
+For a step-by-step guide on how to get your application data into a collection inside a Mendix Cloud knowledge base resource, see [Grounding Your Large Language Model in Data – Mendix Cloud GenAI](/agents/agents-kit-1/how-to/howto-groundllm/). The Mendix Portal also provides options for importing data into your knowledge base, such as file uploads. For more information, see [Navigate through the Mendix Cloud GenAI Portal](/agents/mx-cloud-genai/Navigate-MxGenAI/). This documentation focuses solely on adding data from inside a Mendix application and using the connector. 
 
 ### Knowledge Base Operations
 

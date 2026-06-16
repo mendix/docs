@@ -10,7 +10,7 @@ aliases:
 
 ## Introduction
 
-This document explains how to add data to your smart app to integrate with a Large Language Model (LLM). To do this, you can use your existing app or follow the [Build a Smart App from a Blank GenAI App](/agents/how-to/blank-app/) guide to start from scratch.
+This document explains how to add data to your smart app to integrate with a Large Language Model (LLM). To do this, you can use your existing app or follow the [Build a Smart App from a Blank GenAI App](/agents/agents-kit-1/how-to/blank-app/) guide to start from scratch.
 
 In this document, you will:
 
@@ -21,7 +21,7 @@ In this document, you will:
 
 Before implementing this capability into your app, make sure you meet the following requirements:
 
-* Start from scratch: to simplify your first use case, start building from a preconfigured setup [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934). For more information, see [Build a Chatbot from Scratch Using the Blank GenAI App](/agents/how-to/blank-app/). 
+* Start from scratch: to simplify your first use case, start building from a preconfigured setup [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934). For more information, see [Build a Chatbot from Scratch Using the Blank GenAI App](/agents/agents-kit-1/how-to/blank-app/). 
 
 * Install the [Mendix GenAI Connector](https://marketplace.mendix.com/link/component/239449) and [GenAICommons](https://marketplace.mendix.com/link/component/239448) modules (version 2.2.0 and above) from the Mendix Marketplace. If you start with the Blank GenAI App, you can skip this installation.
 
@@ -47,7 +47,7 @@ Follow the instructions in the [Navigate through the Mendix Cloud GenAI Portal](
 
 ### Creating Domain Model Entity {#domainmodel}
 
-Since your application needs to store information, you must create attributes for the knowledge you want to save. In this example, based on the [demo data](/agents/how-to/howto-groundllm/#demodata) mentioned below, a `Description` attribute of type `String` is created.
+Since your application needs to store information, you must create attributes for the knowledge you want to save. In this example, based on the [demo data](/agents/agents-kit-1/how-to/howto-groundllm/#demodata) mentioned below, a `Description` attribute of type `String` is created.
 
 ### Demo Data {#demodata}
 
@@ -134,7 +134,7 @@ This microflow first checks whether a list of tickets already exists in the data
 5. Next, add the `Import With Mapping` action with the following configurations:
 
     * **Variable**: `TicketJSON` created in the previous step
-    * **Mapping**: Use the mapping mentioned in the [demo data section](/agents/how-to/howto-groundllm/#demodata)
+    * **Mapping**: Use the mapping mentioned in the [demo data section](/agents/agents-kit-1/how-to/howto-groundllm/#demodata)
     * **Range**: `All`
     * **Commit**: `Yes without events`
     * **Store in variable**: `No` (optional, not needed here)
@@ -203,7 +203,7 @@ For the application to function as expected, ensure that the following microflow
 
 ## Testing and Troubleshooting
 
-Before testing, ensure that you have completed the Mendix Cloud GenAI configuration as described in the [Build a Chatbot from Scratch Using the Blank GenAI App](/agents/how-to/blank-app/), particularly the [Mendix Cloud GenAI Configuration](/agents/how-to/blank-app/#mendix-cloud-genai-configuration) section. 
+Before testing, ensure that you have completed the Mendix Cloud GenAI configuration as described in the [Build a Chatbot from Scratch Using the Blank GenAI App](/agents/agents-kit-1/how-to/blank-app/), particularly the [Mendix Cloud GenAI Configuration](/agents/agents-kit-1/how-to/blank-app/#mendix-cloud-genai-configuration) section. 
 
 To test the Chatbot, click on the **Create Demo Data and Populate KB** option to populate the knowledge base and go to the **Chatbot** icon to open the chatbot interface. Start interacting with your chatbot by typing in the chat box something related to your knowledge base.
 For example, *My computer crashes every time, what can I do?*

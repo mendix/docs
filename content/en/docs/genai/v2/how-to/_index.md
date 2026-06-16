@@ -18,8 +18,8 @@ Generative Artificial Intelligence (GenAI) transforms business applications, emp
 
 ### Getting Started with the How-Tos
 
-* [Build a Chatbot Using the AI Bot Starter App](/agents/how-to/starter-template/)
-* [Build a Chatbot from Scratch Using the Blank GenAI App](/agents/how-to/blank-app/)
+* [Build a Chatbot Using the AI Bot Starter App](/agents/agents-kit-2/how-to/starter-template/)
+* [Build a Chatbot from Scratch Using the Blank GenAI App](/agents/agents-kit-2/how-to/blank-app/)
 
 ### Starter Apps
 
@@ -39,10 +39,10 @@ Generative Artificial Intelligence (GenAI) transforms business applications, emp
 * The [GenAICommons](/agents/genai-for-mx/commons/) module as a prerequisite for all GenAI components.
 * The [ConversationalUI](/agents/genai-for-mx/conversational-ui/) module that offers UI snippets for chat, token consumption monitoring and prompt management.
 * The [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/) to learn how to quickly access GenAI capabilities from a Mendix app.
-* The [OpenAI](/agents/reference-guide/external-connectors/openai/) provides essential information about the OpenAI connector.
+* The [OpenAI](/agents/agents-kit-2/reference-guide/external-connectors/openai/) provides essential information about the OpenAI connector.
 * The [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/) provides key information about the AWS Bedrock connector.
 * The [MCP Server Module](/agents/mcp-modules/mcp-server/) provides reusable operations to create and initialize an MCP server within a Mendix app to expose tools and prompts to external clients.
-* The [PGVector Knowledge Base](/agents/reference-guide/external-connectors/pgvector/) offers the option for a private knowledge base outside of the LLM infrastructure.
+* The [PGVector Knowledge Base](/agents/agents-kit-2/reference-guide/external-connectors/pgvector/) offers the option for a private knowledge base outside of the LLM infrastructure.
 
 For any additional feedback, send a message in the [#genai-connectors](https://mendixcommunity.slack.com/archives/C07P8NRBLN9) channel on the Mendix Community Slack. You can sign up for the Mendix Community [here](https://mendixcommunity.slack.com/join/shared_invite/zt-270ys3pwi-kgWhJUwWrKMEMuQln4bqrQ#/shared-invite/email).
 

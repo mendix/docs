@@ -9,7 +9,7 @@ aliases:
 
 ## Introduction
 
-This guide describes the shared setup steps for the example IT helpdesk agent. Complete these steps before choosing one of three implementation approaches. For more information about the agent use case and implementation options, see [Creating Your First Agent](/agents/how-to/creating-agents/).
+This guide describes the shared setup steps for the example IT helpdesk agent. Complete these steps before choosing one of three implementation approaches. For more information about the agent use case and implementation options, see [Creating Your First Agent](/agents/agents-kit-2/how-to/creating-agents/).
 
 This guide walks you through the following:
 
@@ -20,26 +20,26 @@ This guide walks you through the following:
 
 After you complete these steps, continue to one of the implementation approach guides:
 
-* [Create an Agent with Agent Editor](/agents/how-to/create-agent-with-agent-editor/)
-* [Create an Agent with Agent Commons](/agents/how-to/create-agent-with-agent-commons/)
-* [Create an Agent Programmatically](/agents/how-to/create-agent-programmatically/)
+* [Create an Agent with Agent Editor](/agents/agents-kit-2/how-to/create-agent-with-agent-editor/)
+* [Create an Agent with Agent Commons](/agents/agents-kit-2/how-to/create-agent-with-agent-commons/)
+* [Create an Agent Programmatically](/agents/agents-kit-2/how-to/create-agent-programmatically/)
 
 ## Prerequisites {#prerequisites}
 
 Before you build an agent in your app, make sure your scenario meets the following requirements:
 
 * An existing app – Use a GenAI starter app such as the [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934), or add to an app that you have already built
-* Studio Pro 10.24 or above (or Studio Pro 11.9.1 or above if you plan to use [Agent Editor](/agents/how-to/create-agent-with-agent-editor/))
+* Studio Pro 10.24 or above (or Studio Pro 11.9.1 or above if you plan to use [Agent Editor](/agents/agents-kit-2/how-to/create-agent-with-agent-editor/))
 * Intermediate understanding of Mendix – Knowledge of simple page building, microflow modeling, domain model creation, and import/export mappings
 * Basic understanding of GenAI concepts – Review [Enrich Your Mendix App with Agentic Capabilities](/agents/) for foundational knowledge and familiarize yourself with the [concepts of GenAI](/agents/get-started/) and [agents](/agents/agents/)
 * Basic understanding of function calling and prompt engineering – Learn about [Function Calling](/agents/function-calling/) and [Prompt Engineering](/agents/get-started/#prompt-engineering) to use them within the Mendix ecosystem
-* Optional – If you are not yet familiar with implementing specific GenAI concepts with Agents Kit, follow these GenAI documents: [Grounding Your LLM in Data](/agents/how-to/howto-groundllm/), [Prompt Engineering at Runtime](/agents/how-to/howto-prompt-engineering/), and [Integrate Function Calling into Your Mendix App](/agents/how-to/howto-functioncalling/)
+* Optional – If you are not yet familiar with implementing specific GenAI concepts with Agents Kit, follow these GenAI documents: [Grounding Your LLM in Data](/agents/agents-kit-2/how-to/howto-groundllm/), [Prompt Engineering at Runtime](/agents/agents-kit-2/how-to/howto-prompt-engineering/), and [Integrate Function Calling into Your Mendix App](/agents/agents-kit-2/how-to/howto-functioncalling/)
 * Optional – Basic understanding of the [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) and the related Mendix modules: [MCP Server module](/agents/mcp-modules/mcp-server/) and [MCP Client module](/agents/mcp-modules/mcp-client/)
 
 ## Setting Up Your Application
 
 {{% alert color="info" %}}
-This guide uses the Mendix Cloud GenAI Connector for text generation. You can also use alternative [supported connectors](/agents/#connectors), such as [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/) or [OpenAI](/agents/reference-guide/external-connectors/openai/). For knowledge base operations, this guide uses the Mendix Cloud Knowledge Base, but the [pgVector Knowledge Base](/agents/reference-guide/external-connectors/pgvector/) is also supported. As long as you configure access to a provider and knowledge base according to the connector documentation, and the knowledge base supports inserting chunks from a microflow, the remaining steps in this guide apply.
+This guide uses the Mendix Cloud GenAI Connector for text generation. You can also use alternative [supported connectors](/agents/#connectors), such as [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/) or [OpenAI](/agents/agents-kit-2/reference-guide/external-connectors/openai/). For knowledge base operations, this guide uses the Mendix Cloud Knowledge Base, but the [pgVector Knowledge Base](/agents/agents-kit-2/reference-guide/external-connectors/pgvector/) is also supported. As long as you configure access to a provider and knowledge base according to the connector documentation, and the knowledge base supports inserting chunks from a microflow, the remaining steps in this guide apply.
 {{% /alert %}}
 
 If you are using a GenAI starter app such as the Blank GenAI Starter App, you can skip ahead to [Creating the Agent's Functional Prerequisites](#creating-functional-prerequisites) because the following setup steps are completed by default. Otherwise, follow these steps to add the required modules and configuration to your app:
@@ -71,7 +71,7 @@ Each of these steps is described in the following sections.
 To define the agent and generate responses, the steps differ based on your chosen approach and are covered in separate documents.
 ### Ingesting Data Into Knowledge Base {#ingest-knowledge-base}
 
-Ingest Mendix ticket data into the knowledge base. For a detailed guide, see [Grounding Your LLM in Data](/agents/how-to/howto-groundllm/#demodata). The following steps explain the process at a higher level by modifying logic imported from the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475). You can find the sample data used in this document in the GenAI Showcase App or use your own data.
+Ingest Mendix ticket data into the knowledge base. For a detailed guide, see [Grounding Your LLM in Data](/agents/agents-kit-2/how-to/howto-groundllm/#demodata). The following steps explain the process at a higher level by modifying logic imported from the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475). You can find the sample data used in this document in the GenAI Showcase App or use your own data.
 
 1. Go to the domain model of the module where you want to implement this example. (The following instructions use `MyFirstModule` as the module name in examples—replace this with your actual module name.) In your domain model, create a `Ticket` entity with the following attributes:
 
@@ -240,8 +240,8 @@ This method provides greater flexibility in managing and sharing functions acros
 
 You have completed the foundational setup. Continue with your chosen implementation approach:
 
-* [Create an Agent with Agent Editor](/agents/how-to/create-agent-with-agent-editor/)
-* [Create an Agent with Agent Commons](/agents/how-to/create-agent-with-agent-commons/)
-* [Create an Agent Programmatically](/agents/how-to/create-agent-programmatically/)
+* [Create an Agent with Agent Editor](/agents/agents-kit-2/how-to/create-agent-with-agent-editor/)
+* [Create an Agent with Agent Commons](/agents/agents-kit-2/how-to/create-agent-with-agent-commons/)
+* [Create an Agent Programmatically](/agents/agents-kit-2/how-to/create-agent-programmatically/)
 
-For help choosing an approach, see [Creating Your First Agent](/agents/how-to/creating-agents/#implementation-approach).
+For help choosing an approach, see [Creating Your First Agent](/agents/agents-kit-2/how-to/creating-agents/#implementation-approach).

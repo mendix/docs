@@ -106,7 +106,7 @@ To use Agent Editor functionalities in your app, you must perform the following 
 6. Deploy the agent to cloud environments.
 7. Improve the agent in the next iterations.
 
-For a step-by-step tutorial, see [Create an Agent with Agent Editor](/agents/how-to/create-agent-with-agent-editor/).
+For a step-by-step tutorial, see [Create an Agent with Agent Editor](/agents/agents-kit-1/how-to/create-agent-with-agent-editor/).
 
 ### Defining the Model {#define-model}
 

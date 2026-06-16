@@ -137,7 +137,7 @@ Complete the following steps:
 
 ## Configuring the Database Connection Details in Your Application {#configure-database-connection}
 
-1. Add the PgVector Knowledge Base module and its dependencies to your Mendix app and set it up. For detailed instructions, see [PgVector Knowledge Base](/agents/reference-guide/external-connectors/pgvector/).
+1. Add the PgVector Knowledge Base module and its dependencies to your Mendix app and set it up. For detailed instructions, see [PgVector Knowledge Base](/agents/agents-kit-2/reference-guide/external-connectors/pgvector/).
 
 2. Include the page **DatabaseConfiguration_Overview** in the navigation or use the snippet **Snippet_DatabaseConfigurations** on an existing page.
 

@@ -38,7 +38,7 @@ The current version supports inserting data chunks with their vectors into a kno
 
 ### Prerequisites {#prerequisites}
 
-You must have access to your own (remote) PostgreSQL database server with the [pgvector](https://github.com/pgvector/pgvector) extension installed. For more information, see [Setting up a Vector Database](/agents/reference-guide/external-connectors/pgvector-setup/).
+You must have access to your own (remote) PostgreSQL database server with the [pgvector](https://github.com/pgvector/pgvector) extension installed. For more information, see [Setting up a Vector Database](/agents/agents-kit-2/reference-guide/external-connectors/pgvector-setup/).
 
 {{% alert color="info" %}}This module cannot be used with the Mendix Cloud app database. It only works if you are using your own database server or Amazon RDS.{{% /alert %}}
 
@@ -64,7 +64,7 @@ To integrate a PgVector knowledge base into a Mendix app, perform the following 
 
 1. Add the module role **PgVectorKnowledgeBase.Administrator** to your Administrator user role in the security settings of your app. Optionally, map **GenAICommons.User** to any user roles that need read access directly on retrieved entities.
 2. Add the **DatabaseConfiguration_Overview** page (**USE_ME > Configuration**) to your navigation, or add the **Snippet_DatabaseConfigurations** to a page that is already part of your navigation. 
-3. Set up your database configurations at runtime. For more information, see the [Configuring the Database Connection Details](/agents/reference-guide/external-connectors/pgvector-setup/#configure-database-connection) section in *Setting up a Vector Database*. Selecting an embeddings model is optional and only required if you plan to use PgVector for the [Tools: Add Knowledge Base](/agents/genai-for-mx/commons/#add-knowledge-base-to-request) action.
+3. Set up your database configurations at runtime. For more information, see the [Configuring the Database Connection Details](/agents/agents-kit-2/reference-guide/external-connectors/pgvector-setup/#configure-database-connection) section in *Setting up a Vector Database*. Selecting an embeddings model is optional and only required if you plan to use PgVector for the [Tools: Add Knowledge Base](/agents/genai-for-mx/commons/#add-knowledge-base-to-request) action.
 
 {{% alert color="info" %}}
 It is possible to have multiple knowledge bases in the same database in parallel by providing different knowledge base names in combination with the same `DatabaseConfiguration`.
@@ -180,7 +180,7 @@ The **Documentation** pane displays the documentation for the currently selected
 For more inspiration and guidance on how to use these operations in your logic and how to combine them with use cases in the context of generative AI, Mendix recommends downloading the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) from Marketplace. This application contains various examples in the context of generative AI, some of which use the PgVector Knowledge Base module for storing embedding vectors.
 
 {{% alert color="info" %}}
-For more information on how to set up a vector database for retrieval augmented generation (RAG), see [Setting up a Vector Database](/agents/reference-guide/external-connectors/pgvector-setup/) and [RAG Example Implementation in the GenAI Showcase App](/agents/rag/).
+For more information on how to set up a vector database for retrieval augmented generation (RAG), see [Setting up a Vector Database](/agents/agents-kit-2/reference-guide/external-connectors/pgvector-setup/) and [RAG Example Implementation in the GenAI Showcase App](/agents/rag/).
 {{% /alert %}}
 
 ## Troubleshooting

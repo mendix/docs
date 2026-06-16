@@ -36,7 +36,7 @@ To use this connector, you need to sign up for a Mistral account and create an A
 * [GenAI Commons module](/agents/genai-for-mx/commons/)
 * [Encryption module](/appstore/modules/encryption/)
 * [Community Commons module](/appstore/modules/community-commons-function-library/)
-* [OpenAI connector](/agents/reference-guide/external-connectors/openai/)
+* [OpenAI connector](/agents/agents-kit-2/reference-guide/external-connectors/openai/)
 
 ## Installation
 
@@ -173,7 +173,7 @@ The `Generate Embeddings (Chunk Collection)` microflow action supports the more 
 
 To generate embeddings, it does not matter whether the ChunkCollection contains Chunks or its specialization KnowledgeBaseChunks. However, if the goal is to store the generated embedding vectors in a knowledge base (such as using the [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/) module), Mendix recommends adding `KnowledgeBaseChunks` to the `ChunkCollection` and using these as input for the embeddings operations so they can later be used directly to populate the knowledge base.
 
-OpenAI-compatible APIs do not support knowledge base interaction (inserting or retrieving chunks). For more information on ways to work with knowledge bases for embedding generation, see [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/) and [Setting Up a Vector Database](/agents/reference-guide/external-connectors/pgvector-setup/).
+OpenAI-compatible APIs do not support knowledge base interaction (inserting or retrieving chunks). For more information on ways to work with knowledge bases for embedding generation, see [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/) and [Setting Up a Vector Database](/agents/agents-kit-2/reference-guide/external-connectors/pgvector-setup/).
 
 ### Exposed Microflow Actions for OpenAI-compatible APIs {#exposed-microflows}
 

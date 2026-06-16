@@ -1,6 +1,6 @@
 ---
 title: "Setting up a Vector Database"
-url: /agents/reference-guide/external-connectors/pgvector-setup/
+url: /agents/agents-kit-2/reference-guide/external-connectors/pgvector-setup/
 linktitle: "Vector Database Setup"
 weight: 5
 description: "Agents Kit 2: Describes how to set up a vector database to store and manage vector embeddings for a knowledge base"

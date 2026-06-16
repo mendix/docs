@@ -1,6 +1,6 @@
 ---
 title: "OpenAI"
-url: /agents/reference-guide/external-connectors/openai/
+url: /agents/agents-kit-2/reference-guide/external-connectors/openai/
 linktitle: "OpenAI"
 description: "Agents Kit 2: Describes how to configure and use the OpenAI connector to integrate generative AI capabilities into Mendix apps."
 weight: 20

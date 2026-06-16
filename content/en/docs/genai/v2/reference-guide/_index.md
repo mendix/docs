@@ -1,6 +1,6 @@
 ---
 title: "Reference Guide"
-url: /agents/reference-guide/
+url: /agents/agents-kit-2/reference-guide/
 linktitle: "Reference Guide"
 weight: 20
 description: "Agents Kit 2: Provides references of Mendix's GenAI Modules and Tools."

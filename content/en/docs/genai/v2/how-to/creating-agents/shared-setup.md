@@ -1,6 +1,6 @@
 ---
 title: "Set Up Your App for Agent Creation"
-url: /agents/how-to/creating-agents/shared-setup/
+url: /agents/agents-kit-2/how-to/creating-agents/shared-setup/
 weight: 60
 description: "Agents Kit 2: Describes how to set up your app with the required modules, data, domain model, and function microflows for the example IT helpdesk agent."
 aliases:

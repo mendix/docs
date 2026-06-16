@@ -1,6 +1,6 @@
 ---
 title: "Build a Chatbot Using the AI Bot Starter App"
-url: /agents/how-to/starter-template
+url: /agents/agents-kit-1/how-to/starter-template
 linktitle: "Build a Chatbot Using the AI Bot Starter App"
 weight: 10
 description: "Agents Kit 1: A tutorial that describes how to get started building a smart app with a starter template"

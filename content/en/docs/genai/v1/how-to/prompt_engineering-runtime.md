@@ -1,6 +1,6 @@
 ---
 title: "Prompt Engineering at Runtime"
-url: /agents/how-to/howto-prompt-engineering/
+url: /agents/agents-kit-1/how-to/howto-prompt-engineering/
 linktitle: "Prompt Engineering at Runtime"
 weight: 30
 description: "Agents Kit 1: This document guides you through integrating Agent Commons into your Mendix application, allowing users to perform prompt engineering at runtime."

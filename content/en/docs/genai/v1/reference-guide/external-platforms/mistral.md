@@ -1,6 +1,6 @@
 ---
 title: "Mistral"
-url: /agents/reference-guide/external-connectors/mistral/
+url: /agents/agents-kit-1/reference-guide/external-connectors/mistral/
 linktitle: "Mistral"
 description: "Agents Kit 1: Describes how to configure and use the Mistral connector to integrate generative AI capabilities into Mendix apps."
 weight: 20
@@ -62,7 +62,7 @@ The following inputs are required for the Mistral configuration:
 | Parameter   | Value                                                        |
 | ----------- | ------------------------------------------------------------ |
 | Display name | The name identifier of a configuration (for example, *MyConfiguration*). |
-| Endpoint | The API endpoint (for example, `https://api.mistral.ai/v1/`). |
+| Endpoint | The API endpoint (for example, `https://api.mistral.ai/agents-kit-1/`). |
 | Token | The access token to authorize your API call. <br />To get an API key, see the [Quickstart](https://docs.mistral.ai/getting-started/quickstart). |
 
 #### Configuring the Mistral Deployed Models

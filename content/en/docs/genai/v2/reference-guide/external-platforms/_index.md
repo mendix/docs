@@ -1,6 +1,6 @@
 ---
 title: "Connectors"
-url: /agents/reference-guide/connectors/
+url: /agents/agents-kit-2/reference-guide/connectors/
 weight: 30
 description: "Agents Kit 2: Provides information on connectors that enable seamless integration between Mendix applications and GenAI platforms and services."
 no_list: false

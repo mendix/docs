@@ -1,6 +1,6 @@
 ---
 title: "Creating Your First Agent"
-url: /agents/how-to/creating-agents/
+url: /agents/agents-kit-2/how-to/creating-agents/
 linktitle: "Creating Your First Agent"
 weight: 60
 description: "Agents Kit 2: Introduces an example agent use case and describes three approaches for implementing it with Agents Kit using knowledge base retrieval and function calling."

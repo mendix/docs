@@ -1,6 +1,6 @@
 ---
 title: "Grounding Your Large Language Model in Data – Mendix Cloud GenAI"
-url: /agents/how-to/howto-groundllm/
+url: /agents/agents-kit-1/how-to/howto-groundllm/
 linktitle: "Grounding Your LLM in Data"
 weight: 50
 description: "Agents Kit 1: This document guides you on grounding your large language model in data within your Mendix application to enhance its functionality."

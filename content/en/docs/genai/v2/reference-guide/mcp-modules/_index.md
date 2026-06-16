@@ -1,6 +1,6 @@
 ---
 title: "Model Context Protocol Modules"
-url: /agents/reference-guide/mcp-modules/
+url: /agents/agents-kit-2/reference-guide/mcp-modules/
 linktitle: "MCP Modules"
 weight: 20
 description: "Agents Kit 2: Provides information on modules that enable the implementation of the Model Context Protocol (MCP) in Mendix."

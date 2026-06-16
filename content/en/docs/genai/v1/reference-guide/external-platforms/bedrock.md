@@ -1,6 +1,6 @@
 ---
 title: "Amazon Bedrock"
-url: /agents/reference-guide/external-connectors/bedrock/
+url: /agents/agents-kit-1/reference-guide/external-connectors/bedrock/
 weight: 10
 description: "Agents Kit 1: Describes the Amazon Bedrock GenAI service."
 aliases:

@@ -1,6 +1,6 @@
 ---
 title: "How to Build Smarter Apps Using GenAI"
-url: /agents/how-to/
+url: /agents/agents-kit-1/how-to/
 linktitle: "How to Build Smarter Apps using GenAI"
 weight: 20
 description: "Agents Kit 1: Tutorial on how to get started with GenAI for Smarter Apps"

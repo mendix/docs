@@ -1,6 +1,6 @@
 ---
 title: "PgVector Knowledge Base"
-url: /agents/reference-guide/external-connectors/pgvector/
+url: /agents/agents-kit-2/reference-guide/external-connectors/pgvector/
 linktitle: "PgVector Knowledge Base"
 description: "Agents Kit 2: Describes how to configure and use the PgVector Knowledge Base module to integrate PostgreSQL databases with pgvector installed as knowledge bases."
 weight: 70

@@ -1,6 +1,6 @@
 ---
 title: "Build Your Own GenAI Connector"
-url: /agents/how-to/byo-connector/
+url: /agents/agents-kit-2/how-to/byo-connector/
 linktitle: "Build Your Own GenAI connector"
 weight: 70
 description: "Agents Kit 2: A tutorial that describes how to build your own GenAI connector"

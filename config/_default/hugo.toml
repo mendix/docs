@@ -59,7 +59,7 @@ disableKinds = ["taxonomy", "term"]
         startLevel = 2
 
 [module]
-replacements = "github.com/FortAwesome/Font-Awesome -> @fortawesome/fontawesome-free, github.com/twbs/bootstrap -> bootstrap"
+replacements = "github.com/FortAwesome/Font-Awesome -> ., github.com/twbs/bootstrap -> ."
 
 # Comment out if you don't want the "print entire section" link enabled.
 [outputs]
@@ -87,11 +87,8 @@ replacements = "github.com/FortAwesome/Font-Awesome -> @fortawesome/fontawesome-
     minifyOutput = false
 
 # Disable HTTP cache feature introduced in Hugo v0.127.0
+
 [httpCache]
-  [httpCache.cache]
-    [httpCache.cache.for]
-      excludes = ["**"]
-      includes = []
   [[httpCache.polls]]
     disable = true
 

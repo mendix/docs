@@ -24,9 +24,6 @@ languageCode = "en-us"
 
 disableKinds = ["taxonomy", "term"]
 
-# Disable taxonomy definitions entirely to prevent GetTerms processing
-[taxonomies]
-
 # Image processing configuration. (Do we use this - probably not?)
 [imaging]
     resampleFilter = "CatmullRom"
@@ -45,24 +42,10 @@ disableKinds = ["taxonomy", "term"]
     [markup.goldmark]
         [markup.goldmark.renderer]
             unsafe = true
-        [markup.goldmark.extensions]
-            # Disable Goldmark Extras extensions introduced in Hugo v0.128.0
-            # These scan all markdown files and may cause performance issues
-            [markup.goldmark.extensions.extras]
-                [markup.goldmark.extensions.extras.delete]
-                    enable = false
-                [markup.goldmark.extensions.extras.insert]
-                    enable = false
-                [markup.goldmark.extensions.extras.mark]
-                    enable = false
-                [markup.goldmark.extensions.extras.subscript]
-                    enable = false
-                [markup.goldmark.extensions.extras.superscript]
-                    enable = false
-            [markup.goldmark.extensions.typographer]
-                # Disable typographic replacements, such as smart quotes. MvM - Changed to disable=true to avoid issues with quotes being mismatched.
-                # See https://gohugo.io/configuration/markup/
-                disable = true
+        [markup.goldmark.extensions.typographer]
+            # Disable typographic replacements, such as smart quotes. MvM - Changed to disable=true to avoid issues with quotes being mismatched.
+            # See https://gohugo.io/configuration/markup/
+            disable = true
     [markup.highlight]
         # See a complete list of available styles at https://xyproto.github.io/splash/docs/all.html
         # See config options at https://gohugo.io/getting-started/configuration-markup/#highlight
@@ -79,14 +62,10 @@ disableKinds = ["taxonomy", "term"]
 replacements = "github.com/FortAwesome/Font-Awesome -> ., github.com/twbs/bootstrap -> ."
 
 # Comment out if you don't want the "print entire section" link enabled.
-# DB - Performance optimization: Removed "print" output to halve page generation
-# Generates 8,487 pages instead of 16,974 pages (2× speed improvement)
 [outputs]
-    section = ["HTML"]
-    page = ["HTML"]
-    # Uncomment to enable print versions:
-    # section = ["HTML", "print"]
-    # page = ["HTML", "print"]
+    section = ["HTML", "print"]
+    # MvM - add line below to print every page
+    page = ["HTML", "print"]
 
 # MvM - add line below to activate production of RSS pages
 [outputFormats]
@@ -106,14 +85,6 @@ replacements = "github.com/FortAwesome/Font-Awesome -> ., github.com/twbs/bootst
 # Olu - Minification configuration
 [minify]
     minifyOutput = false
-
-# DB - Performance optimization for Hugo v0.128.0+
-[build]
-    # Use resource cache aggressively for faster builds
-    useResourceCacheWhen = "always"
-    # Disable build stats generation (saves processing time)
-    [build.buildStats]
-        enable = false
 
 # Disable HTTP cache feature introduced in Hugo v0.127.0
 [httpCache]

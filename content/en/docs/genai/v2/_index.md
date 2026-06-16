@@ -16,12 +16,12 @@ Agents Kit 2 is available for Studio Pro 11.12 and above and provides Mendix's n
 
 This section includes the following resources:
 
-* [How to Build Smarter Apps Using GenAI](/agents/agents-kit-1/how-to/) – Step-by-step guides for building AI-powered applications
-* [Reference Guide](/agents/agents-kit-1/reference-guide/) – Technical reference documentation for the Mendix components in Agents Kit
+* [How to Build Smarter Apps Using GenAI](/agents/agents-kit-2/how-to/) – Step-by-step guides for building AI-powered applications
+* [Reference Guide](/agents/agents-kit-2/reference-guide/) – Technical reference documentation for the Mendix components in Agents Kit
 
 ## Agents Kit Components {#components}
 
-The following Marketplace components are available in Agents Kit 1. All components are available from the [Mendix Marketplace](/appstore/).
+The following Marketplace components are available in Agents Kit 2. All components are available from the [Mendix Marketplace](/appstore/).
 
 ### Starter Apps {#starter-apps}
 

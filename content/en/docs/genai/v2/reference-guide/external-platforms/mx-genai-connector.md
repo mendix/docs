@@ -5,6 +5,7 @@ linktitle: "Mendix Cloud GenAI Connector"
 description: "Agents Kit 2: Describes how to configure and use the Mendix Cloud GenAI Connector, enabling you to integrate Mendix Cloud GenAI Resource Packs directly into your Mendix application."
 weight: 20
 aliases:
+    - /agents/mx-cloud-genai/mxgenai-connector/
     - /appstore/modules/genai/MxGenAI/
     - /appstore/modules/genai/mx-cloud-genai/MxGenAI-connector/
 ---

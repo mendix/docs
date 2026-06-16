@@ -6,6 +6,7 @@ weight: 20
 description: "Agents Kit 2: Provides information on modules that enable the implementation of the Model Context Protocol (MCP) in Mendix."
 no_list: false
 aliases:
+    - /agents/reference-guide/mcp-modules/
     - /appstore/modules/genai/reference-guide/mcp-modules/
 ---
 

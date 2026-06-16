@@ -5,6 +5,7 @@ linktitle: "Release and Migration Guide"
 description: "Agents Kit 2: Describes the combined releases of various GenAI-related modules and their inter-module dependencies. It also includes migration steps and notices about deprecations and removals."
 weight: 1
 aliases:
+    - /agents/genai-for-mx/migration-guide/
     - /appstore/modules/genai/genai-for-mx/migration-guide/
 ---
 ## Introduction

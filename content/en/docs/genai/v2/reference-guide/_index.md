@@ -6,6 +6,7 @@ weight: 20
 description: "Agents Kit 2: Provides references of Mendix's GenAI Modules and Tools."
 no_list: false
 aliases:
+    - /agents/reference-guide/
     - /appstore/modules/genai/genai-for-mx/
     - /appstore/modules/genai/reference-guide/
 ---

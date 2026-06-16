@@ -5,8 +5,9 @@ linktitle: "Vector Database Setup"
 weight: 5
 description: "Agents Kit 2: Describes how to set up a vector database to store and manage vector embeddings for a knowledge base"
 aliases:
-    - /appstore/modules/genai/pgvector-setup/
-    - /appstore/modules/genai/reference-guide/external-connectors/pgvector-setup/
+   - /agents/reference-guide/external-connectors/pgvector-setup/
+   - /appstore/modules/genai/pgvector-setup/
+   - /appstore/modules/genai/reference-guide/external-connectors/pgvector-setup/
 ---
 
 ## Introduction

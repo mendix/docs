@@ -5,6 +5,7 @@ linktitle: "OpenAI"
 description: "Agents Kit 2: Describes how to configure and use the OpenAI connector to integrate generative AI capabilities into Mendix apps."
 weight: 20
 aliases:
+    - /agents/reference-guide/external-connectors/openai/
     - /appstore/connectors/openai-connector/
     - /appstore/modules/genai/openai/
     - /appstore/modules/genai/reference-guide/external-connectors/openai/

@@ -4,6 +4,7 @@ url: /agents/agents-kit-2/how-to/create-agent-with-agent-commons/
 weight: 80
 description: "Agents Kit 2: Learn how to create and manage agents using the Agent Commons UI for runtime configuration, versioning, and rapid experimentation without redeployment."
 aliases:
+    - /agents/how-to/create-agent-with-agent-commons/
     - /appstore/modules/genai/how-to/create-agent-with-agent-commons/
 ---
 

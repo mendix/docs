@@ -5,6 +5,7 @@ linktitle: "Gemini"
 description: "Agents Kit 2: Describes the configuration and usage of the Google Gemini Connector, which allows you to integrate generative AI into your Mendix app."
 weight: 20
 aliases:
+    - /agents/reference-guide/external-connectors/gemini/
     - /appstore/modules/genai/reference-guide/external-connectors/gemini/
 ---
 

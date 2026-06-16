@@ -1,12 +1,13 @@
 ---
 title: "Build a Chatbot Using the AI Bot Starter App"
-url: /agents/agents-kit-2/how-to/starter-template
+url: /agents/agents-kit-2/how-to/starter-template/
 linktitle: "Build a Chatbot Using the AI Bot Starter App"
 weight: 10
 description: "Agents Kit 2: A tutorial that describes how to get started building a smart app with a starter template"
 aliases:
-    - /appstore/modules/genai/using-genai/starter-template/
-    - /appstore/modules/genai/how-to/starter-template
+   - /agents/how-to/starter-template/
+   - /appstore/modules/genai/using-genai/starter-template/
+   - /appstore/modules/genai/how-to/starter-template/
 ---
 
 ## Introduction

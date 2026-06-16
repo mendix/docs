@@ -6,6 +6,7 @@ weight: 20
 description: "Agents Kit 2: Tutorial on how to get started with GenAI for Smarter Apps"
 no_list: false
 aliases:
+    - /agents/how-to/
     - /appstore/modules/genai/using-genai/
     - /appstore/modules/genai/how-to/
 ---

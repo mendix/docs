@@ -5,6 +5,7 @@ weight: 30
 description: "Agents Kit 2: Provides information on connectors that enable seamless integration between Mendix applications and GenAI platforms and services."
 no_list: false
 aliases:
+    - /agents/reference-guide/connectors/
     - /appstore/modules/genai/reference-guide/external-connectors/
     - /appstore/modules/genai/reference-guide/connectors/
 ---

@@ -4,6 +4,7 @@ url: /agents/agents-kit-2/how-to/create-agent-programmatically/
 weight: 90
 description: "Agents Kit 2: Learn how to create agents programmatically using microflows and GenAI Commons building blocks for maximum control and debugging capabilities."
 aliases:
+    - /agents/how-to/create-agent-programmatically/
     - /appstore/modules/genai/how-to/create-agent-programmatically/
 ---
 

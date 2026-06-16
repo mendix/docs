@@ -4,6 +4,7 @@ url: /agents/agents-kit-2/reference-guide/external-connectors/bedrock/
 weight: 10
 description: "Agents Kit 2: Describes the Amazon Bedrock GenAI service."
 aliases:
+    - /agents/reference-guide/external-connectors/bedrock/
     - /appstore/modules/genai/bedrock/
     - /appstore/modules/genai/reference-guide/external-connectors/bedrock/
 ---

@@ -5,6 +5,7 @@ linktitle: "Mistral"
 description: "Agents Kit 2: Describes how to configure and use the Mistral connector to integrate generative AI capabilities into Mendix apps."
 weight: 20
 aliases:
+    - /agents/reference-guide/external-connectors/mistral/
     - /appstore/modules/genai/reference-guide/external-connectors/mistral/
 ---
 

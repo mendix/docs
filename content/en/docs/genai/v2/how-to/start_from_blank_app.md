@@ -1,12 +1,13 @@
 ---
 title: "Build a Chatbot from Scratch Using the Blank GenAI App"
-url: /agents/agents-kit-2/how-to/blank-app
+url: /agents/agents-kit-2/how-to/blank-app/
 linktitle: "Build a Chatbot Using the Blank GenAI App"
 weight: 20
 description: "Agents Kit 2: A tutorial that describes how to get started building a smart app from a Blank GenAI App"
 aliases:
-    - /appstore/modules/genai/using-genai/blank-app/
-    - /appstore/modules/genai/how-to/blank-app
+   - /agents/how-to/blank-app/
+   - /appstore/modules/genai/using-genai/blank-app/
+   - /appstore/modules/genai/how-to/blank-app/
 ---
 
 ## Introduction

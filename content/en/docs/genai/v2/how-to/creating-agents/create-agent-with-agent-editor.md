@@ -4,6 +4,7 @@ url: /agents/agents-kit-2/how-to/create-agent-with-agent-editor/
 weight: 70
 description: "Agents Kit 2: Learn how to create and manage agents using Agent Editor in Studio Pro, defining agents as part of your app model."
 aliases:
+    - /agents/how-to/create-agent-with-agent-editor/
     - /appstore/modules/genai/how-to/create-agent-with-agent-editor/
 ---
 

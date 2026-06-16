@@ -5,6 +5,7 @@ linktitle: "Creating Your First Agent"
 weight: 60
 description: "Agents Kit 2: Introduces an example agent use case and describes three approaches for implementing it with Agents Kit using knowledge base retrieval and function calling."
 aliases:
+    - /agents/how-to/creating-agents/
     - /appstore/modules/genai/how-to/howto-single-agent/
     - /appstore/modules/genai/how-to/creating-agents/
 ---

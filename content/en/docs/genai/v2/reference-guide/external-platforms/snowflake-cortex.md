@@ -4,6 +4,7 @@ url: /agents/agents-kit-2/snowflake-cortex/
 weight: 50
 description: "Agents Kit 2: Describes the Snowflake Cortex service."
 aliases:
+    - /agents/snowflake-cortex/
     - /appstore/modules/genai/snowflake-cortex/
 ---
 

@@ -5,6 +5,7 @@ linktitle: "Integrating Function Calling"
 weight: 40
 description: "Agents Kit 2: This document guides you through integrating and implementing function calling in your Mendix application to enhance functionality."
 aliases:
+    - /agents/how-to/howto-functioncalling/
     - /appstore/modules/genai/using-genai/howto-functioncalling/
     - /appstore/modules/genai/how-to/howto-functioncalling/
 ---

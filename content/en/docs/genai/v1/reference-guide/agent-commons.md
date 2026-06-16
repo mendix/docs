@@ -97,7 +97,7 @@ For example, download and run the [Agent Builder Starter App](https://marketplac
 
 To interact with LLMs using Agent Commons, you need at least one GenAI connector that adheres to the GenAI Commons principles. To test agent behavior, you must configure at least one [Deployed Model](/agents/genai-for-mx/commons/#deployed-model) for your chosen connector. Refer to the specific connector’s documentation for detailed instructions on setting up the Deployed Model.
 
-* For [Mendix Cloud GenAI](https://marketplace.mendix.com/link/component/239449), importing the **Key** from the Mendix portal automatically creates a MxCloud Deployed Model. This is part of the [configuration](/agents/mx-cloud-genai/mxgenai-connector/#configuration).
+* For [Mendix Cloud GenAI](https://marketplace.mendix.com/link/component/239449), importing the **Key** from the Mendix portal automatically creates a MxCloud Deployed Model. This is part of the [configuration](/agents/agents-kit-1/mx-cloud-genai/mxgenai-connector/#configuration).
 * For [Amazon Bedrock](https://marketplace.mendix.com/link/component/215042), the creation of Bedrock Deployed Models is part of the [model synchronization mechanism](/appstore/modules/aws/amazon-bedrock/#sync-models).
 * For [OpenAI](https://marketplace.mendix.com/link/component/220472), the configuration of OpenAI Deployed Models is part of the [configuration](/agents/agents-kit-1/reference-guide/external-connectors/openai/#general-configuration).
 
@@ -139,7 +139,7 @@ For more technical details, see the [Function Calling](/agents/function-calling/
 
 ##### Adding Tools from MCP Servers
 
-Besides microflow tools, tools exposed by MCP servers are also supported. To add MCP tools to an agent version, select an MCP server configuration from the [MCP Client module](/agents/mcp-modules/mcp-client/). You can then choose one of two ways to add MCP tools: 
+Besides microflow tools, tools exposed by MCP servers are also supported. To add MCP tools to an agent version, select an MCP server configuration from the [MCP Client module](/agents/agents-kit-1/mcp-modules/mcp-client/). You can then choose one of two ways to add MCP tools: 
 
 * **Use all available tools**: Imports the entire server, including all tools it provides. This also means less control over individual tools, and if tools are added in the future, they get added automatically on agent execution.
 * **Select Tools**: Lets you import specific tools from the server and change specific fields for individual tools.
@@ -148,7 +148,7 @@ Besides microflow tools, tools exposed by MCP servers are also supported. To add
 
 For supported knowledge bases registered in your app, you can connect them to agents to enable autonomous retrievals. Refer to the documentation of the connector provided by your selected knowledge base provider. Follow the instructions to configure the knowledge bases in your app, so that they can be linked to your agents. Mendix provides the following platform-supported connectors that support knowledge base integrations with agents:
 
-* [Mendix Cloud GenAI Connector](/agents/mx-cloud-genai/mxgenai-connector/#configuration)
+* [Mendix Cloud GenAI Connector](/agents/agents-kit-1/mx-cloud-genai/mxgenai-connector/#configuration)
 * [Amazon Bedrock Connector](/appstore/modules/aws/amazon-bedrock/#sync-models)
 * [OpenAI Connector](/agents/agents-kit-1/reference-guide/external-connectors/openai/#azure-ai-search)
 * [PgVector Knowledge Base](/agents/agents-kit-1/reference-guide/external-connectors/pgvector/#general-configuration)

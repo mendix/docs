@@ -50,7 +50,7 @@ In Mendix, this is implemented through user access approval settings on [tools](
 
 A storage system for discrete pieces of information that can be retrieved and used to augment prompts. Knowledge bases are essential for [RAG](#retrieval-augmented-generation) patterns. When knowledge is stored as [embeddings](#embeddings) in a [vector database](#vector-database), semantic similarity searches are possible.
 
-Mendix supports managed cloud knowledge base services such as [Mendix Cloud GenAI Knowledge Base Resource Packs](/agents/mx-cloud-genai/resource-packs/) and self-managed implementations using the [PgVector Knowledge Base module](/agents/reference-guide/external-connectors/pgvector/).
+Mendix supports managed cloud knowledge base services such as [Mendix Cloud GenAI Knowledge Base Resource Packs](/agents/mx-cloud-genai/resource-packs/) and self-managed implementations using the [PgVector Knowledge Base module](/agents/agents-kit-2/reference-guide/external-connectors/pgvector/).
 
 ## Large Language Model (LLM) {#large-language-model}
 
@@ -98,4 +98,4 @@ The input text provided by an end-user or app to an LLM. User prompts contain th
 
 A specialized database designed to store and query [embeddings](#embeddings). Vector databases support similarity searches using mathematical techniques to find the most semantically similar items to a query. This capability is essential for [RAG](#retrieval-augmented-generation) patterns.
 
-In Mendix, PostgreSQL with the pgvector extension serves as a vector database. For more information, see [PgVector Knowledge Base](/agents/reference-guide/external-connectors/pgvector/).
+In Mendix, PostgreSQL with the pgvector extension serves as a vector database. For more information, see [PgVector Knowledge Base](/agents/agents-kit-2/reference-guide/external-connectors/pgvector/).

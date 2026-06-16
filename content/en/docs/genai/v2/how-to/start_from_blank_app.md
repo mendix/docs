@@ -106,7 +106,7 @@ You may encounter an error about allowed roles. To resolve this, go to the **Pro
 
 #### Mendix Cloud GenAI Configuration
 
-Follow these steps to configure the Mendix Cloud GenAI Resources Packs for your application and more background information, look at the [Mendix Cloud GenAI Configuration](/agents/mx-cloud-genai/mxgenai-connector/#configuration) documentation:
+Follow these steps to configure the Mendix Cloud GenAI Resources Packs for your application and more background information, look at the [Mendix Cloud GenAI Configuration](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/#configuration) documentation:
 
 1. Run the application locally.
 

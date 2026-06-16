@@ -26,7 +26,7 @@ These pages focus on integrating agentic and generative AI into applications usi
 
 Start using AI capabilities based on your experience level:
 
-* **Familiar with generative AI?** Start building with the [How to Build Smarter Apps Using GenAI](/agents/how-to/) guides.
+* **Familiar with generative AI?** Start building with the [How to Build Smarter Apps Using GenAI](/agents/agents-kit-2/how-to/) guides.
 * **New to generative AI?** Follow these steps:
 
     1. Familiarize yourself with the [core concepts](/agents/get-started/), including prompt engineering, retrieval augmented generation (RAG), and function calling (ReAct).
@@ -71,18 +71,18 @@ All connectors depend on GenAI Commons and can be used with the other [core modu
 | Asset | Description | Studio Pro Version |
 | --- | --- | --- |
 | [Amazon Bedrock Connector](/appstore/modules/aws/amazon-bedrock/) | Connect to Amazon Bedrock. | 10.24 |
-| [Google Gemini Connector](/agents/reference-guide/external-connectors/gemini/) | Connect to Google Gemini. | 10.24 |
-| [Mendix Cloud GenAI Connector](/agents/mx-cloud-genai/mxgenai-connector/) | Connect to Mendix Cloud and use Mendix Cloud GenAI resource packs directly within your Mendix application. | 10.24 |
-| [Mistral Connector](/agents/reference-guide/external-connectors/mistral/) | Connect to Mistral AI. | 10.24 |
-| [OpenAI Connector](/agents/reference-guide/external-connectors/openai/) | Connect to OpenAI and Microsoft Foundry. | 10.24 |
-| [PgVector Knowledge Base](/agents/reference-guide/external-connectors/pgvector/) | Manage and interact with a PostgreSQL PgVector knowledge base. | 10.24 |
+| [Google Gemini Connector](/agents/agents-kit-2/reference-guide/external-connectors/gemini/) | Connect to Google Gemini. | 10.24 |
+| [Mendix Cloud GenAI Connector](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/) | Connect to Mendix Cloud and use Mendix Cloud GenAI resource packs directly within your Mendix application. | 10.24 |
+| [Mistral Connector](/agents/agents-kit-2/reference-guide/external-connectors/mistral/) | Connect to Mistral AI. | 10.24 |
+| [OpenAI Connector](/agents/agents-kit-2/reference-guide/external-connectors/openai/) | Connect to OpenAI and Microsoft Foundry. | 10.24 |
+| [PgVector Knowledge Base](/agents/agents-kit-2/reference-guide/external-connectors/pgvector/) | Manage and interact with a PostgreSQL PgVector knowledge base. | 10.24 |
 
 #### MCP Modules {#mcp-modules}
 
 | Asset | Description | Studio Pro Version |
 | --- | --- | --- |
-| [MCP Client](/agents/mcp-modules/mcp-client/) | Access tools and prompts available via MCP inside your Mendix app and add them to LLM requests. | 10.24 |
-| [MCP Server](/agents/mcp-modules/mcp-server/) | Make your Mendix business logic available to any agent in your enterprise landscape. Expose reusable prompts, including the ability to use prompt variables. List and run actions implemented in the application as a tool. | 10.24 |
+| [MCP Client](/agents/agents-kit-2/mcp-modules/mcp-client/) | Access tools and prompts available via MCP inside your Mendix app and add them to LLM requests. | 10.24 |
+| [MCP Server](/agents/agents-kit-2/mcp-modules/mcp-server/) | Make your Mendix business logic available to any agent in your enterprise landscape. Expose reusable prompts, including the ability to use prompt variables. List and run actions implemented in the application as a tool. | 10.24 |
 
 {{% alert color="info" %}}
 Older versions of the modules and the GenAI Showcase App are available in Studio Pro 9.24.2.
@@ -147,4 +147,4 @@ In addition to the models listed above, you can also connect to other models by 
 
 * To connect to other [foundation models](https://docs.aws.amazon.com/bedrock/latest/userguide/models-features.html) and implement them in your app, use the [Amazon Bedrock connector](/appstore/modules/aws/amazon-bedrock/).
 * To connect to [Snowflake Cortex LLM](https://docs.snowflake.com/en/sql-reference/functions/complete-snowflake-cortex) functions, [configure the Snowflake AI Data Connector for Snowflake Cortex Analyst](/appstore/connectors/snowflake/snowflake-ai-data-connector/#cortex-analyst).
-* To implement your own connector that is compatible with the other components, use the [GenAI Commons](/agents/genai-for-mx/commons/) interface and see [How to Build Your Own GenAI Connector](/agents/how-to/byo-connector/).
+* To implement your own connector that is compatible with the other components, use the [GenAI Commons](/agents/genai-for-mx/commons/) interface and see [How to Build Your Own GenAI Connector](/agents/agents-kit-2/how-to/byo-connector/).

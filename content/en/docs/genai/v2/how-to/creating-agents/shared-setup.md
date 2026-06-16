@@ -34,7 +34,7 @@ Before you build an agent in your app, make sure your scenario meets the followi
 * Basic understanding of GenAI concepts – Review [Enrich Your Mendix App with Agentic Capabilities](/agents/) for foundational knowledge and familiarize yourself with the [concepts of GenAI](/agents/get-started/) and [agents](/agents/agents/)
 * Basic understanding of function calling and prompt engineering – Learn about [Function Calling](/agents/function-calling/) and [Prompt Engineering](/agents/get-started/#prompt-engineering) to use them within the Mendix ecosystem
 * Optional – If you are not yet familiar with implementing specific GenAI concepts with Agents Kit, follow these GenAI documents: [Grounding Your LLM in Data](/agents/agents-kit-2/how-to/howto-groundllm/), [Prompt Engineering at Runtime](/agents/agents-kit-2/how-to/howto-prompt-engineering/), and [Integrate Function Calling into Your Mendix App](/agents/agents-kit-2/how-to/howto-functioncalling/)
-* Optional – Basic understanding of the [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) and the related Mendix modules: [MCP Server module](/agents/mcp-modules/mcp-server/) and [MCP Client module](/agents/mcp-modules/mcp-client/)
+* Optional – Basic understanding of the [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) and the related Mendix modules: [MCP Server module](/agents/agents-kit-2/mcp-modules/mcp-server/) and [MCP Client module](/agents/agents-kit-2/mcp-modules/mcp-client/)
 
 ## Setting Up Your Application
 
@@ -116,7 +116,7 @@ Ingest Mendix ticket data into the knowledge base. For a detailed guide, see [Gr
 
 10. Add the new microflow to your navigation or homepage.
 
-When the microflow is called, the demo data is created and ingested into the knowledge base for later use. This needs to be called only once at the beginning. Make sure to first add a knowledge base resource. For more details, see [Configuration](/agents/mx-cloud-genai/mxgenai-connector/#configuration).
+When the microflow is called, the demo data is created and ingested into the knowledge base for later use. This needs to be called only once at the beginning. Make sure to first add a knowledge base resource. For more details, see [Configuration](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/#configuration).
 
 ### Setting Up the Domain Model and Creating a User Interface {#domain-model-setup}
 

@@ -136,7 +136,7 @@ For more information, see [Navigate Through the Mendix Cloud GenAI Portal](/agen
 
 ### Mendix Cloud GenAI Connector
 
-The [Mendix Cloud GenAI connector](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/) lets you utilize Mendix Cloud GenAI resource packs directly within your Mendix application. It allows you to integrate generative AI by dragging and dropping common operations from its toolbox. Note that any versions older than the ones listed below are no longer functional:  
+The [Mendix Cloud GenAI connector](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/) lets you use Mendix Cloud GenAI resource packs directly within your Mendix application. It allows you to integrate generative AI by dragging and dropping common operations from its toolbox. Note that any versions older than the ones listed below are no longer functional:  
 
 * GenAI for Mendix bundle v2.4.1 (Mendix 9) (contains Mendix Cloud GenAI connector) or
 * Mendix Cloud GenAI connector v3.1.1 (no `DeployedKnowledgeBase` support) or

@@ -75,9 +75,9 @@ While LLMs are powerful, they are not without limitations. Remember they are:
 * **not conscious:** LLMs do not possess self-awareness or semantic knowledge (understanding). They generate text based on patterns in the data they were trained on.
 * **not perfect:** These models can sometimes produce incorrect or nonsensical outputs (so-called hallucinations), especially if the input is ambiguous or if they were not trained on the relevant data.
 * **not a replacement for human judgment:** LLMs should be seen as tools to augment human capabilities, not replace human expertise or critical thinking.
-* **not trained for specific use cases**: LLMs are trained on a broad variety of use cases, for some specific (e.g. statistical) use cases you need to use traditional machine learning (ML) models. For more details on how to deploy such a model see [Machine Learning Kit](/refguide/machine-learning-kit/).
+* **not trained for specific use cases**: LLMs are trained on a broad variety of use cases, for some specific (such as tatistical) use cases you need to use traditional machine learning (ML) models. For more details on how to deploy such a model see [Machine Learning Kit](/refguide/machine-learning-kit/).
 
-### Making an LLM more specific
+### Making an LLM more Specific
 
 Since an LLM is pretrained on a huge dataset it can do many things out of the box. If you want to make it more specific to your use case and program it to perform specific functions in your apps, you can typically do three things:
 
@@ -100,7 +100,7 @@ With prompt engineering you can guide the model to generate accurate, applicable
 
 ## Retrieval Augmented Generation (RAG) {#rag}
 
-The knowledge of LLMs is limited to the data they have been trained on. This is generally-available information, for example from Wikipedia and other internet sources.
+The knowledge of LLMs is limited to the data they have been trained on. This is generally available information, for example from Wikipedia and other internet sources.
 
 For use cases where the LLM needs to be aware of domain-specific or private enterprise data, you can use the RAG pattern. This allows you to add large amounts of additional context to a request without making the prompts extremely lengthy. To implement RAG, you need to set up a knowledge base that contains the data. When evaluating the actual user prompt, the basic pattern of RAG consists of three phases:
 
@@ -119,7 +119,7 @@ There are two approaches to including RAG in your generative AI-powered app.
 
 Some architectures provide the capabilities for the RAG pattern out of the box, which shields you from having to retrieve and augment your prompt yourself. All you need to do is ensure that your knowledge base is available to the model.
 
-For example, Amazon Bedrock has the concept of [knowledge bases for Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html), which allows you to create a repository of private information that can be used to improve an LLM's response. This knowledge base is based on files (e.g. manuals or historical documents) in an S3 bucket. You can then use the Retrieve And Generate operation which will retrieve data from the knowledge base, augment the prompt with the retrieved information, and generate the response.
+For example, Amazon Bedrock has the concept of [knowledge bases for Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html), which allows you to create a repository of private information that can be used to improve an LLM's response. This knowledge base is based on files (such as manuals or historical documents) in an S3 bucket. You can then use the Retrieve And Generate operation which will retrieve data from the knowledge base, augment the prompt with the retrieved information, and generate the response.
 
 ### PgVector Knowledge Base {#pgvectorknowledgebase}
 

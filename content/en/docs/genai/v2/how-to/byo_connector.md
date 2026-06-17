@@ -143,7 +143,7 @@ Since the microflow follows the same input parameters and returns a `Response` o
 If you would like to track the consumption usage of tokens of your models, please look into the `GenAICommons.Usage_Create_TextAndFiles` microflow and related [documentation](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#token-usage). This microflow can be added at the end of your microflow.
 {{% /alert %}}
 
-### Testing the Echo connector
+### Testing the Echo Connector
 
 To test the connector, first set up the configuration and deployed models. While the setup approach is flexible, the Echo Connector includes UI components to configure settings and create `EchoDeployedModel` objects, which can be used in the GenAI Showcase App's Chat UI examples.
 

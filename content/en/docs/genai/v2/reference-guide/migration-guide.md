@@ -84,7 +84,7 @@ The following modules require an upgrade:
 
 ###### Key Changes {#changes}
 
-* The association from entity `SingleMCPTool` towards the entity `MCPTool` has been deprecated.
+* The association from entity `SingleMCPTool` toward the entity `MCPTool` has been deprecated.
 * Entity `SingleMCPTool` has a new association `SingleMCPTool_ConsumedMCPService` and a new attribute `Tool`.
 * Entity `MCPServerConfiguration` was renamed to `ConsumedMCPService`, along with the corresponding page `ConsumedMCPService_Overview` and Java action `ConsumedMCPService_CreateMCPClient`.
 

@@ -2,7 +2,7 @@
 title: "MCP Client"
 url: /agents/agents-kit-1/mcp-modules/mcp-client/
 linktitle: "MCP Client"
-description: "Agents Kit 1: This document describes the purpose, configuration, and usage of the MCP Client module from the Mendix Marketplace that allows developers to consume tools and prompts from external MCP servers."
+description: "Agents Kit 1: This document describes the purpose, configuration, and usage of the MCP Client module from Mendix Marketplace that allows developers to consume tools and prompts from external MCP servers."
 weight: 20
 aliases:
     - /appstore/modules/genai/mcp-modules/mcp-client/

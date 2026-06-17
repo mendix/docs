@@ -2,7 +2,7 @@
 title: "Agent Commons"
 url: /agents/agents-kit-2/reference-guide/genai-for-mx/agent-commons/
 linktitle: "Agent Commons"
-description: "Agents Kit 2: Describes the purpose, configuration, and usage of the Agents Commons module from the Mendix Marketplace that allows developers to build, define, and refine Agents, to integrate GenAI principles, and Agentic patterns into their Mendix app."
+description: "Agents Kit 2: Describes the purpose, configuration, and usage of the Agents Commons module from Mendix Marketplace that allows developers to build, define, and refine Agents, to integrate GenAI principles, and Agentic patterns into their Mendix app."
 weight: 20
 aliases:
     - /agents/genai-for-mx/commons/
@@ -62,7 +62,7 @@ In addition, install the following modules:
 
 ## Installation
 
-If you are starting from a blank app or adding agent-building functionality to an existing project, you need to manually install the [Agent Commons](https://marketplace.mendix.com/link/component/240371) module from the Mendix Marketplace. 
+If you are starting from a blank app or adding agent-building functionality to an existing project, you need to manually install the [Agent Commons](https://marketplace.mendix.com/link/component/240371) module from Mendix Marketplace. 
 Before proceeding, ensure your project includes the latest versions of the required [dependencies](#dependencies). Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to install the Agent Commons module.
 
 ## Configuration {#configuration}
@@ -108,7 +108,7 @@ When the app is running, a user with the `AgentAdmin` role can set up agents, wr
 
 Users can create two types of agents:
 
-* **Chat Agent**: Intended for scenarios where the end user interacts through a chat interface, or where the agent is called conversationally by another agent.
+* **Chat Agent**: Intended for scenarios where the end-user interacts through a chat interface, or where the agent is called conversationally by another agent.
 
 * **Task Agent**: Designed for isolated agentic patterns such as background processes, subagents in an Agent-as-Tool setup, or any use case that doesn't require a conversational interface with historical context.
 
@@ -169,7 +169,7 @@ After a few quick iterations, the first version of the agent is typically ready 
 
 #### Creating a Version
 
-New agents will be created in the draft status by default, meaning they are still being worked on and can be tested using the agent commons module only. Once an agent is ready to be integrated into the app logic (that is, logic triggered by end users), it must be saved as a version. This will store a snapshot of the prompt texts and the configured microflows as tools and knowledge bases. To select the active version for the agent, use the three-dot ({{% icon name="three-dots-menu-horizontal" %}}) menu option on the agent overview and click  **Select Version in use**.
+New agents will be created in the draft status by default, meaning they are still being worked on and can be tested using the agent commons module only. Once an agent is ready to be integrated into the app logic (that is, logic triggered by end-users), it must be saved as a version. This will store a snapshot of the prompt texts and the configured microflows as tools and knowledge bases. To select the active version for the agent, use the three-dot ({{% icon name="three-dots-menu-horizontal" %}}) menu option on the agent overview and click  **Select Version in use**.
 
 #### Calling the Agent from a Microflow {#call-agent-microflow}
 

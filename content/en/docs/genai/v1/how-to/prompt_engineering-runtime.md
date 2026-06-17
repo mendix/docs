@@ -42,7 +42,7 @@ Agent Commons enables users to create powerful agents at runtime, enriching requ
 
 If you are using a GenAI starter app such as the Blank GenAI app, you can skip ahead to [the next section](#configuration) because the following steps are already completed. Otherwise, follow these setup steps to add Agent Commons capabilities to your app and navigation:
 
-1. Install the [Agent Commons module](/agents/agents-kit-1/reference-guide/genai-for-mx/agent-commons/) module and its dependencies from the Mendix Marketplace.
+1. Install the [Agent Commons module](/agents/agents-kit-1/reference-guide/genai-for-mx/agent-commons/) module and its dependencies from Mendix Marketplace.
 2. Open your app's [Security](/refguide/security/#user-role) settings and edit the user role that you want to be able to create agents at runtime. This is typically the Administrator role, but this may vary depending on your use case. Follow these steps:
 
     1. For the Agent Commons module, assign the **AgentAdmin** module role.
@@ -58,7 +58,7 @@ If you are using a GenAI starter app such as the Blank GenAI app, you can skip a
 
 ## Configuring a GenAI Connector {#configuration}
 
-To enable generative AI capabilities, install and configure the [Mendix Cloud GenAI Connector](/agents/agents-kit-1/mx-cloud-genai/mxgenai-connector/) and its dependencies from the Mendix Marketplace. If you are using a GenAI starter app such as the Blank GenAI app, you can skip the installation and just follow the [configuration instructions](/agents/agents-kit-1/mx-cloud-genai/mxgenai-connector/#configuration).
+To enable generative AI capabilities, install and configure the [Mendix Cloud GenAI Connector](/agents/agents-kit-1/mx-cloud-genai/mxgenai-connector/) and its dependencies from Mendix Marketplace. If you are using a GenAI starter app such as the Blank GenAI app, you can skip the installation and just follow the [configuration instructions](/agents/agents-kit-1/mx-cloud-genai/mxgenai-connector/#configuration).
 
 {{% alert color="info" %}}
 This example uses the Mendix Cloud GenAI Connector. Alternatively, you can install and configure an [external connector](/agents/agents-kit-1/reference-guide/connectors/) for any provider with a connector that is compatible with [GenAICommons](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/). This includes [OpenAI](/agents/agents-kit-1/reference-guide/external-connectors/openai/) and [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). 
@@ -66,7 +66,7 @@ This example uses the Mendix Cloud GenAI Connector. Alternatively, you can insta
 
 ## Verifying Setup {#verification}
 
-Run the app, log in as administrator, and verify that you can navigate to the **Agent_Overview** and **Mendix Cloud GenAI Configuration** pages.
+Run the app, sign in as administrator, and verify that you can navigate to the **Agent_Overview** and **Mendix Cloud GenAI Configuration** pages.
 
 ## Creating an Agent {#create-agent}
 
@@ -78,21 +78,21 @@ You can now create your first agent in the user interface. The final agent will 
 
 1. In the running app, open the **Agent_Overview** page.
 
-2. Click **New Agent** in the top-right corner.
+2. Click **New Agent** in the upper-right corner.
 
 3. In the **Title** field, enter `Product Description Generator`.
 
 4. Select **Task** as the **Usage type**.
 
-    Task agents execute based on variables and user input, typically for single-call interactions and programmatic use in microflows. Chat agents, on the other hand, retain conversation history and are suitable for interactive dialogues. For this example, select **Task** and click **Save** to create the agent.
+    Task agents execute based on variables and user input, typically for single-call interactions and programmatic use in microflows. Chat agents, on the other hand, retain conversation history and are suitable for interactive dialogs. For this example, select **Task** and click **Save** to create the agent.
 
 5. On the agent's details page, where you can perform prompt engineering at runtime, enter the following prompt in the [User Prompt](/agents/prompt-engineering/#user-prompt) field: `Generate a short product description for a chair`.
 
-    The user prompt typically represents the end user's input. You can also prefill it with predefined instructions, as shown here.
+    The user prompt typically represents the end-user's input. You can also prefill it with predefined instructions, as shown here.
 
 6. Select a model. If no models are available to select, configure one as described in the [Configure a GenAI Connector](#configuration) section.
 
-7. Click **Test** in the top-right corner to view the model's response. On the **Output** card, you'll be able to see the response from the model.
+7. Click **Test** in the upper-right corner to view the model's response. On the **Output** card, you'll be able to see the response from the model.
 
 8. Click **Save as new version** ({{% icon name="floppy-disk" %}}) next to the **Agent version** field to save this version of the agent. For the title, use `Simple product description agent`.
 

@@ -100,7 +100,7 @@ The returned `Response` includes [References](/agents/agents-kit-2/reference-gui
 You can optionally control both reference creation and the output returned for the model during the insertion step:
 
 * The `HumanReadableId` of a chunk is used for the reference title in the response, shown to the end-user in the [ConversationalUI](/agents/agents-kit-2/reference-guide/genai-for-mx/conversational-ui/).
-* To utilize the `Source` attribute of the references, include `MetaData` with the key `sourceUrl`. In [ConversationalUI](/agents/agents-kit-2/reference-guide/genai-for-mx/conversational-ui/), this appears as a clickable link for the end-user.
+* To use the `Source` attribute of the references, include `MetaData` with the key `sourceUrl`. In [ConversationalUI](/agents/agents-kit-2/reference-guide/genai-for-mx/conversational-ui/), this appears as a clickable link for the end-user.
 * In some cases, a knowledge chunk consists of two texts: one for the semantic search (retrieval) step and another for the generation step. For example, when solving a problem based on historical solutions, semantic search identifies similar problems using their descriptions, while the generation step produces a solution based on the corresponding historical solutions. In such cases, add [MetaData](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#chunkcollection-add-knowledgebasechunk) with the key `knowledge` to each chunk during insertion. This allows the model to generate its response using the specified metadata instead of the input text. Only the value of `knowledge` is passed to the model.
 
 #### Function Calling {#function-calling}

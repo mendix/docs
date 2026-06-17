@@ -40,7 +40,7 @@ To use this connector, you need to sign up for a Google AI Studio account and cr
 
 ## Installation
 
-Install all required modules from the Mendix Marketplace as listed in the [Dependencies](#dependencies) section above.
+Install all required modules from Mendix Marketplace as listed in the [Dependencies](#dependencies) section above.
 
 To import the [Google Gemini Connector](https://marketplace.mendix.com/link/component/248276) and the other modules into your app, follow the instructions in [Using Marketplace Content](/appstore/use-content/).
 

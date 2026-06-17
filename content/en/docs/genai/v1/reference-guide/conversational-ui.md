@@ -3,7 +3,7 @@ title: "Conversational UI"
 url: /agents/agents-kit-1/reference-guide/genai-for-mx/conversational-ui/
 linktitle: "Conversational UI"
 weight: 20
-description: "Agents Kit 1: Describes the Conversational UI marketplace module that assists developers in implementing conversational use cases such as an AI Bot."
+description: "Agents Kit 1: Describes the Conversational UI Marketplace module that assists developers in implementing conversational use cases such as an AI Bot."
 aliases:
     - /appstore/modules/genai/conversational-ui/
     - /appstore/modules/genai/conversational-ui-module/conversational-ui/
@@ -107,7 +107,7 @@ You can include the following pages in your navigation, or copy them to your mod
 
 * **ConversationalUI_FullScreenChat** - This page displays a centered chat interface on a full-screen responsive page. 
 * **ConversationalUI_Sidebar** - This page displays the chat interface on the right side with the full height.
-* **ConversationalUI_PopUp** - This is a floating pop-up in the bottom-right corner. To open it, users can click the **Snippet_FloatingChatButton** that floats in the bottom-right corner. Alternatively, you can use the building block **Floating Chat Button** from the toolbox to create your custom opening logic.
+* **ConversationalUI_PopUp** - This is a floating pop-up in the lower-right corner. To open it, users can click the **Snippet_FloatingChatButton** that floats in the lower-right corner. Alternatively, you can use the building block **Floating Chat Button** from the toolbox to create your custom opening logic.
 
 All pages expect a [ChatContext](#chat-context) that needs to have an active [ProviderConfig](#provider-config). The user can chat with the LLM on all these pages, but cannot configure additional settings, such as the model or system prompt. There are many ways to enable this: on a custom page before the chat was opened, on a custom version of the chat page itself, or in the [action microflow](#action-microflow) that is stored in the active [ProviderConfig](#provider-config).
 
@@ -220,7 +220,7 @@ Since version 6.0.0, the module stores messages from tool calling persistently i
 
 This changes how action microflows are used, because they are called each time a tool is called and the UI changes for the user, for example, displaying a tool call or waiting for a user decision if a tool can be executed. Logic that only needs to happen right after the user sends their message (preprocessing) or after the final assistant's message was returned (postprocessing), should perhaps only be executed for those cases.
 
-If no [user-visibility](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#enum-useraccessapproval) is configured for tools and you would like not to store tool messages (and therefore retain the behavior from versions before 6.0.0), you can change the boolean `SaveToolCallHistory` to *false* on the [Request](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#request). Note that [knowledge base retrievals](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#add-knowledge-base-to-request) are set to `HiddenForUser` by default.
+If no [user-visibility](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#enum-useraccessapproval) is configured for tools and you would like not to store tool messages (and therefore retain the behavior from versions before 6.0.0), you can change the Boolean `SaveToolCallHistory` to *false* on the [Request](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#request). Note that [knowledge base retrievals](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#add-knowledge-base-to-request) are set to `HiddenForUser` by default.
 
 ### Human in the loop {#human-in-the-loop}
 
@@ -249,7 +249,7 @@ The following variables have a default value defined in the Conversational UI mo
 | `send-btn-size` | the height and width of the button in the user chat input box | 
 | `chat-input-max-height` | the max-height of the user chat input box | 
 | `chat-header-color` | the background color of the top bar of the pop-up and sidebar chat window |
-| `pop-up-chat-bottom-position` | the absolute bottom position of the pop-up chat window |
+| `pop-up-chat-lower-position` | the absolute bottom position of the pop-up chat window |
 | `pop-up-chat-right-position` | the absolute right position of the pop-up chat window |
 | `pop-up-chat-width` | the width of the pop-up and sidebar chat window |
 | `pop-up-chat-height` | the height of the pop-up chat window | 
@@ -298,7 +298,7 @@ Sometimes it is helpful to manipulate the Markdown styling. For example, if the 
 
 #### Using a Custom Layout
 
-If you are using a custom layout in your application, you may need to use a layout other than **Atlas_Default**. For such scenarios, the module provides **Layout_MasterBase**—a layout derived from **Atlas_Default** that is applied to every page in the module. You can modify the properties of the master layout to change its appearance. Note that you need to reapply these customizations after each marketplace update.
+If you are using a custom layout in your application, you may need to use a layout other than **Atlas_Default**. For such scenarios, the module provides **Layout_MasterBase**—a layout derived from **Atlas_Default** that is applied to every page in the module. You can modify the properties of the master layout to change its appearance. Note that you need to reapply these customizations after each Marketplace update.
 
 ### Token Consumption Monitor Snippets {#snippet-token-monitor}
 

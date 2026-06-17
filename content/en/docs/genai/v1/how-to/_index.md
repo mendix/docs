@@ -44,7 +44,7 @@ Generative Artificial Intelligence (GenAI) transforms business applications, emp
 * The [MCP Server Module](/agents/agents-kit-1/mcp-modules/mcp-server/) provides reusable operations to create and initialize an MCP server within a Mendix app to expose tools and prompts to external clients.
 * The [PGVector Knowledge Base](/agents/agents-kit-1/reference-guide/external-connectors/pgvector/) offers the option for a private knowledge base outside of the LLM infrastructure.
 
-For any additional feedback, send a message in the [#genai-connectors](https://mendixcommunity.slack.com/archives/C07P8NRBLN9) channel on the Mendix Community Slack. You can sign up for the Mendix Community [here](https://mendixcommunity.slack.com/join/shared_invite/zt-270ys3pwi-kgWhJUwWrKMEMuQln4bqrQ#/shared-invite/email).
+For any additional feedback, send a message in the [#genai-connectors](https://mendixcommunity.slack.com/archives/C07P8NRBLN9) channel on the Mendix Community Slack. You can sign up for the Mendix Community using [this invitation link](https://mendixcommunity.slack.com/join/shared_invite/zt-270ys3pwi-kgWhJUwWrKMEMuQln4bqrQ#/shared-invite/email).
 
 ### Featured Blogposts
 
@@ -55,7 +55,7 @@ For any additional feedback, send a message in the [#genai-connectors](https://m
 * [OpenAI Using the ‘GenAI for Mendix’ Module](https://www.mendix.com/blog/openai-using-the-genai-for-mendix-module/)
 * [How to Configure Microsoft Foundry OpenAI Models in Mendix](https://www.mendix.com/blog/how-to-configure-azure-openai-models-in-mendix/)
 
-#### Building your own Connector
+#### Building Your Own Connector
 
 * [How to Run Open-Source LLMs Locally with the OpenAI Connector and Ollama](https://www.mendix.com/blog/how-to-run-open-source-llms-locally-with-the-openai-connector-and-ollama/)
 

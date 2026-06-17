@@ -12,7 +12,7 @@ aliases:
 
 Tool calling (also known as function calling) enables LLMs (Large Language Models) to connect with external tools to gather information, execute actions, convert natural language into structured data, and much more. Tool calling thus enables the model to intelligently decide when to let the Mendix app call one or more predefined functions (microflows) to gather additional information to include in the assistant's response.
 
-The LLM (e.g. OpenAI ChatGPT, Anthropic Claude) does not call the function. The model returns a tool call JSON structure that is used to build the input of the functions so that they can be executed as part of the chat completions operation.
+The LLM (for example, OpenAI ChatGPT or Anthropic Claude) does not call the function. The model returns a tool call JSON structure that is used to build the input of the functions so that they can be executed as part of the chat completions operation.
 
 ## High-Level Flow {#high-level}
 

@@ -1,7 +1,6 @@
 ---
 title: "RAG in a Mendix App"
 url: /agents/rag/
-
 linktitle: "Retrieval Augmented Generation (RAG)"
 weight: 30
 description: "Describes the retrieval augmented generation (RAG) pattern and the example implementation in the GenAI Showcase App"
@@ -11,13 +10,13 @@ aliases:
 
 ## Introduction {#introduction}
 
-Retrieval augmented generation (RAG) is a framework for an AI-based search using a private or external knowledge base that combines embeddings-based knowledge retrieval with a text generation model. The starting point is a collection of data to be considered as the private knowledge base. The final goal is that an end user of the app can ask questions about the data and the assistant's responses are only be based on this knowledge base. 
+Retrieval augmented generation (RAG) is a framework for an AI-based search using a private or external knowledge base that combines embeddings-based knowledge retrieval with a text generation model. The starting point is a collection of data to be considered as the private knowledge base. The final goal is that an end-user of the app can ask questions about the data and the assistant's responses are only be based on this knowledge base. 
 
 {{% alert color="info" %}}This document describes how to set up RAG with PgVector. If you want to use the Bedrock Retrieval Augmented Generation capabilities, see [Bedrock Retrieval Augmented Generation](/agents/get-started/#rag).{{% /alert %}}
 
 ### Terminology
 
-To understand the basics of the RAG pattern, it is important to know the common terminology. As the [showcase example](https://marketplace.mendix.com/link/component/220475) and the relevant platform-supported modules depend on [GenAI Commons](/agents/agents-kit-2/genai-for-mx/commons/), relevant entities will be linked for reference.
+To understand the basics of the RAG pattern, it is important to know the common terminology. As the [showcase example](https://marketplace.mendix.com/link/component/220475) and the relevant platform-supported modules depend on [GenAI Commons](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/), relevant entities will be linked for reference.
 
 #### Embedding vector
 
@@ -27,7 +26,7 @@ Every LLM will have its algorithm for generating vectors, but the convention is 
 
 #### Chunk
 
-In the context of GenAI Commons in a Mendix app, embedding vectors are generated using a [Chunk](/agents/agents-kit-2/genai-for-mx/commons/#chunk-entity). Each object represents a discrete piece of information and contains its original string representation, as well as (after the embedding operation) the vector representation of that string according to the LLM of choice.
+In the context of GenAI Commons in a Mendix app, embedding vectors are generated using a [Chunk](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#chunk-entity). Each object represents a discrete piece of information and contains its original string representation, as well as (after the embedding operation) the vector representation of that string according to the LLM of choice.
 
 #### Knowledge base 
 
@@ -37,11 +36,11 @@ In the context of GenAI Commons in a Mendix app, we use the [PgVector Knowledge 
 
 #### Knowledge base chunk
 
-In most use cases, more information needs to be stored than just the original input string and its vector representation. A [KnowledgeBaseChunk](/agents/agents-kit-2/genai-for-mx/commons/#knowledgebasechunk-entity) is an extension of [Chunk](/agents/agents-kit-2/genai-for-mx/commons/#chunk-entity) that can hold additional information that is typically required for useful insertion and retrieval from a Mendix application.
+In most use cases, more information needs to be stored than just the original input string and its vector representation. A [KnowledgeBaseChunk](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#knowledgebasechunk-entity) is an extension of [Chunk](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#chunk-entity) that can hold additional information that is typically required for useful insertion and retrieval from a Mendix application.
 
 #### Metadata
 
-If additional conventional filtering is needed during similarity searches, such additional data can be stored in the knowledge base as well. [Metadata](/agents/agents-kit-2/genai-for-mx/commons/#metadata-entity) objects are key-value pairs that are inserted along with the chunks and contain this additional information. The filtering is applied on an exact string-match basis for the key-value pair. Records are only retrieved if they match all records of the metadata in the collection provided as part of the search step.
+If additional conventional filtering is needed during similarity searches, such additional data can be stored in the knowledge base as well. [Metadata](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#metadata-entity) objects are key-value pairs that are inserted along with the chunks and contain this additional information. The filtering is applied on an exact string-match basis for the key-value pair. Records are only retrieved if they match all records of the metadata in the collection provided as part of the search step.
 
 {{% alert color="info" %}}The example described in the remainder of this document does not include the more advanced use case of metadata filtering nor does it cover the construction of complex input strings. If you want to see how this can work in practice, take a look at the *RAG with Semantic Search on Historical Data* example in the [GenAI Showcase app](https://marketplace.mendix.com/link/component/220475). {{% /alert %}}
 

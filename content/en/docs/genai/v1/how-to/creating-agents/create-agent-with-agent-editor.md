@@ -19,7 +19,7 @@ Before you begin, complete the following prerequisites:
 
 * Use an app running on Studio Pro 11.9.1 or above
 * Complete [Set Up Your App for Agent Creation](/agents/agents-kit-1/how-to/creating-agents/shared-setup/) to configure your application, knowledge base, domain model, UI, and function microflows
-* Install [Agent Editor](/agents/agents-kit-1/genai-for-mx/agent-editor/), including the [first-time setup](/agents/agents-kit-1/genai-for-mx/agent-editor/#setup) steps
+* Install [Agent Editor](/agents/agents-kit-1/reference-guide/genai-for-mx/agent-editor/), including the [first-time setup](/agents/agents-kit-1/reference-guide/genai-for-mx/agent-editor/#setup) steps
 * Have access to Mendix Cloud GenAI text generation and knowledge base resources, and generate a key for both of these resource types from the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com/)
 
 ## Setting Up the Agent with a Prompt
@@ -113,7 +113,7 @@ Connect an MCP server as a tool source through a consumed MCP service document a
     * **Credentials microflow** (optional): Set this when authentication is required
     * **Protocol version**: Select the protocol that matches your MCP server
 
-    For more details regarding protocol version and authentication, refer to the [technical documentation](/agents/agents-kit-1/genai-for-mx/agent-editor/#define-mcp).
+    For more details regarding protocol version and authentication, refer to the [technical documentation](/agents/agents-kit-1/reference-guide/genai-for-mx/agent-editor/#define-mcp).
 
 3. In the consumed MCP service document, click **List tools** to verify the connection.
 

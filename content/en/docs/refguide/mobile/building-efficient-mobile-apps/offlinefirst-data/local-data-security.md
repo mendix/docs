@@ -181,6 +181,6 @@ Next to zero. The cookies which are stored in the device can only be accessed th
 Note that `android:debuggable` option should never be set to true in production app.
 {{% /alert %}}
 
-### Downsizes of Encryption
+### Downsides of Encryption
 
-Main downsize is performance. Since the cookies need to be decrypted and encrypted on each request, this operation will be demanding on the device and make the app slower during downloads, especially if your targeted devices are on the lower end.
+The main downside of enabling encryption is performance. Since the cookies need to be decrypted and encrypted on each request, this operation will be demanding on the device and make the app slower during downloads, especially if your targeted devices are on the lower end.

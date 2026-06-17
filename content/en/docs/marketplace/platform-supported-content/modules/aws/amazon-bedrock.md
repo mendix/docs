@@ -61,19 +61,20 @@ As of version 3.0.0 of the [AWS Authentication Connector](https://marketplace.me
 
 The AWS Authentication Connector supports both **static credentials** and **temporary credentials**. For more information and detailed instructions please refer to the [AWS Authentication Connector documentation page](/appstore/modules/aws/aws-authentication/).
 
-To use other authentication ways, you can create an `Credentials` object in your custom way and pass it to the operations.
-- Chat Completions: associate the `Credentials` object to the `ChatCompletionsRequest_Extension`
-- Embeddings: associate the `Credentials` object to the `CohereEmbedOptions_Extension`
-- Image Generation: associate the `Credentials` object to the `TitanImageOptions_Extension`
-- Retrieve: associate the `Credentials` object to the `RetrieveRequest_Extension`
-- Retrieve and Generate: associate the `Credentials` object to the `RetrieveAndGenerateRequest_Extension`
+To use other authentication methods, you can create a `Credentials` object programmatically using custom logic and pass it to the operations using the following associations:
+
+* Chat Completions: associate the `Credentials` object with the `ChatCompletionsRequest_Extension`
+* Embeddings: associate the `Credentials` object with the `CohereEmbedOptions_Extension`
+* Image Generation: associate the `Credentials` object with the `TitanImageOptions_Extension`
+* Retrieve: associate the `Credentials` object with the `RetrieveRequest_Extension`
+* Retrieve and Generate: associate the `Credentials` object with the `RetrieveAndGenerateRequest_Extension`
 
 ### Syncing Available Models, Knowledge Bases, and Agents
 
 You can use the `SNIP_Settings_Admin_ConfigOverview` snippet under **_USE_ME > SyncBedrockMetadata > ReusableUI** on an administrator page to sync models, knowledge bases and agents for the selected region at runtime. Admins on the page first need to configure the settings of the [AWS Authentication Connector](#configure-authentication) module, by selecting the AWS region and how to authenticate. When saving the settings or when you sync the models for the current region, AWS metadata services are called to create persistent objects in the database which you can view in the tables at the bottom of the snippet. 
 
 {{% alert color="info" %}}
-All models are shown, even those which you cannot accesss. Access to models must be configured in the AWS console.
+All models are shown, even those which you cannot access. Access to models must be configured in the AWS console.
 {{% /alert %}}
 
 #### Syncing Resources Using Microflows

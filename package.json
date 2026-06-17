@@ -23,10 +23,10 @@
   "homepage": "https://github.com/mendix/docs#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.19",
-    "docsy": "github:google/docsy#semver:0.15.0",
-    "hugo-extended": "^0.157.0",
+    "docsy": "github:google/docsy#semver:0.10.0",
+    "hugo-extended": "^0.126.1",
     "postcss": "^8.5.10",
-    "postcss-cli": "^8.3.1" 
+    "postcss-cli": "^8.3.1"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",

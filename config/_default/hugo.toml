@@ -30,6 +30,24 @@ disableKinds = ["taxonomy", "term"]
     quality = 75
     anchor = "smart"
 
+[build]
+    workers = 4
+    writeStats = true
+    noChmod = true
+    useResourceCacheWhen = "always"
+    gc = true 
+
+[caches]
+    [caches.assets]
+        dir = ":resourceDir/_gen"
+        maxAge = "720h"  # 30 days
+    [caches.getjson]
+        dir = ":cacheDir/getjson"
+        maxAge = "168h"  # 1 week
+    [caches.getcsv]
+        dir = ":cacheDir/getcsv"
+        maxAge = "168h"
+
 # Language configuration
 
 [languages]

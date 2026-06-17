@@ -39,9 +39,11 @@ branches:
 
 cache:
 # Cache node_modules to avoid re-downloading on every build
+# Cache resources/_gen to avoid recompiling SCSS/CSS on every build (Hugo/Docsy asset pipeline)
 # See https://docs.travis-ci.com/user/caching/
   directories:
     - node_modules
+    - resources/_gen
 
 before_install:
 ###############

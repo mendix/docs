@@ -34,7 +34,7 @@ disableKinds = ["taxonomy", "term"]
     workers = 4
     writeStats = true
     noChmod = true
-    useResourceCacheWhen = "always"
+    useResourceCacheWhen = "fallback"
     gc = true 
 
 # Language configuration

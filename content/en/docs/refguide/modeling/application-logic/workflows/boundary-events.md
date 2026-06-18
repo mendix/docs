@@ -34,7 +34,7 @@ Below is an example of what a non-interrupting timer boundary event looks like:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/drag-drop.png" alt="Adding boundary events through drag and drop" max-width=80% >}}
 
-## Getting started
+## Getting Started
 
 <a id="supported-activities"></a>You can add boundary events to the following activities:
 
@@ -77,7 +77,7 @@ When a boundary event is added to an ongoing activity, any workflow instances cu
 
 ### Changing Boundary Event Type {#changing-boundary-event-type}
 
-You can change the type of an existing boundary event using the context menu, without having to delete and re-add it. To do this:
+You can change the type of an existing boundary event using the context menu without having to delete and re-add it. To do this:
 
 1. Right-click the boundary event to open its context menu.
 2. Click **Change event**.
@@ -105,11 +105,13 @@ After you confirm the change:
     * If the changed boundary event was non-interrupting, you will get the [Non-interrupting Boundary Event Path Removed](/refguide/workflow-versioning/#non-interrupting-boundary-event-path-removed) conflict.
     * If the changed boundary event was interrupting, you will get the [Current Activity Removed](/refguide/workflow-versioning/#current-activity-removed) conflict.
 
-Boundary events are re-created upon interrupting behavior change because in-place conversion can result in invalid states. An interrupting boundary event must abort its parent activity when triggered, meaning an activity cannot have more than one active interrupting boundary event. Converting an already-triggered non-interrupting boundary event to interrupting in place violates this rule: the parent activity remains in progress, resulting in an interrupting boundary event whose parent is never aborted. Conversely, converting an already-triggered interrupting boundary event to non-interrupting in place leaves it active on an already-aborted parent activity, contradicting the rule that a non-interrupting boundary event must not abort its parent.
+Boundary events are re-created upon interrupting behavior change because in-place conversion can result in invalid states. An interrupting boundary event must abort its parent activity when triggered, meaning an activity cannot have more than one active interrupting boundary event.
+
+Converting an already-triggered non-interrupting boundary event to interrupting in place violates this rule: the parent activity remains in progress, resulting in an interrupting boundary event whose parent is never aborted. Conversely, converting an already-triggered interrupting boundary event to non-interrupting in place leaves it active on an already-aborted parent activity, contradicting the rule that a non-interrupting boundary event must not abort its parent.
 
 #### Implications of Changing the Boundary Event Type
 
-When the type of an ongoing **non-interrupting** boundary event is changed (for example, from Timer to Notification), this causes a partially resolvable [Current Activity Moved out of Path](/refguide/workflow-versioning/#current-activity-moved-out-of-path) conflict. Affected workflow instances cannot be continued. This does not apply to interrupting boundary events.
+When you change the type of an ongoing **non-interrupting** boundary event (for example, from Timer to Notification), this causes a partially resolvable [Current Activity Moved out of Path](/refguide/workflow-versioning/#current-activity-moved-out-of-path) conflict. Affected workflow instances cannot be continued. This does not apply to interrupting boundary events.
 
 For more information on how to handle such conflicts, see [Workaround for Non-resolvable and Partially Resolvable Conflicts](/refguide/workflow-versioning/#workaround-for-non-resolvable-and-partially-resolvable-conflicts).
 

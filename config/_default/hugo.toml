@@ -3,6 +3,7 @@ title = "Mendix Documentation"
 
 enableRobotsTXT = true
 
+
 # Hugo allows theme composition (and inheritance). The precedence is from left to right.
 theme = ["docsy"]
 themesDir = "node_modules"
@@ -20,7 +21,7 @@ defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
-languageCode = "en-us"
+locale = "en-us"  # Renamed from languageCode (deprecated in Hugo v0.158.0)
 
 disableKinds = ["taxonomy", "term"]
 
@@ -34,7 +35,7 @@ disableKinds = ["taxonomy", "term"]
 
 [languages]
     [languages.en]
-        languageName ="English"
+        label = "English"  # Renamed from languageName (deprecated in Hugo v0.158.0)
         # Weight used for sorting.
         weight = 1
 

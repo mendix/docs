@@ -25,9 +25,7 @@ The current scope of the module focuses on text and image generation, embeddings
 
 ### Dependencies {#dependencies}
 
-The GenAI Commons module requires Mendix Studio Pro version 10.24.0 or above.
-
-You must also download the [Community Commons](/appstore/modules/community-commons-function-library/) module.
+Download the [Community Commons](/appstore/modules/community-commons-function-library/) module.
 
 ## Installation {#installation}
 
@@ -1039,7 +1037,7 @@ To check your JDK version and update it if necessary, follow these steps:
 5. Open Studio Pro and go to **Edit** > **Preferences** > **Deployment** > **JDK directory**. Click **Browse** and select the folder with the new JDK version you just installed. This is the folder containing the *bin* folder. Save your settings by clicking **OK**.
 6. Run the project and execute the action that threw the above-mentioned exception earlier.
     1. You might get an error saying `FAILURE: Build failed with an exception. The supplied javaHome seems to be invalid. I cannot find the java executable.` In this case, verify that you have selected the correct JDK directory containing the updated JDK version.
-    2. You may also need to update Gradle. To do this, go to **Edit** > **Preferences** > **Deployment** > **Gradle directory**. Click **Browse** and select the appropriate Gradle version from the Mendix folder. For Mendix 10.10 and above, use Gradle 8.5. For Mendix 10 versions below 10.10, use Gradle 7.6.3. Then save your settings by clicking **OK**.
+    2. You may also need to update Gradle. To do this, go to **Edit** > **Preferences** > **Deployment** > **Gradle directory**. Click **Browse** and select the appropriate Gradle version from the Mendix folder. For Studio Pro versions 10.10 and above, use Gradle 8.5. Then save your settings by clicking **OK**.
     3. Rerun the project.
   
 ### Migration from Add-On Module to App Module

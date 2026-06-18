@@ -37,7 +37,6 @@ To use this connector, you need to either sign up for an [OpenAI account](https:
 
 ### Dependencies {#dependencies}
 
-* Mendix Studio Pro 10.24.0 and above
 * [GenAI Commons module](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/)
 * [Encryption module](/appstore/modules/encryption/)
 * [Community Commons module](/appstore/modules/community-commons-function-library/)
@@ -124,8 +123,8 @@ A [deployed model](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#de
     | -------------- | ------------------------------------------------------------ |
     | Display name | The reference for app users when selecting the model. |
     | Deployment name / Model name | The technical reference of the model. For OpenAI, this equals the [model alias](https://platform.openai.com/docs/models#current-model-aliases). For Microsoft Foundry, this is the deployment name from the [Microsoft Foundry portal](https://ai.azure.com/).
-    | Output modality | The output of the model. This connector currently supports text, embeddings, and images.
-    | Input modality | The input modalities accepted by the model. This connector currently supports text and images.
+    | Output modality | The output of the model. This connector supports text, embeddings, and images.
+    | Input modality | The input modalities accepted by the model. This connector supports text and images.
     | Azure API version | Azure OpenAI only. The API version to use for this operation. It follows the `yyyy-MM-dd` format. For supported versions, see [Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference). The supported versions can vary depending on the type of model, so make sure to look for the right section (such as Chat Completions, Image Generation, or Embeddings) on that page. |
 
 3. Close the dialog box and test the configuration with the newly created deployed models.
@@ -312,12 +311,12 @@ To check your JDK version and update it if necessary, follow these steps:
 
 1. Check your JDK version – In Studio Pro, go to **Edit** > **Preferences** > **Deployment** > **JDK directory**. If the path points to a version below `jdk-11.0.5.0-hotspot`, you need to update the JDK by following the next steps.
 2. Go to [Eclipse Temurin JDK 11](https://adoptium.net/en-GB/temurin/releases/?variant=openjdk11&os=windows&package=jdk) and download the `.msi` file of the latest release of **JDK 11**.
-3. Open the downloaded file and follow the installation steps. Remember the installation path. Usually, this should be something like `C:/Program Files/Eclipse Adoptium/jdk-11.0.22.7-hotspot`.
+3. Open the downloaded file and follow the installation steps. Remember the installation path. Usually, this is something like `C:/Program Files/Eclipse Adoptium/jdk-11.0.22.7-hotspot`.
 4. After the installation has finished, restart your computer if prompted.
 5. Open Studio Pro and go to **Edit** > **Preferences** > **Deployment** > **JDK directory**. Click **Browse** and select the folder with the new JDK version you just installed. This should be the folder containing the *bin* folder. Click **OK** to save your settings.
 6. Run the project and execute the action that threw the exception.
     1. If you get an error saying `FAILURE: Build failed with an exception. The supplied javaHome seems to be invalid. I cannot find the java executable.`, verify that you have selected the correct JDK directory containing the updated JDK version.
-    2. You may also need to update Gradle. To do this, go to **Edit** > **Preferences** > **Deployment** > **Gradle directory**. Click **Browse** and select the appropriate Gradle version from the Mendix folder. For Studio Pro 10.10 and above, use Gradle 8.5. For Studio Pro 10 versions below 10.10, use Gradle 7.6.3. Click **OK** to save your settings.
+    2. You may also need to update Gradle. To do this, go to **Edit** > **Preferences** > **Deployment** > **Gradle directory**. Click **Browse** and select the appropriate Gradle version from the Mendix folder. For Studio Pro 10.10 and above, use Gradle 8.5. Click **OK** to save your settings.
     3. Rerun the project.
 
 ### Chat Completions with Vision and JSON Mode (Microsoft Foundry)

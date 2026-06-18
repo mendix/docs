@@ -9,9 +9,9 @@ aliases:
 ---
 ## Introduction
 
-During most regular release cycles, upgrading GenAI modules is seamless and requires no manual intervention. However, in some cases, breaking changes to the database or code are unavoidable in order to enable future improvements. 
+During most regular release cycles, upgrading Agents Kit modules is seamless and requires no manual intervention. However, in some cases, breaking changes to the database or code are unavoidable in order to enable future improvements. 
 
-This document is intended for consumers of GenAI modules. For releases that introduce impactful changes, it outlines the affected module versions, describes the nature of the changes, and specifies any actions that must be taken when upgrading to the newer versions.
+This document is intended for consumers of Agents Kit modules. For releases that introduce impactful changes, it outlines the affected module versions, describes the nature of the changes, and specifies any actions that must be taken when upgrading to the newer versions.
 
 {{% alert color="warning" %}}
 Do not skip major versions as they may contain deprecations or require migration.
@@ -44,7 +44,7 @@ The sections below describe each release increment for a set of modules that are
 
 ### Release March 2026 {#march-2026}
 
-This section explains breaking changes and required actions for a set of GenAI modules released in early March 2026. These changes prepare the domain models for future enhancements, particularly to support Agent definitions using MCP tools and Knowledge Bases.
+This section explains breaking changes and required actions for a set of Agents Kit modules released in early March 2026. These changes prepare the domain models for future enhancements, particularly to support Agent definitions using MCP tools and Knowledge Bases.
 
 {{% alert color="warning" %}}
 

@@ -43,7 +43,7 @@ To start building your smart app with a blank GenAI App template, download the [
 
 ### Important Modules
 
-The [Blank GenAI App Template](https://marketplace.mendix.com/link/component/227934) has the essential GenAI modules pre-installed, which is beneficial to familiarize yourself with the GenAI functionalities Mendix can offer, as it includes:
+The [Blank GenAI App Template](https://marketplace.mendix.com/link/component/227934) has the essential Agents Kit modules preinstalled, which is beneficial to familiarize yourself with the GenAI functionalities Mendix can offer, as it includes:
 
 * The [GenAI Commons](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/) module: provides pre-built operations and data structures for seamless integration with platform-supported GenAI connectors, such as the Mendix Cloud GenAI, OpenAI, or Amazon Bedrock.
 

@@ -49,9 +49,7 @@ The Agent Commons module offers the following features:
 
 ### Dependencies {#dependencies}
 
-The Agent Commons module requires Mendix Studio Pro version 10.24.0 or above.
-
-In addition, install the following modules:
+Install the following modules:
 
 * [Administration](https://marketplace.mendix.com/link/component/23513)
 * [Community Commons](https://marketplace.mendix.com/link/component/170)
@@ -63,6 +61,7 @@ In addition, install the following modules:
 ## Installation
 
 If you are starting from a blank app or adding agent-building functionality to an existing project, you need to manually install the [Agent Commons](https://marketplace.mendix.com/link/component/240371) module from Mendix Marketplace. 
+
 Before proceeding, ensure your project includes the latest versions of the required [dependencies](#dependencies). Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to install the Agent Commons module.
 
 ## Configuration {#configuration}
@@ -130,7 +129,7 @@ The `AgentAdmin` will see warnings on the Agent Version Details page if:
 
 #### Adding Tools
 
-To extend an agent's capabilities, you can provide an LLM with tools so that it becomes truly agentic. Mendix currently supports adding microflows or all exposed tools from an MCP (Model Context Protocol) server to an agent version.
+To extend an agent's capabilities, you can provide an LLM with tools so that it becomes truly agentic. Mendix supports adding microflows or all exposed tools from an MCP (Model Context Protocol) server to an agent version.
 
 ##### Adding Microflows as Tools
 

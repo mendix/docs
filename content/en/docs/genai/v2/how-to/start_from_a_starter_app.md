@@ -18,8 +18,6 @@ This document guides on building a smart app using a starter template. Alternati
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
-* Be on Mendix Studio Pro 10.12.4 or higher.
-
 * Intermediate knowledge of the Mendix platform: Familiarity with Mendix Studio Pro, microflows, and modules is required.
 
 * Basic understanding of GenAI concepts: Review the [Enrich Your Mendix App with Agentic Capabilities](/agents/) page to gain foundational knowledge and become familiar with the key [concepts](/agents/get-started/).
@@ -96,12 +94,12 @@ Follow the steps below to configure OpenAI for your application. For more inform
 
      * After saving the changes, a new pop-up will appear to add the deployment models. Select **Add deployed model** and provide the following details (optional for the OpenAI API Type):
          * **Display name**: A reference name for the deployed model (for example, "GPT-4 Conversational").
-         * **Deployment Name**: Specify the deployed model (for example, *gpt-4o*, *gpt-3.5-turbo*, etc.)
+         * **Deployment Name**: Specify the deployed model (for example, *gpt-4o*, *gpt-5.5*, etc.)
          * **Output modality**: Indicate the type of output (for example, Text, Embeddings, Image).
          * **Support system prompt**: Indicate whether the model supports system prompts.
          * **Support conversations with history**: Indicate whether the model can remember and use previous interactions in a conversation by referring back to earlier messages in the chat.
          * **Support function calling**: Indicate whether the model can invoke different functions during the conversation based on the user input.
-         * **Azure API Version**: Provide the version of the API you are using (for example, *2024-06-01*, *2024-10-21*, etc.)
+         * **Azure API Version**: Provide the version of the API you are using (for example, *2025-05-01*)
          * **Is active**: Indicate whether the deployment model should be active to be used in the app.
 
    * Click **Save** to store your configuration.

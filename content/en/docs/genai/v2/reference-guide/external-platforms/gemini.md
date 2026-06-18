@@ -25,7 +25,7 @@ The Google Gemini connector does not currently offer image generation functional
 
 #### Knowledge Base
 
-The Google Gemini connector supports Knowledge bases from providers such as pgVector, Mendix Cloud, Amazon Bedrock, and Azure AI Search to be added to a conversation.
+The Google Gemini connector supports knowledge bases from providers such as pgVector, Mendix Cloud, Amazon Bedrock, and Azure AI Search to be added to a conversation.
 
 ### Prerequisites
 
@@ -33,7 +33,6 @@ To use this connector, you need to sign up for a Google AI Studio account and cr
 
 ### Dependencies {#dependencies}
 
-* Mendix Studio Pro version 10.24.13 or above
 * [GenAI Commons module](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/)
 * [Encryption module](/appstore/modules/encryption/)
 * [Community Commons module](/appstore/modules/community-commons-function-library/)
@@ -68,11 +67,11 @@ The following inputs are required for the Gemini configuration:
 
 #### Configuring the Gemini Deployed Models
 
-A [Deployed Model](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#deployed-model) represents a GenAI model instance that can be used by the app to generate text, embeddings, or images. For every model you want to invoke from your app, you need to create a `GeminiDeployedModel` record, a specialization of `DeployedModel` (and also a specialization of `OpenAIDeployedModel`). In addition to the model display name and a technical name or identifier, a Gemini-deployed model contains a reference to the additional connection details as configured in the previous step. Currently, only specific models for text generation are supported by the Google Gemini connector.
+A [Deployed Model](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#deployed-model) represents a GenAI model instance that can be used by the app to generate text, embeddings, or images. For every model you want to invoke from your app, you need to create a `GeminiDeployedModel` record, a specialization of `DeployedModel` (and also a specialization of `OpenAIDeployedModel`). In addition to the model display name and a technical name or identifier, a Gemini-deployed model contains a reference to the additional connection details as configured in the previous step. Only specific models for text generation are supported by the Google Gemini connector.
 
-1. Click the three-dots ({{% icon name="three-dots-menu-horizontal-filled" %}}) icon for a Gemini configuration and open **Manage Deployed Models**. It is possible to use a predefined generation method, where available models are created according to their capabilities. 
+1. Click the **More Options**({{% icon name="three-dots-menu-horizontal-filled" %}}) icon for a Gemini configuration and open **Manage Deployed Models**. It is possible to use a predefined generation method, where available models are created according to their capabilities. 
     
-2. Close the **Manage Deployed Models** pop-up and test the configuration with the newly created deployed models.
+2. Close the **Manage Deployed Models** dialog box and test the configuration with the newly created deployed models.
 
 ### Using GenAI Commons Operations {#genai-commons-operations} 
 

@@ -24,7 +24,7 @@ Before implementing this capability into your app, make sure you meet the follow
 
 * Start from scratch: to simplify your first use case, start building from a preconfigured setup [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934). For more information, see [Build a Chatbot from Scratch Using the Blank GenAI App](/agents/agents-kit-2/how-to/blank-app/). 
 
-* Install the [Mendix GenAI Connector](https://marketplace.mendix.com/link/component/239449) and [GenAICommons](https://marketplace.mendix.com/link/component/239448) modules (version 2.2.0 and above) from Mendix Marketplace. If you start with the Blank GenAI App, you can skip this installation.
+* Install the [Mendix GenAI Connector](https://marketplace.mendix.com/link/component/239449) and [GenAICommons](https://marketplace.mendix.com/link/component/239448) modules from Mendix Marketplace. If you start with the Blank GenAI App, you can skip this installation.
 
 * Set up a Knowledge Base resource within the [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/). 
 

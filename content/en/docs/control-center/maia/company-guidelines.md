@@ -16,7 +16,7 @@ Company guidelines provide organization-wide context for Maia, enabling relevant
 
 Company guidelines define the following:
 
-* Rules and standards – Compliance, security, and governance policies that teams must follow.
+* Guidelines and standards – Compliance, security, and governance policies that teams must follow.
 * Reusable assets and conventions – Architecture and integration standards, development and design best practices.
 * Shared terminology – Domain language and company-specific terminology.
 
@@ -28,7 +28,7 @@ You can upload, review, and apply company guidelines through the **Company Guide
 
 Follow these steps to create company guidelines:
 
-1. Click **Upload Document**. You can upload .md, .pdf, and .docx format documents. For information on what constitutes a good guideline document, refer to the [Best Practices for Guideline Documents](#best-practices) section.
+1. Click **Upload Document**. You can upload .md, .pdf, and .docx format documents. For information on what constitutes a good guideline document, check out <a href="/originals/control-center/company-guidelines/Evora Development Guidelines.pdf" target="_blank" rel="noopener noreferrer">this sample .pdf</a>.
 
 2. Once the document is uploaded, the **Company Guidelines** page displays a **Documents that need your attention** section. This includes guideline documents that need to be processed, reviewed, or fixed, and that are not yet active.    
 
@@ -41,10 +41,6 @@ Follow these steps to create company guidelines:
     You can search by guideline text, or filter by category and status.
 
 4. Once you have gone through all the guidelines, and are happy with the result, click **Create Guidelines**. The guidelines are now listed on the **Company Guidelines** tab of the main page.
-
-### Best Practices for Guideline Documents {#best-practices}
-
-[...]
 
 ## Company Guidelines Page Tabs 
 

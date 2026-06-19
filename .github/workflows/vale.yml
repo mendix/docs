@@ -3,10 +3,14 @@ name: Vale Linting
 # Trigger on PRs that change Markdown files
 on:
   pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
     paths:
       - 'content/en/docs/**/*.md'
 
 # Allow reading repo contents and posting PR comments
+# Note: Fork PRs from org members run automatically but get read-only tokens,
+# so reviewdog falls back to check annotations instead of review comments.
+# External contributors require workflow approval per repo settings.
 permissions:
   contents: read
   pull-requests: write
@@ -48,5 +52,5 @@ jobs:
           separator: ','
           version: 3.14.2
           fail_on_error: false
-          reporter: github-pr-review
+          reporter: github-pr-review  # Uses filter_mode=added (default): only comment on modified lines
           vale_flags: '--minAlertLevel=error'  # Only flag errors, not warnings or suggestions

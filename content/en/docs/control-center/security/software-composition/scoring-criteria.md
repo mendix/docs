@@ -14,13 +14,22 @@ Scoring criteria reflect your company's risk preference.
 
 The settings on this tab determine how each such vulnerability is calculated for apps, environments, and components.
 
+<!-- {{< figure src="/attachments/control-center/security/software-composition/scoring_criteria_complete.png" >}} -->
 {{< figure src="/attachments/control-center/security/software-composition/scoring_criteria.png" >}}
 
 The default values are strict, but you can adjust them to reflect the practice of your company.
 
-## Finding Types
+## Finding Types {#finding-types}
 
 The types of findings that you can adjust for are **Outdated** and **Deprecated**.
+
+<!--
+### Vulnerable
+
+A finding is generated when a component is published on the [Security Advisories](/releasenotes/security-advisories/) page, and is assigned a specific CVSS score. CVSS scores are based on the [NVD Vulnerability Metrics](https://nvd.nist.gov/vuln-metrics) framework, and cannot be orverriden.
+
+You can choose the combination of CVSS range and severity for which you want a component to be marked as vulnerable.
+-->
 
 ### Outdated
 

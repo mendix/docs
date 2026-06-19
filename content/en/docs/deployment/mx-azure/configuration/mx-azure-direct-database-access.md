@@ -55,7 +55,7 @@ By default, the read replica for Postgres database is disabled. To enable it, pe
 
 {{% alert color="info" %}}Never delete the existing ServicePrincipal user.{{% /alert %}}
 
-{{% alert color="info" %}}Users added here only have full Read access to the database, as network access is restricted to the read replica only using [Network Security Group](https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview) rules.{{% /alert %}}
+{{% alert color="info" %}}Users added here only have full Read access to the database, as network access is restricted using [Network Security Group](https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview) rules. This means that access to the primary database is blocked and only the read replica can be accessed.{{% /alert %}}
 
 ## Enabling Virtual Network Peering and DNS Name Resolution
 

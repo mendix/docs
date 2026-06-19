@@ -23,10 +23,10 @@ Tracing is an important tool for maintaining critical applications, ensuring app
 To view these traces, you will need an observability tool such as [Jaeger](https://www.jaegertracing.io/) or [Datadog](https://www.datadoghq.com/).
 
 {{% alert color="warning" %}}
-Tracing is currently supported only via [Datadog integration](/developerportal/operate/datadog-metrics/) on Mendix Cloud.
+Tracing is currently supported via [Datadog](/developerportal/operate/datadog-metrics/) and [OpenTelemetry](/developerportal/operate/opentelemetry/) integrations on Mendix Cloud.
 {{% /alert %}}
 
-## Generated spans
+## Generated Spans
 
 The runtime generates spans for the following:
 

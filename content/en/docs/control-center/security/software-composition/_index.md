@@ -8,27 +8,38 @@ weight: 20
 
 ## Introduction
 
-A Mendix app can consist of the Mendix Model (which includes pages, domain model, microflows, etc.), custom Java, and JavaScript. Additionally, it can use reusable components such as standard marketplace modules, widgets, Java libraries, npm packages, and the runtime version. These reusable components are dependencies, namely, components you are dependent on for your Mendix app to run.  
+A Mendix app can consist of the Mendix Model (which includes pages, domain model, microflows, and more), custom Java, and JavaScript. Additionally, it can use reusable components such as standard Marketplace modules, widgets, Java libraries, npm packages, and the runtime version. These reusable components are dependencies—components your Mendix app needs to run.  
 
-Over time, these dependencies can become deprecated, outdated, or vulnerable. Enterprises also have policies on which of these reusable components can or cannot be used based on support, license, etc. It is important to have an easily accessible, clear view of component dependencies through the development lifecycle in order to address any security finding raised by your admins or security teams.
+Over time, these dependencies can become deprecated, outdated, or vulnerable. Enterprises also have policies on which reusable components can or cannot be used based on support, license, and other factors. You need an easily accessible, clear view of component dependencies through the development lifecycle to address any security finding raised by your admins or security teams.
 
-To enable this, the **Software Composition** page in Control Center provides visibility into the component dependencies in each app environment. The components displayed here will be based on the [Software Bill of Materials (SBOM)](/refguide/sbom-generation/).
+The **Software Composition** page in Control Center provides visibility into the component dependencies in each app environment. The components displayed here are based on the [Software Bill of Materials (SBOM)](/refguide/sbom-generation/).
 
 {{% alert color="warning" %}}Advanced software composition capabilities are currently available to all. In the future, access to these capabilities will be subject to your license.{{% /alert %}}
 
-## Prerequisites {#prerequisites}
+## Prerequisites
 
-To be able to see the software composition information, make sure that you meet the following prerequisites:
+To access Software Composition information, make sure you meet the following prerequisites:
 
-* Software Bill of Materials (SBOM) generation and the associated Software Composition capabilities are compatible with the following versions of Studio Pro: 9.24.26 and above, 10.6.12 and above, 10.12.3 and above. 
+* SBOM generation and the associated Software Composition capabilities are compatible with the following versions of Studio Pro: 
 
-    {{% alert color="warning" %}}Make sure you upgrade to a compatible Studio Pro version to continue to use Software Composition. Previously supported Studio Pro versions (9.24.22 to 9.24.25, 10.6.9 to 10.6.11, 10.10.0 to 10.12.2, and 10.13) will no longer result in SBOM generation and visibility in Software Composition. Any historical data within Software Composition remains accessible regardless of the upgrade.{{% /alert %}}
+    * 11.9.1 and above
+    * 11.6.6
+    * 10.24.18 and above 
+    * 9.24.43 and above
 
-* Software composition visibility is only possible for deployment packages created via the platform services. It is not available if you manually upload the locally-created deployment package. SBOMs are created behind the scenes for each deployment package. For more information, see [Create Deployment Package](/refguide/create-deployment-package-dialog/).
+   SBOMs created on older versions may contain inaccuracies. Software Composition flags SBOMs and findings created on older versions.    
+   To make sure you have an SBOM without inaccuracies, upgrade to one of the supported versions. Upon upgrade, the model is checked and fixed, resulting in a corrected SBOM.    
+   
+   **Known limitation** – Some issues cannot be fixed automatically. The corresponding components remain flagged. To fix any flagged components that remain after the upgrade, take one of these actions:
+
+    * Update the component in your project.
+    * If the previous action does not work, remove the component and add it again.
+
+* Software composition visibility is only available for deployment packages created via the platform services. It is not available if you manually upload a locally created deployment package. SBOMs are created for each deployment package. For more information, refer to [Create Deployment Package](/refguide/create-deployment-package-dialog/).
 
 * You must be using free or licensed Mendix Cloud or Mendix Cloud Dedicated, or Mendix on Kubernetes. 
 
-* If your deployment package was deployed before June 14, 2024, you must create and deploy a new deployment package in order to get the software composition information populated on this page.
+* If your deployment package was deployed before June 14, 2024, you must create and deploy a new deployment package to populate the software composition information on this page.
 
 ## Software Composition Generation {#software-composition-generation}
 
@@ -37,15 +48,15 @@ A software bill of materials (SBOM) is generated in the following circumstances:
 * When a new deployment package with the compatible Mendix Runtime version is created via the Mendix Portal
 * Using the **App** > **Tools** > **Generate Bill of Materials** menu option in Studio Pro 10.18 and above
 
-Click **View build output** in the deployment package details in the Mendix Portal to see the log details. For details of SBOM generation, see [SBOM Generation](/refguide/sbom-generation/).
+Click **View build output** in the deployment package details in the Mendix Portal to open the log details. For more information on SBOM generation, refer to [SBOM Generation](/refguide/sbom-generation/).
 
-You can find the component dependencies for each non-expired, deployment package in the [Software Composition](/developerportal/deploy/software-composition/) page of **Apps** in the Mendix Portal. 
+You can find the component dependencies for each non-expired deployment package in the [Software Composition](/developerportal/deploy/software-composition/) page of **Apps** in the Mendix Portal. 
 
-After the creation of a deployment package, the **Software Composition** page usually becomes visible within a few minutes. However, in rare cases, it can take up to a day. Mendix is working to improve the performance on this front.
+After you create a deployment package, the **Software Composition** page usually becomes visible within a few minutes. However, in rare cases, it can take up to a day. Mendix is working to improve performance.
 
 ## Guidance
 
-Click the **{{% icon name="book-closed" %}} Guidance** option in the upper right corner of the **Software Composition** page to find a video outlining the main features, as well as links to detailed information.
+Click **{{% icon name="book-closed" %}} Guidance** in the upper-right corner of the **Software Composition** page to find a video outlining the main features and links to detailed information.
 
 ## Software Composition Tabs
 

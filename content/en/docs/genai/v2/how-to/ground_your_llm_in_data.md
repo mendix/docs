@@ -182,7 +182,7 @@ Assign these module roles to your admin role: `MxGenAIConnector.Administrator`, 
 
 ## Testing and Troubleshooting
 
-Before testing, ensure that you have completed the Mendix Cloud GenAI configuration as described in [Build a Chatbot from Scratch Using the Blank GenAI App](/agents/agents-kit-2/how-to/blank-app/), particularly the [Mendix Cloud GenAI Configuration](/agents/agents-kit-2/how-to/blank-app/#mendix-cloud-genai-configuration) section.
+Before testing, ensure that you have completed the Mendix Cloud GenAI configuration as described in the [Configuration](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/#configuration) section of *Mendix Cloud GenAI Connector*.
 
 To test the chatbot, follow these steps:
 

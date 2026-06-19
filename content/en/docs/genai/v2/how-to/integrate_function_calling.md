@@ -12,7 +12,7 @@ aliases:
 
 ## Introduction
 
-This document explains how to use function calling in your smart app. To do this, you can use your existing app or follow the [Build a Smart App from a Blank GenAI App](/agents/agents-kit-2/how-to/blank-app/) guide to start from scratch, as demonstrated in the sections below.
+This document explains how to use function calling in your smart app.
 
 Through this document, you will:
 
@@ -23,9 +23,8 @@ Through this document, you will:
 
 Before integrating function calling into your app, make sure you meet the following requirements:
 
-* An existing app: To simplify your first use case, start building from a preconfigured set up [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934). For more information, see [Build a Chatbot from Scratch Using the Blank GenAI App](/agents/agents-kit-2/how-to/blank-app/).
-
-* Install the [Mendix GenAI Connector](https://marketplace.mendix.com/link/component/239449) and [GenAICommons](https://marketplace.mendix.com/link/component/239448) modules from Mendix Marketplace. If you start with the Blank GenAI App, you can skip this installation.
+* Use a GenAI starter app such as the [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934), or add to an app that you have already built.
+    * If you are not using a GenAI starter app, install the [Mendix GenAI Connector](https://marketplace.mendix.com/link/component/239449) and [GenAICommons](https://marketplace.mendix.com/link/component/239448) modules from Mendix Marketplace. The starter apps have these dependencies preinstalled.
 
 * Intermediate knowledge of the Mendix platform: Familiarity with Mendix Studio Pro, microflows, and modules.
 
@@ -145,7 +144,7 @@ As shown in the image, two key steps must be completed to enable the execution o
 
 ### Optional: Changing the System Prompt {#edit-systemprompt}
 
-Optionally, you can change the system prompt to provide the model additional instructions, for example, the tone of voice. Therefore, follow a similar approach described in the [Build a Chatbot from Scratch Using the Blank GenAI App](/agents/agents-kit-2/how-to/blank-app/#changing-system-prompt).
+Optionally, you can change the system prompt to provide the model with additional instructions, such as specifying its the tone.
 
 1. Open the copied `ACT_FullScreenChat_Open` microflow from your `MyFirstBot` module.
 2. Locate the **New Chat** action.
@@ -159,11 +158,8 @@ When adding tools to a request, you can optionally set a [User Access Approval](
 
 ## Testing and Troubleshooting {#testing-troubleshooting}
 
-Before testing, ensure that you have completed the Mendix Cloud GenAI, OpenAI, or Bedrock configuration as described in the [Build a Chatbot from Scratch Using the Blank GenAI App](/agents/agents-kit-2/how-to/blank-app/), particularly the [Infrastructure Configuration](/agents/agents-kit-2/how-to/blank-app/#config) section. 
+Before testing, ensure that you have completed the connector's configuration as described in its documentation. For example, if you are using Mendix Cloud GenAI, follow the intructions in the [Configuration](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/#configuration) section of *Mendix Cloud GenAI Connector*.
 
-To test the Chatbot, go to the **Home** icon to open the chatbot interface. Start interacting with your chatbot by typing in the chat box.
-For example, type `Write a message to my colleague Max asking about a meeting to discuss the content for our next GenAI how-to.` or `How many bank holidays do I have in December?`.
-
-Congratulations! Your chatbot is now ready to use.
+To test the chatbot, go to the **Home** icon to open the chatbot interface. Start interacting with your chatbot by typing in the chat box. For example, type `Write a message to my colleague Max asking about a meeting to discuss the content for our next GenAI how-to.` or `How many bank holidays do I have in December?`.
 
 If an error occurs, check the **Console** in Studio Pro for detailed information to assist in resolving the issue.

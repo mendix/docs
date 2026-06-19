@@ -48,4 +48,4 @@ For any additional feedback, send a message in the [#genai-connectors](https://m
 
 * [Use MCP to Bring Mendix Business Logic into Claude for Desktop](https://www.mendix.com/blog/how-to-use-mcp-to-bring-mendix-business-logic-into-claude-for-desktop/)
 
-## Documents in this Category
+## Documents in This Category

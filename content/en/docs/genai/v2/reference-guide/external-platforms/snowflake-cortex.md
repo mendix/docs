@@ -18,7 +18,7 @@ To allow your Mendix app to use Snowflake Cortex GenAI functionalities, install 
 
 Mendix also offers a [Snowflake showcase app](https://marketplace.mendix.com/link/component/225845), which you can use as an example of how to implement the Cortex functionalities in your own app.
 
-## Functionalities Available in the Snowflake Showcase App
+## Functionalities Available in the Snowflake Showcase App {#functionalities-available-in-the-snowflake-showcase-app}
 
 The Snowflake showcase app shows an example implementation of the following GenAI functionalities:
 

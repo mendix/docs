@@ -3,7 +3,7 @@ title: "MCP Server"
 url: /agents/agents-kit-2/mcp-modules/mcp-server/
 linktitle: "MCP Server"
 description: "Agents Kit 2: Reference documentation for the MCP Server module, which exposes Mendix logic to external MCP clients and AI systems."
-weight: 20,
+weight: 20
 aliases:
     - /agents/mcp-modules/mcp-server/
     - /appstore/modules/genai/genai-for-mx/mcp-server/

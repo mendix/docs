@@ -13,7 +13,7 @@ themesDir = "node_modules"
 refLinksErrorLevel = "WARNING"
 
 # Will give values to .Lastmod etc.
-enableGitInfo = true
+enableGitInfo = false
 
 # Language settings
 contentDir = "content/en"
@@ -64,9 +64,9 @@ replacements = "github.com/FortAwesome/Font-Awesome -> ., github.com/twbs/bootst
 
 # Comment out if you don't want the "print entire section" link enabled.
 [outputs]
-    section = ["HTML"]
+    section = ["HTML", "print"]
     # MvM - add line below to print every page
-    page = ["HTML"]
+    page = ["HTML", "print"]
 
 # MvM - add line below to activate production of RSS pages
 [outputFormats]

@@ -18,30 +18,42 @@ After clicking a specific resource, you land on its details page, which provides
 
 {{< figure src="/attachments/genai/navigate_mxgenai/GenAIResource_Details.png" alt="" >}}
 
-### Settings
+### Consumption (Only for Text and Embeddings Generation Resources)
 
-The **Settings** tab contains the details of a GenAI resource. It shows the following:
+{{% alert color="info" %}} The **Consumption** tab is available for Model resources only.{{% /alert %}} 
 
-* **Display Name** – The name of the resource.
-* **ID** – The resource ID.
-* **Region(s)** – The region where the resource is hosted.
-* **Cross Region Inference (CRI)** – Indicates whether cross region inference is enabled for this resource ¹.
-* **Cloud Provider** – The cloud provider, for example, AWS.
-* **Type** – The type of resource, for example, Text Generation Model, Embeddings Generation, or Knowledge Base.
-* **Available models** – The model versions enabled on the resource. For text generation resources, this lists all Claude model versions available for use. For embeddings resources, this lists all available Cohere Embed model versions. For a full list of supported models, see [Supported Models](/agents/mx-cloud-genai/resource-packs/#supported-models).
-* **Default model** – The model version used as a fallback when no model is explicitly specified in an API call. This field only applies to text generation resources and is present for backward compatibility with apps using connector versions below V3.0.0.
-* **Tokens** – The monthly [GenAI Unit](/agents/mx-cloud-genai/Navigate-MxGenAI/#what-are-tokens-and-genai-units) allocation for the resource, for example, 1,000 GenAI Units.
-* **Environment** – The environment, for example, Test, Acceptance, or Production.
+The **Consumption** tab provides an overview of GenAI Unit and Large Language Model (LLM) token consumption for the resource. Use this overview to see current usage, view daily consumption insights, and compare the current period with previous periods. 
 
-¹ Cross Region Inference (CRI) allows a model to redirect requests to another region, helping to distribute the load across multiple regions within the same area. EU requests always stay within EU regions. Connecting to a cross region inference profile does not change how the request is sent; the redirection happens on the server side, determining the region to handle the request to get the fastest response. For more information, see [Increase throughput with cross-region inference](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html). If applicable, CRI profiles are selected during provisioning of a model resource. New models are available under the CRI inferencing type by default.
+Note that periods represent bundle months. A bundle month is the period during which consumption is tracked, beginning on the date of your last GenAI Resource entitlement reset and ending on the next reset date. This creates a recurring monthly cycle based on your resource activation date, not the calendar month.
 
-#### Additional Details for Knowledge Base Resources
+{{< figure src="/attachments/genai/navigate_mxgenai/GenAIResource_TokenConsumptionMonitor.png" alt="" >}}
 
-For knowledge base resources, you can also see details of the associated embeddings resource and vice versa. To learn more about embeddings, see the [Embedding vector](/agents/rag/#embedding-vector) section of *RAG in a Mendix App*.
+**Current Consumption** shows the total GenAI Units consumed against your monthly allocation, displayed as a percentage and a number (for example, 1,521 / 1.6k). **Plan** shows the resource pack model type (for example, Anthropic Claude Opus) and the total GenAI Unit allocation for the bundle month. The bundle refill date is shown at the top of the page.
 
-#### Adjusting the GenAI Unit Capacity of a Resource
+Below the summary, the page shows **Consumption Over Selected Time Range**. You can switch between weekly (**W**), bundle month (**BM**), month to date (**MTD**), and six months (**6M**) views. The charts show:
 
-After a resource is provisioned, you can change its GenAI Unit capacity to match your actual usage. Company Admins can adjust the capacity through the GenAI Resources self-service in the Control Center. For more information, see the [Adjusting Resource GenAI Unit Capacity](/control-center/genai-resources-self-service/#adjusting-resource-genai-unit-capacity) section of *GenAI Resources*.
+* **Monthly Bundle GenAI Units Consumption** – GenAI Units consumed per day, with a dashed line indicating the monthly allocation limit.
+* **Monthly Bundle Input Consumption** – Raw LLM input tokens consumed per day.
+* **Monthly Bundle Output Consumption** – Raw LLM output tokens consumed per day.
+* **Monthly Bundle API Calls** – 
+
+#### What Are Tokens and GenAI Units?
+
+LLM tokens (not to be confused with Mendix Cloud Tokens) are what you pay for when consuming large language model services. Text input is first "tokenized," meaning it is broken down into smaller pieces where each piece represents a token. A good rule of thumb is that 100 tokens are around 75 English words, though this varies by model and language. Tokens sent to the model are called input tokens; tokens generated by the model are called output tokens.
+
+GenAI Units are the unit of measure for consumption across all models on a resource. Each model family has a different exchange rate. The exchange rate is the number of GenAI Units consumed per one million input or output tokens. A more capable model costs more GenAI Units per token than a less capable model.
+
+#### When Are Tokens and GenAI Units Consumed?
+
+Text generation resources consume both LLM input and output tokens, which are converted to GenAI Units using the model-specific exchange rate.
+
+Embeddings resources only consume input tokens. This is because only the generated embedding vectors are returned and the generated output is not tokenized.
+
+Knowledge base resources do not consume tokens directly. Uploading a document to a knowledge base connected to an embeddings resource consumes tokens in that embeddings resource.
+
+#### Exporting Consumption Data
+
+Click **Export** to export consumption data in CSV format. The export contains information about input tokens, output tokens, and dates. Days with no consumption are not exported.
 
 ### Team
 
@@ -130,36 +142,27 @@ Instead of relying solely on similarity-based searches of ticket descriptions, u
 
 You can upload data directly from Mendix to the Knowledge Base. To do so, several operations of the Mendix Cloud GenAI connector are required. For a detailed guide on this process, see the [Add Data Chunks to Your Knowledge Base](/agents/mx-cloud-genai/mxgenai-connector/#add-data-chunks-to-your-knowledge-base) section of *Mendix Cloud GenAI Connector*.
 
-### Consumption (Only for Text and Embeddings Generation Resources)
+### Settings
 
-{{% alert color="info" %}} The **Consumption** tab is available for Model resources only.{{% /alert %}} 
+The **Settings** tab contains the details of a GenAI resource. It shows the following:
 
-The **Consumption** tab provides an overview of GenAI Unit and Large Language Model (LLM) token consumption for the resource. Use this overview to see current usage, view daily consumption insights, and compare the current period with previous periods. Note that periods represent bundle months. A bundle month is the period during which consumption is tracked, beginning on the date of your last GenAI Resource entitlement reset and ending on the next reset date. This creates a recurring monthly cycle based on your resource activation date, not the calendar month.
+* **Display Name** – The name of the resource.
+* **ID** – The resource ID.
+* **Region(s)** – The region where the resource is hosted.
+* **Cross Region Inference (CRI)** – Indicates whether cross region inference is enabled for this resource ¹.
+* **Cloud Provider** – The cloud provider, for example, AWS.
+* **Type** – The type of resource, for example, Text Generation Model, Embeddings Generation, or Knowledge Base.
+* **Available models** – The model versions enabled on the resource. For text generation resources, this lists all Claude model versions available for use. For embeddings resources, this lists all available Cohere Embed model versions. For a full list of supported models, see [Supported Models](/agents/mx-cloud-genai/resource-packs/#supported-models).
+* **Default model** – The model version used as a fallback when no model is explicitly specified in an API call. This field only applies to text generation resources and is present for backward compatibility with apps using connector versions below V3.0.0.
+* **Tokens** – The monthly [GenAI Unit](/agents/mx-cloud-genai/Navigate-MxGenAI/#what-are-tokens-and-genai-units) allocation for the resource, for example, 1,000 GenAI Units.
+* **Environment** – The environment, for example, Test, Acceptance, or Production.
 
-{{< figure src="/attachments/genai/navigate_mxgenai/GenAIResource_TokenConsumptionMonitor.png" alt="" >}}
+¹ Cross Region Inference (CRI) allows a model to redirect requests to another region, helping to distribute the load across multiple regions within the same area. EU requests always stay within EU regions. Connecting to a cross region inference profile does not change how the request is sent; the redirection happens on the server side, determining the region to handle the request to get the fastest response. For more information, see [Increase throughput with cross-region inference](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html). If applicable, CRI profiles are selected during provisioning of a model resource. New models are available under the CRI inferencing type by default.
 
-The **Current Consumption** panel shows the total GenAI Units consumed against your monthly allocation, displayed as a percentage and a number (for example, 1,521 / 1.6k). The **Plan** panel shows the resource pack model type (for example, Anthropic Claude Opus) and the total GenAI Unit allocation for the bundle month. The bundle refill date is shown at the top of the page.
+#### Additional Details for Knowledge Base Resources
 
-Below the summary, the page shows consumption over a selected time range. You can switch between weekly (**W**), bundle month (**BM**), month to date (**MTD**), and six months (**6M**) views. The charts show:
+For knowledge base resources, you can also see details of the associated embeddings resource and vice versa. To learn more about embeddings, see the [Embedding vector](/agents/rag/#embedding-vector) section of *RAG in a Mendix App*.
 
-* **Monthly GenAI Units Consumption** – GenAI Units consumed per day, with a dashed line indicating the monthly allocation limit.
-* **Monthly Input Consumption** – Raw LLM input tokens consumed per day.
-* **Monthly Output Consumption** – Raw LLM output tokens consumed per day.
+#### Adjusting the GenAI Unit Capacity of a Resource
 
-#### What Are Tokens and GenAI Units?
-
-LLM tokens (not to be confused with Mendix Cloud Tokens) are what you pay for when consuming large language model services. Text input is first "tokenized," meaning it is broken down into smaller pieces where each piece represents a token. A good rule of thumb is that 100 tokens are around 75 English words, though this varies by model and language. Tokens sent to the model are called input tokens; tokens generated by the model are called output tokens.
-
-GenAI Units are the unit of measure for consumption across all models on a resource. Each model family has a different exchange rate. The exchange rate is the number of GenAI Units consumed per 1 million input or output tokens. A more capable model costs more GenAI Units per token than a less capable model.
-
-#### When Are Tokens and GenAI Units Consumed?
-
-Text generation resources consume both LLM input and output tokens, which are converted to GenAI Units using the model-specific exchange rate.
-
-Embeddings resources only consume input tokens. This is because only the generated embedding vectors are returned and the generated output is not tokenized.
-
-Knowledge base resources do not consume tokens directly. Uploading a document to a knowledge base connected to an embeddings resource consumes tokens in that embeddings resource.
-
-#### Exporting Consumption Data
-
-Click **Export** to export consumption data in CSV format. The export contains information about input tokens, output tokens, and dates. Days with no consumption are not exported.
+After a resource is provisioned, you can change its GenAI Unit capacity to match your actual usage. Company Admins can adjust the capacity through the GenAI Resources self-service in the Control Center. For more information, see the [Adjusting Resource GenAI Unit Capacity](/control-center/genai-resources-self-service/#adjusting-resource-genai-unit-capacity) section of *GenAI Resources*.

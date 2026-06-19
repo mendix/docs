@@ -12,7 +12,7 @@ aliases:
 
 ## Introduction
 
-This document guides you on building a smart app from scratch using a blank GenAI app template. Alternatively, you can use a starter app template to begin your build. For more details, see [Build a Smart App Using a Starter Template](/agents/agents-kit-2/how-to/starter-template/).
+This document guides you on building a smart app from scratch using a blank GenAI app template.
 
 ### Prerequisites
 

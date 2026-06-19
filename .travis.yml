@@ -39,8 +39,7 @@ branches:
 
 cache:
 # Cache node_modules to avoid re-downloading on every build
-# Cache Hugo's resource and cache directories for faster builds
-# See https://docs.travis-ci.com/user/caching/ and https://gohugo.io/configuration/caches/
+# See https://docs.travis-ci.com/user/caching/
   directories:
     - node_modules
     - resources             # Hugo's :resourceDir/_gen for processed assets and images
@@ -72,12 +71,7 @@ install:
   # Append output to hugo.log file to print at the end of the travis job
   # (see https://stackoverflow.com/questions/418896/how-to-redirect-output-to-a-file-and-stdout)
 
-
-
-  # OPTIMIZED: Let htmltest output normally to the console log without disk write throttling
-
-  - ./node_modules/.bin/hugo --environment $TRAVIS_BRANCH --templateMetrics --templateMetricsHints
-
+  -  ./node_modules/.bin/hugo --environment $TRAVIS_BRANCH 2>&1 | tee -a $TRAVIS_BUILD_DIR/hugo.log
 
   # normal htmltest takes too much memory - using a modified version which strips <aside> tag content
   # NB - Set pipefail so that Travis CI sees the return code from `tee` and not from `htmltest` so it will always build.
@@ -89,7 +83,7 @@ install:
   - chmod +x ./htmltest/htmltest
   # Run htmltest - convert red (91) and green (92) aixterm colors with 8-bit versions (31 and 32).
 
-  - ./htmltest/htmltest 2>&1 | sed "s/\o033\[91/\o033\[31/g; s/\o033\[92/\o033\[32/g"
+  - ./htmltest/htmltest 2>&1 | sed "s/\o033\[91/\o033\[31/g; s/\o033\[92/\o033\[32/g" |tee -a $TRAVIS_BUILD_DIR/hugo.log
 
 before_script:
 ##############
@@ -168,4 +162,3 @@ after_deploy:
 after_script:
 ############# Skipped
 # Anything placed here gets folded by Travis, so can't output useful information :-(.
-

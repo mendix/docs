@@ -10,9 +10,7 @@ buildDrafts=true
 buildExpired=true
 buildFuture=true
 
-# Disable print output and git info in development
-enableGitInfo = false
-
-[outputs]
-  section = ["HTML"]
-  page = ["HTML"]
+[markup.goldmark.renderHooks.image]
+  enableDefault = false
+[markup.goldmark.renderHooks.link]
+  enableDefault = false

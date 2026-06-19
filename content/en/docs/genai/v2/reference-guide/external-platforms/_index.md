@@ -16,4 +16,6 @@ The Mendix platform provides seamless integration with various platforms through
 
 This section contains documentation for GenAI connectors, including the [Mendix Cloud GenAI Connector](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/) and connectors to external platforms such as Amazon Bedrock and OpenAI.
 
+For guidance on how to integrate with an alternative connector, see [Build Your Own GenAI Connector](/agents/agents-kit-2/how-to/byo-connector/).
+
 ## Connectors

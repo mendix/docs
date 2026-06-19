@@ -62,7 +62,7 @@ Integrate AI capabilities into your applications with Agents Kit, a collection o
 | [Agent Commons](/agents/genai-for-mx/agent-commons/) | Build agentic functionality by defining, testing, and evaluating agents at runtime. Iterate on prompts and agent configurations without app redeployment through the integrated Agent Builder UI. | 10.24 |
 | [Agent Editor](/agents/genai-for-mx/agent-editor/) | Define agents as version-controlled documents in Studio Pro at design time. Author prompts, configure tools and knowledge bases, test locally, and deploy agents as part of your app model. | 11.9 |
 | [Conversational UI](/agents/genai-for-mx/conversational-ui/) | Create chat interfaces for full-screen, sidebar, or modal GenAI conversations. Monitor token consumption and trace interactions with UI features built on GenAI Commons. | 10.24 |
-| [GenAI Commons](/agents/genai-for-mx/commons/) | Use common capabilities that allow all GenAI connectors to be integrated with the other modules. You can also implement your own connector based on this module. | 10.24 |
+| [GenAI Commons](/agents/genai-for-mx/commons/) | Integrate GenAI connectors with other modules using common capabilities provided by this base module. Required dependency for both core and connector modules. You can also implement your own connector based on this module. | 10.24 |
 
 #### Connector Modules {#connectors}
 
@@ -103,49 +103,43 @@ Mendix [connectors](#connectors) offer direct support for the following models.
 
 | Models | Category | Input | Output | Additional Capabilities |
 | --- | --- | --- | --- | --- |
-| gpt-4, gpt-4-turbo, gpt-4o, gpt-4o mini, gpt-4.1, gpt-4.1-mini, gpt-4.1-nano, gpt-5.0, gpt-5.0-mini, gpt-5.0-nano, gpt-5.1, gpt-5.2, o1, o1-mini, o3, o3-mini, o4-mini | Chat completions | text, image, document (OpenAI only) | text | Function calling |
-| DALL·E 2, DALL·E 3, gpt-image-1 | Image generation | text | image | |
+| gpt and o family, such as gpt-5.5 and o4 | Chat completions | text, image, document (OpenAI only) | text | Function calling |
+| gpt-image-1, gpt-image-1.5, gpt-image-2 | Image generation | text | image | |
 | text-embedding-ada-002, text-embedding-3-small, text-embedding-3-large | Embeddings | text | embeddings | |
+
+For a list of all OpenAI models, see [Models](https://developers.openai.com/api/docs/models) in the OpenAI documentation.
 
 #### Mistral
 
 | Models | Category | Input | Output | Additional Capabilities |
 | --- | --- | --- | --- | --- |
-| Mistral Large 3, Mistral Medium 3.1, Mistral Small 3.2, Ministral 3 (3B, 8B, 14B), Magistral (Small, Medium) | Chat completions | text, image | text | Function calling |
-| Codestral, Devstral (Small, Medium), Open Mistral 7B, Mistral Nemo 12B | Chat completions | text | text | Function calling |
+| Mistral's generalist models such as Mistral Small 4, Mistral Medium 3.5, Mistral Large 3, and Ministral 3 (3B, 8B, 14B) | Chat completions | text, image | text | Function calling |
+| Codestral, Devstral | Chat completions | text | text | Function calling |
+| (Open) Mistral Nemo 12B | Chat completions | text | text |  |
 | Mistral Embed, Codestral Embed | Embeddings | text | embeddings | |
+
+For a list of all Mistral models, see [Models Overview](https://docs.mistral.ai/models/overview) in the Mistral documentation.
 
 #### Google Gemini
 
 | Models | Category | Input | Output | Additional Capabilities |
 | --- | --- | --- | --- | --- |
-| Gemini 2.5 Flash (+ Preview Sep 2025), Gemini 2.5 Flash-Lite (+ Preview Sep 2025), Gemini 2.5 Pro, Gemini Flash Latest, Gemini Flash-Lite Latest, Gemini Pro Latest | Chat completions | text, image | text | Function calling |
-| Gemini 3 Flash Preview, Gemini 3 Pro Preview | Chat completions | text, image | text | |
+| Gemini 2.5 Flash, Gemini 2.5 Flash-Lite, Gemini 2.5 Pro, Gemini Flash Latest, Gemini Flash-Lite Latest, Gemini Pro Latest | Chat completions | text, image | text | Function calling |
+| Gemini 3 Flash Preview, Gemini 3.1 Flash-Lite, Gemini 3.1 Pro Preview, Gemini 3.5 Flash | Chat completions | text, image | text | |
 
 #### Amazon Bedrock
 
 | Models | Category | Input | Output | Additional Capabilities |
 | --- | --- | --- | --- | --- |
-| Amazon Titan Text G1 - Express, Amazon Titan Text G1 - Lite, Amazon Titan Text G1 - Premier | Chat completions | text, document (except Titan Premier) | text | |
-| AI21 Jamba-Instruct | Chat completions | text | text | |
-| AI21 Labs Jurassic-2 (Text) | Chat completions | text | text | |
-| Amazon Nova Pro, Amazon Nova Lite | Chat completions | text, image, document | text | Function calling |
-| Amazon Titan Image Generator G1 | Image generation | text | image | |
-| Amazon Titan Embeddings Text v2 | Embeddings | text | embeddings | |
-| Anthropic Claude 3 Sonnet, Anthropic Claude 3.5 Sonnet, Anthropic Claude 3.5 Sonnet v2, Anthropic Claude 3 Haiku, Anthropic Claude 3 Opus, Anthropic Claude 3.5 Haiku, Anthropic Claude 4.5 Sonnet, Anthropic Claude 4.5 Haiku, Anthropic Claude 4.5 Opus | Chat completions | text, image, document | text | Function calling |
-| Cohere Command | Chat completions | text, document | text | |
-| Cohere Command Light | Chat completions | text | text | |
-| Cohere Command R, Cohere Command R+ | Chat completions | text, document | text | Function calling |
-| Cohere Embed English, Cohere Embed Multilingual | Embeddings | text | embeddings | |
-| DeepSeek, DeepSeek-R1 | Text | text | document | |
-| Meta Llama 2, MetaLlama 3 | Chat completions | text, document | text | |
-| Meta Llama 3.1 | Chat completions | text, document | text | Function calling |
-| Mistral AI Instruct | Chat completions | text, document | text | |
-| Mistral Large, Mistral Large 2 | Chat completions | text, document | text | Function calling |
-| Mistral Small | Chat completions | text | text | Function calling |
-| OpenAI gpt-oss-20B, gpt-oss-120b | Chat completions | text | text | |
+| Native support for models that support the Converse API, with providers including Anthropic Claude, DeepSeek, Meta, and OpenAI (OSS models). | Chat completions | text, document, image  | text | Function calling |
+| Native support for [models by Cohere](https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards-cohere.html), and configurable support for all other models that support the Invoke API. | Embeddings  | text | embeddings | |
+| Native support for Titan Image Generator G1 v2 (availability varies by region), and configurable support for all other models that support the Invoke API. | Image generation  | text | image | |
 
-For more details on limitations and supported model capabilities for the Bedrock Converse API used in the ChatCompletions operations, see [Supported models and model features](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference-supported-models-features.html) in the AWS documentation.
+{{% alert color="info" %}}
+For embeddings and image generation, models that support the Invoke API but lack native support can be supported after minor configuration changes.
+{{% /alert %}}
+
+For a list of all Bedrock Models, see [Models at a glance](https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html). To determine if a model supports the Converse or Invoke APIs, see the model details after selecting a model from the list.
 
 #### Connecting to Other Models
 

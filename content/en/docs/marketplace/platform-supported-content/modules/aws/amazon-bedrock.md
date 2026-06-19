@@ -232,7 +232,6 @@ To invoke a Bedrock agent for your Mendix app, do the following steps:
 * Chat Completions with History
 * Chat Completion without History
 * Embeddings with Cohere Embed
-* Embeddings with Amazon Titan Embeddings
 
 For more information about using this feature, refer to the [GenAI commons documentation](/agents/genai-for-mx/commons/#token-usage).
 
@@ -337,19 +336,19 @@ For Titan Image models, the `Image Generation: Add Titan Image Extension` operat
 
 #### Generate Embeddings (String) {#embeddings-single-string}
 
-The [Generate Embeddings (String)](/agents/genai-for-mx/commons/#embeddings-string) activity can be used to generate an embedding vector for a given input string with one of the Cohere Embed models or Titan Embeddings v2.
+The [Generate Embeddings (String)](/agents/genai-for-mx/commons/#embeddings-string) activity can be used to generate an embedding vector for a given input string with one of the Cohere Embed models.
 
-For Cohere Embed and Titan Embeddings, the request can be associated to their respective EmbeddingsOptions extension object which can be created with the [Embeddings Options: Add Cohere Embed Extension](#add-cohere-embed-extension) or [Embeddings Options: Add Titan Embeddings Extension](#add-titan-embeddings-extension) operation. Through this extension, it is possible to tailor the operation to more specific needs.
+For Cohere Embed, the request can be associated to their respective EmbeddingsOptions extension object which can be created with the [Embeddings Options: Add Cohere Embed Extension](#add-cohere-embed-extension) operation. Through this extension, it is possible to tailor the operation to more specific needs.
 
-Currently, embeddings are available for the Cohere Embed family and or Titan Embeddings v2.
+Currently, embeddings are available for the Cohere Embed family.
 
 #### Generate Embeddings (Chunk Collection) {#embeddings-chunk-collection}
 
-The [Generate Embeddings (Chunk Collection)](/agents/genai-for-mx/commons/#embeddings-chunk-collection) activity can be used to generate a collection of embedding vectors for a given collection of text chunks with one of the Cohere Embed models or Titan Embeddings v2.
+The [Generate Embeddings (Chunk Collection)](/agents/genai-for-mx/commons/#embeddings-chunk-collection) activity can be used to generate a collection of embedding vectors for a given collection of text chunks with one of the Cohere Embed models.
 
-For each model family, the request can be associated to an extension of the EmbeddingsOptions object which can be created with either the [Embeddings Options: Add Cohere Embed Extension](#add-cohere-embed-extension) or the [Embeddings Options: Add Titan Embeddings Extension](#add-titan-embeddings-extension) operation. Through this extension, it is possible to tailor the operation to more specific needs.
+For each model family, the request can be associated to an extension of the EmbeddingsOptions object which can be created with either the [Embeddings Options: Add Cohere Embed Extension](#add-cohere-embed-extension) operation. Through this extension, it is possible to tailor the operation to more specific needs.
 
-Currently, embeddings are available for the Cohere Embed family and Titan Embeddings v2.
+Currently, embeddings are available for the Cohere Embed family.
 
 #### Retrieve {#retrieve}
 
@@ -442,16 +441,6 @@ This operation corresponds to the **CohereEmbedOptions_Extension_Create** microf
 | Input | Output |
 | --- | --- |
 | `GenAICommons.EmbeddingsOptions (object)`, `InputType (enumeration)`, `EmbeddingTypes (enumeration, optional)`, `Truncate (enumeration, optional)` | `CohereEmbedOptions_Extension (object)`|
-
-#### Embeddings Options: Add Titan Embeddings Extension {#add-titan-embeddings-extension}
-
-Use this microflow to add a new TitanEmbeddingsOptions_Extension object to your `EmbeddingsOptions` object. You can use it to include parameters that are unique to Titan Embeddings models.
-
-This operation corresponds to the **TitanEmbeddingsOptions_Extension_Create** microflow.
-
-| Input | Output |
-| --- | --- |
-| `GenAICommons.EmbeddingsOptions (object)`, `Normalize (boolean)`| `TitanEmbeddingsOptions_Extension (object)`|
 
 #### Set Bedrock Retrieve Options {#add-r-extension}
 

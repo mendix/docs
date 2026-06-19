@@ -2,7 +2,7 @@
 title: "Connectors"
 url: /agents/agents-kit-2/reference-guide/connectors/
 weight: 30
-description: "Agents Kit 2: Provides information on connectors that enable seamless integration between Mendix applications and GenAI platforms and services."
+description: "Agents Kit 2: Reference documentation for connectors that integrate AI providers like OpenAI, Amazon Bedrock, Google Gemini, and Mistral with Mendix apps."
 no_list: false
 aliases:
     - /agents/reference-guide/connectors/

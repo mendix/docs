@@ -2,7 +2,7 @@
 title: "GenAI Commons"
 url: /agents/agents-kit-2/reference-guide/genai-for-mx/commons/
 linktitle: "GenAI Commons"
-description: "Agents Kit 2: Describes the purpose, configuration, and usage of the GenAI Commons module from Mendix Marketplace, which allows developers to integrate common generative AI principles and patterns into Mendix apps."
+description: "Agents Kit 2: Reference documentation for the GenAI Commons module, which provides the foundation for all Menidx GenAI connectors and modules."
 weight: 10
 aliases:
     - /agents/genai-for-mx/commons/

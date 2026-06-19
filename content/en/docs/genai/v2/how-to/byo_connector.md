@@ -3,7 +3,7 @@ title: "Build Your Own GenAI Connector"
 url: /agents/agents-kit-2/how-to/byo-connector/
 linktitle: "Build Your Own GenAI connector"
 weight: 70
-description: "Agents Kit 2: A tutorial that describes how to build your own GenAI connector"
+description: "Agents Kit 2: Build your own GenAI connector to integrate alternative AI providers with Agents Kit."
 aliases:
     - /agents/how-to/byo-connector/
     - /appstore/modules/genai/how-to/byo-connector/

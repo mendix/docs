@@ -3,7 +3,7 @@ title: "Prompt Engineering at Runtime"
 url: /agents/agents-kit-2/how-to/howto-prompt-engineering/
 linktitle: "Prompt Engineering at Runtime"
 weight: 30
-description: "Agents Kit 2: This document guides you through integrating Agent Commons into your Mendix application, allowing users to perform prompt engineering at runtime."
+description: "Agents Kit 2: Enable prompt engineering at runtime using Agent Commons to let users refine prompts without redeploying."
 aliases:
     - /agents/how-to/howto-prompt-engineering/
     - /appstore/modules/genai/how-to/howto-prompt-management/

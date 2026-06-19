@@ -2,7 +2,7 @@
 title: "Snowflake Cortex"
 url: /agents/agents-kit-2/reference-guide/snowflake-cortex/
 weight: 50
-description: "Agents Kit 2: Describes the Snowflake Cortex service."
+description: "Agents Kit 2: Reference documentation for integrating Snowflake Cortex AI capabilities into Mendix apps."
 aliases:
     - /agents/snowflake-cortex/
     - /appstore/modules/genai/snowflake-cortex/

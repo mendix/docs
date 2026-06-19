@@ -2,7 +2,7 @@
 title: "Agent Editor"
 url: /agents/agents-kit-2/reference-guide/genai-for-mx/agent-editor/
 linktitle: "Agent Editor"
-description: "Agents Kit 2: Describes the purpose, configuration, and usage of the Agent Editor and Agent Editor Commons modules from Mendix Marketplace that allow developers to build, define, and refine agents, and integrate GenAI principles and agentic patterns into their Mendix app."
+description: "Agents Kit 2: Reference documentation for the Agent Editor module, which enables defining agents as version-controlled documents in Studio Pro."
 weight: 20
 aliases:
     - /agents/genai-for-mx/agent-editor/

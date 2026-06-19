@@ -18,7 +18,6 @@ Currently, Agent Editor supports only [Mendix Cloud GenAI](/agents/mx-cloud-gena
 
 Before you begin, complete the following prerequisites:
 
-* Use an app running on Studio Pro 11.9.1 or above
 * Complete [Set Up Your App for Agent Creation](/agents/agents-kit-2/how-to/creating-agents/shared-setup/) to configure your application, knowledge base, domain model, UI, and function microflows
 * Install [Agent Editor](/agents/agents-kit-2/reference-guide/genai-for-mx/agent-editor/), including the [first-time setup](/agents/agents-kit-2/reference-guide/genai-for-mx/agent-editor/#setup) steps
 * Have access to Mendix Cloud GenAI text generation and knowledge base resources, and generate a key for both of these resource types from the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com/)

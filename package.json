@@ -23,9 +23,9 @@
   "homepage": "https://github.com/mendix/docs#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.19",
-    "docsy": "github:google/docsy#semver:0.10.0",
-    "hugo-extended": "^0.161.1",
-    "postcss": "^8.5.10",
+    "docsy": "github:google/docsy#semver:0.12.0",
+    "hugo-extended": "0.147.5",
+    "postcss": "^8.4.38",
     "postcss-cli": "^8.3.1"
   },
   "dependencies": {

@@ -12,7 +12,9 @@ This feature is in Public Beta. For more information, refer to [Release Status](
 
 ## Introduction
 
-Company guidelines provide organization-wide context for Maia, enabling relevant and compliant outputs across your Mendix development teams. In the absence of defined guidelines, Maia operates without shared knowledge of your company's standards, requiring repeated user input and producing inconsistent results.
+The **Company Guidelines** page offers an organization-wide foundation for Mendix development that enables Maia to generate outputs aligned with your standards. It provides a central place where you can define, manage, and maintain guidelines and standards that govern how teams build with Mendix.
+
+In the absence of defined guidelines, Maia operates without knowledge of your organization's requirements, so developers must manually reapply the same architectural guidelines, compliance policies, and naming conventions for each project. The **Company Guidelines** page eliminates this by giving Maia persistent, structured company context that is inherited automatically across all Maia capabilities.
 
 Company guidelines define the following:
 
@@ -20,7 +22,7 @@ Company guidelines define the following:
 * Reusable assets and conventions – Architecture and integration standards, development and design best practices.
 * Shared terminology – Domain language and company-specific terminology.
 
-By configuring company guidelines, you establish a cohesive foundation that ensures Maia understands your organization's requirements and produces outputs that align with your development standards.
+When you upload company guideline documents, the system extracts and categorizes guidelines, which you can then review and approve. Once approved, these guidelines are stored in a central library, and automatically served to Maia services, ensuring consistent AI generation across your software delivery lifecycle.
 
 You can upload, review, and apply company guidelines through the **Company Guidelines** page.
 

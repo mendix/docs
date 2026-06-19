@@ -3,7 +3,7 @@ title: "Mendix Cloud GenAI Connector"
 url: /agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/
 linktitle: "Mendix Cloud GenAI Connector"
 description: "Agents Kit 2: Describes how to configure and use the Mendix Cloud GenAI Connector, enabling you to integrate Mendix Cloud GenAI Resource Packs directly into your Mendix application."
-weight: 20
+weight: 5
 aliases:
     - /agents/mx-cloud-genai/mxgenai-connector/
     - /appstore/modules/genai/MxGenAI/
@@ -16,9 +16,7 @@ The [Mendix Cloud GenAI connector](https://marketplace.mendix.com/link/component
 
 ### Features
 
-In the current version, Mendix supports text generation (including function/tool calling, chat with images, and chat with documents), vector embedding generation, knowledge base storage, and retrieval of knowledge base chunks.
-
-Typical use cases for generative AI are described in more detail in the [Typical LLM Use Cases](/agents/get-started/#llm-use-cases) section of the *GenAI Concepts*.
+This connector supports text generation (including function/tool calling, chat with images, and chat with documents), vector embedding generation, knowledge base storage, and retrieval of knowledge base chunks.
 
 ### Prerequisites
 
@@ -36,18 +34,24 @@ The Mendix Cloud GenAI Connector module generates embeddings internally when int
 
 ## Installation
 
-Add the [dependencies](#dependencies) listed above from the Marketplace. To import this module into your app, follow the instructions in [Use Marketplace Content](/appstore/use-content/).
+Install the [Mendix Cloud GenAI connector](https://marketplace.mendix.com/link/component/239449) and its [dependencies](#dependencies) from Mendix Marketplace. To import these modules into your app, follow the instructions in [Use Marketplace Content](/appstore/use-content/).
+
+If you are using a GenAI starter app such as the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934), these modules come preinstalled.
 
 ## Configuration {#configuration}
 
 After installing the Mendix Cloud GenAI connector, you can find it in the **App Explorer** under the **Marketplace modules** section. The connector includes a domain model and several activities to integrate your app with the Mendix Cloud GenAI service. To implement the connector, use its actions in a microflow. You can find the Mendix GenAI actions in the microflow toolbox.
 
+Configuration steps vary: For [Agent Editor](https://marketplace.mendix.com/link/component/257918), configure resources in Studio Pro as described in the [Defining the Model](/agents/agents-kit-2/reference-guide/genai-for-mx/agent-editor/#define-model) and [Configuring the Knowledge Base Document](/agents/agents-kit-2/reference-guide/genai-for-mx/agent-editor/#define-knowledgebase) sections of *Agent Editor*. For [Agent Commons](https://marketplace.mendix.com/link/component/240371) or using connector operations directly, follow the steps below.
+
 To get started, follow these steps:
 
-* Configure the [Encryption module](/appstore/modules/encryption/#configuration) before you connect your app to Mendix Cloud GenAI.
-* Add the module role `MxGenAIConnector.Administrator` to your Administrator user roles in the **Security** settings of your app. 
+* Configure the [EncryptionKey Constant](/appstore/modules/encryption/#configuration).
+* Add the module role `MxGenAIConnector.Administrator` to your Administrator user roles in the **Security** settings of your app.
+    * If you are using a GenAI starter app, this module role is configured by default.
 * Add the `Configuration_Overview` page (**USE_ME** > **Configuration**) to your navigation, or add the `Snippet_Configuration` to a page that is already part of your navigation. Alternatively, register your key by using the `Configuration_RegisterByString` microflow.
-* Complete the runtime setup of the Mendix Cloud GenAI configuration by navigating to the page mentioned above. Import a key generated in the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com) or provided to you and click **Test Key** to validate its functionality. This key establishes a connection between the Mendix Cloud resources and your application and contains all the information required to set up the connection.
+    * If you are using a GenAI starter app, the configuration page is automatically added to your navigation and can be accessed by clicking **Settings** ({{% icon name="cog" %}}) > **Mendix Cloud GenAI Configuration** in your running app.
+* Run the app and navigate to the configuration page. Import a key generated in the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com) and click **Test Key** to validate its functionality. This key establishes a connection between the Mendix Cloud resources and your application and contains all the information required to set up the connection.
 
 {{% alert color="info" %}}
 When using an Embeddings Model Resource together with a Knowledge Base Resource, you do not need to import both keys. Importing the Knowledge Base Resource key automatically generates the connection details for the embeddings generation model.
@@ -83,7 +87,7 @@ For more inspiration or guidance on how to use the above-mentioned microflows in
 
 #### Chat Completions (Without History)
 
-The microflow activity [Chat Completions (without history)](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#chat-completions-without-history) supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request.
+The microflow activity [Chat Completions (without history)](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#chat-completions-without-history) supports scenarios where you do not need to send a list of historical messages as part of the request.
 
 #### Chat Completions (With History)
 
@@ -147,7 +151,7 @@ The model uses the file name when analyzing documents, which may introduce a pot
 
 ##### Collections 
 
-A knowledge base resource can comprise several collections. Each collection is tdesigned to hold numerous documents and serves as a logical grouping for related information based on its shared domain, purpose, or thematic focus.
+A knowledge base resource can comprise several collections. Each collection is designed to hold numerous documents and serves as a logical grouping for related information based on its shared domain, purpose, or thematic focus.
 
 Below is a diagram showing how resources are organized into separate collections. This approach allows multiple use cases to share a common resource while the option to only add the required collections to the conversation context is preserved. For example, both employee onboarding and IT ticket support require information about IT setup and equipment. However, only onboarding needs knowledge about the company culture and values, while only IT support requires access to historical support ticket data.
 

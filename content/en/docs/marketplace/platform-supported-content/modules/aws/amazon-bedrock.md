@@ -63,11 +63,11 @@ The AWS Authentication Connector supports both **static credentials** and **temp
 
 To use other authentication methods, you can create a `Credentials` object programmatically using custom logic and pass it to the operations using the following associations:
 
-* Chat Completions: associate the `Credentials` object with the `ChatCompletionsRequest_Extension`
-* Embeddings: associate the `Credentials` object with the `CohereEmbedOptions_Extension`
-* Image Generation: associate the `Credentials` object with the `TitanImageOptions_Extension`
-* Retrieve: associate the `Credentials` object with the `RetrieveRequest_Extension`
-* Retrieve and Generate: associate the `Credentials` object with the `RetrieveAndGenerateRequest_Extension`
+* Chat Completions - Associate the `Credentials` object with the `ChatCompletionsRequest_Extension`.
+* Embeddings - Associate the `Credentials` object with the `CohereEmbedOptions_Extension`.
+* Image Generation - Associate the `Credentials` object with the `TitanImageOptions_Extension`.
+* Retrieve - Associate the `Credentials` object with the `RetrieveRequest_Extension`.
+* Retrieve and Generate - Associate the `Credentials` object with the `RetrieveAndGenerateRequest_Extension`.
 
 ### Syncing Available Models, Knowledge Bases, and Agents
 

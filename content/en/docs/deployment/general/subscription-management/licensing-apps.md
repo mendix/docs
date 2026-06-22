@@ -23,7 +23,7 @@ Unlicensed apps, running outside Mendix Cloud, have some restrictions. These res
 
 ¹ More information on the capabilities of different license options is available on [Mendix Platform Pricing](https://www.mendix.com/pricing).
 
-² End-users of your app are classified as either internal or external. You must report this classification for licensing purposes by [implementing User Metering](/developerportal/deploy/implementing-user-metering/) for each end user of your app. The [`USAGE_METRICS_EMAIL_FIELDS` custom variable](/developerportal/deploy/environments-details/#custom-environment-variables) is deprecated and should no longer be used for user classification. Use User Metering instead to ensure accurate and consistent user classification across your application portfolio. Only end users whose Mendix accounts are marked as **Active** are counted towards the number of end users of the app.
+² End-users of your app are classified as either internal or external. You must report this classification for licensing purposes by [implementing User Metering](/developerportal/deploy/implementing-user-metering/) for each end-user of your app. The [`USAGE_METRICS_EMAIL_FIELDS` custom variable](/developerportal/deploy/environments-details/#custom-environment-variables) is deprecated and should no longer be used for user classification. Use User Metering instead to ensure accurate and consistent user classification across your application portfolio. Only end users whose Mendix accounts are marked as **Active** are counted toward the number of end users of the app.
 
 ³ Depending on the configuration of your chosen cloud, a container and runtime may be restarted if it appears unhealthy because the runtime has stopped.
 
@@ -169,17 +169,19 @@ For more instructions on how to do this, see [Linux Deployment](/developerportal
 
 ### Portable App Distribution{#portableappdistribution}
 
-To activate the license on a Mendix app using Portable App Distribution on either Docker, Cloud Foundry, or Unix-like servers, follow these steps:
+To activate the license for a Mendix app using Portable App Distribution on Docker, Cloud Foundry, or Unix-like servers, follow these steps:
 
 1. Open the `$ConfigName.conf` in `etc/configurations`.
-2.  Add the `LicenseID` and `LicenseKey` to your runtime configuration:
+2. Add the `LicenseID` and `LicenseKey` to your runtime configuration:
    
 ```bash
 # License configuration
-runtime.params {
-  License.LicenseID = <licenseId>
-  License.LicenseKey = <license_Key
+runtime {
+ license {
+   id = 
+    key = 
+  }
 }
 ```
 
-The values for these properties can also be passed by using environment variables for your deployment type, or by creating a separate config file.
+The values for these properties can also be passed by using the environment variables `RUNTIME_LICENSE_ID` and `RUNTIME_LICENSE_KEY` for the license related to your deployment target, or by creating a separate config file.

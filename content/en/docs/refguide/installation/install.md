@@ -149,6 +149,28 @@ To continue, you may accept the certificate for the current session by clicking 
 Accepting untrusted certificates can bring security risks. You should only do so after having received confirmation from your network administrator.
 {{% /alert %}}
 
+## Signing Certificates
+
+Mendix signs the certificates for Studio Pro on both Windows and macOS. 
+
+### Windows Certificate
+
+For Windows, Mendix uses Microsoft Trusted Signing, a service managed by Microsoft that provides short-lived certificates with a high trust level. Microsoft manages these certificates and provides the signing service for Mendix Studio Pro.
+
+For more information, see [Artifact Signing](https://azure.microsoft.com/en-us/products/artifact-signing) (formerly Trusted Signing) on the Microsoft website.
+
+{{% alert color="info" %}}
+To correctly verify modules signed by Trusted Signing, your computer must have the "Microsoft Identity Verification Root Certificate Authority 2020" certificate authority (CA) installed. By default, root certificates are installed automatically if the computer is connected to the internet. If the **Automatic root certificates update** setting is disabled or the computer is offline, you must manually install this root certificate into the certificate store of **Local Computer** under **Trusted Root Certification Authorities**. To download the certificate, see [PKI Repository - Microsoft PKI Services](https://www.microsoft.com/pkiops/docs/repository.htm). 
+{{% /alert %}} 
+
+### Apple Certificate
+
+For macOS, Mendix uses a certificate provided by Apple through the Apple Developer Program. This certificate allows Mendix to sign Studio Pro binaries and use the Apple notarization service, which checks the installer and stores evidence in the Apple trust store.
+
+When you install Studio Pro, macOS does not display any warning about the installer.
+
+For an introduction to the Apple Developer Program with details about their PKI, see [Inside Code Signing: Certificates](https://developer.apple.com/documentation/technotes/tn3161-inside-code-signing-certificates) on the Apple website. 
+
 ## Next Steps
 
 Congratulations on installing Mendix Studio Pro! Now you are ready to start modeling your apps. 

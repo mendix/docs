@@ -6,13 +6,7 @@ description: "These release notes showcase each release of the iOS and Android M
 ---
 
 {{% alert color="warning" %}}
-{{% alert color="warning" %}}
-Make It Native 8 is no longer available in Mendix Marketplace and is not supported. For still building Make It Native 8, please refer to [the GitHub Make it Native App repository](https://github.com/mendix/make-it-native).
-{{% /alert %}}
-{{% /alert %}}
-
-{{% alert color="info" %}}
-Make It Native 8 should only be used with the LTS version of Mendix 8.
+Make It Native 8 is no longer available in Mendix Marketplace and is not supported. 
 {{% /alert %}}
 
 For more information on the Make It Native app, see [Getting the Make It Native App](/refguide9/getting-the-make-it-native-app/).

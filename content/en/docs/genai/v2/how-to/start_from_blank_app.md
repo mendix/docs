@@ -59,7 +59,7 @@ Selecting the infrastructure for integrating GenAI into your Mendix application 
 * [Mendix Cloud GenAI Resources Packs](/agents/mx-cloud-genai/resource-packs/): The [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) integrates LLMs by dragging and dropping common operations from its toolbox in Studio Pro.
 * [OpenAI](/agents/agents-kit-2/reference-guide/external-connectors/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) supports both OpenAI's platform and Microsoft Foundry.
 
-* [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/): The [Amazon Bedrock Connector](https://marketplace.mendix.com/link/component/215042) allows you to leverage Amazon Bedrock’s fully managed service to integrate foundation models from Amazon and leading AI providers. 
+* [Amazon Bedrock](/agents/agents-kit-2/reference-guide/external-connectors/bedrock/): The [Amazon Bedrock Connector](https://marketplace.mendix.com/link/component/215042) allows you to leverage Amazon Bedrock’s fully managed service to integrate foundation models from Amazon and leading AI providers. 
 
 * Your Own Connector: Optionally, if you prefer a custom connector, you can integrate your chosen infrastructure. However, this document focuses on the OpenAI and Bedrock connectors, as they offer comprehensive support and ease of use to get started.
 
@@ -178,7 +178,7 @@ Follow the steps below to configure Amazon Bedrock for your application:
    * Click **Save & Sync Data** to ensure your changes are applied.
 
 {{% alert color="info" %}}
-If you encounter any issues while using the Amazon Bedrock connector, see the [Troubleshooting](/appstore/modules/aws/amazon-bedrock/#troubleshooting) section of the *Amazon Bedrock*.
+If you encounter any issues while using the Amazon Bedrock connector, see the [Troubleshooting](/agents/agents-kit-2/reference-guide/external-connectors/bedrock/#troubleshooting) section of the *Amazon Bedrock*.
 {{% /alert %}}
 
 ## Testing and Troubleshooting

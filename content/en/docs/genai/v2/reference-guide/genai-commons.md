@@ -37,7 +37,7 @@ If you start from a blank app or have an existing app where you want to include 
 
 ## Implementation {#implementation}
 
-GenAI Commons is the foundation of large language model implementations within the [Mendix Cloud GenAI Connector](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/), [OpenAI connector](/agents/agents-kit-2/reference-guide/external-connectors/openai/), and the [Amazon Bedrock connector](/appstore/modules/aws/amazon-bedrock/). You can also use it to build other GenAI service implementations by reusing the provided domain model and exposed actions.
+GenAI Commons is the foundation of large language model implementations within the [Mendix Cloud GenAI Connector](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/), [OpenAI connector](/agents/agents-kit-2/reference-guide/external-connectors/openai/), and the [Amazon Bedrock connector](/agents/agents-kit-2/reference-guide/external-connectors/bedrock/). You can also use it to build other GenAI service implementations by reusing the provided domain model and exposed actions.
 
 GenAI Commons defines additional capabilities typically found in chat completion APIs, such as image processing (vision) and tools (function calling). Whether these capabilities are implemented and supported by the LLM depends on the connector module you choose. To learn which additional capabilities a connector supports and for which models these can be used, refer to the documentation of that connector.
 

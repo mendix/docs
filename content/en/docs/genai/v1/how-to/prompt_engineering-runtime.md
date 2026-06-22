@@ -61,7 +61,7 @@ If you are using a GenAI starter app such as the Blank GenAI app, you can skip a
 To enable generative AI capabilities, install and configure the [Mendix Cloud GenAI Connector](/agents/agents-kit-1/mx-cloud-genai/mxgenai-connector/) and its dependencies from the Mendix Marketplace. If you are using a GenAI starter app such as the Blank GenAI app, you can skip the installation and just follow the [configuration instructions](/agents/agents-kit-1/mx-cloud-genai/mxgenai-connector/#configuration).
 
 {{% alert color="info" %}}
-This example uses the Mendix Cloud GenAI Connector. Alternatively, you can install and configure an [external connector](/agents/agents-kit-1/reference-guide/connectors/) for any provider with a connector that is compatible with [GenAICommons](/agents/agents-kit-1/genai-for-mx/commons/). This includes [OpenAI](/agents/agents-kit-1/reference-guide/external-connectors/openai/) and [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). 
+This example uses the Mendix Cloud GenAI Connector. Alternatively, you can install and configure an [external connector](/agents/agents-kit-1/reference-guide/connectors/) for any provider with a connector that is compatible with [GenAICommons](/agents/agents-kit-1/genai-for-mx/commons/). This includes [OpenAI](/agents/agents-kit-1/reference-guide/external-connectors/openai/) and [Amazon Bedrock](/agents/agents-kit-1/reference-guide/external-connectors/bedrock/). 
 {{% /alert %}}
 
 ## Verifying Setup {#verification}

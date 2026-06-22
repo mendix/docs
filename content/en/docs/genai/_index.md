@@ -6,6 +6,8 @@ description: "Describes how to integrate agentic and generative AI into Mendix a
 weight: 40
 aliases:
     - /appstore/modules/genai/
+cascade:
+    - content_type: "Agents"
 ---
 
 ## Introduction

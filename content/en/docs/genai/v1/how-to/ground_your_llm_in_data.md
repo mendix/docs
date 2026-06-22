@@ -23,7 +23,7 @@ Before implementing this capability into your app, make sure you meet the follow
 
 * Start from scratch: to simplify your first use case, start building from a preconfigured setup [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934). For more information, see [Build a Chatbot from Scratch Using the Blank GenAI App](/agents/agents-kit-1/how-to/blank-app/). 
 
-* Install the [Mendix GenAI Connector](https://marketplace.mendix.com/link/component/239449) and [GenAICommons](https://marketplace.mendix.com/link/component/239448) modules (version 2.2.0 and above) from the Mendix Marketplace. If you start with the Blank GenAI App, you can skip this installation.
+* Install the [Mendix GenAI Connector](https://marketplace.mendix.com/link/component/239449) and [GenAICommons](https://marketplace.mendix.com/link/component/239448) modules (version 2.2.0 and above) from Mendix Marketplace. If you start with the Blank GenAI App, you can skip this installation.
 
 * Set up a Knowledge Base resource within the [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/). 
 
@@ -205,7 +205,7 @@ For the application to function as expected, ensure that the following microflow
 
 Before testing, ensure that you have completed the Mendix Cloud GenAI configuration as described in the [Build a Chatbot from Scratch Using the Blank GenAI App](/agents/agents-kit-1/how-to/blank-app/), particularly the [Mendix Cloud GenAI Configuration](/agents/agents-kit-1/how-to/blank-app/#mendix-cloud-genai-configuration) section. 
 
-To test the Chatbot, click on the **Create Demo Data and Populate KB** option to populate the knowledge base and go to the **Chatbot** icon to open the chatbot interface. Start interacting with your chatbot by typing in the chat box something related to your knowledge base.
+To test the Chatbot, click the **Create Demo Data and Populate KB** option to populate the knowledge base and go to the **Chatbot** icon to open the chatbot interface. Start interacting with your chatbot by typing in the chat box something related to your knowledge base.
 For example, *My computer crashes every time, what can I do?*
 
 Congratulations! You grounded your LLM in data and your chatbot is now ready to use.

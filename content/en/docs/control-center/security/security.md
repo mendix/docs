@@ -17,6 +17,10 @@ The **Settings** page in the **Security** category in Control Center allows you 
 
 ## Security Settings Tab
 
+### Free App Deployment
+
+With [Free Apps](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/#deploy-free-app), you can deploy your app to Mendix Cloud from Studio Pro. The ability to deploy Free Apps can be blocked at the company level by disabling **Free App Deployment**.
+
 ### Password Policy
 
 Mendix enforces a 90-day password validity period for all platform passwords used to sign in to the Mendix Platform or Studio Pro. 

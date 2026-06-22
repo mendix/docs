@@ -3,7 +3,7 @@ title: "Reference Guide"
 url: /agents/agents-kit-2/reference-guide/
 linktitle: "Reference Guide"
 weight: 20
-description: "Agents Kit 2: Provides references of Mendix's GenAI Modules and Tools."
+description: "Agents Kit 2: Technical reference documentation for Agents Kit 2 modules and connectors."
 no_list: false
 aliases:
     - /agents/reference-guide/
@@ -13,6 +13,8 @@ aliases:
 
 ## Introduction {#introduction}
 
-This guide provides comprehensive information on the tools and modules available within the Mendix platform. It helps you explore how to enhance your applications by integrating Generative AI and how each tool supports this process. Additionally, it includes technical reference guides to ensure you have all the information needed for effective implementation and optimization.
+This section provides technical reference documentation for Agents Kit 2 modules and connectors. Find detailed information on core modules, connectors for integrating with AI providers, and MCP modules.
+
+For an overview of available components, see [Agents Kit Components](/agents/agents-kit-2/#components).
 
 ## Documents in This Category

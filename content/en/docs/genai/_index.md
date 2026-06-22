@@ -94,4 +94,4 @@ In addition to the models listed above, you can also connect to other models by 
 
 * To connect to other [foundation models](https://docs.aws.amazon.com/bedrock/latest/userguide/models-features.html) and implement them in your app, use the [Amazon Bedrock connector](/agents/reference-guide/external-connectors/bedrock/).
 * To connect to [Snowflake Cortex LLM](https://docs.snowflake.com/en/sql-reference/functions/complete-snowflake-cortex) functions, [configure the Snowflake AI Data Connector for Snowflake Cortex Analyst](/appstore/connectors/snowflake/snowflake-ai-data-connector/#cortex-analyst).
-* To implement your own connector that is compatible with the other components, use the [GenAI Commons](/agents/agents-kit-2/genai-for-mx/commons/) interface and see [How to Build Your Own GenAI Connector](/agents/agents-kit-2/how-to/byo-connector/).
+* To implement your own connector that is compatible with the other components, use the [GenAI Commons](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/) interface and see [How to Build Your Own GenAI Connector](/agents/agents-kit-2/how-to/byo-connector/).

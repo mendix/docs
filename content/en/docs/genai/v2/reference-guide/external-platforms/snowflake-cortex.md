@@ -1,8 +1,8 @@
 ---
 title: "Snowflake Cortex"
-url: /agents/agents-kit-2/snowflake-cortex/
+url: /agents/agents-kit-2/reference-guide/snowflake-cortex/
 weight: 50
-description: "Agents Kit 2: Describes the Snowflake Cortex service."
+description: "Agents Kit 2: Reference documentation for integrating Snowflake Cortex AI capabilities into Mendix apps."
 aliases:
     - /agents/snowflake-cortex/
     - /appstore/modules/genai/snowflake-cortex/
@@ -18,7 +18,7 @@ To allow your Mendix app to use Snowflake Cortex GenAI functionalities, install 
 
 Mendix also offers a [Snowflake showcase app](https://marketplace.mendix.com/link/component/225845), which you can use as an example of how to implement the Cortex functionalities in your own app.
 
-## Functionalities Available in the Snowflake Showcase App
+## Functionalities Available in the Snowflake Showcase App {#functionalities-available-in-the-snowflake-showcase-app}
 
 The Snowflake showcase app shows an example implementation of the following GenAI functionalities:
 

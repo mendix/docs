@@ -1,6 +1,6 @@
 ---
 title: "Snowflake Cortex"
-url: /agents/agents-kit-1/snowflake-cortex/
+url: /agents/agents-kit-1/reference-guide/snowflake-cortex/
 weight: 50
 description: "Agents Kit 1: Describes the Snowflake Cortex service."
 aliases:

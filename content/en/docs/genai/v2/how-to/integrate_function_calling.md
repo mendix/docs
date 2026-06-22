@@ -3,7 +3,7 @@ title: "Integrate Function Calling into Your Mendix App"
 url: /agents/agents-kit-2/how-to/howto-functioncalling/
 linktitle: "Integrating Function Calling"
 weight: 40
-description: "Agents Kit 2: This document guides you through integrating and implementing function calling in your Mendix application to enhance functionality."
+description: "Agents Kit 2: Integrate function calling in your Mendix app to enhance functionality."
 aliases:
     - /agents/how-to/howto-functioncalling/
     - /appstore/modules/genai/using-genai/howto-functioncalling/
@@ -12,7 +12,7 @@ aliases:
 
 ## Introduction
 
-This document explains how to use function calling in your smart app. To do this, you can use your existing app or follow the [Build a Smart App from a Blank GenAI App](/agents/agents-kit-2/how-to/blank-app/) guide to start from scratch, as demonstrated in the sections below.
+This document explains how to use function calling in your smart app.
 
 Through this document, you will:
 
@@ -23,11 +23,8 @@ Through this document, you will:
 
 Before integrating function calling into your app, make sure you meet the following requirements:
 
-* An existing app: To simplify your first use case, start building from a preconfigured set up [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934). For more information, see [Build a Chatbot from Scratch Using the Blank GenAI App](/agents/agents-kit-2/how-to/blank-app/). 
-
-* Be on Mendix Studio Pro 10.12.4 or higher.
-
-* Install the [Mendix GenAI Connector](https://marketplace.mendix.com/link/component/239449) and [GenAICommons](https://marketplace.mendix.com/link/component/239448) modules (version 2.2.0 and above) from the Mendix Marketplace. If you start with the Blank GenAI App, you can skip this installation.
+* Use a GenAI starter app such as the [Blank GenAI Starter App](https://marketplace.mendix.com/link/component/227934), or add to an app that you have already built.
+    * If you are not using a GenAI starter app, install the [Mendix GenAI Connector](https://marketplace.mendix.com/link/component/239449) and [GenAICommons](https://marketplace.mendix.com/link/component/239448) modules from Mendix Marketplace. The starter apps have these dependencies preinstalled.
 
 * Intermediate knowledge of the Mendix platform: Familiarity with Mendix Studio Pro, microflows, and modules.
 
@@ -41,14 +38,14 @@ Before integrating function calling into your app, make sure you meet the follow
 
 In this example, two functions will be implemented with the following purposes:
 
-1. Retrieving the display name of the user when an email is requested in a chatbot, allows the information to be automatically filled for the end user.
+1. Retrieving the display name of the user when an email is requested in a chatbot, allows the information to be automatically filled for the end-user.
 2. Extracting bank holidays in the Netherlands using an API. For this example, a public API from [Open Holidays API](https://www.openholidaysapi.org/en/) is used.
 
 ### Choosing the Infrastructure {#infrastructure}
 
 Selecting the infrastructure for integrating GenAI into your Mendix application is the first step. Depending on your use case and preferences, you can choose from the following options:
 
-* [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/): The [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) allows you to utilize Mendix Cloud GenAI Resource Packs directly within your Mendix application.
+* [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/): The [Mendix Cloud GenAI Connector](https://marketplace.mendix.com/link/component/239449) allows you to use Mendix Cloud GenAI Resource Packs directly within your Mendix application.
 
 * [OpenAI](/agents/agents-kit-2/reference-guide/external-connectors/openai/): The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) supports both OpenAI's platform and Microsoft Foundry.
 
@@ -66,7 +63,7 @@ To make the functions work, create and adjust certain microflows as shown below.
 
 1. Locate the pre-built microflow `ChatContext_ChatWithHistory_ActionMicroflow` in the **ConversationalUI** > **USE_ME** > **Conversational UI** > **Action microflow examples** folder and copy it into your `MyFirstBot` module.
 
-2. Locate the pre-built microflow `ACT_FullScreenChat_Open` in **ConversationalUI > USE_ME > Pages**. Right-click on the microflow and select **Include in project**.
+2. Locate the pre-built microflow `ACT_FullScreenChat_Open` in **ConversationalUI > USE_ME > Pages**. Right-click the microflow and select **Include in project**.
 
 3. Locate the `New Chat` action in the `ACT_FullScreenChat_Open` microflow. Inside this action, change the `Action microflow` input parameter to your new `MyFirstBot.ChatContext_ChatWithHistory_ActionMicroflow` from your `MyFirstBot` module.
 
@@ -117,7 +114,7 @@ Create a new microflow with the name `GetCurrentUserName_Function`.
     * Store in variable: `Yes`
     * Variable name: `HolidayJSON`
 
-2. Right-click on the `Call REST` action and select `Set $HolidayJSON` as the return value. 
+2. Right-click the `Call REST` action and select `Set $HolidayJSON` as the return value. 
 
 ### Calling the Functions {#calling-the-functions}
 
@@ -147,7 +144,7 @@ As shown in the image, two key steps must be completed to enable the execution o
 
 ### Optional: Changing the System Prompt {#edit-systemprompt}
 
-Optionally, you can change the system prompt to provide the model additional instructions, for example, the tone of voice. Therefore, follow a similar approach described in the [Build a Chatbot from Scratch Using the Blank GenAI App](/agents/agents-kit-2/how-to/blank-app/#changing-system-prompt).
+Optionally, you can change the system prompt to provide the model with additional instructions, such as specifying its the tone.
 
 1. Open the copied `ACT_FullScreenChat_Open` microflow from your `MyFirstBot` module.
 2. Locate the **New Chat** action.
@@ -157,15 +154,12 @@ Optionally, you can change the system prompt to provide the model additional ins
 
 ### Optional: Setting User Access and Approval
 
-When adding tools to a request, you can optionally set a [User Access Approval](/agents/agents-kit-2/genai-for-mx/commons/#enum-useraccessapproval) value to control if the user first needs to confirm the tool before execution or if the tool is even visible to the user. To show different title and description for the tool, you may modify the `DiplayTitle` and `DisplayDescription` which are only used for display and can thus be less technical or detailed than the `Name` and `Description` of the tool.
+When adding tools to a request, you can optionally set a [User Access Approval](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#enum-useraccessapproval) value to control if the user first needs to confirm the tool before execution or if the tool is even visible to the user. To show different title and description for the tool, you may modify the `DiplayTitle` and `DisplayDescription` which are only used for display and can thus be less technical or detailed than the `Name` and `Description` of the tool.
 
 ## Testing and Troubleshooting {#testing-troubleshooting}
 
-Before testing, ensure that you have completed the Mendix Cloud GenAI, OpenAI, or Bedrock configuration as described in the [Build a Chatbot from Scratch Using the Blank GenAI App](/agents/agents-kit-2/how-to/blank-app/), particularly the [Infrastructure Configuration](/agents/agents-kit-2/how-to/blank-app/#config) section. 
+Before testing, ensure that you have completed the connector's configuration as described in its documentation. For example, if you are using Mendix Cloud GenAI, follow the intructions in the [Configuration](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/#configuration) section of *Mendix Cloud GenAI Connector*.
 
-To test the Chatbot, go to the **Home** icon to open the chatbot interface. Start interacting with your chatbot by typing in the chat box.
-For example, type—`Write a message to my colleague Max asking about a meeting to discuss the content for our next GenAI how-to.` or `How many bank holidays do I have in December?`
-
-Congratulations! Your chatbot is now ready to use.
+To test the chatbot, go to the **Home** icon to open the chatbot interface. Start interacting with your chatbot by typing in the chat box. For example, type `Write a message to my colleague Max asking about a meeting to discuss the content for our next GenAI how-to.` or `How many bank holidays do I have in December?`.
 
 If an error occurs, check the **Console** in Studio Pro for detailed information to assist in resolving the issue.

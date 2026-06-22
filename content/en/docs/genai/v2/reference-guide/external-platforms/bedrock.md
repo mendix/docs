@@ -1,7 +1,7 @@
 ---
 title: "Amazon Bedrock"
 url: /agents/agents-kit-2/reference-guide/external-connectors/bedrock/
-description: "Agents Kit 2: Describes the Amazon Bedrock connector."
+description: "Agents Kit 2: Describes how to configure and use the Amazon Bedrock connector, which integrates foundation models from Amazon and leading AI providers."
 weight: 20
 aliases:
     - /agents/reference-guide/external-connectors/bedrock/

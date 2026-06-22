@@ -2,7 +2,7 @@
 title: "MCP Client"
 url: /agents/agents-kit-2/mcp-modules/mcp-client/
 linktitle: "MCP Client"
-description: "Agents Kit 2: This document describes the purpose, configuration, and usage of the MCP Client module from the Mendix Marketplace that allows developers to consume tools and prompts from external MCP servers."
+description: "Agents Kit 2: Reference documentation for the MCP Client module, which consumes tools and prompts from external MCP servers."
 weight: 20
 aliases:
     - /agents/mcp-modules/mcp-client/
@@ -35,8 +35,7 @@ If you start from a standard Mendix blank app or have an existing project, you m
 
 ## Dependencies {#dependencies}
 
-* Mendix Studio Pro version 10.24.0 or above
-* [GenAI Commons module](/agents/agents-kit-2/genai-for-mx/commons/)
+* [GenAI Commons module](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/)
 
 ## Configuration
 
@@ -52,7 +51,7 @@ See the **Example Implementations** folder inside the module containing example 
 
 #### Protocol Version
 
-When creating an MCP client, specify a `ProtocolVersion`. On the official MCP documentation, you can review the differences between the protocol versions in the [changelog](https://modelcontextprotocol.io/specification/2025-03-26/changelog). The MCP Client module currently supports `v2024-11-05` with the HTTP+SSE transport and `v2025-03-26` with the streamable HTTP transport, which is the new standard method. MCP servers should support the same version as the client. Note that Mendix supports the capabilities provided by the MCP Java SDK.
+When creating an MCP client, specify a `ProtocolVersion`. On the official MCP documentation, you can review the differences between the protocol versions in the [changelog](https://modelcontextprotocol.io/specification/2025-03-26/changelog). The MCP Client module supports `v2024-11-05` with HTTP+SSE transport and `v2025-03-26` with streamable HTTP transport. MCP servers must support the same version as the client. Note that Mendix supports the capabilities provided by the MCP Java SDK.
 
 ### Discovering Resources {#discover-resources}
 
@@ -70,7 +69,7 @@ For both actions, you can pass an `ArgumentCollection` if the prompt or tool req
 
 To add all tools from an MCP server to a `GenAICommons.Request`, you can use the `Request: Add all tools from MCP server` toolbox action. This action will first list all tools from the provided MCP server configuration, iterate over them, and adding them one by one to the tool collection. The request can then be passed to a Chat Completions operation. 
 
-You can also find an example [action microflow](/agents/agents-kit-2/genai-for-mx/conversational-ui/#action-microflow) `ChatCompletions_MCPClient_ActionMicroflow` in the **Example Implementations** folder of the module. This microflow demonstrates how a Conversational UI chat action including MCP tools can be facilitated. Duplicate and include this microflow into your custom module and modify it according to your requirements.
+You can also find an example [action microflow](/agents/agents-kit-2/reference-guide/genai-for-mx/conversational-ui/#action-microflow) `ChatCompletions_MCPClient_ActionMicroflow` in the **Example Implementations** folder of the module. This microflow demonstrates how a Conversational UI chat action including MCP tools can be facilitated. Duplicate and include this microflow into your custom module and modify it according to your requirements.
 
 Currently, there is no out of the box solution available for using prompts from MCP. You can get inspired by the MCP Client example in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475), where the prompts are displayed to the user to start a conversation in a chat interface.
 

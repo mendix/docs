@@ -3,7 +3,7 @@ title: "Mendix Cloud GenAI Connector"
 url: /agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/
 linktitle: "Mendix Cloud GenAI Connector"
 description: "Agents Kit 2: Describes how to configure and use the Mendix Cloud GenAI Connector, enabling you to integrate Mendix Cloud GenAI Resource Packs directly into your Mendix application."
-weight: 20
+weight: 5
 aliases:
     - /agents/mx-cloud-genai/mxgenai-connector/
     - /appstore/modules/genai/MxGenAI/
@@ -16,9 +16,7 @@ The [Mendix Cloud GenAI connector](https://marketplace.mendix.com/link/component
 
 ### Features
 
-In the current version, Mendix supports text generation (including function/tool calling, chat with images, and chat with documents), vector embedding generation, knowledge base storage, and retrieval of knowledge base chunks.
-
-Typical use cases for generative AI are described in more detail in the [Typical LLM Use Cases](/agents/get-started/#llm-use-cases) section of the *GenAI Concepts*.
+This connector supports text generation (including function/tool calling, chat with images, and chat with documents), vector embedding generation, knowledge base storage, and retrieval of knowledge base chunks.
 
 ### Prerequisites
 
@@ -36,18 +34,27 @@ The Mendix Cloud GenAI Connector module generates embeddings internally when int
 
 ## Installation
 
-Add the [dependencies](#dependencies) listed above from the Marketplace. To import this module into your app, follow the instructions in [Use Marketplace Content](/appstore/use-content/).
+Install the [Mendix Cloud GenAI connector](https://marketplace.mendix.com/link/component/239449) and its [dependencies](#dependencies) from Mendix Marketplace. To import these modules into your app, follow the instructions in [Use Marketplace Content](/appstore/use-content/).
+
+If you are using a GenAI starter app such as the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934), these modules come preinstalled.
 
 ## Configuration {#configuration}
 
 After installing the Mendix Cloud GenAI connector, you can find it in the **App Explorer** under the **Marketplace modules** section. The connector includes a domain model and several activities to integrate your app with the Mendix Cloud GenAI service. To implement the connector, use its actions in a microflow. You can find the Mendix GenAI actions in the microflow toolbox.
 
-To get started, follow these steps:
+Before using the connector, complete these configuration steps:
 
-* Configure the [Encryption module](/appstore/modules/encryption/#configuration) before you connect your app to Mendix Cloud GenAI.
-* Add the module role `MxGenAIConnector.Administrator` to your Administrator user roles in the **Security** settings of your app. 
-* Add the `Configuration_Overview` page (**USE_ME** > **Configuration**) to your navigation, or add the `Snippet_Configuration` to a page that is already part of your navigation. Alternatively, register your key by using the `Configuration_RegisterByString` microflow.
-* Complete the runtime setup of the Mendix Cloud GenAI configuration by navigating to the page mentioned above. Import a key generated in the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com) or provided to you and click **Test Key** to validate its functionality. This key establishes a connection between the Mendix Cloud resources and your application and contains all the information required to set up the connection.
+1. In Studio Pro, add a random 32-character string value for the [EncryptionKey Constant](/appstore/modules/encryption/#configuration).
+2. Add the module role `MxGenAIConnector.Administrator` to your Administrator user roles in the **Security** settings of your app.
+    * If you are using a GenAI starter app, this module role is configured by default.
+
+Next, complete the following configuration steps according to the module you are using:
+
+* **Agent Editor** – Configure resources directly in Studio Pro, as described in [Defining the Model](/agents/agents-kit-2/reference-guide/genai-for-mx/agent-editor/#define-model) and [Configuring the Knowledge Base Document](/agents/agents-kit-2/reference-guide/genai-for-mx/agent-editor/#define-knowledgebase) sections of *Agent Editor*.
+* **Agent Commons or direct connector operations** – Complete these steps:
+    1. Add the `Configuration_Overview` page (**USE_ME** > **Configuration**) to your navigation, or add the `Snippet_Configuration` to a page that is already part of your navigation. Alternatively, register your key by using the `Configuration_RegisterByString` microflow.
+        * If you are using a GenAI starter app, you can skip this step. The configuration page is automatically added to your navigation and can be accessed by clicking **Settings** ({{% icon name="cog" %}}) > **Mendix Cloud GenAI Configuration** in your running app.
+    2. Run the app and navigate to the configuration page. Import a key generated in the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com) and click **Test Key** to validate its functionality. This key establishes a connection between the Mendix Cloud resources and your application and contains all the information required to set up the connection.
 
 {{% alert color="info" %}}
 When using an Embeddings Model Resource together with a Knowledge Base Resource, you do not need to import both keys. Importing the Knowledge Base Resource key automatically generates the connection details for the embeddings generation model.
@@ -75,7 +82,7 @@ After following the general setup above, you are ready to use the chat completio
 
 These microflows expect a `DeployedModel` as input to determine the connection details. 
 
-In chat completions, system prompts and user prompts are two key components that guide the language model in generating relevant and contextually appropriate responses. For more information on prompt engineering, see the [Read More](#readmore) section. Different exposed microflow activities may require different prompts and logic for how prompts must be passed, as described in the following sections. For more information on message roles, see the [ENUM_MessageRole](/agents/agents-kit-2/genai-for-mx/commons/#enum-messagerole) enumeration in *GenAI Commons*.
+In chat completions, system prompts and user prompts are two key components that guide the language model in generating relevant and contextually appropriate responses. For more information on prompt engineering, see the [Read More](#readmore) section. Different exposed microflow activities may require different prompts and logic for how prompts must be passed, as described in the following sections. For more information on message roles, see the [ENUM_MessageRole](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#enum-messagerole) enumeration in *GenAI Commons*.
 
 The chat completion operations support [Function Calling](#function-calling), [Vision](#vision), and [Document Chat](#document-chat).
 
@@ -83,25 +90,25 @@ For more inspiration or guidance on how to use the above-mentioned microflows in
 
 #### Chat Completions (Without History)
 
-The microflow activity [Chat Completions (without history)](/agents/agents-kit-2/genai-for-mx/commons/#chat-completions-without-history) supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request.
+The microflow activity [Chat Completions (without history)](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#chat-completions-without-history) supports scenarios where you do not need to send a list of historical messages as part of the request.
 
 #### Chat Completions (With History)
 
-The microflow activity [Chat completions (with history)](/agents/agents-kit-2/genai-for-mx/commons/#chat-completions-with-history) supports more complex use cases where a list of (historical) messages (for example, the conversation or context so far) is sent as part of the request to the LLM.
+The microflow activity [Chat completions (with history)](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#chat-completions-with-history) supports more complex use cases where a list of (historical) messages (for example, the conversation or context so far) is sent as part of the request to the LLM.
 
 #### Retrieve & Generate {#retrieve-and-generate}
 
-To use retrieval and generation in a single operation, add an internally predefined tool to the [Request](/agents/agents-kit-2/genai-for-mx/commons/#request) via the `Tools: Add Knowledge Base` action. The model can then decide whether to use the [knowledge base retrieval](/agents/agents-kit-2/genai-for-mx/commons/#knowledge-base-retrieval) tool when handling the request. This functionality is supported in both with-history and without-history operations. The optional `Description` parameter helps the model understand the knowledge base content and decide whether it should be called in the current chat context. You can also apply optional filters, such as `MaxNumberOfResults` or `MinimumSimilarity`, or pass a [MetadataCollection](/agents/agents-kit-2/genai-for-mx/commons/#metadatacollection-entity). 
+To use retrieval and generation in a single operation, add an internally predefined tool to the [Request](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#request) via the `Tools: Add Knowledge Base` action. The model can then decide whether to use the [knowledge base retrieval](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#knowledge-base-retrieval) tool when handling the request. This functionality is supported in both with-history and without-history operations. The optional `Description` parameter helps the model understand the knowledge base content and decide whether it should be called in the current chat context. You can also apply optional filters, such as `MaxNumberOfResults` or `MinimumSimilarity`, or pass a [MetadataCollection](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#metadatacollection-entity). 
 
 {{< figure src="/attachments/genai/mxgenAI-connector/mxgenaiconnector-rag.png" alt="" >}}
 
-The returned `Response` includes [References](/agents/agents-kit-2/genai-for-mx/commons/#reference) for each retrieved chunk from the knowledge base. 
+The returned `Response` includes [References](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#reference) for each retrieved chunk from the knowledge base. 
 
 You can optionally control both reference creation and the output returned for the model during the insertion step:
 
-* The `HumanReadableId` of a chunk is used for the reference title in the response, shown to the end-user in the [ConversationalUI](/agents/agents-kit-2/genai-for-mx/conversational-ui/).
-* To utilize the `Source` attribute of the references, include `MetaData` with the key `sourceUrl`. In [ConversationalUI](/agents/agents-kit-2/genai-for-mx/conversational-ui/), this appears as a clickable link for the end-user.
-* In some cases, a knowledge chunk consists of two texts: one for the semantic search (retrieval) step and another for the generation step. For example, when solving a problem based on historical solutions, semantic search identifies similar problems using their descriptions, while the generation step produces a solution based on the corresponding historical solutions. In such cases, add [MetaData](/agents/agents-kit-2/genai-for-mx/commons/#chunkcollection-add-knowledgebasechunk) with the key `knowledge` to each chunk during insertion. This allows the model to generate its response using the specified metadata instead of the input text. Only the value of `knowledge` is passed to the model.
+* The `HumanReadableId` of a chunk is used for the reference title in the response, shown to the end-user in the [ConversationalUI](/agents/agents-kit-2/reference-guide/genai-for-mx/conversational-ui/).
+* To use the `Source` attribute of the references, include `MetaData` with the key `sourceUrl`. In [ConversationalUI](/agents/agents-kit-2/reference-guide/genai-for-mx/conversational-ui/), this appears as a clickable link for the end-user.
+* In some cases, a knowledge chunk consists of two texts: one for the semantic search (retrieval) step and another for the generation step. For example, when solving a problem based on historical solutions, semantic search identifies similar problems using their descriptions, while the generation step produces a solution based on the corresponding historical solutions. In such cases, add [MetaData](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#chunkcollection-add-knowledgebasechunk) with the key `knowledge` to each chunk during insertion. This allows the model to generate its response using the specified metadata instead of the input text. Only the value of `knowledge` is passed to the model.
 
 #### Function Calling {#function-calling}
 
@@ -109,7 +116,7 @@ Function calling enables LLMs to connect with external tools to gather informati
 
 The model does not call the function. Instead, it returns a tool called JSON structure that builds the input of the function (or functions) so they can be executed as part of the chat completions operation. Functions in Mendix are microflows that can be registered within the request to the LLM. The connector handles the tool call response and executes the function microflows until the API returns the assistant's final response.
 
-Function microflows can have none, a single, or multiple primitive input parameters such as Boolean, Datetime, Decimal, Enumeration, Integer or String. Additionally, they may accept the [Request](/agents/agents-kit-2/genai-for-mx/commons/#request) or [Tool](/agents/agents-kit-2/genai-for-mx/commons/#tool) objects as inputs. The function microflow must return a String value.
+Function microflows can have none, a single, or multiple primitive input parameters such as Boolean, Datetime, Decimal, Enumeration, Integer or String. Additionally, they may accept the [Request](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#request) or [Tool](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#tool) objects as inputs. The function microflow must return a String value.
 
 {{% alert color="warning" %}}
 Function calling is a powerful capability and should be used with caution. Function microflows run in the context of the current user without enforcing entity access. Use `$currentUser` in XPath queries to ensure you retrieve and return only information that the end-user is allowed to view. Otherwise, confidential information may become visible to the current end-user in the assistant's response.
@@ -117,21 +124,21 @@ Function calling is a powerful capability and should be used with caution. Funct
 Mendix recommends building user confirmation logic into function microflows that potentially impact the world on behalf of the end-user. Examples of such microflows include sending an email, posting online, or making a purchase.
 {{% /alert %}}
 
-Use function calling in all chat completions operations by adding a `ToolCollection` with a `Function` via the [Tools: Add Function to Request](/agents/agents-kit-2/genai-for-mx/commons/#add-function-to-request) operation. For more information, see [Function Calling](/agents/function-calling/).
+Use function calling in all chat completions operations by adding a `ToolCollection` with a `Function` via the [Tools: Add Function to Request](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#add-function-to-request) operation. For more information, see [Function Calling](/agents/function-calling/).
 
 #### Vision {#vision}
 
-Vision enables the model to interpret and analyze images, allowing it to answer questions and perform tasks related to visual content. This integration of computer vision and language processing enhances the model's comprehension and makes it valuable for tasks involving visual information. To use vision with the connector, send an optional [FileCollection](/agents/agents-kit-2/genai-for-mx/commons/#filecollection) containing one or multiple images with a single message.
+Vision enables the model to interpret and analyze images, allowing it to answer questions and perform tasks related to visual content. This integration of computer vision and language processing enhances the model's comprehension and makes it valuable for tasks involving visual information. To use vision with the connector, send an optional [FileCollection](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#filecollection) containing one or multiple images with a single message.
 
-For [Chat Completions (without history)](/agents/agents-kit-2/genai-for-mx/commons/#chat-completions-without-history), `OptionalFileCollection` is an optional input parameter. For [Chat completions (with history)](/agents/agents-kit-2/genai-for-mx/commons/#chat-completions-with-history), a `FileCollection` can optionally be added to individual user messages using [Add Message to Request](/agents/agents-kit-2/genai-for-mx/commons/#chat-add-message-to-request).
+For [Chat Completions (without history)](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#chat-completions-without-history), `OptionalFileCollection` is an optional input parameter. For [Chat completions (with history)](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#chat-completions-with-history), a `FileCollection` can optionally be added to individual user messages using [Add Message to Request](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#chat-add-message-to-request).
 
 In the entire conversation, you can pass up to 20 images that are smaller than 3.75 MB each and with a height and width of a maximum of 8000 pixels. The following types are accepted: PNG, JPEG, JPG, GIF, and WebP.
 
 #### Document Chat {#document-chat}
 
-Document chat enables the model to interpret and analyze documents, such as PDFs or Excel files, allowing it to answer questions and perform tasks related to the content. To use document chat, send an optional [FileCollection](/agents/agents-kit-2/genai-for-mx/commons/#filecollection) containing one or multiple documents along with a single message.
+Document chat enables the model to interpret and analyze documents, such as PDFs or Excel files, allowing it to answer questions and perform tasks related to the content. To use document chat, send an optional [FileCollection](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#filecollection) containing one or multiple documents along with a single message.
 
-For [Chat Completions (without history)](/agents/agents-kit-2/genai-for-mx/commons/#chat-completions-without-history), `OptionalFileCollection` is an optional input parameter. For [Chat completions (with history)](/agents/agents-kit-2/genai-for-mx/commons/#chat-completions-with-history), a `FileCollection` can optionally be added to individual user messages using [Add Message to Request](/agents/agents-kit-2/genai-for-mx/commons/#chat-add-message-to-request).
+For [Chat Completions (without history)](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#chat-completions-without-history), `OptionalFileCollection` is an optional input parameter. For [Chat completions (with history)](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#chat-completions-with-history), a `FileCollection` can optionally be added to individual user messages using [Add Message to Request](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#chat-add-message-to-request).
 
 In the entire conversation, you can pass up to five documents that are smaller than 4.5 MB each. There is also a practical, model-dependent limit on the number of pages a document can contain, typically around 100 pages. This is not fixed and can vary with the selected model and the complexity of the file. For example, images, heavy formatting, or embedded content can reduce the effective page limit. If you expect to work with very large documents, consider splitting them into smaller files or providing summarized extracts to improve reliability.
 
@@ -147,7 +154,7 @@ The model uses the file name when analyzing documents, which may introduce a pot
 
 ##### Collections 
 
-A knowledge base resource can comprise several collections. Each collection is tdesigned to hold numerous documents and serves as a logical grouping for related information based on its shared domain, purpose, or thematic focus.
+A knowledge base resource can comprise several collections. Each collection is designed to hold numerous documents and serves as a logical grouping for related information based on its shared domain, purpose, or thematic focus.
 
 Below is a diagram showing how resources are organized into separate collections. This approach allows multiple use cases to share a common resource while the option to only add the required collections to the conversation context is preserved. For example, both employee onboarding and IT ticket support require information about IT setup and equipment. However, only onboarding needs knowledge about the company culture and values, while only IT support requires access to historical support ticket data.
 
@@ -177,7 +184,7 @@ Using metadata, even more fine-grained filtering becomes feasible. Each ticket m
 * key: `Status`, value: `Solved`
 * key: `Priority`, value: `High`
 
-Instead of relying solely on similarity-based searches of ticket descriptions, users can filter for specific tickets, such as Bug tickets with the status set to Solved. Add [MetaData](/agents/agents-kit-2/genai-for-mx/commons/#chunkcollection-add-knowledgebasechunk) with the respective key to each chunk during insertion. 
+Instead of relying solely on similarity-based searches of ticket descriptions, users can filter for specific tickets, such as Bug tickets with the status set to Solved. Add [MetaData](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#chunkcollection-add-knowledgebasechunk) with the respective key to each chunk during insertion. 
 
 #### How to Get Data Into a Knowledge Base 
 
@@ -185,7 +192,7 @@ For a step-by-step guide on how to get your application data into a collection i
 
 ### Knowledge Base Operations
 
-To implement knowledge base logic into your Mendix application, use the actions in the **USE_ME** > **Knowledge Base** folder or under the **GenAI Knowledge Base (Content)** or **Mendix Cloud Knowledge Base** categories in the **Toolbox**. These actions require a specialized [DeployedKnowledgeBase](/agents/agents-kit-2/genai-for-mx/commons/#deployed-knowledge-base) of type `Collection` that determines the model and endpoint to use. The collection name must be passed when creating the object, and the object must be associated with a `Configuration` object. For Mendix Cloud GenAI, a knowledge base resource may contain several collections (tables). 
+To implement knowledge base logic into your Mendix application, use the actions in the **USE_ME** > **Knowledge Base** folder or under the **GenAI Knowledge Base (Content)** or **Mendix Cloud Knowledge Base** categories in the **Toolbox**. These actions require a specialized [DeployedKnowledgeBase](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#deployed-knowledge-base) of type `Collection` that determines the model and endpoint to use. The collection name must be passed when creating the object, and the object must be associated with a `Configuration` object. For Mendix Cloud GenAI, a knowledge base resource may contain several collections (tables). 
 
 Dealing with knowledge bases involves two main stages:
 
@@ -202,7 +209,7 @@ Knowledge chunks are stored in an AWS OpenSearch Serverless database to ensure s
 
 ##### Data Chunks
 
-To add data to the knowledge base, you need discrete pieces of information and create knowledge base chunks for each one. Use the GenAICommons operations to first [initialize a ChunkCollection object](/agents/agents-kit-2/genai-for-mx/commons/#chunkcollection-create), and then [add a KnowledgeBaseChunk](/agents/agents-kit-2/genai-for-mx/commons/#chunkcollection-add-knowledgebasechunk) object to it for each piece of information. Both can be found in the **Toolbox** under the **GenAI Knowledge Base (Content)** category.
+To add data to the knowledge base, you need discrete pieces of information and create knowledge base chunks for each one. Use the GenAICommons operations to first [initialize a ChunkCollection object](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#chunkcollection-create), and then [add a KnowledgeBaseChunk](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#chunkcollection-add-knowledgebasechunk) object to it for each piece of information. Both can be found in the **Toolbox** under the **GenAI Knowledge Base (Content)** category.
 
 ##### Chunking Strategy
 
@@ -216,9 +223,9 @@ The chunk collection can then be stored in the knowledge base using one of the f
 
 Use the following toolbox actions in the **Mendix Cloud Knowledge Base** toolbox category to populate knowledge data into a collection:
 
-1. `Embed & Insert` embeds a list of chunks (passed via a [ChunkCollection](/agents/agents-kit-2/genai-for-mx/commons/#chunkcollection)) and inserts them into the knowledge base.
+1. `Embed & Insert` embeds a list of chunks (passed via a [ChunkCollection](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#chunkcollection)) and inserts them into the knowledge base.
 2. `Embed & Repopulate KB` is similar to `Embed & Insert`, but deletes all existing chunks from the knowledge base before inserting the new chunks.
-3. `Embed & Replace` replaces existing chunks in the knowledge base that match the associated Mendix object that was passed via the [Add KnowledgeBaseChunk to ChunkCollection](/agents/agents-kit-2/genai-for-mx/commons/#chunkcollection-add-knowledgebasechunk) action at the insertion stage.
+3. `Embed & Replace` replaces existing chunks in the knowledge base that match the associated Mendix object that was passed via the [Add KnowledgeBaseChunk to ChunkCollection](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#chunkcollection-add-knowledgebasechunk) action at the insertion stage.
 
 Additionally, use the following toolbox actions to delete chunks:
 
@@ -237,7 +244,7 @@ Use the following toolbox actions to retrieve knowledge data from a collection a
     {{% alert color="info" %}}You must define your entity specialized from `KnowledgeBaseChunk`, which is associated with the entity that was used to pass a MendixObject during the [insertion stage](#knowledge-base-insertion).
     {{% /alert %}}
 
-3. `Embed & Retrieve Nearest Neighbors` retrieves a list of type [KnowledgeBaseChunk](/agents/agents-kit-2/genai-for-mx/commons/#knowledgebasechunk-entity) from the knowledge base that are most similar to a given `Content` by calculating the cosine similarity of its vectors.
+3. `Embed & Retrieve Nearest Neighbors` retrieves a list of type [KnowledgeBaseChunk](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#knowledgebasechunk-entity) from the knowledge base that are most similar to a given `Content` by calculating the cosine similarity of its vectors.
 4. `Embed & Retrieve Nearest Neighbors & Associate` combines the above actions, `Retrieve & Associate` and `Embed & Retrieve Nearest Neighbors`.
 
 ### Embedding Operations
@@ -246,15 +253,15 @@ If you are working directly with embedding vectors for specific use cases that d
 
 To implement embeddings into your Mendix application, use the microflows in the **Knowledge Bases & Embeddings** folder in the GenAICommons module. Both microflows for embeddings are exposed as microflow actions under the **GenAI (Generate)** category in the **Toolbox** in Studio Pro.
 
-These microflows require a [DeployedModel](/agents/agents-kit-2/genai-for-mx/commons/#deployed-model) that determines the model and endpoint to use. Depending on the selected operation, an `InputText` String or a [ChunkCollection](/agents/agents-kit-2/genai-for-mx/commons/#chunkcollection) needs to be provided. Note that embedding operations enforce a maximum character limit of 2048 characters per chunk; input exceeding this limit will cause the embedding operation to fail, so validate your input before submitting it for embedding.
+These microflows require a [DeployedModel](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#deployed-model) that determines the model and endpoint to use. Depending on the selected operation, an `InputText` String or a [ChunkCollection](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#chunkcollection) needs to be provided. Note that embedding operations enforce a maximum character limit of 2048 characters per chunk; input exceeding this limit will cause the embedding operation to fail, so validate your input before submitting it for embedding.
 
 #### Embeddings (String)
 
-The microflow activity [Generate Embeddings (String)](/agents/agents-kit-2/genai-for-mx/commons/#embeddings-string) supports scenarios where the vector embedding of a single string must be generated. This input string can be passed directly as the `TextInput` parameter of this microflow. Note that the parameter [EmbeddingsOptions](/agents/agents-kit-2/genai-for-mx/commons/#embeddingsoptions-entity) is optional. Use the exposed microflow [Embeddings: Get First Vector from Response](/agents/agents-kit-2/genai-for-mx/commons/#embeddings-get-first-vector) to retrieve the generated embeddings vector.
+The microflow activity [Generate Embeddings (String)](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#embeddings-string) supports scenarios where the vector embedding of a single string must be generated. This input string can be passed directly as the `TextInput` parameter of this microflow. Note that the parameter [EmbeddingsOptions](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#embeddingsoptions-entity) is optional. Use the exposed microflow [Embeddings: Get First Vector from Response](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#embeddings-get-first-vector) to retrieve the generated embeddings vector.
 
 #### Embeddings (ChunkCollection)
 
-The microflow activity [Generate Embeddings (ChunkCollection)](/agents/agents-kit-2/genai-for-mx/commons/#embeddings-chunk-collection) supports the more complex scenario where a collection of [Chunk](/agents/agents-kit-2/genai-for-mx/commons/#chunkcollection) objects is vectorized in a single API call, such as when converting a collection of text strings (chunks) from a private knowledge base into embeddings. Instead of calling the API for each string, executing a single call for a list of strings can significantly reduce HTTP overhead. The embedding vectors returned after a successful API call will be stored as an `EmbeddingVector` attribute in the same `Chunk` object. Use the exposed microflows of GenAI Commons [Chunks: Initialize ChunkCollection](/agents/agents-kit-2/genai-for-mx/commons/#chunkcollection-create), [Chunks: Add Chunk to ChunkCollection](/agents/agents-kit-2/genai-for-mx/commons/#chunkcollection-add-chunk), or [Chunks: Add KnowledgeBaseChunk to ChunkCollection](/agents/agents-kit-2/genai-for-mx/commons/#chunkcollection-add-knowledgebasechunk) to construct the input.
+The microflow activity [Generate Embeddings (ChunkCollection)](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#embeddings-chunk-collection) supports the more complex scenario where a collection of [Chunk](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#chunkcollection) objects is vectorized in a single API call, such as when converting a collection of text strings (chunks) from a private knowledge base into embeddings. Instead of calling the API for each string, executing a single call for a list of strings can significantly reduce HTTP overhead. The embedding vectors returned after a successful API call will be stored as an `EmbeddingVector` attribute in the same `Chunk` object. Use the exposed microflows of GenAI Commons [Chunks: Initialize ChunkCollection](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#chunkcollection-create), [Chunks: Add Chunk to ChunkCollection](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#chunkcollection-add-chunk), or [Chunks: Add KnowledgeBaseChunk to ChunkCollection](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#chunkcollection-add-knowledgebasechunk) to construct the input.
 
 To create embeddings, it does not matter whether the ChunkCollection contains Chunks or its specialization KnowledgeBaseChunks. Note that the knowledge base operations handle the embedding generation themselves internally.
 
@@ -271,7 +278,7 @@ The **Documentation** pane displays the documentation for the currently selected
 
 ### Tool Choice
 
-All [tool choice types](/agents/agents-kit-2/genai-for-mx/commons/#enum-toolchoice) of GenAI Commons for the [Tools: Set Tool Choice](/agents/agents-kit-2/genai-for-mx/commons/#set-toolchoice) action are supported. For API mapping reference, see the table below:
+All [tool choice types](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#enum-toolchoice) of GenAI Commons for the [Tools: Set Tool Choice](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#set-toolchoice) action are supported. For API mapping reference, see the table below:
 
 | GenAI Commons (Mendix) | Amazon Bedrock                |
 | -----------------------| ----------------------------- |
@@ -303,12 +310,12 @@ To check your JDK version and update it if necessary, follow these steps:
 5. Open Studio Pro and go to **Edit** > **Preferences** > **Deployment** > **JDK directory**. Click **Browse** and select the folder with the new JDK version you just installed. This should be the folder containing the *bin* folder. Save your settings by clicking **OK**.
 6. Run the project and execute the action that threw the above-mentioned exception earlier.
     1. You might get an error saying `FAILURE: Build failed with an exception. The supplied javaHome seems to be invalid. I cannot find the java executable.` In this case, verify that you have selected the correct JDK directory containing the updated JDK version.
-    2. You may also need to update Gradle. To do this, go to **Edit** > **Preferences** > **Deployment** > **Gradle directory**. Click **Browse** and select the appropriate Gradle version from the Mendix folder. For Mendix 10.10 and above, use Gradle 8.5. For Mendix 10 versions below 10.10, use Gradle 7.6.3. Then save your settings by clicking **OK**.
+    2. You may also need to update Gradle. To do this, go to **Edit** > **Preferences** > **Deployment** > **Gradle directory**. Click **Browse** and select the appropriate Gradle version from the Mendix folder. For Studio Pro versions 10.10 and above, use Gradle 8.5. Then save your settings by clicking **OK**.
     3. Rerun the project.
 
 ### Migrating From Add-on Module to App Module
 
-Because the module has been changed with version 3.0.0 from an add-on to an app module, updating it via Marketplace requires a migration to ensure it works properly with your app.
+In version 3.0.0, the module changed from an add-on to an app module. Therefore, updating it via Marketplace requires a migration to ensure it works properly with your app.
 
 To do this, follow these steps:
 

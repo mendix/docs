@@ -1,8 +1,8 @@
 ---
 title: "GenAI Commons"
-url: /agents/agents-kit-2/genai-for-mx/commons/
+url: /agents/agents-kit-2/reference-guide/genai-for-mx/commons/
 linktitle: "GenAI Commons"
-description: "Agents Kit 2: Describes the purpose, configuration, and usage of the GenAI Commons module from Mendix Marketplace, which allows developers to integrate common generative AI principles and patterns into Mendix apps."
+description: "Agents Kit 2: Reference documentation for the GenAI Commons module, which provides the foundation for all Menidx GenAI connectors and modules."
 weight: 10
 aliases:
     - /agents/genai-for-mx/commons/
@@ -13,7 +13,7 @@ aliases:
 
 ## Introduction {#introduction}
 
-The [GenAI Commons](https://marketplace.mendix.com/link/component/239448) module combines common generative AI patterns found across various models on the market. Platform-supported GenAI connectors use the underlying data structures and their operations. This makes it easier to develop vendor-agnostic AI-enhanced apps with Mendix, for example by using one of the connectors or the [Conversational UI](/agents/agents-kit-2/genai-for-mx/conversational-ui/) module.
+The [GenAI Commons](https://marketplace.mendix.com/link/component/239448) module combines common generative AI patterns found across various models on the market. Platform-supported GenAI connectors use the underlying data structures and their operations. This makes it easier to develop vendor-agnostic AI-enhanced apps with Mendix, for example by using one of the connectors or the [Conversational UI](/agents/agents-kit-2/reference-guide/genai-for-mx/conversational-ui/) module.
 
 Connectors that adhere to the GenAI Commons module can be easily swapped, reducing dependency on model providers. The connectors provide a drag-and-drop experience for implementing AI capabilities and help you get started quickly. The module exposes useful operations for building requests to a large language model (LLM) and handling responses.
 
@@ -25,9 +25,7 @@ The current scope of the module focuses on text and image generation, embeddings
 
 ### Dependencies {#dependencies}
 
-The GenAI Commons module requires Mendix Studio Pro version 10.24.0 or above.
-
-You must also download the [Community Commons](/appstore/modules/community-commons-function-library/) module.
+Download the [Community Commons](/appstore/modules/community-commons-function-library/) module.
 
 ## Installation {#installation}
 
@@ -47,7 +45,7 @@ GenAI Commons can store usage data, allowing admins to understand token usage. U
 
 To clean up usage data in a deployed app, enable the daily scheduled event `ScE_Usage_Cleanup` in the Mendix Cloud Portal. Use the `Usage_CleanUpAfterDays` constant to control how long token usage data is persisted. 
 
-The [Conversational UI module](/agents/agents-kit-2/genai-for-mx/conversational-ui/) provides pages, snippets, and logic to display and export token usage information. For this to work, assign the module roles `UsageMonitoring` from both Conversational UI and GenAI Commons to the applicable project roles.
+The [Conversational UI module](/agents/agents-kit-2/reference-guide/genai-for-mx/conversational-ui/) provides pages, snippets, and logic to display and export token usage information. For this to work, assign the module roles `UsageMonitoring` from both Conversational UI and GenAI Commons to the applicable project roles.
 
 ### Traceability {#traceability}
 
@@ -95,7 +93,7 @@ Furthermore, it contains the name of the microflow to be run to do a retrieval f
 
 As these objects are created as a specialization by the logic in connectors themselves (specializations), such a specialization typically contains more specific data required for the connection to the resource according to the provider infrastructure details, such as endpoints and credentials. Admins need to configure this at runtime.
 
-The `ConsumedKnowledgeBase` entity was introduced in module version 6.0.0. To migrate data from earlier versions, refer to the [GenAI migration guide](/agents/agents-kit-2/genai-for-mx/migration-guide/#march-2026).
+The `ConsumedKnowledgeBase` entity was introduced in module version 6.0.0. To migrate data from earlier versions, refer to the [GenAI migration guide](/agents/agents-kit-2/reference-guide/genai-for-mx/migration-guide/#march-2026).
 
 | Attribute | Description |
 | --- | --- |
@@ -456,7 +454,7 @@ It is recommended that you adapt to the same interface when developing custom ch
 
 ##### Chat Completions (With History) {#chat-completions-with-history}
 
-The `Chat Completions (with history)` operation supports more complex use cases where a list of (historical) messages (for example, comprising the conversation or context so far) is sent as part of the request to the LLM. Note that the response might not be complete if tools with [UserAccessApproval](#enum-useraccessapproval) other than `HiddenForUser` are added or the request specifies that the tool messages should be stored ([SaveToolCallHistory](#request)). In such cases, implement the logic to call the action again, with [toolcalls](#toolcall) appended to the assistant's message as well as messages of role tool to the request. If you are using the [ConversationalUI](/agents/agents-kit-2/genai-for-mx/conversational-ui/#human-in-the-loop) module, this is automatically handled.
+The `Chat Completions (with history)` operation supports more complex use cases where a list of (historical) messages (for example, comprising the conversation or context so far) is sent as part of the request to the LLM. Note that the response might not be complete if tools with [UserAccessApproval](#enum-useraccessapproval) other than `HiddenForUser` are added or the request specifies that the tool messages should be stored ([SaveToolCallHistory](#request)). In such cases, implement the logic to call the action again, with [toolcalls](#toolcall) appended to the assistant's message as well as messages of role tool to the request. If you are using the [ConversationalUI](/agents/agents-kit-2/reference-guide/genai-for-mx/conversational-ui/#human-in-the-loop) module, this is automatically handled.
 
 ###### Input Parameters
 
@@ -473,7 +471,7 @@ The `Chat Completions (with history)` operation supports more complex use cases 
 
 ##### Chat Completions (Without History) {#chat-completions-without-history}
 
-The `Chat Completions (without history)` operation supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. Note that the response might not be complete if tools with [UserAccessApproval](#enum-useraccessapproval) other than `HiddenForUser` are added or the request specifies that the tool messages should be stored ([SaveToolCallHistory](#request)). In such cases, implement a logic to call the action again, with [toolcalls](#toolcall) appended to the assistant's message as well as messages of role tool to the request. For more information, refer to [Human in the loop](/agents/agents-kit-2/genai-for-mx/conversational-ui/#human-in-the-loop).
+The `Chat Completions (without history)` operation supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. Note that the response might not be complete if tools with [UserAccessApproval](#enum-useraccessapproval) other than `HiddenForUser` are added or the request specifies that the tool messages should be stored ([SaveToolCallHistory](#request)). In such cases, implement a logic to call the action again, with [toolcalls](#toolcall) appended to the assistant's message as well as messages of role tool to the request. For more information, refer to [Human in the loop](/agents/agents-kit-2/reference-guide/genai-for-mx/conversational-ui/#human-in-the-loop).
 
 ###### Input Parameters
 
@@ -1039,7 +1037,7 @@ To check your JDK version and update it if necessary, follow these steps:
 5. Open Studio Pro and go to **Edit** > **Preferences** > **Deployment** > **JDK directory**. Click **Browse** and select the folder with the new JDK version you just installed. This is the folder containing the *bin* folder. Save your settings by clicking **OK**.
 6. Run the project and execute the action that threw the above-mentioned exception earlier.
     1. You might get an error saying `FAILURE: Build failed with an exception. The supplied javaHome seems to be invalid. I cannot find the java executable.` In this case, verify that you have selected the correct JDK directory containing the updated JDK version.
-    2. You may also need to update Gradle. To do this, go to **Edit** > **Preferences** > **Deployment** > **Gradle directory**. Click **Browse** and select the appropriate Gradle version from the Mendix folder. For Mendix 10.10 and above, use Gradle 8.5. For Mendix 10 versions below 10.10, use Gradle 7.6.3. Then save your settings by clicking **OK**.
+    2. You may also need to update Gradle. To do this, go to **Edit** > **Preferences** > **Deployment** > **Gradle directory**. Click **Browse** and select the appropriate Gradle version from the Mendix folder. For Studio Pro versions 10.10 and above, use Gradle 8.5. Then save your settings by clicking **OK**.
     3. Rerun the project.
   
 ### Migration from Add-On Module to App Module

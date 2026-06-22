@@ -2,8 +2,8 @@
 title: "MCP Server"
 url: /agents/agents-kit-2/mcp-modules/mcp-server/
 linktitle: "MCP Server"
-description: "Agents Kit 2: This document describes the purpose, configuration, and usage of the MCP Server module from the Mendix Marketplace that allows developers to expose Mendix logic to external MCP clients and AI systems."
-weight: 20,
+description: "Agents Kit 2: Reference documentation for the MCP Server module, which exposes Mendix logic to external MCP clients and AI systems."
+weight: 20
 aliases:
     - /agents/mcp-modules/mcp-server/
     - /appstore/modules/genai/genai-for-mx/mcp-server/
@@ -65,11 +65,7 @@ The `User` returned in the microflow is used for all subsequent prompt and tool 
 
 #### Protocol Version
 
-When creating an MCP server, you need to specify a `ProtocolVersion`. On the official MCP documentation, you can review the differences between the protocol versions in the [changelog](https://modelcontextprotocol.io/specification/2025-03-26/changelog). The latest version of the MCP Server module currently only supports `v2025-03-26` and the Streamable HTTP transport. MCP Clients that need to connect to a Mendix MCP server should support the same version. Note that Mendix follows the offered capabilities of the MCP Java SDK.
-
-{{% alert color="info" %}}
-Since version 4.0.0 of the module, the protocol version `v2024-11-05` was replaced by `v2025-03-26`, which changed the transport from HTTP + SSE to Streamable HTTP because HTTP + SSE is officially deprecated. Most clients already support the new transport, such as the Mendix [MCP Client](/agents/agents-kit-2/mcp-modules/mcp-client/) module.
-{{% /alert %}}
+When creating an MCP server, you need to specify a `ProtocolVersion`. On the official MCP documentation, you can review the differences between the protocol versions in the [changelog](https://modelcontextprotocol.io/specification/2025-03-26/changelog). The latest version of the MCP Server module only supports `v2025-03-26` and the Streamable HTTP transport. MCP clients that need to connect to a Mendix MCP server must support the same version. Note that Mendix follows the offered capabilities of the MCP Java SDK.
 
 ### Add Tools
 

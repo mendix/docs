@@ -1,9 +1,8 @@
 ---
-title: "How to Build Smarter Apps Using GenAI"
+title: "Building Smarter Apps Using GenAI"
 url: /agents/agents-kit-2/how-to/
-linktitle: "How to Build Smarter Apps using GenAI"
 weight: 20
-description: "Agents Kit 2: Tutorial on how to get started with GenAI for Smarter Apps"
+description: "Agents Kit 2: Step-by-step how-tos for building smart apps, including creating agents, integrating function calling, grounding LLMs in data, and building custom connectors."
 no_list: false
 aliases:
     - /agents/how-to/
@@ -13,28 +12,19 @@ aliases:
 
 ## Introduction
 
-Generative Artificial Intelligence (GenAI) transforms business applications, empowering developers and technologists to create smarter, more dynamic solutions. This document provides the knowledge and tools needed to make your first GenAI-powered application and guides developers and business technologists in integrating GenAI into their Mendix applications.
+This section provides step-by-step how-tos for building apps with Agents Kit 2. Learn how to create agents, integrate function calling, ground LLMs in your data, and implement agentic patterns.
 
-## Key Resources to Continue Your GenAI Journey
+## Key Resources to Continue Your Agentic App Journey
 
-### Getting Started with the How-Tos
+Before you get started, review the [Agents Kit Components](/agents/agents-kit-2/#components) that are available as part of Agents Kit 2. These include starter apps to jumpstart your development, showcase apps with example use cases, core modules for building agentic functionality, connector modules to integrate with various AI providers, and MCP modules for exposing and consuming tools across your enterprise.
 
-* [Build a Chatbot Using the AI Bot Starter App](/agents/agents-kit-2/how-to/starter-template/)
-* [Build a Chatbot from Scratch Using the Blank GenAI App](/agents/agents-kit-2/how-to/blank-app/)
+For explanations of key terms, see the [Glossary](/agents/glossary/) and other pages in [GenAI Concepts](/agents/get-started/).
 
-### Starter Apps
-
-* The [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) demonstrates over 10 use cases for implementing GenAI.
-* The [Support Assistant Starter App](https://marketplace.mendix.com/link/component/231035) is a template that incorporates [RAG (Retrieval-Augmented Generation)](/agents/rag/), [Function Calling (ReAct Pattern)](/agents/function-calling/), and knowledge base integration. For more details on this use case, see [How to Build Smarter Apps with Function Calling & Generative AI](https://www.mendix.com/blog/building-smarter-apps-with-function-calling-and-generative-ai/).
-
-### Prompt Engineering Resources
-
-* The [Prompt Engineering](/agents/prompt-engineering/) documentation provides an introduction to the basics of prompting and useful tips.
-* The [Prompt Library](https://mendixlabs.github.io/smart-apps-prompt-library/) offers a collection of prompts used in Mendix applications, as well as other examples.
-* The blog post [Hey ChatGPT, Write a Blog Post About Prompt Engineering – Part 1](https://www.mendix.com/blog/part-one-hey-chatgpt-can-you-write-me-a-blog-post-about-prompt-engineering/) introduces the fundamentals of prompt engineering, including techniques and examples.
-* The blog post [Hey ChatGPT, Write a Blog Post About Prompt Engineering – Part 2](https://www.mendix.com/blog/hey-chatgpt-can-you-write-me-a-blog-post-about-prompt-engineering-part-2/) explores the Tree of Thought (ToT) prompt technique, provides recommendations for getting started, and discusses how to handle hallucinations.
+For an introduction to Mendix Cloud GenAI resources, see [Mendix Cloud GenAI](/agents/mx-cloud-genai/).
 
 ### Additional Resources
+
+For any additional feedback, send a message in the [#genai-connectors](https://mendixcommunity.slack.com/archives/C07P8NRBLN9) channel on the Mendix Community Slack. You can sign up for the Mendix Community using [this invitation link](https://mendixcommunity.slack.com/join/shared_invite/zt-270ys3pwi-kgWhJUwWrKMEMuQln4bqrQ#/shared-invite/email).
 
 * Basic documentation on [GenAI Concepts](/agents/get-started/) is an essential resource for anyone beginning their GenAI journey.
 * The [GenAICommons](/agents/agents-kit-2/genai-for-mx/commons/) module as a prerequisite for all GenAI components.
@@ -56,7 +46,7 @@ For any additional feedback, send a message in the [#genai-connectors](https://m
 * [OpenAI Using the ‘GenAI for Mendix’ Module](https://www.mendix.com/blog/openai-using-the-genai-for-mendix-module/)
 * [How to Configure Microsoft Foundry OpenAI Models in Mendix](https://www.mendix.com/blog/how-to-configure-azure-openai-models-in-mendix/)
 
-#### Building your own Connector
+#### Building Your Own Connector
 
 * [How to Run Open-Source LLMs Locally with the OpenAI Connector and Ollama](https://www.mendix.com/blog/how-to-run-open-source-llms-locally-with-the-openai-connector-and-ollama/)
 
@@ -69,4 +59,4 @@ For any additional feedback, send a message in the [#genai-connectors](https://m
 
 * [Use MCP to Bring Mendix Business Logic into Claude for Desktop](https://www.mendix.com/blog/how-to-use-mcp-to-bring-mendix-business-logic-into-claude-for-desktop/)
 
-## Documents in this Category
+## Documents in This Category

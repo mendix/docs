@@ -4,25 +4,161 @@ linktitle: "Mendix Cloud"
 url: /releasenotes/developer-portal/mendix-cloud/
 weight: 10
 description: "Release notes for deployment to Mendix Cloud"
+aliases:
+    - /releasenotes/developer-portal/mendix-cloud/2026/
 ---
 
-These release notes cover changes to deployment to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).
+These release notes cover changes to deployment to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/). There are separate release notes for other deployment targets; for more information, refer to the [Deployment](/releasenotes/developer-portal/deployment/) release notes.
 
 Mendix Cloud deployments are also dependent on the latest version of the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack). The [Mendix Cloud Foundry Buildpack release notes](https://github.com/mendix/cf-mendix-buildpack/releases) are published separately, as other deployment targets are also dependent on the buildpack.
 
-There are separate release notes for other deployment targets; for more information, see the [Deployment](/releasenotes/developer-portal/deployment/) release notes.
+For information on the current status of deployment to Mendix Cloud and any planned releases, refer to [Mendix Status](https://status.mendix.com/).
 
-Click a year to view the corresponding release notes:
+## June 2026
 
-* [2026 Mendix Cloud Release Notes](/releasenotes/developer-portal/mendix-cloud/2026/)
-* [2025 Mendix Cloud Release Notes](/releasenotes/developer-portal/mendix-cloud/2025/)
-* [2024 Mendix Cloud Release Notes](/releasenotes/developer-portal/mendix-cloud/2024/)
-* [2023 Mendix Cloud Release Notes](/releasenotes/developer-portal/mendix-cloud/2023/)
-* [2022 Mendix Cloud Release Notes](/releasenotes/developer-portal/mendix-cloud/2022/)
-* [2021 Mendix Cloud Release Notes](/releasenotes/developer-portal/mendix-cloud/2021/)
-* [2020 Mendix Cloud Release Notes](/releasenotes/developer-portal/mendix-cloud/2020/)
-* [2019 Mendix Cloud Release Notes](/releasenotes/developer-portal/mendix-cloud/2019/)
-* [2018 Mendix Cloud Release Notes](/releasenotes/developer-portal/mendix-cloud/2018/)
-* [2017 Mendix Cloud Release Notes](/releasenotes/developer-portal/mendix-cloud/2017/)
+### June 17, 2026
 
-For information on the current status of deployment to Mendix Cloud and any planned releases, see [Mendix Status](https://status.mendix.com/).
+#### Fixes
+
+* We have fixed an SBOM generation issue which sometimes caused incorrect versions. As such, Mendix now supports SBOM generation and the associated Software Composition capabilities with the following versions of Studio Pro: 
+
+    * 11.9.1 and above
+    * 11.6.6
+    * 10.24.18 and above 
+    * 9.24.43 and above
+   
+### June 11, 2026
+
+#### New Features
+
+* We introduced [OpenTelemetry integration](/developerportal/operate/opentelemetry/), which lets you send traces, metrics, and logs to any OpenTelemetry-compatible observability backend that supports the core exporters OTLP and `PROMETHEUS_REMOTE_WRITE`.
+
+### June 9, 2026
+
+#### Improvements
+
+* Mendix Cloud database backups are now created with `pg_dump` version `1.16`. This version has been included with PostgreSQL since September 2024 as part of PostgreSQL 17. As a result, backups created in Mendix Cloud can only be restored with `pg_restore` version `1.16` or above (PostgreSQL 17 or above).
+
+    If you attempt to restore a backup using an earlier version, you will receive the following error: `pg_restore: [archiver] unsupported version (1.16) in the file header`. To resolve this issue, upgrade your software to a version that includes newer versions of `pg_dump` and `pg_restore`. 
+
+    Backups created in Mendix Cloud before June 9, 2026, continue to work as expected after you upgrade your local PostgreSQL binaries to newer versions.
+
+### June 7, 2026
+
+#### Bug Fixes
+
+* We fixed an issue in Free Apps that prevented Technical Contacts from accessing sandbox backups. (Tickets #279092, #279580)
+* We fixed an issue that prevented access to the **Environments** page for undeployed Free Apps. (Tickets #278349, #279299)
+  
+#### New Features
+
+* [Activity logs](/developerportal/operate/logs/#activity-log) are now automatically published to the [Central Audit Logging System](https://ccauditlogs.home.mendix.com/), providing improved visibility and auditability across environments. For more information, refer to [Audit Logs](/control-center/audit-logs/).
+
+## April 2026
+
+### April 26, 2026
+
+#### Bug Fixes
+
+* We fixed an issue in Free Apps where changing user roles blocked privilege creation, causing backups to be hidden. (Tickets #271426, #272705)
+  
+## March 2026
+
+### March 24, 2026
+
+#### Bug Fixes
+
+* We fixed an issue where [Splunk metrics](/developerportal/operate/splunk-metrics/) were not being ingested properly.
+
+### March 15, 2026
+
+#### Improvements
+
+* [Zero-downtime deployment](/developerportal/deploy/zero-downtime/) now supports multiple runtime instances without service interruption. Previously, this feature was only available for applications with a single runtime instance.
+
+#### New Features
+
+* Environments on Mendix Cloud are now labeled **Unlicensed** one day after the contract expires.
+
+### March 8, 2026
+
+#### Deprecations
+
+* Application migration from Cloud Foundry to Kubernetes is nearly complete, and the migration banner has been removed from the [Environments](/developerportal/deploy/environments/) page. The Kubernetes/Cloud Foundry tag, which indicated the platform each environment runs on, has also been removed.
+
+### March 1, 2026
+
+#### Bug Fixes
+
+* We fixed an issue where the **Environments** list changed order after multiple refreshes. (Ticket #260516)
+* We fixed an issue where attempting to create certificate requests resulted in errors. (Ticket #272519)
+
+## February 2026
+
+### February 26, 2026
+
+#### New Features
+
+* The Datadog APM integration now supports [Mendix Tracing](/developerportal/operate/datadog-metrics/#mendix-tracing).
+
+### February 18, 2026
+
+#### New Features
+
+* We added support for access logs to Splunk, New Relic, and Dynatrace integrations.
+
+### February 15, 2026
+
+#### Bug Fixes
+
+* We fixed the issue with accessing deployed apps through Mendix SSO. (Ticket #271622)
+
+### February 1, 2026
+
+#### General Availability Release
+
+* [Version Pinning](/developerportal/deploy/version-pinning/) is now in general availability (GA) and enabled by default for all Mendix Cloud (Kubernetes) users. Company-level enablement is no longer required.
+
+#### New Features
+
+* Technical Contacts can now [configure custom domains](/developerportal/deploy/custom-domains/#Configuring) at the application level using [centralized certificates](/developerportal/deploy/certificates/centralized-certificates/) created by a Mendix Admin on the [Certificate Management](/control-center/certificate-management/) page in Control Center.
+
+#### Bug Fixes
+
+* We fixed an issue where the database version was not displayed. (Tickets #257091, #260360, #262575)
+* We fixed an issue with the display of trimmed constant values; values now appear as-is. (Ticket #262456)
+* We fixed an issue with the incorrect **Mendix Pipelines** link in the deploy pop-up.
+
+## January 2026
+
+### January 18, 2026
+
+#### New Features
+
+* We have added support for centralized certificate management. Through the updated [Custom Domains](/developerportal/deploy/environments/#custom-domains) tab on the **Cloud Settings** page, Technical Contacts can now centrally manage custom domain certificates rather than only at the application level. They can also check whether a certificate is managed locally at the app level or centrally.
+
+### January 16, 2026
+
+#### New Features
+
+* We have added metrics support to [Splunk Cloud Platform integration](/developerportal/operate/splunk-metrics/).
+
+### January 11, 2026
+
+#### Improvements
+
+* During [deployment package creation](/developerportal/deploy/environments/#create-package-wizard), **App highest tag** and **Branch highest tag** on the **Options** tab have been renamed to **App latest tag** and **Branch latest tag** respectively to ensure consistency with other Mendix applications.
+* A new **Ineligible** status has been added to the [Plan Change Requests statuses](/developerportal/deploy/change-plan/#plan-change-status).
+* The warning banner about APM tools for Kubernetes applications has been removed from the custom environment variable configuration dialog, as APM tools are now fully supported.
+
+#### Bug Fixes
+
+* We fixed an issue on the [Permissions tab](/developerportal/deploy/environments/#permissions-tab) where the environment selection dropdown did not correctly display the selected environment name. (Ticket 264653)
+* We fixed the banner shown when free app deployment is blocked so that it now links to the correct **Control Center** page.
+
+### January 5, 2026
+
+#### New Features
+
+* We have added a new feature in the **Connectivity** tab of the **Environment Details** page that enables Technical Contacts to securely [connect Mendix applications to external resources](/developerportal/deploy/connecting-to-external-resource/) through [Mendix Cloud Private Connectivity](/control-center/private-connectivity/).
+    * From the [Connections](/developerportal/deploy/environments-details/#connections) section of the **Connectivity** tab, Technical Contacts can now request new private connections, track the status of their pending connection requests, connect to external resources, and delete existing connections.

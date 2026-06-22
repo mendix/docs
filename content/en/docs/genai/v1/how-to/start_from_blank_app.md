@@ -37,17 +37,17 @@ By the end of this document, you will:
 
 ## Building Your Smart App
 
-To start building your smart app with a blank GenAI App template, download the [Blank GenAI App Template](https://marketplace.mendix.com/link/component/227934) from the Mendix Marketplace. This template provides a clean slate, enabling you to build your GenAI-powered application step by step. Using this document, you can build a chatbot. The image below shows the final result.
+To start building your smart app with a blank GenAI App template, download the [Blank GenAI App Template](https://marketplace.mendix.com/link/component/227934) from Mendix Marketplace. This template provides a clean slate, enabling you to build your GenAI-powered application step by step. Using this document, you can build a chatbot. The image below shows the final result.
 
 {{< figure src="/attachments/genai/howto-blankapp/blank_genai_interface.jpg" >}}
 
 ### Important Modules
 
-The [Blank GenAI App Template](https://marketplace.mendix.com/link/component/227934) has the essential GenAI modules pre-installed, which is beneficial to familiarize yourself with the GenAI functionalities Mendix can offer, as it includes:
+The [Blank GenAI App Template](https://marketplace.mendix.com/link/component/227934) has the essential Agents Kit modules preinstalled, which is beneficial to familiarize yourself with the GenAI functionalities Mendix can offer, as it includes:
 
-* The [GenAI Commons](/agents/agents-kit-1/genai-for-mx/commons/) module: provides pre-built operations and data structures for seamless integration with platform-supported GenAI connectors, such as the Mendix Cloud GenAI, OpenAI, or Amazon Bedrock.
+* The [GenAI Commons](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/) module: provides pre-built operations and data structures for seamless integration with platform-supported GenAI connectors, such as the Mendix Cloud GenAI, OpenAI, or Amazon Bedrock.
 
-* The [Conversational UI](/agents/agents-kit-1/genai-for-mx/conversational-ui/) module: offers UI elements for chat interfaces and usage data monitoring.
+* The [Conversational UI](/agents/agents-kit-1/reference-guide/genai-for-mx/conversational-ui/) module: offers UI elements for chat interfaces and usage data monitoring.
 
 * The [Mendix Cloud GenAI Resources Packs](/agents/mx-cloud-genai/resource-packs/) connector: supports the usage of LLMs in your applications.
 
@@ -135,11 +135,11 @@ Follow the steps below to configure OpenAI for your application. For more inform
          * If using Microsoft Foundry, add the **Azure key type** by choosing between **OpenAI** or **Azure OpenAI**.
 
      * After saving the changes, a new pop-up will appear to add the deployment models. Select **Add deployed model** and provide the following details (optional for the OpenAI API Type):
-         * **Display name**: A reference name for the deployed model (e.g., "GPT-4 Conversational").
+         * **Display name**: A reference name for the deployed model (for example, "GPT-4 Conversational").
          * **Deployment Name**: Specify the deployed model (for example, *gpt-4o*, *gpt-3.5-turbo*, etc.)
-         * **Output modality**: Indicate the type of output (e.g., Text, Embeddings, Image).
+         * **Output modality**: Indicate the type of output (for example, Text, Embeddings, Image).
          * **Support system prompt**: Indicate whether the model supports system prompts.
-         * **Support conversations with history**: Indicate whether the model can remember and utilize previous interactions in a conversation by referring back to earlier messages in the chat.
+         * **Support conversations with history**: Indicate whether the model can remember and use previous interactions in a conversation by referring back to earlier messages in the chat.
          * **Support function calling**: Indicate whether the model can invoke different functions during the conversation based on the user input.
          * **Azure API Version**: Provide the version of the API you are using (for example, *2024-06-01*, *2024-10-21*, etc.)
          * **Is active**: Indicate whether the deployment model should be active to be used in the app.

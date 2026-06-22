@@ -136,7 +136,7 @@ For more information, see [Navigate Through the Mendix Cloud GenAI Portal](/agen
 
 ### Mendix Cloud GenAI Connector
 
-The [Mendix Cloud GenAI connector](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/) lets you utilize Mendix Cloud GenAI resource packs directly within your Mendix application. It allows you to integrate generative AI by dragging and dropping common operations from its toolbox. Note that any versions older than the ones listed below are no longer functional:  
+The [Mendix Cloud GenAI connector](/agents/agents-kit-2/mx-cloud-genai/mxgenai-connector/) lets you use Mendix Cloud GenAI resource packs directly within your Mendix application. It allows you to integrate generative AI by dragging and dropping common operations from its toolbox. Note that any versions older than the ones listed below are no longer functional:  
 
 * GenAI for Mendix bundle v2.4.1 (Mendix 9) (contains Mendix Cloud GenAI connector) or
 * Mendix Cloud GenAI connector v3.1.1 (no `DeployedKnowledgeBase` support) or
@@ -155,10 +155,3 @@ Data stored in GenAI Knowledge Base Resources resides in a logically isolated da
 Requests (prompts) sent to and responses (answers, embeddings) received from the models are not stored and not used for training. Only metadata—such as token input/output counts—is collected for logging, monitoring, metering, billing, product improvement, and maintenance purposes.
 
 Data sent to the Knowledge Base (vectors, chunks) is stored in a logically isolated, fully secure vector database, following industry-standard practices. This data is exclusively accessible to you and not used by Mendix. Similar to model requests, only metadata about Knowledge Base usage is collected for logging, monitoring, metering, billing, product improvement, and maintenance purposes.
-
-### Read More
-
-* [Enrich Your Mendix App with Agentic Capabilities](/agents/)
-* [Build a Chatbot Using the AI Bot Starter App](/agents/how-to/starter-template/)
-* [Creating Your First Agent](/agents/agents-kit-2/how-to/creating-agents/)
-* [Grounding Your Large Language Model in Data – Mendix Cloud GenAI](/agents/agents-kit-2/how-to/howto-groundllm/)

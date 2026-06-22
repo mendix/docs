@@ -5,7 +5,7 @@ description: "Agents Kit 1: Describes the Agents Kit 1 components for building a
 weight: 60
 v10_24: true
 cascade:
-    banner: "For access to Mendix's newest GenAI features, upgrade to Studio Pro 11.12 or above, and use <a href=\"/agents/agents-kit-2/\">Agents Kit 2</a>. Agents Kit 2 has updated versions of the GenAI modules and apps."
+    banner: "For access to Mendix's newest agentic and generative AI features, upgrade to Studio Pro 11.12 or above, and use <a href=\"/agents/agents-kit-2/\">Agents Kit 2</a>. Agents Kit 2 has updated versions of the Agents Kit modules and apps."
 ---
 
 ## Introduction
@@ -45,10 +45,10 @@ The following Marketplace components are available in Agents Kit 1. All componen
 
 | Asset | Description | Release Version |
 | --- | --- | --- |
-| [Agent Commons](/agents/agents-kit-1/genai-for-mx/agent-commons/) | Build agentic functionality by defining, testing, and evaluating agents at runtime. Iterate on prompts and agent configurations without app redeployment through the integrated Agent Builder UI. | 2.0.0 |
-| [Agent Editor](/agents/agents-kit-1/genai-for-mx/agent-editor/) | Define agents as version-controlled documents in Studio Pro at design time. Author prompts, configure tools and knowledge bases, test locally, and deploy agents as part of your app model. Available in Studio Pro 11.9 and above. | 1.0.0 |
-| [Conversational UI](/agents/agents-kit-1/genai-for-mx/conversational-ui/) | Create chat interfaces for full-screen, sidebar, or modal GenAI conversations. Monitor token consumption and trace interactions with UI features built on GenAI Commons. | 5.0.0 |
-| [GenAI Commons](/agents/agents-kit-1/genai-for-mx/commons/) | Integrate GenAI connectors with other modules using common capabilities provided by this base module. Required dependency for both core and connector modules. You can also implement your own connector based on this module. | 5.0.0 |
+| [Agent Commons](/agents/agents-kit-1/reference-guide/genai-for-mx/agent-commons/) | Build agentic functionality by defining, testing, and evaluating agents at runtime. Iterate on prompts and agent configurations without app redeployment through the integrated Agent Builder UI. | 2.0.0 |
+| [Agent Editor](/agents/agents-kit-1/reference-guide/genai-for-mx/agent-editor/) | Define agents as version-controlled documents in Studio Pro at design time. Author prompts, configure tools and knowledge bases, test locally, and deploy agents as part of your app model. Available in Studio Pro 11.9 and above. | 1.0.0 |
+| [Conversational UI](/agents/agents-kit-1/reference-guide/genai-for-mx/conversational-ui/) | Create chat interfaces for full-screen, sidebar, or modal GenAI conversations. Monitor token consumption and trace interactions with UI features built on GenAI Commons. | 5.0.0 |
+| [GenAI Commons](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/) | Integrate GenAI connectors with other modules using common capabilities provided by this base module. Required dependency for both core and connector modules. You can also implement your own connector based on this module. | 5.0.0 |
 
 ### Connector Modules {#connectors}
 

@@ -51,7 +51,7 @@ These tables show how many Mendix Cloud Tokens each CRP requires:
 | XXXXL21 | 1280 |
 | XXXXL-5XLDB | 2240 |
 
-|Premium Resource Packs | Mendix Cloud Tokens |
+| Premium Resource Packs | Mendix Cloud Tokens |
 | --- | --- |
 | S21 | 30 |
 | M21 | 60 |
@@ -62,7 +62,7 @@ These tables show how many Mendix Cloud Tokens each CRP requires:
 | XXXXL21 | 1920 |
 | XXXXL-5XLDB | 3360 |
 
-|Premium Plus Resource Packs | Mendix Cloud Tokens |
+| Premium Plus Resource Packs | Mendix Cloud Tokens |
 | --- | --: |
 | XL21 | 400 |
 | XXL21 | 800 |
@@ -98,10 +98,10 @@ These tables show how many Mendix Cloud Tokens each CRP requires:
 
 ## GenAI Resource Packs {#grps}
 
-GenAI Resource Packs provide turn-key access to Generative AI technology, delivered through Mendix Cloud. For text generation and embeddings resources, 1 Mendix Cloud Token equals 100 GenAI Units. You choose any Cloud Token amount when provisioning a resource. There are no fixed plan sizes. For technical details, GenAI Unit exchange rates, and model pricing, see [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/).
+GenAI Resource Packs provide turn-key access to Generative AI technology, delivered through Mendix Cloud. For text generation and embeddings resources, one Mendix Cloud Token equals 100 GenAI Units. You choose any Cloud Token amount when provisioning a resource. There are no fixed plan sizes. For technical details, GenAI Unit exchange rates, and model pricing, see [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/).
 
 | GenAI Knowledge Base Resource Packs | Mendix Cloud Tokens |
-| --- | --: |
+| --- | -- |
 | Standard | 48 |
 
 ## Key Takeaways

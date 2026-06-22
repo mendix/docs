@@ -64,7 +64,7 @@ You must also ensure you have the other prerequisite modules that Conversational
 * [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
 * [Web Actions](https://marketplace.mendix.com/link/component/114337)
 
-Finally, you must also set up a connector that is compatible with [GenAI Commons](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/). One option is to use the [Mendix Cloud GenAI connector](https://marketplace.mendix.com/link/component/239449). For more information on how to configure this connector, see the [Configuration](/agents/agents-kit-1/mx-cloud-genai/mxgenai-connector/#configuration) section of *Mendix Cloud GenAI connector*. Additionally, Mendix offers platform-supported integration with [(Azure) OpenAI](/agents/agents-kit-1/reference-guide/external-connectors/openai/) and [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). If desired, you need to download these integrations manually from the Marketplace. Alternatively, you can integrate with custom models by creating your own connector and making its operations and object structure compatible with the [GenAI Commons](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/) `Request` and `Response`.
+Finally, you must also set up a connector that is compatible with [GenAI Commons](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/). One option is to use the [Mendix Cloud GenAI connector](https://marketplace.mendix.com/link/component/239449). For more information on how to configure this connector, see the [Configuration](/agents/agents-kit-1/mx-cloud-genai/mxgenai-connector/#configuration) section of *Mendix Cloud GenAI connector*. Additionally, Mendix offers platform-supported integration with [(Azure) OpenAI](/agents/agents-kit-1/reference-guide/external-connectors/openai/) and [Amazon Bedrock](/agents/agents-kit-1/reference-guide/external-connectors/bedrock/). If desired, you need to download these integrations manually from the Marketplace. Alternatively, you can integrate with custom models by creating your own connector and making its operations and object structure compatible with the [GenAI Commons](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/) `Request` and `Response`.
 
 ## Installation {#installation}
 
@@ -177,7 +177,7 @@ If the `ChatContext`, however, already exists and a new `ProviderConfig` needs t
 
 ### Defining and Setting the Action Microflow {#action-microflow}
 
-The `Action Microflow` stored on a `ProviderConfig` is executed when the user clicks the **Send** button. This microflow handles the interaction between the LLM connectors and the Conversational UI entities. The **USE_ME > ConversationalUI > Action microflow examples** folder included in the Conversational UI module contains an example action microflow that is compatible with all connectors that follow GenAI Commons principles (such as [Mendix Cloud GenAI Connector](/agents/agents-kit-1/mx-cloud-genai/mxgenai-connector/), [OpenAI](/agents/agents-kit-1/reference-guide/external-connectors/openai/), and [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/)). You can copy and modify the microflow or use it directly. 
+The `Action Microflow` stored on a `ProviderConfig` is executed when the user clicks the **Send** button. This microflow handles the interaction between the LLM connectors and the Conversational UI entities. The **USE_ME > ConversationalUI > Action microflow examples** folder included in the Conversational UI module contains an example action microflow that is compatible with all connectors that follow GenAI Commons principles (such as [Mendix Cloud GenAI Connector](/agents/agents-kit-1/mx-cloud-genai/mxgenai-connector/), [OpenAI](/agents/agents-kit-1/reference-guide/external-connectors/openai/), and [Amazon Bedrock](/agents/agents-kit-1/reference-guide/external-connectors/bedrock/)). You can copy and modify the microflow or use it directly. 
 
 Add the action microflow to an existing `ProviderConfig` by using the **Set Chat Action** toolbox action. Note that this action does not commit the object, so you must add a step to commit it afterward.
 
@@ -204,7 +204,7 @@ The following operations can be found in the toolbox for changing the [ChatConte
 
 * `Set Topic` sets the `Topic` of the `ChatContext`. This attribute can be used in the **History** sidebar while making historical chats visible to users.
 * `Default Preprocessing` sets a default `Topic` for `ChatContext` and creates a sample [Request](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#request).
-* `Set ConversationID` sets the ConversationID on the `ChatContext`. Storing the ConversationID is needed for a chat with history within [Retrieve and Generate with Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/#retrieve-and-generate).
+* `Set ConversationID` sets the ConversationID on the `ChatContext`. Storing the ConversationID is needed for a chat with history within [Retrieve and Generate with Amazon Bedrock](/agents/agents-kit-1/reference-guide/external-connectors/bedrock/#retrieve-and-generate).
 
 ##### Request Operations {#request-operations}
 

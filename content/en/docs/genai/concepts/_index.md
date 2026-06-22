@@ -42,7 +42,7 @@ For example, you can use an LLM to do:
     * Translate languages
     * Simulate characters for games
  
-Some LLMs, such as [Anthropic Claude](/appstore/modules/aws/amazon-bedrock/) and [GPT-4o](/agents/agents-kit-2/reference-guide/external-connectors/openai/), can also use one or more images as input, allowing you to ask questions about images for use cases such as object recognition, image to text (OCR), and validating whether an image is as intended.
+Some LLMs, such as [Anthropic Claude](/agents/reference-guide/external-connectors/bedrock/) and [GPT-4o](/agents/agents-kit-2/reference-guide/external-connectors/openai/), can also use one or more images as input, allowing you to ask questions about images for use cases such as object recognition, image to text (OCR), and validating whether an image is as intended.
  
 #### Embeddings Generation
 
@@ -145,4 +145,4 @@ The agent concept combines prompts, RAG (Retrieval Augmented Generation), and Re
 
 For an overview of the components that help you get started, refer to [Agents Kit Components](/agents/agents-kit-2/#components). 
 
-In addition, you can integrate agentic behavior in a Mendix app by leveraging external agents through cloud infrastructure providers. In this case, the Mendix app does not store the agent definition. Instead, it only calls the external agent. For example, [Agents for Amazon Bedrock](https://aws.amazon.com/bedrock/agents/) provides this functionality for Amazon Bedrock. You can find out how to use this in your Mendix application in [Invoking an Agent with the InvokeAgent Operation](/appstore/modules/aws/amazon-bedrock/#invokeagent) section of the *Amazon Bedrock* module documentation.
+In addition, you can integrate agentic behavior in a Mendix app by leveraging external agents through cloud infrastructure providers. In this case, the Mendix app does not store the agent definition. Instead, it only calls the external agent. For example, [Agents for Amazon Bedrock](https://aws.amazon.com/bedrock/agents/) provides this functionality for Amazon Bedrock. You can find out how to use this in your Mendix application in [Invoking an Agent with the InvokeAgent Operation](/agents/reference-guide/external-connectors/bedrock/#invokeagent) section of the *Amazon Bedrock* module documentation.

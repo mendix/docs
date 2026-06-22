@@ -26,10 +26,10 @@ Prompt Management used to be a capability of the Conversational UI module. Since
 
 Typical use cases for Conversational UI include the following:
 
-* Create a chat interface for users to chat with Large Language Models (LLM). 
+* Create a chat interface for users to chat with [large language models](/agents/glossary/#large-language-model) (LLMs). 
 * Allow users to switch between different implementations by switching providers. 
 * Include advanced capabilities to control the model's behavior, for example, by setting the temperature parameter.
-* Easily extend the chat interface with advanced concepts, such as RAG or the ReAct pattern. For more information, see [GenAI Concepts](/agents/get-started/).
+* Easily extend the chat interface with advanced concepts, such as [RAG](/agents/glossary/#retrieval-augmented-generation) or the ReAct pattern. For more information, see [GenAI Concepts](/agents/get-started/).
 
 ### Features {#features}
 
@@ -40,14 +40,14 @@ The Conversational UI module provides the following functionalities:
     * Pages that you can use in your navigation for chat
     * Snippets that you can use directly on your pages, for example, to display messages or a history sidebar
     * A floating button for opening a pop-up chat
-    * Pages, snippets, and logic to display and export token usage data (if enabled in GenAI Commons)
+    * Pages, snippets, and logic to display and export [token](/agents/glossary/#token) usage data (if enabled in GenAI Commons)
     * Traceability pages for monitoring and analyzing GenAI interactions (if enabled in GenAI Commons)
 
 * Operations to set up your context, interact with the model, and add the data to be displayed in the UI
 * Domain model to store the chat conversations and additional information  
 * Integration with any model that is compatible with [GenAI Commons](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/)
-* Support for comprehensive traceability and monitoring of GenAI interactions
-* Support for human-in-the-loop patterns, allowing users to review and approve tool executions
+* Support for comprehensive [traceability](/agents/glossary/#trace) and monitoring of GenAI interactions
+* Support for [human-in-the-loop](/agents/glossary/#human-in-the-loop) patterns, allowing users to review and approve tool executions
 
 ### Limitations {#limitations}
 

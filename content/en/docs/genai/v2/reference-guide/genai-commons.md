@@ -21,7 +21,7 @@ If you want to connect to another LLM provider or your own service, Mendix recom
 
 ### Limitations {#limitations}
 
-The current scope of the module focuses on text and image generation, embeddings, and knowledge base use cases.
+The current scope of the module focuses on text and image generation, [embeddings](/agents/glossary/#embeddings), and [knowledge base](/agents/glossary/#knowledge-base) use cases.
 
 ### Dependencies {#dependencies}
 
@@ -49,7 +49,7 @@ The [Conversational UI module](/agents/agents-kit-2/reference-guide/genai-for-mx
 
 ### Traceability {#traceability}
 
-Traceability was introduced in version 5.3.0 of the GenAI Commons module.
+[Traceability](/agents/glossary/#trace)Traceability was introduced in version 5.3.0 of the GenAI Commons module.
 
 By default, the chat completions operations of GenAI Commons store data in your application's database for traceability. This makes it easier to understand GenAI usage in your app and why the model behaved in a certain way, for example, by reviewing tool usage. Trace data is only persisted if the constant `StoreTraces` is set to *true*. 
 

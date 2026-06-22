@@ -11,7 +11,7 @@ aliases:
 
 ## Introduction
 
-This document explains how to add data to your smart app to integrate with a large language model (LLM). You learn how to ground your LLM in data within your Mendix application using the [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/) and integrate GenAI capabilities with a knowledge base to address specific business requirements.
+This document explains how to add data to your smart app to integrate with a large language model (LLM). You learn how to ground your LLM in data within your Mendix application using the [Mendix Cloud GenAI Resource Packs](/agents/mx-cloud-genai/resource-packs/) and integrate GenAI capabilities with a [knowledge base](/agents/glossary/#knowledge-base) to address specific business requirements.
 
 ### Prerequisites
 

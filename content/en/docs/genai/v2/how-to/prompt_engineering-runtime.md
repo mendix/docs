@@ -17,8 +17,8 @@ This document explains how to integrate the prompt engineering capabilities of t
 This document will help you with the following:
 
 * Understand how to implement Agent Commons in your Mendix application.
-* Enable AI experts to prompt engineer in your running application.
-* Learn how you can call a crafted agent to an LLM of your choice.
+* Enable AI experts to [prompt engineer](/agents/glossary/#prompt-engineering) in your running application.
+* Learn how you can call a crafted agent to a [large language model](/agents/glossary/#large-language-model) (LLM) of your choice.
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ Before integrating Agent Commons into your app, make sure you meet the following
 
 ## Use Case
 
-This document shows you how to build a simple user interface that lets users generate descriptions for their products. By integrating generative AI, you can leverage a large language model (LLM) to create these descriptions based on a preconfigured prompt as part of an agent.
+This document shows you how to build a simple user interface that lets users generate descriptions for their products. By integrating generative AI, you can leverage an LLM to create these descriptions based on a preconfigured prompt as part of an agent.
 
 This document also explains how you can integrate Agent Commons capabilities to your app and craft an agent in the UI at runtime. In the UI, users can input the product name and specify the desired length of the description. This input is dynamically inserted into a prompt previously created by an admin, which is then called. Users can then review the generated response.
 
@@ -118,7 +118,7 @@ To further improve your prompts and the user experience, you can add some placeh
 
 ### Adding a System Prompt and Multiple Test Cases
 
-To further refine the agent's responses, add a system prompt that defines the assistant's role and create an additional test case for comparison.
+To further refine the agent's responses, add a [system prompt](/agents/glossary/#system-prompt) that defines the assistant's role and create an additional test case for comparison.
 
 1. In the **Agent version** dropdown, click **Draft** so that you can edit the fields again. This time, add instructions in the [System Prompt](/agents/prompt-engineering/#system-prompt) field. Enter the following: `You are a sales assistant that can write engaging and inspiring product descriptions for our online marketplace. The user asks you to create a description for various products. You should always respond in {{Language}}.` Notice that the **Language** variable appears in the **Test Card**.
 

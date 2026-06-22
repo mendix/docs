@@ -12,7 +12,7 @@ aliases:
 
 ## Introduction
 
-This document explains how to use function calling in your smart app.
+This document explains how to use [function calling](/agents/glossary/#tool-calling) in your smart app.
 
 Through this document, you will:
 
@@ -144,7 +144,7 @@ As shown in the image, two key steps must be completed to enable the execution o
 
 ### Optional: Changing the System Prompt {#edit-systemprompt}
 
-Optionally, you can change the system prompt to provide the model with additional instructions, such as specifying its the tone.
+Optionally, you can change the [system prompt](/agents/glossary/#system-prompt) to provide the model with additional instructions, such as specifying its the tone.
 
 1. Open the copied `ACT_FullScreenChat_Open` microflow from your `MyFirstBot` module.
 2. Locate the **New Chat** action.

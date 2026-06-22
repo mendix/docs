@@ -11,7 +11,7 @@ aliases:
 
 ## Introduction
 
-The [Agent Editor](https://marketplace.mendix.com/link/component/257918) module enables you to develop, test, and optimize GenAI use cases by creating agents that interact with large language models (LLMs).
+The [Agent Editor](https://marketplace.mendix.com/link/component/257918) module enables you to develop, test, and optimize GenAI use cases by creating [agents](/agents/glossary/#agent) that interact with large language models (LLMs).
 
 With the Agent Editor module, you can define agents at design time in Studio Pro (11.9.0 and above) and manage their lifecycle as part of your app by leveraging existing platform capabilities such as Model documents, version control, and deployment capabilities. Define and develop agents locally, then deploy them directly to cloud environments using the app model.
 

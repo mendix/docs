@@ -12,7 +12,7 @@ aliases:
 
 ## Introduction
 
-Vector databases play an important role in embeddings-based AI use cases. They efficiently store, retrieve, and manipulate high-dimensional vectors that represent text or semantic information. A crucial step in these use cases, such as semantic search and retrieval-augmented generation (RAG), is to find the most similar pieces of information to a given input. Standard databases cannot perform these similarity and distance calculations between high-dimensional vectors efficiently, so a vector database is needed.
+[Vector databases](/agents/glossary/#vector-database) play an important role in embeddings-based AI use cases. They efficiently store, retrieve, and manipulate high-dimensional vectors that represent text or semantic information. A crucial step in these use cases, such as semantic search and retrieval-augmented generation (RAG), is to find the most similar pieces of information to a given input. Standard databases cannot perform these similarity and distance calculations between high-dimensional vectors efficiently, so a vector database is needed.
 
 This page describes how to set up a PostgreSQL vector database to explore use cases with knowledge bases.
 

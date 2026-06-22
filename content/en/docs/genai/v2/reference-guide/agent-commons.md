@@ -11,7 +11,7 @@ aliases:
 
 ## Introduction
 
-The [Agent Commons](https://marketplace.mendix.com/link/component/240371) module enables users to develop, test, and optimize their GenAI use cases by creating effective agents that interact with large language models (LLMs).
+The [Agent Commons](https://marketplace.mendix.com/link/component/240371) module enables users to develop, test, and optimize their GenAI use cases by creating effective [agents](/agents/glossary/#agent) that interact with large language models (LLMs).
 
 With the Agent Commons module, you can use the Agent Builder interface within your app to define agents at runtime and manage multiple versions over time.
 
@@ -159,7 +159,7 @@ Note that [user access approval](/agents/agents-kit-2/reference-guide/genai-for-
 
 #### Testing and Refining the Agent
 
-While writing the system prompt (for both chat and task types) or the user prompt (only for the task type), the prompt engineer can include variables by enclosing them in double braces, for example, `{{variable}}`. The actual values of these placeholders are typically known at runtime based on the user's page context. 
+While writing the [system prompt](/agents/glossary/#system-prompt) (for both chat and task types) or the [user prompt](/agents/glossary/#user-prompt) (only for the task type), the prompt engineer can include variables by enclosing them in double braces, for example, `{{variable}}`. The actual values of these placeholders are typically known at runtime based on the user's page context. 
 To test the behavior of the prompts, a test can be executed. The prompt engineer must provide test values for all variables defined in the prompts. Additionally, multiple sets of test values for the variables can be defined and run in bulk. Based on the test results, the prompt engineer can add, remove, or rephrase certain parts of the prompt.
 
 ### Using the Agent in the App Logic {#app-logic}

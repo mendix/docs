@@ -22,11 +22,10 @@ Self-service provisioning of GenAI resources using Mendix Cloud Tokens is availa
 
 The overview page provides a centralized view of all deployed GenAI resources, including text generation resources, embeddings generation resources, and knowledge base resources. From this page, you can easily review the status, basic information, and usage details of each deployed resource. The following list shows detailed information about your GenAI resource.
 
-* **Status** – The current status of the resource.
 * **Name** – The name of the resource.
-* **Available Models** – The model versions available on the resource, grouped by family, for example, Claude Haiku, Sonnet, or Opus. For a full list of available models, see [Supported Models](/agents/mx-cloud-genai/resource-packs/#supported-models).
-* **GenAI Units** – The monthly GenAI Unit allocation for the resource.
-* **Created For** – For whom it is created.
+* **Models** – The model versions available on the resource, grouped by family, for example, Claude Haiku, Sonnet, or Opus. For a full list of available models, see [Supported Models](/agents/mx-cloud-genai/resource-packs/#supported-models).
+* **Capacity** – The monthly GenAI Unit allocation for the resource.
+* **Status** – The current status of the resource.
 
 {{< figure src="/attachments/control-center/genai-resources/overview-genai-resources.png" alt="" >}}
 
@@ -40,19 +39,18 @@ Ensure that you are on the correct resource tab before provisioning. For example
 
 When provisioning a new resource, enter the following information:
 
-* **Display Name** – The name of the resource.
+* **Name** – The name of the resource.
 * **Environment** – The environment for which the resource is created, such as Test, Acceptance, or Production.
 * **Mendix Cloud Region** – The cloud region where the resource is hosted.
 * **Cross Region Inference** – Select whether to enable cross region inference for this resource. Without cross region inference, the latest model versions may not be available. For more information, see the [Settings](/agents/mx-cloud-genai/Navigate-MxGenAI/#settings) section of *Navigate through the Mendix Cloud GenAI Portal*.
 * **Available Models** – The model versions to enable on the resource. For text generation resources, select one or more versions from the available Claude model families (Haiku, Sonnet, or Opus). For embeddings resources, select a single model from the available options. For a full list of available models, see [Supported Models](/agents/mx-cloud-genai/resource-packs/#supported-models).
 * **Default Model** – The model version used when no model is explicitly specified in an API call. Select one of the model versions chosen in **Available Models**. This ensures backward compatibility with existing apps that use older connector versions.
-* **Cloud Tokens** – The number of Mendix Cloud Tokens to allocate per month (minimum 1). Each Cloud Token provides 100 [GenAI Units](/agents/mx-cloud-genai/Navigate-MxGenAI/#what-are-tokens-and-genai-units). The **Resource Specification** panel shows the resulting monthly GenAI Unit allocation.
-* **User** – The name of the user for whom the provisioning was initially created.
-* **Email** – The user's email address.
+* **Cloud Tokens** – The number of Mendix Cloud Tokens to allocate per month (minimum one). Each Cloud Token provides 100 [GenAI Units](/agents/mx-cloud-genai/Navigate-MxGenAI/#what-are-tokens-and-genai-units). **Resource Specification** shows the resulting monthly GenAI Unit allocation.
+* **User** – The name and email address of the user for whom the provisioning was initially created.
 
-After filling in the required fields, review all the entered details in the **Resource Specification** panel. If the Cloud Token amount entered exceeds your available balance, the **Cloud Tokens Consumption** widget turns red and the **Provision Resource** button is disabled. To learn more about GenAI Unit allocation, see [GenAI Units and Model Pricing](/agents/mx-cloud-genai/resource-packs/#genai-units-and-model-pricing).
+After filling in the required fields, review all the entered details in **Resource Specification**. If the Cloud Token amount entered exceeds your available balance, the **Cloud Tokens Consumption** widget turns red and the **Provision Resource** button is disabled. To learn more about GenAI Unit allocation, see [GenAI Units and Model Pricing](/agents/mx-cloud-genai/resource-packs/#genai-units-and-model-pricing).
 
-Click **Provision Resource** to proceed. Before provisioning is finalized, a **Resource Summary** confirmation dialog shows a read-only overview of all entered details. Review the summary and click **Confirm** to complete provisioning. You are taken back to the **GenAI Resources** page, where the newly created resource is displayed in the list. Selecting the newly provisioned resource opens its details directly in the Mendix Cloud GenAI Portal in a new tab.
+Click **Provision** to proceed. Before provisioning is finalized, a **Resource Summary** confirmation dialog shows a read-only overview of all entered details. Review the summary and click **Provision** to complete provisioning. You are taken back to the **GenAI Resources** page, where the newly created resource is displayed in the list. Selecting the newly provisioned resource opens its details directly in the Mendix Cloud GenAI Portal in a new tab.
 
 ## Deprovisioning GenAI Resources
 
@@ -66,15 +64,16 @@ Click **Deprovision** to proceed. After confirmation, the resource status update
 When you deprovision a resource, the actual deprovisioning occurs at the end of the current bundle month. Until that date, you can still use the resource, and the scheduled deprovisioning date appears in the resource's **Status**. Knowledge base and embeddings resources can be deprovisioned in the same bundle month. The system handles the dependency automatically.
 {{% /alert %}}
 
-## Adjusting Resource GenAI Unit Capacity {#adjusting-resource-genai-unit-capacity}
+## Editing Resource GenAI Unit Capacity {#adjusting-resource-genai-unit-capacity}
 
 You can change the Cloud Token allocation of an already provisioned GenAI resource (text generation or embeddings) to better match your actual usage. You can adjust the allocation through the self-service capability of the Control Center.
 
 To adjust the GenAI Unit capacity of a resource, do the following:
 
 1. Log in to the Control Center as a Company Admin.
-2. On the **GenAI Resources** page, click the three-dot ({{% icon name="three-dots-menu-horizontal-filled" %}}) icon next to the selected resource and select **Adjust Capacity**.
-3. Enter the new Cloud Token amount and review the updated **Resource Specification**. Click **Adjust Capacity** to submit the change.
+2. On the **GenAI Resources** page, click the three-dot ({{% icon name="three-dots-menu-horizontal-filled" %}}) icon next to the selected resource and select **Edit Resource**.
+3. Enter the new **Cloud Tokens** amount and review the updated **Cloud Tokens Consumption**.
+4. You can also change the **Name** and **Default Model** at this stage. 
 
 {{< figure src="/attachments/control-center/genai-resources/adjust-plan-size.png" alt="" >}}
 
@@ -86,5 +85,5 @@ Increases take effect immediately. The additional GenAI Units are added to the c
 
 The behavior depends on how much of the current month's allocation has already been consumed:
 
-* **Immediate decrease** – If the GenAI Units consumed so far in the current bundle month are less than the new allocation, the decrease takes effect immediately and Cloud Tokens are released immediately.
-* **Deferred decrease** – If the GenAI Units consumed so far in the current bundle month exceed the new allocation, the current month continues at the existing allocation. The decrease takes effect at the start of the next bundle month, and Cloud Tokens are released at that point.
+* Immediate decrease – If the GenAI Units consumed so far in the current bundle month are less than the new allocation, the decrease takes effect immediately and Cloud Tokens are released immediately.
+* Deferred decrease – If the GenAI Units consumed so far in the current bundle month exceed the new allocation, the current month continues at the existing allocation. The decrease takes effect at the start of the next bundle month, and Cloud Tokens are released at that point.

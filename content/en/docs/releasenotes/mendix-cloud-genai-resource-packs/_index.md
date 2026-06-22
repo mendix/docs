@@ -35,7 +35,7 @@ These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs
 
 #### New Features
 
-* It is now possible to downgrade the plan of a GenAI resource directly through self-service in the Control Center. For more information, see [Downgrading GenAI Resource Plan Size](/control-center/genai-resources-self-service/#downgrading-genai-resource-plan-size) section of *GenAI Resources*.
+* It is now possible to downgrade the plan of a GenAI resource directly through self-service in the Control Center.
 
 #### Fixes
 
@@ -45,7 +45,7 @@ These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs
 
 #### New Features
 
-* It is now possible to upgrade the plan of a GenAI resource directly through self-service in the Control Center. For more information, see [Upgrading GenAI Resource Plan Size](/control-center/genai-resources-self-service/#upgrading-genai-resource-plan-size) section of *GenAI Resources*.
+* It is now possible to upgrade the plan of a GenAI resource directly through self-service in the Control Center.
 
 #### Fixes
 

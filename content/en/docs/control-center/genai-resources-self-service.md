@@ -1,6 +1,6 @@
 ---
 title: "GenAI Resources"
-url: /control-center/genai-resources-self-service
+url: /control-center/genai-resources-self-service/
 description: "Describes how to provision and deprovision GenAI Resources using self-service."
 weight: 20
 ---
@@ -25,9 +25,9 @@ The overview page provides a centralized view of all deployed GenAI resources, i
 * **Name** – The name of the resource.
 * **Models** – The model versions available on the resource, grouped by family, for example, Claude Haiku, Sonnet, or Opus. For a full list of available models, see [Supported Models](/agents/mx-cloud-genai/resource-packs/#supported-models).
 * **Capacity** – The monthly GenAI Unit allocation for the resource.
-* **Status** – The current status of the resource.
+* **Status** – The current status of the resource, for example, **Active**.
 
-{{< figure src="/attachments/control-center/genai-resources/overview-genai-resources.png" alt="" >}}
+{{< figure src="/attachments/control-center/genai-resources/overview-genai-resources.png" alt="Overview page showing deployed GenAI resources with columns for Name, Models, Capacity, and Status" >}}
 
 ## Provisioning GenAI Resources
 
@@ -48,15 +48,15 @@ When provisioning a new resource, enter the following information:
 * **Cloud Tokens** – The number of Mendix Cloud Tokens to allocate per month (minimum one). Each Cloud Token provides 100 [GenAI Units](/agents/mx-cloud-genai/Navigate-MxGenAI/#what-are-tokens-and-genai-units). **Resource Specification** shows the resulting monthly GenAI Unit allocation.
 * **User** – The name and email address of the user for whom the provisioning was initially created.
 
-After filling in the required fields, review all the entered details in **Resource Specification**. If the Cloud Token amount entered exceeds your available balance, the **Cloud Tokens Consumption** widget turns red and the **Provision Resource** button is disabled. To learn more about GenAI Unit allocation, see [GenAI Units and Model Pricing](/agents/mx-cloud-genai/resource-packs/#genai-units-and-model-pricing).
+After filling in the required fields, review all the entered details in **Resource Specification**. If the entered Cloud Token amount exceeds your available balance, **Cloud Tokens Consumption** turns red and the **Provision Resource** button is disabled. To learn more about GenAI Unit allocation, see [GenAI Units and Model Pricing](/agents/mx-cloud-genai/resource-packs/#genai-units-and-model-pricing).
 
 Click **Provision** to proceed. Before provisioning is finalized, a **Resource Summary** confirmation dialog shows a read-only overview of all entered details. Review the summary and click **Provision** to complete provisioning. You are taken back to the **GenAI Resources** page, where the newly created resource is displayed in the list. Selecting the newly provisioned resource opens its details directly in the Mendix Cloud GenAI Portal in a new tab.
 
 ## Deprovisioning GenAI Resources
 
-To deprovision a resource, click the three-dot icon ({{% icon name="three-dots-menu-horizontal" %}}) next to the selected resource and select **Deprovision Resource**. A confirmation dialog box appears, displaying a message and the details of the selected resource, as shown in the example below.
+To deprovision a resource, click the three-dot icon ({{% icon name="three-dots-menu-horizontal-filled" %}}) next to the selected resource and select **Deprovision Resource**. A confirmation dialog box appears, displaying a message and the details of the selected resource, as shown in the example below.
 
-{{< figure src="/attachments/control-center/genai-resources/deprovisioning.png" alt="" >}}
+{{< figure src="/attachments/control-center/genai-resources/deprovisioning.png" alt="Confirmation dialog for deprovisioning a GenAI resource showing resource details and Deprovision button" >}}
 
 Click **Deprovision** to proceed. After confirmation, the resource status updates on the **GenAI Resources** page to reflect that deprovisioning is scheduled.
 
@@ -64,7 +64,7 @@ Click **Deprovision** to proceed. After confirmation, the resource status update
 When you deprovision a resource, the actual deprovisioning occurs at the end of the current bundle month. Until that date, you can still use the resource, and the scheduled deprovisioning date appears in the resource's **Status**. Knowledge base and embeddings resources can be deprovisioned in the same bundle month. The system handles the dependency automatically.
 {{% /alert %}}
 
-## Editing Resource GenAI Unit Capacity {#adjusting-resource-genai-unit-capacity}
+## Adjusting Resource GenAI Unit Capacity {#adjusting-resource-genai-unit-capacity}
 
 You can change the Cloud Token allocation of an already provisioned GenAI resource (text generation or embeddings) to better match your actual usage. You can adjust the allocation through the self-service capability of the Control Center.
 
@@ -75,7 +75,7 @@ To adjust the GenAI Unit capacity of a resource, do the following:
 3. Enter the new **Cloud Tokens** amount and review the updated **Cloud Tokens Consumption**.
 4. You can also change the **Name** and **Default Model** at this stage. 
 
-{{< figure src="/attachments/control-center/genai-resources/adjust-plan-size.png" alt="" >}}
+{{< figure src="/attachments/control-center/genai-resources/adjust-plan-size.png" alt="Edit Resource dialog showing Cloud Tokens field, Name field, Default Model dropdown, and Cloud Tokens Consumption summary" >}}
 
 ### Increasing GenAI Unit Capacity
 

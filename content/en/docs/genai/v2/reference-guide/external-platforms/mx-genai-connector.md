@@ -42,16 +42,19 @@ If you are using a GenAI starter app such as the [Blank GenAI App](https://marke
 
 After installing the Mendix Cloud GenAI connector, you can find it in the **App Explorer** under the **Marketplace modules** section. The connector includes a domain model and several activities to integrate your app with the Mendix Cloud GenAI service. To implement the connector, use its actions in a microflow. You can find the Mendix GenAI actions in the microflow toolbox.
 
-Configuration steps vary: For [Agent Editor](https://marketplace.mendix.com/link/component/257918), configure resources in Studio Pro as described in the [Defining the Model](/agents/agents-kit-2/reference-guide/genai-for-mx/agent-editor/#define-model) and [Configuring the Knowledge Base Document](/agents/agents-kit-2/reference-guide/genai-for-mx/agent-editor/#define-knowledgebase) sections of *Agent Editor*. For [Agent Commons](https://marketplace.mendix.com/link/component/240371) or using connector operations directly, follow the steps below.
+Before using the connector, complete these configuration steps:
 
-To get started, follow these steps:
-
-* Configure the [EncryptionKey Constant](/appstore/modules/encryption/#configuration).
-* Add the module role `MxGenAIConnector.Administrator` to your Administrator user roles in the **Security** settings of your app.
+1. In Studio Pro, add a random 32-character string value for the [EncryptionKey Constant](/appstore/modules/encryption/#configuration).
+2. Add the module role `MxGenAIConnector.Administrator` to your Administrator user roles in the **Security** settings of your app.
     * If you are using a GenAI starter app, this module role is configured by default.
-* Add the `Configuration_Overview` page (**USE_ME** > **Configuration**) to your navigation, or add the `Snippet_Configuration` to a page that is already part of your navigation. Alternatively, register your key by using the `Configuration_RegisterByString` microflow.
-    * If you are using a GenAI starter app, the configuration page is automatically added to your navigation and can be accessed by clicking **Settings** ({{% icon name="cog" %}}) > **Mendix Cloud GenAI Configuration** in your running app.
-* Run the app and navigate to the configuration page. Import a key generated in the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com) and click **Test Key** to validate its functionality. This key establishes a connection between the Mendix Cloud resources and your application and contains all the information required to set up the connection.
+
+Next, complete the following configuration steps according to the module you are using:
+
+* **Agent Editor** – Configure resources directly in Studio Pro, as described in [Defining the Model](/agents/agents-kit-2/reference-guide/genai-for-mx/agent-editor/#define-model) and [Configuring the Knowledge Base Document](/agents/agents-kit-2/reference-guide/genai-for-mx/agent-editor/#define-knowledgebase) sections of *Agent Editor*.
+* **Agent Commons or direct connector operations** – Complete these steps:
+    1. Add the `Configuration_Overview` page (**USE_ME** > **Configuration**) to your navigation, or add the `Snippet_Configuration` to a page that is already part of your navigation. Alternatively, register your key by using the `Configuration_RegisterByString` microflow.
+        * If you are using a GenAI starter app, you can skip this step. The configuration page is automatically added to your navigation and can be accessed by clicking **Settings** ({{% icon name="cog" %}}) > **Mendix Cloud GenAI Configuration** in your running app.
+    2. Run the app and navigate to the configuration page. Import a key generated in the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com) and click **Test Key** to validate its functionality. This key establishes a connection between the Mendix Cloud resources and your application and contains all the information required to set up the connection.
 
 {{% alert color="info" %}}
 When using an Embeddings Model Resource together with a Knowledge Base Resource, you do not need to import both keys. Importing the Knowledge Base Resource key automatically generates the connection details for the embeddings generation model.

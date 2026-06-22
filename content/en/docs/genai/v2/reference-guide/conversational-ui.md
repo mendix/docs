@@ -47,6 +47,7 @@ The Conversational UI module provides the following functionalities:
 * Domain model to store the chat conversations and additional information  
 * Integration with any model that is compatible with [GenAI Commons](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/)
 * Support for comprehensive traceability and monitoring of GenAI interactions
+* Support for human-in-the-loop patterns, allowing users to review and approve tool executions
 
 ### Limitations {#limitations}
 

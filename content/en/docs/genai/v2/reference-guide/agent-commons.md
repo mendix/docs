@@ -37,7 +37,7 @@ The Agent Commons module offers the following features:
 
 * Drag-and-drop operations for calling both task and chat agents from microflows and workflows.
 
-* Adding tools and knowledge bases to enhance the agent's capabilities
+* Adding tools and knowledge bases to enhance the agent's capabilities, with configurable human-in-the-loop controls for tool execution approval and visibility.
 
 * Prompt placeholders, allowing dynamic insertion of values based on user or context objects at runtime.
 

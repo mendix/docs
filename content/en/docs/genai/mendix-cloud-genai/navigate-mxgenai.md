@@ -162,7 +162,7 @@ The **Settings** tab contains the details of a GenAI resource. It shows the foll
 * **Cloud Provider** – The cloud provider, for example, AWS.
 * **Type** – The type of resource, for example, Text Generation Model, Embeddings Generation, or Knowledge Base.
 * **Available Models** – The model versions enabled on the resource. For text generation resources, this lists all Claude model versions available for use. For embeddings resources, this lists all available Cohere Embed model versions. For a full list of supported models, see [Supported Models](/agents/mx-cloud-genai/resource-packs/#supported-models).
-* **Default model** – The model version used as a fallback when no model is explicitly specified in an API call. This field only applies to text generation resources and is present for backward compatibility with apps using connector below V3.0.0.
+* **Default model** – The model version used as a fallback when no model is explicitly specified in an API call. This field only applies to text generation resources and is present for backward compatibility with apps using connector below V6.2.0.
 * **Capacity** – The monthly [GenAI Unit](/agents/mx-cloud-genai/Navigate-MxGenAI/#what-are-tokens-and-genai-units) allocation for the resource, for example, 1,000 GenAI Units.
 * **Environment** – The environment, for example, Test, Acceptance, or Production.
 

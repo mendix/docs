@@ -1,7 +1,7 @@
 ---
 title: "Agents Kit 2"
 url: /agents/agents-kit-2/
-description: "Agents Kit 2: Describes the Agents Kit 2 components for building agentic and generative AI applications in Studio Pro 11.12 and above."
+description: "Agents Kit 2: Describes the Agents Kit 2 components for building agentic and generative AI apps in Studio Pro 11.12 and above."
 weight: 50
 v11_12: true
 ---
@@ -14,14 +14,9 @@ Agents Kit 2 provides a comprehensive set of Mendix components for building agen
 Agents Kit 2 is available for Studio Pro 11.12 and above and provides Mendix's newest agentic features and improvements. [Agents Kit 1](/agents/agents-kit-1/) is available for Studio Pro 10.24 and above.
 {{% /alert %}}
 
-This section includes the following resources:
-
-* [Building Smarter Apps Using GenAI](/agents/agents-kit-2/how-to/) – Step-by-step guides for building AI-powered applications
-* [Reference Guide](/agents/agents-kit-2/reference-guide/) – Technical reference documentation for the Mendix components in Agents Kit
-
 ## Agents Kit Components {#components}
 
-The following Marketplace components are available in Agents Kit 2. All components are available from the [Mendix Marketplace](/appstore/).
+The following components are available in Agents Kit 2.
 
 ### Starter Apps {#starter-apps}
 
@@ -67,3 +62,13 @@ All connectors depend on GenAI Commons and can be used with the other [core modu
 | --- | --- | --- |
 | [MCP Client](/agents/agents-kit-2/mcp-modules/mcp-client/) | Access tools and prompts available via MCP inside your Mendix app and add them to LLM requests. | 4.0.0 |
 | [MCP Server](/agents/agents-kit-2/mcp-modules/mcp-server/) | Make your Mendix business logic available to any agent in your enterprise landscape. Expose reusable prompts, including the ability to use prompt variables. List and run actions implemented in the application as a tool. | 5.0.0 |
+
+## Documents in This Section
+
+* [Building Smarter Apps Using GenAI](/agents/agents-kit-2/how-to/)
+
+    Step-by-step how-tos for building smart apps, including creating agents, integrating function calling, grounding LLMs in data, and building custom connectors
+
+* [Reference Guide](/agents/agents-kit-2/reference-guide/)
+
+    Technical reference documentation for the Mendix components in Agents Kit 2

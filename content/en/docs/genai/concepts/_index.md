@@ -3,7 +3,7 @@ title: "GenAI Concepts"
 url: /agents/get-started/
 linktitle: "GenAI Concepts"
 weight: 10
-description: "Describes the concepts behind generative AI and what you might implement with it."
+description: "Introduces essential generative AI concepts including LLMs, RAG, prompt engineering, function calling, and agents for Mendix app development."
 aliases:
     - /appstore/modules/genai/using-gen-ai/ 
     - /appstore/modules/genai/get-started/
@@ -115,7 +115,7 @@ This allows you to use your own knowledge base to do things like:
 
 There are two approaches to including RAG in your generative AI-powered app.
 
-### Fully-Integrated RAG
+### Fully Integrated RAG
 
 Some architectures provide the capabilities for the RAG pattern out of the box, which shields you from having to retrieve and augment your prompt yourself. All you need to do is ensure that your knowledge base is available to the model.
 

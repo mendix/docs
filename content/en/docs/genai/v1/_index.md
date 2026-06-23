@@ -1,7 +1,7 @@
 ---
 title: "Agents Kit 1"
 url: /agents/agents-kit-1/
-description: "Agents Kit 1: Describes the Agents Kit 1 components for building agentic and generative AI applications in Studio Pro 10.24 and above."
+description: "Agents Kit 1: Describes the Agents Kit 1 components for building agentic and generative AI apps in Studio Pro 10.24 and above."
 weight: 60
 v10_24: true
 cascade:
@@ -12,18 +12,9 @@ cascade:
 
 Agents Kit 1 provides a comprehensive set of Mendix components for building agentic and generative AI applications. It includes starter apps and showcase apps to help you get started quickly. It also includes connector modules to integrate with Mendix Cloud GenAI resources and external providers like Amazon Bedrock, OpenAI, Google Gemini, and Mistral. Core modules like Agent Commons and GenAI Commons provide reusable patterns and capabilities for building agentic functionality.
 
-{{% alert color="info" %}}
-Agents Kit 1 is available for Studio Pro 10.24 and above. For the newest agentic features and improvements, upgrade to Studio Pro 11.12 or above and use [Agents Kit 2](/agents/agents-kit-2/).
-{{% /alert %}}
-
-This section includes the following resources:
-
-* [How to Build Smarter Apps Using GenAI](/agents/agents-kit-1/how-to/) – Step-by-step guides for building AI-powered applications
-* [Reference Guide](/agents/agents-kit-1/reference-guide/) – Technical reference documentation for the Mendix components in Agents Kit
-
 ## Agents Kit Components {#components}
 
-The following Marketplace components are available in Agents Kit 1. All components are available from the [Mendix Marketplace](/appstore/).
+The following components are available in Agents Kit 1.
 
 ### Starter Apps {#starter-apps}
 
@@ -73,3 +64,11 @@ All connectors depend on GenAI Commons and can be used with the other [core modu
 {{% alert color="info" %}}
 Older versions of some modules and the GenAI Showcase App are available in Studio Pro 9.24.2.
 {{% /alert %}}
+
+## Documents in This Section
+
+* [How to Build Smarter Apps Using GenAI](/agents/agents-kit-1/how-to/)
+
+    Step-by-step how-tos for building smart apps, including creating agents, integrating function calling, grounding LLMs in data, and building custom connectors
+* [Reference Guide](/agents/agents-kit-1/reference-guide/)
+    Technical reference documentation for the Mendix components in Agents Kit 1

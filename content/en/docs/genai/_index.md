@@ -2,33 +2,36 @@
 title: "Enrich Your Mendix App with Agentic Capabilities"
 url: /agents/
 linktitle: "Agents"
-description: "Describes how to integrate agentic and generative AI into Mendix applications using Agents Kit components. Provides a catalog of available starter apps, showcase apps, connectors, modules, and models."
+description: "Describes how to integrate agentic and generative AI into Mendix apps using Agents Kit components. Provides a catalog of available starter apps, showcase apps, connectors, modules, and models."
 weight: 40
+no_list: false
+description_list: true
 aliases:
     - /appstore/modules/genai/
 ---
 
+{{% alert color="info" %}}
+These pages focus on using Agents Kit to integrate agentic and generative AI into Mendix apps. For AI assistance while building apps, see [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/). For pretrained machine learning models, see [Mendix Runtime](/refguide/runtime/).
+{{% /alert %}}
+
 ## Introduction
 
-With Mendix's agentic capabilities, you can build AI-powered features into your applications using leading AI models and your own data.
-
-Integrate AI capabilities into your applications with Agents Kit, a collection of Mendix starter apps, connectors, and modules that support implementations from simple text generation to complex multi-step agentic workflows. [Agents Kit 2](/agents/agents-kit-2/) is available for Mendix Studio Pro 11.12 and above. [Agents Kit 1](/agents/agents-kit-1/) is available for Studio Pro 10.24 and above. Older versions of some Marketplace modules and the GenAI Showcase App are available in Studio Pro 9.24.2.
+With Mendix's agentic capabilities, you can build AI-powered features into your apps using leading AI models and your own data. Integrate AI capabilities into your apps with Agents Kit, a collection of Mendix starter apps, connectors, and modules that support implementations from simple text generation to complex multi-step agentic workflows.
 
 Some typical use cases include the following:
 
 * Create AI agents that autonomously interact with your Mendix app's data, logic, and external systems.
-* Build conversational UIs with human-in-the-loop controls and embed AI-powered interactions directly into your Mendix applications.
-* Connect application data and enterprise knowledge bases to provide grounded, context-aware AI responses.
+* Build conversational UIs with human-in-the-loop controls and embed AI-powered interactions directly into your Mendix apps.
+* Connect app data and enterprise knowledge bases to provide grounded, context-aware AI responses.
 
-{{% alert color="info" %}}
-These pages focus on integrating agentic and generative AI into applications using Agents Kit. For AI assistance while building apps, see [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/). For pretrained machine learning models, see [Mendix Runtime](/refguide/runtime/).
-{{% /alert %}}
+[Agents Kit 2](/agents/agents-kit-2/) is available for Mendix Studio Pro 11.12 and above and provides Mendix's newest agentic features and improvements. [Agents Kit 1](/agents/agents-kit-1/) is available for Studio Pro 10.24 and above. Older versions of some modules and the GenAI Showcase App are available in Studio Pro 9.24.2.
 
 ### Getting Started
 
 Start using AI capabilities based on your experience level:
 
-* **Familiar with generative AI?** Start building with the [How to Build Smarter Apps Using GenAI](/agents/agents-kit-2/how-to/) guides.
+* **Familiar with generative AI?** Explore the [Agents Kit guides](/agents/agents-kit-2/) to browse available components, start building with step-by-step how-to guides, and access reference documentation.
+
 * **New to generative AI?** Follow these steps:
 
     1. Familiarize yourself with the [core concepts](/agents/get-started/), including prompt engineering, retrieval augmented generation (RAG), and function calling (ReAct).
@@ -95,3 +98,5 @@ In addition to the models listed above, you can also connect to other models by 
 * To connect to other [foundation models](https://docs.aws.amazon.com/bedrock/latest/userguide/models-features.html) and implement them in your app, use the [Amazon Bedrock connector](/agents/reference-guide/external-connectors/bedrock/).
 * To connect to [Snowflake Cortex LLM](https://docs.snowflake.com/en/sql-reference/functions/complete-snowflake-cortex) functions, [configure the Snowflake AI Data Connector for Snowflake Cortex Analyst](/appstore/connectors/snowflake/snowflake-ai-data-connector/#cortex-analyst).
 * To implement your own connector that is compatible with the other components, use the [GenAI Commons](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/) interface and see [How to Build Your Own GenAI Connector](/agents/agents-kit-2/how-to/byo-connector/).
+
+## Documents in This Category

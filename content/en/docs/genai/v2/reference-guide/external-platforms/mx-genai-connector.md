@@ -62,7 +62,7 @@ When using an Embeddings Model Resource together with a Knowledge Base Resource,
 
 ## Operations
 
-{{< figure src="/attachments/genai/mxgenAI-connector/mxgenaiconnector-configuration.png" alt="" >}}
+{{< figure src="/attachments/genai/mxgenAI-connector/mxgenaiconnector-domainmodel.png" alt="" >}}
 
 Configuration keys are stored persistently after import, either via the UI or the exposed microflow. There are three different types of configurations that reflect the use cases this service supports. The specific operations are described below.
 
@@ -70,7 +70,7 @@ To use the operations, either a `DeployedModel` (text, embeddings) or a `Deploye
 
 ### How to Get the `DeployedModel` in Scope
 
-The `DeployedModel` object is created automatically when importing keys at runtime and must be retrieved from the database. 
+The `DeployedModel` objects are created automatically when importing keys at runtime and must be retrieved from the database. 
 
 ### How to Get the `DeployedKnowledgeBase` in Scope 
 
@@ -312,20 +312,6 @@ To check your JDK version and update it if necessary, follow these steps:
     1. You might get an error saying `FAILURE: Build failed with an exception. The supplied javaHome seems to be invalid. I cannot find the java executable.` In this case, verify that you have selected the correct JDK directory containing the updated JDK version.
     2. You may also need to update Gradle. To do this, go to **Edit** > **Preferences** > **Deployment** > **Gradle directory**. Click **Browse** and select Gradle 8.5 from the Mendix folder. Then save your settings by clicking **OK**.
     3. Rerun the project.
-
-### Migrating From Add-on Module to App Module
-
-In version 3.0.0, the module changed from an add-on to an app module. Therefore, updating it via Marketplace requires a migration to ensure it works properly with your app.
-
-To do this, follow these steps:
-
-1. Back up your data, either as a full database backup or by exporting individual components:
-    * Keys for the Mendix Cloud GenAI Resource Packs can be reimported later.
-    * Incoming associations to the protected module’s entities will be deleted.
-2. Delete the add-on module: MxGenAIConnector.
-3. Download the updated module from the Marketplace. Note that the module is now listed under the **Marketplace modules** category in the **App Explorer**.
-4. Test your application locally to ensure everything functions as expected.
-5. Restore any lost data in deployed environments. Typically, keys and incoming associations to the protected module need to be reset.
 
 ### Attribute or Reference Required Error Message After Upgrade 
 

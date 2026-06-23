@@ -160,7 +160,7 @@ A knowledge base resource can comprise several collections. Each collection is t
 
 Below is a diagram showing how resources are organized into separate collections. This approach allows multiple use cases to share a common resource while the option to only add the required collections to the conversation context is preserved. For example, both employee onboarding and IT ticket support require information about IT setup and equipment. However, only onboarding needs knowledge about the company culture and values, while only IT support requires access to historical support ticket data.
 
-{{< figure src="/attachments/genai/navigate_mxgenai/GenAIKnowledgeBaseResource.png" alt="" >}}
+{{< figure src="/attachments/genai/mxgenAI-connector/genai-knowledgebase-resource.png" alt="" >}}
 
 While collections provide a mechanism for data separation, it is not best practice to create a large number of collections within a single knowledge base resource. A more performant and practical approach for achieving fine-grained data separation is through the strategic use of metadata. 
 
@@ -178,7 +178,7 @@ key: `Category`, value: `Ticket`
 
 The model then generates its response using the specified metadata instead of solely the input text. 
 
-{{< figure src="/attachments/genai/navigate_mxgenai/GenAIKBMetadataSeparation.png" alt="" >}}
+{{< figure src="/attachments/genai/mxgenAI-connector/genai-kb-metadata-seperation.png" alt="" >}}
 
 Using metadata, even more fine-grained filtering becomes feasible. Each ticket may have associated metadata, such as the following:
 

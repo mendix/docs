@@ -35,7 +35,7 @@ Below the summary, the page shows **Consumption Over Selected Time Range**. You 
 * **Monthly Bundle GenAI Units Consumption** – GenAI Units consumed per day, with a dashed line indicating the monthly allocation limit.
 * **Monthly Bundle Input Consumption** – Raw LLM input tokens consumed per day.
 * **Monthly Bundle Output Consumption** – Raw LLM output tokens consumed per day.
-* **Monthly Bundle API Calls** – 
+* **Monthly Bundle API Calls** – Number of API calls made under the resource per day within a bundle month.
 
 ### What Are Tokens and GenAI Units?
 

@@ -310,7 +310,7 @@ To check your JDK version and update it if necessary, follow these steps:
 5. Open Studio Pro and go to **Edit** > **Preferences** > **Deployment** > **JDK directory**. Click **Browse** and select the folder with the new JDK version you just installed. This should be the folder containing the *bin* folder. Save your settings by clicking **OK**.
 6. Run the project and execute the action that threw the above-mentioned exception earlier.
     1. You might get an error saying `FAILURE: Build failed with an exception. The supplied javaHome seems to be invalid. I cannot find the java executable.` In this case, verify that you have selected the correct JDK directory containing the updated JDK version.
-    2. You may also need to update Gradle. To do this, go to **Edit** > **Preferences** > **Deployment** > **Gradle directory**. Click **Browse** and select the appropriate Gradle version from the Mendix folder. For Studio Pro versions 10.10 and above, use Gradle 8.5. Then save your settings by clicking **OK**.
+    2. You may also need to update Gradle. To do this, go to **Edit** > **Preferences** > **Deployment** > **Gradle directory**. Click **Browse** and select Gradle 8.5 from the Mendix folder. Then save your settings by clicking **OK**.
     3. Rerun the project.
 
 ### Migrating From Add-on Module to App Module

@@ -35,7 +35,7 @@ Even without invoking LLMs directly with the retrieved information, the similari
 
 ### Features {#features}
 
-The current version supports inserting data chunks with their vectors into a knowledge base (population) and selecting those records from that moment onwards (retrieval). In addition to cosine similarity search, which is executed based on the vector only, custom filtering is possible using key-value labeling (metadata) to support an additional traditional search component.
+This module supports inserting data chunks with their vectors into a knowledge base (population) and selecting those records from that moment onwards (retrieval). In addition to cosine similarity search, which is executed based on the vector only, custom filtering is possible using key-value labeling (metadata) to support an additional traditional search component.
 
 ### Prerequisites {#prerequisites}
 

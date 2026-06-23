@@ -59,7 +59,7 @@ Create an agent that can be sent to the LLM. The [Agent Commons](/agents/agents-
 
 10. Go back to the **Agent Overview** page. 
 
-11. Hover over the ellipsis ({{% icon name="three-dots-menu-horizontal-small" %}}) icon corresponding to your agent, and click the **Select Version in Use** button. On this page, choose the version you want to set as **In Use**, which means it is selected for production and makes it selectable in your microflow logic. Select the *Initial agent* version and click **Select**.
+11. Hover over the **More Details** icon ({{% icon name="three-dots-menu-horizontal-small" %}}) corresponding to your agent, and click the **Select Version in Use** button. On this page, choose the version you want to set as **In Use**, which means it is selected for production and makes it selectable in your microflow logic. Select the *Initial agent* version and click **Select**.
 
 Your agent is now almost ready to be used in your application. You can iterate on it until you are satisfied with the results.
 

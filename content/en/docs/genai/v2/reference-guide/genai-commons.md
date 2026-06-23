@@ -41,7 +41,7 @@ GenAI Commons defines additional capabilities typically found in chat completion
 
 ### Token Usage
 
-GenAI Commons can store usage data, allowing admins to understand token usage. Usage data is persisted only if the constant `StoreUsageMetrics` is set to *true* (exception in version 5.3.0 and above: if [StoreTraces](#traceability) is set to *true*, usage data is stored as well). This is only supported for chat completions and embedding operations.
+GenAI Commons can store usage data, allowing admins to understand token usage. Usage data is persisted only if the constant `StoreUsageMetrics` is set to *true* or if [StoreTraces](#traceability) is set to *true*. This is only supported for chat completions and embedding operations.
 
 To clean up usage data in a deployed app, enable the daily scheduled event `ScE_Usage_Cleanup` in the Mendix Cloud Portal. Use the `Usage_CleanUpAfterDays` constant to control how long token usage data is persisted. 
 
@@ -49,9 +49,7 @@ The [Conversational UI module](/agents/agents-kit-2/reference-guide/genai-for-mx
 
 ### Traceability {#traceability}
 
-[Traceability](/agents/glossary/#trace)Traceability was introduced in version 5.3.0 of the GenAI Commons module.
-
-By default, the chat completions operations of GenAI Commons store data in your application's database for traceability. This makes it easier to understand GenAI usage in your app and why the model behaved in a certain way, for example, by reviewing tool usage. Trace data is only persisted if the constant `StoreTraces` is set to *true*. 
+By default, the chat completions operations of GenAI Commons store data in your application's database for traceability. This makes it easier to understand GenAI usage in your app and why the model behaved in a certain way, for example, by reviewing tool usage. [Trace](/agents/glossary/#trace) data is only persisted if the constant `StoreTraces` is set to *true*. 
 
 Traces may contain sensitive and personally identifiable information. Determine on a case-by-case basis whether storing this data is compliant. To enable read access for a user (typically an admin user), grant the module role `TraceMonitoring` to the applicable project roles.
 
@@ -152,8 +150,6 @@ The data stored in this entity is to be used later on for token consumption moni
 A trace represents the whole LLM interaction from the first user message until the final assistant's response was returned, including tool calls.
 The data stored in this entity is to be used later on for traceability use cases.
 
-`Trace` was introduced in version 5.3.0.
-
 | Attribute | Description |
 | --- | --- |
 | `TraceId` | The trace ID, set internally to identify a trace. |
@@ -181,8 +177,6 @@ A span is created for each interaction between Mendix and the LLM (such as chat 
 | `Output` | The output of the span. |
 | `IsError` | Indicates if the call failed. If so, the span's output will contain the error message that was also logged. |
 
-`Span` was introduced in version 5.3.0.
-
 #### `ModelSpan` {#model-span}
 
 A model span is created for each interaction between Mendix and the LLM where content is generated (sent as the assistant's message). Typically, this is a request for text generation. In addition to the [Span's](#span) attributes, it also contains the following:
@@ -192,8 +186,6 @@ A model span is created for each interaction between Mendix and the LLM where co
 | `InputTokens` | Number of tokens in the request. |
 | `OutputTokens` | Number of tokens in the generated response. |
 | `_DeploymentIdentifier` | Internal object used to identify the `DeployedModel` that was used. |
-
-`ModelSpan` was introduced in version 5.3.0.
 
 #### `ToolSpan` {#tool-span}
 
@@ -206,8 +198,6 @@ A tool span is created for each tool call requested by the LLM. The tool call is
 | `_ToolCallId` | The ID of the tool call used by the model to map an assistant message containing a tool call with the output of the tool call (tool message). |
 | `ToolCallStatus` | The current status of the tool call. |
 
-`ToolSpan` was introduced in version 5.3.0.
-
 #### `KnowledgeBaseSpan` {#knowledge-base-span}
 
 A knowledge base span is created for each knowledge base retrieval tool call requested by the LLM. The tool call is processed in GenAI Commons, and the result is sent back to the model. In addition to the [ToolSpan's](#tool-span) attributes, it also contains the following:
@@ -219,8 +209,6 @@ A knowledge base span is created for each knowledge base retrieval tool call req
 | `MaxNumberOfResults` | The maximum number of results that was specified during the retrieval. |
 | `KBDisplayName` | The display name of the deployed knowledge base that was specified during the retrieval. |
 
-`KnowledgebaseSpan` was introduced in version 5.3.0.
-
 #### `MCPSpan` {#mcp-span}
 
 An MCP span is created for each tool invocation over the Model Context Protocol via the [MCP Client module](/agents/agents-kit-2/mcp-modules/mcp-client/). The tool call is processed on the MCP server, usually outside of this application, and the result is sent back to the model. In addition to the [ToolSpan's](#tool-span) attributes, it also contains the following:
@@ -228,8 +216,6 @@ An MCP span is created for each tool invocation over the Model Context Protocol 
 | Attribute | Description |
 | --- | --- |
 | `ServerName` | The name of the server where the tool resides. |
-
-`MCPSpan` was introduced in version 5.4.0.
 
 #### `Request` {#request} 
 
@@ -1037,7 +1023,7 @@ To check your JDK version and update it if necessary, follow these steps:
 5. Open Studio Pro and go to **Edit** > **Preferences** > **Deployment** > **JDK directory**. Click **Browse** and select the folder with the new JDK version you just installed. This is the folder containing the *bin* folder. Save your settings by clicking **OK**.
 6. Run the project and execute the action that threw the above-mentioned exception earlier.
     1. You might get an error saying `FAILURE: Build failed with an exception. The supplied javaHome seems to be invalid. I cannot find the java executable.` In this case, verify that you have selected the correct JDK directory containing the updated JDK version.
-    2. You may also need to update Gradle. To do this, go to **Edit** > **Preferences** > **Deployment** > **Gradle directory**. Click **Browse** and select the appropriate Gradle version from the Mendix folder. For Studio Pro versions 10.10 and above, use Gradle 8.5. Then save your settings by clicking **OK**.
+    2. You may also need to update Gradle. To do this, go to **Edit** > **Preferences** > **Deployment** > **Gradle directory**. Click **Browse** and select Gradle 8.5 from the Mendix folder. Then save your settings by clicking **OK**.
     3. Rerun the project.
   
 ### Migration from Add-On Module to App Module
@@ -1046,11 +1032,11 @@ Because the module changed with version 3.0.0 from an add-on to an app module, i
 
 The process may look like this:
 
-1. Backup of data; either as database backup or individual:
+1. Backup of data, either as database backup or individual:
     * Incoming associations to protected module’s entities will be deleted
     * Usage data will be lost but can be exported in the ConversationalUI module via the Token Consumption Monitor snippets
 2. Delete Add-On module: GenAICommons
-3. Download the module from Marketplace; note that the module is from now on located under the “Marketplace modules” category in the app explorer.
+3. Download the module from Marketplace; note that the module is from now on located under the **Marketplace modules** category in the App Explorer.
 4. Test your application locally and verify that everything works as before.
 5. Restore lost data on deployed environments. Usually incoming associations to the protected modules need to be reset.
 

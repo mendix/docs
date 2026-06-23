@@ -32,8 +32,6 @@ Typical use cases for generative AI are described in the [Typical LLM Use Cases]
 
 ### Prerequisites {#prerequisites}
 
-The Amazon Bedrock connector requires Mendix Studio Pro version 10.24.0 or above.
-
 To authenticate with Amazon Web Services (AWS), you must install and configure the [AWS Authentication connector version 4.1.1 or above](https://marketplace.mendix.com/link/component/120333). It is crucial for the Amazon Bedrock connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
 
 You must have the latest [GenAI Commons](https://marketplace.mendix.com/link/component/239448) version. To make integration of generative AI capabilities as easy as possible, the Amazon Bedrock connector depends on the generic domain model and operations provided by the GenAI Commons module.
@@ -337,10 +335,6 @@ The history can be enabled using the `SessionId` parameter on the RetrieveAndGen
 
 #### Image Generation {#image-generation}
 
-{{% alert color="info" %}}
-This activity was introduced in Amazon Bedrock Connector version 3.1.0.
-{{% /alert %}}
-
 The [Generate Image](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#generate-image) operation can be used to generate one or more images. Currently *Amazon Titan Image Generator G1* is the only supported model for image generation of the Amazon Bedrock Connector. 
 
 `GenAICommons.ImageOptions` can be an empty object. If provided, it allows you to set additional options for Image Generation and can be created by using the [Image: Create Options](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#imageoptions-create) operation of GenAI Commons.
@@ -403,10 +397,6 @@ This operation corresponds to the **RetrieveAndGenerateRequest_Extension_Create*
 
 #### Image Generation: Add Titan Image Extension {#add-titan-image-extension}
 
-{{% alert color="info" %}}
-This microflow was introduced in Amazon Bedrock Connector version 3.1.0.
-{{% /alert %}}
-
 Use this microflow to add a new TitanImageOptions_Extension object to your GenAICommons.ImageOptions object. This will allow you to configure the **NegativeText** attribute.
 
 This operation corresponds to the **TitanImageOptions_Extension_Create** microflow.
@@ -417,10 +407,6 @@ This operation corresponds to the **TitanImageOptions_Extension_Create** microfl
 
 #### Image Generation: Set Image Size (Titan Image) {#set-titan-image-size}
 
-{{% alert color="info" %}}
-This microflow was introduced in Amazon Bedrock Connector version 3.1.0.
-{{% /alert %}}
-
 Use this microflow to set the **Height** and **Width** attributes of your **GenAICommons.ImageOptions** object to any valid image size supported by Titan Image models. The `ENUM_ImageSize_TitanImage` enumeration contains all valid height-width combinations to choose from.
 
 This operation corresponds to the **ImageOptions_SetImageSize_TitanImage** microflow.
@@ -430,10 +416,6 @@ This operation corresponds to the **ImageOptions_SetImageSize_TitanImage** micro
 | `GenAICommons.ImageOptions (object)`, `ENUM_ImageSize_TitanImage (enumeration)` | `none` |
 
 #### Image Generation: Set Randomness {#set-randomness}
-
-{{% alert color="info" %}}
-This microflow was introduced in Amazon Bedrock Connector version 3.1.0.
-{{% /alert %}}
 
 Use this microflow to set the **Seed** and **CfgScale** attributes of your GenAICommons.ImageOptions object. These attributes can be used to influence the randomness of the image generation.
 

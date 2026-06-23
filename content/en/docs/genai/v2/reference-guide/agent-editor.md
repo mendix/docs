@@ -13,7 +13,7 @@ aliases:
 
 The [Agent Editor](https://marketplace.mendix.com/link/component/257918) module enables you to develop, test, and optimize GenAI use cases by creating [agents](/agents/glossary/#agent) that interact with large language models (LLMs).
 
-With the Agent Editor module, you can define agents at design time in Studio Pro (11.9.0 and above) and manage their lifecycle as part of your app by leveraging existing platform capabilities such as Model documents, version control, and deployment capabilities. Define and develop agents locally, then deploy them directly to cloud environments using the app model.
+With the Agent Editor module, you can define agents at design time in Studio Pro and manage their lifecycle as part of your app by leveraging existing platform capabilities such as Model documents, version control, and deployment capabilities. Define and develop agents locally, then deploy them directly to cloud environments using the app model.
 
 Agent Editor is compatible with the Agent Commons module. Using this module, you can define and manage prompts, microflows (as tools), external Model Context Protocol (MCP) servers, knowledge bases, and large language models to build agentic patterns that support your business logic. Additionally, you can define variables that act as placeholders for data from the app session context. These placeholders are replaced with actual values when the end-user interacts with the app.
 
@@ -48,8 +48,6 @@ Agent Editor provides the following features:
 * Deployment together with the app model, with environment-specific flexibility through constant overrides.
 
 ### Dependencies {#dependencies}
-
-The Agent Editor module requires Mendix Studio Pro version 11.9.0 or above.
 
 The following modules are required dependencies for the supported capabilities of Agent Editor and need to be installed:
 

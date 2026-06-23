@@ -10,7 +10,7 @@ aliases:
 Traditional data integration methods often result in delays, inefficiencies, and increased complexity, requiring developers to build custom solutions that handle transaction consistency, error recovery, and schema evolution. Real-Time Data Sharing provides a platform-level solution for data integration through change data capture. Instead of implementing custom replication logic, you specify which entities and attributes to publish, and the runtime handles change detection, streaming, and delivery.
 
 {{% alert color="info" %}}
-Real-Time Data Sharing is currently in beta and supported in Studio Pro 11.12 and above. It can be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).
+Real-Time Data Sharing is currently in beta and supported in Studio Pro 11.12 and above. 
 {{% /alert %}}
 
 ## Key Capabilities

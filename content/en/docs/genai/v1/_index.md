@@ -1,7 +1,7 @@
 ---
 title: "Agents Kit 1"
 url: /agents/agents-kit-1/
-description: "Agents Kit 1: Describes the Agents Kit 1 components for building agentic and generative AI apps in Studio Pro 10.24 and above."
+description: "Agents Kit 1: Lists the Agents Kit 1 components (starter apps, showcase apps, core modules, connectors, and MCP modules) and provides links to how-to guides and reference documentation for building agentic and generative AI apps in Studio Pro 10.24 and above."
 weight: 60
 v10_24: true
 cascade:
@@ -71,4 +71,5 @@ Older versions of some modules and the GenAI Showcase App are available in Studi
 
     Step-by-step how-tos for building smart apps, including creating agents, integrating function calling, grounding LLMs in data, and building custom connectors
 * [Reference Guide](/agents/agents-kit-1/reference-guide/)
+
     Technical reference documentation for the Mendix components in Agents Kit 1

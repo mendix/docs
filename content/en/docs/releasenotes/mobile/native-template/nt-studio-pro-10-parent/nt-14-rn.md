@@ -5,6 +5,22 @@ weight: 6
 description: "Native Template 14"
 ---
 
+## 14.1.18
+
+**Release date: June 10, 2026**
+
+### Improvements
+
+* We removed the fallback `scijava` Maven repositories.
+
+## 14.1.17
+
+**Release date: May 04, 2026**
+
+### Improvements
+
+* We updated vulnerable `okhttp`, `jackson`, and `security-crypto` dependencies.
+
 ## 14.1.16
 
 **Release date: Apr 29, 2026**

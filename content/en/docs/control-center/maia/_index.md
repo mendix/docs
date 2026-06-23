@@ -8,6 +8,6 @@ no_list: false
 
 ## Introduction
 
-The **Maia** section allows you to stay on top of Maia behavior on Mendix Portal.
+The **Maia** section allows you to manage, control, and monitor Maia behavior on Mendix Portal.
 
 ## Documents in This Category

@@ -73,9 +73,10 @@ To adjust the GenAI Unit capacity of a resource, do the following:
 1. Log in to the Control Center as a Company Admin.
 2. On the **GenAI Resources** page, click the three-dot ({{% icon name="three-dots-menu-horizontal-filled" %}}) icon next to the selected resource and select **Edit Resource**.
 3. Enter the new **Cloud Tokens** amount and review the updated **Cloud Tokens Consumption**.
-4. You can also change the **Name** and **Default Model** at this stage. 
+4. You can also change the **Name** and **Default Model** at this stage.
+5. Click **Edit** to save the changes. 
 
-{{< figure src="/attachments/control-center/genai-resources/adjust-plan-size.png" alt="Edit Resource dialog showing Cloud Tokens field, Name field, Default Model dropdown, and Cloud Tokens Consumption summary" >}}
+{{< figure src="/attachments/control-center/genai-resources/edit-resource.png" alt="Edit Resource dialog showing Cloud Tokens field, Name field, Default Model dropdown, and Cloud Tokens Consumption summary" >}}
 
 ### Increasing GenAI Unit Capacity
 

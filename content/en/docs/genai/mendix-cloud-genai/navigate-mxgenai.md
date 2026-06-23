@@ -16,7 +16,7 @@ The [Mendix Cloud GenAI portal](https://genai.home.mendix.com/) is the part of t
 
 After clicking a specific resource, you land on its details page, which provides shortcuts to consumption insights, key generation, team management, and helpful documentation.
 
-{{< figure src="/attachments/genai/navigate_mxgenai/GenAIResource_Details.png" alt="" >}}
+{{< figure src="/attachments/genai/navigate_mxgenai/genai-resource-details.png" alt="" >}}
 
 ## Consumption (Only for Text and Embeddings Generation Resources)
 
@@ -26,7 +26,7 @@ The **Consumption** tab provides an overview of GenAI Unit and Large Language Mo
 
 Note that periods represent bundle months. A bundle month is the period during which consumption is tracked, beginning on the date of your last GenAI Resource entitlement reset and ending on the next reset date. This creates a recurring monthly cycle based on your resource activation date, not the calendar month.
 
-{{< figure src="/attachments/genai/navigate_mxgenai/GenAIResource_TokenConsumptionMonitor.png" alt="" >}}
+{{< figure src="/attachments/genai/navigate_mxgenai/token-consumption-monitor.png" alt="" >}}
 
 **Current Consumption** shows the total GenAI Units consumed against your monthly allocation, displayed as a percentage and a number (for example, 1,521 / 1.6k). **Plan** shows the resource pack model type (for example, Anthropic Claude Opus) and the total GenAI Unit allocation for the bundle month. The bundle refill date is shown at the top of the page.
 
@@ -71,7 +71,7 @@ You can withdraw pending invitations at any time. Invitations automatically expi
 
 ## Keys
 
-{{< figure src="/attachments/genai/navigate_mxgenai/GenAIResource_Keys.png" alt="" >}}
+{{< figure src="/attachments/genai/navigate_mxgenai/genai-resource-keys.png" alt="" >}}
 
 The **Keys** tab allows you to manage configuration keys for the resources. These keys provide programmatic access to the GenAI resources. From the **Keys** tab, you can create new keys and revoke existing ones.  
 
@@ -81,7 +81,7 @@ To create a new key, click **Create Key**, add a description, and save the chang
 Store it securely. The key is shown only once.
 {{% /alert %}}
 
-{{< figure src="/attachments/genai/navigate_mxgenai/GenAIResource_KeyGeneration.png" alt="" >}}
+{{< figure src="/attachments/genai/navigate_mxgenai/key-generation.png" alt="" >}}
 
 Once created, the key can be used in the Mendix application via the Mendix Cloud GenAI connector. A single key exposes all model versions currently enabled on the resource. When you import the key into your application, all available models are accessible. No key rotation is required when new model versions are added to the resource.
 
@@ -91,7 +91,7 @@ When you create a key for a knowledge base, an embeddings resource key is automa
 
 ## Content (Only for Knowledge Bases)
 
-{{< figure src="/attachments/genai/navigate_mxgenai/GenAIResource_Content.png" alt="" >}}
+{{< figure src="/attachments/genai/navigate_mxgenai/content.png" alt="" >}}
 
 {{% alert color="info" %}} The **Content** tab is available only for Knowledge Bases.{{% /alert %}} 
 
@@ -110,7 +110,7 @@ When you select the **Add Files Like .TXT or .PDF** option, you can upload docum
 
 Before uploading, you can choose to upload the data to a new collection, the default collection, or another existing collection within the resource. A Knowledge Base resource can comprise several collections. Each collection is specifically designed to hold numerous documents, serving as a logical grouping for related information based on its shared domain, purpose, or thematic focus. Below is a diagram showing how resources are organized into separate collections. This approach allows multiple use cases to share a common resource while the option to only add the required collections to the conversation context is preserved.
 
-{{< figure src="/attachments/genai/navigate_mxgenai/GenAIKnowledgeBaseResource.png" alt="" >}}
+{{< figure src="/attachments/genai/navigate_mxgenai/knowledgebase-resource.png" alt="" >}}
 
 {{% alert color="info" %}} While collections provide a mechanism for data separation, it is not best practice to create a large number of collections within a single Knowledge Base resource. A more performant and practical approach for achieving fine-grained data separation is through the strategic use of [Metadata](#metadata). {{% /alert %}} 
 
@@ -128,7 +128,7 @@ key: Category, value: Ticket
 
 The model then generates its response using the specified metadata instead of solely the input text. 
 
-{{< figure src="/attachments/genai/navigate_mxgenai/GenAIKBMetadataSeparation.png" alt="" >}}
+{{< figure src="/attachments/genai/navigate_mxgenai/kb-metadata-seperation.png" alt="" >}}
 
 Using metadata, even more fine-grained filtering becomes feasible. Each ticket may have associated metadata, such as
 

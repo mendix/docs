@@ -111,7 +111,7 @@ Users can create two types of agents:
 
 * **Task Agent**: Designed for isolated agentic patterns such as background processes, subagents in an Agent-as-Tool setup, or any use case that doesn't require a conversational interface with historical context.
 
- {{< figure src="/attachments/genai/agentcommons/agentbuilderUI.png" alt="" >}}
+ {{< figure src="/attachments/genai/agentcommons/agent_builder_task.png" alt="" >}}
 
 #### Defining Context Entity {#define-context-entity}
 

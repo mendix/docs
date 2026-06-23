@@ -8,13 +8,11 @@ description: "Version Pinning guarantees consistent platform configurations acro
 # The anchors in this document are referenced from other documents. Do NOT remove!
 ---
 
-{{% alert color="warning" %}}
-This feature is in Limited Availability. For more information, see [Release Status](/releasenotes/release-status/#limited-availability).
-{{% /alert %}}
-
 ## Introduction
 
-Mendix Cloud(Kubernetes) provides version pinning to guarantee consistent and predictable application behavior across all environments. For example, when you promote a Mendix application from acceptance to production, version pinning ensures that the same underlying platform configuration is reused across both environments. This configuration includes components critical to how your application runs in Mendix Cloud, such as runtime images, buildpacks, and supporting services, all of which remain identical across environments.
+Mendix Cloud (Kubernetes) provides version pinning to guarantee consistent and predictable application behavior across all environments. For example, when you promote a Mendix application from acceptance to production, version pinning ensures that the same underlying platform configuration is reused across both environments.
+
+This configuration includes components critical to how your application runs in Mendix Cloud, such as runtime images, buildpacks, and supporting services, all of which remain identical across environments.
 
 By maintaining a consistent runtime stack, version pinning effectively eliminates subtle environmental differences, leading to more reliable and predictable application behavior throughout your development and deployment landscape.
 
@@ -26,7 +24,6 @@ This feature is only applicable to promotions between environments on Mendix Clo
 
 You must meet the following conditions to use version pinning:
 
-* **Company-level enablement** – Version Pinning must first be enabled at the company-level.
 * **Mendix Cloud (Kubernetes) environment** – Your Mendix applications must be deployed to and running within environments hosted on Mendix Cloud (Kubernetes)
 * **Environment promotion** – You must be promoting an application from one environment to another (for example from test to acceptance, or acceptance to production).
 * **Same application, same company** – Both the source and target environments must belong to the same application within the same company.

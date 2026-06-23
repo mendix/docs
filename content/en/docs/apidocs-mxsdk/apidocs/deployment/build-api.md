@@ -26,7 +26,7 @@ The Build API requires authentication via API keys that are bound to your Mendix
 
 ### Obtaining an API Key
 
-To obtain a Mendix API key, follow the instructions in the [API Keys](/mendix-profile/user-settings/#profile-api-keys) section of *Mendix Profile*.
+To obtain a Mendix API key, follow the instructions in the [API Keys](/portal/user-settings/#profile-api-keys) section of *Mendix Profile*.
 
 ### Using Authentication Headers
 
@@ -281,7 +281,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
 
 ##### Payload
 
-The payload depends on whether the app is held in a [Git repository or an SVN repository](/refguide/version-control-faq/#which-team-server).
+The payload depends on whether the app is held in a [Git repository or an SVN repository](/refguide/version-control/#which-team-server).
 
 An object with the following key-value pairs:
 

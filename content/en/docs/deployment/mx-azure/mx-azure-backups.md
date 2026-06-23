@@ -11,6 +11,8 @@ Mendix on Azure integrates backup and restore functionality that allows you to c
 
 Backup snapshots include both the database and the file documents associated with the Mendix app environment.
 
+The backup snapshot file format used by Mendix on Azure is identical to the backup snapshot file format used in the public Mendix Cloud. This allows for easy migration of app data between these deployment options.
+
 ## Enabling Backups
 
 To start using backups, select **Try new Backup and Restore** on the **Backups** page in the Mendix for Kubernetes portal.
@@ -64,6 +66,10 @@ To delete a backup snapshot, perform the following steps:
 2. Click **Delete**.
 
 ## Restoring a Backup Snapshot {#restore-backup}
+
+{{% alert color="warning" %}} 
+Restoring a backup is only supported within the same cluster. For the workaround to restore backups across clusters, see [Known Limitations](#known-limitations).
+{{% /alert %}}
 
 {{% alert color="info" %}} 
 Restore requires **Manage Apps Backups** and **Stop Apps** permissions on the namespace. 
@@ -135,8 +141,14 @@ Automatic backups only run when the app is deployed.
 
 If the first nightly backup occurs after the first Sunday, no monthly backup will be retained that month. Download a nightly or weekly backup to extend retention.
 
-## Known Limitations
+## Known Limitations {#known-limitations}
 
 * Partial data restoration may occur if a restore process fails.
 * No API support exists currently for backup and restore.
-* Although the portal UI suggests cross-namespace restores, only restores within the same namespace are supported.
+* Although the portal UI suggests that cross-cluster backup restorations are, only restorations within the same cluster are actually supported.
+
+As a workaround, you can restore a backup across clusters by performing the following steps:
+
+1. Download the backup snapshot from your source environment to your local machine.
+2. Upload the downloaded backup snapshot from your local machine to the target environment.
+3. Begin the restore process within the target environment using the newly uploaded backup snapshot.

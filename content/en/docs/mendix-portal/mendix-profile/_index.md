@@ -1,12 +1,13 @@
 ---
 title: "Mendix Profile"
-url: /mendix-profile/
+url: /portal/mendix-profile/
 weight: 5
 description: "Describes the personal profile page of the Mendix Portal."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 aliases:
     - /developerportal/community-tools/mendix-profile/
     - /community-tools/mendix-profile/
+    - /mendix-profile/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -24,7 +25,7 @@ By default, all newly created Mendix accounts come with their own Mendix profile
 
 Your profile header displays a quick overview of information about you. Your Mendix experience in level and points, your number of [credits](#challenges), and your number of [connections](#connections) are all found here. You can also select up to four featured [badges](#badges) to display your progress on the Mendix Platform. If you have a certificate from the Mendix [Academy](https://academy.mendix.com), this will also be displayed. The **Personal Info** card presents other information.
 
-You can [edit your Mendix profile](/mendix-profile/user-settings/) by clicking the settings ({{% icon name="cog" %}}) icon in the upper-right corner.
+You can [edit your Mendix profile](/portal/user-settings/) by clicking the settings ({{% icon name="cog" %}}) icon in the upper-right corner.
 
 ## Overview and Stats
 

@@ -34,7 +34,7 @@ The page header displays the following information:
 
 * The app image – You can change the image by clicking it.
 * The app name – You can change the name of the app by clicking the pencil icon next to it.    
-    Renaming the app in the Mendix Portal does not rename it in Studio Pro. The app name in Studio Pro is tied to its *.mpr* file. However, changing the name of the *.mpr* file is not supported, and we strongly advise against it. For more information, refer to the [Mendix MPR Storage](/refguide/version-control/#mpr-format) section in *Version Control*. 
+    Renaming the app in the Mendix Portal does not rename it in Studio Pro. The app name in Studio Pro is tied to its *.mpr* file. However, changing the name of the *.mpr* file is not supported, and we strongly advise against it. For more information, refer to the [Mendix MPR Storage](/refguide/version-control/glossary/#mpr-format) section in *Version Control*. 
 * The company that owns the app.
 * The **Watch** / **Stop Watching** toggle – You can enable or disable notifications for this app.
 
@@ -81,6 +81,10 @@ Specific steps for configuring different cloud platforms are provided here:
 * [Mendix on Kubernetes](/developerportal/deploy/private-cloud/)
 
 ## Access Management {#managing-app-users}
+
+{{% alert color="warning" %}}
+The Mendix SSO module has been deprecated as of May 1, 2026. As part of this deprecation, **Access Management** is also deprecated. You may alternatively use [OIDC SSO](/appstore/modules/oidc/), [SAML](/appstore/modules/saml/), or [LDAP](/appstore/modules/ldap/) for Mendix SSO. For **Access Management**, use user groups or roles configured within your Identity Provider (IdP) of choice.
+{{% /alert %}}
 
 On the **Access Management** tab, you can manage and invite app users. App users are end-users who can access the deployed app on specific environments. They can use and test your deployed app, and provide feedback.
 

@@ -89,7 +89,7 @@ The following options are available above the list:
 The finding list contains the following information:
 
 * **Severity** — The severity level of the finding related to that component.
-* **Finding Type** — The type of finding, which can be **Outdated** or **Deprecated**.
+* **Finding Type** — The type of finding, which can be **Outdated**, **Deprecated**, or **Vulnerable**.
 * **Component** — The name of the component used in the app. Clicking this takes you to the corresponding Mendix Marketplace page.
 * **Version** — The version of the component that is used in the app.
 * **Type** — The type of component.
@@ -105,7 +105,27 @@ The finding list contains the following information:
 * **Deprecated since version publish date** — The release date of the version when the component became deprecated.
 * Column customization ({{% icon name="view" %}}) — You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
 
-### Component Usage {#overviw-component-usage}
+#### Finding and Component Details
+
+If a finding is marked as **Vulnerable**, its corresponding component has a **View Details** button. Clicking it opens a window which includes two sections:
+
+* **Finding Details** – This includes the following details:
+
+    * **Severity** – The severity of the finding, as computed on the [Scoring Criteria](/control-center/scoring-criteria-tab/) tab.
+    * **CVE-ID** – The unique ID which identifies the finding on the [Security Advisories](https://docs.mendix.com/releasenotes/security-advisories/) page.
+    * **CVSS Score 3.1** and **CVSS Score 4.0** – The CVSS score, as computed based on the [NVD Vulnerability Metrics](https://nvd.nist.gov/vuln-metrics) framework.
+    * **Age** – The number of days since the date when the CVSS score was computed.
+    * **Created on** – The date when the component was created.
+    * **Description** – The reason why the component was marked as vulnerable.
+
+* **Components Details** – This includes the following details:
+
+    * **Current Version** – The version of the component affected by this finding.
+    * **Type** – The type of the component affected by this finding.
+    * **Publisher** – The entity that published the component affected by this finding.
+    * **Apps using component** – The number of apps where the vulnerable component is used. Click **View Component Usage** to see a list of affected apps.
+
+### Component Usage {#overview-component-usage}
 
 The **Component Usage** tab displays a detailed view of all components used within the app.
 
@@ -133,10 +153,10 @@ The component usage list contains the following information:
 * **Support type** – The support type of the Marketplace component. This can be **Mendix**, **Partner**, or **Community**.    
   For more information, refer to [Content Support Categories](/appstore/marketplace-content-support/#category).
 * **License** – For components derived from the Mendix Marketplace, this is the end-user license for the component.
-* **Latest version** – The latest version of the component.
-* **Marketplace** – Whether the component is **Public** or **Private**. A public component is available to the whole Mendix community in the Marketplace, while a private component is available only via your [Company Content](/appstore/home-page/#company-content) page.
+* **Latest version** – For components derived from the Mendix Marketplace, this is the latest version of the component.
+* **Marketplace** – Whether the component is **Public** or **Private**. A public component is available to the whole Mendix community in the Marketplace, while a private component is only available for your organisation. On the Marketplace homepage, you can use the **Visibility** filter to display specific components.
 * **Latest Runtime Compatible Version** — The most recent runtime version to which the component is compatible.
-* **Publisher** – The name of the organization that published the component.
+* **Publisher** – For components derived from the Mendix Marketplace, this is the name of the organization that published the component.
 * Column customization ({{% icon name="view" %}}) – You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and selecting or deselecting options.
 
 To export the information corresponding to selected items in the list to an Excel file, select the checkboxes of the items in the list, then click **Selection Export** that appears at the bottom of the page.

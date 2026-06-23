@@ -72,7 +72,7 @@ The fallback page is a page or microflow that can be used to customize the appli
 
 If a microflow is used as a fallback, it can have only one String parameter named 'Path', which will contain the URL that could not be found.
 
-The fallback page will only be used for URLs that start with a [URL Prefix](/refguide/app-settings/#url-prefix).
+The fallback page will only be used for URLs that start with a [URL Prefix](/refguide/runtime-tab/#url-prefix).
 
 ## Setting a Nanoflow as a Home Page {#nanoflow-home-page}
 

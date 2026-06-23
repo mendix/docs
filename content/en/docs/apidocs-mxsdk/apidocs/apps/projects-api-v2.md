@@ -21,7 +21,7 @@ Authentication for the Projects API uses a personal access token (PAT).
 
 ### Generating a PAT {#generate}
 
-For details on how to generate a PAT, see the [Personal Access Tokens](/mendix-profile/user-settings/#pat) section of *User Settings*.
+For details on how to generate a PAT, see the [Personal Access Tokens](/portal/user-settings/#pat) section of *User Settings*.
 
 Select the appropriate scopes, depending on the endpoints that need to be invoked. Refer to the [API Reference](#api-reference) for more information on which scopes to use in which endpoints.
 

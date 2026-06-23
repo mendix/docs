@@ -18,7 +18,7 @@ For users deploying to a (virtual) Mendix on Kubernetes deployment, you can foll
 
 Before you begin, make sure you have the following:
 
-* A [Personal Access Token](/mendix-profile/user-settings/#pat) to access the Catalog APIs
+* A [Personal Access Token](/portal/user-settings/#pat) to access the Catalog APIs
 * A working pipeline that deploys your Mendix app (see [Creating a Mendix on Kubernetes Cluster](/developerportal/deploy/private-cloud-cluster/) for the first steps on deploying to a Mendix on Kubernetes deployment) 
 
 ## Starting Point: dependencies.json
@@ -35,7 +35,7 @@ Ensure your contract metadata will be accepted by transforming *dependencies.jso
 
 For this section, you will need:
 
-* A [personal access token](/mendix-profile/user-settings/#pat)
+* A [personal access token](/portal/user-settings/#pat)
 * The `dependencies.json` file 
 * Endpoint location `Name` (found in the *metadata.json* file for your exposed service, in an array called **Constants**, under **Name**)
 * Endpoint location `Value` (found in the *metadata.json* file for your exposed service, in an array called **Constants**, under **DefaultValue**)
@@ -46,7 +46,7 @@ Follow the steps in [Registering an environment through the Catalog Registration
 
 To register the application, you need: 
 
-* A [Personal Access Token](/mendix-profile/user-settings/#pat)
+* A [Personal Access Token](/portal/user-settings/#pat)
 * The application **Name**
 
 Follow the steps for [registering an application through the Registration API](/apidocs-mxsdk/apidocs/registration-api/#register-application).
@@ -57,7 +57,7 @@ Upon completion, you will have the `application_UUID`.
 
 To register the environment, you will need:
 
-* A [Personal Access Token](/mendix-profile/user-settings/#pat)
+* A [Personal Access Token](/portal/user-settings/#pat)
 * The `application_UUID`
 * Environment `Name`
 * Environment `Location`
@@ -71,7 +71,7 @@ Upon completion, you will have the `environment_UUID`.
 
 To register the service endpoint (or endpoints), you will need:
 
-* A [Personal Access Token](/mendix-profile/user-settings/#pat)
+* A [Personal Access Token](/portal/user-settings/#pat)
 * The `application_UUID`
 * The `environment_UUID`
 * The Service `Path`, `Name`, and `Type`

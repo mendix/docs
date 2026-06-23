@@ -1,13 +1,16 @@
 openapi: 3.0.0
 info:
   title: Mendix for Private Cloud Deploy API
-  version: 4.10.1
+  version: 4.12.0
   contact:
     name: Mendix Support
     url: 'https://support.mendix.com'
     email: support@mendix.com
   termsOfService: 'https://www.mendix.com/terms-of-use/'
   description: 'The API to manage clusters, namespaces, and environments for Mendix apps which are deployed to Mendix for Private Cloud.'
+  license:
+    name: Mendix
+    url: 'https://www.mendix.com/legal/'
 servers:
   - url: 'https://privatecloud.mendixcloud.com/api/v4'
 paths:
@@ -148,6 +151,7 @@ paths:
       parameters:
         - $ref: '#/components/parameters/offset'
         - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/retrieveEnvironments'
     post:
       summary: Create Namespace
       operationId: create-namespace
@@ -184,6 +188,8 @@ paths:
           $ref: '#/components/responses/error404'
       operationId: get-namespace-manifest
       description: Retrieves the manifest of a namespace.
+      parameters:
+        - $ref: '#/components/parameters/retrieveEnvironments'
     delete:
       summary: Delete Namespace
       operationId: delete-namespace
@@ -495,14 +501,7 @@ paths:
       parameters: []
   '/cli/{cliVersionValue}':
     parameters:
-      - name: cliVersionValue
-        in: path
-        required: true
-        schema:
-          type: string
-          pattern: '[0-9].[0-9].[0-9]'
-          example: 2.0.0
-        description: A version of mxpc-cli..
+      - $ref: '#/components/parameters/cliVersionValue'
     post:
       summary: Get/Download mxpc-cli
       operationId: get-cli
@@ -631,14 +630,6 @@ components:
       description: Model for jobId.
       x-examples:
         example-jobid: db6ed4d3-8b6d-4c2b-ad2b-2a69d0f7afe0
-    clusterId:
-      type: string
-      title: clusterId
-      format: uuid
-      example: db6ed4d3-8b6d-4c2b-ad2b-2a69d0f7afe0
-      description: Model for clusterId.
-      x-examples:
-        example-clusterid: db6ed4d3-8b6d-4c2b-ad2b-2a69d0f7afe0
     namespaceId:
       type: string
       title: namespaceId
@@ -834,9 +825,32 @@ components:
                 mxAgentInstrumentationConfig:
                   type: string
                   example: 'https://docs.mendix.com/developerportal/deploy/private-cloud-monitor/#configuring-mxagent'
+            deploymentStrategy:
+              type: object
+              x-stoplight:
+                id: gc7iayl3c6pm9
+              properties:
+                runtimeDeploymentStrategyType:
+                  $ref: '#/components/schemas/runtimeDeploymentStrategyType'
+                switchOverthreshold:
+                  type: integer
+                  x-stoplight:
+                    id: k8etqbc3oizq5
+                  description: Percentage point when Kubernetes updates all remaining old Pods.
+                maxSurge:
+                  type: integer
+                  x-stoplight:
+                    id: kyo353xd19ss4
+                  description: Maximum percentage of extra Pods allowed above desired count during updates.
+                maxUnavailable:
+                  type: integer
+                  x-stoplight:
+                    id: zn13vlv5opnxw
+                  description: Maximum percentage of Pods that can be offline during updates.
       required:
         - manifestVersion
         - environment
+      title: ''
     getEnvironmentManifest:
       type: object
       x-examples:
@@ -1021,6 +1035,32 @@ components:
                 mxAgentInstrumentationConfig:
                   type: string
                   example: 'https://docs.mendix.com/developerportal/deploy/private-cloud-monitor/#configuring-mxagent'
+            deploymentStrategy:
+              type: object
+              x-stoplight:
+                id: ixbxzheap4iz0
+              enum:
+                - Default
+                - Reduced App Downtime
+              default: Reduced App Downtime
+              properties:
+                runtimeDeploymentStrategyType:
+                  $ref: '#/components/schemas/runtimeDeploymentStrategyType'
+                switchOverthreshold:
+                  type: integer
+                  x-stoplight:
+                    id: 34ccs7qi15htx
+                  description: Percentage point when Kubernetes updates all remaining old Pod.
+                maxSurge:
+                  type: integer
+                  x-stoplight:
+                    id: 2yuaazsxlntpj
+                  description: Maximum percentage of extra Pods allowed above desired count during updates.
+                maxUnavailable:
+                  type: integer
+                  x-stoplight:
+                    id: 1jiigc3wgjc3r
+                  description: Maximum percentage of Pods that can be offline during updates.
       required:
         - manifestVersion
         - environment
@@ -1028,7 +1068,7 @@ components:
       type: string
       title: environmentId
       example: e9m3vf7f
-      maxLength: 8
+      maxLength: 32
       description: Model for environmentId.
       x-examples:
         example-environmentid: e9m3vf7f
@@ -1107,8 +1147,6 @@ components:
           memory: '0.512'
           ephemeralStorage: '1'
       description: Model for resources (limits & requests).
-      x-stoplight:
-        id: 3cf5b8d99db2e
       properties:
         cpu:
           type: string
@@ -1306,14 +1344,6 @@ components:
           type: string
         availableArchitectures:
           type: string
-    cliVersionValue:
-      type: string
-      title: cliVersionValue
-      pattern: '[0-9].[0-9].[0-9]'
-      example: 2.0.0
-      description: Model for cliVersionValue.
-      x-examples:
-        example-cli-version-value: 2.0.0
     namespaceManifest:
       type: object
       x-examples:
@@ -1561,6 +1591,31 @@ components:
                       type: string
                       example: 7fd1d6df6e754cafb43efaa75071cff3a16932be
                       description: non-editable
+            environments:
+              type: array
+              x-stoplight:
+                id: tbadsg5zgay71
+              description: Only retrieved if query parameter is provided.
+              items:
+                x-stoplight:
+                  id: qiwsh1bww4rkx
+                type: object
+                properties:
+                  environmentId:
+                    $ref: '#/components/schemas/environmentId'
+                  environmentName:
+                    type: string
+                    x-stoplight:
+                      id: 9phv1as455kbl
+                    example: my-awesome-environment
+                    description: Environment display name.
+                  applicationId:
+                    $ref: '#/components/schemas/appId'
+                  applicationName:
+                    type: string
+                    x-stoplight:
+                      id: u96g4g56i7z6e
+                    example: My Awesome App
       required:
         - manifestVersion
         - namespace
@@ -1836,50 +1891,6 @@ components:
             - clusterType
       required:
         - manifestVersion
-    databasePlan:
-      type: object
-      x-examples:
-        example-databasePlan:
-          planName: ephemeral
-          planType: OnDemand
-          activate: true
-          planConfig: '{type: "database"}'
-      description: Model for the database plan.
-      properties:
-        planName:
-          type: string
-          example: ephemeral
-        planType:
-          type: string
-          example: OnDemand
-        activate:
-          type: boolean
-          default: false
-        planConfig:
-          type: string
-          example: '{type: \"database\"}'
-    storagePlan:
-      type: object
-      x-examples:
-        example-storagePlan:
-          planName: minio
-          planType: Dedicated
-          activate: true
-          planConfig: '{type: "storage"}'
-      properties:
-        planName:
-          type: string
-          example: minio
-        planType:
-          type: string
-          example: Dedicated
-        activate:
-          type: boolean
-          default: true
-        planConfig:
-          type: string
-          example: '{type: \"storage\"}'
-      description: Model for storage plan.
     invitationStatus:
       title: invitationStatus
       type: string
@@ -1934,6 +1945,20 @@ components:
         *This value cannot be changed after it has been set.*
         The namespace type is influenced by the type of operator installation.
       default: standard
+    runtimeDeploymentStrategyType:
+      title: runtimeDeploymentStrategyType
+      x-stoplight:
+        id: olamgcumvo118
+      type: string
+      x-examples:
+        example-Default: Default
+        example-Reduced App Downtime: Reduced App Downtime
+      description: |-
+        non-editable</br>
+        PreferRolling updates gradually for continuous service(Reduced App Downtime); Recreate stops all Pods before restart(Default).
+      enum:
+        - Reduced App Downtime
+        - Default
   parameters:
     appId:
       name: appId
@@ -1959,7 +1984,7 @@ components:
       required: true
       schema:
         type: string
-        maxLength: 8
+        maxLength: 32
         example: q8g3ns76
       description: The ID of an environment.
     clusterId:
@@ -1988,7 +2013,7 @@ components:
         type: string
         pattern: '[0-9].[0-9].[0-9]'
         example: 2.0.0
-      description: A version of mxpc-cli..
+      description: A version of mxpc-cli.
     os:
       name: os
       in: query
@@ -2033,6 +2058,13 @@ components:
       schema:
         type: integer
       description: Used with paging and defines the maximum amount of objects to return. The default value is 100.
+    retrieveEnvironments:
+      name: retrieveEnvironments
+      in: query
+      required: false
+      schema:
+        type: boolean
+      description: Used to retrieve information about environments deployed into this namespace.
   responses:
     error400:
       description: |-
@@ -2213,6 +2245,11 @@ components:
                     interval: 'https://docs.mendix.com/refguide/custom-settings/#11-durationinterval-settings'
                     mxAgentConfig: 'https://docs.mendix.com/developerportal/deploy/private-cloud-monitor/#configuring-mxagent'
                     mxAgentInstrumentationConfig: 'https://docs.mendix.com/developerportal/deploy/private-cloud-monitor/#configuring-mxagent'
+                  deploymentStrategy:
+                    runtimeDeploymentStrategyType: Reduced App Downtime
+                    maxUnavailable: 50
+                    maxSurge: 0
+                    switchOverthreshold: 50
     getEnvironmentsManifests:
       description: The environments manifests response returned by a get-environments-manifests request.
       content:
@@ -2324,6 +2361,11 @@ components:
                         interval: PT1H30M
                         mxAgentConfig: config
                         mxAgentInstrumentationConfig: config
+                      deploymentStrategy:
+                        runtimeDeploymentStrategyType: Reduced App Downtime
+                        maxUnavailable: 50
+                        maxSurge: 0
+                        switchOverthreshold: 50
             example-environments-manifests-with-ephemeral-storage:
               value:
                 environments:
@@ -2425,6 +2467,11 @@ components:
                         interval: PT1H30M
                         mxAgentConfig: config
                         mxAgentInstrumentationConfig: config
+                      deploymentStrategy:
+                        runtimeDeploymentStrategyType: Reduced App Downtime
+                        maxUnavailable: 50
+                        maxSurge: 0
+                        switchOverthreshold: 50
     clusterManifest:
       description: The cluster manifest response returned by a get-cluster-manifest request.
       content:
@@ -2550,6 +2597,71 @@ components:
                       buildBranch: HEAD
                       buildDate: '2023-01-03_14:45:47'
                       buildHash: fee1feb8df3898b37b356281006b2f0acbfa8982
+            example-namespace-with-environments:
+              value:
+                manifestVersion: 2.0.0
+                namespace:
+                  namespaceId: 9fab54b2-39f9-48e4-8ceb-5a7ecbba44e1
+                  name: my-namespace
+                  namespaceType: standard
+                  installationType: Connected
+                  secret: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+                  productTypePCLM: standard
+                  plans:
+                    - planName: my-db | my-str
+                      planType: OnDemand
+                      activate: false
+                      planConfig: '"{type:\"database | storage\"}"'
+                  enableDevelopmentMode: false
+                  enableExternalSecretsStore: false
+                  membership:
+                    - email: abc@xxx.com
+                      role: Developer | Administrator | Custom_DEPRECATED | MyCustomRole | OtherCustomRole
+                      status: Invitation_Sent
+                      displayName: member name
+                      autoAcceptInvite: false
+                      permissions:
+                        manageEnvironment: false
+                        deployApp: false
+                        scaleApp: false
+                        startApp: false
+                        stopApp: false
+                        modifyMxAdminPassword: false
+                        editAppConstants: false
+                        manageAppScheduledEvents: false
+                        viewAppLogs: false
+                        viewAppAlerts: false
+                        viewAppMetrics: false
+                        manageAppBackups: false
+                        manageDebugger: false
+                        manageTLSConfigurations: false
+                        manageCustomEnvVarJVMOpts: false
+                        manageCustomRuntimeSettings: false
+                        manageLogLevels: false
+                        manageRuntimeMetricsConfiguration: false
+                  operationalLinks:
+                    metricsUrl: 'https://www.exampleurl.com'
+                    alertsUrl: 'https://www.exampleurl.com'
+                    logsUrl: 'https://www.exampleurl.com'
+                    backupsUrl: 'https://www.exampleurl.com'
+                  additionalInformation:
+                    componentVersion:
+                      operatorVersion: 3.0.0
+                      repositoryURL: docker-local.artifactory.url
+                      builderVersion: ingvar-rhel
+                      metricsSidecarVersion: 1.0.0
+                      m2EESidecarVersion: 1.0.0
+                    internalDetails:
+                      operatorSDK: v0.18.2
+                      goRuntimeVersion: go1.14.13_linux/amd64
+                      buildBranch: HEAD
+                      buildDate: '2021-01-05_10:14:42'
+                      buildHash: 7fd1d6df6e754cafb43efaa75071cff3a16932be
+                  environments:
+                    - environmentId: e9m3vf7f
+                      environmentName: my-awesome-environment
+                      applicationId: c533ee0b-f7db-4e62-868b-1192d392ccec
+                      applicationName: My Awesome App
     namespacesManifestsResponse:
       description: The namespaces manifests response returned by a get-namespaces-manifests request.
       content:
@@ -2689,6 +2801,72 @@ components:
                           buildBranch: HEAD
                           buildDate: '2023-01-03_14:45:47'
                           buildHash: fee1feb8df3898b37b356281006b2f0acbfa8982
+            example-namespaces-manifests-with-environments:
+              value:
+                namespaces:
+                  - manifestVersion: 2.0.0
+                    namespace:
+                      namespaceId: 9fab54b2-39f9-48e4-8ceb-5a7ecbba44e1
+                      name: my-namespace
+                      namespaceType: standard
+                      installationType: Connected
+                      secret: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+                      productTypePCLM: standard
+                      plans:
+                        - planName: my-db | my-str
+                          planType: OnDemand
+                          activate: false
+                          planConfig: '"{type:\"database | storage\"}"'
+                      enableDevelopmentMode: false
+                      enableExternalSecretsStore: false
+                      membership:
+                        - email: abc@xxx.com
+                          role: Developer | Administrator | Custom_DEPRECATED | MyCustomRole | OtherCustomRole
+                          status: Invitation_Sent
+                          displayName: member name
+                          autoAcceptInvite: false
+                          permissions:
+                            manageEnvironment: false
+                            deployApp: false
+                            scaleApp: false
+                            startApp: false
+                            stopApp: false
+                            modifyMxAdminPassword: false
+                            editAppConstants: false
+                            manageAppScheduledEvents: false
+                            viewAppLogs: false
+                            viewAppAlerts: false
+                            viewAppMetrics: false
+                            manageAppBackups: false
+                            manageDebugger: false
+                            manageTLSConfigurations: false
+                            manageCustomEnvVarJVMOpts: false
+                            manageCustomRuntimeSettings: false
+                            manageLogLevels: false
+                            manageRuntimeMetricsConfiguration: false
+                      operationalLinks:
+                        metricsUrl: 'https://www.exampleurl.com'
+                        alertsUrl: 'https://www.exampleurl.com'
+                        logsUrl: 'https://www.exampleurl.com'
+                        backupsUrl: 'https://www.exampleurl.com'
+                      additionalInformation:
+                        componentVersion:
+                          operatorVersion: 3.0.0
+                          repositoryURL: docker-local.artifactory.url
+                          builderVersion: ingvar-rhel
+                          metricsSidecarVersion: 1.0.0
+                          m2EESidecarVersion: 1.0.0
+                        internalDetails:
+                          operatorSDK: v0.18.2
+                          goRuntimeVersion: go1.14.13_linux/amd64
+                          buildBranch: HEAD
+                          buildDate: '2021-01-05_10:14:42'
+                          buildHash: 7fd1d6df6e754cafb43efaa75071cff3a16932be
+                      environments:
+                        - environmentId: e9m3vf7f
+                          environmentName: my-awesome-environment
+                          applicationId: c533ee0b-f7db-4e62-868b-1192d392ccec
+                          applicationName: My Awesome App
     cliVersionList:
       description: The JSON response returned by a get-cli-versions request.
       content:
@@ -2718,6 +2896,9 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/appManifest'
+          examples:
+            Example 1:
+              $ref: '#/components/examples/AppManifest'
     appsManifests:
       description: The apps manifests response returned by a get-apps-manifests request.
       content:
@@ -2734,28 +2915,8 @@ components:
       name: Authorization
       type: apiKey
       in: header
-      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/mendix-profile/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
+      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
   requestBodies:
-    environmentManifest:
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/environmentManifest'
-          examples:
-            example-environment-manifest:
-              $ref: '#/components/examples/EnvironmentManifest'
-            example-environment-manifest-with-ephemeral-storage:
-              $ref: '#/components/examples/EnvironmentManifestWithEphemeralStorage'
-      description: Request body for the environment manifest.
-    clusterManifest:
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/clusterManifest'
-          examples:
-            example-cluster-manifest:
-              $ref: '#/components/examples/ClusterManifest'
-      description: Request body for the cluster manifest.
     createNamespaceManifest:
       content:
         application/json:
@@ -2765,15 +2926,6 @@ components:
             example-namespace-manifest:
               $ref: '#/components/examples/CreateNamespaceManifestExample'
       description: Request body for the namespace manifest.
-    updateClusterManifest:
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/updateClusterManifest'
-          examples:
-            example-update-cluster-manifest:
-              $ref: '#/components/examples/UpdateClusterManifest'
-      description: Request body for manifest used when updating the cluster.
     updateNamespaceManifest:
       content:
         application/json:
@@ -2852,6 +3004,11 @@ components:
             interval: 'https://docs.mendix.com/refguide/custom-settings/#11-durationinterval-settings'
             mxAgentConfig: 'https://docs.mendix.com/developerportal/deploy/private-cloud-monitor/#configuring-mxagent'
             mxAgentInstrumentationConfig: 'https://docs.mendix.com/developerportal/deploy/private-cloud-monitor/#configuring-mxagent'
+          deploymentStrategy:
+            runtimeDeploymentStrategyType: Reduced App Downtime
+            maxUnavailable: 50
+            maxSurge: 0
+            switchOverthreshold: 50
     ClusterManifest:
       value:
         manifestVersion: 2.0.0
@@ -3077,6 +3234,11 @@ components:
             interval: 'https://docs.mendix.com/refguide/custom-settings/#11-durationinterval-settings'
             mxAgentConfig: 'https://docs.mendix.com/developerportal/deploy/private-cloud-monitor/#configuring-mxagent'
             mxAgentInstrumentationConfig: 'https://docs.mendix.com/developerportal/deploy/private-cloud-monitor/#configuring-mxagent'
+          deploymentStrategy:
+            runtimeDeploymentStrategyType: Reduced App Downtime
+            maxUnavailable: 50
+            maxSurge: 0
+            switchOverthreshold: 50
     GetEnvironmentManifest:
       value:
         manifestVersion: 2.0.0
@@ -3119,6 +3281,9 @@ components:
                 certificateType: Client
                 key: long base64 encoded .pfx file
           runtime:
+            subscriptionSecret: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+            debuggerPassword: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+            mxAdminPassword: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
             runtimeVersion: 9.24.2
             environmentVariables:
               - name: custom-env-variable1
@@ -3143,12 +3308,23 @@ components:
             interval: 'https://docs.mendix.com/refguide/custom-settings/#11-durationinterval-settings'
             mxAgentConfig: 'https://docs.mendix.com/developerportal/deploy/private-cloud-monitor/#configuring-mxagent'
             mxAgentInstrumentationConfig: 'https://docs.mendix.com/developerportal/deploy/private-cloud-monitor/#configuring-mxagent'
+          deploymentStrategy:
+            runtimeDeploymentStrategyType: Reduced App Downtime
+            maxUnavailable: 50
+            maxSurge: 0
+            switchOverthreshold: 50
 tags:
   - name: apps
+    description: Endpoints for retrieving app(s).
   - name: cli
+    description: Endpoints for retrieving mxpc-cli version(s).
   - name: clusters
+    description: Endpoints for cluster operations.
   - name: environments
+    description: Endpoints for environment operations.
   - name: jobs
+    description: Endpoint for retrieveing the job status.
   - name: namespaces
+    description: Endpoints for namespace operations.
 security:
   - PersonalAccessToken: []

@@ -48,7 +48,7 @@ The following Java dependencies are shipped with the module. For Mendix versions
 ## Configuration {#configuration}
 
 1. Add the module role **TestRunner** from the module to all app user roles that should be able to run and view unit tests.
-1. In the runtime settings of your app, configure the **Startup** microflow for the [after startup property](/refguide/app-settings/#after-startup). If there is already an after startup microflow set, add the **Startup** microflow as an action in the existing microflow.
+1. In the runtime settings of your app, configure the **Startup** microflow for the [after startup property](/refguide/runtime-tab/#after-startup). If there is already an after startup microflow set, add the **Startup** microflow as an action in the existing microflow.
 1. Add the **UnitTestOverview** microflow to your navigation structure, or include the **UnitTestOverview** snippet on a custom page.
 
     {{% alert color="info" %}}When using the snippet in your own page, the snippet should be placed on the top level of the page (not in a layout grid or container), to enable independent scrolling for the left and right panels.S{{% /alert %}}

@@ -22,7 +22,7 @@ The header for a component includes the following details:
     * **Recommended**: If the header contains this label, it means that the component meets your company's policies and guidelines, and therefore is recommended by your Mendix Admins.
     
 * The name of the component
-* **Save** – Click this to add the component to your [Saved Content](/appstore/home-page/#personal) list.
+* **Save** – Click this to add the component to your **Saved** list.
 * Depending on the content type:
 
     * **Use in Studio Pro** for modules and widgets – Click this to copy the content ID so that you can [search for and use the component in Studio Pro](/appstore/use-content/#current-sp).
@@ -74,4 +74,4 @@ The component details page also includes the following tabs:
         * You can now rate a component four or five stars without leaving a review. For three-, two-, and one-star ratings, a review is mandatory.
         * You can find all your reviews on your [My Reviews](/appstore/home-page/#my-reviews) page in the Marketplace home page.
     * If you are a developer of the component, you can reply to a review.
-* **Developers** – This tab shows the names of the developers who most recently updated the component, with links to their [Mendix Profile](/mendix-profile/).
+* **Developers** – This tab shows the names of the developers who most recently updated the component, with links to their [Mendix Profile](/portal/mendix-profile/).

@@ -136,7 +136,7 @@ The activity name will be one of the following reported activities:
 
 You can use this information during performance optimization. Even when you cannot identify the exact activity (for example, if there are several different `retrieveObject` activities in the same microflow), you can still use this information to identify which activities might be related to trends in performance. You can also use it to compare performance between different versions or environment configurations.
 
-### Custom Tags
+### Custom Tags{#custom-tags}
 
 If you use Datadog to monitor more than one app and environment, you will not be able to tell which app or environment these metrics apply to. To identify the metrics for your app and environment in Datadog, you need to add tags for the app name and environment.
 
@@ -162,18 +162,77 @@ Setting these values for your app causes all metrics from this environment of yo
 You can add more tags if you want, but note that Datadog may charge for custom metrics. For more information, see [Custom Metrics Billing](https://docs.datadoghq.com/account_management/billing/custom_metrics) on the Datadog site.
 {{% /alert %}}
 
+Tags you set here also influence Mendix's pre-configured Datadog variables. In particular, if you include a `service:`, `env:`, or `version:` tag, Mendix uses those values when automatically configuring [Unified Service Tagging](https://docs.datadoghq.com/getting_started/tagging/unified_service_tagging/) for your app. See [Pre-configured Variables](#pre-configured-variables) for details.
+
+## Pre-configured Variables{#pre-configured-variables}
+
+When Datadog is enabled for your Mendix app, Mendix automatically configures a set of Datadog variables on your behalf. Understanding these helps you avoid unexpected behavior and allows you to override them where needed.
+
+Mendix sets the following [Unified Service Tagging](https://docs.datadoghq.com/getting_started/tagging/unified_service_tagging/) variables automatically, deriving their values from your app's configuration:
+
+* `DD_SERVICE` – defaults to your app's name, derived from its domain. You can override this by setting a `service:<name>` tag (for example, `service:customermanagement`) on the **Tags** tab of your environment.
+* `DD_ENV` – set from the `env:` tag if present.
+* `DD_VERSION` – set from the `version:` tag if present; otherwise defaults to the Mendix model version of your application.
+
+### Automatically Configured Variables{#auto-configured-variables}
+
+The following variables are set automatically by Mendix when your app starts. Some can be overridden using [Custom Environment Variables](/developerportal/deploy/environments-details/#custom-environment-variables) if you need different values.
+
+| Variable | Automatically Set To | Can Be Overridden? | Description |
+| --- | --- | --- | --- |
+| `DD_SERVICE` | Defaults to your app's name, derived from its domain. Override via a `service:` tag on the Tags tab. | Yes | Identifies your app as a service in Datadog. Used by APM and Unified Service Tagging. |
+| `DD_ENV` | Value of `env:` tag | Yes | Identifies the environment (for example, `production`, `accp`). Used by Unified Service Tagging. |
+| `DD_VERSION` | Value of `version:` tag, or the Mendix model version | Yes | Identifies the deployed version of your app. Used by Unified Service Tagging. |
+| `DD_TAGS` | All tags from the Tags tab | Yes | Sent as global tags on all metrics, traces, and logs submitted to Datadog. |
+| `DD_HOSTNAME` | `<application-domain>-<pod-name-suffix>` (for example, `customermanagement-accp.mendixcloud.com-c25sj` or `customermanagement.mendixcloud.com-6pxlk`) | No | The hostname shown in Datadog for your app. |
+| `DD_LOGS_ENABLED` | `true` | No | Enables log forwarding to Datadog. |
+| `DD_JMXFETCH_ENABLED` | `true` | No | Enables JMX metric collection from the Mendix runtime via the Datadog Java trace agent. |
+| `DD_SERVICE_MAPPING` | `<database>:<app>.db` | No | Links your database service to your app in Datadog APM, so database calls appear correlated in traces. |
+
+{{% alert color="info" %}}
+Variables marked **No** in the **Can Be Overridden?** column are fixed by Mendix and cannot be changed via Custom Environment Variables.
+{{% /alert %}}
+
 ## Multi-Instance Metrics{#multi-instance-metrics}
 
 To view metrics for multiple instances of an application on the Datadog dashboard, follow these steps:
 
-1. In Datadog, go to **Metrics** > **Explorer**.
+1. In Datadog, go to **Metrics** and click **Explorer**.
 2. In the search form, search for your desired metric.
 3. In the **from** field, specify your desired app environment's **Environment ID**. Use the format `application_name:<environment id>`.
-4. In the **avg by** field, select **instance_index**.
+4. In the **avg by** field, select **pod_name**.
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/datadog-metrics/datadog-metrics-explorer.png" alt="Metrics Explorer search form" class="no-border" >}}
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/datadog-metrics/datadog-metrics-explorer.png" alt="Metrics Explorer search form" >}}
 
-If the app has more than one instance, you will see lines on the graph for each instance.  
+If the app has more than one instance, you will see lines on the graph for each instance.
+
+## Mendix Tracing{#mendix-tracing}
+
+[Mendix Tracing](/refguide/tracing-in-runtime/) sends Mendix Runtime traces to [Datadog APM](https://docs.datadoghq.com/tracing/), giving you distributed tracing visibility into your app's performance and microflow executions.
+
+{{% alert color="info" %}}
+Mendix Tracing requires Mendix Runtime 10.24.12 or above, or 11.5 or above.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+Enabling Mendix Tracing may significantly affect your Datadog APM costs. Review the [Datadog APM billing page](https://docs.datadoghq.com/account_management/billing/apm_tracing_profiler/) before enabling this feature in production.
+{{% /alert %}}
+
+### Enabling Tracing{#enable-tracing}
+
+To enable Mendix Tracing, follow these steps:
+
+1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+2. Click **Details** on the environment you want to monitor.
+3. Switch to the **Runtime** tab.
+4. Click **Add** in the **Custom Environment Variables** section.
+5. Set **Name** to `MX_TRACING_ENABLED` and **Value** to `true`.
+6. Click **Save**.
+7. Redeploy your app into the selected environment.
+
+### Filtering Traces{#filter-traces}
+
+To control which traces are sent to Datadog, set the `MX_TRACING_FILTER` custom environment variable. For available filter options and syntax, see [Tracing in Runtime](/refguide/tracing-in-runtime/#filtering).
 
 ## Additional Information{#additional-info}
 
@@ -213,7 +272,7 @@ You can find the correct type and unit for submitted metrics in the GitHub repo 
 
 ### System Metrics{#system-metrics}
 
-System metrics are disabled by default as they usually reflect metrics for a host, rather than for a specific container. You can enable these additional metrics by creating a `DD_ENABLE_CHECKS` custom environment variable and setting its value to `true`. (By default, this variable is set to `false`.)
+System metrics are disabled as they usually reflect metrics for a host, rather than for a specific application container.
 
 ### Datadog Events Explorer
 
@@ -246,6 +305,7 @@ Previously, when Mendix Cloud ran on Cloud Foundry, hosts were incorrectly regis
 
 * [Monitor Your Mendix Apps with Datadog](https://www.mendix.com/blog/monitor-your-mendix-apps-with-datadog/) – a Mendix blog about the capabilities of Datadog and using Datadog with Mendix
 * [Metrics](/developerportal/operate/metrics/)
+* [Tracing in Runtime](/refguide/tracing-in-runtime/) – Mendix documentation
 * [Java Runtime Metrics](https://docs.datadoghq.com/tracing/runtime_metrics/java/) – Datadog documentation
 * [Postgres](https://docs.datadoghq.com/integrations/postgres/) – Datadog documentation
 * [System Check](https://docs.datadoghq.com/integrations/system/) – Datadog documentation

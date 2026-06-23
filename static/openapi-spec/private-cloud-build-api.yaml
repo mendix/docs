@@ -610,7 +610,7 @@ components:
       name: Authorization
       type: apiKey
       in: header
-      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/mendix-profile/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
+      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com//portal/user-settings/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
   requestBodies: {}
 tags:
   - name: packages

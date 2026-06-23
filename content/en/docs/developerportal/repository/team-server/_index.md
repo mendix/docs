@@ -43,7 +43,7 @@ The `https://teamserver.sprintr.com/<your AppID>/` endpoint is deprecated and ca
 You may have to add the final slash (`/`) manually to follow the link. You may also be asked to re-enter your Mendix credentials. Single sign-on (SSO) is not yet implemented for the Team Server. 
 {{% /alert %}}
 
-If you are connecting to Git, or connecting to SVN using a PAT, you need to create a PAT as described in the [Personal Access Tokens](/mendix-profile/user-settings/#pat) section of *Mendix Profile*. The PAT must include the following scopes:
+If you are connecting to Git, or connecting to SVN using a PAT, you need to create a PAT as described in the [Personal Access Tokens](/portal/user-settings/#pat) section of *Mendix Profile*. The PAT must include the following scopes:
 
 * `mx:modelrepository:repo:write`, `mx:modelrepository:repo:read`, and/or `mx:modelrepository:write` under *Model Repository* – for accessing the Git Team Server
 * `mx:modelrepository:write` under *Model Repository* – for accessing the SVN Team Server
@@ -73,7 +73,7 @@ For each revision, you can see the following information:
 * The Mendix Studio Pro version used
 * The revision number
 
-You can also access the revision history in Studio Pro. For more information, see the [History](/refguide/using-version-control-in-studio-pro/#history) section in *Using Version Control in Studio Pro*.
+You can also access the revision history in Studio Pro. For more information, see the [Using History](/refguide/version-control-using-history/) section in *Using Version Control in Studio Pro*.
 
 ## Revision Details {#revision-details}
 
@@ -85,5 +85,5 @@ Related stories will only appear if you select them in the **Commit** dialog box
 
 ## Read More
 
-* [Version Control FAQ](/refguide/version-control-faq/)
+* [Version Control FAQ](/refguide/version-control/)
 * [App Roles](/developerportal/general/app-roles/)

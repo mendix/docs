@@ -2,7 +2,7 @@
 title: "Designing Mendix Applications with Single or Multiple Active Teamcenter Configurations"
 linktitle: "Designing Mendix applications"
 url: /appstore/modules/siemens-plm/designing-applications/
-weight: 3
+weight: 5
 description: "Describes the process of designing Mendix application with single of multiple active Teamcenter configurations."
 ---
 
@@ -55,4 +55,3 @@ If you have setup multiple Teamcenter configurations, you can choose a specific 
 4. From the configurations list, click **Login** against the configuration that you want to use.
     {{< figure src="/attachments/partners/siemens/teamcenter/image016.png" alt="" class="no-border" >}}
 5. In the page that appears, log on to the chosen configuration.
-

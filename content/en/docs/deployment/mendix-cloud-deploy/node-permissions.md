@@ -16,7 +16,7 @@ Team members who have a role with **Cloud Access** can view the permissions. For
 
 ## Viewing Your Nodes{#nodes}
 
-To find a list of all Mendix Cloud licensed nodes that you have access to, open the [Global Navigation menu](/global-navigation/) and click **Deployment**.
+To find a list of all Mendix Cloud licensed nodes that you have access to, open the [Global Navigation menu](/portal/global-navigation/) and click **Deployment**.
 
 You will see a list of all your licensed nodes:
 

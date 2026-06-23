@@ -20,7 +20,7 @@ The **Feedback** page contains two tabs: [Inbox](#inbox) and [Archive](#archive)
 
 #### What Happens to Your Team
 
-After a user reports feedback in the app using the feedback widget, the feedback goes automatically to the [Inbox](#inbox) on the **Feedback** page, and the members in your team who are a Scrum Master or have the same permissions as the default permissions of a Scrum Master get a [notification](/global-navigation/#notifications). If you no longer want to receive feedback notifications for a specific app, you can [stop watching](/developerportal/#my-apps) the app. 
+After a user reports feedback in the app using the feedback widget, the feedback goes automatically to the [Inbox](#inbox) on the **Feedback** page, and the members in your team who are a Scrum Master or have the same permissions as the default permissions of a Scrum Master get a [notification](/portal/global-navigation/#notifications). If you no longer want to receive feedback notifications for a specific app, you can [stop watching](/developerportal/#my-apps) the app. 
 
 On top of getting a notification in the Mendix Portal, Scrum Masters of your team also receive an email with a link to the details of the new feedback.
 
@@ -168,6 +168,15 @@ The following options are available:
 
 * **Group Team Comments** – Displays all the comments left by your team for this group. You can leave comments here and add attachments to each comment.         
   Comments submitted here are only visible to your team members.
+
+## Organizing Feedback with Maia
+
+You can use Maia to organize unsorted feedback. To do that, click {{% icon name="sparkles" %}} (**Ask Maia**), then select one of these options:
+
+* **Suggest Groups** – Maia analyzes ungrouped feedback, and defines new groups for similar items. 
+* **Add Feedback to Group** – Maia analyzes ungrouped feedback, and suggests existing groups where it can be added.     
+
+In both cases, you can accept Maia's suggestion, or ask it to broaden or tighten the results it provides.
 
 ## Archive {#archive}
 

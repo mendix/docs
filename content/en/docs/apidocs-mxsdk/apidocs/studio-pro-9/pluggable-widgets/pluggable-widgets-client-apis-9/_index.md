@@ -133,6 +133,149 @@ There is a way to use more the convenient `displayValue`  and `setTextValue` whi
 
 The optional field `universe` is used to indicate the set of all possible values that can be passed to a `setValue` if a set is limited. Currently, `universe` is provided only when the edited attribute is of the Boolean or enumeration [types](/refguide9/attributes/#type).
 
+#### Formatter Details {#formatter-details}
+
+The `formatter` field on `EditableValue` is defined as follows:
+
+```ts
+type ParseResult<T> = { valid: true; value: T } | { valid: false };
+
+interface SimpleFormatter<T> {
+    format(value: T | undefined): string;
+    parse(value: string): ParseResult<T>;
+}
+```
+
+##### Built-in Formatter Types {#built-in-formatter-types}
+
+The Mendix platform provides two typed, configurable built-in formatters that extend `SimpleFormatter<T>`: `NumberFormatter` and `DateTimeFormatter`. The actual type of `EditableValue.formatter` is `ValueFormatter<T>` — a union that covers both built-in and plain formatters:
+
+```ts
+type ValueFormatter<T> =
+    | (TypedFormatter<T> & (NumberFormatter | DateTimeFormatter))
+    | (SimpleFormatter<T> & { readonly type?: never });
+```
+
+Use the `type` property as a type guard to narrow to a specific built-in formatter before accessing its extra API:
+
+```ts
+if (myAttribute.formatter.type === "datetime") {
+    // DateTimeFormatter — has withConfig, getFormatPlaceholder
+} else if (myAttribute.formatter.type === "number") {
+    // NumberFormatter — has withConfig
+} else {
+    // Plain SimpleFormatter — string, enum, or boolean
+}
+```
+
+##### DateTimeFormatter
+
+**Date/DateTime** attributes receive a `DateTimeFormatter`, which extends `SimpleFormatter<Date>`:
+
+```ts
+interface DateTimeFormatter extends SimpleFormatter<Date> {
+    readonly type: "datetime";
+    readonly config: DateTimeFormatterConfig;
+    withConfig(config: DateTimeFormatterConfig): DateTimeFormatter;
+    getFormatPlaceholder(): string | undefined;
+}
+```
+
+The `withConfig` method returns a **new formatter** with a different date pattern while preserving the user's locale. It accepts a `DateTimeFormatterConfig` with the following options:
+
+* `{ type: "date" }`: platform default date format
+* `{ type: "time" }`: platform default time format
+* `{ type: "datetime" }`: platform default datetime format
+* `{ type: "custom", pattern: "..." }`: custom Unicode date pattern (for example `"EEEE"`, `"dd MMMM"`, `"MMMM YYYY"`)
+
+The following example formats a date attribute using a custom month-year pattern:
+
+```ts
+if (myDateAttribute.formatter.type === "datetime") {
+    const customFormatter = myDateAttribute.formatter.withConfig({
+        type: "custom",
+        pattern: "MMMM YYYY"
+    });
+    const formatted = customFormatter.format(myDateAttribute.value); // e.g. "March 2026"
+}
+```
+
+`getFormatPlaceholder` returns a locale-appropriate placeholder string for the active date pattern, useful for input field `placeholder` attributes:
+
+```ts
+const placeholder = myDateAttribute.formatter.type === "datetime"
+    ? myDateAttribute.formatter.getFormatPlaceholder()
+    : undefined;
+```
+
+##### NumberFormatter
+
+**Decimal**, **Integer**, and **Long** attributes receive a `NumberFormatter`, which extends `SimpleFormatter<Big>`:
+
+```ts
+interface NumberFormatter extends SimpleFormatter<Big> {
+    readonly type: "number";
+    readonly config: NumberFormatterConfig;
+    withConfig(config: NumberFormatterConfig): NumberFormatter;
+}
+```
+
+`NumberFormatterConfig` has the following options:
+
+```ts
+interface NumberFormatterConfig {
+    readonly groupDigits: boolean;       // e.g. 1,000,000
+    readonly decimalPrecision?: number;
+}
+```
+
+The following example disables the thousands separator and fixes the output to four decimal places:
+
+```ts
+if (myNumberAttribute.formatter.type === "number") {
+    const customFormatter = myNumberAttribute.formatter.withConfig({
+        groupDigits: false,
+        decimalPrecision: 4
+    });
+    const formatted = customFormatter.format(myNumberAttribute.value); // e.g. "1234.5600"
+}
+```
+
+##### Plain SimpleFormatter
+
+For **string**, **enumeration**, and **Boolean** attributes the platform provides a plain `SimpleFormatter<T>` without a `type` property. These formatters convert raw values to human-readable captions (for example, enum captions configured in Studio Pro) and parse text input back to the typed value. They do **not** have `withConfig` or `getFormatPlaceholder`:
+
+```ts
+// myEnumAttribute is an EditableValue<string>
+const caption = myEnumAttribute.formatter.format(myEnumAttribute.value); // e.g. "In Progress"
+```
+
+##### Custom Formatters via setFormatter
+
+You can supply a fully custom formatter for any attribute type using `setFormatter`. The object must implement `format` and `parse`:
+
+```ts
+myDecimalAttribute.setFormatter({
+    format(value: Big | undefined): string {
+        return value !== undefined ? `$${Number(value).toFixed(2)}` : "";
+    },
+    parse(text: string): { valid: true; value: Big } | { valid: false } {
+        const num = Number(text.replace(/[$,]/g, ""));
+        return isNaN(num) ? { valid: false } : { valid: true, value: new Big(num) };
+    }
+});
+```
+
+Call `setFormatter(undefined)` to reset the formatter to the platform default.
+
+##### Quick Reference
+
+| Formatter type | `type` value | `withConfig` | `getFormatPlaceholder` | Applies to |
+|---|---|---|---|---|
+| `DateTimeFormatter` | `"datetime"` | ✅ `DateTimeFormatterConfig` | ✅ | `Date` |
+| `NumberFormatter` | `"number"` | ✅ `NumberFormatterConfig` | ❌ | `Big` (Decimal, Integer, Long) |
+| `SimpleFormatter` | `undefined` | ❌ | ❌ | `string`, `boolean`, Enum |
+
 ### ModifiableValue {#modifiable-value}
 
 `ModifiableValue` is used to represent values that can be changed by a pluggable widget client component. It is passed only to [association properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types-9/#association), and is defined as follows:

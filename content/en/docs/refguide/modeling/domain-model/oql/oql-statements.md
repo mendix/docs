@@ -1,30 +1,20 @@
 ---
 title: "OQL Statements"
 url: /refguide/oql-statements/
-beta: true
 weight: 50
 aliases:
     - /refguide/oql-delete-statement/
 ---
-
-{{% alert color="warning" %}} This feature is experimental. For more information, see [Release Status](/releasenotes/release-status/). {{% /alert %}}
 
 ## Introduction
 
 OQL statements are translated to SQL statements that are sent to the database.
 This can be much faster than retrieving the objects in a microflow and then updating or deleting the resulting list.
 
-This feature is experimental and currently only accessible through the Java API by writing a Java action.
+This feature is currently only accessible through the Java API by writing a Java action.
 
 {{% alert color="info" %}}
-From Mendix version 11.1, you can delete objects in bulk using OQL `DELETE` statements.
-
-From Mendix version 11.3, you can also update object attributes in bulk using OQL `UPDATE` statements.
-
-From Mendix version 11.4, you can update object associations as well as attributes in bulk using OQL `UPDATE` statements.
-
-From Mendix version 11.6, you can insert new objects with attributes in bulk using OQL `INSERT` statements.
-
+These statements are not available from Mendix 11.0.0. See the summary in the [Version Reference](/refguide/oql/#statement-versions) section of the *OQL* document, or refer to the individual statements, below, to see which Mendix version you need.
 {{% /alert %}}
 
 ## Java API for OQL updates
@@ -173,27 +163,32 @@ Available from Mendix version 11.6.0
 The syntax of `INSERT` statements is:
 
 ```sql
-INSERT INTO <entity> ( <attribute> [ , …n ] ) <oql-query>
+INSERT INTO <entity> ( <attribute | <association> [ , …n ] ) <oql-query>
 ```
 
 * `entity` is the entity for which new objects will be created.
 
 * `attribute` is an attribute of the entity that will be inserted.
 
-* `oql-query` is any OQL query that returns same number of columns as the number of attributes that will be inserted.
+* `association` is an association to an existing object of associated entity. Associations can be inserted in Mendix version 11.7.0 and above.
+
+* `oql-query` is any OQL query that returns same number of columns as the number of attributes and associations that will be inserted.
 This query can select data from persistable entities and/or [view entities](/refguide/view-entities/).
 
 Example:
 
 ```sql
-INSERT INTO Module.Order ( OrderNumber, CustomerNumber )
-SELECT NewOrderNumber, Loader.TemporaryData_Customer/Loader.Customer/Number FROM Loader.TemporaryData
+INSERT INTO Module.Order ( OrderNumber, CustomerNumber, Module.Order_Customer )
+SELECT NewOrderNumber, Loader.TemporaryData_Customer/Loader.Customer/Number, Loader.TemporaryData_Customer FROM Loader.TemporaryData
 ```
 
 ### OQL `INSERT` Limitations
 
-* It is not yet possible to insert associations. As a workaround, they can be added after the `INSERT` using an OQL `UPDATE` statement.
+* Only a single value can be specified per association.
+
+  If you need to set multiple values in a many-to-many association, we recommend doing that in two stages. First, use `INSERT` to create required objects and then set associations using `UPDATE`.
 * Attributes of type "Date and time" with a default value of `'[%CurrentDateTime%]'` will not have their default values set when the `INSERT` statement does not specify them.
+
   As a workaround, explicitly insert the attribute with a value of `'[%CurrentDatetime%]'` in the `SELECT` part.
 * When using Oracle, due to database limitations, inserting attributes of type unlimited string or binary is not supported.
 * The general limitations for OQL statements also apply. See [General Limitations for OQL Statements](#oql-limitations), below.

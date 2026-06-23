@@ -77,6 +77,8 @@ Now, you can start calling the REST service from your microflow data source. To 
 
 ## Creating a Data Grid with a Microflow Data Source
 
+{{% alert color="info" %}} The data grid widget is a Dojo widget. This means the runtime setting **Use React client** must be set to **No** for it be visible in the Toolbox. {{% /alert %}}
+
 In the previous section, you created a microflow which returns a list of characters. Now, you will use this microflow as a data source for a data grid:
 
 1. From the **Toolbox**, drag a **Data grid** onto a page.

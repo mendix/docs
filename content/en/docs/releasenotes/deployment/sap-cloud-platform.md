@@ -12,6 +12,14 @@ SAP Business Technology Platform deployments also depend on the latest version o
 
 For information on the current status of deployment to SAP BTP and any planned releases, see [Mendix Status](https://status.mendix.com/).
 
+## 2026
+
+### June 14, 2026
+
+#### Portal Improvements
+
+* We updated the portal with a new UI.
+
 ## 2025
 
 ### September 28, 2025

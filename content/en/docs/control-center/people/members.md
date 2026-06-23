@@ -45,7 +45,7 @@ As a Mendix Admin:
 * You can remove Mendix Admins from the [Mendix Admins](/control-center/mendix-admins-page/) page in the Control Center.    
   You cannot remove yourself as a Mendix Admin.
 * You can deactivate other users, but you cannot delete them.    
-  A user can delete their own account from the [User Settings](/mendix-profile/user-settings/#deleting-an-account) window of their Mendix profile.
+  A user can delete their own account from the [User Settings](/portal/user-settings/#deleting-an-account) window of their Mendix profile.
 {{% /alert %}}
 
 ## Deactivated Members

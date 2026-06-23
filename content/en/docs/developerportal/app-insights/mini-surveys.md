@@ -201,7 +201,7 @@ To install the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) mod
 
 ### Viewing or Exporting Responses {#view-export-responses}
 
-When the start time that you set for the mini survey is reached, the survey will start running automatically. Then you get [notifications](/global-navigation/#notifications) on how many responses have been collected.
+When the start time that you set for the mini survey is reached, the survey will start running automatically. Then you get [notifications](/portal/global-navigation/#notifications) on how many responses have been collected.
 
 To check the responses that have been collected, follow these steps:
 

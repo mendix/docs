@@ -79,9 +79,9 @@ To allow the module to send and receive document generation requests on your Men
     
     2. On the **Overview** tab, click **Details** for the respective environment.
     
-    3. In the specific **Environment Details** page, select the **Network** tab.
+    3. In the specific **Environment Details** page, select the **Connectivity** tab.
     
-    4. Scroll down to **Path Based Access Restrictions** and click **Add**. The **Edit Path Based Access Restriction** dialog box opens.
+    4. Scroll down to **Path Based Access Restrictions** and click **Add**. The **New Path Based Access Restriction** dialog box opens.
     
     5. Fill in the fields as follows:
         * In the **Path** field, enter */docgen/*.
@@ -174,3 +174,5 @@ Rule | Name | Pattern | Rewrite URL
 2 | docgen | `^(docgen/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 
 {{% alert color="info" %}}Rule 1 is based on the default URL prefix (`p`) for page/microflow URLs. If you configured a different prefix in the runtime settings of your app, adjust the rule accordingly.{{% /alert %}}
+
+{{% alert color="info" %}}If you use IIS as your reverse proxy, make sure that the [default document](https://learn.microsoft.com/en-us/iis/configuration/system.webserver/defaultdocument/) is configured to serve `index.html`. Without this setting, the base URL does not resolve correctly, and document generation fails.{{% /alert %}}

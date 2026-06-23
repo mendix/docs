@@ -17,6 +17,10 @@ The **Settings** page in the **Security** category in Control Center allows you 
 
 ## Security Settings Tab
 
+### Free App Deployment
+
+With [Free Apps](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/#deploy-free-app), you can deploy your app to Mendix Cloud from Studio Pro. The ability to deploy Free Apps can be blocked at the company level by disabling **Free App Deployment**.
+
 ### Password Policy
 
 Mendix enforces a 90-day password validity period for all platform passwords used to sign in to the Mendix Platform or Studio Pro. 
@@ -89,7 +93,7 @@ If you want to automate the process of assigning project-level roles to project 
 You can use your IT processes and IT systems to request and approve the Mendix Admin role for certain employees, and include the entitled employees in a user group in your IdP. The Mendix platform assigns or removes the Mendix Admin role from a user at login time, based on a group membership. When using IdP-managed admins, Mendix Admins can no longer be manually assigned through the Control Center.
 
 {{% alert color="info" %}}
-The IdP-managed Mendix Admin feature is currently in [Limited Availability](/releasenotes/release-status/#limited-availability) due to the lack of self-service configuration in the Control Center. As a result, it requires Mendix-assisted onboarding. To arrange onboarding, contact `jaap.francke@mendix.com`.
+The IdP-managed Mendix Admin feature is currently in [Limited Availability](/releasenotes/release-status/#limited-availability) due to the lack of self-service configuration in the Control Center. As a result, it requires Mendix-assisted onboarding. To arrange onboarding, contact `jacob.francke@siemens.com`.
 {{% /alert %}}
 
 Note that enabling this feature on the Mendix platform may affect your existing set of Mendix Admins. The changes will take place at login:

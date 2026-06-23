@@ -2,6 +2,8 @@
 title: "Mendix Native Mobile Builder Release Notes"
 linktitle: "Mendix Native Mobile Builder"
 url: /releasenotes/mobile/mendix-native-mobile-builder/
+aliases:
+    - /releasenotes/mobile/mendix-mobile-native-builder
 weight: 11
 description: "Mendix Native Mobile Builder release notes."
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
@@ -26,6 +28,18 @@ To fix this issue, do the following:
 3. Remove the content of the file.
 4. Remove **config.json**.
 5. Reopen the Mendix Native Mobile Builder.
+
+## Release 1.0.145 {#10145}
+
+**Release date: January 28, 2026**
+
+### iOS Location Permission Change
+
+* We changed the criterion for location permissions on iOS. It used to be required by default, but can now be opted in or out of from the **Native Permissions** screen.
+
+### Features
+
+* We added support for `MEDIA` permissions on Android targeting OS 13+. The permissions are now shown in the Native Builder. Subsequently, this also fixes cases of these permissions not working correctly on these devices.
 
 ## Release 1.0.144 {#10143}
 

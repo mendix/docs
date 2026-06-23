@@ -7,7 +7,7 @@ description: "Describes the configuration and usage of the File Uploader module,
 
 ## Introduction
 
-The [File Uploader](https://marketplace.mendix.com/link/component/235351) enables you to upload files or images by dragging and dropping them onto the widget, or by using the file selection dialog box. 
+The [File Uploader](https://marketplace.mendix.com/link/component/235351) enables you to upload files or images by dragging and dropping them onto the widget, or by using the file selection dialog box.
 
 It supports multi-file uploading, and includes an image-only mode that previews thumbnails of the uploaded images. The module comes with a domain model containing the entities and nanoflows it needs to function properly.
 
@@ -54,7 +54,7 @@ For an advanced setup, useful when modifying the context entity is not possible,
 
 #### General Tab {#general}
 
-##### Upload mode
+##### Upload Mode
 
 * **Files** — Allows all file types by default, and adds a configuration option to specify a custom set of allowed file types.
 * **Images** — Limits uploads to images and shows a preview thumbnail.
@@ -75,7 +75,7 @@ This configuration is only shown for the **Files** upload mode. Users can manual
 
 ##### Maximum Number of Files
 
-This configuration sets a limit on how many files can be uploaded at once.
+This configuration sets a limit on how many files can be uploaded in total.
 
 ##### Maximum File Size (MB)
 
@@ -87,15 +87,35 @@ Configures the displayed text used in **File Uploader**.
 
 #### Advanced Tab {#advanced}
 
-* **Object creation timeout** — Configures the timeouts to wait until object creation has failed. The value is in seconds.
-* **Enable custom buttons** — Allows the use of custom action buttons that will be displayed on the right side of file list instead of the standard 
-buttons. If set to **Yes**, the default action buttons will be hidden.
-* **Custom buttons** — Adds custom buttons that will be used in file uploader.
-    * **Caption** — Captions text configuration for the custom button.
-    * **Icon** — Provides icon configuration for the custom button.
-    * **Action** — Provides **On click** action configuration for the custom button.
-    * **Default file action** — If set to **Yes**, the action in the button will be use as default click action for the file.
-    * **Visible** — If set to **False**, the button will be hidden.
+##### Object Creation Timeout
+
+Configures the timeout to wait until object creation has failed. The value is in seconds.
+
+##### On Upload Success
+
+This action runs after a successful upload. When uploading multiple files at once, it will run for every successfully uploaded file, and this file will be passed as an argument to the action.
+
+##### On Upload Failure
+
+This action runs when an upload to the server started, but failed during the process. The created object will be passed to the action. This is useful to perform cleanups from empty, dangling objects that were created but did not have content uploaded to them.
+
+{{% alert color="info" %}}
+This action will not run if a validation error occurred on the client side, for example, if a provided file was too big or had an incorrect extension. 
+{{% /alert %}}
+
+##### Enable Custom Buttons
+
+Allows the use of custom action buttons that will be displayed on the right side of the file list instead of the standard buttons. If set to **Yes**, the default action buttons will be hidden.
+
+##### Custom Buttons
+
+Adds custom buttons that will be used in the file uploader:
+
+* **Caption** — Caption text configuration for the custom button.
+* **Icon** — Provides icon configuration for the custom button.
+* **Action** — Provides **On click** action configuration for the custom button.
+* **Default file action** — If set to **Yes**, the action in the button will be used as the default click action for the file.
+* **Visible** — If set to **False**, the button will be hidden.
 
 ### Nanoflows
 

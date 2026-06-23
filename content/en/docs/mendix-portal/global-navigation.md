@@ -1,10 +1,11 @@
 ---
 title: "Global Navigation"
-url: /global-navigation/
+url: /portal/global-navigation/
 description: "Describes the global navigation and top bar that is available throughout the online Mendix Platform."
 weight: 3
 aliases: 
     - /developerportal/global-navigation/
+    - /global-navigation/
 ---
 
 ## Introduction
@@ -41,7 +42,7 @@ If you see **Get Started with Mendix**, a red dot next to this menu item will re
 
 Click **Open Notifications Menu** ({{% icon name="alarm-bell" %}}) to see the platform notifications you have received. Clicking the notification itself takes you to the source.
 
-To configure what types of notifications you receive, click **Settings** ({{% icon name="cog" %}}) and update the options in the [Notification Settings](/mendix-profile/user-settings/#notifications) page that opens. 
+To configure what types of notifications you receive, click **Settings** ({{% icon name="cog" %}}) and update the options in the [Notification Settings](/portal/user-settings/#notifications) page that opens. 
 
 {{< figure src="/attachments/developerportal/global-nav/notifications.png" width="500" class="no-border" >}}
 
@@ -51,6 +52,6 @@ To stop receiving notifications when new feedback is submitted for a specific ap
 
 ## Profile Menu
 
-Click **Open Profile Menu** ({{% icon name="user" %}}) to access your [Mendix Profile](/mendix-profile/), enable **Dark Mode**, and access your [Account Settings](/mendix-profile/user-settings/#settings). 
+Click **Open Profile Menu** ({{% icon name="user" %}}) to access your [Mendix Profile](/portal/mendix-profile/), enable **Dark Mode**, and access your [Account Settings](/portal/user-settings/#settings). 
 
 You can also sign out from Mendix Portal via this menu.

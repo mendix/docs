@@ -104,7 +104,7 @@ To apply access restrictions to a specific application environment, follow these
 
 1. From [Apps](https://sprintr.home.mendix.com), go to the app's **Environments** page.
 2. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
-3. Go to the **Network** tab.
+3. Go to the **Connectivity** tab.
 4. Navigate to the [Path Based Access Restrictions](/developerportal/deploy/environments-details/#path-based-restrictions) section to apply access restrictions to a single environment.
 
 {{% alert color="info" %}}
@@ -174,7 +174,7 @@ To apply IP restrictions to a specific application environment, follow these ste
 
 1. From [Apps](https://sprintr.home.mendix.com), go to the app's **Environments** page.
 2. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
-3. Go to the **Network** tab.
+3. Go to the **Connectivity** tab.
 4. Navigate to the [IP Access Restrictions](/developerportal/deploy/environments-details/#ip-access-restrictions) section to apply access restrictions to a single environment.
 
 {{% alert color="info" %}}
@@ -199,14 +199,15 @@ To restrict access to the app to an IP range, follow these steps:
 5. Add one or more IP ranges to the **Denied IP Profiles**.
 
 6. Save the access restriction profile.
-7. Go to the **Deploy** tab of the **Environments** page. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
-8. Switch to the **Network** tab.
-9. Select the top-level path (`/`) and click **Edit**.
+7. Go to the **Overview** tab on the **Environments** page.
+8. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
+9. Switch to the **Connectivity** tab.
+10. Select the top-level path (`/`) and click **Edit**.
 
     {{% alert color="info" %}}Any path below this path that does not have an explicit restriction will inherit this access restriction profile.{{% /alert %}}
 
-10. Select **Custom Profile for Client Certificates and/or IP ranges** as the **New Restriction Type**.
-11. Select your access restriction profile as the **New Restriction Profile**, and save it.
+11. Select **Custom Profile for Client Certificates and/or IP ranges** as the **New Restriction Type**.
+12. Select your access restriction profile as the **New Restriction Profile**, and save it.
 
 ### Example Scenario 2 – Back-End Administration with Third-Party Web Service Integrations
 
@@ -227,9 +228,10 @@ To add this additional access restriction profile, follow these steps:
 4. Create a new access restriction profile.
 5. Upload the certificate of the internal CA that is used to sign the client certificates.
 6. Save the new access restriction profile.
-7. Go to the **Deploy** tab of the **Environments** page. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
-8. Switch to the **Network** tab.
-9. Edit the `/ws/` path of the environment to apply the new access restriction profile. This overrides the default profile (for the top level `/`) for the selected path (`/ws/`).
+7. Go to the **Overview** tab on the **Environments** page.
+8. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
+9. Switch to the **Connectivity** tab.
+10. Edit the `/ws/` path of the environment to apply the new access restriction profile. This overrides the default profile (for the top level `/`) for the selected path (`/ws/`).
 
 {{% alert color="info" %}}
 If the `/ws/` path should still be reachable from the office location without using a client certificate, add the IP ranges of the office location to the profile used for `/ws/`.

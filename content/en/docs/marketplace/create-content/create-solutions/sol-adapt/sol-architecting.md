@@ -98,7 +98,7 @@ Studio Pro enforces consistency during both development and implementation, and 
 {{% alert color="info" %}}
 
 * This is an exception to the cyclic dependency rule, in that a solution module may have an open module counterpart while they work together as one module.  
-* Be sure to configure the [Solution](/refguide/app-settings/#solution) tab of **App Settings** to allow for distribution as an adaptable solution and for creating solution modules.
+* Be sure to configure the [Solution](/refguide/solution-tab/) tab of **App Settings** to allow for distribution as an adaptable solution and for creating solution modules.
 
 {{% /alert %}}
 
@@ -146,7 +146,7 @@ For example, a solution contains a module like the [Excel Importer](/appstore/mo
 
 ### Clean Coding
 
-Mendix recommends adhering to the [Mendix Best Practices for Development](/refguide/dev-best-practices/) and having clear coding conventions. 
+Mendix recommends adhering to [development best practices](/refguide/dev-best-practices/) and having clear coding conventions. 
 
 {{% alert color="warning" %}}
 This is even more important for solutions that will be adapted at the model level.

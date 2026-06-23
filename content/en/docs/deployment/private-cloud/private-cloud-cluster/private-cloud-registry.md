@@ -25,6 +25,7 @@ Some examples of such container registries are:
 * Docker Hub
 * Azure ACR [admin account](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-authentication?tabs=azure-cli#admin-account)
 * Self-hosted registries such as [Sonartype Nexus](https://www.sonatype.com/products/nexus-repository)
+* STACKIT container registry
 
 However, static credentials are often considered insecure, and cloud providers offer alternative authentication methods based on short-lived tokens. For example, pushing an image to ECR requires getting a short-lived token from the AWS API. For more details about specific container registries, see the [Configuring the Registry](#configure-registry) section.
 
@@ -278,6 +279,27 @@ To access quay.io, you will need to create a robot account, and give this accoun
 
 Check your image registry documentation to see if repositories can be created automatically (on push) or need to be pre-created.
 Some registries impose limitations on repository names, for example the repository path cannot have more than three parts.
+
+**STACKIT container registry**
+
+| Field               | Value                                                                                          |
+| ------------------- | -----------------------------------------------------------------------------------------------|
+| Push URL            | registry.onstackit.cloud                                                                       |
+| Pull URL            | registry.onstackit.cloud                                                                       |
+| Registry name       | `<stackitregistry>/<repository>`, where `<stackitregistry>` is the registry you created in STACKIT |
+| With authentication | enabled                                                                                        |
+| User                | Username for the registry robot account                                                        |
+| Password            | Token (password) for the robot account                                                         |
+
+Before pushing images to container registry, you must first create the registry.
+
+Example:
+
+   ```shell
+   kubectl patch serviceaccount default -n <namespace> -p '{"imagePullSecrets": [{"name": "<secret-name>"}]}'
+   ```
+
+In order to fetch the container images from container registry, patch the `default` service account with the registry credentials. Both mxpc-cli and mx-ops-cli automatically generate a secret named `mendix-generic-registry-secret`. This secret holds the necessary registry credentials, enabling pods to pull images.
 
 ### Existing Docker Registry Secret
 

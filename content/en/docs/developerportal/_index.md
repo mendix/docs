@@ -20,11 +20,26 @@ cascade:
 
 ## Creating an App {#create-app}
 
-Follow these steps to create a new app and start collaborating:
+There are two ways to create apps:
 
-1. In **Apps**, click **Create App** in the upper-right corner. A screen opens to guide you through the process.
+* Using Maia to plan and build your app.
+* Using a starter app template.
 
-2. Enter the following information for your app:
+The following sections describe the process for each option.
+
+### Creating an App with Maia
+
+Follow the steps in [Maia Plan](/developerportal/maia-plan/) to enlist Maia's help in planning and creating an app.
+
+### Creating an App from a Starter App Template
+
+Follow these steps to use a starter app:
+
+1. In **Apps**, click **Create App** in the upper right corner. 
+
+2. Select **Use a Starter App**. A screen opens to guide you through the process.
+
+3. Enter the following information for your app:
 
     * **App name** – Every app must have a name that abides by these requirements:
 
@@ -36,15 +51,15 @@ Follow these steps to create a new app and start collaborating:
     
     * **App icon** – Mendix has generated an icon for your app. You can change the color of the icon if you like. You can upload a custom icon in the [App Settings](/developerportal/general-settings/#general) page once you have created the app.
 
-3. Click **Next** to go to step 2.
+4. Click **Next** to go to step 2.
 
-4. Select a starter app template on which the app will be based. The most used starter app templates are displayed.    
+5. Select a starter app template on which the app will be based. The most used starter app templates are displayed.    
 
     Some templates offer multiple versions for you to choose from, which are displayed as selectable options. By default, the stable version is pre-selected.    
     
     If you want to choose a different starter app template than the ones displayed, click the **discover community starter apps** link at the top. This takes you to the Marketplace, where you can browse through all available starter app templates and select one that suits your needs.
     
-5. After selecting a starter app template, click **Create App**. Based on the starter app template you selected, it can take some time to set up the app, its repository, and access to the collaboration tools. After it is completed, the app is created.
+6. After selecting a starter app template, click **Create App**. Based on the starter app template you selected, it can take some time to set up the app, its repository, and access to the collaboration tools. After it is completed, the app is created.
 
 ## My Apps {#my-apps}
 
@@ -79,9 +94,9 @@ The navigation pane is divided into these main categories:
 * [General](/developerportal/general/)
 * [Project Management](/developerportal/project-management/)
 * [App Insights](/developerportal/app-insights/)
-* [Repository]()
+* [Repository](/developerportal/repository/)
 * [Deployment](/developerportal/deploy/general/)
-* [Monitoring]()
+* [Monitoring](/developerportal/monitoring/)
 
 {{% alert color="info" %}}
 The features in the navigation pane can also be accessed via APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).

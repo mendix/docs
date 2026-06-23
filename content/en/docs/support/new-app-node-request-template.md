@@ -2,7 +2,7 @@
 title: "App Node Requests"
 url: /support/new-app-node-request-template/
 description: "Describes how to resize environments, offboard an environment, and request a new licensed node in Mendix Cloud or on-premises/virtual Mendix on Kubernetes."
-weight: 30
+weight: 40
 aliases:
     - /developerportal/support/new-app-request-template.html
     - /developerportal/support/new-app-request-template/
@@ -27,7 +27,7 @@ To deploy your app to a new licensed node, you will need to request a node from 
 * **Mendix Cloud Dedicated** – Select this option for apps deployed to Mendix Cloud Dedicated.
 * **Mendix for Private Cloud** – Select this option for apps deployed to Kubernetes using the Mendix Operator. Refer to [Mendix on Kubernetes](/developerportal/deploy/private-cloud/) for more information.
 * **Server-based (Windows Server)** – Select this option for apps deployed to Windows. You are required to enter the **Server ID**, which you can retrieve by following the steps in the [Windows Server](/developerportal/deploy/licensing-apps-outside-mxcloud/#windows-server) section of *Licensing Apps*.
-* **Container-based (Docker, Cloud Foundry, Kubernetes)** – Select this option for apps deployed to Docker, Cloud Foundry, or Kubernetes, without Mendix Operator.
+* **Container-based (Docker, Cloud Foundry, Kubernetes)** – Select this option for apps deployed to Portable App Distribution, Docker, Cloud Foundry, or Kubernetes, without Mendix Operator.
 * **SAP** – Select this option for apps deployed to SAP.
 
 To request your node from Mendix Support, complete the following steps:

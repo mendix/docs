@@ -36,11 +36,15 @@ Parameters of the selected microflow. Depending on the selected microflow, you w
 
 ### Outcomes Section {#outcomes}
 
-**Outcomes** depends on the return type and values of the microflow. For example, when there is not return type, you have a single outcome; for the Boolean, you have **true** and **false** outcomes; and for the enumeration – an outcome per each enumeration value and an empty one when the value is unassigned. 
+The outcomes depend on the return type of the selected microflow:
+
+* **No return type**: The activity has a single outcome and the workflow proceeds to the next step.
+* **Boolean**: The activity has two outcomes: `true` and `false`. The workflow proceeds to the next step based on the returned value.
+* **Enumeration**: The activity has one outcome for each enumeration value, plus an `empty` outcome for when the value is unassigned. The workflow proceeds to the next step based on the returned value.
 
 ### Boundary Events Section {#boundary-events}
 
-For more information, see [Boundary Events](/refguide/workflow-boundary-events/).
+Boundary events can be attached to this element and are triggered by certain events to handle exceptional situations during its execution. For more information, see [Boundary Events](/refguide/workflow-boundary-events/).
 
 ### Common Section {#common}
 

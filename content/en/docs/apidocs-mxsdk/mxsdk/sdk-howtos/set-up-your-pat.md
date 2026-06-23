@@ -12,7 +12,7 @@ Before running your first script, you need to set up your personal access token 
 
 ## Creating the Personal Access Token
 
-For details on how to create your personal access token (PAT), see the [Personal Access Tokens](/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
+For details on how to create your personal access token (PAT), see the [Personal Access Tokens](/portal/user-settings/#pat) section of *Mendix Profile*.
 
 Make sure you choose at least the following scopes:
 

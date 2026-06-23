@@ -9,6 +9,12 @@ description: "Describes the configuration and usage of the PDF Document Generati
 
 The [PDF Document Generation](https://marketplace.mendix.com/link/component/211553) module allows you to generate pixel-perfect PDF documents based on regular pages in your app. 
 
+For detailed information on how to install and use the PDF Document Generation module, refer to these pages:
+
+* [Installation and Configuration](/appstore/modules/document-generation/installation-configuration/)
+* [Usage](/appstore/modules/document-generation/usage/)
+* [Troubleshooting](/appstore/modules/document-generation/troubleshooting/)
+
 ## Features
 
 * Generate pixel-perfect PDF documents based on regular pages in your app.
@@ -31,7 +37,7 @@ The [PDF Document Generation](https://marketplace.mendix.com/link/component/2115
     {{% alert color="info" %}}We only support apps that allow bi-directional communication with the PDF Service in Mendix Cloud for all deployment types except for on-premises, and for the [Private PDF Document Generation Service](/appstore/services/private-document-generation-service/).{{% /alert %}}
 * The maximum file size is 25 MB per document. If your document exceeds this limit, the action will result in an exception. We recommend compressing high-resolution images to reduce their file size.
 * If your app is configured to [restrict access for incoming requests](/developerportal/deploy/access-restrictions/) using client certificates, our cloud service will not be able to reach your app, and the module will not work properly.
-* If your app uses a custom domain, you must configure a custom SSL/TLS domain certificate signed by a trusted public authority, including all intermediate certificates if applicable. Self-signed certificates will cause the service to fail. For more information, see [Obtaining a new signed certificate](/developerportal/deploy/custom-domains/#obtaining-a-new-signed-certificate).
+* If your app uses a custom domain, you must configure a custom SSL/TLS domain certificate signed by a trusted public authority, including all intermediate certificates if applicable. Self-signed certificates will cause the service to fail. For more information, see [Obtaining a new signed certificate](/developerportal/deploy/application-level-certificates/#obtaining-a-new-signed-certificate).
 * We use a fixed 30 second timeout for the page to finish loading and rendering. A timeout exception is thrown if the page content did not finish loading within 30 seconds.
 * Widgets or add-ons for your `index.html` file that perform long polling network requests are not supported. The document generation service waits until there are no more pending network requests.
 * Some widgets, such as [Charts](/appstore/widgets/charts/), might be rendered inconsistently in the generated PDF due to factors like animation.

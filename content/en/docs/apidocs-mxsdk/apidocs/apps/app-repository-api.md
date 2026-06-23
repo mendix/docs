@@ -35,7 +35,7 @@ Authentication for the App Repository API uses a personal access token (PAT).
 
 ### Generating a PAT
 
-For details on how to generate a PAT, see the [Personal Access Tokens](/mendix-profile/user-settings/#pat) section in *User Settings*. When you define the new PAT, choose at least this scope:
+For details on how to generate a PAT, see the [Personal Access Tokens](/portal/user-settings/#pat) section in *User Settings*. When you define the new PAT, choose at least this scope:
 
 * `mx:modelrepository:repo:read`.
 

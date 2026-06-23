@@ -1,16 +1,17 @@
 ---
 title: "User Settings"
-url: /mendix-profile/user-settings/
+url: /portal/user-settings/
 weight: 5
 description: "Describes the user settings for the Mendix Portal."
 aliases:
-    - /developerportal/community-tools/mendix-profile/user-settings/
-    - /community-tools/mendix-profile/user-settings/
+    - /developerportal/community-tools/portal/user-settings/
+    - /community-tools/portal/user-settings/
+    - /mendix-profile/user-settings/
 ---
 
 ## Introduction {#settings}
 
-On the [User Settings](https://user-settings.mendix.com/link/profile) page, you can edit your [Mendix profile](/mendix-profile/).
+On the [User Settings](https://user-settings.mendix.com/link/profile) page, you can edit your [Mendix profile](/portal/mendix-profile/).
 
 ## Profile {#profile}
 

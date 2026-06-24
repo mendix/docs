@@ -28,7 +28,7 @@ A *station* represents a workstation on the shop floor. It can connect to one or
 
     {{< figure src="/attachments/workstation/wks-install1.png" class="no-border" >}}
 
-3. Enter a name for your new workspace, and then click **Create Workspace**.
+3. Enter a name for your new workspace, specify the environment type (**Test**, **Acceptance** or **Production**), and then click **Create Workspace**.
 
     {{< figure src="/attachments/workstation/wks-install2.png" class="no-border" >}}
 
@@ -196,7 +196,7 @@ Auto-refresh settings are available in Workstation Management at **Settings > Cl
 
 By default, the Workstation Client operates in auto-refresh mode. That is, any changes made to the configuration in Workstation Management are immediately reflected in the Client. 
 
-To change this behavior, set the **Auto-Refresh Mode** toggle to **Off**. You can then force the configuration to refresh by clicking **Refresh on Computer** in Workstation Management, or by clicking **Refresh** in the Workstation Client.
+To change this behavior, set the **Auto-Refresh Mode** toggle to **Off**. You can then force the configuration to refresh by clicking **Sync Clients** in Station Overview, or by clicking **Refresh** in the Workstation Client.
 
 The **Check Interval** setting is only available when the auto-refresh mode is enabled. It specifies how often a Workstation Client that is disconnected due to a web socket failure should automatically refresh its configuration by polling Workstation Management. By default, this happens every 60 minutes.
 
@@ -281,6 +281,18 @@ For production environments, it is recommended to disable *Developer Mode* to pr
 
 #### Device Settings
 
+##### Configuration in Management UI
+
+To add a printer device, perform the following steps:
+
+1. Navigate to the **Devices** section on the **Station Detail** page.
+2. Click **Add Device** and select the device type.
+3. Enter a meaningful name for the device, for example, *Shopfloor Printer*.
+4. Optional: Select or create a class to help you manage your devices, for example, *Building A Printers*.
+5. Specify the information required to connect to the device.
+
+    The required information depends on the type of the device. For some devices, like printers, you must only specify the device name. For others, like Serial Port devices, you can use a variety of identifiers such as serial numbers, manufacturer names, and others.
+
 ##### Card Readers
 
 Card reader devices cannot be configured as separate devices in the **Devices** overview of a **Station** page. Instead, they are automatically detected by the Workstation Client and added to the device list of the Client. 
@@ -289,9 +301,19 @@ Auto detecting card readers is enabled by default. This setting can be configure
 
 Refer to [Message Syntax - Card Readers](/mendix-workstation/device-syntax/#card-readers) for a more in-depth explaination how to communicate with card readers.
 
+### Serial Port Devices
+
+Serial Port devices allow you to connect to a device with a serial port.
+
+##### Bluetooth Devices
+
+Add Bluetooth LE (BLE) devices that use the ATT protocol by entering the exact device name as displayed in your OS' device manager 
+
+Refer to [Message Syntax - Bluetooth](/mendix-workstation/device-syntax/#bluetooth) for a more in-depth explaination how to communicate with bluetooth devices.
+
 ##### File Device
 
-This section explains the configuration of a file device. Refer to [Message Syntax - File Device](/mendix-workstation/device-syntax/#file-device) for a more in-depth explaination how to communicate with file devices.
+File devices allow you to read and write from a file. Refer to [Message Syntax - File Device](/mendix-workstation/device-syntax/#file-device) for a more in-depth explaination how to communicate with file devices.
 
 ###### Allowed Folder Configuration
 
@@ -316,20 +338,14 @@ Windows and Unix-style paths can be used independently of the operating system t
 
 The administrator can choose to allow either one or a combination of the following permissions: subscribe to change events, read files, and write files.
 
-##### Bluetooth Devices
+##### TCP/IP Client
 
-Simply add Bluetooth LE (BLE) devices that use the ATT protocol by entering the exact device name as displayed in your OS' device manager 
+TCP/IP clients allow you to connect to remote devices over the network.
 
-Refer to [Message Syntax - Bluetooth](/mendix-workstation/device-syntax/#bluetooth) for a more in-depth explaination how to communicate with bluetooth devices.
+##### TCP/IP Server
 
-## Printers
+TCP/IP clients allow you to host connections over the network.
+
+##### Printers
 
 You can integrate your Workstations with printer devices.
-
-### Configuration in Management UI
-
-To add a printer device, perform the following steps:
-
-1. Navigate to the **Devices** section on the **Station Detail** page.
-2. Click **Add Device** and select **Printer**.
-3. Enter the exact device name as it is displayed in your operating system's device manager.

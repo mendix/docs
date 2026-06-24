@@ -28,6 +28,8 @@ Contact Mendix Support to transfer workspace ownership.
 
 ## Workstation Client
 
+### Logs
+
 By default, the Client retains logs of up to 10 MB for the past seven days locally on your computer. Access logs by clicking the **Logs** button on the Client UI, then optionally selecting the level of logs you want to see. Opening the Client's console through the browser developer tools (**Ctrl + Shift + I**) can also provide additional information about encountered errors in the UI of the Client.
 
 Log files are also available by day in the Client's app data folder. On Windows, press **Win + R** and enter:
@@ -41,6 +43,10 @@ On Linux, the *Mendix Workstation/logs* folder is located at either `$XDG_CONFIG
 
 * Start the Workstation Client. Click the three-dot icon in the top tight, then click **Logs**. Debug level logs are only available in *Developer Mode*
 * Start the Workstation Client from PowerShell: `start "C:\Program Files\Mendix Workstation\Mendix Workstation.exe" -ArgumentList "--log-level=debug" -wait`.
+
+### Diagnostics
+
+When [Developer Mode](/mendix-workstation/installation/#developer-mode) is enabled, the Client also shows a **Diagnostics** page. This page displays information about the available devices, credentials, station configuration, system info, and log levels, which you can use to help you troubleshoot any issues.
 
 ### Registration Token Could Not Be Parsed
 

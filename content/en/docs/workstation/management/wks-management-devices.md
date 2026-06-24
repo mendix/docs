@@ -122,7 +122,7 @@ Bluetooth Low Energy (BLE) devices using the ATT protocol can be integrated with
 To add a Bluetooth Device, perform the following steps:
 
 1. Navigate to the **Devices** section on the **Station Detail** page.
-2. Click Add Device and select Bluetooth Device.
+2. Click **Add Device** and select **Bluetooth Device**.
 3. Enter the exact device name as it is displayed in your operating system's device manager.
 
 ### Message Syntax
@@ -139,3 +139,27 @@ This device type requires the following message and response:
 ### Response
 
 * `CharacteristicUUID#Response`
+
+## Printers
+
+You can integrate your Workstations with printer devices.
+
+### Configuration in Management UI
+
+To add a printer device, perform the following steps:
+
+1. Navigate to the **Devices** section on the **Station Detail** page.
+2. Click **Add Device** and select **Printer**.
+3. Enter the exact device name as it is displayed in your operating system's device manager.
+
+### Message Syntax
+
+This device type requires the following message and response:
+
+#### Message
+
+A print command, for example, `P#TESTHELLO#RAW#aGVsbG8=`.
+
+#### Response
+
+The output of the print command, for example, `hello` in a *TESTHELLO.prn* file.

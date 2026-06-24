@@ -202,7 +202,7 @@ You need to configure some additional settings for the agent before it can be us
 
 Create the microflow that is called when a user clicks the button. This microflow will execute a call to the LLM and set the `ProductDescription` attribute value to the model's response. The microflow, which can also be found in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) in **ExampleMicroflows** > **Prompt Engineering** > **ACT_Product_GenerateProductDescription**, will look like this:
 
-{{< figure src="/attachments/genai/howto-prompt-engineering/prompt-engineering-microflow.png" alt="Microflow with four sequential steps: change Product Language, retrieve Agent from database, call Agent Without History, and update ProductDescription with response" >}}
+{{< figure src="/attachments/genai/howto-prompt-engineering/prompt-engineering-microflow-v2.png" alt="Microflow with four sequential steps: change Product Language, retrieve Agent from database, call Agent (Runtime) w/o History, and update ProductDescription with response" >}}
 
 1. In Studio Pro, go to the `Product_NewEdit` page.
 
@@ -230,7 +230,7 @@ Create the microflow that is called when a user clicks the button. This microflo
     * Range: `First`
     * Object name: `Agent` (default)
 
-9. Add the `Call Agent Without History` action to run the LLM call:
+9. Add the `Call Agent (Runtime) w/o History` action to run the LLM call:
     
     * Agent: `$Agent`
     * Optional context object: `$Product` (input parameter)

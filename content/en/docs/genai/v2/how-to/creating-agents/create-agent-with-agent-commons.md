@@ -148,7 +148,7 @@ If your knowledge base is not compatible with Agent Commons, or if the retrieval
 
 Configure the **Ask the agent** button created in [Set Up Your App for Agent Creation](/agents/agents-kit-2/how-to/creating-agents/shared-setup/#domain-model-setup) to call a microflow to invoke the agent. Your completed microflow will look like this:
 
-{{< figure src="/attachments/genai/howto-singleagent/Microflow_AgentCommons.png" alt="Microflow with three activities: Retrieve Agent from database, Call Agent Without History, and Change TicketHelper ModelResponse attribute" >}}
+{{< figure src="/attachments/genai/howto-singleagent/Microflow_AgentCommons_v2.png" alt="Microflow with three activities: Retrieve Agent from database, Call Agent (Runtime) w/o History, and Change TicketHelper ModelResponse attribute" >}}
 
 1. On the **TicketHelper_Agent** page, edit the button's **On click** event to call a microflow. Click **New** to create a microflow named `ACT_TicketHelper_CallAgent_Commons`.
 
@@ -162,7 +162,7 @@ Configure the **Ask the agent** button created in [Set Up Your App for Agent Cre
     * **Range**: `First`
     * **Object name**: `Agent` (default)
 
-4. Add the `Call Agent Without History` action from the toolbox to invoke the agent with the `TicketHelper` object containing the user input:
+4. Add the `Call Agent (Runtime) w/o History` action from the toolbox to invoke the agent with the `TicketHelper` object containing the user input:
 
     * **Agent**: `Agent` (the object that was previously retrieved)
     * **Optional context object**: `TicketHelper` (input parameter)
@@ -194,9 +194,9 @@ Follow these steps:
 
 3. Add the microflow `Request_AddMessage_ToolMessages` from the ConversationalUI module and pass the message that is associated with your `TicketHelper`.
 
-4. Duplicate the `Request_CallAgent_ToolUserConfirmation_Example` microflow from ConversationalUI in your own module and include it in the project. Call this microflow instead of the `Call Agent Without History` action. Make the following modifications (the annotations show the position):
+4. Duplicate the `Request_CallAgent_ToolUserConfirmation_Example` microflow from ConversationalUI in your own module and include it in the project. Call this microflow instead of the `Call Agent (Runtime) w/o History` action. Make the following modifications (the annotations show the position):
 
-    * Add your context object `TicketHelper` as an input parameter and pass it in the first `Call Agent Without History` action.
+    * Add your context object `TicketHelper` as an input parameter and pass it in the first `Call Agent (Runtime) w/o History` action.
     * Change the message retrieval to retrieve a `Message` from your `TicketHelper` via association.
     * After calling the microflow `Response_CreateOrUpdateMessage`, add a `Change object` action to set the association `TicketHelper_Message` to the `Message_ConversationalUI` object. Additionally, set the `RequestId` derived from the `ResponseId`.
     * After the decision, add an action to call `ACT_TicketHelper_CallAgent_Commons` again to ensure updated tool messages are sent back to the LLM.

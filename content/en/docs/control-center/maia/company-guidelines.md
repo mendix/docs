@@ -54,7 +54,7 @@ After a document is parsed, guidelines are automatically assigned to one or more
 * Development standards – Guidelines in this category govern how code is written, tested, reviewed, named, built, deployed, or operated inside a single service or team: coding conventions, branch naming, internal tooling.
 * Security – Guidelines in this category impose a technical control: encryption, authentication, authorization, secrets management, input validation, vulnerability management, access controls.
 * Compliance and governance – Guidelines in this category impose a regulatory obligation, audit/evidence requirement, approval workflow, or governance process with an accountability trail: mandated processes, sign-offs, deadlines with owners.
-* Design and brand – Guidelines in this category govern visual design, UX behaviour, copywriting, tone, or brand identity on user-facing surfaces: layouts, colors, typography, voice, accessibility.
+* Design and brand – Guidelines in this category govern visual design, UX behavior, copywriting, tone, or brand identity on user-facing surfaces: layouts, colors, typography, voice, accessibility.
 
 ## Company Guidelines Page Tabs
 

@@ -86,3 +86,15 @@ Send instruction in hexadecimal as a string, for example, *FFCA000000* to read t
 * `1#` - Card disconnected
 * `2# Response` - Response from device as raw hexadecimal.
 * `3# Error` - Error message from device.
+
+## Printers
+
+This device type requires the following message and response:
+
+### Message
+
+A print command, for example, `P#TESTHELLO#RAW#aGVsbG8=`.
+
+### Response
+
+The output of the print command, for example, `hello` in a *TESTHELLO.prn* file.

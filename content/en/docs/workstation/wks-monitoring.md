@@ -24,4 +24,4 @@ You can access the Usage Reports by performing the following steps:
 
     {{< figure src="/attachments/workstation/wks-usage2.png" class="no-border" >}}
 
-The Usage Reports display information about the usage trends for each station
+The Usage Reports display information about the usage trends for each station both daily and over time.

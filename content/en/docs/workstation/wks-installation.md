@@ -321,3 +321,15 @@ The administrator can choose to allow either one or a combination of the followi
 Simply add Bluetooth LE (BLE) devices that use the ATT protocol by entering the exact device name as displayed in your OS' device manager 
 
 Refer to [Message Syntax - Bluetooth](/mendix-workstation/device-syntax/#bluetooth) for a more in-depth explaination how to communicate with bluetooth devices.
+
+## Printers
+
+You can integrate your Workstations with printer devices.
+
+### Configuration in Management UI
+
+To add a printer device, perform the following steps:
+
+1. Navigate to the **Devices** section on the **Station Detail** page.
+2. Click **Add Device** and select **Printer**.
+3. Enter the exact device name as it is displayed in your operating system's device manager.

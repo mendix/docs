@@ -45,7 +45,7 @@ Studio Pro agents, built using [Agent Editor](/agents/agents-kit-2/reference-gui
 
 ##### Migrating from Runtime Agents to Studio Pro Agents {#runtime-to-studio-pro}
 
-If your app uses runtime agents (built with the [Agent Commons](/agents/agents-kit-2/reference-guide/genai-for-mx/agent-commons/) module), you can migrate them to Studio Pro agents by following these steps:
+If your app uses runtime agents (built with the [Agent Commons](/agents/agents-kit-2/reference-guide/genai-for-mx/agent-commons/) module) and Mendix Cloud GenAI Resources, you can migrate them to Studio Pro agents by following these steps:
 
 1. Ensure your app uses Studio Pro 11.12 or higher.
 2. Open Agent Editor in Studio Pro.

@@ -1,11 +1,10 @@
 ---
 title: "Release and Migration Guide for GenAI Modules"
-url: /agents/agents-kit-2/reference-guide/genai-for-mx/migration-guide/
+url: /agents/agents-kit-1/reference-guide/genai-for-mx/migration-guide/
 linktitle: "Release and Migration Guide"
-description: "Agents Kit 2: Describes the combined releases of various GenAI-related modules and their inter-module dependencies. It also includes migration steps and notices about deprecations and removals."
-weight: 1
+description: "Agents Kit 1: Describes the combined releases of various GenAI-related modules and their inter-module dependencies. It also includes migration steps and notices about deprecations and removals."
+weight: 80
 aliases:
-    - /agents/genai-for-mx/migration-guide/
     - /appstore/modules/genai/genai-for-mx/migration-guide/
 ---
 ## Introduction
@@ -15,7 +14,7 @@ During most regular release cycles, upgrading Agents Kit modules is seamless and
 This document is intended for consumers of Agents Kit modules. For releases that introduce impactful changes, it outlines the affected module versions, describes the nature of the changes, and specifies any actions that must be taken when upgrading to the newer versions.
 
 {{% alert color="warning" %}}
-Do not skip major versions; they may contain deprecations or require migration.
+Do not skip major versions as they may contain deprecations or require migration.
 
 Modules remove deprecated entities, associations, and attributes in the subsequent major release, after they have been marked as deprecated. Deprecated domain model elements are indicated by an annotation in the documentation field. 
 
@@ -107,13 +106,13 @@ To prevent the need to recreate existing data related to Agent definitions, perf
    The **AgentCommons** > **USE_ME** > **Migration** > `SingleMCPTool_Migrate` microflow will set the new association and attribute on existing `SingleMCPTool` records.
 
 4. Update any custom logic or pages in your app that refer to the old entity or its attributes `MCPTool` in the MCPClient module. Available tools are not cached anymore. In cases where the actual list of available tools is required, refer to the `ConsumedMCPService_ListTools` microflow.
-5. In your running apps, configure your MCP connections again on the `ConsumedMCPService_Overview` page. Furthermore, in existing agents where those MCP connections were used, you need to add them again. Make sure to save a new version when using the agent in microflows.
+5. In your running apps, configure your MCP connections again on the `ConsumedMCPService_Overview` page. Furthermore, in existing agents where those MCP connections were used, you need to add them again. Ensure to save a new version when using the agent in microflows.
 6. Verify your application compiles and runs correctly before deploying to cloud environments.
 
 {{% alert color="info" %}}
 The `MCPTool` entity and related attributes and association will be permanently removed in the next major version of the MCP Client (V4.0.0) and Agent Commons (V4.0.0) modules.
  
-Make sure to run the migration microflow before upgrading to the next major version.
+Ensure to run the migration microflow before upgrading to the next major version.
 {{% /alert %}}
 
 ##### Consumed Knowledge Bases

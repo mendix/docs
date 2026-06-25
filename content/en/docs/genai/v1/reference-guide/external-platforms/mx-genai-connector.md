@@ -118,7 +118,7 @@ Function calling enables LLMs to connect with external tools to gather informati
 
 The model does not call the function. Instead, it returns a tool called JSON structure that builds the input of the function (or functions) so they can be executed as part of the chat completions operation. Functions in Mendix are microflows that can be registered within the request to the LLM. The connector handles the tool call response and executes the function microflows until the API returns the assistant's final response.
 
-Function microflows can have none, a single, or multiple primitive input parameters such as Boolean, Datetime, Decimal, Enumeration, Integer or String. Additionally, they may accept the [Request](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#request) or [Tool](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#tool) objects as inputs. The function microflow must return a String value.
+Function microflows can have none, a single, or multiple primitive input parameters such as Boolean, Datetime, Decimal, Enumeration, Integer, or String. Additionally, they may accept the [Request](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#request) or [Tool](/agents/agents-kit-1/reference-guide/genai-for-mx/commons/#tool) objects as inputs. The function microflow must return a String value.
 
 {{% alert color="warning" %}}
 Function calling is a powerful capability and should be used with caution. Function microflows run in the context of the current user without enforcing entity access. Use `$currentUser` in XPath queries to ensure you retrieve and return only information that the end-user is allowed to view. Otherwise, confidential information may become visible to the current end-user in the assistant's response.
@@ -156,7 +156,7 @@ The model uses the file name when analyzing documents, which may introduce a pot
 
 ##### Collections 
 
-A knowledge base resource can comprise several collections. Each collection is tdesigned to hold numerous documents and serves as a logical grouping for related information based on its shared domain, purpose, or thematic focus.
+A knowledge base resource can comprise several collections. Each collection is designed to hold numerous documents and serves as a logical grouping for related information based on its shared domain, purpose, or thematic focus.
 
 Below is a diagram showing how resources are organized into separate collections. This approach allows multiple use cases to share a common resource while the option to only add the required collections to the conversation context is preserved. For example, both employee onboarding and IT ticket support require information about IT setup and equipment. However, only onboarding needs knowledge about the company culture and values, while only IT support requires access to historical support ticket data.
 

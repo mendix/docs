@@ -20,7 +20,7 @@ This connector supports text generation (including function/tool calling, chat w
 
 ### Prerequisites
 
-To use this connector, you need configuration keys to authenticate to the Mendix Cloud GenAI services. You can generate keys in the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com). Alternatively, ask someone with access to generate keys for you or add you to their team so you can generate keys yourself. 
+To use this connector, you need configuration keys to authenticate to the Mendix Cloud GenAI services. You can generate keys in the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com). Alternatively, ask someone with access to generate keys for you or add you to their team so you can generate keys yourself.
 
 {{% alert color="info" %}}
 The Mendix Cloud GenAI Connector module generates embeddings internally when interacting with a knowledge base. You do not need to create embedding keys yourself when interacting with a Mendix Cloud knowledge base. Direct embedding operations are only required if additional processes are needed, such as using the generated vectors instead of text. For example, a similar search algorithm could use vector distances to calculate relatedness.
@@ -56,8 +56,14 @@ Next, complete the following configuration steps according to the module you are
         * If you are using a GenAI starter app, you can skip this step. The configuration page is automatically added to your navigation and can be accessed by clicking **Settings** ({{% icon name="cog" %}}) > **Mendix Cloud GenAI Configuration** in your running app.
     2. Run the app and navigate to the configuration page. Import a key generated in the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com) and click **Test Key** to validate its functionality. This key establishes a connection between the Mendix Cloud resources and your application and contains all the information required to set up the connection.
 
+    A single key exposes all model versions currently enabled on the resource. When you import the key, all [available models](/agents/mx-cloud-genai/resource-packs/#supported-models) are accessible. No key rotation is required when new model versions are added to the resource by a Company Admin.
+
 {{% alert color="info" %}}
 When using an Embeddings Model Resource together with a Knowledge Base Resource, you do not need to import both keys. Importing the Knowledge Base Resource key automatically generates the connection details for the embeddings generation model.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+You can select which model to use per agent or microflow from all available models on the resource.
 {{% /alert %}}
 
 ## Operations
@@ -98,7 +104,7 @@ The microflow activity [Chat completions (with history)](/agents/agents-kit-2/re
 
 #### Retrieve & Generate {#retrieve-and-generate}
 
-To use retrieval and generation in a single operation, add an internally predefined tool to the [Request](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#request) via the `Tools: Add Knowledge Base` action. The model can then decide whether to use the [knowledge base retrieval](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#knowledge-base-retrieval) tool when handling the request. This functionality is supported in both with-history and without-history operations. The optional `Description` parameter helps the model understand the knowledge base content and decide whether it should be called in the current chat context. You can also apply optional filters, such as `MaxNumberOfResults` or `MinimumSimilarity`, or pass a [MetadataCollection](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#metadatacollection-entity). 
+To use retrieval and generation in a single operation, add an internally predefined tool to the [Request](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#request) via the `Tools: Add Knowledge Base` action. The model can then decide whether to use the [knowledge base retrieval](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#knowledge-base-retrieval) tool when handling the request. This functionality is supported in both with-history and without-history operations. The optional `Description` parameter helps the model understand the knowledge base content and decide whether to call it in the current chat context. You can also apply optional filters, such as `MaxNumberOfResults` or `MinimumSimilarity`, or pass a [MetadataCollection](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#metadatacollection-entity).
 
 {{< figure src="/attachments/genai/mxgenAI-connector/mxgenaiconnector-rag.png" alt="" >}}
 
@@ -116,7 +122,7 @@ Function calling enables LLMs to connect with external tools to gather informati
 
 The model does not call the function. Instead, it returns a tool called JSON structure that builds the input of the function (or functions) so they can be executed as part of the chat completions operation. Functions in Mendix are microflows that can be registered within the request to the LLM. The connector handles the tool call response and executes the function microflows until the API returns the assistant's final response.
 
-Function microflows can have none, a single, or multiple primitive input parameters such as Boolean, Datetime, Decimal, Enumeration, Integer or String. Additionally, they may accept the [Request](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#request) or [Tool](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#tool) objects as inputs. The function microflow must return a String value.
+Function microflows can have none, a single, or multiple primitive input parameters such as Boolean, Datetime, Decimal, Enumeration, Integer, or String. Additionally, they may accept the [Request](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#request) or [Tool](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#tool) objects as inputs. The function microflow must return a String value.
 
 {{% alert color="warning" %}}
 Function calling is a powerful capability and should be used with caution. Function microflows run in the context of the current user without enforcing entity access. Use `$currentUser` in XPath queries to ensure you retrieve and return only information that the end-user is allowed to view. Otherwise, confidential information may become visible to the current end-user in the assistant's response.
@@ -158,7 +164,7 @@ A knowledge base resource can comprise several collections. Each collection is d
 
 Below is a diagram showing how resources are organized into separate collections. This approach allows multiple use cases to share a common resource while the option to only add the required collections to the conversation context is preserved. For example, both employee onboarding and IT ticket support require information about IT setup and equipment. However, only onboarding needs knowledge about the company culture and values, while only IT support requires access to historical support ticket data.
 
-{{< figure src="/attachments/genai/navigate_mxgenai/GenAIKnowledgeBaseResource.png" alt="" >}}
+{{< figure src="/attachments/genai/mxgenAI-connector/genai-knowledgebase-resource.png" alt="" >}}
 
 While collections provide a mechanism for data separation, it is not best practice to create a large number of collections within a single knowledge base resource. A more performant and practical approach for achieving fine-grained data separation is through the strategic use of metadata. 
 
@@ -176,7 +182,7 @@ key: `Category`, value: `Ticket`
 
 The model then generates its response using the specified metadata instead of solely the input text. 
 
-{{< figure src="/attachments/genai/navigate_mxgenai/GenAIKBMetadataSeparation.png" alt="" >}}
+{{< figure src="/attachments/genai/mxgenAI-connector/genai-kb-metadata-seperation.png" alt="" >}}
 
 Using metadata, even more fine-grained filtering becomes feasible. Each ticket may have associated metadata, such as the following:
 
@@ -192,7 +198,7 @@ For a step-by-step guide on how to get your application data into a collection i
 
 ### Knowledge Base Operations
 
-To implement knowledge base logic into your Mendix application, use the actions in the **USE_ME** > **Knowledge Base** folder or under the **GenAI Knowledge Base (Content)** or **Mendix Cloud Knowledge Base** categories in the **Toolbox**. These actions require a specialized [DeployedKnowledgeBase](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#deployed-knowledge-base) of type `Collection` that determines the model and endpoint to use. The collection name must be passed when creating the object, and the object must be associated with a `Configuration` object. For Mendix Cloud GenAI, a knowledge base resource may contain several collections (tables). 
+To implement knowledge base logic into your Mendix application, use the actions in the **USE_ME** > **Knowledge Base** folder or under the **GenAI Knowledge Base (Content)** or **Mendix Cloud Knowledge Base** categories in the **Toolbox**. These actions require a specialized [DeployedKnowledgeBase](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/#deployed-knowledge-base) of type `Collection` that determines the model and endpoint to use. The collection name must be passed when creating the object, and the object must be associated with a `Configuration` object. For Mendix Cloud GenAI, a knowledge base resource may contain several collections (tables).
 
 Dealing with knowledge bases involves two main stages:
 

@@ -2,7 +2,6 @@
 title: "Model Context Protocol Modules"
 url: /agents/agents-kit-2/reference-guide/mcp-modules/
 linktitle: "MCP Modules"
-weight: 20
 description: "Agents Kit 2: Reference documentation for MCP modules that expose and consume logic via the Model Context Protocol."
 no_list: false
 aliases:

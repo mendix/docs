@@ -1,7 +1,6 @@
 ---
-title: "Connectors"
+title: "Connector Modules"
 url: /agents/agents-kit-1/reference-guide/connectors/
-weight: 30
 description: "Agents Kit 1: Provides information on connectors that enable seamless integration between Mendix applications and GenAI platforms and services."
 no_list: false
 aliases:

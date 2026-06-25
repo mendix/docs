@@ -8,6 +8,8 @@ no_list: false
 description_list: true
 aliases:
     - /appstore/modules/genai/
+cascade:
+    - content_type: "Agents"
 ---
 
 {{% alert color="info" %}}
@@ -26,17 +28,18 @@ Some typical use cases include the following:
 
 [Agents Kit 2](/agents/agents-kit-2/) is available for Mendix Studio Pro 11.12 and above and provides Mendix's newest agentic features and improvements. [Agents Kit 1](/agents/agents-kit-1/) is available for Studio Pro 10.24 and above. Older versions of some modules and the GenAI Showcase App are available in Studio Pro 9.24.2.
 
-### Getting Started
+### Getting Started {#getting-started}
 
-Start using AI capabilities based on your experience level:
+Start exploring how to integrate agentic and generative AI into your Mendix apps:
 
-* **Familiar with generative AI?** Explore the [Agents Kit guides](/agents/agents-kit-2/) to browse available components, start building with step-by-step how-to guides, and access reference documentation.
+* **New to generative AI?**
+    * Familiarize yourself with [core concepts](/agents/get-started/), including prompt engineering, retrieval augmented generation (RAG), and function calling (ReAct).
+    * Follow the Academy learning path [Introduction to AI and GenAI](https://academy.mendix.com/link/paths/168/Introduction-to-AI-and-GenAI).
 
-* **New to generative AI?** Follow these steps:
-
-    1. Familiarize yourself with the [core concepts](/agents/get-started/), including prompt engineering, retrieval augmented generation (RAG), and function calling (ReAct).
-    2. Choose an architecture for your use case.
-    3. Obtain the required credentials for your selected architecture.
+* **Already familiar with generative AI?**
+    * Browse the [Agents Kit guides](/agents/agents-kit-2/) for available components, step-by-step how-tos, and reference documentation.
+    * Download and run the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) to see working examples, including multi-agent patterns, exposing and consuming tools via MCP, interactive chatbots, RAG, function calling, image generation, and semantic search.
+    * Select the [LLM provider and model](#models) and [Agents Kit components](/agents/agents-kit-2/#components) that fit your use case, then start building.
 
 ## Available Models {#models}
 
@@ -98,5 +101,9 @@ In addition to the models listed above, you can also connect to other models by 
 * To connect to other [foundation models](https://docs.aws.amazon.com/bedrock/latest/userguide/models-features.html) and implement them in your app, use the [Amazon Bedrock connector](/agents/reference-guide/external-connectors/bedrock/).
 * To connect to [Snowflake Cortex LLM](https://docs.snowflake.com/en/sql-reference/functions/complete-snowflake-cortex) functions, [configure the Snowflake AI Data Connector for Snowflake Cortex Analyst](/appstore/connectors/snowflake/snowflake-ai-data-connector/#cortex-analyst).
 * To implement your own connector that is compatible with the other components, use the [GenAI Commons](/agents/agents-kit-2/reference-guide/genai-for-mx/commons/) interface and see [How to Build Your Own GenAI Connector](/agents/agents-kit-2/how-to/byo-connector/).
+
+## Support and Feedback
+
+If you have any questions, encounter errors, or want to share feedback, reach out in the [#genai-connectors](https://mendixcommunity.slack.com/archives/C07P8NRBLN9) channel in the Mendix Community Slack workspace. To sign up for this workspace, use [this invitation link](https://mendixcommunity.slack.com/join/shared_invite/zt-270ys3pwi-kgWhJUwWrKMEMuQln4bqrQ#/shared-invite/email).
 
 ## Documents in This Category

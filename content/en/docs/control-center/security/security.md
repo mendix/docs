@@ -21,15 +21,6 @@ The **Settings** page in the **Security** category in Control Center allows you 
 
 With [Free Apps](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/#deploy-free-app), you can deploy your app to Mendix Cloud from Studio Pro. The ability to deploy Free Apps can be blocked at the company level by disabling **Free App Deployment**.
 
-### Password Policy
-
-Mendix enforces a 90-day password validity period for all platform passwords used to sign in to the Mendix Platform or Studio Pro. 
-If Mendix Admins [set up SSO (BYOIDP)](/control-center/security/set-up-sso-byoidp/), the organization's IdP manages all sign-ins and passwords. In this case, the Mendix Platform's password validity policy no longer applies. 
-
-{{% alert color="info" %}}
-The Mendix Platform no longer allows you to configure a password validity period other than 90 days or to disable password expiry. This capability will be removed on March 31, 2026.
-{{% /alert %}}
-
 ### Email Signing {#disable-enable-digital-signing-emails}
 
 The Mendix Platform digitally signs the content of emails from senders [no-reply@notifications.mendix.com](mailto:no-reply@notifications.mendix.com) and [no-reply@platform-mail.mendix.com](mailto:no-reply@platform-mail.mendix.com). By digitally signing the content of an email, Mendix provides assurance to the recipient of the email that the content of an email has not been altered in transit. For reasons of security, this feature is enabled by default. However, if digitally signing the content of an email interferes with the delivery of that email to the recipient, a Mendix Admin can disable this feature for emails sent to receivers in the company domains. For more information, see the [Why Would You Want to Disable the Digital Signing of Email Content?](#why-disable-email-signing) section below.

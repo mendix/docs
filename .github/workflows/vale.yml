@@ -1,6 +1,6 @@
 name: Vale Linting
 
-# Trigger on PRs that change Markdown files
+# Trigger on PRs that change Markdown files (but skip run on draft PRs)
 on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]

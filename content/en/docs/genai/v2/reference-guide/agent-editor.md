@@ -3,7 +3,6 @@ title: "Agent Editor"
 url: /agents/agents-kit-2/reference-guide/genai-for-mx/agent-editor/
 linktitle: "Agent Editor"
 description: "Agents Kit 2: Reference documentation for the Agent Editor module, which enables defining agents as version-controlled documents in Studio Pro."
-weight: 20
 aliases:
     - /agents/genai-for-mx/agent-editor/
     - /appstore/modules/genai/genai-for-mx/agent-editor/

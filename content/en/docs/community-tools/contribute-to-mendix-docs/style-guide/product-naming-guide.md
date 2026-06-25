@@ -132,20 +132,6 @@ A solution for an air-gapped secure Mendix deployment.
 
 This section contains various Mendix terms that are used in the product UI and documentation.
 
-### application & app
-
-An "application" or "app" can be one of the following:
-
-* A local application
-* A Free App
-* A licensed application hosted on Mendix Cloud; another cloud such as AWS, SAP Cloud, or IBM Cloud Portal; or on the user's own server
-
-Do not capitalize (meaning, do not write "Mendix App").
-
-Do not replace with "app project" (or "project") generically, even when referring to project management-like tasks. **Project** is still used in some UI text, but that usage is being phased out. Using "app" in all instances is prioritized.
-
-The full word "application" has a more well-rounded meaning to it (as in, web and mobile apps), whereas "app" may suggest just mobile apps to the reader. Accordingly, it can be better to use "application" at the beginning of documents and then switch to "app" later on. We want to make it clear that Mendix is not just for building mobile apps, but all kinds of applications.
-
 ### App ID
 
 Always capitalize.
